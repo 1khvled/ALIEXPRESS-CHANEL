@@ -28,9 +28,9 @@ URL_REGEX = re.compile(
     re.IGNORECASE
 )
 
-# Product ID regex patterns
-ITEM_HTML_PATTERN = re.compile(r'/item/(\d+)\.html', re.IGNORECASE)
-ITEM_ID_PATTERN = re.compile(r'/item/(\d+)', re.IGNORECASE)
+# Product ID regex patterns (strictly 10 to 18 digits)
+ITEM_HTML_PATTERN = re.compile(r'/item/(\d{10,18})\.html', re.IGNORECASE)
+ITEM_ID_PATTERN = re.compile(r'/item/(\d{10,18})', re.IGNORECASE)
 
 def extract_all_urls(text: str) -> List[str]:
     """Extracts all HTTP/HTTPS URLs from raw text."""
@@ -73,9 +73,14 @@ def extract_product_id_from_url(url: str) -> Optional[str]:
     """
     Extracts numerical product ID from various AliExpress URL formats.
     e.g. https://www.aliexpress.com/item/1005006382910245.html -> 1005006382910245
+    Strictly validates that the extracted ID is between 10 and 18 digits.
     """
     if not url:
         return None
+
+    clean = url.strip()
+    if clean.isdigit() and 10 <= len(clean) <= 18:
+        return clean
 
     # Check /item/{id}.html
     m = ITEM_HTML_PATTERN.search(url)
@@ -91,19 +96,21 @@ def extract_product_id_from_url(url: str) -> Optional[str]:
     try:
         parsed = urlparse(url)
         qs = parse_qs(parsed.query)
-        for key in ["productIds", "productId", "product_id", "id", "itemId", "item_id", "productIdList"]:
+        for key in ["productIds", "productId", "product_id", "itemId", "item_id", "productIdList", "id"]:
             if key in qs and qs[key]:
                 val = qs[key][0].split(',')[0].strip()
-                if val.isdigit():
+                if val.isdigit() and 10 <= len(val) <= 18:
                     return val
-        # Also check regex for productIds=100500... in raw string if query parsing missed it
-        m = re.search(r'productIds?=(\d+)', url, re.IGNORECASE)
+
+        # Strict regex for pure id=, not terminal_id or sceneId
+        m = re.search(r'(?:^|[?&#;])(?:productIds?|itemId|id)=(\d{10,18})(?:$|[&#;])', url, re.IGNORECASE)
         if m:
             return m.group(1)
     except Exception:
         pass
 
     return None
+
 
 def normalize_aliexpress_url(url: str, product_id: Optional[str] = None) -> str:
     """

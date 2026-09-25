@@ -21,13 +21,14 @@ async def test_generated_caption_format_exact():
     )
 
     # Check structural requirements
-    assert "العرض مستمر 🚨" in caption
+    assert any(h in caption for h in ["العرض مستمر 🚨", "استغل رصيد العملات", "تخفيض عملات خرافي", "صيدة ممتازة للقيمرز", "نزول قوي في السعر"])
     assert f"تخفيض لـ {title}" in caption
     assert f"السعر : {usd:.2f}$ ({eur:.2f}€)🔥" in caption
     assert f"رابط {aff_url}" in caption
-    assert f"كوبون : {coupon}" in caption
+    assert f"كوبون : <code>{coupon}</code>" in caption
     assert "خصم النقاط" in caption
-    assert "لا تنسى استخدام البوت للشراء بأقل الأسعار" in caption
+    assert "DealScoutDz" in caption
+
 
     # Validate with validator
     validation = caption_validator.validate(

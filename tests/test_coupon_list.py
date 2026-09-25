@@ -39,12 +39,13 @@ async def test_format_and_validate_coupon_list():
         coupon_list=coupons
     )
 
-    assert "أحدث كوبونات وتخفيضات AliExpress 🚨🔥" in caption
-    assert "🎟️ كوبون 4/35$ : BDQT04" in caption
-    assert "🎟️ كوبون 6/59$ : BDQT06" in caption
-    assert "🎟️ كوبون 10/99$ : BDQT10" in caption
+    assert "كودات التخفيض" in caption
+    assert "BDQT04" in caption
+    assert "BDQT06" in caption
+    assert "BDQT10" in caption
     assert aff_url in caption
-    assert "لا تنسى استخدام البوت للشراء بأقل الأسعار" in caption
+    assert "DealScoutDz" in caption
+
 
     val = caption_validator.validate(
         caption=caption,

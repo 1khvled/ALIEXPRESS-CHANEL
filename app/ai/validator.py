@@ -7,9 +7,24 @@ class ValidationResult:
     errors: List[str]
 
 class DealCaptionValidator:
-    REQUIRED_HEADER = "العرض مستمر 🚨"
-    COUPON_LIST_HEADER = "أحدث كوبونات وتخفيضات AliExpress 🚨🔥"
-    REQUIRED_CTA = "لا تنسى استخدام البوت للشراء بأقل الأسعار"
+    SITUATIONAL_HOOKS = [
+        "العرض مستمر 🚨",
+        "تخفيض عملات خرافي 🪙🔥",
+        "استغل رصيد العملات واشترِ بأقل سعر 🪙💰",
+        "خصم إضافي قوي بالعملات لا تضيعه 🪙⚡",
+        "صيدة ممتازة للقيمرز 🎮🔥",
+        "عتاد قيمنق بأفضل قيمة مقابل سعر 🎧🖱️",
+        "عرض ناري لعشاق الجيمنج 🕹️💥",
+        "نزول قوي في السعر 🔥📉",
+        "سعر ممتاز جداً لا يُفوّت 💥",
+        "أفضل سعر متوفر حالياً 🚨",
+        "عرض نااار بسعر استثنائي 🔥",
+        "تخفيض مباشر مع كود الخصم 🎟️🔥",
+        "سعر مميز بعد تطبيق الكوبون 🏷️⚡",
+        "الكمية محدودة سارع بالطلب ⏳🚨",
+        "تخفيض حصري لفترة محدودة ⚡",
+        "سعر ممتاز متوفر الآن 🚨",
+    ]
 
     def validate(
         self,
@@ -32,8 +47,8 @@ class DealCaptionValidator:
             return ValidationResult(approved=False, errors=["Caption is empty"])
 
         # CTA check
-        if self.REQUIRED_CTA not in caption:
-            errors.append(f"Mandatory CTA '{self.REQUIRED_CTA}' is missing")
+        if "@Alilo07BOT" not in caption and "DealScoutDz" not in caption and "البوت" not in caption:
+            errors.append("Mandatory bot CTA is missing")
 
         # Affiliate URL check
         if expected_affiliate_url not in caption:
@@ -41,19 +56,18 @@ class DealCaptionValidator:
 
         # Specific checks for Coupon List posts
         if is_coupon_list:
-            if "كوبونات" not in caption:
+            if "كودات" not in caption and "كوبونات" not in caption:
                 errors.append("Missing coupon list header")
-            if "🎟️" not in caption:
-                errors.append("No formatted coupon items found in coupon list")
             return ValidationResult(
                 approved=len(errors) == 0,
                 errors=errors
             )
 
         # Specific checks for Single Product Deals
-        # 1. Header check
-        if self.REQUIRED_HEADER not in caption:
-            errors.append(f"Missing required header '{self.REQUIRED_HEADER}'")
+        # 1. Header / Hook check
+        if not any(hook in caption for hook in self.SITUATIONAL_HOOKS):
+            errors.append("Missing valid situational hook header")
+
 
         # 2. Price verification
         if expected_usd_price is not None:

@@ -81,7 +81,13 @@ class UrlResolver:
 
                 # Sometimes AliExpress mobile page contains canonical link in html or JS redirect
                 if not found_id and response.text:
-                    found_id = extract_product_id_from_url(response.text)
+                    m_html = re.search(r'href=[\'"][^\'"]*aliexpress\.com/item/(\d{10,18})\.html', response.text[:30000], re.IGNORECASE)
+                    if m_html:
+                        found_id = m_html.group(1)
+                    else:
+                        m_json = re.search(r'[\'"]productId[\'"]\s*:\s*[\'"]?(\d{10,18})[\'"]?', response.text[:30000], re.IGNORECASE)
+                        if m_json:
+                            found_id = m_json.group(1)
 
                 canonical = normalize_aliexpress_url(final_url, found_id) if found_id else final_url
                 is_valid = bool(found_id or is_aliexpress_url(final_url))
