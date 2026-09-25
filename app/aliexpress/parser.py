@@ -56,43 +56,53 @@ ALLOWED_CATEGORY_KEYWORDS_EN = [
     "mouse", "mice", "keyboard", "headset", "headphone", "earphone", "earbuds",
     "tws", "controller", "gamepad", "joystick", "gaming", "gamer", "game",
     "monitor", "mechanical", "rgb", "dpi", "mouse pad", "mousepad",
-    # GPU / PC parts
-    "gpu", "graphics card", "rtx", "gtx", "radeon", "ram", "ssd", "nvme",
-    "gaming chair", "cooling", "cooler", "fan",
-    # Phones
+    # Gaming & PC Brands
+    "attack shark", "ajazz", "machenike", "aula", "darmoshark", "vgn", "zaopin",
+    "kysona", "fantech", "keychron", "royal kludge", "rk61", "epomaker", "akko",
+    "redragon", "razer", "logitech", "steelseries", "corsair", "hyperx", "dareu",
+    "thunderobot", "flydigi", "gamesir", "8bitdo", "gulikit", "easysmx", "mobapad",
+    # GPU / PC parts & Specs
+    "gpu", "graphics card", "rtx", "gtx", "radeon", "ram", "ssd", "nvme", "ddr4", "ddr5",
+    "gaming chair", "cooling", "cooler", "fan", "motherboard", "processor", "ryzen", "intel core",
+    "120hz", "144hz", "165hz", "240hz", "ips", "oled", "amoled",
+    # Phones & Brands
     "phone", "smartphone", "mobile", "iphone", "samsung", "xiaomi", "redmi",
     "poco", "oneplus", "realme", "oppo", "vivo", "nothing phone", "pixel",
+    "honor", "huawei", "infinix", "tecno", "zte", "nubia", "redmagic", "iqoo",
+    "motorola", "moto", "black shark",
     # Tablets
-    "tablet", "ipad", "tab",
+    "tablet", "ipad", "tab", "pad", "xiaomi pad", "lenovo tab", "redmi pad",
     # Watches
     "watch", "smartwatch", "smart watch", "smart band", "band", "mi band",
-    "amazfit", "garmin", "huawei watch", "apple watch", "fitness tracker",
+    "amazfit", "garmin", "huawei watch", "apple watch", "fitness tracker", "colmi", "zeblaze",
     # Consoles & VR
     "console", "playstation", "ps5", "ps4", "xbox", "nintendo", "switch",
-    "vr", "oculus", "meta quest", "steam deck",
+    "vr", "oculus", "meta quest", "steam deck", "rog ally", "legion go", "anbernic", "miyoo",
     # Audio
-    "speaker", "soundbar", "microphone", "mic", "bluetooth",
+    "speaker", "soundbar", "microphone", "mic", "bluetooth", "anc", "hifi",
     # Accessories (phone/tablet/pc)
     "charger", "charging", "power bank", "case", "cover", "screen protector",
     "tempered glass", "stylus", "pen", "cable", "usb", "type-c", "hdmi",
-    "adapter", "hub", "dock",
+    "adapter", "hub", "dock", "gan charger", "baseus", "ugreen", "anker",
     # Camera & media
     "webcam", "camera", "drone", "action cam", "gopro", "tripod",
     "ring light", "led strip", "projector",
     # Computers
-    "mini pc", "laptop", "notebook", "chromebook",
+    "mini pc", "laptop", "notebook", "chromebook", "macbook",
     # Generic tech
     "wireless", "bluetooth", "rechargeable",
 ]
 
 ALLOWED_CATEGORY_KEYWORDS_AR = [
-    "ماوس", "كيبورد", "لوحة مفاتيح", "سماعة", "سماعات", "يد تحكم",
-    "جيمنج", "قيمنق", "جيمينق", "جايمنج", "شاشة", "كرسي",
-    "هاتف", "جوال", "موبايل", "تابلت", "لوحي",
+    "ماوس", "كيبورد", "لوحة مفاتيح", "سماعة", "سماعات", "يد تحكم", "يدة تحكم",
+    "جيمنج", "قيمنق", "جيمينق", "جايمنج", "العاب", "ألعاب", "شاشة", "كرسي",
+    "هاتف", "جوال", "موبايل", "تابلت", "لوحي", "ايباد", "آيباد",
     "ساعة", "ساعه", "ذكية", "سوار ذكي",
     "بلوتوث", "شاحن", "باور بانك", "كابل", "كفر", "جراب", "حامل",
     "سبيكر", "مايك", "كاميرا", "درون", "بروجكتر", "لابتوب",
-    "لاسلكي", "وايرلس",
+    "لاسلكي", "وايرلس", "بي سي", "كارت شاشة", "كرت شاشة", "معالج", "رام",
+    "هونر", "هواوي", "شاومي", "ريدمي", "بوكو", "سامسونج", "ايفون", "آيفون",
+    "ريلمي", "انفينكس", "تكنو", "نوبيا", "لينوفو", "اسوس",
 ]
 
 
