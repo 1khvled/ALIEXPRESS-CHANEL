@@ -61,5 +61,15 @@
   ],
   "last_disclaimer_time": 1790371890.4189165,
   "last_calendar_time": 1790371890.4189165,
-  "last_run_time": 1790371890.4189165
+  "last_run_time": 1790371890.4189165,
+  "schedule_config": {
+    "day_interval_minutes": 5,
+    "night_interval_minutes": 30,
+    "current_interval_minutes": 5,
+    "is_paused": false,
+    "night_mode_enabled": true,
+    "last_deal_post_time": 0.0,
+    "night_start_hour_dz": 0,
+    "night_end_hour_dz": 8
+  }
 }

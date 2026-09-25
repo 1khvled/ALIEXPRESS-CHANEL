@@ -237,3 +237,79 @@ def record_coin_reminder_published():
     state["coin_reminder_variant_idx"] = (state.get("coin_reminder_variant_idx", 0) + 1) % 3
     save_persistent_state(state)
 
+# ── Dynamic Schedule & Interval Management ──────────────────────
+DEFAULT_SCHEDULE_CONFIG = {
+    "day_interval_minutes": 5,
+    "night_interval_minutes": 30,
+    "current_interval_minutes": 5,
+    "is_paused": False,
+    "night_mode_enabled": True,
+    "last_deal_post_time": 0.0,
+    "night_start_hour_dz": 0,   # 00:00 Algerian time
+    "night_end_hour_dz": 8      # 08:00 Algerian time
+}
+
+def get_schedule_config() -> Dict[str, Any]:
+    """Loads current schedule configuration with defaults."""
+    state = load_persistent_state()
+    saved = state.get("schedule_config", {})
+    merged = dict(DEFAULT_SCHEDULE_CONFIG)
+    merged.update(saved)
+    return merged
+
+def update_schedule_config(updates: Dict[str, Any]) -> Dict[str, Any]:
+    """Updates and persists schedule configuration."""
+    state = load_persistent_state()
+    saved = state.get("schedule_config", {})
+    merged = dict(DEFAULT_SCHEDULE_CONFIG)
+    merged.update(saved)
+    merged.update(updates)
+    state["schedule_config"] = merged
+    save_persistent_state(state)
+    logger.info(f"Updated schedule config: {merged}")
+    return merged
+
+def is_deal_posting_due() -> Tuple[bool, str, int]:
+    """
+    Checks if enough time has passed to post a new deal based on:
+    - User-configured interval (5m, 10m, 15m, 30m, etc.)
+    - Day vs Night mode (automatic 30m after midnight)
+    - Pause switch
+    Returns: (is_due, reason_message, active_interval_minutes)
+    """
+    config = get_schedule_config()
+    if config.get("is_paused", False):
+        return False, "⏸️ النشر التلقائي متوقف مؤقتاً بأمر المدير (Paused)", 0
+
+    now_utc = datetime.now(timezone.utc)
+    # Algeria is UTC+1
+    algeria_hour = (now_utc.hour + 1) % 24
+    is_night = (algeria_hour >= config.get("night_start_hour_dz", 0) and algeria_hour < config.get("night_end_hour_dz", 8))
+
+    if is_night and config.get("night_mode_enabled", True):
+        active_interval = config.get("night_interval_minutes", 30)
+        mode_desc = f"الوضع الليلي 🌙 ({active_interval} دقيقة)"
+    else:
+        active_interval = config.get("current_interval_minutes", config.get("day_interval_minutes", 5))
+        mode_desc = f"الوضع النهاري ☀️ ({active_interval} دقائق)"
+
+    now_ts = time.time()
+    last_post_ts = config.get("last_deal_post_time", 0.0)
+    elapsed_seconds = now_ts - last_post_ts
+    required_seconds = active_interval * 60
+
+    if last_post_ts > 0 and elapsed_seconds < required_seconds:
+        remaining_minutes = (required_seconds - elapsed_seconds) / 60
+        return False, f"⏳ في فترة الانتظار: {mode_desc} - متبقي {remaining_minutes:.1f} دقيقة", active_interval
+
+    return True, f"✅ جاهز للنشر: {mode_desc}", active_interval
+
+def record_deal_posted_time():
+    """Updates the last_deal_post_time timestamp."""
+    state = load_persistent_state()
+    if "schedule_config" not in state:
+        state["schedule_config"] = dict(DEFAULT_SCHEDULE_CONFIG)
+    state["schedule_config"]["last_deal_post_time"] = time.time()
+    save_persistent_state(state)
+
+

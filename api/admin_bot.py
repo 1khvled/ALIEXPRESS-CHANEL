@@ -430,6 +430,48 @@ async def prepare_deal_state(pid: str, raw_user_text: str = "") -> Dict[str, Any
     save_deal_state(pid, deal_state)
     return deal_state
 
+def build_schedule_menu_text_and_markup() -> Tuple[str, Dict[str, Any]]:
+    """Builds interactive admin schedule control menu."""
+    from app.publisher.state_tracker import get_schedule_config
+    config = get_schedule_config()
+    cur_m = config.get("current_interval_minutes", 5)
+    paused = config.get("is_paused", False)
+    night_on = config.get("night_mode_enabled", True)
+
+    status_badge = "⏸️ متوقف مؤقتاً" if paused else "✅ نشط يعمل"
+    night_badge = "مفعّل (كل 30 دقيقة من 00:00 إلى 08:00)" if night_on else "معطّل"
+
+    text = (
+        "⚙️ <b>لوحة التحكم في سرعة وتوقيت النشر التلقائي</b> ⏱️\n\n"
+        f"• <b>السرعة الحالية (النهارية):</b> كل <b>{cur_m} دقائق</b>\n"
+        f"• <b>الوضع الليلي التلقائي:</b> {night_badge} 🌙\n"
+        f"• <b>حالة النشر:</b> {status_badge}\n\n"
+        "👇 <i>اضغط على أي زر أدناه لتغيير سرعة النشر فوراً:</i>"
+    )
+
+    markup = {
+        "inline_keyboard": [
+            [
+                {"text": ("⚡ كل 5 دقائق (أقصى سرعة) ✔️" if cur_m == 5 else "⚡ كل 5 دقائق"), "callback_data": "sched_int_5"},
+                {"text": ("🚀 كل 10 دقائق ✔️" if cur_m == 10 else "🚀 كل 10 دقائق"), "callback_data": "sched_int_10"}
+            ],
+            [
+                {"text": ("⚖️ كل 15 دقيقة ✔️" if cur_m == 15 else "⚖️ كل 15 دقيقة"), "callback_data": "sched_int_15"},
+                {"text": ("🕒 كل 30 دقيقة ✔️" if cur_m == 30 else "🕒 كل 30 دقيقة"), "callback_data": "sched_int_30"}
+            ],
+            [
+                {"text": ("🌙 تعطيل الوضع الليلي" if night_on else "🌙 تفعيل الوضع الليلي (30د ليلاً)"), "callback_data": "sched_toggle_night"}
+            ],
+            [
+                {"text": ("▶️ استئناف النشر التلقائي" if paused else "⏸️ إيقاف النشر التلقائي مؤقتاً"), "callback_data": "sched_toggle_pause"}
+            ],
+            [
+                {"text": "🔄 تحديث الإعدادات والحالة", "callback_data": "sched_refresh"}
+            ]
+        ]
+    }
+    return text, markup
+
 async def handle_admin_update(update: Dict[str, Any]) -> bool:
     """Processes updates coming to the Admin Bot."""
     # 1. Callback Queries
@@ -449,6 +491,58 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
                     await client.post(
                         f"https://api.telegram.org/bot{ADMIN_BOT_TOKEN}/answerCallbackQuery",
                         json={"callback_query_id": cb_id, "text": "⛔ هذا الإجراء مخصص لمشرف القناة فقط."}
+                    )
+            except Exception:
+                pass
+            return True
+
+        # Callback: Schedule & Interval controls
+        if cb_data.startswith("sched_"):
+            from app.publisher.state_tracker import update_schedule_config, get_schedule_config
+            if cb_data == "sched_int_5":
+                update_schedule_config({"current_interval_minutes": 5, "day_interval_minutes": 5, "is_paused": False})
+                toast = "⚡ تم ضبط سرعة النشر على كل 5 دقائق!"
+            elif cb_data == "sched_int_10":
+                update_schedule_config({"current_interval_minutes": 10, "day_interval_minutes": 10, "is_paused": False})
+                toast = "🚀 تم ضبط سرعة النشر على كل 10 دقائق!"
+            elif cb_data == "sched_int_15":
+                update_schedule_config({"current_interval_minutes": 15, "day_interval_minutes": 15, "is_paused": False})
+                toast = "⚖️ تم ضبط سرعة النشر على كل 15 دقيقة!"
+            elif cb_data == "sched_int_30":
+                update_schedule_config({"current_interval_minutes": 30, "day_interval_minutes": 30, "is_paused": False})
+                toast = "🕒 تم ضبط سرعة النشر على كل 30 دقيقة!"
+            elif cb_data == "sched_toggle_night":
+                cur = get_schedule_config().get("night_mode_enabled", True)
+                update_schedule_config({"night_mode_enabled": not cur})
+                toast = "🌙 تم تغيير إعداد الوضع الليلي!"
+            elif cb_data == "sched_toggle_pause":
+                cur = get_schedule_config().get("is_paused", False)
+                update_schedule_config({"is_paused": not cur})
+                toast = "⏸️ تم إيقاف النشر" if not cur else "▶️ تم استئناف النشر!"
+            else:
+                toast = "🔄 تم تحديث الإعدادات!"
+
+            try:
+                async with httpx.AsyncClient(timeout=3.0) as client:
+                    await client.post(
+                        f"https://api.telegram.org/bot{ADMIN_BOT_TOKEN}/answerCallbackQuery",
+                        json={"callback_query_id": cb_id, "text": toast}
+                    )
+            except Exception:
+                pass
+
+            new_text, new_markup = build_schedule_menu_text_and_markup()
+            try:
+                async with httpx.AsyncClient(timeout=8.0) as client:
+                    await client.post(
+                        f"https://api.telegram.org/bot{ADMIN_BOT_TOKEN}/editMessageText",
+                        json={
+                            "chat_id": chat_id,
+                            "message_id": msg_id,
+                            "text": new_text,
+                            "parse_mode": "HTML",
+                            "reply_markup": new_markup
+                        }
                     )
             except Exception:
                 pass
@@ -626,6 +720,9 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             "4️⃣ اضغط <b>[ 📢 نشر هذا المنشور في القناة الآن 🚀 ]</b> وسينشر فوراً في القناة!\n\n"
             "⚡ <b>أوامر سريعة:</b>\n"
             "• <code>/post &lt;نص أو رابط&gt;</code> - للنشر الفوري في القناة دون معاينة.\n"
+            "• <code>/schedule</code> - التحكم في سرعة النشر التلقائي (5د، 10د، 15د، 30د، الوضع الليلي).\n"
+            "• <code>/pause</code> - إيقاف النشر التلقائي مؤقتاً.\n"
+            "• <code>/resume</code> - استئناف النشر التلقائي.\n"
             "• <code>/notify_end</code> - نشر تنبيه اقتراب نهاية التخفيضات (مع حيلة حجز السعر 20 يوم).\n"
             "• <code>/notify_start</code> - نشر تنبيه الاستعداد لانطلاق التخفيضات (دليل السلة والكوبونات).\n"
             "• <code>/reminder</code> - نشر تذكير العملات ودليل متسوقي الحاسوب (PC / Laptop).\n"
@@ -635,6 +732,31 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             "• <code>/rate</code> - لمعرفة سعر الـ USDT الحالي من SquareAlgerie."
         )
         await send_admin_msg(chat_id, welcome_text)
+        return True
+
+    if text.startswith("/schedule") or text.startswith("/speed") or text.startswith("/interval") or text.startswith("سرعة") or text.startswith("توقيت"):
+        parts = text.split()
+        if len(parts) > 1 and parts[1].isdigit():
+            mins = max(1, int(parts[1]))
+            from app.publisher.state_tracker import update_schedule_config
+            update_schedule_config({"current_interval_minutes": mins, "day_interval_minutes": mins, "is_paused": False})
+            await send_admin_msg(chat_id, f"⚡ <b>تم تحديث سرعة النشر التلقائي بنجاح إلى:</b> كل <b>{mins} دقائق</b>!")
+            return True
+
+        menu_text, markup = build_schedule_menu_text_and_markup()
+        await send_admin_msg(chat_id, menu_text, reply_markup=markup)
+        return True
+
+    if text.startswith("/pause") or text.startswith("إيقاف"):
+        from app.publisher.state_tracker import update_schedule_config
+        update_schedule_config({"is_paused": True})
+        await send_admin_msg(chat_id, "⏸️ <b>تم إيقاف النشر التلقائي مؤقتاً!</b> لن تُنشر أي عروض تلقائياً حتى تستأنفها.")
+        return True
+
+    if text.startswith("/resume") or text.startswith("استئناف"):
+        from app.publisher.state_tracker import update_schedule_config
+        update_schedule_config({"is_paused": False})
+        await send_admin_msg(chat_id, "▶️ <b>تم استئناف النشر التلقائي بنجاح!</b>")
         return True
 
     if text.startswith("/rate"):

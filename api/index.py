@@ -280,6 +280,62 @@ DASHBOARD_HTML = """<!DOCTYPE html>
       </div>
     </div>
 
+    <!-- Auto-Publishing Speed & Schedule Control Panel -->
+    <div class="glass-panel rounded-3xl p-5 sm:p-6 mb-6 card-hover border border-rose-500/20">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-slate-800/80">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-600 to-amber-500 flex items-center justify-center text-white shadow-lg shadow-rose-600/30">
+            <i class="fa-solid fa-gauge-high"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-sm sm:text-base text-white flex items-center gap-2">
+              <span>سرعة وتوقيت النشر التلقائي</span>
+              <span id="sched-badge-status" class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold">نشط</span>
+            </h3>
+            <p class="text-[11px] text-slate-400">تحكم فوري في الفاصل الزمني بين كل منشور (نهاراً وليلاً)</p>
+          </div>
+        </div>
+        <div id="sched-current-summary" class="text-xs text-rose-300 font-bold bg-slate-900/80 border border-slate-800 px-3 py-1.5 rounded-xl">
+          كل 5 دقائق ☀️
+        </div>
+      </div>
+
+      <!-- Quick Speed Buttons -->
+      <div class="space-y-3">
+        <div class="text-xs font-semibold text-slate-300">الفاصل الزمني النهاري:</div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          <button onclick="setSpeed(5)" id="btn-speed-5" class="speed-btn bg-rose-600 text-white font-bold text-xs py-2 px-3 rounded-xl border border-rose-500 transition flex items-center justify-center gap-1.5 active:scale-95 shadow-md shadow-rose-600/20">
+            <i class="fa-solid fa-bolt"></i>
+            <span>كل 5 دقائق</span>
+          </button>
+          <button onclick="setSpeed(10)" id="btn-speed-10" class="speed-btn bg-slate-800/80 hover:bg-slate-700 text-slate-300 font-bold text-xs py-2 px-3 rounded-xl border border-slate-700 transition flex items-center justify-center gap-1.5 active:scale-95">
+            <i class="fa-solid fa-rocket"></i>
+            <span>كل 10 دقائق</span>
+          </button>
+          <button onclick="setSpeed(15)" id="btn-speed-15" class="speed-btn bg-slate-800/80 hover:bg-slate-700 text-slate-300 font-bold text-xs py-2 px-3 rounded-xl border border-slate-700 transition flex items-center justify-center gap-1.5 active:scale-95">
+            <i class="fa-solid fa-scale-balanced"></i>
+            <span>كل 15 دقيقة</span>
+          </button>
+          <button onclick="setSpeed(30)" id="btn-speed-30" class="speed-btn bg-slate-800/80 hover:bg-slate-700 text-slate-300 font-bold text-xs py-2 px-3 rounded-xl border border-slate-700 transition flex items-center justify-center gap-1.5 active:scale-95">
+            <i class="fa-solid fa-clock"></i>
+            <span>كل 30 دقيقة</span>
+          </button>
+        </div>
+
+        <!-- Mode Switches -->
+        <div class="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-800/60 text-xs">
+          <button onclick="toggleNightMode()" id="btn-night-mode" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl flex items-center gap-2 transition active:scale-95">
+            <i class="fa-solid fa-moon text-indigo-400"></i>
+            <span id="text-night-mode">الوضع الليلي: مفعّل (30د بعد منتصف الليل)</span>
+          </button>
+          <button onclick="togglePauseAuto()" id="btn-pause-auto" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-300 px-3 py-1.5 rounded-xl flex items-center gap-2 transition active:scale-95">
+            <i id="icon-pause-auto" class="fa-solid fa-pause text-amber-400"></i>
+            <span id="text-pause-auto">إيقاف النشر مؤقتاً</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- Quick Stats Cards -->
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
       <div class="glass-panel rounded-2xl p-4 card-hover">
@@ -613,9 +669,116 @@ DASHBOARD_HTML = """<!DOCTYPE html>
       document.getElementById('scout-url-input').focus();
     }
 
+    let currentSchedule = { current_interval_minutes: 5, night_mode_enabled: true, is_paused: false, is_night: false };
+
+    async function loadSchedule() {
+      try {
+        const resp = await fetch('/api/schedule');
+        const data = await resp.json();
+        if (data.ok && data.config) {
+          currentSchedule = { ...data.config, is_night: data.is_night };
+          updateScheduleUI();
+        }
+      } catch (e) {}
+    }
+
+    function updateScheduleUI() {
+      const cur = currentSchedule.current_interval_minutes || 5;
+      const isNight = currentSchedule.is_night;
+      const nightOn = currentSchedule.night_mode_enabled;
+      const paused = currentSchedule.is_paused;
+
+      [5, 10, 15, 30].forEach(m => {
+        const btn = document.getElementById('btn-speed-' + m);
+        if (btn) {
+          if (m === cur) {
+            btn.className = 'speed-btn bg-rose-600 text-white font-bold text-xs py-2 px-3 rounded-xl border border-rose-500 transition flex items-center justify-center gap-1.5 active:scale-95 shadow-md shadow-rose-600/20';
+          } else {
+            btn.className = 'speed-btn bg-slate-800/80 hover:bg-slate-700 text-slate-300 font-bold text-xs py-2 px-3 rounded-xl border border-slate-700 transition flex items-center justify-center gap-1.5 active:scale-95';
+          }
+        }
+      });
+
+      const summary = document.getElementById('sched-current-summary');
+      if (summary) {
+        if (paused) {
+          summary.innerText = '⏸️ النشر متوقف مؤقتاً';
+          summary.className = 'text-xs text-amber-300 font-bold bg-amber-500/10 border border-amber-500/20 px-3 py-1.5 rounded-xl';
+        } else if (isNight && nightOn) {
+          summary.innerText = 'كل ' + (currentSchedule.night_interval_minutes || 30) + ' دقيقة (ليلي 🌙)';
+          summary.className = 'text-xs text-indigo-300 font-bold bg-indigo-500/10 border border-indigo-500/20 px-3 py-1.5 rounded-xl';
+        } else {
+          summary.innerText = 'كل ' + cur + ' دقائق (نهاري ☀️)';
+          summary.className = 'text-xs text-rose-300 font-bold bg-slate-900/80 border border-slate-800 px-3 py-1.5 rounded-xl';
+        }
+      }
+
+      const badge = document.getElementById('sched-badge-status');
+      if (badge) {
+        badge.innerText = paused ? 'متوقف مؤقتاً' : 'نشط';
+        badge.className = paused
+          ? 'text-[10px] px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 font-bold'
+          : 'text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold';
+      }
+
+      const nightText = document.getElementById('text-night-mode');
+      if (nightText) {
+        nightText.innerText = nightOn ? 'الوضع الليلي: مفعّل (30د بعد منتصف الليل)' : 'الوضع الليلي: معطّل';
+      }
+
+      const pauseText = document.getElementById('text-pause-auto');
+      const pauseIcon = document.getElementById('icon-pause-auto');
+      if (pauseText) {
+        pauseText.innerText = paused ? 'استئناف النشر التلقائي' : 'إيقاف النشر مؤقتاً';
+      }
+      if (pauseIcon) {
+        pauseIcon.className = paused ? 'fa-solid fa-play text-emerald-400' : 'fa-solid fa-pause text-amber-400';
+      }
+    }
+
+    async function setSpeed(mins) {
+      currentSchedule.current_interval_minutes = mins;
+      currentSchedule.day_interval_minutes = mins;
+      currentSchedule.is_paused = false;
+      updateScheduleUI();
+      try {
+        await fetch('/api/schedule', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ current_interval_minutes: mins, day_interval_minutes: mins, is_paused: false })
+        });
+      } catch (e) {}
+    }
+
+    async function toggleNightMode() {
+      currentSchedule.night_mode_enabled = !currentSchedule.night_mode_enabled;
+      updateScheduleUI();
+      try {
+        await fetch('/api/schedule', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ night_mode_enabled: currentSchedule.night_mode_enabled })
+        });
+      } catch (e) {}
+    }
+
+    async function togglePauseAuto() {
+      currentSchedule.is_paused = !currentSchedule.is_paused;
+      updateScheduleUI();
+      try {
+        await fetch('/api/schedule', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ is_paused: currentSchedule.is_paused })
+        });
+      } catch (e) {}
+    }
+
     // Auto-load
     refreshDashboard();
+    loadSchedule();
     setInterval(refreshDashboard, 60000);
+    setInterval(loadSchedule, 30000);
   </script>
 </body>
 </html>"""
@@ -652,6 +815,37 @@ async def live_rates():
     from api.coin_bot import get_live_usdt_rate
     rate = await get_live_usdt_rate()
     return {"rate": rate, "currency": "USDT", "source": "SquareAlgerie.com"}
+
+
+@app.get("/api/schedule")
+async def get_schedule():
+    """Returns current automated posting schedule configuration."""
+    try:
+        from app.publisher.state_tracker import get_schedule_config
+        config = get_schedule_config()
+        now_utc = datetime.now(timezone.utc)
+        algeria_hour = (now_utc.hour + 1) % 24
+        is_night = (algeria_hour >= config.get("night_start_hour_dz", 0) and algeria_hour < config.get("night_end_hour_dz", 8))
+        return {
+            "ok": True,
+            "config": config,
+            "is_night": is_night,
+            "algeria_hour": algeria_hour
+        }
+    except Exception as e:
+        return {"ok": False, "error": str(e)}
+
+
+@app.post("/api/schedule")
+async def update_schedule(request: Request):
+    """Updates automated posting schedule configuration."""
+    try:
+        data = await request.json()
+        from app.publisher.state_tracker import update_schedule_config
+        updated = update_schedule_config(data)
+        return {"ok": True, "config": updated}
+    except Exception as e:
+        return {"ok": False, "error": str(e)}
 
 
 @app.get("/api/scout")

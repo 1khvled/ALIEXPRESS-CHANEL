@@ -87,6 +87,14 @@ async def collect_and_post_last_10_deals():
     except Exception as e:
         print(f"[!] Coin reminder check error: {e}")
 
+    # Dynamic Interval & Day/Night Schedule Check (Controlled via Admin Bot & Dashboard)
+    from app.publisher.state_tracker import is_deal_posting_due, record_deal_posted_time
+    is_due, schedule_msg, active_interval = is_deal_posting_due()
+    print(f"\n[SCHEDULE EVALUATION] {schedule_msg}")
+    if not is_due:
+        print(f"--> Skipping deal collection this run. ({schedule_msg})")
+        return
+
     published_deals = []
     seen_products = set()
 
@@ -288,6 +296,7 @@ async def collect_and_post_last_10_deals():
 
                         if success:
                             record_product_published(deal.product_id, deal.title)
+                            record_deal_posted_time()
                             published_deals.append({
                                 "id": deal.id,
                                 "channel": ch,

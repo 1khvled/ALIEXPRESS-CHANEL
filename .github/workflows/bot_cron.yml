@@ -2,8 +2,10 @@ name: AliExpress Deals Telegram Bot
 
 on:
   schedule:
-    # Run every 30 minutes (prevent spam runs and protect channel health)
-    - cron: '*/30 * * * *'
+    # Daytime (08:00 to 23:59 Algerian Time / 07:00 to 22:59 UTC): Run every 5 minutes
+    - cron: '*/5 7-22 * * *'
+    # Nighttime (00:00 to 07:59 Algerian Time / 23:00 to 06:59 UTC): Run every 30 minutes
+    - cron: '*/30 23,0-6 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI anytime
 
 jobs:
