@@ -17,6 +17,7 @@ class PromoEvent:
     banner_tag: str
     is_major: bool
     coupon_tiers: List[Dict[str, str]]
+    banner_image_url: Optional[str] = None
 
 # Official AliExpress 2026 Sales Calendar
 PROMO_CALENDAR: List[PromoEvent] = [
@@ -33,7 +34,8 @@ PROMO_CALENDAR: List[PromoEvent] = [
             {"tier": "10/79$", "code": "CDDZ10"},
             {"tier": "20/159$", "code": "CDDZ20"},
             {"tier": "40/299$", "code": "CDDZ40"},
-        ]
+        ],
+        banner_image_url="https://ae-pic-a1.aliexpress-media.com/kf/HTB18eCBQXXXXXXfXXXX760XFXXXa.png"
     ),
     PromoEvent(
         name="Autumn Tech & Brands Sale",
@@ -151,5 +153,57 @@ class PromoTracker:
                 return f"⏳ استعدوا: {event.banner_tag} ينطلق بعد {days_left} أيام!"
 
         return None
+
+    async def scrape_aliexpress_promo_banner(self, campaign_url: Optional[str] = None) -> Optional[str]:
+        """
+        Scrapes or retrieves the official AliExpress promo banner image:
+        1. Resolves shortlink / campaign URL and fetches page metadata (og:image, twitter:image).
+        2. Filters strictly for AliExpress CDN domains (alicdn.com, aliexpress-media.com).
+        3. Falls back to official AliExpress CDN calendar banners (e.g. Choice Day).
+        """
+        if campaign_url:
+            try:
+                import httpx
+                from bs4 import BeautifulSoup
+                headers = {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
+                    "Accept-Language": "en-US,en;q=0.9,ar;q=0.8",
+                }
+                async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
+                    resp = await client.get(campaign_url, headers=headers)
+                    if resp.status_code == 200:
+                        soup = BeautifulSoup(resp.text, "html.parser")
+                        og = soup.find("meta", property="og:image") or soup.find("meta", attrs={"name": "og:image"})
+                        if og and og.get("content"):
+                            cand = og["content"].strip()
+                            if any(d in cand for d in ["alicdn.com", "aliexpress-media.com"]):
+                                return cand
+
+                        tw = soup.find("meta", attrs={"name": "twitter:image"})
+                        if tw and tw.get("content"):
+                            cand = tw["content"].strip()
+                            if any(d in cand for d in ["alicdn.com", "aliexpress-media.com"]):
+                                return cand
+
+                        for img in soup.find_all("img"):
+                            src = img.get("src") or img.get("data-src") or ""
+                            if any(d in src for d in ["alicdn.com", "aliexpress-media.com"]) and ("kf/" in src or "banner" in src.lower()):
+                                if not src.startswith("http"):
+                                    src = f"https:{src}"
+                                return src
+            except Exception:
+                pass
+
+        # Fallback to current or upcoming official event banner from AliExpress CDN
+        active = self.get_active_promo()
+        if active and active.banner_image_url:
+            return active.banner_image_url
+
+        next_event = self.get_next_promo()
+        if next_event and next_event[0].banner_image_url:
+            return next_event[0].banner_image_url
+
+        # General official AliExpress Deals CDN banner
+        return "https://ae-pic-a1.aliexpress-media.com/kf/HTB18eCBQXXXXXXfXXXX760XFXXXa.png"
 
 promo_tracker = PromoTracker()

@@ -7,11 +7,12 @@ from app.utils.logger import logger, record_system_log
 scheduler = AsyncIOScheduler()
 
 async def monitor_cycle():
-    """Scheduled task executing the 3-minute channel monitoring cycle."""
+    """Scheduled task executing the autonomous channel monitoring and deal publishing cycle."""
     try:
-        logger.info("Starting 3-minute Telegram collection cycle...")
-        collected = await telegram_collector.collect_all_channels()
-        logger.info(f"Collection cycle finished. New messages processed: {collected}")
+        from app.jobs.autonomous_engine import autonomous_engine
+        await autonomous_engine.initialize()
+        published = await autonomous_engine.run_single_cycle()
+        logger.info(f"Autonomous cycle finished. Deals published: {published}")
     except Exception as e:
         logger.exception(f"Unhandled error in monitor cycle: {e}")
         await record_system_log("ERROR", "scheduler", f"Monitor cycle failed: {e}")
