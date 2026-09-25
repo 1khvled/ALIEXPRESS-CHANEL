@@ -134,22 +134,43 @@ async def generate_coin_discount_response(product_id: str, canonical_url: str) -
             f"https://www.aliexpress.com/item/{product_id}.html?sourceType=562",
         ]
 
+        # 1. Fetch details
+        prod_title = "منتج مميز من AliExpress"
+        prod_price = None
+        prod_image = None
+        try:
+            details = await asyncio.to_thread(api.get_products_details, [product_id])
+            if details and len(details) > 0:
+                info = details[0]
+                t = getattr(info, 'product_title', None)
+                if t:
+                    prod_title = t[:90]
+                p = getattr(info, 'target_sale_price', None) or getattr(info, 'sale_price', None)
+                if p:
+                    try:
+                        prod_price = float(p)
+                    except Exception:
+                        pass
+                img = getattr(info, 'product_main_image_url', None)
+                if img and ("alicdn.com" in img or "aliexpress-media.com" in img):
+                    prod_image = img
+        except Exception:
+            pass
+
+        await asyncio.sleep(0.15)
+
+        # 2. Fetch affiliate links
         aff_map = {}
-        for attempt in range(3):
-            try:
-                raw_links = await asyncio.to_thread(api.get_affiliate_links, ",".join(target_urls))
-                if raw_links:
-                    for item in raw_links:
-                        orig = getattr(item, 'source_value', '')
-                        promo = getattr(item, 'promotion_link', '')
-                        if orig and promo:
-                            aff_map[orig] = promo
-                break
-            except Exception as e:
-                if "ApiCallLimit" in str(e) or "frequency exceeds" in str(e):
-                    await asyncio.sleep(1.5)
-                else:
-                    break
+        try:
+            raw_links = await asyncio.to_thread(api.get_affiliate_links, ",".join(target_urls))
+            if raw_links:
+                for item in raw_links:
+                    orig = getattr(item, 'source_value', '')
+                    promo = getattr(item, 'promotion_link', '')
+                    if orig and promo:
+                        aff_map[orig] = promo
+        except Exception:
+            pass
 
         coin_link_1 = aff_map.get(target_urls[0], target_urls[0])
         coin_link_2 = aff_map.get(target_urls[1], target_urls[1])
