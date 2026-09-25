@@ -211,3 +211,29 @@ def record_calendar_published():
     state = load_persistent_state()
     state["last_calendar_time"] = time.time()
     save_persistent_state(state)
+
+async def is_coin_reminder_eligible(min_hours: float = 48.0) -> Tuple[bool, str]:
+    """Checks if the educational Coins & PC guide reminder is eligible (randomized 48-72h interval)."""
+    await refresh_channel_cache()
+    state = load_persistent_state()
+    now = time.time()
+    last_rem = state.get("last_coin_reminder_time", 0.0)
+
+    jitter_seconds = state.get("next_reminder_interval_seconds", int(min_hours * 3600))
+    if (now - last_rem) < jitter_seconds:
+        hours_left = (jitter_seconds - (now - last_rem)) / 3600
+        return False, f"Coin reminder cooldown active ({hours_left:.1f} hours remaining)"
+
+    if _CACHED_CHANNEL_TEXTS and any(k in _CACHED_CHANNEL_TEXTS[0] for k in ["دليل متسوقي الحاسوب", "اجمع رصيد عملاتك اليومية", "جامع العملات التلقائي"]):
+        return False, "Coin reminder was recently posted and at the top of the channel"
+
+    return True, "Coin reminder eligible for posting"
+
+def record_coin_reminder_published():
+    import random
+    state = load_persistent_state()
+    state["last_coin_reminder_time"] = time.time()
+    state["next_reminder_interval_seconds"] = random.randint(48 * 3600, 72 * 3600)
+    state["coin_reminder_variant_idx"] = (state.get("coin_reminder_variant_idx", 0) + 1) % 3
+    save_persistent_state(state)
+

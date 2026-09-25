@@ -628,6 +628,7 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             "• <code>/post &lt;نص أو رابط&gt;</code> - للنشر الفوري في القناة دون معاينة.\n"
             "• <code>/notify_end</code> - نشر تنبيه اقتراب نهاية التخفيضات (مع حيلة حجز السعر 20 يوم).\n"
             "• <code>/notify_start</code> - نشر تنبيه الاستعداد لانطلاق التخفيضات (دليل السلة والكوبونات).\n"
+            "• <code>/reminder</code> - نشر تذكير العملات ودليل متسوقي الحاسوب (PC / Laptop).\n"
             "• <code>/calendar</code> - نشر رزنامة التخفيضات الرسمية.\n"
             "• <code>/regroup</code> - تجميع عروض المنتجات المتشابهة في منشور موحد.\n"
             "• <code>/disclaimer</code> - نشر وتثبيت تنبيه تغيير الدولة في القناة.\n"
@@ -695,6 +696,27 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
                 await send_admin_msg(chat_id, f"✅ <b>تم نشر تنبيه الاستعداد لانطلاق التخفيضات بنجاح في القناة!</b>\n🔗 <a href=\"{post_url}\">{post_url}</a>")
             else:
                 await send_admin_msg(chat_id, f"❌ فشل النشر: {err}")
+        except Exception as e:
+            await send_admin_msg(chat_id, f"❌ حدث خطأ: {e}")
+        return True
+
+    if text.startswith("/reminder") or text.startswith("/coins_tip") or text.startswith("تذكير عملات") or text.startswith("دليل الحاسوب"):
+        await send_admin_msg(chat_id, "⏳ جاري نشر المنشور التثقيفي للعملات ودليل الحاسوب في القناة @DzAliexpress0...")
+        try:
+            from app.publisher.bot_ad import post_bot_advertisement
+            v_idx = None
+            if "pc" in text.lower() or "حاسوب" in text or "كمبيوتر" in text:
+                v_idx = 0
+            elif "daily" in text.lower() or "يومي" in text:
+                v_idx = 1
+            elif "auto" in text.lower() or "github" in text.lower() or "collector" in text.lower():
+                v_idx = 2
+
+            success, msg = await post_bot_advertisement(force=True, variant_idx=v_idx)
+            if success:
+                await send_admin_msg(chat_id, f"✅ <b>تم نشر المنشور التثقيفي بنجاح في القناة!</b>\n{msg}")
+            else:
+                await send_admin_msg(chat_id, f"❌ فشل النشر: {msg}")
         except Exception as e:
             await send_admin_msg(chat_id, f"❌ حدث خطأ: {e}")
         return True

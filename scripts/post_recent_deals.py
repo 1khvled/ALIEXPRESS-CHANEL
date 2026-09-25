@@ -78,6 +78,15 @@ async def collect_and_post_last_10_deals():
     except Exception as e:
         print(f"[!] Promo alert check error: {e}")
 
+    # Automated Check: Rotating Coin & PC Educational Reminders (48-72h randomized interval)
+    try:
+        from app.publisher.bot_ad import post_bot_advertisement
+        c_success, c_msg = await post_bot_advertisement(force=False)
+        if c_success:
+            print(f"[COIN REMINDER AUTO-POST] {c_msg}")
+    except Exception as e:
+        print(f"[!] Coin reminder check error: {e}")
+
     published_deals = []
     seen_products = set()
 
