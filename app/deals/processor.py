@@ -119,11 +119,8 @@ class DealProcessor:
         and publishes or queues for manual review depending on PUBLISH_MODE and score.
         """
         try:
-            # 1. Tracking redirect URL
-            redirect = await redirect_service.create_or_get_redirect(
-                session, deal, deal.affiliate_url or deal.normalized_url or deal.original_url
-            )
-            public_deal_url = redirect_service.get_public_url(redirect.slug)
+            # 1. Use direct verified affiliate URL
+            post_deal_url = deal.affiliate_url or deal.original_url
 
             is_coupon_list = bool(deal.product_id and deal.product_id.startswith("COUPONS_"))
             coupon_items = []
@@ -136,7 +133,7 @@ class DealProcessor:
                 title=deal.title or "AliExpress Deal",
                 usd_price=deal.current_price or 0.0,
                 eur_price=deal.current_price_eur or 0.0,
-                affiliate_url=public_deal_url,
+                affiliate_url=post_deal_url,
                 coupon_code=deal.coupon_code,
                 has_points_discount=deal.has_points_discount,
                 coupon_list=coupon_items if is_coupon_list else None
@@ -148,7 +145,7 @@ class DealProcessor:
                 expected_title=deal.title or "",
                 expected_usd_price=deal.current_price,
                 expected_eur_price=deal.current_price_eur,
-                expected_affiliate_url=public_deal_url,
+                expected_affiliate_url=post_deal_url,
                 expected_coupon=deal.coupon_code,
                 expected_points=deal.has_points_discount,
                 is_coupon_list=is_coupon_list
@@ -159,7 +156,12 @@ class DealProcessor:
             if deal.image_url:
                 downloaded = await media_downloader.download_image(deal.image_url, deal.product_id)
                 if downloaded:
-                    local_img = media_renderer.prepare_post_image(downloaded, deal.product_id, deal.title)
+                    local_img = media_renderer.prepare_post_image(
+                        downloaded,
+                        deal.product_id,
+                        deal.title,
+                        usd_price=deal.current_price
+                    )
                     deal.local_image_path = str(local_img)
 
             if not local_img:

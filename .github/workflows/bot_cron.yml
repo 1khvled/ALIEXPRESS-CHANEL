@@ -1,0 +1,48 @@
+name: AliExpress Deals Telegram Bot
+
+on:
+  schedule:
+    # Run every 20 minutes (UTC)
+    - cron: '*/20 * * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub UI anytime
+
+jobs:
+  run-deals-collector:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install python-aliexpress-api
+
+      - name: Run Deals Publisher
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TARGET_CHANNEL_ID: ${{ secrets.TARGET_CHANNEL_ID }}
+          ALIEXPRESS_AFFILIATE_PROVIDER: portals
+          ALIEXPRESS_AFFILIATE_TRACKING_ID: ${{ secrets.ALIEXPRESS_AFFILIATE_TRACKING_ID }}
+          ALIEXPRESS_AFFILIATE_APP_KEY: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_KEY }}
+          ALIEXPRESS_AFFILIATE_APP_SECRET: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_SECRET }}
+          ADMIN_USER_ID: ${{ secrets.ADMIN_USER_ID }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL || 'sqlite+aiosqlite:///deals.db' }}
+        run: |
+          python scripts/post_recent_deals.py
+
+      - name: Commit and push DB changes (if using local SQLite)
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add deals.db storage/ || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update deals database [skip ci]" && git push)
+        continue-on-error: true

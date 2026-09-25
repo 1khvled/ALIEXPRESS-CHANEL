@@ -39,3 +39,9 @@ env/
 .idea/
 .vscode/
 *.swp
+
+# Temporary testing & debug files
+test_*.jpg
+debug_*.txt
+channel_samples.txt
+aliexpress_sdk/

@@ -3,12 +3,14 @@ from dataclasses import dataclass, field
 from typing import Optional, List, Dict
 import httpx
 from bs4 import BeautifulSoup
+from app.config.settings import settings
 from app.aliexpress.urls import extract_all_urls, is_aliexpress_url, is_potential_shortener
 from app.aliexpress.resolver import url_resolver
 from app.aliexpress.parser import (
     extract_prices,
     extract_coupon,
     detect_points_discount,
+    extract_country_instruction,
     extract_clean_title,
     is_spam_or_non_deal,
     extract_coupon_list
@@ -28,6 +30,7 @@ class ExtractedProduct:
     image_url: Optional[str]
     is_valid: bool
     raw_text: str
+    country_info: Optional[str] = None
     is_coupon_list: bool = False
     coupon_list: List[Dict[str, str]] = field(default_factory=list)
 
@@ -61,9 +64,11 @@ class ProductExtractor:
                 ali_url = u
                 break
 
-        # Check if this is a Full Coupon List bulletin
+        # Check if this is a Full Coupon List bulletin (must have 3+ coupons and NO single product price)
         coupon_items = extract_coupon_list(text)
-        if len(coupon_items) >= 2 and ali_url:
+        usd_price, eur_price = extract_prices(text)
+
+        if len(coupon_items) >= 3 and usd_price is None and ali_url:
             resolved = await self.resolver.resolve(ali_url)
             import hashlib
             codes_sig = ",".join(sorted(c["code"] for c in coupon_items))
@@ -81,6 +86,7 @@ class ProductExtractor:
                 image_url=None,
                 is_valid=True,
                 raw_text=text,
+                country_info=None,
                 is_coupon_list=True,
                 coupon_list=coupon_items
             )
@@ -95,27 +101,52 @@ class ProductExtractor:
             return None
 
         # 4. Extract single deal fields
-        usd_price, eur_price = extract_prices(text)
         coupon_code = extract_coupon(text)
         has_points = detect_points_discount(text)
+        country_info = extract_country_instruction(text)
         title = extract_clean_title(text)
 
-        # 5. Fetch page metadata if needed
+        # 5. Fetch official HD studio image & details via AliExpress Open Platform API
         image_url = None
-        if not title or not image_url:
+        if resolved.product_id and settings.ALIEXPRESS_AFFILIATE_APP_KEY and settings.ALIEXPRESS_AFFILIATE_APP_SECRET:
+            try:
+                from aliexpress_api import AliexpressApi, models
+                api = AliexpressApi(
+                    settings.ALIEXPRESS_AFFILIATE_APP_KEY,
+                    settings.ALIEXPRESS_AFFILIATE_APP_SECRET,
+                    models.Language.EN,
+                    models.Currency.USD,
+                    settings.ALIEXPRESS_AFFILIATE_TRACKING_ID or "default"
+                )
+                details = await asyncio.to_thread(api.get_products_details, [resolved.product_id])
+                if details and len(details) > 0:
+                    prod_info = details[0]
+                    if getattr(prod_info, 'product_main_image_url', None):
+                        image_url = prod_info.product_main_image_url
+                    if (not title or len(title) < 10) and getattr(prod_info, 'product_title', None):
+                        title = prod_info.product_title[:90]
+            except Exception as e:
+                logger.debug(f"API product details fetch skipped: {e}")
+
+        # Fallback to page metadata if image/title still missing
+        if not image_url or not title or len(title) < 10:
             page_meta = await self._fetch_page_metadata(resolved.canonical_url)
-            if not title and page_meta.get("title"):
-                title = page_meta["title"]
-            if page_meta.get("image"):
+            if not title or len(title) < 10:
+                if page_meta.get("title"):
+                    meta_t = page_meta["title"]
+                    meta_t = re.sub(r'(\s*-\s*AliExpress.*$|\s*\|\s*AliExpress.*$)', '', meta_t).strip()
+                    if len(meta_t) >= 4:
+                        title = meta_t[:100]
+            if not image_url and page_meta.get("image"):
                 image_url = page_meta["image"]
 
-        is_valid = bool(resolved.product_id and (usd_price or eur_price or title))
+        is_valid = bool(resolved.product_id and (usd_price or eur_price) and title)
 
         return ExtractedProduct(
             product_id=resolved.product_id,
             original_url=ali_url,
             canonical_url=resolved.canonical_url,
-            title=title or "AliExpress Deal",
+            title=title or "منتج مميز من AliExpress",
             current_price=usd_price,
             current_price_eur=eur_price,
             coupon_code=coupon_code,
@@ -123,6 +154,7 @@ class ProductExtractor:
             image_url=image_url,
             is_valid=is_valid,
             raw_text=text,
+            country_info=country_info,
             is_coupon_list=False,
             coupon_list=[]
         )
