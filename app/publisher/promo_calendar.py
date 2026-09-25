@@ -12,8 +12,15 @@ import httpx
 from sqlalchemy import select
 
 from app.config.settings import settings
+import os
+import json
 from app.aliexpress.promos import promo_tracker, PromoEvent
 from app.utils.logger import logger
+
+# Official AliExpress 2026 Promotion Calendar Image
+LOCAL_CALENDAR_PATH = os.path.join(os.path.dirname(__file__), "..", "assets", "official_calendar_october_2026.jpg")
+if not os.path.exists(LOCAL_CALENDAR_PATH):
+    LOCAL_CALENDAR_PATH = r"C:\Users\Abdelli\Downloads\photo_2026-09-25_18-41-05.jpg"
 
 CALENDAR_BANNER_IMG = "https://ae-pic-a1.aliexpress-media.com/kf/HTB18eCBQXXXXXXfXXXX760XFXXXa.png"
 
@@ -124,17 +131,28 @@ async def publish_calendar_to_channel(bot_token: Optional[str] = None, channel_i
 
     api_url = f"https://api.telegram.org/bot{token}"
     try:
-        async with httpx.AsyncClient(timeout=15.0) as client:
-            resp = await client.post(
-                f"{api_url}/sendPhoto",
-                json={
-                    "chat_id": target,
-                    "photo": CALENDAR_BANNER_IMG,
-                    "caption": caption[:1024],
-                    "parse_mode": "HTML",
-                    "reply_markup": markup
-                }
-            )
+        async with httpx.AsyncClient(timeout=20.0) as client:
+            if os.path.exists(LOCAL_CALENDAR_PATH):
+                with open(LOCAL_CALENDAR_PATH, "rb") as f:
+                    files = {"photo": ("official_aliexpress_calendar_2026.jpg", f, "image/jpeg")}
+                    data = {
+                        "chat_id": target,
+                        "caption": caption[:1024],
+                        "parse_mode": "HTML",
+                        "reply_markup": json.dumps(markup)
+                    }
+                    resp = await client.post(f"{api_url}/sendPhoto", data=data, files=files)
+            else:
+                resp = await client.post(
+                    f"{api_url}/sendPhoto",
+                    json={
+                        "chat_id": target,
+                        "photo": CALENDAR_BANNER_IMG,
+                        "caption": caption[:1024],
+                        "parse_mode": "HTML",
+                        "reply_markup": markup
+                    }
+                )
             data = resp.json()
             if resp.status_code == 200 and data.get("ok"):
                 msg_id = data.get("result", {}).get("message_id")

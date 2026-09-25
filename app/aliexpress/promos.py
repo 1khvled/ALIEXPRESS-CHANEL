@@ -22,11 +22,11 @@ class PromoEvent:
 # Official AliExpress 2026 Sales Calendar
 PROMO_CALENDAR: List[PromoEvent] = [
     PromoEvent(
-        name="Choice Day October",
-        name_ar="تخفيضات Choice Day لشهر أكتوبر 🔥",
+        name="Party Ready Sale / Choice Day",
+        name_ar="تخفيضات Party Ready Sale & Choice Day لشهر أكتوبر 🔥",
         start_date=datetime(2026, 10, 1, 0, 0, tzinfo=timezone.utc),
         end_date=datetime(2026, 10, 7, 23, 59, 59, tzinfo=timezone.utc),
-        banner_tag="🎯 Choice Day (1 - 7 أكتوبر)",
+        banner_tag="🎯 Party Ready Sale (1 - 7 أكتوبر)",
         is_major=True,
         coupon_tiers=[
             {"tier": "3/29$", "code": "CDDZ03"},
@@ -38,12 +38,21 @@ PROMO_CALENDAR: List[PromoEvent] = [
         banner_image_url="https://ae-pic-a1.aliexpress-media.com/kf/HTB18eCBQXXXXXXfXXXX760XFXXXa.png"
     ),
     PromoEvent(
-        name="Autumn Tech & Brands Sale",
-        name_ar="عروض الخريف والبراند داي 💻",
-        start_date=datetime(2026, 10, 18, 0, 0, tzinfo=timezone.utc),
-        end_date=datetime(2026, 10, 22, 23, 59, 59, tzinfo=timezone.utc),
-        banner_tag="⚡ عروض منتصف أكتوبر",
-        is_major=False,
+        name="Brand Day Sale",
+        name_ar="مهرجان Brand Day لشهر أكتوبر 🏷️",
+        start_date=datetime(2026, 10, 9, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 10, 11, 23, 59, 59, tzinfo=timezone.utc),
+        banner_tag="🏷️ Brand Day (9 - 11 أكتوبر)",
+        is_major=True,
+        coupon_tiers=[]
+    ),
+    PromoEvent(
+        name="Winter Offers",
+        name_ar="تخفيضات عروض الشتاء Winter Offers ❄️",
+        start_date=datetime(2026, 10, 14, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 10, 16, 23, 59, 59, tzinfo=timezone.utc),
+        banner_tag="❄️ Winter Offers (14 - 16 أكتوبر)",
+        is_major=True,
         coupon_tiers=[]
     ),
     PromoEvent(
