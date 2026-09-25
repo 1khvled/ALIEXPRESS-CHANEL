@@ -108,8 +108,8 @@ class ProductExtractor:
         # 4. Extract single deal fields
         coupon_code = extract_coupon(text)
         has_points = detect_points_discount(text)
-        country_info = extract_country_instruction(text)
         title = extract_clean_title(text)
+        country_info = extract_country_instruction(text, url=ali_url or "", title=title or "")
 
         # 5. Fetch official HD studio image & details via AliExpress Open Platform API
         image_url = None

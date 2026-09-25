@@ -116,11 +116,11 @@ class PromoTracker:
         """
         now = datetime.now(timezone.utc)
 
-        # 1. Message age check (reject messages older than 24 hours)
+        # 1. Message age check (allow fresh deals from the last 72 hours)
         if msg_datetime is not None:
             age = now - msg_datetime
-            if age > timedelta(hours=24):
-                return False, f"Message is too old ({age.total_seconds() / 3600:.1f} hours ago, max 24h)"
+            if age > timedelta(hours=72):
+                return False, f"Message is too old ({age.total_seconds() / 3600:.1f} hours ago, max 72h)"
 
         # 2. Expired date mentions in text
         for pat in EXPIRED_DATE_PATTERNS:

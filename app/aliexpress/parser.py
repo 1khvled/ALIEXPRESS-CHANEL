@@ -58,13 +58,22 @@ ALLOWED_CATEGORY_KEYWORDS_EN = [
     "monitor", "mechanical", "rgb", "dpi", "mouse pad", "mousepad",
     # Gaming & PC Brands
     "attack shark", "ajazz", "machenike", "aula", "darmoshark", "vgn", "zaopin",
-    "kysona", "fantech", "keychron", "royal kludge", "rk61", "epomaker", "akko",
-    "redragon", "razer", "logitech", "steelseries", "corsair", "hyperx", "dareu",
-    "thunderobot", "flydigi", "gamesir", "8bitdo", "gulikit", "easysmx", "mobapad",
+    "scyrox", "mad r", "vxe", "fantech", "keychron", "nuphy", "akko", "monsgeek",
+    "wobkey", "rainy75", "crush80", "bridge75", "hi75", "hi8", "leobog", "epomaker",
+    "royal kludge", "rk61", "redragon", "razer", "logitech", "steelseries", "corsair",
+    "hyperx", "dareu", "thunderobot", "flydigi", "gamesir", "8bitdo", "gulikit",
+    "easysmx", "mobapad", "iine", "dobe", "skull & co", "yunzii",
+    # Sensor & Switch Tech
+    "paw3395", "paw3950", "paw3311", "paw3370", "rapid trigger", "magnetic switch",
+    "hall effect", "8k", "4k", "polling rate", "glass pad", "cordura",
+    # Enthusiast brands
+    "pulsar", "lamzu", "ninjutso", "sora", "maya", "thorn", "atlantis",
+    "superlight", "g pro", "viper", "deathadder", "basilisk", "blackshark", "kraken",
     # GPU / PC parts & Specs
-    "gpu", "graphics card", "rtx", "gtx", "radeon", "ram", "ssd", "nvme", "ddr4", "ddr5",
+    "gpu", "graphics card", "rtx", "gtx", "radeon", "rx", "ram", "ssd", "nvme", "ddr4", "ddr5",
     "gaming chair", "cooling", "cooler", "fan", "motherboard", "processor", "ryzen", "intel core",
     "120hz", "144hz", "165hz", "240hz", "ips", "oled", "amoled",
+    "thermalright", "deepcool", "id-cooling", "arctic", "noctua", "nzxt", "lian li",
     # Phones & Brands
     "phone", "smartphone", "mobile", "iphone", "samsung", "xiaomi", "redmi",
     "poco", "oneplus", "realme", "oppo", "vivo", "nothing phone", "pixel",
@@ -80,13 +89,12 @@ ALLOWED_CATEGORY_KEYWORDS_EN = [
     "vr", "oculus", "meta quest", "steam deck", "rog ally", "legion go", "anbernic", "miyoo",
     # Audio
     "speaker", "soundbar", "microphone", "mic", "bluetooth", "anc", "hifi",
-    # Accessories (phone/tablet/pc)
+    # Accessories & Projectors
     "charger", "charging", "power bank", "case", "cover", "screen protector",
     "tempered glass", "stylus", "pen", "cable", "usb", "type-c", "hdmi",
     "adapter", "hub", "dock", "gan charger", "baseus", "ugreen", "anker",
-    # Camera & media
     "webcam", "camera", "drone", "action cam", "gopro", "tripod",
-    "ring light", "led strip", "projector",
+    "ring light", "led strip", "projector", "magcubic", "hy300",
     # Computers
     "mini pc", "laptop", "notebook", "chromebook", "macbook",
     # Generic tech
@@ -94,20 +102,25 @@ ALLOWED_CATEGORY_KEYWORDS_EN = [
 ]
 
 ALLOWED_CATEGORY_KEYWORDS_AR = [
-    "ماوس", "كيبورد", "لوحة مفاتيح", "سماعة", "سماعات", "يد تحكم", "يدة تحكم",
+    "ماوس", "كيبورد", "لوحة مفاتيح", "سماعة", "سماعات", "يد تحكم", "يدة تحكم", "يدة",
     "جيمنج", "قيمنق", "جيمينق", "جايمنج", "العاب", "ألعاب", "شاشة", "كرسي",
     "هاتف", "جوال", "موبايل", "تابلت", "لوحي", "ايباد", "آيباد",
     "ساعة", "ساعه", "ذكية", "سوار ذكي",
     "بلوتوث", "شاحن", "باور بانك", "كابل", "كفر", "جراب", "حامل",
-    "سبيكر", "مايك", "كاميرا", "درون", "بروجكتر", "لابتوب",
+    "سبيكر", "مايك", "كاميرا", "درون", "بروجكتر", "بروجكتور", "بروجيكتور", "لابتوب",
     "لاسلكي", "وايرلس", "بي سي", "كارت شاشة", "كرت شاشة", "معالج", "رام",
     "هونر", "هواوي", "شاومي", "ريدمي", "بوكو", "سامسونج", "ايفون", "آيفون",
-    "ريلمي", "انفينكس", "تكنو", "نوبيا", "لينوفو", "اسوس",
+    "ريلمي", "انفينكس", "تكنو", "نوبيا", "لينوفو", "اسوس", "باد ماوس", "ماوس باد",
+    "سويتش", "سويتشات", "عتاد", "صيدة",
 ]
 
 
-def is_allowed_category(title: str, text: str) -> Tuple[bool, Optional[str]]:
+def is_allowed_category(title: str, text: str, channel_username: str = "") -> Tuple[bool, Optional[str]]:
     """Check if the deal belongs to an allowed category (gaming, watches, phones, tablets, tech)."""
+    # 1. Dedicated PC Gaming channels are 100% gaming deals by definition
+    if channel_username.lower() in ["pcgamingpart", "bnddeals"]:
+        return True, None
+
     combined = f"{title} {text}".lower()
 
     # Check English keywords
@@ -245,13 +258,48 @@ def detect_points_discount(text: str) -> bool:
             return True
     return False
 
-def extract_country_instruction(text: str) -> Optional[str]:
-    if not text:
-        return None
-    for pattern, name in COUNTRY_PATTERNS:
-        if pattern.search(text):
-            return name
-    return None
+def extract_country_instruction(text: str, url: str = "", title: str = "") -> str:
+    """
+    Intelligently detects which country setting is needed for maximum discount.
+    1. Reads explicit mentions or flags in text or url (Canada 🇨🇦, Korea 🇰🇷, Algeria 🇩🇿, France 🇫🇷, Spain 🇪🇸).
+    2. If not explicitly specified, smartly infers:
+       - PC & Gaming hardware/peripherals (mice, keyboards, headsets, RAM, GPUs) -> Korea 🇰🇷 (standard for Algerian gaming channels).
+       - General gadgets, accessories, audio, smartwatches -> Canada 🇨🇦 (standard for high coin discounts).
+    """
+    combined = f"{text or ''} {url or ''}".lower()
+
+    # 1. Canada detection
+    if any(k in combined for k in ["كندا", "🇨🇦", "canada", "cad", "shiptocountry=ca", "country=ca"]):
+        return "كندا 🇨🇦"
+
+    # 2. Korea detection
+    if any(k in combined for k in ["كوريا", "🇰🇷", "korea", "krw", "shiptocountry=kr", "country=kr"]):
+        return "كوريا 🇰🇷"
+
+    # 3. Algeria detection (rare cases: local shipping / DZ coin promo)
+    if any(k in combined for k in ["الجزائر", "🇩🇿", "algeria", "shiptocountry=dz", "country=dz", "ديرو الجزائر", "بلاد الجزائر"]):
+        return "الجزائر 🇩🇿"
+
+    # 4. France detection
+    if any(k in combined for k in ["فرنسا", "🇫🇷", "france", "shiptocountry=fr", "country=fr"]):
+        return "فرنسا 🇫🇷"
+
+    # 5. Spain detection
+    if any(k in combined for k in ["إسبانيا", "اسبانيا", "🇪🇸", "spain", "shiptocountry=es"]):
+        return "إسبانيا 🇪🇸"
+
+    # 6. Smart Contextual Inference (PC Gaming -> Korea 🇰🇷, Other Tech -> Canada 🇨🇦)
+    full_context = f"{title or ''} {text or ''}".lower()
+    gaming_indicators = [
+        "mouse", "keyboard", "headset", "controller", "gaming", "game", "ajazz", "attack shark",
+        "aula", "darmoshark", "machenike", "vgn", "zaopin", "scyrox", "keychron", "ram", "gpu",
+        "ماوس", "كيبورد", "سماعة", "سماعات", "يد تحكم", "يدة", "جيمنج", "قيمنق", "ألعاب"
+    ]
+    if any(k in full_context for k in gaming_indicators):
+        return "كوريا 🇰🇷"
+
+    # Default to Canada 🇨🇦 for all other general deals (standard 70%+ coins)
+    return "كندا 🇨🇦"
 
 def extract_clean_title(text: str) -> Optional[str]:
     if not text:

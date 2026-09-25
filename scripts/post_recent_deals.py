@@ -60,6 +60,15 @@ async def collect_and_post_last_10_deals():
     except Exception as e:
         print(f"[!] Promo calendar check error: {e}")
 
+    # Automated Check: 14-day Region Disclaimer Pinning
+    try:
+        from app.publisher.region_disclaimer import check_and_auto_post_disclaimer
+        d_success, d_msg = await check_and_auto_post_disclaimer()
+        if d_success:
+            print(f"[REGION DISCLAIMER AUTO-POST] {d_msg}")
+    except Exception as e:
+        print(f"[!] Region disclaimer check error: {e}")
+
     published_deals = []
     seen_products = set()
 
@@ -132,7 +141,8 @@ async def collect_and_post_last_10_deals():
                     if not extracted.is_coupon_list:
                         allowed, reject_reason = is_allowed_category(
                             extracted.title or '',
-                            raw_text
+                            raw_text,
+                            channel_username=ch
                         )
                         if not allowed:
                             print(f"  [CATEGORY FILTERED] {reject_reason}")

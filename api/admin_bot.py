@@ -640,6 +640,21 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             await send_admin_msg(chat_id, f"❌ حدث خطأ: {e}")
         return True
 
+    if text.startswith("/disclaimer") or text.startswith("/guide") or text.startswith("تنبيه") or text.startswith("شرح"):
+        await send_admin_msg(chat_id, "⏳ جاري نشر وتثبيت تنبيه تغيير الدولة في القناة @DzAliexpress0...")
+        try:
+            from app.publisher.region_disclaimer import publish_and_pin_disclaimer
+            success, err, msg_id = await publish_and_pin_disclaimer(bot_token=ADMIN_BOT_TOKEN)
+            if success:
+                ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
+                post_url = f"https://t.me/{ch_clean}/{msg_id}"
+                await send_admin_msg(chat_id, f"✅ <b>تم نشر وتثبيت تنبيه تغيير الدولة بنجاح في القناة!</b> 📌\n🔗 <a href=\"{post_url}\">{post_url}</a>")
+            else:
+                await send_admin_msg(chat_id, f"❌ فشل النشر: {err}")
+        except Exception as e:
+            await send_admin_msg(chat_id, f"❌ حدث خطأ: {e}")
+        return True
+
     if text.startswith("/id") or text.startswith("/myid"):
         await send_admin_msg(chat_id, f"🆔 معرفك: <code>{user_id}</code> (مشرف معتمد 👑)")
         return True
@@ -705,30 +720,34 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
         country=country
     )
 
-    # Build admin interactive keyboard
-    has_multiple_images = len(candidate_images) > 1
-    admin_buttons = [
-        [
-            {"text": "📢 نشر هذا المنشور في القناة الآن 🚀", "callback_data": f"pub_{pid}_0"}
+    # Direct Channel Publication (Never repost or clutter admin chat)
+    await send_admin_msg(chat_id, f"🚀 <b>جاري نشر العرض مباشرة في القناة @DzAliexpress0...</b>")
+    success, err, post_msg_id = await publish_deal_post(pid, chosen_image=chosen_img, raw_user_text=text)
+
+    if success:
+        ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
+        post_url = f"https://t.me/{ch_clean}/{post_msg_id}"
+        has_multiple_images = len(candidate_images) > 1
+        confirm_buttons = [
+            [
+                {"text": "🔗 فتح المنشور في القناة 🚀", "url": post_url}
+            ]
         ]
-    ]
+        if has_multiple_images:
+            confirm_buttons.append([
+                {"text": f"🔄 تبديل الصورة (بائع آخر / زاوية) 🖼️ (1/{len(candidate_images)})", "callback_data": f"cycle_{pid}_1"}
+            ])
 
-    if has_multiple_images:
-        admin_buttons.append([
-            {"text": f"🔄 تبديل الصورة (بائع آخر / زاوية) 🖼️ (1/{len(candidate_images)})", "callback_data": f"cycle_{pid}_1"}
-        ])
+        await send_admin_msg(
+            chat_id,
+            f"✅ <b>تم نشر العرض مباشرة في القناة!</b> 🚀\n\n"
+            f"📌 <b>المنتج:</b> {html.escape(title)}\n"
+            f"💵 <b>السعر:</b> {price or 0.0}$\n"
+            f"📍 <b>الدولة:</b> {country or 'كندا 🇨🇦'}\n"
+            f"🔗 <a href=\"{post_url}\">{post_url}</a>",
+            {"inline_keyboard": confirm_buttons}
+        )
+    else:
+        await send_admin_msg(chat_id, f"❌ فشل نشر العرض في القناة: {err}")
 
-    admin_buttons.append([
-        {"text": "🛒 رابط الشراء المباشر", "url": product_link},
-        {"text": "🪙 رابط العملات", "url": coin_link}
-    ])
-
-    admin_keyboard = {"inline_keyboard": admin_buttons}
-
-    if chosen_img:
-        msg_id = await send_admin_photo(chat_id, chosen_img, caption, admin_keyboard)
-        if msg_id:
-            return True
-
-    await send_admin_msg(chat_id, caption, admin_keyboard)
     return True

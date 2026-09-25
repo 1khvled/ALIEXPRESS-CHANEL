@@ -132,7 +132,11 @@ class AutonomousEngine:
 
                 # 4. Strict category filter (Gaming, Watches, Phones, Tablets only; Coupon bulletin exempt)
                 if not extracted.is_coupon_list:
-                    allowed, reject_reason = is_allowed_category(extracted.title or "", raw_text)
+                    allowed, reject_reason = is_allowed_category(
+                        extracted.title or "",
+                        raw_text,
+                        channel_username=channel_username
+                    )
                     if not allowed:
                         logger.debug(f"[@{channel_username}] Category rejected: {reject_reason}")
                         if msg_url:
@@ -304,6 +308,16 @@ class AutonomousEngine:
         except Exception as e:
             logger.error(f"Error checking promo calendar: {e}")
 
+    async def check_and_post_disclaimer(self):
+        """Checks and auto-posts/pins the 14-day region disclaimer."""
+        try:
+            from app.publisher.region_disclaimer import check_and_auto_post_disclaimer
+            success, msg = await check_and_auto_post_disclaimer()
+            if success:
+                logger.info(f"Region disclaimer check: {msg}")
+        except Exception as e:
+            logger.error(f"Error checking region disclaimer: {e}")
+
     async def run_single_cycle(self) -> int:
         """Executes one scan cycle across all monitored channels."""
         # 1. Check if 24-hour bot advertisement is due
@@ -312,7 +326,10 @@ class AutonomousEngine:
         # 2. Check if promo calendar or sale transition is due
         await self.check_and_post_promo_calendar()
 
-        # 3. Scan deal channels
+        # 3. Check if 14-day region disclaimer is due
+        await self.check_and_post_disclaimer()
+
+        # 4. Scan deal channels
 
         total_new = 0
         async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
