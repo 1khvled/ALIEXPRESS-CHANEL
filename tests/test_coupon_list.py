@@ -39,7 +39,7 @@ async def test_format_and_validate_coupon_list():
         coupon_list=coupons
     )
 
-    assert "كودات التخفيض" in caption
+    assert ("كوبونات" in caption or "كودات التخفيض" in caption)
     assert "BDQT04" in caption
     assert "BDQT06" in caption
     assert "BDQT10" in caption

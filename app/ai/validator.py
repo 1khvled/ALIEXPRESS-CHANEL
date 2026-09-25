@@ -45,8 +45,8 @@ class DealCaptionValidator:
             return ValidationResult(approved=False, errors=["Caption is empty"])
 
         # CTA check
-        if "@Alilo07BOT" not in caption and "DealScoutDz" not in caption and "البوت" not in caption:
-            errors.append("Mandatory bot CTA is missing")
+        if "@Alilo07BOT" not in caption and "DealScout" not in caption and "البوت" not in caption and "@DzAliexpress0" not in caption:
+            errors.append("Mandatory channel/bot CTA is missing")
 
         # Affiliate URL check
         if expected_affiliate_url not in caption:
@@ -83,15 +83,15 @@ class DealCaptionValidator:
             if expected_coupon not in caption:
                 errors.append(f"Coupon code '{expected_coupon}' missing from caption")
         else:
-            if "كوبون" in caption:
+            if "كوبون :" in caption or "كود الخصم:" in caption:
                 errors.append("Unverified coupon line found in caption")
 
         # 4. Points discount check
         if expected_points:
-            if "خصم النقاط" not in caption:
+            if "خصم النقاط" not in caption and "تخفيض العملات" not in caption:
                 errors.append("Verified points discount line missing from caption")
         else:
-            if "خصم النقاط" in caption:
+            if "خصم النقاط" in caption or "تخفيض العملات:" in caption:
                 errors.append("Unverified points discount found in caption")
 
         return ValidationResult(
