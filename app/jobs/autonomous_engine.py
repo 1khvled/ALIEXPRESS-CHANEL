@@ -338,6 +338,17 @@ class AutonomousEngine:
         except Exception as e:
             logger.error(f"Error checking auto-regrouped bulletin: {e}")
 
+    async def check_and_post_promo_notifiers(self):
+        """Checks and auto-posts promo ending and promo starting alerts (1 day before)."""
+        try:
+            from app.publisher.promo_notifiers import check_and_auto_post_promo_notifiers
+            results = await check_and_auto_post_promo_notifiers()
+            if results:
+                for r in results:
+                    logger.info(f"Promo Era Notifier posted: {r['type']} for {r['promo']} -> Msg #{r.get('message_id')}")
+        except Exception as e:
+            logger.error(f"Error checking promo notifiers: {e}")
+
     async def run_single_cycle(self) -> int:
         """Executes one scan cycle across all monitored channels."""
         # 1. Check if 24-hour bot advertisement is due
@@ -346,10 +357,13 @@ class AutonomousEngine:
         # 2. Check if promo calendar or sale transition is due
         await self.check_and_post_promo_calendar()
 
-        # 3. Check if 14-day region disclaimer is due
+        # 3. Check if 1-day promo alerts (ending or starting) are due
+        await self.check_and_post_promo_notifiers()
+
+        # 4. Check if 14-day region disclaimer is due
         await self.check_and_post_disclaimer()
 
-        # 4. Check if auto-regrouping bulletin is due (4+ phones, 4+ mice, etc.)
+        # 5. Check if auto-regrouping bulletin is due (4+ phones, 4+ mice, etc.)
         await self.check_and_post_regrouped_bulletin()
 
         # 5. Scan deal channels

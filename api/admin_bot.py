@@ -626,6 +626,11 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             "4️⃣ اضغط <b>[ 📢 نشر هذا المنشور في القناة الآن 🚀 ]</b> وسينشر فوراً في القناة!\n\n"
             "⚡ <b>أوامر سريعة:</b>\n"
             "• <code>/post &lt;نص أو رابط&gt;</code> - للنشر الفوري في القناة دون معاينة.\n"
+            "• <code>/notify_end</code> - نشر تنبيه اقتراب نهاية التخفيضات (مع حيلة حجز السعر 20 يوم).\n"
+            "• <code>/notify_start</code> - نشر تنبيه الاستعداد لانطلاق التخفيضات (دليل السلة والكوبونات).\n"
+            "• <code>/calendar</code> - نشر رزنامة التخفيضات الرسمية.\n"
+            "• <code>/regroup</code> - تجميع عروض المنتجات المتشابهة في منشور موحد.\n"
+            "• <code>/disclaimer</code> - نشر وتثبيت تنبيه تغيير الدولة في القناة.\n"
             "• <code>/rate</code> - لمعرفة سعر الـ USDT الحالي من SquareAlgerie."
         )
         await send_admin_msg(chat_id, welcome_text)
@@ -647,6 +652,49 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
                 await send_admin_msg(chat_id, f"✅ <b>تم نشر رزنامة التخفيضات بنجاح في القناة!</b>\n🔗 <a href=\"{post_url}\">{post_url}</a>")
             else:
                 await send_admin_msg(chat_id, f"❌ فشل نشر الرزنامة: {err}")
+        except Exception as e:
+            await send_admin_msg(chat_id, f"❌ حدث خطأ: {e}")
+        return True
+
+    if text.startswith("/notify_end") or text.startswith("نهاية التخفيضات") or text.startswith("تنبيه نهاية"):
+        await send_admin_msg(chat_id, "⏳ جاري تجهيز ونشر تنبيه اقتراب نهاية التخفيضات في القناة @DzAliexpress0...")
+        try:
+            from app.publisher.promo_notifiers import build_promo_ending_alert, send_promo_alert_to_channel, record_promo_notifier_sent
+            from app.aliexpress.promos import promo_tracker
+            now = datetime.now(timezone.utc)
+            promo = promo_tracker.get_active_promo(now)
+            if not promo:
+                promo = promo_tracker.calendar[0]
+            alert_text, markup = build_promo_ending_alert(promo)
+            success, err, msg_id = await send_promo_alert_to_channel(alert_text, markup, bot_token=ADMIN_BOT_TOKEN)
+            if success:
+                ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
+                post_url = f"https://t.me/{ch_clean}/{msg_id}"
+                record_promo_notifier_sent(f"MANUAL_END_{promo.name}_{now.strftime('%Y%m%d')}")
+                await send_admin_msg(chat_id, f"✅ <b>تم نشر تنبيه اقتراب نهاية التخفيضات بنجاح في القناة!</b>\n🔗 <a href=\"{post_url}\">{post_url}</a>")
+            else:
+                await send_admin_msg(chat_id, f"❌ فشل النشر: {err}")
+        except Exception as e:
+            await send_admin_msg(chat_id, f"❌ حدث خطأ: {e}")
+        return True
+
+    if text.startswith("/notify_start") or text.startswith("انطلاق التخفيضات") or text.startswith("تنبيه بداية"):
+        await send_admin_msg(chat_id, "⏳ جاري تجهيز ونشر تنبيه الاستعداد لانطلاق التخفيضات في القناة @DzAliexpress0...")
+        try:
+            from app.publisher.promo_notifiers import build_promo_starting_alert, send_promo_alert_to_channel, record_promo_notifier_sent
+            from app.aliexpress.promos import promo_tracker
+            now = datetime.now(timezone.utc)
+            next_res = promo_tracker.get_next_promo(now)
+            promo = next_res[0] if next_res else promo_tracker.calendar[0]
+            alert_text, markup = build_promo_starting_alert(promo)
+            success, err, msg_id = await send_promo_alert_to_channel(alert_text, markup, bot_token=ADMIN_BOT_TOKEN)
+            if success:
+                ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
+                post_url = f"https://t.me/{ch_clean}/{msg_id}"
+                record_promo_notifier_sent(f"MANUAL_START_{promo.name}_{now.strftime('%Y%m%d')}")
+                await send_admin_msg(chat_id, f"✅ <b>تم نشر تنبيه الاستعداد لانطلاق التخفيضات بنجاح في القناة!</b>\n🔗 <a href=\"{post_url}\">{post_url}</a>")
+            else:
+                await send_admin_msg(chat_id, f"❌ فشل النشر: {err}")
         except Exception as e:
             await send_admin_msg(chat_id, f"❌ حدث خطأ: {e}")
         return True

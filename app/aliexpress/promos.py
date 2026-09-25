@@ -24,8 +24,8 @@ PROMO_CALENDAR: List[PromoEvent] = [
     PromoEvent(
         name="Party Ready Sale / Choice Day",
         name_ar="تخفيضات Party Ready Sale & Choice Day لشهر أكتوبر 🔥",
-        start_date=datetime(2026, 10, 1, 0, 0, tzinfo=timezone.utc),
-        end_date=datetime(2026, 10, 7, 23, 59, 59, tzinfo=timezone.utc),
+        start_date=datetime(2026, 10, 1, 7, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 10, 8, 6, 59, 59, tzinfo=timezone.utc),
         banner_tag="🎯 Party Ready Sale (1 - 7 أكتوبر)",
         is_major=True,
         coupon_tiers=[
@@ -40,8 +40,8 @@ PROMO_CALENDAR: List[PromoEvent] = [
     PromoEvent(
         name="Brand Day Sale",
         name_ar="مهرجان Brand Day لشهر أكتوبر 🏷️",
-        start_date=datetime(2026, 10, 9, 0, 0, tzinfo=timezone.utc),
-        end_date=datetime(2026, 10, 11, 23, 59, 59, tzinfo=timezone.utc),
+        start_date=datetime(2026, 10, 9, 7, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 10, 12, 6, 59, 59, tzinfo=timezone.utc),
         banner_tag="🏷️ Brand Day (9 - 11 أكتوبر)",
         is_major=True,
         coupon_tiers=[]
@@ -49,8 +49,8 @@ PROMO_CALENDAR: List[PromoEvent] = [
     PromoEvent(
         name="Winter Offers",
         name_ar="تخفيضات عروض الشتاء Winter Offers ❄️",
-        start_date=datetime(2026, 10, 14, 0, 0, tzinfo=timezone.utc),
-        end_date=datetime(2026, 10, 16, 23, 59, 59, tzinfo=timezone.utc),
+        start_date=datetime(2026, 10, 14, 7, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 10, 17, 6, 59, 59, tzinfo=timezone.utc),
         banner_tag="❄️ Winter Offers (14 - 16 أكتوبر)",
         is_major=True,
         coupon_tiers=[]
@@ -58,8 +58,8 @@ PROMO_CALENDAR: List[PromoEvent] = [
     PromoEvent(
         name="11.11 Global Shopping Festival Warm-Up",
         name_ar="التحضير لمهرجان 11.11 العالمي 💥",
-        start_date=datetime(2026, 11, 1, 0, 0, tzinfo=timezone.utc),
-        end_date=datetime(2026, 11, 10, 23, 59, 59, tzinfo=timezone.utc),
+        start_date=datetime(2026, 11, 1, 7, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 11, 11, 6, 59, 59, tzinfo=timezone.utc),
         banner_tag="⏳ تحضيرات مهرجان 11.11",
         is_major=True,
         coupon_tiers=[]
@@ -67,8 +67,8 @@ PROMO_CALENDAR: List[PromoEvent] = [
     PromoEvent(
         name="11.11 Global Shopping Festival Main Sale",
         name_ar="مهرجان 11.11 الأكبر عالمياً 🛍️",
-        start_date=datetime(2026, 11, 11, 0, 0, tzinfo=timezone.utc),
-        end_date=datetime(2026, 11, 18, 23, 59, 59, tzinfo=timezone.utc),
+        start_date=datetime(2026, 11, 11, 7, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 11, 19, 6, 59, 59, tzinfo=timezone.utc),
         banner_tag="🔥 أقوى تخفيضات السنة 11.11",
         is_major=True,
         coupon_tiers=[]
@@ -76,8 +76,8 @@ PROMO_CALENDAR: List[PromoEvent] = [
     PromoEvent(
         name="Black Friday & Cyber Monday",
         name_ar="تخفيضات الجمعة البيضاء Black Friday 🖤",
-        start_date=datetime(2026, 11, 24, 0, 0, tzinfo=timezone.utc),
-        end_date=datetime(2026, 11, 30, 23, 59, 59, tzinfo=timezone.utc),
+        start_date=datetime(2026, 11, 24, 7, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 12, 1, 6, 59, 59, tzinfo=timezone.utc),
         banner_tag="🖤 Black Friday السنوي",
         is_major=True,
         coupon_tiers=[]

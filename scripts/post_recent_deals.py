@@ -69,6 +69,15 @@ async def collect_and_post_last_10_deals():
     except Exception as e:
         print(f"[!] Region disclaimer check error: {e}")
 
+    # Automated Check: Promo Era Alerts (1-day before end & 1-day before start)
+    try:
+        from app.publisher.promo_notifiers import check_and_auto_post_promo_notifiers
+        alerts = await check_and_auto_post_promo_notifiers()
+        for alert in alerts:
+            print(f"[PROMO ALERT AUTO-POST] {alert.get('type')}: {alert.get('promo')} (Msg ID: {alert.get('message_id')})")
+    except Exception as e:
+        print(f"[!] Promo alert check error: {e}")
+
     published_deals = []
     seen_products = set()
 
