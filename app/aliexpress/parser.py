@@ -1,18 +1,16 @@
 import re
 from dataclasses import dataclass
-from typing import Optional, Tuple
+from typing import Optional, Tuple, List, Dict
 from app.config.settings import settings
 
 # Regex patterns for price detection
 PRICE_PATTERNS = [
-    # $29.99 or $ 29.99 or 29.99$ or 29,99$
     re.compile(r'\$\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
     re.compile(r'([0-9]+(?:[\.,][0-9]{1,2})?)\s*\$', re.IGNORECASE),
-    # 29.99 USD or USD 29.99
     re.compile(r'([0-9]+(?:[\.,][0-9]{1,2})?)\s*USD', re.IGNORECASE),
     re.compile(r'USD\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
-    # السعر : 20.12 or السعر: 20.12
     re.compile(r'السعر\s*[:：]\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
+    re.compile(r'السعــــر\s*[:：]\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
 ]
 
 EUR_PRICE_PATTERNS = [
@@ -21,11 +19,11 @@ EUR_PRICE_PATTERNS = [
     re.compile(r'([0-9]+(?:[\.,][0-9]{1,2})?)\s*EUR', re.IGNORECASE),
 ]
 
-# Patterns for coupon code
+# Patterns for single coupon code
 COUPON_PATTERNS = [
-    re.compile(r'(?:كوبون|كود|code|coupon)\s*[:：\-]\s*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
-    re.compile(r'🎟️?\s*(?:كوبون|كود|code|coupon)\s*[:：\-]?\s*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
-    re.compile(r'(?:استخدم كود|استعمل كود)\s*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
+    re.compile(r'(?:كوبـــ?ون|كود|code|coupon)\s*(?:[0-9]+(?:\.[0-9]+)?/[0-9]+(?:\.[0-9]+)?\$?)?\s*[:：\-]\s*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
+    re.compile(r'🎟️?\s*(?:كوبـــ?ون|كود|code|coupon)\s*[:：\-]?\s*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
+    re.compile(r'(?:استخدم كود|استعمل كود|قسيمة)\s*[:：\-]?\s*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
 ]
 
 # Points discount patterns
@@ -33,7 +31,75 @@ POINTS_PATTERNS = [
     re.compile(r'خصم\s*(?:النقاط|نقاط|العملات)', re.IGNORECASE),
     re.compile(r'نقاط\s*علي\s*إكسبريس', re.IGNORECASE),
     re.compile(r'coins\s*discount', re.IGNORECASE),
+    re.compile(r'تخفيض\s*العملات', re.IGNORECASE),
+    re.compile(r'تحتاج\s*الى\s*العملات', re.IGNORECASE),
+    re.compile(r'رابط\s*العملات', re.IGNORECASE),
 ]
+
+# Spam & non-deal keywords
+BLOCKED_STORE_KEYWORDS = [
+    "temu", "تيمو", "amazon", "امازون", "أمازون", "shein", "شي ان", "noon", "نون"
+]
+
+NON_DEAL_INDICATORS = [
+    "pinned a photo", "pinned a message", "تبادل إعلاني", "تبادل اعلاني",
+    "اشترك في قناتنا", "قناتنا الاحتياطية", "مسابقة ربح", "قنواتنا"
+]
+
+def is_spam_or_non_deal(text: str) -> Tuple[bool, Optional[str]]:
+    """
+    Identifies spam, competing platforms (Temu, Amazon), or random non-deal messages.
+    """
+    if not text or len(text.strip()) < 10:
+        return True, "Message is too short or empty"
+
+    lower_text = text.lower()
+
+    # Block competing e-commerce platforms
+    for store in BLOCKED_STORE_KEYWORDS:
+        if store in lower_text:
+            return True, f"Blocked store or platform detected: {store}"
+
+    # Block channel admin spam / meta chatter without deal context
+    for spam_kw in NON_DEAL_INDICATORS:
+        if spam_kw in lower_text and not any(k in lower_text for k in ["aliexpress", "s.click", "تخفيض", "سعر", "كوبون"]):
+            return True, f"Non-deal announcement: {spam_kw}"
+
+    return False, None
+
+def extract_coupon_list(text: str) -> List[Dict[str, str]]:
+    """
+    Detects and extracts lists of multiple promo codes from bulletin posts.
+    e.g. 🎟️ كوبون 4/35$ : BDQT04
+    """
+    if not text:
+        return []
+
+    coupons = []
+    lines = text.splitlines()
+
+    for line in lines:
+        line_clean = line.strip()
+        if not line_clean or "http://" in line_clean or "https://" in line_clean:
+            continue
+
+        # Look for pattern: [كوبون] [tier] : [CODE]
+        # Match lines like: كوبون 4/35$ : BDQT04 or 4/35$ : BDQT04 or 10/99$: BDQT10
+        m = re.search(
+            r'(?:🎟️?|🎫)?\s*(?:كوبـــ?ون|كود|code)?\s*([0-9]+(?:\.[0-9]+)?/[0-9]+(?:\.[0-9]+)?\$?|[0-9]+\$?(?:\s*/\s*[0-9]+\$?)?)\s*[:：\-]?\s*([A-Za-z0-9_-]{4,20})',
+            line_clean,
+            re.IGNORECASE
+        )
+        if m:
+            tier = m.group(1).strip()
+            code = m.group(2).strip()
+            if not tier.endswith("$"):
+                tier += "$"
+            # Avoid picking false codes like "https", "aliexpress"
+            if code.lower() not in {"http", "https", "aliexpress", "item", "link", "t.me"}:
+                coupons.append({"tier": tier, "code": code.upper()})
+
+    return coupons
 
 def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
     """
@@ -46,7 +112,6 @@ def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
     if not text:
         return None, None
 
-    # Check EUR pattern
     for pattern in EUR_PRICE_PATTERNS:
         m = pattern.search(text)
         if m:
@@ -56,20 +121,17 @@ def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
             except ValueError:
                 pass
 
-    # Check USD / standard patterns
     for pattern in PRICE_PATTERNS:
         m = pattern.search(text)
         if m:
             try:
                 candidate = float(m.group(1).replace(",", "."))
-                # Skip zero or unreasonable numbers
                 if 0.1 <= candidate <= 10000:
                     usd_val = candidate
                     break
             except ValueError:
                 pass
 
-    # Rate conversion if one is missing
     rate = settings.EUR_USD_RATE or 0.92
     if usd_val is not None and eur_val is None:
         eur_val = round(usd_val * rate, 2)
@@ -79,16 +141,15 @@ def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
     return usd_val, eur_val
 
 def extract_coupon(text: str) -> Optional[str]:
-    """Extracts coupon or discount promo code from text."""
+    """Extracts single coupon or promo code from a product deal post."""
     if not text:
         return None
     for pattern in COUPON_PATTERNS:
         m = pattern.search(text)
         if m:
             code = m.group(1).strip()
-            # Exclude false positives like "http", "https", "aliexpress"
-            if code.lower() not in {"http", "https", "aliexpress", "item", "link", "url"}:
-                return code
+            if code.lower() not in {"http", "https", "aliexpress", "item", "link", "url", "temu"}:
+                return code.upper()
     return None
 
 def detect_points_discount(text: str) -> bool:
@@ -102,8 +163,8 @@ def detect_points_discount(text: str) -> bool:
 
 def extract_clean_title(text: str) -> Optional[str]:
     """
-    Extracts product title from message text.
-    Usually the first line or line after emoji like 🔥 or تخفيض لـ.
+    Extracts clean product title from message text, stripping competitor channel watermarks,
+    bot links, and instructions.
     """
     if not text:
         return None
@@ -112,24 +173,33 @@ def extract_clean_title(text: str) -> Optional[str]:
     if not lines:
         return None
 
-    # Check for prefix lines like "تخفيض لـ X" or "عرض لـ X"
+    # Ignore lines that are competitor plugs or bot mentions
+    filtered_lines = []
+    for l in lines:
+        l_lower = l.lower()
+        if any(ign in l_lower for l in [
+            "t.me/", "youtube.com", "youtu.be", "قناتنا", "البوت", "تحويل دولة", "طريقة حجز",
+            "سعر تخفيض", "سعر العملات", "السعر", "الرابط", "رابط العملات"
+        ]):
+            continue
+        filtered_lines.append(l)
+
+    # 1. Look for explicit title prefix lines like "تخفيض لـ X"
     for line in lines:
-        m = re.search(r'(?:تخفيض لـ|عرض لـ|عرض خاص لـ|خصم لـ)\s*(.+)', line)
+        m = re.search(r'(?:تخفيض لـ[ــ]*|عرض لـ[ــ]*|خصم لـ[ــ]*|تخفيض الآن لـ?)\s*[:：\-]?\s*(.+)', line)
         if m:
             title = m.group(1).strip()
             title = re.sub(r'[\$€].*$', '', title).strip()
+            title = re.sub(r'https?://\S+', '', title).strip()
             if len(title) > 3:
-                return title
+                return title[:120]
 
-    # Fallback to the first non-empty line that doesn't start with URL
-    first_line = lines[0]
-    # Remove leading decorative emojis
-    first_line = re.sub(r'^[🔥🚨⚡💥✨📦🛒🎁📢\s\-:]+', '', first_line).strip()
-    # Strip trailing price or link if mixed in line
-    first_line = re.sub(r'https?://\S+', '', first_line).strip()
-    first_line = re.sub(r'[\$€].*$', '', first_line).strip()
-
-    if len(first_line) > 3:
-        return first_line[:120]
+    # 2. Check filtered lines
+    for line in filtered_lines:
+        clean = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻\s\-:]+', '', line).strip()
+        clean = re.sub(r'https?://\S+', '', clean).strip()
+        clean = re.sub(r'[\$€].*$', '', clean).strip()
+        if len(clean) >= 5 and not any(k in clean for k in ["السعر", "رابط", "كوبون"]):
+            return clean[:120]
 
     return None

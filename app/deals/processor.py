@@ -54,7 +54,8 @@ class DealProcessor:
             title=extracted.title,
             image_url=extracted.image_url,
             has_discount=extracted.has_points_discount,
-            coupon_code=extracted.coupon_code
+            coupon_code=extracted.coupon_code,
+            is_coupon_list=extracted.is_coupon_list
         )
 
         # Convert to our affiliate link
@@ -124,6 +125,12 @@ class DealProcessor:
             )
             public_deal_url = redirect_service.get_public_url(redirect.slug)
 
+            is_coupon_list = bool(deal.product_id and deal.product_id.startswith("COUPONS_"))
+            coupon_items = []
+            if is_coupon_list and deal.source_message and deal.source_message.raw_text:
+                from app.aliexpress.parser import extract_coupon_list
+                coupon_items = extract_coupon_list(deal.source_message.raw_text)
+
             # 2. Generate exact Arabic post
             caption = await caption_generator.generate(
                 title=deal.title or "AliExpress Deal",
@@ -131,18 +138,20 @@ class DealProcessor:
                 eur_price=deal.current_price_eur or 0.0,
                 affiliate_url=public_deal_url,
                 coupon_code=deal.coupon_code,
-                has_points_discount=deal.has_points_discount
+                has_points_discount=deal.has_points_discount,
+                coupon_list=coupon_items if is_coupon_list else None
             )
 
             # 3. Validate generated caption
             validation = caption_validator.validate(
                 caption=caption,
                 expected_title=deal.title or "",
-                expected_usd_price=deal.current_price or 0.0,
-                expected_eur_price=deal.current_price_eur or 0.0,
+                expected_usd_price=deal.current_price,
+                expected_eur_price=deal.current_price_eur,
                 expected_affiliate_url=public_deal_url,
                 expected_coupon=deal.coupon_code,
-                expected_points=deal.has_points_discount
+                expected_points=deal.has_points_discount,
+                is_coupon_list=is_coupon_list
             )
 
             # 4. Prepare image

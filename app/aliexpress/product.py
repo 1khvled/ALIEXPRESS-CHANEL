@@ -1,6 +1,6 @@
 import re
-from dataclasses import dataclass
-from typing import Optional
+from dataclasses import dataclass, field
+from typing import Optional, List, Dict
 import httpx
 from bs4 import BeautifulSoup
 from app.aliexpress.urls import extract_all_urls, is_aliexpress_url, is_potential_shortener
@@ -9,7 +9,9 @@ from app.aliexpress.parser import (
     extract_prices,
     extract_coupon,
     detect_points_discount,
-    extract_clean_title
+    extract_clean_title,
+    is_spam_or_non_deal,
+    extract_coupon_list
 )
 from app.utils.logger import logger
 
@@ -26,6 +28,8 @@ class ExtractedProduct:
     image_url: Optional[str]
     is_valid: bool
     raw_text: str
+    is_coupon_list: bool = False
+    coupon_list: List[Dict[str, str]] = field(default_factory=list)
 
 class ProductExtractor:
     def __init__(self):
@@ -37,37 +41,66 @@ class ProductExtractor:
         media_path: Optional[str] = None
     ) -> Optional[ExtractedProduct]:
         """
-        Parses a Telegram message to find AliExpress URLs and extract deal information.
-        Returns None if no AliExpress link or valid shortlink is found.
+        Parses a Telegram message from source channels.
+        Smartly filters out non-deal spam, extracts single AliExpress deals or full coupon lists.
         """
         if not text:
             return None
 
-        # 1. Find all URLs
+        # 1. Smart spam & non-deal filtering
+        is_spam, reason = is_spam_or_non_deal(text)
+        if is_spam:
+            logger.debug(f"Filtered non-deal message: {reason}")
+            return None
+
+        # 2. Find AliExpress URL(s)
         urls = extract_all_urls(text)
         ali_url = None
-
         for u in urls:
             if is_aliexpress_url(u) or is_potential_shortener(u):
                 ali_url = u
                 break
 
+        # Check if this is a Full Coupon List bulletin
+        coupon_items = extract_coupon_list(text)
+        if len(coupon_items) >= 2 and ali_url:
+            resolved = await self.resolver.resolve(ali_url)
+            import hashlib
+            codes_sig = ",".join(sorted(c["code"] for c in coupon_items))
+            coupon_hash = hashlib.sha256(codes_sig.encode()).hexdigest()[:12]
+
+            return ExtractedProduct(
+                product_id=f"COUPONS_{coupon_hash}",
+                original_url=ali_url,
+                canonical_url=resolved.canonical_url or ali_url,
+                title="أحدث كوبونات وتخفيضات AliExpress",
+                current_price=None,
+                current_price_eur=None,
+                coupon_code=None,
+                has_points_discount=False,
+                image_url=None,
+                is_valid=True,
+                raw_text=text,
+                is_coupon_list=True,
+                coupon_list=coupon_items
+            )
+
         if not ali_url:
             return None
 
-        # 2. Resolve URL
+        # 3. Resolve single deal URL
         resolved = await self.resolver.resolve(ali_url)
         if not resolved.is_valid:
             logger.info(f"Could not validate AliExpress link: {ali_url}")
             return None
 
-        # 3. Extract deal fields from text
+        # 4. Extract single deal fields
         usd_price, eur_price = extract_prices(text)
         coupon_code = extract_coupon(text)
         has_points = detect_points_discount(text)
         title = extract_clean_title(text)
 
-        # 4. If title or image not in text, try product page metadata
+        # 5. Fetch page metadata if needed
         image_url = None
         if not title or not image_url:
             page_meta = await self._fetch_page_metadata(resolved.canonical_url)
@@ -89,11 +122,12 @@ class ProductExtractor:
             has_points_discount=has_points,
             image_url=image_url,
             is_valid=is_valid,
-            raw_text=text
+            raw_text=text,
+            is_coupon_list=False,
+            coupon_list=[]
         )
 
     async def _fetch_page_metadata(self, url: str) -> dict:
-        """Fetches OpenGraph title and image from the product page when needed."""
         meta = {}
         try:
             async with httpx.AsyncClient(timeout=8.0, follow_redirects=True, verify=False) as client:

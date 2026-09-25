@@ -33,7 +33,7 @@ class DeduplicationEngine:
             cooldown_cutoff = datetime.now(timezone.utc) - timedelta(hours=self.cooldown_hours)
             conditions_time.append(Deal.created_at >= cooldown_cutoff)
 
-        active_statuses = ["PUBLISHED", "APPROVED", "PENDING_REVIEW"]
+        active_statuses = ["PUBLISHED", "APPROVED", "PENDING_REVIEW", "DETECTED"]
 
         # Layer 1: Global Product ID duplicate (same product from ANY channel)
         if product_id:

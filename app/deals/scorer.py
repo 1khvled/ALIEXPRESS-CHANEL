@@ -18,11 +18,15 @@ class DealScorer:
         title: Optional[str],
         image_url: Optional[str],
         has_discount: bool = False,
-        coupon_code: Optional[str] = None
+        coupon_code: Optional[str] = None,
+        is_coupon_list: bool = False
     ) -> int:
         """
         Calculates confidence score (0 - 100) based on verified deal attributes.
         """
+        if is_coupon_list and url_valid:
+            return 95
+
         total = 0
 
         # URL validity

@@ -1,53 +1,37 @@
-# Configuration for 10 Telegram deal source channels
-# These channels will be monitored every 180 seconds
+# Telegram deal source channels configured from user specifications
 
 channels:
-  - username: "aliexpress_deals_1"
-    name: "Ali Deals VIP"
+  - username: "ECKSDEAL"
+    name: "ECKS DEAL"
     enabled: true
     priority: 100
 
-  - username: "aliexpress_deals_2"
-    name: "Tech & Gadgets Deals"
+  - username: "zedstoreonline"
+    name: "Zed Store Online"
     enabled: true
     priority: 95
 
-  - username: "aliexpress_deals_3"
-    name: "Global Promo Deals"
+  - username: "Pcgamingpart"
+    name: "PC Gaming Part"
     enabled: true
     priority: 90
 
-  - username: "aliexpress_deals_4"
-    name: "Ali Express Flash"
+  - username: "lodydeals"
+    name: "Lody Deals"
     enabled: true
     priority: 85
 
-  - username: "aliexpress_deals_5"
-    name: "Electronics Discounts"
+  - username: "BNDDEALS"
+    name: "BND DEALS"
     enabled: true
     priority: 80
 
-  - username: "aliexpress_deals_6"
-    name: "Super Deals Community"
+  - username: "megaprix"
+    name: "Mega Prix"
     enabled: true
     priority: 75
 
-  - username: "aliexpress_deals_7"
-    name: "Daily AliExpress Finds"
+  - username: "aniscoupons"
+    name: "Anis Coupons"
     enabled: true
     priority: 70
-
-  - username: "aliexpress_deals_8"
-    name: "Gaming & PC Deals"
-    enabled: true
-    priority: 65
-
-  - username: "aliexpress_deals_9"
-    name: "Smart Home Promos"
-    enabled: true
-    priority: 60
-
-  - username: "aliexpress_deals_10"
-    name: "Coupons & Codes Central"
-    enabled: true
-    priority: 50

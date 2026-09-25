@@ -27,10 +27,12 @@ async def bootstrap_channels():
             channels_data = data.get("channels", [])
 
         async with db_context() as session:
+            active_usernames = []
             for item in channels_data:
                 username = item.get("username", "").strip().lstrip("@")
                 if not username:
                     continue
+                active_usernames.append(username)
 
                 existing = (await session.execute(
                     select(Channel).where(Channel.username == username)
@@ -45,9 +47,19 @@ async def bootstrap_channels():
                         last_message_id=0
                     )
                     session.add(ch)
+                else:
+                    existing.enabled = item.get("enabled", True)
+                    existing.display_name = item.get("name", existing.display_name)
+                    existing.priority = item.get("priority", existing.priority)
+
+            # Disable any channel not in channels.yaml
+            all_channels = (await session.execute(select(Channel))).scalars().all()
+            for ch in all_channels:
+                if ch.username not in active_usernames:
+                    ch.enabled = False
 
             await session.commit()
-            logger.info("Channels bootstrapped from configuration.")
+            logger.info("Channels synchronized from configuration.")
     except Exception as e:
         logger.error(f"Error bootstrapping channels: {e}")
 
