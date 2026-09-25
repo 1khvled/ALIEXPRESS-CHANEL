@@ -26,7 +26,7 @@ _REGROUP_STATE_FILE = "/tmp/regrouped_deals.json" if os.path.exists("/tmp") else
 
 CATEGORIES_CONFIG = {
     "phones": {
-        "header": "⚡⚡ الهواتف الذكية الأكثر طلباً ومبيعاً 📱⚡⚡",
+        "header": "📱 <b>دليل الهواتف الذكية المعتمدة | DealScout Smartphones</b>",
         "keywords": [
             "phone", "smartphone", "هاتف", "جوال", "موبايل", "poco", "redmi",
             "realme", "honor", "samsung", "infinix", "oppo", "vivo", "iphone",
@@ -38,7 +38,7 @@ CATEGORIES_CONFIG = {
         ]
     },
     "mice": {
-        "header": "⚡⚡ أفضل صيدات الماوسات القيمنق 🖱️⚡⚡",
+        "header": "🖱️ <b>دليل ماوسات القيمنق الاحترافية | DealScout Gaming Mice</b>",
         "keywords": [
             "mouse", "mice", "ماوس", "فأرة", "فارة", "attack shark x3",
             "attack shark r1", "attack shark x1", "ajazz aj", "vxe r1", "scyrox"
@@ -48,7 +48,7 @@ CATEGORIES_CONFIG = {
         ]
     },
     "keyboards": {
-        "header": "⚡⚡ أقوى عروض الكيبوردات الميكانيكية ⌨️⚡⚡",
+        "header": "⌨️ <b>دليل الكيبوردات الميكانيكية | DealScout Mechanical Keyboards</b>",
         "keywords": [
             "keyboard", "كيبورد", "لوحة مفاتيح", "ak820", "rainy75", "hi75",
             "crush80", "aula f75", "aula f87", "mechanical keyboard"
@@ -56,7 +56,7 @@ CATEGORIES_CONFIG = {
         "negative_keywords": []
     },
     "headsets": {
-        "header": "⚡⚡ أقوى عروض السماعات القيمنق والصوتيات 🎧⚡⚡",
+        "header": "🎧 <b>دليل السماعات والصوتيات المختارة | DealScout Audio</b>",
         "keywords": [
             "headset", "headphone", "earbuds", "earphone", "tws",
             "سماعة", "سماعات", "سماعة محيطية", "attack shark l90", "attack shark l80"
@@ -64,7 +64,7 @@ CATEGORIES_CONFIG = {
         "negative_keywords": []
     },
     "tablets": {
-        "header": "⚡⚡ أفضل عروض أجهزة التابلت والايباد 📟⚡⚡",
+        "header": "📟 <b>دليل أجهزة التابلت واللوحيات | DealScout Tablets</b>",
         "keywords": [
             "tablet", "tab", "pad", "ipad", "تابلت", "ايباد", "لوحي",
             "xiaomi pad", "redmi pad", "realme pad"
@@ -74,7 +74,7 @@ CATEGORIES_CONFIG = {
         ]
     },
     "pc_parts": {
-        "header": "⚡⚡ أقوى عروض قطع البي سي والعتاد 🖥️⚡⚡",
+        "header": "🖥️ <b>دليل عتاد وقطع البي سي | DealScout PC Hardware</b>",
         "keywords": [
             "ram", "ssd", "nvme", "gpu", "graphics card", "cooler", "thermal pad",
             "ptm7950", "كارت شاشة", "كرت شاشة", "معالج", "مشتت", "رام", "ddr4", "ddr5"
@@ -82,7 +82,7 @@ CATEGORIES_CONFIG = {
         "negative_keywords": []
     },
     "smartwatches": {
-        "header": "⚡⚡ أفضل عروض الساعات الذكية ⌚⚡⚡",
+        "header": "⌚ <b>دليل الساعات الذكية المعتمدة | DealScout Smartwatches</b>",
         "keywords": [
             "smartwatch", "smart watch", "smart band", "ساعة ذكية", "ساعة",
             "سوار ذكي", "colmi", "zeblaze", "amazfit"
@@ -211,7 +211,7 @@ async def check_and_publish_regrouped_bulletins(bot_token: Optional[str] = None)
         selected_items = items[:7]
         cat_config = CATEGORIES_CONFIG[cat_name]
 
-        # 3. Build Bulletin post matching user screenshot format
+        # 3. Build Bulletin post matching DealScout signature format
         lines = [
             cat_config["header"],
             "━━━━━━━━━━━━━━━━━"
@@ -219,12 +219,13 @@ async def check_and_publish_regrouped_bulletins(bot_token: Optional[str] = None)
 
         for item in selected_items:
             price_str = f"${int(item['price'])}" if item['price'].is_integer() else f"${item['price']:.2f}"
-            lines.append(f"🔻 <b>{item['title']}</b> بسعر <b>{price_str}</b>")
-            lines.append(f"🔗 {item['channel_url']}\n")
+            lines.append(f"▫️ <b>{item['title']}</b>")
+            lines.append(f"   💰 السعر: <b>{price_str}</b>")
+            lines.append(f"   🔗 رابط المنشور: {item['channel_url']}\n")
 
         lines.append("━━━━━━━━━━━━━━━━━")
-        lines.append("💡 <i>اضغط على روابط المنتجات أعلاه للشراء بأقل سعر.</i>")
-        lines.append("🪙 استخدم بوت DealScoutDz لزيادة تخفيض العملات: @Alilo07BOT")
+        lines.append("💡 <i>اضغط على رابط كل منتج أعلاه للانتقال لمنشور العرض والطلب المباشر.</i>")
+        lines.append("🪙 <b>تخفيض إضافي بالعملات:</b> أرسل رابط أي منتج للبوت @Alilo07BOT")
 
         bulletin_text = "\n".join(lines)
 

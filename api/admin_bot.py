@@ -244,15 +244,14 @@ async def build_exact_deal_caption(
     coins_text: Optional[str] = None,
     country: Optional[str] = None
 ) -> str:
-    """Builds caption matching the channel's exact auto-posting format with user overrides."""
+    """Builds caption matching DealScout signature theme with user overrides."""
     country_name = country or "كوريا 🇰🇷"
     eur_price = round(price * 0.92, 2) if price else 0.0
+    dzd_approx = int(price * 249) if price else 0
 
-    lines = [
-        f"لا تنسى تحويل دولة التطبيق إلى {country_name} 📍"
-    ]
+    lines = []
 
-    # Select smart situational hook
+    # 1. Smart signature badge
     hook = _caption_generator._select_smart_hook(
         title=title,
         usd_price=price or 0.0,
@@ -261,23 +260,35 @@ async def build_exact_deal_caption(
     )
     lines.append(hook)
 
+    # 2. Country recommendation
+    lines.append(f"🌐 دولة العرض: <b>{country_name}</b> (لأقصى تخفيض)")
+
     safe_title = html.escape(title)
-    lines.append(f"تخفيض لـ {safe_title}")
-
-    if price and price > 0:
-        lines.append(f"السعر : {price:.2f}$ ({eur_price:.2f}€)🔥")
-    else:
-        lines.append("سعر مميز وتخفيض عملات 🔥")
-
-    lines.append(f"رابط {affiliate_url}")
-
-    if coupon_code:
-        lines.append(f"كوبون : <code>{html.escape(coupon_code)}</code>")
-
-    lines.append(coins_text or "خصم النقاط (العملات)")
 
     lines.append("")
-    lines.append(f"🪙 استخدم بوت DealScoutDz للشراء بأقل سعر: @{PUBLIC_BOT_USERNAME}")
+    lines.append(f"📦 <b>{safe_title}</b>")
+    lines.append("━━━━━━━━━━━━━━━━━")
+
+    if price and price > 0:
+        dzd_str = f" (~<b>{dzd_approx:,} دج</b>)" if dzd_approx > 0 else ""
+        lines.append(f"💰 <b>السعر:</b> <b>${price:.2f}</b>{dzd_str} | <i>{eur_price:.2f}€</i>")
+    else:
+        lines.append("💰 <b>السعر:</b> <b>سعر خاص ومخفض</b>")
+
+    if coupon_code:
+        lines.append(f"🎟️ <b>كود الخصم:</b> <code>{html.escape(coupon_code)}</code>")
+
+    if coins_text:
+        lines.append(f"🪙 <b>تخفيض العملات:</b> {html.escape(coins_text)}")
+    else:
+        lines.append("🪙 <b>تخفيض العملات:</b> مفعّل تلقائياً عبر الرابط")
+
+    lines.append("")
+    lines.append("🔗 <b>رابط الطلب المباشر:</b>")
+    lines.append(f"{affiliate_url}")
+    lines.append("━━━━━━━━━━━━━━━━━")
+    lines.append("💡 <i>افتح الرابط عبر تطبيق AliExpress لتطبيق كامل الخصم.</i>")
+    lines.append(f"📢 قناة العروض المعتمدة: @{TARGET_CHANNEL_ID.lstrip('@')}")
 
     return "\n".join(lines)
 
