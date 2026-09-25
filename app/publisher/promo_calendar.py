@@ -180,35 +180,23 @@ async def check_and_auto_post_promo_transitions() -> Tuple[bool, Optional[str]]:
     """
     Automated check designed to run in background / cron:
     1. Checks if a promo has ended within the last 24h and the next transition post hasn't been posted yet.
-    2. Checks if weekly calendar refresh is due (every 7 days).
+    2. Checks if weekly calendar refresh is due (every 7 days) using central state tracker.
     """
-    now = datetime.now(timezone.utc)
+    from app.publisher.state_tracker import is_calendar_eligible, record_calendar_published
 
-    # Check database or memory tracking
+    eligible, reason = await is_calendar_eligible()
+    if not eligible:
+        return False, reason
+
+    now = datetime.now(timezone.utc)
     from app.db.session import db_context
     from app.db.models import Deal
 
-    async with db_context() as session:
-        # Check last calendar post
-        last_cal = (await session.execute(
-            select(Deal).where(Deal.product_id.like("PROMO_CALENDAR_%")).order_by(Deal.created_at.desc()).limit(1)
-        )).scalar_one_or_none()
-
-        cutoff_7d = now - timedelta(days=7)
-        should_post_calendar = False
-
-        if not last_cal or not last_cal.created_at:
-            should_post_calendar = True
-        else:
-            t = last_cal.created_at
-            if t.tzinfo is None:
-                t = t.replace(tzinfo=timezone.utc)
-            if t < cutoff_7d:
-                should_post_calendar = True
-
-        if should_post_calendar:
-            success, err, msg_id = await publish_calendar_to_channel()
-            if success:
+    success, err, msg_id = await publish_calendar_to_channel()
+    if success:
+        record_calendar_published()
+        try:
+            async with db_context() as session:
                 record = Deal(
                     product_id=f"PROMO_CALENDAR_{now.strftime('%Y%m%d')}",
                     original_url="https://aliexpress.com",
@@ -217,7 +205,7 @@ async def check_and_auto_post_promo_transitions() -> Tuple[bool, Optional[str]]:
                 )
                 session.add(record)
                 await session.commit()
-                return True, f"Published official promo calendar (Msg ID: {msg_id})"
-            return False, err
-
-    return False, "Promo calendar is already up to date."
+        except Exception:
+            pass
+        return True, f"Published official promo calendar (Msg ID: {msg_id})"
+    return False, err

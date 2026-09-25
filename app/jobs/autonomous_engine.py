@@ -143,7 +143,15 @@ class AutonomousEngine:
                             self.seen_message_urls.add(msg_url)
                         continue
 
-                # 5. Deduplication
+                # 5. Strict Deduplication via central state_tracker (JSON State + DB + Live Channel text)
+                from app.publisher.state_tracker import is_product_already_published, record_product_published
+                already_pub, pub_reason = await is_product_already_published(extracted.product_id, extracted.title or "")
+                if already_pub:
+                    logger.debug(f"[@{channel_username}] Strict duplicate skipped: {pub_reason}")
+                    if msg_url:
+                        self.seen_message_urls.add(msg_url)
+                    continue
+
                 if extracted.product_id in self.seen_products:
                     if msg_url:
                         self.seen_message_urls.add(msg_url)
@@ -265,6 +273,7 @@ class AutonomousEngine:
                     )
 
                     if success:
+                        record_product_published(deal.product_id, deal.title)
                         self.seen_products.add(extracted.product_id)
                         if msg_url:
                             self.seen_message_urls.add(msg_url)

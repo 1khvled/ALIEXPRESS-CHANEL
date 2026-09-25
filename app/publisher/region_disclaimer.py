@@ -103,6 +103,11 @@ async def publish_and_pin_disclaimer(bot_token: Optional[str] = None) -> Tuple[b
                 logger.warning(f"Could not pin message #{msg_id}: {e}")
 
             _set_last_pinned_time(time.time())
+            try:
+                from app.publisher.state_tracker import record_disclaimer_published
+                record_disclaimer_published()
+            except Exception:
+                pass
             return True, None, msg_id
 
     except Exception as e:
@@ -111,15 +116,13 @@ async def publish_and_pin_disclaimer(bot_token: Optional[str] = None) -> Tuple[b
 
 async def check_and_auto_post_disclaimer(force: bool = False) -> Tuple[bool, str]:
     """
-    Enforces 14-day recurrence for the region disclaimer.
+    Enforces 14-day recurrence for the region disclaimer using central state tracker.
     """
-    now = time.time()
-    last_time = _get_last_pinned_time()
-    fourteen_days_sec = 14 * 86400  # 14 days
-
-    if not force and (now - last_time < fourteen_days_sec):
-        days_passed = (now - last_time) / 86400
-        return False, f"Disclaimer was posted {days_passed:.1f} days ago (cooldown 14 days)"
+    if not force:
+        from app.publisher.state_tracker import is_disclaimer_eligible
+        eligible, reason = await is_disclaimer_eligible()
+        if not eligible:
+            return False, reason
 
     success, err, msg_id = await publish_and_pin_disclaimer()
     if success:

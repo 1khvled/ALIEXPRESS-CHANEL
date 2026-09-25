@@ -2,8 +2,8 @@ name: AliExpress Deals Telegram Bot
 
 on:
   schedule:
-    # Run every 5 minutes (UTC)
-    - cron: '*/5 * * * *'
+    # Run every 30 minutes (prevent spam runs and protect channel health)
+    - cron: '*/30 * * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI anytime
 
 jobs:
@@ -43,6 +43,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add deals.db storage/ || true
+          git add storage/state/ deals.db storage/ || true
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update deals database [skip ci]" && git push)
         continue-on-error: true

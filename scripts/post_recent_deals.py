@@ -85,9 +85,11 @@ async def collect_and_post_last_10_deals():
 
     print(f"Loaded {len(seen_products)} existing published products for deduplication.")
 
+    MAX_DEALS_PER_RUN = 2
+
     async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
         for ch in CHANNELS:
-            if len(published_deals) >= 10:
+            if len(published_deals) >= MAX_DEALS_PER_RUN:
                 break
 
             url = f"https://t.me/s/{ch}"
@@ -103,7 +105,7 @@ async def collect_and_post_last_10_deals():
                 print(f"  Found {len(blocks)} message blocks in @{ch}")
 
                 for block in reversed(blocks):
-                    if len(published_deals) >= 10:
+                    if len(published_deals) >= MAX_DEALS_PER_RUN:
                         break
 
                     text_div = block.find("div", class_="tgme_widget_message_text")
@@ -148,9 +150,15 @@ async def collect_and_post_last_10_deals():
                             print(f"  [CATEGORY FILTERED] {reject_reason}")
                             continue
 
-                    # 6. Deduplication check
+                    # 6. Strict Deduplication check (Persistent JSON State + DB + Live Channel text)
+                    from app.publisher.state_tracker import is_product_already_published, record_product_published
+                    already_pub, pub_reason = await is_product_already_published(extracted.product_id, extracted.title or "")
+                    if already_pub:
+                        print(f"  [DUPLICATE STRICT SKIPPED] {pub_reason}")
+                        continue
+
                     if extracted.product_id in seen_products:
-                        print(f"  [DUPLICATE SKIPPED] '{extracted.product_id}' already posted.")
+                        print(f"  [DUPLICATE SKIPPED] '{extracted.product_id}' already seen in current run.")
                         continue
 
                     seen_products.add(extracted.product_id)
@@ -261,6 +269,7 @@ async def collect_and_post_last_10_deals():
                         )
 
                         if success:
+                            record_product_published(deal.product_id, deal.title)
                             published_deals.append({
                                 "id": deal.id,
                                 "channel": ch,

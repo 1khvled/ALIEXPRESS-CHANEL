@@ -18,6 +18,8 @@ storage/downloads/*
 !storage/downloads/.gitkeep
 storage/generated/*
 !storage/generated/.gitkeep
+!storage/state/
+!storage/state/*
 
 # Python artifacts
 __pycache__/
