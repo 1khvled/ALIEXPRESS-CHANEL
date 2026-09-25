@@ -307,7 +307,7 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
 
     direct_product = f"https://www.aliexpress.com/item/{product_id}.html"
     direct_coin = f"https://m.aliexpress.com/p/coin-index/index.html?productIds={product_id}"
-    direct_bundle = f"https://www.aliexpress.com/ssr/300000512/BundleDeals2?productIds={product_id}"
+    direct_bundle = f"https://www.aliexpress.com/item/{product_id}.html?sourceType=562"
     direct_super = f"https://www.aliexpress.com/item/{product_id}.html?sourceType=680"
     direct_limited = f"https://www.aliexpress.com/item/{product_id}.html?sourceType=562"
 
@@ -427,6 +427,7 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
         "image_url": prod_image,
         "product_link": product_link,
         "coin_link": coin_link,
+        "bundle_link": bundle_link,
         "reply_markup": reply_markup
     }
 
@@ -439,6 +440,12 @@ async def publish_deal_to_channel(product_id: str, raw_user_text: str = "") -> T
     eur_price = round(prod_price * 0.92, 2)
     product_link = res.get("product_link") or f"https://www.aliexpress.com/item/{product_id}.html"
     image_url = res.get("image_url")
+
+    # Smart Deal Link: Coin link (90%+) or Bundle link (rare cases)
+    is_bundle = any(k in raw_user_text.lower() for k in ["bundle", "حزم", "حزمة", "3 بـ", "3 منتجات"])
+    deal_link = res.get("bundle_link") if is_bundle else res.get("coin_link")
+    if not deal_link:
+        deal_link = res.get("coin_link") or product_link
 
     # Smart situational hook
     t_lower = prod_title.lower()
@@ -455,7 +462,7 @@ async def publish_deal_to_channel(product_id: str, raw_user_text: str = "") -> T
         hook,
         f"تخفيض لـ {html.escape(prod_title)}",
         f"السعر : {prod_price:.2f}$ ({eur_price:.2f}€)🔥" if prod_price > 0 else "سعر مميز وتخفيض عملات 🔥",
-        f"رابط {product_link}",
+        f"رابط {deal_link}",
         "خصم النقاط (العملات)",
         "",
         "🪙 استخدم بوت DealScoutDz للشراء بأقل سعر: @Alilo07BOT"
@@ -465,7 +472,7 @@ async def publish_deal_to_channel(product_id: str, raw_user_text: str = "") -> T
     channel_reply_markup = {
         "inline_keyboard": [
             [
-                {"text": "🛒 رابط الشراء من AliExpress", "url": product_link}
+                {"text": "🛒 رابط الشراء من AliExpress", "url": deal_link}
             ],
             [
                 {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": "https://t.me/Alilo07BOT"}

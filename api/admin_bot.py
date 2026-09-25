@@ -136,7 +136,14 @@ def parse_user_deal_submission(raw_text: str) -> Dict[str, Any]:
     m_title = re.search(r'تخفيض\s*لـ+[\s:]*([^\n\r]+)', text)
     if m_title:
         candidate_title = m_title.group(1).strip()
-        if len(candidate_title) >= 5 and "http" not in candidate_title:
+        # Clean inline price, coupon, and coins keywords if they were on the same line
+        candidate_title = re.sub(r'(?:السعــــ?ر|السعر|Price|price)\s*[:💲]*\s*\$?[0-9]+[.,]?[0-9]*\s*\$?', '', candidate_title, flags=re.IGNORECASE)
+        candidate_title = re.sub(r'\$?[0-9]+[.,][0-9]{1,2}\s*\$?', '', candidate_title)
+        candidate_title = re.sub(r'(?:كوبون|كود|قسيمة)\s*[:\-]?\s*[A-Za-z0-9_]+', '', candidate_title, flags=re.IGNORECASE)
+        candidate_title = re.sub(r'(?:خصم\s*(?:النقاط|العملات)|عملات|coins?).*', '', candidate_title, flags=re.IGNORECASE)
+        candidate_title = re.sub(r'https?://\S+', '', candidate_title).strip()
+        candidate_title = re.sub(r'[|؛:,\-_~]+$', '', candidate_title).strip()
+        if len(candidate_title) >= 5:
             data["custom_title"] = candidate_title
 
     return data
@@ -284,6 +291,7 @@ async def publish_deal_post(product_id: str, chosen_image: Optional[str] = None,
     title = deal_state.get("title") or "منتج مميز من AliExpress"
     price = deal_state.get("price")
     product_link = deal_state.get("product_link") or f"https://www.aliexpress.com/item/{product_id}.html"
+    deal_link = deal_state.get("primary_link") or deal_state.get("coin_link") or product_link
     coupon = deal_state.get("coupon")
     coins_text = deal_state.get("coins_text")
     country = deal_state.get("country")
@@ -291,7 +299,7 @@ async def publish_deal_post(product_id: str, chosen_image: Optional[str] = None,
     caption = await build_exact_deal_caption(
         title=title,
         price=price,
-        affiliate_url=product_link,
+        affiliate_url=deal_link,
         coupon_code=coupon,
         coins_text=coins_text,
         country=country
@@ -306,7 +314,7 @@ async def publish_deal_post(product_id: str, chosen_image: Optional[str] = None,
     channel_reply_markup = {
         "inline_keyboard": [
             [
-                {"text": "🛒 رابط الشراء من AliExpress", "url": product_link}
+                {"text": "🛒 رابط الشراء من AliExpress", "url": deal_link}
             ],
             [
                 {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": f"https://t.me/{PUBLIC_BOT_USERNAME}"}
@@ -364,6 +372,11 @@ async def prepare_deal_state(pid: str, raw_user_text: str = "") -> Dict[str, Any
     country = user_inputs["country"] or "كوريا 🇰🇷"
     product_link = res.get("product_link") or f"https://www.aliexpress.com/item/{pid}.html"
     coin_link = res.get("coin_link") or product_link
+    bundle_link = res.get("bundle_link") or product_link
+
+    # Determine deal type: 90%+ are coin deals, rare cases are bundle
+    is_bundle = any(k in raw_user_text.lower() for k in ["bundle", "حزم", "حزمة", "3 بـ", "3 منتجات"])
+    primary_link = bundle_link if is_bundle else coin_link
 
     # 3. Collect candidate images from original seller + other sellers
     main_image = res.get("image_url")
@@ -395,6 +408,9 @@ async def prepare_deal_state(pid: str, raw_user_text: str = "") -> Dict[str, Any
         "country": country,
         "product_link": product_link,
         "coin_link": coin_link,
+        "bundle_link": bundle_link,
+        "primary_link": primary_link,
+        "is_bundle": is_bundle,
         "images": candidate_images,
         "chosen_image": chosen_image,
         "raw_text": raw_user_text
@@ -494,6 +510,7 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             price = deal_state.get("price")
             product_link = deal_state.get("product_link") or f"https://www.aliexpress.com/item/{target_pid}.html"
             coin_link = deal_state.get("coin_link") or product_link
+            deal_link = deal_state.get("primary_link") or coin_link
             coupon = deal_state.get("coupon")
             coins_text = deal_state.get("coins_text")
             country = deal_state.get("country")
@@ -501,7 +518,7 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             caption = await build_exact_deal_caption(
                 title=title,
                 price=price,
-                affiliate_url=product_link,
+                affiliate_url=deal_link,
                 coupon_code=coupon,
                 coins_text=coins_text,
                 country=country
@@ -671,6 +688,7 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
     price = deal_state.get("price")
     product_link = deal_state.get("product_link") or f"https://www.aliexpress.com/item/{pid}.html"
     coin_link = deal_state.get("coin_link") or product_link
+    deal_link = deal_state.get("primary_link") or coin_link
     coupon = deal_state.get("coupon")
     coins_text = deal_state.get("coins_text")
     country = deal_state.get("country")
@@ -681,7 +699,7 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
     caption = await build_exact_deal_caption(
         title=title,
         price=price,
-        affiliate_url=product_link,
+        affiliate_url=deal_link,
         coupon_code=coupon,
         coins_text=coins_text,
         country=country

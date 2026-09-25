@@ -326,3 +326,24 @@ def extract_clean_title(text: str) -> Optional[str]:
             return c[:100]
 
     return None
+
+
+def detect_deal_type(raw_text: str, url: str = "") -> str:
+    """
+    Intelligently determines whether a deal is a 'bundle' deal or a 'coin' deal.
+    90%+ of channel offers are coin deals.
+    Bundle deals are identified by keywords like 'bundle', 'حزمة', 'حزم', '3 بـ',
+    '3 منتجات', 'choice bundle', or bundle URL patterns.
+    """
+    text_lower = (raw_text or "").lower()
+    url_lower = (url or "").lower()
+
+    bundle_keywords = [
+        "bundle", "bundledraw", "bundledeals", "bundle deals",
+        "حزم", "حزمة", "3 بـ", "3 منتجات", "3 items", "3 حبات",
+        "sourcetype=562"
+    ]
+    if any(k in text_lower for k in bundle_keywords) or any(k in url_lower for k in bundle_keywords):
+        return "bundle"
+
+    return "coin"

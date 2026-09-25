@@ -23,7 +23,7 @@ from app.config.settings import settings
 from app.db.session import init_db, db_context
 from app.db.models import Channel, SourceMessage, Deal, GeneratedPost
 from app.aliexpress.product import product_extractor
-from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category
+from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category, detect_deal_type
 from app.aliexpress.promos import promo_tracker
 from app.aliexpress.affiliate import affiliate_service
 from app.ai.generator import caption_generator
@@ -153,10 +153,12 @@ async def collect_and_post_last_10_deals():
                             print(f"  [NO OFFICIAL PHOTO] Skipping deal without clean AliExpress CDN image: {extracted.product_id}")
                             continue
 
-                    # 8. Build affiliate URL (Direct AliExpress Portals API, s.click links)
+                    # 8. Build affiliate URL (Coin link 90%+, Bundle link for bundle deals)
+                    deal_type = detect_deal_type(raw_text, extracted.canonical_url)
                     aff_link = await affiliate_service.create_affiliate_link(
                         product_url=extracted.canonical_url,
-                        product_id=extracted.product_id if not extracted.is_coupon_list else None
+                        product_id=extracted.product_id if not extracted.is_coupon_list else None,
+                        deal_type=deal_type
                     )
 
                     # 9. Generate caption with promo banner if active

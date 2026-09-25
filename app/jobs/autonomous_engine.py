@@ -22,7 +22,7 @@ from app.config.settings import settings
 from app.db.session import init_db, db_context
 from app.db.models import Channel, SourceMessage, Deal, GeneratedPost
 from app.aliexpress.product import product_extractor
-from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category
+from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category, detect_deal_type
 from app.aliexpress.promos import promo_tracker
 from app.aliexpress.affiliate import affiliate_service
 from app.ai.generator import caption_generator
@@ -165,10 +165,12 @@ class AutonomousEngine:
                         # Do not mark as seen so it can be published when cooldown clears
                         return new_published
 
-                # 8. Build affiliate link
+                # 8. Build affiliate link (Coin link 90%+, Bundle link for bundle deals)
+                deal_type = detect_deal_type(raw_text, extracted.canonical_url)
                 aff_link = await affiliate_service.create_affiliate_link(
                     product_url=extracted.canonical_url,
-                    product_id=extracted.product_id if not extracted.is_coupon_list else None
+                    product_id=extracted.product_id if not extracted.is_coupon_list else None,
+                    deal_type=deal_type
                 )
 
                 # 9. Generate caption with promo header + @Alilo07BOT CTA
