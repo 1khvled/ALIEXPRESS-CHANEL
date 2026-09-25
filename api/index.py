@@ -1001,7 +1001,8 @@ async def set_telegram_webhook():
 async def set_admin_telegram_webhook():
     """Sets the dedicated Admin bot webhook to this Vercel deployment URL."""
     try:
-        admin_token = "8708965924:AAGi9HgLDxKsvaOzPOnCDRhI4c9WAfUvkOk"
+        import os
+        admin_token = os.getenv("ADMIN_BOT_TOKEN", "8708965924:AAGi9HgLDxKsvaOzPOnCDRhI4c9WAfUvkOk")
         webhook_url = "https://dealscout-green.vercel.app/api/admin-webhook"
         async with httpx.AsyncClient(timeout=10.0) as client:
             resp = await client.post(
