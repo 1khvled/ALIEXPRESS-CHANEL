@@ -718,11 +718,14 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             "2️⃣ سيعتمد البوت سعرك وكوبونك ونسبة العملات تلقائياً ويعطيك معاينة مطابقة 100% للقناة.\n"
             "3️⃣ إذا كانت الصورة غير مناسبة، اضغط <b>[ 🔄 تبديل الصورة ]</b> لاختيار صورة من بائع آخر!\n"
             "4️⃣ اضغط <b>[ 📢 نشر هذا المنشور في القناة الآن 🚀 ]</b> وسينشر فوراً في القناة!\n\n"
-            "⚡ <b>أوامر سريعة:</b>\n"
-            "• <code>/post &lt;نص أو رابط&gt;</code> - للنشر الفوري في القناة دون معاينة.\n"
-            "• <code>/schedule</code> - التحكم في سرعة النشر التلقائي (5د، 10د، 15د، 30د، الوضع الليلي).\n"
-            "• <code>/pause</code> - إيقاف النشر التلقائي مؤقتاً.\n"
+            "⚡ <b>أوامر التحكم بالنشر التلقائي:</b>\n"
+            "• <code>/status</code> - فحص حالة النشر والوقت المتبقي لآخر صفقة.\n"
+            "• <code>/stop</code> أو <code>/pause</code> - إيقاف النشر التلقائي تماماً.\n"
             "• <code>/resume</code> - استئناف النشر التلقائي.\n"
+            "• <code>/schedule</code> - لوحة التحكم التفاعلية في سرعة النشر والوضع الليلي.\n"
+            "• <code>/interval &lt;دقيقة&gt;</code> - ضبط السرعة بالأرقام (مثال: <code>/interval 5</code>).\n\n"
+            "📢 <b>أوامر المنشورات الترويجية والتثقيفية:</b>\n"
+            "• <code>/post &lt;نص أو رابط&gt;</code> - للنشر الفوري في القناة دون معاينة.\n"
             "• <code>/notify_end</code> - نشر تنبيه اقتراب نهاية التخفيضات (مع حيلة حجز السعر 20 يوم).\n"
             "• <code>/notify_start</code> - نشر تنبيه الاستعداد لانطلاق التخفيضات (دليل السلة والكوبونات).\n"
             "• <code>/reminder</code> - نشر تذكير العملات ودليل متسوقي الحاسوب (PC / Laptop).\n"
@@ -733,6 +736,43 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             "• <code>/rate</code> - لمعرفة سعر الـ USDT الحالي من SquareAlgerie."
         )
         await send_admin_msg(chat_id, welcome_text)
+        return True
+
+    # Check status
+    if any(text.lower().startswith(c) for c in ["/status", "/state", "حالة", "الحالة"]):
+        from app.publisher.state_tracker import is_deal_posting_due, get_schedule_config
+        cfg = get_schedule_config()
+        is_due, reason, active_interval = is_deal_posting_due()
+        paused = cfg.get("is_paused", False)
+        night_on = cfg.get("night_mode_enabled", True)
+        last_post = cfg.get("last_deal_post_time", 0.0)
+
+        status_badge = "🔴 <b>متوقف (Paused / Stopped)</b>" if paused else "🟢 <b>شغال ونشط (Running)</b>"
+
+        now_ts = time.time()
+        if last_post > 0:
+            mins_ago = int((now_ts - last_post) / 60)
+            last_post_str = f"منذ {mins_ago} دقيقة" if mins_ago > 0 else "الآن"
+        else:
+            last_post_str = "لم يُنشر بعد في هذه الجلسة"
+
+        status_text = (
+            f"📊 <b>حالة نظام النشر التلقائي للقناة @DzAliexpress0:</b>\n\n"
+            f"• <b>الحالة العامة:</b> {status_badge}\n"
+            f"• <b>السرعة النشطة:</b> كل <b>{active_interval} دقيقة</b>\n"
+            f"• <b>الوضع الليلي:</b> {'🌙 مفعّل (كل 30د بين 00:00 - 08:00)' if night_on else '☀️ معطل'}\n"
+            f"• <b>آخر صفقة نُشرت:</b> {last_post_str}\n"
+            f"• <b>التقرير المباشر:</b> <i>{reason}</i>\n"
+        )
+
+        action_btn = {"text": "▶️ استئناف النشر التلقائي", "callback_data": "sched_toggle_pause"} if paused else {"text": "🛑 إيقاف النشر التلقائي", "callback_data": "sched_toggle_pause"}
+        markup = {
+            "inline_keyboard": [
+                [action_btn],
+                [{"text": "⚙️ فتح لوحة الجدولة والسرعات", "callback_data": "sched_refresh"}]
+            ]
+        }
+        await send_admin_msg(chat_id, status_text, reply_markup=markup)
         return True
 
     if text.startswith("/schedule") or text.startswith("/speed") or text.startswith("/interval") or text.startswith("سرعة") or text.startswith("توقيت"):
@@ -748,16 +788,42 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
         await send_admin_msg(chat_id, menu_text, reply_markup=markup)
         return True
 
-    if text.startswith("/pause") or text.startswith("إيقاف"):
+    # Stop / Pause auto-posting
+    if any(text.lower().startswith(c) for c in ["/stop", "/pause", "/halt", "إيقاف", "ايقاف", "توقف", "وقف"]):
         from app.publisher.state_tracker import update_schedule_config
         update_schedule_config({"is_paused": True})
-        await send_admin_msg(chat_id, "⏸️ <b>تم إيقاف النشر التلقائي مؤقتاً!</b> لن تُنشر أي عروض تلقائياً حتى تستأنفها.")
+        stop_markup = {
+            "inline_keyboard": [
+                [{"text": "▶️ استئناف النشر التلقائي الآن", "callback_data": "sched_toggle_pause"}],
+                [{"text": "⚙️ لوحة التحكم في الجدولة", "callback_data": "sched_refresh"}]
+            ]
+        }
+        await send_admin_msg(
+            chat_id,
+            "🛑 <b>تم إيقاف النشر التلقائي تماماً! (Stopped)</b>\n\n"
+            "لن يتم نشر أي صفقات جديدة تلقائياً في القناة @DzAliexpress0 حتى تقوم باستئناف النشر عبر <code>/resume</code> أو الضغط على الزر أدناه.",
+            reply_markup=stop_markup
+        )
         return True
 
-    if text.startswith("/resume") or text.startswith("استئناف"):
-        from app.publisher.state_tracker import update_schedule_config
+    # Resume auto-posting
+    if any(text.lower().startswith(c) for c in ["/resume", "/unpause", "/start_posting", "/continue", "/play", "استئناف", "تشغيل", "متابعة"]):
+        from app.publisher.state_tracker import update_schedule_config, get_schedule_config, is_deal_posting_due
         update_schedule_config({"is_paused": False})
-        await send_admin_msg(chat_id, "▶️ <b>تم استئناف النشر التلقائي بنجاح!</b>")
+        _, reason, active_interval = is_deal_posting_due()
+        resume_markup = {
+            "inline_keyboard": [
+                [{"text": "🛑 إيقاف النشر التلقائي", "callback_data": "sched_toggle_pause"}],
+                [{"text": "⚙️ ضبط سرعة النشر", "callback_data": "sched_refresh"}]
+            ]
+        }
+        await send_admin_msg(
+            chat_id,
+            f"▶️ <b>تم استئناف وتفعيل النشر التلقائي بنجاح! (Resumed)</b>\n\n"
+            f"⚡ <b>السرعة الحالية:</b> كل <b>{active_interval} دقائق</b>\n"
+            f"📋 <b>الحالة:</b> <i>{reason}</i>",
+            reply_markup=resume_markup
+        )
         return True
 
     if text.startswith("/rate"):
