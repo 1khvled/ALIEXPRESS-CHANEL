@@ -158,12 +158,14 @@ class DealCaptionGenerator:
         )
         lines.append(hook)
 
-        lines.append(f"تخفيض لـ {title}")
+        import html
+        safe_title = html.escape(title)
+        lines.append(f"تخفيض لـ {safe_title}")
         lines.append(f"السعر : {usd_price:.2f}$ ({eur_price:.2f}€)🔥")
         lines.append(f"رابط {affiliate_url}")
 
         if coupon_code:
-            lines.append(f"كوبون : <code>{coupon_code}</code>")
+            lines.append(f"كوبون : <code>{html.escape(coupon_code)}</code>")
 
         if has_points_discount:
             lines.append("خصم النقاط (العملات)")

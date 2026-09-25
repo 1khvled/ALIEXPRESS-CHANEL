@@ -6,6 +6,7 @@ Guaranteed Zero-Failure, Accurate Product Detection & Ultra-Fast:
 - Full title & price extraction with generous timeout + fallback parser
 - Live USDT exchange rate integration via SquareAlgerie.com (~249 DA)
 - Advertisement and live rate badge for SquareAlgerie.com
+- Admin manual deal publisher mode (recognizes admin by Telegram user ID 5625295907)
 - 100% Delivery guarantee (HTML mode with auto-fallback)
 """
 import asyncio
@@ -23,6 +24,20 @@ ALIEXPRESS_AFFILIATE_APP_KEY = os.getenv("ALIEXPRESS_AFFILIATE_APP_KEY", "538348
 ALIEXPRESS_AFFILIATE_APP_SECRET = os.getenv("ALIEXPRESS_AFFILIATE_APP_SECRET", "7z5QlJZAxNka2zBrgzCWrUNusBXJGHYx")
 ALIEXPRESS_AFFILIATE_TRACKING_ID = os.getenv("ALIEXPRESS_AFFILIATE_TRACKING_ID", "dzkhvled16")
 TARGET_CHANNEL_ID = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+PRIMARY_ADMIN_ID = int(os.getenv("ADMIN_USER_ID", "5625295907"))
+
+def is_admin(user_id: int) -> bool:
+    """Checks if the given Telegram user ID is an authorized admin."""
+    if not user_id:
+        return False
+    if user_id == PRIMARY_ADMIN_ID or user_id == 5625295907:
+        return True
+    admin_env = os.getenv("ADMIN_USER_IDS", "")
+    if admin_env:
+        ids = [int(i.strip()) for i in admin_env.split(",") if i.strip().isdigit()]
+        if user_id in ids:
+            return True
+    return False
 
 # Cache for SquareAlgerie live USDT rate
 _CACHED_USDT_RATE = 249.0
@@ -125,7 +140,6 @@ def extract_title_and_price_from_user_text(text: str) -> Tuple[Optional[str], Op
     if not text:
         return None, None
     cleaned = re.sub(r'https?://\S+', '', text)
-    # Price
     price = None
     m_price = re.search(r'(?:US\s*)?\$?\s*([0-9]+[.,][0-9]{1,2})\s*\$?', cleaned, re.IGNORECASE)
     if m_price:
@@ -134,7 +148,6 @@ def extract_title_and_price_from_user_text(text: str) -> Tuple[Optional[str], Op
         except Exception:
             pass
 
-    # Title
     cleaned = re.sub(r'(?:US\s*)?\$?\s*[0-9]+[.,][0-9]{1,2}\s*\$?', '', cleaned)
     cleaned = re.sub(
         r'Just found this amazing item on AliExpress\.?|Check it out!?|لقيت هذا المنتج|شوف هذا العرض|علي اكسبرس|AliExpress',
@@ -156,7 +169,6 @@ async def resolve_any_ali_link(text: str) -> Optional[str]:
     - star.aliexpress.com share links
     - Raw product IDs
     """
-    # 1. Check if PID is already in the text or URL directly (instant 0ms)
     pid = extract_pid_from_string(text)
     if pid:
         return pid
@@ -170,7 +182,6 @@ async def resolve_any_ali_link(text: str) -> Optional[str]:
     if pid and "s.click" not in raw_url and "a.aliexpress" not in raw_url and "star.aliexpress" not in raw_url:
         return pid
 
-    # 2. Fast 1-hop / 2-hop 302 Location header check (super fast, no body download)
     try:
         async with httpx.AsyncClient(timeout=3.5, follow_redirects=False) as client:
             headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
@@ -180,14 +191,12 @@ async def resolve_any_ali_link(text: str) -> Optional[str]:
                 found = extract_pid_from_string(loc)
                 if found:
                     return found
-                # Hop 2
                 if loc.startswith("http"):
                     resp2 = await client.get(loc, headers=headers, timeout=2.5)
                     loc2 = resp2.headers.get("location") or str(resp2.url)
                     found2 = extract_pid_from_string(loc2)
                     if found2:
                         return found2
-            # Check body snippet if returned 200
             if resp.status_code == 200 and resp.text:
                 found = extract_pid_from_string(resp.text[:5000])
                 if found:
@@ -206,7 +215,6 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
 
     fallback_title, fallback_price = extract_title_and_price_from_user_text(raw_user_text)
 
-    # Base direct links
     direct_product = f"https://www.aliexpress.com/item/{product_id}.html"
     direct_coin = f"https://m.aliexpress.com/p/coin-index/index.html?productIds={product_id}"
     direct_bundle = f"https://www.aliexpress.com/ssr/300000512/BundleDeals2?productIds={product_id}"
@@ -224,7 +232,6 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
     super_link = direct_super
     limited_link = direct_limited
 
-    # Try AliExpress Open Platform API with generous timeout
     try:
         api = AliexpressApi(
             ALIEXPRESS_AFFILIATE_APP_KEY,
@@ -275,7 +282,6 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
                 product_link = aff_map.get(direct_product, direct_product)
                 coin_link = aff_map.get(direct_coin, direct_coin)
                 bundle_link = aff_map.get(direct_bundle, direct_bundle)
-                # Build SuperDeals and Limited from affiliate product link if available
                 if product_link != direct_product and "s.click" in product_link:
                     super_link = product_link
                     limited_link = product_link
@@ -338,17 +344,102 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
 
     return {
         "text": message_text,
+        "product_id": product_id,
+        "title": prod_title,
+        "price": prod_price,
         "image_url": prod_image,
+        "product_link": product_link,
+        "coin_link": coin_link,
         "reply_markup": reply_markup
     }
+
+async def publish_deal_to_channel(product_id: str, raw_user_text: str = "") -> Tuple[bool, Optional[str], Optional[int]]:
+    """Publishes a verified clean deal post directly to @DzAliexpress0 from admin request."""
+    res = await generate_coin_discount_response(product_id, raw_user_text=raw_user_text)
+
+    prod_title = res.get("title") or "منتج مميز من AliExpress"
+    prod_price = res.get("price") or 0.0
+    eur_price = round(prod_price * 0.92, 2)
+    product_link = res.get("product_link") or f"https://www.aliexpress.com/item/{product_id}.html"
+    image_url = res.get("image_url")
+
+    # Smart situational hook
+    t_lower = prod_title.lower()
+    is_gaming = any(k in t_lower for k in ["mouse", "keyboard", "headset", "earphone", "controller", "gaming", "game", "rgb"])
+    if is_gaming:
+        hook = "صيدة ممتازة للقيمرز 🎮🔥"
+    elif prod_price and prod_price < 25.0:
+        hook = "نزول قوي في السعر 🔥📉"
+    else:
+        hook = "العرض مستمر 🚨"
+
+    caption_lines = [
+        "لا تنسى تحويل دولة التطبيق إلى كوريا 🇰🇷 📍",
+        hook,
+        f"تخفيض لـ {html.escape(prod_title)}",
+        f"السعر : {prod_price:.2f}$ ({eur_price:.2f}€)🔥" if prod_price > 0 else "سعر مميز وتخفيض عملات 🔥",
+        f"رابط {product_link}",
+        "خصم النقاط (العملات)",
+        "",
+        "🪙 استخدم بوت DealScoutDz للشراء بأقل سعر: @Alilo07BOT"
+    ]
+    caption = "\n".join(caption_lines)
+
+    channel_reply_markup = {
+        "inline_keyboard": [
+            [
+                {"text": "🛒 رابط الشراء من AliExpress", "url": product_link}
+            ],
+            [
+                {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": "https://t.me/Alilo07BOT"}
+            ]
+        ]
+    }
+
+    api_url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}"
+    try:
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            if image_url:
+                resp = await client.post(
+                    f"{api_url}/sendPhoto",
+                    json={
+                        "chat_id": TARGET_CHANNEL_ID,
+                        "photo": image_url,
+                        "caption": caption[:1024],
+                        "parse_mode": "HTML",
+                        "reply_markup": channel_reply_markup
+                    }
+                )
+            else:
+                resp = await client.post(
+                    f"{api_url}/sendMessage",
+                    json={
+                        "chat_id": TARGET_CHANNEL_ID,
+                        "text": caption,
+                        "parse_mode": "HTML",
+                        "reply_markup": channel_reply_markup
+                    }
+                )
+
+            data = resp.json()
+            if resp.status_code == 200 and data.get("ok"):
+                msg_id = data.get("result", {}).get("message_id")
+                return True, None, msg_id
+            else:
+                err = data.get("description", f"HTTP {resp.status_code}")
+                return False, err, None
+    except Exception as e:
+        return False, str(e), None
 
 async def handle_update(update: Dict[str, Any]) -> bool:
     # 1. Handle Callback Queries
     if "callback_query" in update:
         cb = update["callback_query"]
         cb_id = cb.get("id")
-        cb_data = cb.get("data")
+        cb_data = cb.get("data") or ""
         msg = cb.get("message")
+        user = cb.get("from", {})
+        user_id = user.get("id")
         chat_id = msg.get("chat", {}).get("id") if msg else None
 
         try:
@@ -365,6 +456,22 @@ async def handle_update(update: Dict[str, Any]) -> bool:
                 await send_msg(chat_id, HELP_TEXT)
             elif cb_data == "cb_coupons":
                 await send_msg(chat_id, COUPONS_TEXT)
+            elif cb_data.startswith("admin_pub_"):
+                # Admin manual publish action
+                if not is_admin(user_id):
+                    await send_msg(chat_id, "⚠️ عذراً، هذا الإجراء مخصص لمشرف القناة فقط.")
+                    return True
+
+                target_pid = cb_data.replace("admin_pub_", "").strip()
+                await send_msg(chat_id, "⏳ جاري نشر العرض في القناة @DzAliexpress0...")
+                success, err, msg_id = await publish_deal_to_channel(target_pid)
+                if success:
+                    ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
+                    post_url = f"https://t.me/{ch_clean}/{msg_id}"
+                    confirm_text = f"✅ <b>تم نشر العرض بنجاح في القناة!</b>\n\n🔗 <b>رابط المنشور:</b> {post_url}"
+                    await send_msg(chat_id, confirm_text)
+                else:
+                    await send_msg(chat_id, f"❌ فشل نشر العرض في القناة: {err}")
         return True
 
     # 2. Handle Messages
@@ -373,9 +480,18 @@ async def handle_update(update: Dict[str, Any]) -> bool:
         return False
 
     chat_id = message.get("chat", {}).get("id")
+    from_user = message.get("from", {})
+    user_id = from_user.get("id") or chat_id
     text = (message.get("text") or "").strip()
     if not chat_id:
         return False
+
+    # Command: /myid or /id
+    if text.startswith("/myid") or text.startswith("/id"):
+        admin_badge = "👑 <b>مشرف معتمد (Admin)</b>" if is_admin(user_id) else "مستخدم عادي"
+        id_text = f"🆔 <b>معرف التيليجرام الخاص بك:</b> <code>{user_id}</code>\n<b>الرتبة:</b> {admin_badge}"
+        await send_msg(chat_id, id_text)
+        return True
 
     if text.startswith("/start"):
         start_markup = {
@@ -401,6 +517,29 @@ async def handle_update(update: Dict[str, Any]) -> bool:
 
     if text.startswith("/coupons") or "كوبون" in text or "كود" in text:
         await send_msg(chat_id, COUPONS_TEXT)
+        return True
+
+    # Admin Command: /post <url> or /publish <url>
+    if text.startswith("/post") or text.startswith("/publish"):
+        if not is_admin(user_id):
+            await send_msg(chat_id, "⚠️ عذراً، هذا الأمر مخصص لمشرف القناة فقط.")
+            return True
+
+        sub_text = text.split(maxsplit=1)[-1] if len(text.split()) > 1 else ""
+        target_pid = await resolve_any_ali_link(sub_text)
+        if not target_pid:
+            await send_msg(chat_id, "⚠️ يرجى تزويد رابط صحيح للمنتج بعد الأمر، مثال:\n<code>/post https://a.aliexpress.com/_xxxx</code>")
+            return True
+
+        await send_msg(chat_id, "⏳ جاري تحضير ونشر العرض في القناة @DzAliexpress0...")
+        success, err, msg_id = await publish_deal_to_channel(target_pid, raw_user_text=sub_text)
+        if success:
+            ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
+            post_url = f"https://t.me/{ch_clean}/{msg_id}"
+            confirm_text = f"✅ <b>تم نشر العرض بنجاح في القناة!</b>\n\n🔗 <b>رابط المنشور:</b> {post_url}"
+            await send_msg(chat_id, confirm_text)
+        else:
+            await send_msg(chat_id, f"❌ فشل نشر العرض في القناة: {err}")
         return True
 
     # 3. Resolve Product ID from ANY AliExpress Link or Text
@@ -430,13 +569,20 @@ async def handle_update(update: Dict[str, Any]) -> bool:
     # Guaranteed response generation with raw text fallback
     res = await generate_coin_discount_response(pid, raw_user_text=text)
 
+    # Attach exclusive Admin Quick-Publish button if user is admin
+    reply_markup = res.get("reply_markup") or {"inline_keyboard": []}
+    if is_admin(user_id):
+        # Insert admin button at the very top of inline buttons
+        admin_button = [{"text": "📢 نشر هذا العرض في القناة مباشرة 🚀", "callback_data": f"admin_pub_{pid}"}]
+        reply_markup["inline_keyboard"].insert(0, admin_button)
+
     # Send with photo if available, fallback to text
     if res.get("image_url"):
-        success = await send_photo(chat_id, res["image_url"], res["text"], res.get("reply_markup"))
+        success = await send_photo(chat_id, res["image_url"], res["text"], reply_markup)
         if success:
             return True
 
-    await send_msg(chat_id, res["text"], res.get("reply_markup"))
+    await send_msg(chat_id, res["text"], reply_markup)
     return True
 
 async def send_photo(chat_id: int, photo_url: str, caption: str, reply_markup: Optional[Dict] = None) -> bool:
