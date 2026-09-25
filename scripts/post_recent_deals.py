@@ -31,7 +31,6 @@ from app.media.downloader import media_downloader
 from app.media.renderer import media_renderer
 from app.publisher.publisher import telegram_publisher
 from app.utils.logger import logger
-
 # Channels to monitor for deals (photos are fetched exclusively from AliExpress CDN)
 CHANNELS = [
     "Pcgamingpart",
@@ -52,8 +51,19 @@ async def collect_and_post_last_10_deals():
     print(f"Active Channels: {', '.join(CHANNELS)}")
     print("=" * 70)
 
+    # Automated Check: Promo Calendar & Next Promo Transitions
+    try:
+        from app.publisher.promo_calendar import check_and_auto_post_promo_transitions
+        p_success, p_msg = await check_and_auto_post_promo_transitions()
+        if p_success:
+            print(f"[PROMO CALENDAR AUTO-POST] {p_msg}")
+    except Exception as e:
+        print(f"[!] Promo calendar check error: {e}")
+
     published_deals = []
     seen_products = set()
+
+
 
     # Load existing published products
     async with db_context() as s:

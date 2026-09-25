@@ -292,12 +292,26 @@ class AutonomousEngine:
         except Exception as e:
             logger.error(f"Error checking daily bot ad: {e}")
 
+    async def check_and_post_promo_calendar(self):
+        """Checks and auto-posts promo calendar and sale transitions."""
+        try:
+            from app.publisher.promo_calendar import check_and_auto_post_promo_transitions
+            success, msg = await check_and_auto_post_promo_transitions()
+            if success:
+                logger.info(f"Promo calendar check: {msg}")
+        except Exception as e:
+            logger.error(f"Error checking promo calendar: {e}")
+
     async def run_single_cycle(self) -> int:
         """Executes one scan cycle across all monitored channels."""
         # 1. Check if 24-hour bot advertisement is due
         await self.check_and_post_bot_ad()
 
-        # 2. Scan deal channels
+        # 2. Check if promo calendar or sale transition is due
+        await self.check_and_post_promo_calendar()
+
+        # 3. Scan deal channels
+
         total_new = 0
         async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
             for ch in MONITORED_CHANNELS:
