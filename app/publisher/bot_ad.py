@@ -105,10 +105,13 @@ REMINDER_VARIANTS: List[Dict[str, Any]] = [
 ]
 
 def get_next_coin_reminder_variant(variant_idx: Optional[int] = None) -> Tuple[Dict[str, Any], int]:
-    """Returns the variant to post, either specified or rotated from state."""
-    state = load_persistent_state()
-    idx = variant_idx if variant_idx is not None else state.get("coin_reminder_variant_idx", 0)
-    idx = idx % len(REMINDER_VARIANTS)
+    """Returns a randomly selected educational/repo-marketing reminder variant."""
+    import random
+    if variant_idx is not None:
+        idx = variant_idx % len(REMINDER_VARIANTS)
+    else:
+        # Truly random pick: 33% PC Guide, 33% Daily Coins Habit, 33% Coin Bot GitHub Repo Marketing
+        idx = random.randint(0, len(REMINDER_VARIANTS) - 1)
     return REMINDER_VARIANTS[idx], idx
 
 async def post_bot_advertisement(force: bool = False, variant_idx: Optional[int] = None) -> Tuple[bool, Optional[str]]:
