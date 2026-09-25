@@ -1,6 +1,13 @@
 """
 Lightweight Serverless AliExpress Coin & Discount Bot for Vercel
 Directly handles Telegram webhook updates without heavy dependencies.
+Provides:
+- Maximum Coin Discount link generation
+- Bundle Deals, SuperDeals, and Limited Offer links
+- Product photo previews in Telegram
+- Instant 1-tap inline shopping buttons
+- Algerian Dinar (DZD) price estimates
+- Interactive guides (/help, /coupons)
 """
 import asyncio
 import os
@@ -15,15 +22,44 @@ ALIEXPRESS_AFFILIATE_APP_KEY = os.getenv("ALIEXPRESS_AFFILIATE_APP_KEY", "538348
 ALIEXPRESS_AFFILIATE_APP_SECRET = os.getenv("ALIEXPRESS_AFFILIATE_APP_SECRET", "7z5QlJZAxNka2zBrgzCWrUNusBXJGHYx")
 ALIEXPRESS_AFFILIATE_TRACKING_ID = os.getenv("ALIEXPRESS_AFFILIATE_TRACKING_ID", "dzkhvled16")
 TARGET_CHANNEL_ID = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+DZD_USD_RATE = 240.0
 
 WELCOME_TEXT = """👋 مرحباً بك في بوت زيادة تخفيض العملات! 🪙
 
-هذا البوت يعمل على **زيادة نسبة التخفيض بالعملات (النقاط)** من 1%~5% إلى نسبة عالية تصل حتى **90%** في بعض المنتجات 🤑
+هذا البوت يعمل على **زيادة نسبة التخفيض بالعملات (النقاط)** من 1%~5% إلى نسبة عالية تصل حتى **70%** في معظم منتجات AliExpress 🤑
 
-📌 **طريقة الاستخدام:**
-1. انسخ رابط أي منتج تريده من تطبيق أو موقع AliExpress.
-2. أرسل الرابط هنا في المحادثة.
-3. سيرسل لك البوت فوراً روابط التخفيض الأكبر (تخفيض العملات، Bundle Deals، السوبر ديلز)! 🚀
+📌 **طريقة الاستخدام بكل بساطة:**
+1️⃣ انسخ رابط أي منتج تريده من تطبيق أو موقع AliExpress.
+2️⃣ أرسل الرابط هنا في المحادثة.
+3️⃣ سيرسل لك البوت فوراً صورة المنتج وروابط التخفيض الأكبر (تخفيض العملات، Bundle Deals، السوبر ديلز) مع أزرار شراء سريعة! 🚀
+"""
+
+HELP_TEXT = """💡 **دليل استخدام تخفيض العملات بأقصى نسبة:**
+
+1️⃣ **كيف تفعل الخصم الأكبر؟**
+عند فتح رابط العملات، لا تشترِ من الصفحة العادية! اضغط على زر **"شراء الآن"** مباشرة من صفحة العملات، أو أضف المنتج إلى السلة من داخل صفحة العملات لتخصم لك كل النقاط المتاحة.
+
+2️⃣ **كيف تجمع العملات يومياً؟**
+ادخل يومياً لتطبيق AliExpress واضغط على أيقونة **Coins / العملات** واجمع العملات المجانية اليومية (يمكنك جمع 70 إلى 150 عملة يومياً مجاناً).
+
+3️⃣ **الكوبونات الإضافية:**
+يمكنك دمج تخفيض العملات مع كودات التخفيض للحصول على أقل سعر ممكن عالمياً!
+
+📢 للمزيد من العروض اليومية، انضم لقناتنا: @DzAliexpress0
+"""
+
+COUPONS_TEXT = """🎟️ **أحدث كودات التخفيض من AliExpress لشهر أكتوبر 🔥**
+━━━━━━━━━━━━━━━━━
+🎯 **تخفيضات Choice Day (1 - 7 أكتوبر):**
+▫️ خصم 3$ عند الشراء بـ 29$+ ⬅️ كود: `CDDZ03`
+▫️ خصم 6$ عند الشراء بـ 49$+ ⬅️ كود: `CDDZ06`
+▫️ خصم 10$ عند الشراء بـ 79$+ ⬅️ كود: `CDDZ10`
+▫️ خصم 20$ عند الشراء بـ 159$+ ⬅️ كود: `CDDZ20`
+▫️ خصم 40$ عند الشراء بـ 299$+ ⬅️ كود: `CDDZ40`
+━━━━━━━━━━━━━━━━━
+💡 يمكنك إدخال الكود في صفحة الدفع والاستفادة من خصم العملات في نفس الوقت!
+
+📢 تابع قناتنا للمزيد: @DzAliexpress0
 """
 
 URL_REGEX = re.compile(r'(https?://[^\s<>"\',;]+)', re.IGNORECASE)
@@ -76,7 +112,7 @@ async def resolve_ali_url(raw_url: str) -> Optional[str]:
         return extract_pid(raw_url)
 
 async def generate_coin_discount_response(product_id: str) -> Optional[Dict[str, Any]]:
-    """Generates the exact discount message and s.click links shown in user screenshot."""
+    """Generates the rich discount response with direct affiliate links and photo."""
     try:
         api = AliexpressApi(
             ALIEXPRESS_AFFILIATE_APP_KEY,
@@ -86,9 +122,10 @@ async def generate_coin_discount_response(product_id: str) -> Optional[Dict[str,
             ALIEXPRESS_AFFILIATE_TRACKING_ID
         )
 
-        # 1. Fetch title & price
+        # 1. Fetch product details
         prod_title = "منتج مميز من AliExpress"
         prod_price = None
+        prod_image = None
 
         for attempt in range(3):
             try:
@@ -104,6 +141,9 @@ async def generate_coin_discount_response(product_id: str) -> Optional[Dict[str,
                             prod_price = float(p)
                         except Exception:
                             pass
+                    img = getattr(info, 'product_main_image_url', None)
+                    if img and ("alicdn.com" in img or "aliexpress-media.com" in img):
+                        prod_image = img
                 break
             except Exception as e:
                 if "ApiCallLimit" in str(e) or "frequency exceeds" in str(e):
@@ -144,36 +184,45 @@ async def generate_coin_discount_response(product_id: str) -> Optional[Dict[str,
         super_link = aff_map.get(target_urls[3], target_urls[3])
         limited_link = aff_map.get(target_urls[4], target_urls[4])
 
-        price_str = f"{prod_price:.2f}" if prod_price else ""
+        # Price info
+        price_line = ""
+        if prod_price:
+            dzd_val = int(prod_price * DZD_USD_RATE)
+            price_line = f"💵 السعر: {prod_price:.2f}$ (~{dzd_val:,} دج) 🔥\n"
 
-        message_text = f"""{prod_title}
+        message_text = f"""🛍️ {prod_title}
+{price_line}
+🪙 **سعر تخفيض العملات (Coins):**
+🔗 {coin_link_1}
 
-✔️ سعر تخفيض العملات: {price_str} $
-🔗 الرابط في صفحة التخفيضات:
-{coin_link_1}
-{coin_link_2}
+📦 **عروض الحزم (Bundle Deals):**
+🔗 {bundle_link}
 
-✔️ سعر عرض bundle deal ب : $
-🔗 الرابط:
-{bundle_link}
+⚡ **عروض السوبر ديلز (SuperDeals):**
+🔗 {super_link}
 
-✔️ سعر السوبر ديلز : $
-🔗 الرابط:
-{super_link}
+⏳ **العرض المحدود (Limited Offer):**
+🔗 {limited_link}
 
-✔️ سعر العرض المحدود: $
-🔗 الرابط:
-{limited_link}"""
+💡 *نصيحة: ادخل من رابط العملات واشترِ مباشرة أو أضف المنتج للسلة لتفعيل أكبر نسبة خصم!*"""
 
+        # Interactive inline buttons
         reply_markup = {
             "inline_keyboard": [
                 [
-                    {"text": "📢 مجموعتنا على Telegram", "url": "https://t.me/DzAliexpress0"},
+                    {"text": "🪙 شراء بتخفيض العملات المباشر", "url": coin_link_1}
+                ],
+                [
+                    {"text": "📦 عروض Bundle Deals", "url": bundle_link},
+                    {"text": "⚡ عروض السوبر ديلز", "url": super_link}
+                ],
+                [
+                    {"text": "📢 قناتنا للعروض @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
                 ],
                 [
                     {
-                        "text": "🔄 مشاركة البوت مع أصدقائك",
-                        "url": "https://t.me/share/url?url=https://t.me/Alilo07BOT&text=بوت زيادة تخفيض العملات في علي اكسبرس 🪙🔥"
+                        "text": "🔄 شارك البوت مع أصدقائك",
+                        "url": "https://t.me/share/url?url=https://t.me/Alilo07BOT&text=بوت زيادة تخفيض العملات في علي اكسبرس 🪙🔥 يوفر لك حتى 70%!"
                     }
                 ]
             ]
@@ -181,13 +230,37 @@ async def generate_coin_discount_response(product_id: str) -> Optional[Dict[str,
 
         return {
             "text": message_text,
+            "image_url": prod_image,
             "reply_markup": reply_markup
         }
 
-    except Exception as e:
+    except Exception:
         return None
 
 async def handle_update(update: Dict[str, Any]) -> bool:
+    # 1. Handle Callback Queries (Inline Button clicks like Help / Coupons)
+    if "callback_query" in update:
+        cb = update["callback_query"]
+        cb_id = cb.get("id")
+        cb_data = cb.get("data")
+        msg = cb.get("message")
+        chat_id = msg.get("chat", {}).get("id") if msg else None
+
+        # Answer callback to remove loading state
+        async with httpx.AsyncClient(timeout=5.0) as client:
+            await client.post(
+                f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/answerCallbackQuery",
+                json={"callback_query_id": cb_id}
+            )
+
+        if chat_id:
+            if cb_data == "cb_help":
+                await send_msg(chat_id, HELP_TEXT)
+            elif cb_data == "cb_coupons":
+                await send_msg(chat_id, COUPONS_TEXT)
+        return True
+
+    # 2. Handle Messages
     message = update.get("message") or update.get("edited_message")
     if not message:
         return False
@@ -198,20 +271,40 @@ async def handle_update(update: Dict[str, Any]) -> bool:
         return False
 
     if text.startswith("/start"):
-        await send_msg(chat_id, WELCOME_TEXT)
+        start_markup = {
+            "inline_keyboard": [
+                [
+                    {"text": "📖 طريقة استخدام تخفيض العملات", "callback_data": "cb_help"},
+                    {"text": "🎟️ كودات وكوبونات التخفيض", "callback_data": "cb_coupons"}
+                ],
+                [
+                    {"text": "📢 قناتنا للعروض @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
+                ]
+            ]
+        }
+        await send_msg(chat_id, WELCOME_TEXT, start_markup)
         return True
 
+    if text.startswith("/help") or "كيف" in text or "طريقة" in text:
+        await send_msg(chat_id, HELP_TEXT)
+        return True
+
+    if text.startswith("/coupons") or "كوبون" in text or "كود" in text:
+        await send_msg(chat_id, COUPONS_TEXT)
+        return True
+
+    # 3. Handle Product Links
     urls = extract_urls(text)
     if not urls:
         if text.isdigit() and len(text) >= 10:
             pid = text
         else:
             help_msg = (
-                "⚠️ الرجاء إرسال رابط صحيح لمنتج من AliExpress.\n\n"
-                "مثال:\n"
-                "https://a.aliexpress.com/_c4ttSySh\n"
-                "أو\n"
-                "https://www.aliexpress.com/item/1005006533038973.html"
+                "⚠️ **الرجاء إرسال رابط صحيح لمنتج من AliExpress.**\n\n"
+                "📌 **مثال على الروابط المقبولة:**\n"
+                "• https://a.aliexpress.com/_c4ttSySh\n"
+                "• https://www.aliexpress.com/item/1005006533038973.html\n\n"
+                "أو اكتب /help لمعرفة كيفية الاستخدام."
             )
             await send_msg(chat_id, help_msg)
             return True
@@ -219,11 +312,11 @@ async def handle_update(update: Dict[str, Any]) -> bool:
         pid = await resolve_ali_url(urls[0])
 
     if not pid:
-        err_msg = "❌ تعذر استخراج كود المنتج من الرابط. يرجى التأكد من الرابط والمحاولة مجدداً."
+        err_msg = "❌ تعذر استخراج كود المنتج من هذا الرابط. يرجى التأكد من الرابط والمحاولة مجدداً."
         await send_msg(chat_id, err_msg)
         return False
 
-    # Send typing status
+    # Send typing action
     async with httpx.AsyncClient(timeout=5.0) as client:
         await client.post(
             f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendChatAction",
@@ -232,17 +325,45 @@ async def handle_update(update: Dict[str, Any]) -> bool:
 
     res = await generate_coin_discount_response(pid)
     if not res:
-        err_msg = "❌ تعذر توليد روابط التخفيض لهذا المنتج حالياً. يرجى المحاولة بعد قليل."
+        err_msg = "❌ تعذر توليد روابط التخفيض لهذا المنتج حالياً. يرجى التأكد من أن الرابط لمنتج نشط والمحاولة بعد قليل."
         await send_msg(chat_id, err_msg)
         return False
 
-    await send_msg(chat_id, res["text"], res["reply_markup"])
+    # If product image is available, send via sendPhoto for ultra-clean display
+    if res.get("image_url"):
+        success = await send_photo(chat_id, res["image_url"], res["text"], res.get("reply_markup"))
+        if success:
+            return True
+
+    # Fallback to sendMessage
+    await send_msg(chat_id, res["text"], res.get("reply_markup"))
     return True
+
+async def send_photo(chat_id: int, photo_url: str, caption: str, reply_markup: Optional[Dict] = None) -> bool:
+    payload = {
+        "chat_id": chat_id,
+        "photo": photo_url,
+        "caption": caption[:1024],
+        "parse_mode": "Markdown"
+    }
+    if reply_markup:
+        payload["reply_markup"] = reply_markup
+
+    try:
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            resp = await client.post(
+                f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendPhoto",
+                json=payload
+            )
+            return resp.status_code == 200 and resp.json().get("ok")
+    except Exception:
+        return False
 
 async def send_msg(chat_id: int, text: str, reply_markup: Optional[Dict] = None):
     payload = {
         "chat_id": chat_id,
         "text": text,
+        "parse_mode": "Markdown",
         "disable_web_page_preview": False
     }
     if reply_markup:

@@ -280,8 +280,24 @@ class AutonomousEngine:
             logger.error(f"Error scanning channel @{channel_username}: {e}")
             return 0
 
+    async def check_and_post_bot_ad(self):
+        """Checks if 24 hours have elapsed and posts the @Alilo07BOT ad."""
+        try:
+            from app.publisher.bot_ad import post_bot_advertisement
+            success, msg = await post_bot_advertisement(force=False)
+            if success:
+                logger.info("Daily @Alilo07BOT promo advertisement posted successfully!")
+            elif msg and "already posted" not in msg:
+                logger.warning(f"Daily bot ad check: {msg}")
+        except Exception as e:
+            logger.error(f"Error checking daily bot ad: {e}")
+
     async def run_single_cycle(self) -> int:
         """Executes one scan cycle across all monitored channels."""
+        # 1. Check if 24-hour bot advertisement is due
+        await self.check_and_post_bot_ad()
+
+        # 2. Scan deal channels
         total_new = 0
         async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
             for ch in MONITORED_CHANNELS:
