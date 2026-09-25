@@ -153,13 +153,13 @@ async def notify_watchlist_users(
         f"━━━━━━━━━━━━━━━━━\n"
         f"🔗 <b>رابط الشراء المباشر بأقصى تخفيض عملات:</b>\n"
         f"{affiliate_url}\n\n"
-        f"💡 <i>وصلك هذا التنبيه لأنك قمت بتفعيل مراقبة هذا المنتج عبر @Alilo07BOT.</i>"
+        f"💡 <i>وصلك هذا التنبيه لأنك قمت بتفعيل مراقبة هذا المنتج عبر بوت التخفيضات.</i>"
     )
 
     markup = {
         "inline_keyboard": [
             [{"text": "🪙 شراء الآن بتخفيض العملات", "url": affiliate_url}],
-            [{"text": "📢 تابع أحدث العروض @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}]
+            [{"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}]
         ]
     }
 

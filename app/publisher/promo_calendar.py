@@ -80,10 +80,10 @@ def build_promo_calendar_post(now: Optional[datetime] = None) -> Tuple[str, Dict
     reply_markup = {
         "inline_keyboard": [
             [
-                {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": "https://t.me/Alilo07BOT"}
+                {"text": "🪙 فتح بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"}
             ],
             [
-                {"text": "📢 تابع أحدث العروض الحصرية @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
+                {"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}
             ]
         ]
     }
@@ -119,10 +119,10 @@ def build_next_sale_transition_post(ended_promo: PromoEvent, next_promo: PromoEv
     reply_markup = {
         "inline_keyboard": [
             [
-                {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": "https://t.me/Alilo07BOT"}
+                {"text": "🪙 فتح بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"}
             ],
             [
-                {"text": "📢 تابع أحدث العروض الحصرية @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
+                {"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}
             ]
         ]
     }

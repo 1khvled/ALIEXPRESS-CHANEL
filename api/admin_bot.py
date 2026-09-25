@@ -880,8 +880,8 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
 
             hub_markup = {
                 "inline_keyboard": [
-                    [{"text": "🪙 افتح بوت تخفيض العملات @Alilo07BOT", "url": "https://t.me/Alilo07BOT"}],
-                    [{"text": "📢 تابع أحدث الصيدات @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}]
+                    [{"text": "🪙 فتح بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"}],
+                    [{"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}]
                 ]
             }
 

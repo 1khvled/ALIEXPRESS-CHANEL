@@ -81,25 +81,25 @@ REMINDER_VARIANTS: List[Dict[str, Any]] = [
         "id": "pc_guide",
         "caption": POST_PC_GUIDE,
         "buttons": [
-            [{"text": "🪙 جرب بوت تخفيض العملات @Alilo07BOT", "url": "https://t.me/Alilo07BOT"}],
-            [{"text": "📢 تابع أحدث العروض @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}]
+            [{"text": "🪙 فتح بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"}],
+            [{"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}]
         ]
     },
     {
         "id": "daily_coins",
         "caption": POST_DAILY_COINS,
         "buttons": [
-            [{"text": "🪙 افتح البوت لتخفيض أي رابط @Alilo07BOT", "url": "https://t.me/Alilo07BOT"}],
-            [{"text": "📢 تابع أحدث العروض @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}]
+            [{"text": "🪙 تخفيض أي رابط بالعملات", "url": "https://t.me/Alilo07BOT"}],
+            [{"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}]
         ]
     },
     {
         "id": "pc_collector",
         "caption": POST_PC_COLLECTOR,
         "buttons": [
-            [{"text": "🪙 بوت تخفيض العملات @Alilo07BOT", "url": "https://t.me/Alilo07BOT"}],
+            [{"text": "🪙 بوت تخفيض العملات المباشر", "url": "https://t.me/Alilo07BOT"}],
             [{"text": "⚡ كود جامع العملات للحاسوب (GitHub)", "url": "https://github.com/1khvled/COIN-BOT-"}],
-            [{"text": "📢 تابع أحدث العروض @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}]
+            [{"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}]
         ]
     }
 ]

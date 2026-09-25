@@ -408,7 +408,7 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
                 {"text": "⚡ عروض السوبر ديلز", "url": super_link}
             ],
             [
-                {"text": "📢 قناتنا للعروض @DzAliexpress0", "url": "https://t.me/DzAliexpress0"},
+                {"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"},
                 {
                     "text": "🔄 مشاركة البوت",
                     "url": "https://t.me/share/url?url=https://t.me/Alilo07BOT&text=بوت زيادة تخفيض العملات في علي اكسبرس 🪙🔥 يوفر حتى 70%!"
@@ -691,7 +691,7 @@ async def handle_update(update: Dict[str, Any]) -> bool:
                             {"text": "🛒 الرابط المباشر", "url": product_link}
                         ],
                         [
-                            {"text": "📢 قناة الصفقات @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
+                            {"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}
                         ]
                     ]
                 }
@@ -728,7 +728,7 @@ async def handle_update(update: Dict[str, Any]) -> bool:
             )
             markup = {
                 "inline_keyboard": [
-                    [{"text": "📢 قناة الصفقات المعتمدة @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}],
+                    [{"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}],
                     [{"text": "📖 طريقة جمع وتفعيل العملات", "callback_data": "cb_help"}]
                 ]
             }
@@ -744,7 +744,7 @@ async def handle_update(update: Dict[str, Any]) -> bool:
                 ],
                 [
                     {"text": "📋 قائمة مراقبة الأسعار", "callback_data": "cb_watchlist_help"},
-                    {"text": "📢 قناة العروض @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
+                    {"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}
                 ]
             ]
         }

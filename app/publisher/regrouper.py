@@ -240,10 +240,10 @@ async def check_and_publish_regrouped_bulletins(bot_token: Optional[str] = None)
         reply_markup = {
             "inline_keyboard": [
                 [
-                    {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": "https://t.me/Alilo07BOT"}
+                    {"text": "🪙 فتح بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"}
                 ],
                 [
-                    {"text": "📢 تابع أحدث العروض @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
+                    {"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}
                 ]
             ]
         }

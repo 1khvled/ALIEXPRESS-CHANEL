@@ -55,7 +55,7 @@ def build_promo_ending_alert(promo: PromoEvent, end_hour_str: str = "08:00") -> 
                 {"text": "🪙 بوت تخفيض العملات DealScout", "url": "https://t.me/Alilo07BOT"}
             ],
             [
-                {"text": "📢 قناة الصفقات @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
+                {"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}
             ]
         ]
     }
@@ -94,7 +94,7 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
                 {"text": "🪙 بوت تخفيض العملات DealScout", "url": "https://t.me/Alilo07BOT"}
             ],
             [
-                {"text": "📢 قناة الصفقات @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
+                {"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}
             ]
         ]
     }

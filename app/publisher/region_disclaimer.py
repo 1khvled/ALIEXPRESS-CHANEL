@@ -33,10 +33,10 @@ DISCLAIMER_TEXT = """❝ ❓ <b>لماذا يجب تغيير دولة التطب
 DISCLAIMER_KEYBOARD = {
     "inline_keyboard": [
         [
-            {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": "https://t.me/Alilo07BOT"}
+            {"text": "🪙 فتح بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"}
         ],
         [
-            {"text": "📢 انضم لقناة العروض @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
+            {"text": "📢 انضم لقناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}
         ]
     ]
 }
