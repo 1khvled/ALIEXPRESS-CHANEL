@@ -14,6 +14,7 @@ if sys.platform == "win32":
     except Exception:
         pass
 
+from datetime import datetime, timezone
 import httpx
 from bs4 import BeautifulSoup
 from sqlalchemy import select
@@ -23,6 +24,7 @@ from app.db.session import init_db, db_context
 from app.db.models import Channel, SourceMessage, Deal, GeneratedPost
 from app.aliexpress.product import product_extractor
 from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category
+from app.aliexpress.promos import promo_tracker
 from app.aliexpress.affiliate import affiliate_service
 from app.ai.generator import caption_generator
 from app.media.downloader import media_downloader
@@ -30,13 +32,14 @@ from app.media.renderer import media_renderer
 from app.publisher.publisher import telegram_publisher
 from app.utils.logger import logger
 
-# Channels with clean, unbranded official product photos
-# Strictly avoiding aniscoupons and ECKSDEAL due to competitor graphic frame overlays
+# Channels to monitor for deals (photos are fetched exclusively from AliExpress CDN)
 CHANNELS = [
-    "lodydeals",
-    "BNDDEALS",
     "Pcgamingpart",
-    "zedstoreonline"
+    "zedstoreonline",
+    "aniscoupons",
+    "ECKSDEAL",
+    "lodydeals",
+    "BNDDEALS"
 ]
 
 async def collect_and_post_last_10_deals():
@@ -90,17 +93,32 @@ async def collect_and_post_last_10_deals():
 
                     raw_text = text_div.get_text(separator="\n").strip()
 
-                    # 1. Smart spam filtering
+                    # 1. Parse message timestamp and enforce maximum 24h freshness
+                    time_el = block.find("time")
+                    msg_dt = None
+                    if time_el and time_el.get("datetime"):
+                        try:
+                            msg_dt = datetime.fromisoformat(time_el["datetime"].replace("Z", "+00:00"))
+                        except Exception:
+                            pass
+
+                    # 2. Promo calendar freshness & expired campaign check
+                    is_fresh, freshness_reason = promo_tracker.validate_deal_freshness(raw_text, msg_dt)
+                    if not is_fresh:
+                        print(f"  [EXPIRED / STALE SKIPPED] {freshness_reason}")
+                        continue
+
+                    # 3. Smart spam filtering
                     is_spam, spam_reason = is_spam_or_non_deal(raw_text)
                     if is_spam:
                         continue
 
-                    # 2. Extract deal or coupon list
+                    # 4. Extract deal or coupon list
                     extracted = await product_extractor.extract_from_message(raw_text)
                     if not extracted or not extracted.is_valid:
                         continue
 
-                    # 2.5 Category whitelist: ONLY gaming, watches, phones, tablets
+                    # 5. Category whitelist: ONLY gaming, watches, phones, tablets
                     allowed, reject_reason = is_allowed_category(
                         extracted.title or '',
                         raw_text
@@ -109,28 +127,28 @@ async def collect_and_post_last_10_deals():
                         print(f"  [CATEGORY FILTERED] {reject_reason}")
                         continue
 
-                    # 3. Deduplication check
+                    # 6. Deduplication check
                     if extracted.product_id in seen_products:
                         print(f"  [DUPLICATE SKIPPED] '{extracted.product_id}' already posted.")
                         continue
 
                     seen_products.add(extracted.product_id)
 
-                    # 4. Extract attached channel photo
+                    # 7. Official Studio Photo ONLY — NEVER use competitor Telegram channel photos!
+                    # Only accept official AliExpress CDN images (alicdn.com, aliexpress-media.com)
                     img_url = extracted.image_url
-                    photo_wrap = block.find("a", class_="tgme_widget_message_photo_wrap")
-                    if photo_wrap and photo_wrap.get("style"):
-                        m = re.search(r"url\('([^']+)'\)", photo_wrap["style"])
-                        if m:
-                            img_url = m.group(1)
+                    if not img_url or not any(domain in img_url for domain in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
+                        print(f"  [NO OFFICIAL PHOTO] Skipping deal without clean AliExpress CDN image: {extracted.product_id}")
+                        continue
 
-                    # 5. Build affiliate URL (Direct AliExpress or Portals API, NO TinyURL!)
+                    # 8. Build affiliate URL (Direct AliExpress Portals API, s.click links)
                     aff_link = await affiliate_service.create_affiliate_link(
                         product_url=extracted.canonical_url,
                         product_id=extracted.product_id
                     )
 
-                    # 6. Generate caption matching channel structure
+                    # 9. Generate caption with promo banner if active
+                    promo_tag = promo_tracker.get_promo_header()
                     caption = await caption_generator.generate(
                         title=extracted.title or "AliExpress Deal",
                         usd_price=extracted.current_price,
@@ -139,10 +157,11 @@ async def collect_and_post_last_10_deals():
                         coupon_code=extracted.coupon_code,
                         has_points_discount=extracted.has_points_discount,
                         country_info=extracted.country_info,
-                        coupon_list=extracted.coupon_list if extracted.is_coupon_list else None
+                        coupon_list=extracted.coupon_list if extracted.is_coupon_list else None,
+                        promo_tag=promo_tag
                     )
 
-                    # 7. Prepare Image with subtle circular DealScout logo watermark
+                    # 10. Prepare Image with subtle circular DealScout logo watermark
                     local_img_file = None
                     if img_url:
                         downloaded = await media_downloader.download_image(img_url, extracted.product_id)
@@ -155,9 +174,9 @@ async def collect_and_post_last_10_deals():
                             )
 
                     if not local_img_file:
-                        continue  # Must have valid product image
+                        continue  # Must have valid rendered product image
 
-                    # 8. Save record
+                    # 11. Save record
                     async with db_context() as s:
                         ch_record = (await s.execute(
                             select(Channel).where(Channel.username == ch)
@@ -239,7 +258,9 @@ async def collect_and_post_last_10_deals():
                             print(f"  [!] Failed to publish: {err}")
 
             except Exception as e:
+                import traceback
                 print(f"  [ERROR] @{ch}: {e}")
+                traceback.print_exc()
 
     print("\n" + "=" * 70)
     print(f"SUCCESS: Published {len(published_deals)} deals to {settings.TARGET_CHANNEL_ID}!")

@@ -42,10 +42,12 @@ class DealCaptionGenerator:
         affiliate_url: str,
         coupon_code: Optional[str] = None,
         has_points_discount: bool = False,
-        country_info: Optional[str] = None
+        country_info: Optional[str] = None,
+        promo_tag: Optional[str] = None
     ) -> str:
         """
         Builds the exact post format matching top Algerian channels:
+        [إشعار الحملة الترويجية إن وجد]
         [إشعار الدولة إن وجد]
         العرض مستمر 🚨
         تخفيض لـ {PRODUCT_TITLE}
@@ -57,6 +59,8 @@ class DealCaptionGenerator:
         لا تنسى استخدام البوت للشراء بأقل الأسعار
         """
         lines = []
+        if promo_tag:
+            lines.append(f"{promo_tag} 🛍️")
         if country_info:
             lines.append(f"لا تنسى تحويل دولة التطبيق إلى {country_info} 📍")
         lines.append("العرض مستمر 🚨")
@@ -84,7 +88,8 @@ class DealCaptionGenerator:
         coupon_code: Optional[str] = None,
         has_points_discount: bool = False,
         country_info: Optional[str] = None,
-        coupon_list: Optional[List[Dict[str, str]]] = None
+        coupon_list: Optional[List[Dict[str, str]]] = None,
+        promo_tag: Optional[str] = None
     ) -> str:
         """
         Generates clean Arabic Telegram caption matching project requirements.
@@ -103,7 +108,8 @@ class DealCaptionGenerator:
             affiliate_url=affiliate_url,
             coupon_code=coupon_code,
             has_points_discount=has_points_discount,
-            country_info=country_info
+            country_info=country_info,
+            promo_tag=promo_tag
         )
 
 caption_generator = DealCaptionGenerator()

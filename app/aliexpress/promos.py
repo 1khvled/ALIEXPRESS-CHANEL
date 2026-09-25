@@ -1,0 +1,155 @@
+"""
+AliExpress Global Promotions & Promo Codes Tracker
+Tracks official AliExpress sale festivals, Choice Day events, active coupons,
+and validates deal freshness to prevent posting expired deals or outdated coupons.
+"""
+from dataclasses import dataclass
+from datetime import datetime, timezone, timedelta
+from typing import Optional, List, Dict, Tuple
+import re
+
+@dataclass
+class PromoEvent:
+    name: str
+    name_ar: str
+    start_date: datetime
+    end_date: datetime
+    banner_tag: str
+    is_major: bool
+    coupon_tiers: List[Dict[str, str]]
+
+# Official AliExpress 2026 Sales Calendar
+PROMO_CALENDAR: List[PromoEvent] = [
+    PromoEvent(
+        name="Choice Day October",
+        name_ar="تخفيضات Choice Day لشهر أكتوبر 🔥",
+        start_date=datetime(2026, 10, 1, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 10, 7, 23, 59, 59, tzinfo=timezone.utc),
+        banner_tag="🎯 Choice Day (1 - 7 أكتوبر)",
+        is_major=True,
+        coupon_tiers=[
+            {"tier": "3/29$", "code": "CDDZ03"},
+            {"tier": "6/49$", "code": "CDDZ06"},
+            {"tier": "10/79$", "code": "CDDZ10"},
+            {"tier": "20/159$", "code": "CDDZ20"},
+            {"tier": "40/299$", "code": "CDDZ40"},
+        ]
+    ),
+    PromoEvent(
+        name="Autumn Tech & Brands Sale",
+        name_ar="عروض الخريف والبراند داي 💻",
+        start_date=datetime(2026, 10, 18, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 10, 22, 23, 59, 59, tzinfo=timezone.utc),
+        banner_tag="⚡ عروض منتصف أكتوبر",
+        is_major=False,
+        coupon_tiers=[]
+    ),
+    PromoEvent(
+        name="11.11 Global Shopping Festival Warm-Up",
+        name_ar="التحضير لمهرجان 11.11 العالمي 💥",
+        start_date=datetime(2026, 11, 1, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 11, 10, 23, 59, 59, tzinfo=timezone.utc),
+        banner_tag="⏳ تحضيرات مهرجان 11.11",
+        is_major=True,
+        coupon_tiers=[]
+    ),
+    PromoEvent(
+        name="11.11 Global Shopping Festival Main Sale",
+        name_ar="مهرجان 11.11 الأكبر عالمياً 🛍️",
+        start_date=datetime(2026, 11, 11, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 11, 18, 23, 59, 59, tzinfo=timezone.utc),
+        banner_tag="🔥 أقوى تخفيضات السنة 11.11",
+        is_major=True,
+        coupon_tiers=[]
+    ),
+    PromoEvent(
+        name="Black Friday & Cyber Monday",
+        name_ar="تخفيضات الجمعة البيضاء Black Friday 🖤",
+        start_date=datetime(2026, 11, 24, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 11, 30, 23, 59, 59, tzinfo=timezone.utc),
+        banner_tag="🖤 Black Friday السنوي",
+        is_major=True,
+        coupon_tiers=[]
+    ),
+]
+
+EXPIRED_DATE_PATTERNS = [
+    # Explicit past dates in September or earlier
+    re.compile(r'(?:ينتهي|صالح\s+حتى|نهاية\s+العرض|إلى\s+غاية|الى\s+غاية)\s*(?:يوم)?\s*([0-9]{1,2})\s*(?:سبتمبر|sept|september|أوت|اوت|august|جويلية|july)', re.IGNORECASE),
+    re.compile(r'(?:20|19|18|17|16|15|14|13|12|11|10)\s*(?:سبتمبر|september|sept)\b', re.IGNORECASE),
+    re.compile(r'\b(?:20|19|18|17|16|15|14|13|12|11|10)/09(?:/202[0-6])?\b', re.IGNORECASE),
+    re.compile(r'brand\s*day\s*september', re.IGNORECASE),
+    re.compile(r'تخفيضات\s*(?:منتصف|شهر)?\s*سبتمبر', re.IGNORECASE),
+]
+
+class PromoTracker:
+    def __init__(self):
+        self.calendar = PROMO_CALENDAR
+
+    def get_active_promo(self, now: Optional[datetime] = None) -> Optional[PromoEvent]:
+        """Returns the currently active official AliExpress promo event, if any."""
+        if now is None:
+            now = datetime.now(timezone.utc)
+        for event in self.calendar:
+            if event.start_date <= now <= event.end_date:
+                return event
+        return None
+
+    def get_next_promo(self, now: Optional[datetime] = None) -> Optional[Tuple[PromoEvent, int]]:
+        """Returns the upcoming promo event and days remaining until it starts."""
+        if now is None:
+            now = datetime.now(timezone.utc)
+        for event in self.calendar:
+            if event.start_date > now:
+                days_left = (event.start_date - now).days
+                return event, days_left
+        return None
+
+    def validate_deal_freshness(self, text: str, msg_datetime: Optional[datetime] = None) -> Tuple[bool, Optional[str]]:
+        """
+        Validates that a deal is fresh and not an expired promo from past campaigns:
+        1. Checks message age (must be within last 24 hours).
+        2. Detects expired date mentions (e.g. Sept 20 coupons or past dates).
+        3. Detects expired campaign names.
+        """
+        now = datetime.now(timezone.utc)
+
+        # 1. Message age check (reject messages older than 24 hours)
+        if msg_datetime is not None:
+            age = now - msg_datetime
+            if age > timedelta(hours=24):
+                return False, f"Message is too old ({age.total_seconds() / 3600:.1f} hours ago, max 24h)"
+
+        # 2. Expired date mentions in text
+        for pat in EXPIRED_DATE_PATTERNS:
+            m = pat.search(text)
+            if m:
+                return False, f"Mention of expired campaign/date detected: '{m.group(0)}'"
+
+        # 3. If coupons are mentioned, ensure we are not in an empty period passing off old codes
+        active_promo = self.get_active_promo(now)
+        if not active_promo:
+            # Between campaigns: allow individual store coupons or coins, but reject generic expired platform campaigns
+            if "brand day" in text.lower() and "sept" in text.lower():
+                return False, "Expired September Brand Day promo"
+
+        return True, None
+
+    def get_promo_header(self, now: Optional[datetime] = None) -> Optional[str]:
+        """Returns promo banner to include in telegram posts if a major event is active or imminent."""
+        if now is None:
+            now = datetime.now(timezone.utc)
+
+        active = self.get_active_promo(now)
+        if active:
+            return active.banner_tag
+
+        next_event = self.get_next_promo(now)
+        if next_event:
+            event, days_left = next_event
+            if days_left <= 3 and event.is_major:
+                return f"⏳ استعدوا: {event.banner_tag} ينطلق بعد {days_left} أيام!"
+
+        return None
+
+promo_tracker = PromoTracker()

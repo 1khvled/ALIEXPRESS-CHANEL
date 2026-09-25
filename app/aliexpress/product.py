@@ -123,24 +123,28 @@ class ProductExtractor:
                     prod_info = details[0]
                     if getattr(prod_info, 'product_main_image_url', None):
                         image_url = prod_info.product_main_image_url
-                    if (not title or len(title) < 10) and getattr(prod_info, 'product_title', None):
-                        title = prod_info.product_title[:90]
+                    api_title = getattr(prod_info, 'product_title', None)
+                    if api_title:
+                        clean_api_title = self._clean_official_title(api_title)
+                        # Replace title if current title is missing, too short, or suspicious description
+                        if not title or len(title) < 15 or self._is_suspicious_title(title):
+                            title = clean_api_title
             except Exception as e:
                 logger.debug(f"API product details fetch skipped: {e}")
 
         # Fallback to page metadata if image/title still missing
-        if not image_url or not title or len(title) < 10:
-            page_meta = await self._fetch_page_metadata(resolved.canonical_url)
-            if not title or len(title) < 10:
+        if not image_url or not title or len(title) < 10 or self._is_suspicious_title(title):
+            page_meta = (await self._fetch_page_metadata(resolved.canonical_url)) or {}
+            if not title or len(title) < 10 or self._is_suspicious_title(title):
                 if page_meta.get("title"):
                     meta_t = page_meta["title"]
                     meta_t = re.sub(r'(\s*-\s*AliExpress.*$|\s*\|\s*AliExpress.*$)', '', meta_t).strip()
                     if len(meta_t) >= 4:
-                        title = meta_t[:100]
+                        title = self._clean_official_title(meta_t)
             if not image_url and page_meta.get("image"):
                 image_url = page_meta["image"]
 
-        is_valid = bool(resolved.product_id and (usd_price or eur_price) and title)
+        is_valid = bool(resolved.product_id and (usd_price or eur_price) and title and image_url)
 
         return ExtractedProduct(
             product_id=resolved.product_id,
@@ -185,5 +189,56 @@ class ProductExtractor:
         except Exception as e:
             logger.debug(f"Metadata fetch skipped for {url}: {e}")
         return meta
+
+    def _clean_official_title(self, raw_title: str) -> str:
+        """Removes SEO junk words from AliExpress official catalog titles."""
+        if not raw_title:
+            return ""
+        # Strip common AliExpress SEO fluff
+        patterns_to_remove = [
+            r'\b(?:original|global\s+version|wholesale|hot\s+sale|free\s+shipping|brand\s+new|top\s+quality)\b',
+            r'\b(?:new\s+202[0-9]|202[0-9]\s+new|202[0-9])\b',
+            r'\b(?:for\s+men|for\s+women|for\s+kids|for\s+adults)\b',
+            r'\b(?:high\s+quality|drop\s+shipping|in\s+stock)\b',
+            r'[\$€£].*$',
+            r'[\(\[\{][^\)\]\}]*(?:shipping|original|version|sale)[^\)\]\}]*[\)\]\}]',
+        ]
+        cleaned = raw_title
+        for pat in patterns_to_remove:
+            cleaned = re.sub(pat, '', cleaned, flags=re.IGNORECASE)
+        # Clean extra spaces and punctuation
+        cleaned = re.sub(r'[\s\-|,/]{2,}', ' ', cleaned).strip(' -|,/')
+        # Return first 75 characters if it's too long
+        if len(cleaned) > 80:
+            words = cleaned.split()
+            result = []
+            cur_len = 0
+            for w in words:
+                if cur_len + len(w) + 1 > 75:
+                    break
+                result.append(w)
+                cur_len += len(w) + 1
+            cleaned = ' '.join(result)
+        return cleaned or raw_title[:75]
+
+    def _is_suspicious_title(self, title: str) -> bool:
+        """Detects if a title looks like a description, accessories list, or non-product phrase."""
+        if not title:
+            return True
+        t_low = title.lower()
+        # Words indicating package descriptions or accessories
+        suspicious_words = [
+            "يلحقك", "معاها", "يأتي مع", "معها", "ملحقات", "الهدايا",
+            "محتويات", "العلبة", "بوشات", "كيتمان", "قلم كتابة", "انكسابل",
+            "طريقة", "كيفية", "شرح", "تخفيض لـ", "تخفيض الآن", "عرض خاص",
+            "جدول", "اكواد", "أكواد", "قسيمة البائع", "قسيمة", "كوبون"
+        ]
+        for w in suspicious_words:
+            if w in t_low:
+                return True
+        # If it has 2+ slashes, it's an accessories list
+        if title.count('/') >= 2 or title.count('+') >= 3:
+            return True
+        return False
 
 product_extractor = ProductExtractor()

@@ -147,6 +147,31 @@ DASHBOARD_HTML = """<!DOCTYPE html>
       <!-- Right Column -->
       <div class="space-y-6">
 
+        <!-- Promo Calendar Card -->
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3">
+          <h3 class="font-bold text-sm flex items-center justify-between">
+            <span class="flex items-center space-x-2">
+              <i class="fa-solid fa-calendar-days text-amber-400"></i>
+              <span>AliExpress Promo Calendar</span>
+            </span>
+            <span class="text-[10px] bg-amber-500/10 text-amber-400 px-2 py-0.5 rounded-full border border-amber-500/20">Upcoming</span>
+          </h3>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 space-y-1 text-xs">
+            <div class="font-semibold text-rose-400">🎯 Choice Day (1 - 7 أكتوبر)</div>
+            <div class="text-slate-400 text-[11px]">Starts October 1st • 7 days of mega sales & coupon tiers</div>
+          </div>
+          <div class="space-y-1.5 text-xs text-slate-400">
+            <div class="flex items-center justify-between py-1 border-b border-slate-800/80">
+              <span>Sept 20 Promos</span>
+              <span class="text-rose-400 font-medium">Expired & Filtered</span>
+            </div>
+            <div class="flex items-center justify-between py-1">
+              <span>Photo Source</span>
+              <span class="text-emerald-400 font-medium">100% AliExpress CDN</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Bot Status Card -->
         <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3">
           <h3 class="font-bold text-sm flex items-center space-x-2">

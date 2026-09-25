@@ -265,7 +265,11 @@ def extract_clean_title(text: str) -> Optional[str]:
         "هاتف جديد", "أحدث", "جميع الألوان", "عاود رجع", "تخفيض الآن",
         "مواصفات", "قسيمة البائع", "كوبون", "قسيمة", "قناة", "اشترك",
         "بكمية قليلة", "ألحق", "الحق", "تاع بريكولاج", "بريكولاج", "افار", "آفار",
-        "ديرو بلاد", "بلاد الجزائر", "ديرو بلاد الجزائر", "اختر بلد", "أختر بلد"
+        "ديرو بلاد", "بلاد الجزائر", "ديرو بلاد الجزائر", "اختر بلد", "أختر بلد",
+        "يلحقك", "معاها", "يأتي مع", "معها", "ملحقات", "الهدايا", "محتويات", "العلبة",
+        "بوشات", "كيتمان", "قلم كتابة", "انكسابل", "هدية", "شاحن مع كابل",
+        "طريقة الشراء", "طريقة الطلب", "رابط الشراء", "للشراء", "للطلب",
+        "جدول", "اكواد", "أكواد", "تخفيضات", "عروض الخريف", "تفعيل"
     ]
 
     # Normalize tatweel and remove multiple exclamation/fire emojis
@@ -282,6 +286,12 @@ def extract_clean_title(text: str) -> Optional[str]:
         for n in noise:
             if n in norm or n in norm_collapsed:
                 return True
+        # Reject bundle listings with multiple slashes (e.g. بوشات / كابل / شاحن / ماوس)
+        if cand_str.count('/') >= 2 or cand_str.count('+') >= 3:
+            return True
+        # Reject candidate titles starting with description verbs
+        if any(norm.startswith(v) for v in ["يلحقك", "تأتي", "تحتوي", "يأتي", "معاها", "طريقة", "كيفية", "شرح"]):
+            return True
         return False
 
     # 1. Look for explicit title prefix line
@@ -295,7 +305,7 @@ def extract_clean_title(text: str) -> Optional[str]:
             cand = re.sub(r'[\$€].*$', '', cand).strip()
             cand = re.sub(r'https?://\S+', '', cand).strip()
             cand = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:]+', '', cand).strip()
-            if not is_noisy(cand):
+            if not is_noisy(cand) and len(cand) >= 4:
                 return cand[:100]
 
     # 2. Look for lines with English/Arabic product name
