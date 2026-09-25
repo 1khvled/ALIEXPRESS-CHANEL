@@ -22,7 +22,7 @@ from app.config.settings import settings
 from app.db.session import init_db, db_context
 from app.db.models import Channel, SourceMessage, Deal, GeneratedPost
 from app.aliexpress.product import product_extractor
-from app.aliexpress.parser import is_spam_or_non_deal
+from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category
 from app.aliexpress.affiliate import affiliate_service
 from app.ai.generator import caption_generator
 from app.media.downloader import media_downloader
@@ -98,6 +98,15 @@ async def collect_and_post_last_10_deals():
                     # 2. Extract deal or coupon list
                     extracted = await product_extractor.extract_from_message(raw_text)
                     if not extracted or not extracted.is_valid:
+                        continue
+
+                    # 2.5 Category whitelist: ONLY gaming, watches, phones, tablets
+                    allowed, reject_reason = is_allowed_category(
+                        extracted.title or '',
+                        raw_text
+                    )
+                    if not allowed:
+                        print(f"  [CATEGORY FILTERED] {reject_reason}")
                         continue
 
                     # 3. Deduplication check

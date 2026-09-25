@@ -50,6 +50,72 @@ NON_DEAL_INDICATORS = [
     "اشترك في قناتنا", "قناتنا الاحتياطية", "مسابقة ربح", "قنواتنا", "تطبيق أفلام", "apk"
 ]
 
+# ── Category Whitelist: ONLY gaming, watches, phones, tablets, tech accessories ──
+ALLOWED_CATEGORY_KEYWORDS_EN = [
+    # Gaming peripherals
+    "mouse", "mice", "keyboard", "headset", "headphone", "earphone", "earbuds",
+    "tws", "controller", "gamepad", "joystick", "gaming", "gamer", "game",
+    "monitor", "mechanical", "rgb", "dpi", "mouse pad", "mousepad",
+    # GPU / PC parts
+    "gpu", "graphics card", "rtx", "gtx", "radeon", "ram", "ssd", "nvme",
+    "gaming chair", "cooling", "cooler", "fan",
+    # Phones
+    "phone", "smartphone", "mobile", "iphone", "samsung", "xiaomi", "redmi",
+    "poco", "oneplus", "realme", "oppo", "vivo", "nothing phone", "pixel",
+    # Tablets
+    "tablet", "ipad", "tab",
+    # Watches
+    "watch", "smartwatch", "smart watch", "smart band", "band", "mi band",
+    "amazfit", "garmin", "huawei watch", "apple watch", "fitness tracker",
+    # Consoles & VR
+    "console", "playstation", "ps5", "ps4", "xbox", "nintendo", "switch",
+    "vr", "oculus", "meta quest", "steam deck",
+    # Audio
+    "speaker", "soundbar", "microphone", "mic", "bluetooth",
+    # Accessories (phone/tablet/pc)
+    "charger", "charging", "power bank", "case", "cover", "screen protector",
+    "tempered glass", "stylus", "pen", "cable", "usb", "type-c", "hdmi",
+    "adapter", "hub", "dock",
+    # Camera & media
+    "webcam", "camera", "drone", "action cam", "gopro", "tripod",
+    "ring light", "led strip", "projector",
+    # Computers
+    "mini pc", "laptop", "notebook", "chromebook",
+    # Generic tech
+    "wireless", "bluetooth", "rechargeable",
+]
+
+ALLOWED_CATEGORY_KEYWORDS_AR = [
+    "ماوس", "كيبورد", "لوحة مفاتيح", "سماعة", "سماعات", "يد تحكم",
+    "جيمنج", "قيمنق", "جيمينق", "جايمنج", "شاشة", "كرسي",
+    "هاتف", "جوال", "موبايل", "تابلت", "لوحي",
+    "ساعة", "ساعه", "ذكية", "سوار ذكي",
+    "بلوتوث", "شاحن", "باور بانك", "كابل", "كفر", "جراب", "حامل",
+    "سبيكر", "مايك", "كاميرا", "درون", "بروجكتر", "لابتوب",
+    "لاسلكي", "وايرلس",
+]
+
+
+def is_allowed_category(title: str, text: str) -> Tuple[bool, Optional[str]]:
+    """Check if the deal belongs to an allowed category (gaming, watches, phones, tablets, tech)."""
+    combined = f"{title} {text}".lower()
+
+    # Check English keywords
+    for kw in ALLOWED_CATEGORY_KEYWORDS_EN:
+        if kw in combined:
+            return True, None
+
+    # Check Arabic keywords
+    for kw in ALLOWED_CATEGORY_KEYWORDS_AR:
+        if kw in combined:
+            return True, None
+
+    # If coupon list (multiple coupons), allow it through — these are general discount codes
+    if combined.count("كوبون") >= 2 or combined.count("code") >= 2 or combined.count("coupon") >= 2:
+        return True, None
+
+    return False, f"Category not allowed (not gaming/watch/phone/tablet): {title[:60]}"
+
 def is_spam_or_non_deal(text: str) -> Tuple[bool, Optional[str]]:
     if not text or len(text.strip()) < 10:
         return True, "Message is too short or empty"
