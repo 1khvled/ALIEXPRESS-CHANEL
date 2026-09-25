@@ -76,7 +76,7 @@ def build_promo_calendar_post(now: Optional[datetime] = None) -> Tuple[str, Dict
                 {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": "https://t.me/Alilo07BOT"}
             ],
             [
-                {"text": "📈 أسعار الصرف الحية SquareAlgerie.com 🇩🇿", "url": "https://squarealgerie.com"}
+                {"text": "📢 تابع أحدث العروض الحصرية @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
             ]
         ]
     }
@@ -115,7 +115,7 @@ def build_next_sale_transition_post(ended_promo: PromoEvent, next_promo: PromoEv
                 {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": "https://t.me/Alilo07BOT"}
             ],
             [
-                {"text": "📈 أسعار الصرف الحية SquareAlgerie.com 🇩🇿", "url": "https://squarealgerie.com"}
+                {"text": "📢 تابع أحدث العروض الحصرية @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
             ]
         ]
     }

@@ -78,7 +78,7 @@ WELCOME_TEXT = """👋 <b>مرحباً بك في بوت DealScoutDz لزيادة
 2️⃣ أرسل الرابط هنا في المحادثة.
 3️⃣ سيرسل لك البوت فوراً روابط التخفيض الأكبر (تخفيض العملات، Bundle Deals، السوبر ديلز، والرابط المباشر) مع السعر المباشر بالدينار الجزائري! 🚀
 
-📊 أسعار الصرف الحية مقدمة لكم بشراكة مع: <a href="https://squarealgerie.com">SquareAlgerie.com</a> 🇩🇿"""
+💡 <i>أرسل أي رابط منتج من AliExpress الآن لتجربة التخفيض!</i>"""
 
 HELP_TEXT = """💡 <b>دليل استخدام تخفيض العملات بأقصى نسبة:</b>
 
@@ -371,7 +371,7 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
     price_line = ""
     if prod_price:
         dzd_val = int(prod_price * usdt_rate)
-        price_line = f"💵 السعر: <b>{prod_price:.2f}$</b> (~<b>{dzd_val:,} دج</b>)\n(سعر الصرف 1 USDT ≈ {int(usdt_rate)} دج عبر SquareAlgerie.com)\n"
+        price_line = f"💵 السعر التقريبي: <b>{prod_price:.2f}$</b> (~<b>{dzd_val:,} دج</b>)\n"
 
     safe_title = html.escape(prod_title)
 
@@ -392,9 +392,7 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
 ⏳ <b>العرض المحدود (Limited Offer):</b>
 🔗 {limited_link}
 
-💡 <i>نصيحة: ادخل من رابط العملات واشترِ مباشرة أو أضف المنتج للسلة لتفعيل أكبر نسبة خصم!</i>
-
-📊 <i>أسعار الصرف مقدمة من:</i> <a href="https://squarealgerie.com">SquareAlgerie.com</a> 🇩🇿"""
+💡 <i>نصيحة: ادخل من رابط العملات واشترِ مباشرة أو أضف المنتج للسلة لتفعيل أكبر نسبة خصم!</i>"""
 
     reply_markup = {
         "inline_keyboard": [
@@ -405,9 +403,6 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
             [
                 {"text": "📦 عروض Bundle Deals", "url": bundle_link},
                 {"text": "⚡ عروض السوبر ديلز", "url": super_link}
-            ],
-            [
-                {"text": "📈 أسعار الصرف الحية SquareAlgerie.com 🇩🇿", "url": "https://squarealgerie.com"}
             ],
             [
                 {"text": "📢 قناتنا للعروض @DzAliexpress0", "url": "https://t.me/DzAliexpress0"},
@@ -583,9 +578,6 @@ async def handle_update(update: Dict[str, Any]) -> bool:
                 [
                     {"text": "📖 طريقة استخدام تخفيض العملات", "callback_data": "cb_help"},
                     {"text": "🎟️ كودات وكوبونات التخفيض", "callback_data": "cb_coupons"}
-                ],
-                [
-                    {"text": "📈 أسعار الصرف الحية SquareAlgerie.com 🇩🇿", "url": "https://squarealgerie.com"}
                 ],
                 [
                     {"text": "📢 قناتنا للعروض @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
