@@ -467,9 +467,21 @@ async def telegram_webhook(request: Request):
         return {"ok": False, "error": str(e)}
 
 
+@app.post("/api/admin-webhook")
+async def telegram_admin_webhook(request: Request):
+    """Serverless Telegram Admin Scout & Publisher Bot webhook."""
+    try:
+        update = await request.json()
+        from api.admin_bot import handle_admin_update
+        await handle_admin_update(update)
+        return {"ok": True}
+    except Exception as e:
+        return {"ok": False, "error": str(e)}
+
+
 @app.get("/api/set-webhook")
 async def set_telegram_webhook():
-    """Sets the Telegram bot webhook to this Vercel deployment URL."""
+    """Sets the public Coin bot webhook to this Vercel deployment URL."""
     try:
         from app.config.settings import settings
         token = settings.TELEGRAM_BOT_TOKEN
@@ -485,3 +497,20 @@ async def set_telegram_webhook():
             return resp.json()
     except Exception as e:
         return {"ok": False, "error": str(e)}
+
+
+@app.get("/api/set-admin-webhook")
+async def set_admin_telegram_webhook():
+    """Sets the dedicated Admin bot webhook to this Vercel deployment URL."""
+    try:
+        admin_token = "8708965924:AAGi9HgLDxKsvaOzPOnCDRhI4c9WAfUvkOk"
+        webhook_url = "https://dealscout-green.vercel.app/api/admin-webhook"
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            resp = await client.post(
+                f"https://api.telegram.org/bot{admin_token}/setWebhook",
+                json={"url": webhook_url, "drop_pending_updates": True}
+            )
+            return resp.json()
+    except Exception as e:
+        return {"ok": False, "error": str(e)}
+

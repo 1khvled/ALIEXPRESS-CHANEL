@@ -124,16 +124,20 @@ def extract_pid_from_string(text: str) -> Optional[str]:
     clean = text.strip()
     if clean.isdigit() and len(clean) >= 10:
         return clean
-    m = re.search(r'/item/(\d+)', text, re.IGNORECASE)
+    m = re.search(r'/item/(\d{10,18})', text, re.IGNORECASE)
     if m:
         return m.group(1)
-    m = re.search(r'productIds?=(\d+)', text, re.IGNORECASE)
+    m = re.search(r'productIds?=(\d{10,18})', text, re.IGNORECASE)
     if m:
         return m.group(1)
-    m = re.search(r'(?:itemId|item_id|productId|product_id|id)=(\d+)', text, re.IGNORECASE)
+    m = re.search(r'(?:itemId|item_id|productId|product_id)[=:](\d{10,18})', text, re.IGNORECASE)
+    if m:
+        return m.group(1)
+    m = re.search(r'(?:^|[?&#;])id=(\d{10,18})(?:$|[&#;])', text, re.IGNORECASE)
     if m:
         return m.group(1)
     return None
+
 
 def extract_title_and_price_from_user_text(text: str) -> Tuple[Optional[str], Optional[float]]:
     """Extracts product title and price if user shared directly from AliExpress mobile app."""
@@ -159,6 +163,75 @@ def extract_title_and_price_from_user_text(text: str) -> Tuple[Optional[str], Op
     title = cleaned[:90] if len(cleaned) >= 8 else None
     return title, price
 
+_ALI_API_LOCK = asyncio.Lock()
+_LAST_ALI_CALL_TIME = 0.0
+
+async def safe_api_get_details(api: AliexpressApi, product_id: str) -> Optional[List[Any]]:
+    """Rate-limited safe caller for get_products_details."""
+    global _LAST_ALI_CALL_TIME
+    async with _ALI_API_LOCK:
+        elapsed = time.time() - _LAST_ALI_CALL_TIME
+        if elapsed < 1.1:
+            await asyncio.sleep(1.1 - elapsed)
+        _LAST_ALI_CALL_TIME = time.time()
+
+        for attempt in range(2):
+            try:
+                res = await asyncio.wait_for(
+                    asyncio.to_thread(api.get_products_details, str(product_id)),
+                    timeout=4.5
+                )
+                if res:
+                    return res
+            except Exception as e:
+                err_str = str(e).lower()
+                if "ban" in err_str or "limit" in err_str:
+                    await asyncio.sleep(1.2)
+                    _LAST_ALI_CALL_TIME = time.time()
+                    try:
+                        return await asyncio.wait_for(
+                            asyncio.to_thread(api.get_products_details, str(product_id)),
+                            timeout=4.5
+                        )
+                    except Exception:
+                        pass
+                elif attempt == 0:
+                    await asyncio.sleep(0.5)
+        return None
+
+async def safe_api_get_affiliate_links(api: AliexpressApi, urls_joined: str) -> Optional[List[Any]]:
+    """Rate-limited safe caller for get_affiliate_links."""
+    global _LAST_ALI_CALL_TIME
+    async with _ALI_API_LOCK:
+        elapsed = time.time() - _LAST_ALI_CALL_TIME
+        if elapsed < 1.1:
+            await asyncio.sleep(1.1 - elapsed)
+        _LAST_ALI_CALL_TIME = time.time()
+
+        for attempt in range(2):
+            try:
+                res = await asyncio.wait_for(
+                    asyncio.to_thread(api.get_affiliate_links, urls_joined),
+                    timeout=4.0
+                )
+                if res:
+                    return res
+            except Exception as e:
+                err_str = str(e).lower()
+                if "ban" in err_str or "limit" in err_str:
+                    await asyncio.sleep(1.2)
+                    _LAST_ALI_CALL_TIME = time.time()
+                    try:
+                        return await asyncio.wait_for(
+                            asyncio.to_thread(api.get_affiliate_links, urls_joined),
+                            timeout=4.0
+                        )
+                    except Exception:
+                        pass
+                elif attempt == 0:
+                    await asyncio.sleep(0.5)
+        return None
+
 async def resolve_any_ali_link(text: str) -> Optional[str]:
     """
     Bulletproof resolver for ANY AliExpress link:
@@ -173,38 +246,55 @@ async def resolve_any_ali_link(text: str) -> Optional[str]:
     if pid:
         return pid
 
-    urls = extract_urls(text)
-    if not urls:
-        return None
+    # Check for embedded shortlinks even if glued to text without spaces
+    sclick_match = re.search(r's\.click\.aliexpress\.com/e/(_[a-zA-Z0-9]+)', text)
+    candidate_urls = []
+    if sclick_match:
+        candidate_urls.append(f"https://s.click.aliexpress.com/e/{sclick_match.group(1)}")
 
-    raw_url = urls[0]
-    pid = extract_pid_from_string(raw_url)
-    if pid and "s.click" not in raw_url and "a.aliexpress" not in raw_url and "star.aliexpress" not in raw_url:
-        return pid
+    a_match = re.search(r'a\.aliexpress\.com/(_[a-zA-Z0-9]+)', text)
+    if a_match:
+        candidate_urls.append(f"https://a.aliexpress.com/{a_match.group(1)}")
 
-    try:
-        async with httpx.AsyncClient(timeout=3.5, follow_redirects=False) as client:
-            headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
-            resp = await client.get(raw_url, headers=headers)
-            loc = resp.headers.get("location") or resp.headers.get("Location")
-            if loc:
-                found = extract_pid_from_string(loc)
+    candidate_urls.extend(extract_urls(text))
+
+    for raw_url in candidate_urls:
+        pid = extract_pid_from_string(raw_url)
+        if pid and "s.click" not in raw_url and "a.aliexpress" not in raw_url and "star.aliexpress" not in raw_url:
+            return pid
+
+        try:
+            async with httpx.AsyncClient(timeout=4.5, follow_redirects=True) as client:
+                headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+                resp = await client.get(raw_url, headers=headers)
+                found = extract_pid_from_string(str(resp.url))
                 if found:
                     return found
-                if loc.startswith("http"):
-                    resp2 = await client.get(loc, headers=headers, timeout=2.5)
-                    loc2 = resp2.headers.get("location") or str(resp2.url)
-                    found2 = extract_pid_from_string(loc2)
-                    if found2:
-                        return found2
-            if resp.status_code == 200 and resp.text:
-                found = extract_pid_from_string(resp.text[:5000])
-                if found:
-                    return found
-    except Exception:
-        pass
+                if resp.text:
+                    found = extract_pid_from_string(resp.text[:5000])
+                    if found:
+                        return found
+        except Exception:
+            pass
 
-    return extract_pid_from_string(raw_url)
+        # If s.click failed and has extra characters glued at the end, try trimming
+        if "s.click.aliexpress.com/e/_" in raw_url:
+            m_s = re.search(r's\.click\.aliexpress\.com/e/(_[a-zA-Z0-9]{7,12})', raw_url)
+            if m_s:
+                code = m_s.group(1)
+                for trim_len in [8, 9, 7]:
+                    if len(code) > trim_len:
+                        trimmed_url = f"https://s.click.aliexpress.com/e/{code[:trim_len]}"
+                        try:
+                            async with httpx.AsyncClient(timeout=3.5, follow_redirects=True) as client:
+                                resp = await client.get(trimmed_url, headers={"User-Agent": "Mozilla/5.0"})
+                                found = extract_pid_from_string(str(resp.url))
+                                if found:
+                                    return found
+                        except Exception:
+                            pass
+
+    return extract_pid_from_string(text)
 
 async def generate_coin_discount_response(product_id: str, raw_user_text: str = "") -> Dict[str, Any]:
     """
@@ -241,55 +331,42 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
             ALIEXPRESS_AFFILIATE_TRACKING_ID
         )
 
-        # 1. Fetch details (generous 4.5s timeout with retry)
-        for attempt in range(2):
-            try:
-                details = await asyncio.wait_for(
-                    asyncio.to_thread(api.get_products_details, str(product_id)),
-                    timeout=4.5
-                )
-                if details and len(details) > 0:
-                    info = details[0]
-                    t = getattr(info, 'product_title', None)
-                    if t:
-                        prod_title = t[:90]
-                    p = getattr(info, 'target_sale_price', None) or getattr(info, 'sale_price', None)
-                    if p:
-                        try:
-                            prod_price = float(p)
-                        except Exception:
-                            pass
-                    img = getattr(info, 'product_main_image_url', None)
-                    if img and ("alicdn.com" in img or "aliexpress-media.com" in img):
-                        prod_image = img
-                    break
-            except Exception:
-                await asyncio.sleep(0.2)
+        # 1. Fetch details with rate limiting
+        details = await safe_api_get_details(api, str(product_id))
+        if details and len(details) > 0:
+            info = details[0]
+            t = getattr(info, 'product_title', None)
+            if t:
+                prod_title = t[:90]
+            p = getattr(info, 'target_sale_price', None) or getattr(info, 'sale_price', None)
+            if p:
+                try:
+                    prod_price = float(p)
+                except Exception:
+                    pass
+            img = getattr(info, 'product_main_image_url', None)
+            if img and ("alicdn.com" in img or "aliexpress-media.com" in img):
+                prod_image = img
 
-        # 2. Fetch s.click affiliate links
-        try:
-            raw_links = await asyncio.wait_for(
-                asyncio.to_thread(api.get_affiliate_links, ",".join(target_urls)),
-                timeout=3.5
-            )
-            if raw_links:
-                aff_map = {}
-                for item in raw_links:
-                    orig = getattr(item, 'source_value', '')
-                    promo = getattr(item, 'promotion_link', '')
-                    if orig and promo:
-                        aff_map[orig] = promo
-                product_link = aff_map.get(direct_product, direct_product)
-                coin_link = aff_map.get(direct_coin, direct_coin)
-                bundle_link = aff_map.get(direct_bundle, direct_bundle)
-                if product_link != direct_product and "s.click" in product_link:
-                    super_link = product_link
-                    limited_link = product_link
-        except Exception:
-            pass
+        # 2. Fetch s.click affiliate links with rate limiting
+        raw_links = await safe_api_get_affiliate_links(api, ",".join(target_urls))
+        if raw_links:
+            aff_map = {}
+            for item in raw_links:
+                orig = getattr(item, 'source_value', '')
+                promo = getattr(item, 'promotion_link', '')
+                if orig and promo:
+                    aff_map[orig] = promo
+            product_link = aff_map.get(direct_product, direct_product)
+            coin_link = aff_map.get(direct_coin, direct_coin)
+            bundle_link = aff_map.get(direct_bundle, direct_bundle)
+            if product_link != direct_product and "s.click" in product_link:
+                super_link = product_link
+                limited_link = product_link
 
     except Exception:
         pass
+
 
     price_line = ""
     if prod_price:
