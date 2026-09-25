@@ -1,10 +1,11 @@
 """
 Bulletproof Serverless AliExpress Coin & Discount Bot for Vercel
-Guaranteed Zero-Failure & Ultra-Fast:
+Guaranteed Zero-Failure, Accurate Product Detection & Ultra-Fast:
 - Works with ANY AliExpress link (desktop, mobile, shortlinks, share texts, raw IDs)
-- Live USDT exchange rate integration via SquareAlgerie.com (248-250 DA)
+- Direct Product link (الرابط المباشر للمنتج) + Coin link + Bundle Deals + SuperDeals
+- Full title & price extraction with generous timeout + fallback parser
+- Live USDT exchange rate integration via SquareAlgerie.com (~249 DA)
 - Advertisement and live rate badge for SquareAlgerie.com
-- Parallel/Graceful API execution with instant fallback to direct affiliate coin links
 - 100% Delivery guarantee (HTML mode with auto-fallback)
 """
 import asyncio
@@ -12,7 +13,7 @@ import html
 import os
 import re
 import time
-from typing import Optional, Dict, Any, List
+from typing import Optional, Dict, Any, List, Tuple
 from urllib.parse import urlparse, parse_qs
 import httpx
 from aliexpress_api import AliexpressApi, models
@@ -49,7 +50,6 @@ async def get_live_usdt_rate() -> float:
     except Exception:
         pass
 
-    # Default calibrated rate in the 248-250 DA range requested by user
     _CACHED_USDT_RATE = 249.0
     _CACHED_USDT_TIME = now
     return _CACHED_USDT_RATE
@@ -61,7 +61,7 @@ WELCOME_TEXT = """👋 <b>مرحباً بك في بوت DealScoutDz لزيادة
 📌 <b>طريقة الاستخدام بكل بساطة:</b>
 1️⃣ انسخ رابط أي منتج تريده من تطبيق أو موقع AliExpress.
 2️⃣ أرسل الرابط هنا في المحادثة.
-3️⃣ سيرسل لك البوت فوراً روابط التخفيض الأكبر (تخفيض العملات، Bundle Deals، السوبر ديلز) مع السعر المباشر بالدينار الجزائري! 🚀
+3️⃣ سيرسل لك البوت فوراً روابط التخفيض الأكبر (تخفيض العملات، Bundle Deals، السوبر ديلز، والرابط المباشر) مع السعر المباشر بالدينار الجزائري! 🚀
 
 📊 أسعار الصرف الحية مقدمة لكم بشراكة مع: <a href="https://squarealgerie.com">SquareAlgerie.com</a> 🇩🇿"""
 
@@ -107,22 +107,44 @@ def extract_pid_from_string(text: str) -> Optional[str]:
     if not text:
         return None
     clean = text.strip()
-    # 1. Bare product ID
     if clean.isdigit() and len(clean) >= 10:
         return clean
-    # 2. /item/{id}.html
     m = re.search(r'/item/(\d+)', text, re.IGNORECASE)
     if m:
         return m.group(1)
-    # 3. productIds=...
     m = re.search(r'productIds?=(\d+)', text, re.IGNORECASE)
     if m:
         return m.group(1)
-    # 4. itemId=... or id=...
     m = re.search(r'(?:itemId|item_id|productId|product_id|id)=(\d+)', text, re.IGNORECASE)
     if m:
         return m.group(1)
     return None
+
+def extract_title_and_price_from_user_text(text: str) -> Tuple[Optional[str], Optional[float]]:
+    """Extracts product title and price if user shared directly from AliExpress mobile app."""
+    if not text:
+        return None, None
+    cleaned = re.sub(r'https?://\S+', '', text)
+    # Price
+    price = None
+    m_price = re.search(r'(?:US\s*)?\$?\s*([0-9]+[.,][0-9]{1,2})\s*\$?', cleaned, re.IGNORECASE)
+    if m_price:
+        try:
+            price = float(m_price.group(1).replace(',', '.'))
+        except Exception:
+            pass
+
+    # Title
+    cleaned = re.sub(r'(?:US\s*)?\$?\s*[0-9]+[.,][0-9]{1,2}\s*\$?', '', cleaned)
+    cleaned = re.sub(
+        r'Just found this amazing item on AliExpress\.?|Check it out!?|لقيت هذا المنتج|شوف هذا العرض|علي اكسبرس|AliExpress',
+        '',
+        cleaned,
+        flags=re.IGNORECASE
+    )
+    cleaned = re.sub(r'[|؛:,\-_~]+', ' ', cleaned).strip()
+    title = cleaned[:90] if len(cleaned) >= 8 else None
+    return title, price
 
 async def resolve_any_ali_link(text: str) -> Optional[str]:
     """
@@ -175,30 +197,34 @@ async def resolve_any_ali_link(text: str) -> Optional[str]:
 
     return extract_pid_from_string(raw_url)
 
-async def generate_coin_discount_response(product_id: str) -> Dict[str, Any]:
+async def generate_coin_discount_response(product_id: str, raw_user_text: str = "") -> Dict[str, Any]:
     """
-    Guaranteed Zero-Failure generator:
-    Always returns valid discount links, even if AliExpress Open Platform API is slow or offline.
+    Guaranteed Zero-Failure generator with generous timeout for AliExpress API
+    and fallback to user share text title/price.
     """
     usdt_rate = await get_live_usdt_rate()
 
-    # Base direct links (always valid and working!)
+    fallback_title, fallback_price = extract_title_and_price_from_user_text(raw_user_text)
+
+    # Base direct links
+    direct_product = f"https://www.aliexpress.com/item/{product_id}.html"
     direct_coin = f"https://m.aliexpress.com/p/coin-index/index.html?productIds={product_id}"
     direct_bundle = f"https://www.aliexpress.com/ssr/300000512/BundleDeals2?productIds={product_id}"
     direct_super = f"https://www.aliexpress.com/item/{product_id}.html?sourceType=680"
     direct_limited = f"https://www.aliexpress.com/item/{product_id}.html?sourceType=562"
 
-    target_urls = [direct_coin, direct_bundle, direct_super, direct_limited]
+    target_urls = [direct_product, direct_coin, direct_bundle]
 
-    prod_title = "منتج مميز من AliExpress"
-    prod_price = None
+    prod_title = fallback_title or "منتج مميز من AliExpress"
+    prod_price = fallback_price
     prod_image = None
+    product_link = direct_product
     coin_link = direct_coin
     bundle_link = direct_bundle
     super_link = direct_super
     limited_link = direct_limited
 
-    # Try AliExpress Open Platform API with timeout protection
+    # Try AliExpress Open Platform API with generous timeout
     try:
         api = AliexpressApi(
             ALIEXPRESS_AFFILIATE_APP_KEY,
@@ -208,36 +234,36 @@ async def generate_coin_discount_response(product_id: str) -> Dict[str, Any]:
             ALIEXPRESS_AFFILIATE_TRACKING_ID
         )
 
-        # 1. Fetch details
-        try:
-            details = await asyncio.wait_for(
-                asyncio.to_thread(api.get_products_details, [product_id]),
-                timeout=2.0
-            )
-            if details and len(details) > 0:
-                info = details[0]
-                t = getattr(info, 'product_title', None)
-                if t:
-                    prod_title = t[:90]
-                p = getattr(info, 'target_sale_price', None) or getattr(info, 'sale_price', None)
-                if p:
-                    try:
-                        prod_price = float(p)
-                    except Exception:
-                        pass
-                img = getattr(info, 'product_main_image_url', None)
-                if img and ("alicdn.com" in img or "aliexpress-media.com" in img):
-                    prod_image = img
-        except Exception:
-            pass
-
-        await asyncio.sleep(0.12)
+        # 1. Fetch details (generous 4.5s timeout with retry)
+        for attempt in range(2):
+            try:
+                details = await asyncio.wait_for(
+                    asyncio.to_thread(api.get_products_details, str(product_id)),
+                    timeout=4.5
+                )
+                if details and len(details) > 0:
+                    info = details[0]
+                    t = getattr(info, 'product_title', None)
+                    if t:
+                        prod_title = t[:90]
+                    p = getattr(info, 'target_sale_price', None) or getattr(info, 'sale_price', None)
+                    if p:
+                        try:
+                            prod_price = float(p)
+                        except Exception:
+                            pass
+                    img = getattr(info, 'product_main_image_url', None)
+                    if img and ("alicdn.com" in img or "aliexpress-media.com" in img):
+                        prod_image = img
+                    break
+            except Exception:
+                await asyncio.sleep(0.2)
 
         # 2. Fetch s.click affiliate links
         try:
             raw_links = await asyncio.wait_for(
                 asyncio.to_thread(api.get_affiliate_links, ",".join(target_urls)),
-                timeout=2.0
+                timeout=3.5
             )
             if raw_links:
                 aff_map = {}
@@ -246,26 +272,31 @@ async def generate_coin_discount_response(product_id: str) -> Dict[str, Any]:
                     promo = getattr(item, 'promotion_link', '')
                     if orig and promo:
                         aff_map[orig] = promo
+                product_link = aff_map.get(direct_product, direct_product)
                 coin_link = aff_map.get(direct_coin, direct_coin)
                 bundle_link = aff_map.get(direct_bundle, direct_bundle)
-                super_link = aff_map.get(direct_super, direct_super)
-                limited_link = aff_map.get(direct_limited, direct_limited)
+                # Build SuperDeals and Limited from affiliate product link if available
+                if product_link != direct_product and "s.click" in product_link:
+                    super_link = product_link
+                    limited_link = product_link
         except Exception:
             pass
 
     except Exception:
-        # Fallback to direct links — ZERO FAILURE GUARANTEE
         pass
 
     price_line = ""
     if prod_price:
         dzd_val = int(prod_price * usdt_rate)
-        price_line = f"💵 السعر التقريبي: <b>{prod_price:.2f}$</b> (~<b>{dzd_val:,} دج</b>)\n(سعر الصرف 1 USDT ≈ {int(usdt_rate)} دج عبر SquareAlgerie.com)\n"
+        price_line = f"💵 السعر: <b>{prod_price:.2f}$</b> (~<b>{dzd_val:,} دج</b>)\n(سعر الصرف 1 USDT ≈ {int(usdt_rate)} دج عبر SquareAlgerie.com)\n"
 
     safe_title = html.escape(prod_title)
 
     message_text = f"""🛍️ <b>{safe_title}</b>
 {price_line}
+🛒 <b>الرابط المباشر للمنتج:</b>
+🔗 {product_link}
+
 🪙 <b>سعر تخفيض العملات (Coins):</b>
 🔗 {coin_link}
 
@@ -285,7 +316,8 @@ async def generate_coin_discount_response(product_id: str) -> Dict[str, Any]:
     reply_markup = {
         "inline_keyboard": [
             [
-                {"text": "🪙 شراء بتخفيض العملات المباشر", "url": coin_link}
+                {"text": "🛒 رابط الشراء المباشر", "url": product_link},
+                {"text": "🪙 شراء بتخفيض العملات", "url": coin_link}
             ],
             [
                 {"text": "📦 عروض Bundle Deals", "url": bundle_link},
@@ -395,8 +427,8 @@ async def handle_update(update: Dict[str, Any]) -> bool:
     except Exception:
         pass
 
-    # Guaranteed response generation
-    res = await generate_coin_discount_response(pid)
+    # Guaranteed response generation with raw text fallback
+    res = await generate_coin_discount_response(pid, raw_user_text=text)
 
     # Send with photo if available, fallback to text
     if res.get("image_url"):
@@ -418,7 +450,7 @@ async def send_photo(chat_id: int, photo_url: str, caption: str, reply_markup: O
         payload["reply_markup"] = reply_markup
 
     try:
-        async with httpx.AsyncClient(timeout=4.5) as client:
+        async with httpx.AsyncClient(timeout=5.0) as client:
             resp = await client.post(
                 f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendPhoto",
                 json=payload
@@ -438,13 +470,12 @@ async def send_msg(chat_id: int, text: str, reply_markup: Optional[Dict] = None)
         payload["reply_markup"] = reply_markup
 
     try:
-        async with httpx.AsyncClient(timeout=4.5) as client:
+        async with httpx.AsyncClient(timeout=5.0) as client:
             resp = await client.post(
                 f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage",
                 json=payload
             )
             if resp.status_code != 200 or not resp.json().get("ok"):
-                # Safety fallback without parse_mode
                 payload["parse_mode"] = None
                 await client.post(
                     f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage",
