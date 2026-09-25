@@ -109,6 +109,15 @@ class TelegramPublisher:
         # Send via Telegram Bot API
         api_url = f"https://api.telegram.org/bot{self.bot_token}"
         try:
+            # Inline keyboard for direct purchase + coin discount bot
+            import json
+            inline_keyboard = []
+            if deal.affiliate_url and deal.affiliate_url.startswith("http"):
+                btn_title = "🎟️ صفحة الكوبونات والتخفيضات" if getattr(deal, "quality_score", 0) == 95 and "كود" in caption else "🛒 رابط الشراء من AliExpress"
+                inline_keyboard.append([{"text": btn_title, "url": deal.affiliate_url}])
+            inline_keyboard.append([{"text": "🪙 بوت تخفيض العملات @Alilo07BOT", "url": "https://t.me/Alilo07BOT"}])
+            reply_markup_json = json.dumps({"inline_keyboard": inline_keyboard})
+
             async with httpx.AsyncClient(timeout=30.0) as client:
                 if image_path and image_path.exists():
                     # Send photo with caption
@@ -117,7 +126,8 @@ class TelegramPublisher:
                         data = {
                             "chat_id": self.target_channel,
                             "caption": caption,
-                            "parse_mode": "HTML"
+                            "parse_mode": "HTML",
+                            "reply_markup": reply_markup_json
                         }
                         resp = await client.post(f"{api_url}/sendPhoto", data=data, files=files)
                 else:
@@ -125,7 +135,8 @@ class TelegramPublisher:
                     data = {
                         "chat_id": self.target_channel,
                         "text": caption,
-                        "parse_mode": "HTML"
+                        "parse_mode": "HTML",
+                        "reply_markup": reply_markup_json
                     }
                     resp = await client.post(f"{api_url}/sendMessage", data=data)
 

@@ -27,10 +27,10 @@ class DealCaptionGenerator:
             lines.append(f"🎟️ كوبون {tier} : {code}")
 
         lines.append("")
-        lines.append("رابط صفحة الكوبونات والتخفيضات:")
-        lines.append(f"🔗 {affiliate_url}")
+        lines.append("🔗 رابط صفحة الكوبونات والتخفيضات:")
+        lines.append(f"{affiliate_url}")
         lines.append("")
-        lines.append("لا تنسى استخدام البوت للشراء بأقل الأسعار")
+        lines.append("🪙 استخدم بوت العملات للشراء بأقل سعر: @Alilo07BOT")
 
         return "\n".join(lines)
 
@@ -56,7 +56,7 @@ class DealCaptionGenerator:
         كوبون : {COUPON} (إن وجد)
         خصم النقاط (إن وجد)
 
-        لا تنسى استخدام البوت للشراء بأقل الأسعار
+        🪙 استخدم بوت العملات للشراء بأقل سعر: @Alilo07BOT
         """
         lines = []
         if promo_tag:
@@ -75,7 +75,7 @@ class DealCaptionGenerator:
             lines.append("خصم النقاط")
 
         lines.append("")
-        lines.append("لا تنسى استخدام البوت للشراء بأقل الأسعار")
+        lines.append("🪙 استخدم بوت العملات للشراء بأقل سعر: @Alilo07BOT")
 
         return "\n".join(lines)
 

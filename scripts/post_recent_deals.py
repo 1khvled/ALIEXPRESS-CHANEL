@@ -118,14 +118,15 @@ async def collect_and_post_last_10_deals():
                     if not extracted or not extracted.is_valid:
                         continue
 
-                    # 5. Category whitelist: ONLY gaming, watches, phones, tablets
-                    allowed, reject_reason = is_allowed_category(
-                        extracted.title or '',
-                        raw_text
-                    )
-                    if not allowed:
-                        print(f"  [CATEGORY FILTERED] {reject_reason}")
-                        continue
+                    # 5. Category whitelist: ONLY gaming, watches, phones, tablets (Coupons bulletin exempt)
+                    if not extracted.is_coupon_list:
+                        allowed, reject_reason = is_allowed_category(
+                            extracted.title or '',
+                            raw_text
+                        )
+                        if not allowed:
+                            print(f"  [CATEGORY FILTERED] {reject_reason}")
+                            continue
 
                     # 6. Deduplication check
                     if extracted.product_id in seen_products:
@@ -137,14 +138,15 @@ async def collect_and_post_last_10_deals():
                     # 7. Official Studio Photo ONLY — NEVER use competitor Telegram channel photos!
                     # Only accept official AliExpress CDN images (alicdn.com, aliexpress-media.com)
                     img_url = extracted.image_url
-                    if not img_url or not any(domain in img_url for domain in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
-                        print(f"  [NO OFFICIAL PHOTO] Skipping deal without clean AliExpress CDN image: {extracted.product_id}")
-                        continue
+                    if not extracted.is_coupon_list:
+                        if not img_url or not any(domain in img_url for domain in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
+                            print(f"  [NO OFFICIAL PHOTO] Skipping deal without clean AliExpress CDN image: {extracted.product_id}")
+                            continue
 
                     # 8. Build affiliate URL (Direct AliExpress Portals API, s.click links)
                     aff_link = await affiliate_service.create_affiliate_link(
                         product_url=extracted.canonical_url,
-                        product_id=extracted.product_id
+                        product_id=extracted.product_id if not extracted.is_coupon_list else None
                     )
 
                     # 9. Generate caption with promo banner if active
@@ -173,8 +175,8 @@ async def collect_and_post_last_10_deals():
                                 usd_price=extracted.current_price
                             )
 
-                    if not local_img_file:
-                        continue  # Must have valid rendered product image
+                    if not local_img_file and not extracted.is_coupon_list:
+                        continue  # Must have valid rendered product image unless it's a coupon list bulletin
 
                     # 11. Save record
                     async with db_context() as s:
