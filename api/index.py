@@ -460,8 +460,8 @@ async def telegram_webhook(request: Request):
     """Serverless Telegram Coin & Discount Bot webhook."""
     try:
         update = await request.json()
-        from app.telegram.coin_bot import handle_telegram_update
-        await handle_telegram_update(update)
+        from api.coin_bot import handle_update
+        await handle_update(update)
         return {"ok": True}
     except Exception as e:
         return {"ok": False, "error": str(e)}
