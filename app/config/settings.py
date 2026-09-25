@@ -1,5 +1,6 @@
 from pathlib import Path
-from typing import Literal, Optional
+from typing import Literal, Optional, Any, Union
+from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
@@ -27,6 +28,7 @@ class Settings(BaseSettings):
     # Telegram Publisher (Bot API)
     TELEGRAM_BOT_TOKEN: Optional[str] = None
     TARGET_CHANNEL_ID: Optional[str] = None
+    ADMIN_USER_ID: Optional[int] = None
 
     # Database
     DATABASE_URL: str = "sqlite+aiosqlite:///deals.db"
@@ -59,5 +61,34 @@ class Settings(BaseSettings):
     # AI Provider
     OPENAI_API_KEY: Optional[str] = None
     AI_MODEL: str = "gpt-4o-mini"
+
+    @field_validator(
+        "TELEGRAM_API_ID",
+        "ADMIN_USER_ID",
+        mode="before"
+    )
+    @classmethod
+    def parse_optional_int(cls, v: Any) -> Optional[int]:
+        if v is None or v == "" or str(v).strip() == "":
+            return None
+        return int(v)
+
+    @field_validator(
+        "TELEGRAM_API_HASH",
+        "TELEGRAM_PHONE",
+        "TELEGRAM_BOT_TOKEN",
+        "TARGET_CHANNEL_ID",
+        "ALIEXPRESS_AFFILIATE_TRACKING_ID",
+        "ALIEXPRESS_AFFILIATE_APP_KEY",
+        "ALIEXPRESS_AFFILIATE_APP_SECRET",
+        "ALIEXPRESS_CUSTOM_AFFILIATE_PREFIX",
+        "OPENAI_API_KEY",
+        mode="before"
+    )
+    @classmethod
+    def parse_optional_str(cls, v: Any) -> Optional[str]:
+        if v is None or str(v).strip() == "":
+            return None
+        return str(v).strip()
 
 settings = Settings()
