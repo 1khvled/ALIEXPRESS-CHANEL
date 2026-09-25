@@ -5,7 +5,7 @@ No database required.
 """
 import re
 from datetime import datetime, timezone
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 import httpx
 from bs4 import BeautifulSoup
@@ -453,3 +453,35 @@ async def channel_posts():
             {"error": str(e), "posts": []},
             status_code=500
         )
+
+
+@app.post("/api/webhook")
+async def telegram_webhook(request: Request):
+    """Serverless Telegram Coin & Discount Bot webhook."""
+    try:
+        update = await request.json()
+        from app.telegram.coin_bot import handle_telegram_update
+        await handle_telegram_update(update)
+        return {"ok": True}
+    except Exception as e:
+        return {"ok": False, "error": str(e)}
+
+
+@app.get("/api/set-webhook")
+async def set_telegram_webhook():
+    """Sets the Telegram bot webhook to this Vercel deployment URL."""
+    try:
+        from app.config.settings import settings
+        token = settings.TELEGRAM_BOT_TOKEN
+        if not token:
+            return {"ok": False, "error": "TELEGRAM_BOT_TOKEN not configured"}
+
+        webhook_url = "https://dealscout-green.vercel.app/api/webhook"
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            resp = await client.post(
+                f"https://api.telegram.org/bot{token}/setWebhook",
+                json={"url": webhook_url, "drop_pending_updates": True}
+            )
+            return resp.json()
+    except Exception as e:
+        return {"ok": False, "error": str(e)}
