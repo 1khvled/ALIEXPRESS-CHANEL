@@ -817,6 +817,32 @@ async def live_rates():
     return {"rate": rate, "currency": "USDT", "source": "SquareAlgerie.com"}
 
 
+@app.get("/api/stats")
+async def get_dashboard_stats():
+    """Returns real-time ecosystem stats (watchlist items, schedule, rates)."""
+    try:
+        from app.publisher.watchlist import get_total_watchlist_count
+        from app.publisher.state_tracker import get_schedule_config
+        from api.coin_bot import get_live_usdt_rate
+
+        rate = await get_live_usdt_rate()
+        wl_count = get_total_watchlist_count()
+        cfg = get_schedule_config()
+
+        return {
+            "ok": True,
+            "usdt_rate": rate,
+            "watchlist_active_count": wl_count,
+            "schedule": {
+                "day_interval": cfg.get("day_interval_minutes", 5),
+                "night_interval": cfg.get("night_interval_minutes", 30),
+                "is_paused": cfg.get("is_paused", False)
+            }
+        }
+    except Exception as e:
+        return {"ok": False, "error": str(e)}
+
+
 @app.get("/api/schedule")
 async def get_schedule():
     """Returns current automated posting schedule configuration."""

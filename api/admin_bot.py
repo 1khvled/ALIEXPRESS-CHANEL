@@ -846,6 +846,77 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             await send_admin_msg(chat_id, f"❌ حدث خطأ: {e}")
         return True
 
+    if text.startswith("/hub") or text.startswith("/sticky_hub") or text.startswith("دليل التخفيضات"):
+        await send_admin_msg(chat_id, "⏳ جاري إنشاء ونشر وتثبيت الدليل الشامل للتخفيضات والكوبونات في القناة @DzAliexpress0...")
+        try:
+            from app.aliexpress.promos import promo_tracker
+            now = datetime.now(timezone.utc)
+            promo = promo_tracker.get_active_promo(now)
+            if not promo:
+                next_p = promo_tracker.get_next_promo(now)
+                promo = next_p[0] if next_p else promo_tracker.calendar[0]
+
+            tiers_text = []
+            for t in promo.coupon_tiers:
+                tiers_text.append(f"▫️ خصم <b>{t['tier']}</b> ⬅️ الكود: <code>{t['code']}</code>")
+            coupons_block = "\n".join(tiers_text) if tiers_text else "▫️ الكوبونات تُفعّل تلقائياً عند الدفع"
+
+            hub_caption = (
+                f"📌 <b>دليل التخفيضات والكوبونات الفعالة الشامل | DealScout Live Hub</b> 🛍️\n"
+                f"━━━━━━━━━━━━━━━━━\n"
+                f"🎯 <b>الحدث الحالي:</b> {promo.name_ar}\n"
+                f"🗓 <b>الفترة:</b> {promo.banner_tag}\n\n"
+                f"🎟️ <b>كوبونات التخفيض الحصرية المعتمدة:</b>\n"
+                f"{coupons_block}\n"
+                f"━━━━━━━━━━━━━━━━━\n"
+                f"💡 <b>نصائح ذهبية لمضاعفة التوفير:</b>\n"
+                f"1️⃣ <b>تخفيض العملات:</b> انسخ رابط أي منتج وأرسله للبوت @Alilo07BOT للحصول على أعلى نسبة خصم عملات ممكنة.\n"
+                f"2️⃣ <b>تحويل الدولة:</b> حوّل دولة التطبيق في AliExpress إلى <b>كوريا 🇰🇷</b> للاستفادة من أسعار وتخفيضات أقل.\n"
+                f"3️⃣ <b>حيلة تجميد السعر 20 يوماً:</b> إذا أعجبك عرض وخفت نفاده، ادفع ببطاقة فارغة/مجمدة لتحجز السعر والكوبون مدة 20 يوماً!\n"
+                f"━━━━━━━━━━━━━━━━━\n"
+                f"🪙 <b>بوت تخفيض العملات:</b> @Alilo07BOT\n"
+                f"📢 <b>قناة الصفقات المعتمدة:</b> @DzAliexpress0"
+            )
+
+            hub_markup = {
+                "inline_keyboard": [
+                    [{"text": "🪙 افتح بوت تخفيض العملات @Alilo07BOT", "url": "https://t.me/Alilo07BOT"}],
+                    [{"text": "📢 تابع أحدث الصيدات @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}]
+                ]
+            }
+
+            token = ADMIN_BOT_TOKEN
+            target = TARGET_CHANNEL_ID
+            async with httpx.AsyncClient(timeout=15.0) as client:
+                resp = await client.post(
+                    f"https://api.telegram.org/bot{token}/sendMessage",
+                    json={
+                        "chat_id": target,
+                        "text": hub_caption,
+                        "parse_mode": "HTML",
+                        "disable_web_page_preview": True,
+                        "reply_markup": hub_markup
+                    }
+                )
+                res_data = resp.json()
+                if resp.status_code == 200 and res_data.get("ok"):
+                    msg_id = res_data["result"]["message_id"]
+                    try:
+                        await client.post(
+                            f"https://api.telegram.org/bot{token}/pinChatMessage",
+                            json={"chat_id": target, "message_id": msg_id, "disable_notification": False}
+                        )
+                    except Exception:
+                        pass
+                    ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
+                    post_url = f"https://t.me/{ch_clean}/{msg_id}"
+                    await send_admin_msg(chat_id, f"✅ <b>تم نشر وتثبيت الدليل الشامل للتخفيضات بنجاح في القناة!</b> 📌\n🔗 <a href=\"{post_url}\">{post_url}</a>")
+                else:
+                    await send_admin_msg(chat_id, f"❌ فشل النشر: {res_data}")
+        except Exception as e:
+            await send_admin_msg(chat_id, f"❌ حدث خطأ: {e}")
+        return True
+
     if text.startswith("/notify_end") or text.startswith("نهاية التخفيضات") or text.startswith("تنبيه نهاية"):
         await send_admin_msg(chat_id, "⏳ جاري تجهيز ونشر تنبيه اقتراب نهاية التخفيضات في القناة @DzAliexpress0...")
         try:

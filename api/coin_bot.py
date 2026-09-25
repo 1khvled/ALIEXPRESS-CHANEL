@@ -401,6 +401,9 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
                 {"text": "🪙 شراء بتخفيض العملات", "url": coin_link}
             ],
             [
+                {"text": "🔔 راقب انخفاض السعر | Alert Price Drop", "callback_data": f"watch_{product_id}_{prod_price or 0.0}"}
+            ],
+            [
                 {"text": "📦 عروض Bundle Deals", "url": bundle_link},
                 {"text": "⚡ عروض السوبر ديلز", "url": super_link}
             ],
@@ -520,12 +523,67 @@ async def handle_update(update: Dict[str, Any]) -> bool:
         user = cb.get("from", {})
         user_id = user.get("id")
         chat_id = msg.get("chat", {}).get("id") if msg else None
+        msg_id = msg.get("message_id") if msg else None
+
+        toast_msg = None
+
+        if cb_data.startswith("watch_"):
+            # Format: watch_{pid}_{price}
+            parts = cb_data.split("_")
+            pid = parts[1] if len(parts) > 1 else ""
+            try:
+                price = float(parts[2]) if len(parts) > 2 else 0.0
+            except Exception:
+                price = 0.0
+
+            from app.publisher.watchlist import add_to_watchlist
+            title = msg.get("caption") or msg.get("text") or f"منتج {pid}"
+            clean_title = title.splitlines()[0] if title else f"منتج {pid}"
+            clean_title = clean_title.replace("🛍️", "").replace("<b>", "").replace("</b>", "").strip()
+
+            add_to_watchlist(user_id=user_id, product_id=pid, title=clean_title, price=price)
+            toast_msg = "✅ تم تفعيل المراقبة! سنرسل لك إشعاراً خاصاً فور انخفاض السعر أو توفر كوبون."
+
+        elif cb_data.startswith("unwatch_"):
+            pid = cb_data.replace("unwatch_", "").strip()
+            from app.publisher.watchlist import remove_from_watchlist, get_user_watchlist
+            remove_from_watchlist(user_id=user_id, product_id=pid)
+            toast_msg = "🗑️ تم حذف المنتج من قائمة المراقبة."
+
+            # Update watchlist message
+            if chat_id and msg_id:
+                user_watches = get_user_watchlist(user_id)
+                if not user_watches:
+                    await send_msg(chat_id, "📭 <b>أصبحت قائمة المراقبة فارغة الآن.</b>")
+                else:
+                    lines = [f"📋 <b>قائمة المنتجات التي تراقبها ({len(user_watches)}):</b>\n"]
+                    kb = []
+                    for w in user_watches[:10]:
+                        p_id = w.get("product_id")
+                        t_str = w.get("title", "")[:35]
+                        pr = w.get("price", 0.0)
+                        lines.append(f"• <b>{t_str}</b>\n  السعر: <b>{pr:.2f}$</b>\n  🆔 <code>{p_id}</code>")
+                        kb.append([{"text": f"❌ إزالة {t_str[:20]}...", "callback_data": f"unwatch_{p_id}"}])
+                    try:
+                        async with httpx.AsyncClient(timeout=4.0) as client:
+                            await client.post(
+                                f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/editMessageText",
+                                json={
+                                    "chat_id": chat_id,
+                                    "message_id": msg_id,
+                                    "text": "\n\n".join(lines),
+                                    "parse_mode": "HTML",
+                                    "reply_markup": {"inline_keyboard": kb}
+                                }
+                            )
+                    except Exception:
+                        pass
 
         try:
             async with httpx.AsyncClient(timeout=3.0) as client:
                 await client.post(
                     f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/answerCallbackQuery",
-                    json={"callback_query_id": cb_id}
+                    json={"callback_query_id": cb_id, "text": toast_msg} if toast_msg else {"callback_query_id": cb_id}
                 )
         except Exception:
             pass
@@ -536,17 +594,16 @@ async def handle_update(update: Dict[str, Any]) -> bool:
             elif cb_data == "cb_coupons":
                 await send_msg(chat_id, COUPONS_TEXT)
             elif cb_data.startswith("admin_pub_"):
-                # Admin manual publish action
                 if not is_admin(user_id):
                     await send_msg(chat_id, "⚠️ عذراً، هذا الإجراء مخصص لمشرف القناة فقط.")
                     return True
 
                 target_pid = cb_data.replace("admin_pub_", "").strip()
                 await send_msg(chat_id, "⏳ جاري نشر العرض في القناة @DzAliexpress0...")
-                success, err, msg_id = await publish_deal_to_channel(target_pid)
+                success, err, p_msg_id = await publish_deal_to_channel(target_pid)
                 if success:
                     ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
-                    post_url = f"https://t.me/{ch_clean}/{msg_id}"
+                    post_url = f"https://t.me/{ch_clean}/{p_msg_id}"
                     confirm_text = f"✅ <b>تم نشر العرض بنجاح في القناة!</b>\n\n🔗 <b>رابط المنشور:</b> {post_url}"
                     await send_msg(chat_id, confirm_text)
                 else:
@@ -558,13 +615,93 @@ async def handle_update(update: Dict[str, Any]) -> bool:
     if not message:
         return False
 
-    chat_id = message.get("chat", {}).get("id")
+    chat = message.get("chat", {})
+    chat_id = chat.get("id")
+    chat_type = chat.get("type", "private")
+    is_group = chat_type in ["group", "supergroup"]
+    message_id = message.get("message_id")
+
     from_user = message.get("from", {})
     user_id = from_user.get("id") or chat_id
-    text = (message.get("text") or "").strip()
+    text = (message.get("text") or message.get("caption") or "").strip()
     if not chat_id:
         return False
 
+    # ── Group Messages Auto-Conversion & Group Commands ─────────────────
+    if is_group:
+        # Command: /calc or /rate in group
+        if text.startswith("/calc") or text.startswith("/حساب"):
+            m = re.search(r'([0-9]+[.,]?[0-9]*)', text)
+            if m:
+                usd_val = float(m.group(1).replace(',', '.'))
+                rate = await get_live_usdt_rate()
+                dzd_val = int(usd_val * rate)
+                tax_est = 130
+                total_est = dzd_val + tax_est
+                calc_text = (
+                    f"🧮 <b>حاسبة سعر الشراء بالدينار الجزائري 🇩🇿</b>\n\n"
+                    f"💵 <b>المبلغ:</b> {usd_val:.2f}$ (سعر الصرف: {rate:.1f} دج)\n"
+                    f"▫️ <b>قيمة السلعة:</b> <b>{dzd_val:,} دج</b>\n"
+                    f"▫️ <b>رسوم طرد البريد الجزائري:</b> ~<b>{tax_est} دج</b>\n"
+                    f"💰 <b>التكلفة الإجمالية التقديرية:</b> ~<b>{total_est:,} دج</b>"
+                )
+                await send_msg(chat_id, calc_text, reply_to_message_id=message_id)
+                return True
+
+        if text.startswith("/rate") or text.startswith("/square") or text.startswith("/سكوار"):
+            rate = await get_live_usdt_rate()
+            rate_text = (
+                f"📈 <b>سعر صرف الـ USDT الحالي (SquareAlgerie.com):</b>\n\n"
+                f"💵 <b>1 USDT</b> ≈ <b>{rate:.1f} دج</b> 🇩🇿\n\n"
+                f"🪙 <i>لحساب أي مبلغ، أرسل: <code>/calc 15.5</code></i>"
+            )
+            await send_msg(chat_id, rate_text, reply_to_message_id=message_id)
+            return True
+
+        # Check if message contains an AliExpress link
+        urls = extract_urls(text)
+        has_ali = any("aliexpress" in u.lower() or "a.aliexpress" in u.lower() or "s.click" in u.lower() for u in urls) or extract_pid_from_string(text)
+        if has_ali:
+            pid = await resolve_any_ali_link(text)
+            if pid:
+                res = await generate_coin_discount_response(pid, raw_user_text=text)
+                title = res.get("title") or "منتج مميز من AliExpress"
+                safe_title = html.escape(title)[:75]
+                price = res.get("price")
+                coin_link = res.get("coin_link") or res.get("product_link")
+                product_link = res.get("product_link") or coin_link
+                usdt_rate = await get_live_usdt_rate()
+
+                price_info = ""
+                if price:
+                    dzd_approx = int(price * usdt_rate)
+                    price_info = f"💰 <b>السعر التقريبي:</b> ${price:.2f} (~<b>{dzd_approx:,} دج</b>)\n"
+
+                group_reply = (
+                    f"🪙 <b>تخفيض العملات المباشر للمنتج:</b>\n"
+                    f"📦 <b>{safe_title}</b>\n"
+                    f"{price_info}\n"
+                    f"🔗 <b><a href=\"{coin_link}\">اضغط هنا لفتح رابط أقصى تخفيض عملات (Coins) 👈</a></b>"
+                )
+
+                group_markup = {
+                    "inline_keyboard": [
+                        [
+                            {"text": "🪙 شراء بتخفيض العملات (Coins)", "url": coin_link},
+                            {"text": "🛒 الرابط المباشر", "url": product_link}
+                        ],
+                        [
+                            {"text": "📢 قناة الصفقات @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
+                        ]
+                    ]
+                }
+                await send_msg(chat_id, group_reply, reply_markup=group_markup, reply_to_message_id=message_id)
+                return True
+
+        # Normal chatter in group: return silently without spamming
+        return True
+
+    # ── Private Chat Handlers ──────────────────────────────────────────
     # Command: /myid or /id
     if text.startswith("/myid") or text.startswith("/id"):
         admin_badge = "👑 <b>مشرف معتمد (Admin)</b>" if is_admin(user_id) else "مستخدم عادي"
@@ -572,7 +709,33 @@ async def handle_update(update: Dict[str, Any]) -> bool:
         await send_msg(chat_id, id_text)
         return True
 
+    # Command: /start (Supports Deep-Link Ads & Campaigns)
     if text.startswith("/start"):
+        parts = text.split()
+        param = parts[1].lower() if len(parts) > 1 else ""
+
+        # Deep-link from Meta Ads or Promotions
+        if any(k in param for k in ["meta", "ad", "fb", "coins", "promo", "deal"]):
+            ad_welcome = (
+                "🇩🇿 <b>مرحباً بك في بوت DealScout DZ عبر إعلان تخفيض العملات!</b> 🪙🔥\n\n"
+                "هذا البوت يساعدك على توفير حتى <b>70%</b> من سعر أي منتج في <b>AliExpress</b> عبر تحويله إلى رابط خصم العملات (Coins) الأقصى!\n\n"
+                "📌 <b>جرّب الآن في 3 خطوات بسيطة:</b>\n"
+                "1️⃣ افتح تطبيق <b>AliExpress</b> واختر أي منتج تريده.\n"
+                "2️⃣ اضغط على زر المشاركة <b>(Share)</b> ثم نسخ الرابط <b>(Copy link)</b>.\n"
+                "3️⃣ <b>ألصق الرابط هنا في هذه المحادثة فوراً</b>.\n\n"
+                "⚡ سيرسل لك البوت روابط الشراء بأقل سعر ممكن بالدينار الجزائري!\n\n"
+                "📢 <i>تابع أيضاً قناتنا الرسمية لصيدات اليوم الحصرية:</i> @DzAliexpress0"
+            )
+            markup = {
+                "inline_keyboard": [
+                    [{"text": "📢 قناة الصفقات المعتمدة @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}],
+                    [{"text": "📖 طريقة جمع وتفعيل العملات", "callback_data": "cb_help"}]
+                ]
+            }
+            await send_msg(chat_id, ad_welcome, reply_markup=markup)
+            return True
+
+        # Standard Welcome
         start_markup = {
             "inline_keyboard": [
                 [
@@ -580,11 +743,73 @@ async def handle_update(update: Dict[str, Any]) -> bool:
                     {"text": "🎟️ كودات وكوبونات التخفيض", "callback_data": "cb_coupons"}
                 ],
                 [
-                    {"text": "📢 قناتنا للعروض @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
+                    {"text": "📋 قائمة مراقبة الأسعار", "callback_data": "cb_watchlist_help"},
+                    {"text": "📢 قناة العروض @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
                 ]
             ]
         }
         await send_msg(chat_id, WELCOME_TEXT, start_markup)
+        return True
+
+    # Command: /calc <usd_amount>
+    if text.startswith("/calc") or text.startswith("/حساب"):
+        m = re.search(r'([0-9]+[.,]?[0-9]*)', text)
+        if m:
+            usd_val = float(m.group(1).replace(',', '.'))
+            rate = await get_live_usdt_rate()
+            dzd_val = int(usd_val * rate)
+            tax_est = 130
+            total_est = dzd_val + tax_est
+            calc_text = (
+                f"🧮 <b>حاسبة سعر الشراء بالدينار الجزائري 🇩🇿</b>\n\n"
+                f"💵 <b>المبلغ بالدولار:</b> {usd_val:.2f}$\n"
+                f"📈 <b>سعر صرف الـ USDT الحالي:</b> {rate:.1f} دج (المصدر: SquareAlgerie.com)\n"
+                f"━━━━━━━━━━━━━━━━━\n"
+                f"▫️ <b>قيمة السلعة بالدينار:</b> <b>{dzd_val:,} دج</b>\n"
+                f"▫️ <b>رسوم طرد البريد الجزائري:</b> ~<b>{tax_est} دج</b>\n"
+                f"💰 <b>التكلفة الإجمالية التقديرية:</b> ~<b>{total_est:,} دج</b>\n\n"
+                f"💡 <i>نصيحة: استخدم دائماً رابط العملات (Coins) لتخفيض القيمة بالدولار قبل الشراء!</i>"
+            )
+            await send_msg(chat_id, calc_text)
+            return True
+        else:
+            await send_msg(chat_id, "💡 <b>طريقة استخدام الحاسبة:</b>\nأرسل المبلغ بالدولار مع الأمر، مثال:\n<code>/calc 15.5</code>")
+            return True
+
+    # Command: /rate or /square
+    if text.startswith("/rate") or text.startswith("/square") or text.startswith("/سكوار") or text.startswith("سعر السكوار") or text.startswith("سعر الدولار"):
+        rate = await get_live_usdt_rate()
+        rate_text = (
+            f"📈 <b>سعر صرف الـ USDT الحالي في السوق الموازي:</b>\n\n"
+            f"💵 <b>1 USDT</b> ≈ <b>{rate:.1f} دج</b> 🇩🇿\n\n"
+            f"📊 المصدر المباشر: <a href=\"https://squarealgerie.com\">SquareAlgerie.com</a>\n"
+            f"🪙 <i>لحساب تكلفة أي طلب بالدينار أرسل: <code>/calc 20</code></i>"
+        )
+        await send_msg(chat_id, rate_text)
+        return True
+
+    # Command: /watchlist or /alerts
+    if text.startswith("/watchlist") or text.startswith("/alerts") or text.startswith("مراقبة") or text.startswith("تنبيهات"):
+        from app.publisher.watchlist import get_user_watchlist
+        user_watches = get_user_watchlist(user_id)
+        if not user_watches:
+            await send_msg(
+                chat_id,
+                "📭 <b>قائمة المراقبة فارغة حالياً!</b>\n\n"
+                "عند فحص أي رابط منتج، اضغط على زر <b>[ 🔔 راقب انخفاض السعر ]</b> وسيرسل لك البوت تنبيهاً فور انخفاض سعره."
+            )
+            return True
+
+        lines = [f"📋 <b>قائمة المنتجات التي تراقبها ({len(user_watches)}):</b>\n"]
+        kb = []
+        for w in user_watches[:10]:
+            p_id = w.get("product_id")
+            t_str = w.get("title", "")[:35]
+            pr = w.get("price", 0.0)
+            lines.append(f"• <b>{t_str}</b>\n  السعر: <b>{pr:.2f}$</b>\n  🆔 <code>{p_id}</code>")
+            kb.append([{"text": f"❌ إزالة {t_str[:20]}...", "callback_data": f"unwatch_{p_id}"}])
+        markup = {"inline_keyboard": kb}
+        await send_msg(chat_id, "\n\n".join(lines), reply_markup=markup)
         return True
 
     if text.startswith("/help") or "كيف" in text or "طريقة" in text:
@@ -608,10 +833,10 @@ async def handle_update(update: Dict[str, Any]) -> bool:
             return True
 
         await send_msg(chat_id, "⏳ جاري تحضير ونشر العرض في القناة @DzAliexpress0...")
-        success, err, msg_id = await publish_deal_to_channel(target_pid, raw_user_text=sub_text)
+        success, err, p_msg_id = await publish_deal_to_channel(target_pid, raw_user_text=sub_text)
         if success:
             ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
-            post_url = f"https://t.me/{ch_clean}/{msg_id}"
+            post_url = f"https://t.me/{ch_clean}/{p_msg_id}"
             confirm_text = f"✅ <b>تم نشر العرض بنجاح في القناة!</b>\n\n🔗 <b>رابط المنشور:</b> {post_url}"
             await send_msg(chat_id, confirm_text)
         else:
@@ -627,7 +852,7 @@ async def handle_update(update: Dict[str, Any]) -> bool:
             "• روابط التطبيق: <code>https://a.aliexpress.com/_xxxx</code>\n"
             "• روابط المتصفح: <code>https://aliexpress.com/item/100500...html</code>\n"
             "• كود المنتج مباشرة: <code>1005007458498882</code>\n\n"
-            "💡 أو اكتب /help لمعرفة كيفية الاستخدام."
+            "💡 أو اكتب /calc لحساب الأسعار بالدينار، أو /help لمعرفة كيفية الاستخدام."
         )
         await send_msg(chat_id, help_msg)
         return True
@@ -648,7 +873,6 @@ async def handle_update(update: Dict[str, Any]) -> bool:
     # Attach exclusive Admin Quick-Publish button if user is admin
     reply_markup = res.get("reply_markup") or {"inline_keyboard": []}
     if is_admin(user_id):
-        # Insert admin button at the very top of inline buttons
         admin_button = [{"text": "📢 نشر هذا العرض في القناة مباشرة 🚀", "callback_data": f"admin_pub_{pid}"}]
         reply_markup["inline_keyboard"].insert(0, admin_button)
 
@@ -661,7 +885,10 @@ async def handle_update(update: Dict[str, Any]) -> bool:
     await send_msg(chat_id, res["text"], reply_markup)
     return True
 
-async def send_photo(chat_id: int, photo_url: str, caption: str, reply_markup: Optional[Dict] = None) -> bool:
+# Export alias for compatibility
+handle_coin_bot_update = handle_update
+
+async def send_photo(chat_id: int, photo_url: str, caption: str, reply_markup: Optional[Dict] = None, reply_to_message_id: Optional[int] = None) -> bool:
     payload = {
         "chat_id": chat_id,
         "photo": photo_url,
@@ -670,6 +897,8 @@ async def send_photo(chat_id: int, photo_url: str, caption: str, reply_markup: O
     }
     if reply_markup:
         payload["reply_markup"] = reply_markup
+    if reply_to_message_id:
+        payload["reply_to_message_id"] = reply_to_message_id
 
     try:
         async with httpx.AsyncClient(timeout=5.0) as client:
@@ -681,7 +910,7 @@ async def send_photo(chat_id: int, photo_url: str, caption: str, reply_markup: O
     except Exception:
         return False
 
-async def send_msg(chat_id: int, text: str, reply_markup: Optional[Dict] = None):
+async def send_msg(chat_id: int, text: str, reply_markup: Optional[Dict] = None, reply_to_message_id: Optional[int] = None):
     payload = {
         "chat_id": chat_id,
         "text": text,
@@ -690,6 +919,8 @@ async def send_msg(chat_id: int, text: str, reply_markup: Optional[Dict] = None)
     }
     if reply_markup:
         payload["reply_markup"] = reply_markup
+    if reply_to_message_id:
+        payload["reply_to_message_id"] = reply_to_message_id
 
     try:
         async with httpx.AsyncClient(timeout=5.0) as client:

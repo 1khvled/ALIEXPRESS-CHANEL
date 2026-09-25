@@ -297,6 +297,22 @@ async def collect_and_post_last_10_deals():
                         if success:
                             record_product_published(deal.product_id, deal.title)
                             record_deal_posted_time()
+
+                            # Check and notify watchlist subscribers for price drops
+                            try:
+                                from app.publisher.watchlist import notify_watchlist_users
+                                if deal.current_price:
+                                    alerted = await notify_watchlist_users(
+                                        product_id=deal.product_id,
+                                        new_price=deal.current_price,
+                                        title=deal.title,
+                                        affiliate_url=aff_link
+                                    )
+                                    if alerted > 0:
+                                        print(f"  [WATCHLIST] Sent price drop alert to {alerted} user(s) for {deal.product_id}!")
+                            except Exception as wl_err:
+                                logger.warning(f"Watchlist notification failed: {wl_err}")
+
                             published_deals.append({
                                 "id": deal.id,
                                 "channel": ch,
