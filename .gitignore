@@ -1,0 +1,41 @@
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Telegram sessions
+*.session
+*.session-journal
+sessions/
+
+# Database & local data
+*.db
+*.db-journal
+*.sqlite3
+
+# Storage
+storage/downloads/*
+!storage/downloads/.gitkeep
+storage/generated/*
+!storage/generated/.gitkeep
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
