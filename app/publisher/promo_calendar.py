@@ -9,7 +9,14 @@ import asyncio
 from datetime import datetime, timezone, timedelta
 from typing import Optional, Tuple, Dict, Any
 import httpx
-from sqlalchemy import select
+
+try:
+    from sqlalchemy import select
+    from app.db.session import db_context
+    from app.db.models import Deal
+    HAS_DB = True
+except (ImportError, Exception):
+    HAS_DB = False
 
 from app.config.settings import settings
 import os
@@ -189,23 +196,21 @@ async def check_and_auto_post_promo_transitions() -> Tuple[bool, Optional[str]]:
         return False, reason
 
     now = datetime.now(timezone.utc)
-    from app.db.session import db_context
-    from app.db.models import Deal
-
     success, err, msg_id = await publish_calendar_to_channel()
     if success:
         record_calendar_published()
-        try:
-            async with db_context() as session:
-                record = Deal(
-                    product_id=f"PROMO_CALENDAR_{now.strftime('%Y%m%d')}",
-                    original_url="https://aliexpress.com",
-                    title="رزنامة تخفيضات ومهرجانات AliExpress",
-                    status="PUBLISHED"
-                )
-                session.add(record)
-                await session.commit()
-        except Exception:
-            pass
+        if HAS_DB:
+            try:
+                async with db_context() as session:
+                    record = Deal(
+                        product_id=f"PROMO_CALENDAR_{now.strftime('%Y%m%d')}",
+                        original_url="https://aliexpress.com",
+                        title="رزنامة تخفيضات ومهرجانات AliExpress",
+                        status="PUBLISHED"
+                    )
+                    session.add(record)
+                    await session.commit()
+            except Exception:
+                pass
         return True, f"Published official promo calendar (Msg ID: {msg_id})"
     return False, err

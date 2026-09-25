@@ -10,11 +10,16 @@ import re
 from datetime import datetime, timezone, timedelta
 from typing import List, Dict, Any, Tuple, Optional
 import httpx
-from sqlalchemy import select
+
+try:
+    from sqlalchemy import select
+    from app.db.session import db_context
+    from app.db.models import Deal, TelegramPost
+    HAS_DB = True
+except (ImportError, Exception):
+    HAS_DB = False
 
 from app.config.settings import settings
-from app.db.session import db_context
-from app.db.models import Deal, TelegramPost
 from app.utils.logger import logger
 
 TARGET_CHANNEL_ID = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
@@ -166,6 +171,9 @@ async def check_and_publish_regrouped_bulletins(bot_token: Optional[str] = None)
 
     # 1. Fetch recent published deals with their channel message IDs
     deals_by_category: Dict[str, List[Dict[str, Any]]] = {k: [] for k in CATEGORIES_CONFIG.keys()}
+
+    if not HAS_DB:
+        return []
 
     async with db_context() as s:
         # Get last 50 published deals with TelegramPost records

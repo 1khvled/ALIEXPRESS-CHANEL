@@ -13,11 +13,16 @@ from pathlib import Path
 from typing import Optional, Tuple, Dict, Any, List
 import json
 import httpx
-from sqlalchemy import select
+
+try:
+    from sqlalchemy import select
+    from app.db.session import db_context
+    from app.db.models import Deal, TelegramPost
+    HAS_DB = True
+except (ImportError, Exception):
+    HAS_DB = False
 
 from app.config.settings import settings
-from app.db.session import db_context
-from app.db.models import Deal, TelegramPost
 from app.publisher.state_tracker import (
     load_persistent_state,
     is_coin_reminder_eligible,
@@ -162,30 +167,34 @@ async def post_bot_advertisement(force: bool = False, variant_idx: Optional[int]
                 # Record in persistent state (rotates index and randomizes next cooldown)
                 record_coin_reminder_published()
 
-                # Record in DB
-                async with db_context() as session:
-                    deal = Deal(
-                        product_id=f"COIN_REMINDER_{variant['id'].upper()}_{now.strftime('%Y%m%d')}",
-                        original_url="https://t.me/Alilo07BOT",
-                        normalized_url="https://t.me/Alilo07BOT",
-                        affiliate_url="https://t.me/Alilo07BOT",
-                        title=f"تذكير عملات وبوت ({variant['id']})",
-                        quality_score=100,
-                        status="PUBLISHED"
-                    )
-                    session.add(deal)
-                    await session.flush()
+                # Record in DB (if available)
+                if HAS_DB:
+                    try:
+                        async with db_context() as session:
+                            deal = Deal(
+                                product_id=f"COIN_REMINDER_{variant['id'].upper()}_{now.strftime('%Y%m%d')}",
+                                original_url="https://t.me/Alilo07BOT",
+                                normalized_url="https://t.me/Alilo07BOT",
+                                affiliate_url="https://t.me/Alilo07BOT",
+                                title=f"تذكير عملات وبوت ({variant['id']})",
+                                quality_score=100,
+                                status="PUBLISHED"
+                            )
+                            session.add(deal)
+                            await session.flush()
 
-                    post = TelegramPost(
-                        deal_id=deal.id,
-                        telegram_message_id=msg_id,
-                        channel_id=str(target_channel),
-                        status="PUBLISHED",
-                        published_at=now,
-                        permalink=f"https://t.me/{str(target_channel).lstrip('@')}/{msg_id}"
-                    )
-                    session.add(post)
-                    await session.commit()
+                            post = TelegramPost(
+                                deal_id=deal.id,
+                                telegram_message_id=msg_id,
+                                channel_id=str(target_channel),
+                                status="PUBLISHED",
+                                published_at=now,
+                                permalink=f"https://t.me/{str(target_channel).lstrip('@')}/{msg_id}"
+                            )
+                            session.add(post)
+                            await session.commit()
+                    except Exception as db_err:
+                        logger.warning(f"DB recording skipped: {db_err}")
 
                 logger.info(f"Published educational Coin Reminder ({variant['id']}) to {target_channel} (msg #{msg_id})")
                 await record_system_log("INFO", "publisher", f"Published coin reminder ({variant['id']}) to {target_channel} (msg #{msg_id})")
