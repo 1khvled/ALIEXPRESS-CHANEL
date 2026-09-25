@@ -22,14 +22,16 @@ AD_CAPTION = """🪙 <b>طريقة الشراء بأرخص سعر من AliExpres
 
 🤔 <b>كيف تفعّل هذا التخفيض الأكبر على أي منتج تريده؟</b>
 قمنا ببرمجة بوت ذكي ومجاني خصيصاً لمتابعي قناتنا:
-🤖 <b>@Alilo07BOT</b>
+🤖 <b>DealScoutDz Bot (@Alilo07BOT)</b>
 
 📌 <b>طريقة الاستخدام البسيطة:</b>
 1️⃣ افتح تطبيق AliExpress واختر أي منتج ثم انسخ الرابط.
 2️⃣ أرسل الرابط إلى البوت: @Alilo07BOT
 3️⃣ سيرسل لك فوراً روابط الشراء بالخصم الأقصى للعملات، عروض السوبر ديلز، وBundle Deals! 🚀
 
-💡 <i>البوت مجاني 100% ويعمل لجميع الدول. جربه الآن ووفر أموالك في كل عملية شراء!</i> 👇"""
+🇰🇷 <b>نصيحة إضافية:</b> لا تنسى تحويل دولة التطبيق إلى كوريا 🇰🇷 📍 لتفعيل أكبر تخفيضات عملات على العتاد والأجهزة!
+
+💡 <i>البوت مجاني 100%. جربه الآن ووفر أموالك في كل عملية شراء!</i> 👇"""
 
 async def post_bot_advertisement(force: bool = False) -> Tuple[bool, Optional[str]]:
     """
@@ -69,7 +71,7 @@ async def post_bot_advertisement(force: bool = False) -> Tuple[bool, Optional[st
         reply_markup = {
             "inline_keyboard": [
                 [
-                    {"text": "🪙 اضغط هنا وجرب البوت مجاناً @Alilo07BOT", "url": "https://t.me/Alilo07BOT"}
+                    {"text": "🪙 اضغط هنا وجرب بوت DealScoutDz مجاناً", "url": "https://t.me/Alilo07BOT"}
                 ],
                 [
                     {

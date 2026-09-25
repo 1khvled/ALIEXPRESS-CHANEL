@@ -115,7 +115,7 @@ class TelegramPublisher:
             if deal.affiliate_url and deal.affiliate_url.startswith("http"):
                 btn_title = "🎟️ صفحة الكوبونات والتخفيضات" if getattr(deal, "quality_score", 0) == 95 and "كود" in caption else "🛒 رابط الشراء من AliExpress"
                 inline_keyboard.append([{"text": btn_title, "url": deal.affiliate_url}])
-            inline_keyboard.append([{"text": "🪙 بوت تخفيض العملات @Alilo07BOT", "url": "https://t.me/Alilo07BOT"}])
+            inline_keyboard.append([{"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": "https://t.me/Alilo07BOT"}])
             reply_markup_json = json.dumps({"inline_keyboard": inline_keyboard})
 
             async with httpx.AsyncClient(timeout=30.0) as client:
