@@ -659,6 +659,24 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
         await send_admin_msg(chat_id, f"🆔 معرفك: <code>{user_id}</code> (مشرف معتمد 👑)")
         return True
 
+    if text.startswith("/regroup") or text.startswith("تجميع") or text.startswith("تجميعة"):
+        await send_admin_msg(chat_id, "⏳ جاري فحص العروض المنشورة لتجميع المنتجات المتشابهة (شرط 4 منتجات أو أكثر من نفس النوع)...")
+        try:
+            from app.publisher.regrouper import check_and_publish_regrouped_bulletins
+            bulletins = await check_and_publish_regrouped_bulletins(bot_token=ADMIN_BOT_TOKEN)
+            if bulletins:
+                msg_lines = ["✅ <b>تم تجميع ونشر التجميعات التالية بنجاح في القناة:</b>\n"]
+                ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
+                for b in bulletins:
+                    post_url = f"https://t.me/{ch_clean}/{b['message_id']}"
+                    msg_lines.append(f"• <b>{b['category']}</b> ({b['count']} منتجات): <a href=\"{post_url}\">منشور #{b['message_id']}</a>")
+                await send_admin_msg(chat_id, "\n".join(msg_lines))
+            else:
+                await send_admin_msg(chat_id, "ℹ️ <b>لا توجد حالياً 4 منتجات جديدة غير مجمعة من نفس الفئة المحددة</b> (هواتف، ماوسات، كيبوردات، سماعات، تابلت، بي سي، ساعات). سيتم التجميع فور وصول المنتج الرابع!")
+        except Exception as e:
+            await send_admin_msg(chat_id, f"❌ حدث خطأ أثناء التجميع: {e}")
+        return True
+
 
     # Direct publish command: /post <url or full deal text>
     if text.startswith("/post") or text.startswith("/publish"):

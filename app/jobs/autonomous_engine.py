@@ -318,6 +318,17 @@ class AutonomousEngine:
         except Exception as e:
             logger.error(f"Error checking region disclaimer: {e}")
 
+    async def check_and_post_regrouped_bulletin(self):
+        """Checks and auto-posts homogeneous product regrouping bulletins when >= 4 items exist."""
+        try:
+            from app.publisher.regrouper import check_and_publish_regrouped_bulletins
+            results = await check_and_publish_regrouped_bulletins()
+            if results:
+                for b in results:
+                    logger.info(f"Auto-Regrouped bulletin published: {b['category']} ({b['count']} items) -> Msg #{b['message_id']}")
+        except Exception as e:
+            logger.error(f"Error checking auto-regrouped bulletin: {e}")
+
     async def run_single_cycle(self) -> int:
         """Executes one scan cycle across all monitored channels."""
         # 1. Check if 24-hour bot advertisement is due
@@ -329,8 +340,10 @@ class AutonomousEngine:
         # 3. Check if 14-day region disclaimer is due
         await self.check_and_post_disclaimer()
 
-        # 4. Scan deal channels
+        # 4. Check if auto-regrouping bulletin is due (4+ phones, 4+ mice, etc.)
+        await self.check_and_post_regrouped_bulletin()
 
+        # 5. Scan deal channels
         total_new = 0
         async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
             for ch in MONITORED_CHANNELS:

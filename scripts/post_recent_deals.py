@@ -290,5 +290,16 @@ async def collect_and_post_last_10_deals():
     print(f"SUCCESS: Published {len(published_deals)} deals to {settings.TARGET_CHANNEL_ID}!")
     print("=" * 70)
 
+    # 10. Check if homogeneous product regrouping is ready (>= 4 of same category)
+    try:
+        from app.publisher.regrouper import check_and_publish_regrouped_bulletins
+        bulletins = await check_and_publish_regrouped_bulletins()
+        if bulletins:
+            print(f"\n[REGROUP] Published {len(bulletins)} regrouped bulletin(s):")
+            for b in bulletins:
+                print(f"  - {b['category']}: {b['count']} items -> Msg #{b['message_id']}")
+    except Exception as e:
+        print(f"[REGROUP ERROR] {e}")
+
 if __name__ == "__main__":
     asyncio.run(collect_and_post_last_10_deals())
