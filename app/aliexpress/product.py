@@ -1,3 +1,4 @@
+import asyncio
 import re
 from dataclasses import dataclass, field
 from typing import Optional, List, Dict
@@ -118,7 +119,18 @@ class ProductExtractor:
                     models.Currency.USD,
                     settings.ALIEXPRESS_AFFILIATE_TRACKING_ID or "default"
                 )
-                details = await asyncio.to_thread(api.get_products_details, [resolved.product_id])
+                details = None
+                for attempt in range(3):
+                    try:
+                        details = await asyncio.to_thread(api.get_products_details, [resolved.product_id])
+                        break
+                    except Exception as err:
+                        if "ApiCallLimit" in str(err) or "frequency exceeds" in str(err) or "exceeds" in str(err):
+                            await asyncio.sleep(1.5)
+                        else:
+                            logger.debug(f"API details error on attempt {attempt+1}: {err}")
+                            break
+
                 if details and len(details) > 0:
                     prod_info = details[0]
                     if getattr(prod_info, 'product_main_image_url', None):

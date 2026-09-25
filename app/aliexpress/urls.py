@@ -91,11 +91,15 @@ def extract_product_id_from_url(url: str) -> Optional[str]:
     try:
         parsed = urlparse(url)
         qs = parse_qs(parsed.query)
-        for key in ["productId", "product_id", "id", "itemId", "item_id"]:
+        for key in ["productIds", "productId", "product_id", "id", "itemId", "item_id", "productIdList"]:
             if key in qs and qs[key]:
-                val = qs[key][0]
+                val = qs[key][0].split(',')[0].strip()
                 if val.isdigit():
                     return val
+        # Also check regex for productIds=100500... in raw string if query parsing missed it
+        m = re.search(r'productIds?=(\d+)', url, re.IGNORECASE)
+        if m:
+            return m.group(1)
     except Exception:
         pass
 
