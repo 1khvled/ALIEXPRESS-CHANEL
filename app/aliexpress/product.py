@@ -10,6 +10,7 @@ from app.aliexpress.resolver import url_resolver
 from app.aliexpress.parser import (
     extract_prices,
     extract_coupon,
+    extract_seller_coupon,
     detect_points_discount,
     extract_country_instruction,
     extract_clean_title,
@@ -27,13 +28,15 @@ class ExtractedProduct:
     current_price: Optional[float]
     current_price_eur: Optional[float]
     coupon_code: Optional[str]
-    has_points_discount: bool
-    image_url: Optional[str]
-    is_valid: bool
-    raw_text: str
+    seller_coupon: Optional[str] = None
+    has_points_discount: bool = False
+    image_url: Optional[str] = None
+    is_valid: bool = False
+    raw_text: str = ""
     country_info: Optional[str] = None
     is_coupon_list: bool = False
     coupon_list: List[Dict[str, str]] = field(default_factory=list)
+
 
 class ProductExtractor:
     def __init__(self):
@@ -107,6 +110,7 @@ class ProductExtractor:
 
         # 4. Extract single deal fields
         coupon_code = extract_coupon(text)
+        seller_coupon = extract_seller_coupon(text)
         has_points = detect_points_discount(text)
         title = extract_clean_title(text)
         country_info = extract_country_instruction(text, url=ali_url or "", title=title or "")
@@ -170,6 +174,7 @@ class ProductExtractor:
             current_price=usd_price,
             current_price_eur=eur_price,
             coupon_code=coupon_code,
+            seller_coupon=seller_coupon,
             has_points_discount=has_points,
             image_url=image_url,
             is_valid=is_valid,

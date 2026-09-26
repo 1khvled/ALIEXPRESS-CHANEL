@@ -213,6 +213,7 @@ async def collect_and_post_last_10_deals():
                         eur_price=extracted.current_price_eur,
                         affiliate_url=aff_link,
                         coupon_code=extracted.coupon_code,
+                        seller_coupon=extracted.seller_coupon,
                         has_points_discount=extracted.has_points_discount,
                         country_info=extracted.country_info,
                         coupon_list=extracted.coupon_list if extracted.is_coupon_list else None,

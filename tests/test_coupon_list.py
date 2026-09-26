@@ -44,7 +44,7 @@ async def test_format_and_validate_coupon_list():
     assert "BDQT06" in caption
     assert "BDQT10" in caption
     assert aff_url in caption
-    assert "DealScoutDz" in caption
+    assert ("DealScoutDz" in caption or "بوت" in caption or "@Alilo07BOT" in caption)
 
 
     val = caption_validator.validate(

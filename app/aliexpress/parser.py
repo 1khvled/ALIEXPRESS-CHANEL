@@ -19,10 +19,15 @@ EUR_PRICE_PATTERNS = [
 ]
 
 COUPON_PATTERNS = [
-    re.compile(r'(?:كوبـــ?ون|كود|code|coupon)\s*(?:[0-9]+(?:\.[0-9]+)?/[0-9]+(?:\.[0-9]+)?\$?)?\s*[:：\-]\s*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
-    re.compile(r'🎟️?\s*(?:كوبـــ?ون|كود|code|coupon)\s*[:：\-]?\s*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
-    re.compile(r'(?:استخدم كود|استعمل كود|قسيمة)\s*[:：\-]?\s*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
+    re.compile(r'(?:كوبـــ?ون|كود|code|coupon)\s*(?:[0-9]+(?:\.[0-9]+)?/[0-9]+(?:\.[0-9]+)?\$?)?\s*[:：\-\s✅🔥👉✔️]*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
+    re.compile(r'🎟️?\s*(?:كوبـــ?ون|كود|code|coupon)\s*[:：\-\s✅🔥👉✔️]*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
+    re.compile(r'(?:استخدم كود|استعمل كود|قسيمة)\s*[:：\-\s✅🔥👉✔️]*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
 ]
+
+SELLER_COUPON_PATTERNS = [
+    re.compile(r'(?:قسيمة\s*(?:البائع|المتجر)|store\s*coupon|seller\s*coupon)\s*(?:[0-9]+(?:\.[0-9]+)?\$?)?\s*[:：\-\s✅🔥👉✔️]*([A-Za-z0-9_-]{4,25})', re.IGNORECASE),
+]
+
 
 POINTS_PATTERNS = [
     re.compile(r'خصم\s*(?:النقاط|نقاط|العملات)', re.IGNORECASE),
@@ -249,6 +254,18 @@ def extract_coupon(text: str) -> Optional[str]:
             if code.lower() not in {"http", "https", "aliexpress", "item", "link", "url", "temu"}:
                 return code.upper()
     return None
+
+def extract_seller_coupon(text: str) -> Optional[str]:
+    if not text:
+        return None
+    for pattern in SELLER_COUPON_PATTERNS:
+        m = pattern.search(text)
+        if m:
+            code = m.group(1).strip()
+            if code.lower() not in {"http", "https", "aliexpress", "item", "link", "url", "temu"}:
+                return code.upper()
+    return None
+
 
 def detect_points_discount(text: str) -> bool:
     if not text:

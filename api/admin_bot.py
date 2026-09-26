@@ -101,7 +101,7 @@ def parse_user_deal_submission(raw_text: str) -> Dict[str, Any]:
 
     # 2. Coupon Code extraction
     coupon_patterns = [
-        r'(?:كوبون|كود|قسيمة|Coupon|coupon|Code|code)\s*(?:[^\n:0-9]*[0-9]+/[0-9]+\$?)?\s*[:\-\s]\s*([A-Za-z0-9_]{3,20})',
+        r'(?:كوبون|كود|Coupon|coupon|Code|code)\s*(?:[^\n:0-9]*[0-9]+/[0-9]+\$?)?\s*[:\-\s✅🔥👉✔️]*([A-Za-z0-9_]{3,20})',
         r'<code>([A-Za-z0-9_]{3,20})</code>',
         r'(?:كود|كوبون)\s+([A-Za-z0-9_]{4,15})'
     ]
@@ -112,6 +112,13 @@ def parse_user_deal_submission(raw_text: str) -> Dict[str, Any]:
             if code.lower() not in ["aliexpress", "http", "https", "item", "deal", "deals", "coins"]:
                 data["coupon"] = code
                 break
+
+    # 2b. Seller Coupon extraction
+    seller_match = re.search(r'(?:قسيمة\s*(?:البائع|المتجر)|store\s*coupon|seller\s*coupon)\s*(?:[0-9]+(?:\.[0-9]+)?\$?)?\s*[:：\-\s✅🔥👉✔️]*([A-Za-z0-9_-]{4,25})', text, re.IGNORECASE)
+    if seller_match:
+        s_code = seller_match.group(1).strip()
+        if s_code.lower() not in ["aliexpress", "http", "https", "item", "deal", "deals", "coins"]:
+            data["seller_coupon"] = s_code
 
     # 3. Coins Info extraction
     coin_match = re.search(r'(?:خصم\s*(?:النقاط|العملات)|تحتاج\s*(?:الى|إلى)?\s*العملات|عملات|coins?)\s*([0-9]{1,2}\s*%)?', text, re.IGNORECASE)
@@ -241,42 +248,46 @@ async def build_exact_deal_caption(
     price: Optional[float],
     affiliate_url: str,
     coupon_code: Optional[str] = None,
+    seller_coupon: Optional[str] = None,
     coins_text: Optional[str] = None,
     country: Optional[str] = None
 ) -> str:
-    """Builds caption matching DealScout signature theme with user overrides."""
+    """Builds caption matching authentic Algerian Telegram deal channels."""
     country_name = country or "كوريا 🇰🇷"
-    eur_price = round(price * 0.92, 2) if price else 0.0
     dzd_approx = int(price * 249) if price else 0
 
     lines = []
 
-    # 1. Smart signature badge
+    # 1. Authentic Algerian Deal Hook
     hook = _caption_generator._select_smart_hook(
         title=title,
         usd_price=price or 0.0,
         has_points_discount=bool(coins_text),
-        has_coupon=bool(coupon_code)
+        has_coupon=bool(coupon_code or seller_coupon)
     )
     lines.append(hook)
 
     # 2. Country recommendation
-    lines.append(f"🌐 دولة العرض: <b>{country_name}</b> (لأقصى تخفيض)")
+    lines.append(f"📍 أختر بلد الحساب <b>{country_name}</b>")
 
+    import html
     safe_title = html.escape(title)
 
     lines.append("")
-    lines.append(f"📦 <b>{safe_title}</b>")
+    lines.append(f"✅ <b>{safe_title}</b>")
     lines.append("━━━━━━━━━━━━━━━━━")
 
     if price and price > 0:
         dzd_str = f" (~<b>{dzd_approx:,} دج</b>)" if dzd_approx > 0 else ""
-        lines.append(f"💰 <b>السعر:</b> <b>${price:.2f}</b>{dzd_str} | <i>{eur_price:.2f}€</i>")
+        lines.append(f"💰 <b>السعر:</b> <b>${price:.2f}</b>{dzd_str}")
     else:
         lines.append("💰 <b>السعر:</b> <b>سعر خاص ومخفض</b>")
 
+    if seller_coupon:
+        lines.append(f"🎫 <b>قسيمة المتجر:</b> <code>{html.escape(seller_coupon)}</code>")
+
     if coupon_code:
-        lines.append(f"🎟️ <b>كود الخصم:</b> <code>{html.escape(coupon_code)}</code>")
+        lines.append(f"🎟️ <b>الكوبون:</b> <code>{html.escape(coupon_code)}</code>")
 
     if coins_text:
         lines.append(f"🪙 <b>تخفيض العملات:</b> {html.escape(coins_text)}")
@@ -284,11 +295,11 @@ async def build_exact_deal_caption(
         lines.append("🪙 <b>تخفيض العملات:</b> مفعّل تلقائياً عبر الرابط")
 
     lines.append("")
-    lines.append("🔗 <b>رابط الطلب المباشر:</b>")
+    lines.append("📎 <b>رابط الشراء المباشر ⬇️</b>")
     lines.append(f"{affiliate_url}")
     lines.append("━━━━━━━━━━━━━━━━━")
-    lines.append("💡 <i>افتح الرابط عبر تطبيق AliExpress لتطبيق كامل الخصم.</i>")
-    lines.append(f"📢 قناة العروض المعتمدة: @{TARGET_CHANNEL_ID.lstrip('@')}")
+    lines.append("⚠️ <i>افتح الرابط في تطبيق AliExpress لتطبيق كامل الخصم.</i>")
+    lines.append(f"📢 <i>قناة العروض: @{TARGET_CHANNEL_ID.lstrip('@')}</i>")
 
     return "\n".join(lines)
 
@@ -307,11 +318,14 @@ async def publish_deal_post(product_id: str, chosen_image: Optional[str] = None,
     coins_text = deal_state.get("coins_text")
     country = deal_state.get("country")
 
+    seller_coupon = deal_state.get("seller_coupon")
+
     caption = await build_exact_deal_caption(
         title=title,
         price=price,
         affiliate_url=deal_link,
         coupon_code=coupon,
+        seller_coupon=seller_coupon,
         coins_text=coins_text,
         country=country
     )
@@ -379,6 +393,7 @@ async def prepare_deal_state(pid: str, raw_user_text: str = "") -> Dict[str, Any
     title = user_inputs["custom_title"] or res.get("title") or "منتج مميز من AliExpress"
     price = user_inputs["user_price"] if user_inputs["user_price"] is not None else res.get("price")
     coupon = user_inputs["coupon"]
+    seller_coupon = user_inputs.get("seller_coupon")
     coins_text = user_inputs["coins_text"]
     country = user_inputs["country"] or "كوريا 🇰🇷"
     product_link = res.get("product_link") or f"https://www.aliexpress.com/item/{pid}.html"
@@ -415,6 +430,7 @@ async def prepare_deal_state(pid: str, raw_user_text: str = "") -> Dict[str, Any
         "title": title,
         "price": price,
         "coupon": coupon,
+        "seller_coupon": seller_coupon,
         "coins_text": coins_text,
         "country": country,
         "product_link": product_link,

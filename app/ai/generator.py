@@ -18,8 +18,8 @@ class DealCaptionGenerator:
         promo_tag: Optional[str] = None
     ) -> str:
         """
-        Generates premium, distinct DealScout badges.
-        Strictly avoids competitor cliches (no 'الحق', 'سارع بالطلب', or 'لافار').
+        Generates authentic Algerian Telegram deal channel hooks.
+        Matches the language and enthusiasm of top Algerian AliExpress channels.
         """
         h = int(hashlib.md5(title.encode()).hexdigest(), 16)
         t_lower = title.lower()
@@ -33,31 +33,37 @@ class DealCaptionGenerator:
 
         if is_gaming:
             candidates.extend([
-                "🎮 <b>صفقة قيمنق مختارة | DealScout Gaming Pick</b>",
-                "🎯 <b>عتاد قيمنق عالي الأداء | Pro Hardware Pick</b>",
+                "🎮 <b>عتـاد قيمنق بسـعر مـمـتاز 🔥</b>",
+                "🔥 <b>ســـعـــر ممتـــــــــــــــــــــــــاز</b>",
+                "⚡ <b>ألحـــــق لافــــــــــــــار</b>",
             ])
 
         if has_points_discount:
             candidates.extend([
-                "🪙 <b>توفير فائق بالعملات | DealScout Coins Pick</b>",
-                "⚡ <b>أقصى خصم بالعملات | Max Coins Value</b>",
+                "🪙 <b>تخفيض قوي بالعملات (Coins) 🔥</b>",
+                "⚡ <b>ألحـــــق لافــــــــــــــار</b>",
+                "🔥 <b>عـــرض نـــــاااار بسعر استثنائي</b>",
             ])
 
         if usd_price and usd_price < 25.0:
             candidates.extend([
-                "💎 <b>أفضل قيمة مقابل سعر | DealScout Value Pick</b>",
-                "📉 <b>هبوط قوي في السعر | Price Drop Alert</b>",
+                "⚡ <b>ألحـــــق لافــــــــــــــار</b>",
+                "📉 <b>نـزول قـوي في السـعر 🔥</b>",
+                "💥 <b>سـعـر خيـالي لا يُـفوّت</b>",
             ])
 
         if has_coupon:
             candidates.extend([
-                "🎟️ <b>صفقة كود الخصم | Verified Promo Code</b>",
-                "🏷️ <b>تخفيض مباشر بالكوبون | Instant Coupon Deal</b>",
+                "🎟️ <b>تخفيض قوي بالكوبون 🔥</b>",
+                "🔥 <b>ســـعـــر ممتـــــــــــــــــــــــــاز</b>",
+                "⚡ <b>ألحـــــق لافــــــــــــــار</b>",
             ])
 
         candidates.extend([
-            "🎯 <b>صفقة اليوم المعتمدة | DealScout Verified Deal</b>",
-            "✨ <b>منتج مختار بعناية | Curated DealScout Pick</b>",
+            "🔥 <b>ســـعـــر ممتـــــــــــــــــــــــــاز</b>",
+            "🔥 <b>عـــرض نـــــاااار بسعر استثنائي</b>",
+            "⚡ <b>ألحـــــق لافــــــــــــــار</b>",
+            "📉 <b>نـزول قـوي في السـعر 🔥</b>",
         ])
 
         return candidates[h % len(candidates)]
@@ -68,10 +74,10 @@ class DealCaptionGenerator:
         affiliate_url: str
     ) -> str:
         """
-        Builds clean, branded coupon bulletin format for multi-coupon lists.
+        Builds clean, popular coupon bulletin format for multi-coupon lists.
         """
         lines = [
-            "🎟️ <b>دليل كوبونات وقسائم التخفيض المعتمدة | DealScout</b>",
+            "🎟️ <b>دليل كوبونات وقسائم التخفيض الحصرية 🔥</b>",
             "━━━━━━━━━━━━━━━━━"
         ]
 
@@ -87,8 +93,8 @@ class DealCaptionGenerator:
         lines.append("🔗 <b>رابط صفحة تفعيل الكوبونات:</b>")
         lines.append(f"{affiliate_url}")
         lines.append("━━━━━━━━━━━━━━━━━")
-        lines.append("🪙 استخدم بوت DealScoutDz لزيادة خصم العملات: @Alilo07BOT")
-        lines.append("📢 قناة العروض الحصرية: @DzAliexpress0")
+        lines.append("🪙 استخدم بوت التخفيضات لزيادة خصم العملات: @Alilo07BOT")
+        lines.append("📢 قناة العروض: @DzAliexpress0")
 
         return "\n".join(lines)
 
@@ -99,39 +105,40 @@ class DealCaptionGenerator:
         eur_price: float,
         affiliate_url: str,
         coupon_code: Optional[str] = None,
+        seller_coupon: Optional[str] = None,
         has_points_discount: bool = False,
         country_info: Optional[str] = None,
         promo_tag: Optional[str] = None
     ) -> str:
         """
-        Builds the DealScout signature post format:
-        [إشعار الحملة الترويجية إن وجد]
-        🎯 صفقة اليوم المعتمدة | DealScout Verified Deal
-        🌐 دولة العرض: كندا 🇨🇦 (لأقصى تخفيض بالعملات)
+        Builds authentic Algerian Telegram deal channel post format:
+        🔥 ســـعـــر ممتـــــــــــــــــــــــــاز
+        📍 أختر بلد الحساب كندا 🇨🇦
         
-        📦 PRODUCT_TITLE
+        ✅ PRODUCT_TITLE
         ━━━━━━━━━━━━━━━━━
-        💰 السعر: $XX.XX (~XXXX دج | XX.XX€)
-        🎟️ كود الخصم: CODE
-        🪙 تخفيض العملات: مفعّل تلقائياً
+        💰 السعر: $XX.XX (~XXXX دج)
+        🎫 قسيمة المتجر: CODE
+        🎟️ الكوبون: CODE
+        🪙 تخفيض العملات: مفعّل تلقائياً عبر الرابط
         
-        🔗 رابط الطلب المباشر:
+        📎 رابط الشراء المباشر ⬇️
         AFFILIATE_URL
         ━━━━━━━━━━━━━━━━━
-        💡 افتح الرابط عبر تطبيق AliExpress لتطبيق كامل الخصم.
-        📢 قناة العروض المعتمدة: @DzAliexpress0
+        ⚠️ افتح الرابط في تطبيق AliExpress لتطبيق كامل الخصم.
+        📢 قناة العروض: @DzAliexpress0
         """
         lines = []
 
         if promo_tag:
             lines.append(f"📅 <b>{promo_tag}</b>")
 
-        # 1. Smart situational hook badge
+        # 1. Authentic Algerian Deal Hook
         hook = self._select_smart_hook(
             title=title,
             usd_price=usd_price,
             has_points_discount=has_points_discount,
-            has_coupon=bool(coupon_code),
+            has_coupon=bool(coupon_code or seller_coupon),
             promo_tag=promo_tag
         )
         lines.append(hook)
@@ -140,15 +147,17 @@ class DealCaptionGenerator:
         if country_info:
             c_str = str(country_info).lower()
             if "كوريا" in country_info or "korea" in c_str or "kr" in c_str:
-                lines.append("🌐 دولة العرض: <b>كوريا 🇰🇷</b> (تخفيض عملات أقصى)")
+                lines.append("📍 أختر بلد الحساب <b>كوريا 🇰🇷</b>")
             elif "كندا" in country_info or "canada" in c_str or "ca" in c_str:
-                lines.append("🌐 دولة العرض: <b>كندا 🇨🇦</b> (تخفيض عملات أقصى)")
+                lines.append("📍 أختر بلد الحساب <b>كندا 🇨🇦</b>")
+            elif "الجزائر" in country_info or "algeria" in c_str or "dz" in c_str:
+                lines.append("📍 بلد الحساب <b>الجزائر 🇩🇿</b>")
             elif "فرنسا" in country_info or "france" in c_str or "fr" in c_str:
-                lines.append("🌐 دولة العرض: <b>فرنسا 🇫🇷</b>")
+                lines.append("📍 أختر بلد الحساب <b>فرنسا 🇫🇷</b>")
             elif "إسبانيا" in country_info or "spain" in c_str or "es" in c_str:
-                lines.append("🌐 دولة العرض: <b>إسبانيا 🇪🇸</b>")
+                lines.append("📍 أختر بلد الحساب <b>إسبانيا 🇪🇸</b>")
             else:
-                lines.append(f"🌐 دولة العرض: <b>{country_info}</b>")
+                lines.append(f"📍 أختر بلد الحساب <b>{country_info}</b>")
 
         import html
         safe_title = html.escape(title)
@@ -157,7 +166,7 @@ class DealCaptionGenerator:
         dzd_approx = int(usd_price * 249) if usd_price else 0
 
         lines.append("")
-        lines.append(f"📦 <b>{safe_title}</b>")
+        lines.append(f"✅ <b>{safe_title}</b>")
         lines.append("━━━━━━━━━━━━━━━━━")
 
         if usd_price and usd_price > 0:
@@ -166,18 +175,21 @@ class DealCaptionGenerator:
         else:
             lines.append("💰 <b>السعر:</b> <b>سعر خاص ومخفض</b>")
 
+        if seller_coupon:
+            lines.append(f"🎫 <b>قسيمة المتجر:</b> <code>{html.escape(seller_coupon)}</code>")
+
         if coupon_code:
-            lines.append(f"🎟️ <b>كود الخصم:</b> <code>{html.escape(coupon_code)}</code>")
+            lines.append(f"🎟️ <b>الكوبون:</b> <code>{html.escape(coupon_code)}</code>")
 
         if has_points_discount:
             lines.append("🪙 <b>تخفيض العملات:</b> مفعّل تلقائياً عبر الرابط")
 
         lines.append("")
-        lines.append("🔗 <b>رابط الطلب المباشر:</b>")
+        lines.append("📎 <b>رابط الشراء المباشر ⬇️</b>")
         lines.append(f"{affiliate_url}")
         lines.append("━━━━━━━━━━━━━━━━━")
-        lines.append("💡 <i>افتح الرابط عبر تطبيق AliExpress لتطبيق كامل الخصم.</i>")
-        lines.append("📢 قناة العروض المعتمدة: @DzAliexpress0")
+        lines.append("⚠️ <i>افتح الرابط في تطبيق AliExpress لتطبيق كامل الخصم.</i>")
+        lines.append("📢 <i>قناة العروض: @DzAliexpress0</i>")
 
         return "\n".join(lines)
 
@@ -188,13 +200,14 @@ class DealCaptionGenerator:
         eur_price: Optional[float],
         affiliate_url: str,
         coupon_code: Optional[str] = None,
+        seller_coupon: Optional[str] = None,
         has_points_discount: bool = False,
         country_info: Optional[str] = None,
         coupon_list: Optional[List[Dict[str, str]]] = None,
         promo_tag: Optional[str] = None
     ) -> str:
         """
-        Generates clean Arabic Telegram caption matching project requirements.
+        Generates authentic Algerian Telegram channel caption.
         """
         if coupon_list and len(coupon_list) >= 2:
             return self.format_coupon_list(coupon_list, affiliate_url)
@@ -209,6 +222,7 @@ class DealCaptionGenerator:
             eur_price=eur_val,
             affiliate_url=affiliate_url,
             coupon_code=coupon_code,
+            seller_coupon=seller_coupon,
             has_points_discount=has_points_discount,
             country_info=country_info,
             promo_tag=promo_tag
