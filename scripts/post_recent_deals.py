@@ -160,22 +160,26 @@ async def collect_and_post_last_10_deals():
                 last_seen_id = get_monitored_channel_last_id(ch)
 
                 if last_seen_id is None:
-                    # Baseline initialization: record current top message ID so we NEVER post historical backlog
+                    # First time seeing this channel — process ALL posts on current page
+                    # (they're within the visible window so they're recent enough)
                     record_monitored_channel_last_id(ch, current_max_id)
-                    print(f"  [BASELINE INITIALIZED] @{ch} baseline set to #{current_max_id}. Waiting for new posts.")
-                    continue
-
-                if current_max_id <= last_seen_id:
+                    new_blocks = [
+                        (b_id, b) for b_id, b in block_items
+                        if not is_post_already_published(ch, b_id)
+                    ]
+                    new_blocks.sort(key=lambda x: x[0])
+                    print(f"  [FIRST RUN] @{ch} baseline set to #{current_max_id}. Processing {len(new_blocks)} visible post(s).")
+                elif current_max_id <= last_seen_id:
                     print(f"  [NO NEW POSTS] @{ch} has no new messages (last seen: #{last_seen_id}, current: #{current_max_id}).")
                     continue
-
-                # Filter strictly for messages newer than last_seen_id AND not already published
-                new_blocks = [
-                    (b_id, b) for b_id, b in block_items
-                    if b_id > last_seen_id and not is_post_already_published(ch, b_id)
-                ]
-                new_blocks.sort(key=lambda x: x[0])
-                print(f"  [NEW POSTS DETECTED] @{ch} has {len(new_blocks)} new post(s) (newer than #{last_seen_id})!")
+                else:
+                    # Filter strictly for messages newer than last_seen_id AND not already published
+                    new_blocks = [
+                        (b_id, b) for b_id, b in block_items
+                        if b_id > last_seen_id and not is_post_already_published(ch, b_id)
+                    ]
+                    new_blocks.sort(key=lambda x: x[0])
+                    print(f"  [NEW POSTS DETECTED] @{ch} has {len(new_blocks)} new post(s) (newer than #{last_seen_id})!")
 
                 for msg_id, block in new_blocks:
                     if len(published_deals) >= MAX_DEALS_PER_RUN:
