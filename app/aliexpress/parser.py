@@ -141,9 +141,9 @@ def is_allowed_category(title: str, text: str, channel_username: str = "") -> Tu
     """Check if the deal belongs to an allowed category (gaming, tech, PC parts, cables, tools, phones, etc.)."""
     clean_ch = channel_username.lower().lstrip("@")
     monitored_tech_channels = {
-        "pcgamingpart", "bnddeals", "zedstoreonline", "aniscoupons", "ecksdeal", "lodydeals"
+        "pcgamingpart", "bnddeals", "zedstoreonline", "aniscoupons", "ecksdeal", "lodydeals", "megaprix"
     }
-    # All 6 monitored channels are specialized Algerian tech/deal channels curated by the user
+    # All 7 monitored channels are specialized Algerian tech/deal channels curated by the user
     if clean_ch in monitored_tech_channels:
         return True, None
 

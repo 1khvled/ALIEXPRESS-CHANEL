@@ -38,7 +38,8 @@ CHANNELS = [
     "aniscoupons",
     "ECKSDEAL",
     "lodydeals",
-    "BNDDEALS"
+    "BNDDEALS",
+    "megaprix"
 ]
 
 async def collect_and_post_last_10_deals():
