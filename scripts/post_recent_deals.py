@@ -117,7 +117,7 @@ async def collect_and_post_last_10_deals():
 
     print(f"Loaded {len(seen_products)} existing published products and {len(seen_titles)} titles from last {settings.DUPLICATE_COOLDOWN_HOURS}h for deduplication.")
 
-    MAX_DEALS_PER_RUN = 2
+    MAX_DEALS_PER_RUN = 6
 
     async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
         for ch in CHANNELS:
@@ -136,8 +136,14 @@ async def collect_and_post_last_10_deals():
                 blocks = soup.find_all("div", class_="tgme_widget_message")
                 print(f"  Found {len(blocks)} message blocks in @{ch}")
 
-                # High-water mark tracking: ONLY process genuinely new messages from this channel
-                from app.publisher.state_tracker import get_monitored_channel_last_id, record_monitored_channel_last_id
+                # High-water mark & post ID tracking: ONLY process genuinely new messages from this channel
+                from app.publisher.state_tracker import (
+                    get_monitored_channel_last_id,
+                    record_monitored_channel_last_id,
+                    is_post_already_published,
+                    record_post_published,
+                    is_recent_cross_channel_duplicate
+                )
                 
                 block_items = []
                 for b in blocks:
@@ -162,10 +168,10 @@ async def collect_and_post_last_10_deals():
                     print(f"  [NO NEW POSTS] @{ch} has no new messages (last seen: #{last_seen_id}, current: #{current_max_id}).")
                     continue
 
-                # Filter strictly for messages newer than last_seen_id (ordered oldest-new first)
+                # Filter strictly for messages newer than last_seen_id AND not already published
                 new_blocks = [
                     (b_id, b) for b_id, b in block_items
-                    if b_id > last_seen_id
+                    if b_id > last_seen_id and not is_post_already_published(ch, b_id)
                 ]
                 new_blocks.sort(key=lambda x: x[0])
                 print(f"  [NEW POSTS DETECTED] @{ch} has {len(new_blocks)} new post(s) (newer than #{last_seen_id})!")
@@ -216,28 +222,20 @@ async def collect_and_post_last_10_deals():
                             print(f"  [CATEGORY FILTERED] {reject_reason}")
                             continue
 
-                    # 6. Strict Cross-Channel Deduplication check (Persistent JSON State + DB + Live Channel text + In-memory)
-                    from app.publisher.state_tracker import is_product_already_published, record_product_published, is_same_deal_title
-                    already_pub, pub_reason = await is_product_already_published(extracted.product_id, extracted.title or "")
-                    if already_pub:
-                        print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] {pub_reason}")
+                    # 6. Validate by Post ID & check Cross-Channel duplicates
+                    is_dup, dup_reason = is_recent_cross_channel_duplicate(extracted.product_id, ch)
+                    if is_dup:
+                        print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] {dup_reason}")
+                        record_monitored_channel_last_id(ch, msg_id)
                         continue
 
-                    if extracted.product_id in seen_products:
-                        print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] Product ID '{extracted.product_id}' was already published from another channel!")
+                    if extracted.product_id and extracted.product_id in seen_products:
+                        print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] Product ID '{extracted.product_id}' was already published in this run!")
+                        record_monitored_channel_last_id(ch, msg_id)
                         continue
 
-                    # Check against titles published earlier in this run or session
-                    is_title_dup = False
-                    for st in seen_titles:
-                        if is_same_deal_title(extracted.title or "", st):
-                            is_title_dup = True
-                            print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] Deal '{extracted.title}' closely matches already published deal '{st}'.")
-                            break
-                    if is_title_dup:
-                        continue
-
-                    seen_products.add(extracted.product_id)
+                    if extracted.product_id:
+                        seen_products.add(extracted.product_id)
                     if extracted.title:
                         seen_titles.append(extracted.title)
 
@@ -348,7 +346,7 @@ async def collect_and_post_last_10_deals():
                         )
 
                         if success:
-                            record_product_published(deal.product_id, deal.title)
+                            record_post_published(ch, msg_id, deal.product_id, deal.title)
                             record_deal_posted_time()
 
                             # Check and notify watchlist subscribers for price drops

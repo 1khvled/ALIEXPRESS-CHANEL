@@ -106,4 +106,30 @@ async def test_repost_after_cooldown():
     assert is_dup_b is True, "Expected Product B to be blocked within 24h cooldown"
     assert "already in persistent published state" in reason_b
 
+def test_post_id_validation_and_no_repeat():
+    """Verifies that deals are validated by Telegram Post ID: never repeat the same post ID, but allow new post IDs."""
+    from app.publisher.state_tracker import is_post_already_published, record_post_published, is_recent_cross_channel_duplicate
+
+    ch = "pcgamingpart"
+    post_id_1 = 7906
+    post_id_2 = 7908
+
+    # Post 7906 not published yet
+    assert is_post_already_published(ch, post_id_1) is False
+
+    # Publish post 7906
+    record_post_published(ch, post_id_1, product_id="1005012561537862", title="Box Wrench Set")
+
+    # Post 7906 is now recorded and will never be repeated
+    assert is_post_already_published(ch, post_id_1) is True
+
+    # Tomorrow channel posts post 7908 with another deal -> Post ID 7908 is NEW and validated by post ID
+    assert is_post_already_published(ch, post_id_2) is False
+
+    # Cross-channel duplicate check: another channel posting exact same product on same day is blocked
+    is_cross_dup, r = is_recent_cross_channel_duplicate("1005012561537862", "aniscoupons")
+    assert is_cross_dup is True
+    assert "was already posted" in r
+
+
 

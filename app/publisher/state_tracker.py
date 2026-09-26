@@ -46,6 +46,7 @@ def load_persistent_state() -> Dict:
         "published_product_timestamps": {},
         "published_titles": [],
         "published_title_timestamps": {},
+        "published_post_keys": [],
         "last_disclaimer_time": 0.0,
         "last_calendar_time": 0.0,
         "last_run_time": 0.0
@@ -58,6 +59,84 @@ def save_persistent_state(state: Dict):
             json.dump(state, f, indent=2, ensure_ascii=False)
     except Exception as e:
         logger.error(f"Error saving state file: {e}")
+
+def get_post_key(channel_username: str, message_id: int) -> str:
+    clean_ch = channel_username.lower().lstrip("@")
+    return f"{clean_ch}:{message_id}"
+
+def is_post_already_published(channel_username: str, message_id: int) -> bool:
+    """
+    Validates by Telegram Post ID: has this post already been published?
+    Ensures we post what channels post, but never repeat the same post.
+    """
+    state = load_persistent_state()
+    post_key = get_post_key(channel_username, message_id)
+    seen_posts = state.get("published_post_keys", [])
+    return post_key in seen_posts
+
+def record_post_published(channel_username: str, message_id: int, product_id: Optional[str] = None, title: str = ""):
+    """
+    Records a post as published by its Post ID and updates last_message_id for that channel.
+    Also records product_id and timestamp for short-term cross-channel deduplication.
+    """
+    state = load_persistent_state()
+    post_key = get_post_key(channel_username, message_id)
+    now = time.time()
+
+    if "published_post_keys" not in state:
+        state["published_post_keys"] = []
+    if post_key not in state["published_post_keys"]:
+        state["published_post_keys"].append(post_key)
+
+    # Keep published_post_keys within reasonable bounds
+    if len(state["published_post_keys"]) > 1000:
+        state["published_post_keys"] = state["published_post_keys"][-1000:]
+
+    clean_ch = channel_username.lower().lstrip("@")
+    if "monitored_channels" not in state:
+        state["monitored_channels"] = {}
+    prev = state["monitored_channels"].get(clean_ch, {}).get("last_message_id", 0)
+    state["monitored_channels"][clean_ch] = {
+        "last_message_id": max(prev, int(message_id)),
+        "last_check_time": now
+    }
+
+    if product_id:
+        p_str = str(product_id).strip()
+        state.setdefault("published_product_timestamps", {})[p_str] = now
+        if p_str not in state.get("published_product_ids", []):
+            state.setdefault("published_product_ids", []).append(p_str)
+
+    if title:
+        t_clean = title.strip()
+        state.setdefault("published_title_timestamps", {})[t_clean] = now
+        if t_clean not in state.get("published_titles", []):
+            state.setdefault("published_titles", []).append(t_clean)
+
+    state["last_run_time"] = now
+    save_persistent_state(state)
+
+def is_recent_cross_channel_duplicate(product_id: Optional[str], current_channel: str = "") -> Tuple[bool, str]:
+    """
+    Validates cross-channel duplicates:
+    If another channel posted this exact AliExpress product today (within 24h), skip it.
+    Does NOT do fuzzy title matching so different products of the same brand are never blocked.
+    """
+    if not product_id:
+        return False, ""
+    state = load_persistent_state()
+    now = time.time()
+    from app.config.settings import settings
+    cooldown_seconds = getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 24) * 3600
+
+    p_str = str(product_id).strip()
+    ts_map = state.get("published_product_timestamps", {})
+    if p_str in ts_map:
+        age = now - ts_map[p_str]
+        if age < cooldown_seconds:
+            return True, f"Product ID {p_str} was already posted {age/3600:.1f}h ago from another channel"
+
+    return False, ""
 
 def get_monitored_channel_last_id(channel_username: str) -> Optional[int]:
     """Returns the highest telegram message ID seen for this monitored source channel."""

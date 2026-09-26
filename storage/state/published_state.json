@@ -29,7 +29,8 @@
     "1005008829227075",
     "1005007275142457",
     "1005012925826589",
-    "999111222"
+    "999111222",
+    "1005012561537862"
   ],
   "published_titles": [
     "SomnAmbulist SATA3 SSD 120GB",
@@ -61,11 +62,12 @@
     "ماوس لاسلكي مع شاحن Attack Shark X1 Wireless",
     "ماوس لاسلكي Attack Shark X3 PRO Wireless 8K",
     "realme P3 5G 8GB+256GB/12GB+512GB 5260mAh Battery NFC",
-    "Test Wireless Gaming Mouse X1"
+    "Test Wireless Gaming Mouse X1",
+    "Box Wrench Set"
   ],
   "last_disclaimer_time": 1790371890.4189165,
   "last_calendar_time": 1790371890.4189165,
-  "last_run_time": 1790431324.4475195,
+  "last_run_time": 1790431610.0218077,
   "schedule_config": {
     "day_interval_minutes": 5,
     "night_interval_minutes": 30,
@@ -82,7 +84,7 @@
   "monitored_channels": {
     "pcgamingpart": {
       "last_message_id": 7906,
-      "last_check_time": 1790424551.74458
+      "last_check_time": 1790431610.0218077
     },
     "zedstoreonline": {
       "last_message_id": 38466,
@@ -106,13 +108,18 @@
     }
   },
   "published_product_timestamps": {
-    "999111222": 1790431324.4475195,
-    "100500999912345": 1790341325.3975208,
-    "100500999954321": 1790424125.3975208
+    "999111222": 1790431608.9492671,
+    "100500999912345": 1790341609.990294,
+    "100500999954321": 1790424409.990294,
+    "1005012561537862": 1790431610.0218077
   },
   "published_title_timestamps": {
-    "Test Wireless Gaming Mouse X1": 1790431324.4475195,
-    "SomnAmbulist NVMe SSD 1TB High Speed": 1790341325.3975208,
-    "Attack Shark R2 Mouse": 1790424125.3975208
-  }
+    "Test Wireless Gaming Mouse X1": 1790431608.9492671,
+    "SomnAmbulist NVMe SSD 1TB High Speed": 1790341609.990294,
+    "Attack Shark R2 Mouse": 1790424409.990294,
+    "Box Wrench Set": 1790431610.0218077
+  },
+  "published_post_keys": [
+    "pcgamingpart:7906"
+  ]
 }
