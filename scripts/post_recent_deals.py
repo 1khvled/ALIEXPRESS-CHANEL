@@ -117,7 +117,7 @@ async def collect_and_post_last_10_deals():
 
     print(f"Loaded {len(seen_products)} existing published products and {len(seen_titles)} titles from last {settings.DUPLICATE_COOLDOWN_HOURS}h for deduplication.")
 
-    MAX_DEALS_PER_RUN = 6
+    MAX_DEALS_PER_RUN = 40
 
     async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
         for ch in CHANNELS:

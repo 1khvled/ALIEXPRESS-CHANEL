@@ -43,8 +43,8 @@ class Settings(BaseSettings):
     PORT: int = 8000
 
     # Rate Limiting & Cooldowns
-    MAX_POSTS_PER_HOUR: int = 6
-    MAX_POSTS_PER_DAY: int = 40
+    MAX_POSTS_PER_HOUR: int = 40
+    MAX_POSTS_PER_DAY: int = 150
     COOLDOWN_MINUTES: int = 10
     MIN_QUALITY_SCORE: int = 60
     AUTO_PUBLISH_QUALITY_SCORE: int = 85

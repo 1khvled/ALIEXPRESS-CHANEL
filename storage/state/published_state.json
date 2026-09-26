@@ -29,8 +29,6 @@
     "1005008829227075",
     "1005007275142457",
     "1005012925826589",
-    "999111222",
-    "9998883218",
     "1005012561537862",
     "1005010184054784"
   ],
@@ -64,8 +62,6 @@
     "ماوس لاسلكي مع شاحن Attack Shark X1 Wireless",
     "ماوس لاسلكي Attack Shark X3 PRO Wireless 8K",
     "realme P3 5G 8GB+256GB/12GB+512GB 5260mAh Battery NFC",
-    "Test Wireless Gaming Mouse X1",
-    "Test Wrench Set",
     "Pro'skit HW-609A 10-Piece Mini Double-Ended Box Wrench Set",
     "CX H1300 Thermal Putty 13.5W/m.K for VGA GPU IC Processor 10g"
   ],
@@ -109,30 +105,17 @@
     "bnddeals": {
       "last_message_id": 50737,
       "last_check_time": 1790408800.0
-    },
-    "test_channel": {
-      "last_message_id": 1790433218,
-      "last_check_time": 1790433218.1412995
     }
   },
   "published_product_timestamps": {
-    "999111222": 1790433217.0741277,
-    "100500999912345": 1790343218.113952,
-    "100500999954321": 1790426018.113952,
-    "9998883218": 1790433218.1412995,
     "1005012561537862": 1790439932.9103508,
     "1005010184054784": 1790439938.4275959
   },
   "published_title_timestamps": {
-    "Test Wireless Gaming Mouse X1": 1790433217.0741277,
-    "SomnAmbulist NVMe SSD 1TB High Speed": 1790343218.113952,
-    "Attack Shark R2 Mouse": 1790426018.113952,
-    "Test Wrench Set": 1790433218.1412995,
     "Pro'skit HW-609A 10-Piece Mini Double-Ended Box Wrench Set": 1790439932.9103508,
     "CX H1300 Thermal Putty 13.5W/m.K for VGA GPU IC Processor 10g": 1790439938.4275959
   },
   "published_post_keys": [
-    "test_channel:1790433218",
     "pcgamingpart:7906",
     "pcgamingpart:7907"
   ]
