@@ -75,7 +75,8 @@ ALLOWED_CATEGORY_KEYWORDS_EN = [
     "pulsar", "lamzu", "ninjutso", "sora", "maya", "thorn", "atlantis",
     "superlight", "g pro", "viper", "deathadder", "basilisk", "blackshark", "kraken",
     # GPU / PC parts & Specs
-    "gpu", "graphics card", "rtx", "gtx", "radeon", "rx", "ram", "ssd", "hdd", "nvme", "ddr4", "ddr5",
+    "gpu", "graphics card", "video card", "vga", "apu", "amd", "bc 250", "bc-250", "bc250", "gddr6", "gddr5", "gddr",
+    "256-bit", "256bit", "192bit", "128bit", "rtx", "gtx", "radeon", "rx", "ram", "ssd", "hdd", "nvme", "ddr4", "ddr5",
     "gaming chair", "cooling", "cooler", "fan", "fans", "motherboard", "processor", "ryzen", "intel core",
     "120hz", "144hz", "165hz", "240hz", "ips", "oled", "amoled",
     "thermalright", "deepcool", "id-cooling", "arctic", "noctua", "nzxt", "lian li",

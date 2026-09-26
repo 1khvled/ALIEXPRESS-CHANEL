@@ -30,7 +30,7 @@
     "1005007275142457",
     "1005012925826589",
     "999111222",
-    "1005012561537862"
+    "9998883218"
   ],
   "published_titles": [
     "SomnAmbulist SATA3 SSD 120GB",
@@ -63,11 +63,11 @@
     "ماوس لاسلكي Attack Shark X3 PRO Wireless 8K",
     "realme P3 5G 8GB+256GB/12GB+512GB 5260mAh Battery NFC",
     "Test Wireless Gaming Mouse X1",
-    "Box Wrench Set"
+    "Test Wrench Set"
   ],
   "last_disclaimer_time": 1790371890.4189165,
   "last_calendar_time": 1790371890.4189165,
-  "last_run_time": 1790431610.0218077,
+  "last_run_time": 1790433218.1412995,
   "schedule_config": {
     "day_interval_minutes": 5,
     "night_interval_minutes": 30,
@@ -83,8 +83,8 @@
   "coin_reminder_variant_idx": 1,
   "monitored_channels": {
     "pcgamingpart": {
-      "last_message_id": 7906,
-      "last_check_time": 1790431610.0218077
+      "last_message_id": 7905,
+      "last_check_time": 1790408800.0
     },
     "zedstoreonline": {
       "last_message_id": 38466,
@@ -105,21 +105,25 @@
     "bnddeals": {
       "last_message_id": 50737,
       "last_check_time": 1790408800.0
+    },
+    "test_channel": {
+      "last_message_id": 1790433218,
+      "last_check_time": 1790433218.1412995
     }
   },
   "published_product_timestamps": {
-    "999111222": 1790431608.9492671,
-    "100500999912345": 1790341609.990294,
-    "100500999954321": 1790424409.990294,
-    "1005012561537862": 1790431610.0218077
+    "999111222": 1790433217.0741277,
+    "100500999912345": 1790343218.113952,
+    "100500999954321": 1790426018.113952,
+    "9998883218": 1790433218.1412995
   },
   "published_title_timestamps": {
-    "Test Wireless Gaming Mouse X1": 1790431608.9492671,
-    "SomnAmbulist NVMe SSD 1TB High Speed": 1790341609.990294,
-    "Attack Shark R2 Mouse": 1790424409.990294,
-    "Box Wrench Set": 1790431610.0218077
+    "Test Wireless Gaming Mouse X1": 1790433217.0741277,
+    "SomnAmbulist NVMe SSD 1TB High Speed": 1790343218.113952,
+    "Attack Shark R2 Mouse": 1790426018.113952,
+    "Test Wrench Set": 1790433218.1412995
   },
   "published_post_keys": [
-    "pcgamingpart:7906"
+    "test_channel:1790433218"
   ]
 }

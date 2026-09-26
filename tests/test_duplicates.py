@@ -110,24 +110,26 @@ def test_post_id_validation_and_no_repeat():
     """Verifies that deals are validated by Telegram Post ID: never repeat the same post ID, but allow new post IDs."""
     from app.publisher.state_tracker import is_post_already_published, record_post_published, is_recent_cross_channel_duplicate
 
-    ch = "pcgamingpart"
-    post_id_1 = 7906
-    post_id_2 = 7908
+    import time
+    ch = "test_channel"
+    post_id_1 = int(time.time())
+    post_id_2 = post_id_1 + 10
 
-    # Post 7906 not published yet
+    # Post 1 not published yet
     assert is_post_already_published(ch, post_id_1) is False
 
-    # Publish post 7906
-    record_post_published(ch, post_id_1, product_id="1005012561537862", title="Box Wrench Set")
+    # Publish post 1
+    test_pid = f"999888{post_id_1 % 10000}"
+    record_post_published(ch, post_id_1, product_id=test_pid, title="Test Wrench Set")
 
-    # Post 7906 is now recorded and will never be repeated
+    # Post 1 is now recorded and will never be repeated
     assert is_post_already_published(ch, post_id_1) is True
 
-    # Tomorrow channel posts post 7908 with another deal -> Post ID 7908 is NEW and validated by post ID
+    # Tomorrow channel posts post 2 with another deal -> Post ID 2 is NEW and validated by post ID
     assert is_post_already_published(ch, post_id_2) is False
 
     # Cross-channel duplicate check: another channel posting exact same product on same day is blocked
-    is_cross_dup, r = is_recent_cross_channel_duplicate("1005012561537862", "aniscoupons")
+    is_cross_dup, r = is_recent_cross_channel_duplicate(test_pid, "aniscoupons")
     assert is_cross_dup is True
     assert "was already posted" in r
 
