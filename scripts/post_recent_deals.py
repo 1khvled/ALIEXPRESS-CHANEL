@@ -130,7 +130,41 @@ async def collect_and_post_last_10_deals():
                 blocks = soup.find_all("div", class_="tgme_widget_message")
                 print(f"  Found {len(blocks)} message blocks in @{ch}")
 
-                for block in reversed(blocks):
+                # High-water mark tracking: ONLY process genuinely new messages from this channel
+                from app.publisher.state_tracker import get_monitored_channel_last_id, record_monitored_channel_last_id
+                
+                block_items = []
+                for b in blocks:
+                    dp = b.get("data-post", "")
+                    if "/" in dp and dp.split("/")[-1].isdigit():
+                        block_items.append((int(dp.split("/")[-1]), b))
+
+                if not block_items:
+                    print(f"  No valid post IDs found in @{ch}")
+                    continue
+
+                current_max_id = max(b_id for b_id, _ in block_items)
+                last_seen_id = get_monitored_channel_last_id(ch)
+
+                if last_seen_id is None:
+                    # Baseline initialization: record current top message ID so we NEVER post historical backlog
+                    record_monitored_channel_last_id(ch, current_max_id)
+                    print(f"  [BASELINE INITIALIZED] @{ch} baseline set to #{current_max_id}. Waiting for new posts.")
+                    continue
+
+                if current_max_id <= last_seen_id:
+                    print(f"  [NO NEW POSTS] @{ch} has no new messages (last seen: #{last_seen_id}, current: #{current_max_id}).")
+                    continue
+
+                # Filter strictly for messages newer than last_seen_id (ordered oldest-new first)
+                new_blocks = [
+                    (b_id, b) for b_id, b in block_items
+                    if b_id > last_seen_id
+                ]
+                new_blocks.sort(key=lambda x: x[0])
+                print(f"  [NEW POSTS DETECTED] @{ch} has {len(new_blocks)} new post(s) (newer than #{last_seen_id})!")
+
+                for msg_id, block in new_blocks:
                     if len(published_deals) >= MAX_DEALS_PER_RUN:
                         break
 
@@ -140,7 +174,7 @@ async def collect_and_post_last_10_deals():
 
                     raw_text = text_div.get_text(separator="\n").strip()
 
-                    # 1. Parse message timestamp and enforce maximum 24h freshness
+                    # 1. Parse message timestamp and enforce maximum 2h freshness
                     time_el = block.find("time")
                     msg_dt = None
                     if time_el and time_el.get("datetime"):
@@ -333,6 +367,10 @@ async def collect_and_post_last_10_deals():
                             await asyncio.sleep(2.0)
                         else:
                             print(f"  [!] Failed to publish: {err}")
+
+                # Advance high-water mark so these posts are never processed again
+                if current_max_id and current_max_id > (last_seen_id or 0):
+                    record_monitored_channel_last_id(ch, current_max_id)
 
             except Exception as e:
                 import traceback

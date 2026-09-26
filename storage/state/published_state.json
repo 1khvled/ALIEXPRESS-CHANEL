@@ -76,5 +76,31 @@
   },
   "last_coin_reminder_time": 1790384028.035038,
   "next_reminder_interval_seconds": 223422,
-  "coin_reminder_variant_idx": 1
+  "coin_reminder_variant_idx": 1,
+  "monitored_channels": {
+    "pcgamingpart": {
+      "last_message_id": 7905,
+      "last_check_time": 1790408800.0
+    },
+    "zedstoreonline": {
+      "last_message_id": 38466,
+      "last_check_time": 1790408800.0
+    },
+    "aniscoupons": {
+      "last_message_id": 32552,
+      "last_check_time": 1790408800.0
+    },
+    "ecksdeal": {
+      "last_message_id": 5835,
+      "last_check_time": 1790408800.0
+    },
+    "lodydeals": {
+      "last_message_id": 45279,
+      "last_check_time": 1790408800.0
+    },
+    "bnddeals": {
+      "last_message_id": 50737,
+      "last_check_time": 1790408800.0
+    }
+  }
 }

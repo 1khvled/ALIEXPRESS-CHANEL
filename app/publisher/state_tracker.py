@@ -56,6 +56,27 @@ def save_persistent_state(state: Dict):
     except Exception as e:
         logger.error(f"Error saving state file: {e}")
 
+def get_monitored_channel_last_id(channel_username: str) -> Optional[int]:
+    """Returns the highest telegram message ID seen for this monitored source channel."""
+    state = load_persistent_state()
+    ch_state = state.get("monitored_channels", {})
+    ch_info = ch_state.get(channel_username.lower().lstrip("@"), {})
+    return ch_info.get("last_message_id")
+
+def record_monitored_channel_last_id(channel_username: str, last_message_id: int):
+    """Saves the highest seen telegram message ID for this monitored channel."""
+    state = load_persistent_state()
+    if "monitored_channels" not in state:
+        state["monitored_channels"] = {}
+    ch_key = channel_username.lower().lstrip("@")
+    prev = state["monitored_channels"].get(ch_key, {}).get("last_message_id", 0)
+    state["monitored_channels"][ch_key] = {
+        "last_message_id": max(prev, int(last_message_id)),
+        "last_check_time": time.time()
+    }
+    save_persistent_state(state)
+
+
 async def refresh_channel_cache(force: bool = False):
     """Scrapes the public preview of @DzAliexpress0 to inspect the actual live channel messages."""
     global _CACHED_CHANNEL_TEXTS, _CACHED_CHANNEL_PIDS, _LAST_CHANNEL_SCRAPE_TIME
