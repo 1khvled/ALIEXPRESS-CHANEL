@@ -48,11 +48,16 @@ class AutonomousEngine:
         self.seen_message_urls: Set[str] = set()
 
     async def initialize(self):
-        """Pre-loads existing published deals from DB to prevent duplicates."""
+        """Pre-loads existing published deals from DB within cooldown period to prevent duplicates."""
+        from datetime import timedelta
         await init_db()
+        cooldown_cutoff = datetime.now(timezone.utc) - timedelta(hours=settings.DUPLICATE_COOLDOWN_HOURS)
         async with db_context() as s:
             existing_pids = (await s.execute(
-                select(Deal.product_id).where(Deal.status == "PUBLISHED")
+                select(Deal.product_id).where(
+                    Deal.status == "PUBLISHED",
+                    Deal.created_at >= cooldown_cutoff
+                )
             )).scalars().all()
             for pid in existing_pids:
                 if pid:

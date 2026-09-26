@@ -26,7 +26,8 @@ STATE_FILE_PATH = os.path.join(
 
 # In-memory cached channel content to prevent hammering Telegram web
 _CACHED_CHANNEL_TEXTS: List[str] = []
-_CACHED_CHANNEL_PIDS: Set[str] = set()
+_CACHED_CHANNEL_TEXT_TIMESTAMPS: List[Tuple[str, float]] = []
+_CACHED_CHANNEL_PIDS: Dict[str, float] = {}
 _LAST_CHANNEL_SCRAPE_TIME: float = 0.0
 
 def _ensure_state_dir():
@@ -42,7 +43,9 @@ def load_persistent_state() -> Dict:
             logger.error(f"Error loading state file: {e}")
     return {
         "published_product_ids": [],
+        "published_product_timestamps": {},
         "published_titles": [],
+        "published_title_timestamps": {},
         "last_disclaimer_time": 0.0,
         "last_calendar_time": 0.0,
         "last_run_time": 0.0
@@ -79,7 +82,7 @@ def record_monitored_channel_last_id(channel_username: str, last_message_id: int
 
 async def refresh_channel_cache(force: bool = False):
     """Scrapes the public preview of @DzAliexpress0 to inspect the actual live channel messages."""
-    global _CACHED_CHANNEL_TEXTS, _CACHED_CHANNEL_PIDS, _LAST_CHANNEL_SCRAPE_TIME
+    global _CACHED_CHANNEL_TEXTS, _CACHED_CHANNEL_TEXT_TIMESTAMPS, _CACHED_CHANNEL_PIDS, _LAST_CHANNEL_SCRAPE_TIME
     now = time.time()
     if not force and _CACHED_CHANNEL_TEXTS and (now - _LAST_CHANNEL_SCRAPE_TIME < 120):
         return
@@ -93,18 +96,29 @@ async def refresh_channel_cache(force: bool = False):
                 soup = BeautifulSoup(resp.text, "html.parser")
                 blocks = soup.find_all("div", class_="tgme_widget_message")
                 texts = []
-                pids = set()
+                text_tuples = []
+                pids = {}
                 for b in blocks:
                     t_div = b.find("div", class_="tgme_widget_message_text")
                     t = t_div.get_text(separator=" ").strip() if t_div else ""
+                    msg_ts = now
+                    time_el = b.find("time")
+                    if time_el and time_el.get("datetime"):
+                        try:
+                            msg_dt = datetime.fromisoformat(time_el["datetime"].replace("Z", "+00:00"))
+                            msg_ts = msg_dt.timestamp()
+                        except Exception:
+                            pass
                     if t:
                         texts.append(t)
+                        text_tuples.append((t, msg_ts))
                         # Extract product ID if found in text or URLs
                         for u in re.findall(r'https?://[^\s<>"\'\)]+', t):
                             pid = extract_product_id_from_url(u)
                             if pid:
-                                pids.add(pid)
+                                pids[pid] = max(pids.get(pid, 0.0), msg_ts)
                 _CACHED_CHANNEL_TEXTS = texts
+                _CACHED_CHANNEL_TEXT_TIMESTAMPS = text_tuples
                 _CACHED_CHANNEL_PIDS = pids
                 _LAST_CHANNEL_SCRAPE_TIME = now
                 logger.info(f"Refreshed live channel cache: {len(_CACHED_CHANNEL_TEXTS)} messages, {len(_CACHED_CHANNEL_PIDS)} product IDs found.")
@@ -175,69 +189,114 @@ def _clean_title_keywords(title: str) -> List[str]:
 
 async def is_product_already_published(product_id: Optional[str], title: str = "") -> Tuple[bool, str]:
     """
-    Bulletproof check: Has this product or exact deal already been posted?
-    Checks persistent state, database, and live channel messages.
-    Prevents cross-channel duplicate deals from being republished.
+    Bulletproof check: Has this product or exact deal already been posted within the cooldown period?
+    Checks persistent state, database, and live channel messages against DUPLICATE_COOLDOWN_HOURS (default 24h).
+    Prevents cross-channel duplicate deals from being republished within 24h,
+    while allowing legitimate new broadcasts of products after cooldown.
     """
     await refresh_channel_cache()
     state = load_persistent_state()
+    now = time.time()
+    from app.config.settings import settings
+    cooldown_seconds = getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 24) * 3600
 
     # 1. Product ID check in persistent state
     if product_id:
         p_str = str(product_id).strip()
-        if p_str in state.get("published_product_ids", []):
-            return True, f"Product ID {p_str} already in persistent published state"
+        ts_map = state.get("published_product_timestamps", {})
+        if p_str in ts_map:
+            age = now - ts_map[p_str]
+            if age < cooldown_seconds:
+                return True, f"Product ID {p_str} already in persistent published state ({age/3600:.1f}h ago)"
+        elif p_str in state.get("published_product_ids", []):
+            # Legacy entry without timestamp: check DB for actual published date
+            try:
+                from app.db.session import db_context
+                from app.db.models import Deal
+                from sqlalchemy import select
+                async with db_context() as s:
+                    db_created = (await s.execute(
+                        select(Deal.created_at).where(Deal.product_id == p_str, Deal.status == "PUBLISHED").order_by(Deal.created_at.desc()).limit(1)
+                    )).scalar_one_or_none()
+                    if db_created:
+                        age = (datetime.now(timezone.utc) - db_created).total_seconds()
+                        if age < cooldown_seconds:
+                            return True, f"Product ID {p_str} already in persistent published state ({age/3600:.1f}h ago)"
+                    else:
+                        last_run = state.get("last_run_time", 0.0)
+                        if (now - last_run) < cooldown_seconds:
+                            return True, f"Product ID {p_str} already in persistent published state"
+            except Exception:
+                return True, f"Product ID {p_str} already in persistent published state"
 
         # 2. Product ID check in live channel messages
         if p_str in _CACHED_CHANNEL_PIDS:
-            return True, f"Product ID {p_str} is present in live @DzAliexpress0 channel"
+            pid_ts = _CACHED_CHANNEL_PIDS[p_str]
+            if (now - pid_ts) < cooldown_seconds:
+                return True, f"Product ID {p_str} is present in live @DzAliexpress0 channel"
 
-        # 3. Check database (deals.db) if available
+        # 3. Check database (deals.db) within cooldown window
         try:
             from app.db.session import db_context
             from app.db.models import Deal
             from sqlalchemy import select
+            cooldown_cutoff = datetime.now(timezone.utc) - timedelta(seconds=cooldown_seconds)
             async with db_context() as s:
                 db_deal = (await s.execute(
-                    select(Deal.id).where(Deal.product_id == p_str, Deal.status == "PUBLISHED").limit(1)
+                    select(Deal.id).where(
+                        Deal.product_id == p_str,
+                        Deal.status == "PUBLISHED",
+                        Deal.created_at >= cooldown_cutoff
+                    ).limit(1)
                 )).scalar_one_or_none()
                 if db_deal:
-                    return True, f"Product ID {p_str} already published in database (Deal #{db_deal})"
+                    return True, f"Product ID {p_str} already published in database within last {settings.DUPLICATE_COOLDOWN_HOURS}h (Deal #{db_deal})"
         except Exception:
             pass
 
     # 4. Smart Title cross-channel matching
     if title:
+        title_ts_map = state.get("published_title_timestamps", {})
         # Check against previously published titles
         for pub_t in state.get("published_titles", []):
             if is_same_deal_title(title, pub_t):
-                return True, f"Product matches previously published deal: '{pub_t[:45]}'"
+                pub_ts = title_ts_map.get(pub_t)
+                if pub_ts is None or (now - pub_ts) < cooldown_seconds:
+                    return True, f"Product matches previously published deal: '{pub_t[:45]}'"
 
-        # Check against live channel texts
-        for ch_t in _CACHED_CHANNEL_TEXTS:
-            if is_same_deal_title(title, ch_t):
+        # Check against live channel texts within cooldown
+        for ch_t, ch_ts in _CACHED_CHANNEL_TEXT_TIMESTAMPS:
+            if (now - ch_ts) < cooldown_seconds and is_same_deal_title(title, ch_t):
                 return True, f"Product already visible in recent channel post: '{ch_t[:45]}'"
 
     return False, ""
 
 def record_product_published(product_id: Optional[str], title: str = ""):
-    """Records a published product into persistent state immediately."""
+    """Records a published product into persistent state immediately with current timestamp."""
     state = load_persistent_state()
     changed = False
+    now = time.time()
+
+    if "published_product_timestamps" not in state:
+        state["published_product_timestamps"] = {}
+    if "published_title_timestamps" not in state:
+        state["published_title_timestamps"] = {}
 
     if product_id:
         p_str = str(product_id).strip()
-        if p_str not in state["published_product_ids"]:
-            state["published_product_ids"].append(p_str)
-            changed = True
+        state["published_product_timestamps"][p_str] = now
+        if p_str not in state.get("published_product_ids", []):
+            state.setdefault("published_product_ids", []).append(p_str)
+        changed = True
 
     if title:
         t_clean = title.strip()
-        if t_clean not in state["published_titles"]:
-            state["published_titles"].append(t_clean)
-            changed = True
+        state["published_title_timestamps"][t_clean] = now
+        if t_clean not in state.get("published_titles", []):
+            state.setdefault("published_titles", []).append(t_clean)
+        changed = True
 
-    state["last_run_time"] = time.time()
+    state["last_run_time"] = now
     save_persistent_state(state)
 
 async def is_disclaimer_eligible() -> Tuple[bool, str]:

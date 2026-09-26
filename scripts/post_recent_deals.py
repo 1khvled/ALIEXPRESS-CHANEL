@@ -99,10 +99,15 @@ async def collect_and_post_last_10_deals():
     seen_products = set()
     seen_titles = []
 
-    # Load existing published products and titles for cross-channel deduplication
+    # Load existing published products and titles for cross-channel deduplication within cooldown
+    from datetime import timedelta
+    cooldown_cutoff = datetime.now(timezone.utc) - timedelta(hours=settings.DUPLICATE_COOLDOWN_HOURS)
     async with db_context() as s:
         existing_deals = (await s.execute(
-            select(Deal.product_id, Deal.title).where(Deal.status == "PUBLISHED")
+            select(Deal.product_id, Deal.title).where(
+                Deal.status == "PUBLISHED",
+                Deal.created_at >= cooldown_cutoff
+            )
         )).all()
         for pid, t in existing_deals:
             if pid:
@@ -110,7 +115,7 @@ async def collect_and_post_last_10_deals():
             if t:
                 seen_titles.append(t)
 
-    print(f"Loaded {len(seen_products)} existing published products and {len(seen_titles)} titles for deduplication.")
+    print(f"Loaded {len(seen_products)} existing published products and {len(seen_titles)} titles from last {settings.DUPLICATE_COOLDOWN_HOURS}h for deduplication.")
 
     MAX_DEALS_PER_RUN = 2
 

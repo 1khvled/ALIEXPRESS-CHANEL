@@ -75,10 +75,25 @@ ALLOWED_CATEGORY_KEYWORDS_EN = [
     "pulsar", "lamzu", "ninjutso", "sora", "maya", "thorn", "atlantis",
     "superlight", "g pro", "viper", "deathadder", "basilisk", "blackshark", "kraken",
     # GPU / PC parts & Specs
-    "gpu", "graphics card", "rtx", "gtx", "radeon", "rx", "ram", "ssd", "nvme", "ddr4", "ddr5",
-    "gaming chair", "cooling", "cooler", "fan", "motherboard", "processor", "ryzen", "intel core",
+    "gpu", "graphics card", "rtx", "gtx", "radeon", "rx", "ram", "ssd", "hdd", "nvme", "ddr4", "ddr5",
+    "gaming chair", "cooling", "cooler", "fan", "fans", "motherboard", "processor", "ryzen", "intel core",
     "120hz", "144hz", "165hz", "240hz", "ips", "oled", "amoled",
     "thermalright", "deepcool", "id-cooling", "arctic", "noctua", "nzxt", "lian li",
+    # Thermal & Cooling supplies
+    "thermal paste", "thermal putty", "putty", "thermal pad", "thermalpad", "ptm7950", "heatsink", "aio",
+    # Storage & Drives
+    "hard drive", "hard disk", "m.2", "m2", "sata", "sata3", "flash drive", "pendrive", "pen drive",
+    "thumb drive", "micro sd", "microsd", "sd card", "tf card", "memory card", "storage", "enclosure",
+    # Cables, Power & Charging
+    "cable", "cables", "cord", "wire", "usb", "usb-c", "usbc", "usb c", "type-c", "typec", "type c",
+    "c to c", "hdmi", "displayport", "dp cable", "otg", "aux", "ethernet", "lan", "rj45", "lightning",
+    "charger", "chargers", "charging", "gan charger", "gan", "fast charger", "fast charge", "fast charging",
+    "power bank", "powerbank", "adapter", "adapters", "hub", "hubs", "dock", "docks", "docking station",
+    "baseus", "ugreen", "anker", "pd 100w", "pd 65w", "100w", "65w",
+    # Tools, Drivers & DIY
+    "driver", "drivers", "screwdriver", "screwdrivers", "drill", "electric screwdriver", "rotary tool",
+    "pen set", "grinder pen", "tool", "tools", "diy", "soldering", "soldering iron", "multimeter", "wrench",
+    "plier", "pliers", "tungfull",
     # Phones & Brands
     "phone", "smartphone", "mobile", "iphone", "samsung", "xiaomi", "redmi",
     "poco", "oneplus", "realme", "oppo", "vivo", "nothing phone", "pixel",
@@ -95,13 +110,11 @@ ALLOWED_CATEGORY_KEYWORDS_EN = [
     # Audio
     "speaker", "soundbar", "microphone", "mic", "bluetooth", "anc", "hifi",
     # Accessories & Projectors
-    "charger", "charging", "power bank", "case", "cover", "screen protector",
-    "tempered glass", "stylus", "pen", "cable", "usb", "type-c", "hdmi",
-    "adapter", "hub", "dock", "gan charger", "baseus", "ugreen", "anker",
+    "case", "cover", "screen protector", "tempered glass", "stylus", "pen",
     "webcam", "camera", "drone", "action cam", "gopro", "tripod",
     "ring light", "led strip", "projector", "magcubic", "hy300",
     # Computers
-    "mini pc", "laptop", "notebook", "chromebook", "macbook",
+    "mini pc", "laptop", "notebook", "chromebook", "macbook", "pc", "computer", "desktop",
     # Generic tech
     "wireless", "bluetooth", "rechargeable",
 ]
@@ -111,19 +124,26 @@ ALLOWED_CATEGORY_KEYWORDS_AR = [
     "جيمنج", "قيمنق", "جيمينق", "جايمنج", "العاب", "ألعاب", "شاشة", "كرسي",
     "هاتف", "جوال", "موبايل", "تابلت", "لوحي", "ايباد", "آيباد",
     "ساعة", "ساعه", "ذكية", "سوار ذكي",
-    "بلوتوث", "شاحن", "باور بانك", "كابل", "كفر", "جراب", "حامل",
+    "بلوتوث", "شاحن", "شواحن", "شحن سريع", "باور بانك", "باوربانك", "كابل", "كوابل", "كيبل", "كيابل", "سلك", "وصلة", "وصلات", "محول", "محولات", "كفر", "جراب", "حامل",
     "سبيكر", "مايك", "كاميرا", "درون", "بروجكتر", "بروجكتور", "بروجيكتور", "لابتوب",
-    "لاسلكي", "وايرلس", "بي سي", "كارت شاشة", "كرت شاشة", "معالج", "رام",
+    "لاسلكي", "وايرلس", "بي سي", "حاسوب", "كمبيوتر", "كارت شاشة", "كرت شاشة", "معالج", "رام", "رامات", "مذربورد", "لوحة ام",
+    "قرص صلب", "هارد ديسك", "فلاش ديسك", "فلاشة", "بطاقة ذاكرة", "كارت ميموار", "تخزين", "اس اس دي", "ان في ام اي", "ساتا",
+    "مفك", "مفكات", "طقم مفكات", "أداة", "اداة", "أدوات", "ادوات", "دريل", "صيانة", "لحام", "كاوية لحام",
+    "معجون حراري", "بوتي حراري", "وسادة حرارية", "تبريد", "تبريد مائي", "مروحة", "مراوح", "مشتت",
     "هونر", "هواوي", "شاومي", "ريدمي", "بوكو", "سامسونج", "ايفون", "آيفون",
     "ريلمي", "انفينكس", "تكنو", "نوبيا", "لينوفو", "اسوس", "باد ماوس", "ماوس باد",
-    "سويتش", "سويتشات", "عتاد", "صيدة",
+    "سويتش", "سويتشات", "عتاد", "صيدة", "يو اس بي", "تايب سي",
 ]
 
 
 def is_allowed_category(title: str, text: str, channel_username: str = "") -> Tuple[bool, Optional[str]]:
-    """Check if the deal belongs to an allowed category (gaming, watches, phones, tablets, tech)."""
-    # 1. Dedicated PC Gaming channels are 100% gaming deals by definition
-    if channel_username.lower() in ["pcgamingpart", "bnddeals"]:
+    """Check if the deal belongs to an allowed category (gaming, tech, PC parts, cables, tools, phones, etc.)."""
+    clean_ch = channel_username.lower().lstrip("@")
+    monitored_tech_channels = {
+        "pcgamingpart", "bnddeals", "zedstoreonline", "aniscoupons", "ecksdeal", "lodydeals"
+    }
+    # All 6 monitored channels are specialized Algerian tech/deal channels curated by the user
+    if clean_ch in monitored_tech_channels:
         return True, None
 
     combined = f"{title} {text}".lower()
@@ -142,7 +162,7 @@ def is_allowed_category(title: str, text: str, channel_username: str = "") -> Tu
     if combined.count("كوبون") >= 2 or combined.count("code") >= 2 or combined.count("coupon") >= 2:
         return True, None
 
-    return False, f"Category not allowed (not gaming/watch/phone/tablet): {title[:60]}"
+    return False, f"Category not allowed (not tech/gaming/phone/tool): {title[:60]}"
 
 def is_spam_or_non_deal(text: str) -> Tuple[bool, Optional[str]]:
     if not text or len(text.strip()) < 10:

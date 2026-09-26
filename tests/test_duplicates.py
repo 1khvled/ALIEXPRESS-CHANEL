@@ -74,3 +74,36 @@ async def test_cross_channel_duplicate_detection():
     assert is_dup_title is True
     assert "matches previously published" in reason_title
 
+@pytest.mark.asyncio
+async def test_repost_after_cooldown():
+    """Verifies that after 24h cooldown, products reposted by source channels are ALLOWED."""
+    import time
+    from app.publisher.state_tracker import load_persistent_state, save_persistent_state, is_product_already_published
+
+    # Simulate product A posted 25 hours ago
+    state = load_persistent_state()
+    product_a = "100500999912345"
+    title_a = "SomnAmbulist NVMe SSD 1TB High Speed"
+    now = time.time()
+    twenty_five_hours_ago = now - (25 * 3600)
+
+    state["published_product_timestamps"][product_a] = twenty_five_hours_ago
+    state["published_title_timestamps"][title_a] = twenty_five_hours_ago
+    save_persistent_state(state)
+
+    # 1. Product A should now be eligible for reposting (not blocked as duplicate)
+    is_dup, reason = await is_product_already_published(product_a, title_a)
+    assert is_dup is False, f"Expected repost to be allowed after 25h, but was blocked: {reason}"
+
+    # 2. Simulate Product B posted only 2 hours ago
+    product_b = "100500999954321"
+    title_b = "Attack Shark R2 Mouse"
+    state["published_product_timestamps"][product_b] = now - (2 * 3600)
+    state["published_title_timestamps"][title_b] = now - (2 * 3600)
+    save_persistent_state(state)
+
+    is_dup_b, reason_b = await is_product_already_published(product_b, title_b)
+    assert is_dup_b is True, "Expected Product B to be blocked within 24h cooldown"
+    assert "already in persistent published state" in reason_b
+
+

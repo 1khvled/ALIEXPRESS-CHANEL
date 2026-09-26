@@ -49,7 +49,7 @@ class Settings(BaseSettings):
     MIN_QUALITY_SCORE: int = 60
     AUTO_PUBLISH_QUALITY_SCORE: int = 85
     DUPLICATE_COOLDOWN_HOURS: int = 24
-    NEVER_REPEAT_DUPLICATES: bool = True
+    NEVER_REPEAT_DUPLICATES: bool = False
     EUR_USD_RATE: float = 0.92
 
     # AliExpress Affiliate

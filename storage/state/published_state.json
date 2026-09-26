@@ -65,7 +65,7 @@
   ],
   "last_disclaimer_time": 1790371890.4189165,
   "last_calendar_time": 1790371890.4189165,
-  "last_run_time": 1790405730.9996195,
+  "last_run_time": 1790431324.4475195,
   "schedule_config": {
     "day_interval_minutes": 5,
     "night_interval_minutes": 30,
@@ -104,5 +104,15 @@
       "last_message_id": 50737,
       "last_check_time": 1790408800.0
     }
+  },
+  "published_product_timestamps": {
+    "999111222": 1790431324.4475195,
+    "100500999912345": 1790341325.3975208,
+    "100500999954321": 1790424125.3975208
+  },
+  "published_title_timestamps": {
+    "Test Wireless Gaming Mouse X1": 1790431324.4475195,
+    "SomnAmbulist NVMe SSD 1TB High Speed": 1790341325.3975208,
+    "Attack Shark R2 Mouse": 1790424125.3975208
   }
 }
