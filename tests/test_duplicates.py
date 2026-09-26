@@ -52,3 +52,25 @@ async def test_deduplication_engine(async_test_session):
     )
     assert is_not_dup is False
     assert reason2 is None
+
+@pytest.mark.asyncio
+async def test_cross_channel_duplicate_detection():
+    """Verifies that deals already posted from another channel are strictly blocked."""
+    from app.publisher.state_tracker import is_product_already_published, record_product_published, is_same_deal_title
+
+    # 1. Title matching works across channels
+    assert is_same_deal_title("realme P3 5G 8GB+256GB", "Realme P3") is True
+    assert is_same_deal_title("Attack Shark X3 Pro 8K", "ماوس Attack Shark X3 Pro") is True
+    assert is_same_deal_title("Attack Shark R1", "Attack Shark X3 Pro") is False
+
+    # 2. State-level deduplication blocks reposts
+    record_product_published("999111222", "Test Wireless Gaming Mouse X1")
+    is_dup, reason = await is_product_already_published("999111222", "Test Wireless Gaming Mouse X1")
+    assert is_dup is True
+    assert "already in persistent" in reason
+
+    # 3. Different channel posting the same product by title is blocked
+    is_dup_title, reason_title = await is_product_already_published("888333444", "ماوس ألعاب Wireless Gaming Mouse X1")
+    assert is_dup_title is True
+    assert "matches previously published" in reason_title
+

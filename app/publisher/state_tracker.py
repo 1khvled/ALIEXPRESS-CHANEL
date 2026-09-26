@@ -111,19 +111,73 @@ async def refresh_channel_cache(force: bool = False):
     except Exception as e:
         logger.warning(f"Could not refresh live channel cache: {e}")
 
-def _clean_title_keywords(title: str) -> List[str]:
-    """Extracts distinctive model/product keywords for title-based deduplication."""
+STOP_WORDS = {
+    'for', 'with', 'and', 'the', 'new', 'hot', 'original', 'inch', 'piece', 'pcs',
+    'livan', 'auto', 'تخفيض', 'عرض', 'سعر', 'شاحن', 'كابل', 'نسخة', 'جيغا', 'جيجا',
+    'global', 'version', 'sale', 'brand', 'deals', 'deal', 'official', 'store',
+    'الشراء', 'الطلب', 'رابط', 'خصم', 'عملات', 'كوبون'
+}
+
+def extract_title_tokens(title: str) -> Set[str]:
+    """Extracts distinctive model/product tokens, preserving alphanumeric codes (e.g. p3, x3, 5g, 8k, r1)."""
     if not title:
-        return []
+        return set()
     cleaned = re.sub(r'[\$€\(\)\[\],.;:!?/\\|\-_~+]+', ' ', title.lower())
-    stop_words = {'for', 'with', 'and', 'the', 'new', 'hot', 'original', 'inch', 'piece', 'pcs', 'pro', 'max', 'livan', 'auto', 'تخفيض', 'عرض', 'سعر', 'شاحن', 'كابل'}
-    words = [w for w in cleaned.split() if len(w) >= 3 and w not in stop_words]
-    return words
+    tokens = set()
+    for w in cleaned.split():
+        if w in STOP_WORDS:
+            continue
+        # Keep words of len >= 3 OR words containing digits (e.g. p3, x3, 5g, 8k, r1)
+        if len(w) >= 3 or any(c.isdigit() for c in w):
+            tokens.add(w)
+    return tokens
+
+SPEC_TOKENS = {'5g', '4g', '8k', '4k', '120hz', '144hz', '165hz', '240hz', '128', '256', '512', '64', '32', '16', '8', '6', '12'}
+
+def extract_model_identifiers(tokens: Set[str]) -> Set[str]:
+    """Finds product model identifiers like r1, x3, p3, ak820, f6, gt, hy300."""
+    return {t for t in tokens if any(c.isdigit() for c in t) and t not in SPEC_TOKENS}
+
+def is_same_deal_title(title_a: str, title_b: str) -> bool:
+    """Accurately identifies if two titles refer to the same product across different channels."""
+    toks_a = extract_title_tokens(title_a)
+    toks_b = extract_title_tokens(title_b)
+    if not toks_a or not toks_b:
+        return False
+
+    # Check distinct model codes (e.g. Attack Shark R1 vs Attack Shark X3)
+    models_a = extract_model_identifiers(toks_a)
+    models_b = extract_model_identifiers(toks_b)
+    if models_a and models_b and not models_a.intersection(models_b):
+        return False
+
+    # Check product category mismatch (e.g. realme phone vs realme pad)
+    if ("pad" in toks_a and "pad" not in toks_b) or ("pad" in toks_b and "pad" not in toks_a):
+        return False
+
+    common = toks_a.intersection(toks_b)
+
+    # 1. 3+ common distinctive keywords (e.g. "attack", "shark", "x3")
+    if len(common) >= 3:
+        return True
+
+    # 2. 2 core keywords (e.g. "realme", "p3")
+    if len(common) >= 2:
+        min_len = min(len(toks_a), len(toks_b))
+        if len(common) / min_len >= 0.5:
+            return True
+
+    return False
+
+def _clean_title_keywords(title: str) -> List[str]:
+    """Backwards-compatible wrapper returning token list."""
+    return list(extract_title_tokens(title))
 
 async def is_product_already_published(product_id: Optional[str], title: str = "") -> Tuple[bool, str]:
     """
     Bulletproof check: Has this product or exact deal already been posted?
     Checks persistent state, database, and live channel messages.
+    Prevents cross-channel duplicate deals from being republished.
     """
     await refresh_channel_cache()
     state = load_persistent_state()
@@ -138,23 +192,31 @@ async def is_product_already_published(product_id: Optional[str], title: str = "
         if p_str in _CACHED_CHANNEL_PIDS:
             return True, f"Product ID {p_str} is present in live @DzAliexpress0 channel"
 
-    # 3. Title distinctive keyword matching against channel messages
-    if title:
-        words = _clean_title_keywords(title)
-        if len(words) >= 2:
-            # Check against previously published titles
-            for pub_t in state.get("published_titles", []):
-                pub_words = _clean_title_keywords(pub_t)
-                common = set(words).intersection(set(pub_words))
-                if len(common) >= 3 or (len(words) == 2 and len(common) == 2):
-                    return True, f"Title closely matches previously published deal: '{pub_t[:40]}'"
+        # 3. Check database (deals.db) if available
+        try:
+            from app.db.session import db_context
+            from app.db.models import Deal
+            from sqlalchemy import select
+            async with db_context() as s:
+                db_deal = (await s.execute(
+                    select(Deal.id).where(Deal.product_id == p_str, Deal.status == "PUBLISHED").limit(1)
+                )).scalar_one_or_none()
+                if db_deal:
+                    return True, f"Product ID {p_str} already published in database (Deal #{db_deal})"
+        except Exception:
+            pass
 
-            # Check against live channel texts
-            for ch_t in _CACHED_CHANNEL_TEXTS:
-                ch_words = _clean_title_keywords(ch_t)
-                common = set(words).intersection(set(ch_words))
-                if len(common) >= 3:
-                    return True, f"Distinctive product keywords {list(common)[:3]} already found in channel post"
+    # 4. Smart Title cross-channel matching
+    if title:
+        # Check against previously published titles
+        for pub_t in state.get("published_titles", []):
+            if is_same_deal_title(title, pub_t):
+                return True, f"Product matches previously published deal: '{pub_t[:45]}'"
+
+        # Check against live channel texts
+        for ch_t in _CACHED_CHANNEL_TEXTS:
+            if is_same_deal_title(title, ch_t):
+                return True, f"Product already visible in recent channel post: '{ch_t[:45]}'"
 
     return False, ""
 

@@ -97,19 +97,20 @@ async def collect_and_post_last_10_deals():
 
     published_deals = []
     seen_products = set()
+    seen_titles = []
 
-
-
-    # Load existing published products
+    # Load existing published products and titles for cross-channel deduplication
     async with db_context() as s:
-        existing_pids = (await s.execute(
-            select(Deal.product_id).where(Deal.status == "PUBLISHED")
-        )).scalars().all()
-        for pid in existing_pids:
+        existing_deals = (await s.execute(
+            select(Deal.product_id, Deal.title).where(Deal.status == "PUBLISHED")
+        )).all()
+        for pid, t in existing_deals:
             if pid:
                 seen_products.add(pid)
+            if t:
+                seen_titles.append(t)
 
-    print(f"Loaded {len(seen_products)} existing published products for deduplication.")
+    print(f"Loaded {len(seen_products)} existing published products and {len(seen_titles)} titles for deduplication.")
 
     MAX_DEALS_PER_RUN = 2
 
@@ -210,18 +211,30 @@ async def collect_and_post_last_10_deals():
                             print(f"  [CATEGORY FILTERED] {reject_reason}")
                             continue
 
-                    # 6. Strict Deduplication check (Persistent JSON State + DB + Live Channel text)
-                    from app.publisher.state_tracker import is_product_already_published, record_product_published
+                    # 6. Strict Cross-Channel Deduplication check (Persistent JSON State + DB + Live Channel text + In-memory)
+                    from app.publisher.state_tracker import is_product_already_published, record_product_published, is_same_deal_title
                     already_pub, pub_reason = await is_product_already_published(extracted.product_id, extracted.title or "")
                     if already_pub:
-                        print(f"  [DUPLICATE STRICT SKIPPED] {pub_reason}")
+                        print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] {pub_reason}")
                         continue
 
                     if extracted.product_id in seen_products:
-                        print(f"  [DUPLICATE SKIPPED] '{extracted.product_id}' already seen in current run.")
+                        print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] Product ID '{extracted.product_id}' was already published from another channel!")
+                        continue
+
+                    # Check against titles published earlier in this run or session
+                    is_title_dup = False
+                    for st in seen_titles:
+                        if is_same_deal_title(extracted.title or "", st):
+                            is_title_dup = True
+                            print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] Deal '{extracted.title}' closely matches already published deal '{st}'.")
+                            break
+                    if is_title_dup:
                         continue
 
                     seen_products.add(extracted.product_id)
+                    if extracted.title:
+                        seen_titles.append(extracted.title)
 
                     # 7. Official Studio Photo ONLY — NEVER use competitor Telegram channel photos!
                     # Only accept official AliExpress CDN images (alicdn.com, aliexpress-media.com)
