@@ -30,7 +30,9 @@
     "1005007275142457",
     "1005012925826589",
     "999111222",
-    "9998883218"
+    "9998883218",
+    "1005012561537862",
+    "1005010184054784"
   ],
   "published_titles": [
     "SomnAmbulist SATA3 SSD 120GB",
@@ -63,18 +65,20 @@
     "ماوس لاسلكي Attack Shark X3 PRO Wireless 8K",
     "realme P3 5G 8GB+256GB/12GB+512GB 5260mAh Battery NFC",
     "Test Wireless Gaming Mouse X1",
-    "Test Wrench Set"
+    "Test Wrench Set",
+    "Pro'skit HW-609A 10-Piece Mini Double-Ended Box Wrench Set",
+    "CX H1300 Thermal Putty 13.5W/m.K for VGA GPU IC Processor 10g"
   ],
   "last_disclaimer_time": 1790371890.4189165,
   "last_calendar_time": 1790371890.4189165,
-  "last_run_time": 1790433218.1412995,
+  "last_run_time": 1790439938.4275959,
   "schedule_config": {
     "day_interval_minutes": 5,
     "night_interval_minutes": 30,
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790384051.5277712,
+    "last_deal_post_time": 1790439938.4758134,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -83,20 +87,20 @@
   "coin_reminder_variant_idx": 1,
   "monitored_channels": {
     "pcgamingpart": {
-      "last_message_id": 7905,
-      "last_check_time": 1790408800.0
+      "last_message_id": 7908,
+      "last_check_time": 1790439940.5968432
     },
     "zedstoreonline": {
-      "last_message_id": 38466,
-      "last_check_time": 1790408800.0
+      "last_message_id": 38467,
+      "last_check_time": 1790439941.1367211
     },
     "aniscoupons": {
       "last_message_id": 32552,
       "last_check_time": 1790408800.0
     },
     "ecksdeal": {
-      "last_message_id": 5835,
-      "last_check_time": 1790408800.0
+      "last_message_id": 5836,
+      "last_check_time": 1790439942.0613577
     },
     "lodydeals": {
       "last_message_id": 45279,
@@ -115,15 +119,21 @@
     "999111222": 1790433217.0741277,
     "100500999912345": 1790343218.113952,
     "100500999954321": 1790426018.113952,
-    "9998883218": 1790433218.1412995
+    "9998883218": 1790433218.1412995,
+    "1005012561537862": 1790439932.9103508,
+    "1005010184054784": 1790439938.4275959
   },
   "published_title_timestamps": {
     "Test Wireless Gaming Mouse X1": 1790433217.0741277,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790343218.113952,
     "Attack Shark R2 Mouse": 1790426018.113952,
-    "Test Wrench Set": 1790433218.1412995
+    "Test Wrench Set": 1790433218.1412995,
+    "Pro'skit HW-609A 10-Piece Mini Double-Ended Box Wrench Set": 1790439932.9103508,
+    "CX H1300 Thermal Putty 13.5W/m.K for VGA GPU IC Processor 10g": 1790439938.4275959
   },
   "published_post_keys": [
-    "test_channel:1790433218"
+    "test_channel:1790433218",
+    "pcgamingpart:7906",
+    "pcgamingpart:7907"
   ]
 }
