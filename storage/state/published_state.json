@@ -27,7 +27,8 @@
     "1005013086990605",
     "1005009916208760",
     "1005008829227075",
-    "1005007275142457"
+    "1005007275142457",
+    "1005012925826589"
   ],
   "published_titles": [
     "SomnAmbulist SATA3 SSD 120GB",
@@ -57,19 +58,23 @@
     "POCO X8 5G 6/128",
     "بروجكتور Magcubic HY300 max – أوتو فوكس، Android 14، إضاءة 400 ANSI",
     "ماوس لاسلكي مع شاحن Attack Shark X1 Wireless",
-    "ماوس لاسلكي Attack Shark X3 PRO Wireless 8K"
+    "ماوس لاسلكي Attack Shark X3 PRO Wireless 8K",
+    "realme P3 5G 8GB+256GB/12GB+512GB 5260mAh Battery NFC"
   ],
   "last_disclaimer_time": 1790371890.4189165,
   "last_calendar_time": 1790371890.4189165,
-  "last_run_time": 1790371890.4189165,
+  "last_run_time": 1790384051.5274358,
   "schedule_config": {
     "day_interval_minutes": 5,
     "night_interval_minutes": 30,
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 0.0,
+    "last_deal_post_time": 1790384051.5277712,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
-  }
+  },
+  "last_coin_reminder_time": 1790384028.035038,
+  "next_reminder_interval_seconds": 223422,
+  "coin_reminder_variant_idx": 1
 }
