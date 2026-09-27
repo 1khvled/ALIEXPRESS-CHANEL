@@ -10,8 +10,8 @@ import httpx
 from app.utils.logger import logger
 
 TARGET_CHANNEL_ID = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8900887118:AAFuAFcxS1Xa2K4g0tlpD_YutPrsco3Y-Vo")
-ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "8708965924:AAGi9HgLDxKsvaOzPOnCDRhI4c9WAfUvkOk")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "")
 
 DISCLAIMER_TEXT = """❝ ❓ <b>لماذا يجب تغيير دولة التطبيق في AliExpress؟</b> ❞
 
