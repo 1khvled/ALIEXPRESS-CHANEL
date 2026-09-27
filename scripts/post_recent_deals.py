@@ -260,8 +260,7 @@ async def collect_and_post_last_10_deals():
                         deal_type=deal_type
                     )
 
-                    # 9. Generate caption with promo banner if active
-                    promo_tag = promo_tracker.get_promo_header()
+                    # 9. Generate caption with clean Algerian format (NO promo calendar banners on single deals)
                     caption = await caption_generator.generate(
                         title=extracted.title or "AliExpress Deal",
                         usd_price=extracted.current_price,
@@ -272,7 +271,7 @@ async def collect_and_post_last_10_deals():
                         has_points_discount=extracted.has_points_discount,
                         country_info=extracted.country_info,
                         coupon_list=extracted.coupon_list if extracted.is_coupon_list else None,
-                        promo_tag=promo_tag
+                        promo_tag=None
                     )
 
                     # 10. Prepare Image with subtle circular DealScout logo watermark

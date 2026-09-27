@@ -267,15 +267,23 @@ async def build_exact_deal_caption(
     )
     lines.append(hook)
 
-    # 2. Country recommendation
-    lines.append(f"📍 أختر بلد الحساب <b>{country_name}</b>")
+    # 2. Country recommendation (clean Algerian channel style)
+    if "كندا" in country_name:
+        lines.append("خلي البلـــد كــــــندا 🇨🇦")
+    elif "كوريا" in country_name:
+        lines.append("خلي البلـــد كــــــوريا 🇰🇷")
+    elif "فرنسا" in country_name:
+        lines.append("خلي البلـــد فـــرنسا 🇫🇷")
+    elif "إسبانيا" in country_name:
+        lines.append("خلي البلـــد إسبـــانيا 🇪🇸")
+    elif country:
+        lines.append(f"خلي البلـــد <b>{country}</b>")
 
     import html
     safe_title = html.escape(title)
 
     lines.append("")
     lines.append(f"✅ <b>{safe_title}</b>")
-    lines.append("━━━━━━━━━━━━━━━━━")
 
     if price and price > 0:
         dzd_str = f" (~<b>{dzd_approx:,} دج</b>)" if dzd_approx > 0 else ""
@@ -292,13 +300,12 @@ async def build_exact_deal_caption(
     if coins_text:
         lines.append(f"🪙 <b>تخفيض العملات:</b> {html.escape(coins_text)}")
     else:
-        lines.append("🪙 <b>تخفيض العملات:</b> مفعّل تلقائياً عبر الرابط")
+        lines.append("🪙 <b>تخفيض العملات:</b> مفعّل عبر الرابط")
 
     lines.append("")
-    lines.append("📎 <b>رابط الشراء المباشر ⬇️</b>")
+    lines.append("📎 <b>رابط الشراء ⬇️</b>")
     lines.append(f"{affiliate_url}")
-    lines.append("━━━━━━━━━━━━━━━━━")
-    lines.append("⚠️ <i>افتح الرابط في تطبيق AliExpress لتطبيق كامل الخصم.</i>")
+    lines.append("")
     lines.append(f"📢 <i>قناة العروض: @{TARGET_CHANNEL_ID.lstrip('@')}</i>")
 
     return "\n".join(lines)

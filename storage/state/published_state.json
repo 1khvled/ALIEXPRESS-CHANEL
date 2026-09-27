@@ -30,7 +30,8 @@
     "1005007275142457",
     "1005012925826589",
     "1005012561537862",
-    "1005010184054784"
+    "1005010184054784",
+    "1005003793015046"
   ],
   "published_titles": [
     "SomnAmbulist SATA3 SSD 120GB",
@@ -63,18 +64,19 @@
     "ماوس لاسلكي Attack Shark X3 PRO Wireless 8K",
     "realme P3 5G 8GB+256GB/12GB+512GB 5260mAh Battery NFC",
     "Pro'skit HW-609A 10-Piece Mini Double-Ended Box Wrench Set",
-    "CX H1300 Thermal Putty 13.5W/m.K for VGA GPU IC Processor 10g"
+    "CX H1300 Thermal Putty 13.5W/m.K for VGA GPU IC Processor 10g",
+    "LED Wooden Digital Alarm Clock with Voice Control"
   ],
   "last_disclaimer_time": 1790371890.4189165,
   "last_calendar_time": 1790371890.4189165,
-  "last_run_time": 1790439938.4275959,
+  "last_run_time": 1790510777.3970847,
   "schedule_config": {
     "day_interval_minutes": 5,
     "night_interval_minutes": 30,
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790439938.4758134,
+    "last_deal_post_time": 1790510777.4056776,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -91,8 +93,8 @@
       "last_check_time": 1790439941.1367211
     },
     "aniscoupons": {
-      "last_message_id": 32552,
-      "last_check_time": 1790408800.0
+      "last_message_id": 32553,
+      "last_check_time": 1790510779.4378018
     },
     "ecksdeal": {
       "last_message_id": 5836,
@@ -109,14 +111,17 @@
   },
   "published_product_timestamps": {
     "1005012561537862": 1790439932.9103508,
-    "1005010184054784": 1790439938.4275959
+    "1005010184054784": 1790439938.4275959,
+    "1005003793015046": 1790510777.3970847
   },
   "published_title_timestamps": {
     "Pro'skit HW-609A 10-Piece Mini Double-Ended Box Wrench Set": 1790439932.9103508,
-    "CX H1300 Thermal Putty 13.5W/m.K for VGA GPU IC Processor 10g": 1790439938.4275959
+    "CX H1300 Thermal Putty 13.5W/m.K for VGA GPU IC Processor 10g": 1790439938.4275959,
+    "LED Wooden Digital Alarm Clock with Voice Control": 1790510777.3970847
   },
   "published_post_keys": [
     "pcgamingpart:7906",
-    "pcgamingpart:7907"
+    "pcgamingpart:7907",
+    "aniscoupons:32553"
   ]
 }
