@@ -69,7 +69,7 @@
   ],
   "last_disclaimer_time": 1790371890.4189165,
   "last_calendar_time": 1790371890.4189165,
-  "last_run_time": 1790510777.3970847,
+  "last_run_time": 1790511833.3526797,
   "schedule_config": {
     "day_interval_minutes": 5,
     "night_interval_minutes": 30,
@@ -123,5 +123,6 @@
     "pcgamingpart:7906",
     "pcgamingpart:7907",
     "aniscoupons:32553"
-  ]
+  ],
+  "channel_published_deals": {}
 }

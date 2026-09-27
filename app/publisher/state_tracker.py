@@ -74,10 +74,17 @@ def is_post_already_published(channel_username: str, message_id: int) -> bool:
     seen_posts = state.get("published_post_keys", [])
     return post_key in seen_posts
 
-def record_post_published(channel_username: str, message_id: int, product_id: Optional[str] = None, title: str = ""):
+def record_post_published(
+    channel_username: str,
+    message_id: int,
+    product_id: Optional[str] = None,
+    title: str = "",
+    channel_msg_id: Optional[int] = None
+):
     """
     Records a post as published by its Post ID and updates last_message_id for that channel.
-    Also records product_id and timestamp for short-term cross-channel deduplication.
+    Also records product_id and timestamp for short-term cross-channel deduplication,
+    and stores the target channel_msg_id to detect if the post is ever deleted.
     """
     state = load_persistent_state()
     post_key = get_post_key(channel_username, message_id)
@@ -113,8 +120,82 @@ def record_post_published(channel_username: str, message_id: int, product_id: Op
         if t_clean not in state.get("published_titles", []):
             state.setdefault("published_titles", []).append(t_clean)
 
+    if channel_msg_id:
+        state.setdefault("channel_published_deals", {})[post_key] = {
+            "channel_msg_id": int(channel_msg_id),
+            "product_id": str(product_id) if product_id else None,
+            "title": title,
+            "channel": clean_ch,
+            "source_msg_id": int(message_id),
+            "timestamp": now
+        }
+
     state["last_run_time"] = now
     save_persistent_state(state)
+
+
+async def sync_deleted_channel_posts() -> Set[str]:
+    """
+    Checks if any recently published deals were deleted from @DzAliexpress0.
+    If a message was deleted:
+    - Removes it from published_post_keys, product timestamps, and title timestamps.
+    - Returns the set of post_keys (e.g. {'aniscoupons:32553'}) that need reposting.
+    """
+    state = load_persistent_state()
+    deals = state.get("channel_published_deals", {})
+    if not deals:
+        return set()
+
+    clean_ch = str(TARGET_CHANNEL_ID).lstrip("@")
+    now = time.time()
+    recent_deals = {k: v for k, v in deals.items() if (now - v.get("timestamp", 0)) < 86400}
+    if not recent_deals:
+        return set()
+
+    deleted_keys = set()
+    async with httpx.AsyncClient(timeout=8.0, follow_redirects=True) as client:
+        for post_key, info in recent_deals.items():
+            msg_id = info.get("channel_msg_id")
+            if not msg_id:
+                continue
+            url = f"https://t.me/{clean_ch}/{msg_id}?embed=1"
+            try:
+                resp = await client.get(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
+                if resp.status_code == 200:
+                    text = resp.text
+                    if "tgme_widget_message_error" in text or "Post not found" in text:
+                        logger.warning(f"[DELETED DEAL DETECTED] Post #{msg_id} ({post_key}) was deleted from @{clean_ch}! Resetting for reposting.")
+                        deleted_keys.add(post_key)
+            except Exception as e:
+                logger.debug(f"Error checking status for message #{msg_id}: {e}")
+
+    if deleted_keys:
+        pub_keys = state.get("published_post_keys", [])
+        state["published_post_keys"] = [k for k in pub_keys if k not in deleted_keys]
+
+        for k in deleted_keys:
+            info = state.get("channel_published_deals", {}).pop(k, {})
+            pid = info.get("product_id")
+            if pid:
+                state.get("published_product_timestamps", {}).pop(str(pid), None)
+                if str(pid) in state.get("published_product_ids", []):
+                    try:
+                        state["published_product_ids"].remove(str(pid))
+                    except ValueError:
+                        pass
+            title = info.get("title")
+            if title:
+                state.get("published_title_timestamps", {}).pop(title, None)
+                if title in state.get("published_titles", []):
+                    try:
+                        state["published_titles"].remove(title)
+                    except ValueError:
+                        pass
+
+        save_persistent_state(state)
+        logger.info(f"Synchronized deleted posts: {len(deleted_keys)} post(s) marked for reposting: {deleted_keys}")
+
+    return deleted_keys
 
 def is_recent_cross_channel_duplicate(product_id: Optional[str], current_channel: str = "") -> Tuple[bool, str]:
     """

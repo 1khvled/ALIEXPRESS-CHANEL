@@ -120,6 +120,11 @@ async def collect_and_post_last_10_deals():
 
     MAX_DEALS_PER_RUN = 40
 
+    from app.publisher.state_tracker import sync_deleted_channel_posts
+    needs_repost_keys = await sync_deleted_channel_posts()
+    if needs_repost_keys:
+        print(f"[DELETED POSTS SYNC] Found {len(needs_repost_keys)} post(s) deleted from channel, ready to repost: {needs_repost_keys}")
+
     async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
         for ch in CHANNELS:
             if len(published_deals) >= MAX_DEALS_PER_RUN:
@@ -161,7 +166,6 @@ async def collect_and_post_last_10_deals():
 
                 if last_seen_id is None:
                     # First time seeing this channel — process ALL posts on current page
-                    # (they're within the visible window so they're recent enough)
                     record_monitored_channel_last_id(ch, current_max_id)
                     new_blocks = [
                         (b_id, b) for b_id, b in block_items
@@ -169,17 +173,21 @@ async def collect_and_post_last_10_deals():
                     ]
                     new_blocks.sort(key=lambda x: x[0])
                     print(f"  [FIRST RUN] @{ch} baseline set to #{current_max_id}. Processing {len(new_blocks)} visible post(s).")
-                elif current_max_id <= last_seen_id:
-                    print(f"  [NO NEW POSTS] @{ch} has no new messages (last seen: #{last_seen_id}, current: #{current_max_id}).")
-                    continue
                 else:
-                    # Filter strictly for messages newer than last_seen_id AND not already published
+                    # Filter for messages newer than last_seen_id OR any post that was deleted from channel and needs reposting
                     new_blocks = [
                         (b_id, b) for b_id, b in block_items
-                        if b_id > last_seen_id and not is_post_already_published(ch, b_id)
+                        if (b_id > last_seen_id or f"{ch.lower()}:{b_id}" in needs_repost_keys)
+                        and not is_post_already_published(ch, b_id)
                     ]
                     new_blocks.sort(key=lambda x: x[0])
-                    print(f"  [NEW POSTS DETECTED] @{ch} has {len(new_blocks)} new post(s) (newer than #{last_seen_id})!")
+                    if new_blocks:
+                        repost_count = sum(1 for b_id, _ in new_blocks if b_id <= last_seen_id)
+                        new_count = len(new_blocks) - repost_count
+                        print(f"  [@{ch}] Found {new_count} new post(s) and {repost_count} deleted post(s) to repost.")
+                    else:
+                        print(f"  [NO NEW POSTS] @{ch} has no new or repostable messages (last seen: #{last_seen_id}, current: #{current_max_id}).")
+                        continue
 
                 for msg_id, block in new_blocks:
                     if len(published_deals) >= MAX_DEALS_PER_RUN:
@@ -350,7 +358,13 @@ async def collect_and_post_last_10_deals():
                         )
 
                         if success:
-                            record_post_published(ch, msg_id, deal.product_id, deal.title)
+                            post_msg_id = (await s.execute(
+                                select(TelegramPost.telegram_message_id)
+                                .where(TelegramPost.deal_id == deal.id)
+                                .order_by(desc(TelegramPost.id))
+                            )).scalar_one_or_none()
+
+                            record_post_published(ch, msg_id, deal.product_id, deal.title, channel_msg_id=post_msg_id)
                             record_deal_posted_time()
 
                             # Check and notify watchlist subscribers for price drops
