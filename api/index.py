@@ -280,6 +280,109 @@ DASHBOARD_HTML = """<!DOCTYPE html>
       </div>
     </div>
 
+    <!-- Telegram Post Reformatter & 1-Tap Publisher Tool -->
+    <div class="glass-panel glass-glow rounded-3xl p-5 sm:p-6 mb-6 card-hover border border-rose-500/30">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-slate-800/80">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-amber-500 to-rose-600 flex items-center justify-center text-white shadow-lg shadow-rose-600/30">
+            <i class="fa-solid fa-wand-magic-sparkles text-lg"></i>
+          </div>
+          <div>
+            <h3 class="font-bold text-base sm:text-lg text-white flex items-center gap-2">
+              <span>إعادة تنسيق ونشر عروض التيليجرام ⚡</span>
+              <span class="text-[10px] px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/30 font-bold">VIP للأدمن</span>
+            </h3>
+            <p class="text-xs text-slate-400">ألصق منشور أي قناة وسيقوم النظام فوراً باستخراج المنتج وتوليد الروابط التابعة وإعادة الصياغة باللهجة الجزائرية ثم النشر بضغطة زر!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <textarea 
+          id="reformat-input" 
+          rows="4" 
+          placeholder="ألصق هنا المنشور كما هو من قناة التيليجرام (يحتوي على رابط AliExpress، السعر، الكوبون...)" 
+          dir="auto"
+          class="w-full bg-slate-900 border border-slate-700/80 rounded-2xl p-3.5 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 font-sans leading-relaxed"
+        ></textarea>
+
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <button 
+            onclick="reformatTelegramPost()" 
+            id="reformat-submit-btn" 
+            class="bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-lg shadow-rose-600/30 flex items-center justify-center gap-2 transition active:scale-95"
+          >
+            <i class="fa-solid fa-arrows-rotate"></i>
+            <span>إعادة التنسيق والمعاينة</span>
+          </button>
+          <button 
+            onclick="document.getElementById('reformat-input').value=''; document.getElementById('reformat-result').classList.add('hidden');" 
+            class="text-xs text-slate-400 hover:text-slate-200 px-3 py-1.5 rounded-lg border border-slate-800 hover:bg-slate-800 transition"
+          >
+            مسح الحقل
+          </button>
+        </div>
+      </div>
+
+      <!-- Reformatted Result Card -->
+      <div id="reformat-result" class="hidden mt-5 pt-5 border-t border-slate-800/80 space-y-4">
+        <div class="bg-slate-950/80 rounded-2xl p-4 border border-slate-800 flex flex-col md:flex-row items-start gap-4">
+          <!-- Image Box & Selectors -->
+          <div class="flex flex-col items-center gap-2 w-full md:w-auto">
+            <div id="reformat-img-box" class="w-32 h-32 rounded-xl bg-slate-900 border border-slate-700 overflow-hidden flex items-center justify-center flex-shrink-0">
+              <i class="fa-solid fa-image text-slate-600 text-3xl"></i>
+            </div>
+            <div id="reformat-gallery" class="flex flex-wrap gap-1 max-w-[140px] justify-center"></div>
+          </div>
+
+          <!-- Content Details & Editable Caption -->
+          <div class="flex-1 min-w-0 w-full space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span id="reformat-pid" class="text-xs font-mono bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-md border border-slate-700"></span>
+              <div class="flex items-center gap-2">
+                <span id="reformat-price-usd" class="text-emerald-400 font-bold bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md text-xs"></span>
+                <span id="reformat-price-dzd" class="text-amber-400 font-bold bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md text-xs"></span>
+              </div>
+            </div>
+
+            <!-- Editable Caption Box -->
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <label class="text-[11px] font-bold text-slate-300">نص المنشور الجزائري المنسق (يمكنك التعديل عليه قبل النشر):</label>
+                <span class="text-[10px] text-slate-500 font-mono" id="reformat-char-count"></span>
+              </div>
+              <textarea 
+                id="reformat-caption" 
+                rows="8" 
+                dir="rtl"
+                class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3 text-xs sm:text-sm text-slate-100 focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 font-sans leading-relaxed"
+              ></textarea>
+            </div>
+
+            <!-- Actions Row -->
+            <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
+              <a id="reformat-deal-link" href="#" target="_blank" class="text-xs text-rose-400 hover:text-rose-300 flex items-center gap-1.5 font-bold">
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                <span>فحص الرابط التابع</span>
+              </a>
+
+              <button 
+                onclick="publishReformattedDeal()" 
+                id="reformat-publish-btn" 
+                class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2 transition active:scale-95"
+              >
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>نشر في القناة الآن (@DzAliexpress0)</span>
+              </button>
+            </div>
+
+            <!-- Feedback Notification Box -->
+            <div id="reformat-feedback" class="hidden p-3 rounded-xl text-xs font-medium"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Auto-Publishing Speed & Schedule Control Panel -->
     <div class="glass-panel rounded-3xl p-5 sm:p-6 mb-6 card-hover border border-rose-500/20">
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4 pb-3 border-b border-slate-800/80">
@@ -660,6 +763,152 @@ DASHBOARD_HTML = """<!DOCTYPE html>
       }
     }
 
+    // Telegram Post Reformatter & 1-Tap Publisher Handlers
+    let currentReformattedDeal = null;
+
+    async function reformatTelegramPost() {
+      const input = document.getElementById('reformat-input');
+      const btn = document.getElementById('reformat-submit-btn');
+      const resBox = document.getElementById('reformat-result');
+      const feedback = document.getElementById('reformat-feedback');
+      const val = (input.value || '').trim();
+
+      if (!val) {
+        input.focus();
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i><span>جاري المعالجة وإعادة التنسيق...</span>';
+      if (feedback) feedback.classList.add('hidden');
+
+      try {
+        const resp = await fetch('/api/reformat-deal', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: val })
+        });
+        const data = await resp.json();
+
+        if (data.ok) {
+          currentReformattedDeal = data;
+          document.getElementById('reformat-pid').innerText = 'ID: ' + data.product_id;
+          document.getElementById('reformat-price-usd').innerText = data.price ? '$' + data.price.toFixed(2) : 'سعر خاص';
+          document.getElementById('reformat-price-dzd').innerText = data.price_dzd ? '~ ' + data.price_dzd.toLocaleString() + ' دج' : '';
+
+          const captionArea = document.getElementById('reformat-caption');
+          captionArea.value = data.caption || '';
+          updateCaptionCharCount();
+          captionArea.oninput = updateCaptionCharCount;
+
+          // Main image
+          const imgBox = document.getElementById('reformat-img-box');
+          if (data.image_url) {
+            imgBox.innerHTML = `<img id="reformat-active-img" src="${data.image_url}" class="w-full h-full object-cover">`;
+          } else {
+            imgBox.innerHTML = '<i class="fa-solid fa-image text-slate-600 text-3xl"></i>';
+          }
+
+          // Gallery thumbnails
+          const gallery = document.getElementById('reformat-gallery');
+          if (data.images && data.images.length > 1) {
+            gallery.innerHTML = data.images.map((img) => `
+              <div onclick="selectReformatImage('${img}')" class="w-8 h-8 rounded-md bg-slate-800 border border-slate-700 overflow-hidden cursor-pointer hover:border-rose-500 transition">
+                <img src="${img}" class="w-full h-full object-cover">
+              </div>
+            `).join('');
+          } else {
+            gallery.innerHTML = '';
+          }
+
+          document.getElementById('reformat-deal-link').href = data.deal_link || '#';
+          resBox.classList.remove('hidden');
+          resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          alert('تعذر استخراج بيانات العرض: ' + (data.error || 'تأكد من وجود رابط AliExpress في المنشور'));
+        }
+      } catch (e) {
+        alert('حدث خطأ أثناء معالجة المنشور: ' + e.message);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-arrows-rotate"></i><span>إعادة التنسيق والمعاينة</span>';
+      }
+    }
+
+    function selectReformatImage(imgUrl) {
+      if (!currentReformattedDeal) return;
+      currentReformattedDeal.image_url = imgUrl;
+      const imgBox = document.getElementById('reformat-img-box');
+      imgBox.innerHTML = `<img id="reformat-active-img" src="${imgUrl}" class="w-full h-full object-cover">`;
+    }
+
+    function updateCaptionCharCount() {
+      const area = document.getElementById('reformat-caption');
+      const countEl = document.getElementById('reformat-char-count');
+      if (area && countEl) {
+        const len = area.value.length;
+        countEl.innerText = len + ' / 1024 حرف';
+        countEl.className = len > 1024 ? 'text-[10px] text-rose-400 font-bold' : 'text-[10px] text-slate-500 font-mono';
+      }
+    }
+
+    async function publishReformattedDeal() {
+      if (!currentReformattedDeal) return;
+
+      const btn = document.getElementById('reformat-publish-btn');
+      const feedback = document.getElementById('reformat-feedback');
+      const caption = document.getElementById('reformat-caption').value.trim();
+
+      if (!caption) {
+        alert('نص المنشور فارغ!');
+        return;
+      }
+
+      if (!confirm('هل أنت متأكد من نشر هذا المنشور في القناة @DzAliexpress0 الآن؟')) {
+        return;
+      }
+
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i><span>جاري النشر في القناة...</span>';
+      if (feedback) feedback.classList.add('hidden');
+
+      try {
+        const resp = await fetch('/api/publish-deal', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            product_id: currentReformattedDeal.product_id,
+            caption: caption,
+            image_url: currentReformattedDeal.image_url,
+            deal_link: currentReformattedDeal.deal_link
+          })
+        });
+        const data = await resp.json();
+
+        if (data.ok) {
+          feedback.className = 'p-3 rounded-xl text-xs font-medium bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 flex items-center justify-between';
+          feedback.innerHTML = `
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
+              <span>تم نشر المنشور في القناة بنجاح! (#${data.message_id})</span>
+            </div>
+            ${data.post_url ? `<a href="${data.post_url}" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-2.5 py-1 rounded-lg text-[11px] font-bold">عرض بالتيليجرام</a>` : ''}
+          `;
+          feedback.classList.remove('hidden');
+          setTimeout(refreshDashboard, 2000);
+        } else {
+          feedback.className = 'p-3 rounded-xl text-xs font-medium bg-rose-500/10 border border-rose-500/20 text-rose-300';
+          feedback.innerText = 'فشل النشر: ' + (data.error || 'خطأ غير معروف');
+          feedback.classList.remove('hidden');
+        }
+      } catch (e) {
+        alert('حدث خطأ أثناء النشر: ' + e.message);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i><span>نشر في القناة الآن (@DzAliexpress0)</span>';
+      }
+    }
+
     function scrollToFeed() {
       window.scrollTo({ top: 350, behavior: 'smooth' });
     }
@@ -900,6 +1149,148 @@ async def scout_endpoint(url: str = Query(...)):
                 "coin_link": res.get("coin_link"),
             }
         }
+    except Exception as e:
+        return {"ok": False, "error": str(e)}
+
+
+@app.post("/api/reformat-deal")
+async def api_reformat_deal(request: Request):
+    """Reformat raw Telegram deal post and prepare clean Algerian channel caption."""
+    try:
+        data = await request.json()
+        raw_text = (data.get("text") or "").strip()
+        if not raw_text:
+            return {"ok": False, "error": "يرجى لصق نص المنشور"}
+
+        from api.coin_bot import resolve_any_ali_link, generate_coin_discount_response, get_live_usdt_rate
+        from api.admin_bot import parse_user_deal_submission, build_exact_deal_caption
+
+        pid = await resolve_any_ali_link(raw_text)
+        if not pid:
+            return {"ok": False, "error": "لم يتم العثور على رابط منتج AliExpress صالح في النص"}
+
+        parsed = parse_user_deal_submission(raw_text)
+        deal_info = await generate_coin_discount_response(pid, raw_user_text=raw_text)
+
+        title = parsed.get("custom_title") or deal_info.get("title") or "منتج مميز من AliExpress"
+        price = parsed.get("user_price") or deal_info.get("price") or 0.0
+        rate = await get_live_usdt_rate()
+        dzd_price = int(price * rate) if price else 0
+
+        coupon = parsed.get("coupon")
+        seller_coupon = parsed.get("seller_coupon")
+        coins_text = parsed.get("coins_text")
+        country = parsed.get("country")
+
+        deal_link = deal_info.get("coin_link") or deal_info.get("product_link") or f"https://www.aliexpress.com/item/{pid}.html"
+
+        caption = await build_exact_deal_caption(
+            title=title,
+            price=price,
+            affiliate_url=deal_link,
+            coupon_code=coupon,
+            seller_coupon=seller_coupon,
+            coins_text=coins_text,
+            country=country
+        )
+
+        images = deal_info.get("images", [])
+        main_img = deal_info.get("image_url")
+        if main_img and main_img not in images:
+            images.insert(0, main_img)
+
+        return {
+            "ok": True,
+            "product_id": pid,
+            "title": title,
+            "price": price,
+            "price_dzd": dzd_price,
+            "coupon": coupon,
+            "seller_coupon": seller_coupon,
+            "coins_text": coins_text,
+            "country": country,
+            "image_url": main_img,
+            "images": images[:8],
+            "deal_link": deal_link,
+            "caption": caption
+        }
+    except Exception as e:
+        return {"ok": False, "error": str(e)}
+
+
+@app.post("/api/publish-deal")
+async def api_publish_deal(request: Request):
+    """Publish reformatted deal post directly to @DzAliexpress0."""
+    try:
+        data = await request.json()
+        caption = (data.get("caption") or "").strip()
+        image_url = (data.get("image_url") or "").strip() or None
+        deal_link = (data.get("deal_link") or "").strip()
+        product_id = data.get("product_id", "")
+
+        if not caption:
+            return {"ok": False, "error": "نص المنشور فارغ"}
+
+        import os
+        from api.admin_bot import ADMIN_BOT_TOKEN, TARGET_CHANNEL_ID, PUBLIC_BOT_USERNAME
+
+        token = ADMIN_BOT_TOKEN or os.getenv("TELEGRAM_BOT_TOKEN", "")
+        if not token:
+            return {"ok": False, "error": "توكن البوت غير مهيأ"}
+
+        channel_reply_markup = {
+            "inline_keyboard": [
+                [
+                    {"text": "🛒 رابط الشراء من AliExpress", "url": deal_link or "https://aliexpress.com"}
+                ],
+                [
+                    {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": f"https://t.me/{PUBLIC_BOT_USERNAME}"}
+                ]
+            ]
+        } if deal_link else None
+
+        api_url = f"https://api.telegram.org/bot{token}"
+        async with httpx.AsyncClient(timeout=15.0) as client:
+            if image_url:
+                resp = await client.post(
+                    f"{api_url}/sendPhoto",
+                    json={
+                        "chat_id": TARGET_CHANNEL_ID,
+                        "photo": image_url,
+                        "caption": caption[:1024],
+                        "parse_mode": "HTML",
+                        "reply_markup": channel_reply_markup
+                    }
+                )
+            else:
+                resp = await client.post(
+                    f"{api_url}/sendMessage",
+                    json={
+                        "chat_id": TARGET_CHANNEL_ID,
+                        "text": caption,
+                        "parse_mode": "HTML",
+                        "reply_markup": channel_reply_markup
+                    }
+                )
+
+            res = resp.json()
+            if resp.status_code == 200 and res.get("ok"):
+                msg_id = res["result"]["message_id"]
+                try:
+                    from app.publisher.state_tracker import record_post_published
+                    record_post_published("manual_admin", msg_id, str(product_id), caption.splitlines()[0] if caption else "")
+                except Exception:
+                    pass
+
+                ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
+                return {
+                    "ok": True,
+                    "message_id": msg_id,
+                    "channel": TARGET_CHANNEL_ID,
+                    "post_url": f"https://t.me/{ch_clean}/{msg_id}"
+                }
+            else:
+                return {"ok": False, "error": res.get("description", f"Telegram API error {resp.status_code}")}
     except Exception as e:
         return {"ok": False, "error": str(e)}
 

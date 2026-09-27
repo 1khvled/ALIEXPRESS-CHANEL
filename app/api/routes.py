@@ -252,6 +252,76 @@ async def test_parse_message(payload: TestParseRequest):
         "preview_caption": preview_caption
     }
 
+class PublishDealRequest(BaseModel):
+    caption: str
+    image_url: Optional[str] = None
+    deal_link: Optional[str] = None
+    product_id: Optional[str] = None
+
+@api_router.post("/api/publish-deal")
+async def publish_deal_endpoint(payload: PublishDealRequest):
+    import os
+    import httpx
+    from api.admin_bot import ADMIN_BOT_TOKEN, TARGET_CHANNEL_ID, PUBLIC_BOT_USERNAME
+
+    token = ADMIN_BOT_TOKEN or os.getenv("TELEGRAM_BOT_TOKEN", "")
+    if not token:
+        raise HTTPException(status_code=500, detail="Bot token not configured")
+
+    channel_reply_markup = {
+        "inline_keyboard": [
+            [
+                {"text": "🛒 رابط الشراء من AliExpress", "url": payload.deal_link or "https://aliexpress.com"}
+            ],
+            [
+                {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": f"https://t.me/{PUBLIC_BOT_USERNAME}"}
+            ]
+        ]
+    } if payload.deal_link else None
+
+    api_url = f"https://api.telegram.org/bot{token}"
+    async with httpx.AsyncClient(timeout=15.0) as client:
+        if payload.image_url:
+            resp = await client.post(
+                f"{api_url}/sendPhoto",
+                json={
+                    "chat_id": TARGET_CHANNEL_ID,
+                    "photo": payload.image_url,
+                    "caption": payload.caption[:1024],
+                    "parse_mode": "HTML",
+                    "reply_markup": channel_reply_markup
+                }
+            )
+        else:
+            resp = await client.post(
+                f"{api_url}/sendMessage",
+                json={
+                    "chat_id": TARGET_CHANNEL_ID,
+                    "text": payload.caption,
+                    "parse_mode": "HTML",
+                    "reply_markup": channel_reply_markup
+                }
+            )
+
+        res = resp.json()
+        if resp.status_code == 200 and res.get("ok"):
+            msg_id = res["result"]["message_id"]
+            try:
+                from app.publisher.state_tracker import record_post_published
+                record_post_published("manual_admin", msg_id, str(payload.product_id or ""), payload.caption.splitlines()[0] if payload.caption else "")
+            except Exception:
+                pass
+
+            ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
+            return {
+                "ok": True,
+                "message_id": msg_id,
+                "channel": TARGET_CHANNEL_ID,
+                "post_url": f"https://t.me/{ch_clean}/{msg_id}"
+            }
+        else:
+            return {"ok": False, "error": res.get("description", f"Telegram API error {resp.status_code}")}
+
 # -------------------------------------------------------------
 # 6. Channel & Admin Controls
 # -------------------------------------------------------------

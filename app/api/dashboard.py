@@ -147,9 +147,14 @@ DASHBOARD_HTML = """<!DOCTYPE html>
             </div>
             <div id="test-fields" class="grid grid-cols-2 gap-1 text-[11px] text-slate-300"></div>
 
-            <div class="pt-2 border-t border-slate-800">
-              <span class="text-[11px] text-slate-400 block mb-1">Generated Arabic Caption:</span>
-              <pre id="test-preview-caption" class="arabic-text bg-slate-950 p-2.5 rounded text-emerald-400 whitespace-pre-wrap text-xs leading-relaxed"></pre>
+            <div class="pt-2 border-t border-slate-800 space-y-2">
+              <span class="text-[11px] text-slate-400 block mb-1">Generated Arabic Caption (Editable):</span>
+              <textarea id="test-preview-caption" rows="7" dir="rtl" class="w-full arabic-text bg-slate-950 p-2.5 rounded text-emerald-400 text-xs leading-relaxed border border-slate-800 focus:outline-none focus:border-rose-500"></textarea>
+              <button onclick="publishTestedDeal()" id="test-publish-btn" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs py-2 rounded-lg flex items-center justify-center space-x-1.5 transition active:scale-95 shadow">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Publish to @DzAliexpress0</span>
+              </button>
+              <div id="test-publish-feedback" class="hidden p-2 rounded text-[11px] text-center font-medium"></div>
             </div>
           </div>
         </div>
@@ -410,9 +415,60 @@ DASHBOARD_HTML = """<!DOCTYPE html>
           <div>Coupon: <b class="text-white">${data.coupon_code || 'None'}</b></div>
           <div>Points Discount: <b class="text-white">${data.has_points_discount ? 'Yes' : 'No'}</b></div>
         `;
-        document.getElementById('test-preview-caption').innerText = data.preview_caption;
+        document.getElementById('test-preview-caption').value = data.preview_caption || '';
+        window.lastTestedDeal = data;
+        const fb = document.getElementById('test-publish-feedback');
+        if (fb) fb.classList.add('hidden');
       } catch (e) {
         alert('Test failed: ' + e);
+      }
+    }
+
+    async function publishTestedDeal() {
+      if (!window.lastTestedDeal) {
+        alert('Please run the test first.');
+        return;
+      }
+      const caption = document.getElementById('test-preview-caption').value.trim();
+      if (!caption) {
+        alert('Caption is empty!');
+        return;
+      }
+      if (!confirm('Publish this deal to @DzAliexpress0 now?')) return;
+
+      const btn = document.getElementById('test-publish-btn');
+      const fb = document.getElementById('test-publish-feedback');
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Publishing...';
+      if (fb) fb.classList.add('hidden');
+
+      try {
+        const res = await fetch('/api/publish-deal', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            caption: caption,
+            image_url: window.lastTestedDeal.image_url,
+            deal_link: window.lastTestedDeal.canonical_url,
+            product_id: window.lastTestedDeal.product_id
+          })
+        });
+        const data = await res.json();
+        if (data.ok) {
+          fb.className = 'p-2 rounded text-[11px] text-center font-medium bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+          fb.innerHTML = `Published successfully! (#${data.message_id}) <a href="${data.post_url}" target="_blank" class="underline ml-1 font-bold">View Post</a>`;
+          fb.classList.remove('hidden');
+          fetchStats();
+        } else {
+          fb.className = 'p-2 rounded text-[11px] text-center font-medium bg-rose-500/20 text-rose-400 border border-rose-500/30';
+          fb.innerText = 'Publish failed: ' + (data.error || 'Unknown error');
+          fb.classList.remove('hidden');
+        }
+      } catch (e) {
+        alert('Error publishing deal: ' + e);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Publish to @DzAliexpress0';
       }
     }
 
