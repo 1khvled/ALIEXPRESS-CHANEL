@@ -135,7 +135,7 @@ async def notify_watchlist_users(
     Checks if any users are watching this product_id and alerts them if new_price <= watched_price.
     Returns the count of successfully alerted users.
     """
-    token = bot_token or os.getenv("TELEGRAM_BOT_TOKEN", "")
+    token = bot_token or os.getenv("TELEGRAM_BOT_TOKEN", "8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY")
     data = load_watchlist_data()
     pid_str = str(product_id).strip()
 

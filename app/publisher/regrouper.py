@@ -23,8 +23,8 @@ from app.config.settings import settings
 from app.utils.logger import logger
 
 TARGET_CHANNEL_ID = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "")
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY")
+ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "8708965924:AAH7SoSX7VV3Nx_yI_J39VzWjlsc-XPgXAQ")
 
 # Persistence tracking for already regrouped deals so we don't repeat the exact same bulletin
 _REGROUP_STATE_FILE = "/tmp/regrouped_deals.json" if os.path.exists("/tmp") else os.path.join(os.path.dirname(__file__), "regrouped_deals.json")

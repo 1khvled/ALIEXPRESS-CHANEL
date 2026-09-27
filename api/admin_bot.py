@@ -33,7 +33,7 @@ from api.coin_bot import (
     PRIMARY_ADMIN_ID
 )
 
-ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "")
+ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "8708965924:AAH7SoSX7VV3Nx_yI_J39VzWjlsc-XPgXAQ")
 PUBLIC_BOT_USERNAME = "Alilo07BOT"
 
 _caption_generator = DealCaptionGenerator()
