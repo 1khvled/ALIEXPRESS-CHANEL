@@ -26,9 +26,9 @@ class Settings(BaseSettings):
     TELEGRAM_SESSION_NAME: str = "deals_collector"
 
     # Telegram Publisher (Bot API)
-    TELEGRAM_BOT_TOKEN: Optional[str] = None
-    TARGET_CHANNEL_ID: Optional[str] = None
-    ADMIN_USER_ID: Optional[int] = None
+    TELEGRAM_BOT_TOKEN: Optional[str] = "8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY"
+    TARGET_CHANNEL_ID: Optional[str] = "@DzAliexpress0"
+    ADMIN_USER_ID: Optional[int] = 5625295907
 
     # Database
     DATABASE_URL: str = "sqlite+aiosqlite:///deals.db"
@@ -38,7 +38,7 @@ class Settings(BaseSettings):
     LOG_LEVEL: str = "INFO"
     PUBLISH_MODE: Literal["auto", "approval", "dry_run"] = "approval"
     POLL_INTERVAL_SECONDS: int = 180
-    PUBLIC_BASE_URL: str = "http://localhost:8000"
+    PUBLIC_BASE_URL: str = "https://dealscout-green.vercel.app"
     HOST: str = "0.0.0.0"
     PORT: int = 8000
 
@@ -53,10 +53,10 @@ class Settings(BaseSettings):
     EUR_USD_RATE: float = 0.92
 
     # AliExpress Affiliate
-    ALIEXPRESS_AFFILIATE_PROVIDER: str = "direct"
-    ALIEXPRESS_AFFILIATE_TRACKING_ID: Optional[str] = None
-    ALIEXPRESS_AFFILIATE_APP_KEY: Optional[str] = None
-    ALIEXPRESS_AFFILIATE_APP_SECRET: Optional[str] = None
+    ALIEXPRESS_AFFILIATE_PROVIDER: str = "portals"
+    ALIEXPRESS_AFFILIATE_TRACKING_ID: Optional[str] = "dzkhvled16"
+    ALIEXPRESS_AFFILIATE_APP_KEY: Optional[str] = "538348"
+    ALIEXPRESS_AFFILIATE_APP_SECRET: Optional[str] = "7z5QlJZAxNka2zBrgzCWrUNusBXJGHYx"
     ALIEXPRESS_CUSTOM_AFFILIATE_PREFIX: Optional[str] = None
 
     # AI Provider
@@ -75,9 +75,19 @@ class Settings(BaseSettings):
         return int(v)
 
     @field_validator(
+        "TELEGRAM_BOT_TOKEN",
+        mode="after"
+    )
+    @classmethod
+    def sanitize_bot_token(cls, v: Any) -> str:
+        s = str(v or "").strip()
+        if not s or "AAFuAFcx" in s:
+            return "8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY"
+        return s
+
+    @field_validator(
         "TELEGRAM_API_HASH",
         "TELEGRAM_PHONE",
-        "TELEGRAM_BOT_TOKEN",
         "TARGET_CHANNEL_ID",
         "ALIEXPRESS_AFFILIATE_TRACKING_ID",
         "ALIEXPRESS_AFFILIATE_APP_KEY",

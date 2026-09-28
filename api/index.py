@@ -1399,9 +1399,9 @@ async def set_telegram_webhook():
     """Sets the public Coin bot webhook to this Vercel deployment URL."""
     try:
         from app.config.settings import settings
-        token = settings.TELEGRAM_BOT_TOKEN
-        if not token:
-            return {"ok": False, "error": "TELEGRAM_BOT_TOKEN not configured"}
+        token = settings.TELEGRAM_BOT_TOKEN or "8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY"
+        if not token or "AAFuAFcx" in token:
+            token = "8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY"
 
         webhook_url = "https://dealscout-green.vercel.app/api/webhook"
         async with httpx.AsyncClient(timeout=10.0) as client:
@@ -1420,6 +1420,8 @@ async def set_admin_telegram_webhook():
     try:
         import os
         admin_token = os.getenv("ADMIN_BOT_TOKEN", "8708965924:AAH7SoSX7VV3Nx_yI_J39VzWjlsc-XPgXAQ")
+        if not admin_token or "AAGi9Hg" in admin_token:
+            admin_token = "8708965924:AAH7SoSX7VV3Nx_yI_J39VzWjlsc-XPgXAQ"
         webhook_url = "https://dealscout-green.vercel.app/api/admin-webhook"
         async with httpx.AsyncClient(timeout=10.0) as client:
             resp = await client.post(
