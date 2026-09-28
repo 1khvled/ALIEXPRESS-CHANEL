@@ -80,9 +80,9 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
-  "last_coin_reminder_time": 1790384028.035038,
-  "next_reminder_interval_seconds": 223422,
-  "coin_reminder_variant_idx": 1,
+  "last_coin_reminder_time": 1790608424.7795236,
+  "next_reminder_interval_seconds": 191777,
+  "coin_reminder_variant_idx": 2,
   "monitored_channels": {
     "pcgamingpart": {
       "last_message_id": 7908,
@@ -93,8 +93,8 @@
       "last_check_time": 1790439941.1367211
     },
     "aniscoupons": {
-      "last_message_id": 32553,
-      "last_check_time": 1790510779.4378018
+      "last_message_id": 32554,
+      "last_check_time": 1790608426.4083345
     },
     "ecksdeal": {
       "last_message_id": 5836,
@@ -105,8 +105,8 @@
       "last_check_time": 1790530565.771234
     },
     "bnddeals": {
-      "last_message_id": 50737,
-      "last_check_time": 1790408800.0
+      "last_message_id": 50738,
+      "last_check_time": 1790608429.1221757
     }
   },
   "published_product_timestamps": {
