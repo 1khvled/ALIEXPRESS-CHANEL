@@ -17,11 +17,11 @@ if sys.platform == "win32":
 from datetime import datetime, timezone
 import httpx
 from bs4 import BeautifulSoup
-from sqlalchemy import select
+from sqlalchemy import select, desc
 
 from app.config.settings import settings
 from app.db.session import init_db, db_context
-from app.db.models import Channel, SourceMessage, Deal, GeneratedPost
+from app.db.models import Channel, SourceMessage, Deal, GeneratedPost, TelegramPost
 from app.aliexpress.product import product_extractor
 from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category, detect_deal_type
 from app.aliexpress.promos import promo_tracker
@@ -88,37 +88,32 @@ async def collect_and_post_last_10_deals():
     except Exception as e:
         print(f"[!] Coin reminder check error: {e}")
 
+    # Automated Check: Expired Deals / Dead Links Auto-Updater (Checks last 24h posts in @DzAliexpress0)
+    try:
+        from app.publisher.state_tracker import check_and_update_expired_deals
+        expired_count = await check_and_update_expired_deals()
+        if expired_count > 0:
+            print(f"[EXPIRED DEALS UPDATER] Edited {expired_count} dead/out-of-stock post(s) in channel with 'انتهى العرض'.")
+    except Exception as e:
+        print(f"[!] Expired deals updater check error: {e}")
+
     # Dynamic Interval & Day/Night Schedule Check (Controlled via Admin Bot & Dashboard)
-    from app.publisher.state_tracker import is_deal_posting_due, record_deal_posted_time
+    from app.publisher.state_tracker import is_deal_posting_due, record_deal_posted_time, is_algerian_peak_hour
     is_due, schedule_msg, active_interval = is_deal_posting_due()
     print(f"\n[SCHEDULE EVALUATION] {schedule_msg}")
     if not is_due:
         print(f"--> Skipping deal collection this run. ({schedule_msg})")
         return
 
+    # Anti-Flood Pacer & Traffic Evaluation (Peak hours: 12-14 and 18-23:30 Algeria time)
+    is_peak = is_algerian_peak_hour()
+    max_deals_per_channel = 4 if is_peak else 2
+    MAX_DEALS_PER_RUN = 8 if is_peak else 4
+    print(f"[PACER TRAFFIC STATUS] Peak Hour Boost: {'ON (Up to 4 deals/ch)' if is_peak else 'OFF (Paced 2 deals/ch)'} | Max run limit: {MAX_DEALS_PER_RUN}")
+
     published_deals = []
     seen_products = set()
     seen_titles = []
-
-    # Load existing published products and titles for cross-channel deduplication within cooldown
-    from datetime import timedelta
-    cooldown_cutoff = datetime.now(timezone.utc) - timedelta(hours=settings.DUPLICATE_COOLDOWN_HOURS)
-    async with db_context() as s:
-        existing_deals = (await s.execute(
-            select(Deal.product_id, Deal.title).where(
-                Deal.status == "PUBLISHED",
-                Deal.created_at >= cooldown_cutoff
-            )
-        )).all()
-        for pid, t in existing_deals:
-            if pid:
-                seen_products.add(pid)
-            if t:
-                seen_titles.append(t)
-
-    print(f"Loaded {len(seen_products)} existing published products and {len(seen_titles)} titles from last {settings.DUPLICATE_COOLDOWN_HOURS}h for deduplication.")
-
-    MAX_DEALS_PER_RUN = 40
 
     from app.publisher.state_tracker import sync_deleted_channel_posts
     needs_repost_keys = await sync_deleted_channel_posts()
@@ -189,7 +184,14 @@ async def collect_and_post_last_10_deals():
                         print(f"  [NO NEW POSTS] @{ch} has no new or repostable messages (last seen: #{last_seen_id}, current: #{current_max_id}).")
                         continue
 
-                for msg_id, block in new_blocks:
+                # Anti-Flood Pacing: if channel dumps 5+ deals, pace them (take top 2 or 4 during peak)
+                if len(new_blocks) > max_deals_per_channel:
+                    print(f"  [ANTI-FLOOD PACER] Channel @{ch} has {len(new_blocks)} deals. Pacing: publishing top {max_deals_per_channel}, holding remainder for next cycle.")
+                    to_process_blocks = new_blocks[:max_deals_per_channel]
+                else:
+                    to_process_blocks = new_blocks
+
+                for msg_id, block in to_process_blocks:
                     if len(published_deals) >= MAX_DEALS_PER_RUN:
                         break
 
@@ -235,15 +237,20 @@ async def collect_and_post_last_10_deals():
                             print(f"  [CATEGORY FILTERED] {reject_reason}")
                             continue
 
-                    # 6. Validate by Post ID & check Cross-Channel duplicates
-                    is_dup, dup_reason = is_recent_cross_channel_duplicate(extracted.product_id, ch)
+                    # 6. Validate by Post ID & check Cross-Channel duplicates (with Price-Drop Exception)
+                    is_dup, dup_reason, is_price_drop = is_recent_cross_channel_duplicate(
+                        extracted.product_id, ch, current_price=extracted.current_price
+                    )
                     if is_dup:
                         print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] {dup_reason}")
                         record_monitored_channel_last_id(ch, msg_id)
                         continue
 
-                    if extracted.product_id and extracted.product_id in seen_products:
-                        print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] Product ID '{extracted.product_id}' was already published in this run!")
+                    if is_price_drop:
+                        print(f"  [📉 PRICE-DROP EXCEPTION] {dup_reason}! Reposting with updated price & hook.")
+
+                    if extracted.product_id and extracted.product_id in seen_products and not is_price_drop:
+                        print(f"  [DUPLICATE IN CURRENT RUN] Product ID '{extracted.product_id}' was already published in this run!")
                         record_monitored_channel_last_id(ch, msg_id)
                         continue
 
@@ -268,7 +275,12 @@ async def collect_and_post_last_10_deals():
                         deal_type=deal_type
                     )
 
-                    # 9. Generate caption with clean Algerian format (NO promo calendar banners on single deals)
+                    # 9. Coins Deep-Link Auto-Maximizer
+                    coin_deep_link = None
+                    if extracted.product_id:
+                        coin_deep_link = f"https://m.aliexpress.com/p/coin-index/index.html?productIds={extracted.product_id}"
+
+                    # 10. Generate caption with clean Algerian format (NO promo calendar banners on single deals)
                     caption = await caption_generator.generate(
                         title=extracted.title or "AliExpress Deal",
                         usd_price=extracted.current_price,
@@ -279,7 +291,9 @@ async def collect_and_post_last_10_deals():
                         has_points_discount=extracted.has_points_discount,
                         country_info=extracted.country_info,
                         coupon_list=extracted.coupon_list if extracted.is_coupon_list else None,
-                        promo_tag=None
+                        promo_tag=None,
+                        is_price_drop=is_price_drop,
+                        coin_url=coin_deep_link
                     )
 
                     # 10. Prepare Image with subtle circular DealScout logo watermark
@@ -364,7 +378,11 @@ async def collect_and_post_last_10_deals():
                                 .order_by(desc(TelegramPost.id))
                             )).scalar_one_or_none()
 
-                            record_post_published(ch, msg_id, deal.product_id, deal.title, channel_msg_id=post_msg_id)
+                            record_post_published(
+                                ch, msg_id, deal.product_id, deal.title,
+                                channel_msg_id=post_msg_id,
+                                price=deal.current_price
+                            )
                             record_deal_posted_time()
 
                             # Check and notify watchlist subscribers for price drops

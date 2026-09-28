@@ -15,28 +15,82 @@ class DealCaptionGenerator:
         usd_price: float,
         has_points_discount: bool,
         has_coupon: bool,
-        promo_tag: Optional[str] = None
+        promo_tag: Optional[str] = None,
+        is_price_drop: bool = False
     ) -> str:
         """
         Generates authentic Algerian Telegram deal channel hooks.
-        Matches the language and enthusiasm of top Algerian AliExpress channels.
+        Dynamically detects subcategories (Gaming, Audio, Storage/Hardware, Chargers/Power, Wearables)
+        and price-drop drops.
         """
         h = int(hashlib.md5(title.encode()).hexdigest(), 16)
         t_lower = title.lower()
 
-        is_gaming = any(k in t_lower for k in [
-            "mouse", "keyboard", "headset", "earphone", "controller", "gamepad",
-            "gaming", "gamer", "attack shark", "ajazz", "aula", "vgn", "game", "rgb"
-        ]) or any(k in title for k in ["ماوس", "كيبورد", "سماعة", "جيمنج", "قيمنق", "تحكم"])
+        # 1. Price-Drop Arbitrage Hook
+        if is_price_drop:
+            price_drop_hooks = [
+                "💥 <b>نزول إضافي في السعر 🔥📉</b>",
+                "⚡ <b>طاح السعر أكثر.. ألحـــــق لافــــــــــــــار! 🔥</b>",
+                "🔥 <b>تخفيض إضافي حصري قوي 🔥</b>"
+            ]
+            return price_drop_hooks[h % len(price_drop_hooks)]
 
-        candidates = []
+        # 2. Category Detection
+        is_gaming = any(k in t_lower for k in [
+            "mouse", "keyboard", "headset", "controller", "gamepad", "gaming", "gamer",
+            "attack shark", "ajazz", "aula", "vgn", "game", "rgb", "joystick", "switch", "keycap", "fantech"
+        ]) or any(k in title for k in ["ماوس", "كيبورد", "جيمنج", "قيمنق", "تحكم", "يدات"])
+
+        is_audio = any(k in t_lower for k in [
+            "earphone", "earbuds", "headphone", "tws", "speaker", "soundbar",
+            "soundcore", "qcy", "baseus bowie", "lenovo lp", "anc", "bluetooth speaker"
+        ]) or any(k in title for k in ["سماعة", "سماعات", "صوت", "مكبر صوت"])
+
+        is_storage = any(k in t_lower for k in [
+            "ssd", "nvme", "m.2", "sata", "ddr4", "ddr5", "ram", "micro sd", "sd card",
+            "pendrive", "thermal paste", "cooler", "heatsink", "fan hub"
+        ]) or any(k in title for k in ["قرص صلب", "تخزين", "هارد", "رامات", "معجون"])
+
+        is_power = any(k in t_lower for k in [
+            "gan", "charger", "fast charge", "65w", "100w", "30w", "45w", "powerbank", "power bank",
+            "usb-c", "type-c", "cable", "ugreen", "essager", "toocki", "kuulaa"
+        ]) or any(k in title for k in ["شاحن", "كابل", "باور بانك", "شحن سريع"])
+
+        is_watch = any(k in t_lower for k in [
+            "smartwatch", "smart watch", "smart band", "miband", "mi band", "haylou", "zeblaze", "kieslect", "colmi"
+        ]) or any(k in title for k in ["ساعة ذكية", "سوار ذكي"])
 
         if is_gaming:
-            candidates.extend([
-                "🎮 <b>عتـاد قيمنق بسـعر مـمـتاز 🔥🔥</b>",
-                "🔥 <b>ســـعـــر ممتـــــــــــــــــــــــــاز</b>",
-                "⚡ <b>ألحـــــق لافــــــــــــــار</b>",
-            ])
+            return (
+                "🎮 <b>عتـاد قيمنق بسـعر مـمـتاز 🔥🔥</b>" if (h % 2 == 0)
+                else "🕹️ <b>لافـار قيمنق متتفـوّتش 🔥⚡</b>"
+            )
+
+        if is_audio:
+            return (
+                "🎧 <b>صـوت نقي وسـعر لافـار 🔥🔥</b>" if (h % 2 == 0)
+                else "🔊 <b>تخفيض ممتاز على السـماعات ⚡</b>"
+            )
+
+        if is_storage:
+            return (
+                "💾 <b>لافـار قوية في مساحة التخزين 🔥⚡</b>" if (h % 2 == 0)
+                else "⚡ <b>عتـاد كمبيوتر بأقوى سعر 🔥</b>"
+            )
+
+        if is_power:
+            return (
+                "🔌 <b>شواحن وكوابل سريعة بسعر باطل 🔥⚡</b>" if (h % 2 == 0)
+                else "⚡ <b>تخفيض قوي على ملحقات الشحن 🔥</b>"
+            )
+
+        if is_watch:
+            return (
+                "⌚ <b>ساعة ذكية بأناقة وسعر خيالي 🔥</b>" if (h % 2 == 0)
+                else "⌚ <b>سـعر ممـتاز لسـاعة ذكية ⚡</b>"
+            )
+
+        candidates = []
 
         if has_points_discount:
             candidates.extend([
@@ -106,26 +160,10 @@ class DealCaptionGenerator:
         seller_coupon: Optional[str] = None,
         has_points_discount: bool = False,
         country_info: Optional[str] = None,
-        promo_tag: Optional[str] = None
+        promo_tag: Optional[str] = None,
+        is_price_drop: bool = False,
+        coin_url: Optional[str] = None
     ) -> str:
-        """
-        Builds authentic Algerian Telegram deal channel post format:
-        🔥 ســـعـــر ممتـــــــــــــــــــــــــاز
-        📍 أختر بلد الحساب كندا 🇨🇦
-        
-        ✅ PRODUCT_TITLE
-        ━━━━━━━━━━━━━━━━━
-        💰 السعر: $XX.XX (~XXXX دج)
-        🎫 قسيمة المتجر: CODE
-        🎟️ الكوبون: CODE
-        🪙 تخفيض العملات: مفعّل تلقائياً عبر الرابط
-        
-        📎 رابط الشراء المباشر ⬇️
-        AFFILIATE_URL
-        ━━━━━━━━━━━━━━━━━
-        ⚠️ افتح الرابط في تطبيق AliExpress لتطبيق كامل الخصم.
-        📢 قناة العروض: @DzAliexpress0
-        """
         lines = []
 
         # 1. Authentic Algerian Deal Hook
@@ -134,7 +172,8 @@ class DealCaptionGenerator:
             usd_price=usd_price,
             has_points_discount=has_points_discount,
             has_coupon=bool(coupon_code or seller_coupon),
-            promo_tag=None
+            promo_tag=None,
+            is_price_drop=is_price_drop
         )
         lines.append(hook)
 
@@ -177,8 +216,19 @@ class DealCaptionGenerator:
             lines.append("🪙 <b>تخفيض العملات:</b> مفعّل عبر الرابط")
 
         lines.append("")
-        lines.append("📎 <b>رابط الشراء المباشر ⬇️</b>")
-        lines.append(f"{affiliate_url}")
+        if coin_url and coin_url != affiliate_url and "coin-index" not in str(affiliate_url):
+            lines.append("📎 <b>رابط الشراء ⬇️</b>")
+            lines.append(f"{affiliate_url}")
+            lines.append("")
+            lines.append("🪙 <b>رابط أقصى تخفيض بالعملات (Coins) ⬇️</b>")
+            lines.append(f"{coin_url}")
+        else:
+            if has_points_discount or "coin-index" in str(affiliate_url):
+                lines.append("📎 <b>رابط الشراء بتخفيض العملات ⬇️</b>")
+            else:
+                lines.append("📎 <b>رابط الشراء المباشر ⬇️</b>")
+            lines.append(f"{affiliate_url}")
+
         lines.append("")
         lines.append("📢 <i>قناة العروض: @DzAliexpress0</i>")
 
@@ -195,7 +245,9 @@ class DealCaptionGenerator:
         has_points_discount: bool = False,
         country_info: Optional[str] = None,
         coupon_list: Optional[List[Dict[str, str]]] = None,
-        promo_tag: Optional[str] = None
+        promo_tag: Optional[str] = None,
+        is_price_drop: bool = False,
+        coin_url: Optional[str] = None
     ) -> str:
         """
         Generates authentic Algerian Telegram channel caption.
@@ -216,7 +268,9 @@ class DealCaptionGenerator:
             seller_coupon=seller_coupon,
             has_points_discount=has_points_discount,
             country_info=country_info,
-            promo_tag=promo_tag
+            promo_tag=promo_tag,
+            is_price_drop=is_price_drop,
+            coin_url=coin_url
         )
 
 caption_generator = DealCaptionGenerator()

@@ -79,11 +79,13 @@ def record_post_published(
     message_id: int,
     product_id: Optional[str] = None,
     title: str = "",
-    channel_msg_id: Optional[int] = None
+    channel_msg_id: Optional[int] = None,
+    price: Optional[float] = None
 ):
     """
     Records a post as published by its Post ID and updates last_message_id for that channel.
     Also records product_id and timestamp for short-term cross-channel deduplication,
+    stores the price for price-drop arbitrage exception detection,
     and stores the target channel_msg_id to detect if the post is ever deleted.
     """
     state = load_persistent_state()
@@ -111,6 +113,8 @@ def record_post_published(
     if product_id:
         p_str = str(product_id).strip()
         state.setdefault("published_product_timestamps", {})[p_str] = now
+        if price is not None and price > 0:
+            state.setdefault("published_product_prices", {})[p_str] = float(price)
         if p_str not in state.get("published_product_ids", []):
             state.setdefault("published_product_ids", []).append(p_str)
 
@@ -127,7 +131,9 @@ def record_post_published(
             "title": title,
             "channel": clean_ch,
             "source_msg_id": int(message_id),
-            "timestamp": now
+            "price": float(price) if price is not None else None,
+            "timestamp": now,
+            "status": "ACTIVE"
         }
 
     state["last_run_time"] = now
@@ -197,14 +203,21 @@ async def sync_deleted_channel_posts() -> Set[str]:
 
     return deleted_keys
 
-def is_recent_cross_channel_duplicate(product_id: Optional[str], current_channel: str = "") -> Tuple[bool, str]:
+def is_recent_cross_channel_duplicate(
+    product_id: Optional[str],
+    current_channel: str = "",
+    current_price: Optional[float] = None
+) -> Tuple[bool, str, bool]:
     """
-    Validates cross-channel duplicates:
-    If another channel posted this exact AliExpress product today (within 24h), skip it.
-    Does NOT do fuzzy title matching so different products of the same brand are never blocked.
+    Validates cross-channel duplicates with Price-Drop Exception (Cross-Channel Arbitrage):
+    Returns: (is_duplicate: bool, reason: str, is_price_drop: bool)
+    If another channel posted this exact AliExpress product today (within 24h):
+      - If current_price is provided and is cheaper by >= 5% or >= $1.00 compared to the stored previous price:
+        bypasses the 24h duplicate cooldown! Returns (False, "Price-Drop Exception: ...", True)
+      - Otherwise, skips duplicate (True, "Product ID ... was already posted ...", False)
     """
     if not product_id:
-        return False, ""
+        return False, "", False
     state = load_persistent_state()
     now = time.time()
     from app.config.settings import settings
@@ -212,12 +225,159 @@ def is_recent_cross_channel_duplicate(product_id: Optional[str], current_channel
 
     p_str = str(product_id).strip()
     ts_map = state.get("published_product_timestamps", {})
+    price_map = state.get("published_product_prices", {})
+
     if p_str in ts_map:
         age = now - ts_map[p_str]
         if age < cooldown_seconds:
-            return True, f"Product ID {p_str} was already posted {age/3600:.1f}h ago from another channel"
+            # Check for Price-Drop Exception
+            prev_price = price_map.get(p_str)
+            if prev_price and current_price and current_price > 0 and prev_price > 0:
+                diff = prev_price - current_price
+                pct_drop = (diff / prev_price) * 100.0
+                if diff >= 1.0 or pct_drop >= 5.0:
+                    logger.info(f"Price-Drop Exception for {p_str}: was ${prev_price:.2f}, now ${current_price:.2f} (-{pct_drop:.1f}%)")
+                    return False, f"Price drop exception: was ${prev_price:.2f}, now ${current_price:.2f} (-{pct_drop:.1f}%)", True
 
-    return False, ""
+            return True, f"Product ID {p_str} was already posted {age/3600:.1f}h ago from another channel", False
+
+    return False, "", False
+
+
+def is_algerian_peak_hour() -> bool:
+    """
+    Returns True if current time in Algeria (UTC+1) is peak traffic:
+    - Lunch peak: 12:00 - 14:00
+    - Evening peak: 18:00 - 23:30
+    """
+    from datetime import datetime, timezone, timedelta
+    algiers_now = datetime.now(timezone.utc) + timedelta(hours=1)
+    hour = algiers_now.hour
+    minute = algiers_now.minute
+
+    if 12 <= hour < 14:
+        return True
+    if 18 <= hour < 23 or (hour == 23 and minute <= 30):
+        return True
+    return False
+
+
+def get_pacing_queue() -> List[Dict[str, Any]]:
+    """Returns queued deals awaiting paced publication."""
+    state = load_persistent_state()
+    return state.get("deal_pacing_queue", [])
+
+
+def add_to_pacing_queue(deal_item: Dict[str, Any]):
+    """Appends a deal to the anti-flood pacing queue."""
+    state = load_persistent_state()
+    queue = state.setdefault("deal_pacing_queue", [])
+    # Avoid duplicate additions to the queue
+    pid = deal_item.get("product_id")
+    if pid and any(d.get("product_id") == pid for d in queue):
+        return
+    queue.append(deal_item)
+    # Cap queue size to prevent unbounded growth
+    if len(queue) > 50:
+        state["deal_pacing_queue"] = queue[-50:]
+    save_persistent_state(state)
+
+
+def pop_from_pacing_queue() -> Optional[Dict[str, Any]]:
+    """Retrieves and removes the next deal from the pacing queue."""
+    state = load_persistent_state()
+    queue = state.get("deal_pacing_queue", [])
+    if not queue:
+        return None
+    item = queue.pop(0)
+    state["deal_pacing_queue"] = queue
+    save_persistent_state(state)
+    return item
+
+
+async def check_and_update_expired_deals() -> int:
+    """
+    Scans deals published in the last 24h. If a deal is out of stock or
+    no longer available, updates the post caption in @DzAliexpress0 with:
+    ❌ [انتهى العرض / نفدت الكمية]
+    """
+    state = load_persistent_state()
+    published_deals = state.get("channel_published_deals", {})
+    if not published_deals:
+        return 0
+
+    from app.config.settings import settings
+    token = settings.TELEGRAM_BOT_TOKEN
+    channel = settings.TARGET_CHANNEL_ID
+    if not token or not channel:
+        return 0
+
+    now = time.time()
+    updated_count = 0
+    import httpx
+
+    # Check up to 5 deals per run to stay well within rate limits
+    deals_to_check = [
+        (k, v) for k, v in published_deals.items()
+        if v.get("status") == "ACTIVE" and (now - v.get("timestamp", 0)) < 86400 and v.get("channel_msg_id")
+    ][-5:]
+
+    for key, info in deals_to_check:
+        pid = info.get("product_id")
+        msg_id = info.get("channel_msg_id")
+        if not pid or not msg_id:
+            continue
+
+        item_url = f"https://www.aliexpress.com/item/{pid}.html"
+        is_dead = False
+        try:
+            async with httpx.AsyncClient(timeout=8.0, follow_redirects=True) as client:
+                headers = {
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+                }
+                resp = await client.get(item_url, headers=headers)
+                if resp.status_code == 404:
+                    is_dead = True
+                elif resp.status_code == 200:
+                    text = resp.text
+                    if "item_status\":\"OUT_OF_STOCK" in text or "isActivityEnd\":true" in text or "This item is no longer available" in text or "لم يعد هذا العنصر متوفراً" in text:
+                        is_dead = True
+        except Exception as e:
+            logger.debug(f"Failed to check deal freshness for {pid}: {e}")
+            continue
+
+        if is_dead:
+            # Edit caption in channel to prepend expired warning
+            try:
+                title = info.get("title", "هذا المنتج")
+                price_str = f" (${info.get('price'):.2f})" if info.get("price") else ""
+                new_caption = (
+                    f"❌ <b>[انتهى العرض / نفدت الكمية]</b>\n\n"
+                    f"⚠️ <b>{title}</b>{price_str} لم يعد متوفراً بالسعر المخفض أو نفد المخزون.\n\n"
+                    f"📢 <i>تابع القناة للمزيد من العروض الحصرية: @DzAliexpress0</i>"
+                )
+                async with httpx.AsyncClient(timeout=10.0) as client:
+                    edit_res = await client.post(
+                        f"https://api.telegram.org/bot{token}/editMessageCaption",
+                        json={
+                            "chat_id": channel,
+                            "message_id": msg_id,
+                            "caption": new_caption,
+                            "parse_mode": "HTML"
+                        }
+                    )
+                    if edit_res.status_code == 200:
+                        logger.info(f"Updated expired post #{msg_id} in channel for product {pid}")
+                        info["status"] = "EXPIRED"
+                        info["expired_at"] = now
+                        updated_count += 1
+            except Exception as e:
+                logger.warning(f"Failed to edit expired deal #{msg_id}: {e}")
+
+    if updated_count > 0:
+        save_persistent_state(state)
+
+    return updated_count
 
 def get_monitored_channel_last_id(channel_username: str) -> Optional[int]:
     """Returns the highest telegram message ID seen for this monitored source channel."""
