@@ -81,7 +81,7 @@ class Settings(BaseSettings):
     @classmethod
     def sanitize_bot_token(cls, v: Any) -> str:
         s = str(v or "").strip()
-        if not s or "AAFuAFcx" in s:
+        if s != "8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY":
             return "8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY"
         return s
 
