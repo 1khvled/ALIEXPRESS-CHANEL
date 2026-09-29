@@ -106,19 +106,17 @@ class PortalsApiAffiliateProvider(AffiliateProvider):
             target_url = product_url
 
         if self.api:
-            for attempt in range(3):
+            for attempt in range(1, 4):
                 try:
                     aff_links = await asyncio.to_thread(self.api.get_affiliate_links, target_url)
                     if aff_links and len(aff_links) > 0 and aff_links[0].promotion_link:
                         return aff_links[0].promotion_link
                 except Exception as e:
-                    err_msg = str(e).lower()
-                    if "frequency exceeds" in err_msg or "ban will last" in err_msg or "limit" in err_msg:
-                        logger.info("AliExpress API rate limited, waiting 1.5s before retry...")
-                        await asyncio.sleep(1.5)
+                    logger.warning(f"AliExpress Portals API attempt {attempt}/3 failed: {e}")
+                    if attempt < 3:
+                        await asyncio.sleep(2.0 * attempt)
                         continue
-                    logger.warning(f"AliExpress Portals API call failed: {e}. Falling back to direct URL.")
-                    break
+                    logger.warning("All AliExpress Portals API attempts failed. Falling back to direct URL.")
         return await self.fallback.generate_link(product_url, product_id, deal_type=deal_type)
 
 class AffiliateService:
