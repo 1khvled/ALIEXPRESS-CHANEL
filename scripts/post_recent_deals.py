@@ -204,12 +204,15 @@ async def collect_and_post_last_10_deals():
                 else:
                     to_process_blocks = new_blocks
 
+                max_processed_id = last_seen_id or 0
+
                 for msg_id, block in to_process_blocks:
                     if len(published_deals) >= MAX_DEALS_PER_RUN:
                         break
 
                     text_div = block.find("div", class_="tgme_widget_message_text")
                     if not text_div:
+                        max_processed_id = max(max_processed_id, msg_id)
                         continue
 
                     raw_text = text_div.get_text(separator="\n").strip()
@@ -358,36 +361,58 @@ async def collect_and_post_last_10_deals():
                             s.add(src)
                             await s.flush()
 
-                        deal = Deal(
-                            source_message_id=src.id,
-                            product_id=extracted.product_id,
-                            original_url=extracted.original_url,
-                            normalized_url=extracted.canonical_url,
-                            affiliate_url=aff_link,
-                            title=extracted.title,
-                            currency="USD",
-                            current_price=extracted.current_price,
-                            current_price_eur=extracted.current_price_eur,
-                            coupon_code=extracted.coupon_code,
-                            has_points_discount=extracted.has_points_discount,
-                            image_url=img_url,
-                            local_image_path=str(local_img_file) if local_img_file else None,
-                            quality_score=95 if extracted.is_coupon_list else 90,
-                            status="PUBLISHED"
-                        )
-                        s.add(deal)
-                        await s.flush()
+                        deal = (await s.execute(
+                            select(Deal).where(Deal.source_message_id == src.id)
+                        )).scalar_one_or_none()
 
-                        gen_post = GeneratedPost(
-                            deal_id=deal.id,
-                            title=deal.title,
-                            caption=caption,
-                            image_path=str(local_img_file) if local_img_file else None,
-                            ai_model="clean_deals_v3",
-                            ai_validation_status="APPROVED",
-                            status="VALIDATED"
-                        )
-                        s.add(gen_post)
+                        if not deal:
+                            deal = Deal(
+                                source_message_id=src.id,
+                                product_id=extracted.product_id,
+                                original_url=extracted.original_url,
+                                normalized_url=extracted.canonical_url,
+                                affiliate_url=aff_link,
+                                title=extracted.title,
+                                currency="USD",
+                                current_price=extracted.current_price,
+                                current_price_eur=extracted.current_price_eur,
+                                coupon_code=extracted.coupon_code,
+                                has_points_discount=extracted.has_points_discount,
+                                image_url=img_url,
+                                local_image_path=str(local_img_file) if local_img_file else None,
+                                quality_score=95 if extracted.is_coupon_list else 90,
+                                status="PENDING"
+                            )
+                            s.add(deal)
+                            await s.flush()
+                        else:
+                            deal.affiliate_url = aff_link
+                            deal.current_price = extracted.current_price
+                            deal.current_price_eur = extracted.current_price_eur
+                            deal.coupon_code = extracted.coupon_code
+                            deal.local_image_path = str(local_img_file) if local_img_file else None
+                            deal.status = "PENDING"
+                            await s.flush()
+
+                        gen_post = (await s.execute(
+                            select(GeneratedPost).where(GeneratedPost.deal_id == deal.id)
+                        )).scalar_one_or_none()
+
+                        if not gen_post:
+                            gen_post = GeneratedPost(
+                                deal_id=deal.id,
+                                title=deal.title,
+                                caption=caption,
+                                image_path=str(local_img_file) if local_img_file else None,
+                                ai_model="clean_deals_v3",
+                                ai_validation_status="APPROVED",
+                                status="VALIDATED"
+                            )
+                            s.add(gen_post)
+                        else:
+                            gen_post.caption = caption
+                            gen_post.image_path = str(local_img_file) if local_img_file else None
+
                         await s.commit()
 
                         # 9. Send Photo + Caption to Channel
@@ -448,9 +473,9 @@ async def collect_and_post_last_10_deals():
                         else:
                             print(f"  [!] Failed to publish: {err}")
 
-                # Advance high-water mark so these posts are never processed again
-                if current_max_id and current_max_id > (last_seen_id or 0):
-                    record_monitored_channel_last_id(ch, current_max_id)
+                # Advance high-water mark ONLY up to the highest post actually processed/filtered (preserves paced deals!)
+                if max_processed_id and max_processed_id > (last_seen_id or 0):
+                    record_monitored_channel_last_id(ch, max_processed_id)
 
             except Exception as e:
                 import traceback

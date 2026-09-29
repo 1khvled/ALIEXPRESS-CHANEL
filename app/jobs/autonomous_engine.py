@@ -355,35 +355,14 @@ class AutonomousEngine:
             logger.error(f"Error checking promo notifiers: {e}")
 
     async def run_single_cycle(self) -> int:
-        """Executes one scan cycle across all monitored channels."""
-        # 1. Check if 24-hour bot advertisement is due
-        await self.check_and_post_bot_ad()
-
-        # 2. Check if promo calendar or sale transition is due
-        await self.check_and_post_promo_calendar()
-
-        # 3. Check if 1-day promo alerts (ending or starting) are due
-        await self.check_and_post_promo_notifiers()
-
-        # 4. Check if 14-day region disclaimer is due
-        await self.check_and_post_disclaimer()
-
-        # 5. Check if auto-regrouping bulletin is due (4+ phones, 4+ mice, etc.)
-        await self.check_and_post_regrouped_bulletin()
-
-        # 5. Scan deal channels
-        total_new = 0
-        async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
-            for ch in MONITORED_CHANNELS:
-                try:
-                    count = await self.scan_channel(client, ch)
-                    total_new += count
-                    if count > 0:
-                        # Once a deal is posted, stop current cycle to let channel cooldown elapse
-                        break
-                except Exception as e:
-                    logger.error(f"Scan error on @{ch}: {e}")
-        return total_new
+        """Executes one scan cycle across all monitored channels using the unified deal processor."""
+        try:
+            from scripts.post_recent_deals import collect_and_post_last_10_deals
+            await collect_and_post_last_10_deals()
+            return 1
+        except Exception as e:
+            logger.error(f"Autonomous cycle execution error: {e}", exc_info=True)
+            return 0
 
     async def run_forever(self):
         """Continuous autonomous loop running 24/7."""

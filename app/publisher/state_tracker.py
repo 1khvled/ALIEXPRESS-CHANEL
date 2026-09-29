@@ -224,6 +224,9 @@ def is_recent_cross_channel_duplicate(
     cooldown_seconds = getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 24) * 3600
 
     p_str = str(product_id).strip()
+    if p_str.startswith("COUPONS_") or p_str.startswith("EVENT_"):
+        return False, "", False
+
     ts_map = state.get("published_product_timestamps", {})
     price_map = state.get("published_product_prices", {})
 

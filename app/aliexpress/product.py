@@ -141,11 +141,11 @@ class ProductExtractor:
                         details = await asyncio.to_thread(api.get_products_details, [resolved.product_id])
                         break
                     except Exception as err:
-                        if "ApiCallLimit" in str(err) or "frequency exceeds" in str(err) or "exceeds" in str(err):
-                            await asyncio.sleep(1.5)
-                        else:
-                            logger.debug(f"API details error on attempt {attempt+1}: {err}")
-                            break
+                        logger.debug(f"API details attempt {attempt+1}/3 failed: {err}")
+                        if attempt < 2:
+                            await asyncio.sleep(1.5 * (attempt + 1))
+                            continue
+                        break
 
                 if details and len(details) > 0:
                     prod_info = details[0]
