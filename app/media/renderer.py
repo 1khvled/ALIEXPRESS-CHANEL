@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List, Dict
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 from app.config.settings import settings
 from app.utils.logger import logger

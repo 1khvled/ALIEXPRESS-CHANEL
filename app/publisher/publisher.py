@@ -148,6 +148,8 @@ class TelegramPublisher:
                         if resp.status_code == 200:
                             break
                         logger.warning(f"Telegram API publish attempt {attempt} returned {resp.status_code}: {resp.text}")
+                        if attempt < 3:
+                            await asyncio.sleep(2.0 * attempt)
                     except (httpx.ConnectError, httpx.TimeoutException, httpx.NetworkError) as net_err:
                         logger.warning(f"Telegram API connect error on attempt {attempt}/3: {net_err}")
                         if attempt < 3:

@@ -233,16 +233,19 @@ async def collect_and_post_last_10_deals():
                     is_fresh, freshness_reason = promo_tracker.validate_deal_freshness(raw_text, msg_dt)
                     if not is_fresh:
                         print(f"  [EXPIRED / STALE SKIPPED] {freshness_reason}")
+                        max_processed_id = max(max_processed_id, msg_id)
                         continue
 
                     # 3. Smart spam filtering
                     is_spam, spam_reason = is_spam_or_non_deal(raw_text)
                     if is_spam:
+                        max_processed_id = max(max_processed_id, msg_id)
                         continue
 
                     # 4. Extract deal or coupon list
                     extracted = await product_extractor.extract_from_message(raw_text)
                     if not extracted or not extracted.is_valid:
+                        max_processed_id = max(max_processed_id, msg_id)
                         continue
 
                     # 5. Category whitelist: ONLY gaming, watches, phones, tablets (Coupons bulletin exempt)
@@ -254,6 +257,7 @@ async def collect_and_post_last_10_deals():
                         )
                         if not allowed:
                             print(f"  [CATEGORY FILTERED] {reject_reason}")
+                            max_processed_id = max(max_processed_id, msg_id)
                             continue
 
                     # 6. Validate by Post ID & check Cross-Channel duplicates (with Price-Drop Exception)
@@ -284,6 +288,7 @@ async def collect_and_post_last_10_deals():
                     if not extracted.is_coupon_list:
                         if not img_url or not any(domain in img_url for domain in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
                             print(f"  [NO OFFICIAL PHOTO] Skipping deal without clean AliExpress CDN image: {extracted.product_id}")
+                            max_processed_id = max(max_processed_id, msg_id)
                             continue
 
                     # 8. Build affiliate URL (Coin link 90%+, Bundle link for bundle deals)
@@ -335,6 +340,7 @@ async def collect_and_post_last_10_deals():
                             )
 
                     if not local_img_file:
+                        max_processed_id = max(max_processed_id, msg_id)
                         continue  # Must ALWAYS have a valid rendered image (coupons or product)!
 
                     # 11. Save record
@@ -475,6 +481,7 @@ async def collect_and_post_last_10_deals():
                             await asyncio.sleep(2.0)
                         else:
                             print(f"  [!] Failed to publish: {err}")
+                            max_processed_id = max(max_processed_id, msg_id)
 
                 # Advance high-water mark ONLY up to the highest post actually processed/filtered (preserves paced deals!)
                 if max_processed_id and max_processed_id > (last_seen_id or 0):

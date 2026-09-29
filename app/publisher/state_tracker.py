@@ -55,8 +55,14 @@ def load_persistent_state() -> Dict:
 def save_persistent_state(state: Dict):
     _ensure_state_dir()
     try:
-        with open(STATE_FILE_PATH, "w", encoding="utf-8") as f:
+        tmp_path = STATE_FILE_PATH + ".tmp"
+        with open(tmp_path, "w", encoding="utf-8") as f:
             json.dump(state, f, indent=2, ensure_ascii=False)
+        # Atomic rename (on Windows, need to remove target first)
+        if os.path.exists(STATE_FILE_PATH):
+            os.replace(tmp_path, STATE_FILE_PATH)
+        else:
+            os.rename(tmp_path, STATE_FILE_PATH)
     except Exception as e:
         logger.error(f"Error saving state file: {e}")
 
