@@ -184,7 +184,10 @@ def is_spam_or_non_deal(text: str) -> Tuple[bool, Optional[str]]:
 def extract_coupon_list(text: str) -> List[Dict[str, str]]:
     """
     Extracts coupons from explicit coupon bulletin lists.
-    Strips Arabic tatweels and handles single-line or multi-line formats cleanly.
+    Strips Arabic tatweels and handles:
+    - Tier then Code: 'كوبون 2/15$ : OTPRD02', '🎟️ 2/15$ : OTPRD02', 'خصم 2/15$ بكود OTPRD02'
+    - Code then Tier: 'OTPRD02 : 2/15$', 'كود OTPRD02 (2/15$)'
+    - Multi-line or single-line formats.
     """
     if not text:
         return []
@@ -192,23 +195,46 @@ def extract_coupon_list(text: str) -> List[Dict[str, str]]:
     # Strip Arabic tatweels (\u0640)
     norm = re.sub(r'[\u0640]', '', text)
 
-    pattern = re.compile(
-        r'(?:🎟️?|🎫)?\s*(?:كوبون|كود|code|قسيمة)\s*([$]?[0-9]+(?:\.[0-9]+)?\s*/\s*[$]?[0-9]+(?:\.[0-9]+)?[$]?|[0-9]+[$]?(?:\s*/\s*[0-9]+[$]?)?)\s*[:：\-]?\s*([A-Za-z0-9_-]{4,25})',
+    # 1. Tier then Code
+    p1 = re.compile(
+        r'(?P<kw>🎟️?|🎫|•|\-|\*)?[^\S\r\n]*(?P<kw2>كوبون|كود|code|قسيمة|خصم)?[^\S\r\n]*(?P<tier>[$]?[0-9]+(?:\.[0-9]+)?[^\S\r\n]*/[^\S\r\n]*[$]?[0-9]+(?:\.[0-9]+)?[$]?)[^\S\r\n]*(?:بكود|code|:|=|：|\-)?[^\S\r\n]*\r?\n?[^\S\r\n]*(?P<code>[A-Za-z0-9_-]{4,25})',
+        re.IGNORECASE
+    )
+
+    # 2. Code then Tier
+    p2 = re.compile(
+        r'(?P<kw>🎟️?|🎫|•|\-|\*)?[^\S\r\n]*(?P<kw2>كوبون|كود|code|قسيمة)?[^\S\r\n]*(?P<code>[A-Za-z][A-Za-z0-9_-]{3,24})[^\S\r\n]*(?:[:=：\-]|خصم|بخصم|\()?[^\S\r\n]*\r?\n?[^\S\r\n]*(?P<tier>[$]?[0-9]+(?:\.[0-9]+)?[^\S\r\n]*/[^\S\r\n]*[$]?[0-9]+(?:\.[0-9]+)?[$]?)\)?',
         re.IGNORECASE
     )
 
     coupons = []
     seen_codes = set()
-    for m in pattern.finditer(norm):
-        tier = m.group(1).strip()
-        code = m.group(2).strip()
-        if not tier.startswith("$") and not tier.endswith("$"):
-            tier = f"${tier}"
-        if code.lower() not in {"http", "https", "aliexpress", "item", "link", "t.me"}:
-            c_upper = code.upper()
-            if c_upper not in seen_codes:
-                seen_codes.add(c_upper)
-                coupons.append({"tier": tier, "code": c_upper})
+    blacklist = {'http', 'https', 'aliexpress', 'item', 'link', 't.me', 'camera', 'battery', 'android', 'snapdragon', 'display', 'screen'}
+
+    def add_coupon(tier_str, code_str, has_kw):
+        c = code_str.strip().upper()
+        if c.lower() in blacklist or any(b in c.lower() for b in ['http', 't.me', 'click']):
+            return
+        if not re.search(r'[A-Za-z]', c):
+            return
+        # If tier has no dollar sign (e.g. 8/256), ensure explicit coupon context exists
+        if '$' not in tier_str and not has_kw:
+            return
+        t = re.sub(r'\s+', '', tier_str.strip())
+        if not t.startswith('$') and not t.endswith('$'):
+            t = f"{t}$"
+        if c not in seen_codes:
+            seen_codes.add(c)
+            coupons.append({"tier": t, "code": c})
+
+    for m in p1.finditer(norm):
+        has_kw = bool((m.group('kw') and m.group('kw') in '🎟️🎫') or m.group('kw2'))
+        add_coupon(m.group('tier'), m.group('code'), has_kw)
+
+    for m in p2.finditer(norm):
+        has_kw = bool((m.group('kw') and m.group('kw') in '🎟️🎫') or m.group('kw2'))
+        add_coupon(m.group('tier'), m.group('code'), has_kw)
+
     return coupons
 
 def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:

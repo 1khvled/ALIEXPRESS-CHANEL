@@ -78,10 +78,6 @@ class ProductExtractor:
             codes_sig = ",".join(sorted(c["code"] for c in coupon_items))
             coupon_hash = hashlib.sha256(codes_sig.encode()).hexdigest()[:12]
 
-            # Scrape official AliExpress promo banner image from campaign landing page / CDN
-            from app.aliexpress.promos import promo_tracker
-            promo_banner = await promo_tracker.scrape_aliexpress_promo_banner(resolved.canonical_url or ali_url)
-
             # Clean URL: strip all tracking query parameters to ensure clean, short affiliate links
             raw_target = resolved.canonical_url or ali_url
             clean_campaign_url = raw_target.split("?")[0] if ("aliexpress.com" in raw_target and not resolved.product_id) else raw_target
@@ -95,7 +91,7 @@ class ProductExtractor:
                 current_price_eur=None,
                 coupon_code=None,
                 has_points_discount=False,
-                image_url=promo_banner,
+                image_url=None,
                 is_valid=True,
                 raw_text=text,
                 country_info=None,
