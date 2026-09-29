@@ -183,8 +183,8 @@ def is_spam_or_non_deal(text: str) -> Tuple[bool, Optional[str]]:
 
 def extract_coupon_list(text: str) -> List[Dict[str, str]]:
     """
-    Extracts coupons ONLY from explicit coupon bulletin lists.
-    Must contain explicit words like 'كوبون' or 'كود' on the line.
+    Extracts coupons from explicit coupon bulletin lists.
+    Strips Arabic tatweels and handles $2/15, 2/15$, and all currency variations.
     """
     if not text:
         return []
@@ -200,20 +200,23 @@ def extract_coupon_list(text: str) -> List[Dict[str, str]]:
         if any(w in lower for w in ["camera", "battery", "amoled", "mah", "nits", "pdaf", "ois", "gen", "snapdragon", "adreno"]):
             continue
 
+        # Strip Arabic tatweels (\u0640) for matching
+        norm = re.sub(r'[\u0640]', '', line_clean)
+
         # Must explicitly contain coupon / code / قسيمة
-        if not any(k in line_clean for k in ["كوبون", "كوبـــون", "كود", "قسيمة", "code", "coupon"]):
+        if not any(k in norm for k in ["كوبون", "كود", "قسيمة", "code", "coupon"]):
             continue
 
         m = re.search(
-            r'(?:🎟️?|🎫)?\s*(?:كوبـــ?ون|كود|code|قسيمة)?\s*([0-9]+(?:\.[0-9]+)?/[0-9]+(?:\.[0-9]+)?\$?|[0-9]+\$?(?:\s*/\s*[0-9]+\$?)?)\s*[:：\-]?\s*([A-Za-z0-9_-]{4,20})',
-            line_clean,
+            r'(?:🎟️?|🎫)?\s*(?:كوبون|كود|code|قسيمة)?\s*([$]?[0-9]+(?:\.[0-9]+)?\s*/\s*[$]?[0-9]+(?:\.[0-9]+)?[$]?|[0-9]+[$]?(?:\s*/\s*[0-9]+[$]?)?)\s*[:：\-]?\s*([A-Za-z0-9_-]{4,25})',
+            norm,
             re.IGNORECASE
         )
         if m:
             tier = m.group(1).strip()
             code = m.group(2).strip()
-            if not tier.endswith("$"):
-                tier += "$"
+            if not tier.startswith("$") and not tier.endswith("$"):
+                tier = f"${tier}"
             if code.lower() not in {"http", "https", "aliexpress", "item", "link", "t.me"}:
                 coupons.append({"tier": tier, "code": code.upper()})
     return coupons

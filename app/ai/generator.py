@@ -123,31 +123,64 @@ class DealCaptionGenerator:
     def format_coupon_list(
         self,
         coupon_items: List[Dict[str, str]],
-        affiliate_url: str
+        affiliate_url: str,
+        promo_name: Optional[str] = "Party Ready Sale"
     ) -> str:
         """
-        Builds clean, popular coupon bulletin format for multi-coupon lists.
+        Builds authentic Algerian coupon bulletin format for multi-coupon lists.
         """
         lines = [
-            "🎟️ <b>دليل كوبونات وقسائم التخفيض الحصرية 🔥</b>",
-            "━━━━━━━━━━━━━━━━━"
+            f"✨📢 <b>ظهور كوبونات جديدة بمناسبة تخفيضات {promo_name} احجزها الآن!</b> 📢✨",
+            "",
+            "✅ <b>قائمة الكوبونات:</b>",
+            ""
         ]
 
         for item in coupon_items:
             tier = item.get("tier", "").strip()
             code = item.get("code", "").strip()
             if tier and code:
-                lines.append(f"▫️ خصم <b>{tier}</b> ⬅️ الكود: <code>{code}</code>")
+                lines.append(f"🎟️ <b>كوبــــــون {tier} :</b> <code>{code}</code>")
             elif code:
-                lines.append(f"▫️ الكود: <code>{code}</code>")
+                lines.append(f"🎟️ <b>كوبــــــون :</b> <code>{code}</code>")
 
-        lines.append("━━━━━━━━━━━━━━━━━")
-        lines.append("🔗 <b>رابط صفحة تفعيل الكوبونات:</b>")
+        lines.append("")
+        lines.append("✅ <b>رابط المناسبة وتفعيل الكوبونات ⬇️</b>")
         lines.append(f"{affiliate_url}")
-        lines.append("━━━━━━━━━━━━━━━━━")
-        lines.append("🪙 استخدم بوت التخفيضات لزيادة خصم العملات: @Alilo07BOT")
-        lines.append("📢 قناة العروض: @DzAliexpress0")
+        lines.append("")
+        lines.append("⭐ <i>لا تنسى استخدام بوت العملات للشراء بأقل الأسعار:</i> @Alilo07BOT")
+        lines.append("📢 <i>قناة العروض: @DzAliexpress0</i>")
 
+        return "\n".join(lines)
+
+    def format_event_campaign(
+        self,
+        raw_text: str,
+        affiliate_url: str
+    ) -> str:
+        """
+        Formats AliExpress official event / warm-up announcements in authentic Algerian style.
+        """
+        clean_lines = []
+        for line in raw_text.splitlines():
+            line_str = line.strip()
+            if not line_str or "http://" in line_str or "https://" in line_str or "t.me/" in line_str or "COINBOT" in line_str:
+                continue
+            clean_lines.append(line_str)
+
+        main_content = "\n".join(clean_lines).strip()
+        if not main_content:
+            main_content = "✨ <b>تخفيضات وكوبونات حصرية بمناسبة انطلاق العروض الجديدة على AliExpress!</b>"
+
+        lines = [
+            f"🎉 <b>{main_content}</b>",
+            "",
+            "🔗 <b>رابط الدخول وتحصيل الكوبونات ⬇️</b>",
+            f"{affiliate_url}",
+            "",
+            "⭐ <i>لا تنسى استخدام بوت العملات للشراء بأقل الأسعار:</i> @Alilo07BOT",
+            "📢 <i>قناة العروض: @DzAliexpress0</i>"
+        ]
         return "\n".join(lines)
 
     def _format_deterministic(
@@ -247,13 +280,17 @@ class DealCaptionGenerator:
         coupon_list: Optional[List[Dict[str, str]]] = None,
         promo_tag: Optional[str] = None,
         is_price_drop: bool = False,
-        coin_url: Optional[str] = None
+        coin_url: Optional[str] = None,
+        raw_text: Optional[str] = None
     ) -> str:
         """
         Generates authentic Algerian Telegram channel caption.
         """
         if coupon_list and len(coupon_list) >= 2:
             return self.format_coupon_list(coupon_list, affiliate_url)
+
+        if (not usd_price or usd_price <= 0) and raw_text and any(k in raw_text for k in ["كوبونات", "تحصيل", "رابط المناسبة", "تخفيضات", "عشوائية", "party ready", "choice day"]):
+            return self.format_event_campaign(raw_text, affiliate_url)
 
         usd_val = usd_price or 0.0
         eur_val = eur_price or round(usd_val * (settings.EUR_USD_RATE or 0.92), 2)

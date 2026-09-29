@@ -293,7 +293,8 @@ async def collect_and_post_last_10_deals():
                         coupon_list=extracted.coupon_list if extracted.is_coupon_list else None,
                         promo_tag=None,
                         is_price_drop=is_price_drop,
-                        coin_url=coin_deep_link
+                        coin_url=coin_deep_link,
+                        raw_text=raw_text
                     )
 
                     # 10. Prepare Image with subtle circular DealScout logo watermark
