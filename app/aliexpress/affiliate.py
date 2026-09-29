@@ -42,8 +42,10 @@ class DirectAffiliateProvider(AffiliateProvider):
             else:
                 return f"https://m.aliexpress.com/p/coin-index/index.html?productIds={pid}&aff_fcid={self.tracking_id}"
 
-        separator = "&" if "?" in product_url else "?"
-        return f"{product_url}{separator}aff_fcid={self.tracking_id}"
+        # Clean campaign URLs to strip noisy tracking parameters
+        clean_url = product_url.split("?")[0] if ("aliexpress.com" in product_url and "?" in product_url) else product_url
+        separator = "&" if "?" in clean_url else "?"
+        return f"{clean_url}{separator}aff_fcid={self.tracking_id}"
 
 class CustomNetworkAffiliateProvider(AffiliateProvider):
     def __init__(self, prefix: str):

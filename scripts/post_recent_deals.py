@@ -299,7 +299,13 @@ async def collect_and_post_last_10_deals():
 
                     # 10. Prepare Image with subtle circular DealScout logo watermark
                     local_img_file = None
-                    if img_url:
+                    if extracted.is_coupon_list and extracted.coupon_list:
+                        # Render high-definition branded coupon bulletin card
+                        local_img_file = media_renderer.render_coupon_bulletin_card(
+                            extracted.coupon_list,
+                            promo_title="Party Ready Sale"
+                        )
+                    elif img_url:
                         downloaded = await media_downloader.download_image(img_url, extracted.product_id)
                         if downloaded:
                             local_img_file = media_renderer.prepare_post_image(
@@ -309,8 +315,8 @@ async def collect_and_post_last_10_deals():
                                 usd_price=extracted.current_price
                             )
 
-                    if not local_img_file and not extracted.is_coupon_list:
-                        continue  # Must have valid rendered product image unless it's a coupon list bulletin
+                    if not local_img_file:
+                        continue  # Must ALWAYS have a valid rendered image (coupons or product)!
 
                     # 11. Save record
                     async with db_context() as s:

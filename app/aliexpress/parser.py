@@ -175,9 +175,9 @@ def is_spam_or_non_deal(text: str) -> Tuple[bool, Optional[str]]:
         if store in lower_text:
             return True, f"Blocked store or platform detected: {store}"
 
-    for spam_kw in NON_DEAL_INDICATORS:
-        if spam_kw in lower_text and not any(k in lower_text for k in ["s.click.aliexpress.com", "aliexpress.com/item"]):
-            return True, f"Non-deal announcement: {spam_kw}"
+    # Skip dead / ephemeral random coupons / lucky draw lottery posts
+    if any(k in lower_text for k in ["كوبونات عشوائية", "سحب عشوائي", "يمد في كوبونات", "عشوائية", "عشوائيه"]):
+        return True, "Dead / temporary random coupon draw post skipped"
 
     return False, None
 

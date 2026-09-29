@@ -82,10 +82,14 @@ class ProductExtractor:
             from app.aliexpress.promos import promo_tracker
             promo_banner = await promo_tracker.scrape_aliexpress_promo_banner(resolved.canonical_url or ali_url)
 
+            # Clean URL: strip all tracking query parameters to ensure clean, short affiliate links
+            raw_target = resolved.canonical_url or ali_url
+            clean_campaign_url = raw_target.split("?")[0] if ("aliexpress.com" in raw_target and not resolved.product_id) else raw_target
+
             return ExtractedProduct(
                 product_id=f"COUPONS_{coupon_hash}",
                 original_url=ali_url,
-                canonical_url=resolved.canonical_url or ali_url,
+                canonical_url=clean_campaign_url,
                 title="أحدث كوبونات وتخفيضات AliExpress",
                 current_price=None,
                 current_price_eur=None,
@@ -108,39 +112,9 @@ class ProductExtractor:
             logger.info(f"Could not validate AliExpress link: {ali_url}")
             return None
 
-        # Check if this is an Event/Campaign warm-up announcement (Lucky Draw, Party Ready Sale, Warm-up event)
-        is_event_campaign = (
-            resolved.product_id is None
-            and any(k in text.lower() for k in [
-                "كوبونات عشوائية", "تحصيل", "رابط المناسبة", "احجزها", "بداية التخفيضات",
-                "party ready", "choice day", "سحب عشوائي", "تخفيضات 1 أكتوبر", "1 اكتوبر",
-                "تخفيضات عشوائية", "عروض بداية الشهر"
-            ])
-        )
-
-        if is_event_campaign:
-            import hashlib
-            url_hash = hashlib.sha256(ali_url.encode()).hexdigest()[:10]
-            from app.aliexpress.promos import promo_tracker
-            promo_banner = await promo_tracker.scrape_aliexpress_promo_banner(resolved.canonical_url or ali_url)
-
-            return ExtractedProduct(
-                product_id=f"EVENT_{url_hash}",
-                original_url=ali_url,
-                canonical_url=resolved.canonical_url or ali_url,
-                title="تخفيضات وفعاليات AliExpress الرسمية",
-                current_price=None,
-                current_price_eur=None,
-                coupon_code=None,
-                seller_coupon=None,
-                has_points_discount=False,
-                image_url=promo_banner or "https://ae-pic-a1.aliexpress-media.com/kf/HTB18eCBQXXXXXXfXXXX760XFXXXa.png",
-                is_valid=True,
-                raw_text=text,
-                country_info=None,
-                is_coupon_list=True,
-                coupon_list=[]
-            )
+        # Single deals MUST have a valid product_id
+        if not resolved.product_id:
+            return None
 
         # 4. Extract single deal fields
         coupon_code = extract_coupon(text)

@@ -130,6 +130,127 @@ class MediaRenderer:
             except Exception as e:
                 logger.warning(f"Failed processing image {image_path}: {e}")
 
-        return None
+    def render_coupon_bulletin_card(
+        self,
+        coupon_list: List[Dict[str, str]],
+        promo_title: str = "Party Ready Sale"
+    ) -> Path:
+        """
+        Renders a high-definition 1080x1080 promotional coupon card.
+        Guarantees coupon bulletin posts always have a professional graphic attached.
+        """
+        import hashlib
+        w, h = 1080, 1080
+        card = Image.new("RGB", (w, h), (18, 20, 32))
+        draw = ImageDraw.Draw(card)
+
+        # 1. Header Gradient: AliExpress Coral Red (#FF3B30 to #D31D1D)
+        for y in range(230):
+            r = int(240 - (y / 230.0) * 45)
+            g = int(45 - (y / 230.0) * 20)
+            b = int(55 - (y / 230.0) * 15)
+            draw.line([(0, y), (w, y)], fill=(r, g, b))
+
+        try:
+            font_title = ImageFont.truetype("arialbd.ttf", 46)
+            font_sub = ImageFont.truetype("arialbd.ttf", 26)
+            font_tier = ImageFont.truetype("arialbd.ttf", 28)
+            font_code = ImageFont.truetype("consola.ttf", 32)
+            font_footer = ImageFont.truetype("arialbd.ttf", 22)
+        except Exception:
+            font_title = font_sub = font_tier = font_code = font_footer = ImageFont.load_default()
+
+        # Title and Header text
+        header_title = f"ALIEXPRESS {promo_title.upper()}" if promo_title else "ALIEXPRESS SPECIAL SALE"
+        draw.text((w // 2, 65), header_title, fill=(255, 255, 255), font=font_title, anchor="mm")
+        draw.text((w // 2, 125), "OFFICIAL PROMO CODES • SAVE UP TO $55", fill=(254, 240, 138), font=font_sub, anchor="mm")
+        draw.text((w // 2, 175), "Valid Oct 1 - Oct 7 • Limited Quantities", fill=(255, 255, 255), font=font_footer, anchor="mm")
+
+        # Circular Logo top right in header
+        if self.logo_path.exists():
+            try:
+                with Image.open(self.logo_path) as logo_raw:
+                    logo = logo_raw.convert("RGBA").resize((90, 90), Image.Resampling.LANCZOS)
+                    card.paste(logo, (w - 120, 25), logo)
+            except Exception:
+                pass
+
+        # Coupon Rows
+        start_y = 250
+        num_coupons = min(len(coupon_list), 7)
+        row_h = max(68, min(88, (720 - (num_coupons * 12)) // max(1, num_coupons)))
+        pad = 12
+        card_w = 980
+        card_x = (w - card_w) // 2
+
+        for i, c in enumerate(coupon_list[:num_coupons]):
+            tier_raw = str(c.get("tier", "")).strip().replace("$", "")
+            code_raw = str(c.get("code", "")).strip().upper()
+            tier_label = f"DISCOUNT ${tier_raw}" if tier_raw else "DISCOUNT"
+
+            cy = start_y + i * (row_h + pad)
+            # Row Background container
+            draw.rounded_rectangle(
+                (card_x, cy, card_x + card_w, cy + row_h),
+                radius=14,
+                fill=(28, 32, 48),
+                outline=(255, 75, 75, 120),
+                width=2
+            )
+
+            # Left Badge: Tier
+            tier_badge_w = 340
+            draw.rounded_rectangle(
+                (card_x + 10, cy + 8, card_x + tier_badge_w, cy + row_h - 8),
+                radius=10,
+                fill=(239, 68, 68)
+            )
+            draw.text(
+                (card_x + 10 + tier_badge_w // 2, cy + row_h // 2),
+                tier_label,
+                fill=(255, 255, 255),
+                font=font_tier,
+                anchor="mm"
+            )
+
+            # Center Label
+            draw.text(
+                (card_x + tier_badge_w + 120, cy + row_h // 2),
+                "CODE:",
+                fill=(156, 163, 175),
+                font=font_sub,
+                anchor="mm"
+            )
+
+            # Right Badge: Code
+            code_box_x = card_x + card_w - 380
+            draw.rounded_rectangle(
+                (code_box_x, cy + 8, card_x + card_w - 12, cy + row_h - 8),
+                radius=10,
+                fill=(17, 24, 39),
+                outline=(245, 158, 11),
+                width=2
+            )
+            draw.text(
+                ((code_box_x + card_x + card_w - 12) // 2, cy + row_h // 2),
+                code_raw,
+                fill=(251, 191, 36),
+                font=font_code,
+                anchor="mm"
+            )
+
+        # Footer
+        draw.text(
+            (w // 2, 1035),
+            "Telegram: @DzAliexpress0   •   Coin Bot: @Alilo07BOT",
+            fill=(156, 163, 175),
+            font=font_footer,
+            anchor="mm"
+        )
+
+        h_sig = hashlib.sha256(str(coupon_list).encode()).hexdigest()[:8]
+        out_file = self.output_dir / f"coupons_card_{h_sig}.jpg"
+        card.save(out_file, "JPEG", quality=95)
+        return out_file
 
 media_renderer = MediaRenderer()
