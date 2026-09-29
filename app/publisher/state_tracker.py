@@ -323,9 +323,9 @@ async def check_and_update_expired_deals() -> int:
     ][-5:]
 
     for key, info in deals_to_check:
-        pid = info.get("product_id")
+        pid = str(info.get("product_id", "")).strip()
         msg_id = info.get("channel_msg_id")
-        if not pid or not msg_id:
+        if not pid or not msg_id or pid.startswith("COUPONS_") or pid.startswith("EVENT_") or not pid.isdigit():
             continue
 
         item_url = f"https://www.aliexpress.com/item/{pid}.html"

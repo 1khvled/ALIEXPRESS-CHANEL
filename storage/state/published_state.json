@@ -31,7 +31,9 @@
     "1005012925826589",
     "1005012561537862",
     "1005010184054784",
-    "1005003793015046"
+    "1005003793015046",
+    "COUPONS_5f58596f9519",
+    "EVENT_57b2a8d236"
   ],
   "published_titles": [
     "SomnAmbulist SATA3 SSD 120GB",
@@ -65,18 +67,20 @@
     "realme P3 5G 8GB+256GB/12GB+512GB 5260mAh Battery NFC",
     "Pro'skit HW-609A 10-Piece Mini Double-Ended Box Wrench Set",
     "CX H1300 Thermal Putty 13.5W/m.K for VGA GPU IC Processor 10g",
-    "LED Wooden Digital Alarm Clock with Voice Control"
+    "LED Wooden Digital Alarm Clock with Voice Control",
+    "أحدث كوبونات وتخفيضات AliExpress",
+    "تخفيضات وفعاليات AliExpress الرسمية"
   ],
   "last_disclaimer_time": 1790371890.4189165,
   "last_calendar_time": 1790371890.4189165,
-  "last_run_time": 1790511833.3526797,
+  "last_run_time": 1790700061.6056805,
   "schedule_config": {
     "day_interval_minutes": 5,
     "night_interval_minutes": 30,
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790510777.4056776,
+    "last_deal_post_time": 1790700061.6175303,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -86,19 +90,19 @@
   "monitored_channels": {
     "pcgamingpart": {
       "last_message_id": 7909,
-      "last_check_time": 1790672233.0691442
+      "last_check_time": 1790700063.6328223
     },
     "zedstoreonline": {
       "last_message_id": 38468,
       "last_check_time": 1790672233.5718849
     },
     "aniscoupons": {
-      "last_message_id": 32557,
-      "last_check_time": 1790690110.9638128
+      "last_message_id": 32558,
+      "last_check_time": 1790699828.147316
     },
     "ecksdeal": {
-      "last_message_id": 5836,
-      "last_check_time": 1790439942.0613577
+      "last_message_id": 5839,
+      "last_check_time": 1790699858.8471513
     },
     "lodydeals": {
       "last_message_id": 45282,
@@ -112,17 +116,44 @@
   "published_product_timestamps": {
     "1005012561537862": 1790439932.9103508,
     "1005010184054784": 1790439938.4275959,
-    "1005003793015046": 1790510777.3970847
+    "1005003793015046": 1790510777.3970847,
+    "COUPONS_5f58596f9519": 1790699856.8263774,
+    "EVENT_57b2a8d236": 1790700061.6056805
   },
   "published_title_timestamps": {
     "Pro'skit HW-609A 10-Piece Mini Double-Ended Box Wrench Set": 1790439932.9103508,
     "CX H1300 Thermal Putty 13.5W/m.K for VGA GPU IC Processor 10g": 1790439938.4275959,
-    "LED Wooden Digital Alarm Clock with Voice Control": 1790510777.3970847
+    "LED Wooden Digital Alarm Clock with Voice Control": 1790510777.3970847,
+    "أحدث كوبونات وتخفيضات AliExpress": 1790699856.8263774,
+    "تخفيضات وفعاليات AliExpress الرسمية": 1790700061.6056805
   },
   "published_post_keys": [
     "pcgamingpart:7906",
     "pcgamingpart:7907",
-    "aniscoupons:32553"
+    "aniscoupons:32553",
+    "ecksdeal:5838",
+    "pcgamingpart:7909"
   ],
-  "channel_published_deals": {}
+  "channel_published_deals": {
+    "ecksdeal:5838": {
+      "channel_msg_id": 185,
+      "product_id": "COUPONS_5f58596f9519",
+      "title": "أحدث كوبونات وتخفيضات AliExpress",
+      "channel": "ecksdeal",
+      "source_msg_id": 5838,
+      "price": null,
+      "timestamp": 1790699856.8263774,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7909": {
+      "channel_msg_id": 186,
+      "product_id": "EVENT_57b2a8d236",
+      "title": "تخفيضات وفعاليات AliExpress الرسمية",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7909,
+      "price": null,
+      "timestamp": 1790700061.6056805,
+      "status": "ACTIVE"
+    }
+  }
 }
