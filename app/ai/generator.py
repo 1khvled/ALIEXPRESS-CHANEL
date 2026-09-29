@@ -150,6 +150,7 @@ class DealCaptionGenerator:
         lines.append("")
         lines.append("⭐ <i>لا تنسى استخدام بوت العملات للشراء بأقل الأسعار:</i> @Alilo07BOT")
         lines.append("📢 <i>قناة العروض: @DzAliexpress0</i>")
+        lines.append("🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس #AliExpressDZ #AliExpress</i>")
 
         return "\n".join(lines)
 
@@ -179,7 +180,8 @@ class DealCaptionGenerator:
             f"{affiliate_url}",
             "",
             "⭐ <i>لا تنسى استخدام بوت العملات للشراء بأقل الأسعار:</i> @Alilo07BOT",
-            "📢 <i>قناة العروض: @DzAliexpress0</i>"
+            "📢 <i>قناة العروض: @DzAliexpress0</i>",
+            "🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس #AliExpressDZ #AliExpress</i>"
         ]
         return "\n".join(lines)
 
@@ -264,6 +266,7 @@ class DealCaptionGenerator:
 
         lines.append("")
         lines.append("📢 <i>قناة العروض: @DzAliexpress0</i>")
+        lines.append("🔍 <i>#عروض_علي_اكسبرس #تخفيضات_علي_اكسبرس #AliExpressDZ #AliExpress</i>")
 
         return "\n".join(lines)
 

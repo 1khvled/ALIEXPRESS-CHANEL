@@ -9,6 +9,9 @@ Runs continuously and autonomously without manual intervention:
 6. Generates affiliate links and attaches @Alilo07BOT CTA and inline buttons.
 7. Enforces posting cooldowns and hourly/daily rate limits to maintain high channel quality.
 """
+from app.utils.network import enforce_ipv4
+enforce_ipv4()
+
 import asyncio
 from datetime import datetime, timezone
 from pathlib import Path

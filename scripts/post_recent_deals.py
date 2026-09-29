@@ -14,6 +14,9 @@ if sys.platform == "win32":
     except Exception:
         pass
 
+from app.utils.network import enforce_ipv4
+enforce_ipv4()
+
 from datetime import datetime, timezone
 import httpx
 from bs4 import BeautifulSoup
