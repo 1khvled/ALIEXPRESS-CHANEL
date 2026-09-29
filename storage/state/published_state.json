@@ -85,12 +85,12 @@
   "coin_reminder_variant_idx": 2,
   "monitored_channels": {
     "pcgamingpart": {
-      "last_message_id": 7908,
-      "last_check_time": 1790439940.5968432
+      "last_message_id": 7909,
+      "last_check_time": 1790672233.0691442
     },
     "zedstoreonline": {
-      "last_message_id": 38467,
-      "last_check_time": 1790439941.1367211
+      "last_message_id": 38468,
+      "last_check_time": 1790672233.5718849
     },
     "aniscoupons": {
       "last_message_id": 32556,
@@ -105,8 +105,8 @@
       "last_check_time": 1790630192.3984492
     },
     "bnddeals": {
-      "last_message_id": 50738,
-      "last_check_time": 1790608429.1221757
+      "last_message_id": 50741,
+      "last_check_time": 1790672235.0796027
     }
   },
   "published_product_timestamps": {
