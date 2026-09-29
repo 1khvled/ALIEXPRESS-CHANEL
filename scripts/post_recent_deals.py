@@ -120,7 +120,12 @@ async def collect_and_post_last_10_deals():
     if needs_repost_keys:
         print(f"[DELETED POSTS SYNC] Found {len(needs_repost_keys)} post(s) deleted from channel, ready to repost: {needs_repost_keys}")
 
-    async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9,ar;q=0.8"
+    }
+    async with httpx.AsyncClient(headers=headers, timeout=20.0, follow_redirects=True) as client:
         for ch in CHANNELS:
             if len(published_deals) >= MAX_DEALS_PER_RUN:
                 break

@@ -28,7 +28,7 @@ class ResolvedUrlResult:
     error: Optional[str] = None
 
 class UrlResolver:
-    def __init__(self, timeout: float = 12.0, max_redirects: int = 8):
+    def __init__(self, timeout: float = 20.0, max_redirects: int = 8):
         self.timeout = timeout
         self.max_redirects = max_redirects
         self.headers = {
@@ -110,7 +110,7 @@ class UrlResolver:
                 final_url=url,
                 canonical_url=normalize_aliexpress_url(url, fallback_id) if fallback_id else url,
                 product_id=fallback_id,
-                is_valid=bool(fallback_id),
+                is_valid=bool(fallback_id or is_aliexpress_url(url)),
                 error=str(e)
             )
 

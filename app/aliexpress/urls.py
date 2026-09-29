@@ -41,6 +41,9 @@ def extract_all_urls(text: str) -> List[str]:
     cleaned_urls = []
     for u in urls:
         cleaned = u.rstrip(".,;!?:)]}\"'>")
+        # Strip trailing emojis or Arabic text touching URLs without spaces (e.g. _c3wYF7dL⭐️)
+        cleaned = re.sub(r'[^\x21-\x7E]+$', '', cleaned)
+        cleaned = cleaned.rstrip(".,;!?:)]}\"'>")
         if cleaned.startswith("http://") or cleaned.startswith("https://"):
             cleaned_urls.append(cleaned)
     return cleaned_urls

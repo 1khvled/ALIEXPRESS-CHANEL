@@ -404,13 +404,15 @@ async def refresh_channel_cache(force: bool = False):
     """Scrapes the public preview of @DzAliexpress0 to inspect the actual live channel messages."""
     global _CACHED_CHANNEL_TEXTS, _CACHED_CHANNEL_TEXT_TIMESTAMPS, _CACHED_CHANNEL_PIDS, _LAST_CHANNEL_SCRAPE_TIME
     now = time.time()
-    if not force and _CACHED_CHANNEL_TEXTS and (now - _LAST_CHANNEL_SCRAPE_TIME < 120):
+    if not force and (now - _LAST_CHANNEL_SCRAPE_TIME < 120):
         return
+    _LAST_CHANNEL_SCRAPE_TIME = now
 
     clean_ch = str(TARGET_CHANNEL_ID).lstrip("@")
     url = f"https://t.me/s/{clean_ch}"
     try:
-        async with httpx.AsyncClient(timeout=12.0, follow_redirects=True) as client:
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"}
+        async with httpx.AsyncClient(headers=headers, timeout=12.0, follow_redirects=True) as client:
             resp = await client.get(url)
             if resp.status_code == 200:
                 soup = BeautifulSoup(resp.text, "html.parser")
