@@ -1,3 +1,4 @@
+import asyncio
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional, Tuple
@@ -118,27 +119,44 @@ class TelegramPublisher:
             inline_keyboard.append([{"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": "https://t.me/Alilo07BOT"}])
             reply_markup_json = json.dumps({"inline_keyboard": inline_keyboard})
 
-            async with httpx.AsyncClient(timeout=30.0) as client:
-                if image_path and image_path.exists():
-                    # Send photo with caption
-                    with open(image_path, "rb") as photo_file:
-                        files = {"photo": photo_file}
-                        data = {
-                            "chat_id": self.target_channel,
-                            "caption": caption,
-                            "parse_mode": "HTML",
-                            "reply_markup": reply_markup_json
-                        }
-                        resp = await client.post(f"{api_url}/sendPhoto", data=data, files=files)
-                else:
-                    # Send text message
-                    data = {
-                        "chat_id": self.target_channel,
-                        "text": caption,
-                        "parse_mode": "HTML",
-                        "reply_markup": reply_markup_json
-                    }
-                    resp = await client.post(f"{api_url}/sendMessage", data=data)
+            photo_bytes = None
+            if image_path and image_path.exists():
+                photo_bytes = image_path.read_bytes()
+
+            resp = None
+            async with httpx.AsyncClient(timeout=45.0) as client:
+                for attempt in range(1, 4):
+                    try:
+                        if photo_bytes:
+                            files = {"photo": ("deal.jpg", photo_bytes, "image/jpeg")}
+                            data = {
+                                "chat_id": self.target_channel,
+                                "caption": caption,
+                                "parse_mode": "HTML",
+                                "reply_markup": reply_markup_json
+                            }
+                            resp = await client.post(f"{api_url}/sendPhoto", data=data, files=files)
+                        else:
+                            data = {
+                                "chat_id": self.target_channel,
+                                "text": caption,
+                                "parse_mode": "HTML",
+                                "reply_markup": reply_markup_json
+                            }
+                            resp = await client.post(f"{api_url}/sendMessage", data=data)
+
+                        if resp.status_code == 200:
+                            break
+                        logger.warning(f"Telegram API publish attempt {attempt} returned {resp.status_code}: {resp.text}")
+                    except (httpx.ConnectError, httpx.TimeoutException, httpx.NetworkError) as net_err:
+                        logger.warning(f"Telegram API connect error on attempt {attempt}/3: {net_err}")
+                        if attempt < 3:
+                            await asyncio.sleep(2.0 * attempt)
+                        else:
+                            raise
+
+                if resp is None:
+                    return False, "Failed to connect to Telegram API after 3 attempts"
 
                 result = resp.json()
 

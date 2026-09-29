@@ -35,7 +35,7 @@ PROMO_CALENDAR: List[PromoEvent] = [
             {"tier": "20/159$", "code": "CDDZ20"},
             {"tier": "40/299$", "code": "CDDZ40"},
         ],
-        banner_image_url="https://ae-pic-a1.aliexpress-media.com/kf/HTB18eCBQXXXXXXfXXXX760XFXXXa.png"
+        banner_image_url=None
     ),
     PromoEvent(
         name="Brand Day Sale",
@@ -213,6 +213,6 @@ class PromoTracker:
             return next_event[0].banner_image_url
 
         # General official AliExpress Deals CDN banner
-        return "https://ae-pic-a1.aliexpress-media.com/kf/HTB18eCBQXXXXXXfXXXX760XFXXXa.png"
+        return None
 
 promo_tracker = PromoTracker()

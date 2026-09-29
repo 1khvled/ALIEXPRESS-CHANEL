@@ -31,7 +31,8 @@
     "1005012925826589",
     "1005012561537862",
     "1005010184054784",
-    "1005003793015046"
+    "1005003793015046",
+    "COUPONS_3f89a2292e41"
   ],
   "published_titles": [
     "SomnAmbulist SATA3 SSD 120GB",
@@ -65,18 +66,19 @@
     "realme P3 5G 8GB+256GB/12GB+512GB 5260mAh Battery NFC",
     "Pro'skit HW-609A 10-Piece Mini Double-Ended Box Wrench Set",
     "CX H1300 Thermal Putty 13.5W/m.K for VGA GPU IC Processor 10g",
-    "LED Wooden Digital Alarm Clock with Voice Control"
+    "LED Wooden Digital Alarm Clock with Voice Control",
+    "أحدث كوبونات وتخفيضات AliExpress"
   ],
   "last_disclaimer_time": 1790371890.4189165,
   "last_calendar_time": 1790371890.4189165,
-  "last_run_time": 1790700061.6056805,
+  "last_run_time": 1790701464.713457,
   "schedule_config": {
     "day_interval_minutes": 5,
     "night_interval_minutes": 30,
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 0.0,
+    "last_deal_post_time": 1790701464.7239888,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -86,7 +88,7 @@
   "monitored_channels": {
     "pcgamingpart": {
       "last_message_id": 7909,
-      "last_check_time": 1790700817.363462
+      "last_check_time": 1790701466.735331
     },
     "zedstoreonline": {
       "last_message_id": 38468,
@@ -113,19 +115,31 @@
     "1005012561537862": 1790439932.9103508,
     "1005010184054784": 1790439938.4275959,
     "1005003793015046": 1790510777.3970847,
-    "COUPONS_5f58596f9519": 1790699856.8263774
+    "COUPONS_3f89a2292e41": 1790701464.713457
   },
   "published_title_timestamps": {
     "Pro'skit HW-609A 10-Piece Mini Double-Ended Box Wrench Set": 1790439932.9103508,
     "CX H1300 Thermal Putty 13.5W/m.K for VGA GPU IC Processor 10g": 1790439938.4275959,
     "LED Wooden Digital Alarm Clock with Voice Control": 1790510777.3970847,
-    "أحدث كوبونات وتخفيضات AliExpress": 1790699856.8263774
+    "أحدث كوبونات وتخفيضات AliExpress": 1790701464.713457
   },
   "published_post_keys": [
     "pcgamingpart:7906",
     "pcgamingpart:7907",
     "aniscoupons:32553",
-    "ecksdeal:5838"
+    "ecksdeal:5838",
+    "pcgamingpart:7909"
   ],
-  "channel_published_deals": {}
+  "channel_published_deals": {
+    "pcgamingpart:7909": {
+      "channel_msg_id": 188,
+      "product_id": "COUPONS_3f89a2292e41",
+      "title": "أحدث كوبونات وتخفيضات AliExpress",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7909,
+      "price": null,
+      "timestamp": 1790701464.713457,
+      "status": "ACTIVE"
+    }
+  }
 }
