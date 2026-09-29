@@ -133,9 +133,17 @@ async def collect_and_post_last_10_deals():
             url = f"https://t.me/s/{ch}"
             print(f"\n---> Scanning channel @{ch}...")
             try:
-                resp = await client.get(url)
-                if resp.status_code != 200:
-                    print(f"  [!] HTTP {resp.status_code} for @{ch}")
+                resp = None
+                for attempt in range(2):
+                    try:
+                        resp = await client.get(url)
+                        if resp.status_code == 200:
+                            break
+                    except Exception:
+                        await asyncio.sleep(1.0)
+
+                if not resp or resp.status_code != 200:
+                    print(f"  [!] HTTP {resp.status_code if resp else 'TIMEOUT'} for @{ch}")
                     continue
 
                 soup = BeautifulSoup(resp.text, "html.parser")
@@ -333,14 +341,22 @@ async def collect_and_post_last_10_deals():
                         data_post = block.get("data-post", "")
                         msg_id = int(data_post.split("/")[-1]) if "/" in data_post and data_post.split("/")[-1].isdigit() else 888000 + len(published_deals)
 
-                        src = SourceMessage(
-                            channel_id=ch_id,
-                            telegram_message_id=msg_id,
-                            message_url=f"https://t.me/{ch}/{msg_id}",
-                            raw_text=raw_text
-                        )
-                        s.add(src)
-                        await s.flush()
+                        src = (await s.execute(
+                            select(SourceMessage).where(
+                                SourceMessage.channel_id == ch_id,
+                                SourceMessage.telegram_message_id == msg_id
+                            )
+                        )).scalar_one_or_none()
+
+                        if not src:
+                            src = SourceMessage(
+                                channel_id=ch_id,
+                                telegram_message_id=msg_id,
+                                message_url=f"https://t.me/{ch}/{msg_id}",
+                                raw_text=raw_text
+                            )
+                            s.add(src)
+                            await s.flush()
 
                         deal = Deal(
                             source_message_id=src.id,
