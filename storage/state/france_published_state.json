@@ -1,17 +1,29 @@
 {
   "published_post_keys": [
-    "francecp:400",
-    "francecp:395",
-    "francecp:397",
+    "francecp:406",
+    "francecp:409",
+    "francecp:408",
     "francecp:399",
+    "francecp:395",
     "francecp:396",
-    "francecp:394"
+    "francecp:394",
+    "francecp:411",
+    "francecp:397",
+    "francecp:403",
+    "francecp:400",
+    "francecp:404"
   ],
   "published_product_ids": [
     "1005012101241211",
-    "1005012491876584",
+    "1005010587574277",
+    "1005012948532401",
     "1005012030178344",
+    "1005011654106789",
     "1005012282671673",
+    "1005012491876584",
+    "1005012154507020",
+    "1005010356100546",
+    "1005012193894043",
     "1005011584731160",
     "1005008084309191"
   ],
@@ -21,5 +33,8 @@
       "last_check_time": 1790806903.6445477
     }
   },
-  "last_run_time": 1790807232.5329971
+  "last_run_time": 1790807392.753094,
+  "sent_promo_notifiers": [
+    "FR_START_ALERT_Party Ready Sale / Choice Day_20261001"
+  ]
 }

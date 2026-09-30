@@ -139,6 +139,15 @@ async def collect_and_post_france_deals():
     print(f"Source Channels: {', '.join(FRANCE_SOURCE_CHANNELS)}")
     print("=" * 70)
 
+    # 0. Autonomous Promo Notifiers & Event Alerts (24h start warm-up & 24h end alert)
+    try:
+        from app.publisher.promo_notifiers_fr import check_and_auto_post_france_promo_notifiers
+        fr_alerts = await check_and_auto_post_france_promo_notifiers()
+        if fr_alerts:
+            print(f"  [FRANCE PROMO ALERTS] Triggered {len(fr_alerts)} alert(s): {[a.get('type') for a in fr_alerts]}")
+    except Exception as e:
+        print(f"  [!] France promo notifiers warning: {e}")
+
     state = load_france_state()
     published_keys = set(state.get("published_post_keys", []))
     published_pids = set(state.get("published_product_ids", []))
