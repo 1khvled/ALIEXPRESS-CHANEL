@@ -110,9 +110,9 @@ async def collect_and_post_last_10_deals():
 
     # Anti-Flood Pacer & Traffic Evaluation (Peak hours: 12-14 and 18-23:30 Algeria time)
     is_peak = is_algerian_peak_hour()
-    max_deals_per_channel = 4 if is_peak else 2
-    MAX_DEALS_PER_RUN = 8 if is_peak else 4
-    print(f"[PACER TRAFFIC STATUS] Peak Hour Boost: {'ON (Up to 4 deals/ch)' if is_peak else 'OFF (Paced 2 deals/ch)'} | Max run limit: {MAX_DEALS_PER_RUN}")
+    max_deals_per_channel = 6 if is_peak else 4
+    MAX_DEALS_PER_RUN = 12 if is_peak else 8
+    print(f"[PACER TRAFFIC STATUS] Peak Hour Boost: {'ON (Up to 6 deals/ch)' if is_peak else 'OFF (Paced 4 deals/ch)'} | Max run limit: {MAX_DEALS_PER_RUN}")
 
     published_deals = []
     seen_products = set()
@@ -185,17 +185,18 @@ async def collect_and_post_last_10_deals():
                     new_blocks.sort(key=lambda x: x[0])
                     print(f"  [FIRST RUN] @{ch} baseline set to #{current_max_id}. Processing {len(new_blocks)} visible post(s).")
                 else:
-                    # Filter for messages newer than last_seen_id OR any post that was deleted from channel and needs reposting
+                    # Process posts newer than last_seen_id, or unposted recent candidate messages from current page
+                    lookback_cutoff = max(0, last_seen_id - 6)
                     new_blocks = [
                         (b_id, b) for b_id, b in block_items
-                        if (b_id > last_seen_id or f"{ch.lower()}:{b_id}" in needs_repost_keys)
+                        if (b_id > last_seen_id or (b_id >= lookback_cutoff and not is_post_already_published(ch, b_id)) or f"{ch.lower()}:{b_id}" in needs_repost_keys)
                         and not is_post_already_published(ch, b_id)
                     ]
                     new_blocks.sort(key=lambda x: x[0])
                     if new_blocks:
                         repost_count = sum(1 for b_id, _ in new_blocks if b_id <= last_seen_id)
                         new_count = len(new_blocks) - repost_count
-                        print(f"  [@{ch}] Found {new_count} new post(s) and {repost_count} deleted post(s) to repost.")
+                        print(f"  [@{ch}] Found {new_count} new post(s) and {repost_count} unposted/repostable post(s) to process.")
                     else:
                         print(f"  [NO NEW POSTS] @{ch} has no new or repostable messages (last seen: #{last_seen_id}, current: #{current_max_id}).")
                         continue

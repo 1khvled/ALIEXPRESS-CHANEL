@@ -30,7 +30,7 @@ jobs:
           pip install -r requirements.txt
           pip install python-aliexpress-api
 
-      - name: Run Deals Publisher
+      - name: Run Algeria Deals Publisher
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TARGET_CHANNEL_ID: ${{ secrets.TARGET_CHANNEL_ID }}
@@ -42,6 +42,18 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL || 'sqlite+aiosqlite:///deals.db' }}
         run: |
           python scripts/post_recent_deals.py
+
+      - name: Run France Deals Publisher (@francedealsdz)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          FRANCE_TARGET_CHANNEL_ID: ${{ secrets.FRANCE_TARGET_CHANNEL_ID || '@francedealsdz' }}
+          ALIEXPRESS_AFFILIATE_PROVIDER: portals
+          ALIEXPRESS_AFFILIATE_TRACKING_ID: ${{ secrets.ALIEXPRESS_AFFILIATE_TRACKING_ID }}
+          ALIEXPRESS_AFFILIATE_APP_KEY: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_KEY }}
+          ALIEXPRESS_AFFILIATE_APP_SECRET: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_SECRET }}
+        run: |
+          python scripts/post_france_deals.py
+        continue-on-error: true
 
       - name: Commit and push DB changes (if using local SQLite)
         run: |
