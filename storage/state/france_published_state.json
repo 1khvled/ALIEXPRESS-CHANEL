@@ -3,9 +3,9 @@
   "published_product_ids": [],
   "monitored_channels": {
     "francecp": {
-      "last_message_id": 393,
-      "last_check_time": 1790806778.0828314
+      "last_message_id": 413,
+      "last_check_time": 1790806865.6727986
     }
   },
-  "last_run_time": 1790806778.0829258
+  "last_run_time": 1790806865.672956
 }
