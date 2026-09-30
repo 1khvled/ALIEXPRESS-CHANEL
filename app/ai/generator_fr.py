@@ -100,12 +100,14 @@ class FranceDealCaptionGenerator:
                 lines.append(f"🎟️ <b>Code promo :</b> <code>{code}</code>")
 
         lines.append("")
-        lines.append("✅ <b>Lien direct pour activer les codes ⬇️</b>")
-        lines.append(f"{affiliate_url}")
+        lines.append("⭕️ <b>Tutoriel : Verrouiller tous les codes sur votre compte :</b>")
+        lines.append("⚠️ <b>Commencez par les gros codes (-60€, -45€...)</b> puis appliquez les suivants pour les lier à votre compte avant rupture de stock !")
+        lines.append("🔹 <b>Appliquez tous les codes sur ce produit (tous les seuils passent) ⤵️</b>")
+        lines.append("https://s.click.aliexpress.com/e/_c3NEyXfT")
         lines.append("")
-        lines.append("🚚 <i>Livraison rapide disponible en France métropolitaine 🇫🇷</i>")
+        lines.append("🪙 <i>Bot réduction pièces (Coins) : @Alilo07BOT</i>")
         lines.append("📢 <i>Canal de bons plans : @francedealsdz</i>")
-        lines.append("🔍 <i>#AliExpressFrance #BonsPlans #CodesPromo #AliExpress #Promo</i>")
+        lines.append("🔍 <i>#AliExpressFrance #BonsPlans #CodesPromo #AliExpress #ChoiceDay</i>")
 
         return "\n".join(lines)
 

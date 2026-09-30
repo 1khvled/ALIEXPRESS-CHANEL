@@ -339,7 +339,12 @@ async def collect_and_post_last_10_deals():
                             if downloaded:
                                 local_img_file = downloaded
 
-                        # Fallback to rendered card only if competitor posted text-only
+                        # Fallback to official AliExpress Choice Day banner image
+                        official_banner = os.path.join(settings.BASE_DIR, "storage", "assets", "choice_day_banner.png")
+                        if not local_img_file and os.path.exists(official_banner):
+                            local_img_file = official_banner
+
+                        # Fallback to rendered card only if no banner is available
                         if not local_img_file and extracted.coupon_list:
                             local_img_file = media_renderer.render_coupon_bulletin_card(
                                 extracted.coupon_list,

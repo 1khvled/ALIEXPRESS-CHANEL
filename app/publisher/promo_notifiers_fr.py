@@ -57,44 +57,42 @@ def record_france_notifier_sent(notifier_key: str):
 def build_france_promo_starting_alert(promo: PromoEvent, start_hour_paris: str = "09:00") -> Tuple[str, Dict[str, Any]]:
     """
     Builds authentic French warm-up / coupon announcement alert for @francedealsdz.
+    Includes booking tutorial with eligible high-value product to bind codes.
     """
     lines = [
-        f"<blockquote>🚨 <b>Alerte Promo AliExpress France | Début des soldes demain dès {start_hour_paris} ! 🇫🇷</b></blockquote>",
+        "🚨 <b>CODES PROMO | Choice Day Octobre ! 🇫🇷</b>",
+        "Du <b>1er au 7 octobre 2026</b> 🛍️",
+        f"⏰ Actifs dès demain à <b>{start_hour_paris} (Paris) / 08h00 (DZ)</b>",
         "",
-        f"🎯 <b>Événement officiel :</b> Party Ready Sale & Choice Day France",
-        f"⏰ <b>Lancement officiel :</b> Demain matin à <b>{start_hour_paris} (Heure de Paris)</b> / 08h00 (Heure DZ)",
+        "🎟️ <b>Code -2€</b> dès 18€ : <code>FRPRD02</code>",
+        "🎟️ <b>Code -6€</b> dès 45€ : <code>FRPRD06</code>",
+        "🎟️ <b>Code -12€</b> dès 89€ : <code>FRPRD12</code>",
+        "🎟️ <b>Code -20€</b> dès 159€ : <code>FRPRD20</code>",
+        "🎟️ <b>Code -30€</b> dès 239€ : <code>FRPRD30</code>",
+        "🎟️ <b>Code -45€</b> dès 355€ : <code>FRPRD45</code>",
+        "🎟️ <b>Code -60€</b> dès 475€ : <code>FRPRD60</code>",
         "",
-        "🎟️ <b>Codes Promo Officiels France (actifs dès 09h00) :</b>",
-        "• <b>-3€</b> dès 29€ d'achat : <code>CDFR03</code>",
-        "• <b>-6€</b> dès 49€ d'achat : <code>CDFR06</code>",
-        "• <b>-10€</b> dès 79€ d'achat : <code>CDFR10</code>",
-        "• <b>-20€</b> dès 159€ d'achat : <code>FWFR20</code>",
-        "• <b>-30€</b> dès 239€ d'achat : <code>FWFR30</code>",
-        "• <b>-45€</b> dès 349€ d'achat : <code>FRLD45</code>",
-        "• <b>-63€</b> dès 459€ d'achat : <code>FRLD63</code>",
+        "💳 <b>Astuce PayPal :</b> Jusqu'à <b>-33€ supplémentaires</b> au paiement !",
         "",
-        "💳 <b>Astuce Réduction PayPal :</b>",
-        "En payant avec <b>PayPal</b>, bénéficiez de réductions cumulables allant jusqu'à <b>-33€</b> supplémentaires directement au paiement !",
+        "⭕️ <b>Tutoriel : Verrouiller tous les codes sur votre compte :</b>",
+        "⚠️ <b>Commencez par les gros codes (-60€, -45€...)</b> puis appliquez les suivants pour les lier à votre compte avant rupture de stock !",
         "",
-        f"🛒 <b>Guide rapide avant le coup d'envoi de {start_hour_paris} :</b>",
-        "1️⃣ <b>Préparez votre panier :</b> Ajoutez vos produits cibles dès maintenant pour éviter les ruptures de stock.",
-        f"2️⃣ <b>Appliquez vos codes à {start_hour_paris} pile :</b> Les coupons les plus avantageux partent très vite.",
-        "3️⃣ <b>Livraison rapide :</b> Priorisez les articles expédiés depuis les entrepôts européens/France pour une livraison en 3-7 jours.",
+        "🔹 <b>Appliquez tous les codes sur ce produit (tous les seuils passent) ⤵️</b>",
+        "https://s.click.aliexpress.com/e/_c3NEyXfT",
         "",
-        "🔔 <i>Activez les notifications du canal pour ne rater aucun code ni baisse de prix !</i>",
+        "🪙 Bot réduction pièces : @Alilo07BOT",
         "━━━━━━━━━━━━━━━━━",
-        "📢 <b>Canal officiel de bons plans :</b> @francedealsdz",
-        "🔍 <i>#AliExpressFrance #CodesPromo #BonsPlans #AliExpress #ChoiceDay</i>"
+        "📢 <b>Canal :</b> @francedealsdz"
     ]
 
     text = "\n".join(lines)
     reply_markup = {
         "inline_keyboard": [
             [
-                {"text": "🛒 Accéder aux offres AliExpress France", "url": "https://s.click.aliexpress.com/e/_c3dQsooR"}
+                {"text": "🛒 Lien pour enregistrer & verrouiller les codes", "url": "https://s.click.aliexpress.com/e/_c3NEyXfT"}
             ],
             [
-                {"text": "📢 Rejoindre @francedealsdz", "url": "https://t.me/francedealsdz"}
+                {"text": "🪙 Bot réduction pièces DealScout", "url": "https://t.me/Alilo07BOT"}
             ]
         ]
     }
@@ -138,18 +136,33 @@ async def send_france_promo_alert(text: str, reply_markup: Dict[str, Any]) -> Tu
         return False, "TELEGRAM_BOT_TOKEN missing", None
 
     api_url = f"https://api.telegram.org/bot{bot_token}"
+    banner_path = os.path.join(settings.BASE_DIR, "storage", "assets", "choice_day_banner.png")
+
     try:
-        async with httpx.AsyncClient(timeout=15.0) as client:
-            resp = await client.post(
-                f"{api_url}/sendMessage",
-                json={
-                    "chat_id": TARGET_FRANCE_CHANNEL,
-                    "text": text,
-                    "parse_mode": "HTML",
-                    "reply_markup": reply_markup,
-                    "disable_web_page_preview": True
-                }
-            )
+        async with httpx.AsyncClient(timeout=25.0) as client:
+            if os.path.exists(banner_path) and len(text) <= 1024:
+                with open(banner_path, "rb") as pf:
+                    resp = await client.post(
+                        f"{api_url}/sendPhoto",
+                        data={
+                            "chat_id": TARGET_FRANCE_CHANNEL,
+                            "caption": text,
+                            "parse_mode": "HTML",
+                            "reply_markup": json.dumps(reply_markup)
+                        },
+                        files={"photo": ("choice_day_banner.png", pf, "image/png")}
+                    )
+            else:
+                resp = await client.post(
+                    f"{api_url}/sendMessage",
+                    json={
+                        "chat_id": TARGET_FRANCE_CHANNEL,
+                        "text": text,
+                        "parse_mode": "HTML",
+                        "reply_markup": reply_markup,
+                        "disable_web_page_preview": True
+                    }
+                )
             data = resp.json()
             if resp.status_code == 200 and data.get("ok"):
                 return True, None, data.get("result", {}).get("message_id")

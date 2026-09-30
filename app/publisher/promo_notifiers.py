@@ -64,40 +64,44 @@ def build_promo_ending_alert(promo: PromoEvent, end_hour_str: str = "08:00") -> 
 
 def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00") -> Tuple[str, Dict[str, Any]]:
     """
-    Builds the warm-up starting notifier post matching Algerian deal channels:
-    - Highlights booking coupons exactly at 08:00 AM (حجز الكوبونات على الساعة 08:00 صباحاً)
-    - Preparation steps (Cart setup + Daily Coins)
-    - Authentic Algerian deal language
+    Builds the warm-up starting notifier post matching authentic Algerian deal channels:
+    - Lists active official coupons
+    - Explains coupon booking / saving tutorial using high-value phone link
+    - Sets 08:00 AM booking alert
     """
     lines = [
-        f"<blockquote>🚨 <b>تنبيه هام | انطلاق التخفيضات والكوبونات غداً على الساعة {start_hour_str} صباحاً! 🇩🇿</b></blockquote>",
+        f"🚨 <b>كوبونات حدث {promo.name_ar} لشهر أكتوبر!</b> 🛍️",
+        f"تنطلق غداً <b>01 أكتوبر وتستمر إلى غاية 07 أكتوبر</b> 🗓️",
         "",
-        f"🎯 <b>الحدث التخفيضي:</b> {promo.name_ar}",
-        f"⏰ <b>موعد الانطلاق والتفعيل:</b> غداً صباحاً عند الساعة <b>{start_hour_str} تماماً</b> بتوقيت الجزائر",
+        "🎟️ <b>كوبون 2/15$ :</b> <code>OTPRD02</code>",
+        "🎟️ <b>كوبون 4/30$ :</b> <code>OTPRD04</code>",
+        "🎟️ <b>كوبون 8/65$ :</b> <code>OTPRD08</code>",
+        "🎟️ <b>كوبون 15/119$ :</b> <code>OTPRD15</code>",
+        "🎟️ <b>كوبون 29/229$ :</b> <code>OTPRD28</code>",
+        "🎟️ <b>كوبون 42/339$ :</b> <code>OTPRD42</code>",
+        "🎟️ <b>كوبون 55/449$ :</b> <code>OTPRD55</code>",
         "",
-        f"🔴 <b>احجزوا الكوبونات وطبقوها على الساعة {start_hour_str} صباحاً بالضبط:</b>",
-        f"جميع الكوبونات القوية تبدأ العمل غداً على <b>{start_hour_str} صباحاً</b>. الكميات محدودة جداً وتطير في الدقائق الأولى من الانطلاق.. جهز نفسك واغتنم الفرصة!",
+        f"⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك (طبقوها غداً على {start_hour_str} صباحاً 🔥👌🏽):</b>",
+        "⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ($55 ثم $42...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅",
         "",
-        f"🛒 <b>دليل الاستعداد قبل انطلاق الساعة {start_hour_str}:</b>",
-        "1️⃣ <b>وجد السلة تاعك (Cart):</b> خير المنتجات اللي راك حاب تشريهم وحطهم فالسلة من درك باش ما يهربلكش الستوك.",
-        "2️⃣ <b>اجمع العملات (Coins):</b> ادخل لقسم العملات واجمع رصيدك اليومي المجاني لمضاعفة نسبة الخصم.",
-        f"3️⃣ <b>طبق الكوبون على {start_hour_str}:</b> فور حلول الساعة {start_hour_str} دخل كود الخصم ودير Valider مباشرة.",
+        "🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب (كل الكوبونات مقبولة عليه) ⤵️</b>",
+        "https://s.click.aliexpress.com/e/_c3ecIizb",
         "",
-        "🔔 <i>فعلوا إشعارات القناة من درك.. سننشر فور الانطلاق أقوى الصيدات وقوائم الأكواد الشغالة!</i>",
+        "لا تنسى استخدام البوت للشراء بأقل الأسعار ومضاعفة خصم العملات :",
+        "👉 t.me/Alilo07BOT",
         "━━━━━━━━━━━━━━━━━",
-        "🪙 <b>بوت مضاعفة تخفيض العملات:</b> @Alilo07BOT",
-        "📢 <b>قناة الصيدات اليومية:</b> @DzAliexpress0",
-        "🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس #تخفيضات_علي_اكسبرس #AliExpressDZ</i>"
+        "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0",
+        "🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس #ChoiceDay</i>"
     ]
 
     text = "\n".join(lines)
     reply_markup = {
         "inline_keyboard": [
             [
-                {"text": "🪙 بوت تخفيض العملات DealScout", "url": "https://t.me/Alilo07BOT"}
+                {"text": "🛒 رابط حجز وتثبيت الكوبونات في الحساب", "url": "https://s.click.aliexpress.com/e/_c3ecIizb"}
             ],
             [
-                {"text": "📢 قناة الصيدات المعتمدة", "url": "https://t.me/DzAliexpress0"}
+                {"text": "🪙 بوت تخفيض العملات DealScout", "url": "https://t.me/Alilo07BOT"}
             ]
         ]
     }
@@ -127,23 +131,38 @@ async def send_promo_alert_to_channel(
     bot_token: Optional[str] = None,
     channel_id: Optional[str] = None
 ) -> Tuple[bool, Optional[str], Optional[int]]:
-    """Dispatches the alert message to the target Telegram channel using HTML blockquote styling."""
+    """Dispatches the alert message to the target Telegram channel using photo banner if available."""
     token = bot_token or ADMIN_BOT_TOKEN or TELEGRAM_BOT_TOKEN
     target = channel_id or TARGET_CHANNEL_ID
 
     api_url = f"https://api.telegram.org/bot{token}"
+    banner_path = os.path.join(settings.BASE_DIR, "storage", "assets", "choice_day_banner.png")
+
     try:
-        async with httpx.AsyncClient(timeout=15.0) as client:
-            resp = await client.post(
-                f"{api_url}/sendMessage",
-                json={
-                    "chat_id": target,
-                    "text": text,
-                    "parse_mode": "HTML",
-                    "reply_markup": reply_markup,
-                    "disable_web_page_preview": True
-                }
-            )
+        async with httpx.AsyncClient(timeout=25.0) as client:
+            if os.path.exists(banner_path) and len(text) <= 1024:
+                with open(banner_path, "rb") as pf:
+                    resp = await client.post(
+                        f"{api_url}/sendPhoto",
+                        data={
+                            "chat_id": target,
+                            "caption": text,
+                            "parse_mode": "HTML",
+                            "reply_markup": json.dumps(reply_markup)
+                        },
+                        files={"photo": ("choice_day_banner.png", pf, "image/png")}
+                    )
+            else:
+                resp = await client.post(
+                    f"{api_url}/sendMessage",
+                    json={
+                        "chat_id": target,
+                        "text": text,
+                        "parse_mode": "HTML",
+                        "reply_markup": reply_markup,
+                        "disable_web_page_preview": True
+                    }
+                )
             data = resp.json()
             if resp.status_code == 200 and data.get("ok"):
                 msg_id = data.get("result", {}).get("message_id")
