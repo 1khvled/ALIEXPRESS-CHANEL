@@ -1,39 +1,13 @@
 {
-  "published_post_keys": [
-    "francecp:394",
-    "francecp:395",
-    "francecp:403",
-    "francecp:397",
-    "francecp:411",
-    "francecp:396",
-    "francecp:409",
-    "francecp:406",
-    "francecp:400",
-    "francecp:408",
-    "francecp:404",
-    "francecp:399"
-  ],
-  "published_product_ids": [
-    "1005011584731160",
-    "1005012101241211",
-    "1005012491876584",
-    "1005012282671673",
-    "1005012030178344",
-    "1005010356100546",
-    "1005011654106789",
-    "1005008084309191",
-    "1005012193894043",
-    "1005012948532401",
-    "1005010587574277",
-    "1005012154507020"
-  ],
+  "published_post_keys": [],
+  "published_product_ids": [],
   "monitored_channels": {
     "francecp": {
       "last_message_id": 413,
-      "last_check_time": 1790806903.6445477
+      "last_check_time": 1790807600.0
     }
   },
-  "last_run_time": 1790807465.9944332,
+  "last_run_time": 1790807608.8126245,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001"
   ]
