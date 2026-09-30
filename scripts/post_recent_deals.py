@@ -219,6 +219,14 @@ async def collect_and_post_last_10_deals():
                         max_processed_id = max(max_processed_id, msg_id)
                         continue
 
+                    # Extract source post photo if present (competitor's coupon banner)
+                    source_photo_url = None
+                    photo_wrap = block.find("a", class_="tgme_widget_message_photo_wrap")
+                    if photo_wrap and photo_wrap.get("style"):
+                        m_url = re.search(r"url\(['\"]?(https?://[^'\"]+)['\"]?\)", photo_wrap["style"])
+                        if m_url:
+                            source_photo_url = m_url.group(1)
+
                     raw_text = text_div.get_text(separator="\n").strip()
 
                     # 1. Parse message timestamp and enforce maximum 2h freshness
@@ -324,12 +332,19 @@ async def collect_and_post_last_10_deals():
 
                     # 10. Prepare Image with subtle circular DealScout logo watermark
                     local_img_file = None
-                    if extracted.is_coupon_list and extracted.coupon_list:
-                        # Render high-definition branded coupon bulletin card
-                        local_img_file = media_renderer.render_coupon_bulletin_card(
-                            extracted.coupon_list,
-                            promo_title="Party Ready Sale"
-                        )
+                    if extracted.is_coupon_list:
+                        # Use competitor's official promo/coupon banner photo if available
+                        if source_photo_url:
+                            downloaded = await media_downloader.download_image(source_photo_url, identifier=f"coupon_{extracted.product_id}")
+                            if downloaded:
+                                local_img_file = downloaded
+
+                        # Fallback to rendered card only if competitor posted text-only
+                        if not local_img_file and extracted.coupon_list:
+                            local_img_file = media_renderer.render_coupon_bulletin_card(
+                                extracted.coupon_list,
+                                promo_title="Party Ready Sale"
+                            )
                     elif img_url:
                         downloaded = await media_downloader.download_image(img_url, extracted.product_id)
                         if downloaded:
