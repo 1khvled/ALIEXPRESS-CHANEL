@@ -180,7 +180,16 @@ async def send_france_promo_alert(text: str, reply_markup: Dict[str, Any]) -> Tu
                 )
             data = resp.json()
             if resp.status_code == 200 and data.get("ok"):
-                return True, None, data.get("result", {}).get("message_id")
+                msg_id = data.get("result", {}).get("message_id")
+                if msg_id:
+                    try:
+                        await client.post(
+                            f"{api_url}/pinChatMessage",
+                            json={"chat_id": TARGET_FRANCE_CHANNEL, "message_id": msg_id, "disable_notification": False}
+                        )
+                    except Exception as pe:
+                        logger.warning(f"Failed to auto-pin France message {msg_id}: {pe}")
+                return True, None, msg_id
             return False, data.get("description", "Error"), None
     except Exception as e:
         logger.error(f"Error sending France promo alert: {e}")

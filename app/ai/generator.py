@@ -222,41 +222,37 @@ class DealCaptionGenerator:
         dzd_approx = int(usd_price * 249) if usd_price else 0
 
         lines.append("")
-        lines.append(f"✅ <b>{safe_title}</b>")
+        safe_title = html.escape(title)
+        lines.append(f"⭐️ <b>{safe_title}</b>")
 
         if usd_price and usd_price > 0:
-            dzd_str = f" (~<b>{dzd_approx:,} دج</b>)" if dzd_approx > 0 else ""
-            lines.append(f"💰 <b>السعر:</b> <b>${usd_price:.2f}</b>{dzd_str}")
+            if eur_price and eur_price > 0:
+                lines.append(f"💵 <b>السعر :</b> <b>${usd_price:.2f} ({eur_price:.2f}€)</b> 🔥")
+            else:
+                lines.append(f"💵 <b>السعر :</b> <b>${usd_price:.2f}</b> 🔥")
         else:
-            lines.append("💰 <b>السعر:</b> <b>سعر خاص ومخفض</b>")
+            lines.append("💵 <b>السعر :</b> <b>سعر خاص ومخفض</b> 🔥")
 
         if seller_coupon:
-            lines.append(f"🎫 <b>قسيمة المتجر:</b> <code>{html.escape(seller_coupon)}</code>")
+            lines.append(f"🌷 <b>احجــز قسيمــة البــائع :</b> <code>{html.escape(seller_coupon)}</code>")
 
         if coupon_code:
-            lines.append(f"🎟️ <b>كود الخصم:</b> <code>{html.escape(coupon_code)}</code>")
+            lines.append(f"🎟️ <b>كوبــون الخصم :</b> <code>{html.escape(coupon_code)}</code>")
 
         if has_points_discount:
-            lines.append("🪙 <b>تخفيض العملات (Coins):</b> مفعّل عبر الرابط")
+            lines.append("🪙 <b>تخفيض العملات مفعّل عبر الرابط</b>")
 
         lines.append("")
         if coin_url and coin_url != affiliate_url and "coin-index" not in str(affiliate_url):
-            lines.append("🛒 <b>رابط الطلب المباشر ⬇️</b>")
-            lines.append(f"{affiliate_url}")
-            lines.append("")
-            lines.append("🪙 <b>رابط أقصى تخفيض بالعملات (Coins) ⬇️</b>")
-            lines.append(f"{coin_url}")
+            lines.append(f"🔗 <b>رابـــــط المنتـــج :</b> {affiliate_url}")
+            lines.append(f"🪙 <b>رابط تخفيض العملات :</b> {coin_url}")
         else:
-            if has_points_discount or "coin-index" in str(affiliate_url):
-                lines.append("🪙 <b>رابط الشراء بتخفيض العملات ⬇️</b>")
-            else:
-                lines.append("🛒 <b>رابط الطلب ⬇️</b>")
-            lines.append(f"{affiliate_url}")
+            lines.append(f"🔗 <b>رابـــــط المنتـــج :</b> {affiliate_url}")
 
         lines.append("")
-        lines.append("🪙 <i>استخدم بوت العملات للشراء بأقل سعر:</i> @Alilo07BOT")
-        lines.append("📢 <i>قناة الصيدات اليومية: @DzAliexpress0</i>")
-        lines.append("🔍 <i>#عروض_علي_اكسبرس #تخفيضات_علي_اكسبرس #AliExpressDZ #AliExpress</i>")
+        lines.append("😊 <b>لا تنسى استخدام البوت للشراء بأفضل سعر وتخفيض العملات :</b>")
+        lines.append("👉 t.me/Alilo07BOT")
+        lines.append("📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0")
 
         return "\n".join(lines)
 

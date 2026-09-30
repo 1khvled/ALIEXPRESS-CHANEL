@@ -181,6 +181,14 @@ async def send_promo_alert_to_channel(
             data = resp.json()
             if resp.status_code == 200 and data.get("ok"):
                 msg_id = data.get("result", {}).get("message_id")
+                if msg_id:
+                    try:
+                        await client.post(
+                            f"{api_url}/pinChatMessage",
+                            json={"chat_id": target, "message_id": msg_id, "disable_notification": False}
+                        )
+                    except Exception as pe:
+                        logger.warning(f"Failed to auto-pin message {msg_id}: {pe}")
                 return True, None, msg_id
             return False, data.get("description", "Telegram API returned non-OK"), None
     except Exception as e:

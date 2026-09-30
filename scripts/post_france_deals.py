@@ -389,6 +389,19 @@ async def collect_and_post_france_deals():
                         published_pids.add(extracted.product_id)
                     max_processed_id = max(max_processed_id, msg_id)
                     print(f"  [PUBLISHED #{published_count} to {TARGET_FRANCE_CHANNEL}] Msg #{channel_msg_id}: {extracted.title}")
+
+                    # Auto-pin coupon bulletins
+                    if extracted.is_coupon_list and channel_msg_id:
+                        try:
+                            bot_tok = settings.TELEGRAM_BOT_TOKEN
+                            async with httpx.AsyncClient(timeout=10.0) as pc:
+                                await pc.post(
+                                    f"https://api.telegram.org/bot{bot_tok}/pinChatMessage",
+                                    json={"chat_id": TARGET_FRANCE_CHANNEL, "message_id": channel_msg_id, "disable_notification": False}
+                                )
+                        except Exception as pe:
+                            logger.warning(f"Failed to auto-pin France coupon bulletin {channel_msg_id}: {pe}")
+
                     await asyncio.sleep(2.0)
                 else:
                     print(f"  [!] Publish to {TARGET_FRANCE_CHANNEL} failed: {err}")

@@ -461,6 +461,19 @@ async def collect_and_post_last_10_deals():
                                 .order_by(desc(TelegramPost.id))
                             )).scalar_one_or_none()
 
+                            # Auto-pin coupon bulletins
+                            if extracted.is_coupon_list and post_msg_id:
+                                try:
+                                    bot_tok = settings.TELEGRAM_BOT_TOKEN
+                                    target_ch = settings.TELEGRAM_CHANNEL_ID
+                                    async with httpx.AsyncClient(timeout=10.0) as pc:
+                                        await pc.post(
+                                            f"https://api.telegram.org/bot{bot_tok}/pinChatMessage",
+                                            json={"chat_id": target_ch, "message_id": post_msg_id, "disable_notification": False}
+                                        )
+                                except Exception as pe:
+                                    logger.warning(f"Failed to auto-pin coupon bulletin {post_msg_id}: {pe}")
+
                             record_post_published(
                                 ch, msg_id, deal.product_id, deal.title,
                                 channel_msg_id=post_msg_id,
