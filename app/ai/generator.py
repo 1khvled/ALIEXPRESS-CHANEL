@@ -29,9 +29,9 @@ class DealCaptionGenerator:
         # 1. Price-Drop Arbitrage Hook
         if is_price_drop:
             price_drop_hooks = [
-                "💥 <b>نزول إضافي في السعر 🔥📉</b>",
-                "⚡ <b>طاح السعر أكثر.. ألحـــــق لافــــــــــــــار! 🔥</b>",
-                "🔥 <b>تخفيض إضافي حصري قوي 🔥</b>"
+                "💥 <b>هبوط قوي في السعر.. ألحـــــق لافــــــــــــــار! 📉🔥</b>",
+                "⚡ <b>طاح السعر أكثر.. تخفيض إضافي ناااار 🔥</b>",
+                "🔥 <b>نزول إضافي في السعر صيدة اليوم متتراطاش 🔥</b>"
             ]
             return price_drop_hooks[h % len(price_drop_hooks)]
 
@@ -62,61 +62,44 @@ class DealCaptionGenerator:
 
         if is_gaming:
             return (
-                "🎮 <b>عتـاد قيمنق بسـعر مـمـتاز 🔥🔥</b>" if (h % 2 == 0)
-                else "🕹️ <b>لافـار قيمنق متتفـوّتش 🔥⚡</b>"
+                "🎮 <b>لافاااااار قيمنق متتفوتش عتاد بأقوى سعر 🔥🕹️</b>" if (h % 2 == 0)
+                else "🕹️ <b>صيدة قيمنق خيالية بسعر باطل 🔥⚡</b>"
             )
 
         if is_audio:
             return (
-                "🎧 <b>صـوت نقي وسـعر لافـار 🔥🔥</b>" if (h % 2 == 0)
-                else "🔊 <b>تخفيض ممتاز على السـماعات ⚡</b>"
+                "🎧 <b>صوت نقي وسعر لافار هبال متتراطاش 🔥🎧</b>" if (h % 2 == 0)
+                else "🔊 <b>تخفيض ممتاز على السماعات صيدة نااار ⚡</b>"
             )
 
         if is_storage:
             return (
-                "💾 <b>لافـار قوية في مساحة التخزين 🔥⚡</b>" if (h % 2 == 0)
-                else "⚡ <b>عتـاد كمبيوتر بأقوى سعر 🔥</b>"
+                "💾 <b>صيدة اليوم في التخزين والكمبيوتر هبال 🔥⚡</b>" if (h % 2 == 0)
+                else "⚡ <b>عتاد كمبيوتر وتخزين بأقوى سعر 🔥</b>"
             )
 
         if is_power:
             return (
-                "🔌 <b>شواحن وكوابل سريعة بسعر باطل 🔥⚡</b>" if (h % 2 == 0)
-                else "⚡ <b>تخفيض قوي على ملحقات الشحن 🔥</b>"
+                "🔌 <b>شواحن وكوابل سريعة بسعر باطل هبال 🔥⚡</b>" if (h % 2 == 0)
+                else "⚡ <b>تخفيض قوي على ملحقات الشحن الأصلية 🔥</b>"
             )
 
         if is_watch:
             return (
-                "⌚ <b>ساعة ذكية بأناقة وسعر خيالي 🔥</b>" if (h % 2 == 0)
-                else "⌚ <b>سـعر ممـتاز لسـاعة ذكية ⚡</b>"
+                "⌚ <b>ساعة ذكية بأناقة وسعر خيالي لافار 🔥</b>" if (h % 2 == 0)
+                else "⌚ <b>سعر ممتاز لساعة ذكية ألحق الصيدة ⚡</b>"
             )
 
-        candidates = []
+        candidates = [
+            "🔥 <b>لافاااااااااااار ناااار صيدة اليوم 💥</b>",
+            "⚡ <b>ألحـــــق لافــــــــــــــار بأقوى سعر 🔥</b>",
+            "💥 <b>سعر هبااااال متتفوتش لافار 🔥</b>",
+            "🪙 <b>تخفيض قوي بالعملات (Coins) سعر خيالي 🔥🪙</b>",
+            "🎯 <b>صيدة ناااار بأفضل سعر ممكن 🔥</b>"
+        ]
 
         if has_points_discount:
-            candidates.extend([
-                "🪙 <b>تخفيض قوي بالعملات 🔥</b>",
-                "⚡ <b>ألحـــــق لافــــــــــــــار</b>",
-                "🔥 <b>ســـعـــر ممتـــــــــــــــــــــــــاز</b>",
-            ])
-
-        if usd_price and usd_price < 25.0:
-            candidates.extend([
-                "⚡ <b>ألحـــــق لافــــــــــــــار</b>",
-                "🔥 <b>ســـعـــر ممتـــــــــــــــــــــــــاز</b>",
-                "💥 <b>هبوط قوي في السعر 🔥</b>",
-            ])
-
-        if has_coupon:
-            candidates.extend([
-                "🎟️ <b>تخفيض قوي بالكود 🔥</b>",
-                "🔥 <b>ســـعـــر ممتـــــــــــــــــــــــــاز</b>",
-            ])
-
-        candidates.extend([
-            "🔥 <b>ســـعـــر ممتـــــــــــــــــــــــــاز</b>",
-            "⚡ <b>ألحـــــق لافــــــــــــــار</b>",
-            "💥 <b>هبوط قوي في السعر 🔥</b>",
-        ])
+            candidates.append("🪙 <b>تخفيض قوي بالعملات (Coins) سعر خيالي 🔥🪙</b>")
 
         return candidates[h % len(candidates)]
 
@@ -128,11 +111,15 @@ class DealCaptionGenerator:
     ) -> str:
         """
         Builds authentic Algerian coupon bulletin format for multi-coupon lists.
+        Explicitly instructs users to book coupons at 08:00 AM Algerian time.
         """
         lines = [
-            f"✨📢 <b>ظهور كوبونات جديدة بمناسبة تخفيضات {promo_name} احجزها الآن!</b> 📢✨",
+            f"✨📣 <b>ظهور كوبونات تخفيضات {promo_name} الرسمية لشهر أكتوبر!</b> 📣✨",
+            "⏰ <b>تنبيه هام:</b> الكوبونات تبدأ العمل وتتفعل غداً 01 أكتوبر على <b>الساعة 08:00 صباحاً</b> بتوقيت الجزائر 🇩🇿",
+            "🔴 <b>احجزوا الكوبونات وطبقوها على الساعة 08:00 صباحاً بالضبط:</b>",
+            "الكميات محدودة جداً وتنفد في الدقائق الأولى من الانطلاق.. وجد السلة تاعك من درك! 🏃💨",
             "",
-            "✅ <b>قائمة الكوبونات:</b>",
+            "✅ <b>قائمة الكوبونات المعتمدة (قابلة للحجز والتطبيق):</b>",
             ""
         ]
 
@@ -145,11 +132,11 @@ class DealCaptionGenerator:
                 lines.append(f"🎟️ <b>كوبــــــون :</b> <code>{code}</code>")
 
         lines.append("")
-        lines.append("✅ <b>رابط المناسبة وتفعيل الكوبونات ⬇️</b>")
+        lines.append("🔗 <b>رابط صفحة المناسبة وتفعيل الكوبونات ⬇️</b>")
         lines.append(f"{affiliate_url}")
         lines.append("")
-        lines.append("⭐ <i>لا تنسى استخدام بوت العملات للشراء بأقل الأسعار:</i> @Alilo07BOT")
-        lines.append("📢 <i>قناة العروض: @DzAliexpress0</i>")
+        lines.append("🪙 <b>لا تنسى استخدام بوت العملات للشراء بأقل سعر:</b> @Alilo07BOT")
+        lines.append("📢 <b>قناة الصيدات اليومية:</b> @DzAliexpress0")
         lines.append("🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس #AliExpressDZ #AliExpress</i>")
 
         return "\n".join(lines)
@@ -216,15 +203,15 @@ class DealCaptionGenerator:
         if country_info:
             c_str = str(country_info).lower()
             if "كوريا" in country_info or "korea" in c_str or "kr" in c_str:
-                lines.append("خلي البلـــد كــــــوريا 🇰🇷")
+                lines.append("📍 خلي البلـــد <b>كــــــوريا 🇰🇷</b>")
             elif "كندا" in country_info or "canada" in c_str or "ca" in c_str:
-                lines.append("خلي البلـــد كــــــندا 🇨🇦")
+                lines.append("📍 خلي البلـــد <b>كــــــندا 🇨🇦</b>")
             elif "الجزائر" in country_info or "algeria" in c_str or "dz" in c_str:
-                lines.append("بلد الحساب <b>الجزائر 🇩🇿</b>")
+                lines.append("📍 بلد الحساب <b>الجزائر 🇩🇿</b>")
             elif "فرنسا" in country_info or "france" in c_str or "fr" in c_str:
-                lines.append("خلي البلـــد فـــرنسا 🇫🇷")
+                lines.append("📍 خلي البلـــد <b>فـــرنسا 🇫🇷</b>")
             elif "إسبانيا" in country_info or "spain" in c_str or "es" in c_str:
-                lines.append("خلي البلـــد إسبـــانيا 🇪🇸")
+                lines.append("📍 خلي البلـــد <b>إسبـــانيا 🇪🇸</b>")
 
         import html
         safe_title = html.escape(title)
@@ -245,27 +232,28 @@ class DealCaptionGenerator:
             lines.append(f"🎫 <b>قسيمة المتجر:</b> <code>{html.escape(seller_coupon)}</code>")
 
         if coupon_code:
-            lines.append(f"🎟️ <b>الكوبون:</b> <code>{html.escape(coupon_code)}</code>")
+            lines.append(f"🎟️ <b>كود الخصم:</b> <code>{html.escape(coupon_code)}</code>")
 
         if has_points_discount:
-            lines.append("🪙 <b>تخفيض العملات:</b> مفعّل عبر الرابط")
+            lines.append("🪙 <b>تخفيض العملات (Coins):</b> مفعّل عبر الرابط")
 
         lines.append("")
         if coin_url and coin_url != affiliate_url and "coin-index" not in str(affiliate_url):
-            lines.append("📎 <b>رابط الشراء ⬇️</b>")
+            lines.append("🛒 <b>رابط الطلب المباشر ⬇️</b>")
             lines.append(f"{affiliate_url}")
             lines.append("")
             lines.append("🪙 <b>رابط أقصى تخفيض بالعملات (Coins) ⬇️</b>")
             lines.append(f"{coin_url}")
         else:
             if has_points_discount or "coin-index" in str(affiliate_url):
-                lines.append("📎 <b>رابط الشراء بتخفيض العملات ⬇️</b>")
+                lines.append("🪙 <b>رابط الشراء بتخفيض العملات ⬇️</b>")
             else:
-                lines.append("📎 <b>رابط الشراء المباشر ⬇️</b>")
+                lines.append("🛒 <b>رابط الطلب ⬇️</b>")
             lines.append(f"{affiliate_url}")
 
         lines.append("")
-        lines.append("📢 <i>قناة العروض: @DzAliexpress0</i>")
+        lines.append("🪙 <i>استخدم بوت العملات للشراء بأقل سعر:</i> @Alilo07BOT")
+        lines.append("📢 <i>قناة الصيدات اليومية: @DzAliexpress0</i>")
         lines.append("🔍 <i>#عروض_علي_اكسبرس #تخفيضات_علي_اكسبرس #AliExpressDZ #AliExpress</i>")
 
         return "\n".join(lines)

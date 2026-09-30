@@ -40,6 +40,35 @@ def is_admin(user_id: int) -> bool:
             return True
     return False
 
+# User Hourly Rate Limiter (Max 20 links / hour per user to prevent spam & abuse)
+_USER_LINK_REQUESTS: Dict[int, List[float]] = {}
+MAX_LINKS_PER_HOUR = 20
+
+def check_and_record_rate_limit(user_id: int) -> Tuple[bool, int, float]:
+    """
+    Enforces hourly rate limiting: max 20 links per hour per user.
+    Returns: (is_limited: bool, current_hourly_count: int, seconds_to_wait: float)
+    Admins are fully exempt.
+    """
+    if is_admin(user_id):
+        return False, 0, 0.0
+
+    now = time.time()
+    cutoff = now - 3600.0
+
+    timestamps = _USER_LINK_REQUESTS.get(user_id, [])
+    valid_ts = [ts for ts in timestamps if ts > cutoff]
+    _USER_LINK_REQUESTS[user_id] = valid_ts
+
+    if len(valid_ts) >= MAX_LINKS_PER_HOUR:
+        oldest_ts = valid_ts[0]
+        wait_seconds = max(1.0, 3600.0 - (now - oldest_ts))
+        return True, len(valid_ts), wait_seconds
+
+    valid_ts.append(now)
+    _USER_LINK_REQUESTS[user_id] = valid_ts
+    return False, len(valid_ts), 0.0
+
 # Cache for SquareAlgerie live USDT rate
 _CACHED_USDT_RATE = 249.0
 _CACHED_USDT_TIME = 0.0
@@ -856,6 +885,18 @@ async def handle_update(update: Dict[str, Any]) -> bool:
             "💡 أو اكتب /calc لحساب الأسعار بالدينار، أو /help لمعرفة كيفية الاستخدام."
         )
         await send_msg(chat_id, help_msg)
+        return True
+
+    # 4. Enforce Hourly Rate Limiting (Max 20 links per hour per user)
+    is_limited, req_count, wait_sec = check_and_record_rate_limit(user_id)
+    if is_limited:
+        wait_min = int(wait_sec // 60) + 1
+        rate_msg = (
+            "⏳ <b>عذراً! لقد وصلت إلى الحد الأقصى للطلبات (20 رابط في الساعة).</b>\n\n"
+            f"لتفادي الضغط على السيرفرات ولحماية الخدمة للجميع، يرجى الانتظار <b>~{wait_min} دقيقة</b> قبل إرسال روابط جديدة.\n\n"
+            "📢 <i>تابع أحدث الصيدات الحصرية المنشورة مباشرة على قناتنا:</i> @DzAliexpress0"
+        )
+        await send_msg(chat_id, rate_msg)
         return True
 
     # Send typing action in background

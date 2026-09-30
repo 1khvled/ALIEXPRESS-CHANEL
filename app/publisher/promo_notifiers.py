@@ -64,27 +64,30 @@ def build_promo_ending_alert(promo: PromoEvent, end_hour_str: str = "08:00") -> 
 
 def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00") -> Tuple[str, Dict[str, Any]]:
     """
-    Builds the warm-up starting notifier post:
-    - Native Telegram blockquote countdown
+    Builds the warm-up starting notifier post matching Algerian deal channels:
+    - Highlights booking coupons exactly at 08:00 AM (حجز الكوبونات على الساعة 08:00 صباحاً)
     - Preparation steps (Cart setup + Daily Coins)
-    - Notification reminder for first-minute coupon drops
-    - Branded DealScout theme & inline links
+    - Authentic Algerian deal language
     """
     lines = [
-        f"<blockquote>⏳ <b>استعداد لانطلاق التخفيضات | غداً صباحاً عند الساعة {start_hour_str}!</b></blockquote>",
+        f"<blockquote>🚨 <b>تنبيه هام | انطلاق التخفيضات والكوبونات غداً على الساعة {start_hour_str} صباحاً! 🇩🇿</b></blockquote>",
         "",
-        f"🎯 <b>الحدث التخفيضي المرتقب:</b> {promo.name_ar}",
-        f"🗓 <b>موعد الانطلاق الرسمي:</b> غداً صباحاً عند الساعة {start_hour_str} (بتوقيت الجزائر)",
+        f"🎯 <b>الحدث التخفيضي:</b> {promo.name_ar}",
+        f"⏰ <b>موعد الانطلاق والتفعيل:</b> غداً صباحاً عند الساعة <b>{start_hour_str} تماماً</b> بتوقيت الجزائر",
         "",
-        "🛒 <b>دليل الاستعداد لاقتناص أكبر نسبة تخفيض:</b>",
-        "1️⃣ <b>تجهيز السلة:</b> أضف المنتجات المرغوبة إلى السلة (Cart) من الآن لتفادي نفاد المخزون.",
-        "2️⃣ <b>تجميع رصيد العملات:</b> ادخل لقسم Coins واجمع رصيدك اليومي المجاني لمضاعفة الخصم.",
-        "3️⃣ <b>ترقّب الكوبونات الحصرية:</b> سننشر هنا في القناة فور الانطلاق قائمة الأكواد المعتمدة لكل الفئات.",
+        f"🔴 <b>احجزوا الكوبونات وطبقوها على الساعة {start_hour_str} صباحاً بالضبط:</b>",
+        f"جميع الكوبونات القوية تبدأ العمل غداً على <b>{start_hour_str} صباحاً</b>. الكميات محدودة جداً وتطير في الدقائق الأولى من الانطلاق.. جهز نفسك واغتنم الفرصة!",
         "",
-        "💡 <i>تنبيه: أقوى الكوبونات وأفضل الصيدات تنفد في الدقائق الأولى من الانطلاق.. تأكد من تفعيل إشعارات القناة!</i>",
+        f"🛒 <b>دليل الاستعداد قبل انطلاق الساعة {start_hour_str}:</b>",
+        "1️⃣ <b>وجد السلة تاعك (Cart):</b> خير المنتجات اللي راك حاب تشريهم وحطهم فالسلة من درك باش ما يهربلكش الستوك.",
+        "2️⃣ <b>اجمع العملات (Coins):</b> ادخل لقسم العملات واجمع رصيدك اليومي المجاني لمضاعفة نسبة الخصم.",
+        f"3️⃣ <b>طبق الكوبون على {start_hour_str}:</b> فور حلول الساعة {start_hour_str} دخل كود الخصم ودير Valider مباشرة.",
+        "",
+        "🔔 <i>فعلوا إشعارات القناة من درك.. سننشر فور الانطلاق أقوى الصيدات وقوائم الأكواد الشغالة!</i>",
         "━━━━━━━━━━━━━━━━━",
         "🪙 <b>بوت مضاعفة تخفيض العملات:</b> @Alilo07BOT",
-        "📢 <b>قناة الصفقات المعتمدة:</b> @DzAliexpress0"
+        "📢 <b>قناة الصيدات اليومية:</b> @DzAliexpress0",
+        "🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس #تخفيضات_علي_اكسبرس #AliExpressDZ</i>"
     ]
 
     text = "\n".join(lines)
@@ -94,7 +97,7 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
                 {"text": "🪙 بوت تخفيض العملات DealScout", "url": "https://t.me/Alilo07BOT"}
             ],
             [
-                {"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}
+                {"text": "📢 قناة الصيدات المعتمدة", "url": "https://t.me/DzAliexpress0"}
             ]
         ]
     }
