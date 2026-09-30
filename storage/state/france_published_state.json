@@ -1,11 +1,25 @@
 {
-  "published_post_keys": [],
-  "published_product_ids": [],
+  "published_post_keys": [
+    "francecp:400",
+    "francecp:395",
+    "francecp:397",
+    "francecp:399",
+    "francecp:396",
+    "francecp:394"
+  ],
+  "published_product_ids": [
+    "1005012101241211",
+    "1005012491876584",
+    "1005012030178344",
+    "1005012282671673",
+    "1005011584731160",
+    "1005008084309191"
+  ],
   "monitored_channels": {
     "francecp": {
       "last_message_id": 413,
       "last_check_time": 1790806903.6445477
     }
   },
-  "last_run_time": 1790806903.6446528
+  "last_run_time": 1790807232.5329971
 }
