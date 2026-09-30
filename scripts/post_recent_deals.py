@@ -308,12 +308,7 @@ async def collect_and_post_last_10_deals():
                         deal_type=deal_type
                     )
 
-                    # 9. Coins Deep-Link Auto-Maximizer
-                    coin_deep_link = None
-                    if extracted.product_id:
-                        coin_deep_link = f"https://m.aliexpress.com/p/coin-index/index.html?productIds={extracted.product_id}"
-
-                    # 10. Generate caption with clean Algerian format (NO promo calendar banners on single deals)
+                    # 10. Generate caption with clean Algerian format (Single monetized referral link)
                     caption = await caption_generator.generate(
                         title=extracted.title or "AliExpress Deal",
                         usd_price=extracted.current_price,
@@ -326,7 +321,7 @@ async def collect_and_post_last_10_deals():
                         coupon_list=extracted.coupon_list if extracted.is_coupon_list else None,
                         promo_tag=None,
                         is_price_drop=is_price_drop,
-                        coin_url=coin_deep_link,
+                        coin_url=None,
                         raw_text=raw_text
                     )
 

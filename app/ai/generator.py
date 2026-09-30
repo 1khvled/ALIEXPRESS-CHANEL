@@ -236,11 +236,7 @@ class DealCaptionGenerator:
             lines.append("🪙 <b>تخفيض العملات مفعّل عبر الرابط</b>")
 
         lines.append("")
-        if coin_url and coin_url != affiliate_url and "coin-index" not in str(affiliate_url):
-            lines.append(f"🔗 <b>رابـــــط المنتـــج :</b>\n{affiliate_url}")
-            lines.append(f"🪙 <b>رابط تخفيض العملات :</b>\n{coin_url}")
-        else:
-            lines.append(f"🔗 <b>رابـــــط المنتـــج :</b>\n{affiliate_url}")
+        lines.append(f"🔗 <b>رابـــــط المنتـــج :</b>\n{affiliate_url}")
 
         lines.append("")
         lines.append("😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات :</b>")
