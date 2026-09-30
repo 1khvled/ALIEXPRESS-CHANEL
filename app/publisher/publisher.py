@@ -110,14 +110,17 @@ class TelegramPublisher:
         # Send via Telegram Bot API
         api_url = f"https://api.telegram.org/bot{self.bot_token}"
         try:
-            # Inline keyboard for direct purchase + coin discount bot
-            import json
-            inline_keyboard = []
-            if deal.affiliate_url and deal.affiliate_url.startswith("http"):
+            # Lody & ZedStore channel standard: Links inside text body, no inline keyboard on regular deals
+            # This ensures that Telegram forwards preserve the affiliate link intact!
+            reply_markup_json = None
+            if deal.affiliate_url and deal.affiliate_url.startswith("http") and deal.affiliate_url not in caption:
+                import json
                 btn_title = "🎟️ صفحة الكوبونات والتخفيضات" if getattr(deal, "quality_score", 0) == 95 and "كود" in caption else "🛒 رابط الشراء من AliExpress"
-                inline_keyboard.append([{"text": btn_title, "url": deal.affiliate_url}])
-            inline_keyboard.append([{"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": "https://t.me/Alilo07BOT"}])
-            reply_markup_json = json.dumps({"inline_keyboard": inline_keyboard})
+                inline_keyboard = [
+                    [{"text": btn_title, "url": deal.affiliate_url}],
+                    [{"text": "🪙 بوت تخفيض العملات DealScout", "url": "https://t.me/Alilo07BOT"}]
+                ]
+                reply_markup_json = json.dumps({"inline_keyboard": inline_keyboard})
 
             photo_bytes = None
             if image_path and image_path.exists():
@@ -132,17 +135,19 @@ class TelegramPublisher:
                             data = {
                                 "chat_id": self.target_channel,
                                 "caption": caption,
-                                "parse_mode": "HTML",
-                                "reply_markup": reply_markup_json
+                                "parse_mode": "HTML"
                             }
+                            if reply_markup_json:
+                                data["reply_markup"] = reply_markup_json
                             resp = await client.post(f"{api_url}/sendPhoto", data=data, files=files)
                         else:
                             data = {
                                 "chat_id": self.target_channel,
                                 "text": caption,
-                                "parse_mode": "HTML",
-                                "reply_markup": reply_markup_json
+                                "parse_mode": "HTML"
                             }
+                            if reply_markup_json:
+                                data["reply_markup"] = reply_markup_json
                             resp = await client.post(f"{api_url}/sendMessage", data=data)
 
                         if resp.status_code == 200:

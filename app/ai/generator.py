@@ -91,15 +91,17 @@ class DealCaptionGenerator:
             )
 
         candidates = [
-            "🔥 <b>لافاااااااااااار ناااار صيدة اليوم 💥</b>",
+            "🔥 <b>لافـــــــــــــــــــــــار هباااال 🔥</b>",
+            "🔥 <b>الحححححق عودة لافاااار ناااار 💥</b>",
             "⚡ <b>ألحـــــق لافــــــــــــــار بأقوى سعر 🔥</b>",
-            "💥 <b>سعر هبااااال متتفوتش لافار 🔥</b>",
-            "🪙 <b>تخفيض قوي بالعملات (Coins) سعر خيالي 🔥🪙</b>",
-            "🎯 <b>صيدة ناااار بأفضل سعر ممكن 🔥</b>"
+            "💥 <b>سعرها خيالي متتفوتش هبال 🔥</b>",
+            "🪙 <b>تخفيض قوي بالعملات (Coins) صيدة اليوم 🔥🪙</b>",
+            "🎯 <b>صيدة ناااار بأفضل سعر ممكن 🔥</b>",
+            "🚨 <b>العـــــرض مستمـــــر صيدة اليوم ⚡</b>"
         ]
 
         if has_points_discount:
-            candidates.append("🪙 <b>تخفيض قوي بالعملات (Coins) سعر خيالي 🔥🪙</b>")
+            candidates.append("🪙 <b>تخفيض قوي بالعملات (Coins) صيدة اليوم 🔥🪙</b>")
 
         return candidates[h % len(candidates)]
 
@@ -110,16 +112,15 @@ class DealCaptionGenerator:
         promo_name: Optional[str] = "Party Ready Sale"
     ) -> str:
         """
-        Builds authentic Algerian coupon bulletin format for multi-coupon lists.
-        Explicitly instructs users to book coupons at 08:00 AM Algerian time.
+        Builds authentic Algerian coupon bulletin format matching ZedStore & Lody.
         """
         lines = [
-            f"✨📣 <b>ظهور كوبونات تخفيضات {promo_name} الرسمية لشهر أكتوبر!</b> 📣✨",
+            f"📣 <b>كوبونات خاصة بتخفيضات {promo_name} لشهر أكتوبر! 🚨</b>",
             "⏰ <b>تنبيه هام:</b> الكوبونات تبدأ العمل وتتفعل غداً 01 أكتوبر على <b>الساعة 08:00 صباحاً</b> بتوقيت الجزائر 🇩🇿",
             "🔴 <b>احجزوا الكوبونات وطبقوها على الساعة 08:00 صباحاً بالضبط:</b>",
-            "الكميات محدودة جداً وتنفد في الدقائق الأولى من الانطلاق.. وجد السلة تاعك من درك! 🏃💨",
+            "الكميات محدودة جداً وتنفد في الدقائق الأولى.. جهز نفسك واغتنم الفرصة! 🏃💨",
             "",
-            "✅ <b>قائمة الكوبونات المعتمدة (قابلة للحجز والتطبيق):</b>",
+            "✅ <b>قـائمة الكوبونـات المعتمدة:</b>",
             ""
         ]
 
@@ -127,9 +128,9 @@ class DealCaptionGenerator:
             tier = item.get("tier", "").strip()
             code = item.get("code", "").strip()
             if tier and code:
-                lines.append(f"🎟️ <b>كوبــــــون {tier} :</b> <code>{code}</code>")
+                lines.append(f"🙏 <b>كـوبون {tier}$ :</b> ⏺ <code>{code}</code>")
             elif code:
-                lines.append(f"🎟️ <b>كوبــــــون :</b> <code>{code}</code>")
+                lines.append(f"🙏 <b>كـوبون :</b> ⏺ <code>{code}</code>")
 
         lines.append("")
         lines.append("⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك (طبقوها غداً على 08:00 صباحاً 🔥👌🏽):</b>")
@@ -137,9 +138,9 @@ class DealCaptionGenerator:
         lines.append("🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب (كل الكوبونات مقبولة عليه) ⤵️</b>")
         lines.append("https://s.click.aliexpress.com/e/_c3d8Osgp")
         lines.append("")
-        lines.append("🪙 <b>لا تنسى استخدام بوت العملات للشراء بأقل سعر:</b> @Alilo07BOT")
+        lines.append("😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات :</b>")
+        lines.append("👉 t.me/Alilo07BOT")
         lines.append("📢 <b>قناة الصيدات اليومية:</b> @DzAliexpress0")
-        lines.append("🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس #AliExpressDZ #AliExpress</i>")
 
         return "\n".join(lines)
 
@@ -168,9 +169,9 @@ class DealCaptionGenerator:
             "🔗 <b>رابط الدخول وتحصيل الكوبونات ⬇️</b>",
             f"{affiliate_url}",
             "",
-            "⭐ <i>لا تنسى استخدام بوت العملات للشراء بأقل الأسعار:</i> @Alilo07BOT",
-            "📢 <i>قناة العروض: @DzAliexpress0</i>",
-            "🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس #AliExpressDZ #AliExpress</i>"
+            "😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات :</b>",
+            "👉 t.me/Alilo07BOT",
+            "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0"
         ]
         return "\n".join(lines)
 
@@ -210,19 +211,11 @@ class DealCaptionGenerator:
                 lines.append("📍 خلي البلـــد <b>كــــــندا 🇨🇦</b>")
             elif "الجزائر" in country_info or "algeria" in c_str or "dz" in c_str:
                 lines.append("📍 بلد الحساب <b>الجزائر 🇩🇿</b>")
-            elif "فرنسا" in country_info or "france" in c_str or "fr" in c_str:
-                lines.append("📍 خلي البلـــد <b>فـــرنسا 🇫🇷</b>")
-            elif "إسبانيا" in country_info or "spain" in c_str or "es" in c_str:
-                lines.append("📍 خلي البلـــد <b>إسبـــانيا 🇪🇸</b>")
 
         import html
         safe_title = html.escape(title)
 
-        # Approximate DZD price (1 USD ≈ 249 DZD)
-        dzd_approx = int(usd_price * 249) if usd_price else 0
-
         lines.append("")
-        safe_title = html.escape(title)
         lines.append(f"⭐️ <b>{safe_title}</b>")
 
         if usd_price and usd_price > 0:
@@ -237,20 +230,20 @@ class DealCaptionGenerator:
             lines.append(f"🌷 <b>احجــز قسيمــة البــائع :</b> <code>{html.escape(seller_coupon)}</code>")
 
         if coupon_code:
-            lines.append(f"🎟️ <b>كوبــون الخصم :</b> <code>{html.escape(coupon_code)}</code>")
+            lines.append(f"🙏 <b>كـوبون الخصم :</b> ⏺ <code>{html.escape(coupon_code)}</code>")
 
         if has_points_discount:
             lines.append("🪙 <b>تخفيض العملات مفعّل عبر الرابط</b>")
 
         lines.append("")
         if coin_url and coin_url != affiliate_url and "coin-index" not in str(affiliate_url):
-            lines.append(f"🔗 <b>رابـــــط المنتـــج :</b> {affiliate_url}")
-            lines.append(f"🪙 <b>رابط تخفيض العملات :</b> {coin_url}")
+            lines.append(f"🔗 <b>رابـــــط المنتـــج :</b>\n{affiliate_url}")
+            lines.append(f"🪙 <b>رابط تخفيض العملات :</b>\n{coin_url}")
         else:
-            lines.append(f"🔗 <b>رابـــــط المنتـــج :</b> {affiliate_url}")
+            lines.append(f"🔗 <b>رابـــــط المنتـــج :</b>\n{affiliate_url}")
 
         lines.append("")
-        lines.append("😊 <b>لا تنسى استخدام البوت للشراء بأفضل سعر وتخفيض العملات :</b>")
+        lines.append("😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات :</b>")
         lines.append("👉 t.me/Alilo07BOT")
         lines.append("📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0")
 

@@ -164,35 +164,28 @@ class FranceDealCaptionGenerator:
             is_price_drop=is_price_drop
         )
         lines.append(hook)
-        lines.append("Livraison France 🇫🇷")
-        lines.append("")
 
         safe_title = html.escape(title)
-        lines.append(f"✅ <b>{safe_title}</b>")
+        lines.append(f"🔥 <b>{safe_title}</b>")
 
         if eur_price and eur_price > 0:
-            lines.append(f"💰 <b>Prix :</b> <b>{eur_price:.2f} €</b>")
+            lines.append(f"💸 <b>Prix :</b> {eur_price:.2f}€")
         elif usd_price and usd_price > 0:
             approx_eur = usd_price * (settings.EUR_USD_RATE or 0.92)
-            lines.append(f"💰 <b>Prix :</b> <b>~{approx_eur:.2f} €</b> (${usd_price:.2f})")
+            lines.append(f"💸 <b>Prix :</b> {approx_eur:.2f}€ (${usd_price:.2f})")
         else:
-            lines.append("💰 <b>Prix :</b> <b>Prix réduit exclusif</b>")
+            lines.append("💸 <b>Prix :</b> Prix réduit")
 
         if seller_coupon:
-            lines.append(f"🎫 <b>Coupon vendeur :</b> <code>{html.escape(seller_coupon)}</code>")
+            lines.append(f"🌷 <b>Coupon vendeur :</b> <code>{html.escape(seller_coupon)}</code>")
 
         if coupon_code:
-            lines.append(f"🎟️ <b>Code promo :</b> <code>{html.escape(coupon_code)}</code>")
+            lines.append(f"🤐 <b>Code :</b> <code>{html.escape(coupon_code)}</code>")
 
-        if has_points_discount:
-            lines.append("🪙 <b>Remise pièces (Coins) :</b> activée via le lien")
-
-        lines.append("")
-        lines.append("📎 <b>Lien de l'offre ⬇️</b>")
-        lines.append(f"{affiliate_url}")
-        lines.append("")
-        lines.append("📢 <i>Canal de bons plans : @francedealsdz</i>")
-        lines.append("🔍 <i>#AliExpressFrance #BonsPlans #CodesPromo #AliExpress</i>")
+        lines.append(f"🔗 <b>Lien :</b>\n{affiliate_url}")
+        lines.append("________________________________")
+        lines.append("🤖 <b>Utilisez le bot avant d'acheter :</b> @Alilo07BOT")
+        lines.append("📢 <b>Canal :</b> @francedealsdz")
 
         return "\n".join(lines)
 
