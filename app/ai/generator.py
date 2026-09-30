@@ -135,7 +135,7 @@ class DealCaptionGenerator:
         lines.append("⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك (طبقوها غداً على 08:00 صباحاً 🔥👌🏽):</b>")
         lines.append("⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ($55 ثم $42...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅")
         lines.append("🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب (كل الكوبونات مقبولة عليه) ⤵️</b>")
-        lines.append("https://s.click.aliexpress.com/e/_c3ecIizb")
+        lines.append("https://s.click.aliexpress.com/e/_c3d8Osgp")
         lines.append("")
         lines.append("🪙 <b>لا تنسى استخدام بوت العملات للشراء بأقل سعر:</b> @Alilo07BOT")
         lines.append("📢 <b>قناة الصيدات اليومية:</b> @DzAliexpress0")

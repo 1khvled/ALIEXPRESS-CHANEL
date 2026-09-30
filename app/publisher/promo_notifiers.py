@@ -85,7 +85,7 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
         "⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ($55 ثم $42...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅",
         "",
         "🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب (كل الكوبونات مقبولة عليه) ⤵️</b>",
-        "https://s.click.aliexpress.com/e/_c3ecIizb",
+        "https://s.click.aliexpress.com/e/_c3d8Osgp",
         "",
         "لا تنسى استخدام البوت للشراء بأقل الأسعار ومضاعفة خصم العملات :",
         "👉 t.me/Alilo07BOT",
@@ -98,7 +98,7 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
     reply_markup = {
         "inline_keyboard": [
             [
-                {"text": "🛒 رابط حجز وتثبيت الكوبونات في الحساب", "url": "https://s.click.aliexpress.com/e/_c3ecIizb"}
+                {"text": "🛒 رابط حجز وتثبيت الكوبونات في الحساب", "url": "https://s.click.aliexpress.com/e/_c3d8Osgp"}
             ],
             [
                 {"text": "🪙 بوت تخفيض العملات DealScout", "url": "https://t.me/Alilo07BOT"}
@@ -131,17 +131,32 @@ async def send_promo_alert_to_channel(
     bot_token: Optional[str] = None,
     channel_id: Optional[str] = None
 ) -> Tuple[bool, Optional[str], Optional[int]]:
-    """Dispatches the alert message to the target Telegram channel using photo banner if available."""
+    """Dispatches the alert message to the target Telegram channel using generated card graphic."""
+    from app.media.renderer import media_renderer
     token = bot_token or ADMIN_BOT_TOKEN or TELEGRAM_BOT_TOKEN
     target = channel_id or TARGET_CHANNEL_ID
 
     api_url = f"https://api.telegram.org/bot{token}"
-    banner_path = os.path.join(settings.BASE_DIR, "storage", "assets", "choice_day_banner.png")
+    coupons_dz = [
+        {"tier": "2/15", "code": "OTPRD02"},
+        {"tier": "4/30", "code": "OTPRD04"},
+        {"tier": "8/65", "code": "OTPRD08"},
+        {"tier": "15/119", "code": "OTPRD15"},
+        {"tier": "29/229", "code": "OTPRD28"},
+        {"tier": "42/339", "code": "OTPRD42"},
+        {"tier": "55/449", "code": "OTPRD55"}
+    ]
+    card_path = media_renderer.render_coupon_bulletin_card(
+        coupons_dz,
+        promo_title="Choice Day",
+        channel_handle="@DzAliexpress0",
+        is_french=False
+    )
 
     try:
         async with httpx.AsyncClient(timeout=25.0) as client:
-            if os.path.exists(banner_path) and len(text) <= 1024:
-                with open(banner_path, "rb") as pf:
+            if os.path.exists(card_path) and len(text) <= 1024:
+                with open(card_path, "rb") as pf:
                     resp = await client.post(
                         f"{api_url}/sendPhoto",
                         data={
@@ -150,7 +165,7 @@ async def send_promo_alert_to_channel(
                             "parse_mode": "HTML",
                             "reply_markup": json.dumps(reply_markup)
                         },
-                        files={"photo": ("choice_day_banner.png", pf, "image/png")}
+                        files={"photo": ("choice_day_card.jpg", pf, "image/jpeg")}
                     )
             else:
                 resp = await client.post(

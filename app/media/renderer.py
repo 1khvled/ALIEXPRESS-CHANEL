@@ -133,7 +133,9 @@ class MediaRenderer:
     def render_coupon_bulletin_card(
         self,
         coupon_list: List[Dict[str, str]],
-        promo_title: str = "Party Ready Sale"
+        promo_title: str = "Choice Day",
+        channel_handle: str = "@DzAliexpress0",
+        is_french: bool = False
     ) -> Path:
         """
         Renders a high-definition 1080x1080 promotional coupon card.
@@ -161,10 +163,18 @@ class MediaRenderer:
             font_title = font_sub = font_tier = font_code = font_footer = ImageFont.load_default()
 
         # Title and Header text
-        header_title = f"ALIEXPRESS {promo_title.upper()}" if promo_title else "ALIEXPRESS SPECIAL SALE"
+        if is_french:
+            header_title = "ALIEXPRESS FRANCE | CHOICE DAY"
+            sub_title = "CODES PROMO OFFICIELS • ÉCONOMISEZ JUSQU'À -60€"
+            date_sub = "Valables du 1er au 7 Octobre • Quantités limitées"
+        else:
+            header_title = f"ALIEXPRESS {promo_title.upper()}"
+            sub_title = "OFFICIAL PROMO CODES • SAVE UP TO $55"
+            date_sub = "Valid Oct 1 - Oct 7 • Limited Quantities"
+
         draw.text((w // 2, 65), header_title, fill=(255, 255, 255), font=font_title, anchor="mm")
-        draw.text((w // 2, 125), "OFFICIAL PROMO CODES • SAVE UP TO $55", fill=(254, 240, 138), font=font_sub, anchor="mm")
-        draw.text((w // 2, 175), "Valid Oct 1 - Oct 7 • Limited Quantities", fill=(255, 255, 255), font=font_footer, anchor="mm")
+        draw.text((w // 2, 125), sub_title, fill=(254, 240, 138), font=font_sub, anchor="mm")
+        draw.text((w // 2, 175), date_sub, fill=(255, 255, 255), font=font_footer, anchor="mm")
 
         # Circular Logo top right in header
         if self.logo_path.exists():
@@ -186,7 +196,10 @@ class MediaRenderer:
         for i, c in enumerate(coupon_list[:num_coupons]):
             tier_raw = str(c.get("tier", "")).strip().replace("$", "")
             code_raw = str(c.get("code", "")).strip().upper()
-            tier_label = f"DISCOUNT ${tier_raw}" if tier_raw else "DISCOUNT"
+            if is_french:
+                tier_label = f"RÉDUCTION {tier_raw}" if tier_raw else "RÉDUCTION"
+            else:
+                tier_label = f"DISCOUNT ${tier_raw}" if tier_raw else "DISCOUNT"
 
             cy = start_y + i * (row_h + pad)
             # Row Background container
@@ -242,14 +255,14 @@ class MediaRenderer:
         # Footer
         draw.text(
             (w // 2, 1035),
-            "Telegram: @DzAliexpress0   •   Coin Bot: @Alilo07BOT",
+            f"Telegram: {channel_handle}   •   Coin Bot: @Alilo07BOT",
             fill=(156, 163, 175),
             font=font_footer,
             anchor="mm"
         )
 
         h_sig = hashlib.sha256(str(coupon_list).encode()).hexdigest()[:8]
-        out_file = self.output_dir / f"coupons_card_{h_sig}.jpg"
+        out_file = self.output_dir / f"coupons_card_{h_sig}_{'fr' if is_french else 'dz'}.jpg"
         card.save(out_file, "JPEG", quality=95)
         return out_file
 

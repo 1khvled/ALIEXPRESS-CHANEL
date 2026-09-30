@@ -103,7 +103,7 @@ class FranceDealCaptionGenerator:
         lines.append("⭕️ <b>Tutoriel : Verrouiller tous les codes sur votre compte :</b>")
         lines.append("⚠️ <b>Commencez par les gros codes (-60€, -45€...)</b> puis appliquez les suivants pour les lier à votre compte avant rupture de stock !")
         lines.append("🔹 <b>Appliquez tous les codes sur ce produit (tous les seuils passent) ⤵️</b>")
-        lines.append("https://s.click.aliexpress.com/e/_c3NEyXfT")
+        lines.append("https://s.click.aliexpress.com/e/_c2QPADRL")
         lines.append("")
         lines.append("🪙 <i>Bot réduction pièces (Coins) : @Alilo07BOT</i>")
         lines.append("📢 <i>Canal de bons plans : @francedealsdz</i>")

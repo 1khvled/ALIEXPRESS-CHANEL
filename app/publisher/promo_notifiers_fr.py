@@ -78,7 +78,7 @@ def build_france_promo_starting_alert(promo: PromoEvent, start_hour_paris: str =
         "⚠️ <b>Commencez par les gros codes (-60€, -45€...)</b> puis appliquez les suivants pour les lier à votre compte avant rupture de stock !",
         "",
         "🔹 <b>Appliquez tous les codes sur ce produit (tous les seuils passent) ⤵️</b>",
-        "https://s.click.aliexpress.com/e/_c3NEyXfT",
+        "https://s.click.aliexpress.com/e/_c2QPADRL",
         "",
         "🪙 Bot réduction pièces : @Alilo07BOT",
         "━━━━━━━━━━━━━━━━━",
@@ -89,7 +89,7 @@ def build_france_promo_starting_alert(promo: PromoEvent, start_hour_paris: str =
     reply_markup = {
         "inline_keyboard": [
             [
-                {"text": "🛒 Lien pour enregistrer & verrouiller les codes", "url": "https://s.click.aliexpress.com/e/_c3NEyXfT"}
+                {"text": "🛒 Lien pour enregistrer & verrouiller les codes", "url": "https://s.click.aliexpress.com/e/_c2QPADRL"}
             ],
             [
                 {"text": "🪙 Bot réduction pièces DealScout", "url": "https://t.me/Alilo07BOT"}
@@ -121,7 +121,7 @@ def build_france_promo_ending_alert(promo: PromoEvent, end_hour_paris: str = "08
     reply_markup = {
         "inline_keyboard": [
             [
-                {"text": "🛒 Dernières affaires AliExpress France", "url": "https://s.click.aliexpress.com/e/_c3dQsooR"}
+                {"text": "🛒标志 Dernières affaires AliExpress France", "url": "https://s.click.aliexpress.com/e/_c2QPADRL"}
             ],
             [
                 {"text": "📢 Rejoindre @francedealsdz", "url": "https://t.me/francedealsdz"}
@@ -131,17 +131,32 @@ def build_france_promo_ending_alert(promo: PromoEvent, end_hour_paris: str = "08
     return text, reply_markup
 
 async def send_france_promo_alert(text: str, reply_markup: Dict[str, Any]) -> Tuple[bool, Optional[str], Optional[int]]:
+    from app.media.renderer import media_renderer
     bot_token = settings.TELEGRAM_BOT_TOKEN
     if not bot_token:
         return False, "TELEGRAM_BOT_TOKEN missing", None
 
     api_url = f"https://api.telegram.org/bot{bot_token}"
-    banner_path = os.path.join(settings.BASE_DIR, "storage", "assets", "choice_day_banner.png")
+    coupons_fr = [
+        {"tier": "-2€ dès 18€", "code": "FRPRD02"},
+        {"tier": "-6€ dès 45€", "code": "FRPRD06"},
+        {"tier": "-12€ dès 89€", "code": "FRPRD12"},
+        {"tier": "-20€ dès 159€", "code": "FRPRD20"},
+        {"tier": "-30€ dès 239€", "code": "FRPRD30"},
+        {"tier": "-45€ dès 355€", "code": "FRPRD45"},
+        {"tier": "-60€ dès 475€", "code": "FRPRD60"}
+    ]
+    card_path = media_renderer.render_coupon_bulletin_card(
+        coupons_fr,
+        promo_title="Choice Day France",
+        channel_handle="@francedealsdz",
+        is_french=True
+    )
 
     try:
         async with httpx.AsyncClient(timeout=25.0) as client:
-            if os.path.exists(banner_path) and len(text) <= 1024:
-                with open(banner_path, "rb") as pf:
+            if os.path.exists(card_path) and len(text) <= 1024:
+                with open(card_path, "rb") as pf:
                     resp = await client.post(
                         f"{api_url}/sendPhoto",
                         data={
@@ -150,7 +165,7 @@ async def send_france_promo_alert(text: str, reply_markup: Dict[str, Any]) -> Tu
                             "parse_mode": "HTML",
                             "reply_markup": json.dumps(reply_markup)
                         },
-                        files={"photo": ("choice_day_banner.png", pf, "image/png")}
+                        files={"photo": ("choice_day_fr_card.jpg", pf, "image/jpeg")}
                     )
             else:
                 resp = await client.post(
