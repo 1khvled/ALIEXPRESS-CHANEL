@@ -1,22 +1,62 @@
 {
   "published_product_ids": [
-    "1005012973772517"
+    "1005012973772517",
+    "COUPONS_3f89a2292e41",
+    "1005007027334636",
+    "1005007345108759",
+    "1005006982567811",
+    "3256812728623262",
+    "1005013152491360",
+    "1005012264415744",
+    "3256812678803138"
   ],
   "published_product_timestamps": {
-    "1005012973772517": 1790857823.0117362
+    "1005012973772517": 1790857823.0117362,
+    "COUPONS_3f89a2292e41": 1790863452.9844334,
+    "1005007027334636": 1790863457.9439182,
+    "1005007345108759": 1790863468.1632457,
+    "1005006982567811": 1790863479.1450555,
+    "3256812728623262": 1790863490.8762736,
+    "1005013152491360": 1790863500.981156,
+    "1005012264415744": 1790863511.4083428,
+    "3256812678803138": 1790863521.992221
   },
   "published_titles": [
-    "Xiaomi Redmi Note 17 5G Global Version"
+    "Xiaomi Redmi Note 17 5G Global Version",
+    "أحدث كوبونات وتخفيضات AliExpress",
+    "SomnAmbulist SSD  128GB",
+    "FIFINE AmpliGame A2 RGB USB Gaming Microphone",
+    "Lexar D400 USB Flash Drive USB 3.1  128GB",
+    "POCO C71 3/64",
+    "POCO X8 5G 6/128",
+    "POCO C81 Pro 4/64",
+    "realme 14 Pro 5G 12/256"
   ],
   "published_title_timestamps": {
-    "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362
+    "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
+    "أحدث كوبونات وتخفيضات AliExpress": 1790863452.9844334,
+    "SomnAmbulist SSD  128GB": 1790863457.9439182,
+    "FIFINE AmpliGame A2 RGB USB Gaming Microphone": 1790863468.1632457,
+    "Lexar D400 USB Flash Drive USB 3.1  128GB": 1790863479.1450555,
+    "POCO C71 3/64": 1790863490.8762736,
+    "POCO X8 5G 6/128": 1790863500.981156,
+    "POCO C81 Pro 4/64": 1790863511.4083428,
+    "realme 14 Pro 5G 12/256": 1790863521.992221
   },
   "published_post_keys": [
-    "aniscoupons:32590"
+    "aniscoupons:32590",
+    "pcgamingpart:7911",
+    "pcgamingpart:7912",
+    "pcgamingpart:7913",
+    "pcgamingpart:7914",
+    "zedstoreonline:38474",
+    "zedstoreonline:38475",
+    "zedstoreonline:38476",
+    "zedstoreonline:38477"
   ],
-  "last_disclaimer_time": 0.0,
-  "last_calendar_time": 0.0,
-  "last_run_time": 1790857823.0117362,
+  "last_disclaimer_time": 1790863447.485975,
+  "last_calendar_time": 1790863446.3386598,
+  "last_run_time": 1790863521.992221,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32590,
@@ -33,10 +73,25 @@
     "bnddeals": {
       "last_message_id": 50765,
       "last_check_time": 1790857843.056168
+    },
+    "pcgamingpart": {
+      "last_message_id": 7931,
+      "last_check_time": 1790863479.1450555
+    },
+    "zedstoreonline": {
+      "last_message_id": 38493,
+      "last_check_time": 1790863521.992221
     }
   },
   "published_product_prices": {
-    "1005012973772517": 179.1
+    "1005012973772517": 179.1,
+    "1005007027334636": 10.35,
+    "1005007345108759": 23.51,
+    "1005006982567811": 9.37,
+    "3256812728623262": 60.0,
+    "1005013152491360": 202.0,
+    "1005012264415744": 78.0,
+    "3256812678803138": 234.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -48,6 +103,86 @@
       "price": 179.1,
       "timestamp": 1790857823.0117362,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7911": {
+      "channel_msg_id": 218,
+      "product_id": "COUPONS_3f89a2292e41",
+      "title": "أحدث كوبونات وتخفيضات AliExpress",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7911,
+      "price": null,
+      "timestamp": 1790863452.9844334,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7912": {
+      "channel_msg_id": 219,
+      "product_id": "1005007027334636",
+      "title": "SomnAmbulist SSD  128GB",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7912,
+      "price": 10.35,
+      "timestamp": 1790863457.9439182,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7913": {
+      "channel_msg_id": 220,
+      "product_id": "1005007345108759",
+      "title": "FIFINE AmpliGame A2 RGB USB Gaming Microphone",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7913,
+      "price": 23.51,
+      "timestamp": 1790863468.1632457,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7914": {
+      "channel_msg_id": 221,
+      "product_id": "1005006982567811",
+      "title": "Lexar D400 USB Flash Drive USB 3.1  128GB",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7914,
+      "price": 9.37,
+      "timestamp": 1790863479.1450555,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38474": {
+      "channel_msg_id": 222,
+      "product_id": "3256812728623262",
+      "title": "POCO C71 3/64",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38474,
+      "price": 60.0,
+      "timestamp": 1790863490.8762736,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38475": {
+      "channel_msg_id": 223,
+      "product_id": "1005013152491360",
+      "title": "POCO X8 5G 6/128",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38475,
+      "price": 202.0,
+      "timestamp": 1790863500.981156,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38476": {
+      "channel_msg_id": 224,
+      "product_id": "1005012264415744",
+      "title": "POCO C81 Pro 4/64",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38476,
+      "price": 78.0,
+      "timestamp": 1790863511.4083428,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38477": {
+      "channel_msg_id": 225,
+      "product_id": "3256812678803138",
+      "title": "realme 14 Pro 5G 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38477,
+      "price": 234.9,
+      "timestamp": 1790863521.992221,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -56,7 +191,7 @@
     "current_interval_minutes": 15,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790857823.0200894,
+    "last_deal_post_time": 1790863521.9928355,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   }
