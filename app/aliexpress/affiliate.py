@@ -112,17 +112,20 @@ class PortalsApiAffiliateProvider(AffiliateProvider):
                 target_url = product_url
 
         if self.api:
-            for attempt in range(1, 4):
+            for attempt in range(1, 3):
                 try:
                     aff_links = await asyncio.to_thread(self.api.get_affiliate_links, target_url)
-                    if aff_links and len(aff_links) > 0 and aff_links[0].promotion_link:
-                        return aff_links[0].promotion_link
+                    if aff_links and len(aff_links) > 0:
+                        link = getattr(aff_links[0], "promotion_link", None) or getattr(aff_links[0], "promotion_url", None)
+                        if link:
+                            return link
+                    # If API responded cleanly but item has no promotion link, fall back immediately
+                    break
                 except Exception as e:
-                    logger.warning(f"AliExpress Portals API attempt {attempt}/3 failed: {e}")
-                    if attempt < 3:
-                        await asyncio.sleep(2.0 * attempt)
+                    logger.warning(f"AliExpress Portals API attempt {attempt}/2 failed: {e}")
+                    if attempt < 2:
+                        await asyncio.sleep(1.5)
                         continue
-                    logger.warning("All AliExpress Portals API attempts failed. Falling back to direct URL.")
         return await self.fallback.generate_link(product_url, product_id, deal_type=deal_type)
 
 class AffiliateService:
