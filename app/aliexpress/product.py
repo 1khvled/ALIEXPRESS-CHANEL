@@ -137,14 +137,17 @@ class ProductExtractor:
                     settings.ALIEXPRESS_AFFILIATE_TRACKING_ID or "default"
                 )
                 details = None
-                for attempt in range(3):
+                for attempt in range(2):
                     try:
-                        details = await asyncio.to_thread(api.get_products_details, [resolved.product_id])
+                        details = await asyncio.wait_for(
+                            asyncio.to_thread(api.get_products_details, [resolved.product_id]),
+                            timeout=5.0
+                        )
                         break
                     except Exception as err:
-                        logger.debug(f"API details attempt {attempt+1}/3 failed: {err}")
-                        if attempt < 2:
-                            await asyncio.sleep(1.5 * (attempt + 1))
+                        logger.debug(f"API details attempt {attempt+1}/2 failed: {err}")
+                        if attempt < 1:
+                            await asyncio.sleep(1.0)
                             continue
                         break
 
