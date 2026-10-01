@@ -95,17 +95,36 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
     ]
 
     text = "\n".join(lines)
-    reply_markup = {
-        "inline_keyboard": [
-            [
-                {"text": "🛒 رابط حجز وتثبيت الكوبونات في الحساب", "url": "https://s.click.aliexpress.com/e/_c3d8Osgp"}
-            ],
-            [
-                {"text": "🪙 بوت تخفيض العملات DealScout", "url": "https://t.me/Alilo07BOT"}
-            ]
-        ]
-    }
+    reply_markup = {}
     return text, reply_markup
+
+
+def build_promo_launch_alert(promo: PromoEvent, start_hour_str: str = "08:00") -> Tuple[str, Dict[str, Any]]:
+    """Builds the launch alert when promo officially starts at 08:00 AM Algerian Time."""
+    lines = [
+        f"🚀 <b>انطلاق تخفيضات {promo.name_ar} رسمياً الآن! 🛍️🔥</b>",
+        f"⏰ <b>الكوبونات اشتغلت وبدأت بالعمل في هذه اللحظات ({start_hour_str} صباحاً بتوقيت الجزائر 🇩🇿):</b>",
+        "سارعوا بحجزها وتطبيقها فوراً في حساباتكم قبل نفاد الكميات المحدودة! 🏃💨",
+        "",
+        "🎟️ <b>كوبون 2/15$ :</b> <code>OTPRD02</code>",
+        "🎟️ <b>كوبون 4/30$ :</b> <code>OTPRD04</code>",
+        "🎟️ <b>كوبون 8/65$ :</b> <code>OTPRD08</code>",
+        "🎟️ <b>كوبون 15/119$ :</b> <code>OTPRD15</code>",
+        "🎟️ <b>كوبون 29/229$ :</b> <code>OTPRD28</code>",
+        "🎟️ <b>كوبون 42/339$ :</b> <code>OTPRD42</code>",
+        "🎟️ <b>كوبون 55/449$ :</b> <code>OTPRD55</code>",
+        "",
+        f"⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك الآن 🔥👌🏽:</b>",
+        "⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ($55 ثم $42...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅",
+        "",
+        "🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب (كل الكوبونات مقبولة عليه) ⤵️</b>",
+        "https://s.click.aliexpress.com/e/_c3d8Osgp",
+        "",
+        "😊 <b>بوت مطور لشراء بأفضل سعر وتتبع الطرود :</b>",
+        "👉 t.me/Alilo07BOT",
+        "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0"
+    ]
+    return "\n".join(lines), {}
 
 
 def is_promo_notifier_already_sent(notifier_key: str) -> bool:
@@ -233,6 +252,25 @@ async def check_and_auto_post_promo_notifiers(
                         })
                     else:
                         logger.error(f"Failed to post promo ending alert: {err}")
+
+            # --- 3. CHECK PROMO LAUNCH ALERT (OFFICIAL START HOUR - 08:00 AM DZ) ---
+            time_since_start = now - promo.start_date
+            if timedelta(hours=0) <= time_since_start <= timedelta(hours=6):
+                notifier_key = f"LAUNCH_ALERT_{promo.name}_{promo.start_date.strftime('%Y%m%d')}"
+                if not is_promo_notifier_already_sent(notifier_key):
+                    logger.info(f"Triggering Official Promo Launch Alert for {promo.name}")
+                    text, markup = build_promo_launch_alert(promo)
+                    success, err, msg_id = await send_promo_alert_to_channel(text, markup, bot_token, channel_id)
+                    if success:
+                        record_promo_notifier_sent(notifier_key)
+                        results.append({
+                            "type": "promo_launch_alert",
+                            "promo": promo.name,
+                            "message_id": msg_id,
+                            "status": "published"
+                        })
+                    else:
+                        logger.error(f"Failed to post promo launch alert: {err}")
 
         # --- 2. CHECK PROMO STARTING ALERT (1 DAY BEFORE START) ---
         elif now < promo.start_date:

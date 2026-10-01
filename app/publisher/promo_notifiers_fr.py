@@ -85,18 +85,35 @@ def build_france_promo_starting_alert(promo: PromoEvent, start_hour_paris: str =
         "📢 <b>Canal :</b> @francedealsdz"
     ]
 
-    text = "\n".join(lines)
-    reply_markup = {
-        "inline_keyboard": [
-            [
-                {"text": "🛒 Lien pour enregistrer & verrouiller les codes", "url": "https://s.click.aliexpress.com/e/_c2QPADRL"}
-            ],
-            [
-                {"text": "🪙 Bot réduction pièces DealScout", "url": "https://t.me/Alilo07BOT"}
-            ]
-        ]
-    }
+    reply_markup = {}
     return text, reply_markup
+
+def build_france_promo_launch_alert(promo: PromoEvent, start_hour_paris: str = "09:00") -> Tuple[str, Dict[str, Any]]:
+    """Builds the launch alert when promo officially starts for France shoppers."""
+    lines = [
+        "🚀 <b>C'EST PARTI ! Lancement officiel du Choice Day ! 🇫🇷🛍️</b>",
+        f"⏰ <b>Les codes promo viennent d'être activés dès maintenant ({start_hour_paris}) :</b>",
+        "",
+        "🎟️ <b>Code -2€</b> dès 18€ : <code>FRPRD02</code>",
+        "🎟️ <b>Code -6€</b> dès 45€ : <code>FRPRD06</code>",
+        "🎟️ <b>Code -12€</b> dès 89€ : <code>FRPRD12</code>",
+        "🎟️ <b>Code -20€</b> dès 159€ : <code>FRPRD20</code>",
+        "🎟️ <b>Code -30€</b> dès 239€ : <code>FRPRD30</code>",
+        "🎟️ <b>Code -45€</b> dès 355€ : <code>FRPRD45</code>",
+        "🎟️ <b>Code -60€</b> dès 475€ : <code>FRPRD60</code>",
+        "",
+        "💳 <b>Astuce PayPal :</b> Jusqu'à <b>-33€ supplémentaires</b> au paiement !",
+        "",
+        "⭕️ <b>Verrouillez tous les codes sur votre compte dès maintenant :</b>",
+        "⚠️ <b>Commencez par les gros codes (-60€, -45€...)</b> puis appliquez les suivants !",
+        "",
+        "🔹 <b>Lien du produit pour lier tous les codes à votre panier ⤵️</b>",
+        "https://s.click.aliexpress.com/e/_c2QPADRL",
+        "",
+        "🤖 <b>Utilisez le bot avant d'acheter :</b> @Alilo07BOT",
+        "📢 <b>Canal :</b> @francedealsdz"
+    ]
+    return "\n".join(lines), {}
 
 def build_france_promo_ending_alert(promo: PromoEvent, end_hour_paris: str = "08:59") -> Tuple[str, Dict[str, Any]]:
     """
@@ -225,8 +242,27 @@ async def check_and_auto_post_france_promo_notifiers(now: Optional[datetime] = N
                     else:
                         logger.error(f"Failed to post France promo starting alert: {err}")
 
-        # 2. Ending alert check (~24h before end)
+        # 2. Launch alert check (At start hour - 09:00 Paris / 08:00 DZ)
         elif promo.start_date <= now <= promo.end_date:
+            time_since_start = now - promo.start_date
+            if timedelta(hours=0) <= time_since_start <= timedelta(hours=6):
+                notifier_key = f"FR_LAUNCH_ALERT_{promo.name}_{promo.start_date.strftime('%Y%m%d')}"
+                if not is_france_notifier_already_sent(notifier_key):
+                    logger.info(f"Triggering France Promo Launch Alert for {promo.name}")
+                    text, markup = build_france_promo_launch_alert(promo)
+                    success, err, msg_id = await send_france_promo_alert(text, markup)
+                    if success:
+                        record_france_notifier_sent(notifier_key)
+                        results.append({
+                            "type": "france_promo_launch_alert",
+                            "promo": promo.name,
+                            "message_id": msg_id,
+                            "status": "published"
+                        })
+                    else:
+                        logger.error(f"Failed to post France promo launch alert: {err}")
+
+            # 3. Ending alert check (~24h before end)
             time_until_end = promo.end_date - now
             if timedelta(hours=6) <= time_until_end <= timedelta(hours=36):
                 notifier_key = f"FR_END_ALERT_{promo.name}_{promo.end_date.strftime('%Y%m%d')}"

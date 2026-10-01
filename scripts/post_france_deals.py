@@ -45,6 +45,7 @@ TARGET_FRANCE_CHANNEL = os.getenv("FRANCE_TARGET_CHANNEL_ID", "@francedealsdz")
 FRANCE_STATE_FILE = Path(settings.BASE_DIR) / "storage" / "state" / "france_published_state.json"
 
 FRANCE_SOURCE_CHANNELS = [
+    "AliFRDrop",
     "FranceCP"
 ]
 
