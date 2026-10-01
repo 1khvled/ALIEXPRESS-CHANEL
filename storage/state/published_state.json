@@ -17,19 +17,30 @@
     "1005007279793099",
     "1005008829227075",
     "9998887952",
-    "9998887972"
+    "9998887972",
+    "1005011778621042",
+    "9998888080",
+    "1005012312990781",
+    "1005009234854371",
+    "1005006533038973",
+    "1005007394028808",
+    "1005012899224314",
+    "1005012923660718",
+    "1005012881256093",
+    "1005009118633225",
+    "1005012143831265"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790857823.0117362,
     "1005010219205081": 1790884267.9909704,
-    "999111222": 1790887971.0449624,
-    "100500999912345": 1790797972.1309164,
-    "100500999954321": 1790880772.1309164,
+    "999111222": 1790888079.4397638,
+    "100500999912345": 1790798080.281984,
+    "100500999954321": 1790880880.281984,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
     "1005007805638431": 1790884166.1520143,
-    "1005007027334636": 1790884215.4346776,
+    "1005007027334636": 1790888129.0606623,
     "1005009054706827": 1790884195.3586087,
     "1005007961216287": 1790884206.6605399,
     "1005008233932899": 1790884227.6404886,
@@ -40,7 +51,18 @@
     "1005008829227075": 1790884310.7506618,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1790877172.171063
+    "100500777666555": 1790877280.3240745,
+    "1005011778621042": 1790888057.5668976,
+    "9998888080": 1790888080.3099577,
+    "1005012312990781": 1790888097.0085742,
+    "1005009234854371": 1790888140.513047,
+    "1005006533038973": 1790888145.7563388,
+    "1005007394028808": 1790888161.7112389,
+    "1005012899224314": 1790888183.366231,
+    "1005012923660718": 1790888191.2162998,
+    "1005012881256093": 1790888202.2321055,
+    "1005009118633225": 1790888213.2900865,
+    "1005012143831265": 1790888224.6523979
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -58,15 +80,26 @@
     "سماعات لاسلكية Attack Shark L80 PRO Wireless",
     "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K",
     "ماوس لاسلكي Attack Shark R1 Wireless",
-    "ماوس لاسلكي مع شاحن Attack Shark X1 Wireless"
+    "ماوس لاسلكي مع شاحن Attack Shark X1 Wireless",
+    "معالج AMD Ryzen R7 5700X جديد! بتردد 3.4 جيجاهرتز، ثماني النواة وستة عشر",
+    "معالج AMD Ryzen 5 7500F مستعمل، 6 نوى/12 خيط، 65 واط، 5 نانومتر، ذاكرة",
+    "SomnAmbulist SSD  128GB",
+    "UGREEN  1080P Webcam 8MP for PC",
+    "EasySMX X15 Wireless PC Gamepad Hall Effect",
+    "Attack Shark X5",
+    "Honor Choice Watch 2i",
+    "HONOR CHOICE Earbuds X7e Active",
+    "Honor Watch X5i",
+    "UGREEN 45W GaN Charger",
+    "Realme Pad 3 5G 256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1790887971.0449624,
-    "SomnAmbulist NVMe SSD 1TB High Speed": 1790797972.1309164,
-    "Attack Shark R2 Mouse": 1790880772.1309164,
-    "Test Wrench Set": 1790887972.157133,
+    "Test Wireless Gaming Mouse X1": 1790888079.4397638,
+    "SomnAmbulist NVMe SSD 1TB High Speed": 1790798080.281984,
+    "Attack Shark R2 Mouse": 1790880880.281984,
+    "Test Wrench Set": 1790888080.3099577,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1790884195.3586087,
@@ -78,7 +111,18 @@
     "سماعات لاسلكية Attack Shark L80 PRO Wireless": 1790884281.6726701,
     "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K": 1790884287.4211984,
     "ماوس لاسلكي Attack Shark R1 Wireless": 1790884299.0959656,
-    "ماوس لاسلكي مع شاحن Attack Shark X1 Wireless": 1790884310.7506618
+    "ماوس لاسلكي مع شاحن Attack Shark X1 Wireless": 1790884310.7506618,
+    "معالج AMD Ryzen R7 5700X جديد! بتردد 3.4 جيجاهرتز، ثماني النواة وستة عشر": 1790888057.5668976,
+    "معالج AMD Ryzen 5 7500F مستعمل، 6 نوى/12 خيط، 65 واط، 5 نانومتر، ذاكرة": 1790888097.0085742,
+    "SomnAmbulist SSD  128GB": 1790888129.0606623,
+    "UGREEN  1080P Webcam 8MP for PC": 1790888140.513047,
+    "EasySMX X15 Wireless PC Gamepad Hall Effect": 1790888145.7563388,
+    "Attack Shark X5": 1790888161.7112389,
+    "Honor Choice Watch 2i": 1790888183.366231,
+    "HONOR CHOICE Earbuds X7e Active": 1790888191.2162998,
+    "Honor Watch X5i": 1790888202.2321055,
+    "UGREEN 45W GaN Charger": 1790888213.2900865,
+    "Realme Pad 3 5G 256GB": 1790888224.6523979
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -99,46 +143,58 @@
     "ecksdeal:5847",
     "ecksdeal:5848",
     "test_channel:1790887952",
-    "test_channel:1790887972"
+    "test_channel:1790887972",
+    "pcgamingpart:7919",
+    "test_channel:1790888080",
+    "pcgamingpart:7920",
+    "pcgamingpart:7922",
+    "pcgamingpart:7923",
+    "pcgamingpart:7924",
+    "zedstoreonline:38490",
+    "aniscoupons:32624",
+    "aniscoupons:32625",
+    "aniscoupons:32626",
+    "aniscoupons:32628",
+    "aniscoupons:32629"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790887972.157133,
+  "last_run_time": 1790888224.6523979,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32622,
-      "last_check_time": 1790884270.0154653
+      "last_message_id": 32629,
+      "last_check_time": 1790888226.6936457
     },
     "ecksdeal": {
       "last_message_id": 5850,
       "last_check_time": 1790884310.7506618
     },
     "lodydeals": {
-      "last_message_id": 45334,
-      "last_check_time": 1790857826.0396965
+      "last_message_id": 45341,
+      "last_check_time": 1790888227.4909987
     },
     "bnddeals": {
       "last_message_id": 50765,
-      "last_check_time": 1790857876.901691
+      "last_check_time": 1790888261.3704066
     },
     "test_channel": {
-      "last_message_id": 1790887972,
-      "last_check_time": 1790887972.157133
+      "last_message_id": 1790888080,
+      "last_check_time": 1790888080.3099577
     },
     "pcgamingpart": {
       "last_message_id": 7936,
-      "last_check_time": 1790884175.8931081
+      "last_check_time": 1790888148.9327576
     },
     "zedstoreonline": {
       "last_message_id": 38502,
-      "last_check_time": 1790884217.4785542
+      "last_check_time": 1790888174.025456
     }
   },
   "published_product_prices": {
     "1005012973772517": 179.1,
     "1005010219205081": 57.2,
     "1005007805638431": 22.64,
-    "1005007027334636": 28.5,
+    "1005007027334636": 10.35,
     "1005009054706827": 22.0,
     "1005007961216287": 18.7,
     "1005008233932899": 294.9,
@@ -147,7 +203,17 @@
     "1005007275142457": 29.58,
     "1005007279793099": 14.13,
     "1005008829227075": 25.06,
-    "100500777666555": 20.0
+    "100500777666555": 20.0,
+    "1005011778621042": 124.99,
+    "1005012312990781": 93.32,
+    "1005009234854371": 19.64,
+    "1005006533038973": 23.98,
+    "1005007394028808": 11.2,
+    "1005012899224314": 27.14,
+    "1005012923660718": 15.17,
+    "1005012881256093": 28.5,
+    "1005009118633225": 14.14,
+    "1005012143831265": 281.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -289,6 +355,116 @@
       "price": 25.06,
       "timestamp": 1790884310.7506618,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7919": {
+      "channel_msg_id": 258,
+      "product_id": "1005011778621042",
+      "title": "معالج AMD Ryzen R7 5700X جديد! بتردد 3.4 جيجاهرتز، ثماني النواة وستة عشر",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7919,
+      "price": 124.99,
+      "timestamp": 1790888057.5668976,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7920": {
+      "channel_msg_id": 259,
+      "product_id": "1005012312990781",
+      "title": "معالج AMD Ryzen 5 7500F مستعمل، 6 نوى/12 خيط، 65 واط، 5 نانومتر، ذاكرة",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7920,
+      "price": 93.32,
+      "timestamp": 1790888097.0085742,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7922": {
+      "channel_msg_id": 260,
+      "product_id": "1005007027334636",
+      "title": "SomnAmbulist SSD  128GB",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7922,
+      "price": 10.35,
+      "timestamp": 1790888129.0606623,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7923": {
+      "channel_msg_id": 261,
+      "product_id": "1005009234854371",
+      "title": "UGREEN  1080P Webcam 8MP for PC",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7923,
+      "price": 19.64,
+      "timestamp": 1790888140.513047,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7924": {
+      "channel_msg_id": 262,
+      "product_id": "1005006533038973",
+      "title": "EasySMX X15 Wireless PC Gamepad Hall Effect",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7924,
+      "price": 23.98,
+      "timestamp": 1790888145.7563388,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38490": {
+      "channel_msg_id": 263,
+      "product_id": "1005007394028808",
+      "title": "Attack Shark X5",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38490,
+      "price": 11.2,
+      "timestamp": 1790888161.7112389,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32624": {
+      "channel_msg_id": 264,
+      "product_id": "1005012899224314",
+      "title": "Honor Choice Watch 2i",
+      "channel": "aniscoupons",
+      "source_msg_id": 32624,
+      "price": 27.14,
+      "timestamp": 1790888183.366231,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32625": {
+      "channel_msg_id": 265,
+      "product_id": "1005012923660718",
+      "title": "HONOR CHOICE Earbuds X7e Active",
+      "channel": "aniscoupons",
+      "source_msg_id": 32625,
+      "price": 15.17,
+      "timestamp": 1790888191.2162998,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32626": {
+      "channel_msg_id": 266,
+      "product_id": "1005012881256093",
+      "title": "Honor Watch X5i",
+      "channel": "aniscoupons",
+      "source_msg_id": 32626,
+      "price": 28.5,
+      "timestamp": 1790888202.2321055,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32628": {
+      "channel_msg_id": 267,
+      "product_id": "1005009118633225",
+      "title": "UGREEN 45W GaN Charger",
+      "channel": "aniscoupons",
+      "source_msg_id": 32628,
+      "price": 14.14,
+      "timestamp": 1790888213.2900865,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32629": {
+      "channel_msg_id": 268,
+      "product_id": "1005012143831265",
+      "title": "Realme Pad 3 5G 256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 32629,
+      "price": 281.9,
+      "timestamp": 1790888224.6523979,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -297,7 +473,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790884310.7631476,
+    "last_deal_post_time": 1790888224.6634455,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
