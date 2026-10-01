@@ -134,4 +134,46 @@ def test_post_id_validation_and_no_repeat():
     assert "was already posted" in r
 
 
+def test_price_drop_exception_minimum_age():
+    """Verifies that price-drop exception requires the post to be at least 1h old to prevent rapid duplicate thrashing."""
+    import time
+    from app.publisher.state_tracker import load_persistent_state, save_persistent_state, is_recent_cross_channel_duplicate
+
+    pid = "100500777666555"
+    state = load_persistent_state()
+    now = time.time()
+
+    # 1. Product posted 5 minutes ago at $20.00
+    state["published_product_timestamps"][pid] = now - 300
+    state["published_product_prices"][pid] = 20.0
+    save_persistent_state(state)
+
+    # Scraped again at $15.00 (cheaper by $5, 25% drop)
+    is_dup, reason, is_price_drop = is_recent_cross_channel_duplicate(pid, "otherchannel", current_price=15.0)
+    # Must be BLOCKED because age < 1h (3600s)
+    assert is_dup is True
+    assert is_price_drop is False
+
+    # 2. Product posted 3 hours ago at $20.00
+    state["published_product_timestamps"][pid] = now - 10800
+    save_persistent_state(state)
+
+    # Scraped again at $15.00
+    is_dup2, reason2, is_price_drop2 = is_recent_cross_channel_duplicate(pid, "otherchannel", current_price=15.0)
+    assert is_dup2 is False
+    assert is_price_drop2 is True
+    assert "Price drop exception" in reason2
+
+
+def test_seller_coupon_sanitization():
+    """Verifies that seller coupons with value '0', '0$', or sub-dollar amounts are ignored."""
+    from app.aliexpress.parser import extract_seller_coupon
+
+    assert extract_seller_coupon("احجز قسيمة البائع: 0") is None
+    assert extract_seller_coupon("احجز قسيمة البائع : 0$") is None
+    assert extract_seller_coupon("قسيمة المتجر: 0.9$") is None
+    assert extract_seller_coupon("احجز قسيمة المتجر : 5$") is not None
+
+
+
 

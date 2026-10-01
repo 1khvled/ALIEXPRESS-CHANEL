@@ -129,6 +129,17 @@ async def collect_and_post_last_10_deals():
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.9,ar;q=0.8"
     }
+    from app.publisher.state_tracker import (
+        get_monitored_channel_last_id,
+        record_monitored_channel_last_id,
+        is_post_already_published,
+        record_post_published,
+        is_recent_cross_channel_duplicate,
+        refresh_channel_cache,
+        is_same_deal_title
+    )
+    await refresh_channel_cache(force=True)
+
     async with httpx.AsyncClient(headers=headers, timeout=20.0, follow_redirects=True) as client:
         for ch in CHANNELS:
             if len(published_deals) >= MAX_DEALS_PER_RUN:
@@ -153,15 +164,6 @@ async def collect_and_post_last_10_deals():
                 soup = BeautifulSoup(resp.text, "html.parser")
                 blocks = soup.find_all("div", class_="tgme_widget_message")
                 print(f"  Found {len(blocks)} message blocks in @{ch}")
-
-                # High-water mark & post ID tracking: ONLY process genuinely new messages from this channel
-                from app.publisher.state_tracker import (
-                    get_monitored_channel_last_id,
-                    record_monitored_channel_last_id,
-                    is_post_already_published,
-                    record_post_published,
-                    is_recent_cross_channel_duplicate
-                )
                 
                 block_items = []
                 for b in blocks:
@@ -272,7 +274,7 @@ async def collect_and_post_last_10_deals():
 
                     # 6. Validate by Post ID & check Cross-Channel duplicates (with Price-Drop Exception)
                     is_dup, dup_reason, is_price_drop = is_recent_cross_channel_duplicate(
-                        extracted.product_id, ch, current_price=extracted.current_price
+                        extracted.product_id, ch, current_price=extracted.current_price, title=extracted.title or ""
                     )
                     if is_dup:
                         print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] {dup_reason}")
@@ -282,8 +284,13 @@ async def collect_and_post_last_10_deals():
                     if is_price_drop:
                         print(f"  [📉 PRICE-DROP EXCEPTION] {dup_reason}! Reposting with updated price & hook.")
 
-                    if extracted.product_id and extracted.product_id in seen_products and not is_price_drop:
+                    if extracted.product_id and extracted.product_id in seen_products:
                         print(f"  [DUPLICATE IN CURRENT RUN] Product ID '{extracted.product_id}' was already published in this run!")
+                        record_monitored_channel_last_id(ch, msg_id)
+                        continue
+
+                    if extracted.title and any(is_same_deal_title(extracted.title, st) for st in seen_titles):
+                        print(f"  [SIMILAR TITLE IN CURRENT RUN] Deal title '{extracted.title[:40]}' matches deal already posted in this run!")
                         record_monitored_channel_last_id(ch, msg_id)
                         continue
 

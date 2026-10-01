@@ -209,39 +209,105 @@ async def sync_deleted_channel_posts() -> Set[str]:
 
     return deleted_keys
 
+STOP_WORDS = {
+    'for', 'with', 'and', 'the', 'new', 'hot', 'original', 'inch', 'piece', 'pcs',
+    'livan', 'auto', 'تخفيض', 'عرض', 'سعر', 'شاحن', 'كابل', 'نسخة', 'جيغا', 'جيجا',
+    'global', 'version', 'sale', 'brand', 'deals', 'deal', 'official', 'store',
+    'الشراء', 'الطلب', 'رابط', 'خصم', 'عملات', 'كوبون'
+}
+
+def extract_title_tokens(title: str) -> Set[str]:
+    """Extracts distinctive model/product tokens, preserving alphanumeric codes (e.g. p3, x3, 5g, 8k, r1)."""
+    if not title:
+        return set()
+    cleaned = re.sub(r'[\$€\(\)\[\],.;:!?/\\|\-_~+]+', ' ', title.lower())
+    tokens = set()
+    for w in cleaned.split():
+        if w in STOP_WORDS:
+            continue
+        # Keep words of len >= 3 OR words containing digits (e.g. p3, x3, 5g, 8k, r1)
+        if len(w) >= 3 or any(c.isdigit() for c in w):
+            tokens.add(w)
+    return tokens
+
+SPEC_TOKENS = {'5g', '4g', '8k', '4k', '120hz', '144hz', '165hz', '240hz', '128', '256', '512', '64', '32', '16', '8', '6', '12'}
+
+def extract_model_identifiers(tokens: Set[str]) -> Set[str]:
+    """Finds product model identifiers like r1, x3, p3, ak820, f6, gt, hy300."""
+    return {t for t in tokens if any(c.isdigit() for c in t) and t not in SPEC_TOKENS}
+
+def is_same_deal_title(title_a: str, title_b: str) -> bool:
+    """Accurately identifies if two titles refer to the same product across different channels."""
+    toks_a = extract_title_tokens(title_a)
+    toks_b = extract_title_tokens(title_b)
+    if not toks_a or not toks_b:
+        return False
+
+    # Check distinct model codes (e.g. Attack Shark R1 vs Attack Shark X3)
+    models_a = extract_model_identifiers(toks_a)
+    models_b = extract_model_identifiers(toks_b)
+    if models_a and models_b and not models_a.intersection(models_b):
+        return False
+
+    # Check product category mismatch (e.g. realme phone vs realme pad)
+    if ("pad" in toks_a and "pad" not in toks_b) or ("pad" in toks_b and "pad" not in toks_a):
+        return False
+
+    common = toks_a.intersection(toks_b)
+
+    # 1. 3+ common distinctive keywords (e.g. "attack", "shark", "x3")
+    if len(common) >= 3:
+        return True
+
+    # 2. 2 core keywords (e.g. "realme", "p3")
+    if len(common) >= 2:
+        min_len = min(len(toks_a), len(toks_b))
+        if len(common) / min_len >= 0.5:
+            return True
+
+    return False
+
+def _clean_title_keywords(title: str) -> List[str]:
+    """Backwards-compatible wrapper returning token list."""
+    return list(extract_title_tokens(title))
+
 def is_recent_cross_channel_duplicate(
     product_id: Optional[str],
     current_channel: str = "",
-    current_price: Optional[float] = None
+    current_price: Optional[float] = None,
+    title: str = ""
 ) -> Tuple[bool, str, bool]:
     """
     Validates cross-channel duplicates with Price-Drop Exception (Cross-Channel Arbitrage):
     Returns: (is_duplicate: bool, reason: str, is_price_drop: bool)
-    If another channel posted this exact AliExpress product today (within 24h):
+    If another channel or persistent state posted this exact AliExpress product today (within 24h):
       - If current_price is provided and is cheaper by >= 5% or >= $1.00 compared to the stored previous price:
+        AND the previous post is at least 1 hour old (age >= 3600):
         bypasses the 24h duplicate cooldown! Returns (False, "Price-Drop Exception: ...", True)
       - Otherwise, skips duplicate (True, "Product ID ... was already posted ...", False)
+    Also checks live channel scraped PIDs and title similarity.
     """
-    if not product_id:
+    if not product_id and not title:
         return False, "", False
     state = load_persistent_state()
     now = time.time()
     from app.config.settings import settings
     cooldown_seconds = getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 24) * 3600
 
-    p_str = str(product_id).strip()
-    if p_str.startswith("COUPONS_") or p_str.startswith("EVENT_"):
+    p_str = str(product_id).strip() if product_id else ""
+    if p_str and (p_str.startswith("COUPONS_") or p_str.startswith("EVENT_")):
         return False, "", False
 
     ts_map = state.get("published_product_timestamps", {})
     price_map = state.get("published_product_prices", {})
 
-    if p_str in ts_map:
+    # 1. Product ID check against persistent timestamps
+    if p_str and p_str in ts_map:
         age = now - ts_map[p_str]
         if age < cooldown_seconds:
-            # Check for Price-Drop Exception
+            # Check for Price-Drop Exception: require at least 1h age to prevent rapid reposts
             prev_price = price_map.get(p_str)
-            if prev_price and current_price and current_price > 0 and prev_price > 0:
+            if age >= 3600 and prev_price and current_price and current_price > 0 and prev_price > 0:
                 diff = prev_price - current_price
                 pct_drop = (diff / prev_price) * 100.0
                 if diff >= 1.0 or pct_drop >= 5.0:
@@ -249,6 +315,26 @@ def is_recent_cross_channel_duplicate(
                     return False, f"Price drop exception: was ${prev_price:.2f}, now ${current_price:.2f} (-{pct_drop:.1f}%)", True
 
             return True, f"Product ID {p_str} was already posted {age/3600:.1f}h ago from another channel", False
+
+    # 2. Check live channel cache PIDs
+    if p_str and p_str in _CACHED_CHANNEL_PIDS:
+        pid_ts = _CACHED_CHANNEL_PIDS[p_str]
+        age = now - pid_ts
+        if age < cooldown_seconds:
+            return True, f"Product ID {p_str} is present in live @DzAliexpress0 channel ({age/3600:.1f}h ago)", False
+
+    # 3. Smart title cross-channel deduplication
+    if title:
+        title_ts_map = state.get("published_title_timestamps", {})
+        for pub_t in state.get("published_titles", []):
+            if is_same_deal_title(title, pub_t):
+                pub_ts = title_ts_map.get(pub_t)
+                if pub_ts is None or (now - pub_ts) < cooldown_seconds:
+                    return True, f"Product title matches previously published deal: '{pub_t[:45]}'", False
+
+        for ch_t, ch_ts in _CACHED_CHANNEL_TEXT_TIMESTAMPS:
+            if (now - ch_ts) < cooldown_seconds and is_same_deal_title(title, ch_t):
+                return True, f"Product title already visible in live channel: '{ch_t[:45]}'", False
 
     return False, "", False
 
@@ -456,67 +542,7 @@ async def refresh_channel_cache(force: bool = False):
     except Exception as e:
         logger.warning(f"Could not refresh live channel cache: {e}")
 
-STOP_WORDS = {
-    'for', 'with', 'and', 'the', 'new', 'hot', 'original', 'inch', 'piece', 'pcs',
-    'livan', 'auto', 'تخفيض', 'عرض', 'سعر', 'شاحن', 'كابل', 'نسخة', 'جيغا', 'جيجا',
-    'global', 'version', 'sale', 'brand', 'deals', 'deal', 'official', 'store',
-    'الشراء', 'الطلب', 'رابط', 'خصم', 'عملات', 'كوبون'
-}
 
-def extract_title_tokens(title: str) -> Set[str]:
-    """Extracts distinctive model/product tokens, preserving alphanumeric codes (e.g. p3, x3, 5g, 8k, r1)."""
-    if not title:
-        return set()
-    cleaned = re.sub(r'[\$€\(\)\[\],.;:!?/\\|\-_~+]+', ' ', title.lower())
-    tokens = set()
-    for w in cleaned.split():
-        if w in STOP_WORDS:
-            continue
-        # Keep words of len >= 3 OR words containing digits (e.g. p3, x3, 5g, 8k, r1)
-        if len(w) >= 3 or any(c.isdigit() for c in w):
-            tokens.add(w)
-    return tokens
-
-SPEC_TOKENS = {'5g', '4g', '8k', '4k', '120hz', '144hz', '165hz', '240hz', '128', '256', '512', '64', '32', '16', '8', '6', '12'}
-
-def extract_model_identifiers(tokens: Set[str]) -> Set[str]:
-    """Finds product model identifiers like r1, x3, p3, ak820, f6, gt, hy300."""
-    return {t for t in tokens if any(c.isdigit() for c in t) and t not in SPEC_TOKENS}
-
-def is_same_deal_title(title_a: str, title_b: str) -> bool:
-    """Accurately identifies if two titles refer to the same product across different channels."""
-    toks_a = extract_title_tokens(title_a)
-    toks_b = extract_title_tokens(title_b)
-    if not toks_a or not toks_b:
-        return False
-
-    # Check distinct model codes (e.g. Attack Shark R1 vs Attack Shark X3)
-    models_a = extract_model_identifiers(toks_a)
-    models_b = extract_model_identifiers(toks_b)
-    if models_a and models_b and not models_a.intersection(models_b):
-        return False
-
-    # Check product category mismatch (e.g. realme phone vs realme pad)
-    if ("pad" in toks_a and "pad" not in toks_b) or ("pad" in toks_b and "pad" not in toks_a):
-        return False
-
-    common = toks_a.intersection(toks_b)
-
-    # 1. 3+ common distinctive keywords (e.g. "attack", "shark", "x3")
-    if len(common) >= 3:
-        return True
-
-    # 2. 2 core keywords (e.g. "realme", "p3")
-    if len(common) >= 2:
-        min_len = min(len(toks_a), len(toks_b))
-        if len(common) / min_len >= 0.5:
-            return True
-
-    return False
-
-def _clean_title_keywords(title: str) -> List[str]:
-    """Backwards-compatible wrapper returning token list."""
-    return list(extract_title_tokens(title))
 
 async def is_product_already_published(product_id: Optional[str], title: str = "") -> Tuple[bool, str]:
     """
@@ -602,7 +628,7 @@ async def is_product_already_published(product_id: Optional[str], title: str = "
 
     return False, ""
 
-def record_product_published(product_id: Optional[str], title: str = ""):
+def record_product_published(product_id: Optional[str], title: str = "", price: Optional[float] = None):
     """Records a published product into persistent state immediately with current timestamp."""
     state = load_persistent_state()
     changed = False
@@ -612,10 +638,14 @@ def record_product_published(product_id: Optional[str], title: str = ""):
         state["published_product_timestamps"] = {}
     if "published_title_timestamps" not in state:
         state["published_title_timestamps"] = {}
+    if "published_product_prices" not in state:
+        state["published_product_prices"] = {}
 
     if product_id:
         p_str = str(product_id).strip()
         state["published_product_timestamps"][p_str] = now
+        if price is not None and price > 0:
+            state["published_product_prices"][p_str] = float(price)
         if p_str not in state.get("published_product_ids", []):
             state.setdefault("published_product_ids", []).append(p_str)
         changed = True
@@ -645,7 +675,7 @@ async def is_disclaimer_eligible() -> Tuple[bool, str]:
 
     # Live channel text check: is disclaimer already in recent messages?
     for t in _CACHED_CHANNEL_TEXTS:
-        if "لماذا يجب تغيير دولة التطبيق" in t or "تغيير دولة التطبيق في AliExpress" in t:
+        if any(kw in t for kw in ["لماذا يجب تغيير دولة التطبيق", "تغيير دولة التطبيق", "تغيير الدولة في تطبيق", "لا تفوت أي سنتيم", "وفر دراهمك"]):
             # Update state so we don't re-check repeatedly
             state["last_disclaimer_time"] = now
             save_persistent_state(state)
@@ -673,7 +703,7 @@ async def is_calendar_eligible() -> Tuple[bool, str]:
 
     # Live channel check
     for t in _CACHED_CHANNEL_TEXTS:
-        if "رزنامة تخفيضات ومهرجانات AliExpress" in t:
+        if any(kw in t for kw in ["رزنامة تخفيضات ومهرجانات", "جدول التخفيضات الرسمية", "رزنامة تخفيضات", "التخفيضات الرسمية"]):
             state["last_calendar_time"] = now
             save_persistent_state(state)
             return False, "Calendar already visible in recent channel messages"
@@ -697,8 +727,11 @@ async def is_coin_reminder_eligible(min_hours: float = 48.0) -> Tuple[bool, str]
         hours_left = (jitter_seconds - (now - last_rem)) / 3600
         return False, f"Coin reminder cooldown active ({hours_left:.1f} hours remaining)"
 
-    if _CACHED_CHANNEL_TEXTS and any(k in _CACHED_CHANNEL_TEXTS[0] for k in ["دليل متسوقي الحاسوب", "اجمع رصيد عملاتك اليومية", "جامع العملات التلقائي"]):
-        return False, "Coin reminder was recently posted and at the top of the channel"
+    for t in _CACHED_CHANNEL_TEXTS:
+        if any(k in t for k in ["دليل متسوقي الحاسوب", "اجمع رصيد عملاتك اليومية", "جامع العملات التلقائي", "دليل جامع العملات", "دليل جمع العملات", "جامع العملات"]):
+            state["last_coin_reminder_time"] = now
+            save_persistent_state(state)
+            return False, "Coin reminder already visible in recent channel messages"
 
     return True, "Coin reminder eligible for posting"
 

@@ -245,8 +245,11 @@ class DealCaptionGenerator:
         else:
             lines.append("💵 <b>السعر :</b> <b>سعر خاص ومخفض</b> 🔥")
 
-        if seller_coupon:
-            lines.append(f"🌷 <b>احجــز قسيمــة البــائع :</b> <code>{html.escape(seller_coupon)}</code>")
+        if seller_coupon and str(seller_coupon).strip() not in {"0", "0$", "$0", "None", ""}:
+            s_clean = str(seller_coupon).strip()
+            if s_clean.isdigit():
+                s_clean = f"{s_clean}$"
+            lines.append(f"🌷 <b>احجــز قسيمــة البــائع :</b> <code>{html.escape(s_clean)}</code>")
 
         if coupon_code:
             lines.append(f"🙏 <b>كـوبون الخصم :</b> ⏺ <code>{html.escape(coupon_code)}</code>")

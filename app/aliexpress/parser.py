@@ -25,7 +25,7 @@ COUPON_PATTERNS = [
 ]
 
 SELLER_COUPON_PATTERNS = [
-    re.compile(r'(?:احجز\s*قسيمة\s*(?:البائع|المتجر)|قسيمة\s*(?:البائع|المتجر)|store\s*coupon|seller\s*coupon)\s*[:：\-\s✅🔥👉✔️🌷🙏]*([A-Za-z0-9_\-\$]{1,25}(?:\s*(?:دولار|dollar|\$))?)', re.IGNORECASE),
+    re.compile(r'(?:احجز\s*قسيمة\s*(?:البائع|المتجر)|قسيمة\s*(?:البائع|المتجر)|store\s*coupon|seller\s*coupon)\s*[:：\-\s✅🔥👉✔️🌷🙏\+]*([0-9]+(?:[\.,][0-9]+)?(?:\s*(?:دولار|dollar|\$))?|[A-Za-z0-9_\-]{3,25})', re.IGNORECASE),
 ]
 
 
@@ -308,8 +308,16 @@ def extract_seller_coupon(text: str) -> Optional[str]:
         m = pattern.search(norm)
         if m:
             code = m.group(1).strip()
-            if code.lower() not in {"http", "https", "aliexpress", "item", "link", "url", "temu"}:
-                return code
+            if code.lower() in {"http", "https", "aliexpress", "item", "link", "url", "temu", "0", "0$", "$0", "none"}:
+                continue
+            # If purely numerical or dollar amount, ensure it is at least $1.00
+            num_clean = re.sub(r'[^\d\.]', '', code)
+            try:
+                if num_clean and float(num_clean) < 1.0:
+                    continue  # Ignore trivial sub-dollar coupons like 0.9$
+            except ValueError:
+                pass
+            return code
     return None
 
 
