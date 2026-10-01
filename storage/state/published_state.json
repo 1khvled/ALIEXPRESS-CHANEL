@@ -8,7 +8,19 @@
     "3256812728623262",
     "1005013152491360",
     "1005012264415744",
-    "3256812678803138"
+    "3256812678803138",
+    "1005007331264474",
+    "1005007279793099",
+    "1005007961216287",
+    "1005005217734986",
+    "1005008829227075",
+    "1005007458827229",
+    "1005007394028808",
+    "1005010453516983",
+    "1005008390562391",
+    "1005008233932899",
+    "1005009627597591",
+    "1005009734653254"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790857823.0117362,
@@ -19,7 +31,19 @@
     "3256812728623262": 1790863490.8762736,
     "1005013152491360": 1790863500.981156,
     "1005012264415744": 1790863511.4083428,
-    "3256812678803138": 1790863521.992221
+    "3256812678803138": 1790863521.992221,
+    "1005007331264474": 1790883277.084975,
+    "1005007279793099": 1790883289.1615145,
+    "1005007961216287": 1790883294.186916,
+    "1005005217734986": 1790883306.0826752,
+    "1005008829227075": 1790883316.1783996,
+    "1005007458827229": 1790883321.2313778,
+    "1005007394028808": 1790883333.2928143,
+    "1005010453516983": 1790883344.1994839,
+    "1005008390562391": 1790883349.6253302,
+    "1005008233932899": 1790883353.9268405,
+    "1005009627597591": 1790883365.1735752,
+    "1005009734653254": 1790883376.1943722
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -30,7 +54,19 @@
     "POCO C71 3/64",
     "POCO X8 5G 6/128",
     "POCO C81 Pro 4/64",
-    "realme 14 Pro 5G 12/256"
+    "realme 14 Pro 5G 12/256",
+    "Attack Shark L80 Gaming Headset, Lightweight",
+    "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,",
+    "ATTACK SHARK L90 Flodable Gaming Headset",
+    "SomnAmbulist SSD  120GB",
+    "ATTACK SHARK X1 Wireless Gaming Mouse with Magnetic Charging Dock, PAW3395PRO Sensor,",
+    "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor",
+    "Attack Shark X5",
+    "OPPO A6 Pro 8/256",
+    "ATTACK SHARK G300",
+    "Realme 14 Pro Plus Global (8/256)",
+    "Realme 15 Pro Global (8/256)",
+    "POCO C81 Pro"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -41,7 +77,19 @@
     "POCO C71 3/64": 1790863490.8762736,
     "POCO X8 5G 6/128": 1790863500.981156,
     "POCO C81 Pro 4/64": 1790863511.4083428,
-    "realme 14 Pro 5G 12/256": 1790863521.992221
+    "realme 14 Pro 5G 12/256": 1790863521.992221,
+    "Attack Shark L80 Gaming Headset, Lightweight": 1790883277.084975,
+    "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,": 1790883289.1615145,
+    "ATTACK SHARK L90 Flodable Gaming Headset": 1790883294.186916,
+    "SomnAmbulist SSD  120GB": 1790883306.0826752,
+    "ATTACK SHARK X1 Wireless Gaming Mouse with Magnetic Charging Dock, PAW3395PRO Sensor,": 1790883316.1783996,
+    "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor": 1790883321.2313778,
+    "Attack Shark X5": 1790883333.2928143,
+    "OPPO A6 Pro 8/256": 1790883344.1994839,
+    "ATTACK SHARK G300": 1790883349.6253302,
+    "Realme 14 Pro Plus Global (8/256)": 1790883353.9268405,
+    "Realme 15 Pro Global (8/256)": 1790883365.1735752,
+    "POCO C81 Pro": 1790883376.1943722
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -52,15 +100,27 @@
     "zedstoreonline:38474",
     "zedstoreonline:38475",
     "zedstoreonline:38476",
-    "zedstoreonline:38477"
+    "zedstoreonline:38477",
+    "pcgamingpart:7925",
+    "pcgamingpart:7926",
+    "pcgamingpart:7927",
+    "pcgamingpart:7928",
+    "pcgamingpart:7929",
+    "pcgamingpart:7930",
+    "zedstoreonline:38490",
+    "zedstoreonline:38492",
+    "aniscoupons:32616",
+    "aniscoupons:32617",
+    "aniscoupons:32618",
+    "aniscoupons:32619"
   ],
   "last_disclaimer_time": 1790863447.485975,
   "last_calendar_time": 1790863446.3386598,
-  "last_run_time": 1790863521.992221,
+  "last_run_time": 1790883376.1943722,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32590,
-      "last_check_time": 1790857825.0355954
+      "last_message_id": 32619,
+      "last_check_time": 1790883376.1943722
     },
     "ecksdeal": {
       "last_message_id": 5850,
@@ -76,11 +136,11 @@
     },
     "pcgamingpart": {
       "last_message_id": 7931,
-      "last_check_time": 1790863479.1450555
+      "last_check_time": 1790883321.2313778
     },
     "zedstoreonline": {
       "last_message_id": 38493,
-      "last_check_time": 1790863521.992221
+      "last_check_time": 1790883344.1994839
     }
   },
   "published_product_prices": {
@@ -91,7 +151,19 @@
     "3256812728623262": 60.0,
     "1005013152491360": 202.0,
     "1005012264415744": 78.0,
-    "3256812678803138": 234.9
+    "3256812678803138": 234.9,
+    "1005007331264474": 16.22,
+    "1005007279793099": 14.12,
+    "1005007961216287": 18.17,
+    "1005005217734986": 9.61,
+    "1005008829227075": 25.06,
+    "1005007458827229": 22.75,
+    "1005007394028808": 11.2,
+    "1005010453516983": 204.7,
+    "1005008390562391": 11.7,
+    "1005008233932899": 294.9,
+    "1005009627597591": 314.9,
+    "1005009734653254": 67.3
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -183,6 +255,126 @@
       "price": 234.9,
       "timestamp": 1790863521.992221,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7925": {
+      "channel_msg_id": 228,
+      "product_id": "1005007331264474",
+      "title": "Attack Shark L80 Gaming Headset, Lightweight",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7925,
+      "price": 16.22,
+      "timestamp": 1790883277.084975,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7926": {
+      "channel_msg_id": 229,
+      "product_id": "1005007279793099",
+      "title": "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7926,
+      "price": 14.12,
+      "timestamp": 1790883289.1615145,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7927": {
+      "channel_msg_id": 230,
+      "product_id": "1005007961216287",
+      "title": "ATTACK SHARK L90 Flodable Gaming Headset",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7927,
+      "price": 18.17,
+      "timestamp": 1790883294.186916,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7928": {
+      "channel_msg_id": 231,
+      "product_id": "1005005217734986",
+      "title": "SomnAmbulist SSD  120GB",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7928,
+      "price": 9.61,
+      "timestamp": 1790883306.0826752,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7929": {
+      "channel_msg_id": 232,
+      "product_id": "1005008829227075",
+      "title": "ATTACK SHARK X1 Wireless Gaming Mouse with Magnetic Charging Dock, PAW3395PRO Sensor,",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7929,
+      "price": 25.06,
+      "timestamp": 1790883316.1783996,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7930": {
+      "channel_msg_id": 233,
+      "product_id": "1005007458827229",
+      "title": "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7930,
+      "price": 22.75,
+      "timestamp": 1790883321.2313778,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38490": {
+      "channel_msg_id": 234,
+      "product_id": "1005007394028808",
+      "title": "Attack Shark X5",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38490,
+      "price": 11.2,
+      "timestamp": 1790883333.2928143,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38492": {
+      "channel_msg_id": 235,
+      "product_id": "1005010453516983",
+      "title": "OPPO A6 Pro 8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38492,
+      "price": 204.7,
+      "timestamp": 1790883344.1994839,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32616": {
+      "channel_msg_id": 236,
+      "product_id": "1005008390562391",
+      "title": "ATTACK SHARK G300",
+      "channel": "aniscoupons",
+      "source_msg_id": 32616,
+      "price": 11.7,
+      "timestamp": 1790883349.6253302,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32617": {
+      "channel_msg_id": 237,
+      "product_id": "1005008233932899",
+      "title": "Realme 14 Pro Plus Global (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 32617,
+      "price": 294.9,
+      "timestamp": 1790883353.9268405,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32618": {
+      "channel_msg_id": 238,
+      "product_id": "1005009627597591",
+      "title": "Realme 15 Pro Global (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 32618,
+      "price": 314.9,
+      "timestamp": 1790883365.1735752,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32619": {
+      "channel_msg_id": 239,
+      "product_id": "1005009734653254",
+      "title": "POCO C81 Pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 32619,
+      "price": 67.3,
+      "timestamp": 1790883376.1943722,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -191,8 +383,11 @@
     "current_interval_minutes": 15,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790863521.9928355,
+    "last_deal_post_time": 1790883376.195294,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
-  }
+  },
+  "last_coin_reminder_time": 1790883262.5798116,
+  "next_reminder_interval_seconds": 224062,
+  "coin_reminder_variant_idx": 1
 }
