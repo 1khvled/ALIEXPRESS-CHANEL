@@ -19,13 +19,14 @@ EUR_PRICE_PATTERNS = [
 ]
 
 COUPON_PATTERNS = [
-    re.compile(r'(?:كوبـــ?ون|كود|code|coupon)\s*(?:[0-9]+(?:\.[0-9]+)?/[0-9]+(?:\.[0-9]+)?\$?)?\s*[:：\-\s✅🔥👉✔️]*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
-    re.compile(r'🎟️?\s*(?:كوبـــ?ون|كود|code|coupon)\s*[:：\-\s✅🔥👉✔️]*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
-    re.compile(r'(?:استخدم كود|استعمل كود|قسيمة)\s*[:：\-\s✅🔥👉✔️]*([A-Za-z0-9_-]{3,25})', re.IGNORECASE),
+    re.compile(r'(?:كوبون|كود|code|coupon|قسيمة)\s*(?:[$]?[0-9]+(?:[\.,][0-9]+)?[^\S\r\n]*/[^\S\r\n]*[$]?[0-9]+(?:[\.,][0-9]+)?[$]?)?\s*(?:دولار|dollar|\$)?\s*[:：\-\s✅🔥👉✔️⏺🙏🎟️]*(?:استخدمه|استخدم|بكود|code)?\s*[:：\-\s✅🔥👉✔️⏺🙏🎟️]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
+    re.compile(r'(?:كوبون|كود|code|coupon)\s*(?:[0-9]+(?:\.[0-9]+)?\s*(?:دولار|dollar|\$))?[^\nA-Za-z0-9]*(?:استخدمه|استخدم|استعمله|استعمل)?[^\nA-Za-z0-9]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
+    re.compile(r'(?:استخدم كود|استعمل كود|كود الخصم|كود التخفيض|كوبون خاص)\s*[^A-Za-z0-9]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
+    re.compile(r'(?:code|كود)\s*[:：\-\s✅🔥👉✔️⏺🤐]+\s*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
 ]
 
 SELLER_COUPON_PATTERNS = [
-    re.compile(r'(?:قسيمة\s*(?:البائع|المتجر)|store\s*coupon|seller\s*coupon)\s*(?:[0-9]+(?:\.[0-9]+)?\$?)?\s*[:：\-\s✅🔥👉✔️]*([A-Za-z0-9_-]{4,25})', re.IGNORECASE),
+    re.compile(r'(?:احجز\s*قسيمة\s*(?:البائع|المتجر)|قسيمة\s*(?:البائع|المتجر)|store\s*coupon|seller\s*coupon)\s*[:：\-\s✅🔥👉✔️🌷🙏]*([A-Za-z0-9_\-\$]{1,25}(?:\s*(?:دولار|dollar|\$))?)', re.IGNORECASE),
 ]
 
 
@@ -287,8 +288,9 @@ def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
 def extract_coupon(text: str) -> Optional[str]:
     if not text:
         return None
+    norm = re.sub(r'[\u0640]', '', text)
     for pattern in COUPON_PATTERNS:
-        m = pattern.search(text)
+        m = pattern.search(norm)
         if m:
             code = m.group(1).strip()
             if code.lower() not in {"http", "https", "aliexpress", "item", "link", "url", "temu"}:
@@ -298,12 +300,13 @@ def extract_coupon(text: str) -> Optional[str]:
 def extract_seller_coupon(text: str) -> Optional[str]:
     if not text:
         return None
+    norm = re.sub(r'[\u0640]', '', text)
     for pattern in SELLER_COUPON_PATTERNS:
-        m = pattern.search(text)
+        m = pattern.search(norm)
         if m:
             code = m.group(1).strip()
             if code.lower() not in {"http", "https", "aliexpress", "item", "link", "url", "temu"}:
-                return code.upper()
+                return code
     return None
 
 
@@ -398,6 +401,19 @@ def extract_clean_title(text: str) -> Optional[str]:
         if any(norm.startswith(v) for v in ["يلحقك", "تأتي", "تحتوي", "يأتي", "معاها", "طريقة", "كيفية", "شرح"]):
             return True
         return False
+
+    # 0. Look for explicit star bullet title line (ZedStore & top Algerian channels standard: ⭐️ [Title])
+    for i, line in enumerate(lines):
+        if any(s in line for s in ["⭐️", "⭐", "🌟"]):
+            cand = re.sub(r'^[⭐️⭐🌟\s\-:]+', '', line).strip()
+            if (not cand or len(cand) < 3) and i + 1 < len(lines):
+                cand = lines[i + 1].strip()
+                if i + 2 < len(lines) and not any(k in lines[i + 2] for k in ['$', '€', 'السعر', 'احجز', 'كوبون', 'رابط', '🔗', '💵']):
+                    cand += ' ' + lines[i + 2].strip()
+            cand = re.sub(r'[\$€💵].*$', '', cand).strip()
+            cand = re.sub(r'https?://\S+', '', cand).strip()
+            if not is_noisy(cand) and len(cand) >= 3:
+                return cand[:100]
 
     # 1. Look for explicit title prefix line
     for i, line in enumerate(lines):

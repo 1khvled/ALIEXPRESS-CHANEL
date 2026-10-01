@@ -162,8 +162,7 @@ async def send_france_promo_alert(text: str, reply_markup: Dict[str, Any]) -> Tu
                         data={
                             "chat_id": TARGET_FRANCE_CHANNEL,
                             "caption": text,
-                            "parse_mode": "HTML",
-                            "reply_markup": json.dumps(reply_markup)
+                            "parse_mode": "HTML"
                         },
                         files={"photo": ("choice_day_fr_card.jpg", pf, "image/jpeg")}
                     )
@@ -174,7 +173,6 @@ async def send_france_promo_alert(text: str, reply_markup: Dict[str, Any]) -> Tu
                         "chat_id": TARGET_FRANCE_CHANNEL,
                         "text": text,
                         "parse_mode": "HTML",
-                        "reply_markup": reply_markup,
                         "disable_web_page_preview": True
                     }
                 )

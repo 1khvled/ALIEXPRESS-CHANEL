@@ -88,13 +88,7 @@ async def post_deal_to_france_channel(
         return False, "TELEGRAM_BOT_TOKEN not configured", None
 
     api_url = f"https://api.telegram.org/bot{bot_token}"
-    inline_keyboard = []
-    if affiliate_url and affiliate_url.startswith("http"):
-        btn_text = "🎟️ Voir les codes promo" if is_coupon_bulletin else "🛒 Acheter sur AliExpress"
-        inline_keyboard.append([{"text": btn_text, "url": affiliate_url}])
-    inline_keyboard.append([{"text": "📢 Rejoindre @francedealsdz", "url": "https://t.me/francedealsdz"}])
-    reply_markup_json = json.dumps({"inline_keyboard": inline_keyboard})
-
+    # Competitor standard (AliFRDrop / Dealabs): 0% inline buttons so affiliate links survive Telegram forwards
     photo_bytes = None
     if image_path and image_path.exists():
         photo_bytes = image_path.read_bytes()
@@ -107,16 +101,14 @@ async def post_deal_to_france_channel(
                     data = {
                         "chat_id": TARGET_FRANCE_CHANNEL,
                         "caption": caption,
-                        "parse_mode": "HTML",
-                        "reply_markup": reply_markup_json
+                        "parse_mode": "HTML"
                     }
                     resp = await client.post(f"{api_url}/sendPhoto", data=data, files=files)
                 else:
                     data = {
                         "chat_id": TARGET_FRANCE_CHANNEL,
                         "text": caption,
-                        "parse_mode": "HTML",
-                        "reply_markup": reply_markup_json
+                        "parse_mode": "HTML"
                     }
                     resp = await client.post(f"{api_url}/sendMessage", data=data)
 

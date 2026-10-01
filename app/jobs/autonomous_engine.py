@@ -358,14 +358,30 @@ class AutonomousEngine:
             logger.error(f"Error checking promo notifiers: {e}")
 
     async def run_single_cycle(self) -> int:
-        """Executes one scan cycle across all monitored channels using the unified deal processor."""
+        """Executes one scan cycle across monitored channels for both Algeria (@DzAliexpress0) and France (@francedealsdz)."""
+        dz_published = 0
+        fr_published = 0
         try:
             from scripts.post_recent_deals import collect_and_post_last_10_deals
             await collect_and_post_last_10_deals()
-            return 1
+            dz_published = 1
         except Exception as e:
-            logger.error(f"Autonomous cycle execution error: {e}", exc_info=True)
-            return 0
+            logger.error(f"DZ autonomous cycle execution error: {e}", exc_info=True)
+
+        try:
+            from scripts.post_france_deals import collect_and_post_france_deals
+            await collect_and_post_france_deals()
+            fr_published = 1
+        except Exception as e:
+            logger.error(f"France autonomous cycle execution error: {e}", exc_info=True)
+
+        try:
+            from app.publisher.promo_notifiers_fr import check_and_auto_post_france_promo_notifiers
+            await check_and_auto_post_france_promo_notifiers()
+        except Exception as e:
+            logger.error(f"France promo notifier check error: {e}")
+
+        return dz_published + fr_published
 
     async def run_forever(self):
         """Continuous autonomous loop running 24/7."""

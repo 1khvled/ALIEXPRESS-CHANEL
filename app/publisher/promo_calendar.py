@@ -145,8 +145,7 @@ async def publish_calendar_to_channel(bot_token: Optional[str] = None, channel_i
                     data = {
                         "chat_id": target,
                         "caption": caption[:1024],
-                        "parse_mode": "HTML",
-                        "reply_markup": json.dumps(markup)
+                        "parse_mode": "HTML"
                     }
                     resp = await client.post(f"{api_url}/sendPhoto", data=data, files=files)
             else:
@@ -156,8 +155,7 @@ async def publish_calendar_to_channel(bot_token: Optional[str] = None, channel_i
                         "chat_id": target,
                         "photo": CALENDAR_BANNER_IMG,
                         "caption": caption[:1024],
-                        "parse_mode": "HTML",
-                        "reply_markup": markup
+                        "parse_mode": "HTML"
                     }
                 )
             data = resp.json()
@@ -171,8 +169,7 @@ async def publish_calendar_to_channel(bot_token: Optional[str] = None, channel_i
                     json={
                         "chat_id": target,
                         "text": caption,
-                        "parse_mode": "HTML",
-                        "reply_markup": markup
+                        "parse_mode": "HTML"
                     }
                 )
                 data_text = resp_text.json()

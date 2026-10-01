@@ -162,8 +162,7 @@ async def send_promo_alert_to_channel(
                         data={
                             "chat_id": target,
                             "caption": text,
-                            "parse_mode": "HTML",
-                            "reply_markup": json.dumps(reply_markup)
+                            "parse_mode": "HTML"
                         },
                         files={"photo": ("choice_day_card.jpg", pf, "image/jpeg")}
                     )
@@ -174,7 +173,6 @@ async def send_promo_alert_to_channel(
                         "chat_id": target,
                         "text": text,
                         "parse_mode": "HTML",
-                        "reply_markup": reply_markup,
                         "disable_web_page_preview": True
                     }
                 )
