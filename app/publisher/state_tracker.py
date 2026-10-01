@@ -712,9 +712,9 @@ def record_coin_reminder_published():
 
 # ── Dynamic Schedule & Interval Management ──────────────────────
 DEFAULT_SCHEDULE_CONFIG = {
-    "day_interval_minutes": 15,
+    "day_interval_minutes": 5,
     "night_interval_minutes": 60,
-    "current_interval_minutes": 15,
+    "current_interval_minutes": 5,
     "is_paused": False,
     "night_mode_enabled": True,
     "last_deal_post_time": 0.0,

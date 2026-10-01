@@ -15,7 +15,8 @@ from app.aliexpress.parser import (
     extract_country_instruction,
     extract_clean_title,
     is_spam_or_non_deal,
-    extract_coupon_list
+    extract_coupon_list,
+    detect_deal_type
 )
 from app.utils.logger import logger
 
@@ -36,6 +37,8 @@ class ExtractedProduct:
     country_info: Optional[str] = None
     is_coupon_list: bool = False
     coupon_list: List[Dict[str, str]] = field(default_factory=list)
+    final_url: Optional[str] = None
+    deal_type: str = "coin"
 
 
 class ProductExtractor:
@@ -117,7 +120,9 @@ class ProductExtractor:
         seller_coupon = extract_seller_coupon(text)
         has_points = detect_points_discount(text)
         title = extract_clean_title(text)
-        country_info = extract_country_instruction(text, url=ali_url or "", title=title or "")
+        combined_deal_url = f"{ali_url or ''} {resolved.final_url or ''} {resolved.canonical_url or ''}"
+        country_info = extract_country_instruction(text, url=combined_deal_url, title=title or "")
+        deal_type = detect_deal_type(text, combined_deal_url)
 
         # 5. Fetch official HD studio image & details via AliExpress Open Platform API
         image_url = None
@@ -185,7 +190,9 @@ class ProductExtractor:
             raw_text=text,
             country_info=country_info,
             is_coupon_list=False,
-            coupon_list=[]
+            coupon_list=[],
+            final_url=resolved.final_url,
+            deal_type=deal_type
         )
 
     async def _fetch_page_metadata(self, url: str) -> dict:

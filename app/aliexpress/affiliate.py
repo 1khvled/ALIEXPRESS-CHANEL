@@ -44,6 +44,8 @@ class DirectAffiliateProvider(AffiliateProvider):
 
         # Clean campaign URLs to strip noisy tracking parameters
         clean_url = product_url.split("?")[0] if ("aliexpress.com" in product_url and "?" in product_url) else product_url
+        if deal_type == "bundle":
+            return f"{clean_url}?sourceType=562&aff_fcid={self.tracking_id}"
         separator = "&" if "?" in clean_url else "?"
         return f"{clean_url}{separator}aff_fcid={self.tracking_id}"
 
@@ -103,7 +105,11 @@ class PortalsApiAffiliateProvider(AffiliateProvider):
             else:
                 target_url = f"https://m.aliexpress.com/p/coin-index/index.html?productIds={pid}"
         else:
-            target_url = product_url
+            if deal_type == "bundle" and "sourceType=562" not in product_url:
+                sep = "&" if "?" in product_url else "?"
+                target_url = f"{product_url}{sep}sourceType=562"
+            else:
+                target_url = product_url
 
         if self.api:
             for attempt in range(1, 4):

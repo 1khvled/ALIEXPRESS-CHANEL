@@ -129,7 +129,7 @@ def test_post_id_validation_and_no_repeat():
     assert is_post_already_published(ch, post_id_2) is False
 
     # Cross-channel duplicate check: another channel posting exact same product on same day is blocked
-    is_cross_dup, r = is_recent_cross_channel_duplicate(test_pid, "aniscoupons")
+    is_cross_dup, r, _ = is_recent_cross_channel_duplicate(test_pid, "aniscoupons")
     assert is_cross_dup is True
     assert "was already posted" in r
 

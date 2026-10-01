@@ -314,7 +314,10 @@ async def collect_and_post_france_deals():
                         continue
 
                 # 8. Build France affiliate URL
-                deal_type = detect_deal_type(raw_text, extracted.canonical_url)
+                deal_type = getattr(extracted, 'deal_type', None) or detect_deal_type(
+                    raw_text,
+                    f"{extracted.original_url} {getattr(extracted, 'final_url', '') or ''} {extracted.canonical_url}"
+                )
                 aff_link = await affiliate_service.create_affiliate_link(
                     product_url=extracted.canonical_url,
                     product_id=extracted.product_id if not extracted.is_coupon_list else None,

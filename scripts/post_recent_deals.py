@@ -302,7 +302,10 @@ async def collect_and_post_last_10_deals():
                             continue
 
                     # 8. Build affiliate URL (Coin link 90%+, Bundle link for bundle deals)
-                    deal_type = detect_deal_type(raw_text, extracted.canonical_url)
+                    deal_type = getattr(extracted, 'deal_type', None) or detect_deal_type(
+                        raw_text,
+                        f"{extracted.original_url} {getattr(extracted, 'final_url', '') or ''} {extracted.canonical_url}"
+                    )
                     aff_link = await affiliate_service.create_affiliate_link(
                         product_url=extracted.canonical_url,
                         product_id=extracted.product_id if not extracted.is_coupon_list else None,
@@ -323,7 +326,8 @@ async def collect_and_post_last_10_deals():
                         promo_tag=None,
                         is_price_drop=is_price_drop,
                         coin_url=None,
-                        raw_text=raw_text
+                        raw_text=raw_text,
+                        deal_type=deal_type
                     )
 
                     # 10. Prepare Image with subtle circular DealScout logo watermark

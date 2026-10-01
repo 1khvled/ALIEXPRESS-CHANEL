@@ -137,7 +137,7 @@ class DealCaptionGenerator:
         lines.append("⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك (طبقوها غداً على 08:00 صباحاً 🔥👌🏽):</b>")
         lines.append("⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ($55 ثم $42...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅")
         lines.append("🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب (كل الكوبونات مقبولة عليه) ⤵️</b>")
-        lines.append("https://s.click.aliexpress.com/e/_c3d8Osgp")
+        lines.append(affiliate_url)
         lines.append("")
         lines.append("😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات :</b>")
         lines.append("👉 t.me/Alilo07BOT")
@@ -188,23 +188,41 @@ class DealCaptionGenerator:
         country_info: Optional[str] = None,
         promo_tag: Optional[str] = None,
         is_price_drop: bool = False,
-        coin_url: Optional[str] = None
+        coin_url: Optional[str] = None,
+        deal_type: str = "coin"
     ) -> str:
         lines = []
 
         # 1. Authentic Algerian Deal Hook
-        hook = self._select_smart_hook(
-            title=title,
-            usd_price=usd_price,
-            has_points_discount=has_points_discount,
-            has_coupon=bool(coupon_code or seller_coupon),
-            promo_tag=None,
-            is_price_drop=is_price_drop
-        )
+        if deal_type == "bundle":
+            h = int(hashlib.md5(title.encode()).hexdigest(), 16)
+            bundle_hooks = [
+                "🔥 <b>الححححححححق عروض bundle deals متتراطاش 🔥</b>",
+                "📦 <b>عروض الحزم (Choice Bundle) صيدة هبااال ناااار 🔥⚡</b>",
+                "⚡ <b>صيدة اليوم في عروض الحزم 3 قطع بأقوى سعر 🔥</b>",
+                "🛍️ <b>لافـــــــــــــار عروض الحزم bundle deals باطل 🔥</b>"
+            ]
+            hook = bundle_hooks[h % len(bundle_hooks)]
+        else:
+            hook = self._select_smart_hook(
+                title=title,
+                usd_price=usd_price,
+                has_points_discount=has_points_discount,
+                has_coupon=bool(coupon_code or seller_coupon),
+                promo_tag=None,
+                is_price_drop=is_price_drop
+            )
         lines.append(hook)
 
         # 2. Country recommendation (exact Algerian Telegram style)
-        if country_info:
+        if deal_type == "bundle":
+            if country_info and any(k in str(country_info).lower() for k in ["كندا", "canada", "ca"]):
+                lines.append("📍 خلي البلـــد <b>كــــــندا 🇨🇦</b>")
+            elif country_info and any(k in str(country_info).lower() for k in ["كوريا", "korea", "kr"]):
+                lines.append("📍 خلي البلـــد <b>كــــــوريا 🇰🇷</b>")
+            else:
+                lines.append("📍 خلي البلـــد <b>الجزائر 🇩🇿</b>")
+        elif country_info:
             c_str = str(country_info).lower()
             if "كوريا" in country_info or "korea" in c_str or "kr" in c_str:
                 lines.append("📍 خلي البلـــد <b>كــــــوريا 🇰🇷</b>")
@@ -233,11 +251,16 @@ class DealCaptionGenerator:
         if coupon_code:
             lines.append(f"🙏 <b>كـوبون الخصم :</b> ⏺ <code>{html.escape(coupon_code)}</code>")
 
-        if has_points_discount:
+        if deal_type == "bundle":
+            lines.append("📦 <b>عروض الحزم (Choice Bundle - 3 منتجات فأكثر) 🛍️</b>")
+        elif has_points_discount:
             lines.append("🪙 <b>تخفيض العملات مفعّل عبر الرابط</b>")
 
         lines.append("")
-        lines.append(f"🔗 <b>رابـــــط المنتـــج</b>\n{affiliate_url}")
+        if deal_type == "bundle":
+            lines.append(f"🔗 <b>رابط الباندل (Bundle Deals) ⤵️</b>\n{affiliate_url}")
+        else:
+            lines.append(f"🔗 <b>رابـــــط المنتـــج</b>\n{affiliate_url}")
 
         lines.append("")
         lines.append("😊 <b>بوت مطور لشراء بأفضل سعر وتتبع الطرود :</b>")
@@ -261,7 +284,8 @@ class DealCaptionGenerator:
         promo_tag: Optional[str] = None,
         is_price_drop: bool = False,
         coin_url: Optional[str] = None,
-        raw_text: Optional[str] = None
+        raw_text: Optional[str] = None,
+        deal_type: str = "coin"
     ) -> str:
         """
         Generates authentic Algerian Telegram channel caption.
@@ -287,7 +311,8 @@ class DealCaptionGenerator:
             country_info=country_info,
             promo_tag=promo_tag,
             is_price_drop=is_price_drop,
-            coin_url=coin_url
+            coin_url=coin_url,
+            deal_type=deal_type
         )
 
 caption_generator = DealCaptionGenerator()

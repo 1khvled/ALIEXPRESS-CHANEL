@@ -4,12 +4,11 @@ from typing import Optional, Tuple, List, Dict
 from app.config.settings import settings
 
 PRICE_PATTERNS = [
-    re.compile(r'\$\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
-    re.compile(r'([0-9]+(?:[\.,][0-9]{1,2})?)\s*\$', re.IGNORECASE),
+    re.compile(r'[\$💲]\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
+    re.compile(r'([0-9]+(?:[\.,][0-9]{1,2})?)\s*[\$💲]', re.IGNORECASE),
     re.compile(r'([0-9]+(?:[\.,][0-9]{1,2})?)\s*USD', re.IGNORECASE),
     re.compile(r'USD\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
-    re.compile(r'السعر\s*[:：]\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
-    re.compile(r'السعــــر\s*[:：]\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
+    re.compile(r'(?:السعر|السعــــر|سعر\s*القطعة|سعر\s*قطعة|سعر)\s*[:：]?\s*[\$💲]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
 ]
 
 EUR_PRICE_PATTERNS = [
@@ -171,6 +170,10 @@ def is_spam_or_non_deal(text: str) -> Tuple[bool, Optional[str]]:
         return True, "Message is too short or empty"
 
     lower_text = text.lower()
+
+    for indicator in NON_DEAL_INDICATORS:
+        if indicator in lower_text:
+            return True, f"Non-deal announcement or promotional meta post: {indicator}"
 
     for store in BLOCKED_STORE_KEYWORDS:
         if store in lower_text:
@@ -454,17 +457,32 @@ def detect_deal_type(raw_text: str, url: str = "") -> str:
     Intelligently determines whether a deal is a 'bundle' deal or a 'coin' deal.
     90%+ of channel offers are coin deals.
     Bundle deals are identified by keywords like 'bundle', 'حزمة', 'حزم', '3 بـ',
-    '3 منتجات', 'choice bundle', or bundle URL patterns.
+    '3 منتجات', '3 حبات', 'choice bundle', 'BundleDeals2', or bundle URL patterns.
     """
     text_lower = (raw_text or "").lower()
     url_lower = (url or "").lower()
 
     bundle_keywords = [
-        "bundle", "bundledraw", "bundledeals", "bundle deals",
-        "حزم", "حزمة", "3 بـ", "3 منتجات", "3 items", "3 حبات",
-        "sourcetype=562"
+        "bundle", "bundledraw", "bundledeals", "bundle deals", "bundledeals2",
+        "300000512", "sourcetype=562", "sourcetype=620", "channel=bundle",
+        "/bundledeals", "choice bundle", "حزم", "حزمة", "3 بـ", "3 ب ", "3بـ", "3ب",
+        "3 منتجات", "3 items", "3 حبات", "ثلاث حبات", "ثلاث منتجات", "3 عروض",
+        "باندل", "بندل", "حزم التوفير", "حزمة التوفير", "3 قطع", "3 سلع",
+        "ثلاث سلع", "ثلاث قطع", "عرض 3", "عروض 3", "3 أجهزة", "3 اجهزة",
+        "3 حبات بـ", "3 حبات ب", "3items", "3pcs", "سعر ثلاث قطع", "سعر 3 قطع",
+        "سعر 3 حبات", "سعر ثلاث حبات", "رابط الباندل", "رابط البندل"
     ]
     if any(k in text_lower for k in bundle_keywords) or any(k in url_lower for k in bundle_keywords):
+        return "bundle"
+
+    # Regex patterns for subtle variations like "3 ب 4$" or "3بـ"
+    if re.search(r'\b3\s*ب(?:ـ|\s|[0-9]|$)', text_lower):
+        return "bundle"
+    if re.search(r'bundle\s*deal', text_lower):
+        return "bundle"
+    if re.search(r'3\s*(?:items|منتجات|حبات|قطع|سلع)', text_lower):
+        return "bundle"
+    if re.search(r'300000512|sourcetype=(?:562|620)|bundledeals', url_lower):
         return "bundle"
 
     return "coin"
