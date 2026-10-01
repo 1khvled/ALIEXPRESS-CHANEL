@@ -46,7 +46,7 @@ CHANNELS = [
     "megaprix"
 ]
 
-async def collect_and_post_last_10_deals():
+async def collect_and_post_last_10_deals(force: bool = False) -> int:
     await init_db()
 
     print("=" * 70)
@@ -105,9 +105,9 @@ async def collect_and_post_last_10_deals():
     from app.publisher.state_tracker import is_deal_posting_due, record_deal_posted_time, is_algerian_peak_hour
     is_due, schedule_msg, active_interval = is_deal_posting_due()
     print(f"\n[SCHEDULE EVALUATION] {schedule_msg}")
-    if not is_due:
+    if not is_due and not force:
         print(f"--> Skipping deal collection this run. ({schedule_msg})")
-        return
+        return 0
 
     # Anti-Flood Pacer & Traffic Evaluation (Peak hours: 12-14 and 18-23:30 Algeria time)
     is_peak = is_algerian_peak_hour()
@@ -548,5 +548,8 @@ async def collect_and_post_last_10_deals():
     except Exception as e:
         print(f"[REGROUP ERROR] {e}")
 
+    return len(published_deals)
+
 if __name__ == "__main__":
-    asyncio.run(collect_and_post_last_10_deals())
+    force_run = "--force" in sys.argv or "-f" in sys.argv
+    asyncio.run(collect_and_post_last_10_deals(force=force_run))

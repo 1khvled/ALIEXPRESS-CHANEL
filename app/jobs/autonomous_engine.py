@@ -13,6 +13,8 @@ from app.utils.network import enforce_ipv4
 enforce_ipv4()
 
 import asyncio
+import json
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import List, Set, Optional
@@ -44,7 +46,7 @@ MONITORED_CHANNELS = [
 ]
 
 class AutonomousEngine:
-    def __init__(self, cycle_interval_seconds: int = 180):
+    def __init__(self, cycle_interval_seconds: int = 60):
         self.interval = cycle_interval_seconds
         self.is_running = False
         self.seen_products: Set[str] = set()
@@ -357,21 +359,21 @@ class AutonomousEngine:
         except Exception as e:
             logger.error(f"Error checking promo notifiers: {e}")
 
-    async def run_single_cycle(self) -> int:
+    async def run_single_cycle(self, force: bool = False) -> int:
         """Executes one scan cycle across monitored channels for both Algeria (@DzAliexpress0) and France (@francedealsdz)."""
         dz_published = 0
         fr_published = 0
         try:
             from scripts.post_recent_deals import collect_and_post_last_10_deals
-            await collect_and_post_last_10_deals()
-            dz_published = 1
+            res = await collect_and_post_last_10_deals(force=force)
+            dz_published = int(res) if res is not None else 0
         except Exception as e:
             logger.error(f"DZ autonomous cycle execution error: {e}", exc_info=True)
 
         try:
             from scripts.post_france_deals import collect_and_post_france_deals
-            await collect_and_post_france_deals()
-            fr_published = 1
+            res_fr = await collect_and_post_france_deals(force=force)
+            fr_published = int(res_fr) if res_fr is not None else 0
         except Exception as e:
             logger.error(f"France autonomous cycle execution error: {e}", exc_info=True)
 
@@ -381,28 +383,54 @@ class AutonomousEngine:
         except Exception as e:
             logger.error(f"France promo notifier check error: {e}")
 
+        # Update daemon heartbeat file
+        try:
+            heartbeat_file = Path(settings.BASE_DIR) / "storage" / "state" / "daemon_heartbeat.json"
+            heartbeat_file.parent.mkdir(parents=True, exist_ok=True)
+            with open(heartbeat_file, "w", encoding="utf-8") as f:
+                json.dump({
+                    "timestamp": time.time(),
+                    "datetime": datetime.now(timezone.utc).isoformat(),
+                    "dz_published": dz_published,
+                    "fr_published": fr_published,
+                    "status": "RUNNING",
+                    "interval_seconds": self.interval
+                }, f, indent=2)
+        except Exception:
+            pass
+
         return dz_published + fr_published
 
     async def run_forever(self):
-        """Continuous autonomous loop running 24/7."""
+        """Continuous autonomous loop running 24/7 with auto-recovery and exponential backoff on fatal errors."""
         self.is_running = True
         logger.info("=" * 60)
         logger.info("AUTONOMOUS DEAL SCOUT ENGINE STARTED (24/7 OPERATION)")
-        logger.info(f"Target: {settings.TARGET_CHANNEL_ID} | Tracking: {settings.ALIEXPRESS_AFFILIATE_TRACKING_ID}")
-        logger.info(f"Interval: {self.interval}s | Channels: {', '.join(MONITORED_CHANNELS)}")
+        logger.info(f"Target Channel: {settings.TARGET_CHANNEL_ID} | Tracking: {settings.ALIEXPRESS_AFFILIATE_TRACKING_ID}")
+        logger.info(f"Check Interval: {self.interval}s | Channels: {', '.join(MONITORED_CHANNELS)}")
         logger.info("=" * 60)
 
-        await self.initialize()
-
+        consecutive_failures = 0
         while self.is_running:
             try:
+                await self.initialize()
                 published = await self.run_single_cycle()
                 if published > 0:
-                    logger.info(f"Cycle completed. {published} deal(s) published.")
+                    logger.info(f"Autonomous cycle completed: {published} deal(s) published.")
+                consecutive_failures = 0
+            except asyncio.CancelledError:
+                logger.info("Autonomous Deal Scout Engine task cancelled.")
+                break
             except Exception as e:
-                logger.exception(f"Unhandled error in autonomous engine cycle: {e}")
+                consecutive_failures += 1
+                logger.exception(f"Unhandled error in autonomous engine cycle (failure #{consecutive_failures}): {e}")
+                backoff = min(60, 5 * consecutive_failures)
+                await asyncio.sleep(backoff)
 
-            await asyncio.sleep(self.interval)
+            try:
+                await asyncio.sleep(self.interval)
+            except asyncio.CancelledError:
+                break
 
     def stop(self):
         self.is_running = False

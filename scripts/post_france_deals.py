@@ -133,7 +133,7 @@ async def post_deal_to_france_channel(
 
     return False, "Failed after 3 attempts", None
 
-async def collect_and_post_france_deals():
+async def collect_and_post_france_deals(force: bool = False) -> int:
     print("=" * 70)
     print("ALIEXPRESS FRANCE DEALS PUBLISHER (STRICT QUALITY & FRESHNESS)")
     print(f"Target Channel: {TARGET_FRANCE_CHANNEL}")
@@ -423,6 +423,8 @@ async def collect_and_post_france_deals():
     print("\n" + "=" * 70)
     print(f"FRANCE RUN FINISHED: Published {published_count} deals to {TARGET_FRANCE_CHANNEL}!")
     print("=" * 70)
+    return published_count
 
 if __name__ == "__main__":
-    asyncio.run(collect_and_post_france_deals())
+    force_run = "--force" in sys.argv or "-f" in sys.argv
+    asyncio.run(collect_and_post_france_deals(force=force_run))

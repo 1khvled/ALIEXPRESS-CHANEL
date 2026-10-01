@@ -1,0 +1,20 @@
+[Unit]
+Description=DealScout Autonomous Telegram Bot Daemon
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/ALIEXPRESS-CHANEL
+ExecStart=/usr/bin/python3 scripts/run_autonomous.py --interval 60
+Restart=always
+RestartSec=5
+KillMode=process
+TimeoutStopSec=15
+StandardOutput=append:/root/ALIEXPRESS-CHANEL/storage/logs/daemon.log
+StandardError=append:/root/ALIEXPRESS-CHANEL/storage/logs/daemon.log
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

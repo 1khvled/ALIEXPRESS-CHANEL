@@ -28,14 +28,19 @@
     "1005012923660718",
     "1005012881256093",
     "1005009118633225",
-    "1005012143831265"
+    "1005012143831265",
+    "1005007458827229",
+    "1005010453516983",
+    "1005008852027824",
+    "1005012499451512",
+    "9998888981"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790857823.0117362,
     "1005010219205081": 1790884267.9909704,
-    "999111222": 1790888079.4397638,
-    "100500999912345": 1790798080.281984,
-    "100500999954321": 1790880880.281984,
+    "999111222": 1790888980.8239095,
+    "100500999912345": 1790798981.6562803,
+    "100500999954321": 1790881781.6562803,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
@@ -51,7 +56,7 @@
     "1005008829227075": 1790884310.7506618,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1790877280.3240745,
+    "100500777666555": 1790878181.6999035,
     "1005011778621042": 1790888057.5668976,
     "9998888080": 1790888080.3099577,
     "1005012312990781": 1790888097.0085742,
@@ -62,7 +67,12 @@
     "1005012923660718": 1790888191.2162998,
     "1005012881256093": 1790888202.2321055,
     "1005009118633225": 1790888213.2900865,
-    "1005012143831265": 1790888224.6523979
+    "1005012143831265": 1790888224.6523979,
+    "1005007458827229": 1790888886.4062796,
+    "1005010453516983": 1790888897.5243473,
+    "1005008852027824": 1790888909.743846,
+    "1005012499451512": 1790888928.6181495,
+    "9998888981": 1790888981.6873999
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -91,15 +101,19 @@
     "HONOR CHOICE Earbuds X7e Active",
     "Honor Watch X5i",
     "UGREEN 45W GaN Charger",
-    "Realme Pad 3 5G 256GB"
+    "Realme Pad 3 5G 256GB",
+    "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor",
+    "OPPO A6 Pro 8/256",
+    "realme P3 5G 8/256",
+    "OnePlus Turbo 6X Pro 5G"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1790888079.4397638,
-    "SomnAmbulist NVMe SSD 1TB High Speed": 1790798080.281984,
-    "Attack Shark R2 Mouse": 1790880880.281984,
-    "Test Wrench Set": 1790888080.3099577,
+    "Test Wireless Gaming Mouse X1": 1790888980.8239095,
+    "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
+    "Attack Shark R2 Mouse": 1790881781.6562803,
+    "Test Wrench Set": 1790888981.6873999,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1790884195.3586087,
@@ -122,7 +136,11 @@
     "HONOR CHOICE Earbuds X7e Active": 1790888191.2162998,
     "Honor Watch X5i": 1790888202.2321055,
     "UGREEN 45W GaN Charger": 1790888213.2900865,
-    "Realme Pad 3 5G 256GB": 1790888224.6523979
+    "Realme Pad 3 5G 256GB": 1790888224.6523979,
+    "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor": 1790888886.4062796,
+    "OPPO A6 Pro 8/256": 1790888897.5243473,
+    "realme P3 5G 8/256": 1790888909.743846,
+    "OnePlus Turbo 6X Pro 5G": 1790888928.6181495
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -155,39 +173,44 @@
     "aniscoupons:32625",
     "aniscoupons:32626",
     "aniscoupons:32628",
-    "aniscoupons:32629"
+    "aniscoupons:32629",
+    "pcgamingpart:7930",
+    "zedstoreonline:38492",
+    "zedstoreonline:38494",
+    "aniscoupons:32633",
+    "test_channel:1790888981"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790888224.6523979,
+  "last_run_time": 1790888981.6873999,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32629,
-      "last_check_time": 1790888226.6936457
+      "last_message_id": 32634,
+      "last_check_time": 1790888932.931745
     },
     "ecksdeal": {
       "last_message_id": 5850,
       "last_check_time": 1790884310.7506618
     },
     "lodydeals": {
-      "last_message_id": 45341,
-      "last_check_time": 1790888227.4909987
+      "last_message_id": 45342,
+      "last_check_time": 1790888933.5753958
     },
     "bnddeals": {
       "last_message_id": 50765,
-      "last_check_time": 1790888261.3704066
+      "last_check_time": 1790888954.6719067
     },
     "test_channel": {
-      "last_message_id": 1790888080,
-      "last_check_time": 1790888080.3099577
+      "last_message_id": 1790888981,
+      "last_check_time": 1790888981.6873999
     },
     "pcgamingpart": {
       "last_message_id": 7936,
-      "last_check_time": 1790888148.9327576
+      "last_check_time": 1790888886.4062796
     },
     "zedstoreonline": {
       "last_message_id": 38502,
-      "last_check_time": 1790888174.025456
+      "last_check_time": 1790888909.743846
     }
   },
   "published_product_prices": {
@@ -213,7 +236,11 @@
     "1005012923660718": 15.17,
     "1005012881256093": 28.5,
     "1005009118633225": 14.14,
-    "1005012143831265": 281.9
+    "1005012143831265": 281.9,
+    "1005007458827229": 22.75,
+    "1005010453516983": 204.7,
+    "1005008852027824": 194.9,
+    "1005012499451512": 261.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -465,6 +492,46 @@
       "price": 281.9,
       "timestamp": 1790888224.6523979,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7930": {
+      "channel_msg_id": 271,
+      "product_id": "1005007458827229",
+      "title": "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7930,
+      "price": 22.75,
+      "timestamp": 1790888886.4062796,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38492": {
+      "channel_msg_id": 272,
+      "product_id": "1005010453516983",
+      "title": "OPPO A6 Pro 8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38492,
+      "price": 204.7,
+      "timestamp": 1790888897.5243473,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38494": {
+      "channel_msg_id": 273,
+      "product_id": "1005008852027824",
+      "title": "realme P3 5G 8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38494,
+      "price": 194.9,
+      "timestamp": 1790888909.743846,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32633": {
+      "channel_msg_id": 274,
+      "product_id": "1005012499451512",
+      "title": "OnePlus Turbo 6X Pro 5G",
+      "channel": "aniscoupons",
+      "source_msg_id": 32633,
+      "price": 261.8,
+      "timestamp": 1790888928.6181495,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -473,7 +540,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790888224.6634455,
+    "last_deal_post_time": 1790888928.6280098,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },

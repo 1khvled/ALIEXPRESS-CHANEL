@@ -60,5 +60,11 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add storage/state/ deals.db storage/ || true
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update deals database [skip ci]" && git push)
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Auto-update deals database [skip ci]"
+            for i in 1 2 3; do
+              git pull --rebase origin main || true
+              git push && break || sleep 3
+            done
+          fi
         continue-on-error: true
