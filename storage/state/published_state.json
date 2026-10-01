@@ -32,9 +32,7 @@
     "1005012561537862",
     "1005010184054784",
     "1005003793015046",
-    "COUPONS_3f89a2292e41",
-    "1005012986547529",
-    "1005012826487437"
+    "3256812800232777"
   ],
   "published_titles": [
     "SomnAmbulist SATA3 SSD 120GB",
@@ -69,20 +67,18 @@
     "Pro'skit HW-609A 10-Piece Mini Double-Ended Box Wrench Set",
     "CX H1300 Thermal Putty 13.5W/m.K for VGA GPU IC Processor 10g",
     "LED Wooden Digital Alarm Clock with Voice Control",
-    "أحدث كوبونات وتخفيضات AliExpress",
-    "High-Pressure Steam Cleaner",
-    "جهاز تلحيم البلاستيك"
+    "High-Pressure Steam Cleaner"
   ],
   "last_disclaimer_time": 1790371890.4189165,
   "last_calendar_time": 1790371890.4189165,
-  "last_run_time": 1790806580.4148211,
+  "last_run_time": 1790836766.357824,
   "schedule_config": {
     "day_interval_minutes": 5,
     "night_interval_minutes": 30,
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790806580.4235485,
+    "last_deal_post_time": 1790836766.3583932,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -100,7 +96,7 @@
     },
     "aniscoupons": {
       "last_message_id": 32563,
-      "last_check_time": 1790806554.5624733
+      "last_check_time": 1790836766.357824
     },
     "ecksdeal": {
       "last_message_id": 5841,
@@ -119,17 +115,13 @@
     "1005012561537862": 1790439932.9103508,
     "1005010184054784": 1790439938.4275959,
     "1005003793015046": 1790510777.3970847,
-    "COUPONS_3f89a2292e41": 1790806559.9618554,
-    "1005012986547529": 1790806534.9280944,
-    "1005012826487437": 1790806580.4148211
+    "3256812800232777": 1790836766.357824
   },
   "published_title_timestamps": {
     "Pro'skit HW-609A 10-Piece Mini Double-Ended Box Wrench Set": 1790439932.9103508,
     "CX H1300 Thermal Putty 13.5W/m.K for VGA GPU IC Processor 10g": 1790439938.4275959,
     "LED Wooden Digital Alarm Clock with Voice Control": 1790510777.3970847,
-    "أحدث كوبونات وتخفيضات AliExpress": 1790806559.9618554,
-    "High-Pressure Steam Cleaner": 1790806534.9280944,
-    "جهاز تلحيم البلاستيك": 1790806580.4148211
+    "High-Pressure Steam Cleaner": 1790836766.357824
   },
   "published_post_keys": [
     "pcgamingpart:7906",
@@ -137,9 +129,7 @@
     "aniscoupons:32553",
     "ecksdeal:5838",
     "pcgamingpart:7909",
-    "aniscoupons:32559",
-    "ecksdeal:5841",
-    "bnddeals:50742"
+    "aniscoupons:32559"
   ],
   "channel_published_deals": {
     "pcgamingpart:7909": {
@@ -153,33 +143,13 @@
       "status": "ACTIVE"
     },
     "aniscoupons:32559": {
-      "channel_msg_id": 195,
-      "product_id": "1005012986547529",
+      "channel_msg_id": 202,
+      "product_id": "3256812800232777",
       "title": "High-Pressure Steam Cleaner",
       "channel": "aniscoupons",
       "source_msg_id": 32559,
       "price": 14.7,
-      "timestamp": 1790806534.9280944,
-      "status": "ACTIVE"
-    },
-    "ecksdeal:5841": {
-      "channel_msg_id": 196,
-      "product_id": "COUPONS_3f89a2292e41",
-      "title": "أحدث كوبونات وتخفيضات AliExpress",
-      "channel": "ecksdeal",
-      "source_msg_id": 5841,
-      "price": null,
-      "timestamp": 1790806559.9618554,
-      "status": "ACTIVE"
-    },
-    "bnddeals:50742": {
-      "channel_msg_id": 197,
-      "product_id": "1005012826487437",
-      "title": "جهاز تلحيم البلاستيك",
-      "channel": "bnddeals",
-      "source_msg_id": 50742,
-      "price": 12.7,
-      "timestamp": 1790806580.4148211,
+      "timestamp": 1790836766.357824,
       "status": "ACTIVE"
     }
   },
@@ -188,6 +158,7 @@
   ],
   "published_product_prices": {
     "1005012986547529": 14.7,
-    "1005012826487437": 12.7
+    "1005012826487437": 12.7,
+    "3256812800232777": 14.7
   }
 }
