@@ -33,7 +33,8 @@
     "1005010453516983",
     "1005008852027824",
     "1005012499451512",
-    "9998888981"
+    "9998888981",
+    "1005010129356058"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790857823.0117362,
@@ -45,7 +46,7 @@
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
     "1005007805638431": 1790884166.1520143,
-    "1005007027334636": 1790888129.0606623,
+    "1005007027334636": 1790897093.4157302,
     "1005009054706827": 1790884195.3586087,
     "1005007961216287": 1790884206.6605399,
     "1005008233932899": 1790884227.6404886,
@@ -72,7 +73,8 @@
     "1005010453516983": 1790888897.5243473,
     "1005008852027824": 1790888909.743846,
     "1005012499451512": 1790888928.6181495,
-    "9998888981": 1790888981.6873999
+    "9998888981": 1790888981.6873999,
+    "1005010129356058": 1790897106.449474
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -105,7 +107,9 @@
     "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor",
     "OPPO A6 Pro 8/256",
     "realme P3 5G 8/256",
-    "OnePlus Turbo 6X Pro 5G"
+    "OnePlus Turbo 6X Pro 5G",
+    "SomnAmbulist SSD",
+    "Xiaomi Pad 7  12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -140,7 +144,9 @@
     "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor": 1790888886.4062796,
     "OPPO A6 Pro 8/256": 1790888897.5243473,
     "realme P3 5G 8/256": 1790888909.743846,
-    "OnePlus Turbo 6X Pro 5G": 1790888928.6181495
+    "OnePlus Turbo 6X Pro 5G": 1790888928.6181495,
+    "SomnAmbulist SSD": 1790897093.4157302,
+    "Xiaomi Pad 7  12/256GB": 1790897106.449474
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -178,27 +184,29 @@
     "zedstoreonline:38492",
     "zedstoreonline:38494",
     "aniscoupons:32633",
-    "test_channel:1790888981"
+    "test_channel:1790888981",
+    "aniscoupons:32631",
+    "bnddeals:50765"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790888981.6873999,
+  "last_run_time": 1790897106.449474,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32634,
-      "last_check_time": 1790888932.931745
+      "last_check_time": 1790897098.5913134
     },
     "ecksdeal": {
       "last_message_id": 5850,
       "last_check_time": 1790884310.7506618
     },
     "lodydeals": {
-      "last_message_id": 45342,
-      "last_check_time": 1790888933.5753958
+      "last_message_id": 45343,
+      "last_check_time": 1790897099.3078384
     },
     "bnddeals": {
-      "last_message_id": 50765,
-      "last_check_time": 1790888954.6719067
+      "last_message_id": 50766,
+      "last_check_time": 1790897109.4350789
     },
     "test_channel": {
       "last_message_id": 1790888981,
@@ -206,18 +214,18 @@
     },
     "pcgamingpart": {
       "last_message_id": 7936,
-      "last_check_time": 1790888886.4062796
+      "last_check_time": 1790897080.7706153
     },
     "zedstoreonline": {
       "last_message_id": 38502,
-      "last_check_time": 1790888909.743846
+      "last_check_time": 1790897087.0627186
     }
   },
   "published_product_prices": {
     "1005012973772517": 179.1,
     "1005010219205081": 57.2,
     "1005007805638431": 22.64,
-    "1005007027334636": 10.35,
+    "1005007027334636": 9.5,
     "1005009054706827": 22.0,
     "1005007961216287": 18.7,
     "1005008233932899": 294.9,
@@ -240,7 +248,8 @@
     "1005007458827229": 22.75,
     "1005010453516983": 204.7,
     "1005008852027824": 194.9,
-    "1005012499451512": 261.8
+    "1005012499451512": 261.8,
+    "1005010129356058": 294.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -532,6 +541,26 @@
       "price": 261.8,
       "timestamp": 1790888928.6181495,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32631": {
+      "channel_msg_id": 278,
+      "product_id": "1005007027334636",
+      "title": "SomnAmbulist SSD",
+      "channel": "aniscoupons",
+      "source_msg_id": 32631,
+      "price": 9.5,
+      "timestamp": 1790897093.4157302,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50765": {
+      "channel_msg_id": 279,
+      "product_id": "1005010129356058",
+      "title": "Xiaomi Pad 7  12/256GB",
+      "channel": "bnddeals",
+      "source_msg_id": 50765,
+      "price": 294.0,
+      "timestamp": 1790897106.449474,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -540,7 +569,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790888928.6280098,
+    "last_deal_post_time": 1790897106.4506102,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
