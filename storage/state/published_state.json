@@ -5,23 +5,55 @@
     "999111222",
     "9998883350",
     "9998883398",
-    "9998883417"
+    "9998883417",
+    "1005007805638431",
+    "1005007027334636",
+    "1005009054706827",
+    "1005007961216287",
+    "1005008233932899",
+    "1005009627597591",
+    "1005008880082336",
+    "1005007275142457",
+    "1005007279793099",
+    "1005008829227075"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790857823.0117362,
-    "1005010219205081": 1790857873.6056087,
+    "1005010219205081": 1790884267.9909704,
     "999111222": 1790883416.2073352,
     "100500999912345": 1790793417.356822,
     "100500999954321": 1790876217.356822,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
-    "9998883417": 1790883417.3833034
+    "9998883417": 1790883417.3833034,
+    "1005007805638431": 1790884166.1520143,
+    "1005007027334636": 1790884215.4346776,
+    "1005009054706827": 1790884195.3586087,
+    "1005007961216287": 1790884206.6605399,
+    "1005008233932899": 1790884227.6404886,
+    "1005009627597591": 1790884233.6428,
+    "1005008880082336": 1790884281.6726701,
+    "1005007275142457": 1790884287.4211984,
+    "1005007279793099": 1790884299.0959656,
+    "1005008829227075": 1790884310.7506618
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
     "POCO C71 3/64GB",
     "Test Wireless Gaming Mouse X1",
-    "Test Wrench Set"
+    "Test Wrench Set",
+    "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock",
+    "SomnAmbulist SSD 2.5 128GB",
+    "Machenike G3 V2 PC Gaming Controller Hall Effect",
+    "ATTACK SHARK L90",
+    "SomnAmbulist SSD 2.5 120GB",
+    "Realme 14 Pro Plus Global (8/256)",
+    "Realme 15 Pro Global (8/256)",
+    "Poco C71 3/64GB",
+    "سماعات لاسلكية Attack Shark L80 PRO Wireless",
+    "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K",
+    "ماوس لاسلكي Attack Shark R1 Wireless",
+    "ماوس لاسلكي مع شاحن Attack Shark X1 Wireless"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -29,26 +61,50 @@
     "Test Wireless Gaming Mouse X1": 1790883416.2073352,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790793417.356822,
     "Attack Shark R2 Mouse": 1790876217.356822,
-    "Test Wrench Set": 1790883417.3833034
+    "Test Wrench Set": 1790883417.3833034,
+    "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
+    "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
+    "Machenike G3 V2 PC Gaming Controller Hall Effect": 1790884195.3586087,
+    "ATTACK SHARK L90": 1790884206.6605399,
+    "SomnAmbulist SSD 2.5 120GB": 1790884215.4346776,
+    "Realme 14 Pro Plus Global (8/256)": 1790884227.6404886,
+    "Realme 15 Pro Global (8/256)": 1790884233.6428,
+    "Poco C71 3/64GB": 1790884267.9909704,
+    "سماعات لاسلكية Attack Shark L80 PRO Wireless": 1790884281.6726701,
+    "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K": 1790884287.4211984,
+    "ماوس لاسلكي Attack Shark R1 Wireless": 1790884299.0959656,
+    "ماوس لاسلكي مع شاحن Attack Shark X1 Wireless": 1790884310.7506618
   },
   "published_post_keys": [
     "aniscoupons:32590",
     "bnddeals:50750",
     "test_channel:1790883350",
     "test_channel:1790883398",
-    "test_channel:1790883417"
+    "test_channel:1790883417",
+    "pcgamingpart:7921",
+    "zedstoreonline:38484",
+    "zedstoreonline:38485",
+    "zedstoreonline:38486",
+    "zedstoreonline:38488",
+    "aniscoupons:32617",
+    "aniscoupons:32618",
+    "aniscoupons:32622",
+    "ecksdeal:5845",
+    "ecksdeal:5846",
+    "ecksdeal:5847",
+    "ecksdeal:5848"
   ],
-  "last_disclaimer_time": 0.0,
-  "last_calendar_time": 0.0,
-  "last_run_time": 1790883417.3833034,
+  "last_disclaimer_time": 1790884122.2970214,
+  "last_calendar_time": 1790884121.198062,
+  "last_run_time": 1790884310.7506618,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32590,
-      "last_check_time": 1790857825.0355954
+      "last_message_id": 32622,
+      "last_check_time": 1790884270.0154653
     },
     "ecksdeal": {
       "last_message_id": 5850,
-      "last_check_time": 1790857825.710592
+      "last_check_time": 1790884310.7506618
     },
     "lodydeals": {
       "last_message_id": 45334,
@@ -61,11 +117,29 @@
     "test_channel": {
       "last_message_id": 1790883417,
       "last_check_time": 1790883417.3833034
+    },
+    "pcgamingpart": {
+      "last_message_id": 7936,
+      "last_check_time": 1790884175.8931081
+    },
+    "zedstoreonline": {
+      "last_message_id": 38502,
+      "last_check_time": 1790884217.4785542
     }
   },
   "published_product_prices": {
     "1005012973772517": 179.1,
-    "1005010219205081": 60.0
+    "1005010219205081": 57.2,
+    "1005007805638431": 22.64,
+    "1005007027334636": 28.5,
+    "1005009054706827": 22.0,
+    "1005007961216287": 18.7,
+    "1005008233932899": 294.9,
+    "1005009627597591": 314.9,
+    "1005008880082336": 22.7,
+    "1005007275142457": 29.58,
+    "1005007279793099": 14.13,
+    "1005008829227075": 25.06
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -87,6 +161,126 @@
       "price": 60.0,
       "timestamp": 1790857873.6056087,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7921": {
+      "channel_msg_id": 245,
+      "product_id": "1005007805638431",
+      "title": "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7921,
+      "price": 22.64,
+      "timestamp": 1790884166.1520143,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38484": {
+      "channel_msg_id": 246,
+      "product_id": "1005007027334636",
+      "title": "SomnAmbulist SSD 2.5 128GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38484,
+      "price": 31.0,
+      "timestamp": 1790884187.7542295,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38485": {
+      "channel_msg_id": 247,
+      "product_id": "1005009054706827",
+      "title": "Machenike G3 V2 PC Gaming Controller Hall Effect",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38485,
+      "price": 22.0,
+      "timestamp": 1790884195.3586087,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38486": {
+      "channel_msg_id": 248,
+      "product_id": "1005007961216287",
+      "title": "ATTACK SHARK L90",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38486,
+      "price": 18.7,
+      "timestamp": 1790884206.6605399,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38488": {
+      "channel_msg_id": 249,
+      "product_id": "1005007027334636",
+      "title": "SomnAmbulist SSD 2.5 120GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38488,
+      "price": 28.5,
+      "timestamp": 1790884215.4346776,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32617": {
+      "channel_msg_id": 250,
+      "product_id": "1005008233932899",
+      "title": "Realme 14 Pro Plus Global (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 32617,
+      "price": 294.9,
+      "timestamp": 1790884227.6404886,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32618": {
+      "channel_msg_id": 251,
+      "product_id": "1005009627597591",
+      "title": "Realme 15 Pro Global (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 32618,
+      "price": 314.9,
+      "timestamp": 1790884233.6428,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32622": {
+      "channel_msg_id": 252,
+      "product_id": "1005010219205081",
+      "title": "Poco C71 3/64GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 32622,
+      "price": 57.2,
+      "timestamp": 1790884267.9909704,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5845": {
+      "channel_msg_id": 253,
+      "product_id": "1005008880082336",
+      "title": "سماعات لاسلكية Attack Shark L80 PRO Wireless",
+      "channel": "ecksdeal",
+      "source_msg_id": 5845,
+      "price": 22.7,
+      "timestamp": 1790884281.6726701,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5846": {
+      "channel_msg_id": 254,
+      "product_id": "1005007275142457",
+      "title": "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K",
+      "channel": "ecksdeal",
+      "source_msg_id": 5846,
+      "price": 29.58,
+      "timestamp": 1790884287.4211984,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5847": {
+      "channel_msg_id": 255,
+      "product_id": "1005007279793099",
+      "title": "ماوس لاسلكي Attack Shark R1 Wireless",
+      "channel": "ecksdeal",
+      "source_msg_id": 5847,
+      "price": 14.13,
+      "timestamp": 1790884299.0959656,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5848": {
+      "channel_msg_id": 256,
+      "product_id": "1005008829227075",
+      "title": "ماوس لاسلكي مع شاحن Attack Shark X1 Wireless",
+      "channel": "ecksdeal",
+      "source_msg_id": 5848,
+      "price": 25.06,
+      "timestamp": 1790884310.7506618,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -95,8 +289,11 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790857873.6132364,
+    "last_deal_post_time": 1790884310.7631476,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
-  }
+  },
+  "last_coin_reminder_time": 1790884123.5561955,
+  "next_reminder_interval_seconds": 205506,
+  "coin_reminder_variant_idx": 1
 }

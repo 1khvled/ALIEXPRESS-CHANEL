@@ -219,7 +219,7 @@ async def collect_and_post_france_deals():
                 print(f"  [FIRST RUN BASELINE] @{ch} baseline set to #{current_max_id}. Evaluating {len(new_blocks)} most recent candidate(s).")
             else:
                 # Filter for posts strictly newer than last_seen_id OR unposted recent candidates
-                lookback_cutoff = max(0, last_seen_id - 4)
+                lookback_cutoff = max(0, last_seen_id - 15)
                 new_blocks = [
                     (b_id, b) for b_id, b in block_items
                     if (b_id > last_seen_id or (b_id >= lookback_cutoff and f"{clean_ch}:{b_id}" not in published_keys))

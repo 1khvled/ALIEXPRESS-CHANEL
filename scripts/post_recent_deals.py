@@ -187,7 +187,7 @@ async def collect_and_post_last_10_deals():
                     print(f"  [FIRST RUN] @{ch} baseline set to #{current_max_id}. Processing {len(new_blocks)} visible post(s).")
                 else:
                     # Process posts newer than last_seen_id, or unposted recent candidate messages from current page
-                    lookback_cutoff = max(0, last_seen_id - 6)
+                    lookback_cutoff = max(0, last_seen_id - 20)
                     new_blocks = [
                         (b_id, b) for b_id, b in block_items
                         if (b_id > last_seen_id or (b_id >= lookback_cutoff and not is_post_already_published(ch, b_id)) or f"{ch.lower()}:{b_id}" in needs_repost_keys)
