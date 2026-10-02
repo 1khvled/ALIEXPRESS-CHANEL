@@ -114,7 +114,7 @@
     "1005009627597591": 1790884233.6428,
     "1005008880082336": 1790943678.5551012,
     "1005007275142457": 1790884287.4211984,
-    "1005008829227075": 1790884310.7506618,
+    "1005008829227075": 1790972445.6591878,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
     "100500777666555": 1790955193.4001324,
@@ -297,7 +297,8 @@
     "REALME 15 5G (12/256)",
     "Lenovo XT88 TWS",
     "SMAILWOLF M3 PAW3311",
-    "UGREEN 4K 8MP 2Mics Webcam"
+    "UGREEN 4K 8MP 2Mics Webcam",
+    "Attack Shark X1"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -396,7 +397,8 @@
     "REALME 15 5G (12/256)": 1790971257.8109736,
     "Lenovo XT88 TWS": 1790971842.421131,
     "SMAILWOLF M3 PAW3311": 1790971850.2217886,
-    "UGREEN 4K 8MP 2Mics Webcam": 1790972149.2892344
+    "UGREEN 4K 8MP 2Mics Webcam": 1790972149.2892344,
+    "Attack Shark X1": 1790972445.6591878
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -619,27 +621,29 @@
     "lodydeals:45404",
     "lodydeals:45405",
     "lodydeals:45406",
-    "bnddeals:50792"
+    "bnddeals:50792",
+    "lodydeals:45407",
+    "lodydeals:45408"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790972149.2892344,
+  "last_run_time": 1790972445.6591878,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32685,
-      "last_check_time": 1790972157.7259235
+      "last_check_time": 1790972449.5128756
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45406,
-      "last_check_time": 1790972151.2978258
+      "last_message_id": 45408,
+      "last_check_time": 1790972447.6691847
     },
     "bnddeals": {
       "last_message_id": 50792,
-      "last_check_time": 1790972157.0046425
+      "last_check_time": 1790972448.815509
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -651,11 +655,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790972151.9130337
+      "last_check_time": 1790972448.1938233
     },
     "megaphonna": {
       "last_message_id": 8202,
-      "last_check_time": 1790972157.3685582
+      "last_check_time": 1790972449.1278534
     }
   },
   "published_product_prices": {
@@ -1690,6 +1694,16 @@
       "price": 2.0,
       "timestamp": 1790972149.2892344,
       "status": "ACTIVE"
+    },
+    "lodydeals:45408": {
+      "channel_msg_id": 423,
+      "product_id": "1005008829227075",
+      "title": "Attack Shark X1",
+      "channel": "lodydeals",
+      "source_msg_id": 45408,
+      "price": 25.06,
+      "timestamp": 1790972445.6591878,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1698,7 +1712,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790972149.2914026,
+    "last_deal_post_time": 1790972445.661845,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1785,7 +1799,8 @@
     "1005009120957437": "lodydeals",
     "1005005652871847": "lodydeals",
     "1005012554205120": "lodydeals",
-    "1005009234854371": "lodydeals"
+    "1005009234854371": "lodydeals",
+    "1005008829227075": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1855,7 +1870,8 @@
     "ASROCK B850M X WiFi": "lodydeals",
     "Lenovo XT88 TWS": "lodydeals",
     "SMAILWOLF M3 PAW3311": "lodydeals",
-    "UGREEN 4K 8MP 2Mics Webcam": "lodydeals"
+    "UGREEN 4K 8MP 2Mics Webcam": "lodydeals",
+    "Attack Shark X1": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
