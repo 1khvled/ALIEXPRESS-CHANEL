@@ -85,7 +85,8 @@
     "1005005824280128",
     "999888989",
     "9998881037",
-    "1005011991145678"
+    "1005011991145678",
+    "1005011682821623"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -177,7 +178,8 @@
     "1005005824280128": 1790960161.26754,
     "999888989": 1790960989.3715808,
     "9998881037": 1790961037.0515263,
-    "1005011991145678": 1790962541.57551
+    "1005011991145678": 1790962541.57551,
+    "1005011682821623": 1790962844.0034096
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -261,7 +263,8 @@
     "Blackview LINK 1 Kids Tablets",
     "POCO X8 5G (6/128GB)",
     "HONOR 600 PRO",
-    "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34"
+    "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34",
+    "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -348,7 +351,8 @@
     "Blackview LINK 1 Kids Tablets": 1790960161.26754,
     "POCO X8 5G (6/128GB)": 1790960468.486696,
     "HONOR 600 PRO": 1790960475.7249138,
-    "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551
+    "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
+    "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -541,15 +545,16 @@
     "megaphonna:8177",
     "megaphonna:8189",
     "megaphonna:8190",
-    "megaphonna:8191"
+    "megaphonna:8191",
+    "megaphonna:8192"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790962541.57551,
+  "last_run_time": 1790962844.0034096,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32679,
-      "last_check_time": 1790962546.9642494
+      "last_check_time": 1790962846.531016
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -557,11 +562,11 @@
     },
     "lodydeals": {
       "last_message_id": 45401,
-      "last_check_time": 1790962536.1704535
+      "last_check_time": 1790962837.2606173
     },
     "bnddeals": {
       "last_message_id": 50788,
-      "last_check_time": 1790962537.045432
+      "last_check_time": 1790962838.197919
     },
     "test_channel": {
       "last_message_id": 1790961037,
@@ -573,11 +578,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790962536.4443965
+      "last_check_time": 1790962837.6058867
     },
     "megaphonna": {
-      "last_message_id": 8191,
-      "last_check_time": 1790962546.4368694
+      "last_message_id": 8192,
+      "last_check_time": 1790962846.0134463
     }
   },
   "published_product_prices": {
@@ -652,7 +657,8 @@
     "1005009295911745": 25.87,
     "1005012340203471": 242.7,
     "1005005824280128": 96.8,
-    "1005011991145678": 0.8
+    "1005011991145678": 0.8,
+    "1005011682821623": 0.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1484,6 +1490,16 @@
       "price": 0.8,
       "timestamp": 1790962541.57551,
       "status": "ACTIVE"
+    },
+    "megaphonna:8192": {
+      "channel_msg_id": 406,
+      "product_id": "1005011682821623",
+      "title": "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone",
+      "channel": "megaphonna",
+      "source_msg_id": 8192,
+      "price": 0.8,
+      "timestamp": 1790962844.0034096,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1492,7 +1508,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790962541.6328943,
+    "last_deal_post_time": 1790962844.0058136,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1567,7 +1583,8 @@
     "1005006533038973": "aniscoupons",
     "999888989": "test_channel",
     "9998881037": "test_channel",
-    "1005011991145678": "megaphonna"
+    "1005011991145678": "megaphonna",
+    "1005011682821623": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1626,7 +1643,8 @@
     "HONOR 600 PRO": "aniscoupons",
     "EasySMX X15 Wireless PC Gamepad Hall Effect": "aniscoupons",
     "Realme Pad 3 5G 256GB": "aniscoupons",
-    "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": "megaphonna"
+    "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": "megaphonna",
+    "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
