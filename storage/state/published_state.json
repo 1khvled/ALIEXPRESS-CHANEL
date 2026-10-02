@@ -89,7 +89,8 @@
     "9998887832",
     "9998887913",
     "9998887994",
-    "1005013005786079"
+    "1005013005786079",
+    "1005005824280128"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -103,7 +104,7 @@
     "1005007805638431": 1790884166.1520143,
     "1005009054706827": 1790884195.3586087,
     "1005007961216287": 1790937542.235978,
-    "1005008233932899": 1790943965.6572914,
+    "1005008233932899": 1790958357.0533867,
     "1005009627597591": 1790884233.6428,
     "1005008880082336": 1790943678.5551012,
     "1005007275142457": 1790884287.4211984,
@@ -144,7 +145,7 @@
     "1005012184442621": 1790941174.1965158,
     "1005006631309573": 1790941179.7256634,
     "1005005648888450": 1790941186.791633,
-    "1005010178295650": 1790941192.9120486,
+    "1005010178295650": 1790958372.8407452,
     "1005006117094928": 1790941202.9035249,
     "1005006603602562": 1790941207.5310047,
     "1005010721042860": 1790941214.6756065,
@@ -185,7 +186,8 @@
     "9998887832": 1790957832.2997856,
     "9998887913": 1790957913.5473306,
     "9998887994": 1790957994.466288,
-    "1005013005786079": 1790958106.1812875
+    "1005013005786079": 1790958106.1812875,
+    "1005005824280128": 1790958364.4624152
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -273,7 +275,9 @@
     "POCO X6 Pro 5G 12/512GB",
     "SomnAmbulist SSD",
     "CMF Buds Neo 12.4 mm Titanium‑coated Driver",
-    "Attack Shark R1"
+    "Attack Shark R1",
+    "Blackview LINK 1 Kids Tablets",
+    "Monster MQT52"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -287,7 +291,7 @@
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1790884195.3586087,
     "ATTACK SHARK L90": 1790884206.6605399,
     "SomnAmbulist SSD 2.5 120GB": 1790884215.4346776,
-    "Realme 14 Pro Plus Global (8/256)": 1790884227.6404886,
+    "Realme 14 Pro Plus Global (8/256)": 1790958357.0533867,
     "Realme 15 Pro Global (8/256)": 1790884233.6428,
     "Poco C71 3/64GB": 1790884267.9909704,
     "سماعات لاسلكية Attack Shark L80 PRO Wireless": 1790884281.6726701,
@@ -364,7 +368,9 @@
     "POCO X6 Pro 5G 12/512GB": 1790950255.4725466,
     "SomnAmbulist SSD": 1790958099.4496896,
     "CMF Buds Neo 12.4 mm Titanium‑coated Driver": 1790958106.1812875,
-    "Attack Shark R1": 1790958112.48898
+    "Attack Shark R1": 1790958112.48898,
+    "Blackview LINK 1 Kids Tablets": 1790958364.4624152,
+    "Monster MQT52": 1790958372.8407452
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -532,15 +538,19 @@
     "aniscoupons:32660",
     "aniscoupons:32661",
     "aniscoupons:32662",
-    "aniscoupons:32663"
+    "aniscoupons:32663",
+    "aniscoupons:32664",
+    "aniscoupons:32665",
+    "aniscoupons:32666",
+    "aniscoupons:32667"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790958112.48898,
+  "last_run_time": 1790958372.8407452,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32663,
-      "last_check_time": 1790958112.48898
+      "last_message_id": 32667,
+      "last_check_time": 1790958374.8484614
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -548,11 +558,11 @@
     },
     "lodydeals": {
       "last_message_id": 45401,
-      "last_check_time": 1790958091.1380982
+      "last_check_time": 1790958349.8786438
     },
     "bnddeals": {
       "last_message_id": 50788,
-      "last_check_time": 1790958092.050731
+      "last_check_time": 1790958350.9206939
     },
     "test_channel": {
       "last_message_id": 1790957994,
@@ -564,11 +574,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790958091.4741867
+      "last_check_time": 1790958350.252771
     },
     "megaphonna": {
       "last_message_id": 8186,
-      "last_check_time": 1790958092.4599223
+      "last_check_time": 1790958351.2966144
     }
   },
   "published_product_prices": {
@@ -578,7 +588,7 @@
     "1005007027334636": 9.5,
     "1005009054706827": 22.0,
     "1005007961216287": 18.17,
-    "1005008233932899": 294.7,
+    "1005008233932899": 294.9,
     "1005009627597591": 314.9,
     "1005008880082336": 22.7,
     "1005007275142457": 29.58,
@@ -613,7 +623,7 @@
     "1005012184442621": 12.35,
     "1005006631309573": 3.69,
     "1005005648888450": 10.09,
-    "1005010178295650": 7.09,
+    "1005010178295650": 6.4,
     "1005006117094928": 32.2,
     "1005006603602562": 181.0,
     "1005010721042860": 376.0,
@@ -642,7 +652,8 @@
     "1005012058540420": 10.49,
     "1005009295911745": 25.87,
     "1005012340203471": 242.7,
-    "1005013005786079": 19.4
+    "1005013005786079": 19.4,
+    "1005005824280128": 96.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1474,6 +1485,36 @@
       "price": 14.1,
       "timestamp": 1790958112.48898,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32664": {
+      "channel_msg_id": 369,
+      "product_id": "1005008233932899",
+      "title": "Realme 14 Pro Plus Global (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 32664,
+      "price": 294.9,
+      "timestamp": 1790958357.0533867,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32665": {
+      "channel_msg_id": 370,
+      "product_id": "1005005824280128",
+      "title": "Blackview LINK 1 Kids Tablets",
+      "channel": "aniscoupons",
+      "source_msg_id": 32665,
+      "price": 96.8,
+      "timestamp": 1790958364.4624152,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32667": {
+      "channel_msg_id": 371,
+      "product_id": "1005010178295650",
+      "title": "Monster MQT52",
+      "channel": "aniscoupons",
+      "source_msg_id": 32667,
+      "price": 6.4,
+      "timestamp": 1790958372.8407452,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1482,7 +1523,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790958112.491224,
+    "last_deal_post_time": 1790958372.8431895,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1502,7 +1543,7 @@
     "1005012184442621": "lodydeals",
     "1005006631309573": "lodydeals",
     "1005005648888450": "lodydeals",
-    "1005010178295650": "lodydeals",
+    "1005010178295650": "aniscoupons",
     "1005006117094928": "zedstoreonline",
     "1005006603602562": "zedstoreonline",
     "1005010721042860": "zedstoreonline",
@@ -1525,7 +1566,7 @@
     "1005007345398413": "bnddeals",
     "1005012504076921": "lodydeals",
     "1005008715050858": "bnddeals",
-    "1005008233932899": "bnddeals",
+    "1005008233932899": "aniscoupons",
     "9998885689": "test_channel",
     "9998885726": "test_channel",
     "9998885776": "test_channel",
@@ -1550,7 +1591,8 @@
     "9998887913": "test_channel",
     "9998887994": "test_channel",
     "1005013005786079": "aniscoupons",
-    "1005007279793099": "aniscoupons"
+    "1005007279793099": "aniscoupons",
+    "1005005824280128": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1601,7 +1643,10 @@
     "POCO X6 Pro 5G 12/512GB": "lodydeals",
     "SomnAmbulist SSD": "aniscoupons",
     "CMF Buds Neo 12.4 mm Titanium‑coated Driver": "aniscoupons",
-    "Attack Shark R1": "aniscoupons"
+    "Attack Shark R1": "aniscoupons",
+    "Realme 14 Pro Plus Global (8/256)": "aniscoupons",
+    "Blackview LINK 1 Kids Tablets": "aniscoupons",
+    "Monster MQT52": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
