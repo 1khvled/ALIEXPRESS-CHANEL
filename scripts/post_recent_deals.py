@@ -40,7 +40,8 @@ CHANNELS = [
     "lodydeals",
     "zedstoreonline",
     "ECKSDEAL",
-    "BNDDEALS"
+    "BNDDEALS",
+    "megaphonna"
 ]
 
 async def collect_and_post_last_10_deals(force: bool = False) -> int:
@@ -288,6 +289,32 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                     # 4. Extract deal or coupon list (pass source_photo_url as fallback image)
                     extracted = await product_extractor.extract_from_message(raw_text, media_path=source_photo_url)
                     if not extracted or not extracted.is_valid:
+                        # Automated check: Competitor channel service announcements (China holidays, customs, courier notices)
+                        from app.aliexpress.parser import detect_channel_announcement
+                        from app.publisher.state_tracker import is_channel_announcement_eligible, record_channel_announcement_published
+                        is_ann, ann_text, ann_tag = detect_channel_announcement(raw_text)
+                        if is_ann and ann_tag:
+                            now_dz = datetime.now(timezone(timedelta(hours=1)))
+                            today_str = now_dz.strftime("%Y-%m-%d")
+                            if is_channel_announcement_eligible(ann_tag, today_str):
+                                token = os.getenv("ADMIN_BOT_TOKEN") or os.getenv("TELEGRAM_BOT_TOKEN")
+                                if token:
+                                    try:
+                                        async with httpx.AsyncClient(timeout=10.0) as client:
+                                            resp = await client.post(
+                                                f"https://api.telegram.org/bot{token}/sendMessage",
+                                                json={
+                                                    "chat_id": settings.TARGET_CHANNEL_ID,
+                                                    "text": ann_text,
+                                                    "parse_mode": "HTML",
+                                                    "disable_web_page_preview": True
+                                                }
+                                            )
+                                            if resp.status_code == 200 and resp.json().get("ok"):
+                                                record_channel_announcement_published(ann_tag, today_str)
+                                                print(f"  [ANNOUNCEMENT PUBLISHED] Auto-posted '{ann_tag}' announcement to {settings.TARGET_CHANNEL_ID}")
+                                    except Exception as e:
+                                        print(f"  [!] Failed to publish announcement: {e}")
                         max_processed_id = max(max_processed_id, msg_id)
                         record_post_handled(ch, msg_id)
                         continue

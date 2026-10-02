@@ -22,6 +22,11 @@ channels:
     enabled: true
     priority: 85
 
+  - username: "megaphonna"
+    name: "Mega Phone"
+    enabled: true
+    priority: 88
+
   - username: "Pcgamingpart"
     name: "PC Gaming Part"
     enabled: false

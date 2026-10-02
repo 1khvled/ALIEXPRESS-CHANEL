@@ -842,6 +842,21 @@ def record_religious_reminder_published(reminder_type: str, date_str: str):
     state["religious_reminders_history"][reminder_type] = date_str
     save_persistent_state(state)
 
+# ── Channel Informational & Service Announcements Tracking ──────
+def is_channel_announcement_eligible(tag: str, date_str: str) -> bool:
+    """Checks if a service announcement (e.g. 'china_holiday_shipping_delay') has already been posted today."""
+    state = load_persistent_state()
+    history = state.get("channel_announcements_history", {})
+    return history.get(tag) != date_str
+
+def record_channel_announcement_published(tag: str, date_str: str):
+    """Records that a service announcement was published for the given date."""
+    state = load_persistent_state()
+    if "channel_announcements_history" not in state:
+        state["channel_announcements_history"] = {}
+    state["channel_announcements_history"][tag] = date_str
+    save_persistent_state(state)
+
 # ── Dynamic Schedule & Interval Management ──────────────────────
 DEFAULT_SCHEDULE_CONFIG = {
     "day_interval_minutes": 5,

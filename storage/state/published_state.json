@@ -73,14 +73,16 @@
     "9998885726",
     "9998885776",
     "9998886147",
-    "9998886362"
+    "9998886362",
+    "1005012407874415",
+    "9998887189"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
     "1005010219205081": 1790884267.9909704,
-    "999111222": 1790946360.643882,
-    "100500999912345": 1790856362.0358515,
-    "100500999954321": 1790939162.0358515,
+    "999111222": 1790947188.7823389,
+    "100500999912345": 1790857189.830911,
+    "100500999954321": 1790939989.830911,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
@@ -95,7 +97,7 @@
     "1005008829227075": 1790884310.7506618,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1790935562.0896769,
+    "100500777666555": 1790936389.8841915,
     "1005011778621042": 1790888057.5668976,
     "9998888080": 1790888080.3099577,
     "1005012312990781": 1790888097.0085742,
@@ -110,7 +112,7 @@
     "1005007458827229": 1790888886.4062796,
     "1005010453516983": 1790943694.6895797,
     "1005008852027824": 1790888909.743846,
-    "1005012499451512": 1790946953.0110464,
+    "1005012499451512": 1790888928.6181495,
     "9998888981": 1790888981.6873999,
     "1005010129356058": 1790897106.449474,
     "1005005217734986": 1790937548.9389005,
@@ -118,7 +120,7 @@
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
-    "100500888999777": 1790931962.1223269,
+    "100500888999777": 1790932789.9138663,
     "1005007027334636": 1790940343.7746465,
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
@@ -152,8 +154,10 @@
     "9998885726": 1790945726.205554,
     "9998885776": 1790945776.0478673,
     "9998886147": 1790946147.1871526,
-    "999888777111": 1790944562.2224572,
-    "9998886362": 1790946362.071869
+    "999888777111": 1790945390.005885,
+    "9998886362": 1790946362.071869,
+    "1005012407874415": 1790947009.9546273,
+    "9998887189": 1790947189.8634577
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -225,15 +229,15 @@
     "OnePlus Turbo 6X Pro 8/128GB",
     "من منتجات الأكثر طلبا",
     "النسخة العالمية",
-    "OnePlus Turbo 6X Pro 8/128"
+    "HONOR 600 PRO (12/256)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1790946360.643882,
+    "Test Wireless Gaming Mouse X1": 1790947188.7823389,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
-    "Attack Shark R2 Mouse": 1790939162.0358515,
-    "Test Wrench Set": 1790946362.071869,
+    "Attack Shark R2 Mouse": 1790939989.830911,
+    "Test Wrench Set": 1790947189.8634577,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1790884195.3586087,
@@ -268,8 +272,8 @@
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
-    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1790856362.0358515,
-    "Attack Shark L80 PRO Wireless Mouse": 1790945462.1223269,
+    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1790857189.830911,
+    "Attack Shark L80 PRO Wireless Mouse": 1790946289.9138663,
     "الأكثر لبا لنهار اليوووم": 1790940343.7746465,
     "POCO C81 Pro 4/64": 1790940366.7525578,
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
@@ -300,7 +304,7 @@
     "OnePlus Turbo 6X Pro 8/128GB": 1790943950.8265061,
     "من منتجات الأكثر طلبا": 1790943959.7454133,
     "النسخة العالمية": 1790943965.6572914,
-    "OnePlus Turbo 6X Pro 8/128": 1790946953.0110464
+    "HONOR 600 PRO (12/256)": 1790947009.9546273
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -430,40 +434,40 @@
     "test_channel:1790945776",
     "test_channel:1790946147",
     "test_channel:1790946362",
-    "zedstoreonline:38522",
-    "ecksdeal:5852"
+    "megaphonna:8185",
+    "test_channel:1790947189"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790946953.0110464,
+  "last_run_time": 1790947189.9151301,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32646,
       "last_check_time": 1790932016.8823907
     },
     "ecksdeal": {
-      "last_message_id": 5852,
-      "last_check_time": 1790946955.6936193
+      "last_message_id": 5851,
+      "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
       "last_message_id": 45392,
-      "last_check_time": 1790946946.1344433
+      "last_check_time": 1790947189.9151301
     },
     "bnddeals": {
       "last_message_id": 50786,
-      "last_check_time": 1790946956.0395136
+      "last_check_time": 1790944838.5652263
     },
     "test_channel": {
-      "last_message_id": 1790946362,
-      "last_check_time": 1790946362.071869
+      "last_message_id": 1790947189,
+      "last_check_time": 1790947189.8634577
     },
     "pcgamingpart": {
       "last_message_id": 7936,
       "last_check_time": 1790937548.9389005
     },
     "zedstoreonline": {
-      "last_message_id": 38522,
-      "last_check_time": 1790946953.0110464
+      "last_message_id": 38521,
+      "last_check_time": 1790944837.9476655
     }
   },
   "published_product_prices": {
@@ -493,7 +497,7 @@
     "1005007458827229": 22.75,
     "1005010453516983": 204.6,
     "1005008852027824": 194.9,
-    "1005012499451512": 260.0,
+    "1005012499451512": 261.8,
     "1005010129356058": 294.0,
     "3256809790988797": 92.8,
     "1005005217734986": 9.61,
@@ -525,7 +529,8 @@
     "1005007345398413": 14.3,
     "1005012504076921": 260.91,
     "1005008715050858": 20.47,
-    "999888777111": 20.0
+    "999888777111": 20.0,
+    "1005012407874415": 480.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1197,16 +1202,6 @@
       "price": 294.7,
       "timestamp": 1790943965.6572914,
       "status": "ACTIVE"
-    },
-    "zedstoreonline:38522": {
-      "channel_msg_id": 348,
-      "product_id": "1005012499451512",
-      "title": "OnePlus Turbo 6X Pro 8/128",
-      "channel": "zedstoreonline",
-      "source_msg_id": 38522,
-      "price": 260.0,
-      "timestamp": 1790946953.0110464,
-      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1215,7 +1210,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790946953.013026,
+    "last_deal_post_time": 1790943965.659193,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1265,7 +1260,7 @@
     "9998886147": "test_channel",
     "999888777111": "lodydeals",
     "9998886362": "test_channel",
-    "1005012499451512": "zedstoreonline"
+    "9998887189": "test_channel"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1300,8 +1295,7 @@
     "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": "bnddeals",
     "OnePlus Turbo 6X Pro 8/128GB": "lodydeals",
     "من منتجات الأكثر طلبا": "bnddeals",
-    "النسخة العالمية": "bnddeals",
-    "OnePlus Turbo 6X Pro 8/128": "zedstoreonline"
+    "النسخة العالمية": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -1309,6 +1303,12 @@
     "test_rem_e95dab13": "2026-10-02",
     "jumuah": "2026-10-02",
     "test_rem_d0b156d9": "2026-10-02",
-    "test_rem_35271d74": "2026-10-02"
+    "test_rem_35271d74": "2026-10-02",
+    "test_rem_308fc3d4": "2026-10-02"
+  },
+  "channel_announcements_history": {
+    "china_holiday_shipping_delay": "2026-10-02",
+    "test_tag_1ee10f": "2026-10-02",
+    "test_tag_4f19c1": "2026-10-02"
   }
 }

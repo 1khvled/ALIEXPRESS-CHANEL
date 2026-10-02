@@ -141,7 +141,7 @@ def is_allowed_category(title: str, text: str, channel_username: str = "") -> Tu
     """Check if the deal belongs to an allowed category (gaming, tech, PC parts, cables, tools, phones, etc.)."""
     clean_ch = channel_username.lower().lstrip("@")
     monitored_tech_channels = {
-        "pcgamingpart", "bnddeals", "zedstoreonline", "aniscoupons", "ecksdeal", "lodydeals", "megaprix"
+        "pcgamingpart", "bnddeals", "zedstoreonline", "aniscoupons", "ecksdeal", "lodydeals", "megaprix", "megaphonna"
     }
     # All 7 monitored channels are specialized Algerian tech/deal channels curated by the user
     if clean_ch in monitored_tech_channels:
@@ -565,3 +565,53 @@ def detect_restock_deal(text: str) -> bool:
         return True
 
     return False
+
+
+def detect_channel_announcement(text: str) -> Tuple[bool, Optional[str], Optional[str]]:
+    """
+    Detects non-deal informational bulletins or service notices from monitored channels:
+    - China national holidays / Golden Week / Spring festival shipping delays.
+    - Customs & parcel alerts (الجمارك / الطرود).
+    - General shipping & courier delay announcements.
+    Returns (is_announcement, formatted_text, tag).
+    """
+    if not text:
+        return False, None, None
+    t = text.lower()
+
+    # Skip if text contains actual product affiliate links
+    if any(k in t for k in ["s.click.aliexpress.com", "/item/", "bundledeals", "coin-index"]):
+        return False, None, None
+
+    # 1. China Holiday / Shipping Delays (e.g. October Golden Week or Spring Festival)
+    china_holiday_kws = ["عطلة في الصين", "عطلة الصين", "العيد الوطني في الصين", "العيد الوطني الصيني", "رأس السنة الصينية"]
+    shipping_delay_kws = ["تتأخر في الشحن", "تأخر في الشحن", "تأخر الشحن", "تأخير في الشحن", "تأخير الشحن", "توقف الشحن"]
+
+    if any(k in t for k in china_holiday_kws) or (any(k in t for k in shipping_delay_kws) and ("صين" in t or "china" in t)):
+        m_date = re.search(r'حتى\s*(?:يوم\s*)?([0-9]+\s*[^\s\n\.,]+)', text)
+        date_str = m_date.group(0) if m_date else "خلال هذه الفترة"
+        formatted = (
+            "⚠️ <b>تنويه هـام لمتابعينا الكرام 🇨🇳📦</b>\n\n"
+            "نحيطكم علماً بأنه توجد حالياً <b>عطلة رسمية في الصين</b> "
+            f"({date_str}).\n\n"
+            "📌 <b>ملاحظة هامة:</b>\n"
+            "▫️ بعض المتاجر والبائعين في AliExpress قد يتأخرون قليلاً في تجهيز وشحن الطلبيات خلال هذه الفترة.\n"
+            "▫️ العروض والأسعار المنشورة مستمرة كالمعتاد بدون أي توقف، ولكن الشحن سينطلق فور انتهاء فترة العطلة إن شاء الله ✈️\n\n"
+            "تسوق ممتع وبالتوفيق للجميع 🤍🛒"
+        )
+        return True, formatted, "china_holiday_shipping_delay"
+
+    # 2. Algerian Customs / Postal notices
+    customs_kws = ["جمارك", "الجمارك", "طرود الجمارك", "مركز الفرز", "بريد الجزائر"]
+    if any(k in t for k in customs_kws) and any(w in t for w in ["تنبيه", "تنويه", "إشعار", "توقف", "حجز", "قانون"]):
+        clean = re.sub(r'@[A-Za-z0-9_]+', '', text)
+        clean = re.sub(r'https?://t\.me/[A-Za-z0-9_]+', '', clean).strip()
+        formatted = (
+            "📢 <b>إشعار هـام لمتابعينا 📦🇩🇿</b>\n\n"
+            f"{clean}\n\n"
+            "📌 <i>نوافيكم دائماً بكل جديد ومستجدات الشحن والتسوق من AliExpress أولاً بأول ✨</i>"
+        )
+        return True, formatted, "customs_postal_notice"
+
+    return False, None, None
+
