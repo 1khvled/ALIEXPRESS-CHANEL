@@ -74,3 +74,8 @@ async def test_bundle_deal_disclaimer_3_items():
     assert "تنبيه عروض الحزم" in caption
     assert "يجب إضافة 3 قطع" in caption
     assert "Choice Bundle" in caption
+
+def test_country_instruction_ukraine_and_australia():
+    from app.aliexpress.parser import extract_country_instruction
+    assert extract_country_instruction("أختر بلد الحساب أوكرانيا 🇺🇦") == "أوكرانيا 🇺🇦"
+    assert extract_country_instruction("أضع البلد استراليا 🇦🇺") == "أستراليا 🇦🇺"

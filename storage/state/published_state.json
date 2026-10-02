@@ -89,29 +89,30 @@
     "9998887832",
     "9998887913",
     "9998887994",
-    "9998888899"
+    "9998888899",
+    "9998889674"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
     "1005010219205081": 1790947574.20351,
-    "999111222": 1790958898.896546,
-    "100500999912345": 1790868899.5993805,
-    "100500999954321": 1790951699.5993805,
+    "999111222": 1790959674.0988214,
+    "100500999912345": 1790869674.8519812,
+    "100500999954321": 1790952474.8519812,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
     "1005007805638431": 1790884166.1520143,
     "1005009054706827": 1790884195.3586087,
     "1005007961216287": 1790937542.235978,
-    "1005008233932899": 1790959559.6949198,
+    "1005008233932899": 1790943965.6572914,
     "1005009627597591": 1790884233.6428,
     "1005008880082336": 1790943678.5551012,
     "1005007275142457": 1790884287.4211984,
-    "1005007279793099": 1790959256.6207588,
+    "1005007279793099": 1790884299.0959656,
     "1005008829227075": 1790884310.7506618,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1790948099.6509843,
+    "100500777666555": 1790948874.904764,
     "1005011778621042": 1790888057.5668976,
     "9998888080": 1790888080.3099577,
     "1005012312990781": 1790888097.0085742,
@@ -134,8 +135,8 @@
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
-    "100500888999777": 1790944499.6792178,
-    "1005007027334636": 1790959250.3065743,
+    "100500888999777": 1790945274.9413028,
+    "1005007027334636": 1790940343.7746465,
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
@@ -144,7 +145,7 @@
     "1005012184442621": 1790941174.1965158,
     "1005006631309573": 1790941179.7256634,
     "1005005648888450": 1790941186.791633,
-    "1005010178295650": 1790959566.549264,
+    "1005010178295650": 1790941192.9120486,
     "1005006117094928": 1790941202.9035249,
     "1005006603602562": 1790941207.5310047,
     "1005010721042860": 1790941214.6756065,
@@ -168,13 +169,13 @@
     "9998885726": 1790945726.205554,
     "9998885776": 1790945776.0478673,
     "9998886147": 1790946147.1871526,
-    "999888777111": 1790957099.7671394,
+    "999888777111": 1790957875.0234323,
     "9998886362": 1790946362.071869,
     "1005012407874415": 1790947009.9546273,
     "9998887189": 1790947189.8634577,
     "1005013152491360": 1790947849.7049744,
-    "1005012925826589": 1790959241.7410603,
-    "1005012922578845": 1790959551.9000359,
+    "1005012925826589": 1790948179.150464,
+    "1005012922578845": 1790948453.331144,
     "1005012865117890": 1790948460.5860589,
     "1005010428573334": 1790948755.0367405,
     "1005013146524028": 1790948764.3756874,
@@ -185,7 +186,8 @@
     "9998887832": 1790957832.2997856,
     "9998887913": 1790957913.5473306,
     "9998887994": 1790957994.466288,
-    "9998888899": 1790958899.632337
+    "9998888899": 1790958899.632337,
+    "9998889674": 1790959674.8864965
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -270,24 +272,21 @@
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back",
     "Powerful Violent Fan 150000RPM",
     "Essager 65W GaN USB",
-    "POCO X6 Pro 5G 12/512GB",
-    "SomnAmbulist SSD",
-    "Attack Shark R1",
-    "New Monster MQT52 TWS Wireless Gaming Headset Bluetooth 5.4 HIFI Stereo"
+    "POCO X6 Pro 5G 12/512GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1790958898.896546,
+    "Test Wireless Gaming Mouse X1": 1790959674.0988214,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
-    "Attack Shark R2 Mouse": 1790951699.5993805,
-    "Test Wrench Set": 1790958899.632337,
+    "Attack Shark R2 Mouse": 1790952474.8519812,
+    "Test Wrench Set": 1790959674.8864965,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1790884195.3586087,
     "ATTACK SHARK L90": 1790884206.6605399,
     "SomnAmbulist SSD 2.5 120GB": 1790884215.4346776,
-    "Realme 14 Pro Plus Global (8/256)": 1790959559.6949198,
+    "Realme 14 Pro Plus Global (8/256)": 1790884227.6404886,
     "Realme 15 Pro Global (8/256)": 1790884233.6428,
     "Poco C71 3/64GB": 1790884267.9909704,
     "سماعات لاسلكية Attack Shark L80 PRO Wireless": 1790884281.6726701,
@@ -316,8 +315,8 @@
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
-    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1790868899.5993805,
-    "Attack Shark L80 PRO Wireless Mouse": 1790957999.6792178,
+    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1790869674.8519812,
+    "Attack Shark L80 PRO Wireless Mouse": 1790958774.9413028,
     "الأكثر لبا لنهار اليوووم": 1790940343.7746465,
     "POCO C81 Pro 4/64": 1790940366.7525578,
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
@@ -353,18 +352,15 @@
     "POCO C71 (3/64)": 1790947574.20351,
     "POCO X8 (6/128)": 1790947849.7049744,
     "XIAOMI PAD7 (12/256)": 1790948167.421073,
-    "REALME P3 5G (8/256)": 1790959241.7410603,
-    "REALME 15 5G (12/256)": 1790959551.9000359,
+    "REALME P3 5G (8/256)": 1790948179.150464,
+    "REALME 15 5G (12/256)": 1790948453.331144,
     "REALME 14 pro (12/256)": 1790948460.5860589,
     "HONOR X9D (12/256)": 1790948755.0367405,
     "Honor 400  Smart  (6/128)": 1790948764.3756874,
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": 1790949354.0364344,
     "Powerful Violent Fan 150000RPM": 1790949652.480052,
     "Essager 65W GaN USB": 1790949658.4852333,
-    "POCO X6 Pro 5G 12/512GB": 1790950255.4725466,
-    "SomnAmbulist SSD": 1790959250.3065743,
-    "Attack Shark R1": 1790959256.6207588,
-    "New Monster MQT52 TWS Wireless Gaming Headset Bluetooth 5.4 HIFI Stereo": 1790959566.549264
+    "POCO X6 Pro 5G 12/512GB": 1790950255.4725466
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -530,24 +526,15 @@
     "test_channel:1790957913",
     "test_channel:1790957994",
     "test_channel:1790958899",
-    "megaphonna:8187",
-    "aniscoupons:32660",
-    "aniscoupons:32661",
-    "aniscoupons:32662",
-    "aniscoupons:32663",
-    "megaphonna:8188",
-    "aniscoupons:32664",
-    "aniscoupons:32665",
-    "aniscoupons:32666",
-    "aniscoupons:32667"
+    "test_channel:1790959674"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790959566.549264,
+  "last_run_time": 1790959674.9424946,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32667,
-      "last_check_time": 1790959568.5558937
+      "last_message_id": 32646,
+      "last_check_time": 1790932016.8823907
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -555,15 +542,15 @@
     },
     "lodydeals": {
       "last_message_id": 45401,
-      "last_check_time": 1790959542.679826
+      "last_check_time": 1790959674.9424946
     },
     "bnddeals": {
       "last_message_id": 50788,
-      "last_check_time": 1790959543.7199228
+      "last_check_time": 1790957143.6465154
     },
     "test_channel": {
-      "last_message_id": 1790958899,
-      "last_check_time": 1790958899.632337
+      "last_message_id": 1790959674,
+      "last_check_time": 1790959674.8864965
     },
     "pcgamingpart": {
       "last_message_id": 7936,
@@ -571,25 +558,25 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790959543.0394013
+      "last_check_time": 1790957143.043569
     },
     "megaphonna": {
-      "last_message_id": 8188,
-      "last_check_time": 1790959551.9000359
+      "last_message_id": 8186,
+      "last_check_time": 1790957143.9392233
     }
   },
   "published_product_prices": {
     "1005012973772517": 179.1,
     "1005010219205081": 60.0,
     "1005007805638431": 22.64,
-    "1005007027334636": 9.5,
+    "1005007027334636": 28.5,
     "1005009054706827": 22.0,
     "1005007961216287": 18.17,
-    "1005008233932899": 294.9,
+    "1005008233932899": 294.7,
     "1005009627597591": 314.9,
     "1005008880082336": 22.7,
     "1005007275142457": 29.58,
-    "1005007279793099": 14.1,
+    "1005007279793099": 14.13,
     "1005008829227075": 25.06,
     "100500777666555": 20.0,
     "1005011778621042": 124.99,
@@ -620,7 +607,7 @@
     "1005012184442621": 12.35,
     "1005006631309573": 3.69,
     "1005005648888450": 10.09,
-    "1005010178295650": 6.4,
+    "1005010178295650": 7.09,
     "1005006117094928": 32.2,
     "1005006603602562": 181.0,
     "1005010721042860": 376.0,
@@ -1450,66 +1437,6 @@
       "price": 242.7,
       "timestamp": 1790950255.4725466,
       "status": "ACTIVE"
-    },
-    "megaphonna:8187": {
-      "channel_msg_id": 377,
-      "product_id": "1005012925826589",
-      "title": "REALME P3 5G (8/256)",
-      "channel": "megaphonna",
-      "source_msg_id": 8187,
-      "price": 189.0,
-      "timestamp": 1790959241.7410603,
-      "status": "ACTIVE"
-    },
-    "aniscoupons:32661": {
-      "channel_msg_id": 378,
-      "product_id": "1005007027334636",
-      "title": "SomnAmbulist SSD",
-      "channel": "aniscoupons",
-      "source_msg_id": 32661,
-      "price": 9.5,
-      "timestamp": 1790959250.3065743,
-      "status": "ACTIVE"
-    },
-    "aniscoupons:32663": {
-      "channel_msg_id": 379,
-      "product_id": "1005007279793099",
-      "title": "Attack Shark R1",
-      "channel": "aniscoupons",
-      "source_msg_id": 32663,
-      "price": 14.1,
-      "timestamp": 1790959256.6207588,
-      "status": "ACTIVE"
-    },
-    "megaphonna:8188": {
-      "channel_msg_id": 380,
-      "product_id": "1005012922578845",
-      "title": "REALME 15 5G (12/256)",
-      "channel": "megaphonna",
-      "source_msg_id": 8188,
-      "price": 214.9,
-      "timestamp": 1790959551.9000359,
-      "status": "ACTIVE"
-    },
-    "aniscoupons:32664": {
-      "channel_msg_id": 381,
-      "product_id": "1005008233932899",
-      "title": "Realme 14 Pro Plus Global (8/256)",
-      "channel": "aniscoupons",
-      "source_msg_id": 32664,
-      "price": 294.9,
-      "timestamp": 1790959559.6949198,
-      "status": "ACTIVE"
-    },
-    "aniscoupons:32667": {
-      "channel_msg_id": 382,
-      "product_id": "1005010178295650",
-      "title": "New Monster MQT52 TWS Wireless Gaming Headset Bluetooth 5.4 HIFI Stereo",
-      "channel": "aniscoupons",
-      "source_msg_id": 32667,
-      "price": 6.4,
-      "timestamp": 1790959566.549264,
-      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1518,7 +1445,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790959566.5511398,
+    "last_deal_post_time": 1790950255.4746878,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1528,7 +1455,7 @@
   "published_product_channels": {
     "999888104": "test_channel",
     "100500888999777": "lodydeals",
-    "1005007027334636": "aniscoupons",
+    "1005007027334636": "zedstoreonline",
     "1005009734653254": "bnddeals",
     "1005008333859881": "bnddeals",
     "1005009357018019": "bnddeals",
@@ -1538,7 +1465,7 @@
     "1005012184442621": "lodydeals",
     "1005006631309573": "lodydeals",
     "1005005648888450": "lodydeals",
-    "1005010178295650": "aniscoupons",
+    "1005010178295650": "lodydeals",
     "1005006117094928": "zedstoreonline",
     "1005006603602562": "zedstoreonline",
     "1005010721042860": "zedstoreonline",
@@ -1561,7 +1488,7 @@
     "1005007345398413": "bnddeals",
     "1005012504076921": "lodydeals",
     "1005008715050858": "bnddeals",
-    "1005008233932899": "aniscoupons",
+    "1005008233932899": "bnddeals",
     "9998885689": "test_channel",
     "9998885726": "test_channel",
     "9998885776": "test_channel",
@@ -1586,7 +1513,7 @@
     "9998887913": "test_channel",
     "9998887994": "test_channel",
     "9998888899": "test_channel",
-    "1005007279793099": "aniscoupons"
+    "9998889674": "test_channel"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1634,11 +1561,7 @@
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": "bnddeals",
     "Powerful Violent Fan 150000RPM": "lodydeals",
     "Essager 65W GaN USB": "lodydeals",
-    "POCO X6 Pro 5G 12/512GB": "lodydeals",
-    "SomnAmbulist SSD": "aniscoupons",
-    "Attack Shark R1": "aniscoupons",
-    "Realme 14 Pro Plus Global (8/256)": "aniscoupons",
-    "New Monster MQT52 TWS Wireless Gaming Headset Bluetooth 5.4 HIFI Stereo": "aniscoupons"
+    "POCO X6 Pro 5G 12/512GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -1652,7 +1575,8 @@
     "test_rem_668cf761": "2026-10-02",
     "test_rem_4160aaaf": "2026-10-02",
     "test_rem_961ddded": "2026-10-02",
-    "test_rem_a95bf6b9": "2026-10-02"
+    "test_rem_a95bf6b9": "2026-10-02",
+    "test_rem_76523e29": "2026-10-02"
   },
   "channel_announcements_history": {
     "china_holiday_shipping_delay": "2026-10-02",
@@ -1661,6 +1585,7 @@
     "test_tag_01edb4": "2026-10-02",
     "test_tag_58d21e": "2026-10-02",
     "test_tag_9e309a": "2026-10-02",
-    "test_tag_d281b3": "2026-10-02"
+    "test_tag_d281b3": "2026-10-02",
+    "test_tag_3d0c39": "2026-10-02"
   }
 }

@@ -299,7 +299,7 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                             now_dz = datetime.now(timezone(timedelta(hours=1)))
                             today_str = now_dz.strftime("%Y-%m-%d")
                             if is_channel_announcement_eligible(ann_tag, today_str):
-                                token = os.getenv("ADMIN_BOT_TOKEN") or os.getenv("TELEGRAM_BOT_TOKEN")
+                                token = os.getenv("TELEGRAM_BOT_TOKEN") or os.getenv("ADMIN_BOT_TOKEN")
                                 if token:
                                     try:
                                         async with httpx.AsyncClient(timeout=10.0) as client:

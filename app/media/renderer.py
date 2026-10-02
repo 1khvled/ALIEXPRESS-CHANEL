@@ -66,9 +66,21 @@ class MediaRenderer:
             try:
                 price_text = f"${usd_price:.2f}"
                 font_size = max(24, min(42, int(w * 0.035)))
-                try:
-                    font_price = ImageFont.truetype("arialbd.ttf", font_size)
-                except Exception:
+                font_candidates = [
+                    "arialbd.ttf", "arial.ttf",
+                    "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+                    "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
+                    "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf",
+                    "DejaVuSans-Bold.ttf"
+                ]
+                font_price = None
+                for fc in font_candidates:
+                    try:
+                        font_price = ImageFont.truetype(fc, font_size)
+                        break
+                    except Exception:
+                        continue
+                if not font_price:
                     font_price = ImageFont.load_default()
 
                 bbox = draw.textbbox((0, 0), price_text, font=font_price)

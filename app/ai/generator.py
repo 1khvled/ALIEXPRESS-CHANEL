@@ -263,6 +263,10 @@ class DealCaptionGenerator:
                 lines.append("<blockquote>📍 خلي البلـــد <b>كــــــوريا 🇰🇷</b></blockquote>")
             elif "كندا" in country_info or "canada" in c_str or "ca" in c_str:
                 lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
+            elif "أوكرانيا" in country_info or "اوكرانيا" in country_info or "ukraine" in c_str or "ua" in c_str:
+                lines.append("<blockquote>📍 خلي البلـــد <b>أوكرانيـــــا 🇺🇦</b></blockquote>")
+            elif "استراليا" in country_info or "أستراليا" in country_info or "australia" in c_str or "au" in c_str:
+                lines.append("<blockquote>📍 خلي البلـــد <b>أستراليـــــا 🇦🇺</b></blockquote>")
             elif "الجزائر" in country_info or "algeria" in c_str or "dz" in c_str:
                 lines.append("<blockquote>📍 بلد الحساب <b>الجزائر 🇩🇿</b></blockquote>")
 

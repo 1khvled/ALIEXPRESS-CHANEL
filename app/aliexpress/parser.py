@@ -8,7 +8,7 @@ PRICE_PATTERNS = [
     re.compile(r'([0-9]+(?:[\.,][0-9]{1,2})?)\s*[\$💲]', re.IGNORECASE),
     re.compile(r'([0-9]+(?:[\.,][0-9]{1,2})?)\s*USD', re.IGNORECASE),
     re.compile(r'USD\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
-    re.compile(r'(?:السعر|السعــــر|سعر\s*القطعة|سعر\s*قطعة|سعر)\s*[:：]?\s*[\$💲]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
+    re.compile(r'(?:ا+لسعر|ا+لسعــــر|سعر\s*القطعة|سعر\s*قطعة|سعر)\s*[:：\-\s]*[\$💲]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
 ]
 
 EUR_PRICE_PATTERNS = [
@@ -322,6 +322,13 @@ def extract_seller_coupon(text: str) -> Optional[str]:
         code = p_combined.group(2).strip()
         code = code.split('\n')[0].strip()
         code = re.sub(r'[🎟️🎫👊🔗📌].*$', '', code).strip()
+        # Remove any trailing Arabic commentary (e.g. احجزها, سارع قبل النفاذ)
+        code = re.sub(r'[\u0600-\u06FF].*$', '', code).strip()
+        try:
+            if amount and float(amount) < 1.0:
+                return None
+        except ValueError:
+            pass
         if code and code.lower() not in {"http", "https", "aliexpress", "link", "url", "temu"}:
             return f"{amount}$ (كود: {code})"
 
@@ -378,6 +385,14 @@ def extract_country_instruction(text: str, url: str = "", title: str = "") -> st
     # 5. Spain detection
     if any(k in combined for k in ["إسبانيا", "اسبانيا", "🇪🇸", "spain", "shiptocountry=es"]):
         return "إسبانيا 🇪🇸"
+
+    # 5.5 Ukraine detection (frequent for low smartphone prices)
+    if any(k in combined for k in ["أوكرانيا", "اوكرانيا", "🇺🇦", "ukraine", "shiptocountry=ua"]):
+        return "أوكرانيا 🇺🇦"
+
+    # 5.6 Australia detection
+    if any(k in combined for k in ["استراليا", "أستراليا", "🇦🇺", "australia", "shiptocountry=au"]):
+        return "أستراليا 🇦🇺"
 
     # 6. Smart Contextual Inference (PC Gaming -> Korea 🇰🇷, Other Tech -> Canada 🇨🇦)
     full_context = f"{title or ''} {text or ''}".lower()
