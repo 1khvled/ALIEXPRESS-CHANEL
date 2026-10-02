@@ -153,7 +153,7 @@
     "1005012406142215": 1790943705.796801,
     "1005008390562391": 1790943710.6779277,
     "1005007345398413": 1790943717.3545928,
-    "1005012504076921": 1790943950.8265061,
+    "1005012504076921": 1790964073.9921887,
     "1005008715050858": 1790943959.7454133,
     "9998885689": 1790945689.9436276,
     "9998885726": 1790945726.205554,
@@ -264,7 +264,8 @@
     "POCO X8 5G (6/128GB)",
     "HONOR 600 PRO",
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34",
-    "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone"
+    "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone",
+    "ONEPLUS TURBO 6X PRO 5G (8/128)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -352,7 +353,8 @@
     "POCO X8 5G (6/128GB)": 1790960468.486696,
     "HONOR 600 PRO": 1790960475.7249138,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
-    "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096
+    "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
+    "ONEPLUS TURBO 6X PRO 5G (8/128)": 1790964073.9921887
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -547,15 +549,17 @@
     "megaphonna:8190",
     "megaphonna:8191",
     "megaphonna:8192",
-    "megaphonna:8193"
+    "megaphonna:8193",
+    "megaphonna:8194",
+    "megaphonna:8195"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790962844.0034096,
+  "last_run_time": 1790964073.9921887,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32679,
-      "last_check_time": 1790963740.7030184
+      "last_check_time": 1790964076.6541183
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -563,11 +567,11 @@
     },
     "lodydeals": {
       "last_message_id": 45401,
-      "last_check_time": 1790963736.8378503
+      "last_check_time": 1790964061.2620492
     },
     "bnddeals": {
       "last_message_id": 50788,
-      "last_check_time": 1790963737.7624624
+      "last_check_time": 1790964062.2629404
     },
     "test_channel": {
       "last_message_id": 1790961037,
@@ -579,11 +583,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790963737.1363528
+      "last_check_time": 1790964061.6055217
     },
     "megaphonna": {
-      "last_message_id": 8193,
-      "last_check_time": 1790963740.3519926
+      "last_message_id": 8195,
+      "last_check_time": 1790964076.0004733
     }
   },
   "published_product_prices": {
@@ -643,7 +647,7 @@
     "1005012406142215": 393.0,
     "1005008390562391": 11.79,
     "1005007345398413": 14.3,
-    "1005012504076921": 260.91,
+    "1005012504076921": 257.4,
     "1005008715050858": 20.47,
     "999888777111": 20.0,
     "1005012407874415": 478.44,
@@ -1501,6 +1505,16 @@
       "price": 0.8,
       "timestamp": 1790962844.0034096,
       "status": "ACTIVE"
+    },
+    "megaphonna:8195": {
+      "channel_msg_id": 408,
+      "product_id": "1005012504076921",
+      "title": "ONEPLUS TURBO 6X PRO 5G (8/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8195,
+      "price": 257.4,
+      "timestamp": 1790964073.9921887,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1509,7 +1523,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790962844.0058136,
+    "last_deal_post_time": 1790964073.9941425,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1550,7 +1564,7 @@
     "1005012406142215": "bnddeals",
     "1005008390562391": "bnddeals",
     "1005007345398413": "bnddeals",
-    "1005012504076921": "lodydeals",
+    "1005012504076921": "megaphonna",
     "1005008715050858": "bnddeals",
     "1005008233932899": "aniscoupons",
     "9998885689": "test_channel",
@@ -1645,7 +1659,8 @@
     "EasySMX X15 Wireless PC Gamepad Hall Effect": "aniscoupons",
     "Realme Pad 3 5G 256GB": "aniscoupons",
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": "megaphonna",
-    "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": "megaphonna"
+    "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": "megaphonna",
+    "ONEPLUS TURBO 6X PRO 5G (8/128)": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
