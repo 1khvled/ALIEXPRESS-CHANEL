@@ -93,7 +93,8 @@
     "1005009774318553",
     "1005012574108028",
     "1005008599340405",
-    "1005007572968437"
+    "1005007572968437",
+    "1005009120957437"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -193,7 +194,8 @@
     "1005009774318553": 1790966460.2151659,
     "1005012574108028": 1790967954.6642368,
     "1005008599340405": 1790967962.6418507,
-    "1005007572968437": 1790969442.7810974
+    "1005007572968437": 1790969442.7810974,
+    "1005009120957437": 1790970941.2570727
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -284,7 +286,8 @@
     "CUSU SSD 512 GB Portable SSD External Drive",
     "HONOR  X80 PRO MAX (8/128)",
     "WALRAM Sata SSD 512GB",
-    "Lenovo GM2 Pro TWS"
+    "Lenovo GM2 Pro TWS",
+    "ASROCK B850M X WiFi"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -378,7 +381,8 @@
     "CUSU SSD 512 GB Portable SSD External Drive": 1790966460.2151659,
     "HONOR  X80 PRO MAX (8/128)": 1790967954.6642368,
     "WALRAM Sata SSD 512GB": 1790967962.6418507,
-    "Lenovo GM2 Pro TWS": 1790969442.7810974
+    "Lenovo GM2 Pro TWS": 1790969442.7810974,
+    "ASROCK B850M X WiFi": 1790970941.2570727
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -590,27 +594,28 @@
     "aniscoupons:32685",
     "zedstoreonline:38524",
     "megaphonna:8198",
-    "lodydeals:45402"
+    "lodydeals:45402",
+    "lodydeals:45403"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790969442.7810974,
+  "last_run_time": 1790970941.2570727,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32685,
-      "last_check_time": 1790970656.4076402
+      "last_check_time": 1790970945.0680254
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45402,
-      "last_check_time": 1790970654.403983
+      "last_message_id": 45403,
+      "last_check_time": 1790970943.2668712
     },
     "bnddeals": {
       "last_message_id": 50789,
-      "last_check_time": 1790970655.5176551
+      "last_check_time": 1790970944.4205744
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -622,11 +627,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790970654.7727723
+      "last_check_time": 1790970943.7511027
     },
     "megaphonna": {
       "last_message_id": 8198,
-      "last_check_time": 1790970655.9722626
+      "last_check_time": 1790970944.7302308
     }
   },
   "published_product_prices": {
@@ -706,7 +711,8 @@
     "1005009774318553": 53.8,
     "1005012574108028": 279.1,
     "1005008599340405": 47.4,
-    "1005007572968437": 17.47
+    "1005007572968437": 17.47,
+    "1005009120957437": 189.21
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1608,6 +1614,16 @@
       "price": 17.47,
       "timestamp": 1790969442.7810974,
       "status": "ACTIVE"
+    },
+    "lodydeals:45403": {
+      "channel_msg_id": 418,
+      "product_id": "1005009120957437",
+      "title": "ASROCK B850M X WiFi",
+      "channel": "lodydeals",
+      "source_msg_id": 45403,
+      "price": 189.21,
+      "timestamp": 1790970941.2570727,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1616,7 +1632,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790969442.7836368,
+    "last_deal_post_time": 1790970941.259573,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1699,7 +1715,8 @@
     "1005012574108028": "megaphonna",
     "1005008599340405": "aniscoupons",
     "1005009054706827": "zedstoreonline",
-    "1005007572968437": "lodydeals"
+    "1005007572968437": "lodydeals",
+    "1005009120957437": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1765,7 +1782,8 @@
     "HONOR  X80 PRO MAX (8/128)": "megaphonna",
     "WALRAM Sata SSD 512GB": "aniscoupons",
     "Machenike G3 V2 PC Gaming Controller Hall Effect": "zedstoreonline",
-    "Lenovo GM2 Pro TWS": "lodydeals"
+    "Lenovo GM2 Pro TWS": "lodydeals",
+    "ASROCK B850M X WiFi": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
