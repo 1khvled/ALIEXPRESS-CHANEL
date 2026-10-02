@@ -1112,7 +1112,7 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
         await send_admin_msg(chat_id, "⏳ جاري فحص العروض المنشورة لتجميع المنتجات المتشابهة (شرط 4 منتجات أو أكثر من نفس النوع)...")
         try:
             from app.publisher.regrouper import check_and_publish_regrouped_bulletins
-            bulletins = await check_and_publish_regrouped_bulletins(bot_token=ADMIN_BOT_TOKEN)
+            bulletins = await check_and_publish_regrouped_bulletins(bot_token=ADMIN_BOT_TOKEN, force=True)
             if bulletins:
                 msg_lines = ["✅ <b>تم تجميع ونشر التجميعات التالية بنجاح في القناة:</b>\n"]
                 ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")

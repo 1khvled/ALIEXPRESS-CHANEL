@@ -46,7 +46,7 @@ CHANNELS = [
     "Coupon4Dz"
 ]
 
-async def collect_and_post_last_10_deals(force: bool = False) -> int:
+async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bool = False) -> int:
     await init_db()
 
     print("=" * 70)
@@ -628,19 +628,20 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
     print(f"SUCCESS: Published {len(published_deals)} deals to {settings.TARGET_CHANNEL_ID}!")
     print("=" * 70)
 
-    # 10. Check if homogeneous product regrouping is ready (>= 4 of same category)
+    # 10. Daily Tajmi3at / Compilations (~10:00 PM UTC+1 or forced)
     try:
         from app.publisher.regrouper import check_and_publish_regrouped_bulletins
-        bulletins = await check_and_publish_regrouped_bulletins()
+        bulletins = await check_and_publish_regrouped_bulletins(force=force_tajmi3at)
         if bulletins:
-            print(f"\n[REGROUP] Published {len(bulletins)} regrouped bulletin(s):")
+            print(f"\n[TAJMI3AT] Published {len(bulletins)} daily roundup bulletin(s):")
             for b in bulletins:
                 print(f"  - {b['category']}: {b['count']} items -> Msg #{b['message_id']}")
     except Exception as e:
-        print(f"[REGROUP ERROR] {e}")
+        print(f"[TAJMI3AT ERROR] {e}")
 
     return len(published_deals)
 
 if __name__ == "__main__":
     force_run = "--force" in sys.argv or "-f" in sys.argv
-    asyncio.run(collect_and_post_last_10_deals(force=force_run))
+    force_tajmi3at = "--tajmi3at" in sys.argv or "--force-tajmi3at" in sys.argv
+    asyncio.run(collect_and_post_last_10_deals(force=force_run, force_tajmi3at=force_tajmi3at))

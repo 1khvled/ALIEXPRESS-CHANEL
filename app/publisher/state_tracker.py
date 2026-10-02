@@ -49,7 +49,9 @@ def load_persistent_state() -> Dict:
         "published_post_keys": [],
         "last_disclaimer_time": 0.0,
         "last_calendar_time": 0.0,
-        "last_run_time": 0.0
+        "last_run_time": 0.0,
+        "daily_tajmi3at_history": {},
+        "regrouped_channel_msg_ids": []
     }
 
 def save_persistent_state(state: Dict):
@@ -887,6 +889,83 @@ def record_channel_announcement_published(tag: str, date_str: str):
     if "channel_announcements_history" not in state:
         state["channel_announcements_history"] = {}
     state["channel_announcements_history"][tag] = date_str
+    save_persistent_state(state)
+
+# ── Daily Tajmi3at (Roundups at ~10:00 PM UTC+1) Tracking ──────
+def is_tajmi3at_time_window(now_dt: Optional[datetime] = None) -> bool:
+    """
+    Checks if current time in Algiers (UTC+1) is around 10:00 PM.
+    Target window: 21:30 to 22:45 UTC+1.
+    """
+    dz_tz = timezone(timedelta(hours=1))
+    if now_dt is None:
+        now_dt = datetime.now(dz_tz)
+    elif now_dt.tzinfo is None:
+        now_dt = now_dt.replace(tzinfo=dz_tz)
+    else:
+        now_dt = now_dt.astimezone(dz_tz)
+
+    hour = now_dt.hour
+    minute = now_dt.minute
+    # Window: 21:30 to 22:45 Algiers time
+    return (hour == 21 and minute >= 30) or (hour == 22 and minute <= 45)
+
+def is_daily_tajmi3at_eligible(date_str: Optional[str] = None) -> Tuple[bool, str]:
+    """
+    Checks if daily tajmi3at (roundup) is eligible to post today.
+    Ensures roundups are posted at most once per calendar day.
+    """
+    state = load_persistent_state()
+    if not date_str:
+        dz_tz = timezone(timedelta(hours=1))
+        date_str = datetime.now(dz_tz).strftime("%Y-%m-%d")
+
+    history = state.get("daily_tajmi3at_history", {})
+    if date_str in history:
+        info = history[date_str]
+        count = info.get("bulletins_count", 0) if isinstance(info, dict) else 1
+        return False, f"Daily tajmi3at already published for {date_str} ({count} bulletin(s))"
+
+    return True, "Eligible for daily tajmi3at"
+
+def record_daily_tajmi3at_published(bulletins_count: int, date_str: Optional[str] = None):
+    """
+    Records that daily tajmi3at was posted today to prevent reposting.
+    """
+    state = load_persistent_state()
+    if not date_str:
+        dz_tz = timezone(timedelta(hours=1))
+        date_str = datetime.now(dz_tz).strftime("%Y-%m-%d")
+
+    if "daily_tajmi3at_history" not in state:
+        state["daily_tajmi3at_history"] = {}
+
+    state["daily_tajmi3at_history"][date_str] = {
+        "timestamp": time.time(),
+        "bulletins_count": bulletins_count
+    }
+    save_persistent_state(state)
+    logger.info(f"Recorded daily tajmi3at published for {date_str}: {bulletins_count} bulletin(s)")
+
+def get_regrouped_channel_msg_ids() -> Set[int]:
+    """Returns set of channel message IDs that have already been regrouped in bulletins."""
+    state = load_persistent_state()
+    return set(state.get("regrouped_channel_msg_ids", []))
+
+def record_deals_regrouped(channel_msg_ids: List[int]):
+    """Records channel message IDs as regrouped to prevent repetition in subsequent bulletins."""
+    if not channel_msg_ids:
+        return
+    state = load_persistent_state()
+    existing = set(state.get("regrouped_channel_msg_ids", []))
+    for mid in channel_msg_ids:
+        if mid and int(mid) > 0:
+            existing.add(int(mid))
+    # Keep up to the latest 500 IDs
+    sorted_ids = sorted(list(existing))
+    if len(sorted_ids) > 500:
+        sorted_ids = sorted_ids[-500:]
+    state["regrouped_channel_msg_ids"] = sorted_ids
     save_persistent_state(state)
 
 # ── Dynamic Schedule & Interval Management ──────────────────────
