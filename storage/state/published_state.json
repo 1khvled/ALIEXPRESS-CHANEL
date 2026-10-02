@@ -109,7 +109,7 @@
     "1005007458827229": 1790888886.4062796,
     "1005010453516983": 1790943694.6895797,
     "1005008852027824": 1790888909.743846,
-    "1005012499451512": 1790888928.6181495,
+    "1005012499451512": 1790946640.9884756,
     "9998888981": 1790888981.6873999,
     "1005010129356058": 1790897106.449474,
     "1005005217734986": 1790937548.9389005,
@@ -222,7 +222,8 @@
     "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry",
     "OnePlus Turbo 6X Pro 8/128GB",
     "من منتجات الأكثر طلبا",
-    "النسخة العالمية"
+    "النسخة العالمية",
+    "OnePlus Turbo 6X Pro 8/128"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -296,7 +297,8 @@
     "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": 1790943717.3545928,
     "OnePlus Turbo 6X Pro 8/128GB": 1790943950.8265061,
     "من منتجات الأكثر طلبا": 1790943959.7454133,
-    "النسخة العالمية": 1790943965.6572914
+    "النسخة العالمية": 1790943965.6572914,
+    "OnePlus Turbo 6X Pro 8/128": 1790946640.9884756
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -425,11 +427,12 @@
     "test_channel:1790945726",
     "test_channel:1790945776",
     "test_channel:1790946147",
-    "ecksdeal:5852"
+    "ecksdeal:5852",
+    "zedstoreonline:38522"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790946147.243427,
+  "last_run_time": 1790946640.9884756,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32646,
@@ -437,15 +440,15 @@
     },
     "ecksdeal": {
       "last_message_id": 5852,
-      "last_check_time": 1790946343.624401
+      "last_check_time": 1790946643.5901544
     },
     "lodydeals": {
       "last_message_id": 45392,
-      "last_check_time": 1790946342.927193
+      "last_check_time": 1790946635.2127059
     },
     "bnddeals": {
       "last_message_id": 50786,
-      "last_check_time": 1790946343.949367
+      "last_check_time": 1790946643.8815145
     },
     "test_channel": {
       "last_message_id": 1790946147,
@@ -456,8 +459,8 @@
       "last_check_time": 1790937548.9389005
     },
     "zedstoreonline": {
-      "last_message_id": 38521,
-      "last_check_time": 1790946343.2955966
+      "last_message_id": 38522,
+      "last_check_time": 1790946640.9884756
     }
   },
   "published_product_prices": {
@@ -487,7 +490,7 @@
     "1005007458827229": 22.75,
     "1005010453516983": 204.6,
     "1005008852027824": 194.9,
-    "1005012499451512": 261.8,
+    "1005012499451512": 260.0,
     "1005010129356058": 294.0,
     "3256809790988797": 92.8,
     "1005005217734986": 9.61,
@@ -1191,6 +1194,16 @@
       "price": 294.7,
       "timestamp": 1790943965.6572914,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38522": {
+      "channel_msg_id": 346,
+      "product_id": "1005012499451512",
+      "title": "OnePlus Turbo 6X Pro 8/128",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38522,
+      "price": 260.0,
+      "timestamp": 1790946640.9884756,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1199,7 +1212,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790943965.659193,
+    "last_deal_post_time": 1790946641.0261285,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1247,7 +1260,8 @@
     "9998885726": "test_channel",
     "9998885776": "test_channel",
     "9998886147": "test_channel",
-    "999888777111": "lodydeals"
+    "999888777111": "lodydeals",
+    "1005012499451512": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1282,7 +1296,8 @@
     "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": "bnddeals",
     "OnePlus Turbo 6X Pro 8/128GB": "lodydeals",
     "من منتجات الأكثر طلبا": "bnddeals",
-    "النسخة العالمية": "bnddeals"
+    "النسخة العالمية": "bnddeals",
+    "OnePlus Turbo 6X Pro 8/128": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
