@@ -1,11 +1,11 @@
 {
   "published_post_keys": [
-    "alifrdrop:105",
-    "alifrdrop:103"
+    "alifrdrop:103",
+    "alifrdrop:105"
   ],
   "published_product_ids": [
-    "1005011938407661",
-    "1005012540990578"
+    "1005012540990578",
+    "1005011938407661"
   ],
   "monitored_channels": {
     "francecp": {
@@ -17,7 +17,7 @@
       "last_check_time": 1790836790.2576432
     }
   },
-  "last_run_time": 1790945437.6316261,
+  "last_run_time": 1790945745.425841,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001"
   ],
