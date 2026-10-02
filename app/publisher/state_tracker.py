@@ -80,6 +80,21 @@ def is_post_already_published(channel_username: str, message_id: int) -> bool:
     seen_posts = state.get("published_post_keys", [])
     return post_key in seen_posts
 
+def record_post_handled(channel_username: str, message_id: int):
+    """
+    Marks a source post ID as handled (e.g. skipped due to duplicate, spam, or category filter)
+    so it won't be re-processed every cycle, without recording it as published on @DzAliexpress0.
+    """
+    state = load_persistent_state()
+    post_key = get_post_key(channel_username, message_id)
+    if "published_post_keys" not in state:
+        state["published_post_keys"] = []
+    if post_key not in state["published_post_keys"]:
+        state["published_post_keys"].append(post_key)
+        if len(state["published_post_keys"]) > 1000:
+            state["published_post_keys"] = state["published_post_keys"][-1000:]
+        save_persistent_state(state)
+
 def record_post_published(
     channel_username: str,
     message_id: int,
@@ -91,6 +106,7 @@ def record_post_published(
     """
     Records a post as published by its Post ID and updates last_message_id for that channel.
     Also records product_id and timestamp for short-term cross-channel deduplication,
+    tracks the source channel for repeat-post detection vs cross-channel duplicates,
     stores the price for price-drop arbitrage exception detection,
     and stores the target channel_msg_id to detect if the post is ever deleted.
     """
@@ -118,6 +134,7 @@ def record_post_published(
 
     if product_id:
         p_str = str(product_id).strip()
+        state.setdefault("published_product_channels", {})[p_str] = clean_ch
         state.setdefault("published_product_timestamps", {})[p_str] = now
         if price is not None and price > 0:
             state.setdefault("published_product_prices", {})[p_str] = float(price)
@@ -126,6 +143,7 @@ def record_post_published(
 
     if title:
         t_clean = title.strip()
+        state.setdefault("published_title_channels", {})[t_clean] = clean_ch
         state.setdefault("published_title_timestamps", {})[t_clean] = now
         if t_clean not in state.get("published_titles", []):
             state.setdefault("published_titles", []).append(t_clean)
@@ -279,20 +297,24 @@ def is_recent_cross_channel_duplicate(
     cooldown_hours: Optional[float] = None
 ) -> Tuple[bool, str, bool]:
     """
-    Validates cross-channel duplicates with Price-Drop Exception (Cross-Channel Arbitrage):
+    Validates cross-channel duplicates vs. repeat posts:
+    - If multiple channels post the SAME offer at the same time:
+      Blocks subsequent channel's post (within cooldown_hours, default 3.0h).
+    - If the SAME channel repeat posts the offer (e.g. after debounce >= 10m):
+      ALLOWS repeat post! (Mimics channel reposting behavior).
+    - If ANY channel reposts after cooldown_hours (renewed deal):
+      ALLOWS repeat post!
+    - If there is a price drop (>= 5% or >= $1.00 cheaper):
+      ALLOWS repeat post via Price-Drop Exception!
     Returns: (is_duplicate: bool, reason: str, is_price_drop: bool)
-    If another channel or persistent state posted this exact AliExpress product recently:
-      - If current_price is provided and is cheaper by >= 5% or >= $1.00 compared to previous price:
-        bypasses the duplicate cooldown! Returns (False, "Price-Drop Exception: ...", True)
-      - Otherwise, skips duplicate (True, "Product ID ... was already posted ...", False)
-    Also checks live channel scraped PIDs and title similarity.
     """
     if not product_id and not title:
         return False, "", False
     state = load_persistent_state()
     now = time.time()
     from app.config.settings import settings
-    default_cooldown = getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 24)
+    # Default cross-channel simultaneous duplicate window = 3 hours
+    default_cooldown = getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 3.0)
     active_cooldown_hours = cooldown_hours if cooldown_hours is not None else default_cooldown
     cooldown_seconds = active_cooldown_hours * 3600
 
@@ -300,43 +322,86 @@ def is_recent_cross_channel_duplicate(
     if p_str and (p_str.startswith("COUPONS_") or p_str.startswith("EVENT_")):
         return False, "", False
 
+    clean_curr_ch = current_channel.lower().lstrip("@")
     ts_map = state.get("published_product_timestamps", {})
     price_map = state.get("published_product_prices", {})
+    ch_map = state.get("published_product_channels", {})
 
-    # 1. Product ID check against persistent timestamps
+    # Determine previous source channel for this product_id if available
+    prev_ch = ch_map.get(p_str)
+    if not prev_ch and p_str:
+        # Fallback to search channel_published_deals
+        for info in reversed(list(state.get("channel_published_deals", {}).values())):
+            if info.get("product_id") == p_str:
+                prev_ch = info.get("channel", "").lower()
+                break
+
+    # 1. Product ID check
     if p_str and p_str in ts_map:
         age = now - ts_map[p_str]
-        if age < cooldown_seconds:
-            # Check for Price-Drop Exception: require at least 1h age to prevent rapid reposts
-            prev_price = price_map.get(p_str)
-            if age >= 3600 and prev_price and current_price and current_price > 0 and prev_price > 0:
-                diff = prev_price - current_price
-                pct_drop = (diff / prev_price) * 100.0
-                if diff >= 1.0 or pct_drop >= 5.0:
-                    logger.info(f"Price-Drop Exception for {p_str}: was ${prev_price:.2f}, now ${current_price:.2f} (-{pct_drop:.1f}%)")
-                    return False, f"Price drop exception: was ${prev_price:.2f}, now ${current_price:.2f} (-{pct_drop:.1f}%)", True
+        prev_price = price_map.get(p_str)
 
-            return True, f"Product ID {p_str} was already posted {age/3600:.1f}h ago from another channel", False
+        # Check for Price-Drop Exception: require at least 1h age to prevent rapid reposts
+        if age >= 3600 and prev_price and current_price and current_price > 0 and prev_price > 0:
+            diff = prev_price - current_price
+            pct_drop = (diff / prev_price) * 100.0
+            if diff >= 1.0 or pct_drop >= 5.0:
+                logger.info(f"Price-Drop Exception for {p_str}: was ${prev_price:.2f}, now ${current_price:.2f} (-{pct_drop:.1f}%)")
+                return False, f"Price drop exception: was ${prev_price:.2f}, now ${current_price:.2f} (-{pct_drop:.1f}%)", True
+
+        # Check SAME CHANNEL repeat post
+        if prev_ch and clean_curr_ch and prev_ch == clean_curr_ch:
+            # If same channel posted >= 10 min ago (600s), allow repeat post!
+            if age >= 600:
+                logger.info(f"[SAME-CHANNEL REPEAT POST] @{clean_curr_ch} repeat-posted {p_str} ({age/60:.1f}m later). Allowing repeat post!")
+                return False, f"Repeat post from same channel @{clean_curr_ch}", False
+            else:
+                return True, f"Product ID {p_str} was posted just {age/60:.1f}m ago from @{clean_curr_ch} (rapid debounce)", False
+
+        # DIFFERENT CHANNEL posting at the same time (within cross-channel duplicate window)
+        if age < cooldown_seconds:
+            prev_desc = f"from @{prev_ch}" if prev_ch else "from another channel"
+            return True, f"Product ID {p_str} was already posted {age/3600:.1f}h ago {prev_desc} (cross-channel duplicate at same time)", False
+        else:
+            logger.info(f"[RENEWED DEAL REPOST] Product {p_str} reposted after {age/3600:.1f}h. Allowing repeat post!")
+            return False, f"Renewed deal repost after {age/3600:.1f}h", False
 
     # 2. Check live channel cache PIDs
     if p_str and p_str in _CACHED_CHANNEL_PIDS:
         pid_ts = _CACHED_CHANNEL_PIDS[p_str]
         age = now - pid_ts
         if age < cooldown_seconds:
-            return True, f"Product ID {p_str} is present in live @DzAliexpress0 channel ({age/3600:.1f}h ago)", False
+            # Check if this is a repeat post from the same channel
+            if prev_ch and clean_curr_ch and prev_ch == clean_curr_ch and age >= 600:
+                pass
+            else:
+                return True, f"Product ID {p_str} is present in live @DzAliexpress0 channel ({age/3600:.1f}h ago)", False
 
-    # 3. Smart title cross-channel deduplication
+    # 3. Smart title cross-channel deduplication vs repeat post
     if title:
         title_ts_map = state.get("published_title_timestamps", {})
+        title_ch_map = state.get("published_title_channels", {})
         for pub_t in state.get("published_titles", []):
             if is_same_deal_title(title, pub_t):
                 pub_ts = title_ts_map.get(pub_t)
-                if pub_ts is None or (now - pub_ts) < cooldown_seconds:
-                    return True, f"Product title matches previously published deal: '{pub_t[:45]}'", False
+                pub_ch = title_ch_map.get(pub_t, "")
+                if pub_ts is not None:
+                    t_age = now - pub_ts
+                    if t_age < cooldown_seconds:
+                        # Allow same channel repeat post by title
+                        if pub_ch and clean_curr_ch and pub_ch == clean_curr_ch and t_age >= 600:
+                            logger.info(f"[SAME-CHANNEL REPEAT TITLE] @{clean_curr_ch} repeat-posted title '{pub_t[:40]}'")
+                            break
+                        prev_desc = f"from @{pub_ch}" if pub_ch else "previously"
+                        return True, f"Product title matches deal posted {prev_desc}: '{pub_t[:45]}'", False
 
         for ch_t, ch_ts in _CACHED_CHANNEL_TEXT_TIMESTAMPS:
-            if (now - ch_ts) < cooldown_seconds and is_same_deal_title(title, ch_t):
-                return True, f"Product title already visible in live channel: '{ch_t[:45]}'", False
+            t_age = now - ch_ts
+            if t_age < cooldown_seconds and is_same_deal_title(title, ch_t):
+                if prev_ch and clean_curr_ch and prev_ch == clean_curr_ch and t_age >= 600:
+                    pass
+                else:
+                    return True, f"Product title already visible in live channel: '{ch_t[:45]}'", False
 
     return False, "", False
 
@@ -784,39 +849,15 @@ def update_schedule_config(updates: Dict[str, Any]) -> Dict[str, Any]:
 
 def is_deal_posting_due() -> Tuple[bool, str, int]:
     """
-    Checks if enough time has passed to post a new deal based on:
-    - User-configured interval (5m, 10m, 15m, 30m, etc.)
-    - Day vs Night mode (automatic 30m after midnight)
-    - Pause switch
-    Returns: (is_due, reason_message, active_interval_minutes)
+    Checks if deal posting is active:
+    - If paused via /pause by admin: returns False
+    - Otherwise: returns True so deals are published as soon as monitored channels post.
     """
     config = get_schedule_config()
     if config.get("is_paused", False):
         return False, "⏸️ النشر التلقائي متوقف مؤقتاً بأمر المدير (Paused)", 0
 
-    now_utc = datetime.now(timezone.utc)
-    # Algeria is UTC+1
-    algeria_hour = (now_utc.hour + 1) % 24
-    is_night = (algeria_hour >= config.get("night_start_hour_dz", 0) and algeria_hour < config.get("night_end_hour_dz", 8))
-
-    if is_night and config.get("night_mode_enabled", True):
-        active_interval = config.get("night_interval_minutes", 30)
-        mode_desc = f"الوضع الليلي 🌙 ({active_interval} دقيقة)"
-    else:
-        active_interval = config.get("current_interval_minutes", config.get("day_interval_minutes", 5))
-        mode_desc = f"الوضع النهاري ☀️ ({active_interval} دقائق)"
-
-    now_ts = time.time()
-    last_post_ts = config.get("last_deal_post_time", 0.0)
-    elapsed_seconds = now_ts - last_post_ts
-    required_seconds = active_interval * 60
-
-    # 45-second jitter buffer for GitHub Actions cron timer drift
-    if last_post_ts > 0 and (elapsed_seconds + 45) < required_seconds:
-        remaining_minutes = (required_seconds - elapsed_seconds) / 60
-        return False, f"⏳ في فترة الانتظار: {mode_desc} - متبقي {remaining_minutes:.1f} دقيقة", active_interval
-
-    return True, f"✅ جاهز للنشر: {mode_desc}", active_interval
+    return True, "✅ مراقبة ونشر العروض فورياً نشطة (Lody, Zdstore, Esk, BND)", 0
 
 def record_deal_posted_time():
     """Updates the last_deal_post_time timestamp."""

@@ -175,5 +175,68 @@ def test_seller_coupon_sanitization():
     assert extract_seller_coupon("احجز قسيمة المتجر : 5$") is not None
 
 
+def test_mimic_channels_repeat_post_and_duplicate_handling():
+    """
+    Verifies user specifications:
+    1. Simultaneous posts from different channels (e.g. Lody vs Zdstore) -> DONT post duplicates!
+    2. Same channel repeating/reposting the offer -> REPEAT POST ALLOWED!
+    3. Channel posting renewed offer after 3h cooldown -> REPEAT POST ALLOWED!
+    """
+    import time
+    from app.publisher.state_tracker import (
+        load_persistent_state,
+        save_persistent_state,
+        record_post_published,
+        is_recent_cross_channel_duplicate
+    )
 
+    now = time.time()
+    pid = "100500888999777"
+    title = "Attack Shark L80 PRO Wireless Mouse"
 
+    # Step 1: Lody Deals posts the deal at t = now - 900 (15 minutes ago)
+    record_post_published("lodydeals", 45000, product_id=pid, title=title, price=22.70)
+    state = load_persistent_state()
+    state["published_product_timestamps"][pid] = now - 900
+    state["published_title_timestamps"][title] = now - 900
+    save_persistent_state(state)
+
+    # Step 2: Zedstore posts the same offer at the same time (15 mins later, same price)
+    # -> Must be BLOCKED as simultaneous cross-channel duplicate
+    is_dup_zd, reason_zd, _ = is_recent_cross_channel_duplicate(
+        product_id=pid,
+        current_channel="zedstoreonline",
+        current_price=22.70,
+        title=title,
+        cooldown_hours=3.0
+    )
+    assert is_dup_zd is True, "Expected cross-channel simultaneous offer to be blocked as duplicate"
+    assert "cross-channel duplicate at same time" in reason_zd
+
+    # Step 3: Lody Deals repeat posts the offer (e.g. 35 mins later, same channel)
+    # -> Must be ALLOWED as a repeat post by source channel
+    state["published_product_timestamps"][pid] = now - (35 * 60)
+    save_persistent_state(state)
+    is_dup_repeat, reason_repeat, _ = is_recent_cross_channel_duplicate(
+        product_id=pid,
+        current_channel="lodydeals",
+        current_price=22.70,
+        title=title,
+        cooldown_hours=3.0
+    )
+    assert is_dup_repeat is False, "Expected same channel repeat post to be allowed"
+    assert "Repeat post from same channel" in reason_repeat
+
+    # Step 4: ECKSDEAL posts the offer 4 hours later (after 3h cooldown)
+    # -> Must be ALLOWED as renewed deal repost
+    state["published_product_timestamps"][pid] = now - (4 * 3600)
+    save_persistent_state(state)
+    is_dup_renewed, reason_renewed, _ = is_recent_cross_channel_duplicate(
+        product_id=pid,
+        current_channel="ECKSDEAL",
+        current_price=22.70,
+        title=title,
+        cooldown_hours=3.0
+    )
+    assert is_dup_renewed is False, "Expected renewed post after 3h cooldown to be allowed"
+    assert "Renewed deal repost" in reason_renewed

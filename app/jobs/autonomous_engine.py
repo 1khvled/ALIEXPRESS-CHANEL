@@ -37,11 +37,9 @@ from app.publisher.publisher import telegram_publisher
 from app.utils.logger import logger, record_system_log
 
 MONITORED_CHANNELS = [
-    "Pcgamingpart",
-    "zedstoreonline",
-    "aniscoupons",
-    "ECKSDEAL",
     "lodydeals",
+    "zedstoreonline",
+    "ECKSDEAL",
     "BNDDEALS"
 ]
 

@@ -35,15 +35,12 @@ from app.media.downloader import media_downloader
 from app.media.renderer import media_renderer
 from app.publisher.publisher import telegram_publisher
 from app.utils.logger import logger
-# Channels to monitor for deals (photos are fetched exclusively from AliExpress CDN)
+# Primary Algerian deal channels to mimic (Lody, Zedstore, Esk Deals, BND Deals)
 CHANNELS = [
-    "Pcgamingpart",
-    "zedstoreonline",
-    "aniscoupons",
-    "ECKSDEAL",
     "lodydeals",
-    "BNDDEALS",
-    "megaprix"
+    "zedstoreonline",
+    "ECKSDEAL",
+    "BNDDEALS"
 ]
 
 async def collect_and_post_last_10_deals(force: bool = False) -> int:
@@ -134,6 +131,7 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
         record_monitored_channel_last_id,
         is_post_already_published,
         record_post_published,
+        record_post_handled,
         is_recent_cross_channel_duplicate,
         refresh_channel_cache,
         is_same_deal_title
@@ -246,24 +244,28 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                     if not is_fresh:
                         print(f"  [EXPIRED / STALE SKIPPED] {freshness_reason}")
                         max_processed_id = max(max_processed_id, msg_id)
+                        record_post_handled(ch, msg_id)
                         continue
 
                     # 3. Smart spam filtering
                     is_spam, spam_reason = is_spam_or_non_deal(raw_text)
                     if is_spam:
                         max_processed_id = max(max_processed_id, msg_id)
+                        record_post_handled(ch, msg_id)
                         continue
 
                     # 4. Extract deal or coupon list
                     extracted = await product_extractor.extract_from_message(raw_text)
                     if not extracted or not extracted.is_valid:
                         max_processed_id = max(max_processed_id, msg_id)
+                        record_post_handled(ch, msg_id)
                         continue
 
                     # 4.5. Strictly reject France-specific deals in Algerian channel @DzAliexpress0
                     if is_france_deal(raw_text, url=f"{extracted.original_url} {extracted.canonical_url}", country_info=extracted.country_info):
                         print(f"  [FRANCE DEAL REJECTED] Deal is intended for France/Europe, skipping in Algerian channel: {extracted.product_id}")
                         record_monitored_channel_last_id(ch, msg_id)
+                        record_post_handled(ch, msg_id)
                         continue
 
                     # 5. Category whitelist: ONLY gaming, watches, phones, tablets (Coupons bulletin exempt)
@@ -276,17 +278,20 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                         if not allowed:
                             print(f"  [CATEGORY FILTERED] {reject_reason}")
                             max_processed_id = max(max_processed_id, msg_id)
+                            record_post_handled(ch, msg_id)
                             continue
 
-                    # 6. Validate by Post ID & check Cross-Channel duplicates (with Price-Drop Exception)
-                    # Use cooldown_hours=0.25 (15 min rapid duplicate guard) so repeat posts across hours/days are ALLOWED
+                    # 6. Validate by Post ID & check Cross-Channel duplicates vs Repeat Posts:
+                    # Cross-channel window = 3.0h (blocks simultaneous duplicates if multiple channels post at the same time),
+                    # but allows repeat posts if the source channel reposts it or if reposted after 3h!
                     is_dup, dup_reason, is_price_drop = is_recent_cross_channel_duplicate(
                         extracted.product_id, ch, current_price=extracted.current_price, title=extracted.title or "",
-                        cooldown_hours=0.25
+                        cooldown_hours=3.0
                     )
                     if is_dup:
                         print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] {dup_reason}")
                         record_monitored_channel_last_id(ch, msg_id)
+                        record_post_handled(ch, msg_id)
                         continue
 
                     if is_price_drop:
@@ -295,11 +300,13 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                     if extracted.product_id and extracted.product_id in seen_products:
                         print(f"  [DUPLICATE IN CURRENT RUN] Product ID '{extracted.product_id}' was already published in this run!")
                         record_monitored_channel_last_id(ch, msg_id)
+                        record_post_handled(ch, msg_id)
                         continue
 
                     if extracted.title and any(is_same_deal_title(extracted.title, st) for st in seen_titles):
                         print(f"  [SIMILAR TITLE IN CURRENT RUN] Deal title '{extracted.title[:40]}' matches deal already posted in this run!")
                         record_monitored_channel_last_id(ch, msg_id)
+                        record_post_handled(ch, msg_id)
                         continue
 
                     if extracted.product_id:
@@ -314,6 +321,7 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                         if not img_url or not any(domain in img_url for domain in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
                             print(f"  [NO OFFICIAL PHOTO] Skipping deal without clean AliExpress CDN image: {extracted.product_id}")
                             max_processed_id = max(max_processed_id, msg_id)
+                            record_post_handled(ch, msg_id)
                             continue
 
                     # 8. Build affiliate URL (Coin link 90%+, Bundle link for bundle deals)

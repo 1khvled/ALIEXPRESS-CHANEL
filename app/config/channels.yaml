@@ -1,8 +1,9 @@
 # Telegram deal source channels configured from user specifications
+# Primary channels to mimic: Lody Deals, Zed Store Online, ECKS DEAL, BND DEALS
 
 channels:
-  - username: "ECKSDEAL"
-    name: "ECKS DEAL"
+  - username: "lodydeals"
+    name: "Lody Deals"
     enabled: true
     priority: 100
 
@@ -11,27 +12,27 @@ channels:
     enabled: true
     priority: 95
 
-  - username: "Pcgamingpart"
-    name: "PC Gaming Part"
+  - username: "ECKSDEAL"
+    name: "ECKS DEAL"
     enabled: true
     priority: 90
-
-  - username: "lodydeals"
-    name: "Lody Deals"
-    enabled: true
-    priority: 85
 
   - username: "BNDDEALS"
     name: "BND DEALS"
     enabled: true
-    priority: 80
+    priority: 85
+
+  - username: "Pcgamingpart"
+    name: "PC Gaming Part"
+    enabled: false
+    priority: 50
 
   - username: "megaprix"
     name: "Mega Prix"
-    enabled: true
-    priority: 75
+    enabled: false
+    priority: 40
 
   - username: "aniscoupons"
     name: "Anis Coupons"
-    enabled: true
-    priority: 70
+    enabled: false
+    priority: 30
