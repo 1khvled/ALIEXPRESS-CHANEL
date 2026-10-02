@@ -43,7 +43,19 @@
     "1005007027334636",
     "1005009734653254",
     "1005008333859881",
-    "1005009357018019"
+    "1005009357018019",
+    "1005012436000251",
+    "1005006750448278",
+    "1005012184442621",
+    "1005006631309573",
+    "1005005648888450",
+    "1005010178295650",
+    "1005006117094928",
+    "1005006603602562",
+    "1005010721042860",
+    "1005009517247552",
+    "1005012191191893",
+    "1005012968221708"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790857823.0117362,
@@ -92,7 +104,19 @@
     "1005007027334636": 1790940343.7746465,
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
-    "1005009357018019": 1790940383.4974926
+    "1005009357018019": 1790940383.4974926,
+    "1005012436000251": 1790941160.7696626,
+    "1005006750448278": 1790941167.9296343,
+    "1005012184442621": 1790941174.1965158,
+    "1005006631309573": 1790941179.7256634,
+    "1005005648888450": 1790941186.791633,
+    "1005010178295650": 1790941192.9120486,
+    "1005006117094928": 1790941202.9035249,
+    "1005006603602562": 1790941207.5310047,
+    "1005010721042860": 1790941214.6756065,
+    "1005009517247552": 1790941221.8823678,
+    "1005012191191893": 1790941226.7537792,
+    "1005012968221708": 1790941233.5893936
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -138,7 +162,19 @@
     "POCO C81 Pro 4/64",
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones",
     "300Mbps WiFi Amplifier Wireless WIFI Repeater Extender 802.11N Booster",
-    "realme Pad 3 5G Global Version 8/256GB"
+    "realme Pad 3 5G Global Version 8/256GB",
+    "AMD Ryzen 5 7600X",
+    "Adapter  8 in 2 USB Hub",
+    "Zeblaze Btalk PRO Multiple",
+    "KZ EDX Lite Dynamic",
+    "HILDA Laser Rangefinder",
+    "Monster Maxstar MQT52",
+    "QCY T13 True Wireless Earbuds Bluetooth 5.1 Earphones 7.2mm Drivers with",
+    "Blackview Zeno 10 5G  8/128",
+    "Honor Power 2  12/256",
+    "Honor X70 5G 8/128",
+    "Blackview MEGA 5  8/256",
+    "سماعات اذن فخمة  Moondrop Chu 3 IEM"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -187,7 +223,19 @@
     "POCO C81 Pro 4/64": 1790940366.7525578,
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
     "300Mbps WiFi Amplifier Wireless WIFI Repeater Extender 802.11N Booster": 1790940383.4974926,
-    "realme Pad 3 5G Global Version 8/256GB": 1790940388.7188938
+    "realme Pad 3 5G Global Version 8/256GB": 1790940388.7188938,
+    "AMD Ryzen 5 7600X": 1790941160.7696626,
+    "Adapter  8 in 2 USB Hub": 1790941167.9296343,
+    "Zeblaze Btalk PRO Multiple": 1790941174.1965158,
+    "KZ EDX Lite Dynamic": 1790941179.7256634,
+    "HILDA Laser Rangefinder": 1790941186.791633,
+    "Monster Maxstar MQT52": 1790941192.9120486,
+    "QCY T13 True Wireless Earbuds Bluetooth 5.1 Earphones 7.2mm Drivers with": 1790941202.9035249,
+    "Blackview Zeno 10 5G  8/128": 1790941207.5310047,
+    "Honor Power 2  12/256": 1790941214.6756065,
+    "Honor X70 5G 8/128": 1790941221.8823678,
+    "Blackview MEGA 5  8/256": 1790941226.7537792,
+    "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1790941233.5893936
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -259,23 +307,45 @@
     "bnddeals:50771",
     "bnddeals:50772",
     "bnddeals:50773",
-    "bnddeals:50774"
+    "bnddeals:50774",
+    "lodydeals:45379",
+    "lodydeals:45380",
+    "lodydeals:45381",
+    "lodydeals:45382",
+    "lodydeals:45383",
+    "lodydeals:45384",
+    "zedstoreonline:38509",
+    "zedstoreonline:38510",
+    "zedstoreonline:38511",
+    "zedstoreonline:38512",
+    "zedstoreonline:38513",
+    "zedstoreonline:38514",
+    "ecksdeal:5837",
+    "ecksdeal:5838",
+    "ecksdeal:5839",
+    "ecksdeal:5840",
+    "ecksdeal:5841",
+    "ecksdeal:5843",
+    "ecksdeal:5844",
+    "ecksdeal:5849",
+    "ecksdeal:5850",
+    "ecksdeal:5851"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790940388.7188938,
+  "last_run_time": 1790941233.5893936,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32646,
       "last_check_time": 1790932016.8823907
     },
     "ecksdeal": {
-      "last_message_id": 5850,
-      "last_check_time": 1790884310.7506618
+      "last_message_id": 5851,
+      "last_check_time": 1790941233.5893936
     },
     "lodydeals": {
-      "last_message_id": 45378,
-      "last_check_time": 1790940337.5474277
+      "last_message_id": 45384,
+      "last_check_time": 1790941192.9120486
     },
     "bnddeals": {
       "last_message_id": 50774,
@@ -290,8 +360,8 @@
       "last_check_time": 1790937548.9389005
     },
     "zedstoreonline": {
-      "last_message_id": 38508,
-      "last_check_time": 1790940358.465452
+      "last_message_id": 38514,
+      "last_check_time": 1790941226.7537792
     }
   },
   "published_product_prices": {
@@ -330,7 +400,19 @@
     "100500888999777": 22.7,
     "1005009734653254": 67.0,
     "1005008333859881": 20.47,
-    "1005009357018019": 17.5
+    "1005009357018019": 17.5,
+    "1005012436000251": 103.39,
+    "1005006750448278": 3.69,
+    "1005012184442621": 12.35,
+    "1005006631309573": 3.69,
+    "1005005648888450": 10.09,
+    "1005010178295650": 7.09,
+    "1005006117094928": 32.2,
+    "1005006603602562": 181.0,
+    "1005010721042860": 376.0,
+    "1005009517247552": 236.0,
+    "1005012191191893": 224.0,
+    "1005012968221708": 22.74
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -742,6 +824,126 @@
       "price": 281.0,
       "timestamp": 1790940388.7188938,
       "status": "ACTIVE"
+    },
+    "lodydeals:45379": {
+      "channel_msg_id": 318,
+      "product_id": "1005012436000251",
+      "title": "AMD Ryzen 5 7600X",
+      "channel": "lodydeals",
+      "source_msg_id": 45379,
+      "price": 103.39,
+      "timestamp": 1790941160.7696626,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45380": {
+      "channel_msg_id": 319,
+      "product_id": "1005006750448278",
+      "title": "Adapter  8 in 2 USB Hub",
+      "channel": "lodydeals",
+      "source_msg_id": 45380,
+      "price": 3.69,
+      "timestamp": 1790941167.9296343,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45381": {
+      "channel_msg_id": 320,
+      "product_id": "1005012184442621",
+      "title": "Zeblaze Btalk PRO Multiple",
+      "channel": "lodydeals",
+      "source_msg_id": 45381,
+      "price": 12.35,
+      "timestamp": 1790941174.1965158,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45382": {
+      "channel_msg_id": 321,
+      "product_id": "1005006631309573",
+      "title": "KZ EDX Lite Dynamic",
+      "channel": "lodydeals",
+      "source_msg_id": 45382,
+      "price": 3.69,
+      "timestamp": 1790941179.7256634,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45383": {
+      "channel_msg_id": 322,
+      "product_id": "1005005648888450",
+      "title": "HILDA Laser Rangefinder",
+      "channel": "lodydeals",
+      "source_msg_id": 45383,
+      "price": 10.09,
+      "timestamp": 1790941186.791633,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45384": {
+      "channel_msg_id": 323,
+      "product_id": "1005010178295650",
+      "title": "Monster Maxstar MQT52",
+      "channel": "lodydeals",
+      "source_msg_id": 45384,
+      "price": 7.09,
+      "timestamp": 1790941192.9120486,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38510": {
+      "channel_msg_id": 324,
+      "product_id": "1005006117094928",
+      "title": "QCY T13 True Wireless Earbuds Bluetooth 5.1 Earphones 7.2mm Drivers with",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38510,
+      "price": 32.2,
+      "timestamp": 1790941202.9035249,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38511": {
+      "channel_msg_id": 325,
+      "product_id": "1005006603602562",
+      "title": "Blackview Zeno 10 5G  8/128",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38511,
+      "price": 181.0,
+      "timestamp": 1790941207.5310047,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38512": {
+      "channel_msg_id": 326,
+      "product_id": "1005010721042860",
+      "title": "Honor Power 2  12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38512,
+      "price": 376.0,
+      "timestamp": 1790941214.6756065,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38513": {
+      "channel_msg_id": 327,
+      "product_id": "1005009517247552",
+      "title": "Honor X70 5G 8/128",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38513,
+      "price": 236.0,
+      "timestamp": 1790941221.8823678,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38514": {
+      "channel_msg_id": 328,
+      "product_id": "1005012191191893",
+      "title": "Blackview MEGA 5  8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38514,
+      "price": 224.0,
+      "timestamp": 1790941226.7537792,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5851": {
+      "channel_msg_id": 329,
+      "product_id": "1005012968221708",
+      "title": "سماعات اذن فخمة  Moondrop Chu 3 IEM",
+      "channel": "ecksdeal",
+      "source_msg_id": 5851,
+      "price": 22.74,
+      "timestamp": 1790941233.5893936,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -750,7 +952,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790940388.7203078,
+    "last_deal_post_time": 1790941233.5909731,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -764,7 +966,19 @@
     "1005009734653254": "bnddeals",
     "1005008333859881": "bnddeals",
     "1005009357018019": "bnddeals",
-    "1005012143831265": "bnddeals"
+    "1005012143831265": "bnddeals",
+    "1005012436000251": "lodydeals",
+    "1005006750448278": "lodydeals",
+    "1005012184442621": "lodydeals",
+    "1005006631309573": "lodydeals",
+    "1005005648888450": "lodydeals",
+    "1005010178295650": "lodydeals",
+    "1005006117094928": "zedstoreonline",
+    "1005006603602562": "zedstoreonline",
+    "1005010721042860": "zedstoreonline",
+    "1005009517247552": "zedstoreonline",
+    "1005012191191893": "zedstoreonline",
+    "1005012968221708": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -773,6 +987,18 @@
     "POCO C81 Pro 4/64": "bnddeals",
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": "bnddeals",
     "300Mbps WiFi Amplifier Wireless WIFI Repeater Extender 802.11N Booster": "bnddeals",
-    "realme Pad 3 5G Global Version 8/256GB": "bnddeals"
+    "realme Pad 3 5G Global Version 8/256GB": "bnddeals",
+    "AMD Ryzen 5 7600X": "lodydeals",
+    "Adapter  8 in 2 USB Hub": "lodydeals",
+    "Zeblaze Btalk PRO Multiple": "lodydeals",
+    "KZ EDX Lite Dynamic": "lodydeals",
+    "HILDA Laser Rangefinder": "lodydeals",
+    "Monster Maxstar MQT52": "lodydeals",
+    "QCY T13 True Wireless Earbuds Bluetooth 5.1 Earphones 7.2mm Drivers with": "zedstoreonline",
+    "Blackview Zeno 10 5G  8/128": "zedstoreonline",
+    "Honor Power 2  12/256": "zedstoreonline",
+    "Honor X70 5G 8/128": "zedstoreonline",
+    "Blackview MEGA 5  8/256": "zedstoreonline",
+    "سماعات اذن فخمة  Moondrop Chu 3 IEM": "ecksdeal"
   }
 }
