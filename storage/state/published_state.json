@@ -77,7 +77,9 @@
     "1005012407874415",
     "9998887189",
     "1005013152491360",
-    "1005012925826589"
+    "1005012925826589",
+    "1005012922578845",
+    "1005012865117890"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -161,7 +163,9 @@
     "1005012407874415": 1790947009.9546273,
     "9998887189": 1790947189.8634577,
     "1005013152491360": 1790947849.7049744,
-    "1005012925826589": 1790948179.150464
+    "1005012925826589": 1790948179.150464,
+    "1005012922578845": 1790948453.331144,
+    "1005012865117890": 1790948460.5860589
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -238,7 +242,9 @@
     "POCO C71 (3/64)",
     "POCO X8 (6/128)",
     "XIAOMI PAD7 (12/256)",
-    "REALME P3 5G (8/256)"
+    "REALME P3 5G (8/256)",
+    "REALME 15 5G (12/256)",
+    "REALME 14 pro (12/256)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -318,7 +324,9 @@
     "POCO C71 (3/64)": 1790947574.20351,
     "POCO X8 (6/128)": 1790947849.7049744,
     "XIAOMI PAD7 (12/256)": 1790948167.421073,
-    "REALME P3 5G (8/256)": 1790948179.150464
+    "REALME P3 5G (8/256)": 1790948179.150464,
+    "REALME 15 5G (12/256)": 1790948453.331144,
+    "REALME 14 pro (12/256)": 1790948460.5860589
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -465,11 +473,15 @@
     "megaphonna:8173",
     "megaphonna:8174",
     "megaphonna:8175",
-    "megaphonna:8176"
+    "megaphonna:8176",
+    "megaphonna:8177",
+    "megaphonna:8178",
+    "megaphonna:8179",
+    "megaphonna:8180"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790948179.150464,
+  "last_run_time": 1790948460.5860589,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32646,
@@ -481,11 +493,11 @@
     },
     "lodydeals": {
       "last_message_id": 45395,
-      "last_check_time": 1790948156.9599917
+      "last_check_time": 1790948445.7774386
     },
     "bnddeals": {
       "last_message_id": 50787,
-      "last_check_time": 1790948161.119374
+      "last_check_time": 1790948446.938921
     },
     "test_channel": {
       "last_message_id": 1790947189,
@@ -497,11 +509,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790948157.3211188
+      "last_check_time": 1790948446.1573632
     },
     "megaphonna": {
       "last_message_id": 8185,
-      "last_check_time": 1790948179.150464
+      "last_check_time": 1790948463.3002741
     }
   },
   "published_product_prices": {
@@ -566,7 +578,9 @@
     "999888777111": 20.0,
     "1005012407874415": 480.4,
     "1005013152491360": 196.0,
-    "1005012925826589": 189.0
+    "1005012925826589": 189.0,
+    "1005012922578845": 214.9,
+    "1005012865117890": 234.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1288,6 +1302,26 @@
       "price": 189.0,
       "timestamp": 1790948179.150464,
       "status": "ACTIVE"
+    },
+    "megaphonna:8177": {
+      "channel_msg_id": 357,
+      "product_id": "1005012922578845",
+      "title": "REALME 15 5G (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8177,
+      "price": 214.9,
+      "timestamp": 1790948453.331144,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8179": {
+      "channel_msg_id": 358,
+      "product_id": "1005012865117890",
+      "title": "REALME 14 pro (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8179,
+      "price": 234.9,
+      "timestamp": 1790948460.5860589,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1296,7 +1330,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790948179.1525457,
+    "last_deal_post_time": 1790948460.5881355,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1351,7 +1385,9 @@
     "1005010219205081": "megaphonna",
     "1005013152491360": "megaphonna",
     "1005010129356058": "megaphonna",
-    "1005012925826589": "megaphonna"
+    "1005012925826589": "megaphonna",
+    "1005012922578845": "megaphonna",
+    "1005012865117890": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1391,7 +1427,9 @@
     "POCO C71 (3/64)": "megaphonna",
     "POCO X8 (6/128)": "megaphonna",
     "XIAOMI PAD7 (12/256)": "megaphonna",
-    "REALME P3 5G (8/256)": "megaphonna"
+    "REALME P3 5G (8/256)": "megaphonna",
+    "REALME 15 5G (12/256)": "megaphonna",
+    "REALME 14 pro (12/256)": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
