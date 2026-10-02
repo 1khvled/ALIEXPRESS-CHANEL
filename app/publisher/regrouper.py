@@ -249,23 +249,11 @@ async def check_and_publish_regrouped_bulletins(bot_token: Optional[str] = None)
         }
 
         # 4. Determine banner photo for bulletin:
-        # Default for all tajmi3at: Fiery AliExpress Deals Collage (tajmi3at_banner.png)
-        # If phones collection and lody_phones_banner.jpg exists: use Lody phones banner
+        # ALL tajmi3at / collections strictly use Fiery AliExpress Deals Collage (tajmi3at_banner.png)
         from pathlib import Path
-        banner_path = None
-        if cat_name == "phones":
-            lody_p = Path(settings.BASE_DIR) / "storage" / "assets" / "lody_phones_banner.jpg"
-            if not lody_p.exists():
-                lody_p = Path(settings.BASE_DIR) / "assets" / "lody_phones_banner.jpg"
-            if lody_p.exists():
-                banner_path = lody_p
-
-        if not banner_path:
-            taj_p = Path(settings.BASE_DIR) / "storage" / "assets" / "tajmi3at_banner.png"
-            if not taj_p.exists():
-                taj_p = Path(settings.BASE_DIR) / "assets" / "tajmi3at_banner.png"
-            if taj_p.exists():
-                banner_path = taj_p
+        banner_path = Path(settings.BASE_DIR) / "storage" / "assets" / "tajmi3at_banner.png"
+        if not banner_path.exists():
+            banner_path = Path(settings.BASE_DIR) / "assets" / "tajmi3at_banner.png"
 
         # 5. Publish to channel (photo with caption if available, fallback to sendMessage)
         api_url = f"https://api.telegram.org/bot{token}"

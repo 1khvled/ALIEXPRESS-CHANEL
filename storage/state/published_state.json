@@ -37,14 +37,16 @@
     "1005005217734986",
     "1005010062128237",
     "1005006593951067",
-    "9998887645"
+    "9998887645",
+    "999888104",
+    "100500888999777"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790857823.0117362,
     "1005010219205081": 1790884267.9909704,
-    "999111222": 1790937644.540672,
-    "100500999912345": 1790847645.5602148,
-    "100500999954321": 1790930445.5602148,
+    "999111222": 1790940103.5335498,
+    "100500999912345": 1790850104.3850508,
+    "100500999954321": 1790932904.3850508,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
@@ -59,7 +61,7 @@
     "1005008829227075": 1790884310.7506618,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1790926845.6016781,
+    "100500777666555": 1790929304.4293187,
     "1005011778621042": 1790888057.5668976,
     "9998888080": 1790888080.3099577,
     "1005012312990781": 1790888097.0085742,
@@ -80,7 +82,9 @@
     "1005005217734986": 1790937548.9389005,
     "1005010062128237": 1790937566.337433,
     "1005006593951067": 1790937595.2497241,
-    "9998887645": 1790937645.5884554
+    "9998887645": 1790937645.5884554,
+    "999888104": 1790940104.4138699,
+    "100500888999777": 1790925704.4538765
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -120,15 +124,16 @@
     "ATTACK SHARK L80 PRO",
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver",
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT",
-    "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health"
+    "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health",
+    "Attack Shark L80 PRO Wireless Mouse"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1790937644.540672,
+    "Test Wireless Gaming Mouse X1": 1790940103.5335498,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
-    "Attack Shark R2 Mouse": 1790930445.5602148,
-    "Test Wrench Set": 1790937645.5884554,
+    "Attack Shark R2 Mouse": 1790932904.3850508,
+    "Test Wrench Set": 1790940104.4138699,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1790884195.3586087,
@@ -163,7 +168,8 @@
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
-    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1790847645.5602148
+    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1790850104.3850508,
+    "Attack Shark L80 PRO Wireless Mouse": 1790939204.4538765
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -209,11 +215,13 @@
     "zedstoreonline:38503",
     "bnddeals:50767",
     "bnddeals:50770",
-    "test_channel:1790937645"
+    "test_channel:1790937645",
+    "test_channel:1790940104",
+    "lodydeals:45000"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790937645.5884554,
+  "last_run_time": 1790940104.454607,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32646,
@@ -225,15 +233,15 @@
     },
     "lodydeals": {
       "last_message_id": 45375,
-      "last_check_time": 1790937576.7722542
+      "last_check_time": 1790940104.454607
     },
     "bnddeals": {
       "last_message_id": 50770,
       "last_check_time": 1790937597.279287
     },
     "test_channel": {
-      "last_message_id": 1790937645,
-      "last_check_time": 1790937645.5884554
+      "last_message_id": 1790940104,
+      "last_check_time": 1790940104.4138699
     },
     "pcgamingpart": {
       "last_message_id": 7936,
@@ -276,7 +284,8 @@
     "3256809790988797": 92.8,
     "1005005217734986": 9.61,
     "1005010062128237": 9.9,
-    "1005006593951067": 24.0
+    "1005006593951067": 24.0,
+    "100500888999777": 22.7
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -652,5 +661,13 @@
   },
   "last_coin_reminder_time": 1790884123.5561955,
   "next_reminder_interval_seconds": 205506,
-  "coin_reminder_variant_idx": 1
+  "coin_reminder_variant_idx": 1,
+  "published_product_channels": {
+    "999888104": "test_channel",
+    "100500888999777": "lodydeals"
+  },
+  "published_title_channels": {
+    "Test Wrench Set": "test_channel",
+    "Attack Shark L80 PRO Wireless Mouse": "lodydeals"
+  }
 }
