@@ -173,7 +173,7 @@
     "9998886362": 1790946362.071869,
     "1005012407874415": 1790947009.9546273,
     "9998887189": 1790947189.8634577,
-    "1005013152491360": 1790947849.7049744,
+    "1005013152491360": 1790958662.0470448,
     "1005012925826589": 1790948179.150464,
     "1005012922578845": 1790948453.331144,
     "1005012865117890": 1790948460.5860589,
@@ -277,7 +277,8 @@
     "CMF Buds Neo 12.4 mm Titanium‑coated Driver",
     "Attack Shark R1",
     "Blackview LINK 1 Kids Tablets",
-    "Monster MQT52"
+    "Monster MQT52",
+    "POCO X8 5G (6/128GB)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -370,7 +371,8 @@
     "CMF Buds Neo 12.4 mm Titanium‑coated Driver": 1790958106.1812875,
     "Attack Shark R1": 1790958112.48898,
     "Blackview LINK 1 Kids Tablets": 1790958364.4624152,
-    "Monster MQT52": 1790958372.8407452
+    "Monster MQT52": 1790958372.8407452,
+    "POCO X8 5G (6/128GB)": 1790958662.0470448
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -542,15 +544,19 @@
     "aniscoupons:32664",
     "aniscoupons:32665",
     "aniscoupons:32666",
-    "aniscoupons:32667"
+    "aniscoupons:32667",
+    "aniscoupons:32668",
+    "aniscoupons:32669",
+    "aniscoupons:32670",
+    "aniscoupons:32671"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790958372.8407452,
+  "last_run_time": 1790958662.0470448,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32667,
-      "last_check_time": 1790958374.8484614
+      "last_message_id": 32671,
+      "last_check_time": 1790958664.0567138
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -558,11 +564,11 @@
     },
     "lodydeals": {
       "last_message_id": 45401,
-      "last_check_time": 1790958349.8786438
+      "last_check_time": 1790958649.0820758
     },
     "bnddeals": {
       "last_message_id": 50788,
-      "last_check_time": 1790958350.9206939
+      "last_check_time": 1790958650.293431
     },
     "test_channel": {
       "last_message_id": 1790957994,
@@ -574,11 +580,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790958350.252771
+      "last_check_time": 1790958649.481299
     },
     "megaphonna": {
       "last_message_id": 8186,
-      "last_check_time": 1790958351.2966144
+      "last_check_time": 1790958650.6913004
     }
   },
   "published_product_prices": {
@@ -1515,6 +1521,16 @@
       "price": 6.4,
       "timestamp": 1790958372.8407452,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32671": {
+      "channel_msg_id": 372,
+      "product_id": "1005013152491360",
+      "title": "POCO X8 5G (6/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 32671,
+      "price": 196.0,
+      "timestamp": 1790958662.0470448,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1523,7 +1539,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790958372.8431895,
+    "last_deal_post_time": 1790958662.0494456,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1576,7 +1592,7 @@
     "9998887189": "test_channel",
     "1005012499451512": "zedstoreonline",
     "1005010219205081": "megaphonna",
-    "1005013152491360": "megaphonna",
+    "1005013152491360": "aniscoupons",
     "1005010129356058": "megaphonna",
     "1005012925826589": "megaphonna",
     "1005012922578845": "megaphonna",
@@ -1646,7 +1662,8 @@
     "Attack Shark R1": "aniscoupons",
     "Realme 14 Pro Plus Global (8/256)": "aniscoupons",
     "Blackview LINK 1 Kids Tablets": "aniscoupons",
-    "Monster MQT52": "aniscoupons"
+    "Monster MQT52": "aniscoupons",
+    "POCO X8 5G (6/128GB)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
