@@ -87,7 +87,8 @@
     "9998881037",
     "1005011991145678",
     "1005011682821623",
-    "1005007476901342"
+    "1005007476901342",
+    "1005012113350943"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -181,7 +182,8 @@
     "9998881037": 1790961037.0515263,
     "1005011991145678": 1790962541.57551,
     "1005011682821623": 1790962844.0034096,
-    "1005007476901342": 1790964354.5508902
+    "1005007476901342": 1790964354.5508902,
+    "1005012113350943": 1790964645.4325032
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -268,7 +270,8 @@
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34",
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone",
     "ONEPLUS TURBO 6X PRO 5G (8/128)",
-    "GTMEDIA V8 Finder 2 Satellite Finder"
+    "GTMEDIA V8 Finder 2 Satellite Finder",
+    "شاحن 80 واط اصلي لهواتف ريلمي اوبو وانبلاس"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -358,7 +361,8 @@
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1790964073.9921887,
-    "GTMEDIA V8 Finder 2 Satellite Finder": 1790964354.5508902
+    "GTMEDIA V8 Finder 2 Satellite Finder": 1790964354.5508902,
+    "شاحن 80 واط اصلي لهواتف ريلمي اوبو وانبلاس": 1790964645.4325032
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -557,15 +561,16 @@
     "megaphonna:8194",
     "megaphonna:8195",
     "aniscoupons:32680",
-    "aniscoupons:32681"
+    "aniscoupons:32681",
+    "aniscoupons:32682"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790964354.5508902,
+  "last_run_time": 1790964645.4325032,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32681,
-      "last_check_time": 1790964357.3122096
+      "last_message_id": 32682,
+      "last_check_time": 1790964647.442344
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -573,11 +578,11 @@
     },
     "lodydeals": {
       "last_message_id": 45401,
-      "last_check_time": 1790964348.6442502
+      "last_check_time": 1790964639.08011
     },
     "bnddeals": {
       "last_message_id": 50788,
-      "last_check_time": 1790964349.7124941
+      "last_check_time": 1790964640.0403714
     },
     "test_channel": {
       "last_message_id": 1790961037,
@@ -589,11 +594,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790964349.0170758
+      "last_check_time": 1790964639.3997626
     },
     "megaphonna": {
       "last_message_id": 8195,
-      "last_check_time": 1790964350.1255603
+      "last_check_time": 1790964640.395101
     }
   },
   "published_product_prices": {
@@ -670,7 +675,8 @@
     "1005005824280128": 96.8,
     "1005011991145678": 0.8,
     "1005011682821623": 0.8,
-    "1005007476901342": 54.1
+    "1005007476901342": 54.1,
+    "1005012113350943": 15.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1532,6 +1538,16 @@
       "price": 54.1,
       "timestamp": 1790964354.5508902,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32682": {
+      "channel_msg_id": 410,
+      "product_id": "1005012113350943",
+      "title": "شاحن 80 واط اصلي لهواتف ريلمي اوبو وانبلاس",
+      "channel": "aniscoupons",
+      "source_msg_id": 32682,
+      "price": 15.5,
+      "timestamp": 1790964645.4325032,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1540,7 +1556,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790964354.5532994,
+    "last_deal_post_time": 1790964645.4350827,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1617,7 +1633,8 @@
     "9998881037": "test_channel",
     "1005011991145678": "megaphonna",
     "1005011682821623": "megaphonna",
-    "1005007476901342": "aniscoupons"
+    "1005007476901342": "aniscoupons",
+    "1005012113350943": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1679,7 +1696,8 @@
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": "megaphonna",
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": "megaphonna",
     "ONEPLUS TURBO 6X PRO 5G (8/128)": "megaphonna",
-    "GTMEDIA V8 Finder 2 Satellite Finder": "aniscoupons"
+    "GTMEDIA V8 Finder 2 Satellite Finder": "aniscoupons",
+    "شاحن 80 واط اصلي لهواتف ريلمي اوبو وانبلاس": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
