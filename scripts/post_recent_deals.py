@@ -474,7 +474,8 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                                 select(TelegramPost.telegram_message_id)
                                 .where(TelegramPost.deal_id == deal.id)
                                 .order_by(desc(TelegramPost.id))
-                            )).scalar_one_or_none()
+                                .limit(1)
+                            )).scalars().first()
 
                             # Auto-pin coupon bulletins
                             if extracted.is_coupon_list and post_msg_id:

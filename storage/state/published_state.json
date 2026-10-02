@@ -7,7 +7,6 @@
     "9998883398",
     "9998883417",
     "1005007805638431",
-    "1005007027334636",
     "1005009054706827",
     "1005007961216287",
     "1005008233932899",
@@ -35,36 +34,38 @@
     "1005012499451512",
     "9998888981",
     "1005010129356058",
-    "3256809790988797"
+    "1005005217734986",
+    "1005010062128237",
+    "1005006593951067",
+    "9998887645"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790857823.0117362,
     "1005010219205081": 1790884267.9909704,
-    "999111222": 1790888980.8239095,
-    "100500999912345": 1790798981.6562803,
-    "100500999954321": 1790881781.6562803,
+    "999111222": 1790937644.540672,
+    "100500999912345": 1790847645.5602148,
+    "100500999954321": 1790930445.5602148,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
     "1005007805638431": 1790884166.1520143,
-    "1005007027334636": 1790897093.4157302,
     "1005009054706827": 1790884195.3586087,
-    "1005007961216287": 1790884206.6605399,
+    "1005007961216287": 1790937542.235978,
     "1005008233932899": 1790884227.6404886,
     "1005009627597591": 1790884233.6428,
-    "1005008880082336": 1790884281.6726701,
+    "1005008880082336": 1790937557.0801485,
     "1005007275142457": 1790884287.4211984,
     "1005007279793099": 1790884299.0959656,
     "1005008829227075": 1790884310.7506618,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1790878181.6999035,
+    "100500777666555": 1790926845.6016781,
     "1005011778621042": 1790888057.5668976,
     "9998888080": 1790888080.3099577,
     "1005012312990781": 1790888097.0085742,
     "1005009234854371": 1790888140.513047,
     "1005006533038973": 1790888145.7563388,
-    "1005007394028808": 1790888161.7112389,
+    "1005007394028808": 1790937582.4855082,
     "1005012899224314": 1790888183.366231,
     "1005012923660718": 1790888191.2162998,
     "1005012881256093": 1790888202.2321055,
@@ -76,7 +77,10 @@
     "1005012499451512": 1790888928.6181495,
     "9998888981": 1790888981.6873999,
     "1005010129356058": 1790897106.449474,
-    "3256809790988797": 1790932009.345257
+    "1005005217734986": 1790937548.9389005,
+    "1005010062128237": 1790937566.337433,
+    "1005006593951067": 1790937595.2497241,
+    "9998887645": 1790937645.5884554
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -110,17 +114,21 @@
     "OPPO A6 Pro 8/256",
     "realme P3 5G 8/256",
     "OnePlus Turbo 6X Pro 5G",
-    "SomnAmbulist SSD",
     "Xiaomi Pad 7  12/256GB",
-    "Todmart T3"
+    "ATTACK SHARK L90 Flodable Gaming Headset",
+    "SomnAmbulist SSD  120GB",
+    "ATTACK SHARK L80 PRO",
+    "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver",
+    "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT",
+    "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1790888980.8239095,
+    "Test Wireless Gaming Mouse X1": 1790937644.540672,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
-    "Attack Shark R2 Mouse": 1790881781.6562803,
-    "Test Wrench Set": 1790888981.6873999,
+    "Attack Shark R2 Mouse": 1790930445.5602148,
+    "Test Wrench Set": 1790937645.5884554,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1790884195.3586087,
@@ -148,9 +156,14 @@
     "OPPO A6 Pro 8/256": 1790888897.5243473,
     "realme P3 5G 8/256": 1790888909.743846,
     "OnePlus Turbo 6X Pro 5G": 1790888928.6181495,
-    "SomnAmbulist SSD": 1790897093.4157302,
     "Xiaomi Pad 7  12/256GB": 1790897106.449474,
-    "Todmart T3": 1790932009.345257
+    "ATTACK SHARK L90 Flodable Gaming Headset": 1790937542.235978,
+    "SomnAmbulist SSD  120GB": 1790937548.9389005,
+    "ATTACK SHARK L80 PRO": 1790937557.0801485,
+    "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
+    "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
+    "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
+    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1790847645.5602148
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -189,13 +202,18 @@
     "zedstoreonline:38494",
     "aniscoupons:32633",
     "test_channel:1790888981",
-    "aniscoupons:32631",
     "bnddeals:50765",
-    "aniscoupons:32644"
+    "pcgamingpart:7927",
+    "pcgamingpart:7928",
+    "zedstoreonline:38501",
+    "zedstoreonline:38503",
+    "bnddeals:50767",
+    "bnddeals:50770",
+    "test_channel:1790937645"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790932009.345257,
+  "last_run_time": 1790937645.5884554,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32646,
@@ -206,24 +224,24 @@
       "last_check_time": 1790884310.7506618
     },
     "lodydeals": {
-      "last_message_id": 45362,
-      "last_check_time": 1790932017.7610168
+      "last_message_id": 45375,
+      "last_check_time": 1790937576.7722542
     },
     "bnddeals": {
-      "last_message_id": 50767,
-      "last_check_time": 1790932025.4529593
+      "last_message_id": 50770,
+      "last_check_time": 1790937597.279287
     },
     "test_channel": {
-      "last_message_id": 1790888981,
-      "last_check_time": 1790888981.6873999
+      "last_message_id": 1790937645,
+      "last_check_time": 1790937645.5884554
     },
     "pcgamingpart": {
       "last_message_id": 7936,
-      "last_check_time": 1790931992.0839727
+      "last_check_time": 1790937548.9389005
     },
     "zedstoreonline": {
       "last_message_id": 38504,
-      "last_check_time": 1790932000.8101556
+      "last_check_time": 1790937566.337433
     }
   },
   "published_product_prices": {
@@ -232,7 +250,7 @@
     "1005007805638431": 22.64,
     "1005007027334636": 9.5,
     "1005009054706827": 22.0,
-    "1005007961216287": 18.7,
+    "1005007961216287": 18.17,
     "1005008233932899": 294.9,
     "1005009627597591": 314.9,
     "1005008880082336": 22.7,
@@ -255,7 +273,10 @@
     "1005008852027824": 194.9,
     "1005012499451512": 261.8,
     "1005010129356058": 294.0,
-    "3256809790988797": 92.8
+    "3256809790988797": 92.8,
+    "1005005217734986": 9.61,
+    "1005010062128237": 9.9,
+    "1005006593951067": 24.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -548,16 +569,6 @@
       "timestamp": 1790888928.6181495,
       "status": "ACTIVE"
     },
-    "aniscoupons:32631": {
-      "channel_msg_id": 278,
-      "product_id": "1005007027334636",
-      "title": "SomnAmbulist SSD",
-      "channel": "aniscoupons",
-      "source_msg_id": 32631,
-      "price": 9.5,
-      "timestamp": 1790897093.4157302,
-      "status": "ACTIVE"
-    },
     "bnddeals:50765": {
       "channel_msg_id": 279,
       "product_id": "1005010129356058",
@@ -568,14 +579,64 @@
       "timestamp": 1790897106.449474,
       "status": "ACTIVE"
     },
-    "aniscoupons:32644": {
-      "channel_msg_id": 287,
-      "product_id": "3256809790988797",
-      "title": "Todmart T3",
-      "channel": "aniscoupons",
-      "source_msg_id": 32644,
-      "price": 92.8,
-      "timestamp": 1790932009.345257,
+    "pcgamingpart:7927": {
+      "channel_msg_id": 288,
+      "product_id": "1005007961216287",
+      "title": "ATTACK SHARK L90 Flodable Gaming Headset",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7927,
+      "price": 18.17,
+      "timestamp": 1790937542.235978,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7928": {
+      "channel_msg_id": 289,
+      "product_id": "1005005217734986",
+      "title": "SomnAmbulist SSD  120GB",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7928,
+      "price": 9.61,
+      "timestamp": 1790937548.9389005,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38501": {
+      "channel_msg_id": 290,
+      "product_id": "1005008880082336",
+      "title": "ATTACK SHARK L80 PRO",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38501,
+      "price": 22.7,
+      "timestamp": 1790937557.0801485,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38503": {
+      "channel_msg_id": 291,
+      "product_id": "1005010062128237",
+      "title": "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38503,
+      "price": 9.9,
+      "timestamp": 1790937566.337433,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50767": {
+      "channel_msg_id": 293,
+      "product_id": "1005007394028808",
+      "title": "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT",
+      "channel": "bnddeals",
+      "source_msg_id": 50767,
+      "price": 11.2,
+      "timestamp": 1790937582.4855082,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50770": {
+      "channel_msg_id": 294,
+      "product_id": "1005006593951067",
+      "title": "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health",
+      "channel": "bnddeals",
+      "source_msg_id": 50770,
+      "price": 24.0,
+      "timestamp": 1790937595.2497241,
       "status": "ACTIVE"
     }
   },
@@ -585,7 +646,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790932009.3460393,
+    "last_deal_post_time": 1790937595.263634,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
