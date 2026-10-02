@@ -76,7 +76,8 @@
     "9998886362",
     "1005012407874415",
     "9998887189",
-    "1005013152491360"
+    "1005013152491360",
+    "1005012925826589"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -115,7 +116,7 @@
     "1005008852027824": 1790888909.743846,
     "1005012499451512": 1790947559.0343862,
     "9998888981": 1790888981.6873999,
-    "1005010129356058": 1790897106.449474,
+    "1005010129356058": 1790948167.421073,
     "1005005217734986": 1790937548.9389005,
     "1005010062128237": 1790937566.337433,
     "1005006593951067": 1790937595.2497241,
@@ -159,7 +160,8 @@
     "9998886362": 1790946362.071869,
     "1005012407874415": 1790947009.9546273,
     "9998887189": 1790947189.8634577,
-    "1005013152491360": 1790947849.7049744
+    "1005013152491360": 1790947849.7049744,
+    "1005012925826589": 1790948179.150464
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -234,7 +236,9 @@
     "HONOR 600 PRO (12/256)",
     "OnePlus Turbo 6X Pro 8/128",
     "POCO C71 (3/64)",
-    "POCO X8 (6/128)"
+    "POCO X8 (6/128)",
+    "XIAOMI PAD7 (12/256)",
+    "REALME P3 5G (8/256)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -312,7 +316,9 @@
     "HONOR 600 PRO (12/256)": 1790947009.9546273,
     "OnePlus Turbo 6X Pro 8/128": 1790947559.0343862,
     "POCO C71 (3/64)": 1790947574.20351,
-    "POCO X8 (6/128)": 1790947849.7049744
+    "POCO X8 (6/128)": 1790947849.7049744,
+    "XIAOMI PAD7 (12/256)": 1790948167.421073,
+    "REALME P3 5G (8/256)": 1790948179.150464
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -453,11 +459,17 @@
     "megaphonna:8169",
     "megaphonna:8170",
     "megaphonna:8171",
-    "megaphonna:8172"
+    "megaphonna:8172",
+    "lodydeals:45395",
+    "bnddeals:50787",
+    "megaphonna:8173",
+    "megaphonna:8174",
+    "megaphonna:8175",
+    "megaphonna:8176"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790947849.7049744,
+  "last_run_time": 1790948179.150464,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32646,
@@ -468,12 +480,12 @@
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45394,
-      "last_check_time": 1790947837.656908
+      "last_message_id": 45395,
+      "last_check_time": 1790948156.9599917
     },
     "bnddeals": {
-      "last_message_id": 50786,
-      "last_check_time": 1790947838.7985482
+      "last_message_id": 50787,
+      "last_check_time": 1790948161.119374
     },
     "test_channel": {
       "last_message_id": 1790947189,
@@ -485,11 +497,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790947838.022621
+      "last_check_time": 1790948157.3211188
     },
     "megaphonna": {
       "last_message_id": 8185,
-      "last_check_time": 1790947853.8042395
+      "last_check_time": 1790948179.150464
     }
   },
   "published_product_prices": {
@@ -520,7 +532,7 @@
     "1005010453516983": 204.6,
     "1005008852027824": 194.9,
     "1005012499451512": 260.0,
-    "1005010129356058": 294.0,
+    "1005010129356058": 291.0,
     "3256809790988797": 92.8,
     "1005005217734986": 9.61,
     "1005010062128237": 9.9,
@@ -553,7 +565,8 @@
     "1005008715050858": 20.47,
     "999888777111": 20.0,
     "1005012407874415": 480.4,
-    "1005013152491360": 196.0
+    "1005013152491360": 196.0,
+    "1005012925826589": 189.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1255,6 +1268,26 @@
       "price": 196.0,
       "timestamp": 1790947849.7049744,
       "status": "ACTIVE"
+    },
+    "megaphonna:8173": {
+      "channel_msg_id": 355,
+      "product_id": "1005010129356058",
+      "title": "XIAOMI PAD7 (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8173,
+      "price": 291.0,
+      "timestamp": 1790948167.421073,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8176": {
+      "channel_msg_id": 356,
+      "product_id": "1005012925826589",
+      "title": "REALME P3 5G (8/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8176,
+      "price": 189.0,
+      "timestamp": 1790948179.150464,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1263,7 +1296,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790947849.7071164,
+    "last_deal_post_time": 1790948179.1525457,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1316,7 +1349,9 @@
     "9998887189": "test_channel",
     "1005012499451512": "zedstoreonline",
     "1005010219205081": "megaphonna",
-    "1005013152491360": "megaphonna"
+    "1005013152491360": "megaphonna",
+    "1005010129356058": "megaphonna",
+    "1005012925826589": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1354,7 +1389,9 @@
     "النسخة العالمية": "bnddeals",
     "OnePlus Turbo 6X Pro 8/128": "zedstoreonline",
     "POCO C71 (3/64)": "megaphonna",
-    "POCO X8 (6/128)": "megaphonna"
+    "POCO X8 (6/128)": "megaphonna",
+    "XIAOMI PAD7 (12/256)": "megaphonna",
+    "REALME P3 5G (8/256)": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
