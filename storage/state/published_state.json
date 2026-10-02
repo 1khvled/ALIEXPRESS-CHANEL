@@ -124,7 +124,7 @@
     "1005012923660718": 1790888191.2162998,
     "1005012881256093": 1790888202.2321055,
     "1005009118633225": 1790888213.2900865,
-    "1005012143831265": 1790940388.7188938,
+    "1005012143831265": 1790960747.853039,
     "1005007458827229": 1790888886.4062796,
     "1005010453516983": 1790943694.6895797,
     "1005008852027824": 1790888909.743846,
@@ -137,7 +137,7 @@
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
     "100500888999777": 1790945274.9413028,
-    "1005007027334636": 1790959789.8538215,
+    "1005007027334636": 1790960741.7535982,
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
@@ -312,7 +312,7 @@
     "HONOR CHOICE Earbuds X7e Active": 1790888191.2162998,
     "Honor Watch X5i": 1790888202.2321055,
     "UGREEN 45W GaN Charger": 1790888213.2900865,
-    "Realme Pad 3 5G 256GB": 1790888224.6523979,
+    "Realme Pad 3 5G 256GB": 1790960747.853039,
     "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor": 1790888886.4062796,
     "OPPO A6 Pro 8/256": 1790888897.5243473,
     "realme P3 5G 8/256": 1790888909.743846,
@@ -370,7 +370,7 @@
     "Powerful Violent Fan 150000RPM": 1790949652.480052,
     "Essager 65W GaN USB": 1790949658.4852333,
     "POCO X6 Pro 5G 12/512GB": 1790950255.4725466,
-    "SomnAmbulist SSD": 1790959789.8538215,
+    "SomnAmbulist SSD": 1790960741.7535982,
     "Attack Shark R1": 1790959798.375033,
     "Blackview LINK 1 Kids Tablets": 1790960161.26754,
     "New Monster MQT52 TWS Wireless Gaming Headset Bluetooth 5.4 HIFI Stereo": 1790960167.7624023,
@@ -558,15 +558,21 @@
     "aniscoupons:32670",
     "aniscoupons:32671",
     "aniscoupons:32672",
-    "aniscoupons:32673"
+    "aniscoupons:32673",
+    "aniscoupons:32674",
+    "aniscoupons:32675",
+    "aniscoupons:32676",
+    "aniscoupons:32677",
+    "aniscoupons:32678",
+    "aniscoupons:32679"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790960482.9803915,
+  "last_run_time": 1790960747.853039,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32673,
-      "last_check_time": 1790960484.9873838
+      "last_message_id": 32679,
+      "last_check_time": 1790960753.2318103
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -574,11 +580,11 @@
     },
     "lodydeals": {
       "last_message_id": 45401,
-      "last_check_time": 1790960452.2483807
+      "last_check_time": 1790960734.6129332
     },
     "bnddeals": {
       "last_message_id": 50788,
-      "last_check_time": 1790960453.3549578
+      "last_check_time": 1790960735.584351
     },
     "test_channel": {
       "last_message_id": 1790959674,
@@ -590,11 +596,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790960452.650768
+      "last_check_time": 1790960734.9396963
     },
     "megaphonna": {
       "last_message_id": 8188,
-      "last_check_time": 1790960453.740416
+      "last_check_time": 1790960735.916033
     }
   },
   "published_product_prices": {
@@ -620,7 +626,7 @@
     "1005012923660718": 15.17,
     "1005012881256093": 28.5,
     "1005009118633225": 14.14,
-    "1005012143831265": 281.0,
+    "1005012143831265": 281.9,
     "1005007458827229": 22.75,
     "1005010453516983": 204.6,
     "1005008852027824": 194.9,
@@ -1580,6 +1586,26 @@
       "price": 23.9,
       "timestamp": 1790960482.9803915,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32674": {
+      "channel_msg_id": 398,
+      "product_id": "1005007027334636",
+      "title": "SomnAmbulist SSD",
+      "channel": "aniscoupons",
+      "source_msg_id": 32674,
+      "price": 9.5,
+      "timestamp": 1790960741.7535982,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32675": {
+      "channel_msg_id": 399,
+      "product_id": "1005012143831265",
+      "title": "Realme Pad 3 5G 256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 32675,
+      "price": 281.9,
+      "timestamp": 1790960747.853039,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1588,7 +1614,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790960482.9827952,
+    "last_deal_post_time": 1790960747.8555799,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1602,7 +1628,7 @@
     "1005009734653254": "bnddeals",
     "1005008333859881": "bnddeals",
     "1005009357018019": "bnddeals",
-    "1005012143831265": "bnddeals",
+    "1005012143831265": "aniscoupons",
     "1005012436000251": "lodydeals",
     "1005006750448278": "lodydeals",
     "1005012184442621": "lodydeals",
@@ -1717,7 +1743,8 @@
     "Xiaomi Pad 7 (12/256)": "aniscoupons",
     "POCO X8 5G (6/128GB)": "aniscoupons",
     "HONOR 600 PRO": "aniscoupons",
-    "EasySMX X15 Wireless PC Gamepad Hall Effect": "aniscoupons"
+    "EasySMX X15 Wireless PC Gamepad Hall Effect": "aniscoupons",
+    "Realme Pad 3 5G 256GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
