@@ -128,7 +128,7 @@
     "1005007394028808": 1790937582.4855082,
     "1005012899224314": 1790888183.366231,
     "1005012923660718": 1790888191.2162998,
-    "1005012881256093": 1790888202.2321055,
+    "1005012881256093": 1790973641.950298,
     "1005009118633225": 1790888213.2900865,
     "1005012143831265": 1790960747.853039,
     "1005007458827229": 1790888886.4062796,
@@ -331,7 +331,7 @@
     "Attack Shark X5": 1790888161.7112389,
     "Honor Choice Watch 2i": 1790888183.366231,
     "HONOR CHOICE Earbuds X7e Active": 1790888191.2162998,
-    "Honor Watch X5i": 1790888202.2321055,
+    "Honor Watch X5i": 1790973641.950298,
     "UGREEN 45W GaN Charger": 1790888213.2900865,
     "Realme Pad 3 5G 256GB": 1790960747.853039,
     "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor": 1790888886.4062796,
@@ -632,15 +632,16 @@
     "lodydeals:45408",
     "lodydeals:45409",
     "lodydeals:45410",
-    "aniscoupons:32686"
+    "aniscoupons:32686",
+    "aniscoupons:32687"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790973057.7979915,
+  "last_run_time": 1790973641.950298,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32686,
-      "last_check_time": 1790973347.7273197
+      "last_message_id": 32687,
+      "last_check_time": 1790973643.9605358
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -648,11 +649,11 @@
     },
     "lodydeals": {
       "last_message_id": 45410,
-      "last_check_time": 1790973345.773706
+      "last_check_time": 1790973636.6695309
     },
     "bnddeals": {
       "last_message_id": 50792,
-      "last_check_time": 1790973346.886473
+      "last_check_time": 1790973637.539902
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -664,11 +665,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790973346.1709402
+      "last_check_time": 1790973636.9762223
     },
     "megaphonna": {
       "last_message_id": 8202,
-      "last_check_time": 1790973347.2885358
+      "last_check_time": 1790973637.923551
     }
   },
   "published_product_prices": {
@@ -1734,6 +1735,16 @@
       "price": 13.87,
       "timestamp": 1790973057.7979915,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32687": {
+      "channel_msg_id": 426,
+      "product_id": "1005012881256093",
+      "title": "Honor Watch X5i",
+      "channel": "aniscoupons",
+      "source_msg_id": 32687,
+      "price": 28.5,
+      "timestamp": 1790973641.950298,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1742,7 +1753,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790973057.800691,
+    "last_deal_post_time": 1790973641.9529397,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1831,7 +1842,8 @@
     "1005012554205120": "lodydeals",
     "1005009234854371": "lodydeals",
     "1005008829227075": "lodydeals",
-    "1005008901941749": "lodydeals"
+    "1005008901941749": "lodydeals",
+    "1005012881256093": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1903,7 +1915,8 @@
     "SMAILWOLF M3 PAW3311": "lodydeals",
     "UGREEN 4K 8MP 2Mics Webcam": "lodydeals",
     "Attack Shark X1": "lodydeals",
-    "KUULAA USB C Cable": "lodydeals"
+    "KUULAA USB C Cable": "lodydeals",
+    "Honor Watch X5i": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
