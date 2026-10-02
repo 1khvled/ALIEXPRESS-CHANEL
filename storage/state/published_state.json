@@ -104,7 +104,8 @@
     "1005012285327063",
     "1005006581583862",
     "1005012816171978",
-    "1005009834132291"
+    "1005009834132291",
+    "1005010585654037"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -215,7 +216,8 @@
     "1005012285327063": 1790976041.1098428,
     "1005006581583862": 1790976351.072879,
     "1005012816171978": 1790976952.8889163,
-    "1005009834132291": 1790976959.5801246
+    "1005009834132291": 1790976959.5801246,
+    "1005010585654037": 1790978149.8785934
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -320,7 +322,8 @@
     "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise",
     "VIVO Y600 Pro 8/128GB",
     "EasySMX X05 Pro Wireless Gamepad Gaming Controller",
-    "3 VILCORN G6 Bluetooth-Compatible"
+    "3 VILCORN G6 Bluetooth-Compatible",
+    "TV Box Rockchip RK3518"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -428,7 +431,8 @@
     "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise": 1790976654.120254,
     "VIVO Y600 Pro 8/128GB": 1790976952.8889163,
     "EasySMX X05 Pro Wireless Gamepad Gaming Controller": 1790976959.5801246,
-    "3 VILCORN G6 Bluetooth-Compatible": 1790977546.6736062
+    "3 VILCORN G6 Bluetooth-Compatible": 1790977546.6736062,
+    "TV Box Rockchip RK3518": 1790978149.8785934
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -672,27 +676,29 @@
     "aniscoupons:32692",
     "aniscoupons:32693",
     "megaphonna:8205",
-    "aniscoupons:32694"
+    "aniscoupons:32694",
+    "lodydeals:45413",
+    "aniscoupons:32695"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790977848.5294187,
+  "last_run_time": 1790978149.8785934,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32694,
-      "last_check_time": 1790977850.713187
+      "last_message_id": 32695,
+      "last_check_time": 1790978151.8892837
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45412,
-      "last_check_time": 1790977843.1981115
+      "last_message_id": 45413,
+      "last_check_time": 1790978142.2724073
     },
     "bnddeals": {
       "last_message_id": 50795,
-      "last_check_time": 1790977844.1891108
+      "last_check_time": 1790978143.1962304
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -704,11 +710,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790977843.5338163
+      "last_check_time": 1790978142.5818236
     },
     "megaphonna": {
       "last_message_id": 8205,
-      "last_check_time": 1790977844.6604187
+      "last_check_time": 1790978143.597855
     }
   },
   "published_product_prices": {
@@ -797,7 +803,8 @@
     "1005012285327063": 19.5,
     "1005006581583862": 25.0,
     "1005012816171978": 273.46,
-    "1005009834132291": 23.0
+    "1005009834132291": 23.0,
+    "1005010585654037": 20.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1879,6 +1886,16 @@
       "price": 57.2,
       "timestamp": 1790977848.5294187,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32695": {
+      "channel_msg_id": 436,
+      "product_id": "1005010585654037",
+      "title": "TV Box Rockchip RK3518",
+      "channel": "aniscoupons",
+      "source_msg_id": 32695,
+      "price": 20.6,
+      "timestamp": 1790978149.8785934,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1887,7 +1904,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790977848.5579035,
+    "last_deal_post_time": 1790978149.881504,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1982,7 +1999,8 @@
     "1005012285327063": "aniscoupons",
     "1005006581583862": "aniscoupons",
     "1005012816171978": "lodydeals",
-    "1005009834132291": "aniscoupons"
+    "1005009834132291": "aniscoupons",
+    "1005010585654037": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2063,7 +2081,8 @@
     "VIVO Y600 Pro 8/128GB": "lodydeals",
     "EasySMX X05 Pro Wireless Gamepad Gaming Controller": "aniscoupons",
     "3 VILCORN G6 Bluetooth-Compatible": "aniscoupons",
-    "Poco C71 3/64GB": "aniscoupons"
+    "Poco C71 3/64GB": "aniscoupons",
+    "TV Box Rockchip RK3518": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
