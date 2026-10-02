@@ -121,7 +121,7 @@
     "1005011778621042": 1790888057.5668976,
     "9998888080": 1790888080.3099577,
     "1005012312990781": 1790888097.0085742,
-    "1005009234854371": 1790888140.513047,
+    "1005009234854371": 1790972149.2892344,
     "1005006533038973": 1790960482.9803915,
     "1005007394028808": 1790937582.4855082,
     "1005012899224314": 1790888183.366231,
@@ -296,7 +296,8 @@
     "ASROCK B850M X WiFi",
     "REALME 15 5G (12/256)",
     "Lenovo XT88 TWS",
-    "SMAILWOLF M3 PAW3311"
+    "SMAILWOLF M3 PAW3311",
+    "UGREEN 4K 8MP 2Mics Webcam"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -394,7 +395,8 @@
     "ASROCK B850M X WiFi": 1790970941.2570727,
     "REALME 15 5G (12/256)": 1790971257.8109736,
     "Lenovo XT88 TWS": 1790971842.421131,
-    "SMAILWOLF M3 PAW3311": 1790971850.2217886
+    "SMAILWOLF M3 PAW3311": 1790971850.2217886,
+    "UGREEN 4K 8MP 2Mics Webcam": 1790972149.2892344
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -615,27 +617,29 @@
     "megaphonna:8202",
     "bnddeals:50791",
     "lodydeals:45404",
-    "lodydeals:45405"
+    "lodydeals:45405",
+    "lodydeals:45406",
+    "bnddeals:50792"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790971850.2217886,
+  "last_run_time": 1790972149.2892344,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32685,
-      "last_check_time": 1790971854.033509
+      "last_check_time": 1790972157.7259235
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45405,
-      "last_check_time": 1790971852.2301657
+      "last_message_id": 45406,
+      "last_check_time": 1790972151.2978258
     },
     "bnddeals": {
-      "last_message_id": 50791,
-      "last_check_time": 1790971853.3263323
+      "last_message_id": 50792,
+      "last_check_time": 1790972157.0046425
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -647,11 +651,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790971852.7324262
+      "last_check_time": 1790972151.9130337
     },
     "megaphonna": {
       "last_message_id": 8202,
-      "last_check_time": 1790971853.6634219
+      "last_check_time": 1790972157.3685582
     }
   },
   "published_product_prices": {
@@ -670,7 +674,7 @@
     "100500777666555": 20.0,
     "1005011778621042": 124.99,
     "1005012312990781": 93.32,
-    "1005009234854371": 19.64,
+    "1005009234854371": 2.0,
     "1005006533038973": 23.9,
     "1005007394028808": 11.2,
     "1005012899224314": 27.14,
@@ -1676,6 +1680,16 @@
       "price": 21.67,
       "timestamp": 1790971850.2217886,
       "status": "ACTIVE"
+    },
+    "lodydeals:45406": {
+      "channel_msg_id": 422,
+      "product_id": "1005009234854371",
+      "title": "UGREEN 4K 8MP 2Mics Webcam",
+      "channel": "lodydeals",
+      "source_msg_id": 45406,
+      "price": 2.0,
+      "timestamp": 1790972149.2892344,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1684,7 +1698,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790971850.2244306,
+    "last_deal_post_time": 1790972149.2914026,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1770,7 +1784,8 @@
     "1005007572968437": "lodydeals",
     "1005009120957437": "lodydeals",
     "1005005652871847": "lodydeals",
-    "1005012554205120": "lodydeals"
+    "1005012554205120": "lodydeals",
+    "1005009234854371": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1839,7 +1854,8 @@
     "Lenovo GM2 Pro TWS": "lodydeals",
     "ASROCK B850M X WiFi": "lodydeals",
     "Lenovo XT88 TWS": "lodydeals",
-    "SMAILWOLF M3 PAW3311": "lodydeals"
+    "SMAILWOLF M3 PAW3311": "lodydeals",
+    "UGREEN 4K 8MP 2Mics Webcam": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
