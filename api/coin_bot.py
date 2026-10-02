@@ -634,7 +634,7 @@ async def handle_update(update: Dict[str, Any]) -> bool:
                 if success:
                     ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
                     post_url = f"https://t.me/{ch_clean}/{p_msg_id}"
-                    confirm_text = f"✅ <b>تم نشر العرض بنجاح في القناة!</b>\n\n🔗 <b>رابط المنشور:</b> {post_url}"
+                    confirm_text = f"✅ <b>تم نشر العرض بنجاح في القناة!</b>\n\n🔗 <b>رابط المنشور:</b> <a href=\"{post_url}\">اضغط هنا 👈</a>"
                     await send_msg(chat_id, confirm_text)
                 else:
                     await send_msg(chat_id, f"❌ فشل نشر العرض في القناة: {err}")
@@ -867,7 +867,7 @@ async def handle_update(update: Dict[str, Any]) -> bool:
         if success:
             ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
             post_url = f"https://t.me/{ch_clean}/{p_msg_id}"
-            confirm_text = f"✅ <b>تم نشر العرض بنجاح في القناة!</b>\n\n🔗 <b>رابط المنشور:</b> {post_url}"
+            confirm_text = f"✅ <b>تم نشر العرض بنجاح في القناة!</b>\n\n🔗 <b>رابط المنشور:</b> <a href=\"{post_url}\">اضغط هنا 👈</a>"
             await send_msg(chat_id, confirm_text)
         else:
             await send_msg(chat_id, f"❌ فشل نشر العرض في القناة: {err}")

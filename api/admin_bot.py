@@ -597,7 +597,7 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
                 post_url = f"https://t.me/{ch_clean}/{post_msg_id}"
                 confirm_text = (
                     f"🎉 <b>تم نشر العرض بنجاح في القناة!</b>\n\n"
-                    f"🔗 <b>رابط المنشور:</b> <a href=\"{post_url}\">{post_url}</a>\n"
+                    f"🔗 <b>رابط المنشور:</b> <a href=\"{post_url}\">اضغط هنا 👈</a>\n"
                     f"🆔 <b>رقم المنتج:</b> <code>{target_pid}</code>"
                 )
                 await send_admin_msg(chat_id, confirm_text)

@@ -229,10 +229,10 @@ async def check_and_publish_regrouped_bulletins(bot_token: Optional[str] = None)
             price_str = f"${int(item['price'])}" if item['price'].is_integer() else f"${item['price']:.2f}"
             lines.append(f"▫️ <b>{item['title']}</b>")
             lines.append(f"   💰 السعر: <b>{price_str}</b>")
-            lines.append(f"   🔗 رابط المنشور: {item['channel_url']}\n")
+            lines.append(f"   🔗 <b>رابط المنشور:</b> <a href=\"{item['channel_url']}\">اضغط هنا 👈</a>\n")
 
         lines.append("━━━━━━━━━━━━━━━━━")
-        lines.append("💡 <i>اضغط على رابط كل منتج أعلاه للانتقال لمنشور العرض والطلب المباشر.</i>")
+        lines.append("💡 <i>اضغط على (اضغط هنا) للانتقال مباشرة لمنشور العرض في القناة.</i>")
         lines.append("🪙 <b>تخفيض إضافي بالعملات:</b> أرسل رابط أي منتج للبوت @Alilo07BOT")
 
         bulletin_text = "\n".join(lines)
