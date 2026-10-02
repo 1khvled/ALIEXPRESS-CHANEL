@@ -81,7 +81,8 @@
     "1005012922578845",
     "1005012865117890",
     "1005010428573334",
-    "1005013146524028"
+    "1005013146524028",
+    "1005009411512584"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -169,7 +170,8 @@
     "1005012922578845": 1790948453.331144,
     "1005012865117890": 1790948460.5860589,
     "1005010428573334": 1790948755.0367405,
-    "1005013146524028": 1790948764.3756874
+    "1005013146524028": 1790948764.3756874,
+    "1005009411512584": 1790949354.0364344
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -250,7 +252,8 @@
     "REALME 15 5G (12/256)",
     "REALME 14 pro (12/256)",
     "HONOR X9D (12/256)",
-    "Honor 400  Smart  (6/128)"
+    "Honor 400  Smart  (6/128)",
+    "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -334,7 +337,8 @@
     "REALME 15 5G (12/256)": 1790948453.331144,
     "REALME 14 pro (12/256)": 1790948460.5860589,
     "HONOR X9D (12/256)": 1790948755.0367405,
-    "Honor 400  Smart  (6/128)": 1790948764.3756874
+    "Honor 400  Smart  (6/128)": 1790948764.3756874,
+    "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": 1790949354.0364344
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -488,11 +492,12 @@
     "megaphonna:8180",
     "megaphonna:8181",
     "megaphonna:8182",
-    "megaphonna:8184"
+    "megaphonna:8184",
+    "bnddeals:50788"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790948764.3756874,
+  "last_run_time": 1790949354.0364344,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32646,
@@ -504,11 +509,11 @@
     },
     "lodydeals": {
       "last_message_id": 45395,
-      "last_check_time": 1790949040.3177855
+      "last_check_time": 1790949346.2446644
     },
     "bnddeals": {
-      "last_message_id": 50787,
-      "last_check_time": 1790949041.2438614
+      "last_message_id": 50788,
+      "last_check_time": 1790949354.0364344
     },
     "test_channel": {
       "last_message_id": 1790947189,
@@ -520,11 +525,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790949040.6422126
+      "last_check_time": 1790949346.5955517
     },
     "megaphonna": {
       "last_message_id": 8185,
-      "last_check_time": 1790949041.5554793
+      "last_check_time": 1790949356.655466
     }
   },
   "published_product_prices": {
@@ -593,7 +598,8 @@
     "1005012922578845": 214.9,
     "1005012865117890": 234.9,
     "1005010428573334": 294.0,
-    "1005013146524028": 162.4
+    "1005013146524028": 162.4,
+    "1005009411512584": 26.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1355,6 +1361,16 @@
       "price": 162.4,
       "timestamp": 1790948764.3756874,
       "status": "ACTIVE"
+    },
+    "bnddeals:50788": {
+      "channel_msg_id": 361,
+      "product_id": "1005009411512584",
+      "title": "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back",
+      "channel": "bnddeals",
+      "source_msg_id": 50788,
+      "price": 26.8,
+      "timestamp": 1790949354.0364344,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1363,7 +1379,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790948764.377812,
+    "last_deal_post_time": 1790949354.0379484,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1422,7 +1438,8 @@
     "1005012922578845": "megaphonna",
     "1005012865117890": "megaphonna",
     "1005010428573334": "megaphonna",
-    "1005013146524028": "megaphonna"
+    "1005013146524028": "megaphonna",
+    "1005009411512584": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1466,7 +1483,8 @@
     "REALME 15 5G (12/256)": "megaphonna",
     "REALME 14 pro (12/256)": "megaphonna",
     "HONOR X9D (12/256)": "megaphonna",
-    "Honor 400  Smart  (6/128)": "megaphonna"
+    "Honor 400  Smart  (6/128)": "megaphonna",
+    "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
