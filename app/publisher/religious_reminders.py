@@ -48,9 +48,6 @@ JUMUAH_MORNING_KEYBOARD = {
     "inline_keyboard": [
         [
             {"text": "📖 تلاوة وقراءة سورة الكهف", "url": "https://quran.com/18"}
-        ],
-        [
-            {"text": "📢 قناة الصفقات @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
         ]
     ]
 }
@@ -74,9 +71,6 @@ JUMUAH_ASR_KEYBOARD = {
     "inline_keyboard": [
         [
             {"text": "🤲 أدعية مأثورة واستغفار", "url": "https://sunnah.com"}
-        ],
-        [
-            {"text": "📢 قناة الصفقات @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}
         ]
     ]
 }
@@ -94,8 +88,7 @@ FAJR_VARIANTS = [
 <b>صلاة الفجر أثابكم الله ونوّر قلوبكم وبيوتكم ودروبكم 🤲</b>""",
         "keyboard": {
             "inline_keyboard": [
-                [{"text": "🤲 أذكار الصباح والحفظ", "url": "https://sunnah.com"}],
-                [{"text": "📢 قناة الصفقات @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}]
+                [{"text": "🤲 أذكار الصباح والحفظ", "url": "https://sunnah.com"}]
             ]
         }
     },
@@ -113,8 +106,7 @@ FAJR_VARIANTS = [
 <b>صلاة الفجر أثابكم الله، تقبل الله منا ومنكم صالح الأعمال والدعوات 🤲</b>""",
         "keyboard": {
             "inline_keyboard": [
-                [{"text": "🤲 أذكار الصباح والحفظ", "url": "https://sunnah.com"}],
-                [{"text": "📢 قناة الصفقات @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}]
+                [{"text": "🤲 أذكار الصباح والحفظ", "url": "https://sunnah.com"}]
             ]
         }
     },
@@ -126,11 +118,10 @@ FAJR_VARIANTS = [
 طوبى لمن استفتح يومه بصلاة الفجر وبذكر الله عز وجل ✨
 ابسطوا أمانيكم في سجودكم، وتوكلوا على الحي القيوم الذي بيده مقاليد السماوات والأرض..
 
-<b>صلاة الفجر يرحمكم الله، رزقنا الله وإياكم القبول والبركة وراحة البال 🤲</b>""",
+<b>صلاة الفجر يرحمكم الله، رزقنا الله وإياكم القبول والبركة وراحة بال 🤲</b>""",
         "keyboard": {
             "inline_keyboard": [
-                [{"text": "🤲 أذكار الصباح والحفظ", "url": "https://sunnah.com"}],
-                [{"text": "📢 قناة الصفقات @DzAliexpress0", "url": "https://t.me/DzAliexpress0"}]
+                [{"text": "🤲 أذكار الصباح والحفظ", "url": "https://sunnah.com"}]
             ]
         }
     }
