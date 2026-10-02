@@ -618,8 +618,13 @@ async def is_product_already_published(product_id: Optional[str], title: str = "
         for pub_t in state.get("published_titles", []):
             if is_same_deal_title(title, pub_t):
                 pub_ts = title_ts_map.get(pub_t)
-                if pub_ts is None or (now - pub_ts) < cooldown_seconds:
-                    return True, f"Product matches previously published deal: '{pub_t[:45]}'"
+                if pub_ts is not None:
+                    if (now - pub_ts) < cooldown_seconds:
+                        return True, f"Product matches previously published deal: '{pub_t[:45]}'"
+                else:
+                    last_run = state.get("last_run_time", 0.0)
+                    if last_run > 0 and (now - last_run) < cooldown_seconds:
+                        return True, f"Product matches previously published deal: '{pub_t[:45]}'"
 
         # Check against live channel texts within cooldown
         for ch_t, ch_ts in _CACHED_CHANNEL_TEXT_TIMESTAMPS:
@@ -804,7 +809,8 @@ def is_deal_posting_due() -> Tuple[bool, str, int]:
     elapsed_seconds = now_ts - last_post_ts
     required_seconds = active_interval * 60
 
-    if last_post_ts > 0 and elapsed_seconds < required_seconds:
+    # 45-second jitter buffer for GitHub Actions cron timer drift
+    if last_post_ts > 0 and (elapsed_seconds + 45) < required_seconds:
         remaining_minutes = (required_seconds - elapsed_seconds) / 60
         return False, f"⏳ في فترة الانتظار: {mode_desc} - متبقي {remaining_minutes:.1f} دقيقة", active_interval
 

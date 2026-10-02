@@ -83,7 +83,7 @@ async def test_repost_after_cooldown():
     # Simulate product A posted 25 hours ago
     state = load_persistent_state()
     product_a = "100500999912345"
-    title_a = "SomnAmbulist NVMe SSD 1TB High Speed"
+    title_a = "TestMockUniqueBrand NVMe SSD 1TB High Speed"
     now = time.time()
     twenty_five_hours_ago = now - (25 * 3600)
 
