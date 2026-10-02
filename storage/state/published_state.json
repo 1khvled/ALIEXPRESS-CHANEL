@@ -58,10 +58,18 @@
     "1005012968221708",
     "9998883454",
     "9998883497",
-    "9998883531"
+    "9998883531",
+    "1005010111014453",
+    "1005009828161174",
+    "1005009281115306",
+    "1005011797801269",
+    "1005007168829266",
+    "1005012406142215",
+    "1005008390562391",
+    "1005007345398413"
   ],
   "published_product_timestamps": {
-    "1005012973772517": 1790857823.0117362,
+    "1005012973772517": 1790943667.90417,
     "1005010219205081": 1790884267.9909704,
     "999111222": 1790943530.5835958,
     "100500999912345": 1790853531.5149248,
@@ -74,7 +82,7 @@
     "1005007961216287": 1790937542.235978,
     "1005008233932899": 1790884227.6404886,
     "1005009627597591": 1790884233.6428,
-    "1005008880082336": 1790937557.0801485,
+    "1005008880082336": 1790943678.5551012,
     "1005007275142457": 1790884287.4211984,
     "1005007279793099": 1790884299.0959656,
     "1005008829227075": 1790884310.7506618,
@@ -93,7 +101,7 @@
     "1005009118633225": 1790888213.2900865,
     "1005012143831265": 1790940388.7188938,
     "1005007458827229": 1790888886.4062796,
-    "1005010453516983": 1790888897.5243473,
+    "1005010453516983": 1790943694.6895797,
     "1005008852027824": 1790888909.743846,
     "1005012499451512": 1790888928.6181495,
     "9998888981": 1790888981.6873999,
@@ -122,7 +130,15 @@
     "1005012968221708": 1790941233.5893936,
     "9998883454": 1790943454.3504107,
     "9998883497": 1790943497.723828,
-    "9998883531": 1790943531.551938
+    "9998883531": 1790943531.551938,
+    "1005010111014453": 1790943633.9774187,
+    "1005009828161174": 1790943640.1460688,
+    "1005009281115306": 1790943648.855101,
+    "1005011797801269": 1790943656.257167,
+    "1005007168829266": 1790943673.6091957,
+    "1005012406142215": 1790943705.796801,
+    "1005008390562391": 1790943710.6779277,
+    "1005007345398413": 1790943717.3545928
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -180,7 +196,17 @@
     "Honor Power 2  12/256",
     "Honor X70 5G 8/128",
     "Blackview MEGA 5  8/256",
-    "سماعات اذن فخمة  Moondrop Chu 3 IEM"
+    "سماعات اذن فخمة  Moondrop Chu 3 IEM",
+    "4G LTE Wireless USB 150Mbps",
+    "Curren 8455 Men's Quartz",
+    "ATTACK SHARK X11SE",
+    "CMF Watch 3 Pro AMOLED",
+    "Redmi Note 17 5G   6/256",
+    "Baseus USB Type C Charger 20W",
+    "OPPO A6 Pro 8/256GB",
+    "Honor Win Turbo 12/256BG",
+    "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction",
+    "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -219,7 +245,7 @@
     "Xiaomi Pad 7  12/256GB": 1790897106.449474,
     "ATTACK SHARK L90 Flodable Gaming Headset": 1790937542.235978,
     "SomnAmbulist SSD  120GB": 1790937548.9389005,
-    "ATTACK SHARK L80 PRO": 1790937557.0801485,
+    "ATTACK SHARK L80 PRO": 1790943678.5551012,
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
@@ -241,7 +267,17 @@
     "Honor Power 2  12/256": 1790941214.6756065,
     "Honor X70 5G 8/128": 1790941221.8823678,
     "Blackview MEGA 5  8/256": 1790941226.7537792,
-    "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1790941233.5893936
+    "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1790941233.5893936,
+    "4G LTE Wireless USB 150Mbps": 1790943633.9774187,
+    "Curren 8455 Men's Quartz": 1790943640.1460688,
+    "ATTACK SHARK X11SE": 1790943648.855101,
+    "CMF Watch 3 Pro AMOLED": 1790943656.257167,
+    "Redmi Note 17 5G   6/256": 1790943667.90417,
+    "Baseus USB Type C Charger 20W": 1790943673.6091957,
+    "OPPO A6 Pro 8/256GB": 1790943694.6895797,
+    "Honor Win Turbo 12/256BG": 1790943705.796801,
+    "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction": 1790943710.6779277,
+    "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": 1790943717.3545928
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -338,11 +374,29 @@
     "ecksdeal:5851",
     "test_channel:1790943454",
     "test_channel:1790943497",
-    "test_channel:1790943531"
+    "test_channel:1790943531",
+    "lodydeals:45385",
+    "lodydeals:45386",
+    "lodydeals:45387",
+    "lodydeals:45388",
+    "lodydeals:45389",
+    "lodydeals:45390",
+    "zedstoreonline:38515",
+    "zedstoreonline:38516",
+    "zedstoreonline:38517",
+    "zedstoreonline:38518",
+    "zedstoreonline:38519",
+    "zedstoreonline:38520",
+    "bnddeals:50775",
+    "bnddeals:50776",
+    "bnddeals:50777",
+    "bnddeals:50778",
+    "bnddeals:50779",
+    "bnddeals:50780"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790943531.6031158,
+  "last_run_time": 1790943717.3545928,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32646,
@@ -350,15 +404,15 @@
     },
     "ecksdeal": {
       "last_message_id": 5851,
-      "last_check_time": 1790941233.5893936
+      "last_check_time": 1790943689.3303618
     },
     "lodydeals": {
-      "last_message_id": 45384,
-      "last_check_time": 1790943531.6031158
+      "last_message_id": 45390,
+      "last_check_time": 1790943656.257167
     },
     "bnddeals": {
-      "last_message_id": 50774,
-      "last_check_time": 1790940390.7247198
+      "last_message_id": 50780,
+      "last_check_time": 1790943719.363794
     },
     "test_channel": {
       "last_message_id": 1790943531,
@@ -369,8 +423,8 @@
       "last_check_time": 1790937548.9389005
     },
     "zedstoreonline": {
-      "last_message_id": 38514,
-      "last_check_time": 1790941226.7537792
+      "last_message_id": 38520,
+      "last_check_time": 1790943688.7030835
     }
   },
   "published_product_prices": {
@@ -398,7 +452,7 @@
     "1005009118633225": 14.14,
     "1005012143831265": 281.0,
     "1005007458827229": 22.75,
-    "1005010453516983": 204.7,
+    "1005010453516983": 204.6,
     "1005008852027824": 194.9,
     "1005012499451512": 261.8,
     "1005010129356058": 294.0,
@@ -421,7 +475,15 @@
     "1005010721042860": 376.0,
     "1005009517247552": 236.0,
     "1005012191191893": 224.0,
-    "1005012968221708": 22.74
+    "1005012968221708": 22.74,
+    "1005010111014453": 6.09,
+    "1005009828161174": 8.29,
+    "1005009281115306": 17.95,
+    "1005011797801269": 55.78,
+    "1005007168829266": 16.2,
+    "1005012406142215": 393.0,
+    "1005008390562391": 11.79,
+    "1005007345398413": 14.3
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -953,6 +1015,116 @@
       "price": 22.74,
       "timestamp": 1790941233.5893936,
       "status": "ACTIVE"
+    },
+    "lodydeals:45385": {
+      "channel_msg_id": 330,
+      "product_id": "1005010111014453",
+      "title": "4G LTE Wireless USB 150Mbps",
+      "channel": "lodydeals",
+      "source_msg_id": 45385,
+      "price": 6.09,
+      "timestamp": 1790943633.9774187,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45386": {
+      "channel_msg_id": 331,
+      "product_id": "1005009828161174",
+      "title": "Curren 8455 Men's Quartz",
+      "channel": "lodydeals",
+      "source_msg_id": 45386,
+      "price": 8.29,
+      "timestamp": 1790943640.1460688,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45389": {
+      "channel_msg_id": 332,
+      "product_id": "1005009281115306",
+      "title": "ATTACK SHARK X11SE",
+      "channel": "lodydeals",
+      "source_msg_id": 45389,
+      "price": 17.95,
+      "timestamp": 1790943648.855101,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45390": {
+      "channel_msg_id": 333,
+      "product_id": "1005011797801269",
+      "title": "CMF Watch 3 Pro AMOLED",
+      "channel": "lodydeals",
+      "source_msg_id": 45390,
+      "price": 55.78,
+      "timestamp": 1790943656.257167,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38516": {
+      "channel_msg_id": 334,
+      "product_id": "1005012973772517",
+      "title": "Redmi Note 17 5G   6/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38516,
+      "price": 179.1,
+      "timestamp": 1790943667.90417,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38517": {
+      "channel_msg_id": 335,
+      "product_id": "1005007168829266",
+      "title": "Baseus USB Type C Charger 20W",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38517,
+      "price": 16.2,
+      "timestamp": 1790943673.6091957,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38518": {
+      "channel_msg_id": 336,
+      "product_id": "1005008880082336",
+      "title": "ATTACK SHARK L80 PRO",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38518,
+      "price": 22.7,
+      "timestamp": 1790943678.5551012,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50775": {
+      "channel_msg_id": 337,
+      "product_id": "1005010453516983",
+      "title": "OPPO A6 Pro 8/256GB",
+      "channel": "bnddeals",
+      "source_msg_id": 50775,
+      "price": 204.6,
+      "timestamp": 1790943694.6895797,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50777": {
+      "channel_msg_id": 338,
+      "product_id": "1005012406142215",
+      "title": "Honor Win Turbo 12/256BG",
+      "channel": "bnddeals",
+      "source_msg_id": 50777,
+      "price": 393.0,
+      "timestamp": 1790943705.796801,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50778": {
+      "channel_msg_id": 339,
+      "product_id": "1005008390562391",
+      "title": "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction",
+      "channel": "bnddeals",
+      "source_msg_id": 50778,
+      "price": 11.79,
+      "timestamp": 1790943710.6779277,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50779": {
+      "channel_msg_id": 340,
+      "product_id": "1005007345398413",
+      "title": "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry",
+      "channel": "bnddeals",
+      "source_msg_id": 50779,
+      "price": 14.3,
+      "timestamp": 1790943717.3545928,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -961,7 +1133,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790941233.5909731,
+    "last_deal_post_time": 1790943717.356505,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -990,7 +1162,18 @@
     "1005012968221708": "ecksdeal",
     "9998883454": "test_channel",
     "9998883497": "test_channel",
-    "9998883531": "test_channel"
+    "9998883531": "test_channel",
+    "1005010111014453": "lodydeals",
+    "1005009828161174": "lodydeals",
+    "1005009281115306": "lodydeals",
+    "1005011797801269": "lodydeals",
+    "1005012973772517": "zedstoreonline",
+    "1005007168829266": "zedstoreonline",
+    "1005008880082336": "zedstoreonline",
+    "1005010453516983": "bnddeals",
+    "1005012406142215": "bnddeals",
+    "1005008390562391": "bnddeals",
+    "1005007345398413": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1011,6 +1194,17 @@
     "Honor Power 2  12/256": "zedstoreonline",
     "Honor X70 5G 8/128": "zedstoreonline",
     "Blackview MEGA 5  8/256": "zedstoreonline",
-    "سماعات اذن فخمة  Moondrop Chu 3 IEM": "ecksdeal"
+    "سماعات اذن فخمة  Moondrop Chu 3 IEM": "ecksdeal",
+    "4G LTE Wireless USB 150Mbps": "lodydeals",
+    "Curren 8455 Men's Quartz": "lodydeals",
+    "ATTACK SHARK X11SE": "lodydeals",
+    "CMF Watch 3 Pro AMOLED": "lodydeals",
+    "Redmi Note 17 5G   6/256": "zedstoreonline",
+    "Baseus USB Type C Charger 20W": "zedstoreonline",
+    "ATTACK SHARK L80 PRO": "zedstoreonline",
+    "OPPO A6 Pro 8/256GB": "bnddeals",
+    "Honor Win Turbo 12/256BG": "bnddeals",
+    "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction": "bnddeals",
+    "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": "bnddeals"
   }
 }
