@@ -250,6 +250,9 @@ class DealCaptionGenerator:
             )
         lines.append(f"<blockquote>{hook}</blockquote>")
 
+        if deal_type == "bundle":
+            lines.append("<blockquote>📦 <b>تنبيه عروض الحزم:</b> يجب إضافة 3 قطع إلى السلة للاستفادة من هذا السعر والشحن المجاني! 🛍️</blockquote>")
+
         if is_restock:
             lines.append("<blockquote>⚡ <b>تنبيه:</b> العرض رجع توفر بكمية محدودة.. سارع قبل النفاذ! 🏃‍♂️💨</blockquote>")
 
@@ -296,7 +299,7 @@ class DealCaptionGenerator:
             lines.append(f"🎟️ <b>كـوبون الخصم :</b> <code>{html.escape(coupon_code)}</code>")
 
         if deal_type == "bundle":
-            lines.append("📦 <b>عروض الحزم (Choice Bundle - 3 قطع)</b>")
+            lines.append("📦 <b>عروض الحزم (Choice Bundle) — يجب إضافة 3 قطع</b>")
         elif has_points_discount:
             lines.append("🪙 <b>تخفيض العملات مفعّل عبر الرابط</b>")
 

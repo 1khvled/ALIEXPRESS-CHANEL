@@ -59,3 +59,18 @@ async def test_clean_algerian_post_formatting():
     # Must NOT have old clutter
     assert "تنبيه : لي يراسلك ويقلك انا ادمن القناة" not in caption
     assert "بوت مطور لشراء بأفضل سعر وتتبع الطرود" not in caption
+
+@pytest.mark.asyncio
+async def test_bundle_deal_disclaimer_3_items():
+    caption = await caption_generator.generate(
+        title="Baseus 65W GaN Charger 3-pack bundle",
+        usd_price=12.50,
+        eur_price=11.50,
+        affiliate_url="https://s.click.aliexpress.com/e/_bundle123",
+        deal_type="bundle"
+    )
+
+    # Must contain the 3-item requirement disclaimer in blockquote
+    assert "تنبيه عروض الحزم" in caption
+    assert "يجب إضافة 3 قطع" in caption
+    assert "Choice Bundle" in caption
