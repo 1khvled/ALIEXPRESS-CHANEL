@@ -79,7 +79,7 @@
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
-    "1005010219205081": 1790884267.9909704,
+    "1005010219205081": 1790947574.20351,
     "999111222": 1790947188.7823389,
     "100500999912345": 1790857189.830911,
     "100500999954321": 1790939989.830911,
@@ -112,7 +112,7 @@
     "1005007458827229": 1790888886.4062796,
     "1005010453516983": 1790943694.6895797,
     "1005008852027824": 1790888909.743846,
-    "1005012499451512": 1790888928.6181495,
+    "1005012499451512": 1790947559.0343862,
     "9998888981": 1790888981.6873999,
     "1005010129356058": 1790897106.449474,
     "1005005217734986": 1790937548.9389005,
@@ -229,7 +229,9 @@
     "OnePlus Turbo 6X Pro 8/128GB",
     "من منتجات الأكثر طلبا",
     "النسخة العالمية",
-    "HONOR 600 PRO (12/256)"
+    "HONOR 600 PRO (12/256)",
+    "OnePlus Turbo 6X Pro 8/128",
+    "POCO C71 (3/64)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -304,7 +306,9 @@
     "OnePlus Turbo 6X Pro 8/128GB": 1790943950.8265061,
     "من منتجات الأكثر طلبا": 1790943959.7454133,
     "النسخة العالمية": 1790943965.6572914,
-    "HONOR 600 PRO (12/256)": 1790947009.9546273
+    "HONOR 600 PRO (12/256)": 1790947009.9546273,
+    "OnePlus Turbo 6X Pro 8/128": 1790947559.0343862,
+    "POCO C71 (3/64)": 1790947574.20351
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -435,11 +439,17 @@
     "test_channel:1790946147",
     "test_channel:1790946362",
     "megaphonna:8185",
-    "test_channel:1790947189"
+    "test_channel:1790947189",
+    "lodydeals:45394",
+    "zedstoreonline:38522",
+    "megaphonna:8165",
+    "megaphonna:8166",
+    "megaphonna:8167",
+    "megaphonna:8168"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790947189.9151301,
+  "last_run_time": 1790947574.20351,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32646,
@@ -450,12 +460,12 @@
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45392,
-      "last_check_time": 1790947189.9151301
+      "last_message_id": 45394,
+      "last_check_time": 1790947552.32447
     },
     "bnddeals": {
       "last_message_id": 50786,
-      "last_check_time": 1790944838.5652263
+      "last_check_time": 1790947562.0782547
     },
     "test_channel": {
       "last_message_id": 1790947189,
@@ -466,13 +476,17 @@
       "last_check_time": 1790937548.9389005
     },
     "zedstoreonline": {
-      "last_message_id": 38521,
-      "last_check_time": 1790944837.9476655
+      "last_message_id": 38522,
+      "last_check_time": 1790947559.0343862
+    },
+    "megaphonna": {
+      "last_message_id": 8185,
+      "last_check_time": 1790947574.20351
     }
   },
   "published_product_prices": {
     "1005012973772517": 179.1,
-    "1005010219205081": 57.2,
+    "1005010219205081": 60.0,
     "1005007805638431": 22.64,
     "1005007027334636": 28.5,
     "1005009054706827": 22.0,
@@ -497,7 +511,7 @@
     "1005007458827229": 22.75,
     "1005010453516983": 204.6,
     "1005008852027824": 194.9,
-    "1005012499451512": 261.8,
+    "1005012499451512": 260.0,
     "1005010129356058": 294.0,
     "3256809790988797": 92.8,
     "1005005217734986": 9.61,
@@ -1202,6 +1216,26 @@
       "price": 294.7,
       "timestamp": 1790943965.6572914,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38522": {
+      "channel_msg_id": 351,
+      "product_id": "1005012499451512",
+      "title": "OnePlus Turbo 6X Pro 8/128",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38522,
+      "price": 260.0,
+      "timestamp": 1790947559.0343862,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8168": {
+      "channel_msg_id": 352,
+      "product_id": "1005010219205081",
+      "title": "POCO C71 (3/64)",
+      "channel": "megaphonna",
+      "source_msg_id": 8168,
+      "price": 60.0,
+      "timestamp": 1790947574.20351,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1210,7 +1244,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790943965.659193,
+    "last_deal_post_time": 1790947574.2051845,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1260,7 +1294,9 @@
     "9998886147": "test_channel",
     "999888777111": "lodydeals",
     "9998886362": "test_channel",
-    "9998887189": "test_channel"
+    "9998887189": "test_channel",
+    "1005012499451512": "zedstoreonline",
+    "1005010219205081": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1295,7 +1331,9 @@
     "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": "bnddeals",
     "OnePlus Turbo 6X Pro 8/128GB": "lodydeals",
     "من منتجات الأكثر طلبا": "bnddeals",
-    "النسخة العالمية": "bnddeals"
+    "النسخة العالمية": "bnddeals",
+    "OnePlus Turbo 6X Pro 8/128": "zedstoreonline",
+    "POCO C71 (3/64)": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
