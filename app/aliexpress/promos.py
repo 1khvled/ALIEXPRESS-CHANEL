@@ -116,20 +116,24 @@ class PromoTracker:
                 return event, days_left
         return None
 
-    def validate_deal_freshness(self, text: str, msg_datetime: Optional[datetime] = None) -> Tuple[bool, Optional[str]]:
+    def validate_deal_freshness(self, text: str, msg_datetime: Optional[datetime] = None, max_hours: Optional[int] = None) -> Tuple[bool, Optional[str]]:
         """
         Validates that a deal is fresh and not an expired promo from past campaigns:
-        1. Checks message age (must be within last 24 hours).
+        1. Checks message age (within last 24 hours normally, or 72 hours during active promos).
         2. Detects expired date mentions (e.g. Sept 20 coupons or past dates).
         3. Detects expired campaign names.
         """
         now = datetime.now(timezone.utc)
 
-        # 1. Message age check (within the last 24 hours)
+        # 1. Message age check (within 24 hours normally, up to 72 hours during active promos)
+        if max_hours is None:
+            active_promo = self.get_active_promo(now)
+            max_hours = 72 if active_promo else 24
+
         if msg_datetime is not None:
             age = now - msg_datetime
-            if age > timedelta(hours=24):
-                return False, f"Message is too old ({age.total_seconds() / 3600:.1f} hours ago, max 24h)"
+            if age > timedelta(hours=max_hours):
+                return False, f"Message is too old ({age.total_seconds() / 3600:.1f} hours ago, max {max_hours}h)"
 
         # 2. Expired date mentions in text
         for pat in EXPIRED_DATE_PATTERNS:

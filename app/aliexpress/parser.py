@@ -18,11 +18,11 @@ EUR_PRICE_PATTERNS = [
 ]
 
 COUPON_PATTERNS = [
-    re.compile(r'(?:كوبون|كود|code|coupon|قسيمة)\s*(?:[$]?[0-9]+(?:[\.,][0-9]+)?[^\S\r\n]*/[^\S\r\n]*[$]?[0-9]+(?:[\.,][0-9]+)?[$]?)?\s*(?:دولار|dollar|\$)?\s*[:：\-\s✅🔥👉✔️⏺🙏🎟️]*(?:استخدمه|استخدم|بكود|code)?\s*[:：\-\s✅🔥👉✔️⏺🙏🎟️]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
-    re.compile(r'(?:كوبون|كود|code|coupon)\s*(?:[$]?[0-9]+(?:\.[0-9]+)?(?:\s*(?:دولار|dollar|\$))?)?[^\nA-Za-z0-9]*(?:استخدمه|استخدم|استعمله|استعمل)?[^\nA-Za-z0-9]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
-    re.compile(r'(?:استخدم كود|استعمل كود|كود الخصم|كود التخفيض|كوبون خاص)\s*[^A-Za-z0-9]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
-    re.compile(r'(?:code|كود)\s*[:：\-\s✅🔥👉✔️⏺🤐]+\s*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
-    re.compile(r'👊\s*(?:كوبون|كود|code)\s*[:：\-\s\d\$/]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
+    re.compile(r'(?:كوبون|كود|code|coupon|قسيمة)\s*(?:[-–]?\s*[$€]?[0-9]+(?:[\.,][0-9]+)?[^\S\r\n]*(?:/[^\S\r\n]*[$€]?[0-9]+(?:[\.,][0-9]+)?)?[^\S\r\n]*(?:€|eur|euro|euros|دولار|dollar|\$)?)?\s*[:：\-\s✅🔥👉✔️⏺🙏🎟️]*(?:استخدمه|استخدم|بكود|code)?\s*[:：\-\s✅🔥👉✔️⏺🙏🎟️]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
+    re.compile(r'(?:كوبون|كود|code|coupon)\s*(?:[-–]?\s*[$€]?[0-9]+(?:\.[0-9]+)?(?:\s*(?:€|eur|euro|euros|دولار|dollar|\$))?)?[^\nA-Za-z0-9]*(?:استخدمه|استخدم|استعمله|استعمل)?[^\nA-Za-z0-9]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
+    re.compile(r'(?:استخدم كود|استعمل كود|كود الخصم|كود التخفيض|كوبون خاص|code promo|code de reduction)\s*[^A-Za-z0-9]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
+    re.compile(r'(?:code|كود)\s*[-–]?\s*[0-9]+[€$]?\s*[:：\-\s✅🔥👉✔️⏺🤐]+\s*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
+    re.compile(r'👊\s*(?:كوبون|كود|code)\s*[:：\-\s\d\$/€]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
 ]
 
 SELLER_COUPON_PATTERNS = [
@@ -113,7 +113,8 @@ ALLOWED_CATEGORY_KEYWORDS_EN = [
     "speaker", "soundbar", "microphone", "mic", "bluetooth", "anc", "hifi",
     # Accessories & Projectors
     "case", "cover", "screen protector", "tempered glass", "stylus", "pen",
-    "webcam", "camera", "drone", "action cam", "gopro", "tripod",
+    "webcam", "camera", "drone", "action cam", "action camera", "gopro", "tripod",
+    "dji", "osmo", "gimbal", "stabilizer",
     "ring light", "led strip", "projector", "magcubic", "hy300",
     # Computers
     "mini pc", "laptop", "notebook", "chromebook", "macbook", "pc", "computer", "desktop",
@@ -142,9 +143,10 @@ def is_allowed_category(title: str, text: str, channel_username: str = "") -> Tu
     """Check if the deal belongs to an allowed category (gaming, tech, PC parts, cables, tools, phones, etc.)."""
     clean_ch = channel_username.lower().lstrip("@")
     monitored_tech_channels = {
-        "pcgamingpart", "bnddeals", "zedstoreonline", "aniscoupons", "ecksdeal", "lodydeals", "megaprix", "megaphonna", "coupon4dz"
+        "pcgamingpart", "bnddeals", "zedstoreonline", "aniscoupons", "ecksdeal",
+        "lodydeals", "megaprix", "megaphonna", "coupon4dz", "francecp", "alifrdrop"
     }
-    # All 7 monitored channels are specialized Algerian tech/deal channels curated by the user
+    # Curated channels are specialized tech/deal channels curated by the user
     if clean_ch in monitored_tech_channels:
         return True, None
 
@@ -379,7 +381,11 @@ def extract_country_instruction(text: str, url: str = "", title: str = "") -> st
         return "الجزائر 🇩🇿"
 
     # 4. France detection
-    if any(k in combined for k in ["فرنسا", "🇫🇷", "france", "shiptocountry=fr", "country=fr"]):
+    if any(k in combined for k in [
+        "فرنسا", "🇫🇷", "france", "shiptocountry=fr", "country=fr",
+        "european", "version européenne", "version europeenne", "livraison france",
+        "francecp", "alifrdrop"
+    ]) or re.search(r'\bfr(?:prd|ld|cd)?[0-9]{1,4}\b', combined):
         return "فرنسا 🇫🇷"
 
     # 5. Spain detection

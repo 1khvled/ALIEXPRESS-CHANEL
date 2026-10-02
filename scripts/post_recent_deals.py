@@ -322,8 +322,22 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         continue
 
                     # 4.5. Strictly reject France-specific deals in Algerian channel @DzAliexpress0
+                    # and auto-route them cleanly to @francedealsdz!
                     if is_france_deal(raw_text, url=f"{extracted.original_url} {extracted.canonical_url}", country_info=extracted.country_info):
-                        print(f"  [FRANCE DEAL REJECTED] Deal is intended for France/Europe, skipping in Algerian channel: {extracted.product_id}")
+                        print(f"  [FRANCE DEAL ROUTER] Deal is intended for France/Europe: {extracted.product_id}. Auto-routing to @francedealsdz...")
+                        try:
+                            from scripts.post_france_deals import publish_extracted_deal_to_france
+                            routed = await publish_extracted_deal_to_france(
+                                extracted=extracted,
+                                raw_text=raw_text,
+                                source_photo_url=source_photo_url,
+                                channel_username=ch,
+                                msg_id=msg_id
+                            )
+                            if routed:
+                                print(f"  [FRANCE ROUTER SUCCESS] Posted {extracted.product_id} to @francedealsdz!")
+                        except Exception as e:
+                            print(f"  [!] Failed to auto-route France deal: {e}")
                         max_processed_id = max(max_processed_id, msg_id)
                         record_monitored_channel_last_id(ch, msg_id)
                         record_post_handled(ch, msg_id)

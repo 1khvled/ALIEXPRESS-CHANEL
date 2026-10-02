@@ -151,11 +151,14 @@ class FranceDealCaptionGenerator:
         coupon_code: Optional[str] = None,
         seller_coupon: Optional[str] = None,
         has_points_discount: bool = False,
-        is_price_drop: bool = False
+        is_price_drop: bool = False,
+        deal_type: str = "coin",
+        country_info: Optional[str] = None,
+        raw_text: Optional[str] = None
     ) -> str:
         lines = []
 
-        # 1. Smart French Hook
+        # 1. Smart French Hook in blockquote
         hook = self._select_smart_hook(
             title=title,
             eur_price=eur_price,
@@ -163,29 +166,51 @@ class FranceDealCaptionGenerator:
             has_coupon=bool(coupon_code or seller_coupon),
             is_price_drop=is_price_drop
         )
-        lines.append(hook)
+        clean_hook = re.sub(r'</?b>', '', hook).strip()
+        lines.append(f"<blockquote>🔥 <b>{clean_hook}</b></blockquote>")
+
+        # 2. Choice Bundle Alert in blockquote
+        if deal_type == "bundle":
+            lines.append("<blockquote>📦 <b>Alerte Choice Bundle :</b> Ajoutez 3 articles au panier pour profiter de ce prix et de la livraison gratuite ! 🛍️</blockquote>")
+
+        # 3. Shipping / Location note in blockquote
+        lines.append("<blockquote>🚚 <b>Livraison :</b> France métropolitaine 🇫🇷</blockquote>")
+        lines.append("")
 
         safe_title = html.escape(title)
-        lines.append(f"🔥 <b>{safe_title}</b>")
+        lines.append(f"✅ <b>{safe_title}</b>")
+        lines.append("")
 
+        # Price
         if eur_price and eur_price > 0:
-            lines.append(f"💸 <b>Prix :</b> {eur_price:.2f}€")
+            usd_str = f" (${usd_price:.2f})" if usd_price and usd_price > 0 else ""
+            lines.append(f"💰 <b>Prix :</b> <b>{eur_price:.2f}€</b>{usd_str} 🔥")
         elif usd_price and usd_price > 0:
             approx_eur = usd_price * (settings.EUR_USD_RATE or 0.92)
-            lines.append(f"💸 <b>Prix :</b> {approx_eur:.2f}€ (${usd_price:.2f})")
+            lines.append(f"💰 <b>Prix :</b> <b>{approx_eur:.2f}€</b> (${usd_price:.2f}) 🔥")
         else:
-            lines.append("💸 <b>Prix :</b> Prix réduit")
+            lines.append("💰 <b>Prix :</b> <b>Prix réduit exceptionnel</b> 🔥")
 
         if seller_coupon:
             lines.append(f"🌷 <b>Coupon vendeur :</b> <code>{html.escape(seller_coupon)}</code>")
 
         if coupon_code:
-            lines.append(f"🤐 <b>Code :</b> <code>{html.escape(coupon_code)}</code>")
+            lines.append(f"🏷️ <b>Code promo :</b> <code>{html.escape(coupon_code)}</code>")
 
-        lines.append(f"🔗 <b>Lien :</b>\n{affiliate_url}")
-        lines.append("________________________________")
-        lines.append("🤖 <b>Utilisez le bot avant d'acheter :</b> @Alilo07BOT")
-        lines.append("📢 <b>Canal :</b> @francedealsdz")
+        if deal_type == "bundle":
+            lines.append("📦 <b>Offre Choice Bundle — 3 articles minimum</b>")
+        elif has_points_discount:
+            lines.append("🪙 <b>Réduction pièces (Coins) appliquée via le lien</b>")
+
+        lines.append("")
+        if deal_type == "bundle":
+            lines.append("🛒 <b>Lien de l'offre Bundle ⤵️</b>")
+        else:
+            lines.append("🛒 <b>Lien du Bon Plan ⤵️</b>")
+        lines.append(f"{affiliate_url}")
+        lines.append("")
+        lines.append("🤖 <b>Bot Réduction Pièces (Coins) :</b> @Alilo07BOT")
+        lines.append("📢 @francedealsdz")
 
         return "\n".join(lines)
 
@@ -200,6 +225,8 @@ class FranceDealCaptionGenerator:
         has_points_discount: bool = False,
         coupon_list: Optional[List[Dict[str, str]]] = None,
         is_price_drop: bool = False,
+        deal_type: str = "coin",
+        country_info: Optional[str] = None,
         raw_text: Optional[str] = None
     ) -> str:
         if coupon_list and len(coupon_list) >= 2:
@@ -220,7 +247,10 @@ class FranceDealCaptionGenerator:
             coupon_code=coupon_code,
             seller_coupon=seller_coupon,
             has_points_discount=has_points_discount,
-            is_price_drop=is_price_drop
+            is_price_drop=is_price_drop,
+            deal_type=deal_type,
+            country_info=country_info,
+            raw_text=raw_text
         )
 
 france_caption_generator = FranceDealCaptionGenerator()

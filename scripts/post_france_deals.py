@@ -80,7 +80,7 @@ def save_france_state(state: Dict):
 
 async def post_deal_to_france_channel(
     caption: str,
-    image_path: Optional[Path],
+    image_path: Optional[Any],
     affiliate_url: str,
     is_coupon_bulletin: bool = False
 ) -> Tuple[bool, Optional[str], Optional[int]]:
@@ -89,10 +89,21 @@ async def post_deal_to_france_channel(
         return False, "TELEGRAM_BOT_TOKEN not configured", None
 
     api_url = f"https://api.telegram.org/bot{bot_token}"
-    # Competitor standard (AliFRDrop / Dealabs): 0% inline buttons so affiliate links survive Telegram forwards
     photo_bytes = None
-    if image_path and image_path.exists():
-        photo_bytes = image_path.read_bytes()
+    if image_path:
+        p = Path(image_path) if isinstance(image_path, str) else image_path
+        if p.exists():
+            photo_bytes = p.read_bytes()
+
+    # Premium inline buttons for French deals (Clean CTA + Bot link)
+    reply_markup_json = None
+    if affiliate_url and affiliate_url.startswith("http"):
+        btn_text = "🎟️ Voir les codes promo AliExpress" if is_coupon_bulletin else "🛒 Voir le bon plan sur AliExpress ➔"
+        inline_keyboard = [
+            [{"text": btn_text, "url": affiliate_url}],
+            [{"text": "🪙 Bot Pièces AliExpress (Coins)", "url": "https://t.me/Alilo07BOT"}]
+        ]
+        reply_markup_json = json.dumps({"inline_keyboard": inline_keyboard})
 
     async with httpx.AsyncClient(timeout=45.0) as client:
         for attempt in range(1, 4):
@@ -104,13 +115,18 @@ async def post_deal_to_france_channel(
                         "caption": caption,
                         "parse_mode": "HTML"
                     }
+                    if reply_markup_json:
+                        data["reply_markup"] = reply_markup_json
                     resp = await client.post(f"{api_url}/sendPhoto", data=data, files=files)
                 else:
                     data = {
                         "chat_id": TARGET_FRANCE_CHANNEL,
                         "text": caption,
-                        "parse_mode": "HTML"
+                        "parse_mode": "HTML",
+                        "disable_web_page_preview": False
                     }
+                    if reply_markup_json:
+                        data["reply_markup"] = reply_markup_json
                     resp = await client.post(f"{api_url}/sendMessage", data=data)
 
                 if resp.status_code == 200:
@@ -132,6 +148,136 @@ async def post_deal_to_france_channel(
                     await asyncio.sleep(2.0 * attempt)
 
     return False, "Failed after 3 attempts", None
+
+
+async def publish_extracted_deal_to_france(
+    extracted: Any,
+    raw_text: str,
+    source_photo_url: Optional[str] = None,
+    channel_username: str = "",
+    msg_id: int = 0
+) -> bool:
+    """
+    Directly format and publish an extracted AliExpress deal to the France channel (@francedealsdz).
+    Used when a French/European deal is routed from another monitor or webhook.
+    """
+    state = load_france_state()
+    published_keys = set(state.get("published_post_keys", []))
+    published_pids = set(state.get("published_product_ids", []))
+    clean_ch = channel_username.replace("@", "").lower()
+    post_key = f"{clean_ch}:{msg_id}" if clean_ch and msg_id else None
+
+    if post_key and post_key in published_keys:
+        logger.info(f"[FRANCE ROUTER] Skipping already published post key: {post_key}")
+        return False
+
+    if extracted.product_id and not extracted.is_coupon_list:
+        if extracted.product_id in published_pids:
+            logger.info(f"[FRANCE ROUTER] Duplicate product ID blocked: {extracted.product_id}")
+            return False
+
+    # Check category whitelist if not coupon list
+    if not extracted.is_coupon_list:
+        allowed, reject_reason = is_allowed_category(
+            extracted.title or '',
+            raw_text,
+            channel_username=channel_username
+        )
+        if not allowed:
+            logger.info(f"[FRANCE ROUTER] Category filtered: {reject_reason}")
+            return False
+
+    # Affiliate link
+    deal_type = getattr(extracted, 'deal_type', None) or detect_deal_type(
+        raw_text,
+        f"{extracted.original_url} {getattr(extracted, 'final_url', '') or ''} {extracted.canonical_url}"
+    )
+    aff_link = await affiliate_service.create_affiliate_link(
+        product_url=extracted.canonical_url,
+        product_id=extracted.product_id if not extracted.is_coupon_list else None,
+        deal_type=deal_type
+    )
+
+    # Caption
+    caption = await france_caption_generator.generate(
+        title=extracted.title or "AliExpress Deal",
+        eur_price=extracted.current_price_eur,
+        usd_price=extracted.current_price,
+        affiliate_url=aff_link,
+        coupon_code=extracted.coupon_code,
+        seller_coupon=extracted.seller_coupon,
+        has_points_discount=extracted.has_points_discount,
+        coupon_list=extracted.coupon_list if extracted.is_coupon_list else None,
+        is_price_drop=False,
+        deal_type=deal_type,
+        country_info=getattr(extracted, 'country_info', None),
+        raw_text=raw_text
+    )
+
+    # Image preparation
+    local_img_file = None
+    img_url = extracted.image_url or source_photo_url
+    if extracted.is_coupon_list:
+        if source_photo_url:
+            downloaded = await media_downloader.download_image(source_photo_url, identifier=f"fr_coupon_{extracted.product_id or 'list'}")
+            if downloaded:
+                local_img_file = downloaded
+
+        official_banner = os.path.join(settings.BASE_DIR, "storage", "assets", "choice_day_banner.png")
+        if not local_img_file and os.path.exists(official_banner):
+            local_img_file = Path(official_banner)
+
+        if not local_img_file and extracted.coupon_list:
+            local_img_file = media_renderer.render_coupon_bulletin_card(
+                extracted.coupon_list,
+                promo_title="Party Ready Sale"
+            )
+    elif img_url:
+        downloaded = await media_downloader.download_image(img_url, extracted.product_id)
+        if downloaded:
+            local_img_file = media_renderer.prepare_post_image(
+                downloaded,
+                extracted.product_id,
+                extracted.title,
+                usd_price=extracted.current_price
+            )
+
+    if not local_img_file:
+        logger.warning(f"[FRANCE ROUTER] Failed to prepare image for deal {extracted.product_id}")
+        return False
+
+    success, err, channel_msg_id = await post_deal_to_france_channel(
+        caption=caption,
+        image_path=local_img_file,
+        affiliate_url=aff_link,
+        is_coupon_bulletin=extracted.is_coupon_list
+    )
+
+    if success:
+        if post_key:
+            published_keys.add(post_key)
+        if extracted.product_id:
+            published_pids.add(extracted.product_id)
+        state["published_post_keys"] = list(published_keys)[-1000:]
+        state["published_product_ids"] = list(published_pids)[-1000:]
+        state["last_deal_post_time"] = time.time()
+        save_france_state(state)
+        print(f"  [FRANCE ROUTED PUBLISHED] Msg #{channel_msg_id}: {extracted.title}")
+
+        if extracted.is_coupon_list and channel_msg_id:
+            try:
+                bot_tok = settings.TELEGRAM_BOT_TOKEN
+                async with httpx.AsyncClient(timeout=10.0) as pc:
+                    await pc.post(
+                        f"https://api.telegram.org/bot{bot_tok}/pinChatMessage",
+                        json={"chat_id": TARGET_FRANCE_CHANNEL, "message_id": channel_msg_id, "disable_notification": False}
+                    )
+            except Exception as pe:
+                logger.warning(f"Failed to auto-pin France coupon bulletin {channel_msg_id}: {pe}")
+        return True
+    else:
+        logger.warning(f"[FRANCE ROUTER] Publish to {TARGET_FRANCE_CHANNEL} failed: {err}")
+        return False
 
 async def collect_and_post_france_deals(force: bool = False) -> int:
     print("=" * 70)
@@ -226,8 +372,10 @@ async def collect_and_post_france_deals(force: bool = False) -> int:
                     and f"{clean_ch}:{b_id}" not in published_keys
                 ]
 
-            # Pre-filter for message freshness (< 24h) and auto-mark ancient stale posts
+            # Pre-filter for message freshness (< 24h normally, or < 72h during active promo/force)
             fresh_blocks = []
+            active_promo = promo_tracker.get_active_promo()
+            max_age_hours = 72.0 if (active_promo or force) else 24.0
             for b_id, b in new_blocks:
                 time_el = b.find("time")
                 msg_dt = None
@@ -238,7 +386,7 @@ async def collect_and_post_france_deals(force: bool = False) -> int:
                         pass
                 if msg_dt:
                     age_h = (datetime.now(timezone.utc) - msg_dt).total_seconds() / 3600.0
-                    if age_h > 24.0:
+                    if age_h > max_age_hours:
                         if f"{clean_ch}:{b_id}" not in state.get("published_post_keys", []):
                             state.setdefault("published_post_keys", []).append(f"{clean_ch}:{b_id}")
                         continue
@@ -276,7 +424,7 @@ async def collect_and_post_france_deals(force: bool = False) -> int:
 
                 raw_text = t_div.get_text(separator="\n").strip()
 
-                # 1. Parse message timestamp and enforce maximum 24h freshness (NO OLD DEALS!)
+                # 1. Parse message timestamp and enforce maximum freshness
                 time_el = block.find("time")
                 msg_dt = None
                 if time_el and time_el.get("datetime"):
@@ -286,9 +434,10 @@ async def collect_and_post_france_deals(force: bool = False) -> int:
                         pass
 
                 # 2. Strict freshness check & expired promo check
-                is_fresh, freshness_reason = promo_tracker.validate_deal_freshness(raw_text, msg_dt)
+                is_fresh, freshness_reason = promo_tracker.validate_deal_freshness(raw_text, msg_dt, max_hours=int(max_age_hours))
                 if not is_fresh:
                     print(f"  [EXPIRED / STALE SKIPPED] Post #{msg_id}: {freshness_reason}")
+                    published_keys.add(post_key)
                     max_processed_id = max(max_processed_id, msg_id)
                     continue
 
@@ -296,12 +445,14 @@ async def collect_and_post_france_deals(force: bool = False) -> int:
                 is_spam, spam_reason = is_spam_or_non_deal(raw_text)
                 if is_spam:
                     print(f"  [SPAM FILTERED] Post #{msg_id}: {spam_reason}")
+                    published_keys.add(post_key)
                     max_processed_id = max(max_processed_id, msg_id)
                     continue
 
                 # 4. Extract product or coupon bulletin
-                extracted = await product_extractor.extract_from_message(raw_text)
+                extracted = await product_extractor.extract_from_message(raw_text, media_path=source_photo_url)
                 if not extracted or not extracted.is_valid:
+                    published_keys.add(post_key)
                     max_processed_id = max(max_processed_id, msg_id)
                     continue
 
@@ -314,6 +465,7 @@ async def collect_and_post_france_deals(force: bool = False) -> int:
                     )
                     if not allowed:
                         print(f"  [CATEGORY FILTERED] Post #{msg_id}: {reject_reason}")
+                        published_keys.add(post_key)
                         max_processed_id = max(max_processed_id, msg_id)
                         continue
 
@@ -321,14 +473,16 @@ async def collect_and_post_france_deals(force: bool = False) -> int:
                 if extracted.product_id and not extracted.is_coupon_list:
                     if extracted.product_id in published_pids:
                         print(f"  [DUPLICATE BLOCKED] Product {extracted.product_id} already published in France channel")
+                        published_keys.add(post_key)
                         max_processed_id = max(max_processed_id, msg_id)
                         continue
 
                 # 7. Official Studio Photo ONLY (or competitor's promo banner for coupons)
-                img_url = extracted.image_url
+                img_url = extracted.image_url or source_photo_url
                 if not extracted.is_coupon_list:
-                    if not img_url or not any(domain in img_url for domain in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
+                    if not img_url or not any(domain in img_url for domain in ["alicdn.com", "aliexpress-media.com", "aliexpress.com", "cdn", "telesco.pe", "telegram"]):
                         print(f"  [NO OFFICIAL PHOTO] Skipping deal without clean AliExpress CDN image: {extracted.product_id}")
+                        published_keys.add(post_key)
                         max_processed_id = max(max_processed_id, msg_id)
                         continue
 
@@ -354,6 +508,8 @@ async def collect_and_post_france_deals(force: bool = False) -> int:
                     has_points_discount=extracted.has_points_discount,
                     coupon_list=extracted.coupon_list if extracted.is_coupon_list else None,
                     is_price_drop=False,
+                    deal_type=deal_type,
+                    country_info=getattr(extracted, 'country_info', None),
                     raw_text=raw_text
                 )
 
@@ -368,7 +524,7 @@ async def collect_and_post_france_deals(force: bool = False) -> int:
                     # Fallback to official AliExpress Choice Day banner image
                     official_banner = os.path.join(settings.BASE_DIR, "storage", "assets", "choice_day_banner.png")
                     if not local_img_file and os.path.exists(official_banner):
-                        local_img_file = official_banner
+                        local_img_file = Path(official_banner)
 
                     if not local_img_file and extracted.coupon_list:
                         local_img_file = media_renderer.render_coupon_bulletin_card(

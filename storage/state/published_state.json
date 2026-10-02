@@ -87,16 +87,16 @@
     "9998881037",
     "1005011991145678",
     "1005011682821623",
-    "1005007476901342",
-    "1005012113350943",
-    "1005008776714223"
+    "9998885747",
+    "1005010129356058",
+    "9998885993"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
     "1005010219205081": 1790947574.20351,
-    "999111222": 1790961036.2599459,
-    "100500999912345": 1790871037.014485,
-    "100500999954321": 1790953837.014485,
+    "999111222": 1790965992.445056,
+    "100500999912345": 1790875993.3410206,
+    "100500999954321": 1790958793.3410206,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
@@ -109,7 +109,7 @@
     "1005008829227075": 1790884310.7506618,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1790950237.0709023,
+    "100500777666555": 1790955193.4001324,
     "1005011778621042": 1790888057.5668976,
     "9998888080": 1790888080.3099577,
     "1005012312990781": 1790888097.0085742,
@@ -130,7 +130,7 @@
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
-    "100500888999777": 1790946637.0985308,
+    "100500888999777": 1790951593.4317453,
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
@@ -156,13 +156,13 @@
     "1005012406142215": 1790943705.796801,
     "1005008390562391": 1790943710.6779277,
     "1005007345398413": 1790943717.3545928,
-    "1005012504076921": 1790964073.9921887,
+    "1005012504076921": 1790943950.8265061,
     "1005008715050858": 1790943959.7454133,
     "9998885689": 1790945689.9436276,
     "9998885726": 1790945726.205554,
     "9998885776": 1790945776.0478673,
     "9998886147": 1790946147.1871526,
-    "999888777111": 1790959237.2429366,
+    "999888777111": 1790964193.5958848,
     "9998886362": 1790946362.071869,
     "1005012407874415": 1790960475.7249138,
     "9998887189": 1790947189.8634577,
@@ -183,9 +183,9 @@
     "9998881037": 1790961037.0515263,
     "1005011991145678": 1790962541.57551,
     "1005011682821623": 1790962844.0034096,
-    "1005007476901342": 1790964354.5508902,
-    "1005012113350943": 1790964645.4325032,
-    "1005008776714223": 1790965853.1910522
+    "9998885747": 1790965747.5380507,
+    "1005010129356058": 1790954473.488348,
+    "9998885993": 1790965993.3792443
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -271,18 +271,15 @@
     "HONOR 600 PRO",
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34",
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone",
-    "ONEPLUS TURBO 6X PRO 5G (8/128)",
-    "GTMEDIA V8 Finder 2 Satellite Finder",
-    "شاحن 80 واط اصلي لهواتف ريلمي اوبو وانبلاس",
-    "CUSU 512GB"
+    "Xiaomi Pad 7 (12/256)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1790961036.2599459,
+    "Test Wireless Gaming Mouse X1": 1790965992.445056,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
-    "Attack Shark R2 Mouse": 1790953837.014485,
-    "Test Wrench Set": 1790961037.0515263,
+    "Attack Shark R2 Mouse": 1790958793.3410206,
+    "Test Wrench Set": 1790965993.3792443,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1790884195.3586087,
@@ -316,8 +313,8 @@
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
-    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1790871037.014485,
-    "Attack Shark L80 PRO Wireless Mouse": 1790960137.0985308,
+    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1790875993.3410206,
+    "Attack Shark L80 PRO Wireless Mouse": 1790965093.4317453,
     "الأكثر لبا لنهار اليوووم": 1790940343.7746465,
     "POCO C81 Pro 4/64": 1790940366.7525578,
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
@@ -363,10 +360,7 @@
     "HONOR 600 PRO": 1790960475.7249138,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
-    "ONEPLUS TURBO 6X PRO 5G (8/128)": 1790964073.9921887,
-    "GTMEDIA V8 Finder 2 Satellite Finder": 1790964354.5508902,
-    "شاحن 80 واط اصلي لهواتف ريلمي اوبو وانبلاس": 1790964645.4325032,
-    "CUSU 512GB": 1790965853.1910522
+    "Xiaomi Pad 7 (12/256)": 1790954473.488348
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -562,21 +556,16 @@
     "megaphonna:8191",
     "megaphonna:8192",
     "megaphonna:8193",
-    "megaphonna:8194",
-    "megaphonna:8195",
-    "aniscoupons:32680",
-    "aniscoupons:32681",
-    "aniscoupons:32682",
-    "bnddeals:50789",
-    "aniscoupons:32683"
+    "test_channel:1790965747",
+    "test_channel:1790965993"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790965853.1910522,
+  "last_run_time": 1790965993.48965,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32683,
-      "last_check_time": 1790965855.1999106
+      "last_message_id": 32679,
+      "last_check_time": 1790963740.7030184
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -584,15 +573,15 @@
     },
     "lodydeals": {
       "last_message_id": 45401,
-      "last_check_time": 1790965845.3570514
+      "last_check_time": 1790965993.4330578
     },
     "bnddeals": {
-      "last_message_id": 50789,
-      "last_check_time": 1790965846.3396804
+      "last_message_id": 50788,
+      "last_check_time": 1790963737.7624624
     },
     "test_channel": {
-      "last_message_id": 1790961037,
-      "last_check_time": 1790961037.0515263
+      "last_message_id": 1790965993,
+      "last_check_time": 1790965993.3792443
     },
     "pcgamingpart": {
       "last_message_id": 7936,
@@ -600,11 +589,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790965845.704232
+      "last_check_time": 1790963737.1363528
     },
     "megaphonna": {
-      "last_message_id": 8195,
-      "last_check_time": 1790965846.6915956
+      "last_message_id": 8193,
+      "last_check_time": 1790965993.48965
     }
   },
   "published_product_prices": {
@@ -664,7 +653,7 @@
     "1005012406142215": 393.0,
     "1005008390562391": 11.79,
     "1005007345398413": 14.3,
-    "1005012504076921": 257.4,
+    "1005012504076921": 260.91,
     "1005008715050858": 20.47,
     "999888777111": 20.0,
     "1005012407874415": 478.44,
@@ -680,10 +669,7 @@
     "1005012340203471": 242.7,
     "1005005824280128": 96.8,
     "1005011991145678": 0.8,
-    "1005011682821623": 0.8,
-    "1005007476901342": 54.1,
-    "1005012113350943": 15.5,
-    "1005008776714223": 47.6
+    "1005011682821623": 0.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1525,46 +1511,6 @@
       "price": 0.8,
       "timestamp": 1790962844.0034096,
       "status": "ACTIVE"
-    },
-    "megaphonna:8195": {
-      "channel_msg_id": 408,
-      "product_id": "1005012504076921",
-      "title": "ONEPLUS TURBO 6X PRO 5G (8/128)",
-      "channel": "megaphonna",
-      "source_msg_id": 8195,
-      "price": 257.4,
-      "timestamp": 1790964073.9921887,
-      "status": "ACTIVE"
-    },
-    "aniscoupons:32680": {
-      "channel_msg_id": 409,
-      "product_id": "1005007476901342",
-      "title": "GTMEDIA V8 Finder 2 Satellite Finder",
-      "channel": "aniscoupons",
-      "source_msg_id": 32680,
-      "price": 54.1,
-      "timestamp": 1790964354.5508902,
-      "status": "ACTIVE"
-    },
-    "aniscoupons:32682": {
-      "channel_msg_id": 410,
-      "product_id": "1005012113350943",
-      "title": "شاحن 80 واط اصلي لهواتف ريلمي اوبو وانبلاس",
-      "channel": "aniscoupons",
-      "source_msg_id": 32682,
-      "price": 15.5,
-      "timestamp": 1790964645.4325032,
-      "status": "ACTIVE"
-    },
-    "aniscoupons:32683": {
-      "channel_msg_id": 411,
-      "product_id": "1005008776714223",
-      "title": "CUSU 512GB",
-      "channel": "aniscoupons",
-      "source_msg_id": 32683,
-      "price": 47.6,
-      "timestamp": 1790965853.1910522,
-      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1573,7 +1519,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790965853.1933122,
+    "last_deal_post_time": 1790962844.0058136,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1614,7 +1560,7 @@
     "1005012406142215": "bnddeals",
     "1005008390562391": "bnddeals",
     "1005007345398413": "bnddeals",
-    "1005012504076921": "megaphonna",
+    "1005012504076921": "lodydeals",
     "1005008715050858": "bnddeals",
     "1005008233932899": "aniscoupons",
     "9998885689": "test_channel",
@@ -1650,9 +1596,8 @@
     "9998881037": "test_channel",
     "1005011991145678": "megaphonna",
     "1005011682821623": "megaphonna",
-    "1005007476901342": "aniscoupons",
-    "1005012113350943": "aniscoupons",
-    "1005008776714223": "aniscoupons"
+    "9998885747": "test_channel",
+    "9998885993": "test_channel"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1712,11 +1657,7 @@
     "EasySMX X15 Wireless PC Gamepad Hall Effect": "aniscoupons",
     "Realme Pad 3 5G 256GB": "aniscoupons",
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": "megaphonna",
-    "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": "megaphonna",
-    "ONEPLUS TURBO 6X PRO 5G (8/128)": "megaphonna",
-    "GTMEDIA V8 Finder 2 Satellite Finder": "aniscoupons",
-    "شاحن 80 واط اصلي لهواتف ريلمي اوبو وانبلاس": "aniscoupons",
-    "CUSU 512GB": "aniscoupons"
+    "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -1733,7 +1674,9 @@
     "test_rem_a95bf6b9": "2026-10-02",
     "test_rem_76523e29": "2026-10-02",
     "test_rem_8edf125a": "2026-10-02",
-    "test_rem_36e0413a": "2026-10-02"
+    "test_rem_36e0413a": "2026-10-02",
+    "test_rem_93b209a2": "2026-10-02",
+    "test_rem_aed653c9": "2026-10-02"
   },
   "channel_announcements_history": {
     "china_holiday_shipping_delay": "2026-10-02",
@@ -1745,7 +1688,9 @@
     "test_tag_d281b3": "2026-10-02",
     "test_tag_3d0c39": "2026-10-02",
     "test_tag_e64aaa": "2026-10-02",
-    "test_tag_15318a": "2026-10-02"
+    "test_tag_15318a": "2026-10-02",
+    "test_tag_78bf5d": "2026-10-02",
+    "test_tag_d5c464": "2026-10-02"
   },
   "daily_tajmi3at_history": {},
   "regrouped_channel_msg_ids": []

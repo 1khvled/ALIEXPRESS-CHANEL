@@ -79,3 +79,43 @@ def test_country_instruction_ukraine_and_australia():
     from app.aliexpress.parser import extract_country_instruction
     assert extract_country_instruction("أختر بلد الحساب أوكرانيا 🇺🇦") == "أوكرانيا 🇺🇦"
     assert extract_country_instruction("أضع البلد استراليا 🇦🇺") == "أستراليا 🇦🇺"
+
+def test_france_coupon_and_country_extraction():
+    from app.aliexpress.parser import extract_coupon, extract_country_instruction, extract_prices
+    sample_text = """
+    HONOR 600 EUROPEAN VERSION
+    Code -45€ : FRPRD45
+    Prix : 289.0€
+    Lien : https://s.click.aliexpress.com/e/_oENzM7m
+    """
+    coupon = extract_coupon(sample_text)
+    assert coupon == "FRPRD45"
+
+    country = extract_country_instruction(sample_text)
+    assert country == "فرنسا 🇫🇷"
+
+    usd, eur = extract_prices(sample_text)
+    assert eur == 289.0
+
+@pytest.mark.asyncio
+async def test_france_caption_generator_formatting():
+    from app.ai.generator_fr import france_caption_generator
+    caption = await france_caption_generator.generate(
+        title="POCO F8 Pro 5G Snapdragon 8 Elite",
+        eur_price=419.0,
+        usd_price=455.43,
+        affiliate_url="https://s.click.aliexpress.com/e/_oD34123",
+        coupon_code="FRPRD60",
+        deal_type="coin",
+        has_points_discount=True
+    )
+
+    assert "<blockquote>" in caption
+    assert "POCO F8 Pro 5G Snapdragon 8 Elite" in caption
+    assert "419.00€" in caption
+    assert "$455.43" in caption
+    assert "🏷️ <b>Code promo :</b> <code>FRPRD60</code>" in caption
+    assert "🤐" not in caption
+    assert "________________________________" not in caption
+    assert "📢 @francedealsdz" in caption
+    assert "@Alilo07BOT" in caption
