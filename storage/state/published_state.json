@@ -162,7 +162,7 @@
     "1005009828161174": 1790943640.1460688,
     "1005009281115306": 1790943648.855101,
     "1005011797801269": 1790943656.257167,
-    "1005007168829266": 1790943673.6091957,
+    "1005007168829266": 1790973945.5080817,
     "1005012406142215": 1790943705.796801,
     "1005008390562391": 1790943710.6779277,
     "1005007345398413": 1790943717.3545928,
@@ -369,7 +369,7 @@
     "ATTACK SHARK X11SE": 1790943648.855101,
     "CMF Watch 3 Pro AMOLED": 1790943656.257167,
     "Redmi Note 17 5G   6/256": 1790943667.90417,
-    "Baseus USB Type C Charger 20W": 1790943673.6091957,
+    "Baseus USB Type C Charger 20W": 1790973945.5080817,
     "OPPO A6 Pro 8/256GB": 1790943694.6895797,
     "Honor Win Turbo 12/256BG": 1790943705.796801,
     "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction": 1790943710.6779277,
@@ -633,15 +633,16 @@
     "lodydeals:45409",
     "lodydeals:45410",
     "aniscoupons:32686",
-    "aniscoupons:32687"
+    "aniscoupons:32687",
+    "aniscoupons:32688"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790973641.950298,
+  "last_run_time": 1790973945.5080817,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32687,
-      "last_check_time": 1790973643.9605358
+      "last_message_id": 32688,
+      "last_check_time": 1790973947.5181036
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -649,11 +650,11 @@
     },
     "lodydeals": {
       "last_message_id": 45410,
-      "last_check_time": 1790973636.6695309
+      "last_check_time": 1790973938.6797862
     },
     "bnddeals": {
       "last_message_id": 50792,
-      "last_check_time": 1790973637.539902
+      "last_check_time": 1790973939.6176803
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -665,11 +666,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790973636.9762223
+      "last_check_time": 1790973939.011276
     },
     "megaphonna": {
       "last_message_id": 8202,
-      "last_check_time": 1790973637.923551
+      "last_check_time": 1790973939.9714212
     }
   },
   "published_product_prices": {
@@ -725,7 +726,7 @@
     "1005009828161174": 8.29,
     "1005009281115306": 17.95,
     "1005011797801269": 55.78,
-    "1005007168829266": 16.2,
+    "1005007168829266": 4.19,
     "1005012406142215": 393.0,
     "1005008390562391": 11.79,
     "1005007345398413": 14.3,
@@ -1745,6 +1746,16 @@
       "price": 28.5,
       "timestamp": 1790973641.950298,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32688": {
+      "channel_msg_id": 427,
+      "product_id": "1005007168829266",
+      "title": "Baseus USB Type C Charger 20W",
+      "channel": "aniscoupons",
+      "source_msg_id": 32688,
+      "price": 4.19,
+      "timestamp": 1790973945.5080817,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1753,7 +1764,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790973641.9529397,
+    "last_deal_post_time": 1790973945.510673,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1788,7 +1799,7 @@
     "1005009281115306": "lodydeals",
     "1005011797801269": "lodydeals",
     "1005012973772517": "zedstoreonline",
-    "1005007168829266": "zedstoreonline",
+    "1005007168829266": "aniscoupons",
     "1005008880082336": "zedstoreonline",
     "1005010453516983": "bnddeals",
     "1005012406142215": "bnddeals",
@@ -1870,7 +1881,7 @@
     "ATTACK SHARK X11SE": "lodydeals",
     "CMF Watch 3 Pro AMOLED": "lodydeals",
     "Redmi Note 17 5G   6/256": "zedstoreonline",
-    "Baseus USB Type C Charger 20W": "zedstoreonline",
+    "Baseus USB Type C Charger 20W": "aniscoupons",
     "ATTACK SHARK L80 PRO": "zedstoreonline",
     "OPPO A6 Pro 8/256GB": "bnddeals",
     "Honor Win Turbo 12/256BG": "bnddeals",
