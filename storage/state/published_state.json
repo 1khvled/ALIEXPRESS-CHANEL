@@ -90,7 +90,9 @@
     "9998885747",
     "1005010129356058",
     "9998885993",
-    "1005009774318553"
+    "1005009774318553",
+    "1005012574108028",
+    "1005008599340405"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -187,7 +189,9 @@
     "9998885747": 1790965747.5380507,
     "1005010129356058": 1790954473.488348,
     "9998885993": 1790965993.3792443,
-    "1005009774318553": 1790966460.2151659
+    "1005009774318553": 1790966460.2151659,
+    "1005012574108028": 1790967954.6642368,
+    "1005008599340405": 1790967962.6418507
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -275,7 +279,9 @@
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone",
     "Xiaomi Pad 7 (12/256)",
     "ONEPLUS TURBO 6X PRO 5G (8/128)",
-    "CUSU SSD 512 GB Portable SSD External Drive"
+    "CUSU SSD 512 GB Portable SSD External Drive",
+    "HONOR  X80 PRO MAX (8/128)",
+    "WALRAM Sata SSD 512GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -366,7 +372,9 @@
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
     "Xiaomi Pad 7 (12/256)": 1790954473.488348,
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1790966153.636154,
-    "CUSU SSD 512 GB Portable SSD External Drive": 1790966460.2151659
+    "CUSU SSD 512 GB Portable SSD External Drive": 1790966460.2151659,
+    "HONOR  X80 PRO MAX (8/128)": 1790967954.6642368,
+    "WALRAM Sata SSD 512GB": 1790967962.6418507
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -573,15 +581,17 @@
     "aniscoupons:32683",
     "aniscoupons:32684",
     "zedstoreonline:38523",
-    "megaphonna:8196"
+    "megaphonna:8196",
+    "megaphonna:8197",
+    "aniscoupons:32685"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790966460.2151659,
+  "last_run_time": 1790967962.6418507,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32684,
-      "last_check_time": 1790967652.8797514
+      "last_message_id": 32685,
+      "last_check_time": 1790967964.6475863
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -589,11 +599,11 @@
     },
     "lodydeals": {
       "last_message_id": 45401,
-      "last_check_time": 1790967646.03819
+      "last_check_time": 1790967947.7274399
     },
     "bnddeals": {
       "last_message_id": 50789,
-      "last_check_time": 1790967651.5876637
+      "last_check_time": 1790967948.7440438
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -605,11 +615,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38523,
-      "last_check_time": 1790967650.9312015
+      "last_check_time": 1790967948.0916972
     },
     "megaphonna": {
-      "last_message_id": 8196,
-      "last_check_time": 1790967652.5581589
+      "last_message_id": 8197,
+      "last_check_time": 1790967956.6725664
     }
   },
   "published_product_prices": {
@@ -686,7 +696,9 @@
     "1005005824280128": 96.8,
     "1005011991145678": 0.8,
     "1005011682821623": 0.8,
-    "1005009774318553": 53.8
+    "1005009774318553": 53.8,
+    "1005012574108028": 279.1,
+    "1005008599340405": 47.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1548,6 +1560,26 @@
       "price": 53.8,
       "timestamp": 1790966460.2151659,
       "status": "ACTIVE"
+    },
+    "megaphonna:8197": {
+      "channel_msg_id": 414,
+      "product_id": "1005012574108028",
+      "title": "HONOR  X80 PRO MAX (8/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8197,
+      "price": 279.1,
+      "timestamp": 1790967954.6642368,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32685": {
+      "channel_msg_id": 415,
+      "product_id": "1005008599340405",
+      "title": "WALRAM Sata SSD 512GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 32685,
+      "price": 47.4,
+      "timestamp": 1790967962.6418507,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1556,7 +1588,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790966460.2175968,
+    "last_deal_post_time": 1790967962.64389,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1635,7 +1667,9 @@
     "1005011682821623": "megaphonna",
     "9998885747": "test_channel",
     "9998885993": "test_channel",
-    "1005009774318553": "aniscoupons"
+    "1005009774318553": "aniscoupons",
+    "1005012574108028": "megaphonna",
+    "1005008599340405": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1697,7 +1731,9 @@
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": "megaphonna",
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": "megaphonna",
     "ONEPLUS TURBO 6X PRO 5G (8/128)": "megaphonna",
-    "CUSU SSD 512 GB Portable SSD External Drive": "aniscoupons"
+    "CUSU SSD 512 GB Portable SSD External Drive": "aniscoupons",
+    "HONOR  X80 PRO MAX (8/128)": "megaphonna",
+    "WALRAM Sata SSD 512GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
