@@ -88,7 +88,8 @@
     "1005011991145678",
     "1005011682821623",
     "1005007476901342",
-    "1005012113350943"
+    "1005012113350943",
+    "1005008776714223"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -183,7 +184,8 @@
     "1005011991145678": 1790962541.57551,
     "1005011682821623": 1790962844.0034096,
     "1005007476901342": 1790964354.5508902,
-    "1005012113350943": 1790964645.4325032
+    "1005012113350943": 1790964645.4325032,
+    "1005008776714223": 1790965853.1910522
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -271,7 +273,8 @@
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone",
     "ONEPLUS TURBO 6X PRO 5G (8/128)",
     "GTMEDIA V8 Finder 2 Satellite Finder",
-    "شاحن 80 واط اصلي لهواتف ريلمي اوبو وانبلاس"
+    "شاحن 80 واط اصلي لهواتف ريلمي اوبو وانبلاس",
+    "CUSU 512GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -362,7 +365,8 @@
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1790964073.9921887,
     "GTMEDIA V8 Finder 2 Satellite Finder": 1790964354.5508902,
-    "شاحن 80 واط اصلي لهواتف ريلمي اوبو وانبلاس": 1790964645.4325032
+    "شاحن 80 واط اصلي لهواتف ريلمي اوبو وانبلاس": 1790964645.4325032,
+    "CUSU 512GB": 1790965853.1910522
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -563,15 +567,16 @@
     "aniscoupons:32680",
     "aniscoupons:32681",
     "aniscoupons:32682",
-    "bnddeals:50789"
+    "bnddeals:50789",
+    "aniscoupons:32683"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790964645.4325032,
+  "last_run_time": 1790965853.1910522,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32682,
-      "last_check_time": 1790965546.2103677
+      "last_message_id": 32683,
+      "last_check_time": 1790965855.1999106
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -579,11 +584,11 @@
     },
     "lodydeals": {
       "last_message_id": 45401,
-      "last_check_time": 1790965542.4026294
+      "last_check_time": 1790965845.3570514
     },
     "bnddeals": {
       "last_message_id": 50789,
-      "last_check_time": 1790965545.4488955
+      "last_check_time": 1790965846.3396804
     },
     "test_channel": {
       "last_message_id": 1790961037,
@@ -595,11 +600,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790965542.7565866
+      "last_check_time": 1790965845.704232
     },
     "megaphonna": {
       "last_message_id": 8195,
-      "last_check_time": 1790965545.8415163
+      "last_check_time": 1790965846.6915956
     }
   },
   "published_product_prices": {
@@ -677,7 +682,8 @@
     "1005011991145678": 0.8,
     "1005011682821623": 0.8,
     "1005007476901342": 54.1,
-    "1005012113350943": 15.5
+    "1005012113350943": 15.5,
+    "1005008776714223": 47.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1549,6 +1555,16 @@
       "price": 15.5,
       "timestamp": 1790964645.4325032,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32683": {
+      "channel_msg_id": 411,
+      "product_id": "1005008776714223",
+      "title": "CUSU 512GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 32683,
+      "price": 47.6,
+      "timestamp": 1790965853.1910522,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1557,7 +1573,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790964645.4350827,
+    "last_deal_post_time": 1790965853.1933122,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1635,7 +1651,8 @@
     "1005011991145678": "megaphonna",
     "1005011682821623": "megaphonna",
     "1005007476901342": "aniscoupons",
-    "1005012113350943": "aniscoupons"
+    "1005012113350943": "aniscoupons",
+    "1005008776714223": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1698,7 +1715,8 @@
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": "megaphonna",
     "ONEPLUS TURBO 6X PRO 5G (8/128)": "megaphonna",
     "GTMEDIA V8 Finder 2 Satellite Finder": "aniscoupons",
-    "شاحن 80 واط اصلي لهواتف ريلمي اوبو وانبلاس": "aniscoupons"
+    "شاحن 80 واط اصلي لهواتف ريلمي اوبو وانبلاس": "aniscoupons",
+    "CUSU 512GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
