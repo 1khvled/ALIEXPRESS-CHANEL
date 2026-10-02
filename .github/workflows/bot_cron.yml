@@ -77,7 +77,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add storage/state/ deals.db storage/ || true
           if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "Auto-update deals database [skip ci]"
+            git commit -m "Auto-update deals database [skip ci] [skip vercel] [vercel skip]"
             for i in 1 2 3; do
               git pull --rebase origin main || true
               git push && break || sleep 3

@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "ignoreCommand": "bash scripts/ignore_build.sh",
   "builds": [
     {
       "src": "api/index.py",
