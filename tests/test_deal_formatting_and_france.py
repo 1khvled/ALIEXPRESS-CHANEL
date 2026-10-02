@@ -119,3 +119,109 @@ async def test_france_caption_generator_formatting():
     assert "________________________________" not in caption
     assert "📢 @francedealsdz" in caption
     assert "@Alilo07BOT" in caption
+
+
+@pytest.mark.asyncio
+async def test_france_restock_and_price_drop_caption():
+    from app.ai.generator_fr import france_caption_generator
+
+    # 1. Restock caption
+    cap_restock = await france_caption_generator.generate(
+        title="POCO X6 Pro 5G",
+        eur_price=219.0,
+        usd_price=238.0,
+        affiliate_url="https://s.click.aliexpress.com/e/_test123",
+        is_restock=True,
+        raw_text="De retour en stock ! Stock limité !"
+    )
+    assert "Alerte Restock" in cap_restock
+    assert "De retour en stock" in cap_restock
+
+    # 2. Price drop caption with retail comparison
+    cap_price_drop = await france_caption_generator.generate(
+        title="Anker Soundcore Space One",
+        eur_price=64.0,
+        usd_price=69.5,
+        affiliate_url="https://s.click.aliexpress.com/e/_test456",
+        seller_coupon="5$",
+        raw_text="Baisse de prix importante ! Prix constaté ailleurs : 99€ en magasin"
+    )
+    assert "Baisse de Prix" in cap_price_drop
+    assert "Nouveau prix réduit" in cap_price_drop
+    assert "Prix constaté :" in cap_price_drop
+    assert "<code>5€</code>" in cap_price_drop
+
+
+def test_france_deduplication_cooldown_and_exceptions():
+    import time
+    from scripts.post_france_deals import is_recent_france_duplicate
+
+    mock_state = {
+        "published_deals_history": [
+            {
+                "product_id": "1005001111111",
+                "title": "Xiaomi Pad 6 Global",
+                "price_eur": 240.0,
+                "timestamp": time.time() - 3600  # 1 hour ago
+            }
+        ]
+    }
+
+    # Same price within 24h -> duplicate
+    is_dup, reason, is_drop = is_recent_france_duplicate(
+        product_id="1005001111111",
+        current_price_eur=240.0,
+        title="Xiaomi Pad 6 Global",
+        raw_text="Xiaomi Pad 6 promo",
+        state=mock_state
+    )
+    assert is_dup is True
+    assert "cooldown" in reason
+
+    # Price dropped by 15€ (>4% and >3€) -> allowed through!
+    is_dup2, reason2, is_drop2 = is_recent_france_duplicate(
+        product_id="1005001111111",
+        current_price_eur=225.0,
+        title="Xiaomi Pad 6 Global",
+        raw_text="Xiaomi Pad 6 promo",
+        state=mock_state
+    )
+    assert is_dup2 is False
+    assert is_drop2 is True
+    assert "Price drop" in reason2
+
+    # Restock deal -> allowed through!
+    is_dup3, reason3, is_drop3 = is_recent_france_duplicate(
+        product_id="1005001111111",
+        current_price_eur=240.0,
+        title="Xiaomi Pad 6 Global",
+        raw_text="Alerte Restock ! De retour en stock !",
+        state=mock_state
+    )
+    assert is_dup3 is False
+    assert "Restock exception" in reason3
+
+
+def test_france_tajmi3at_regrouper():
+    from app.publisher.regrouper_fr import classify_deal_category, format_france_bulletin
+
+    # Category classification
+    assert classify_deal_category("POCO X6 Pro 5G 12/512GB") == "smartphones"
+    assert classify_deal_category("GameSir G7 SE Manette Gaming Hall Effect") == "gaming"
+    assert classify_deal_category("Anker Soundcore Space Q45 Casque Bluetooth") == "audio"
+    assert classify_deal_category("Baseus GaN 65W Chargeur Rapide USB-C") == "tech"
+
+    # Bulletin formatting
+    items = [
+        {"title": "POCO X6 Pro 5G", "price_eur": 219.0, "channel_msg_id": 101},
+        {"title": "Redmi Note 13 Pro+", "price_eur": 289.0, "channel_msg_id": 102},
+        {"title": "OnePlus 12R", "price_eur": 450.0, "channel_msg_id": 103}
+    ]
+    bulletin = format_france_bulletin("smartphones", items)
+    assert "Sélection des Meilleurs Smartphones du Jour" in bulletin
+    assert "t.me/francedealsdz/101" in bulletin
+    assert "t.me/francedealsdz/102" in bulletin
+    assert "t.me/francedealsdz/103" in bulletin
+    assert "219.00€" in bulletin
+    assert "@francedealsdz" in bulletin
+

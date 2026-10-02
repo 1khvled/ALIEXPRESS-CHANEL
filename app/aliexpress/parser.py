@@ -506,14 +506,17 @@ def is_france_deal(text: str, url: str = "", country_info: Optional[str] = None)
     Detects if a deal or coupon is specifically intended for France/Europe and NOT Algeria.
     Prevents French offers from ever leaking into Algerian channel @DzAliexpress0.
     """
-    if country_info and "فرنسا" in str(country_info):
+    if country_info and any(k in str(country_info).lower() for k in ["فرنسا", "france", "fr"]):
         return True
     combined = f"{text or ''} {url or ''}".lower()
     france_keywords = [
         "فرنسا", "🇫🇷", "france", "shiptocountry=fr", "country=fr",
         "توصيل لفرنسا", "توصيل فرنسا", "livraison france", "vers la france",
         "pour la france", "france seulement", "خاص بفرنسا", "فرنسا فقط",
-        "فقط لفرنسا", "كودات فرنسا", "كوبونات فرنسا", "codes promo france"
+        "فقط لفرنسا", "كودات فرنسا", "كوبونات فرنسا", "codes promo france",
+        "@francedealsdz", "francedealsdz", "livraison : france",
+        "livraison en france", "livré en france", "livraison gratuite en france",
+        "bon plan france", "prix constaté"
     ]
     if any(k in combined for k in france_keywords):
         return True
@@ -595,7 +598,18 @@ def detect_restock_deal(text: str) -> bool:
     if has_urgency and has_stock:
         return True
 
-    # 3. Regex matches
+    # 3. French Restock Phrases
+    french_restock_phrases = [
+        "restock", "re-stock", "retour en stock", "de retour en stock",
+        "de nouveau disponible", "nouveau en stock", "remise en stock",
+        "stock limité", "quantité limitée", "quantités limitées",
+        "quelques pièces", "dernières pièces", "derniers stocks",
+        "dépêchez-vous", "faites vite", "avant rupture"
+    ]
+    if any(p in t for p in french_restock_phrases):
+        return True
+
+    # 4. Regex matches
     if re.search(r'حبات\s*(?:قلال|قليلة|قلا|معدودة)', t):
         return True
     if re.search(r'عود[ةه]\s*(?:ال(?:عرض|توفر)|توفر|سلع)', t):
@@ -604,6 +618,27 @@ def detect_restock_deal(text: str) -> bool:
         return True
 
     return False
+
+
+def detect_price_drop_deal(text: str) -> bool:
+    """
+    Detects if an incoming Telegram deal post mentions a price drop / price cut.
+    Works for both French and Algerian / Arabic deal channel styles.
+    """
+    if not text:
+        return False
+    t = text.lower()
+    price_drop_keywords = [
+        # French
+        "baisse de prix", "prix en baisse", "nouveau prix", "prix réduit", "prix cassé",
+        "prix en chute", "chute de prix", "encore moins cher", "prix encore plus bas",
+        "baisse supplémentaire", "prix en promo", "chute du prix", "baisse de tarif",
+        # Arabic / Algerian
+        "انخفاض السعر", "هبوط السعر", "نزل السعر", "طاح السعر", "طيحة فالسعر",
+        "سعر جديد منخفض", "سعر جديد أقل", "تخفيض إضافي", "تخفيض جديد", "زاد هبط",
+        "أرخص من قبل", "ارخص من قبل", "نقص السعر"
+    ]
+    return any(k in t for k in price_drop_keywords)
 
 
 def detect_channel_announcement(text: str) -> Tuple[bool, Optional[str], Optional[str]]:

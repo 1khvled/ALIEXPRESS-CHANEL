@@ -343,7 +343,10 @@ DASHBOARD_HTML = """<!DOCTYPE html>
           <!-- Content Details & Editable Caption -->
           <div class="flex-1 min-w-0 w-full space-y-3">
             <div class="flex flex-wrap items-center justify-between gap-2">
-              <span id="reformat-pid" class="text-xs font-mono bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-md border border-slate-700"></span>
+              <div class="flex items-center gap-2">
+                <span id="reformat-pid" class="text-xs font-mono bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-md border border-slate-700"></span>
+                <span id="reformat-target-channel-badge" class="text-xs font-bold px-2.5 py-0.5 rounded-md border border-emerald-500/20 bg-emerald-500/10 text-emerald-300">@DzAliexpress0</span>
+              </div>
               <div class="flex items-center gap-2">
                 <span id="reformat-price-usd" class="text-emerald-400 font-bold bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md text-xs"></span>
                 <span id="reformat-price-eur" class="text-sky-400 font-bold bg-sky-500/10 border border-sky-500/20 px-2.5 py-0.5 rounded-md text-xs hidden"></span>
@@ -354,7 +357,7 @@ DASHBOARD_HTML = """<!DOCTYPE html>
             <!-- Editable Caption Box -->
             <div>
               <div class="flex items-center justify-between mb-1">
-                <label class="text-[11px] font-bold text-slate-300">نص المنشور الجزائري المنسق (يمكنك التعديل عليه قبل النشر):</label>
+                <label id="reformat-caption-label" class="text-[11px] font-bold text-slate-300">نص المنشور المنسق (يمكنك التعديل عليه قبل النشر):</label>
                 <span class="text-[10px] text-slate-500 font-mono" id="reformat-char-count"></span>
               </div>
               <textarea 
@@ -378,7 +381,7 @@ DASHBOARD_HTML = """<!DOCTYPE html>
                 class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2 transition active:scale-95"
               >
                 <i class="fa-solid fa-paper-plane"></i>
-                <span>نشر في القناة الآن (@DzAliexpress0)</span>
+                <span id="reformat-publish-btn-text">نشر في القناة الآن (@DzAliexpress0)</span>
               </button>
             </div>
 
@@ -492,10 +495,14 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 
       <!-- Left 2 Cols: Posts Feed -->
       <div class="lg:col-span-2 space-y-4">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between flex-wrap gap-2">
           <div class="flex items-center gap-2">
-            <h3 class="font-bold text-base text-white">آخر العروض المنشورة في القناة</h3>
+            <h3 class="font-bold text-base text-white">آخر العروض المنشورة</h3>
             <span id="posts-badge" class="bg-slate-800 text-slate-400 text-xs px-2 py-0.5 rounded-full border border-slate-700">0</span>
+          </div>
+          <div class="flex items-center bg-slate-900 border border-slate-800 rounded-xl p-1 text-xs">
+            <button onclick="switchFeedChannel('@DzAliexpress0')" id="feed-btn-dz" class="px-2.5 py-1 rounded-lg font-bold bg-rose-600 text-white transition">🇩🇿 الجزائر</button>
+            <button onclick="switchFeedChannel('@francedealsdz')" id="feed-btn-fr" class="px-2.5 py-1 rounded-lg font-bold text-slate-400 hover:text-white transition">🇫🇷 فرنسا</button>
           </div>
           <span id="last-update" class="text-xs text-slate-500"></span>
         </div>
@@ -545,6 +552,14 @@ DASHBOARD_HTML = """<!DOCTYPE html>
                 <span class="text-[10px] text-slate-500">@DealscoutadminBOT</span>
               </div>
               <p class="text-[11px] text-slate-400">مخصص للأدمن فقط لفحص المنتجات، اختيار أفضل الصور، والنشر الفوري في القناة.</p>
+            </a>
+
+            <a href="https://t.me/francedealsdz" target="_blank" class="block p-3 rounded-xl bg-slate-900 hover:bg-slate-800/80 border border-slate-800 transition">
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-bold text-sky-400">🇫🇷 قناة الصفقات لفرنسا</span>
+                <span class="text-[10px] text-slate-500">@francedealsdz</span>
+              </div>
+              <p class="text-[11px] text-slate-400">قناة الصفقات والكوبونات الحصرية لفرنسا وأوروبا مع روابط مباشرة /e/.</p>
             </a>
           </div>
         </div>
@@ -638,6 +653,23 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 
     // Live Feed Loader
     let isLoading = false;
+    let currentFeedChannel = '@DzAliexpress0';
+
+    function switchFeedChannel(channel) {
+      currentFeedChannel = channel;
+      const btnDz = document.getElementById('feed-btn-dz');
+      const btnFr = document.getElementById('feed-btn-fr');
+      if (btnDz && btnFr) {
+        if (channel === '@DzAliexpress0') {
+          btnDz.className = 'px-2.5 py-1 rounded-lg font-bold bg-rose-600 text-white transition';
+          btnFr.className = 'px-2.5 py-1 rounded-lg font-bold text-slate-400 hover:text-white transition';
+        } else {
+          btnFr.className = 'px-2.5 py-1 rounded-lg font-bold bg-sky-600 text-white transition';
+          btnDz.className = 'px-2.5 py-1 rounded-lg font-bold text-slate-400 hover:text-white transition';
+        }
+      }
+      refreshDashboard();
+    }
 
     async function refreshDashboard() {
       if (isLoading) return;
@@ -656,7 +688,7 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 
       try {
         // Fetch posts
-        const res = await fetch('/api/channel-posts');
+        const res = await fetch('/api/channel-posts?channel=' + encodeURIComponent(currentFeedChannel));
         const data = await res.json();
 
         // Fetch live USDT rate
@@ -826,6 +858,24 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 
         if (data.ok) {
           currentReformattedDeal = data;
+          const isFrance = data.is_france || (data.target_channel === '@francedealsdz');
+          const badgeEl = document.getElementById('reformat-target-channel-badge');
+          const labelEl = document.getElementById('reformat-caption-label');
+          const btnTextEl = document.getElementById('reformat-publish-btn-text');
+
+          if (badgeEl) {
+            badgeEl.innerText = isFrance ? '🇫🇷 @francedealsdz (فرنسا)' : '🇩🇿 @DzAliexpress0 (الجزائر)';
+            badgeEl.className = isFrance 
+              ? 'text-xs font-bold px-2.5 py-0.5 rounded-md border border-sky-500/30 bg-sky-500/10 text-sky-300'
+              : 'text-xs font-bold px-2.5 py-0.5 rounded-md border border-emerald-500/30 bg-emerald-500/10 text-emerald-300';
+          }
+          if (labelEl) {
+            labelEl.innerText = isFrance ? 'نص المنشور المنسق لفرنسا (يمكنك التعديل عليه قبل النشر):' : 'نص المنشور الجزائري المنسق (يمكنك التعديل عليه قبل النشر):';
+          }
+          if (btnTextEl) {
+            btnTextEl.innerText = isFrance ? 'نشر في القناة الفرنسية (@francedealsdz)' : 'نشر في القناة الآن (@DzAliexpress0)';
+          }
+
           document.getElementById('reformat-pid').innerText = 'ID: ' + data.product_id;
           document.getElementById('reformat-price-usd').innerText = data.price ? '$' + data.price.toFixed(2) : 'سعر خاص';
           
@@ -909,7 +959,9 @@ DASHBOARD_HTML = """<!DOCTYPE html>
         return;
       }
 
-      if (!confirm('هل أنت متأكد من نشر هذا المنشور في القناة @DzAliexpress0 الآن؟')) {
+      const isFrance = currentReformattedDeal.is_france || (currentReformattedDeal.target_channel === '@francedealsdz');
+      const targetName = isFrance ? 'الفرنسية @francedealsdz' : '@DzAliexpress0';
+      if (!confirm(`هل أنت متأكد من نشر هذا المنشور في القناة ${targetName} الآن؟`)) {
         return;
       }
 
@@ -926,7 +978,8 @@ DASHBOARD_HTML = """<!DOCTYPE html>
             caption: caption,
             image_url: currentReformattedDeal.image_url,
             deal_link: currentReformattedDeal.deal_link,
-            price: currentReformattedDeal.price
+            price: currentReformattedDeal.price,
+            target_channel: currentReformattedDeal.target_channel || (isFrance ? '@francedealsdz' : '@DzAliexpress0')
           })
         });
         const data = await resp.json();
@@ -1174,9 +1227,10 @@ async def scout_endpoint(url: str = Query(...)):
     """In-Dashboard Deal Scout resolver with full algorithm caption and verified /e/ links."""
     try:
         from api.coin_bot import resolve_any_ali_link, generate_coin_discount_response, get_live_usdt_rate, ensure_affiliate
-        from app.aliexpress.parser import detect_deal_type
+        from app.aliexpress.parser import detect_deal_type, is_france_deal
         from app.aliexpress.affiliate import affiliate_service
         from app.ai.generator import caption_generator
+        from app.ai.generator_fr import france_caption_generator
         from app.config.settings import settings
 
         pid = await resolve_any_ali_link(url)
@@ -1197,17 +1251,29 @@ async def scout_endpoint(url: str = Query(...)):
         coin_aff_link = await affiliate_service.generate_affiliate_link(target_product_url, product_id=pid, deal_type="coin")
         preferred_link = coin_aff_link or res.get("coin_link") or direct_aff_link or res.get("product_link")
 
-        # Official preview caption
-        caption = await caption_generator.generate(
-            title=res.get("title") or "منتج مميز من AliExpress",
-            usd_price=price,
-            eur_price=eur_price,
-            affiliate_url=preferred_link,
-            has_points_discount=True,
-            country_info="كوريا 🇰🇷",
-            deal_type=deal_type,
-            raw_text=url
-        )
+        # Caption generation (France or Algeria)
+        is_fr = is_france_deal(url)
+        if is_fr:
+            caption = await france_caption_generator.generate(
+                title=res.get("title") or "AliExpress Deal",
+                usd_price=price,
+                eur_price=eur_price,
+                affiliate_url=preferred_link,
+                has_points_discount=True,
+                deal_type=deal_type,
+                raw_text=url
+            )
+        else:
+            caption = await caption_generator.generate(
+                title=res.get("title") or "منتج مميز من AliExpress",
+                usd_price=price,
+                eur_price=eur_price,
+                affiliate_url=preferred_link,
+                has_points_discount=True,
+                country_info="كوريا 🇰🇷",
+                deal_type=deal_type,
+                raw_text=url
+            )
 
         return {
             "ok": True,
@@ -1241,10 +1307,12 @@ async def api_reformat_deal(request: Request):
         from app.aliexpress.parser import (
             extract_prices, extract_coupon, extract_seller_coupon,
             extract_country_instruction, detect_deal_type, detect_restock_deal,
+            detect_price_drop_deal, is_france_deal,
             extract_clean_title, detect_points_discount
         )
         from app.aliexpress.affiliate import affiliate_service
         from app.ai.generator import caption_generator
+        from app.ai.generator_fr import france_caption_generator
         from app.config.settings import settings
 
         pid = await resolve_any_ali_link(raw_text)
@@ -1268,7 +1336,12 @@ async def api_reformat_deal(request: Request):
         country = extract_country_instruction(raw_text, title=title)
         deal_type = detect_deal_type(raw_text)
         is_restock = detect_restock_deal(raw_text)
+        is_price_drop = detect_price_drop_deal(raw_text)
         has_points = detect_points_discount(raw_text)
+
+        # Detect if deal is specifically for France channel
+        is_fr = is_france_deal(raw_text, country_info=country)
+        target_channel = "@francedealsdz" if is_fr else "@DzAliexpress0"
 
         # 2. Official /e/ affiliate link generation
         target_product_url = f"https://www.aliexpress.com/item/{pid}.html"
@@ -1281,20 +1354,37 @@ async def api_reformat_deal(request: Request):
             preferred = deal_info.get("bundle_link") if deal_type == "bundle" else (deal_info.get("coin_link") or deal_info.get("product_link"))
             deal_link = ensure_affiliate(preferred, fallback_link=deal_info.get("product_link"), pid=pid)
 
-        # 3. Authentic Algerian caption via caption_generator
-        caption = await caption_generator.generate(
-            title=title,
-            usd_price=price,
-            eur_price=eur_price,
-            affiliate_url=deal_link,
-            coupon_code=coupon,
-            seller_coupon=seller_coupon,
-            has_points_discount=has_points,
-            country_info=country,
-            is_restock=is_restock,
-            deal_type=deal_type,
-            raw_text=raw_text
-        )
+        # 3. Caption generation using target channel generator
+        if is_fr:
+            caption = await france_caption_generator.generate(
+                title=title,
+                usd_price=price,
+                eur_price=eur_price,
+                affiliate_url=deal_link,
+                coupon_code=coupon,
+                seller_coupon=seller_coupon,
+                has_points_discount=has_points,
+                is_price_drop=is_price_drop,
+                is_restock=is_restock,
+                deal_type=deal_type,
+                country_info=country,
+                raw_text=raw_text
+            )
+        else:
+            caption = await caption_generator.generate(
+                title=title,
+                usd_price=price,
+                eur_price=eur_price,
+                affiliate_url=deal_link,
+                coupon_code=coupon,
+                seller_coupon=seller_coupon,
+                has_points_discount=has_points,
+                country_info=country,
+                is_price_drop=is_price_drop,
+                is_restock=is_restock,
+                deal_type=deal_type,
+                raw_text=raw_text
+            )
 
         images = deal_info.get("images", [])
         main_img = deal_info.get("image_url")
@@ -1312,6 +1402,10 @@ async def api_reformat_deal(request: Request):
             "seller_coupon": seller_coupon,
             "deal_type": deal_type,
             "country": country,
+            "is_france": is_fr,
+            "target_channel": target_channel,
+            "is_price_drop": is_price_drop,
+            "is_restock": is_restock,
             "image_url": main_img,
             "images": images[:8],
             "deal_link": deal_link,
@@ -1323,7 +1417,7 @@ async def api_reformat_deal(request: Request):
 
 @app.post("/api/publish-deal")
 async def api_publish_deal(request: Request):
-    """Publish reformatted deal post directly to @DzAliexpress0."""
+    """Publish reformatted deal post directly to target channel (@DzAliexpress0 or @francedealsdz)."""
     try:
         data = await request.json()
         caption = (data.get("caption") or "").strip()
@@ -1331,32 +1425,52 @@ async def api_publish_deal(request: Request):
         deal_link = (data.get("deal_link") or "").strip()
         product_id = data.get("product_id", "")
         price = data.get("price")
+        target_ch = (data.get("target_channel") or "").strip()
 
         if not caption:
             return {"ok": False, "error": "نص المنشور فارغ"}
 
+        # Target channel auto-detection if not explicitly passed
+        if not target_ch:
+            if "@francedealsdz" in caption or "Livraison : France" in caption or "Livraison en France" in caption or "Livré en France" in caption:
+                target_ch = "@francedealsdz"
+            else:
+                target_ch = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+
+        is_france = (target_ch == "@francedealsdz")
+        target_clean = str(target_ch).lstrip("@")
+
         import os
-        from api.admin_bot import TARGET_CHANNEL_ID
         from api.coin_bot import TELEGRAM_BOT_TOKEN, ADMIN_BOT_TOKEN, ensure_affiliate
 
         token = os.getenv("TELEGRAM_BOT_TOKEN", "") or TELEGRAM_BOT_TOKEN or ADMIN_BOT_TOKEN
         if not token:
             return {"ok": False, "error": "توكن البوت غير مهيأ"}
 
-        target_ch = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
-        target_clean = str(target_ch).lstrip("@")
         tracked_deal_link = ensure_affiliate(deal_link, pid=product_id)
 
-        channel_reply_markup = {
-            "inline_keyboard": [
-                [
-                    {"text": "🪙 فتح بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"}
-                ],
-                [
-                    {"text": "📢 قناة الصفقات المعتمدة", "url": f"https://t.me/{target_clean}"}
+        if is_france:
+            channel_reply_markup = {
+                "inline_keyboard": [
+                    [
+                        {"text": "🛒 Voir le bon plan sur AliExpress ➔", "url": tracked_deal_link or "https://s.click.aliexpress.com/e/_oEN3d53"}
+                    ],
+                    [
+                        {"text": "🪙 Bot Pièces AliExpress (Coins)", "url": "https://t.me/Alilo07BOT"}
+                    ]
                 ]
-            ]
-        }
+            }
+        else:
+            channel_reply_markup = {
+                "inline_keyboard": [
+                    [
+                        {"text": "🪙 فتح بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"}
+                    ],
+                    [
+                        {"text": "📢 قناة الصفقات المعتمدة", "url": f"https://t.me/{target_clean}"}
+                    ]
+                ]
+            }
 
         api_url = f"https://api.telegram.org/bot{token}"
         async with httpx.AsyncClient(timeout=15.0) as client:
@@ -1385,19 +1499,34 @@ async def api_publish_deal(request: Request):
             res = resp.json()
             if resp.status_code == 200 and res.get("ok"):
                 msg_id = res["result"]["message_id"]
-                try:
-                    from app.publisher.state_tracker import record_post_published
-                    clean_title = caption.splitlines()[0] if caption else ""
-                    record_post_published(
-                        channel_username="dashboard_admin",
-                        message_id=msg_id,
-                        product_id=str(product_id) if product_id else None,
-                        title=clean_title,
-                        channel_msg_id=msg_id,
-                        price=price
-                    )
-                except Exception:
-                    pass
+                clean_title = caption.splitlines()[0] if caption else ""
+
+                if is_france:
+                    try:
+                        from scripts.post_france_deals import load_france_state, record_france_deal_published
+                        f_state = load_france_state()
+                        record_france_deal_published(
+                            state=f_state,
+                            product_id=str(product_id) if product_id else None,
+                            title=clean_title,
+                            price_eur=price,
+                            channel_msg_id=msg_id
+                        )
+                    except Exception:
+                        pass
+                else:
+                    try:
+                        from app.publisher.state_tracker import record_post_published
+                        record_post_published(
+                            channel_username="dashboard_admin",
+                            message_id=msg_id,
+                            product_id=str(product_id) if product_id else None,
+                            title=clean_title,
+                            channel_msg_id=msg_id,
+                            price=price
+                        )
+                    except Exception:
+                        pass
 
                 return {
                     "ok": True,
@@ -1422,12 +1551,13 @@ async def health():
 
 
 @app.get("/api/channel-posts")
-async def channel_posts():
-    """Fetch recent posts from @DzAliexpress0 via public web preview."""
+async def channel_posts(channel: str = "@DzAliexpress0"):
+    """Fetch recent posts from @DzAliexpress0 or @francedealsdz via public web preview."""
     try:
+        clean_ch = channel.replace("@", "").strip() or "DzAliexpress0"
         async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
             resp = await client.get(
-                "https://t.me/s/DzAliexpress0",
+                f"https://t.me/s/{clean_ch}",
                 headers={"User-Agent": "Mozilla/5.0 (compatible; DealScoutBot/2.0)"}
             )
 

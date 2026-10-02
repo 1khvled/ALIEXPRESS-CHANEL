@@ -256,6 +256,9 @@ class DealCaptionGenerator:
         if is_restock:
             lines.append("<blockquote>⚡ <b>تنبيه:</b> العرض رجع توفر بكمية محدودة.. سارع قبل النفاذ! 🏃‍♂️💨</blockquote>")
 
+        if is_price_drop:
+            lines.append("<blockquote>📉 <b>انخفاض السعر:</b> السعر نزل أكثر من قبل، لافار حقيقية استغلها الآن! 🔥</blockquote>")
+
         # 2. Country recommendation (exact Algerian Telegram style in blockquote)
         if country_info:
             c_str = str(country_info).lower()
@@ -343,6 +346,10 @@ class DealCaptionGenerator:
         if not is_restock and raw_text:
             from app.aliexpress.parser import detect_restock_deal
             is_restock = detect_restock_deal(raw_text)
+
+        if not is_price_drop and raw_text:
+            from app.aliexpress.parser import detect_price_drop_deal
+            is_price_drop = detect_price_drop_deal(raw_text)
 
         if coupon_list and len(coupon_list) >= 2:
             return self.format_coupon_list(coupon_list, affiliate_url)

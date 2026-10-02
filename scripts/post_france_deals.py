@@ -60,10 +60,91 @@ def load_france_state() -> Dict:
     return {
         "published_post_keys": [],
         "published_product_ids": [],
+        "published_deals_history": {},
         "monitored_channels": {},
         "last_run_time": 0.0,
         "last_deal_post_time": 0.0
     }
+
+def is_recent_france_duplicate(
+    product_id: Optional[str],
+    current_price_eur: Optional[float] = None,
+    title: str = "",
+    raw_text: str = "",
+    cooldown_hours: float = 24.0,
+    state: Optional[Dict] = None
+) -> Tuple[bool, Optional[str], bool]:
+    """
+    Evaluates whether a France deal is a recent duplicate or qualifies for an exception:
+    1. Restock / Return Exception: If seller restocked, always allow re-posting.
+    2. Price-Drop Exception: If price dropped by >= 4% or >= 3€, allow with is_price_drop=True.
+    3. 24h Cooldown: If older than cooldown_hours, allow re-posting fresh.
+    """
+    if not product_id or str(product_id).strip() == "":
+        return False, None, False
+
+    pid = str(product_id).strip()
+
+    # 1. Restock Exception
+    from app.aliexpress.parser import detect_restock_deal
+    if detect_restock_deal(raw_text):
+        return False, "Restock exception: return/restock deal", False
+
+    if state is None:
+        state = load_france_state()
+
+    deals_history = state.get("published_deals_history", {})
+    record = None
+    if isinstance(deals_history, dict):
+        record = deals_history.get(pid)
+    elif isinstance(deals_history, list):
+        for item in reversed(deals_history):
+            if str(item.get("product_id")) == pid:
+                record = item
+                break
+
+    if not record:
+        return False, None, False
+
+    prev_time = record.get("timestamp", 0.0)
+    prev_price = record.get("price_eur")
+    now = datetime.now(timezone.utc).timestamp()
+    age_hours = (now - prev_time) / 3600.0
+
+    # 2. Cooldown check
+    if age_hours < cooldown_hours:
+        # Check price drop exception
+        if current_price_eur and prev_price and prev_price > 0:
+            if current_price_eur <= (prev_price * 0.96) or (current_price_eur <= prev_price - 3.0):
+                return False, f"Price drop exception: {prev_price}€ -> {current_price_eur}€", True
+
+        return True, f"Product {pid} already posted to France {age_hours:.1f}h ago (< {cooldown_hours}h cooldown)", False
+
+    return False, None, False
+
+def record_france_deal_published(
+    state: Dict,
+    product_id: Optional[str],
+    title: str,
+    price_eur: Optional[float],
+    channel_msg_id: Optional[int],
+    post_key: Optional[str] = None
+):
+    now = datetime.now(timezone.utc).timestamp()
+    if post_key:
+        state.setdefault("published_post_keys", []).append(post_key)
+        state["published_post_keys"] = list(dict.fromkeys(state["published_post_keys"]))[-1000:]
+    if product_id:
+        pid = str(product_id).strip()
+        state.setdefault("published_product_ids", []).append(pid)
+        state["published_product_ids"] = list(dict.fromkeys(state["published_product_ids"]))[-1000:]
+        state.setdefault("published_deals_history", {})[pid] = {
+            "timestamp": now,
+            "title": title,
+            "price_eur": price_eur,
+            "channel_msg_id": channel_msg_id
+        }
+    state["last_deal_post_time"] = now
 
 def save_france_state(state: Dict):
     FRANCE_STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
@@ -171,10 +252,23 @@ async def publish_extracted_deal_to_france(
         logger.info(f"[FRANCE ROUTER] Skipping already published post key: {post_key}")
         return False
 
+    from app.aliexpress.parser import detect_restock_deal
+    is_restock = detect_restock_deal(raw_text)
+
     if extracted.product_id and not extracted.is_coupon_list:
-        if extracted.product_id in published_pids:
-            logger.info(f"[FRANCE ROUTER] Duplicate product ID blocked: {extracted.product_id}")
+        is_dup, dup_reason, is_price_drop = is_recent_france_duplicate(
+            product_id=extracted.product_id,
+            current_price_eur=extracted.current_price_eur,
+            title=extracted.title or "",
+            raw_text=raw_text,
+            cooldown_hours=24.0,
+            state=state
+        )
+        if is_dup:
+            logger.info(f"[FRANCE ROUTER] Duplicate product ID blocked: {dup_reason}")
             return False
+    else:
+        is_price_drop = False
 
     # Check category whitelist if not coupon list
     if not extracted.is_coupon_list:
@@ -208,7 +302,8 @@ async def publish_extracted_deal_to_france(
         seller_coupon=extracted.seller_coupon,
         has_points_discount=extracted.has_points_discount,
         coupon_list=extracted.coupon_list if extracted.is_coupon_list else None,
-        is_price_drop=False,
+        is_price_drop=is_price_drop,
+        is_restock=is_restock,
         deal_type=deal_type,
         country_info=getattr(extracted, 'country_info', None),
         raw_text=raw_text
@@ -254,13 +349,14 @@ async def publish_extracted_deal_to_france(
     )
 
     if success:
-        if post_key:
-            published_keys.add(post_key)
-        if extracted.product_id:
-            published_pids.add(extracted.product_id)
-        state["published_post_keys"] = list(published_keys)[-1000:]
-        state["published_product_ids"] = list(published_pids)[-1000:]
-        state["last_deal_post_time"] = time.time()
+        record_france_deal_published(
+            state=state,
+            product_id=extracted.product_id,
+            title=extracted.title or "Deal",
+            price_eur=extracted.current_price_eur,
+            channel_msg_id=channel_msg_id,
+            post_key=post_key
+        )
         save_france_state(state)
         print(f"  [FRANCE ROUTED PUBLISHED] Msg #{channel_msg_id}: {extracted.title}")
 
@@ -279,7 +375,7 @@ async def publish_extracted_deal_to_france(
         logger.warning(f"[FRANCE ROUTER] Publish to {TARGET_FRANCE_CHANNEL} failed: {err}")
         return False
 
-async def collect_and_post_france_deals(force: bool = False) -> int:
+async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: bool = False) -> int:
     print("=" * 70)
     print("ALIEXPRESS FRANCE DEALS PUBLISHER (STRICT QUALITY & FRESHNESS)")
     print(f"Target Channel: {TARGET_FRANCE_CHANNEL}")
@@ -469,13 +565,26 @@ async def collect_and_post_france_deals(force: bool = False) -> int:
                         max_processed_id = max(max_processed_id, msg_id)
                         continue
 
-                # 6. Deduplicate by product ID within France channel
+                # 6. Deduplicate by product ID within France channel (24h cooldown, restock & price drop exceptions)
+                from app.aliexpress.parser import detect_restock_deal
+                is_restock = detect_restock_deal(raw_text)
+
                 if extracted.product_id and not extracted.is_coupon_list:
-                    if extracted.product_id in published_pids:
-                        print(f"  [DUPLICATE BLOCKED] Product {extracted.product_id} already published in France channel")
+                    is_dup, dup_reason, is_price_drop = is_recent_france_duplicate(
+                        product_id=extracted.product_id,
+                        current_price_eur=extracted.current_price_eur,
+                        title=extracted.title or "",
+                        raw_text=raw_text,
+                        cooldown_hours=24.0,
+                        state=state
+                    )
+                    if is_dup:
+                        print(f"  [DUPLICATE BLOCKED] {dup_reason}")
                         published_keys.add(post_key)
                         max_processed_id = max(max_processed_id, msg_id)
                         continue
+                else:
+                    is_price_drop = False
 
                 # 7. Official Studio Photo ONLY (or competitor's promo banner for coupons)
                 img_url = extracted.image_url or source_photo_url
@@ -507,7 +616,8 @@ async def collect_and_post_france_deals(force: bool = False) -> int:
                     seller_coupon=extracted.seller_coupon,
                     has_points_discount=extracted.has_points_discount,
                     coupon_list=extracted.coupon_list if extracted.is_coupon_list else None,
-                    is_price_drop=False,
+                    is_price_drop=is_price_drop,
+                    is_restock=is_restock,
                     deal_type=deal_type,
                     country_info=getattr(extracted, 'country_info', None),
                     raw_text=raw_text
@@ -556,8 +666,14 @@ async def collect_and_post_france_deals(force: bool = False) -> int:
                 if success:
                     published_count += 1
                     published_keys.add(post_key)
-                    if extracted.product_id:
-                        published_pids.add(extracted.product_id)
+                    record_france_deal_published(
+                        state=state,
+                        product_id=extracted.product_id,
+                        title=extracted.title or "Deal",
+                        price_eur=extracted.current_price_eur,
+                        channel_msg_id=channel_msg_id,
+                        post_key=post_key
+                    )
                     max_processed_id = max(max_processed_id, msg_id)
                     print(f"  [PUBLISHED #{published_count} to {TARGET_FRANCE_CHANNEL}] Msg #{channel_msg_id}: {extracted.title}")
 
@@ -598,8 +714,21 @@ async def collect_and_post_france_deals(force: bool = False) -> int:
     print("\n" + "=" * 70)
     print(f"FRANCE RUN FINISHED: Published {published_count} deals to {TARGET_FRANCE_CHANNEL}!")
     print("=" * 70)
+
+    # 10. Daily Tajmi3at / Compilations (~10:00 PM CET or forced)
+    try:
+        from app.publisher.regrouper_fr import check_and_publish_france_regrouped_bulletins
+        bulletins = await check_and_publish_france_regrouped_bulletins(force=force_tajmi3at)
+        if bulletins:
+            print(f"\n[FRANCE ROUNDUP] Published {len(bulletins)} daily roundup bulletin(s):")
+            for b in bulletins:
+                print(f"  - {b['category']}: {b['count']} items -> Msg #{b['message_id']}")
+    except Exception as e:
+        print(f"[FRANCE ROUNDUP ERROR] {e}")
+
     return published_count
 
 if __name__ == "__main__":
     force_run = "--force" in sys.argv or "-f" in sys.argv
-    asyncio.run(collect_and_post_france_deals(force=force_run))
+    force_tajmi3at = "--tajmi3at" in sys.argv or "--force-tajmi3at" in sys.argv
+    asyncio.run(collect_and_post_france_deals(force=force_run, force_tajmi3at=force_tajmi3at))

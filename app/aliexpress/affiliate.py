@@ -183,4 +183,6 @@ class AffiliateService:
         """Converts raw/canonical AliExpress URL to our verified affiliate URL on aliexpress.com domain."""
         return await self.provider.generate_link(product_url, product_id, deal_type=deal_type)
 
+    generate_affiliate_link = create_affiliate_link
+
 affiliate_service = AffiliateService()
