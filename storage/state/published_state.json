@@ -94,7 +94,8 @@
     "1005012574108028",
     "1005008599340405",
     "1005007572968437",
-    "1005009120957437"
+    "1005009120957437",
+    "1005012922578845"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -195,7 +196,8 @@
     "1005012574108028": 1790967954.6642368,
     "1005008599340405": 1790967962.6418507,
     "1005007572968437": 1790969442.7810974,
-    "1005009120957437": 1790970941.2570727
+    "1005009120957437": 1790970941.2570727,
+    "1005012922578845": 1790971257.8109736
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -287,7 +289,8 @@
     "HONOR  X80 PRO MAX (8/128)",
     "WALRAM Sata SSD 512GB",
     "Lenovo GM2 Pro TWS",
-    "ASROCK B850M X WiFi"
+    "ASROCK B850M X WiFi",
+    "REALME 15 5G (12/256)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -382,7 +385,8 @@
     "HONOR  X80 PRO MAX (8/128)": 1790967954.6642368,
     "WALRAM Sata SSD 512GB": 1790967962.6418507,
     "Lenovo GM2 Pro TWS": 1790969442.7810974,
-    "ASROCK B850M X WiFi": 1790970941.2570727
+    "ASROCK B850M X WiFi": 1790970941.2570727,
+    "REALME 15 5G (12/256)": 1790971257.8109736
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -595,15 +599,20 @@
     "zedstoreonline:38524",
     "megaphonna:8198",
     "lodydeals:45402",
-    "lodydeals:45403"
+    "lodydeals:45403",
+    "bnddeals:50790",
+    "megaphonna:8199",
+    "megaphonna:8200",
+    "megaphonna:8201",
+    "megaphonna:8202"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790970941.2570727,
+  "last_run_time": 1790971257.8109736,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32685,
-      "last_check_time": 1790970945.0680254
+      "last_check_time": 1790971262.29191
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -611,11 +620,11 @@
     },
     "lodydeals": {
       "last_message_id": 45403,
-      "last_check_time": 1790970943.2668712
+      "last_check_time": 1790971245.5344832
     },
     "bnddeals": {
-      "last_message_id": 50789,
-      "last_check_time": 1790970944.4205744
+      "last_message_id": 50790,
+      "last_check_time": 1790971248.5676775
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -627,11 +636,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790970943.7511027
+      "last_check_time": 1790971245.936178
     },
     "megaphonna": {
-      "last_message_id": 8198,
-      "last_check_time": 1790970944.7302308
+      "last_message_id": 8202,
+      "last_check_time": 1790971261.5923924
     }
   },
   "published_product_prices": {
@@ -1624,6 +1633,16 @@
       "price": 189.21,
       "timestamp": 1790970941.2570727,
       "status": "ACTIVE"
+    },
+    "megaphonna:8200": {
+      "channel_msg_id": 419,
+      "product_id": "1005012922578845",
+      "title": "REALME 15 5G (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8200,
+      "price": 214.9,
+      "timestamp": 1790971257.8109736,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1632,7 +1651,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790970941.259573,
+    "last_deal_post_time": 1790971257.8135383,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
