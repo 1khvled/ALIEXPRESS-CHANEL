@@ -102,7 +102,9 @@
     "1005010178295650",
     "1005006861002512",
     "1005012285327063",
-    "1005006581583862"
+    "1005006581583862",
+    "1005012816171978",
+    "1005009834132291"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -211,7 +213,9 @@
     "1005010178295650": 1790973057.7979915,
     "1005006861002512": 1790974856.4783835,
     "1005012285327063": 1790976041.1098428,
-    "1005006581583862": 1790976351.072879
+    "1005006581583862": 1790976351.072879,
+    "1005012816171978": 1790976952.8889163,
+    "1005009834132291": 1790976959.5801246
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -313,7 +317,9 @@
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
     "HAYLOU Watch Faro",
     "HAYLOU S30",
-    "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise"
+    "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise",
+    "VIVO Y600 Pro 8/128GB",
+    "EasySMX X05 Pro Wireless Gamepad Gaming Controller"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -418,7 +424,9 @@
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router": 1790974856.4783835,
     "HAYLOU Watch Faro": 1790976041.1098428,
     "HAYLOU S30": 1790976351.072879,
-    "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise": 1790976654.120254
+    "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise": 1790976654.120254,
+    "VIVO Y600 Pro 8/128GB": 1790976952.8889163,
+    "EasySMX X05 Pro Wireless Gamepad Gaming Controller": 1790976959.5801246
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -657,27 +665,29 @@
     "aniscoupons:32689",
     "aniscoupons:32690",
     "bnddeals:50795",
-    "aniscoupons:32691"
+    "aniscoupons:32691",
+    "lodydeals:45412",
+    "aniscoupons:32692"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790976654.120254,
+  "last_run_time": 1790976959.5801246,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32691,
-      "last_check_time": 1790976656.1725209
+      "last_message_id": 32692,
+      "last_check_time": 1790976961.5864594
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45411,
-      "last_check_time": 1790976641.938618
+      "last_message_id": 45412,
+      "last_check_time": 1790976954.896513
     },
     "bnddeals": {
       "last_message_id": 50795,
-      "last_check_time": 1790976648.200542
+      "last_check_time": 1790976956.2444885
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -689,11 +699,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790976642.3679488
+      "last_check_time": 1790976955.6143456
     },
     "megaphonna": {
       "last_message_id": 8204,
-      "last_check_time": 1790976648.8507993
+      "last_check_time": 1790976956.5738056
     }
   },
   "published_product_prices": {
@@ -780,7 +790,9 @@
     "1005008901941749": 1.2,
     "1005006861002512": 13.5,
     "1005012285327063": 19.5,
-    "1005006581583862": 25.0
+    "1005006581583862": 25.0,
+    "1005012816171978": 273.46,
+    "1005009834132291": 23.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1822,6 +1834,26 @@
       "price": 3.7,
       "timestamp": 1790976654.120254,
       "status": "ACTIVE"
+    },
+    "lodydeals:45412": {
+      "channel_msg_id": 432,
+      "product_id": "1005012816171978",
+      "title": "VIVO Y600 Pro 8/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45412,
+      "price": 273.46,
+      "timestamp": 1790976952.8889163,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32692": {
+      "channel_msg_id": 433,
+      "product_id": "1005009834132291",
+      "title": "EasySMX X05 Pro Wireless Gamepad Gaming Controller",
+      "channel": "aniscoupons",
+      "source_msg_id": 32692,
+      "price": 23.0,
+      "timestamp": 1790976959.5801246,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1830,7 +1862,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790976654.1279309,
+    "last_deal_post_time": 1790976959.5818288,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1923,7 +1955,9 @@
     "1005012881256093": "aniscoupons",
     "1005006861002512": "bnddeals",
     "1005012285327063": "aniscoupons",
-    "1005006581583862": "aniscoupons"
+    "1005006581583862": "aniscoupons",
+    "1005012816171978": "lodydeals",
+    "1005009834132291": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2000,7 +2034,9 @@
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router": "bnddeals",
     "HAYLOU Watch Faro": "aniscoupons",
     "HAYLOU S30": "aniscoupons",
-    "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise": "aniscoupons"
+    "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise": "aniscoupons",
+    "VIVO Y600 Pro 8/128GB": "lodydeals",
+    "EasySMX X05 Pro Wireless Gamepad Gaming Controller": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
