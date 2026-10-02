@@ -97,7 +97,9 @@
     "1005009120957437",
     "1005012922578845",
     "1005005652871847",
-    "1005012554205120"
+    "1005012554205120",
+    "1005008901941749",
+    "1005010178295650"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -201,7 +203,9 @@
     "1005009120957437": 1790970941.2570727,
     "1005012922578845": 1790971257.8109736,
     "1005005652871847": 1790971842.421131,
-    "1005012554205120": 1790971850.2217886
+    "1005012554205120": 1790971850.2217886,
+    "1005008901941749": 1790973051.970508,
+    "1005010178295650": 1790973057.7979915
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -298,7 +302,8 @@
     "Lenovo XT88 TWS",
     "SMAILWOLF M3 PAW3311",
     "UGREEN 4K 8MP 2Mics Webcam",
-    "Attack Shark X1"
+    "Attack Shark X1",
+    "KUULAA USB C Cable"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -352,7 +357,7 @@
     "Zeblaze Btalk PRO Multiple": 1790941174.1965158,
     "KZ EDX Lite Dynamic": 1790941179.7256634,
     "HILDA Laser Rangefinder": 1790941186.791633,
-    "Monster Maxstar MQT52": 1790941192.9120486,
+    "Monster Maxstar MQT52": 1790973057.7979915,
     "QCY T13 True Wireless Earbuds Bluetooth 5.1 Earphones 7.2mm Drivers with": 1790941202.9035249,
     "Blackview Zeno 10 5G  8/128": 1790941207.5310047,
     "Honor Power 2  12/256": 1790941214.6756065,
@@ -398,7 +403,8 @@
     "Lenovo XT88 TWS": 1790971842.421131,
     "SMAILWOLF M3 PAW3311": 1790971850.2217886,
     "UGREEN 4K 8MP 2Mics Webcam": 1790972149.2892344,
-    "Attack Shark X1": 1790972445.6591878
+    "Attack Shark X1": 1790972445.6591878,
+    "KUULAA USB C Cable": 1790973051.970508
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -623,27 +629,30 @@
     "lodydeals:45406",
     "bnddeals:50792",
     "lodydeals:45407",
-    "lodydeals:45408"
+    "lodydeals:45408",
+    "lodydeals:45409",
+    "lodydeals:45410",
+    "aniscoupons:32686"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790972445.6591878,
+  "last_run_time": 1790973057.7979915,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32685,
-      "last_check_time": 1790972741.4736083
+      "last_message_id": 32686,
+      "last_check_time": 1790973065.1642332
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45408,
-      "last_check_time": 1790972739.7499905
+      "last_message_id": 45410,
+      "last_check_time": 1790973059.8063867
     },
     "bnddeals": {
       "last_message_id": 50792,
-      "last_check_time": 1790972740.736371
+      "last_check_time": 1790973061.2312489
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -655,11 +664,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790972740.1311007
+      "last_check_time": 1790973060.4950118
     },
     "megaphonna": {
       "last_message_id": 8202,
-      "last_check_time": 1790972741.108404
+      "last_check_time": 1790973061.659998
     }
   },
   "published_product_prices": {
@@ -704,7 +713,7 @@
     "1005012184442621": 12.35,
     "1005006631309573": 3.69,
     "1005005648888450": 10.09,
-    "1005010178295650": 6.4,
+    "1005010178295650": 13.87,
     "1005006117094928": 32.2,
     "1005006603602562": 181.0,
     "1005010721042860": 376.0,
@@ -742,7 +751,8 @@
     "1005007572968437": 17.47,
     "1005009120957437": 189.21,
     "1005005652871847": 15.16,
-    "1005012554205120": 21.67
+    "1005012554205120": 21.67,
+    "1005008901941749": 1.2
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1704,6 +1714,26 @@
       "price": 25.06,
       "timestamp": 1790972445.6591878,
       "status": "ACTIVE"
+    },
+    "lodydeals:45409": {
+      "channel_msg_id": 424,
+      "product_id": "1005008901941749",
+      "title": "KUULAA USB C Cable",
+      "channel": "lodydeals",
+      "source_msg_id": 45409,
+      "price": 1.2,
+      "timestamp": 1790973051.970508,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45410": {
+      "channel_msg_id": 425,
+      "product_id": "1005010178295650",
+      "title": "Monster Maxstar MQT52",
+      "channel": "lodydeals",
+      "source_msg_id": 45410,
+      "price": 13.87,
+      "timestamp": 1790973057.7979915,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1712,7 +1742,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790972445.661845,
+    "last_deal_post_time": 1790973057.800691,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1732,7 +1762,7 @@
     "1005012184442621": "lodydeals",
     "1005006631309573": "lodydeals",
     "1005005648888450": "lodydeals",
-    "1005010178295650": "aniscoupons",
+    "1005010178295650": "lodydeals",
     "1005006117094928": "zedstoreonline",
     "1005006603602562": "zedstoreonline",
     "1005010721042860": "zedstoreonline",
@@ -1800,7 +1830,8 @@
     "1005005652871847": "lodydeals",
     "1005012554205120": "lodydeals",
     "1005009234854371": "lodydeals",
-    "1005008829227075": "lodydeals"
+    "1005008829227075": "lodydeals",
+    "1005008901941749": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1871,7 +1902,8 @@
     "Lenovo XT88 TWS": "lodydeals",
     "SMAILWOLF M3 PAW3311": "lodydeals",
     "UGREEN 4K 8MP 2Mics Webcam": "lodydeals",
-    "Attack Shark X1": "lodydeals"
+    "Attack Shark X1": "lodydeals",
+    "KUULAA USB C Cable": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
