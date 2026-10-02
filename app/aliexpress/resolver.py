@@ -77,10 +77,23 @@ class UrlResolver:
                 final_url = str(response.url)
                 status_code = response.status_code
 
-                # Extract product id from the final destination URL
-                found_id = extract_product_id_from_url(final_url)
+                # 1. Check all intermediate redirect URLs & Location headers in history
+                found_id = None
+                for h in response.history:
+                    found_id = extract_product_id_from_url(str(h.url))
+                    if found_id:
+                        break
+                    h_loc = h.headers.get("location") or h.headers.get("Location")
+                    if h_loc:
+                        found_id = extract_product_id_from_url(h_loc)
+                        if found_id:
+                            break
 
-                # Sometimes AliExpress mobile page contains canonical link in html or JS redirect
+                # 2. Extract product id from the final destination URL
+                if not found_id:
+                    found_id = extract_product_id_from_url(final_url)
+
+                # 3. Sometimes AliExpress mobile page contains canonical link in html or JS redirect
                 if not found_id and response.text:
                     m_html = re.search(r'href=[\'"][^\'"]*aliexpress\.com/item/(\d{10,18})\.html', response.text[:30000], re.IGNORECASE)
                     if m_html:

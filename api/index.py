@@ -262,6 +262,7 @@ DASHBOARD_HTML = """<!DOCTYPE html>
             <h4 id="scout-title" class="font-bold text-sm text-white line-clamp-2"></h4>
             <div class="flex flex-wrap items-center gap-3 text-xs">
               <span id="scout-price-usd" class="text-emerald-400 font-bold bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-md"></span>
+              <span id="scout-price-eur" class="text-sky-400 font-bold bg-sky-500/10 border border-sky-500/20 px-2 py-0.5 rounded-md hidden"></span>
               <span id="scout-price-dzd" class="text-amber-400 font-bold bg-amber-500/10 border border-amber-500/20 px-2 py-0.5 rounded-md"></span>
               <span id="scout-pid" class="text-slate-400 text-[11px]"></span>
             </div>
@@ -274,6 +275,10 @@ DASHBOARD_HTML = """<!DOCTYPE html>
                 <i class="fa-solid fa-coins text-amber-300"></i>
                 <span>رابط تخفيض العملات</span>
               </a>
+              <button onclick="copyScoutToReformatter()" class="bg-gradient-to-r from-amber-600 to-rose-600 hover:from-amber-500 hover:to-rose-500 text-white text-xs px-3 py-1.5 rounded-lg flex items-center gap-1.5 font-bold transition active:scale-95 shadow">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <span>توليد ونشر المنشور ⚡</span>
+              </button>
             </div>
           </div>
         </div>
@@ -341,6 +346,7 @@ DASHBOARD_HTML = """<!DOCTYPE html>
               <span id="reformat-pid" class="text-xs font-mono bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-md border border-slate-700"></span>
               <div class="flex items-center gap-2">
                 <span id="reformat-price-usd" class="text-emerald-400 font-bold bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md text-xs"></span>
+                <span id="reformat-price-eur" class="text-sky-400 font-bold bg-sky-500/10 border border-sky-500/20 px-2.5 py-0.5 rounded-md text-xs hidden"></span>
                 <span id="reformat-price-dzd" class="text-amber-400 font-bold bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md text-xs"></span>
               </div>
             </div>
@@ -719,6 +725,8 @@ DASHBOARD_HTML = """<!DOCTYPE html>
     }
 
     // In-Dashboard Deal Scout Action
+    let lastScoutedDeal = null;
+
     async function scoutDeal() {
       const input = document.getElementById('scout-url-input');
       const btn = document.getElementById('scout-submit-btn');
@@ -739,8 +747,20 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 
         if (data.ok && data.deal) {
           const d = data.deal;
+          lastScoutedDeal = d;
           document.getElementById('scout-title').innerText = d.title || 'منتج مميز من AliExpress';
           document.getElementById('scout-price-usd').innerText = d.price ? '$' + d.price.toFixed(2) : 'سعر مميز';
+          
+          const scoutEurEl = document.getElementById('scout-price-eur');
+          if (scoutEurEl) {
+            if (d.price_eur) {
+              scoutEurEl.innerText = d.price_eur.toFixed(2) + '€';
+              scoutEurEl.classList.remove('hidden');
+            } else {
+              scoutEurEl.classList.add('hidden');
+            }
+          }
+
           document.getElementById('scout-price-dzd').innerText = d.price_dzd ? '~ ' + d.price_dzd.toLocaleString() + ' دج' : '';
           document.getElementById('scout-pid').innerText = 'ID: ' + d.product_id;
           
@@ -760,6 +780,20 @@ DASHBOARD_HTML = """<!DOCTYPE html>
       } finally {
         btn.disabled = false;
         btn.innerHTML = '<i class="fa-solid fa-wand-magic-sparkles"></i><span>فحص العرض</span>';
+      }
+    }
+
+    function copyScoutToReformatter() {
+      if (!lastScoutedDeal) return;
+      const refInput = document.getElementById('reformat-input');
+      if (refInput) {
+        let textToFill = lastScoutedDeal.product_link || lastScoutedDeal.coin_link || '';
+        if (lastScoutedDeal.price) {
+          textToFill += `\nالسعر: $${lastScoutedDeal.price}`;
+        }
+        refInput.value = textToFill;
+        refInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        reformatTelegramPost();
       }
     }
 
@@ -794,6 +828,17 @@ DASHBOARD_HTML = """<!DOCTYPE html>
           currentReformattedDeal = data;
           document.getElementById('reformat-pid').innerText = 'ID: ' + data.product_id;
           document.getElementById('reformat-price-usd').innerText = data.price ? '$' + data.price.toFixed(2) : 'سعر خاص';
+          
+          const refEurEl = document.getElementById('reformat-price-eur');
+          if (refEurEl) {
+            if (data.price_eur) {
+              refEurEl.innerText = data.price_eur.toFixed(2) + '€';
+              refEurEl.classList.remove('hidden');
+            } else {
+              refEurEl.classList.add('hidden');
+            }
+          }
+
           document.getElementById('reformat-price-dzd').innerText = data.price_dzd ? '~ ' + data.price_dzd.toLocaleString() + ' دج' : '';
 
           const captionArea = document.getElementById('reformat-caption');
@@ -880,7 +925,8 @@ DASHBOARD_HTML = """<!DOCTYPE html>
             product_id: currentReformattedDeal.product_id,
             caption: caption,
             image_url: currentReformattedDeal.image_url,
-            deal_link: currentReformattedDeal.deal_link
+            deal_link: currentReformattedDeal.deal_link,
+            price: currentReformattedDeal.price
           })
         });
         const data = await resp.json();
@@ -1125,9 +1171,14 @@ async def update_schedule(request: Request):
 
 @app.get("/api/scout")
 async def scout_endpoint(url: str = Query(...)):
-    """In-Dashboard Deal Scout resolver."""
+    """In-Dashboard Deal Scout resolver with full algorithm caption and verified /e/ links."""
     try:
-        from api.coin_bot import resolve_any_ali_link, generate_coin_discount_response, get_live_usdt_rate
+        from api.coin_bot import resolve_any_ali_link, generate_coin_discount_response, get_live_usdt_rate, ensure_affiliate
+        from app.aliexpress.parser import detect_deal_type
+        from app.aliexpress.affiliate import affiliate_service
+        from app.ai.generator import caption_generator
+        from app.config.settings import settings
+
         pid = await resolve_any_ali_link(url)
         if not pid:
             return {"ok": False, "error": "لم يتم التعرف على كود المنتج"}
@@ -1135,7 +1186,28 @@ async def scout_endpoint(url: str = Query(...)):
         res = await generate_coin_discount_response(pid, raw_user_text=url)
         rate = await get_live_usdt_rate()
         price = res.get("price") or 0.0
+        eur_rate = float(getattr(settings, "EUR_USD_RATE", 0.92))
+        eur_price = round(price * eur_rate, 2) if price else None
         dzd = int(price * rate) if price else None
+        deal_type = detect_deal_type(url)
+
+        # Official /e/ affiliate link
+        target_product_url = f"https://www.aliexpress.com/item/{pid}.html"
+        direct_aff_link = await affiliate_service.generate_affiliate_link(target_product_url, product_id=pid, deal_type="item")
+        coin_aff_link = await affiliate_service.generate_affiliate_link(target_product_url, product_id=pid, deal_type="coin")
+        preferred_link = coin_aff_link or res.get("coin_link") or direct_aff_link or res.get("product_link")
+
+        # Official preview caption
+        caption = await caption_generator.generate(
+            title=res.get("title") or "منتج مميز من AliExpress",
+            usd_price=price,
+            eur_price=eur_price,
+            affiliate_url=preferred_link,
+            has_points_discount=True,
+            country_info="كوريا 🇰🇷",
+            deal_type=deal_type,
+            raw_text=url
+        )
 
         return {
             "ok": True,
@@ -1143,10 +1215,13 @@ async def scout_endpoint(url: str = Query(...)):
                 "product_id": pid,
                 "title": res.get("title"),
                 "price": price,
+                "price_eur": eur_price,
                 "price_dzd": dzd,
                 "image_url": res.get("image_url"),
-                "product_link": res.get("product_link"),
-                "coin_link": res.get("coin_link"),
+                "product_link": direct_aff_link or res.get("product_link"),
+                "coin_link": coin_aff_link or res.get("coin_link"),
+                "deal_link": preferred_link,
+                "caption": caption
             }
         }
     except Exception as e:
@@ -1155,46 +1230,70 @@ async def scout_endpoint(url: str = Query(...)):
 
 @app.post("/api/reformat-deal")
 async def api_reformat_deal(request: Request):
-    """Reformat raw Telegram deal post and prepare clean Algerian channel caption."""
+    """Reformat raw Telegram deal post and prepare clean Algerian channel caption using the official algorithm."""
     try:
         data = await request.json()
         raw_text = (data.get("text") or "").strip()
         if not raw_text:
             return {"ok": False, "error": "يرجى لصق نص المنشور"}
 
-        from api.coin_bot import resolve_any_ali_link, generate_coin_discount_response, get_live_usdt_rate
-        from api.admin_bot import parse_user_deal_submission, build_exact_deal_caption
+        from api.coin_bot import resolve_any_ali_link, generate_coin_discount_response, get_live_usdt_rate, ensure_affiliate
+        from app.aliexpress.parser import (
+            extract_prices, extract_coupon, extract_seller_coupon,
+            extract_country_instruction, detect_deal_type, detect_restock_deal,
+            extract_clean_title, detect_points_discount
+        )
+        from app.aliexpress.affiliate import affiliate_service
+        from app.ai.generator import caption_generator
+        from app.config.settings import settings
 
         pid = await resolve_any_ali_link(raw_text)
         if not pid:
             return {"ok": False, "error": "لم يتم العثور على رابط منتج AliExpress صالح في النص"}
 
-        parsed = parse_user_deal_submission(raw_text)
         deal_info = await generate_coin_discount_response(pid, raw_user_text=raw_text)
 
-        title = parsed.get("custom_title") or deal_info.get("title") or "منتج مميز من AliExpress"
-        price = parsed.get("user_price") or deal_info.get("price") or 0.0
+        # 1. Price extraction with EUR support
+        parsed_usd, parsed_eur = extract_prices(raw_text)
+        price = parsed_usd or deal_info.get("price") or 0.0
+        eur_rate = float(getattr(settings, "EUR_USD_RATE", 0.92))
+        eur_price = parsed_eur or (round(price * eur_rate, 2) if price else 0.0)
+
         rate = await get_live_usdt_rate()
         dzd_price = int(price * rate) if price else 0
 
-        coupon = parsed.get("coupon")
-        seller_coupon = parsed.get("seller_coupon")
-        coins_text = parsed.get("coins_text")
-        country = parsed.get("country")
+        title = extract_clean_title(raw_text) or deal_info.get("title") or "منتج مميز من AliExpress"
+        coupon = extract_coupon(raw_text)
+        seller_coupon = extract_seller_coupon(raw_text)
+        country = extract_country_instruction(raw_text, title=title)
+        deal_type = detect_deal_type(raw_text)
+        is_restock = detect_restock_deal(raw_text)
+        has_points = detect_points_discount(raw_text)
 
-        from api.coin_bot import ensure_affiliate
-        is_bundle = any(k in (raw_text or "").lower() for k in ["bundle", "حزم", "حزمة", "3 بـ", "3 منتجات", "3 قطع"])
-        preferred_link = deal_info.get("bundle_link") if is_bundle else (deal_info.get("coin_link") or deal_info.get("product_link"))
-        deal_link = ensure_affiliate(preferred_link, fallback_link=deal_info.get("product_link"), pid=pid)
+        # 2. Official /e/ affiliate link generation
+        target_product_url = f"https://www.aliexpress.com/item/{pid}.html"
+        deal_link = await affiliate_service.generate_affiliate_link(
+            target_product_url,
+            product_id=pid,
+            deal_type=deal_type
+        )
+        if not deal_link or "aliexpress.com" not in deal_link:
+            preferred = deal_info.get("bundle_link") if deal_type == "bundle" else (deal_info.get("coin_link") or deal_info.get("product_link"))
+            deal_link = ensure_affiliate(preferred, fallback_link=deal_info.get("product_link"), pid=pid)
 
-        caption = await build_exact_deal_caption(
+        # 3. Authentic Algerian caption via caption_generator
+        caption = await caption_generator.generate(
             title=title,
-            price=price,
+            usd_price=price,
+            eur_price=eur_price,
             affiliate_url=deal_link,
             coupon_code=coupon,
             seller_coupon=seller_coupon,
-            coins_text=coins_text,
-            country=country
+            has_points_discount=has_points,
+            country_info=country,
+            is_restock=is_restock,
+            deal_type=deal_type,
+            raw_text=raw_text
         )
 
         images = deal_info.get("images", [])
@@ -1207,10 +1306,11 @@ async def api_reformat_deal(request: Request):
             "product_id": pid,
             "title": title,
             "price": price,
+            "price_eur": eur_price,
             "price_dzd": dzd_price,
             "coupon": coupon,
             "seller_coupon": seller_coupon,
-            "coins_text": coins_text,
+            "deal_type": deal_type,
             "country": country,
             "image_url": main_img,
             "images": images[:8],
@@ -1230,26 +1330,30 @@ async def api_publish_deal(request: Request):
         image_url = (data.get("image_url") or "").strip() or None
         deal_link = (data.get("deal_link") or "").strip()
         product_id = data.get("product_id", "")
+        price = data.get("price")
 
         if not caption:
             return {"ok": False, "error": "نص المنشور فارغ"}
 
         import os
-        from api.admin_bot import ADMIN_BOT_TOKEN, TARGET_CHANNEL_ID, PUBLIC_BOT_USERNAME
-        from api.coin_bot import ensure_affiliate
+        from api.admin_bot import TARGET_CHANNEL_ID
+        from api.coin_bot import TELEGRAM_BOT_TOKEN, ADMIN_BOT_TOKEN, ensure_affiliate
 
-        token = ADMIN_BOT_TOKEN or os.getenv("TELEGRAM_BOT_TOKEN", "")
+        token = os.getenv("TELEGRAM_BOT_TOKEN", "") or TELEGRAM_BOT_TOKEN or ADMIN_BOT_TOKEN
         if not token:
             return {"ok": False, "error": "توكن البوت غير مهيأ"}
 
+        target_ch = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+        target_clean = str(target_ch).lstrip("@")
         tracked_deal_link = ensure_affiliate(deal_link, pid=product_id)
+
         channel_reply_markup = {
             "inline_keyboard": [
                 [
-                    {"text": "🛒 رابط الشراء من AliExpress", "url": tracked_deal_link}
+                    {"text": "🪙 فتح بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"}
                 ],
                 [
-                    {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": f"https://t.me/{PUBLIC_BOT_USERNAME}"}
+                    {"text": "📢 قناة الصفقات المعتمدة", "url": f"https://t.me/{target_clean}"}
                 ]
             ]
         }
@@ -1260,7 +1364,7 @@ async def api_publish_deal(request: Request):
                 resp = await client.post(
                     f"{api_url}/sendPhoto",
                     json={
-                        "chat_id": TARGET_CHANNEL_ID,
+                        "chat_id": target_ch,
                         "photo": image_url,
                         "caption": caption[:1024],
                         "parse_mode": "HTML",
@@ -1271,7 +1375,7 @@ async def api_publish_deal(request: Request):
                 resp = await client.post(
                     f"{api_url}/sendMessage",
                     json={
-                        "chat_id": TARGET_CHANNEL_ID,
+                        "chat_id": target_ch,
                         "text": caption,
                         "parse_mode": "HTML",
                         "reply_markup": channel_reply_markup
@@ -1283,16 +1387,23 @@ async def api_publish_deal(request: Request):
                 msg_id = res["result"]["message_id"]
                 try:
                     from app.publisher.state_tracker import record_post_published
-                    record_post_published("manual_admin", msg_id, str(product_id), caption.splitlines()[0] if caption else "")
+                    clean_title = caption.splitlines()[0] if caption else ""
+                    record_post_published(
+                        channel_username="dashboard_admin",
+                        message_id=msg_id,
+                        product_id=str(product_id) if product_id else None,
+                        title=clean_title,
+                        channel_msg_id=msg_id,
+                        price=price
+                    )
                 except Exception:
                     pass
 
-                ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
                 return {
                     "ok": True,
                     "message_id": msg_id,
-                    "channel": TARGET_CHANNEL_ID,
-                    "post_url": f"https://t.me/{ch_clean}/{msg_id}"
+                    "channel": target_ch,
+                    "post_url": f"https://t.me/{target_clean}/{msg_id}"
                 }
             else:
                 return {"ok": False, "error": res.get("description", f"Telegram API error {resp.status_code}")}

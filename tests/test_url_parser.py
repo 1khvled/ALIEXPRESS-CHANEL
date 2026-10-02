@@ -60,3 +60,58 @@ def test_normalize_aliexpress_url():
     )
     clean = normalize_aliexpress_url(dirty_url)
     assert clean == "https://www.aliexpress.com/item/1005006382910245.html"
+
+
+def test_bundle_deals_url_product_id():
+    bundle_url = (
+        "https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES"
+        "&pha_manifest=ssr&_immersiveMode=true&productIds=1005007027334636"
+        "&aff_fcid=abcd123"
+    )
+    assert extract_product_id_from_url(bundle_url) == "1005007027334636"
+
+
+@pytest.mark.asyncio
+async def test_resolve_any_ali_link_history_resolution(monkeypatch):
+    from api.coin_bot import resolve_any_ali_link
+    import httpx
+
+    # Test resolving bare s.click that redirects to bundledeals with productIds
+    class DummyHistory:
+        def __init__(self, url):
+            self.url = url
+            self.headers = {}
+
+    class DummyResponse:
+        def __init__(self):
+            self.url = "https://www.aliexpress.com/p/error/404.html"
+            self.headers = {}
+            self.text = "Error 404"
+            self.history = [
+                DummyHistory("https://s.click.aliexpress.com/e/_mockTest"),
+                DummyHistory("https://www.aliexpress.com/ssr/300000512/BundleDeals2?productIds=1005007027334636&aff_fcid=123")
+            ]
+
+    class MockAsyncClient:
+        def __init__(self, *args, **kwargs):
+            pass
+        async def __aenter__(self):
+            return self
+        async def __aexit__(self, exc_type, exc_val, exc_tb):
+            pass
+        async def get(self, url, headers=None):
+            return DummyResponse()
+
+    monkeypatch.setattr(httpx, "AsyncClient", MockAsyncClient)
+
+    sample_post = (
+        "\"عودة SSD بكمية قليلة ألحق 🏃\"\n"
+        "📍 أختر بلد الحساب الجزائر 🇩🇿\n"
+        "✔️ ضف 3 قطع ثم أدفع\n\n"
+        "⭐️ 3 SOMNAMBULIST SSD (128g)\n"
+        "💵 السعر : 28.5 $ 🔥\n"
+        "🔗 باندل: https://s.click.aliexpress.com/e/_mockTest"
+    )
+
+    pid = await resolve_any_ali_link(sample_post)
+    assert pid == "1005007027334636"

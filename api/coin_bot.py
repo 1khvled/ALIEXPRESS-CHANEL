@@ -349,6 +349,7 @@ async def resolve_any_ali_link(text: str) -> Optional[str]:
     - a.aliexpress.com shortlinks
     - s.click.aliexpress.com shortlinks
     - star.aliexpress.com share links
+    - BundleDeals / Coin links
     - Raw product IDs
     """
     pid = extract_pid_from_string(text)
@@ -367,26 +368,81 @@ async def resolve_any_ali_link(text: str) -> Optional[str]:
 
     candidate_urls.extend(extract_urls(text))
 
+    try:
+        from app.aliexpress.urls import extract_product_id_from_url
+    except Exception:
+        extract_product_id_from_url = extract_pid_from_string
+
+    def _extract_id(val: Optional[str]) -> Optional[str]:
+        if not val:
+            return None
+        return extract_pid_from_string(val) or extract_product_id_from_url(val)
+
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9,ar;q=0.8",
+    }
+
     for raw_url in candidate_urls:
-        pid = extract_pid_from_string(raw_url)
+        pid = _extract_id(raw_url)
         if pid and "s.click" not in raw_url and "a.aliexpress" not in raw_url and "star.aliexpress" not in raw_url:
             return pid
 
+        # 1. Quick non-redirected hop check (catches Location header before error pages)
         try:
-            async with httpx.AsyncClient(timeout=4.5, follow_redirects=True) as client:
-                headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
-                resp = await client.get(raw_url, headers=headers)
-                found = extract_pid_from_string(str(resp.url))
-                if found:
-                    return found
-                if resp.text:
-                    found = extract_pid_from_string(resp.text[:5000])
+            async with httpx.AsyncClient(timeout=4.0, follow_redirects=False) as client:
+                r_hop = await client.get(raw_url, headers=headers)
+                loc = r_hop.headers.get("location") or r_hop.headers.get("Location")
+                if loc:
+                    found = _extract_id(loc)
                     if found:
                         return found
         except Exception:
             pass
 
-        # If s.click failed and has extra characters glued at the end, try trimming
+        # 2. Full redirect following with inspection of ALL history hops
+        try:
+            async with httpx.AsyncClient(timeout=6.0, follow_redirects=True) as client:
+                resp = await client.get(raw_url, headers=headers)
+                
+                # Check each hop in redirect history
+                for h in resp.history:
+                    found = _extract_id(str(h.url))
+                    if found:
+                        return found
+                    h_loc = h.headers.get("location") or h.headers.get("Location")
+                    if h_loc:
+                        found = _extract_id(h_loc)
+                        if found:
+                            return found
+
+                # Check final destination
+                found = _extract_id(str(resp.url))
+                if found:
+                    return found
+                resp_loc = resp.headers.get("location") or resp.headers.get("Location")
+                if resp_loc:
+                    found = _extract_id(resp_loc)
+                    if found:
+                        return found
+                if resp.text:
+                    found = _extract_id(resp.text[:30000])
+                    if found:
+                        return found
+        except Exception:
+            pass
+
+        # 3. Dedicated UrlResolver fallback
+        try:
+            from app.aliexpress.resolver import url_resolver
+            resolved = await url_resolver.resolve(raw_url)
+            if resolved and resolved.product_id:
+                return str(resolved.product_id)
+        except Exception:
+            pass
+
+        # 4. If s.click failed and has extra characters glued at the end, try trimming
         if "s.click.aliexpress.com/e/_" in raw_url:
             m_s = re.search(r's\.click\.aliexpress\.com/e/(_[a-zA-Z0-9]{7,12})', raw_url)
             if m_s:
@@ -395,15 +451,17 @@ async def resolve_any_ali_link(text: str) -> Optional[str]:
                     if len(code) > trim_len:
                         trimmed_url = f"https://s.click.aliexpress.com/e/{code[:trim_len]}"
                         try:
-                            async with httpx.AsyncClient(timeout=3.5, follow_redirects=True) as client:
-                                resp = await client.get(trimmed_url, headers={"User-Agent": "Mozilla/5.0"})
-                                found = extract_pid_from_string(str(resp.url))
-                                if found:
-                                    return found
+                            async with httpx.AsyncClient(timeout=3.5, follow_redirects=False) as client:
+                                r_trim = await client.get(trimmed_url, headers=headers)
+                                t_loc = r_trim.headers.get("location") or r_trim.headers.get("Location")
+                                if t_loc:
+                                    found = _extract_id(t_loc)
+                                    if found:
+                                        return found
                         except Exception:
                             pass
 
-    return extract_pid_from_string(text)
+    return _extract_id(text)
 
 async def generate_coin_discount_response(product_id: str, raw_user_text: str = "") -> Dict[str, Any]:
     """
@@ -561,41 +619,35 @@ async def publish_deal_to_channel(product_id: str, raw_user_text: str = "") -> T
     image_url = res.get("image_url")
 
     # Smart Deal Link: Coin link (90%+) or Bundle link (rare cases)
-    is_bundle = any(k in raw_user_text.lower() for k in ["bundle", "حزم", "حزمة", "3 بـ", "3 منتجات"])
+    from app.aliexpress.parser import detect_deal_type, extract_country_instruction
+    is_bundle = (detect_deal_type(raw_user_text) == "bundle")
     deal_link = res.get("bundle_link") if is_bundle else res.get("coin_link")
     if not deal_link:
         deal_link = res.get("coin_link") or product_link
     deal_link = ensure_affiliate(deal_link, fallback_link=product_link, pid=product_id)
 
-    # Smart situational hook
-    t_lower = prod_title.lower()
-    is_gaming = any(k in t_lower for k in ["mouse", "keyboard", "headset", "earphone", "controller", "gaming", "game", "rgb"])
-    if is_gaming:
-        hook = "صيدة ممتازة للقيمرز 🎮🔥"
-    elif prod_price and prod_price < 25.0:
-        hook = "نزول قوي في السعر 🔥📉"
-    else:
-        hook = "العرض مستمر 🚨"
+    country_detected = extract_country_instruction(raw_user_text, title=prod_title) or "كوريا 🇰🇷"
 
-    caption_lines = [
-        "لا تنسى تحويل دولة التطبيق إلى كوريا 🇰🇷 📍",
-        hook,
-        f"تخفيض لـ {html.escape(prod_title)}",
-        f"السعر : {prod_price:.2f}$ ({eur_price:.2f}€)🔥" if prod_price > 0 else "سعر مميز وتخفيض عملات 🔥",
-        f"رابط {deal_link}",
-        "خصم النقاط (العملات)",
-        "",
-        "🪙 استخدم بوت DealScoutDz للشراء بأقل سعر: @Alilo07BOT"
-    ]
-    caption = "\n".join(caption_lines)
+    from app.ai.generator import caption_generator
+    caption = caption_generator._format_deterministic(
+        title=prod_title,
+        usd_price=prod_price or 0.0,
+        eur_price=eur_price,
+        affiliate_url=deal_link,
+        has_points_discount=True,
+        country_info=country_detected,
+        deal_type="bundle" if is_bundle else "coin",
+        raw_text=raw_user_text
+    )
 
+    ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
     channel_reply_markup = {
         "inline_keyboard": [
             [
-                {"text": "🛒 رابط الشراء من AliExpress", "url": deal_link}
+                {"text": "🪙 فتح بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"}
             ],
             [
-                {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": "https://t.me/Alilo07BOT"}
+                {"text": "📢 قناة الصفقات المعتمدة", "url": f"https://t.me/{ch_clean}"}
             ]
         ]
     }
@@ -628,6 +680,19 @@ async def publish_deal_to_channel(product_id: str, raw_user_text: str = "") -> T
             data = resp.json()
             if resp.status_code == 200 and data.get("ok"):
                 msg_id = data.get("result", {}).get("message_id")
+                try:
+                    from app.publisher.state_tracker import record_post_published
+                    clean_title = caption.splitlines()[0] if caption else ""
+                    record_post_published(
+                        channel_username="coin_bot",
+                        message_id=msg_id,
+                        product_id=str(product_id) if product_id else None,
+                        title=clean_title,
+                        channel_msg_id=msg_id,
+                        price=prod_price
+                    )
+                except Exception:
+                    pass
                 return True, None, msg_id
             else:
                 err = data.get("description", f"HTTP {resp.status_code}")

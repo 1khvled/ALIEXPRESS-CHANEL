@@ -84,6 +84,28 @@ def parse_user_deal_submission(raw_text: str) -> Dict[str, Any]:
 
     text = raw_text.strip()
 
+    try:
+        from app.aliexpress.parser import (
+            extract_prices, extract_coupon, extract_seller_coupon,
+            extract_country_instruction, detect_deal_type, detect_restock_deal,
+            extract_clean_title, detect_points_discount
+        )
+        usd, eur = extract_prices(text)
+        data["user_price"] = usd
+        data["user_price_eur"] = eur
+        data["coupon"] = extract_coupon(text)
+        data["seller_coupon"] = extract_seller_coupon(text)
+        data["country"] = extract_country_instruction(text)
+        data["is_bundle"] = (detect_deal_type(text) == "bundle")
+        data["is_restock"] = detect_restock_deal(text)
+        if detect_points_discount(text):
+            data["coins_text"] = "خصم العملات مفعّل"
+        data["custom_title"] = extract_clean_title(text)
+        if data["user_price"] is not None:
+            return data
+    except Exception:
+        pass
+
     # 1. Price extraction (e.g. السعر : $ 23.01 | السعر: 23.01$ | $23.01 | 23.01$ | Price: 23.01)
     price_patterns = [
         r'(?:السعــــ?ر|السعر|Price|price|سعر)\s*[:💲]*\s*\$?\s*([0-9]+(?:[.,][0-9]{1,2})?)\s*\$?',
@@ -135,6 +157,10 @@ def parse_user_deal_submission(raw_text: str) -> Dict[str, Any]:
         data["country"] = "كوريا 🇰🇷"
     elif "كندا" in text or "canada" in text.lower():
         data["country"] = "كندا 🇨🇦"
+    elif "أوكرانيا" in text or "ukraine" in text.lower():
+        data["country"] = "أوكرانيا 🇺🇦"
+    elif "أستراليا" in text or "australia" in text.lower() or "استراليا" in text.lower():
+        data["country"] = "أستراليا 🇦🇺"
     elif "فرنسا" in text or "france" in text.lower():
         data["country"] = "فرنسا 🇫🇷"
     elif "إسبانيا" in text or "spain" in text.lower():
@@ -144,7 +170,6 @@ def parse_user_deal_submission(raw_text: str) -> Dict[str, Any]:
     m_title = re.search(r'تخفيض\s*لـ+[\s:]*([^\n\r]+)', text)
     if m_title:
         candidate_title = m_title.group(1).strip()
-        # Clean inline price, coupon, and coins keywords if they were on the same line
         candidate_title = re.sub(r'(?:السعــــ?ر|السعر|Price|price)\s*[:💲]*\s*\$?[0-9]+[.,]?[0-9]*\s*\$?', '', candidate_title, flags=re.IGNORECASE)
         candidate_title = re.sub(r'\$?[0-9]+[.,][0-9]{1,2}\s*\$?', '', candidate_title)
         candidate_title = re.sub(r'(?:كوبون|كود|قسيمة)\s*[:\-]?\s*[A-Za-z0-9_]+', '', candidate_title, flags=re.IGNORECASE)
@@ -252,69 +277,30 @@ async def build_exact_deal_caption(
     seller_coupon: Optional[str] = None,
     coins_text: Optional[str] = None,
     country: Optional[str] = None,
-    is_restock: bool = False
+    is_restock: bool = False,
+    is_bundle: bool = False,
+    eur_price: Optional[float] = None,
+    coin_url: Optional[str] = None,
+    raw_text: Optional[str] = None
 ) -> str:
-    """Builds caption matching authentic Algerian Telegram deal channels."""
-    country_name = country or "كوريا 🇰🇷"
-    dzd_approx = int(price * 249) if price else 0
-
-    lines = []
-
-    # 1. Authentic Algerian Deal Hook
-    hook = _caption_generator._select_smart_hook(
+    """Builds caption matching authentic Algerian Telegram deal channels using official algorithm."""
+    usd = float(price or 0.0)
+    eur = float(eur_price) if eur_price is not None else round(usd * 0.92, 2)
+    deal_type = "bundle" if is_bundle else "coin"
+    return _caption_generator._format_deterministic(
         title=title,
-        usd_price=price or 0.0,
+        usd_price=usd,
+        eur_price=eur,
+        affiliate_url=affiliate_url,
+        coupon_code=coupon_code,
+        seller_coupon=seller_coupon,
         has_points_discount=bool(coins_text),
-        has_coupon=bool(coupon_code or seller_coupon),
-        is_restock=is_restock
+        country_info=country,
+        is_restock=is_restock,
+        coin_url=coin_url,
+        deal_type=deal_type,
+        raw_text=raw_text
     )
-    lines.append(hook)
-
-    if is_restock:
-        lines.append("⚡ <b>تنبيه:</b> العرض رجع توفر بكمية محدودة (حبات قلال)! 🏃‍♂️💨")
-
-    # 2. Country recommendation (clean Algerian channel style)
-    if "كندا" in country_name:
-        lines.append("خلي البلـــد كــــــندا 🇨🇦")
-    elif "كوريا" in country_name:
-        lines.append("خلي البلـــد كــــــوريا 🇰🇷")
-    elif "فرنسا" in country_name:
-        lines.append("خلي البلـــد فـــرنسا 🇫🇷")
-    elif "إسبانيا" in country_name:
-        lines.append("خلي البلـــد إسبـــانيا 🇪🇸")
-    elif country:
-        lines.append(f"خلي البلـــد <b>{country}</b>")
-
-    import html
-    safe_title = html.escape(title)
-
-    lines.append("")
-    lines.append(f"✅ <b>{safe_title}</b>")
-
-    if price and price > 0:
-        dzd_str = f" (~<b>{dzd_approx:,} دج</b>)" if dzd_approx > 0 else ""
-        lines.append(f"💰 <b>السعر:</b> <b>${price:.2f}</b>{dzd_str}")
-    else:
-        lines.append("💰 <b>السعر:</b> <b>سعر خاص ومخفض</b>")
-
-    if seller_coupon:
-        lines.append(f"🎫 <b>قسيمة المتجر:</b> <code>{html.escape(seller_coupon)}</code>")
-
-    if coupon_code:
-        lines.append(f"🎟️ <b>الكوبون:</b> <code>{html.escape(coupon_code)}</code>")
-
-    if coins_text:
-        lines.append(f"🪙 <b>تخفيض العملات:</b> {html.escape(coins_text)}")
-    else:
-        lines.append("🪙 <b>تخفيض العملات:</b> مفعّل عبر الرابط")
-
-    lines.append("")
-    lines.append("📎 <b>رابط الشراء ⬇️</b>")
-    lines.append(f"{affiliate_url}")
-    lines.append("")
-    lines.append(f"📢 <i>قناة العروض: @{TARGET_CHANNEL_ID.lstrip('@')}</i>")
-
-    return "\n".join(lines)
 
 async def publish_deal_post(product_id: str, chosen_image: Optional[str] = None, raw_user_text: str = "") -> Tuple[bool, Optional[str], Optional[int]]:
     """Publishes deal post to @DzAliexpress0 with exact user-specified price & attributes."""
@@ -330,7 +316,6 @@ async def publish_deal_post(product_id: str, chosen_image: Optional[str] = None,
     coupon = deal_state.get("coupon")
     coins_text = deal_state.get("coins_text")
     country = deal_state.get("country")
-
     seller_coupon = deal_state.get("seller_coupon")
 
     caption = await build_exact_deal_caption(
@@ -341,7 +326,11 @@ async def publish_deal_post(product_id: str, chosen_image: Optional[str] = None,
         seller_coupon=seller_coupon,
         coins_text=coins_text,
         country=country,
-        is_restock=deal_state.get("is_restock", False)
+        is_restock=deal_state.get("is_restock", False),
+        is_bundle=deal_state.get("is_bundle", False),
+        eur_price=deal_state.get("user_price_eur"),
+        coin_url=deal_state.get("coin_link"),
+        raw_text=raw_user_text or deal_state.get("raw_text")
     )
 
     image_url = chosen_image or deal_state.get("chosen_image") or deal_state.get("image_url")
@@ -350,13 +339,14 @@ async def publish_deal_post(product_id: str, chosen_image: Optional[str] = None,
         if imgs:
             image_url = imgs[0]
 
+    ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
     channel_reply_markup = {
         "inline_keyboard": [
             [
-                {"text": "🛒 رابط الشراء من AliExpress", "url": deal_link}
+                {"text": "🪙 فتح بوت تخفيض العملات", "url": f"https://t.me/{PUBLIC_BOT_USERNAME}"}
             ],
             [
-                {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": f"https://t.me/{PUBLIC_BOT_USERNAME}"}
+                {"text": "📢 قناة الصفقات المعتمدة", "url": f"https://t.me/{ch_clean}"}
             ]
         ]
     }
@@ -389,6 +379,19 @@ async def publish_deal_post(product_id: str, chosen_image: Optional[str] = None,
             data = resp.json()
             if resp.status_code == 200 and data.get("ok"):
                 msg_id = data.get("result", {}).get("message_id")
+                try:
+                    from app.publisher.state_tracker import record_post_published
+                    clean_title = caption.splitlines()[0] if caption else ""
+                    record_post_published(
+                        channel_username="admin_bot",
+                        message_id=msg_id,
+                        product_id=str(product_id) if product_id else None,
+                        title=clean_title,
+                        channel_msg_id=msg_id,
+                        price=price
+                    )
+                except Exception:
+                    pass
                 return True, None, msg_id
             else:
                 err = data.get("description", f"HTTP {resp.status_code}")
@@ -414,13 +417,14 @@ async def prepare_deal_state(pid: str, raw_user_text: str = "") -> Dict[str, Any
     coin_link = ensure_affiliate(res.get("coin_link"), fallback_link=product_link, pid=pid)
     bundle_link = ensure_affiliate(res.get("bundle_link"), fallback_link=product_link, pid=pid)
 
-    # Determine deal type & restock status
-    is_bundle = any(k in raw_user_text.lower() for k in ["bundle", "حزم", "حزمة", "3 بـ", "3 منتجات"])
+    # Determine deal type & restock status using official parser
+    from app.aliexpress.parser import detect_deal_type, detect_restock_deal
+    is_bundle = bool(user_inputs.get("is_bundle")) or (detect_deal_type(raw_user_text) == "bundle")
     primary_link = bundle_link if is_bundle else coin_link
     primary_link = ensure_affiliate(primary_link, fallback_link=product_link, pid=pid)
 
-    from app.aliexpress.parser import detect_restock_deal
-    is_restock = detect_restock_deal(raw_user_text)
+    is_restock = bool(user_inputs.get("is_restock")) or detect_restock_deal(raw_user_text)
+    user_price_eur = user_inputs.get("user_price_eur")
 
     # 3. Collect candidate images from original seller + other sellers
     main_image = res.get("image_url")
@@ -457,6 +461,7 @@ async def prepare_deal_state(pid: str, raw_user_text: str = "") -> Dict[str, Any
         "primary_link": primary_link,
         "is_bundle": is_bundle,
         "is_restock": is_restock,
+        "user_price_eur": user_price_eur,
         "images": candidate_images,
         "chosen_image": chosen_image,
         "raw_text": raw_user_text
@@ -660,9 +665,14 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
                 price=price,
                 affiliate_url=deal_link,
                 coupon_code=coupon,
+                seller_coupon=deal_state.get("seller_coupon"),
                 coins_text=coins_text,
                 country=country,
-                is_restock=deal_state.get("is_restock", False)
+                is_restock=deal_state.get("is_restock", False),
+                is_bundle=deal_state.get("is_bundle", False),
+                eur_price=deal_state.get("user_price_eur"),
+                coin_url=deal_state.get("coin_link"),
+                raw_text=deal_state.get("raw_text")
             )
 
             next_cycle_idx = (actual_idx + 1) % len(images)
@@ -1183,9 +1193,14 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
         price=price,
         affiliate_url=deal_link,
         coupon_code=coupon,
+        seller_coupon=deal_state.get("seller_coupon"),
         coins_text=coins_text,
         country=country,
-        is_restock=deal_state.get("is_restock", False)
+        is_restock=deal_state.get("is_restock", False),
+        is_bundle=deal_state.get("is_bundle", False),
+        eur_price=deal_state.get("user_price_eur"),
+        coin_url=deal_state.get("coin_link"),
+        raw_text=text
     )
 
     # Direct Channel Publication (Never repost or clutter admin chat)
