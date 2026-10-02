@@ -1182,7 +1182,8 @@ async def api_reformat_deal(request: Request):
         coins_text = parsed.get("coins_text")
         country = parsed.get("country")
 
-        deal_link = deal_info.get("coin_link") or deal_info.get("product_link") or f"https://www.aliexpress.com/item/{pid}.html"
+        from api.coin_bot import ensure_affiliate
+        deal_link = ensure_affiliate(deal_info.get("coin_link") or deal_info.get("product_link"), pid=pid)
 
         caption = await build_exact_deal_caption(
             title=title,
@@ -1233,21 +1234,23 @@ async def api_publish_deal(request: Request):
 
         import os
         from api.admin_bot import ADMIN_BOT_TOKEN, TARGET_CHANNEL_ID, PUBLIC_BOT_USERNAME
+        from api.coin_bot import ensure_affiliate
 
         token = ADMIN_BOT_TOKEN or os.getenv("TELEGRAM_BOT_TOKEN", "")
         if not token:
             return {"ok": False, "error": "توكن البوت غير مهيأ"}
 
+        tracked_deal_link = ensure_affiliate(deal_link, pid=product_id)
         channel_reply_markup = {
             "inline_keyboard": [
                 [
-                    {"text": "🛒 رابط الشراء من AliExpress", "url": deal_link or "https://aliexpress.com"}
+                    {"text": "🛒 رابط الشراء من AliExpress", "url": tracked_deal_link}
                 ],
                 [
                     {"text": "🪙 بوت تخفيض العملات DealScoutDz", "url": f"https://t.me/{PUBLIC_BOT_USERNAME}"}
                 ]
             ]
-        } if deal_link else None
+        }
 
         api_url = f"https://api.telegram.org/bot{token}"
         async with httpx.AsyncClient(timeout=15.0) as client:

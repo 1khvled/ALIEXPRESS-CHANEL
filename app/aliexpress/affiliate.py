@@ -20,12 +20,9 @@ class DirectAffiliateProvider(AffiliateProvider):
     For bundle deals: returns Choice/bundle link with sourceType=562.
     """
     def __init__(self, tracking_id: Optional[str] = None):
-        self.tracking_id = tracking_id or settings.ALIEXPRESS_AFFILIATE_TRACKING_ID
+        self.tracking_id = tracking_id or settings.ALIEXPRESS_AFFILIATE_TRACKING_ID or "dzkhvled16"
 
     async def generate_link(self, product_url: str, product_id: Optional[str] = None, deal_type: str = "coin") -> str:
-        if not self.tracking_id:
-            return product_url
-
         pid = product_id
         if not pid:
             m = re.search(r'/item/(\d+)\.html', product_url)
@@ -39,6 +36,8 @@ class DirectAffiliateProvider(AffiliateProvider):
         if pid:
             if deal_type == "bundle":
                 return f"https://aliexpress.com/item/{pid}.html?sourceType=562&aff_fcid={self.tracking_id}"
+            elif deal_type == "super":
+                return f"https://aliexpress.com/item/{pid}.html?sourceType=680&aff_fcid={self.tracking_id}"
             elif deal_type == "item":
                 return f"https://aliexpress.com/item/{pid}.html?aff_fcid={self.tracking_id}"
             else:
@@ -48,6 +47,8 @@ class DirectAffiliateProvider(AffiliateProvider):
         clean_url = product_url.split("?")[0] if ("aliexpress.com" in product_url and "?" in product_url) else product_url
         if deal_type == "bundle":
             return f"{clean_url}?sourceType=562&aff_fcid={self.tracking_id}"
+        elif deal_type == "super":
+            return f"{clean_url}?sourceType=680&aff_fcid={self.tracking_id}"
         separator = "&" if "?" in clean_url else "?"
         return f"{clean_url}{separator}aff_fcid={self.tracking_id}"
 
@@ -61,6 +62,9 @@ class CustomNetworkAffiliateProvider(AffiliateProvider):
         sep = "&ulp=" if "?" in self.prefix else "?ulp="
         return f"{self.prefix}{sep}{quote(product_url, safe='')}"
 
+_PORTALS_API_LOCK = asyncio.Lock()
+_LAST_PORTALS_CALL_TIME = 0.0
+
 class PortalsApiAffiliateProvider(AffiliateProvider):
     """
     Official AliExpress Open Platform Portals API provider.
@@ -71,7 +75,7 @@ class PortalsApiAffiliateProvider(AffiliateProvider):
     def __init__(self, app_key: Optional[str] = None, app_secret: Optional[str] = None, tracking_id: Optional[str] = None):
         self.app_key = app_key or settings.ALIEXPRESS_AFFILIATE_APP_KEY
         self.app_secret = app_secret or settings.ALIEXPRESS_AFFILIATE_APP_SECRET
-        self.tracking_id = tracking_id or settings.ALIEXPRESS_AFFILIATE_TRACKING_ID
+        self.tracking_id = tracking_id or settings.ALIEXPRESS_AFFILIATE_TRACKING_ID or "dzkhvled16"
         self.fallback = DirectAffiliateProvider(self.tracking_id)
         self.api = None
 
@@ -104,6 +108,8 @@ class PortalsApiAffiliateProvider(AffiliateProvider):
         if pid:
             if deal_type == "bundle":
                 target_url = f"https://www.aliexpress.com/item/{pid}.html?sourceType=562"
+            elif deal_type == "super":
+                target_url = f"https://www.aliexpress.com/item/{pid}.html?sourceType=680"
             elif deal_type == "item":
                 target_url = f"https://www.aliexpress.com/item/{pid}.html"
             else:
@@ -112,24 +118,36 @@ class PortalsApiAffiliateProvider(AffiliateProvider):
             if deal_type == "bundle" and "sourceType=562" not in product_url:
                 sep = "&" if "?" in product_url else "?"
                 target_url = f"{product_url}{sep}sourceType=562"
+            elif deal_type == "super" and "sourceType=680" not in product_url:
+                sep = "&" if "?" in product_url else "?"
+                target_url = f"{product_url}{sep}sourceType=680"
             else:
                 target_url = product_url
 
         if self.api:
-            for attempt in range(1, 3):
-                try:
-                    aff_links = await asyncio.to_thread(self.api.get_affiliate_links, target_url)
-                    if aff_links and len(aff_links) > 0:
-                        link = getattr(aff_links[0], "promotion_link", None) or getattr(aff_links[0], "promotion_url", None)
-                        if link:
-                            return link
-                    # If API responded cleanly but item has no promotion link, fall back immediately
-                    break
-                except Exception as e:
-                    logger.warning(f"AliExpress Portals API attempt {attempt}/2 failed: {e}")
-                    if attempt < 2:
-                        await asyncio.sleep(1.5)
-                        continue
+            global _LAST_PORTALS_CALL_TIME
+            async with _PORTALS_API_LOCK:
+                import time
+                elapsed = time.time() - _LAST_PORTALS_CALL_TIME
+                if elapsed < 1.1:
+                    await asyncio.sleep(1.1 - elapsed)
+                _LAST_PORTALS_CALL_TIME = time.time()
+
+                for attempt in range(1, 3):
+                    try:
+                        aff_links = await asyncio.to_thread(self.api.get_affiliate_links, target_url)
+                        if aff_links and len(aff_links) > 0:
+                            link = getattr(aff_links[0], "promotion_link", None) or getattr(aff_links[0], "promotion_url", None)
+                            if link:
+                                return link
+                        # If API responded cleanly but item has no promotion link, fall back immediately
+                        break
+                    except Exception as e:
+                        logger.warning(f"AliExpress Portals API attempt {attempt}/2 failed: {e}")
+                        if attempt < 2:
+                            await asyncio.sleep(1.5)
+                            _LAST_PORTALS_CALL_TIME = time.time()
+                            continue
         return await self.fallback.generate_link(product_url, product_id, deal_type=deal_type)
 
 class AffiliateService:

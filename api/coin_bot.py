@@ -229,6 +229,57 @@ async def safe_api_get_details(api: AliexpressApi, product_id: str) -> Optional[
                     await asyncio.sleep(0.5)
         return None
 
+async def safe_api_get_affiliate_link_single(api: AliexpressApi, url: str) -> Optional[str]:
+    """Safe caller for get_affiliate_links for a single URL with error handling and retry."""
+    for attempt in range(2):
+        try:
+            res = await asyncio.wait_for(
+                asyncio.to_thread(api.get_affiliate_links, url),
+                timeout=4.0
+            )
+            if res and len(res) > 0:
+                link = getattr(res[0], "promotion_link", None) or getattr(res[0], "promotion_url", None)
+                if link and ("s.click.aliexpress.com" in link or "/e/" in link):
+                    return link
+        except Exception as e:
+            err_str = str(e).lower()
+            if "ban" in err_str or "limit" in err_str:
+                await asyncio.sleep(1.0)
+                try:
+                    res = await asyncio.wait_for(
+                        asyncio.to_thread(api.get_affiliate_links, url),
+                        timeout=4.0
+                    )
+                    if res and len(res) > 0:
+                        link = getattr(res[0], "promotion_link", None) or getattr(res[0], "promotion_url", None)
+                        if link and ("s.click.aliexpress.com" in link or "/e/" in link):
+                            return link
+                except Exception:
+                    pass
+            elif attempt == 0:
+                await asyncio.sleep(0.3)
+    return None
+
+def ensure_affiliate(link: Optional[str], fallback_link: Optional[str] = None, pid: Optional[str] = None) -> str:
+    """
+    Ironclad Affiliate Guarantee:
+    1. If link is already an official s.click / affiliate link, return it.
+    2. If fallback_link is an official s.click / affiliate link, use it.
+    3. If link is a raw AliExpress URL, append aff_fcid tracking ID.
+    4. If pid is provided, build direct tracked item URL.
+    5. NEVER return a naked/unmonetized AliExpress link.
+    """
+    tracking_id = ALIEXPRESS_AFFILIATE_TRACKING_ID or "dzkhvled16"
+    if link and ("s.click.aliexpress.com" in link or "/e/_" in link or "/e/" in link):
+        return link
+    if fallback_link and ("s.click.aliexpress.com" in fallback_link or "/e/_" in fallback_link or "/e/" in fallback_link):
+        return fallback_link
+    target = link or (f"https://www.aliexpress.com/item/{pid}.html" if pid else f"https://www.aliexpress.com?aff_fcid={tracking_id}")
+    if "aff_fcid=" not in target:
+        sep = "&" if "?" in target else "?"
+        return f"{target}{sep}aff_fcid={tracking_id}"
+    return target
+
 async def safe_api_get_affiliate_links(api: AliexpressApi, urls_joined: str) -> Optional[List[Any]]:
     """Rate-limited safe caller for get_affiliate_links."""
     global _LAST_ALI_CALL_TIME
@@ -341,16 +392,14 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
     direct_super = f"https://www.aliexpress.com/item/{product_id}.html?sourceType=680"
     direct_limited = f"https://www.aliexpress.com/item/{product_id}.html?sourceType=562"
 
-    target_urls = [direct_product, direct_coin, direct_bundle]
-
     prod_title = fallback_title or "منتج مميز من AliExpress"
     prod_price = fallback_price
     prod_image = None
-    product_link = direct_product
-    coin_link = direct_coin
-    bundle_link = direct_bundle
-    super_link = direct_super
-    limited_link = direct_limited
+    product_link = ensure_affiliate(direct_product, pid=product_id)
+    coin_link = ensure_affiliate(direct_coin, pid=product_id)
+    bundle_link = ensure_affiliate(direct_bundle, pid=product_id)
+    super_link = ensure_affiliate(direct_super, pid=product_id)
+    limited_link = ensure_affiliate(direct_limited, pid=product_id)
 
     try:
         api = AliexpressApi(
@@ -378,21 +427,27 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
             if img and ("alicdn.com" in img or "aliexpress-media.com" in img):
                 prod_image = img
 
-        # 2. Fetch s.click affiliate links with rate limiting
-        raw_links = await safe_api_get_affiliate_links(api, ",".join(target_urls))
-        if raw_links:
-            aff_map = {}
-            for item in raw_links:
-                orig = getattr(item, 'source_value', '')
-                promo = getattr(item, 'promotion_link', '')
-                if orig and promo:
-                    aff_map[orig] = promo
-            product_link = aff_map.get(direct_product, direct_product)
-            coin_link = aff_map.get(direct_coin, direct_coin)
-            bundle_link = aff_map.get(direct_bundle, direct_bundle)
-            if product_link != direct_product and "s.click" in product_link:
-                super_link = product_link
-                limited_link = product_link
+        # 2. Fetch s.click affiliate links concurrently (bulletproof, non-truncating)
+        res_product, res_coin, res_bundle, res_super = await asyncio.gather(
+            safe_api_get_affiliate_link_single(api, direct_product),
+            safe_api_get_affiliate_link_single(api, direct_coin),
+            safe_api_get_affiliate_link_single(api, direct_bundle),
+            safe_api_get_affiliate_link_single(api, direct_super),
+            return_exceptions=True
+        )
+
+        s_prod = res_product if isinstance(res_product, str) else None
+        s_coin = res_coin if isinstance(res_coin, str) else None
+        s_bundle = res_bundle if isinstance(res_bundle, str) else None
+        s_super = res_super if isinstance(res_super, str) else None
+
+        best_affiliate = next((l for l in [s_coin, s_prod, s_bundle, s_super] if l and "s.click" in l), None)
+
+        product_link = ensure_affiliate(s_prod, fallback_link=best_affiliate, pid=product_id)
+        coin_link = ensure_affiliate(s_coin, fallback_link=best_affiliate, pid=product_id)
+        bundle_link = ensure_affiliate(s_bundle, fallback_link=best_affiliate, pid=product_id)
+        super_link = ensure_affiliate(s_super, fallback_link=product_link, pid=product_id)
+        limited_link = ensure_affiliate(s_bundle, fallback_link=best_affiliate, pid=product_id)
 
     except Exception:
         pass
@@ -456,6 +511,8 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
         "product_link": product_link,
         "coin_link": coin_link,
         "bundle_link": bundle_link,
+        "super_link": super_link,
+        "limited_link": limited_link,
         "reply_markup": reply_markup
     }
 
@@ -466,7 +523,7 @@ async def publish_deal_to_channel(product_id: str, raw_user_text: str = "") -> T
     prod_title = res.get("title") or "منتج مميز من AliExpress"
     prod_price = res.get("price") or 0.0
     eur_price = round(prod_price * 0.92, 2)
-    product_link = res.get("product_link") or f"https://www.aliexpress.com/item/{product_id}.html"
+    product_link = ensure_affiliate(res.get("product_link"), pid=product_id)
     image_url = res.get("image_url")
 
     # Smart Deal Link: Coin link (90%+) or Bundle link (rare cases)
@@ -474,6 +531,7 @@ async def publish_deal_to_channel(product_id: str, raw_user_text: str = "") -> T
     deal_link = res.get("bundle_link") if is_bundle else res.get("coin_link")
     if not deal_link:
         deal_link = res.get("coin_link") or product_link
+    deal_link = ensure_affiliate(deal_link, fallback_link=product_link, pid=product_id)
 
     # Smart situational hook
     t_lower = prod_title.lower()

@@ -26,6 +26,7 @@ from api.coin_bot import (
     get_live_usdt_rate,
     is_admin,
     safe_api_get_details,
+    ensure_affiliate,
     ALIEXPRESS_AFFILIATE_APP_KEY,
     ALIEXPRESS_AFFILIATE_APP_SECRET,
     ALIEXPRESS_AFFILIATE_TRACKING_ID,
@@ -319,8 +320,8 @@ async def publish_deal_post(product_id: str, chosen_image: Optional[str] = None,
 
     title = deal_state.get("title") or "منتج مميز من AliExpress"
     price = deal_state.get("price")
-    product_link = deal_state.get("product_link") or f"https://www.aliexpress.com/item/{product_id}.html"
-    deal_link = deal_state.get("primary_link") or deal_state.get("coin_link") or product_link
+    product_link = ensure_affiliate(deal_state.get("product_link"), pid=product_id)
+    deal_link = ensure_affiliate(deal_state.get("primary_link") or deal_state.get("coin_link") or product_link, fallback_link=product_link, pid=product_id)
     coupon = deal_state.get("coupon")
     coins_text = deal_state.get("coins_text")
     country = deal_state.get("country")
@@ -403,13 +404,14 @@ async def prepare_deal_state(pid: str, raw_user_text: str = "") -> Dict[str, Any
     seller_coupon = user_inputs.get("seller_coupon")
     coins_text = user_inputs["coins_text"]
     country = user_inputs["country"] or "كوريا 🇰🇷"
-    product_link = res.get("product_link") or f"https://www.aliexpress.com/item/{pid}.html"
-    coin_link = res.get("coin_link") or product_link
-    bundle_link = res.get("bundle_link") or product_link
+    product_link = ensure_affiliate(res.get("product_link"), pid=pid)
+    coin_link = ensure_affiliate(res.get("coin_link"), fallback_link=product_link, pid=pid)
+    bundle_link = ensure_affiliate(res.get("bundle_link"), fallback_link=product_link, pid=pid)
 
     # Determine deal type: 90%+ are coin deals, rare cases are bundle
     is_bundle = any(k in raw_user_text.lower() for k in ["bundle", "حزم", "حزمة", "3 بـ", "3 منتجات"])
     primary_link = bundle_link if is_bundle else coin_link
+    primary_link = ensure_affiliate(primary_link, fallback_link=product_link, pid=pid)
 
     # 3. Collect candidate images from original seller + other sellers
     main_image = res.get("image_url")
@@ -636,9 +638,9 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
 
             title = deal_state.get("title") or "منتج مميز من AliExpress"
             price = deal_state.get("price")
-            product_link = deal_state.get("product_link") or f"https://www.aliexpress.com/item/{target_pid}.html"
-            coin_link = deal_state.get("coin_link") or product_link
-            deal_link = deal_state.get("primary_link") or coin_link
+            product_link = ensure_affiliate(deal_state.get("product_link"), pid=target_pid)
+            coin_link = ensure_affiliate(deal_state.get("coin_link"), fallback_link=product_link, pid=target_pid)
+            deal_link = ensure_affiliate(deal_state.get("primary_link") or coin_link, fallback_link=product_link, pid=target_pid)
             coupon = deal_state.get("coupon")
             coins_text = deal_state.get("coins_text")
             country = deal_state.get("country")
@@ -1125,9 +1127,9 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
 
     title = deal_state.get("title") or "منتج مميز من AliExpress"
     price = deal_state.get("price")
-    product_link = deal_state.get("product_link") or f"https://www.aliexpress.com/item/{pid}.html"
-    coin_link = deal_state.get("coin_link") or product_link
-    deal_link = deal_state.get("primary_link") or coin_link
+    product_link = ensure_affiliate(deal_state.get("product_link"), pid=pid)
+    coin_link = ensure_affiliate(deal_state.get("coin_link"), fallback_link=product_link, pid=pid)
+    deal_link = ensure_affiliate(deal_state.get("primary_link") or coin_link, fallback_link=product_link, pid=pid)
     coupon = deal_state.get("coupon")
     coins_text = deal_state.get("coins_text")
     country = deal_state.get("country")
