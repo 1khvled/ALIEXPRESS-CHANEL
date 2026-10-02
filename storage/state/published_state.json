@@ -88,7 +88,8 @@
     "1005012340203471",
     "9998887832",
     "9998887913",
-    "9998887994"
+    "9998887994",
+    "1005013005786079"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -106,7 +107,7 @@
     "1005009627597591": 1790884233.6428,
     "1005008880082336": 1790943678.5551012,
     "1005007275142457": 1790884287.4211984,
-    "1005007279793099": 1790884299.0959656,
+    "1005007279793099": 1790958112.48898,
     "1005008829227075": 1790884310.7506618,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
@@ -134,7 +135,7 @@
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
     "100500888999777": 1790943594.512046,
-    "1005007027334636": 1790940343.7746465,
+    "1005007027334636": 1790958099.4496896,
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
@@ -183,7 +184,8 @@
     "1005012340203471": 1790950255.4725466,
     "9998887832": 1790957832.2997856,
     "9998887913": 1790957913.5473306,
-    "9998887994": 1790957994.466288
+    "9998887994": 1790957994.466288,
+    "1005013005786079": 1790958106.1812875
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -268,7 +270,10 @@
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back",
     "Powerful Violent Fan 150000RPM",
     "Essager 65W GaN USB",
-    "POCO X6 Pro 5G 12/512GB"
+    "POCO X6 Pro 5G 12/512GB",
+    "SomnAmbulist SSD",
+    "CMF Buds Neo 12.4 mm Titanium‑coated Driver",
+    "Attack Shark R1"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -356,7 +361,10 @@
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": 1790949354.0364344,
     "Powerful Violent Fan 150000RPM": 1790949652.480052,
     "Essager 65W GaN USB": 1790949658.4852333,
-    "POCO X6 Pro 5G 12/512GB": 1790950255.4725466
+    "POCO X6 Pro 5G 12/512GB": 1790950255.4725466,
+    "SomnAmbulist SSD": 1790958099.4496896,
+    "CMF Buds Neo 12.4 mm Titanium‑coated Driver": 1790958106.1812875,
+    "Attack Shark R1": 1790958112.48898
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -520,15 +528,19 @@
     "lodydeals:45401",
     "test_channel:1790957832",
     "test_channel:1790957913",
-    "test_channel:1790957994"
+    "test_channel:1790957994",
+    "aniscoupons:32660",
+    "aniscoupons:32661",
+    "aniscoupons:32662",
+    "aniscoupons:32663"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790957994.5133312,
+  "last_run_time": 1790958112.48898,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32646,
-      "last_check_time": 1790932016.8823907
+      "last_message_id": 32663,
+      "last_check_time": 1790958112.48898
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -536,11 +548,11 @@
     },
     "lodydeals": {
       "last_message_id": 45401,
-      "last_check_time": 1790957994.5133312
+      "last_check_time": 1790958091.1380982
     },
     "bnddeals": {
       "last_message_id": 50788,
-      "last_check_time": 1790957143.6465154
+      "last_check_time": 1790958092.050731
     },
     "test_channel": {
       "last_message_id": 1790957994,
@@ -552,25 +564,25 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790957143.043569
+      "last_check_time": 1790958091.4741867
     },
     "megaphonna": {
       "last_message_id": 8186,
-      "last_check_time": 1790957143.9392233
+      "last_check_time": 1790958092.4599223
     }
   },
   "published_product_prices": {
     "1005012973772517": 179.1,
     "1005010219205081": 60.0,
     "1005007805638431": 22.64,
-    "1005007027334636": 28.5,
+    "1005007027334636": 9.5,
     "1005009054706827": 22.0,
     "1005007961216287": 18.17,
     "1005008233932899": 294.7,
     "1005009627597591": 314.9,
     "1005008880082336": 22.7,
     "1005007275142457": 29.58,
-    "1005007279793099": 14.13,
+    "1005007279793099": 14.1,
     "1005008829227075": 25.06,
     "100500777666555": 20.0,
     "1005011778621042": 124.99,
@@ -629,7 +641,8 @@
     "1005009411512584": 26.8,
     "1005012058540420": 10.49,
     "1005009295911745": 25.87,
-    "1005012340203471": 242.7
+    "1005012340203471": 242.7,
+    "1005013005786079": 19.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1431,6 +1444,36 @@
       "price": 242.7,
       "timestamp": 1790950255.4725466,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32661": {
+      "channel_msg_id": 366,
+      "product_id": "1005007027334636",
+      "title": "SomnAmbulist SSD",
+      "channel": "aniscoupons",
+      "source_msg_id": 32661,
+      "price": 9.5,
+      "timestamp": 1790958099.4496896,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32662": {
+      "channel_msg_id": 367,
+      "product_id": "1005013005786079",
+      "title": "CMF Buds Neo 12.4 mm Titanium‑coated Driver",
+      "channel": "aniscoupons",
+      "source_msg_id": 32662,
+      "price": 19.4,
+      "timestamp": 1790958106.1812875,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32663": {
+      "channel_msg_id": 368,
+      "product_id": "1005007279793099",
+      "title": "Attack Shark R1",
+      "channel": "aniscoupons",
+      "source_msg_id": 32663,
+      "price": 14.1,
+      "timestamp": 1790958112.48898,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1439,7 +1482,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790950255.4746878,
+    "last_deal_post_time": 1790958112.491224,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1449,7 +1492,7 @@
   "published_product_channels": {
     "999888104": "test_channel",
     "100500888999777": "lodydeals",
-    "1005007027334636": "zedstoreonline",
+    "1005007027334636": "aniscoupons",
     "1005009734653254": "bnddeals",
     "1005008333859881": "bnddeals",
     "1005009357018019": "bnddeals",
@@ -1505,7 +1548,9 @@
     "1005012340203471": "lodydeals",
     "9998887832": "test_channel",
     "9998887913": "test_channel",
-    "9998887994": "test_channel"
+    "9998887994": "test_channel",
+    "1005013005786079": "aniscoupons",
+    "1005007279793099": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1553,7 +1598,10 @@
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": "bnddeals",
     "Powerful Violent Fan 150000RPM": "lodydeals",
     "Essager 65W GaN USB": "lodydeals",
-    "POCO X6 Pro 5G 12/512GB": "lodydeals"
+    "POCO X6 Pro 5G 12/512GB": "lodydeals",
+    "SomnAmbulist SSD": "aniscoupons",
+    "CMF Buds Neo 12.4 mm Titanium‑coated Driver": "aniscoupons",
+    "Attack Shark R1": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
