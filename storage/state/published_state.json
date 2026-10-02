@@ -104,7 +104,7 @@
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
     "1005007805638431": 1790884166.1520143,
-    "1005009054706827": 1790884195.3586087,
+    "1005009054706827": 1790968242.9714053,
     "1005007961216287": 1790937542.235978,
     "1005009627597591": 1790884233.6428,
     "1005008880082336": 1790943678.5551012,
@@ -292,7 +292,7 @@
     "Test Wrench Set": 1790965993.3792443,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
-    "Machenike G3 V2 PC Gaming Controller Hall Effect": 1790884195.3586087,
+    "Machenike G3 V2 PC Gaming Controller Hall Effect": 1790968242.9714053,
     "ATTACK SHARK L90": 1790884206.6605399,
     "SomnAmbulist SSD 2.5 120GB": 1790884215.4346776,
     "Realme 15 Pro Global (8/256)": 1790884233.6428,
@@ -583,15 +583,16 @@
     "zedstoreonline:38523",
     "megaphonna:8196",
     "megaphonna:8197",
-    "aniscoupons:32685"
+    "aniscoupons:32685",
+    "zedstoreonline:38524"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790967962.6418507,
+  "last_run_time": 1790968242.9714053,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32685,
-      "last_check_time": 1790967964.6475863
+      "last_check_time": 1790968246.5296078
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -599,11 +600,11 @@
     },
     "lodydeals": {
       "last_message_id": 45401,
-      "last_check_time": 1790967947.7274399
+      "last_check_time": 1790968238.6454864
     },
     "bnddeals": {
       "last_message_id": 50789,
-      "last_check_time": 1790967948.7440438
+      "last_check_time": 1790968245.8207314
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -614,12 +615,12 @@
       "last_check_time": 1790937548.9389005
     },
     "zedstoreonline": {
-      "last_message_id": 38523,
-      "last_check_time": 1790967948.0916972
+      "last_message_id": 38524,
+      "last_check_time": 1790968244.9814003
     },
     "megaphonna": {
       "last_message_id": 8197,
-      "last_check_time": 1790967956.6725664
+      "last_check_time": 1790968246.140851
     }
   },
   "published_product_prices": {
@@ -627,7 +628,7 @@
     "1005010219205081": 60.0,
     "1005007805638431": 22.64,
     "1005007027334636": 9.5,
-    "1005009054706827": 22.0,
+    "1005009054706827": 22.6,
     "1005007961216287": 18.17,
     "1005008233932899": 294.9,
     "1005009627597591": 314.9,
@@ -1580,6 +1581,16 @@
       "price": 47.4,
       "timestamp": 1790967962.6418507,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38524": {
+      "channel_msg_id": 416,
+      "product_id": "1005009054706827",
+      "title": "Machenike G3 V2 PC Gaming Controller Hall Effect",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38524,
+      "price": 22.6,
+      "timestamp": 1790968242.9714053,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1588,7 +1599,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790967962.64389,
+    "last_deal_post_time": 1790968242.9739435,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1669,7 +1680,8 @@
     "9998885993": "test_channel",
     "1005009774318553": "aniscoupons",
     "1005012574108028": "megaphonna",
-    "1005008599340405": "aniscoupons"
+    "1005008599340405": "aniscoupons",
+    "1005009054706827": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1733,7 +1745,8 @@
     "ONEPLUS TURBO 6X PRO 5G (8/128)": "megaphonna",
     "CUSU SSD 512 GB Portable SSD External Drive": "aniscoupons",
     "HONOR  X80 PRO MAX (8/128)": "megaphonna",
-    "WALRAM Sata SSD 512GB": "aniscoupons"
+    "WALRAM Sata SSD 512GB": "aniscoupons",
+    "Machenike G3 V2 PC Gaming Controller Hall Effect": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
