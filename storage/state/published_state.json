@@ -509,7 +509,8 @@
     "lodydeals:45397",
     "lodydeals:45398",
     "lodydeals:45399",
-    "lodydeals:45400"
+    "lodydeals:45400",
+    "megaphonna:8186"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
@@ -525,11 +526,11 @@
     },
     "lodydeals": {
       "last_message_id": 45400,
-      "last_check_time": 1790951148.7727048
+      "last_check_time": 1790951436.068946
     },
     "bnddeals": {
       "last_message_id": 50788,
-      "last_check_time": 1790951149.8559573
+      "last_check_time": 1790951436.983258
     },
     "test_channel": {
       "last_message_id": 1790947189,
@@ -541,11 +542,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790951149.15543
+      "last_check_time": 1790951436.4052222
     },
     "megaphonna": {
-      "last_message_id": 8185,
-      "last_check_time": 1790951150.2665706
+      "last_message_id": 8186,
+      "last_check_time": 1790951440.555399
     }
   },
   "published_product_prices": {
@@ -1548,7 +1549,8 @@
     "jumuah": "2026-10-02",
     "test_rem_d0b156d9": "2026-10-02",
     "test_rem_35271d74": "2026-10-02",
-    "test_rem_308fc3d4": "2026-10-02"
+    "test_rem_308fc3d4": "2026-10-02",
+    "jumuah_asr": "2026-10-02"
   },
   "channel_announcements_history": {
     "china_holiday_shipping_delay": "2026-10-02",
