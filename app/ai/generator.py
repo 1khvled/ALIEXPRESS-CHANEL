@@ -16,17 +16,29 @@ class DealCaptionGenerator:
         has_points_discount: bool,
         has_coupon: bool,
         promo_tag: Optional[str] = None,
-        is_price_drop: bool = False
+        is_price_drop: bool = False,
+        is_restock: bool = False
     ) -> str:
         """
         Generates authentic Algerian Telegram deal channel hooks.
-        Dynamically detects subcategories (Gaming, Audio, Storage/Hardware, Chargers/Power, Wearables)
+        Dynamically detects restocks/returns, subcategories (Gaming, Audio, Storage, Power, Wearables),
         and price-drop drops.
         """
         h = int(hashlib.md5(title.encode()).hexdigest(), 16)
         t_lower = title.lower()
 
-        # 1. Price-Drop Arbitrage Hook
+        # 1. Restock / Return Repost Hook (Highest urgency: "الححق عودة العرض حبات قلال")
+        if is_restock:
+            restock_hooks = [
+                "🚨 <b>الحححححق عودة العرض.. حبات قلال فقط! 🔥🏃‍♂️</b>",
+                "⚡ <b>الحقوووو رجع توفر من جديد.. حبات قلال ويسالي! 🚨🔥</b>",
+                "🔥 <b>صيدة رجعت توفرت بسعر باطل.. كمية محدودة جداً سارع! ⚡</b>",
+                "🏃‍♂️💨 <b>الحق عودة العرض لافااار.. بقاو حبات قلال متتراطاش! 🔥</b>",
+                "🚨 <b>الححححق توفر من جديد.. الكمية طير في دقائق! 🔥⚡</b>"
+            ]
+            return restock_hooks[h % len(restock_hooks)]
+
+        # 2. Price-Drop Arbitrage Hook
         if is_price_drop:
             price_drop_hooks = [
                 "💥 <b>هبوط قوي في السعر.. ألحـــــق لافــــــــــــــار! 📉🔥</b>",
@@ -188,6 +200,7 @@ class DealCaptionGenerator:
         country_info: Optional[str] = None,
         promo_tag: Optional[str] = None,
         is_price_drop: bool = False,
+        is_restock: bool = False,
         coin_url: Optional[str] = None,
         deal_type: str = "coin"
     ) -> str:
@@ -196,13 +209,16 @@ class DealCaptionGenerator:
         # 1. Authentic Algerian Deal Hook
         if deal_type == "bundle":
             h = int(hashlib.md5(title.encode()).hexdigest(), 16)
-            bundle_hooks = [
-                "🔥 <b>الححححححححق عروض bundle deals متتراطاش 🔥</b>",
-                "📦 <b>عروض الحزم (Choice Bundle) صيدة هبااال ناااار 🔥⚡</b>",
-                "⚡ <b>صيدة اليوم في عروض الحزم 3 قطع بأقوى سعر 🔥</b>",
-                "🛍️ <b>لافـــــــــــــار عروض الحزم bundle deals باطل 🔥</b>"
-            ]
-            hook = bundle_hooks[h % len(bundle_hooks)]
+            if is_restock:
+                hook = "🚨 <b>الحححححق عودة عروض Bundle Deals.. حبات قلال فقط! 🔥📦</b>"
+            else:
+                bundle_hooks = [
+                    "🔥 <b>الححححححححق عروض bundle deals متتراطاش 🔥</b>",
+                    "📦 <b>عروض الحزم (Choice Bundle) صيدة هبااال ناااار 🔥⚡</b>",
+                    "⚡ <b>صيدة اليوم في عروض الحزم 3 قطع بأقوى سعر 🔥</b>",
+                    "🛍️ <b>لافـــــــــــــار عروض الحزم bundle deals باطل 🔥</b>"
+                ]
+                hook = bundle_hooks[h % len(bundle_hooks)]
         else:
             hook = self._select_smart_hook(
                 title=title,
@@ -210,9 +226,13 @@ class DealCaptionGenerator:
                 has_points_discount=has_points_discount,
                 has_coupon=bool(coupon_code or seller_coupon),
                 promo_tag=None,
-                is_price_drop=is_price_drop
+                is_price_drop=is_price_drop,
+                is_restock=is_restock
             )
         lines.append(f"<blockquote>{hook}</blockquote>")
+
+        if is_restock:
+            lines.append("<blockquote>⚡ <b>تنبيه:</b> العرض رجع توفر بكمية محدودة.. سارع قبل النفاذ! 🏃‍♂️💨</blockquote>")
 
         # 2. Country recommendation (exact Algerian Telegram style in blockquote)
         if country_info:
@@ -278,6 +298,7 @@ class DealCaptionGenerator:
         coupon_list: Optional[List[Dict[str, str]]] = None,
         promo_tag: Optional[str] = None,
         is_price_drop: bool = False,
+        is_restock: bool = False,
         coin_url: Optional[str] = None,
         raw_text: Optional[str] = None,
         deal_type: str = "coin"
@@ -285,6 +306,10 @@ class DealCaptionGenerator:
         """
         Generates authentic Algerian Telegram channel caption.
         """
+        if not is_restock and raw_text:
+            from app.aliexpress.parser import detect_restock_deal
+            is_restock = detect_restock_deal(raw_text)
+
         if coupon_list and len(coupon_list) >= 2:
             return self.format_coupon_list(coupon_list, affiliate_url)
 
@@ -306,6 +331,7 @@ class DealCaptionGenerator:
             country_info=country_info,
             promo_tag=promo_tag,
             is_price_drop=is_price_drop,
+            is_restock=is_restock,
             coin_url=coin_url,
             deal_type=deal_type
         )

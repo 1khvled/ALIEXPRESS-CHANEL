@@ -251,7 +251,8 @@ async def build_exact_deal_caption(
     coupon_code: Optional[str] = None,
     seller_coupon: Optional[str] = None,
     coins_text: Optional[str] = None,
-    country: Optional[str] = None
+    country: Optional[str] = None,
+    is_restock: bool = False
 ) -> str:
     """Builds caption matching authentic Algerian Telegram deal channels."""
     country_name = country or "كوريا 🇰🇷"
@@ -264,9 +265,13 @@ async def build_exact_deal_caption(
         title=title,
         usd_price=price or 0.0,
         has_points_discount=bool(coins_text),
-        has_coupon=bool(coupon_code or seller_coupon)
+        has_coupon=bool(coupon_code or seller_coupon),
+        is_restock=is_restock
     )
     lines.append(hook)
+
+    if is_restock:
+        lines.append("⚡ <b>تنبيه:</b> العرض رجع توفر بكمية محدودة (حبات قلال)! 🏃‍♂️💨")
 
     # 2. Country recommendation (clean Algerian channel style)
     if "كندا" in country_name:
@@ -335,7 +340,8 @@ async def publish_deal_post(product_id: str, chosen_image: Optional[str] = None,
         coupon_code=coupon,
         seller_coupon=seller_coupon,
         coins_text=coins_text,
-        country=country
+        country=country,
+        is_restock=deal_state.get("is_restock", False)
     )
 
     image_url = chosen_image or deal_state.get("chosen_image") or deal_state.get("image_url")
@@ -408,10 +414,13 @@ async def prepare_deal_state(pid: str, raw_user_text: str = "") -> Dict[str, Any
     coin_link = ensure_affiliate(res.get("coin_link"), fallback_link=product_link, pid=pid)
     bundle_link = ensure_affiliate(res.get("bundle_link"), fallback_link=product_link, pid=pid)
 
-    # Determine deal type: 90%+ are coin deals, rare cases are bundle
+    # Determine deal type & restock status
     is_bundle = any(k in raw_user_text.lower() for k in ["bundle", "حزم", "حزمة", "3 بـ", "3 منتجات"])
     primary_link = bundle_link if is_bundle else coin_link
     primary_link = ensure_affiliate(primary_link, fallback_link=product_link, pid=pid)
+
+    from app.aliexpress.parser import detect_restock_deal
+    is_restock = detect_restock_deal(raw_user_text)
 
     # 3. Collect candidate images from original seller + other sellers
     main_image = res.get("image_url")
@@ -447,6 +456,7 @@ async def prepare_deal_state(pid: str, raw_user_text: str = "") -> Dict[str, Any
         "bundle_link": bundle_link,
         "primary_link": primary_link,
         "is_bundle": is_bundle,
+        "is_restock": is_restock,
         "images": candidate_images,
         "chosen_image": chosen_image,
         "raw_text": raw_user_text
@@ -651,7 +661,8 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
                 affiliate_url=deal_link,
                 coupon_code=coupon,
                 coins_text=coins_text,
-                country=country
+                country=country,
+                is_restock=deal_state.get("is_restock", False)
             )
 
             next_cycle_idx = (actual_idx + 1) % len(images)
@@ -883,6 +894,36 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
     if text.startswith("/rate"):
         rate = await get_live_usdt_rate()
         await send_admin_msg(chat_id, f"📈 <b>سعر الـ USDT الحالي في السوق الموازي:</b>\n1 USDT ≈ <b>{rate:.1f} دج</b>\nالمصدر: <a href=\"https://squarealgerie.com\">SquareAlgerie.com</a> 🇩🇿")
+        return True
+
+    if text.startswith("/jumuah") or text.startswith("جمعة"):
+        await send_admin_msg(chat_id, "⏳ جاري نشر تذكير سنن الجمعة والصلاة على النبي ﷺ في القناة @DzAliexpress0...")
+        try:
+            from app.publisher.religious_reminders import post_religious_reminder
+            success, err, msg_id = await post_religious_reminder("jumuah", bot_token=ADMIN_BOT_TOKEN)
+            if success:
+                ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
+                post_url = f"https://t.me/{ch_clean}/{msg_id}"
+                await send_admin_msg(chat_id, f"✅ <b>تم نشر تذكير الجمعة المباركة بنجاح!</b>\n🔗 <a href=\"{post_url}\">{post_url}</a>")
+            else:
+                await send_admin_msg(chat_id, f"❌ فشل نشر تذكير الجمعة: {err}")
+        except Exception as e:
+            await send_admin_msg(chat_id, f"❌ حدث خطأ: {e}")
+        return True
+
+    if text.startswith("/fajr") or text.startswith("فجر"):
+        await send_admin_msg(chat_id, "⏳ جاري نشر تذكير صلاة الفجر في القناة @DzAliexpress0...")
+        try:
+            from app.publisher.religious_reminders import post_religious_reminder
+            success, err, msg_id = await post_religious_reminder("fajr", bot_token=ADMIN_BOT_TOKEN)
+            if success:
+                ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
+                post_url = f"https://t.me/{ch_clean}/{msg_id}"
+                await send_admin_msg(chat_id, f"✅ <b>تم نشر تذكير صلاة الفجر بنجاح!</b>\n🔗 <a href=\"{post_url}\">{post_url}</a>")
+            else:
+                await send_admin_msg(chat_id, f"❌ فشل نشر تذكير الفجر: {err}")
+        except Exception as e:
+            await send_admin_msg(chat_id, f"❌ حدث خطأ: {e}")
         return True
 
     if text.startswith("/calendar") or text.startswith("/promo") or text.startswith("رزنامة") or text.startswith("تخفيضات"):
@@ -1143,7 +1184,8 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
         affiliate_url=deal_link,
         coupon_code=coupon,
         coins_text=coins_text,
-        country=country
+        country=country,
+        is_restock=deal_state.get("is_restock", False)
     )
 
     # Direct Channel Publication (Never repost or clutter admin chat)

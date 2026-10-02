@@ -294,12 +294,15 @@ def is_recent_cross_channel_duplicate(
     current_channel: str = "",
     current_price: Optional[float] = None,
     title: str = "",
-    cooldown_hours: Optional[float] = None
+    cooldown_hours: Optional[float] = None,
+    raw_text: str = ""
 ) -> Tuple[bool, str, bool]:
     """
     Validates cross-channel duplicates vs. repeat posts:
     - If multiple channels post the SAME offer at the same time:
       Blocks subsequent channel's post (within cooldown_hours, default 3.0h).
+    - If competitor announces Restock / Return ("عودة العرض", "حبات قلال"):
+      ALLOWS repeat post via Restock Exception!
     - If the SAME channel repeat posts the offer (e.g. after debounce >= 10m):
       ALLOWS repeat post! (Mimics channel reposting behavior).
     - If ANY channel reposts after cooldown_hours (renewed deal):
@@ -340,6 +343,15 @@ def is_recent_cross_channel_duplicate(
     if p_str and p_str in ts_map:
         age = now - ts_map[p_str]
         prev_price = price_map.get(p_str)
+
+        # Check for Restock / Return Repost Exception:
+        # If competitor explicitly announces restock/limited stock ("عودة العرض", "حبات قلال", etc.),
+        # allow repost after at least 10 min debounce (age >= 600s)!
+        if raw_text and age >= 600:
+            from app.aliexpress.parser import detect_restock_deal
+            if detect_restock_deal(raw_text):
+                logger.info(f"[RESTOCK REPOST EXCEPTION] Product {p_str} restock announced by @{clean_curr_ch} (age {age/60:.1f}m). Allowing restock repost!")
+                return False, f"Restock exception: competitor announced restock/return ({age/60:.1f}m later)", False
 
         # Check for Price-Drop Exception: require at least 1h age to prevent rapid reposts
         if age >= 3600 and prev_price and current_price and current_price > 0 and prev_price > 0:
@@ -813,6 +825,21 @@ def record_coin_reminder_published():
     state["last_coin_reminder_time"] = time.time()
     state["next_reminder_interval_seconds"] = random.randint(48 * 3600, 72 * 3600)
     state["coin_reminder_variant_idx"] = (state.get("coin_reminder_variant_idx", 0) + 1) % 3
+    save_persistent_state(state)
+
+# ── Religious & Spiritual Reminders Tracking (Jumuah, Fajr, etc.) ────
+def is_religious_reminder_eligible(reminder_type: str, date_str: str) -> bool:
+    """Checks if a religious reminder (e.g. 'jumuah', 'fajr', 'jumuah_asr') has already been posted today."""
+    state = load_persistent_state()
+    history = state.get("religious_reminders_history", {})
+    return history.get(reminder_type) != date_str
+
+def record_religious_reminder_published(reminder_type: str, date_str: str):
+    """Records that a religious reminder was published for the given date."""
+    state = load_persistent_state()
+    if "religious_reminders_history" not in state:
+        state["religious_reminders_history"] = {}
+    state["religious_reminders_history"][reminder_type] = date_str
     save_persistent_state(state)
 
 # ── Dynamic Schedule & Interval Management ──────────────────────

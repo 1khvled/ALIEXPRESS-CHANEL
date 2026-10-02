@@ -524,3 +524,44 @@ def detect_deal_type(raw_text: str, url: str = "") -> str:
 
     # Default to standard canonical item URL for clean coupons and seller discounts
     return "coin"
+
+
+def detect_restock_deal(text: str) -> bool:
+    """
+    Detects if an incoming Telegram deal post is an urgent Restock / Return announcement.
+    Matches Algerian deal channel patterns like:
+    - عودة العرض, عودة التوفر, عودة توفر, رجع العرض, رجع توفر, عاد للتوفر, توفر من جديد
+    - حبات قلال, حبات قليلة, حبات قلا, بقاو حبات, كمية محدودة جدا, عدد قليل
+    - الححححق عودة, الحقوو عودة, سارع قبل النفاذ, قبل ما يخلاص
+    """
+    if not text:
+        return False
+    t = text.lower()
+
+    # 1. Direct explicit phrases
+    phrases = [
+        "عودة العرض", "عودة التوفر", "عودة توفر", "رجع العرض", "رجع توفر",
+        "توفر من جديد", "توفر مجددا", "عاد للتوفر", "رجع للتوفر", "رجعت توفرت",
+        "عاود توفر", "عاود رجع", "حبات قلال", "حبات قليلة", "حبات قلا",
+        "بقايا حبات", "بقاو حبات", "كمية محدودة جدا", "كمية قليلة جدا", "عدد قليل",
+        "سارع قبل النفاذ", "سارعوا قبل نفاذ الكمية", "قبل ما يخلاص", "قبل نفاذ المخزون",
+        "الحق عودة", "الحححق عودة", "الحقوو عودة", "الحقوا عودة", "الحقق عودة"
+    ]
+    if any(p in t for p in phrases):
+        return True
+
+    # 2. Co-occurrence: (الحق / سارع / اجري) + (توفر / رجع / عودة / حبات / مخزون)
+    has_urgency = any(u in t for u in ["الحق", "الحححق", "الحقو", "الحقوا", "سارع", "سارعوا", "اجري", "لحق روحك"])
+    has_stock = any(s in t for s in ["توفر", "رجع", "رجعت", "عودة", "حبات", "مخزون", "ستوك", "stock"])
+    if has_urgency and has_stock:
+        return True
+
+    # 3. Regex matches
+    if re.search(r'حبات\s*(?:قلال|قليلة|قلا|معدودة)', t):
+        return True
+    if re.search(r'عود[ةه]\s*(?:ال(?:عرض|توفر)|توفر|سلع)', t):
+        return True
+    if re.search(r'رجعت?\s*(?:توفر|توفرت|العرض)', t):
+        return True
+
+    return False

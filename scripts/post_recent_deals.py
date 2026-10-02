@@ -89,6 +89,16 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
     except Exception as e:
         print(f"[!] Coin reminder check error: {e}")
 
+    # Automated Check: Religious & Spiritual Reminders (Jumu'ah & Fajr Salah)
+    try:
+        from app.publisher.religious_reminders import check_and_auto_post_religious_reminders
+        rel_results = await check_and_auto_post_religious_reminders(force=False)
+        for r in rel_results:
+            if r.get("success"):
+                print(f"[RELIGIOUS REMINDER AUTO-POST] Posted {r.get('type')} reminder to channel (Msg ID: {r.get('message_id')})")
+    except Exception as e:
+        print(f"[!] Religious reminder check error: {e}")
+
     # Automated Check: Expired Deals / Dead Links Auto-Updater (Checks last 24h posts in @DzAliexpress0)
     try:
         from app.publisher.state_tracker import check_and_update_expired_deals
@@ -302,12 +312,15 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                             record_post_handled(ch, msg_id)
                             continue
 
-                    # 6. Validate by Post ID & check Cross-Channel duplicates vs Repeat Posts:
+                    # 6. Validate by Post ID & check Cross-Channel duplicates vs Repeat Posts / Restocks:
                     # Cross-channel window = 3.0h (blocks simultaneous duplicates if multiple channels post at the same time),
-                    # but allows repeat posts if the source channel reposts it or if reposted after 3h!
+                    # but allows repeat posts if the source channel reposts it, if restocked, or if reposted after 3h!
+                    from app.aliexpress.parser import detect_restock_deal
+                    is_restock = detect_restock_deal(raw_text)
+
                     is_dup, dup_reason, is_price_drop = is_recent_cross_channel_duplicate(
                         extracted.product_id, ch, current_price=extracted.current_price, title=extracted.title or "",
-                        cooldown_hours=3.0
+                        cooldown_hours=3.0, raw_text=raw_text
                     )
                     if is_dup:
                         print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] {dup_reason}")
@@ -315,7 +328,9 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                         record_post_handled(ch, msg_id)
                         continue
 
-                    if is_price_drop:
+                    if is_restock:
+                        print(f"  [🚨 RESTOCK EXCEPTION] Competitor announced return/restock! Reposting with restock urgency hook.")
+                    elif is_price_drop:
                         print(f"  [📉 PRICE-DROP EXCEPTION] {dup_reason}! Reposting with updated price & hook.")
 
                     if extracted.product_id and extracted.product_id in seen_products:
@@ -370,6 +385,7 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                         coupon_list=extracted.coupon_list if extracted.is_coupon_list else None,
                         promo_tag=None,
                         is_price_drop=is_price_drop,
+                        is_restock=is_restock,
                         coin_url=None,
                         raw_text=raw_text,
                         deal_type=deal_type
