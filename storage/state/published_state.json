@@ -82,7 +82,9 @@
     "1005012865117890",
     "1005010428573334",
     "1005013146524028",
-    "1005009411512584"
+    "1005009411512584",
+    "1005012058540420",
+    "1005009295911745"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -171,7 +173,9 @@
     "1005012865117890": 1790948460.5860589,
     "1005010428573334": 1790948755.0367405,
     "1005013146524028": 1790948764.3756874,
-    "1005009411512584": 1790949354.0364344
+    "1005009411512584": 1790949354.0364344,
+    "1005012058540420": 1790949652.480052,
+    "1005009295911745": 1790949658.4852333
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -253,7 +257,9 @@
     "REALME 14 pro (12/256)",
     "HONOR X9D (12/256)",
     "Honor 400  Smart  (6/128)",
-    "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back"
+    "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back",
+    "Powerful Violent Fan 150000RPM",
+    "Essager 65W GaN USB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -338,7 +344,9 @@
     "REALME 14 pro (12/256)": 1790948460.5860589,
     "HONOR X9D (12/256)": 1790948755.0367405,
     "Honor 400  Smart  (6/128)": 1790948764.3756874,
-    "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": 1790949354.0364344
+    "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": 1790949354.0364344,
+    "Powerful Violent Fan 150000RPM": 1790949652.480052,
+    "Essager 65W GaN USB": 1790949658.4852333
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -493,11 +501,13 @@
     "megaphonna:8181",
     "megaphonna:8182",
     "megaphonna:8184",
-    "bnddeals:50788"
+    "bnddeals:50788",
+    "lodydeals:45397",
+    "lodydeals:45398"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790949354.0364344,
+  "last_run_time": 1790949658.4852333,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32646,
@@ -508,12 +518,12 @@
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45395,
-      "last_check_time": 1790949346.2446644
+      "last_message_id": 45398,
+      "last_check_time": 1790949658.4852333
     },
     "bnddeals": {
       "last_message_id": 50788,
-      "last_check_time": 1790949354.0364344
+      "last_check_time": 1790949661.695031
     },
     "test_channel": {
       "last_message_id": 1790947189,
@@ -525,11 +535,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790949346.5955517
+      "last_check_time": 1790949661.0541377
     },
     "megaphonna": {
       "last_message_id": 8185,
-      "last_check_time": 1790949356.655466
+      "last_check_time": 1790949662.0432315
     }
   },
   "published_product_prices": {
@@ -599,7 +609,9 @@
     "1005012865117890": 234.9,
     "1005010428573334": 294.0,
     "1005013146524028": 162.4,
-    "1005009411512584": 26.8
+    "1005009411512584": 26.8,
+    "1005012058540420": 10.49,
+    "1005009295911745": 25.87
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1371,6 +1383,26 @@
       "price": 26.8,
       "timestamp": 1790949354.0364344,
       "status": "ACTIVE"
+    },
+    "lodydeals:45397": {
+      "channel_msg_id": 362,
+      "product_id": "1005012058540420",
+      "title": "Powerful Violent Fan 150000RPM",
+      "channel": "lodydeals",
+      "source_msg_id": 45397,
+      "price": 10.49,
+      "timestamp": 1790949652.480052,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45398": {
+      "channel_msg_id": 363,
+      "product_id": "1005009295911745",
+      "title": "Essager 65W GaN USB",
+      "channel": "lodydeals",
+      "source_msg_id": 45398,
+      "price": 25.87,
+      "timestamp": 1790949658.4852333,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1379,7 +1411,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790949354.0379484,
+    "last_deal_post_time": 1790949658.4869967,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1439,7 +1471,9 @@
     "1005012865117890": "megaphonna",
     "1005010428573334": "megaphonna",
     "1005013146524028": "megaphonna",
-    "1005009411512584": "bnddeals"
+    "1005009411512584": "bnddeals",
+    "1005012058540420": "lodydeals",
+    "1005009295911745": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1484,7 +1518,9 @@
     "REALME 14 pro (12/256)": "megaphonna",
     "HONOR X9D (12/256)": "megaphonna",
     "Honor 400  Smart  (6/128)": "megaphonna",
-    "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": "bnddeals"
+    "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": "bnddeals",
+    "Powerful Violent Fan 150000RPM": "lodydeals",
+    "Essager 65W GaN USB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
