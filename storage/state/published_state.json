@@ -39,7 +39,11 @@
     "1005006593951067",
     "9998887645",
     "999888104",
-    "100500888999777"
+    "100500888999777",
+    "1005007027334636",
+    "1005009734653254",
+    "1005008333859881",
+    "1005009357018019"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790857823.0117362,
@@ -72,7 +76,7 @@
     "1005012923660718": 1790888191.2162998,
     "1005012881256093": 1790888202.2321055,
     "1005009118633225": 1790888213.2900865,
-    "1005012143831265": 1790888224.6523979,
+    "1005012143831265": 1790940388.7188938,
     "1005007458827229": 1790888886.4062796,
     "1005010453516983": 1790888897.5243473,
     "1005008852027824": 1790888909.743846,
@@ -84,7 +88,11 @@
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
-    "100500888999777": 1790925704.4538765
+    "100500888999777": 1790925704.4538765,
+    "1005007027334636": 1790940343.7746465,
+    "1005009734653254": 1790940366.7525578,
+    "1005008333859881": 1790940373.336947,
+    "1005009357018019": 1790940383.4974926
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -125,7 +133,12 @@
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver",
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT",
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health",
-    "Attack Shark L80 PRO Wireless Mouse"
+    "Attack Shark L80 PRO Wireless Mouse",
+    "الأكثر لبا لنهار اليوووم",
+    "POCO C81 Pro 4/64",
+    "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones",
+    "300Mbps WiFi Amplifier Wireless WIFI Repeater Extender 802.11N Booster",
+    "realme Pad 3 5G Global Version 8/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -169,7 +182,12 @@
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
     "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1790850104.3850508,
-    "Attack Shark L80 PRO Wireless Mouse": 1790939204.4538765
+    "Attack Shark L80 PRO Wireless Mouse": 1790939204.4538765,
+    "الأكثر لبا لنهار اليوووم": 1790940343.7746465,
+    "POCO C81 Pro 4/64": 1790940366.7525578,
+    "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
+    "300Mbps WiFi Amplifier Wireless WIFI Repeater Extender 802.11N Booster": 1790940383.4974926,
+    "realme Pad 3 5G Global Version 8/256GB": 1790940388.7188938
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -217,11 +235,35 @@
     "bnddeals:50770",
     "test_channel:1790937645",
     "test_channel:1790940104",
-    "lodydeals:45000"
+    "lodydeals:45000",
+    "lodydeals:45373",
+    "lodydeals:45374",
+    "lodydeals:45375",
+    "lodydeals:45376",
+    "lodydeals:45377",
+    "lodydeals:45378",
+    "zedstoreonline:38502",
+    "zedstoreonline:38504",
+    "zedstoreonline:38505",
+    "zedstoreonline:38506",
+    "zedstoreonline:38507",
+    "zedstoreonline:38508",
+    "ecksdeal:5831",
+    "ecksdeal:5832",
+    "ecksdeal:5833",
+    "ecksdeal:5834",
+    "ecksdeal:5835",
+    "ecksdeal:5836",
+    "bnddeals:50768",
+    "bnddeals:50769",
+    "bnddeals:50771",
+    "bnddeals:50772",
+    "bnddeals:50773",
+    "bnddeals:50774"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790940104.454607,
+  "last_run_time": 1790940388.7188938,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32646,
@@ -232,12 +274,12 @@
       "last_check_time": 1790884310.7506618
     },
     "lodydeals": {
-      "last_message_id": 45375,
-      "last_check_time": 1790940104.454607
+      "last_message_id": 45378,
+      "last_check_time": 1790940337.5474277
     },
     "bnddeals": {
-      "last_message_id": 50770,
-      "last_check_time": 1790937597.279287
+      "last_message_id": 50774,
+      "last_check_time": 1790940390.7247198
     },
     "test_channel": {
       "last_message_id": 1790940104,
@@ -248,15 +290,15 @@
       "last_check_time": 1790937548.9389005
     },
     "zedstoreonline": {
-      "last_message_id": 38504,
-      "last_check_time": 1790937566.337433
+      "last_message_id": 38508,
+      "last_check_time": 1790940358.465452
     }
   },
   "published_product_prices": {
     "1005012973772517": 179.1,
     "1005010219205081": 57.2,
     "1005007805638431": 22.64,
-    "1005007027334636": 9.5,
+    "1005007027334636": 28.5,
     "1005009054706827": 22.0,
     "1005007961216287": 18.17,
     "1005008233932899": 294.9,
@@ -275,7 +317,7 @@
     "1005012923660718": 15.17,
     "1005012881256093": 28.5,
     "1005009118633225": 14.14,
-    "1005012143831265": 281.9,
+    "1005012143831265": 281.0,
     "1005007458827229": 22.75,
     "1005010453516983": 204.7,
     "1005008852027824": 194.9,
@@ -285,7 +327,10 @@
     "1005005217734986": 9.61,
     "1005010062128237": 9.9,
     "1005006593951067": 24.0,
-    "100500888999777": 22.7
+    "100500888999777": 22.7,
+    "1005009734653254": 67.0,
+    "1005008333859881": 20.47,
+    "1005009357018019": 17.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -647,6 +692,56 @@
       "price": 24.0,
       "timestamp": 1790937595.2497241,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38504": {
+      "channel_msg_id": 313,
+      "product_id": "1005007027334636",
+      "title": "الأكثر لبا لنهار اليوووم",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38504,
+      "price": 28.5,
+      "timestamp": 1790940343.7746465,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50769": {
+      "channel_msg_id": 314,
+      "product_id": "1005009734653254",
+      "title": "POCO C81 Pro 4/64",
+      "channel": "bnddeals",
+      "source_msg_id": 50769,
+      "price": 67.0,
+      "timestamp": 1790940366.7525578,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50771": {
+      "channel_msg_id": 315,
+      "product_id": "1005008333859881",
+      "title": "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones",
+      "channel": "bnddeals",
+      "source_msg_id": 50771,
+      "price": 20.47,
+      "timestamp": 1790940373.336947,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50773": {
+      "channel_msg_id": 316,
+      "product_id": "1005009357018019",
+      "title": "300Mbps WiFi Amplifier Wireless WIFI Repeater Extender 802.11N Booster",
+      "channel": "bnddeals",
+      "source_msg_id": 50773,
+      "price": 17.5,
+      "timestamp": 1790940383.4974926,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50774": {
+      "channel_msg_id": 317,
+      "product_id": "1005012143831265",
+      "title": "realme Pad 3 5G Global Version 8/256GB",
+      "channel": "bnddeals",
+      "source_msg_id": 50774,
+      "price": 281.0,
+      "timestamp": 1790940388.7188938,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -655,7 +750,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790937595.263634,
+    "last_deal_post_time": 1790940388.7203078,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -664,10 +759,20 @@
   "coin_reminder_variant_idx": 1,
   "published_product_channels": {
     "999888104": "test_channel",
-    "100500888999777": "lodydeals"
+    "100500888999777": "lodydeals",
+    "1005007027334636": "zedstoreonline",
+    "1005009734653254": "bnddeals",
+    "1005008333859881": "bnddeals",
+    "1005009357018019": "bnddeals",
+    "1005012143831265": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
-    "Attack Shark L80 PRO Wireless Mouse": "lodydeals"
+    "Attack Shark L80 PRO Wireless Mouse": "lodydeals",
+    "الأكثر لبا لنهار اليوووم": "zedstoreonline",
+    "POCO C81 Pro 4/64": "bnddeals",
+    "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": "bnddeals",
+    "300Mbps WiFi Amplifier Wireless WIFI Repeater Extender 802.11N Booster": "bnddeals",
+    "realme Pad 3 5G Global Version 8/256GB": "bnddeals"
   }
 }
