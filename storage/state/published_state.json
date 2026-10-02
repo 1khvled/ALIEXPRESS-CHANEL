@@ -34,7 +34,8 @@
     "1005008852027824",
     "1005012499451512",
     "9998888981",
-    "1005010129356058"
+    "1005010129356058",
+    "3256809790988797"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790857823.0117362,
@@ -74,7 +75,8 @@
     "1005008852027824": 1790888909.743846,
     "1005012499451512": 1790888928.6181495,
     "9998888981": 1790888981.6873999,
-    "1005010129356058": 1790897106.449474
+    "1005010129356058": 1790897106.449474,
+    "3256809790988797": 1790932009.345257
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -109,7 +111,8 @@
     "realme P3 5G 8/256",
     "OnePlus Turbo 6X Pro 5G",
     "SomnAmbulist SSD",
-    "Xiaomi Pad 7  12/256GB"
+    "Xiaomi Pad 7  12/256GB",
+    "Todmart T3"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -146,7 +149,8 @@
     "realme P3 5G 8/256": 1790888909.743846,
     "OnePlus Turbo 6X Pro 5G": 1790888928.6181495,
     "SomnAmbulist SSD": 1790897093.4157302,
-    "Xiaomi Pad 7  12/256GB": 1790897106.449474
+    "Xiaomi Pad 7  12/256GB": 1790897106.449474,
+    "Todmart T3": 1790932009.345257
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -186,27 +190,28 @@
     "aniscoupons:32633",
     "test_channel:1790888981",
     "aniscoupons:32631",
-    "bnddeals:50765"
+    "bnddeals:50765",
+    "aniscoupons:32644"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790897106.449474,
+  "last_run_time": 1790932009.345257,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32636,
-      "last_check_time": 1790905933.7869039
+      "last_message_id": 32646,
+      "last_check_time": 1790932016.8823907
     },
     "ecksdeal": {
       "last_message_id": 5850,
       "last_check_time": 1790884310.7506618
     },
     "lodydeals": {
-      "last_message_id": 45343,
-      "last_check_time": 1790897099.3078384
+      "last_message_id": 45362,
+      "last_check_time": 1790932017.7610168
     },
     "bnddeals": {
       "last_message_id": 50767,
-      "last_check_time": 1790905940.1914246
+      "last_check_time": 1790932025.4529593
     },
     "test_channel": {
       "last_message_id": 1790888981,
@@ -214,11 +219,11 @@
     },
     "pcgamingpart": {
       "last_message_id": 7936,
-      "last_check_time": 1790905917.6607265
+      "last_check_time": 1790931992.0839727
     },
     "zedstoreonline": {
-      "last_message_id": 38502,
-      "last_check_time": 1790905924.4655674
+      "last_message_id": 38504,
+      "last_check_time": 1790932000.8101556
     }
   },
   "published_product_prices": {
@@ -249,7 +254,8 @@
     "1005010453516983": 204.7,
     "1005008852027824": 194.9,
     "1005012499451512": 261.8,
-    "1005010129356058": 294.0
+    "1005010129356058": 294.0,
+    "3256809790988797": 92.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -561,6 +567,16 @@
       "price": 294.0,
       "timestamp": 1790897106.449474,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32644": {
+      "channel_msg_id": 287,
+      "product_id": "3256809790988797",
+      "title": "Todmart T3",
+      "channel": "aniscoupons",
+      "source_msg_id": 32644,
+      "price": 92.8,
+      "timestamp": 1790932009.345257,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -569,7 +585,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790897106.4506102,
+    "last_deal_post_time": 1790932009.3460393,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
