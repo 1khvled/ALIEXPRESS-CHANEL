@@ -61,7 +61,8 @@ class DealProcessor:
         # Convert to our affiliate link
         affiliate_url = await affiliate_service.create_affiliate_link(
             product_url=extracted.canonical_url,
-            product_id=extracted.product_id
+            product_id=extracted.product_id,
+            deal_type=getattr(extracted, 'deal_type', 'coin')
         )
 
         initial_status = "DETECTED"

@@ -1183,7 +1183,9 @@ async def api_reformat_deal(request: Request):
         country = parsed.get("country")
 
         from api.coin_bot import ensure_affiliate
-        deal_link = ensure_affiliate(deal_info.get("coin_link") or deal_info.get("product_link"), pid=pid)
+        is_bundle = any(k in (raw_text or "").lower() for k in ["bundle", "حزم", "حزمة", "3 بـ", "3 منتجات", "3 قطع"])
+        preferred_link = deal_info.get("bundle_link") if is_bundle else (deal_info.get("coin_link") or deal_info.get("product_link"))
+        deal_link = ensure_affiliate(preferred_link, fallback_link=deal_info.get("product_link"), pid=pid)
 
         caption = await build_exact_deal_caption(
             title=title,

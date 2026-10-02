@@ -56,3 +56,35 @@ async def test_coin_discount_response_monetization():
             if "aliexpress.com" in url:
                 assert ("s.click.aliexpress.com" in url or "aff_fcid=dzkhvled16" in url), f"Button {btn['text']} ({url}) is not monetized!"
 
+@pytest.mark.asyncio
+async def test_bundle_and_promo_links_integrity():
+    from api.coin_bot import generate_coin_discount_response, ensure_affiliate
+
+    pid = "1005008080932874"
+    res = await generate_coin_discount_response(pid)
+
+    # All generated links must be populated
+    bundle_link = res["bundle_link"]
+    super_link = res["super_link"]
+    coin_link = res["coin_link"]
+    product_link = res["product_link"]
+    limited_link = res["limited_link"]
+
+    assert bundle_link and super_link and coin_link and product_link and limited_link
+
+    # Bundle link must NEVER be the raw product link or coin link
+    if "s.click" not in bundle_link:
+        assert "BundleDeals2" in bundle_link
+        assert "productIds=" in bundle_link
+    if "s.click" not in super_link:
+        assert "sourceType=561" in super_link
+        assert "channel=superdeal" in super_link
+    if "s.click" not in coin_link:
+        assert "coin-index" in coin_link
+
+    # Promotional URLs must never be replaced by fallback_link
+    bundle_promo = f"https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES&productIds={pid}"
+    preserved_bundle = ensure_affiliate(bundle_promo, fallback_link=product_link)
+    assert "BundleDeals2" in preserved_bundle
+    assert "aff_fcid=dzkhvled16" in preserved_bundle
+

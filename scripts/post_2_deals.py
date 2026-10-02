@@ -97,7 +97,8 @@ async def post_last_2():
                 # Build real s.click affiliate link
                 aff_link = await affiliate_service.create_affiliate_link(
                     product_url=extracted.canonical_url,
-                    product_id=extracted.product_id
+                    product_id=extracted.product_id,
+                    deal_type=getattr(extracted, 'deal_type', 'coin')
                 )
 
                 # Generate clean caption
