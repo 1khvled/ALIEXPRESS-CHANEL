@@ -184,7 +184,7 @@
     "1005012865117890": 1790948460.5860589,
     "1005010428573334": 1790948755.0367405,
     "1005013146524028": 1790948764.3756874,
-    "1005009411512584": 1790949354.0364344,
+    "1005009411512584": 1790977546.6736062,
     "1005012058540420": 1790949652.480052,
     "1005009295911745": 1790949658.4852333,
     "1005012340203471": 1790950255.4725466,
@@ -319,7 +319,8 @@
     "HAYLOU S30",
     "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise",
     "VIVO Y600 Pro 8/128GB",
-    "EasySMX X05 Pro Wireless Gamepad Gaming Controller"
+    "EasySMX X05 Pro Wireless Gamepad Gaming Controller",
+    "3 VILCORN G6 Bluetooth-Compatible"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -426,7 +427,8 @@
     "HAYLOU S30": 1790976351.072879,
     "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise": 1790976654.120254,
     "VIVO Y600 Pro 8/128GB": 1790976952.8889163,
-    "EasySMX X05 Pro Wireless Gamepad Gaming Controller": 1790976959.5801246
+    "EasySMX X05 Pro Wireless Gamepad Gaming Controller": 1790976959.5801246,
+    "3 VILCORN G6 Bluetooth-Compatible": 1790977546.6736062
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -667,15 +669,16 @@
     "bnddeals:50795",
     "aniscoupons:32691",
     "lodydeals:45412",
-    "aniscoupons:32692"
+    "aniscoupons:32692",
+    "aniscoupons:32693"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790976959.5801246,
+  "last_run_time": 1790977546.6736062,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32692,
-      "last_check_time": 1790977243.776144
+      "last_message_id": 32693,
+      "last_check_time": 1790977548.6841414
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -683,11 +686,11 @@
     },
     "lodydeals": {
       "last_message_id": 45412,
-      "last_check_time": 1790977242.1145165
+      "last_check_time": 1790977539.186246
     },
     "bnddeals": {
       "last_message_id": 50795,
-      "last_check_time": 1790977243.075414
+      "last_check_time": 1790977540.1265392
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -699,11 +702,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790977242.4438086
+      "last_check_time": 1790977539.5172188
     },
     "megaphonna": {
       "last_message_id": 8204,
-      "last_check_time": 1790977243.4031813
+      "last_check_time": 1790977540.4698663
     }
   },
   "published_product_prices": {
@@ -773,7 +776,7 @@
     "1005012865117890": 234.9,
     "1005010428573334": 294.0,
     "1005013146524028": 162.4,
-    "1005009411512584": 26.8,
+    "1005009411512584": 8.7,
     "1005012058540420": 10.49,
     "1005009295911745": 25.87,
     "1005012340203471": 242.7,
@@ -1854,6 +1857,16 @@
       "price": 23.0,
       "timestamp": 1790976959.5801246,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32693": {
+      "channel_msg_id": 434,
+      "product_id": "1005009411512584",
+      "title": "3 VILCORN G6 Bluetooth-Compatible",
+      "channel": "aniscoupons",
+      "source_msg_id": 32693,
+      "price": 8.7,
+      "timestamp": 1790977546.6736062,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1862,7 +1875,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790976959.5818288,
+    "last_deal_post_time": 1790977546.6763697,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1922,7 +1935,7 @@
     "1005012865117890": "megaphonna",
     "1005010428573334": "megaphonna",
     "1005013146524028": "megaphonna",
-    "1005009411512584": "bnddeals",
+    "1005009411512584": "aniscoupons",
     "1005012058540420": "lodydeals",
     "1005009295911745": "lodydeals",
     "1005012340203471": "lodydeals",
@@ -2036,7 +2049,8 @@
     "HAYLOU S30": "aniscoupons",
     "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise": "aniscoupons",
     "VIVO Y600 Pro 8/128GB": "lodydeals",
-    "EasySMX X05 Pro Wireless Gamepad Gaming Controller": "aniscoupons"
+    "EasySMX X05 Pro Wireless Gamepad Gaming Controller": "aniscoupons",
+    "3 VILCORN G6 Bluetooth-Compatible": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
