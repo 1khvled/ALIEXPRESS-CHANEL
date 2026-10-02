@@ -89,7 +89,8 @@
     "1005011682821623",
     "9998885747",
     "1005010129356058",
-    "9998885993"
+    "9998885993",
+    "1005009774318553"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -185,7 +186,8 @@
     "1005011682821623": 1790962844.0034096,
     "9998885747": 1790965747.5380507,
     "1005010129356058": 1790954473.488348,
-    "9998885993": 1790965993.3792443
+    "9998885993": 1790965993.3792443,
+    "1005009774318553": 1790966460.2151659
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -272,7 +274,8 @@
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34",
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone",
     "Xiaomi Pad 7 (12/256)",
-    "ONEPLUS TURBO 6X PRO 5G (8/128)"
+    "ONEPLUS TURBO 6X PRO 5G (8/128)",
+    "CUSU SSD 512 GB Portable SSD External Drive"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -362,7 +365,8 @@
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
     "Xiaomi Pad 7 (12/256)": 1790954473.488348,
-    "ONEPLUS TURBO 6X PRO 5G (8/128)": 1790966153.636154
+    "ONEPLUS TURBO 6X PRO 5G (8/128)": 1790966153.636154,
+    "CUSU SSD 512 GB Portable SSD External Drive": 1790966460.2151659
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -566,15 +570,16 @@
     "aniscoupons:32680",
     "aniscoupons:32681",
     "aniscoupons:32682",
-    "aniscoupons:32683"
+    "aniscoupons:32683",
+    "aniscoupons:32684"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790966153.636154,
+  "last_run_time": 1790966460.2151659,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32683,
-      "last_check_time": 1790966164.8273003
+      "last_message_id": 32684,
+      "last_check_time": 1790966462.2249742
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -582,11 +587,11 @@
     },
     "lodydeals": {
       "last_message_id": 45401,
-      "last_check_time": 1790966138.7072263
+      "last_check_time": 1790966451.7531693
     },
     "bnddeals": {
       "last_message_id": 50789,
-      "last_check_time": 1790966143.0622184
+      "last_check_time": 1790966453.3872464
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -598,11 +603,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790966139.0156562
+      "last_check_time": 1790966452.2475667
     },
     "megaphonna": {
       "last_message_id": 8195,
-      "last_check_time": 1790966155.6422849
+      "last_check_time": 1790966453.7915106
     }
   },
   "published_product_prices": {
@@ -678,7 +683,8 @@
     "1005012340203471": 242.7,
     "1005005824280128": 96.8,
     "1005011991145678": 0.8,
-    "1005011682821623": 0.8
+    "1005011682821623": 0.8,
+    "1005009774318553": 53.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1530,6 +1536,16 @@
       "price": 257.4,
       "timestamp": 1790966153.636154,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32684": {
+      "channel_msg_id": 413,
+      "product_id": "1005009774318553",
+      "title": "CUSU SSD 512 GB Portable SSD External Drive",
+      "channel": "aniscoupons",
+      "source_msg_id": 32684,
+      "price": 53.8,
+      "timestamp": 1790966460.2151659,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1538,7 +1554,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790966153.6376593,
+    "last_deal_post_time": 1790966460.2175968,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1616,7 +1632,8 @@
     "1005011991145678": "megaphonna",
     "1005011682821623": "megaphonna",
     "9998885747": "test_channel",
-    "9998885993": "test_channel"
+    "9998885993": "test_channel",
+    "1005009774318553": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1677,7 +1694,8 @@
     "Realme Pad 3 5G 256GB": "aniscoupons",
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": "megaphonna",
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": "megaphonna",
-    "ONEPLUS TURBO 6X PRO 5G (8/128)": "megaphonna"
+    "ONEPLUS TURBO 6X PRO 5G (8/128)": "megaphonna",
+    "CUSU SSD 512 GB Portable SSD External Drive": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
