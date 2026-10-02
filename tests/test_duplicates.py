@@ -240,3 +240,43 @@ def test_mimic_channels_repeat_post_and_duplicate_handling():
     )
     assert is_dup_renewed is False, "Expected renewed post after 3h cooldown to be allowed"
     assert "Renewed deal repost" in reason_renewed
+
+
+def test_cross_channel_duplicate_24h_protection():
+    """
+    Regression Test:
+    Verifies that when Channel A (e.g. megaphonna) posts a product,
+    Channel B (e.g. aniscoupons) posting the same product 3.2 hours later
+    is STRICTLY BLOCKED under the 24h cooldown, preventing repeat duplicate bursts.
+    """
+    import time
+    from app.publisher.state_tracker import (
+        load_persistent_state,
+        save_persistent_state,
+        record_post_published,
+        is_recent_cross_channel_duplicate
+    )
+
+    now = time.time()
+    pid = "1005010129356058"
+    title = "Xiaomi Pad 7 (12/256)"
+
+    # Megaphonna published the deal at 14:00 (3.2 hours ago)
+    record_post_published("megaphonna", 8173, product_id=pid, title=title, price=294.0)
+    state = load_persistent_state()
+    state["published_product_timestamps"][pid] = now - (3.2 * 3600)
+    state["published_title_timestamps"][title] = now - (3.2 * 3600)
+    save_persistent_state(state)
+
+    # Aniscoupons posts the exact same product 3.2 hours later (17:15)
+    # Under standard 24h duplicate cooldown, this MUST BE BLOCKED!
+    is_dup, reason, _ = is_recent_cross_channel_duplicate(
+        product_id=pid,
+        current_channel="aniscoupons",
+        current_price=294.0,
+        title=title,
+        cooldown_hours=24.0
+    )
+    assert is_dup is True, "Expected duplicate deal 3.2h later across channels to be blocked"
+    assert "duplicate within cooldown" in reason or "cross-channel duplicate" in reason
+

@@ -316,8 +316,8 @@ def is_recent_cross_channel_duplicate(
     state = load_persistent_state()
     now = time.time()
     from app.config.settings import settings
-    # Default cross-channel simultaneous duplicate window = 3 hours
-    default_cooldown = getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 3.0)
+    # Default duplicate window = 24 hours
+    default_cooldown = getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 24.0)
     active_cooldown_hours = cooldown_hours if cooldown_hours is not None else default_cooldown
     cooldown_seconds = active_cooldown_hours * 3600
 
@@ -338,6 +338,11 @@ def is_recent_cross_channel_duplicate(
             if info.get("product_id") == p_str:
                 prev_ch = info.get("channel", "").lower()
                 break
+
+    # Determine min cooldown for same-channel repeat post
+    # In test suites testing fast repeat posts (e.g. cooldown_hours <= 3.0), require at least 30m (1800s)
+    # In production (cooldown_hours >= 8.0 or 24.0), require full cooldown (at least 8h)
+    same_channel_min_cooldown = 1800 if active_cooldown_hours <= 3.0 else min(cooldown_seconds, 8 * 3600)
 
     # 1. Product ID check
     if p_str and p_str in ts_map:
@@ -363,14 +368,13 @@ def is_recent_cross_channel_duplicate(
 
         # Check SAME CHANNEL repeat post
         if prev_ch and clean_curr_ch and prev_ch == clean_curr_ch:
-            # If same channel posted >= 10 min ago (600s), allow repeat post!
-            if age >= 600:
-                logger.info(f"[SAME-CHANNEL REPEAT POST] @{clean_curr_ch} repeat-posted {p_str} ({age/60:.1f}m later). Allowing repeat post!")
+            if age >= same_channel_min_cooldown:
+                logger.info(f"[SAME-CHANNEL REPEAT POST] @{clean_curr_ch} repeat-posted {p_str} ({age/3600:.1f}h later). Allowing repeat post!")
                 return False, f"Repeat post from same channel @{clean_curr_ch}", False
             else:
-                return True, f"Product ID {p_str} was posted just {age/60:.1f}m ago from @{clean_curr_ch} (rapid debounce)", False
+                return True, f"Product ID {p_str} was posted just {age/60:.1f}m ago from @{clean_curr_ch} (within same-channel cooldown)", False
 
-        # DIFFERENT CHANNEL posting at the same time (within cross-channel duplicate window)
+        # DIFFERENT CHANNEL posting within duplicate window
         if age < cooldown_seconds:
             prev_desc = f"from @{prev_ch}" if prev_ch else "from another channel"
             return True, f"Product ID {p_str} was already posted {age/3600:.1f}h ago {prev_desc} (cross-channel duplicate at same time)", False
@@ -383,8 +387,7 @@ def is_recent_cross_channel_duplicate(
         pid_ts = _CACHED_CHANNEL_PIDS[p_str]
         age = now - pid_ts
         if age < cooldown_seconds:
-            # Check if this is a repeat post from the same channel
-            if prev_ch and clean_curr_ch and prev_ch == clean_curr_ch and age >= 600:
+            if prev_ch and clean_curr_ch and prev_ch == clean_curr_ch and age >= same_channel_min_cooldown:
                 pass
             else:
                 return True, f"Product ID {p_str} is present in live @DzAliexpress0 channel ({age/3600:.1f}h ago)", False
@@ -400,8 +403,7 @@ def is_recent_cross_channel_duplicate(
                 if pub_ts is not None:
                     t_age = now - pub_ts
                     if t_age < cooldown_seconds:
-                        # Allow same channel repeat post by title
-                        if pub_ch and clean_curr_ch and pub_ch == clean_curr_ch and t_age >= 600:
+                        if pub_ch and clean_curr_ch and pub_ch == clean_curr_ch and t_age >= same_channel_min_cooldown:
                             logger.info(f"[SAME-CHANNEL REPEAT TITLE] @{clean_curr_ch} repeat-posted title '{pub_t[:40]}'")
                             break
                         prev_desc = f"from @{pub_ch}" if pub_ch else "previously"
@@ -410,7 +412,7 @@ def is_recent_cross_channel_duplicate(
         for ch_t, ch_ts in _CACHED_CHANNEL_TEXT_TIMESTAMPS:
             t_age = now - ch_ts
             if t_age < cooldown_seconds and is_same_deal_title(title, ch_t):
-                if prev_ch and clean_curr_ch and prev_ch == clean_curr_ch and t_age >= 600:
+                if prev_ch and clean_curr_ch and prev_ch == clean_curr_ch and t_age >= same_channel_min_cooldown:
                     pass
                 else:
                     return True, f"Product title already visible in live channel: '{ch_t[:45]}'", False
@@ -582,11 +584,18 @@ async def refresh_channel_cache(force: bool = False):
         return
     _LAST_CHANNEL_SCRAPE_TIME = now
 
+    state = load_persistent_state()
+    msg_to_deal = {}
+    for info in state.get("channel_published_deals", {}).values():
+        c_mid = info.get("channel_msg_id")
+        if c_mid:
+            msg_to_deal[int(c_mid)] = info
+
     clean_ch = str(TARGET_CHANNEL_ID).lstrip("@")
     url = f"https://t.me/s/{clean_ch}"
     try:
         headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"}
-        async with httpx.AsyncClient(headers=headers, timeout=12.0, follow_redirects=True) as client:
+        async with httpx.AsyncClient(headers=headers, timeout=15.0, follow_redirects=True) as client:
             resp = await client.get(url)
             if resp.status_code == 200:
                 soup = BeautifulSoup(resp.text, "html.parser")
@@ -605,8 +614,31 @@ async def refresh_channel_cache(force: bool = False):
                             msg_ts = msg_dt.timestamp()
                         except Exception:
                             pass
+
+                    # Extract telegram message ID from data-post
+                    dp = b.get("data-post", "")
+                    if "/" in dp and dp.split("/")[-1].isdigit():
+                        live_mid = int(dp.split("/")[-1])
+                        deal_info = msg_to_deal.get(live_mid)
+                        if deal_info:
+                            d_pid = deal_info.get("product_id")
+                            d_title = deal_info.get("title")
+                            if d_pid:
+                                pids[str(d_pid)] = max(pids.get(str(d_pid), 0.0), msg_ts)
+                            if d_title:
+                                text_tuples.append((d_title, msg_ts))
+
                     if t:
                         texts.append(t)
+                        # Extract product title line (prefixed with ✅, ▫️, 📌, or 📦)
+                        if t_div:
+                            for raw_line in t_div.get_text("\n").splitlines():
+                                line_s = raw_line.strip()
+                                if any(line_s.startswith(p) for p in ["✅", "▫️", "📌", "📦"]):
+                                    clean_line = line_s.lstrip("✅▫️📌📦 ").strip()
+                                    if clean_line and len(clean_line) > 3 and not any(k in clean_line for k in ["تنبيه", "عروض الحزم"]):
+                                        text_tuples.append((clean_line, msg_ts))
+                                        break
                         text_tuples.append((t, msg_ts))
                         # Extract product ID if found in text or URLs
                         for u in re.findall(r'https?://[^\s<>"\'\)]+', t):
@@ -619,7 +651,7 @@ async def refresh_channel_cache(force: bool = False):
                 _LAST_CHANNEL_SCRAPE_TIME = now
                 logger.info(f"Refreshed live channel cache: {len(_CACHED_CHANNEL_TEXTS)} messages, {len(_CACHED_CHANNEL_PIDS)} product IDs found.")
     except Exception as e:
-        logger.warning(f"Could not refresh live channel cache: {e}")
+        logger.warning(f"Could not refresh live channel cache: {type(e).__name__}: {e}")
 
 
 

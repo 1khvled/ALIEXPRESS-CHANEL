@@ -12,6 +12,10 @@ on:
         type: boolean
         default: false
 
+concurrency:
+  group: telegram-deals-cron
+  cancel-in-progress: false
+
 jobs:
   run-deals-collector:
     runs-on: ubuntu-latest
