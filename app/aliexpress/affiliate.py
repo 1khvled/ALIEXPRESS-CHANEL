@@ -35,20 +35,20 @@ class DirectAffiliateProvider(AffiliateProvider):
 
         if pid:
             if deal_type == "bundle":
-                return f"https://aliexpress.com/item/{pid}.html?sourceType=562&aff_fcid={self.tracking_id}"
+                return f"https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds={pid}&aff_fcid={self.tracking_id}"
             elif deal_type == "super":
-                return f"https://aliexpress.com/item/{pid}.html?sourceType=680&aff_fcid={self.tracking_id}"
+                return f"https://www.aliexpress.com/item/{pid}.html?sourceType=561&channel=superdeal&aff_fcid={self.tracking_id}"
             elif deal_type == "item":
-                return f"https://aliexpress.com/item/{pid}.html?aff_fcid={self.tracking_id}"
+                return f"https://www.aliexpress.com/item/{pid}.html?aff_fcid={self.tracking_id}"
             else:
-                return f"https://m.aliexpress.com/p/coin-index/index.html?productIds={pid}&aff_fcid={self.tracking_id}"
+                return f"https://m.aliexpress.com/p/coin-index/index.html?_immersiveMode=true&tabname=configTab_1926001&productIds={pid}&aff_fcid={self.tracking_id}"
 
         # Clean campaign URLs to strip noisy tracking parameters
         clean_url = product_url.split("?")[0] if ("aliexpress.com" in product_url and "?" in product_url) else product_url
         if deal_type == "bundle":
-            return f"{clean_url}?sourceType=562&aff_fcid={self.tracking_id}"
+            return f"https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&aff_fcid={self.tracking_id}"
         elif deal_type == "super":
-            return f"{clean_url}?sourceType=680&aff_fcid={self.tracking_id}"
+            return f"{clean_url}?sourceType=561&channel=superdeal&aff_fcid={self.tracking_id}"
         separator = "&" if "?" in clean_url else "?"
         return f"{clean_url}{separator}aff_fcid={self.tracking_id}"
 
@@ -107,20 +107,19 @@ class PortalsApiAffiliateProvider(AffiliateProvider):
         # Target URL determination based on deal_type
         if pid:
             if deal_type == "bundle":
-                target_url = f"https://www.aliexpress.com/item/{pid}.html?sourceType=562"
+                target_url = f"https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds={pid}"
             elif deal_type == "super":
-                target_url = f"https://www.aliexpress.com/item/{pid}.html?sourceType=680"
+                target_url = f"https://www.aliexpress.com/item/{pid}.html?sourceType=561&channel=superdeal"
             elif deal_type == "item":
                 target_url = f"https://www.aliexpress.com/item/{pid}.html"
             else:
-                target_url = f"https://m.aliexpress.com/p/coin-index/index.html?productIds={pid}"
+                target_url = f"https://m.aliexpress.com/p/coin-index/index.html?_immersiveMode=true&tabname=configTab_1926001&productIds={pid}"
         else:
-            if deal_type == "bundle" and "sourceType=562" not in product_url:
+            if deal_type == "bundle":
+                target_url = "https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES&pha_manifest=ssr&_immersiveMode=true"
+            elif deal_type == "super":
                 sep = "&" if "?" in product_url else "?"
-                target_url = f"{product_url}{sep}sourceType=562"
-            elif deal_type == "super" and "sourceType=680" not in product_url:
-                sep = "&" if "?" in product_url else "?"
-                target_url = f"{product_url}{sep}sourceType=680"
+                target_url = f"{product_url}{sep}sourceType=561&channel=superdeal"
             else:
                 target_url = product_url
 

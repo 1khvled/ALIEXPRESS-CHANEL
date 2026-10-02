@@ -387,10 +387,10 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
     fallback_title, fallback_price = extract_title_and_price_from_user_text(raw_user_text)
 
     direct_product = f"https://www.aliexpress.com/item/{product_id}.html"
-    direct_coin = f"https://m.aliexpress.com/p/coin-index/index.html?productIds={product_id}"
-    direct_bundle = f"https://www.aliexpress.com/item/{product_id}.html?sourceType=562"
-    direct_super = f"https://www.aliexpress.com/item/{product_id}.html?sourceType=680"
-    direct_limited = f"https://www.aliexpress.com/item/{product_id}.html?sourceType=562"
+    direct_coin = f"https://m.aliexpress.com/p/coin-index/index.html?_immersiveMode=true&tabname=configTab_1926001&productIds={product_id}"
+    direct_bundle = f"https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds={product_id}"
+    direct_super = f"https://www.aliexpress.com/item/{product_id}.html?sourceType=561&channel=superdeal"
+    direct_limited = f"https://www.aliexpress.com/item/{product_id}.html?sourceType=562&channel=limited"
 
     prod_title = fallback_title or "منتج مميز من AliExpress"
     prod_price = fallback_price
