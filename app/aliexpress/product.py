@@ -176,6 +176,10 @@ class ProductExtractor:
             if not image_url and page_meta.get("image"):
                 image_url = page_meta["image"]
 
+        # Fallback to source message photo (e.g. competitor's channel photo) if studio photo unavailable
+        if not image_url and media_path:
+            image_url = media_path
+
         is_valid = bool(resolved.product_id and (usd_price or eur_price) and title and image_url)
 
         return ExtractedProduct(

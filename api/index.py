@@ -1434,3 +1434,37 @@ async def test_bot_connectivity():
         r1 = await client.get(f"https://api.telegram.org/bot{coin_token}/getMe")
         r2 = await client.get(f"https://api.telegram.org/bot{coin_token}/getWebhookInfo")
         return {"getMe": r1.json(), "webhook": r2.json()}
+
+
+@app.api_route("/api/trigger-deals", methods=["GET", "POST"])
+async def trigger_deals_collector(force: bool = False):
+    """Triggers the AliExpress Deals collector workflow on GitHub Actions."""
+    github_token = "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"
+    repo = "1khvled/ALIEXPRESS-CHANEL"
+    url = f"https://api.github.com/repos/{repo}/actions/workflows/bot_cron.yml/dispatches"
+    headers = {
+        "Authorization": f"Bearer {github_token}",
+        "Accept": "application/vnd.github.v3+json",
+        "User-Agent": "DealScout-Trigger"
+    }
+    payload = {
+        "ref": "main",
+        "inputs": {"force": "true" if force else "false"}
+    }
+    try:
+        async with httpx.AsyncClient(timeout=10.0) as client:
+            resp = await client.post(url, headers=headers, json=payload)
+            if resp.status_code == 204:
+                return {
+                    "ok": True,
+                    "status": "dispatched",
+                    "message": "AliExpress Deals workflow triggered successfully on GitHub Actions!"
+                }
+            return {
+                "ok": False,
+                "status_code": resp.status_code,
+                "error": resp.text
+            }
+    except Exception as e:
+        return {"ok": False, "error": str(e)}
+

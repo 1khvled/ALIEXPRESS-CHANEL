@@ -226,14 +226,33 @@ async def collect_and_post_france_deals(force: bool = False) -> int:
                     and f"{clean_ch}:{b_id}" not in published_keys
                 ]
 
-            print(f"  [@{ch}] Found {len(new_blocks)} candidate(s) to process (last seen #{last_seen_id})")
+            # Pre-filter for message freshness (< 24h) and auto-mark ancient stale posts
+            fresh_blocks = []
+            for b_id, b in new_blocks:
+                time_el = b.find("time")
+                msg_dt = None
+                if time_el and time_el.get("datetime"):
+                    try:
+                        msg_dt = datetime.fromisoformat(time_el["datetime"].replace("Z", "+00:00"))
+                    except Exception:
+                        pass
+                if msg_dt:
+                    age_h = (datetime.now(timezone.utc) - msg_dt).total_seconds() / 3600.0
+                    if age_h > 24.0:
+                        if f"{clean_ch}:{b_id}" not in state.get("published_post_keys", []):
+                            state.setdefault("published_post_keys", []).append(f"{clean_ch}:{b_id}")
+                        continue
+                fresh_blocks.append((b_id, b))
+
+            save_france_state(state)
+            print(f"  [@{ch}] Found {len(fresh_blocks)} fresh candidate(s) to process (last seen #{last_seen_id})")
 
             # Pacing: limit per channel per cycle
-            if len(new_blocks) > MAX_DEALS_PER_CHANNEL:
-                print(f"  [PACING] Channel @{ch} has {len(new_blocks)} candidates. Pacing top {MAX_DEALS_PER_CHANNEL}.")
-                to_process_blocks = new_blocks[:MAX_DEALS_PER_CHANNEL]
+            if len(fresh_blocks) > MAX_DEALS_PER_CHANNEL:
+                print(f"  [PACING] Channel @{ch} has {len(fresh_blocks)} candidates. Pacing top {MAX_DEALS_PER_CHANNEL}.")
+                to_process_blocks = fresh_blocks[:MAX_DEALS_PER_CHANNEL]
             else:
-                to_process_blocks = new_blocks
+                to_process_blocks = fresh_blocks
 
             max_processed_id = last_seen_id or 0
 

@@ -17,6 +17,18 @@ def test_extract_all_urls():
     assert "https://www.aliexpress.com/item/1005006382910245.html" in urls
     assert "https://a.aliexpress.com/_mt8123" in urls
 
+def test_extract_bare_aliexpress_urls():
+    # Test bare domain without https:// and with touching Arabic text
+    text = "🔥رابط s.click.aliexpress.com/e/_c4LARstxكوبون 15/119$ : OTPRD15"
+    urls = extract_all_urls(text)
+    assert len(urls) == 1
+    assert urls[0] == "https://s.click.aliexpress.com/e/_c4LARstx"
+
+    text2 = "🔥الرابط : s.click.aliexpress.com/e/_c3b0oYB7ضع البلد الجزائر 🇩🇿"
+    urls2 = extract_all_urls(text2)
+    assert len(urls2) == 1
+    assert urls2[0] == "https://s.click.aliexpress.com/e/_c3b0oYB7"
+
 def test_is_aliexpress_url():
     assert is_aliexpress_url("https://www.aliexpress.com/item/1005006382910245.html")
     assert is_aliexpress_url("https://a.aliexpress.com/_mt8123")

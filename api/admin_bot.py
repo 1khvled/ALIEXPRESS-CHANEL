@@ -742,6 +742,7 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             "3️⃣ إذا كانت الصورة غير مناسبة، اضغط <b>[ 🔄 تبديل الصورة ]</b> لاختيار صورة من بائع آخر!\n"
             "4️⃣ اضغط <b>[ 📢 نشر هذا المنشور في القناة الآن 🚀 ]</b> وسينشر فوراً في القناة!\n\n"
             "⚡ <b>أوامر التحكم بالنشر التلقائي:</b>\n"
+            "• <code>/trigger</code> - إطلاق سحب ونشر الصفقات فوراً عبر GitHub Actions 🚀\n"
             "• <code>/status</code> - فحص حالة النشر والوقت المتبقي لآخر صفقة.\n"
             "• <code>/stop</code> أو <code>/pause</code> - إيقاف النشر التلقائي تماماً.\n"
             "• <code>/resume</code> - استئناف النشر التلقائي.\n"
@@ -796,6 +797,34 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             ]
         }
         await send_admin_msg(chat_id, status_text, reply_markup=markup)
+        return True
+
+    # Instant Trigger Deals Collector on GitHub Actions
+    if any(text.lower().startswith(c) for c in ["/trigger", "/scrape", "/sync", "/fetch", "اسحب", "انشر"]):
+        force_flag = "--force" in text or "force" in text.lower()
+        await send_admin_msg(chat_id, "⏳ <b>جاري إطلاق سكريبت سحب العروض فوراً عبر GitHub Actions...</b>")
+        try:
+            github_token = "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"
+            repo = "1khvled/ALIEXPRESS-CHANEL"
+            url = f"https://api.github.com/repos/{repo}/actions/workflows/bot_cron.yml/dispatches"
+            headers = {
+                "Authorization": f"Bearer {github_token}",
+                "Accept": "application/vnd.github.v3+json",
+                "User-Agent": "DealScoutAdminBot"
+            }
+            payload = {"ref": "main", "inputs": {"force": "true" if force_flag else "false"}}
+            async with httpx.AsyncClient(timeout=10.0) as client:
+                resp = await client.post(url, headers=headers, json=payload)
+                if resp.status_code == 204:
+                    success_txt = (
+                        "🚀 <b>تم إطلاق جامع الصفقات بنجاح على GitHub Actions!</b>\n\n"
+                        "🔍 جاري الآن فحص القنوات الأربعة (@lodydeals, @zedstoreonline, @ECKSDEAL, @BNDDEALS) ونشر الصفقات الجديدة في القناة @DzAliexpress0 خلال ثوانٍ!"
+                    )
+                    await send_admin_msg(chat_id, success_txt)
+                else:
+                    await send_admin_msg(chat_id, f"⚠️ خطأ أثناء إطلاق المهمة: {resp.status_code}\n<code>{resp.text}</code>")
+        except Exception as e:
+            await send_admin_msg(chat_id, f"❌ حدث خطأ غير متوقع: {e}")
         return True
 
     if text.startswith("/schedule") or text.startswith("/speed") or text.startswith("/interval") or text.startswith("سرعة") or text.startswith("توقيت"):

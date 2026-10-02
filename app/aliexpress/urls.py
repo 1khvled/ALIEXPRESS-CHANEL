@@ -22,9 +22,9 @@ COMMON_SHORTENERS = [
     "buff.ly",
 ]
 
-# Regex for URLs in text
+# Regex for URLs in text (matches full https:// or bare domains like s.click.aliexpress.com/...)
 URL_REGEX = re.compile(
-    r'(https?://[^\s<>"\',;]+)',
+    r'(https?://[^\s<>"\',;]+|(?:[a-zA-Z0-9_\-]+\.)*(?:aliexpress\.com|alitems\.com|alitems\.site|bit\.ly|tinyurl\.com|t\.co|cutt\.ly|rb\.gy|is\.gd|buff\.ly)/[^\s<>"\',;]+)',
     re.IGNORECASE
 )
 
@@ -33,18 +33,18 @@ ITEM_HTML_PATTERN = re.compile(r'/item/(\d{10,18})\.html', re.IGNORECASE)
 ITEM_ID_PATTERN = re.compile(r'/item/(\d{10,18})', re.IGNORECASE)
 
 def extract_all_urls(text: str) -> List[str]:
-    """Extracts all HTTP/HTTPS URLs from raw text."""
+    """Extracts all HTTP/HTTPS URLs and bare AliExpress/shortener links from raw text."""
     if not text:
         return []
     urls = URL_REGEX.findall(text)
-    # Clean trailing punctuation often attached to URLs in text
     cleaned_urls = []
     for u in urls:
-        cleaned = u.rstrip(".,;!?:)]}\"'>")
-        # Strip trailing emojis or Arabic text touching URLs without spaces (e.g. _c3wYF7dL⭐️)
-        cleaned = re.sub(r'[^\x21-\x7E]+$', '', cleaned)
-        cleaned = cleaned.rstrip(".,;!?:)]}\"'>")
-        if cleaned.startswith("http://") or cleaned.startswith("https://"):
+        # Strip trailing non-ASCII characters touching URLs (Arabic, emojis, etc. e.g. _c4LARstxكوبون)
+        cleaned = re.sub(r'[^\x21-\x7E].*$', '', u)
+        cleaned = cleaned.rstrip('.,;!?:)]}"\'>')
+        if not cleaned.startswith("http://") and not cleaned.startswith("https://"):
+            cleaned = "https://" + cleaned
+        if cleaned not in cleaned_urls:
             cleaned_urls.append(cleaned)
     return cleaned_urls
 

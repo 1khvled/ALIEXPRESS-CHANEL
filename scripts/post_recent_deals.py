@@ -194,20 +194,41 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                         and not is_post_already_published(ch, b_id)
                     ]
                     new_blocks.sort(key=lambda x: x[0])
-                    if new_blocks:
-                        repost_count = sum(1 for b_id, _ in new_blocks if b_id <= last_seen_id)
-                        new_count = len(new_blocks) - repost_count
-                        print(f"  [@{ch}] Found {new_count} new post(s) and {repost_count} unposted/repostable post(s) to process.")
+
+                    # Pre-filter for message freshness (< 24h) and auto-mark ancient stale posts as handled
+                    fresh_blocks = []
+                    for b_id, b in new_blocks:
+                        time_el = b.find("time")
+                        msg_dt = None
+                        if time_el and time_el.get("datetime"):
+                            try:
+                                msg_dt = datetime.fromisoformat(time_el["datetime"].replace("Z", "+00:00"))
+                            except Exception:
+                                pass
+                        text_div = b.find("div", class_="tgme_widget_message_text")
+                        raw_text = text_div.get_text(separator="\n").strip() if text_div else ""
+                        is_fresh, _ = promo_tracker.validate_deal_freshness(raw_text, msg_dt)
+                        if not is_fresh:
+                            record_post_handled(ch, b_id)
+                            continue
+                        fresh_blocks.append((b_id, b))
+
+                    if fresh_blocks:
+                        repost_count = sum(1 for b_id, _ in fresh_blocks if b_id <= last_seen_id)
+                        new_count = len(fresh_blocks) - repost_count
+                        print(f"  [@{ch}] Found {new_count} fresh post(s) and {repost_count} unposted/repostable post(s) to process.")
                     else:
-                        print(f"  [NO NEW POSTS] @{ch} has no new or repostable messages (last seen: #{last_seen_id}, current: #{current_max_id}).")
+                        print(f"  [NO NEW POSTS] @{ch} has no new or fresh messages (last seen: #{last_seen_id}, current: #{current_max_id}).")
+                        record_monitored_channel_last_id(ch, current_max_id)
                         continue
 
-                # Anti-Flood Pacing: if channel dumps 5+ deals, pace them (take top 2 or 4 during peak)
-                if len(new_blocks) > max_deals_per_channel:
-                    print(f"  [ANTI-FLOOD PACER] Channel @{ch} has {len(new_blocks)} deals. Pacing: publishing top {max_deals_per_channel}, holding remainder for next cycle.")
-                    to_process_blocks = new_blocks[:max_deals_per_channel]
+                # Anti-Flood Pacing: pace active fresh deals
+                active_blocks = fresh_blocks if last_seen_id is not None else new_blocks
+                if len(active_blocks) > max_deals_per_channel:
+                    print(f"  [ANTI-FLOOD PACER] Channel @{ch} has {len(active_blocks)} fresh deals. Pacing: publishing top {max_deals_per_channel}, holding remainder for next cycle.")
+                    to_process_blocks = active_blocks[:max_deals_per_channel]
                 else:
-                    to_process_blocks = new_blocks
+                    to_process_blocks = active_blocks
 
                 max_processed_id = last_seen_id or 0
 
@@ -254,8 +275,8 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                         record_post_handled(ch, msg_id)
                         continue
 
-                    # 4. Extract deal or coupon list
-                    extracted = await product_extractor.extract_from_message(raw_text)
+                    # 4. Extract deal or coupon list (pass source_photo_url as fallback image)
+                    extracted = await product_extractor.extract_from_message(raw_text, media_path=source_photo_url)
                     if not extracted or not extracted.is_valid:
                         max_processed_id = max(max_processed_id, msg_id)
                         record_post_handled(ch, msg_id)
@@ -314,12 +335,11 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                     if extracted.title:
                         seen_titles.append(extracted.title)
 
-                    # 7. Official Studio Photo ONLY — NEVER use competitor Telegram channel photos!
-                    # Only accept official AliExpress CDN images (alicdn.com, aliexpress-media.com)
-                    img_url = extracted.image_url
+                    # 7. Product Photo inside DealScout Neon Frame
+                    img_url = extracted.image_url or source_photo_url
                     if not extracted.is_coupon_list:
-                        if not img_url or not any(domain in img_url for domain in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
-                            print(f"  [NO OFFICIAL PHOTO] Skipping deal without clean AliExpress CDN image: {extracted.product_id}")
+                        if not img_url:
+                            print(f"  [NO PHOTO] Skipping deal without product image: {extracted.product_id}")
                             max_processed_id = max(max_processed_id, msg_id)
                             record_post_handled(ch, msg_id)
                             continue
