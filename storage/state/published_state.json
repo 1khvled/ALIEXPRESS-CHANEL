@@ -99,7 +99,8 @@
     "1005005652871847",
     "1005012554205120",
     "1005008901941749",
-    "1005010178295650"
+    "1005010178295650",
+    "1005006861002512"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -205,7 +206,8 @@
     "1005005652871847": 1790971842.421131,
     "1005012554205120": 1790971850.2217886,
     "1005008901941749": 1790973051.970508,
-    "1005010178295650": 1790973057.7979915
+    "1005010178295650": 1790973057.7979915,
+    "1005006861002512": 1790974856.4783835
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -303,7 +305,8 @@
     "SMAILWOLF M3 PAW3311",
     "UGREEN 4K 8MP 2Mics Webcam",
     "Attack Shark X1",
-    "KUULAA USB C Cable"
+    "KUULAA USB C Cable",
+    "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -404,7 +407,8 @@
     "SMAILWOLF M3 PAW3311": 1790971850.2217886,
     "UGREEN 4K 8MP 2Mics Webcam": 1790972149.2892344,
     "Attack Shark X1": 1790972445.6591878,
-    "KUULAA USB C Cable": 1790973051.970508
+    "KUULAA USB C Cable": 1790973051.970508,
+    "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router": 1790974856.4783835
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -635,27 +639,31 @@
     "aniscoupons:32686",
     "aniscoupons:32687",
     "aniscoupons:32688",
-    "bnddeals:50793"
+    "bnddeals:50793",
+    "lodydeals:45411",
+    "bnddeals:50794",
+    "megaphonna:8203",
+    "megaphonna:8204"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790973945.5080817,
+  "last_run_time": 1790974856.4783835,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32688,
-      "last_check_time": 1790974539.3020298
+      "last_check_time": 1790974863.8713126
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45410,
-      "last_check_time": 1790974537.711989
+      "last_message_id": 45411,
+      "last_check_time": 1790974849.8139863
     },
     "bnddeals": {
-      "last_message_id": 50793,
-      "last_check_time": 1790974538.628706
+      "last_message_id": 50794,
+      "last_check_time": 1790974858.5100462
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -667,11 +675,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790974538.027859
+      "last_check_time": 1790974850.1588652
     },
     "megaphonna": {
-      "last_message_id": 8202,
-      "last_check_time": 1790974538.9487033
+      "last_message_id": 8204,
+      "last_check_time": 1790974863.4972718
     }
   },
   "published_product_prices": {
@@ -755,7 +763,8 @@
     "1005009120957437": 189.21,
     "1005005652871847": 15.16,
     "1005012554205120": 21.67,
-    "1005008901941749": 1.2
+    "1005008901941749": 1.2,
+    "1005006861002512": 13.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1757,6 +1766,16 @@
       "price": 4.19,
       "timestamp": 1790973945.5080817,
       "status": "ACTIVE"
+    },
+    "bnddeals:50794": {
+      "channel_msg_id": 428,
+      "product_id": "1005006861002512",
+      "title": "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
+      "channel": "bnddeals",
+      "source_msg_id": 50794,
+      "price": 13.5,
+      "timestamp": 1790974856.4783835,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1765,7 +1784,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790973945.510673,
+    "last_deal_post_time": 1790974856.4837148,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1855,7 +1874,8 @@
     "1005009234854371": "lodydeals",
     "1005008829227075": "lodydeals",
     "1005008901941749": "lodydeals",
-    "1005012881256093": "aniscoupons"
+    "1005012881256093": "aniscoupons",
+    "1005006861002512": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1928,7 +1948,8 @@
     "UGREEN 4K 8MP 2Mics Webcam": "lodydeals",
     "Attack Shark X1": "lodydeals",
     "KUULAA USB C Cable": "lodydeals",
-    "Honor Watch X5i": "aniscoupons"
+    "Honor Watch X5i": "aniscoupons",
+    "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
