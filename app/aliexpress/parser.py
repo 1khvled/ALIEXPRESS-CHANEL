@@ -180,7 +180,12 @@ def is_spam_or_non_deal(text: str) -> Tuple[bool, Optional[str]]:
             return True, f"Blocked store or platform detected: {store}"
 
     # Skip dead / ephemeral random coupons / lucky draw lottery posts
-    if any(k in lower_text for k in ["كوبونات عشوائية", "سحب عشوائي", "يمد في كوبونات", "عشوائية", "عشوائيه"]):
+    # BUT allow coupon claim posts that contain actual AliExpress links (competitors post these as engagement)
+    random_coupon_kws = ["كوبونات عشوائية", "سحب عشوائي", "يمد في كوبونات", "عشوائية", "عشوائيه"]
+    has_random_coupon = any(k in lower_text for k in random_coupon_kws)
+    has_ali_link = "aliexpress.com" in lower_text or "s.click.aliexpress" in lower_text
+    has_claim_action = any(k in lower_text for k in ["احجز", "احجزها", "يوزع في كوبونات", "عودة الكوبونات", "رجعت الكوبونات"])
+    if has_random_coupon and not has_ali_link and not has_claim_action:
         return True, "Dead / temporary random coupon draw post skipped"
 
     return False, None
@@ -571,15 +576,38 @@ def detect_channel_announcement(text: str) -> Tuple[bool, Optional[str], Optiona
     """
     Detects non-deal informational bulletins or service notices from monitored channels:
     - China national holidays / Golden Week / Spring festival shipping delays.
+    - Coupon return / refresh announcements (الحق عودة الكوبونات احجزها).
     - Customs & parcel alerts (الجمارك / الطرود).
-    - General shipping & courier delay announcements.
     Returns (is_announcement, formatted_text, tag).
     """
     if not text:
         return False, None, None
     t = text.lower()
 
-    # Skip if text contains actual product affiliate links
+    # 0. Coupon Return / Refresh Announcements (checked FIRST because they contain AliExpress links)
+    coupon_return_kws = [
+        "عودة الكوبونات", "رجعت الكوبونات", "كوبونات جديدة", "كوبونات عشوائية",
+        "يوزع في كوبونات", "يوزع كوبونات", "توزيع كوبونات", "احجز الكوبونات",
+        "احجز كوبونات", "كوبونات مجانية"
+    ]
+    coupon_action_kws = ["احجز", "احجزها", "سارع", "الحق", "اجري"]
+    has_coupon_return = any(k in t for k in coupon_return_kws)
+    has_action = any(k in t for k in coupon_action_kws)
+    has_ali_link_ann = "aliexpress.com" in t or "s.click.aliexpress" in t
+    if has_coupon_return and (has_action or has_ali_link_ann):
+        ali_link_match = re.search(r'https?://s\.click\.aliexpress\.com/e/[A-Za-z0-9_-]+', text)
+        ali_link = ali_link_match.group(0) if ali_link_match else "https://www.aliexpress.com"
+        formatted = (
+            "🎟️ <b>الحقوووا عودة الكوبونات.. احجزوها قبل ما تخلاص! 🏃‍♂️🔥</b>\n\n"
+            "AliExpress رجعت توزع في <b>كوبونات خصم عشوائية</b> 🎁\n"
+            "احجزوها الآن مباشرة قبل نفاذها:\n\n"
+            f"🔗 <b>رابط حجز الكوبونات ⤵️</b>\n{ali_link}\n\n"
+            "📌 <b>ملاحظة:</b> حوّل دولة التطبيق إلى نفس عنوان الشحن 🇩🇿\n\n"
+            "📢 @DzAliexpress0"
+        )
+        return True, formatted, "coupon_return_refresh"
+
+    # Skip remaining checks if text contains actual product affiliate links (deal posts, not announcements)
     if any(k in t for k in ["s.click.aliexpress.com", "/item/", "bundledeals", "coin-index"]):
         return False, None, None
 
@@ -614,4 +642,5 @@ def detect_channel_announcement(text: str) -> Tuple[bool, Optional[str], Optiona
         return True, formatted, "customs_postal_notice"
 
     return False, None, None
+
 

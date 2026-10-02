@@ -43,3 +43,17 @@ def test_channel_announcement_state_tracking():
     record_channel_announcement_published(tag, today)
     assert is_channel_announcement_eligible(tag, today) is False
     assert is_channel_announcement_eligible(tag, tomorrow) is True
+
+def test_detect_coupon_return_announcement():
+    text = "🏃‍♂️🏃‍♂️ علي اكسبراس يوزع في كوبونات عشوائية احجزها الان سريعا : https://s.click.aliexpress.com/e/_c3QaIuLL"
+    is_ann, formatted, tag = detect_channel_announcement(text)
+    assert is_ann is True
+    assert tag == "coupon_return_refresh"
+    assert "عودة الكوبونات" in formatted
+    assert "s.click.aliexpress.com/e/_c3QaIuLL" in formatted
+
+def test_detect_coupon_return_arabic_variant():
+    text = "الحق عودة الكوبونات احجزها قبل ما تخلاص https://s.click.aliexpress.com/e/_c3QaIuLL"
+    is_ann, formatted, tag = detect_channel_announcement(text)
+    assert is_ann is True
+    assert tag == "coupon_return_refresh"
