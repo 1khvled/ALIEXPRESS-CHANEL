@@ -66,7 +66,9 @@
     "1005007168829266",
     "1005012406142215",
     "1005008390562391",
-    "1005007345398413"
+    "1005007345398413",
+    "1005012504076921",
+    "1005008715050858"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -80,7 +82,7 @@
     "1005007805638431": 1790884166.1520143,
     "1005009054706827": 1790884195.3586087,
     "1005007961216287": 1790937542.235978,
-    "1005008233932899": 1790884227.6404886,
+    "1005008233932899": 1790943965.6572914,
     "1005009627597591": 1790884233.6428,
     "1005008880082336": 1790943678.5551012,
     "1005007275142457": 1790884287.4211984,
@@ -138,7 +140,9 @@
     "1005007168829266": 1790943673.6091957,
     "1005012406142215": 1790943705.796801,
     "1005008390562391": 1790943710.6779277,
-    "1005007345398413": 1790943717.3545928
+    "1005007345398413": 1790943717.3545928,
+    "1005012504076921": 1790943950.8265061,
+    "1005008715050858": 1790943959.7454133
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -206,7 +210,10 @@
     "OPPO A6 Pro 8/256GB",
     "Honor Win Turbo 12/256BG",
     "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction",
-    "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry"
+    "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry",
+    "OnePlus Turbo 6X Pro 8/128GB",
+    "من منتجات الأكثر طلبا",
+    "النسخة العالمية"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -277,7 +284,10 @@
     "OPPO A6 Pro 8/256GB": 1790943694.6895797,
     "Honor Win Turbo 12/256BG": 1790943705.796801,
     "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction": 1790943710.6779277,
-    "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": 1790943717.3545928
+    "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": 1790943717.3545928,
+    "OnePlus Turbo 6X Pro 8/128GB": 1790943950.8265061,
+    "من منتجات الأكثر طلبا": 1790943959.7454133,
+    "النسخة العالمية": 1790943965.6572914
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -392,11 +402,20 @@
     "bnddeals:50777",
     "bnddeals:50778",
     "bnddeals:50779",
-    "bnddeals:50780"
+    "bnddeals:50780",
+    "lodydeals:45391",
+    "lodydeals:45392",
+    "zedstoreonline:38521",
+    "bnddeals:50781",
+    "bnddeals:50782",
+    "bnddeals:50783",
+    "bnddeals:50784",
+    "bnddeals:50785",
+    "bnddeals:50786"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790943717.3545928,
+  "last_run_time": 1790943965.6572914,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32646,
@@ -404,15 +423,15 @@
     },
     "ecksdeal": {
       "last_message_id": 5851,
-      "last_check_time": 1790943689.3303618
+      "last_check_time": 1790943953.799497
     },
     "lodydeals": {
-      "last_message_id": 45390,
-      "last_check_time": 1790943656.257167
+      "last_message_id": 45392,
+      "last_check_time": 1790943952.8371074
     },
     "bnddeals": {
-      "last_message_id": 50780,
-      "last_check_time": 1790943719.363794
+      "last_message_id": 50786,
+      "last_check_time": 1790943971.461046
     },
     "test_channel": {
       "last_message_id": 1790943531,
@@ -423,8 +442,8 @@
       "last_check_time": 1790937548.9389005
     },
     "zedstoreonline": {
-      "last_message_id": 38520,
-      "last_check_time": 1790943688.7030835
+      "last_message_id": 38521,
+      "last_check_time": 1790943953.4595802
     }
   },
   "published_product_prices": {
@@ -434,7 +453,7 @@
     "1005007027334636": 28.5,
     "1005009054706827": 22.0,
     "1005007961216287": 18.17,
-    "1005008233932899": 294.9,
+    "1005008233932899": 294.7,
     "1005009627597591": 314.9,
     "1005008880082336": 22.7,
     "1005007275142457": 29.58,
@@ -483,7 +502,9 @@
     "1005007168829266": 16.2,
     "1005012406142215": 393.0,
     "1005008390562391": 11.79,
-    "1005007345398413": 14.3
+    "1005007345398413": 14.3,
+    "1005012504076921": 260.91,
+    "1005008715050858": 20.47
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1125,6 +1146,36 @@
       "price": 14.3,
       "timestamp": 1790943717.3545928,
       "status": "ACTIVE"
+    },
+    "lodydeals:45391": {
+      "channel_msg_id": 341,
+      "product_id": "1005012504076921",
+      "title": "OnePlus Turbo 6X Pro 8/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45391,
+      "price": 260.91,
+      "timestamp": 1790943950.8265061,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50782": {
+      "channel_msg_id": 342,
+      "product_id": "1005008715050858",
+      "title": "من منتجات الأكثر طلبا",
+      "channel": "bnddeals",
+      "source_msg_id": 50782,
+      "price": 20.47,
+      "timestamp": 1790943959.7454133,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50784": {
+      "channel_msg_id": 343,
+      "product_id": "1005008233932899",
+      "title": "النسخة العالمية",
+      "channel": "bnddeals",
+      "source_msg_id": 50784,
+      "price": 294.7,
+      "timestamp": 1790943965.6572914,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1133,7 +1184,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790943717.356505,
+    "last_deal_post_time": 1790943965.659193,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1173,7 +1224,10 @@
     "1005010453516983": "bnddeals",
     "1005012406142215": "bnddeals",
     "1005008390562391": "bnddeals",
-    "1005007345398413": "bnddeals"
+    "1005007345398413": "bnddeals",
+    "1005012504076921": "lodydeals",
+    "1005008715050858": "bnddeals",
+    "1005008233932899": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1205,6 +1259,9 @@
     "OPPO A6 Pro 8/256GB": "bnddeals",
     "Honor Win Turbo 12/256BG": "bnddeals",
     "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction": "bnddeals",
-    "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": "bnddeals"
+    "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": "bnddeals",
+    "OnePlus Turbo 6X Pro 8/128GB": "lodydeals",
+    "من منتجات الأكثر طلبا": "bnddeals",
+    "النسخة العالمية": "bnddeals"
   }
 }
