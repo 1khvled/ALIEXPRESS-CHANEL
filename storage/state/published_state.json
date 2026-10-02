@@ -75,7 +75,8 @@
     "9998886147",
     "9998886362",
     "1005012407874415",
-    "9998887189"
+    "9998887189",
+    "1005013152491360"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -157,7 +158,8 @@
     "999888777111": 1790945390.005885,
     "9998886362": 1790946362.071869,
     "1005012407874415": 1790947009.9546273,
-    "9998887189": 1790947189.8634577
+    "9998887189": 1790947189.8634577,
+    "1005013152491360": 1790947849.7049744
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -231,7 +233,8 @@
     "النسخة العالمية",
     "HONOR 600 PRO (12/256)",
     "OnePlus Turbo 6X Pro 8/128",
-    "POCO C71 (3/64)"
+    "POCO C71 (3/64)",
+    "POCO X8 (6/128)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -308,7 +311,8 @@
     "النسخة العالمية": 1790943965.6572914,
     "HONOR 600 PRO (12/256)": 1790947009.9546273,
     "OnePlus Turbo 6X Pro 8/128": 1790947559.0343862,
-    "POCO C71 (3/64)": 1790947574.20351
+    "POCO C71 (3/64)": 1790947574.20351,
+    "POCO X8 (6/128)": 1790947849.7049744
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -445,11 +449,15 @@
     "megaphonna:8165",
     "megaphonna:8166",
     "megaphonna:8167",
-    "megaphonna:8168"
+    "megaphonna:8168",
+    "megaphonna:8169",
+    "megaphonna:8170",
+    "megaphonna:8171",
+    "megaphonna:8172"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790947574.20351,
+  "last_run_time": 1790947849.7049744,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32646,
@@ -461,11 +469,11 @@
     },
     "lodydeals": {
       "last_message_id": 45394,
-      "last_check_time": 1790947552.32447
+      "last_check_time": 1790947837.656908
     },
     "bnddeals": {
       "last_message_id": 50786,
-      "last_check_time": 1790947562.0782547
+      "last_check_time": 1790947838.7985482
     },
     "test_channel": {
       "last_message_id": 1790947189,
@@ -477,11 +485,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38522,
-      "last_check_time": 1790947559.0343862
+      "last_check_time": 1790947838.022621
     },
     "megaphonna": {
       "last_message_id": 8185,
-      "last_check_time": 1790947574.20351
+      "last_check_time": 1790947853.8042395
     }
   },
   "published_product_prices": {
@@ -544,7 +552,8 @@
     "1005012504076921": 260.91,
     "1005008715050858": 20.47,
     "999888777111": 20.0,
-    "1005012407874415": 480.4
+    "1005012407874415": 480.4,
+    "1005013152491360": 196.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1236,6 +1245,16 @@
       "price": 60.0,
       "timestamp": 1790947574.20351,
       "status": "ACTIVE"
+    },
+    "megaphonna:8170": {
+      "channel_msg_id": 353,
+      "product_id": "1005013152491360",
+      "title": "POCO X8 (6/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8170,
+      "price": 196.0,
+      "timestamp": 1790947849.7049744,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1244,7 +1263,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790947574.2051845,
+    "last_deal_post_time": 1790947849.7071164,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1296,7 +1315,8 @@
     "9998886362": "test_channel",
     "9998887189": "test_channel",
     "1005012499451512": "zedstoreonline",
-    "1005010219205081": "megaphonna"
+    "1005010219205081": "megaphonna",
+    "1005013152491360": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1333,7 +1353,8 @@
     "من منتجات الأكثر طلبا": "bnddeals",
     "النسخة العالمية": "bnddeals",
     "OnePlus Turbo 6X Pro 8/128": "zedstoreonline",
-    "POCO C71 (3/64)": "megaphonna"
+    "POCO C71 (3/64)": "megaphonna",
+    "POCO X8 (6/128)": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
