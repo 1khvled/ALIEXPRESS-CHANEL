@@ -108,6 +108,84 @@ class MediaRenderer:
         final_composite = Image.alpha_composite(prod, overlay)
         return final_composite.convert("RGB")
 
+    def _render_framed_deal(
+        self,
+        base_img: Image.Image,
+        usd_price: Optional[float] = None,
+        title: Optional[str] = None
+    ) -> Image.Image:
+        """
+        Renders product image seamlessly inside DealScout Neon Algerian Deals Frame.
+        If product is Attack Shark, adds official Attack Shark logo.
+        """
+        frame_path = settings.BASE_DIR / "storage" / "assets" / "product_frame_template.png"
+        if not frame_path.exists():
+            frame_path = settings.BASE_DIR / "assets" / "product_frame_template.png"
+
+        overlay_path = settings.BASE_DIR / "storage" / "assets" / "frame_overlay.png"
+        if not overlay_path.exists():
+            overlay_path = settings.BASE_DIR / "assets" / "frame_overlay.png"
+
+        if not frame_path.exists():
+            return self._render_deal_card(base_img, usd_price=usd_price)
+
+        try:
+            with Image.open(frame_path) as frame_raw:
+                frame = frame_raw.convert("RGBA")
+                fw, fh = frame.size
+
+                # Inner product display box in DealScout Neon frame: left=105, top=215, width=930, height=860
+                bx, by, bw, bh = 105, 215, 930, 860
+                pad = 14
+                avail_w = bw - (pad * 2)
+                avail_h = bh - (pad * 2)
+
+                prod = base_img.convert("RGBA")
+                iw, ih = prod.size
+                scale = min(avail_w / iw, avail_h / ih)
+                new_w = max(1, int(iw * scale))
+                new_h = max(1, int(ih * scale))
+                scaled_img = prod.resize((new_w, new_h), Image.Resampling.LANCZOS)
+
+                px = bx + (bw - new_w) // 2
+                py = by + (bh - new_h) // 2
+
+                bg_fill = Image.new("RGBA", (bw, bh), (255, 255, 255, 255))
+                canvas = frame.copy()
+                canvas.paste(bg_fill, (bx, by))
+                canvas.paste(scaled_img, (px, py), scaled_img if scaled_img.mode == "RGBA" else None)
+
+                # Check if Attack Shark brand: place official logo
+                is_attack_shark = bool(title and "attack shark" in title.lower())
+                if is_attack_shark:
+                    as_logo_file = settings.BASE_DIR / "storage" / "assets" / "attack_shark_logo.png"
+                    if not as_logo_file.exists():
+                        as_logo_file = settings.BASE_DIR / "assets" / "attack_shark_logo.png"
+                    if as_logo_file.exists():
+                        try:
+                            with Image.open(as_logo_file) as as_raw:
+                                as_logo = as_raw.convert("RGBA")
+                                al_w, al_h = as_logo.size
+                                target_al_w = 170
+                                target_al_h = int(al_h * (target_al_w / al_w))
+                                as_scaled = as_logo.resize((target_al_w, target_al_h), Image.Resampling.LANCZOS)
+                                canvas.paste(as_scaled, (bx + 24, by + 18), as_scaled)
+                        except Exception as as_err:
+                            logger.warning(f"Failed pasting Attack Shark logo: {as_err}")
+
+                # Overlay neon border edges
+                if overlay_path.exists():
+                    try:
+                        with Image.open(overlay_path) as ov_raw:
+                            canvas = Image.alpha_composite(canvas, ov_raw.convert("RGBA"))
+                    except Exception as ov_err:
+                        logger.warning(f"Failed overlaying frame border: {ov_err}")
+
+                return canvas.convert("RGB")
+        except Exception as e:
+            logger.warning(f"Failed rendering framed deal: {e}, falling back to default card")
+            return self._render_deal_card(base_img, usd_price=usd_price)
+
     def prepare_post_image(
         self,
         image_path: Optional[Path],
@@ -116,7 +194,7 @@ class MediaRenderer:
         usd_price: Optional[float] = None
     ) -> Optional[Path]:
         """
-        Processes product image with Option A+B mixed styling.
+        Processes product image inside DealScout Neon Frame template.
         """
         pid = product_id or "deal"
         out_file = self.output_dir / f"ready_{pid}.jpg"
@@ -124,7 +202,7 @@ class MediaRenderer:
         if image_path and image_path.exists():
             try:
                 with Image.open(image_path) as img:
-                    branded = self._render_deal_card(img, usd_price=usd_price)
+                    branded = self._render_framed_deal(img, usd_price=usd_price, title=title)
                     branded.save(out_file, "JPEG", quality=95)
                     return out_file
             except Exception as e:

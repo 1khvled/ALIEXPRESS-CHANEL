@@ -215,8 +215,8 @@ async def check_and_publish_regrouped_bulletins(bot_token: Optional[str] = None)
             # "anything less then 4 dont do it it must be same thing"
             continue
 
-        # Take up to 7 items of the exact same category
-        selected_items = items[:7]
+        # Take up to 6 items of the exact same category (ensures caption stays strictly <= 1024 chars for photo)
+        selected_items = items[:6]
         cat_config = CATEGORIES_CONFIG[cat_name]
 
         # 3. Build Bulletin post matching DealScout signature format
@@ -248,22 +248,59 @@ async def check_and_publish_regrouped_bulletins(bot_token: Optional[str] = None)
             ]
         }
 
-        # 4. Publish to channel
+        # 4. Determine banner photo for bulletin:
+        # Default for all tajmi3at: Fiery AliExpress Deals Collage (tajmi3at_banner.png)
+        # If phones collection and lody_phones_banner.jpg exists: use Lody phones banner
+        from pathlib import Path
+        banner_path = None
+        if cat_name == "phones":
+            lody_p = Path(settings.BASE_DIR) / "storage" / "assets" / "lody_phones_banner.jpg"
+            if not lody_p.exists():
+                lody_p = Path(settings.BASE_DIR) / "assets" / "lody_phones_banner.jpg"
+            if lody_p.exists():
+                banner_path = lody_p
+
+        if not banner_path:
+            taj_p = Path(settings.BASE_DIR) / "storage" / "assets" / "tajmi3at_banner.png"
+            if not taj_p.exists():
+                taj_p = Path(settings.BASE_DIR) / "assets" / "tajmi3at_banner.png"
+            if taj_p.exists():
+                banner_path = taj_p
+
+        # 5. Publish to channel (photo with caption if available, fallback to sendMessage)
         api_url = f"https://api.telegram.org/bot{token}"
         try:
-            async with httpx.AsyncClient(timeout=15.0) as client:
-                resp = await client.post(
-                    f"{api_url}/sendMessage",
-                    json={
-                        "chat_id": target,
-                        "text": bulletin_text,
-                        "parse_mode": "HTML",
-                        "disable_web_page_preview": True,
-                        "reply_markup": reply_markup
-                    }
-                )
-                data = resp.json()
-                if resp.status_code == 200 and data.get("ok"):
+            async with httpx.AsyncClient(timeout=20.0) as client:
+                data = None
+                if banner_path and banner_path.exists() and len(bulletin_text) <= 1024:
+                    with open(banner_path, "rb") as bf:
+                        mime = "image/jpeg" if str(banner_path).endswith((".jpg", ".jpeg")) else "image/png"
+                        resp = await client.post(
+                            f"{api_url}/sendPhoto",
+                            data={
+                                "chat_id": target,
+                                "caption": bulletin_text,
+                                "parse_mode": "HTML",
+                                "reply_markup": json.dumps(reply_markup)
+                            },
+                            files={"photo": (banner_path.name, bf, mime)}
+                        )
+                        data = resp.json()
+
+                if not data or not data.get("ok"):
+                    resp = await client.post(
+                        f"{api_url}/sendMessage",
+                        json={
+                            "chat_id": target,
+                            "text": bulletin_text,
+                            "parse_mode": "HTML",
+                            "disable_web_page_preview": True,
+                            "reply_markup": reply_markup
+                        }
+                    )
+                    data = resp.json()
+
+                if data and data.get("ok"):
                     bulletin_msg_id = data["result"]["message_id"]
                     # Mark these deal IDs as regrouped
                     for it in selected_items:
