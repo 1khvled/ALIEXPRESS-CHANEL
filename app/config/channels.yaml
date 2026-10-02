@@ -39,5 +39,10 @@ channels:
 
   - username: "aniscoupons"
     name: "Anis Coupons"
-    enabled: false
-    priority: 30
+    enabled: true
+    priority: 82
+
+  - username: "Coupon4Dz"
+    name: "Coupon 4 Dz"
+    enabled: true
+    priority: 84

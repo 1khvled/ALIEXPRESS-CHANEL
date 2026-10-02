@@ -72,6 +72,24 @@ class DealCaptionGenerator:
             "smartwatch", "smart watch", "smart band", "miband", "mi band", "haylou", "zeblaze", "kieslect", "colmi"
         ]) or any(k in title for k in ["ساعة ذكية", "سوار ذكي"])
 
+        is_phone = any(k in t_lower for k in [
+            "phone", "smartphone", "mobile", "redmi", "poco", "xiaomi", "realme", "oneplus",
+            "oppo", "vivo", "honor", "infinix", "tecno", "samsung galaxy", "iphone", "pixel",
+            "global version", "5g", "snapdragon", "dimensity", "pad", "tablet"
+        ]) or any(k in title for k in [
+            "هاتف", "موبايل", "جوال", "تابلت", "شاومي", "ريدمي", "بوكو", "ريلمي", "هونر", "سامسونج"
+        ])
+
+        if is_phone:
+            phone_hooks = [
+                "📱 <b>لافاااار جننننح في الهواتف الذكية صيدة اليوم 🔥📱</b>",
+                "⚡ <b>هاتف بمواصفات قوية وسعر لافار متتراطاش 🔥📱</b>",
+                "🔥 <b>أجرررررري لافــــــــــار نسخة عالمية أصلية نااار 📱⚡</b>",
+                "🌟 <b>عودة المحبوب بسعر خيالي ألحـــق الصيدة 🔥📱</b>",
+                "📱 <b>صيدة اليوم في الهواتف بسعر باطل هبال 🔥⚡</b>"
+            ]
+            return phone_hooks[h % len(phone_hooks)]
+
         if is_gaming:
             return (
                 "🎮 <b>لافاااااار قيمنق متتفوتش عتاد بأقوى سعر 🔥🕹️</b>" if (h % 2 == 0)
@@ -107,7 +125,7 @@ class DealCaptionGenerator:
             "🔥 <b>لافاااار هباااال ناااار 🔥</b>",
             "🔥 <b>الحححححق عودة لافاااار 🔥</b>",
             "⚡ <b>الحححححق باااآآاطل صيدة اليوم ⚡</b>",
-            "⚡ <b>سعرها يفوق مليون سنتيم فـالبلاد 🔥</b>",
+            "🔥 <b>صيدة اليوم بأقوى تخفيض متتراطاش 🔥⚡</b>",
             "🔥 <b>اجججججججري سعـــــر ممتــــــــــــاز 🔥</b>",
             "🚨 <b>الحححححححححق صيدة نااار ⚡</b>",
             "😍 <b>نسخـة عالميــــــــة بسعر باطل هبال 🔥</b>"
@@ -202,7 +220,8 @@ class DealCaptionGenerator:
         is_price_drop: bool = False,
         is_restock: bool = False,
         coin_url: Optional[str] = None,
-        deal_type: str = "coin"
+        deal_type: str = "coin",
+        raw_text: Optional[str] = None
     ) -> str:
         lines = []
 
@@ -245,6 +264,14 @@ class DealCaptionGenerator:
                 lines.append("<blockquote>📍 بلد الحساب <b>الجزائر 🇩🇿</b></blockquote>")
 
         import html
+
+        # 2.5 Local price comparison quote if mentioned in source
+        if raw_text:
+            clean_raw = re.sub(r'[\u064B-\u065F\u0640]', '', raw_text)
+            p_quote = re.search(r'(?:سعرو|سعرها|سعره)\s*(?:حاليا|هنا|فالبلاد|في البلاد)\s*(?:في البلاد|فالبلاد)?\s*فوق\s*([0-9\s\.,]+(?:دج|مليون|ألف|الف|سنتيم)?)', clean_raw)
+            if p_quote:
+                matched_quote = p_quote.group(0).strip()
+                lines.append(f"<blockquote>🏷️ <b>سعر السوق المحلي:</b> {html.escape(matched_quote)} 🛒</blockquote>")
         safe_title = html.escape(title)
 
         lines.append("")
@@ -333,7 +360,8 @@ class DealCaptionGenerator:
             is_price_drop=is_price_drop,
             is_restock=is_restock,
             coin_url=coin_url,
-            deal_type=deal_type
+            deal_type=deal_type,
+            raw_text=raw_text
         )
 
 caption_generator = DealCaptionGenerator()

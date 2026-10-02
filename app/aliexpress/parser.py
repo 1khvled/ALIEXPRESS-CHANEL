@@ -19,13 +19,14 @@ EUR_PRICE_PATTERNS = [
 
 COUPON_PATTERNS = [
     re.compile(r'(?:كوبون|كود|code|coupon|قسيمة)\s*(?:[$]?[0-9]+(?:[\.,][0-9]+)?[^\S\r\n]*/[^\S\r\n]*[$]?[0-9]+(?:[\.,][0-9]+)?[$]?)?\s*(?:دولار|dollar|\$)?\s*[:：\-\s✅🔥👉✔️⏺🙏🎟️]*(?:استخدمه|استخدم|بكود|code)?\s*[:：\-\s✅🔥👉✔️⏺🙏🎟️]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
-    re.compile(r'(?:كوبون|كود|code|coupon)\s*(?:[0-9]+(?:\.[0-9]+)?\s*(?:دولار|dollar|\$))?[^\nA-Za-z0-9]*(?:استخدمه|استخدم|استعمله|استعمل)?[^\nA-Za-z0-9]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
+    re.compile(r'(?:كوبون|كود|code|coupon)\s*(?:[$]?[0-9]+(?:\.[0-9]+)?(?:\s*(?:دولار|dollar|\$))?)?[^\nA-Za-z0-9]*(?:استخدمه|استخدم|استعمله|استعمل)?[^\nA-Za-z0-9]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
     re.compile(r'(?:استخدم كود|استعمل كود|كود الخصم|كود التخفيض|كوبون خاص)\s*[^A-Za-z0-9]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
     re.compile(r'(?:code|كود)\s*[:：\-\s✅🔥👉✔️⏺🤐]+\s*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
+    re.compile(r'👊\s*(?:كوبون|كود|code)\s*[:：\-\s\d\$/]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
 ]
 
 SELLER_COUPON_PATTERNS = [
-    re.compile(r'(?:احجز\s*قسيمة\s*(?:البائع|المتجر)|قسيمة\s*(?:البائع|المتجر)|store\s*coupon|seller\s*coupon)\s*[:：\-\s✅🔥👉✔️🌷🙏\+]*([0-9]+(?:[\.,][0-9]+)?(?:\s*(?:دولار|dollar|\$))?|[A-Za-z0-9_\-]{3,25})', re.IGNORECASE),
+    re.compile(r'(?:حصل\s*|احجز\s*)?قسيمة\s*(?:البائع|المتجر|خاصة\s*بالمتجر|store\s*coupon|seller\s*coupon)\s*[:：\-\s✅🔥👉✔️🌷🙏\+]*[$]?\s*([0-9]+(?:[\.,][0-9]+)?(?:\s*(?:دولار|dollar|\$))?|[A-Za-z0-9_\-]{3,25})', re.IGNORECASE),
 ]
 
 
@@ -141,7 +142,7 @@ def is_allowed_category(title: str, text: str, channel_username: str = "") -> Tu
     """Check if the deal belongs to an allowed category (gaming, tech, PC parts, cables, tools, phones, etc.)."""
     clean_ch = channel_username.lower().lstrip("@")
     monitored_tech_channels = {
-        "pcgamingpart", "bnddeals", "zedstoreonline", "aniscoupons", "ecksdeal", "lodydeals", "megaprix", "megaphonna"
+        "pcgamingpart", "bnddeals", "zedstoreonline", "aniscoupons", "ecksdeal", "lodydeals", "megaprix", "megaphonna", "coupon4dz"
     }
     # All 7 monitored channels are specialized Algerian tech/deal channels curated by the user
     if clean_ch in monitored_tech_channels:
@@ -309,12 +310,26 @@ def extract_seller_coupon(text: str) -> Optional[str]:
     if not text:
         return None
     norm = re.sub(r'[\u0640]', '', text)
+
+    # 1. Combined amount and code: e.g. "حصل قسيمة البائع $80: T0F4TZ" or "قسيمة المتجر $35: TJD5MT" or "قسيمة البائع $2: SEP908KKLL / JULYHHKKLL88"
+    p_combined = re.search(
+        r'(?:حصل\s*|احجز\s*)?قسيمة\s*(?:البائع|المتجر|خاصة\s*بالمتجر)\s*[:：\-\s✅🔥👉✔️🌷🙏\+]*[$]?\s*([0-9]+(?:\.[0-9]+)?)\s*[$]?\s*[:：\-\s]+\s*([A-Za-z0-9_\-\s/]{3,35})',
+        norm,
+        re.IGNORECASE
+    )
+    if p_combined:
+        amount = p_combined.group(1).strip()
+        code = p_combined.group(2).strip()
+        code = code.split('\n')[0].strip()
+        code = re.sub(r'[🎟️🎫👊🔗📌].*$', '', code).strip()
+        if code and code.lower() not in {"http", "https", "aliexpress", "link", "url", "temu"}:
+            return f"{amount}$ (كود: {code})"
+
+    # 2. Standard SELLER_COUPON_PATTERNS (amount or code)
     for pattern in SELLER_COUPON_PATTERNS:
         m = pattern.search(norm)
         if m:
             code = m.group(1).strip()
-            if code.lower() in {"http", "https", "aliexpress", "item", "link", "url", "temu", "0", "0$", "$0", "none"}:
-                continue
             # If purely numerical or dollar amount, ensure it is at least $1.00
             num_clean = re.sub(r'[^\d\.]', '', code)
             try:
@@ -522,12 +537,10 @@ def detect_deal_type(raw_text: str, url: str = "") -> str:
         "عملات", "نقاط", "coins", "تخفيض العملات", "رابط العملات", "خصم العملات", "سعر العملات"
     ]
     if any(k in text_lower for k in coin_keywords):
-        # Do not use coin link for smartphones or tablets (> $80) as they don't support coin index finder
         if any(w in text_lower for w in ["phone", "redmi", "poco", "xiaomi", "realme", "oneplus", "oppo", "هاتف", "تابلت", "ipad", "pad"]):
             return "item"
         return "coin"
 
-    # Default to standard canonical item URL for clean coupons and seller discounts
     return "coin"
 
 

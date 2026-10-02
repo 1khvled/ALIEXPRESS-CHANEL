@@ -66,3 +66,31 @@ def test_validation_catches_hallucinations_and_errors():
     assert not validation.approved
     assert any("price" in err.lower() for err in validation.errors)
     assert any("CTA" in err or "البوت" in err for err in validation.errors)
+
+@pytest.mark.asyncio
+async def test_phone_hook_and_seller_coupon_generation():
+    caption = await caption_generator.generate(
+        title="REALME 15 5G (12/256)",
+        usd_price=214.90,
+        eur_price=197.71,
+        affiliate_url="https://s.click.aliexpress.com/e/_c4duJlBL",
+        coupon_code="OTPRD42",
+        seller_coupon="80$ (كود: T0F4TZ)",
+        country_info="كندا 🇨🇦",
+        raw_text="أجرررررررري لافــــــــــار سعرو حالياً في البلاد فوق 82000دج"
+    )
+
+    # Must contain authentic phone hook
+    assert any(h in caption for h in ["الهواتف", "أجرررررري لافــــــــــار", "صيدة اليوم في الهواتف", "المحبوب", "مواصفات قوية"])
+    # Must NOT contain the bad generic million centime hook
+    assert "سعرها يفوق مليون سنتيم" not in caption
+    # Must contain seller coupon
+    assert "قسيمــة البــائع" in caption
+    assert "80$ (كود: T0F4TZ)" in caption
+    # Must contain coupon
+    assert "OTPRD42" in caption
+    # Must contain Canada flag
+    assert "كــــــندا 🇨🇦" in caption
+    # Must contain price comparison
+    assert "سعر السوق المحلي" in caption
+    assert "82000دج" in caption

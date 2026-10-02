@@ -139,7 +139,19 @@ class PortalsApiAffiliateProvider(AffiliateProvider):
                             link = getattr(aff_links[0], "promotion_link", None) or getattr(aff_links[0], "promotion_url", None)
                             if link:
                                 return link
-                        # If API responded cleanly but item has no promotion link, fall back immediately
+                        # If API responded cleanly but target_url has no promotion link (e.g. raw /item/ URL),
+                        # retry with coin index URL which reliably produces official /e/ shortlinks in Portals API!
+                        if pid:
+                            coin_target = f"https://m.aliexpress.com/p/coin-index/index.html?_immersiveMode=true&tabname=configTab_1926001&productIds={pid}"
+                            if target_url != coin_target:
+                                try:
+                                    coin_aff_links = await asyncio.to_thread(self.api.get_affiliate_links, coin_target)
+                                    if coin_aff_links and len(coin_aff_links) > 0:
+                                        c_link = getattr(coin_aff_links[0], "promotion_link", None) or getattr(coin_aff_links[0], "promotion_url", None)
+                                        if c_link:
+                                            return c_link
+                                except Exception as e2:
+                                    logger.warning(f"Portals API coin fallback failed: {e2}")
                         break
                     except Exception as e:
                         logger.warning(f"AliExpress Portals API attempt {attempt}/2 failed: {e}")
