@@ -92,7 +92,8 @@
     "9998885993",
     "1005009774318553",
     "1005012574108028",
-    "1005008599340405"
+    "1005008599340405",
+    "1005007572968437"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -191,7 +192,8 @@
     "9998885993": 1790965993.3792443,
     "1005009774318553": 1790966460.2151659,
     "1005012574108028": 1790967954.6642368,
-    "1005008599340405": 1790967962.6418507
+    "1005008599340405": 1790967962.6418507,
+    "1005007572968437": 1790969442.7810974
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -281,7 +283,8 @@
     "ONEPLUS TURBO 6X PRO 5G (8/128)",
     "CUSU SSD 512 GB Portable SSD External Drive",
     "HONOR  X80 PRO MAX (8/128)",
-    "WALRAM Sata SSD 512GB"
+    "WALRAM Sata SSD 512GB",
+    "Lenovo GM2 Pro TWS"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -374,7 +377,8 @@
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1790966153.636154,
     "CUSU SSD 512 GB Portable SSD External Drive": 1790966460.2151659,
     "HONOR  X80 PRO MAX (8/128)": 1790967954.6642368,
-    "WALRAM Sata SSD 512GB": 1790967962.6418507
+    "WALRAM Sata SSD 512GB": 1790967962.6418507,
+    "Lenovo GM2 Pro TWS": 1790969442.7810974
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -585,27 +589,28 @@
     "megaphonna:8197",
     "aniscoupons:32685",
     "zedstoreonline:38524",
-    "megaphonna:8198"
+    "megaphonna:8198",
+    "lodydeals:45402"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790968242.9714053,
+  "last_run_time": 1790969442.7810974,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32685,
-      "last_check_time": 1790969158.9531748
+      "last_check_time": 1790969446.5546985
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45401,
-      "last_check_time": 1790969157.0777662
+      "last_message_id": 45402,
+      "last_check_time": 1790969444.7960181
     },
     "bnddeals": {
       "last_message_id": 50789,
-      "last_check_time": 1790969158.1514208
+      "last_check_time": 1790969445.8723433
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -617,11 +622,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790969157.4429612
+      "last_check_time": 1790969445.2830136
     },
     "megaphonna": {
       "last_message_id": 8198,
-      "last_check_time": 1790969158.526942
+      "last_check_time": 1790969446.2272146
     }
   },
   "published_product_prices": {
@@ -700,7 +705,8 @@
     "1005011682821623": 0.8,
     "1005009774318553": 53.8,
     "1005012574108028": 279.1,
-    "1005008599340405": 47.4
+    "1005008599340405": 47.4,
+    "1005007572968437": 17.47
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1592,6 +1598,16 @@
       "price": 22.6,
       "timestamp": 1790968242.9714053,
       "status": "ACTIVE"
+    },
+    "lodydeals:45402": {
+      "channel_msg_id": 417,
+      "product_id": "1005007572968437",
+      "title": "Lenovo GM2 Pro TWS",
+      "channel": "lodydeals",
+      "source_msg_id": 45402,
+      "price": 17.47,
+      "timestamp": 1790969442.7810974,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1600,7 +1616,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790968242.9739435,
+    "last_deal_post_time": 1790969442.7836368,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1682,7 +1698,8 @@
     "1005009774318553": "aniscoupons",
     "1005012574108028": "megaphonna",
     "1005008599340405": "aniscoupons",
-    "1005009054706827": "zedstoreonline"
+    "1005009054706827": "zedstoreonline",
+    "1005007572968437": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -1747,7 +1764,8 @@
     "CUSU SSD 512 GB Portable SSD External Drive": "aniscoupons",
     "HONOR  X80 PRO MAX (8/128)": "megaphonna",
     "WALRAM Sata SSD 512GB": "aniscoupons",
-    "Machenike G3 V2 PC Gaming Controller Hall Effect": "zedstoreonline"
+    "Machenike G3 V2 PC Gaming Controller Hall Effect": "zedstoreonline",
+    "Lenovo GM2 Pro TWS": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
