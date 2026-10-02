@@ -108,7 +108,7 @@
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
-    "1005010219205081": 1790947574.20351,
+    "1005010219205081": 1790977848.5294187,
     "999111222": 1790965992.445056,
     "100500999912345": 1790875993.3410206,
     "100500999954321": 1790958793.3410206,
@@ -335,7 +335,7 @@
     "ATTACK SHARK L90": 1790884206.6605399,
     "SomnAmbulist SSD 2.5 120GB": 1790884215.4346776,
     "Realme 15 Pro Global (8/256)": 1790884233.6428,
-    "Poco C71 3/64GB": 1790884267.9909704,
+    "Poco C71 3/64GB": 1790977848.5294187,
     "سماعات لاسلكية Attack Shark L80 PRO Wireless": 1790884281.6726701,
     "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K": 1790884287.4211984,
     "ماوس لاسلكي Attack Shark R1 Wireless": 1790884299.0959656,
@@ -670,15 +670,17 @@
     "aniscoupons:32691",
     "lodydeals:45412",
     "aniscoupons:32692",
-    "aniscoupons:32693"
+    "aniscoupons:32693",
+    "megaphonna:8205",
+    "aniscoupons:32694"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1790977546.6736062,
+  "last_run_time": 1790977848.5294187,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32693,
-      "last_check_time": 1790977548.6841414
+      "last_message_id": 32694,
+      "last_check_time": 1790977850.713187
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -686,11 +688,11 @@
     },
     "lodydeals": {
       "last_message_id": 45412,
-      "last_check_time": 1790977539.186246
+      "last_check_time": 1790977843.1981115
     },
     "bnddeals": {
       "last_message_id": 50795,
-      "last_check_time": 1790977540.1265392
+      "last_check_time": 1790977844.1891108
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -702,16 +704,16 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790977539.5172188
+      "last_check_time": 1790977843.5338163
     },
     "megaphonna": {
-      "last_message_id": 8204,
-      "last_check_time": 1790977540.4698663
+      "last_message_id": 8205,
+      "last_check_time": 1790977844.6604187
     }
   },
   "published_product_prices": {
     "1005012973772517": 179.1,
-    "1005010219205081": 60.0,
+    "1005010219205081": 57.2,
     "1005007805638431": 22.64,
     "1005007027334636": 9.5,
     "1005009054706827": 22.6,
@@ -1867,6 +1869,16 @@
       "price": 8.7,
       "timestamp": 1790977546.6736062,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32694": {
+      "channel_msg_id": 435,
+      "product_id": "1005010219205081",
+      "title": "Poco C71 3/64GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 32694,
+      "price": 57.2,
+      "timestamp": 1790977848.5294187,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1875,7 +1887,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1790977546.6763697,
+    "last_deal_post_time": 1790977848.5579035,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -1927,7 +1939,7 @@
     "9998886362": "test_channel",
     "9998887189": "test_channel",
     "1005012499451512": "zedstoreonline",
-    "1005010219205081": "megaphonna",
+    "1005010219205081": "aniscoupons",
     "1005013152491360": "aniscoupons",
     "1005010129356058": "megaphonna",
     "1005012925826589": "megaphonna",
@@ -2050,7 +2062,8 @@
     "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise": "aniscoupons",
     "VIVO Y600 Pro 8/128GB": "lodydeals",
     "EasySMX X05 Pro Wireless Gamepad Gaming Controller": "aniscoupons",
-    "3 VILCORN G6 Bluetooth-Compatible": "aniscoupons"
+    "3 VILCORN G6 Bluetooth-Compatible": "aniscoupons",
+    "Poco C71 3/64GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
