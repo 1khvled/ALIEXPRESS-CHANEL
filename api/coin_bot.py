@@ -626,7 +626,7 @@ async def publish_deal_to_channel(product_id: str, raw_user_text: str = "") -> T
         deal_link = res.get("coin_link") or product_link
     deal_link = ensure_affiliate(deal_link, fallback_link=product_link, pid=product_id)
 
-    country_detected = extract_country_instruction(raw_user_text, title=prod_title) or "كوريا 🇰🇷"
+    country_detected = extract_country_instruction(raw_user_text, title=prod_title) or "كندا 🇨🇦"
 
     from app.ai.generator import caption_generator
     caption = caption_generator._format_deterministic(

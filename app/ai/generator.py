@@ -32,7 +32,7 @@ class DealCaptionGenerator:
             restock_hooks = [
                 "🚨 <b>الحححححق عودة العرض.. حبات قلال فقط! 🔥🏃‍♂️</b>",
                 "⚡ <b>الحقوووو رجع توفر من جديد.. حبات قلال ويسالي! 🚨🔥</b>",
-                "🔥 <b>صيدة رجعت توفرت بسعر باطل.. كمية محدودة جداً سارع! ⚡</b>",
+                "🔥 <b>عرض ممتاز رجع توفر بسعر باطل.. كمية محدودة جداً سارع! ⚡</b>",
                 "🏃‍♂️💨 <b>الحق عودة العرض لافااار.. بقاو حبات قلال متتراطاش! 🔥</b>",
                 "🚨 <b>الححححق توفر من جديد.. الكمية طير في دقائق! 🔥⚡</b>"
             ]
@@ -43,20 +43,22 @@ class DealCaptionGenerator:
             price_drop_hooks = [
                 "💥 <b>هبوط قوي في السعر.. ألحـــــق لافــــــــــــــار! 📉🔥</b>",
                 "⚡ <b>طاح السعر أكثر.. تخفيض إضافي ناااار 🔥</b>",
-                "🔥 <b>نزول إضافي في السعر صيدة اليوم متتراطاش 🔥</b>"
+                "🔥 <b>نزول إضافي في السعر لافار اليوم متتراطاش 🔥</b>"
             ]
             return price_drop_hooks[h % len(price_drop_hooks)]
 
         # 2. Category Detection
+        is_audio = any(k in t_lower for k in [
+            "earphone", "earphones", "earbuds", "earbud", "headphone", "headphones", "headset",
+            "tws", "speaker", "soundbar", "soundcore", "qcy", "baseus bowie", "lenovo lp", "anc",
+            "bluetooth speaker", "haylou s", "haylou w", "haylou gt", "haylou x", "edifier",
+            "earfun", "tronsmart", "fiil", "moondrop", "iem", "kz ", "s30"
+        ]) or any(k in title for k in ["سماعة", "سماعات", "صوت", "مكبر صوت", "ايربودز", "سماعه", "كاسك"])
+
         is_gaming = any(k in t_lower for k in [
-            "mouse", "keyboard", "headset", "controller", "gamepad", "gaming", "gamer",
+            "mouse", "keyboard", "controller", "gamepad", "gaming", "gamer",
             "attack shark", "ajazz", "aula", "vgn", "game", "rgb", "joystick", "switch", "keycap", "fantech"
         ]) or any(k in title for k in ["ماوس", "كيبورد", "جيمنج", "قيمنق", "تحكم", "يدات"])
-
-        is_audio = any(k in t_lower for k in [
-            "earphone", "earbuds", "headphone", "tws", "speaker", "soundbar",
-            "soundcore", "qcy", "baseus bowie", "lenovo lp", "anc", "bluetooth speaker"
-        ]) or any(k in title for k in ["سماعة", "سماعات", "صوت", "مكبر صوت"])
 
         is_storage = any(k in t_lower for k in [
             "ssd", "nvme", "m.2", "sata", "ddr4", "ddr5", "ram", "micro sd", "sd card",
@@ -68,9 +70,10 @@ class DealCaptionGenerator:
             "usb-c", "type-c", "cable", "ugreen", "essager", "toocki", "kuulaa"
         ]) or any(k in title for k in ["شاحن", "كابل", "باور بانك", "شحن سريع"])
 
-        is_watch = any(k in t_lower for k in [
-            "smartwatch", "smart watch", "smart band", "miband", "mi band", "haylou", "zeblaze", "kieslect", "colmi"
-        ]) or any(k in title for k in ["ساعة ذكية", "سوار ذكي"])
+        is_watch = (not is_audio) and (any(k in t_lower for k in [
+            "smartwatch", "smart watch", "smart band", "miband", "mi band", "band 8", "band 9",
+            "zeblaze", "kieslect", "colmi", "amazfit", "haylou watch", "haylou solar", "haylou rs"
+        ]) or any(k in title for k in ["ساعة ذكية", "سوار ذكي", "ساعة يد ذكية"]))
 
         is_phone = any(k in t_lower for k in [
             "phone", "smartphone", "mobile", "redmi", "poco", "xiaomi", "realme", "oneplus",
@@ -82,30 +85,32 @@ class DealCaptionGenerator:
 
         if is_phone:
             phone_hooks = [
-                "📱 <b>لافاااار جننننح في الهواتف الذكية صيدة اليوم 🔥📱</b>",
+                "📱 <b>لافاااار جننننح في الهواتف الذكية بسعر ممتاز 🔥📱</b>",
                 "⚡ <b>هاتف بمواصفات قوية وسعر لافار متتراطاش 🔥📱</b>",
                 "🔥 <b>أجرررررري لافــــــــــار نسخة عالمية أصلية نااار 📱⚡</b>",
-                "🌟 <b>عودة المحبوب بسعر خيالي ألحـــق الصيدة 🔥📱</b>",
-                "📱 <b>صيدة اليوم في الهواتف بسعر باطل هبال 🔥⚡</b>"
+                "🌟 <b>عودة العرض بسعر خيالي ممتاز متتراطاش 🔥📱</b>",
+                "📱 <b>عرض اليوم في الهواتف بسعر باطل هبال 🔥⚡</b>"
             ]
             return phone_hooks[h % len(phone_hooks)]
+
+        if is_audio:
+            audio_hooks = [
+                "🎧 <b>صوت نقي وباس قوي وسعر لافار متتراطاش 🔥🎧</b>",
+                "🔊 <b>تخفيض ممتاز على السماعات الأصلية جودة صوت هايلة 🔥⚡</b>",
+                "🎧 <b>سماعات ممتازة بعزل صوت قوي وسعر باطل 🔥🎧</b>"
+            ]
+            return audio_hooks[h % len(audio_hooks)]
 
         if is_gaming:
             return (
                 "🎮 <b>لافاااااار قيمنق متتفوتش عتاد بأقوى سعر 🔥🕹️</b>" if (h % 2 == 0)
-                else "🕹️ <b>صيدة قيمنق خيالية بسعر باطل 🔥⚡</b>"
-            )
-
-        if is_audio:
-            return (
-                "🎧 <b>صوت نقي وسعر لافار هبال متتراطاش 🔥🎧</b>" if (h % 2 == 0)
-                else "🔊 <b>تخفيض ممتاز على السماعات صيدة نااار ⚡</b>"
+                else "🕹️ <b>عتاد قيمنق ممتاز بأقوى تخفيض متفوتوش 🔥⚡</b>"
             )
 
         if is_storage:
             return (
-                "💾 <b>صيدة اليوم في التخزين والكمبيوتر هبال 🔥⚡</b>" if (h % 2 == 0)
-                else "⚡ <b>عتاد كمبيوتر وتخزين بأقوى سعر 🔥</b>"
+                "💾 <b>تخفيض ممتاز في التخزين والكمبيوتر هبال 🔥⚡</b>" if (h % 2 == 0)
+                else "⚡ <b>عتاد كمبيوتر وتخزين بأقوى سعر متتراطاش 🔥</b>"
             )
 
         if is_power:
@@ -116,23 +121,23 @@ class DealCaptionGenerator:
 
         if is_watch:
             return (
-                "⌚ <b>ساعة ذكية بأناقة وسعر خيالي لافار 🔥</b>" if (h % 2 == 0)
-                else "⌚ <b>سعر ممتاز لساعة ذكية ألحق الصيدة ⚡</b>"
+                "⌚ <b>ساعة ذكية بأناقة ومواصفات قوية وسعر خيالي لافار 🔥</b>" if (h % 2 == 0)
+                else "⌚ <b>سعر ممتاز ومواصفات ممتازة لساعة ذكية أنيقة ⚡</b>"
             )
 
         candidates = [
             "🔥 <b>لافـــــــــــــــــــــــار 🔥</b>",
             "🔥 <b>لافاااار هباااال ناااار 🔥</b>",
             "🔥 <b>الحححححق عودة لافاااار 🔥</b>",
-            "⚡ <b>الحححححق باااآآاطل صيدة اليوم ⚡</b>",
-            "🔥 <b>صيدة اليوم بأقوى تخفيض متتراطاش 🔥⚡</b>",
+            "⚡ <b>الحححححق باااآآاطل عرض اليوم ⚡</b>",
+            "🔥 <b>عرض اليوم بأقوى تخفيض متتراطاش 🔥⚡</b>",
             "🔥 <b>اجججججججري سعـــــر ممتــــــــــــاز 🔥</b>",
-            "🚨 <b>الحححححححححق صيدة نااار ⚡</b>",
+            "🚨 <b>الحححححححححق تخفيض نااار ⚡</b>",
             "😍 <b>نسخـة عالميــــــــة بسعر باطل هبال 🔥</b>"
         ]
 
         if has_points_discount:
-            candidates.append("🪙 <b>تخفيض قوي بالعملات (Coins) صيدة اليوم 🔥🪙</b>")
+            candidates.append("🪙 <b>تخفيض قوي بالعملات (Coins) متتراطاش 🔥🪙</b>")
 
         return candidates[h % len(candidates)]
 
@@ -233,8 +238,8 @@ class DealCaptionGenerator:
             else:
                 bundle_hooks = [
                     "🔥 <b>الححححححححق عروض bundle deals متتراطاش 🔥</b>",
-                    "📦 <b>عروض الحزم (Choice Bundle) صيدة هبااال ناااار 🔥⚡</b>",
-                    "⚡ <b>صيدة اليوم في عروض الحزم 3 قطع بأقوى سعر 🔥</b>",
+                    "📦 <b>عروض الحزم (Choice Bundle) لافار هبااال ناااار 🔥⚡</b>",
+                    "⚡ <b>تخفيض ممتاز في عروض الحزم 3 قطع بأقوى سعر 🔥</b>",
                     "🛍️ <b>لافـــــــــــــار عروض الحزم bundle deals باطل 🔥</b>"
                 ]
                 hook = bundle_hooks[h % len(bundle_hooks)]
@@ -260,7 +265,21 @@ class DealCaptionGenerator:
             lines.append("<blockquote>📉 <b>انخفاض السعر:</b> السعر نزل أكثر من قبل، لافار حقيقية استغلها الآن! 🔥</blockquote>")
 
         # 2. Country recommendation (exact Algerian Telegram style in blockquote)
-        if country_info:
+        if deal_type == "coin":
+            # Coin deals in Algerian community are always Canada for 50-70%+ coin discounts
+            lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
+        elif deal_type == "bundle":
+            # Bundle deals can be Algeria or Canada depending on source
+            is_dz = False
+            if country_info and any(k in str(country_info).lower() for k in ["الجزائر", "algeria", "dz"]):
+                is_dz = True
+            if raw_text and any(k in raw_text.lower() for k in ["الجزائر", "algeria", "dz", "ديرو الجزائر", "بلاد الجزائر", "حساب جزائري"]):
+                is_dz = True
+            if is_dz:
+                lines.append("<blockquote>📍 بلد الحساب <b>الجزائر 🇩🇿</b></blockquote>")
+            else:
+                lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
+        elif country_info:
             c_str = str(country_info).lower()
             if "كوريا" in country_info or "korea" in c_str or "kr" in c_str:
                 lines.append("<blockquote>📍 خلي البلـــد <b>كــــــوريا 🇰🇷</b></blockquote>")
@@ -324,10 +343,10 @@ class DealCaptionGenerator:
 
     async def generate(
         self,
-        title: str,
-        usd_price: Optional[float],
-        eur_price: Optional[float],
-        affiliate_url: str,
+        title: str = "",
+        usd_price: Optional[float] = None,
+        eur_price: Optional[float] = None,
+        affiliate_url: str = "",
         coupon_code: Optional[str] = None,
         seller_coupon: Optional[str] = None,
         has_points_discount: bool = False,

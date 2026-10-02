@@ -412,7 +412,7 @@ async def prepare_deal_state(pid: str, raw_user_text: str = "") -> Dict[str, Any
     coupon = user_inputs["coupon"]
     seller_coupon = user_inputs.get("seller_coupon")
     coins_text = user_inputs["coins_text"]
-    country = user_inputs["country"] or "كوريا 🇰🇷"
+    country = user_inputs["country"] or "كندا 🇨🇦"
     product_link = ensure_affiliate(res.get("product_link"), pid=pid)
     coin_link = ensure_affiliate(res.get("coin_link"), fallback_link=product_link, pid=pid)
     bundle_link = ensure_affiliate(res.get("bundle_link"), fallback_link=product_link, pid=pid)

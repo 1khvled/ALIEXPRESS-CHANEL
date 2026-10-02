@@ -46,3 +46,8 @@ channels:
     name: "Coupon 4 Dz"
     enabled: true
     priority: 84
+
+  - username: "CouponsGlobal"
+    name: "Coupons Global"
+    enabled: true
+    priority: 80

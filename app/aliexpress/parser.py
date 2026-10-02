@@ -144,7 +144,8 @@ def is_allowed_category(title: str, text: str, channel_username: str = "") -> Tu
     clean_ch = channel_username.lower().lstrip("@")
     monitored_tech_channels = {
         "pcgamingpart", "bnddeals", "zedstoreonline", "aniscoupons", "ecksdeal",
-        "lodydeals", "megaprix", "megaphonna", "coupon4dz", "francecp", "alifrdrop"
+        "lodydeals", "megaprix", "megaphonna", "coupon4dz", "francecp", "alifrdrop",
+        "couponsglobal"
     }
     # Curated channels are specialized tech/deal channels curated by the user
     if clean_ch in monitored_tech_channels:
@@ -361,10 +362,8 @@ def detect_points_discount(text: str) -> bool:
 def extract_country_instruction(text: str, url: str = "", title: str = "") -> str:
     """
     Intelligently detects which country setting is needed for maximum discount.
-    1. Reads explicit mentions or flags in text or url (Canada 🇨🇦, Korea 🇰🇷, Algeria 🇩🇿, France 🇫🇷, Spain 🇪🇸).
-    2. If not explicitly specified, smartly infers:
-       - PC & Gaming hardware/peripherals (mice, keyboards, headsets, RAM, GPUs) -> Korea 🇰🇷 (standard for Algerian gaming channels).
-       - General gadgets, accessories, audio, smartwatches -> Canada 🇨🇦 (standard for high coin discounts).
+    1. Reads explicit mentions or flags in text or url (Canada 🇨🇦, Korea 🇰🇷, Algeria 🇩🇿, France 🇫🇷, Spain 🇪🇸, Ukraine 🇺🇦, Australia 🇦🇺).
+    2. Defaults to Canada 🇨🇦 for coins and tech deals (standard 50-70%+ coin discounts).
     """
     combined = f"{text or ''} {url or ''}".lower()
 
@@ -372,12 +371,12 @@ def extract_country_instruction(text: str, url: str = "", title: str = "") -> st
     if any(k in combined for k in ["كندا", "🇨🇦", "canada", "cad", "shiptocountry=ca", "country=ca"]):
         return "كندا 🇨🇦"
 
-    # 2. Korea detection
+    # 2. Korea detection (only when explicitly specified in source post or URL)
     if any(k in combined for k in ["كوريا", "🇰🇷", "korea", "krw", "shiptocountry=kr", "country=kr"]):
         return "كوريا 🇰🇷"
 
     # 3. Algeria detection (rare cases: local shipping / DZ coin promo)
-    if any(k in combined for k in ["الجزائر", "🇩🇿", "algeria", "shiptocountry=dz", "country=dz", "ديرو الجزائر", "بلاد الجزائر"]):
+    if any(k in combined for k in ["الجزائر", "🇩🇿", "algeria", "shiptocountry=dz", "country=dz", "ديرو الجزائر", "بلاد الجزائر", "حساب جزائري"]):
         return "الجزائر 🇩🇿"
 
     # 4. France detection
@@ -400,17 +399,7 @@ def extract_country_instruction(text: str, url: str = "", title: str = "") -> st
     if any(k in combined for k in ["استراليا", "أستراليا", "🇦🇺", "australia", "shiptocountry=au"]):
         return "أستراليا 🇦🇺"
 
-    # 6. Smart Contextual Inference (PC Gaming -> Korea 🇰🇷, Other Tech -> Canada 🇨🇦)
-    full_context = f"{title or ''} {text or ''}".lower()
-    gaming_indicators = [
-        "mouse", "keyboard", "headset", "controller", "gaming", "game", "ajazz", "attack shark",
-        "aula", "darmoshark", "machenike", "vgn", "zaopin", "scyrox", "keychron", "ram", "gpu",
-        "ماوس", "كيبورد", "سماعة", "سماعات", "يد تحكم", "يدة", "جيمنج", "قيمنق", "ألعاب"
-    ]
-    if any(k in full_context for k in gaming_indicators):
-        return "كوريا 🇰🇷"
-
-    # Default to Canada 🇨🇦 for all other general deals (standard 70%+ coins)
+    # Default to Canada 🇨🇦 for all coins / general tech deals
     return "كندا 🇨🇦"
 
 def extract_clean_title(text: str) -> Optional[str]:

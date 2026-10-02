@@ -43,7 +43,8 @@ CHANNELS = [
     "BNDDEALS",
     "megaphonna",
     "aniscoupons",
-    "Coupon4Dz"
+    "Coupon4Dz",
+    "CouponsGlobal"
 ]
 
 async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bool = False) -> int:

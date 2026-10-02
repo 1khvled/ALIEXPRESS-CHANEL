@@ -225,3 +225,54 @@ def test_france_tajmi3at_regrouper():
     assert "219.00€" in bulletin
     assert "@francedealsdz" in bulletin
 
+
+@pytest.mark.asyncio
+async def test_audio_vs_watch_and_no_corny_hooks():
+    from app.ai.generator import caption_generator
+    # Haylou S30 is an over-ear ANC headset - must NEVER be classified as watch
+    caption = await caption_generator.generate(
+        title="Haylou S30 ANC Wireless Bluetooth Headphone Over-Ear Headset 43dB",
+        usd_price=24.50,
+        affiliate_url="https://s.click.aliexpress.com/e/_testHaylou",
+        deal_type="coin"
+    )
+    assert "ساعة" not in caption
+    assert "سوار" not in caption
+    assert "صيدة" not in caption
+    # Coin deals are always Canada
+    assert "كــــــندا 🇨🇦" in caption
+
+
+@pytest.mark.asyncio
+async def test_bundle_country_rules():
+    from app.ai.generator import caption_generator
+    # Bundle default is Canada
+    caption_ca = await caption_generator.generate(
+        title="Baseus 65W GaN Charger 3-pack bundle",
+        usd_price=12.50,
+        affiliate_url="https://s.click.aliexpress.com/e/_bundle1",
+        deal_type="bundle"
+    )
+    assert "كــــــندا 🇨🇦" in caption_ca
+    assert "صيدة" not in caption_ca
+
+    # Bundle with Algeria specified is Algeria
+    caption_dz = await caption_generator.generate(
+        title="Baseus 65W GaN Charger 3-pack bundle",
+        usd_price=12.50,
+        affiliate_url="https://s.click.aliexpress.com/e/_bundle2",
+        deal_type="bundle",
+        raw_text="عروض الحزم باندل ديرو بلاد الجزائر 🇩🇿"
+    )
+    assert "بلد الحساب <b>الجزائر 🇩🇿</b>" in caption_dz
+
+
+def test_couponsglobal_monitored_channel():
+    from app.aliexpress.parser import is_allowed_category
+    from scripts.post_recent_deals import CHANNELS
+    assert "CouponsGlobal" in CHANNELS
+    # Allowed category check accepts couponsglobal
+    allowed, _ = is_allowed_category("Random Deal", "Some text", channel_username="CouponsGlobal")
+    assert allowed is True
+
+
