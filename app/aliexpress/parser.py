@@ -460,12 +460,32 @@ def extract_clean_title(text: str) -> Optional[str]:
     return None
 
 
+def is_france_deal(text: str, url: str = "", country_info: Optional[str] = None) -> bool:
+    """
+    Detects if a deal or coupon is specifically intended for France/Europe and NOT Algeria.
+    Prevents French offers from ever leaking into Algerian channel @DzAliexpress0.
+    """
+    if country_info and "فرنسا" in str(country_info):
+        return True
+    combined = f"{text or ''} {url or ''}".lower()
+    france_keywords = [
+        "فرنسا", "🇫🇷", "france", "shiptocountry=fr", "country=fr",
+        "توصيل لفرنسا", "توصيل فرنسا", "livraison france", "vers la france",
+        "pour la france", "france seulement", "خاص بفرنسا", "فرنسا فقط",
+        "فقط لفرنسا", "كودات فرنسا", "كوبونات فرنسا", "codes promo france"
+    ]
+    if any(k in combined for k in france_keywords):
+        return True
+    if re.search(r'\bfr\d{2,3}\b', combined):
+        return True
+    return False
+
 def detect_deal_type(raw_text: str, url: str = "") -> str:
     """
-    Intelligently determines whether a deal is a 'bundle' deal or a 'coin' deal.
-    90%+ of channel offers are coin deals.
-    Bundle deals are identified by keywords like 'bundle', 'حزمة', 'حزم', '3 بـ',
-    '3 منتجات', '3 حبات', 'choice bundle', 'BundleDeals2', or bundle URL patterns.
+    Intelligently determines whether a deal is a 'bundle', 'coin', or standard 'item' deal.
+    - Bundle deals: Choice Bundle / 3 items / sourceType=562.
+    - Coin deals: explicitly mentions coins/points AND is a small gadget/peripheral.
+    - Standard item deals: phones, tablets, or coupon-only deals (canonical item page).
     """
     text_lower = (raw_text or "").lower()
     url_lower = (url or "").lower()
@@ -483,7 +503,6 @@ def detect_deal_type(raw_text: str, url: str = "") -> str:
     if any(k in text_lower for k in bundle_keywords) or any(k in url_lower for k in bundle_keywords):
         return "bundle"
 
-    # Regex patterns for subtle variations like "3 ب 4$" or "3بـ"
     if re.search(r'\b3\s*ب(?:ـ|\s|[0-9]|$)', text_lower):
         return "bundle"
     if re.search(r'bundle\s*deal', text_lower):
@@ -493,4 +512,15 @@ def detect_deal_type(raw_text: str, url: str = "") -> str:
     if re.search(r'300000512|sourcetype=(?:562|620)|bundledeals', url_lower):
         return "bundle"
 
+    # Coin deals: only if text explicitly mentions coins / points discount
+    coin_keywords = [
+        "عملات", "نقاط", "coins", "تخفيض العملات", "رابط العملات", "خصم العملات", "سعر العملات"
+    ]
+    if any(k in text_lower for k in coin_keywords):
+        # Do not use coin link for smartphones or tablets (> $80) as they don't support coin index finder
+        if any(w in text_lower for w in ["phone", "redmi", "poco", "xiaomi", "realme", "oneplus", "oppo", "هاتف", "تابلت", "ipad", "pad"]):
+            return "item"
+        return "coin"
+
+    # Default to standard canonical item URL for clean coupons and seller discounts
     return "coin"

@@ -275,15 +275,15 @@ def is_recent_cross_channel_duplicate(
     product_id: Optional[str],
     current_channel: str = "",
     current_price: Optional[float] = None,
-    title: str = ""
+    title: str = "",
+    cooldown_hours: Optional[float] = None
 ) -> Tuple[bool, str, bool]:
     """
     Validates cross-channel duplicates with Price-Drop Exception (Cross-Channel Arbitrage):
     Returns: (is_duplicate: bool, reason: str, is_price_drop: bool)
-    If another channel or persistent state posted this exact AliExpress product today (within 24h):
-      - If current_price is provided and is cheaper by >= 5% or >= $1.00 compared to the stored previous price:
-        AND the previous post is at least 1 hour old (age >= 3600):
-        bypasses the 24h duplicate cooldown! Returns (False, "Price-Drop Exception: ...", True)
+    If another channel or persistent state posted this exact AliExpress product recently:
+      - If current_price is provided and is cheaper by >= 5% or >= $1.00 compared to previous price:
+        bypasses the duplicate cooldown! Returns (False, "Price-Drop Exception: ...", True)
       - Otherwise, skips duplicate (True, "Product ID ... was already posted ...", False)
     Also checks live channel scraped PIDs and title similarity.
     """
@@ -292,7 +292,9 @@ def is_recent_cross_channel_duplicate(
     state = load_persistent_state()
     now = time.time()
     from app.config.settings import settings
-    cooldown_seconds = getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 24) * 3600
+    default_cooldown = getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 24)
+    active_cooldown_hours = cooldown_hours if cooldown_hours is not None else default_cooldown
+    cooldown_seconds = active_cooldown_hours * 3600
 
     p_str = str(product_id).strip() if product_id else ""
     if p_str and (p_str.startswith("COUPONS_") or p_str.startswith("EVENT_")):

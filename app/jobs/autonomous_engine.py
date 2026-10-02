@@ -140,6 +140,14 @@ class AutonomousEngine:
                         self.seen_message_urls.add(msg_url)
                     continue
 
+                # 3.5. Strictly reject France deals from entering Algerian channel @DzAliexpress0
+                from app.aliexpress.parser import is_france_deal
+                if is_france_deal(raw_text, url=f"{extracted.original_url} {extracted.canonical_url}", country_info=extracted.country_info):
+                    logger.info(f"[@{channel_username}] France deal rejected from Algerian channel: {extracted.product_id}")
+                    if msg_url:
+                        self.seen_message_urls.add(msg_url)
+                    continue
+
                 # 4. Strict category filter (Gaming, Watches, Phones, Tablets only; Coupon bulletin exempt)
                 if not extracted.is_coupon_list:
                     allowed, reject_reason = is_allowed_category(
@@ -195,7 +203,7 @@ class AutonomousEngine:
                     deal_type=deal_type
                 )
 
-                # 9. Generate caption with promo header + @Alilo07BOT CTA
+                # 9. Generate caption with authentic format
                 promo_tag = promo_tracker.get_promo_header()
                 caption = await caption_generator.generate(
                     title=extracted.title or "AliExpress Deal",
@@ -203,10 +211,12 @@ class AutonomousEngine:
                     eur_price=extracted.current_price_eur,
                     affiliate_url=aff_link,
                     coupon_code=extracted.coupon_code,
+                    seller_coupon=extracted.seller_coupon,
                     has_points_discount=extracted.has_points_discount,
                     country_info=extracted.country_info,
                     coupon_list=extracted.coupon_list if extracted.is_coupon_list else None,
-                    promo_tag=promo_tag
+                    promo_tag=promo_tag,
+                    deal_type=deal_type
                 )
 
                 # 10. Prepare Image with DealScout branding

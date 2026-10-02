@@ -39,6 +39,8 @@ class DirectAffiliateProvider(AffiliateProvider):
         if pid:
             if deal_type == "bundle":
                 return f"https://aliexpress.com/item/{pid}.html?sourceType=562&aff_fcid={self.tracking_id}"
+            elif deal_type == "item":
+                return f"https://aliexpress.com/item/{pid}.html?aff_fcid={self.tracking_id}"
             else:
                 return f"https://m.aliexpress.com/p/coin-index/index.html?productIds={pid}&aff_fcid={self.tracking_id}"
 
@@ -98,10 +100,12 @@ class PortalsApiAffiliateProvider(AffiliateProvider):
                 if m_pid:
                     pid = m_pid.group(1)
 
-        # 90%+ of channel deals are coin deals! Bundle deals in rare cases.
+        # Target URL determination based on deal_type
         if pid:
             if deal_type == "bundle":
                 target_url = f"https://www.aliexpress.com/item/{pid}.html?sourceType=562"
+            elif deal_type == "item":
+                target_url = f"https://www.aliexpress.com/item/{pid}.html"
             else:
                 target_url = f"https://m.aliexpress.com/p/coin-index/index.html?productIds={pid}"
         else:

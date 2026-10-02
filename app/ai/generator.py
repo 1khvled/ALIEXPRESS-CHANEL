@@ -212,64 +212,56 @@ class DealCaptionGenerator:
                 promo_tag=None,
                 is_price_drop=is_price_drop
             )
-        lines.append(hook)
+        lines.append(f"<blockquote>{hook}</blockquote>")
 
-        # 2. Country recommendation (exact Algerian Telegram style)
-        if deal_type == "bundle":
-            if country_info and any(k in str(country_info).lower() for k in ["كندا", "canada", "ca"]):
-                lines.append("📍 خلي البلـــد <b>كــــــندا 🇨🇦</b>")
-            elif country_info and any(k in str(country_info).lower() for k in ["كوريا", "korea", "kr"]):
-                lines.append("📍 خلي البلـــد <b>كــــــوريا 🇰🇷</b>")
-            else:
-                lines.append("📍 خلي البلـــد <b>الجزائر 🇩🇿</b>")
-        elif country_info:
+        # 2. Country recommendation (exact Algerian Telegram style in blockquote)
+        if country_info:
             c_str = str(country_info).lower()
             if "كوريا" in country_info or "korea" in c_str or "kr" in c_str:
-                lines.append("📍 خلي البلـــد <b>كــــــوريا 🇰🇷</b>")
+                lines.append("<blockquote>📍 خلي البلـــد <b>كــــــوريا 🇰🇷</b></blockquote>")
             elif "كندا" in country_info or "canada" in c_str or "ca" in c_str:
-                lines.append("📍 خلي البلـــد <b>كــــــندا 🇨🇦</b>")
+                lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
             elif "الجزائر" in country_info or "algeria" in c_str or "dz" in c_str:
-                lines.append("📍 بلد الحساب <b>الجزائر 🇩🇿</b>")
+                lines.append("<blockquote>📍 بلد الحساب <b>الجزائر 🇩🇿</b></blockquote>")
 
         import html
         safe_title = html.escape(title)
 
         lines.append("")
-        lines.append(f"⭐️ <b>{safe_title}</b>")
+        lines.append(f"✅ <b>{safe_title}</b>")
+        lines.append("")
 
         if usd_price and usd_price > 0:
             if eur_price and eur_price > 0:
-                lines.append(f"💵 <b>السعر :</b> <b>${usd_price:.2f} ({eur_price:.2f}€)</b> 🔥")
+                lines.append(f"💰 <b>السعر :</b> <b>${usd_price:.2f} ({eur_price:.2f}€)</b> 🔥")
             else:
-                lines.append(f"💵 <b>السعر :</b> <b>${usd_price:.2f}</b> 🔥")
+                lines.append(f"💰 <b>السعر :</b> <b>${usd_price:.2f}</b> 🔥")
         else:
-            lines.append("💵 <b>السعر :</b> <b>سعر خاص ومخفض</b> 🔥")
+            lines.append("💰 <b>السعر :</b> <b>سعر خاص ومخفض</b> 🔥")
 
         if seller_coupon and str(seller_coupon).strip() not in {"0", "0$", "$0", "None", ""}:
             s_clean = str(seller_coupon).strip()
             if s_clean.isdigit():
                 s_clean = f"{s_clean}$"
-            lines.append(f"🌷 <b>احجــز قسيمــة البــائع :</b> <code>{html.escape(s_clean)}</code>")
+            lines.append(f"🌷 <b>قسيمــة البــائع :</b> <code>{html.escape(s_clean)}</code>")
 
         if coupon_code:
-            lines.append(f"🙏 <b>كـوبون الخصم :</b> ⏺ <code>{html.escape(coupon_code)}</code>")
+            lines.append(f"🎟️ <b>كـوبون الخصم :</b> <code>{html.escape(coupon_code)}</code>")
 
         if deal_type == "bundle":
-            lines.append("📦 <b>عروض الحزم (Choice Bundle - 3 منتجات فأكثر) 🛍️</b>")
+            lines.append("📦 <b>عروض الحزم (Choice Bundle - 3 قطع)</b>")
         elif has_points_discount:
             lines.append("🪙 <b>تخفيض العملات مفعّل عبر الرابط</b>")
 
         lines.append("")
         if deal_type == "bundle":
-            lines.append(f"🔗 <b>رابط الباندل (Bundle Deals) ⤵️</b>\n{affiliate_url}")
+            lines.append("🛒 <b>رابط الباندل (Bundle Deals) ⤵️</b>")
         else:
-            lines.append(f"🔗 <b>رابـــــط المنتـــج</b>\n{affiliate_url}")
+            lines.append("🛒 <b>رابط الشراء ⤵️</b>")
+        lines.append(affiliate_url)
 
         lines.append("")
-        lines.append("😊 <b>بوت مطور لشراء بأفضل سعر وتتبع الطرود :</b>")
-        lines.append("👉 t.me/Alilo07BOT")
-        lines.append("📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0")
-        lines.append("⚠️ <b>تنبيه :</b> لي يراسلك ويقلك انا ادمن القناة ابلوكيه مباشرة ( نصاب )")
+        lines.append("📢 @DzAliexpress0")
 
         return "\n".join(lines)
 

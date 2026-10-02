@@ -27,7 +27,7 @@ from app.config.settings import settings
 from app.db.session import init_db, db_context
 from app.db.models import Channel, SourceMessage, Deal, GeneratedPost, TelegramPost
 from app.aliexpress.product import product_extractor
-from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category, detect_deal_type
+from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category, detect_deal_type, is_france_deal
 from app.aliexpress.promos import promo_tracker
 from app.aliexpress.affiliate import affiliate_service
 from app.ai.generator import caption_generator
@@ -260,6 +260,12 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                         max_processed_id = max(max_processed_id, msg_id)
                         continue
 
+                    # 4.5. Strictly reject France-specific deals in Algerian channel @DzAliexpress0
+                    if is_france_deal(raw_text, url=f"{extracted.original_url} {extracted.canonical_url}", country_info=extracted.country_info):
+                        print(f"  [FRANCE DEAL REJECTED] Deal is intended for France/Europe, skipping in Algerian channel: {extracted.product_id}")
+                        record_monitored_channel_last_id(ch, msg_id)
+                        continue
+
                     # 5. Category whitelist: ONLY gaming, watches, phones, tablets (Coupons bulletin exempt)
                     if not extracted.is_coupon_list:
                         allowed, reject_reason = is_allowed_category(
@@ -273,8 +279,10 @@ async def collect_and_post_last_10_deals(force: bool = False) -> int:
                             continue
 
                     # 6. Validate by Post ID & check Cross-Channel duplicates (with Price-Drop Exception)
+                    # Use cooldown_hours=0.25 (15 min rapid duplicate guard) so repeat posts across hours/days are ALLOWED
                     is_dup, dup_reason, is_price_drop = is_recent_cross_channel_duplicate(
-                        extracted.product_id, ch, current_price=extracted.current_price, title=extracted.title or ""
+                        extracted.product_id, ch, current_price=extracted.current_price, title=extracted.title or "",
+                        cooldown_hours=0.25
                     )
                     if is_dup:
                         print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] {dup_reason}")
