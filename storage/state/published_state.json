@@ -147,7 +147,10 @@
     "1005012203827165",
     "1005009870615222",
     "1005007546468421",
-    "1005006367419820"
+    "1005006367419820",
+    "1005013046831062",
+    "1005006974721332",
+    "1005010266413614"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -301,7 +304,10 @@
     "1005012203827165": 1791050748.149688,
     "1005009870615222": 1791051351.3013499,
     "1005007546468421": 1791051357.7053592,
-    "1005006367419820": 1791056153.3979695
+    "1005006367419820": 1791056153.3979695,
+    "1005013046831062": 1791056447.2532988,
+    "1005006974721332": 1791056453.5992196,
+    "1005010266413614": 1791056463.1366906
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -458,7 +464,10 @@
     "RYZEN 7 7800X3D",
     "Redmi Note 14S  8/128GB",
     "Attack Shark X AJAZZ AK820",
-    "Baseus Stylus Pen"
+    "Baseus Stylus Pen",
+    "46pcs Ratchet Set Kit",
+    "TOPK Car Phone Holder",
+    "الهاتف الاكثر طلبا"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -618,7 +627,10 @@
     "RYZEN 7 7800X3D": 1791050748.149688,
     "Redmi Note 14S  8/128GB": 1791051351.3013499,
     "Attack Shark X AJAZZ AK820": 1791051357.7053592,
-    "Baseus Stylus Pen": 1791056153.3979695
+    "Baseus Stylus Pen": 1791056153.3979695,
+    "46pcs Ratchet Set Kit": 1791056447.2532988,
+    "TOPK Car Phone Holder": 1791056453.5992196,
+    "الهاتف الاكثر طلبا": 1791056463.1366906
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -999,27 +1011,30 @@
     "lodydeals:45447",
     "lodydeals:45448",
     "lodydeals:45449",
-    "lodydeals:45450"
+    "lodydeals:45450",
+    "lodydeals:45451",
+    "lodydeals:45452",
+    "aniscoupons:32730"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791056153.3979695,
+  "last_run_time": 1791056463.1366906,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32729,
-      "last_check_time": 1791056163.0865266
+      "last_message_id": 32730,
+      "last_check_time": 1791056465.146021
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45450,
-      "last_check_time": 1791056160.8389544
+      "last_message_id": 45452,
+      "last_check_time": 1791056455.608691
     },
     "bnddeals": {
       "last_message_id": 50810,
-      "last_check_time": 1791056162.2622852
+      "last_check_time": 1791056457.0256217
     },
     "test_channel": {
       "last_message_id": 1791047267,
@@ -1031,15 +1046,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791056161.4919958
+      "last_check_time": 1791056456.3924286
     },
     "megaphonna": {
       "last_message_id": 8233,
-      "last_check_time": 1791056162.6573782
+      "last_check_time": 1791056457.3978148
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791056163.8273866
+      "last_check_time": 1791056466.2098587
     }
   },
   "published_product_prices": {
@@ -1168,7 +1183,10 @@
     "1005012203827165": 259.7,
     "1005009870615222": 149.1,
     "1005007546468421": 29.56,
-    "1005006367419820": 5.89
+    "1005006367419820": 5.89,
+    "1005013046831062": 5.29,
+    "1005006974721332": 3.09,
+    "1005010266413614": 295.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2930,6 +2948,36 @@
       "price": 5.89,
       "timestamp": 1791056153.3979695,
       "status": "ACTIVE"
+    },
+    "lodydeals:45451": {
+      "channel_msg_id": 511,
+      "product_id": "1005013046831062",
+      "title": "46pcs Ratchet Set Kit",
+      "channel": "lodydeals",
+      "source_msg_id": 45451,
+      "price": 5.29,
+      "timestamp": 1791056447.2532988,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45452": {
+      "channel_msg_id": 512,
+      "product_id": "1005006974721332",
+      "title": "TOPK Car Phone Holder",
+      "channel": "lodydeals",
+      "source_msg_id": 45452,
+      "price": 3.09,
+      "timestamp": 1791056453.5992196,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32730": {
+      "channel_msg_id": 513,
+      "product_id": "1005010266413614",
+      "title": "الهاتف الاكثر طلبا",
+      "channel": "aniscoupons",
+      "source_msg_id": 32730,
+      "price": 295.0,
+      "timestamp": 1791056463.1366906,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2938,7 +2986,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791056153.4021204,
+    "last_deal_post_time": 1791056463.1399078,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3075,7 +3123,10 @@
     "1005012203827165": "aniscoupons",
     "1005009870615222": "lodydeals",
     "1005007546468421": "lodydeals",
-    "1005006367419820": "lodydeals"
+    "1005006367419820": "lodydeals",
+    "1005013046831062": "lodydeals",
+    "1005006974721332": "lodydeals",
+    "1005010266413614": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3208,7 +3259,10 @@
     "RYZEN 7 7800X3D": "aniscoupons",
     "Redmi Note 14S  8/128GB": "lodydeals",
     "Attack Shark X AJAZZ AK820": "lodydeals",
-    "Baseus Stylus Pen": "lodydeals"
+    "Baseus Stylus Pen": "lodydeals",
+    "46pcs Ratchet Set Kit": "lodydeals",
+    "TOPK Car Phone Holder": "lodydeals",
+    "الهاتف الاكثر طلبا": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
