@@ -202,7 +202,7 @@
     "1005008390562391": 1790943710.6779277,
     "1005007345398413": 1790943717.3545928,
     "1005012504076921": 1790966153.636154,
-    "1005008715050858": 1790943959.7454133,
+    "1005008715050858": 1791033345.3970714,
     "9998885689": 1790945689.9436276,
     "9998885726": 1790945726.205554,
     "9998885776": 1790945776.0478673,
@@ -422,7 +422,8 @@
     "Nail Scissors Set Household",
     "V600 OBD2 Diagnostic Scanner Car",
     "Wireless WiFi Repeater 300Mbps",
-    "Mini Laser Rangefinder 30M High Precision"
+    "Mini Laser Rangefinder 30M High Precision",
+    "Men’s Oxford Fabric Sling Crossbody Bag"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -568,7 +569,8 @@
     "Nail Scissors Set Household": 1791032153.257991,
     "V600 OBD2 Diagnostic Scanner Car": 1791032158.6801872,
     "Wireless WiFi Repeater 300Mbps": 1791032170.0482783,
-    "Mini Laser Rangefinder 30M High Precision": 1791032177.1222703
+    "Mini Laser Rangefinder 30M High Precision": 1791032177.1222703,
+    "Men’s Oxford Fabric Sling Crossbody Bag": 1791033345.3970714
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -920,15 +922,16 @@
     "couponsglobal:48777",
     "couponsglobal:48778",
     "couponsglobal:48779",
-    "megaphonna:8225"
+    "megaphonna:8225",
+    "aniscoupons:32722"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791032177.1222703,
+  "last_run_time": 1791033345.3970714,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32721,
-      "last_check_time": 1791033044.641853
+      "last_message_id": 32722,
+      "last_check_time": 1791033347.4094477
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -936,11 +939,11 @@
     },
     "lodydeals": {
       "last_message_id": 45445,
-      "last_check_time": 1791033039.314048
+      "last_check_time": 1791033338.3268113
     },
     "bnddeals": {
       "last_message_id": 50804,
-      "last_check_time": 1791033040.2556906
+      "last_check_time": 1791033339.237488
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -952,15 +955,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791033039.6325772
+      "last_check_time": 1791033338.6503403
     },
     "megaphonna": {
       "last_message_id": 8225,
-      "last_check_time": 1791033044.297824
+      "last_check_time": 1791033339.554637
     },
     "couponsglobal": {
       "last_message_id": 48779,
-      "last_check_time": 1791033045.2020984
+      "last_check_time": 1791033348.1689816
     }
   },
   "published_product_prices": {
@@ -1021,7 +1024,7 @@
     "1005008390562391": 11.79,
     "1005007345398413": 14.3,
     "1005012504076921": 257.4,
-    "1005008715050858": 20.47,
+    "1005008715050858": 6.4,
     "999888777111": 20.0,
     "1005012407874415": 478.44,
     "1005013152491360": 196.0,
@@ -2661,6 +2664,16 @@
       "price": 6.42,
       "timestamp": 1791032177.1222703,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32722": {
+      "channel_msg_id": 489,
+      "product_id": "1005008715050858",
+      "title": "Men’s Oxford Fabric Sling Crossbody Bag",
+      "channel": "aniscoupons",
+      "source_msg_id": 32722,
+      "price": 6.4,
+      "timestamp": 1791033345.3970714,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2669,7 +2682,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791032177.1260273,
+    "last_deal_post_time": 1791033345.4007905,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2711,7 +2724,7 @@
     "1005008390562391": "bnddeals",
     "1005007345398413": "bnddeals",
     "1005012504076921": "megaphonna",
-    "1005008715050858": "bnddeals",
+    "1005008715050858": "aniscoupons",
     "1005008233932899": "aniscoupons",
     "9998885689": "test_channel",
     "9998885726": "test_channel",
@@ -2914,7 +2927,8 @@
     "Nail Scissors Set Household": "couponsglobal",
     "V600 OBD2 Diagnostic Scanner Car": "couponsglobal",
     "Wireless WiFi Repeater 300Mbps": "couponsglobal",
-    "Mini Laser Rangefinder 30M High Precision": "couponsglobal"
+    "Mini Laser Rangefinder 30M High Precision": "couponsglobal",
+    "Men’s Oxford Fabric Sling Crossbody Bag": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
