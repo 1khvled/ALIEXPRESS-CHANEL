@@ -1,44 +1,48 @@
 {
   "published_post_keys": [
-    "francecp:415",
-    "francecp:416",
-    "couponsglobal:48779",
-    "alifrdrop:103",
     "francecp:414",
-    "couponsglobal:48780",
-    "megaphonna:8218",
-    "couponsglobal:48770",
+    "megaphonna:8217",
+    "couponsglobal:48775",
+    "francecp:419",
+    "couponsglobal:48779",
+    "couponsglobal:48772",
+    "francecp:413",
+    "francecp:420",
+    "alifrdrop:103",
     "megaphonna:8216",
-    "couponsglobal:48769",
-    "couponsglobal:48771",
     "alifrdrop:102",
+    "couponsglobal:48768",
+    "couponsglobal:48770",
     "alifrdrop:106",
     "alifrdrop:105",
-    "francecp:420",
-    "megaphonna:8217",
-    "couponsglobal:48768",
+    "couponsglobal:48773",
+    "couponsglobal:48766",
+    "francecp:417",
+    "couponsglobal:48776",
+    "couponsglobal:48774",
+    "megaphonna:8219",
+    "couponsglobal:48769",
+    "megaphonna:8231",
+    "couponsglobal:48765",
+    "couponsglobal:48780",
+    "megaphonna:8218",
+    "couponsglobal:48771",
+    "megaphonna:8230",
+    "francecp:418",
+    "alifrdrop:104",
     "couponsglobal:48767",
     "couponsglobal:48778",
-    "megaphonna:8230",
-    "alifrdrop:104",
-    "francecp:419",
-    "couponsglobal:48765",
-    "francecp:418",
-    "megaphonna:8231",
-    "francecp:413",
-    "couponsglobal:48773",
-    "couponsglobal:48772",
-    "couponsglobal:48766",
-    "francecp:417"
+    "francecp:415",
+    "francecp:416"
   ],
   "published_product_ids": [
     "1005009977303549",
-    "1005012155835323",
-    "1005011938407661",
     "1005012589045044",
     "1005012541048117",
-    "1005012540990578",
-    "1005012218291528"
+    "1005012155835323",
+    "1005012218291528",
+    "1005011938407661",
+    "1005012540990578"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -172,6 +176,30 @@
       "title": "REALME PAD3 (8/256)",
       "price_eur": 258.52,
       "channel_msg_id": 50
+    },
+    "1005008144734940": {
+      "timestamp": 1791048045.728389,
+      "title": "V600 OBD2 Diagnostic Scanner Car",
+      "price_eur": 4.81,
+      "channel_msg_id": 53
+    },
+    "1005006678053738": {
+      "timestamp": 1791048051.025708,
+      "title": "Baseus Fast Charging USB Type C Cable 5A USB C Cable Type C Data Cord for",
+      "price_eur": 3.85,
+      "channel_msg_id": 54
+    },
+    "1005006861002512": {
+      "timestamp": 1791048057.924931,
+      "title": "Wireless WiFi Repeater 300Mbps",
+      "price_eur": 3.12,
+      "channel_msg_id": 55
+    },
+    "1005012265051745": {
+      "timestamp": 1791048066.154287,
+      "title": "OnePlus Pad Go 2 8/128GB",
+      "price_eur": 226.32,
+      "channel_msg_id": 56
     }
   },
   "monitored_channels": {
@@ -192,11 +220,11 @@
       "last_check_time": 1791046109.524443
     }
   },
-  "last_run_time": 1791047783.6833892,
+  "last_run_time": 1791048068.1567874,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001"
   ],
-  "last_deal_post_time": 1791047783.68339,
+  "last_deal_post_time": 1791048068.156788,
   "daily_roundup_history": {
     "2026-10-02": {
       "timestamp": 1790976075.00982,
