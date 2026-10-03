@@ -302,5 +302,16 @@ def test_france_channel_never_accepts_arabic_deals():
     ok4, _ = is_strictly_france_compatible_deal("HONOR 600 EUROPEAN بسعر 289€ Code -45€ : FRPRD45", channel_username="FranceCP")
     assert ok4 is True
 
+    # 4. Arabic channels dropping an explicit French deal ("عروض ففرنسا") are accepted!
+    ok5, reason5 = is_strictly_france_compatible_deal("عروض ففرنسا 🇫🇷🔥 هاتف POCO X6 Pro بسعر 219€ كود FRPRD45", channel_username="megaphonna")
+    assert ok5 is True
+    assert "Explicit French drop" in reason5
+
+    # 5. Arabic channels with normal Algerian deals are rejected from France
+    ok6, reason6 = is_strictly_france_compatible_deal("عرض خيالي هاتف ريدمي نوت 13 شحن للجزائر بسعر 149$ تخفيض عملات", channel_username="megaphonna")
+    assert ok6 is False
+    assert "without explicit France markers" in reason6
+
+
 
 

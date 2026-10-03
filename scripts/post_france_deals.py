@@ -55,21 +55,14 @@ FRANCE_SOURCE_CHANNELS = [
 def is_strictly_france_compatible_deal(raw_text: str, channel_username: str = "") -> Tuple[bool, str]:
     """
     Validates that a deal is strictly genuine and compatible with France / Europe.
-    Rejects any deal originating from Algerian/Arabic channels or containing Algerian specifics.
+    - Verified French channels (@AliFRDrop, @FranceCP) are accepted.
+    - Arabic/Algerian channels are accepted ONLY if they explicitly dropped a France deal
+      (e.g. they typed 'عروض ففرنسا', 'عروض فرنسا', 'خاص بفرنسا', French promo code, etc.).
+    - Any deal containing domestic Algerian indicators (DZD, BaridiMob, 58 ولاية) is strictly rejected.
     """
-    clean_ch = channel_username.replace("@", "").lower()
-    
-    # Reject known Algerian/Arabic channels completely
-    algerian_channels = {
-        "megaphonna", "lodydeals", "zedstoreonline", "bnddeals",
-        "ecksdeal", "aniscoupons", "coupon4dz", "couponsglobal"
-    }
-    if clean_ch in algerian_channels:
-        return False, f"Channel @{channel_username} is an Algerian source, not France"
+    lower_text = (raw_text or "").lower()
 
-    lower_text = raw_text.lower()
-
-    # Reject Algerian currency / shipping / domestic mentions
+    # 1. Reject any deal mentioning domestic Algerian currency, banking, or local shipping
     algerian_indicators = [
         "الجزائر", "dzd", "دينار", "بريدي موب", "بريد الجزائر", "58 ولاية",
         "yalidine", "kazi tour", "carré", "livraison algerie", "algeria", "algerie"
@@ -77,7 +70,29 @@ def is_strictly_france_compatible_deal(raw_text: str, channel_username: str = ""
     if any(ind in lower_text for ind in algerian_indicators):
         return False, "Contains Algerian-specific text, currency or domestic shipping"
 
+    clean_ch = channel_username.replace("@", "").lower()
+
+    # 2. Verified French channels are native French sources
+    verified_french_channels = {"alifrdrop", "francecp"}
+    if clean_ch in verified_french_channels:
+        return True, "Verified French source channel"
+
+    # 3. Check for explicit French drop indicators from other channels (e.g. 'عروض ففرنسا')
+    from app.aliexpress.parser import is_france_deal
+    if is_france_deal(raw_text):
+        return True, "Explicit French drop detected ('عروض ففرنسا')"
+
+    # 4. Known Algerian/Arabic channels without explicit French marker are rejected
+    algerian_channels = {
+        "megaphonna", "lodydeals", "zedstoreonline", "bnddeals",
+        "ecksdeal", "aniscoupons", "coupon4dz", "couponsglobal"
+    }
+    if clean_ch in algerian_channels:
+        return False, f"Channel @{channel_username} is an Algerian source without explicit France markers ('عروض ففرنسا')"
+
     return True, "Valid France deal"
+
+
 
 
 def load_france_state() -> Dict:

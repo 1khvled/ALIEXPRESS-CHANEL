@@ -499,19 +499,22 @@ def is_france_deal(text: str, url: str = "", country_info: Optional[str] = None)
         return True
     combined = f"{text or ''} {url or ''}".lower()
     france_keywords = [
+        "عروض ففرنسا", "عروض فرنسا", "عرض فرنسا", "عرض ففرنسا",
+        "خاص بفرنسا", "فرنسا فقط", "فقط لفرنسا", "شحن لفرنسا", "شحن فرنسا",
+        "توصيل لفرنسا", "توصيل فرنسا", "توصيل الى فرنسا", "شحن الى فرنسا",
+        "كودات فرنسا", "كوبونات فرنسا", "كوبون فرنسا", "كود فرنسا",
         "فرنسا", "🇫🇷", "france", "shiptocountry=fr", "country=fr",
-        "توصيل لفرنسا", "توصيل فرنسا", "livraison france", "vers la france",
-        "pour la france", "france seulement", "خاص بفرنسا", "فرنسا فقط",
-        "فقط لفرنسا", "كودات فرنسا", "كوبونات فرنسا", "codes promo france",
-        "@francedealsdz", "francedealsdz", "livraison : france",
+        "livraison france", "vers la france", "pour la france", "france seulement",
+        "codes promo france", "@francedealsdz", "francedealsdz", "livraison : france",
         "livraison en france", "livré en france", "livraison gratuite en france",
         "bon plan france", "prix constaté"
     ]
     if any(k in combined for k in france_keywords):
         return True
-    if re.search(r'\bfr\d{2,3}\b', combined):
+    if re.search(r'\b(?:frprd|frld|frcd|cdfr|fr)\d{2,3}\b', combined):
         return True
     return False
+
 
 def detect_deal_type(raw_text: str, url: str = "") -> str:
     """
