@@ -109,7 +109,8 @@
     "1005006196428484",
     "1005012390398338",
     "1005012297674623",
-    "1005013152491360"
+    "1005013152491360",
+    "1005007097205322"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -215,7 +216,7 @@
     "1005008901941749": 1790973051.970508,
     "1005010178295650": 1790973057.7979915,
     "1005006861002512": 1790974856.4783835,
-    "1005012285327063": 1790976041.1098428,
+    "1005012285327063": 1791014763.6830645,
     "1005006581583862": 1791013842.0461159,
     "1005012816171978": 1790976952.8889163,
     "1005009834132291": 1790976959.5801246,
@@ -225,7 +226,8 @@
     "1005006196428484": 1791013836.445986,
     "1005012390398338": 1791014140.3360124,
     "1005012297674623": 1791014145.8727648,
-    "1005013152491360": 1791014155.5083368
+    "1005013152491360": 1791014155.5083368,
+    "1005007097205322": 1791014755.488723
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -335,7 +337,8 @@
     "Predyee Groin Hair Trimmer WH",
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling",
     "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise",
-    "Baseus-Bowie E5x"
+    "Baseus-Bowie E5x",
+    "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -436,7 +439,7 @@
     "Attack Shark X1": 1790972445.6591878,
     "KUULAA USB C Cable": 1790973051.970508,
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router": 1790974856.4783835,
-    "HAYLOU Watch Faro": 1790976041.1098428,
+    "HAYLOU Watch Faro": 1791014763.6830645,
     "HAYLOU S30": 1790976351.072879,
     "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise": 1790976654.120254,
     "VIVO Y600 Pro 8/128GB": 1790976952.8889163,
@@ -448,7 +451,8 @@
     "Predyee Groin Hair Trimmer WH": 1791013836.445986,
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1791013842.0461159,
     "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise": 1791014140.3360124,
-    "Baseus-Bowie E5x": 1791014145.8727648
+    "Baseus-Bowie E5x": 1791014145.8727648,
+    "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": 1791014755.488723
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -711,15 +715,18 @@
     "aniscoupons:32703",
     "bnddeals:50800",
     "bnddeals:50801",
-    "aniscoupons:32704"
+    "aniscoupons:32704",
+    "bnddeals:50802",
+    "aniscoupons:32705",
+    "aniscoupons:32706"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791014155.5083368,
+  "last_run_time": 1791014763.6830645,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32704,
-      "last_check_time": 1791014444.4284198
+      "last_message_id": 32706,
+      "last_check_time": 1791014765.6916988
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -727,11 +734,11 @@
     },
     "lodydeals": {
       "last_message_id": 45416,
-      "last_check_time": 1791014442.659679
+      "last_check_time": 1791014746.9162264
     },
     "bnddeals": {
-      "last_message_id": 50801,
-      "last_check_time": 1791014443.739641
+      "last_message_id": 50802,
+      "last_check_time": 1791014757.498963
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -743,11 +750,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791014443.009758
+      "last_check_time": 1791014747.2982345
     },
     "megaphonna": {
       "last_message_id": 8205,
-      "last_check_time": 1791014444.077624
+      "last_check_time": 1791014758.142962
     }
   },
   "published_product_prices": {
@@ -842,7 +849,8 @@
     "1005009390995992": 34.9,
     "1005006196428484": 19.2,
     "1005012390398338": 13.2,
-    "1005012297674623": 21.6
+    "1005012297674623": 21.6,
+    "1005007097205322": 15.1
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2004,6 +2012,26 @@
       "price": 196.0,
       "timestamp": 1791014155.5083368,
       "status": "ACTIVE"
+    },
+    "bnddeals:50802": {
+      "channel_msg_id": 447,
+      "product_id": "1005007097205322",
+      "title": "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa",
+      "channel": "bnddeals",
+      "source_msg_id": 50802,
+      "price": 15.1,
+      "timestamp": 1791014755.488723,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32706": {
+      "channel_msg_id": 448,
+      "product_id": "1005012285327063",
+      "title": "HAYLOU Watch Faro",
+      "channel": "aniscoupons",
+      "source_msg_id": 32706,
+      "price": 19.5,
+      "timestamp": 1791014763.6830645,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2012,7 +2040,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791014155.5114639,
+    "last_deal_post_time": 1791014763.6858323,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2113,7 +2141,8 @@
     "1005009390995992": "aniscoupons",
     "1005006196428484": "bnddeals",
     "1005012390398338": "bnddeals",
-    "1005012297674623": "bnddeals"
+    "1005012297674623": "bnddeals",
+    "1005007097205322": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2201,7 +2230,8 @@
     "Predyee Groin Hair Trimmer WH": "bnddeals",
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": "aniscoupons",
     "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise": "bnddeals",
-    "Baseus-Bowie E5x": "bnddeals"
+    "Baseus-Bowie E5x": "bnddeals",
+    "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
