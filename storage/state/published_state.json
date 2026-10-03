@@ -205,7 +205,7 @@
     "9998887994": 1790957994.466288,
     "9998888899": 1790958899.632337,
     "9998889674": 1790959674.8864965,
-    "1005005824280128": 1790960161.26754,
+    "1005005824280128": 1791022250.7560554,
     "999888989": 1790960989.3715808,
     "9998881037": 1790961037.0515263,
     "1005011991145678": 1790962541.57551,
@@ -444,7 +444,7 @@
     "Powerful Violent Fan 150000RPM": 1790949652.480052,
     "Essager 65W GaN USB": 1790949658.4852333,
     "POCO X6 Pro 5G 12/512GB": 1790950255.4725466,
-    "Blackview LINK 1 Kids Tablets": 1790960161.26754,
+    "Blackview LINK 1 Kids Tablets": 1791022250.7560554,
     "POCO X8 5G (6/128GB)": 1791014155.5083368,
     "HONOR 600 PRO": 1790960475.7249138,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
@@ -771,15 +771,16 @@
     "megaphonna:8212",
     "megaphonna:8213",
     "lodydeals:45420",
-    "lodydeals:45421"
+    "lodydeals:45421",
+    "aniscoupons:32714"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791021850.86469,
+  "last_run_time": 1791022250.7560554,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32713,
-      "last_check_time": 1791021942.7460985
+      "last_message_id": 32714,
+      "last_check_time": 1791022252.7672098
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -787,11 +788,11 @@
     },
     "lodydeals": {
       "last_message_id": 45421,
-      "last_check_time": 1791021940.9172037
+      "last_check_time": 1791022243.4385278
     },
     "bnddeals": {
       "last_message_id": 50803,
-      "last_check_time": 1791021942.0120952
+      "last_check_time": 1791022244.3886309
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -803,11 +804,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791021941.3154051
+      "last_check_time": 1791022243.7767115
     },
     "megaphonna": {
       "last_message_id": 8213,
-      "last_check_time": 1791021942.3425558
+      "last_check_time": 1791022244.74823
     }
   },
   "published_product_prices": {
@@ -2191,6 +2192,16 @@
       "price": 1.49,
       "timestamp": 1791021850.86469,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32714": {
+      "channel_msg_id": 459,
+      "product_id": "1005005824280128",
+      "title": "Blackview LINK 1 Kids Tablets",
+      "channel": "aniscoupons",
+      "source_msg_id": 32714,
+      "price": 96.8,
+      "timestamp": 1791022250.7560554,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2199,7 +2210,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791021850.868088,
+    "last_deal_post_time": 1791022250.7592516,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
