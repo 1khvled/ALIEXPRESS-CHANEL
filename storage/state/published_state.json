@@ -219,7 +219,7 @@
     "1005009411512584": 1790977546.6736062,
     "1005012058540420": 1790949652.480052,
     "1005009295911745": 1790949658.4852333,
-    "1005012340203471": 1790950255.4725466,
+    "1005012340203471": 1791037857.3485136,
     "9998887832": 1790957832.2997856,
     "9998887913": 1790957913.5473306,
     "9998887994": 1790957994.466288,
@@ -429,7 +429,8 @@
     "Mini Laser Rangefinder 30M High Precision",
     "Men’s Oxford Fabric Sling Crossbody Bag",
     "ONEPLUS TURBO 6X 5G",
-    "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem"
+    "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem",
+    "️ POCO X6 Pro (12/256)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -578,7 +579,8 @@
     "Mini Laser Rangefinder 30M High Precision": 1791032177.1222703,
     "Men’s Oxford Fabric Sling Crossbody Bag": 1791033345.3970714,
     "ONEPLUS TURBO 6X 5G": 1791035151.8836284,
-    "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": 1791035458.4959302
+    "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": 1791035458.4959302,
+    "️ POCO X6 Pro (12/256)": 1791037857.3485136
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -934,15 +936,17 @@
     "aniscoupons:32722",
     "megaphonna:8226",
     "megaphonna:8227",
-    "aniscoupons:32723"
+    "aniscoupons:32723",
+    "bnddeals:50805",
+    "megaphonna:8228"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791035458.4959302,
+  "last_run_time": 1791037857.3485136,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32723,
-      "last_check_time": 1791037547.6668289
+      "last_check_time": 1791037860.0243878
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -950,11 +954,11 @@
     },
     "lodydeals": {
       "last_message_id": 45445,
-      "last_check_time": 1791037545.8482873
+      "last_check_time": 1791037846.728467
     },
     "bnddeals": {
-      "last_message_id": 50804,
-      "last_check_time": 1791037546.943115
+      "last_message_id": 50805,
+      "last_check_time": 1791037851.6280518
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -966,15 +970,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791037546.2390213
+      "last_check_time": 1791037847.1200705
     },
     "megaphonna": {
-      "last_message_id": 8227,
-      "last_check_time": 1791037547.3108969
+      "last_message_id": 8228,
+      "last_check_time": 1791037859.360985
     },
     "couponsglobal": {
       "last_message_id": 48779,
-      "last_check_time": 1791037548.2664058
+      "last_check_time": 1791037860.6979556
     }
   },
   "published_product_prices": {
@@ -2717,6 +2721,16 @@
       "price": 15.6,
       "timestamp": 1791035458.4959302,
       "status": "ACTIVE"
+    },
+    "megaphonna:8228": {
+      "channel_msg_id": 493,
+      "product_id": "1005012340203471",
+      "title": "️ POCO X6 Pro (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8228,
+      "price": 242.7,
+      "timestamp": 1791037857.3485136,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2725,7 +2739,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791035458.5008078,
+    "last_deal_post_time": 1791037857.3523645,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2788,7 +2802,7 @@
     "1005009411512584": "aniscoupons",
     "1005012058540420": "lodydeals",
     "1005009295911745": "lodydeals",
-    "1005012340203471": "lodydeals",
+    "1005012340203471": "megaphonna",
     "9998887832": "test_channel",
     "9998887913": "test_channel",
     "9998887994": "test_channel",
@@ -2975,7 +2989,8 @@
     "Mini Laser Rangefinder 30M High Precision": "couponsglobal",
     "Men’s Oxford Fabric Sling Crossbody Bag": "aniscoupons",
     "ONEPLUS TURBO 6X 5G": "megaphonna",
-    "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": "aniscoupons"
+    "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": "aniscoupons",
+    "️ POCO X6 Pro (12/256)": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
