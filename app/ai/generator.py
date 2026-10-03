@@ -25,119 +25,45 @@ class DealCaptionGenerator:
         and price-drop drops.
         """
         h = int(hashlib.md5(title.encode()).hexdigest(), 16)
-        t_lower = title.lower()
 
-        # 1. Restock / Return Repost Hook (Highest urgency: "الححق عودة العرض حبات قلال")
+        # 1. Restock / Return Repost Hook
         if is_restock:
             restock_hooks = [
-                "🚨 <b>الحححححق عودة العرض.. حبات قلال فقط! 🔥🏃‍♂️</b>",
-                "⚡ <b>الحقوووو رجع توفر من جديد.. حبات قلال ويسالي! 🚨🔥</b>",
-                "🔥 <b>عرض ممتاز رجع توفر بسعر باطل.. كمية محدودة جداً سارع! ⚡</b>",
-                "🏃‍♂️💨 <b>الحق عودة العرض لافااار.. بقاو حبات قلال متتراطاش! 🔥</b>",
-                "🚨 <b>الححححق توفر من جديد.. الكمية طير في دقائق! 🔥⚡</b>"
+                "⚡ <b>العرض رجع توفر من جديد.. حبات قلال سارعوا! 🚨🔥</b>",
+                "🔥 <b>رجوع التوفر بسعر لافار ممتاز متفوتوهش 🏃‍♂️⚡</b>",
+                "🚨 <b>رجع توفر بكمية محدودة بسعر باطل متتراطاش! 🔥</b>",
+                "⚡ <b>الحق توفر من جديد قبل نفاذ الكمية 🔥🏃‍♂️</b>"
             ]
             return restock_hooks[h % len(restock_hooks)]
 
         # 2. Price-Drop Arbitrage Hook
         if is_price_drop:
             price_drop_hooks = [
-                "💥 <b>هبوط قوي في السعر.. ألحـــــق لافــــــــــــــار! 📉🔥</b>",
-                "⚡ <b>طاح السعر أكثر.. تخفيض إضافي ناااار 🔥</b>",
-                "🔥 <b>نزول إضافي في السعر لافار اليوم متتراطاش 🔥</b>"
+                "📉 <b>نزول إضافي في السعر.. لافار ممتازة استغلوها! 🔥</b>",
+                "⚡ <b>السعر زاد طاح.. تخفيض إضافي بأقوى سعر 🔥</b>",
+                "💥 <b>هبوط قوي في السعر.. سعر باطل لافار 📉🔥</b>"
             ]
             return price_drop_hooks[h % len(price_drop_hooks)]
 
-        # 2. Category Detection
-        is_audio = any(k in t_lower for k in [
-            "earphone", "earphones", "earbuds", "earbud", "headphone", "headphones", "headset",
-            "tws", "speaker", "soundbar", "soundcore", "qcy", "baseus bowie", "lenovo lp", "anc",
-            "bluetooth speaker", "haylou s", "haylou w", "haylou gt", "haylou x", "edifier",
-            "earfun", "tronsmart", "fiil", "moondrop", "iem", "kz ", "s30"
-        ]) or any(k in title for k in ["سماعة", "سماعات", "صوت", "مكبر صوت", "ايربودز", "سماعه", "كاسك"])
-
-        is_gaming = any(k in t_lower for k in [
-            "mouse", "keyboard", "controller", "gamepad", "gaming", "gamer",
-            "attack shark", "ajazz", "aula", "vgn", "game", "rgb", "joystick", "switch", "keycap", "fantech"
-        ]) or any(k in title for k in ["ماوس", "كيبورد", "جيمنج", "قيمنق", "تحكم", "يدات"])
-
-        is_storage = any(k in t_lower for k in [
-            "ssd", "nvme", "m.2", "sata", "ddr4", "ddr5", "ram", "micro sd", "sd card",
-            "pendrive", "thermal paste", "cooler", "heatsink", "fan hub"
-        ]) or any(k in title for k in ["قرص صلب", "تخزين", "هارد", "رامات", "معجون"])
-
-        is_power = any(k in t_lower for k in [
-            "gan", "charger", "fast charge", "65w", "100w", "30w", "45w", "powerbank", "power bank",
-            "usb-c", "type-c", "cable", "ugreen", "essager", "toocki", "kuulaa"
-        ]) or any(k in title for k in ["شاحن", "كابل", "باور بانك", "شحن سريع"])
-
-        is_watch = (not is_audio) and (any(k in t_lower for k in [
-            "smartwatch", "smart watch", "smart band", "miband", "mi band", "band 8", "band 9",
-            "zeblaze", "kieslect", "colmi", "amazfit", "haylou watch", "haylou solar", "haylou rs"
-        ]) or any(k in title for k in ["ساعة ذكية", "سوار ذكي", "ساعة يد ذكية"]))
-
-        is_phone = any(k in t_lower for k in [
-            "phone", "smartphone", "mobile", "redmi", "poco", "xiaomi", "realme", "oneplus",
-            "oppo", "vivo", "honor", "infinix", "tecno", "samsung galaxy", "iphone", "pixel",
-            "global version", "5g", "snapdragon", "dimensity", "pad", "tablet"
-        ]) or any(k in title for k in [
-            "هاتف", "موبايل", "جوال", "تابلت", "شاومي", "ريدمي", "بوكو", "ريلمي", "هونر", "سامسونج"
-        ])
-
-        if is_phone:
-            phone_hooks = [
-                "📱 <b>لافاااار جننننح في الهواتف الذكية بسعر ممتاز 🔥📱</b>",
-                "⚡ <b>هاتف بمواصفات قوية وسعر لافار متتراطاش 🔥📱</b>",
-                "🔥 <b>أجرررررري لافــــــــــار نسخة عالمية أصلية نااار 📱⚡</b>",
-                "🌟 <b>عودة العرض بسعر خيالي ممتاز متتراطاش 🔥📱</b>",
-                "📱 <b>عرض اليوم في الهواتف بسعر باطل هبال 🔥⚡</b>"
-            ]
-            return phone_hooks[h % len(phone_hooks)]
-
-        if is_audio:
-            audio_hooks = [
-                "🎧 <b>صوت نقي وباس قوي وسعر لافار متتراطاش 🔥🎧</b>",
-                "🔊 <b>تخفيض ممتاز على السماعات الأصلية جودة صوت هايلة 🔥⚡</b>",
-                "🎧 <b>سماعات ممتازة بعزل صوت قوي وسعر باطل 🔥🎧</b>"
-            ]
-            return audio_hooks[h % len(audio_hooks)]
-
-        if is_gaming:
-            return (
-                "🎮 <b>لافاااااار قيمنق متتفوتش عتاد بأقوى سعر 🔥🕹️</b>" if (h % 2 == 0)
-                else "🕹️ <b>عتاد قيمنق ممتاز بأقوى تخفيض متفوتوش 🔥⚡</b>"
-            )
-
-        if is_storage:
-            return (
-                "💾 <b>تخفيض ممتاز في التخزين والكمبيوتر هبال 🔥⚡</b>" if (h % 2 == 0)
-                else "⚡ <b>عتاد كمبيوتر وتخزين بأقوى سعر متتراطاش 🔥</b>"
-            )
-
-        if is_power:
-            return (
-                "🔌 <b>شواحن وكوابل سريعة بسعر باطل هبال 🔥⚡</b>" if (h % 2 == 0)
-                else "⚡ <b>تخفيض قوي على ملحقات الشحن الأصلية 🔥</b>"
-            )
-
-        if is_watch:
-            return (
-                "⌚ <b>ساعة ذكية بأناقة ومواصفات قوية وسعر خيالي لافار 🔥</b>" if (h % 2 == 0)
-                else "⌚ <b>سعر ممتاز ومواصفات ممتازة لساعة ذكية أنيقة ⚡</b>"
-            )
-
+        # 3. High-Impact Deal Candidates (Versatile, authentic Algerian deal phrasing)
+        # Keeps the fire and batel energy toned down without shouting or random category hallucinations
         candidates = [
-            "🔥 <b>لافـــــــــــــــــــــــار 🔥</b>",
-            "🔥 <b>لافاااار هباااال ناااار 🔥</b>",
-            "🔥 <b>الحححححق عودة لافاااار 🔥</b>",
-            "⚡ <b>الحححححق باااآآاطل عرض اليوم ⚡</b>",
-            "🔥 <b>عرض اليوم بأقوى تخفيض متتراطاش 🔥⚡</b>",
-            "🔥 <b>اجججججججري سعـــــر ممتــــــــــــاز 🔥</b>",
-            "🚨 <b>الحححححححححق تخفيض نااار ⚡</b>",
-            "😍 <b>نسخـة عالميــــــــة بسعر باطل هبال 🔥</b>"
+            "🔥 <b>لافار ممتازة بأقوى سعر 🔥</b>",
+            "⚡ <b>تخفيض قوي بسعر باطل متتراطاش 🔥</b>",
+            "🔥 <b>سعر ممتاز لافار نهار اليوم 🔥⚡</b>",
+            "🌟 <b>تخفيض قوي بأفضل سعر متاح 🔥</b>",
+            "⚡ <b>أقوى تخفيض نهار اليوم باطل 🔥</b>",
+            "🔥 <b>لافار حقيقية وتخفيض ممتاز 🔥⚡</b>",
+            "💥 <b>تخفيض استثنائي بسعر ممتاز متتراطاش 🔥</b>",
+            "⚡ <b>عرض اليوم بسعر باطل لافار 🔥</b>",
+            "🔥 <b>سعر خيالي لافار متتفوتش نهار اليوم 🔥⚡</b>",
+            "🌟 <b>سعر لافار ممتاز استغلوه الآن 🔥</b>",
+            "⚡ <b>مواصفات قوية وسعر لافار ممتاز متتراطاش 🔥⚡</b>"
         ]
 
         if has_points_discount:
-            candidates.append("🪙 <b>تخفيض قوي بالعملات (Coins) متتراطاش 🔥🪙</b>")
+            candidates.append("🪙 <b>تخفيض قوي بالعملات (Coins) بسعر باطل 🔥🪙</b>")
+            candidates.append("🪙 <b>لافار ممتازة بتخفيض العملات متتراطاش 🔥⚡</b>")
 
         return candidates[h % len(candidates)]
 
@@ -234,13 +160,13 @@ class DealCaptionGenerator:
         if deal_type == "bundle":
             h = int(hashlib.md5(title.encode()).hexdigest(), 16)
             if is_restock:
-                hook = "🚨 <b>الحححححق عودة عروض Bundle Deals.. حبات قلال فقط! 🔥📦</b>"
+                hook = "⚡ <b>عروض الحزم رجعت توفرت.. حبات قلال متتراطاش! 🔥📦</b>"
             else:
                 bundle_hooks = [
-                    "🔥 <b>الححححححححق عروض bundle deals متتراطاش 🔥</b>",
-                    "📦 <b>عروض الحزم (Choice Bundle) لافار هبااال ناااار 🔥⚡</b>",
-                    "⚡ <b>تخفيض ممتاز في عروض الحزم 3 قطع بأقوى سعر 🔥</b>",
-                    "🛍️ <b>لافـــــــــــــار عروض الحزم bundle deals باطل 🔥</b>"
+                    "🔥 <b>عروض الحزم Bundle Deals بسعر ممتاز متتراطاش 🔥📦</b>",
+                    "🛍️ <b>لافاار عروض الحزم 3 قطع بسعر باطل 🔥⚡</b>",
+                    "⚡ <b>تخفيض قوي في عروض الحزم 3 قطع بأقوى سعر 🔥</b>",
+                    "📦 <b>عروض الحزم (Choice Bundle) لافار ممتازة باطل 🔥⚡</b>"
                 ]
                 hook = bundle_hooks[h % len(bundle_hooks)]
         else:
