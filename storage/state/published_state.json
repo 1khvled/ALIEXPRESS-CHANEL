@@ -103,7 +103,8 @@
     "1005006581583862",
     "1005012816171978",
     "1005009834132291",
-    "1005010585654037"
+    "1005010585654037",
+    "1005006248571160"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -213,7 +214,8 @@
     "1005006581583862": 1790976351.072879,
     "1005012816171978": 1790976952.8889163,
     "1005009834132291": 1790976959.5801246,
-    "1005010585654037": 1790978149.8785934
+    "1005010585654037": 1790978149.8785934,
+    "1005006248571160": 1791012946.4110153
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -317,7 +319,8 @@
     "VIVO Y600 Pro 8/128GB",
     "EasySMX X05 Pro Wireless Gamepad Gaming Controller",
     "3 VILCORN G6 Bluetooth-Compatible",
-    "TV Box Rockchip RK3518"
+    "TV Box Rockchip RK3518",
+    "آلة حلاقة من علامة KEMEI"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -424,7 +427,8 @@
     "VIVO Y600 Pro 8/128GB": 1790976952.8889163,
     "EasySMX X05 Pro Wireless Gamepad Gaming Controller": 1790976959.5801246,
     "3 VILCORN G6 Bluetooth-Compatible": 1790977546.6736062,
-    "TV Box Rockchip RK3518": 1790978149.8785934
+    "TV Box Rockchip RK3518": 1790978149.8785934,
+    "آلة حلاقة من علامة KEMEI": 1791012946.4110153
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -678,15 +682,17 @@
     "aniscoupons:32697",
     "aniscoupons:32698",
     "lodydeals:45416",
-    "aniscoupons:32699"
+    "aniscoupons:32699",
+    "bnddeals:50798",
+    "aniscoupons:32700"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791012345.6086447,
+  "last_run_time": 1791012946.4110153,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32699,
-      "last_check_time": 1791012642.828946
+      "last_message_id": 32700,
+      "last_check_time": 1791012953.2658744
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -694,11 +700,11 @@
     },
     "lodydeals": {
       "last_message_id": 45416,
-      "last_check_time": 1791012641.2189338
+      "last_check_time": 1791012939.4707575
     },
     "bnddeals": {
-      "last_message_id": 50797,
-      "last_check_time": 1791012642.1574545
+      "last_message_id": 50798,
+      "last_check_time": 1791012948.4216423
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -710,11 +716,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791012641.5292559
+      "last_check_time": 1791012939.8310356
     },
     "megaphonna": {
       "last_message_id": 8205,
-      "last_check_time": 1791012642.4929397
+      "last_check_time": 1791012948.955684
     }
   },
   "published_product_prices": {
@@ -804,7 +810,8 @@
     "1005006581583862": 25.0,
     "1005012816171978": 273.46,
     "1005009834132291": 23.0,
-    "1005010585654037": 20.6
+    "1005010585654037": 20.6,
+    "1005006248571160": 16.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1896,6 +1903,16 @@
       "price": 281.9,
       "timestamp": 1791012345.6086447,
       "status": "ACTIVE"
+    },
+    "bnddeals:50798": {
+      "channel_msg_id": 440,
+      "product_id": "1005006248571160",
+      "title": "آلة حلاقة من علامة KEMEI",
+      "channel": "bnddeals",
+      "source_msg_id": 50798,
+      "price": 16.8,
+      "timestamp": 1791012946.4110153,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1904,7 +1921,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791012345.610996,
+    "last_deal_post_time": 1791012946.4137912,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2000,7 +2017,8 @@
     "1005006581583862": "aniscoupons",
     "1005012816171978": "lodydeals",
     "1005009834132291": "aniscoupons",
-    "1005010585654037": "aniscoupons"
+    "1005010585654037": "aniscoupons",
+    "1005006248571160": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2082,7 +2100,8 @@
     "EasySMX X05 Pro Wireless Gamepad Gaming Controller": "aniscoupons",
     "3 VILCORN G6 Bluetooth-Compatible": "aniscoupons",
     "Poco C71 3/64GB": "aniscoupons",
-    "TV Box Rockchip RK3518": "aniscoupons"
+    "TV Box Rockchip RK3518": "aniscoupons",
+    "آلة حلاقة من علامة KEMEI": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
