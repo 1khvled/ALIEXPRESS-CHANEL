@@ -1,60 +1,64 @@
 {
   "published_post_keys": [
-    "lodydeals:45443",
-    "alifrdrop:106",
-    "couponsglobal:48770",
-    "megaphonna:8219",
-    "megaphonna:8222",
-    "francecp:415",
-    "francecp:413",
-    "couponsglobal:48769",
-    "francecp:414",
-    "megaphonna:8220",
-    "megaphonna:8216",
-    "megaphonna:8230",
-    "megaphonna:8221",
-    "couponsglobal:48768",
-    "couponsglobal:48780",
-    "couponsglobal:48766",
-    "alifrdrop:103",
-    "megaphonna:8225",
-    "megaphonna:8224",
-    "couponsglobal:48774",
     "megaphonna:8218",
-    "francecp:420",
-    "megaphonna:8217",
-    "couponsglobal:48777",
-    "couponsglobal:48779",
-    "megaphonna:8231",
-    "lodydeals:45428",
-    "megaphonna:8226",
-    "couponsglobal:48767",
-    "couponsglobal:48773",
-    "couponsglobal:48775",
-    "megaphonna:8228",
-    "megaphonna:8223",
-    "alifrdrop:105",
-    "couponsglobal:48778",
-    "francecp:419",
-    "francecp:417",
-    "francecp:416",
-    "megaphonna:8227",
-    "alifrdrop:102",
-    "couponsglobal:48772",
-    "francecp:418",
     "couponsglobal:48765",
-    "alifrdrop:104",
+    "megaphonna:8226",
+    "megaphonna:8229",
+    "couponsglobal:48766",
+    "megaphonna:8224",
+    "francecp:418",
     "couponsglobal:48776",
-    "couponsglobal:48771"
+    "francecp:417",
+    "megaphonna:8217",
+    "megaphonna:8222",
+    "couponsglobal:48771",
+    "megaphonna:8225",
+    "megaphonna:8232",
+    "megaphonna:8221",
+    "alifrdrop:103",
+    "megaphonna:8231",
+    "couponsglobal:48778",
+    "couponsglobal:48780",
+    "couponsglobal:48770",
+    "lodydeals:45443",
+    "megaphonna:8220",
+    "megaphonna:8227",
+    "francecp:416",
+    "megaphonna:8230",
+    "francecp:420",
+    "francecp:419",
+    "couponsglobal:48773",
+    "couponsglobal:48774",
+    "megaphonna:8216",
+    "francecp:413",
+    "lodydeals:45429",
+    "megaphonna:8219",
+    "couponsglobal:48769",
+    "alifrdrop:106",
+    "couponsglobal:48772",
+    "alifrdrop:102",
+    "couponsglobal:48779",
+    "francecp:415",
+    "couponsglobal:48767",
+    "couponsglobal:48777",
+    "alifrdrop:104",
+    "francecp:414",
+    "megaphonna:8228",
+    "lodydeals:45428",
+    "megaphonna:8223",
+    "megaphonna:8233",
+    "couponsglobal:48768",
+    "alifrdrop:105",
+    "couponsglobal:48775"
   ],
   "published_product_ids": [
-    "1005012218291528",
-    "1005011938407661",
-    "1005012155835323",
-    "1005012589045044",
     "1005012540990578",
     "1005009977303549",
-    "1005012541048117"
+    "1005011938407661",
+    "1005012218291528",
+    "1005012155835323",
+    "1005012541048117",
+    "1005012589045044"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -284,6 +288,30 @@
       "title": "Mini Digital Pocket Scale",
       "price_eur": 3.28,
       "channel_msg_id": 68
+    },
+    "1005013146524028": {
+      "timestamp": 1791049251.110971,
+      "title": "Honor 400  Smart  (6/128)",
+      "price_eur": 149.41,
+      "channel_msg_id": 69
+    },
+    "1005010219205081": {
+      "timestamp": 1791049258.682973,
+      "title": "POCO C71 (3/64)",
+      "price_eur": 55.2,
+      "channel_msg_id": 70
+    },
+    "1005012925826589": {
+      "timestamp": 1791049265.537345,
+      "title": "REALME P3 5G (8/256)",
+      "price_eur": 173.88,
+      "channel_msg_id": 71
+    },
+    "1005010285419688": {
+      "timestamp": 1791049272.536936,
+      "title": "Square Quartz Watch",
+      "price_eur": 3.28,
+      "channel_msg_id": 72
     }
   },
   "monitored_channels": {
@@ -300,19 +328,19 @@
       "last_check_time": 1791046092.9195073
     },
     "megaphonna": {
-      "last_message_id": 8231,
-      "last_check_time": 1791046109.524443
+      "last_message_id": 8233,
+      "last_check_time": 1791049267.5395293
     },
     "lodydeals": {
       "last_message_id": 45443,
       "last_check_time": 1791048674.3921647
     }
   },
-  "last_run_time": 1791048974.7781346,
+  "last_run_time": 1791049274.5394378,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001"
   ],
-  "last_deal_post_time": 1791048974.7781355,
+  "last_deal_post_time": 1791049274.5394385,
   "daily_roundup_history": {
     "2026-10-02": {
       "timestamp": 1790976075.00982,
