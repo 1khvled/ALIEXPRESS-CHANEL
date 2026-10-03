@@ -309,7 +309,7 @@
     "1005006367419820": 1791056153.3979695,
     "1005013046831062": 1791056447.2532988,
     "1005006974721332": 1791056453.5992196,
-    "1005010266413614": 1791056463.1366906,
+    "1005010266413614": 1791061545.5863013,
     "1005009497821240": 1791056745.5798366,
     "1005011925142821": 1791057346.9236152
   },
@@ -549,7 +549,7 @@
     "POCO C71 (3/64)": 1790947574.20351,
     "XIAOMI PAD7 (12/256)": 1791023149.808202,
     "REALME 14 pro (12/256)": 1791026755.742076,
-    "HONOR X9D (12/256)": 1790948755.0367405,
+    "HONOR X9D (12/256)": 1791061545.5863013,
     "Honor 400  Smart  (6/128)": 1791042354.706192,
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": 1790949354.0364344,
     "Powerful Violent Fan 150000RPM": 1790949652.480052,
@@ -1031,15 +1031,18 @@
     "lodydeals:45454",
     "megaphonna:8234",
     "megaphonna:8235",
-    "aniscoupons:32733"
+    "aniscoupons:32733",
+    "megaphonna:8236",
+    "megaphonna:8237",
+    "aniscoupons:32734"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791061256.0753598,
+  "last_run_time": 1791061545.5863013,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32733,
-      "last_check_time": 1791061261.8941662
+      "last_message_id": 32734,
+      "last_check_time": 1791061550.3083456
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1047,11 +1050,11 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791061248.3001168
+      "last_check_time": 1791061537.8950531
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791061249.3788862
+      "last_check_time": 1791061538.8636444
     },
     "test_channel": {
       "last_message_id": 1791047267,
@@ -1063,15 +1066,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791061248.6684058
+      "last_check_time": 1791061538.2817292
     },
     "megaphonna": {
-      "last_message_id": 8235,
-      "last_check_time": 1791061258.0862267
+      "last_message_id": 8237,
+      "last_check_time": 1791061547.596309
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791061262.5512087
+      "last_check_time": 1791061550.9058852
     }
   },
   "published_product_prices": {
@@ -1203,7 +1206,7 @@
     "1005006367419820": 5.89,
     "1005013046831062": 5.29,
     "1005006974721332": 3.09,
-    "1005010266413614": 295.0,
+    "1005010266413614": 294.0,
     "1005009497821240": 4.69,
     "1005011925142821": 270.9
   },
@@ -3037,6 +3040,16 @@
       "price": 480.4,
       "timestamp": 1791061256.0753598,
       "status": "ACTIVE"
+    },
+    "megaphonna:8237": {
+      "channel_msg_id": 518,
+      "product_id": "1005010266413614",
+      "title": "HONOR X9D (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8237,
+      "price": 294.0,
+      "timestamp": 1791061545.5863013,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3045,7 +3058,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791061256.0786817,
+    "last_deal_post_time": 1791061545.5893893,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3185,7 +3198,7 @@
     "1005006367419820": "lodydeals",
     "1005013046831062": "lodydeals",
     "1005006974721332": "lodydeals",
-    "1005010266413614": "aniscoupons",
+    "1005010266413614": "megaphonna",
     "1005009497821240": "lodydeals",
     "1005011925142821": "aniscoupons"
   },
