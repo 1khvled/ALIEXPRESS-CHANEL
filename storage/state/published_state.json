@@ -194,7 +194,7 @@
     "1005006603602562": 1790941207.5310047,
     "1005010721042860": 1791042962.9882953,
     "1005009517247552": 1790941221.8823678,
-    "1005012191191893": 1790941226.7537792,
+    "1005012191191893": 1791045953.997142,
     "1005012968221708": 1790941233.5893936,
     "9998883454": 1790943454.3504107,
     "9998883497": 1790943497.723828,
@@ -502,7 +502,7 @@
     "Blackview Zeno 10 5G  8/128": 1790941207.5310047,
     "Honor Power 2  12/256": 1790941214.6756065,
     "Honor X70 5G 8/128": 1790941221.8823678,
-    "Blackview MEGA 5  8/256": 1790941226.7537792,
+    "Blackview MEGA 5  8/256": 1791045953.997142,
     "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1790941233.5893936,
     "4G LTE Wireless USB 150Mbps": 1790943633.9774187,
     "Curren 8455 Men's Quartz": 1790943640.1460688,
@@ -972,15 +972,16 @@
     "aniscoupons:32726",
     "bnddeals:50810",
     "megaphonna:8232",
-    "aniscoupons:32727"
+    "aniscoupons:32727",
+    "aniscoupons:32728"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791045040.5964694,
+  "last_run_time": 1791045953.997142,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32727,
-      "last_check_time": 1791045642.838248
+      "last_message_id": 32728,
+      "last_check_time": 1791045956.0077841
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -988,11 +989,11 @@
     },
     "lodydeals": {
       "last_message_id": 45445,
-      "last_check_time": 1791045641.111621
+      "last_check_time": 1791045945.846083
     },
     "bnddeals": {
       "last_message_id": 50810,
-      "last_check_time": 1791045642.1008892
+      "last_check_time": 1791045946.7386773
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -1004,15 +1005,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791045641.4730558
+      "last_check_time": 1791045946.155973
     },
     "megaphonna": {
       "last_message_id": 8232,
-      "last_check_time": 1791045642.4528625
+      "last_check_time": 1791045947.0956662
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791045643.3481097
+      "last_check_time": 1791045956.780547
     }
   },
   "published_product_prices": {
@@ -1062,7 +1063,7 @@
     "1005006603602562": 181.0,
     "1005010721042860": 376.5,
     "1005009517247552": 236.0,
-    "1005012191191893": 224.0,
+    "1005012191191893": 224.3,
     "1005012968221708": 22.74,
     "1005010111014453": 6.09,
     "1005009828161174": 7.62,
@@ -2849,6 +2850,16 @@
       "price": 14.0,
       "timestamp": 1791045040.5964694,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32728": {
+      "channel_msg_id": 502,
+      "product_id": "1005012191191893",
+      "title": "Blackview MEGA 5  8/256",
+      "channel": "aniscoupons",
+      "source_msg_id": 32728,
+      "price": 224.3,
+      "timestamp": 1791045953.997142,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2857,7 +2868,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791045040.6004143,
+    "last_deal_post_time": 1791045954.0003343,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2882,7 +2893,7 @@
     "1005006603602562": "zedstoreonline",
     "1005010721042860": "megaphonna",
     "1005009517247552": "zedstoreonline",
-    "1005012191191893": "zedstoreonline",
+    "1005012191191893": "aniscoupons",
     "1005012968221708": "ecksdeal",
     "9998883454": "test_channel",
     "9998883497": "test_channel",
@@ -3009,7 +3020,7 @@
     "Blackview Zeno 10 5G  8/128": "zedstoreonline",
     "Honor Power 2  12/256": "zedstoreonline",
     "Honor X70 5G 8/128": "zedstoreonline",
-    "Blackview MEGA 5  8/256": "zedstoreonline",
+    "Blackview MEGA 5  8/256": "aniscoupons",
     "سماعات اذن فخمة  Moondrop Chu 3 IEM": "ecksdeal",
     "4G LTE Wireless USB 150Mbps": "lodydeals",
     "Curren 8455 Men's Quartz": "lodydeals",
