@@ -143,7 +143,8 @@
     "1005008414973716",
     "1005010706783496",
     "1005012826813261",
-    "9998887267"
+    "9998887267",
+    "1005012203827165"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -293,7 +294,8 @@
     "1005008414973716": 1791038753.5097415,
     "1005010706783496": 1791043842.6639822,
     "1005012826813261": 1791045040.5964694,
-    "9998887267": 1791047267.2870219
+    "9998887267": 1791047267.2870219,
+    "1005012203827165": 1791050748.149688
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -446,7 +448,8 @@
     "HONOR WIN TURBO 12/256GB",
     "HONOR POWER 2 (12/256)",
     "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light",
-    "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC"
+    "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC",
+    "RYZEN 7 7800X3D"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -602,7 +605,8 @@
     "HONOR WIN TURBO 12/256GB": 1791042955.9414852,
     "HONOR POWER 2 (12/256)": 1791042962.9882953,
     "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light": 1791043842.6639822,
-    "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": 1791045040.5964694
+    "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": 1791045040.5964694,
+    "RYZEN 7 7800X3D": 1791050748.149688
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -977,15 +981,16 @@
     "aniscoupons:32727",
     "aniscoupons:32728",
     "test_channel:1791047267",
-    "megaphonna:8233"
+    "megaphonna:8233",
+    "aniscoupons:32729"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791047267.3987002,
+  "last_run_time": 1791050748.149688,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32728,
-      "last_check_time": 1791050453.9082088
+      "last_message_id": 32729,
+      "last_check_time": 1791050750.572802
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -993,11 +998,11 @@
     },
     "lodydeals": {
       "last_message_id": 45445,
-      "last_check_time": 1791050452.0797381
+      "last_check_time": 1791050742.3330917
     },
     "bnddeals": {
       "last_message_id": 50810,
-      "last_check_time": 1791050453.155046
+      "last_check_time": 1791050743.2701428
     },
     "test_channel": {
       "last_message_id": 1791047267,
@@ -1009,15 +1014,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791050452.4402685
+      "last_check_time": 1791050742.6562045
     },
     "megaphonna": {
       "last_message_id": 8233,
-      "last_check_time": 1791050453.522796
+      "last_check_time": 1791050743.6399622
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791050454.5260997
+      "last_check_time": 1791050751.3931768
     }
   },
   "published_product_prices": {
@@ -1142,7 +1147,8 @@
     "1005011734677486": 13.8,
     "1005008414973716": 15.6,
     "1005010706783496": 16.2,
-    "1005012826813261": 14.0
+    "1005012826813261": 14.0,
+    "1005012203827165": 259.7
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2864,6 +2870,16 @@
       "price": 224.3,
       "timestamp": 1791045953.997142,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32729": {
+      "channel_msg_id": 507,
+      "product_id": "1005012203827165",
+      "title": "RYZEN 7 7800X3D",
+      "channel": "aniscoupons",
+      "source_msg_id": 32729,
+      "price": 259.7,
+      "timestamp": 1791050748.149688,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2872,7 +2888,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791045954.0003343,
+    "last_deal_post_time": 1791050748.3576906,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3005,7 +3021,8 @@
     "1005008414973716": "bnddeals",
     "1005010706783496": "bnddeals",
     "1005012826813261": "aniscoupons",
-    "9998887267": "test_channel"
+    "9998887267": "test_channel",
+    "1005012203827165": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3134,7 +3151,8 @@
     "HONOR WIN TURBO 12/256GB": "megaphonna",
     "HONOR POWER 2 (12/256)": "megaphonna",
     "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light": "bnddeals",
-    "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": "aniscoupons"
+    "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": "aniscoupons",
+    "RYZEN 7 7800X3D": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
