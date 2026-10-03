@@ -200,7 +200,7 @@
     "9998886362": 1790946362.071869,
     "1005012407874415": 1790960475.7249138,
     "9998887189": 1790947189.8634577,
-    "1005012865117890": 1790948460.5860589,
+    "1005012865117890": 1791026755.742076,
     "1005010428573334": 1790948755.0367405,
     "1005013146524028": 1790948764.3756874,
     "1005009411512584": 1790977546.6736062,
@@ -238,7 +238,7 @@
     "1005010585654037": 1790978149.8785934,
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791013541.4254196,
-    "1005006196428484": 1791013836.445986,
+    "1005006196428484": 1791026745.7640984,
     "1005012390398338": 1791014140.3360124,
     "1005012297674623": 1791014145.8727648,
     "1005013152491360": 1791014155.5083368,
@@ -383,7 +383,8 @@
     "Adjustable Laptop Stand",
     "Robot UGREEN 30W GaN Charger",
     "Camping Sleeping Bag",
-    "SomnAmbulist SSD"
+    "SomnAmbulist SSD",
+    "Electric Groin Hair Trimmer"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -458,7 +459,7 @@
     "HONOR 600 PRO (12/256)": 1790947009.9546273,
     "POCO C71 (3/64)": 1790947574.20351,
     "XIAOMI PAD7 (12/256)": 1791023149.808202,
-    "REALME 14 pro (12/256)": 1790948460.5860589,
+    "REALME 14 pro (12/256)": 1791026755.742076,
     "HONOR X9D (12/256)": 1790948755.0367405,
     "Honor 400  Smart  (6/128)": 1790948764.3756874,
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": 1790949354.0364344,
@@ -512,7 +513,8 @@
     "Adjustable Laptop Stand": 1791026444.9395418,
     "Robot UGREEN 30W GaN Charger": 1791026452.368309,
     "Camping Sleeping Bag": 1791026457.7236943,
-    "SomnAmbulist SSD": 1791026466.6956959
+    "SomnAmbulist SSD": 1791026466.6956959,
+    "Electric Groin Hair Trimmer": 1791026745.7640984
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -821,27 +823,33 @@
     "lodydeals:45430",
     "lodydeals:45431",
     "lodydeals:45432",
-    "aniscoupons:32717"
+    "aniscoupons:32717",
+    "lodydeals:45433",
+    "lodydeals:45434",
+    "megaphonna:8221",
+    "megaphonna:8222",
+    "megaphonna:8223",
+    "aniscoupons:32718"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791026466.6956959,
+  "last_run_time": 1791026755.742076,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32717,
-      "last_check_time": 1791026468.7055254
+      "last_message_id": 32718,
+      "last_check_time": 1791026762.8517702
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45432,
-      "last_check_time": 1791026459.7335129
+      "last_message_id": 45434,
+      "last_check_time": 1791026749.3126314
     },
     "bnddeals": {
       "last_message_id": 50803,
-      "last_check_time": 1791026460.8551784
+      "last_check_time": 1791026750.4780276
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -853,11 +861,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791026460.2421622
+      "last_check_time": 1791026749.8780406
     },
     "megaphonna": {
-      "last_message_id": 8220,
-      "last_check_time": 1791026461.2085488
+      "last_message_id": 8223,
+      "last_check_time": 1791026760.5578368
     }
   },
   "published_product_prices": {
@@ -950,7 +958,7 @@
     "1005010585654037": 20.6,
     "1005006248571160": 16.8,
     "1005009390995992": 34.9,
-    "1005006196428484": 19.2,
+    "1005006196428484": 7.09,
     "1005012390398338": 13.2,
     "1005012297674623": 21.6,
     "1005007097205322": 15.1,
@@ -2337,6 +2345,26 @@
       "price": 10.3,
       "timestamp": 1791026466.6956959,
       "status": "ACTIVE"
+    },
+    "lodydeals:45433": {
+      "channel_msg_id": 468,
+      "product_id": "1005006196428484",
+      "title": "Electric Groin Hair Trimmer",
+      "channel": "lodydeals",
+      "source_msg_id": 45433,
+      "price": 7.09,
+      "timestamp": 1791026745.7640984,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8221": {
+      "channel_msg_id": 469,
+      "product_id": "1005012865117890",
+      "title": "REALME 14 pro (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8221,
+      "price": 234.9,
+      "timestamp": 1791026755.742076,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2345,7 +2373,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791026466.6991408,
+    "last_deal_post_time": 1791026755.7442834,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2444,7 +2472,7 @@
     "1005010585654037": "aniscoupons",
     "1005006248571160": "bnddeals",
     "1005009390995992": "aniscoupons",
-    "1005006196428484": "bnddeals",
+    "1005006196428484": "lodydeals",
     "1005012390398338": "bnddeals",
     "1005012297674623": "bnddeals",
     "1005007097205322": "bnddeals",
@@ -2561,7 +2589,8 @@
     "Square Quartz Watch": "lodydeals",
     "Adjustable Laptop Stand": "lodydeals",
     "Robot UGREEN 30W GaN Charger": "lodydeals",
-    "Camping Sleeping Bag": "lodydeals"
+    "Camping Sleeping Bag": "lodydeals",
+    "Electric Groin Hair Trimmer": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
