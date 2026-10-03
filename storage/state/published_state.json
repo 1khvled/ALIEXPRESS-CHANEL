@@ -138,7 +138,7 @@
     "9998888080": 1790888080.3099577,
     "1005012312990781": 1790888097.0085742,
     "1005009234854371": 1790972149.2892344,
-    "1005006533038973": 1790960482.9803915,
+    "1005006533038973": 1791017752.638834,
     "1005007394028808": 1790937582.4855082,
     "1005012899224314": 1790888183.366231,
     "1005012923660718": 1790888191.2162998,
@@ -374,7 +374,7 @@
     "معالج AMD Ryzen 5 7500F مستعمل، 6 نوى/12 خيط، 65 واط، 5 نانومتر، ذاكرة": 1790888097.0085742,
     "SomnAmbulist SSD  128GB": 1790888129.0606623,
     "UGREEN  1080P Webcam 8MP for PC": 1790888140.513047,
-    "EasySMX X15 Wireless PC Gamepad Hall Effect": 1790960482.9803915,
+    "EasySMX X15 Wireless PC Gamepad Hall Effect": 1791017752.638834,
     "Attack Shark X5": 1790888161.7112389,
     "Honor Choice Watch 2i": 1790888183.366231,
     "HONOR CHOICE Earbuds X7e Active": 1790888191.2162998,
@@ -742,15 +742,16 @@
     "aniscoupons:32709",
     "aniscoupons:32710",
     "lodydeals:45419",
-    "bnddeals:50803"
+    "bnddeals:50803",
+    "aniscoupons:32711"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791017145.537471,
+  "last_run_time": 1791017752.638834,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32710,
-      "last_check_time": 1791017439.1951637
+      "last_message_id": 32711,
+      "last_check_time": 1791017754.6520395
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -758,11 +759,11 @@
     },
     "lodydeals": {
       "last_message_id": 45419,
-      "last_check_time": 1791017437.7287776
+      "last_check_time": 1791017746.4054832
     },
     "bnddeals": {
       "last_message_id": 50803,
-      "last_check_time": 1791017438.584954
+      "last_check_time": 1791017747.578284
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -774,11 +775,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791017438.0058408
+      "last_check_time": 1791017746.810658
     },
     "megaphonna": {
       "last_message_id": 8205,
-      "last_check_time": 1791017438.8909268
+      "last_check_time": 1791017747.9895694
     }
   },
   "published_product_prices": {
@@ -798,7 +799,7 @@
     "1005011778621042": 124.99,
     "1005012312990781": 93.32,
     "1005009234854371": 2.0,
-    "1005006533038973": 23.9,
+    "1005006533038973": 21.8,
     "1005007394028808": 11.2,
     "1005012899224314": 27.14,
     "1005012923660718": 15.17,
@@ -2099,6 +2100,16 @@
       "price": 15.4,
       "timestamp": 1791017145.537471,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32711": {
+      "channel_msg_id": 453,
+      "product_id": "1005006533038973",
+      "title": "EasySMX X15 Wireless PC Gamepad Hall Effect",
+      "channel": "aniscoupons",
+      "source_msg_id": 32711,
+      "price": 21.8,
+      "timestamp": 1791017752.638834,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2107,7 +2118,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791017145.540939,
+    "last_deal_post_time": 1791017752.641978,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
