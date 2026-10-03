@@ -130,7 +130,8 @@
     "1005009916278058",
     "1005009719082543",
     "1005008720862916",
-    "1005006436971986"
+    "1005006436971986",
+    "1005007331264474"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -267,7 +268,8 @@
     "1005009916278058": 1791027049.3509357,
     "1005009719082543": 1791027355.6595695,
     "1005008720862916": 1791027941.9208312,
-    "1005006436971986": 1791027947.9506829
+    "1005006436971986": 1791027947.9506829,
+    "1005007331264474": 1791030941.0497417
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -401,7 +403,8 @@
     "P50 LED Flashlight",
     "Original Samsung Charger 45W",
     "FENVI FV-2.5G PCIE Network Card",
-    "Attack Shark X3 26000DPI Wireless"
+    "Attack Shark X3 26000DPI Wireless",
+    "Attack Shark L80 Tri-mode Gaming Headset Lightweight 180g 5.1 Channel"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -538,7 +541,8 @@
     "P50 LED Flashlight": 1791027355.6595695,
     "Original Samsung Charger 45W": 1791027941.9208312,
     "FENVI FV-2.5G PCIE Network Card": 1791027947.9506829,
-    "Attack Shark X3 26000DPI Wireless": 1791029447.177805
+    "Attack Shark X3 26000DPI Wireless": 1791029447.177805,
+    "Attack Shark L80 Tri-mode Gaming Headset Lightweight 180g 5.1 Channel": 1791030941.0497417
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -867,27 +871,28 @@
     "bnddeals:50804",
     "lodydeals:45442",
     "lodydeals:45443",
-    "aniscoupons:32721"
+    "aniscoupons:32721",
+    "lodydeals:45444"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791029447.177805,
+  "last_run_time": 1791030941.0497417,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32721,
-      "last_check_time": 1791030644.4494944
+      "last_check_time": 1791030944.8823128
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45443,
-      "last_check_time": 1791030642.858094
+      "last_message_id": 45444,
+      "last_check_time": 1791030943.0617862
     },
     "bnddeals": {
       "last_message_id": 50804,
-      "last_check_time": 1791030643.8142455
+      "last_check_time": 1791030944.2026625
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -899,11 +904,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791030643.1596189
+      "last_check_time": 1791030943.5508993
     },
     "megaphonna": {
       "last_message_id": 8224,
-      "last_check_time": 1791030644.1229837
+      "last_check_time": 1791030944.5143461
     }
   },
   "published_product_prices": {
@@ -1016,7 +1021,8 @@
     "1005009916278058": 4.29,
     "1005009719082543": 4.09,
     "1005008720862916": 7.89,
-    "1005006436971986": 13.27
+    "1005006436971986": 13.27,
+    "1005007331264474": 16.22
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2498,6 +2504,16 @@
       "price": 24.2,
       "timestamp": 1791029447.177805,
       "status": "ACTIVE"
+    },
+    "lodydeals:45444": {
+      "channel_msg_id": 479,
+      "product_id": "1005007331264474",
+      "title": "Attack Shark L80 Tri-mode Gaming Headset Lightweight 180g 5.1 Channel",
+      "channel": "lodydeals",
+      "source_msg_id": 45444,
+      "price": 16.22,
+      "timestamp": 1791030941.0497417,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2506,7 +2522,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791029447.1813986,
+    "last_deal_post_time": 1791030941.0533886,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2626,7 +2642,8 @@
     "1005009719082543": "lodydeals",
     "1005008720862916": "lodydeals",
     "1005006436971986": "bnddeals",
-    "1005007275142457": "lodydeals"
+    "1005007275142457": "lodydeals",
+    "1005007331264474": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2736,7 +2753,8 @@
     "P50 LED Flashlight": "lodydeals",
     "Original Samsung Charger 45W": "lodydeals",
     "FENVI FV-2.5G PCIE Network Card": "bnddeals",
-    "Attack Shark X3 26000DPI Wireless": "lodydeals"
+    "Attack Shark X3 26000DPI Wireless": "lodydeals",
+    "Attack Shark L80 Tri-mode Gaming Headset Lightweight 180g 5.1 Channel": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
