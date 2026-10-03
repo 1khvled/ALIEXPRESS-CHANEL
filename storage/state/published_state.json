@@ -125,7 +125,9 @@
     "1005008144855522",
     "1005008486721357",
     "1005012871566388",
-    "1005007027334636"
+    "1005007027334636",
+    "1005006727600702",
+    "1005009916278058"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -257,7 +259,9 @@
     "1005008144855522": 1791026444.9395418,
     "1005008486721357": 1791026452.368309,
     "1005012871566388": 1791026457.7236943,
-    "1005007027334636": 1791026466.6956959
+    "1005007027334636": 1791026466.6956959,
+    "1005006727600702": 1791027043.7332833,
+    "1005009916278058": 1791027049.3509357
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -384,7 +388,9 @@
     "Robot UGREEN 30W GaN Charger",
     "Camping Sleeping Bag",
     "SomnAmbulist SSD",
-    "Electric Groin Hair Trimmer"
+    "Electric Groin Hair Trimmer",
+    "3 Layers Shaker Protein",
+    "Shaking Cup Fitness Sports"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -514,7 +520,9 @@
     "Robot UGREEN 30W GaN Charger": 1791026452.368309,
     "Camping Sleeping Bag": 1791026457.7236943,
     "SomnAmbulist SSD": 1791026466.6956959,
-    "Electric Groin Hair Trimmer": 1791026745.7640984
+    "Electric Groin Hair Trimmer": 1791026745.7640984,
+    "3 Layers Shaker Protein": 1791027043.7332833,
+    "Shaking Cup Fitness Sports": 1791027049.3509357
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -829,27 +837,29 @@
     "megaphonna:8221",
     "megaphonna:8222",
     "megaphonna:8223",
-    "aniscoupons:32718"
+    "aniscoupons:32718",
+    "lodydeals:45435",
+    "lodydeals:45436"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791026755.742076,
+  "last_run_time": 1791027049.3509357,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32718,
-      "last_check_time": 1791026762.8517702
+      "last_check_time": 1791027053.1470678
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45434,
-      "last_check_time": 1791026749.3126314
+      "last_message_id": 45436,
+      "last_check_time": 1791027051.3609629
     },
     "bnddeals": {
       "last_message_id": 50803,
-      "last_check_time": 1791026750.4780276
+      "last_check_time": 1791027052.4832878
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -861,11 +871,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791026749.8780406
+      "last_check_time": 1791027051.8623528
     },
     "megaphonna": {
       "last_message_id": 8223,
-      "last_check_time": 1791026760.5578368
+      "last_check_time": 1791027052.801317
     }
   },
   "published_product_prices": {
@@ -973,7 +983,9 @@
     "1005010285419688": 3.69,
     "1005008144855522": 2.69,
     "1005008486721357": 11.39,
-    "1005012871566388": 6.49
+    "1005012871566388": 6.49,
+    "1005006727600702": 5.09,
+    "1005009916278058": 4.29
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2365,6 +2377,26 @@
       "price": 234.9,
       "timestamp": 1791026755.742076,
       "status": "ACTIVE"
+    },
+    "lodydeals:45435": {
+      "channel_msg_id": 470,
+      "product_id": "1005006727600702",
+      "title": "3 Layers Shaker Protein",
+      "channel": "lodydeals",
+      "source_msg_id": 45435,
+      "price": 5.09,
+      "timestamp": 1791027043.7332833,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45436": {
+      "channel_msg_id": 471,
+      "product_id": "1005009916278058",
+      "title": "Shaking Cup Fitness Sports",
+      "channel": "lodydeals",
+      "source_msg_id": 45436,
+      "price": 4.29,
+      "timestamp": 1791027049.3509357,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2373,7 +2405,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791026755.7442834,
+    "last_deal_post_time": 1791027049.3544118,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2487,7 +2519,9 @@
     "1005010285419688": "lodydeals",
     "1005008144855522": "lodydeals",
     "1005008486721357": "lodydeals",
-    "1005012871566388": "lodydeals"
+    "1005012871566388": "lodydeals",
+    "1005006727600702": "lodydeals",
+    "1005009916278058": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2590,7 +2624,9 @@
     "Adjustable Laptop Stand": "lodydeals",
     "Robot UGREEN 30W GaN Charger": "lodydeals",
     "Camping Sleeping Bag": "lodydeals",
-    "Electric Groin Hair Trimmer": "lodydeals"
+    "Electric Groin Hair Trimmer": "lodydeals",
+    "3 Layers Shaker Protein": "lodydeals",
+    "Shaking Cup Fitness Sports": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
