@@ -112,7 +112,8 @@
     "1005013152491360",
     "1005007097205322",
     "1005010470699571",
-    "1005012741634118"
+    "1005012741634118",
+    "1005010453516983"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -231,7 +232,8 @@
     "1005013152491360": 1791014155.5083368,
     "1005007097205322": 1791014755.488723,
     "1005010470699571": 1791015054.3845687,
-    "1005012741634118": 1791015347.2675145
+    "1005012741634118": 1791015347.2675145,
+    "1005010453516983": 1791015953.484505
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -344,7 +346,8 @@
     "Baseus-Bowie E5x",
     "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa",
     "HAYLOU Solar Lite 2",
-    "HAYLOU FlowLoop S33"
+    "HAYLOU FlowLoop S33",
+    "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -460,7 +463,8 @@
     "Baseus-Bowie E5x": 1791014145.8727648,
     "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": 1791014755.488723,
     "HAYLOU Solar Lite 2": 1791015054.3845687,
-    "HAYLOU FlowLoop S33": 1791015347.2675145
+    "HAYLOU FlowLoop S33": 1791015347.2675145,
+    "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": 1791015953.484505
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -731,15 +735,16 @@
     "aniscoupons:32707",
     "lodydeals:45418",
     "aniscoupons:32708",
-    "aniscoupons:32709"
+    "aniscoupons:32709",
+    "aniscoupons:32710"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791015347.2675145,
+  "last_run_time": 1791015953.484505,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32709,
-      "last_check_time": 1791015653.2337573
+      "last_message_id": 32710,
+      "last_check_time": 1791015955.4960778
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -747,11 +752,11 @@
     },
     "lodydeals": {
       "last_message_id": 45418,
-      "last_check_time": 1791015647.5374508
+      "last_check_time": 1791015947.08982
     },
     "bnddeals": {
       "last_message_id": 50802,
-      "last_check_time": 1791015648.635566
+      "last_check_time": 1791015948.3641045
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -763,11 +768,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791015647.9048908
+      "last_check_time": 1791015947.4863026
     },
     "megaphonna": {
       "last_message_id": 8205,
-      "last_check_time": 1791015649.0831811
+      "last_check_time": 1791015948.7847073
     }
   },
   "published_product_prices": {
@@ -795,7 +800,7 @@
     "1005009118633225": 14.14,
     "1005012143831265": 281.9,
     "1005007458827229": 22.75,
-    "1005010453516983": 204.6,
+    "1005010453516983": 204.7,
     "1005008852027824": 194.9,
     "1005012499451512": 260.0,
     "1005010129356058": 294.0,
@@ -2067,6 +2072,16 @@
       "price": 29.0,
       "timestamp": 1791015347.2675145,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32710": {
+      "channel_msg_id": 451,
+      "product_id": "1005010453516983",
+      "title": "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery",
+      "channel": "aniscoupons",
+      "source_msg_id": 32710,
+      "price": 204.7,
+      "timestamp": 1791015953.484505,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2075,7 +2090,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791015347.2700343,
+    "last_deal_post_time": 1791015953.4875882,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2112,7 +2127,7 @@
     "1005012973772517": "zedstoreonline",
     "1005007168829266": "aniscoupons",
     "1005008880082336": "zedstoreonline",
-    "1005010453516983": "bnddeals",
+    "1005010453516983": "aniscoupons",
     "1005012406142215": "bnddeals",
     "1005008390562391": "bnddeals",
     "1005007345398413": "bnddeals",
@@ -2270,7 +2285,8 @@
     "Baseus-Bowie E5x": "bnddeals",
     "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": "bnddeals",
     "HAYLOU Solar Lite 2": "aniscoupons",
-    "HAYLOU FlowLoop S33": "aniscoupons"
+    "HAYLOU FlowLoop S33": "aniscoupons",
+    "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
