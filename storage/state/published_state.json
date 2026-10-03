@@ -248,7 +248,7 @@
     "1005010129356058": 1791035747.3970683,
     "9998885993": 1790965993.3792443,
     "1005009774318553": 1790966460.2151659,
-    "1005012574108028": 1791027656.0225317,
+    "1005012574108028": 1791060354.760787,
     "1005008599340405": 1790967962.6418507,
     "1005007572968437": 1790969442.7810974,
     "1005009120957437": 1790970941.2570727,
@@ -563,7 +563,7 @@
     "Xiaomi Pad 7 (12/256)": 1791035747.3970683,
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1791035451.2154183,
     "CUSU SSD 512 GB Portable SSD External Drive": 1790966460.2151659,
-    "HONOR  X80 PRO MAX (8/128)": 1791027656.0225317,
+    "HONOR  X80 PRO MAX (8/128)": 1791060354.760787,
     "WALRAM Sata SSD 512GB": 1790967962.6418507,
     "Lenovo GM2 Pro TWS": 1790969442.7810974,
     "ASROCK B850M X WiFi": 1790970941.2570727,
@@ -1028,15 +1028,16 @@
     "aniscoupons:32731",
     "aniscoupons:32732",
     "bnddeals:50812",
-    "lodydeals:45454"
+    "lodydeals:45454",
+    "megaphonna:8234"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791057346.9236152,
+  "last_run_time": 1791060354.760787,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32732,
-      "last_check_time": 1791060049.745119
+      "last_check_time": 1791060357.3019772
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1044,11 +1045,11 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791060047.8310208
+      "last_check_time": 1791060347.059543
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791060048.9260461
+      "last_check_time": 1791060348.0413296
     },
     "test_channel": {
       "last_message_id": 1791047267,
@@ -1060,15 +1061,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791060048.2511094
+      "last_check_time": 1791060347.4049575
     },
     "megaphonna": {
-      "last_message_id": 8233,
-      "last_check_time": 1791060049.2792418
+      "last_message_id": 8234,
+      "last_check_time": 1791060356.7734585
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791060050.3637424
+      "last_check_time": 1791060357.8845246
     }
   },
   "published_product_prices": {
@@ -3014,6 +3015,16 @@
       "price": 270.9,
       "timestamp": 1791057346.9236152,
       "status": "ACTIVE"
+    },
+    "megaphonna:8234": {
+      "channel_msg_id": 516,
+      "product_id": "1005012574108028",
+      "title": "HONOR  X80 PRO MAX (8/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8234,
+      "price": 279.1,
+      "timestamp": 1791060354.760787,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3022,7 +3033,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791057346.9275837,
+    "last_deal_post_time": 1791060354.764965,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
