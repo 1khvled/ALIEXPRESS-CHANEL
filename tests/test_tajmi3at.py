@@ -311,3 +311,28 @@ def test_format_deal_line_rtl_stability():
     assert "1️⃣ 🌐 <a href=" in line
     assert "HTC NE79 TWS" in line
     assert "$5.09" in line
+
+def test_bulletin_link_integrity():
+    """Verifies that every item in bulletin text links directly and strictly to its own channel_msg_id."""
+    items = [
+        {"channel_msg_id": 441, "title": "Haylou S40 ANC", "price": 28.50},
+        {"channel_msg_id": 443, "title": "Haylou S30", "price": 22.10},
+        {"channel_msg_id": 472, "title": "HTC NE79 TWS", "price": 5.09},
+        {"channel_msg_id": 474, "title": "KZ EDX Lite", "price": 4.80},
+    ]
+    bulletin_text, selected_items = build_category_bulletin_text("headsets", items, "DzAliexpress0")
+
+    # Extract all href links: <a href="https://t.me/DzAliexpress0/(\d+)"><b>(.*?)</b></a>
+    import re
+    links = re.findall(r'<a href="https://t\.me/DzAliexpress0/(\d+)"><b>(.*?)</b></a>', bulletin_text)
+
+    assert len(links) == len(items), f"Expected {len(items)} links, got {len(links)}"
+    for idx, (msg_id_str, title_str) in enumerate(links):
+        expected_item = items[idx]
+        assert int(msg_id_str) == expected_item["channel_msg_id"], (
+            f"Link mismatch: link has {msg_id_str}, expected {expected_item['channel_msg_id']}"
+        )
+        assert expected_item["title"] in title_str, (
+            f"Title mismatch: {title_str} does not contain {expected_item['title']}"
+        )
+

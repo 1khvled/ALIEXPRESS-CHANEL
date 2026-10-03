@@ -183,6 +183,7 @@ class TelegramPublisher:
                     )
                     session.add(post_record)
                     deal.status = "PUBLISHED"
+                    deal.telegram_message_id = msg_id
                     await session.commit()
 
                     await record_system_log(

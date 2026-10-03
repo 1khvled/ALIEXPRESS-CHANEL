@@ -583,12 +583,17 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         )
 
                         if success:
-                            post_msg_id = (await s.execute(
-                                select(TelegramPost.telegram_message_id)
-                                .where(TelegramPost.deal_id == deal.id)
-                                .order_by(desc(TelegramPost.id))
-                                .limit(1)
-                            )).scalars().first()
+                            post_msg_id = getattr(deal, "telegram_message_id", None)
+                            if not post_msg_id:
+                                try:
+                                    post_msg_id = (await s.execute(
+                                        select(TelegramPost.telegram_message_id)
+                                        .where(TelegramPost.deal_id == deal.id)
+                                        .order_by(desc(TelegramPost.id))
+                                        .limit(1)
+                                    )).scalars().first()
+                                except Exception:
+                                    post_msg_id = None
 
                             # Auto-pin coupon bulletins
                             if extracted.is_coupon_list and post_msg_id:
