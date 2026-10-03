@@ -1,36 +1,40 @@
 {
   "published_post_keys": [
-    "francecp:419",
-    "alifrdrop:106",
-    "francecp:413",
-    "couponsglobal:48765",
-    "megaphonna:8216",
-    "alifrdrop:104",
-    "alifrdrop:105",
-    "megaphonna:8230",
-    "francecp:415",
     "couponsglobal:48779",
-    "francecp:418",
-    "couponsglobal:48780",
-    "megaphonna:8231",
-    "alifrdrop:103",
-    "francecp:414",
-    "couponsglobal:48778",
-    "francecp:417",
+    "francecp:415",
     "francecp:420",
+    "francecp:418",
+    "francecp:414",
+    "alifrdrop:105",
+    "francecp:416",
+    "megaphonna:8217",
+    "couponsglobal:48766",
+    "couponsglobal:48780",
+    "couponsglobal:48768",
+    "couponsglobal:48769",
+    "alifrdrop:104",
+    "couponsglobal:48770",
+    "francecp:417",
+    "alifrdrop:106",
+    "megaphonna:8231",
     "couponsglobal:48767",
     "alifrdrop:102",
-    "couponsglobal:48766",
-    "francecp:416"
+    "megaphonna:8216",
+    "couponsglobal:48778",
+    "alifrdrop:103",
+    "couponsglobal:48765",
+    "francecp:413",
+    "francecp:419",
+    "megaphonna:8230"
   ],
   "published_product_ids": [
-    "1005012589045044",
-    "1005012541048117",
-    "1005009977303549",
-    "1005012218291528",
     "1005012540990578",
+    "1005012218291528",
+    "1005012541048117",
     "1005012155835323",
-    "1005011938407661"
+    "1005012589045044",
+    "1005011938407661",
+    "1005009977303549"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -116,6 +120,30 @@
       "title": "Blackview MEGA 5  ( 8/256 )",
       "price_eur": 206.08,
       "channel_msg_id": 42
+    },
+    "1005009508881738": {
+      "timestamp": 1791047454.125801,
+      "title": "Toocki 65W USB C Car Fast Charge PPS PD3.0",
+      "price_eur": 3.03,
+      "channel_msg_id": 43
+    },
+    "1005005652871847": {
+      "timestamp": 1791047460.808568,
+      "title": "Lenovo XT88 TWS Wireless Earphones",
+      "price_eur": 3.49,
+      "channel_msg_id": 44
+    },
+    "1005007223679861": {
+      "timestamp": 1791047468.293482,
+      "title": "Lenovo GM2 Pro TWS Wireless Headphones",
+      "price_eur": 5.35,
+      "channel_msg_id": 45
+    },
+    "1005010129356058": {
+      "timestamp": 1791047477.177813,
+      "title": "XIAOMI PAD7 (12/256)",
+      "price_eur": 267.72,
+      "channel_msg_id": 46
     }
   },
   "monitored_channels": {
@@ -136,11 +164,11 @@
       "last_check_time": 1791046109.524443
     }
   },
-  "last_run_time": 1791046907.8007107,
+  "last_run_time": 1791047479.1804051,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001"
   ],
-  "last_deal_post_time": 1791046907.8007114,
+  "last_deal_post_time": 1791047479.1804063,
   "daily_roundup_history": {
     "2026-10-02": {
       "timestamp": 1790976075.00982,
