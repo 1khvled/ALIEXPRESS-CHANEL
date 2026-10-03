@@ -133,7 +133,10 @@
     "1005006436971986",
     "1005007331264474",
     "1005010375387628",
-    "1005007244376156"
+    "1005007244376156",
+    "1005005639737205",
+    "1005008144734940",
+    "1005006443158717"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -238,7 +241,7 @@
     "1005012554205120": 1790971850.2217886,
     "1005008901941749": 1790973051.970508,
     "1005010178295650": 1791031559.2102907,
-    "1005006861002512": 1790974856.4783835,
+    "1005006861002512": 1791032170.0482783,
     "1005012285327063": 1791014763.6830645,
     "1005006581583862": 1791013842.0461159,
     "1005012816171978": 1791031841.1598868,
@@ -273,7 +276,10 @@
     "1005006436971986": 1791027947.9506829,
     "1005007331264474": 1791030941.0497417,
     "1005010375387628": 1791031850.9681444,
-    "1005007244376156": 1791031868.917476
+    "1005007244376156": 1791031868.917476,
+    "1005005639737205": 1791032153.257991,
+    "1005008144734940": 1791032158.6801872,
+    "1005006443158717": 1791032177.1222703
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -412,7 +418,11 @@
     "CURREN 8455 Men's Fashion Quartz Watch",
     "Monster MQT52 TWS Wireless Gaming Headset Bluetooth",
     "HTC NE51 Bluetooth TWS Mini EarBuds",
-    "Upper Arm Automatic Blood Pressure Monitor"
+    "Upper Arm Automatic Blood Pressure Monitor",
+    "Nail Scissors Set Household",
+    "V600 OBD2 Diagnostic Scanner Car",
+    "Wireless WiFi Repeater 300Mbps",
+    "Mini Laser Rangefinder 30M High Precision"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -554,7 +564,11 @@
     "CURREN 8455 Men's Fashion Quartz Watch": 1791031550.2120771,
     "Monster MQT52 TWS Wireless Gaming Headset Bluetooth": 1791031559.2102907,
     "HTC NE51 Bluetooth TWS Mini EarBuds": 1791031850.9681444,
-    "Upper Arm Automatic Blood Pressure Monitor": 1791031868.917476
+    "Upper Arm Automatic Blood Pressure Monitor": 1791031868.917476,
+    "Nail Scissors Set Household": 1791032153.257991,
+    "V600 OBD2 Diagnostic Scanner Car": 1791032158.6801872,
+    "Wireless WiFi Repeater 300Mbps": 1791032170.0482783,
+    "Mini Laser Rangefinder 30M High Precision": 1791032177.1222703
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -897,15 +911,21 @@
     "couponsglobal:48768",
     "couponsglobal:48769",
     "couponsglobal:48770",
-    "couponsglobal:48771"
+    "couponsglobal:48771",
+    "couponsglobal:48772",
+    "couponsglobal:48773",
+    "couponsglobal:48774",
+    "couponsglobal:48775",
+    "couponsglobal:48776",
+    "couponsglobal:48777"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791031868.917476,
+  "last_run_time": 1791032177.1222703,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32721,
-      "last_check_time": 1791031844.9603431
+      "last_check_time": 1791032141.9016817
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -913,11 +933,11 @@
     },
     "lodydeals": {
       "last_message_id": 45445,
-      "last_check_time": 1791031843.1718714
+      "last_check_time": 1791032140.3420193
     },
     "bnddeals": {
       "last_message_id": 50804,
-      "last_check_time": 1791031844.3007338
+      "last_check_time": 1791032141.2442002
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -929,15 +949,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791031843.679817
+      "last_check_time": 1791032140.6537292
     },
     "megaphonna": {
       "last_message_id": 8224,
-      "last_check_time": 1791031844.614335
+      "last_check_time": 1791032141.5664344
     },
     "couponsglobal": {
       "last_message_id": 48779,
-      "last_check_time": 1791031868.917476
+      "last_check_time": 1791032177.1222703
     }
   },
   "published_product_prices": {
@@ -1022,7 +1042,7 @@
     "1005005652871847": 3.7,
     "1005012554205120": 21.67,
     "1005008901941749": 1.2,
-    "1005006861002512": 13.5,
+    "1005006861002512": 3.39,
     "1005012285327063": 19.5,
     "1005006581583862": 25.0,
     "1005012816171978": 273.46,
@@ -1053,7 +1073,10 @@
     "1005006436971986": 13.27,
     "1005007331264474": 16.22,
     "1005010375387628": 4.62,
-    "1005007244376156": 6.02
+    "1005007244376156": 6.02,
+    "1005005639737205": 2.69,
+    "1005008144734940": 5.23,
+    "1005006443158717": 6.42
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2595,6 +2618,46 @@
       "price": 6.02,
       "timestamp": 1791031868.917476,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48773": {
+      "channel_msg_id": 485,
+      "product_id": "1005005639737205",
+      "title": "Nail Scissors Set Household",
+      "channel": "couponsglobal",
+      "source_msg_id": 48773,
+      "price": 2.69,
+      "timestamp": 1791032153.257991,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48774": {
+      "channel_msg_id": 486,
+      "product_id": "1005008144734940",
+      "title": "V600 OBD2 Diagnostic Scanner Car",
+      "channel": "couponsglobal",
+      "source_msg_id": 48774,
+      "price": 5.23,
+      "timestamp": 1791032158.6801872,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48776": {
+      "channel_msg_id": 487,
+      "product_id": "1005006861002512",
+      "title": "Wireless WiFi Repeater 300Mbps",
+      "channel": "couponsglobal",
+      "source_msg_id": 48776,
+      "price": 3.39,
+      "timestamp": 1791032170.0482783,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48777": {
+      "channel_msg_id": 488,
+      "product_id": "1005006443158717",
+      "title": "Mini Laser Rangefinder 30M High Precision",
+      "channel": "couponsglobal",
+      "source_msg_id": 48777,
+      "price": 6.42,
+      "timestamp": 1791032177.1222703,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2603,7 +2666,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791031868.921126,
+    "last_deal_post_time": 1791032177.1260273,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2694,7 +2757,7 @@
     "1005008829227075": "lodydeals",
     "1005008901941749": "lodydeals",
     "1005012881256093": "aniscoupons",
-    "1005006861002512": "bnddeals",
+    "1005006861002512": "couponsglobal",
     "1005012285327063": "aniscoupons",
     "1005006581583862": "aniscoupons",
     "1005012816171978": "lodydeals",
@@ -2726,7 +2789,10 @@
     "1005007275142457": "lodydeals",
     "1005007331264474": "lodydeals",
     "1005010375387628": "couponsglobal",
-    "1005007244376156": "couponsglobal"
+    "1005007244376156": "couponsglobal",
+    "1005005639737205": "couponsglobal",
+    "1005008144734940": "couponsglobal",
+    "1005006443158717": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2841,7 +2907,11 @@
     "CURREN 8455 Men's Fashion Quartz Watch": "couponsglobal",
     "Monster MQT52 TWS Wireless Gaming Headset Bluetooth": "couponsglobal",
     "HTC NE51 Bluetooth TWS Mini EarBuds": "couponsglobal",
-    "Upper Arm Automatic Blood Pressure Monitor": "couponsglobal"
+    "Upper Arm Automatic Blood Pressure Monitor": "couponsglobal",
+    "Nail Scissors Set Household": "couponsglobal",
+    "V600 OBD2 Diagnostic Scanner Car": "couponsglobal",
+    "Wireless WiFi Repeater 300Mbps": "couponsglobal",
+    "Mini Laser Rangefinder 30M High Precision": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
