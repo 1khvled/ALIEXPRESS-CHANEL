@@ -145,7 +145,7 @@
     "1005009054706827": 1790968242.9714053,
     "1005007961216287": 1790937542.235978,
     "1005009627597591": 1790884233.6428,
-    "1005007275142457": 1790884287.4211984,
+    "1005007275142457": 1791029447.177805,
     "1005008829227075": 1790972445.6591878,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
@@ -400,7 +400,8 @@
     "HTC NE79 TWS Bluetooth 6.0",
     "P50 LED Flashlight",
     "Original Samsung Charger 45W",
-    "FENVI FV-2.5G PCIE Network Card"
+    "FENVI FV-2.5G PCIE Network Card",
+    "Attack Shark X3 26000DPI Wireless"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -536,7 +537,8 @@
     "HTC NE79 TWS Bluetooth 6.0": 1791027348.2517543,
     "P50 LED Flashlight": 1791027355.6595695,
     "Original Samsung Charger 45W": 1791027941.9208312,
-    "FENVI FV-2.5G PCIE Network Card": 1791027947.9506829
+    "FENVI FV-2.5G PCIE Network Card": 1791027947.9506829,
+    "Attack Shark X3 26000DPI Wireless": 1791029447.177805
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -863,27 +865,28 @@
     "aniscoupons:32720",
     "lodydeals:45441",
     "bnddeals:50804",
-    "lodydeals:45442"
+    "lodydeals:45442",
+    "lodydeals:45443"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791027947.9506829,
+  "last_run_time": 1791029447.177805,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32720,
-      "last_check_time": 1791029153.4984438
+      "last_check_time": 1791029451.0893235
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45442,
-      "last_check_time": 1791029151.892115
+      "last_message_id": 45443,
+      "last_check_time": 1791029449.189663
     },
     "bnddeals": {
       "last_message_id": 50804,
-      "last_check_time": 1791029152.8117054
+      "last_check_time": 1791029450.3664994
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -895,11 +898,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791029152.2141974
+      "last_check_time": 1791029449.767129
     },
     "megaphonna": {
       "last_message_id": 8224,
-      "last_check_time": 1791029153.1368253
+      "last_check_time": 1791029450.7037115
     }
   },
   "published_product_prices": {
@@ -912,7 +915,7 @@
     "1005008233932899": 294.9,
     "1005009627597591": 314.9,
     "1005008880082336": 22.7,
-    "1005007275142457": 29.58,
+    "1005007275142457": 24.2,
     "1005007279793099": 14.1,
     "1005008829227075": 25.06,
     "100500777666555": 20.0,
@@ -2484,6 +2487,16 @@
       "price": 13.27,
       "timestamp": 1791027947.9506829,
       "status": "ACTIVE"
+    },
+    "lodydeals:45443": {
+      "channel_msg_id": 478,
+      "product_id": "1005007275142457",
+      "title": "Attack Shark X3 26000DPI Wireless",
+      "channel": "lodydeals",
+      "source_msg_id": 45443,
+      "price": 24.2,
+      "timestamp": 1791029447.177805,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2492,7 +2505,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791027947.954241,
+    "last_deal_post_time": 1791029447.1813986,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2611,7 +2624,8 @@
     "1005009916278058": "lodydeals",
     "1005009719082543": "lodydeals",
     "1005008720862916": "lodydeals",
-    "1005006436971986": "bnddeals"
+    "1005006436971986": "bnddeals",
+    "1005007275142457": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2720,7 +2734,8 @@
     "HTC NE79 TWS Bluetooth 6.0": "lodydeals",
     "P50 LED Flashlight": "lodydeals",
     "Original Samsung Charger 45W": "lodydeals",
-    "FENVI FV-2.5G PCIE Network Card": "bnddeals"
+    "FENVI FV-2.5G PCIE Network Card": "bnddeals",
+    "Attack Shark X3 26000DPI Wireless": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
