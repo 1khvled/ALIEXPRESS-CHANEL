@@ -682,7 +682,7 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32696,
-      "last_check_time": 1790997937.7003613
+      "last_check_time": 1790998271.6976004
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -690,11 +690,11 @@
     },
     "lodydeals": {
       "last_message_id": 45415,
-      "last_check_time": 1790997936.1421824
+      "last_check_time": 1790998270.1122808
     },
     "bnddeals": {
       "last_message_id": 50797,
-      "last_check_time": 1790997937.0353782
+      "last_check_time": 1790998271.0371182
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -706,11 +706,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790997936.476224
+      "last_check_time": 1790998270.4424322
     },
     "megaphonna": {
       "last_message_id": 8205,
-      "last_check_time": 1790997937.3420284
+      "last_check_time": 1790998271.3465767
     }
   },
   "published_product_prices": {
@@ -2077,7 +2077,8 @@
     "test_rem_8edf125a": "2026-10-02",
     "test_rem_36e0413a": "2026-10-02",
     "test_rem_93b209a2": "2026-10-02",
-    "test_rem_aed653c9": "2026-10-02"
+    "test_rem_aed653c9": "2026-10-02",
+    "fajr": "2026-10-03"
   },
   "channel_announcements_history": {
     "china_holiday_shipping_delay": "2026-10-02",
