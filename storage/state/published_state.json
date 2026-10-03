@@ -131,7 +131,9 @@
     "1005009719082543",
     "1005008720862916",
     "1005006436971986",
-    "1005007331264474"
+    "1005007331264474",
+    "1005010375387628",
+    "1005007244376156"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -239,7 +241,7 @@
     "1005006861002512": 1790974856.4783835,
     "1005012285327063": 1791014763.6830645,
     "1005006581583862": 1791013842.0461159,
-    "1005012816171978": 1790976952.8889163,
+    "1005012816171978": 1791031841.1598868,
     "1005009834132291": 1790976959.5801246,
     "1005010585654037": 1790978149.8785934,
     "1005006248571160": 1791012946.4110153,
@@ -269,7 +271,9 @@
     "1005009719082543": 1791027355.6595695,
     "1005008720862916": 1791027941.9208312,
     "1005006436971986": 1791027947.9506829,
-    "1005007331264474": 1791030941.0497417
+    "1005007331264474": 1791030941.0497417,
+    "1005010375387628": 1791031850.9681444,
+    "1005007244376156": 1791031868.917476
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -406,7 +410,9 @@
     "Attack Shark X3 26000DPI Wireless",
     "Attack Shark L80 Tri-mode Gaming Headset Lightweight 180g 5.1 Channel",
     "CURREN 8455 Men's Fashion Quartz Watch",
-    "Monster MQT52 TWS Wireless Gaming Headset Bluetooth"
+    "Monster MQT52 TWS Wireless Gaming Headset Bluetooth",
+    "HTC NE51 Bluetooth TWS Mini EarBuds",
+    "Upper Arm Automatic Blood Pressure Monitor"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -510,7 +516,7 @@
     "HAYLOU Watch Faro": 1791014763.6830645,
     "HAYLOU S30": 1790976351.072879,
     "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise": 1790976654.120254,
-    "VIVO Y600 Pro 8/128GB": 1790976952.8889163,
+    "VIVO Y600 Pro 8/128GB": 1791031841.1598868,
     "EasySMX X05 Pro Wireless Gamepad Gaming Controller": 1790976959.5801246,
     "3 VILCORN G6 Bluetooth-Compatible": 1790977546.6736062,
     "TV Box Rockchip RK3518": 1790978149.8785934,
@@ -546,7 +552,9 @@
     "Attack Shark X3 26000DPI Wireless": 1791029447.177805,
     "Attack Shark L80 Tri-mode Gaming Headset Lightweight 180g 5.1 Channel": 1791030941.0497417,
     "CURREN 8455 Men's Fashion Quartz Watch": 1791031550.2120771,
-    "Monster MQT52 TWS Wireless Gaming Headset Bluetooth": 1791031559.2102907
+    "Monster MQT52 TWS Wireless Gaming Headset Bluetooth": 1791031559.2102907,
+    "HTC NE51 Bluetooth TWS Mini EarBuds": 1791031850.9681444,
+    "Upper Arm Automatic Blood Pressure Monitor": 1791031868.917476
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -882,27 +890,34 @@
     "couponsglobal:48762",
     "couponsglobal:48763",
     "couponsglobal:48764",
-    "couponsglobal:48765"
+    "couponsglobal:48765",
+    "lodydeals:45445",
+    "couponsglobal:48766",
+    "couponsglobal:48767",
+    "couponsglobal:48768",
+    "couponsglobal:48769",
+    "couponsglobal:48770",
+    "couponsglobal:48771"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791031559.2102907,
+  "last_run_time": 1791031868.917476,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32721,
-      "last_check_time": 1791031539.354899
+      "last_check_time": 1791031844.9603431
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45444,
-      "last_check_time": 1791031537.8007038
+      "last_message_id": 45445,
+      "last_check_time": 1791031843.1718714
     },
     "bnddeals": {
       "last_message_id": 50804,
-      "last_check_time": 1791031538.687011
+      "last_check_time": 1791031844.3007338
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -914,15 +929,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791031538.111022
+      "last_check_time": 1791031843.679817
     },
     "megaphonna": {
       "last_message_id": 8224,
-      "last_check_time": 1791031539.0039134
+      "last_check_time": 1791031844.614335
     },
     "couponsglobal": {
       "last_message_id": 48779,
-      "last_check_time": 1791031565.9974825
+      "last_check_time": 1791031868.917476
     }
   },
   "published_product_prices": {
@@ -1036,7 +1051,9 @@
     "1005009719082543": 4.09,
     "1005008720862916": 7.89,
     "1005006436971986": 13.27,
-    "1005007331264474": 16.22
+    "1005007331264474": 16.22,
+    "1005010375387628": 4.62,
+    "1005007244376156": 6.02
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2548,6 +2565,36 @@
       "price": 4.62,
       "timestamp": 1791031559.2102907,
       "status": "ACTIVE"
+    },
+    "lodydeals:45445": {
+      "channel_msg_id": 482,
+      "product_id": "1005012816171978",
+      "title": "VIVO Y600 Pro 8/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45445,
+      "price": 273.46,
+      "timestamp": 1791031841.1598868,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48766": {
+      "channel_msg_id": 483,
+      "product_id": "1005010375387628",
+      "title": "HTC NE51 Bluetooth TWS Mini EarBuds",
+      "channel": "couponsglobal",
+      "source_msg_id": 48766,
+      "price": 4.62,
+      "timestamp": 1791031850.9681444,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48771": {
+      "channel_msg_id": 484,
+      "product_id": "1005007244376156",
+      "title": "Upper Arm Automatic Blood Pressure Monitor",
+      "channel": "couponsglobal",
+      "source_msg_id": 48771,
+      "price": 6.02,
+      "timestamp": 1791031868.917476,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2556,7 +2603,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791031559.213957,
+    "last_deal_post_time": 1791031868.921126,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2677,7 +2724,9 @@
     "1005008720862916": "lodydeals",
     "1005006436971986": "bnddeals",
     "1005007275142457": "lodydeals",
-    "1005007331264474": "lodydeals"
+    "1005007331264474": "lodydeals",
+    "1005010375387628": "couponsglobal",
+    "1005007244376156": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2790,7 +2839,9 @@
     "Attack Shark X3 26000DPI Wireless": "lodydeals",
     "Attack Shark L80 Tri-mode Gaming Headset Lightweight 180g 5.1 Channel": "lodydeals",
     "CURREN 8455 Men's Fashion Quartz Watch": "couponsglobal",
-    "Monster MQT52 TWS Wireless Gaming Headset Bluetooth": "couponsglobal"
+    "Monster MQT52 TWS Wireless Gaming Headset Bluetooth": "couponsglobal",
+    "HTC NE51 Bluetooth TWS Mini EarBuds": "couponsglobal",
+    "Upper Arm Automatic Blood Pressure Monitor": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
