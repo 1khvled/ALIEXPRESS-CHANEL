@@ -225,7 +225,7 @@
     "9998886147": 1790946147.1871526,
     "999888777111": 1791045467.4520626,
     "9998886362": 1790946362.071869,
-    "1005012407874415": 1790960475.7249138,
+    "1005012407874415": 1791061256.0753598,
     "9998887189": 1790947189.8634577,
     "1005012865117890": 1791026755.742076,
     "1005010428573334": 1790948755.0367405,
@@ -545,7 +545,7 @@
     "OnePlus Turbo 6X Pro 8/128GB": 1790943950.8265061,
     "من منتجات الأكثر طلبا": 1790943959.7454133,
     "النسخة العالمية": 1790943965.6572914,
-    "HONOR 600 PRO (12/256)": 1790947009.9546273,
+    "HONOR 600 PRO (12/256)": 1791061256.0753598,
     "POCO C71 (3/64)": 1790947574.20351,
     "XIAOMI PAD7 (12/256)": 1791023149.808202,
     "REALME 14 pro (12/256)": 1791026755.742076,
@@ -1029,15 +1029,17 @@
     "aniscoupons:32732",
     "bnddeals:50812",
     "lodydeals:45454",
-    "megaphonna:8234"
+    "megaphonna:8234",
+    "megaphonna:8235",
+    "aniscoupons:32733"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791060354.760787,
+  "last_run_time": 1791061256.0753598,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32732,
-      "last_check_time": 1791060955.278805
+      "last_message_id": 32733,
+      "last_check_time": 1791061261.8941662
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1045,11 +1047,11 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791060953.20191
+      "last_check_time": 1791061248.3001168
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791060954.4285138
+      "last_check_time": 1791061249.3788862
     },
     "test_channel": {
       "last_message_id": 1791047267,
@@ -1061,15 +1063,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791060953.6178768
+      "last_check_time": 1791061248.6684058
     },
     "megaphonna": {
-      "last_message_id": 8234,
-      "last_check_time": 1791060954.8398848
+      "last_message_id": 8235,
+      "last_check_time": 1791061258.0862267
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791060956.0025766
+      "last_check_time": 1791061262.5512087
     }
   },
   "published_product_prices": {
@@ -1132,7 +1134,7 @@
     "1005012504076921": 257.4,
     "1005008715050858": 6.4,
     "999888777111": 20.0,
-    "1005012407874415": 478.44,
+    "1005012407874415": 480.4,
     "1005013152491360": 196.0,
     "1005012925826589": 189.0,
     "1005012922578845": 214.9,
@@ -3025,6 +3027,16 @@
       "price": 279.1,
       "timestamp": 1791060354.760787,
       "status": "ACTIVE"
+    },
+    "megaphonna:8235": {
+      "channel_msg_id": 517,
+      "product_id": "1005012407874415",
+      "title": "HONOR 600 PRO (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8235,
+      "price": 480.4,
+      "timestamp": 1791061256.0753598,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3033,7 +3045,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791060354.764965,
+    "last_deal_post_time": 1791061256.0786817,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3104,7 +3116,7 @@
     "9998889674": "test_channel",
     "1005007279793099": "aniscoupons",
     "1005005824280128": "aniscoupons",
-    "1005012407874415": "aniscoupons",
+    "1005012407874415": "megaphonna",
     "1005006533038973": "aniscoupons",
     "999888989": "test_channel",
     "9998881037": "test_channel",
@@ -3313,7 +3325,8 @@
     "TOPK Car Phone Holder": "lodydeals",
     "الهاتف الاكثر طلبا": "aniscoupons",
     "Car Battery Charger LCD Display": "lodydeals",
-    "Honor 600 lite (8/256)": "aniscoupons"
+    "Honor 600 lite (8/256)": "aniscoupons",
+    "HONOR 600 PRO (12/256)": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
