@@ -10,7 +10,6 @@
     "1005009054706827",
     "1005007961216287",
     "1005009627597591",
-    "1005008880082336",
     "1005007275142457",
     "1005008829227075",
     "9998887952",
@@ -27,7 +26,6 @@
     "1005009118633225",
     "1005012143831265",
     "1005007458827229",
-    "1005010453516983",
     "1005008852027824",
     "9998888981",
     "1005005217734986",
@@ -120,7 +118,6 @@
     "1005009054706827": 1790968242.9714053,
     "1005007961216287": 1790937542.235978,
     "1005009627597591": 1790884233.6428,
-    "1005008880082336": 1790943678.5551012,
     "1005007275142457": 1790884287.4211984,
     "1005008829227075": 1790972445.6591878,
     "9998887952": 1790887952.6119926,
@@ -138,7 +135,6 @@
     "1005009118633225": 1790888213.2900865,
     "1005012143831265": 1790960747.853039,
     "1005007458827229": 1790888886.4062796,
-    "1005010453516983": 1790943694.6895797,
     "1005008852027824": 1790888909.743846,
     "9998888981": 1790888981.6873999,
     "1005005217734986": 1790937548.9389005,
@@ -253,7 +249,6 @@
     "Xiaomi Pad 7  12/256GB",
     "ATTACK SHARK L90 Flodable Gaming Headset",
     "SomnAmbulist SSD  120GB",
-    "ATTACK SHARK L80 PRO",
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver",
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT",
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health",
@@ -281,7 +276,6 @@
     "CMF Watch 3 Pro AMOLED",
     "Redmi Note 17 5G   6/256",
     "Baseus USB Type C Charger 20W",
-    "OPPO A6 Pro 8/256GB",
     "Honor Win Turbo 12/256BG",
     "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction",
     "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry",
@@ -361,7 +355,6 @@
     "Xiaomi Pad 7  12/256GB": 1790897106.449474,
     "ATTACK SHARK L90 Flodable Gaming Headset": 1790937542.235978,
     "SomnAmbulist SSD  120GB": 1790937548.9389005,
-    "ATTACK SHARK L80 PRO": 1790943678.5551012,
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
@@ -390,7 +383,6 @@
     "CMF Watch 3 Pro AMOLED": 1790943656.257167,
     "Redmi Note 17 5G   6/256": 1790943667.90417,
     "Baseus USB Type C Charger 20W": 1790973945.5080817,
-    "OPPO A6 Pro 8/256GB": 1790943694.6895797,
     "Honor Win Turbo 12/256BG": 1790943705.796801,
     "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction": 1790943710.6779277,
     "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": 1790943717.3545928,
@@ -539,10 +531,8 @@
     "zedstoreonline:38515",
     "zedstoreonline:38516",
     "zedstoreonline:38517",
-    "zedstoreonline:38518",
     "zedstoreonline:38519",
     "zedstoreonline:38520",
-    "bnddeals:50775",
     "bnddeals:50776",
     "bnddeals:50777",
     "bnddeals:50778",
@@ -683,7 +673,8 @@
     "lodydeals:45414",
     "lodydeals:45415",
     "bnddeals:50796",
-    "bnddeals:50797"
+    "bnddeals:50797",
+    "zedstoreonline:38518"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
@@ -691,7 +682,7 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32696,
-      "last_check_time": 1790991938.687614
+      "last_check_time": 1790992241.0366018
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -699,11 +690,11 @@
     },
     "lodydeals": {
       "last_message_id": 45415,
-      "last_check_time": 1790991937.0353408
+      "last_check_time": 1790992237.6709065
     },
     "bnddeals": {
       "last_message_id": 50797,
-      "last_check_time": 1790991937.9795907
+      "last_check_time": 1790992240.4300904
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -715,11 +706,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1790991937.3626876
+      "last_check_time": 1790992239.9088075
     },
     "megaphonna": {
       "last_message_id": 8205,
-      "last_check_time": 1790991938.3426263
+      "last_check_time": 1790992240.735677
     }
   },
   "published_product_prices": {
@@ -1400,26 +1391,6 @@
       "source_msg_id": 38517,
       "price": 16.2,
       "timestamp": 1790943673.6091957,
-      "status": "ACTIVE"
-    },
-    "zedstoreonline:38518": {
-      "channel_msg_id": 336,
-      "product_id": "1005008880082336",
-      "title": "ATTACK SHARK L80 PRO",
-      "channel": "zedstoreonline",
-      "source_msg_id": 38518,
-      "price": 22.7,
-      "timestamp": 1790943678.5551012,
-      "status": "ACTIVE"
-    },
-    "bnddeals:50775": {
-      "channel_msg_id": 337,
-      "product_id": "1005010453516983",
-      "title": "OPPO A6 Pro 8/256GB",
-      "channel": "bnddeals",
-      "source_msg_id": 50775,
-      "price": 204.6,
-      "timestamp": 1790943694.6895797,
       "status": "ACTIVE"
     },
     "bnddeals:50777": {
