@@ -127,7 +127,8 @@
     "1005012871566388",
     "1005007027334636",
     "1005006727600702",
-    "1005009916278058"
+    "1005009916278058",
+    "1005009719082543"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -241,7 +242,7 @@
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791013541.4254196,
     "1005006196428484": 1791026745.7640984,
-    "1005012390398338": 1791014140.3360124,
+    "1005012390398338": 1791027348.2517543,
     "1005012297674623": 1791014145.8727648,
     "1005013152491360": 1791014155.5083368,
     "1005007097205322": 1791014755.488723,
@@ -261,7 +262,8 @@
     "1005012871566388": 1791026457.7236943,
     "1005007027334636": 1791026466.6956959,
     "1005006727600702": 1791027043.7332833,
-    "1005009916278058": 1791027049.3509357
+    "1005009916278058": 1791027049.3509357,
+    "1005009719082543": 1791027355.6595695
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -390,7 +392,9 @@
     "SomnAmbulist SSD",
     "Electric Groin Hair Trimmer",
     "3 Layers Shaker Protein",
-    "Shaking Cup Fitness Sports"
+    "Shaking Cup Fitness Sports",
+    "HTC NE79 TWS Bluetooth 6.0",
+    "P50 LED Flashlight"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -522,7 +526,9 @@
     "SomnAmbulist SSD": 1791026466.6956959,
     "Electric Groin Hair Trimmer": 1791026745.7640984,
     "3 Layers Shaker Protein": 1791027043.7332833,
-    "Shaking Cup Fitness Sports": 1791027049.3509357
+    "Shaking Cup Fitness Sports": 1791027049.3509357,
+    "HTC NE79 TWS Bluetooth 6.0": 1791027348.2517543,
+    "P50 LED Flashlight": 1791027355.6595695
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -839,27 +845,31 @@
     "megaphonna:8223",
     "aniscoupons:32718",
     "lodydeals:45435",
-    "lodydeals:45436"
+    "lodydeals:45436",
+    "lodydeals:45437",
+    "lodydeals:45438",
+    "lodydeals:45439",
+    "aniscoupons:32719"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791027049.3509357,
+  "last_run_time": 1791027355.6595695,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32718,
-      "last_check_time": 1791027053.1470678
+      "last_message_id": 32719,
+      "last_check_time": 1791027366.9163408
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45436,
-      "last_check_time": 1791027051.3609629
+      "last_message_id": 45439,
+      "last_check_time": 1791027360.864405
     },
     "bnddeals": {
       "last_message_id": 50803,
-      "last_check_time": 1791027052.4832878
+      "last_check_time": 1791027362.2019265
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -871,11 +881,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791027051.8623528
+      "last_check_time": 1791027361.510647
     },
     "megaphonna": {
       "last_message_id": 8223,
-      "last_check_time": 1791027052.801317
+      "last_check_time": 1791027362.64689
     }
   },
   "published_product_prices": {
@@ -969,7 +979,7 @@
     "1005006248571160": 16.8,
     "1005009390995992": 34.9,
     "1005006196428484": 7.09,
-    "1005012390398338": 13.2,
+    "1005012390398338": 5.09,
     "1005012297674623": 21.6,
     "1005007097205322": 15.1,
     "1005010470699571": 24.56,
@@ -985,7 +995,8 @@
     "1005008486721357": 11.39,
     "1005012871566388": 6.49,
     "1005006727600702": 5.09,
-    "1005009916278058": 4.29
+    "1005009916278058": 4.29,
+    "1005009719082543": 4.09
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2397,6 +2408,26 @@
       "price": 4.29,
       "timestamp": 1791027049.3509357,
       "status": "ACTIVE"
+    },
+    "lodydeals:45437": {
+      "channel_msg_id": 472,
+      "product_id": "1005012390398338",
+      "title": "HTC NE79 TWS Bluetooth 6.0",
+      "channel": "lodydeals",
+      "source_msg_id": 45437,
+      "price": 5.09,
+      "timestamp": 1791027348.2517543,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45438": {
+      "channel_msg_id": 473,
+      "product_id": "1005009719082543",
+      "title": "P50 LED Flashlight",
+      "channel": "lodydeals",
+      "source_msg_id": 45438,
+      "price": 4.09,
+      "timestamp": 1791027355.6595695,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2405,7 +2436,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791027049.3544118,
+    "last_deal_post_time": 1791027355.6623528,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2505,7 +2536,7 @@
     "1005006248571160": "bnddeals",
     "1005009390995992": "aniscoupons",
     "1005006196428484": "lodydeals",
-    "1005012390398338": "bnddeals",
+    "1005012390398338": "lodydeals",
     "1005012297674623": "bnddeals",
     "1005007097205322": "bnddeals",
     "1005010470699571": "aniscoupons",
@@ -2521,7 +2552,8 @@
     "1005008486721357": "lodydeals",
     "1005012871566388": "lodydeals",
     "1005006727600702": "lodydeals",
-    "1005009916278058": "lodydeals"
+    "1005009916278058": "lodydeals",
+    "1005009719082543": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2626,7 +2658,9 @@
     "Camping Sleeping Bag": "lodydeals",
     "Electric Groin Hair Trimmer": "lodydeals",
     "3 Layers Shaker Protein": "lodydeals",
-    "Shaking Cup Fitness Sports": "lodydeals"
+    "Shaking Cup Fitness Sports": "lodydeals",
+    "HTC NE79 TWS Bluetooth 6.0": "lodydeals",
+    "P50 LED Flashlight": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
