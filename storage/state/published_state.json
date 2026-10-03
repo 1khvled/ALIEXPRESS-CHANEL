@@ -110,7 +110,8 @@
     "1005012390398338",
     "1005012297674623",
     "1005013152491360",
-    "1005007097205322"
+    "1005007097205322",
+    "1005010470699571"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -227,7 +228,8 @@
     "1005012390398338": 1791014140.3360124,
     "1005012297674623": 1791014145.8727648,
     "1005013152491360": 1791014155.5083368,
-    "1005007097205322": 1791014755.488723
+    "1005007097205322": 1791014755.488723,
+    "1005010470699571": 1791015054.3845687
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -338,7 +340,8 @@
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling",
     "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise",
     "Baseus-Bowie E5x",
-    "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa"
+    "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa",
+    "HAYLOU Solar Lite 2"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -452,7 +455,8 @@
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1791013842.0461159,
     "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise": 1791014140.3360124,
     "Baseus-Bowie E5x": 1791014145.8727648,
-    "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": 1791014755.488723
+    "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": 1791014755.488723,
+    "HAYLOU Solar Lite 2": 1791015054.3845687
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -718,27 +722,29 @@
     "aniscoupons:32704",
     "bnddeals:50802",
     "aniscoupons:32705",
-    "aniscoupons:32706"
+    "aniscoupons:32706",
+    "lodydeals:45417",
+    "aniscoupons:32707"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791014763.6830645,
+  "last_run_time": 1791015054.3845687,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32706,
-      "last_check_time": 1791014765.6916988
+      "last_message_id": 32707,
+      "last_check_time": 1791015056.3954031
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45416,
-      "last_check_time": 1791014746.9162264
+      "last_message_id": 45417,
+      "last_check_time": 1791015049.2342293
     },
     "bnddeals": {
       "last_message_id": 50802,
-      "last_check_time": 1791014757.498963
+      "last_check_time": 1791015050.7253406
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -750,11 +756,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791014747.2982345
+      "last_check_time": 1791015050.0343294
     },
     "megaphonna": {
       "last_message_id": 8205,
-      "last_check_time": 1791014758.142962
+      "last_check_time": 1791015051.0853138
     }
   },
   "published_product_prices": {
@@ -850,7 +856,8 @@
     "1005006196428484": 19.2,
     "1005012390398338": 13.2,
     "1005012297674623": 21.6,
-    "1005007097205322": 15.1
+    "1005007097205322": 15.1,
+    "1005010470699571": 24.56
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2032,6 +2039,16 @@
       "price": 19.5,
       "timestamp": 1791014763.6830645,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32707": {
+      "channel_msg_id": 449,
+      "product_id": "1005010470699571",
+      "title": "HAYLOU Solar Lite 2",
+      "channel": "aniscoupons",
+      "source_msg_id": 32707,
+      "price": 24.56,
+      "timestamp": 1791015054.3845687,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2040,7 +2057,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791014763.6858323,
+    "last_deal_post_time": 1791015054.387585,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2142,7 +2159,8 @@
     "1005006196428484": "bnddeals",
     "1005012390398338": "bnddeals",
     "1005012297674623": "bnddeals",
-    "1005007097205322": "bnddeals"
+    "1005007097205322": "bnddeals",
+    "1005010470699571": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2231,7 +2249,8 @@
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": "aniscoupons",
     "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise": "bnddeals",
     "Baseus-Bowie E5x": "bnddeals",
-    "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": "bnddeals"
+    "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": "bnddeals",
+    "HAYLOU Solar Lite 2": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
