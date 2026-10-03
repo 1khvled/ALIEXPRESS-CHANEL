@@ -137,7 +137,8 @@
     "1005005639737205",
     "1005008144734940",
     "1005006443158717",
-    "1005012492244291"
+    "1005012492244291",
+    "1005008522983211"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -202,7 +203,7 @@
     "1005012406142215": 1790943705.796801,
     "1005008390562391": 1790943710.6779277,
     "1005007345398413": 1790943717.3545928,
-    "1005012504076921": 1790966153.636154,
+    "1005012504076921": 1791035451.2154183,
     "1005008715050858": 1791033345.3970714,
     "9998885689": 1790945689.9436276,
     "9998885726": 1790945726.205554,
@@ -281,7 +282,8 @@
     "1005005639737205": 1791032153.257991,
     "1005008144734940": 1791032158.6801872,
     "1005006443158717": 1791032177.1222703,
-    "1005012492244291": 1791035151.8836284
+    "1005012492244291": 1791035151.8836284,
+    "1005008522983211": 1791035458.4959302
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -426,7 +428,8 @@
     "Wireless WiFi Repeater 300Mbps",
     "Mini Laser Rangefinder 30M High Precision",
     "Men’s Oxford Fabric Sling Crossbody Bag",
-    "ONEPLUS TURBO 6X 5G"
+    "ONEPLUS TURBO 6X 5G",
+    "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -514,7 +517,7 @@
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
     "Xiaomi Pad 7 (12/256)": 1790954473.488348,
-    "ONEPLUS TURBO 6X PRO 5G (8/128)": 1790966153.636154,
+    "ONEPLUS TURBO 6X PRO 5G (8/128)": 1791035451.2154183,
     "CUSU SSD 512 GB Portable SSD External Drive": 1790966460.2151659,
     "HONOR  X80 PRO MAX (8/128)": 1791027656.0225317,
     "WALRAM Sata SSD 512GB": 1790967962.6418507,
@@ -574,7 +577,8 @@
     "Wireless WiFi Repeater 300Mbps": 1791032170.0482783,
     "Mini Laser Rangefinder 30M High Precision": 1791032177.1222703,
     "Men’s Oxford Fabric Sling Crossbody Bag": 1791033345.3970714,
-    "ONEPLUS TURBO 6X 5G": 1791035151.8836284
+    "ONEPLUS TURBO 6X 5G": 1791035151.8836284,
+    "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": 1791035458.4959302
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -928,15 +932,17 @@
     "couponsglobal:48779",
     "megaphonna:8225",
     "aniscoupons:32722",
-    "megaphonna:8226"
+    "megaphonna:8226",
+    "megaphonna:8227",
+    "aniscoupons:32723"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791035151.8836284,
+  "last_run_time": 1791035458.4959302,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32722,
-      "last_check_time": 1791035154.4467869
+      "last_message_id": 32723,
+      "last_check_time": 1791035460.507668
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -944,11 +950,11 @@
     },
     "lodydeals": {
       "last_message_id": 45445,
-      "last_check_time": 1791035143.6556113
+      "last_check_time": 1791035443.1994646
     },
     "bnddeals": {
       "last_message_id": 50804,
-      "last_check_time": 1791035144.610471
+      "last_check_time": 1791035444.3680072
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -960,15 +966,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791035143.9656272
+      "last_check_time": 1791035443.601957
     },
     "megaphonna": {
-      "last_message_id": 8226,
-      "last_check_time": 1791035153.8925028
+      "last_message_id": 8227,
+      "last_check_time": 1791035453.2279725
     },
     "couponsglobal": {
       "last_message_id": 48779,
-      "last_check_time": 1791035154.9920924
+      "last_check_time": 1791035461.5772312
     }
   },
   "published_product_prices": {
@@ -1088,7 +1094,8 @@
     "1005005639737205": 2.69,
     "1005008144734940": 5.23,
     "1005006443158717": 6.42,
-    "1005012492244291": 230.0
+    "1005012492244291": 230.0,
+    "1005008522983211": 15.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2690,6 +2697,26 @@
       "price": 230.0,
       "timestamp": 1791035151.8836284,
       "status": "ACTIVE"
+    },
+    "megaphonna:8227": {
+      "channel_msg_id": 491,
+      "product_id": "1005012504076921",
+      "title": "ONEPLUS TURBO 6X PRO 5G (8/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8227,
+      "price": 257.4,
+      "timestamp": 1791035451.2154183,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32723": {
+      "channel_msg_id": 492,
+      "product_id": "1005008522983211",
+      "title": "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem",
+      "channel": "aniscoupons",
+      "source_msg_id": 32723,
+      "price": 15.6,
+      "timestamp": 1791035458.4959302,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2698,7 +2725,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791035151.8860605,
+    "last_deal_post_time": 1791035458.5008078,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2825,7 +2852,8 @@
     "1005005639737205": "couponsglobal",
     "1005008144734940": "couponsglobal",
     "1005006443158717": "couponsglobal",
-    "1005012492244291": "megaphonna"
+    "1005012492244291": "megaphonna",
+    "1005008522983211": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2946,7 +2974,8 @@
     "Wireless WiFi Repeater 300Mbps": "couponsglobal",
     "Mini Laser Rangefinder 30M High Precision": "couponsglobal",
     "Men’s Oxford Fabric Sling Crossbody Bag": "aniscoupons",
-    "ONEPLUS TURBO 6X 5G": "megaphonna"
+    "ONEPLUS TURBO 6X 5G": "megaphonna",
+    "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
