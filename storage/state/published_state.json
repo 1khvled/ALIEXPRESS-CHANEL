@@ -119,7 +119,8 @@
     "1005012925826589",
     "1005010306498953",
     "1005010338761787",
-    "1005012265051745"
+    "1005012265051745",
+    "1005009390922629"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -212,7 +213,7 @@
     "1005011991145678": 1790962541.57551,
     "1005011682821623": 1790962844.0034096,
     "9998885747": 1790965747.5380507,
-    "1005010129356058": 1790954473.488348,
+    "1005010129356058": 1791023149.808202,
     "9998885993": 1790965993.3792443,
     "1005009774318553": 1790966460.2151659,
     "1005012574108028": 1790967954.6642368,
@@ -245,7 +246,8 @@
     "1005012925826589": 1791019854.2427852,
     "1005010306498953": 1791021345.213176,
     "1005010338761787": 1791021850.86469,
-    "1005012265051745": 1791022849.763491
+    "1005012265051745": 1791022849.763491,
+    "1005009390922629": 1791023140.1114628
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -365,7 +367,8 @@
     "REALME P3 5G (8/256)",
     "Toocki USB-C 60W Cable",
     "Toocki 2.4A Lightning Cable",
-    "OnePlus Pad Go 2 8/128GB"
+    "OnePlus Pad Go 2 8/128GB",
+    "ASROCK  X470 MASTER"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -439,7 +442,7 @@
     "النسخة العالمية": 1790943965.6572914,
     "HONOR 600 PRO (12/256)": 1790947009.9546273,
     "POCO C71 (3/64)": 1790947574.20351,
-    "XIAOMI PAD7 (12/256)": 1790948167.421073,
+    "XIAOMI PAD7 (12/256)": 1791023149.808202,
     "REALME 14 pro (12/256)": 1790948460.5860589,
     "HONOR X9D (12/256)": 1790948755.0367405,
     "Honor 400  Smart  (6/128)": 1790948764.3756874,
@@ -488,7 +491,8 @@
     "REALME P3 5G (8/256)": 1791019854.2427852,
     "Toocki USB-C 60W Cable": 1791021345.213176,
     "Toocki 2.4A Lightning Cable": 1791021850.86469,
-    "OnePlus Pad Go 2 8/128GB": 1791022849.763491
+    "OnePlus Pad Go 2 8/128GB": 1791022849.763491,
+    "ASROCK  X470 MASTER": 1791023140.1114628
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -783,27 +787,31 @@
     "lodydeals:45425",
     "megaphonna:8214",
     "megaphonna:8215",
-    "aniscoupons:32715"
+    "aniscoupons:32715",
+    "lodydeals:45426",
+    "megaphonna:8216",
+    "megaphonna:8217",
+    "megaphonna:8218"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791022849.763491,
+  "last_run_time": 1791023149.808202,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32715,
-      "last_check_time": 1791022861.595353
+      "last_check_time": 1791023153.0194197
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45425,
-      "last_check_time": 1791022851.9360356
+      "last_message_id": 45426,
+      "last_check_time": 1791023142.120288
     },
     "bnddeals": {
       "last_message_id": 50803,
-      "last_check_time": 1791022853.1230743
+      "last_check_time": 1791023143.3477714
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -815,11 +823,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791022852.4846106
+      "last_check_time": 1791023142.6711621
     },
     "megaphonna": {
-      "last_message_id": 8215,
-      "last_check_time": 1791022858.4838014
+      "last_message_id": 8218,
+      "last_check_time": 1791023152.4805763
     }
   },
   "published_product_prices": {
@@ -850,7 +858,7 @@
     "1005010453516983": 204.7,
     "1005008852027824": 194.9,
     "1005012499451512": 260.0,
-    "1005010129356058": 294.0,
+    "1005010129356058": 291.0,
     "3256809790988797": 92.8,
     "1005005217734986": 9.61,
     "1005010062128237": 9.9,
@@ -922,7 +930,8 @@
     "1005008776714223": 47.6,
     "1005010306498953": 1.46,
     "1005010338761787": 1.49,
-    "1005012265051745": 246.04
+    "1005012265051745": 246.04,
+    "1005009390922629": 101.91
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2224,6 +2233,26 @@
       "price": 246.04,
       "timestamp": 1791022849.763491,
       "status": "ACTIVE"
+    },
+    "lodydeals:45426": {
+      "channel_msg_id": 461,
+      "product_id": "1005009390922629",
+      "title": "ASROCK  X470 MASTER",
+      "channel": "lodydeals",
+      "source_msg_id": 45426,
+      "price": 101.91,
+      "timestamp": 1791023140.1114628,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8217": {
+      "channel_msg_id": 462,
+      "product_id": "1005010129356058",
+      "title": "XIAOMI PAD7 (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8217,
+      "price": 291.0,
+      "timestamp": 1791023149.808202,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2232,7 +2261,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791022849.7661421,
+    "last_deal_post_time": 1791023149.8108196,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2341,7 +2370,8 @@
     "1005008776714223": "aniscoupons",
     "1005010306498953": "lodydeals",
     "1005010338761787": "lodydeals",
-    "1005012265051745": "lodydeals"
+    "1005012265051745": "lodydeals",
+    "1005009390922629": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2438,7 +2468,8 @@
     "CUSU 512GB": "aniscoupons",
     "Toocki USB-C 60W Cable": "lodydeals",
     "Toocki 2.4A Lightning Cable": "lodydeals",
-    "OnePlus Pad Go 2 8/128GB": "lodydeals"
+    "OnePlus Pad Go 2 8/128GB": "lodydeals",
+    "ASROCK  X470 MASTER": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
