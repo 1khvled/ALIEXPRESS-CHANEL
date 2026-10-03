@@ -235,3 +235,79 @@ def test_smart_gaming_aggregation():
     assert "تجميعة ملحقات وعتاد القيمنق" in caption
     assert "@Alilo07BOT" in caption
     assert "https://t.me/DzAliexpress0/301" in caption
+
+def test_clean_item_title_word_boundaries():
+    """Verifies that titles are never sliced mid-word and dangling prepositions/marketing words are stripped."""
+    # 1. Marketing buzzwords stripped
+    raw = "🔥 Global Version Original HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation Noise Cancellation"
+    cleaned = clean_item_title(raw, max_chars=50)
+    assert not cleaned.endswith("Translatio"), f"Word was sliced mid-character! Got: {cleaned}"
+    assert not cleaned.endswith("Noise Can")
+    assert "Global Version" not in cleaned
+    assert "Original" not in cleaned
+
+    # 2. Dangling preposition stripped at boundary
+    raw_with = "EDIFIER W820NB Plus ANC Wireless Headphones With Extra Base"
+    cleaned_with = clean_item_title(raw_with, max_chars=48)
+    assert not cleaned_with.lower().endswith("with"), f"Dangling preposition remained! Got: {cleaned_with}"
+
+    # 3. Short titles preserved
+    assert clean_item_title("Attack Shark X11") == "Attack Shark X11"
+
+def test_deal_deduplication_keeps_best_and_latest(tmp_path):
+    """Verifies that identical products posted multiple times are deduplicated to the best deal."""
+    from app.publisher.regrouper import get_recent_published_deals_for_roundup
+
+    now_ts = datetime.now(timezone.utc).timestamp()
+    mock_state = {
+        "channel_published_deals": {
+            "channel:444": {
+                "channel_msg_id": 444,
+                "product_id": "100500799999",
+                "title": "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation",
+                "price": 13.20,
+                "timestamp": now_ts - 7200,
+                "status": "ACTIVE"
+            },
+            "channel:472": {
+                "channel_msg_id": 472,
+                "product_id": "100500799999",
+                "title": "HTC NE79 TWS Bluetooth 6.0",
+                "price": 5.09,
+                "timestamp": now_ts - 3600,
+                "status": "ACTIVE"
+            },
+            "channel:480": {
+                "channel_msg_id": 480,
+                "product_id": "100500888888",
+                "title": "Attack Shark X11 Mouse",
+                "price": 22.50,
+                "timestamp": now_ts - 1800,
+                "status": "ACTIVE"
+            }
+        }
+    }
+
+    with patch("app.publisher.regrouper.load_persistent_state", return_value=mock_state):
+        deals = get_recent_published_deals_for_roundup(max_age_hours=24.0)
+
+        # Should only have 2 deals, NOT 3 (HTC NE79 deduplicated!)
+        assert len(deals) == 2
+
+        htc_deal = next(d for d in deals if "HTC" in d["title"])
+        assert htc_deal["channel_msg_id"] == 472
+        assert htc_deal["price"] == 5.09
+
+def test_format_deal_line_rtl_stability():
+    """Verifies that deal line starts with Arabic 'السعر:' to prevent Telegram BiDi scrambling."""
+    item = {
+        "channel_msg_id": 472,
+        "title": "HTC NE79 TWS Bluetooth 6.0",
+        "price": 5.09,
+        "channel_url": "https://t.me/DzAliexpress0/472"
+    }
+    line = format_deal_line(item, "DzAliexpress0")
+    # Verify RTL base paragraph direction marker
+    assert "السعر:" in line
+    assert "💰 السعر: <b>$5.09" in line
+    assert "رابط المنشور 👈" in line

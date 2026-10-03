@@ -238,26 +238,89 @@ def classify_deal_category(title: str, text: str = "") -> Optional[str]:
     return None
 
 
-def clean_item_title(raw_title: str) -> str:
-    """Produces clean, readable title for the bulletin line."""
+def clean_item_title(raw_title: str, max_chars: int = 50) -> str:
+    """Produces clean, readable title for the bulletin line without slicing words in half."""
     t = raw_title or "منتج مميز"
     t = re.sub(r'[\$€].*$', '', t).strip()
     t = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:]+', '', t).strip()
-    # Strip long noise words
-    t = re.sub(r'(\s*-\s*AliExpress.*$|\s*\|\s*AliExpress.*$)', '', t).strip()
-    return t[:48].strip()
+    # Strip long noise words and platform suffixes
+    t = re.sub(r'(\s*-\s*AliExpress.*$|\s*\|\s*AliExpress.*$)', '', t, flags=re.IGNORECASE).strip()
+    # Strip common noisy marketing words that bloat titles
+    t = re.sub(r'\b(Global\s+Version|Original|Hot\s+Sale|Brand\s+New|Top\s+Selling|202[4-9])\b', '', t, flags=re.IGNORECASE).strip()
+    t = re.sub(r'\s+', ' ', t).strip()
+
+    if len(t) <= max_chars:
+        return t
+
+    # Word-boundary truncation: cut at the last space before max_chars
+    truncated = t[:max_chars].rsplit(' ', 1)[0].strip()
+    if len(truncated) < 18:
+        truncated = t[:max_chars].strip()
+
+    # Strip trailing punctuation, hyphens, and dangling prepositions / conjunctions
+    truncated = truncated.rstrip(" -,/:;|")
+    dangling_words = {
+        'with', 'for', 'and', 'to', 'in', 'on', 'of', 'by', 'the', 'a', 'an',
+        'wit', 'fo', 'an', 'مع', 'من', 'في', 'على', 'لـ', 'إلى'
+    }
+    words = truncated.split()
+    if words and words[-1].lower() in dangling_words:
+        truncated = " ".join(words[:-1]).rstrip(" -,/:;|")
+
+    return truncated or t[:max_chars].strip()
+
+def get_deal_dedup_key(product_id: Optional[Any], raw_title: str, msg_id: int) -> str:
+    """Builds a unique deduplication key for a product to prevent identical products from appearing twice."""
+    if product_id:
+        p_clean = str(product_id).strip()
+        if p_clean and p_clean.lower() not in ("none", "null", "0", "") and not p_clean.startswith("msg_"):
+            return f"pid_{p_clean}"
+
+    t = (raw_title or "").lower()
+    t = re.sub(r'[\$€].*$', '', t)
+    t = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:]+', '', t)
+    t = re.sub(r'[^\w\s]', ' ', t)
+    stop_words = {
+        'original', 'global', 'version', 'new', 'hot', 'sale', 'official',
+        'free', 'shipping', 'edition', 'جديد', 'اصلي', 'نسخة', 'تخفيض', 'عرض'
+    }
+    tokens = [w for w in t.split() if len(w) > 2 and w not in stop_words]
+    if len(tokens) >= 2:
+        return "norm_" + "_".join(tokens[:4])
+    elif tokens:
+        return f"norm_{tokens[0]}"
+    return f"msg_{msg_id}"
+
+def is_better_deal(candidate: Dict[str, Any], current: Dict[str, Any]) -> bool:
+    """Selects the best deal entry between duplicate posts of the same product."""
+    cand_price = float(candidate.get("price") or 0.0)
+    curr_price = float(current.get("price") or 0.0)
+
+    # 1. If both have positive prices, strictly lower price wins (e.g. $5.09 vs $13.20 flash drop)
+    if cand_price > 0 and curr_price > 0:
+        if cand_price < curr_price:
+            return True
+        if curr_price < cand_price:
+            return False
+    elif cand_price > 0 and curr_price <= 0:
+        return True
+    elif curr_price > 0 and cand_price <= 0:
+        return False
+
+    # 2. If prices are identical (or both <= 0), prefer the freshest post
+    return int(candidate.get("channel_msg_id") or 0) > int(current.get("channel_msg_id") or 0)
 
 def get_recent_published_deals_for_roundup(max_age_hours: float = 24.0) -> List[Dict[str, Any]]:
     """
     Collects active deals published to @DzAliexpress0 within the last 24 hours.
-    Merges persistent state tracking (published_state.json) and local SQLite (deals.db).
+    Deduplicates identical products posted multiple times during the day (keeps lowest price / latest post).
     """
     state = load_persistent_state()
     deals_dict = state.get("channel_published_deals", {})
-    now = time_now = datetime.now(timezone.utc).timestamp()
+    now = datetime.now(timezone.utc).timestamp()
     max_age_sec = max_age_hours * 3600
 
-    collected: Dict[int, Dict[str, Any]] = {}
+    collected: Dict[str, Dict[str, Any]] = {}
 
     # 1. Load from persistent state (primary in GitHub Actions & production)
     target_clean = str(TARGET_CHANNEL_ID).lstrip("@")
@@ -272,13 +335,15 @@ def get_recent_published_deals_for_roundup(max_age_hours: float = 24.0) -> List[
             continue
 
         msg_id_int = int(msg_id)
-        title = clean_item_title(info.get("title", ""))
+        raw_title = info.get("title", "")
+        title = clean_item_title(raw_title)
         price = float(info.get("price") or 0.0)
-        category = classify_deal_category(info.get("title", ""))
+        category = classify_deal_category(raw_title)
+        product_id = info.get("product_id")
 
-        collected[msg_id_int] = {
+        deal_entry = {
             "channel_msg_id": msg_id_int,
-            "product_id": info.get("product_id"),
+            "product_id": product_id,
             "title": title,
             "price": price,
             "timestamp": ts,
@@ -286,10 +351,17 @@ def get_recent_published_deals_for_roundup(max_age_hours: float = 24.0) -> List[
             "channel_url": f"https://t.me/{target_clean}/{msg_id_int}"
         }
 
+        dedup_key = get_deal_dedup_key(product_id, raw_title, msg_id_int)
+        if dedup_key not in collected:
+            collected[dedup_key] = deal_entry
+        else:
+            if is_better_deal(deal_entry, collected[dedup_key]):
+                collected[dedup_key] = deal_entry
+
     return list(collected.values())
 
 def format_deal_line(item: Dict[str, Any], channel_username: str) -> str:
-    """Formats a single product line for the bulletin with both $ and € and post link."""
+    """Formats a single product line for the bulletin with both $ and € and post link with RTL stability."""
     title = item.get("title") or "منتج مميز"
     price_val = float(item.get("price") or 0.0)
     eur_rate = float(getattr(settings, "EUR_USD_RATE", 0.92))
@@ -304,7 +376,8 @@ def format_deal_line(item: Dict[str, Any], channel_username: str) -> str:
         price_str = "سعر خاص ومخفض 🔥"
 
     post_url = item.get("channel_url") or f"https://t.me/{channel_username}/{item['channel_msg_id']}"
-    return f"▫️ <b>{title}</b>\n   💰 <b>{price_str}</b> ▫️ <a href=\"{post_url}\">رابط المنشور 👈</a>\n"
+    # Starting line 2 with Arabic 'السعر:' enforces RTL base direction across all Telegram clients
+    return f"▫️ <b>{title}</b>\n   💰 السعر: <b>{price_str}</b> ▫️ <a href=\"{post_url}\">رابط المنشور 👈</a>\n"
 
 def build_category_bulletin_text(category_name: str, items: List[Dict[str, Any]], channel_username: str) -> Tuple[str, List[Dict[str, Any]]]:
     """
@@ -322,7 +395,7 @@ def build_category_bulletin_text(category_name: str, items: List[Dict[str, Any]]
     footer_lines = [
         "━━━━━━━━━━━━━━━━━",
         "💡 <i>اضغط على (رابط المنشور) للانتقال مباشرة للعرض في القناة.</i>",
-        "🪙 <b>تخفيض إضافي بالعملات:</b> أرسل رابط أي منتج للبوت @Alilo07BOT"
+        "🪙 <b>تخفيض إضافي بالعملات:</b> أرسل رابط أي منتج للبوت (@Alilo07BOT)"
     ]
     footer_text = "\n".join(footer_lines)
 
@@ -353,7 +426,7 @@ def build_master_daily_roundup_text(deals: List[Dict[str, Any]], channel_usernam
     footer_lines = [
         "━━━━━━━━━━━━━━━━━",
         "💡 <i>أبرز صيدات وصفقات نهار اليوم المنشورة في القناة!</i>",
-        "🪙 <b>تخفيض إضافي بالعملات:</b> أرسل رابط أي منتج للبوت @Alilo07BOT"
+        "🪙 <b>تخفيض إضافي بالعملات:</b> أرسل رابط أي منتج للبوت (@Alilo07BOT)"
     ]
     footer_text = "\n".join(footer_lines)
 

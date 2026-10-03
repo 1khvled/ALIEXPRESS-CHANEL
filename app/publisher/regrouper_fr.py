@@ -145,24 +145,81 @@ def classify_france_deal_category(title: str, text: str = "") -> Optional[str]:
                 return cat_name
     return None
 
-def clean_item_title_fr(raw_title: str) -> str:
+def clean_item_title_fr(raw_title: str, max_chars: int = 55) -> str:
+    """Produces clean, readable French title for the bulletin line without slicing words in half."""
     t = raw_title or "Bon Plan AliExpress"
     t = re.sub(r'[\$€].*$', '', t).strip()
     t = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:]+', '', t).strip()
-    t = re.sub(r'(\s*-\s*AliExpress.*$|\s*\|\s*AliExpress.*$)', '', t).strip()
-    return t[:55].strip()
+    t = re.sub(r'(\s*-\s*AliExpress.*$|\s*\|\s*AliExpress.*$)', '', t, flags=re.IGNORECASE).strip()
+    t = re.sub(r'\b(Version\s+Globale|Global\s+Version|Original|Hot\s+Sale|Brand\s+New|Top\s+Selling|202[4-9])\b', '', t, flags=re.IGNORECASE).strip()
+    t = re.sub(r'\s+', ' ', t).strip()
+
+    if len(t) <= max_chars:
+        return t
+
+    truncated = t[:max_chars].rsplit(' ', 1)[0].strip()
+    if len(truncated) < 18:
+        truncated = t[:max_chars].strip()
+
+    truncated = truncated.rstrip(" -,/:;|")
+    dangling_words = {'avec', 'pour', 'et', 'de', 'du', 'en', 'sur', 'dans', 'with', 'for', 'and'}
+    words = truncated.split()
+    if words and words[-1].lower() in dangling_words:
+        truncated = " ".join(words[:-1]).rstrip(" -,/:;|")
+
+    return truncated or t[:max_chars].strip()
+
+def get_france_deal_dedup_key(product_id: Optional[Any], raw_title: str, msg_id: int) -> str:
+    """Builds a unique deduplication key for France deals."""
+    if product_id:
+        p_clean = str(product_id).strip()
+        if p_clean and p_clean.lower() not in ("none", "null", "0", "") and not p_clean.startswith("msg_"):
+            return f"pid_{p_clean}"
+
+    t = (raw_title or "").lower()
+    t = re.sub(r'[\$€].*$', '', t)
+    t = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:]+', '', t)
+    t = re.sub(r'[^\w\s]', ' ', t)
+    stop_words = {
+        'original', 'global', 'version', 'new', 'hot', 'sale', 'official',
+        'free', 'shipping', 'edition', 'bon', 'plan', 'deal'
+    }
+    tokens = [w for w in t.split() if len(w) > 2 and w not in stop_words]
+    if len(tokens) >= 2:
+        return "norm_" + "_".join(tokens[:4])
+    elif tokens:
+        return f"norm_{tokens[0]}"
+    return f"msg_{msg_id}"
+
+def is_better_france_deal(candidate: Dict[str, Any], current: Dict[str, Any]) -> bool:
+    """Selects the best deal entry between duplicate posts of the same product for France."""
+    cand_price = float(candidate.get("price_eur") or 0.0)
+    curr_price = float(current.get("price_eur") or 0.0)
+
+    if cand_price > 0 and curr_price > 0:
+        if cand_price < curr_price:
+            return True
+        if curr_price < cand_price:
+            return False
+    elif cand_price > 0 and curr_price <= 0:
+        return True
+    elif curr_price > 0 and cand_price <= 0:
+        return False
+
+    return int(candidate.get("channel_msg_id") or 0) > int(current.get("channel_msg_id") or 0)
 
 async def get_recent_france_published_deals(max_age_hours: float = 24.0) -> List[Dict[str, Any]]:
     """
     Retrieves deals published to @francedealsdz within the last 24h.
     Merges state deals history and public channel scraping for 100% accuracy.
+    Deduplicates identical products posted multiple times during the day.
     """
     state = load_france_state()
     deals_history = state.get("published_deals_history", {})
     now = datetime.now(timezone.utc).timestamp()
     max_age_sec = max_age_hours * 3600.0
 
-    collected: Dict[int, Dict[str, Any]] = {}
+    collected: Dict[str, Dict[str, Any]] = {}
 
     # 1. From state history
     target_clean = TARGET_FRANCE_CHANNEL.replace("@", "")
@@ -175,11 +232,12 @@ async def get_recent_france_published_deals(max_age_hours: float = 24.0) -> List
             continue
 
         msg_id_int = int(msg_id)
-        title = clean_item_title_fr(info.get("title", ""))
+        raw_title = info.get("title", "")
+        title = clean_item_title_fr(raw_title)
         price_eur = float(info.get("price_eur") or 0.0)
-        category = classify_france_deal_category(title)
+        category = classify_france_deal_category(raw_title)
 
-        collected[msg_id_int] = {
+        deal_entry = {
             "channel_msg_id": msg_id_int,
             "product_id": pid,
             "title": title,
@@ -188,6 +246,13 @@ async def get_recent_france_published_deals(max_age_hours: float = 24.0) -> List
             "category": category,
             "channel_url": f"https://t.me/{target_clean}/{msg_id_int}"
         }
+
+        dedup_key = get_france_deal_dedup_key(pid, raw_title, msg_id_int)
+        if dedup_key not in collected:
+            collected[dedup_key] = deal_entry
+        else:
+            if is_better_france_deal(deal_entry, collected[dedup_key]):
+                collected[dedup_key] = deal_entry
 
     # 2. Complement from channel scraping if state history was sparse
     if len(collected) < 3:
@@ -203,8 +268,6 @@ async def get_recent_france_published_deals(max_age_hours: float = 24.0) -> List
                         if "/" not in dp:
                             continue
                         msg_id_int = int(dp.split("/")[-1])
-                        if msg_id_int in collected:
-                            continue
 
                         # Check message age
                         time_el = b.find("time")
@@ -244,15 +307,21 @@ async def get_recent_france_published_deals(max_age_hours: float = 24.0) -> List
 
                         if first_line and price > 0:
                             title = clean_item_title_fr(first_line)
-                            collected[msg_id_int] = {
+                            scraped_entry = {
                                 "channel_msg_id": msg_id_int,
                                 "product_id": f"msg_{msg_id_int}",
                                 "title": title,
                                 "price_eur": price,
                                 "timestamp": now,
-                                "category": classify_france_deal_category(title, text),
+                                "category": classify_france_deal_category(first_line, text),
                                 "channel_url": f"https://t.me/{target_clean}/{msg_id_int}"
                             }
+                            dedup_key = get_france_deal_dedup_key(None, first_line, msg_id_int)
+                            if dedup_key not in collected:
+                                collected[dedup_key] = scraped_entry
+                            else:
+                                if is_better_france_deal(scraped_entry, collected[dedup_key]):
+                                    collected[dedup_key] = scraped_entry
         except Exception as e:
             logger.warning(f"France channel scraping error: {e}")
 
@@ -264,7 +333,7 @@ def format_france_deal_line(item: Dict[str, Any], channel_username: str = "franc
     price_str = f"<b>{price_val:.2f}€</b>" if price_val > 0 else "<b>Prix réduit</b>"
     clean_ch = channel_username.replace("@", "")
     post_url = item.get("channel_url") or f"https://t.me/{clean_ch}/{item['channel_msg_id']}"
-    return f"▫️ <b>{title}</b>\n   💰 {price_str} ▫️ <a href=\"{post_url}\">Voir le deal ➔</a>\n"
+    return f"▫️ <b>{title}</b>\n   💰 Prix : {price_str} ▫️ <a href=\"{post_url}\">Voir le deal ➔</a>\n"
 
 def build_france_category_bulletin(category_name: str, items: List[Dict[str, Any]], channel_username: str = "francedealsdz") -> Tuple[str, List[Dict[str, Any]]]:
     cat_config = CATEGORIES_CONFIG_FR.get(category_name, {
