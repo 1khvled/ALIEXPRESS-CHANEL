@@ -907,8 +907,8 @@ def is_tajmi3at_time_window(now_dt: Optional[datetime] = None) -> bool:
 
     hour = now_dt.hour
     minute = now_dt.minute
-    # Window: 21:30 to 22:45 Algiers time
-    return (hour == 21 and minute >= 30) or (hour == 22 and minute <= 45)
+    # Window: 21:30 to 23:45 Algiers time (accommodates GitHub Actions cron delays)
+    return (hour == 21 and minute >= 30) or (hour == 22) or (hour == 23 and minute <= 45)
 
 def is_daily_tajmi3at_eligible(date_str: Optional[str] = None) -> Tuple[bool, str]:
     """

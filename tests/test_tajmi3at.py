@@ -21,22 +21,24 @@ from app.publisher.regrouper import (
 )
 
 def test_tajmi3at_time_window():
-    """Verifies that 10:00 PM Algiers time (UTC+1) is properly bounded (21:30 to 22:45)."""
+    """Verifies that 10:00 PM Algiers time (UTC+1) is properly bounded (21:30 to 23:45)."""
     dz_tz = timezone(timedelta(hours=1))
 
     # Outside window
     assert is_tajmi3at_time_window(datetime(2026, 10, 2, 14, 0, tzinfo=dz_tz)) is False
     assert is_tajmi3at_time_window(datetime(2026, 10, 2, 21, 29, tzinfo=dz_tz)) is False
-    assert is_tajmi3at_time_window(datetime(2026, 10, 2, 22, 46, tzinfo=dz_tz)) is False
-    assert is_tajmi3at_time_window(datetime(2026, 10, 2, 23, 0, tzinfo=dz_tz)) is False
+    assert is_tajmi3at_time_window(datetime(2026, 10, 2, 23, 46, tzinfo=dz_tz)) is False
+    assert is_tajmi3at_time_window(datetime(2026, 10, 2, 0, 0, tzinfo=dz_tz)) is False
     assert is_tajmi3at_time_window(datetime(2026, 10, 2, 10, 0, tzinfo=dz_tz)) is False
 
-    # Inside window (around 10:00 PM)
+    # Inside window (around 10:00 PM and accommodating delays)
     assert is_tajmi3at_time_window(datetime(2026, 10, 2, 21, 30, tzinfo=dz_tz)) is True
     assert is_tajmi3at_time_window(datetime(2026, 10, 2, 21, 45, tzinfo=dz_tz)) is True
     assert is_tajmi3at_time_window(datetime(2026, 10, 2, 22, 0, tzinfo=dz_tz)) is True  # 10:00 PM
     assert is_tajmi3at_time_window(datetime(2026, 10, 2, 22, 15, tzinfo=dz_tz)) is True
     assert is_tajmi3at_time_window(datetime(2026, 10, 2, 22, 45, tzinfo=dz_tz)) is True
+    assert is_tajmi3at_time_window(datetime(2026, 10, 2, 23, 0, tzinfo=dz_tz)) is True
+    assert is_tajmi3at_time_window(datetime(2026, 10, 2, 23, 45, tzinfo=dz_tz)) is True
 
 def test_daily_tajmi3at_idempotency(tmp_path):
     """Verifies that daily tajmi3at can only be published once per calendar day."""
