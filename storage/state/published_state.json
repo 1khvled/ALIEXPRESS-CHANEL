@@ -985,7 +985,7 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32728,
-      "last_check_time": 1791048037.5317967
+      "last_check_time": 1791048341.641477
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -993,11 +993,11 @@
     },
     "lodydeals": {
       "last_message_id": 45445,
-      "last_check_time": 1791048035.8600426
+      "last_check_time": 1791048339.9753082
     },
     "bnddeals": {
       "last_message_id": 50810,
-      "last_check_time": 1791048036.8310661
+      "last_check_time": 1791048340.9672644
     },
     "test_channel": {
       "last_message_id": 1791047267,
@@ -1009,15 +1009,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791048036.2180347
+      "last_check_time": 1791048340.3025868
     },
     "megaphonna": {
       "last_message_id": 8233,
-      "last_check_time": 1791048037.1418319
+      "last_check_time": 1791048341.2962472
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791048038.0019202
+      "last_check_time": 1791048342.1651552
     }
   },
   "published_product_prices": {
@@ -3173,5 +3173,8 @@
     "test_tag_c2af16": "2026-10-02"
   },
   "daily_tajmi3at_history": {},
-  "regrouped_channel_msg_ids": []
+  "regrouped_channel_msg_ids": [],
+  "pinned_promo_events": {
+    "Party Ready Sale / Choice Day_20261001": 505
+  }
 }

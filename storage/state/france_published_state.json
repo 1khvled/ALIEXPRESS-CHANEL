@@ -1,48 +1,52 @@
 {
   "published_post_keys": [
-    "francecp:414",
-    "megaphonna:8217",
-    "couponsglobal:48775",
-    "francecp:419",
-    "couponsglobal:48779",
-    "couponsglobal:48772",
-    "francecp:413",
-    "francecp:420",
-    "alifrdrop:103",
-    "megaphonna:8216",
-    "alifrdrop:102",
     "couponsglobal:48768",
-    "couponsglobal:48770",
-    "alifrdrop:106",
-    "alifrdrop:105",
-    "couponsglobal:48773",
-    "couponsglobal:48766",
-    "francecp:417",
-    "couponsglobal:48776",
-    "couponsglobal:48774",
-    "megaphonna:8219",
-    "couponsglobal:48769",
-    "megaphonna:8231",
-    "couponsglobal:48765",
-    "couponsglobal:48780",
-    "megaphonna:8218",
     "couponsglobal:48771",
     "megaphonna:8230",
-    "francecp:418",
-    "alifrdrop:104",
-    "couponsglobal:48767",
+    "megaphonna:8217",
+    "couponsglobal:48777",
+    "couponsglobal:48769",
+    "couponsglobal:48774",
+    "couponsglobal:48766",
+    "alifrdrop:106",
+    "alifrdrop:102",
     "couponsglobal:48778",
+    "francecp:418",
+    "couponsglobal:48780",
+    "francecp:419",
+    "couponsglobal:48779",
+    "alifrdrop:103",
+    "francecp:420",
+    "megaphonna:8218",
+    "francecp:414",
+    "francecp:416",
+    "francecp:417",
+    "couponsglobal:48776",
+    "couponsglobal:48767",
+    "megaphonna:8222",
+    "francecp:413",
+    "megaphonna:8219",
     "francecp:415",
-    "francecp:416"
+    "alifrdrop:104",
+    "couponsglobal:48772",
+    "couponsglobal:48773",
+    "couponsglobal:48770",
+    "couponsglobal:48775",
+    "couponsglobal:48765",
+    "megaphonna:8216",
+    "megaphonna:8220",
+    "megaphonna:8231",
+    "alifrdrop:105",
+    "megaphonna:8221"
   ],
   "published_product_ids": [
-    "1005009977303549",
-    "1005012589045044",
+    "1005011938407661",
+    "1005012218291528",
     "1005012541048117",
     "1005012155835323",
-    "1005012218291528",
-    "1005011938407661",
-    "1005012540990578"
+    "1005009977303549",
+    "1005012540990578",
+    "1005012589045044"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -200,6 +204,30 @@
       "title": "OnePlus Pad Go 2 8/128GB",
       "price_eur": 226.32,
       "channel_msg_id": 56
+    },
+    "1005006443158717": {
+      "timestamp": 1791048349.997547,
+      "title": "Mini Laser Rangefinder 30M High Precision",
+      "price_eur": 5.91,
+      "channel_msg_id": 57
+    },
+    "1005012407874415": {
+      "timestamp": 1791048357.8574,
+      "title": "HONOR 600 PRO (12/256)",
+      "price_eur": 441.97,
+      "channel_msg_id": 58
+    },
+    "1005012865117890": {
+      "timestamp": 1791048364.14484,
+      "title": "REALME 14 pro (12/256)",
+      "price_eur": 216.11,
+      "channel_msg_id": 59
+    },
+    "1005008233932899": {
+      "timestamp": 1791048370.64541,
+      "title": "Realme 14 Pro Plus +   (8/256)",
+      "price_eur": 270.48,
+      "channel_msg_id": 60
     }
   },
   "monitored_channels": {
@@ -220,11 +248,11 @@
       "last_check_time": 1791046109.524443
     }
   },
-  "last_run_time": 1791048068.1567874,
+  "last_run_time": 1791048372.6479592,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001"
   ],
-  "last_deal_post_time": 1791048068.156788,
+  "last_deal_post_time": 1791048372.64796,
   "daily_roundup_history": {
     "2026-10-02": {
       "timestamp": 1790976075.00982,
