@@ -1,32 +1,36 @@
 {
   "published_post_keys": [
+    "francecp:419",
     "alifrdrop:106",
-    "alifrdrop:103",
-    "francecp:420",
-    "francecp:418",
     "francecp:413",
-    "francecp:416",
-    "couponsglobal:48779",
-    "couponsglobal:48780",
-    "alifrdrop:102",
-    "francecp:415",
+    "couponsglobal:48765",
+    "megaphonna:8216",
     "alifrdrop:104",
-    "francecp:414",
-    "megaphonna:8230",
-    "francecp:417",
-    "couponsglobal:48778",
     "alifrdrop:105",
+    "megaphonna:8230",
+    "francecp:415",
+    "couponsglobal:48779",
+    "francecp:418",
+    "couponsglobal:48780",
     "megaphonna:8231",
-    "francecp:419"
+    "alifrdrop:103",
+    "francecp:414",
+    "couponsglobal:48778",
+    "francecp:417",
+    "francecp:420",
+    "couponsglobal:48767",
+    "alifrdrop:102",
+    "couponsglobal:48766",
+    "francecp:416"
   ],
   "published_product_ids": [
     "1005012589045044",
     "1005012541048117",
-    "1005012540990578",
-    "1005011938407661",
+    "1005009977303549",
     "1005012218291528",
+    "1005012540990578",
     "1005012155835323",
-    "1005009977303549"
+    "1005011938407661"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -88,6 +92,30 @@
       "title": "HONOR POWER 2 (12/256)",
       "price_eur": 346.38,
       "channel_msg_id": 38
+    },
+    "1005011734677486": {
+      "timestamp": 1791046882.604227,
+      "title": "Lenovo LE257 TWS Wireless Bluetooth 6.0",
+      "price_eur": 4.25,
+      "channel_msg_id": 39
+    },
+    "1005010375387628": {
+      "timestamp": 1791046890.634232,
+      "title": "HTC NE51 Bluetooth TWS Mini EarBuds",
+      "price_eur": 4.25,
+      "channel_msg_id": 40
+    },
+    "1005007168829266": {
+      "timestamp": 1791046899.621252,
+      "title": "Baseus USB Type C Charger 20W",
+      "price_eur": 3.85,
+      "channel_msg_id": 41
+    },
+    "1005012191191893": {
+      "timestamp": 1791046905.787084,
+      "title": "Blackview MEGA 5  ( 8/256 )",
+      "price_eur": 206.08,
+      "channel_msg_id": 42
     }
   },
   "monitored_channels": {
@@ -108,11 +136,11 @@
       "last_check_time": 1791046109.524443
     }
   },
-  "last_run_time": 1791046109.524646,
+  "last_run_time": 1791046907.8007107,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001"
   ],
-  "last_deal_post_time": 1791046109.524647,
+  "last_deal_post_time": 1791046907.8007114,
   "daily_roundup_history": {
     "2026-10-02": {
       "timestamp": 1790976075.00982,

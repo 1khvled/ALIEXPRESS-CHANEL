@@ -63,6 +63,8 @@ jobs:
           ALIEXPRESS_AFFILIATE_TRACKING_ID: ${{ secrets.ALIEXPRESS_AFFILIATE_TRACKING_ID || 'dzkhvled16' }}
           ALIEXPRESS_AFFILIATE_APP_KEY: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_KEY || '538348' }}
           ALIEXPRESS_AFFILIATE_APP_SECRET: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_SECRET || '7z5QlJZAxNka2zBrgzCWrUNusBXJGHYx' }}
+          ADMIN_USER_ID: ${{ secrets.ADMIN_USER_ID || '5625295907' }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL || 'sqlite+aiosqlite:///deals.db' }}
         run: |
           if [ "${{ github.event.inputs.force }}" = "true" ]; then
             python scripts/post_france_deals.py --force

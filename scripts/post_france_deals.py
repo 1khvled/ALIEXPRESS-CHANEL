@@ -1,3 +1,4 @@
+from __future__ import annotations
 import asyncio
 import re
 import sys
@@ -6,7 +7,7 @@ import json
 import time
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
-from typing import Optional, List, Dict, Set, Tuple
+from typing import Optional, List, Dict, Set, Tuple, Any
 
 # Add project root to sys.path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -45,14 +46,16 @@ TARGET_FRANCE_CHANNEL = os.getenv("FRANCE_TARGET_CHANNEL_ID", "@francedealsdz")
 FRANCE_STATE_FILE = Path(settings.BASE_DIR) / "storage" / "state" / "france_published_state.json"
 
 FRANCE_SOURCE_CHANNELS = [
-    "AliFRDrop",
-    "FranceCP",
     "CouponsGlobal",
     "megaphonna",
     "lodydeals",
     "zedstoreonline",
     "BNDDEALS",
-    "ECKSDEAL"
+    "ECKSDEAL",
+    "aniscoupons",
+    "Coupon4Dz",
+    "AliFRDrop",
+    "FranceCP"
 ]
 
 def load_france_state() -> Dict:
@@ -737,4 +740,9 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
 if __name__ == "__main__":
     force_run = "--force" in sys.argv or "-f" in sys.argv
     force_tajmi3at = "--tajmi3at" in sys.argv or "--force-tajmi3at" in sys.argv
-    asyncio.run(collect_and_post_france_deals(force=force_run, force_tajmi3at=force_tajmi3at))
+    try:
+        res = asyncio.run(collect_and_post_france_deals(force=force_run, force_tajmi3at=force_tajmi3at))
+        sys.exit(0)
+    except Exception as e:
+        logger.critical(f"FATAL ERROR in France deals publisher: {e}", exc_info=True)
+        sys.exit(1)
