@@ -1,52 +1,56 @@
 {
   "published_post_keys": [
-    "couponsglobal:48768",
-    "couponsglobal:48771",
-    "megaphonna:8230",
-    "megaphonna:8217",
-    "couponsglobal:48777",
-    "couponsglobal:48769",
-    "couponsglobal:48774",
-    "couponsglobal:48766",
-    "alifrdrop:106",
-    "alifrdrop:102",
-    "couponsglobal:48778",
-    "francecp:418",
-    "couponsglobal:48780",
-    "francecp:419",
-    "couponsglobal:48779",
     "alifrdrop:103",
-    "francecp:420",
-    "megaphonna:8218",
-    "francecp:414",
-    "francecp:416",
-    "francecp:417",
-    "couponsglobal:48776",
-    "couponsglobal:48767",
-    "megaphonna:8222",
-    "francecp:413",
-    "megaphonna:8219",
-    "francecp:415",
-    "alifrdrop:104",
-    "couponsglobal:48772",
-    "couponsglobal:48773",
-    "couponsglobal:48770",
-    "couponsglobal:48775",
     "couponsglobal:48765",
-    "megaphonna:8216",
+    "megaphonna:8224",
+    "couponsglobal:48778",
+    "megaphonna:8219",
     "megaphonna:8220",
+    "alifrdrop:102",
+    "megaphonna:8221",
+    "francecp:415",
+    "megaphonna:8217",
+    "francecp:419",
+    "couponsglobal:48770",
+    "couponsglobal:48773",
+    "megaphonna:8222",
+    "couponsglobal:48780",
+    "francecp:417",
+    "couponsglobal:48771",
+    "couponsglobal:48768",
+    "couponsglobal:48774",
+    "couponsglobal:48779",
+    "megaphonna:8216",
+    "couponsglobal:48776",
+    "lodydeals:45443",
+    "couponsglobal:48775",
+    "megaphonna:8230",
+    "couponsglobal:48772",
+    "francecp:413",
+    "francecp:414",
     "megaphonna:8231",
+    "couponsglobal:48767",
+    "francecp:418",
+    "alifrdrop:106",
     "alifrdrop:105",
-    "megaphonna:8221"
+    "megaphonna:8225",
+    "megaphonna:8218",
+    "couponsglobal:48769",
+    "francecp:416",
+    "couponsglobal:48777",
+    "couponsglobal:48766",
+    "megaphonna:8223",
+    "alifrdrop:104",
+    "francecp:420"
   ],
   "published_product_ids": [
-    "1005011938407661",
-    "1005012218291528",
-    "1005012541048117",
-    "1005012155835323",
+    "1005012589045044",
     "1005009977303549",
     "1005012540990578",
-    "1005012589045044"
+    "1005012155835323",
+    "1005011938407661",
+    "1005012541048117",
+    "1005012218291528"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -228,6 +232,30 @@
       "title": "Realme 14 Pro Plus +   (8/256)",
       "price_eur": 270.48,
       "channel_msg_id": 60
+    },
+    "1005012816171978": {
+      "timestamp": 1791048650.590423,
+      "title": "VIVO Y600 PRO (8/128)",
+      "price_eur": 251.53,
+      "channel_msg_id": 61
+    },
+    "1005012574108028": {
+      "timestamp": 1791048657.542027,
+      "title": "HONOR  X80 PRO MAX (8/128)",
+      "price_eur": 256.77,
+      "channel_msg_id": 62
+    },
+    "1005012922578845": {
+      "timestamp": 1791048664.718756,
+      "title": "REALME 15 5G (12/256)",
+      "price_eur": 197.71,
+      "channel_msg_id": 63
+    },
+    "1005007275142457": {
+      "timestamp": 1791048672.390087,
+      "title": "Attack Shark X3 26000DPI Wireless",
+      "price_eur": 21.55,
+      "channel_msg_id": 64
     }
   },
   "monitored_channels": {
@@ -246,13 +274,17 @@
     "megaphonna": {
       "last_message_id": 8231,
       "last_check_time": 1791046109.524443
+    },
+    "lodydeals": {
+      "last_message_id": 45443,
+      "last_check_time": 1791048674.3921647
     }
   },
-  "last_run_time": 1791048372.6479592,
+  "last_run_time": 1791048674.392299,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001"
   ],
-  "last_deal_post_time": 1791048372.64796,
+  "last_deal_post_time": 1791048674.3923,
   "daily_roundup_history": {
     "2026-10-02": {
       "timestamp": 1790976075.00982,
