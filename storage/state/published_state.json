@@ -128,7 +128,9 @@
     "1005007027334636",
     "1005006727600702",
     "1005009916278058",
-    "1005009719082543"
+    "1005009719082543",
+    "1005008720862916",
+    "1005006436971986"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -263,7 +265,9 @@
     "1005007027334636": 1791026466.6956959,
     "1005006727600702": 1791027043.7332833,
     "1005009916278058": 1791027049.3509357,
-    "1005009719082543": 1791027355.6595695
+    "1005009719082543": 1791027355.6595695,
+    "1005008720862916": 1791027941.9208312,
+    "1005006436971986": 1791027947.9506829
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -394,7 +398,9 @@
     "3 Layers Shaker Protein",
     "Shaking Cup Fitness Sports",
     "HTC NE79 TWS Bluetooth 6.0",
-    "P50 LED Flashlight"
+    "P50 LED Flashlight",
+    "Original Samsung Charger 45W",
+    "FENVI FV-2.5G PCIE Network Card"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -528,7 +534,9 @@
     "3 Layers Shaker Protein": 1791027043.7332833,
     "Shaking Cup Fitness Sports": 1791027049.3509357,
     "HTC NE79 TWS Bluetooth 6.0": 1791027348.2517543,
-    "P50 LED Flashlight": 1791027355.6595695
+    "P50 LED Flashlight": 1791027355.6595695,
+    "Original Samsung Charger 45W": 1791027941.9208312,
+    "FENVI FV-2.5G PCIE Network Card": 1791027947.9506829
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -852,27 +860,29 @@
     "aniscoupons:32719",
     "lodydeals:45440",
     "megaphonna:8224",
-    "aniscoupons:32720"
+    "aniscoupons:32720",
+    "lodydeals:45441",
+    "bnddeals:50804"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791027656.0225317,
+  "last_run_time": 1791027947.9506829,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32720,
-      "last_check_time": 1791027661.4433444
+      "last_check_time": 1791027950.852921
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45440,
-      "last_check_time": 1791027647.5242274
+      "last_message_id": 45441,
+      "last_check_time": 1791027943.9331436
     },
     "bnddeals": {
-      "last_message_id": 50803,
-      "last_check_time": 1791027648.6660056
+      "last_message_id": 50804,
+      "last_check_time": 1791027949.9608965
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -884,11 +894,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791027648.0587888
+      "last_check_time": 1791027944.4106576
     },
     "megaphonna": {
       "last_message_id": 8224,
-      "last_check_time": 1791027658.0325332
+      "last_check_time": 1791027950.5097294
     }
   },
   "published_product_prices": {
@@ -999,7 +1009,9 @@
     "1005012871566388": 6.49,
     "1005006727600702": 5.09,
     "1005009916278058": 4.29,
-    "1005009719082543": 4.09
+    "1005009719082543": 4.09,
+    "1005008720862916": 7.89,
+    "1005006436971986": 13.27
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2451,6 +2463,26 @@
       "price": 279.1,
       "timestamp": 1791027656.0225317,
       "status": "ACTIVE"
+    },
+    "lodydeals:45441": {
+      "channel_msg_id": 476,
+      "product_id": "1005008720862916",
+      "title": "Original Samsung Charger 45W",
+      "channel": "lodydeals",
+      "source_msg_id": 45441,
+      "price": 7.89,
+      "timestamp": 1791027941.9208312,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50804": {
+      "channel_msg_id": 477,
+      "product_id": "1005006436971986",
+      "title": "FENVI FV-2.5G PCIE Network Card",
+      "channel": "bnddeals",
+      "source_msg_id": 50804,
+      "price": 13.27,
+      "timestamp": 1791027947.9506829,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2459,7 +2491,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791027656.025985,
+    "last_deal_post_time": 1791027947.954241,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2576,7 +2608,9 @@
     "1005012871566388": "lodydeals",
     "1005006727600702": "lodydeals",
     "1005009916278058": "lodydeals",
-    "1005009719082543": "lodydeals"
+    "1005009719082543": "lodydeals",
+    "1005008720862916": "lodydeals",
+    "1005006436971986": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2683,7 +2717,9 @@
     "3 Layers Shaker Protein": "lodydeals",
     "Shaking Cup Fitness Sports": "lodydeals",
     "HTC NE79 TWS Bluetooth 6.0": "lodydeals",
-    "P50 LED Flashlight": "lodydeals"
+    "P50 LED Flashlight": "lodydeals",
+    "Original Samsung Charger 45W": "lodydeals",
+    "FENVI FV-2.5G PCIE Network Card": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
