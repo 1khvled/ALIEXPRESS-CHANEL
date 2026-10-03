@@ -139,7 +139,8 @@
     "1005006443158717",
     "1005012492244291",
     "1005008522983211",
-    "1005011734677486"
+    "1005011734677486",
+    "1005008414973716"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -285,7 +286,8 @@
     "1005006443158717": 1791032177.1222703,
     "1005012492244291": 1791035151.8836284,
     "1005008522983211": 1791035458.4959302,
-    "1005011734677486": 1791038145.1521833
+    "1005011734677486": 1791038145.1521833,
+    "1005008414973716": 1791038753.5097415
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -433,7 +435,8 @@
     "ONEPLUS TURBO 6X 5G",
     "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem",
     "️ POCO X6 Pro (12/256)",
-    "LENOVO LE257"
+    "LENOVO LE257",
+    "Lenovo XT53"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -584,7 +587,8 @@
     "ONEPLUS TURBO 6X 5G": 1791035151.8836284,
     "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": 1791035458.4959302,
     "️ POCO X6 Pro (12/256)": 1791037857.3485136,
-    "LENOVO LE257": 1791038145.1521833
+    "LENOVO LE257": 1791038145.1521833,
+    "Lenovo XT53": 1791038753.5097415
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -944,15 +948,17 @@
     "bnddeals:50805",
     "megaphonna:8228",
     "bnddeals:50806",
-    "aniscoupons:32724"
+    "aniscoupons:32724",
+    "bnddeals:50807",
+    "bnddeals:50808"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791038145.1521833,
+  "last_run_time": 1791038753.5097415,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32724,
-      "last_check_time": 1791038450.238941
+      "last_check_time": 1791038757.7031724
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -960,11 +966,11 @@
     },
     "lodydeals": {
       "last_message_id": 45445,
-      "last_check_time": 1791038448.4167287
+      "last_check_time": 1791038744.8599105
     },
     "bnddeals": {
-      "last_message_id": 50806,
-      "last_check_time": 1791038449.458073
+      "last_message_id": 50808,
+      "last_check_time": 1791038756.6351628
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -976,15 +982,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791038448.7671487
+      "last_check_time": 1791038745.2234938
     },
     "megaphonna": {
       "last_message_id": 8228,
-      "last_check_time": 1791038449.844858
+      "last_check_time": 1791038757.3034005
     },
     "couponsglobal": {
       "last_message_id": 48779,
-      "last_check_time": 1791038450.8743722
+      "last_check_time": 1791038758.361639
     }
   },
   "published_product_prices": {
@@ -1106,7 +1112,8 @@
     "1005006443158717": 6.42,
     "1005012492244291": 230.0,
     "1005008522983211": 15.6,
-    "1005011734677486": 13.8
+    "1005011734677486": 13.8,
+    "1005008414973716": 15.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2748,6 +2755,16 @@
       "price": 13.8,
       "timestamp": 1791038145.1521833,
       "status": "ACTIVE"
+    },
+    "bnddeals:50807": {
+      "channel_msg_id": 495,
+      "product_id": "1005008414973716",
+      "title": "Lenovo XT53",
+      "channel": "bnddeals",
+      "source_msg_id": 50807,
+      "price": 15.6,
+      "timestamp": 1791038753.5097415,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2756,7 +2773,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791038145.1561027,
+    "last_deal_post_time": 1791038753.5134697,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2885,7 +2902,8 @@
     "1005006443158717": "couponsglobal",
     "1005012492244291": "megaphonna",
     "1005008522983211": "aniscoupons",
-    "1005011734677486": "bnddeals"
+    "1005011734677486": "bnddeals",
+    "1005008414973716": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3009,7 +3027,8 @@
     "ONEPLUS TURBO 6X 5G": "megaphonna",
     "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": "aniscoupons",
     "️ POCO X6 Pro (12/256)": "megaphonna",
-    "LENOVO LE257": "bnddeals"
+    "LENOVO LE257": "bnddeals",
+    "Lenovo XT53": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
