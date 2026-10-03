@@ -190,7 +190,7 @@
     "1005005648888450": 1790941186.791633,
     "1005006117094928": 1790941202.9035249,
     "1005006603602562": 1790941207.5310047,
-    "1005010721042860": 1790941214.6756065,
+    "1005010721042860": 1791042962.9882953,
     "1005009517247552": 1790941221.8823678,
     "1005012191191893": 1790941226.7537792,
     "1005012968221708": 1790941233.5893936,
@@ -202,7 +202,7 @@
     "1005009281115306": 1790943648.855101,
     "1005011797801269": 1790943656.257167,
     "1005007168829266": 1790973945.5080817,
-    "1005012406142215": 1790943705.796801,
+    "1005012406142215": 1791042955.9414852,
     "1005008390562391": 1790943710.6779277,
     "1005007345398413": 1790943717.3545928,
     "1005012504076921": 1791035451.2154183,
@@ -436,7 +436,9 @@
     "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem",
     "️ POCO X6 Pro (12/256)",
     "LENOVO LE257",
-    "Lenovo XT53"
+    "Lenovo XT53",
+    "HONOR WIN TURBO 12/256GB",
+    "HONOR POWER 2 (12/256)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -588,7 +590,9 @@
     "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": 1791035458.4959302,
     "️ POCO X6 Pro (12/256)": 1791037857.3485136,
     "LENOVO LE257": 1791038145.1521833,
-    "Lenovo XT53": 1791038753.5097415
+    "Lenovo XT53": 1791038753.5097415,
+    "HONOR WIN TURBO 12/256GB": 1791042955.9414852,
+    "HONOR POWER 2 (12/256)": 1791042962.9882953
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -954,15 +958,17 @@
     "aniscoupons:32725",
     "couponsglobal:48780",
     "bnddeals:50809",
-    "megaphonna:8229"
+    "megaphonna:8229",
+    "megaphonna:8230",
+    "megaphonna:8231"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791042354.706192,
+  "last_run_time": 1791042962.9882953,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32725,
-      "last_check_time": 1791042638.824905
+      "last_check_time": 1791042965.6613731
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -970,11 +976,11 @@
     },
     "lodydeals": {
       "last_message_id": 45445,
-      "last_check_time": 1791042637.142387
+      "last_check_time": 1791042948.3846362
     },
     "bnddeals": {
       "last_message_id": 50809,
-      "last_check_time": 1791042638.1505775
+      "last_check_time": 1791042949.4453604
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -986,15 +992,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791042637.4692044
+      "last_check_time": 1791042948.7478158
     },
     "megaphonna": {
-      "last_message_id": 8229,
-      "last_check_time": 1791042638.4817903
+      "last_message_id": 8231,
+      "last_check_time": 1791042964.998932
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791042639.3709013
+      "last_check_time": 1791042966.33594
     }
   },
   "published_product_prices": {
@@ -1042,7 +1048,7 @@
     "1005010178295650": 4.62,
     "1005006117094928": 32.2,
     "1005006603602562": 181.0,
-    "1005010721042860": 376.0,
+    "1005010721042860": 376.5,
     "1005009517247552": 236.0,
     "1005012191191893": 224.0,
     "1005012968221708": 22.74,
@@ -2779,6 +2785,26 @@
       "price": 162.4,
       "timestamp": 1791042354.706192,
       "status": "ACTIVE"
+    },
+    "megaphonna:8230": {
+      "channel_msg_id": 497,
+      "product_id": "1005012406142215",
+      "title": "HONOR WIN TURBO 12/256GB",
+      "channel": "megaphonna",
+      "source_msg_id": 8230,
+      "price": 393.0,
+      "timestamp": 1791042955.9414852,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8231": {
+      "channel_msg_id": 498,
+      "product_id": "1005010721042860",
+      "title": "HONOR POWER 2 (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8231,
+      "price": 376.5,
+      "timestamp": 1791042962.9882953,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2787,7 +2813,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791042354.7100437,
+    "last_deal_post_time": 1791042962.992152,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2810,7 +2836,7 @@
     "1005010178295650": "couponsglobal",
     "1005006117094928": "zedstoreonline",
     "1005006603602562": "zedstoreonline",
-    "1005010721042860": "zedstoreonline",
+    "1005010721042860": "megaphonna",
     "1005009517247552": "zedstoreonline",
     "1005012191191893": "zedstoreonline",
     "1005012968221708": "ecksdeal",
@@ -2825,7 +2851,7 @@
     "1005007168829266": "aniscoupons",
     "1005008880082336": "zedstoreonline",
     "1005010453516983": "aniscoupons",
-    "1005012406142215": "bnddeals",
+    "1005012406142215": "megaphonna",
     "1005008390562391": "bnddeals",
     "1005007345398413": "bnddeals",
     "1005012504076921": "megaphonna",
@@ -3042,7 +3068,9 @@
     "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": "aniscoupons",
     "️ POCO X6 Pro (12/256)": "megaphonna",
     "LENOVO LE257": "bnddeals",
-    "Lenovo XT53": "bnddeals"
+    "Lenovo XT53": "bnddeals",
+    "HONOR WIN TURBO 12/256GB": "megaphonna",
+    "HONOR POWER 2 (12/256)": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
