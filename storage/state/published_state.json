@@ -189,7 +189,7 @@
     "9998883497": 1790943497.723828,
     "9998883531": 1790943531.551938,
     "1005010111014453": 1790943633.9774187,
-    "1005009828161174": 1790943640.1460688,
+    "1005009828161174": 1791031550.2120771,
     "1005009281115306": 1790943648.855101,
     "1005011797801269": 1790943656.257167,
     "1005007168829266": 1790973945.5080817,
@@ -235,7 +235,7 @@
     "1005005652871847": 1790976654.120254,
     "1005012554205120": 1790971850.2217886,
     "1005008901941749": 1790973051.970508,
-    "1005010178295650": 1790973057.7979915,
+    "1005010178295650": 1791031559.2102907,
     "1005006861002512": 1790974856.4783835,
     "1005012285327063": 1791014763.6830645,
     "1005006581583862": 1791013842.0461159,
@@ -404,7 +404,9 @@
     "Original Samsung Charger 45W",
     "FENVI FV-2.5G PCIE Network Card",
     "Attack Shark X3 26000DPI Wireless",
-    "Attack Shark L80 Tri-mode Gaming Headset Lightweight 180g 5.1 Channel"
+    "Attack Shark L80 Tri-mode Gaming Headset Lightweight 180g 5.1 Channel",
+    "CURREN 8455 Men's Fashion Quartz Watch",
+    "Monster MQT52 TWS Wireless Gaming Headset Bluetooth"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -542,7 +544,9 @@
     "Original Samsung Charger 45W": 1791027941.9208312,
     "FENVI FV-2.5G PCIE Network Card": 1791027947.9506829,
     "Attack Shark X3 26000DPI Wireless": 1791029447.177805,
-    "Attack Shark L80 Tri-mode Gaming Headset Lightweight 180g 5.1 Channel": 1791030941.0497417
+    "Attack Shark L80 Tri-mode Gaming Headset Lightweight 180g 5.1 Channel": 1791030941.0497417,
+    "CURREN 8455 Men's Fashion Quartz Watch": 1791031550.2120771,
+    "Monster MQT52 TWS Wireless Gaming Headset Bluetooth": 1791031559.2102907
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -872,15 +876,21 @@
     "lodydeals:45442",
     "lodydeals:45443",
     "aniscoupons:32721",
-    "lodydeals:45444"
+    "lodydeals:45444",
+    "couponsglobal:48760",
+    "couponsglobal:48761",
+    "couponsglobal:48762",
+    "couponsglobal:48763",
+    "couponsglobal:48764",
+    "couponsglobal:48765"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791030941.0497417,
+  "last_run_time": 1791031559.2102907,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32721,
-      "last_check_time": 1791031234.483782
+      "last_check_time": 1791031539.354899
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -888,11 +898,11 @@
     },
     "lodydeals": {
       "last_message_id": 45444,
-      "last_check_time": 1791031232.9638267
+      "last_check_time": 1791031537.8007038
     },
     "bnddeals": {
       "last_message_id": 50804,
-      "last_check_time": 1791031233.82686
+      "last_check_time": 1791031538.687011
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -904,11 +914,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791031233.264069
+      "last_check_time": 1791031538.111022
     },
     "megaphonna": {
       "last_message_id": 8224,
-      "last_check_time": 1791031234.126411
+      "last_check_time": 1791031539.0039134
+    },
+    "couponsglobal": {
+      "last_message_id": 48779,
+      "last_check_time": 1791031565.9974825
     }
   },
   "published_product_prices": {
@@ -953,7 +967,7 @@
     "1005012184442621": 12.35,
     "1005006631309573": 2.55,
     "1005005648888450": 10.09,
-    "1005010178295650": 13.87,
+    "1005010178295650": 4.62,
     "1005006117094928": 32.2,
     "1005006603602562": 181.0,
     "1005010721042860": 376.0,
@@ -961,7 +975,7 @@
     "1005012191191893": 224.0,
     "1005012968221708": 22.74,
     "1005010111014453": 6.09,
-    "1005009828161174": 8.29,
+    "1005009828161174": 7.62,
     "1005009281115306": 17.95,
     "1005011797801269": 55.78,
     "1005007168829266": 4.19,
@@ -2514,6 +2528,26 @@
       "price": 16.22,
       "timestamp": 1791030941.0497417,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48762": {
+      "channel_msg_id": 480,
+      "product_id": "1005009828161174",
+      "title": "CURREN 8455 Men's Fashion Quartz Watch",
+      "channel": "couponsglobal",
+      "source_msg_id": 48762,
+      "price": 7.62,
+      "timestamp": 1791031550.2120771,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48764": {
+      "channel_msg_id": 481,
+      "product_id": "1005010178295650",
+      "title": "Monster MQT52 TWS Wireless Gaming Headset Bluetooth",
+      "channel": "couponsglobal",
+      "source_msg_id": 48764,
+      "price": 4.62,
+      "timestamp": 1791031559.2102907,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2522,7 +2556,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791030941.0533886,
+    "last_deal_post_time": 1791031559.213957,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2542,7 +2576,7 @@
     "1005012184442621": "lodydeals",
     "1005006631309573": "lodydeals",
     "1005005648888450": "lodydeals",
-    "1005010178295650": "lodydeals",
+    "1005010178295650": "couponsglobal",
     "1005006117094928": "zedstoreonline",
     "1005006603602562": "zedstoreonline",
     "1005010721042860": "zedstoreonline",
@@ -2553,7 +2587,7 @@
     "9998883497": "test_channel",
     "9998883531": "test_channel",
     "1005010111014453": "lodydeals",
-    "1005009828161174": "lodydeals",
+    "1005009828161174": "couponsglobal",
     "1005009281115306": "lodydeals",
     "1005011797801269": "lodydeals",
     "1005012973772517": "zedstoreonline",
@@ -2754,7 +2788,9 @@
     "Original Samsung Charger 45W": "lodydeals",
     "FENVI FV-2.5G PCIE Network Card": "bnddeals",
     "Attack Shark X3 26000DPI Wireless": "lodydeals",
-    "Attack Shark L80 Tri-mode Gaming Headset Lightweight 180g 5.1 Channel": "lodydeals"
+    "Attack Shark L80 Tri-mode Gaming Headset Lightweight 180g 5.1 Channel": "lodydeals",
+    "CURREN 8455 Men's Fashion Quartz Watch": "couponsglobal",
+    "Monster MQT52 TWS Wireless Gaming Headset Bluetooth": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
