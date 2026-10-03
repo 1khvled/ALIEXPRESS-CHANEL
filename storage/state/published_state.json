@@ -116,7 +116,8 @@
     "1005010453516983",
     "1005008554596598",
     "1005008776714223",
-    "1005012925826589"
+    "1005012925826589",
+    "1005010306498953"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -239,7 +240,8 @@
     "1005010453516983": 1791015953.484505,
     "1005008554596598": 1791017145.537471,
     "1005008776714223": 1791018047.9604976,
-    "1005012925826589": 1791019854.2427852
+    "1005012925826589": 1791019854.2427852,
+    "1005010306498953": 1791021345.213176
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -356,7 +358,8 @@
     "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery",
     "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz",
     "CUSU 512GB",
-    "REALME P3 5G (8/256)"
+    "REALME P3 5G (8/256)",
+    "Toocki USB-C 60W Cable"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -476,7 +479,8 @@
     "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": 1791015953.484505,
     "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz": 1791017145.537471,
     "CUSU 512GB": 1791018047.9604976,
-    "REALME P3 5G (8/256)": 1791019854.2427852
+    "REALME P3 5G (8/256)": 1791019854.2427852,
+    "Toocki USB-C 60W Cable": 1791021345.213176
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -761,27 +765,28 @@
     "megaphonna:8210",
     "megaphonna:8211",
     "megaphonna:8212",
-    "megaphonna:8213"
+    "megaphonna:8213",
+    "lodydeals:45420"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791019861.3685746,
+  "last_run_time": 1791021345.213176,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32713,
-      "last_check_time": 1791021050.361068
+      "last_check_time": 1791021349.013375
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45419,
-      "last_check_time": 1791021048.3562553
+      "last_message_id": 45420,
+      "last_check_time": 1791021347.2244387
     },
     "bnddeals": {
       "last_message_id": 50803,
-      "last_check_time": 1791021049.5433981
+      "last_check_time": 1791021348.3246064
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -793,11 +798,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791021048.7393558
+      "last_check_time": 1791021347.7189186
     },
     "megaphonna": {
       "last_message_id": 8213,
-      "last_check_time": 1791021049.9428189
+      "last_check_time": 1791021348.6657248
     }
   },
   "published_product_prices": {
@@ -897,7 +902,8 @@
     "1005010470699571": 24.56,
     "1005012741634118": 29.0,
     "1005008554596598": 15.4,
-    "1005008776714223": 47.6
+    "1005008776714223": 47.6,
+    "1005010306498953": 1.46
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2159,6 +2165,16 @@
       "price": 214.9,
       "timestamp": 1791019861.3685746,
       "status": "ACTIVE"
+    },
+    "lodydeals:45420": {
+      "channel_msg_id": 457,
+      "product_id": "1005010306498953",
+      "title": "Toocki USB-C 60W Cable",
+      "channel": "lodydeals",
+      "source_msg_id": 45420,
+      "price": 1.46,
+      "timestamp": 1791021345.213176,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2167,7 +2183,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791019861.3721535,
+    "last_deal_post_time": 1791021345.2164617,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2273,7 +2289,8 @@
     "1005010470699571": "aniscoupons",
     "1005012741634118": "aniscoupons",
     "1005008554596598": "bnddeals",
-    "1005008776714223": "aniscoupons"
+    "1005008776714223": "aniscoupons",
+    "1005010306498953": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2367,7 +2384,8 @@
     "HAYLOU FlowLoop S33": "aniscoupons",
     "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": "aniscoupons",
     "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz": "bnddeals",
-    "CUSU 512GB": "aniscoupons"
+    "CUSU 512GB": "aniscoupons",
+    "Toocki USB-C 60W Cable": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
