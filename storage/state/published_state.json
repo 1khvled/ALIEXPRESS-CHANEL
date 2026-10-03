@@ -138,7 +138,8 @@
     "1005008144734940",
     "1005006443158717",
     "1005012492244291",
-    "1005008522983211"
+    "1005008522983211",
+    "1005011734677486"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -283,7 +284,8 @@
     "1005008144734940": 1791032158.6801872,
     "1005006443158717": 1791032177.1222703,
     "1005012492244291": 1791035151.8836284,
-    "1005008522983211": 1791035458.4959302
+    "1005008522983211": 1791035458.4959302,
+    "1005011734677486": 1791038145.1521833
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -430,7 +432,8 @@
     "Men’s Oxford Fabric Sling Crossbody Bag",
     "ONEPLUS TURBO 6X 5G",
     "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem",
-    "️ POCO X6 Pro (12/256)"
+    "️ POCO X6 Pro (12/256)",
+    "LENOVO LE257"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -580,7 +583,8 @@
     "Men’s Oxford Fabric Sling Crossbody Bag": 1791033345.3970714,
     "ONEPLUS TURBO 6X 5G": 1791035151.8836284,
     "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": 1791035458.4959302,
-    "️ POCO X6 Pro (12/256)": 1791037857.3485136
+    "️ POCO X6 Pro (12/256)": 1791037857.3485136,
+    "LENOVO LE257": 1791038145.1521833
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -938,15 +942,17 @@
     "megaphonna:8227",
     "aniscoupons:32723",
     "bnddeals:50805",
-    "megaphonna:8228"
+    "megaphonna:8228",
+    "bnddeals:50806",
+    "aniscoupons:32724"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791037857.3485136,
+  "last_run_time": 1791038145.1521833,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32723,
-      "last_check_time": 1791037860.0243878
+      "last_message_id": 32724,
+      "last_check_time": 1791038150.858763
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -954,11 +960,11 @@
     },
     "lodydeals": {
       "last_message_id": 45445,
-      "last_check_time": 1791037846.728467
+      "last_check_time": 1791038138.369873
     },
     "bnddeals": {
-      "last_message_id": 50805,
-      "last_check_time": 1791037851.6280518
+      "last_message_id": 50806,
+      "last_check_time": 1791038147.1647997
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -970,15 +976,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791037847.1200705
+      "last_check_time": 1791038138.7074437
     },
     "megaphonna": {
       "last_message_id": 8228,
-      "last_check_time": 1791037859.360985
+      "last_check_time": 1791038147.7460492
     },
     "couponsglobal": {
       "last_message_id": 48779,
-      "last_check_time": 1791037860.6979556
+      "last_check_time": 1791038151.4566824
     }
   },
   "published_product_prices": {
@@ -1099,7 +1105,8 @@
     "1005008144734940": 5.23,
     "1005006443158717": 6.42,
     "1005012492244291": 230.0,
-    "1005008522983211": 15.6
+    "1005008522983211": 15.6,
+    "1005011734677486": 13.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2731,6 +2738,16 @@
       "price": 242.7,
       "timestamp": 1791037857.3485136,
       "status": "ACTIVE"
+    },
+    "bnddeals:50806": {
+      "channel_msg_id": 494,
+      "product_id": "1005011734677486",
+      "title": "LENOVO LE257",
+      "channel": "bnddeals",
+      "source_msg_id": 50806,
+      "price": 13.8,
+      "timestamp": 1791038145.1521833,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2739,7 +2756,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791037857.3523645,
+    "last_deal_post_time": 1791038145.1561027,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2867,7 +2884,8 @@
     "1005008144734940": "couponsglobal",
     "1005006443158717": "couponsglobal",
     "1005012492244291": "megaphonna",
-    "1005008522983211": "aniscoupons"
+    "1005008522983211": "aniscoupons",
+    "1005011734677486": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2990,7 +3008,8 @@
     "Men’s Oxford Fabric Sling Crossbody Bag": "aniscoupons",
     "ONEPLUS TURBO 6X 5G": "megaphonna",
     "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": "aniscoupons",
-    "️ POCO X6 Pro (12/256)": "megaphonna"
+    "️ POCO X6 Pro (12/256)": "megaphonna",
+    "LENOVO LE257": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
