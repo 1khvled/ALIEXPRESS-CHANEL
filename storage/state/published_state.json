@@ -141,7 +141,8 @@
     "1005008522983211",
     "1005011734677486",
     "1005008414973716",
-    "1005010706783496"
+    "1005010706783496",
+    "1005012826813261"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -289,7 +290,8 @@
     "1005008522983211": 1791035458.4959302,
     "1005011734677486": 1791038145.1521833,
     "1005008414973716": 1791038753.5097415,
-    "1005010706783496": 1791043842.6639822
+    "1005010706783496": 1791043842.6639822,
+    "1005012826813261": 1791045040.5964694
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -441,7 +443,8 @@
     "Lenovo XT53",
     "HONOR WIN TURBO 12/256GB",
     "HONOR POWER 2 (12/256)",
-    "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light"
+    "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light",
+    "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -596,7 +599,8 @@
     "Lenovo XT53": 1791038753.5097415,
     "HONOR WIN TURBO 12/256GB": 1791042955.9414852,
     "HONOR POWER 2 (12/256)": 1791042962.9882953,
-    "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light": 1791043842.6639822
+    "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light": 1791043842.6639822,
+    "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": 1791045040.5964694
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -967,15 +971,16 @@
     "megaphonna:8231",
     "aniscoupons:32726",
     "bnddeals:50810",
-    "megaphonna:8232"
+    "megaphonna:8232",
+    "aniscoupons:32727"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791043842.6639822,
+  "last_run_time": 1791045040.5964694,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32726,
-      "last_check_time": 1791044743.1100566
+      "last_message_id": 32727,
+      "last_check_time": 1791045042.6092975
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -983,11 +988,11 @@
     },
     "lodydeals": {
       "last_message_id": 45445,
-      "last_check_time": 1791044741.3750837
+      "last_check_time": 1791045035.3330026
     },
     "bnddeals": {
       "last_message_id": 50810,
-      "last_check_time": 1791044742.4082456
+      "last_check_time": 1791045036.2721562
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -999,15 +1004,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791044741.7282035
+      "last_check_time": 1791045035.6397674
     },
     "megaphonna": {
       "last_message_id": 8232,
-      "last_check_time": 1791044742.7291086
+      "last_check_time": 1791045036.5880995
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791044743.618725
+      "last_check_time": 1791045043.3724058
     }
   },
   "published_product_prices": {
@@ -1131,7 +1136,8 @@
     "1005008522983211": 15.6,
     "1005011734677486": 13.8,
     "1005008414973716": 15.6,
-    "1005010706783496": 16.2
+    "1005010706783496": 16.2,
+    "1005012826813261": 14.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2833,6 +2839,16 @@
       "price": 16.2,
       "timestamp": 1791043842.6639822,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32727": {
+      "channel_msg_id": 501,
+      "product_id": "1005012826813261",
+      "title": "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC",
+      "channel": "aniscoupons",
+      "source_msg_id": 32727,
+      "price": 14.0,
+      "timestamp": 1791045040.5964694,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2841,7 +2857,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791043842.667941,
+    "last_deal_post_time": 1791045040.6004143,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2972,7 +2988,8 @@
     "1005008522983211": "aniscoupons",
     "1005011734677486": "bnddeals",
     "1005008414973716": "bnddeals",
-    "1005010706783496": "bnddeals"
+    "1005010706783496": "bnddeals",
+    "1005012826813261": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3100,7 +3117,8 @@
     "Lenovo XT53": "bnddeals",
     "HONOR WIN TURBO 12/256GB": "megaphonna",
     "HONOR POWER 2 (12/256)": "megaphonna",
-    "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light": "bnddeals"
+    "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light": "bnddeals",
+    "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
