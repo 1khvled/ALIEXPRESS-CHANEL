@@ -150,7 +150,8 @@
     "1005006367419820",
     "1005013046831062",
     "1005006974721332",
-    "1005010266413614"
+    "1005010266413614",
+    "1005009497821240"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -307,7 +308,8 @@
     "1005006367419820": 1791056153.3979695,
     "1005013046831062": 1791056447.2532988,
     "1005006974721332": 1791056453.5992196,
-    "1005010266413614": 1791056463.1366906
+    "1005010266413614": 1791056463.1366906,
+    "1005009497821240": 1791056745.5798366
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -467,7 +469,8 @@
     "Baseus Stylus Pen",
     "46pcs Ratchet Set Kit",
     "TOPK Car Phone Holder",
-    "الهاتف الاكثر طلبا"
+    "الهاتف الاكثر طلبا",
+    "Car Battery Charger LCD Display"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -630,7 +633,8 @@
     "Baseus Stylus Pen": 1791056153.3979695,
     "46pcs Ratchet Set Kit": 1791056447.2532988,
     "TOPK Car Phone Holder": 1791056453.5992196,
-    "الهاتف الاكثر طلبا": 1791056463.1366906
+    "الهاتف الاكثر طلبا": 1791056463.1366906,
+    "Car Battery Charger LCD Display": 1791056745.5798366
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1014,27 +1018,28 @@
     "lodydeals:45450",
     "lodydeals:45451",
     "lodydeals:45452",
-    "aniscoupons:32730"
+    "aniscoupons:32730",
+    "lodydeals:45453"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791056463.1366906,
+  "last_run_time": 1791056745.5798366,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32730,
-      "last_check_time": 1791056465.146021
+      "last_check_time": 1791056749.9476519
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45452,
-      "last_check_time": 1791056455.608691
+      "last_message_id": 45453,
+      "last_check_time": 1791056747.593151
     },
     "bnddeals": {
       "last_message_id": 50810,
-      "last_check_time": 1791056457.0256217
+      "last_check_time": 1791056749.2235427
     },
     "test_channel": {
       "last_message_id": 1791047267,
@@ -1046,15 +1051,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791056456.3924286
+      "last_check_time": 1791056748.108791
     },
     "megaphonna": {
       "last_message_id": 8233,
-      "last_check_time": 1791056457.3978148
+      "last_check_time": 1791056749.5647933
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791056466.2098587
+      "last_check_time": 1791056750.5123668
     }
   },
   "published_product_prices": {
@@ -1186,7 +1191,8 @@
     "1005006367419820": 5.89,
     "1005013046831062": 5.29,
     "1005006974721332": 3.09,
-    "1005010266413614": 295.0
+    "1005010266413614": 295.0,
+    "1005009497821240": 4.69
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2978,6 +2984,16 @@
       "price": 295.0,
       "timestamp": 1791056463.1366906,
       "status": "ACTIVE"
+    },
+    "lodydeals:45453": {
+      "channel_msg_id": 514,
+      "product_id": "1005009497821240",
+      "title": "Car Battery Charger LCD Display",
+      "channel": "lodydeals",
+      "source_msg_id": 45453,
+      "price": 4.69,
+      "timestamp": 1791056745.5798366,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2986,7 +3002,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791056463.1399078,
+    "last_deal_post_time": 1791056745.5840564,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3126,7 +3142,8 @@
     "1005006367419820": "lodydeals",
     "1005013046831062": "lodydeals",
     "1005006974721332": "lodydeals",
-    "1005010266413614": "aniscoupons"
+    "1005010266413614": "aniscoupons",
+    "1005009497821240": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3262,7 +3279,8 @@
     "Baseus Stylus Pen": "lodydeals",
     "46pcs Ratchet Set Kit": "lodydeals",
     "TOPK Car Phone Holder": "lodydeals",
-    "الهاتف الاكثر طلبا": "aniscoupons"
+    "الهاتف الاكثر طلبا": "aniscoupons",
+    "Car Battery Charger LCD Display": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
