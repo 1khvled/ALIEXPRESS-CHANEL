@@ -238,36 +238,79 @@ def classify_deal_category(title: str, text: str = "") -> Optional[str]:
     return None
 
 
-def clean_item_title(raw_title: str, max_chars: int = 50) -> str:
-    """Produces clean, readable title for the bulletin line without slicing words in half."""
-    t = raw_title or "منتج مميز"
-    t = re.sub(r'[\$€].*$', '', t).strip()
+NUMBER_BADGES = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟", "1️⃣1️⃣", "1️⃣2️⃣", "1️⃣3️⃣", "1️⃣4️⃣", "1️⃣5️⃣"]
+
+def clean_product_name_short(raw_title: str, max_chars: int = 32) -> str:
+    """
+    Extracts clean, concise Brand and Model name from an AliExpress title.
+    Transforms verbose SEO spam into sleek titles like 'EasySMX X15' or 'Haylou S40 ANC'.
+    """
+    if not raw_title:
+        return "منتج مميز"
+
+    t = raw_title.strip()
+    # Remove leading emojis and bullet symbols
     t = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:]+', '', t).strip()
-    # Strip long noise words and platform suffixes
+    # Remove prices inside title
+    t = re.sub(r'[\$€].*$', '', t).strip()
+    # Remove store suffixes / watermarks
     t = re.sub(r'(\s*-\s*AliExpress.*$|\s*\|\s*AliExpress.*$)', '', t, flags=re.IGNORECASE).strip()
-    # Strip common noisy marketing words that bloat titles
-    t = re.sub(r'\b(Global\s+Version|Original|Hot\s+Sale|Brand\s+New|Top\s+Selling|202[4-9])\b', '', t, flags=re.IGNORECASE).strip()
-    t = re.sub(r'\s+', ' ', t).strip()
+    # Remove marketing buzzwords
+    t = re.sub(
+        r'\b(Global\s+Version|Original|Hot\s+Sale|Brand\s+New|Top\s+Selling|Official\s+Store|Official|Edition|Newest|Version\s+Globale|202[4-9])\b',
+        '', t, flags=re.IGNORECASE
+    ).strip()
 
-    if len(t) <= max_chars:
-        return t
+    trim_patterns = [
+        r'\b(?:(?:Wireless|PC\s+Gaming|PC|Gaming|Tri-Mode)?\s*(?:Gamepad|Controller|Game\s+Controller|Joystick|Manette))\b.*$',
+        r'\b(?:(?:Wireless|Optical|Wired)?\s*(?:Gaming\s+Mouse|Mouse\s+Gamer|Mouse|Mice))\b.*$',
+        r'\b(?:(?:Mechanical|Gaming|Wireless)?\s*(?:Keyboard|Keyboards|Clavier))\b.*$',
+        r'\b(?:(?:Wireless|Gaming)?\s*(?:Headphones?|Headsets?|Earphones?|Earbuds?|Casque))\b.*$',
+        r'\b(?:Tri-Mode|Dual-Mode|Tri\s+Mode|Dual\s+Mode)\b.*$',
+        r'\b(?:Wireless\s+Bluetooth|Bluetooth\s+[0-9\.]+|Bluetooth)\b.*$',
+        r'\b(?:Hall\s+Effect\b.*$)',
+        r'\b(?:Noise\s+Cancell\w*|50dB|45dB|42dB|40dB|35dB)\b.*$',
+        r'\b(?:with\s+Charging\s+Dock|Charging\s+Dock)\b.*$',
+        r'\b(?:Smartphones?|Smart\s+Phone|Mobile\s+Phone)\b.*$',
+        r'\b(?:Smart\s*Watch|Smart\s*Band)\b.*$',
+        r'\b(?:Internal\s+Solid\s+State|Internal\s+SSD|Solid\s+State\s+Drive)\b.*$',
+        r'\b(?:Fast\s+Charging|GaN\s+Fast\s+Charger|Wall\s+Charger)\b.*$',
+        r'\b(?:Large\s+Desk\s+Mat|Desk\s+Mat|Mousepad|Mouse\s+Pad|Tapis\s+de\s+Souris)\b.*$',
+        r'\b(?:Dynamic\s+Drivers?|Dynamic)\b.*$'
+    ]
+    for pat in trim_patterns:
+        m = re.search(pat, t, flags=re.IGNORECASE)
+        if m and m.start() >= 5:
+            t = t[:m.start()].strip()
+            break
 
-    # Word-boundary truncation: cut at the last space before max_chars
-    truncated = t[:max_chars].rsplit(' ', 1)[0].strip()
-    if len(truncated) < 18:
-        truncated = t[:max_chars].strip()
+    # Strip trailing loose descriptors
+    t = re.sub(r'\b(?:Wireless|PC|SATA\s*\d*|Dynamic)\b\s*$', '', t, flags=re.IGNORECASE).strip()
+    t = t.rstrip(" -,/:;|+")
 
-    # Strip trailing punctuation, hyphens, and dangling prepositions / conjunctions
-    truncated = truncated.rstrip(" -,/:;|")
-    dangling_words = {
-        'with', 'for', 'and', 'to', 'in', 'on', 'of', 'by', 'the', 'a', 'an',
-        'wit', 'fo', 'an', 'مع', 'من', 'في', 'على', 'لـ', 'إلى'
-    }
-    words = truncated.split()
+    dangling_words = {'with', 'for', 'and', 'to', 'in', 'on', 'of', 'by', 'the', 'a', 'an', 'wit', 'fo', 'avec', 'pour', 'et', 'de', 'du', 'en', 'sur', 'dans', 'مع', 'من', 'في', 'على', 'لـ', 'إلى', 'ل'}
+    words = t.split()
     if words and words[-1].lower() in dangling_words:
-        truncated = " ".join(words[:-1]).rstrip(" -,/:;|")
+        t = " ".join(words[:-1]).rstrip(" -,/:;|+")
 
-    return truncated or t[:max_chars].strip()
+    if len(t) > max_chars:
+        words = t.split()
+        shortened = ""
+        for w in words:
+            if len(shortened + " " + w) <= max_chars:
+                shortened = (shortened + " " + w).strip()
+            else:
+                break
+        if len(shortened) >= 6:
+            t = shortened.rstrip(" -,/:;|+")
+        else:
+            t = t[:max_chars].strip()
+
+    return t or raw_title[:max_chars].strip()
+
+def clean_item_title(raw_title: str, max_chars: int = 32) -> str:
+    """Produces clean, readable title for the bulletin line without slicing words in half."""
+    return clean_product_name_short(raw_title, max_chars=max_chars)
 
 def get_deal_dedup_key(product_id: Optional[Any], raw_title: str, msg_id: int) -> str:
     """Builds a unique deduplication key for a product to prevent identical products from appearing twice."""
@@ -360,9 +403,9 @@ def get_recent_published_deals_for_roundup(max_age_hours: float = 24.0) -> List[
 
     return list(collected.values())
 
-def format_deal_line(item: Dict[str, Any], channel_username: str) -> str:
-    """Formats a single product line for the bulletin with both $ and € and post link with RTL stability."""
-    title = item.get("title") or "منتج مميز"
+def format_deal_line(item: Dict[str, Any], channel_username: str, index: int = 1) -> str:
+    """Formats a single product line for the bulletin matching the clean Anis/Lody index style."""
+    title = clean_product_name_short(item.get("title") or "منتج مميز")
     price_val = float(item.get("price") or 0.0)
     eur_rate = float(getattr(settings, "EUR_USD_RATE", 0.92))
     eur_val = price_val * eur_rate
@@ -373,38 +416,42 @@ def format_deal_line(item: Dict[str, Any], channel_username: str) -> str:
         else:
             price_str = f"${price_val:.2f} ({eur_val:.2f}€)"
     else:
-        price_str = "سعر خاص ومخفض 🔥"
+        price_str = "سعر خاص 🔥"
 
-    post_url = item.get("channel_url") or f"https://t.me/{channel_username}/{item['channel_msg_id']}"
-    # Starting line 2 with Arabic 'السعر:' enforces RTL base direction across all Telegram clients
-    return f"▫️ <b>{title}</b>\n   💰 السعر: <b>{price_str}</b> ▫️ <a href=\"{post_url}\">رابط المنشور 👈</a>\n"
+    badge = NUMBER_BADGES[index - 1] if 1 <= index <= len(NUMBER_BADGES) else f"{index}️⃣"
+    clean_ch = channel_username.replace("@", "")
+    post_url = item.get("channel_url") or f"https://t.me/{clean_ch}/{item['channel_msg_id']}"
+    return f"{badge} 🌐 <a href=\"{post_url}\"><b>{title}</b></a> ▫️ <b>{price_str}</b>"
 
 def build_category_bulletin_text(category_name: str, items: List[Dict[str, Any]], channel_username: str) -> Tuple[str, List[Dict[str, Any]]]:
     """
-    Builds the caption for a category bulletin, dynamically fitting items
-    to guarantee the total length strictly never exceeds 980 characters (Telegram photo caption limit: 1024).
+    Builds the caption for a category bulletin matching the sleek Anis/Lody index style.
+    Dynamically fits items to guarantee the total length strictly never exceeds 980 characters (Telegram photo caption limit: 1024).
     """
     cat_config = CATEGORIES_CONFIG.get(category_name, {
         "header": f"📦 <b>تجميعة عروض {category_name} لنهار اليوم 🇩🇿🔥</b>"
     })
+    clean_ch = channel_username.replace("@", "")
 
     header_lines = [
         cat_config["header"],
-        "━━━━━━━━━━━━━━━━━"
+        "",
+        "👈 <b>إضغط على إسم المنتج ليأخذك مباشرة للعرض ⚪️</b>",
+        ""
     ]
     footer_lines = [
+        "",
         "━━━━━━━━━━━━━━━━━",
-        "💡 <i>اضغط على (رابط المنشور) للانتقال مباشرة للعرض في القناة.</i>",
-        "🪙 <b>تخفيض إضافي بالعملات:</b> أرسل رابط أي منتج للبوت (@Alilo07BOT)"
+        "🪙 <b>تخفيض العملات:</b> أرسل رابط أي منتج للبوت (@Alilo07BOT)",
+        f"📢 <b>قناتنا:</b> @{clean_ch}"
     ]
     footer_text = "\n".join(footer_lines)
 
     selected_items: List[Dict[str, Any]] = []
     body_lines: List[str] = []
 
-    for item in items:
-        line = format_deal_line(item, channel_username)
-        # Check total hypothetical caption length
+    for idx, item in enumerate(items, start=1):
+        line = format_deal_line(item, channel_username, index=idx)
         candidate_text = "\n".join(header_lines + body_lines + [line, footer_text])
         if len(candidate_text) > 980:
             break
@@ -417,16 +464,20 @@ def build_category_bulletin_text(category_name: str, items: List[Dict[str, Any]]
 def build_master_daily_roundup_text(deals: List[Dict[str, Any]], channel_username: str) -> Tuple[str, List[Dict[str, Any]]]:
     """
     Builds the Master Daily Roundup when individual categories don't have >= 4 items.
-    Selects top deals across diverse categories.
+    Selects top deals across diverse categories matching the sleek Anis/Lody index style.
     """
+    clean_ch = channel_username.replace("@", "")
     header_lines = [
         "🌙 <b>تجميعة أفضل صفقات وعروض اليوم على AliExpress 🇩🇿🔥</b>",
-        "━━━━━━━━━━━━━━━━━"
+        "",
+        "👈 <b>إضغط على إسم المنتج ليأخذك مباشرة للعرض ⚪️</b>",
+        ""
     ]
     footer_lines = [
+        "",
         "━━━━━━━━━━━━━━━━━",
-        "💡 <i>أبرز صيدات وصفقات نهار اليوم المنشورة في القناة!</i>",
-        "🪙 <b>تخفيض إضافي بالعملات:</b> أرسل رابط أي منتج للبوت (@Alilo07BOT)"
+        "🪙 <b>تخفيض العملات:</b> أرسل رابط أي منتج للبوت (@Alilo07BOT)",
+        f"📢 <b>قناتنا:</b> @{clean_ch}"
     ]
     footer_text = "\n".join(footer_lines)
 
@@ -436,8 +487,8 @@ def build_master_daily_roundup_text(deals: List[Dict[str, Any]], channel_usernam
     # Take deals with valid prices, prioritized
     sorted_deals = sorted(deals, key=lambda x: x.get("price", 0), reverse=True)
 
-    for item in sorted_deals:
-        line = format_deal_line(item, channel_username)
+    for idx, item in enumerate(sorted_deals, start=1):
+        line = format_deal_line(item, channel_username, index=idx)
         candidate_text = "\n".join(header_lines + body_lines + [line, footer_text])
         if len(candidate_text) > 980:
             break

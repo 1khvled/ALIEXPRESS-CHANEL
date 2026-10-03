@@ -145,29 +145,67 @@ def classify_france_deal_category(title: str, text: str = "") -> Optional[str]:
                 return cat_name
     return None
 
-def clean_item_title_fr(raw_title: str, max_chars: int = 55) -> str:
-    """Produces clean, readable French title for the bulletin line without slicing words in half."""
-    t = raw_title or "Bon Plan AliExpress"
-    t = re.sub(r'[\$€].*$', '', t).strip()
+NUMBER_BADGES = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟", "1️⃣1️⃣", "1️⃣2️⃣", "1️⃣3️⃣", "1️⃣4️⃣", "1️⃣5️⃣"]
+
+def clean_item_title_fr(raw_title: str, max_chars: int = 32) -> str:
+    """Produces clean, concise French title (Brand + Model) for the bulletin line."""
+    if not raw_title:
+        return "Bon plan"
+
+    t = raw_title.strip()
     t = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:]+', '', t).strip()
+    t = re.sub(r'[\$€].*$', '', t).strip()
     t = re.sub(r'(\s*-\s*AliExpress.*$|\s*\|\s*AliExpress.*$)', '', t, flags=re.IGNORECASE).strip()
-    t = re.sub(r'\b(Version\s+Globale|Global\s+Version|Original|Hot\s+Sale|Brand\s+New|Top\s+Selling|202[4-9])\b', '', t, flags=re.IGNORECASE).strip()
-    t = re.sub(r'\s+', ' ', t).strip()
+    t = re.sub(
+        r'\b(Version\s+Globale|Global\s+Version|Original|Hot\s+Sale|Brand\s+New|Top\s+Selling|Official\s+Store|Official|Edition|Newest|202[4-9])\b',
+        '', t, flags=re.IGNORECASE
+    ).strip()
 
-    if len(t) <= max_chars:
-        return t
+    trim_patterns = [
+        r'\b(?:(?:Wireless|PC\s+Gaming|PC|Gaming|Tri-Mode)?\s*(?:Gamepad|Controller|Game\s+Controller|Joystick|Manette))\b.*$',
+        r'\b(?:(?:Wireless|Optical|Wired)?\s*(?:Gaming\s+Mouse|Mouse\s+Gamer|Mouse|Mice))\b.*$',
+        r'\b(?:(?:Mechanical|Gaming|Wireless)?\s*(?:Keyboard|Keyboards|Clavier))\b.*$',
+        r'\b(?:(?:Wireless|Gaming)?\s*(?:Headphones?|Headsets?|Earphones?|Earbuds?|Casque))\b.*$',
+        r'\b(?:Tri-Mode|Dual-Mode|Tri\s+Mode|Dual\s+Mode)\b.*$',
+        r'\b(?:Wireless\s+Bluetooth|Bluetooth\s+[0-9\.]+|Bluetooth)\b.*$',
+        r'\b(?:Hall\s+Effect\b.*$)',
+        r'\b(?:Noise\s+Cancell\w*|50dB|45dB|42dB|40dB|35dB)\b.*$',
+        r'\b(?:with\s+Charging\s+Dock|Charging\s+Dock)\b.*$',
+        r'\b(?:Smartphones?|Smart\s+Phone|Mobile\s+Phone)\b.*$',
+        r'\b(?:Smart\s*Watch|Smart\s*Band|Montre\s+Connect\w*)\b.*$',
+        r'\b(?:Internal\s+Solid\s+State|Internal\s+SSD|Solid\s+State\s+Drive)\b.*$',
+        r'\b(?:Fast\s+Charging|GaN\s+Fast\s+Charger|Wall\s+Charger|Chargeur\s+Rapide)\b.*$',
+        r'\b(?:Large\s+Desk\s+Mat|Desk\s+Mat|Mousepad|Mouse\s+Pad|Tapis\s+de\s+Souris)\b.*$',
+        r'\b(?:Dynamic\s+Drivers?|Dynamic)\b.*$'
+    ]
+    for pat in trim_patterns:
+        m = re.search(pat, t, flags=re.IGNORECASE)
+        if m and m.start() >= 5:
+            t = t[:m.start()].strip()
+            break
 
-    truncated = t[:max_chars].rsplit(' ', 1)[0].strip()
-    if len(truncated) < 18:
-        truncated = t[:max_chars].strip()
+    t = re.sub(r'\b(?:Wireless|Sans\s+Fil|PC|SATA\s*\d*|Dynamic)\b\s*$', '', t, flags=re.IGNORECASE).strip()
+    t = t.rstrip(" -,/:;|+")
 
-    truncated = truncated.rstrip(" -,/:;|")
     dangling_words = {'avec', 'pour', 'et', 'de', 'du', 'en', 'sur', 'dans', 'with', 'for', 'and'}
-    words = truncated.split()
+    words = t.split()
     if words and words[-1].lower() in dangling_words:
-        truncated = " ".join(words[:-1]).rstrip(" -,/:;|")
+        t = " ".join(words[:-1]).rstrip(" -,/:;|+")
 
-    return truncated or t[:max_chars].strip()
+    if len(t) > max_chars:
+        words = t.split()
+        shortened = ""
+        for w in words:
+            if len(shortened + " " + w) <= max_chars:
+                shortened = (shortened + " " + w).strip()
+            else:
+                break
+        if len(shortened) >= 6:
+            t = shortened.rstrip(" -,/:;|+")
+        else:
+            t = t[:max_chars].strip()
+
+    return t or raw_title[:max_chars].strip()
 
 def get_france_deal_dedup_key(product_id: Optional[Any], raw_title: str, msg_id: int) -> str:
     """Builds a unique deduplication key for France deals."""
@@ -327,36 +365,40 @@ async def get_recent_france_published_deals(max_age_hours: float = 24.0) -> List
 
     return list(collected.values())
 
-def format_france_deal_line(item: Dict[str, Any], channel_username: str = "francedealsdz") -> str:
-    title = item.get("title") or "Bon plan"
+def format_france_deal_line(item: Dict[str, Any], channel_username: str = "francedealsdz", index: int = 1) -> str:
+    title = clean_item_title_fr(item.get("title") or "Bon plan")
     price_val = float(item.get("price_eur") or 0.0)
-    price_str = f"<b>{price_val:.2f}€</b>" if price_val > 0 else "<b>Prix réduit</b>"
+    price_str = f"<b>{price_val:.2f}€</b>" if price_val > 0 else "<b>Prix réduit 🔥</b>"
+    badge = NUMBER_BADGES[index - 1] if 1 <= index <= len(NUMBER_BADGES) else f"{index}️⃣"
     clean_ch = channel_username.replace("@", "")
     post_url = item.get("channel_url") or f"https://t.me/{clean_ch}/{item['channel_msg_id']}"
-    return f"▫️ <b>{title}</b>\n   💰 Prix : {price_str} ▫️ <a href=\"{post_url}\">Voir le deal ➔</a>\n"
+    return f"{badge} 🌐 <a href=\"{post_url}\"><b>{title}</b></a> ▫️ {price_str}"
 
 def build_france_category_bulletin(category_name: str, items: List[Dict[str, Any]], channel_username: str = "francedealsdz") -> Tuple[str, List[Dict[str, Any]]]:
     cat_config = CATEGORIES_CONFIG_FR.get(category_name, {
         "header": f"📦 <b>Sélection {category_name} du Jour 🇫🇷🔥</b>"
     })
+    clean_ch = channel_username.replace("@", "")
 
     header_lines = [
         cat_config["header"],
-        "━━━━━━━━━━━━━━━━━"
+        "",
+        "👈 <b>Cliquez sur le nom du produit pour accéder à l'offre ⚪️</b>",
+        ""
     ]
     footer_lines = [
+        "",
         "━━━━━━━━━━━━━━━━━",
-        "💡 <i>Cliquez sur (Voir le deal ➔) pour accéder à l'offre sur le canal.</i>",
         "🪙 <b>Réduction pièces (Coins) :</b> @Alilo07BOT",
-        "📢 @francedealsdz"
+        f"📢 @{clean_ch}"
     ]
     footer_text = "\n".join(footer_lines)
 
     selected_items: List[Dict[str, Any]] = []
     body_lines: List[str] = []
 
-    for item in items:
-        line = format_france_deal_line(item, channel_username)
+    for idx, item in enumerate(items, start=1):
+        line = format_france_deal_line(item, channel_username, index=idx)
         cand = "\n".join(header_lines + body_lines + [line, footer_text])
         if len(cand) > 980:
             break
@@ -373,15 +415,18 @@ def format_france_bulletin(category_name: str, items: List[Dict[str, Any]], chan
     return caption
 
 def build_france_master_roundup(deals: List[Dict[str, Any]], channel_username: str) -> Tuple[str, List[Dict[str, Any]]]:
+    clean_ch = channel_username.replace("@", "")
     header_lines = [
         "🌙 <b>Récapitulatif des Meilleurs Bons Plans du Jour 🇫🇷🔥</b>",
-        "━━━━━━━━━━━━━━━━━"
+        "",
+        "👈 <b>Cliquez sur le nom du produit pour accéder à l'offre ⚪️</b>",
+        ""
     ]
     footer_lines = [
+        "",
         "━━━━━━━━━━━━━━━━━",
-        "💡 <i>Les meilleures offres AliExpress sélectionnées aujourd'hui !</i>",
         "🪙 <b>Réduction pièces (Coins) :</b> @Alilo07BOT",
-        "📢 @francedealsdz"
+        f"📢 @{clean_ch}"
     ]
     footer_text = "\n".join(footer_lines)
 
@@ -390,8 +435,8 @@ def build_france_master_roundup(deals: List[Dict[str, Any]], channel_username: s
 
     sorted_deals = sorted(deals, key=lambda x: x.get("price_eur", 0), reverse=True)
 
-    for item in sorted_deals:
-        line = format_france_deal_line(item, channel_username)
+    for idx, item in enumerate(sorted_deals, start=1):
+        line = format_france_deal_line(item, channel_username, index=idx)
         cand = "\n".join(header_lines + body_lines + [line, footer_text])
         if len(cand) > 980:
             break

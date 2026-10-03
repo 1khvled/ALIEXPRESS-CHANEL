@@ -299,15 +299,15 @@ def test_deal_deduplication_keeps_best_and_latest(tmp_path):
         assert htc_deal["price"] == 5.09
 
 def test_format_deal_line_rtl_stability():
-    """Verifies that deal line starts with Arabic 'السعر:' to prevent Telegram BiDi scrambling."""
+    """Verifies that deal line uses clean single-line index layout with clickable title and badge."""
     item = {
         "channel_msg_id": 472,
         "title": "HTC NE79 TWS Bluetooth 6.0",
         "price": 5.09,
         "channel_url": "https://t.me/DzAliexpress0/472"
     }
-    line = format_deal_line(item, "DzAliexpress0")
-    # Verify RTL base paragraph direction marker
-    assert "السعر:" in line
-    assert "💰 السعر: <b>$5.09" in line
-    assert "رابط المنشور 👈" in line
+    line = format_deal_line(item, "DzAliexpress0", index=1)
+    # Verify single-line clickable format with badge
+    assert "1️⃣ 🌐 <a href=" in line
+    assert "HTC NE79 TWS" in line
+    assert "$5.09" in line
