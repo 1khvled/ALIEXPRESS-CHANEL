@@ -159,3 +159,45 @@ async def test_check_and_publish_skips_outside_window():
     with patch("app.publisher.regrouper.is_tajmi3at_time_window", return_value=False):
         res = await check_and_publish_regrouped_bulletins(force=False)
         assert res == []
+
+@pytest.mark.asyncio
+async def test_ensure_active_promo_coupons_pinned_dz(tmp_path):
+    """Verifies that during an active promo, the official coupon post is published and pinned for Algeria."""
+    from app.publisher.promo_notifiers import ensure_active_promo_coupons_pinned
+    test_state = str(tmp_path / "published_state.json")
+    with patch("app.publisher.state_tracker.STATE_FILE_PATH", test_state), \
+         patch("app.publisher.promo_notifiers.send_promo_alert_to_channel", return_value=(True, None, 888)), \
+         patch("httpx.AsyncClient.post") as mock_post:
+        resp = MagicMock()
+        resp.status_code = 200
+        resp.json.return_value = {"ok": True}
+        mock_post.return_value = resp
+
+        # 1. First call: publishes and pins
+        msg_id = await ensure_active_promo_coupons_pinned()
+        assert msg_id == 888
+
+        # 2. Second call during same event: re-verifies pin without re-publishing
+        msg_id_2 = await ensure_active_promo_coupons_pinned()
+        assert msg_id_2 == 888
+
+@pytest.mark.asyncio
+async def test_ensure_active_promo_coupons_pinned_france(tmp_path):
+    """Verifies that during an active promo, the official French coupon post is published and pinned for France."""
+    from app.publisher.promo_notifiers_fr import ensure_france_active_promo_coupons_pinned
+    test_state = tmp_path / "france_published_state.json"
+    with patch("app.publisher.promo_notifiers_fr.FRANCE_STATE_FILE_PATH", str(test_state)), \
+         patch("app.publisher.promo_notifiers_fr.send_france_promo_alert", return_value=(True, None, 777)), \
+         patch("httpx.AsyncClient.post") as mock_post:
+        resp = MagicMock()
+        resp.status_code = 200
+        resp.json.return_value = {"ok": True}
+        mock_post.return_value = resp
+
+        # 1. First call: publishes and pins
+        msg_id = await ensure_france_active_promo_coupons_pinned()
+        assert msg_id == 777
+
+        # 2. Second call during same event: re-verifies pin without re-publishing
+        msg_id_2 = await ensure_france_active_promo_coupons_pinned()
+        assert msg_id_2 == 777

@@ -112,6 +112,15 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     except Exception as e:
         print(f"[!] Expired deals updater check error: {e}")
 
+    # Automated Check: Daily Tajmi3at / Compilations (~10:00 PM Algiers time 21:30-23:45 or forced)
+    try:
+        from app.publisher.regrouper import check_and_publish_regrouped_bulletins
+        bulletins = await check_and_publish_regrouped_bulletins(force=force_tajmi3at)
+        if bulletins:
+            print(f"[TAJMI3AT AUTO-POST] Published {len(bulletins)} daily roundup bulletin(s): {[b['category'] for b in bulletins]}")
+    except Exception as e:
+        print(f"[!] Daily tajmi3at check error: {e}")
+
     # Dynamic Interval & Day/Night Schedule Check (Controlled via Admin Bot & Dashboard)
     from app.publisher.state_tracker import is_deal_posting_due, record_deal_posted_time, is_algerian_peak_hour
     is_due, schedule_msg, active_interval = is_deal_posting_due()
@@ -575,7 +584,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                             if extracted.is_coupon_list and post_msg_id:
                                 try:
                                     bot_tok = settings.TELEGRAM_BOT_TOKEN
-                                    target_ch = settings.TELEGRAM_CHANNEL_ID
+                                    target_ch = settings.TARGET_CHANNEL_ID
                                     async with httpx.AsyncClient(timeout=10.0) as pc:
                                         await pc.post(
                                             f"https://api.telegram.org/bot{bot_tok}/pinChatMessage",

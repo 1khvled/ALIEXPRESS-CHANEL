@@ -293,4 +293,72 @@ async def check_and_auto_post_promo_notifiers(
                     else:
                         logger.error(f"Failed to post promo starting alert: {err}")
 
+    # --- 4. GUARANTEE ACTIVE EVENT COUPON BULLETIN IS ALWAYS PINNED ---
+    try:
+        pinned_msg_id = await ensure_active_promo_coupons_pinned(now, bot_token, channel_id)
+        if pinned_msg_id:
+            results.append({
+                "type": "active_promo_coupons_pinned",
+                "message_id": pinned_msg_id,
+                "status": "pinned"
+            })
+    except Exception as e:
+        logger.warning(f"Error in ensure_active_promo_coupons_pinned: {e}")
+
     return results
+
+async def ensure_active_promo_coupons_pinned(
+    now: Optional[datetime] = None,
+    bot_token: Optional[str] = None,
+    channel_id: Optional[str] = None,
+    force_post: bool = False
+) -> Optional[int]:
+    """
+    Guarantees that during EVERY active promo event (e.g. Choice Day, Mega Brands),
+    an official promo coupon bulletin is published and PINNED at the top of @DzAliexpress0.
+    If already published and pinned for this event, verifies it remains pinned via Telegram API.
+    """
+    if now is None:
+        now = datetime.now(timezone.utc)
+
+    promo = promo_tracker.get_active_promo(now)
+    if not promo:
+        return None
+
+    state = load_persistent_state()
+    pinned_promos = state.get("pinned_promo_events", {})
+    promo_key = f"{promo.name}_{promo.start_date.strftime('%Y%m%d')}"
+
+    existing_msg_id = pinned_promos.get(promo_key)
+    token = bot_token or ADMIN_BOT_TOKEN or TELEGRAM_BOT_TOKEN
+    target = channel_id or TARGET_CHANNEL_ID
+
+    # If already published for this event, re-verify it remains pinned in the channel
+    if existing_msg_id and not force_post:
+        try:
+            api_url = f"https://api.telegram.org/bot{token}"
+            async with httpx.AsyncClient(timeout=10.0) as client:
+                resp = await client.post(
+                    f"{api_url}/pinChatMessage",
+                    json={"chat_id": target, "message_id": existing_msg_id, "disable_notification": True}
+                )
+                if resp.status_code == 200 and resp.json().get("ok"):
+                    logger.info(f"[PROMO PIN] Verified active promo coupon bulletin #{existing_msg_id} remains PINNED for {promo.name}")
+                    return existing_msg_id
+        except Exception as e:
+            logger.warning(f"Error checking pinned status: {e}")
+
+    # Build and post the official coupon bulletin for this active event
+    logger.info(f"[PROMO PIN] Publishing and pinning official event coupon bulletin for {promo.name}...")
+    text, markup = build_promo_launch_alert(promo)
+    success, err, msg_id = await send_promo_alert_to_channel(text, markup, token, target)
+    if success and msg_id:
+        if "pinned_promo_events" not in state:
+            state["pinned_promo_events"] = {}
+        state["pinned_promo_events"][promo_key] = msg_id
+        save_persistent_state(state)
+        logger.info(f"[PROMO PIN] Successfully published & PINNED coupon bulletin for {promo.name} (Msg #{msg_id}) to {target}")
+        return msg_id
+    else:
+        logger.error(f"[PROMO PIN] Failed to publish & pin coupon bulletin: {err}")
+        return None

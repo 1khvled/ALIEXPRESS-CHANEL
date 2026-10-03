@@ -895,7 +895,7 @@ def record_channel_announcement_published(tag: str, date_str: str):
 def is_tajmi3at_time_window(now_dt: Optional[datetime] = None) -> bool:
     """
     Checks if current time in Algiers (UTC+1) is around 10:00 PM.
-    Target window: 21:30 to 22:45 UTC+1.
+    Target window: 21:30 to 23:45 UTC+1 (9:30 PM - 11:45 PM Algiers time).
     """
     dz_tz = timezone(timedelta(hours=1))
     if now_dt is None:

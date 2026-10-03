@@ -85,24 +85,33 @@ def save_france_state(state: Dict):
         logger.error(f"Error saving France state: {e}")
 
 def is_france_roundup_time_window(now_dt: Optional[datetime] = None) -> bool:
-    """Target window: 21:30 to 23:45 CET."""
-    cet = timezone(timedelta(hours=1))
+    """Target window: 21:30 to 23:45 Paris local time (Europe/Paris CEST/CET)."""
+    try:
+        import zoneinfo
+        paris_tz = zoneinfo.ZoneInfo("Europe/Paris")
+    except Exception:
+        paris_tz = timezone(timedelta(hours=2))
+
     if now_dt is None:
-        now_dt = datetime.now(cet)
+        now_dt = datetime.now(paris_tz)
     elif now_dt.tzinfo is None:
-        now_dt = now_dt.replace(tzinfo=cet)
+        now_dt = now_dt.replace(tzinfo=paris_tz)
     else:
-        now_dt = now_dt.astimezone(cet)
+        now_dt = now_dt.astimezone(paris_tz)
 
     hour = now_dt.hour
     minute = now_dt.minute
-    return (hour == 21 and minute >= 30) or hour == 22 or (hour == 23 and minute <= 45)
+    return (hour == 21 and minute >= 30) or (hour == 22) or (hour == 23 and minute <= 45)
 
 def is_france_roundup_eligible(date_str: Optional[str] = None) -> Tuple[bool, str]:
     state = load_france_state()
     if not date_str:
-        cet = timezone(timedelta(hours=1))
-        date_str = datetime.now(cet).strftime("%Y-%m-%d")
+        try:
+            import zoneinfo
+            paris_tz = zoneinfo.ZoneInfo("Europe/Paris")
+        except Exception:
+            paris_tz = timezone(timedelta(hours=2))
+        date_str = datetime.now(paris_tz).strftime("%Y-%m-%d")
 
     history = state.get("daily_roundup_history", {})
     if date_str in history:

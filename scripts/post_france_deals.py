@@ -391,7 +391,7 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
     print(f"Source Channels: {', '.join(FRANCE_SOURCE_CHANNELS)}")
     print("=" * 70)
 
-    # 0. Autonomous Promo Notifiers & Event Alerts (24h start warm-up & 24h end alert)
+    # 0. Autonomous Promo Notifiers & Event Alerts (24h start warm-up & 24h end alert + pinned coupon bulletin)
     try:
         from app.publisher.promo_notifiers_fr import check_and_auto_post_france_promo_notifiers
         fr_alerts = await check_and_auto_post_france_promo_notifiers()
@@ -399,6 +399,15 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
             print(f"  [FRANCE PROMO ALERTS] Triggered {len(fr_alerts)} alert(s): {[a.get('type') for a in fr_alerts]}")
     except Exception as e:
         print(f"  [!] France promo notifiers warning: {e}")
+
+    # 0.5. Daily Tajmi3at / Compilations (~10:00 PM CET 21:30 - 23:45 or forced)
+    try:
+        from app.publisher.regrouper_fr import check_and_publish_france_regrouped_bulletins
+        bulletins = await check_and_publish_france_regrouped_bulletins(force=force_tajmi3at)
+        if bulletins:
+            print(f"\n[FRANCE ROUNDUP] Published {len(bulletins)} daily roundup bulletin(s): {[b['category'] for b in bulletins]}")
+    except Exception as e:
+        print(f"  [!] France daily roundup check error: {e}")
 
     state = load_france_state()
     published_keys = set(state.get("published_post_keys", []))
