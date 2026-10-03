@@ -1,56 +1,60 @@
 {
   "published_post_keys": [
-    "alifrdrop:103",
-    "couponsglobal:48765",
-    "megaphonna:8224",
-    "couponsglobal:48778",
-    "megaphonna:8219",
-    "megaphonna:8220",
-    "alifrdrop:102",
-    "megaphonna:8221",
-    "francecp:415",
-    "megaphonna:8217",
-    "francecp:419",
-    "couponsglobal:48770",
-    "couponsglobal:48773",
-    "megaphonna:8222",
-    "couponsglobal:48780",
-    "francecp:417",
-    "couponsglobal:48771",
-    "couponsglobal:48768",
-    "couponsglobal:48774",
-    "couponsglobal:48779",
-    "megaphonna:8216",
-    "couponsglobal:48776",
     "lodydeals:45443",
-    "couponsglobal:48775",
-    "megaphonna:8230",
-    "couponsglobal:48772",
-    "francecp:413",
-    "francecp:414",
-    "megaphonna:8231",
-    "couponsglobal:48767",
-    "francecp:418",
     "alifrdrop:106",
-    "alifrdrop:105",
-    "megaphonna:8225",
-    "megaphonna:8218",
+    "couponsglobal:48770",
+    "megaphonna:8219",
+    "megaphonna:8222",
+    "francecp:415",
+    "francecp:413",
     "couponsglobal:48769",
-    "francecp:416",
-    "couponsglobal:48777",
+    "francecp:414",
+    "megaphonna:8220",
+    "megaphonna:8216",
+    "megaphonna:8230",
+    "megaphonna:8221",
+    "couponsglobal:48768",
+    "couponsglobal:48780",
     "couponsglobal:48766",
+    "alifrdrop:103",
+    "megaphonna:8225",
+    "megaphonna:8224",
+    "couponsglobal:48774",
+    "megaphonna:8218",
+    "francecp:420",
+    "megaphonna:8217",
+    "couponsglobal:48777",
+    "couponsglobal:48779",
+    "megaphonna:8231",
+    "lodydeals:45428",
+    "megaphonna:8226",
+    "couponsglobal:48767",
+    "couponsglobal:48773",
+    "couponsglobal:48775",
+    "megaphonna:8228",
     "megaphonna:8223",
+    "alifrdrop:105",
+    "couponsglobal:48778",
+    "francecp:419",
+    "francecp:417",
+    "francecp:416",
+    "megaphonna:8227",
+    "alifrdrop:102",
+    "couponsglobal:48772",
+    "francecp:418",
+    "couponsglobal:48765",
     "alifrdrop:104",
-    "francecp:420"
+    "couponsglobal:48776",
+    "couponsglobal:48771"
   ],
   "published_product_ids": [
-    "1005012589045044",
-    "1005009977303549",
-    "1005012540990578",
-    "1005012155835323",
+    "1005012218291528",
     "1005011938407661",
-    "1005012541048117",
-    "1005012218291528"
+    "1005012155835323",
+    "1005012589045044",
+    "1005012540990578",
+    "1005009977303549",
+    "1005012541048117"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -256,6 +260,30 @@
       "title": "Attack Shark X3 26000DPI Wireless",
       "price_eur": 21.55,
       "channel_msg_id": 64
+    },
+    "1005012492244291": {
+      "timestamp": 1791048949.253138,
+      "title": "ONEPLUS TURBO 6X 5G",
+      "price_eur": 211.6,
+      "channel_msg_id": 65
+    },
+    "1005012504076921": {
+      "timestamp": 1791048956.956357,
+      "title": "ONEPLUS TURBO 6X PRO 5G (8/128)",
+      "price_eur": 236.81,
+      "channel_msg_id": 66
+    },
+    "1005012340203471": {
+      "timestamp": 1791048963.19493,
+      "title": "️ POCO X6 Pro (12/256)",
+      "price_eur": 223.28,
+      "channel_msg_id": 67
+    },
+    "1005007805543887": {
+      "timestamp": 1791048972.775595,
+      "title": "Mini Digital Pocket Scale",
+      "price_eur": 3.28,
+      "channel_msg_id": 68
     }
   },
   "monitored_channels": {
@@ -280,11 +308,11 @@
       "last_check_time": 1791048674.3921647
     }
   },
-  "last_run_time": 1791048674.392299,
+  "last_run_time": 1791048974.7781346,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001"
   ],
-  "last_deal_post_time": 1791048674.3923,
+  "last_deal_post_time": 1791048974.7781355,
   "daily_roundup_history": {
     "2026-10-02": {
       "timestamp": 1790976075.00982,
