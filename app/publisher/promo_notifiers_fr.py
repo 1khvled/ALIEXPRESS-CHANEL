@@ -59,18 +59,27 @@ def build_france_promo_starting_alert(promo: PromoEvent, start_hour_paris: str =
     Builds authentic French warm-up / coupon announcement alert for @francedealsdz.
     Includes booking tutorial with eligible high-value product to bind codes.
     """
+    coupons = promo.coupon_tiers_fr if promo.coupon_tiers_fr else [
+        {"tier": "-2€ dès 18€", "code": "FRPRD02"},
+        {"tier": "-6€ dès 45€", "code": "FRPRD06"},
+        {"tier": "-12€ dès 89€", "code": "FRPRD12"},
+        {"tier": "-20€ dès 159€", "code": "FRPRD20"},
+        {"tier": "-30€ dès 239€", "code": "FRPRD30"},
+        {"tier": "-45€ dès 355€", "code": "FRPRD45"},
+        {"tier": "-60€ dès 475€", "code": "FRPRD60"}
+    ]
+    coupon_lines = []
+    for c in coupons:
+        t = c.get("tier", "").strip()
+        code = c.get("code", "").strip()
+        coupon_lines.append(f"🎟️ <b>Code {t} :</b> <code>{code}</code>")
+
     lines = [
-        "🚨 <b>CODES PROMO | Choice Day Octobre ! 🇫🇷</b>",
-        "Du <b>1er au 7 octobre 2026</b> 🛍️",
+        f"🚨 <b>CODES PROMO | {promo.name_fr or promo.name} ! 🇫🇷</b>",
+        f"Du <b>{promo.start_date.strftime('%d')} au {promo.end_date.strftime('%d %B %Y')}</b> 🛍️",
         f"⏰ Actifs dès demain à <b>{start_hour_paris} (Paris) / 08h00 (DZ)</b>",
         "",
-        "🎟️ <b>Code -2€</b> dès 18€ : <code>FRPRD02</code>",
-        "🎟️ <b>Code -6€</b> dès 45€ : <code>FRPRD06</code>",
-        "🎟️ <b>Code -12€</b> dès 89€ : <code>FRPRD12</code>",
-        "🎟️ <b>Code -20€</b> dès 159€ : <code>FRPRD20</code>",
-        "🎟️ <b>Code -30€</b> dès 239€ : <code>FRPRD30</code>",
-        "🎟️ <b>Code -45€</b> dès 355€ : <code>FRPRD45</code>",
-        "🎟️ <b>Code -60€</b> dès 475€ : <code>FRPRD60</code>",
+        *coupon_lines,
         "",
         "💳 <b>Astuce PayPal :</b> Jusqu'à <b>-33€ supplémentaires</b> au paiement !",
         "",
@@ -85,22 +94,32 @@ def build_france_promo_starting_alert(promo: PromoEvent, start_hour_paris: str =
         "📢 <b>Canal :</b> @francedealsdz"
     ]
 
+    text = "\n".join(lines)
     reply_markup = {}
     return text, reply_markup
 
 def build_france_promo_launch_alert(promo: PromoEvent, start_hour_paris: str = "09:00") -> Tuple[str, Dict[str, Any]]:
     """Builds the launch alert when promo officially starts for France shoppers."""
+    coupons = promo.coupon_tiers_fr if promo.coupon_tiers_fr else [
+        {"tier": "-2€ dès 18€", "code": "FRPRD02"},
+        {"tier": "-6€ dès 45€", "code": "FRPRD06"},
+        {"tier": "-12€ dès 89€", "code": "FRPRD12"},
+        {"tier": "-20€ dès 159€", "code": "FRPRD20"},
+        {"tier": "-30€ dès 239€", "code": "FRPRD30"},
+        {"tier": "-45€ dès 355€", "code": "FRPRD45"},
+        {"tier": "-60€ dès 475€", "code": "FRPRD60"}
+    ]
+    coupon_lines = []
+    for c in coupons:
+        t = c.get("tier", "").strip()
+        code = c.get("code", "").strip()
+        coupon_lines.append(f"🎟️ <b>Code {t} :</b> <code>{code}</code>")
+
     lines = [
-        "🚀 <b>C'EST PARTI ! Lancement officiel du Choice Day ! 🇫🇷🛍️</b>",
+        f"🚀 <b>C'EST PARTI ! Lancement officiel : {promo.name_fr or promo.name} ! 🇫🇷🛍️</b>",
         f"⏰ <b>Les codes promo viennent d'être activés dès maintenant ({start_hour_paris}) :</b>",
         "",
-        "🎟️ <b>Code -2€</b> dès 18€ : <code>FRPRD02</code>",
-        "🎟️ <b>Code -6€</b> dès 45€ : <code>FRPRD06</code>",
-        "🎟️ <b>Code -12€</b> dès 89€ : <code>FRPRD12</code>",
-        "🎟️ <b>Code -20€</b> dès 159€ : <code>FRPRD20</code>",
-        "🎟️ <b>Code -30€</b> dès 239€ : <code>FRPRD30</code>",
-        "🎟️ <b>Code -45€</b> dès 355€ : <code>FRPRD45</code>",
-        "🎟️ <b>Code -60€</b> dès 475€ : <code>FRPRD60</code>",
+        *coupon_lines,
         "",
         "💳 <b>Astuce PayPal :</b> Jusqu'à <b>-33€ supplémentaires</b> au paiement !",
         "",
@@ -122,10 +141,10 @@ def build_france_promo_ending_alert(promo: PromoEvent, end_hour_paris: str = "08
     lines = [
         f"<blockquote>⚠️ <b>Dernières 24 Heures | Fin des soldes et codes promo demain à {end_hour_paris} ! 🇫🇷</b></blockquote>",
         "",
-        "📌 <b>Événement en cours :</b> Party Ready Sale & Choice Day France",
+        f"📌 <b>Événement en cours :</b> {promo.name_fr or promo.name}",
         "",
         "❌ <b>Dernière chance pour utiliser vos coupons :</b>",
-        "Tous les codes promo <code>CDFR03</code>, <code>CDFR06</code>, <code>CDFR10</code>, <code>FWFR20</code>, <code>FWFR30</code>, <code>FRLD45</code> et <code>FRLD63</code> cesseront de fonctionner dès la fin de l'événement.",
+        "Tous les codes promo cesseront de fonctionner dès la fin de l'événement.",
         "",
         "💳 <b>Astuce Pro Réservation de prix :</b>",
         "Vous pouvez valider votre commande dès maintenant en choisissant un moyen de paiement en attente ou temporairement bloqué pour figer le tarif réduit et finaliser le paiement plus tard !",
@@ -138,7 +157,7 @@ def build_france_promo_ending_alert(promo: PromoEvent, end_hour_paris: str = "08
     reply_markup = {
         "inline_keyboard": [
             [
-                {"text": "🛒标志 Dernières affaires AliExpress France", "url": "https://s.click.aliexpress.com/e/_c2QPADRL"}
+                {"text": "🛒 Dernières affaires AliExpress France", "url": "https://s.click.aliexpress.com/e/_c2QPADRL"}
             ],
             [
                 {"text": "📢 Rejoindre @francedealsdz", "url": "https://t.me/francedealsdz"}
@@ -147,14 +166,19 @@ def build_france_promo_ending_alert(promo: PromoEvent, end_hour_paris: str = "08
     }
     return text, reply_markup
 
-async def send_france_promo_alert(text: str, reply_markup: Dict[str, Any]) -> Tuple[bool, Optional[str], Optional[int]]:
+async def send_france_promo_alert(
+    text: str,
+    reply_markup: Dict[str, Any],
+    coupon_list: Optional[List[Dict[str, str]]] = None,
+    promo_title: str = "Choice Day France"
+) -> Tuple[bool, Optional[str], Optional[int]]:
     from app.media.renderer import media_renderer
     bot_token = settings.TELEGRAM_BOT_TOKEN
     if not bot_token:
         return False, "TELEGRAM_BOT_TOKEN missing", None
 
     api_url = f"https://api.telegram.org/bot{bot_token}"
-    coupons_fr = [
+    coupons_fr = coupon_list if coupon_list else [
         {"tier": "-2€ dès 18€", "code": "FRPRD02"},
         {"tier": "-6€ dès 45€", "code": "FRPRD06"},
         {"tier": "-12€ dès 89€", "code": "FRPRD12"},
@@ -165,7 +189,7 @@ async def send_france_promo_alert(text: str, reply_markup: Dict[str, Any]) -> Tu
     ]
     card_path = media_renderer.render_coupon_bulletin_card(
         coupons_fr,
-        promo_title="Choice Day France",
+        promo_title=promo_title,
         channel_handle="@francedealsdz",
         is_french=True
     )
@@ -230,7 +254,7 @@ async def check_and_auto_post_france_promo_notifiers(now: Optional[datetime] = N
                 if not is_france_notifier_already_sent(notifier_key):
                     logger.info(f"Triggering France Promo Starting Alert for {promo.name}")
                     text, markup = build_france_promo_starting_alert(promo)
-                    success, err, msg_id = await send_france_promo_alert(text, markup)
+                    success, err, msg_id = await send_france_promo_alert(text, markup, coupon_list=promo.coupon_tiers_fr, promo_title=promo.name_fr or promo.name)
                     if success:
                         record_france_notifier_sent(notifier_key)
                         results.append({
@@ -250,7 +274,7 @@ async def check_and_auto_post_france_promo_notifiers(now: Optional[datetime] = N
                 if not is_france_notifier_already_sent(notifier_key):
                     logger.info(f"Triggering France Promo Launch Alert for {promo.name}")
                     text, markup = build_france_promo_launch_alert(promo)
-                    success, err, msg_id = await send_france_promo_alert(text, markup)
+                    success, err, msg_id = await send_france_promo_alert(text, markup, coupon_list=promo.coupon_tiers_fr, promo_title=promo.name_fr or promo.name)
                     if success:
                         record_france_notifier_sent(notifier_key)
                         results.append({
@@ -269,7 +293,7 @@ async def check_and_auto_post_france_promo_notifiers(now: Optional[datetime] = N
                 if not is_france_notifier_already_sent(notifier_key):
                     logger.info(f"Triggering France Promo Ending Alert for {promo.name}")
                     text, markup = build_france_promo_ending_alert(promo)
-                    success, err, msg_id = await send_france_promo_alert(text, markup)
+                    success, err, msg_id = await send_france_promo_alert(text, markup, coupon_list=promo.coupon_tiers_fr, promo_title=promo.name_fr or promo.name)
                     if success:
                         record_france_notifier_sent(notifier_key)
                         results.append({
@@ -337,7 +361,7 @@ async def ensure_france_active_promo_coupons_pinned(
     # Build and post the official French coupon bulletin for this active event
     logger.info(f"[FRANCE PROMO PIN] Publishing and pinning official French coupon bulletin for {promo.name}...")
     text, markup = build_france_promo_launch_alert(promo)
-    success, err, msg_id = await send_france_promo_alert(text, markup)
+    success, err, msg_id = await send_france_promo_alert(text, markup, coupon_list=promo.coupon_tiers_fr, promo_title=promo.name_fr or promo.name)
     if success and msg_id:
         if "pinned_promo_events" not in state:
             state["pinned_promo_events"] = {}

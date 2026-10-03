@@ -274,6 +274,14 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
 
                     raw_text = text_div.get_text(separator="\n").strip()
 
+                    # Autonomous Event Knower: Sniff any official promo festivals, sale announcements, or coupon batches
+                    try:
+                        sniffed_ev = promo_tracker.sniff_and_register_event(raw_text, media_url=source_photo_url)
+                        if sniffed_ev:
+                            print(f"  [EVENT KNOWER] Discovered & registered event: {sniffed_ev.name} ({sniffed_ev.start_date.strftime('%d/%m')} - {sniffed_ev.end_date.strftime('%d/%m')}) with {len(sniffed_ev.coupon_tiers)} DZ codes, {len(sniffed_ev.coupon_tiers_fr or [])} FR codes")
+                    except Exception as ev_err:
+                        logger.debug(f"Event sniffing skipped: {ev_err}")
+
                     # 1. Parse message timestamp and enforce maximum 2h freshness
                     time_el = block.find("time")
                     msg_dt = None

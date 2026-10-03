@@ -225,7 +225,8 @@ class MediaRenderer:
         coupon_list: List[Dict[str, str]],
         promo_title: str = "Choice Day",
         channel_handle: str = "@DzAliexpress0",
-        is_french: bool = False
+        is_french: bool = False,
+        date_range_str: Optional[str] = None
     ) -> Path:
         """
         Renders a high-definition 1080x1080 promotional coupon card.
@@ -259,17 +260,18 @@ class MediaRenderer:
             font_title = font_sub = font_badge = font_amount = font_cond = font_code = font_footer = font_tip = ImageFont.load_default()
 
         # Header Badge & Titles
+        badge_text = date_range_str or ("CHOICE DAY • DU 1 AU 7 OCTOBRE" if is_french else "CHOICE DAY • 01 - 07 OCTOBRE")
         if is_french:
-            draw.rounded_rectangle((w // 2 - 200, 20, w // 2 + 200, 52), radius=16, fill=(254, 240, 138))
-            draw.text((w // 2, 36), "CHOICE DAY • DU 1 AU 7 OCTOBRE", fill=(180, 83, 9), font=font_badge, anchor="mm")
-            draw.text((w // 2, 92), "ALIEXPRESS FRANCE 🇫🇷", fill=(255, 255, 255), font=font_title, anchor="mm")
-            draw.text((w // 2, 146), "CODES PROMO OFFICIELS • JUSQU'À -60€", fill=(254, 240, 138), font=font_sub, anchor="mm")
+            draw.rounded_rectangle((w // 2 - 220, 20, w // 2 + 220, 52), radius=16, fill=(254, 240, 138))
+            draw.text((w // 2, 36), badge_text.upper(), fill=(180, 83, 9), font=font_badge, anchor="mm")
+            draw.text((w // 2, 92), f"{promo_title.upper()} 🇫🇷", fill=(255, 255, 255), font=font_title, anchor="mm")
+            draw.text((w // 2, 146), "CODES PROMO OFFICIELS", fill=(254, 240, 138), font=font_sub, anchor="mm")
             draw.text((w // 2, 182), "Actifs dès 09h00 (Heure de Paris) • Valables sur tout le site", fill=(255, 255, 255), font=font_badge, anchor="mm")
         else:
-            draw.rounded_rectangle((w // 2 - 200, 20, w // 2 + 200, 52), radius=16, fill=(254, 240, 138))
-            draw.text((w // 2, 36), "CHOICE DAY • 01 - 07 OCTOBRE", fill=(180, 83, 9), font=font_badge, anchor="mm")
+            draw.rounded_rectangle((w // 2 - 220, 20, w // 2 + 220, 52), radius=16, fill=(254, 240, 138))
+            draw.text((w // 2, 36), badge_text.upper(), fill=(180, 83, 9), font=font_badge, anchor="mm")
             draw.text((w // 2, 92), f"ALIEXPRESS {promo_title.upper()}", fill=(255, 255, 255), font=font_title, anchor="mm")
-            draw.text((w // 2, 146), "OFFICIAL PROMO CODES • SAVE UP TO $55", fill=(254, 240, 138), font=font_sub, anchor="mm")
+            draw.text((w // 2, 146), "OFFICIAL PROMO CODES", fill=(254, 240, 138), font=font_sub, anchor="mm")
             draw.text((w // 2, 182), "Actifs dès 08h00 (Heure DZ) • Quantités Limitées", fill=(255, 255, 255), font=font_badge, anchor="mm")
 
         # Circular Logo top right in header

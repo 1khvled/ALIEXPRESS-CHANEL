@@ -65,21 +65,30 @@ def build_promo_ending_alert(promo: PromoEvent, end_hour_str: str = "08:00") -> 
 def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00") -> Tuple[str, Dict[str, Any]]:
     """
     Builds the warm-up starting notifier post matching authentic Algerian deal channels:
-    - Lists active official coupons
+    - Lists active official coupons dynamically from the promo event
     - Explains coupon booking / saving tutorial using high-value phone link
     - Sets 08:00 AM booking alert
     """
+    coupons = promo.coupon_tiers if promo.coupon_tiers else [
+        {"tier": "2/15$", "code": "OTPRD02"},
+        {"tier": "4/30$", "code": "OTPRD04"},
+        {"tier": "8/65$", "code": "OTPRD08"},
+        {"tier": "15/119$", "code": "OTPRD15"},
+        {"tier": "29/229$", "code": "OTPRD28"},
+        {"tier": "42/339$", "code": "OTPRD42"},
+        {"tier": "55/449$", "code": "OTPRD55"}
+    ]
+    coupon_lines = []
+    for c in coupons:
+        t = c.get("tier", "").strip()
+        code = c.get("code", "").strip()
+        coupon_lines.append(f"🎟️ <b>كوبون {t} :</b> <code>{code}</code>")
+
     lines = [
-        f"🚨 <b>كوبونات حدث {promo.name_ar} لشهر أكتوبر!</b> 🛍️",
-        f"تنطلق غداً <b>01 أكتوبر وتستمر إلى غاية 07 أكتوبر</b> 🗓️",
+        f"🚨 <b>كوبونات حدث {promo.name_ar}!</b> 🛍️",
+        f"تنطلق غداً <b>{promo.start_date.strftime('%d/%m')} وتستمر إلى غاية {promo.end_date.strftime('%d/%m/%Y')}</b> 🗓️",
         "",
-        "🎟️ <b>كوبون 2/15$ :</b> <code>OTPRD02</code>",
-        "🎟️ <b>كوبون 4/30$ :</b> <code>OTPRD04</code>",
-        "🎟️ <b>كوبون 8/65$ :</b> <code>OTPRD08</code>",
-        "🎟️ <b>كوبون 15/119$ :</b> <code>OTPRD15</code>",
-        "🎟️ <b>كوبون 29/229$ :</b> <code>OTPRD28</code>",
-        "🎟️ <b>كوبون 42/339$ :</b> <code>OTPRD42</code>",
-        "🎟️ <b>كوبون 55/449$ :</b> <code>OTPRD55</code>",
+        *coupon_lines,
         "",
         f"⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك (طبقوها غداً على {start_hour_str} صباحاً 🔥👌🏽):</b>",
         "⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ($55 ثم $42...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅",
@@ -101,18 +110,27 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
 
 def build_promo_launch_alert(promo: PromoEvent, start_hour_str: str = "08:00") -> Tuple[str, Dict[str, Any]]:
     """Builds the launch alert when promo officially starts at 08:00 AM Algerian Time."""
+    coupons = promo.coupon_tiers if promo.coupon_tiers else [
+        {"tier": "2/15$", "code": "OTPRD02"},
+        {"tier": "4/30$", "code": "OTPRD04"},
+        {"tier": "8/65$", "code": "OTPRD08"},
+        {"tier": "15/119$", "code": "OTPRD15"},
+        {"tier": "29/229$", "code": "OTPRD28"},
+        {"tier": "42/339$", "code": "OTPRD42"},
+        {"tier": "55/449$", "code": "OTPRD55"}
+    ]
+    coupon_lines = []
+    for c in coupons:
+        t = c.get("tier", "").strip()
+        code = c.get("code", "").strip()
+        coupon_lines.append(f"🎟️ <b>كوبون {t} :</b> <code>{code}</code>")
+
     lines = [
         f"🚀 <b>انطلاق تخفيضات {promo.name_ar} رسمياً الآن! 🛍️🔥</b>",
         f"⏰ <b>الكوبونات اشتغلت وبدأت بالعمل في هذه اللحظات ({start_hour_str} صباحاً بتوقيت الجزائر 🇩🇿):</b>",
         "سارعوا بحجزها وتطبيقها فوراً في حساباتكم قبل نفاد الكميات المحدودة! 🏃💨",
         "",
-        "🎟️ <b>كوبون 2/15$ :</b> <code>OTPRD02</code>",
-        "🎟️ <b>كوبون 4/30$ :</b> <code>OTPRD04</code>",
-        "🎟️ <b>كوبون 8/65$ :</b> <code>OTPRD08</code>",
-        "🎟️ <b>كوبون 15/119$ :</b> <code>OTPRD15</code>",
-        "🎟️ <b>كوبون 29/229$ :</b> <code>OTPRD28</code>",
-        "🎟️ <b>كوبون 42/339$ :</b> <code>OTPRD42</code>",
-        "🎟️ <b>كوبون 55/449$ :</b> <code>OTPRD55</code>",
+        *coupon_lines,
         "",
         f"⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك الآن 🔥👌🏽:</b>",
         "⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ($55 ثم $42...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅",
@@ -148,7 +166,9 @@ async def send_promo_alert_to_channel(
     text: str,
     reply_markup: Dict[str, Any],
     bot_token: Optional[str] = None,
-    channel_id: Optional[str] = None
+    channel_id: Optional[str] = None,
+    coupon_list: Optional[List[Dict[str, str]]] = None,
+    promo_title: str = "Choice Day"
 ) -> Tuple[bool, Optional[str], Optional[int]]:
     """Dispatches the alert message to the target Telegram channel using generated card graphic."""
     from app.media.renderer import media_renderer
@@ -156,18 +176,18 @@ async def send_promo_alert_to_channel(
     target = channel_id or TARGET_CHANNEL_ID
 
     api_url = f"https://api.telegram.org/bot{token}"
-    coupons_dz = [
-        {"tier": "2/15", "code": "OTPRD02"},
-        {"tier": "4/30", "code": "OTPRD04"},
-        {"tier": "8/65", "code": "OTPRD08"},
-        {"tier": "15/119", "code": "OTPRD15"},
-        {"tier": "29/229", "code": "OTPRD28"},
-        {"tier": "42/339", "code": "OTPRD42"},
-        {"tier": "55/449", "code": "OTPRD55"}
+    coupons_dz = coupon_list if coupon_list else [
+        {"tier": "2/15$", "code": "OTPRD02"},
+        {"tier": "4/30$", "code": "OTPRD04"},
+        {"tier": "8/65$", "code": "OTPRD08"},
+        {"tier": "15/119$", "code": "OTPRD15"},
+        {"tier": "29/229$", "code": "OTPRD28"},
+        {"tier": "42/339$", "code": "OTPRD42"},
+        {"tier": "55/449$", "code": "OTPRD55"}
     ]
     card_path = media_renderer.render_coupon_bulletin_card(
         coupons_dz,
-        promo_title="Choice Day",
+        promo_title=promo_title,
         channel_handle="@DzAliexpress0",
         is_french=False
     )
@@ -241,7 +261,7 @@ async def check_and_auto_post_promo_notifiers(
                 if not is_promo_notifier_already_sent(notifier_key):
                     logger.info(f"Triggering Promo Ending Alert for {promo.name} (Ends in {time_until_end.total_seconds()/3600:.1f}h)")
                     text, markup = build_promo_ending_alert(promo)
-                    success, err, msg_id = await send_promo_alert_to_channel(text, markup, bot_token, channel_id)
+                    success, err, msg_id = await send_promo_alert_to_channel(text, markup, bot_token, channel_id, coupon_list=promo.coupon_tiers, promo_title=promo.name)
                     if success:
                         record_promo_notifier_sent(notifier_key)
                         results.append({
@@ -260,7 +280,7 @@ async def check_and_auto_post_promo_notifiers(
                 if not is_promo_notifier_already_sent(notifier_key):
                     logger.info(f"Triggering Official Promo Launch Alert for {promo.name}")
                     text, markup = build_promo_launch_alert(promo)
-                    success, err, msg_id = await send_promo_alert_to_channel(text, markup, bot_token, channel_id)
+                    success, err, msg_id = await send_promo_alert_to_channel(text, markup, bot_token, channel_id, coupon_list=promo.coupon_tiers, promo_title=promo.name)
                     if success:
                         record_promo_notifier_sent(notifier_key)
                         results.append({
@@ -281,7 +301,7 @@ async def check_and_auto_post_promo_notifiers(
                 if not is_promo_notifier_already_sent(notifier_key):
                     logger.info(f"Triggering Promo Starting Alert for {promo.name} (Starts in {time_until_start.total_seconds()/3600:.1f}h)")
                     text, markup = build_promo_starting_alert(promo)
-                    success, err, msg_id = await send_promo_alert_to_channel(text, markup, bot_token, channel_id)
+                    success, err, msg_id = await send_promo_alert_to_channel(text, markup, bot_token, channel_id, coupon_list=promo.coupon_tiers, promo_title=promo.name)
                     if success:
                         record_promo_notifier_sent(notifier_key)
                         results.append({
@@ -351,7 +371,7 @@ async def ensure_active_promo_coupons_pinned(
     # Build and post the official coupon bulletin for this active event
     logger.info(f"[PROMO PIN] Publishing and pinning official event coupon bulletin for {promo.name}...")
     text, markup = build_promo_launch_alert(promo)
-    success, err, msg_id = await send_promo_alert_to_channel(text, markup, token, target)
+    success, err, msg_id = await send_promo_alert_to_channel(text, markup, token, target, coupon_list=promo.coupon_tiers, promo_title=promo.name)
     if success and msg_id:
         if "pinned_promo_events" not in state:
             state["pinned_promo_events"] = {}
