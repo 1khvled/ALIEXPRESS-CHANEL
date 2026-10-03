@@ -105,7 +105,8 @@
     "1005009834132291",
     "1005010585654037",
     "1005006248571160",
-    "1005009390995992"
+    "1005009390995992",
+    "1005006196428484"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -212,12 +213,13 @@
     "1005010178295650": 1790973057.7979915,
     "1005006861002512": 1790974856.4783835,
     "1005012285327063": 1790976041.1098428,
-    "1005006581583862": 1790976351.072879,
+    "1005006581583862": 1791013842.0461159,
     "1005012816171978": 1790976952.8889163,
     "1005009834132291": 1790976959.5801246,
     "1005010585654037": 1790978149.8785934,
     "1005006248571160": 1791012946.4110153,
-    "1005009390995992": 1791013541.4254196
+    "1005009390995992": 1791013541.4254196,
+    "1005006196428484": 1791013836.445986
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -323,7 +325,9 @@
     "3 VILCORN G6 Bluetooth-Compatible",
     "TV Box Rockchip RK3518",
     "آلة حلاقة من علامة KEMEI",
-    "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial"
+    "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial",
+    "Predyee Groin Hair Trimmer WH",
+    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -432,7 +436,9 @@
     "3 VILCORN G6 Bluetooth-Compatible": 1790977546.6736062,
     "TV Box Rockchip RK3518": 1790978149.8785934,
     "آلة حلاقة من علامة KEMEI": 1791012946.4110153,
-    "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": 1791013541.4254196
+    "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": 1791013541.4254196,
+    "Predyee Groin Hair Trimmer WH": 1791013836.445986,
+    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1791013842.0461159
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -690,15 +696,17 @@
     "bnddeals:50798",
     "aniscoupons:32700",
     "aniscoupons:32701",
-    "aniscoupons:32702"
+    "aniscoupons:32702",
+    "bnddeals:50799",
+    "aniscoupons:32703"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791013541.4254196,
+  "last_run_time": 1791013842.0461159,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32702,
-      "last_check_time": 1791013543.4361053
+      "last_message_id": 32703,
+      "last_check_time": 1791013844.05431
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -706,11 +714,11 @@
     },
     "lodydeals": {
       "last_message_id": 45416,
-      "last_check_time": 1791013534.842297
+      "last_check_time": 1791013831.1400394
     },
     "bnddeals": {
-      "last_message_id": 50798,
-      "last_check_time": 1791013535.8136508
+      "last_message_id": 50799,
+      "last_check_time": 1791013838.4544888
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -722,11 +730,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791013535.1746454
+      "last_check_time": 1791013831.4556968
     },
     "megaphonna": {
       "last_message_id": 8205,
-      "last_check_time": 1791013536.136883
+      "last_check_time": 1791013839.0335352
     }
   },
   "published_product_prices": {
@@ -818,7 +826,8 @@
     "1005009834132291": 23.0,
     "1005010585654037": 20.6,
     "1005006248571160": 16.8,
-    "1005009390995992": 34.9
+    "1005009390995992": 34.9,
+    "1005006196428484": 19.2
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1930,6 +1939,26 @@
       "price": 34.9,
       "timestamp": 1791013541.4254196,
       "status": "ACTIVE"
+    },
+    "bnddeals:50799": {
+      "channel_msg_id": 442,
+      "product_id": "1005006196428484",
+      "title": "Predyee Groin Hair Trimmer WH",
+      "channel": "bnddeals",
+      "source_msg_id": 50799,
+      "price": 19.2,
+      "timestamp": 1791013836.445986,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32703": {
+      "channel_msg_id": 443,
+      "product_id": "1005006581583862",
+      "title": "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling",
+      "channel": "aniscoupons",
+      "source_msg_id": 32703,
+      "price": 25.0,
+      "timestamp": 1791013842.0461159,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1938,7 +1967,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791013541.42845,
+    "last_deal_post_time": 1791013842.0490334,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2036,7 +2065,8 @@
     "1005009834132291": "aniscoupons",
     "1005010585654037": "aniscoupons",
     "1005006248571160": "bnddeals",
-    "1005009390995992": "aniscoupons"
+    "1005009390995992": "aniscoupons",
+    "1005006196428484": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2120,7 +2150,9 @@
     "Poco C71 3/64GB": "aniscoupons",
     "TV Box Rockchip RK3518": "aniscoupons",
     "آلة حلاقة من علامة KEMEI": "bnddeals",
-    "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": "aniscoupons"
+    "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": "aniscoupons",
+    "Predyee Groin Hair Trimmer WH": "bnddeals",
+    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
