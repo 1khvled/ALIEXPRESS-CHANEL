@@ -104,7 +104,8 @@
     "1005012816171978",
     "1005009834132291",
     "1005010585654037",
-    "1005006248571160"
+    "1005006248571160",
+    "1005009390995992"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -215,7 +216,8 @@
     "1005012816171978": 1790976952.8889163,
     "1005009834132291": 1790976959.5801246,
     "1005010585654037": 1790978149.8785934,
-    "1005006248571160": 1791012946.4110153
+    "1005006248571160": 1791012946.4110153,
+    "1005009390995992": 1791013541.4254196
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -320,7 +322,8 @@
     "EasySMX X05 Pro Wireless Gamepad Gaming Controller",
     "3 VILCORN G6 Bluetooth-Compatible",
     "TV Box Rockchip RK3518",
-    "آلة حلاقة من علامة KEMEI"
+    "آلة حلاقة من علامة KEMEI",
+    "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -428,7 +431,8 @@
     "EasySMX X05 Pro Wireless Gamepad Gaming Controller": 1790976959.5801246,
     "3 VILCORN G6 Bluetooth-Compatible": 1790977546.6736062,
     "TV Box Rockchip RK3518": 1790978149.8785934,
-    "آلة حلاقة من علامة KEMEI": 1791012946.4110153
+    "آلة حلاقة من علامة KEMEI": 1791012946.4110153,
+    "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": 1791013541.4254196
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -685,15 +689,16 @@
     "aniscoupons:32699",
     "bnddeals:50798",
     "aniscoupons:32700",
-    "aniscoupons:32701"
+    "aniscoupons:32701",
+    "aniscoupons:32702"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791012946.4110153,
+  "last_run_time": 1791013541.4254196,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32701,
-      "last_check_time": 1791013243.85531
+      "last_message_id": 32702,
+      "last_check_time": 1791013543.4361053
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -701,11 +706,11 @@
     },
     "lodydeals": {
       "last_message_id": 45416,
-      "last_check_time": 1791013239.1543021
+      "last_check_time": 1791013534.842297
     },
     "bnddeals": {
       "last_message_id": 50798,
-      "last_check_time": 1791013240.1059597
+      "last_check_time": 1791013535.8136508
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -717,11 +722,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791013239.5055306
+      "last_check_time": 1791013535.1746454
     },
     "megaphonna": {
       "last_message_id": 8205,
-      "last_check_time": 1791013240.4522862
+      "last_check_time": 1791013536.136883
     }
   },
   "published_product_prices": {
@@ -812,7 +817,8 @@
     "1005012816171978": 273.46,
     "1005009834132291": 23.0,
     "1005010585654037": 20.6,
-    "1005006248571160": 16.8
+    "1005006248571160": 16.8,
+    "1005009390995992": 34.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1914,6 +1920,16 @@
       "price": 16.8,
       "timestamp": 1791012946.4110153,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32702": {
+      "channel_msg_id": 441,
+      "product_id": "1005009390995992",
+      "title": "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial",
+      "channel": "aniscoupons",
+      "source_msg_id": 32702,
+      "price": 34.9,
+      "timestamp": 1791013541.4254196,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1922,7 +1938,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791012946.4137912,
+    "last_deal_post_time": 1791013541.42845,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2019,7 +2035,8 @@
     "1005012816171978": "lodydeals",
     "1005009834132291": "aniscoupons",
     "1005010585654037": "aniscoupons",
-    "1005006248571160": "bnddeals"
+    "1005006248571160": "bnddeals",
+    "1005009390995992": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2102,7 +2119,8 @@
     "3 VILCORN G6 Bluetooth-Compatible": "aniscoupons",
     "Poco C71 3/64GB": "aniscoupons",
     "TV Box Rockchip RK3518": "aniscoupons",
-    "آلة حلاقة من علامة KEMEI": "bnddeals"
+    "آلة حلاقة من علامة KEMEI": "bnddeals",
+    "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
