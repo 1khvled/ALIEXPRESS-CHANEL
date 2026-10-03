@@ -120,7 +120,8 @@
     "1005010306498953",
     "1005010338761787",
     "1005012265051745",
-    "1005009390922629"
+    "1005009390922629",
+    "1005010285419688"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -247,7 +248,8 @@
     "1005010306498953": 1791021345.213176,
     "1005010338761787": 1791021850.86469,
     "1005012265051745": 1791022849.763491,
-    "1005009390922629": 1791023140.1114628
+    "1005009390922629": 1791023140.1114628,
+    "1005010285419688": 1791026154.7068377
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -368,7 +370,8 @@
     "Toocki USB-C 60W Cable",
     "Toocki 2.4A Lightning Cable",
     "OnePlus Pad Go 2 8/128GB",
-    "ASROCK  X470 MASTER"
+    "ASROCK  X470 MASTER",
+    "Square Quartz Watch"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -492,7 +495,8 @@
     "Toocki USB-C 60W Cable": 1791021345.213176,
     "Toocki 2.4A Lightning Cable": 1791021850.86469,
     "OnePlus Pad Go 2 8/128GB": 1791022849.763491,
-    "ASROCK  X470 MASTER": 1791023140.1114628
+    "ASROCK  X470 MASTER": 1791023140.1114628,
+    "Square Quartz Watch": 1791026154.7068377
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -795,27 +799,29 @@
     "megaphonna:8219",
     "megaphonna:8220",
     "lodydeals:45427",
-    "aniscoupons:32716"
+    "aniscoupons:32716",
+    "lodydeals:45428",
+    "lodydeals:45429"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791023149.808202,
+  "last_run_time": 1791026154.7068377,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32716,
-      "last_check_time": 1791025846.2923903
+      "last_check_time": 1791026158.900787
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45427,
-      "last_check_time": 1791025840.5923216
+      "last_message_id": 45429,
+      "last_check_time": 1791026156.7147555
     },
     "bnddeals": {
       "last_message_id": 50803,
-      "last_check_time": 1791025841.5390613
+      "last_check_time": 1791026158.131224
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -827,11 +833,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791025840.9157822
+      "last_check_time": 1791026157.3920708
     },
     "megaphonna": {
       "last_message_id": 8220,
-      "last_check_time": 1791025841.905638
+      "last_check_time": 1791026158.50016
     }
   },
   "published_product_prices": {
@@ -935,7 +941,8 @@
     "1005010306498953": 1.46,
     "1005010338761787": 1.49,
     "1005012265051745": 246.04,
-    "1005009390922629": 101.91
+    "1005009390922629": 101.91,
+    "1005010285419688": 3.69
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2257,6 +2264,16 @@
       "price": 291.0,
       "timestamp": 1791023149.808202,
       "status": "ACTIVE"
+    },
+    "lodydeals:45429": {
+      "channel_msg_id": 463,
+      "product_id": "1005010285419688",
+      "title": "Square Quartz Watch",
+      "channel": "lodydeals",
+      "source_msg_id": 45429,
+      "price": 3.69,
+      "timestamp": 1791026154.7068377,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2265,7 +2282,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791023149.8108196,
+    "last_deal_post_time": 1791026154.708879,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2375,7 +2392,8 @@
     "1005010306498953": "lodydeals",
     "1005010338761787": "lodydeals",
     "1005012265051745": "lodydeals",
-    "1005009390922629": "lodydeals"
+    "1005009390922629": "lodydeals",
+    "1005010285419688": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2473,7 +2491,8 @@
     "Toocki USB-C 60W Cable": "lodydeals",
     "Toocki 2.4A Lightning Cable": "lodydeals",
     "OnePlus Pad Go 2 8/128GB": "lodydeals",
-    "ASROCK  X470 MASTER": "lodydeals"
+    "ASROCK  X470 MASTER": "lodydeals",
+    "Square Quartz Watch": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
