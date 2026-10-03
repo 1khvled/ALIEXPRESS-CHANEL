@@ -144,7 +144,9 @@
     "1005010706783496",
     "1005012826813261",
     "9998887267",
-    "1005012203827165"
+    "1005012203827165",
+    "1005009870615222",
+    "1005007546468421"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -295,7 +297,9 @@
     "1005010706783496": 1791043842.6639822,
     "1005012826813261": 1791045040.5964694,
     "9998887267": 1791047267.2870219,
-    "1005012203827165": 1791050748.149688
+    "1005012203827165": 1791050748.149688,
+    "1005009870615222": 1791051351.3013499,
+    "1005007546468421": 1791051357.7053592
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -449,7 +453,9 @@
     "HONOR POWER 2 (12/256)",
     "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light",
     "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC",
-    "RYZEN 7 7800X3D"
+    "RYZEN 7 7800X3D",
+    "Redmi Note 14S  8/128GB",
+    "Attack Shark X AJAZZ AK820"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -606,7 +612,9 @@
     "HONOR POWER 2 (12/256)": 1791042962.9882953,
     "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light": 1791043842.6639822,
     "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": 1791045040.5964694,
-    "RYZEN 7 7800X3D": 1791050748.149688
+    "RYZEN 7 7800X3D": 1791050748.149688,
+    "Redmi Note 14S  8/128GB": 1791051351.3013499,
+    "Attack Shark X AJAZZ AK820": 1791051357.7053592
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -982,27 +990,29 @@
     "aniscoupons:32728",
     "test_channel:1791047267",
     "megaphonna:8233",
-    "aniscoupons:32729"
+    "aniscoupons:32729",
+    "lodydeals:45446",
+    "lodydeals:45447"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791050748.149688,
+  "last_run_time": 1791051357.7053592,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32729,
-      "last_check_time": 1791051039.9726028
+      "last_check_time": 1791051362.0587664
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45445,
-      "last_check_time": 1791051038.321128
+      "last_message_id": 45447,
+      "last_check_time": 1791051359.7149389
     },
     "bnddeals": {
       "last_message_id": 50810,
-      "last_check_time": 1791051039.2741017
+      "last_check_time": 1791051361.2004952
     },
     "test_channel": {
       "last_message_id": 1791047267,
@@ -1014,15 +1024,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791051038.667945
+      "last_check_time": 1791051360.4356506
     },
     "megaphonna": {
       "last_message_id": 8233,
-      "last_check_time": 1791051039.5914297
+      "last_check_time": 1791051361.6105928
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791051040.5010905
+      "last_check_time": 1791051362.7893243
     }
   },
   "published_product_prices": {
@@ -1148,7 +1158,9 @@
     "1005008414973716": 15.6,
     "1005010706783496": 16.2,
     "1005012826813261": 14.0,
-    "1005012203827165": 259.7
+    "1005012203827165": 259.7,
+    "1005009870615222": 149.1,
+    "1005007546468421": 29.56
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2880,6 +2892,26 @@
       "price": 259.7,
       "timestamp": 1791050748.149688,
       "status": "ACTIVE"
+    },
+    "lodydeals:45446": {
+      "channel_msg_id": 508,
+      "product_id": "1005009870615222",
+      "title": "Redmi Note 14S  8/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45446,
+      "price": 149.1,
+      "timestamp": 1791051351.3013499,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45447": {
+      "channel_msg_id": 509,
+      "product_id": "1005007546468421",
+      "title": "Attack Shark X AJAZZ AK820",
+      "channel": "lodydeals",
+      "source_msg_id": 45447,
+      "price": 29.56,
+      "timestamp": 1791051357.7053592,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2888,7 +2920,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791050748.3576906,
+    "last_deal_post_time": 1791051357.7096913,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3022,7 +3054,9 @@
     "1005010706783496": "bnddeals",
     "1005012826813261": "aniscoupons",
     "9998887267": "test_channel",
-    "1005012203827165": "aniscoupons"
+    "1005012203827165": "aniscoupons",
+    "1005009870615222": "lodydeals",
+    "1005007546468421": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3152,7 +3186,9 @@
     "HONOR POWER 2 (12/256)": "megaphonna",
     "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light": "bnddeals",
     "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": "aniscoupons",
-    "RYZEN 7 7800X3D": "aniscoupons"
+    "RYZEN 7 7800X3D": "aniscoupons",
+    "Redmi Note 14S  8/128GB": "lodydeals",
+    "Attack Shark X AJAZZ AK820": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
