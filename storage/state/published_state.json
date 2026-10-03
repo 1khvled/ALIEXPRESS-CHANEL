@@ -151,7 +151,8 @@
     "1005013046831062",
     "1005006974721332",
     "1005010266413614",
-    "1005009497821240"
+    "1005009497821240",
+    "1005011925142821"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -309,7 +310,8 @@
     "1005013046831062": 1791056447.2532988,
     "1005006974721332": 1791056453.5992196,
     "1005010266413614": 1791056463.1366906,
-    "1005009497821240": 1791056745.5798366
+    "1005009497821240": 1791056745.5798366,
+    "1005011925142821": 1791057346.9236152
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -470,7 +472,8 @@
     "46pcs Ratchet Set Kit",
     "TOPK Car Phone Holder",
     "الهاتف الاكثر طلبا",
-    "Car Battery Charger LCD Display"
+    "Car Battery Charger LCD Display",
+    "Honor 600 lite (8/256)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -634,7 +637,8 @@
     "46pcs Ratchet Set Kit": 1791056447.2532988,
     "TOPK Car Phone Holder": 1791056453.5992196,
     "الهاتف الاكثر طلبا": 1791056463.1366906,
-    "Car Battery Charger LCD Display": 1791056745.5798366
+    "Car Battery Charger LCD Display": 1791056745.5798366,
+    "Honor 600 lite (8/256)": 1791057346.9236152
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1019,15 +1023,18 @@
     "lodydeals:45451",
     "lodydeals:45452",
     "aniscoupons:32730",
-    "lodydeals:45453"
+    "lodydeals:45453",
+    "bnddeals:50811",
+    "aniscoupons:32731",
+    "aniscoupons:32732"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791056745.5798366,
+  "last_run_time": 1791057346.9236152,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32730,
-      "last_check_time": 1791057041.371621
+      "last_message_id": 32732,
+      "last_check_time": 1791057351.2254558
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1035,11 +1042,11 @@
     },
     "lodydeals": {
       "last_message_id": 45453,
-      "last_check_time": 1791057039.6805665
+      "last_check_time": 1791057338.6365135
     },
     "bnddeals": {
-      "last_message_id": 50810,
-      "last_check_time": 1791057040.695218
+      "last_message_id": 50811,
+      "last_check_time": 1791057342.9304671
     },
     "test_channel": {
       "last_message_id": 1791047267,
@@ -1051,15 +1058,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791057040.0016766
+      "last_check_time": 1791057338.9582038
     },
     "megaphonna": {
       "last_message_id": 8233,
-      "last_check_time": 1791057041.002872
+      "last_check_time": 1791057343.27762
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791057041.8617759
+      "last_check_time": 1791057351.988503
     }
   },
   "published_product_prices": {
@@ -1192,7 +1199,8 @@
     "1005013046831062": 5.29,
     "1005006974721332": 3.09,
     "1005010266413614": 295.0,
-    "1005009497821240": 4.69
+    "1005009497821240": 4.69,
+    "1005011925142821": 270.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2994,6 +3002,16 @@
       "price": 4.69,
       "timestamp": 1791056745.5798366,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32731": {
+      "channel_msg_id": 515,
+      "product_id": "1005011925142821",
+      "title": "Honor 600 lite (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 32731,
+      "price": 270.9,
+      "timestamp": 1791057346.9236152,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3002,7 +3020,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791056745.5840564,
+    "last_deal_post_time": 1791057346.9275837,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3143,7 +3161,8 @@
     "1005013046831062": "lodydeals",
     "1005006974721332": "lodydeals",
     "1005010266413614": "aniscoupons",
-    "1005009497821240": "lodydeals"
+    "1005009497821240": "lodydeals",
+    "1005011925142821": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3280,7 +3299,8 @@
     "46pcs Ratchet Set Kit": "lodydeals",
     "TOPK Car Phone Holder": "lodydeals",
     "الهاتف الاكثر طلبا": "aniscoupons",
-    "Car Battery Charger LCD Display": "lodydeals"
+    "Car Battery Charger LCD Display": "lodydeals",
+    "Honor 600 lite (8/256)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
