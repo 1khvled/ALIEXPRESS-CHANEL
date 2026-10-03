@@ -106,7 +106,10 @@
     "1005010585654037",
     "1005006248571160",
     "1005009390995992",
-    "1005006196428484"
+    "1005006196428484",
+    "1005012390398338",
+    "1005012297674623",
+    "1005013152491360"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -219,7 +222,10 @@
     "1005010585654037": 1790978149.8785934,
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791013541.4254196,
-    "1005006196428484": 1791013836.445986
+    "1005006196428484": 1791013836.445986,
+    "1005012390398338": 1791014140.3360124,
+    "1005012297674623": 1791014145.8727648,
+    "1005013152491360": 1791014155.5083368
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -327,7 +333,9 @@
     "آلة حلاقة من علامة KEMEI",
     "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial",
     "Predyee Groin Hair Trimmer WH",
-    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling"
+    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling",
+    "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise",
+    "Baseus-Bowie E5x"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -410,7 +418,7 @@
     "Essager 65W GaN USB": 1790949658.4852333,
     "POCO X6 Pro 5G 12/512GB": 1790950255.4725466,
     "Blackview LINK 1 Kids Tablets": 1790960161.26754,
-    "POCO X8 5G (6/128GB)": 1790960468.486696,
+    "POCO X8 5G (6/128GB)": 1791014155.5083368,
     "HONOR 600 PRO": 1790960475.7249138,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
@@ -438,7 +446,9 @@
     "آلة حلاقة من علامة KEMEI": 1791012946.4110153,
     "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": 1791013541.4254196,
     "Predyee Groin Hair Trimmer WH": 1791013836.445986,
-    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1791013842.0461159
+    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1791013842.0461159,
+    "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise": 1791014140.3360124,
+    "Baseus-Bowie E5x": 1791014145.8727648
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -698,15 +708,18 @@
     "aniscoupons:32701",
     "aniscoupons:32702",
     "bnddeals:50799",
-    "aniscoupons:32703"
+    "aniscoupons:32703",
+    "bnddeals:50800",
+    "bnddeals:50801",
+    "aniscoupons:32704"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791013842.0461159,
+  "last_run_time": 1791014155.5083368,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32703,
-      "last_check_time": 1791013844.05431
+      "last_message_id": 32704,
+      "last_check_time": 1791014157.5173953
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -714,11 +727,11 @@
     },
     "lodydeals": {
       "last_message_id": 45416,
-      "last_check_time": 1791013831.1400394
+      "last_check_time": 1791014135.59957
     },
     "bnddeals": {
-      "last_message_id": 50799,
-      "last_check_time": 1791013838.4544888
+      "last_message_id": 50801,
+      "last_check_time": 1791014147.8816938
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -730,11 +743,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791013831.4556968
+      "last_check_time": 1791014135.9355404
     },
     "megaphonna": {
       "last_message_id": 8205,
-      "last_check_time": 1791013839.0335352
+      "last_check_time": 1791014148.4129767
     }
   },
   "published_product_prices": {
@@ -827,7 +840,9 @@
     "1005010585654037": 20.6,
     "1005006248571160": 16.8,
     "1005009390995992": 34.9,
-    "1005006196428484": 19.2
+    "1005006196428484": 19.2,
+    "1005012390398338": 13.2,
+    "1005012297674623": 21.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -1959,6 +1974,36 @@
       "price": 25.0,
       "timestamp": 1791013842.0461159,
       "status": "ACTIVE"
+    },
+    "bnddeals:50800": {
+      "channel_msg_id": 444,
+      "product_id": "1005012390398338",
+      "title": "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise",
+      "channel": "bnddeals",
+      "source_msg_id": 50800,
+      "price": 13.2,
+      "timestamp": 1791014140.3360124,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50801": {
+      "channel_msg_id": 445,
+      "product_id": "1005012297674623",
+      "title": "Baseus-Bowie E5x",
+      "channel": "bnddeals",
+      "source_msg_id": 50801,
+      "price": 21.6,
+      "timestamp": 1791014145.8727648,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32704": {
+      "channel_msg_id": 446,
+      "product_id": "1005013152491360",
+      "title": "POCO X8 5G (6/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 32704,
+      "price": 196.0,
+      "timestamp": 1791014155.5083368,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -1967,7 +2012,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791013842.0490334,
+    "last_deal_post_time": 1791014155.5114639,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2066,7 +2111,9 @@
     "1005010585654037": "aniscoupons",
     "1005006248571160": "bnddeals",
     "1005009390995992": "aniscoupons",
-    "1005006196428484": "bnddeals"
+    "1005006196428484": "bnddeals",
+    "1005012390398338": "bnddeals",
+    "1005012297674623": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2152,7 +2199,9 @@
     "آلة حلاقة من علامة KEMEI": "bnddeals",
     "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": "aniscoupons",
     "Predyee Groin Hair Trimmer WH": "bnddeals",
-    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": "aniscoupons"
+    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": "aniscoupons",
+    "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise": "bnddeals",
+    "Baseus-Bowie E5x": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
