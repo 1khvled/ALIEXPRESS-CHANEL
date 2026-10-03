@@ -114,7 +114,8 @@
     "1005010470699571",
     "1005012741634118",
     "1005010453516983",
-    "1005008554596598"
+    "1005008554596598",
+    "1005008776714223"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -235,7 +236,8 @@
     "1005010470699571": 1791015054.3845687,
     "1005012741634118": 1791015347.2675145,
     "1005010453516983": 1791015953.484505,
-    "1005008554596598": 1791017145.537471
+    "1005008554596598": 1791017145.537471,
+    "1005008776714223": 1791018047.9604976
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -350,7 +352,8 @@
     "HAYLOU Solar Lite 2",
     "HAYLOU FlowLoop S33",
     "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery",
-    "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz"
+    "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz",
+    "CUSU 512GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -468,7 +471,8 @@
     "HAYLOU Solar Lite 2": 1791015054.3845687,
     "HAYLOU FlowLoop S33": 1791015347.2675145,
     "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": 1791015953.484505,
-    "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz": 1791017145.537471
+    "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz": 1791017145.537471,
+    "CUSU 512GB": 1791018047.9604976
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -743,15 +747,16 @@
     "aniscoupons:32710",
     "lodydeals:45419",
     "bnddeals:50803",
-    "aniscoupons:32711"
+    "aniscoupons:32711",
+    "aniscoupons:32712"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791017752.638834,
+  "last_run_time": 1791018047.9604976,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32711,
-      "last_check_time": 1791017754.6520395
+      "last_message_id": 32712,
+      "last_check_time": 1791018049.972021
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -759,11 +764,11 @@
     },
     "lodydeals": {
       "last_message_id": 45419,
-      "last_check_time": 1791017746.4054832
+      "last_check_time": 1791018041.089995
     },
     "bnddeals": {
       "last_message_id": 50803,
-      "last_check_time": 1791017747.578284
+      "last_check_time": 1791018042.0651133
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -775,11 +780,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791017746.810658
+      "last_check_time": 1791018041.4283621
     },
     "megaphonna": {
       "last_message_id": 8205,
-      "last_check_time": 1791017747.9895694
+      "last_check_time": 1791018042.4496443
     }
   },
   "published_product_prices": {
@@ -878,7 +883,8 @@
     "1005007097205322": 15.1,
     "1005010470699571": 24.56,
     "1005012741634118": 29.0,
-    "1005008554596598": 15.4
+    "1005008554596598": 15.4,
+    "1005008776714223": 47.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2110,6 +2116,16 @@
       "price": 21.8,
       "timestamp": 1791017752.638834,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32712": {
+      "channel_msg_id": 454,
+      "product_id": "1005008776714223",
+      "title": "CUSU 512GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 32712,
+      "price": 47.6,
+      "timestamp": 1791018047.9604976,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2118,7 +2134,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791017752.641978,
+    "last_deal_post_time": 1791018047.9637039,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2223,7 +2239,8 @@
     "1005007097205322": "bnddeals",
     "1005010470699571": "aniscoupons",
     "1005012741634118": "aniscoupons",
-    "1005008554596598": "bnddeals"
+    "1005008554596598": "bnddeals",
+    "1005008776714223": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2316,7 +2333,8 @@
     "HAYLOU Solar Lite 2": "aniscoupons",
     "HAYLOU FlowLoop S33": "aniscoupons",
     "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": "aniscoupons",
-    "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz": "bnddeals"
+    "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz": "bnddeals",
+    "CUSU 512GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
