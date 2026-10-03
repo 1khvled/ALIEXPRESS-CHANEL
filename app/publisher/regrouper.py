@@ -43,73 +43,105 @@ CATEGORIES_CONFIG = {
         "header": "📱 <b>تجميعة أقوى عروض الهواتف الذكية لنهار اليوم 🇩🇿🔥</b>",
         "tag": "#تجميعة_الهواتف",
         "keywords": [
-            "phone", "phones", "smartphone", "smartphones", "هاتف", "جوال", "موبايل", "poco", "redmi",
-            "realme", "honor", "samsung", "infinix", "oppo", "vivo", "iphone",
-            "nubia", "zte", "motorola", "iqoo"
+            "phone", "phones", "smartphone", "smartphones", "هاتف", "جوال", "موبايل",
+            "poco", "redmi", "realme", "honor", "samsung", "infinix", "oppo", "vivo",
+            "iphone", "nubia", "zte", "motorola", "iqoo", "oneplus", "meizu", "tecno"
         ],
         "negative_keywords": [
             "headset", "earphone", "case", "cover", "holder", "charger",
-            "cable", "cooler", "mousepad", "screen protector", "glass", "film",
+            "cable", "cooler", "mousepad", "mouse pad", "screen protector", "glass", "film",
             "watch", "band", "ساعة", "سوار", "smartwatch", "قلم", "stylus",
-            "بوشات", "زجاج", "واقي"
+            "بوشات", "زجاج", "واقي", "تابلت", "tablet", "pad"
+        ]
+    },
+    "gaming_pads": {
+        "header": "🖱️ <b>تجميعة أفضل ماوس باد وسجادات القيمنق لنهار اليوم 🇩🇿🔥</b>",
+        "tag": "#تجميعة_الماوس_باد",
+        "keywords": [
+            "mousepad", "mouse pad", "mouse mat", "desk mat", "gaming pad",
+            "ماوس باد", "باد ماوس", "سجادة ماوس", "بساط ماوس", "سجادة مكتب",
+            "pad gaming", "attack shark pad", "speed pad", "control pad", "cordura pad",
+            "glass mousepad"
+        ],
+        "negative_keywords": [
+            "thermal pad", "ptm7950", "tablet", "phone", "هاتف", "تابلت"
+        ]
+    },
+    "controllers": {
+        "header": "🎮 <b>تجميعة أجهزة وأيادي التحكم (Gamepads) لنهار اليوم 🇩🇿🔥</b>",
+        "tag": "#تجميعة_الكونترولر",
+        "keywords": [
+            "gamepad", "controller", "joystick", "يد تحكم", "ذراع تحكم", "كنترولر",
+            "جيم باد", "يد العاب", "manette", "easysmx", "gamesir", "machenike g3",
+            "machenike g5", "machenike g6", "fantech shooter", "fantech nova",
+            "flydigi", "8bitdo", "gulikit", "tarantula 8k", "dobe"
+        ],
+        "negative_keywords": [
+            "holder", "stand", "case", "cover"
         ]
     },
     "mice": {
         "header": "🖱️ <b>تجميعة ماوسات القيمنق الاحترافية لنهار اليوم 🇩🇿🔥</b>",
         "tag": "#تجميعة_الماوسات",
         "keywords": [
-            "mouse", "mice", "ماوس", "فأرة", "فارة", "attack shark x3",
-            "attack shark r1", "attack shark x1", "attack shark x11", "ajazz aj",
-            "vxe r1", "scyrox", "wireless mouse", "gaming mouse", "zaopin", "delux"
+            "mouse", "mice", "ماوس", "فأرة", "فارة", "wireless mouse", "gaming mouse",
+            "attack shark x3", "attack shark r1", "attack shark x1", "attack shark x11",
+            "attack shark x6", "attack shark r3", "attack shark r6", "attack shark x5",
+            "attack shark x7", "attack shark mouse", "ajazz aj", "aj199", "aj139", "aj159",
+            "aj099", "vxe r1", "vxe mad", "vgn dragonfly", "vgn f1", "scyrox", "zaopin",
+            "darmoshark m", "fantech aria", "fantech xd7", "delux m"
         ],
         "negative_keywords": [
-            "mousepad", "mouse pad", "pad", "باد", "باد ماوس"
+            "mousepad", "mouse pad", "pad", "باد", "باد ماوس", "سجادة", "mat"
         ]
     },
     "keyboards": {
         "header": "⌨️ <b>تجميعة الكيبوردات الميكانيكية لنهار اليوم 🇩🇿🔥</b>",
         "tag": "#تجميعة_الكيبوردات",
         "keywords": [
-            "keyboard", "keyboards", "كيبورد", "لوحة مفاتيح", "ak820", "rainy75", "hi75",
-            "crush80", "aula f75", "aula f87", "mechanical keyboard", "ajazz ak"
+            "keyboard", "keyboards", "كيبورد", "لوحة مفاتيح", "mechanical keyboard",
+            "ak820", "ak870", "ak992", "ak680", "rainy75", "hi75", "crush80",
+            "aula f75", "aula f87", "aula f99", "attack shark k86", "attack shark k98",
+            "attack shark k75", "attack shark k87", "attack shark k68", "ajazz ak",
+            "machenike k500", "kzzi", "epomaker", "fantech maxfit"
         ],
         "negative_keywords": [
-            "keycap", "keycaps", "switch", "switches"
+            "keycap", "keycaps", "switch", "switches", "سويتش", "كيكاب"
         ]
+    },
+    "gaming_gear": {
+        "header": "🎮 <b>تجميعة ملحقات وعتاد القيمنق لنهار اليوم 🇩🇿🔥</b>",
+        "tag": "#تجميعة_القيمنق",
+        "keywords": [],
+        "negative_keywords": []
     },
     "headsets": {
         "header": "🎧 <b>تجميعة أفضل السماعات والصوتيات لنهار اليوم 🇩🇿🔥</b>",
         "tag": "#تجميعة_السماعات",
         "keywords": [
-            "headset", "headsets", "headphone", "headphones", "earbuds", "earbud", "earphone", "earphones", "tws", "iem",
-            "سماعة", "سماعات", "سماعة محيطية", "attack shark l90", "attack shark l80",
-            "moondrop", "qcy", "lenovo xt", "kz edx", "monster maxstar"
+            "headset", "headsets", "headphone", "headphones", "earbuds", "earbud",
+            "earphone", "earphones", "tws", "iem", "سماعة", "سماعات", "سماعة محيطية",
+            "attack shark l80", "attack shark l90", "lenovo xt", "lenovo lp", "lenovo th",
+            "htc ne", "kz edx", "kz castor", "moondrop", "qcy", "soundcore",
+            "monster mqt", "monster maxstar", "cmf buds", "baseus bowie", "redmi buds", "edifier"
         ],
         "negative_keywords": [
-            "case", "cover", "cable", "كابل"
+            "case", "cover", "cable", "كابل", "stand", "holder"
         ]
     },
     "tablets": {
         "header": "📟 <b>تجميعة أجهزة التابلت واللوحيات لنهار اليوم 🇩🇿🔥</b>",
         "tag": "#تجميعة_التابلت",
         "keywords": [
-            "tablet", "tablets", "tab", "pad", "ipad", "تابلت", "ايباد", "لوحي",
-            "xiaomi pad", "redmi pad", "realme pad", "blackview pad", "blackview link"
+            "tablet", "tablets", "tab", "ipad", "تابلت", "ايباد", "لوحي",
+            "xiaomi pad", "redmi pad", "realme pad", "blackview pad", "blackview link",
+            "blackview mega", "blackview tab", "honor pad", "oneplus pad", "lenovo tab",
+            "xiaoxin", "matepad", "teclast", "chuwi", "alldocube", "oscal pad"
         ],
         "negative_keywords": [
-            "mousepad", "mouse pad", "thermal pad", "ptm7950", "case", "cover",
-            "holder", "stand", "screen protector", "بوشات"
+            "mousepad", "mouse pad", "thermal pad", "ptm7950", "cooling pad",
+            "case", "cover", "holder", "stand", "screen protector", "بوشات", "واقي"
         ]
-    },
-    "pc_parts": {
-        "header": "🖥️ <b>تجميعة عتاد وقطع البي سي لنهار اليوم 🇩🇿🔥</b>",
-        "tag": "#تجميعة_البي_سي",
-        "keywords": [
-            "ram", "ssd", "nvme", "gpu", "graphics card", "cooler", "thermal pad",
-            "ptm7950", "كارت شاشة", "كرت شاشة", "معالج", "مشتت", "رام", "ddr4", "ddr5",
-            "ryzen", "somnambulist", "cpu"
-        ],
-        "negative_keywords": []
     },
     "smartwatches": {
         "header": "⌚ <b>تجميعة الساعات الذكية المعتمدة لنهار اليوم 🇩🇿🔥</b>",
@@ -118,10 +150,37 @@ CATEGORIES_CONFIG = {
             "smartwatch", "smart watch", "smart band", "ساعة ذكية", "ساعة",
             "سوار ذكي", "watch", "colmi", "zeblaze", "amazfit", "choice watch",
             "watch x", "watch 2", "watch 3", "watch 4", "watch 5", "watch pro",
-            "cmf watch", "btalk"
+            "cmf watch", "btalk", "curren", "naviforce", "skmei", "poedagar", "lige"
         ],
         "negative_keywords": [
             "strap", "حزام", "screen protector", "حماية", "charger", "cable"
+        ]
+    },
+    "pc_parts": {
+        "header": "🖥️ <b>تجميعة عتاد وقطع البي سي لنهار اليوم 🇩🇿🔥</b>",
+        "tag": "#تجميعة_البي_سي",
+        "keywords": [
+            "ram", "ssd", "nvme", "gpu", "graphics card", "cooler", "thermal pad",
+            "ptm7950", "كارت شاشة", "كرت شاشة", "معالج", "مشتت", "رام", "ddr4", "ddr5",
+            "ryzen", "somnambulist", "cpu", "motherboard", "لوحة أم", "carte mere",
+            "b450", "b550", "b650", "x470", "x570", "x670", "z790", "z690",
+            "fenvi", "network card", "pcie"
+        ],
+        "negative_keywords": [
+            "case phone", "cover phone"
+        ]
+    },
+    "chargers_cables": {
+        "header": "⚡ <b>تجميعة الشواحن السريعة والباوربانك لنهار اليوم 🇩🇿🔥</b>",
+        "tag": "#تجميعة_الشواحن",
+        "keywords": [
+            "gan charger", "شاحن سريع", "شاحن سيارة", "شاحن جداري", "powerbank", "باور بانك",
+            "ugreen 30w", "ugreen 65w", "ugreen charger", "toocki 60w", "toocki 100w",
+            "toocki charger", "toocki usb", "toocki 2.4a", "baseus charger", "samsung charger",
+            "anker charger"
+        ],
+        "negative_keywords": [
+            "phone", "smartphone", "watch"
         ]
     }
 }
@@ -137,8 +196,19 @@ def classify_deal_category(title: str, text: str = "") -> Optional[str]:
 
     combined = f"{title or ''} {text or ''}".lower()
 
-    # Priority order: specific items first (tablets, smartwatches) before generic phone brands
-    priority_order = ["tablets", "keyboards", "mice", "headsets", "smartwatches", "phones", "pc_parts"]
+    # Priority order: specialized/niche items first before broader categories
+    priority_order = [
+        "gaming_pads",
+        "controllers",
+        "tablets",
+        "keyboards",
+        "mice",
+        "headsets",
+        "smartwatches",
+        "pc_parts",
+        "chargers_cables",
+        "phones"
+    ]
 
     for cat_name in priority_order:
         config = CATEGORIES_CONFIG[cat_name]
@@ -152,16 +222,21 @@ def classify_deal_category(title: str, text: str = "") -> Optional[str]:
         if has_negative:
             continue
 
+        # Special regex pattern for tablets (e.g. Pad 6, Pad7, Pad Pro)
+        if cat_name == "tablets" and re.search(r'\bpad\d*\b', combined):
+            return cat_name
+
         # Check positive keywords with word boundaries
         for kw in config["keywords"]:
             if any(ord(char) > 127 for char in kw):
                 if kw in combined:
                     return cat_name
             else:
-                if re.search(rf'\b{re.escape(kw)}\b', combined):
+                if re.search(rf'\b{re.escape(kw)}\b', combined) or kw in combined:
                     return cat_name
 
     return None
+
 
 def clean_item_title(raw_title: str) -> str:
     """Produces clean, readable title for the bulletin line."""
@@ -302,15 +377,15 @@ def build_master_daily_roundup_text(deals: List[Dict[str, Any]], channel_usernam
 async def check_and_publish_regrouped_bulletins(
     bot_token: Optional[str] = None,
     force: bool = False,
-    min_items: int = 4,
+    min_items: int = 3,
     max_bulletins: int = 4
 ) -> List[Dict[str, Any]]:
     """
     Daily 10:00 PM Tajmi3at (Roundups) Publisher.
-    - If not forced: strictly verifies the ~10 PM window (21:30 - 22:45 UTC+1) and daily idempotency.
+    - If not forced: strictly verifies the ~10 PM window (21:30 - 23:45 UTC+1) and daily idempotency.
     - Collects deals published today on @DzAliexpress0.
-    - Publishes category roundups for categories meeting min_items (default 4).
-    - If no category reaches 4, publishes a Master Daily Roundup.
+    - Publishes category roundups for categories meeting min_items (default 3).
+    - If no category reaches min_items, publishes a Master Daily Roundup.
     - Attaches storage/assets/tajmi3at_banner.png.
     - Records daily completion to prevent duplicate postings.
     """
@@ -321,7 +396,7 @@ async def check_and_publish_regrouped_bulletins(
     # 1. Timing & Idempotency verification (unless forced)
     if not force:
         if not is_tajmi3at_time_window():
-            logger.info("[TAJMI3AT] Current time is not within daily 10 PM window (21:30 - 22:45 Algiers time UTC+1). Skipping.")
+            logger.info("[TAJMI3AT] Current time is not within daily 10 PM window (21:30 - 23:45 Algiers time UTC+1). Skipping.")
             return []
 
         eligible, reason = is_daily_tajmi3at_eligible()
@@ -352,11 +427,30 @@ async def check_and_publish_regrouped_bulletins(
         else:
             other_deals.append(d)
 
-    # 5. Check which categories meet the strict min_items threshold (default 4)
-    qualifying_categories = [
-        (cat, items) for cat, items in deals_by_category.items()
-        if len(items) >= min_items
-    ]
+    # 5. Smart Grouping & Aggregation
+    qualifying_categories: List[Tuple[str, List[Dict[str, Any]]]] = []
+
+    # Gaming peripheral categories: mice, keyboards, controllers, gaming_pads
+    GAMING_CATS = ["mice", "keyboards", "controllers", "gaming_pads"]
+    unassigned_gaming_deals: List[Dict[str, Any]] = []
+
+    for cat_name, items in deals_by_category.items():
+        if cat_name in GAMING_CATS:
+            if len(items) >= min_items:
+                qualifying_categories.append((cat_name, items))
+            else:
+                unassigned_gaming_deals.extend(items)
+        elif cat_name != "gaming_gear":
+            if len(items) >= min_items:
+                qualifying_categories.append((cat_name, items))
+
+    # Smart fallback for gaming gear:
+    # If individual gaming categories had < min_items, but combined they reach >= min_items,
+    # bundle them into a high-converting 'gaming_gear' bulletin!
+    if len(unassigned_gaming_deals) >= min_items:
+        logger.info(f"[TAJMI3AT] Smart Gaming Aggregation: Grouped {len(unassigned_gaming_deals)} items into 'gaming_gear' bulletin.")
+        qualifying_categories.append(("gaming_gear", unassigned_gaming_deals))
+
     # Sort by number of items descending (most abundant categories first)
     qualifying_categories.sort(key=lambda x: len(x[1]), reverse=True)
 

@@ -275,4 +275,32 @@ def test_couponsglobal_monitored_channel():
     allowed, _ = is_allowed_category("Random Deal", "Some text", channel_username="CouponsGlobal")
     assert allowed is True
 
+def test_france_channel_never_accepts_arabic_deals():
+    from scripts.post_france_deals import is_strictly_france_compatible_deal, FRANCE_SOURCE_CHANNELS
+
+    # 1. Source channels list must ONLY contain verified French channels
+    assert "megaphonna" not in FRANCE_SOURCE_CHANNELS
+    assert "lodydeals" not in FRANCE_SOURCE_CHANNELS
+    assert "aniscoupons" not in FRANCE_SOURCE_CHANNELS
+    assert "CouponsGlobal" not in FRANCE_SOURCE_CHANNELS
+    assert "AliFRDrop" in FRANCE_SOURCE_CHANNELS
+    assert "FranceCP" in FRANCE_SOURCE_CHANNELS
+
+    # 2. Algerian deals or channels must be rejected
+    ok1, reason1 = is_strictly_france_compatible_deal("POCO X6 Pro 240$ تخفيض عملات شحن للجزائر 58 ولاية", channel_username="lodydeals")
+    assert ok1 is False
+    assert "Algerian" in reason1
+
+    ok2, reason2 = is_strictly_france_compatible_deal("هاتف رخيص الدفع بريدي موب دينار جزائري", channel_username="AliFRDrop")
+    assert ok2 is False
+    assert "Algerian" in reason2
+
+    # 3. Genuine French deals must be accepted
+    ok3, _ = is_strictly_france_compatible_deal("POCO X8 PRO MAX 12/512GB Prix : 317€ via PayPal Code : FRLD45", channel_username="AliFRDrop")
+    assert ok3 is True
+
+    ok4, _ = is_strictly_france_compatible_deal("HONOR 600 EUROPEAN بسعر 289€ Code -45€ : FRPRD45", channel_username="FranceCP")
+    assert ok4 is True
+
+
 

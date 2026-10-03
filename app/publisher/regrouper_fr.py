@@ -39,15 +39,18 @@ CATEGORIES_CONFIG_FR = {
         "keywords": [
             "mouse", "mice", "keyboard", "keyboards", "gamepad", "controller",
             "gaming", "gamer", "attack shark", "ajazz", "aula", "vgn", "scyrox",
-            "zaopin", "mechanical keyboard", "wireless mouse"
+            "zaopin", "mechanical keyboard", "wireless mouse", "mousepad", "mouse pad",
+            "tapis de souris", "gaming pad", "desk mat", "manette", "easysmx",
+            "gamesir", "machenike", "fantech", "darmoshark", "ak820"
         ],
-        "negative_keywords": ["mousepad", "keycap", "switch"]
+        "negative_keywords": ["keycap", "switch"]
     },
     "audio": {
         "header": "🎧 <b>Sélection Écouteurs & Audio du Jour 🇫🇷🔥</b>",
         "keywords": [
             "headset", "headphone", "headphones", "earbuds", "earbud", "earphone",
-            "earphones", "tws", "speaker", "soundbar", "soundcore", "qcy", "anc"
+            "earphones", "tws", "speaker", "soundbar", "soundcore", "qcy", "anc",
+            "attack shark l80", "attack shark l90", "lenovo lp", "lenovo xt", "edifier"
         ],
         "negative_keywords": ["case", "cover", "cable"]
     },
@@ -61,6 +64,7 @@ CATEGORIES_CONFIG_FR = {
         "negative_keywords": []
     }
 }
+
 
 def load_france_state() -> Dict:
     if FRANCE_STATE_FILE.exists():

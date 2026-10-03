@@ -110,10 +110,25 @@ def test_category_classification_accuracy():
     assert classify_deal_category("SomnAmbulist SSD 2.5 128GB") == "pc_parts"
     assert classify_deal_category("AMD Ryzen 5 7600X CPU") == "pc_parts"
 
+    # Gaming Pads (Mousepads / Desk Mats)
+    assert classify_deal_category("Attack Shark Gaming Mousepad 900x400") == "gaming_pads"
+    assert classify_deal_category("Mousepad gaming large") == "gaming_pads"
+    assert classify_deal_category("ماوس باد قيمنق كبير") == "gaming_pads"
+
+    # Gamepads / Controllers
+    assert classify_deal_category("EasySMX X15 Wireless PC Gamepad Controller") == "controllers"
+    assert classify_deal_category("يد تحكم GameSir Tarantula 8K TMR") == "controllers"
+
+    # Keyboards
+    assert classify_deal_category("Attack Shark K86 Mechanical Keyboard") == "keyboards"
+    assert classify_deal_category("Attack Shark X AJAZZ AK820") == "keyboards"
+
+    # Chargers & Powerbanks
+    assert classify_deal_category("Robot UGREEN 30W GaN Charger") == "chargers_cables"
+
     # Accessories / multi-packs excluded
     assert classify_deal_category("Case for POCO C71") is None
     assert classify_deal_category("Tempered glass for Realme 14 Pro") is None
-    assert classify_deal_category("Mousepad gaming large") is None
 
 def test_bulletin_caption_length_and_format():
     """Verifies that bulletin caption fits within Telegram photo caption limit (1024 chars) and contains links and prices."""
@@ -203,3 +218,20 @@ async def test_ensure_active_promo_coupons_pinned_france(tmp_path):
         # 2. Second call during same event: re-verifies pin without re-publishing
         msg_id_2 = await ensure_france_active_promo_coupons_pinned()
         assert msg_id_2 == 777
+
+def test_smart_gaming_aggregation():
+    """Verifies that sub-threshold gaming deals (mice, keyboards, controllers, pads) aggregate into a gaming_gear bulletin."""
+    from app.publisher.regrouper import build_category_bulletin_text
+
+    sample_gaming_deals = [
+        {"channel_msg_id": 301, "title": "Attack Shark X3 Wireless Mouse", "price": 24.5, "channel_url": "https://t.me/DzAliexpress0/301"},
+        {"channel_msg_id": 302, "title": "Attack Shark K86 Mechanical Keyboard", "price": 42.0, "channel_url": "https://t.me/DzAliexpress0/302"},
+        {"channel_msg_id": 303, "title": "GameSir Tarantula 8K Controller", "price": 55.0, "channel_url": "https://t.me/DzAliexpress0/303"},
+        {"channel_msg_id": 304, "title": "Attack Shark Speed Gaming Pad", "price": 8.5, "channel_url": "https://t.me/DzAliexpress0/304"},
+    ]
+
+    caption, used = build_category_bulletin_text("gaming_gear", sample_gaming_deals, "DzAliexpress0")
+    assert len(used) == 4
+    assert "تجميعة ملحقات وعتاد القيمنق" in caption
+    assert "@Alilo07BOT" in caption
+    assert "https://t.me/DzAliexpress0/301" in caption

@@ -45,18 +45,40 @@ from app.utils.logger import logger
 TARGET_FRANCE_CHANNEL = os.getenv("FRANCE_TARGET_CHANNEL_ID", "@francedealsdz")
 FRANCE_STATE_FILE = Path(settings.BASE_DIR) / "storage" / "state" / "france_published_state.json"
 
+# Dedicated, strictly verified French/European AliExpress channels
+# NEVER include Algerian or Arabic channels here (their coins, coupons, and links do not work in France).
 FRANCE_SOURCE_CHANNELS = [
-    "CouponsGlobal",
-    "megaphonna",
-    "lodydeals",
-    "zedstoreonline",
-    "BNDDEALS",
-    "ECKSDEAL",
-    "aniscoupons",
-    "Coupon4Dz",
     "AliFRDrop",
     "FranceCP"
 ]
+
+def is_strictly_france_compatible_deal(raw_text: str, channel_username: str = "") -> Tuple[bool, str]:
+    """
+    Validates that a deal is strictly genuine and compatible with France / Europe.
+    Rejects any deal originating from Algerian/Arabic channels or containing Algerian specifics.
+    """
+    clean_ch = channel_username.replace("@", "").lower()
+    
+    # Reject known Algerian/Arabic channels completely
+    algerian_channels = {
+        "megaphonna", "lodydeals", "zedstoreonline", "bnddeals",
+        "ecksdeal", "aniscoupons", "coupon4dz", "couponsglobal"
+    }
+    if clean_ch in algerian_channels:
+        return False, f"Channel @{channel_username} is an Algerian source, not France"
+
+    lower_text = raw_text.lower()
+
+    # Reject Algerian currency / shipping / domestic mentions
+    algerian_indicators = [
+        "الجزائر", "dzd", "دينار", "بريدي موب", "بريد الجزائر", "58 ولاية",
+        "yalidine", "kazi tour", "carré", "livraison algerie", "algeria", "algerie"
+    ]
+    if any(ind in lower_text for ind in algerian_indicators):
+        return False, "Contains Algerian-specific text, currency or domestic shipping"
+
+    return True, "Valid France deal"
+
 
 def load_france_state() -> Dict:
     FRANCE_STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
@@ -259,6 +281,11 @@ async def publish_extracted_deal_to_france(
 
     if post_key and post_key in published_keys:
         logger.info(f"[FRANCE ROUTER] Skipping already published post key: {post_key}")
+        return False
+
+    valid_fr, fr_reason = is_strictly_france_compatible_deal(raw_text, channel_username=channel_username)
+    if not valid_fr:
+        logger.info(f"[FRANCE ROUTER] Rejected non-France deal: {fr_reason}")
         return False
 
     from app.aliexpress.parser import detect_restock_deal
@@ -537,6 +564,14 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                         source_photo_url = m_url.group(1)
 
                 raw_text = t_div.get_text(separator="\n").strip()
+
+                # Strict France-specific validation: reject any Arabic/Algerian deal or non-compatible source
+                valid_fr, fr_reason = is_strictly_france_compatible_deal(raw_text, channel_username=ch)
+                if not valid_fr:
+                    print(f"  [NOT FRANCE COMPATIBLE] Post #{msg_id} from @{ch}: {fr_reason}")
+                    published_keys.add(post_key)
+                    max_processed_id = max(max_processed_id, msg_id)
+                    continue
 
                 # Autonomous Event Knower: Sniff any official promo festivals, sale announcements, or coupon batches
                 try:

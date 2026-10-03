@@ -339,27 +339,15 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         record_post_handled(ch, msg_id)
                         continue
 
-                    # 4.5. Strictly reject France-specific deals in Algerian channel @DzAliexpress0
-                    # and auto-route them cleanly to @francedealsdz!
+                    # 4.5. Strictly reject France-specific deals in Algerian channel @DzAliexpress0.
+                    # Do NOT copy deals from Arabic/Algerian channels to the French channel (links & coins don't work across regions).
                     if is_france_deal(raw_text, url=f"{extracted.original_url} {extracted.canonical_url}", country_info=extracted.country_info):
-                        print(f"  [FRANCE DEAL ROUTER] Deal is intended for France/Europe: {extracted.product_id}. Auto-routing to @francedealsdz...")
-                        try:
-                            from scripts.post_france_deals import publish_extracted_deal_to_france
-                            routed = await publish_extracted_deal_to_france(
-                                extracted=extracted,
-                                raw_text=raw_text,
-                                source_photo_url=source_photo_url,
-                                channel_username=ch,
-                                msg_id=msg_id
-                            )
-                            if routed:
-                                print(f"  [FRANCE ROUTER SUCCESS] Posted {extracted.product_id} to @francedealsdz!")
-                        except Exception as e:
-                            print(f"  [!] Failed to auto-route France deal: {e}")
+                        print(f"  [FRANCE DEAL DETECTED] Post #{msg_id} is for France/Europe. Skipping for Algerian channel...")
                         max_processed_id = max(max_processed_id, msg_id)
                         record_monitored_channel_last_id(ch, msg_id)
                         record_post_handled(ch, msg_id)
                         continue
+
 
                     # 5. Category whitelist: ONLY gaming, watches, phones, tablets (Coupons bulletin exempt)
                     if not extracted.is_coupon_list:
