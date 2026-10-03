@@ -217,7 +217,7 @@
     "9998887189": 1790947189.8634577,
     "1005012865117890": 1791026755.742076,
     "1005010428573334": 1790948755.0367405,
-    "1005013146524028": 1790948764.3756874,
+    "1005013146524028": 1791042354.706192,
     "1005009411512584": 1790977546.6736062,
     "1005012058540420": 1790949652.480052,
     "1005009295911745": 1790949658.4852333,
@@ -513,7 +513,7 @@
     "XIAOMI PAD7 (12/256)": 1791023149.808202,
     "REALME 14 pro (12/256)": 1791026755.742076,
     "HONOR X9D (12/256)": 1790948755.0367405,
-    "Honor 400  Smart  (6/128)": 1790948764.3756874,
+    "Honor 400  Smart  (6/128)": 1791042354.706192,
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": 1790949354.0364344,
     "Powerful Violent Fan 150000RPM": 1790949652.480052,
     "Essager 65W GaN USB": 1790949658.4852333,
@@ -953,15 +953,16 @@
     "bnddeals:50808",
     "aniscoupons:32725",
     "couponsglobal:48780",
-    "bnddeals:50809"
+    "bnddeals:50809",
+    "megaphonna:8229"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791038753.5097415,
+  "last_run_time": 1791042354.706192,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32725,
-      "last_check_time": 1791042038.6027615
+      "last_check_time": 1791042357.4502559
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -969,11 +970,11 @@
     },
     "lodydeals": {
       "last_message_id": 45445,
-      "last_check_time": 1791042036.9420063
+      "last_check_time": 1791042349.176828
     },
     "bnddeals": {
       "last_message_id": 50809,
-      "last_check_time": 1791042037.8079953
+      "last_check_time": 1791042350.388598
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -985,15 +986,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791042037.256594
+      "last_check_time": 1791042349.6208494
     },
     "megaphonna": {
-      "last_message_id": 8228,
-      "last_check_time": 1791042038.165551
+      "last_message_id": 8229,
+      "last_check_time": 1791042356.7186704
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791042039.091229
+      "last_check_time": 1791042358.1801248
     }
   },
   "published_product_prices": {
@@ -2768,6 +2769,16 @@
       "price": 15.6,
       "timestamp": 1791038753.5097415,
       "status": "ACTIVE"
+    },
+    "megaphonna:8229": {
+      "channel_msg_id": 496,
+      "product_id": "1005013146524028",
+      "title": "Honor 400  Smart  (6/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8229,
+      "price": 162.4,
+      "timestamp": 1791042354.706192,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2776,7 +2787,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791038753.5134697,
+    "last_deal_post_time": 1791042354.7100437,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
