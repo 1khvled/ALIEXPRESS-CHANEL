@@ -174,7 +174,7 @@
     "1005012436000251": 1790941160.7696626,
     "1005006750448278": 1790941167.9296343,
     "1005012184442621": 1790941174.1965158,
-    "1005006631309573": 1790941179.7256634,
+    "1005006631309573": 1791027645.512462,
     "1005005648888450": 1790941186.791633,
     "1005006117094928": 1790941202.9035249,
     "1005006603602562": 1790941207.5310047,
@@ -224,7 +224,7 @@
     "1005010129356058": 1791023149.808202,
     "9998885993": 1790965993.3792443,
     "1005009774318553": 1790966460.2151659,
-    "1005012574108028": 1790967954.6642368,
+    "1005012574108028": 1791027656.0225317,
     "1005008599340405": 1790967962.6418507,
     "1005007572968437": 1790969442.7810974,
     "1005009120957437": 1790970941.2570727,
@@ -445,7 +445,7 @@
     "AMD Ryzen 5 7600X": 1790941160.7696626,
     "Adapter  8 in 2 USB Hub": 1790941167.9296343,
     "Zeblaze Btalk PRO Multiple": 1790941174.1965158,
-    "KZ EDX Lite Dynamic": 1790941179.7256634,
+    "KZ EDX Lite Dynamic": 1791027645.512462,
     "HILDA Laser Rangefinder": 1790941186.791633,
     "Monster Maxstar MQT52": 1790973057.7979915,
     "QCY T13 True Wireless Earbuds Bluetooth 5.1 Earphones 7.2mm Drivers with": 1790941202.9035249,
@@ -484,7 +484,7 @@
     "Xiaomi Pad 7 (12/256)": 1790954473.488348,
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1790966153.636154,
     "CUSU SSD 512 GB Portable SSD External Drive": 1790966460.2151659,
-    "HONOR  X80 PRO MAX (8/128)": 1790967954.6642368,
+    "HONOR  X80 PRO MAX (8/128)": 1791027656.0225317,
     "WALRAM Sata SSD 512GB": 1790967962.6418507,
     "Lenovo GM2 Pro TWS": 1790969442.7810974,
     "ASROCK B850M X WiFi": 1790970941.2570727,
@@ -849,27 +849,30 @@
     "lodydeals:45437",
     "lodydeals:45438",
     "lodydeals:45439",
-    "aniscoupons:32719"
+    "aniscoupons:32719",
+    "lodydeals:45440",
+    "megaphonna:8224",
+    "aniscoupons:32720"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791027355.6595695,
+  "last_run_time": 1791027656.0225317,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32719,
-      "last_check_time": 1791027366.9163408
+      "last_message_id": 32720,
+      "last_check_time": 1791027661.4433444
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45439,
-      "last_check_time": 1791027360.864405
+      "last_message_id": 45440,
+      "last_check_time": 1791027647.5242274
     },
     "bnddeals": {
       "last_message_id": 50803,
-      "last_check_time": 1791027362.2019265
+      "last_check_time": 1791027648.6660056
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -881,11 +884,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791027361.510647
+      "last_check_time": 1791027648.0587888
     },
     "megaphonna": {
-      "last_message_id": 8223,
-      "last_check_time": 1791027362.64689
+      "last_message_id": 8224,
+      "last_check_time": 1791027658.0325332
     }
   },
   "published_product_prices": {
@@ -928,7 +931,7 @@
     "1005012436000251": 103.39,
     "1005006750448278": 3.69,
     "1005012184442621": 12.35,
-    "1005006631309573": 3.69,
+    "1005006631309573": 2.55,
     "1005005648888450": 10.09,
     "1005010178295650": 13.87,
     "1005006117094928": 32.2,
@@ -2428,6 +2431,26 @@
       "price": 4.09,
       "timestamp": 1791027355.6595695,
       "status": "ACTIVE"
+    },
+    "lodydeals:45440": {
+      "channel_msg_id": 474,
+      "product_id": "1005006631309573",
+      "title": "KZ EDX Lite Dynamic",
+      "channel": "lodydeals",
+      "source_msg_id": 45440,
+      "price": 2.55,
+      "timestamp": 1791027645.512462,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8224": {
+      "channel_msg_id": 475,
+      "product_id": "1005012574108028",
+      "title": "HONOR  X80 PRO MAX (8/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8224,
+      "price": 279.1,
+      "timestamp": 1791027656.0225317,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2436,7 +2459,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791027355.6623528,
+    "last_deal_post_time": 1791027656.025985,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
