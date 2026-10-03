@@ -146,7 +146,8 @@
     "9998887267",
     "1005012203827165",
     "1005009870615222",
-    "1005007546468421"
+    "1005007546468421",
+    "1005006367419820"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -299,7 +300,8 @@
     "9998887267": 1791047267.2870219,
     "1005012203827165": 1791050748.149688,
     "1005009870615222": 1791051351.3013499,
-    "1005007546468421": 1791051357.7053592
+    "1005007546468421": 1791051357.7053592,
+    "1005006367419820": 1791056153.3979695
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -455,7 +457,8 @@
     "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC",
     "RYZEN 7 7800X3D",
     "Redmi Note 14S  8/128GB",
-    "Attack Shark X AJAZZ AK820"
+    "Attack Shark X AJAZZ AK820",
+    "Baseus Stylus Pen"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -614,7 +617,8 @@
     "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": 1791045040.5964694,
     "RYZEN 7 7800X3D": 1791050748.149688,
     "Redmi Note 14S  8/128GB": 1791051351.3013499,
-    "Attack Shark X AJAZZ AK820": 1791051357.7053592
+    "Attack Shark X AJAZZ AK820": 1791051357.7053592,
+    "Baseus Stylus Pen": 1791056153.3979695
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -993,27 +997,29 @@
     "aniscoupons:32729",
     "lodydeals:45446",
     "lodydeals:45447",
-    "lodydeals:45448"
+    "lodydeals:45448",
+    "lodydeals:45449",
+    "lodydeals:45450"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791051357.7053592,
+  "last_run_time": 1791056153.3979695,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32729,
-      "last_check_time": 1791055849.3973992
+      "last_check_time": 1791056163.0865266
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45448,
-      "last_check_time": 1791055847.7086027
+      "last_message_id": 45450,
+      "last_check_time": 1791056160.8389544
     },
     "bnddeals": {
       "last_message_id": 50810,
-      "last_check_time": 1791055848.6810622
+      "last_check_time": 1791056162.2622852
     },
     "test_channel": {
       "last_message_id": 1791047267,
@@ -1025,15 +1031,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791055848.0478523
+      "last_check_time": 1791056161.4919958
     },
     "megaphonna": {
       "last_message_id": 8233,
-      "last_check_time": 1791055849.0347595
+      "last_check_time": 1791056162.6573782
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791055850.0092275
+      "last_check_time": 1791056163.8273866
     }
   },
   "published_product_prices": {
@@ -1161,7 +1167,8 @@
     "1005012826813261": 14.0,
     "1005012203827165": 259.7,
     "1005009870615222": 149.1,
-    "1005007546468421": 29.56
+    "1005007546468421": 29.56,
+    "1005006367419820": 5.89
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2913,6 +2920,16 @@
       "price": 29.56,
       "timestamp": 1791051357.7053592,
       "status": "ACTIVE"
+    },
+    "lodydeals:45449": {
+      "channel_msg_id": 510,
+      "product_id": "1005006367419820",
+      "title": "Baseus Stylus Pen",
+      "channel": "lodydeals",
+      "source_msg_id": 45449,
+      "price": 5.89,
+      "timestamp": 1791056153.3979695,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2921,7 +2938,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791051357.7096913,
+    "last_deal_post_time": 1791056153.4021204,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3057,7 +3074,8 @@
     "9998887267": "test_channel",
     "1005012203827165": "aniscoupons",
     "1005009870615222": "lodydeals",
-    "1005007546468421": "lodydeals"
+    "1005007546468421": "lodydeals",
+    "1005006367419820": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3189,7 +3207,8 @@
     "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": "aniscoupons",
     "RYZEN 7 7800X3D": "aniscoupons",
     "Redmi Note 14S  8/128GB": "lodydeals",
-    "Attack Shark X AJAZZ AK820": "lodydeals"
+    "Attack Shark X AJAZZ AK820": "lodydeals",
+    "Baseus Stylus Pen": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
