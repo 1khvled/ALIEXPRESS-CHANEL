@@ -113,7 +113,8 @@
     "1005007097205322",
     "1005010470699571",
     "1005012741634118",
-    "1005010453516983"
+    "1005010453516983",
+    "1005008554596598"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -233,7 +234,8 @@
     "1005007097205322": 1791014755.488723,
     "1005010470699571": 1791015054.3845687,
     "1005012741634118": 1791015347.2675145,
-    "1005010453516983": 1791015953.484505
+    "1005010453516983": 1791015953.484505,
+    "1005008554596598": 1791017145.537471
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -347,7 +349,8 @@
     "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa",
     "HAYLOU Solar Lite 2",
     "HAYLOU FlowLoop S33",
-    "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery"
+    "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery",
+    "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -464,7 +467,8 @@
     "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": 1791014755.488723,
     "HAYLOU Solar Lite 2": 1791015054.3845687,
     "HAYLOU FlowLoop S33": 1791015347.2675145,
-    "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": 1791015953.484505
+    "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": 1791015953.484505,
+    "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz": 1791017145.537471
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -736,27 +740,29 @@
     "lodydeals:45418",
     "aniscoupons:32708",
     "aniscoupons:32709",
-    "aniscoupons:32710"
+    "aniscoupons:32710",
+    "lodydeals:45419",
+    "bnddeals:50803"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791015953.484505,
+  "last_run_time": 1791017145.537471,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32710,
-      "last_check_time": 1791016841.4200623
+      "last_check_time": 1791017148.4511094
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45418,
-      "last_check_time": 1791016839.723411
+      "last_message_id": 45419,
+      "last_check_time": 1791017140.9269986
     },
     "bnddeals": {
-      "last_message_id": 50802,
-      "last_check_time": 1791016840.7077127
+      "last_message_id": 50803,
+      "last_check_time": 1791017147.5488193
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -768,11 +774,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791016840.0983307
+      "last_check_time": 1791017141.2778172
     },
     "megaphonna": {
       "last_message_id": 8205,
-      "last_check_time": 1791016841.0365326
+      "last_check_time": 1791017148.0556045
     }
   },
   "published_product_prices": {
@@ -870,7 +876,8 @@
     "1005012297674623": 21.6,
     "1005007097205322": 15.1,
     "1005010470699571": 24.56,
-    "1005012741634118": 29.0
+    "1005012741634118": 29.0,
+    "1005008554596598": 15.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2082,6 +2089,16 @@
       "price": 204.7,
       "timestamp": 1791015953.484505,
       "status": "ACTIVE"
+    },
+    "bnddeals:50803": {
+      "channel_msg_id": 452,
+      "product_id": "1005008554596598",
+      "title": "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz",
+      "channel": "bnddeals",
+      "source_msg_id": 50803,
+      "price": 15.4,
+      "timestamp": 1791017145.537471,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2090,7 +2107,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791015953.4875882,
+    "last_deal_post_time": 1791017145.540939,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2194,7 +2211,8 @@
     "1005012297674623": "bnddeals",
     "1005007097205322": "bnddeals",
     "1005010470699571": "aniscoupons",
-    "1005012741634118": "aniscoupons"
+    "1005012741634118": "aniscoupons",
+    "1005008554596598": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2286,7 +2304,8 @@
     "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": "bnddeals",
     "HAYLOU Solar Lite 2": "aniscoupons",
     "HAYLOU FlowLoop S33": "aniscoupons",
-    "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": "aniscoupons"
+    "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": "aniscoupons",
+    "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
