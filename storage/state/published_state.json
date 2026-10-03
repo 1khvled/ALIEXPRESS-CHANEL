@@ -136,7 +136,8 @@
     "1005007244376156",
     "1005005639737205",
     "1005008144734940",
-    "1005006443158717"
+    "1005006443158717",
+    "1005012492244291"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -279,7 +280,8 @@
     "1005007244376156": 1791031868.917476,
     "1005005639737205": 1791032153.257991,
     "1005008144734940": 1791032158.6801872,
-    "1005006443158717": 1791032177.1222703
+    "1005006443158717": 1791032177.1222703,
+    "1005012492244291": 1791035151.8836284
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -423,7 +425,8 @@
     "V600 OBD2 Diagnostic Scanner Car",
     "Wireless WiFi Repeater 300Mbps",
     "Mini Laser Rangefinder 30M High Precision",
-    "Men’s Oxford Fabric Sling Crossbody Bag"
+    "Men’s Oxford Fabric Sling Crossbody Bag",
+    "ONEPLUS TURBO 6X 5G"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -570,7 +573,8 @@
     "V600 OBD2 Diagnostic Scanner Car": 1791032158.6801872,
     "Wireless WiFi Repeater 300Mbps": 1791032170.0482783,
     "Mini Laser Rangefinder 30M High Precision": 1791032177.1222703,
-    "Men’s Oxford Fabric Sling Crossbody Bag": 1791033345.3970714
+    "Men’s Oxford Fabric Sling Crossbody Bag": 1791033345.3970714,
+    "ONEPLUS TURBO 6X 5G": 1791035151.8836284
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -923,15 +927,16 @@
     "couponsglobal:48778",
     "couponsglobal:48779",
     "megaphonna:8225",
-    "aniscoupons:32722"
+    "aniscoupons:32722",
+    "megaphonna:8226"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791033345.3970714,
+  "last_run_time": 1791035151.8836284,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32722,
-      "last_check_time": 1791034839.808802
+      "last_check_time": 1791035154.4467869
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -939,11 +944,11 @@
     },
     "lodydeals": {
       "last_message_id": 45445,
-      "last_check_time": 1791034838.180691
+      "last_check_time": 1791035143.6556113
     },
     "bnddeals": {
       "last_message_id": 50804,
-      "last_check_time": 1791034839.1162753
+      "last_check_time": 1791035144.610471
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -955,15 +960,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791034838.517946
+      "last_check_time": 1791035143.9656272
     },
     "megaphonna": {
-      "last_message_id": 8225,
-      "last_check_time": 1791034839.4609146
+      "last_message_id": 8226,
+      "last_check_time": 1791035153.8925028
     },
     "couponsglobal": {
       "last_message_id": 48779,
-      "last_check_time": 1791034840.3174307
+      "last_check_time": 1791035154.9920924
     }
   },
   "published_product_prices": {
@@ -1082,7 +1087,8 @@
     "1005007244376156": 6.02,
     "1005005639737205": 2.69,
     "1005008144734940": 5.23,
-    "1005006443158717": 6.42
+    "1005006443158717": 6.42,
+    "1005012492244291": 230.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2674,6 +2680,16 @@
       "price": 6.4,
       "timestamp": 1791033345.3970714,
       "status": "ACTIVE"
+    },
+    "megaphonna:8226": {
+      "channel_msg_id": 490,
+      "product_id": "1005012492244291",
+      "title": "ONEPLUS TURBO 6X 5G",
+      "channel": "megaphonna",
+      "source_msg_id": 8226,
+      "price": 230.0,
+      "timestamp": 1791035151.8836284,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2682,7 +2698,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791033345.4007905,
+    "last_deal_post_time": 1791035151.8860605,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2808,7 +2824,8 @@
     "1005007244376156": "couponsglobal",
     "1005005639737205": "couponsglobal",
     "1005008144734940": "couponsglobal",
-    "1005006443158717": "couponsglobal"
+    "1005006443158717": "couponsglobal",
+    "1005012492244291": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2928,7 +2945,8 @@
     "V600 OBD2 Diagnostic Scanner Car": "couponsglobal",
     "Wireless WiFi Repeater 300Mbps": "couponsglobal",
     "Mini Laser Rangefinder 30M High Precision": "couponsglobal",
-    "Men’s Oxford Fabric Sling Crossbody Bag": "aniscoupons"
+    "Men’s Oxford Fabric Sling Crossbody Bag": "aniscoupons",
+    "ONEPLUS TURBO 6X 5G": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
