@@ -118,7 +118,8 @@
     "1005008776714223",
     "1005012925826589",
     "1005010306498953",
-    "1005010338761787"
+    "1005010338761787",
+    "1005012265051745"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -243,7 +244,8 @@
     "1005008776714223": 1791018047.9604976,
     "1005012925826589": 1791019854.2427852,
     "1005010306498953": 1791021345.213176,
-    "1005010338761787": 1791021850.86469
+    "1005010338761787": 1791021850.86469,
+    "1005012265051745": 1791022849.763491
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -362,7 +364,8 @@
     "CUSU 512GB",
     "REALME P3 5G (8/256)",
     "Toocki USB-C 60W Cable",
-    "Toocki 2.4A Lightning Cable"
+    "Toocki 2.4A Lightning Cable",
+    "OnePlus Pad Go 2 8/128GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -484,7 +487,8 @@
     "CUSU 512GB": 1791018047.9604976,
     "REALME P3 5G (8/256)": 1791019854.2427852,
     "Toocki USB-C 60W Cable": 1791021345.213176,
-    "Toocki 2.4A Lightning Cable": 1791021850.86469
+    "Toocki 2.4A Lightning Cable": 1791021850.86469,
+    "OnePlus Pad Go 2 8/128GB": 1791022849.763491
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -775,27 +779,31 @@
     "aniscoupons:32714",
     "lodydeals:45422",
     "lodydeals:45423",
-    "lodydeals:45424"
+    "lodydeals:45424",
+    "lodydeals:45425",
+    "megaphonna:8214",
+    "megaphonna:8215",
+    "aniscoupons:32715"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791022250.7560554,
+  "last_run_time": 1791022849.763491,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32714,
-      "last_check_time": 1791022559.521762
+      "last_message_id": 32715,
+      "last_check_time": 1791022861.595353
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45424,
-      "last_check_time": 1791022556.7075539
+      "last_message_id": 45425,
+      "last_check_time": 1791022851.9360356
     },
     "bnddeals": {
       "last_message_id": 50803,
-      "last_check_time": 1791022558.261289
+      "last_check_time": 1791022853.1230743
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -807,11 +815,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791022557.4852533
+      "last_check_time": 1791022852.4846106
     },
     "megaphonna": {
-      "last_message_id": 8213,
-      "last_check_time": 1791022558.6976688
+      "last_message_id": 8215,
+      "last_check_time": 1791022858.4838014
     }
   },
   "published_product_prices": {
@@ -913,7 +921,8 @@
     "1005008554596598": 15.4,
     "1005008776714223": 47.6,
     "1005010306498953": 1.46,
-    "1005010338761787": 1.49
+    "1005010338761787": 1.49,
+    "1005012265051745": 246.04
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2205,6 +2214,16 @@
       "price": 96.8,
       "timestamp": 1791022250.7560554,
       "status": "ACTIVE"
+    },
+    "lodydeals:45425": {
+      "channel_msg_id": 460,
+      "product_id": "1005012265051745",
+      "title": "OnePlus Pad Go 2 8/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45425,
+      "price": 246.04,
+      "timestamp": 1791022849.763491,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2213,7 +2232,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791022250.7592516,
+    "last_deal_post_time": 1791022849.7661421,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2321,7 +2340,8 @@
     "1005008554596598": "bnddeals",
     "1005008776714223": "aniscoupons",
     "1005010306498953": "lodydeals",
-    "1005010338761787": "lodydeals"
+    "1005010338761787": "lodydeals",
+    "1005012265051745": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2417,7 +2437,8 @@
     "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz": "bnddeals",
     "CUSU 512GB": "aniscoupons",
     "Toocki USB-C 60W Cable": "lodydeals",
-    "Toocki 2.4A Lightning Cable": "lodydeals"
+    "Toocki 2.4A Lightning Cable": "lodydeals",
+    "OnePlus Pad Go 2 8/128GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
