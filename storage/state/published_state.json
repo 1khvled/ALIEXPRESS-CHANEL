@@ -121,7 +121,11 @@
     "1005010338761787",
     "1005012265051745",
     "1005009390922629",
-    "1005010285419688"
+    "1005010285419688",
+    "1005008144855522",
+    "1005008486721357",
+    "1005012871566388",
+    "1005007027334636"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -249,7 +253,11 @@
     "1005010338761787": 1791021850.86469,
     "1005012265051745": 1791022849.763491,
     "1005009390922629": 1791023140.1114628,
-    "1005010285419688": 1791026154.7068377
+    "1005010285419688": 1791026154.7068377,
+    "1005008144855522": 1791026444.9395418,
+    "1005008486721357": 1791026452.368309,
+    "1005012871566388": 1791026457.7236943,
+    "1005007027334636": 1791026466.6956959
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -371,7 +379,11 @@
     "Toocki 2.4A Lightning Cable",
     "OnePlus Pad Go 2 8/128GB",
     "ASROCK  X470 MASTER",
-    "Square Quartz Watch"
+    "Square Quartz Watch",
+    "Adjustable Laptop Stand",
+    "Robot UGREEN 30W GaN Charger",
+    "Camping Sleeping Bag",
+    "SomnAmbulist SSD"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -496,7 +508,11 @@
     "Toocki 2.4A Lightning Cable": 1791021850.86469,
     "OnePlus Pad Go 2 8/128GB": 1791022849.763491,
     "ASROCK  X470 MASTER": 1791023140.1114628,
-    "Square Quartz Watch": 1791026154.7068377
+    "Square Quartz Watch": 1791026154.7068377,
+    "Adjustable Laptop Stand": 1791026444.9395418,
+    "Robot UGREEN 30W GaN Charger": 1791026452.368309,
+    "Camping Sleeping Bag": 1791026457.7236943,
+    "SomnAmbulist SSD": 1791026466.6956959
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -801,27 +817,31 @@
     "lodydeals:45427",
     "aniscoupons:32716",
     "lodydeals:45428",
-    "lodydeals:45429"
+    "lodydeals:45429",
+    "lodydeals:45430",
+    "lodydeals:45431",
+    "lodydeals:45432",
+    "aniscoupons:32717"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791026154.7068377,
+  "last_run_time": 1791026466.6956959,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32716,
-      "last_check_time": 1791026158.900787
+      "last_message_id": 32717,
+      "last_check_time": 1791026468.7055254
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45429,
-      "last_check_time": 1791026156.7147555
+      "last_message_id": 45432,
+      "last_check_time": 1791026459.7335129
     },
     "bnddeals": {
       "last_message_id": 50803,
-      "last_check_time": 1791026158.131224
+      "last_check_time": 1791026460.8551784
     },
     "test_channel": {
       "last_message_id": 1790965993,
@@ -833,18 +853,18 @@
     },
     "zedstoreonline": {
       "last_message_id": 38524,
-      "last_check_time": 1791026157.3920708
+      "last_check_time": 1791026460.2421622
     },
     "megaphonna": {
       "last_message_id": 8220,
-      "last_check_time": 1791026158.50016
+      "last_check_time": 1791026461.2085488
     }
   },
   "published_product_prices": {
     "1005012973772517": 179.1,
     "1005010219205081": 57.2,
     "1005007805638431": 22.64,
-    "1005007027334636": 9.5,
+    "1005007027334636": 10.3,
     "1005009054706827": 22.6,
     "1005007961216287": 18.17,
     "1005008233932899": 294.9,
@@ -942,7 +962,10 @@
     "1005010338761787": 1.49,
     "1005012265051745": 246.04,
     "1005009390922629": 101.91,
-    "1005010285419688": 3.69
+    "1005010285419688": 3.69,
+    "1005008144855522": 2.69,
+    "1005008486721357": 11.39,
+    "1005012871566388": 6.49
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -2274,6 +2297,46 @@
       "price": 3.69,
       "timestamp": 1791026154.7068377,
       "status": "ACTIVE"
+    },
+    "lodydeals:45430": {
+      "channel_msg_id": 464,
+      "product_id": "1005008144855522",
+      "title": "Adjustable Laptop Stand",
+      "channel": "lodydeals",
+      "source_msg_id": 45430,
+      "price": 2.69,
+      "timestamp": 1791026444.9395418,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45431": {
+      "channel_msg_id": 465,
+      "product_id": "1005008486721357",
+      "title": "Robot UGREEN 30W GaN Charger",
+      "channel": "lodydeals",
+      "source_msg_id": 45431,
+      "price": 11.39,
+      "timestamp": 1791026452.368309,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45432": {
+      "channel_msg_id": 466,
+      "product_id": "1005012871566388",
+      "title": "Camping Sleeping Bag",
+      "channel": "lodydeals",
+      "source_msg_id": 45432,
+      "price": 6.49,
+      "timestamp": 1791026457.7236943,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32717": {
+      "channel_msg_id": 467,
+      "product_id": "1005007027334636",
+      "title": "SomnAmbulist SSD",
+      "channel": "aniscoupons",
+      "source_msg_id": 32717,
+      "price": 10.3,
+      "timestamp": 1791026466.6956959,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -2282,7 +2345,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791026154.708879,
+    "last_deal_post_time": 1791026466.6991408,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -2393,7 +2456,10 @@
     "1005010338761787": "lodydeals",
     "1005012265051745": "lodydeals",
     "1005009390922629": "lodydeals",
-    "1005010285419688": "lodydeals"
+    "1005010285419688": "lodydeals",
+    "1005008144855522": "lodydeals",
+    "1005008486721357": "lodydeals",
+    "1005012871566388": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -2492,7 +2558,10 @@
     "Toocki 2.4A Lightning Cable": "lodydeals",
     "OnePlus Pad Go 2 8/128GB": "lodydeals",
     "ASROCK  X470 MASTER": "lodydeals",
-    "Square Quartz Watch": "lodydeals"
+    "Square Quartz Watch": "lodydeals",
+    "Adjustable Laptop Stand": "lodydeals",
+    "Robot UGREEN 30W GaN Charger": "lodydeals",
+    "Camping Sleeping Bag": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
