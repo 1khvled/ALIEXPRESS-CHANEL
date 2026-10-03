@@ -46,7 +46,13 @@ FRANCE_STATE_FILE = Path(settings.BASE_DIR) / "storage" / "state" / "france_publ
 
 FRANCE_SOURCE_CHANNELS = [
     "AliFRDrop",
-    "FranceCP"
+    "FranceCP",
+    "CouponsGlobal",
+    "megaphonna",
+    "lodydeals",
+    "zedstoreonline",
+    "BNDDEALS",
+    "ECKSDEAL"
 ]
 
 def load_france_state() -> Dict:

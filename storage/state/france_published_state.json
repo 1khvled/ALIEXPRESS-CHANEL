@@ -1,27 +1,32 @@
 {
   "published_post_keys": [
-    "francecp:420",
-    "alifrdrop:105",
-    "alifrdrop:102",
-    "francecp:414",
-    "francecp:416",
-    "francecp:417",
-    "alifrdrop:103",
-    "francecp:419",
-    "francecp:415",
-    "francecp:418",
     "alifrdrop:106",
+    "alifrdrop:103",
+    "francecp:420",
+    "francecp:418",
+    "francecp:413",
+    "francecp:416",
+    "couponsglobal:48779",
+    "couponsglobal:48780",
+    "alifrdrop:102",
+    "francecp:415",
     "alifrdrop:104",
-    "francecp:413"
+    "francecp:414",
+    "megaphonna:8230",
+    "francecp:417",
+    "couponsglobal:48778",
+    "alifrdrop:105",
+    "megaphonna:8231",
+    "francecp:419"
   ],
   "published_product_ids": [
+    "1005012589045044",
     "1005012541048117",
-    "1005009977303549",
+    "1005012540990578",
+    "1005011938407661",
     "1005012218291528",
     "1005012155835323",
-    "1005012589045044",
-    "1005011938407661",
-    "1005012540990578"
+    "1005009977303549"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -59,6 +64,30 @@
       "title": "HONOR 600 5G Smartphone EU Version",
       "price_eur": 289.0,
       "channel_msg_id": 33
+    },
+    "1005007010594042": {
+      "timestamp": 1791046081.69332,
+      "title": "Adapter 2.4G/5GHZ Dual Band WiFi Dongle Wireless",
+      "price_eur": 3.67,
+      "channel_msg_id": 35
+    },
+    "1005007027334636": {
+      "timestamp": 1791046089.292046,
+      "title": "SomnAmbulist SSD 2.5 120GB",
+      "price_eur": 9.52,
+      "channel_msg_id": 36
+    },
+    "1005012406142215": {
+      "timestamp": 1791046099.184458,
+      "title": "HONOR WIN TURBO 12/256GB",
+      "price_eur": 361.56,
+      "channel_msg_id": 37
+    },
+    "1005010721042860": {
+      "timestamp": 1791046107.510236,
+      "title": "HONOR POWER 2 (12/256)",
+      "price_eur": 346.38,
+      "channel_msg_id": 38
     }
   },
   "monitored_channels": {
@@ -69,13 +98,21 @@
     "alifrdrop": {
       "last_message_id": 106,
       "last_check_time": 1790836790.2576432
+    },
+    "couponsglobal": {
+      "last_message_id": 48780,
+      "last_check_time": 1791046092.9195073
+    },
+    "megaphonna": {
+      "last_message_id": 8231,
+      "last_check_time": 1791046109.524443
     }
   },
-  "last_run_time": 1790965967.7358937,
+  "last_run_time": 1791046109.524646,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001"
   ],
-  "last_deal_post_time": 1790965967.7358942,
+  "last_deal_post_time": 1791046109.524647,
   "daily_roundup_history": {
     "2026-10-02": {
       "timestamp": 1790976075.00982,
