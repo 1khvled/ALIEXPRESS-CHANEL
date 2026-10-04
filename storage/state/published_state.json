@@ -172,7 +172,8 @@
     "1005006996329614",
     "1005008046254742",
     "1005011987956470",
-    "1005012865709979"
+    "1005012865709979",
+    "COUPONS_be64457c7fff"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -351,7 +352,8 @@
     "1005006996329614": 1791126044.0695431,
     "1005008046254742": 1791126049.4061573,
     "1005011987956470": 1791126349.6683438,
-    "1005012865709979": 1791135345.3136878
+    "1005012865709979": 1791135345.3136878,
+    "COUPONS_be64457c7fff": 1791138647.0734267
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -546,7 +548,8 @@
     "E27 60W Wireless Remote Control Smart Timer",
     "HTC NE79 TWS Wireless Bluetooth Earphones: AI",
     "Nail Scissors Set Household High End",
-    "Baseus 30W Car Charger Dual Port USB Type-C Fast"
+    "Baseus 30W Car Charger Dual Port USB Type-C Fast",
+    "أحدث كوبونات وتخفيضات AliExpress"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -744,7 +747,8 @@
     "E27 60W Wireless Remote Control Smart Timer": 1791126049.4061573,
     "HTC NE79 TWS Wireless Bluetooth Earphones: AI": 1791126349.6683438,
     "Nail Scissors Set Household High End": 1791126649.148256,
-    "Baseus 30W Car Charger Dual Port USB Type-C Fast": 1791135345.3136878
+    "Baseus 30W Car Charger Dual Port USB Type-C Fast": 1791135345.3136878,
+    "أحدث كوبونات وتخفيضات AliExpress": 1791138647.0734267
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1255,27 +1259,28 @@
     "couponsglobal:48795",
     "aniscoupons:32773",
     "aniscoupons:32774",
-    "aniscoupons:32775"
+    "aniscoupons:32775",
+    "lodydeals:45461"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791137155.7589798,
+  "last_run_time": 1791138647.0734267,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32775,
-      "last_check_time": 1791138337.9133904
+      "last_check_time": 1791138651.6135168
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45460,
-      "last_check_time": 1791138335.9165292
+      "last_message_id": 45461,
+      "last_check_time": 1791138649.08607
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791138337.220469
+      "last_check_time": 1791138650.7963347
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1283,19 +1288,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791138336.896985
+      "last_check_time": 1791138650.4522228
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791138336.2366412
+      "last_check_time": 1791138649.7579184
     },
     "megaphonna": {
       "last_message_id": 8259,
-      "last_check_time": 1791138337.5492578
+      "last_check_time": 1791138651.1750574
     },
     "couponsglobal": {
       "last_message_id": 48795,
-      "last_check_time": 1791138338.5156627
+      "last_check_time": 1791138652.2515438
     }
   },
   "published_product_prices": {
@@ -3768,6 +3773,16 @@
       "price": 224.3,
       "timestamp": 1791137155.7589798,
       "status": "ACTIVE"
+    },
+    "lodydeals:45461": {
+      "channel_msg_id": 573,
+      "product_id": "COUPONS_be64457c7fff",
+      "title": "أحدث كوبونات وتخفيضات AliExpress",
+      "channel": "lodydeals",
+      "source_msg_id": 45461,
+      "price": null,
+      "timestamp": 1791138647.0734267,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3776,7 +3791,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791137155.7648108,
+    "last_deal_post_time": 1791138647.077671,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3940,7 +3955,8 @@
     "1005006996329614": "couponsglobal",
     "1005008046254742": "couponsglobal",
     "1005011987956470": "couponsglobal",
-    "1005012865709979": "couponsglobal"
+    "1005012865709979": "couponsglobal",
+    "COUPONS_be64457c7fff": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4114,7 +4130,8 @@
     "E27 60W Wireless Remote Control Smart Timer": "couponsglobal",
     "HTC NE79 TWS Wireless Bluetooth Earphones: AI": "couponsglobal",
     "Nail Scissors Set Household High End": "couponsglobal",
-    "Baseus 30W Car Charger Dual Port USB Type-C Fast": "couponsglobal"
+    "Baseus 30W Car Charger Dual Port USB Type-C Fast": "couponsglobal",
+    "أحدث كوبونات وتخفيضات AliExpress": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",

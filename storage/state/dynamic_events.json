@@ -1,0 +1,37 @@
+[
+  {
+    "name": "AliExpress Special Promo Octobre 2026",
+    "name_ar": "تخفيضات علي إكسبرس الاستثنائية (أكتوبر 2026) 🔥",
+    "name_fr": "Promotions Spéciales AliExpress Octobre 2026 🇫🇷",
+    "start_date": "2026-10-04T18:00:00+00:00",
+    "end_date": "2026-10-11T18:00:00+00:00",
+    "banner_tag": "🎯 تخفيضات علي إكسبرس (4 - 10 أكتوبر)",
+    "is_major": true,
+    "coupon_tiers": [
+      {
+        "tier": "2/15$",
+        "code": "OTPRD02"
+      },
+      {
+        "tier": "4/30$",
+        "code": "OTPRD04"
+      },
+      {
+        "tier": "8/65$",
+        "code": "OTPRD08"
+      },
+      {
+        "tier": "15/119$",
+        "code": "OTPRD15"
+      },
+      {
+        "tier": "28/229$",
+        "code": "OTPRD28"
+      }
+    ],
+    "coupon_tiers_fr": [],
+    "banner_image_url": "https://cdn4.telesco.pe/file/skR1tl7XZTzma649ytCyfvbD26TKjyDmrjrRJ86v9Qzj6GX9toCYmdciuuBOlghAt0oMU3c9OBcpwO4PvBrOr7r-kgeEpy1qsJLnTynZO9bmcM35EAkwJ7jjMetK-bwtLlPky1H6JuyRKbRG7MI09vqBKCyixeRl0UnYTBb-AtyJu7uNwdkLS35pTVK_u2MY9NSJuszN2huy4fNjCn23oZ4MnPRh-LYPF5sEpzZsKvSOwwbFnZQ2mYCRhlBvZD66Ysbz7ucg7a_SNzFYxQ6DB6Ojg44ciOovlfgb041LSA1BKxCyVO-JBVYVVhGlm3_bmkl5hLdaybC_hQDFpJl-lg.jpg",
+    "source": "discovered",
+    "event_key": "AliExpress_Special_Promo_Octobre_2026_20261004"
+  }
+]
