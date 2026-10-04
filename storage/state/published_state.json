@@ -164,7 +164,8 @@
     "1005007394197021",
     "1005008880082336",
     "1005012571601398",
-    "1005013290515237"
+    "1005013290515237",
+    "1005012264415744"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -335,7 +336,8 @@
     "1005007394197021": 1791106853.9447496,
     "1005008880082336": 1791107750.295487,
     "1005012571601398": 1791109857.5190113,
-    "1005013290515237": 1791110751.0808105
+    "1005013290515237": 1791110751.0808105,
+    "1005012264415744": 1791114344.949536
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -563,7 +565,7 @@
     "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1790973864.542499,
     "Attack Shark L80 PRO Wireless Mouse": 1791062964.6446297,
     "الأكثر لبا لنهار اليوووم": 1790940343.7746465,
-    "POCO C81 Pro 4/64": 1790940366.7525578,
+    "POCO C81 Pro 4/64": 1791114344.949536,
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
     "300Mbps WiFi Amplifier Wireless WIFI Repeater Extender 802.11N Booster": 1790940383.4974926,
     "realme Pad 3 5G Global Version 8/256GB": 1790940388.7188938,
@@ -1175,15 +1177,18 @@
     "aniscoupons:32765",
     "aniscoupons:32766",
     "zedstoreonline:38529",
-    "pcgamingpart:7958"
+    "pcgamingpart:7958",
+    "pcgamingpart:7959",
+    "megaphonna:8248",
+    "megaphonna:8249"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791110751.0808105,
+  "last_run_time": 1791114344.949536,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32766,
-      "last_check_time": 1791114043.1195736
+      "last_check_time": 1791114347.589335
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1191,31 +1196,31 @@
     },
     "lodydeals": {
       "last_message_id": 45458,
-      "last_check_time": 1791114041.177555
+      "last_check_time": 1791114334.7639232
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791114042.4839227
+      "last_check_time": 1791114338.0472097
     },
     "test_channel": {
       "last_message_id": 1791063864,
       "last_check_time": 1791063864.5866926
     },
     "pcgamingpart": {
-      "last_message_id": 7958,
-      "last_check_time": 1791114042.1839309
+      "last_message_id": 7959,
+      "last_check_time": 1791114337.6884265
     },
     "zedstoreonline": {
       "last_message_id": 38529,
-      "last_check_time": 1791114041.5281966
+      "last_check_time": 1791114335.1110437
     },
     "megaphonna": {
-      "last_message_id": 8247,
-      "last_check_time": 1791114042.7892401
+      "last_message_id": 8249,
+      "last_check_time": 1791114346.963891
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791114043.7773252
+      "last_check_time": 1791114348.1462584
     }
   },
   "published_product_prices": {
@@ -1358,7 +1363,8 @@
     "1005007345108759": 22.12,
     "1005007394197021": 14.84,
     "1005012571601398": 275.7,
-    "1005013290515237": 23.22
+    "1005013290515237": 23.22,
+    "1005012264415744": 78.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3520,6 +3526,16 @@
       "price": 23.22,
       "timestamp": 1791110751.0808105,
       "status": "ACTIVE"
+    },
+    "megaphonna:8249": {
+      "channel_msg_id": 557,
+      "product_id": "1005012264415744",
+      "title": "POCO C81 Pro 4/64",
+      "channel": "megaphonna",
+      "source_msg_id": 8249,
+      "price": 78.0,
+      "timestamp": 1791114344.949536,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3528,7 +3544,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791110751.0838218,
+    "last_deal_post_time": 1791114344.9543586,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3684,13 +3700,14 @@
     "1005007394197021": "aniscoupons",
     "1005011778621042": "lodydeals",
     "1005012571601398": "aniscoupons",
-    "1005013290515237": "aniscoupons"
+    "1005013290515237": "aniscoupons",
+    "1005012264415744": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
     "Attack Shark L80 PRO Wireless Mouse": "lodydeals",
     "الأكثر لبا لنهار اليوووم": "zedstoreonline",
-    "POCO C81 Pro 4/64": "bnddeals",
+    "POCO C81 Pro 4/64": "megaphonna",
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": "bnddeals",
     "300Mbps WiFi Amplifier Wireless WIFI Repeater Extender 802.11N Booster": "bnddeals",
     "realme Pad 3 5G Global Version 8/256GB": "bnddeals",
