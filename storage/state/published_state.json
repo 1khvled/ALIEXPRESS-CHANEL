@@ -166,7 +166,8 @@
     "1005012571601398",
     "1005013290515237",
     "1005012264415744",
-    "1005009689592131"
+    "1005009689592131",
+    "1005006437107166"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -339,7 +340,8 @@
     "1005012571601398": 1791109857.5190113,
     "1005013290515237": 1791110751.0808105,
     "1005012264415744": 1791114344.949536,
-    "1005009689592131": 1791114651.412541
+    "1005009689592131": 1791114651.412541,
+    "1005006437107166": 1791124852.3122299
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -526,7 +528,8 @@
     "ATTACK SHARK V6 Tri-Mode",
     "POCO M7 (6/128)",
     "OPPO A6 Pro 8/256GB",
-    "ATTACK SHARK X1  Tri-Mode"
+    "ATTACK SHARK X1  Tri-Mode",
+    "HILDA 2 Lines Laser Level Green"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -716,7 +719,8 @@
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
     "OPPO A6 Pro 8/256GB": 1791114657.3821456,
-    "ATTACK SHARK X1  Tri-Mode": 1791117948.6585228
+    "ATTACK SHARK X1  Tri-Mode": 1791117948.6585228,
+    "HILDA 2 Lines Laser Level Green": 1791124852.3122299
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1207,15 +1211,16 @@
     "couponsglobal:48782",
     "couponsglobal:48783",
     "aniscoupons:32770",
-    "aniscoupons:32771"
+    "aniscoupons:32771",
+    "couponsglobal:48784"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791123641.3272605,
+  "last_run_time": 1791124852.3122299,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32771,
-      "last_check_time": 1791124538.0326395
+      "last_check_time": 1791124844.864036
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1223,11 +1228,11 @@
     },
     "lodydeals": {
       "last_message_id": 45460,
-      "last_check_time": 1791124536.0348232
+      "last_check_time": 1791124842.3966043
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791124537.2670279
+      "last_check_time": 1791124843.9839175
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1235,19 +1240,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791124536.977875
+      "last_check_time": 1791124843.5962436
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791124536.3472476
+      "last_check_time": 1791124842.8098562
     },
     "megaphonna": {
       "last_message_id": 8255,
-      "last_check_time": 1791124537.6239593
+      "last_check_time": 1791124844.4446304
     },
     "couponsglobal": {
-      "last_message_id": 48783,
-      "last_check_time": 1791124538.5664968
+      "last_message_id": 48784,
+      "last_check_time": 1791124854.3294916
     }
   },
   "published_product_prices": {
@@ -1392,7 +1397,8 @@
     "1005012571601398": 275.7,
     "1005013290515237": 23.22,
     "1005012264415744": 78.0,
-    "1005009689592131": 114.1
+    "1005009689592131": 114.1,
+    "1005006437107166": 1.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3604,6 +3610,16 @@
       "price": 57.2,
       "timestamp": 1791123641.3272605,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48784": {
+      "channel_msg_id": 562,
+      "product_id": "1005006437107166",
+      "title": "HILDA 2 Lines Laser Level Green",
+      "channel": "couponsglobal",
+      "source_msg_id": 48784,
+      "price": 1.0,
+      "timestamp": 1791124852.3122299,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3612,7 +3628,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791123641.334188,
+    "last_deal_post_time": 1791124852.319089,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3770,7 +3786,8 @@
     "1005012571601398": "aniscoupons",
     "1005013290515237": "aniscoupons",
     "1005012264415744": "megaphonna",
-    "1005009689592131": "megaphonna"
+    "1005009689592131": "megaphonna",
+    "1005006437107166": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3936,7 +3953,8 @@
     "CMF Smart Watch 3 pro AMOLED": "aniscoupons",
     "ATTACK SHARK V6 Tri-Mode": "aniscoupons",
     "POCO M7 (6/128)": "megaphonna",
-    "ATTACK SHARK X1  Tri-Mode": "lodydeals"
+    "ATTACK SHARK X1  Tri-Mode": "lodydeals",
+    "HILDA 2 Lines Laser Level Green": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
