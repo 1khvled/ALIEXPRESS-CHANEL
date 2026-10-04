@@ -171,7 +171,8 @@
     "1005006895026041",
     "1005006996329614",
     "1005008046254742",
-    "1005011987956470"
+    "1005011987956470",
+    "1005012865709979"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -349,7 +350,8 @@
     "1005006895026041": 1791125753.051726,
     "1005006996329614": 1791126044.0695431,
     "1005008046254742": 1791126049.4061573,
-    "1005011987956470": 1791126349.6683438
+    "1005011987956470": 1791126349.6683438,
+    "1005012865709979": 1791135345.3136878
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -543,7 +545,8 @@
     "KODAK USB 2.0 Flash Drive 64GB",
     "E27 60W Wireless Remote Control Smart Timer",
     "HTC NE79 TWS Wireless Bluetooth Earphones: AI",
-    "Nail Scissors Set Household High End"
+    "Nail Scissors Set Household High End",
+    "Baseus 30W Car Charger Dual Port USB Type-C Fast"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -740,7 +743,8 @@
     "KODAK USB 2.0 Flash Drive 64GB": 1791126044.0695431,
     "E27 60W Wireless Remote Control Smart Timer": 1791126049.4061573,
     "HTC NE79 TWS Wireless Bluetooth Earphones: AI": 1791126349.6683438,
-    "Nail Scissors Set Household High End": 1791126649.148256
+    "Nail Scissors Set Household High End": 1791126649.148256,
+    "Baseus 30W Car Charger Dual Port USB Type-C Fast": 1791135345.3136878
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1247,15 +1251,16 @@
     "megaphonna:8256",
     "megaphonna:8257",
     "megaphonna:8258",
-    "megaphonna:8259"
+    "megaphonna:8259",
+    "couponsglobal:48795"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791129948.3620403,
+  "last_run_time": 1791135345.3136878,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32772,
-      "last_check_time": 1791135042.8797107
+      "last_check_time": 1791135339.052099
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1263,11 +1268,11 @@
     },
     "lodydeals": {
       "last_message_id": 45460,
-      "last_check_time": 1791135040.344998
+      "last_check_time": 1791135336.7922797
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791135042.0174093
+      "last_check_time": 1791135338.1872842
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1275,19 +1280,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791135041.605251
+      "last_check_time": 1791135337.7624636
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791135040.7638755
+      "last_check_time": 1791135337.1096542
     },
     "megaphonna": {
       "last_message_id": 8259,
-      "last_check_time": 1791135042.446572
+      "last_check_time": 1791135338.5063875
     },
     "couponsglobal": {
-      "last_message_id": 48794,
-      "last_check_time": 1791135043.5647678
+      "last_message_id": 48795,
+      "last_check_time": 1791135347.3931532
     }
   },
   "published_product_prices": {
@@ -1437,7 +1442,8 @@
     "1005006895026041": 1.0,
     "1005006996329614": 1.0,
     "1005008046254742": 1.0,
-    "1005011987956470": 1.0
+    "1005011987956470": 1.0,
+    "1005012865709979": 1.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3739,6 +3745,16 @@
       "price": 234.9,
       "timestamp": 1791129948.3620403,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48795": {
+      "channel_msg_id": 571,
+      "product_id": "1005012865709979",
+      "title": "Baseus 30W Car Charger Dual Port USB Type-C Fast",
+      "channel": "couponsglobal",
+      "source_msg_id": 48795,
+      "price": 1.0,
+      "timestamp": 1791135345.3136878,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3747,7 +3763,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791129948.3681452,
+    "last_deal_post_time": 1791135345.3387344,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3910,7 +3926,8 @@
     "1005006895026041": "couponsglobal",
     "1005006996329614": "couponsglobal",
     "1005008046254742": "couponsglobal",
-    "1005011987956470": "couponsglobal"
+    "1005011987956470": "couponsglobal",
+    "1005012865709979": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4083,7 +4100,8 @@
     "KODAK USB 2.0 Flash Drive 64GB": "couponsglobal",
     "E27 60W Wireless Remote Control Smart Timer": "couponsglobal",
     "HTC NE79 TWS Wireless Bluetooth Earphones: AI": "couponsglobal",
-    "Nail Scissors Set Household High End": "couponsglobal"
+    "Nail Scissors Set Household High End": "couponsglobal",
+    "Baseus 30W Car Charger Dual Port USB Type-C Fast": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
