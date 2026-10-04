@@ -183,7 +183,8 @@
     "1005007076639821",
     "1005011653915422",
     "1005007473024376",
-    "1005005902976406"
+    "1005005902976406",
+    "1005006996130042"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -373,7 +374,8 @@
     "1005007076639821": 1791150954.013484,
     "1005011653915422": 1791151270.6442711,
     "1005007473024376": 1791151278.7237968,
-    "1005005902976406": 1791152146.3442965
+    "1005005902976406": 1791152146.3442965,
+    "1005006996130042": 1791153956.1367443
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -583,7 +585,8 @@
     "Lenovo XT62 Earphones Bluetooth",
     "ENCHEN Blackstone Electrical Rotary Shaver",
     "Samsung 45W PD Charger Super Fast Charging",
-    "Men Watch, Fashion Quartz Wristwatch"
+    "Men Watch, Fashion Quartz Wristwatch",
+    "Philips New EDC Portable Flashlight Rechargeable"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -796,7 +799,8 @@
     "Lenovo XT62 Earphones Bluetooth": 1791151278.7237968,
     "ENCHEN Blackstone Electrical Rotary Shaver": 1791152146.3442965,
     "Samsung 45W PD Charger Super Fast Charging": 1791152444.7701666,
-    "Men Watch, Fashion Quartz Wristwatch": 1791153345.9204953
+    "Men Watch, Fashion Quartz Wristwatch": 1791153345.9204953,
+    "Philips New EDC Portable Flashlight Rechargeable": 1791153956.1367443
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1339,15 +1343,16 @@
     "couponsglobal:48799",
     "couponsglobal:48800",
     "couponsglobal:48801",
-    "couponsglobal:48802"
+    "couponsglobal:48802",
+    "couponsglobal:48803"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791153345.9204953,
+  "last_run_time": 1791153956.1367443,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32781,
-      "last_check_time": 1791153643.8349984
+      "last_check_time": 1791153949.5471087
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1355,11 +1360,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791153641.6486018
+      "last_check_time": 1791153947.2432482
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791153643.049035
+      "last_check_time": 1791153948.7276506
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1367,19 +1372,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791153642.6954713
+      "last_check_time": 1791153948.3710036
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791153641.9833722
+      "last_check_time": 1791153947.6091127
     },
     "megaphonna": {
       "last_message_id": 8263,
-      "last_check_time": 1791153643.4546347
+      "last_check_time": 1791153949.149508
     },
     "couponsglobal": {
-      "last_message_id": 48802,
-      "last_check_time": 1791153644.4252887
+      "last_message_id": 48803,
+      "last_check_time": 1791153958.1520886
     }
   },
   "published_product_prices": {
@@ -1540,7 +1545,8 @@
     "1005007076639821": 16.27,
     "1005011653915422": 1.0,
     "1005007473024376": 1.0,
-    "1005005902976406": 1.0
+    "1005005902976406": 1.0,
+    "1005006996130042": 1.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -4062,6 +4068,16 @@
       "price": 1.0,
       "timestamp": 1791153345.9204953,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48803": {
+      "channel_msg_id": 596,
+      "product_id": "1005006996130042",
+      "title": "Philips New EDC Portable Flashlight Rechargeable",
+      "channel": "couponsglobal",
+      "source_msg_id": 48803,
+      "price": 1.0,
+      "timestamp": 1791153956.1367443,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4070,7 +4086,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791153345.925822,
+    "last_deal_post_time": 1791153956.1422002,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4245,7 +4261,8 @@
     "1005007076639821": "lodydeals",
     "1005011653915422": "couponsglobal",
     "1005007473024376": "couponsglobal",
-    "1005005902976406": "couponsglobal"
+    "1005005902976406": "couponsglobal",
+    "1005006996130042": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4434,7 +4451,8 @@
     "Lenovo XT62 Earphones Bluetooth": "couponsglobal",
     "ENCHEN Blackstone Electrical Rotary Shaver": "couponsglobal",
     "Samsung 45W PD Charger Super Fast Charging": "couponsglobal",
-    "Men Watch, Fashion Quartz Wristwatch": "couponsglobal"
+    "Men Watch, Fashion Quartz Wristwatch": "couponsglobal",
+    "Philips New EDC Portable Flashlight Rechargeable": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
