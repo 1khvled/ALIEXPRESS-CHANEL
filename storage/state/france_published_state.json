@@ -1,29 +1,31 @@
 {
   "published_post_keys": [
-    "francecp:415",
-    "francecp:420",
+    "alifrdrop:104",
     "alifrdrop:103",
-    "francecp:423",
+    "alifrdrop:102",
+    "francecp:426",
+    "francecp:425",
     "francecp:413",
+    "francecp:424",
     "francecp:421",
+    "francecp:416",
     "alifrdrop:105",
     "francecp:414",
-    "francecp:417",
-    "francecp:422",
-    "francecp:416",
-    "alifrdrop:102",
-    "alifrdrop:104",
+    "francecp:423",
+    "francecp:415",
     "francecp:419",
-    "francecp:424",
+    "alifrdrop:106",
+    "francecp:420",
+    "francecp:422",
     "francecp:418",
-    "alifrdrop:106"
+    "francecp:417"
   ],
   "published_product_ids": [
-    "1005012155835323",
+    "1005012589045044",
     "1005012541048117",
+    "1005012155835323",
     "1005012218291528",
-    "1005009977303549",
-    "1005012589045044"
+    "1005009977303549"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -73,24 +75,36 @@
       "title": "🟢 HONOR X8d 4G AMOLED 7000 MAh",
       "price_eur": 175.16,
       "channel_msg_id": 153
+    },
+    "1005012325972220": {
+      "timestamp": 1791152455.260763,
+      "title": "🟢  HONOR Magic8 Lite 7500 MAh Amoled",
+      "price_eur": 224.67,
+      "channel_msg_id": 154
+    },
+    "1005012918284558": {
+      "timestamp": 1791152460.229622,
+      "title": "🟢  OPPO Reno15 FS 5G 8 Go + 512 Go",
+      "price_eur": 258.52,
+      "channel_msg_id": 155
     }
   },
   "monitored_channels": {
     "francecp": {
-      "last_message_id": 424,
-      "last_check_time": 1791152159.5572617
+      "last_message_id": 426,
+      "last_check_time": 1791152462.2318306
     },
     "alifrdrop": {
       "last_message_id": 106,
       "last_check_time": 1790836790.2576432
     }
   },
-  "last_run_time": 1791152159.5576727,
+  "last_run_time": 1791152462.2322538,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001",
     "FR_LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004"
   ],
-  "last_deal_post_time": 1791152159.5576737,
+  "last_deal_post_time": 1791152462.2322545,
   "daily_roundup_history": {
     "2026-10-02": {
       "timestamp": 1790976075.00982,

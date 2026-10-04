@@ -319,7 +319,7 @@
     "1005006727600702": 1791027043.7332833,
     "1005009916278058": 1791027049.3509357,
     "1005009719082543": 1791027355.6595695,
-    "1005008720862916": 1791027941.9208312,
+    "1005008720862916": 1791152444.7701666,
     "1005006436971986": 1791027947.9506829,
     "1005007331264474": 1791108947.313694,
     "1005010375387628": 1791031850.9681444,
@@ -581,7 +581,8 @@
     "300Mbps  WIFi Repeater",
     "5pcs Manicure and Pedicure Kit  Includes Nail Clipper",
     "Lenovo XT62 Earphones Bluetooth",
-    "ENCHEN Blackstone Electrical Rotary Shaver"
+    "ENCHEN Blackstone Electrical Rotary Shaver",
+    "Samsung 45W PD Charger Super Fast Charging"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -792,7 +793,8 @@
     "300Mbps  WIFi Repeater": 1791151259.5667012,
     "5pcs Manicure and Pedicure Kit  Includes Nail Clipper": 1791151270.6442711,
     "Lenovo XT62 Earphones Bluetooth": 1791151278.7237968,
-    "ENCHEN Blackstone Electrical Rotary Shaver": 1791152146.3442965
+    "ENCHEN Blackstone Electrical Rotary Shaver": 1791152146.3442965,
+    "Samsung 45W PD Charger Super Fast Charging": 1791152444.7701666
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1333,15 +1335,16 @@
     "couponsglobal:48797",
     "couponsglobal:48798",
     "couponsglobal:48799",
-    "couponsglobal:48800"
+    "couponsglobal:48800",
+    "couponsglobal:48801"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791152146.3442965,
+  "last_run_time": 1791152444.7701666,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32781,
-      "last_check_time": 1791152140.4475188
+      "last_check_time": 1791152438.033701
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1349,11 +1352,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791152138.4382472
+      "last_check_time": 1791152436.0927427
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791152139.7121818
+      "last_check_time": 1791152437.331918
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1361,19 +1364,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791152139.3938596
+      "last_check_time": 1791152437.036984
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791152138.759763
+      "last_check_time": 1791152436.3908954
     },
     "megaphonna": {
       "last_message_id": 8263,
-      "last_check_time": 1791152140.086563
+      "last_check_time": 1791152437.7042685
     },
     "couponsglobal": {
-      "last_message_id": 48800,
-      "last_check_time": 1791152148.3599808
+      "last_message_id": 48801,
+      "last_check_time": 1791152446.7853053
     }
   },
   "published_product_prices": {
@@ -1485,7 +1488,7 @@
     "1005006727600702": 5.09,
     "1005009916278058": 4.29,
     "1005009719082543": 4.09,
-    "1005008720862916": 7.89,
+    "1005008720862916": 1.0,
     "1005006436971986": 13.27,
     "1005007331264474": 15.8,
     "1005010375387628": 4.62,
@@ -4036,6 +4039,16 @@
       "price": 1.0,
       "timestamp": 1791152146.3442965,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48801": {
+      "channel_msg_id": 594,
+      "product_id": "1005008720862916",
+      "title": "Samsung 45W PD Charger Super Fast Charging",
+      "channel": "couponsglobal",
+      "source_msg_id": 48801,
+      "price": 1.0,
+      "timestamp": 1791152444.7701666,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4044,7 +4057,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791152146.349867,
+    "last_deal_post_time": 1791152444.775489,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4162,7 +4175,7 @@
     "1005006727600702": "lodydeals",
     "1005009916278058": "lodydeals",
     "1005009719082543": "lodydeals",
-    "1005008720862916": "lodydeals",
+    "1005008720862916": "couponsglobal",
     "1005006436971986": "bnddeals",
     "1005007275142457": "lodydeals",
     "1005007331264474": "lodydeals",
@@ -4406,7 +4419,8 @@
     "300Mbps  WIFi Repeater": "lodydeals",
     "5pcs Manicure and Pedicure Kit  Includes Nail Clipper": "couponsglobal",
     "Lenovo XT62 Earphones Bluetooth": "couponsglobal",
-    "ENCHEN Blackstone Electrical Rotary Shaver": "couponsglobal"
+    "ENCHEN Blackstone Electrical Rotary Shaver": "couponsglobal",
+    "Samsung 45W PD Charger Super Fast Charging": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
