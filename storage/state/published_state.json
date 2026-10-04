@@ -246,7 +246,7 @@
     "9998886362": 1790946362.071869,
     "1005012407874415": 1791061256.0753598,
     "9998887189": 1790947189.8634577,
-    "1005012865117890": 1791026755.742076,
+    "1005012865117890": 1791129948.3620403,
     "1005010428573334": 1790948755.0367405,
     "1005013146524028": 1791042354.706192,
     "1005009411512584": 1791104149.1784146,
@@ -618,7 +618,7 @@
     "HONOR 600 PRO (12/256)": 1791061256.0753598,
     "POCO C71 (3/64)": 1790947574.20351,
     "XIAOMI PAD7 (12/256)": 1791023149.808202,
-    "REALME 14 pro (12/256)": 1791026755.742076,
+    "REALME 14 pro (12/256)": 1791129948.3620403,
     "HONOR X9D (12/256)": 1791104767.2093377,
     "Honor 400  Smart  (6/128)": 1791042354.706192,
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": 1790949354.0364344,
@@ -1243,15 +1243,17 @@
     "couponsglobal:48792",
     "couponsglobal:48793",
     "couponsglobal:48794",
-    "aniscoupons:32772"
+    "aniscoupons:32772",
+    "megaphonna:8256",
+    "megaphonna:8257"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791126656.5930831,
+  "last_run_time": 1791129948.3620403,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32772,
-      "last_check_time": 1791129643.2055144
+      "last_check_time": 1791129954.601323
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1259,11 +1261,11 @@
     },
     "lodydeals": {
       "last_message_id": 45460,
-      "last_check_time": 1791129641.3144183
+      "last_check_time": 1791129940.1432285
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791129642.5049994
+      "last_check_time": 1791129941.7391784
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1271,19 +1273,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791129642.214077
+      "last_check_time": 1791129941.351034
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791129641.62775
+      "last_check_time": 1791129940.5278046
     },
     "megaphonna": {
-      "last_message_id": 8255,
-      "last_check_time": 1791129642.8243308
+      "last_message_id": 8257,
+      "last_check_time": 1791129953.9002984
     },
     "couponsglobal": {
       "last_message_id": 48794,
-      "last_check_time": 1791129643.6833982
+      "last_check_time": 1791129955.3686311
     }
   },
   "published_product_prices": {
@@ -3725,6 +3727,16 @@
       "price": 1.0,
       "timestamp": 1791126656.5930831,
       "status": "ACTIVE"
+    },
+    "megaphonna:8256": {
+      "channel_msg_id": 570,
+      "product_id": "1005012865117890",
+      "title": "REALME 14 pro (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8256,
+      "price": 234.9,
+      "timestamp": 1791129948.3620403,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3733,7 +3745,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791126656.5981412,
+    "last_deal_post_time": 1791129948.3681452,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
