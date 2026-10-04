@@ -168,7 +168,9 @@
     "1005012264415744",
     "1005009689592131",
     "1005006437107166",
-    "1005006895026041"
+    "1005006895026041",
+    "1005006996329614",
+    "1005008046254742"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -343,7 +345,9 @@
     "1005012264415744": 1791114344.949536,
     "1005009689592131": 1791114651.412541,
     "1005006437107166": 1791124852.3122299,
-    "1005006895026041": 1791125753.051726
+    "1005006895026041": 1791125753.051726,
+    "1005006996329614": 1791126044.0695431,
+    "1005008046254742": 1791126049.4061573
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -533,7 +537,9 @@
     "ATTACK SHARK X1  Tri-Mode",
     "HILDA 2 Lines Laser Level Green",
     "Lenovo XT53 Wireless Bluetooth 5.4 Earphones",
-    "Electric Trimmer for Men's Groin Hair: Versatile Body"
+    "Electric Trimmer for Men's Groin Hair: Versatile Body",
+    "KODAK USB 2.0 Flash Drive 64GB",
+    "E27 60W Wireless Remote Control Smart Timer"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -726,7 +732,9 @@
     "ATTACK SHARK X1  Tri-Mode": 1791117948.6585228,
     "HILDA 2 Lines Laser Level Green": 1791124852.3122299,
     "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": 1791125437.8944824,
-    "Electric Trimmer for Men's Groin Hair: Versatile Body": 1791125753.051726
+    "Electric Trimmer for Men's Groin Hair: Versatile Body": 1791125753.051726,
+    "KODAK USB 2.0 Flash Drive 64GB": 1791126044.0695431,
+    "E27 60W Wireless Remote Control Smart Timer": 1791126049.4061573
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1221,15 +1229,18 @@
     "couponsglobal:48784",
     "couponsglobal:48785",
     "couponsglobal:48786",
-    "couponsglobal:48787"
+    "couponsglobal:48787",
+    "couponsglobal:48788",
+    "couponsglobal:48789",
+    "couponsglobal:48790"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791125753.051726,
+  "last_run_time": 1791126049.4061573,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32771,
-      "last_check_time": 1791125745.930566
+      "last_check_time": 1791126039.0305955
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1237,11 +1248,11 @@
     },
     "lodydeals": {
       "last_message_id": 45460,
-      "last_check_time": 1791125743.4888592
+      "last_check_time": 1791126036.7591987
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791125745.1411645
+      "last_check_time": 1791126038.2660406
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1249,19 +1260,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791125744.7742348
+      "last_check_time": 1791126037.9653404
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791125743.8818135
+      "last_check_time": 1791126037.3170269
     },
     "megaphonna": {
       "last_message_id": 8255,
-      "last_check_time": 1791125745.5367942
+      "last_check_time": 1791126038.6141965
     },
     "couponsglobal": {
-      "last_message_id": 48787,
-      "last_check_time": 1791125758.6649044
+      "last_message_id": 48790,
+      "last_check_time": 1791126054.6395833
     }
   },
   "published_product_prices": {
@@ -1408,7 +1419,9 @@
     "1005012264415744": 78.0,
     "1005009689592131": 114.1,
     "1005006437107166": 1.0,
-    "1005006895026041": 1.0
+    "1005006895026041": 1.0,
+    "1005006996329614": 1.0,
+    "1005008046254742": 1.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3650,6 +3663,26 @@
       "price": 1.0,
       "timestamp": 1791125753.051726,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48788": {
+      "channel_msg_id": 565,
+      "product_id": "1005006996329614",
+      "title": "KODAK USB 2.0 Flash Drive 64GB",
+      "channel": "couponsglobal",
+      "source_msg_id": 48788,
+      "price": 1.0,
+      "timestamp": 1791126044.0695431,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48789": {
+      "channel_msg_id": 566,
+      "product_id": "1005008046254742",
+      "title": "E27 60W Wireless Remote Control Smart Timer",
+      "channel": "couponsglobal",
+      "source_msg_id": 48789,
+      "price": 1.0,
+      "timestamp": 1791126049.4061573,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3658,7 +3691,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791125753.0567474,
+    "last_deal_post_time": 1791126049.4092014,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3818,7 +3851,9 @@
     "1005012264415744": "megaphonna",
     "1005009689592131": "megaphonna",
     "1005006437107166": "couponsglobal",
-    "1005006895026041": "couponsglobal"
+    "1005006895026041": "couponsglobal",
+    "1005006996329614": "couponsglobal",
+    "1005008046254742": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3987,7 +4022,9 @@
     "ATTACK SHARK X1  Tri-Mode": "lodydeals",
     "HILDA 2 Lines Laser Level Green": "couponsglobal",
     "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": "couponsglobal",
-    "Electric Trimmer for Men's Groin Hair: Versatile Body": "couponsglobal"
+    "Electric Trimmer for Men's Groin Hair: Versatile Body": "couponsglobal",
+    "KODAK USB 2.0 Flash Drive 64GB": "couponsglobal",
+    "E27 60W Wireless Remote Control Smart Timer": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
