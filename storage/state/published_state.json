@@ -154,7 +154,8 @@
     "1005009497821240",
     "1005011925142821",
     "9998883864",
-    "1005010536089199"
+    "1005010536089199",
+    "1005012385221205"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -315,7 +316,8 @@
     "1005009497821240": 1791056745.5798366,
     "1005011925142821": 1791057346.9236152,
     "9998883864": 1791063864.5866926,
-    "1005010536089199": 1791101144.9729881
+    "1005010536089199": 1791101144.9729881,
+    "1005012385221205": 1791102050.1835058
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -479,7 +481,8 @@
     "Car Battery Charger LCD Display",
     "Honor 600 lite (8/256)",
     "ATTACK SHARK G300",
-    "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones"
+    "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones",
+    "Toocki 25W GaN Charger"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -646,7 +649,8 @@
     "Car Battery Charger LCD Display": 1791056745.5798366,
     "Honor 600 lite (8/256)": 1791057346.9236152,
     "ATTACK SHARK G300": 1791098743.198129,
-    "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": 1791101144.9729881
+    "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": 1791101144.9729881,
+    "Toocki 25W GaN Charger": 1791102050.1835058
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1058,15 +1062,17 @@
     "megaphonna:8242",
     "aniscoupons:32740",
     "aniscoupons:32741",
-    "aniscoupons:32742"
+    "aniscoupons:32742",
+    "aniscoupons:32743",
+    "aniscoupons:32744"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791101144.9729881,
+  "last_run_time": 1791102050.1835058,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32742,
-      "last_check_time": 1791101742.3571224
+      "last_message_id": 32744,
+      "last_check_time": 1791102052.1964743
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1074,11 +1080,11 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791101740.715161
+      "last_check_time": 1791102039.599001
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791101741.670649
+      "last_check_time": 1791102040.4827695
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1090,15 +1096,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38526,
-      "last_check_time": 1791101741.0459852
+      "last_check_time": 1791102039.9048204
     },
     "megaphonna": {
       "last_message_id": 8242,
-      "last_check_time": 1791101741.9999506
+      "last_check_time": 1791102040.7814279
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791101742.8998842
+      "last_check_time": 1791102052.924407
     }
   },
   "published_product_prices": {
@@ -1233,7 +1239,8 @@
     "1005010266413614": 294.0,
     "1005009497821240": 4.69,
     "1005011925142821": 270.9,
-    "1005010536089199": 34.4
+    "1005010536089199": 34.4,
+    "1005012385221205": 13.27
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3095,6 +3102,16 @@
       "price": 34.4,
       "timestamp": 1791101144.9729881,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32744": {
+      "channel_msg_id": 527,
+      "product_id": "1005012385221205",
+      "title": "Toocki 25W GaN Charger",
+      "channel": "aniscoupons",
+      "source_msg_id": 32744,
+      "price": 13.27,
+      "timestamp": 1791102050.1835058,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3103,7 +3120,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791101144.9768202,
+    "last_deal_post_time": 1791102050.187791,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3247,7 +3264,8 @@
     "1005009497821240": "lodydeals",
     "1005011925142821": "aniscoupons",
     "9998883864": "test_channel",
-    "1005010536089199": "aniscoupons"
+    "1005010536089199": "aniscoupons",
+    "1005012385221205": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3388,7 +3406,8 @@
     "Honor 600 lite (8/256)": "aniscoupons",
     "HONOR 600 PRO (12/256)": "megaphonna",
     "ATTACK SHARK G300": "megaphonna",
-    "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": "aniscoupons"
+    "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": "aniscoupons",
+    "Toocki 25W GaN Charger": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
