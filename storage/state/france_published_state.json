@@ -1,27 +1,28 @@
 {
   "published_post_keys": [
+    "francecp:415",
+    "francecp:420",
+    "alifrdrop:103",
+    "francecp:423",
     "francecp:413",
     "francecp:421",
-    "alifrdrop:102",
-    "francecp:423",
-    "francecp:415",
-    "francecp:416",
-    "alifrdrop:103",
-    "francecp:418",
-    "francecp:420",
     "alifrdrop:105",
-    "alifrdrop:104",
-    "francecp:422",
     "francecp:414",
-    "alifrdrop:106",
+    "francecp:417",
+    "francecp:422",
+    "francecp:416",
+    "alifrdrop:102",
+    "alifrdrop:104",
     "francecp:419",
-    "francecp:417"
+    "francecp:424",
+    "francecp:418",
+    "alifrdrop:106"
   ],
   "published_product_ids": [
-    "1005012218291528",
-    "1005012541048117",
-    "1005009977303549",
     "1005012155835323",
+    "1005012541048117",
+    "1005012218291528",
+    "1005009977303549",
     "1005012589045044"
   ],
   "published_deals_history": {
@@ -66,24 +67,30 @@
       "title": "HONOR Pad X8a – 11\" | 85,27",
       "price_eur": 85.27,
       "channel_msg_id": 152
+    },
+    "1005012939973284": {
+      "timestamp": 1791152157.555066,
+      "title": "🟢 HONOR X8d 4G AMOLED 7000 MAh",
+      "price_eur": 175.16,
+      "channel_msg_id": 153
     }
   },
   "monitored_channels": {
     "francecp": {
-      "last_message_id": 423,
-      "last_check_time": 1791150354.7403886
+      "last_message_id": 424,
+      "last_check_time": 1791152159.5572617
     },
     "alifrdrop": {
       "last_message_id": 106,
       "last_check_time": 1790836790.2576432
     }
   },
-  "last_run_time": 1791151857.3014503,
+  "last_run_time": 1791152159.5576727,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001",
     "FR_LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004"
   ],
-  "last_deal_post_time": 1791150057.62055,
+  "last_deal_post_time": 1791152159.5576737,
   "daily_roundup_history": {
     "2026-10-02": {
       "timestamp": 1790976075.00982,

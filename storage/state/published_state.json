@@ -182,7 +182,8 @@
     "1005006499712212",
     "1005007076639821",
     "1005011653915422",
-    "1005007473024376"
+    "1005007473024376",
+    "1005005902976406"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -371,7 +372,8 @@
     "1005006499712212": 1791150646.4428236,
     "1005007076639821": 1791150954.013484,
     "1005011653915422": 1791151270.6442711,
-    "1005007473024376": 1791151278.7237968
+    "1005007473024376": 1791151278.7237968,
+    "1005005902976406": 1791152146.3442965
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -578,7 +580,8 @@
     "Fenvi FV-AX1801 AX1800 WiFi 6",
     "300Mbps  WIFi Repeater",
     "5pcs Manicure and Pedicure Kit  Includes Nail Clipper",
-    "Lenovo XT62 Earphones Bluetooth"
+    "Lenovo XT62 Earphones Bluetooth",
+    "ENCHEN Blackstone Electrical Rotary Shaver"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -788,7 +791,8 @@
     "Fenvi FV-AX1801 AX1800 WiFi 6": 1791150954.013484,
     "300Mbps  WIFi Repeater": 1791151259.5667012,
     "5pcs Manicure and Pedicure Kit  Includes Nail Clipper": 1791151270.6442711,
-    "Lenovo XT62 Earphones Bluetooth": 1791151278.7237968
+    "Lenovo XT62 Earphones Bluetooth": 1791151278.7237968,
+    "ENCHEN Blackstone Electrical Rotary Shaver": 1791152146.3442965
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1328,15 +1332,16 @@
     "lodydeals:45475",
     "couponsglobal:48797",
     "couponsglobal:48798",
-    "couponsglobal:48799"
+    "couponsglobal:48799",
+    "couponsglobal:48800"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791151278.7237968,
+  "last_run_time": 1791152146.3442965,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32781,
-      "last_check_time": 1791151848.323059
+      "last_check_time": 1791152140.4475188
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1344,11 +1349,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791151845.9202933
+      "last_check_time": 1791152138.4382472
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791151847.423315
+      "last_check_time": 1791152139.7121818
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1356,19 +1361,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791151847.061432
+      "last_check_time": 1791152139.3938596
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791151846.2998002
+      "last_check_time": 1791152138.759763
     },
     "megaphonna": {
       "last_message_id": 8263,
-      "last_check_time": 1791151847.8742394
+      "last_check_time": 1791152140.086563
     },
     "couponsglobal": {
-      "last_message_id": 48799,
-      "last_check_time": 1791151852.2295613
+      "last_message_id": 48800,
+      "last_check_time": 1791152148.3599808
     }
   },
   "published_product_prices": {
@@ -1528,7 +1533,8 @@
     "1005006499712212": 6.22,
     "1005007076639821": 16.27,
     "1005011653915422": 1.0,
-    "1005007473024376": 1.0
+    "1005007473024376": 1.0,
+    "1005005902976406": 1.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -4020,6 +4026,16 @@
       "price": 1.0,
       "timestamp": 1791151278.7237968,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48800": {
+      "channel_msg_id": 593,
+      "product_id": "1005005902976406",
+      "title": "ENCHEN Blackstone Electrical Rotary Shaver",
+      "channel": "couponsglobal",
+      "source_msg_id": 48800,
+      "price": 1.0,
+      "timestamp": 1791152146.3442965,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4028,7 +4044,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791151278.7292523,
+    "last_deal_post_time": 1791152146.349867,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4202,7 +4218,8 @@
     "1005006499712212": "lodydeals",
     "1005007076639821": "lodydeals",
     "1005011653915422": "couponsglobal",
-    "1005007473024376": "couponsglobal"
+    "1005007473024376": "couponsglobal",
+    "1005005902976406": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4388,7 +4405,8 @@
     "Fenvi FV-AX1801 AX1800 WiFi 6": "lodydeals",
     "300Mbps  WIFi Repeater": "lodydeals",
     "5pcs Manicure and Pedicure Kit  Includes Nail Clipper": "couponsglobal",
-    "Lenovo XT62 Earphones Bluetooth": "couponsglobal"
+    "Lenovo XT62 Earphones Bluetooth": "couponsglobal",
+    "ENCHEN Blackstone Electrical Rotary Shaver": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
