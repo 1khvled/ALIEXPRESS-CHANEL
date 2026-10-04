@@ -163,7 +163,8 @@
     "1005007345108759",
     "1005007394197021",
     "1005008880082336",
-    "1005012571601398"
+    "1005012571601398",
+    "1005013290515237"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -333,7 +334,8 @@
     "1005007345108759": 1791104759.7671344,
     "1005007394197021": 1791106853.9447496,
     "1005008880082336": 1791107750.295487,
-    "1005012571601398": 1791109857.5190113
+    "1005012571601398": 1791109857.5190113,
+    "1005013290515237": 1791110751.0808105
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -516,7 +518,8 @@
     "AMD Ryzen 7 5700X",
     "Attack Shark L80 Tri-mode",
     "هاتف ينسيك في شارجور🤣🤣",
-    "CMF Smart Watch 3 pro AMOLED"
+    "CMF Smart Watch 3 pro AMOLED",
+    "ATTACK SHARK V6 Tri-Mode"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -702,7 +705,8 @@
     "AMD Ryzen 7 5700X": 1791108644.641232,
     "Attack Shark L80 Tri-mode": 1791108947.313694,
     "هاتف ينسيك في شارجور🤣🤣": 1791109857.5190113,
-    "CMF Smart Watch 3 pro AMOLED": 1791110146.1927805
+    "CMF Smart Watch 3 pro AMOLED": 1791110146.1927805,
+    "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1165,15 +1169,17 @@
     "aniscoupons:32762",
     "aniscoupons:32763",
     "zedstoreonline:38527",
-    "megaphonna:8247"
+    "megaphonna:8247",
+    "zedstoreonline:38528",
+    "aniscoupons:32764"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791110146.1927805,
+  "last_run_time": 1791110751.0808105,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32763,
-      "last_check_time": 1791110445.5044172
+      "last_message_id": 32764,
+      "last_check_time": 1791110753.0907645
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1181,11 +1187,11 @@
     },
     "lodydeals": {
       "last_message_id": 45458,
-      "last_check_time": 1791110436.3543324
+      "last_check_time": 1791110740.3735504
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791110440.1276531
+      "last_check_time": 1791110745.7531526
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1193,19 +1199,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7957,
-      "last_check_time": 1791110439.7931557
+      "last_check_time": 1791110745.3956654
     },
     "zedstoreonline": {
-      "last_message_id": 38527,
-      "last_check_time": 1791110439.182479
+      "last_message_id": 38528,
+      "last_check_time": 1791110744.7072315
     },
     "megaphonna": {
       "last_message_id": 8247,
-      "last_check_time": 1791110445.1421623
+      "last_check_time": 1791110746.0806932
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791110446.0576837
+      "last_check_time": 1791110753.8407812
     }
   },
   "published_product_prices": {
@@ -1347,7 +1353,8 @@
     "1005007805497968": 22.81,
     "1005007345108759": 22.12,
     "1005007394197021": 14.84,
-    "1005012571601398": 275.7
+    "1005012571601398": 275.7,
+    "1005013290515237": 23.22
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3499,6 +3506,16 @@
       "price": 55.7,
       "timestamp": 1791110146.1927805,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32764": {
+      "channel_msg_id": 556,
+      "product_id": "1005013290515237",
+      "title": "ATTACK SHARK V6 Tri-Mode",
+      "channel": "aniscoupons",
+      "source_msg_id": 32764,
+      "price": 23.22,
+      "timestamp": 1791110751.0808105,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3507,7 +3524,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791110146.1976047,
+    "last_deal_post_time": 1791110751.0838218,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3662,7 +3679,8 @@
     "1005007394028808": "aniscoupons",
     "1005007394197021": "aniscoupons",
     "1005011778621042": "lodydeals",
-    "1005012571601398": "aniscoupons"
+    "1005012571601398": "aniscoupons",
+    "1005013290515237": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3825,7 +3843,8 @@
     "AMD Ryzen 7 5700X": "lodydeals",
     "Attack Shark L80 Tri-mode": "lodydeals",
     "هاتف ينسيك في شارجور🤣🤣": "aniscoupons",
-    "CMF Smart Watch 3 pro AMOLED": "aniscoupons"
+    "CMF Smart Watch 3 pro AMOLED": "aniscoupons",
+    "ATTACK SHARK V6 Tri-Mode": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
