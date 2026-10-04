@@ -170,7 +170,7 @@
     "9998883417": 1790883417.3833034,
     "1005007805638431": 1790884166.1520143,
     "1005009054706827": 1790968242.9714053,
-    "1005007961216287": 1790937542.235978,
+    "1005007961216287": 1791104165.8542082,
     "1005009627597591": 1790884233.6428,
     "1005007275142457": 1791029447.177805,
     "1005008829227075": 1790972445.6591878,
@@ -235,7 +235,7 @@
     "1005012865117890": 1791026755.742076,
     "1005010428573334": 1790948755.0367405,
     "1005013146524028": 1791042354.706192,
-    "1005009411512584": 1790977546.6736062,
+    "1005009411512584": 1791104149.1784146,
     "1005012058540420": 1790949652.480052,
     "1005009295911745": 1790949658.4852333,
     "1005012340203471": 1791037857.3485136,
@@ -266,7 +266,7 @@
     "1005012285327063": 1791014763.6830645,
     "1005006581583862": 1791013842.0461159,
     "1005012816171978": 1791031841.1598868,
-    "1005009834132291": 1790976959.5801246,
+    "1005009834132291": 1791104155.533397,
     "1005010585654037": 1790978149.8785934,
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791013541.4254196,
@@ -491,7 +491,9 @@
     "Rechargeable RC Drift Racing Car",
     "Zeblaze Btalk PRO",
     "AMD Ryzen 5 7600X USED R5 7600X",
-    "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,"
+    "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,",
+    "New G6 Wireless Controller",
+    "EasySMX X05 Pro Wireless Gamepad PC Controller"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -527,7 +529,7 @@
     "realme P3 5G 8/256": 1790888909.743846,
     "OnePlus Turbo 6X Pro 5G": 1790888928.6181495,
     "Xiaomi Pad 7  12/256GB": 1790897106.449474,
-    "ATTACK SHARK L90 Flodable Gaming Headset": 1790937542.235978,
+    "ATTACK SHARK L90 Flodable Gaming Headset": 1791104165.8542082,
     "SomnAmbulist SSD  120GB": 1791104047.0967803,
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
@@ -664,7 +666,9 @@
     "Rechargeable RC Drift Racing Car": 1791103847.2554617,
     "Zeblaze Btalk PRO": 1791103856.6825738,
     "AMD Ryzen 5 7600X USED R5 7600X": 1791104054.392151,
-    "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,": 1791104060.2548923
+    "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,": 1791104060.2548923,
+    "New G6 Wireless Controller": 1791104149.1784146,
+    "EasySMX X05 Pro Wireless Gamepad PC Controller": 1791104155.533397
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1092,15 +1096,19 @@
     "pcgamingpart:7940",
     "pcgamingpart:7941",
     "pcgamingpart:7942",
-    "pcgamingpart:7943"
+    "pcgamingpart:7943",
+    "pcgamingpart:7944",
+    "pcgamingpart:7945",
+    "pcgamingpart:7946",
+    "pcgamingpart:7947"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791104060.2548923,
+  "last_run_time": 1791104165.8542082,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32750,
-      "last_check_time": 1791104063.4877846
+      "last_check_time": 1791104169.4943676
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1108,31 +1116,31 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791104043.1793072
+      "last_check_time": 1791104143.0166082
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791104062.7468786
+      "last_check_time": 1791104168.5665348
     },
     "test_channel": {
       "last_message_id": 1791063864,
       "last_check_time": 1791063864.5866926
     },
     "pcgamingpart": {
-      "last_message_id": 7943,
-      "last_check_time": 1791104062.2646105
+      "last_message_id": 7947,
+      "last_check_time": 1791104167.8657775
     },
     "zedstoreonline": {
       "last_message_id": 38526,
-      "last_check_time": 1791104043.5206945
+      "last_check_time": 1791104143.4416468
     },
     "megaphonna": {
       "last_message_id": 8242,
-      "last_check_time": 1791104063.1695106
+      "last_check_time": 1791104169.056174
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791104063.9928837
+      "last_check_time": 1791104170.2336895
     }
   },
   "published_product_prices": {
@@ -1202,7 +1210,7 @@
     "1005012865117890": 234.9,
     "1005010428573334": 294.0,
     "1005013146524028": 162.4,
-    "1005009411512584": 8.7,
+    "1005009411512584": 8.95,
     "1005012058540420": 10.49,
     "1005009295911745": 25.87,
     "1005012340203471": 242.7,
@@ -1221,7 +1229,7 @@
     "1005012285327063": 19.5,
     "1005006581583862": 25.0,
     "1005012816171978": 273.46,
-    "1005009834132291": 23.0,
+    "1005009834132291": 23.08,
     "1005010585654037": 20.6,
     "1005006248571160": 16.8,
     "1005009390995992": 34.9,
@@ -3211,6 +3219,36 @@
       "price": 14.12,
       "timestamp": 1791104060.2548923,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7944": {
+      "channel_msg_id": 535,
+      "product_id": "1005009411512584",
+      "title": "New G6 Wireless Controller",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7944,
+      "price": 8.95,
+      "timestamp": 1791104149.1784146,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7945": {
+      "channel_msg_id": 536,
+      "product_id": "1005009834132291",
+      "title": "EasySMX X05 Pro Wireless Gamepad PC Controller",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7945,
+      "price": 23.08,
+      "timestamp": 1791104155.533397,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7947": {
+      "channel_msg_id": 537,
+      "product_id": "1005007961216287",
+      "title": "ATTACK SHARK L90 Flodable Gaming Headset",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7947,
+      "price": 18.17,
+      "timestamp": 1791104165.8542082,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3219,7 +3257,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791104060.2584078,
+    "last_deal_post_time": 1791104165.8586571,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3279,7 +3317,7 @@
     "1005012865117890": "megaphonna",
     "1005010428573334": "megaphonna",
     "1005013146524028": "megaphonna",
-    "1005009411512584": "aniscoupons",
+    "1005009411512584": "pcgamingpart",
     "1005012058540420": "lodydeals",
     "1005009295911745": "lodydeals",
     "1005012340203471": "megaphonna",
@@ -3314,7 +3352,7 @@
     "1005012285327063": "aniscoupons",
     "1005006581583862": "aniscoupons",
     "1005012816171978": "lodydeals",
-    "1005009834132291": "aniscoupons",
+    "1005009834132291": "pcgamingpart",
     "1005010585654037": "aniscoupons",
     "1005006248571160": "bnddeals",
     "1005009390995992": "aniscoupons",
@@ -3366,7 +3404,8 @@
     "1005010536089199": "aniscoupons",
     "1005012385221205": "aniscoupons",
     "1005013223462188": "pcgamingpart",
-    "1005005217734986": "pcgamingpart"
+    "1005005217734986": "pcgamingpart",
+    "1005007961216287": "pcgamingpart"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3514,7 +3553,10 @@
     "Zeblaze Btalk PRO": "aniscoupons",
     "SomnAmbulist SSD  120GB": "pcgamingpart",
     "AMD Ryzen 5 7600X USED R5 7600X": "pcgamingpart",
-    "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,": "pcgamingpart"
+    "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,": "pcgamingpart",
+    "New G6 Wireless Controller": "pcgamingpart",
+    "EasySMX X05 Pro Wireless Gamepad PC Controller": "pcgamingpart",
+    "ATTACK SHARK L90 Flodable Gaming Headset": "pcgamingpart"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
