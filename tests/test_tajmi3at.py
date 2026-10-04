@@ -151,7 +151,6 @@ def test_bulletin_caption_length_and_format():
     assert "@Alilo07BOT" in caption
     assert "https://t.me/DzAliexpress0/" in caption
     assert "$" in caption
-    assert "€" in caption
 
 def test_master_roundup_caption_and_format():
     """Verifies that the Master Daily Roundup caption is clean, <= 1024 chars, and contains valid links."""

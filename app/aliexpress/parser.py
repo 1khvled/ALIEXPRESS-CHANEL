@@ -493,26 +493,49 @@ def extract_clean_title(text: str) -> Optional[str]:
 def is_france_deal(text: str, url: str = "", country_info: Optional[str] = None) -> bool:
     """
     Detects if a deal or coupon is specifically intended for France/Europe and NOT Algeria.
-    Prevents French offers from ever leaking into Algerian channel @DzAliexpress0.
+    Prevents French offers from ever leaking into Algerian channel @DzAliexpress0,
+    and prevents non-French Arabic deals from leaking into France channel @francedealsdz.
     """
-    if country_info and any(k in str(country_info).lower() for k in ["فرنسا", "france", "fr"]):
-        return True
     combined = f"{text or ''} {url or ''}".lower()
-    france_keywords = [
+
+    # Reject immediately if domestic Algerian indicators are present
+    algerian_indicators = [
+        "الجزائر", "dzd", "دينار", "بريدي موب", "بريد الجزائر", "58 ولاية",
+        "yalidine", "kazi tour", "carré", "livraison algerie", "algeria", "algerie"
+    ]
+    if any(ind in combined for ind in algerian_indicators):
+        return False
+
+    if country_info and any(k in str(country_info).lower() for k in ["فرنسا", "france"]):
+        return True
+
+    # Explicit Arabic drop indicators as typed by Algerian/Arabic deal hunters
+    explicit_arabic_france_markers = [
         "عروض ففرنسا", "عروض فرنسا", "عرض فرنسا", "عرض ففرنسا",
         "خاص بفرنسا", "فرنسا فقط", "فقط لفرنسا", "شحن لفرنسا", "شحن فرنسا",
         "توصيل لفرنسا", "توصيل فرنسا", "توصيل الى فرنسا", "شحن الى فرنسا",
-        "كودات فرنسا", "كوبونات فرنسا", "كوبون فرنسا", "كود فرنسا",
-        "فرنسا", "🇫🇷", "france", "shiptocountry=fr", "country=fr",
-        "livraison france", "vers la france", "pour la france", "france seulement",
-        "codes promo france", "@francedealsdz", "francedealsdz", "livraison : france",
-        "livraison en france", "livré en france", "livraison gratuite en france",
-        "bon plan france", "prix constaté"
+        "كودات فرنسا", "كوبونات فرنسا", "كوبون فرنسا", "كود فرنسا"
     ]
-    if any(k in combined for k in france_keywords):
+    if any(k in combined for k in explicit_arabic_france_markers):
         return True
-    if re.search(r'\b(?:frprd|frld|frcd|cdfr|fr)\d{2,3}\b', combined):
+
+    # Native French phrasing
+    native_french_markers = [
+        "livraison france", "vers la france", "pour la france", "france seulement",
+        "codes promo france", "livraison : france", "livraison en france",
+        "livré en france", "livraison gratuite en france", "bon plan france", "prix constaté"
+    ]
+    if any(k in combined for k in native_french_markers):
         return True
+
+    # Specific French promo codes (e.g. FRPRD12, FRLD30, CDFR25, FWFR11)
+    if re.search(r'\b(?:frprd|frld|frcd|cdfr|frfw|fwfr)\d{2,3}\b', combined):
+        return True
+
+    # Explicit URL shipping parameters for France
+    if "shiptocountry=fr" in combined or "country=fr" in combined:
+        return True
+
     return False
 
 

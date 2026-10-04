@@ -473,7 +473,7 @@ async def check_and_publish_france_regrouped_bulletins(
             return []
 
     logger.info("[FRANCE ROUNDUP] Starting daily roundup collection...")
-    today_deals = await get_recent_france_published_deals(max_age_hours=24.0)
+    today_deals = await get_recent_france_published_deals(max_age_hours=48.0)
     if not today_deals or len(today_deals) < 2:
         logger.info("[FRANCE ROUNDUP] Insufficient deals published today (< 2). Skipping.")
         return []

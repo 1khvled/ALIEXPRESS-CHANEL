@@ -407,14 +407,12 @@ def format_deal_line(item: Dict[str, Any], channel_username: str, index: int = 1
     """Formats a single product line for the bulletin matching the clean Anis/Lody index style."""
     title = clean_product_name_short(item.get("title") or "منتج مميز")
     price_val = float(item.get("price") or 0.0)
-    eur_rate = float(getattr(settings, "EUR_USD_RATE", 0.92))
-    eur_val = price_val * eur_rate
 
     if price_val > 0:
         if price_val.is_integer():
-            price_str = f"${int(price_val)} ({eur_val:.2f}€)"
+            price_str = f"${int(price_val)}"
         else:
-            price_str = f"${price_val:.2f} ({eur_val:.2f}€)"
+            price_str = f"${price_val:.2f}"
     else:
         price_str = "سعر خاص 🔥"
 
@@ -423,9 +421,16 @@ def format_deal_line(item: Dict[str, Any], channel_username: str, index: int = 1
     post_url = item.get("channel_url") or f"https://t.me/{clean_ch}/{item['channel_msg_id']}"
     return f"{badge} 🌐 <a href=\"{post_url}\"><b>{title}</b></a> ▫️ <b>{price_str}</b>"
 
-def build_category_bulletin_text(category_name: str, items: List[Dict[str, Any]], channel_username: str) -> Tuple[str, List[Dict[str, Any]]]:
+def build_category_bulletin_text(
+    category_name: str,
+    items: List[Dict[str, Any]],
+    channel_username: str,
+    part: Optional[int] = None,
+    total_parts: Optional[int] = None
+) -> Tuple[str, List[Dict[str, Any]]]:
     """
     Builds the caption for a category bulletin matching the sleek Anis/Lody index style.
+    Supports multi-part pagination (الجزء 1, الجزء 2) when a category has many deals.
     Dynamically fits items to guarantee the total length strictly never exceeds 980 characters (Telegram photo caption limit: 1024).
     """
     cat_config = CATEGORIES_CONFIG.get(category_name, {
@@ -433,8 +438,17 @@ def build_category_bulletin_text(category_name: str, items: List[Dict[str, Any]]
     })
     clean_ch = channel_username.replace("@", "")
 
+    base_header = cat_config["header"]
+    if part and total_parts and total_parts > 1:
+        if "🇩🇿🔥</b>" in base_header:
+            header_text = base_header.replace("🇩🇿🔥</b>", f"(الجزء {part}) 🇩🇿🔥</b>")
+        else:
+            header_text = base_header.replace("</b>", f" (الجزء {part})</b>")
+    else:
+        header_text = base_header
+
     header_lines = [
-        cat_config["header"],
+        header_text,
         "",
         "👈 <b>إضغط على إسم المنتج ليأخذك مباشرة للعرض ⚪️</b>",
         ""
@@ -603,55 +617,69 @@ async def check_and_publish_regrouped_bulletins(
         if qualifying_categories:
             to_publish = qualifying_categories[:max_bulletins]
             for cat_name, cat_items in to_publish:
-                bulletin_text, used_items = build_category_bulletin_text(cat_name, cat_items, target_clean)
-                if not used_items:
-                    continue
+                remaining_items = list(cat_items)
+                total_parts = (len(cat_items) + 7) // 8 if len(cat_items) > 8 else 1
+                part = 1
 
-                sent_data = None
-                # Send photo with caption
-                if banner_path.exists() and len(bulletin_text) <= 1024:
-                    with open(banner_path, "rb") as bf:
-                        mime = "image/png" if banner_path.suffix.lower() == ".png" else "image/jpeg"
+                while remaining_items:
+                    bulletin_text, used_items = build_category_bulletin_text(
+                        cat_name, remaining_items, target_clean,
+                        part=part if total_parts > 1 else None,
+                        total_parts=total_parts if total_parts > 1 else None
+                    )
+                    if not used_items:
+                        break
+
+                    sent_data = None
+                    # Send photo with caption
+                    if banner_path.exists() and len(bulletin_text) <= 1024:
+                        with open(banner_path, "rb") as bf:
+                            mime = "image/png" if banner_path.suffix.lower() == ".png" else "image/jpeg"
+                            resp = await client.post(
+                                f"{api_url}/sendPhoto",
+                                data={
+                                    "chat_id": target,
+                                    "caption": bulletin_text,
+                                    "parse_mode": "HTML",
+                                    "reply_markup": json.dumps(reply_markup)
+                                },
+                                files={"photo": (banner_path.name, bf, mime)}
+                            )
+                            sent_data = resp.json()
+
+                    # Fallback to sendMessage if photo upload failed or text > 1024
+                    if not sent_data or not sent_data.get("ok"):
                         resp = await client.post(
-                            f"{api_url}/sendPhoto",
-                            data={
+                            f"{api_url}/sendMessage",
+                            json={
                                 "chat_id": target,
-                                "caption": bulletin_text,
+                                "text": bulletin_text,
                                 "parse_mode": "HTML",
-                                "reply_markup": json.dumps(reply_markup)
-                            },
-                            files={"photo": (banner_path.name, bf, mime)}
+                                "disable_web_page_preview": True,
+                                "reply_markup": reply_markup
+                            }
                         )
                         sent_data = resp.json()
 
-                # Fallback to sendMessage if photo upload failed or text > 1024
-                if not sent_data or not sent_data.get("ok"):
-                    resp = await client.post(
-                        f"{api_url}/sendMessage",
-                        json={
-                            "chat_id": target,
-                            "text": bulletin_text,
-                            "parse_mode": "HTML",
-                            "disable_web_page_preview": True,
-                            "reply_markup": reply_markup
-                        }
-                    )
-                    sent_data = resp.json()
+                    if sent_data and sent_data.get("ok"):
+                        b_msg_id = sent_data["result"]["message_id"]
+                        used_ids = [it["channel_msg_id"] for it in used_items]
+                        all_regrouped_msg_ids.extend(used_ids)
 
-                if sent_data and sent_data.get("ok"):
-                    b_msg_id = sent_data["result"]["message_id"]
-                    used_ids = [it["channel_msg_id"] for it in used_items]
-                    all_regrouped_msg_ids.extend(used_ids)
+                        part_label = f" (Part {part}/{total_parts})" if total_parts > 1 else ""
+                        logger.info(f"[TAJMI3AT] Published {cat_name}{part_label} bulletin #{b_msg_id} with {len(used_items)} items to {target}")
+                        published_bulletins.append({
+                            "category": f"{cat_name}_part{part}" if total_parts > 1 else cat_name,
+                            "message_id": b_msg_id,
+                            "count": len(used_items)
+                        })
+                        await asyncio.sleep(2.5)
+                    else:
+                        logger.error(f"[TAJMI3AT] Failed to publish {cat_name} bulletin: {sent_data}")
+                        break
 
-                    logger.info(f"[TAJMI3AT] Published {cat_name} bulletin #{b_msg_id} with {len(used_items)} items to {target}")
-                    published_bulletins.append({
-                        "category": cat_name,
-                        "message_id": b_msg_id,
-                        "count": len(used_items)
-                    })
-                    await asyncio.sleep(2.5)
-                else:
-                    logger.error(f"[TAJMI3AT] Failed to publish {cat_name} bulletin: {sent_data}")
+                    remaining_items = remaining_items[len(used_items):]
+                    part += 1
 
         # CASE B: No single category reached 4 items, but we have >= 3 deals today
         elif len(available_deals) >= 3:
