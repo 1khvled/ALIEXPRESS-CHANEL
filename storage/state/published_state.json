@@ -219,7 +219,7 @@
     "1005009357018019": 1790940383.4974926,
     "1005012436000251": 1791104054.392151,
     "1005006750448278": 1790941167.9296343,
-    "1005012184442621": 1791103856.6825738,
+    "1005012184442621": 1791146144.850411,
     "1005006631309573": 1791027645.512462,
     "1005005648888450": 1790941186.791633,
     "1005006117094928": 1790941202.9035249,
@@ -724,7 +724,7 @@
     "Toocki 25W GaN Charger": 1791102050.1835058,
     "Baseus Bowie E5x": 1791103551.065819,
     "Rechargeable RC Drift Racing Car": 1791103847.2554617,
-    "Zeblaze Btalk PRO": 1791103856.6825738,
+    "Zeblaze Btalk PRO": 1791146144.850411,
     "AMD Ryzen 5 7600X USED R5 7600X": 1791104054.392151,
     "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,": 1791104060.2548923,
     "New G6 Wireless Controller": 1791104149.1784146,
@@ -1271,15 +1271,16 @@
     "megaphonna:8261",
     "aniscoupons:32776",
     "aniscoupons:32777",
-    "aniscoupons:32778"
+    "aniscoupons:32778",
+    "aniscoupons:32779"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791145541.318689,
+  "last_run_time": 1791146144.850411,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32778,
-      "last_check_time": 1791145854.1594934
+      "last_message_id": 32779,
+      "last_check_time": 1791146146.8610213
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1287,11 +1288,11 @@
     },
     "lodydeals": {
       "last_message_id": 45461,
-      "last_check_time": 1791145851.9301417
+      "last_check_time": 1791146135.475777
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791145853.4222095
+      "last_check_time": 1791146136.7066824
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1299,19 +1300,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791145853.0237098
+      "last_check_time": 1791146136.429721
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791145852.2802541
+      "last_check_time": 1791146135.7909353
     },
     "megaphonna": {
       "last_message_id": 8261,
-      "last_check_time": 1791145853.7762027
+      "last_check_time": 1791146137.0357442
     },
     "couponsglobal": {
       "last_message_id": 48795,
-      "last_check_time": 1791145854.8426614
+      "last_check_time": 1791146147.6211674
     }
   },
   "published_product_prices": {
@@ -3845,6 +3846,16 @@
       "price": 7.22,
       "timestamp": 1791145541.318689,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32779": {
+      "channel_msg_id": 582,
+      "product_id": "1005012184442621",
+      "title": "Zeblaze Btalk PRO",
+      "channel": "aniscoupons",
+      "source_msg_id": 32779,
+      "price": 11.15,
+      "timestamp": 1791146144.850411,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3853,7 +3864,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791145541.3229396,
+    "last_deal_post_time": 1791146144.8537664,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
