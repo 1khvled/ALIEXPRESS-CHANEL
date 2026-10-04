@@ -153,7 +153,8 @@
     "1005010266413614",
     "1005009497821240",
     "1005011925142821",
-    "9998883864"
+    "9998883864",
+    "1005010536089199"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -313,7 +314,8 @@
     "1005010266413614": 1791061545.5863013,
     "1005009497821240": 1791056745.5798366,
     "1005011925142821": 1791057346.9236152,
-    "9998883864": 1791063864.5866926
+    "9998883864": 1791063864.5866926,
+    "1005010536089199": 1791101144.9729881
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -476,7 +478,8 @@
     "الهاتف الاكثر طلبا",
     "Car Battery Charger LCD Display",
     "Honor 600 lite (8/256)",
-    "ATTACK SHARK G300"
+    "ATTACK SHARK G300",
+    "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -642,7 +645,8 @@
     "الهاتف الاكثر طلبا": 1791056463.1366906,
     "Car Battery Charger LCD Display": 1791056745.5798366,
     "Honor 600 lite (8/256)": 1791057346.9236152,
-    "ATTACK SHARK G300": 1791098743.198129
+    "ATTACK SHARK G300": 1791098743.198129,
+    "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": 1791101144.9729881
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1053,15 +1057,16 @@
     "megaphonna:8241",
     "megaphonna:8242",
     "aniscoupons:32740",
-    "aniscoupons:32741"
+    "aniscoupons:32741",
+    "aniscoupons:32742"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791098743.198129,
+  "last_run_time": 1791101144.9729881,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32741,
-      "last_check_time": 1791100853.0668106
+      "last_message_id": 32742,
+      "last_check_time": 1791101146.9845195
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1069,11 +1074,11 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791100847.4016483
+      "last_check_time": 1791101137.3146381
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791100848.669773
+      "last_check_time": 1791101138.321841
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1085,15 +1090,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38526,
-      "last_check_time": 1791100847.818734
+      "last_check_time": 1791101137.6555474
     },
     "megaphonna": {
       "last_message_id": 8242,
-      "last_check_time": 1791100849.1098003
+      "last_check_time": 1791101138.6933546
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791100853.7940617
+      "last_check_time": 1791101147.8226457
     }
   },
   "published_product_prices": {
@@ -1227,7 +1232,8 @@
     "1005006974721332": 3.09,
     "1005010266413614": 294.0,
     "1005009497821240": 4.69,
-    "1005011925142821": 270.9
+    "1005011925142821": 270.9,
+    "1005010536089199": 34.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3079,6 +3085,16 @@
       "price": 1.7,
       "timestamp": 1791098743.198129,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32742": {
+      "channel_msg_id": 526,
+      "product_id": "1005010536089199",
+      "title": "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones",
+      "channel": "aniscoupons",
+      "source_msg_id": 32742,
+      "price": 34.4,
+      "timestamp": 1791101144.9729881,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3087,7 +3103,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791098743.2024167,
+    "last_deal_post_time": 1791101144.9768202,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3230,7 +3246,8 @@
     "1005010266413614": "megaphonna",
     "1005009497821240": "lodydeals",
     "1005011925142821": "aniscoupons",
-    "9998883864": "test_channel"
+    "9998883864": "test_channel",
+    "1005010536089199": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3370,7 +3387,8 @@
     "Car Battery Charger LCD Display": "lodydeals",
     "Honor 600 lite (8/256)": "aniscoupons",
     "HONOR 600 PRO (12/256)": "megaphonna",
-    "ATTACK SHARK G300": "megaphonna"
+    "ATTACK SHARK G300": "megaphonna",
+    "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
