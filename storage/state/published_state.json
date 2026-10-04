@@ -174,7 +174,10 @@
     "1005011987956470",
     "1005012865709979",
     "COUPONS_be64457c7fff",
-    "1005007461615597"
+    "1005007461615597",
+    "1005010167814251",
+    "1005012113350943",
+    "1005012415005884"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -255,7 +258,7 @@
     "1005009411512584": 1791104149.1784146,
     "1005012058540420": 1790949652.480052,
     "1005009295911745": 1790949658.4852333,
-    "1005012340203471": 1791037857.3485136,
+    "1005012340203471": 1791147359.976985,
     "9998887832": 1790957832.2997856,
     "9998887913": 1790957913.5473306,
     "9998887994": 1790957994.466288,
@@ -355,7 +358,10 @@
     "1005011987956470": 1791126349.6683438,
     "1005012865709979": 1791135345.3136878,
     "COUPONS_be64457c7fff": 1791138647.0734267,
-    "1005007461615597": 1791144648.6951094
+    "1005007461615597": 1791144648.6951094,
+    "1005010167814251": 1791147347.3774981,
+    "1005012113350943": 1791147353.0681367,
+    "1005012415005884": 1791147368.3357995
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -553,7 +559,10 @@
     "Baseus 30W Car Charger Dual Port USB Type-C Fast",
     "أحدث كوبونات وتخفيضات AliExpress",
     "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6",
-    "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode"
+    "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode",
+    "Xprinter H10 Handheld POS Thermal",
+    "realme 80W SUPERVOOC Charger",
+    "OnePlus Turbo 6V  12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -634,7 +643,7 @@
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": 1790949354.0364344,
     "Powerful Violent Fan 150000RPM": 1790949652.480052,
     "Essager 65W GaN USB": 1790949658.4852333,
-    "POCO X6 Pro 5G 12/512GB": 1790950255.4725466,
+    "POCO X6 Pro 5G 12/512GB": 1791147359.976985,
     "Blackview LINK 1 Kids Tablets": 1791022250.7560554,
     "POCO X8 5G (6/128GB)": 1791014155.5083368,
     "HONOR 600 PRO": 1790960475.7249138,
@@ -754,7 +763,10 @@
     "Baseus 30W Car Charger Dual Port USB Type-C Fast": 1791135345.3136878,
     "أحدث كوبونات وتخفيضات AliExpress": 1791138647.0734267,
     "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6": 1791144648.6951094,
-    "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode": 1791145541.318689
+    "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode": 1791145541.318689,
+    "Xprinter H10 Handheld POS Thermal": 1791147347.3774981,
+    "realme 80W SUPERVOOC Charger": 1791147353.0681367,
+    "OnePlus Turbo 6V  12/256GB": 1791147368.3357995
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1275,27 +1287,31 @@
     "aniscoupons:32779",
     "lodydeals:45462",
     "lodydeals:45463",
-    "lodydeals:45464"
+    "lodydeals:45464",
+    "lodydeals:45465",
+    "lodydeals:45466",
+    "lodydeals:45467",
+    "lodydeals:45468"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791146144.850411,
+  "last_run_time": 1791147368.3357995,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32779,
-      "last_check_time": 1791147041.9697115
+      "last_check_time": 1791147372.7860858
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45464,
-      "last_check_time": 1791147039.7170913
+      "last_message_id": 45468,
+      "last_check_time": 1791147370.3469
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791147041.2788389
+      "last_check_time": 1791147371.9875975
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1303,19 +1319,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791147040.8963814
+      "last_check_time": 1791147371.6652827
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791147040.2760718
+      "last_check_time": 1791147370.9895651
     },
     "megaphonna": {
       "last_message_id": 8261,
-      "last_check_time": 1791147041.628919
+      "last_check_time": 1791147372.3862689
     },
     "couponsglobal": {
       "last_message_id": 48795,
-      "last_check_time": 1791147042.618346
+      "last_check_time": 1791147373.387654
     }
   },
   "published_product_prices": {
@@ -1467,7 +1483,10 @@
     "1005008046254742": 1.0,
     "1005011987956470": 1.0,
     "1005012865709979": 1.0,
-    "1005007461615597": 23.15
+    "1005007461615597": 23.15,
+    "1005010167814251": 139.9,
+    "1005012113350943": 15.5,
+    "1005012415005884": 299.3
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3859,6 +3878,46 @@
       "price": 11.15,
       "timestamp": 1791146144.850411,
       "status": "ACTIVE"
+    },
+    "lodydeals:45465": {
+      "channel_msg_id": 583,
+      "product_id": "1005010167814251",
+      "title": "Xprinter H10 Handheld POS Thermal",
+      "channel": "lodydeals",
+      "source_msg_id": 45465,
+      "price": 139.9,
+      "timestamp": 1791147347.3774981,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45466": {
+      "channel_msg_id": 584,
+      "product_id": "1005012113350943",
+      "title": "realme 80W SUPERVOOC Charger",
+      "channel": "lodydeals",
+      "source_msg_id": 45466,
+      "price": 15.5,
+      "timestamp": 1791147353.0681367,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45467": {
+      "channel_msg_id": 585,
+      "product_id": "1005012340203471",
+      "title": "POCO X6 Pro 5G 12/512GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45467,
+      "price": 242.7,
+      "timestamp": 1791147359.976985,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45468": {
+      "channel_msg_id": 586,
+      "product_id": "1005012415005884",
+      "title": "OnePlus Turbo 6V  12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45468,
+      "price": 299.3,
+      "timestamp": 1791147368.3357995,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3867,7 +3926,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791146144.8537664,
+    "last_deal_post_time": 1791147368.3399909,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3930,7 +3989,7 @@
     "1005009411512584": "pcgamingpart",
     "1005012058540420": "lodydeals",
     "1005009295911745": "lodydeals",
-    "1005012340203471": "megaphonna",
+    "1005012340203471": "lodydeals",
     "9998887832": "test_channel",
     "9998887913": "test_channel",
     "9998887994": "test_channel",
@@ -4033,7 +4092,10 @@
     "1005011987956470": "couponsglobal",
     "1005012865709979": "couponsglobal",
     "COUPONS_be64457c7fff": "lodydeals",
-    "1005007461615597": "aniscoupons"
+    "1005007461615597": "aniscoupons",
+    "1005010167814251": "lodydeals",
+    "1005012113350943": "lodydeals",
+    "1005012415005884": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4210,7 +4272,10 @@
     "Baseus 30W Car Charger Dual Port USB Type-C Fast": "couponsglobal",
     "أحدث كوبونات وتخفيضات AliExpress": "lodydeals",
     "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6": "aniscoupons",
-    "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode": "aniscoupons"
+    "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode": "aniscoupons",
+    "Xprinter H10 Handheld POS Thermal": "lodydeals",
+    "realme 80W SUPERVOOC Charger": "lodydeals",
+    "OnePlus Turbo 6V  12/256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
