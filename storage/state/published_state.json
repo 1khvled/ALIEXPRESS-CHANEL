@@ -182,7 +182,7 @@
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
     "100500777666555": 1791053064.6118824,
-    "1005011778621042": 1790888057.5668976,
+    "1005011778621042": 1791108644.641232,
     "9998888080": 1790888080.3099577,
     "1005012312990781": 1790888097.0085742,
     "1005009234854371": 1791104748.6212523,
@@ -510,7 +510,8 @@
     "ATTACK SHARK X1 Wireless Gaming Mouse with Magnetic Charging Dock, PAW3395PRO Sensor,",
     "ATTACK SHARK X5",
     "ATTACK SHARK X2 Pro",
-    "ATTACK SHARK L80PRO Ultralight"
+    "ATTACK SHARK L80PRO Ultralight",
+    "AMD Ryzen 7 5700X"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -692,7 +693,8 @@
     "ATTACK SHARK X1 Wireless Gaming Mouse with Magnetic Charging Dock, PAW3395PRO Sensor,": 1791105954.2458005,
     "ATTACK SHARK X5": 1791106544.154073,
     "ATTACK SHARK X2 Pro": 1791106853.9447496,
-    "ATTACK SHARK L80PRO Ultralight": 1791107750.295487
+    "ATTACK SHARK L80PRO Ultralight": 1791107750.295487,
+    "AMD Ryzen 7 5700X": 1791108644.641232
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1146,27 +1148,30 @@
     "aniscoupons:32758",
     "aniscoupons:32759",
     "aniscoupons:32760",
-    "aniscoupons:32761"
+    "aniscoupons:32761",
+    "lodydeals:45455",
+    "lodydeals:45456",
+    "lodydeals:45457"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791107750.295487,
+  "last_run_time": 1791108644.641232,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32761,
-      "last_check_time": 1791108346.7841783
+      "last_check_time": 1791108650.779673
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45454,
-      "last_check_time": 1791108343.6465662
+      "last_message_id": 45457,
+      "last_check_time": 1791108648.5242
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791108345.1586027
+      "last_check_time": 1791108650.0089715
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1174,19 +1179,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7957,
-      "last_check_time": 1791108344.7994514
+      "last_check_time": 1791108649.7012475
     },
     "zedstoreonline": {
       "last_message_id": 38526,
-      "last_check_time": 1791108344.0122223
+      "last_check_time": 1791108649.0648766
     },
     "megaphonna": {
       "last_message_id": 8245,
-      "last_check_time": 1791108345.5245028
+      "last_check_time": 1791108650.3534472
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791108347.5257401
+      "last_check_time": 1791108651.2877023
     }
   },
   "published_product_prices": {
@@ -1203,7 +1208,7 @@
     "1005007279793099": 14.12,
     "1005008829227075": 24.73,
     "100500777666555": 20.0,
-    "1005011778621042": 124.99,
+    "1005011778621042": 123.59,
     "1005012312990781": 93.32,
     "1005009234854371": 19.64,
     "1005006533038973": 21.81,
@@ -3439,6 +3444,16 @@
       "price": 22.16,
       "timestamp": 1791107750.295487,
       "status": "ACTIVE"
+    },
+    "lodydeals:45455": {
+      "channel_msg_id": 552,
+      "product_id": "1005011778621042",
+      "title": "AMD Ryzen 7 5700X",
+      "channel": "lodydeals",
+      "source_msg_id": 45455,
+      "price": 123.59,
+      "timestamp": 1791108644.641232,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3447,7 +3462,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791107750.2986057,
+    "last_deal_post_time": 1791108644.6459186,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3600,7 +3615,8 @@
     "1005007805497968": "pcgamingpart",
     "1005007345108759": "pcgamingpart",
     "1005007394028808": "aniscoupons",
-    "1005007394197021": "aniscoupons"
+    "1005007394197021": "aniscoupons",
+    "1005011778621042": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3759,7 +3775,8 @@
     "ATTACK SHARK X1 Wireless Gaming Mouse with Magnetic Charging Dock, PAW3395PRO Sensor,": "pcgamingpart",
     "ATTACK SHARK X5": "aniscoupons",
     "ATTACK SHARK X2 Pro": "aniscoupons",
-    "ATTACK SHARK L80PRO Ultralight": "aniscoupons"
+    "ATTACK SHARK L80PRO Ultralight": "aniscoupons",
+    "AMD Ryzen 7 5700X": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
