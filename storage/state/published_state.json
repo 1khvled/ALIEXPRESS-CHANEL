@@ -165,7 +165,8 @@
     "1005008880082336",
     "1005012571601398",
     "1005013290515237",
-    "1005012264415744"
+    "1005012264415744",
+    "1005009689592131"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -285,7 +286,7 @@
     "1005007097205322": 1791014755.488723,
     "1005010470699571": 1791015054.3845687,
     "1005012741634118": 1791015347.2675145,
-    "1005010453516983": 1791015953.484505,
+    "1005010453516983": 1791114657.3821456,
     "1005008554596598": 1791017145.537471,
     "1005008776714223": 1791018047.9604976,
     "1005012925826589": 1791104477.3335717,
@@ -337,7 +338,8 @@
     "1005008880082336": 1791107750.295487,
     "1005012571601398": 1791109857.5190113,
     "1005013290515237": 1791110751.0808105,
-    "1005012264415744": 1791114344.949536
+    "1005012264415744": 1791114344.949536,
+    "1005009689592131": 1791114651.412541
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -521,7 +523,9 @@
     "Attack Shark L80 Tri-mode",
     "هاتف ينسيك في شارجور🤣🤣",
     "CMF Smart Watch 3 pro AMOLED",
-    "ATTACK SHARK V6 Tri-Mode"
+    "ATTACK SHARK V6 Tri-Mode",
+    "POCO M7 (6/128)",
+    "OPPO A6 Pro 8/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -708,7 +712,9 @@
     "Attack Shark L80 Tri-mode": 1791108947.313694,
     "هاتف ينسيك في شارجور🤣🤣": 1791109857.5190113,
     "CMF Smart Watch 3 pro AMOLED": 1791110146.1927805,
-    "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105
+    "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
+    "POCO M7 (6/128)": 1791114651.412541,
+    "OPPO A6 Pro 8/256GB": 1791114657.3821456
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1180,15 +1186,17 @@
     "pcgamingpart:7958",
     "pcgamingpart:7959",
     "megaphonna:8248",
-    "megaphonna:8249"
+    "megaphonna:8249",
+    "megaphonna:8250",
+    "aniscoupons:32767"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791114344.949536,
+  "last_run_time": 1791114657.3821456,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32766,
-      "last_check_time": 1791114347.589335
+      "last_message_id": 32767,
+      "last_check_time": 1791114659.3948627
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1196,11 +1204,11 @@
     },
     "lodydeals": {
       "last_message_id": 45458,
-      "last_check_time": 1791114334.7639232
+      "last_check_time": 1791114643.071049
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791114338.0472097
+      "last_check_time": 1791114644.5731003
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1208,19 +1216,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7959,
-      "last_check_time": 1791114337.6884265
+      "last_check_time": 1791114644.2042818
     },
     "zedstoreonline": {
       "last_message_id": 38529,
-      "last_check_time": 1791114335.1110437
+      "last_check_time": 1791114643.4602103
     },
     "megaphonna": {
-      "last_message_id": 8249,
-      "last_check_time": 1791114346.963891
+      "last_message_id": 8250,
+      "last_check_time": 1791114653.4269273
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791114348.1462584
+      "last_check_time": 1791114660.4011004
     }
   },
   "published_product_prices": {
@@ -1364,7 +1372,8 @@
     "1005007394197021": 14.84,
     "1005012571601398": 275.7,
     "1005013290515237": 23.22,
-    "1005012264415744": 78.0
+    "1005012264415744": 78.0,
+    "1005009689592131": 114.1
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3536,6 +3545,26 @@
       "price": 78.0,
       "timestamp": 1791114344.949536,
       "status": "ACTIVE"
+    },
+    "megaphonna:8250": {
+      "channel_msg_id": 558,
+      "product_id": "1005009689592131",
+      "title": "POCO M7 (6/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8250,
+      "price": 114.1,
+      "timestamp": 1791114651.412541,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32767": {
+      "channel_msg_id": 559,
+      "product_id": "1005010453516983",
+      "title": "OPPO A6 Pro 8/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 32767,
+      "price": 204.7,
+      "timestamp": 1791114657.3821456,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3544,7 +3573,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791114344.9543586,
+    "last_deal_post_time": 1791114657.387152,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3701,7 +3730,8 @@
     "1005011778621042": "lodydeals",
     "1005012571601398": "aniscoupons",
     "1005013290515237": "aniscoupons",
-    "1005012264415744": "megaphonna"
+    "1005012264415744": "megaphonna",
+    "1005009689592131": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3730,7 +3760,7 @@
     "Redmi Note 17 5G   6/256": "zedstoreonline",
     "Baseus USB Type C Charger 20W": "aniscoupons",
     "ATTACK SHARK L80 PRO": "zedstoreonline",
-    "OPPO A6 Pro 8/256GB": "bnddeals",
+    "OPPO A6 Pro 8/256GB": "aniscoupons",
     "Honor Win Turbo 12/256BG": "bnddeals",
     "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction": "bnddeals",
     "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": "bnddeals",
@@ -3865,7 +3895,8 @@
     "Attack Shark L80 Tri-mode": "lodydeals",
     "هاتف ينسيك في شارجور🤣🤣": "aniscoupons",
     "CMF Smart Watch 3 pro AMOLED": "aniscoupons",
-    "ATTACK SHARK V6 Tri-Mode": "aniscoupons"
+    "ATTACK SHARK V6 Tri-Mode": "aniscoupons",
+    "POCO M7 (6/128)": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
