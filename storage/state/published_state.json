@@ -311,7 +311,7 @@
     "1005010338761787": 1791021850.86469,
     "1005012265051745": 1791022849.763491,
     "1005009390922629": 1791023140.1114628,
-    "1005010285419688": 1791026154.7068377,
+    "1005010285419688": 1791153345.9204953,
     "1005008144855522": 1791026444.9395418,
     "1005008486721357": 1791026452.368309,
     "1005012871566388": 1791026457.7236943,
@@ -582,7 +582,8 @@
     "5pcs Manicure and Pedicure Kit  Includes Nail Clipper",
     "Lenovo XT62 Earphones Bluetooth",
     "ENCHEN Blackstone Electrical Rotary Shaver",
-    "Samsung 45W PD Charger Super Fast Charging"
+    "Samsung 45W PD Charger Super Fast Charging",
+    "Men Watch, Fashion Quartz Wristwatch"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -794,7 +795,8 @@
     "5pcs Manicure and Pedicure Kit  Includes Nail Clipper": 1791151270.6442711,
     "Lenovo XT62 Earphones Bluetooth": 1791151278.7237968,
     "ENCHEN Blackstone Electrical Rotary Shaver": 1791152146.3442965,
-    "Samsung 45W PD Charger Super Fast Charging": 1791152444.7701666
+    "Samsung 45W PD Charger Super Fast Charging": 1791152444.7701666,
+    "Men Watch, Fashion Quartz Wristwatch": 1791153345.9204953
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1336,15 +1338,16 @@
     "couponsglobal:48798",
     "couponsglobal:48799",
     "couponsglobal:48800",
-    "couponsglobal:48801"
+    "couponsglobal:48801",
+    "couponsglobal:48802"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791152444.7701666,
+  "last_run_time": 1791153345.9204953,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32781,
-      "last_check_time": 1791153038.2062306
+      "last_check_time": 1791153340.3231518
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1352,11 +1355,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791153035.982936
+      "last_check_time": 1791153338.3228893
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791153037.3845158
+      "last_check_time": 1791153339.6170404
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1364,19 +1367,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791153037.0626814
+      "last_check_time": 1791153339.3042846
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791153036.340028
+      "last_check_time": 1791153338.6489327
     },
     "megaphonna": {
       "last_message_id": 8263,
-      "last_check_time": 1791153037.7861867
+      "last_check_time": 1791153339.9829366
     },
     "couponsglobal": {
-      "last_message_id": 48801,
-      "last_check_time": 1791153038.788907
+      "last_message_id": 48802,
+      "last_check_time": 1791153347.935577
     }
   },
   "published_product_prices": {
@@ -1481,7 +1484,7 @@
     "1005010338761787": 1.49,
     "1005012265051745": 246.04,
     "1005009390922629": 101.91,
-    "1005010285419688": 3.69,
+    "1005010285419688": 1.0,
     "1005008144855522": 2.69,
     "1005008486721357": 11.39,
     "1005012871566388": 6.49,
@@ -4049,6 +4052,16 @@
       "price": 1.0,
       "timestamp": 1791152444.7701666,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48802": {
+      "channel_msg_id": 595,
+      "product_id": "1005010285419688",
+      "title": "Men Watch, Fashion Quartz Wristwatch",
+      "channel": "couponsglobal",
+      "source_msg_id": 48802,
+      "price": 1.0,
+      "timestamp": 1791153345.9204953,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4057,7 +4070,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791152444.775489,
+    "last_deal_post_time": 1791153345.925822,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4168,7 +4181,7 @@
     "1005010338761787": "lodydeals",
     "1005012265051745": "lodydeals",
     "1005009390922629": "lodydeals",
-    "1005010285419688": "lodydeals",
+    "1005010285419688": "couponsglobal",
     "1005008144855522": "lodydeals",
     "1005008486721357": "lodydeals",
     "1005012871566388": "lodydeals",
@@ -4420,7 +4433,8 @@
     "5pcs Manicure and Pedicure Kit  Includes Nail Clipper": "couponsglobal",
     "Lenovo XT62 Earphones Bluetooth": "couponsglobal",
     "ENCHEN Blackstone Electrical Rotary Shaver": "couponsglobal",
-    "Samsung 45W PD Charger Super Fast Charging": "couponsglobal"
+    "Samsung 45W PD Charger Super Fast Charging": "couponsglobal",
+    "Men Watch, Fashion Quartz Wristwatch": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
