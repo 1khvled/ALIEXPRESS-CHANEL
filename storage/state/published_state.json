@@ -324,7 +324,7 @@
     "1005013046831062": 1791056447.2532988,
     "1005006974721332": 1791056453.5992196,
     "1005010266413614": 1791104767.2093377,
-    "1005009497821240": 1791056745.5798366,
+    "1005009497821240": 1791117948.6585228,
     "1005011925142821": 1791057346.9236152,
     "9998883864": 1791063864.5866926,
     "1005010536089199": 1791101144.9729881,
@@ -525,7 +525,8 @@
     "CMF Smart Watch 3 pro AMOLED",
     "ATTACK SHARK V6 Tri-Mode",
     "POCO M7 (6/128)",
-    "OPPO A6 Pro 8/256GB"
+    "OPPO A6 Pro 8/256GB",
+    "ATTACK SHARK X1  Tri-Mode"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -714,7 +715,8 @@
     "CMF Smart Watch 3 pro AMOLED": 1791110146.1927805,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
-    "OPPO A6 Pro 8/256GB": 1791114657.3821456
+    "OPPO A6 Pro 8/256GB": 1791114657.3821456,
+    "ATTACK SHARK X1  Tri-Mode": 1791117948.6585228
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1197,27 +1199,28 @@
     "pcgamingpart:7961",
     "megaphonna:8251",
     "megaphonna:8252",
-    "megaphonna:8253"
+    "megaphonna:8253",
+    "lodydeals:45460"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791114657.3821456,
+  "last_run_time": 1791117948.6585228,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32769,
-      "last_check_time": 1791117643.733932
+      "last_check_time": 1791117953.3107147
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45458,
-      "last_check_time": 1791117641.7635536
+      "last_message_id": 45460,
+      "last_check_time": 1791117950.6701872
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791117643.0487404
+      "last_check_time": 1791117952.4615622
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1225,19 +1228,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791117642.7421722
+      "last_check_time": 1791117952.087391
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791117642.0909111
+      "last_check_time": 1791117951.3622272
     },
     "megaphonna": {
       "last_message_id": 8253,
-      "last_check_time": 1791117643.3873525
+      "last_check_time": 1791117952.866341
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791117644.3148112
+      "last_check_time": 1791117954.0259962
     }
   },
   "published_product_prices": {
@@ -1370,7 +1373,7 @@
     "1005013046831062": 5.29,
     "1005006974721332": 3.09,
     "1005010266413614": 294.0,
-    "1005009497821240": 4.69,
+    "1005009497821240": 24.73,
     "1005011925142821": 270.9,
     "1005010536089199": 34.4,
     "1005012385221205": 13.27,
@@ -3574,6 +3577,16 @@
       "price": 204.7,
       "timestamp": 1791114657.3821456,
       "status": "ACTIVE"
+    },
+    "lodydeals:45460": {
+      "channel_msg_id": 560,
+      "product_id": "1005009497821240",
+      "title": "ATTACK SHARK X1  Tri-Mode",
+      "channel": "lodydeals",
+      "source_msg_id": 45460,
+      "price": 24.73,
+      "timestamp": 1791117948.6585228,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3582,7 +3595,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791114657.387152,
+    "last_deal_post_time": 1791117948.6623788,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3905,7 +3918,8 @@
     "هاتف ينسيك في شارجور🤣🤣": "aniscoupons",
     "CMF Smart Watch 3 pro AMOLED": "aniscoupons",
     "ATTACK SHARK V6 Tri-Mode": "aniscoupons",
-    "POCO M7 (6/128)": "megaphonna"
+    "POCO M7 (6/128)": "megaphonna",
+    "ATTACK SHARK X1  Tri-Mode": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
