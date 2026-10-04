@@ -167,7 +167,8 @@
     "1005013290515237",
     "1005012264415744",
     "1005009689592131",
-    "1005006437107166"
+    "1005006437107166",
+    "1005006895026041"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -341,7 +342,8 @@
     "1005013290515237": 1791110751.0808105,
     "1005012264415744": 1791114344.949536,
     "1005009689592131": 1791114651.412541,
-    "1005006437107166": 1791124852.3122299
+    "1005006437107166": 1791124852.3122299,
+    "1005006895026041": 1791125753.051726
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -530,7 +532,8 @@
     "OPPO A6 Pro 8/256GB",
     "ATTACK SHARK X1  Tri-Mode",
     "HILDA 2 Lines Laser Level Green",
-    "Lenovo XT53 Wireless Bluetooth 5.4 Earphones"
+    "Lenovo XT53 Wireless Bluetooth 5.4 Earphones",
+    "Electric Trimmer for Men's Groin Hair: Versatile Body"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -722,7 +725,8 @@
     "OPPO A6 Pro 8/256GB": 1791114657.3821456,
     "ATTACK SHARK X1  Tri-Mode": 1791117948.6585228,
     "HILDA 2 Lines Laser Level Green": 1791124852.3122299,
-    "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": 1791125437.8944824
+    "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": 1791125437.8944824,
+    "Electric Trimmer for Men's Groin Hair: Versatile Body": 1791125753.051726
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1215,15 +1219,17 @@
     "aniscoupons:32770",
     "aniscoupons:32771",
     "couponsglobal:48784",
-    "couponsglobal:48785"
+    "couponsglobal:48785",
+    "couponsglobal:48786",
+    "couponsglobal:48787"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791125437.8944824,
+  "last_run_time": 1791125753.051726,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32771,
-      "last_check_time": 1791125433.5106778
+      "last_check_time": 1791125745.930566
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1231,11 +1237,11 @@
     },
     "lodydeals": {
       "last_message_id": 45460,
-      "last_check_time": 1791125431.4802053
+      "last_check_time": 1791125743.4888592
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791125432.7965415
+      "last_check_time": 1791125745.1411645
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1243,19 +1249,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791125432.4704113
+      "last_check_time": 1791125744.7742348
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791125431.8319166
+      "last_check_time": 1791125743.8818135
     },
     "megaphonna": {
       "last_message_id": 8255,
-      "last_check_time": 1791125433.129617
+      "last_check_time": 1791125745.5367942
     },
     "couponsglobal": {
-      "last_message_id": 48785,
-      "last_check_time": 1791125439.909605
+      "last_message_id": 48787,
+      "last_check_time": 1791125758.6649044
     }
   },
   "published_product_prices": {
@@ -1401,7 +1407,8 @@
     "1005013290515237": 23.22,
     "1005012264415744": 78.0,
     "1005009689592131": 114.1,
-    "1005006437107166": 1.0
+    "1005006437107166": 1.0,
+    "1005006895026041": 1.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3633,6 +3640,16 @@
       "price": 1.0,
       "timestamp": 1791125437.8944824,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48786": {
+      "channel_msg_id": 564,
+      "product_id": "1005006895026041",
+      "title": "Electric Trimmer for Men's Groin Hair: Versatile Body",
+      "channel": "couponsglobal",
+      "source_msg_id": 48786,
+      "price": 1.0,
+      "timestamp": 1791125753.051726,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3641,7 +3658,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791125437.8997061,
+    "last_deal_post_time": 1791125753.0567474,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3800,7 +3817,8 @@
     "1005013290515237": "aniscoupons",
     "1005012264415744": "megaphonna",
     "1005009689592131": "megaphonna",
-    "1005006437107166": "couponsglobal"
+    "1005006437107166": "couponsglobal",
+    "1005006895026041": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3968,7 +3986,8 @@
     "POCO M7 (6/128)": "megaphonna",
     "ATTACK SHARK X1  Tri-Mode": "lodydeals",
     "HILDA 2 Lines Laser Level Green": "couponsglobal",
-    "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": "couponsglobal"
+    "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": "couponsglobal",
+    "Electric Trimmer for Men's Groin Hair: Versatile Body": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
