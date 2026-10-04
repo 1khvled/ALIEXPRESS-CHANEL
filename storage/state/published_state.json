@@ -162,7 +162,8 @@
     "1005007805497968",
     "1005007345108759",
     "1005007394197021",
-    "1005008880082336"
+    "1005008880082336",
+    "1005012571601398"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -331,7 +332,8 @@
     "1005007805497968": 1791104753.5513856,
     "1005007345108759": 1791104759.7671344,
     "1005007394197021": 1791106853.9447496,
-    "1005008880082336": 1791107750.295487
+    "1005008880082336": 1791107750.295487,
+    "1005012571601398": 1791109857.5190113
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -512,7 +514,8 @@
     "ATTACK SHARK X2 Pro",
     "ATTACK SHARK L80PRO Ultralight",
     "AMD Ryzen 7 5700X",
-    "Attack Shark L80 Tri-mode"
+    "Attack Shark L80 Tri-mode",
+    "هاتف ينسيك في شارجور🤣🤣"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -696,7 +699,8 @@
     "ATTACK SHARK X2 Pro": 1791106853.9447496,
     "ATTACK SHARK L80PRO Ultralight": 1791107750.295487,
     "AMD Ryzen 7 5700X": 1791108644.641232,
-    "Attack Shark L80 Tri-mode": 1791108947.313694
+    "Attack Shark L80 Tri-mode": 1791108947.313694,
+    "هاتف ينسيك في شارجور🤣🤣": 1791109857.5190113
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1155,15 +1159,16 @@
     "lodydeals:45456",
     "lodydeals:45457",
     "lodydeals:45458",
-    "megaphonna:8246"
+    "megaphonna:8246",
+    "aniscoupons:32762"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791108947.313694,
+  "last_run_time": 1791109857.5190113,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32761,
-      "last_check_time": 1791109540.5859315
+      "last_message_id": 32762,
+      "last_check_time": 1791109859.533734
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1171,11 +1176,11 @@
     },
     "lodydeals": {
       "last_message_id": 45458,
-      "last_check_time": 1791109535.622367
+      "last_check_time": 1791109848.8712108
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791109537.0083451
+      "last_check_time": 1791109850.589007
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1183,19 +1188,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7957,
-      "last_check_time": 1791109536.6664212
+      "last_check_time": 1791109850.1952035
     },
     "zedstoreonline": {
       "last_message_id": 38526,
-      "last_check_time": 1791109535.991306
+      "last_check_time": 1791109849.3398654
     },
     "megaphonna": {
       "last_message_id": 8246,
-      "last_check_time": 1791109540.2069445
+      "last_check_time": 1791109851.0205097
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791109541.0669808
+      "last_check_time": 1791109860.580825
     }
   },
   "published_product_prices": {
@@ -1336,7 +1341,8 @@
     "1005012743092233": 24.37,
     "1005007805497968": 22.81,
     "1005007345108759": 22.12,
-    "1005007394197021": 14.84
+    "1005007394197021": 14.84,
+    "1005012571601398": 275.7
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3468,6 +3474,16 @@
       "price": 15.8,
       "timestamp": 1791108947.313694,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32762": {
+      "channel_msg_id": 554,
+      "product_id": "1005012571601398",
+      "title": "هاتف ينسيك في شارجور🤣🤣",
+      "channel": "aniscoupons",
+      "source_msg_id": 32762,
+      "price": 275.7,
+      "timestamp": 1791109857.5190113,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3476,7 +3492,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791108947.318547,
+    "last_deal_post_time": 1791109857.5238776,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3630,7 +3646,8 @@
     "1005007345108759": "pcgamingpart",
     "1005007394028808": "aniscoupons",
     "1005007394197021": "aniscoupons",
-    "1005011778621042": "lodydeals"
+    "1005011778621042": "lodydeals",
+    "1005012571601398": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3791,7 +3808,8 @@
     "ATTACK SHARK X2 Pro": "aniscoupons",
     "ATTACK SHARK L80PRO Ultralight": "aniscoupons",
     "AMD Ryzen 7 5700X": "lodydeals",
-    "Attack Shark L80 Tri-mode": "lodydeals"
+    "Attack Shark L80 Tri-mode": "lodydeals",
+    "هاتف ينسيك في شارجور🤣🤣": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
