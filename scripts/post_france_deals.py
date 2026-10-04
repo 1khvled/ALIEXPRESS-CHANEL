@@ -665,10 +665,12 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                 else:
                     is_price_drop = False
 
-                # 7. Official Studio Photo ONLY (or competitor's promo banner for coupons)
-                img_url = extracted.image_url or source_photo_url
+                # 7. Official Studio Photo ONLY (Never leak competitor channel watermarks)
+                img_url = extracted.image_url
+                if not img_url and extracted.product_id:
+                    img_url = await product_extractor._fetch_clean_aliexpress_image(extracted.product_id)
                 if not extracted.is_coupon_list:
-                    if not img_url or not any(domain in img_url for domain in ["alicdn.com", "aliexpress-media.com", "aliexpress.com", "cdn", "telesco.pe", "telegram"]):
+                    if not img_url or not any(domain in str(img_url) for domain in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
                         print(f"  [NO OFFICIAL PHOTO] Skipping deal without clean AliExpress CDN image: {extracted.product_id}")
                         published_keys.add(post_key)
                         max_processed_id = max(max_processed_id, msg_id)

@@ -418,11 +418,13 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     if extracted.title:
                         seen_titles.append(extracted.title)
 
-                    # 7. Product Photo inside DealScout Neon Frame
-                    img_url = extracted.image_url or source_photo_url
+                    # 7. Official Studio Photo ONLY (Never leak competitor channel watermarks)
+                    img_url = extracted.image_url
+                    if not img_url and extracted.product_id:
+                        img_url = await product_extractor._fetch_clean_aliexpress_image(extracted.product_id)
                     if not extracted.is_coupon_list:
-                        if not img_url:
-                            print(f"  [NO PHOTO] Skipping deal without product image: {extracted.product_id}")
+                        if not img_url or not any(d in str(img_url) for d in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
+                            print(f"  [NO CLEAN PHOTO] Skipping deal without clean AliExpress studio image: {extracted.product_id}")
                             max_processed_id = max(max_processed_id, msg_id)
                             record_post_handled(ch, msg_id)
                             continue

@@ -197,7 +197,10 @@ class ProductExtractor:
         country_info = extract_country_instruction(text, url=combined_deal_url, title=title or "")
         deal_type = detect_deal_type(text, combined_deal_url)
 
-        # Fallback to page metadata if image/title still missing
+        # Fallback to direct AliExpress studio image or page metadata if image still missing
+        if not image_url and resolved.product_id:
+            image_url = await self._fetch_clean_aliexpress_image(resolved.product_id)
+
         if not image_url or not title or len(title) < 10 or self._is_suspicious_title(title):
             page_meta = (await self._fetch_page_metadata(resolved.canonical_url)) or {}
             if not title or len(title) < 10 or self._is_suspicious_title(title):
@@ -209,10 +212,7 @@ class ProductExtractor:
             if not image_url and page_meta.get("image"):
                 image_url = page_meta["image"]
 
-        # Fallback to source message photo (e.g. competitor's channel photo) if studio photo unavailable
-        if not image_url and media_path:
-            image_url = media_path
-
+        # NEVER fall back to competitor media_path for product deals to prevent competitor logos / watermarks!
         is_valid = bool(resolved.product_id and (usd_price or eur_price) and title and image_url)
 
         return ExtractedProduct(
@@ -261,6 +261,39 @@ class ProductExtractor:
         except Exception as e:
             logger.debug(f"Metadata fetch skipped for {url}: {e}")
         return meta
+
+    async def _fetch_clean_aliexpress_image(self, pid: str) -> Optional[str]:
+        """Fetches the official clean AliExpress studio image directly without any competitor watermarks."""
+        if not pid:
+            return None
+        headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0.0.0 Safari/537.36"
+            ),
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.5",
+        }
+        url = f"https://www.aliexpress.com/item/{pid}.html"
+        try:
+            async with httpx.AsyncClient(headers=headers, follow_redirects=True, timeout=7.0) as client:
+                res = await client.get(url)
+                if res.status_code == 200:
+                    text = res.text
+                    soup = BeautifulSoup(text, "html.parser")
+                    og_img = soup.find("meta", property="og:image")
+                    if og_img and og_img.get("content") and "aliexpress" in og_img["content"]:
+                        return og_img["content"].strip()
+                    m = re.search(r'https://ae-pic-a1\.aliexpress-media\.com/kf/[A-Za-z0-9_]+\.(?:jpg|png)', text)
+                    if m:
+                        return m.group(0)
+                    m2 = re.search(r'https://ae01\.alicdn\.com/kf/[A-Za-z0-9_]+\.(?:jpg|png)', text)
+                    if m2:
+                        return m2.group(0)
+        except Exception as e:
+            logger.debug(f"Direct clean image fetch skipped for {pid}: {e}")
+        return None
 
     def _clean_official_title(self, raw_title: str) -> str:
         """Removes SEO junk words from AliExpress official catalog titles."""
