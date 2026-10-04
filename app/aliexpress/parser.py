@@ -60,8 +60,13 @@ NON_DEAL_INDICATORS = [
 ALLOWED_CATEGORY_KEYWORDS_EN = [
     # Gaming peripherals
     "mouse", "mice", "keyboard", "headset", "headphone", "earphone", "earbuds",
-    "tws", "controller", "gamepad", "joystick", "gaming", "gamer", "game",
+    "tws", "controller", "controllers", "gamepad", "gamepads", "joystick", "joysticks", "gaming", "gamer", "game",
     "monitor", "mechanical", "rgb", "dpi", "mouse pad", "mousepad",
+    "iem", "iems", "in-ear", "in ear", "earphones", "headphones", "headsets",
+    # IEM & Audio Brands
+    "kz", "edx", "edx pro", "edx pro x", "castor", "zsn", "zs10", "cca", "tangzu",
+    "wan'er", "waner", "moondrop", "chu", "space travel", "7hz", "zero", "salnotes",
+    "qkz", "truthear", "gate", "hola", "simgot", "ew200", "kbear",
     # Gaming & PC Brands
     "attack shark", "ajazz", "machenike", "aula", "darmoshark", "vgn", "zaopin",
     "scyrox", "mad r", "vxe", "fantech", "keychron", "nuphy", "akko", "monsgeek",
@@ -71,7 +76,7 @@ ALLOWED_CATEGORY_KEYWORDS_EN = [
     "easysmx", "mobapad", "iine", "dobe", "skull & co", "yunzii",
     # Sensor & Switch Tech
     "paw3395", "paw3950", "paw3311", "paw3370", "rapid trigger", "magnetic switch",
-    "hall effect", "8k", "4k", "polling rate", "glass pad", "cordura",
+    "hall effect", "magnetic keyboard", "mechanical keyboard", "magnetic", "8k", "4k", "polling rate", "glass pad", "cordura",
     # Enthusiast brands
     "pulsar", "lamzu", "ninjutso", "sora", "maya", "thorn", "atlantis",
     "superlight", "g pro", "viper", "deathadder", "basilisk", "blackshark", "kraken",
@@ -126,7 +131,10 @@ ALLOWED_CATEGORY_KEYWORDS_EN = [
 ]
 
 ALLOWED_CATEGORY_KEYWORDS_AR = [
-    "ماوس", "كيبورد", "لوحة مفاتيح", "سماعة", "سماعات", "يد تحكم", "يدة تحكم", "يدة",
+    "ماوس", "كيبورد", "لوحة مفاتيح", "سماعة", "سماعات", "سماعات اذن", "سماعات أذن", "سماعة اذن", "سماعة أذن",
+    "سماعات داخل الاذن", "سماعات داخل الأذن", "سماعة داخل الاذن", "سماعة داخل الأذن", "سماعة سلكية", "سماعات سلكية", "سماعة رأس", "سماعات رأس", "ايربودز", "إيربودز",
+    "يد تحكم", "يد تحكم فخمة", "يدة تحكم", "ايادي تحكم", "أيادي تحكم", "يدات تحكم", "كنترولر", "كنترولرز", "جيمباد", "قيمباد", "ذراع تحكم", "يدة",
+    "كيبورد مغناطيسي", "كيبورد ميكانيكي", "لوحة مفاتيح مغناطيسية", "لوحة مفاتيح ميكانيكية", "مغناطيسي", "ميكانيكي", "مغناطيسية", "ميكانيكية", "رابيد تريجر", "هول افكت", "هول إفكت",
     "جيمنج", "قيمنق", "جيمينق", "جايمنج", "العاب", "ألعاب", "شاشة", "كرسي",
     "هاتف", "جوال", "موبايل", "تابلت", "لوحي", "ايباد", "آيباد",
     "ساعة", "ساعه", "ذكية", "سوار ذكي",
@@ -138,6 +146,7 @@ ALLOWED_CATEGORY_KEYWORDS_AR = [
     "معجون حراري", "بوتي حراري", "وسادة حرارية", "تبريد", "تبريد مائي", "مروحة", "مراوح", "مشتت",
     "هونر", "هواوي", "شاومي", "ريدمي", "بوكو", "سامسونج", "ايفون", "آيفون",
     "ريلمي", "انفينكس", "تكنو", "نوبيا", "لينوفو", "اسوس", "باد ماوس", "ماوس باد",
+    "كيزيد", "كي زي", "كي زيد", "موندروب", "تانغزو",
     "سويتش", "سويتشات", "عتاد", "صيدة", "يو اس بي", "تايب سي",
 ]
 
@@ -767,23 +776,49 @@ BRAND_TRANSLITERATIONS = {
     "بيسوس": "baseus",
     "يوغرين": "ugreen",
     "كولمي": "colmi",
+    "كيزيد": "kz",
+    "كي زي": "kz",
+    "كي زيد": "kz",
+    "موندروب": "moondrop",
+    "تانغزو": "tangzu",
+    "كنترولر": "controller",
+    "كنترولرز": "controller",
+    "جيمباد": "gamepad",
+    "قيمباد": "gamepad",
 }
 
 CATEGORY_MAPPINGS = {
     "ماوس": ["mouse", "mice"],
     "كيبورد": ["keyboard"],
     "لوحة مفاتيح": ["keyboard"],
-    "سماعة": ["headset", "headphone", "earphone", "earbuds", "audio", "tws"],
-    "سماعات": ["headset", "headphone", "earphone", "earbuds", "audio", "tws"],
+    "سماعة": ["headset", "headphone", "earphone", "earphones", "earbuds", "audio", "tws", "iem", "iems", "kz"],
+    "سماعات": ["headset", "headphone", "earphone", "earphones", "earbuds", "audio", "tws", "iem", "iems", "kz"],
+    "اذن": ["earphone", "earphones", "earbuds", "in-ear", "iem", "iems", "headphone"],
+    "أذن": ["earphone", "earphones", "earbuds", "in-ear", "iem", "iems", "headphone"],
+    "الاذن": ["earphone", "earphones", "earbuds", "in-ear", "iem", "iems", "headphone"],
+    "الأذن": ["earphone", "earphones", "earbuds", "in-ear", "iem", "iems", "headphone"],
     "هاتف": ["phone", "smartphone", "mobile"],
     "جوال": ["phone", "smartphone", "mobile"],
     "ساعة": ["watch", "smartwatch"],
     "شاحن": ["charger", "gan"],
     "كابل": ["cable", "cord"],
-    "يد تحكم": ["gamepad", "controller"],
+    "تحكم": ["controller", "gamepad", "joystick"],
+    "يد تحكم": ["gamepad", "controller", "joystick"],
+    "كنترولر": ["controller", "gamepad", "joystick"],
+    "كنترولرز": ["controller", "gamepad", "joystick"],
+    "جيمباد": ["gamepad", "controller"],
+    "قيمباد": ["gamepad", "controller"],
+    "مغناطيسي": ["magnetic", "rapid trigger", "hall effect", "keyboard"],
+    "مغناطيسية": ["magnetic", "rapid trigger", "hall effect", "keyboard"],
+    "ميكانيكي": ["mechanical", "keyboard"],
+    "ميكانيكية": ["mechanical", "keyboard"],
+    "سلكي": ["wired"],
+    "سلكية": ["wired"],
+    "لاسلكي": ["wireless"],
     "معالج": ["cpu", "processor", "ryzen", "intel"],
     "مذربورد": ["motherboard", "mainboard"],
     "لوحة ام": ["motherboard", "mainboard"],
+    "لوحة أم": ["motherboard", "mainboard"],
     "مايك": ["microphone", "mic"],
     "ميكروفون": ["microphone", "mic"],
     "مايكروفون": ["microphone", "mic"],
@@ -805,7 +840,10 @@ def compute_title_compatibility(extracted_title: str, candidate_title: str) -> f
         stop = {
             "algeria", "global", "version", "original", "aliexpress", "deal", "drops",
             "edition", "sale", "new", "free", "pro", "max", "ultra", "plus", "lite",
-            "الهاتف", "نسخة", "عالمية", "تخفيض", "سعر", "ممتاز"
+            "الهاتف", "نسخة", "عالمية", "تخفيض", "سعر", "ممتاز",
+            "فخمة", "فخم", "احترافية", "احترافي", "ممتازة", "رهيبة", "رهيب",
+            "اسطوري", "أسطوري", "أقوى", "اقوى", "أفضل", "افضل", "عرض", "جديد", "جديدة",
+            "أصلي", "اصلي", "يد"
         }
         return tokens - stop
 
@@ -823,10 +861,16 @@ def compute_title_compatibility(extracted_title: str, candidate_title: str) -> f
             common.add(ar_b)
 
     # Category cross-matching (Arabic to English)
+    s1_lower = extracted_title.lower()
+    s2_lower = candidate_title.lower()
     for ar_term, en_terms in CATEGORY_MAPPINGS.items():
-        if ar_term in t1 and any(en in t2 for en in en_terms):
+        matched_1 = ar_term in t1 or (len(ar_term.split()) > 1 and ar_term in s1_lower)
+        matched_2 = any(en in t2 for en in en_terms) or (any(en in s2_lower for en in en_terms))
+        if matched_1 and matched_2:
             common.add(ar_term)
-        elif ar_term in t2 and any(en in t1 for en in en_terms):
+        matched_rev_1 = ar_term in t2 or (len(ar_term.split()) > 1 and ar_term in s2_lower)
+        matched_rev_2 = any(en in t1 for en in en_terms) or (any(en in s1_lower for en in en_terms))
+        if matched_rev_1 and matched_rev_2:
             common.add(ar_term)
 
     score = len(common) / min(len(t1), len(t2))

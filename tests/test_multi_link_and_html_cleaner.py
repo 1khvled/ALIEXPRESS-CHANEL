@@ -49,3 +49,56 @@ async def test_multi_link_prefers_matching_product():
     # Must select the headset product ID (1005008390562391), NOT POCO phone (1005013152491360)
     assert extracted.product_id == "1005008390562391"
     assert extracted.current_price == 11.7
+
+def test_kz_earphones_controllers_and_keyboards_compatibility():
+    from app.aliexpress.parser import is_allowed_category
+
+    # 1. Allowed category checks
+    allowed1, _ = is_allowed_category("سماعات الاذن KZ EDX PRO X", "سماعات سلكية احترافية")
+    assert allowed1 is True
+
+    allowed2, _ = is_allowed_category("يد تحكم فخمة GameSir G7", "كنترولر بي سي واكسبوكس")
+    assert allowed2 is True
+
+    allowed3, _ = is_allowed_category("كيبورد مغناطيسي Attack Shark K85", "كيبورد رابيد تريجر وهول افكت")
+    assert allowed3 is True
+
+    allowed4, _ = is_allowed_category("كيبورد ميكانيكي Aula F75", "لوحة مفاتيح ميكانيكية احترافية")
+    assert allowed4 is True
+
+    # 2. Title compatibility checks
+    # KZ EDX PRO X
+    score_kz = compute_title_compatibility(
+        "سماعات الاذن KZ EDX PRO X",
+        "KZ EDX PRO X In-Ear Earphones Dynamic IEM Earbuds Noise Cancelling HIFI Headset"
+    )
+    assert score_kz >= 0.4
+
+    # GameSir Controller
+    score_ctrl = compute_title_compatibility(
+        "يد تحكم فخمة GameSir G7",
+        "GameSir G7 SE Wired Controller Gamepad for Xbox PC"
+    )
+    assert score_ctrl >= 0.4
+
+    # Magnetic Keyboard
+    score_mag = compute_title_compatibility(
+        "كيبورد مغناطيسي Attack Shark K85",
+        "ATTACK SHARK K85 Rapid Trigger Magnetic Switch Gaming Keyboard"
+    )
+    assert score_mag >= 0.4
+
+    # Mechanical Keyboard
+    score_mech = compute_title_compatibility(
+        "كيبورد ميكانيكي Aula F75",
+        "AULA F75 Wireless Mechanical Keyboard 75% Layout"
+    )
+    assert score_mech >= 0.4
+
+    # Mismatch rejection
+    score_mismatch = compute_title_compatibility(
+        "يد تحكم فخمة GameSir G7",
+        "Xiaomi Redmi Note 13 4G Smartphone 108MP Camera"
+    )
+    assert score_mismatch == 0.0
+
