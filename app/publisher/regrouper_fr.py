@@ -491,18 +491,24 @@ async def check_and_publish_france_regrouped_bulletins(
 
     bulletins_to_post: List[Tuple[str, str, List[Dict[str, Any]]]] = []
 
-    # Check for category-specific bulletins meeting min_items
-    for cat_name, cat_items in by_category.items():
-        if len(cat_items) >= min_items:
-            caption, selected = build_france_category_bulletin(cat_name, cat_items, target_clean)
-            if selected:
-                bulletins_to_post.append((cat_name, caption, selected))
-
-    # If no category reached min_items, build a Master Daily Roundup
-    if not bulletins_to_post:
+    # If total deals <= 8, build a single comprehensive Master Roundup containing ALL deals of the day
+    if len(today_deals) <= 8:
         caption, selected = build_france_master_roundup(today_deals, target_clean)
         if selected and len(selected) >= 2:
             bulletins_to_post.append(("master_roundup", caption, selected))
+    else:
+        # Check for category-specific bulletins meeting min_items
+        for cat_name, cat_items in by_category.items():
+            if len(cat_items) >= min_items:
+                caption, selected = build_france_category_bulletin(cat_name, cat_items, target_clean)
+                if selected:
+                    bulletins_to_post.append((cat_name, caption, selected))
+
+        # If no category reached min_items, build a Master Daily Roundup
+        if not bulletins_to_post:
+            caption, selected = build_france_master_roundup(today_deals, target_clean)
+            if selected and len(selected) >= 2:
+                bulletins_to_post.append(("master_roundup", caption, selected))
 
     if not bulletins_to_post:
         logger.info("[FRANCE ROUNDUP] No qualifying bulletins to post.")
@@ -511,10 +517,12 @@ async def check_and_publish_france_regrouped_bulletins(
     published_results: List[Dict[str, Any]] = []
     published_msg_ids: List[int] = []
 
-    # Prepare banner image
-    banner_path = Path(settings.BASE_DIR) / "storage" / "assets" / "choice_day_banner.png"
+    # Prepare banner image: Use France-specific DealScout banner
+    banner_path = Path(settings.BASE_DIR) / "storage" / "assets" / "tajmi3at_banner_fr.png"
     if not banner_path.exists():
         banner_path = Path(settings.BASE_DIR) / "storage" / "assets" / "tajmi3at_banner.png"
+    if not banner_path.exists():
+        banner_path = Path(settings.BASE_DIR) / "storage" / "assets" / "choice_day_banner.png"
 
     photo_bytes = banner_path.read_bytes() if banner_path.exists() else None
 
