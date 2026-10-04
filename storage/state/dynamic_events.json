@@ -27,6 +27,22 @@
       {
         "tier": "28/229$",
         "code": "OTPRD28"
+      },
+      {
+        "tier": "8",
+        "code": "PLUS"
+      },
+      {
+        "tier": "8",
+        "code": "LITE"
+      },
+      {
+        "tier": "12",
+        "code": "POWER2"
+      },
+      {
+        "tier": "12",
+        "code": "TURBO"
       }
     ],
     "coupon_tiers_fr": [],
