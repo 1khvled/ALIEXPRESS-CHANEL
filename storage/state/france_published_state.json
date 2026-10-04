@@ -1,34 +1,35 @@
 {
   "published_post_keys": [
-    "francecp:426",
-    "francecp:420",
-    "francecp:422",
-    "francecp:428",
-    "alifrdrop:102",
-    "francecp:417",
-    "francecp:427",
     "francecp:415",
-    "alifrdrop:103",
-    "francecp:423",
+    "francecp:417",
+    "francecp:418",
+    "francecp:424",
+    "francecp:426",
+    "francecp:427",
     "francecp:425",
+    "francecp:429",
+    "francecp:413",
+    "francecp:428",
+    "francecp:421",
+    "francecp:416",
+    "francecp:420",
+    "alifrdrop:102",
+    "francecp:419",
+    "alifrdrop:104",
+    "francecp:422",
     "alifrdrop:106",
     "francecp:414",
-    "francecp:429",
-    "francecp:418",
-    "francecp:416",
-    "francecp:419",
-    "francecp:424",
-    "francecp:413",
-    "alifrdrop:104",
+    "francecp:430",
+    "francecp:423",
     "alifrdrop:105",
-    "francecp:421"
+    "alifrdrop:103"
   ],
   "published_product_ids": [
-    "1005012589045044",
-    "1005012541048117",
-    "1005012218291528",
     "1005012155835323",
-    "1005009977303549"
+    "1005012218291528",
+    "1005012589045044",
+    "1005009977303549",
+    "1005012541048117"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -100,15 +101,15 @@
   },
   "monitored_channels": {
     "francecp": {
-      "last_message_id": 429,
-      "last_check_time": 1791154543.9870343
+      "last_message_id": 430,
+      "last_check_time": 1791155750.579415
     },
     "alifrdrop": {
       "last_message_id": 106,
       "last_check_time": 1790836790.2576432
     }
   },
-  "last_run_time": 1791155450.7172685,
+  "last_run_time": 1791155750.5796783,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001",
     "FR_LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004"
