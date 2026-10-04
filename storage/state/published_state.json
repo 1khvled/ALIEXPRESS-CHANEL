@@ -224,7 +224,7 @@
     "1005006603602562": 1790941207.5310047,
     "1005010721042860": 1791042962.9882953,
     "1005009517247552": 1790941221.8823678,
-    "1005012191191893": 1791045953.997142,
+    "1005012191191893": 1791137155.7589798,
     "1005012968221708": 1790941233.5893936,
     "9998883454": 1790943454.3504107,
     "9998883497": 1790943497.723828,
@@ -604,7 +604,7 @@
     "Blackview Zeno 10 5G  8/128": 1790941207.5310047,
     "Honor Power 2  12/256": 1790941214.6756065,
     "Honor X70 5G 8/128": 1790941221.8823678,
-    "Blackview MEGA 5  8/256": 1791045953.997142,
+    "Blackview MEGA 5  8/256": 1791137155.7589798,
     "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1790941233.5893936,
     "4G LTE Wireless USB 150Mbps": 1790943633.9774187,
     "Curren 8455 Men's Quartz": 1790943640.1460688,
@@ -1253,15 +1253,16 @@
     "megaphonna:8258",
     "megaphonna:8259",
     "couponsglobal:48795",
-    "aniscoupons:32773"
+    "aniscoupons:32773",
+    "aniscoupons:32774"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791135345.3136878,
+  "last_run_time": 1791137155.7589798,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32773,
-      "last_check_time": 1791136841.0751338
+      "last_message_id": 32774,
+      "last_check_time": 1791137157.7750492
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1269,11 +1270,11 @@
     },
     "lodydeals": {
       "last_message_id": 45460,
-      "last_check_time": 1791136836.7971063
+      "last_check_time": 1791137146.8225796
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791136838.2641375
+      "last_check_time": 1791137148.5097892
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1281,19 +1282,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791136837.8904488
+      "last_check_time": 1791137148.134507
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791136837.2174428
+      "last_check_time": 1791137147.3367662
     },
     "megaphonna": {
       "last_message_id": 8259,
-      "last_check_time": 1791136838.6500132
+      "last_check_time": 1791137148.9354455
     },
     "couponsglobal": {
       "last_message_id": 48795,
-      "last_check_time": 1791136841.6419313
+      "last_check_time": 1791137158.7348723
     }
   },
   "published_product_prices": {
@@ -3756,6 +3757,16 @@
       "price": 1.0,
       "timestamp": 1791135345.3136878,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32774": {
+      "channel_msg_id": 572,
+      "product_id": "1005012191191893",
+      "title": "Blackview MEGA 5  8/256",
+      "channel": "aniscoupons",
+      "source_msg_id": 32774,
+      "price": 224.3,
+      "timestamp": 1791137155.7589798,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3764,7 +3775,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791135345.3387344,
+    "last_deal_post_time": 1791137155.7648108,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
