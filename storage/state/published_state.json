@@ -176,7 +176,7 @@
     "1005007961216287": 1791104165.8542082,
     "1005009627597591": 1790884233.6428,
     "1005007275142457": 1791029447.177805,
-    "1005008829227075": 1790972445.6591878,
+    "1005008829227075": 1791105954.2458005,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
     "100500777666555": 1791053064.6118824,
@@ -502,7 +502,8 @@
     "EasySMX X05 Pro Wireless Gamepad PC Controller",
     "K61 Wired Mechanical Keyboard",
     "GameSir Nova Lite Gamepads PC  Hall Effect",
-    "FIFINE AmpliGame A2 RGB USB Gaming Microphone"
+    "FIFINE AmpliGame A2 RGB USB Gaming Microphone",
+    "ATTACK SHARK X1 Wireless Gaming Mouse with Magnetic Charging Dock, PAW3395PRO Sensor,"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -680,7 +681,8 @@
     "EasySMX X05 Pro Wireless Gamepad PC Controller": 1791104155.533397,
     "K61 Wired Mechanical Keyboard": 1791104461.903693,
     "GameSir Nova Lite Gamepads PC  Hall Effect": 1791104753.5513856,
-    "FIFINE AmpliGame A2 RGB USB Gaming Microphone": 1791104759.7671344
+    "FIFINE AmpliGame A2 RGB USB Gaming Microphone": 1791104759.7671344,
+    "ATTACK SHARK X1 Wireless Gaming Mouse with Magnetic Charging Dock, PAW3395PRO Sensor,": 1791105954.2458005
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1126,15 +1128,16 @@
     "megaphonna:8245",
     "aniscoupons:32751",
     "aniscoupons:32753",
-    "aniscoupons:32754"
+    "aniscoupons:32754",
+    "pcgamingpart:7957"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791105348.8066044,
+  "last_run_time": 1791105954.2458005,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32754,
-      "last_check_time": 1791105649.3710272
+      "last_check_time": 1791105957.7209797
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1142,31 +1145,31 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791105647.0122721
+      "last_check_time": 1791105946.673094
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791105648.5290794
+      "last_check_time": 1791105956.8930278
     },
     "test_channel": {
       "last_message_id": 1791063864,
       "last_check_time": 1791063864.5866926
     },
     "pcgamingpart": {
-      "last_message_id": 7956,
-      "last_check_time": 1791105648.1717737
+      "last_message_id": 7957,
+      "last_check_time": 1791105956.2590342
     },
     "zedstoreonline": {
       "last_message_id": 38526,
-      "last_check_time": 1791105647.396126
+      "last_check_time": 1791105947.072656
     },
     "megaphonna": {
       "last_message_id": 8245,
-      "last_check_time": 1791105648.9329128
+      "last_check_time": 1791105957.3017504
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791105650.046914
+      "last_check_time": 1791105958.3453894
     }
   },
   "published_product_prices": {
@@ -1181,7 +1184,7 @@
     "1005008880082336": 22.7,
     "1005007275142457": 24.2,
     "1005007279793099": 14.12,
-    "1005008829227075": 25.06,
+    "1005008829227075": 24.73,
     "100500777666555": 20.0,
     "1005011778621042": 124.99,
     "1005012312990781": 93.32,
@@ -3378,6 +3381,16 @@
       "price": 11.29,
       "timestamp": 1791105348.8066044,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7957": {
+      "channel_msg_id": 548,
+      "product_id": "1005008829227075",
+      "title": "ATTACK SHARK X1 Wireless Gaming Mouse with Magnetic Charging Dock, PAW3395PRO Sensor,",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7957,
+      "price": 24.73,
+      "timestamp": 1791105954.2458005,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3386,7 +3399,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791105348.8103511,
+    "last_deal_post_time": 1791105954.2502823,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3474,7 +3487,7 @@
     "1005005652871847": "aniscoupons",
     "1005012554205120": "lodydeals",
     "1005009234854371": "pcgamingpart",
-    "1005008829227075": "lodydeals",
+    "1005008829227075": "pcgamingpart",
     "1005008901941749": "lodydeals",
     "1005012881256093": "aniscoupons",
     "1005006861002512": "couponsglobal",
@@ -3692,7 +3705,8 @@
     "K61 Wired Mechanical Keyboard": "pcgamingpart",
     "UGREEN  1080P Webcam 8MP for PC": "pcgamingpart",
     "GameSir Nova Lite Gamepads PC  Hall Effect": "pcgamingpart",
-    "FIFINE AmpliGame A2 RGB USB Gaming Microphone": "pcgamingpart"
+    "FIFINE AmpliGame A2 RGB USB Gaming Microphone": "pcgamingpart",
+    "ATTACK SHARK X1 Wireless Gaming Mouse with Magnetic Charging Dock, PAW3395PRO Sensor,": "pcgamingpart"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
