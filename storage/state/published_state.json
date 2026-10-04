@@ -170,7 +170,8 @@
     "1005006437107166",
     "1005006895026041",
     "1005006996329614",
-    "1005008046254742"
+    "1005008046254742",
+    "1005011987956470"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -347,7 +348,8 @@
     "1005006437107166": 1791124852.3122299,
     "1005006895026041": 1791125753.051726,
     "1005006996329614": 1791126044.0695431,
-    "1005008046254742": 1791126049.4061573
+    "1005008046254742": 1791126049.4061573,
+    "1005011987956470": 1791126349.6683438
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -539,7 +541,8 @@
     "Lenovo XT53 Wireless Bluetooth 5.4 Earphones",
     "Electric Trimmer for Men's Groin Hair: Versatile Body",
     "KODAK USB 2.0 Flash Drive 64GB",
-    "E27 60W Wireless Remote Control Smart Timer"
+    "E27 60W Wireless Remote Control Smart Timer",
+    "HTC NE79 TWS Wireless Bluetooth Earphones: AI"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -734,7 +737,8 @@
     "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": 1791125437.8944824,
     "Electric Trimmer for Men's Groin Hair: Versatile Body": 1791125753.051726,
     "KODAK USB 2.0 Flash Drive 64GB": 1791126044.0695431,
-    "E27 60W Wireless Remote Control Smart Timer": 1791126049.4061573
+    "E27 60W Wireless Remote Control Smart Timer": 1791126049.4061573,
+    "HTC NE79 TWS Wireless Bluetooth Earphones: AI": 1791126349.6683438
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1232,15 +1236,17 @@
     "couponsglobal:48787",
     "couponsglobal:48788",
     "couponsglobal:48789",
-    "couponsglobal:48790"
+    "couponsglobal:48790",
+    "couponsglobal:48791",
+    "couponsglobal:48792"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791126049.4061573,
+  "last_run_time": 1791126349.6683438,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32771,
-      "last_check_time": 1791126039.0305955
+      "last_check_time": 1791126341.7798955
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1248,11 +1254,11 @@
     },
     "lodydeals": {
       "last_message_id": 45460,
-      "last_check_time": 1791126036.7591987
+      "last_check_time": 1791126339.8113618
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791126038.2660406
+      "last_check_time": 1791126341.1038876
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1260,19 +1266,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791126037.9653404
+      "last_check_time": 1791126340.762635
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791126037.3170269
+      "last_check_time": 1791126340.1186666
     },
     "megaphonna": {
       "last_message_id": 8255,
-      "last_check_time": 1791126038.6141965
+      "last_check_time": 1791126341.4373586
     },
     "couponsglobal": {
-      "last_message_id": 48790,
-      "last_check_time": 1791126054.6395833
+      "last_message_id": 48792,
+      "last_check_time": 1791126355.3108363
     }
   },
   "published_product_prices": {
@@ -1421,7 +1427,8 @@
     "1005006437107166": 1.0,
     "1005006895026041": 1.0,
     "1005006996329614": 1.0,
-    "1005008046254742": 1.0
+    "1005008046254742": 1.0,
+    "1005011987956470": 1.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3683,6 +3690,16 @@
       "price": 1.0,
       "timestamp": 1791126049.4061573,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48791": {
+      "channel_msg_id": 567,
+      "product_id": "1005011987956470",
+      "title": "HTC NE79 TWS Wireless Bluetooth Earphones: AI",
+      "channel": "couponsglobal",
+      "source_msg_id": 48791,
+      "price": 1.0,
+      "timestamp": 1791126349.6683438,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3691,7 +3708,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791126049.4092014,
+    "last_deal_post_time": 1791126349.6737168,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3853,7 +3870,8 @@
     "1005006437107166": "couponsglobal",
     "1005006895026041": "couponsglobal",
     "1005006996329614": "couponsglobal",
-    "1005008046254742": "couponsglobal"
+    "1005008046254742": "couponsglobal",
+    "1005011987956470": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4024,7 +4042,8 @@
     "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": "couponsglobal",
     "Electric Trimmer for Men's Groin Hair: Versatile Body": "couponsglobal",
     "KODAK USB 2.0 Flash Drive 64GB": "couponsglobal",
-    "E27 60W Wireless Remote Control Smart Timer": "couponsglobal"
+    "E27 60W Wireless Remote Control Smart Timer": "couponsglobal",
+    "HTC NE79 TWS Wireless Bluetooth Earphones: AI": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
