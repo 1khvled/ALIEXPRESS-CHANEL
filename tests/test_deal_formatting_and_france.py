@@ -29,6 +29,13 @@ def test_detect_deal_type_bundle_vs_coin():
 
     # Genuine small coin deals
     assert detect_deal_type("ماوس قيمنق تخفيض قوي بالعملات (Coins)") == "coin"
+    assert detect_deal_type("ماوس قيمنق", url="https://aliexpress.com/item/123.html?sourceType=620") == "coin"
+
+    # Smartphones, tablets, CPUs must NEVER be bundle deals even with sourceType=620 or bundle keywords
+    assert detect_deal_type("OPPO A6 Pro 8/256GB", url="https://aliexpress.com/item/100500123.html?sourceType=620") == "item"
+    assert detect_deal_type("POCO M7 (6/128)", url="https://aliexpress.com/item/100500123.html?sourceType=620") == "item"
+    assert detect_deal_type("AMD Ryzen 5 7600X USED R5 7600X", url="https://aliexpress.com/item/100500123.html?sourceType=620") == "item"
+    assert detect_deal_type("معالج Intel Core i5 12400F", url="https://aliexpress.com/item/100500123.html?sourceType=562") == "item"
 
 @pytest.mark.asyncio
 async def test_clean_algerian_post_formatting():

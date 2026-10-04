@@ -585,41 +585,53 @@ def detect_deal_type(raw_text: str, url: str = "") -> str:
     """
     Intelligently determines whether a deal is a 'bundle', 'coin', or standard 'item' deal.
     - Bundle deals: Choice Bundle / 3 items / sourceType=562.
-    - Coin deals: explicitly mentions coins/points AND is a small gadget/peripheral.
-    - Standard item deals: phones, tablets, or coupon-only deals (canonical item page).
+    - Coin deals: explicitly mentions coins/points AND is a small gadget/peripheral or sourceType=620.
+    - Standard item deals: phones, tablets, CPUs/hardware, or coupon-only deals (canonical item page).
     """
     text_lower = (raw_text or "").lower()
     url_lower = (url or "").lower()
 
-    bundle_keywords = [
-        "bundle", "bundledraw", "bundledeals", "bundle deals", "bundledeals2",
-        "300000512", "sourcetype=562", "sourcetype=620", "channel=bundle",
-        "/bundledeals", "choice bundle", "حزم", "حزمة", "3 بـ", "3 ب ", "3بـ", "3ب",
-        "3 منتجات", "3 items", "3 حبات", "ثلاث حبات", "ثلاث منتجات", "3 عروض",
-        "باندل", "بندل", "حزم التوفير", "حزمة التوفير", "3 قطع", "3 سلع",
-        "ثلاث سلع", "ثلاث قطع", "عرض 3", "عروض 3", "3 أجهزة", "3 اجهزة",
-        "3 حبات بـ", "3 حبات ب", "3items", "3pcs", "سعر ثلاث قطع", "سعر 3 قطع",
-        "سعر 3 حبات", "سعر ثلاث حبات", "رابط الباندل", "رابط البندل"
+    # High-value tech (phones, tablets, CPUs, GPUs, laptops) must NEVER be classified as bundle deals
+    high_value_keywords = [
+        "phone", "smartphone", "هاتف", "هواتف", "redmi", "poco", "xiaomi",
+        "realme", "oneplus", "oppo", "honor", "infinix", "tecno", "samsung",
+        "galaxy", "iphone", "تابلت", "ipad", "pad", "tablet",
+        "cpu", "ryzen", "intel core", "processor", "معالج", "gpu", "rtx",
+        "gtx", "motherboard", "carte mere", "لوحة أم", "laptop", "pc portable", "حاسوب"
     ]
-    if any(k in text_lower for k in bundle_keywords) or any(k in url_lower for k in bundle_keywords):
-        return "bundle"
+    is_high_value = any(w in text_lower for w in high_value_keywords) or any(w in url_lower for w in high_value_keywords)
 
-    if re.search(r'\b3\s*ب(?:ـ|\s|[0-9]|$)', text_lower):
-        return "bundle"
-    if re.search(r'bundle\s*deal', text_lower):
-        return "bundle"
-    if re.search(r'3\s*(?:items|منتجات|حبات|قطع|سلع)', text_lower):
-        return "bundle"
-    if re.search(r'300000512|sourcetype=(?:562|620)|bundledeals', url_lower):
-        return "bundle"
+    if not is_high_value:
+        bundle_keywords = [
+            "bundle", "bundledraw", "bundledeals", "bundle deals", "bundledeals2",
+            "300000512", "sourcetype=562", "channel=bundle",
+            "/bundledeals", "choice bundle", "حزم", "حزمة", "3 بـ", "3 ب ", "3بـ", "3ب",
+            "3 منتجات", "3 items", "3 حبات", "ثلاث حبات", "ثلاث منتجات", "3 عروض",
+            "باندل", "بندل", "حزم التوفير", "حزمة التوفير", "3 قطع", "3 سلع",
+            "ثلاث سلع", "ثلاث قطع", "عرض 3", "عروض 3", "3 أجهزة", "3 اجهزة",
+            "3 حبات بـ", "3 حبات ب", "3items", "3pcs", "سعر ثلاث قطع", "سعر 3 قطع",
+            "سعر 3 حبات", "سعر ثلاث حبات", "رابط الباندل", "رابط البندل"
+        ]
+        if any(k in text_lower for k in bundle_keywords) or any(k in url_lower for k in bundle_keywords):
+            return "bundle"
 
-    # Coin deals: only if text explicitly mentions coins / points discount
+        if re.search(r'\b3\s*ب(?:ـ|\s|[0-9]|$)', text_lower):
+            return "bundle"
+        if re.search(r'bundle\s*deal', text_lower):
+            return "bundle"
+        if re.search(r'3\s*(?:items|منتجات|حبات|قطع|سلع)', text_lower):
+            return "bundle"
+        if re.search(r'300000512|sourcetype=562|bundledeals', url_lower):
+            return "bundle"
+
+    if is_high_value:
+        return "item"
+
+    # Coin deals: only if text explicitly mentions coins / points discount or URL is coin landing (sourceType=620)
     coin_keywords = [
         "عملات", "نقاط", "coins", "تخفيض العملات", "رابط العملات", "خصم العملات", "سعر العملات"
     ]
-    if any(k in text_lower for k in coin_keywords):
-        if any(w in text_lower for w in ["phone", "redmi", "poco", "xiaomi", "realme", "oneplus", "oppo", "هاتف", "تابلت", "ipad", "pad"]):
-            return "item"
+    if any(k in text_lower for k in coin_keywords) or "sourcetype=620" in url_lower or "channel=coin" in url_lower:
         return "coin"
 
     return "coin"
