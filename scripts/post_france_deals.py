@@ -364,7 +364,15 @@ async def publish_extracted_deal_to_france(
     local_img_file = None
     img_url = extracted.image_url or source_photo_url
     if extracted.is_coupon_list:
-        if source_photo_url:
+        if extracted.coupon_list:
+            local_img_file = media_renderer.render_coupon_bulletin_card(
+                extracted.coupon_list,
+                promo_title="Choice Day",
+                channel_handle="@francedealsdz",
+                is_french=True
+            )
+
+        if not local_img_file and source_photo_url:
             downloaded = await media_downloader.download_image(source_photo_url, identifier=f"fr_coupon_{extracted.product_id or 'list'}")
             if downloaded:
                 local_img_file = downloaded
@@ -372,14 +380,6 @@ async def publish_extracted_deal_to_france(
         official_banner = os.path.join(settings.BASE_DIR, "storage", "assets", "choice_day_banner.png")
         if not local_img_file and os.path.exists(official_banner):
             local_img_file = Path(official_banner)
-
-        if not local_img_file and extracted.coupon_list:
-            local_img_file = media_renderer.render_coupon_bulletin_card(
-                extracted.coupon_list,
-                promo_title="Choice Day",
-                channel_handle="@francedealsdz",
-                is_french=True
-            )
     elif img_url:
         downloaded = await media_downloader.download_image(img_url, extracted.product_id)
         if downloaded:
@@ -704,7 +704,15 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                 # 10. Prepare image
                 local_img_file = None
                 if extracted.is_coupon_list:
-                    if source_photo_url:
+                    if extracted.coupon_list:
+                        local_img_file = media_renderer.render_coupon_bulletin_card(
+                            extracted.coupon_list,
+                            promo_title="Choice Day",
+                            channel_handle="@francedealsdz",
+                            is_french=True
+                        )
+
+                    if not local_img_file and source_photo_url:
                         downloaded = await media_downloader.download_image(source_photo_url, identifier=f"fr_coupon_{extracted.product_id}")
                         if downloaded:
                             local_img_file = downloaded
@@ -713,14 +721,6 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                     official_banner = os.path.join(settings.BASE_DIR, "storage", "assets", "choice_day_banner.png")
                     if not local_img_file and os.path.exists(official_banner):
                         local_img_file = Path(official_banner)
-
-                    if not local_img_file and extracted.coupon_list:
-                        local_img_file = media_renderer.render_coupon_bulletin_card(
-                            extracted.coupon_list,
-                            promo_title="Choice Day",
-                            channel_handle="@francedealsdz",
-                            is_french=True
-                        )
                 elif img_url:
                     downloaded = await media_downloader.download_image(img_url, extracted.product_id)
                     if downloaded:

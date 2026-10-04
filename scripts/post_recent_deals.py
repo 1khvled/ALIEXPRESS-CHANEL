@@ -461,8 +461,15 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     # 10. Prepare Image with subtle circular DealScout logo watermark
                     local_img_file = None
                     if extracted.is_coupon_list:
-                        # Use competitor's official promo/coupon banner photo if available
-                        if source_photo_url:
+                        if extracted.coupon_list:
+                            local_img_file = media_renderer.render_coupon_bulletin_card(
+                                extracted.coupon_list,
+                                promo_title="Choice Day",
+                                channel_handle="@DzAliexpress0",
+                                is_french=False
+                            )
+
+                        if not local_img_file and source_photo_url:
                             downloaded = await media_downloader.download_image(source_photo_url, identifier=f"coupon_{extracted.product_id}")
                             if downloaded:
                                 local_img_file = downloaded
@@ -471,13 +478,6 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         official_banner = os.path.join(settings.BASE_DIR, "storage", "assets", "choice_day_banner.png")
                         if not local_img_file and os.path.exists(official_banner):
                             local_img_file = official_banner
-
-                        # Fallback to rendered card only if no banner is available
-                        if not local_img_file and extracted.coupon_list:
-                            local_img_file = media_renderer.render_coupon_bulletin_card(
-                                extracted.coupon_list,
-                                promo_title="Party Ready Sale"
-                            )
                     elif img_url:
                         downloaded = await media_downloader.download_image(img_url, extracted.product_id)
                         if downloaded:
