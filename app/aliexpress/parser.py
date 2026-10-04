@@ -18,15 +18,20 @@ EUR_PRICE_PATTERNS = [
 ]
 
 COUPON_PATTERNS = [
-    re.compile(r'(?:كوبون|كود|code|coupon|قسيمة)\s*(?:[-–]?\s*[$€]?[0-9]+(?:[\.,][0-9]+)?[^\S\r\n]*(?:/[^\S\r\n]*[$€]?[0-9]+(?:[\.,][0-9]+)?)?[^\S\r\n]*(?:€|eur|euro|euros|دولار|dollar|\$)?)?\s*[:：\-\s✅🔥👉✔️⏺🙏🎟️]*(?:استخدمه|استخدم|بكود|code)?\s*[:：\-\s✅🔥👉✔️⏺🙏🎟️]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
-    re.compile(r'(?:كوبون|كود|code|coupon)\s*(?:[-–]?\s*[$€]?[0-9]+(?:\.[0-9]+)?(?:\s*(?:€|eur|euro|euros|دولار|dollar|\$))?)?[^\nA-Za-z0-9]*(?:استخدمه|استخدم|استعمله|استعمل)?[^\nA-Za-z0-9]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
-    re.compile(r'(?:استخدم كود|استعمل كود|كود الخصم|كود التخفيض|كوبون خاص|code promo|code de reduction)\s*[^A-Za-z0-9]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
-    re.compile(r'(?:code|كود)\s*[-–]?\s*[0-9]+[€$]?\s*[:：\-\s✅🔥👉✔️⏺🤐]+\s*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
-    re.compile(r'👊\s*(?:كوبون|كود|code)\s*[:：\-\s\d\$/€]*([A-Za-z][A-Za-z0-9_-]{3,24})', re.IGNORECASE),
+    re.compile(
+        r'(?:كوبون|كود|code|coupon|قسيمة)\s*(?:[-–]?\s*[$€]?[0-9]+(?:[\.,][0-9]+)?[^\S\r\n]*(?:/[^\S\r\n]*[$€]?[0-9]+(?:[\.,][0-9]+)?)?[^\S\r\n]*(?:€|eur|euro|euros|دولار|dollar|\$)?)?'
+        r'[\s:：\-=ـ_•*~|()✅🔥👉✔️⏺🙏🎟️🎫💵💰🎁📌⚡💥🤐\r\n]*'
+        r'(?:استخدمه|استخدم|استعمله|استعمل|بكود|code)?'
+        r'[\s:：\-=ـ_•*~|()✅🔥👉✔️⏺🙏🎟️🎫💵💰🎁📌⚡💥🤐\r\n]*'
+        r'([A-Za-z0-9_-]{3,24})',
+        re.IGNORECASE
+    ),
+    re.compile(r'(?:استخدم كود|استعمل كود|كود الخصم|كود التخفيض|كوبون خاص|code promo|code de reduction)\s*[^A-Za-z0-9]*([A-Za-z0-9_-]{3,24})', re.IGNORECASE),
+    re.compile(r'👊\s*(?:كوبون|كود|code)\s*[:：\-\s\d\$/€\r\n]*([A-Za-z0-9_-]{3,24})', re.IGNORECASE),
 ]
 
 SELLER_COUPON_PATTERNS = [
-    re.compile(r'(?:حصل\s*|احجز\s*)?قسيمة\s*(?:البائع|المتجر|خاصة\s*بالمتجر|store\s*coupon|seller\s*coupon)\s*[:：\-\s✅🔥👉✔️🌷🙏\+]*[$]?\s*([0-9]+(?:[\.,][0-9]+)?(?:\s*(?:دولار|dollar|\$))?|[A-Za-z0-9_\-]{3,25})', re.IGNORECASE),
+    re.compile(r'(?:حصل\s*|احجز\s*)?(?:قسيمة|كوبون)\s*(?:البائع|المتجر|خاصة\s*بالمتجر|store\s*coupon|seller\s*coupon)[\s:：\-=ـ_•*~|()✅🔥👉✔️🌷🙏\+💵💰🎁\r\n]*[$]?\s*([0-9]+(?:[\.,][0-9]+)?(?:\s*(?:دولار|dollar|\$))?|[A-Za-z0-9_\-]{3,25})', re.IGNORECASE),
 ]
 
 
@@ -317,11 +322,14 @@ def extract_coupon(text: str) -> Optional[str]:
     if not text:
         return None
     norm = re.sub(r'[\u0640]', '', text)
+    blacklist = {
+        "http", "https", "aliexpress", "item", "link", "url", "temu", "html", "bot",
+        "t.me", "dzgamingcoinbot", "coinbot", "coins", "channel", "click", "s.click"
+    }
     for pattern in COUPON_PATTERNS:
-        m = pattern.search(norm)
-        if m:
+        for m in pattern.finditer(norm):
             code = m.group(1).strip()
-            if code.lower() not in {"http", "https", "aliexpress", "item", "link", "url", "temu"}:
+            if len(code) >= 3 and re.search(r'[A-Za-z]', code) and code.lower() not in blacklist and not any(b in code.lower() for b in ["http", "t.me", "click", "bot"]):
                 return code.upper()
     return None
 
@@ -329,29 +337,45 @@ def extract_seller_coupon(text: str) -> Optional[str]:
     if not text:
         return None
     norm = re.sub(r'[\u0640]', '', text)
+    blacklist = {"http", "https", "aliexpress", "link", "url", "temu", "t.me", "bot"}
 
-    # 1. Combined amount and code: e.g. "حصل قسيمة البائع $80: T0F4TZ" or "قسيمة المتجر $35: TJD5MT" or "قسيمة البائع $2: SEP908KKLL / JULYHHKKLL88"
+    # 1. Combined amount and code: e.g. "حصل قسيمة البائع $80: T0F4TZ" or "احجز كوبون المتجر 💵: KR0864"
     p_combined = re.search(
-        r'(?:حصل\s*|احجز\s*)?قسيمة\s*(?:البائع|المتجر|خاصة\s*بالمتجر)\s*[:：\-\s✅🔥👉✔️🌷🙏\+]*[$]?\s*([0-9]+(?:\.[0-9]+)?)\s*[$]?\s*[:：\-\s]+\s*([A-Za-z0-9_\-\s/]{3,35})',
+        r'(?:حصل\s*|احجز\s*)?(?:قسيمة|كوبون)\s*(?:البائع|المتجر|خاصة\s*بالمتجر|store\s*coupon|seller\s*coupon)'
+        r'[\s:：\-=ـ_•*~|()✅🔥👉✔️🌷🙏\+💵💰🎁\r\n]*'
+        r'[$]?\s*([0-9]+(?:\.[0-9]+)?)\s*[$]?'
+        r'[\s:：\-=ـ_•*~|()✅🔥👉✔️🌷🙏\+💵💰🎁\r\n]+'
+        r'([A-Za-z0-9_\-\s/]{3,35})',
         norm,
         re.IGNORECASE
     )
     if p_combined:
         amount = p_combined.group(1).strip()
-        code = p_combined.group(2).strip()
-        code = code.split('\n')[0].strip()
-        code = re.sub(r'[🎟️🎫👊🔗📌].*$', '', code).strip()
-        # Remove any trailing Arabic commentary (e.g. احجزها, سارع قبل النفاذ)
+        code = p_combined.group(2).strip().split('\n')[0].strip()
+        code = re.sub(r'[🎟️🎫👊🔗📌💵💰].*$', '', code).strip()
         code = re.sub(r'[\u0600-\u06FF].*$', '', code).strip()
         try:
             if amount and float(amount) < 1.0:
-                return None
+                amount = ""
         except ValueError:
             pass
-        if code and code.lower() not in {"http", "https", "aliexpress", "link", "url", "temu"}:
-            return f"{amount}$ (كود: {code})"
+        if code and code.lower() not in blacklist and re.search(r'[A-Za-z0-9]', code):
+            return f"{amount}$ (كود: {code})" if amount else code
 
-    # 2. Standard SELLER_COUPON_PATTERNS (amount or code)
+    # 2. Code only: e.g. "🎁💰احجز كوبون المتجر 💵:\nKR0864"
+    p_code = re.search(
+        r'(?:حصل\s*|احجز\s*)?(?:قسيمة|كوبون)\s*(?:البائع|المتجر|خاصة\s*بالمتجر|store\s*coupon|seller\s*coupon)'
+        r'[\s:：\-=ـ_•*~|()✅🔥👉✔️🌷🙏\+💵💰🎁\r\n]+'
+        r'([A-Za-z][A-Za-z0-9_-]{3,24})',
+        norm,
+        re.IGNORECASE
+    )
+    if p_code:
+        code = p_code.group(1).strip()
+        if code.lower() not in blacklist and not code.lower().endswith(('$', 'usd', 'eur')):
+            return code
+
+    # 3. Standard SELLER_COUPON_PATTERNS (amount or code)
     for pattern in SELLER_COUPON_PATTERNS:
         m = pattern.search(norm)
         if m:
@@ -361,6 +385,8 @@ def extract_seller_coupon(text: str) -> Optional[str]:
             try:
                 if num_clean and float(num_clean) < 1.0:
                     continue  # Ignore trivial sub-dollar coupons like 0.9$
+                if num_clean and not code.endswith('$'):
+                    code = f"{num_clean}$"
             except ValueError:
                 pass
             return code

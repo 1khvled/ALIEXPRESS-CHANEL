@@ -191,21 +191,7 @@ class DealCaptionGenerator:
             lines.append("<blockquote>📉 <b>انخفاض السعر:</b> السعر نزل أكثر من قبل، لافار حقيقية استغلها الآن! 🔥</blockquote>")
 
         # 2. Country recommendation (exact Algerian Telegram style in blockquote)
-        if deal_type == "coin":
-            # Coin deals in Algerian community are always Canada for 50-70%+ coin discounts
-            lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
-        elif deal_type == "bundle":
-            # Bundle deals can be Algeria or Canada depending on source
-            is_dz = False
-            if country_info and any(k in str(country_info).lower() for k in ["الجزائر", "algeria", "dz"]):
-                is_dz = True
-            if raw_text and any(k in raw_text.lower() for k in ["الجزائر", "algeria", "dz", "ديرو الجزائر", "بلاد الجزائر", "حساب جزائري"]):
-                is_dz = True
-            if is_dz:
-                lines.append("<blockquote>📍 بلد الحساب <b>الجزائر 🇩🇿</b></blockquote>")
-            else:
-                lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
-        elif country_info:
+        if country_info:
             c_str = str(country_info).lower()
             if "كوريا" in country_info or "korea" in c_str or "kr" in c_str:
                 lines.append("<blockquote>📍 خلي البلـــد <b>كــــــوريا 🇰🇷</b></blockquote>")
@@ -217,6 +203,20 @@ class DealCaptionGenerator:
                 lines.append("<blockquote>📍 خلي البلـــد <b>أستراليـــــا 🇦🇺</b></blockquote>")
             elif "الجزائر" in country_info or "algeria" in c_str or "dz" in c_str:
                 lines.append("<blockquote>📍 بلد الحساب <b>الجزائر 🇩🇿</b></blockquote>")
+            else:
+                lines.append(f"<blockquote>📍 خلي البلـــد <b>{html.escape(str(country_info))}</b></blockquote>")
+        elif deal_type == "bundle":
+            # Bundle deals can be Algeria or Canada depending on source
+            is_dz = False
+            if raw_text and any(k in raw_text.lower() for k in ["الجزائر", "algeria", "dz", "ديرو الجزائر", "بلاد الجزائر", "حساب جزائري"]):
+                is_dz = True
+            if is_dz:
+                lines.append("<blockquote>📍 بلد الحساب <b>الجزائر 🇩🇿</b></blockquote>")
+            else:
+                lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
+        elif deal_type == "coin":
+            # Coin deals in Algerian community default to Canada for 50-70%+ coin discounts
+            lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
 
         import html
 

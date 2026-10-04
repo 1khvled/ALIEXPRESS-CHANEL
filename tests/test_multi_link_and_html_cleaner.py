@@ -143,4 +143,34 @@ def test_ugreen_webcam_ajazz_mchose_logitech():
     )
     assert score_logi >= 0.4
 
+@pytest.mark.asyncio
+async def test_coupon_multiline_and_country_priority():
+    from app.aliexpress.parser import extract_coupon, extract_seller_coupon
+    from app.ai.generator import caption_generator
+
+    # 1. Pcgamingpart multi-emoji with newline formats
+    t1 = "🎁💰كوبون 💵:\nOTPRD02\n🎁💰احجز كوبون المتجر 💵:\nKR0864"
+    assert extract_coupon(t1) == "OTPRD02"
+    assert extract_seller_coupon(t1) == "KR0864"
+
+    t2 = "🎁💰كوبون 💵:\nOTPRD04\n🎁💰احجز كوبون المتجر 💵:4$"
+    assert extract_coupon(t2) == "OTPRD04"
+    assert extract_seller_coupon(t2) == "4$"
+
+    # 2. Country priority over deal_type == 'coin'
+    cap = await caption_generator.generate(
+        title="Test Controller",
+        usd_price=22.5,
+        affiliate_url="https://s.click.aliexpress.com/e/test",
+        coupon_code="OTPRD04",
+        country_info="كوريا 🇰🇷",
+        deal_type="coin",
+        has_points_discount=True
+    )
+    assert "كــــــوريا 🇰🇷" in cap
+    assert "كــــــندا 🇨🇦" not in cap
+    assert "OTPRD04" in cap
+    assert "كـوبون الخصم" in cap
+
+
 
