@@ -173,7 +173,8 @@
     "1005008046254742",
     "1005011987956470",
     "1005012865709979",
-    "COUPONS_be64457c7fff"
+    "COUPONS_be64457c7fff",
+    "1005007461615597"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -353,7 +354,8 @@
     "1005008046254742": 1791126049.4061573,
     "1005011987956470": 1791126349.6683438,
     "1005012865709979": 1791135345.3136878,
-    "COUPONS_be64457c7fff": 1791138647.0734267
+    "COUPONS_be64457c7fff": 1791138647.0734267,
+    "1005007461615597": 1791144648.6951094
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -549,7 +551,8 @@
     "HTC NE79 TWS Wireless Bluetooth Earphones: AI",
     "Nail Scissors Set Household High End",
     "Baseus 30W Car Charger Dual Port USB Type-C Fast",
-    "أحدث كوبونات وتخفيضات AliExpress"
+    "أحدث كوبونات وتخفيضات AliExpress",
+    "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -748,7 +751,8 @@
     "HTC NE79 TWS Wireless Bluetooth Earphones: AI": 1791126349.6683438,
     "Nail Scissors Set Household High End": 1791126649.148256,
     "Baseus 30W Car Charger Dual Port USB Type-C Fast": 1791135345.3136878,
-    "أحدث كوبونات وتخفيضات AliExpress": 1791138647.0734267
+    "أحدث كوبونات وتخفيضات AliExpress": 1791138647.0734267,
+    "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6": 1791144648.6951094
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1262,15 +1266,16 @@
     "aniscoupons:32775",
     "lodydeals:45461",
     "megaphonna:8260",
-    "megaphonna:8261"
+    "megaphonna:8261",
+    "aniscoupons:32776"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791142278.6117659,
+  "last_run_time": 1791144648.6951094,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32775,
-      "last_check_time": 1791144335.3459198
+      "last_message_id": 32776,
+      "last_check_time": 1791144650.7098682
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1278,11 +1283,11 @@
     },
     "lodydeals": {
       "last_message_id": 45461,
-      "last_check_time": 1791144333.0487561
+      "last_check_time": 1791144642.8732677
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791144334.5839155
+      "last_check_time": 1791144644.2838094
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1290,19 +1295,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791144334.2111695
+      "last_check_time": 1791144643.9323475
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791144333.4036338
+      "last_check_time": 1791144643.2459774
     },
     "megaphonna": {
       "last_message_id": 8261,
-      "last_check_time": 1791144334.9705014
+      "last_check_time": 1791144644.639893
     },
     "couponsglobal": {
       "last_message_id": 48795,
-      "last_check_time": 1791144335.8878906
+      "last_check_time": 1791144651.5425901
     }
   },
   "published_product_prices": {
@@ -1453,7 +1458,8 @@
     "1005006996329614": 1.0,
     "1005008046254742": 1.0,
     "1005011987956470": 1.0,
-    "1005012865709979": 1.0
+    "1005012865709979": 1.0,
+    "1005007461615597": 23.15
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3805,6 +3811,16 @@
       "price": 257.4,
       "timestamp": 1791142278.6117659,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32776": {
+      "channel_msg_id": 579,
+      "product_id": "1005007461615597",
+      "title": "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6",
+      "channel": "aniscoupons",
+      "source_msg_id": 32776,
+      "price": 23.15,
+      "timestamp": 1791144648.6951094,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3813,7 +3829,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791142278.6169045,
+    "last_deal_post_time": 1791144648.7004244,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3978,7 +3994,8 @@
     "1005008046254742": "couponsglobal",
     "1005011987956470": "couponsglobal",
     "1005012865709979": "couponsglobal",
-    "COUPONS_be64457c7fff": "lodydeals"
+    "COUPONS_be64457c7fff": "lodydeals",
+    "1005007461615597": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4153,7 +4170,8 @@
     "HTC NE79 TWS Wireless Bluetooth Earphones: AI": "couponsglobal",
     "Nail Scissors Set Household High End": "couponsglobal",
     "Baseus 30W Car Charger Dual Port USB Type-C Fast": "couponsglobal",
-    "أحدث كوبونات وتخفيضات AliExpress": "lodydeals"
+    "أحدث كوبونات وتخفيضات AliExpress": "lodydeals",
+    "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
