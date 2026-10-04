@@ -158,7 +158,9 @@
     "1005012385221205",
     "1005013223462188",
     "1005007279793099",
-    "1005012743092233"
+    "1005012743092233",
+    "1005007805497968",
+    "1005007345108759"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -181,7 +183,7 @@
     "1005011778621042": 1790888057.5668976,
     "9998888080": 1790888080.3099577,
     "1005012312990781": 1790888097.0085742,
-    "1005009234854371": 1790972149.2892344,
+    "1005009234854371": 1791104748.6212523,
     "1005006533038973": 1791104468.758226,
     "1005007394028808": 1790937582.4855082,
     "1005012899224314": 1790888183.366231,
@@ -315,7 +317,7 @@
     "1005006367419820": 1791056153.3979695,
     "1005013046831062": 1791056447.2532988,
     "1005006974721332": 1791056453.5992196,
-    "1005010266413614": 1791061545.5863013,
+    "1005010266413614": 1791104767.2093377,
     "1005009497821240": 1791056745.5798366,
     "1005011925142821": 1791057346.9236152,
     "9998883864": 1791063864.5866926,
@@ -323,7 +325,9 @@
     "1005012385221205": 1791102050.1835058,
     "1005013223462188": 1791103847.2554617,
     "1005007279793099": 1791104060.2548923,
-    "1005012743092233": 1791104461.903693
+    "1005012743092233": 1791104461.903693,
+    "1005007805497968": 1791104753.5513856,
+    "1005007345108759": 1791104759.7671344
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -496,7 +500,9 @@
     "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,",
     "New G6 Wireless Controller",
     "EasySMX X05 Pro Wireless Gamepad PC Controller",
-    "K61 Wired Mechanical Keyboard"
+    "K61 Wired Mechanical Keyboard",
+    "GameSir Nova Lite Gamepads PC  Hall Effect",
+    "FIFINE AmpliGame A2 RGB USB Gaming Microphone"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -519,7 +525,7 @@
     "معالج AMD Ryzen R7 5700X جديد! بتردد 3.4 جيجاهرتز، ثماني النواة وستة عشر": 1790888057.5668976,
     "معالج AMD Ryzen 5 7500F مستعمل، 6 نوى/12 خيط، 65 واط، 5 نانومتر، ذاكرة": 1790888097.0085742,
     "SomnAmbulist SSD  128GB": 1790888129.0606623,
-    "UGREEN  1080P Webcam 8MP for PC": 1790888140.513047,
+    "UGREEN  1080P Webcam 8MP for PC": 1791104748.6212523,
     "EasySMX X15 Wireless PC Gamepad Hall Effect": 1791104468.758226,
     "Attack Shark X5": 1790888161.7112389,
     "Honor Choice Watch 2i": 1790888183.366231,
@@ -572,7 +578,7 @@
     "POCO C71 (3/64)": 1790947574.20351,
     "XIAOMI PAD7 (12/256)": 1791023149.808202,
     "REALME 14 pro (12/256)": 1791026755.742076,
-    "HONOR X9D (12/256)": 1791061545.5863013,
+    "HONOR X9D (12/256)": 1791104767.2093377,
     "Honor 400  Smart  (6/128)": 1791042354.706192,
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": 1790949354.0364344,
     "Powerful Violent Fan 150000RPM": 1790949652.480052,
@@ -672,7 +678,9 @@
     "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,": 1791104060.2548923,
     "New G6 Wireless Controller": 1791104149.1784146,
     "EasySMX X05 Pro Wireless Gamepad PC Controller": 1791104155.533397,
-    "K61 Wired Mechanical Keyboard": 1791104461.903693
+    "K61 Wired Mechanical Keyboard": 1791104461.903693,
+    "GameSir Nova Lite Gamepads PC  Hall Effect": 1791104753.5513856,
+    "FIFINE AmpliGame A2 RGB USB Gaming Microphone": 1791104759.7671344
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1110,15 +1118,21 @@
     "pcgamingpart:7950",
     "pcgamingpart:7951",
     "megaphonna:8243",
-    "megaphonna:8244"
+    "megaphonna:8244",
+    "pcgamingpart:7952",
+    "pcgamingpart:7953",
+    "pcgamingpart:7954",
+    "pcgamingpart:7956",
+    "megaphonna:8245",
+    "aniscoupons:32751"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791104484.5433714,
+  "last_run_time": 1791104767.2093377,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32750,
-      "last_check_time": 1791104487.3603523
+      "last_message_id": 32751,
+      "last_check_time": 1791104773.1601233
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1126,31 +1140,31 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791104450.1387093
+      "last_check_time": 1791104742.695613
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791104471.46161
+      "last_check_time": 1791104762.380171
     },
     "test_channel": {
       "last_message_id": 1791063864,
       "last_check_time": 1791063864.5866926
     },
     "pcgamingpart": {
-      "last_message_id": 7951,
-      "last_check_time": 1791104470.7699242
+      "last_message_id": 7956,
+      "last_check_time": 1791104761.7758422
     },
     "zedstoreonline": {
       "last_message_id": 38526,
-      "last_check_time": 1791104450.577115
+      "last_check_time": 1791104743.0385866
     },
     "megaphonna": {
-      "last_message_id": 8244,
-      "last_check_time": 1791104486.5551417
+      "last_message_id": 8245,
+      "last_check_time": 1791104769.2211561
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791104488.092417
+      "last_check_time": 1791104773.7413156
     }
   },
   "published_product_prices": {
@@ -1169,7 +1183,7 @@
     "100500777666555": 20.0,
     "1005011778621042": 124.99,
     "1005012312990781": 93.32,
-    "1005009234854371": 2.0,
+    "1005009234854371": 19.64,
     "1005006533038973": 21.81,
     "1005007394028808": 11.2,
     "1005012899224314": 27.14,
@@ -1288,7 +1302,9 @@
     "1005010536089199": 34.4,
     "1005012385221205": 13.27,
     "1005013223462188": 13.47,
-    "1005012743092233": 24.37
+    "1005012743092233": 24.37,
+    "1005007805497968": 22.81,
+    "1005007345108759": 22.12
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3310,6 +3326,46 @@
       "price": 214.9,
       "timestamp": 1791104484.5433714,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7952": {
+      "channel_msg_id": 543,
+      "product_id": "1005009234854371",
+      "title": "UGREEN  1080P Webcam 8MP for PC",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7952,
+      "price": 19.64,
+      "timestamp": 1791104748.6212523,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7953": {
+      "channel_msg_id": 544,
+      "product_id": "1005007805497968",
+      "title": "GameSir Nova Lite Gamepads PC  Hall Effect",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7953,
+      "price": 22.81,
+      "timestamp": 1791104753.5513856,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7956": {
+      "channel_msg_id": 545,
+      "product_id": "1005007345108759",
+      "title": "FIFINE AmpliGame A2 RGB USB Gaming Microphone",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7956,
+      "price": 22.12,
+      "timestamp": 1791104759.7671344,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8245": {
+      "channel_msg_id": 546,
+      "product_id": "1005010266413614",
+      "title": "HONOR X9D (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8245,
+      "price": 294.0,
+      "timestamp": 1791104767.2093377,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3318,7 +3374,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791104484.5478973,
+    "last_deal_post_time": 1791104767.2156532,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3405,7 +3461,7 @@
     "1005009120957437": "lodydeals",
     "1005005652871847": "aniscoupons",
     "1005012554205120": "lodydeals",
-    "1005009234854371": "lodydeals",
+    "1005009234854371": "pcgamingpart",
     "1005008829227075": "lodydeals",
     "1005008901941749": "lodydeals",
     "1005012881256093": "aniscoupons",
@@ -3467,7 +3523,9 @@
     "1005013223462188": "pcgamingpart",
     "1005005217734986": "pcgamingpart",
     "1005007961216287": "pcgamingpart",
-    "1005012743092233": "pcgamingpart"
+    "1005012743092233": "pcgamingpart",
+    "1005007805497968": "pcgamingpart",
+    "1005007345108759": "pcgamingpart"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3619,7 +3677,10 @@
     "New G6 Wireless Controller": "pcgamingpart",
     "EasySMX X05 Pro Wireless Gamepad PC Controller": "pcgamingpart",
     "ATTACK SHARK L90 Flodable Gaming Headset": "pcgamingpart",
-    "K61 Wired Mechanical Keyboard": "pcgamingpart"
+    "K61 Wired Mechanical Keyboard": "pcgamingpart",
+    "UGREEN  1080P Webcam 8MP for PC": "pcgamingpart",
+    "GameSir Nova Lite Gamepads PC  Hall Effect": "pcgamingpart",
+    "FIFINE AmpliGame A2 RGB USB Gaming Microphone": "pcgamingpart"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
