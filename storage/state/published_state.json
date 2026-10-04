@@ -314,7 +314,7 @@
     "1005012492244291": 1791035151.8836284,
     "1005008522983211": 1791035458.4959302,
     "1005011734677486": 1791038145.1521833,
-    "1005008414973716": 1791038753.5097415,
+    "1005008414973716": 1791125437.8944824,
     "1005010706783496": 1791043842.6639822,
     "1005012826813261": 1791045040.5964694,
     "9998887267": 1791047267.2870219,
@@ -529,7 +529,8 @@
     "POCO M7 (6/128)",
     "OPPO A6 Pro 8/256GB",
     "ATTACK SHARK X1  Tri-Mode",
-    "HILDA 2 Lines Laser Level Green"
+    "HILDA 2 Lines Laser Level Green",
+    "Lenovo XT53 Wireless Bluetooth 5.4 Earphones"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -720,7 +721,8 @@
     "POCO M7 (6/128)": 1791114651.412541,
     "OPPO A6 Pro 8/256GB": 1791114657.3821456,
     "ATTACK SHARK X1  Tri-Mode": 1791117948.6585228,
-    "HILDA 2 Lines Laser Level Green": 1791124852.3122299
+    "HILDA 2 Lines Laser Level Green": 1791124852.3122299,
+    "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": 1791125437.8944824
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1212,15 +1214,16 @@
     "couponsglobal:48783",
     "aniscoupons:32770",
     "aniscoupons:32771",
-    "couponsglobal:48784"
+    "couponsglobal:48784",
+    "couponsglobal:48785"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791124852.3122299,
+  "last_run_time": 1791125437.8944824,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32771,
-      "last_check_time": 1791125140.6615465
+      "last_check_time": 1791125433.5106778
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1228,11 +1231,11 @@
     },
     "lodydeals": {
       "last_message_id": 45460,
-      "last_check_time": 1791125138.4168916
+      "last_check_time": 1791125431.4802053
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791125139.87262
+      "last_check_time": 1791125432.7965415
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1240,19 +1243,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791125139.5268922
+      "last_check_time": 1791125432.4704113
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791125138.7741878
+      "last_check_time": 1791125431.8319166
     },
     "megaphonna": {
       "last_message_id": 8255,
-      "last_check_time": 1791125140.2730868
+      "last_check_time": 1791125433.129617
     },
     "couponsglobal": {
-      "last_message_id": 48784,
-      "last_check_time": 1791125141.302098
+      "last_message_id": 48785,
+      "last_check_time": 1791125439.909605
     }
   },
   "published_product_prices": {
@@ -1375,7 +1378,7 @@
     "1005012492244291": 230.0,
     "1005008522983211": 15.6,
     "1005011734677486": 13.8,
-    "1005008414973716": 15.6,
+    "1005008414973716": 1.0,
     "1005010706783496": 16.2,
     "1005012826813261": 14.0,
     "1005012203827165": 259.7,
@@ -3620,6 +3623,16 @@
       "price": 1.0,
       "timestamp": 1791124852.3122299,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48785": {
+      "channel_msg_id": 563,
+      "product_id": "1005008414973716",
+      "title": "Lenovo XT53 Wireless Bluetooth 5.4 Earphones",
+      "channel": "couponsglobal",
+      "source_msg_id": 48785,
+      "price": 1.0,
+      "timestamp": 1791125437.8944824,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3628,7 +3641,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791124852.319089,
+    "last_deal_post_time": 1791125437.8997061,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3758,7 +3771,7 @@
     "1005012492244291": "megaphonna",
     "1005008522983211": "aniscoupons",
     "1005011734677486": "bnddeals",
-    "1005008414973716": "bnddeals",
+    "1005008414973716": "couponsglobal",
     "1005010706783496": "bnddeals",
     "1005012826813261": "aniscoupons",
     "9998887267": "test_channel",
@@ -3954,7 +3967,8 @@
     "ATTACK SHARK V6 Tri-Mode": "aniscoupons",
     "POCO M7 (6/128)": "megaphonna",
     "ATTACK SHARK X1  Tri-Mode": "lodydeals",
-    "HILDA 2 Lines Laser Level Green": "couponsglobal"
+    "HILDA 2 Lines Laser Level Green": "couponsglobal",
+    "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
