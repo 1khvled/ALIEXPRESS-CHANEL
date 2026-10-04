@@ -179,7 +179,8 @@
     "1005012113350943",
     "1005012415005884",
     "1005008830684400",
-    "1005006499712212"
+    "1005006499712212",
+    "1005007076639821"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -365,7 +366,8 @@
     "1005012113350943": 1791147353.0681367,
     "1005012415005884": 1791147368.3357995,
     "1005008830684400": 1791150348.3326037,
-    "1005006499712212": 1791150646.4428236
+    "1005006499712212": 1791150646.4428236,
+    "1005007076639821": 1791150954.013484
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -568,7 +570,8 @@
     "realme 80W SUPERVOOC Charger",
     "OnePlus Turbo 6V  12/256GB",
     "hair clipper hair and beard trimming",
-    "KZ Castor 2DD in Ear HiFi"
+    "KZ Castor 2DD in Ear HiFi",
+    "Fenvi FV-AX1801 AX1800 WiFi 6"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -774,7 +777,8 @@
     "realme 80W SUPERVOOC Charger": 1791147353.0681367,
     "OnePlus Turbo 6V  12/256GB": 1791147368.3357995,
     "hair clipper hair and beard trimming": 1791150348.3326037,
-    "KZ Castor 2DD in Ear HiFi": 1791150646.4428236
+    "KZ Castor 2DD in Ear HiFi": 1791150646.4428236,
+    "Fenvi FV-AX1801 AX1800 WiFi 6": 1791150954.013484
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1309,27 +1313,28 @@
     "megaphonna:8263",
     "lodydeals:45472",
     "couponsglobal:48796",
-    "lodydeals:45473"
+    "lodydeals:45473",
+    "lodydeals:45474"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791150646.4428236,
+  "last_run_time": 1791150954.013484,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32781,
-      "last_check_time": 1791150651.2852077
+      "last_check_time": 1791150958.9060192
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45473,
-      "last_check_time": 1791150648.4613683
+      "last_message_id": 45474,
+      "last_check_time": 1791150956.0290456
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791150650.3372562
+      "last_check_time": 1791150957.9631524
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1337,19 +1342,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791150649.9626484
+      "last_check_time": 1791150957.5935013
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791150649.180248
+      "last_check_time": 1791150956.74372
     },
     "megaphonna": {
       "last_message_id": 8263,
-      "last_check_time": 1791150650.7853606
+      "last_check_time": 1791150958.408341
     },
     "couponsglobal": {
       "last_message_id": 48796,
-      "last_check_time": 1791150651.9761465
+      "last_check_time": 1791150959.5937128
     }
   },
   "published_product_prices": {
@@ -1506,7 +1511,8 @@
     "1005012113350943": 15.5,
     "1005012415005884": 299.3,
     "1005008830684400": 1.0,
-    "1005006499712212": 6.22
+    "1005006499712212": 6.22,
+    "1005007076639821": 16.27
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3958,6 +3964,16 @@
       "price": 6.22,
       "timestamp": 1791150646.4428236,
       "status": "ACTIVE"
+    },
+    "lodydeals:45474": {
+      "channel_msg_id": 589,
+      "product_id": "1005007076639821",
+      "title": "Fenvi FV-AX1801 AX1800 WiFi 6",
+      "channel": "lodydeals",
+      "source_msg_id": 45474,
+      "price": 16.27,
+      "timestamp": 1791150954.013484,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3966,7 +3982,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791150646.4483025,
+    "last_deal_post_time": 1791150954.019008,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4137,7 +4153,8 @@
     "1005012113350943": "lodydeals",
     "1005012415005884": "lodydeals",
     "1005008830684400": "couponsglobal",
-    "1005006499712212": "lodydeals"
+    "1005006499712212": "lodydeals",
+    "1005007076639821": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4319,7 +4336,8 @@
     "realme 80W SUPERVOOC Charger": "lodydeals",
     "OnePlus Turbo 6V  12/256GB": "lodydeals",
     "hair clipper hair and beard trimming": "couponsglobal",
-    "KZ Castor 2DD in Ear HiFi": "lodydeals"
+    "KZ Castor 2DD in Ear HiFi": "lodydeals",
+    "Fenvi FV-AX1801 AX1800 WiFi 6": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
