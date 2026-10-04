@@ -160,7 +160,8 @@
     "1005007279793099",
     "1005012743092233",
     "1005007805497968",
-    "1005007345108759"
+    "1005007345108759",
+    "1005007394197021"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -327,7 +328,8 @@
     "1005007279793099": 1791104060.2548923,
     "1005012743092233": 1791104461.903693,
     "1005007805497968": 1791104753.5513856,
-    "1005007345108759": 1791104759.7671344
+    "1005007345108759": 1791104759.7671344,
+    "1005007394197021": 1791106853.9447496
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -504,7 +506,8 @@
     "GameSir Nova Lite Gamepads PC  Hall Effect",
     "FIFINE AmpliGame A2 RGB USB Gaming Microphone",
     "ATTACK SHARK X1 Wireless Gaming Mouse with Magnetic Charging Dock, PAW3395PRO Sensor,",
-    "ATTACK SHARK X5"
+    "ATTACK SHARK X5",
+    "ATTACK SHARK X2 Pro"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -684,7 +687,8 @@
     "GameSir Nova Lite Gamepads PC  Hall Effect": 1791104753.5513856,
     "FIFINE AmpliGame A2 RGB USB Gaming Microphone": 1791104759.7671344,
     "ATTACK SHARK X1 Wireless Gaming Mouse with Magnetic Charging Dock, PAW3395PRO Sensor,": 1791105954.2458005,
-    "ATTACK SHARK X5": 1791106544.154073
+    "ATTACK SHARK X5": 1791106544.154073,
+    "ATTACK SHARK X2 Pro": 1791106853.9447496
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1133,15 +1137,16 @@
     "aniscoupons:32754",
     "pcgamingpart:7957",
     "aniscoupons:32755",
-    "aniscoupons:32756"
+    "aniscoupons:32756",
+    "aniscoupons:32757"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791106544.154073,
+  "last_run_time": 1791106853.9447496,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32756,
-      "last_check_time": 1791106546.1689487
+      "last_message_id": 32757,
+      "last_check_time": 1791106855.9591625
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1149,11 +1154,11 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791106538.7052414
+      "last_check_time": 1791106847.319552
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791106539.9331374
+      "last_check_time": 1791106848.9711025
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1161,19 +1166,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7957,
-      "last_check_time": 1791106539.66346
+      "last_check_time": 1791106848.585396
     },
     "zedstoreonline": {
       "last_message_id": 38526,
-      "last_check_time": 1791106539.0185204
+      "last_check_time": 1791106847.725912
     },
     "megaphonna": {
       "last_message_id": 8245,
-      "last_check_time": 1791106540.3032324
+      "last_check_time": 1791106849.3923798
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791106546.7909157
+      "last_check_time": 1791106856.9990964
     }
   },
   "published_product_prices": {
@@ -1313,7 +1318,8 @@
     "1005013223462188": 13.47,
     "1005012743092233": 24.37,
     "1005007805497968": 22.81,
-    "1005007345108759": 22.12
+    "1005007345108759": 22.12,
+    "1005007394197021": 14.84
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3405,6 +3411,16 @@
       "price": 10.73,
       "timestamp": 1791106544.154073,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32757": {
+      "channel_msg_id": 550,
+      "product_id": "1005007394197021",
+      "title": "ATTACK SHARK X2 Pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 32757,
+      "price": 14.84,
+      "timestamp": 1791106853.9447496,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3413,7 +3429,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791106544.1591349,
+    "last_deal_post_time": 1791106853.9496582,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3565,7 +3581,8 @@
     "1005012743092233": "pcgamingpart",
     "1005007805497968": "pcgamingpart",
     "1005007345108759": "pcgamingpart",
-    "1005007394028808": "aniscoupons"
+    "1005007394028808": "aniscoupons",
+    "1005007394197021": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3722,7 +3739,8 @@
     "GameSir Nova Lite Gamepads PC  Hall Effect": "pcgamingpart",
     "FIFINE AmpliGame A2 RGB USB Gaming Microphone": "pcgamingpart",
     "ATTACK SHARK X1 Wireless Gaming Mouse with Magnetic Charging Dock, PAW3395PRO Sensor,": "pcgamingpart",
-    "ATTACK SHARK X5": "aniscoupons"
+    "ATTACK SHARK X5": "aniscoupons",
+    "ATTACK SHARK X2 Pro": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
