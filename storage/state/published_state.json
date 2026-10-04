@@ -170,7 +170,7 @@
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
-    "1005010219205081": 1791043558.632988,
+    "1005010219205081": 1791123641.3272605,
     "999111222": 1791063863.6911209,
     "100500999912345": 1790973864.542499,
     "100500999954321": 1791056664.542499,
@@ -541,7 +541,7 @@
     "ATTACK SHARK L90": 1790884206.6605399,
     "SomnAmbulist SSD 2.5 120GB": 1790884215.4346776,
     "Realme 15 Pro Global (8/256)": 1790884233.6428,
-    "Poco C71 3/64GB": 1791043558.632988,
+    "Poco C71 3/64GB": 1791123641.3272605,
     "سماعات لاسلكية Attack Shark L80 PRO Wireless": 1790884281.6726701,
     "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K": 1790884287.4211984,
     "ماوس لاسلكي Attack Shark R1 Wireless": 1790884299.0959656,
@@ -1206,15 +1206,16 @@
     "couponsglobal:48781",
     "couponsglobal:48782",
     "couponsglobal:48783",
-    "aniscoupons:32770"
+    "aniscoupons:32770",
+    "aniscoupons:32771"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791117948.6585228,
+  "last_run_time": 1791123641.3272605,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32770,
-      "last_check_time": 1791123345.1014292
+      "last_message_id": 32771,
+      "last_check_time": 1791123643.341824
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1222,11 +1223,11 @@
     },
     "lodydeals": {
       "last_message_id": 45460,
-      "last_check_time": 1791123342.6221726
+      "last_check_time": 1791123636.1079335
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791123344.2507055
+      "last_check_time": 1791123637.4480717
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1234,19 +1235,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791123343.8509486
+      "last_check_time": 1791123637.1313062
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791123343.0271456
+      "last_check_time": 1791123636.44146
     },
     "megaphonna": {
       "last_message_id": 8255,
-      "last_check_time": 1791123344.6635778
+      "last_check_time": 1791123637.7998438
     },
     "couponsglobal": {
       "last_message_id": 48783,
-      "last_check_time": 1791123345.8602922
+      "last_check_time": 1791123644.235203
     }
   },
   "published_product_prices": {
@@ -3593,6 +3594,16 @@
       "price": 24.73,
       "timestamp": 1791117948.6585228,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32771": {
+      "channel_msg_id": 561,
+      "product_id": "1005010219205081",
+      "title": "Poco C71 3/64GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 32771,
+      "price": 57.2,
+      "timestamp": 1791123641.3272605,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3601,7 +3612,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791117948.6623788,
+    "last_deal_post_time": 1791123641.334188,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
