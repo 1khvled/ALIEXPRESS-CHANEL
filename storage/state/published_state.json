@@ -238,7 +238,7 @@
     "1005012406142215": 1791042955.9414852,
     "1005008390562391": 1791105348.8066044,
     "1005007345398413": 1790943717.3545928,
-    "1005012504076921": 1791035451.2154183,
+    "1005012504076921": 1791142278.6117659,
     "1005008715050858": 1791033345.3970714,
     "9998885689": 1790945689.9436276,
     "9998885726": 1790945726.205554,
@@ -637,7 +637,7 @@
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
     "Xiaomi Pad 7 (12/256)": 1791052344.704609,
-    "ONEPLUS TURBO 6X PRO 5G (8/128)": 1791035451.2154183,
+    "ONEPLUS TURBO 6X PRO 5G (8/128)": 1791142278.6117659,
     "CUSU SSD 512 GB Portable SSD External Drive": 1790966460.2151659,
     "HONOR  X80 PRO MAX (8/128)": 1791060354.760787,
     "WALRAM Sata SSD 512GB": 1790967962.6418507,
@@ -1261,15 +1261,16 @@
     "aniscoupons:32774",
     "aniscoupons:32775",
     "lodydeals:45461",
-    "megaphonna:8260"
+    "megaphonna:8260",
+    "megaphonna:8261"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791141939.4721515,
+  "last_run_time": 1791142278.6117659,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32775,
-      "last_check_time": 1791141942.1086018
+      "last_check_time": 1791142281.2167451
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1277,11 +1278,11 @@
     },
     "lodydeals": {
       "last_message_id": 45461,
-      "last_check_time": 1791141934.6432512
+      "last_check_time": 1791142270.680124
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791141935.9877076
+      "last_check_time": 1791142272.2638578
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1289,19 +1290,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791141935.65113
+      "last_check_time": 1791142271.6668694
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791141934.9825916
+      "last_check_time": 1791142271.0078013
     },
     "megaphonna": {
-      "last_message_id": 8260,
-      "last_check_time": 1791141941.489331
+      "last_message_id": 8261,
+      "last_check_time": 1791142280.6262925
     },
     "couponsglobal": {
       "last_message_id": 48795,
-      "last_check_time": 1791141942.63455
+      "last_check_time": 1791142281.7405977
     }
   },
   "published_product_prices": {
@@ -3794,6 +3795,16 @@
       "price": 294.0,
       "timestamp": 1791141939.4721515,
       "status": "ACTIVE"
+    },
+    "megaphonna:8261": {
+      "channel_msg_id": 578,
+      "product_id": "1005012504076921",
+      "title": "ONEPLUS TURBO 6X PRO 5G (8/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8261,
+      "price": 257.4,
+      "timestamp": 1791142278.6117659,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3802,7 +3813,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791141939.477445,
+    "last_deal_post_time": 1791142278.6169045,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
