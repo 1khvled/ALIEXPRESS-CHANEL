@@ -269,7 +269,7 @@
     "1005006196428484": 1791026745.7640984,
     "1005012390398338": 1791027348.2517543,
     "1005012297674623": 1791014145.8727648,
-    "1005013152491360": 1791014155.5083368,
+    "1005013152491360": 1791098743.198129,
     "1005007097205322": 1791014755.488723,
     "1005010470699571": 1791015054.3845687,
     "1005012741634118": 1791015347.2675145,
@@ -475,7 +475,8 @@
     "TOPK Car Phone Holder",
     "الهاتف الاكثر طلبا",
     "Car Battery Charger LCD Display",
-    "Honor 600 lite (8/256)"
+    "Honor 600 lite (8/256)",
+    "ATTACK SHARK G300"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -640,7 +641,8 @@
     "TOPK Car Phone Holder": 1791056453.5992196,
     "الهاتف الاكثر طلبا": 1791056463.1366906,
     "Car Battery Charger LCD Display": 1791056745.5798366,
-    "Honor 600 lite (8/256)": 1791057346.9236152
+    "Honor 600 lite (8/256)": 1791057346.9236152,
+    "ATTACK SHARK G300": 1791098743.198129
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1048,15 +1050,16 @@
     "aniscoupons:32739",
     "zedstoreonline:38526",
     "megaphonna:8240",
-    "megaphonna:8241"
+    "megaphonna:8241",
+    "megaphonna:8242"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791063864.706781,
+  "last_run_time": 1791098743.198129,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32739,
-      "last_check_time": 1791098438.327206
+      "last_check_time": 1791098745.7166343
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1064,11 +1067,11 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791098436.77125
+      "last_check_time": 1791098735.8362796
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791098437.707937
+      "last_check_time": 1791098737.4072185
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1080,15 +1083,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38526,
-      "last_check_time": 1791098437.0806131
+      "last_check_time": 1791098736.1812725
     },
     "megaphonna": {
-      "last_message_id": 8241,
-      "last_check_time": 1791098438.0155725
+      "last_message_id": 8242,
+      "last_check_time": 1791098745.211277
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791098438.8033974
+      "last_check_time": 1791098746.240389
     }
   },
   "published_product_prices": {
@@ -1152,7 +1155,7 @@
     "1005008715050858": 6.4,
     "999888777111": 20.0,
     "1005012407874415": 480.4,
-    "1005013152491360": 196.0,
+    "1005013152491360": 1.7,
     "1005012925826589": 189.0,
     "1005012922578845": 214.9,
     "1005012865117890": 234.9,
@@ -3064,6 +3067,16 @@
       "price": 294.0,
       "timestamp": 1791061545.5863013,
       "status": "ACTIVE"
+    },
+    "megaphonna:8242": {
+      "channel_msg_id": 525,
+      "product_id": "1005013152491360",
+      "title": "ATTACK SHARK G300",
+      "channel": "megaphonna",
+      "source_msg_id": 8242,
+      "price": 1.7,
+      "timestamp": 1791098743.198129,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3072,7 +3085,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791061545.5893893,
+    "last_deal_post_time": 1791098743.2024167,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3125,7 +3138,7 @@
     "9998887189": "test_channel",
     "1005012499451512": "zedstoreonline",
     "1005010219205081": "aniscoupons",
-    "1005013152491360": "aniscoupons",
+    "1005013152491360": "megaphonna",
     "1005010129356058": "megaphonna",
     "1005012925826589": "megaphonna",
     "1005012922578845": "megaphonna",
@@ -3354,7 +3367,8 @@
     "الهاتف الاكثر طلبا": "aniscoupons",
     "Car Battery Charger LCD Display": "lodydeals",
     "Honor 600 lite (8/256)": "aniscoupons",
-    "HONOR 600 PRO (12/256)": "megaphonna"
+    "HONOR 600 PRO (12/256)": "megaphonna",
+    "ATTACK SHARK G300": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
