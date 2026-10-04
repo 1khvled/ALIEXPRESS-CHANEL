@@ -728,3 +728,101 @@ def detect_channel_announcement(text: str) -> Tuple[bool, Optional[str], Optiona
     return False, None, None
 
 
+def extract_telegram_html_text(text_div) -> str:
+    """
+    Safely extracts text from Telegram web widget message HTML without
+    chopping numbers or inline formatting across inline tags (<b>, <code>, <i>, <span>).
+    Only converts block-level tags (<br>, </p>, </div>, </blockquote>) to newlines.
+    """
+    if not text_div:
+        return ""
+    from bs4 import BeautifulSoup
+    html = text_div.decode_contents() if hasattr(text_div, "decode_contents") else str(text_div)
+    # Replace block breaks with newlines
+    html = re.sub(r'<(?:br|/p|/div|/blockquote)[^>]*>', '\n', html, flags=re.IGNORECASE)
+    soup = BeautifulSoup(html, "html.parser")
+    text = soup.get_text()
+    # Normalize excessive newlines
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    return text.strip()
+
+
+BRAND_TRANSLITERATIONS = {
+    "بوكو": "poco",
+    "شاومي": "xiaomi",
+    "ريدمي": "redmi",
+    "ريلمي": "realme",
+    "هونر": "honor",
+    "هواوي": "huawei",
+    "سامسونج": "samsung",
+    "انفينكس": "infinix",
+    "تكنو": "tecno",
+    "نوبيا": "nubia",
+    "لينوفو": "lenovo",
+    "اسوس": "asus",
+    "انكر": "anker",
+    "بيسوس": "baseus",
+    "يوغرين": "ugreen",
+    "كولمي": "colmi",
+}
+
+CATEGORY_MAPPINGS = {
+    "ماوس": ["mouse", "mice"],
+    "كيبورد": ["keyboard"],
+    "لوحة مفاتيح": ["keyboard"],
+    "سماعة": ["headset", "headphone", "earphone", "earbuds", "audio", "tws"],
+    "سماعات": ["headset", "headphone", "earphone", "earbuds", "audio", "tws"],
+    "هاتف": ["phone", "smartphone", "mobile"],
+    "جوال": ["phone", "smartphone", "mobile"],
+    "ساعة": ["watch", "smartwatch"],
+    "شاحن": ["charger", "gan"],
+    "كابل": ["cable", "cord"],
+    "يد تحكم": ["gamepad", "controller"],
+    "معالج": ["cpu", "processor", "ryzen", "intel"],
+}
+
+
+def compute_title_compatibility(extracted_title: str, candidate_title: str) -> float:
+    """
+    Computes keyword and category overlap between the message deal title and
+    the resolved API / webpage title. Returns a score between 0.0 and 1.0.
+    """
+    if not extracted_title or not candidate_title:
+        return 0.5
+
+    def tokenize(s):
+        s = s.lower()
+        s = re.sub(r'[^a-zA-Z0-9\u0600-\u06FF]+', ' ', s)
+        tokens = set(w for w in s.split() if len(w) >= 2)
+        stop = {
+            "algeria", "global", "version", "original", "aliexpress", "deal", "drops",
+            "edition", "sale", "new", "free", "pro", "max", "ultra", "plus", "lite",
+            "الهاتف", "نسخة", "عالمية", "تخفيض", "سعر", "ممتاز"
+        }
+        return tokens - stop
+
+    t1 = tokenize(extracted_title)
+    t2 = tokenize(candidate_title)
+    if not t1 or not t2:
+        return 0.5
+
+    # Direct token intersection
+    common = t1.intersection(t2)
+
+    # Brand transliteration matching
+    for ar_b, en_b in BRAND_TRANSLITERATIONS.items():
+        if (ar_b in t1 and en_b in t2) or (en_b in t1 and ar_b in t2):
+            common.add(ar_b)
+
+    # Category cross-matching (Arabic to English)
+    for ar_term, en_terms in CATEGORY_MAPPINGS.items():
+        if ar_term in t1 and any(en in t2 for en in en_terms):
+            common.add(ar_term)
+        elif ar_term in t2 and any(en in t1 for en in en_terms):
+            common.add(ar_term)
+
+    score = len(common) / min(len(t1), len(t2))
+    return score
+
+
+

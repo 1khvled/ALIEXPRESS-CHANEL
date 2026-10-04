@@ -24,7 +24,6 @@ async def test_generated_caption_format_exact():
     assert any(h in caption for h in ["DealScout", "سعر ممتاز", "ســـعـــر ممت", "عرض نااار", "ألحق لافار", "لافار", "لافاااااار", "قيمنق", "صيدة", "نزول قوي في السعر", "عتاد قيمنق", "عتـاد قيمنق", "تخفيض قوي", "صفقة اليوم المعتمدة", "صفقة قيمنق مختارة", "توفير فائق بالعملات", "أقصى خصم بالعملات", "أفضل قيمة مقابل سعر", "هبوط قوي في السعر", "صفقة كود الخصم", "تخفيض مباشر بالكوبون", "منتج مختار بعناية", "العرض مستمر"])
     assert title in caption
     assert f"${usd:.2f}" in caption
-    assert f"{eur:.2f}€" in caption
     assert aff_url in caption
     assert f"<code>{coupon}</code>" in caption
     assert ("خصم النقاط" in caption or "تخفيض العملات" in caption)

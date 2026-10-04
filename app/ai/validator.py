@@ -99,7 +99,7 @@ class DealCaptionValidator:
             if expected_usd_str not in caption and f"{expected_usd_price:.1f}" not in caption:
                 errors.append(f"USD price {expected_usd_price} not found in caption")
 
-        if expected_eur_price is not None:
+        if expected_eur_price is not None and ("€" in caption or "EUR" in caption):
             expected_eur_str = f"{expected_eur_price:.2f}"
             if expected_eur_str not in caption and f"{expected_eur_price:.1f}" not in caption:
                 errors.append(f"EUR price {expected_eur_price} not found in caption")

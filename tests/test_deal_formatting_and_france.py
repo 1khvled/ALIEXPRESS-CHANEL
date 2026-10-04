@@ -50,7 +50,7 @@ async def test_clean_algerian_post_formatting():
     assert "كــــــندا 🇨🇦" in caption
     assert "Attack Shark X3 Pro 8K" in caption
     assert "$35.50" in caption
-    assert "32.20€" in caption
+    assert "€" not in caption
     assert "<code>SHARK3</code>" in caption
     assert "<code>5$</code>" in caption
     assert "🛒 <b>رابط الشراء ⤵️</b>" in caption

@@ -234,10 +234,7 @@ class DealCaptionGenerator:
         lines.append("")
 
         if usd_price and usd_price > 0:
-            if eur_price and eur_price > 0:
-                lines.append(f"💰 <b>السعر :</b> <b>${usd_price:.2f} ({eur_price:.2f}€)</b> 🔥")
-            else:
-                lines.append(f"💰 <b>السعر :</b> <b>${usd_price:.2f}</b> 🔥")
+            lines.append(f"💰 <b>السعر :</b> <b>${usd_price:.2f}</b> 🔥")
         else:
             lines.append("💰 <b>السعر :</b> <b>سعر خاص ومخفض</b> 🔥")
 

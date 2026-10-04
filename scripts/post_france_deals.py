@@ -33,7 +33,8 @@ from app.aliexpress.parser import (
     detect_deal_type,
     extract_coupon_list,
     extract_prices,
-    is_allowed_category
+    is_allowed_category,
+    extract_telegram_html_text
 )
 from app.aliexpress.promos import promo_tracker
 from app.aliexpress.affiliate import affiliate_service
@@ -580,7 +581,7 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                     if m_url:
                         source_photo_url = m_url.group(1)
 
-                raw_text = t_div.get_text(separator="\n").strip()
+                raw_text = extract_telegram_html_text(t_div)
 
                 # Strict France-specific validation: reject any Arabic/Algerian deal or non-compatible source
                 valid_fr, fr_reason = is_strictly_france_compatible_deal(raw_text, channel_username=ch)

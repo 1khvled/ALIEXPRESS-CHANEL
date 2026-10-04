@@ -27,7 +27,7 @@ from app.config.settings import settings
 from app.db.session import init_db, db_context
 from app.db.models import Channel, SourceMessage, Deal, GeneratedPost, TelegramPost
 from app.aliexpress.product import product_extractor
-from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category, detect_deal_type, is_france_deal
+from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category, detect_deal_type, is_france_deal, extract_telegram_html_text
 from app.aliexpress.promos import promo_tracker
 from app.aliexpress.affiliate import affiliate_service
 from app.ai.generator import caption_generator
@@ -229,7 +229,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                             except Exception:
                                 pass
                         text_div = b.find("div", class_="tgme_widget_message_text")
-                        raw_text = text_div.get_text(separator="\n").strip() if text_div else ""
+                        raw_text = extract_telegram_html_text(text_div) if text_div else ""
                         is_fresh, _ = promo_tracker.validate_deal_freshness(raw_text, msg_dt)
                         if not is_fresh:
                             record_post_handled(ch, b_id)
@@ -272,7 +272,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         if m_url:
                             source_photo_url = m_url.group(1)
 
-                    raw_text = text_div.get_text(separator="\n").strip()
+                    raw_text = extract_telegram_html_text(text_div)
 
                     # Autonomous Event Knower: Sniff any official promo festivals, sale announcements, or coupon batches
                     try:
@@ -634,7 +634,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                                 "id": deal.id,
                                 "channel": ch,
                                 "title": deal.title,
-                                "price": f"${deal.current_price} ({deal.current_price_eur}€)" if deal.current_price else "Coupons",
+                                "price": f"${deal.current_price}" if deal.current_price else "Coupons",
                                 "link": aff_link
                             })
                             try:

@@ -16,7 +16,8 @@ from app.aliexpress.parser import (
     extract_clean_title,
     is_spam_or_non_deal,
     extract_coupon_list,
-    detect_deal_type
+    detect_deal_type,
+    compute_title_compatibility
 )
 from app.utils.logger import logger
 
@@ -65,17 +66,27 @@ class ProductExtractor:
 
         # 2. Find AliExpress URL(s)
         urls = extract_all_urls(text)
-        ali_url = None
-        for u in urls:
-            if is_aliexpress_url(u) or is_potential_shortener(u):
-                ali_url = u
-                break
+        ali_urls = [u for u in urls if is_aliexpress_url(u) or is_potential_shortener(u)]
+        if not ali_urls:
+            return None
+
+        # Prioritize URLs that are labeled "مباشر" or "direct" in source text
+        def _url_priority(u: str) -> int:
+            idx = text.find(u)
+            if idx > 0:
+                prefix = text[max(0, idx - 45):idx].lower()
+                if any(k in prefix for k in ["مباشر", "direct", "رابط مباشر", "عادي"]):
+                    return 0
+            return 1
+
+        ali_urls.sort(key=_url_priority)
 
         # Check if this is a Full Coupon List bulletin (must have 3+ coupons and NO single product price)
         coupon_items = extract_coupon_list(text)
         usd_price, eur_price = extract_prices(text)
 
-        if len(coupon_items) >= 3 and usd_price is None and ali_url:
+        if len(coupon_items) >= 3 and usd_price is None and ali_urls:
+            ali_url = ali_urls[0]
             resolved = await self.resolver.resolve(ali_url)
             import hashlib
             codes_sig = ",".join(sorted(c["code"] for c in coupon_items))
@@ -102,31 +113,12 @@ class ProductExtractor:
                 coupon_list=coupon_items
             )
 
-        if not ali_url:
-            return None
-
-        # 3. Resolve single deal URL
-        resolved = await self.resolver.resolve(ali_url)
-        if not resolved.is_valid:
-            logger.info(f"Could not validate AliExpress link: {ali_url}")
-            return None
-
-        # Single deals MUST have a valid product_id
-        if not resolved.product_id:
-            return None
-
-        # 4. Extract single deal fields
-        coupon_code = extract_coupon(text)
-        seller_coupon = extract_seller_coupon(text)
-        has_points = detect_points_discount(text)
+        # 3. Extract single deal fields from text first
         title = extract_clean_title(text)
-        combined_deal_url = f"{ali_url or ''} {resolved.final_url or ''} {resolved.canonical_url or ''}"
-        country_info = extract_country_instruction(text, url=combined_deal_url, title=title or "")
-        deal_type = detect_deal_type(text, combined_deal_url)
 
-        # 5. Fetch official HD studio image & details via AliExpress Open Platform API
-        image_url = None
-        if resolved.product_id and settings.ALIEXPRESS_AFFILIATE_APP_KEY and settings.ALIEXPRESS_AFFILIATE_APP_SECRET:
+        # 4. Resolve candidate URLs and find the best matching product
+        api = None
+        if settings.ALIEXPRESS_AFFILIATE_APP_KEY and settings.ALIEXPRESS_AFFILIATE_APP_SECRET:
             try:
                 from aliexpress_api import AliexpressApi, models
                 api = AliexpressApi(
@@ -136,33 +128,74 @@ class ProductExtractor:
                     models.Currency.USD,
                     settings.ALIEXPRESS_AFFILIATE_TRACKING_ID or "default"
                 )
-                details = None
+            except Exception as e:
+                logger.debug(f"AliExpress API client init skipped: {e}")
+
+        best_cand = None
+        best_cand_score = -1.0
+
+        for cand_url in ali_urls:
+            res = await self.resolver.resolve(cand_url)
+            if not res.is_valid or not res.product_id:
+                continue
+
+            cand_api_title = None
+            cand_image_url = None
+            prod_info = None
+
+            if api:
                 for attempt in range(2):
                     try:
                         details = await asyncio.wait_for(
-                            asyncio.to_thread(api.get_products_details, [resolved.product_id]),
+                            asyncio.to_thread(api.get_products_details, [res.product_id]),
                             timeout=5.0
                         )
+                        if details and len(details) > 0:
+                            prod_info = details[0]
+                            cand_image_url = getattr(prod_info, 'product_main_image_url', None)
+                            cand_api_title = getattr(prod_info, 'product_title', None)
                         break
                     except Exception as err:
-                        logger.debug(f"API details attempt {attempt+1}/2 failed: {err}")
+                        logger.debug(f"API details fetch for {res.product_id} attempt {attempt+1}/2: {err}")
                         if attempt < 1:
                             await asyncio.sleep(1.0)
-                            continue
-                        break
 
-                if details and len(details) > 0:
-                    prod_info = details[0]
-                    if getattr(prod_info, 'product_main_image_url', None):
-                        image_url = prod_info.product_main_image_url
-                    api_title = getattr(prod_info, 'product_title', None)
-                    if api_title:
-                        clean_api_title = self._clean_official_title(api_title)
-                        # Replace title if current title is missing, too short, or suspicious description
-                        if not title or len(title) < 15 or self._is_suspicious_title(title):
-                            title = clean_api_title
-            except Exception as e:
-                logger.debug(f"API product details fetch skipped: {e}")
+            # Compute compatibility score between post title and API title
+            score = compute_title_compatibility(title or "", cand_api_title or "")
+            if score > best_cand_score:
+                best_cand_score = score
+                best_cand = (cand_url, res, prod_info, cand_api_title, cand_image_url)
+
+            # High confidence match (score >= 0.3): use immediately
+            if score >= 0.3:
+                break
+
+        if not best_cand:
+            return None
+
+        ali_url, resolved, prod_info, api_title, image_url = best_cand
+
+        # CRITICAL SANITY CHECK: If the message text has a specific deal title (e.g. ATTACK SHARK headset),
+        # but the resolved product title has ZERO keyword/category overlap (e.g. POCO smartphone),
+        # reject the deal to prevent mismatched/frankenstein posts!
+        if api_title and best_cand_score == 0.0 and title:
+            clean_tokens = [w for w in re.findall(r'[a-zA-Z0-9\u0600-\u06FF]{3,}', title.lower()) if w not in {"deal", "aliexpress", "sale", "global", "version", "original", "تخفيض", "سعر", "ممتاز", "عرض"}]
+            if len(clean_tokens) >= 2:
+                logger.warning(f"Rejecting contaminated deal: post title '{title}' completely conflicts with resolved product '{api_title}' (score: 0.0).")
+                return None
+
+        # Clean official title and update if needed
+        if api_title:
+            clean_api_title = self._clean_official_title(api_title)
+            if not title or len(title) < 15 or self._is_suspicious_title(title):
+                title = clean_api_title
+
+        coupon_code = extract_coupon(text)
+        seller_coupon = extract_seller_coupon(text)
+        has_points = detect_points_discount(text)
+        combined_deal_url = f"{ali_url or ''} {resolved.final_url or ''} {resolved.canonical_url or ''}"
+        country_info = extract_country_instruction(text, url=combined_deal_url, title=title or "")
+        deal_type = detect_deal_type(text, combined_deal_url)
 
         # Fallback to page metadata if image/title still missing
         if not image_url or not title or len(title) < 10 or self._is_suspicious_title(title):

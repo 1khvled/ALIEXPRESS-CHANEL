@@ -27,7 +27,7 @@ from app.config.settings import settings
 from app.db.session import init_db, db_context
 from app.db.models import Channel, SourceMessage, Deal, GeneratedPost
 from app.aliexpress.product import product_extractor
-from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category, detect_deal_type
+from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category, detect_deal_type, extract_telegram_html_text
 from app.aliexpress.promos import promo_tracker
 from app.aliexpress.affiliate import affiliate_service
 from app.ai.generator import caption_generator
@@ -100,7 +100,7 @@ class AutonomousEngine:
                 if not text_div:
                     continue
 
-                raw_text = text_div.get_text(separator="\n").strip()
+                raw_text = extract_telegram_html_text(text_div)
 
                 # Extract message URL / ID
                 data_post = block.get("data-post", "")
