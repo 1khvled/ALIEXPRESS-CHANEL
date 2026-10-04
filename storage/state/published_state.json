@@ -216,7 +216,7 @@
     "1005009828161174": 1791031550.2120771,
     "1005009281115306": 1790943648.855101,
     "1005011797801269": 1790943656.257167,
-    "1005007168829266": 1790973945.5080817,
+    "1005007168829266": 1791102355.4991398,
     "1005012406142215": 1791042955.9414852,
     "1005008390562391": 1790943710.6779277,
     "1005007345398413": 1790943717.3545928,
@@ -547,7 +547,7 @@
     "ATTACK SHARK X11SE": 1790943648.855101,
     "CMF Watch 3 Pro AMOLED": 1790943656.257167,
     "Redmi Note 17 5G   6/256": 1790943667.90417,
-    "Baseus USB Type C Charger 20W": 1790973945.5080817,
+    "Baseus USB Type C Charger 20W": 1791102355.4991398,
     "Honor Win Turbo 12/256BG": 1790943705.796801,
     "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction": 1790943710.6779277,
     "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": 1790943717.3545928,
@@ -1064,15 +1064,16 @@
     "aniscoupons:32741",
     "aniscoupons:32742",
     "aniscoupons:32743",
-    "aniscoupons:32744"
+    "aniscoupons:32744",
+    "aniscoupons:32745"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791102050.1835058,
+  "last_run_time": 1791102355.4991398,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32744,
-      "last_check_time": 1791102052.1964743
+      "last_message_id": 32745,
+      "last_check_time": 1791102357.5125294
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1080,11 +1081,11 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791102039.599001
+      "last_check_time": 1791102349.5393393
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791102040.4827695
+      "last_check_time": 1791102350.6589153
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1096,15 +1097,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38526,
-      "last_check_time": 1791102039.9048204
+      "last_check_time": 1791102349.9186928
     },
     "megaphonna": {
       "last_message_id": 8242,
-      "last_check_time": 1791102040.7814279
+      "last_check_time": 1791102351.0604665
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791102052.924407
+      "last_check_time": 1791102358.674498
     }
   },
   "published_product_prices": {
@@ -3112,6 +3113,16 @@
       "price": 13.27,
       "timestamp": 1791102050.1835058,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32745": {
+      "channel_msg_id": 528,
+      "product_id": "1005007168829266",
+      "title": "Baseus USB Type C Charger 20W",
+      "channel": "aniscoupons",
+      "source_msg_id": 32745,
+      "price": 4.19,
+      "timestamp": 1791102355.4991398,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3120,7 +3131,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791102050.187791,
+    "last_deal_post_time": 1791102355.503429,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
