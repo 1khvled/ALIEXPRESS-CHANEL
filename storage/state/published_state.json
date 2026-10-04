@@ -276,7 +276,7 @@
     "1005009120957437": 1790970941.2570727,
     "1005012922578845": 1791104484.5433714,
     "1005005652871847": 1790976654.120254,
-    "1005012554205120": 1790971850.2217886,
+    "1005012554205120": 1791145541.318689,
     "1005008901941749": 1790973051.970508,
     "1005010178295650": 1791031559.2102907,
     "1005006861002512": 1791032170.0482783,
@@ -552,7 +552,8 @@
     "Nail Scissors Set Household High End",
     "Baseus 30W Car Charger Dual Port USB Type-C Fast",
     "أحدث كوبونات وتخفيضات AliExpress",
-    "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6"
+    "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6",
+    "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -752,7 +753,8 @@
     "Nail Scissors Set Household High End": 1791126649.148256,
     "Baseus 30W Car Charger Dual Port USB Type-C Fast": 1791135345.3136878,
     "أحدث كوبونات وتخفيضات AliExpress": 1791138647.0734267,
-    "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6": 1791144648.6951094
+    "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6": 1791144648.6951094,
+    "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode": 1791145541.318689
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1268,15 +1270,16 @@
     "megaphonna:8260",
     "megaphonna:8261",
     "aniscoupons:32776",
-    "aniscoupons:32777"
+    "aniscoupons:32777",
+    "aniscoupons:32778"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791144981.285681,
+  "last_run_time": 1791145541.318689,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32777,
-      "last_check_time": 1791145243.4243696
+      "last_message_id": 32778,
+      "last_check_time": 1791145543.3314927
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1284,11 +1287,11 @@
     },
     "lodydeals": {
       "last_message_id": 45461,
-      "last_check_time": 1791145241.0100176
+      "last_check_time": 1791145533.9597044
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791145242.5685449
+      "last_check_time": 1791145535.2897935
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1296,19 +1299,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791145242.1727223
+      "last_check_time": 1791145534.9652572
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791145241.4251642
+      "last_check_time": 1791145534.2875159
     },
     "megaphonna": {
       "last_message_id": 8261,
-      "last_check_time": 1791145243.0092676
+      "last_check_time": 1791145535.6129153
     },
     "couponsglobal": {
       "last_message_id": 48795,
-      "last_check_time": 1791145244.12584
+      "last_check_time": 1791145544.08895
     }
   },
   "published_product_prices": {
@@ -1391,7 +1394,7 @@
     "1005007572968437": 17.47,
     "1005009120957437": 189.21,
     "1005005652871847": 3.7,
-    "1005012554205120": 21.67,
+    "1005012554205120": 7.22,
     "1005008901941749": 1.2,
     "1005006861002512": 3.39,
     "1005012285327063": 19.5,
@@ -3832,6 +3835,16 @@
       "price": 15.6,
       "timestamp": 1791144981.285681,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32778": {
+      "channel_msg_id": 581,
+      "product_id": "1005012554205120",
+      "title": "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode",
+      "channel": "aniscoupons",
+      "source_msg_id": 32778,
+      "price": 7.22,
+      "timestamp": 1791145541.318689,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3840,7 +3853,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791144981.290973,
+    "last_deal_post_time": 1791145541.3229396,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3926,7 +3939,7 @@
     "1005007572968437": "lodydeals",
     "1005009120957437": "lodydeals",
     "1005005652871847": "aniscoupons",
-    "1005012554205120": "lodydeals",
+    "1005012554205120": "aniscoupons",
     "1005009234854371": "pcgamingpart",
     "1005008829227075": "pcgamingpart",
     "1005008901941749": "lodydeals",
@@ -4182,7 +4195,8 @@
     "Nail Scissors Set Household High End": "couponsglobal",
     "Baseus 30W Car Charger Dual Port USB Type-C Fast": "couponsglobal",
     "أحدث كوبونات وتخفيضات AliExpress": "lodydeals",
-    "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6": "aniscoupons"
+    "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6": "aniscoupons",
+    "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
