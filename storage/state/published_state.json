@@ -178,7 +178,8 @@
     "1005010167814251",
     "1005012113350943",
     "1005012415005884",
-    "1005008830684400"
+    "1005008830684400",
+    "1005006499712212"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -363,7 +364,8 @@
     "1005010167814251": 1791147347.3774981,
     "1005012113350943": 1791147353.0681367,
     "1005012415005884": 1791147368.3357995,
-    "1005008830684400": 1791150348.3326037
+    "1005008830684400": 1791150348.3326037,
+    "1005006499712212": 1791150646.4428236
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -565,7 +567,8 @@
     "Xprinter H10 Handheld POS Thermal",
     "realme 80W SUPERVOOC Charger",
     "OnePlus Turbo 6V  12/256GB",
-    "hair clipper hair and beard trimming"
+    "hair clipper hair and beard trimming",
+    "KZ Castor 2DD in Ear HiFi"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -770,7 +773,8 @@
     "Xprinter H10 Handheld POS Thermal": 1791147347.3774981,
     "realme 80W SUPERVOOC Charger": 1791147353.0681367,
     "OnePlus Turbo 6V  12/256GB": 1791147368.3357995,
-    "hair clipper hair and beard trimming": 1791150348.3326037
+    "hair clipper hair and beard trimming": 1791150348.3326037,
+    "KZ Castor 2DD in Ear HiFi": 1791150646.4428236
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1304,27 +1308,28 @@
     "megaphonna:8262",
     "megaphonna:8263",
     "lodydeals:45472",
-    "couponsglobal:48796"
+    "couponsglobal:48796",
+    "lodydeals:45473"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791150348.3326037,
+  "last_run_time": 1791150646.4428236,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32781,
-      "last_check_time": 1791150341.1951864
+      "last_check_time": 1791150651.2852077
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45472,
-      "last_check_time": 1791150338.888386
+      "last_message_id": 45473,
+      "last_check_time": 1791150648.4613683
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791150340.419163
+      "last_check_time": 1791150650.3372562
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1332,19 +1337,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791150340.0800228
+      "last_check_time": 1791150649.9626484
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791150339.2617605
+      "last_check_time": 1791150649.180248
     },
     "megaphonna": {
       "last_message_id": 8263,
-      "last_check_time": 1791150340.8200107
+      "last_check_time": 1791150650.7853606
     },
     "couponsglobal": {
       "last_message_id": 48796,
-      "last_check_time": 1791150350.3452373
+      "last_check_time": 1791150651.9761465
     }
   },
   "published_product_prices": {
@@ -1500,7 +1505,8 @@
     "1005010167814251": 139.9,
     "1005012113350943": 15.5,
     "1005012415005884": 299.3,
-    "1005008830684400": 1.0
+    "1005008830684400": 1.0,
+    "1005006499712212": 6.22
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3942,6 +3948,16 @@
       "price": 1.0,
       "timestamp": 1791150348.3326037,
       "status": "ACTIVE"
+    },
+    "lodydeals:45473": {
+      "channel_msg_id": 588,
+      "product_id": "1005006499712212",
+      "title": "KZ Castor 2DD in Ear HiFi",
+      "channel": "lodydeals",
+      "source_msg_id": 45473,
+      "price": 6.22,
+      "timestamp": 1791150646.4428236,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3950,7 +3966,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791150348.3368294,
+    "last_deal_post_time": 1791150646.4483025,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4120,7 +4136,8 @@
     "1005010167814251": "lodydeals",
     "1005012113350943": "lodydeals",
     "1005012415005884": "lodydeals",
-    "1005008830684400": "couponsglobal"
+    "1005008830684400": "couponsglobal",
+    "1005006499712212": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4301,7 +4318,8 @@
     "Xprinter H10 Handheld POS Thermal": "lodydeals",
     "realme 80W SUPERVOOC Charger": "lodydeals",
     "OnePlus Turbo 6V  12/256GB": "lodydeals",
-    "hair clipper hair and beard trimming": "couponsglobal"
+    "hair clipper hair and beard trimming": "couponsglobal",
+    "KZ Castor 2DD in Ear HiFi": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
