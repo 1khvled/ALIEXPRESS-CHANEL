@@ -1054,7 +1054,7 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32739,
-      "last_check_time": 1791077748.0052269
+      "last_check_time": 1791078043.4457471
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1062,11 +1062,11 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791077746.1210892
+      "last_check_time": 1791078041.6371524
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791077747.2195947
+      "last_check_time": 1791078042.689557
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1078,15 +1078,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38526,
-      "last_check_time": 1791077746.5124493
+      "last_check_time": 1791078042.025321
     },
     "megaphonna": {
       "last_message_id": 8239,
-      "last_check_time": 1791077747.603269
+      "last_check_time": 1791078043.0864778
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791077748.672464
+      "last_check_time": 1791078044.05096
     }
   },
   "published_product_prices": {
