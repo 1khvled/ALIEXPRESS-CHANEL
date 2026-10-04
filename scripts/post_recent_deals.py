@@ -40,6 +40,7 @@ CHANNELS = [
     "lodydeals",
     "zedstoreonline",
     "ECKSDEAL",
+    "Pcgamingpart",
     "BNDDEALS",
     "megaphonna",
     "aniscoupons",

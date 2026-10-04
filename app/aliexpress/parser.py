@@ -75,10 +75,13 @@ ALLOWED_CATEGORY_KEYWORDS_EN = [
     # Enthusiast brands
     "pulsar", "lamzu", "ninjutso", "sora", "maya", "thorn", "atlantis",
     "superlight", "g pro", "viper", "deathadder", "basilisk", "blackshark", "kraken",
-    # GPU / PC parts & Specs
-    "gpu", "graphics card", "video card", "vga", "apu", "amd", "bc 250", "bc-250", "bc250", "gddr6", "gddr5", "gddr",
+    # GPU / CPU / PC parts & Specs
+    "gpu", "graphics card", "video card", "vga", "apu", "cpu", "cpus", "processor", "processors",
+    "amd", "intel", "ryzen", "intel core", "core i3", "core i5", "core i7", "core i9", "i3", "i5", "i7", "i9",
+    "am4", "am5", "lga1700", "lga1200", "b450", "b550", "b650", "b760", "h610", "a520", "z790", "x670",
+    "bc 250", "bc-250", "bc250", "gddr6", "gddr5", "gddr",
     "256-bit", "256bit", "192bit", "128bit", "rtx", "gtx", "radeon", "rx", "ram", "ssd", "hdd", "nvme", "ddr4", "ddr5",
-    "gaming chair", "cooling", "cooler", "fan", "fans", "motherboard", "processor", "ryzen", "intel core",
+    "gaming chair", "cooling", "cooler", "fan", "fans", "motherboard", "motherboards", "mainboard",
     "120hz", "144hz", "165hz", "240hz", "ips", "oled", "amoled",
     "thermalright", "deepcool", "id-cooling", "arctic", "noctua", "nzxt", "lian li",
     # Thermal & Cooling supplies
@@ -128,8 +131,8 @@ ALLOWED_CATEGORY_KEYWORDS_AR = [
     "هاتف", "جوال", "موبايل", "تابلت", "لوحي", "ايباد", "آيباد",
     "ساعة", "ساعه", "ذكية", "سوار ذكي",
     "بلوتوث", "شاحن", "شواحن", "شحن سريع", "باور بانك", "باوربانك", "كابل", "كوابل", "كيبل", "كيابل", "سلك", "وصلة", "وصلات", "محول", "محولات", "كفر", "جراب", "حامل",
-    "سبيكر", "مايك", "كاميرا", "درون", "بروجكتر", "بروجكتور", "بروجيكتور", "لابتوب",
-    "لاسلكي", "وايرلس", "بي سي", "حاسوب", "كمبيوتر", "كارت شاشة", "كرت شاشة", "معالج", "رام", "رامات", "مذربورد", "لوحة ام",
+    "سبيكر", "مايك", "ميكروفون", "مايكروفون", "كاميرا", "درون", "بروجكتر", "بروجكتور", "بروجيكتور", "لابتوب",
+    "لاسلكي", "وايرلس", "بي سي", "حاسوب", "كمبيوتر", "كارت شاشة", "كرت شاشة", "معالج", "معالجات", "رام", "رامات", "مذربورد", "لوحة ام", "لوحة أم",
     "قرص صلب", "هارد ديسك", "فلاش ديسك", "فلاشة", "بطاقة ذاكرة", "كارت ميموار", "تخزين", "اس اس دي", "ان في ام اي", "ساتا",
     "مفك", "مفكات", "طقم مفكات", "أداة", "اداة", "أدوات", "ادوات", "دريل", "صيانة", "لحام", "كاوية لحام",
     "معجون حراري", "بوتي حراري", "وسادة حرارية", "تبريد", "تبريد مائي", "مروحة", "مراوح", "مشتت",
@@ -779,6 +782,11 @@ CATEGORY_MAPPINGS = {
     "كابل": ["cable", "cord"],
     "يد تحكم": ["gamepad", "controller"],
     "معالج": ["cpu", "processor", "ryzen", "intel"],
+    "مذربورد": ["motherboard", "mainboard"],
+    "لوحة ام": ["motherboard", "mainboard"],
+    "مايك": ["microphone", "mic"],
+    "ميكروفون": ["microphone", "mic"],
+    "مايكروفون": ["microphone", "mic"],
 }
 
 
