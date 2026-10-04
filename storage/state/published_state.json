@@ -1268,7 +1268,7 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32775,
-      "last_check_time": 1791138651.6135168
+      "last_check_time": 1791138935.249536
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1276,11 +1276,11 @@
     },
     "lodydeals": {
       "last_message_id": 45461,
-      "last_check_time": 1791138649.08607
+      "last_check_time": 1791138932.7069488
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791138650.7963347
+      "last_check_time": 1791138934.5046568
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1288,19 +1288,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791138650.4522228
+      "last_check_time": 1791138934.1405566
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791138649.7579184
+      "last_check_time": 1791138933.0858092
     },
     "megaphonna": {
       "last_message_id": 8259,
-      "last_check_time": 1791138651.1750574
+      "last_check_time": 1791138934.8435361
     },
     "couponsglobal": {
       "last_message_id": 48795,
-      "last_check_time": 1791138652.2515438
+      "last_check_time": 1791138935.7949903
     }
   },
   "published_product_prices": {
@@ -4195,5 +4195,8 @@
   ],
   "pinned_promo_events": {
     "Party Ready Sale / Choice Day_20261001": 505
-  }
+  },
+  "sent_promo_notifiers": [
+    "LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004"
+  ]
 }
