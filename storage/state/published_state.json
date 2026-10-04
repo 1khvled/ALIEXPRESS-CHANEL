@@ -180,7 +180,9 @@
     "1005012415005884",
     "1005008830684400",
     "1005006499712212",
-    "1005007076639821"
+    "1005007076639821",
+    "1005011653915422",
+    "1005007473024376"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -285,7 +287,7 @@
     "1005012554205120": 1791145541.318689,
     "1005008901941749": 1790973051.970508,
     "1005010178295650": 1791031559.2102907,
-    "1005006861002512": 1791032170.0482783,
+    "1005006861002512": 1791151259.5667012,
     "1005012285327063": 1791014763.6830645,
     "1005006581583862": 1791013842.0461159,
     "1005012816171978": 1791031841.1598868,
@@ -367,7 +369,9 @@
     "1005012415005884": 1791147368.3357995,
     "1005008830684400": 1791150348.3326037,
     "1005006499712212": 1791150646.4428236,
-    "1005007076639821": 1791150954.013484
+    "1005007076639821": 1791150954.013484,
+    "1005011653915422": 1791151270.6442711,
+    "1005007473024376": 1791151278.7237968
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -571,7 +575,10 @@
     "OnePlus Turbo 6V  12/256GB",
     "hair clipper hair and beard trimming",
     "KZ Castor 2DD in Ear HiFi",
-    "Fenvi FV-AX1801 AX1800 WiFi 6"
+    "Fenvi FV-AX1801 AX1800 WiFi 6",
+    "300Mbps  WIFi Repeater",
+    "5pcs Manicure and Pedicure Kit  Includes Nail Clipper",
+    "Lenovo XT62 Earphones Bluetooth"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -778,7 +785,10 @@
     "OnePlus Turbo 6V  12/256GB": 1791147368.3357995,
     "hair clipper hair and beard trimming": 1791150348.3326037,
     "KZ Castor 2DD in Ear HiFi": 1791150646.4428236,
-    "Fenvi FV-AX1801 AX1800 WiFi 6": 1791150954.013484
+    "Fenvi FV-AX1801 AX1800 WiFi 6": 1791150954.013484,
+    "300Mbps  WIFi Repeater": 1791151259.5667012,
+    "5pcs Manicure and Pedicure Kit  Includes Nail Clipper": 1791151270.6442711,
+    "Lenovo XT62 Earphones Bluetooth": 1791151278.7237968
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1314,27 +1324,30 @@
     "lodydeals:45472",
     "couponsglobal:48796",
     "lodydeals:45473",
-    "lodydeals:45474"
+    "lodydeals:45474",
+    "lodydeals:45475",
+    "couponsglobal:48797",
+    "couponsglobal:48798"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791150954.013484,
+  "last_run_time": 1791151278.7237968,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32781,
-      "last_check_time": 1791150958.9060192
+      "last_check_time": 1791151264.4481416
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45474,
-      "last_check_time": 1791150956.0290456
+      "last_message_id": 45475,
+      "last_check_time": 1791151261.5819902
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791150957.9631524
+      "last_check_time": 1791151263.5009167
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1342,19 +1355,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791150957.5935013
+      "last_check_time": 1791151263.0435264
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791150956.74372
+      "last_check_time": 1791151262.28063
     },
     "megaphonna": {
       "last_message_id": 8263,
-      "last_check_time": 1791150958.408341
+      "last_check_time": 1791151263.9517946
     },
     "couponsglobal": {
-      "last_message_id": 48796,
-      "last_check_time": 1791150959.5937128
+      "last_message_id": 48798,
+      "last_check_time": 1791151280.7374027
     }
   },
   "published_product_prices": {
@@ -1439,7 +1452,7 @@
     "1005005652871847": 3.7,
     "1005012554205120": 7.22,
     "1005008901941749": 1.2,
-    "1005006861002512": 3.39,
+    "1005006861002512": 13.56,
     "1005012285327063": 19.5,
     "1005006581583862": 25.0,
     "1005012816171978": 273.46,
@@ -1512,7 +1525,9 @@
     "1005012415005884": 299.3,
     "1005008830684400": 1.0,
     "1005006499712212": 6.22,
-    "1005007076639821": 16.27
+    "1005007076639821": 16.27,
+    "1005011653915422": 1.0,
+    "1005007473024376": 1.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3974,6 +3989,36 @@
       "price": 16.27,
       "timestamp": 1791150954.013484,
       "status": "ACTIVE"
+    },
+    "lodydeals:45475": {
+      "channel_msg_id": 590,
+      "product_id": "1005006861002512",
+      "title": "300Mbps  WIFi Repeater",
+      "channel": "lodydeals",
+      "source_msg_id": 45475,
+      "price": 13.56,
+      "timestamp": 1791151259.5667012,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48797": {
+      "channel_msg_id": 591,
+      "product_id": "1005011653915422",
+      "title": "5pcs Manicure and Pedicure Kit  Includes Nail Clipper",
+      "channel": "couponsglobal",
+      "source_msg_id": 48797,
+      "price": 1.0,
+      "timestamp": 1791151270.6442711,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48798": {
+      "channel_msg_id": 592,
+      "product_id": "1005007473024376",
+      "title": "Lenovo XT62 Earphones Bluetooth",
+      "channel": "couponsglobal",
+      "source_msg_id": 48798,
+      "price": 1.0,
+      "timestamp": 1791151278.7237968,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3982,7 +4027,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791150954.019008,
+    "last_deal_post_time": 1791151278.7292523,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4073,7 +4118,7 @@
     "1005008829227075": "pcgamingpart",
     "1005008901941749": "lodydeals",
     "1005012881256093": "aniscoupons",
-    "1005006861002512": "couponsglobal",
+    "1005006861002512": "lodydeals",
     "1005012285327063": "aniscoupons",
     "1005006581583862": "aniscoupons",
     "1005012816171978": "lodydeals",
@@ -4154,7 +4199,9 @@
     "1005012415005884": "lodydeals",
     "1005008830684400": "couponsglobal",
     "1005006499712212": "lodydeals",
-    "1005007076639821": "lodydeals"
+    "1005007076639821": "lodydeals",
+    "1005011653915422": "couponsglobal",
+    "1005007473024376": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4337,7 +4384,10 @@
     "OnePlus Turbo 6V  12/256GB": "lodydeals",
     "hair clipper hair and beard trimming": "couponsglobal",
     "KZ Castor 2DD in Ear HiFi": "lodydeals",
-    "Fenvi FV-AX1801 AX1800 WiFi 6": "lodydeals"
+    "Fenvi FV-AX1801 AX1800 WiFi 6": "lodydeals",
+    "300Mbps  WIFi Repeater": "lodydeals",
+    "5pcs Manicure and Pedicure Kit  Includes Nail Clipper": "couponsglobal",
+    "Lenovo XT62 Earphones Bluetooth": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
