@@ -270,7 +270,7 @@
     "1005009390995992": 1791013541.4254196,
     "1005006196428484": 1791026745.7640984,
     "1005012390398338": 1791027348.2517543,
-    "1005012297674623": 1791014145.8727648,
+    "1005012297674623": 1791103551.065819,
     "1005013152491360": 1791098743.198129,
     "1005007097205322": 1791014755.488723,
     "1005010470699571": 1791015054.3845687,
@@ -482,7 +482,8 @@
     "Honor 600 lite (8/256)",
     "ATTACK SHARK G300",
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones",
-    "Toocki 25W GaN Charger"
+    "Toocki 25W GaN Charger",
+    "Baseus Bowie E5x"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -650,7 +651,8 @@
     "Honor 600 lite (8/256)": 1791057346.9236152,
     "ATTACK SHARK G300": 1791098743.198129,
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": 1791101144.9729881,
-    "Toocki 25W GaN Charger": 1791102050.1835058
+    "Toocki 25W GaN Charger": 1791102050.1835058,
+    "Baseus Bowie E5x": 1791103551.065819
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1068,15 +1070,16 @@
     "aniscoupons:32745",
     "aniscoupons:32746",
     "aniscoupons:32747",
-    "aniscoupons:32748"
+    "aniscoupons:32748",
+    "aniscoupons:32749"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791102355.4991398,
+  "last_run_time": 1791103551.065819,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32748,
-      "last_check_time": 1791103238.28812
+      "last_message_id": 32749,
+      "last_check_time": 1791103553.0792208
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1084,11 +1087,11 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791103233.4713867
+      "last_check_time": 1791103542.6312249
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791103234.3668265
+      "last_check_time": 1791103543.8112981
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1100,15 +1103,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38526,
-      "last_check_time": 1791103233.7632868
+      "last_check_time": 1791103543.026662
     },
     "megaphonna": {
       "last_message_id": 8242,
-      "last_check_time": 1791103234.665559
+      "last_check_time": 1791103544.2168996
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791103238.8080971
+      "last_check_time": 1791103554.2041454
     }
   },
   "published_product_prices": {
@@ -1203,7 +1206,7 @@
     "1005009390995992": 34.9,
     "1005006196428484": 7.09,
     "1005012390398338": 5.09,
-    "1005012297674623": 21.6,
+    "1005012297674623": 6.89,
     "1005007097205322": 15.1,
     "1005010470699571": 24.56,
     "1005012741634118": 29.0,
@@ -3126,6 +3129,16 @@
       "price": 4.19,
       "timestamp": 1791102355.4991398,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32749": {
+      "channel_msg_id": 529,
+      "product_id": "1005012297674623",
+      "title": "Baseus Bowie E5x",
+      "channel": "aniscoupons",
+      "source_msg_id": 32749,
+      "price": 6.89,
+      "timestamp": 1791103551.065819,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3134,7 +3147,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791102355.503429,
+    "last_deal_post_time": 1791103551.0702925,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3235,7 +3248,7 @@
     "1005009390995992": "aniscoupons",
     "1005006196428484": "lodydeals",
     "1005012390398338": "lodydeals",
-    "1005012297674623": "bnddeals",
+    "1005012297674623": "aniscoupons",
     "1005007097205322": "bnddeals",
     "1005010470699571": "aniscoupons",
     "1005012741634118": "aniscoupons",
@@ -3421,7 +3434,8 @@
     "HONOR 600 PRO (12/256)": "megaphonna",
     "ATTACK SHARK G300": "megaphonna",
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": "aniscoupons",
-    "Toocki 25W GaN Charger": "aniscoupons"
+    "Toocki 25W GaN Charger": "aniscoupons",
+    "Baseus Bowie E5x": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
