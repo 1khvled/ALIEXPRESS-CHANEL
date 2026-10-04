@@ -376,7 +376,9 @@ async def publish_extracted_deal_to_france(
         if not local_img_file and extracted.coupon_list:
             local_img_file = media_renderer.render_coupon_bulletin_card(
                 extracted.coupon_list,
-                promo_title="Party Ready Sale"
+                promo_title="Choice Day",
+                channel_handle="@francedealsdz",
+                is_french=True
             )
     elif img_url:
         downloaded = await media_downloader.download_image(img_url, extracted.product_id)
@@ -715,7 +717,9 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                     if not local_img_file and extracted.coupon_list:
                         local_img_file = media_renderer.render_coupon_bulletin_card(
                             extracted.coupon_list,
-                            promo_title="Party Ready Sale"
+                            promo_title="Choice Day",
+                            channel_handle="@francedealsdz",
+                            is_french=True
                         )
                 elif img_url:
                     downloaded = await media_downloader.download_image(img_url, extracted.product_id)

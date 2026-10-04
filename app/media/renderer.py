@@ -224,7 +224,7 @@ class MediaRenderer:
         self,
         coupon_list: List[Dict[str, str]],
         promo_title: str = "Choice Day",
-        channel_handle: str = "@DzAliexpress0",
+        channel_handle: Optional[str] = None,
         is_french: bool = False,
         date_range_str: Optional[str] = None
     ) -> Path:
@@ -233,6 +233,50 @@ class MediaRenderer:
         Guarantees coupon bulletin posts always have a professional graphic attached.
         """
         import hashlib
+        if not channel_handle:
+            channel_handle = "@francedealsdz" if is_french else "@DzAliexpress0"
+        elif is_french and channel_handle == "@DzAliexpress0":
+            channel_handle = "@francedealsdz"
+
+        template_path = Path(settings.BASE_DIR) / "storage" / "assets" / "choice_day_coupon_template.png"
+        if template_path.exists():
+            try:
+                if not coupon_list:
+                    return template_path
+
+                card = Image.open(template_path).convert("RGBA")
+                draw = ImageDraw.Draw(card)
+                try:
+                    font_amount = ImageFont.truetype("arialbd.ttf", 32)
+                    font_code = ImageFont.truetype("arialbd.ttf", 38)
+                    font_footer = ImageFont.truetype("arialbd.ttf", 24)
+                except Exception:
+                    font_amount = font_code = font_footer = ImageFont.load_default()
+
+                row_y_centers = [481, 581, 681, 780, 880, 980, 1080]
+                for idx, c in enumerate(coupon_list[:7]):
+                    cy = row_y_centers[idx]
+                    tier_raw = str(c.get("tier", "")).strip()
+                    code_raw = str(c.get("code", "")).strip().upper()
+
+                    if is_french:
+                        tier_text = tier_raw if "€" in tier_raw else f"{tier_raw}€"
+                    else:
+                        tier_text = tier_raw if "$" in tier_raw else f"{tier_raw}$"
+
+                    draw.text((285, cy + 12), tier_text, fill=(255, 255, 255), font=font_amount, anchor="mm")
+                    draw.text((967, cy), code_raw, fill=(251, 191, 36), font=font_code, anchor="mm")
+
+                draw.text((340, 1180), channel_handle, fill=(255, 255, 255), font=font_footer, anchor="lm")
+                draw.text((860, 1180), "@Alilo07BOT", fill=(255, 255, 255), font=font_footer, anchor="lm")
+
+                h_sig = hashlib.sha256(str(coupon_list).encode()).hexdigest()[:8]
+                out_file = self.output_dir / f"coupons_card_{h_sig}_{'fr' if is_french else 'dz'}.png"
+                card.save(out_file, "PNG")
+                return out_file
+            except Exception as te:
+                logger.warning(f"Template rendering failed, falling back to generated card: {te}")
+
         w, h = 1080, 1080
         card = Image.new("RGB", (w, h), (18, 20, 32))
         draw = ImageDraw.Draw(card)
