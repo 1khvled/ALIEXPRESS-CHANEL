@@ -319,7 +319,7 @@
     "1005008144734940": 1791032158.6801872,
     "1005006443158717": 1791032177.1222703,
     "1005012492244291": 1791035151.8836284,
-    "1005008522983211": 1791035458.4959302,
+    "1005008522983211": 1791144981.285681,
     "1005011734677486": 1791038145.1521833,
     "1005008414973716": 1791125437.8944824,
     "1005010706783496": 1791043842.6639822,
@@ -701,7 +701,7 @@
     "Mini Laser Rangefinder 30M High Precision": 1791032177.1222703,
     "Men’s Oxford Fabric Sling Crossbody Bag": 1791033345.3970714,
     "ONEPLUS TURBO 6X 5G": 1791035151.8836284,
-    "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": 1791035458.4959302,
+    "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": 1791144981.285681,
     "️ POCO X6 Pro (12/256)": 1791037857.3485136,
     "LENOVO LE257": 1791038145.1521833,
     "Lenovo XT53": 1791038753.5097415,
@@ -1267,15 +1267,16 @@
     "lodydeals:45461",
     "megaphonna:8260",
     "megaphonna:8261",
-    "aniscoupons:32776"
+    "aniscoupons:32776",
+    "aniscoupons:32777"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791144648.6951094,
+  "last_run_time": 1791144981.285681,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32776,
-      "last_check_time": 1791144650.7098682
+      "last_message_id": 32777,
+      "last_check_time": 1791144983.300756
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1283,11 +1284,11 @@
     },
     "lodydeals": {
       "last_message_id": 45461,
-      "last_check_time": 1791144642.8732677
+      "last_check_time": 1791144975.4287035
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791144644.2838094
+      "last_check_time": 1791144977.1653643
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1295,19 +1296,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791144643.9323475
+      "last_check_time": 1791144976.650291
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791144643.2459774
+      "last_check_time": 1791144975.8175104
     },
     "megaphonna": {
       "last_message_id": 8261,
-      "last_check_time": 1791144644.639893
+      "last_check_time": 1791144977.541769
     },
     "couponsglobal": {
       "last_message_id": 48795,
-      "last_check_time": 1791144651.5425901
+      "last_check_time": 1791144984.1658049
     }
   },
   "published_product_prices": {
@@ -3821,6 +3822,16 @@
       "price": 23.15,
       "timestamp": 1791144648.6951094,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32777": {
+      "channel_msg_id": 580,
+      "product_id": "1005008522983211",
+      "title": "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem",
+      "channel": "aniscoupons",
+      "source_msg_id": 32777,
+      "price": 15.6,
+      "timestamp": 1791144981.285681,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3829,7 +3840,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791144648.7004244,
+    "last_deal_post_time": 1791144981.290973,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
