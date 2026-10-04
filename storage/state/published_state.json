@@ -155,7 +155,8 @@
     "1005011925142821",
     "9998883864",
     "1005010536089199",
-    "1005012385221205"
+    "1005012385221205",
+    "1005013223462188"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -200,7 +201,7 @@
     "1005009357018019": 1790940383.4974926,
     "1005012436000251": 1790941160.7696626,
     "1005006750448278": 1790941167.9296343,
-    "1005012184442621": 1790941174.1965158,
+    "1005012184442621": 1791103856.6825738,
     "1005006631309573": 1791027645.512462,
     "1005005648888450": 1790941186.791633,
     "1005006117094928": 1790941202.9035249,
@@ -317,7 +318,8 @@
     "1005011925142821": 1791057346.9236152,
     "9998883864": 1791063864.5866926,
     "1005010536089199": 1791101144.9729881,
-    "1005012385221205": 1791102050.1835058
+    "1005012385221205": 1791102050.1835058,
+    "1005013223462188": 1791103847.2554617
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -483,7 +485,9 @@
     "ATTACK SHARK G300",
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones",
     "Toocki 25W GaN Charger",
-    "Baseus Bowie E5x"
+    "Baseus Bowie E5x",
+    "Rechargeable RC Drift Racing Car",
+    "Zeblaze Btalk PRO"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -652,7 +656,9 @@
     "ATTACK SHARK G300": 1791098743.198129,
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": 1791101144.9729881,
     "Toocki 25W GaN Charger": 1791102050.1835058,
-    "Baseus Bowie E5x": 1791103551.065819
+    "Baseus Bowie E5x": 1791103551.065819,
+    "Rechargeable RC Drift Racing Car": 1791103847.2554617,
+    "Zeblaze Btalk PRO": 1791103856.6825738
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1071,15 +1077,20 @@
     "aniscoupons:32746",
     "aniscoupons:32747",
     "aniscoupons:32748",
-    "aniscoupons:32749"
+    "aniscoupons:32749",
+    "pcgamingpart:7936",
+    "pcgamingpart:7937",
+    "pcgamingpart:7938",
+    "pcgamingpart:7939",
+    "aniscoupons:32750"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791103551.065819,
+  "last_run_time": 1791103856.6825738,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32749,
-      "last_check_time": 1791103553.0792208
+      "last_message_id": 32750,
+      "last_check_time": 1791103858.6950448
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1087,31 +1098,31 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791103542.6312249
+      "last_check_time": 1791103840.3828483
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791103543.8112981
+      "last_check_time": 1791103852.2733297
     },
     "test_channel": {
       "last_message_id": 1791063864,
       "last_check_time": 1791063864.5866926
     },
     "pcgamingpart": {
-      "last_message_id": 7936,
-      "last_check_time": 1790937548.9389005
+      "last_message_id": 7939,
+      "last_check_time": 1791103851.5635202
     },
     "zedstoreonline": {
       "last_message_id": 38526,
-      "last_check_time": 1791103543.026662
+      "last_check_time": 1791103840.7985988
     },
     "megaphonna": {
       "last_message_id": 8242,
-      "last_check_time": 1791103544.2168996
+      "last_check_time": 1791103852.6802413
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791103554.2041454
+      "last_check_time": 1791103859.7474542
     }
   },
   "published_product_prices": {
@@ -1153,7 +1164,7 @@
     "1005009357018019": 17.5,
     "1005012436000251": 103.39,
     "1005006750448278": 3.69,
-    "1005012184442621": 12.35,
+    "1005012184442621": 11.15,
     "1005006631309573": 2.55,
     "1005005648888450": 10.09,
     "1005010178295650": 4.62,
@@ -1247,7 +1258,8 @@
     "1005009497821240": 4.69,
     "1005011925142821": 270.9,
     "1005010536089199": 34.4,
-    "1005012385221205": 13.27
+    "1005012385221205": 13.27,
+    "1005013223462188": 13.47
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -3139,6 +3151,26 @@
       "price": 6.89,
       "timestamp": 1791103551.065819,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7937": {
+      "channel_msg_id": 530,
+      "product_id": "1005013223462188",
+      "title": "Rechargeable RC Drift Racing Car",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7937,
+      "price": 13.47,
+      "timestamp": 1791103847.2554617,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32750": {
+      "channel_msg_id": 531,
+      "product_id": "1005012184442621",
+      "title": "Zeblaze Btalk PRO",
+      "channel": "aniscoupons",
+      "source_msg_id": 32750,
+      "price": 11.15,
+      "timestamp": 1791103856.6825738,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3147,7 +3179,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791103551.0702925,
+    "last_deal_post_time": 1791103856.6869538,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3164,7 +3196,7 @@
     "1005012143831265": "aniscoupons",
     "1005012436000251": "lodydeals",
     "1005006750448278": "lodydeals",
-    "1005012184442621": "lodydeals",
+    "1005012184442621": "aniscoupons",
     "1005006631309573": "lodydeals",
     "1005005648888450": "lodydeals",
     "1005010178295650": "couponsglobal",
@@ -3292,7 +3324,8 @@
     "1005011925142821": "aniscoupons",
     "9998883864": "test_channel",
     "1005010536089199": "aniscoupons",
-    "1005012385221205": "aniscoupons"
+    "1005012385221205": "aniscoupons",
+    "1005013223462188": "pcgamingpart"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3435,7 +3468,9 @@
     "ATTACK SHARK G300": "megaphonna",
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": "aniscoupons",
     "Toocki 25W GaN Charger": "aniscoupons",
-    "Baseus Bowie E5x": "aniscoupons"
+    "Baseus Bowie E5x": "aniscoupons",
+    "Rechargeable RC Drift Racing Car": "pcgamingpart",
+    "Zeblaze Btalk PRO": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
