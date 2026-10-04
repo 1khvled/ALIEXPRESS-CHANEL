@@ -184,7 +184,8 @@
     "1005011653915422",
     "1005007473024376",
     "1005005902976406",
-    "1005006996130042"
+    "1005006996130042",
+    "1005013052800596"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -375,7 +376,8 @@
     "1005011653915422": 1791151270.6442711,
     "1005007473024376": 1791151278.7237968,
     "1005005902976406": 1791152146.3442965,
-    "1005006996130042": 1791153956.1367443
+    "1005006996130042": 1791153956.1367443,
+    "1005013052800596": 1791156089.0187185
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -586,7 +588,8 @@
     "ENCHEN Blackstone Electrical Rotary Shaver",
     "Samsung 45W PD Charger Super Fast Charging",
     "Men Watch, Fashion Quartz Wristwatch",
-    "Philips New EDC Portable Flashlight Rechargeable"
+    "Philips New EDC Portable Flashlight Rechargeable",
+    "Rocoren 100W Type-C to USB Fast Charging"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -800,7 +803,8 @@
     "ENCHEN Blackstone Electrical Rotary Shaver": 1791152146.3442965,
     "Samsung 45W PD Charger Super Fast Charging": 1791152444.7701666,
     "Men Watch, Fashion Quartz Wristwatch": 1791153345.9204953,
-    "Philips New EDC Portable Flashlight Rechargeable": 1791153956.1367443
+    "Philips New EDC Portable Flashlight Rechargeable": 1791153956.1367443,
+    "Rocoren 100W Type-C to USB Fast Charging": 1791156089.0187185
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1344,15 +1348,18 @@
     "couponsglobal:48800",
     "couponsglobal:48801",
     "couponsglobal:48802",
-    "couponsglobal:48803"
+    "couponsglobal:48803",
+    "aniscoupons:32782",
+    "couponsglobal:48804",
+    "couponsglobal:48805"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791153956.1367443,
+  "last_run_time": 1791156089.0187185,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32781,
-      "last_check_time": 1791155747.5945532
+      "last_message_id": 32782,
+      "last_check_time": 1791156080.8894813
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1360,11 +1367,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791155745.0780675
+      "last_check_time": 1791156078.6061823
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791155746.7249608
+      "last_check_time": 1791156080.0520937
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1372,19 +1379,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791155746.2705011
+      "last_check_time": 1791156079.705438
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791155745.4783216
+      "last_check_time": 1791156078.9787762
     },
     "megaphonna": {
       "last_message_id": 8263,
-      "last_check_time": 1791155747.1576114
+      "last_check_time": 1791156080.4824555
     },
     "couponsglobal": {
-      "last_message_id": 48803,
-      "last_check_time": 1791155748.3884687
+      "last_message_id": 48805,
+      "last_check_time": 1791156095.1688547
     }
   },
   "published_product_prices": {
@@ -1546,7 +1553,8 @@
     "1005011653915422": 1.0,
     "1005007473024376": 1.0,
     "1005005902976406": 1.0,
-    "1005006996130042": 1.0
+    "1005006996130042": 1.0,
+    "1005013052800596": 1.28
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -4078,6 +4086,16 @@
       "price": 1.0,
       "timestamp": 1791153956.1367443,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48804": {
+      "channel_msg_id": 597,
+      "product_id": "1005013052800596",
+      "title": "Rocoren 100W Type-C to USB Fast Charging",
+      "channel": "couponsglobal",
+      "source_msg_id": 48804,
+      "price": 1.28,
+      "timestamp": 1791156089.0187185,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4086,7 +4104,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791153956.1422002,
+    "last_deal_post_time": 1791156089.0241547,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4262,7 +4280,8 @@
     "1005011653915422": "couponsglobal",
     "1005007473024376": "couponsglobal",
     "1005005902976406": "couponsglobal",
-    "1005006996130042": "couponsglobal"
+    "1005006996130042": "couponsglobal",
+    "1005013052800596": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4452,7 +4471,8 @@
     "ENCHEN Blackstone Electrical Rotary Shaver": "couponsglobal",
     "Samsung 45W PD Charger Super Fast Charging": "couponsglobal",
     "Men Watch, Fashion Quartz Wristwatch": "couponsglobal",
-    "Philips New EDC Portable Flashlight Rechargeable": "couponsglobal"
+    "Philips New EDC Portable Flashlight Rechargeable": "couponsglobal",
+    "Rocoren 100W Type-C to USB Fast Charging": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
