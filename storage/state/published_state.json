@@ -156,7 +156,8 @@
     "9998883864",
     "1005010536089199",
     "1005012385221205",
-    "1005013223462188"
+    "1005013223462188",
+    "1005007279793099"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -190,7 +191,7 @@
     "1005007458827229": 1790888886.4062796,
     "1005008852027824": 1790888909.743846,
     "9998888981": 1790888981.6873999,
-    "1005005217734986": 1790937548.9389005,
+    "1005005217734986": 1791104047.0967803,
     "1005010062128237": 1790937566.337433,
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
@@ -199,7 +200,7 @@
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
-    "1005012436000251": 1790941160.7696626,
+    "1005012436000251": 1791104054.392151,
     "1005006750448278": 1790941167.9296343,
     "1005012184442621": 1791103856.6825738,
     "1005006631309573": 1791027645.512462,
@@ -319,7 +320,8 @@
     "9998883864": 1791063864.5866926,
     "1005010536089199": 1791101144.9729881,
     "1005012385221205": 1791102050.1835058,
-    "1005013223462188": 1791103847.2554617
+    "1005013223462188": 1791103847.2554617,
+    "1005007279793099": 1791104060.2548923
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -487,7 +489,9 @@
     "Toocki 25W GaN Charger",
     "Baseus Bowie E5x",
     "Rechargeable RC Drift Racing Car",
-    "Zeblaze Btalk PRO"
+    "Zeblaze Btalk PRO",
+    "AMD Ryzen 5 7600X USED R5 7600X",
+    "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -524,7 +528,7 @@
     "OnePlus Turbo 6X Pro 5G": 1790888928.6181495,
     "Xiaomi Pad 7  12/256GB": 1790897106.449474,
     "ATTACK SHARK L90 Flodable Gaming Headset": 1790937542.235978,
-    "SomnAmbulist SSD  120GB": 1790937548.9389005,
+    "SomnAmbulist SSD  120GB": 1791104047.0967803,
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
@@ -658,7 +662,9 @@
     "Toocki 25W GaN Charger": 1791102050.1835058,
     "Baseus Bowie E5x": 1791103551.065819,
     "Rechargeable RC Drift Racing Car": 1791103847.2554617,
-    "Zeblaze Btalk PRO": 1791103856.6825738
+    "Zeblaze Btalk PRO": 1791103856.6825738,
+    "AMD Ryzen 5 7600X USED R5 7600X": 1791104054.392151,
+    "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,": 1791104060.2548923
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1082,15 +1088,19 @@
     "pcgamingpart:7937",
     "pcgamingpart:7938",
     "pcgamingpart:7939",
-    "aniscoupons:32750"
+    "aniscoupons:32750",
+    "pcgamingpart:7940",
+    "pcgamingpart:7941",
+    "pcgamingpart:7942",
+    "pcgamingpart:7943"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791103856.6825738,
+  "last_run_time": 1791104060.2548923,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32750,
-      "last_check_time": 1791103858.6950448
+      "last_check_time": 1791104063.4877846
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1098,31 +1108,31 @@
     },
     "lodydeals": {
       "last_message_id": 45454,
-      "last_check_time": 1791103840.3828483
+      "last_check_time": 1791104043.1793072
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791103852.2733297
+      "last_check_time": 1791104062.7468786
     },
     "test_channel": {
       "last_message_id": 1791063864,
       "last_check_time": 1791063864.5866926
     },
     "pcgamingpart": {
-      "last_message_id": 7939,
-      "last_check_time": 1791103851.5635202
+      "last_message_id": 7943,
+      "last_check_time": 1791104062.2646105
     },
     "zedstoreonline": {
       "last_message_id": 38526,
-      "last_check_time": 1791103840.7985988
+      "last_check_time": 1791104043.5206945
     },
     "megaphonna": {
       "last_message_id": 8242,
-      "last_check_time": 1791103852.6802413
+      "last_check_time": 1791104063.1695106
     },
     "couponsglobal": {
       "last_message_id": 48780,
-      "last_check_time": 1791103859.7474542
+      "last_check_time": 1791104063.9928837
     }
   },
   "published_product_prices": {
@@ -1136,7 +1146,7 @@
     "1005009627597591": 314.9,
     "1005008880082336": 22.7,
     "1005007275142457": 24.2,
-    "1005007279793099": 14.1,
+    "1005007279793099": 14.12,
     "1005008829227075": 25.06,
     "100500777666555": 20.0,
     "1005011778621042": 124.99,
@@ -1162,7 +1172,7 @@
     "1005009734653254": 67.0,
     "1005008333859881": 20.47,
     "1005009357018019": 17.5,
-    "1005012436000251": 103.39,
+    "1005012436000251": 104.99,
     "1005006750448278": 3.69,
     "1005012184442621": 11.15,
     "1005006631309573": 2.55,
@@ -3171,6 +3181,36 @@
       "price": 11.15,
       "timestamp": 1791103856.6825738,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7941": {
+      "channel_msg_id": 532,
+      "product_id": "1005005217734986",
+      "title": "SomnAmbulist SSD  120GB",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7941,
+      "price": 9.61,
+      "timestamp": 1791104047.0967803,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7942": {
+      "channel_msg_id": 533,
+      "product_id": "1005012436000251",
+      "title": "AMD Ryzen 5 7600X USED R5 7600X",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7942,
+      "price": 104.99,
+      "timestamp": 1791104054.392151,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7943": {
+      "channel_msg_id": 534,
+      "product_id": "1005007279793099",
+      "title": "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7943,
+      "price": 14.12,
+      "timestamp": 1791104060.2548923,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3179,7 +3219,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791103856.6869538,
+    "last_deal_post_time": 1791104060.2584078,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -3194,7 +3234,7 @@
     "1005008333859881": "bnddeals",
     "1005009357018019": "bnddeals",
     "1005012143831265": "aniscoupons",
-    "1005012436000251": "lodydeals",
+    "1005012436000251": "pcgamingpart",
     "1005006750448278": "lodydeals",
     "1005012184442621": "aniscoupons",
     "1005006631309573": "lodydeals",
@@ -3248,7 +3288,7 @@
     "9998887994": "test_channel",
     "9998888899": "test_channel",
     "9998889674": "test_channel",
-    "1005007279793099": "aniscoupons",
+    "1005007279793099": "pcgamingpart",
     "1005005824280128": "aniscoupons",
     "1005012407874415": "megaphonna",
     "1005006533038973": "aniscoupons",
@@ -3325,7 +3365,8 @@
     "9998883864": "test_channel",
     "1005010536089199": "aniscoupons",
     "1005012385221205": "aniscoupons",
-    "1005013223462188": "pcgamingpart"
+    "1005013223462188": "pcgamingpart",
+    "1005005217734986": "pcgamingpart"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -3470,7 +3511,10 @@
     "Toocki 25W GaN Charger": "aniscoupons",
     "Baseus Bowie E5x": "aniscoupons",
     "Rechargeable RC Drift Racing Car": "pcgamingpart",
-    "Zeblaze Btalk PRO": "aniscoupons"
+    "Zeblaze Btalk PRO": "aniscoupons",
+    "SomnAmbulist SSD  120GB": "pcgamingpart",
+    "AMD Ryzen 5 7600X USED R5 7600X": "pcgamingpart",
+    "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,": "pcgamingpart"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
