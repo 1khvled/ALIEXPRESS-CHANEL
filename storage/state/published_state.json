@@ -1360,7 +1360,7 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32782,
-      "last_check_time": 1791156346.4239724
+      "last_check_time": 1791156642.0286083
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1368,11 +1368,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791156344.0185015
+      "last_check_time": 1791156639.97628
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791156345.5462537
+      "last_check_time": 1791156641.2923632
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1380,19 +1380,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791156345.1543517
+      "last_check_time": 1791156640.9936614
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791156344.3950663
+      "last_check_time": 1791156640.3224123
     },
     "megaphonna": {
       "last_message_id": 8264,
-      "last_check_time": 1791156345.9959626
+      "last_check_time": 1791156641.6508813
     },
     "couponsglobal": {
       "last_message_id": 48805,
-      "last_check_time": 1791156347.1202524
+      "last_check_time": 1791156642.576243
     }
   },
   "published_product_prices": {
