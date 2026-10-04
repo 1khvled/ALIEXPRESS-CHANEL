@@ -1,25 +1,25 @@
 {
   "published_post_keys": [
-    "francecp:419",
-    "francecp:413",
-    "alifrdrop:102",
-    "francecp:418",
-    "alifrdrop:106",
-    "francecp:420",
-    "francecp:416",
-    "francecp:414",
     "alifrdrop:104",
     "alifrdrop:105",
+    "francecp:414",
+    "alifrdrop:102",
     "francecp:417",
+    "francecp:413",
+    "francecp:418",
     "alifrdrop:103",
-    "francecp:415"
+    "francecp:420",
+    "francecp:415",
+    "alifrdrop:106",
+    "francecp:416",
+    "francecp:419"
   ],
   "published_product_ids": [
-    "1005012218291528",
+    "1005012589045044",
     "1005009977303549",
     "1005012155835323",
     "1005012541048117",
-    "1005012589045044"
+    "1005012218291528"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -69,7 +69,7 @@
       "last_check_time": 1790836790.2576432
     }
   },
-  "last_run_time": 1791082852.464514,
+  "last_run_time": 1791083147.2713804,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001"
   ],
