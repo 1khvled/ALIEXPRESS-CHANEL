@@ -102,3 +102,45 @@ def test_kz_earphones_controllers_and_keyboards_compatibility():
     )
     assert score_mismatch == 0.0
 
+def test_ugreen_webcam_ajazz_mchose_logitech():
+    from app.aliexpress.parser import is_allowed_category
+
+    # Category checks
+    ok1, _ = is_allowed_category("UGREEN 1080P Webcam 8MP for PC", "كاميرا ويب احترافية للكمبيوتر")
+    assert ok1 is True
+
+    ok2, _ = is_allowed_category("ماوس Ajazz AJ159 Apex", "ماوس جيمنج لاسلكي خفيف")
+    assert ok2 is True
+
+    ok3, _ = is_allowed_category("Mchose AX5 Pro Max Mouse", "ماوس مغنيسيوم لاسلكي")
+    assert ok3 is True
+
+    ok4, _ = is_allowed_category("Logitech G Pro X Superlight 2", "ماوس لوجيتك احترافي")
+    assert ok4 is True
+
+    # Title compatibility checks
+    score_webcam = compute_title_compatibility(
+        "كاميرا ويب UGREEN 1080P Webcam 8MP for PC",
+        "UGREEN 1080P 60FPS Webcam with Dual Microphone 8MP AutoFocus for PC Laptop"
+    )
+    assert score_webcam >= 0.4
+
+    score_ajazz = compute_title_compatibility(
+        "ماوس اجاز Ajazz AJ159 Apex",
+        "AJAZZ AJ159 APEX Wireless Gaming Mouse PAW3950 8K Polling Rate"
+    )
+    assert score_ajazz >= 0.4
+
+    score_mchose = compute_title_compatibility(
+        "ماوس امشوز Mchose AX5 Pro Max",
+        "MCHOSE AX5 Wireless Gaming Mouse Magnesium Alloy Tri-Mode 8K"
+    )
+    assert score_mchose >= 0.4
+
+    score_logi = compute_title_compatibility(
+        "كيبورد لوجيتك Logitech G Pro Keyboard",
+        "Logitech G PRO Mechanical Gaming Keyboard RGB Backlit Lightsync"
+    )
+    assert score_logi >= 0.4
+
+
