@@ -311,8 +311,8 @@
     "1005006436971986": 1791027947.9506829,
     "1005007331264474": 1791108947.313694,
     "1005010375387628": 1791031850.9681444,
-    "1005007244376156": 1791031868.917476,
-    "1005005639737205": 1791032153.257991,
+    "1005007244376156": 1791126656.5930831,
+    "1005005639737205": 1791126649.148256,
     "1005008144734940": 1791032158.6801872,
     "1005006443158717": 1791032177.1222703,
     "1005012492244291": 1791035151.8836284,
@@ -542,7 +542,8 @@
     "Electric Trimmer for Men's Groin Hair: Versatile Body",
     "KODAK USB 2.0 Flash Drive 64GB",
     "E27 60W Wireless Remote Control Smart Timer",
-    "HTC NE79 TWS Wireless Bluetooth Earphones: AI"
+    "HTC NE79 TWS Wireless Bluetooth Earphones: AI",
+    "Nail Scissors Set Household High End"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -684,7 +685,7 @@
     "CURREN 8455 Men's Fashion Quartz Watch": 1791031550.2120771,
     "Monster MQT52 TWS Wireless Gaming Headset Bluetooth": 1791031559.2102907,
     "HTC NE51 Bluetooth TWS Mini EarBuds": 1791031850.9681444,
-    "Upper Arm Automatic Blood Pressure Monitor": 1791031868.917476,
+    "Upper Arm Automatic Blood Pressure Monitor": 1791126656.5930831,
     "Nail Scissors Set Household": 1791032153.257991,
     "V600 OBD2 Diagnostic Scanner Car": 1791032158.6801872,
     "Wireless WiFi Repeater 300Mbps": 1791032170.0482783,
@@ -738,7 +739,8 @@
     "Electric Trimmer for Men's Groin Hair: Versatile Body": 1791125753.051726,
     "KODAK USB 2.0 Flash Drive 64GB": 1791126044.0695431,
     "E27 60W Wireless Remote Control Smart Timer": 1791126049.4061573,
-    "HTC NE79 TWS Wireless Bluetooth Earphones: AI": 1791126349.6683438
+    "HTC NE79 TWS Wireless Bluetooth Earphones: AI": 1791126349.6683438,
+    "Nail Scissors Set Household High End": 1791126649.148256
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1238,15 +1240,17 @@
     "couponsglobal:48789",
     "couponsglobal:48790",
     "couponsglobal:48791",
-    "couponsglobal:48792"
+    "couponsglobal:48792",
+    "couponsglobal:48793",
+    "couponsglobal:48794"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791126349.6683438,
+  "last_run_time": 1791126656.5930831,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32771,
-      "last_check_time": 1791126341.7798955
+      "last_check_time": 1791126641.2149107
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1254,11 +1258,11 @@
     },
     "lodydeals": {
       "last_message_id": 45460,
-      "last_check_time": 1791126339.8113618
+      "last_check_time": 1791126639.0832195
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791126341.1038876
+      "last_check_time": 1791126640.4806771
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1266,19 +1270,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791126340.762635
+      "last_check_time": 1791126640.1150036
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791126340.1186666
+      "last_check_time": 1791126639.4302075
     },
     "megaphonna": {
       "last_message_id": 8255,
-      "last_check_time": 1791126341.4373586
+      "last_check_time": 1791126640.845266
     },
     "couponsglobal": {
-      "last_message_id": 48792,
-      "last_check_time": 1791126355.3108363
+      "last_message_id": 48794,
+      "last_check_time": 1791126658.6060646
     }
   },
   "published_product_prices": {
@@ -1394,8 +1398,8 @@
     "1005006436971986": 13.27,
     "1005007331264474": 15.8,
     "1005010375387628": 4.62,
-    "1005007244376156": 6.02,
-    "1005005639737205": 2.69,
+    "1005007244376156": 1.0,
+    "1005005639737205": 1.0,
     "1005008144734940": 5.23,
     "1005006443158717": 6.42,
     "1005012492244291": 230.0,
@@ -3700,6 +3704,26 @@
       "price": 1.0,
       "timestamp": 1791126349.6683438,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48793": {
+      "channel_msg_id": 568,
+      "product_id": "1005005639737205",
+      "title": "Nail Scissors Set Household High End",
+      "channel": "couponsglobal",
+      "source_msg_id": 48793,
+      "price": 1.0,
+      "timestamp": 1791126649.148256,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48794": {
+      "channel_msg_id": 569,
+      "product_id": "1005007244376156",
+      "title": "Upper Arm Automatic Blood Pressure Monitor",
+      "channel": "couponsglobal",
+      "source_msg_id": 48794,
+      "price": 1.0,
+      "timestamp": 1791126656.5930831,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -3708,7 +3732,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791126349.6737168,
+    "last_deal_post_time": 1791126656.5981412,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4043,7 +4067,8 @@
     "Electric Trimmer for Men's Groin Hair: Versatile Body": "couponsglobal",
     "KODAK USB 2.0 Flash Drive 64GB": "couponsglobal",
     "E27 60W Wireless Remote Control Smart Timer": "couponsglobal",
-    "HTC NE79 TWS Wireless Bluetooth Earphones: AI": "couponsglobal"
+    "HTC NE79 TWS Wireless Bluetooth Earphones: AI": "couponsglobal",
+    "Nail Scissors Set Household High End": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
