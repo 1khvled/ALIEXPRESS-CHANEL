@@ -216,7 +216,7 @@
     "1005012881256093": 1790973641.950298,
     "1005009118633225": 1790888213.2900865,
     "1005012143831265": 1791012345.6086447,
-    "1005007458827229": 1790888886.4062796,
+    "1005007458827229": 1791191446.7283864,
     "1005008852027824": 1790888909.743846,
     "9998888981": 1790888981.6873999,
     "1005005217734986": 1791104047.0967803,
@@ -590,7 +590,8 @@
     "Men Watch, Fashion Quartz Wristwatch",
     "Philips New EDC Portable Flashlight Rechargeable",
     "Rocoren 100W Type-C to USB Fast Charging",
-    "Attack Shark R1"
+    "Attack Shark R1",
+    "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -806,7 +807,8 @@
     "Men Watch, Fashion Quartz Wristwatch": 1791153345.9204953,
     "Philips New EDC Portable Flashlight Rechargeable": 1791153956.1367443,
     "Rocoren 100W Type-C to USB Fast Charging": 1791156089.0187185,
-    "Attack Shark R1": 1791191146.7913554
+    "Attack Shark R1": 1791191146.7913554,
+    "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse": 1791191446.7283864
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1361,15 +1363,17 @@
     "zedstoreonline:38532",
     "zedstoreonline:38533",
     "zedstoreonline:38534",
-    "zedstoreonline:38535"
+    "zedstoreonline:38535",
+    "zedstoreonline:38536",
+    "bnddeals:50813"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791191146.7913554,
+  "last_run_time": 1791191446.7283864,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32784,
-      "last_check_time": 1791191151.208883
+      "last_check_time": 1791191451.5089545
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1377,11 +1381,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791191141.9484684
+      "last_check_time": 1791191440.9803438
     },
     "bnddeals": {
-      "last_message_id": 50812,
-      "last_check_time": 1791191150.260622
+      "last_message_id": 50813,
+      "last_check_time": 1791191450.65879
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1389,19 +1393,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791191149.8735948
+      "last_check_time": 1791191449.6605392
     },
     "zedstoreonline": {
-      "last_message_id": 38535,
-      "last_check_time": 1791191148.8075879
+      "last_message_id": 38536,
+      "last_check_time": 1791191448.7439408
     },
     "megaphonna": {
       "last_message_id": 8265,
-      "last_check_time": 1791191150.6679306
+      "last_check_time": 1791191451.0580978
     },
     "couponsglobal": {
       "last_message_id": 48805,
-      "last_check_time": 1791191151.8693483
+      "last_check_time": 1791191452.0250554
     }
   },
   "published_product_prices": {
@@ -1428,7 +1432,7 @@
     "1005012881256093": 28.5,
     "1005009118633225": 14.14,
     "1005012143831265": 281.9,
-    "1005007458827229": 22.75,
+    "1005007458827229": 22.1,
     "1005010453516983": 204.7,
     "1005008852027824": 194.9,
     "1005012499451512": 260.0,
@@ -4126,6 +4130,16 @@
       "price": 13.7,
       "timestamp": 1791191146.7913554,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38536": {
+      "channel_msg_id": 603,
+      "product_id": "1005007458827229",
+      "title": "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38536,
+      "price": 22.1,
+      "timestamp": 1791191446.7283864,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4134,7 +4148,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791191146.7971377,
+    "last_deal_post_time": 1791191446.7339828,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4311,7 +4325,8 @@
     "1005007473024376": "couponsglobal",
     "1005005902976406": "couponsglobal",
     "1005006996130042": "couponsglobal",
-    "1005013052800596": "couponsglobal"
+    "1005013052800596": "couponsglobal",
+    "1005007458827229": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4502,7 +4517,8 @@
     "Samsung 45W PD Charger Super Fast Charging": "couponsglobal",
     "Men Watch, Fashion Quartz Wristwatch": "couponsglobal",
     "Philips New EDC Portable Flashlight Rechargeable": "couponsglobal",
-    "Rocoren 100W Type-C to USB Fast Charging": "couponsglobal"
+    "Rocoren 100W Type-C to USB Fast Charging": "couponsglobal",
+    "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
