@@ -7,6 +7,7 @@ Features:
 - In-Dashboard Instant AliExpress Deal Scout tool
 - Channel post monitor with photos and direct affiliate links
 """
+import os
 import re
 from datetime import datetime, timezone
 from fastapi import FastAPI, Request, Query
@@ -1675,7 +1676,9 @@ async def set_admin_telegram_webhook():
 @app.get("/api/test-bot")
 async def test_bot_connectivity():
     """Tests bot connectivity and returns bot profile from Telegram API."""
-    coin_token = os.getenv("TELEGRAM_BOT_TOKEN", "")
+    coin_token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+    if not coin_token:
+        return {"ok": False, "error": "TELEGRAM_BOT_TOKEN is not configured on Vercel."}
     async with httpx.AsyncClient(timeout=10.0) as client:
         r1 = await client.get(f"https://api.telegram.org/bot{coin_token}/getMe")
         r2 = await client.get(f"https://api.telegram.org/bot{coin_token}/getWebhookInfo")
@@ -1685,7 +1688,12 @@ async def test_bot_connectivity():
 @app.api_route("/api/trigger-deals", methods=["GET", "POST"])
 async def trigger_deals_collector(force: bool = False):
     """Triggers the AliExpress Deals collector workflow on GitHub Actions."""
-    github_token = os.getenv("GITHUB_TOKEN", "")
+    github_token = os.getenv("GITHUB_TOKEN", "").strip()
+    if not github_token:
+        return {
+            "ok": False,
+            "error": "GITHUB_TOKEN is missing. Please add GITHUB_TOKEN to your Vercel project environment variables."
+        }
     repo = "1khvled/ALIEXPRESS-CHANEL"
     url = f"https://api.github.com/repos/{repo}/actions/workflows/bot_cron.yml/dispatches"
     headers = {
