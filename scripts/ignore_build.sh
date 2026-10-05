@@ -9,6 +9,13 @@ echo "Commit Message: $VERCEL_GIT_COMMIT_MESSAGE"
 echo "Commit Ref: $VERCEL_GIT_COMMIT_REF"
 echo "Commit Author: $VERCEL_GIT_COMMIT_AUTHOR_LOGIN"
 
+# 0. Allow force deploy flags
+if [[ "$VERCEL_GIT_COMMIT_MESSAGE" == *"[force vercel]"* ]] || \
+   [[ "$VERCEL_GIT_COMMIT_MESSAGE" == *"[deploy]"* ]]; then
+  echo ">>> Explicit deploy flag detected. Proceeding with Vercel deployment."
+  exit 1
+fi
+
 # 1. Skip if automated state / bot commit or explicit skip tags
 if [[ "$VERCEL_GIT_COMMIT_MESSAGE" == *"[skip vercel]"* ]] || \
    [[ "$VERCEL_GIT_COMMIT_MESSAGE" == *"[vercel skip]"* ]] || \

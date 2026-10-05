@@ -15,7 +15,7 @@ from fastapi.responses import HTMLResponse, JSONResponse, Response
 import httpx
 from bs4 import BeautifulSoup
 
-app = FastAPI(title="DealScout DZ Dashboard", version="2.0.0")
+app = FastAPI(title="DealScout DZ Dashboard", version="2.0.1")
 
 # ── Manifest JSON ───────────────────────────────────────────────
 MANIFEST_JSON = """{
