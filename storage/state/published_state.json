@@ -218,7 +218,7 @@
     "1005009118633225": 1790888213.2900865,
     "1005012143831265": 1791012345.6086447,
     "1005007458827229": 1791191446.7283864,
-    "1005008852027824": 1790888909.743846,
+    "1005008852027824": 1791198946.2774374,
     "9998888981": 1790888981.6873999,
     "1005005217734986": 1791104047.0967803,
     "1005010062128237": 1790937566.337433,
@@ -600,7 +600,8 @@
     "HONOR Watch X5i Version globale SmartWatch 1.9",
     "Attack Shark L60 Tri-mode Gaming Headset",
     "ATTACK SHARK X2 Pro station de chargement RGB",
-    "GameSir Nova Lite Gamepads PC  Hall Effect"
+    "GameSir Nova Lite Gamepads PC  Hall Effect",
+    "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -824,7 +825,8 @@
     "HONOR Watch X5i Version globale SmartWatch 1.9": 1791194149.475346,
     "Attack Shark L60 Tri-mode Gaming Headset": 1791194741.6244273,
     "ATTACK SHARK X2 Pro station de chargement RGB": 1791195344.3305714,
-    "GameSir Nova Lite Gamepads PC  Hall Effect": 1791197438.386862
+    "GameSir Nova Lite Gamepads PC  Hall Effect": 1791197438.386862,
+    "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4": 1791198946.2774374
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1400,15 +1402,16 @@
     "pcgamingpart:7962",
     "aniscoupons:32787",
     "aniscoupons:32788",
-    "aniscoupons:32789"
+    "aniscoupons:32789",
+    "aniscoupons:32790"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791197438.386862,
+  "last_run_time": 1791198946.2774374,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32789,
-      "last_check_time": 1791198640.3464234
+      "last_message_id": 32790,
+      "last_check_time": 1791198948.293865
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1416,11 +1419,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791198634.5243752
+      "last_check_time": 1791198938.8116498
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791198635.956094
+      "last_check_time": 1791198940.1851547
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1428,19 +1431,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7962,
-      "last_check_time": 1791198635.559457
+      "last_check_time": 1791198939.8287885
     },
     "zedstoreonline": {
       "last_message_id": 38547,
-      "last_check_time": 1791198634.889784
+      "last_check_time": 1791198939.1703124
     },
     "megaphonna": {
       "last_message_id": 8266,
-      "last_check_time": 1791198636.3363967
+      "last_check_time": 1791198940.5800197
     },
     "couponsglobal": {
       "last_message_id": 48805,
-      "last_check_time": 1791198640.9148698
+      "last_check_time": 1791198949.006321
     }
   },
   "published_product_prices": {
@@ -1469,7 +1472,7 @@
     "1005012143831265": 281.9,
     "1005007458827229": 22.1,
     "1005010453516983": 204.7,
-    "1005008852027824": 194.9,
+    "1005008852027824": 194.1,
     "1005012499451512": 260.0,
     "1005010129356058": 294.0,
     "3256809790988797": 92.8,
@@ -4276,6 +4279,16 @@
       "price": 22.05,
       "timestamp": 1791197438.386862,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32790": {
+      "channel_msg_id": 615,
+      "product_id": "1005008852027824",
+      "title": "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4",
+      "channel": "aniscoupons",
+      "source_msg_id": 32790,
+      "price": 194.1,
+      "timestamp": 1791198946.2774374,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4284,7 +4297,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791197438.3927772,
+    "last_deal_post_time": 1791198946.2833571,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4464,7 +4477,8 @@
     "1005013052800596": "couponsglobal",
     "1005007458827229": "zedstoreonline",
     "1005012899224314": "zedstoreonline",
-    "1005007331316456": "zedstoreonline"
+    "1005007331316456": "zedstoreonline",
+    "1005008852027824": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4663,7 +4677,8 @@
     "HONOR Watch X5i Version globale SmartWatch 1.9": "bnddeals",
     "Attack Shark L60 Tri-mode Gaming Headset": "zedstoreonline",
     "ATTACK SHARK X2 Pro station de chargement RGB": "zedstoreonline",
-    "GameSir Nova Lite Gamepads PC  Hall Effect": "pcgamingpart"
+    "GameSir Nova Lite Gamepads PC  Hall Effect": "pcgamingpart",
+    "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
