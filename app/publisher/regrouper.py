@@ -470,6 +470,10 @@ def format_deal_line(item: Dict[str, Any], channel_username: str, index: int = 1
     post_url = item.get("channel_url") or f"https://t.me/{clean_ch}/{item.get('channel_msg_id', '')}"
     return f"⭐️ <a href=\"{post_url}\"><b>{title}</b></a> ⤵️ {price_str} 💲"
 
+def get_telegram_visible_len(html_text: str) -> int:
+    """Calculates visible text length in characters as measured by Telegram Bot API (excluding HTML tags)."""
+    return len(re.sub(r"<[^>]+>", "", html_text or ""))
+
 def build_category_bulletin_text(
     category_name: str,
     items: List[Dict[str, Any]],
@@ -480,7 +484,7 @@ def build_category_bulletin_text(
     """
     Builds the caption for a category bulletin matching the sleek Megaprix index style.
     Sub-groups items by brand (👊 BRAND) with clickable models (⭐️ Model ⤵️ Price 💲).
-    Dynamically fits items to guarantee the total length strictly never exceeds 980 characters (photo caption limit 1024).
+    Dynamically fits items to guarantee the visible text length strictly never exceeds 980 characters (Telegram photo caption limit 1024).
     """
     cat_config = CATEGORIES_CONFIG.get(category_name, {
         "header": f"📦 <b>تجميعة عروض {category_name} ترند حاليا التي تم نشرها في القناة 🇩🇿🔥</b>"
@@ -534,7 +538,8 @@ def build_category_bulletin_text(
         for it in b_items:
             line = format_deal_line(it, channel_username)
             cand_body = temp_body + [line]
-            if len("\n".join(header_lines + cand_body + [footer_text])) > 980:
+            cand_full = "\n".join(header_lines + cand_body + [footer_text])
+            if get_telegram_visible_len(cand_full) > 980:
                 break
             temp_body.append(line)
             brand_added.append(it)
@@ -586,7 +591,8 @@ def build_master_daily_roundup_text(deals: List[Dict[str, Any]], channel_usernam
         for it in b_items:
             line = format_deal_line(it, channel_username)
             cand_body = temp_body + [line]
-            if len("\n".join(header_lines + cand_body + [footer_text])) > 980:
+            cand_full = "\n".join(header_lines + cand_body + [footer_text])
+            if get_telegram_visible_len(cand_full) > 980:
                 break
             temp_body.append(line)
             brand_added.append(it)
@@ -714,7 +720,7 @@ async def check_and_publish_regrouped_bulletins(
             to_publish = qualifying_categories[:max_bulletins]
             for cat_name, cat_items in to_publish:
                 remaining_items = list(cat_items)
-                total_parts = (len(cat_items) + 7) // 8 if len(cat_items) > 8 else 1
+                total_parts = (len(cat_items) + 19) // 20 if len(cat_items) > 20 else 1
                 part = 1
 
                 while remaining_items:
@@ -727,8 +733,8 @@ async def check_and_publish_regrouped_bulletins(
                         break
 
                     sent_data = None
-                    # Send photo with caption
-                    if banner_path.exists() and len(bulletin_text) <= 1024:
+                    # Send photo with caption if visible length <= 1024
+                    if banner_path.exists() and get_telegram_visible_len(bulletin_text) <= 1024:
                         with open(banner_path, "rb") as bf:
                             mime = "image/png" if banner_path.suffix.lower() == ".png" else "image/jpeg"
                             resp = await client.post(
