@@ -1360,7 +1360,7 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32782,
-      "last_check_time": 1791162645.2271795
+      "last_check_time": 1791162948.7096114
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1368,11 +1368,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791162642.9138505
+      "last_check_time": 1791162946.24175
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791162644.3780832
+      "last_check_time": 1791162947.8662896
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1380,19 +1380,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791162644.0007074
+      "last_check_time": 1791162947.4611382
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791162643.2876918
+      "last_check_time": 1791162946.6403546
     },
     "megaphonna": {
       "last_message_id": 8264,
-      "last_check_time": 1791162644.7884533
+      "last_check_time": 1791162948.3044739
     },
     "couponsglobal": {
       "last_message_id": 48805,
-      "last_check_time": 1791162645.842911
+      "last_check_time": 1791162949.426194
     }
   },
   "published_product_prices": {
@@ -4540,5 +4540,7 @@
   },
   "sent_promo_notifiers": [
     "LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004"
-  ]
+  ],
+  "last_card_affiliate_time_dz": 1791162928.4193592,
+  "card_affiliate_variant_idx_dz": 1
 }
