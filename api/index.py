@@ -9,7 +9,7 @@ Features:
 """
 import os
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from fastapi import FastAPI, Request, Query
 from fastapi.responses import HTMLResponse, JSONResponse, Response
 import httpx
@@ -1687,7 +1687,36 @@ async def test_bot_connectivity():
 
 @app.api_route("/api/trigger-deals", methods=["GET", "POST"])
 async def trigger_deals_collector(force: bool = False):
-    """Triggers the AliExpress Deals collector workflow on GitHub Actions."""
+    """
+    Webhook endpoint to trigger GitHub Actions collector workflow.
+    Can be called by external cron services (cron-job.org, EasyCron, etc.).
+    
+    Smart Scheduling:
+      - Daytime (07:00 - 01:00 UTC+1): Every 5 minutes
+      - Nighttime (01:00 - 07:00 UTC+1): Throttled to every 30 minutes
+    Pass ?force=true to bypass night mode throttling.
+    """
+    dz_tz = timezone(timedelta(hours=1))
+    now_dz = datetime.now(dz_tz)
+    hour = now_dz.hour
+    minute = now_dz.minute
+
+    # Night hours: 01:00 to 06:59 Algeria time (UTC+1)
+    is_night = 1 <= hour < 7
+    if is_night and not force:
+        # In night mode, only trigger around :00 and :30 (window of first 5 mins)
+        in_run_window = (0 <= minute < 5) or (30 <= minute < 35)
+        if not in_run_window:
+            next_min = "30" if minute < 30 else "00"
+            next_hr = hour if minute < 30 else (hour + 1) % 24
+            return {
+                "ok": True,
+                "status": "night_mode_skipped",
+                "message": f"Night mode active (01:00-07:00 DZ time). Autonomous sweep throttled to every 30 mins to preserve resources.",
+                "local_time": now_dz.strftime("%H:%M:%S UTC+1"),
+                "next_run": f"{next_hr:02d}:{next_min} UTC+1"
+            }
+
     github_token = os.getenv("GITHUB_TOKEN", "").strip()
     if not github_token:
         return {
@@ -1712,6 +1741,8 @@ async def trigger_deals_collector(force: bool = False):
                 return {
                     "ok": True,
                     "status": "dispatched",
+                    "mode": "night_30m" if is_night else "day_5m",
+                    "local_time": now_dz.strftime("%H:%M:%S UTC+1"),
                     "message": "AliExpress Deals workflow triggered successfully on GitHub Actions!"
                 }
             return {
@@ -1721,4 +1752,5 @@ async def trigger_deals_collector(force: bool = False):
             }
     except Exception as e:
         return {"ok": False, "error": str(e)}
+
 
