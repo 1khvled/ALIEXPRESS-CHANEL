@@ -281,7 +281,7 @@
     "9998885747": 1790965747.5380507,
     "1005010129356058": 1791052344.704609,
     "9998885993": 1790965993.3792443,
-    "1005009774318553": 1790966460.2151659,
+    "1005009774318553": 1791200448.8235762,
     "1005012574108028": 1791060354.760787,
     "1005008599340405": 1790967962.6418507,
     "1005007572968437": 1790969442.7810974,
@@ -690,7 +690,7 @@
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
     "Xiaomi Pad 7 (12/256)": 1791052344.704609,
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1791142278.6117659,
-    "CUSU SSD 512 GB Portable SSD External Drive": 1790966460.2151659,
+    "CUSU SSD 512 GB Portable SSD External Drive": 1791200448.8235762,
     "HONOR  X80 PRO MAX (8/128)": 1791060354.760787,
     "WALRAM Sata SSD 512GB": 1790967962.6418507,
     "Lenovo GM2 Pro TWS": 1790969442.7810974,
@@ -1404,15 +1404,16 @@
     "aniscoupons:32788",
     "aniscoupons:32789",
     "aniscoupons:32790",
-    "aniscoupons:32791"
+    "aniscoupons:32791",
+    "aniscoupons:32792"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791198946.2774374,
+  "last_run_time": 1791200448.8235762,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32791,
-      "last_check_time": 1791200135.8163247
+      "last_message_id": 32792,
+      "last_check_time": 1791200450.8392627
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1420,11 +1421,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791200129.9077518
+      "last_check_time": 1791200440.910002
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791200131.258109
+      "last_check_time": 1791200442.6351957
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1432,19 +1433,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7962,
-      "last_check_time": 1791200130.9302273
+      "last_check_time": 1791200442.1781561
     },
     "zedstoreonline": {
       "last_message_id": 38547,
-      "last_check_time": 1791200130.2537184
+      "last_check_time": 1791200441.3449488
     },
     "megaphonna": {
       "last_message_id": 8266,
-      "last_check_time": 1791200131.6105368
+      "last_check_time": 1791200443.1772804
     },
     "couponsglobal": {
       "last_message_id": 48805,
-      "last_check_time": 1791200136.3146083
+      "last_check_time": 1791200451.7766101
     }
   },
   "published_product_prices": {
@@ -4290,6 +4291,16 @@
       "price": 194.1,
       "timestamp": 1791198946.2774374,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32792": {
+      "channel_msg_id": 626,
+      "product_id": "1005009774318553",
+      "title": "CUSU SSD 512 GB Portable SSD External Drive",
+      "channel": "aniscoupons",
+      "source_msg_id": 32792,
+      "price": 53.8,
+      "timestamp": 1791200448.8235762,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4298,7 +4309,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791198946.2833571,
+    "last_deal_post_time": 1791200448.8294215,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
