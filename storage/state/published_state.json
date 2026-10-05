@@ -1513,27 +1513,30 @@
     "couponsglobal:48816",
     "couponsglobal:48818",
     "couponsglobal:48819",
-    "couponsglobal:48820"
+    "couponsglobal:48820",
+    "aniscoupons:32803",
+    "aniscoupons:32804",
+    "aniscoupons:32805"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
   "last_run_time": 1791236020.742662,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32802,
-      "last_check_time": 1791237965.359814
+      "last_message_id": 32805,
+      "last_check_time": 1791238251.4988186
     },
     "ecksdeal": {
       "last_message_id": 5867,
-      "last_check_time": 1791237945.0434284
+      "last_check_time": 1791238232.3975945
     },
     "lodydeals": {
       "last_message_id": 45491,
-      "last_check_time": 1791237944.2046032
+      "last_check_time": 1791238231.814833
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791237945.677237
+      "last_check_time": 1791238233.0255313
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1541,15 +1544,15 @@
     },
     "pcgamingpart": {
       "last_message_id": 7964,
-      "last_check_time": 1791237945.3542469
+      "last_check_time": 1791238232.7240577
     },
     "zedstoreonline": {
       "last_message_id": 38549,
-      "last_check_time": 1791237944.7214756
+      "last_check_time": 1791238232.1108787
     },
     "megaphonna": {
       "last_message_id": 8272,
-      "last_check_time": 1791237946.0442688
+      "last_check_time": 1791238233.3533275
     },
     "couponsglobal": {
       "last_message_id": 48820,
@@ -4666,10 +4669,10 @@
     "night_mode_enabled": true,
     "night_pause_enabled": true,
     "last_deal_post_time": 1791236022.8248365,
-    "last_sweep_time": 1791237991.4217794,
+    "last_sweep_time": 1791238268.3919375,
     "last_sweep_times": {
-      "algeria": 1791237986.127645,
-      "france": 1791237991.4217794
+      "algeria": 1791238262.8881252,
+      "france": 1791238268.3919375
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
