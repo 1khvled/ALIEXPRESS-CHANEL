@@ -203,8 +203,8 @@
     "1005009054706827": 1791194142.1753953,
     "1005007961216287": 1791104165.8542082,
     "1005009627597591": 1790884233.6428,
-    "1005007275142457": 1791029447.177805,
-    "1005008829227075": 1791105954.2458005,
+    "1005007275142457": 1791206151.9745984,
+    "1005008829227075": 1791206156.5528755,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
     "100500777666555": 1791053064.6118824,
@@ -357,7 +357,7 @@
     "1005007805497968": 1791197438.386862,
     "1005007345108759": 1791104759.7671344,
     "1005007394197021": 1791195344.3305714,
-    "1005008880082336": 1791107750.295487,
+    "1005008880082336": 1791206142.4737842,
     "1005012571601398": 1791109857.5190113,
     "1005013290515237": 1791110751.0808105,
     "1005012264415744": 1791114344.949536,
@@ -609,7 +609,8 @@
     "AMD Ryzen 5 7500F",
     "CMF Watch 3 Pro Global AMOLED GPS",
     "يد تحكم لاسلكية Fantech Shooter 3 Wireless Hall Effect Ultimate",
-    "يد تحكم  GameSir Tarantula 8K TMR"
+    "يد تحكم  GameSir Tarantula 8K TMR",
+    "ماوس لاسلكي Attack Shark X1 Wireless"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -625,8 +626,8 @@
     "SomnAmbulist SSD 2.5 120GB": 1790884215.4346776,
     "Realme 15 Pro Global (8/256)": 1790884233.6428,
     "Poco C71 3/64GB": 1791192360.1916943,
-    "سماعات لاسلكية Attack Shark L80 PRO Wireless": 1790884281.6726701,
-    "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K": 1790884287.4211984,
+    "سماعات لاسلكية Attack Shark L80 PRO Wireless": 1791206142.4737842,
+    "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K": 1791206151.9745984,
     "ماوس لاسلكي Attack Shark R1 Wireless": 1790884299.0959656,
     "ماوس لاسلكي مع شاحن Attack Shark X1 Wireless": 1790884310.7506618,
     "معالج AMD Ryzen R7 5700X جديد! بتردد 3.4 جيجاهرتز، ثماني النواة وستة عشر": 1790888057.5668976,
@@ -838,7 +839,8 @@
     "AMD Ryzen 5 7500F": 1791201047.413366,
     "CMF Watch 3 Pro Global AMOLED GPS": 1791203753.790013,
     "يد تحكم لاسلكية Fantech Shooter 3 Wireless Hall Effect Ultimate": 1791205539.6613767,
-    "يد تحكم  GameSir Tarantula 8K TMR": 1791205547.1867356
+    "يد تحكم  GameSir Tarantula 8K TMR": 1791205547.1867356,
+    "ماوس لاسلكي Attack Shark X1 Wireless": 1791206156.5528755
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1432,27 +1434,31 @@
     "ecksdeal:5857",
     "ecksdeal:5858",
     "ecksdeal:5859",
-    "ecksdeal:5860"
+    "ecksdeal:5860",
+    "ecksdeal:5861",
+    "ecksdeal:5862",
+    "ecksdeal:5863",
+    "ecksdeal:5864"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791205547.1867356,
+  "last_run_time": 1791206156.5528755,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32792,
-      "last_check_time": 1791205850.4878623
+      "last_check_time": 1791206160.2899303
     },
     "ecksdeal": {
-      "last_message_id": 5860,
-      "last_check_time": 1791205848.6721795
+      "last_message_id": 5864,
+      "last_check_time": 1791206158.567607
     },
     "lodydeals": {
       "last_message_id": 45478,
-      "last_check_time": 1791205841.770092
+      "last_check_time": 1791206135.9170465
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791205849.6682909
+      "last_check_time": 1791206159.3797424
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1460,19 +1466,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7962,
-      "last_check_time": 1791205849.2927933
+      "last_check_time": 1791206159.0843163
     },
     "zedstoreonline": {
       "last_message_id": 38547,
-      "last_check_time": 1791205842.123005
+      "last_check_time": 1791206136.282768
     },
     "megaphonna": {
       "last_message_id": 8266,
-      "last_check_time": 1791205850.0939288
+      "last_check_time": 1791206159.7860112
     },
     "couponsglobal": {
       "last_message_id": 48808,
-      "last_check_time": 1791205851.083101
+      "last_check_time": 1791206160.812552
     }
   },
   "published_product_prices": {
@@ -1484,8 +1490,8 @@
     "1005007961216287": 18.17,
     "1005008233932899": 294.9,
     "1005009627597591": 314.9,
-    "1005008880082336": 22.16,
-    "1005007275142457": 24.2,
+    "1005008880082336": 22.19,
+    "1005007275142457": 28.9,
     "1005007279793099": 13.7,
     "1005008829227075": 24.73,
     "100500777666555": 20.0,
@@ -4370,6 +4376,36 @@
       "price": 56.86,
       "timestamp": 1791205547.1867356,
       "status": "ACTIVE"
+    },
+    "ecksdeal:5861": {
+      "channel_msg_id": 631,
+      "product_id": "1005008880082336",
+      "title": "سماعات لاسلكية Attack Shark L80 PRO Wireless",
+      "channel": "ecksdeal",
+      "source_msg_id": 5861,
+      "price": 22.19,
+      "timestamp": 1791206142.4737842,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5863": {
+      "channel_msg_id": 632,
+      "product_id": "1005007275142457",
+      "title": "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K",
+      "channel": "ecksdeal",
+      "source_msg_id": 5863,
+      "price": 28.9,
+      "timestamp": 1791206151.9745984,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5864": {
+      "channel_msg_id": 633,
+      "product_id": "1005008829227075",
+      "title": "ماوس لاسلكي Attack Shark X1 Wireless",
+      "channel": "ecksdeal",
+      "source_msg_id": 5864,
+      "price": 24.73,
+      "timestamp": 1791206156.5528755,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4378,7 +4414,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791205547.190996,
+    "last_deal_post_time": 1791206156.5588763,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4414,7 +4450,7 @@
     "1005011797801269": "couponsglobal",
     "1005012973772517": "zedstoreonline",
     "1005007168829266": "aniscoupons",
-    "1005008880082336": "aniscoupons",
+    "1005008880082336": "ecksdeal",
     "1005010453516983": "aniscoupons",
     "1005012406142215": "megaphonna",
     "1005008390562391": "aniscoupons",
@@ -4466,7 +4502,7 @@
     "1005005652871847": "aniscoupons",
     "1005012554205120": "aniscoupons",
     "1005009234854371": "zedstoreonline",
-    "1005008829227075": "pcgamingpart",
+    "1005008829227075": "ecksdeal",
     "1005008901941749": "lodydeals",
     "1005012881256093": "bnddeals",
     "1005006861002512": "lodydeals",
@@ -4498,7 +4534,7 @@
     "1005009719082543": "lodydeals",
     "1005008720862916": "couponsglobal",
     "1005006436971986": "bnddeals",
-    "1005007275142457": "lodydeals",
+    "1005007275142457": "ecksdeal",
     "1005007331264474": "lodydeals",
     "1005010375387628": "couponsglobal",
     "1005007244376156": "couponsglobal",
@@ -4766,7 +4802,10 @@
     "AMD Ryzen 5 7500F": "lodydeals",
     "CMF Watch 3 Pro Global AMOLED GPS": "couponsglobal",
     "يد تحكم لاسلكية Fantech Shooter 3 Wireless Hall Effect Ultimate": "ecksdeal",
-    "يد تحكم  GameSir Tarantula 8K TMR": "ecksdeal"
+    "يد تحكم  GameSir Tarantula 8K TMR": "ecksdeal",
+    "سماعات لاسلكية Attack Shark L80 PRO Wireless": "ecksdeal",
+    "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K": "ecksdeal",
+    "ماوس لاسلكي Attack Shark X1 Wireless": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
