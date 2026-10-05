@@ -186,7 +186,9 @@
     "1005005902976406",
     "1005006996130042",
     "1005013052800596",
-    "1005007331316456"
+    "1005007331316456",
+    "1005007822635375",
+    "1005013096683979"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -379,7 +381,9 @@
     "1005005902976406": 1791152146.3442965,
     "1005006996130042": 1791153956.1367443,
     "1005013052800596": 1791156089.0187185,
-    "1005007331316456": 1791194741.6244273
+    "1005007331316456": 1791194741.6244273,
+    "1005007822635375": 1791205539.6613767,
+    "1005013096683979": 1791205547.1867356
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -603,7 +607,9 @@
     "GameSir Nova Lite Gamepads PC  Hall Effect",
     "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4",
     "AMD Ryzen 5 7500F",
-    "CMF Watch 3 Pro Global AMOLED GPS"
+    "CMF Watch 3 Pro Global AMOLED GPS",
+    "يد تحكم لاسلكية Fantech Shooter 3 Wireless Hall Effect Ultimate",
+    "يد تحكم  GameSir Tarantula 8K TMR"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -830,7 +836,9 @@
     "GameSir Nova Lite Gamepads PC  Hall Effect": 1791197438.386862,
     "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4": 1791198946.2774374,
     "AMD Ryzen 5 7500F": 1791201047.413366,
-    "CMF Watch 3 Pro Global AMOLED GPS": 1791203753.790013
+    "CMF Watch 3 Pro Global AMOLED GPS": 1791203753.790013,
+    "يد تحكم لاسلكية Fantech Shooter 3 Wireless Hall Effect Ultimate": 1791205539.6613767,
+    "يد تحكم  GameSir Tarantula 8K TMR": 1791205547.1867356
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1415,27 +1423,32 @@
     "lodydeals:45478",
     "couponsglobal:48806",
     "couponsglobal:48807",
-    "couponsglobal:48808"
+    "couponsglobal:48808",
+    "ecksdeal:5852",
+    "ecksdeal:5853",
+    "ecksdeal:5854",
+    "ecksdeal:5855",
+    "ecksdeal:5856"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791203753.790013,
+  "last_run_time": 1791205547.1867356,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32792,
-      "last_check_time": 1791205246.5786479
+      "last_check_time": 1791205554.119655
     },
     "ecksdeal": {
-      "last_message_id": 5851,
-      "last_check_time": 1790944838.2909122
+      "last_message_id": 5856,
+      "last_check_time": 1791205552.3488128
     },
     "lodydeals": {
       "last_message_id": 45478,
-      "last_check_time": 1791205244.1611583
+      "last_check_time": 1791205533.5412912
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791205245.7449205
+      "last_check_time": 1791205553.2930408
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1443,19 +1456,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7962,
-      "last_check_time": 1791205245.252425
+      "last_check_time": 1791205552.9611251
     },
     "zedstoreonline": {
       "last_message_id": 38547,
-      "last_check_time": 1791205244.5156453
+      "last_check_time": 1791205533.9416838
     },
     "megaphonna": {
       "last_message_id": 8266,
-      "last_check_time": 1791205246.1378314
+      "last_check_time": 1791205553.6686614
     },
     "couponsglobal": {
       "last_message_id": 48808,
-      "last_check_time": 1791205247.401375
+      "last_check_time": 1791205554.6900477
     }
   },
   "published_product_prices": {
@@ -1619,7 +1632,9 @@
     "1005005902976406": 1.0,
     "1005006996130042": 1.0,
     "1005013052800596": 1.28,
-    "1005007331316456": 17.6
+    "1005007331316456": 17.6,
+    "1005007822635375": 22.47,
+    "1005013096683979": 56.86
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -4331,6 +4346,26 @@
       "price": 55.78,
       "timestamp": 1791203753.790013,
       "status": "ACTIVE"
+    },
+    "ecksdeal:5854": {
+      "channel_msg_id": 629,
+      "product_id": "1005007822635375",
+      "title": "يد تحكم لاسلكية Fantech Shooter 3 Wireless Hall Effect Ultimate",
+      "channel": "ecksdeal",
+      "source_msg_id": 5854,
+      "price": 22.47,
+      "timestamp": 1791205539.6613767,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5855": {
+      "channel_msg_id": 630,
+      "product_id": "1005013096683979",
+      "title": "يد تحكم  GameSir Tarantula 8K TMR",
+      "channel": "ecksdeal",
+      "source_msg_id": 5855,
+      "price": 56.86,
+      "timestamp": 1791205547.1867356,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4339,7 +4374,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791203753.7957983,
+    "last_deal_post_time": 1791205547.190996,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4521,7 +4556,9 @@
     "1005012899224314": "zedstoreonline",
     "1005007331316456": "zedstoreonline",
     "1005008852027824": "aniscoupons",
-    "1005012312990781": "lodydeals"
+    "1005012312990781": "lodydeals",
+    "1005007822635375": "ecksdeal",
+    "1005013096683979": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4723,7 +4760,9 @@
     "GameSir Nova Lite Gamepads PC  Hall Effect": "pcgamingpart",
     "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4": "aniscoupons",
     "AMD Ryzen 5 7500F": "lodydeals",
-    "CMF Watch 3 Pro Global AMOLED GPS": "couponsglobal"
+    "CMF Watch 3 Pro Global AMOLED GPS": "couponsglobal",
+    "يد تحكم لاسلكية Fantech Shooter 3 Wireless Hall Effect Ultimate": "ecksdeal",
+    "يد تحكم  GameSir Tarantula 8K TMR": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
