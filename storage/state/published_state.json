@@ -197,7 +197,7 @@
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
     "1005007805638431": 1790884166.1520143,
-    "1005009054706827": 1791104456.7661033,
+    "1005009054706827": 1791194142.1753953,
     "1005007961216287": 1791104165.8542082,
     "1005009627597591": 1790884233.6428,
     "1005007275142457": 1791029447.177805,
@@ -213,7 +213,7 @@
     "1005007394028808": 1791106544.154073,
     "1005012899224314": 1791193543.9040256,
     "1005012923660718": 1790888191.2162998,
-    "1005012881256093": 1790973641.950298,
+    "1005012881256093": 1791194149.475346,
     "1005009118633225": 1790888213.2900865,
     "1005012143831265": 1791012345.6086447,
     "1005007458827229": 1791191446.7283864,
@@ -594,7 +594,8 @@
     "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse",
     "XUNYOU-LINK 4G SIM WiFi Router",
     "UGREEN  1080P Webcam",
-    "HONOR CHOICE Watch 2i"
+    "HONOR CHOICE Watch 2i",
+    "HONOR Watch X5i Version globale SmartWatch 1.9"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -605,7 +606,7 @@
     "Test Wrench Set": 1791063864.5866926,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
-    "Machenike G3 V2 PC Gaming Controller Hall Effect": 1791104456.7661033,
+    "Machenike G3 V2 PC Gaming Controller Hall Effect": 1791194142.1753953,
     "ATTACK SHARK L90": 1790884206.6605399,
     "SomnAmbulist SSD 2.5 120GB": 1790884215.4346776,
     "Realme 15 Pro Global (8/256)": 1790884233.6428,
@@ -814,7 +815,8 @@
     "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse": 1791191446.7283864,
     "XUNYOU-LINK 4G SIM WiFi Router": 1791192351.7104166,
     "UGREEN  1080P Webcam": 1791192944.201814,
-    "HONOR CHOICE Watch 2i": 1791193543.9040256
+    "HONOR CHOICE Watch 2i": 1791193543.9040256,
+    "HONOR Watch X5i Version globale SmartWatch 1.9": 1791194149.475346
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1380,15 +1382,17 @@
     "zedstoreonline:38541",
     "zedstoreonline:38542",
     "zedstoreonline:38543",
-    "zedstoreonline:38544"
+    "zedstoreonline:38544",
+    "zedstoreonline:38545",
+    "bnddeals:50814"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791193543.9040256,
+  "last_run_time": 1791194149.475346,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32785,
-      "last_check_time": 1791193837.0939047
+      "last_check_time": 1791194152.6006215
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1396,11 +1400,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791193831.5955184
+      "last_check_time": 1791194139.0411525
     },
     "bnddeals": {
-      "last_message_id": 50813,
-      "last_check_time": 1791193836.3565185
+      "last_message_id": 50814,
+      "last_check_time": 1791194151.4847255
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1408,19 +1412,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791193835.984476
+      "last_check_time": 1791194144.8663826
     },
     "zedstoreonline": {
-      "last_message_id": 38544,
-      "last_check_time": 1791193835.3002768
+      "last_message_id": 38545,
+      "last_check_time": 1791194144.1869085
     },
     "megaphonna": {
       "last_message_id": 8265,
-      "last_check_time": 1791193836.7137518
+      "last_check_time": 1791194152.1141195
     },
     "couponsglobal": {
       "last_message_id": 48805,
-      "last_check_time": 1791193837.670016
+      "last_check_time": 1791194153.2093918
     }
   },
   "published_product_prices": {
@@ -1428,7 +1432,7 @@
     "1005010219205081": 57.2,
     "1005007805638431": 22.64,
     "1005007027334636": 10.3,
-    "1005009054706827": 22.69,
+    "1005009054706827": 24.6,
     "1005007961216287": 18.17,
     "1005008233932899": 294.9,
     "1005009627597591": 314.9,
@@ -1444,7 +1448,7 @@
     "1005007394028808": 10.73,
     "1005012899224314": 27.1,
     "1005012923660718": 15.17,
-    "1005012881256093": 28.5,
+    "1005012881256093": 28.4,
     "1005009118633225": 14.14,
     "1005012143831265": 281.9,
     "1005007458827229": 22.1,
@@ -4205,6 +4209,26 @@
       "price": 27.1,
       "timestamp": 1791193543.9040256,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38545": {
+      "channel_msg_id": 609,
+      "product_id": "1005009054706827",
+      "title": "Machenike G3 V2 PC Gaming Controller Hall Effect",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38545,
+      "price": 24.6,
+      "timestamp": 1791194142.1753953,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50814": {
+      "channel_msg_id": 610,
+      "product_id": "1005012881256093",
+      "title": "HONOR Watch X5i Version globale SmartWatch 1.9",
+      "channel": "bnddeals",
+      "source_msg_id": 50814,
+      "price": 28.4,
+      "timestamp": 1791194149.475346,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4213,7 +4237,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791193543.9091353,
+    "last_deal_post_time": 1791194149.4787052,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4295,7 +4319,7 @@
     "1005009774318553": "aniscoupons",
     "1005012574108028": "megaphonna",
     "1005008599340405": "aniscoupons",
-    "1005009054706827": "pcgamingpart",
+    "1005009054706827": "zedstoreonline",
     "1005007572968437": "lodydeals",
     "1005009120957437": "lodydeals",
     "1005005652871847": "aniscoupons",
@@ -4303,7 +4327,7 @@
     "1005009234854371": "zedstoreonline",
     "1005008829227075": "pcgamingpart",
     "1005008901941749": "lodydeals",
-    "1005012881256093": "aniscoupons",
+    "1005012881256093": "bnddeals",
     "1005006861002512": "lodydeals",
     "1005012285327063": "aniscoupons",
     "1005006581583862": "aniscoupons",
@@ -4457,7 +4481,7 @@
     "CUSU SSD 512 GB Portable SSD External Drive": "aniscoupons",
     "HONOR  X80 PRO MAX (8/128)": "megaphonna",
     "WALRAM Sata SSD 512GB": "aniscoupons",
-    "Machenike G3 V2 PC Gaming Controller Hall Effect": "pcgamingpart",
+    "Machenike G3 V2 PC Gaming Controller Hall Effect": "zedstoreonline",
     "Lenovo GM2 Pro TWS": "lodydeals",
     "ASROCK B850M X WiFi": "lodydeals",
     "Lenovo XT88 TWS": "lodydeals",
@@ -4587,7 +4611,8 @@
     "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse": "zedstoreonline",
     "XUNYOU-LINK 4G SIM WiFi Router": "zedstoreonline",
     "UGREEN  1080P Webcam": "zedstoreonline",
-    "HONOR CHOICE Watch 2i": "zedstoreonline"
+    "HONOR CHOICE Watch 2i": "zedstoreonline",
+    "HONOR Watch X5i Version globale SmartWatch 1.9": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
