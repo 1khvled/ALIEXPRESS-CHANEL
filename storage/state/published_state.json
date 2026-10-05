@@ -188,7 +188,9 @@
     "1005013052800596",
     "1005007331316456",
     "1005007822635375",
-    "1005013096683979"
+    "1005013096683979",
+    "1005006838055260",
+    "1005006923518929"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -383,7 +385,9 @@
     "1005013052800596": 1791156089.0187185,
     "1005007331316456": 1791194741.6244273,
     "1005007822635375": 1791205539.6613767,
-    "1005013096683979": 1791205547.1867356
+    "1005013096683979": 1791205547.1867356,
+    "1005006838055260": 1791212152.7085261,
+    "1005006923518929": 1791212158.132987
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -611,7 +615,9 @@
     "يد تحكم لاسلكية Fantech Shooter 3 Wireless Hall Effect Ultimate",
     "يد تحكم  GameSir Tarantula 8K TMR",
     "ماوس لاسلكي Attack Shark X1 Wireless",
-    "Attack Shark L80 Gaming Headset, Lightweight"
+    "Attack Shark L80 Gaming Headset, Lightweight",
+    "Rocoren 90 Degree USB Type C Cable 100W",
+    "Rocoren 30W USB Type C Car Charger PD QC 3.0 Fast"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -842,7 +848,9 @@
     "يد تحكم لاسلكية Fantech Shooter 3 Wireless Hall Effect Ultimate": 1791205539.6613767,
     "يد تحكم  GameSir Tarantula 8K TMR": 1791205547.1867356,
     "ماوس لاسلكي Attack Shark X1 Wireless": 1791206156.5528755,
-    "Attack Shark L80 Gaming Headset, Lightweight": 1791207945.0259264
+    "Attack Shark L80 Gaming Headset, Lightweight": 1791207945.0259264,
+    "Rocoren 90 Degree USB Type C Cable 100W": 1791212152.7085261,
+    "Rocoren 30W USB Type C Car Charger PD QC 3.0 Fast": 1791212158.132987
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1447,27 +1455,30 @@
     "aniscoupons:32793",
     "couponsglobal:48809",
     "couponsglobal:48810",
-    "couponsglobal:48811"
+    "couponsglobal:48811",
+    "couponsglobal:48812",
+    "couponsglobal:48813",
+    "couponsglobal:48814"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791208255.7291632,
+  "last_run_time": 1791212158.132987,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32793,
-      "last_check_time": 1791211843.792431
+      "last_check_time": 1791212145.7091181
     },
     "ecksdeal": {
       "last_message_id": 5866,
-      "last_check_time": 1791211842.2345984
+      "last_check_time": 1791212144.1744466
     },
     "lodydeals": {
       "last_message_id": 45478,
-      "last_check_time": 1791211841.5405974
+      "last_check_time": 1791212143.4240148
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791211842.9540303
+      "last_check_time": 1791212144.9001577
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1475,19 +1486,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7963,
-      "last_check_time": 1791211842.6480846
+      "last_check_time": 1791212144.5353093
     },
     "zedstoreonline": {
       "last_message_id": 38547,
-      "last_check_time": 1791211841.8756557
+      "last_check_time": 1791212143.8209379
     },
     "megaphonna": {
       "last_message_id": 8266,
-      "last_check_time": 1791211843.3326805
+      "last_check_time": 1791212145.3202066
     },
     "couponsglobal": {
-      "last_message_id": 48811,
-      "last_check_time": 1791211844.3517525
+      "last_message_id": 48814,
+      "last_check_time": 1791212161.8035176
     }
   },
   "published_product_prices": {
@@ -1653,7 +1664,9 @@
     "1005013052800596": 1.28,
     "1005007331316456": 17.6,
     "1005007822635375": 22.47,
-    "1005013096683979": 56.86
+    "1005013096683979": 56.86,
+    "1005006838055260": 1.81,
+    "1005006923518929": 0.84
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -4435,6 +4448,26 @@
       "price": 204.7,
       "timestamp": 1791208255.7291632,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48812": {
+      "channel_msg_id": 636,
+      "product_id": "1005006838055260",
+      "title": "Rocoren 90 Degree USB Type C Cable 100W",
+      "channel": "couponsglobal",
+      "source_msg_id": 48812,
+      "price": 1.81,
+      "timestamp": 1791212152.7085261,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48813": {
+      "channel_msg_id": 637,
+      "product_id": "1005006923518929",
+      "title": "Rocoren 30W USB Type C Car Charger PD QC 3.0 Fast",
+      "channel": "couponsglobal",
+      "source_msg_id": 48813,
+      "price": 0.84,
+      "timestamp": 1791212158.132987,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4443,7 +4476,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791208255.734947,
+    "last_deal_post_time": 1791212158.1391664,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4627,7 +4660,9 @@
     "1005008852027824": "aniscoupons",
     "1005012312990781": "lodydeals",
     "1005007822635375": "ecksdeal",
-    "1005013096683979": "ecksdeal"
+    "1005013096683979": "ecksdeal",
+    "1005006838055260": "couponsglobal",
+    "1005006923518929": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4835,7 +4870,9 @@
     "سماعات لاسلكية Attack Shark L80 PRO Wireless": "ecksdeal",
     "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K": "ecksdeal",
     "ماوس لاسلكي Attack Shark X1 Wireless": "ecksdeal",
-    "Attack Shark L80 Gaming Headset, Lightweight": "pcgamingpart"
+    "Attack Shark L80 Gaming Headset, Lightweight": "pcgamingpart",
+    "Rocoren 90 Degree USB Type C Cable 100W": "couponsglobal",
+    "Rocoren 30W USB Type C Car Charger PD QC 3.0 Fast": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
