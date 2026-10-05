@@ -4499,6 +4499,39 @@
       "price": 279.1,
       "timestamp": 1791236020.742662,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48785": {
+      "channel_msg_id": 656,
+      "product_id": "1005008414973716",
+      "title": "Lenovo XT53 Wireless Bluetooth 5.4 Earphones",
+      "channel": "couponsglobal",
+      "source_msg_id": 48785,
+      "price": 5.22,
+      "timestamp": 1791241759.1502223,
+      "status": "ACTIVE",
+      "category": "headsets"
+    },
+    "couponsglobal:48798": {
+      "channel_msg_id": 657,
+      "product_id": "1005007473024376",
+      "title": "Lenovo XT62 Earphones Bluetooth",
+      "channel": "couponsglobal",
+      "source_msg_id": 48798,
+      "price": 5.22,
+      "timestamp": 1791241759.1502223,
+      "status": "ACTIVE",
+      "category": "headsets"
+    },
+    "couponsglobal:48791": {
+      "channel_msg_id": 658,
+      "product_id": "1005011987956470",
+      "title": "HTC NE79 TWS Wireless Bluetooth Earphones AI",
+      "channel": "couponsglobal",
+      "source_msg_id": 48791,
+      "price": 4.82,
+      "timestamp": 1791241759.1502223,
+      "status": "ACTIVE",
+      "category": "headsets"
     }
   },
   "schedule_config": {
