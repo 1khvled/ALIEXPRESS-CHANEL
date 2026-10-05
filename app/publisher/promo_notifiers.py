@@ -21,8 +21,8 @@ from app.publisher.state_tracker import (
 from app.utils.logger import logger
 
 TARGET_CHANNEL_ID = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "")
+TELEGRAM_BOT_TOKEN = getattr(settings, "TELEGRAM_BOT_TOKEN", "") or os.getenv("TELEGRAM_BOT_TOKEN", "")
+ADMIN_BOT_TOKEN = getattr(settings, "ADMIN_BOT_TOKEN", "") or os.getenv("ADMIN_BOT_TOKEN", "")
 
 
 def build_promo_ending_alert(promo: PromoEvent, end_hour_str: str = "08:00") -> Tuple[str, Dict[str, Any]]:

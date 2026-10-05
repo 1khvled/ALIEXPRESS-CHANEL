@@ -126,7 +126,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     # Automated Check: Daily Tajmi3at / Compilations (~10:00 PM Algiers time 21:30-23:45 or forced)
     try:
         from app.publisher.regrouper import check_and_publish_regrouped_bulletins
-        bulletins = await check_and_publish_regrouped_bulletins(force=force_tajmi3at)
+        bulletins = await check_and_publish_regrouped_bulletins(bot_token=settings.TELEGRAM_BOT_TOKEN, force=force_tajmi3at)
         if bulletins:
             print(f"[TAJMI3AT AUTO-POST] Published {len(bulletins)} daily roundup bulletin(s): {[b['category'] for b in bulletins]}")
     except Exception as e:
@@ -703,7 +703,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     # 10. Daily Tajmi3at / Compilations (~10:00 PM UTC+1 or forced)
     try:
         from app.publisher.regrouper import check_and_publish_regrouped_bulletins
-        bulletins = await check_and_publish_regrouped_bulletins(force=force_tajmi3at)
+        bulletins = await check_and_publish_regrouped_bulletins(bot_token=settings.TELEGRAM_BOT_TOKEN, force=force_tajmi3at)
         if bulletins:
             print(f"\n[TAJMI3AT] Published {len(bulletins)} daily roundup bulletin(s):")
             for b in bulletins:

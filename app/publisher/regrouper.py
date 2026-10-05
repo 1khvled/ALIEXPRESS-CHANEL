@@ -38,8 +38,8 @@ from app.publisher.state_tracker import (
     TARGET_CHANNEL_ID
 )
 
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "")
+TELEGRAM_BOT_TOKEN = getattr(settings, "TELEGRAM_BOT_TOKEN", "") or os.getenv("TELEGRAM_BOT_TOKEN", "")
+ADMIN_BOT_TOKEN = getattr(settings, "ADMIN_BOT_TOKEN", "") or os.getenv("ADMIN_BOT_TOKEN", "")
 
 CATEGORIES_CONFIG = {
     "phones": {
@@ -619,7 +619,7 @@ async def check_and_publish_regrouped_bulletins(
     - Attaches storage/assets/tajmi3at_banner.png.
     - Records daily completion to prevent duplicate postings.
     """
-    token = bot_token or TELEGRAM_BOT_TOKEN or ADMIN_BOT_TOKEN
+    token = bot_token or getattr(settings, "TELEGRAM_BOT_TOKEN", "") or TELEGRAM_BOT_TOKEN or getattr(settings, "ADMIN_BOT_TOKEN", "") or ADMIN_BOT_TOKEN
     target = TARGET_CHANNEL_ID
     target_clean = str(target).lstrip("@")
 

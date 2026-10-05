@@ -190,7 +190,10 @@
     "1005007822635375",
     "1005013096683979",
     "1005006838055260",
-    "1005006923518929"
+    "1005006923518929",
+    "1005008379012998",
+    "1005005605683958",
+    "1005010056083952"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -215,7 +218,7 @@
     "1005012312990781": 1791201047.413366,
     "1005009234854371": 1791192944.201814,
     "1005006533038973": 1791104468.758226,
-    "1005007394028808": 1791106544.154073,
+    "1005007394028808": 1791235926.7793725,
     "1005012899224314": 1791193543.9040256,
     "1005012923660718": 1790888191.2162998,
     "1005012881256093": 1791194149.475346,
@@ -233,7 +236,7 @@
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
-    "1005012436000251": 1791104054.392151,
+    "1005012436000251": 1791235979.230238,
     "1005006750448278": 1790941167.9296343,
     "1005012184442621": 1791146144.850411,
     "1005006631309573": 1791027645.512462,
@@ -243,7 +246,7 @@
     "1005010721042860": 1791042962.9882953,
     "1005009517247552": 1790941221.8823678,
     "1005012191191893": 1791137155.7589798,
-    "1005012968221708": 1790941233.5893936,
+    "1005012968221708": 1791235969.3208232,
     "9998883454": 1790943454.3504107,
     "9998883497": 1790943497.723828,
     "9998883531": 1790943531.551938,
@@ -255,7 +258,7 @@
     "1005012406142215": 1791042955.9414852,
     "1005008390562391": 1791105348.8066044,
     "1005007345398413": 1790943717.3545928,
-    "1005012504076921": 1791142278.6117659,
+    "1005012504076921": 1791236011.4353654,
     "1005008715050858": 1791033345.3970714,
     "9998885689": 1790945689.9436276,
     "9998885726": 1790945726.205554,
@@ -265,7 +268,7 @@
     "9998886362": 1790946362.071869,
     "1005012407874415": 1791061256.0753598,
     "9998887189": 1790947189.8634577,
-    "1005012865117890": 1791129948.3620403,
+    "1005012865117890": 1791235914.0319262,
     "1005010428573334": 1790948755.0367405,
     "1005013146524028": 1791042354.706192,
     "1005009411512584": 1791104149.1784146,
@@ -283,14 +286,14 @@
     "1005011991145678": 1790962541.57551,
     "1005011682821623": 1790962844.0034096,
     "9998885747": 1790965747.5380507,
-    "1005010129356058": 1791052344.704609,
+    "1005010129356058": 1791235940.3645434,
     "9998885993": 1790965993.3792443,
     "1005009774318553": 1791200448.8235762,
-    "1005012574108028": 1791060354.760787,
+    "1005012574108028": 1791236020.742662,
     "1005008599340405": 1790967962.6418507,
     "1005007572968437": 1790969442.7810974,
     "1005009120957437": 1790970941.2570727,
-    "1005012922578845": 1791104484.5433714,
+    "1005012922578845": 1791236002.3605435,
     "1005005652871847": 1790976654.120254,
     "1005012554205120": 1791145541.318689,
     "1005008901941749": 1790973051.970508,
@@ -313,7 +316,7 @@
     "1005010453516983": 1791208255.7291632,
     "1005008554596598": 1791017145.537471,
     "1005008776714223": 1791018047.9604976,
-    "1005012925826589": 1791104477.3335717,
+    "1005012925826589": 1791235993.3269281,
     "1005010306498953": 1791021345.213176,
     "1005010338761787": 1791021850.86469,
     "1005012265051745": 1791022849.763491,
@@ -387,7 +390,10 @@
     "1005007822635375": 1791205539.6613767,
     "1005013096683979": 1791205547.1867356,
     "1005006838055260": 1791212152.7085261,
-    "1005006923518929": 1791212158.132987
+    "1005006923518929": 1791212158.132987,
+    "1005008379012998": 1791235946.0562956,
+    "1005005605683958": 1791235953.2682726,
+    "1005010056083952": 1791235961.3129663
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -617,7 +623,14 @@
     "ماوس لاسلكي Attack Shark X1 Wireless",
     "Attack Shark L80 Gaming Headset, Lightweight",
     "Rocoren 90 Degree USB Type C Cable 100W",
-    "Rocoren 30W USB Type C Car Charger PD QC 3.0 Fast"
+    "Rocoren 30W USB Type C Car Charger PD QC 3.0 Fast",
+    "Realme c 12/256GB",
+    "Attack Shark X5 Wireless",
+    "Xiaomi Pad 7  12/128GB",
+    "1MORE SonoFLow SE HQ31",
+    "Baseus GoTrip VA1 Air Pump",
+    "CMF by Nothing Buds 2A 12.4mm Driver 42dB ANC 4HD MicsLong Battery Life Up",
+    "REALME 15 5G (12/512)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -676,7 +689,7 @@
     "Honor Power 2  12/256": 1790941214.6756065,
     "Honor X70 5G 8/128": 1790941221.8823678,
     "Blackview MEGA 5  8/256": 1791137155.7589798,
-    "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1790941233.5893936,
+    "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1791235969.3208232,
     "4G LTE Wireless USB 150Mbps": 1790943633.9774187,
     "Curren 8455 Men's Quartz": 1790943640.1460688,
     "ATTACK SHARK X11SE": 1790943648.855101,
@@ -705,9 +718,9 @@
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
     "Xiaomi Pad 7 (12/256)": 1791052344.704609,
-    "ONEPLUS TURBO 6X PRO 5G (8/128)": 1791142278.6117659,
+    "ONEPLUS TURBO 6X PRO 5G (8/128)": 1791236011.4353654,
     "CUSU SSD 512 GB Portable SSD External Drive": 1791200448.8235762,
-    "HONOR  X80 PRO MAX (8/128)": 1791060354.760787,
+    "HONOR  X80 PRO MAX (8/128)": 1791236020.742662,
     "WALRAM Sata SSD 512GB": 1790967962.6418507,
     "Lenovo GM2 Pro TWS": 1790969442.7810974,
     "ASROCK B850M X WiFi": 1790970941.2570727,
@@ -737,7 +750,7 @@
     "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": 1791015953.484505,
     "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz": 1791017145.537471,
     "CUSU 512GB": 1791018047.9604976,
-    "REALME P3 5G (8/256)": 1791104477.3335717,
+    "REALME P3 5G (8/256)": 1791235993.3269281,
     "Toocki USB-C 60W Cable": 1791021345.213176,
     "Toocki 2.4A Lightning Cable": 1791021850.86469,
     "OnePlus Pad Go 2 8/128GB": 1791022849.763491,
@@ -789,7 +802,7 @@
     "Baseus Bowie E5x": 1791103551.065819,
     "Rechargeable RC Drift Racing Car": 1791103847.2554617,
     "Zeblaze Btalk PRO": 1791146144.850411,
-    "AMD Ryzen 5 7600X USED R5 7600X": 1791104054.392151,
+    "AMD Ryzen 5 7600X USED R5 7600X": 1791235979.230238,
     "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,": 1791104060.2548923,
     "New G6 Wireless Controller": 1791104149.1784146,
     "EasySMX X05 Pro Wireless Gamepad PC Controller": 1791192938.4319167,
@@ -850,7 +863,14 @@
     "ماوس لاسلكي Attack Shark X1 Wireless": 1791206156.5528755,
     "Attack Shark L80 Gaming Headset, Lightweight": 1791207945.0259264,
     "Rocoren 90 Degree USB Type C Cable 100W": 1791212152.7085261,
-    "Rocoren 30W USB Type C Car Charger PD QC 3.0 Fast": 1791212158.132987
+    "Rocoren 30W USB Type C Car Charger PD QC 3.0 Fast": 1791212158.132987,
+    "Realme c 12/256GB": 1791235914.0319262,
+    "Attack Shark X5 Wireless": 1791235926.7793725,
+    "Xiaomi Pad 7  12/128GB": 1791235940.3645434,
+    "1MORE SonoFLow SE HQ31": 1791235946.0562956,
+    "Baseus GoTrip VA1 Air Pump": 1791235953.2682726,
+    "CMF by Nothing Buds 2A 12.4mm Driver 42dB ANC 4HD MicsLong Battery Life Up": 1791235961.3129663,
+    "REALME 15 5G (12/512)": 1791236002.3605435
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1465,53 +1485,39 @@
     "megaphonna:8268",
     "aniscoupons:32795",
     "aniscoupons:32796",
+    "lodydeals:45480",
+    "lodydeals:45481",
     "lodydeals:45482",
-    "aniscoupons:32797",
-    "aniscoupons:32799",
-    "aniscoupons:32801",
-    "couponsglobal:48815",
-    "couponsglobal:48816",
-    "couponsglobal:48817",
-    "couponsglobal:48818",
-    "couponsglobal:48819",
+    "lodydeals:45483",
     "lodydeals:45484",
     "lodydeals:45485",
     "zedstoreonline:38549",
-    "aniscoupons:32802",
-    "aniscoupons:32803",
-    "aniscoupons:32804",
-    "lodydeals:45480",
-    "lodydeals:45483",
-    "lodydeals:45487",
-    "lodydeals:45488",
+    "ecksdeal:5867",
     "pcgamingpart:7964",
     "megaphonna:8269",
     "megaphonna:8270",
     "megaphonna:8271",
-    "megaphonna:8272",
-    "aniscoupons:32800",
-    "couponsglobal:48820",
-    "aniscoupons:32805"
+    "megaphonna:8272"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791217251.8495085,
+  "last_run_time": 1791236020.742662,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32805,
-      "last_check_time": 1791237166.5279875
+      "last_message_id": 32796,
+      "last_check_time": 1791224015.6746075
     },
     "ecksdeal": {
       "last_message_id": 5867,
-      "last_check_time": 1791235856.8124385
+      "last_check_time": 1791235971.3617773
     },
     "lodydeals": {
-      "last_message_id": 45491,
-      "last_check_time": 1791237138.9880023
+      "last_message_id": 45485,
+      "last_check_time": 1791235955.311363
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791237727.449401
+      "last_check_time": 1791235981.783928
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1519,19 +1525,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7964,
-      "last_check_time": 1791237727.1219323
+      "last_check_time": 1791235981.2813232
     },
     "zedstoreonline": {
       "last_message_id": 38549,
-      "last_check_time": 1791237713.3141263
+      "last_check_time": 1791235963.360668
     },
     "megaphonna": {
       "last_message_id": 8272,
-      "last_check_time": 1791237727.8820066
+      "last_check_time": 1791236022.789115
     },
     "couponsglobal": {
-      "last_message_id": 48820,
-      "last_check_time": 1791237742.4986691
+      "last_message_id": 48814,
+      "last_check_time": 1791224016.3462303
     }
   },
   "published_product_prices": {
@@ -1562,7 +1568,7 @@
     "1005010453516983": 204.7,
     "1005008852027824": 194.1,
     "1005012499451512": 260.0,
-    "1005010129356058": 294.0,
+    "1005010129356058": 291.0,
     "3256809790988797": 92.8,
     "1005005217734986": 9.61,
     "1005010062128237": 9.9,
@@ -1597,7 +1603,7 @@
     "1005012407874415": 480.4,
     "1005013152491360": 196.0,
     "1005012925826589": 189.0,
-    "1005012922578845": 214.9,
+    "1005012922578845": 238.9,
     "1005012865117890": 234.9,
     "1005010428573334": 294.0,
     "1005013146524028": 162.4,
@@ -1699,7 +1705,10 @@
     "1005007822635375": 22.47,
     "1005013096683979": 56.86,
     "1005006838055260": 1.81,
-    "1005006923518929": 0.84
+    "1005006923518929": 0.84,
+    "1005008379012998": 38.98,
+    "1005005605683958": 34.73,
+    "1005010056083952": 10.7
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -4511,6 +4520,126 @@
       "price": 29.18,
       "timestamp": 1791217251.8495085,
       "status": "ACTIVE"
+    },
+    "lodydeals:45480": {
+      "channel_msg_id": 640,
+      "product_id": "1005012865117890",
+      "title": "Realme c 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45480,
+      "price": 234.9,
+      "timestamp": 1791235914.0319262,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45481": {
+      "channel_msg_id": 641,
+      "product_id": "1005007394028808",
+      "title": "Attack Shark X5 Wireless",
+      "channel": "lodydeals",
+      "source_msg_id": 45481,
+      "price": 10.73,
+      "timestamp": 1791235926.7793725,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45483": {
+      "channel_msg_id": 642,
+      "product_id": "1005010129356058",
+      "title": "Xiaomi Pad 7  12/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45483,
+      "price": 291.0,
+      "timestamp": 1791235940.3645434,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45484": {
+      "channel_msg_id": 643,
+      "product_id": "1005008379012998",
+      "title": "1MORE SonoFLow SE HQ31",
+      "channel": "lodydeals",
+      "source_msg_id": 45484,
+      "price": 38.98,
+      "timestamp": 1791235946.0562956,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45485": {
+      "channel_msg_id": 644,
+      "product_id": "1005005605683958",
+      "title": "Baseus GoTrip VA1 Air Pump",
+      "channel": "lodydeals",
+      "source_msg_id": 45485,
+      "price": 34.73,
+      "timestamp": 1791235953.2682726,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38549": {
+      "channel_msg_id": 645,
+      "product_id": "1005010056083952",
+      "title": "CMF by Nothing Buds 2A 12.4mm Driver 42dB ANC 4HD MicsLong Battery Life Up",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38549,
+      "price": 10.7,
+      "timestamp": 1791235961.3129663,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5867": {
+      "channel_msg_id": 646,
+      "product_id": "1005012968221708",
+      "title": "سماعات اذن فخمة  Moondrop Chu 3 IEM",
+      "channel": "ecksdeal",
+      "source_msg_id": 5867,
+      "price": 22.74,
+      "timestamp": 1791235969.3208232,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7964": {
+      "channel_msg_id": 647,
+      "product_id": "1005012436000251",
+      "title": "AMD Ryzen 5 7600X USED R5 7600X",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7964,
+      "price": 104.99,
+      "timestamp": 1791235979.230238,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8269": {
+      "channel_msg_id": 648,
+      "product_id": "1005012925826589",
+      "title": "REALME P3 5G (8/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8269,
+      "price": 189.0,
+      "timestamp": 1791235993.3269281,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8270": {
+      "channel_msg_id": 649,
+      "product_id": "1005012922578845",
+      "title": "REALME 15 5G (12/512)",
+      "channel": "megaphonna",
+      "source_msg_id": 8270,
+      "price": 238.9,
+      "timestamp": 1791236002.3605435,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8271": {
+      "channel_msg_id": 650,
+      "product_id": "1005012504076921",
+      "title": "ONEPLUS TURBO 6X PRO 5G (8/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8271,
+      "price": 257.4,
+      "timestamp": 1791236011.4353654,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8272": {
+      "channel_msg_id": 651,
+      "product_id": "1005012574108028",
+      "title": "HONOR  X80 PRO MAX (8/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8272,
+      "price": 279.1,
+      "timestamp": 1791236020.742662,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4520,14 +4649,17 @@
     "is_paused": false,
     "night_mode_enabled": true,
     "night_pause_enabled": true,
-    "last_deal_post_time": 1791217251.8554943,
-    "last_sweep_time": 1791237749.1025321,
+    "last_deal_post_time": 1791236022.8248365,
+    "last_sweep_time": 1791236022.807815,
     "last_sweep_times": {
-      "algeria": 1791237742.5024717,
-      "france": 1791237749.1025321
+      "algeria": 1791236022.807815,
+      "france": 1791224020.4033065
     },
     "night_start_hour_dz": 0,
-    "night_end_hour_dz": 8
+    "night_end_hour_dz": 8,
+    "last_deal_post_times": {
+      "algeria": 1791236022.8248365
+    }
   },
   "last_coin_reminder_time": 1791089725.2515714,
   "next_reminder_interval_seconds": 220280,
@@ -4579,10 +4711,10 @@
     "1005012499451512": "zedstoreonline",
     "1005010219205081": "aniscoupons",
     "1005013152491360": "aniscoupons",
-    "1005010129356058": "megaphonna",
+    "1005010129356058": "lodydeals",
     "1005012925826589": "megaphonna",
     "1005012922578845": "megaphonna",
-    "1005012865117890": "megaphonna",
+    "1005012865117890": "lodydeals",
     "1005010428573334": "megaphonna",
     "1005013146524028": "megaphonna",
     "1005009411512584": "pcgamingpart",
@@ -4677,7 +4809,7 @@
     "1005012743092233": "pcgamingpart",
     "1005007805497968": "pcgamingpart",
     "1005007345108759": "pcgamingpart",
-    "1005007394028808": "aniscoupons",
+    "1005007394028808": "lodydeals",
     "1005007394197021": "zedstoreonline",
     "1005011778621042": "lodydeals",
     "1005012571601398": "aniscoupons",
@@ -4711,7 +4843,10 @@
     "1005007822635375": "ecksdeal",
     "1005013096683979": "ecksdeal",
     "1005006838055260": "couponsglobal",
-    "1005006923518929": "couponsglobal"
+    "1005006923518929": "couponsglobal",
+    "1005008379012998": "lodydeals",
+    "1005005605683958": "lodydeals",
+    "1005010056083952": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4921,7 +5056,14 @@
     "ماوس لاسلكي Attack Shark X1 Wireless": "ecksdeal",
     "Attack Shark L80 Gaming Headset, Lightweight": "pcgamingpart",
     "Rocoren 90 Degree USB Type C Cable 100W": "couponsglobal",
-    "Rocoren 30W USB Type C Car Charger PD QC 3.0 Fast": "couponsglobal"
+    "Rocoren 30W USB Type C Car Charger PD QC 3.0 Fast": "couponsglobal",
+    "Realme c 12/256GB": "lodydeals",
+    "Attack Shark X5 Wireless": "lodydeals",
+    "Xiaomi Pad 7  12/128GB": "lodydeals",
+    "1MORE SonoFLow SE HQ31": "lodydeals",
+    "Baseus GoTrip VA1 Air Pump": "lodydeals",
+    "CMF by Nothing Buds 2A 12.4mm Driver 42dB ANC 4HD MicsLong Battery Life Up": "zedstoreonline",
+    "REALME 15 5G (12/512)": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -4965,6 +5107,10 @@
     "2026-10-03": {
       "timestamp": 1791063642.7206447,
       "bulletins_count": 3
+    },
+    "2026-10-05": {
+      "timestamp": 1791237769.1269245,
+      "bulletins_count": 4
     }
   },
   "regrouped_channel_msg_ids": [
@@ -4981,7 +5127,47 @@
     472,
     474,
     480,
-    500
+    500,
+    526,
+    529,
+    535,
+    537,
+    538,
+    540,
+    542,
+    545,
+    551,
+    554,
+    557,
+    558,
+    560,
+    563,
+    567,
+    577,
+    581,
+    585,
+    586,
+    588,
+    592,
+    602,
+    603,
+    605,
+    606,
+    611,
+    613,
+    615,
+    629,
+    630,
+    632,
+    633,
+    634,
+    635,
+    640,
+    641,
+    646,
+    648,
+    650,
+    651
   ],
   "pinned_promo_events": {
     "Party Ready Sale / Choice Day_20261001": 505
@@ -4990,5 +5176,6 @@
     "LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004"
   ],
   "last_card_affiliate_time_dz": 1791162928.4193592,
-  "card_affiliate_variant_idx_dz": 1
+  "card_affiliate_variant_idx_dz": 1,
+  "last_tajmi3at_published_time": 1791237769.1269245
 }
