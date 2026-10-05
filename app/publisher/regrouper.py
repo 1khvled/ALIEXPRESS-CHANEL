@@ -258,6 +258,12 @@ def clean_product_name_short(raw_title: str, max_chars: int = 32) -> str:
     t = re.sub(r'[\$€].*$', '', t).strip()
     # Remove store suffixes / watermarks
     t = re.sub(r'(\s*-\s*AliExpress.*$|\s*\|\s*AliExpress.*$)', '', t, flags=re.IGNORECASE).strip()
+    # Strip any Arabic prefixes so title begins with Latin characters (guarantees strict LTR Telegram alignment)
+    arabic_prefix = re.match(r'^[\u0600-\u06FF\s\-_:،؛!؟]+', t)
+    if arabic_prefix and len(t) > arabic_prefix.end():
+        t = t[arabic_prefix.end():].strip()
+    # Strip generic prefix buzzwords
+    t = re.sub(r'^(?:New|Original|Hot|Brand New|Real)\s+', '', t, flags=re.IGNORECASE).strip()
     # Remove marketing buzzwords
     t = re.sub(
         r'\b(Global\s+Version|Original|Hot\s+Sale|Brand\s+New|Top\s+Selling|Official\s+Store|Official|Edition|Newest|Version\s+Globale|202[4-9])\b',
@@ -436,10 +442,18 @@ def extract_item_brand(title: str, text: str = "") -> str:
         if re.search(rf"(?:\b|_){re.escape(brand)}(?:\b|_)", combined):
             return brand
     clean_title = re.sub(r"^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:]+", "", title or "").strip()
+    clean_title = re.sub(r"^[\u0600-\u06FF\s\-_:،؛!؟]+", "", clean_title).strip()
     words = [w for w in re.sub(r"[^a-zA-Z0-9\s]", "", clean_title).split() if len(w) >= 3]
     if words and not words[0].isdigit():
         cand = words[0].upper()
-        if cand not in {"GLOBAL", "ORIGINAL", "SMARTPHONE", "WIRELESS", "GAMING", "BLUETOOTH", "MECHANICAL"}:
+        blacklist_brands = {
+            "GLOBAL", "ORIGINAL", "SMARTPHONE", "WIRELESS", "GAMING", "BLUETOOTH",
+            "MECHANICAL", "NEW", "HOT", "MINI", "PRO", "PLUS", "PORTABLE", "FAST",
+            "SMART", "USB", "TYPE", "ADAPTER", "CABLE", "CASE", "SET", "KIT", "TWS"
+        }
+        if cand in POPULAR_BRANDS:
+            return cand
+        if cand not in blacklist_brands and len(cand) >= 4:
             return cand
     return "عروض أخرى"
 
@@ -511,11 +525,15 @@ def build_category_bulletin_text(
     ]
     footer_lines = [
         "",
-        "📌 <b>رابط بوت لخصم سعر أي منتج خاص بالعملات 👌</b>",
-        "🤖 @Alilo07BOT 🤖",
-        f"📺 <b>قناتنا على التلغرام:</b> @{clean_ch}"
+        "🪙 <b>بوت تخفيض العملات:</b> @Alilo07BOT",
+        f"📢 <b>قناتنا على التلغرام:</b> @{clean_ch}"
     ]
     footer_text = "\n".join(footer_lines)
+
+    # Sub-group by brand ONLY for phones when brand has >= 2 items!
+    # For any other category (controllers, mice, headsets, gadgets) or single-item brands,
+    # list products directly without messy '👊 BRAND' clutter.
+    show_brand_headers = (category_name == "phones")
 
     # Group by brand
     brand_groups = group_items_by_brand(items)
@@ -527,12 +545,13 @@ def build_category_bulletin_text(
 
     for brand in sorted_brands:
         b_items = brand_groups[brand]
-        brand_header = f"👊 <b>{brand}</b>"
+        use_brand_header = show_brand_headers and (brand != "عروض أخرى") and (len(b_items) >= 2)
 
         temp_body = list(body_lines)
-        if temp_body:
-            temp_body.append("")
-        temp_body.append(brand_header)
+        if use_brand_header:
+            if temp_body:
+                temp_body.append("")
+            temp_body.append(f"👊 <b>{brand}</b>")
 
         brand_added: List[Dict[str, Any]] = []
         for it in b_items:
@@ -554,7 +573,7 @@ def build_category_bulletin_text(
 def build_master_daily_roundup_text(deals: List[Dict[str, Any]], channel_username: str) -> Tuple[str, List[Dict[str, Any]]]:
     """
     Builds the Master Daily Roundup matching the sleek Megaprix index style.
-    Sub-groups items across categories by brand (👊 BRAND) with clickable direct links.
+    Sub-groups items across categories cleanly with clickable direct links.
     """
     clean_ch = channel_username.replace("@", "")
     header_lines = [
@@ -564,9 +583,8 @@ def build_master_daily_roundup_text(deals: List[Dict[str, Any]], channel_usernam
     ]
     footer_lines = [
         "",
-        "📌 <b>رابط بوت لخصم سعر أي منتج خاص بالعملات 👌</b>",
-        "🤖 @Alilo07BOT 🤖",
-        f"📺 <b>قناتنا على التلغرام:</b> @{clean_ch}"
+        "🪙 <b>بوت تخفيض العملات:</b> @Alilo07BOT",
+        f"📢 <b>قناتنا على التلغرام:</b> @{clean_ch}"
     ]
     footer_text = "\n".join(footer_lines)
 
@@ -580,12 +598,13 @@ def build_master_daily_roundup_text(deals: List[Dict[str, Any]], channel_usernam
 
     for brand in sorted_brands:
         b_items = brand_groups[brand]
-        brand_header = f"👊 <b>{brand}</b>"
+        use_brand_header = (brand != "عروض أخرى") and (len(b_items) >= 3)
 
         temp_body = list(body_lines)
-        if temp_body:
-            temp_body.append("")
-        temp_body.append(brand_header)
+        if use_brand_header:
+            if temp_body:
+                temp_body.append("")
+            temp_body.append(f"👊 <b>{brand}</b>")
 
         brand_added: List[Dict[str, Any]] = []
         for it in b_items:

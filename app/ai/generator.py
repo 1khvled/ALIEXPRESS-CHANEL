@@ -156,30 +156,46 @@ class DealCaptionGenerator:
     ) -> str:
         lines = []
 
-        # 1. Authentic Algerian Deal Hook
-        if deal_type == "bundle":
-            h = int(hashlib.md5(title.encode()).hexdigest(), 16)
-            if is_restock:
-                hook = "⚡ <b>عروض الحزم رجعت توفرت.. حبات قلال متتراطاش! 🔥📦</b>"
+        # 1. Authentic Algerian Deal Hook — Only include if source channel actually included one!
+        # Rule from user: "stop calling eveything affaire takhfid istina2i if those channels do it u do it if they dont u dont"
+        has_source_hook = False
+        if is_restock or is_price_drop:
+            has_source_hook = True
+        elif raw_text:
+            first_lines = " ".join(raw_text.splitlines()[:3]).lower()
+            hook_keywords = [
+                "لافار", "لافــــار", "تخفيض", "سعر خيالي", "عرض اليوم", "باطل", "صيدة",
+                "همزة", "ممتاز", "استثنائي", "سعر هبال", "طاح السعر", "أقوى سعر", "افار",
+                "affaire", "promotion", "promo", "bon plan"
+            ]
+            if any(k in first_lines for k in hook_keywords):
+                has_source_hook = True
+
+        if has_source_hook:
+            if deal_type == "bundle":
+                h = int(hashlib.md5(title.encode()).hexdigest(), 16)
+                if is_restock:
+                    hook = "⚡ <b>عروض الحزم رجعت توفرت.. حبات قلال متتراطاش! 🔥📦</b>"
+                else:
+                    bundle_hooks = [
+                        "🔥 <b>عروض الحزم Bundle Deals بسعر ممتاز متتراطاش 🔥📦</b>",
+                        "🛍️ <b>لافاار عروض الحزم 3 قطع بسعر باطل 🔥⚡</b>",
+                        "⚡ <b>تخفيض قوي في عروض الحزم 3 قطع بأقوى سعر 🔥</b>",
+                        "📦 <b>عروض الحزم (Choice Bundle) لافار ممتازة باطل 🔥⚡</b>"
+                    ]
+                    hook = bundle_hooks[h % len(bundle_hooks)]
             else:
-                bundle_hooks = [
-                    "🔥 <b>عروض الحزم Bundle Deals بسعر ممتاز متتراطاش 🔥📦</b>",
-                    "🛍️ <b>لافاار عروض الحزم 3 قطع بسعر باطل 🔥⚡</b>",
-                    "⚡ <b>تخفيض قوي في عروض الحزم 3 قطع بأقوى سعر 🔥</b>",
-                    "📦 <b>عروض الحزم (Choice Bundle) لافار ممتازة باطل 🔥⚡</b>"
-                ]
-                hook = bundle_hooks[h % len(bundle_hooks)]
-        else:
-            hook = self._select_smart_hook(
-                title=title,
-                usd_price=usd_price,
-                has_points_discount=has_points_discount,
-                has_coupon=bool(coupon_code or seller_coupon),
-                promo_tag=None,
-                is_price_drop=is_price_drop,
-                is_restock=is_restock
-            )
-        lines.append(f"<blockquote>{hook}</blockquote>")
+                hook = self._select_smart_hook(
+                    title=title,
+                    usd_price=usd_price,
+                    has_points_discount=has_points_discount,
+                    has_coupon=bool(coupon_code or seller_coupon),
+                    promo_tag=None,
+                    is_price_drop=is_price_drop,
+                    is_restock=is_restock
+                )
+            if hook:
+                lines.append(f"<blockquote>{hook}</blockquote>")
 
         if deal_type == "bundle":
             lines.append("<blockquote>📦 <b>تنبيه عروض الحزم:</b> يجب إضافة 3 قطع إلى السلة للاستفادة من هذا السعر والشحن المجاني! 🛍️</blockquote>")
