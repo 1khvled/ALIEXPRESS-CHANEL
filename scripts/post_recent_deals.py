@@ -132,9 +132,9 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     except Exception as e:
         print(f"[!] Daily tajmi3at check error: {e}")
 
-    # Dynamic Interval & Day/Night Schedule Check (Controlled via Admin Bot & Dashboard)
-    from app.publisher.state_tracker import is_deal_posting_due, record_deal_posted_time, is_algerian_peak_hour
-    is_due, schedule_msg, active_interval = is_deal_posting_due()
+    # Dynamic Interval & Day/Night Schedule Check (40 min daytime sweep, night paused)
+    from app.publisher.state_tracker import is_deal_posting_due, record_sweep_completed, record_deal_posted_time, is_algerian_peak_hour
+    is_due, schedule_msg, active_interval = is_deal_posting_due(channel="algeria")
     print(f"\n[SCHEDULE EVALUATION] {schedule_msg}")
     if not is_due and not force:
         print(f"--> Skipping deal collection this run. ({schedule_msg})")
@@ -675,6 +675,11 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                 import traceback
                 print(f"  [ERROR] @{ch}: {e}")
                 traceback.print_exc()
+
+    # Record sweep execution and deal posting timestamps
+    record_sweep_completed(channel="algeria")
+    if published_deals:
+        record_deal_posted_time(channel="algeria")
 
     print("\n" + "=" * 70)
     print(f"SUCCESS: Published {len(published_deals)} deals to {settings.TARGET_CHANNEL_ID}!")

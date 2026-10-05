@@ -4483,12 +4483,15 @@
     }
   },
   "schedule_config": {
-    "day_interval_minutes": 5,
-    "night_interval_minutes": 60,
-    "current_interval_minutes": 5,
+    "day_interval_minutes": 40,
+    "night_interval_minutes": 0,
+    "current_interval_minutes": 40,
     "is_paused": false,
     "night_mode_enabled": true,
+    "night_pause_enabled": true,
     "last_deal_post_time": 1791217251.8554943,
+    "last_sweep_time": 0.0,
+    "last_sweep_times": {},
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },

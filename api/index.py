@@ -1182,8 +1182,8 @@ async def get_dashboard_stats():
             "usdt_rate": rate,
             "watchlist_active_count": wl_count,
             "schedule": {
-                "day_interval": cfg.get("day_interval_minutes", 5),
-                "night_interval": cfg.get("night_interval_minutes", 30),
+                "day_interval": cfg.get("day_interval_minutes", 40),
+                "night_interval": cfg.get("night_interval_minutes", 0),
                 "is_paused": cfg.get("is_paused", False)
             }
         }

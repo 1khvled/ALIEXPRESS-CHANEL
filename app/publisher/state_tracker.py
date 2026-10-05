@@ -986,14 +986,17 @@ def record_deals_regrouped(channel_msg_ids: List[int]):
 
 # ── Dynamic Schedule & Interval Management ──────────────────────
 DEFAULT_SCHEDULE_CONFIG = {
-    "day_interval_minutes": 5,
-    "night_interval_minutes": 60,
-    "current_interval_minutes": 5,
+    "day_interval_minutes": 40,
+    "night_interval_minutes": 0,    # 0 = paused at night
+    "current_interval_minutes": 40,
     "is_paused": False,
-    "night_mode_enabled": True,
+    "night_mode_enabled": True,     # True = pause deal sweeps during night window
+    "night_pause_enabled": True,
     "last_deal_post_time": 0.0,
-    "night_start_hour_dz": 0,   # 00:00 Algerian time
-    "night_end_hour_dz": 8      # 08:00 Algerian time
+    "last_sweep_time": 0.0,
+    "last_sweep_times": {},         # {"algeria": timestamp, "france": timestamp}
+    "night_start_hour_dz": 0,       # 00:00 Algerian/CET time (UTC+1)
+    "night_end_hour_dz": 8          # 08:00 Algerian/CET time (UTC+1)
 }
 
 def get_schedule_config() -> Dict[str, Any]:
@@ -1016,24 +1019,69 @@ def update_schedule_config(updates: Dict[str, Any]) -> Dict[str, Any]:
     logger.info(f"Updated schedule config: {merged}")
     return merged
 
-def is_deal_posting_due() -> Tuple[bool, str, int]:
+def is_deal_posting_due(channel: str = "algeria") -> Tuple[bool, str, int]:
     """
-    Checks if deal posting is active:
-    - If paused via /pause by admin: returns False
-    - Otherwise: returns True so deals are published as soon as monitored channels post.
+    Checks if enough time has passed to perform a deal sweep based on:
+    - User-configured interval (default: 40 minutes during daytime)
+    - Night window pause: deal sweeps are paused between 00:00 and 08:00 (Algiers/CET time)
+    - Manual pause switch (/pause by admin)
+
+    Returns: (is_due, reason_message, active_interval_minutes)
     """
     config = get_schedule_config()
     if config.get("is_paused", False):
         return False, "⏸️ النشر التلقائي متوقف مؤقتاً بأمر المدير (Paused)", 0
 
-    return True, "✅ مراقبة ونشر العروض فورياً نشطة (Lody, Zdstore, Esk, BND)", 0
+    # 1. Night check: Algeria & France are UTC+1 (CET / Algiers time)
+    now_utc = datetime.now(timezone.utc)
+    algeria_hour = (now_utc.hour + 1) % 24
+    night_start = config.get("night_start_hour_dz", 0)
+    night_end = config.get("night_end_hour_dz", 8)
 
-def record_deal_posted_time():
+    is_night = (algeria_hour >= night_start and algeria_hour < night_end)
+    if is_night and config.get("night_mode_enabled", True):
+        return False, f"🌙 الوضع الليلي مفعّل ({night_start:02d}:00 - {night_end:02d}:00 بتوقيت الجزائر/فرنسا): جولات سحب العروض متوقفة طوال الليل (Night paused)", 0
+
+    # 2. Daytime sweep interval (default 40 minutes)
+    active_interval = config.get("current_interval_minutes", config.get("day_interval_minutes", 40))
+    mode_desc = f"الوضع النهاري ☀️ (كل {active_interval} دقيقة)"
+
+    now_ts = time.time()
+    last_sweep_times = config.get("last_sweep_times", {})
+    last_sweep_ts = last_sweep_times.get(channel, config.get("last_sweep_time", 0.0))
+    elapsed_seconds = now_ts - last_sweep_ts
+    required_seconds = active_interval * 60
+
+    # Debounce / cooldown check
+    if last_sweep_ts > 0 and elapsed_seconds < required_seconds:
+        remaining_minutes = (required_seconds - elapsed_seconds) / 60
+        return False, f"⏳ في فترة الانتظار بين الجولات: {mode_desc} - متبقي {remaining_minutes:.1f} دقيقة", active_interval
+
+    return True, f"✅ جاهز لجولة سحب العروض: {mode_desc}", active_interval
+
+def record_sweep_completed(channel: str = "algeria"):
+    """Updates the last_sweep_time timestamp for the given channel."""
+    state = load_persistent_state()
+    if "schedule_config" not in state:
+        state["schedule_config"] = dict(DEFAULT_SCHEDULE_CONFIG)
+    now = time.time()
+    state["schedule_config"]["last_sweep_time"] = now
+    if "last_sweep_times" not in state["schedule_config"]:
+        state["schedule_config"]["last_sweep_times"] = {}
+    state["schedule_config"]["last_sweep_times"][channel] = now
+    save_persistent_state(state)
+
+def record_deal_posted_time(channel: str = "algeria"):
     """Updates the last_deal_post_time timestamp."""
     state = load_persistent_state()
     if "schedule_config" not in state:
         state["schedule_config"] = dict(DEFAULT_SCHEDULE_CONFIG)
-    state["schedule_config"]["last_deal_post_time"] = time.time()
+    now = time.time()
+    state["schedule_config"]["last_deal_post_time"] = now
+    if "last_deal_post_times" not in state["schedule_config"]:
+        state["schedule_config"]["last_deal_post_times"] = {}
+    state["schedule_config"]["last_deal_post_times"][channel] = now
     save_persistent_state(state)
+
 
 

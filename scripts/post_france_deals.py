@@ -465,6 +465,14 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
     except Exception as e:
         print(f"  [!] France card affiliate check error: {e}")
 
+    # 0.7. Dynamic Interval & Day/Night Schedule Check (40 min daytime sweep, night paused)
+    from app.publisher.state_tracker import is_deal_posting_due, record_sweep_completed
+    is_due, schedule_msg, active_interval = is_deal_posting_due(channel="france")
+    print(f"\n[FRANCE SCHEDULE EVALUATION] {schedule_msg}")
+    if not is_due and not force:
+        print(f"--> Skipping France deal collection this run. ({schedule_msg})")
+        return 0
+
     state = load_france_state()
     published_keys = set(state.get("published_post_keys", []))
     published_pids = set(state.get("published_product_ids", []))
@@ -804,6 +812,7 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
     if published_count > 0:
         state["last_deal_post_time"] = time.time()
     save_france_state(state)
+    record_sweep_completed(channel="france")
 
     print("\n" + "=" * 70)
     print(f"FRANCE RUN FINISHED: Published {published_count} deals to {TARGET_FRANCE_CHANNEL}!")

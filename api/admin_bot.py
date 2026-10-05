@@ -474,16 +474,16 @@ def build_schedule_menu_text_and_markup() -> Tuple[str, Dict[str, Any]]:
     """Builds interactive admin schedule control menu."""
     from app.publisher.state_tracker import get_schedule_config
     config = get_schedule_config()
-    cur_m = config.get("current_interval_minutes", 5)
+    cur_m = config.get("current_interval_minutes", 40)
     paused = config.get("is_paused", False)
     night_on = config.get("night_mode_enabled", True)
 
     status_badge = "⏸️ متوقف مؤقتاً" if paused else "✅ نشط يعمل"
-    night_badge = "مفعّل (كل 30 دقيقة من 00:00 إلى 08:00)" if night_on else "معطّل"
+    night_badge = "مفعّل (النشر متوقف تماماً من 00:00 إلى 08:00)" if night_on else "معطّل"
 
     text = (
         "⚙️ <b>لوحة التحكم في سرعة وتوقيت النشر التلقائي</b> ⏱️\n\n"
-        f"• <b>السرعة الحالية (النهارية):</b> كل <b>{cur_m} دقائق</b>\n"
+        f"• <b>السرعة الحالية (النهارية):</b> كل <b>{cur_m} دقيقة</b>\n"
         f"• <b>الوضع الليلي التلقائي:</b> {night_badge} 🌙\n"
         f"• <b>حالة النشر:</b> {status_badge}\n\n"
         "👇 <i>اضغط على أي زر أدناه لتغيير سرعة النشر فوراً:</i>"
@@ -492,15 +492,16 @@ def build_schedule_menu_text_and_markup() -> Tuple[str, Dict[str, Any]]:
     markup = {
         "inline_keyboard": [
             [
-                {"text": ("⚡ كل 5 دقائق (أقصى سرعة) ✔️" if cur_m == 5 else "⚡ كل 5 دقائق"), "callback_data": "sched_int_5"},
-                {"text": ("🚀 كل 10 دقائق ✔️" if cur_m == 10 else "🚀 كل 10 دقائق"), "callback_data": "sched_int_10"}
-            ],
-            [
-                {"text": ("⚖️ كل 15 دقيقة ✔️" if cur_m == 15 else "⚖️ كل 15 دقيقة"), "callback_data": "sched_int_15"},
+                {"text": ("⚡ كل 40 دقيقة (الافتراضي) ✔️" if cur_m == 40 else "⚡ كل 40 دقيقة (الافتراضي)"), "callback_data": "sched_int_40"},
                 {"text": ("🕒 كل 30 دقيقة ✔️" if cur_m == 30 else "🕒 كل 30 دقيقة"), "callback_data": "sched_int_30"}
             ],
             [
-                {"text": ("🌙 تعطيل الوضع الليلي" if night_on else "🌙 تفعيل الوضع الليلي (30د ليلاً)"), "callback_data": "sched_toggle_night"}
+                {"text": ("⚖️ كل 15 دقيقة ✔️" if cur_m == 15 else "⚖️ كل 15 دقيقة"), "callback_data": "sched_int_15"},
+                {"text": ("🚀 كل 10 دقائق ✔️" if cur_m == 10 else "🚀 كل 10 دقائق"), "callback_data": "sched_int_10"},
+                {"text": ("⚡ كل 5 دقائق ✔️" if cur_m == 5 else "⚡ كل 5 دقائق"), "callback_data": "sched_int_5"}
+            ],
+            [
+                {"text": ("🌙 تعطيل الوضع الليلي" if night_on else "🌙 تفعيل إيقاف النشر ليلاً (00:00 - 08:00)"), "callback_data": "sched_toggle_night"}
             ],
             [
                 {"text": ("▶️ استئناف النشر التلقائي" if paused else "⏸️ إيقاف النشر التلقائي مؤقتاً"), "callback_data": "sched_toggle_pause"}
@@ -539,7 +540,10 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
         # Callback: Schedule & Interval controls
         if cb_data.startswith("sched_"):
             from app.publisher.state_tracker import update_schedule_config, get_schedule_config
-            if cb_data == "sched_int_5":
+            if cb_data == "sched_int_40":
+                update_schedule_config({"current_interval_minutes": 40, "day_interval_minutes": 40, "is_paused": False})
+                toast = "⚡ تم ضبط سرعة سحب العروض على كل 40 دقيقة!"
+            elif cb_data == "sched_int_5":
                 update_schedule_config({"current_interval_minutes": 5, "day_interval_minutes": 5, "is_paused": False})
                 toast = "⚡ تم ضبط سرعة النشر على كل 5 دقائق!"
             elif cb_data == "sched_int_10":
@@ -807,7 +811,7 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             f"📊 <b>حالة نظام النشر التلقائي للقناة @DzAliexpress0:</b>\n\n"
             f"• <b>الحالة العامة:</b> {status_badge}\n"
             f"• <b>السرعة النشطة:</b> كل <b>{active_interval} دقيقة</b>\n"
-            f"• <b>الوضع الليلي:</b> {'🌙 مفعّل (كل 30د بين 00:00 - 08:00)' if night_on else '☀️ معطل'}\n"
+            f"• <b>الوضع الليلي:</b> {'🌙 مفعّل (النشر متوقف بين 00:00 - 08:00)' if night_on else '☀️ معطل'}\n"
             f"• <b>آخر صفقة نُشرت:</b> {last_post_str}\n"
             f"• <b>التقرير المباشر:</b> <i>{reason}</i>\n"
         )
