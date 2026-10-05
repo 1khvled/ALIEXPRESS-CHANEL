@@ -1,4 +1,5 @@
 import pytest
+from unittest.mock import patch
 from app.aliexpress.parser import extract_telegram_html_text, extract_prices, compute_title_compatibility
 from app.aliexpress.product import product_extractor
 from bs4 import BeautifulSoup
@@ -44,11 +45,31 @@ async def test_multi_link_prefers_matching_product():
 🔗 رابط : https://s.click.aliexpress.com/e/_c2JpSWfB
 🔗 مباشر : https://s.click.aliexpress.com/e/_c3ar3tq9"""
 
-    extracted = await product_extractor.extract_from_message(msg_text)
-    assert extracted is not None
-    # Must select the headset product ID (1005008390562391), NOT POCO phone (1005013152491360)
-    assert extracted.product_id == "1005008390562391"
-    assert extracted.current_price == 11.7
+    from app.aliexpress.resolver import ResolvedUrlResult
+
+    async def mock_resolve(url):
+        if "_c2JpSWfB" in url:
+            return ResolvedUrlResult(
+                original_url=url,
+                final_url="https://www.aliexpress.com/item/1005013152491360.html",
+                canonical_url="https://www.aliexpress.com/item/1005013152491360.html",
+                product_id="1005013152491360",
+                is_valid=True
+            )
+        return ResolvedUrlResult(
+            original_url=url,
+            final_url="https://www.aliexpress.com/item/1005008390562391.html",
+            canonical_url="https://www.aliexpress.com/item/1005008390562391.html",
+            product_id="1005008390562391",
+            is_valid=True
+        )
+
+    with patch("app.aliexpress.resolver.url_resolver.resolve", side_effect=mock_resolve):
+        extracted = await product_extractor.extract_from_message(msg_text)
+        assert extracted is not None
+        # Must select the headset product ID (1005008390562391), NOT POCO phone (1005013152491360)
+        assert extracted.product_id == "1005008390562391"
+        assert extracted.current_price == 11.7
 
 def test_kz_earphones_controllers_and_keyboards_compatibility():
     from app.aliexpress.parser import is_allowed_category

@@ -794,6 +794,11 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                     await asyncio.sleep(2.0)
                 else:
                     print(f"  [!] Publish to {TARGET_FRANCE_CHANNEL} failed: {err}")
+                    try:
+                        from app.publisher.admin_alerts import notify_admin_error
+                        await notify_admin_error("فشل نشر صفقة فرنسا (FR Deal Publish Failed)", f"Product {extracted.product_id} ({extracted.title[:50]}): {err}", channel="france")
+                    except Exception:
+                        pass
                     max_processed_id = max(max_processed_id, msg_id)
                     if "403" in str(err) or "Administrator" in str(err) or "member list is inaccessible" in str(err) or "chat not found" in str(err) or "bot is not a member" in str(err):
                         print(f"  [!] Action required: Add @Alilo07BOT as an Administrator to {TARGET_FRANCE_CHANNEL} with 'Post Messages' permission.")

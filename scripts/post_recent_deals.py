@@ -131,6 +131,11 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
             print(f"[TAJMI3AT AUTO-POST] Published {len(bulletins)} daily roundup bulletin(s): {[b['category'] for b in bulletins]}")
     except Exception as e:
         print(f"[!] Daily tajmi3at check error: {e}")
+        try:
+            from app.publisher.admin_alerts import notify_admin_error
+            await notify_admin_error("فشل نشر التجميعة (Daily Tajmi3at Error)", str(e), channel="algeria", exc=e)
+        except Exception:
+            pass
 
     # Dynamic Interval & Day/Night Schedule Check (40 min daytime sweep, night paused)
     from app.publisher.state_tracker import is_deal_posting_due, record_sweep_completed, record_deal_posted_time, is_algerian_peak_hour
@@ -662,6 +667,11 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                             await asyncio.sleep(2.0)
                         else:
                             print(f"  [!] Failed to publish: {err}")
+                            try:
+                                from app.publisher.admin_alerts import notify_admin_error
+                                await notify_admin_error("فشل نشر الصفقة (Deal Publish Failed)", f"Product {deal.product_id} ({deal.title[:50]}): {err}", channel="algeria")
+                            except Exception:
+                                pass
 
                         max_processed_id = max(max_processed_id, msg_id)
 
@@ -675,6 +685,11 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                 import traceback
                 print(f"  [ERROR] @{ch}: {e}")
                 traceback.print_exc()
+                try:
+                    from app.publisher.admin_alerts import notify_admin_error
+                    await notify_admin_error("فشل مسح القناة (Channel Sweep Failed)", f"@{ch}: {e}", channel="algeria", exc=e)
+                except Exception:
+                    pass
 
     # Record sweep execution and deal posting timestamps
     record_sweep_completed(channel="algeria")

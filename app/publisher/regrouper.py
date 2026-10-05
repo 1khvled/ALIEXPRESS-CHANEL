@@ -406,23 +406,69 @@ def get_recent_published_deals_for_roundup(max_age_hours: float = 24.0) -> List[
 
     return list(collected.values())
 
+POPULAR_BRANDS = [
+    # Phones & Tablets
+    "REALME", "REDMI", "POCO", "XIAOMI", "HONOR", "ONEPLUS", "OPPO", "VIVO",
+    "SAMSUNG", "INFINIX", "TECNO", "NUBIA", "ZTE", "IQOO", "MEIZU", "APPLE",
+    "IPHONE", "GOOGLE", "PIXEL", "MOTOROLA", "BLACKVIEW", "OSCAL", "CHUWI",
+    "TECLAST", "ALLDOCUBE",
+    # Gaming Mice, Keyboards, Pads
+    "ATTACK SHARK", "AULA", "AJAZZ", "VXE", "VGN", "DARMOSHARK", "SCYROX",
+    "ZAOPIN", "MACHENIKE", "FANTECH", "DELUX", "RAINY", "HI75", "CRUSH80",
+    "KZZI", "EPOMAKER", "KEYCHRON", "RAZER", "LOGITECH", "CORSAIR", "STEELSERIES",
+    # Controllers / Gamepads
+    "EASYSMX", "GAMESIR", "FLYDIGI", "8BITDO", "GULIKIT", "DOBE",
+    # Audio / Earphones / Headsets
+    "HOCO", "LENOVO", "HAYLOU", "ANKER", "SOUNDCORE", "BASEUS", "QCY",
+    "EDIFIER", "SOUNDPEATS", "KZ", "CCA", "MOONDROP", "MONSTER",
+    # Chargers & Cables
+    "UGREEN", "TOOCKI", "ESSAGER", "KUULAA", "ROCOREN", "USAMS",
+    # Smartwatches
+    "COLMI", "ZEBLAZE", "AMAZFIT", "CMF", "HUAWEI", "CURREN", "NAVIFORCE", "SKMEI", "POEDAGAR", "LIGE",
+    # PC Hardware
+    "RYZEN", "INTEL", "SOMNAMBULIST", "NETAC", "KINGBANK", "JUHOR", "XRAYDISK", "WALRAM", "FENVI"
+]
+
+def extract_item_brand(title: str, text: str = "") -> str:
+    """Extracts clean Brand name in UPPERCASE from title or description text."""
+    combined = (str(title or "") + " " + str(text or "")).upper()
+    for brand in POPULAR_BRANDS:
+        if re.search(rf"(?:\b|_){re.escape(brand)}(?:\b|_)", combined):
+            return brand
+    clean_title = re.sub(r"^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:]+", "", title or "").strip()
+    words = [w for w in re.sub(r"[^a-zA-Z0-9\s]", "", clean_title).split() if len(w) >= 3]
+    if words and not words[0].isdigit():
+        cand = words[0].upper()
+        if cand not in {"GLOBAL", "ORIGINAL", "SMARTPHONE", "WIRELESS", "GAMING", "BLUETOOTH", "MECHANICAL"}:
+            return cand
+    return "عروض أخرى"
+
+def group_items_by_brand(items: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
+    """Groups items by brand while preserving order within each brand."""
+    brand_groups: Dict[str, List[Dict[str, Any]]] = {}
+    for item in items:
+        brand = extract_item_brand(item.get("title", ""), item.get("text", ""))
+        if brand not in brand_groups:
+            brand_groups[brand] = []
+        brand_groups[brand].append(item)
+    return brand_groups
+
 def format_deal_line(item: Dict[str, Any], channel_username: str, index: int = 1) -> str:
-    """Formats a single product line for the bulletin matching the clean Anis/Lody index style."""
+    """Formats a single product line matching the sleek Megaprix index style: ⭐️ <link><b>Model</b></link> ⤵️ Price 💲"""
     title = clean_product_name_short(item.get("title") or "منتج مميز")
     price_val = float(item.get("price") or 0.0)
 
     if price_val > 0:
         if price_val.is_integer():
-            price_str = f"${int(price_val)}"
+            price_str = f"{int(price_val)}"
         else:
-            price_str = f"${price_val:.2f}"
+            price_str = f"{price_val:g}"
     else:
         price_str = "سعر خاص 🔥"
 
-    badge = NUMBER_BADGES[index - 1] if 1 <= index <= len(NUMBER_BADGES) else f"{index}️⃣"
     clean_ch = channel_username.replace("@", "")
-    post_url = item.get("channel_url") or f"https://t.me/{clean_ch}/{item['channel_msg_id']}"
-    return f"{badge} 🌐 <a href=\"{post_url}\"><b>{title}</b></a> ▫️ <b>{price_str}</b>"
+    post_url = item.get("channel_url") or f"https://t.me/{clean_ch}/{item.get('channel_msg_id', '')}"
+    return f"⭐️ <a href=\"{post_url}\"><b>{title}</b></a> ⤵️ {price_str} 💲"
 
 def build_category_bulletin_text(
     category_name: str,
@@ -432,16 +478,19 @@ def build_category_bulletin_text(
     total_parts: Optional[int] = None
 ) -> Tuple[str, List[Dict[str, Any]]]:
     """
-    Builds the caption for a category bulletin matching the sleek Anis/Lody index style.
-    Supports multi-part pagination (الجزء 1, الجزء 2) when a category has many deals.
-    Dynamically fits items to guarantee the total length strictly never exceeds 980 characters (Telegram photo caption limit: 1024).
+    Builds the caption for a category bulletin matching the sleek Megaprix index style.
+    Sub-groups items by brand (👊 BRAND) with clickable models (⭐️ Model ⤵️ Price 💲).
+    Dynamically fits items to guarantee the total length strictly never exceeds 980 characters (photo caption limit 1024).
     """
     cat_config = CATEGORIES_CONFIG.get(category_name, {
-        "header": f"📦 <b>تجميعة عروض {category_name} لنهار اليوم 🇩🇿🔥</b>"
+        "header": f"📦 <b>تجميعة عروض {category_name} ترند حاليا التي تم نشرها في القناة 🇩🇿🔥</b>"
     })
     clean_ch = channel_username.replace("@", "")
 
-    base_header = cat_config["header"]
+    base_header = cat_config.get("megaprix_header") or cat_config["header"]
+    if "ترند حاليا" not in base_header:
+        base_header = base_header.replace("لنهار اليوم 🇩🇿🔥</b>", "ترند حاليا التي تم نشرها في القناة 🇩🇿🔥</b>")
+
     if part and total_parts and total_parts > 1:
         if "🇩🇿🔥</b>" in base_header:
             header_text = base_header.replace("🇩🇿🔥</b>", f"(الجزء {part}) 🇩🇿🔥</b>")
@@ -450,67 +499,101 @@ def build_category_bulletin_text(
     else:
         header_text = base_header
 
+    target_noun = "الهاتف" if category_name == "phones" else "المنتج"
     header_lines = [
         header_text,
-        "",
-        "👈 <b>إضغط على إسم المنتج ليأخذك مباشرة للعرض ⚪️</b>",
+        f"🖱 <b>ما عليك سوى الضغط على {target_noun} المرغوب للذهاب إليه</b>",
         ""
     ]
     footer_lines = [
         "",
-        "━━━━━━━━━━━━━━━━━",
-        "🪙 <b>تخفيض العملات:</b> أرسل رابط أي منتج للبوت (@Alilo07BOT)",
-        f"📢 <b>قناتنا:</b> @{clean_ch}"
+        "📌 <b>رابط بوت لخصم سعر أي منتج خاص بالعملات 👌</b>",
+        "🤖 @Alilo07BOT 🤖",
+        f"📺 <b>قناتنا على التلغرام:</b> @{clean_ch}"
     ]
     footer_text = "\n".join(footer_lines)
+
+    # Group by brand
+    brand_groups = group_items_by_brand(items)
+    # Brands with most items first, 'عروض أخرى' always last
+    sorted_brands = sorted(brand_groups.keys(), key=lambda b: (b == "عروض أخرى", -len(brand_groups[b]), b))
 
     selected_items: List[Dict[str, Any]] = []
     body_lines: List[str] = []
 
-    for idx, item in enumerate(items, start=1):
-        line = format_deal_line(item, channel_username, index=idx)
-        candidate_text = "\n".join(header_lines + body_lines + [line, footer_text])
-        if len(candidate_text) > 980:
-            break
-        body_lines.append(line)
-        selected_items.append(item)
+    for brand in sorted_brands:
+        b_items = brand_groups[brand]
+        brand_header = f"👊 <b>{brand}</b>"
+
+        temp_body = list(body_lines)
+        if temp_body:
+            temp_body.append("")
+        temp_body.append(brand_header)
+
+        brand_added: List[Dict[str, Any]] = []
+        for it in b_items:
+            line = format_deal_line(it, channel_username)
+            cand_body = temp_body + [line]
+            if len("\n".join(header_lines + cand_body + [footer_text])) > 980:
+                break
+            temp_body.append(line)
+            brand_added.append(it)
+
+        if brand_added:
+            body_lines = temp_body
+            selected_items.extend(brand_added)
 
     full_caption = "\n".join(header_lines + body_lines + footer_lines)
     return full_caption, selected_items
 
 def build_master_daily_roundup_text(deals: List[Dict[str, Any]], channel_username: str) -> Tuple[str, List[Dict[str, Any]]]:
     """
-    Builds the Master Daily Roundup when individual categories don't have >= 4 items.
-    Selects top deals across diverse categories matching the sleek Anis/Lody index style.
+    Builds the Master Daily Roundup matching the sleek Megaprix index style.
+    Sub-groups items across categories by brand (👊 BRAND) with clickable direct links.
     """
     clean_ch = channel_username.replace("@", "")
     header_lines = [
         "🌙 <b>تجميعة أفضل صفقات وعروض اليوم على AliExpress 🇩🇿🔥</b>",
-        "",
-        "👈 <b>إضغط على إسم المنتج ليأخذك مباشرة للعرض ⚪️</b>",
+        "🖱 <b>ما عليك سوى الضغط على المنتج المرغوب للذهاب إليه</b>",
         ""
     ]
     footer_lines = [
         "",
-        "━━━━━━━━━━━━━━━━━",
-        "🪙 <b>تخفيض العملات:</b> أرسل رابط أي منتج للبوت (@Alilo07BOT)",
-        f"📢 <b>قناتنا:</b> @{clean_ch}"
+        "📌 <b>رابط بوت لخصم سعر أي منتج خاص بالعملات 👌</b>",
+        "🤖 @Alilo07BOT 🤖",
+        f"📺 <b>قناتنا على التلغرام:</b> @{clean_ch}"
     ]
     footer_text = "\n".join(footer_lines)
+
+    # Sort deals by price descending, then group by brand
+    sorted_deals = sorted(deals, key=lambda x: float(x.get("price") or 0.0), reverse=True)
+    brand_groups = group_items_by_brand(sorted_deals)
+    sorted_brands = sorted(brand_groups.keys(), key=lambda b: (b == "عروض أخرى", -len(brand_groups[b]), b))
 
     selected_items: List[Dict[str, Any]] = []
     body_lines: List[str] = []
 
-    # Take deals with valid prices, prioritized
-    sorted_deals = sorted(deals, key=lambda x: x.get("price", 0), reverse=True)
+    for brand in sorted_brands:
+        b_items = brand_groups[brand]
+        brand_header = f"👊 <b>{brand}</b>"
 
-    for idx, item in enumerate(sorted_deals, start=1):
-        line = format_deal_line(item, channel_username, index=idx)
-        candidate_text = "\n".join(header_lines + body_lines + [line, footer_text])
-        if len(candidate_text) > 980:
-            break
-        body_lines.append(line)
-        selected_items.append(item)
+        temp_body = list(body_lines)
+        if temp_body:
+            temp_body.append("")
+        temp_body.append(brand_header)
+
+        brand_added: List[Dict[str, Any]] = []
+        for it in b_items:
+            line = format_deal_line(it, channel_username)
+            cand_body = temp_body + [line]
+            if len("\n".join(header_lines + cand_body + [footer_text])) > 980:
+                break
+            temp_body.append(line)
+            brand_added.append(it)
+
+        if brand_added:
+            body_lines = temp_body
+            selected_items.extend(brand_added)
 
     full_caption = "\n".join(header_lines + body_lines + footer_lines)
     return full_caption, selected_items
