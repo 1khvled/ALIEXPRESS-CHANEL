@@ -2,8 +2,8 @@ name: AliExpress Deals Telegram Bot
 
 on:
   schedule:
-    # Run every 20 minutes (deal sweeps paced to 40min in daytime; paused at night 00:00-08:00)
-    - cron: '*/20 * * * *'
+    # Run every 5 minutes 24/7 autonomously
+    - cron: '*/5 * * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI anytime
     inputs:
       force:
@@ -40,13 +40,14 @@ jobs:
 
       - name: Run Algeria Deals Publisher (@DzAliexpress0)
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN || '8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          ADMIN_BOT_TOKEN: ${{ secrets.ADMIN_BOT_TOKEN }}
           TARGET_CHANNEL_ID: ${{ secrets.TARGET_CHANNEL_ID || '@DzAliexpress0' }}
           ALIEXPRESS_AFFILIATE_PROVIDER: portals
-          ALIEXPRESS_AFFILIATE_TRACKING_ID: ${{ secrets.ALIEXPRESS_AFFILIATE_TRACKING_ID || 'dzkhvled16' }}
-          ALIEXPRESS_AFFILIATE_APP_KEY: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_KEY || '538348' }}
-          ALIEXPRESS_AFFILIATE_APP_SECRET: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_SECRET || '7z5QlJZAxNka2zBrgzCWrUNusBXJGHYx' }}
-          ADMIN_USER_ID: ${{ secrets.ADMIN_USER_ID || '5625295907' }}
+          ALIEXPRESS_AFFILIATE_TRACKING_ID: ${{ secrets.ALIEXPRESS_AFFILIATE_TRACKING_ID }}
+          ALIEXPRESS_AFFILIATE_APP_KEY: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_KEY }}
+          ALIEXPRESS_AFFILIATE_APP_SECRET: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_SECRET }}
+          ADMIN_USER_ID: ${{ secrets.ADMIN_USER_ID }}
           DATABASE_URL: ${{ secrets.DATABASE_URL || 'sqlite+aiosqlite:///deals.db' }}
         run: |
           if [ "${{ github.event.inputs.force }}" = "true" ]; then
@@ -57,13 +58,14 @@ jobs:
 
       - name: Run France Deals Publisher (@francedealsdz)
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN || '8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY' }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          ADMIN_BOT_TOKEN: ${{ secrets.ADMIN_BOT_TOKEN }}
           FRANCE_TARGET_CHANNEL_ID: ${{ secrets.FRANCE_TARGET_CHANNEL_ID || '@francedealsdz' }}
           ALIEXPRESS_AFFILIATE_PROVIDER: portals
-          ALIEXPRESS_AFFILIATE_TRACKING_ID: ${{ secrets.ALIEXPRESS_AFFILIATE_TRACKING_ID || 'dzkhvled16' }}
-          ALIEXPRESS_AFFILIATE_APP_KEY: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_KEY || '538348' }}
-          ALIEXPRESS_AFFILIATE_APP_SECRET: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_SECRET || '7z5QlJZAxNka2zBrgzCWrUNusBXJGHYx' }}
-          ADMIN_USER_ID: ${{ secrets.ADMIN_USER_ID || '5625295907' }}
+          ALIEXPRESS_AFFILIATE_TRACKING_ID: ${{ secrets.ALIEXPRESS_AFFILIATE_TRACKING_ID }}
+          ALIEXPRESS_AFFILIATE_APP_KEY: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_KEY }}
+          ALIEXPRESS_AFFILIATE_APP_SECRET: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_SECRET }}
+          ADMIN_USER_ID: ${{ secrets.ADMIN_USER_ID }}
           DATABASE_URL: ${{ secrets.DATABASE_URL || 'sqlite+aiosqlite:///deals.db' }}
         run: |
           if [ "${{ github.event.inputs.force }}" = "true" ]; then

@@ -6,7 +6,7 @@ Guaranteed Zero-Failure, Accurate Product Detection & Ultra-Fast:
 - Full title & price extraction with generous timeout + fallback parser
 - Live USDT exchange rate integration via SquareAlgerie.com (~249 DA)
 - Advertisement and live rate badge for SquareAlgerie.com
-- Admin manual deal publisher mode (recognizes admin by Telegram user ID 5625295907)
+- Admin manual deal publisher mode (recognizes admin by Telegram ADMIN_USER_ID)
 - 100% Delivery guarantee (HTML mode with auto-fallback)
 """
 import asyncio
@@ -19,19 +19,19 @@ from urllib.parse import urlparse, parse_qs
 import httpx
 from aliexpress_api import AliexpressApi, models
 
-TELEGRAM_BOT_TOKEN = "8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY"
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 
-ALIEXPRESS_AFFILIATE_APP_KEY = os.getenv("ALIEXPRESS_AFFILIATE_APP_KEY", "") or "538348"
-ALIEXPRESS_AFFILIATE_APP_SECRET = os.getenv("ALIEXPRESS_AFFILIATE_APP_SECRET", "") or "7z5QlJZAxNka2zBrgzCWrUNusBXJGHYx"
-ALIEXPRESS_AFFILIATE_TRACKING_ID = os.getenv("ALIEXPRESS_AFFILIATE_TRACKING_ID", "") or "dzkhvled16"
+ALIEXPRESS_AFFILIATE_APP_KEY = os.getenv("ALIEXPRESS_AFFILIATE_APP_KEY", "")
+ALIEXPRESS_AFFILIATE_APP_SECRET = os.getenv("ALIEXPRESS_AFFILIATE_APP_SECRET", "")
+ALIEXPRESS_AFFILIATE_TRACKING_ID = os.getenv("ALIEXPRESS_AFFILIATE_TRACKING_ID", "")
 TARGET_CHANNEL_ID = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
-PRIMARY_ADMIN_ID = int(os.getenv("ADMIN_USER_ID", "5625295907"))
+PRIMARY_ADMIN_ID = int(os.getenv("ADMIN_USER_ID", "0") or 0)
 
 def is_admin(user_id: int) -> bool:
     """Checks if the given Telegram user ID is an authorized admin."""
     if not user_id:
         return False
-    if user_id == PRIMARY_ADMIN_ID or user_id == 5625295907:
+    if PRIMARY_ADMIN_ID and user_id == PRIMARY_ADMIN_ID:
         return True
     admin_env = os.getenv("ADMIN_USER_IDS", "")
     if admin_env:
@@ -286,7 +286,7 @@ def ensure_affiliate(link: Optional[str], fallback_link: Optional[str] = None, p
        c. Else return default AliExpress affiliate home.
     5. NEVER return a naked/unmonetized AliExpress link.
     """
-    tracking_id = ALIEXPRESS_AFFILIATE_TRACKING_ID or "dzkhvled16"
+    tracking_id = ALIEXPRESS_AFFILIATE_TRACKING_ID or os.getenv("ALIEXPRESS_AFFILIATE_TRACKING_ID", "") or "affiliate"
     target = (link or "").strip()
     if not target:
         if fallback_link and fallback_link.strip():

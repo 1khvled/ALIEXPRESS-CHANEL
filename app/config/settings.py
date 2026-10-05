@@ -26,9 +26,9 @@ class Settings(BaseSettings):
     TELEGRAM_SESSION_NAME: str = "deals_collector"
 
     # Telegram Publisher (Bot API)
-    TELEGRAM_BOT_TOKEN: Optional[str] = "8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY"
+    TELEGRAM_BOT_TOKEN: Optional[str] = None
     TARGET_CHANNEL_ID: Optional[str] = "@DzAliexpress0"
-    ADMIN_USER_ID: Optional[int] = 5625295907
+    ADMIN_USER_ID: Optional[int] = None
 
     # Database
     DATABASE_URL: str = "sqlite+aiosqlite:///deals.db"
@@ -54,9 +54,9 @@ class Settings(BaseSettings):
 
     # AliExpress Affiliate
     ALIEXPRESS_AFFILIATE_PROVIDER: str = "portals"
-    ALIEXPRESS_AFFILIATE_TRACKING_ID: Optional[str] = "dzkhvled16"
-    ALIEXPRESS_AFFILIATE_APP_KEY: Optional[str] = "538348"
-    ALIEXPRESS_AFFILIATE_APP_SECRET: Optional[str] = "7z5QlJZAxNka2zBrgzCWrUNusBXJGHYx"
+    ALIEXPRESS_AFFILIATE_TRACKING_ID: Optional[str] = None
+    ALIEXPRESS_AFFILIATE_APP_KEY: Optional[str] = None
+    ALIEXPRESS_AFFILIATE_APP_SECRET: Optional[str] = None
     ALIEXPRESS_CUSTOM_AFFILIATE_PREFIX: Optional[str] = None
 
     # AI Provider
@@ -79,11 +79,9 @@ class Settings(BaseSettings):
         mode="after"
     )
     @classmethod
-    def sanitize_bot_token(cls, v: Any) -> str:
+    def sanitize_bot_token(cls, v: Any) -> Optional[str]:
         s = str(v or "").strip()
-        if s != "8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY":
-            return "8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY"
-        return s
+        return s if s else None
 
     @field_validator(
         "TELEGRAM_API_HASH",

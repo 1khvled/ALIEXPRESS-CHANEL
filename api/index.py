@@ -1644,7 +1644,7 @@ async def telegram_admin_webhook(request: Request):
 async def set_telegram_webhook():
     """Sets the public Coin bot webhook to this Vercel deployment URL."""
     try:
-        token = "8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY"
+        token = os.getenv("TELEGRAM_BOT_TOKEN", "")
         webhook_url = "https://dealscout-green.vercel.app/api/webhook"
         async with httpx.AsyncClient(timeout=10.0) as client:
             resp = await client.post(
@@ -1660,7 +1660,7 @@ async def set_telegram_webhook():
 async def set_admin_telegram_webhook():
     """Sets the dedicated Admin bot webhook to this Vercel deployment URL."""
     try:
-        admin_token = "8708965924:AAH7SoSX7VV3Nx_yI_J39VzWjlsc-XPgXAQ"
+        admin_token = os.getenv("ADMIN_BOT_TOKEN", "")
         webhook_url = "https://dealscout-green.vercel.app/api/admin-webhook"
         async with httpx.AsyncClient(timeout=10.0) as client:
             resp = await client.post(
@@ -1675,7 +1675,7 @@ async def set_admin_telegram_webhook():
 @app.get("/api/test-bot")
 async def test_bot_connectivity():
     """Tests bot connectivity and returns bot profile from Telegram API."""
-    coin_token = "8900887118:AAELbFHyV2joUO-4EJ0fPSoZurkQNuENbfY"
+    coin_token = os.getenv("TELEGRAM_BOT_TOKEN", "")
     async with httpx.AsyncClient(timeout=10.0) as client:
         r1 = await client.get(f"https://api.telegram.org/bot{coin_token}/getMe")
         r2 = await client.get(f"https://api.telegram.org/bot{coin_token}/getWebhookInfo")
@@ -1685,7 +1685,7 @@ async def test_bot_connectivity():
 @app.api_route("/api/trigger-deals", methods=["GET", "POST"])
 async def trigger_deals_collector(force: bool = False):
     """Triggers the AliExpress Deals collector workflow on GitHub Actions."""
-    github_token = "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"
+    github_token = os.getenv("GITHUB_TOKEN", "")
     repo = "1khvled/ALIEXPRESS-CHANEL"
     url = f"https://api.github.com/repos/{repo}/actions/workflows/bot_cron.yml/dispatches"
     headers = {

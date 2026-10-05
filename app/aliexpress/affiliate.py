@@ -20,7 +20,7 @@ class DirectAffiliateProvider(AffiliateProvider):
     For bundle deals: returns Choice/bundle link with sourceType=562.
     """
     def __init__(self, tracking_id: Optional[str] = None):
-        self.tracking_id = tracking_id or settings.ALIEXPRESS_AFFILIATE_TRACKING_ID or "dzkhvled16"
+        self.tracking_id = tracking_id or settings.ALIEXPRESS_AFFILIATE_TRACKING_ID or os.getenv("ALIEXPRESS_AFFILIATE_TRACKING_ID", "") or "affiliate"
 
     async def generate_link(self, product_url: str, product_id: Optional[str] = None, deal_type: str = "coin") -> str:
         pid = product_id
@@ -75,7 +75,7 @@ class PortalsApiAffiliateProvider(AffiliateProvider):
     def __init__(self, app_key: Optional[str] = None, app_secret: Optional[str] = None, tracking_id: Optional[str] = None):
         self.app_key = app_key or settings.ALIEXPRESS_AFFILIATE_APP_KEY
         self.app_secret = app_secret or settings.ALIEXPRESS_AFFILIATE_APP_SECRET
-        self.tracking_id = tracking_id or settings.ALIEXPRESS_AFFILIATE_TRACKING_ID or "dzkhvled16"
+        self.tracking_id = tracking_id or settings.ALIEXPRESS_AFFILIATE_TRACKING_ID or os.getenv("ALIEXPRESS_AFFILIATE_TRACKING_ID", "") or "affiliate"
         self.fallback = DirectAffiliateProvider(self.tracking_id)
         self.api = None
 

@@ -1,6 +1,6 @@
 """
 Dedicated Telegram Admin Scout & Publisher Bot
-Controls publishing directly to @DzAliexpress0 for Admin User ID 5625295907.
+Controls publishing directly to @DzAliexpress0 for authorized channel admins.
 Features:
 - Accurately parses user's manual price, coupon code, coins discount, and title from message text
 - Exact match with channel auto-posting format (DealCaptionGenerator)
@@ -34,7 +34,7 @@ from api.coin_bot import (
     PRIMARY_ADMIN_ID
 )
 
-ADMIN_BOT_TOKEN = "8708965924:AAH7SoSX7VV3Nx_yI_J39VzWjlsc-XPgXAQ"
+ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "")
 PUBLIC_BOT_USERNAME = "Alilo07BOT"
 
 _caption_generator = DealCaptionGenerator()
@@ -474,16 +474,16 @@ def build_schedule_menu_text_and_markup() -> Tuple[str, Dict[str, Any]]:
     """Builds interactive admin schedule control menu."""
     from app.publisher.state_tracker import get_schedule_config
     config = get_schedule_config()
-    cur_m = config.get("current_interval_minutes", 40)
+    cur_m = config.get("current_interval_minutes", 5)
     paused = config.get("is_paused", False)
     night_on = config.get("night_mode_enabled", True)
 
     status_badge = "⏸️ متوقف مؤقتاً" if paused else "✅ نشط يعمل"
-    night_badge = "مفعّل (النشر متوقف تماماً من 00:00 إلى 08:00)" if night_on else "معطّل"
+    night_badge = "مفعّل (كل 30 دقيقة من 00:00 إلى 08:00)" if night_on else "معطّل"
 
     text = (
         "⚙️ <b>لوحة التحكم في سرعة وتوقيت النشر التلقائي</b> ⏱️\n\n"
-        f"• <b>السرعة الحالية (النهارية):</b> كل <b>{cur_m} دقيقة</b>\n"
+        f"• <b>السرعة الحالية (النهارية):</b> كل <b>{cur_m} دقائق</b>\n"
         f"• <b>الوضع الليلي التلقائي:</b> {night_badge} 🌙\n"
         f"• <b>حالة النشر:</b> {status_badge}\n\n"
         "👇 <i>اضغط على أي زر أدناه لتغيير سرعة النشر فوراً:</i>"
@@ -492,16 +492,15 @@ def build_schedule_menu_text_and_markup() -> Tuple[str, Dict[str, Any]]:
     markup = {
         "inline_keyboard": [
             [
-                {"text": ("⚡ كل 40 دقيقة (الافتراضي) ✔️" if cur_m == 40 else "⚡ كل 40 دقيقة (الافتراضي)"), "callback_data": "sched_int_40"},
-                {"text": ("🕒 كل 30 دقيقة ✔️" if cur_m == 30 else "🕒 كل 30 دقيقة"), "callback_data": "sched_int_30"}
+                {"text": ("⚡ كل 5 دقائق (أقصى سرعة) ✔️" if cur_m == 5 else "⚡ كل 5 دقائق"), "callback_data": "sched_int_5"},
+                {"text": ("🚀 كل 10 دقائق ✔️" if cur_m == 10 else "🚀 كل 10 دقائق"), "callback_data": "sched_int_10"}
             ],
             [
                 {"text": ("⚖️ كل 15 دقيقة ✔️" if cur_m == 15 else "⚖️ كل 15 دقيقة"), "callback_data": "sched_int_15"},
-                {"text": ("🚀 كل 10 دقائق ✔️" if cur_m == 10 else "🚀 كل 10 دقائق"), "callback_data": "sched_int_10"},
-                {"text": ("⚡ كل 5 دقائق ✔️" if cur_m == 5 else "⚡ كل 5 دقائق"), "callback_data": "sched_int_5"}
+                {"text": ("🕒 كل 30 دقيقة ✔️" if cur_m == 30 else "🕒 كل 30 دقيقة"), "callback_data": "sched_int_30"}
             ],
             [
-                {"text": ("🌙 تعطيل الوضع الليلي" if night_on else "🌙 تفعيل إيقاف النشر ليلاً (00:00 - 08:00)"), "callback_data": "sched_toggle_night"}
+                {"text": ("🌙 تعطيل الوضع الليلي" if night_on else "🌙 تفعيل الوضع الليلي (30د ليلاً)"), "callback_data": "sched_toggle_night"}
             ],
             [
                 {"text": ("▶️ استئناف النشر التلقائي" if paused else "⏸️ إيقاف النشر التلقائي مؤقتاً"), "callback_data": "sched_toggle_pause"}
@@ -831,7 +830,7 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
         force_flag = "--force" in text or "force" in text.lower()
         await send_admin_msg(chat_id, "⏳ <b>جاري إطلاق سكريبت سحب العروض فوراً عبر GitHub Actions...</b>")
         try:
-            github_token = "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"
+            github_token = os.getenv("GITHUB_TOKEN", "")
             repo = "1khvled/ALIEXPRESS-CHANEL"
             url = f"https://api.github.com/repos/{repo}/actions/workflows/bot_cron.yml/dispatches"
             headers = {

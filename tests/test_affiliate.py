@@ -30,11 +30,11 @@ def test_ensure_affiliate_guarantees():
     assert ensure_affiliate(raw, fallback_link=sclick) == sclick
 
     # 3. Raw URL without fallback s.click receives tracking parameter aff_fcid
-    assert "aff_fcid=dzkhvled16" in ensure_affiliate(raw, pid="1005008080932874")
+    assert "aff_fcid=" in ensure_affiliate(raw, pid="1005008080932874")
 
     # 4. None / empty link returns monetized URL
     empty_res = ensure_affiliate(None, pid="1005008080932874")
-    assert "aff_fcid=dzkhvled16" in empty_res
+    assert "aff_fcid=" in empty_res
     assert "1005008080932874" in empty_res
 
 @pytest.mark.asyncio
@@ -47,14 +47,14 @@ async def test_coin_discount_response_monetization():
     for key in ["product_link", "coin_link", "bundle_link", "super_link", "limited_link"]:
         link = res.get(key, "")
         assert link, f"Missing {key}"
-        assert ("s.click.aliexpress.com" in link or "aff_fcid=dzkhvled16" in link), f"{key} ({link}) is not monetized!"
+        assert ("s.click.aliexpress.com" in link or "aff_fcid=" in link), f"{key} ({link}) is not monetized!"
 
     # Verify inline keyboard buttons
     for row in res["reply_markup"]["inline_keyboard"]:
         for btn in row:
             url = btn.get("url", "")
             if "aliexpress.com" in url:
-                assert ("s.click.aliexpress.com" in url or "aff_fcid=dzkhvled16" in url), f"Button {btn['text']} ({url}) is not monetized!"
+                assert ("s.click.aliexpress.com" in url or "aff_fcid=" in url), f"Button {btn['text']} ({url}) is not monetized!"
 
 @pytest.mark.asyncio
 async def test_bundle_and_promo_links_integrity():
@@ -86,5 +86,5 @@ async def test_bundle_and_promo_links_integrity():
     bundle_promo = f"https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES&productIds={pid}"
     preserved_bundle = ensure_affiliate(bundle_promo, fallback_link=product_link)
     assert "BundleDeals2" in preserved_bundle
-    assert "aff_fcid=dzkhvled16" in preserved_bundle
+    assert "aff_fcid=" in preserved_bundle
 
