@@ -349,7 +349,7 @@
     "1005010536089199": 1791101144.9729881,
     "1005012385221205": 1791102050.1835058,
     "1005013223462188": 1791103847.2554617,
-    "1005007279793099": 1791104060.2548923,
+    "1005007279793099": 1791191146.7913554,
     "1005012743092233": 1791104461.903693,
     "1005007805497968": 1791104753.5513856,
     "1005007345108759": 1791104759.7671344,
@@ -589,7 +589,8 @@
     "Samsung 45W PD Charger Super Fast Charging",
     "Men Watch, Fashion Quartz Wristwatch",
     "Philips New EDC Portable Flashlight Rechargeable",
-    "Rocoren 100W Type-C to USB Fast Charging"
+    "Rocoren 100W Type-C to USB Fast Charging",
+    "Attack Shark R1"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -804,7 +805,8 @@
     "Samsung 45W PD Charger Super Fast Charging": 1791152444.7701666,
     "Men Watch, Fashion Quartz Wristwatch": 1791153345.9204953,
     "Philips New EDC Portable Flashlight Rechargeable": 1791153956.1367443,
-    "Rocoren 100W Type-C to USB Fast Charging": 1791156089.0187185
+    "Rocoren 100W Type-C to USB Fast Charging": 1791156089.0187185,
+    "Attack Shark R1": 1791191146.7913554
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1357,15 +1359,17 @@
     "aniscoupons:32783",
     "aniscoupons:32784",
     "zedstoreonline:38532",
-    "zedstoreonline:38533"
+    "zedstoreonline:38533",
+    "zedstoreonline:38534",
+    "zedstoreonline:38535"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791189979.3835318,
+  "last_run_time": 1791191146.7913554,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32784,
-      "last_check_time": 1791190842.673995
+      "last_check_time": 1791191151.208883
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1373,11 +1377,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791190840.5334966
+      "last_check_time": 1791191141.9484684
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791190841.9110749
+      "last_check_time": 1791191150.260622
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1385,19 +1389,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791190841.5894883
+      "last_check_time": 1791191149.8735948
     },
     "zedstoreonline": {
-      "last_message_id": 38533,
-      "last_check_time": 1791190840.85351
+      "last_message_id": 38535,
+      "last_check_time": 1791191148.8075879
     },
     "megaphonna": {
       "last_message_id": 8265,
-      "last_check_time": 1791190842.2953253
+      "last_check_time": 1791191150.6679306
     },
     "couponsglobal": {
       "last_message_id": 48805,
-      "last_check_time": 1791190843.2351744
+      "last_check_time": 1791191151.8693483
     }
   },
   "published_product_prices": {
@@ -1411,7 +1415,7 @@
     "1005009627597591": 314.9,
     "1005008880082336": 22.16,
     "1005007275142457": 24.2,
-    "1005007279793099": 14.12,
+    "1005007279793099": 13.7,
     "1005008829227075": 24.73,
     "100500777666555": 20.0,
     "1005011778621042": 123.59,
@@ -4112,6 +4116,16 @@
       "price": 196.0,
       "timestamp": 1791189979.3835318,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38535": {
+      "channel_msg_id": 602,
+      "product_id": "1005007279793099",
+      "title": "Attack Shark R1",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38535,
+      "price": 13.7,
+      "timestamp": 1791191146.7913554,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4120,7 +4134,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791189979.389406,
+    "last_deal_post_time": 1791191146.7971377,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4189,7 +4203,7 @@
     "9998887994": "test_channel",
     "9998888899": "test_channel",
     "9998889674": "test_channel",
-    "1005007279793099": "pcgamingpart",
+    "1005007279793099": "zedstoreonline",
     "1005005824280128": "aniscoupons",
     "1005012407874415": "megaphonna",
     "1005006533038973": "pcgamingpart",
@@ -4347,7 +4361,7 @@
     "Essager 65W GaN USB": "lodydeals",
     "POCO X6 Pro 5G 12/512GB": "lodydeals",
     "SomnAmbulist SSD": "aniscoupons",
-    "Attack Shark R1": "aniscoupons",
+    "Attack Shark R1": "zedstoreonline",
     "Realme 14 Pro Plus Global (8/256)": "aniscoupons",
     "Blackview LINK 1 Kids Tablets": "aniscoupons",
     "New Monster MQT52 TWS Wireless Gaming Headset Bluetooth 5.4 HIFI Stereo": "aniscoupons",
