@@ -12,6 +12,9 @@ import asyncio
 from datetime import datetime, timezone, timedelta
 from typing import List, Dict, Any, Tuple, Optional, Set
 from pathlib import Path
+
+# Add project root to sys.path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 import httpx
 
 try:
@@ -532,27 +535,43 @@ async def check_and_publish_regrouped_bulletins(
     target_clean = str(target).lstrip("@")
 
     # 1. Timing & Idempotency verification (unless forced)
+    from app.aliexpress.promos import promo_tracker
+    active_promo = promo_tracker.get_active_promo()
+
     if not force:
-        if not is_tajmi3at_time_window():
-            logger.info("[TAJMI3AT] Current time is not within daily 10 PM window (21:30 - 23:45 Algiers time UTC+1). Skipping.")
-            return []
+        if active_promo:
+            # During active promo events, coupons are live and valid: allow reposting every ~6h
+            from app.publisher.state_tracker import is_promo_tajmi3at_eligible
+            eligible, reason = is_promo_tajmi3at_eligible(min_hours=6.0)
+            if not eligible:
+                logger.info(f"[TAJMI3AT] Active promo '{active_promo.name}': {reason}. Skipping.")
+                return []
+        else:
+            # Event ended: strictly do not repost! Only post once per day in the 10 PM window
+            if not is_tajmi3at_time_window():
+                logger.info("[TAJMI3AT] No active promo and current time is outside 10 PM window (21:30 - 23:45 UTC+1). Skipping.")
+                return []
 
-        eligible, reason = is_daily_tajmi3at_eligible()
-        if not eligible:
-            logger.info(f"[TAJMI3AT] Daily tajmi3at not eligible: {reason}. Skipping.")
-            return []
+            eligible, reason = is_daily_tajmi3at_eligible()
+            if not eligible:
+                logger.info(f"[TAJMI3AT] Daily tajmi3at not eligible: {reason}. Skipping.")
+                return []
 
-    logger.info("[TAJMI3AT] Starting Daily Tajmi3at roundup execution...")
+    logger.info(f"[TAJMI3AT] Starting Daily Tajmi3at roundup execution (Active Promo: {active_promo.name if active_promo else 'None'})...")
 
-    # 2. Fetch all active deals published to @DzAliexpress0 in the last 24h
-    today_deals = get_recent_published_deals_for_roundup(max_age_hours=24.0)
+    # 2. Fetch all active deals published to @DzAliexpress0 in the last 24-48h
+    lookup_hours = 48.0 if active_promo else 24.0
+    today_deals = get_recent_published_deals_for_roundup(max_age_hours=lookup_hours)
     if not today_deals:
-        logger.info("[TAJMI3AT] No deals published in the last 24h found in state. Skipping.")
+        logger.info("[TAJMI3AT] No deals published in the lookup window found in state. Skipping.")
         return []
 
-    # 3. Filter out deals already regrouped (unless force)
-    regrouped_ids = get_regrouped_channel_msg_ids()
-    available_deals = [d for d in today_deals if d["channel_msg_id"] not in regrouped_ids] if not force else today_deals
+    # 3. Filter deals: during active promos, all deals of the event are available for roundup!
+    if active_promo:
+        available_deals = today_deals
+    else:
+        regrouped_ids = get_regrouped_channel_msg_ids()
+        available_deals = [d for d in today_deals if d["channel_msg_id"] not in regrouped_ids] if not force else today_deals
 
     # 4. Group by category
     deals_by_category: Dict[str, List[Dict[str, Any]]] = {k: [] for k in CATEGORIES_CONFIG.keys()}

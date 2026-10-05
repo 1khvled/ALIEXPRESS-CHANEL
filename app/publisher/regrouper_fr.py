@@ -122,13 +122,28 @@ def is_france_roundup_eligible(date_str: Optional[str] = None) -> Tuple[bool, st
         return False, f"Daily roundup already published for {date_str}"
     return True, "Eligible for daily roundup"
 
+def is_france_promo_roundup_eligible(min_hours: float = 6.0) -> Tuple[bool, str]:
+    """
+    Checks if France roundup is eligible during an active promo event.
+    Allows reposting every min_hours (default 6h) as long as event and promo codes are live.
+    """
+    state = load_france_state()
+    last_time = state.get("last_france_roundup_time", 0.0)
+    now = time.time()
+    elapsed = (now - last_time) / 3600.0
+    if elapsed >= min_hours:
+        return True, f"Eligible for promo roundup: {elapsed:.1f}h since last roundup (>= {min_hours}h)"
+    return False, f"Promo roundup cooldown active: {elapsed:.1f}h since last roundup (< {min_hours}h)"
+
 def record_france_roundup_published(date_str: str, bulletins_count: int, msg_ids: List[int]):
     state = load_france_state()
+    now_ts = datetime.now(timezone.utc).timestamp()
     state.setdefault("daily_roundup_history", {})[date_str] = {
-        "timestamp": datetime.now(timezone.utc).timestamp(),
+        "timestamp": now_ts,
         "count": bulletins_count,
         "message_ids": msg_ids
     }
+    state["last_france_roundup_time"] = now_ts
     save_france_state(state)
 
 def classify_france_deal_category(title: str, text: str = "") -> Optional[str]:
@@ -462,15 +477,26 @@ async def check_and_publish_france_regrouped_bulletins(
         return []
 
     # 1. Timing & Idempotency check
-    if not force:
-        if not is_france_roundup_time_window():
-            logger.info("[FRANCE ROUNDUP] Not in 10 PM CET window (21:30 - 23:45). Skipping.")
-            return []
+    from app.aliexpress.promos import promo_tracker
+    active_promo = promo_tracker.get_active_promo()
 
-        eligible, reason = is_france_roundup_eligible()
-        if not eligible:
-            logger.info(f"[FRANCE ROUNDUP] Not eligible: {reason}. Skipping.")
-            return []
+    if not force:
+        if active_promo:
+            # During active promo events, coupons are live: allow reposting every ~6h
+            eligible, reason = is_france_promo_roundup_eligible(min_hours=6.0)
+            if not eligible:
+                logger.info(f"[FRANCE ROUNDUP] Active promo '{active_promo.name}': {reason}. Skipping.")
+                return []
+        else:
+            # Event ended: strictly do not repost! Only post once per day in the 10 PM window
+            if not is_france_roundup_time_window():
+                logger.info("[FRANCE ROUNDUP] No active promo and not in 10 PM CET window (21:30 - 23:45). Skipping.")
+                return []
+
+            eligible, reason = is_france_roundup_eligible()
+            if not eligible:
+                logger.info(f"[FRANCE ROUNDUP] Not eligible: {reason}. Skipping.")
+                return []
 
     logger.info("[FRANCE ROUNDUP] Starting daily roundup collection...")
     today_deals = await get_recent_france_published_deals(max_age_hours=48.0)

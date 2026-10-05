@@ -913,7 +913,7 @@ def is_tajmi3at_time_window(now_dt: Optional[datetime] = None) -> bool:
 def is_daily_tajmi3at_eligible(date_str: Optional[str] = None) -> Tuple[bool, str]:
     """
     Checks if daily tajmi3at (roundup) is eligible to post today.
-    Ensures roundups are posted at most once per calendar day.
+    Ensures roundups are posted at most once per calendar day outside active promos.
     """
     state = load_persistent_state()
     if not date_str:
@@ -928,11 +928,26 @@ def is_daily_tajmi3at_eligible(date_str: Optional[str] = None) -> Tuple[bool, st
 
     return True, "Eligible for daily tajmi3at"
 
-def record_daily_tajmi3at_published(bulletins_count: int, date_str: Optional[str] = None):
+def is_promo_tajmi3at_eligible(min_hours: float = 6.0) -> Tuple[bool, str]:
     """
-    Records that daily tajmi3at was posted today to prevent reposting.
+    Checks if tajmi3at is eligible to post/repost during an ongoing promo event.
+    During active promo events, coupons are live and valid: allows publishing/reposting roundups
+    every min_hours (default 6h) so subscribers regularly see active deals with working coupons.
     """
     state = load_persistent_state()
+    last_time = state.get("last_tajmi3at_published_time", 0.0)
+    now = time.time()
+    elapsed = (now - last_time) / 3600.0
+    if elapsed >= min_hours:
+        return True, f"Eligible for promo tajmi3at: {elapsed:.1f}h since last roundup (>= {min_hours}h)"
+    return False, f"Promo tajmi3at cooldown active: {elapsed:.1f}h since last roundup (< {min_hours}h)"
+
+def record_daily_tajmi3at_published(bulletins_count: int, date_str: Optional[str] = None):
+    """
+    Records that daily tajmi3at was posted today and updates last_tajmi3at_published_time.
+    """
+    state = load_persistent_state()
+    now = time.time()
     if not date_str:
         dz_tz = timezone(timedelta(hours=1))
         date_str = datetime.now(dz_tz).strftime("%Y-%m-%d")
@@ -941,9 +956,10 @@ def record_daily_tajmi3at_published(bulletins_count: int, date_str: Optional[str
         state["daily_tajmi3at_history"] = {}
 
     state["daily_tajmi3at_history"][date_str] = {
-        "timestamp": time.time(),
+        "timestamp": now,
         "bulletins_count": bulletins_count
     }
+    state["last_tajmi3at_published_time"] = now
     save_persistent_state(state)
     logger.info(f"Recorded daily tajmi3at published for {date_str}: {bulletins_count} bulletin(s)")
 

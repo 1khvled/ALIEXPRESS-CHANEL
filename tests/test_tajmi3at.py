@@ -171,8 +171,9 @@ def test_master_roundup_caption_and_format():
 
 @pytest.mark.asyncio
 async def test_check_and_publish_skips_outside_window():
-    """Verifies that automatic execution skips when not in the 10 PM window."""
-    with patch("app.publisher.regrouper.is_tajmi3at_time_window", return_value=False):
+    """Verifies that automatic execution skips when not in the 10 PM window outside active promos."""
+    with patch("app.aliexpress.promos.promo_tracker.get_active_promo", return_value=None), \
+         patch("app.publisher.regrouper.is_tajmi3at_time_window", return_value=False):
         res = await check_and_publish_regrouped_bulletins(force=False)
         assert res == []
 
@@ -334,4 +335,26 @@ def test_bulletin_link_integrity():
         assert expected_item["title"] in title_str, (
             f"Title mismatch: {title_str} does not contain {expected_item['title']}"
         )
+
+def test_promo_tajmi3at_reposting_and_event_end_protection(tmp_path):
+    """Verifies that tajmi3at can be reposted during active promo events, but stops when promo ends."""
+    from app.publisher.state_tracker import is_promo_tajmi3at_eligible
+    test_state_file = str(tmp_path / "published_state.json")
+    with patch("app.publisher.state_tracker.STATE_FILE_PATH", test_state_file):
+        # 1. Fresh run is eligible for promo tajmi3at
+        eligible, _ = is_promo_tajmi3at_eligible(min_hours=6.0)
+        assert eligible is True
+
+        # 2. Record tajmi3at published
+        record_daily_tajmi3at_published(bulletins_count=2, date_str="2026-10-05")
+
+        # 3. Within 6 hours, promo tajmi3at is in cooldown
+        eligible2, reason2 = is_promo_tajmi3at_eligible(min_hours=6.0)
+        assert eligible2 is False
+        assert "cooldown active" in reason2
+
+        # 4. Outside active promo, is_daily_tajmi3at_eligible prevents duplicate posting on same calendar day
+        eligible_daily, reason_daily = is_daily_tajmi3at_eligible("2026-10-05")
+        assert eligible_daily is False
+        assert "already published" in reason_daily
 

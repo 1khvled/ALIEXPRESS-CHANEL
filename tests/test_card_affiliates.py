@@ -53,9 +53,32 @@ def test_french_marketing_angles_and_codes():
     assert "5$" in cap_redot
     assert "AliExpress" in cap_redot
 
-    # 3. Binance SEPA variant for France
-    binance_fr = next(v for v in FR_VARIANTS if v["id"] == "fr_binance_sepa")
+    # 3. Binance Crypto + Stocks + P2P + Secured variant for France
+    binance_fr = next(v for v in FR_VARIANTS if v["id"] == "fr_binance_invest_crypto_stocks")
     cap_binance = binance_fr["caption"]
     assert BINANCE_CODE in cap_binance
+    assert "Actions" in cap_binance or "Stocks" in cap_binance
+    assert "P2P" in cap_binance
+    assert "Sécurité" in cap_binance or "SAFU" in cap_binance
     assert "SEPA" in cap_binance
     assert "Binance" in cap_binance
+
+@pytest.mark.asyncio
+async def test_card_affiliate_strict_24h_cooldown(tmp_path):
+    from unittest.mock import patch, AsyncMock
+    import time
+
+    test_dz_file = tmp_path / "published_state.json"
+    with patch("app.publisher.card_affiliates.STATE_FILE_DZ", test_dz_file), \
+         patch("app.publisher.card_affiliates.has_recent_card_post_in_channel", new=AsyncMock(return_value=False)):
+        # 1. Fresh state is eligible
+        eligible, _ = await is_card_affiliate_eligible_dz(min_hours=24.0)
+        assert eligible is True
+
+        # 2. Record publish
+        record_card_affiliate_published_dz(variant_idx=0)
+
+        # 3. Immediately after (within 24h), must be strictly locked
+        eligible2, reason2 = await is_card_affiliate_eligible_dz(min_hours=24.0)
+        assert eligible2 is False
+        assert "Anti-duplicate lock" in reason2 or "required" in reason2
