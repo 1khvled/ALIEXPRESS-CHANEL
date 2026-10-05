@@ -189,7 +189,7 @@
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
-    "1005010219205081": 1791123641.3272605,
+    "1005010219205081": 1791192360.1916943,
     "999111222": 1791063863.6911209,
     "100500999912345": 1790973864.542499,
     "100500999954321": 1791056664.542499,
@@ -366,7 +366,7 @@
     "1005011987956470": 1791126349.6683438,
     "1005012865709979": 1791135345.3136878,
     "COUPONS_be64457c7fff": 1791138647.0734267,
-    "1005007461615597": 1791144648.6951094,
+    "1005007461615597": 1791192351.7104166,
     "1005010167814251": 1791147347.3774981,
     "1005012113350943": 1791147353.0681367,
     "1005012415005884": 1791147368.3357995,
@@ -591,7 +591,8 @@
     "Philips New EDC Portable Flashlight Rechargeable",
     "Rocoren 100W Type-C to USB Fast Charging",
     "Attack Shark R1",
-    "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse"
+    "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse",
+    "XUNYOU-LINK 4G SIM WiFi Router"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -606,7 +607,7 @@
     "ATTACK SHARK L90": 1790884206.6605399,
     "SomnAmbulist SSD 2.5 120GB": 1790884215.4346776,
     "Realme 15 Pro Global (8/256)": 1790884233.6428,
-    "Poco C71 3/64GB": 1791123641.3272605,
+    "Poco C71 3/64GB": 1791192360.1916943,
     "سماعات لاسلكية Attack Shark L80 PRO Wireless": 1790884281.6726701,
     "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K": 1790884287.4211984,
     "ماوس لاسلكي Attack Shark R1 Wireless": 1790884299.0959656,
@@ -808,7 +809,8 @@
     "Philips New EDC Portable Flashlight Rechargeable": 1791153956.1367443,
     "Rocoren 100W Type-C to USB Fast Charging": 1791156089.0187185,
     "Attack Shark R1": 1791191146.7913554,
-    "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse": 1791191446.7283864
+    "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse": 1791191446.7283864,
+    "XUNYOU-LINK 4G SIM WiFi Router": 1791192351.7104166
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1367,15 +1369,17 @@
     "zedstoreonline:38536",
     "bnddeals:50813",
     "zedstoreonline:38537",
-    "zedstoreonline:38538"
+    "zedstoreonline:38538",
+    "zedstoreonline:38539",
+    "aniscoupons:32785"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791191446.7283864,
+  "last_run_time": 1791192360.1916943,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32784,
-      "last_check_time": 1791192046.4094408
+      "last_message_id": 32785,
+      "last_check_time": 1791192362.206961
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1383,11 +1387,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791192041.8556788
+      "last_check_time": 1791192345.495578
     },
     "bnddeals": {
       "last_message_id": 50813,
-      "last_check_time": 1791192045.5365741
+      "last_check_time": 1791192355.2675052
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1395,19 +1399,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791192045.1568978
+      "last_check_time": 1791192354.8663557
     },
     "zedstoreonline": {
-      "last_message_id": 38538,
-      "last_check_time": 1791192044.2946835
+      "last_message_id": 38539,
+      "last_check_time": 1791192353.7264543
     },
     "megaphonna": {
       "last_message_id": 8265,
-      "last_check_time": 1791192045.9483464
+      "last_check_time": 1791192355.770846
     },
     "couponsglobal": {
       "last_message_id": 48805,
-      "last_check_time": 1791192047.1417441
+      "last_check_time": 1791192363.2158167
     }
   },
   "published_product_prices": {
@@ -1559,7 +1563,7 @@
     "1005008046254742": 1.0,
     "1005011987956470": 1.0,
     "1005012865709979": 1.0,
-    "1005007461615597": 23.15,
+    "1005007461615597": 13.7,
     "1005010167814251": 139.9,
     "1005012113350943": 15.5,
     "1005012415005884": 299.3,
@@ -4142,6 +4146,26 @@
       "price": 22.1,
       "timestamp": 1791191446.7283864,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38539": {
+      "channel_msg_id": 604,
+      "product_id": "1005007461615597",
+      "title": "XUNYOU-LINK 4G SIM WiFi Router",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38539,
+      "price": 13.7,
+      "timestamp": 1791192351.7104166,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32785": {
+      "channel_msg_id": 605,
+      "product_id": "1005010219205081",
+      "title": "Poco C71 3/64GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 32785,
+      "price": 57.2,
+      "timestamp": 1791192360.1916943,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4150,7 +4174,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791191446.7339828,
+    "last_deal_post_time": 1791192360.198131,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4316,7 +4340,7 @@
     "1005011987956470": "couponsglobal",
     "1005012865709979": "couponsglobal",
     "COUPONS_be64457c7fff": "lodydeals",
-    "1005007461615597": "aniscoupons",
+    "1005007461615597": "zedstoreonline",
     "1005010167814251": "lodydeals",
     "1005012113350943": "lodydeals",
     "1005012415005884": "lodydeals",
@@ -4520,7 +4544,8 @@
     "Men Watch, Fashion Quartz Wristwatch": "couponsglobal",
     "Philips New EDC Portable Flashlight Rechargeable": "couponsglobal",
     "Rocoren 100W Type-C to USB Fast Charging": "couponsglobal",
-    "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse": "zedstoreonline"
+    "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse": "zedstoreonline",
+    "XUNYOU-LINK 4G SIM WiFi Router": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
