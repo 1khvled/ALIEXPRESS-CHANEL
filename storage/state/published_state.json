@@ -185,7 +185,8 @@
     "1005007473024376",
     "1005005902976406",
     "1005006996130042",
-    "1005013052800596"
+    "1005013052800596",
+    "1005007331316456"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -377,7 +378,8 @@
     "1005007473024376": 1791151278.7237968,
     "1005005902976406": 1791152146.3442965,
     "1005006996130042": 1791153956.1367443,
-    "1005013052800596": 1791156089.0187185
+    "1005013052800596": 1791156089.0187185,
+    "1005007331316456": 1791194741.6244273
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -595,7 +597,8 @@
     "XUNYOU-LINK 4G SIM WiFi Router",
     "UGREEN  1080P Webcam",
     "HONOR CHOICE Watch 2i",
-    "HONOR Watch X5i Version globale SmartWatch 1.9"
+    "HONOR Watch X5i Version globale SmartWatch 1.9",
+    "Attack Shark L60 Tri-mode Gaming Headset"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -816,7 +819,8 @@
     "XUNYOU-LINK 4G SIM WiFi Router": 1791192351.7104166,
     "UGREEN  1080P Webcam": 1791192944.201814,
     "HONOR CHOICE Watch 2i": 1791193543.9040256,
-    "HONOR Watch X5i Version globale SmartWatch 1.9": 1791194149.475346
+    "HONOR Watch X5i Version globale SmartWatch 1.9": 1791194149.475346,
+    "Attack Shark L60 Tri-mode Gaming Headset": 1791194741.6244273
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1384,15 +1388,16 @@
     "zedstoreonline:38543",
     "zedstoreonline:38544",
     "zedstoreonline:38545",
-    "bnddeals:50814"
+    "bnddeals:50814",
+    "zedstoreonline:38546"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791194149.475346,
+  "last_run_time": 1791194741.6244273,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32785,
-      "last_check_time": 1791194443.1781514
+      "last_check_time": 1791194745.7612352
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1400,11 +1405,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791194441.143366
+      "last_check_time": 1791194735.9975078
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791194442.4319322
+      "last_check_time": 1791194744.908896
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1412,19 +1417,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791194442.1309881
+      "last_check_time": 1791194744.5669193
     },
     "zedstoreonline": {
-      "last_message_id": 38545,
-      "last_check_time": 1791194441.4607406
+      "last_message_id": 38546,
+      "last_check_time": 1791194743.641699
     },
     "megaphonna": {
       "last_message_id": 8265,
-      "last_check_time": 1791194442.800784
+      "last_check_time": 1791194745.284239
     },
     "couponsglobal": {
       "last_message_id": 48805,
-      "last_check_time": 1791194444.01417
+      "last_check_time": 1791194746.3223433
     }
   },
   "published_product_prices": {
@@ -1587,7 +1592,8 @@
     "1005007473024376": 1.0,
     "1005005902976406": 1.0,
     "1005006996130042": 1.0,
-    "1005013052800596": 1.28
+    "1005013052800596": 1.28,
+    "1005007331316456": 17.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -4229,6 +4235,16 @@
       "price": 28.4,
       "timestamp": 1791194149.475346,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38546": {
+      "channel_msg_id": 611,
+      "product_id": "1005007331316456",
+      "title": "Attack Shark L60 Tri-mode Gaming Headset",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38546,
+      "price": 17.6,
+      "timestamp": 1791194741.6244273,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4237,7 +4253,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791194149.4787052,
+    "last_deal_post_time": 1791194741.6303427,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4416,7 +4432,8 @@
     "1005006996130042": "couponsglobal",
     "1005013052800596": "couponsglobal",
     "1005007458827229": "zedstoreonline",
-    "1005012899224314": "zedstoreonline"
+    "1005012899224314": "zedstoreonline",
+    "1005007331316456": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4612,7 +4629,8 @@
     "XUNYOU-LINK 4G SIM WiFi Router": "zedstoreonline",
     "UGREEN  1080P Webcam": "zedstoreonline",
     "HONOR CHOICE Watch 2i": "zedstoreonline",
-    "HONOR Watch X5i Version globale SmartWatch 1.9": "bnddeals"
+    "HONOR Watch X5i Version globale SmartWatch 1.9": "bnddeals",
+    "Attack Shark L60 Tri-mode Gaming Headset": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
