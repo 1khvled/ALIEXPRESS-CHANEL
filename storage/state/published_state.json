@@ -246,7 +246,7 @@
     "1005010111014453": 1790943633.9774187,
     "1005009828161174": 1791031550.2120771,
     "1005009281115306": 1790943648.855101,
-    "1005011797801269": 1791110146.1927805,
+    "1005011797801269": 1791203753.790013,
     "1005007168829266": 1791102355.4991398,
     "1005012406142215": 1791042955.9414852,
     "1005008390562391": 1791105348.8066044,
@@ -602,7 +602,8 @@
     "ATTACK SHARK X2 Pro station de chargement RGB",
     "GameSir Nova Lite Gamepads PC  Hall Effect",
     "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4",
-    "AMD Ryzen 5 7500F"
+    "AMD Ryzen 5 7500F",
+    "CMF Watch 3 Pro Global AMOLED GPS"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -828,7 +829,8 @@
     "ATTACK SHARK X2 Pro station de chargement RGB": 1791195344.3305714,
     "GameSir Nova Lite Gamepads PC  Hall Effect": 1791197438.386862,
     "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4": 1791198946.2774374,
-    "AMD Ryzen 5 7500F": 1791201047.413366
+    "AMD Ryzen 5 7500F": 1791201047.413366,
+    "CMF Watch 3 Pro Global AMOLED GPS": 1791203753.790013
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1411,15 +1413,17 @@
     "lodydeals:45476",
     "lodydeals:45477",
     "lodydeals:45478",
-    "couponsglobal:48806"
+    "couponsglobal:48806",
+    "couponsglobal:48807",
+    "couponsglobal:48808"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791201047.413366,
+  "last_run_time": 1791203753.790013,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32792,
-      "last_check_time": 1791203439.5101714
+      "last_check_time": 1791203745.7491455
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1427,11 +1431,11 @@
     },
     "lodydeals": {
       "last_message_id": 45478,
-      "last_check_time": 1791203437.3166597
+      "last_check_time": 1791203742.9589992
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791203438.7695084
+      "last_check_time": 1791203744.716715
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1439,19 +1443,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7962,
-      "last_check_time": 1791203438.3211462
+      "last_check_time": 1791203744.277234
     },
     "zedstoreonline": {
       "last_message_id": 38547,
-      "last_check_time": 1791203437.6547515
+      "last_check_time": 1791203743.4109144
     },
     "megaphonna": {
       "last_message_id": 8266,
-      "last_check_time": 1791203439.1260462
+      "last_check_time": 1791203745.2057006
     },
     "couponsglobal": {
-      "last_message_id": 48806,
-      "last_check_time": 1791203444.4263158
+      "last_message_id": 48808,
+      "last_check_time": 1791203755.8059466
     }
   },
   "published_product_prices": {
@@ -1506,7 +1510,7 @@
     "1005010111014453": 6.09,
     "1005009828161174": 7.62,
     "1005009281115306": 17.95,
-    "1005011797801269": 55.7,
+    "1005011797801269": 55.78,
     "1005007168829266": 4.19,
     "1005012406142215": 393.0,
     "1005008390562391": 11.29,
@@ -4317,6 +4321,16 @@
       "price": 92.31,
       "timestamp": 1791201047.413366,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48808": {
+      "channel_msg_id": 628,
+      "product_id": "1005011797801269",
+      "title": "CMF Watch 3 Pro Global AMOLED GPS",
+      "channel": "couponsglobal",
+      "source_msg_id": 48808,
+      "price": 55.78,
+      "timestamp": 1791203753.790013,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4325,7 +4339,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791201047.4179344,
+    "last_deal_post_time": 1791203753.7957983,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4358,7 +4372,7 @@
     "1005010111014453": "lodydeals",
     "1005009828161174": "couponsglobal",
     "1005009281115306": "lodydeals",
-    "1005011797801269": "aniscoupons",
+    "1005011797801269": "couponsglobal",
     "1005012973772517": "zedstoreonline",
     "1005007168829266": "aniscoupons",
     "1005008880082336": "aniscoupons",
@@ -4708,7 +4722,8 @@
     "ATTACK SHARK X2 Pro station de chargement RGB": "zedstoreonline",
     "GameSir Nova Lite Gamepads PC  Hall Effect": "pcgamingpart",
     "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4": "aniscoupons",
-    "AMD Ryzen 5 7500F": "lodydeals"
+    "AMD Ryzen 5 7500F": "lodydeals",
+    "CMF Watch 3 Pro Global AMOLED GPS": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
