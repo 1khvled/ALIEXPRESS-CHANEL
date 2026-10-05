@@ -308,7 +308,7 @@
     "1005007097205322": 1791014755.488723,
     "1005010470699571": 1791015054.3845687,
     "1005012741634118": 1791015347.2675145,
-    "1005010453516983": 1791114657.3821456,
+    "1005010453516983": 1791208255.7291632,
     "1005008554596598": 1791017145.537471,
     "1005008776714223": 1791018047.9604976,
     "1005012925826589": 1791104477.3335717,
@@ -800,7 +800,7 @@
     "CMF Smart Watch 3 pro AMOLED": 1791110146.1927805,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
-    "OPPO A6 Pro 8/256GB": 1791114657.3821456,
+    "OPPO A6 Pro 8/256GB": 1791208255.7291632,
     "ATTACK SHARK X1  Tri-Mode": 1791117948.6585228,
     "HILDA 2 Lines Laser Level Green": 1791124852.3122299,
     "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": 1791125437.8944824,
@@ -1443,27 +1443,28 @@
     "ecksdeal:5864",
     "ecksdeal:5865",
     "ecksdeal:5866",
-    "pcgamingpart:7963"
+    "pcgamingpart:7963",
+    "aniscoupons:32793"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791207945.0259264,
+  "last_run_time": 1791208255.7291632,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32792,
-      "last_check_time": 1791207948.6347167
+      "last_message_id": 32793,
+      "last_check_time": 1791208257.7452083
     },
     "ecksdeal": {
       "last_message_id": 5866,
-      "last_check_time": 1791207939.645931
+      "last_check_time": 1791208247.26832
     },
     "lodydeals": {
       "last_message_id": 45478,
-      "last_check_time": 1791207938.957898
+      "last_check_time": 1791208246.397305
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791207947.6480565
+      "last_check_time": 1791208248.1095788
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1471,19 +1472,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7963,
-      "last_check_time": 1791207947.0426836
+      "last_check_time": 1791208247.6851828
     },
     "zedstoreonline": {
       "last_message_id": 38547,
-      "last_check_time": 1791207939.3047621
+      "last_check_time": 1791208246.8148332
     },
     "megaphonna": {
       "last_message_id": 8266,
-      "last_check_time": 1791207948.030988
+      "last_check_time": 1791208248.5736008
     },
     "couponsglobal": {
       "last_message_id": 48808,
-      "last_check_time": 1791207949.142908
+      "last_check_time": 1791208258.8101802
     }
   },
   "published_product_prices": {
@@ -4421,6 +4422,16 @@
       "price": 15.8,
       "timestamp": 1791207945.0259264,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32793": {
+      "channel_msg_id": 635,
+      "product_id": "1005010453516983",
+      "title": "OPPO A6 Pro 8/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 32793,
+      "price": 204.7,
+      "timestamp": 1791208255.7291632,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4429,7 +4440,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791207945.031981,
+    "last_deal_post_time": 1791208255.734947,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
