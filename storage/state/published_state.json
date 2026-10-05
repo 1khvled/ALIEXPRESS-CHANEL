@@ -343,7 +343,7 @@
     "9998887267": 1791047267.2870219,
     "1005012203827165": 1791050748.149688,
     "1005009870615222": 1791051351.3013499,
-    "1005007546468421": 1791051357.7053592,
+    "1005007546468421": 1791217251.8495085,
     "1005006367419820": 1791056153.3979695,
     "1005013046831062": 1791056447.2532988,
     "1005006974721332": 1791056453.5992196,
@@ -776,7 +776,7 @@
     "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": 1791045040.5964694,
     "RYZEN 7 7800X3D": 1791050748.149688,
     "Redmi Note 14S  8/128GB": 1791051351.3013499,
-    "Attack Shark X AJAZZ AK820": 1791051357.7053592,
+    "Attack Shark X AJAZZ AK820": 1791217251.8495085,
     "Baseus Stylus Pen": 1791056153.3979695,
     "46pcs Ratchet Set Kit": 1791056447.2532988,
     "TOPK Car Phone Holder": 1791056453.5992196,
@@ -1459,27 +1459,28 @@
     "couponsglobal:48812",
     "couponsglobal:48813",
     "couponsglobal:48814",
-    "zedstoreonline:38548"
+    "zedstoreonline:38548",
+    "aniscoupons:32794"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791212158.132987,
+  "last_run_time": 1791217251.8495085,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32793,
-      "last_check_time": 1791216948.474234
+      "last_message_id": 32794,
+      "last_check_time": 1791217253.8666036
     },
     "ecksdeal": {
       "last_message_id": 5866,
-      "last_check_time": 1791216946.7441006
+      "last_check_time": 1791217244.882809
     },
     "lodydeals": {
       "last_message_id": 45478,
-      "last_check_time": 1791216945.9152505
+      "last_check_time": 1791217244.0402293
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791216947.5708926
+      "last_check_time": 1791217245.7764184
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1487,19 +1488,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7963,
-      "last_check_time": 1791216947.1848745
+      "last_check_time": 1791217245.3171968
     },
     "zedstoreonline": {
       "last_message_id": 38548,
-      "last_check_time": 1791216946.3505673
+      "last_check_time": 1791217244.4650924
     },
     "megaphonna": {
       "last_message_id": 8266,
-      "last_check_time": 1791216948.0176563
+      "last_check_time": 1791217246.2052467
     },
     "couponsglobal": {
       "last_message_id": 48814,
-      "last_check_time": 1791216949.2255986
+      "last_check_time": 1791217254.9102693
     }
   },
   "published_product_prices": {
@@ -1627,7 +1628,7 @@
     "1005012826813261": 14.0,
     "1005012203827165": 259.7,
     "1005009870615222": 149.1,
-    "1005007546468421": 29.56,
+    "1005007546468421": 29.18,
     "1005006367419820": 5.89,
     "1005013046831062": 5.29,
     "1005006974721332": 3.09,
@@ -4469,6 +4470,16 @@
       "price": 0.84,
       "timestamp": 1791212158.132987,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32794": {
+      "channel_msg_id": 638,
+      "product_id": "1005007546468421",
+      "title": "Attack Shark X AJAZZ AK820",
+      "channel": "aniscoupons",
+      "source_msg_id": 32794,
+      "price": 29.18,
+      "timestamp": 1791217251.8495085,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4477,7 +4488,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791212158.1391664,
+    "last_deal_post_time": 1791217251.8554943,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4613,7 +4624,7 @@
     "9998887267": "test_channel",
     "1005012203827165": "aniscoupons",
     "1005009870615222": "lodydeals",
-    "1005007546468421": "lodydeals",
+    "1005007546468421": "aniscoupons",
     "1005006367419820": "lodydeals",
     "1005013046831062": "lodydeals",
     "1005006974721332": "lodydeals",
@@ -4795,7 +4806,7 @@
     "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": "aniscoupons",
     "RYZEN 7 7800X3D": "aniscoupons",
     "Redmi Note 14S  8/128GB": "lodydeals",
-    "Attack Shark X AJAZZ AK820": "lodydeals",
+    "Attack Shark X AJAZZ AK820": "aniscoupons",
     "Baseus Stylus Pen": "lodydeals",
     "46pcs Ratchet Set Kit": "lodydeals",
     "TOPK Car Phone Holder": "lodydeals",
