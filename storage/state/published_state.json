@@ -326,7 +326,7 @@
     "1005009719082543": 1791027355.6595695,
     "1005008720862916": 1791152444.7701666,
     "1005006436971986": 1791027947.9506829,
-    "1005007331264474": 1791108947.313694,
+    "1005007331264474": 1791207945.0259264,
     "1005010375387628": 1791031850.9681444,
     "1005007244376156": 1791126656.5930831,
     "1005005639737205": 1791126649.148256,
@@ -610,7 +610,8 @@
     "CMF Watch 3 Pro Global AMOLED GPS",
     "يد تحكم لاسلكية Fantech Shooter 3 Wireless Hall Effect Ultimate",
     "يد تحكم  GameSir Tarantula 8K TMR",
-    "ماوس لاسلكي Attack Shark X1 Wireless"
+    "ماوس لاسلكي Attack Shark X1 Wireless",
+    "Attack Shark L80 Gaming Headset, Lightweight"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -840,7 +841,8 @@
     "CMF Watch 3 Pro Global AMOLED GPS": 1791203753.790013,
     "يد تحكم لاسلكية Fantech Shooter 3 Wireless Hall Effect Ultimate": 1791205539.6613767,
     "يد تحكم  GameSir Tarantula 8K TMR": 1791205547.1867356,
-    "ماوس لاسلكي Attack Shark X1 Wireless": 1791206156.5528755
+    "ماوس لاسلكي Attack Shark X1 Wireless": 1791206156.5528755,
+    "Attack Shark L80 Gaming Headset, Lightweight": 1791207945.0259264
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1440,47 +1442,48 @@
     "ecksdeal:5863",
     "ecksdeal:5864",
     "ecksdeal:5865",
-    "ecksdeal:5866"
+    "ecksdeal:5866",
+    "pcgamingpart:7963"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791206156.5528755,
+  "last_run_time": 1791207945.0259264,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32792,
-      "last_check_time": 1791207642.0973454
+      "last_check_time": 1791207948.6347167
     },
     "ecksdeal": {
       "last_message_id": 5866,
-      "last_check_time": 1791207640.260326
+      "last_check_time": 1791207939.645931
     },
     "lodydeals": {
       "last_message_id": 45478,
-      "last_check_time": 1791207639.625673
+      "last_check_time": 1791207938.957898
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791207641.1415906
+      "last_check_time": 1791207947.6480565
     },
     "test_channel": {
       "last_message_id": 1791063864,
       "last_check_time": 1791063864.5866926
     },
     "pcgamingpart": {
-      "last_message_id": 7962,
-      "last_check_time": 1791207640.7841034
+      "last_message_id": 7963,
+      "last_check_time": 1791207947.0426836
     },
     "zedstoreonline": {
       "last_message_id": 38547,
-      "last_check_time": 1791207639.934098
+      "last_check_time": 1791207939.3047621
     },
     "megaphonna": {
       "last_message_id": 8266,
-      "last_check_time": 1791207641.7456787
+      "last_check_time": 1791207948.030988
     },
     "couponsglobal": {
       "last_message_id": 48808,
-      "last_check_time": 1791207642.651542
+      "last_check_time": 1791207949.142908
     }
   },
   "published_product_prices": {
@@ -4408,6 +4411,16 @@
       "price": 24.73,
       "timestamp": 1791206156.5528755,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7963": {
+      "channel_msg_id": 634,
+      "product_id": "1005007331264474",
+      "title": "Attack Shark L80 Gaming Headset, Lightweight",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7963,
+      "price": 15.8,
+      "timestamp": 1791207945.0259264,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4416,7 +4429,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791206156.5588763,
+    "last_deal_post_time": 1791207945.031981,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4537,7 +4550,7 @@
     "1005008720862916": "couponsglobal",
     "1005006436971986": "bnddeals",
     "1005007275142457": "ecksdeal",
-    "1005007331264474": "lodydeals",
+    "1005007331264474": "pcgamingpart",
     "1005010375387628": "couponsglobal",
     "1005007244376156": "couponsglobal",
     "1005005639737205": "couponsglobal",
@@ -4807,7 +4820,8 @@
     "يد تحكم  GameSir Tarantula 8K TMR": "ecksdeal",
     "سماعات لاسلكية Attack Shark L80 PRO Wireless": "ecksdeal",
     "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K": "ecksdeal",
-    "ماوس لاسلكي Attack Shark X1 Wireless": "ecksdeal"
+    "ماوس لاسلكي Attack Shark X1 Wireless": "ecksdeal",
+    "Attack Shark L80 Gaming Headset, Lightweight": "pcgamingpart"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
