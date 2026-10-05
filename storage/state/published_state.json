@@ -1460,27 +1460,31 @@
     "couponsglobal:48813",
     "couponsglobal:48814",
     "zedstoreonline:38548",
-    "aniscoupons:32794"
+    "aniscoupons:32794",
+    "megaphonna:8267",
+    "megaphonna:8268",
+    "aniscoupons:32795",
+    "aniscoupons:32796"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
   "last_run_time": 1791217251.8495085,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32794,
-      "last_check_time": 1791219395.6233249
+      "last_message_id": 32796,
+      "last_check_time": 1791224015.6746075
     },
     "ecksdeal": {
       "last_message_id": 5866,
-      "last_check_time": 1791219393.86126
+      "last_check_time": 1791223976.0701237
     },
     "lodydeals": {
-      "last_message_id": 45478,
-      "last_check_time": 1791219393.0864089
+      "last_message_id": 45481,
+      "last_check_time": 1791223974.949351
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791219394.669381
+      "last_check_time": 1791223976.71733
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1488,19 +1492,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7963,
-      "last_check_time": 1791219394.2731209
+      "last_check_time": 1791223976.4005368
     },
     "zedstoreonline": {
       "last_message_id": 38548,
-      "last_check_time": 1791219393.4804554
+      "last_check_time": 1791223975.5993361
     },
     "megaphonna": {
-      "last_message_id": 8266,
-      "last_check_time": 1791219395.1831129
+      "last_message_id": 8270,
+      "last_check_time": 1791224011.5513976
     },
     "couponsglobal": {
       "last_message_id": 48814,
-      "last_check_time": 1791219396.320785
+      "last_check_time": 1791224016.3462303
     }
   },
   "published_product_prices": {
@@ -4490,10 +4494,10 @@
     "night_mode_enabled": true,
     "night_pause_enabled": true,
     "last_deal_post_time": 1791217251.8554943,
-    "last_sweep_time": 1791219400.9487722,
+    "last_sweep_time": 1791224020.4033065,
     "last_sweep_times": {
-      "algeria": 1791219396.326898,
-      "france": 1791219400.9487722
+      "algeria": 1791224016.350445,
+      "france": 1791224020.4033065
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
