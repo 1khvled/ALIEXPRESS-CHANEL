@@ -301,7 +301,7 @@
     "1005006196428484": 1791026745.7640984,
     "1005012390398338": 1791027348.2517543,
     "1005012297674623": 1791103551.065819,
-    "1005013152491360": 1791098743.198129,
+    "1005013152491360": 1791189979.3835318,
     "1005007097205322": 1791014755.488723,
     "1005010470699571": 1791015054.3845687,
     "1005012741634118": 1791015347.2675145,
@@ -672,7 +672,7 @@
     "Essager 65W GaN USB": 1790949658.4852333,
     "POCO X6 Pro 5G 12/512GB": 1791147359.976985,
     "Blackview LINK 1 Kids Tablets": 1791022250.7560554,
-    "POCO X8 5G (6/128GB)": 1791014155.5083368,
+    "POCO X8 5G (6/128GB)": 1791189979.3835318,
     "HONOR 600 PRO": 1790960475.7249138,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
@@ -1354,15 +1354,16 @@
     "couponsglobal:48805",
     "megaphonna:8264",
     "megaphonna:8265",
-    "aniscoupons:32783"
+    "aniscoupons:32783",
+    "aniscoupons:32784"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791156089.0187185,
+  "last_run_time": 1791189979.3835318,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32783,
-      "last_check_time": 1791189641.9684582
+      "last_message_id": 32784,
+      "last_check_time": 1791189981.3997352
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1370,11 +1371,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791189639.9494042
+      "last_check_time": 1791189970.9446456
     },
     "bnddeals": {
       "last_message_id": 50812,
-      "last_check_time": 1791189641.2206638
+      "last_check_time": 1791189972.5727746
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1382,19 +1383,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791189640.904974
+      "last_check_time": 1791189972.2355683
     },
     "zedstoreonline": {
       "last_message_id": 38531,
-      "last_check_time": 1791189640.2614105
+      "last_check_time": 1791189971.4319603
     },
     "megaphonna": {
       "last_message_id": 8265,
-      "last_check_time": 1791189641.5576103
+      "last_check_time": 1791189972.9495776
     },
     "couponsglobal": {
       "last_message_id": 48805,
-      "last_check_time": 1791189642.5000513
+      "last_check_time": 1791189982.1265438
     }
   },
   "published_product_prices": {
@@ -1458,7 +1459,7 @@
     "1005008715050858": 6.4,
     "999888777111": 20.0,
     "1005012407874415": 480.4,
-    "1005013152491360": 1.7,
+    "1005013152491360": 196.0,
     "1005012925826589": 189.0,
     "1005012922578845": 214.9,
     "1005012865117890": 234.9,
@@ -4099,6 +4100,16 @@
       "price": 1.28,
       "timestamp": 1791156089.0187185,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32784": {
+      "channel_msg_id": 601,
+      "product_id": "1005013152491360",
+      "title": "POCO X8 5G (6/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 32784,
+      "price": 196.0,
+      "timestamp": 1791189979.3835318,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4107,7 +4118,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791156089.0241547,
+    "last_deal_post_time": 1791189979.389406,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4160,7 +4171,7 @@
     "9998887189": "test_channel",
     "1005012499451512": "zedstoreonline",
     "1005010219205081": "aniscoupons",
-    "1005013152491360": "megaphonna",
+    "1005013152491360": "aniscoupons",
     "1005010129356058": "megaphonna",
     "1005012925826589": "megaphonna",
     "1005012922578845": "megaphonna",
