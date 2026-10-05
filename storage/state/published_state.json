@@ -211,7 +211,7 @@
     "1005009234854371": 1791192944.201814,
     "1005006533038973": 1791104468.758226,
     "1005007394028808": 1791106544.154073,
-    "1005012899224314": 1790888183.366231,
+    "1005012899224314": 1791193543.9040256,
     "1005012923660718": 1790888191.2162998,
     "1005012881256093": 1790973641.950298,
     "1005009118633225": 1790888213.2900865,
@@ -593,7 +593,8 @@
     "Attack Shark R1",
     "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse",
     "XUNYOU-LINK 4G SIM WiFi Router",
-    "UGREEN  1080P Webcam"
+    "UGREEN  1080P Webcam",
+    "HONOR CHOICE Watch 2i"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -812,7 +813,8 @@
     "Attack Shark R1": 1791191146.7913554,
     "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse": 1791191446.7283864,
     "XUNYOU-LINK 4G SIM WiFi Router": 1791192351.7104166,
-    "UGREEN  1080P Webcam": 1791192944.201814
+    "UGREEN  1080P Webcam": 1791192944.201814,
+    "HONOR CHOICE Watch 2i": 1791193543.9040256
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1376,15 +1378,16 @@
     "aniscoupons:32785",
     "zedstoreonline:38540",
     "zedstoreonline:38541",
-    "zedstoreonline:38542"
+    "zedstoreonline:38542",
+    "zedstoreonline:38543"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791192944.201814,
+  "last_run_time": 1791193543.9040256,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32785,
-      "last_check_time": 1791193240.4086456
+      "last_check_time": 1791193547.9795914
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1392,11 +1395,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791193235.308108
+      "last_check_time": 1791193538.2442818
     },
     "bnddeals": {
       "last_message_id": 50813,
-      "last_check_time": 1791193239.6884418
+      "last_check_time": 1791193547.1476316
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1404,19 +1407,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791193239.3735738
+      "last_check_time": 1791193546.7994099
     },
     "zedstoreonline": {
-      "last_message_id": 38542,
-      "last_check_time": 1791193238.6552196
+      "last_message_id": 38543,
+      "last_check_time": 1791193545.9184911
     },
     "megaphonna": {
       "last_message_id": 8265,
-      "last_check_time": 1791193240.0338302
+      "last_check_time": 1791193547.5483727
     },
     "couponsglobal": {
       "last_message_id": 48805,
-      "last_check_time": 1791193241.060955
+      "last_check_time": 1791193548.631707
     }
   },
   "published_product_prices": {
@@ -1438,7 +1441,7 @@
     "1005009234854371": 19.6,
     "1005006533038973": 21.81,
     "1005007394028808": 10.73,
-    "1005012899224314": 27.14,
+    "1005012899224314": 27.1,
     "1005012923660718": 15.17,
     "1005012881256093": 28.5,
     "1005009118633225": 14.14,
@@ -4191,6 +4194,16 @@
       "price": 19.6,
       "timestamp": 1791192944.201814,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38543": {
+      "channel_msg_id": 608,
+      "product_id": "1005012899224314",
+      "title": "HONOR CHOICE Watch 2i",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38543,
+      "price": 27.1,
+      "timestamp": 1791193543.9040256,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4199,7 +4212,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791192944.2074869,
+    "last_deal_post_time": 1791193543.9091353,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4377,7 +4390,8 @@
     "1005005902976406": "couponsglobal",
     "1005006996130042": "couponsglobal",
     "1005013052800596": "couponsglobal",
-    "1005007458827229": "zedstoreonline"
+    "1005007458827229": "zedstoreonline",
+    "1005012899224314": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4571,7 +4585,8 @@
     "Rocoren 100W Type-C to USB Fast Charging": "couponsglobal",
     "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse": "zedstoreonline",
     "XUNYOU-LINK 4G SIM WiFi Router": "zedstoreonline",
-    "UGREEN  1080P Webcam": "zedstoreonline"
+    "UGREEN  1080P Webcam": "zedstoreonline",
+    "HONOR CHOICE Watch 2i": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
