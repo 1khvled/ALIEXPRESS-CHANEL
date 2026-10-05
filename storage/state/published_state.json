@@ -354,7 +354,7 @@
     "1005012743092233": 1791104461.903693,
     "1005007805497968": 1791104753.5513856,
     "1005007345108759": 1791104759.7671344,
-    "1005007394197021": 1791106853.9447496,
+    "1005007394197021": 1791195344.3305714,
     "1005008880082336": 1791107750.295487,
     "1005012571601398": 1791109857.5190113,
     "1005013290515237": 1791110751.0808105,
@@ -598,7 +598,8 @@
     "UGREEN  1080P Webcam",
     "HONOR CHOICE Watch 2i",
     "HONOR Watch X5i Version globale SmartWatch 1.9",
-    "Attack Shark L60 Tri-mode Gaming Headset"
+    "Attack Shark L60 Tri-mode Gaming Headset",
+    "ATTACK SHARK X2 Pro station de chargement RGB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -820,7 +821,8 @@
     "UGREEN  1080P Webcam": 1791192944.201814,
     "HONOR CHOICE Watch 2i": 1791193543.9040256,
     "HONOR Watch X5i Version globale SmartWatch 1.9": 1791194149.475346,
-    "Attack Shark L60 Tri-mode Gaming Headset": 1791194741.6244273
+    "Attack Shark L60 Tri-mode Gaming Headset": 1791194741.6244273,
+    "ATTACK SHARK X2 Pro station de chargement RGB": 1791195344.3305714
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1390,15 +1392,16 @@
     "zedstoreonline:38545",
     "bnddeals:50814",
     "zedstoreonline:38546",
-    "aniscoupons:32786"
+    "aniscoupons:32786",
+    "zedstoreonline:38547"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791194741.6244273,
+  "last_run_time": 1791195344.3305714,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32786,
-      "last_check_time": 1791195046.7362669
+      "last_check_time": 1791195348.5455801
     },
     "ecksdeal": {
       "last_message_id": 5851,
@@ -1406,11 +1409,11 @@
     },
     "lodydeals": {
       "last_message_id": 45475,
-      "last_check_time": 1791195040.4017828
+      "last_check_time": 1791195338.9608653
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791195041.883065
+      "last_check_time": 1791195347.7737527
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1418,19 +1421,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7961,
-      "last_check_time": 1791195041.5214164
+      "last_check_time": 1791195347.4157395
     },
     "zedstoreonline": {
-      "last_message_id": 38546,
-      "last_check_time": 1791195040.7644315
+      "last_message_id": 38547,
+      "last_check_time": 1791195346.512556
     },
     "megaphonna": {
       "last_message_id": 8265,
-      "last_check_time": 1791195042.28213
+      "last_check_time": 1791195348.1136487
     },
     "couponsglobal": {
       "last_message_id": 48805,
-      "last_check_time": 1791195047.453201
+      "last_check_time": 1791195349.1002727
     }
   },
   "published_product_prices": {
@@ -1571,7 +1574,7 @@
     "1005012743092233": 24.37,
     "1005007805497968": 22.81,
     "1005007345108759": 22.12,
-    "1005007394197021": 14.84,
+    "1005007394197021": 14.8,
     "1005012571601398": 275.7,
     "1005013290515237": 23.22,
     "1005012264415744": 78.0,
@@ -4246,6 +4249,16 @@
       "price": 17.6,
       "timestamp": 1791194741.6244273,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38547": {
+      "channel_msg_id": 612,
+      "product_id": "1005007394197021",
+      "title": "ATTACK SHARK X2 Pro station de chargement RGB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38547,
+      "price": 14.8,
+      "timestamp": 1791195344.3305714,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4254,7 +4267,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791194741.6303427,
+    "last_deal_post_time": 1791195344.3585916,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4407,7 +4420,7 @@
     "1005007805497968": "pcgamingpart",
     "1005007345108759": "pcgamingpart",
     "1005007394028808": "aniscoupons",
-    "1005007394197021": "aniscoupons",
+    "1005007394197021": "zedstoreonline",
     "1005011778621042": "lodydeals",
     "1005012571601398": "aniscoupons",
     "1005013290515237": "aniscoupons",
@@ -4631,7 +4644,8 @@
     "UGREEN  1080P Webcam": "zedstoreonline",
     "HONOR CHOICE Watch 2i": "zedstoreonline",
     "HONOR Watch X5i Version globale SmartWatch 1.9": "bnddeals",
-    "Attack Shark L60 Tri-mode Gaming Headset": "zedstoreonline"
+    "Attack Shark L60 Tri-mode Gaming Headset": "zedstoreonline",
+    "ATTACK SHARK X2 Pro station de chargement RGB": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
