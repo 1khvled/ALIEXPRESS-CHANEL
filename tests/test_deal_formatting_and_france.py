@@ -37,6 +37,43 @@ def test_detect_deal_type_bundle_vs_coin():
     assert detect_deal_type("AMD Ryzen 5 7600X USED R5 7600X", url="https://aliexpress.com/item/100500123.html?sourceType=620") == "item"
     assert detect_deal_type("معالج Intel Core i5 12400F", url="https://aliexpress.com/item/100500123.html?sourceType=562") == "item"
 
+def test_extract_prices_couponsglobal_and_bundle_format():
+    from app.aliexpress.parser import extract_prices
+
+    # 1. Baseus 30W from couponsglobal (must extract $4.19, NOT $1.00 from promo tier line)
+    baseus_text = """تغيير البلد للجزائر 🇩🇿 عرض لشراء 4 قطع Bundle 
+🔹القطعة بعد الكوبون  : 4.19$🔥
+🔹تخفيض لـ  Baseus 30W Car Charger Dual Port USB Type-C Fast
+🔹المنتج : https://s.click.aliexpress.com/e/_c3QnV1YZ
+🔹الصفحة :  https://s.click.aliexpress.com/e/_c45i83Qn
+تخفيض 1$ على 6 منتجات
+كوبون 2/15$ : OTPRD02"""
+    usd, eur = extract_prices(baseus_text)
+    assert usd == 4.19
+    assert usd != 1.00
+
+    # 2. Lenovo XT62 from couponsglobal
+    xt62_text = """تغيير البلد للجزائر 🇩🇿 عرض لشراء 3 قطع Bundle 
+🔹القطعة بعد الكوبون  : 5.22$🔥
+🔹تخفيض لـ  Lenovo XT62 Earphones Bluetooth
+🔹المنتج : https://s.click.aliexpress.com/e/_c41NZlRr
+🔹الصفحة :  https://s.click.aliexpress.com/e/_c45i83Qn
+تخفيض 1$ على 6 منتجات
+كوبون 2/15$ : OTPRD02"""
+    usd_xt, _ = extract_prices(xt62_text)
+    assert usd_xt == 5.22
+    assert usd_xt != 1.00
+
+    # 3. Samsung 45W from couponsglobal
+    samsung_text = """تغيير البلد للجزائر 🇩🇿 عرض لشراء 3 قطع Bundle 
+🔹القطعة بعد الكوبون  : 4.82$🔥
+🔹تخفيض لـ  Samsung 45W PD Charger Super Fast Charging
+تخفيض 1$ على 6 منتجات
+كوبون 2/15$ : OTPRD02"""
+    usd_sam, _ = extract_prices(samsung_text)
+    assert usd_sam == 4.82
+    assert usd_sam != 1.00
+
 @pytest.mark.asyncio
 async def test_clean_algerian_post_formatting():
     caption = await caption_generator.generate(
@@ -292,6 +329,7 @@ def test_france_channel_never_accepts_arabic_deals():
     assert "CouponsGlobal" not in FRANCE_SOURCE_CHANNELS
     assert "AliFRDrop" in FRANCE_SOURCE_CHANNELS
     assert "FranceCP" in FRANCE_SOURCE_CHANNELS
+    assert "PromoZoneFR" in FRANCE_SOURCE_CHANNELS
 
     # 2. Algerian deals or channels must be rejected
     ok1, reason1 = is_strictly_france_compatible_deal("POCO X6 Pro 240$ تخفيض عملات شحن للجزائر 58 ولاية", channel_username="lodydeals")

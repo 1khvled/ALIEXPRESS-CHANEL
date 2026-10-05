@@ -278,13 +278,43 @@ def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
     if not text:
         return None, None
 
-    # Filter out lines that are coupon codes or discount tiers (e.g. 4/35$, 10/99$, قسيمة 20$)
+    # Priority 1: Direct explicit price markers in the raw text
+    explicit_price_patterns = [
+        # 'القطعة بعد الكوبون : 4.19$' or 'السعر بعد الكوبون : 12.50$' or 'السعر بعد التخفيض : 1.28$'
+        re.compile(r'(?:القطعة\s*بعد\s*الكوبون|السعر\s*بعد\s*الكوبون|سعر\s*بعد\s*الكوبون|بعد\s*الكوبون|القطعة\s*بعد\s*الكود|السعر\s*بعد\s*الكود|السعر\s*بعد\s*التخفيض|سعر\s*بعد\s*التخفيض)\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
+        # 'سعر القطعة : 4.4$' or 'سعر قطعة : 7.99$' or 'سعر الحبة : 3.5$'
+        re.compile(r'(?:سعر\s*القطعة|سعر\s*قطعة|سعر\s*الحبة|سعر\s*حبة)\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
+        # 'السعر : 204.7$' or 'السعــــر : 15.5$' or 'السعر: 18.17 $' or 'prix: 15€' or 'price: $15'
+        re.compile(r'(?:ا+لسعر|ا+لسعــــر|prix|price)\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
+        # 'سعر 3 قطع: 28.85$' or 'سعر ثلاث قطع 13.2$' or 'سعر 3 حبات: 24$'
+        re.compile(r'(?:سعر\s*(?:3|ثلاث)\s*(?:قطع|حبات))\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
+    ]
+
+    for p in explicit_price_patterns:
+        m = p.search(text)
+        if m:
+            try:
+                candidate = float(m.group(1).replace(",", "."))
+                if 0.1 <= candidate <= 10000:
+                    rate = getattr(settings, "EUR_USD_RATE", 0.92) or 0.92
+                    if "€" in m.group(0) or "eur" in m.group(0).lower():
+                        return round(candidate / rate, 2), candidate
+                    return candidate, round(candidate * rate, 2)
+            except ValueError:
+                pass
+
+    # Priority 2: Filter out lines that are coupon codes, tiers, or discount announcements
     filtered_lines = []
     for line in text.splitlines():
         lc = line.strip().lower()
+        if any(p in lc for p in ["بعد الكوبون", "بعد الكود", "سعر بعد", "القطعة بعد", "السعر بعد", "سعر القطعة", "سعر قطعة", "السعر :", "السعر:"]):
+            filtered_lines.append(line)
+            continue
         if any(w in lc for w in ["كوبون", "كوبـــون", "كود", "قسيمة", "code", "coupon"]):
             continue
         if re.search(r'\d+\s*/\s*\d+', lc):
+            continue
+        if re.search(r'(?:تخفيض|خصم|وفر|توفير)\s*[\$💲]?\s*\d+(?:\.\d+)?\s*[\$💲]?', lc):
             continue
         filtered_lines.append(line)
 

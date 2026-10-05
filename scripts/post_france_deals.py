@@ -50,13 +50,14 @@ FRANCE_STATE_FILE = Path(settings.BASE_DIR) / "storage" / "state" / "france_publ
 # NEVER include Algerian or Arabic channels here (their coins, coupons, and links do not work in France).
 FRANCE_SOURCE_CHANNELS = [
     "AliFRDrop",
-    "FranceCP"
+    "FranceCP",
+    "PromoZoneFR"
 ]
 
 def is_strictly_france_compatible_deal(raw_text: str, channel_username: str = "") -> Tuple[bool, str]:
     """
     Validates that a deal is strictly genuine and compatible with France / Europe.
-    - Verified French channels (@AliFRDrop, @FranceCP) are accepted.
+    - Verified French channels (@AliFRDrop, @FranceCP, @PromoZoneFR) are accepted.
     - Arabic/Algerian channels are accepted ONLY if they explicitly dropped a France deal
       (e.g. they typed 'عروض ففرنسا', 'عروض فرنسا', 'خاص بفرنسا', French promo code, etc.).
     - Any deal containing domestic Algerian indicators (DZD, BaridiMob, 58 ولاية) is strictly rejected.
@@ -74,7 +75,7 @@ def is_strictly_france_compatible_deal(raw_text: str, channel_username: str = ""
     clean_ch = channel_username.replace("@", "").lower()
 
     # 2. Verified French channels are native French sources
-    verified_french_channels = {"alifrdrop", "francecp"}
+    verified_french_channels = {"alifrdrop", "francecp", "promozonefr"}
     if clean_ch in verified_french_channels:
         return True, "Verified French source channel"
 
@@ -453,6 +454,16 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
             print(f"\n[FRANCE ROUNDUP] Published {len(bulletins)} daily roundup bulletin(s): {[b['category'] for b in bulletins]}")
     except Exception as e:
         print(f"  [!] France daily roundup check error: {e}")
+
+    # 0.6. Automated Check: Day-to-Day Card & Cashback Affiliate Marketing (Bybit 100% Free + Cashback, RedotPay Visa, Binance SEPA)
+    try:
+        from app.publisher.card_affiliates import post_card_affiliate_france
+        force_cards = "--cards" in sys.argv or "--force-cards" in sys.argv
+        fr_card_success, fr_card_msg = await post_card_affiliate_france(force=force_cards)
+        if fr_card_success:
+            print(f"  [FRANCE CARD AFFILIATE AUTO-POST] {fr_card_msg}")
+    except Exception as e:
+        print(f"  [!] France card affiliate check error: {e}")
 
     state = load_france_state()
     published_keys = set(state.get("published_post_keys", []))

@@ -94,6 +94,16 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     except Exception as e:
         print(f"[!] Coin reminder check error: {e}")
 
+    # Automated Check: Day-to-Day Card & Crypto Affiliate Marketing (Bybit Free Card, RedotPay Visa, Binance P2P)
+    try:
+        from app.publisher.card_affiliates import post_card_affiliate_algeria
+        force_cards = "--cards" in sys.argv or "--force-cards" in sys.argv
+        card_success, card_msg = await post_card_affiliate_algeria(force=force_cards)
+        if card_success:
+            print(f"[CARD AFFILIATE AUTO-POST] {card_msg}")
+    except Exception as e:
+        print(f"[!] Card affiliate check error: {e}")
+
     # Automated Check: Religious & Spiritual Reminders (Jumu'ah & Fajr Salah)
     try:
         from app.publisher.religious_reminders import check_and_auto_post_religious_reminders
