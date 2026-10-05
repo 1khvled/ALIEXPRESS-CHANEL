@@ -208,7 +208,7 @@
     "100500777666555": 1791053064.6118824,
     "1005011778621042": 1791108644.641232,
     "9998888080": 1790888080.3099577,
-    "1005012312990781": 1790888097.0085742,
+    "1005012312990781": 1791201047.413366,
     "1005009234854371": 1791192944.201814,
     "1005006533038973": 1791104468.758226,
     "1005007394028808": 1791106544.154073,
@@ -601,7 +601,8 @@
     "Attack Shark L60 Tri-mode Gaming Headset",
     "ATTACK SHARK X2 Pro station de chargement RGB",
     "GameSir Nova Lite Gamepads PC  Hall Effect",
-    "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4"
+    "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4",
+    "AMD Ryzen 5 7500F"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -826,7 +827,8 @@
     "Attack Shark L60 Tri-mode Gaming Headset": 1791194741.6244273,
     "ATTACK SHARK X2 Pro station de chargement RGB": 1791195344.3305714,
     "GameSir Nova Lite Gamepads PC  Hall Effect": 1791197438.386862,
-    "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4": 1791198946.2774374
+    "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4": 1791198946.2774374,
+    "AMD Ryzen 5 7500F": 1791201047.413366
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1405,27 +1407,30 @@
     "aniscoupons:32789",
     "aniscoupons:32790",
     "aniscoupons:32791",
-    "aniscoupons:32792"
+    "aniscoupons:32792",
+    "lodydeals:45476",
+    "lodydeals:45477",
+    "lodydeals:45478"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791200448.8235762,
+  "last_run_time": 1791201047.413366,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32792,
-      "last_check_time": 1791200744.1290207
+      "last_check_time": 1791201054.5115354
     },
     "ecksdeal": {
       "last_message_id": 5851,
       "last_check_time": 1790944838.2909122
     },
     "lodydeals": {
-      "last_message_id": 45475,
-      "last_check_time": 1791200741.5290563
+      "last_message_id": 45478,
+      "last_check_time": 1791201051.7319741
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791200743.2710495
+      "last_check_time": 1791201053.6167922
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1433,19 +1438,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7962,
-      "last_check_time": 1791200742.7919557
+      "last_check_time": 1791201053.1635869
     },
     "zedstoreonline": {
       "last_message_id": 38547,
-      "last_check_time": 1791200741.9514143
+      "last_check_time": 1791201052.371974
     },
     "megaphonna": {
       "last_message_id": 8266,
-      "last_check_time": 1791200743.6921103
+      "last_check_time": 1791201054.0551038
     },
     "couponsglobal": {
       "last_message_id": 48805,
-      "last_check_time": 1791200744.825359
+      "last_check_time": 1791201055.1420987
     }
   },
   "published_product_prices": {
@@ -1463,7 +1468,7 @@
     "1005008829227075": 24.73,
     "100500777666555": 20.0,
     "1005011778621042": 123.59,
-    "1005012312990781": 93.32,
+    "1005012312990781": 92.31,
     "1005009234854371": 19.6,
     "1005006533038973": 21.81,
     "1005007394028808": 10.73,
@@ -4301,6 +4306,16 @@
       "price": 53.8,
       "timestamp": 1791200448.8235762,
       "status": "ACTIVE"
+    },
+    "lodydeals:45477": {
+      "channel_msg_id": 627,
+      "product_id": "1005012312990781",
+      "title": "AMD Ryzen 5 7500F",
+      "channel": "lodydeals",
+      "source_msg_id": 45477,
+      "price": 92.31,
+      "timestamp": 1791201047.413366,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4309,7 +4324,7 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791200448.8294215,
+    "last_deal_post_time": 1791201047.4179344,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8
   },
@@ -4490,7 +4505,8 @@
     "1005007458827229": "zedstoreonline",
     "1005012899224314": "zedstoreonline",
     "1005007331316456": "zedstoreonline",
-    "1005008852027824": "aniscoupons"
+    "1005008852027824": "aniscoupons",
+    "1005012312990781": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4690,7 +4706,8 @@
     "Attack Shark L60 Tri-mode Gaming Headset": "zedstoreonline",
     "ATTACK SHARK X2 Pro station de chargement RGB": "zedstoreonline",
     "GameSir Nova Lite Gamepads PC  Hall Effect": "pcgamingpart",
-    "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4": "aniscoupons"
+    "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4": "aniscoupons",
+    "AMD Ryzen 5 7500F": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
