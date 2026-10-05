@@ -476,23 +476,16 @@ async def check_and_publish_france_regrouped_bulletins(
         logger.warning("[FRANCE ROUNDUP] TELEGRAM_BOT_TOKEN not configured.")
         return []
 
-    # 1. Timing & Idempotency check
-    from app.aliexpress.promos import promo_tracker
-    active_promo = promo_tracker.get_active_promo()
-
+    # 1. Timing check: STRICTLY AT NIGHT ONLY (21:30 - 23:45 CET)
     if not force:
-        if active_promo:
-            # During active promo events, coupons are live: allow reposting every ~6h
-            eligible, reason = is_france_promo_roundup_eligible(min_hours=6.0)
-            if not eligible:
-                logger.info(f"[FRANCE ROUNDUP] Active promo '{active_promo.name}': {reason}. Skipping.")
-                return []
-        else:
-            # Event ended: strictly do not repost! Only post once per day in the 10 PM window
-            if not is_france_roundup_time_window():
-                logger.info("[FRANCE ROUNDUP] No active promo and not in 10 PM CET window (21:30 - 23:45). Skipping.")
-                return []
+        if not is_france_roundup_time_window():
+            logger.info("[FRANCE ROUNDUP] Outside night window (21:30 - 23:45 CET). France roundup runs strictly at night. Skipping.")
+            return []
 
+        from app.aliexpress.promos import promo_tracker
+        active_promo = promo_tracker.get_active_promo()
+        if not active_promo:
+            # When promo event has ended: strictly at most once per calendar day (no reposting)
             eligible, reason = is_france_roundup_eligible()
             if not eligible:
                 logger.info(f"[FRANCE ROUNDUP] Not eligible: {reason}. Skipping.")

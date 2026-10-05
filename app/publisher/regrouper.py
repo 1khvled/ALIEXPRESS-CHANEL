@@ -534,30 +534,24 @@ async def check_and_publish_regrouped_bulletins(
     target = TARGET_CHANNEL_ID
     target_clean = str(target).lstrip("@")
 
-    # 1. Timing & Idempotency verification (unless forced)
-    from app.aliexpress.promos import promo_tracker
-    active_promo = promo_tracker.get_active_promo()
-
+    # 1. Timing check: STRICTLY AT NIGHT ONLY (21:30 - 23:45 Algiers time UTC+1)
     if not force:
-        if active_promo:
-            # During active promo events, coupons are live and valid: allow reposting every ~6h
-            from app.publisher.state_tracker import is_promo_tajmi3at_eligible
-            eligible, reason = is_promo_tajmi3at_eligible(min_hours=6.0)
-            if not eligible:
-                logger.info(f"[TAJMI3AT] Active promo '{active_promo.name}': {reason}. Skipping.")
-                return []
-        else:
-            # Event ended: strictly do not repost! Only post once per day in the 10 PM window
-            if not is_tajmi3at_time_window():
-                logger.info("[TAJMI3AT] No active promo and current time is outside 10 PM window (21:30 - 23:45 UTC+1). Skipping.")
-                return []
+        if not is_tajmi3at_time_window():
+            logger.info("[TAJMI3AT] Outside night window (21:30 - 23:45 Algiers time UTC+1). Tajmi3at runs strictly at night. Skipping.")
+            return []
 
+        from app.aliexpress.promos import promo_tracker
+        active_promo = promo_tracker.get_active_promo()
+        if not active_promo:
+            # When promo event has ended: strictly at most once per calendar day (no reposting)
             eligible, reason = is_daily_tajmi3at_eligible()
             if not eligible:
                 logger.info(f"[TAJMI3AT] Daily tajmi3at not eligible: {reason}. Skipping.")
                 return []
 
-    logger.info(f"[TAJMI3AT] Starting Daily Tajmi3at roundup execution (Active Promo: {active_promo.name if active_promo else 'None'})...")
+    from app.aliexpress.promos import promo_tracker
+    active_promo = promo_tracker.get_active_promo()
+    logger.info(f"[TAJMI3AT] Starting Night Tajmi3at roundup execution (Active Promo: {active_promo.name if active_promo else 'None'})...")
 
     # 2. Fetch all active deals published to @DzAliexpress0 in the last 24-48h
     lookup_hours = 48.0 if active_promo else 24.0
