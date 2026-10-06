@@ -1536,7 +1536,8 @@
     "lodydeals:45495",
     "aniscoupons:32812",
     "pcgamingpart:7969",
-    "megaphonna:8274"
+    "megaphonna:8274",
+    "megaphonna:8275"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
@@ -1544,19 +1545,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32812,
-      "last_check_time": 1791282636.8597846
+      "last_check_time": 1791282938.0691493
     },
     "ecksdeal": {
       "last_message_id": 5867,
-      "last_check_time": 1791282635.3215716
+      "last_check_time": 1791282932.842137
     },
     "lodydeals": {
       "last_message_id": 45495,
-      "last_check_time": 1791282634.6055126
+      "last_check_time": 1791282932.144981
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791282636.0006444
+      "last_check_time": 1791282933.493851
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1564,19 +1565,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7969,
-      "last_check_time": 1791282635.6449802
+      "last_check_time": 1791282933.1487746
     },
     "zedstoreonline": {
       "last_message_id": 38549,
-      "last_check_time": 1791282634.9750855
+      "last_check_time": 1791282932.4778128
     },
     "megaphonna": {
-      "last_message_id": 8274,
-      "last_check_time": 1791282636.3993022
+      "last_message_id": 8275,
+      "last_check_time": 1791282937.663086
     },
     "couponsglobal": {
       "last_message_id": 48820,
-      "last_check_time": 1791282637.4573216
+      "last_check_time": 1791282938.601621
     }
   },
   "published_product_prices": {
@@ -4562,10 +4563,10 @@
     "night_mode_enabled": true,
     "night_pause_enabled": true,
     "last_deal_post_time": 1791236022.8248365,
-    "last_sweep_time": 1791282642.1174197,
+    "last_sweep_time": 1791282942.8070223,
     "last_sweep_times": {
-      "algeria": 1791282637.4614096,
-      "france": 1791282642.1174197
+      "algeria": 1791282938.606042,
+      "france": 1791282942.8070223
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
