@@ -1525,27 +1525,29 @@
     "lodydeals:45492",
     "aniscoupons:32807",
     "pcgamingpart:7966",
-    "pcgamingpart:7968"
+    "pcgamingpart:7968",
+    "aniscoupons:32808",
+    "aniscoupons:32809"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
   "last_run_time": 1791236020.742662,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32808,
-      "last_check_time": 1791275769.539098
+      "last_message_id": 32809,
+      "last_check_time": 1791276659.0435824
     },
     "ecksdeal": {
       "last_message_id": 5867,
-      "last_check_time": 1791276335.786297
+      "last_check_time": 1791276639.5583603
     },
     "lodydeals": {
       "last_message_id": 45492,
-      "last_check_time": 1791276335.0668445
+      "last_check_time": 1791276638.8414555
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791276349.6489196
+      "last_check_time": 1791276653.1814585
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1557,15 +1559,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38549,
-      "last_check_time": 1791276335.4718847
+      "last_check_time": 1791276639.2275646
     },
     "megaphonna": {
       "last_message_id": 8273,
-      "last_check_time": 1791276350.1109574
+      "last_check_time": 1791276653.6486502
     },
     "couponsglobal": {
       "last_message_id": 48820,
-      "last_check_time": 1791276366.2932634
+      "last_check_time": 1791276659.8388302
     }
   },
   "published_product_prices": {
@@ -4551,10 +4553,10 @@
     "night_mode_enabled": true,
     "night_pause_enabled": true,
     "last_deal_post_time": 1791236022.8248365,
-    "last_sweep_time": 1791276370.5281892,
+    "last_sweep_time": 1791276664.7826242,
     "last_sweep_times": {
-      "algeria": 1791276366.299812,
-      "france": 1791276370.5281892
+      "algeria": 1791276659.8453846,
+      "france": 1791276664.7826242
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
