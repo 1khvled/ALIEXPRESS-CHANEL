@@ -1573,7 +1573,8 @@
     "lodydeals:45501",
     "megaphonna:8287",
     "lodydeals:45502",
-    "megaphonna:8286"
+    "megaphonna:8286",
+    "megaphonna:8288"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
@@ -1581,19 +1582,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32826,
-      "last_check_time": 1791316557.1245594
+      "last_check_time": 1791316840.3095462
     },
     "ecksdeal": {
       "last_message_id": 5867,
-      "last_check_time": 1791316540.4676254
+      "last_check_time": 1791316835.482311
     },
     "lodydeals": {
       "last_message_id": 45502,
-      "last_check_time": 1791316539.679253
+      "last_check_time": 1791316834.8185794
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791316541.2220879
+      "last_check_time": 1791316836.2257464
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1601,11 +1602,11 @@
     },
     "pcgamingpart": {
       "last_message_id": 7971,
-      "last_check_time": 1791316540.8238807
+      "last_check_time": 1791316835.8064022
     },
     "zedstoreonline": {
       "last_message_id": 38549,
-      "last_check_time": 1791316540.0697343
+      "last_check_time": 1791316835.1613078
     },
     "megaphonna": {
       "last_message_id": 8288,
@@ -1613,7 +1614,7 @@
     },
     "couponsglobal": {
       "last_message_id": 48824,
-      "last_check_time": 1791316557.8050334
+      "last_check_time": 1791316840.866129
     }
   },
   "published_product_prices": {
@@ -4599,10 +4600,10 @@
     "night_mode_enabled": true,
     "night_pause_enabled": true,
     "last_deal_post_time": 1791236022.8248365,
-    "last_sweep_time": 1791316566.2068174,
+    "last_sweep_time": 1791316847.9890716,
     "last_sweep_times": {
-      "algeria": 1791316557.811026,
-      "france": 1791316566.2068174
+      "algeria": 1791316840.8734093,
+      "france": 1791316847.9890716
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
