@@ -1537,27 +1537,28 @@
     "aniscoupons:32812",
     "pcgamingpart:7969",
     "megaphonna:8274",
-    "megaphonna:8275"
+    "megaphonna:8275",
+    "aniscoupons:32814"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
   "last_run_time": 1791236020.742662,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32813,
-      "last_check_time": 1791283259.9331675
+      "last_message_id": 32814,
+      "last_check_time": 1791283859.0796263
     },
     "ecksdeal": {
       "last_message_id": 5867,
-      "last_check_time": 1791283542.169859
+      "last_check_time": 1791283840.8633032
     },
     "lodydeals": {
       "last_message_id": 45495,
-      "last_check_time": 1791283541.4192927
+      "last_check_time": 1791283840.0731387
     },
     "bnddeals": {
       "last_message_id": 50814,
-      "last_check_time": 1791283542.9383621
+      "last_check_time": 1791283841.6511838
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1565,19 +1566,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7969,
-      "last_check_time": 1791283542.5531337
+      "last_check_time": 1791283841.261398
     },
     "zedstoreonline": {
       "last_message_id": 38549,
-      "last_check_time": 1791283541.8291502
+      "last_check_time": 1791283840.5033317
     },
     "megaphonna": {
       "last_message_id": 8275,
-      "last_check_time": 1791283543.362239
+      "last_check_time": 1791283842.1203413
     },
     "couponsglobal": {
       "last_message_id": 48820,
-      "last_check_time": 1791283555.864636
+      "last_check_time": 1791283860.1125433
     }
   },
   "published_product_prices": {
@@ -4563,10 +4564,10 @@
     "night_mode_enabled": true,
     "night_pause_enabled": true,
     "last_deal_post_time": 1791236022.8248365,
-    "last_sweep_time": 1791283560.572947,
+    "last_sweep_time": 1791283865.8175747,
     "last_sweep_times": {
-      "algeria": 1791283555.871013,
-      "france": 1791283560.572947
+      "algeria": 1791283860.118941,
+      "france": 1791283865.8175747
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
