@@ -1661,27 +1661,28 @@
     "aniscoupons:32849",
     "aniscoupons:32850",
     "bnddeals:50817",
-    "bnddeals:50818"
+    "bnddeals:50818",
+    "aniscoupons:32852"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
   "last_run_time": 1791236020.742662,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32851,
-      "last_check_time": 1791403248.4098365
+      "last_message_id": 32852,
+      "last_check_time": 1791403543.3670604
     },
     "ecksdeal": {
       "last_message_id": 5877,
-      "last_check_time": 1791403235.5847855
+      "last_check_time": 1791403529.960605
     },
     "lodydeals": {
       "last_message_id": 45513,
-      "last_check_time": 1791403234.8288875
+      "last_check_time": 1791403529.2978942
     },
     "bnddeals": {
       "last_message_id": 50818,
-      "last_check_time": 1791403236.3670206
+      "last_check_time": 1791403530.6324418
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1689,15 +1690,15 @@
     },
     "pcgamingpart": {
       "last_message_id": 7974,
-      "last_check_time": 1791403235.9755743
+      "last_check_time": 1791403530.306867
     },
     "zedstoreonline": {
       "last_message_id": 38560,
-      "last_check_time": 1791403235.2277727
+      "last_check_time": 1791403529.6098063
     },
     "megaphonna": {
       "last_message_id": 8307,
-      "last_check_time": 1791403236.779582
+      "last_check_time": 1791403530.9870927
     },
     "couponsglobal": {
       "last_message_id": 48831,
@@ -4687,10 +4688,10 @@
     "night_mode_enabled": true,
     "night_pause_enabled": true,
     "last_deal_post_time": 1791236022.8248365,
-    "last_sweep_time": 1791403269.9111605,
+    "last_sweep_time": 1791403564.2642999,
     "last_sweep_times": {
-      "algeria": 1791403261.4267795,
-      "france": 1791403269.9111605
+      "algeria": 1791403556.6446903,
+      "france": 1791403564.2642999
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
