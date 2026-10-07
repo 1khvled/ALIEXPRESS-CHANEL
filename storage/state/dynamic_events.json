@@ -74,6 +74,34 @@
       {
         "tier": "12",
         "code": "TURBO"
+      },
+      {
+        "tier": "2/15$",
+        "code": "OTPRD02"
+      },
+      {
+        "tier": "4/30$",
+        "code": "OTPRD04"
+      },
+      {
+        "tier": "8/65$",
+        "code": "OTPRD08"
+      },
+      {
+        "tier": "15/119$",
+        "code": "OTPRD15"
+      },
+      {
+        "tier": "28/229$",
+        "code": "OTPRD28"
+      },
+      {
+        "tier": "42/339$",
+        "code": "OTPRD42"
+      },
+      {
+        "tier": "55/449$",
+        "code": "OTPRD55"
       }
     ],
     "coupon_tiers_fr": [],
