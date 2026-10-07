@@ -1599,27 +1599,29 @@
     "aniscoupons:32832",
     "megaphonna:8299",
     "megaphonna:8300",
-    "aniscoupons:32837"
+    "aniscoupons:32837",
+    "aniscoupons:32835",
+    "aniscoupons:32838"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
   "last_run_time": 1791236020.742662,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32837,
-      "last_check_time": 1791369702.4325435
+      "last_message_id": 32838,
+      "last_check_time": 1791370001.7834926
     },
     "ecksdeal": {
       "last_message_id": 5871,
       "last_check_time": 1791366367.944037
     },
     "lodydeals": {
-      "last_message_id": 45503,
-      "last_check_time": 1791369625.9190683
+      "last_message_id": 45504,
+      "last_check_time": 1791369939.8392308
     },
     "bnddeals": {
       "last_message_id": 50816,
-      "last_check_time": 1791369639.658856
+      "last_check_time": 1791369951.4822853
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1627,11 +1629,11 @@
     },
     "pcgamingpart": {
       "last_message_id": 7972,
-      "last_check_time": 1791369639.33626
+      "last_check_time": 1791369951.1441116
     },
     "zedstoreonline": {
       "last_message_id": 38549,
-      "last_check_time": 1791369626.2815278
+      "last_check_time": 1791369940.3678417
     },
     "megaphonna": {
       "last_message_id": 8300,
@@ -1639,7 +1641,7 @@
     },
     "couponsglobal": {
       "last_message_id": 48824,
-      "last_check_time": 1791369703.1935344
+      "last_check_time": 1791370002.4954443
     }
   },
   "published_product_prices": {
@@ -4625,10 +4627,10 @@
     "night_mode_enabled": true,
     "night_pause_enabled": true,
     "last_deal_post_time": 1791236022.8248365,
-    "last_sweep_time": 1791369708.843128,
+    "last_sweep_time": 1791370008.1826725,
     "last_sweep_times": {
-      "algeria": 1791369703.1997516,
-      "france": 1791369708.843128
+      "algeria": 1791370002.502084,
+      "france": 1791370008.1826725
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
