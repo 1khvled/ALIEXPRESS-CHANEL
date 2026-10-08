@@ -169,6 +169,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
         get_monitored_channel_last_id,
         record_monitored_channel_last_id,
         is_post_already_published,
+        is_post_handled,
         record_post_published,
         record_post_handled,
         is_recent_cross_channel_duplicate,
@@ -229,7 +230,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     lookback_cutoff = max(0, last_seen_id - 20)
                     new_blocks = [
                         (b_id, b) for b_id, b in block_items
-                        if (b_id > last_seen_id or (b_id >= lookback_cutoff and not is_post_already_published(ch, b_id)) or f"{ch.lower()}:{b_id}" in needs_repost_keys)
+                        if (b_id > last_seen_id or (b_id >= lookback_cutoff and not is_post_already_published(ch, b_id) and not is_post_handled(ch, b_id)) or f"{ch.lower()}:{b_id}" in needs_repost_keys)
                         and not is_post_already_published(ch, b_id)
                     ]
                     new_blocks.sort(key=lambda x: x[0])

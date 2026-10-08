@@ -82,6 +82,12 @@ def is_post_already_published(channel_username: str, message_id: int) -> bool:
     seen_posts = state.get("published_post_keys", [])
     return post_key in seen_posts
 
+def is_post_handled(channel_username: str, message_id: int) -> bool:
+    """Checks whether a source post was marked as handled/skipped."""
+    state = load_persistent_state()
+    post_key = get_post_key(channel_username, message_id)
+    return post_key in state.get("handled_post_keys", [])
+
 def record_post_handled(channel_username: str, message_id: int):
     """
     Marks a source post ID as handled (e.g. skipped due to duplicate, spam, or category filter)
@@ -89,12 +95,12 @@ def record_post_handled(channel_username: str, message_id: int):
     """
     state = load_persistent_state()
     post_key = get_post_key(channel_username, message_id)
-    if "published_post_keys" not in state:
-        state["published_post_keys"] = []
-    if post_key not in state["published_post_keys"]:
-        state["published_post_keys"].append(post_key)
-        if len(state["published_post_keys"]) > 1000:
-            state["published_post_keys"] = state["published_post_keys"][-1000:]
+    if "handled_post_keys" not in state:
+        state["handled_post_keys"] = []
+    if post_key not in state["handled_post_keys"]:
+        state["handled_post_keys"].append(post_key)
+        if len(state["handled_post_keys"]) > 1000:
+            state["handled_post_keys"] = state["handled_post_keys"][-1000:]
         save_persistent_state(state)
 
 def record_post_published(
