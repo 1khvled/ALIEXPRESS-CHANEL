@@ -32,63 +32,54 @@ if not os.path.exists(LOCAL_CALENDAR_PATH):
 CALENDAR_BANNER_IMG = "https://ae-pic-a1.aliexpress-media.com/kf/HTB18eCBQXXXXXXfXXXX760XFXXXa.png"
 
 def build_promo_calendar_post(now: Optional[datetime] = None) -> Tuple[str, Dict[str, Any]]:
-    """Builds the comprehensive, high-converting Sales Calendar post."""
+    """Builds a clean, high-impact monthly sales calendar post under 500 chars (fits Telegram photo captions)."""
     if now is None:
         now = datetime.now(timezone.utc)
 
-    active = promo_tracker.get_active_promo(now)
-    next_promo = promo_tracker.get_next_promo(now)
+    arabic_months = {
+        1: "جانفي", 2: "فيفري", 3: "مارس", 4: "أفريل", 5: "ماي", 6: "جوان",
+        7: "جويلية", 8: "أوت", 9: "سبتمبر", 10: "أكتوبر", 11: "نوفمبر", 12: "ديسمبر"
+    }
+    month_name = arabic_months.get(now.month, "")
+    year_str = str(now.year)
 
     lines = [
-        "📅 <b>رزنامة تخفيضات ومهرجانات AliExpress الرسمية لعام 2026 🔥</b>",
-        "━━━━━━━━━━━━━━━━━"
+        f"<blockquote>📅 <b>رزنامة تخفيضات علي اكسبرس شهر {month_name} {year_str} 🔥</b></blockquote>",
+        ""
     ]
 
-    if active:
-        end_s = active.end_date.strftime("%d/%m/%Y")
-        lines.append("🔥 <b>الحدث الحالي الشغال الآن:</b>")
-        lines.append(f"▫️ <b>{active.name_ar}</b>")
-        lines.append(f"⏳ مستمر إلى غاية: <b>{end_s}</b>\n")
+    # Filter events for current month
+    month_events = []
+    for p in promo_tracker.calendar:
+        if (p.start_date.year == now.year and p.start_date.month == now.month) or \
+           (p.end_date.year == now.year and p.end_date.month == now.month):
+            if p not in month_events:
+                month_events.append(p)
 
-    lines.append("⏳ <b>المواعيد والمهرجانات القادمة:</b>")
-
-    upcoming = [p for p in promo_tracker.calendar if p.end_date > now]
-    for p in upcoming:
-        s_str = p.start_date.strftime("%d/%m")
-        e_str = p.end_date.strftime("%d/%m/%Y")
-        days_left = (p.start_date - now).days
-
-        if p.start_date <= now <= p.end_date:
-            tag = "🟢 شغال الآن"
-        elif days_left <= 0:
-            tag = "⚡ ينطلق اليوم!"
-        elif days_left == 1:
-            tag = "⏳ غداً ينطلق!"
+    for p in month_events:
+        s_day = p.start_date.day
+        e_day = p.end_date.day
+        if p.end_date < now:
+            status = "(انتهت)"
+        elif p.start_date <= now <= p.end_date:
+            status = "(شغالة الآن 🟢)"
+        elif (p.start_date - now).total_seconds() <= 86400:
+            status = "(تنطلق غداً ⏳)"
         else:
-            tag = f"بعد {days_left} يوم"
+            days = (p.start_date - now).days
+            status = f"(بعد {days} أيام)"
 
-        lines.append(f"▫️ <b>{p.name_ar}</b>")
-        lines.append(f"   🗓 من {s_str} إلى {e_str} ({tag})")
+        lines.append(f"✅ <b>من {s_day} إلى {e_day} {month_name} :</b> {p.name} {status}")
 
-    lines.append("━━━━━━━━━━━━━━━━━")
-    lines.append("💡 <i>نصيحة: احرص على جمع العملات يومياً في التطبيق واستغلال الكوبونات للحصول على أكبر نسبة خصم!</i>")
     lines.append("")
-    lines.append("🪙 استخدم بوت DealScoutDz للحصول على تخفيض العملات: @Alilo07BOT")
+    lines.append("🔥 <b>إجمع العملات التي تحتاجها في العروض من هنا :</b>")
+    lines.append("👉 https://s.click.aliexpress.com/e/_c4l391NX")
+    lines.append("")
+    lines.append("🤖 <b>البوت لتخفيض الأسعار :</b> @Alilo07BOT")
+    lines.append("📢 <b>قناة الصفقات المعتمدة :</b> @DzAliexpress0")
 
     caption = "\n".join(lines)
-
-    reply_markup = {
-        "inline_keyboard": [
-            [
-                {"text": "🪙 فتح بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"}
-            ],
-            [
-                {"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}
-            ]
-        ]
-    }
-
-    return caption, reply_markup
+    return caption, {}
 
 def build_next_sale_transition_post(ended_promo: PromoEvent, next_promo: PromoEvent, now: Optional[datetime] = None) -> Tuple[str, Dict[str, Any]]:
     """Builds the transition announcement post when one promo ends and the next approaches."""
