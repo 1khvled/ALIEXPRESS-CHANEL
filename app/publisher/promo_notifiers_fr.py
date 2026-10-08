@@ -59,40 +59,48 @@ def build_france_promo_starting_alert(promo: PromoEvent, start_hour_paris: str =
     Builds authentic French warm-up / coupon announcement alert for @francedealsdz.
     Includes booking tutorial with eligible high-value product to bind codes.
     """
-    coupons = promo.coupon_tiers_fr if promo.coupon_tiers_fr else [
-        {"tier": "-2€ dès 18€", "code": "FRPRD02"},
-        {"tier": "-6€ dès 45€", "code": "FRPRD06"},
-        {"tier": "-12€ dès 89€", "code": "FRPRD12"},
-        {"tier": "-20€ dès 159€", "code": "FRPRD20"},
-        {"tier": "-30€ dès 239€", "code": "FRPRD30"},
-        {"tier": "-45€ dès 355€", "code": "FRPRD45"},
-        {"tier": "-60€ dès 475€", "code": "FRPRD60"}
-    ]
+    coupons = promo.coupon_tiers_fr if promo.coupon_tiers_fr else []
     coupon_lines = []
     for c in coupons:
         t = c.get("tier", "").strip()
         code = c.get("code", "").strip()
-        coupon_lines.append(f"🎟️ <b>Code {t} :</b> <code>{code}</code>")
+        if t and code:
+            coupon_lines.append(f"🎟️ <b>Code {t} :</b> <code>{code}</code>")
 
-    lines = [
-        f"🚨 <b>CODES PROMO | {promo.name_fr or promo.name} ! 🇫🇷</b>",
-        f"Du <b>{promo.start_date.strftime('%d')} au {promo.end_date.strftime('%d %B %Y')}</b> 🛍️",
-        f"⏰ Actifs dès demain à <b>{start_hour_paris} (Paris) / 08h00 (DZ)</b>",
-        "",
-        *coupon_lines,
-        "",
-        "💳 <b>Astuce PayPal :</b> Jusqu'à <b>-33€ supplémentaires</b> au paiement !",
-        "",
-        "⭕️ <b>Tutoriel : Verrouiller tous les codes sur votre compte :</b>",
-        "⚠️ <b>Commencez par les gros codes (-60€, -45€...)</b> puis appliquez les suivants pour les lier à votre compte avant rupture de stock !",
-        "",
-        "🔹 <b>Appliquez tous les codes sur ce produit (tous les seuils passent) ⤵️</b>",
-        "https://s.click.aliexpress.com/e/_c2QPADRL",
-        "",
-        "🪙 Bot réduction pièces : @Alilo07BOT",
-        "━━━━━━━━━━━━━━━━━",
-        "📢 <b>Canal :</b> @francedealsdz"
-    ]
+    if coupon_lines:
+        lines = [
+            f"🚨 <b>CODES PROMO | {promo.name_fr or promo.name} ! 🇫🇷</b>",
+            f"Du <b>{promo.start_date.strftime('%d')} au {promo.end_date.strftime('%d %B %Y')}</b> 🛍️",
+            f"⏰ Actifs dès demain à <b>{start_hour_paris} (Paris) / 08h00 (DZ)</b>",
+            "",
+            *coupon_lines,
+            "",
+            "💳 <b>Astuce PayPal :</b> Jusqu'à <b>-33€ supplémentaires</b> au paiement !",
+            "",
+            "⭕️ <b>Tutoriel : Verrouiller tous les codes sur votre compte :</b>",
+            "⚠️ <b>Commencez par les gros codes (-60€, -45€...)</b> puis appliquez les suivants pour les lier à votre compte avant rupture de stock !",
+            "",
+            "🔹 <b>Appliquez tous les codes sur ce produit (tous les seuils passent) ⤵️</b>",
+            "https://s.click.aliexpress.com/e/_c2QPADRL",
+            "",
+            "🪙 Bot réduction pièces : @Alilo07BOT",
+            "━━━━━━━━━━━━━━━━━",
+            "📢 <b>Canal :</b> @francedealsdz"
+        ]
+    else:
+        lines = [
+            f"🚨 <b>PROCHAINEMENT | {promo.name_fr or promo.name} ! 🇫🇷</b>",
+            f"Du <b>{promo.start_date.strftime('%d')} au {promo.end_date.strftime('%d %B %Y')}</b> 🛍️",
+            f"⏰ Lancement prévu dès demain à <b>{start_hour_paris} (Paris) / 08h00 (DZ)</b>",
+            "",
+            "💡 <b>Offres & Réductions :</b>",
+            "Remises immédiates avec pièces AliExpress 🪙 et coupons vendeurs dédiés !",
+            "Activez vos pièces et préparez vos paniers dès aujourd'hui.",
+            "",
+            "🪙 Bot réduction pièces : @Alilo07BOT",
+            "━━━━━━━━━━━━━━━━━",
+            "📢 <b>Canal :</b> @francedealsdz"
+        ]
 
     text = "\n".join(lines)
     reply_markup = {}
@@ -100,24 +108,45 @@ def build_france_promo_starting_alert(promo: PromoEvent, start_hour_paris: str =
 
 def build_france_promo_launch_alert(promo: PromoEvent, start_hour_paris: str = "09:00") -> Tuple[str, Dict[str, Any]]:
     """Builds the launch alert when promo officially starts for France shoppers."""
-    coupons = promo.coupon_tiers_fr if promo.coupon_tiers_fr else [
-        {"tier": "-2€ dès 18€", "code": "FRPRD02"},
-        {"tier": "-6€ dès 45€", "code": "FRPRD06"},
-        {"tier": "-12€ dès 89€", "code": "FRPRD12"},
-        {"tier": "-20€ dès 159€", "code": "FRPRD20"},
-        {"tier": "-30€ dès 239€", "code": "FRPRD30"},
-        {"tier": "-45€ dès 355€", "code": "FRPRD45"},
-        {"tier": "-60€ dès 475€", "code": "FRPRD60"}
-    ]
+    coupons = promo.coupon_tiers_fr if promo.coupon_tiers_fr else []
     coupon_lines = []
     for c in coupons:
         t = c.get("tier", "").strip()
         code = c.get("code", "").strip()
-        coupon_lines.append(f"🎟️ <b>Code {t} :</b> <code>{code}</code>")
+        if t and code:
+            coupon_lines.append(f"🎟️ <b>Code {t} :</b> <code>{code}</code>")
 
-    lines = [
-        f"🚀 <b>C'EST PARTI ! Lancement officiel : {promo.name_fr or promo.name} ! 🇫🇷🛍️</b>",
-        f"⏰ <b>Les codes promo viennent d'être activés dès maintenant ({start_hour_paris}) :</b>",
+    if coupon_lines:
+        lines = [
+            f"🚀 <b>C'EST PARTI ! Lancement officiel : {promo.name_fr or promo.name} ! 🇫🇷🛍️</b>",
+            f"⏰ <b>Les codes promo viennent d'être activés dès maintenant ({start_hour_paris}) :</b>",
+            "Appliquez-les immédiatement sur vos commandes avant épuisement des quotas !",
+            "",
+            *coupon_lines,
+            "",
+            "💳 <b>Rappel PayPal :</b> Réduction immédiate supplémentaire possible au paiement !",
+            "",
+            "🔹 <b>Lien rapide vers l'événement ⤵️</b>",
+            "https://s.click.aliexpress.com/e/_c2QPADRL",
+            "",
+            "🪙 Bot réduction pièces : @Alilo07BOT",
+            "━━━━━━━━━━━━━━━━━",
+            "📢 <b>Canal :</b> @francedealsdz"
+        ]
+    else:
+        lines = [
+            f"🚀 <b>C'EST PARTI ! Lancement officiel : {promo.name_fr or promo.name} ! 🇫🇷🛍️</b>",
+            f"⏰ <b>Les offres sont actives dès maintenant ({start_hour_paris}) :</b>",
+            "Profitez des remises pièces et des coupons vendeurs disponibles sur les sélections !",
+            "",
+            "🔹 <b>Lien rapide vers l'événement ⤵️</b>",
+            "https://s.click.aliexpress.com/e/_c2QPADRL",
+            "",
+            "🪙 Bot réduction pièces : @Alilo07BOT",
+            "━━━━━━━━━━━━━━━━━",
+            "📢 <b>Canal :</b> @francedealsdz"
+        ]
+    return "\n".join(lines), {}
         "",
         *coupon_lines,
         "",
@@ -178,25 +207,18 @@ async def send_france_promo_alert(
         return False, "TELEGRAM_BOT_TOKEN missing", None
 
     api_url = f"https://api.telegram.org/bot{bot_token}"
-    coupons_fr = coupon_list if coupon_list else [
-        {"tier": "-2€ dès 18€", "code": "FRPRD02"},
-        {"tier": "-6€ dès 45€", "code": "FRPRD06"},
-        {"tier": "-12€ dès 89€", "code": "FRPRD12"},
-        {"tier": "-20€ dès 159€", "code": "FRPRD20"},
-        {"tier": "-30€ dès 239€", "code": "FRPRD30"},
-        {"tier": "-45€ dès 355€", "code": "FRPRD45"},
-        {"tier": "-60€ dès 475€", "code": "FRPRD60"}
-    ]
-    card_path = media_renderer.render_coupon_bulletin_card(
-        coupons_fr,
-        promo_title=promo_title,
-        channel_handle="@francedealsdz",
-        is_french=True
-    )
+    card_path = None
+    if coupon_list:
+        card_path = media_renderer.render_coupon_bulletin_card(
+            coupon_list,
+            promo_title=promo_title,
+            channel_handle="@francedealsdz",
+            is_french=True
+        )
 
     try:
         async with httpx.AsyncClient(timeout=25.0) as client:
-            if os.path.exists(card_path) and len(text) <= 1024:
+            if card_path and os.path.exists(card_path) and len(text) <= 1024:
                 with open(card_path, "rb") as pf:
                     resp = await client.post(
                         f"{api_url}/sendPhoto",

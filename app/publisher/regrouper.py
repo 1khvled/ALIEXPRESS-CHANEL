@@ -391,6 +391,16 @@ def get_recent_published_deals_for_roundup(max_age_hours: float = 24.0) -> List[
         title = clean_item_title(raw_title)
         price = float(info.get("price") or 0.0)
         category = classify_deal_category(raw_title)
+
+        # Recover actual price from post text if stored price was a placeholder ($1 or $0.99)
+        if price <= 1.5:
+            text_source = info.get("text") or info.get("raw_text") or ""
+            m_price = re.search(r'(?:السعر|price)\s*[:=]\s*[$€£]?\s*([0-9]+(?:\.[0-9]+)?)', text_source, re.IGNORECASE)
+            if m_price:
+                found_price = float(m_price.group(1))
+                if found_price > 1.5:
+                    price = found_price
+
         product_id = info.get("product_id")
 
         deal_entry = {
@@ -467,16 +477,18 @@ def group_items_by_brand(items: List[Dict[str, Any]]) -> Dict[str, List[Dict[str
         brand_groups[brand].append(item)
     return brand_groups
 
-def format_deal_line(item: Dict[str, Any], channel_username: str, index: int = 1) -> str:
-    """Formats a single product line matching the sleek Megaprix index style: ⭐️ <link><b>Model</b></link> ⤵️ Price 💲"""
     title = clean_product_name_short(item.get("title") or "منتج مميز")
     price_val = float(item.get("price") or 0.0)
+    cat = item.get("category") or ""
 
-    if price_val > 0:
+    # Never display buggy 1$ placeholder on expensive tech/electronics
+    if price_val > 1.5:
         if price_val.is_integer():
             price_str = f"{int(price_val)}"
         else:
             price_str = f"{price_val:g}"
+    elif price_val > 0 and cat in ["chargers_cables", "gaming_pads"]:
+        price_str = f"{price_val:g}"
     else:
         price_str = "سعر خاص 🔥"
 

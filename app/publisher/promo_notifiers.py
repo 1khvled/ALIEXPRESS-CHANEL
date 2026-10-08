@@ -69,39 +69,50 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
     - Explains coupon booking / saving tutorial using high-value phone link
     - Sets 08:00 AM booking alert
     """
-    coupons = promo.coupon_tiers if promo.coupon_tiers else [
-        {"tier": "2/15$", "code": "OTPRD02"},
-        {"tier": "4/30$", "code": "OTPRD04"},
-        {"tier": "8/65$", "code": "OTPRD08"},
-        {"tier": "15/119$", "code": "OTPRD15"},
-        {"tier": "29/229$", "code": "OTPRD28"},
-        {"tier": "42/339$", "code": "OTPRD42"},
-        {"tier": "55/449$", "code": "OTPRD55"}
-    ]
+    coupons = promo.coupon_tiers if promo.coupon_tiers else []
     coupon_lines = []
     for c in coupons:
         t = c.get("tier", "").strip()
         code = c.get("code", "").strip()
-        coupon_lines.append(f"🎟️ <b>كوبون {t} :</b> <code>{code}</code>")
+        if t and code:
+            coupon_lines.append(f"🎟️ <b>كوبون {t} :</b> <code>{code}</code>")
 
-    lines = [
-        f"🚨 <b>كوبونات حدث {promo.name_ar}!</b> 🛍️",
-        f"تنطلق غداً <b>{promo.start_date.strftime('%d/%m')} وتستمر إلى غاية {promo.end_date.strftime('%d/%m/%Y')}</b> 🗓️",
-        "",
-        *coupon_lines,
-        "",
-        f"⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك (طبقوها غداً على {start_hour_str} صباحاً 🔥👌🏽):</b>",
-        "⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ($55 ثم $42...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅",
-        "",
-        "🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب (كل الكوبونات مقبولة عليه) ⤵️</b>",
-        "https://s.click.aliexpress.com/e/_c3d8Osgp",
-        "",
-        "لا تنسى استخدام البوت للشراء بأقل الأسعار ومضاعفة خصم العملات :",
-        "👉 t.me/Alilo07BOT",
-        "━━━━━━━━━━━━━━━━━",
-        "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0",
-        "🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس #ChoiceDay</i>"
-    ]
+    if coupon_lines:
+        lines = [
+            f"🚨 <b>كوبونات حدث {promo.name_ar}!</b> 🛍️",
+            f"تنطلق غداً <b>{promo.start_date.strftime('%d/%m')} وتستمر إلى غاية {promo.end_date.strftime('%d/%m/%Y')}</b> 🗓️",
+            "",
+            *coupon_lines,
+            "",
+            f"⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك (طبقوها غداً على {start_hour_str} صباحاً 🔥👌🏽):</b>",
+            "⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ($55 ثم $42...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅",
+            "",
+            "🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب ⤵️</b>",
+            "https://s.click.aliexpress.com/e/_c3d8Osgp",
+            "",
+            "لا تنسى استخدام البوت للشراء بأقل الأسعار ومضاعفة خصم العملات :",
+            "👉 t.me/Alilo07BOT",
+            "━━━━━━━━━━━━━━━━━",
+            "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0",
+            "🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس</i>"
+        ]
+    else:
+        lines = [
+            f"🚨 <b>اقتراب انطلاق فعاليات {promo.name_ar}!</b> 🛍️",
+            f"الموعد: من <b>{promo.start_date.strftime('%d/%m')} إلى {promo.end_date.strftime('%d/%m/%Y')}</b> 🗓️",
+            "",
+            "💡 <b>تفاصيل التخفيض:</b>",
+            "الحدث يعتمد على <b>تخفيضات العملات المضاعفة 🪙</b> وقسائم المتاجر الحصرية (Store Coupons).",
+            "احرصوا على جمع العملات يومياً في التطبيق لتكونوا جاهزين لأفضل الصيدات!",
+            "",
+            "🔥 <b>إجمع العملات من هنا ⤵️</b>",
+            "👉 https://s.click.aliexpress.com/e/_c4l391NX",
+            "",
+            "لا تنسى استخدام البوت للشراء بأقل الأسعار ومضاعفة الخصم :",
+            "👉 t.me/Alilo07BOT",
+            "━━━━━━━━━━━━━━━━━",
+            "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0"
+        ]
 
     text = "\n".join(lines)
     reply_markup = {}
@@ -110,38 +121,45 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
 
 def build_promo_launch_alert(promo: PromoEvent, start_hour_str: str = "08:00") -> Tuple[str, Dict[str, Any]]:
     """Builds the launch alert when promo officially starts at 08:00 AM Algerian Time."""
-    coupons = promo.coupon_tiers if promo.coupon_tiers else [
-        {"tier": "2/15$", "code": "OTPRD02"},
-        {"tier": "4/30$", "code": "OTPRD04"},
-        {"tier": "8/65$", "code": "OTPRD08"},
-        {"tier": "15/119$", "code": "OTPRD15"},
-        {"tier": "29/229$", "code": "OTPRD28"},
-        {"tier": "42/339$", "code": "OTPRD42"},
-        {"tier": "55/449$", "code": "OTPRD55"}
-    ]
+    coupons = promo.coupon_tiers if promo.coupon_tiers else []
     coupon_lines = []
     for c in coupons:
         t = c.get("tier", "").strip()
         code = c.get("code", "").strip()
-        coupon_lines.append(f"🎟️ <b>كوبون {t} :</b> <code>{code}</code>")
+        if t and code:
+            coupon_lines.append(f"🎟️ <b>كوبون {t} :</b> <code>{code}</code>")
 
-    lines = [
-        f"🚀 <b>انطلاق تخفيضات {promo.name_ar} رسمياً الآن! 🛍️🔥</b>",
-        f"⏰ <b>الكوبونات اشتغلت وبدأت بالعمل في هذه اللحظات ({start_hour_str} صباحاً بتوقيت الجزائر 🇩🇿):</b>",
-        "سارعوا بحجزها وتطبيقها فوراً في حساباتكم قبل نفاد الكميات المحدودة! 🏃💨",
-        "",
-        *coupon_lines,
-        "",
-        f"⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك الآن 🔥👌🏽:</b>",
-        "⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ($55 ثم $42...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅",
-        "",
-        "🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب (كل الكوبونات مقبولة عليه) ⤵️</b>",
-        "https://s.click.aliexpress.com/e/_c3d8Osgp",
-        "",
-        "😊 <b>بوت مطور لشراء بأفضل سعر وتتبع الطرود :</b>",
-        "👉 t.me/Alilo07BOT",
-        "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0"
-    ]
+    if coupon_lines:
+        lines = [
+            f"🚀 <b>انطلاق تخفيضات {promo.name_ar} رسمياً الآن! 🛍️🔥</b>",
+            f"⏰ <b>الكوبونات اشتغلت وبدأت بالعمل في هذه اللحظات ({start_hour_str} صباحاً بتوقيت الجزائر 🇩🇿):</b>",
+            "سارعوا بحجزها وتطبيقها فوراً في حساباتكم قبل نفاد الكميات المحدودة! 🏃💨",
+            "",
+            *coupon_lines,
+            "",
+            f"⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك الآن 🔥👌🏽:</b>",
+            "⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ($55 ثم $42...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅",
+            "",
+            "🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب ⤵️</b>",
+            "https://s.click.aliexpress.com/e/_c3d8Osgp",
+            "",
+            "😊 <b>بوت مطور لشراء بأفضل سعر وتتبع الطرود :</b>",
+            "👉 t.me/Alilo07BOT",
+            "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0"
+        ]
+    else:
+        lines = [
+            f"🚀 <b>انطلاق فعاليات {promo.name_ar} رسمياً الآن! 🛍️🔥</b>",
+            f"⏰ <b>بدأت التخفيضات في هذه اللحظات ({start_hour_str} صباحاً بتوقيت الجزائر 🇩🇿):</b>",
+            "استغلوا تخفيضات العملات المباشرة وقسائم المتاجر الحصرية على أفضل المنتجات! 🏃💨",
+            "",
+            "🔥 <b>رابط تفعيل وجمع العملات ⤵️</b>",
+            "👉 https://s.click.aliexpress.com/e/_c4l391NX",
+            "",
+            "😊 <b>بوت مطور للشراء بأفضل سعر :</b>",
+            "👉 t.me/Alilo07BOT",
+            "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0"
+        ]
     return "\n".join(lines), {}
 
 
@@ -176,25 +194,22 @@ async def send_promo_alert_to_channel(
     target = channel_id or TARGET_CHANNEL_ID
 
     api_url = f"https://api.telegram.org/bot{token}"
-    coupons_dz = coupon_list if coupon_list else [
-        {"tier": "2/15$", "code": "OTPRD02"},
-        {"tier": "4/30$", "code": "OTPRD04"},
-        {"tier": "8/65$", "code": "OTPRD08"},
-        {"tier": "15/119$", "code": "OTPRD15"},
-        {"tier": "29/229$", "code": "OTPRD28"},
-        {"tier": "42/339$", "code": "OTPRD42"},
-        {"tier": "55/449$", "code": "OTPRD55"}
-    ]
-    card_path = media_renderer.render_coupon_bulletin_card(
-        coupons_dz,
-        promo_title=promo_title,
-        channel_handle="@DzAliexpress0",
-        is_french=False
-    )
+    card_path = None
+    if coupon_list:
+        card_path = media_renderer.render_coupon_bulletin_card(
+            coupon_list,
+            promo_title=promo_title,
+            channel_handle="@DzAliexpress0",
+            is_french=False
+        )
+    if not card_path or not os.path.exists(card_path):
+        banner_candidate = os.path.join(os.path.dirname(__file__), "..", "assets", "official_calendar_october_2026.jpg")
+        if os.path.exists(banner_candidate):
+            card_path = banner_candidate
 
     try:
         async with httpx.AsyncClient(timeout=25.0) as client:
-            if os.path.exists(card_path) and len(text) <= 1024:
+            if card_path and os.path.exists(card_path) and len(text) <= 1024:
                 with open(card_path, "rb") as pf:
                     resp = await client.post(
                         f"{api_url}/sendPhoto",
