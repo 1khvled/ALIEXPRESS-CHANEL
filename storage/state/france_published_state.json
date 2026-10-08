@@ -1,45 +1,45 @@
 {
   "published_post_keys": [
-    "francecp:413",
-    "francecp:421",
-    "francecp:427",
-    "promozonefr:238",
+    "francecp:432",
+    "francecp:417",
     "francecp:431",
-    "promozonefr:242",
-    "alifrdrop:103",
-    "alifrdrop:106",
-    "promozonefr:237",
     "francecp:414",
     "francecp:433",
-    "promozonefr:239",
-    "francecp:422",
-    "francecp:415",
-    "promozonefr:240",
-    "francecp:425",
-    "francecp:424",
-    "promozonefr:236",
-    "francecp:430",
-    "alifrdrop:102",
-    "francecp:416",
-    "francecp:417",
-    "francecp:420",
-    "francecp:418",
     "francecp:426",
-    "francecp:423",
-    "francecp:432",
-    "promozonefr:241",
-    "francecp:419",
+    "francecp:430",
+    "francecp:415",
     "francecp:428",
-    "alifrdrop:104",
     "francecp:434",
+    "promozonefr:242",
+    "francecp:424",
+    "promozonefr:238",
+    "promozonefr:241",
+    "promozonefr:239",
+    "alifrdrop:104",
+    "alifrdrop:103",
+    "francecp:420",
+    "alifrdrop:102",
+    "promozonefr:236",
+    "francecp:418",
+    "francecp:423",
+    "francecp:416",
+    "francecp:413",
+    "alifrdrop:105",
+    "francecp:419",
+    "francecp:425",
+    "promozonefr:240",
+    "francecp:421",
+    "alifrdrop:106",
+    "francecp:427",
+    "francecp:422",
     "francecp:429",
-    "alifrdrop:105"
+    "promozonefr:237"
   ],
   "published_product_ids": [
     "1005012155835323",
-    "1005012541048117",
     "1005012218291528",
     "1005009977303549",
+    "1005012541048117",
     "1005012589045044"
   ],
   "published_deals_history": {
@@ -81,43 +81,43 @@
     },
     "1005010356100546": {
       "timestamp": 1791150053.377133,
-      "title": "HONOR Pad X8a – 11\" | 85,27",
+      "title": "HONOR Pad X8a â€“ 11\" | 85,27",
       "price_eur": 85.27,
       "channel_msg_id": 152
     },
     "1005012939973284": {
       "timestamp": 1791152157.555066,
-      "title": "🟢 HONOR X8d 4G AMOLED 7000 MAh",
+      "title": "ðŸŸ¢ HONOR X8d 4G AMOLED 7000 MAh",
       "price_eur": 175.16,
       "channel_msg_id": 153
     },
     "1005012325972220": {
       "timestamp": 1791152455.260763,
-      "title": "🟢  HONOR Magic8 Lite 7500 MAh Amoled",
+      "title": "ðŸŸ¢  HONOR Magic8 Lite 7500 MAh Amoled",
       "price_eur": 224.67,
       "channel_msg_id": 154
     },
     "1005012918284558": {
       "timestamp": 1791152460.229622,
-      "title": "🟢  OPPO Reno15 FS 5G 8 Go + 512 Go",
+      "title": "ðŸŸ¢  OPPO Reno15 FS 5G 8 Go + 512 Go",
       "price_eur": 258.52,
       "channel_msg_id": 155
     },
     "1005012032644623": {
       "timestamp": 1791152752.463778,
-      "title": "🟢  SOYO NVIDIA GeForce RTX 3070 8 Go GDDR6",
+      "title": "ðŸŸ¢  SOYO NVIDIA GeForce RTX 3070 8 Go GDDR6",
       "price_eur": 267.47,
       "channel_msg_id": 156
     },
     "1005012697366392": {
       "timestamp": 1791163250.215242,
-      "title": "Nubia pro  8/256GB",
+      "title": "Nubia proÂ  8/256GB",
       "price_eur": 250.0,
       "channel_msg_id": 162
     },
     "1005012948582447": {
       "timestamp": 1791163550.23111,
-      "title": "REALME 14T 5G  8/256GB",
+      "title": "REALME 14T 5GÂ  8/256GB",
       "price_eur": 145.0,
       "channel_msg_id": 163
     }
@@ -136,10 +136,11 @@
       "last_check_time": 1791162967.2944324
     }
   },
-  "last_run_time": 1791481192.689234,
+  "last_run_time": 1791481199.58783,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001",
-    "FR_LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004"
+    "FR_LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
+    "FR_START_ALERT_Brand Day Sale_20261009"
   ],
   "last_deal_post_time": 1791163552.2337444,
   "daily_roundup_history": {
@@ -159,7 +160,8 @@
     }
   },
   "pinned_promo_events": {
-    "FR_Party Ready Sale / Choice Day_20261001": 147
+    "FR_Party Ready Sale / Choice Day_20261001": 147,
+    "FR_AliExpress Special Promo Octobre 2026_20261006": 166
   },
   "last_card_affiliate_time_fr": 1791162951.1813257,
   "card_affiliate_variant_idx_fr": 1

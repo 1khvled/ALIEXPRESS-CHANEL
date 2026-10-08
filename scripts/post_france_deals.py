@@ -543,10 +543,11 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                 print(f"  [FIRST RUN BASELINE] @{ch} baseline set to #{current_max_id}. Evaluating {len(new_blocks)} most recent candidate(s).")
             else:
                 # Filter for posts strictly newer than last_seen_id OR unposted recent candidates
+                handled_keys = set(state.get("handled_post_keys", []))
                 lookback_cutoff = max(0, last_seen_id - 15)
                 new_blocks = [
                     (b_id, b) for b_id, b in block_items
-                    if (b_id > last_seen_id or (b_id >= lookback_cutoff and f"{clean_ch}:{b_id}" not in published_keys))
+                    if (b_id > last_seen_id or (b_id >= lookback_cutoff and f"{clean_ch}:{b_id}" not in published_keys and f"{clean_ch}:{b_id}" not in handled_keys))
                     and f"{clean_ch}:{b_id}" not in published_keys
                 ]
 
@@ -565,8 +566,8 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                 if msg_dt:
                     age_h = (datetime.now(timezone.utc) - msg_dt).total_seconds() / 3600.0
                     if age_h > max_age_hours:
-                        if f"{clean_ch}:{b_id}" not in state.get("published_post_keys", []):
-                            state.setdefault("published_post_keys", []).append(f"{clean_ch}:{b_id}")
+                        if f"{clean_ch}:{b_id}" not in state.get("handled_post_keys", []):
+                            state.setdefault("handled_post_keys", []).append(f"{clean_ch}:{b_id}")
                         continue
                 fresh_blocks.append((b_id, b))
 
