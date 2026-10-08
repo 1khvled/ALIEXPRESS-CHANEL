@@ -197,7 +197,9 @@
     "1005012193220695",
     "1005012823469739",
     "1005009948598802",
-    "1005012293918683"
+    "1005012293918683",
+    "1005012651158292",
+    "1005010289640412"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -212,7 +214,7 @@
     "1005009054706827": 1791194142.1753953,
     "1005007961216287": 1791104165.8542082,
     "1005009627597591": 1790884233.6428,
-    "1005007275142457": 1791206151.9745984,
+    "1005007275142457": 1791480786.6973827,
     "1005008829227075": 1791480023.51619,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
@@ -228,7 +230,7 @@
     "1005012881256093": 1791194149.475346,
     "1005009118633225": 1790888213.2900865,
     "1005012143831265": 1791012345.6086447,
-    "1005007458827229": 1791191446.7283864,
+    "1005007458827229": 1791480745.2605677,
     "1005008852027824": 1791198946.2774374,
     "9998888981": 1790888981.6873999,
     "1005005217734986": 1791104047.0967803,
@@ -278,7 +280,7 @@
     "1005009411512584": 1791104149.1784146,
     "1005012058540420": 1790949652.480052,
     "1005009295911745": 1790949658.4852333,
-    "1005012340203471": 1791147359.976985,
+    "1005012340203471": 1791480676.569482,
     "9998887832": 1790957832.2997856,
     "9998887913": 1790957913.5473306,
     "9998887994": 1790957994.466288,
@@ -306,7 +308,7 @@
     "1005012285327063": 1791014763.6830645,
     "1005006581583862": 1791013842.0461159,
     "1005012816171978": 1791031841.1598868,
-    "1005009834132291": 1791192938.4319167,
+    "1005009834132291": 1791480738.4741676,
     "1005010585654037": 1790978149.8785934,
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791013541.4254196,
@@ -319,7 +321,7 @@
     "1005012741634118": 1791015347.2675145,
     "1005010453516983": 1791208255.7291632,
     "1005008554596598": 1791017145.537471,
-    "1005008776714223": 1791018047.9604976,
+    "1005008776714223": 1791480799.267585,
     "1005012925826589": 1791235993.3269281,
     "1005010306498953": 1791021345.213176,
     "1005010338761787": 1791021850.86469,
@@ -360,14 +362,14 @@
     "9998883864": 1791063864.5866926,
     "1005010536089199": 1791101144.9729881,
     "1005012385221205": 1791102050.1835058,
-    "1005013223462188": 1791103847.2554617,
+    "1005013223462188": 1791480804.9663246,
     "1005007279793099": 1791480122.2739391,
     "1005012743092233": 1791104461.903693,
     "1005007805497968": 1791197438.386862,
     "1005007345108759": 1791104759.7671344,
     "1005007394197021": 1791195344.3305714,
-    "1005008880082336": 1791206142.4737842,
-    "1005012571601398": 1791109857.5190113,
+    "1005008880082336": 1791480756.9313495,
+    "1005012571601398": 1791480706.4625003,
     "1005013290515237": 1791110751.0808105,
     "1005012264415744": 1791114344.949536,
     "1005009689592131": 1791114651.412541,
@@ -391,8 +393,8 @@
     "1005006996130042": 1791153956.1367443,
     "1005013052800596": 1791156089.0187185,
     "1005007331316456": 1791194741.6244273,
-    "1005007822635375": 1791205539.6613767,
-    "1005013096683979": 1791205547.1867356,
+    "1005007822635375": 1791480772.9346173,
+    "1005013096683979": 1791480767.0815318,
     "1005006838055260": 1791212152.7085261,
     "1005006923518929": 1791212158.132987,
     "1005008379012998": 1791235946.0562956,
@@ -401,7 +403,9 @@
     "1005012193220695": 1791480036.1986935,
     "1005012823469739": 1791480096.5429933,
     "1005009948598802": 1791480134.0171144,
-    "1005012293918683": 1791480149.7680097
+    "1005012293918683": 1791480149.7680097,
+    "1005012651158292": 1791480663.2321565,
+    "1005010289640412": 1791480781.053439
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -647,7 +651,12 @@
     "realme 14 Pro 5G 12/256",
     "realme 15 5G  12/256",
     "CUSU SSD 512 GB Portable SSD External",
-    "Indoor Transparent Fiber Optic Cable SC UPC APC Single Core Jumper"
+    "Indoor Transparent Fiber Optic Cable SC UPC APC Single Core Jumper",
+    "Black Shark GT3 Neo 2",
+    "Honor X80 Pro Max 8/128GB",
+    "ATTACK SHARK L80 PRO",
+    "يد تحكم فخمة  Flydigi Direwolf 4 Wireless Hall Effect",
+    "قرص صلب SSD من CUSU بسعات 1 تيرابايت، 512 جيجابايت، 240 جيجابايت، 480"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -664,7 +673,7 @@
     "Realme 15 Pro Global (8/256)": 1790884233.6428,
     "Poco C71 3/64GB": 1791192360.1916943,
     "سماعات لاسلكية Attack Shark L80 PRO Wireless": 1791206142.4737842,
-    "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K": 1791206151.9745984,
+    "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K": 1791480786.6973827,
     "ماوس لاسلكي Attack Shark R1 Wireless": 1790884299.0959656,
     "ماوس لاسلكي مع شاحن Attack Shark X1 Wireless": 1790884310.7506618,
     "معالج AMD Ryzen R7 5700X جديد! بتردد 3.4 جيجاهرتز، ثماني النواة وستة عشر": 1790888057.5668976,
@@ -728,7 +737,7 @@
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": 1790949354.0364344,
     "Powerful Violent Fan 150000RPM": 1790949652.480052,
     "Essager 65W GaN USB": 1790949658.4852333,
-    "POCO X6 Pro 5G 12/512GB": 1791147359.976985,
+    "POCO X6 Pro 5G 12/512GB": 1791480676.569482,
     "Blackview LINK 1 Kids Tablets": 1791022250.7560554,
     "POCO X8 5G (6/128GB)": 1791189979.3835318,
     "HONOR 600 PRO": 1790960475.7249138,
@@ -817,12 +826,12 @@
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": 1791101144.9729881,
     "Toocki 25W GaN Charger": 1791102050.1835058,
     "Baseus Bowie E5x": 1791103551.065819,
-    "Rechargeable RC Drift Racing Car": 1791103847.2554617,
+    "Rechargeable RC Drift Racing Car": 1791480804.9663246,
     "Zeblaze Btalk PRO": 1791146144.850411,
     "AMD Ryzen 5 7600X USED R5 7600X": 1791235979.230238,
     "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,": 1791104060.2548923,
     "New G6 Wireless Controller": 1791104149.1784146,
-    "EasySMX X05 Pro Wireless Gamepad PC Controller": 1791192938.4319167,
+    "EasySMX X05 Pro Wireless Gamepad PC Controller": 1791480738.4741676,
     "K61 Wired Mechanical Keyboard": 1791104461.903693,
     "GameSir Nova Lite Gamepads PC  Hall Effect": 1791104753.5513856,
     "FIFINE AmpliGame A2 RGB USB Gaming Microphone": 1791104759.7671344,
@@ -864,7 +873,7 @@
     "Philips New EDC Portable Flashlight Rechargeable": 1791153956.1367443,
     "Rocoren 100W Type-C to USB Fast Charging": 1791156089.0187185,
     "Attack Shark R1": 1791480122.2739391,
-    "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse": 1791191446.7283864,
+    "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse": 1791480745.2605677,
     "XUNYOU-LINK 4G SIM WiFi Router": 1791192351.7104166,
     "UGREEN  1080P Webcam": 1791192944.201814,
     "HONOR CHOICE Watch 2i": 1791193543.9040256,
@@ -875,8 +884,8 @@
     "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4": 1791198946.2774374,
     "AMD Ryzen 5 7500F": 1791480090.4043386,
     "CMF Watch 3 Pro Global AMOLED GPS": 1791203753.790013,
-    "يد تحكم لاسلكية Fantech Shooter 3 Wireless Hall Effect Ultimate": 1791205539.6613767,
-    "يد تحكم  GameSir Tarantula 8K TMR": 1791205547.1867356,
+    "يد تحكم لاسلكية Fantech Shooter 3 Wireless Hall Effect Ultimate": 1791480772.9346173,
+    "يد تحكم  GameSir Tarantula 8K TMR": 1791480767.0815318,
     "ماوس لاسلكي Attack Shark X1 Wireless": 1791206156.5528755,
     "Attack Shark L80 Gaming Headset, Lightweight": 1791207945.0259264,
     "Rocoren 90 Degree USB Type C Cable 100W": 1791212152.7085261,
@@ -896,7 +905,12 @@
     "realme 14 Pro 5G 12/256": 1791480128.3963842,
     "realme 15 5G  12/256": 1791480134.0171144,
     "CUSU SSD 512 GB Portable SSD External": 1791480143.0421865,
-    "Indoor Transparent Fiber Optic Cable SC UPC APC Single Core Jumper": 1791480149.7680097
+    "Indoor Transparent Fiber Optic Cable SC UPC APC Single Core Jumper": 1791480149.7680097,
+    "Black Shark GT3 Neo 2": 1791480663.2321565,
+    "Honor X80 Pro Max 8/128GB": 1791480706.4625003,
+    "ATTACK SHARK L80 PRO": 1791480756.9313495,
+    "يد تحكم فخمة  Flydigi Direwolf 4 Wireless Hall Effect": 1791480781.053439,
+    "قرص صلب SSD من CUSU بسعات 1 تيرابايت، 512 جيجابايت، 240 جيجابايت، 480": 1791480799.267585
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1555,23 +1569,35 @@
     "zedstoreonline:38553",
     "zedstoreonline:38554",
     "zedstoreonline:38555",
-    "ecksdeal:5868"
+    "ecksdeal:5868",
+    "lodydeals:45504",
+    "lodydeals:45507",
+    "lodydeals:45508",
+    "zedstoreonline:38557",
+    "zedstoreonline:38559",
+    "zedstoreonline:38560",
+    "ecksdeal:5869",
+    "ecksdeal:5870",
+    "ecksdeal:5871",
+    "ecksdeal:5872",
+    "pcgamingpart:7965",
+    "pcgamingpart:7966"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791480149.7680097,
+  "last_run_time": 1791480804.9663246,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32805,
       "last_check_time": 1791238251.4988186
     },
     "ecksdeal": {
-      "last_message_id": 5868,
-      "last_check_time": 1791480151.815564
+      "last_message_id": 5874,
+      "last_check_time": 1791480791.6142495
     },
     "lodydeals": {
-      "last_message_id": 45501,
-      "last_check_time": 1791480105.9537578
+      "last_message_id": 45508,
+      "last_check_time": 1791480708.507654
     },
     "bnddeals": {
       "last_message_id": 50814,
@@ -1582,12 +1608,12 @@
       "last_check_time": 1791063864.5866926
     },
     "pcgamingpart": {
-      "last_message_id": 7964,
-      "last_check_time": 1791241535.2176504
+      "last_message_id": 7966,
+      "last_check_time": 1791480807.0020192
     },
     "zedstoreonline": {
-      "last_message_id": 38555,
-      "last_check_time": 1791480145.082062
+      "last_message_id": 38561,
+      "last_check_time": 1791480759.002578
     },
     "megaphonna": {
       "last_message_id": 8272,
@@ -1607,7 +1633,7 @@
     "1005007961216287": 18.17,
     "1005008233932899": 294.9,
     "1005009627597591": 314.9,
-    "1005008880082336": 22.19,
+    "1005008880082336": 22.1,
     "1005007275142457": 28.9,
     "1005007279793099": 13.7,
     "1005008829227075": 24.76,
@@ -1695,7 +1721,7 @@
     "1005010470699571": 24.56,
     "1005012741634118": 29.0,
     "1005008554596598": 15.4,
-    "1005008776714223": 47.6,
+    "1005008776714223": 47.67,
     "1005010306498953": 1.46,
     "1005010338761787": 1.49,
     "1005012265051745": 246.04,
@@ -1732,12 +1758,12 @@
     "1005011925142821": 270.9,
     "1005010536089199": 34.4,
     "1005012385221205": 13.27,
-    "1005013223462188": 13.47,
+    "1005013223462188": 13.5,
     "1005012743092233": 24.37,
     "1005007805497968": 22.05,
     "1005007345108759": 22.12,
     "1005007394197021": 14.8,
-    "1005012571601398": 275.7,
+    "1005012571601398": 277.3,
     "1005013290515237": 23.22,
     "1005012264415744": 78.0,
     "1005009689592131": 114.1,
@@ -1770,7 +1796,9 @@
     "1005012193220695": 253.22,
     "1005012823469739": 32.11,
     "1005009948598802": 229.9,
-    "1005012293918683": 5.0
+    "1005012293918683": 5.0,
+    "1005012651158292": 9.78,
+    "1005010289640412": 32.06
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -4695,6 +4723,126 @@
       "price": 5.0,
       "timestamp": 1791480149.7680097,
       "status": "ACTIVE"
+    },
+    "lodydeals:45504": {
+      "channel_msg_id": 679,
+      "product_id": "1005012651158292",
+      "title": "Black Shark GT3 Neo 2",
+      "channel": "lodydeals",
+      "source_msg_id": 45504,
+      "price": 9.78,
+      "timestamp": 1791480663.2321565,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45507": {
+      "channel_msg_id": 680,
+      "product_id": "1005012340203471",
+      "title": "POCO X6 Pro 5G 12/512GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45507,
+      "price": 242.7,
+      "timestamp": 1791480676.569482,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45508": {
+      "channel_msg_id": 681,
+      "product_id": "1005012571601398",
+      "title": "Honor X80 Pro Max 8/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45508,
+      "price": 277.3,
+      "timestamp": 1791480706.4625003,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38557": {
+      "channel_msg_id": 682,
+      "product_id": "1005009834132291",
+      "title": "EasySMX X05 Pro Wireless Gamepad PC Controller",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38557,
+      "price": 23.0,
+      "timestamp": 1791480738.4741676,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38559": {
+      "channel_msg_id": 683,
+      "product_id": "1005007458827229",
+      "title": "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38559,
+      "price": 22.1,
+      "timestamp": 1791480745.2605677,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38560": {
+      "channel_msg_id": 684,
+      "product_id": "1005008880082336",
+      "title": "ATTACK SHARK L80 PRO",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38560,
+      "price": 22.1,
+      "timestamp": 1791480756.9313495,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5869": {
+      "channel_msg_id": 685,
+      "product_id": "1005013096683979",
+      "title": "يد تحكم  GameSir Tarantula 8K TMR",
+      "channel": "ecksdeal",
+      "source_msg_id": 5869,
+      "price": 56.86,
+      "timestamp": 1791480767.0815318,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5870": {
+      "channel_msg_id": 686,
+      "product_id": "1005007822635375",
+      "title": "يد تحكم لاسلكية Fantech Shooter 3 Wireless Hall Effect Ultimate",
+      "channel": "ecksdeal",
+      "source_msg_id": 5870,
+      "price": 22.47,
+      "timestamp": 1791480772.9346173,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5871": {
+      "channel_msg_id": 687,
+      "product_id": "1005010289640412",
+      "title": "يد تحكم فخمة  Flydigi Direwolf 4 Wireless Hall Effect",
+      "channel": "ecksdeal",
+      "source_msg_id": 5871,
+      "price": 32.06,
+      "timestamp": 1791480781.053439,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5872": {
+      "channel_msg_id": 688,
+      "product_id": "1005007275142457",
+      "title": "ماوس لاسلكي Attack Shark X3 PRO Wireless 4K",
+      "channel": "ecksdeal",
+      "source_msg_id": 5872,
+      "price": 28.9,
+      "timestamp": 1791480786.6973827,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7965": {
+      "channel_msg_id": 689,
+      "product_id": "1005008776714223",
+      "title": "قرص صلب SSD من CUSU بسعات 1 تيرابايت، 512 جيجابايت، 240 جيجابايت، 480",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7965,
+      "price": 47.67,
+      "timestamp": 1791480799.267585,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7966": {
+      "channel_msg_id": 690,
+      "product_id": "1005013223462188",
+      "title": "Rechargeable RC Drift Racing Car",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7966,
+      "price": 13.5,
+      "timestamp": 1791480804.9663246,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4704,16 +4852,16 @@
     "is_paused": false,
     "night_mode_enabled": true,
     "night_pause_enabled": true,
-    "last_deal_post_time": 1791480151.8490593,
-    "last_sweep_time": 1791480151.832779,
+    "last_deal_post_time": 1791480807.0407605,
+    "last_sweep_time": 1791480807.0218318,
     "last_sweep_times": {
-      "algeria": 1791480151.832779,
+      "algeria": 1791480807.0218318,
       "france": 1791241566.544684
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "last_deal_post_times": {
-      "algeria": 1791480151.8490593
+      "algeria": 1791480807.0407605
     }
   },
   "last_coin_reminder_time": 1791480006.8698988,
@@ -4748,7 +4896,7 @@
     "1005011797801269": "couponsglobal",
     "1005012973772517": "zedstoreonline",
     "1005007168829266": "aniscoupons",
-    "1005008880082336": "ecksdeal",
+    "1005008880082336": "zedstoreonline",
     "1005010453516983": "aniscoupons",
     "1005012406142215": "megaphonna",
     "1005008390562391": "lodydeals",
@@ -4818,7 +4966,7 @@
     "1005010470699571": "aniscoupons",
     "1005012741634118": "aniscoupons",
     "1005008554596598": "bnddeals",
-    "1005008776714223": "aniscoupons",
+    "1005008776714223": "pcgamingpart",
     "1005010306498953": "lodydeals",
     "1005010338761787": "lodydeals",
     "1005012265051745": "lodydeals",
@@ -4867,7 +5015,7 @@
     "1005007394028808": "lodydeals",
     "1005007394197021": "zedstoreonline",
     "1005011778621042": "lodydeals",
-    "1005012571601398": "aniscoupons",
+    "1005012571601398": "lodydeals",
     "1005013290515237": "aniscoupons",
     "1005012264415744": "megaphonna",
     "1005009689592131": "megaphonna",
@@ -4905,7 +5053,9 @@
     "1005012193220695": "lodydeals",
     "1005012823469739": "lodydeals",
     "1005009948598802": "zedstoreonline",
-    "1005012293918683": "ecksdeal"
+    "1005012293918683": "ecksdeal",
+    "1005012651158292": "lodydeals",
+    "1005010289640412": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -5131,7 +5281,11 @@
     "realme 14 Pro 5G 12/256": "zedstoreonline",
     "realme 15 5G  12/256": "zedstoreonline",
     "CUSU SSD 512 GB Portable SSD External": "zedstoreonline",
-    "Indoor Transparent Fiber Optic Cable SC UPC APC Single Core Jumper": "ecksdeal"
+    "Indoor Transparent Fiber Optic Cable SC UPC APC Single Core Jumper": "ecksdeal",
+    "Black Shark GT3 Neo 2": "lodydeals",
+    "Honor X80 Pro Max 8/128GB": "lodydeals",
+    "يد تحكم فخمة  Flydigi Direwolf 4 Wireless Hall Effect": "ecksdeal",
+    "قرص صلب SSD من CUSU بسعات 1 تيرابايت، 512 جيجابايت، 240 جيجابايت، 480": "pcgamingpart"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -5239,7 +5393,8 @@
   ],
   "pinned_promo_events": {
     "Party Ready Sale / Choice Day_20261001": 505,
-    "AliExpress Special Promo Octobre 2026_20261004": 661
+    "AliExpress Special Promo Octobre 2026_20261004": 661,
+    "AliExpress Special Promo Octobre 2026_20261006": 677
   },
   "sent_promo_notifiers": [
     "LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
@@ -5250,5 +5405,14 @@
   "last_tajmi3at_published_time": 1791237769.1269245,
   "published_deals_history": {},
   "settings": {},
-  "handled_post_keys": []
+  "handled_post_keys": [
+    "lodydeals:45502",
+    "lodydeals:45503",
+    "lodydeals:45506",
+    "zedstoreonline:38556",
+    "zedstoreonline:38558",
+    "zedstoreonline:38561",
+    "ecksdeal:5873",
+    "ecksdeal:5874"
+  ]
 }
