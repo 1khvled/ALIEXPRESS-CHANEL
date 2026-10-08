@@ -219,10 +219,15 @@ async def post_deal_to_france_channel(
 
     api_url = f"https://api.telegram.org/bot{bot_token}"
     photo_bytes = None
+    photo_url = None
     if image_path:
-        p = Path(image_path) if isinstance(image_path, str) else image_path
-        if p.exists():
-            photo_bytes = p.read_bytes()
+        p_str = str(image_path)
+        if p_str.startswith("http://") or p_str.startswith("https://"):
+            photo_url = p_str
+        else:
+            p = Path(image_path)
+            if p.exists():
+                photo_bytes = p.read_bytes()
 
     # Premium inline buttons for French deals (Clean CTA + Bot link)
     reply_markup_json = None
@@ -247,6 +252,16 @@ async def post_deal_to_france_channel(
                     if reply_markup_json:
                         data["reply_markup"] = reply_markup_json
                     resp = await client.post(f"{api_url}/sendPhoto", data=data, files=files)
+                elif photo_url:
+                    payload = {
+                        "chat_id": TARGET_FRANCE_CHANNEL,
+                        "photo": photo_url,
+                        "caption": caption,
+                        "parse_mode": "HTML"
+                    }
+                    if reply_markup_json:
+                        payload["reply_markup"] = json.loads(reply_markup_json)
+                    resp = await client.post(f"{api_url}/sendPhoto", json=payload)
                 else:
                     data = {
                         "chat_id": TARGET_FRANCE_CHANNEL,
@@ -760,7 +775,11 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                             usd_price=extracted.current_price
                         )
 
+                if not local_img_file and img_url:
+                    local_img_file = img_url
+
                 if not local_img_file:
+                    print(f"  [IMAGE MISSING] Could not prepare image for product #{extracted.product_id}. Skipping.")
                     max_processed_id = max(max_processed_id, msg_id)
                     continue
 

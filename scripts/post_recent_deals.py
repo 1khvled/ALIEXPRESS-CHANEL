@@ -512,9 +512,13 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                                 usd_price=extracted.current_price
                             )
 
+                    if not local_img_file and img_url:
+                        local_img_file = img_url
+
                     if not local_img_file:
+                        print(f"  [IMAGE MISSING] Could not prepare image for product #{extracted.product_id}. Skipping.")
                         max_processed_id = max(max_processed_id, msg_id)
-                        continue  # Must ALWAYS have a valid rendered image (coupons or product)!
+                        continue
 
                     # 11. Save record
                     async with db_context() as s:

@@ -237,27 +237,39 @@ class ProductExtractor:
 
     async def _fetch_page_metadata(self, url: str) -> dict:
         meta = {}
-        try:
-            async with httpx.AsyncClient(timeout=8.0, follow_redirects=True, verify=False) as client:
-                res = await client.get(
-                    url,
-                    headers={
-                        "User-Agent": (
-                            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                            "AppleWebKit/537.36 (KHTML, like Gecko) "
-                            "Chrome/124.0.0.0 Safari/537.36"
-                        )
-                    }
-                )
-                if res.status_code == 200:
-                    soup = BeautifulSoup(res.text, "html.parser")
-                    og_title = soup.find("meta", property="og:title")
-                    if og_title and og_title.get("content"):
-                        meta["title"] = og_title["content"].strip()
+        urls_to_try = []
+        if "/item/" in url:
+            pid_m = re.search(r'/item/(\d+)\.html', url)
+            if pid_m:
+                urls_to_try.append(f"https://ar.aliexpress.com/item/{pid_m.group(1)}.html")
+        urls_to_try.append(url)
 
-                    og_img = soup.find("meta", property="og:image")
-                    if og_img and og_img.get("content"):
-                        meta["image"] = og_img["content"].strip()
+        headers = {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/124.0.0.0 Safari/537.36"
+            )
+        }
+        try:
+            async with httpx.AsyncClient(timeout=6.0, follow_redirects=True, verify=False) as client:
+                for target_url in urls_to_try:
+                    try:
+                        res = await client.get(target_url, headers=headers)
+                        if res.status_code == 200:
+                            soup = BeautifulSoup(res.text, "html.parser")
+                            og_title = soup.find("meta", property="og:title")
+                            if og_title and og_title.get("content"):
+                                meta["title"] = og_title["content"].strip()
+
+                            og_img = soup.find("meta", property="og:image")
+                            if og_img and og_img.get("content"):
+                                meta["image"] = og_img["content"].strip()
+
+                            if meta.get("image") or meta.get("title"):
+                                return meta
+                    except Exception:
+                        continue
         except Exception as e:
             logger.debug(f"Metadata fetch skipped for {url}: {e}")
         return meta

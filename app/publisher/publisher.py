@@ -123,8 +123,15 @@ class TelegramPublisher:
                 reply_markup_json = json.dumps({"inline_keyboard": inline_keyboard})
 
             photo_bytes = None
-            if image_path and image_path.exists():
-                photo_bytes = image_path.read_bytes()
+            photo_url = None
+            if image_path:
+                p_str = str(image_path)
+                if p_str.startswith("http://") or p_str.startswith("https://"):
+                    photo_url = p_str
+                else:
+                    p = Path(image_path)
+                    if p.exists():
+                        photo_bytes = p.read_bytes()
 
             resp = None
             async with httpx.AsyncClient(timeout=45.0) as client:
@@ -140,6 +147,16 @@ class TelegramPublisher:
                             if reply_markup_json:
                                 data["reply_markup"] = reply_markup_json
                             resp = await client.post(f"{api_url}/sendPhoto", data=data, files=files)
+                        elif photo_url:
+                            payload = {
+                                "chat_id": self.target_channel,
+                                "photo": photo_url,
+                                "caption": caption,
+                                "parse_mode": "HTML"
+                            }
+                            if reply_markup_json:
+                                payload["reply_markup"] = json.loads(reply_markup_json)
+                            resp = await client.post(f"{api_url}/sendPhoto", json=payload)
                         else:
                             data = {
                                 "chat_id": self.target_channel,
