@@ -133,11 +133,12 @@ ALLOWED_CATEGORY_KEYWORDS_EN = [
     "ring light", "led strip", "projector", "magcubic", "hy300",
     # Computers
     "mini pc", "laptop", "notebook", "chromebook", "macbook", "pc", "computer", "desktop",
-    # Generic tech
-    "wireless", "bluetooth", "rechargeable",
+    # Generic tech & Smart Home Gadgets
+    "wireless", "bluetooth", "rechargeable", "scale", "smart scale", "electronic scale",
 ]
 
 ALLOWED_CATEGORY_KEYWORDS_AR = [
+    "ميزان", "ميزان ذكي", "ميزان الكتروني", "ميزان إلكتروني",
     "ماوس", "كيبورد", "لوحة مفاتيح", "سماعة", "سماعات", "سماعات اذن", "سماعات أذن", "سماعة اذن", "سماعة أذن",
     "سماعات داخل الاذن", "سماعات داخل الأذن", "سماعة داخل الاذن", "سماعة داخل الأذن", "سماعة سلكية", "سماعات سلكية", "سماعة رأس", "سماعات رأس", "ايربودز", "إيربودز",
     "يد تحكم", "يد تحكم فخمة", "يدة تحكم", "ايادي تحكم", "أيادي تحكم", "يدات تحكم", "كنترولر", "كنترولرز", "جيمباد", "قيمباد", "ذراع تحكم", "يدة",

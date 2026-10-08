@@ -275,22 +275,30 @@ class ProductExtractor:
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
             "Accept-Language": "en-US,en;q=0.5",
         }
-        url = f"https://www.aliexpress.com/item/{pid}.html"
+        # ar.aliexpress.com resolves fast and reliably without gatewayAdapt hang
+        urls = [
+            f"https://ar.aliexpress.com/item/{pid}.html",
+            f"https://www.aliexpress.com/item/{pid}.html",
+        ]
         try:
-            async with httpx.AsyncClient(headers=headers, follow_redirects=True, timeout=7.0) as client:
-                res = await client.get(url)
-                if res.status_code == 200:
-                    text = res.text
-                    soup = BeautifulSoup(text, "html.parser")
-                    og_img = soup.find("meta", property="og:image")
-                    if og_img and og_img.get("content") and "aliexpress" in og_img["content"]:
-                        return og_img["content"].strip()
-                    m = re.search(r'https://ae-pic-a1\.aliexpress-media\.com/kf/[A-Za-z0-9_]+\.(?:jpg|png)', text)
-                    if m:
-                        return m.group(0)
-                    m2 = re.search(r'https://ae01\.alicdn\.com/kf/[A-Za-z0-9_]+\.(?:jpg|png)', text)
-                    if m2:
-                        return m2.group(0)
+            async with httpx.AsyncClient(headers=headers, follow_redirects=True, timeout=5.0) as client:
+                for url in urls:
+                    try:
+                        res = await client.get(url)
+                        if res.status_code == 200:
+                            text = res.text
+                            soup = BeautifulSoup(text, "html.parser")
+                            og_img = soup.find("meta", property="og:image")
+                            if og_img and og_img.get("content") and "aliexpress" in og_img["content"]:
+                                return og_img["content"].strip()
+                            m = re.search(r'https://ae-pic-a1\.aliexpress-media\.com/kf/[A-Za-z0-9_]+\.(?:jpg|png)', text)
+                            if m:
+                                return m.group(0)
+                            m2 = re.search(r'https://ae01\.alicdn\.com/kf/[A-Za-z0-9_]+\.(?:jpg|png)', text)
+                            if m2:
+                                return m2.group(0)
+                    except Exception:
+                        continue
         except Exception as e:
             logger.debug(f"Direct clean image fetch skipped for {pid}: {e}")
         return None

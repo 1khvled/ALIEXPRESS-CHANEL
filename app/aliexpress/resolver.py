@@ -66,6 +66,41 @@ class UrlResolver:
 
         # Needs network resolution for short links, redirects, or app share links
         try:
+            # 1. Fast-path: probe redirects step-by-step using Location headers (avoids heavy page loads & timeouts)
+            async with httpx.AsyncClient(
+                headers=self.headers,
+                follow_redirects=False,
+                timeout=8.0,
+                verify=False
+            ) as fast_client:
+                curr_url = url
+                for _ in range(self.max_redirects):
+                    try:
+                        resp = await fast_client.get(curr_url)
+                    except Exception:
+                        break
+                    loc = resp.headers.get("location") or resp.headers.get("Location")
+                    if not loc:
+                        break
+                    if loc.startswith("/"):
+                        from urllib.parse import urljoin
+                        loc = urljoin(curr_url, loc)
+                    found_id = extract_product_id_from_url(loc)
+                    if found_id:
+                        canonical = normalize_aliexpress_url(loc, found_id)
+                        return ResolvedUrlResult(
+                            original_url=url,
+                            final_url=loc,
+                            canonical_url=canonical,
+                            product_id=found_id,
+                            is_valid=True,
+                            status_code=resp.status_code
+                        )
+                    curr_url = loc
+        except Exception as fast_err:
+            logger.debug(f"Fast URL resolution probe for {url}: {fast_err}")
+
+        try:
             async with httpx.AsyncClient(
                 headers=self.headers,
                 follow_redirects=True,

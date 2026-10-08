@@ -175,7 +175,8 @@
     "1005006923518929",
     "1005008379012998",
     "1005005605683958",
-    "1005010056083952"
+    "1005010056083952",
+    "1005013313539058"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -357,7 +358,8 @@
     "1005006923518929": 1791212158.132987,
     "1005008379012998": 1791235946.0562956,
     "1005005605683958": 1791235953.2682726,
-    "1005010056083952": 1791235961.3129663
+    "1005010056083952": 1791235961.3129663,
+    "1005013313539058": 1791482965.5086565
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -584,7 +586,8 @@
     "1MORE SonoFLow SE HQ31",
     "Baseus GoTrip VA1 Air Pump",
     "CMF by Nothing Buds 2A 12.4mm Driver 42dB ANC 4HD MicsLong Battery Life Up",
-    "REALME 15 5G (12/512)"
+    "REALME 15 5G (12/512)",
+    "Electronic Scale Smart"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -814,7 +817,8 @@
     "1MORE SonoFLow SE HQ31": 1791235946.0562956,
     "Baseus GoTrip VA1 Air Pump": 1791235953.2682726,
     "CMF by Nothing Buds 2A 12.4mm Driver 42dB ANC 4HD MicsLong Battery Life Up": 1791235961.3129663,
-    "REALME 15 5G (12/512)": 1791236002.3605435
+    "REALME 15 5G (12/512)": 1791236002.3605435,
+    "Electronic Scale Smart": 1791482965.5086565
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1461,27 +1465,28 @@
     "aniscoupons:32803",
     "aniscoupons:32804",
     "aniscoupons:32805",
-    "zedstoreonline:38550"
+    "zedstoreonline:38550",
+    "lodydeals:45516"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1790884121.198062,
-  "last_run_time": 1791480804.9663246,
+  "last_run_time": 1791482965.5086565,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32854,
-      "last_check_time": 1791483027.2509453
+      "last_check_time": 1791482971.3445852
     },
     "ecksdeal": {
       "last_message_id": 5878,
-      "last_check_time": 1791483025.6695716
+      "last_check_time": 1791482968.7207654
     },
     "lodydeals": {
       "last_message_id": 45516,
-      "last_check_time": 1791483024.8704205
+      "last_check_time": 1791482967.547841
     },
     "bnddeals": {
       "last_message_id": 50818,
-      "last_check_time": 1791483026.396361
+      "last_check_time": 1791482969.66619
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1489,19 +1494,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7974,
-      "last_check_time": 1791483026.075554
+      "last_check_time": 1791482969.2512715
     },
     "zedstoreonline": {
       "last_message_id": 38561,
-      "last_check_time": 1791483025.343898
+      "last_check_time": 1791482968.205614
     },
     "megaphonna": {
       "last_message_id": 8310,
-      "last_check_time": 1791483026.7927043
+      "last_check_time": 1791482970.5866134
     },
     "couponsglobal": {
       "last_message_id": 48831,
-      "last_check_time": 1791483027.8956509
+      "last_check_time": 1791482972.0552495
     }
   },
   "published_product_prices": {
@@ -1678,7 +1683,8 @@
     "1005009948598802": 229.9,
     "1005012293918683": 5.0,
     "1005012651158292": 9.78,
-    "1005010289640412": 32.06
+    "1005010289640412": 32.06,
+    "1005013313539058": 6.52
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -4483,6 +4489,16 @@
       "timestamp": 1791241759.1502223,
       "status": "ACTIVE",
       "category": "headsets"
+    },
+    "lodydeals:45516": {
+      "channel_msg_id": 691,
+      "product_id": "1005013313539058",
+      "title": "Electronic Scale Smart",
+      "channel": "lodydeals",
+      "source_msg_id": 45516,
+      "price": 6.52,
+      "timestamp": 1791482965.5086565,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4492,16 +4508,16 @@
     "is_paused": false,
     "night_mode_enabled": true,
     "night_pause_enabled": true,
-    "last_deal_post_time": 1791480807.0407605,
-    "last_sweep_time": 1791483030.18888,
+    "last_deal_post_time": 1791482972.0881739,
+    "last_sweep_time": 1791482972.0707567,
     "last_sweep_times": {
-      "algeria": 1791483027.8999496,
-      "france": 1791483030.18888
+      "algeria": 1791482972.0707567,
+      "france": 1791481199.5927114
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "last_deal_post_times": {
-      "algeria": 1791480807.0407605
+      "algeria": 1791482972.0881739
     }
   },
   "last_coin_reminder_time": 1791480006.8698988,
@@ -4695,7 +4711,8 @@
     "1005009948598802": "zedstoreonline",
     "1005012293918683": "ecksdeal",
     "1005012651158292": "lodydeals",
-    "1005010289640412": "ecksdeal"
+    "1005010289640412": "ecksdeal",
+    "1005013313539058": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -4925,7 +4942,8 @@
     "Black Shark GT3 Neo 2": "lodydeals",
     "Honor X80 Pro Max 8/128GB": "lodydeals",
     "يد تحكم فخمة  Flydigi Direwolf 4 Wireless Hall Effect": "ecksdeal",
-    "قرص صلب SSD من CUSU بسعات 1 تيرابايت، 512 جيجابايت، 240 جيجابايت، 480": "pcgamingpart"
+    "قرص صلب SSD من CUSU بسعات 1 تيرابايت، 512 جيجابايت، 240 جيجابايت، 480": "pcgamingpart",
+    "Electronic Scale Smart": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -5055,31 +5073,9 @@
     "ecksdeal:5873",
     "ecksdeal:5874",
     "lodydeals:45496",
-    "lodydeals:45499",
-    "zedstoreonline:38551",
-    "zedstoreonline:38555",
-    "ecksdeal:5869",
-    "ecksdeal:5870",
-    "ecksdeal:5871",
-    "pcgamingpart:7965",
-    "pcgamingpart:7967",
-    "pcgamingpart:7969",
-    "pcgamingpart:7970",
-    "bnddeals:50816",
-    "bnddeals:50817",
-    "bnddeals:50818",
-    "megaphonna:8290",
-    "megaphonna:8291",
-    "megaphonna:8292",
-    "megaphonna:8294",
-    "megaphonna:8295",
-    "aniscoupons:32839",
-    "aniscoupons:32840",
-    "couponsglobal:48821",
-    "couponsglobal:48822",
-    "couponsglobal:48824",
     "lodydeals:45497",
     "lodydeals:45498",
+    "lodydeals:45499",
     "lodydeals:45500",
     "lodydeals:45501",
     "lodydeals:45504",
@@ -5092,26 +5088,42 @@
     "lodydeals:45513",
     "lodydeals:45514",
     "lodydeals:45515",
+    "zedstoreonline:38551",
     "zedstoreonline:38552",
     "zedstoreonline:38553",
     "zedstoreonline:38554",
+    "zedstoreonline:38555",
     "zedstoreonline:38557",
     "zedstoreonline:38559",
     "zedstoreonline:38560",
     "ecksdeal:5868",
+    "ecksdeal:5869",
+    "ecksdeal:5870",
+    "ecksdeal:5871",
     "ecksdeal:5872",
     "ecksdeal:5875",
     "ecksdeal:5876",
     "ecksdeal:5877",
     "ecksdeal:5878",
+    "pcgamingpart:7965",
     "pcgamingpart:7966",
+    "pcgamingpart:7967",
     "pcgamingpart:7968",
+    "pcgamingpart:7969",
+    "pcgamingpart:7970",
     "pcgamingpart:7971",
     "pcgamingpart:7972",
     "pcgamingpart:7973",
     "pcgamingpart:7974",
     "bnddeals:50815",
+    "bnddeals:50816",
+    "bnddeals:50817",
+    "bnddeals:50818",
+    "megaphonna:8291",
+    "megaphonna:8292",
     "megaphonna:8293",
+    "megaphonna:8294",
+    "megaphonna:8295",
     "megaphonna:8296",
     "megaphonna:8297",
     "megaphonna:8298",
@@ -5126,10 +5138,13 @@
     "megaphonna:8307",
     "megaphonna:8308",
     "megaphonna:8309",
+    "megaphonna:8310",
     "aniscoupons:32835",
     "aniscoupons:32836",
     "aniscoupons:32837",
     "aniscoupons:32838",
+    "aniscoupons:32839",
+    "aniscoupons:32840",
     "aniscoupons:32841",
     "aniscoupons:32842",
     "aniscoupons:32843",
@@ -5145,7 +5160,10 @@
     "aniscoupons:32852",
     "aniscoupons:32854",
     "couponsglobal:48817",
+    "couponsglobal:48821",
+    "couponsglobal:48822",
     "couponsglobal:48823",
+    "couponsglobal:48824",
     "couponsglobal:48825",
     "couponsglobal:48826",
     "couponsglobal:48827",
