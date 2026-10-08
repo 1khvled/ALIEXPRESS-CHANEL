@@ -380,8 +380,14 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
 
 
 
-                    # 5. Category whitelist: ONLY gaming, watches, phones, tablets (Coupons bulletin exempt)
-                    if not extracted.is_coupon_list:
+                    # 5. Category whitelist & Coupon bulletin check
+                    if extracted.is_coupon_list:
+                        if not promo_tracker.get_active_promo():
+                            print(f"  [COUPON BULLETIN BLOCKED] Promo event has ended. Skipping coupon list: #{msg_id}")
+                            max_processed_id = max(max_processed_id, msg_id)
+                            record_post_handled(ch, msg_id)
+                            continue
+                    else:
                         allowed, reject_reason = is_allowed_category(
                             extracted.title or '',
                             raw_text,

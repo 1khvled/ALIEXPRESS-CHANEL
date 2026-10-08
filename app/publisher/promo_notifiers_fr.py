@@ -246,25 +246,10 @@ async def check_and_auto_post_france_promo_notifiers(now: Optional[datetime] = N
     results = []
 
     for promo in promo_tracker.calendar:
-        # 1. Starting alert check (Warm-up ~24h before start)
+        # 1. Starting alert check: Only announce warm-up WITHOUT posting active coupon bulletins before the sale starts
         if now < promo.start_date:
-            time_until_start = promo.start_date - now
-            if timedelta(hours=6) <= time_until_start <= timedelta(hours=36):
-                notifier_key = f"FR_START_ALERT_{promo.name}_{promo.start_date.strftime('%Y%m%d')}"
-                if not is_france_notifier_already_sent(notifier_key):
-                    logger.info(f"Triggering France Promo Starting Alert for {promo.name}")
-                    text, markup = build_france_promo_starting_alert(promo)
-                    success, err, msg_id = await send_france_promo_alert(text, markup, coupon_list=promo.coupon_tiers_fr, promo_title=promo.name_fr or promo.name)
-                    if success:
-                        record_france_notifier_sent(notifier_key)
-                        results.append({
-                            "type": "france_promo_starting_alert",
-                            "promo": promo.name,
-                            "message_id": msg_id,
-                            "status": "published"
-                        })
-                    else:
-                        logger.error(f"Failed to post France promo starting alert: {err}")
+            # Do not post coupons before the event actually starts!
+            pass
 
         # 2. Launch alert check (At start hour - 09:00 Paris / 08:00 DZ)
         elif promo.start_date <= now <= promo.end_date:
@@ -332,7 +317,7 @@ async def ensure_france_active_promo_coupons_pinned(
         now = datetime.now(timezone.utc)
 
     promo = promo_tracker.get_active_promo(now)
-    if not promo:
+    if not promo or not promo.coupon_tiers_fr:
         return None
 
     state = load_france_state()

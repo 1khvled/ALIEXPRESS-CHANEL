@@ -294,24 +294,8 @@ async def check_and_auto_post_promo_notifiers(
 
         # --- 2. CHECK PROMO STARTING ALERT (1 DAY BEFORE START) ---
         elif now < promo.start_date:
-            time_until_start = promo.start_date - now
-            # Within ~24 hours before start (between 6h and 36h)
-            if timedelta(hours=6) <= time_until_start <= timedelta(hours=36):
-                notifier_key = f"START_ALERT_{promo.name}_{promo.start_date.strftime('%Y%m%d')}"
-                if not is_promo_notifier_already_sent(notifier_key):
-                    logger.info(f"Triggering Promo Starting Alert for {promo.name} (Starts in {time_until_start.total_seconds()/3600:.1f}h)")
-                    text, markup = build_promo_starting_alert(promo)
-                    success, err, msg_id = await send_promo_alert_to_channel(text, markup, bot_token, channel_id, coupon_list=promo.coupon_tiers, promo_title=promo.name)
-                    if success:
-                        record_promo_notifier_sent(notifier_key)
-                        results.append({
-                            "type": "promo_starting_alert",
-                            "promo": promo.name,
-                            "message_id": msg_id,
-                            "status": "published"
-                        })
-                    else:
-                        logger.error(f"Failed to post promo starting alert: {err}")
+            # Do not post coupons before the event actually starts!
+            pass
 
     # --- 4. GUARANTEE ACTIVE EVENT COUPON BULLETIN IS ALWAYS PINNED ---
     try:
@@ -342,7 +326,7 @@ async def ensure_active_promo_coupons_pinned(
         now = datetime.now(timezone.utc)
 
     promo = promo_tracker.get_active_promo(now)
-    if not promo:
+    if not promo or not promo.coupon_tiers:
         return None
 
     state = load_persistent_state()

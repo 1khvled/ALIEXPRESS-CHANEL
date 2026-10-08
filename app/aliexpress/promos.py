@@ -677,11 +677,8 @@ def sniff_event_from_text(
     # A) Matched a known festival keyword + (dates OR coupons)
     # B) Has explicit date range + sale keywords
     # C) Has 3+ coupon tiers (a full coupon bulletin announcement)
-    if not (
-        (matched_pattern and (date_range or has_coupons)) or
-        (date_range and has_sale_keywords) or
-        (len(dz_tiers) + len(fr_tiers) >= 3)
-    ):
+    # Qualification criteria: Must have explicit dates or a verified known festival pattern
+    if not date_range and not matched_pattern:
         return None
 
     now = datetime.now(timezone.utc)
@@ -689,25 +686,28 @@ def sniff_event_from_text(
     # Determine dates
     if date_range:
         start_date, end_date = date_range
+        # If the discovered event has already ended, do not register it!
+        if end_date <= now:
+            return None
     elif matched_pattern and matched_pattern["key"] == "choice_day":
-        # If Choice Day is mentioned without explicit dates:
-        # If current date is within Choice Day window (1st-8th) or before 8th, use current month
-        # Else use 1st-8th of next month
-        if now.day <= 8:
+        # Choice Day runs strictly 1st - 7th of the month. On or after the 8th, it has ended!
+        if now.day < 8:
             start_date = datetime(now.year, now.month, 1, 7, 0, 0, tzinfo=timezone.utc)
-            end_date = datetime(now.year, now.month, 8, 6, 59, 59, tzinfo=timezone.utc)
+            end_date = datetime(now.year, now.month, 7, 23, 59, 59, tzinfo=timezone.utc)
+            if end_date <= now:
+                return None
         else:
             m_next = (now.month % 12) + 1
             yr_next = now.year if m_next > 1 else now.year + 1
             start_date = datetime(yr_next, m_next, 1, 7, 0, 0, tzinfo=timezone.utc)
-            end_date = datetime(yr_next, m_next, 8, 6, 59, 59, tzinfo=timezone.utc)
+            end_date = datetime(yr_next, m_next, 7, 23, 59, 59, tzinfo=timezone.utc)
     elif matched_pattern and matched_pattern["key"] == "brand_day":
         start_date = datetime(now.year, now.month, 9, 7, 0, 0, tzinfo=timezone.utc)
         end_date = datetime(now.year, now.month, 13, 6, 59, 59, tzinfo=timezone.utc)
+        if end_date <= now:
+            return None
     else:
-        # Default 7-day window from today if completely unspecified
-        start_date = now.replace(minute=0, second=0, microsecond=0)
-        end_date = start_date + timedelta(days=7)
+        return None
 
     # Determine event naming
     month_ar = ARABIC_MONTH_NAMES.get(start_date.month, "")
@@ -896,9 +896,14 @@ class PromoTracker:
             if m:
                 return False, f"Mention of expired campaign/date detected: '{m.group(0)}'"
 
-        # 3. If coupons are mentioned, ensure we are not in an empty period passing off old codes
+        # 3. If coupons or campaign names are mentioned, ensure we are not in an empty period passing off old codes
         active_promo = self.get_active_promo(now)
         if not active_promo:
+            # Reject any posts containing expired festival codes (OTPRD, FRPRD, Choice Day codes)
+            if re.search(r'\b(?:OTPRD|FRPRD|AEFR)\d+\b', text, re.IGNORECASE):
+                return False, "Promo event has ended: festival coupon codes (OTPRD/FRPRD) are expired"
+            if any(term in text.lower() for term in ["party ready", "شويس داي", "شويس داى"]):
+                return False, "Party Ready Sale / Choice Day event has ended"
             if "brand day" in text.lower() and "sept" in text.lower():
                 return False, "Expired September Brand Day promo"
 
