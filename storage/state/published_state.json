@@ -1469,19 +1469,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32854,
-      "last_check_time": 1791482736.362246
+      "last_check_time": 1791483027.2509453
     },
     "ecksdeal": {
       "last_message_id": 5878,
-      "last_check_time": 1791482734.7094543
+      "last_check_time": 1791483025.6695716
     },
     "lodydeals": {
       "last_message_id": 45516,
-      "last_check_time": 1791482439.535356
+      "last_check_time": 1791483024.8704205
     },
     "bnddeals": {
       "last_message_id": 50818,
-      "last_check_time": 1791482735.513699
+      "last_check_time": 1791483026.396361
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1489,19 +1489,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7974,
-      "last_check_time": 1791482735.1589568
+      "last_check_time": 1791483026.075554
     },
     "zedstoreonline": {
       "last_message_id": 38561,
-      "last_check_time": 1791482734.3562207
+      "last_check_time": 1791483025.343898
     },
     "megaphonna": {
-      "last_message_id": 8309,
-      "last_check_time": 1791482735.928787
+      "last_message_id": 8310,
+      "last_check_time": 1791483026.7927043
     },
     "couponsglobal": {
       "last_message_id": 48831,
-      "last_check_time": 1791482736.9178464
+      "last_check_time": 1791483027.8956509
     }
   },
   "published_product_prices": {
@@ -4493,10 +4493,10 @@
     "night_mode_enabled": true,
     "night_pause_enabled": true,
     "last_deal_post_time": 1791480807.0407605,
-    "last_sweep_time": 1791482739.1888816,
+    "last_sweep_time": 1791483030.18888,
     "last_sweep_times": {
-      "algeria": 1791482736.922032,
-      "france": 1791482739.1888816
+      "algeria": 1791483027.8999496,
+      "france": 1791483030.18888
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
@@ -5152,6 +5152,8 @@
     "couponsglobal:48828",
     "couponsglobal:48829",
     "couponsglobal:48830",
-    "couponsglobal:48831"
+    "couponsglobal:48831",
+    "lodydeals:45516",
+    "megaphonna:8310"
   ]
 }
