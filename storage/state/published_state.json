@@ -1468,40 +1468,40 @@
   "last_run_time": 1791480804.9663246,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32840,
-      "last_check_time": 1791482138.27221
+      "last_message_id": 32854,
+      "last_check_time": 1791482442.3413658
     },
     "ecksdeal": {
-      "last_message_id": 5875,
-      "last_check_time": 1791482014.3487804
+      "last_message_id": 5878,
+      "last_check_time": 1791482440.5394714
     },
     "lodydeals": {
-      "last_message_id": 45508,
-      "last_check_time": 1791480708.507654
+      "last_message_id": 45516,
+      "last_check_time": 1791482439.535356
     },
     "bnddeals": {
       "last_message_id": 50818,
-      "last_check_time": 1791482065.1964533
+      "last_check_time": 1791482441.277194
     },
     "test_channel": {
       "last_message_id": 1791063864,
       "last_check_time": 1791063864.5866926
     },
     "pcgamingpart": {
-      "last_message_id": 7970,
-      "last_check_time": 1791482047.7823026
+      "last_message_id": 7974,
+      "last_check_time": 1791482440.9237337
     },
     "zedstoreonline": {
       "last_message_id": 38561,
-      "last_check_time": 1791480759.002578
+      "last_check_time": 1791482440.14036
     },
     "megaphonna": {
-      "last_message_id": 8295,
-      "last_check_time": 1791482086.2906592
+      "last_message_id": 8309,
+      "last_check_time": 1791482441.8338716
     },
     "couponsglobal": {
-      "last_message_id": 48825,
-      "last_check_time": 1791482182.2164252
+      "last_message_id": 48831,
+      "last_check_time": 1791482442.9723616
     }
   },
   "published_product_prices": {
@@ -4493,10 +4493,10 @@
     "night_mode_enabled": true,
     "night_pause_enabled": true,
     "last_deal_post_time": 1791480807.0407605,
-    "last_sweep_time": 1791482187.046418,
+    "last_sweep_time": 1791482445.311401,
     "last_sweep_times": {
-      "algeria": 1791482182.2226007,
-      "france": 1791482187.046418
+      "algeria": 1791482442.976239,
+      "france": 1791482445.311401
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
@@ -5077,6 +5077,81 @@
     "aniscoupons:32840",
     "couponsglobal:48821",
     "couponsglobal:48822",
-    "couponsglobal:48824"
+    "couponsglobal:48824",
+    "lodydeals:45497",
+    "lodydeals:45498",
+    "lodydeals:45500",
+    "lodydeals:45501",
+    "lodydeals:45504",
+    "lodydeals:45507",
+    "lodydeals:45508",
+    "lodydeals:45509",
+    "lodydeals:45510",
+    "lodydeals:45511",
+    "lodydeals:45512",
+    "lodydeals:45513",
+    "lodydeals:45514",
+    "lodydeals:45515",
+    "zedstoreonline:38552",
+    "zedstoreonline:38553",
+    "zedstoreonline:38554",
+    "zedstoreonline:38557",
+    "zedstoreonline:38559",
+    "zedstoreonline:38560",
+    "ecksdeal:5868",
+    "ecksdeal:5872",
+    "ecksdeal:5875",
+    "ecksdeal:5876",
+    "ecksdeal:5877",
+    "ecksdeal:5878",
+    "pcgamingpart:7966",
+    "pcgamingpart:7968",
+    "pcgamingpart:7971",
+    "pcgamingpart:7972",
+    "pcgamingpart:7973",
+    "pcgamingpart:7974",
+    "bnddeals:50815",
+    "megaphonna:8293",
+    "megaphonna:8296",
+    "megaphonna:8297",
+    "megaphonna:8298",
+    "megaphonna:8299",
+    "megaphonna:8300",
+    "megaphonna:8301",
+    "megaphonna:8302",
+    "megaphonna:8303",
+    "megaphonna:8304",
+    "megaphonna:8305",
+    "megaphonna:8306",
+    "megaphonna:8307",
+    "megaphonna:8308",
+    "megaphonna:8309",
+    "aniscoupons:32835",
+    "aniscoupons:32836",
+    "aniscoupons:32837",
+    "aniscoupons:32838",
+    "aniscoupons:32841",
+    "aniscoupons:32842",
+    "aniscoupons:32843",
+    "aniscoupons:32844",
+    "aniscoupons:32845",
+    "aniscoupons:32846",
+    "aniscoupons:32847",
+    "aniscoupons:32848",
+    "aniscoupons:32849",
+    "aniscoupons:32850",
+    "aniscoupons:32851",
+    "aniscoupons:32853",
+    "aniscoupons:32852",
+    "aniscoupons:32854",
+    "couponsglobal:48817",
+    "couponsglobal:48823",
+    "couponsglobal:48825",
+    "couponsglobal:48826",
+    "couponsglobal:48827",
+    "couponsglobal:48828",
+    "couponsglobal:48829",
+    "couponsglobal:48830",
+    "couponsglobal:48831"
   ]
 }
