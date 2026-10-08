@@ -44,7 +44,6 @@ CHANNELS = [
     "BNDDEALS",
     "megaphonna",
     "aniscoupons",
-    "Coupon4Dz",
     "CouponsGlobal"
 ]
 
