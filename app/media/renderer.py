@@ -239,7 +239,7 @@ class MediaRenderer:
             channel_handle = "@francedealsdz"
 
         template_path = Path(settings.BASE_DIR) / "storage" / "assets" / "choice_day_coupon_template.png"
-        if template_path.exists():
+        if "choice" in promo_title.lower() and template_path.exists():
             try:
                 if not coupon_list:
                     return template_path

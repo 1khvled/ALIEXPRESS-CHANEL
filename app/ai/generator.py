@@ -71,16 +71,26 @@ class DealCaptionGenerator:
         self,
         coupon_items: List[Dict[str, str]],
         affiliate_url: str,
-        promo_name: Optional[str] = "Party Ready Sale"
+        promo_name: Optional[str] = None
     ) -> str:
         """
         Builds authentic Algerian coupon bulletin format matching ZedStore & Lody.
+        Dynamically detects active promo and enforces strict <= 1024 char limit for Telegram captions.
         """
+        if not promo_name or promo_name == "Party Ready Sale":
+            try:
+                from app.aliexpress.promos import promo_tracker
+                active_promo = promo_tracker.get_active_promo()
+                if active_promo:
+                    promo_name = active_promo.name_ar or active_promo.name
+                else:
+                    promo_name = "AliExpress"
+            except Exception:
+                promo_name = "AliExpress"
+
         lines = [
-            f"📣 <b>كوبونات خاصة بتخفيضات {promo_name} لشهر أكتوبر! 🚨</b>",
-            "⏰ <b>تنبيه هام:</b> الكوبونات تبدأ العمل وتتفعل غداً 01 أكتوبر على <b>الساعة 08:00 صباحاً</b> بتوقيت الجزائر 🇩🇿",
-            "🔴 <b>احجزوا الكوبونات وطبقوها على الساعة 08:00 صباحاً بالضبط:</b>",
-            "الكميات محدودة جداً وتنفد في الدقائق الأولى.. جهز نفسك واغتنم الفرصة! 🏃💨",
+            f"📣 <b>كوبونات خاصة بـ {promo_name}! 🚨</b>",
+            "⏰ <b>تنبيه:</b> الكميات محدودة وتنفد بسرعة.. احجزوا الكوبونات واستغلوها الآن! 🏃💨",
             "",
             "✅ <b>قـائمة الكوبونـات المعتمدة:</b>",
             ""
@@ -90,21 +100,27 @@ class DealCaptionGenerator:
             tier = item.get("tier", "").strip()
             code = item.get("code", "").strip()
             if tier and code:
-                lines.append(f"🙏 <b>كـوبون {tier}$ :</b> ⏺ <code>{code}</code>")
+                tier_clean = tier.replace("$", "").strip()
+                lines.append(f"🙏 <b>كـوبون {tier_clean}$ :</b> ⏺ <code>{code}</code>")
             elif code:
                 lines.append(f"🙏 <b>كـوبون :</b> ⏺ <code>{code}</code>")
 
-        lines.append("")
-        lines.append("⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك (طبقوها غداً على 08:00 صباحاً 🔥👌🏽):</b>")
-        lines.append("⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ($55 ثم $42...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅")
-        lines.append("🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب (كل الكوبونات مقبولة عليه) ⤵️</b>")
-        lines.append(affiliate_url)
-        lines.append("")
-        lines.append("😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات :</b>")
-        lines.append("👉 t.me/Alilo07BOT")
-        lines.append("📢 <b>قناة الصيدات اليومية:</b> @DzAliexpress0")
+        lines.extend([
+            "",
+            "⭕️ <b>طريقة حجز وتثبيت الكوبونات:</b>",
+            "⚠️ ابدأ دائماً بالكوبونات الكبيرة ثم البقية باه يبقاو في حسابك ✅",
+            "🔹 <b>رابط الدخول وتفعيل الكوبونات ⤵️</b>",
+            f"{affiliate_url}",
+            "",
+            "😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات:</b>",
+            "👉 t.me/Alilo07BOT",
+            "📢 <b>قناة الصيدات اليومية:</b> @DzAliexpress0"
+        ])
 
-        return "\n".join(lines)
+        caption = "\n".join(lines)
+        if len(caption) > 1020:
+            caption = caption[:1015].rstrip() + "..."
+        return caption
 
     def format_event_campaign(
         self,
@@ -113,6 +129,7 @@ class DealCaptionGenerator:
     ) -> str:
         """
         Formats AliExpress official event / warm-up announcements in authentic Algerian style.
+        Enforces strict <= 1024 char limit for Telegram photo captions.
         """
         clean_lines = []
         for line in raw_text.splitlines():
@@ -124,6 +141,8 @@ class DealCaptionGenerator:
         main_content = "\n".join(clean_lines).strip()
         if not main_content:
             main_content = "✨ <b>تخفيضات وكوبونات حصرية بمناسبة انطلاق العروض الجديدة على AliExpress!</b>"
+        elif len(main_content) > 550:
+            main_content = main_content[:545].rstrip() + "..."
 
         lines = [
             f"🎉 <b>{main_content}</b>",
@@ -135,7 +154,10 @@ class DealCaptionGenerator:
             "👉 t.me/Alilo07BOT",
             "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0"
         ]
-        return "\n".join(lines)
+        caption = "\n".join(lines)
+        if len(caption) > 1020:
+            caption = caption[:1015].rstrip() + "..."
+        return caption
 
     def _format_deterministic(
         self,
@@ -310,7 +332,7 @@ class DealCaptionGenerator:
             is_price_drop = detect_price_drop_deal(raw_text)
 
         if coupon_list and len(coupon_list) >= 2:
-            return self.format_coupon_list(coupon_list, affiliate_url)
+            return self.format_coupon_list(coupon_list, affiliate_url, promo_name=promo_tag)
 
         if (not usd_price or usd_price <= 0) and raw_text and any(k in raw_text for k in ["كوبونات", "تحصيل", "رابط المناسبة", "تخفيضات", "عشوائية", "party ready", "choice day"]):
             return self.format_event_campaign(raw_text, affiliate_url)

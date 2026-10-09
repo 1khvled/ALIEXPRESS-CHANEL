@@ -87,13 +87,25 @@ class FranceDealCaptionGenerator:
         self,
         coupon_items: List[Dict[str, str]],
         affiliate_url: str,
-        promo_name: Optional[str] = "Party Ready Sale"
+        promo_name: Optional[str] = None
     ) -> str:
         """
         Builds French coupon bulletin format for multi-coupon lists.
+        Dynamically detects active promo and enforces strict <= 1024 char limit for Telegram captions.
         """
+        if not promo_name or promo_name == "Party Ready Sale":
+            try:
+                from app.aliexpress.promos import promo_tracker
+                active_promo = promo_tracker.get_active_promo()
+                if active_promo:
+                    promo_name = active_promo.name_fr or active_promo.name
+                else:
+                    promo_name = "AliExpress"
+            except Exception:
+                promo_name = "AliExpress"
+
         lines = [
-            f"✨📢 <b>Nouveaux Codes Promo disponibles pour le {promo_name} !</b> 📢✨",
+            f"✨📢 <b>Nouveaux Codes Promo pour {promo_name} !</b> 📢✨",
             "",
             "✅ <b>Liste officielle des codes promo :</b>",
             ""
@@ -102,23 +114,27 @@ class FranceDealCaptionGenerator:
         for item in coupon_items:
             tier = item.get("tier", "").strip()
             code = item.get("code", "").strip()
-            # Clean tier for French presentation
             tier_display = tier.replace("$", "€")
             if tier_display and code:
                 lines.append(f"🎟️ <b>Code {tier_display} :</b> <code>{code}</code>")
             elif code:
                 lines.append(f"🎟️ <b>Code promo :</b> <code>{code}</code>")
 
-        lines.append("")
-        lines.append("⭕️ <b>Tutoriel : Verrouiller tous les codes sur votre compte :</b>")
-        lines.append("⚠️ <b>Commencez par les gros codes (-60€, -45€...)</b> puis appliquez les suivants pour les lier à votre compte avant rupture de stock !")
-        lines.append("🔹 <b>Appliquez tous les codes sur ce produit (tous les seuils passent) ⤵️</b>")
-        lines.append("https://s.click.aliexpress.com/e/_c2QPADRL")
-        lines.append("")
-        lines.append("🪙 <i>Bot réduction pièces (Coins) : @Alilo07BOT</i>")
-        lines.append("📢 <i>Canal de bons plans : @francedealsdz</i>")
+        lines.extend([
+            "",
+            "⭕️ <b>Tutoriel : Verrouiller tous les codes sur votre compte :</b>",
+            "⚠️ <b>Commencez par les gros codes</b> puis appliquez les suivants pour les lier à votre compte avant rupture de stock !",
+            "🔹 <b>Appliquez tous les codes sur ce produit ⤵️</b>",
+            f"{affiliate_url}",
+            "",
+            "🪙 <i>Bot réduction pièces (Coins) : @Alilo07BOT</i>",
+            "📢 <i>Canal de bons plans : @francedealsdz</i>"
+        ])
 
-        return "\n".join(lines)
+        caption = "\n".join(lines)
+        if len(caption) > 1020:
+            caption = caption[:1015].rstrip() + "..."
+        return caption
 
     def format_event_campaign(
         self,

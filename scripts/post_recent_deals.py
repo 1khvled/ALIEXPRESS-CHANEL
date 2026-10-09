@@ -496,9 +496,11 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     local_img_file = None
                     if extracted.is_coupon_list:
                         if extracted.coupon_list:
+                            active_p = promo_tracker.get_active_promo()
+                            promo_title = active_p.name if active_p else "Brand Day"
                             local_img_file = media_renderer.render_coupon_bulletin_card(
                                 extracted.coupon_list,
-                                promo_title="Choice Day",
+                                promo_title=promo_title,
                                 channel_handle="@DzAliexpress0",
                                 is_french=False
                             )
@@ -685,6 +687,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                                 pass
 
                             await asyncio.sleep(2.0)
+                            max_processed_id = max(max_processed_id, msg_id)
                         else:
                             print(f"  [!] Failed to publish: {err}")
                             try:
@@ -692,8 +695,6 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                                 await notify_admin_error("فشل نشر الصفقة (Deal Publish Failed)", f"Product {deal.product_id} ({deal.title[:50]}): {err}", channel="algeria")
                             except Exception:
                                 pass
-
-                        max_processed_id = max(max_processed_id, msg_id)
 
                 # Advance high-water mark up to highest post actually processed/filtered (preserves paced deals!)
                 if max_processed_id and max_processed_id > (last_seen_id or 0):

@@ -15,6 +15,7 @@ import sys
 import json
 import random
 import asyncio
+from pathlib import Path
 from typing import Optional, Tuple, Dict, Any, List
 import httpx
 
@@ -33,6 +34,7 @@ enforce_ipv4()
 TARGET_DZ_CHANNEL = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
 FRANCE_CHANNEL_HANDLE = os.getenv("FRANCE_TARGET_CHANNEL_ID", "@francedealsdz")
 FRANCE_CHANNEL_URL = "https://t.me/francedealsdz"
+FRANCE_LOGO_PATH = Path(__file__).resolve().parent.parent / "assets" / "france_channel_logo.jpg"
 
 # 4 High-Converting, Authentic Algerian Copywriting Variants
 FRANCE_CROSS_VARIANTS: List[Dict[str, Any]] = [
@@ -117,23 +119,35 @@ async def check_and_post_france_cross_promo(force: bool = False) -> Tuple[bool, 
         ]
     }
 
-    api_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
-    payload = {
-        "chat_id": TARGET_DZ_CHANNEL,
-        "text": variant["text"],
-        "parse_mode": "HTML",
-        "disable_web_page_preview": True,
-        "reply_markup": reply_markup
-    }
-
     try:
-        async with httpx.AsyncClient(timeout=20.0) as client:
-            resp = await client.post(api_url, json=payload)
+        async with httpx.AsyncClient(timeout=25.0) as client:
+            if FRANCE_LOGO_PATH.exists():
+                api_url = f"https://api.telegram.org/bot{bot_token}/sendPhoto"
+                with open(FRANCE_LOGO_PATH, "rb") as f:
+                    files = {"photo": ("france_channel_logo.jpg", f.read(), "image/jpeg")}
+                    data = {
+                        "chat_id": TARGET_DZ_CHANNEL,
+                        "caption": variant["text"],
+                        "parse_mode": "HTML",
+                        "reply_markup": json.dumps(reply_markup)
+                    }
+                    resp = await client.post(api_url, data=data, files=files)
+            else:
+                api_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+                payload = {
+                    "chat_id": TARGET_DZ_CHANNEL,
+                    "text": variant["text"],
+                    "parse_mode": "HTML",
+                    "disable_web_page_preview": True,
+                    "reply_markup": reply_markup
+                }
+                resp = await client.post(api_url, json=payload)
+
             res_data = resp.json()
             if resp.status_code == 200 and res_data.get("ok"):
                 msg_id = res_data.get("result", {}).get("message_id")
                 record_france_cross_promo_published(variant_idx=variant_idx)
-                log_msg = f"Published France cross-promo variant '{variant['id']}' to {TARGET_DZ_CHANNEL} (Msg #{msg_id})"
+                log_msg = f"Published France cross-promo variant '{variant['id']}' with logo to {TARGET_DZ_CHANNEL} (Msg #{msg_id})"
                 logger.info(log_msg)
                 try:
                     await record_system_log("INFO", "FRANCE_CROSS_PROMO", log_msg)
