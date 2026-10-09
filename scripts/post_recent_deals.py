@@ -103,6 +103,16 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     except Exception as e:
         print(f"[!] Card affiliate check error: {e}")
 
+    # Automated Check: Strategic Cross-Promotion for France Channel (@francedealsdz in @DzAliexpress0)
+    try:
+        from app.publisher.france_cross_promo import check_and_post_france_cross_promo
+        force_fr_ad = "--france-ad" in sys.argv or "--force-france-ad" in sys.argv
+        fr_ad_success, fr_ad_msg = await check_and_post_france_cross_promo(force=force_fr_ad)
+        if fr_ad_success:
+            print(f"[FRANCE CROSS-PROMO AUTO-POST] {fr_ad_msg}")
+    except Exception as e:
+        print(f"[!] France cross-promo check error: {e}")
+
     # Automated Check: Religious & Spiritual Reminders (Jumu'ah & Fajr Salah)
     try:
         from app.publisher.religious_reminders import check_and_auto_post_religious_reminders

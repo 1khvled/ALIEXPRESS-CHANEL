@@ -5173,8 +5173,9 @@
     "couponsglobal:48831",
     "lodydeals:45516",
     "megaphonna:8310",
-    "ecksdeal:5879",
-    "aniscoupons:32855",
-    "bnddeals:50820"
-  ]
+    "ecksdeal:5879"
+  ],
+  "last_france_cross_promo_time": 1791544610.263704,
+  "next_france_cross_promo_interval_seconds": 319259,
+  "france_cross_promo_variant_idx": 1
 }

@@ -867,6 +867,101 @@ def record_coin_reminder_published():
     state["coin_reminder_variant_idx"] = (state.get("coin_reminder_variant_idx", 0) + 1) % 3
     save_persistent_state(state)
 
+# ── Deal Velocity & France Channel Cross-Promotion Tracking ────────
+def get_recent_deals_count(hours: float = 4.0) -> int:
+    """Calculates the number of published deals in @DzAliexpress0 within the last N hours."""
+    state = load_persistent_state()
+    now = time.time()
+    cutoff = now - (hours * 3600.0)
+
+    # 1. From channel_published_deals dictionary
+    c_deals = state.get("channel_published_deals", {})
+    count_1 = sum(
+        1 for d in c_deals.values()
+        if d.get("status") != "DELETED" and d.get("timestamp", 0) >= cutoff
+    )
+
+    # 2. From published_product_timestamps
+    p_ts = state.get("published_product_timestamps", {})
+    count_2 = sum(1 for ts in p_ts.values() if ts >= cutoff)
+
+    return max(count_1, count_2)
+
+def is_recent_deal_flow_heavy(hours: float = 4.0, threshold: int = 3) -> bool:
+    """Returns True if deals are currently flowing heavily (>= 3 in last 4h or >= 5 in last 8h)."""
+    count_4h = get_recent_deals_count(hours=hours)
+    count_8h = get_recent_deals_count(hours=8.0)
+    return (count_4h >= threshold) or (count_8h >= 5)
+
+async def is_france_cross_promo_eligible(min_hours: float = 48.0, force: bool = False) -> Tuple[bool, str]:
+    """
+    Checks if the French channel (@francedealsdz) cross-marketing post is eligible in @DzAliexpress0:
+    - User Rule 1: NEVER post marketing if deals are getting posted heavily (keeps channel clean for deals).
+    - User Rule 2: Post at random times, specifically at night or on days/hours where no deals are getting posted.
+    - User Rule 3: Enforce randomized cooldown (48-96 hours with random jitter).
+    - Safety: Inspect live channel messages so @francedealsdz is not duplicated.
+    """
+    if force:
+        return True, "Eligible (forced by user/admin)"
+
+    state = load_persistent_state()
+    now = time.time()
+
+    # 1. Strict Deal Velocity Check: NEVER do marketing when deals are posted heavy!
+    if is_recent_deal_flow_heavy(hours=4.0, threshold=3):
+        return False, "Heavy deal velocity in last 4-8h: skipping marketing to keep channel deal-focused"
+
+    # Avoid interrupting if a deal was published very recently (< 45 minutes)
+    last_deal_time = state.get("schedule_config", {}).get("last_deal_post_time", 0.0)
+    if not last_deal_time:
+        last_deal_time = state.get("last_run_time", 0.0)
+    if last_deal_time > 0 and (now - last_deal_time) < (45 * 60):
+        return False, "Recent deal posted within last 45 minutes: pausing cross-promotion"
+
+    # 2. Randomized Cooldown Check (48 to 96 hours with jitter)
+    last_promo_time = state.get("last_france_cross_promo_time", 0.0)
+    jitter_seconds = state.get("next_france_cross_promo_interval_seconds", int(min_hours * 3600))
+    elapsed = now - last_promo_time
+    if elapsed < jitter_seconds:
+        hours_left = (jitter_seconds - elapsed) / 3600.0
+        return False, f"France cross-promo cooldown active ({hours_left:.1f} hours remaining)"
+
+    # 3. Context & Timing Slot Check:
+    # Preferred slots:
+    # A) Night hours (22:00 to 02:30 Algiers time UTC+1)
+    # B) Slow period / drought where no deals were posted for >= 6 hours
+    dz_tz = timezone(timedelta(hours=1))
+    now_dz = datetime.now(dz_tz)
+    hour = now_dz.hour
+    is_night_slot = (hour >= 22) or (hour <= 2)
+
+    deals_in_last_6h = get_recent_deals_count(hours=6.0)
+    is_slow_day_slot = (deals_in_last_6h == 0)
+
+    if not is_night_slot and not is_slow_day_slot:
+        return False, "Timing slot inactive: cross-promotion runs strictly during quiet night hours or during slow periods without deals"
+
+    # 4. Live Channel Safety Net: verify @francedealsdz is not already visible in last 15 posts
+    await refresh_channel_cache()
+    for t in _CACHED_CHANNEL_TEXTS:
+        if any(k in t for k in ["@francedealsdz", "francedealsdz", "صفقات فرنسا وأوروبا", "عروض فرنسا وأوروبا"]):
+            state["last_france_cross_promo_time"] = now
+            save_persistent_state(state)
+            return False, "France channel cross-promo already visible in recent channel feed"
+
+    return True, "France cross-promo eligible for publication"
+
+def record_france_cross_promo_published(variant_idx: int):
+    """Records that a France cross-promo post was published, rotating variant and setting randomized jitter (48-96h)."""
+    import random
+    state = load_persistent_state()
+    now = time.time()
+    state["last_france_cross_promo_time"] = now
+    # Randomized interval: 48h to 96h (2 to 4 days)
+    state["next_france_cross_promo_interval_seconds"] = random.randint(48 * 3600, 96 * 3600)
+    state["france_cross_promo_variant_idx"] = variant_idx
+    save_persistent_state(state)
+
 # ── Religious & Spiritual Reminders Tracking (Jumuah, Fajr, etc.) ────
 def is_religious_reminder_eligible(reminder_type: str, date_str: str) -> bool:
     """Checks if a religious reminder (e.g. 'jumuah', 'fajr', 'jumuah_asr') has already been posted today."""
