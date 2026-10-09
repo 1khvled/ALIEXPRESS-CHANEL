@@ -44,11 +44,11 @@
     "is_major": true,
     "coupon_tiers": [
       {
-        "tier": "04/35$",
+        "tier": "4/35$",
         "code": "BDQT04"
       },
       {
-        "tier": "06/59$",
+        "tier": "6/59$",
         "code": "BDQT06"
       },
       {
@@ -62,6 +62,10 @@
       {
         "tier": "30/269$",
         "code": "BDQT30"
+      },
+      {
+        "tier": "15/139$",
+        "code": "BDQT"
       }
     ],
     "coupon_tiers_fr": [],
