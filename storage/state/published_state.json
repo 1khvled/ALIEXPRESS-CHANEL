@@ -1474,19 +1474,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32855,
-      "last_check_time": 1791539147.9178941
+      "last_check_time": 1791539485.9098184
     },
     "ecksdeal": {
       "last_message_id": 5879,
-      "last_check_time": 1791539133.1625452
+      "last_check_time": 1791539472.7994812
     },
     "lodydeals": {
       "last_message_id": 45516,
-      "last_check_time": 1791539132.3417869
+      "last_check_time": 1791539472.096766
     },
     "bnddeals": {
-      "last_message_id": 50819,
-      "last_check_time": 1791536737.400072
+      "last_message_id": 50820,
+      "last_check_time": 1791539484.8785355
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1494,19 +1494,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7974,
-      "last_check_time": 1791539133.6183815
+      "last_check_time": 1791539473.150533
     },
     "zedstoreonline": {
       "last_message_id": 38561,
-      "last_check_time": 1791539132.7647672
+      "last_check_time": 1791539472.4662313
     },
     "megaphonna": {
       "last_message_id": 8310,
-      "last_check_time": 1791539147.2300162
+      "last_check_time": 1791539485.4618382
     },
     "couponsglobal": {
       "last_message_id": 48831,
-      "last_check_time": 1791539148.434577
+      "last_check_time": 1791539486.2572656
     }
   },
   "published_product_prices": {
@@ -4509,10 +4509,10 @@
     "night_mode_enabled": true,
     "night_pause_enabled": true,
     "last_deal_post_time": 1791482972.0881739,
-    "last_sweep_time": 1791539151.3139806,
+    "last_sweep_time": 1791539488.515403,
     "last_sweep_times": {
-      "algeria": 1791539148.4418926,
-      "france": 1791539151.3139806
+      "algeria": 1791539486.2636669,
+      "france": 1791539488.515403
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
@@ -5174,6 +5174,7 @@
     "lodydeals:45516",
     "megaphonna:8310",
     "ecksdeal:5879",
-    "aniscoupons:32855"
+    "aniscoupons:32855",
+    "bnddeals:50820"
   ]
 }
