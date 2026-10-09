@@ -19,13 +19,18 @@ from urllib.parse import urlparse, parse_qs
 import httpx
 from aliexpress_api import AliexpressApi, models
 
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+try:
+    from app.config.settings import settings as _app_settings
+except Exception:
+    _app_settings = None
 
-ALIEXPRESS_AFFILIATE_APP_KEY = os.getenv("ALIEXPRESS_AFFILIATE_APP_KEY", "")
-ALIEXPRESS_AFFILIATE_APP_SECRET = os.getenv("ALIEXPRESS_AFFILIATE_APP_SECRET", "")
-ALIEXPRESS_AFFILIATE_TRACKING_ID = os.getenv("ALIEXPRESS_AFFILIATE_TRACKING_ID", "")
-TARGET_CHANNEL_ID = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
-PRIMARY_ADMIN_ID = int(os.getenv("ADMIN_USER_ID", "0") or 0)
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "") or getattr(_app_settings, "TELEGRAM_BOT_TOKEN", "") or ""
+
+ALIEXPRESS_AFFILIATE_APP_KEY = os.getenv("ALIEXPRESS_AFFILIATE_APP_KEY", "") or getattr(_app_settings, "ALIEXPRESS_AFFILIATE_APP_KEY", "") or ""
+ALIEXPRESS_AFFILIATE_APP_SECRET = os.getenv("ALIEXPRESS_AFFILIATE_APP_SECRET", "") or getattr(_app_settings, "ALIEXPRESS_AFFILIATE_APP_SECRET", "") or ""
+ALIEXPRESS_AFFILIATE_TRACKING_ID = os.getenv("ALIEXPRESS_AFFILIATE_TRACKING_ID", "") or getattr(_app_settings, "ALIEXPRESS_AFFILIATE_TRACKING_ID", "") or ""
+TARGET_CHANNEL_ID = getattr(_app_settings, "TELEGRAM_CHANNEL", None) or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+PRIMARY_ADMIN_ID = int(os.getenv("ADMIN_USER_ID", "0") or getattr(_app_settings, "ADMIN_USER_ID", 0) or 0)
 
 def is_admin(user_id: int) -> bool:
     """Checks if the given Telegram user ID is an authorized admin."""

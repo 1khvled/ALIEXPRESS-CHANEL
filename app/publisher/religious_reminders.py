@@ -14,15 +14,19 @@ from datetime import datetime, timezone, timedelta
 from typing import Optional, Tuple, Dict, Any, List
 import httpx
 
+from app.config.settings import settings
 from app.utils.logger import logger, record_system_log
+from app.utils.network import enforce_ipv4
 from app.publisher.state_tracker import (
     is_religious_reminder_eligible,
     record_religious_reminder_published
 )
 
-TARGET_CHANNEL_ID = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "")
+enforce_ipv4()
+
+TARGET_CHANNEL_ID = getattr(settings, "TARGET_CHANNEL_ID", None) or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+TELEGRAM_BOT_TOKEN = getattr(settings, "TELEGRAM_BOT_TOKEN", None) or os.getenv("TELEGRAM_BOT_TOKEN", "")
+ADMIN_BOT_TOKEN = getattr(settings, "ADMIN_BOT_TOKEN", None) or os.getenv("ADMIN_BOT_TOKEN", "")
 
 DZ_TIMEZONE = timezone(timedelta(hours=1))  # Algeria time is UTC+1 all year round
 
@@ -128,16 +132,73 @@ FAJR_VARIANTS = [
 ]
 
 
+# ── 4. Random Daily Dhikr & Spiritual Reminders (أذكار وأدعية مأثورة) ─────
+RANDOM_DHIKR_VARIANTS = [
+    {
+        "text": """﷽
+<b>﴿أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ﴾</b> 🤍🌿
+
+قال رسول الله ﷺ:
+<i>«كَلِمَتَانِ خَفِيفَتَانِ عَلَى اللِّسَانِ، ثَقِيلَتَانِ فِي الْمِيزَانِ، حَبِيبَتَانِ إِلَى الرَّحْمَنِ: سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ»</i> ✨
+
+<b>عطّروا ألسنتكم بذكر الله والصلاة على النبي ﷺ 🤲</b>""",
+        "keyboard": {
+            "inline_keyboard": [
+                [{"text": "📖 حصن المسلم والأذكار", "url": "https://sunnah.com"}]
+            ]
+        }
+    },
+    {
+        "text": """﷽
+<b>﴿فَقُلْتُ اسْتَغْفِرُوا رَبَّكُمْ إِنَّهُ كَانَ غَفَّارًا ۝ يُرْسِلِ السَّمَاءَ عَلَيْكُم مِّدْرَارًا ۝ وَيُمْدِدْكُم بِأَمْوَالٍ وَبَنِينَ وَيَجْعَل لَّكُمْ جَنَّاتٍ وَيَجْعَل لَّكُمْ أَنْهَارًا﴾</b> 🤲🤍
+
+<i>«أستغفر الله العظيم الذي لا إله إلا هو الحي القيوم وأتوب إليه»</i> ✨
+
+استغفار يفرّج الهم، ويجلب الرزق، ويبعث السكينة في النفوس.. لا تغفلوا عنه في زحام يومكم 🌿""",
+        "keyboard": {
+            "inline_keyboard": [
+                [{"text": "🤲 أدعية وتسابيح مأثورة", "url": "https://sunnah.com"}]
+            ]
+        }
+    },
+    {
+        "text": """﷽
+<b>﴿وَتَوَكَّلْ عَلَى الْحَيِّ الَّذِي لَا يَمُوتُ وَسَبِّحْ بِحَمْدِهِ﴾</b> 🤍✨
+
+قال رسول الله ﷺ:
+<i>«مَا مِنْ يَوْمٍ يُصْبِحُ الْعِبَادُ فِيهِ إِلاَّ مَلَكَانِ يَنْزِلاَنِ فَيَقُولُ أَحَدُهُمَا: اللَّهُمَّ أَعْطِ مُنْفِقًا خَلَفًا، وَيَقُولُ الآخَرُ: اللَّهُمَّ أَعْطِ مُمْسِكًا تَلَفًا»</i> 🌿
+
+اللهم إنا نسألك رزقاً طيباً، وعملاً متقبلاً، وشفاءً لكل مريض، وفرجاً لكل صابر 🤲""",
+        "keyboard": {
+            "inline_keyboard": [
+                [{"text": "🤍 أدعية جامعة وأذكار", "url": "https://sunnah.com"}]
+            ]
+        }
+    },
+    {
+        "text": """<b>لا حَوْلَ وَلا قُوَّةَ إِلاَّ بِاللَّهِ العَلِيِّ العَظِيم 🤍🌿</b>
+
+كنزٌ من كنوز الجنة، ومفتاح لكل بابٍ مغلق، وتفريجٌ لكل كربٍ وهم..
+استعينوا بالله في كل أموركم، وتوكلوا عليه وحده، فما خاب من فوّض أمره إلى الله 🤲✨""",
+        "keyboard": {
+            "inline_keyboard": [
+                [{"text": "📖 تلاوات وأدعية مأثورة", "url": "https://quran.com"}]
+            ]
+        }
+    }
+]
+
+
 async def post_religious_reminder(
     reminder_type: str,
     bot_token: Optional[str] = None
 ) -> Tuple[bool, Optional[str], Optional[int]]:
     """
     Publishes a specified religious reminder to @DzAliexpress0.
-    reminder_type: 'jumuah' | 'jumuah_asr' | 'fajr'
+    reminder_type: 'jumuah' | 'jumuah_asr' | 'fajr' | 'daily_dhikr'
     """
-    token = bot_token or ADMIN_BOT_TOKEN or TELEGRAM_BOT_TOKEN
-    target_channel = TARGET_CHANNEL_ID
+    token = bot_token or getattr(settings, "TELEGRAM_BOT_TOKEN", None) or getattr(settings, "ADMIN_BOT_TOKEN", None) or TELEGRAM_BOT_TOKEN or ADMIN_BOT_TOKEN
+    target_channel = getattr(settings, "TARGET_CHANNEL_ID", None) or TARGET_CHANNEL_ID
     if not token or not target_channel:
         return False, "Telegram Bot Token or Target Channel not configured", None
 
@@ -151,12 +212,16 @@ async def post_religious_reminder(
         variant = random.choice(FAJR_VARIANTS)
         text = variant["text"]
         markup = variant["keyboard"]
+    elif reminder_type in ("daily_dhikr", "random_adhkar"):
+        variant = random.choice(RANDOM_DHIKR_VARIANTS)
+        text = variant["text"]
+        markup = variant["keyboard"]
     else:
         return False, f"Unknown reminder type: {reminder_type}", None
 
     api_url = f"https://api.telegram.org/bot{token}"
     try:
-        async with httpx.AsyncClient(timeout=10.0) as client:
+        async with httpx.AsyncClient(timeout=15.0) as client:
             resp = await client.post(
                 f"{api_url}/sendMessage",
                 json={
@@ -197,9 +262,10 @@ async def check_and_auto_post_religious_reminders(
 ) -> List[Dict[str, Any]]:
     """
     Evaluates current Algerian time and publishes religious reminders if eligible:
-    - Jumu'ah Morning: Fridays between 07:00 and 14:00 (or if forced on Friday).
+    - Jumu'ah Morning: Fridays between 07:00 and 15:00 (or if forced on Friday).
     - Jumu'ah Asr: Fridays between 15:30 and 18:30 (Hour of response).
     - Fajr Prayer: Daily between 04:30 and 05:45 AM (Dawn).
+    - Random Daily Dhikr: Daily on non-Fridays between 11:00 and 21:00.
     """
     now_dz = datetime.now(DZ_TIMEZONE)
     today_str = now_dz.strftime("%Y-%m-%d")
@@ -212,8 +278,8 @@ async def check_and_auto_post_religious_reminders(
 
     # 1. Friday Morning Reminder (الصلاة على النبي ﷺ وسنن الجمعة)
     if is_friday:
-        # Eligible between 07:00 and 14:30 Algeria time, or if forced
-        in_jumuah_morning_window = (7.0 <= current_time_float <= 14.5)
+        # Eligible between 07:00 and 15:00 Algeria time, or if forced
+        in_jumuah_morning_window = (7.0 <= current_time_float <= 15.0)
         if in_jumuah_morning_window or force:
             if is_religious_reminder_eligible("jumuah", today_str) or force:
                 success, err, msg_id = await post_religious_reminder("jumuah", bot_token)
@@ -248,5 +314,18 @@ async def check_and_auto_post_religious_reminders(
                 "error": err,
                 "message_id": msg_id
             })
+
+    # 4. Random Daily Dhikr & Spiritual Reminders (On non-Fridays)
+    if not is_friday:
+        in_dhikr_window = (11.0 <= current_time_float <= 21.0)
+        if in_dhikr_window or force:
+            if is_religious_reminder_eligible("daily_dhikr", today_str) or force:
+                success, err, msg_id = await post_religious_reminder("daily_dhikr", bot_token)
+                results.append({
+                    "type": "daily_dhikr",
+                    "success": success,
+                    "error": err,
+                    "message_id": msg_id
+                })
 
     return results

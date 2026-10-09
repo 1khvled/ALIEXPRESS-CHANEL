@@ -34,7 +34,12 @@ from api.coin_bot import (
     PRIMARY_ADMIN_ID
 )
 
-ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "")
+try:
+    from app.config.settings import settings as _app_settings
+except Exception:
+    _app_settings = None
+
+ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "") or getattr(_app_settings, "ADMIN_BOT_TOKEN", "") or ""
 PUBLIC_BOT_USERNAME = "Alilo07BOT"
 
 _caption_generator = DealCaptionGenerator()

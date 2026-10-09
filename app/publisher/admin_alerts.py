@@ -12,14 +12,21 @@ from typing import Optional, Dict
 import httpx
 from app.config.settings import settings
 from app.utils.logger import logger
+from app.utils.network import enforce_ipv4
 
 # In-memory cooldown cache: {error_key: last_sent_timestamp}
 _ALERT_COOLDOWN_CACHE: Dict[str, float] = {}
 COOLDOWN_SECONDS = 900.0  # 15 minutes cooldown for identical errors
 
 def get_admin_credentials():
-    token = os.getenv("ADMIN_BOT_TOKEN") or os.getenv("TELEGRAM_BOT_TOKEN") or ""
-    admin_id_raw = os.getenv("ADMIN_USER_ID") or getattr(settings, "ADMIN_USER_ID", None)
+    token = (
+        getattr(settings, "ADMIN_BOT_TOKEN", None)
+        or getattr(settings, "TELEGRAM_BOT_TOKEN", None)
+        or os.getenv("ADMIN_BOT_TOKEN")
+        or os.getenv("TELEGRAM_BOT_TOKEN")
+        or ""
+    )
+    admin_id_raw = getattr(settings, "ADMIN_USER_ID", None) or os.getenv("ADMIN_USER_ID")
     admin_id = None
     if admin_id_raw:
         try:
@@ -80,6 +87,7 @@ async def notify_admin_error(
     }
 
     try:
+        enforce_ipv4()
         async with httpx.AsyncClient(timeout=8.0) as client:
             resp = await client.post(
                 f"https://api.telegram.org/bot{token}/sendMessage",

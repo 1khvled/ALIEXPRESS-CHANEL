@@ -356,10 +356,10 @@ def parse_promo_dates(text: str, default_year: Optional[int] = None) -> Optional
             except ValueError:
                 pass
 
-    # Pattern 2: Across two different months
-    # e.g. 'من 24 نوفمبر إلى 1 ديسمبر 2026', 'du 24 nov au 1er dec', 'Nov 24 to Dec 1'
+    # Pattern 2: Across two different months or with verbose connectors
+    # e.g. 'من 24 نوفمبر إلى 1 ديسمبر 2026', 'تنطلق 01 أكتوبر وتستمر إلى غاية 07 أكتوبر', 'du 24 nov au 1er dec', 'Nov 24 to Dec 1'
     p2 = re.search(
-        r'(?:من|du|from)?\s*([0-9]{1,2})(?:er|st|nd|rd|th)?\s*([^\W0-9_]+)\s*(?:إلى|الى|حتى|au|à|to|-)\s*([0-9]{1,2})(?:er|st|nd|rd|th)?\s*([^\W0-9_]+)(?:\s*([0-9]{4}))?',
+        r'(?:من|du|from)?\s*([0-9]{1,2})(?:er|st|nd|rd|th)?\s*([^\W0-9_]+)\s*(?:وتستمر\s+)?(?:إلى|الى|حتى|وحتى|au|à|to|-)\s*(?:غاية\s+)?([0-9]{1,2})(?:er|st|nd|rd|th)?\s*([^\W0-9_]+)(?:\s*([0-9]{4}))?',
         clean_text,
         re.IGNORECASE
     )
@@ -686,16 +686,11 @@ def sniff_event_from_text(
     # Determine dates
     if date_range:
         start_date, end_date = date_range
-        # If the discovered event has already ended, do not register it!
-        if end_date <= now:
-            return None
     elif matched_pattern and matched_pattern["key"] == "choice_day":
-        # Choice Day runs strictly 1st - 7th of the month. On or after the 8th, it has ended!
+        # Choice Day runs strictly 1st - 7th of the month.
         if now.day < 8:
             start_date = datetime(now.year, now.month, 1, 7, 0, 0, tzinfo=timezone.utc)
             end_date = datetime(now.year, now.month, 7, 23, 59, 59, tzinfo=timezone.utc)
-            if end_date <= now:
-                return None
         else:
             m_next = (now.month % 12) + 1
             yr_next = now.year if m_next > 1 else now.year + 1
@@ -704,8 +699,6 @@ def sniff_event_from_text(
     elif matched_pattern and matched_pattern["key"] == "brand_day":
         start_date = datetime(now.year, now.month, 9, 7, 0, 0, tzinfo=timezone.utc)
         end_date = datetime(now.year, now.month, 13, 6, 59, 59, tzinfo=timezone.utc)
-        if end_date <= now:
-            return None
     else:
         return None
 
@@ -938,6 +931,9 @@ class PromoTracker:
         """
         discovered = sniff_event_from_text(text, media_url=media_url, campaign_url=campaign_url)
         if not discovered:
+            return None
+        if discovered.end_date <= datetime.now(timezone.utc):
+            logger.info(f"[EVENT KNOWER] Discovered event has already ended ({discovered.name}), skipping registration.")
             return None
 
         # Check if already present in dynamic_events

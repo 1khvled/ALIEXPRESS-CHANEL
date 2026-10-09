@@ -343,14 +343,15 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                             now_dz = datetime.now(timezone(timedelta(hours=1)))
                             today_str = now_dz.strftime("%Y-%m-%d")
                             if is_channel_announcement_eligible(ann_tag, today_str):
-                                token = os.getenv("TELEGRAM_BOT_TOKEN") or os.getenv("ADMIN_BOT_TOKEN")
+                                token = getattr(settings, "TELEGRAM_BOT_TOKEN", None) or getattr(settings, "ADMIN_BOT_TOKEN", None) or os.getenv("TELEGRAM_BOT_TOKEN") or os.getenv("ADMIN_BOT_TOKEN")
                                 if token:
                                     try:
+                                        target_chat = getattr(settings, "TARGET_CHANNEL_ID", None) or getattr(settings, "TELEGRAM_CHANNEL", None) or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
                                         async with httpx.AsyncClient(timeout=10.0) as client:
                                             resp = await client.post(
                                                 f"https://api.telegram.org/bot{token}/sendMessage",
                                                 json={
-                                                    "chat_id": settings.TARGET_CHANNEL_ID,
+                                                    "chat_id": target_chat,
                                                     "text": ann_text,
                                                     "parse_mode": "HTML",
                                                     "disable_web_page_preview": True

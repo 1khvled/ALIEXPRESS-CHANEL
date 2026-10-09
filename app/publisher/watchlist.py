@@ -10,7 +10,9 @@ from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime, timezone
 import httpx
 
+from app.config.settings import settings
 from app.utils.logger import logger
+from app.utils.network import enforce_ipv4
 
 WATCHLIST_FILE = os.path.join(
     os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
@@ -135,12 +137,19 @@ async def notify_watchlist_users(
     Checks if any users are watching this product_id and alerts them if new_price <= watched_price.
     Returns the count of successfully alerted users.
     """
-    token = bot_token or os.getenv("TELEGRAM_BOT_TOKEN", "")
+    token = (
+        bot_token
+        or getattr(settings, "TELEGRAM_BOT_TOKEN", None)
+        or getattr(settings, "ADMIN_BOT_TOKEN", None)
+        or os.getenv("TELEGRAM_BOT_TOKEN", "")
+    )
     data = load_watchlist_data()
     pid_str = str(product_id).strip()
 
     user_ids = data.get("products", {}).get(pid_str, [])
-    if not user_ids:
+    if not user_ids or not token:
+        if not token and user_ids:
+            logger.warning(f"Skipping watchlist alerts for product {pid_str}: No Telegram bot token configured.")
         return 0
 
     dzd_approx = int(new_price * 249) if new_price else 0
@@ -164,6 +173,7 @@ async def notify_watchlist_users(
     }
 
     alerted_count = 0
+    enforce_ipv4()
     async with httpx.AsyncClient(timeout=6.0) as client:
         for uid in user_ids:
             try:

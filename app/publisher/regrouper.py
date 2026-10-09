@@ -477,6 +477,8 @@ def group_items_by_brand(items: List[Dict[str, Any]]) -> Dict[str, List[Dict[str
         brand_groups[brand].append(item)
     return brand_groups
 
+def format_deal_line(item: Dict[str, Any], channel_username: str, index: int = 1) -> str:
+    """Formats a single product line matching the sleek Megaprix index style: ⭐️ <link><b>Model</b></link> ⤵️ Price 💲"""
     title = clean_product_name_short(item.get("title") or "منتج مميز")
     price_val = float(item.get("price") or 0.0)
     cat = item.get("category") or ""

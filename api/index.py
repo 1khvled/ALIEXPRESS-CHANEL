@@ -1645,7 +1645,8 @@ async def telegram_admin_webhook(request: Request):
 async def set_telegram_webhook():
     """Sets the public Coin bot webhook to this Vercel deployment URL."""
     try:
-        token = os.getenv("TELEGRAM_BOT_TOKEN", "")
+        from api.coin_bot import TELEGRAM_BOT_TOKEN as _C_TOKEN
+        token = os.getenv("TELEGRAM_BOT_TOKEN", "") or _C_TOKEN
         webhook_url = "https://dealscout-green.vercel.app/api/webhook"
         async with httpx.AsyncClient(timeout=10.0) as client:
             resp = await client.post(
@@ -1661,7 +1662,8 @@ async def set_telegram_webhook():
 async def set_admin_telegram_webhook():
     """Sets the dedicated Admin bot webhook to this Vercel deployment URL."""
     try:
-        admin_token = os.getenv("ADMIN_BOT_TOKEN", "")
+        from api.coin_bot import ADMIN_BOT_TOKEN as _A_TOKEN
+        admin_token = os.getenv("ADMIN_BOT_TOKEN", "") or _A_TOKEN
         webhook_url = "https://dealscout-green.vercel.app/api/admin-webhook"
         async with httpx.AsyncClient(timeout=10.0) as client:
             resp = await client.post(
@@ -1676,7 +1678,8 @@ async def set_admin_telegram_webhook():
 @app.get("/api/test-bot")
 async def test_bot_connectivity():
     """Tests bot connectivity and returns bot profile from Telegram API."""
-    coin_token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+    from api.coin_bot import TELEGRAM_BOT_TOKEN as _C_TOKEN
+    coin_token = (os.getenv("TELEGRAM_BOT_TOKEN", "") or _C_TOKEN).strip()
     if not coin_token:
         return {"ok": False, "error": "TELEGRAM_BOT_TOKEN is not configured on Vercel."}
     async with httpx.AsyncClient(timeout=10.0) as client:

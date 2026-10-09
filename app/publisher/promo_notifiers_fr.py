@@ -147,21 +147,6 @@ def build_france_promo_launch_alert(promo: PromoEvent, start_hour_paris: str = "
             "📢 <b>Canal :</b> @francedealsdz"
         ]
     return "\n".join(lines), {}
-        "",
-        *coupon_lines,
-        "",
-        "💳 <b>Astuce PayPal :</b> Jusqu'à <b>-33€ supplémentaires</b> au paiement !",
-        "",
-        "⭕️ <b>Verrouillez tous les codes sur votre compte dès maintenant :</b>",
-        "⚠️ <b>Commencez par les gros codes (-60€, -45€...)</b> puis appliquez les suivants !",
-        "",
-        "🔹 <b>Lien du produit pour lier tous les codes à votre panier ⤵️</b>",
-        "https://s.click.aliexpress.com/e/_c2QPADRL",
-        "",
-        "🤖 <b>Utilisez le bot avant d'acheter :</b> @Alilo07BOT",
-        "📢 <b>Canal :</b> @francedealsdz"
-    ]
-    return "\n".join(lines), {}
 
 def build_france_promo_ending_alert(promo: PromoEvent, end_hour_paris: str = "08:59") -> Tuple[str, Dict[str, Any]]:
     """

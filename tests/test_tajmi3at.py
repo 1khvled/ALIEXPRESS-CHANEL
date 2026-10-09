@@ -181,8 +181,19 @@ async def test_check_and_publish_skips_outside_window():
 async def test_ensure_active_promo_coupons_pinned_dz(tmp_path):
     """Verifies that during an active promo, the official coupon post is published and pinned for Algeria."""
     from app.publisher.promo_notifiers import ensure_active_promo_coupons_pinned
+    from app.aliexpress.promos import PromoEvent
+    mock_promo = PromoEvent(
+        name="Choice Day",
+        name_ar="Choice Day",
+        start_date=datetime(2026, 10, 1, tzinfo=timezone.utc),
+        end_date=datetime(2026, 10, 8, tzinfo=timezone.utc),
+        banner_tag="tag",
+        is_major=True,
+        coupon_tiers=[{"tier": "5$", "code": "CD05"}]
+    )
     test_state = str(tmp_path / "published_state.json")
     with patch("app.publisher.state_tracker.STATE_FILE_PATH", test_state), \
+         patch("app.publisher.promo_notifiers.promo_tracker.get_active_promo", return_value=mock_promo), \
          patch("app.publisher.promo_notifiers.send_promo_alert_to_channel", return_value=(True, None, 888)), \
          patch("httpx.AsyncClient.post") as mock_post:
         resp = MagicMock()
@@ -202,8 +213,20 @@ async def test_ensure_active_promo_coupons_pinned_dz(tmp_path):
 async def test_ensure_active_promo_coupons_pinned_france(tmp_path):
     """Verifies that during an active promo, the official French coupon post is published and pinned for France."""
     from app.publisher.promo_notifiers_fr import ensure_france_active_promo_coupons_pinned
+    from app.aliexpress.promos import PromoEvent
+    mock_promo = PromoEvent(
+        name="Choice Day",
+        name_ar="Choice Day",
+        start_date=datetime(2026, 10, 1, tzinfo=timezone.utc),
+        end_date=datetime(2026, 10, 8, tzinfo=timezone.utc),
+        banner_tag="tag",
+        is_major=True,
+        coupon_tiers=[],
+        coupon_tiers_fr=[{"tier": "5€", "code": "FRCD05"}]
+    )
     test_state = tmp_path / "france_published_state.json"
     with patch("app.publisher.promo_notifiers_fr.FRANCE_STATE_FILE_PATH", str(test_state)), \
+         patch("app.publisher.promo_notifiers_fr.promo_tracker.get_active_promo", return_value=mock_promo), \
          patch("app.publisher.promo_notifiers_fr.send_france_promo_alert", return_value=(True, None, 777)), \
          patch("httpx.AsyncClient.post") as mock_post:
         resp = MagicMock()

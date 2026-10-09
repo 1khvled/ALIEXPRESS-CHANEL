@@ -7,11 +7,13 @@ import os
 import time
 from typing import Tuple, Optional
 import httpx
+from app.config.settings import settings
 from app.utils.logger import logger
+from app.utils.network import enforce_ipv4
 
-TARGET_CHANNEL_ID = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "")
+TARGET_CHANNEL_ID = getattr(settings, "TELEGRAM_CHANNEL", None) or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+TELEGRAM_BOT_TOKEN = getattr(settings, "TELEGRAM_BOT_TOKEN", None) or os.getenv("TELEGRAM_BOT_TOKEN", "")
+ADMIN_BOT_TOKEN = getattr(settings, "ADMIN_BOT_TOKEN", None) or os.getenv("ADMIN_BOT_TOKEN", "")
 
 DISCLAIMER_TEXT = """❝ ❓ <b>لماذا يجب تغيير دولة التطبيق في AliExpress؟</b> ❞
 
@@ -64,7 +66,20 @@ async def publish_and_pin_disclaimer(bot_token: Optional[str] = None) -> Tuple[b
     """
     Publishes the region switching guide to @DzAliexpress0 and pins it in the channel.
     """
-    token = bot_token or ADMIN_BOT_TOKEN or TELEGRAM_BOT_TOKEN
+    enforce_ipv4()
+    token = (
+        bot_token
+        or ADMIN_BOT_TOKEN
+        or TELEGRAM_BOT_TOKEN
+        or getattr(settings, "ADMIN_BOT_TOKEN", None)
+        or getattr(settings, "TELEGRAM_BOT_TOKEN", None)
+        or os.getenv("TELEGRAM_BOT_TOKEN", "")
+    )
+    if not token:
+        logger.error("No Telegram Bot Token configured for region disclaimer.")
+        return False, "Bot token not configured", None
+
+    channel_id = TARGET_CHANNEL_ID or getattr(settings, "TELEGRAM_CHANNEL", None) or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
     api_url = f"https://api.telegram.org/bot{token}"
 
     try:
@@ -73,7 +88,7 @@ async def publish_and_pin_disclaimer(bot_token: Optional[str] = None) -> Tuple[b
             send_resp = await client.post(
                 f"{api_url}/sendMessage",
                 json={
-                    "chat_id": TARGET_CHANNEL_ID,
+                    "chat_id": channel_id,
                     "text": DISCLAIMER_TEXT,
                     "parse_mode": "HTML",
                     "reply_markup": DISCLAIMER_KEYBOARD,
@@ -93,12 +108,12 @@ async def publish_and_pin_disclaimer(bot_token: Optional[str] = None) -> Tuple[b
                 pin_resp = await client.post(
                     f"{api_url}/pinChatMessage",
                     json={
-                        "chat_id": TARGET_CHANNEL_ID,
+                        "chat_id": channel_id,
                         "message_id": msg_id,
                         "disable_notification": False
                     }
                 )
-                logger.info(f"Pinned region disclaimer #{msg_id} in {TARGET_CHANNEL_ID}: {pin_resp.status_code}")
+                logger.info(f"Pinned region disclaimer #{msg_id} in {channel_id}: {pin_resp.status_code}")
             except Exception as e:
                 logger.warning(f"Could not pin message #{msg_id}: {e}")
 

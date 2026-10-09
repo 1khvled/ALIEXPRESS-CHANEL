@@ -17,11 +17,12 @@ class DealCaptionGenerator:
         has_coupon: bool,
         promo_tag: Optional[str] = None,
         is_price_drop: bool = False,
-        is_restock: bool = False
+        is_restock: bool = False,
+        raw_text: Optional[str] = None
     ) -> str:
         """
         Generates authentic Algerian Telegram deal channel hooks.
-        Dynamically detects restocks/returns, subcategories (Gaming, Audio, Storage, Power, Wearables),
+        Dynamically detects restocks/returns, subcategories (Gaming, Phones, etc.),
         and price-drop drops.
         """
         h = int(hashlib.md5(title.encode()).hexdigest(), 16)
@@ -45,8 +46,25 @@ class DealCaptionGenerator:
             ]
             return price_drop_hooks[h % len(price_drop_hooks)]
 
-        # 3. High-Impact Deal Candidates (Versatile, authentic Algerian deal phrasing)
-        # Keeps the fire and batel energy toned down without shouting or random category hallucinations
+        # 3. Subcategory hooks: Gaming & Smartphones
+        t_lower = (title + " " + (raw_text or "")).lower()
+        if any(k in t_lower for k in ["shark", "mouse", "keyboard", "gamepad", "headset", "gaming", "قيمنق"]):
+            gaming_hooks = [
+                "🎮 <b>صيدة اليوم في عتاد قيمنق بسعر ممتاز متتراطاش 🔥⚡</b>",
+                "⚡ <b>عتاد قيمنق لافار ممتازة بأقوى سعر 🔥🎮</b>",
+                "🔥 <b>تخفيض قوي في عتاد قيمنق بسعر باطل 🔥🎮</b>"
+            ]
+            return gaming_hooks[h % len(gaming_hooks)]
+
+        if any(k in t_lower for k in ["realme", "xiaomi", "redmi", "poco", "infinix", "oneplus", "هاتف", "الهواتف", "phone"]):
+            phone_hooks = [
+                "📱 <b>صيدة اليوم في الهواتف مواصفات قوية وسعر ممتاز 🔥</b>",
+                "🔥 <b>هاتف بمواصفات قوية وسعر لافار ممتاز متتراطاش 🔥📱</b>",
+                "⚡ <b>عرض لافار ممتاز في عالم الهواتف متتفوتش 🔥📱</b>"
+            ]
+            return phone_hooks[h % len(phone_hooks)]
+
+        # 4. High-Impact Deal Candidates (Versatile, authentic Algerian deal phrasing)
         candidates = [
             "🔥 <b>لافار ممتازة بأقوى سعر 🔥</b>",
             "⚡ <b>تخفيض قوي بسعر باطل متتراطاش 🔥</b>",
@@ -214,16 +232,17 @@ class DealCaptionGenerator:
         # 1. Authentic Algerian Deal Hook — Only include if source channel actually included one!
         # Rule from user: "stop calling eveything affaire takhfid istina2i if those channels do it u do it if they dont u dont"
         has_source_hook = False
-        if is_restock or is_price_drop:
+        if raw_text is None or is_restock or is_price_drop:
             has_source_hook = True
         elif raw_text:
             first_lines = " ".join(raw_text.splitlines()[:3]).lower()
+            clean_first = re.sub(r'[\u0640]', '', first_lines)
             hook_keywords = [
-                "لافار", "لافــــار", "تخفيض", "سعر خيالي", "عرض اليوم", "باطل", "صيدة",
+                "لافار", "تخفيض", "سعر خيالي", "عرض اليوم", "باطل", "صيدة",
                 "همزة", "ممتاز", "استثنائي", "سعر هبال", "طاح السعر", "أقوى سعر", "افار",
-                "affaire", "promotion", "promo", "bon plan"
+                "affaire", "promotion", "promo", "bon plan", "اجري", "أجري"
             ]
-            if any(k in first_lines for k in hook_keywords):
+            if any(k in clean_first for k in hook_keywords):
                 has_source_hook = True
 
         if has_source_hook:
@@ -247,7 +266,8 @@ class DealCaptionGenerator:
                     has_coupon=bool(coupon_code or seller_coupon),
                     promo_tag=None,
                     is_price_drop=is_price_drop,
-                    is_restock=is_restock
+                    is_restock=is_restock,
+                    raw_text=raw_text
                 )
             if hook:
                 lines.append(f"<blockquote>{hook}</blockquote>")

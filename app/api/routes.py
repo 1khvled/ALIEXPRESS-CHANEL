@@ -262,10 +262,16 @@ class PublishDealRequest(BaseModel):
 async def publish_deal_endpoint(payload: PublishDealRequest):
     import os
     import httpx
+    from app.utils.network import enforce_ipv4
     from api.admin_bot import ADMIN_BOT_TOKEN, TARGET_CHANNEL_ID, PUBLIC_BOT_USERNAME
     from api.coin_bot import ensure_affiliate
 
-    token = ADMIN_BOT_TOKEN or os.getenv("TELEGRAM_BOT_TOKEN", "")
+    token = (
+        ADMIN_BOT_TOKEN
+        or getattr(settings, "ADMIN_BOT_TOKEN", None)
+        or getattr(settings, "TELEGRAM_BOT_TOKEN", None)
+        or os.getenv("TELEGRAM_BOT_TOKEN", "")
+    )
     if not token:
         raise HTTPException(status_code=500, detail="Bot token not configured")
 
@@ -281,6 +287,7 @@ async def publish_deal_endpoint(payload: PublishDealRequest):
         ]
     }
 
+    enforce_ipv4()
     api_url = f"https://api.telegram.org/bot{token}"
     async with httpx.AsyncClient(timeout=15.0) as client:
         if payload.image_url:
