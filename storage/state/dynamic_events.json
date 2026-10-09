@@ -33,40 +33,5 @@
     "banner_image_url": "https://cdn4.telesco.pe/file/pObaL7ttUyuFvZKAHbuEg0O-K5dLc2nXIz1r-OOMpDggzd0arl_KozbWMNXvGWdqMOSdWfQkH4VmsYJp2ESw4CB-EfGmeSdzfuCcUEO8hsuxszh71r6adPKq-nUwKnWnQHvooSX0w6GtTDxE74L_Aoi9OvddskogeNsPo5zrbbPcj0ILVEKqPCzbp4VImUU1Cf3S1nZF_58W4e0Gtj7L7xVnx1IJBBghZFYYZJzmoVYuzh52yFS_pzU_E8dNBD79NJATYwSuA9fNI_nju4qEkeIHNdIJa8RbGnrDwZO05JP3BfhcoC6ZRmVssOn1eYV2G2oMds8wdCyAKpAWs-XX9g.jpg",
     "source": "discovered",
     "event_key": "Brand_Day_Sale_Octobre_2026_20261009"
-  },
-  {
-    "name": "Brand Day Sale Octobre 2026",
-    "name_ar": "مهرجان Brand Day للعلامات التجارية 🏷️ (أكتوبر 2026)",
-    "name_fr": "AliExpress Brand Day 🏷️ Octobre 2026",
-    "start_date": "2026-10-09T07:00:00+00:00",
-    "end_date": "2026-10-13T06:59:59+00:00",
-    "banner_tag": "🏷️ Brand Day Sale (9 - 12 أكتوبر)",
-    "is_major": true,
-    "coupon_tiers": [
-      {
-        "tier": "4/35$",
-        "code": "BDQT04"
-      },
-      {
-        "tier": "6/59$",
-        "code": "BDQT06"
-      },
-      {
-        "tier": "10/99$",
-        "code": "BDQT10"
-      },
-      {
-        "tier": "15/139$",
-        "code": "BDQT15"
-      },
-      {
-        "tier": "30/269$",
-        "code": "BDQT30"
-      }
-    ],
-    "coupon_tiers_fr": [],
-    "banner_image_url": "https://cdn4.telesco.pe/file/pObaL7ttUyuFvZKAHbuEg0O-K5dLc2nXIz1r-OOMpDggzd0arl_KozbWMNXvGWdqMOSdWfQkH4VmsYJp2ESw4CB-EfGmeSdzfuCcUEO8hsuxszh71r6adPKq-nUwKnWnQHvooSX0w6GtTDxE74L_Aoi9OvddskogeNsPo5zrbbPcj0ILVEKqPCzbp4VImUU1Cf3S1nZF_58W4e0Gtj7L7xVnx1IJBBghZFYYZJzmoVYuzh52yFS_pzU_E8dNBD79NJATYwSuA9fNI_nju4qEkeIHNdIJa8RbGnrDwZO05JP3BfhcoC6ZRmVssOn1eYV2G2oMds8wdCyAKpAWs-XX9g.jpg",
-    "source": "discovered",
-    "event_key": "Brand_Day_Sale_Octobre_2026_20261009"
   }
 ]
