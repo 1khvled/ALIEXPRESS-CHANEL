@@ -1,46 +1,47 @@
 {
   "published_post_keys": [
-    "francecp:427",
-    "francecp:429",
-    "francecp:417",
-    "promozonefr:236",
-    "francecp:413",
-    "francecp:423",
-    "promozonefr:240",
     "promozonefr:239",
-    "promozonefr:237",
-    "promozonefr:242",
     "francecp:419",
-    "promozonefr:238",
-    "alifrdrop:105",
-    "promozonefr:241",
-    "francecp:421",
-    "francecp:434",
-    "alifrdrop:103",
-    "alifrdrop:104",
-    "francecp:432",
-    "alifrdrop:102",
-    "francecp:416",
-    "francecp:433",
-    "francecp:430",
-    "francecp:431",
     "francecp:415",
-    "alifrdrop:106",
+    "alifrdrop:102",
     "francecp:418",
-    "francecp:414",
-    "francecp:426",
-    "francecp:428",
+    "francecp:417",
+    "francecp:413",
+    "promozonefr:238",
     "francecp:425",
+    "francecp:429",
+    "alifrdrop:103",
+    "francecp:416",
+    "francecp:424",
+    "francecp:427",
+    "francecp:423",
+    "promozonefr:241",
+    "promozonefr:237",
+    "alifrdrop:106",
+    "francecp:428",
+    "alifrdrop:105",
+    "francecp:432",
     "francecp:422",
+    "francecp:431",
+    "francecp:433",
+    "promozonefr:236",
+    "promozonefr:242",
+    "francecp:414",
+    "francecp:434",
+    "francecp:426",
+    "francecp:430",
+    "francecp:421",
+    "alifrdrop:104",
     "francecp:420",
-    "francecp:424"
+    "promozonefr:240",
+    "francecp:435"
   ],
   "published_product_ids": [
-    "1005012541048117",
-    "1005012155835323",
-    "1005012589045044",
     "1005009977303549",
-    "1005012218291528"
+    "1005012589045044",
+    "1005012155835323",
+    "1005012218291528",
+    "1005012541048117"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -124,8 +125,8 @@
   },
   "monitored_channels": {
     "francecp": {
-      "last_message_id": 434,
-      "last_check_time": 1791248445.188391
+      "last_message_id": 435,
+      "last_check_time": 1791585949.2970326
     },
     "alifrdrop": {
       "last_message_id": 106,
@@ -136,7 +137,7 @@
       "last_check_time": 1791162967.2944324
     }
   },
-  "last_run_time": 1791585648.7643337,
+  "last_run_time": 1791585949.681307,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001",
     "FR_LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
