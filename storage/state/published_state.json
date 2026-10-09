@@ -1472,7 +1472,7 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32856,
-      "last_check_time": 1791549938.003013
+      "last_check_time": 1791550247.4998507
     },
     "ecksdeal": {
       "last_message_id": 5879,
@@ -1480,11 +1480,11 @@
     },
     "lodydeals": {
       "last_message_id": 45516,
-      "last_check_time": 1791549926.2885818
+      "last_check_time": 1791550233.7868214
     },
     "bnddeals": {
       "last_message_id": 50820,
-      "last_check_time": 1791545403.6867456
+      "last_check_time": 1791550246.515002
     },
     "test_channel": {
       "last_message_id": 1791063864,
@@ -1492,19 +1492,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7974,
-      "last_check_time": 1791549927.2985644
+      "last_check_time": 1791550245.9618754
     },
     "zedstoreonline": {
       "last_message_id": 38562,
-      "last_check_time": 1791549926.6018112
+      "last_check_time": 1791550234.1760175
     },
     "megaphonna": {
       "last_message_id": 8310,
-      "last_check_time": 1791549937.6175363
+      "last_check_time": 1791550246.964311
     },
     "couponsglobal": {
       "last_message_id": 48831,
-      "last_check_time": 1791549938.332091
+      "last_check_time": 1791550247.8697429
     }
   },
   "published_product_prices": {
@@ -4507,10 +4507,10 @@
     "night_mode_enabled": true,
     "night_pause_enabled": true,
     "last_deal_post_time": 1791545428.7265484,
-    "last_sweep_time": 1791549940.6560442,
+    "last_sweep_time": 1791550250.7392316,
     "last_sweep_times": {
-      "algeria": 1791549938.33594,
-      "france": 1791549940.6560442
+      "algeria": 1791550247.8763602,
+      "france": 1791550250.7392316
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
@@ -5177,7 +5177,8 @@
     "bnddeals:50820",
     "aniscoupons:32855",
     "zedstoreonline:38562",
-    "aniscoupons:32856"
+    "aniscoupons:32856",
+    "bnddeals:50819"
   ],
   "last_france_cross_promo_time": 1791544610.263704,
   "next_france_cross_promo_interval_seconds": 319259,
