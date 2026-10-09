@@ -75,26 +75,46 @@ class DealCaptionGenerator:
     ) -> str:
         """
         Builds authentic Algerian coupon bulletin format matching ZedStore & Lody.
-        Dynamically detects active promo and enforces strict <= 1024 char limit for Telegram captions.
+        Accurately differentiates between live and upcoming events without false reservation claims.
         """
-        if not promo_name or promo_name == "Party Ready Sale":
-            try:
-                from app.aliexpress.promos import promo_tracker
-                active_promo = promo_tracker.get_active_promo()
-                if active_promo:
+        is_live = False
+        start_day_str = "12 أكتوبر"
+        try:
+            from app.aliexpress.promos import promo_tracker
+            active_promo = promo_tracker.get_active_promo()
+            if active_promo:
+                is_live = True
+                if not promo_name or promo_name == "Party Ready Sale":
                     promo_name = active_promo.name_ar or active_promo.name
+            else:
+                next_p = promo_tracker.get_next_promo()
+                if next_p and next_p[0]:
+                    target_promo = next_p[0]
+                    if not promo_name or promo_name == "Party Ready Sale":
+                        promo_name = target_promo.name_ar or target_promo.name
+                    start_day_str = f"{target_promo.start_date.day} أكتوبر"
                 else:
-                    promo_name = "AliExpress"
-            except Exception:
-                promo_name = "AliExpress"
+                    if not promo_name or promo_name == "Party Ready Sale":
+                        promo_name = "تخفيضات AliExpress"
+        except Exception:
+            if not promo_name or promo_name == "Party Ready Sale":
+                promo_name = "تخفيضات AliExpress"
 
         lines = [
             f"📣 <b>كوبونات خاصة بـ {promo_name}! 🚨</b>",
-            "⏰ <b>تنبيه:</b> الكميات محدودة وتنفد بسرعة.. احجزوا الكوبونات واستغلوها الآن! 🏃💨",
+        ]
+
+        if is_live:
+            lines.append("⏰ <b>تنبيه:</b> التخفيضات نشطة الآن والكميات محدودة.. استغلوا الكوبونات قبل نفادها! 🏃💨")
+        else:
+            lines.append(f"⏰ <b>تنبيه هام:</b> الكوبونات تبدأ العمل وتتفعل يوم <b>{start_day_str} على الساعة 08:00 صباحاً</b> بتوقيت الجزائر 🇩🇿")
+            lines.append("🔴 <b>احفظوا الكودات واستعملوها فور انطلاق التخفيضات</b> (الكميات محدودة وتنفد بسرعة) 🏃💨")
+
+        lines.extend([
             "",
             "✅ <b>قـائمة الكوبونـات المعتمدة:</b>",
             ""
-        ]
+        ])
 
         for item in coupon_items:
             tier = item.get("tier", "").strip()
@@ -107,9 +127,7 @@ class DealCaptionGenerator:
 
         lines.extend([
             "",
-            "⭕️ <b>طريقة حجز وتثبيت الكوبونات:</b>",
-            "⚠️ ابدأ دائماً بالكوبونات الكبيرة ثم البقية باه يبقاو في حسابك ✅",
-            "🔹 <b>رابط الدخول وتفعيل الكوبونات ⤵️</b>",
+            "🔹 <b>رابط تصفح العروض والمنتجات ⤵️</b>",
             f"{affiliate_url}",
             "",
             "😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات:</b>",

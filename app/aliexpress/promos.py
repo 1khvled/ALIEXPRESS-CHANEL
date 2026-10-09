@@ -229,9 +229,9 @@ PROMO_CALENDAR: List[PromoEvent] = [
         name="Brand Day Sale",
         name_ar="مهرجان Brand Day لشهر أكتوبر 🏷️",
         name_fr="Festival Brand Day Octobre 🏷️",
-        start_date=datetime(2026, 10, 9, 7, 0, 0, tzinfo=timezone.utc),
-        end_date=datetime(2026, 10, 13, 6, 59, 59, tzinfo=timezone.utc),
-        banner_tag="🏷️ Brand Day (9 - 12 أكتوبر)",
+        start_date=datetime(2026, 10, 12, 7, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 10, 16, 6, 59, 59, tzinfo=timezone.utc),
+        banner_tag="🏷️ Brand Day (12 - 15 أكتوبر)",
         is_major=True,
         coupon_tiers=[],
         source="baseline"
