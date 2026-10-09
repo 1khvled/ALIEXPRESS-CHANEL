@@ -4,7 +4,7 @@ Tracks official AliExpress sale festivals, Choice Day events, active coupons,
 and validates deal freshness to prevent posting expired deals or outdated coupons.
 
 Features:
-1. Perpetual Recurring Event Generator (Choice Day 1st-8th, Brand Day 9th-13th, Mega festivals).
+1. Perpetual Recurring Event Generator (Choice Day 1st-8th, Brand Day 12th-16th, Mega festivals).
 2. Autonomous Live Event Sniffer (Extracts event names, date ranges, and coupon tiers from Arabic, French, and English text).
 3. Persistent Dynamic Event Database (storage/state/dynamic_events.json).
 4. Auto-prioritizing Unified Calendar (Discovered > Baseline > Recurring).
@@ -526,16 +526,16 @@ def generate_recurring_promos(ref_date: Optional[datetime] = None, months_ahead:
             source="recurring"
         ))
 
-        # 2. BRAND DAY (9th to 13th)
-        b_start = datetime(yr, m, 9, 7, 0, 0, tzinfo=timezone.utc)
-        b_end = datetime(yr, m, 13, 6, 59, 59, tzinfo=timezone.utc)
+        # 2. BRAND DAY (12th to 16th)
+        b_start = datetime(yr, m, 12, 7, 0, 0, tzinfo=timezone.utc)
+        b_end = datetime(yr, m, 16, 6, 59, 59, tzinfo=timezone.utc)
         events.append(PromoEvent(
             name=f"Brand Day {fr_m} {yr}",
             name_ar=f"مهرجان Brand Day لشهر {ar_m} 🏷️",
             name_fr=f"AliExpress Brand Day {fr_m} 🏷️",
             start_date=b_start,
             end_date=b_end,
-            banner_tag=f"🏷️ Brand Day (9 - 12 {ar_m})",
+            banner_tag=f"🏷️ Brand Day (12 - 15 {ar_m})",
             is_major=True,
             coupon_tiers=[],
             coupon_tiers_fr=[],

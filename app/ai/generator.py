@@ -75,7 +75,7 @@ class DealCaptionGenerator:
     ) -> str:
         """
         Builds authentic Algerian coupon bulletin format matching ZedStore & Lody.
-        Accurately differentiates between live and upcoming events without false reservation claims.
+        Teases upcoming promo coupons with exact start date (e.g. 12th) and 7ajz tutorial.
         """
         is_live = False
         start_day_str = "12 أكتوبر"
@@ -100,21 +100,22 @@ class DealCaptionGenerator:
             if not promo_name or promo_name == "Party Ready Sale":
                 promo_name = "تخفيضات AliExpress"
 
-        lines = [
-            f"📣 <b>كوبونات خاصة بـ {promo_name}! 🚨</b>",
-        ]
-
         if is_live:
-            lines.append("⏰ <b>تنبيه:</b> التخفيضات نشطة الآن والكميات محدودة.. استغلوا الكوبونات قبل نفادها! 🏃💨")
+            lines = [
+                f"📣 <b>كوبونات خاصة بتخفيضات {promo_name}! 🚨🔥</b>",
+                "⏰ <b>تنبيه:</b> التخفيضات نشطة الآن والكميات محدودة.. استغلوا الكوبونات قبل نفادها! 🏃💨",
+                "",
+                "✅ <b>قـائمة الكوبونـات المعتمدة:</b>",
+                ""
+            ]
         else:
-            lines.append(f"⏰ <b>تنبيه هام:</b> الكوبونات تبدأ العمل وتتفعل يوم <b>{start_day_str} على الساعة 08:00 صباحاً</b> بتوقيت الجزائر 🇩🇿")
-            lines.append("🔴 <b>احفظوا الكودات واستعملوها فور انطلاق التخفيضات</b> (الكميات محدودة وتنفد بسرعة) 🏃💨")
-
-        lines.extend([
-            "",
-            "✅ <b>قـائمة الكوبونـات المعتمدة:</b>",
-            ""
-        ])
+            lines = [
+                f"📣 <b>تسريب وحجز كوبونات {promo_name} القادمة! 🚨🔥</b>",
+                f"⏰ <b>تنبيه هام:</b> الكوبونات تبدأ العمل وتتفعّل رسمياً يوم <b>{start_day_str} على الساعة 08:00 صباحاً</b> بتوقيت الجزائر 🇩🇿",
+                "",
+                "✅ <b>قـائمة الكوبونـات المعتمدة:</b>",
+                ""
+            ]
 
         for item in coupon_items:
             tier = item.get("tier", "").strip()
@@ -125,15 +126,29 @@ class DealCaptionGenerator:
             elif code:
                 lines.append(f"🙏 <b>كـوبون :</b> ⏺ <code>{code}</code>")
 
-        lines.extend([
-            "",
-            "🔹 <b>رابط تصفح العروض والمنتجات ⤵️</b>",
-            f"{affiliate_url}",
-            "",
-            "😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات:</b>",
-            "👉 t.me/Alilo07BOT",
-            "📢 <b>قناة الصيدات اليومية:</b> @DzAliexpress0"
-        ])
+        if is_live:
+            lines.extend([
+                "",
+                "⭕️ <b>طريقة التطبيق:</b> انسخ الكوبون وطبقه مباشرة في صفحة الدفع للاستفادة من التخفيض ✅",
+                "🔹 <b>رابط الشراء وتطبيق الكوبونات ⤵️</b>",
+                f"{affiliate_url}",
+                "",
+                "😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات:</b>",
+                "👉 t.me/Alilo07BOT",
+                "📢 <b>قناة الصيدات اليومية:</b> @DzAliexpress0"
+            ])
+        else:
+            lines.extend([
+                "",
+                f"⭕️ <b>طريقة حجز الكوبونات (احجزوها من الآن باه تخدم يوم {start_day_str} تلقائياً 🔥):</b>",
+                f"⚠️ ادخل للرابط، انسخ الكوبون وطبقه في صفحة الدفع باه يتحجز في حسابك وما يهربلكش الستوك نهار {start_day_str} ✅",
+                "🔹 <b>رابط حجز وتثبيت الكوبونات ⤵️</b>",
+                f"{affiliate_url}",
+                "",
+                "😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات:</b>",
+                "👉 t.me/Alilo07BOT",
+                "📢 <b>قناة الصيدات اليومية:</b> @DzAliexpress0"
+            ])
 
         caption = "\n".join(lines)
         if len(caption) > 1020:

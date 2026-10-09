@@ -304,6 +304,18 @@ class MediaRenderer:
             font_title = font_sub = font_badge = font_amount = font_cond = font_code = font_footer = font_tip = ImageFont.load_default()
 
         # Header Badge & Titles
+        if not date_range_str:
+            try:
+                from app.aliexpress.promos import promo_tracker
+                p = promo_tracker.get_active_promo()
+                if not p:
+                    next_p = promo_tracker.get_next_promo()
+                    p = next_p[0] if next_p else None
+                if p:
+                    date_range_str = f"{p.name.upper()} • {p.start_date.day:02d} - {p.end_date.day:02d} OCTOBRE"
+            except Exception:
+                pass
+
         badge_text = date_range_str or ("CHOICE DAY • DU 1 AU 7 OCTOBRE" if is_french else "CHOICE DAY • 01 - 07 OCTOBRE")
         if is_french:
             draw.rounded_rectangle((w // 2 - 220, 20, w // 2 + 220, 52), radius=16, fill=(254, 240, 138))
