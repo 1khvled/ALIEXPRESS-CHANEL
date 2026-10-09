@@ -176,8 +176,7 @@
     "1005008379012998",
     "1005005605683958",
     "1005010056083952",
-    "1005013313539058",
-    "COUPONS_54d30f00dccf"
+    "1005013313539058"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -360,8 +359,7 @@
     "1005008379012998": 1791235946.0562956,
     "1005005605683958": 1791235953.2682726,
     "1005010056083952": 1791235961.3129663,
-    "1005013313539058": 1791482965.5086565,
-    "COUPONS_54d30f00dccf": 1791545403.6867456
+    "1005013313539058": 1791482965.5086565
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -552,7 +550,6 @@
     "HTC NE79 TWS Wireless Bluetooth Earphones: AI",
     "Nail Scissors Set Household High End",
     "Baseus 30W Car Charger Dual Port USB Type-C Fast",
-    "أحدث كوبونات وتخفيضات AliExpress",
     "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6",
     "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode",
     "Xprinter H10 Handheld POS Thermal",
@@ -783,7 +780,6 @@
     "HTC NE79 TWS Wireless Bluetooth Earphones: AI": 1791126349.6683438,
     "Nail Scissors Set Household High End": 1791126649.148256,
     "Baseus 30W Car Charger Dual Port USB Type-C Fast": 1791135345.3136878,
-    "أحدث كوبونات وتخفيضات AliExpress": 1791545403.6867456,
     "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6": 1791144648.6951094,
     "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode": 1791145541.318689,
     "Xprinter H10 Handheld POS Thermal": 1791147347.3774981,
@@ -1468,8 +1464,7 @@
     "aniscoupons:32804",
     "aniscoupons:32805",
     "zedstoreonline:38550",
-    "lodydeals:45516",
-    "bnddeals:50819"
+    "lodydeals:45516"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
@@ -1477,15 +1472,15 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32855,
-      "last_check_time": 1791545428.340036
+      "last_check_time": 1791545738.9369645
     },
     "ecksdeal": {
       "last_message_id": 5879,
-      "last_check_time": 1791545398.9526582
+      "last_check_time": 1791545727.4720783
     },
     "lodydeals": {
       "last_message_id": 45516,
-      "last_check_time": 1791545398.1894743
+      "last_check_time": 1791545726.6653016
     },
     "bnddeals": {
       "last_message_id": 50820,
@@ -1497,19 +1492,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7974,
-      "last_check_time": 1791545399.4986675
+      "last_check_time": 1791545727.8668203
     },
     "zedstoreonline": {
       "last_message_id": 38561,
-      "last_check_time": 1791545398.583282
+      "last_check_time": 1791545727.1250312
     },
     "megaphonna": {
       "last_message_id": 8310,
-      "last_check_time": 1791545427.3439405
+      "last_check_time": 1791545738.4682844
     },
     "couponsglobal": {
       "last_message_id": 48831,
-      "last_check_time": 1791545428.693427
+      "last_check_time": 1791545739.3859265
     }
   },
   "published_product_prices": {
@@ -4502,16 +4497,6 @@
       "price": 6.52,
       "timestamp": 1791482965.5086565,
       "status": "ACTIVE"
-    },
-    "bnddeals:50819": {
-      "channel_msg_id": 697,
-      "product_id": "COUPONS_54d30f00dccf",
-      "title": "أحدث كوبونات وتخفيضات AliExpress",
-      "channel": "bnddeals",
-      "source_msg_id": 50819,
-      "price": null,
-      "timestamp": 1791545403.6867456,
-      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4522,10 +4507,10 @@
     "night_mode_enabled": true,
     "night_pause_enabled": true,
     "last_deal_post_time": 1791545428.7265484,
-    "last_sweep_time": 1791545428.7103336,
+    "last_sweep_time": 1791545741.9560935,
     "last_sweep_times": {
-      "algeria": 1791545428.7103336,
-      "france": 1791544544.0137372
+      "algeria": 1791545739.390892,
+      "france": 1791545741.9560935
     },
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
