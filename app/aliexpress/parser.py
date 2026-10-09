@@ -279,6 +279,8 @@ def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
     if not text:
         return None, None
 
+    text = re.sub(r'[\u0640]', '', text)
+
     # Priority 1: Direct explicit price markers in the raw text
     explicit_price_patterns = [
         # 'القطعة بعد الكوبون : 4.19$' or 'السعر بعد الكوبون : 12.50$' or 'السعر بعد التخفيض : 1.28$'

@@ -9,6 +9,7 @@ Features:
 - 1-tap instant publishing to channel with channel affiliate buttons
 """
 import asyncio
+from datetime import datetime, timezone, timedelta
 import html
 import json
 import os
@@ -39,7 +40,7 @@ try:
 except Exception:
     _app_settings = None
 
-ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "") or getattr(_app_settings, "ADMIN_BOT_TOKEN", "") or ""
+ADMIN_BOT_TOKEN = os.getenv("ADMIN_BOT_TOKEN", "") or os.getenv("TELEGRAM_BOT_TOKEN", "") or getattr(_app_settings, "ADMIN_BOT_TOKEN", "") or getattr(_app_settings, "TELEGRAM_BOT_TOKEN", "") or ""
 PUBLIC_BOT_USERNAME = "Alilo07BOT"
 
 _caption_generator = DealCaptionGenerator()

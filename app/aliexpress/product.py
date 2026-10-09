@@ -20,6 +20,9 @@ from app.aliexpress.parser import (
     compute_title_compatibility
 )
 from app.utils.logger import logger
+from app.utils.network import enforce_ipv4
+
+enforce_ipv4()
 
 @dataclass
 class ExtractedProduct:

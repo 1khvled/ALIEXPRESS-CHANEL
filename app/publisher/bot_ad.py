@@ -7,6 +7,7 @@ Publishes high-converting, value-packed reminders to @DzAliexpress0:
 
 Throttled to run at randomized intervals (every 48–72 hours) during active Algerian shopping hours.
 """
+import os
 import asyncio
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -29,6 +30,7 @@ from app.publisher.state_tracker import (
     record_coin_reminder_published
 )
 from app.utils.logger import logger, record_system_log
+from app.utils.network import enforce_ipv4
 
 # --- VARIANT 0: PC & Laptop Shoppers Guide ---
 POST_PC_GUIDE = """<blockquote>💻 <b>دليل متسوقي الحاسوب (PC / Laptop) | تفعيل أقصى تخفيض عملات عبر البوت!</b></blockquote>
@@ -132,8 +134,17 @@ async def post_bot_advertisement(force: bool = False, variant_idx: Optional[int]
     if not banner_path.exists():
         banner_path = settings.BASE_DIR / "assets" / "logo.png"
 
-    bot_token = settings.TELEGRAM_BOT_TOKEN
-    target_channel = settings.TARGET_CHANNEL_ID
+    enforce_ipv4()
+    bot_token = (
+        getattr(settings, "TELEGRAM_BOT_TOKEN", None)
+        or getattr(settings, "ADMIN_BOT_TOKEN", None)
+        or os.getenv("TELEGRAM_BOT_TOKEN", "")
+    )
+    target_channel = (
+        getattr(settings, "TARGET_CHANNEL_ID", None)
+        or getattr(settings, "TELEGRAM_CHANNEL", None)
+        or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+    )
     if not bot_token or not target_channel:
         return False, "Bot credentials not configured"
 

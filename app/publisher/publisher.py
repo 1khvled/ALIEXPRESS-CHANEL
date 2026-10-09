@@ -1,3 +1,4 @@
+import os
 import asyncio
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -8,6 +9,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.config.settings import settings
 from app.db.models import TelegramPost, Deal
 from app.utils.logger import logger, record_system_log
+from app.utils.network import enforce_ipv4
 
 class TelegramPublisher:
     def __init__(
@@ -15,8 +17,18 @@ class TelegramPublisher:
         bot_token: Optional[str] = None,
         target_channel: Optional[str] = None
     ):
-        self.bot_token = bot_token or settings.TELEGRAM_BOT_TOKEN
-        self.target_channel = target_channel or settings.TARGET_CHANNEL_ID
+        self.bot_token = (
+            bot_token
+            or getattr(settings, "TELEGRAM_BOT_TOKEN", None)
+            or getattr(settings, "ADMIN_BOT_TOKEN", None)
+            or os.getenv("TELEGRAM_BOT_TOKEN", "")
+        )
+        self.target_channel = (
+            target_channel
+            or getattr(settings, "TARGET_CHANNEL_ID", None)
+            or getattr(settings, "TELEGRAM_CHANNEL", None)
+            or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+        )
 
     async def can_publish(self, session: AsyncSession) -> Tuple[bool, Optional[str]]:
         """
@@ -134,6 +146,7 @@ class TelegramPublisher:
                         photo_bytes = p.read_bytes()
 
             resp = None
+            enforce_ipv4()
             async with httpx.AsyncClient(timeout=45.0) as client:
                 for attempt in range(1, 4):
                     try:

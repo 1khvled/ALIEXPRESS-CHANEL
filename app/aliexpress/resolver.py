@@ -10,6 +10,9 @@ from app.aliexpress.urls import (
     normalize_aliexpress_url
 )
 from app.utils.logger import logger
+from app.utils.network import enforce_ipv4
+
+enforce_ipv4()
 
 DEFAULT_USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "

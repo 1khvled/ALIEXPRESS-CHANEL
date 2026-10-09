@@ -29,6 +29,9 @@ from app.ai.generator import caption_generator
 from app.media.downloader import media_downloader
 from app.media.renderer import media_renderer
 from app.publisher.publisher import telegram_publisher
+from app.utils.network import enforce_ipv4
+
+enforce_ipv4()
 
 CHANNELS = [
     "Pcgamingpart",

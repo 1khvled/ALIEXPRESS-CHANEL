@@ -24,7 +24,13 @@ try:
 except Exception:
     _app_settings = None
 
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "") or getattr(_app_settings, "TELEGRAM_BOT_TOKEN", "") or ""
+try:
+    from app.utils.network import enforce_ipv4
+    enforce_ipv4()
+except Exception:
+    pass
+
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "") or os.getenv("ADMIN_BOT_TOKEN", "") or getattr(_app_settings, "TELEGRAM_BOT_TOKEN", "") or getattr(_app_settings, "ADMIN_BOT_TOKEN", "") or ""
 
 ALIEXPRESS_AFFILIATE_APP_KEY = os.getenv("ALIEXPRESS_AFFILIATE_APP_KEY", "") or getattr(_app_settings, "ALIEXPRESS_AFFILIATE_APP_KEY", "") or ""
 ALIEXPRESS_AFFILIATE_APP_SECRET = os.getenv("ALIEXPRESS_AFFILIATE_APP_SECRET", "") or getattr(_app_settings, "ALIEXPRESS_AFFILIATE_APP_SECRET", "") or ""

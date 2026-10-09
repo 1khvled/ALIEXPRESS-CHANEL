@@ -18,7 +18,7 @@ if sys.platform == "win32":
 from app.utils.network import enforce_ipv4
 enforce_ipv4()
 
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 import httpx
 from bs4 import BeautifulSoup
 from sqlalchemy import select, desc
@@ -46,6 +46,15 @@ CHANNELS = [
     "aniscoupons",
     "CouponsGlobal"
 ]
+
+def get_bot_token() -> str:
+    return (
+        getattr(settings, "TELEGRAM_BOT_TOKEN", None)
+        or getattr(settings, "ADMIN_BOT_TOKEN", None)
+        or os.getenv("TELEGRAM_BOT_TOKEN", "")
+        or os.getenv("ADMIN_BOT_TOKEN", "")
+        or ""
+    )
 
 async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bool = False) -> int:
     await init_db()
@@ -135,7 +144,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     # Automated Check: Daily Tajmi3at / Compilations (~10:00 PM Algiers time 21:30-23:45 or forced)
     try:
         from app.publisher.regrouper import check_and_publish_regrouped_bulletins
-        bulletins = await check_and_publish_regrouped_bulletins(bot_token=settings.TELEGRAM_BOT_TOKEN, force=force_tajmi3at)
+        bulletins = await check_and_publish_regrouped_bulletins(bot_token=get_bot_token(), force=force_tajmi3at)
         if bulletins:
             print(f"[TAJMI3AT AUTO-POST] Published {len(bulletins)} daily roundup bulletin(s): {[b['category'] for b in bulletins]}")
     except Exception as e:
@@ -639,12 +648,12 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                             # Auto-pin coupon bulletins
                             if extracted.is_coupon_list and post_msg_id:
                                 try:
-                                    bot_tok = settings.TELEGRAM_BOT_TOKEN
-                                    target_ch = settings.TARGET_CHANNEL_ID
+                                    bot_tok = get_bot_token()
+                                    target_ch = getattr(settings, "TARGET_CHANNEL_ID", None) or getattr(settings, "TELEGRAM_CHANNEL", None) or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
                                     async with httpx.AsyncClient(timeout=10.0) as pc:
                                         await pc.post(
                                             f"https://api.telegram.org/bot{bot_tok}/pinChatMessage",
-                                            json={"chat_id": target_ch, "message_id": post_msg_id, "disable_notification": False}
+                                            json={"chat_id": target_ch, "message_id": post_msg_id, "disable_notification": True}
                                         )
                                 except Exception as pe:
                                     logger.warning(f"Failed to auto-pin coupon bulletin {post_msg_id}: {pe}")
@@ -725,7 +734,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     # 10. Daily Tajmi3at / Compilations (~10:00 PM UTC+1 or forced)
     try:
         from app.publisher.regrouper import check_and_publish_regrouped_bulletins
-        bulletins = await check_and_publish_regrouped_bulletins(bot_token=settings.TELEGRAM_BOT_TOKEN, force=force_tajmi3at)
+        bulletins = await check_and_publish_regrouped_bulletins(bot_token=get_bot_token(), force=force_tajmi3at)
         if bulletins:
             print(f"\n[TAJMI3AT] Published {len(bulletins)} daily roundup bulletin(s):")
             for b in bulletins:

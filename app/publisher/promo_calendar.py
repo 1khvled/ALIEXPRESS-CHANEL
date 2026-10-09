@@ -23,6 +23,7 @@ import os
 import json
 from app.aliexpress.promos import promo_tracker, PromoEvent
 from app.utils.logger import logger
+from app.utils.network import enforce_ipv4
 
 # Official AliExpress 2026 Promotion Calendar Image
 LOCAL_CALENDAR_PATH = os.path.join(os.path.dirname(__file__), "..", "assets", "official_calendar_october_2026.jpg")
@@ -122,8 +123,21 @@ def build_next_sale_transition_post(ended_promo: PromoEvent, next_promo: PromoEv
 
 async def publish_calendar_to_channel(bot_token: Optional[str] = None, channel_id: Optional[str] = None) -> Tuple[bool, Optional[str], Optional[int]]:
     """Directly publishes the official promo calendar post to the Telegram channel."""
-    token = bot_token or settings.TELEGRAM_BOT_TOKEN
-    target = channel_id or settings.TARGET_CHANNEL_ID
+    enforce_ipv4()
+    token = (
+        bot_token
+        or getattr(settings, "TELEGRAM_BOT_TOKEN", None)
+        or getattr(settings, "ADMIN_BOT_TOKEN", None)
+        or os.getenv("TELEGRAM_BOT_TOKEN", "")
+    )
+    target = (
+        channel_id
+        or getattr(settings, "TARGET_CHANNEL_ID", None)
+        or getattr(settings, "TELEGRAM_CHANNEL", None)
+        or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+    )
+    if not token or not target:
+        return False, "Bot token or channel ID not configured", None
 
     caption, markup = build_promo_calendar_post()
 

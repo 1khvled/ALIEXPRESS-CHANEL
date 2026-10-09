@@ -303,8 +303,9 @@ async def check_and_auto_post_religious_reminders(
                 })
 
     # 3. Daily Fajr Salah Reminder (صلاة الفجر)
-    # Fajr in Algeria is around 04:45 - 05:30 (window 04:30 to 05:45)
-    in_fajr_window = (4.5 <= current_time_float <= 5.75)
+    # Fajr in Algeria in autumn/winter is around 04:45 - 05:35, with sunrise at ~06:45.
+    # Window 04:15 to 06:30 ensures GitHub Actions 30m cron jitter never misses the daily reminder.
+    in_fajr_window = (4.25 <= current_time_float <= 6.5)
     if in_fajr_window:
         if is_religious_reminder_eligible("fajr", today_str):
             success, err, msg_id = await post_religious_reminder("fajr", bot_token)

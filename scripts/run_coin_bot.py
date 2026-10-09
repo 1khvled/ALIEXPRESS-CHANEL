@@ -16,12 +16,16 @@ if sys.platform == "win32":
     except Exception:
         pass
 
+import os
 import httpx
 from app.config.settings import settings
 from app.telegram.coin_bot import handle_telegram_update
+from app.utils.network import enforce_ipv4
+
+enforce_ipv4()
 
 async def run_bot():
-    token = settings.TELEGRAM_BOT_TOKEN
+    token = getattr(settings, "TELEGRAM_BOT_TOKEN", None) or getattr(settings, "ADMIN_BOT_TOKEN", None) or os.getenv("TELEGRAM_BOT_TOKEN") or os.getenv("ADMIN_BOT_TOKEN")
     if not token:
         print("[!] Error: TELEGRAM_BOT_TOKEN is not configured!")
         return

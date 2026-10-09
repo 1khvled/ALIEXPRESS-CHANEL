@@ -31,10 +31,15 @@ from app.utils.network import enforce_ipv4
 
 enforce_ipv4()
 
-TARGET_DZ_CHANNEL = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
-FRANCE_CHANNEL_HANDLE = os.getenv("FRANCE_TARGET_CHANNEL_ID", "@francedealsdz")
+TARGET_DZ_CHANNEL = getattr(settings, "TARGET_CHANNEL_ID", None) or getattr(settings, "TELEGRAM_CHANNEL", None) or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+FRANCE_CHANNEL_HANDLE = getattr(settings, "FRANCE_TARGET_CHANNEL_ID", None) or os.getenv("FRANCE_TARGET_CHANNEL_ID", "@francedealsdz")
 FRANCE_CHANNEL_URL = "https://t.me/francedealsdz"
-FRANCE_LOGO_PATH = Path(__file__).resolve().parent.parent / "assets" / "france_channel_logo.jpg"
+_root_dir = Path(__file__).resolve().parent.parent.parent
+_candidate_paths = [
+    _root_dir / "assets" / "france_channel_logo.jpg",
+    _root_dir / "app" / "assets" / "france_channel_logo.jpg",
+]
+FRANCE_LOGO_PATH = next((p for p in _candidate_paths if p.exists()), None)
 
 # 4 High-Converting, Authentic Algerian Copywriting Variants
 FRANCE_CROSS_VARIANTS: List[Dict[str, Any]] = [
@@ -101,7 +106,11 @@ async def check_and_post_france_cross_promo(force: bool = False) -> Tuple[bool, 
     if not eligible:
         return False, f"Skipped: {reason}"
 
-    bot_token = settings.TELEGRAM_BOT_TOKEN
+    bot_token = (
+        getattr(settings, "TELEGRAM_BOT_TOKEN", None)
+        or getattr(settings, "ADMIN_BOT_TOKEN", None)
+        or os.getenv("TELEGRAM_BOT_TOKEN", "")
+    )
     if not bot_token:
         return False, "TELEGRAM_BOT_TOKEN not configured"
 

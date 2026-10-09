@@ -328,7 +328,12 @@ async def publish_card_affiliate_post(
     image_path: Optional[str] = None
 ) -> Tuple[bool, Optional[str], Optional[int]]:
     """Publishes a photo or text post with HTML caption to Telegram."""
-    bot_token = settings.TELEGRAM_BOT_TOKEN
+    enforce_ipv4()
+    bot_token = (
+        getattr(settings, "TELEGRAM_BOT_TOKEN", None)
+        or getattr(settings, "ADMIN_BOT_TOKEN", None)
+        or os.getenv("TELEGRAM_BOT_TOKEN", "")
+    )
     if not bot_token:
         return False, "Missing TELEGRAM_BOT_TOKEN", None
 

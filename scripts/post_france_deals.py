@@ -43,8 +43,16 @@ from app.media.downloader import media_downloader
 from app.media.renderer import media_renderer
 from app.utils.logger import logger
 
-TARGET_FRANCE_CHANNEL = os.getenv("FRANCE_TARGET_CHANNEL_ID", "@francedealsdz")
+TARGET_FRANCE_CHANNEL = getattr(settings, "FRANCE_TARGET_CHANNEL_ID", None) or os.getenv("FRANCE_TARGET_CHANNEL_ID", "@francedealsdz")
 FRANCE_STATE_FILE = Path(settings.BASE_DIR) / "storage" / "state" / "france_published_state.json"
+
+def get_bot_token() -> str:
+    return (
+        getattr(settings, "TELEGRAM_BOT_TOKEN", None)
+        or getattr(settings, "ADMIN_BOT_TOKEN", None)
+        or os.getenv("TELEGRAM_BOT_TOKEN", "")
+        or ""
+    )
 
 # Dedicated, strictly verified French/European AliExpress channels
 # NEVER include Algerian or Arabic channels here (their coins, coupons, and links do not work in France).
@@ -213,7 +221,7 @@ async def post_deal_to_france_channel(
     affiliate_url: str,
     is_coupon_bulletin: bool = False
 ) -> Tuple[bool, Optional[str], Optional[int]]:
-    bot_token = settings.TELEGRAM_BOT_TOKEN
+    bot_token = get_bot_token()
     if not bot_token:
         return False, "TELEGRAM_BOT_TOKEN not configured", None
 
@@ -434,7 +442,7 @@ async def publish_extracted_deal_to_france(
 
         if extracted.is_coupon_list and channel_msg_id:
             try:
-                bot_tok = settings.TELEGRAM_BOT_TOKEN
+                bot_tok = get_bot_token()
                 async with httpx.AsyncClient(timeout=10.0) as pc:
                     await pc.post(
                         f"https://api.telegram.org/bot{bot_tok}/pinChatMessage",
@@ -812,7 +820,7 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                     # Auto-pin coupon bulletins
                     if extracted.is_coupon_list and channel_msg_id:
                         try:
-                            bot_tok = settings.TELEGRAM_BOT_TOKEN
+                            bot_tok = get_bot_token()
                             async with httpx.AsyncClient(timeout=10.0) as pc:
                                 await pc.post(
                                     f"https://api.telegram.org/bot{bot_tok}/pinChatMessage",

@@ -352,6 +352,19 @@ def is_recent_cross_channel_duplicate(
     # In production (cooldown_hours >= 8.0 or 24.0), require full cooldown (at least 8h)
     same_channel_min_cooldown = 1800 if active_cooldown_hours <= 3.0 else min(cooldown_seconds, 8 * 3600)
 
+    # 0. Coupon Bulletin Global Cooldown check (prevent spamming coupons across channels)
+    if p_str and p_str.startswith("COUPONS_"):
+        for prev_p, prev_ts in ts_map.items():
+            if prev_p.startswith("COUPONS_"):
+                c_age = now - prev_ts
+                if c_age < max(cooldown_seconds, 24 * 3600):
+                    return True, f"A coupon bulletin was already published {c_age/3600:.1f}h ago (< 24h cooldown)", False
+        for ch_pid, ch_ts in _CACHED_CHANNEL_PIDS.items():
+            if ch_pid.startswith("COUPONS_"):
+                c_age = now - ch_ts
+                if c_age < 24 * 3600:
+                    return True, f"A coupon bulletin is already visible in live channel ({c_age/3600:.1f}h ago)", False
+
     # 1. Product ID check
     if p_str and p_str in ts_map:
         age = now - ts_map[p_str]
