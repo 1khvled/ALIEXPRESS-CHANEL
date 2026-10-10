@@ -187,8 +187,8 @@
     "1005006007773971",
     "1005013067004815",
     "1005009948598802",
-    "1005008791989663",
-    "1005010209307090"
+    "1005010209307090",
+    "1005008791989663"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -382,8 +382,8 @@
     "1005006007773971": 1791638433.4352653,
     "1005013067004815": 1791638447.7612462,
     "1005009948598802": 1791639031.4293046,
-    "1005008791989663": 1791663195.8199983,
-    "1005010209307090": 1791663201.0086794
+    "1005010209307090": 1791663201.0086794,
+    "1005008791989663": 1791675306.5093157
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -619,8 +619,8 @@
     "Realme 15 Global (12/256)",
     "REALME P3 5G",
     "Ⓜ HONOR  X80 PRO MAX (8/128)",
-    "realme 14T 5G Smartphone Dimensity 6300 5G Processor 6000mAh Battery 6.67\"",
-    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras"
+    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras",
+    "realme 14T 5G Smartphone Dimensity 6300 5G Processor 6000mAh Battery 6.67\""
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -859,8 +859,8 @@
     "Realme 15 Global (12/256)": 1791639031.4293046,
     "REALME P3 5G": 1791649464.949431,
     "Ⓜ HONOR  X80 PRO MAX (8/128)": 1791663189.4216602,
-    "realme 14T 5G Smartphone Dimensity 6300 5G Processor 6000mAh Battery 6.67\"": 1791663195.8199983,
-    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": 1791663201.0086794
+    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": 1791663201.0086794,
+    "realme 14T 5G Smartphone Dimensity 6300 5G Processor 6000mAh Battery 6.67\"": 1791675306.5093157
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1524,29 +1524,29 @@
     "aniscoupons:32860",
     "bnddeals:50823",
     "megaphonna:8314",
-    "megaphonna:8315",
     "megaphonna:8316",
-    "couponsglobal:48832"
+    "couponsglobal:48832",
+    "megaphonna:8315"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1791663210.0572863,
+  "last_run_time": 1791675306.5093157,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32860,
-      "last_check_time": 1791663205.1485567
+      "last_check_time": 1791675309.2592947
     },
     "ecksdeal": {
       "last_message_id": 5882,
-      "last_check_time": 1791663180.7807086
+      "last_check_time": 1791675302.0116427
     },
     "lodydeals": {
       "last_message_id": 45516,
-      "last_check_time": 1791663178.5197854
+      "last_check_time": 1791675301.3270597
     },
     "bnddeals": {
       "last_message_id": 50823,
-      "last_check_time": 1791663181.549742
+      "last_check_time": 1791675302.7209249
     },
     "test_channel": {
       "last_message_id": 1791627893,
@@ -1554,19 +1554,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7975,
-      "last_check_time": 1791663181.1833975
+      "last_check_time": 1791675302.3809175
     },
     "zedstoreonline": {
       "last_message_id": 38564,
-      "last_check_time": 1791663180.3634088
+      "last_check_time": 1791675301.6782784
     },
     "megaphonna": {
-      "last_message_id": 8318,
-      "last_check_time": 1791663204.4355943
+      "last_message_id": 8319,
+      "last_check_time": 1791675308.532428
     },
     "couponsglobal": {
       "last_message_id": 48832,
-      "last_check_time": 1791663212.0694144
+      "last_check_time": 1791675309.5889077
     }
   },
   "published_product_prices": {
@@ -4664,16 +4664,6 @@
       "timestamp": 1791663189.4216602,
       "status": "ACTIVE"
     },
-    "megaphonna:8315": {
-      "channel_msg_id": 719,
-      "product_id": "1005008791989663",
-      "title": "realme 14T 5G Smartphone Dimensity 6300 5G Processor 6000mAh Battery 6.67\"",
-      "channel": "megaphonna",
-      "source_msg_id": 8315,
-      "price": 197.0,
-      "timestamp": 1791663195.8199983,
-      "status": "ACTIVE"
-    },
     "megaphonna:8316": {
       "channel_msg_id": 720,
       "product_id": "1005010209307090",
@@ -4693,6 +4683,16 @@
       "price": null,
       "timestamp": 1791663210.0572863,
       "status": "ACTIVE"
+    },
+    "megaphonna:8315": {
+      "channel_msg_id": 726,
+      "product_id": "1005008791989663",
+      "title": "realme 14T 5G Smartphone Dimensity 6300 5G Processor 6000mAh Battery 6.67\"",
+      "channel": "megaphonna",
+      "source_msg_id": 8315,
+      "price": 197.0,
+      "timestamp": 1791675306.5093157,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4701,22 +4701,22 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791663212.0799494,
+    "last_deal_post_time": 1791675309.5991502,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1791663215.2949293,
+    "last_sweep_time": 1791675312.1690438,
     "last_sweep_times": {
-      "algeria": 1791663212.0750265,
-      "france": 1791663215.2949293
+      "algeria": 1791675309.5942266,
+      "france": 1791675312.1690438
     },
     "last_deal_post_times": {
-      "algeria": 1791663212.0799494
+      "algeria": 1791675309.5991502
     }
   },
-  "last_coin_reminder_time": 1791480006.8698988,
-  "next_reminder_interval_seconds": 186014,
-  "coin_reminder_variant_idx": 0,
+  "last_coin_reminder_time": 1791675294.0910947,
+  "next_reminder_interval_seconds": 245750,
+  "coin_reminder_variant_idx": 1,
   "published_product_channels": {
     "999888104": "test_channel",
     "100500888999777": "lodydeals",
@@ -5411,7 +5411,8 @@
     "megaphonna:8313",
     "zedstoreonline:38564",
     "megaphonna:8317",
-    "megaphonna:8318"
+    "megaphonna:8318",
+    "megaphonna:8319"
   ],
   "last_france_cross_promo_time": 1791544610.263704,
   "next_france_cross_promo_interval_seconds": 319259,
