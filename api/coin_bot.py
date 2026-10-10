@@ -115,14 +115,8 @@ async def get_live_usdt_rate() -> float:
 _USER_LANG: Dict[int, str] = {}
 
 def get_user_lang(user_id: int, user_obj: Optional[Dict[str, Any]] = None) -> str:
-    """Returns 'fr' or 'ar' for the user based on saved preferences or Telegram app language."""
-    if user_id in _USER_LANG:
-        return _USER_LANG[user_id]
-    if user_obj and isinstance(user_obj, dict):
-        code = (user_obj.get("language_code") or "").lower()
-        if code.startswith("fr"):
-            return "fr"
-    return "ar"
+    """Returns 'fr' or 'ar'. Arabic is always the default unless user explicitly switches to French."""
+    return _USER_LANG.get(user_id, "ar")
 
 WELCOME_TEXT = """👋 <b>مرحباً بك في بوت DealScoutDz لزيادة تخفيض العملات!</b> 🪙
 
