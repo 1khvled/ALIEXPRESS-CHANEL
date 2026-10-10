@@ -136,20 +136,59 @@ HELP_TEXT = """💡 <b>دليل استخدام تخفيض العملات بأق�
 4️⃣ <b>أسعار الصرف في الجزائر:</b>
 تابع أسعار صرف السكوار والـ USDT لحظة بلحظة عبر: <a href="https://squarealgerie.com">SquareAlgerie.com</a> 🇩🇿
 
-📢 للمزيد من العروض اليومية، انضم لقناتنا: @DzAliexpress0"""
+📢 للمزيد من العروض اليومية، انضم لقنواتنا:
+🇩🇿 صفقات الجزائر: @DzAliexpress0
+🇫🇷 صفقات فرنسا وأوروبا: @francedealsdz"""
 
-COUPONS_TEXT = """🎟️ <b>أحدث كودات التخفيض من AliExpress لشهر أكتوبر 🔥</b>
+def get_current_coupons_text() -> str:
+    """Dynamically returns fresh active coupons or informs user of upcoming sales."""
+    try:
+        from app.aliexpress.promos import promo_tracker
+        active_promo = promo_tracker.get_active_promo()
+        if active_promo and active_promo.coupon_tiers:
+            tiers_text = []
+            for t in active_promo.coupon_tiers:
+                tier_label = t.get("tier", "")
+                code = t.get("code", "")
+                tiers_text.append(f"▫️ خصم {tier_label} ⬅️ كود: <code>{code}</code>")
+            tiers_block = "\n".join(tiers_text)
+            promo_title = active_promo.name_ar or active_promo.name
+            tag_line = active_promo.banner_tag or promo_title
+            return f"""🎟️ <b>أحدث كودات التخفيض النشطة من AliExpress 🔥</b>
 ━━━━━━━━━━━━━━━━━
-🎯 <b>تخفيضات Choice Day (1 - 7 أكتوبر):</b>
-▫️ خصم 3$ عند الشراء بـ 29$+ ⬅️ كود: <code>CDDZ03</code>
-▫️ خصم 6$ عند الشراء بـ 49$+ ⬅️ كود: <code>CDDZ06</code>
-▫️ خصم 10$ عند الشراء بـ 79$+ ⬅️ كود: <code>CDDZ10</code>
-▫️ خصم 20$ عند الشراء بـ 159$+ ⬅️ كود: <code>CDDZ20</code>
-▫️ خصم 40$ عند الشراء بـ 299$+ ⬅️ كود: <code>CDDZ40</code>
+🎯 <b>{tag_line}:</b>
+{tiers_block}
 ━━━━━━━━━━━━━━━━━
 💡 يمكنك إدخال الكود في صفحة الدفع والاستفادة من خصم العملات في نفس الوقت!
 
-📢 تابع قناتنا للمزيد: @DzAliexpress0"""
+📢 تابع قنواتنا للمزيد من التخفيضات اليومية:
+🇩🇿 صفقات الجزائر: @DzAliexpress0
+🇫🇷 صفقات فرنسا وأوروبا: @francedealsdz"""
+
+        next_p = promo_tracker.get_next_promo()
+        if next_p and next_p[0]:
+            target_p, days = next_p
+            p_name = target_p.name_ar or target_p.name
+            return f"""🎟️ <b>كودات وكوبونات AliExpress</b>
+━━━━━━━━━━━━━━━━━
+⏳ <b>لا توجد كودات عامة نشطة اليوم.</b>
+🎯 التخفيضات الكبرى القادمة: <b>{p_name}</b> (خلال {days} أيام)
+
+💡 <b>تذكير:</b> تخفيض العملات (Coins) يعمل دائماً ويوفر حتى 70% بدون الحاجة لأي كود! فقط أرسل رابط أي منتج هنا في البوت.
+
+📢 تابع قنواتنا للحصول على الكودات الجديدة فور توفرها:
+🇩🇿 صفقات الجزائر: @DzAliexpress0
+🇫🇷 صفقات فرنسا وأوروبا: @francedealsdz"""
+    except Exception:
+        pass
+
+    return """🎟️ <b>كودات وكوبونات AliExpress</b>
+━━━━━━━━━━━━━━━━━
+💡 تابع قنواتنا الرسمية لمعرفة أحدث الكودات اليومية فور توفرها:
+🇩🇿 صفقات الجزائر: @DzAliexpress0
+🇫🇷 صفقات فرنسا وأوروبا: @francedealsdz"""
+
+COUPONS_TEXT = get_current_coupons_text()
 
 URL_REGEX = re.compile(r'(https?://[^\s<>"\',;]+)', re.IGNORECASE)
 
@@ -587,9 +626,6 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
                 {"text": "🪙 شراء بتخفيض العملات", "url": coin_link}
             ],
             [
-                {"text": "🔔 راقب انخفاض السعر | Alert Price Drop", "callback_data": f"watch_{product_id}_{prod_price or 0.0}"}
-            ],
-            [
                 {"text": "📦 عروض Bundle Deals", "url": bundle_link},
                 {"text": "⚡ عروض السوبر ديلز", "url": super_link}
             ],
@@ -597,9 +633,12 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
                 {"text": "⏳ العرض المحدود (Limited)", "url": limited_link}
             ],
             [
-                {"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"},
+                {"text": "📢 قناة صفقات الجزائر 🇩🇿", "url": "https://t.me/DzAliexpress0"},
+                {"text": "🇫🇷 قناة صفقات فرنسا 🇪🇺", "url": "https://t.me/francedealsdz"}
+            ],
+            [
                 {
-                    "text": "🔄 مشاركة البوت",
+                    "text": "🔄 مشاركة البوت مع أصدقائك",
                     "url": "https://t.me/share/url?url=https://t.me/Alilo07BOT&text=بوت زيادة تخفيض العملات في علي اكسبرس 🪙🔥 يوفر حتى 70%!"
                 }
             ]
@@ -791,7 +830,7 @@ async def handle_update(update: Dict[str, Any]) -> bool:
             if cb_data == "cb_help":
                 await send_msg(chat_id, HELP_TEXT)
             elif cb_data == "cb_coupons":
-                await send_msg(chat_id, COUPONS_TEXT)
+                await send_msg(chat_id, get_current_coupons_text())
             elif cb_data.startswith("admin_pub_"):
                 if not is_admin(user_id):
                     await send_msg(chat_id, "⚠️ عذراً، هذا الإجراء مخصص لمشرف القناة فقط.")
@@ -927,8 +966,11 @@ async def handle_update(update: Dict[str, Any]) -> bool:
             )
             markup = {
                 "inline_keyboard": [
-                    [{"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}],
-                    [{"text": "📖 طريقة جمع وتفعيل العملات", "callback_data": "cb_help"}]
+                    [{"text": "📖 طريقة استخدام تخفيض العملات", "callback_data": "cb_help"}],
+                    [
+                        {"text": "📢 قناة صفقات الجزائر 🇩🇿", "url": "https://t.me/DzAliexpress0"},
+                        {"text": "🇫🇷 قناة صفقات فرنسا 🇪🇺", "url": "https://t.me/francedealsdz"}
+                    ]
                 ]
             }
             await send_msg(chat_id, ad_welcome, reply_markup=markup)
@@ -938,12 +980,11 @@ async def handle_update(update: Dict[str, Any]) -> bool:
         start_markup = {
             "inline_keyboard": [
                 [
-                    {"text": "📖 طريقة استخدام تخفيض العملات", "callback_data": "cb_help"},
-                    {"text": "🎟️ كودات وكوبونات التخفيض", "callback_data": "cb_coupons"}
+                    {"text": "📖 طريقة استخدام تخفيض العملات", "callback_data": "cb_help"}
                 ],
                 [
-                    {"text": "📋 قائمة مراقبة الأسعار", "callback_data": "cb_watchlist_help"},
-                    {"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}
+                    {"text": "📢 قناة صفقات الجزائر 🇩🇿", "url": "https://t.me/DzAliexpress0"},
+                    {"text": "🇫🇷 قناة صفقات فرنسا 🇪🇺", "url": "https://t.me/francedealsdz"}
                 ]
             ]
         }
@@ -1016,7 +1057,7 @@ async def handle_update(update: Dict[str, Any]) -> bool:
         return True
 
     if text.startswith("/coupons") or "كوبون" in text or "كود" in text:
-        await send_msg(chat_id, COUPONS_TEXT)
+        await send_msg(chat_id, get_current_coupons_text())
         return True
 
     # Admin Command: /post <url> or /publish <url>
