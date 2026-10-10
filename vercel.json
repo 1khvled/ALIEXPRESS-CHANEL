@@ -1,11 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "ignoreCommand": "bash scripts/ignore_build.sh",
   "services": {
     "app": {
       "root": ".",
       "framework": "fastapi",
-      "entrypoint": "main.py"
+      "entrypoint": "main.py",
+      "ignoreCommand": "bash scripts/ignore_build.sh"
     }
   },
   "rewrites": [
