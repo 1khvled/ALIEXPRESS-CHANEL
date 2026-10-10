@@ -371,6 +371,10 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                                                 print(f"  [ANNOUNCEMENT PUBLISHED] Auto-posted '{ann_tag}' announcement to {settings.TARGET_CHANNEL_ID}")
                                     except Exception as e:
                                         print(f"  [!] Failed to publish announcement: {e}")
+                        has_ali_link = bool(re.search(r'(?:aliexpress\.(?:com|ru)|s\.click\.aliexpress\.com)', raw_text, re.IGNORECASE))
+                        if has_ali_link and not (is_ann and ann_tag):
+                            print(f"  [TRANSIENT EXTRACTION FAILURE] Post #{msg_id} has AliExpress link but extraction was incomplete. Leaving for retry.")
+                            continue
                         max_processed_id = max(max_processed_id, msg_id)
                         record_post_handled(ch, msg_id)
                         continue

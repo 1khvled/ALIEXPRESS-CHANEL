@@ -672,6 +672,10 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                 # 4. Extract product or coupon bulletin
                 extracted = await product_extractor.extract_from_message(raw_text, media_path=source_photo_url)
                 if not extracted or not extracted.is_valid:
+                    has_ali_link = bool(re.search(r'(?:aliexpress\.(?:com|ru)|s\.click\.aliexpress\.com)', raw_text, re.IGNORECASE))
+                    if has_ali_link:
+                        print(f"  [TRANSIENT EXTRACTION FAILURE] Post #{msg_id} has AliExpress link but extraction was incomplete. Leaving for retry.")
+                        continue
                     published_keys.add(post_key)
                     max_processed_id = max(max_processed_id, msg_id)
                     continue
