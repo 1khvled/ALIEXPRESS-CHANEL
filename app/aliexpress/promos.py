@@ -227,13 +227,19 @@ PROMO_CALENDAR: List[PromoEvent] = [
     ),
     PromoEvent(
         name="Brand Day Sale",
-        name_ar="مهرجان Brand Day لشهر أكتوبر 🏷️",
-        name_fr="Festival Brand Day Octobre 🏷️",
-        start_date=datetime(2026, 10, 12, 7, 0, 0, tzinfo=timezone.utc),
-        end_date=datetime(2026, 10, 16, 6, 59, 59, tzinfo=timezone.utc),
-        banner_tag="🏷️ Brand Day (12 - 15 أكتوبر)",
+        name_ar="مهرجان Brand Day للعلامات التجارية 🏷️ (أكتوبر 2026)",
+        name_fr="AliExpress Brand Day 🏷️ Octobre 2026",
+        start_date=datetime(2026, 10, 9, 7, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 10, 13, 6, 59, 59, tzinfo=timezone.utc),
+        banner_tag="🏷️ Brand Day Sale (9 - 12 أكتوبر)",
         is_major=True,
-        coupon_tiers=[],
+        coupon_tiers=[
+            {"tier": "4/35$", "code": "BDQT04"},
+            {"tier": "6/59$", "code": "BDQT06"},
+            {"tier": "10/99$", "code": "BDQT10"},
+            {"tier": "15/139$", "code": "BDQT15"},
+            {"tier": "30/269$", "code": "BDQT30"},
+        ],
         source="baseline"
     ),
     PromoEvent(
@@ -526,16 +532,16 @@ def generate_recurring_promos(ref_date: Optional[datetime] = None, months_ahead:
             source="recurring"
         ))
 
-        # 2. BRAND DAY (12th to 16th)
-        b_start = datetime(yr, m, 12, 7, 0, 0, tzinfo=timezone.utc)
-        b_end = datetime(yr, m, 16, 6, 59, 59, tzinfo=timezone.utc)
+        # 2. BRAND DAY (9th to 13th morning, covering through 12th)
+        b_start = datetime(yr, m, 9, 7, 0, 0, tzinfo=timezone.utc)
+        b_end = datetime(yr, m, 13, 6, 59, 59, tzinfo=timezone.utc)
         events.append(PromoEvent(
             name=f"Brand Day {fr_m} {yr}",
             name_ar=f"مهرجان Brand Day لشهر {ar_m} 🏷️",
             name_fr=f"AliExpress Brand Day {fr_m} 🏷️",
             start_date=b_start,
             end_date=b_end,
-            banner_tag=f"🏷️ Brand Day (12 - 15 {ar_m})",
+            banner_tag=f"🏷️ Brand Day (9 - 12 {ar_m})",
             is_major=True,
             coupon_tiers=[],
             coupon_tiers_fr=[],
