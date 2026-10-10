@@ -111,6 +111,19 @@ async def get_live_usdt_rate() -> float:
     _CACHED_USDT_TIME = now
     return _CACHED_USDT_RATE
 
+# User Language Preferences ('ar' or 'fr')
+_USER_LANG: Dict[int, str] = {}
+
+def get_user_lang(user_id: int, user_obj: Optional[Dict[str, Any]] = None) -> str:
+    """Returns 'fr' or 'ar' for the user based on saved preferences or Telegram app language."""
+    if user_id in _USER_LANG:
+        return _USER_LANG[user_id]
+    if user_obj and isinstance(user_obj, dict):
+        code = (user_obj.get("language_code") or "").lower()
+        if code.startswith("fr"):
+            return "fr"
+    return "ar"
+
 WELCOME_TEXT = """👋 <b>مرحباً بك في بوت DealScoutDz لزيادة تخفيض العملات!</b> 🪙
 
 هذا البوت يعمل على <b>زيادة نسبة التخفيض بالعملات (النقاط)</b> من 1%~5% إلى نسبة عالية تصل حتى <b>70%</b> في معظم منتجات AliExpress 🤑
@@ -121,6 +134,17 @@ WELCOME_TEXT = """👋 <b>مرحباً بك في بوت DealScoutDz لزيادة
 3️⃣ سيرسل لك البوت فوراً روابط التخفيض الأكبر (تخفيض العملات، Bundle Deals، السوبر ديلز، والرابط المباشر) مع السعر المباشر بالدينار الجزائري! 🚀
 
 💡 <i>أرسل أي رابط منتج من AliExpress الآن لتجربة التخفيض!</i>"""
+
+WELCOME_TEXT_FR = """👋 <b>Bienvenue sur DealScout Bot - Maximiseur de Réduction Pièces (Coins) AliExpress !</b> 🪙
+
+Ce bot vous permet d'<b>augmenter la réduction par pièces (Coins)</b> de 1%~5% jusqu'à <b>70%</b> sur la plupart des produits AliExpress 🤑
+
+📌 <b>Comment l'utiliser facilement :</b>
+1️⃣ Copiez le lien de n'importe quel produit depuis l'application ou le site AliExpress.
+2️⃣ Envoyez le lien ici dans cette conversation.
+3️⃣ Le bot génère instantanément vos liens de réduction maximale (Pièces Coins, Bundle Deals, SuperDeals, et Lien Direct) avec le prix estimé en Euros ! 🚀
+
+💡 <i>Envoyez un lien AliExpress dès maintenant pour tester la réduction !</i>"""
 
 HELP_TEXT = """💡 <b>دليل استخدام تخفيض العملات بأقصى نسبة:</b>
 
@@ -139,6 +163,21 @@ HELP_TEXT = """💡 <b>دليل استخدام تخفيض العملات بأق�
 📢 للمزيد من العروض اليومية، انضم لقنواتنا:
 🇩🇿 صفقات الجزائر: @DzAliexpress0
 🇫🇷 صفقات فرنسا وأوروبا: @francedealsdz"""
+
+HELP_TEXT_FR = """💡 <b>Guide pour maximiser votre réduction par pièces (Coins) :</b>
+
+1️⃣ <b>Comment activer la réduction maximale ?</b>
+En ouvrant le lien Coins, n'achetez pas depuis la page classique ! Cliquez directement sur le bouton <b>"Acheter maintenant"</b> depuis la page des pièces, ou ajoutez le produit au panier depuis cette page pour déduire tous vos points disponibles.
+
+2️⃣ <b>Changer le pays vers la Corée 🇰🇷 (Astuce Tech) :</b>
+Changer le pays de livraison vers la Corée 🇰🇷 📍 dans les paramètres AliExpress permet souvent d'obtenir des prix de base plus bas et un pourcentage de pièces supérieur sur le matériel tech et gaming !
+
+3️⃣ <b>Comment collecter des pièces chaque jour ?</b>
+Ouvrez chaque jour l'application AliExpress, accédez à la section <b>Coins / Pièces</b> et récupérez vos pièces quotidiennes gratuites (70 à 150 pièces par jour).
+
+📢 Pour ne rater aucun bon plan au quotidien, rejoignez nos canaux :
+🇫🇷 Bons Plans France & Europe : @francedealsdz
+🇩🇿 Bons Plans Algérie : @DzAliexpress0"""
 
 def get_current_coupons_text() -> str:
     """Dynamically returns fresh active coupons or informs user of upcoming sales."""
@@ -514,10 +553,10 @@ async def resolve_any_ali_link(text: str) -> Optional[str]:
 
     return _extract_id(text)
 
-async def generate_coin_discount_response(product_id: str, raw_user_text: str = "") -> Dict[str, Any]:
+async def generate_coin_discount_response(product_id: str, raw_user_text: str = "", lang: str = "ar") -> Dict[str, Any]:
     """
     Guaranteed Zero-Failure generator with generous timeout for AliExpress API
-    and fallback to user share text title/price.
+    and fallback to user share text title/price. Supports both Arabic ('ar') and French ('fr').
     """
     usdt_rate = await get_live_usdt_rate()
 
@@ -529,7 +568,7 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
     direct_super = f"https://www.aliexpress.com/item/{product_id}.html?sourceType=561&channel=superdeal"
     direct_limited = f"https://www.aliexpress.com/item/{product_id}.html?sourceType=562&channel=limited"
 
-    prod_title = fallback_title or "منتج مميز من AliExpress"
+    prod_title = fallback_title or ("Produit AliExpress" if lang == "fr" else "منتج مميز من AliExpress")
     prod_price = fallback_price
     prod_image = None
     product_link = ensure_affiliate(direct_product, pid=product_id)
@@ -592,15 +631,66 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
     except Exception:
         pass
 
-
-    price_line = ""
-    if prod_price:
-        dzd_val = int(prod_price * usdt_rate)
-        price_line = f"💵 السعر التقريبي: <b>{prod_price:.2f}$</b> (~<b>{dzd_val:,} دج</b>)\n"
-
     safe_title = html.escape(prod_title)
 
-    message_text = f"""🛍️ <b>{safe_title}</b>
+    if lang == "fr":
+        eur_price = round(prod_price * 0.92, 2) if prod_price else None
+        price_line = f"💶 Prix estimé : <b>{eur_price:.2f}€</b> (~<b>{prod_price:.2f}$</b>)\n" if eur_price else ""
+
+        message_text = f"""🛍️ <b>{safe_title}</b>
+{price_line}
+🛒 <b>Lien direct du produit :</b>
+🔗 {product_link}
+
+🪙 <b>Prix avec réduction Pièces (Coins) :</b>
+🔗 {coin_link}
+
+📦 <b>Offres groupées (Bundle Deals) :</b>
+🔗 {bundle_link}
+
+⚡ <b>Ventes Flash (SuperDeals) :</b>
+🔗 {super_link}
+
+⏳ <b>Offre limitée (Limited Offer) :</b>
+🔗 {limited_link}
+
+💡 <i>Conseil : Ouvrez le lien Pièces et achetez directement pour déduire le maximum de pièces !</i>"""
+
+        reply_markup = {
+            "inline_keyboard": [
+                [
+                    {"text": "🛒 Lien Direct", "url": product_link},
+                    {"text": "🪙 Réduction Pièces (Coins)", "url": coin_link}
+                ],
+                [
+                    {"text": "📦 Offres Bundle Deals", "url": bundle_link},
+                    {"text": "⚡ Ventes SuperDeals", "url": super_link}
+                ],
+                [
+                    {"text": "⏳ Offre Limitée", "url": limited_link}
+                ],
+                [
+                    {"text": "🇫🇷 Canal Bons Plans France 🇪🇺", "url": "https://t.me/francedealsdz"},
+                    {"text": "🇩🇿 Canal Bons Plans Algérie 🇩🇿", "url": "https://t.me/DzAliexpress0"}
+                ],
+                [
+                    {
+                        "text": "🔄 Partager le bot",
+                        "url": "https://t.me/share/url?url=https://t.me/Alilo07BOT&text=Bot de réduction AliExpress Coins 🪙 Économisez jusqu'à 70% !"
+                    }
+                ],
+                [
+                    {"text": "🌐 Passer en Arabe 🇩🇿", "callback_data": "set_lang_ar"}
+                ]
+            ]
+        }
+    else:
+        price_line = ""
+        if prod_price:
+            dzd_val = int(prod_price * usdt_rate)
+            price_line = f"💵 السعر التقريبي: <b>{prod_price:.2f}$</b> (~<b>{dzd_val:,} دج</b>)\n"
+
+        message_text = f"""🛍️ <b>{safe_title}</b>
 {price_line}
 🛒 <b>الرابط المباشر للمنتج:</b>
 🔗 {product_link}
@@ -619,31 +709,34 @@ async def generate_coin_discount_response(product_id: str, raw_user_text: str = 
 
 💡 <i>نصيحة: ادخل من رابط العملات واشترِ مباشرة أو أضف المنتج للسلة لتفعيل أكبر نسبة خصم!</i>"""
 
-    reply_markup = {
-        "inline_keyboard": [
-            [
-                {"text": "🛒 رابط الشراء المباشر", "url": product_link},
-                {"text": "🪙 شراء بتخفيض العملات", "url": coin_link}
-            ],
-            [
-                {"text": "📦 عروض Bundle Deals", "url": bundle_link},
-                {"text": "⚡ عروض السوبر ديلز", "url": super_link}
-            ],
-            [
-                {"text": "⏳ العرض المحدود (Limited)", "url": limited_link}
-            ],
-            [
-                {"text": "📢 قناة صفقات الجزائر 🇩🇿", "url": "https://t.me/DzAliexpress0"},
-                {"text": "🇫🇷 قناة صفقات فرنسا 🇪🇺", "url": "https://t.me/francedealsdz"}
-            ],
-            [
-                {
-                    "text": "🔄 مشاركة البوت مع أصدقائك",
-                    "url": "https://t.me/share/url?url=https://t.me/Alilo07BOT&text=بوت زيادة تخفيض العملات في علي اكسبرس 🪙🔥 يوفر حتى 70%!"
-                }
+        reply_markup = {
+            "inline_keyboard": [
+                [
+                    {"text": "🛒 رابط الشراء المباشر", "url": product_link},
+                    {"text": "🪙 شراء بتخفيض العملات", "url": coin_link}
+                ],
+                [
+                    {"text": "📦 عروض Bundle Deals", "url": bundle_link},
+                    {"text": "⚡ عروض السوبر ديلز", "url": super_link}
+                ],
+                [
+                    {"text": "⏳ العرض المحدود (Limited)", "url": limited_link}
+                ],
+                [
+                    {"text": "📢 قناة صفقات الجزائر 🇩🇿", "url": "https://t.me/DzAliexpress0"},
+                    {"text": "🇫🇷 قناة صفقات فرنسا 🇪🇺", "url": "https://t.me/francedealsdz"}
+                ],
+                [
+                    {
+                        "text": "🔄 مشاركة البوت مع أصدقائك",
+                        "url": "https://t.me/share/url?url=https://t.me/Alilo07BOT&text=بوت زيادة تخفيض العملات في علي اكسبرس 🪙🔥 يوفر حتى 70%!"
+                    }
+                ],
+                [
+                    {"text": "🌐 Passer en Français 🇫🇷", "callback_data": "set_lang_fr"}
+                ]
             ]
-        ]
-    }
+        }
 
     return {
         "text": message_text,
@@ -827,8 +920,37 @@ async def handle_update(update: Dict[str, Any]) -> bool:
             pass
 
         if chat_id:
-            if cb_data == "cb_help":
-                await send_msg(chat_id, HELP_TEXT)
+            if cb_data == "set_lang_fr":
+                _USER_LANG[user_id] = "fr"
+                start_markup_fr = {
+                    "inline_keyboard": [
+                        [{"text": "📖 Guide Réduction Pièces (Coins)", "callback_data": "cb_help"}],
+                        [
+                            {"text": "🇫🇷 Canal Bons Plans France 🇪🇺", "url": "https://t.me/francedealsdz"},
+                            {"text": "🇩🇿 Canal Bons Plans Algérie 🇩🇿", "url": "https://t.me/DzAliexpress0"}
+                        ],
+                        [{"text": "🌐 Passer en Arabe 🇩🇿", "callback_data": "set_lang_ar"}]
+                    ]
+                }
+                await send_msg(chat_id, "✅ <b>Langue changée en Français !</b>\n\n" + WELCOME_TEXT_FR, reply_markup=start_markup_fr)
+                return True
+            elif cb_data == "set_lang_ar":
+                _USER_LANG[user_id] = "ar"
+                start_markup_ar = {
+                    "inline_keyboard": [
+                        [{"text": "📖 طريقة استخدام تخفيض العملات", "callback_data": "cb_help"}],
+                        [
+                            {"text": "📢 قناة صفقات الجزائر 🇩🇿", "url": "https://t.me/DzAliexpress0"},
+                            {"text": "🇫🇷 قناة صفقات فرنسا 🇪🇺", "url": "https://t.me/francedealsdz"}
+                        ],
+                        [{"text": "🌐 Passer en Français 🇫🇷", "callback_data": "set_lang_fr"}]
+                    ]
+                }
+                await send_msg(chat_id, "✅ <b>تم تغيير اللغة إلى العربية !</b>\n\n" + WELCOME_TEXT, reply_markup=start_markup_ar)
+                return True
+            elif cb_data == "cb_help":
+                u_lang = get_user_lang(user_id, user)
+                await send_msg(chat_id, HELP_TEXT_FR if u_lang == "fr" else HELP_TEXT)
             elif cb_data == "cb_coupons":
                 await send_msg(chat_id, get_current_coupons_text())
             elif cb_data.startswith("admin_pub_"):
@@ -952,43 +1074,118 @@ async def handle_update(update: Dict[str, Any]) -> bool:
         parts = text.split()
         param = parts[1].lower() if len(parts) > 1 else ""
 
+        user_lang = get_user_lang(user_id, from_user)
+        if "fr" in param:
+            user_lang = "fr"
+            _USER_LANG[user_id] = "fr"
+        elif "ar" in param:
+            user_lang = "ar"
+            _USER_LANG[user_id] = "ar"
+
         # Deep-link from Meta Ads or Promotions
         if any(k in param for k in ["meta", "ad", "fb", "coins", "promo", "deal"]):
-            ad_welcome = (
-                "🇩🇿 <b>مرحباً بك في بوت DealScout DZ عبر إعلان تخفيض العملات!</b> 🪙🔥\n\n"
-                "هذا البوت يساعدك على توفير حتى <b>70%</b> من سعر أي منتج في <b>AliExpress</b> عبر تحويله إلى رابط خصم العملات (Coins) الأقصى!\n\n"
-                "📌 <b>جرّب الآن في 3 خطوات بسيطة:</b>\n"
-                "1️⃣ افتح تطبيق <b>AliExpress</b> واختر أي منتج تريده.\n"
-                "2️⃣ اضغط على زر المشاركة <b>(Share)</b> ثم نسخ الرابط <b>(Copy link)</b>.\n"
-                "3️⃣ <b>ألصق الرابط هنا في هذه المحادثة فوراً</b>.\n\n"
-                "⚡ سيرسل لك البوت روابط الشراء بأقل سعر ممكن بالدينار الجزائري!\n\n"
-                "📢 <i>تابع أيضاً قناتنا الرسمية لصيدات اليوم الحصرية:</i> @DzAliexpress0"
-            )
-            markup = {
+            if user_lang == "fr":
+                ad_welcome = (
+                    "🇫🇷 <b>Bienvenue sur DealScout Bot via notre promo Réduction Pièces !</b> 🪙🔥\n\n"
+                    "Ce bot vous aide à économiser jusqu'à <b>70%</b> sur AliExpress grâce aux pièces (Coins) !\n\n"
+                    "📌 <b>Testez en 3 étapes simples :</b>\n"
+                    "1️⃣ Ouvrez <b>AliExpress</b> et choisissez un produit.\n"
+                    "2️⃣ Cliquez sur <b>Partager</b> puis <b>Copier le lien</b>.\n"
+                    "3️⃣ <b>Collez le lien ici dans le chat</b>.\n\n"
+                    "⚡ Le bot vous enverra les liens au meilleur prix en Euros !\n\n"
+                    "📢 <i>Rejoignez notre canal officiel de bons plans :</i> @francedealsdz"
+                )
+                markup = {
+                    "inline_keyboard": [
+                        [{"text": "📖 Guide Réduction Pièces (Coins)", "callback_data": "cb_help"}],
+                        [
+                            {"text": "🇫🇷 Canal Bons Plans France 🇪🇺", "url": "https://t.me/francedealsdz"},
+                            {"text": "🇩🇿 Canal Bons Plans Algérie 🇩🇿", "url": "https://t.me/DzAliexpress0"}
+                        ],
+                        [{"text": "🌐 Passer en Arabe 🇩🇿", "callback_data": "set_lang_ar"}]
+                    ]
+                }
+            else:
+                ad_welcome = (
+                    "🇩🇿 <b>مرحباً بك في بوت DealScout DZ عبر إعلان تخفيض العملات!</b> 🪙🔥\n\n"
+                    "هذا البوت يساعدك على توفير حتى <b>70%</b> من سعر أي منتج في <b>AliExpress</b> عبر تحويله إلى رابط خصم العملات (Coins) الأقصى!\n\n"
+                    "📌 <b>جرّب الآن في 3 خطوات بسيطة:</b>\n"
+                    "1️⃣ افتح تطبيق <b>AliExpress</b> واختر أي منتج تريده.\n"
+                    "2️⃣ اضغط على زر المشاركة <b>(Share)</b> ثم نسخ الرابط <b>(Copy link)</b>.\n"
+                    "3️⃣ <b>ألصق الرابط هنا في هذه المحادثة فوراً</b>.\n\n"
+                    "⚡ سيرسل لك البوت روابط الشراء بأقل سعر ممكن بالدينار الجزائري!\n\n"
+                    "📢 <i>تابع أيضاً قناتنا الرسمية لصيدات اليوم الحصرية:</i> @DzAliexpress0"
+                )
+                markup = {
+                    "inline_keyboard": [
+                        [{"text": "📖 طريقة استخدام تخفيض العملات", "callback_data": "cb_help"}],
+                        [
+                            {"text": "📢 قناة صفقات الجزائر 🇩🇿", "url": "https://t.me/DzAliexpress0"},
+                            {"text": "🇫🇷 قناة صفقات فرنسا 🇪🇺", "url": "https://t.me/francedealsdz"}
+                        ],
+                        [{"text": "🌐 Passer en Français 🇫🇷", "callback_data": "set_lang_fr"}]
+                    ]
+                }
+            await send_msg(chat_id, ad_welcome, reply_markup=markup)
+            return True
+
+        # Standard Welcome
+        if user_lang == "fr":
+            start_markup_fr = {
+                "inline_keyboard": [
+                    [{"text": "📖 Guide Réduction Pièces (Coins)", "callback_data": "cb_help"}],
+                    [
+                        {"text": "🇫🇷 Canal Bons Plans France 🇪🇺", "url": "https://t.me/francedealsdz"},
+                        {"text": "🇩🇿 Canal Bons Plans Algérie 🇩🇿", "url": "https://t.me/DzAliexpress0"}
+                    ],
+                    [{"text": "🌐 Passer en Arabe 🇩🇿", "callback_data": "set_lang_ar"}]
+                ]
+            }
+            await send_msg(chat_id, WELCOME_TEXT_FR, start_markup_fr)
+            return True
+        else:
+            start_markup_ar = {
                 "inline_keyboard": [
                     [{"text": "📖 طريقة استخدام تخفيض العملات", "callback_data": "cb_help"}],
                     [
                         {"text": "📢 قناة صفقات الجزائر 🇩🇿", "url": "https://t.me/DzAliexpress0"},
                         {"text": "🇫🇷 قناة صفقات فرنسا 🇪🇺", "url": "https://t.me/francedealsdz"}
-                    ]
+                    ],
+                    [{"text": "🌐 Passer en Français 🇫🇷", "callback_data": "set_lang_fr"}]
                 ]
             }
-            await send_msg(chat_id, ad_welcome, reply_markup=markup)
+            await send_msg(chat_id, WELCOME_TEXT, start_markup_ar)
             return True
 
-        # Standard Welcome
-        start_markup = {
+    # Commands to switch language directly
+    if text in ["/fr", "/french", "francais", "français"]:
+        _USER_LANG[user_id] = "fr"
+        start_markup_fr = {
             "inline_keyboard": [
+                [{"text": "📖 Guide Réduction Pièces (Coins)", "callback_data": "cb_help"}],
                 [
-                    {"text": "📖 طريقة استخدام تخفيض العملات", "callback_data": "cb_help"}
+                    {"text": "🇫🇷 Canal Bons Plans France 🇪🇺", "url": "https://t.me/francedealsdz"},
+                    {"text": "🇩🇿 Canal Bons Plans Algérie 🇩🇿", "url": "https://t.me/DzAliexpress0"}
                 ],
+                [{"text": "🌐 Passer en Arabe 🇩🇿", "callback_data": "set_lang_ar"}]
+            ]
+        }
+        await send_msg(chat_id, "✅ <b>La langue a été changée en Français !</b>\n\n" + WELCOME_TEXT_FR, start_markup_fr)
+        return True
+
+    if text in ["/ar", "/arabic", "عربي", "العربية"]:
+        _USER_LANG[user_id] = "ar"
+        start_markup_ar = {
+            "inline_keyboard": [
+                [{"text": "📖 طريقة استخدام تخفيض العملات", "callback_data": "cb_help"}],
                 [
                     {"text": "📢 قناة صفقات الجزائر 🇩🇿", "url": "https://t.me/DzAliexpress0"},
                     {"text": "🇫🇷 قناة صفقات فرنسا 🇪🇺", "url": "https://t.me/francedealsdz"}
-                ]
+                ],
+                [{"text": "🌐 Passer en Français 🇫🇷", "callback_data": "set_lang_fr"}]
             ]
         }
-        await send_msg(chat_id, WELCOME_TEXT, start_markup)
+        await send_msg(chat_id, "✅ <b>تم تغيير اللغة إلى العربية !</b>\n\n" + WELCOME_TEXT, start_markup_ar)
         return True
 
     # Command: /calc <usd_amount>
@@ -1052,8 +1249,9 @@ async def handle_update(update: Dict[str, Any]) -> bool:
         await send_msg(chat_id, "\n\n".join(lines), reply_markup=markup)
         return True
 
-    if text.startswith("/help") or "كيف" in text or "طريقة" in text:
-        await send_msg(chat_id, HELP_TEXT)
+    if text.startswith("/help") or "كيف" in text or "طريقة" in text or "aide" in text.lower():
+        user_lang = get_user_lang(user_id, from_user)
+        await send_msg(chat_id, HELP_TEXT_FR if user_lang == "fr" else HELP_TEXT)
         return True
 
     if text.startswith("/coupons") or "كوبون" in text or "كود" in text:
@@ -1086,14 +1284,25 @@ async def handle_update(update: Dict[str, Any]) -> bool:
     # 3. Resolve Product ID from ANY AliExpress Link or Text
     pid = await resolve_any_ali_link(text)
     if not pid:
-        help_msg = (
-            "⚠️ <b>الرجاء إرسال رابط صحيح لمنتج من AliExpress.</b>\n\n"
-            "📌 <b>يدعم البوت جميع الروابط:</b>\n"
-            "• روابط التطبيق: <code>https://a.aliexpress.com/_xxxx</code>\n"
-            "• روابط المتصفح: <code>https://aliexpress.com/item/100500...html</code>\n"
-            "• كود المنتج مباشرة: <code>1005007458498882</code>\n\n"
-            "💡 أو اكتب /calc لحساب الأسعار بالدينار، أو /help لمعرفة كيفية الاستخدام."
-        )
+        user_lang = get_user_lang(user_id, from_user)
+        if user_lang == "fr":
+            help_msg = (
+                "⚠️ <b>Veuillez envoyer un lien AliExpress valide.</b>\n\n"
+                "📌 <b>Tous les formats de liens sont supportés :</b>\n"
+                "• Liens de l'application : <code>https://a.aliexpress.com/_xxxx</code>\n"
+                "• Liens du navigateur : <code>https://aliexpress.com/item/100500...html</code>\n"
+                "• ID du produit directement : <code>1005007458498882</code>\n\n"
+                "💡 Tapez /help pour voir le guide d'utilisation."
+            )
+        else:
+            help_msg = (
+                "⚠️ <b>الرجاء إرسال رابط صحيح لمنتج من AliExpress.</b>\n\n"
+                "📌 <b>يدعم البوت جميع الروابط:</b>\n"
+                "• روابط التطبيق: <code>https://a.aliexpress.com/_xxxx</code>\n"
+                "• روابط المتصفح: <code>https://aliexpress.com/item/100500...html</code>\n"
+                "• كود المنتج مباشرة: <code>1005007458498882</code>\n\n"
+                "💡 أو اكتب /calc لحساب الأسعار بالدينار، أو /help لمعرفة كيفية الاستخدام."
+            )
         await send_msg(chat_id, help_msg)
         return True
 
@@ -1120,7 +1329,8 @@ async def handle_update(update: Dict[str, Any]) -> bool:
         pass
 
     # Guaranteed response generation with raw text fallback
-    res = await generate_coin_discount_response(pid, raw_user_text=text)
+    user_lang = get_user_lang(user_id, from_user)
+    res = await generate_coin_discount_response(pid, raw_user_text=text, lang=user_lang)
 
     # Attach exclusive Admin Quick-Publish button if user is admin
     reply_markup = res.get("reply_markup") or {"inline_keyboard": []}

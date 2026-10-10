@@ -88,3 +88,23 @@ async def test_bundle_and_promo_links_integrity():
     assert "BundleDeals2" in preserved_bundle
     assert "aff_fcid=" in preserved_bundle
 
+
+@pytest.mark.asyncio
+async def test_coin_discount_response_french():
+    from api.coin_bot import generate_coin_discount_response
+
+    pid = "1005008080932874"
+    res = await generate_coin_discount_response(pid, lang="fr")
+
+    # French text must have French headings
+    assert "Lien direct du produit" in res["text"]
+    assert "Prix avec réduction Pièces" in res["text"]
+
+    # Inline keyboard buttons must be in French
+    btn_texts = [btn["text"] for row in res["reply_markup"]["inline_keyboard"] for btn in row]
+    assert any("Lien Direct" in t for t in btn_texts)
+    assert any("Réduction Pièces" in t for t in btn_texts)
+    assert any("Bons Plans France" in t for t in btn_texts)
+    assert any("Passer en Arabe" in t for t in btn_texts)
+
+
