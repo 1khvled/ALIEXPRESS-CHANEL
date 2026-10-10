@@ -352,6 +352,7 @@ class DealCaptionGenerator:
         lines.append(affiliate_url)
 
         lines.append("")
+        lines.append("🤖 <b>بوت تخفيض العملات:</b> @Alilo07BOT")
         lines.append("📢 @DzAliexpress0")
 
         return "\n".join(lines)
