@@ -185,7 +185,8 @@
     "9998887532",
     "9998887893",
     "1005006007773971",
-    "1005013067004815"
+    "1005013067004815",
+    "1005009948598802"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -377,7 +378,8 @@
     "9998887532": 1791627532.2548609,
     "9998887893": 1791627893.027416,
     "1005006007773971": 1791638433.4352653,
-    "1005013067004815": 1791638447.7612462
+    "1005013067004815": 1791638447.7612462,
+    "1005009948598802": 1791639031.4293046
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -609,7 +611,8 @@
     "قرص صلب SSD من CUSU بسعات 1 تيرابايت، 512 جيجابايت، 240 جيجابايت، 480",
     "مايكروفون ديناميكي Fifine K688",
     "Walram SATA3 SSD 512GB",
-    "Electronic Body Scale."
+    "Electronic Body Scale.",
+    "Realme 15 Global (12/256)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -844,7 +847,8 @@
     "قرص صلب SSD من CUSU بسعات 1 تيرابايت، 512 جيجابايت، 240 جيجابايت، 480": 1791626816.0179322,
     "مايكروفون ديناميكي Fifine K688": 1791638433.4352653,
     "Walram SATA3 SSD 512GB": 1791638441.843642,
-    "Electronic Body Scale.": 1791638447.7612462
+    "Electronic Body Scale.": 1791638447.7612462,
+    "Realme 15 Global (12/256)": 1791639031.4293046
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1503,27 +1507,28 @@
     "ecksdeal:5882",
     "bnddeals:50822",
     "aniscoupons:32857",
-    "aniscoupons:32858"
+    "aniscoupons:32858",
+    "aniscoupons:32859"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1791638734.5386465,
+  "last_run_time": 1791639031.4293046,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32858,
-      "last_check_time": 1791638736.5567539
+      "last_message_id": 32859,
+      "last_check_time": 1791639033.4465516
     },
     "ecksdeal": {
       "last_message_id": 5882,
-      "last_check_time": 1791638729.6728003
+      "last_check_time": 1791639026.766951
     },
     "lodydeals": {
       "last_message_id": 45516,
-      "last_check_time": 1791638728.9918032
+      "last_check_time": 1791639026.0677228
     },
     "bnddeals": {
       "last_message_id": 50822,
-      "last_check_time": 1791638730.3141377
+      "last_check_time": 1791639027.4278872
     },
     "test_channel": {
       "last_message_id": 1791627893,
@@ -1531,19 +1536,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7975,
-      "last_check_time": 1791638730.0001526
+      "last_check_time": 1791639027.1073177
     },
     "zedstoreonline": {
       "last_message_id": 38562,
-      "last_check_time": 1791638729.3347158
+      "last_check_time": 1791639026.4155567
     },
     "megaphonna": {
       "last_message_id": 8311,
-      "last_check_time": 1791638730.7198122
+      "last_check_time": 1791639027.8416128
     },
     "couponsglobal": {
       "last_message_id": 48831,
-      "last_check_time": 1791638737.0913467
+      "last_check_time": 1791639033.937173
     }
   },
   "published_product_prices": {
@@ -1717,7 +1722,7 @@
     "1005010056083952": 10.7,
     "1005012193220695": 253.22,
     "1005012823469739": 32.11,
-    "1005009948598802": 229.9,
+    "1005009948598802": 236.9,
     "1005012293918683": 5.0,
     "1005012651158292": 9.78,
     "1005010289640412": 32.06,
@@ -4598,6 +4603,16 @@
       "price": 34.9,
       "timestamp": 1791638734.5386465,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32859": {
+      "channel_msg_id": 715,
+      "product_id": "1005009948598802",
+      "title": "Realme 15 Global (12/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 32859,
+      "price": 236.9,
+      "timestamp": 1791639031.4293046,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4606,17 +4621,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791638737.104747,
+    "last_deal_post_time": 1791639033.9507434,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1791638739.353679,
+    "last_sweep_time": 1791639036.191546,
     "last_sweep_times": {
-      "algeria": 1791638737.0982623,
-      "france": 1791638739.353679
+      "algeria": 1791639033.9444613,
+      "france": 1791639036.191546
     },
     "last_deal_post_times": {
-      "algeria": 1791638737.104747
+      "algeria": 1791639033.9507434
     }
   },
   "last_coin_reminder_time": 1791480006.8698988,
@@ -4807,7 +4822,7 @@
     "1005010056083952": "zedstoreonline",
     "1005012193220695": "lodydeals",
     "1005012823469739": "lodydeals",
-    "1005009948598802": "zedstoreonline",
+    "1005009948598802": "aniscoupons",
     "1005012293918683": "ecksdeal",
     "1005012651158292": "lodydeals",
     "1005010289640412": "ecksdeal",
@@ -5053,7 +5068,8 @@
     "Electronic Scale Smart": "lodydeals",
     "مايكروفون ديناميكي Fifine K688": "ecksdeal",
     "Walram SATA3 SSD 512GB": "bnddeals",
-    "Electronic Body Scale.": "aniscoupons"
+    "Electronic Body Scale.": "aniscoupons",
+    "Realme 15 Global (12/256)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
