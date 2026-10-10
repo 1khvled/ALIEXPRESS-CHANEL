@@ -250,7 +250,7 @@ def extract_coupon_list(text: str) -> List[Dict[str, str]]:
         c = code_str.strip().upper()
         if c.lower() in blacklist or any(b in c.lower() for b in ['http', 't.me', 'click']):
             return
-        if not re.search(r'[A-Za-z]', c):
+        if not re.search(r'[A-Za-z]', c) or is_competitor_branded_code(c):
             return
         # If tier has no dollar sign (e.g. 8/256), ensure explicit coupon context exists
         if '$' not in tier_str and not has_kw:
@@ -351,6 +351,19 @@ def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
 
     return usd_val, eur_val
 
+def is_competitor_branded_code(code: str) -> bool:
+    """Checks if a coupon code contains a competitor channel's brand/name (e.g. ANIS, BND, ZED, LODY, ECKS)."""
+    if not code:
+        return False
+    cl = code.lower().strip()
+    for brand in ["anis", "bnd", "zed", "lody", "ecks", "megaprix", "megaphonna", "cp4dz", "francecp"]:
+        if cl.startswith(brand) or f"_{brand}" in cl or f"-{brand}" in cl:
+            return True
+        if brand in ["anis", "megaprix", "megaphonna", "ecks"] and brand in cl:
+            return True
+    return False
+
+
 def extract_coupon(text: str) -> Optional[str]:
     if not text:
         return None
@@ -363,7 +376,8 @@ def extract_coupon(text: str) -> Optional[str]:
         for m in pattern.finditer(norm):
             code = m.group(1).strip()
             if len(code) >= 3 and re.search(r'[A-Za-z]', code) and code.lower() not in blacklist and not any(b in code.lower() for b in ["http", "t.me", "click", "bot"]):
-                return code.upper()
+                if not is_competitor_branded_code(code):
+                    return code.upper()
     return None
 
 def extract_seller_coupon(text: str) -> Optional[str]:
@@ -393,7 +407,8 @@ def extract_seller_coupon(text: str) -> Optional[str]:
         except ValueError:
             pass
         if code and code.lower() not in blacklist and re.search(r'[A-Za-z0-9]', code):
-            return f"{amount}$ (كود: {code})" if amount else code
+            if not is_competitor_branded_code(code):
+                return f"{amount}$ (كود: {code})" if amount else code
 
     # 2. Code only: e.g. "🎁💰احجز كوبون المتجر 💵:\nKR0864" or "كوبون حصري ANISHAYS40"
     p_code = re.search(
@@ -406,7 +421,8 @@ def extract_seller_coupon(text: str) -> Optional[str]:
     if p_code:
         code = p_code.group(1).strip()
         if code.lower() not in blacklist and not code.lower().endswith(('$', 'usd', 'eur')):
-            return code
+            if not is_competitor_branded_code(code):
+                return code
 
     # 3. Standard SELLER_COUPON_PATTERNS (amount or code)
     for pattern in SELLER_COUPON_PATTERNS:
@@ -422,7 +438,8 @@ def extract_seller_coupon(text: str) -> Optional[str]:
                     code = f"{num_clean}$"
             except ValueError:
                 pass
-            return code
+            if not is_competitor_branded_code(code):
+                return code
     return None
 
 
