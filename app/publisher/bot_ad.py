@@ -62,22 +62,6 @@ POST_DAILY_COINS = """<blockquote>🪙 <b>تذكير ذكي | اجمع رصيد 
 🪙 <b>بوت تفعيل وتضخيم خصم العملات:</b> @Alilo07BOT
 📢 <b>قناة الصفقات المعتمدة:</b> @DzAliexpress0"""
 
-# --- VARIANT 2: Windows Automated Daily Collector ---
-POST_PC_COLLECTOR = """<blockquote>⚡ <b>حيلة أصحاب الحواسيب | اجمع عملات AliExpress يومياً بدون فتح التطبيق!</b></blockquote>
-
-إذا كنت تنسى الدخول اليومي لتطبيق الهاتف لجمع العملات، يمكنك تشغيل أداة جمع العملات التلقائية المفتوحة المصدر على حاسوبك الشخصي:
-
-💻 <b>مميزات الأداة:</b>
-▫️ تعمل في الخلفية على الويندوز وتجمع رصيدك اليومي تلقائياً كل 24 ساعة.
-▫️ آمنة 100% ومفتوحة المصدر على GitHub، ولا تتطلب سوى أمر تشغيل واحد وسهل.
-▫️ ترسل لك إشعاراً يومياً على تيليجرام بما تم جمعه!
-
-🔗 <b>رابط المشروع وطريقة التثبيت السريعة:</b>
-https://github.com/1khvled/COIN-BOT-
-━━━━━━━━━━━━━━━━━
-🪙 <b>وعند الرغبة بالشراء، استعن دائماً بالبوت:</b> @Alilo07BOT
-📢 <b>قناة الصفقات المعتمدة:</b> @DzAliexpress0"""
-
 REMINDER_VARIANTS: List[Dict[str, Any]] = [
     {
         "id": "pc_guide",
@@ -94,25 +78,15 @@ REMINDER_VARIANTS: List[Dict[str, Any]] = [
             [{"text": "🪙 تخفيض أي رابط بالعملات", "url": "https://t.me/Alilo07BOT"}],
             [{"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}]
         ]
-    },
-    {
-        "id": "pc_collector",
-        "caption": POST_PC_COLLECTOR,
-        "buttons": [
-            [{"text": "🪙 بوت تخفيض العملات المباشر", "url": "https://t.me/Alilo07BOT"}],
-            [{"text": "⚡ كود جامع العملات للحاسوب (GitHub)", "url": "https://github.com/1khvled/COIN-BOT-"}],
-            [{"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}]
-        ]
     }
 ]
 
 def get_next_coin_reminder_variant(variant_idx: Optional[int] = None) -> Tuple[Dict[str, Any], int]:
-    """Returns a randomly selected educational/repo-marketing reminder variant."""
+    """Returns a randomly selected educational coin reminder variant."""
     import random
     if variant_idx is not None:
         idx = variant_idx % len(REMINDER_VARIANTS)
     else:
-        # Truly random pick: 33% PC Guide, 33% Daily Coins Habit, 33% Coin Bot GitHub Repo Marketing
         idx = random.randint(0, len(REMINDER_VARIANTS) - 1)
     return REMINDER_VARIANTS[idx], idx
 

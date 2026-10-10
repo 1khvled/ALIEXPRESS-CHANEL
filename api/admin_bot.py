@@ -785,7 +785,7 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             "• <code>/notify_end</code> - نشر تنبيه اقتراب نهاية التخفيضات (مع حيلة حجز السعر 20 يوم).\n"
             "• <code>/notify_start</code> - نشر تنبيه الاستعداد لانطلاق التخفيضات (دليل السلة والكوبونات).\n"
             "• <code>/reminder</code> - نشر تذكير العملات ودليل متسوقي الحاسوب (PC / Laptop).\n"
-            "• <code>/coinbot</code> - نشر ترويج سكريبت جامع العملات (COIN-BOT- GitHub).\n"
+            "• <code>/coinbot</code> - نشر تذكير تجميع وتخفيض العملات في القناة.\n"
             "• <code>/calendar</code> - نشر رزنامة التخفيضات الرسمية.\n"
             "• <code>/regroup</code> - تجميع عروض المنتجات المتشابهة في منشور موحد.\n"
             "• <code>/disclaimer</code> - نشر وتثبيت تنبيه تغيير الدولة في القناة.\n"
@@ -1083,8 +1083,6 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
                 v_idx = 0
             elif "daily" in text.lower() or "يومي" in text:
                 v_idx = 1
-            elif "auto" in text.lower() or "github" in text.lower() or "collector" in text.lower():
-                v_idx = 2
 
             success, msg = await post_bot_advertisement(force=True, variant_idx=v_idx)
             if success:
@@ -1095,13 +1093,13 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             await send_admin_msg(chat_id, f"❌ حدث خطأ: {e}")
         return True
 
-    if text.startswith("/coinbot") or text.startswith("/market_repo") or text.startswith("ترويج البوت"):
-        await send_admin_msg(chat_id, "⏳ جاري نشر ترويج سكريبت جامع العملات (GitHub COIN-BOT-) في القناة @DzAliexpress0...")
+    if text.startswith("/coinbot") or text.startswith("ترويج البوت"):
+        await send_admin_msg(chat_id, "⏳ جاري نشر تذكير تخفيض العملات التثقيفي في القناة @DzAliexpress0...")
         try:
             from app.publisher.bot_ad import post_bot_advertisement
-            success, msg = await post_bot_advertisement(force=True, variant_idx=2)
+            success, msg = await post_bot_advertisement(force=True, variant_idx=1)
             if success:
-                await send_admin_msg(chat_id, f"✅ <b>تم نشر ترويج سكريبت جامع العملات (GitHub) بنجاح في القناة!</b>\n{msg}")
+                await send_admin_msg(chat_id, f"✅ <b>تم نشر تذكير العملات بنجاح في القناة!</b>\n{msg}")
             else:
                 await send_admin_msg(chat_id, f"❌ فشل النشر: {msg}")
         except Exception as e:

@@ -210,15 +210,18 @@ async def send_promo_alert_to_channel(
     try:
         async with httpx.AsyncClient(timeout=25.0) as client:
             if card_path and os.path.exists(card_path) and len(text) <= 1024:
+                data_payload = {
+                    "chat_id": target,
+                    "caption": text,
+                    "parse_mode": "HTML"
+                }
+                if reply_markup:
+                    data_payload["reply_markup"] = json.dumps(reply_markup)
                 with open(card_path, "rb") as pf:
                     resp = await client.post(
                         f"{api_url}/sendPhoto",
-                        data={
-                            "chat_id": target,
-                            "caption": text,
-                            "parse_mode": "HTML"
-                        },
-                        files={"photo": ("choice_day_card.jpg", pf, "image/jpeg")}
+                        data=data_payload,
+                        files={"photo": ("promo_card.jpg", pf, "image/jpeg")}
                     )
             else:
                 resp = await client.post(

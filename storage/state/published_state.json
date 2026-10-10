@@ -187,15 +187,15 @@
     "1005006007773971",
     "1005013067004815",
     "1005009948598802",
-    "1005010209307090",
-    "1005008791989663"
+    "9998885318",
+    "9998885569"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
     "1005010219205081": 1791192360.1916943,
-    "999111222": 1791627892.1321952,
-    "100500999912345": 1791537892.977873,
-    "100500999954321": 1791620692.977873,
+    "999111222": 1791675776.0508368,
+    "100500999912345": 1791585776.9065828,
+    "100500999954321": 1791668576.9065828,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
@@ -205,7 +205,7 @@
     "1005009627597591": 1790884233.6428,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1791617093.0572567,
+    "100500777666555": 1791664976.9911487,
     "1005011778621042": 1791108644.641232,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1791192944.201814,
@@ -223,7 +223,7 @@
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
-    "100500888999777": 1791613493.0968695,
+    "100500888999777": 1791661377.034208,
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
@@ -252,9 +252,9 @@
     "1005008715050858": 1791033345.3970714,
     "9998885689": 1790945689.9436276,
     "9998885726": 1790945726.205554,
-    "9998885776": 1790945776.0478673,
+    "9998885776": 1791675776.96059,
     "9998886147": 1790946147.1871526,
-    "999888777111": 1791626093.9652557,
+    "999888777111": 1791673977.9095123,
     "9998886362": 1790946362.071869,
     "1005012407874415": 1791061256.0753598,
     "9998887189": 1790947189.8634577,
@@ -274,9 +274,9 @@
     "1005011991145678": 1790962541.57551,
     "1005011682821623": 1790962844.0034096,
     "9998885747": 1790965747.5380507,
-    "1005010129356058": 1791616373.17474,
+    "1005010129356058": 1791664257.1133413,
     "9998885993": 1790965993.3792443,
-    "1005012574108028": 1791663189.4216602,
+    "1005012574108028": 1791236020.742662,
     "1005008599340405": 1791638441.843642,
     "1005007572968437": 1790969442.7810974,
     "1005009120957437": 1790970941.2570727,
@@ -373,7 +373,7 @@
     "1005010056083952": 1791235961.3129663,
     "1005013313539058": 1791482965.5086565,
     "9998889315": 1791589315.5172248,
-    "COUPONS_54d30f00dccf": 1791663210.0572863,
+    "COUPONS_54d30f00dccf": 1791626806.6018147,
     "1005008776714223": 1791626816.0179322,
     "9998886934": 1791626934.8945594,
     "9998887499": 1791627499.229838,
@@ -382,8 +382,8 @@
     "1005006007773971": 1791638433.4352653,
     "1005013067004815": 1791638447.7612462,
     "1005009948598802": 1791639031.4293046,
-    "1005010209307090": 1791663201.0086794,
-    "1005008791989663": 1791675306.5093157
+    "9998885318": 1791675318.975821,
+    "9998885569": 1791675569.6911583
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -617,18 +617,15 @@
     "Walram SATA3 SSD 512GB",
     "Electronic Body Scale.",
     "Realme 15 Global (12/256)",
-    "REALME P3 5G",
-    "Ⓜ HONOR  X80 PRO MAX (8/128)",
-    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras",
-    "realme 14T 5G Smartphone Dimensity 6300 5G Processor 6000mAh Battery 6.67\""
+    "REALME P3 5G"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1791627892.1321952,
+    "Test Wireless Gaming Mouse X1": 1791675776.0508368,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
-    "Attack Shark R2 Mouse": 1791620692.977873,
-    "Test Wrench Set": 1791627893.027416,
+    "Attack Shark R2 Mouse": 1791668576.9065828,
+    "Test Wrench Set": 1791675776.96059,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1791194142.1753953,
@@ -660,8 +657,8 @@
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
-    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1791537892.977873,
-    "Attack Shark L80 PRO Wireless Mouse": 1791626993.0968695,
+    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1791585776.9065828,
+    "Attack Shark L80 PRO Wireless Mouse": 1791674877.034208,
     "الأكثر لبا لنهار اليوووم": 1790940343.7746465,
     "POCO C81 Pro 4/64": 1791114344.949536,
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
@@ -705,7 +702,7 @@
     "HONOR 600 PRO": 1790960475.7249138,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
-    "Xiaomi Pad 7 (12/256)": 1791616373.17474,
+    "Xiaomi Pad 7 (12/256)": 1791664257.1133413,
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1791236011.4353654,
     "CUSU SSD 512 GB Portable SSD External Drive": 1791200448.8235762,
     "HONOR  X80 PRO MAX (8/128)": 1791236020.742662,
@@ -851,16 +848,13 @@
     "CMF by Nothing Buds 2A 12.4mm Driver 42dB ANC 4HD MicsLong Battery Life Up": 1791235961.3129663,
     "REALME 15 5G (12/512)": 1791236002.3605435,
     "Electronic Scale Smart": 1791482965.5086565,
-    "أحدث كوبونات وتخفيضات AliExpress": 1791663210.0572863,
+    "أحدث كوبونات وتخفيضات AliExpress": 1791626806.6018147,
     "قرص صلب SSD من CUSU بسعات 1 تيرابايت، 512 جيجابايت، 240 جيجابايت، 480": 1791626816.0179322,
     "مايكروفون ديناميكي Fifine K688": 1791638433.4352653,
     "Walram SATA3 SSD 512GB": 1791638441.843642,
     "Electronic Body Scale.": 1791638447.7612462,
     "Realme 15 Global (12/256)": 1791639031.4293046,
-    "REALME P3 5G": 1791649464.949431,
-    "Ⓜ HONOR  X80 PRO MAX (8/128)": 1791663189.4216602,
-    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": 1791663201.0086794,
-    "realme 14T 5G Smartphone Dimensity 6300 5G Processor 6000mAh Battery 6.67\"": 1791675306.5093157
+    "REALME P3 5G": 1791649464.949431
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1523,50 +1517,49 @@
     "aniscoupons:32859",
     "aniscoupons:32860",
     "bnddeals:50823",
-    "megaphonna:8314",
-    "megaphonna:8316",
-    "couponsglobal:48832",
-    "megaphonna:8315"
+    "test_channel:1791675318",
+    "test_channel:1791675569",
+    "test_channel:1791675776"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1791675306.5093157,
+  "last_run_time": 1791675777.1172962,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32860,
-      "last_check_time": 1791675309.2592947
+      "last_check_time": 1791649473.4198394
     },
     "ecksdeal": {
       "last_message_id": 5882,
-      "last_check_time": 1791675302.0116427
+      "last_check_time": 1791649458.2023985
     },
     "lodydeals": {
       "last_message_id": 45516,
-      "last_check_time": 1791675301.3270597
+      "last_check_time": 1791675777.0379999
     },
     "bnddeals": {
       "last_message_id": 50823,
-      "last_check_time": 1791675302.7209249
+      "last_check_time": 1791649466.9614487
     },
     "test_channel": {
-      "last_message_id": 1791627893,
-      "last_check_time": 1791627893.027416
+      "last_message_id": 1791675776,
+      "last_check_time": 1791675776.96059
     },
     "pcgamingpart": {
       "last_message_id": 7975,
-      "last_check_time": 1791675302.3809175
+      "last_check_time": 1791649458.6746562
     },
     "zedstoreonline": {
-      "last_message_id": 38564,
-      "last_check_time": 1791675301.6782784
+      "last_message_id": 38563,
+      "last_check_time": 1791649457.7032387
     },
     "megaphonna": {
-      "last_message_id": 8319,
-      "last_check_time": 1791675308.532428
+      "last_message_id": 8313,
+      "last_check_time": 1791675777.1172962
     },
     "couponsglobal": {
-      "last_message_id": 48832,
-      "last_check_time": 1791675309.5889077
+      "last_message_id": 48831,
+      "last_check_time": 1791649473.7865186
     }
   },
   "published_product_prices": {
@@ -1644,7 +1637,7 @@
     "1005011991145678": 0.8,
     "1005011682821623": 0.8,
     "1005009774318553": 53.9,
-    "1005012574108028": 280.4,
+    "1005012574108028": 279.1,
     "1005008599340405": 48.7,
     "1005007572968437": 17.47,
     "1005009120957437": 189.21,
@@ -1746,9 +1739,7 @@
     "1005010289640412": 32.06,
     "1005013313539058": 6.52,
     "1005006007773971": 54.15,
-    "1005013067004815": 7.5,
-    "1005008791989663": 197.0,
-    "1005010209307090": 197.0
+    "1005013067004815": 7.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -4653,46 +4644,6 @@
       "price": 187.0,
       "timestamp": 1791649464.949431,
       "status": "ACTIVE"
-    },
-    "megaphonna:8314": {
-      "channel_msg_id": 718,
-      "product_id": "1005012574108028",
-      "title": "Ⓜ HONOR  X80 PRO MAX (8/128)",
-      "channel": "megaphonna",
-      "source_msg_id": 8314,
-      "price": 280.4,
-      "timestamp": 1791663189.4216602,
-      "status": "ACTIVE"
-    },
-    "megaphonna:8316": {
-      "channel_msg_id": 720,
-      "product_id": "1005010209307090",
-      "title": "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras",
-      "channel": "megaphonna",
-      "source_msg_id": 8316,
-      "price": 197.0,
-      "timestamp": 1791663201.0086794,
-      "status": "ACTIVE"
-    },
-    "couponsglobal:48832": {
-      "channel_msg_id": 721,
-      "product_id": "COUPONS_54d30f00dccf",
-      "title": "أحدث كوبونات وتخفيضات AliExpress",
-      "channel": "couponsglobal",
-      "source_msg_id": 48832,
-      "price": null,
-      "timestamp": 1791663210.0572863,
-      "status": "ACTIVE"
-    },
-    "megaphonna:8315": {
-      "channel_msg_id": 726,
-      "product_id": "1005008791989663",
-      "title": "realme 14T 5G Smartphone Dimensity 6300 5G Processor 6000mAh Battery 6.67\"",
-      "channel": "megaphonna",
-      "source_msg_id": 8315,
-      "price": 197.0,
-      "timestamp": 1791675306.5093157,
-      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4701,22 +4652,22 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791675309.5991502,
+    "last_deal_post_time": 1791649473.797406,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1791675312.1690438,
+    "last_sweep_time": 1791649476.2540247,
     "last_sweep_times": {
-      "algeria": 1791675309.5942266,
-      "france": 1791675312.1690438
+      "algeria": 1791649473.7906978,
+      "france": 1791649476.2540247
     },
     "last_deal_post_times": {
-      "algeria": 1791675309.5991502
+      "algeria": 1791649473.797406
     }
   },
-  "last_coin_reminder_time": 1791675294.0910947,
-  "next_reminder_interval_seconds": 245750,
-  "coin_reminder_variant_idx": 1,
+  "last_coin_reminder_time": 1791480006.8698988,
+  "next_reminder_interval_seconds": 186014,
+  "coin_reminder_variant_idx": 0,
   "published_product_channels": {
     "999888104": "test_channel",
     "100500888999777": "lodydeals",
@@ -4907,7 +4858,7 @@
     "1005012651158292": "lodydeals",
     "1005010289640412": "ecksdeal",
     "1005013313539058": "lodydeals",
-    "COUPONS_54d30f00dccf": "couponsglobal",
+    "COUPONS_54d30f00dccf": "ecksdeal",
     "9998889315": "test_channel",
     "9998886934": "test_channel",
     "9998887499": "test_channel",
@@ -4915,8 +4866,8 @@
     "9998887893": "test_channel",
     "1005006007773971": "ecksdeal",
     "1005013067004815": "aniscoupons",
-    "1005008791989663": "megaphonna",
-    "1005010209307090": "megaphonna"
+    "9998885318": "test_channel",
+    "9998885569": "test_channel"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -5091,7 +5042,7 @@
     "HTC NE79 TWS Wireless Bluetooth Earphones: AI": "couponsglobal",
     "Nail Scissors Set Household High End": "couponsglobal",
     "Baseus 30W Car Charger Dual Port USB Type-C Fast": "couponsglobal",
-    "أحدث كوبونات وتخفيضات AliExpress": "couponsglobal",
+    "أحدث كوبونات وتخفيضات AliExpress": "ecksdeal",
     "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6": "aniscoupons",
     "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode": "aniscoupons",
     "Xprinter H10 Handheld POS Thermal": "lodydeals",
@@ -5152,10 +5103,7 @@
     "Walram SATA3 SSD 512GB": "bnddeals",
     "Electronic Body Scale.": "aniscoupons",
     "Realme 15 Global (12/256)": "aniscoupons",
-    "REALME P3 5G": "bnddeals",
-    "Ⓜ HONOR  X80 PRO MAX (8/128)": "megaphonna",
-    "realme 14T 5G Smartphone Dimensity 6300 5G Processor 6000mAh Battery 6.67\"": "megaphonna",
-    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": "megaphonna"
+    "REALME P3 5G": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -5183,7 +5131,10 @@
     "test_rem_7dc40719": "2026-10-02",
     "test_rem_dc43d1e0": "2026-10-02",
     "test_rem_3de63a14": "2026-10-02",
-    "test_rem_f5bf70f2": "2026-10-02"
+    "test_rem_f5bf70f2": "2026-10-02",
+    "test_rem_487c4090": "2026-10-02",
+    "test_rem_74ace97e": "2026-10-02",
+    "test_rem_4e0ce4cc": "2026-10-02"
   },
   "channel_announcements_history": {
     "china_holiday_shipping_delay": "2026-10-02",
@@ -5204,7 +5155,10 @@
     "test_tag_09c343": "2026-10-02",
     "test_tag_763014": "2026-10-02",
     "test_tag_2d10a8": "2026-10-02",
-    "test_tag_7d87c1": "2026-10-02"
+    "test_tag_7d87c1": "2026-10-02",
+    "test_tag_104b65": "2026-10-02",
+    "test_tag_766362": "2026-10-02",
+    "test_tag_d128a3": "2026-10-02"
   },
   "daily_tajmi3at_history": {
     "2026-10-03": {
@@ -5408,11 +5362,7 @@
     "bnddeals:50821",
     "zedstoreonline:38563",
     "megaphonna:8312",
-    "megaphonna:8313",
-    "zedstoreonline:38564",
-    "megaphonna:8317",
-    "megaphonna:8318",
-    "megaphonna:8319"
+    "megaphonna:8313"
   ],
   "last_france_cross_promo_time": 1791544610.263704,
   "next_france_cross_promo_interval_seconds": 319259,
