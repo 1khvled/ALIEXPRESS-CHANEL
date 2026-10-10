@@ -372,9 +372,9 @@ def extract_seller_coupon(text: str) -> Optional[str]:
     norm = re.sub(r'[\u0640]', '', text)
     blacklist = {"http", "https", "aliexpress", "link", "url", "temu", "t.me", "bot"}
 
-    # 1. Combined amount and code: e.g. "حصل قسيمة البائع $80: T0F4TZ" or "احجز كوبون المتجر 💵: KR0864"
+    # 1. Combined amount and code: e.g. "كوبون حصري 8$ ANISHAYS40" or "حصل قسيمة البائع $80: T0F4TZ"
     p_combined = re.search(
-        r'(?:حصل\s*|احجز\s*)?(?:قسيمة|كوبون)\s*(?:البائع|المتجر|خاصة\s*بالمتجر|store\s*coupon|seller\s*coupon)'
+        r'(?:حصل\s*|احجز\s*)?(?:قسيمة|كوبون|كود)\s*(?:البائع|المتجر|خاصة\s*بالمتجر|حصري|خاص|store\s*coupon|seller\s*coupon|exclusive)'
         r'[\s:：\-=ـ_•*~|()✅🔥👉✔️🌷🙏\+💵💰🎁\r\n]*'
         r'[$]?\s*([0-9]+(?:\.[0-9]+)?)\s*[$]?'
         r'[\s:：\-=ـ_•*~|()✅🔥👉✔️🌷🙏\+💵💰🎁\r\n]+'
@@ -395,9 +395,9 @@ def extract_seller_coupon(text: str) -> Optional[str]:
         if code and code.lower() not in blacklist and re.search(r'[A-Za-z0-9]', code):
             return f"{amount}$ (كود: {code})" if amount else code
 
-    # 2. Code only: e.g. "🎁💰احجز كوبون المتجر 💵:\nKR0864"
+    # 2. Code only: e.g. "🎁💰احجز كوبون المتجر 💵:\nKR0864" or "كوبون حصري ANISHAYS40"
     p_code = re.search(
-        r'(?:حصل\s*|احجز\s*)?(?:قسيمة|كوبون)\s*(?:البائع|المتجر|خاصة\s*بالمتجر|store\s*coupon|seller\s*coupon)'
+        r'(?:حصل\s*|احجز\s*)?(?:قسيمة|كوبون|كود)\s*(?:البائع|المتجر|خاصة\s*بالمتجر|حصري|خاص|store\s*coupon|seller\s*coupon|exclusive)'
         r'[\s:：\-=ـ_•*~|()✅🔥👉✔️🌷🙏\+💵💰🎁\r\n]+'
         r'([A-Za-z][A-Za-z0-9_-]{3,24})',
         norm,
