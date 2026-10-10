@@ -38,7 +38,7 @@ class Settings(BaseSettings):
     LOG_LEVEL: str = "INFO"
     PUBLISH_MODE: Literal["auto", "approval", "dry_run"] = "approval"
     POLL_INTERVAL_SECONDS: int = 180
-    PUBLIC_BASE_URL: str = "https://dealscout-green.vercel.app"
+    PUBLIC_BASE_URL: str = "https://dealscoutgreen.vercel.app"
     HOST: str = "0.0.0.0"
     PORT: int = 8000
 
