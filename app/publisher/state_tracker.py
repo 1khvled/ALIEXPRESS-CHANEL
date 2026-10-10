@@ -504,8 +504,8 @@ async def check_and_update_expired_deals() -> int:
         return 0
 
     from app.config.settings import settings
-    token = settings.TELEGRAM_BOT_TOKEN
-    channel = settings.TARGET_CHANNEL_ID
+    token = settings.TELEGRAM_BOT_TOKEN or getattr(settings, "ADMIN_BOT_TOKEN", None) or os.getenv("TELEGRAM_BOT_TOKEN") or os.getenv("ADMIN_BOT_TOKEN")
+    channel = settings.TARGET_CHANNEL_ID or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
     if not token or not channel:
         return 0
 

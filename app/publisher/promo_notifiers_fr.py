@@ -187,7 +187,7 @@ async def send_france_promo_alert(
     promo_title: str = "Choice Day France"
 ) -> Tuple[bool, Optional[str], Optional[int]]:
     from app.media.renderer import media_renderer
-    bot_token = settings.TELEGRAM_BOT_TOKEN
+    bot_token = settings.TELEGRAM_BOT_TOKEN or getattr(settings, "ADMIN_BOT_TOKEN", None) or os.getenv("TELEGRAM_BOT_TOKEN") or os.getenv("ADMIN_BOT_TOKEN")
     if not bot_token:
         return False, "TELEGRAM_BOT_TOKEN missing", None
 
@@ -332,7 +332,7 @@ async def ensure_france_active_promo_coupons_pinned(
     promo_key = f"FR_{promo.name}_{promo.start_date.strftime('%Y%m%d')}"
 
     existing_msg_id = pinned_promos.get(promo_key)
-    bot_token = settings.TELEGRAM_BOT_TOKEN
+    bot_token = settings.TELEGRAM_BOT_TOKEN or getattr(settings, "ADMIN_BOT_TOKEN", None) or os.getenv("TELEGRAM_BOT_TOKEN") or os.getenv("ADMIN_BOT_TOKEN")
     target = TARGET_FRANCE_CHANNEL
 
     # If already published for this event, re-verify it remains pinned in the channel

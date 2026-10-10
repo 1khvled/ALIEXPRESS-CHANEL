@@ -469,7 +469,7 @@ async def check_and_publish_france_regrouped_bulletins(
     """
     Publishes daily roundups to @francedealsdz at ~10 PM CET.
     """
-    token = settings.TELEGRAM_BOT_TOKEN
+    token = settings.TELEGRAM_BOT_TOKEN or getattr(settings, "ADMIN_BOT_TOKEN", None) or os.getenv("TELEGRAM_BOT_TOKEN") or os.getenv("ADMIN_BOT_TOKEN")
     target = TARGET_FRANCE_CHANNEL
     target_clean = target.replace("@", "")
 
