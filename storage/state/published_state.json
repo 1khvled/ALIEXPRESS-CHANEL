@@ -288,7 +288,7 @@
     "1005012816171978": 1791031841.1598868,
     "1005010585654037": 1790978149.8785934,
     "1005006248571160": 1791012946.4110153,
-    "1005009390995992": 1791013541.4254196,
+    "1005009390995992": 1791638734.5386465,
     "1005006196428484": 1791026745.7640984,
     "1005012390398338": 1791027348.2517543,
     "1005012297674623": 1791103551.065819,
@@ -716,7 +716,7 @@
     "3 VILCORN G6 Bluetooth-Compatible": 1790977546.6736062,
     "TV Box Rockchip RK3518": 1790978149.8785934,
     "آلة حلاقة من علامة KEMEI": 1791012946.4110153,
-    "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": 1791013541.4254196,
+    "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": 1791638734.5386465,
     "Predyee Groin Hair Trimmer WH": 1791013836.445986,
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1791013842.0461159,
     "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise": 1791014140.3360124,
@@ -1502,27 +1502,28 @@
     "test_channel:1791627893",
     "ecksdeal:5882",
     "bnddeals:50822",
-    "aniscoupons:32857"
+    "aniscoupons:32857",
+    "aniscoupons:32858"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1791638447.7612462,
+  "last_run_time": 1791638734.5386465,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32857,
-      "last_check_time": 1791638449.77916
+      "last_message_id": 32858,
+      "last_check_time": 1791638736.5567539
     },
     "ecksdeal": {
       "last_message_id": 5882,
-      "last_check_time": 1791638435.453286
+      "last_check_time": 1791638729.6728003
     },
     "lodydeals": {
       "last_message_id": 45516,
-      "last_check_time": 1791638428.8308384
+      "last_check_time": 1791638728.9918032
     },
     "bnddeals": {
       "last_message_id": 50822,
-      "last_check_time": 1791638443.8589127
+      "last_check_time": 1791638730.3141377
     },
     "test_channel": {
       "last_message_id": 1791627893,
@@ -1530,19 +1531,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7975,
-      "last_check_time": 1791638436.1097186
+      "last_check_time": 1791638730.0001526
     },
     "zedstoreonline": {
       "last_message_id": 38562,
-      "last_check_time": 1791638429.2273276
+      "last_check_time": 1791638729.3347158
     },
     "megaphonna": {
       "last_message_id": 8311,
-      "last_check_time": 1791638444.599252
+      "last_check_time": 1791638730.7198122
     },
     "couponsglobal": {
       "last_message_id": 48831,
-      "last_check_time": 1791638450.1585114
+      "last_check_time": 1791638737.0913467
     }
   },
   "published_product_prices": {
@@ -4587,6 +4588,16 @@
       "price": 7.5,
       "timestamp": 1791638447.7612462,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32858": {
+      "channel_msg_id": 714,
+      "product_id": "1005009390995992",
+      "title": "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial",
+      "channel": "aniscoupons",
+      "source_msg_id": 32858,
+      "price": 34.9,
+      "timestamp": 1791638734.5386465,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4595,17 +4606,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791638450.1712103,
+    "last_deal_post_time": 1791638737.104747,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1791638452.822054,
+    "last_sweep_time": 1791638739.353679,
     "last_sweep_times": {
-      "algeria": 1791638450.1650782,
-      "france": 1791638452.822054
+      "algeria": 1791638737.0982623,
+      "france": 1791638739.353679
     },
     "last_deal_post_times": {
-      "algeria": 1791638450.1712103
+      "algeria": 1791638737.104747
     }
   },
   "last_coin_reminder_time": 1791480006.8698988,
