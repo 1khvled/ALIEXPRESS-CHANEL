@@ -1642,12 +1642,17 @@ async def telegram_admin_webhook(request: Request):
 
 
 @app.get("/api/set-webhook")
-async def set_telegram_webhook():
+async def set_telegram_webhook(request: Request):
     """Sets the public Coin bot webhook to this Vercel deployment URL."""
     try:
         from api.coin_bot import TELEGRAM_BOT_TOKEN as _C_TOKEN
         token = os.getenv("TELEGRAM_BOT_TOKEN", "") or _C_TOKEN
-        webhook_url = "https://dealscout-green.vercel.app/api/webhook"
+        base_url = os.getenv("PUBLIC_BASE_URL", "").strip().rstrip("/")
+        if not base_url:
+            host = request.headers.get("x-forwarded-host") or request.headers.get("host") or ""
+            proto = request.headers.get("x-forwarded-proto") or "https"
+            base_url = f"{proto}://{host}" if host else "https://dealscout-green.vercel.app"
+        webhook_url = f"{base_url}/api/webhook"
         async with httpx.AsyncClient(timeout=10.0) as client:
             resp = await client.post(
                 f"https://api.telegram.org/bot{token}/setWebhook",
@@ -1659,12 +1664,17 @@ async def set_telegram_webhook():
 
 
 @app.get("/api/set-admin-webhook")
-async def set_admin_telegram_webhook():
+async def set_admin_telegram_webhook(request: Request):
     """Sets the dedicated Admin bot webhook to this Vercel deployment URL."""
     try:
         from api.admin_bot import ADMIN_BOT_TOKEN as _A_TOKEN
         admin_token = os.getenv("ADMIN_BOT_TOKEN", "") or _A_TOKEN
-        webhook_url = "https://dealscout-green.vercel.app/api/admin-webhook"
+        base_url = os.getenv("PUBLIC_BASE_URL", "").strip().rstrip("/")
+        if not base_url:
+            host = request.headers.get("x-forwarded-host") or request.headers.get("host") or ""
+            proto = request.headers.get("x-forwarded-proto") or "https"
+            base_url = f"{proto}://{host}" if host else "https://dealscout-green.vercel.app"
+        webhook_url = f"{base_url}/api/admin-webhook"
         async with httpx.AsyncClient(timeout=10.0) as client:
             resp = await client.post(
                 f"https://api.telegram.org/bot{admin_token}/setWebhook",
