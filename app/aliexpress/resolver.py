@@ -103,67 +103,71 @@ class UrlResolver:
         except Exception as fast_err:
             logger.debug(f"Fast URL resolution probe for {url}: {fast_err}")
 
-        try:
-            async with httpx.AsyncClient(
-                headers=self.headers,
-                follow_redirects=True,
-                max_redirects=self.max_redirects,
-                timeout=self.timeout,
-                verify=False
-            ) as client:
-                response = await client.get(url)
-                final_url = str(response.url)
-                status_code = response.status_code
+        for attempt in range(1, 3):
+            try:
+                async with httpx.AsyncClient(
+                    headers=self.headers,
+                    follow_redirects=True,
+                    max_redirects=self.max_redirects,
+                    timeout=self.timeout,
+                    verify=False
+                ) as client:
+                    response = await client.get(url)
+                    final_url = str(response.url)
+                    status_code = response.status_code
 
-                # 1. Check all intermediate redirect URLs & Location headers in history
-                found_id = None
-                for h in response.history:
-                    found_id = extract_product_id_from_url(str(h.url))
-                    if found_id:
-                        break
-                    h_loc = h.headers.get("location") or h.headers.get("Location")
-                    if h_loc:
-                        found_id = extract_product_id_from_url(h_loc)
+                    # 1. Check all intermediate redirect URLs & Location headers in history
+                    found_id = None
+                    for h in response.history:
+                        found_id = extract_product_id_from_url(str(h.url))
                         if found_id:
                             break
+                        h_loc = h.headers.get("location") or h.headers.get("Location")
+                        if h_loc:
+                            found_id = extract_product_id_from_url(h_loc)
+                            if found_id:
+                                break
 
-                # 2. Extract product id from the final destination URL
-                if not found_id:
-                    found_id = extract_product_id_from_url(final_url)
+                    # 2. Extract product id from the final destination URL
+                    if not found_id:
+                        found_id = extract_product_id_from_url(final_url)
 
-                # 3. Sometimes AliExpress mobile page contains canonical link in html or JS redirect
-                if not found_id and response.text:
-                    m_html = re.search(r'href=[\'"][^\'"]*aliexpress\.com/item/(\d{10,18})\.html', response.text[:30000], re.IGNORECASE)
-                    if m_html:
-                        found_id = m_html.group(1)
-                    else:
-                        m_json = re.search(r'[\'"]productId[\'"]\s*:\s*[\'"]?(\d{10,18})[\'"]?', response.text[:30000], re.IGNORECASE)
-                        if m_json:
-                            found_id = m_json.group(1)
+                    # 3. Sometimes AliExpress mobile page contains canonical link in html or JS redirect
+                    if not found_id and response.text:
+                        m_html = re.search(r'href=[\'"][^\'"]*aliexpress\.com/item/(\d{10,18})\.html', response.text[:30000], re.IGNORECASE)
+                        if m_html:
+                            found_id = m_html.group(1)
+                        else:
+                            m_json = re.search(r'[\'"]productId[\'"]\s*:\s*[\'"]?(\d{10,18})[\'"]?', response.text[:30000], re.IGNORECASE)
+                            if m_json:
+                                found_id = m_json.group(1)
 
-                canonical = normalize_aliexpress_url(final_url, found_id) if found_id else final_url
-                is_valid = bool(found_id or is_aliexpress_url(final_url))
+                    canonical = normalize_aliexpress_url(final_url, found_id) if found_id else final_url
+                    is_valid = bool(found_id or is_aliexpress_url(final_url))
 
-                return ResolvedUrlResult(
-                    original_url=url,
-                    final_url=final_url,
-                    canonical_url=canonical,
-                    product_id=found_id,
-                    is_valid=is_valid,
-                    status_code=status_code
-                )
-        except Exception as e:
-            logger.warning(f"URL resolution error for {url}: {e}")
-            # If resolution timed out or errored, attempt static extraction
-            fallback_id = extract_product_id_from_url(url)
-            return ResolvedUrlResult(
-                original_url=url,
-                final_url=url,
-                canonical_url=normalize_aliexpress_url(url, fallback_id) if fallback_id else url,
-                product_id=fallback_id,
-                is_valid=bool(fallback_id or is_aliexpress_url(url)),
-                error=str(e)
-            )
+                    return ResolvedUrlResult(
+                        original_url=url,
+                        final_url=final_url,
+                        canonical_url=canonical,
+                        product_id=found_id,
+                        is_valid=is_valid,
+                        status_code=status_code
+                    )
+            except Exception as e:
+                logger.warning(f"URL resolution error for {url} (attempt {attempt}/2): {e}")
+                if attempt < 2:
+                    await asyncio.sleep(1.0)
+                else:
+                    # If resolution timed out or errored, attempt static extraction
+                    fallback_id = extract_product_id_from_url(url)
+                    return ResolvedUrlResult(
+                        original_url=url,
+                        final_url=url,
+                        canonical_url=normalize_aliexpress_url(url, fallback_id) if fallback_id else url,
+                        product_id=fallback_id,
+                        is_valid=bool(fallback_id or is_aliexpress_url(url)),
+                        error=str(e)
+                    )
 
 # Global singleton resolver
 url_resolver = UrlResolver()

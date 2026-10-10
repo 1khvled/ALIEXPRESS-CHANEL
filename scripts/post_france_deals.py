@@ -726,9 +726,7 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                     img_url = await product_extractor._fetch_clean_aliexpress_image(extracted.product_id)
                 if not extracted.is_coupon_list:
                     if not img_url or not any(domain in str(img_url) for domain in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
-                        print(f"  [NO OFFICIAL PHOTO] Skipping deal without clean AliExpress CDN image: {extracted.product_id}")
-                        published_keys.add(post_key)
-                        max_processed_id = max(max_processed_id, msg_id)
+                        print(f"  [NO OFFICIAL PHOTO] Image fetch incomplete for {extracted.product_id}. Leaving for retry.")
                         continue
 
                 # 8. Build France affiliate URL

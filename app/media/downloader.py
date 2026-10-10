@@ -1,3 +1,4 @@
+import asyncio
 import hashlib
 from pathlib import Path
 from typing import Optional
@@ -32,29 +33,33 @@ class MediaDownloader:
         if file_path.exists() and file_path.stat().st_size > 1024:
             return file_path
 
-        try:
-            async with httpx.AsyncClient(timeout=12.0, follow_redirects=True, verify=False) as client:
-                resp = await client.get(
-                    image_url,
-                    headers={
-                        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)"
-                    }
-                )
-                if resp.status_code == 200 and len(resp.content) > 1024:
-                    with open(file_path, "wb") as f:
-                        f.write(resp.content)
+        for attempt in range(1, 3):
+            try:
+                async with httpx.AsyncClient(timeout=15.0, follow_redirects=True, verify=False) as client:
+                    resp = await client.get(
+                        image_url,
+                        headers={
+                            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)"
+                        }
+                    )
+                    if resp.status_code == 200 and len(resp.content) > 1024:
+                        with open(file_path, "wb") as f:
+                            f.write(resp.content)
 
-                    # Validate with PIL
-                    with Image.open(file_path) as img:
-                        img.verify()
+                        # Validate with PIL
+                        with Image.open(file_path) as img:
+                            img.verify()
 
-                    return file_path
-                else:
-                    logger.warning(f"Failed image download for {image_url} (HTTP {resp.status_code})")
-        except Exception as e:
-            logger.warning(f"Error downloading image from {image_url}: {e}")
-            if file_path.exists():
-                file_path.unlink(missing_ok=True)
+                        return file_path
+                    else:
+                        logger.warning(f"Failed image download for {image_url} (HTTP {resp.status_code}) attempt {attempt}/2")
+            except Exception as e:
+                logger.warning(f"Error downloading image from {image_url} (attempt {attempt}/2): {e}")
+                if file_path.exists():
+                    file_path.unlink(missing_ok=True)
+
+            if attempt < 2:
+                await asyncio.sleep(1.0)
 
         return None
 

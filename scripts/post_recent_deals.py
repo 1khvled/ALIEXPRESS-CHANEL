@@ -469,9 +469,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         img_url = await product_extractor._fetch_clean_aliexpress_image(extracted.product_id)
                     if not extracted.is_coupon_list:
                         if not img_url or not any(d in str(img_url) for d in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
-                            print(f"  [NO CLEAN PHOTO] Skipping deal without clean AliExpress studio image: {extracted.product_id}")
-                            max_processed_id = max(max_processed_id, msg_id)
-                            record_post_handled(ch, msg_id)
+                            print(f"  [NO CLEAN PHOTO] Image fetch incomplete for {extracted.product_id}. Leaving for retry.")
                             continue
 
                     # 8. Build affiliate URL (Coin link 90%+, Bundle link for bundle deals)
@@ -542,8 +540,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         local_img_file = img_url
 
                     if not local_img_file:
-                        print(f"  [IMAGE MISSING] Could not prepare image for product #{extracted.product_id}. Skipping.")
-                        max_processed_id = max(max_processed_id, msg_id)
+                        print(f"  [IMAGE MISSING] Could not prepare image for product #{extracted.product_id}. Leaving for retry.")
                         continue
 
                     # 11. Save record

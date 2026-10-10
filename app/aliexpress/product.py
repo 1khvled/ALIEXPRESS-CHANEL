@@ -296,7 +296,7 @@ class ProductExtractor:
             f"https://www.aliexpress.com/item/{pid}.html",
         ]
         try:
-            async with httpx.AsyncClient(headers=headers, follow_redirects=True, timeout=5.0) as client:
+            async with httpx.AsyncClient(headers=headers, follow_redirects=True, timeout=10.0) as client:
                 for url in urls:
                     try:
                         res = await client.get(url)
