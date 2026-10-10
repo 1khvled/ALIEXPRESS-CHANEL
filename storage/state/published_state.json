@@ -186,7 +186,9 @@
     "9998887893",
     "1005006007773971",
     "1005013067004815",
-    "1005009948598802"
+    "1005009948598802",
+    "1005008791989663",
+    "1005010209307090"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -274,7 +276,7 @@
     "9998885747": 1790965747.5380507,
     "1005010129356058": 1791616373.17474,
     "9998885993": 1790965993.3792443,
-    "1005012574108028": 1791236020.742662,
+    "1005012574108028": 1791663189.4216602,
     "1005008599340405": 1791638441.843642,
     "1005007572968437": 1790969442.7810974,
     "1005009120957437": 1790970941.2570727,
@@ -371,7 +373,7 @@
     "1005010056083952": 1791235961.3129663,
     "1005013313539058": 1791482965.5086565,
     "9998889315": 1791589315.5172248,
-    "COUPONS_54d30f00dccf": 1791626806.6018147,
+    "COUPONS_54d30f00dccf": 1791663210.0572863,
     "1005008776714223": 1791626816.0179322,
     "9998886934": 1791626934.8945594,
     "9998887499": 1791627499.229838,
@@ -379,7 +381,9 @@
     "9998887893": 1791627893.027416,
     "1005006007773971": 1791638433.4352653,
     "1005013067004815": 1791638447.7612462,
-    "1005009948598802": 1791639031.4293046
+    "1005009948598802": 1791639031.4293046,
+    "1005008791989663": 1791663195.8199983,
+    "1005010209307090": 1791663201.0086794
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -613,7 +617,10 @@
     "Walram SATA3 SSD 512GB",
     "Electronic Body Scale.",
     "Realme 15 Global (12/256)",
-    "REALME P3 5G"
+    "REALME P3 5G",
+    "Ⓜ HONOR  X80 PRO MAX (8/128)",
+    "realme 14T 5G Smartphone Dimensity 6300 5G Processor 6000mAh Battery 6.67\"",
+    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -844,13 +851,16 @@
     "CMF by Nothing Buds 2A 12.4mm Driver 42dB ANC 4HD MicsLong Battery Life Up": 1791235961.3129663,
     "REALME 15 5G (12/512)": 1791236002.3605435,
     "Electronic Scale Smart": 1791482965.5086565,
-    "أحدث كوبونات وتخفيضات AliExpress": 1791626806.6018147,
+    "أحدث كوبونات وتخفيضات AliExpress": 1791663210.0572863,
     "قرص صلب SSD من CUSU بسعات 1 تيرابايت، 512 جيجابايت، 240 جيجابايت، 480": 1791626816.0179322,
     "مايكروفون ديناميكي Fifine K688": 1791638433.4352653,
     "Walram SATA3 SSD 512GB": 1791638441.843642,
     "Electronic Body Scale.": 1791638447.7612462,
     "Realme 15 Global (12/256)": 1791639031.4293046,
-    "REALME P3 5G": 1791649464.949431
+    "REALME P3 5G": 1791649464.949431,
+    "Ⓜ HONOR  X80 PRO MAX (8/128)": 1791663189.4216602,
+    "realme 14T 5G Smartphone Dimensity 6300 5G Processor 6000mAh Battery 6.67\"": 1791663195.8199983,
+    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": 1791663201.0086794
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1512,27 +1522,31 @@
     "aniscoupons:32858",
     "aniscoupons:32859",
     "aniscoupons:32860",
-    "bnddeals:50823"
+    "bnddeals:50823",
+    "megaphonna:8314",
+    "megaphonna:8315",
+    "megaphonna:8316",
+    "couponsglobal:48832"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1791649464.949431,
+  "last_run_time": 1791663210.0572863,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32860,
-      "last_check_time": 1791649473.4198394
+      "last_check_time": 1791663205.1485567
     },
     "ecksdeal": {
       "last_message_id": 5882,
-      "last_check_time": 1791649458.2023985
+      "last_check_time": 1791663180.7807086
     },
     "lodydeals": {
       "last_message_id": 45516,
-      "last_check_time": 1791649457.310132
+      "last_check_time": 1791663178.5197854
     },
     "bnddeals": {
       "last_message_id": 50823,
-      "last_check_time": 1791649466.9614487
+      "last_check_time": 1791663181.549742
     },
     "test_channel": {
       "last_message_id": 1791627893,
@@ -1540,19 +1554,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7975,
-      "last_check_time": 1791649458.6746562
+      "last_check_time": 1791663181.1833975
     },
     "zedstoreonline": {
-      "last_message_id": 38563,
-      "last_check_time": 1791649457.7032387
+      "last_message_id": 38564,
+      "last_check_time": 1791663180.3634088
     },
     "megaphonna": {
-      "last_message_id": 8313,
-      "last_check_time": 1791649472.7341516
+      "last_message_id": 8318,
+      "last_check_time": 1791663204.4355943
     },
     "couponsglobal": {
-      "last_message_id": 48831,
-      "last_check_time": 1791649473.7865186
+      "last_message_id": 48832,
+      "last_check_time": 1791663212.0694144
     }
   },
   "published_product_prices": {
@@ -1630,7 +1644,7 @@
     "1005011991145678": 0.8,
     "1005011682821623": 0.8,
     "1005009774318553": 53.9,
-    "1005012574108028": 279.1,
+    "1005012574108028": 280.4,
     "1005008599340405": 48.7,
     "1005007572968437": 17.47,
     "1005009120957437": 189.21,
@@ -1732,7 +1746,9 @@
     "1005010289640412": 32.06,
     "1005013313539058": 6.52,
     "1005006007773971": 54.15,
-    "1005013067004815": 7.5
+    "1005013067004815": 7.5,
+    "1005008791989663": 197.0,
+    "1005010209307090": 197.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -4637,6 +4653,46 @@
       "price": 187.0,
       "timestamp": 1791649464.949431,
       "status": "ACTIVE"
+    },
+    "megaphonna:8314": {
+      "channel_msg_id": 718,
+      "product_id": "1005012574108028",
+      "title": "Ⓜ HONOR  X80 PRO MAX (8/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8314,
+      "price": 280.4,
+      "timestamp": 1791663189.4216602,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8315": {
+      "channel_msg_id": 719,
+      "product_id": "1005008791989663",
+      "title": "realme 14T 5G Smartphone Dimensity 6300 5G Processor 6000mAh Battery 6.67\"",
+      "channel": "megaphonna",
+      "source_msg_id": 8315,
+      "price": 197.0,
+      "timestamp": 1791663195.8199983,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8316": {
+      "channel_msg_id": 720,
+      "product_id": "1005010209307090",
+      "title": "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras",
+      "channel": "megaphonna",
+      "source_msg_id": 8316,
+      "price": 197.0,
+      "timestamp": 1791663201.0086794,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48832": {
+      "channel_msg_id": 721,
+      "product_id": "COUPONS_54d30f00dccf",
+      "title": "أحدث كوبونات وتخفيضات AliExpress",
+      "channel": "couponsglobal",
+      "source_msg_id": 48832,
+      "price": null,
+      "timestamp": 1791663210.0572863,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4645,17 +4701,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791649473.797406,
+    "last_deal_post_time": 1791663212.0799494,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1791649476.2540247,
+    "last_sweep_time": 1791663215.2949293,
     "last_sweep_times": {
-      "algeria": 1791649473.7906978,
-      "france": 1791649476.2540247
+      "algeria": 1791663212.0750265,
+      "france": 1791663215.2949293
     },
     "last_deal_post_times": {
-      "algeria": 1791649473.797406
+      "algeria": 1791663212.0799494
     }
   },
   "last_coin_reminder_time": 1791480006.8698988,
@@ -4851,14 +4907,16 @@
     "1005012651158292": "lodydeals",
     "1005010289640412": "ecksdeal",
     "1005013313539058": "lodydeals",
-    "COUPONS_54d30f00dccf": "ecksdeal",
+    "COUPONS_54d30f00dccf": "couponsglobal",
     "9998889315": "test_channel",
     "9998886934": "test_channel",
     "9998887499": "test_channel",
     "9998887532": "test_channel",
     "9998887893": "test_channel",
     "1005006007773971": "ecksdeal",
-    "1005013067004815": "aniscoupons"
+    "1005013067004815": "aniscoupons",
+    "1005008791989663": "megaphonna",
+    "1005010209307090": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -5033,7 +5091,7 @@
     "HTC NE79 TWS Wireless Bluetooth Earphones: AI": "couponsglobal",
     "Nail Scissors Set Household High End": "couponsglobal",
     "Baseus 30W Car Charger Dual Port USB Type-C Fast": "couponsglobal",
-    "أحدث كوبونات وتخفيضات AliExpress": "ecksdeal",
+    "أحدث كوبونات وتخفيضات AliExpress": "couponsglobal",
     "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6": "aniscoupons",
     "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode": "aniscoupons",
     "Xprinter H10 Handheld POS Thermal": "lodydeals",
@@ -5094,7 +5152,10 @@
     "Walram SATA3 SSD 512GB": "bnddeals",
     "Electronic Body Scale.": "aniscoupons",
     "Realme 15 Global (12/256)": "aniscoupons",
-    "REALME P3 5G": "bnddeals"
+    "REALME P3 5G": "bnddeals",
+    "Ⓜ HONOR  X80 PRO MAX (8/128)": "megaphonna",
+    "realme 14T 5G Smartphone Dimensity 6300 5G Processor 6000mAh Battery 6.67\"": "megaphonna",
+    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -5347,7 +5408,10 @@
     "bnddeals:50821",
     "zedstoreonline:38563",
     "megaphonna:8312",
-    "megaphonna:8313"
+    "megaphonna:8313",
+    "zedstoreonline:38564",
+    "megaphonna:8317",
+    "megaphonna:8318"
   ],
   "last_france_cross_promo_time": 1791544610.263704,
   "next_france_cross_promo_interval_seconds": 319259,
