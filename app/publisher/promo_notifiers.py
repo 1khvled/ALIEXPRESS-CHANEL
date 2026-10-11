@@ -78,6 +78,35 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
             coupon_lines.append(f"🎟️ <b>كوبون {t} :</b> <code>{code}</code>")
 
     if coupon_lines:
+        is_brand_day = "brand" in promo.name.lower()
+        if is_brand_day:
+            lines = [
+                f"🚨 <b>كوبونات حدث {promo.name_ar}!</b> 🛍️",
+                f"تنطلق غداً <b>{promo.start_date.strftime('%d/%m')} وتستمر إلى غاية {promo.end_date.strftime('%d/%m/%Y')}</b> 🗓️",
+                "",
+                *coupon_lines,
+                "",
+                "⚠️ <b>الكوبونات تعمل في بعض المنتجات فقط الموجودة في هذه الصفحة :</b>",
+                "https://s.click.aliexpress.com/e/_c38iyTZR",
+                "",
+                "🪙 <b>بوت مضاعفة تخفيض العملات:</b> @Alilo07BOT",
+                "━━━━━━━━━━━━━━━━━",
+                "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0",
+                "🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس #Brand_Day</i>"
+            ]
+            reply_markup = {
+                "inline_keyboard": [
+                    [
+                        {"text": "🛍️ صفحة المنتجات المؤهلة للكوبونات", "url": "https://s.click.aliexpress.com/e/_c38iyTZR"}
+                    ],
+                    [
+                        {"text": "🪙 بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"},
+                        {"text": "🇫🇷 قناة عروض فرنسا", "url": "https://t.me/francedealsdz"}
+                    ]
+                ]
+            }
+            return "\n".join(lines), reply_markup
+
         lines = [
             f"🚨 <b>كوبونات حدث {promo.name_ar}!</b> 🛍️",
             f"تنطلق غداً <b>{promo.start_date.strftime('%d/%m')} وتستمر إلى غاية {promo.end_date.strftime('%d/%m/%Y')}</b> 🗓️",
@@ -130,6 +159,36 @@ def build_promo_launch_alert(promo: PromoEvent, start_hour_str: str = "08:00") -
             coupon_lines.append(f"🎟️ <b>كوبون {t} :</b> <code>{code}</code>")
 
     if coupon_lines:
+        is_brand_day = "brand" in promo.name.lower()
+        if is_brand_day:
+            lines = [
+                f"🚀 <b>انطلاق تخفيضات {promo.name_ar} رسمياً الآن! 🛍️🔥</b>",
+                f"⏰ <b>الكوبونات شغالة ومتاحة حالياً (صالحة لغاية {promo.end_date.strftime('%d/%m/%Y')} 🗓️):</b>",
+                "سارعوا باستغلالها قبل نفاد الكميات المحدودة! 🏃💨",
+                "",
+                *coupon_lines,
+                "",
+                "⚠️ <b>الكوبونات تعمل في بعض المنتجات فقط الموجودة في هذه الصفحة :</b>",
+                "https://s.click.aliexpress.com/e/_c38iyTZR",
+                "",
+                "🪙 <b>بوت مضاعفة تخفيض العملات:</b> @Alilo07BOT",
+                "━━━━━━━━━━━━━━━━━",
+                "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0",
+                "🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس #Brand_Day</i>"
+            ]
+            reply_markup = {
+                "inline_keyboard": [
+                    [
+                        {"text": "🛍️ صفحة المنتجات المؤهلة للكوبونات", "url": "https://s.click.aliexpress.com/e/_c38iyTZR"}
+                    ],
+                    [
+                        {"text": "🪙 بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"},
+                        {"text": "🇫🇷 قناة عروض فرنسا", "url": "https://t.me/francedealsdz"}
+                    ]
+                ]
+            }
+            return "\n".join(lines), reply_markup
+
         lines = [
             f"🚀 <b>انطلاق تخفيضات {promo.name_ar} رسمياً الآن! 🛍️🔥</b>",
             f"⏰ <b>الكوبونات اشتغلت وبدأت بالعمل في هذه اللحظات ({start_hour_str} صباحاً بتوقيت الجزائر 🇩🇿):</b>",
@@ -147,6 +206,8 @@ def build_promo_launch_alert(promo: PromoEvent, start_hour_str: str = "08:00") -
             "👉 t.me/Alilo07BOT",
             "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0"
         ]
+        reply_markup = {}
+        return "\n".join(lines), reply_markup
     else:
         lines = [
             f"🚀 <b>انطلاق فعاليات {promo.name_ar} رسمياً الآن! 🛍️🔥</b>",
