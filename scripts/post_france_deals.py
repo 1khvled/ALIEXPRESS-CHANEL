@@ -577,7 +577,7 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
             else:
                 # Filter for posts strictly newer than last_seen_id OR unposted recent candidates
                 handled_keys = set(state.get("handled_post_keys", []))
-                lookback_cutoff = max(0, last_seen_id - 5)
+                lookback_cutoff = max(0, last_seen_id - 20)
                 new_blocks = [
                     (b_id, b) for b_id, b in block_items
                     if (b_id > last_seen_id or (b_id >= lookback_cutoff and f"{clean_ch}:{b_id}" not in published_keys and f"{clean_ch}:{b_id}" not in handled_keys))
