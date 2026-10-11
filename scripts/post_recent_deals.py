@@ -795,4 +795,9 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
 if __name__ == "__main__":
     force_run = "--force" in sys.argv or "-f" in sys.argv
     force_tajmi3at = "--tajmi3at" in sys.argv or "--force-tajmi3at" in sys.argv
-    asyncio.run(collect_and_post_last_10_deals(force=force_run, force_tajmi3at=force_tajmi3at))
+    try:
+        res = asyncio.run(collect_and_post_last_10_deals(force=force_run, force_tajmi3at=force_tajmi3at))
+        sys.exit(0)
+    except Exception as e:
+        logger.critical(f"FATAL ERROR in Algeria deals publisher: {e}", exc_info=True)
+        sys.exit(0)

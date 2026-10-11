@@ -54,7 +54,7 @@ class Settings(BaseSettings):
 
     # AliExpress Affiliate
     ALIEXPRESS_AFFILIATE_PROVIDER: str = "portals"
-    ALIEXPRESS_AFFILIATE_TRACKING_ID: Optional[str] = None
+    ALIEXPRESS_AFFILIATE_TRACKING_ID: Optional[str] = "dzkhvled16"
     ALIEXPRESS_AFFILIATE_APP_KEY: Optional[str] = None
     ALIEXPRESS_AFFILIATE_APP_SECRET: Optional[str] = None
     ALIEXPRESS_CUSTOM_AFFILIATE_PREFIX: Optional[str] = None

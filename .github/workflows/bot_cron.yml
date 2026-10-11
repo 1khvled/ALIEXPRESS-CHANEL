@@ -41,12 +41,13 @@ jobs:
           pip install python-aliexpress-api
 
       - name: Run Algeria Deals Publisher (@DzAliexpress0)
+        continue-on-error: true
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           ADMIN_BOT_TOKEN: ${{ secrets.ADMIN_BOT_TOKEN }}
           TARGET_CHANNEL_ID: ${{ secrets.TARGET_CHANNEL_ID || '@DzAliexpress0' }}
           ALIEXPRESS_AFFILIATE_PROVIDER: portals
-          ALIEXPRESS_AFFILIATE_TRACKING_ID: ${{ secrets.ALIEXPRESS_AFFILIATE_TRACKING_ID }}
+          ALIEXPRESS_AFFILIATE_TRACKING_ID: ${{ secrets.ALIEXPRESS_AFFILIATE_TRACKING_ID || 'dzkhvled16' }}
           ALIEXPRESS_AFFILIATE_APP_KEY: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_KEY }}
           ALIEXPRESS_AFFILIATE_APP_SECRET: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_SECRET }}
           ADMIN_USER_ID: ${{ secrets.ADMIN_USER_ID }}
@@ -59,12 +60,13 @@ jobs:
           fi
 
       - name: Run France Deals Publisher (@francedealsdz)
+        continue-on-error: true
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           ADMIN_BOT_TOKEN: ${{ secrets.ADMIN_BOT_TOKEN }}
           FRANCE_TARGET_CHANNEL_ID: ${{ secrets.FRANCE_TARGET_CHANNEL_ID || '@francedealsdz' }}
           ALIEXPRESS_AFFILIATE_PROVIDER: portals
-          ALIEXPRESS_AFFILIATE_TRACKING_ID: ${{ secrets.ALIEXPRESS_AFFILIATE_TRACKING_ID }}
+          ALIEXPRESS_AFFILIATE_TRACKING_ID: ${{ secrets.ALIEXPRESS_AFFILIATE_TRACKING_ID || 'dzkhvled16' }}
           ALIEXPRESS_AFFILIATE_APP_KEY: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_KEY }}
           ALIEXPRESS_AFFILIATE_APP_SECRET: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_SECRET }}
           ADMIN_USER_ID: ${{ secrets.ADMIN_USER_ID }}
@@ -75,18 +77,19 @@ jobs:
           else
             python scripts/post_france_deals.py
           fi
-        continue-on-error: true
 
       - name: Commit and push DB changes (if using local SQLite)
+        if: always()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add storage/state/ deals.db storage/ || true
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "Auto-update deals database [skip ci] [skip vercel] [vercel skip]"
-            for i in 1 2 3; do
-              git pull --rebase origin main || true
-              git push && break || sleep 3
+            for i in 1 2 3 4 5; do
+              git fetch origin main || true
+              git rebase -X ours origin/main || (git rebase --abort && git pull origin main --no-rebase -X ours) || true
+              git push origin main && break || sleep 5
             done
           fi
         continue-on-error: true
