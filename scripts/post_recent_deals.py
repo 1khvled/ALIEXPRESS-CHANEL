@@ -245,7 +245,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     print(f"  [FIRST RUN] @{ch} baseline set to #{current_max_id}. Processing {len(new_blocks)} visible post(s).")
                 else:
                     # Process posts newer than last_seen_id, or unposted recent candidate messages from current page
-                    lookback_cutoff = max(0, last_seen_id - 20)
+                    lookback_cutoff = max(0, last_seen_id - 5)
                     new_blocks = [
                         (b_id, b) for b_id, b in block_items
                         if (b_id > last_seen_id or (b_id >= lookback_cutoff and not is_post_already_published(ch, b_id) and not is_post_handled(ch, b_id)) or f"{ch.lower()}:{b_id}" in needs_repost_keys)
@@ -253,7 +253,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     ]
                     new_blocks.sort(key=lambda x: x[0])
 
-                    # Pre-filter for message freshness (< 24h) and auto-mark ancient stale posts as handled
+                    # Pre-filter for message freshness (< 14h) and auto-mark ancient stale posts as handled
                     fresh_blocks = []
                     for b_id, b in new_blocks:
                         time_el = b.find("time")
@@ -265,7 +265,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                                 pass
                         text_div = b.find("div", class_="tgme_widget_message_text")
                         raw_text = extract_telegram_html_text(text_div) if text_div else ""
-                        is_fresh, _ = promo_tracker.validate_deal_freshness(raw_text, msg_dt)
+                        is_fresh, _ = promo_tracker.validate_deal_freshness(raw_text, msg_dt, max_hours=14)
                         if not is_fresh:
                             record_post_handled(ch, b_id)
                             continue
@@ -778,17 +778,6 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     print("\n" + "=" * 70)
     print(f"SUCCESS: Published {len(published_deals)} deals to {settings.TARGET_CHANNEL_ID}!")
     print("=" * 70)
-
-    # 10. Daily Tajmi3at / Compilations (~10:00 PM UTC+1 or forced)
-    try:
-        from app.publisher.regrouper import check_and_publish_regrouped_bulletins
-        bulletins = await check_and_publish_regrouped_bulletins(bot_token=get_bot_token(), force=force_tajmi3at)
-        if bulletins:
-            print(f"\n[TAJMI3AT] Published {len(bulletins)} daily roundup bulletin(s):")
-            for b in bulletins:
-                print(f"  - {b['category']}: {b['count']} items -> Msg #{b['message_id']}")
-    except Exception as e:
-        print(f"[TAJMI3AT ERROR] {e}")
 
     return len(published_deals)
 

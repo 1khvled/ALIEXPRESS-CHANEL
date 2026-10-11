@@ -71,7 +71,17 @@ async def post_last_2():
                 if not text_div:
                     continue
 
-                raw_text = text_div.get_text(separator="\n").strip()
+                # Freshness check (< 14h)
+                time_el = block.find("time")
+                msg_dt = None
+                if time_el and time_el.get("datetime"):
+                    try:
+                        msg_dt = datetime.fromisoformat(time_el["datetime"].replace("Z", "+00:00"))
+                    except Exception:
+                        pass
+                is_fresh, _ = promo_tracker.validate_deal_freshness(raw_text, msg_dt, max_hours=14)
+                if not is_fresh:
+                    continue
 
                 # Spam check
                 is_spam, _ = is_spam_or_non_deal(raw_text)

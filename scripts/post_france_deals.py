@@ -577,17 +577,16 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
             else:
                 # Filter for posts strictly newer than last_seen_id OR unposted recent candidates
                 handled_keys = set(state.get("handled_post_keys", []))
-                lookback_cutoff = max(0, last_seen_id - 15)
+                lookback_cutoff = max(0, last_seen_id - 5)
                 new_blocks = [
                     (b_id, b) for b_id, b in block_items
                     if (b_id > last_seen_id or (b_id >= lookback_cutoff and f"{clean_ch}:{b_id}" not in published_keys and f"{clean_ch}:{b_id}" not in handled_keys))
                     and f"{clean_ch}:{b_id}" not in published_keys
                 ]
 
-            # Pre-filter for message freshness (< 24h normally, or < 72h during active promo/force)
+            # Pre-filter for message freshness (< 14h)
             fresh_blocks = []
-            active_promo = promo_tracker.get_active_promo()
-            max_age_hours = 72.0 if (active_promo or force) else 24.0
+            max_age_hours = 14.0
             for b_id, b in new_blocks:
                 time_el = b.find("time")
                 msg_dt = None
@@ -891,17 +890,6 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
     print("\n" + "=" * 70)
     print(f"FRANCE RUN FINISHED: Published {published_count} deals to {TARGET_FRANCE_CHANNEL}!")
     print("=" * 70)
-
-    # 10. Daily Tajmi3at / Compilations (~10:00 PM CET or forced)
-    try:
-        from app.publisher.regrouper_fr import check_and_publish_france_regrouped_bulletins
-        bulletins = await check_and_publish_france_regrouped_bulletins(force=force_tajmi3at)
-        if bulletins:
-            print(f"\n[FRANCE ROUNDUP] Published {len(bulletins)} daily roundup bulletin(s):")
-            for b in bulletins:
-                print(f"  - {b['category']}: {b['count']} items -> Msg #{b['message_id']}")
-    except Exception as e:
-        print(f"[FRANCE ROUNDUP ERROR] {e}")
 
     return published_count
 

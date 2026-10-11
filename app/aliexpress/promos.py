@@ -879,10 +879,9 @@ class PromoTracker:
         """
         now = datetime.now(timezone.utc)
 
-        # 1. Message age check (within 24 hours normally, up to 72 hours during active promos)
+        # 1. Message age check (strictly within 18 hours max under all circumstances)
         if max_hours is None:
-            active_promo = self.get_active_promo(now)
-            max_hours = 72 if active_promo else 24
+            max_hours = 18
 
         if msg_datetime is not None:
             age = now - msg_datetime
@@ -895,12 +894,21 @@ class PromoTracker:
             if m:
                 return False, f"Mention of expired campaign/date detected: '{m.group(0)}'"
 
-        # 3. If coupons or campaign names are mentioned, ensure we are not in an empty period passing off old codes
+        # 3. Reject any posts containing expired festival codes from ended promo events
+        for event in PROMO_CALENDAR:
+            if now > event.end_date:
+                expired_codes = [t.get("code") for t in event.coupon_tiers if t.get("code")] + \
+                                [t.get("code") for t in getattr(event, "coupon_tiers_fr", []) if t.get("code")]
+                for code in expired_codes:
+                    if re.search(r'\b' + re.escape(code) + r'\b', text, re.IGNORECASE):
+                        return False, f"Expired festival coupon code '{code}' from ended event '{event.name}'"
+
+        # 4. If coupons or campaign names are mentioned, ensure we are not in an empty period passing off old codes
         active_promo = self.get_active_promo(now)
         if not active_promo:
-            # Reject any posts containing expired festival codes (OTPRD, FRPRD, Choice Day codes)
-            if re.search(r'\b(?:OTPRD|FRPRD|AEFR)\d+\b', text, re.IGNORECASE):
-                return False, "Promo event has ended: festival coupon codes (OTPRD/FRPRD) are expired"
+            # Reject any posts containing festival codes (OTPRD, FRPRD, BDQT, Choice Day codes)
+            if re.search(r'\b(?:OTPRD|FRPRD|BDQT|AEFR)\d+\b', text, re.IGNORECASE):
+                return False, "Promo event has ended: festival coupon codes are expired"
             if any(term in text.lower() for term in ["party ready", "شويس داي", "شويس داى"]):
                 return False, "Party Ready Sale / Choice Day event has ended"
             if "brand day" in text.lower() and "sept" in text.lower():

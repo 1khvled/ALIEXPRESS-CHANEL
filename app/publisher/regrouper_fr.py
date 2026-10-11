@@ -485,7 +485,12 @@ async def check_and_publish_france_regrouped_bulletins(
 
         from app.aliexpress.promos import promo_tracker
         active_promo = promo_tracker.get_active_promo()
-        if not active_promo:
+        if active_promo:
+            promo_ok, promo_reason = is_france_promo_roundup_eligible(min_hours=6.0)
+            if not promo_ok:
+                logger.info(f"[FRANCE ROUNDUP] Promo cooldown active: {promo_reason}. Skipping.")
+                return []
+        else:
             # When promo event has ended: strictly at most once per calendar day (no reposting)
             eligible, reason = is_france_roundup_eligible()
             if not eligible:
