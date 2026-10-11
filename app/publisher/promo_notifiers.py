@@ -87,7 +87,7 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
                 *coupon_lines,
                 "",
                 "⚠️ <b>الكوبونات تعمل في بعض المنتجات فقط الموجودة في هذه الصفحة :</b>",
-                "https://s.click.aliexpress.com/e/_c38iyTZR",
+                "https://s.click.aliexpress.com/e/_c3F40Fvf",
                 "",
                 "🪙 <b>بوت مضاعفة تخفيض العملات:</b> @Alilo07BOT",
                 "━━━━━━━━━━━━━━━━━",
@@ -97,7 +97,7 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
             reply_markup = {
                 "inline_keyboard": [
                     [
-                        {"text": "🛍️ صفحة المنتجات المؤهلة للكوبونات", "url": "https://s.click.aliexpress.com/e/_c38iyTZR"}
+                        {"text": "🛍️ صفحة المنتجات المؤهلة للكوبونات", "url": "https://s.click.aliexpress.com/e/_c3F40Fvf"}
                     ],
                     [
                         {"text": "🪙 بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"},
@@ -169,7 +169,7 @@ def build_promo_launch_alert(promo: PromoEvent, start_hour_str: str = "08:00") -
                 *coupon_lines,
                 "",
                 "⚠️ <b>الكوبونات تعمل في بعض المنتجات فقط الموجودة في هذه الصفحة :</b>",
-                "https://s.click.aliexpress.com/e/_c38iyTZR",
+                "https://s.click.aliexpress.com/e/_c3F40Fvf",
                 "",
                 "🪙 <b>بوت مضاعفة تخفيض العملات:</b> @Alilo07BOT",
                 "━━━━━━━━━━━━━━━━━",
@@ -179,7 +179,7 @@ def build_promo_launch_alert(promo: PromoEvent, start_hour_str: str = "08:00") -
             reply_markup = {
                 "inline_keyboard": [
                     [
-                        {"text": "🛍️ صفحة المنتجات المؤهلة للكوبونات", "url": "https://s.click.aliexpress.com/e/_c38iyTZR"}
+                        {"text": "🛍️ صفحة المنتجات المؤهلة للكوبونات", "url": "https://s.click.aliexpress.com/e/_c3F40Fvf"}
                     ],
                     [
                         {"text": "🪙 بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"},

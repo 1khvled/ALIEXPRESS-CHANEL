@@ -491,11 +491,17 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         raw_text,
                         f"{extracted.original_url} {getattr(extracted, 'final_url', '') or ''} {extracted.canonical_url}"
                     )
-                    aff_link = await affiliate_service.create_affiliate_link(
-                        product_url=extracted.canonical_url,
-                        product_id=extracted.product_id if not extracted.is_coupon_list else None,
-                        deal_type=deal_type
-                    )
+                    if extracted.is_coupon_list:
+                        deal_type = "item"
+
+                    if extracted.is_coupon_list and getattr(extracted, "is_restricted_event", False) and ("_c38iyTZR" in extracted.original_url or "brand" in raw_text.lower()):
+                        aff_link = "https://s.click.aliexpress.com/e/_c3F40Fvf"
+                    else:
+                        aff_link = await affiliate_service.create_affiliate_link(
+                            product_url=extracted.canonical_url,
+                            product_id=extracted.product_id if not extracted.is_coupon_list else None,
+                            deal_type=deal_type
+                        )
                     from api.coin_bot import ensure_affiliate
                     aff_link = ensure_affiliate(aff_link, pid=extracted.product_id if not extracted.is_coupon_list else None)
 

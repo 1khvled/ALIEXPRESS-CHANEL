@@ -380,6 +380,13 @@ def ensure_affiliate(link: Optional[str], fallback_link: Optional[str] = None, p
         else:
             target = "https://www.aliexpress.com"
 
+    KNOWN_COMPETITOR_LINK_MAP = {
+        "_c38iyTZR": "https://s.click.aliexpress.com/e/_c3F40Fvf",  # ESK Brand Day link -> our Brand Day link
+    }
+    for comp_key, our_link in KNOWN_COMPETITOR_LINK_MAP.items():
+        if comp_key in target:
+            return our_link
+
     if "s.click.aliexpress.com" in target or "/e/_" in target or "/e/" in target:
         return target
 

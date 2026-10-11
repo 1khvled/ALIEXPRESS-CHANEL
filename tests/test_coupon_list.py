@@ -95,3 +95,82 @@ def test_coupon_bulletin_deduplication():
     )
     assert is_dup is True
     assert "already published" in reason
+
+def test_detect_coupon_event_type_restricted():
+    from app.aliexpress.parser import detect_coupon_event_type
+
+    sample_post = """
+    🚨 كوبونات حدث Brand Day! 🛍️
+    تنطلق غداً 09/10 وتستمر إلى غاية 13/10/2026 🗓️
+
+    🎟️ كوبون 4/35$ : BDQT04
+    🎟️ كوبون 6/59$ : BDQT06
+    🎟️ كوبون 10/99$ : BDQT10
+    🎟️ كوبون 15/139$ : BDQT15
+    🎟️ كوبون 30/269$ : BDQT30
+
+    ⚠️ الكوبونات تعمل في بعض المنتجات فقط الموجودة في هذه الصفحة :
+    https://s.click.aliexpress.com/e/_c38iyTZR
+    """
+    res = detect_coupon_event_type(sample_post)
+    assert res["is_restricted"] is True
+    assert res["is_sitewide_booking"] is False
+    assert res["landing_url"] == "https://s.click.aliexpress.com/e/_c38iyTZR"
+
+def test_detect_coupon_event_type_sitewide_booking():
+    from app.aliexpress.parser import detect_coupon_event_type
+
+    sample_post = """
+    🚨 كوبونات حدث Choice Day! 🛍️
+    تنطلق غداً وتستمر إلى غاية 07/11/2026 🗓️
+
+    🎟️ كوبون 4/29$ : CDDZ04
+    🎟️ كوبون 7/49$ : CDDZ07
+    🎟️ كوبون 12/89$ : CDDZ12
+
+    ⭕️ طريقة حجز الكوبونات وتثبيتها في حسابك (طبقوها غداً على 08:00 صباحاً 🔥👌🏽):
+    ⚠️ ابدأ دائماً بالكوبونات الكبيرة ($55 ثم $42...) ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅
+
+    🔹 طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب ⤵️
+    https://s.click.aliexpress.com/e/_c3d8Osgp
+    """
+    res = detect_coupon_event_type(sample_post)
+    assert res["is_restricted"] is False
+    assert res["is_sitewide_booking"] is True
+
+@pytest.mark.asyncio
+async def test_format_restricted_vs_sitewide():
+    coupons = [
+        {"tier": "4/35$", "code": "BDQT04"},
+        {"tier": "6/59$", "code": "BDQT06"},
+    ]
+    aff_url = "https://s.click.aliexpress.com/e/_c3F40Fvf"
+
+    # Restricted format
+    restricted_caption = caption_generator.format_coupon_list(
+        coupons,
+        aff_url,
+        promo_name="Brand Day Sale",
+        is_restricted_event=True
+    )
+    assert "⚠️ <b>الكوبونات تعمل في بعض المنتجات فقط الموجودة في هذه الصفحة :</b>" in restricted_caption
+    assert aff_url in restricted_caption
+
+    # Sitewide booking format (upcoming)
+    sitewide_caption = caption_generator.format_coupon_list(
+        coupons,
+        aff_url,
+        promo_name="Choice Day",
+        is_restricted_event=False
+    )
+    assert ("طريقة حجز الكوبونات وتثبيتها في حسابك" in sitewide_caption or "طريقة التطبيق" in sitewide_caption)
+
+def test_competitor_link_sanitization():
+    from api.coin_bot import ensure_affiliate
+
+    # ESK Brand Day link must automatically be sanitized to our affiliate link
+    esk_link = "https://s.click.aliexpress.com/e/_c38iyTZR"
+    cleaned = ensure_affiliate(esk_link)
+    assert cleaned == "https://s.click.aliexpress.com/e/_c3F40Fvf"
+    assert "_c38iyTZR" not in cleaned
+

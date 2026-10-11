@@ -90,11 +90,14 @@ class DealCaptionGenerator:
         self,
         coupon_items: List[Dict[str, str]],
         affiliate_url: str,
-        promo_name: Optional[str] = None
+        promo_name: Optional[str] = None,
+        is_restricted_event: bool = False
     ) -> str:
         """
         Builds authentic Algerian coupon bulletin format matching ZedStore & Lody.
-        Teases upcoming promo coupons with exact start date (e.g. 12th) and 7ajz tutorial.
+        Intelligently differentiates between:
+        - Special Restricted Promo Events (Brand Day / eligible landing page only).
+        - General Site-Wide Promo Events (Choice Day / 11.11 site-wide booking tutorial).
         """
         is_live = False
         start_day_str = "12 أكتوبر"
@@ -119,7 +122,18 @@ class DealCaptionGenerator:
             if not promo_name or promo_name == "Party Ready Sale":
                 promo_name = "تخفيضات AliExpress"
 
-        if is_live:
+        if not is_restricted_event and promo_name and "brand" in promo_name.lower():
+            is_restricted_event = True
+
+        if is_restricted_event:
+            lines = [
+                f"🚨 <b>كوبونات حدث {promo_name}! 🛍️</b>",
+                "⏰ <b>تنبيه:</b> الكوبونات شغالة والكميات محدودة.. استغلوا التخفيضات قبل نفادها! 🏃💨",
+                "",
+                "✅ <b>قـائمة الكوبونـات المعتمدة:</b>",
+                ""
+            ]
+        elif is_live:
             lines = [
                 f"📣 <b>كوبونات خاصة بتخفيضات {promo_name}! 🚨🔥</b>",
                 "⏰ <b>تنبيه:</b> التخفيضات نشطة الآن والكميات محدودة.. استغلوا الكوبونات قبل نفادها! 🏃💨",
@@ -141,11 +155,21 @@ class DealCaptionGenerator:
             code = item.get("code", "").strip()
             if tier and code:
                 tier_clean = tier.replace("$", "").strip()
-                lines.append(f"🙏 <b>كـوبون {tier_clean}$ :</b> ⏺ <code>{code}</code>")
+                lines.append(f"🎟️ <b>كوبون {tier_clean}$ :</b> ⏺ <code>{code}</code>")
             elif code:
-                lines.append(f"🙏 <b>كـوبون :</b> ⏺ <code>{code}</code>")
+                lines.append(f"🎟️ <b>كوبون :</b> ⏺ <code>{code}</code>")
 
-        if is_live:
+        if is_restricted_event:
+            lines.extend([
+                "",
+                "⚠️ <b>الكوبونات تعمل في بعض المنتجات فقط الموجودة في هذه الصفحة :</b>",
+                f"{affiliate_url}",
+                "",
+                "🪙 <b>بوت مضاعفة تخفيض العملات:</b> @Alilo07BOT",
+                "━━━━━━━━━━━━━━━━━",
+                "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0"
+            ])
+        elif is_live:
             lines.extend([
                 "",
                 "⭕️ <b>طريقة التطبيق:</b> انسخ الكوبون وطبقه مباشرة في صفحة الدفع للاستفادة من التخفيض ✅",
@@ -159,9 +183,10 @@ class DealCaptionGenerator:
         else:
             lines.extend([
                 "",
-                f"⭕️ <b>طريقة الاستفادة من الكوبونات:</b>",
-                f"⚠️ احفظوا الكودات من الآن وأضيفوا السلع المرغوبة لسلة التسوق للاستعداد لتطبيقها فور تفعيل التخفيضات يوم <b>{start_day_str}</b> ✅",
-                "🔹 <b>رابط التخفيضات وسلة التسوق ⤵️</b>",
+                "⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك (طبقوها على 08:00 صباحاً 🔥👌🏽):</b>",
+                "⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ($55 ثم $42...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅",
+                "",
+                "🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب ⤵️</b>",
                 f"{affiliate_url}",
                 "",
                 "😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات:</b>",
@@ -387,7 +412,14 @@ class DealCaptionGenerator:
             is_price_drop = detect_price_drop_deal(raw_text)
 
         if coupon_list and len(coupon_list) >= 2:
-            return self.format_coupon_list(coupon_list, affiliate_url, promo_name=promo_tag)
+            is_restricted = False
+            if raw_text:
+                from app.aliexpress.parser import detect_coupon_event_type
+                ev_info = detect_coupon_event_type(raw_text, promo_name=promo_tag)
+                is_restricted = ev_info.get("is_restricted", False)
+            elif promo_tag and "brand" in promo_tag.lower():
+                is_restricted = True
+            return self.format_coupon_list(coupon_list, affiliate_url, promo_name=promo_tag, is_restricted_event=is_restricted)
 
         if (not usd_price or usd_price <= 0) and raw_text and any(k in raw_text for k in ["كوبونات", "تحصيل", "رابط المناسبة", "تخفيضات", "عشوائية", "party ready", "choice day"]):
             return self.format_event_campaign(raw_text, affiliate_url)

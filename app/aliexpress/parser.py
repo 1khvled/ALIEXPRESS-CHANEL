@@ -272,6 +272,82 @@ def extract_coupon_list(text: str) -> List[Dict[str, str]]:
 
     return coupons
 
+def detect_coupon_event_type(text: str, promo_name: Optional[str] = None) -> Dict[str, Any]:
+    """
+    Intelligently analyzes whether a coupon bulletin post from competitor channels
+    (e.g. ECKSDEAL, lodydeals, zedstoreonline, aniscoupons) is:
+    1. A Special / Restricted Event (e.g. Brand Day, category/brand sales):
+       - Coupons ONLY apply to products on a dedicated landing page.
+       - Signals: 'بعض المنتجات فقط', 'الموجودة في هذه الصفحة', 'صفحة العرض', 'المنتجات المؤهلة', 'Brand Day'.
+       - Shoppers must be directed to the eligible landing page.
+    2. A General / Site-Wide Event (e.g. Choice Day, 11.11, Anniversary Sale):
+       - Coupons apply across the entire site.
+       - Shoppers reserve/lock coupons by applying them to a dummy phone / high-value item ('حجز الكوبونات').
+    """
+    if not text:
+        return {
+            "is_restricted": False,
+            "is_sitewide_booking": False,
+            "landing_url": None,
+            "reason": "empty_text"
+        }
+
+    norm = re.sub(r'[\u0640]', '', text).lower()
+    promo_lower = (promo_name or "").lower()
+
+    # Restricted keywords (coupons work ONLY on specific landing page items)
+    restricted_keywords = [
+        "بعض المنتجات فقط", "في بعض المنتجات فقط", "الموجودة في هذه الصفحة",
+        "الموجوده في هذه الصفحه", "في هذه الصفحة", "في هذه الصفحه",
+        "صفحة العرض", "صفحه العرض", "صفحة التخفيضات", "صفحة التخفيض",
+        "صفحة المنتجات", "صفحة الكوبونات", "المنتجات المؤهلة", "منتجات مؤهلة",
+        "المنتجات المؤهله", "منتجات مؤهله", "خاصة بمنتجات هذه الصفحة",
+        "خاصة بهذه الصفحة", "في هذه الصفحة فقط", "على هذه الصفحة فقط",
+        "منتجات مختارة", "سلع مختارة", "منتجات محددة", "سلع محددة",
+        "brand day", "براند داي", "brands day", "mega brands",
+        "sur cette page", "produits éligibles", "sélection de produits",
+        "eligible items only", "landing page only", "selected products"
+    ]
+
+    is_restricted = any(kw in norm for kw in restricted_keywords) or ("brand" in promo_lower)
+
+    # Booking keywords (general sitewide promo with dummy product coupon locking)
+    booking_keywords = [
+        "حجز الكوبونات", "احجز الكوبونات", "تثبيت الكوبونات", "حجز وتثبيت",
+        "حجز وتثبيت الكوبونات", "طبقوا الآن كامل الكوبونات", "طبقوا كامل الكوبونات",
+        "طبقوها على هذا المنتج", "طبقوا على هذا المنتج", "تبقالكم في الحساب",
+        "تبقى في الحساب", "تثبيت في الحساب", "حفظ الكوبونات", "طريقة الحجز"
+    ]
+    is_sitewide_booking = any(kw in norm for kw in booking_keywords)
+
+    # If restricted indicators are present, it overrides generic booking wording
+    if is_restricted:
+        is_sitewide_booking = False
+
+    # Extract landing page URL if restricted
+    landing_url = None
+    # 1. Search for link immediately following landing page notice
+    m_near = re.search(
+        r'(?:هذه الصفحة|صفحة العرض|المنتجات المؤهلة|رابط العرض|رابط المنتجات|رابط الكوبونات)[^\n]*[\s:：\-=ـ_•*~|()✅🔥👉✔️🌷🙏\+]*\r?\n[^\S\r\n]*(https?://[^\s]+)',
+        text,
+        re.IGNORECASE
+    )
+    if m_near:
+        landing_url = m_near.group(1).strip()
+    else:
+        # 2. Search for any AliExpress link in text
+        all_links = re.findall(r'https?://[^\s]+', text)
+        ali_links = [u for u in all_links if "aliexpress" in u.lower() or "s.click" in u.lower()]
+        if ali_links:
+            landing_url = ali_links[0].strip()
+
+    return {
+        "is_restricted": is_restricted,
+        "is_sitewide_booking": is_sitewide_booking,
+        "landing_url": landing_url,
+        "reason": "restricted_keywords_found" if is_restricted else ("booking_keywords_found" if is_sitewide_booking else "standard")
+    }
+
 def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
     usd_val: Optional[float] = None
     eur_val: Optional[float] = None

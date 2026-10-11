@@ -16,6 +16,7 @@ from app.aliexpress.parser import (
     extract_clean_title,
     is_spam_or_non_deal,
     extract_coupon_list,
+    detect_coupon_event_type,
     detect_deal_type,
     compute_title_compatibility
 )
@@ -43,6 +44,8 @@ class ExtractedProduct:
     coupon_list: List[Dict[str, str]] = field(default_factory=list)
     final_url: Optional[str] = None
     deal_type: str = "coin"
+    is_restricted_event: bool = False
+    landing_page_url: Optional[str] = None
 
 
 class ProductExtractor:
@@ -89,21 +92,33 @@ class ProductExtractor:
         usd_price, eur_price = extract_prices(text)
 
         if len(coupon_items) >= 3 and usd_price is None and ali_urls:
-            ali_url = ali_urls[0]
-            resolved = await self.resolver.resolve(ali_url)
+            # Detect event type: Restricted Landing Page vs Site-Wide Booking
+            from app.aliexpress.promos import promo_tracker
+            active_p = promo_tracker.get_active_promo()
+            promo_name = active_p.name if active_p else ""
+            ev_info = detect_coupon_event_type(text, promo_name=promo_name)
+
+            target_url = ev_info.get("landing_url") or ali_urls[0]
+
+            # Critical: Competitor mapping for ESK Brand Day link (_c38iyTZR) -> our verified affiliate link
+            if "_c38iyTZR" in target_url:
+                clean_campaign_url = "https://s.click.aliexpress.com/e/_c3F40Fvf"
+            else:
+                resolved = await self.resolver.resolve(target_url)
+                raw_target = resolved.canonical_url or target_url
+                clean_campaign_url = raw_target.split("?")[0] if ("aliexpress.com" in raw_target and not resolved.product_id) else raw_target
+
             import hashlib
             codes_sig = ",".join(sorted(c["code"] for c in coupon_items))
             coupon_hash = hashlib.sha256(codes_sig.encode()).hexdigest()[:12]
 
-            # Clean URL: strip all tracking query parameters to ensure clean, short affiliate links
-            raw_target = resolved.canonical_url or ali_url
-            clean_campaign_url = raw_target.split("?")[0] if ("aliexpress.com" in raw_target and not resolved.product_id) else raw_target
+            title = "كوبونات وتخفيضات مهرجان Brand Day 🏷️" if (ev_info["is_restricted"] and "brand" in f"{promo_name} {text}".lower()) else "أحدث كوبونات وتخفيضات AliExpress"
 
             return ExtractedProduct(
                 product_id=f"COUPONS_{coupon_hash}",
-                original_url=ali_url,
+                original_url=target_url,
                 canonical_url=clean_campaign_url,
-                title="أحدث كوبونات وتخفيضات AliExpress",
+                title=title,
                 current_price=None,
                 current_price_eur=None,
                 coupon_code=None,
@@ -113,7 +128,9 @@ class ProductExtractor:
                 raw_text=text,
                 country_info=None,
                 is_coupon_list=True,
-                coupon_list=coupon_items
+                coupon_list=coupon_items,
+                is_restricted_event=ev_info["is_restricted"],
+                landing_page_url=clean_campaign_url
             )
 
         # 3. Extract single deal fields from text first

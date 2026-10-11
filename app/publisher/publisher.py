@@ -125,14 +125,27 @@ class TelegramPublisher:
             # Lody & ZedStore channel standard: Links inside text body, no inline keyboard on regular deals
             # This ensures that Telegram forwards preserve the affiliate link intact!
             reply_markup_json = None
-            if deal.affiliate_url and deal.affiliate_url.startswith("http") and deal.affiliate_url not in caption:
-                import json
-                btn_title = "🎟️ صفحة الكوبونات والتخفيضات" if getattr(deal, "quality_score", 0) == 95 and "كود" in caption else "🛒 رابط الشراء من AliExpress"
-                inline_keyboard = [
-                    [{"text": btn_title, "url": deal.affiliate_url}],
-                    [{"text": "🪙 بوت تخفيض العملات DealScout", "url": "https://t.me/Alilo07BOT"}]
-                ]
-                reply_markup_json = json.dumps({"inline_keyboard": inline_keyboard})
+            if deal.affiliate_url and deal.affiliate_url.startswith("http"):
+                is_coupon_post = getattr(deal, "quality_score", 0) == 95 or "كوبون" in caption or "كود" in caption
+                is_restricted = "بعض المنتجات فقط" in caption or "Brand Day" in caption or "الموجودة في هذه الصفحة" in caption
+
+                if is_restricted:
+                    btn_title = "🛍️ صفحة المنتجات المؤهلة للكوبونات"
+                elif "حجز" in caption:
+                    btn_title = "🎟️ رابط حجز وتطبيق الكوبونات"
+                elif is_coupon_post:
+                    btn_title = "🎟️ صفحة الكوبونات والتخفيضات"
+                else:
+                    btn_title = "🛒 رابط الشراء من AliExpress"
+
+                # Attach inline keyboard for coupon bulletins or when link is not already in caption
+                if is_coupon_post or deal.affiliate_url not in caption:
+                    import json
+                    inline_keyboard = [
+                        [{"text": btn_title, "url": deal.affiliate_url}],
+                        [{"text": "🪙 بوت تخفيض العملات DealScout", "url": "https://t.me/Alilo07BOT"}]
+                    ]
+                    reply_markup_json = json.dumps({"inline_keyboard": inline_keyboard})
 
             photo_bytes = None
             photo_url = None
