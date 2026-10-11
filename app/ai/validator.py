@@ -1,3 +1,4 @@
+import re
 from dataclasses import dataclass
 from typing import List, Optional
 
@@ -48,6 +49,17 @@ class DealCaptionValidator:
         "عروض الحزم",
         "العرض مستمر",
         "تخفيض عملات",
+        "الهواتف",
+        "هاتف بمواصفات",
+        "مواصفات قوية",
+        "سعر باطل",
+        "تخفيض إضافي",
+        "زاد طاح",
+        "عالم الهواتف",
+        "أقوى تخفيض",
+        "أفضل سعر متاح",
+        "تخفيض قوي",
+        "تخفيض استثنائي",
     ]
 
     def validate(
@@ -95,9 +107,17 @@ class DealCaptionValidator:
 
         # Specific checks for Single Product Deals
         # 1. Header / Hook check
-        if not any(hook in caption for hook in self.SITUATIONAL_HOOKS):
-            errors.append("Missing valid situational hook header")
-
+        # If a situational hook block exists in caption, verify it matches our recognized hooks.
+        # When source deals lack hype hooks, generator cleanly omits them per workspace rule.
+        first_lines = "\n".join(caption.splitlines()[:3])
+        clean_first_lines = re.sub(r'[\u0640]', '', first_lines)
+        country_or_meta = [
+            "كندا", "كوريا", "أوكرانيا", "اوكرانيا", "الجزائر", "فرنسا", "أستراليا", "استراليا",
+            "سعر السوق المحلي", "خلي البلد", "بلد الحساب", "تنبيه"
+        ]
+        if "<blockquote>" in clean_first_lines and not any(k in clean_first_lines for k in country_or_meta):
+            if not any(hook in clean_first_lines for hook in self.SITUATIONAL_HOOKS):
+                errors.append("Missing valid situational hook header")
 
         # 2. Price verification
         if expected_usd_price is not None:
@@ -123,7 +143,14 @@ class DealCaptionValidator:
             if "خصم النقاط" not in caption and "تخفيض العملات" not in caption:
                 errors.append("Verified points discount line missing from caption")
         else:
-            if "خصم النقاط" in caption or "تخفيض العملات:" in caption:
+            # Check for unverified points discount claimed for the deal itself,
+            # excluding the bot promotion CTA (e.g. "@Alilo07BOT", "بوت تخفيض العملات")
+            non_bot_lines = [
+                l for l in caption.splitlines()
+                if "@Alilo07BOT" not in l and "بوت" not in l and "Alilo" not in l
+            ]
+            non_bot_text = "\n".join(non_bot_lines)
+            if "خصم النقاط" in non_bot_text or "تخفيض العملات مفعّل" in non_bot_text or "تخفيض العملات:" in non_bot_text:
                 errors.append("Unverified points discount found in caption")
 
         return ValidationResult(

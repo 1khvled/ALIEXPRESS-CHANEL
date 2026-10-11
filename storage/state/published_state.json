@@ -192,14 +192,21 @@
     "9998886905",
     "9998887197",
     "9998887496",
-    "9998887705"
+    "9998887705",
+    "9998882385",
+    "9998882735",
+    "1005006966177706",
+    "1005012234106869",
+    "1005010209307090",
+    "9998883006",
+    "9998888761"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
     "1005010219205081": 1791192360.1916943,
-    "999111222": 1791677994.0781028,
-    "100500999912345": 1791587994.8687923,
-    "100500999954321": 1791670794.8687923,
+    "999111222": 1791758760.526585,
+    "100500999912345": 1791668761.5934513,
+    "100500999954321": 1791751561.5934513,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
@@ -209,7 +216,7 @@
     "1005009627597591": 1790884233.6428,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1791667194.9587,
+    "100500777666555": 1791747961.7865572,
     "1005011778621042": 1791108644.641232,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1791192944.201814,
@@ -220,14 +227,14 @@
     "1005012881256093": 1791194149.475346,
     "1005009118633225": 1790888213.2900865,
     "1005012143831265": 1791012345.6086447,
-    "1005008852027824": 1791639330.0700579,
+    "1005008852027824": 1791752793.585909,
     "9998888981": 1790888981.6873999,
     "1005005217734986": 1791104047.0967803,
     "1005010062128237": 1790937566.337433,
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
-    "100500888999777": 1791663595.0359967,
+    "100500888999777": 1791744361.9679046,
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
@@ -258,7 +265,7 @@
     "9998885726": 1790945726.205554,
     "9998885776": 1791675776.96059,
     "9998886147": 1790946147.1871526,
-    "999888777111": 1791676195.903452,
+    "999888777111": 1791756964.5359364,
     "9998886362": 1790946362.071869,
     "1005012407874415": 1791061256.0753598,
     "9998887189": 1790947189.8634577,
@@ -278,7 +285,7 @@
     "1005011991145678": 1790962541.57551,
     "1005011682821623": 1790962844.0034096,
     "9998885747": 1790965747.5380507,
-    "1005010129356058": 1791666475.1241574,
+    "1005010129356058": 1791747242.6526434,
     "9998885993": 1790965993.3792443,
     "1005012574108028": 1791236020.742662,
     "1005008599340405": 1791638441.843642,
@@ -304,7 +311,7 @@
     "1005012741634118": 1791015347.2675145,
     "1005010453516983": 1791208255.7291632,
     "1005008554596598": 1791017145.537471,
-    "1005012925826589": 1791649464.949431,
+    "1005012925826589": 1791752930.9846199,
     "1005010306498953": 1791021345.213176,
     "1005010338761787": 1791021850.86469,
     "1005012265051745": 1791022849.763491,
@@ -385,17 +392,24 @@
     "9998887893": 1791627893.027416,
     "1005006007773971": 1791638433.4352653,
     "1005013067004815": 1791638447.7612462,
-    "1005009948598802": 1791639031.4293046,
+    "1005009948598802": 1791752816.5344555,
     "9998885318": 1791675318.975821,
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
     "COUPONS_Brand Day Sale": 1791676848.283345,
-    "COUPONS_d9b8b196": 1791677993.8849692,
-    "COUPONS_Test Event 2026": 1791677993.8849692,
+    "COUPONS_d9b8b196": 1791758760.2147858,
+    "COUPONS_Test Event 2026": 1791758760.2147858,
     "9998886905": 1791676905.095083,
     "9998887197": 1791677197.2988765,
     "9998887496": 1791677496.6959877,
-    "9998887705": 1791677705.7215645
+    "9998887705": 1791677705.7215645,
+    "9998882385": 1791752385.1242118,
+    "9998882735": 1791752735.01132,
+    "1005006966177706": 1791752780.7013927,
+    "1005012234106869": 1791752787.9016774,
+    "1005010209307090": 1791752811.1502168,
+    "9998883006": 1791753006.1402605,
+    "9998888761": 1791758761.679281
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -629,15 +643,20 @@
     "Walram SATA3 SSD 512GB",
     "Electronic Body Scale.",
     "Realme 15 Global (12/256)",
-    "REALME P3 5G"
+    "REALME P3 5G",
+    "Essager 54W USB Car Charger",
+    "Original QKZ AK6",
+    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras",
+    "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W",
+    "🌐نسخة عالمية"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1791677994.0781028,
+    "Test Wireless Gaming Mouse X1": 1791758760.526585,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
-    "Attack Shark R2 Mouse": 1791670794.8687923,
-    "Test Wrench Set": 1791677994.9265897,
+    "Attack Shark R2 Mouse": 1791751561.5934513,
+    "Test Wrench Set": 1791758761.679281,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1791194142.1753953,
@@ -661,7 +680,7 @@
     "Realme Pad 3 5G 256GB": 1791012345.6086447,
     "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor": 1790888886.4062796,
     "OPPO A6 Pro 8/256": 1790888897.5243473,
-    "realme P3 5G 8/256": 1790888909.743846,
+    "realme P3 5G 8/256": 1791752793.585909,
     "OnePlus Turbo 6X Pro 5G": 1790888928.6181495,
     "Xiaomi Pad 7  12/256GB": 1790897106.449474,
     "ATTACK SHARK L90 Flodable Gaming Headset": 1791104165.8542082,
@@ -669,8 +688,8 @@
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
-    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1791587994.8687923,
-    "Attack Shark L80 PRO Wireless Mouse": 1791677095.0359967,
+    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1791668761.5934513,
+    "Attack Shark L80 PRO Wireless Mouse": 1791757861.9679046,
     "الأكثر لبا لنهار اليوووم": 1790940343.7746465,
     "POCO C81 Pro 4/64": 1791114344.949536,
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
@@ -714,7 +733,7 @@
     "HONOR 600 PRO": 1790960475.7249138,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
-    "Xiaomi Pad 7 (12/256)": 1791666475.1241574,
+    "Xiaomi Pad 7 (12/256)": 1791747242.6526434,
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1791236011.4353654,
     "CUSU SSD 512 GB Portable SSD External Drive": 1791200448.8235762,
     "HONOR  X80 PRO MAX (8/128)": 1791236020.742662,
@@ -866,7 +885,12 @@
     "Walram SATA3 SSD 512GB": 1791638441.843642,
     "Electronic Body Scale.": 1791638447.7612462,
     "Realme 15 Global (12/256)": 1791639031.4293046,
-    "REALME P3 5G": 1791649464.949431
+    "REALME P3 5G": 1791649464.949431,
+    "Essager 54W USB Car Charger": 1791752780.7013927,
+    "Original QKZ AK6": 1791752787.9016774,
+    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": 1791752811.1502168,
+    "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W": 1791752816.5344555,
+    "🌐نسخة عالمية": 1791752930.9846199
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1536,47 +1560,57 @@
     "test_channel:1791677197",
     "test_channel:1791677496",
     "test_channel:1791677705",
-    "test_channel:1791677994"
+    "test_channel:1791677994",
+    "test_channel:1791752385",
+    "test_channel:1791752735",
+    "lodydeals:45518",
+    "lodydeals:45519",
+    "zedstoreonline:38564",
+    "megaphonna:8316",
+    "megaphonna:8318",
+    "megaphonna:8323",
+    "test_channel:1791753006",
+    "test_channel:1791758761"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1791677995.130798,
+  "last_run_time": 1791758762.6566863,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32860,
-      "last_check_time": 1791649473.4198394
+      "last_check_time": 1791758768.3809514
     },
     "ecksdeal": {
       "last_message_id": 5882,
-      "last_check_time": 1791649458.2023985
+      "last_check_time": 1791758766.199437
     },
     "lodydeals": {
-      "last_message_id": 45516,
-      "last_check_time": 1791677995.039705
+      "last_message_id": 45519,
+      "last_check_time": 1791758762.232288
     },
     "bnddeals": {
       "last_message_id": 50823,
-      "last_check_time": 1791649466.9614487
+      "last_check_time": 1791758767.103071
     },
     "test_channel": {
-      "last_message_id": 1791677994,
-      "last_check_time": 1791677994.9265897
+      "last_message_id": 1791758761,
+      "last_check_time": 1791758761.679281
     },
     "pcgamingpart": {
       "last_message_id": 7975,
-      "last_check_time": 1791649458.6746562
+      "last_check_time": 1791758766.6558921
     },
     "zedstoreonline": {
-      "last_message_id": 38563,
-      "last_check_time": 1791649457.7032387
+      "last_message_id": 38564,
+      "last_check_time": 1791758689.8571026
     },
     "megaphonna": {
-      "last_message_id": 8313,
-      "last_check_time": 1791677995.130798
+      "last_message_id": 8323,
+      "last_check_time": 1791758767.7563403
     },
     "couponsglobal": {
-      "last_message_id": 48831,
-      "last_check_time": 1791649473.7865186
+      "last_message_id": 48832,
+      "last_check_time": 1791758768.7552671
     }
   },
   "published_product_prices": {
@@ -1605,7 +1639,7 @@
     "1005012143831265": 281.9,
     "1005007458827229": 22.1,
     "1005010453516983": 204.7,
-    "1005008852027824": 187.1,
+    "1005008852027824": 187.0,
     "1005012499451512": 260.0,
     "1005010129356058": 294.0,
     "3256809790988797": 92.8,
@@ -1756,7 +1790,10 @@
     "1005010289640412": 32.06,
     "1005013313539058": 6.52,
     "1005006007773971": 54.15,
-    "1005013067004815": 7.5
+    "1005013067004815": 7.5,
+    "1005006966177706": 3.49,
+    "1005012234106869": 1.71,
+    "1005010209307090": 197.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -4661,6 +4698,66 @@
       "price": 187.0,
       "timestamp": 1791649464.949431,
       "status": "ACTIVE"
+    },
+    "lodydeals:45518": {
+      "channel_msg_id": 737,
+      "product_id": "1005006966177706",
+      "title": "Essager 54W USB Car Charger",
+      "channel": "lodydeals",
+      "source_msg_id": 45518,
+      "price": 3.49,
+      "timestamp": 1791752780.7013927,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45519": {
+      "channel_msg_id": 738,
+      "product_id": "1005012234106869",
+      "title": "Original QKZ AK6",
+      "channel": "lodydeals",
+      "source_msg_id": 45519,
+      "price": 1.71,
+      "timestamp": 1791752787.9016774,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38564": {
+      "channel_msg_id": 739,
+      "product_id": "1005008852027824",
+      "title": "realme P3 5G 8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38564,
+      "price": 187.0,
+      "timestamp": 1791752793.585909,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8316": {
+      "channel_msg_id": 740,
+      "product_id": "1005010209307090",
+      "title": "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras",
+      "channel": "megaphonna",
+      "source_msg_id": 8316,
+      "price": 197.0,
+      "timestamp": 1791752811.1502168,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8318": {
+      "channel_msg_id": 741,
+      "product_id": "1005009948598802",
+      "title": "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W",
+      "channel": "megaphonna",
+      "source_msg_id": 8318,
+      "price": 236.9,
+      "timestamp": 1791752816.5344555,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8323": {
+      "channel_msg_id": 744,
+      "product_id": "1005012925826589",
+      "title": "🌐نسخة عالمية",
+      "channel": "megaphonna",
+      "source_msg_id": 8323,
+      "price": 187.0,
+      "timestamp": 1791752930.9846199,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4669,22 +4766,22 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791649473.797406,
+    "last_deal_post_time": 1791752934.074936,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1791649476.2540247,
+    "last_sweep_time": 1791758771.5262961,
     "last_sweep_times": {
-      "algeria": 1791649473.7906978,
-      "france": 1791649476.2540247
+      "algeria": 1791758768.789894,
+      "france": 1791758771.5262961
     },
     "last_deal_post_times": {
-      "algeria": 1791649473.797406
+      "algeria": 1791752934.074936
     }
   },
-  "last_coin_reminder_time": 1791480006.8698988,
-  "next_reminder_interval_seconds": 186014,
-  "coin_reminder_variant_idx": 0,
+  "last_coin_reminder_time": 1791752309.331506,
+  "next_reminder_interval_seconds": 201437,
+  "coin_reminder_variant_idx": 1,
   "published_product_channels": {
     "999888104": "test_channel",
     "100500888999777": "lodydeals",
@@ -4733,7 +4830,7 @@
     "1005010219205081": "aniscoupons",
     "1005013152491360": "zedstoreonline",
     "1005010129356058": "megaphonna",
-    "1005012925826589": "bnddeals",
+    "1005012925826589": "megaphonna",
     "1005012922578845": "megaphonna",
     "1005012865117890": "zedstoreonline",
     "1005010428573334": "megaphonna",
@@ -4859,7 +4956,7 @@
     "1005007458827229": "zedstoreonline",
     "1005012899224314": "zedstoreonline",
     "1005007331316456": "zedstoreonline",
-    "1005008852027824": "aniscoupons",
+    "1005008852027824": "zedstoreonline",
     "1005012312990781": "lodydeals",
     "1005007822635375": "ecksdeal",
     "1005013096683979": "ecksdeal",
@@ -4870,7 +4967,7 @@
     "1005010056083952": "zedstoreonline",
     "1005012193220695": "lodydeals",
     "1005012823469739": "lodydeals",
-    "1005009948598802": "aniscoupons",
+    "1005009948598802": "megaphonna",
     "1005012293918683": "ecksdeal",
     "1005012651158292": "lodydeals",
     "1005010289640412": "ecksdeal",
@@ -4888,7 +4985,14 @@
     "9998886905": "test_channel",
     "9998887197": "test_channel",
     "9998887496": "test_channel",
-    "9998887705": "test_channel"
+    "9998887705": "test_channel",
+    "9998882385": "test_channel",
+    "9998882735": "test_channel",
+    "1005006966177706": "lodydeals",
+    "1005012234106869": "lodydeals",
+    "1005010209307090": "megaphonna",
+    "9998883006": "test_channel",
+    "9998888761": "test_channel"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -5124,7 +5228,13 @@
     "Walram SATA3 SSD 512GB": "bnddeals",
     "Electronic Body Scale.": "aniscoupons",
     "Realme 15 Global (12/256)": "aniscoupons",
-    "REALME P3 5G": "bnddeals"
+    "REALME P3 5G": "bnddeals",
+    "Essager 54W USB Car Charger": "lodydeals",
+    "Original QKZ AK6": "lodydeals",
+    "realme P3 5G 8/256": "zedstoreonline",
+    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": "megaphonna",
+    "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W": "megaphonna",
+    "🌐نسخة عالمية": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -5160,7 +5270,11 @@
     "test_rem_24057213": "2026-10-02",
     "test_rem_2456f97c": "2026-10-02",
     "test_rem_a4f2bb87": "2026-10-02",
-    "test_rem_ca41ffc0": "2026-10-02"
+    "test_rem_ca41ffc0": "2026-10-02",
+    "test_rem_ecdb77b2": "2026-10-02",
+    "test_rem_623089d5": "2026-10-02",
+    "test_rem_3abd9e2d": "2026-10-02",
+    "test_rem_7a340116": "2026-10-02"
   },
   "channel_announcements_history": {
     "china_holiday_shipping_delay": "2026-10-02",
@@ -5189,7 +5303,11 @@
     "test_tag_a76a7a": "2026-10-02",
     "test_tag_9e6c53": "2026-10-02",
     "test_tag_56bb26": "2026-10-02",
-    "test_tag_d7c5a1": "2026-10-02"
+    "test_tag_d7c5a1": "2026-10-02",
+    "test_tag_46f152": "2026-10-02",
+    "test_tag_146e73": "2026-10-02",
+    "test_tag_33151e": "2026-10-02",
+    "test_tag_3c37a8": "2026-10-02"
   },
   "daily_tajmi3at_history": {
     "2026-10-03": {
@@ -5199,6 +5317,10 @@
     "2026-10-05": {
       "timestamp": 1791237769.1269245,
       "bulletins_count": 4
+    },
+    "2026-10-11": {
+      "timestamp": 1791752938.6705437,
+      "bulletins_count": 1
     }
   },
   "regrouped_channel_msg_ids": [
@@ -5255,22 +5377,29 @@
     646,
     648,
     650,
-    651
+    651,
+    715,
+    716,
+    717,
+    739,
+    740,
+    741
   ],
   "pinned_promo_events": {
     "Party Ready Sale / Choice Day_20261001": 505,
     "AliExpress Special Promo Octobre 2026_20261004": 661,
     "AliExpress Special Promo Octobre 2026_20261006": 677,
-    "Brand Day Sale_20261009": 709,
+    "Brand Day Sale_20261009": 731,
     "Brand Day Sale Octobre 2026_20261009": 702
   },
   "sent_promo_notifiers": [
     "LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
-    "START_ALERT_Brand Day Sale_20261009"
+    "START_ALERT_Brand Day Sale_20261009",
+    "END_ALERT_Brand Day Sale_20261013"
   ],
-  "last_card_affiliate_time_dz": 1791626798.8633382,
-  "card_affiliate_variant_idx_dz": 0,
-  "last_tajmi3at_published_time": 1791237769.1269245,
+  "last_card_affiliate_time_dz": 1791753022.6973777,
+  "card_affiliate_variant_idx_dz": 1,
+  "last_tajmi3at_published_time": 1791752938.6705437,
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
@@ -5393,7 +5522,15 @@
     "bnddeals:50821",
     "zedstoreonline:38563",
     "megaphonna:8312",
-    "megaphonna:8313"
+    "megaphonna:8313",
+    "couponsglobal:48832",
+    "megaphonna:8314",
+    "megaphonna:8315",
+    "megaphonna:8317",
+    "megaphonna:8319",
+    "megaphonna:8320",
+    "megaphonna:8321",
+    "megaphonna:8322"
   ],
   "last_france_cross_promo_time": 1791544610.263704,
   "next_france_cross_promo_interval_seconds": 319259,
@@ -5489,6 +5626,50 @@
       "channel_msg_id": 9999,
       "channel": "@DzAliexpress0",
       "timestamp": 1791677993.8849692
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1791752384.071553
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1791752733.6356745
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1791753005.1541839
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1791758760.2147858
     }
   ]
 }

@@ -40,7 +40,11 @@ MONITORED_CHANNELS = [
     "lodydeals",
     "zedstoreonline",
     "ECKSDEAL",
-    "BNDDEALS"
+    "Pcgamingpart",
+    "BNDDEALS",
+    "megaphonna",
+    "aniscoupons",
+    "CouponsGlobal"
 ]
 
 class AutonomousEngine:

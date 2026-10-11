@@ -670,6 +670,13 @@ async def check_and_publish_regrouped_bulletins(
             if not eligible:
                 logger.info(f"[TAJMI3AT] Daily tajmi3at not eligible: {reason}. Skipping.")
                 return []
+        else:
+            # During active promos: enforce minimum 6h cooldown between tajmi3at roundups!
+            from app.publisher.state_tracker import is_promo_tajmi3at_eligible
+            eligible, reason = is_promo_tajmi3at_eligible(min_hours=6.0)
+            if not eligible:
+                logger.info(f"[TAJMI3AT] Promo tajmi3at not eligible: {reason}. Skipping.")
+                return []
 
     from app.aliexpress.promos import promo_tracker
     active_promo = promo_tracker.get_active_promo()
