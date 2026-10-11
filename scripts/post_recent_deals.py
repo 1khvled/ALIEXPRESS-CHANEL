@@ -524,6 +524,24 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         deal_type=deal_type
                     )
 
+                    from app.ai.validator import caption_validator
+                    validation = caption_validator.validate(
+                        caption=caption,
+                        expected_title=extracted.title or "",
+                        expected_usd_price=extracted.current_price,
+                        expected_eur_price=extracted.current_price_eur,
+                        expected_affiliate_url=aff_link,
+                        expected_coupon=extracted.coupon_code,
+                        expected_points=extracted.has_points_discount,
+                        is_coupon_list=extracted.is_coupon_list
+                    )
+                    if not validation.approved:
+                        print(f"  [VALIDATION REJECTED] Deal #{msg_id} failed quality/security check: {validation.errors}")
+                        max_processed_id = max(max_processed_id, msg_id)
+                        record_monitored_channel_last_id(ch, msg_id)
+                        record_post_handled(ch, msg_id)
+                        continue
+
                     # 10. Prepare Image with subtle circular DealScout logo watermark
                     local_img_file = None
                     if extracted.is_coupon_list:

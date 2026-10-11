@@ -70,6 +70,12 @@ class DealCaptionValidator:
         if not caption:
             return ValidationResult(approved=False, errors=["Caption is empty"])
 
+        # 0. STRICT CORE RULE: Zero tolerance for competitor links, handles, or unauthorized bots!
+        from app.aliexpress.urls import check_competitor_contamination
+        is_contam, contam_reason = check_competitor_contamination(caption, expected_affiliate_url or "")
+        if is_contam:
+            errors.append(f"VIOLATION OF CORE RULE: {contam_reason}")
+
         # CTA check
         if "@Alilo07BOT" not in caption and "DealScout" not in caption and "البوت" not in caption and "@DzAliexpress0" not in caption:
             errors.append("Mandatory channel/bot CTA is missing")

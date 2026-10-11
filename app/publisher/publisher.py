@@ -119,6 +119,14 @@ class TelegramPublisher:
             logger.error(err)
             return False, err
 
+        # STRICT SECURITY RULE: Absolutely NEVER publish competitor links, handles, or unauthorized bots to our channel!
+        from app.aliexpress.urls import check_competitor_contamination
+        is_contam, contam_reason = check_competitor_contamination(caption, str(deal.affiliate_url or ""))
+        if is_contam:
+            err_msg = f"SECURITY RULE VIOLATION: Publish blocked by channel firewall: {contam_reason}"
+            logger.critical(err_msg)
+            return False, err_msg
+
         # Send via Telegram Bot API
         api_url = f"https://api.telegram.org/bot{self.bot_token}"
         try:

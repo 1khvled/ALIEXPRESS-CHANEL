@@ -225,6 +225,14 @@ async def post_deal_to_france_channel(
     if not bot_token:
         return False, "TELEGRAM_BOT_TOKEN not configured", None
 
+    # STRICT SECURITY RULE: Absolutely NEVER publish competitor links, handles, or unauthorized bots!
+    from app.aliexpress.urls import check_competitor_contamination
+    is_contam, contam_reason = check_competitor_contamination(caption, affiliate_url or "")
+    if is_contam:
+        err_msg = f"SECURITY RULE VIOLATION: Publish blocked by France channel firewall: {contam_reason}"
+        logger.critical(err_msg)
+        return False, err_msg, None
+
     api_url = f"https://api.telegram.org/bot{bot_token}"
     photo_bytes = None
     photo_url = None

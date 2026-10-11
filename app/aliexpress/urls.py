@@ -147,3 +147,72 @@ def normalize_aliexpress_url(url: str, product_id: Optional[str] = None) -> str:
         ))
     except Exception:
         return url
+
+
+COMPETITOR_CHANNELS = [
+    "ecksdeal", "lodydeals", "zedstoreonline", "aniscoupons", "pcgamingpart",
+    "bnddeals", "megaprix", "megaphonna", "coupon4dz", "francecp", "alifrdrop",
+    "couponsglobal", "anishays", "ecks", "esk"
+]
+
+COMPETITOR_SHORTCODES = [
+    "_c38iyTZR",
+]
+
+def check_competitor_contamination(caption: str = "", url: str = "") -> Tuple[bool, Optional[str]]:
+    """
+    STRICT SECURITY RULE:
+    Checks if a caption, post text, or affiliate URL is contaminated with any
+    competitor channel handle, competitor shortcode, competitor t.me link, or unauthorized bot.
+    Returns (is_contaminated: bool, reason: Optional[str]).
+    """
+    combined = f"{caption or ''} {url or ''}".lower()
+
+    # 1. Competitor shortcodes / links
+    for code in COMPETITOR_SHORTCODES:
+        if code.lower() in combined:
+            return True, f"Competitor affiliate shortcode detected: {code}"
+
+    # 2. Competitor Telegram channels / handles (@channel or t.me/channel)
+    for ch in COMPETITOR_CHANNELS:
+        if f"@{ch}" in combined or f"t.me/{ch}" in combined or "t.me/joinchat/" in combined:
+            return True, f"Competitor channel handle or link detected: {ch}"
+
+    # 3. Unauthorized bots (only @Alilo07BOT is authorized)
+    bot_matches = re.findall(r'@([a-zA-Z0-9_]{3,35}bot)\b', combined, re.IGNORECASE)
+    for b in bot_matches:
+        if b.lower() != "alilo07bot":
+            return True, f"Unauthorized external bot detected: @{b}"
+
+    # 4. Check for unauthorized aff_fcid in AliExpress URLs
+    if "aff_fcid=" in combined:
+        from app.config.settings import settings
+        our_tracking = (getattr(settings, "ALIEXPRESS_AFFILIATE_TRACKING_ID", "") or "dzkhvled16").lower()
+        m_fcid = re.search(r'aff_fcid=([a-zA-Z0-9_\-]+)', combined)
+        if m_fcid and m_fcid.group(1).lower() != our_tracking:
+            return True, f"Competitor aff_fcid tracking ID detected: {m_fcid.group(1)}"
+
+    return False, None
+
+
+def strip_competitor_elements(text: str) -> str:
+    """
+    Strips competitor channel handles, t.me links, and unauthorized bot links from text.
+    """
+    if not text:
+        return ""
+    cleaned = text
+    # Strip known competitor handles and links
+    for ch in COMPETITOR_CHANNELS:
+        cleaned = re.sub(rf'@?https?://t\.me/{ch}\S*', '', cleaned, flags=re.IGNORECASE)
+        cleaned = re.sub(rf't\.me/{ch}\S*', '', cleaned, flags=re.IGNORECASE)
+        cleaned = re.sub(rf'@{ch}\b', '', cleaned, flags=re.IGNORECASE)
+
+    # Strip unauthorized bots
+    for b_match in re.finditer(r'@([a-zA-Z0-9_]{3,35}bot)\b', cleaned, re.IGNORECASE):
+        bot_name = b_match.group(1)
+        if bot_name.lower() != "alilo07bot":
+            cleaned = cleaned.replace(b_match.group(0), '')
+
+    return cleaned.strip()
+
