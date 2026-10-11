@@ -405,9 +405,23 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
 
                     # 5. Category whitelist & Coupon bulletin check
                     if extracted.is_coupon_list:
-                        if not promo_tracker.get_active_promo():
+                        active_promo = promo_tracker.get_active_promo()
+                        if not active_promo:
                             print(f"  [COUPON BULLETIN BLOCKED] Promo event has ended. Skipping coupon list: #{msg_id}")
                             max_processed_id = max(max_processed_id, msg_id)
+                            record_post_handled(ch, msg_id)
+                            continue
+
+                        from app.publisher.state_tracker import is_coupon_bulletin_already_published
+                        is_c_dup, c_reason = is_coupon_bulletin_already_published(
+                            coupon_list=extracted.coupon_list,
+                            promo_name=active_promo.name,
+                            channel_id=settings.TARGET_CHANNEL_ID
+                        )
+                        if is_c_dup:
+                            print(f"  [COUPON BULLETIN DUPLICATE BLOCKED] {c_reason}. Skipping #{msg_id} from {ch}")
+                            max_processed_id = max(max_processed_id, msg_id)
+                            record_monitored_channel_last_id(ch, msg_id)
                             record_post_handled(ch, msg_id)
                             continue
                     else:
@@ -664,6 +678,15 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                                 channel_msg_id=post_msg_id,
                                 price=deal.current_price
                             )
+                            if extracted.is_coupon_list:
+                                from app.publisher.state_tracker import record_coupon_bulletin_published
+                                active_p = promo_tracker.get_active_promo()
+                                record_coupon_bulletin_published(
+                                    promo_name=active_p.name if active_p else "Promo",
+                                    coupon_list=extracted.coupon_list,
+                                    channel_msg_id=post_msg_id,
+                                    channel_id=target_ch
+                                )
                             record_deal_posted_time()
 
                             # Check and notify watchlist subscribers for price drops

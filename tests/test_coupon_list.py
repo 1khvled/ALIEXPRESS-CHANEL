@@ -73,3 +73,25 @@ def test_smart_spam_filtering():
     meta_post = "BND DEALS pinned a photo"
     is_spam, reason = is_spam_or_non_deal(meta_post)
     assert is_spam is True
+
+def test_coupon_bulletin_deduplication():
+    from app.publisher.state_tracker import is_coupon_bulletin_already_published, record_coupon_bulletin_published
+
+    test_coupons = [
+        {"tier": "4/35$", "code": "TEST04"},
+        {"tier": "6/59$", "code": "TEST06"}
+    ]
+    # Record test bulletin
+    record_coupon_bulletin_published(
+        promo_name="Test Event 2026",
+        coupon_list=test_coupons,
+        channel_msg_id=9999
+    )
+
+    # Check that subsequent duplicate bulletin is blocked
+    is_dup, reason = is_coupon_bulletin_already_published(
+        coupon_list=test_coupons,
+        promo_name="Test Event 2026"
+    )
+    assert is_dup is True
+    assert "already published" in reason

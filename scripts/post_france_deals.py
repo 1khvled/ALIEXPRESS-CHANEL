@@ -682,8 +682,21 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
 
                 # 5. Category whitelist & Coupon bulletin check
                 if extracted.is_coupon_list:
-                    if not promo_tracker.get_active_promo():
+                    active_promo = promo_tracker.get_active_promo()
+                    if not active_promo:
                         print(f"  [COUPON BULLETIN BLOCKED] No active promo. Skipping coupon list: #{msg_id}")
+                        published_keys.add(post_key)
+                        max_processed_id = max(max_processed_id, msg_id)
+                        continue
+
+                    from app.publisher.state_tracker import is_coupon_bulletin_already_published
+                    is_c_dup, c_reason = is_coupon_bulletin_already_published(
+                        coupon_list=extracted.coupon_list,
+                        promo_name=active_promo.name,
+                        channel_id=target_channel
+                    )
+                    if is_c_dup:
+                        print(f"  [COUPON BULLETIN DUPLICATE BLOCKED (FR)] {c_reason}. Skipping #{msg_id} from {ch}")
                         published_keys.add(post_key)
                         max_processed_id = max(max_processed_id, msg_id)
                         continue
@@ -816,6 +829,15 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                         channel_msg_id=channel_msg_id,
                         post_key=post_key
                     )
+                    if extracted.is_coupon_list:
+                        from app.publisher.state_tracker import record_coupon_bulletin_published
+                        active_p = promo_tracker.get_active_promo()
+                        record_coupon_bulletin_published(
+                            promo_name=active_p.name if active_p else "Promo",
+                            coupon_list=extracted.coupon_list,
+                            channel_msg_id=channel_msg_id,
+                            channel_id=TARGET_FRANCE_CHANNEL
+                        )
                     max_processed_id = max(max_processed_id, msg_id)
                     print(f"  [PUBLISHED #{published_count} to {TARGET_FRANCE_CHANNEL}] Msg #{channel_msg_id}: {extracted.title}")
 

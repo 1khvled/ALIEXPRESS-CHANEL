@@ -297,6 +297,95 @@ def _clean_title_keywords(title: str) -> List[str]:
     """Backwards-compatible wrapper returning token list."""
     return list(extract_title_tokens(title))
 
+def is_coupon_bulletin_already_published(
+    coupon_list: Optional[List[Dict[str, str]]] = None,
+    promo_name: Optional[str] = None,
+    channel_id: Optional[str] = None,
+    cooldown_hours: float = 48.0
+) -> Tuple[bool, str]:
+    """
+    Strict deduplication for promotional coupon bulletins.
+    Guarantees that a coupon bulletin is NEVER reposted when:
+    1. A coupon bulletin was already published for the same promo event (e.g. Brand Day, Choice Day).
+    2. Any coupon bulletin was published within the cooldown period (default 48h).
+    3. A coupon bulletin with the same codes is already present or pinned in the target channel feed.
+    """
+    state = load_persistent_state()
+    now = time.time()
+    cooldown_seconds = cooldown_hours * 3600
+
+    # Check 1: Promo Event check (only 1 official coupon bulletin per promo event)
+    from app.aliexpress.promos import promo_tracker
+    active_p = promo_tracker.get_active_promo()
+    active_promo_name = promo_name or (active_p.name if active_p else None)
+
+    bulletin_history = state.get("published_coupon_bulletins", [])
+    if active_promo_name:
+        norm_promo = active_promo_name.lower().replace(" ", "").replace("_", "")
+        for b in bulletin_history:
+            b_promo = str(b.get("promo", "")).lower().replace(" ", "").replace("_", "")
+            if norm_promo in b_promo or b_promo in norm_promo:
+                b_age = now - b.get("timestamp", 0)
+                # Within promo duration (e.g. 5 days = 120h)
+                if b_age < 120 * 3600:
+                    return True, f"A coupon bulletin for '{active_promo_name}' was already published {b_age/3600:.1f}h ago (Post #{b.get('channel_msg_id', 'active')})"
+
+    # Check 2: Global timestamp cooldown across all published coupon bulletins (min 48h)
+    ts_map = state.get("published_product_timestamps", {})
+    for p_key, p_ts in ts_map.items():
+        if p_key.startswith("COUPONS_") or p_key.startswith("EVENT_"):
+            c_age = now - p_ts
+            if c_age < cooldown_seconds:
+                return True, f"A coupon bulletin ({p_key}) was already published {c_age/3600:.1f}h ago (< {cooldown_hours:.0f}h cooldown)"
+
+    # Check 3: Check cached live channel texts
+    codes_to_check = []
+    if coupon_list:
+        codes_to_check = [c.get("code", "").strip().upper() for c in coupon_list if c.get("code")]
+    elif active_p and active_p.coupon_tiers:
+        codes_to_check = [c.get("code", "").strip().upper() for c in active_p.coupon_tiers if c.get("code")]
+
+    if codes_to_check:
+        for ch_txt in _CACHED_CHANNEL_TEXTS:
+            matches = sum(1 for code in codes_to_check if code in ch_txt)
+            if matches >= 2:
+                return True, f"A coupon bulletin containing codes {codes_to_check[:3]} is already visible in the live channel"
+
+    return False, ""
+
+
+def record_coupon_bulletin_published(
+    promo_name: Optional[str] = None,
+    coupon_list: Optional[List[Dict[str, str]]] = None,
+    channel_msg_id: Optional[int] = None,
+    channel_id: Optional[str] = None
+):
+    """Records coupon bulletin publication to strictly prevent any future duplicates."""
+    state = load_persistent_state()
+    now = time.time()
+    p_name = promo_name or "Promo"
+    codes = [c.get("code", "").strip().upper() for c in (coupon_list or []) if c.get("code")]
+    import hashlib
+    codes_sig = ",".join(sorted(codes))
+    c_hash = hashlib.sha256(codes_sig.encode()).hexdigest()[:8] if codes_sig else "gen"
+
+    bulletin_entry = {
+        "promo": p_name,
+        "hash": c_hash,
+        "codes": codes,
+        "channel_msg_id": channel_msg_id,
+        "channel": str(channel_id or TARGET_CHANNEL_ID),
+        "timestamp": now
+    }
+    state.setdefault("published_coupon_bulletins", []).append(bulletin_entry)
+    if len(state["published_coupon_bulletins"]) > 50:
+        state["published_coupon_bulletins"] = state["published_coupon_bulletins"][-50:]
+
+    state.setdefault("published_product_timestamps", {})[f"COUPONS_{c_hash}"] = now
+    state.setdefault("published_product_timestamps", {})[f"COUPONS_{p_name}"] = now
+    save_persistent_state(state)
+
+
 def is_recent_cross_channel_duplicate(
     product_id: Optional[str],
     current_channel: str = "",
@@ -308,7 +397,7 @@ def is_recent_cross_channel_duplicate(
     """
     Validates cross-channel duplicates vs. repeat posts:
     - If multiple channels post the SAME offer at the same time:
-      Blocks subsequent channel's post (within cooldown_hours, default 3.0h).
+      Blocks subsequent channel's post (within cooldown_hours, default 24.0h).
     - If competitor announces Restock / Return ("عودة العرض", "حبات قلال"):
       ALLOWS repeat post via Restock Exception!
     - If the SAME channel repeat posts the offer (e.g. after debounce >= 10m):
@@ -331,7 +420,9 @@ def is_recent_cross_channel_duplicate(
 
     p_str = str(product_id).strip() if product_id else ""
     if p_str and (p_str.startswith("COUPONS_") or p_str.startswith("EVENT_")):
-        return False, "", False
+        is_c_dup, c_reason = is_coupon_bulletin_already_published(channel_id=current_channel)
+        if is_c_dup:
+            return True, c_reason, False
 
     clean_curr_ch = current_channel.lower().lstrip("@")
     ts_map = state.get("published_product_timestamps", {})
@@ -348,8 +439,6 @@ def is_recent_cross_channel_duplicate(
                 break
 
     # Determine min cooldown for same-channel repeat post
-    # In test suites testing fast repeat posts (e.g. cooldown_hours <= 3.0), require at least 30m (1800s)
-    # In production (cooldown_hours >= 8.0 or 24.0), require full cooldown (at least 8h)
     same_channel_min_cooldown = 1800 if active_cooldown_hours <= 3.0 else min(cooldown_seconds, 8 * 3600)
 
     # 0. Coupon Bulletin Global Cooldown check (prevent spamming coupons across channels)
