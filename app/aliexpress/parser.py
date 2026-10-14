@@ -1,6 +1,6 @@
 import re
 from dataclasses import dataclass
-from typing import Optional, Tuple, List, Dict
+from typing import Optional, Tuple, List, Dict, Any
 from app.config.settings import settings
 
 PRICE_PATTERNS = [

@@ -1,5 +1,5 @@
 import re
-from typing import List, Optional
+from typing import List, Optional, Tuple
 from urllib.parse import urlparse, parse_qs, urlunparse, urlencode
 
 ALIEXPRESS_DOMAINS = [

@@ -700,7 +700,7 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                     is_c_dup, c_reason = is_coupon_bulletin_already_published(
                         coupon_list=extracted.coupon_list,
                         promo_name=active_promo.name,
-                        channel_id=target_channel
+                        channel_id=TARGET_FRANCE_CHANNEL
                     )
                     if is_c_dup:
                         print(f"  [COUPON BULLETIN DUPLICATE BLOCKED (FR)] {c_reason}. Skipping #{msg_id} from {ch}")
