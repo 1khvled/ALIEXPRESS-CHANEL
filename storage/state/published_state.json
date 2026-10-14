@@ -223,7 +223,10 @@
     "1005007767322935",
     "1005012571601398",
     "1005008131216261",
-    "1005013054007275"
+    "1005013054007275",
+    "1005011899097443",
+    "1005012865117890",
+    "1005010428947440"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -455,9 +458,12 @@
     "1005007920266509": 1791975925.0014532,
     "1005009275536960": 1791975930.016452,
     "1005007767322935": 1791975934.9659944,
-    "1005012571601398": 1791975984.5121527,
+    "1005012571601398": 1792007163.0270946,
     "1005008131216261": 1791992931.9736187,
-    "1005013054007275": 1791992936.3210912
+    "1005013054007275": 1791992936.3210912,
+    "1005011899097443": 1792007142.8492503,
+    "1005012865117890": 1792007168.2612865,
+    "1005010428947440": 1792007180.6836498
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -729,7 +735,10 @@
     "ماوس لاسلكي فخم Scyrox V6 Wireless 8K",
     "ماوس لاسلكي فخم Scyrox V8S Wireless 8K",
     "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM",
-    "Rocoren 100W Type-C to USB Fast Charging 0.5M"
+    "Rocoren 100W Type-C to USB Fast Charging 0.5M",
+    "Acinaci J11 Gaming Headset",
+    "Realme 14 Pro Global (12/256)",
+    "Anker Soundcore Select 4 Go Bluetooth Speaker"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1000,11 +1009,14 @@
     "Acincai BL500 Gaming Headset": 1791975930.016452,
     "Vxe Dragonfly R1 PAW3395 SE": 1791975934.9659944,
     "رجع العرض جنننننننننننننننننح🏃‍♂️🏃‍♂️ ©️©️©️©️️️️️⚡️️️️️️️": 1791975976.6307437,
-    "Ⓜ HONOR X80 PRO MAX (8/128)": 1791975984.5121527,
+    "Ⓜ HONOR X80 PRO MAX (8/128)": 1792007163.0270946,
     "ماوس لاسلكي فخم Scyrox V6 Wireless 8K": 1791992931.9736187,
     "ماوس لاسلكي فخم Scyrox V8S Wireless 8K": 1791992936.3210912,
     "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM": 1791992945.451545,
-    "Rocoren 100W Type-C to USB Fast Charging 0.5M": 1791992975.2913277
+    "Rocoren 100W Type-C to USB Fast Charging 0.5M": 1791992975.2913277,
+    "Acinaci J11 Gaming Headset": 1792007142.8492503,
+    "Realme 14 Pro Global (12/256)": 1792007168.2612865,
+    "Anker Soundcore Select 4 Go Bluetooth Speaker": 1792007180.6836498
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1730,47 +1742,51 @@
     "ecksdeal:5892",
     "pcgamingpart:7984",
     "aniscoupons:32936",
-    "couponsglobal:48842"
+    "couponsglobal:48842",
+    "pcgamingpart:7985",
+    "megaphonna:8379",
+    "aniscoupons:32941",
+    "couponsglobal:48844"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1791992975.2913277,
+  "last_run_time": 1792007180.6836498,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32939,
-      "last_check_time": 1791992970.2357855
+      "last_message_id": 32944,
+      "last_check_time": 1792007175.5692573
     },
     "ecksdeal": {
       "last_message_id": 5892,
-      "last_check_time": 1791992938.339591
+      "last_check_time": 1792007139.7152958
     },
     "lodydeals": {
-      "last_message_id": 45544,
-      "last_check_time": 1791992927.1712525
+      "last_message_id": 45545,
+      "last_check_time": 1792007138.7371297
     },
     "bnddeals": {
-      "last_message_id": 50847,
-      "last_check_time": 1791968157.3835795
+      "last_message_id": 50850,
+      "last_check_time": 1792007147.6344628
     },
     "test_channel": {
       "last_message_id": 1791759936,
       "last_check_time": 1791759936.937901
     },
     "pcgamingpart": {
-      "last_message_id": 7984,
-      "last_check_time": 1791992947.4698315
+      "last_message_id": 7985,
+      "last_check_time": 1792007144.869951
     },
     "zedstoreonline": {
       "last_message_id": 38591,
-      "last_check_time": 1791992928.964179
+      "last_check_time": 1792007139.1660874
     },
     "megaphonna": {
-      "last_message_id": 8375,
-      "last_check_time": 1791992958.2071588
+      "last_message_id": 8379,
+      "last_check_time": 1792007165.0463653
     },
     "couponsglobal": {
-      "last_message_id": 48843,
-      "last_check_time": 1791992979.3824854
+      "last_message_id": 48845,
+      "last_check_time": 1792007184.9076338
     }
   },
   "published_product_prices": {
@@ -1837,7 +1853,7 @@
     "1005013152491360": 196.0,
     "1005012925826589": 187.0,
     "1005012922578845": 238.9,
-    "1005012865117890": 234.9,
+    "1005012865117890": 231.9,
     "1005010428573334": 294.0,
     "1005013146524028": 162.4,
     "1005009411512584": 8.95,
@@ -1973,7 +1989,9 @@
     "1005009275536960": 14.72,
     "1005007767322935": 21.61,
     "1005008131216261": 54.11,
-    "1005013054007275": 55.97
+    "1005013054007275": 55.97,
+    "1005011899097443": 10.86,
+    "1005010428947440": 24.47
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -5368,6 +5386,46 @@
       "price": 1.45,
       "timestamp": 1791992975.2913277,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7985": {
+      "channel_msg_id": 804,
+      "product_id": "1005011899097443",
+      "title": "Acinaci J11 Gaming Headset",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7985,
+      "price": 10.86,
+      "timestamp": 1792007142.8492503,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8379": {
+      "channel_msg_id": 805,
+      "product_id": "1005012571601398",
+      "title": "Ⓜ HONOR X80 PRO MAX (8/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8379,
+      "price": 286.6,
+      "timestamp": 1792007163.0270946,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32941": {
+      "channel_msg_id": 806,
+      "product_id": "1005012865117890",
+      "title": "Realme 14 Pro Global (12/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 32941,
+      "price": 231.9,
+      "timestamp": 1792007168.2612865,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48844": {
+      "channel_msg_id": 807,
+      "product_id": "1005010428947440",
+      "title": "Anker Soundcore Select 4 Go Bluetooth Speaker",
+      "channel": "couponsglobal",
+      "source_msg_id": 48844,
+      "price": 24.47,
+      "timestamp": 1792007180.6836498,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -5376,17 +5434,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791992979.3980267,
+    "last_deal_post_time": 1792007184.9239068,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1791992981.8048248,
+    "last_sweep_time": 1792007188.3275876,
     "last_sweep_times": {
-      "algeria": 1791992979.390392,
-      "france": 1791992981.8048248
+      "algeria": 1792007184.9158916,
+      "france": 1792007188.3275876
     },
     "last_deal_post_times": {
-      "algeria": 1791992979.3980267
+      "algeria": 1792007184.9239068
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -5442,7 +5500,7 @@
     "1005010129356058": "megaphonna",
     "1005012925826589": "megaphonna",
     "1005012922578845": "megaphonna",
-    "1005012865117890": "zedstoreonline",
+    "1005012865117890": "aniscoupons",
     "1005010428573334": "megaphonna",
     "1005013146524028": "megaphonna",
     "1005009411512584": "pcgamingpart",
@@ -5625,7 +5683,9 @@
     "1005009275536960": "lodydeals",
     "1005007767322935": "lodydeals",
     "1005008131216261": "ecksdeal",
-    "1005013054007275": "ecksdeal"
+    "1005013054007275": "ecksdeal",
+    "1005011899097443": "pcgamingpart",
+    "1005010428947440": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -5899,7 +5959,10 @@
     "ماوس لاسلكي فخم Scyrox V6 Wireless 8K": "ecksdeal",
     "ماوس لاسلكي فخم Scyrox V8S Wireless 8K": "ecksdeal",
     "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM": "pcgamingpart",
-    "Rocoren 100W Type-C to USB Fast Charging 0.5M": "couponsglobal"
+    "Rocoren 100W Type-C to USB Fast Charging 0.5M": "couponsglobal",
+    "Acinaci J11 Gaming Headset": "pcgamingpart",
+    "Realme 14 Pro Global (12/256)": "aniscoupons",
+    "Anker Soundcore Select 4 Go Bluetooth Speaker": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -6310,7 +6373,17 @@
     "aniscoupons:32937",
     "aniscoupons:32938",
     "aniscoupons:32939",
-    "couponsglobal:48843"
+    "couponsglobal:48843",
+    "lodydeals:45545",
+    "bnddeals:50849",
+    "bnddeals:50850",
+    "megaphonna:8377",
+    "megaphonna:8378",
+    "aniscoupons:32940",
+    "aniscoupons:32942",
+    "aniscoupons:32943",
+    "aniscoupons:32944",
+    "couponsglobal:48845"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
