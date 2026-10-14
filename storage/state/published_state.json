@@ -212,7 +212,9 @@
     "1005011557896041",
     "1005011754993234",
     "1005011735727412",
-    "1005013039644752"
+    "1005013039644752",
+    "1005007916078341",
+    "1005006506862816"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -322,7 +324,7 @@
     "1005007097205322": 1791014755.488723,
     "1005010470699571": 1791015054.3845687,
     "1005012741634118": 1791015347.2675145,
-    "1005010453516983": 1791208255.7291632,
+    "1005010453516983": 1791947498.6497374,
     "1005008554596598": 1791017145.537471,
     "1005012925826589": 1791752930.9846199,
     "1005010306498953": 1791021345.213176,
@@ -435,7 +437,9 @@
     "1005011557896041": 1791943741.5394402,
     "1005011754993234": 1791943748.7195513,
     "1005011735727412": 1791943783.9162278,
-    "1005013039644752": 1791943797.3155782
+    "1005013039644752": 1791943797.3155782,
+    "1005007916078341": 1791947476.2741654,
+    "1005006506862816": 1791947519.5815504
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -693,7 +697,9 @@
     "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB",
     "🔝 مانات قووووة ل جماعة mobile gaming 🎮",
     "جديد ال ©️©️ ببطارية عملاقة💪💪",
-    "Honor Choice Infowear Watch 2i Smartwatch AMOLED"
+    "Honor Choice Infowear Watch 2i Smartwatch AMOLED",
+    "CMF BY NOTHING Watch 3 Pro",
+    "Dolewa D3 Portable Printer Thermal Paper"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -877,7 +883,7 @@
     "CMF Smart Watch 3 pro AMOLED": 1791110146.1927805,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
-    "OPPO A6 Pro 8/256GB": 1791208255.7291632,
+    "OPPO A6 Pro 8/256GB": 1791947498.6497374,
     "ATTACK SHARK X1  Tri-Mode": 1791117948.6585228,
     "HILDA 2 Lines Laser Level Green": 1791124852.3122299,
     "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": 1791125437.8944824,
@@ -954,7 +960,9 @@
     "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": 1791943777.8506553,
     "🔝 مانات قووووة ل جماعة mobile gaming 🎮": 1791943783.9162278,
     "جديد ال ©️©️ ببطارية عملاقة💪💪": 1791943797.3155782,
-    "Honor Choice Infowear Watch 2i Smartwatch AMOLED": 1791943825.002781
+    "Honor Choice Infowear Watch 2i Smartwatch AMOLED": 1791943825.002781,
+    "CMF BY NOTHING Watch 3 Pro": 1791947476.2741654,
+    "Dolewa D3 Portable Printer Thermal Paper": 1791947519.5815504
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1660,27 +1668,30 @@
     "pcgamingpart:7979",
     "bnddeals:50844",
     "megaphonna:8344",
-    "couponsglobal:48837"
+    "couponsglobal:48837",
+    "zedstoreonline:38577",
+    "aniscoupons:32915",
+    "couponsglobal:48841"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1791943825.002781,
+  "last_run_time": 1791947519.5815504,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32913,
-      "last_check_time": 1791943808.6805015
+      "last_message_id": 32917,
+      "last_check_time": 1791947507.1049457
     },
     "ecksdeal": {
       "last_message_id": 5890,
-      "last_check_time": 1791943772.530171
+      "last_check_time": 1791947479.0371535
     },
     "lodydeals": {
       "last_message_id": 45538,
-      "last_check_time": 1791943759.8615596
+      "last_check_time": 1791947457.2551513
     },
     "bnddeals": {
       "last_message_id": 50846,
-      "last_check_time": 1791943790.2403066
+      "last_check_time": 1791947480.0312207
     },
     "test_channel": {
       "last_message_id": 1791759936,
@@ -1688,19 +1699,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7980,
-      "last_check_time": 1791943777.8506553
+      "last_check_time": 1791947479.4943485
     },
     "zedstoreonline": {
-      "last_message_id": 38575,
-      "last_check_time": 1791943771.859275
+      "last_message_id": 38577,
+      "last_check_time": 1791947478.347156
     },
     "megaphonna": {
       "last_message_id": 8345,
       "last_check_time": 1791943802.3211684
     },
     "couponsglobal": {
-      "last_message_id": 48837,
-      "last_check_time": 1791943827.0165386
+      "last_message_id": 48841,
+      "last_check_time": 1791947521.5977314
     }
   },
   "published_product_prices": {
@@ -1728,7 +1739,7 @@
     "1005009118633225": 14.14,
     "1005012143831265": 281.9,
     "1005007458827229": 22.1,
-    "1005010453516983": 204.7,
+    "1005010453516983": 211.7,
     "1005008852027824": 171.4,
     "1005012499451512": 260.0,
     "1005010129356058": 294.0,
@@ -1893,7 +1904,9 @@
     "1005011557896041": 257.22,
     "1005011754993234": 87.58,
     "1005011735727412": 26.6,
-    "1005013039644752": 186.5
+    "1005013039644752": 186.5,
+    "1005007916078341": 59.0,
+    "1005006506862816": 11.86
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -5088,6 +5101,36 @@
       "price": 26.38,
       "timestamp": 1791943825.002781,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38577": {
+      "channel_msg_id": 780,
+      "product_id": "1005007916078341",
+      "title": "CMF BY NOTHING Watch 3 Pro",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38577,
+      "price": 59.0,
+      "timestamp": 1791947476.2741654,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32915": {
+      "channel_msg_id": 781,
+      "product_id": "1005010453516983",
+      "title": "OPPO A6 Pro 8/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 32915,
+      "price": 211.7,
+      "timestamp": 1791947498.6497374,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48841": {
+      "channel_msg_id": 782,
+      "product_id": "1005006506862816",
+      "title": "Dolewa D3 Portable Printer Thermal Paper",
+      "channel": "couponsglobal",
+      "source_msg_id": 48841,
+      "price": 11.86,
+      "timestamp": 1791947519.5815504,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -5096,17 +5139,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791943827.027836,
+    "last_deal_post_time": 1791947521.6120615,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1791943829.4655497,
+    "last_sweep_time": 1791947524.222042,
     "last_sweep_times": {
-      "algeria": 1791943827.0223799,
-      "france": 1791943829.4655497
+      "algeria": 1791947521.6053948,
+      "france": 1791947524.222042
     },
     "last_deal_post_times": {
-      "algeria": 1791943827.027836
+      "algeria": 1791947521.6120615
     }
   },
   "last_coin_reminder_time": 1791752309.331506,
@@ -5335,7 +5378,9 @@
     "1005011557896041": "lodydeals",
     "1005011754993234": "lodydeals",
     "1005011735727412": "bnddeals",
-    "1005013039644752": "megaphonna"
+    "1005013039644752": "megaphonna",
+    "1005007916078341": "zedstoreonline",
+    "1005006506862816": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -5595,7 +5640,9 @@
     "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": "pcgamingpart",
     "🔝 مانات قووووة ل جماعة mobile gaming 🎮": "bnddeals",
     "جديد ال ©️©️ ببطارية عملاقة💪💪": "megaphonna",
-    "Honor Choice Infowear Watch 2i Smartwatch AMOLED": "couponsglobal"
+    "Honor Choice Infowear Watch 2i Smartwatch AMOLED": "couponsglobal",
+    "CMF BY NOTHING Watch 3 Pro": "zedstoreonline",
+    "Dolewa D3 Portable Printer Thermal Paper": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -5946,7 +5993,12 @@
     "couponsglobal:48833",
     "couponsglobal:48834",
     "couponsglobal:48835",
-    "couponsglobal:48836"
+    "couponsglobal:48836",
+    "aniscoupons:32914",
+    "aniscoupons:32917",
+    "couponsglobal:48838",
+    "couponsglobal:48839",
+    "couponsglobal:48840"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
