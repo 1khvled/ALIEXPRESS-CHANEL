@@ -13,6 +13,11 @@ on:
         required: false
         type: boolean
         default: false
+      test_alert:
+        description: 'Send a test admin alert DM only (verifies notifiers end-to-end)'
+        required: false
+        type: boolean
+        default: false
 
 concurrency:
   group: telegram-deals-cron
@@ -79,6 +84,28 @@ jobs:
           else
             python scripts/post_france_deals.py
           fi
+
+      - name: Send test admin alert (manual verification)
+        # One-click end-to-end proof that admin DMs work. Trigger via
+        # Actions -> Run workflow -> test_alert: true. Fails loudly if the
+        # secrets are wrong; success means Telegram returned ok:true.
+        if: github.event.inputs.test_alert == 'true'
+        env:
+          ADMIN_BOT_TOKEN: ${{ secrets.ADMIN_BOT_TOKEN }}
+          ADMIN_USER_ID: ${{ secrets.ADMIN_USER_ID }}
+        run: |
+          if [ -z "$ADMIN_BOT_TOKEN" ] || [ -z "$ADMIN_USER_ID" ]; then
+            echo "Admin alert test FAILED: ADMIN_BOT_TOKEN or ADMIN_USER_ID not configured."
+            exit 1
+          fi
+          MSG=$(printf 'Test admin alert OK\nRepo: %s\nRun: #%s\nTime: %s' \
+            "${{ github.repository }}" "${{ github.run_number }}" "$(date -u +%Y-%m-%dT%H:%M:%SZ)")
+          RESP=$(curl -s -X POST "https://api.telegram.org/bot$ADMIN_BOT_TOKEN/sendMessage" \
+            --data-urlencode "chat_id=$ADMIN_USER_ID" \
+            --data-urlencode "text=$MSG" \
+            --data-urlencode "disable_web_page_preview=true")
+          echo "$RESP"
+          echo "$RESP" | grep -q '"ok":true' || { echo "Telegram API did not return ok:true"; exit 1; }
 
       - name: Notify admin on publisher failure
         # Catches what in-process alerts cannot: import-time crashes (e.g. the

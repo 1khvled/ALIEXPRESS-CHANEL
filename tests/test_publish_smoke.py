@@ -124,3 +124,18 @@ def test_workflow_has_admin_failure_alert():
         "alert step must check both publisher step outcomes"
     assert "ADMIN_BOT_TOKEN" in alert.get("run", "") and "ADMIN_USER_ID" in alert.get("run", ""), \
         "alert step must message the admin via ADMIN_BOT_TOKEN/ADMIN_USER_ID"
+
+
+def test_workflow_has_test_alert_button():
+    yaml = pytest.importorskip("yaml")
+    wf = yaml.safe_load((BASE_DIR / ".github/workflows/bot_cron.yml").read_text(encoding="utf-8"))
+    # NOTE: YAML 1.1 parses the unquoted `on:` key as boolean True.
+    on = wf.get("on", wf.get(True))
+    inputs = on["workflow_dispatch"]["inputs"]
+    assert "test_alert" in inputs, "workflow_dispatch lost the test_alert input"
+    steps = wf["jobs"]["run-deals-collector"]["steps"]
+    by_name = {s.get("name"): s for s in steps}
+    t = by_name.get("Send test admin alert (manual verification)")
+    assert t is not None, "bot_cron.yml lost the test alert step"
+    assert "test_alert" in t.get("if", ""), "test step must be gated on the test_alert input"
+    assert '"ok":true' in t.get("run", ""), "test step must verify Telegram returned ok:true"

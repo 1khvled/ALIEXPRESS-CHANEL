@@ -75,6 +75,8 @@ description: Mandatory publish-safety rules learned from the Oct 11-14 2026 outa
    - Required secrets: `ADMIN_BOT_TOKEN` (bot that sends the DM) and
      `ADMIN_USER_ID` (your numeric Telegram user ID). Without both, alerts
      degrade to logs only — verify them after any secrets rotation.
-   - Locked by `tests/test_publish_smoke.py::test_publisher_fatal_errors_alert_admin_and_exit_nonzero`
-     and `::test_workflow_has_admin_failure_alert`. If you touch either
-     publisher's `__main__` or `bot_cron.yml`, those tests must stay green.
+   - Locked by `tests/test_publish_smoke.py::test_publisher_fatal_errors_alert_admin_and_exit_nonzero`,
+     `::test_workflow_has_admin_failure_alert` and `::test_workflow_has_test_alert_button`.
+     If you touch either publisher's `__main__` or `bot_cron.yml`, those tests must stay green.
+   - Manual proof: Actions -> `AliExpress Deals Telegram Bot` -> Run workflow ->
+     `test_alert: true` sends a test DM. Step success = Telegram returned `ok:true`.
