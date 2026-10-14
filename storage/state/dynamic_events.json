@@ -33,5 +33,24 @@
     "banner_image_url": "https://cdn4.telesco.pe/file/pObaL7ttUyuFvZKAHbuEg0O-K5dLc2nXIz1r-OOMpDggzd0arl_KozbWMNXvGWdqMOSdWfQkH4VmsYJp2ESw4CB-EfGmeSdzfuCcUEO8hsuxszh71r6adPKq-nUwKnWnQHvooSX0w6GtTDxE74L_Aoi9OvddskogeNsPo5zrbbPcj0ILVEKqPCzbp4VImUU1Cf3S1nZF_58W4e0Gtj7L7xVnx1IJBBghZFYYZJzmoVYuzh52yFS_pzU_E8dNBD79NJATYwSuA9fNI_nju4qEkeIHNdIJa8RbGnrDwZO05JP3BfhcoC6ZRmVssOn1eYV2G2oMds8wdCyAKpAWs-XX9g.jpg",
     "source": "discovered",
     "event_key": "Brand_Day_Sale_Octobre_2026_20261009"
+  },
+  {
+    "name": "Choice Day Novembre 2026",
+    "name_ar": "تخفيضات Choice Day الشهيرة 🎯 (نوفمبر 2026)",
+    "name_fr": "AliExpress Choice Day 🎯 Novembre 2026",
+    "start_date": "2026-11-01T07:00:00+00:00",
+    "end_date": "2026-11-07T23:59:59+00:00",
+    "banner_tag": "🎯 Choice Day Sale (1 - 6 نوفمبر)",
+    "is_major": true,
+    "coupon_tiers": [
+      {
+        "tier": "2/15$",
+        "code": "WOAE02"
+      }
+    ],
+    "coupon_tiers_fr": [],
+    "banner_image_url": "https://cdn4.telesco.pe/file/Riblj9mgdxYMOxgOgLnLJhHPcLh3ONZJ50Yu6LV-3_yTjUaCTiHfK1q-DUxkS7U54bdtcOFerHArcTnnkAQq9oq0NTJq4KCXvu-QFHuCruksx70EIH0dnE_Q670v6ZOwvcfYvS63OQKv_uhN4tO6wC_MkuSjZMQ-pvkEhyPfTZjv0LnFQVV8b1e5VYy5sM-6RthXheEQ-O5QLeIksBj8wFPiRJYGTYfNxCGFpiIcz2lVkUel8fiIuz_9R--nhaY6d43UXfvHtajyQUCCYZqBTw2GnWqMZ4uI5r1PMGgyIFb2ZAy3FeMBLXvWYAsyInflroqHwRQyPqHliiz7xc9uyw.jpg",
+    "source": "discovered",
+    "event_key": "Choice_Day_Novembre_2026_20261101"
   }
 ]

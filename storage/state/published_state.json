@@ -208,7 +208,11 @@
     "1005012086685834",
     "1005012914301139",
     "1005007345151855",
-    "1005010345227483"
+    "1005010345227483",
+    "1005011557896041",
+    "1005011754993234",
+    "1005011735727412",
+    "1005013039644752"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -231,7 +235,7 @@
     "1005009234854371": 1791192944.201814,
     "1005006533038973": 1791104468.758226,
     "1005007394028808": 1791235926.7793725,
-    "1005012899224314": 1791193543.9040256,
+    "1005012899224314": 1791943825.002781,
     "1005012923660718": 1790888191.2162998,
     "1005012881256093": 1791941229.2882626,
     "1005009118633225": 1790888213.2900865,
@@ -308,7 +312,7 @@
     "1005006861002512": 1791151259.5667012,
     "1005012285327063": 1791014763.6830645,
     "1005006581583862": 1791013842.0461159,
-    "1005012816171978": 1791031841.1598868,
+    "1005012816171978": 1791943756.7174351,
     "1005010585654037": 1790978149.8785934,
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791638734.5386465,
@@ -394,7 +398,7 @@
     "1005013313539058": 1791482965.5086565,
     "9998889315": 1791589315.5172248,
     "COUPONS_54d30f00dccf": 1791626806.6018147,
-    "1005008776714223": 1791626816.0179322,
+    "1005008776714223": 1791943777.8506553,
     "9998886934": 1791626934.8945594,
     "9998887499": 1791627499.229838,
     "9998887532": 1791627532.2548609,
@@ -427,7 +431,11 @@
     "1005012086685834": 1791941271.2358608,
     "1005012914301139": 1791942620.3773732,
     "1005007345151855": 1791942667.867043,
-    "1005010345227483": 1791942676.1983886
+    "1005010345227483": 1791942676.1983886,
+    "1005011557896041": 1791943741.5394402,
+    "1005011754993234": 1791943748.7195513,
+    "1005011735727412": 1791943783.9162278,
+    "1005013039644752": 1791943797.3155782
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -679,7 +687,13 @@
     "HONOR 600 Lite 5G 8/256",
     "ATTACK SHARK X11SE Wireless Gaming Mouse PixArt PAW3311",
     "لووووووووووووز controller 🎮",
-    "جديد علامة ©️©️©️©️🆕"
+    "جديد علامة ©️©️©️©️🆕",
+    "AMD Ryzen 7 7800X3D",
+    "AMD Ryzen 5 8400F",
+    "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB",
+    "🔝 مانات قووووة ل جماعة mobile gaming 🎮",
+    "جديد ال ©️©️ ببطارية عملاقة💪💪",
+    "Honor Choice Infowear Watch 2i Smartwatch AMOLED"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -781,7 +795,7 @@
     "HAYLOU Watch Faro": 1791014763.6830645,
     "HAYLOU S30": 1790976351.072879,
     "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise": 1790976654.120254,
-    "VIVO Y600 Pro 8/128GB": 1791031841.1598868,
+    "VIVO Y600 Pro 8/128GB": 1791943756.7174351,
     "EasySMX X05 Pro Wireless Gamepad Gaming Controller": 1790976959.5801246,
     "3 VILCORN G6 Bluetooth-Compatible": 1790977546.6736062,
     "TV Box Rockchip RK3518": 1790978149.8785934,
@@ -934,7 +948,13 @@
     "HONOR 600 Lite 5G 8/256": 1791942649.7580817,
     "ATTACK SHARK X11SE Wireless Gaming Mouse PixArt PAW3311": 1791942658.9081998,
     "لووووووووووووز controller 🎮": 1791942667.867043,
-    "جديد علامة ©️©️©️©️🆕": 1791942676.1983886
+    "جديد علامة ©️©️©️©️🆕": 1791942676.1983886,
+    "AMD Ryzen 7 7800X3D": 1791943741.5394402,
+    "AMD Ryzen 5 8400F": 1791943748.7195513,
+    "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": 1791943777.8506553,
+    "🔝 مانات قووووة ل جماعة mobile gaming 🎮": 1791943783.9162278,
+    "جديد ال ©️©️ ببطارية عملاقة💪💪": 1791943797.3155782,
+    "Honor Choice Infowear Watch 2i Smartwatch AMOLED": 1791943825.002781
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1633,27 +1653,34 @@
     "zedstoreonline:38574",
     "pcgamingpart:7980",
     "bnddeals:50843",
-    "megaphonna:8339"
+    "megaphonna:8339",
+    "lodydeals:45535",
+    "lodydeals:45536",
+    "lodydeals:45537",
+    "pcgamingpart:7979",
+    "bnddeals:50844",
+    "megaphonna:8344",
+    "couponsglobal:48837"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1791942676.1983886,
+  "last_run_time": 1791943825.002781,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32913,
-      "last_check_time": 1791942784.1266267
+      "last_check_time": 1791943808.6805015
     },
     "ecksdeal": {
       "last_message_id": 5890,
-      "last_check_time": 1791942652.2936091
+      "last_check_time": 1791943772.530171
     },
     "lodydeals": {
-      "last_message_id": 45534,
-      "last_check_time": 1791942633.2859695
+      "last_message_id": 45538,
+      "last_check_time": 1791943759.8615596
     },
     "bnddeals": {
-      "last_message_id": 50843,
-      "last_check_time": 1791942669.8832939
+      "last_message_id": 50846,
+      "last_check_time": 1791943790.2403066
     },
     "test_channel": {
       "last_message_id": 1791759936,
@@ -1661,19 +1688,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7980,
-      "last_check_time": 1791942660.9248197
+      "last_check_time": 1791943777.8506553
     },
     "zedstoreonline": {
-      "last_message_id": 38574,
-      "last_check_time": 1791942651.7748907
+      "last_message_id": 38575,
+      "last_check_time": 1791943771.859275
     },
     "megaphonna": {
-      "last_message_id": 8339,
-      "last_check_time": 1791942678.2149796
+      "last_message_id": 8345,
+      "last_check_time": 1791943802.3211684
     },
     "couponsglobal": {
-      "last_message_id": 48836,
-      "last_check_time": 1791942795.6615672
+      "last_message_id": 48837,
+      "last_check_time": 1791943827.0165386
     }
   },
   "published_product_prices": {
@@ -1695,7 +1722,7 @@
     "1005009234854371": 19.6,
     "1005006533038973": 21.81,
     "1005007394028808": 10.73,
-    "1005012899224314": 27.1,
+    "1005012899224314": 26.38,
     "1005012923660718": 15.17,
     "1005012881256093": 27.52,
     "1005009118633225": 14.14,
@@ -1761,7 +1788,7 @@
     "1005006861002512": 13.56,
     "1005012285327063": 19.5,
     "1005006581583862": 25.0,
-    "1005012816171978": 273.46,
+    "1005012816171978": 274.46,
     "1005009834132291": 23.0,
     "1005010585654037": 20.6,
     "1005006248571160": 16.8,
@@ -1773,7 +1800,7 @@
     "1005010470699571": 24.56,
     "1005012741634118": 29.0,
     "1005008554596598": 15.4,
-    "1005008776714223": 47.71,
+    "1005008776714223": 45.74,
     "1005010306498953": 1.46,
     "1005010338761787": 1.49,
     "1005012265051745": 246.04,
@@ -1862,7 +1889,11 @@
     "1005012086685834": 8.99,
     "1005012914301139": 12.96,
     "1005007345151855": 40.0,
-    "1005010345227483": 246.4
+    "1005010345227483": 246.4,
+    "1005011557896041": 257.22,
+    "1005011754993234": 87.58,
+    "1005011735727412": 26.6,
+    "1005013039644752": 186.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -4987,6 +5018,76 @@
       "price": 246.4,
       "timestamp": 1791942676.1983886,
       "status": "ACTIVE"
+    },
+    "lodydeals:45535": {
+      "channel_msg_id": 773,
+      "product_id": "1005011557896041",
+      "title": "AMD Ryzen 7 7800X3D",
+      "channel": "lodydeals",
+      "source_msg_id": 45535,
+      "price": 257.22,
+      "timestamp": 1791943741.5394402,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45536": {
+      "channel_msg_id": 774,
+      "product_id": "1005011754993234",
+      "title": "AMD Ryzen 5 8400F",
+      "channel": "lodydeals",
+      "source_msg_id": 45536,
+      "price": 87.58,
+      "timestamp": 1791943748.7195513,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45537": {
+      "channel_msg_id": 775,
+      "product_id": "1005012816171978",
+      "title": "VIVO Y600 Pro 8/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45537,
+      "price": 274.46,
+      "timestamp": 1791943756.7174351,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7979": {
+      "channel_msg_id": 776,
+      "product_id": "1005008776714223",
+      "title": "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7979,
+      "price": 45.74,
+      "timestamp": 1791943777.8506553,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50844": {
+      "channel_msg_id": 777,
+      "product_id": "1005011735727412",
+      "title": "🔝 مانات قووووة ل جماعة mobile gaming 🎮",
+      "channel": "bnddeals",
+      "source_msg_id": 50844,
+      "price": 26.6,
+      "timestamp": 1791943783.9162278,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8344": {
+      "channel_msg_id": 778,
+      "product_id": "1005013039644752",
+      "title": "جديد ال ©️©️ ببطارية عملاقة💪💪",
+      "channel": "megaphonna",
+      "source_msg_id": 8344,
+      "price": 186.5,
+      "timestamp": 1791943797.3155782,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48837": {
+      "channel_msg_id": 779,
+      "product_id": "1005012899224314",
+      "title": "Honor Choice Infowear Watch 2i Smartwatch AMOLED",
+      "channel": "couponsglobal",
+      "source_msg_id": 48837,
+      "price": 26.38,
+      "timestamp": 1791943825.002781,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4995,17 +5096,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791942678.23288,
+    "last_deal_post_time": 1791943827.027836,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1791942680.4271634,
+    "last_sweep_time": 1791943829.4655497,
     "last_sweep_times": {
-      "algeria": 1791942678.2221737,
-      "france": 1791942680.4271634
+      "algeria": 1791943827.0223799,
+      "france": 1791943829.4655497
     },
     "last_deal_post_times": {
-      "algeria": 1791942678.23288
+      "algeria": 1791943827.027836
     }
   },
   "last_coin_reminder_time": 1791752309.331506,
@@ -5183,7 +5284,7 @@
     "1005006996130042": "couponsglobal",
     "1005013052800596": "couponsglobal",
     "1005007458827229": "zedstoreonline",
-    "1005012899224314": "zedstoreonline",
+    "1005012899224314": "couponsglobal",
     "1005007331316456": "zedstoreonline",
     "1005008852027824": "lodydeals",
     "1005012312990781": "lodydeals",
@@ -5230,7 +5331,11 @@
     "1005012086685834": "pcgamingpart",
     "1005012914301139": "lodydeals",
     "1005007345151855": "bnddeals",
-    "1005010345227483": "megaphonna"
+    "1005010345227483": "megaphonna",
+    "1005011557896041": "lodydeals",
+    "1005011754993234": "lodydeals",
+    "1005011735727412": "bnddeals",
+    "1005013039644752": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -5485,7 +5590,12 @@
     "HONOR 600 Lite 5G 8/256": "zedstoreonline",
     "ATTACK SHARK X11SE Wireless Gaming Mouse PixArt PAW3311": "pcgamingpart",
     "لووووووووووووز controller 🎮": "bnddeals",
-    "جديد علامة ©️©️©️©️🆕": "megaphonna"
+    "جديد علامة ©️©️©️©️🆕": "megaphonna",
+    "AMD Ryzen 5 8400F": "lodydeals",
+    "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": "pcgamingpart",
+    "🔝 مانات قووووة ل جماعة mobile gaming 🎮": "bnddeals",
+    "جديد ال ©️©️ ببطارية عملاقة💪💪": "megaphonna",
+    "Honor Choice Infowear Watch 2i Smartwatch AMOLED": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -5820,7 +5930,23 @@
     "bnddeals:50839",
     "bnddeals:50840",
     "bnddeals:50841",
-    "bnddeals:50842"
+    "bnddeals:50842",
+    "lodydeals:45538",
+    "zedstoreonline:38575",
+    "bnddeals:50845",
+    "bnddeals:50846",
+    "megaphonna:8340",
+    "megaphonna:8342",
+    "megaphonna:8343",
+    "megaphonna:8345",
+    "aniscoupons:32910",
+    "aniscoupons:32911",
+    "aniscoupons:32912",
+    "aniscoupons:32913",
+    "couponsglobal:48833",
+    "couponsglobal:48834",
+    "couponsglobal:48835",
+    "couponsglobal:48836"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
