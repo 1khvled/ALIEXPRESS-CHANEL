@@ -221,7 +221,9 @@
     "1005007920266509",
     "1005009275536960",
     "1005007767322935",
-    "1005012571601398"
+    "1005012571601398",
+    "1005008131216261",
+    "1005013054007275"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -260,7 +262,7 @@
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
-    "1005012436000251": 1791235979.230238,
+    "1005012436000251": 1791992945.451545,
     "1005006750448278": 1790941167.9296343,
     "1005012184442621": 1791146144.850411,
     "1005006631309573": 1791027645.512462,
@@ -331,7 +333,7 @@
     "1005007097205322": 1791014755.488723,
     "1005010470699571": 1791015054.3845687,
     "1005012741634118": 1791015347.2675145,
-    "1005010453516983": 1791947498.6497374,
+    "1005010453516983": 1791992961.3506665,
     "1005008554596598": 1791017145.537471,
     "1005012925826589": 1791752930.9846199,
     "1005010306498953": 1791021345.213176,
@@ -397,7 +399,7 @@
     "1005007473024376": 1791151278.7237968,
     "1005005902976406": 1791152146.3442965,
     "1005006996130042": 1791153956.1367443,
-    "1005013052800596": 1791156089.0187185,
+    "1005013052800596": 1791992975.2913277,
     "1005007331316456": 1791194741.6244273,
     "1005006838055260": 1791212152.7085261,
     "1005006923518929": 1791212158.132987,
@@ -453,7 +455,9 @@
     "1005007920266509": 1791975925.0014532,
     "1005009275536960": 1791975930.016452,
     "1005007767322935": 1791975934.9659944,
-    "1005012571601398": 1791975984.5121527
+    "1005012571601398": 1791975984.5121527,
+    "1005008131216261": 1791992931.9736187,
+    "1005013054007275": 1791992936.3210912
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -721,7 +725,11 @@
     "Acincai BL500 Gaming Headset",
     "Vxe Dragonfly R1 PAW3395 SE",
     "رجع العرض جنننننننننننننننننح🏃‍♂️🏃‍♂️ ©️©️©️©️️️️️⚡️️️️️️️",
-    "Ⓜ HONOR X80 PRO MAX (8/128)"
+    "Ⓜ HONOR X80 PRO MAX (8/128)",
+    "ماوس لاسلكي فخم Scyrox V6 Wireless 8K",
+    "ماوس لاسلكي فخم Scyrox V8S Wireless 8K",
+    "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM",
+    "Rocoren 100W Type-C to USB Fast Charging 0.5M"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -905,7 +913,7 @@
     "CMF Smart Watch 3 pro AMOLED": 1791110146.1927805,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
-    "OPPO A6 Pro 8/256GB": 1791947498.6497374,
+    "OPPO A6 Pro 8/256GB": 1791992961.3506665,
     "ATTACK SHARK X1  Tri-Mode": 1791117948.6585228,
     "HILDA 2 Lines Laser Level Green": 1791124852.3122299,
     "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": 1791125437.8944824,
@@ -992,7 +1000,11 @@
     "Acincai BL500 Gaming Headset": 1791975930.016452,
     "Vxe Dragonfly R1 PAW3395 SE": 1791975934.9659944,
     "رجع العرض جنننننننننننننننننح🏃‍♂️🏃‍♂️ ©️©️©️©️️️️️⚡️️️️️️️": 1791975976.6307437,
-    "Ⓜ HONOR X80 PRO MAX (8/128)": 1791975984.5121527
+    "Ⓜ HONOR X80 PRO MAX (8/128)": 1791975984.5121527,
+    "ماوس لاسلكي فخم Scyrox V6 Wireless 8K": 1791992931.9736187,
+    "ماوس لاسلكي فخم Scyrox V8S Wireless 8K": 1791992936.3210912,
+    "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM": 1791992945.451545,
+    "Rocoren 100W Type-C to USB Fast Charging 0.5M": 1791992975.2913277
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1713,23 +1725,28 @@
     "zedstoreonline:38590",
     "megaphonna:8359",
     "megaphonna:8371",
-    "megaphonna:8372"
+    "megaphonna:8372",
+    "ecksdeal:5891",
+    "ecksdeal:5892",
+    "pcgamingpart:7984",
+    "aniscoupons:32936",
+    "couponsglobal:48842"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1791975984.5121527,
+  "last_run_time": 1791992975.2913277,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32935,
-      "last_check_time": 1791975999.039339
+      "last_message_id": 32939,
+      "last_check_time": 1791992970.2357855
     },
     "ecksdeal": {
-      "last_message_id": 5890,
-      "last_check_time": 1791975953.6288276
+      "last_message_id": 5892,
+      "last_check_time": 1791992938.339591
     },
     "lodydeals": {
       "last_message_id": 45544,
-      "last_check_time": 1791975936.983333
+      "last_check_time": 1791992927.1712525
     },
     "bnddeals": {
       "last_message_id": 50847,
@@ -1740,20 +1757,20 @@
       "last_check_time": 1791759936.937901
     },
     "pcgamingpart": {
-      "last_message_id": 7983,
-      "last_check_time": 1791975954.137061
+      "last_message_id": 7984,
+      "last_check_time": 1791992947.4698315
     },
     "zedstoreonline": {
-      "last_message_id": 38590,
-      "last_check_time": 1791975952.7452028
+      "last_message_id": 38591,
+      "last_check_time": 1791992928.964179
     },
     "megaphonna": {
-      "last_message_id": 8372,
-      "last_check_time": 1791975986.5338657
+      "last_message_id": 8375,
+      "last_check_time": 1791992958.2071588
     },
     "couponsglobal": {
-      "last_message_id": 48841,
-      "last_check_time": 1791975999.7601244
+      "last_message_id": 48843,
+      "last_check_time": 1791992979.3824854
     }
   },
   "published_product_prices": {
@@ -1793,7 +1810,7 @@
     "1005009734653254": 67.0,
     "1005008333859881": 20.47,
     "1005009357018019": 17.5,
-    "1005012436000251": 104.99,
+    "1005012436000251": 106.49,
     "1005006750448278": 3.69,
     "1005012184442621": 11.15,
     "1005006631309573": 2.55,
@@ -1916,7 +1933,7 @@
     "1005007473024376": 1.0,
     "1005005902976406": 1.0,
     "1005006996130042": 1.0,
-    "1005013052800596": 1.28,
+    "1005013052800596": 1.45,
     "1005007331316456": 17.6,
     "1005007822635375": 22.47,
     "1005013096683979": 56.86,
@@ -1954,7 +1971,9 @@
     "1005012824711963": 9.2,
     "1005007920266509": 33.3,
     "1005009275536960": 14.72,
-    "1005007767322935": 21.61
+    "1005007767322935": 21.61,
+    "1005008131216261": 54.11,
+    "1005013054007275": 55.97
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -5299,6 +5318,56 @@
       "price": 286.6,
       "timestamp": 1791975984.5121527,
       "status": "ACTIVE"
+    },
+    "ecksdeal:5891": {
+      "channel_msg_id": 799,
+      "product_id": "1005008131216261",
+      "title": "ماوس لاسلكي فخم Scyrox V6 Wireless 8K",
+      "channel": "ecksdeal",
+      "source_msg_id": 5891,
+      "price": 54.11,
+      "timestamp": 1791992931.9736187,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5892": {
+      "channel_msg_id": 800,
+      "product_id": "1005013054007275",
+      "title": "ماوس لاسلكي فخم Scyrox V8S Wireless 8K",
+      "channel": "ecksdeal",
+      "source_msg_id": 5892,
+      "price": 55.97,
+      "timestamp": 1791992936.3210912,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7984": {
+      "channel_msg_id": 801,
+      "product_id": "1005012436000251",
+      "title": "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7984,
+      "price": 106.49,
+      "timestamp": 1791992945.451545,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32936": {
+      "channel_msg_id": 802,
+      "product_id": "1005010453516983",
+      "title": "OPPO A6 Pro 8/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 32936,
+      "price": 211.7,
+      "timestamp": 1791992961.3506665,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48842": {
+      "channel_msg_id": 803,
+      "product_id": "1005013052800596",
+      "title": "Rocoren 100W Type-C to USB Fast Charging 0.5M",
+      "channel": "couponsglobal",
+      "source_msg_id": 48842,
+      "price": 1.45,
+      "timestamp": 1791992975.2913277,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -5307,17 +5376,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791975999.775359,
+    "last_deal_post_time": 1791992979.3980267,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1791976002.5506861,
+    "last_sweep_time": 1791992981.8048248,
     "last_sweep_times": {
-      "algeria": 1791975999.768012,
-      "france": 1791976002.5506861
+      "algeria": 1791992979.390392,
+      "france": 1791992981.8048248
     },
     "last_deal_post_times": {
-      "algeria": 1791975999.775359
+      "algeria": 1791992979.3980267
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -5554,7 +5623,9 @@
     "1005012824711963": "aniscoupons",
     "1005007920266509": "lodydeals",
     "1005009275536960": "lodydeals",
-    "1005007767322935": "lodydeals"
+    "1005007767322935": "lodydeals",
+    "1005008131216261": "ecksdeal",
+    "1005013054007275": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -5824,7 +5895,11 @@
     "Acincai BL500 Gaming Headset": "lodydeals",
     "Vxe Dragonfly R1 PAW3395 SE": "lodydeals",
     "رجع العرض جنننننننننننننننننح🏃‍♂️🏃‍♂️ ©️©️©️©️️️️️⚡️️️️️️️": "megaphonna",
-    "Ⓜ HONOR X80 PRO MAX (8/128)": "megaphonna"
+    "Ⓜ HONOR X80 PRO MAX (8/128)": "megaphonna",
+    "ماوس لاسلكي فخم Scyrox V6 Wireless 8K": "ecksdeal",
+    "ماوس لاسلكي فخم Scyrox V8S Wireless 8K": "ecksdeal",
+    "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM": "pcgamingpart",
+    "Rocoren 100W Type-C to USB Fast Charging 0.5M": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -6228,7 +6303,14 @@
     "aniscoupons:32932",
     "aniscoupons:32933",
     "aniscoupons:32934",
-    "aniscoupons:32935"
+    "aniscoupons:32935",
+    "zedstoreonline:38591",
+    "megaphonna:8373",
+    "megaphonna:8375",
+    "aniscoupons:32937",
+    "aniscoupons:32938",
+    "aniscoupons:32939",
+    "couponsglobal:48843"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
