@@ -202,7 +202,10 @@
     "9998888761",
     "9998889143",
     "9998889531",
-    "9998889936"
+    "9998889936",
+    "1005012824429842",
+    "1005008450489185",
+    "1005012086685834"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -227,10 +230,10 @@
     "1005007394028808": 1791235926.7793725,
     "1005012899224314": 1791193543.9040256,
     "1005012923660718": 1790888191.2162998,
-    "1005012881256093": 1791194149.475346,
+    "1005012881256093": 1791941229.2882626,
     "1005009118633225": 1790888213.2900865,
     "1005012143831265": 1791012345.6086447,
-    "1005008852027824": 1791752793.585909,
+    "1005008852027824": 1791941221.9951465,
     "9998888981": 1790888981.6873999,
     "1005005217734986": 1791104047.0967803,
     "1005010062128237": 1790937566.337433,
@@ -251,7 +254,7 @@
     "1005010721042860": 1791042962.9882953,
     "1005009517247552": 1790941221.8823678,
     "1005012191191893": 1791137155.7589798,
-    "1005012968221708": 1791235969.3208232,
+    "1005012968221708": 1791941260.30084,
     "9998883454": 1790943454.3504107,
     "9998883497": 1790943497.723828,
     "9998883531": 1790943531.551938,
@@ -354,7 +357,7 @@
     "1005010536089199": 1791101144.9729881,
     "1005012385221205": 1791102050.1835058,
     "1005012743092233": 1791104461.903693,
-    "1005007805497968": 1791197438.386862,
+    "1005007805497968": 1791941266.3806875,
     "1005007345108759": 1791104759.7671344,
     "1005007394197021": 1791195344.3305714,
     "1005013290515237": 1791110751.0808105,
@@ -410,12 +413,15 @@
     "9998882735": 1791752735.01132,
     "1005006966177706": 1791752780.7013927,
     "1005012234106869": 1791752787.9016774,
-    "1005010209307090": 1791752811.1502168,
+    "1005010209307090": 1791941252.83794,
     "9998883006": 1791753006.1402605,
     "9998888761": 1791758761.679281,
     "9998889143": 1791759143.197184,
     "9998889531": 1791759531.2084382,
-    "9998889936": 1791759936.937901
+    "9998889936": 1791759936.937901,
+    "1005012824429842": 1791941215.3821247,
+    "1005008450489185": 1791941233.817019,
+    "1005012086685834": 1791941271.2358608
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -654,7 +660,12 @@
     "Original QKZ AK6",
     "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras",
     "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W",
-    "🌐نسخة عالمية"
+    "🌐نسخة عالمية",
+    "realme P3 5G 8/256GB",
+    "HONOR Watch X5i Global Version",
+    "DATA FROG X3 Wireless Controller",
+    "realme 15T 5G 8/256",
+    "ARTISAN FX Mouse Pad Gaming Mats 400*450*2mm"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -712,7 +723,7 @@
     "Honor Power 2  12/256": 1790941214.6756065,
     "Honor X70 5G 8/128": 1790941221.8823678,
     "Blackview MEGA 5  8/256": 1791137155.7589798,
-    "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1791235969.3208232,
+    "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1791941260.30084,
     "4G LTE Wireless USB 150Mbps": 1790943633.9774187,
     "Curren 8455 Men's Quartz": 1790943640.1460688,
     "ATTACK SHARK X11SE": 1790943648.855101,
@@ -722,7 +733,7 @@
     "Honor Win Turbo 12/256BG": 1790943705.796801,
     "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction": 1790943710.6779277,
     "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": 1790943717.3545928,
-    "OnePlus Turbo 6X Pro 8/128GB": 1790943950.8265061,
+    "OnePlus Turbo 6X Pro 8/128GB": 1791941215.3821247,
     "من منتجات الأكثر طلبا": 1790943959.7454133,
     "النسخة العالمية": 1790943965.6572914,
     "HONOR 600 PRO (12/256)": 1791061256.0753598,
@@ -870,7 +881,7 @@
     "HONOR Watch X5i Version globale SmartWatch 1.9": 1791194149.475346,
     "Attack Shark L60 Tri-mode Gaming Headset": 1791194741.6244273,
     "ATTACK SHARK X2 Pro station de chargement RGB": 1791195344.3305714,
-    "GameSir Nova Lite Gamepads PC  Hall Effect": 1791197438.386862,
+    "GameSir Nova Lite Gamepads PC  Hall Effect": 1791941266.3806875,
     "[Clearance] realme P3 5G Smartphone 5260mAh Battery NFC Snapdragon 6 Gen 4": 1791639330.0700579,
     "CMF Watch 3 Pro Global AMOLED GPS": 1791203753.790013,
     "ماوس لاسلكي Attack Shark X1 Wireless": 1791206156.5528755,
@@ -896,7 +907,12 @@
     "Original QKZ AK6": 1791752787.9016774,
     "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": 1791752811.1502168,
     "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W": 1791752816.5344555,
-    "🌐نسخة عالمية": 1791752930.9846199
+    "🌐نسخة عالمية": 1791752930.9846199,
+    "realme P3 5G 8/256GB": 1791941221.9951465,
+    "HONOR Watch X5i Global Version": 1791941229.2882626,
+    "DATA FROG X3 Wireless Controller": 1791941233.817019,
+    "realme 15T 5G 8/256": 1791941252.83794,
+    "ARTISAN FX Mouse Pad Gaming Mats 400*450*2mm": 1791941271.2358608
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1579,23 +1595,31 @@
     "test_channel:1791758761",
     "test_channel:1791759143",
     "test_channel:1791759531",
-    "test_channel:1791759936"
+    "test_channel:1791759936",
+    "lodydeals:45527",
+    "lodydeals:45528",
+    "lodydeals:45529",
+    "lodydeals:45530",
+    "zedstoreonline:38573",
+    "ecksdeal:5890",
+    "pcgamingpart:7976",
+    "pcgamingpart:7977"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1791759937.1124518,
+  "last_run_time": 1791941271.2358608,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32860,
       "last_check_time": 1791759429.1181958
     },
     "ecksdeal": {
-      "last_message_id": 5882,
-      "last_check_time": 1791759427.0631359
+      "last_message_id": 5890,
+      "last_check_time": 1791941262.3170822
     },
     "lodydeals": {
-      "last_message_id": 45519,
-      "last_check_time": 1791759937.0217812
+      "last_message_id": 45530,
+      "last_check_time": 1791941235.8355532
     },
     "bnddeals": {
       "last_message_id": 50823,
@@ -1606,12 +1630,12 @@
       "last_check_time": 1791759936.937901
     },
     "pcgamingpart": {
-      "last_message_id": 7975,
-      "last_check_time": 1791759427.4806986
+      "last_message_id": 7977,
+      "last_check_time": 1791941273.252487
     },
     "zedstoreonline": {
-      "last_message_id": 38564,
-      "last_check_time": 1791759426.4378319
+      "last_message_id": 38573,
+      "last_check_time": 1791941254.854122
     },
     "megaphonna": {
       "last_message_id": 8323,
@@ -1643,12 +1667,12 @@
     "1005007394028808": 10.73,
     "1005012899224314": 27.1,
     "1005012923660718": 15.17,
-    "1005012881256093": 28.4,
+    "1005012881256093": 27.52,
     "1005009118633225": 14.14,
     "1005012143831265": 281.9,
     "1005007458827229": 22.1,
     "1005010453516983": 204.7,
-    "1005008852027824": 187.0,
+    "1005008852027824": 171.4,
     "1005012499451512": 260.0,
     "1005010129356058": 294.0,
     "3256809790988797": 92.8,
@@ -1758,7 +1782,7 @@
     "1005012385221205": 13.27,
     "1005013223462188": 13.5,
     "1005012743092233": 24.37,
-    "1005007805497968": 22.05,
+    "1005007805497968": 23.82,
     "1005007345108759": 22.12,
     "1005007394197021": 14.8,
     "1005012571601398": 277.3,
@@ -1802,7 +1826,10 @@
     "1005013067004815": 7.5,
     "1005006966177706": 3.49,
     "1005012234106869": 1.71,
-    "1005010209307090": 197.0
+    "1005010209307090": 204.1,
+    "1005012824429842": 252.24,
+    "1005008450489185": 23.91,
+    "1005012086685834": 8.99
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -4767,6 +4794,86 @@
       "price": 187.0,
       "timestamp": 1791752930.9846199,
       "status": "ACTIVE"
+    },
+    "lodydeals:45527": {
+      "channel_msg_id": 750,
+      "product_id": "1005012824429842",
+      "title": "OnePlus Turbo 6X Pro 8/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45527,
+      "price": 252.24,
+      "timestamp": 1791941215.3821247,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45528": {
+      "channel_msg_id": 751,
+      "product_id": "1005008852027824",
+      "title": "realme P3 5G 8/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45528,
+      "price": 171.4,
+      "timestamp": 1791941221.9951465,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45529": {
+      "channel_msg_id": 752,
+      "product_id": "1005012881256093",
+      "title": "HONOR Watch X5i Global Version",
+      "channel": "lodydeals",
+      "source_msg_id": 45529,
+      "price": 27.52,
+      "timestamp": 1791941229.2882626,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45530": {
+      "channel_msg_id": 753,
+      "product_id": "1005008450489185",
+      "title": "DATA FROG X3 Wireless Controller",
+      "channel": "lodydeals",
+      "source_msg_id": 45530,
+      "price": 23.91,
+      "timestamp": 1791941233.817019,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38573": {
+      "channel_msg_id": 754,
+      "product_id": "1005010209307090",
+      "title": "realme 15T 5G 8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38573,
+      "price": 204.1,
+      "timestamp": 1791941252.83794,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5890": {
+      "channel_msg_id": 755,
+      "product_id": "1005012968221708",
+      "title": "سماعات اذن فخمة  Moondrop Chu 3 IEM",
+      "channel": "ecksdeal",
+      "source_msg_id": 5890,
+      "price": 22.74,
+      "timestamp": 1791941260.30084,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7976": {
+      "channel_msg_id": 756,
+      "product_id": "1005007805497968",
+      "title": "GameSir Nova Lite Gamepads PC  Hall Effect",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7976,
+      "price": 23.82,
+      "timestamp": 1791941266.3806875,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:7977": {
+      "channel_msg_id": 757,
+      "product_id": "1005012086685834",
+      "title": "ARTISAN FX Mouse Pad Gaming Mats 400*450*2mm",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7977,
+      "price": 8.99,
+      "timestamp": 1791941271.2358608,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -4775,17 +4882,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1791752934.074936,
+    "last_deal_post_time": 1791941273.2673783,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1791759429.6318414,
+    "last_sweep_time": 1791941276.314313,
     "last_sweep_times": {
-      "algeria": 1791759429.6318414,
-      "france": 1791759409.3673022
+      "algeria": 1791941273.2608998,
+      "france": 1791941276.314313
     },
     "last_deal_post_times": {
-      "algeria": 1791752934.074936
+      "algeria": 1791941273.2673783
     }
   },
   "last_coin_reminder_time": 1791752309.331506,
@@ -4874,7 +4981,7 @@
     "1005009234854371": "zedstoreonline",
     "1005008829227075": "lodydeals",
     "1005008901941749": "lodydeals",
-    "1005012881256093": "bnddeals",
+    "1005012881256093": "lodydeals",
     "1005006861002512": "lodydeals",
     "1005012285327063": "aniscoupons",
     "1005006581583862": "aniscoupons",
@@ -4965,7 +5072,7 @@
     "1005007458827229": "zedstoreonline",
     "1005012899224314": "zedstoreonline",
     "1005007331316456": "zedstoreonline",
-    "1005008852027824": "zedstoreonline",
+    "1005008852027824": "lodydeals",
     "1005012312990781": "lodydeals",
     "1005007822635375": "ecksdeal",
     "1005013096683979": "ecksdeal",
@@ -4999,12 +5106,15 @@
     "9998882735": "test_channel",
     "1005006966177706": "lodydeals",
     "1005012234106869": "lodydeals",
-    "1005010209307090": "megaphonna",
+    "1005010209307090": "zedstoreonline",
     "9998883006": "test_channel",
     "9998888761": "test_channel",
     "9998889143": "test_channel",
     "9998889531": "test_channel",
-    "9998889936": "test_channel"
+    "9998889936": "test_channel",
+    "1005012824429842": "lodydeals",
+    "1005008450489185": "lodydeals",
+    "1005012086685834": "pcgamingpart"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -5246,7 +5356,12 @@
     "realme P3 5G 8/256": "zedstoreonline",
     "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": "megaphonna",
     "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W": "megaphonna",
-    "🌐نسخة عالمية": "megaphonna"
+    "🌐نسخة عالمية": "megaphonna",
+    "realme P3 5G 8/256GB": "lodydeals",
+    "HONOR Watch X5i Global Version": "lodydeals",
+    "DATA FROG X3 Wireless Controller": "lodydeals",
+    "realme 15T 5G 8/256": "zedstoreonline",
+    "ARTISAN FX Mouse Pad Gaming Mats 400*450*2mm": "pcgamingpart"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -5548,11 +5663,27 @@
     "megaphonna:8319",
     "megaphonna:8320",
     "megaphonna:8321",
-    "megaphonna:8322"
+    "megaphonna:8322",
+    "lodydeals:45520",
+    "lodydeals:45521",
+    "lodydeals:45522",
+    "lodydeals:45523",
+    "lodydeals:45524",
+    "lodydeals:45525",
+    "lodydeals:45526",
+    "zedstoreonline:38567",
+    "zedstoreonline:38569",
+    "zedstoreonline:38576",
+    "ecksdeal:5883",
+    "ecksdeal:5884",
+    "ecksdeal:5885",
+    "ecksdeal:5886",
+    "ecksdeal:5888",
+    "ecksdeal:5889"
   ],
-  "last_france_cross_promo_time": 1791544610.263704,
-  "next_france_cross_promo_interval_seconds": 319259,
-  "france_cross_promo_variant_idx": 1,
+  "last_france_cross_promo_time": 1791941207.7166665,
+  "next_france_cross_promo_interval_seconds": 268458,
+  "france_cross_promo_variant_idx": 2,
   "published_coupon_bulletins": [
     {
       "promo": "Brand Day Sale",
