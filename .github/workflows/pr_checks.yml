@@ -1,0 +1,57 @@
+name: PR Checks (publish-safety)
+
+# Loud gate so a NameError like Oct 2026 can never stay green again.
+# The bot_cron workflow uses continue-on-error on publisher steps; THIS
+# workflow must stay strict (no continue-on-error) and runs on code pushes.
+on:
+  push:
+    paths:
+      - 'app/**'
+      - 'api/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'requirements.txt'
+      - '.github/workflows/pr_checks.yml'
+  pull_request:
+    paths:
+      - 'app/**'
+      - 'api/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'requirements.txt'
+
+jobs:
+  publish-safety:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install python-aliexpress-api
+
+      - name: Byte-compile critical paths
+        run: |
+          python -m py_compile app/aliexpress/urls.py app/aliexpress/parser.py
+          python -m py_compile scripts/post_recent_deals.py scripts/post_france_deals.py
+
+      - name: Import smoke (catches NameError before cron does)
+        run: |
+          python -c "from app.aliexpress.urls import check_competitor_contamination; from app.aliexpress.parser import is_spam_or_non_deal; from app.aliexpress.product import product_extractor; print('IMPORT_SMOKE_OK')"
+
+      - name: Fast publish-safety tests
+        run: |
+          python -m pytest tests/test_publish_smoke.py -v
+
+      - name: Full test suite
+        run: |
+          python -m pytest tests/ -q

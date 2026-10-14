@@ -9,3 +9,11 @@ Under NO circumstances may any post, message, caption, button, or link published
 
 All incoming posts from competitor channels MUST be scraped solely for raw deal information (product ID, prices, coupons) and MUST be 100% sanitized and re-monetized before publishing.
 Violations are automatically rejected by the `caption_validator` and blocked by the channel publication firewall in `TelegramPublisher`.
+
+## PUBLISH-SAFETY (Oct 11-14 2026 outage — never repeat)
+Missing `Tuple`/`Any` typing imports + undefined `target_channel` crashed BOTH
+publishers on every cron run for 3 days while `continue-on-error` kept Actions
+green. Mandatory rules live in `.agents/rules/publish_safety.md`. CI gate:
+`.github/workflows/pr_checks.yml` (strict, no `continue-on-error`).
+Regression tests: `tests/test_publish_smoke.py`. Run them before every commit
+touching `app/`, `api/`, or `scripts/`.
