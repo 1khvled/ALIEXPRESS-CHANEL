@@ -226,7 +226,14 @@
     "1005013054007275",
     "1005011899097443",
     "1005012865117890",
-    "1005010428947440"
+    "1005010428947440",
+    "1005010733227481",
+    "1005006281667276",
+    "1005010177152485",
+    "1005012014142030",
+    "1005009117917540",
+    "1005008337650254",
+    "1005013165123874"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -419,7 +426,7 @@
     "9998887893": 1791627893.027416,
     "1005006007773971": 1791638433.4352653,
     "1005013067004815": 1791638447.7612462,
-    "1005009948598802": 1791975963.8528273,
+    "1005009948598802": 1792017751.560627,
     "9998885318": 1791675318.975821,
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
@@ -463,7 +470,14 @@
     "1005013054007275": 1791992936.3210912,
     "1005011899097443": 1792007142.8492503,
     "1005012865117890": 1792007168.2612865,
-    "1005010428947440": 1792007180.6836498
+    "1005010428947440": 1792007180.6836498,
+    "1005010733227481": 1792017716.5973718,
+    "1005006281667276": 1792017728.2932706,
+    "1005010177152485": 1792017733.3056524,
+    "1005012014142030": 1792017738.3981204,
+    "1005009117917540": 1792017762.9428782,
+    "1005008337650254": 1792017769.7299333,
+    "1005013165123874": 1792017774.247927
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -738,7 +752,13 @@
     "Rocoren 100W Type-C to USB Fast Charging 0.5M",
     "Acinaci J11 Gaming Headset",
     "Realme 14 Pro Global (12/256)",
-    "Anker Soundcore Select 4 Go Bluetooth Speaker"
+    "Anker Soundcore Select 4 Go Bluetooth Speaker",
+    "OnePlus Turbo 6V  8/256",
+    "Black Shark GS3  AMOLED",
+    "ساعة قوووووووة من BLACKSHARK🔥",
+    "UGREEN 45W GaN Charger PD3.0 PPS QC3.0 Quick Charge",
+    "HOCO E91 Smart Airtag GPS Positioning Pet Anti-Lost",
+    "Smart Body Fat Scale Accurate"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -979,7 +999,7 @@
     "Essager 54W USB Car Charger": 1791752780.7013927,
     "Original QKZ AK6": 1791752787.9016774,
     "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": 1791752811.1502168,
-    "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W": 1791975963.8528273,
+    "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W": 1792017751.560627,
     "🌐نسخة عالمية": 1791752930.9846199,
     "realme P3 5G 8/256GB": 1791941221.9951465,
     "HONOR Watch X5i Global Version": 1791941229.2882626,
@@ -997,7 +1017,7 @@
     "AMD Ryzen 7 7800X3D": 1791943741.5394402,
     "AMD Ryzen 5 8400F": 1791943748.7195513,
     "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": 1791943777.8506553,
-    "🔝 مانات قووووة ل جماعة mobile gaming 🎮": 1791943783.9162278,
+    "🔝 مانات قووووة ل جماعة mobile gaming 🎮": 1792017738.3981204,
     "جديد ال ©️©️ ببطارية عملاقة💪💪": 1791943797.3155782,
     "Honor Choice Infowear Watch 2i Smartwatch AMOLED": 1791943825.002781,
     "CMF BY NOTHING Watch 3 Pro": 1791947476.2741654,
@@ -1016,7 +1036,13 @@
     "Rocoren 100W Type-C to USB Fast Charging 0.5M": 1791992975.2913277,
     "Acinaci J11 Gaming Headset": 1792007142.8492503,
     "Realme 14 Pro Global (12/256)": 1792007168.2612865,
-    "Anker Soundcore Select 4 Go Bluetooth Speaker": 1792007180.6836498
+    "Anker Soundcore Select 4 Go Bluetooth Speaker": 1792007180.6836498,
+    "OnePlus Turbo 6V  8/256": 1792017716.5973718,
+    "Black Shark GS3  AMOLED": 1792017728.2932706,
+    "ساعة قوووووووة من BLACKSHARK🔥": 1792017733.3056524,
+    "UGREEN 45W GaN Charger PD3.0 PPS QC3.0 Quick Charge": 1792017762.9428782,
+    "HOCO E91 Smart Airtag GPS Positioning Pet Anti-Lost": 1792017769.7299333,
+    "Smart Body Fat Scale Accurate": 1792017774.247927
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1746,27 +1772,35 @@
     "pcgamingpart:7985",
     "megaphonna:8379",
     "aniscoupons:32941",
-    "couponsglobal:48844"
+    "couponsglobal:48844",
+    "zedstoreonline:38593",
+    "bnddeals:50851",
+    "bnddeals:50852",
+    "bnddeals:50853",
+    "megaphonna:8381",
+    "couponsglobal:48846",
+    "couponsglobal:48847",
+    "couponsglobal:48848"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1792007180.6836498,
+  "last_run_time": 1792017774.247927,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32944,
-      "last_check_time": 1792007175.5692573
+      "last_message_id": 32949,
+      "last_check_time": 1792017759.062507
     },
     "ecksdeal": {
       "last_message_id": 5892,
-      "last_check_time": 1792007139.7152958
+      "last_check_time": 1792017722.6475835
     },
     "lodydeals": {
-      "last_message_id": 45545,
-      "last_check_time": 1792007138.7371297
+      "last_message_id": 45547,
+      "last_check_time": 1792017707.5893142
     },
     "bnddeals": {
-      "last_message_id": 50850,
-      "last_check_time": 1792007147.6344628
+      "last_message_id": 50853,
+      "last_check_time": 1792017740.418035
     },
     "test_channel": {
       "last_message_id": 1791759936,
@@ -1774,19 +1808,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792007144.869951
+      "last_check_time": 1792017723.0016787
     },
     "zedstoreonline": {
-      "last_message_id": 38591,
-      "last_check_time": 1792007139.1660874
+      "last_message_id": 38595,
+      "last_check_time": 1792017721.983664
     },
     "megaphonna": {
-      "last_message_id": 8379,
-      "last_check_time": 1792007165.0463653
+      "last_message_id": 8381,
+      "last_check_time": 1792017753.5803454
     },
     "couponsglobal": {
-      "last_message_id": 48845,
-      "last_check_time": 1792007184.9076338
+      "last_message_id": 48848,
+      "last_check_time": 1792017776.2668076
     }
   },
   "published_product_prices": {
@@ -1991,7 +2025,14 @@
     "1005008131216261": 54.11,
     "1005013054007275": 55.97,
     "1005011899097443": 10.86,
-    "1005010428947440": 24.47
+    "1005010428947440": 24.47,
+    "1005010733227481": 285.4,
+    "1005006281667276": 33.0,
+    "1005010177152485": 46.0,
+    "1005012014142030": 21.0,
+    "1005009117917540": 13.96,
+    "1005008337650254": 7.89,
+    "1005013165123874": 7.79
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -5426,6 +5467,86 @@
       "price": 24.47,
       "timestamp": 1792007180.6836498,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38593": {
+      "channel_msg_id": 812,
+      "product_id": "1005010733227481",
+      "title": "OnePlus Turbo 6V  8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38593,
+      "price": 285.4,
+      "timestamp": 1792017716.5973718,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50851": {
+      "channel_msg_id": 813,
+      "product_id": "1005006281667276",
+      "title": "Black Shark GS3  AMOLED",
+      "channel": "bnddeals",
+      "source_msg_id": 50851,
+      "price": 33.0,
+      "timestamp": 1792017728.2932706,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50852": {
+      "channel_msg_id": 814,
+      "product_id": "1005010177152485",
+      "title": "ساعة قوووووووة من BLACKSHARK🔥",
+      "channel": "bnddeals",
+      "source_msg_id": 50852,
+      "price": 46.0,
+      "timestamp": 1792017733.3056524,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50853": {
+      "channel_msg_id": 815,
+      "product_id": "1005012014142030",
+      "title": "🔝 مانات قووووة ل جماعة mobile gaming 🎮",
+      "channel": "bnddeals",
+      "source_msg_id": 50853,
+      "price": 21.0,
+      "timestamp": 1792017738.3981204,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8381": {
+      "channel_msg_id": 816,
+      "product_id": "1005009948598802",
+      "title": "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W",
+      "channel": "megaphonna",
+      "source_msg_id": 8381,
+      "price": 231.9,
+      "timestamp": 1792017751.560627,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48846": {
+      "channel_msg_id": 817,
+      "product_id": "1005009117917540",
+      "title": "UGREEN 45W GaN Charger PD3.0 PPS QC3.0 Quick Charge",
+      "channel": "couponsglobal",
+      "source_msg_id": 48846,
+      "price": 13.96,
+      "timestamp": 1792017762.9428782,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48847": {
+      "channel_msg_id": 818,
+      "product_id": "1005008337650254",
+      "title": "HOCO E91 Smart Airtag GPS Positioning Pet Anti-Lost",
+      "channel": "couponsglobal",
+      "source_msg_id": 48847,
+      "price": 7.89,
+      "timestamp": 1792017769.7299333,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48848": {
+      "channel_msg_id": 819,
+      "product_id": "1005013165123874",
+      "title": "Smart Body Fat Scale Accurate",
+      "channel": "couponsglobal",
+      "source_msg_id": 48848,
+      "price": 7.79,
+      "timestamp": 1792017774.247927,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -5434,17 +5555,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792007184.9239068,
+    "last_deal_post_time": 1792017776.2831202,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792007188.3275876,
+    "last_sweep_time": 1792017778.7644641,
     "last_sweep_times": {
-      "algeria": 1792007184.9158916,
-      "france": 1792007188.3275876
+      "algeria": 1792017776.2751164,
+      "france": 1792017778.7644641
     },
     "last_deal_post_times": {
-      "algeria": 1792007184.9239068
+      "algeria": 1792017776.2831202
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -5685,7 +5806,14 @@
     "1005008131216261": "ecksdeal",
     "1005013054007275": "ecksdeal",
     "1005011899097443": "pcgamingpart",
-    "1005010428947440": "couponsglobal"
+    "1005010428947440": "couponsglobal",
+    "1005010733227481": "zedstoreonline",
+    "1005006281667276": "bnddeals",
+    "1005010177152485": "bnddeals",
+    "1005012014142030": "bnddeals",
+    "1005009117917540": "couponsglobal",
+    "1005008337650254": "couponsglobal",
+    "1005013165123874": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -5962,7 +6090,13 @@
     "Rocoren 100W Type-C to USB Fast Charging 0.5M": "couponsglobal",
     "Acinaci J11 Gaming Headset": "pcgamingpart",
     "Realme 14 Pro Global (12/256)": "aniscoupons",
-    "Anker Soundcore Select 4 Go Bluetooth Speaker": "couponsglobal"
+    "Anker Soundcore Select 4 Go Bluetooth Speaker": "couponsglobal",
+    "OnePlus Turbo 6V  8/256": "zedstoreonline",
+    "Black Shark GS3  AMOLED": "bnddeals",
+    "ساعة قوووووووة من BLACKSHARK🔥": "bnddeals",
+    "UGREEN 45W GaN Charger PD3.0 PPS QC3.0 Quick Charge": "couponsglobal",
+    "HOCO E91 Smart Airtag GPS Positioning Pet Anti-Lost": "couponsglobal",
+    "Smart Body Fat Scale Accurate": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -6055,6 +6189,10 @@
     "2026-10-11": {
       "timestamp": 1791752938.6705437,
       "bulletins_count": 1
+    },
+    "2026-10-14": {
+      "timestamp": 1792017699.1436057,
+      "bulletins_count": 4
     }
   },
   "regrouped_channel_msg_ids": [
@@ -6117,7 +6255,30 @@
     717,
     739,
     740,
-    741
+    741,
+    750,
+    752,
+    754,
+    755,
+    758,
+    773,
+    774,
+    775,
+    776,
+    779,
+    780,
+    786,
+    788,
+    792,
+    793,
+    795,
+    796,
+    801,
+    802,
+    804,
+    805,
+    806,
+    807
   ],
   "pinned_promo_events": {
     "Party Ready Sale / Choice Day_20261001": 505,
@@ -6134,7 +6295,7 @@
   ],
   "last_card_affiliate_time_dz": 1791942707.848495,
   "card_affiliate_variant_idx_dz": 2,
-  "last_tajmi3at_published_time": 1791752938.6705437,
+  "last_tajmi3at_published_time": 1792017699.1436057,
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
@@ -6383,7 +6544,17 @@
     "aniscoupons:32942",
     "aniscoupons:32943",
     "aniscoupons:32944",
-    "couponsglobal:48845"
+    "couponsglobal:48845",
+    "lodydeals:45546",
+    "lodydeals:45547",
+    "zedstoreonline:38592",
+    "zedstoreonline:38594",
+    "zedstoreonline:38595",
+    "megaphonna:8367",
+    "megaphonna:8380",
+    "aniscoupons:32946",
+    "aniscoupons:32948",
+    "aniscoupons:32949"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
