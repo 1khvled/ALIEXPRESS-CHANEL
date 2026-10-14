@@ -789,4 +789,14 @@ if __name__ == "__main__":
         sys.exit(0)
     except Exception as e:
         logger.critical(f"FATAL ERROR in Algeria deals publisher: {e}", exc_info=True)
-        sys.exit(0)
+        try:
+            from app.publisher.admin_alerts import notify_admin_error
+            asyncio.run(notify_admin_error(
+                "تعطل ناشر الجزائر (Algeria Publisher FATAL)",
+                str(e)[:600],
+                channel="algeria",
+                exc=e,
+            ))
+        except Exception:
+            pass
+        sys.exit(1)

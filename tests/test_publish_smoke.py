@@ -5,10 +5,16 @@ Catches without network or Telegram tokens:
 2. Undefined `target_channel` in scripts/post_france_deals.py (must be TARGET_FRANCE_CHANNEL).
 3. Typing imports not covering annotations in critical modules.
 4. Publisher scripts must at least byte-compile.
+5. Fatal publisher crashes must alert the admin AND exit nonzero (so the
+   workflow alert step can see the failure instead of staying silently green).
+6. bot_cron.yml must keep the workflow-level admin alert step (catches
+   import-time crashes that in-process code can never reach).
 """
 import ast
 import py_compile
 from pathlib import Path
+
+import pytest
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -75,3 +81,46 @@ def test_publisher_scripts_compile():
     for rel in ["scripts/post_recent_deals.py", "scripts/post_france_deals.py",
                 "app/aliexpress/urls.py", "app/aliexpress/parser.py"]:
         py_compile.compile(str(BASE_DIR / rel), doraise=True)
+
+
+def _main_except_body(rel: str) -> str:
+    """Source of the __main__ try/except block of a publisher script."""
+    tree = ast.parse((BASE_DIR / rel).read_text(encoding="utf-8"))
+    for node in ast.walk(tree):
+        if isinstance(node, ast.If) and any(
+            isinstance(t, ast.Compare) and any(
+                isinstance(c, ast.Constant) and c.value == "__main__"
+                for c in [t.left, *t.comparators]
+            ) for t in [node.test] if isinstance(t, ast.Compare)
+        ):
+            return ast.unparse(node)
+    raise AssertionError(f"{rel}: no if __name__ == '__main__' block found")
+
+
+def test_publisher_fatal_errors_alert_admin_and_exit_nonzero():
+    # Oct 2026 lesson: Algeria exited 0 on FATAL with no alert -> the failure
+    # was invisible. Both publishers must notify the admin and exit nonzero.
+    for rel in ["scripts/post_recent_deals.py", "scripts/post_france_deals.py"]:
+        body = _main_except_body(rel)
+        assert "notify_admin_error" in body, f"{rel}: FATAL path must call notify_admin_error"
+        assert "sys.exit(1)" in body, f"{rel}: FATAL path must exit nonzero (sys.exit(1))"
+        assert "sys.exit(0)" not in body.split("except")[1], \
+            f"{rel}: FATAL path must not exit 0"
+
+
+def test_workflow_has_admin_failure_alert():
+    yaml = pytest.importorskip("yaml")
+    wf = yaml.safe_load((BASE_DIR / ".github/workflows/bot_cron.yml").read_text(encoding="utf-8"))
+    steps = wf["jobs"]["run-deals-collector"]["steps"]
+    by_name = {s.get("name"): s for s in steps}
+    alg = by_name.get("Run Algeria Deals Publisher (@DzAliexpress0)", {})
+    fr = by_name.get("Run France Deals Publisher (@francedealsdz)", {})
+    alert = by_name.get("Notify admin on publisher failure")
+    assert alg.get("id") == "algeria", "Algeria publisher step needs id: algeria"
+    assert fr.get("id") == "france", "France publisher step needs id: france"
+    assert alert is not None, "bot_cron.yml lost the admin failure alert step"
+    cond = alert.get("if", "")
+    assert "steps.algeria.outcome" in cond and "steps.france.outcome" in cond, \
+        "alert step must check both publisher step outcomes"
+    assert "ADMIN_BOT_TOKEN" in alert.get("run", "") and "ADMIN_USER_ID" in alert.get("run", ""), \
+        "alert step must message the admin via ADMIN_BOT_TOKEN/ADMIN_USER_ID"

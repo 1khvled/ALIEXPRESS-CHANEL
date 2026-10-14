@@ -41,6 +41,7 @@ jobs:
           pip install python-aliexpress-api
 
       - name: Run Algeria Deals Publisher (@DzAliexpress0)
+        id: algeria
         continue-on-error: true
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -60,6 +61,7 @@ jobs:
           fi
 
       - name: Run France Deals Publisher (@francedealsdz)
+        id: france
         continue-on-error: true
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -77,6 +79,33 @@ jobs:
           else
             python scripts/post_france_deals.py
           fi
+
+      - name: Notify admin on publisher failure
+        # Catches what in-process alerts cannot: import-time crashes (e.g. the
+        # Oct 2026 Tuple/Any NameError), missing deps, or any nonzero exit.
+        # Publisher steps use continue-on-error so the job stays green; their
+        # step outcomes are checked explicitly. Skips silently if admin
+        # secrets are not configured. Never prints secrets (GitHub masks them).
+        if: always() && (steps.algeria.outcome == 'failure' || steps.france.outcome == 'failure' || failure())
+        env:
+          ADMIN_BOT_TOKEN: ${{ secrets.ADMIN_BOT_TOKEN }}
+          ADMIN_USER_ID: ${{ secrets.ADMIN_USER_ID }}
+        run: |
+          if [ -z "$ADMIN_BOT_TOKEN" ] || [ -z "$ADMIN_USER_ID" ]; then
+            echo "Admin alert skipped: ADMIN_BOT_TOKEN or ADMIN_USER_ID not configured."
+            exit 0
+          fi
+          FAILED=""
+          [ "${{ steps.algeria.outcome }}" = "failure" ] && FAILED="Algeria publisher (@DzAliexpress0)"
+          [ "${{ steps.france.outcome }}" = "failure" ] && FAILED="$FAILED France publisher (@francedealsdz)"
+          MSG=$(printf '⚠️ Bot Alert: publisher step failed\nRepo: %s\nRun: #%s (%s)\nSHA: %s\nFailed: %s\nLogs: https://github.com/%s/actions/runs/%s' \
+            "${{ github.repository }}" "${{ github.run_number }}" "${{ github.event_name }}" "${{ github.sha }}" "$FAILED" \
+            "${{ github.repository }}" "${{ github.run_id }}")
+          curl -s -X POST "https://api.telegram.org/bot$ADMIN_BOT_TOKEN/sendMessage" \
+            --data-urlencode "chat_id=$ADMIN_USER_ID" \
+            --data-urlencode "text=$MSG" \
+            --data-urlencode "parse_mode=HTML" \
+            --data-urlencode "disable_web_page_preview=true" || true
 
       - name: Commit and push DB changes (if using local SQLite)
         if: always()

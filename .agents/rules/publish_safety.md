@@ -59,3 +59,22 @@ description: Mandatory publish-safety rules learned from the Oct 11-14 2026 outa
 7. **Local test runs dirty `storage/state/*.json` + `deals.db`.** Always
    `git checkout -- storage` and delete `deals.db` / `*.tmp` after a local
    publisher run. Never commit local test state.
+8. **Every failure must page the admin — two layers, keep BOTH:**
+   - In-process: both publishers' `__main__` FATAL handlers call
+     `notify_admin_error(...)` (15-min deduped, never raises) and exit
+     nonzero. Algeria MUST stay `sys.exit(1)` on FATAL — `sys.exit(0)`
+     makes the step outcome `success` and blinds the workflow alert.
+   - Workflow-level (`bot_cron.yml` step `Notify admin on publisher
+     failure`): `if: always() && (steps.algeria.outcome == 'failure' ||
+     steps.france.outcome == 'failure' || failure())`. This is the ONLY
+     layer that can catch import-time crashes (e.g. Oct 2026 Tuple/Any),
+     missing deps, or pip failures — code that never runs can't alert.
+     Keep the `id: algeria` / `id: france` step ids; the alert condition
+     depends on them. The step skips silently when `ADMIN_BOT_TOKEN` /
+     `ADMIN_USER_ID` secrets are unset and never prints secrets.
+   - Required secrets: `ADMIN_BOT_TOKEN` (bot that sends the DM) and
+     `ADMIN_USER_ID` (your numeric Telegram user ID). Without both, alerts
+     degrade to logs only — verify them after any secrets rotation.
+   - Locked by `tests/test_publish_smoke.py::test_publisher_fatal_errors_alert_admin_and_exit_nonzero`
+     and `::test_workflow_has_admin_failure_alert`. If you touch either
+     publisher's `__main__` or `bot_cron.yml`, those tests must stay green.
