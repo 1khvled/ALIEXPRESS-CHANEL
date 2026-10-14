@@ -114,18 +114,19 @@ class TelegramPublisher:
                 logger.warning(f"Publish delayed for deal #{deal.id}: {reason}")
                 return False, reason
 
-        if not self.bot_token or not self.target_channel:
-            err = "TELEGRAM_BOT_TOKEN or TARGET_CHANNEL_ID not configured in settings"
-            logger.error(err)
-            return False, err
-
-        # STRICT SECURITY RULE: Absolutely NEVER publish competitor links, handles, or unauthorized bots to our channel!
+        # STRICT SECURITY RULE (runs before config checks so contamination is
+        # NEVER masked by a missing-token error, and tests stay deterministic).
         from app.aliexpress.urls import check_competitor_contamination
         is_contam, contam_reason = check_competitor_contamination(caption, str(deal.affiliate_url or ""))
         if is_contam:
             err_msg = f"SECURITY RULE VIOLATION: Publish blocked by channel firewall: {contam_reason}"
             logger.critical(err_msg)
             return False, err_msg
+
+        if not self.bot_token or not self.target_channel:
+            err = "TELEGRAM_BOT_TOKEN or TARGET_CHANNEL_ID not configured in settings"
+            logger.error(err)
+            return False, err
 
         # Send via Telegram Bot API
         api_url = f"https://api.telegram.org/bot{self.bot_token}"
