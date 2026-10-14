@@ -401,7 +401,7 @@
     "9998887893": 1791627893.027416,
     "1005006007773971": 1791638433.4352653,
     "1005013067004815": 1791638447.7612462,
-    "1005009948598802": 1791752816.5344555,
+    "1005009948598802": 1791942773.783645,
     "9998885318": 1791675318.975821,
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
@@ -920,7 +920,7 @@
     "Essager 54W USB Car Charger": 1791752780.7013927,
     "Original QKZ AK6": 1791752787.9016774,
     "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": 1791752811.1502168,
-    "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W": 1791752816.5344555,
+    "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W": 1791942773.783645,
     "🌐نسخة عالمية": 1791752930.9846199,
     "realme P3 5G 8/256GB": 1791941221.9951465,
     "HONOR Watch X5i Global Version": 1791941229.2882626,
@@ -1640,8 +1640,8 @@
   "last_run_time": 1791942676.1983886,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32860,
-      "last_check_time": 1791759429.1181958
+      "last_message_id": 32913,
+      "last_check_time": 1791942784.1266267
     },
     "ecksdeal": {
       "last_message_id": 5890,
@@ -1672,8 +1672,8 @@
       "last_check_time": 1791942678.2149796
     },
     "couponsglobal": {
-      "last_message_id": 48832,
-      "last_check_time": 1791759429.573913
+      "last_message_id": 48836,
+      "last_check_time": 1791942795.6615672
     }
   },
   "published_product_prices": {
@@ -1847,7 +1847,7 @@
     "1005010056083952": 10.7,
     "1005012193220695": 253.22,
     "1005012823469739": 32.11,
-    "1005009948598802": 236.9,
+    "1005009948598802": 231.9,
     "1005012293918683": 5.0,
     "1005012651158292": 9.78,
     "1005010289640412": 32.06,
@@ -5654,8 +5654,8 @@
     "START_ALERT_Brand Day Sale_20261009",
     "END_ALERT_Brand Day Sale_20261013"
   ],
-  "last_card_affiliate_time_dz": 1791753022.6973777,
-  "card_affiliate_variant_idx_dz": 1,
+  "last_card_affiliate_time_dz": 1791942707.848495,
+  "card_affiliate_variant_idx_dz": 2,
   "last_tajmi3at_published_time": 1791752938.6705437,
   "published_deals_history": {},
   "settings": {},
