@@ -314,7 +314,23 @@ class DealCaptionGenerator:
         # 2. Country recommendation (exact Algerian Telegram style in blockquote)
         if country_info:
             c_str = str(country_info).lower()
-            if "كوريا" in country_info or "korea" in c_str or "kr" in c_str:
+            if "سعودية" in country_info or "saudi" in c_str or "ksa" in c_str or "🇸🇦" in country_info or "sar" in c_str:
+                lines.append("<blockquote>📍 خلي البلـــد <b>السعوديـــــة 🇸🇦</b></blockquote>")
+            elif "إمارات" in country_info or "امارات" in country_info or "uae" in c_str or "emirates" in c_str or "🇦🇪" in country_info or "aed" in c_str:
+                lines.append("<blockquote>📍 خلي البلـــد <b>الإمـــــارات 🇦🇪</b></blockquote>")
+            elif "قطر" in country_info or "qatar" in c_str or "🇶🇦" in country_info:
+                lines.append("<blockquote>📍 خلي البلـــد <b>قطـــــر 🇶🇦</b></blockquote>")
+            elif "كويت" in country_info or "kuwait" in c_str or "🇰🇼" in country_info:
+                lines.append("<blockquote>📍 خلي البلـــد <b>الكويـــــت 🇰🇼</b></blockquote>")
+            elif "بحرين" in country_info or "bahrain" in c_str or "🇧🇭" in country_info:
+                lines.append("<blockquote>📍 خلي البلـــد <b>البحريـــــن 🇧🇭</b></blockquote>")
+            elif "عمان" in country_info or "عُمان" in country_info or "oman" in c_str or "🇴🇲" in country_info:
+                lines.append("<blockquote>📍 خلي البلـــد <b>عمـــــان 🇴🇲</b></blockquote>")
+            elif "فرنسا" in country_info or "france" in c_str or "🇫🇷" in country_info:
+                lines.append("<blockquote>📍 خلي البلـــد <b>فرنســـــا 🇫🇷</b></blockquote>")
+            elif "إسبانيا" in country_info or "اسبانيا" in country_info or "spain" in c_str or "🇪🇸" in country_info:
+                lines.append("<blockquote>📍 خلي البلـــد <b>إسبانيـــــا 🇪🇸</b></blockquote>")
+            elif "كوريا" in country_info or "korea" in c_str or "kr" in c_str:
                 lines.append("<blockquote>📍 خلي البلـــد <b>كــــــوريا 🇰🇷</b></blockquote>")
             elif "كندا" in country_info or "canada" in c_str or "ca" in c_str:
                 lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
@@ -338,8 +354,6 @@ class DealCaptionGenerator:
         elif deal_type == "coin":
             # Coin deals in Algerian community default to Canada for 50-70%+ coin discounts
             lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
-
-        import html
 
         # 2.5 Local price comparison quote if mentioned in source
         if raw_text:

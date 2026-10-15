@@ -863,7 +863,19 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
 
       // 5. Country Recommendation
       let country = null;
-      if (/كندا|🇨🇦|canada/i.test(cleanNorm)) {
+      if (/سعودية|السعودية|🇸🇦|saudi|ksa/i.test(cleanNorm)) {
+        country = "السعودية 🇸🇦";
+      } else if (/إمارات|الامارات|الإمارات|🇦🇪|uae|emirates/i.test(cleanNorm)) {
+        country = "الإمارات 🇦🇪";
+      } else if (/قطر|🇶🇦|qatar/i.test(cleanNorm)) {
+        country = "قطر 🇶🇦";
+      } else if (/كويت|الكويت|🇰🇼|kuwait/i.test(cleanNorm)) {
+        country = "الكويت 🇰🇼";
+      } else if (/بحرين|البحرين|🇧🇭|bahrain/i.test(cleanNorm)) {
+        country = "البحرين 🇧🇭";
+      } else if (/عمان|عُمان|🇴🇲|oman/i.test(cleanNorm)) {
+        country = "عمان 🇴🇲";
+      } else if (/كندا|🇨🇦|canada/i.test(cleanNorm)) {
         country = "كندا 🇨🇦";
       } else if (/كوريا|🇰🇷|korea/i.test(cleanNorm)) {
         country = "كوريا 🇰🇷";
@@ -877,7 +889,7 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
         country = "أستراليا 🇦🇺";
       } else if (/إسبانيا|اسبانيا|🇪🇸|spain/i.test(cleanNorm)) {
         country = "إسبانيا 🇪🇸";
-      } else if (/(?:خلي\s*البلد|بلد\s*الحساب)/i.test(cleanNorm)) {
+      } else if (/(?:خلي\s*البلد|بلد\s*الحساب|ضع\s*البلد)/i.test(cleanNorm)) {
         country = "كندا 🇨🇦";
       }
 

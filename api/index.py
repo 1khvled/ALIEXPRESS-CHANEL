@@ -672,11 +672,17 @@ def parse_telegram_deal_block(block, clean_ch: str, usdt_rate: float = 249.0):
             if line_s and not any(p in line_s for p in ["📍", "خلي", "http", "بوت", "📢", "@", "💰", "🎟️"]):
                 title = line_s
                 break
+    coupons = []
+    coupon_details = []
+    clean_description = ""
+    coupon_code = None
     try:
-        from app.aliexpress.parser import extract_clean_title, extract_coupon
-        c_found = extract_coupon(raw_text)
-        if c_found:
-            coupon_code = c_found
+        from app.aliexpress.parser import extract_clean_title, extract_multi_coupons
+        multi = extract_multi_coupons(raw_text)
+        coupon_code = multi.get("coupon_code")
+        coupons = multi.get("coupons", [])
+        coupon_details = multi.get("coupon_details", [])
+        clean_description = multi.get("description", "")
         t_found = extract_clean_title(raw_text)
         if t_found and len(t_found) >= 4:
             title = t_found
@@ -706,15 +712,31 @@ def parse_telegram_deal_block(block, clean_ch: str, usdt_rate: float = 249.0):
     elif price_eur:
         price_dzd = int(round(price_eur * usdt_rate * 1.09, -1))
 
-    coupon_code = None
-    c_m = re.search(r'(?:كـ?وبون|Code promo|Coupon)[^\n:]*[:\s]+([A-Za-z0-9_-]{4,15})', raw_text, re.IGNORECASE)
-    if c_m:
-        coupon_code = c_m.group(1).strip()
+    # Fallback single coupon regex if not already found
+    if not coupon_code:
+        c_m = re.search(r'(?:كـ?وبون|Code promo|Coupon)[^\n:]*[:\s]+([A-Za-z0-9_-]{4,15})', raw_text, re.IGNORECASE)
+        if c_m:
+            coupon_code = c_m.group(1).strip()
+            if coupon_code not in coupons:
+                coupons.append(coupon_code)
+                coupon_details.append({"code": coupon_code, "tier": "", "label": "كود الخصم"})
 
     country = None
     clean_country_text = re.sub(r'[\u0640]', '', raw_text)
     low_c = clean_country_text.lower()
-    if any(k in low_c for k in ["كندا", "🇨🇦", "canada"]):
+    if any(k in low_c for k in ["سعودية", "السعودية", "🇸🇦", "saudi", "ksa", "sar"]):
+        country = "السعودية 🇸🇦"
+    elif any(k in low_c for k in ["إمارات", "الامارات", "الإمارات", "🇦🇪", "uae", "emirates", "aed"]):
+        country = "الإمارات 🇦🇪"
+    elif any(k in low_c for k in ["قطر", "🇶🇦", "qatar", "qar"]):
+        country = "قطر 🇶🇦"
+    elif any(k in low_c for k in ["كويت", "الكويت", "🇰🇼", "kuwait", "kwd"]):
+        country = "الكويت 🇰🇼"
+    elif any(k in low_c for k in ["بحرين", "البحرين", "🇧🇭", "bahrain", "bhd"]):
+        country = "البحرين 🇧🇭"
+    elif any(k in low_c for k in ["عمان", "عُمان", "🇴🇲", "oman", "omr"]):
+        country = "عمان 🇴🇲"
+    elif any(k in low_c for k in ["كندا", "🇨🇦", "canada"]):
         country = "كندا 🇨🇦"
     elif any(k in low_c for k in ["كوريا", "🇰🇷", "korea"]):
         country = "كوريا 🇰🇷"
@@ -728,7 +750,7 @@ def parse_telegram_deal_block(block, clean_ch: str, usdt_rate: float = 249.0):
         country = "أستراليا 🇦🇺"
     elif any(k in low_c for k in ["إسبانيا", "اسبانيا", "🇪🇸", "spain"]):
         country = "إسبانيا 🇪🇸"
-    elif any(k in low_c for k in ["خلي البلد", "بلد الحساب"]):
+    elif any(k in low_c for k in ["خلي البلد", "بلد الحساب", "ضع البلد"]):
         country = "كندا 🇨🇦"
 
     has_coins = any(k in raw_text for k in ["عملات", "نقاط", "pièces", "coins", "Alilo07BOT", "🪙"])
@@ -762,6 +784,10 @@ def parse_telegram_deal_block(block, clean_ch: str, usdt_rate: float = 249.0):
         "price_dzd": price_dzd,
         "currency": currency,
         "coupon_code": coupon_code,
+        "coupon": coupon_code,
+        "coupons": coupons,
+        "coupon_details": coupon_details,
+        "description": clean_description,
         "country": country,
         "has_coins": has_coins,
         "affiliate_url": affiliate_url,
@@ -841,6 +867,10 @@ async def get_deals(channel: str = "@DzAliexpress0", force: bool = False):
                         "price_dzd": p_dzd,
                         "currency": "USD",
                         "coupon_code": coupon,
+                        "coupon": coupon,
+                        "coupons": [coupon] if coupon else [],
+                        "coupon_details": [{"code": coupon, "tier": "", "label": "كود الخصم"}] if coupon else [],
+                        "description": title or "",
                         "country": "الجزائر 🇩🇿",
                         "has_coins": bool(coins),
                         "affiliate_url": aff_link or "https://t.me/DzAliexpress0",
@@ -1090,7 +1120,7 @@ async def api_reformat_deal(request: Request):
             extract_prices, extract_coupon, extract_seller_coupon,
             extract_country_instruction, detect_deal_type, detect_restock_deal,
             detect_price_drop_deal, is_france_deal,
-            extract_clean_title, detect_points_discount
+            extract_clean_title, detect_points_discount, extract_multi_coupons
         )
         from app.aliexpress.affiliate import affiliate_service
         from app.ai.generator import caption_generator
@@ -1113,7 +1143,11 @@ async def api_reformat_deal(request: Request):
         dzd_price = int(price * rate) if price else 0
 
         title = extract_clean_title(raw_text) or deal_info.get("title") or "منتج مميز من AliExpress"
-        coupon = extract_coupon(raw_text)
+        multi = extract_multi_coupons(raw_text)
+        coupon = multi.get("coupon_code")
+        coupons = multi.get("coupons", [])
+        coupon_details = multi.get("coupon_details", [])
+        clean_description = multi.get("description", "")
         seller_coupon = extract_seller_coupon(raw_text)
         country = extract_country_instruction(raw_text, title=title)
         deal_type = detect_deal_type(raw_text)
@@ -1181,6 +1215,10 @@ async def api_reformat_deal(request: Request):
             "price_eur": eur_price,
             "price_dzd": dzd_price,
             "coupon": coupon,
+            "coupon_code": coupon,
+            "coupons": coupons,
+            "coupon_details": coupon_details,
+            "description": clean_description,
             "seller_coupon": seller_coupon,
             "deal_type": deal_type,
             "country": country,
@@ -1449,8 +1487,26 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
                 link = f"https://t.me/{data_post}" if data_post else ""
 
                 if text:
+                    try:
+                        from app.aliexpress.parser import extract_multi_coupons
+                        multi = extract_multi_coupons(text)
+                        clean_desc = multi.get("description", "")
+                        c_list = multi.get("coupons", [])
+                        c_details = multi.get("coupon_details", [])
+                        c_primary = multi.get("coupon_code")
+                    except Exception:
+                        clean_desc = ""
+                        c_list = []
+                        c_details = []
+                        c_primary = None
+
                     posts.append({
                         "text": text,
+                        "description": clean_desc,
+                        "coupons": c_list,
+                        "coupon_details": c_details,
+                        "coupon_code": c_primary,
+                        "coupon": c_primary,
                         "photo_url": photo_url,
                         "date": date_str,
                         "link": link

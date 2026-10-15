@@ -12,6 +12,20 @@ Optimized for mobile ergonomics (iOS Safari & Android Chrome) and rich SEO index
 USER_WEBSITE_HTML = """<!DOCTYPE html>
 <html lang="ar" dir="rtl" class="dark">
 <head>
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('dealscout_theme');
+        if (t === 'light') {
+          document.documentElement.classList.remove('dark');
+          document.documentElement.classList.add('light');
+        } else {
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.remove('light');
+        }
+      } catch(e) {}
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <meta name="referrer" content="no-referrer">
@@ -1112,35 +1126,35 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <!-- ───────────────────────────────────────────────────────── -->
     <!-- PAGE: PARCEL TRACKER (SUIVI COLIS DZ)                     -->
     <!-- ───────────────────────────────────────────────────────── -->
-    <div id="page-tracking" class="page-view hidden space-y-6 max-w-5xl mx-auto">
+    <div id="page-tracking" class="page-view hidden space-y-6 max-w-4xl mx-auto">
 
-      <!-- Tracker Search Hero Card -->
-      <div class="border rounded-2xl p-6 sm:p-8 space-y-5 transition-all relative overflow-hidden" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
+      <!-- Tracker Search Console -->
+      <div class="border rounded-2xl p-6 sm:p-8 space-y-5 transition-all relative" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
         
-        <!-- Header & Description -->
-        <div class="text-center sm:text-right space-y-2">
-          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-blue-500/10 text-blue-500 border border-blue-500/20">
-            <span>🇩🇿</span>
-            <span data-i18n="tracking_badge">تتبع الطرود والشحنات في الجزائر (Suivi de Colis)</span>
+        <!-- Header -->
+        <div class="space-y-1.5 text-right">
+          <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md text-[11px] font-mono font-medium border" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span data-i18n="tracking_badge">شبكة التتبع اللوجستي • الجزائر 🇩🇿</span>
           </div>
           <h2 class="text-xl sm:text-2xl font-black tracking-tight" style="color: var(--text-main);" data-i18n="tracking_hero_title">
-            تتبع شحنتك من AliExpress وبريد الجزائر لحظة بلحظة
+            تتبع الشحنات والطرود البريدية
           </h2>
-          <p class="text-xs sm:text-sm leading-relaxed max-w-2xl opacity-80" style="color: var(--text-muted);" data-i18n="tracking_hero_desc">
-            متابعة فورية ومباشرة مدعومة بمحرك 17TRACK وكاينياو وشبكة بريد الجزائر (Algérie Poste / EMS).
+          <p class="text-xs sm:text-sm leading-relaxed opacity-75 max-w-2xl" style="color: var(--text-muted);" data-i18n="tracking_hero_desc">
+            تتبع مباشر لشحنات AliExpress Choice وشبكة بريد الجزائر مع كشف الرقم الفرعي ومحطات الشحن.
           </p>
         </div>
 
         <!-- Search Input Bar -->
         <div class="space-y-3 pt-1">
-          <div class="relative flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+          <div class="flex flex-col sm:flex-row items-stretch gap-2">
             <div class="relative flex-1">
-              <i class="fa-solid fa-barcode absolute right-4 top-1/2 -translate-y-1/2 text-base opacity-40 pointer-events-none"></i>
+              <i class="fa-solid fa-barcode absolute right-4 top-1/2 -translate-y-1/2 text-sm opacity-40 pointer-events-none"></i>
               <input 
                 type="text" 
                 id="tracking-input-num" 
-                placeholder="أدخل رقم التتبع (مثال: LP006... أو RE...DZ أو CP...AE)" 
-                class="w-full border rounded-xl pr-11 pl-20 py-3.5 text-xs sm:text-sm focus:outline-none focus:border-blue-500 transition min-h-[50px] font-mono tracking-wide"
+                placeholder="أدخل رقم التتبع (LP006... أو RE...DZ أو CP...AE)" 
+                class="w-full border rounded-xl pr-11 pl-20 py-3.5 text-xs sm:text-sm focus:outline-none focus:ring-1 focus:ring-zinc-400 dark:focus:ring-zinc-500 transition min-h-[50px] font-mono tracking-wider"
                 style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);"
                 onkeydown="if(event.key==='Enter') submitTracking()"
               />
@@ -1149,7 +1163,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
                 onclick="pasteToTrackingInput()" 
                 id="tracking-paste-btn"
                 title="لصق من الحافظة"
-                class="absolute left-2.5 top-1/2 -translate-y-1/2 px-2.5 py-1.5 rounded-lg border text-[11px] font-semibold flex items-center gap-1.5 transition active:scale-95 touch-manipulation cursor-pointer hover:border-blue-500"
+                class="absolute left-2.5 top-1/2 -translate-y-1/2 px-2.5 py-1.5 rounded-lg border text-[11px] font-semibold flex items-center gap-1.5 transition active:scale-95 touch-manipulation cursor-pointer hover:border-zinc-400"
                 style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);"
               >
                 <i class="fa-regular fa-paste text-xs"></i>
@@ -1161,23 +1175,24 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               type="button" 
               onclick="submitTracking()" 
               id="tracking-submit-btn"
-              class="min-h-[50px] px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20 active:scale-95 transition cursor-pointer flex-shrink-0"
+              class="min-h-[50px] px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 active:scale-95 transition cursor-pointer flex-shrink-0 shadow-sm"
+              style="background-color: var(--text-main); color: var(--bg-page);"
             >
-              <i class="fa-solid fa-magnifying-glass text-sm"></i>
-              <span data-i18n="btn_track_parcel">تتبع الشحنة الآن</span>
+              <i class="fa-solid fa-magnifying-glass text-xs"></i>
+              <span data-i18n="btn_track_parcel">تتبع الشحنة</span>
             </button>
           </div>
 
           <!-- Quick Samples & Recent History -->
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pt-1 text-xs" style="color: var(--text-muted);">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 text-xs" style="color: var(--text-muted);">
             <div class="flex items-center gap-1.5 flex-wrap">
-              <span class="text-[11px] opacity-75 font-semibold" data-i18n="tracking_quick_examples">نماذج تجريبية:</span>
-              <button type="button" onclick="setTrackingSample('CP032359951AE')" class="font-mono text-[11px] px-2.5 py-1 rounded-lg border hover:border-emerald-500 hover:text-emerald-400 transition active:scale-95 cursor-pointer" style="background-color: var(--bg-elevated); border-color: var(--border-card);">CP...AE (UPU)</button>
-              <button type="button" onclick="setTrackingSample('LP00685412978432')" class="font-mono text-[11px] px-2.5 py-1 rounded-lg border hover:border-blue-500 hover:text-blue-400 transition active:scale-95 cursor-pointer" style="background-color: var(--bg-elevated); border-color: var(--border-card);">LP006... (Choice)</button>
-              <button type="button" onclick="setTrackingSample('RE984125874DZ')" class="font-mono text-[11px] px-2.5 py-1 rounded-lg border hover:border-amber-500 hover:text-amber-400 transition active:scale-95 cursor-pointer" style="background-color: var(--bg-elevated); border-color: var(--border-card);">RE...DZ (بريد الجزائر)</button>
+              <span class="text-[11px] opacity-60 font-semibold" data-i18n="tracking_quick_examples">أمثلة:</span>
+              <button type="button" onclick="setTrackingSample('CP032359951AE')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-zinc-400 transition active:scale-95 cursor-pointer" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">CP...AE (UPU)</button>
+              <button type="button" onclick="setTrackingSample('LP00685412978432')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-zinc-400 transition active:scale-95 cursor-pointer" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">LP006... (Choice)</button>
+              <button type="button" onclick="setTrackingSample('RE984125874DZ')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-zinc-400 transition active:scale-95 cursor-pointer" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">RE...DZ (بريد الجزائر)</button>
             </div>
             <div id="tracking-recent-wrap" class="hidden flex items-center gap-1.5 flex-wrap">
-              <span class="text-[11px] opacity-75 flex items-center gap-1 font-semibold"><i class="fa-solid fa-clock-rotate-left text-[10px]"></i> آخر أرقامك:</span>
+              <span class="text-[11px] opacity-60 flex items-center gap-1 font-semibold"><i class="fa-solid fa-clock-rotate-left text-[10px]"></i> السجل:</span>
               <div id="tracking-recent-list" class="flex items-center gap-1 flex-wrap"></div>
             </div>
           </div>
@@ -1189,232 +1204,208 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
       </div>
 
-      <!-- Tracking Results Card (100% Native Obsidian Dark, Zero Iframe Slop) -->
+      <!-- Tracking Results Card (Clean Architecture) -->
       <div id="tracking-result-card" class="hidden border rounded-2xl p-5 sm:p-7 space-y-6 transition-all" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
         
-        <!-- Result Header -->
+        <!-- Header Info Bar -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-5" style="border-color: var(--border-card);">
-          <div class="space-y-2.5">
+          <div class="space-y-2">
             <div class="flex items-center gap-2 flex-wrap">
-              <span id="tracking-carrier-badge" class="px-3 py-1 rounded-xl text-xs font-bold border flex items-center gap-2" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-                <span id="tracking-carrier-flag" class="text-base">🌐</span>
+              <span id="tracking-carrier-badge" class="px-2.5 py-1 rounded-lg text-xs font-semibold border flex items-center gap-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+                <span id="tracking-carrier-flag" class="text-sm">🌐</span>
                 <span id="tracking-carrier-name" style="color: var(--text-main);">AliExpress Choice / Cainiao</span>
               </span>
-              <span id="tracking-status-badge" class="px-3 py-1 rounded-xl text-xs font-bold bg-blue-500/10 text-blue-400 border border-blue-500/25 flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+              <span id="tracking-status-badge" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                 <span id="tracking-status-text">في مسار الشحن الدولي</span>
-              </span>
-              <span class="px-2.5 py-1 rounded-xl text-xs font-semibold border text-sky-400 border-sky-500/30 bg-sky-500/10 flex items-center gap-1">
-                <i class="fa-solid fa-shield-check text-[11px]"></i>
-                <span>مصدر البيانات: 17TRACK & Cainiao</span>
               </span>
             </div>
 
-            <!-- Route Visualization (Origin -> Destination) -->
+            <!-- Trajectory Path -->
             <div class="flex items-center gap-2 text-xs font-medium" style="color: var(--text-muted);">
-              <span class="flex items-center gap-1.5 font-bold" style="color: var(--text-main);">
+              <span class="flex items-center gap-1 font-bold" style="color: var(--text-main);">
                 <span id="tracking-route-origin-flag">🇨🇳</span>
                 <span id="tracking-route-origin">الصين</span>
               </span>
-              <i class="fa-solid fa-arrow-left-long text-blue-500 text-xs px-1"></i>
-              <span class="flex items-center gap-1.5 font-bold" style="color: var(--text-main);">
+              <i class="fa-solid fa-arrow-left-long text-xs opacity-50 px-1"></i>
+              <span class="flex items-center gap-1 font-bold" style="color: var(--text-main);">
                 <span>🇩🇿</span>
-                <span>الجزائر (مكتب بريد بلديتك)</span>
+                <span>الجزائر (بريد بلديتك)</span>
               </span>
             </div>
 
-            <!-- Tracking Number Display with 1-click Copy -->
-            <div class="flex items-center gap-2 pt-0.5">
-              <span class="text-xs font-semibold" style="color: var(--text-muted);">رقم التتبع:</span>
-              <span id="tracking-result-num" class="font-mono font-bold text-sm sm:text-base tracking-wider px-2.5 py-1 rounded-lg border" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">...</span>
-              <button onclick="copyTrackingNum()" class="text-xs px-2.5 py-1 rounded-lg border flex items-center gap-1 transition active:scale-95 cursor-pointer hover:border-blue-500" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
-                <i class="fa-regular fa-copy" id="tracking-copy-icon"></i>
+            <!-- Number Display with 1-click Copy -->
+            <div class="flex items-center gap-2 pt-1">
+              <span class="text-xs opacity-60 font-medium" style="color: var(--text-muted);">رقم الشحنة:</span>
+              <span id="tracking-result-num" class="font-mono font-bold text-sm sm:text-base tracking-wider px-2.5 py-0.5 rounded border" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">...</span>
+              <button onclick="copyTrackingNum()" class="text-xs px-2.5 py-1 rounded-lg border flex items-center gap-1 transition active:scale-95 cursor-pointer hover:border-zinc-400" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+                <i class="fa-regular fa-copy text-xs" id="tracking-copy-icon"></i>
                 <span id="tracking-copy-text">نسخ</span>
               </button>
             </div>
           </div>
 
-          <!-- 3 Quick KPI Stat Badges in Box -->
-          <div class="grid grid-cols-2 sm:grid-cols-1 gap-2 sm:min-w-[210px] text-xs">
+          <!-- Quick Metrics Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-1 gap-2 sm:min-w-[200px] text-xs">
             <div class="border p-2.5 rounded-xl space-y-0.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-              <div class="text-[10px] opacity-70" style="color: var(--text-muted);">المدة التقديرية للوصول:</div>
-              <div id="tracking-est-time" class="font-bold text-xs text-emerald-400 font-mono">14 - 25 يوماً</div>
+              <div class="text-[10px] opacity-60" style="color: var(--text-muted);">المدة المقدرة:</div>
+              <div id="tracking-est-time" class="font-bold text-xs font-mono" style="color: var(--text-main);">14 - 25 يوماً</div>
             </div>
             <div class="border p-2.5 rounded-xl space-y-0.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-              <div class="text-[10px] opacity-70" style="color: var(--text-muted);">الخدمة والحماية:</div>
-              <div id="tracking-service-badge" class="font-bold text-xs text-amber-400 truncate">شحن Choice رسمي مفعّل</div>
+              <div class="text-[10px] opacity-60" style="color: var(--text-muted);">الخدمة:</div>
+              <div id="tracking-service-badge" class="font-bold text-xs truncate" style="color: var(--text-main);">AliExpress Choice رسمي</div>
             </div>
           </div>
         </div>
 
-        <!-- Smart Advisory / Guidance Card (Explains carrier updates & delays) -->
-        <div id="tracking-advisory-card" class="rounded-xl p-4 border flex items-start gap-3 transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-          <div class="w-8 h-8 rounded-lg bg-blue-500/15 text-blue-400 flex items-center justify-center flex-shrink-0 text-sm font-bold mt-0.5">
-            <i class="fa-solid fa-circle-info" id="tracking-advisory-icon"></i>
-          </div>
-          <div class="space-y-1 flex-1 text-xs">
-            <h4 id="tracking-advisory-title" class="font-bold text-sm" style="color: var(--text-main);">
+        <!-- Guidance Note (Non-slop alert) -->
+        <div id="tracking-advisory-card" class="rounded-xl p-3.5 border flex items-start gap-3 transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+          <i class="fa-solid fa-circle-info text-sm opacity-60 mt-0.5" id="tracking-advisory-icon" style="color: var(--text-main);"></i>
+          <div class="space-y-0.5 flex-1 text-xs">
+            <h4 id="tracking-advisory-title" class="font-bold text-xs sm:text-sm" style="color: var(--text-main);">
               الشحنة مسجلة حديثاً — بانتظار أول فحص فيزيائي لدى الناقل
             </h4>
-            <p id="tracking-advisory-body" class="leading-relaxed opacity-85" style="color: var(--text-muted);">
-              قام البائع بتوليد بوليصة الشحن وحجز رقم الطرد. في التجارة الدولية، يستغرق استلام شركة الشحن للطرد وتسجيل أول محطة فحص فعلية بين 24 إلى 72 ساعة.
+            <p id="tracking-advisory-body" class="leading-relaxed opacity-75 text-[11px] sm:text-xs" style="color: var(--text-muted);">
+              قام البائع بتوليد بوليصة الشحن. يستغرق تسجيل أول محطة فعلية عادة بين 24 إلى 72 ساعة.
             </p>
           </div>
         </div>
 
-        <!-- 5-Step Algerian Delivery Journey Tracker (Enhanced Visual Stepper) -->
+        <!-- Minimalist 5-Step Algerian Delivery Journey -->
         <div class="space-y-3">
           <div class="flex items-center justify-between">
             <h4 class="font-bold text-xs uppercase tracking-wider flex items-center gap-2" style="color: var(--text-main);">
-              <i class="fa-solid fa-route text-blue-500"></i>
-              <span>مسار ومحطات التوصيل في الجزائر (Algerian Delivery Journey):</span>
+              <i class="fa-solid fa-route text-xs opacity-60"></i>
+              <span>مراحل التوصيل في الجزائر:</span>
             </h4>
-            <span class="text-[11px] font-mono text-emerald-400" id="tracking-journey-progress">المرحلة 1 من 5</span>
+            <span class="text-[11px] font-mono opacity-80" style="color: var(--text-muted);" id="tracking-journey-progress">المرحلة 1 من 5</span>
           </div>
 
-          <div id="tracking-stages-container" class="grid grid-cols-1 sm:grid-cols-5 gap-2.5 text-xs">
+          <!-- Sleek Horizontal Pipeline -->
+          <div id="tracking-stages-container" class="grid grid-cols-1 sm:grid-cols-5 gap-2 text-xs">
             <!-- Stage 1 -->
-            <div id="track-step-1" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div id="track-step-1" class="p-3 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="flex items-center justify-between">
-                <span class="w-6 h-6 rounded-full bg-emerald-500 text-white font-bold text-[11px] flex items-center justify-center shadow">1</span>
-                <i class="fa-solid fa-box text-emerald-400 text-sm"></i>
+                <span class="w-5 h-5 rounded-full bg-emerald-500 text-white font-bold text-[10px] flex items-center justify-center">1</span>
+                <i class="fa-solid fa-box text-xs opacity-50"></i>
               </div>
-              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">1. انطلاق الطرد</div>
-              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">تجهيز الشحنة وانطلاقها من المستودع</p>
+              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">1. المستودع</div>
+              <p class="text-[10px] opacity-60" style="color: var(--text-muted);">انطلاق الطرد</p>
             </div>
             <!-- Stage 2 -->
-            <div id="track-step-2" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div id="track-step-2" class="p-3 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="flex items-center justify-between">
-                <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">2</span>
-                <i class="fa-solid fa-plane text-zinc-500 text-sm"></i>
+                <span class="w-5 h-5 rounded-full bg-zinc-600 text-white font-bold text-[10px] flex items-center justify-center">2</span>
+                <i class="fa-solid fa-plane text-xs opacity-50"></i>
               </div>
               <div class="font-bold text-xs pt-1" style="color: var(--text-main);">2. الشحن الجوي</div>
-              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">رحلة الترانزيت الدولي نحو الجزائر</p>
+              <p class="text-[10px] opacity-60" style="color: var(--text-muted);">ترانزيت دولي</p>
             </div>
             <!-- Stage 3 -->
-            <div id="track-step-3" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div id="track-step-3" class="p-3 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="flex items-center justify-between">
-                <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">3</span>
-                <i class="fa-solid fa-warehouse text-zinc-500 text-sm"></i>
+                <span class="w-5 h-5 rounded-full bg-zinc-600 text-white font-bold text-[10px] flex items-center justify-center">3</span>
+                <i class="fa-solid fa-warehouse text-xs opacity-50"></i>
               </div>
-              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">3. مركز الفرز CTN</div>
-              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">مطار هواري بومدين / الجزائر</p>
+              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">3. فرز CTN الجزائر</div>
+              <p class="text-[10px] opacity-60" style="color: var(--text-muted);">مطار العاصمة</p>
             </div>
             <!-- Stage 4 -->
-            <div id="track-step-4" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div id="track-step-4" class="p-3 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="flex items-center justify-between">
-                <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">4</span>
-                <i class="fa-solid fa-stamp text-zinc-500 text-sm"></i>
+                <span class="w-5 h-5 rounded-full bg-zinc-600 text-white font-bold text-[10px] flex items-center justify-center">4</span>
+                <i class="fa-solid fa-stamp text-xs opacity-50"></i>
               </div>
-              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">4. الجمارك (Douane)</div>
-              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">معفى للطرود الشخصية غير التجارية</p>
+              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">4. الجمارك</div>
+              <p class="text-[10px] opacity-60" style="color: var(--text-muted);">معفى للاستعمال الشخصي</p>
             </div>
             <!-- Stage 5 -->
-            <div id="track-step-5" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div id="track-step-5" class="p-3 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="flex items-center justify-between">
-                <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">5</span>
-                <i class="fa-solid fa-envelope-open-text text-zinc-500 text-sm"></i>
+                <span class="w-5 h-5 rounded-full bg-zinc-600 text-white font-bold text-[10px] flex items-center justify-center">5</span>
+                <i class="fa-solid fa-envelope text-xs opacity-50"></i>
               </div>
               <div class="font-bold text-xs pt-1" style="color: var(--text-main);">5. بريد بلديتك</div>
-              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">جاهز للاستلام ببطاقة الهوية الوطنية</p>
+              <p class="text-[10px] opacity-60" style="color: var(--text-muted);">جاهز للاستلام</p>
             </div>
           </div>
         </div>
 
-        <!-- Checkpoints Timeline Feed (if live events available) -->
+        <!-- Checkpoints Timeline Feed -->
         <div id="tracking-checkpoints-wrap" class="space-y-3 pt-3 border-t hidden" style="border-color: var(--border-card);">
           <h4 class="font-bold text-xs uppercase tracking-wider flex items-center gap-2" style="color: var(--text-main);">
-            <i class="fa-solid fa-clock-rotate-left text-blue-500"></i>
-            <span>سجل المحطات ونقاط الفرز (Live Checkpoints):</span>
+            <i class="fa-solid fa-clock-rotate-left text-xs opacity-60"></i>
+            <span>سجل المحطات (Checkpoints):</span>
           </h4>
-          <div id="tracking-checkpoints-list" class="space-y-2 text-xs border-r-2 pr-3 mr-1" style="border-color: var(--border-subtle);">
+          <div id="tracking-checkpoints-list" class="space-y-2 text-xs border-r pr-3 mr-1" style="border-color: var(--border-subtle);">
             <!-- Dynamic checkpoints injected here -->
           </div>
         </div>
 
-        <!-- Direct Official Global Verification Portals (1-Click Deep Links) -->
-        <div class="space-y-3 pt-4 border-t" style="border-color: var(--border-card);">
+        <!-- External Verification Portals (Minimalist row) -->
+        <div class="space-y-2.5 pt-4 border-t" style="border-color: var(--border-card);">
           <div class="flex items-center justify-between flex-wrap gap-2">
-            <div>
-              <h4 class="text-xs font-bold" style="color: var(--text-main);">
-                فحص مباشر على أفضل منصات التتبع العالمية (تفتح برقمك تلقائياً ↗):
-              </h4>
-              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">
-                أقوى بدائل تتبع موثوقة في الجزائر تكشف الرقم الفرعي وشركات التوصيل الوسيطة.
-              </p>
-            </div>
-            <span class="text-[11px] text-emerald-400 font-mono">100% موثوق وآمن</span>
+            <h4 class="text-xs font-bold" style="color: var(--text-main);">
+              فحص مباشر برقمك على منصات التتبع العالمية:
+            </h4>
+            <span class="text-[10px] font-mono opacity-60" style="color: var(--text-muted);">تفتح بالرقم مباشرة ↗</span>
           </div>
           
-          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2.5 text-xs">
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs">
             <!-- 1. 17TRACK -->
-            <a id="btn-portal-17track" href="https://t.17track.net/ar" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl border flex flex-col items-center justify-center gap-1.5 text-center font-bold transition hover:border-amber-500 hover:text-amber-400 active:scale-95 touch-manipulation shadow-sm" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
-              <i class="fa-solid fa-globe text-amber-500 text-base"></i>
-              <span class="text-xs">17TRACK</span>
-              <span class="text-[10px] opacity-70 font-normal">الأكثر دقة عالمياً ↗</span>
+            <a id="btn-portal-17track" href="https://t.17track.net/ar" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-between gap-1.5 font-semibold transition hover:border-zinc-400 active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <span>17TRACK</span>
+              <span class="opacity-40 text-[10px]">↗</span>
             </a>
             
             <!-- 2. Postal Ninja -->
-            <a id="btn-portal-ninja" href="https://postal.ninja/ar" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl border flex flex-col items-center justify-center gap-1.5 text-center font-bold transition hover:border-sky-500 hover:text-sky-400 active:scale-95 touch-manipulation shadow-sm" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
-              <i class="fa-solid fa-bolt text-sky-500 text-base"></i>
-              <span class="text-xs">Postal Ninja</span>
-              <span class="text-[10px] opacity-70 font-normal">كشف الرقم الفرعي ↗</span>
+            <a id="btn-portal-ninja" href="https://postal.ninja/ar" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-between gap-1.5 font-semibold transition hover:border-zinc-400 active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <span>Postal Ninja</span>
+              <span class="opacity-40 text-[10px]">↗</span>
             </a>
 
             <!-- 3. Cainiao Official -->
-            <a id="btn-portal-cainiao" href="https://global.cainiao.com" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl border flex flex-col items-center justify-center gap-1.5 text-center font-bold transition hover:border-rose-500 hover:text-rose-400 active:scale-95 touch-manipulation shadow-sm" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
-              <i class="fa-solid fa-plane text-rose-500 text-base"></i>
-              <span class="text-xs">Cainiao Global</span>
-              <span class="text-[10px] opacity-70 font-normal">شحن Choice الرسمي ↗</span>
+            <a id="btn-portal-cainiao" href="https://global.cainiao.com" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-between gap-1.5 font-semibold transition hover:border-zinc-400 active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <span>Cainiao Global</span>
+              <span class="opacity-40 text-[10px]">↗</span>
             </a>
 
             <!-- 4. ParcelsApp -->
-            <a id="btn-portal-parcels" href="https://parcelsapp.com/en" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl border flex flex-col items-center justify-center gap-1.5 text-center font-bold transition hover:border-purple-500 hover:text-purple-400 active:scale-95 touch-manipulation shadow-sm" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
-              <i class="fa-solid fa-cubes text-purple-500 text-base"></i>
-              <span class="text-xs">ParcelsApp</span>
-              <span class="text-[10px] opacity-70 font-normal">توقع تاريخ الوصول ↗</span>
+            <a id="btn-portal-parcels" href="https://parcelsapp.com/en" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-between gap-1.5 font-semibold transition hover:border-zinc-400 active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <span>ParcelsApp</span>
+              <span class="opacity-40 text-[10px]">↗</span>
             </a>
 
             <!-- 5. Algérie Poste -->
-            <a id="btn-portal-poste" href="https://t.17track.net/ar" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl border flex flex-col items-center justify-center gap-1.5 text-center font-bold transition hover:border-emerald-500 hover:text-emerald-400 active:scale-95 touch-manipulation shadow-sm col-span-2 sm:col-span-1" style="background-color: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.35); color: #10b981;">
-              <i class="fa-solid fa-envelope text-emerald-500 text-base"></i>
-              <span class="text-xs">بريد الجزائر</span>
-              <span class="text-[10px] opacity-70 font-normal">Algérie Poste / EMS ↗</span>
+            <a id="btn-portal-poste" href="https://t.17track.net/ar" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-between gap-1.5 font-semibold transition hover:border-emerald-500 active:scale-95 touch-manipulation col-span-2 sm:col-span-1" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <span>بريد الجزائر</span>
+              <span class="opacity-40 text-[10px]">↗</span>
             </a>
           </div>
         </div>
 
       </div>
 
-      <!-- Algerian Delivery Best Practices Guide (3 Sleek Cards) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
-        <div class="border rounded-2xl p-5 space-y-2.5 transition hover:border-blue-500/40" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
-          <div class="w-9 h-9 rounded-xl bg-blue-500/15 text-blue-500 flex items-center justify-center text-base font-bold">
-            <i class="fa-solid fa-stopwatch"></i>
-          </div>
-          <h3 class="font-bold text-sm" style="color: var(--text-main);" data-i18n="track_card1_title">كم يستغرق وصول الطرد؟</h3>
-          <p class="text-xs leading-relaxed opacity-85" style="color: var(--text-muted);" data-i18n="track_card1_desc">
-            تستغرق شحنات <strong>AliExpress Choice</strong> حوالي 14 إلى 25 يوماً للوصول إلى الجزائر، بينما الشحن الاقتصادي العادي يستغرق بين 25 و35 يوماً عبر بريد الجزائر.
+      <!-- Minimalist Delivery Guide (Clean Monochrome / Restrained) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+        <div class="border rounded-xl p-4 space-y-1.5 transition" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="font-bold text-xs" style="color: var(--text-main);" data-i18n="track_card1_title">مدة وصول الشحنات</div>
+          <p class="text-[11px] leading-relaxed opacity-75" style="color: var(--text-muted);" data-i18n="track_card1_desc">
+            تستغرق شحنات AliExpress Choice من 14 إلى 25 يوماً للجزائر، بينما الشحن الاقتصادي العادي بين 25 و35 يوماً عبر بريد الجزائر.
           </p>
         </div>
 
-        <div class="border rounded-2xl p-5 space-y-2.5 transition hover:border-emerald-500/40" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
-          <div class="w-9 h-9 rounded-xl bg-emerald-500/15 text-emerald-500 flex items-center justify-center text-base font-bold">
-            <i class="fa-solid fa-shield-halved"></i>
-          </div>
-          <h3 class="font-bold text-sm" style="color: var(--text-main);" data-i18n="track_card2_title">الجمارك الجزائرية والضرائب</h3>
-          <p class="text-xs leading-relaxed opacity-85" style="color: var(--text-muted);" data-i18n="track_card2_desc">
-            الطرود البريدية الموجهة للاستعمال الشخصي والعائلي معفاة تماماً من الرسوم الجمركية. تجنب طلب أكثر من 3 قطع من نفس السلعة في شحنة واحدة لتفادي الصفة التجارية.
+        <div class="border rounded-xl p-4 space-y-1.5 transition" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="font-bold text-xs" style="color: var(--text-main);" data-i18n="track_card2_title">الجمارك والطرود الشخصية</div>
+          <p class="text-[11px] leading-relaxed opacity-75" style="color: var(--text-muted);" data-i18n="track_card2_desc">
+            الطرود للاستعمال الشخصي معفاة من الرسوم الجمركية. تجنب طلب أكثر من 3 قطع من نفس السلعة في شحنة واحدة لتفادي الصفة التجارية.
           </p>
         </div>
 
-        <div class="border rounded-2xl p-5 space-y-2.5 transition hover:border-amber-500/40" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
-          <div class="w-9 h-9 rounded-xl bg-amber-500/15 text-amber-500 flex items-center justify-center text-base font-bold">
-            <i class="fa-solid fa-box-open"></i>
-          </div>
-          <h3 class="font-bold text-sm" style="color: var(--text-main);" data-i18n="track_card3_title">كيف تستلم طردك؟</h3>
-          <p class="text-xs leading-relaxed opacity-85" style="color: var(--text-muted);" data-i18n="track_card3_desc">
-            عند وصول الطرد لمكتب بريد بلديتك، ستتلقى رسالة SMS أو إشعار Avis de passage. توجه إلى المكتب مصحوباً ببطاقة التعريف الوطنية ودفع الرسم الرمزي (130-250 دج).
+        <div class="border rounded-xl p-4 space-y-1.5 transition" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="font-bold text-xs" style="color: var(--text-main);" data-i18n="track_card3_title">استلام الطرد من البريد</div>
+          <p class="text-[11px] leading-relaxed opacity-75" style="color: var(--text-muted);" data-i18n="track_card3_desc">
+            عند وصول الطرد لبريد بلديتك، توجه مصحوباً ببطاقة التعريف الوطنية ودفع رسم التخليص البريدي الرمزي (130-250 دج).
           </p>
         </div>
       </div>
@@ -2303,7 +2294,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <!-- Image Preview Container -->
       <div id="modal-img-wrap" class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border flex items-center justify-center" style="background-color: var(--bg-page); border-color: var(--border-card);">
         <img id="modal-img" src="" alt="Deal preview" class="w-full h-full object-contain" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-        <span id="modal-country" class="absolute top-2.5 right-2.5 text-xs px-2.5 py-0.5 rounded-lg font-bold border hidden shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"></span>
+        <span id="modal-country" class="absolute top-2.5 right-2.5 text-xs px-2.5 py-1 rounded-lg font-black border hidden shadow-md z-20 backdrop-blur-md" style="background-color: #e11d48; border-color: rgba(255, 255, 255, 0.35); color: #ffffff;"></span>
         <span id="modal-coins" class="absolute top-2.5 left-2.5 bg-amber-500 text-zinc-950 text-xs font-bold px-2 py-0.5 rounded-lg hidden items-center gap-1 shadow-sm"><i class="fa-solid fa-coins text-[10px]"></i> Coins</span>
       </div>
 
@@ -2312,6 +2303,23 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <div class="flex items-center justify-between gap-2 text-xs" style="color: var(--text-soft);">
           <span id="modal-cat" class="px-2.5 py-1 rounded-lg border text-[11px] font-semibold" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);"></span>
           <span id="modal-date" class="font-mono text-xs opacity-75"></span>
+        </div>
+
+        <!-- Prominent Country Setting Alert -->
+        <div id="modal-country-alert" class="hidden rounded-xl p-3 border flex items-center justify-between gap-3 shadow-sm transition" style="background-color: var(--bg-elevated); border-color: rgba(225, 29, 72, 0.35);">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold flex-shrink-0 bg-rose-500/15 text-rose-500">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="min-w-0">
+              <div class="text-[10px] font-bold uppercase tracking-wider opacity-70" data-i18n="modal_country_hint">شرط تطبيق سعر العرض:</div>
+              <div class="text-xs sm:text-sm font-black" style="color: var(--text-main);">
+                <span>خلي بلد الحساب في تطبيق AliExpress:</span>
+                <span id="modal-country-target" class="text-rose-600 dark:text-rose-400 font-extrabold underline decoration-rose-500/50 decoration-2 px-1"></span>
+              </div>
+            </div>
+          </div>
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-rose-500/10 text-rose-500 border border-rose-500/25 flex-shrink-0">ضروري للخصم</span>
         </div>
 
         <h3 id="modal-title" class="font-bold text-sm sm:text-base leading-snug" style="color: var(--text-main);"></h3>
@@ -2325,10 +2333,22 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               <span id="modal-coupon-code" class="font-mono font-bold text-sm sm:text-base tracking-wider truncate block" style="color: var(--text-main);"></span>
             </div>
           </div>
-          <button id="modal-coupon-btn" onclick="copyCouponFromModal(this)" class="min-h-[42px] px-3.5 py-1.5 border active:scale-95 text-xs font-bold rounded-lg transition flex items-center gap-1.5 flex-shrink-0 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">
+          <button id="modal-coupon-btn" onclick="copyCouponFromModal(this)" class="min-h-[42px] px-3.5 py-1.5 border active:scale-95 text-xs font-bold rounded-lg transition flex items-center gap-1.5 flex-shrink-0 touch-manipulation cursor-pointer" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">
             <i class="fa-regular fa-copy"></i>
-            <span data-i18n="btn_copy">نسخ الكود</span>
+            <span class="copy-text" data-i18n="btn_copy">نسخ الكود</span>
           </button>
+        </div>
+
+        <!-- Multi-coupon container inside modal -->
+        <div id="modal-multi-coupons" class="hidden flex flex-col gap-2"></div>
+
+        <!-- Clean Description / Specs inside modal -->
+        <div id="modal-desc-wrap" class="hidden rounded-xl p-3 border text-xs sm:text-sm leading-relaxed whitespace-pre-line select-text" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
+          <div class="text-[10px] font-bold uppercase tracking-wider mb-1.5 opacity-75 flex items-center gap-1.5" style="color: var(--text-main);">
+            <i class="fa-solid fa-list-check text-rose-500 text-[11px]"></i>
+            <span>المواصفات وملاحظات العرض:</span>
+          </div>
+          <div id="modal-desc-text" class="font-sans leading-relaxed"></div>
         </div>
 
         <!-- Price display inside modal -->
@@ -4477,24 +4497,90 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         priceEur = parseFloat(eurMatch[1].replace(',', '.'));
       }
 
-      // Enhanced Coupon Extraction across all Arabic, French, and Telegram formats
+      // Enhanced Multi-Coupon Extraction across all Arabic, French, and Telegram formats
       const cleanNorm = text.replace(/[\u0640]/g, '');
-      const couponMatch = 
-        cleanNorm.match(/(?:(?:ال)?كـ?وبون(?:\\s*الخصم|\\s*خاص)?|(?:ال)?كـ?ود(?:\\s*الخصم|\\s*التخفيض)?|code\\s*promo|code\\s*de\\s*r[ée]duction|code\\s*r[ée]duction|coupon|promo|code|avec\\s*le\\s*code|utilisez\\s*le\\s*code)\\s*[-:：]?\\s*(?:<code>|\\*\\*|`)*([A-Za-z0-9_-]{3,20})/i)
-        || cleanNorm.match(/(?:(?:ال)?قسيمـ?ة(?:\\s*البائع|\\s*المتجر)?|coupon\\s*vendeur|store\\s*coupon)\\s*[-:：]?\\s*(?:<code>|\\*\\*|`)*([0-9]+(?:\\.[0-9]+)?\\$?|[A-Za-z0-9_-]{3,20})/i)
-        || cleanNorm.match(/[🏷️🎟️🎫]\\s*(?:code\\s*[:：]?)?\\s*(?:<code>|\\*\\*|`)*([A-Za-z0-9_-]{3,20})/i)
-        || cleanNorm.match(new RegExp('(?:كود|كوبون|code|promo)[^\\r\\n]{0,60}?(?:<code>|`)([A-Za-z0-9_-]{3,20})(?:<\\/code>|`)', 'i'));
-      
-      if (couponMatch) {
-        let rawCode = (couponMatch[1] || '').trim().replace(/[<>/`*#]/g, '');
-        const bl = ['http', 'https', 'aliexpress', 'tme', 'link', 'item', 'click', 'coins', 'bot', 'france', 'canada', 'algerie', 'promo', 'reduction', 'code'];
-        if (rawCode.length >= 3 && !bl.some(b => rawCode.toLowerCase().includes(b))) {
-          coupon = rawCode.toUpperCase();
+      const extractedCoupons = [];
+      const extractedDetails = [];
+      const seenCodes = new Set();
+      const blCodes = ['http', 'https', 'aliexpress', 'tme', 'link', 'item', 'click', 'coins', 'bot', 'france', 'canada', 'algerie', 'promo', 'reduction', 'code', 'camera', 'battery'];
+      const compBrands = ['anis', 'bnd', 'zed', 'lody', 'ecks', 'megaprix', 'megaphonna', 'cp4dz', 'francecp'];
+
+      function addParsedCode(codeStr, label, tier) {
+        if (!codeStr) return;
+        const cleaned = codeStr.trim().replace(/^[<>/`*#()[\\]{}:;,+=ـ-]+|[<>/`*#()[\\]{}:;,+=ـ-]+$/g, '').replace(/<[^>]+>/g, '').toUpperCase();
+        if (cleaned.length < 3 || cleaned.length > 25 || !/[A-Za-z]/.test(cleaned)) return;
+        const cl = cleaned.toLowerCase();
+        if (blCodes.includes(cl) || blCodes.some(b => cl.includes(b))) return;
+        if (compBrands.some(brand => cl.startsWith(brand) || cl.includes('_' + brand) || cl.includes('-' + brand))) return;
+        if (['anis', 'megaprix', 'megaphonna', 'ecks'].some(brand => cl.includes(brand))) return;
+
+        let cleanTier = (tier || '').trim().replace(/\s+/g, '');
+        if (cleanTier && !cleanTier.startsWith('$') && !cleanTier.endsWith('$') && !cleanTier.startsWith('€') && !cleanTier.endsWith('€')) {
+          cleanTier += '$';
+        }
+        let cleanLabel = (label || 'كوبون').trim().replace(/^[🏷️🎟️🎫•\-\*:\s]+|[🏷️🎟️🎫•\-\*:\s]+$/g, '');
+        if (!cleanLabel) cleanLabel = 'كوبون';
+
+        if (!seenCodes.has(cleaned)) {
+          seenCodes.add(cleaned);
+          extractedCoupons.push(cleaned);
+          extractedDetails.push({ code: cleaned, tier: cleanTier, label: cleanLabel });
         }
       }
 
+      // Tier first: '🎟️ 6/49$ : WOAE06' or 'كوبون $2/15$: WOAE02'
+      const p1Regex = /(?:🎟️?|🎫|•|\-|\*)?\s*(?:(?:ال)?كوبون(?:\s*آخر|\s*إضافي)?|(?:ال)?كود(?:\s*آخر|\s*إضافي)?|code\s*promo|(?:ال)?قسيمة|خصم|تخفيض)?\s*([$€]?[0-9]+(?:\.[0-9]+)?\s*\/\s*[$€]?[0-9]+(?:\.[0-9]+)?[$€]?)\s*(?:بكود|code|:|=|：|\-)?\s*([A-Za-z0-9_-]{3,25})/gi;
+      let mMatch;
+      while ((mMatch = p1Regex.exec(cleanNorm)) !== null) {
+        addParsedCode(mMatch[2], 'كوبون', mMatch[1]);
+      }
+
+      // Code then tier: 'OTPRD02 : 2/15$'
+      const p2Regex = /(?:🎟️?|🎫|•|\-|\*)?\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\s*promo|(?:ال)?قسيمة)?\s*([A-Za-z][A-Za-z0-9_-]{2,24})\s*(?:[:=：\-]|خصم|بخصم|\()?([$€]?[0-9]+(?:\.[0-9]+)?\s*\/\s*[$€]?[0-9]+(?:\.[0-9]+)?[$€]?)\)?/gi;
+      while ((mMatch = p2Regex.exec(cleanNorm)) !== null) {
+        addParsedCode(mMatch[1], 'كوبون', mMatch[2]);
+      }
+
+      // Labeled lines & Slashed codes: 'كوبون: CODE1', 'كود: CODE1 / CODE2'
+      const pLineRegex = /(?:(?:استخدم\s+|استعمل\s+|انسخ\s+|بكود\s+)?(?:(?:ال)?كـ?وبون|(?:ال)?كـ?ود|(?:ال)?قسيمـ?ة|code\s*promo|code\s*de\s*r[ée]duction|code\s*r[ée]duction|coupon|promo|utilisez\s*le\s*code|avec\s*le\s*code)[^\n:]*|[🏷️🎟️🎫👊])\s*[:：\-]\s*([^\r\n]+)/gi;
+      while ((mMatch = pLineRegex.exec(cleanNorm)) !== null) {
+        let content = mMatch[1].trim();
+        const tierMatch = content.match(/\(?([$€]?[0-9]+(?:\.[0-9]+)?\/[0-9]+(?:\.[0-9]+)?[$€]?)\)?/);
+        const lineTier = tierMatch ? tierMatch[1] : '';
+        if (lineTier) content = content.replace(tierMatch[0], '');
+        const parts = content.split(/[\/\|,،]|\s+(?:أو|or|ou)\s+/);
+        for (const p of parts) {
+          const toks = p.match(/[A-Za-z0-9_-]{3,25}/g) || [];
+          for (const tok of toks) {
+            addParsedCode(tok, 'كوبون', lineTier);
+          }
+        }
+      }
+
+      // Code tags: <code>CODE</code>
+      const pTagsRegex = /(?:(?:ال)?كود|(?:ال)?كوبون|(?:ال)?قسيمة|code|coupon|promo)[^\r\n]{0,60}?(?:<code>|`|\*\*)([A-Za-z0-9_-]{3,25})(?:<\/code>|`|\*\*)/gi;
+      while ((mMatch = pTagsRegex.exec(cleanNorm)) !== null) {
+        addParsedCode(mMatch[1], 'كود الخصم', '');
+      }
+
+      const finalCoupons = (post.coupons && post.coupons.length > 0) ? post.coupons : extractedCoupons;
+      const finalDetails = (post.coupon_details && post.coupon_details.length > 0) ? post.coupon_details : extractedDetails;
+      coupon = finalCoupons.length > 0 ? finalCoupons[0] : null;
+
       // Robust Country Extraction with Tatweel Normalization
-      if (/كندا|🇨🇦|canada/i.test(cleanNorm)) {
+      if (/سعودية|السعودية|🇸🇦|saudi|ksa/i.test(cleanNorm)) {
+        country = "السعودية 🇸🇦";
+      } else if (/إمارات|الامارات|الإمارات|🇦🇪|uae|emirates/i.test(cleanNorm)) {
+        country = "الإمارات 🇦🇪";
+      } else if (/قطر|🇶🇦|qatar/i.test(cleanNorm)) {
+        country = "قطر 🇶🇦";
+      } else if (/كويت|الكويت|🇰🇼|kuwait/i.test(cleanNorm)) {
+        country = "الكويت 🇰🇼";
+      } else if (/بحرين|البحرين|🇧🇭|bahrain/i.test(cleanNorm)) {
+        country = "البحرين 🇧🇭";
+      } else if (/عمان|عُمان|🇴🇲|oman/i.test(cleanNorm)) {
+        country = "عمان 🇴🇲";
+      } else if (/كندا|🇨🇦|canada/i.test(cleanNorm)) {
         country = "كندا 🇨🇦";
       } else if (/كوريا|🇰🇷|korea/i.test(cleanNorm)) {
         country = "كوريا 🇰🇷";
@@ -4508,8 +4594,25 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         country = "أستراليا 🇦🇺";
       } else if (/إسبانيا|اسبانيا|🇪🇸|spain/i.test(cleanNorm)) {
         country = "إسبانيا 🇪🇸";
-      } else if (/(?:خلي\\s*البلد|بلد\\s*الحساب)/i.test(cleanNorm)) {
+      } else if (/(?:خلي\s*البلد|بلد\s*الحساب|ضع\s*البلد)/i.test(cleanNorm)) {
         country = "كندا 🇨🇦";
+      }
+
+      // Clean description extraction (spec lines without telegram handles or affiliate links)
+      let cleanDesc = post.description || '';
+      if (!cleanDesc) {
+        const stripKeywords = ['http://', 'https://', 't.me/', 's.click', 'aliexpress.com', 'رابط الشراء', 'بوت', 'قناتنا', 'تابعونا', 'خلي البلد', 'بلد الحساب', 'ضع البلد', 'السعر', 'prix', 'price'];
+        const descLines = [];
+        for (const l of lines) {
+          const ll = l.toLowerCase();
+          if (stripKeywords.some(kw => ll.includes(kw))) continue;
+          if (/https?:\/\/|t\.me\/|@[a-zA-Z0-9_]+/i.test(l)) continue;
+          if (/^(?:🎟️|🎫|•|\-|\*)?\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\s*promo|(?:ال)?قسيمة|code|coupon)\b/i.test(l)) continue;
+          if (/^(?:🎟️|🎫)\s*[$€]?[0-9]+/i.test(l)) continue;
+          const cl = l.replace(/https?:\/\/\S+/g, '').replace(/@[a-zA-Z0-9_]+/g, '').replace(/<\/?[a-zA-Z0-9_-]+>/g, '').trim();
+          if (cl.length > 1) descLines.push(cl);
+        }
+        cleanDesc = descLines.join('\n').trim();
       }
 
       hasCoins = text.includes('عملات') || text.includes('Coins') || text.includes('coins') || text.includes('🪙');
@@ -4538,6 +4641,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (priceUsd) priceDzd = Math.round(priceUsd * usdtRate);
       else if (priceEur) priceDzd = Math.round(priceEur * (usdtRate * 1.08));
 
+      const coupons = post.coupons || (coupon ? [coupon] : []);
+      const couponDetails = post.coupon_details || (coupon ? [{ code: coupon, tier: '', label: 'كوبون' }] : []);
+      const description = post.description || '';
+
       return {
         id: 'deal-' + index,
         title,
@@ -4545,6 +4652,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         price_eur: priceEur,
         price_dzd: priceDzd,
         coupon,
+        coupon_code: coupon,
+        coupons,
+        coupon_details: couponDetails,
+        description,
         country,
         has_coins: hasCoins,
         category,
@@ -4777,8 +4888,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-2.5 cursor-pointer group flex items-center justify-center border" style="background-color: var(--bg-page); border-color: var(--border-card);" onclick="openDealModal('${deal.id}')">
             <img src="${deal.photo_url}" alt="${safeTitle}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="handleImgError(this, '${escapeHtml(deal.photo_url)}')" class="w-full h-full object-contain group-hover:scale-102 transition-transform duration-200">
             ${favBtnHtml}
-            ${deal.has_coins ? `<span class="absolute top-2 left-2 bg-amber-500 text-zinc-950 text-[10px] font-bold px-1.5 py-0.5 rounded flex items-center gap-1 shadow-sm tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
-            ${deal.country ? `<span class="absolute ${deal.has_coins ? 'top-8' : 'top-2'} left-2 text-[10px] px-1.5 py-0.5 rounded font-bold border shadow-sm flex items-center gap-1" style="background-color: rgba(14, 18, 27, 0.92); border-color: var(--border-card); color: #fafafa;"><span class="text-amber-400 font-normal">📍</span> ${escapeHtml(deal.country)}</span>` : ''}
+            <div class="absolute top-2 left-2 flex flex-col items-start gap-1 z-10 pointer-events-none">
+              ${deal.country ? `<span class="text-[10px] sm:text-[11px] font-black px-2 py-0.5 rounded shadow border flex items-center gap-1 backdrop-blur-md" style="background-color: #e11d48; border-color: rgba(255, 255, 255, 0.35); color: #ffffff;"><i class="fa-solid fa-location-dot text-[9px]"></i> <span>خلي البلد: ${escapeHtml(deal.country)}</span></span>` : ''}
+              ${deal.has_coins ? `<span class="bg-amber-500 text-zinc-950 text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm flex items-center gap-1 tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
+            </div>
           </div>
         ` : `
           <div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-2.5 cursor-pointer group flex items-center justify-center border" style="background-color: var(--bg-page); border-color: var(--border-card);" onclick="openDealModal('${deal.id}')">
@@ -4787,8 +4900,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               <span class="text-[11px] font-semibold" style="color: var(--text-muted);">${safeTitle.slice(0, 30)}...</span>
             </div>
             ${favBtnHtml}
-            ${deal.has_coins ? `<span class="absolute top-2 left-2 bg-amber-500 text-zinc-950 text-[10px] font-bold px-1.5 py-0.5 rounded flex items-center gap-1 shadow-sm tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
-            ${deal.country ? `<span class="absolute ${deal.has_coins ? 'top-8' : 'top-2'} left-2 text-[10px] px-1.5 py-0.5 rounded font-bold border shadow-sm flex items-center gap-1" style="background-color: rgba(14, 18, 27, 0.92); border-color: var(--border-card); color: #fafafa;"><span class="text-amber-400 font-normal">📍</span> ${escapeHtml(deal.country)}</span>` : ''}
+            <div class="absolute top-2 left-2 flex flex-col items-start gap-1 z-10 pointer-events-none">
+              ${deal.country ? `<span class="text-[10px] sm:text-[11px] font-black px-2 py-0.5 rounded shadow border flex items-center gap-1 backdrop-blur-md" style="background-color: #e11d48; border-color: rgba(255, 255, 255, 0.35); color: #ffffff;"><i class="fa-solid fa-location-dot text-[9px]"></i> <span>خلي البلد: ${escapeHtml(deal.country)}</span></span>` : ''}
+              ${deal.has_coins ? `<span class="bg-amber-500 text-zinc-950 text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm flex items-center gap-1 tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
+            </div>
           </div>
         `;
 
@@ -4815,7 +4930,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         card.innerHTML = `
           <div>
             ${photoHtml}
-            <div class="flex items-center justify-between gap-2 mb-1.5">
+            <div class="flex items-center justify-between gap-2 mb-1">
               <span class="text-[10px] font-bold px-2 py-0.5 rounded border font-heading" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
                 ${deal.category_label || I18N[currentLang].deal_category_fallback}
               </span>
@@ -4824,6 +4939,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
                 ${deal.date ? deal.date.split(' ')[0] : ''}
               </span>
             </div>
+            ${deal.country ? `
+              <div class="mb-2 px-2 py-0.5 rounded text-[11px] font-bold flex items-center gap-1.5 border border-rose-500/25 bg-rose-500/10 text-rose-600 dark:text-rose-400">
+                <i class="fa-solid fa-location-dot text-[10px] flex-shrink-0"></i>
+                <span class="truncate">${currentLang === 'fr' ? 'Régler pays:' : 'شرط السعر: خلي البلد'} <strong>${escapeHtml(deal.country)}</strong></span>
+              </div>
+            ` : ''}
             <h3 class="font-bold text-xs sm:text-sm line-clamp-2 mb-2 hover:text-rose-500 transition cursor-pointer leading-snug break-words font-heading" style="color: var(--text-main);" onclick="openDealModal('${deal.id}')">
               ${safeTitle}
             </h3>
@@ -4948,23 +5069,85 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       cat.textContent = deal.category_label || t('deal_category_fallback', 'عرض مميز');
       date.textContent = deal.date || '';
 
+      const countryAlert = document.getElementById('modal-country-alert');
+      const countryTarget = document.getElementById('modal-country-target');
       if (deal.country) {
-        country.innerHTML = `<span class="text-amber-400 font-normal">📍</span> خلي البلد: <span class="font-bold text-white">${escapeHtml(deal.country)}</span>`;
+        country.innerHTML = `<i class="fa-solid fa-location-dot text-[10px]"></i> <span>خلي البلد: ${escapeHtml(deal.country)}</span>`;
         country.classList.remove('hidden');
+        if (countryAlert && countryTarget) {
+          countryTarget.textContent = deal.country;
+          countryAlert.classList.remove('hidden');
+          countryAlert.style.display = 'flex';
+        }
       } else {
         country.classList.add('hidden');
+        if (countryAlert) {
+          countryAlert.classList.add('hidden');
+          countryAlert.style.display = 'none';
+        }
       }
 
       if (deal.has_coins) coins.classList.remove('hidden');
       else coins.classList.add('hidden');
 
-      if (deal.coupon) {
-        couponWrap.classList.remove('hidden');
-        couponWrap.style.display = 'flex';
-        couponCode.textContent = deal.coupon;
+      // Multi-coupon & single coupon handling
+      const multiWrap = document.getElementById('modal-multi-coupons');
+      const coupons = deal.coupons || (deal.coupon ? [deal.coupon] : []);
+      const details = deal.coupon_details || [];
+
+      if (coupons.length > 1) {
+        if (couponWrap) { couponWrap.classList.add('hidden'); couponWrap.style.display = 'none'; }
+        if (multiWrap) {
+          multiWrap.classList.remove('hidden');
+          multiWrap.style.display = 'flex';
+          multiWrap.innerHTML = coupons.map((c, i) => {
+            const det = details.find(d => d.code === c) || {};
+            const lbl = det.label || (i === 0 ? 'كوبون' : 'كوبون إضافي');
+            const tierBadge = det.tier ? `<span class="bg-rose-500/10 text-rose-500 text-[10px] font-bold px-1.5 py-0.5 rounded border border-rose-500/20">${escapeHtml(det.tier)}</span>` : '';
+            return `
+              <div class="border border-dashed rounded-xl p-2.5 flex items-center justify-between gap-2" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+                <div class="flex items-center gap-2 min-w-0">
+                  <i class="fa-solid fa-ticket text-sm flex-shrink-0 text-amber-500"></i>
+                  <div class="min-w-0">
+                    <div class="text-[10px] opacity-75 flex items-center gap-1">${escapeHtml(lbl)} ${tierBadge}</div>
+                    <span class="font-mono font-bold text-sm tracking-wider truncate block" style="color: var(--text-main);">${escapeHtml(c)}</span>
+                  </div>
+                </div>
+                <button onclick="copyCoupon('${escapeHtml(c)}', this)" class="min-h-[36px] px-3 py-1 border active:scale-95 text-xs font-bold rounded-lg transition flex items-center gap-1 flex-shrink-0 touch-manipulation cursor-pointer" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">
+                  <i class="fa-regular fa-copy text-[11px]"></i>
+                  <span class="copy-text">${I18N[currentLang].btn_copy}</span>
+                </button>
+              </div>
+            `;
+          }).join('');
+        }
+      } else if (coupons.length === 1) {
+        if (multiWrap) { multiWrap.classList.add('hidden'); multiWrap.style.display = 'none'; }
+        if (couponWrap) {
+          couponWrap.classList.remove('hidden');
+          couponWrap.style.display = 'flex';
+          couponCode.textContent = coupons[0];
+        }
       } else {
-        couponWrap.classList.add('hidden');
-        couponWrap.style.display = 'none';
+        if (multiWrap) { multiWrap.classList.add('hidden'); multiWrap.style.display = 'none'; }
+        if (couponWrap) {
+          couponWrap.classList.add('hidden');
+          couponWrap.style.display = 'none';
+        }
+      }
+
+      // Clean Description / Specs in modal
+      const descWrap = document.getElementById('modal-desc-wrap');
+      const descText = document.getElementById('modal-desc-text');
+      if (descWrap && descText) {
+        if (deal.description && deal.description.trim().length > 3) {
+          descText.textContent = deal.description.trim();
+          descWrap.classList.remove('hidden');
+          descWrap.style.display = 'block';
+        } else {
+          descWrap.classList.add('hidden');
+          descWrap.style.display = 'none';
+        }
       }
 
       price.innerHTML = formatPrice(deal);
@@ -5004,12 +5187,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         fireConfetti(btn);
         showToast((I18N[currentLang].btn_copied || 'تم النسخ!') + ' ' + code);
         if (btn) {
-          const span = btn.querySelector('.copy-text');
+          const span = btn.querySelector('.copy-text') || btn.querySelector('span');
           const icon = btn.querySelector('i');
           const origIcon = icon ? icon.className : '';
           const origText = span ? span.textContent : '';
           
-          if (span) span.textContent = I18N[currentLang].btn_copied;
+          if (span) span.textContent = I18N[currentLang].btn_copied || 'تم النسخ!';
           if (icon) icon.className = 'fa-solid fa-check text-[11px] text-emerald-500';
           btn.classList.add('border-emerald-500', 'text-emerald-500');
           
@@ -5374,22 +5557,21 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
                   stepEl.classList.remove('opacity-40');
                   stepEl.style.borderColor = 'rgba(16, 185, 129, 0.4)';
                   if (badge) {
-                    badge.className = 'w-6 h-6 rounded-full bg-emerald-500 text-white font-bold text-[11px] flex items-center justify-center shadow';
+                    badge.className = 'w-5 h-5 rounded-full bg-emerald-500 text-white font-bold text-[10px] flex items-center justify-center';
                   }
                 } else {
                   stepEl.classList.add('opacity-40');
                   stepEl.style.borderColor = 'var(--border-card)';
                   if (badge) {
-                    badge.className = 'w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center';
+                    badge.className = 'w-5 h-5 rounded-full bg-zinc-600 text-white font-bold text-[10px] flex items-center justify-center';
                   }
                 }
                 if (st.active) {
                   activeStepNum = st.step;
                   stepEl.classList.remove('opacity-40');
-                  stepEl.style.borderColor = 'rgba(59, 130, 246, 0.6)';
-                  stepEl.style.boxShadow = '0 0 15px -3px rgba(59, 130, 246, 0.25)';
+                  stepEl.style.borderColor = 'var(--border-subtle)';
                   if (badge) {
-                    badge.className = 'w-6 h-6 rounded-full bg-blue-500 text-white font-bold text-[11px] flex items-center justify-center shadow ring-2 ring-blue-400/40 animate-pulse';
+                    badge.className = 'w-5 h-5 rounded-full bg-emerald-500 text-white font-bold text-[10px] flex items-center justify-center ring-2 ring-emerald-500/40 animate-pulse';
                   }
                 }
               }
@@ -5449,7 +5631,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.innerHTML = '<i class="fa-solid fa-magnifying-glass-location text-sm"></i> ' + (currentLang === 'fr' ? 'Suivre le colis' : 'تتبع الطرد الآن');
+          submitBtn.innerHTML = '<i class="fa-solid fa-magnifying-glass text-xs"></i> ' + (currentLang === 'fr' ? 'Suivre le colis' : 'تتبع الشحنة');
         }
       }
     }

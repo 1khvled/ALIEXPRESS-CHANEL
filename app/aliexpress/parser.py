@@ -59,10 +59,19 @@ POINTS_PATTERNS = [
 ]
 
 COUNTRY_PATTERNS = [
-    (re.compile(r'(?:دولة|البلد|بلد الحساب|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*كندا|🇨🇦', re.IGNORECASE), "كندا 🇨🇦"),
-    (re.compile(r'(?:دولة|البلد|بلد الحساب|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*كوريا|🇰🇷', re.IGNORECASE), "كوريا 🇰🇷"),
-    (re.compile(r'(?:دولة|البلد|بلد الحساب|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*فرنسا|🇫🇷', re.IGNORECASE), "فرنسا 🇫🇷"),
-    (re.compile(r'(?:ديرو|دير|بلاد|دولة|البلد|بلد الحساب)\s*(?:بلاد\s*|دولة\s*)?الجزائر|🇩🇿', re.IGNORECASE), "الجزائر 🇩🇿"),
+    (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*السعودية|🇸🇦', re.IGNORECASE), "السعودية 🇸🇦"),
+    (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*(?:الإمارات|الامارات)|🇦🇪', re.IGNORECASE), "الإمارات 🇦🇪"),
+    (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*قطر|🇶🇦', re.IGNORECASE), "قطر 🇶🇦"),
+    (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*الكويت|🇰🇼', re.IGNORECASE), "الكويت 🇰🇼"),
+    (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*البحرين|🇧🇭', re.IGNORECASE), "البحرين 🇧🇭"),
+    (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*(?:عمان|عُمان)|🇴🇲', re.IGNORECASE), "عمان 🇴🇲"),
+    (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*كندا|🇨🇦', re.IGNORECASE), "كندا 🇨🇦"),
+    (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*كوريا|🇰🇷', re.IGNORECASE), "كوريا 🇰🇷"),
+    (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*فرنسا|🇫🇷', re.IGNORECASE), "فرنسا 🇫🇷"),
+    (re.compile(r'(?:ديرو|دير|بلاد|دولة|البلد|بلد الحساب|ضع البلد|خلي البلد)\s*(?:بلاد\s*|دولة\s*)?الجزائر|🇩🇿', re.IGNORECASE), "الجزائر 🇩🇿"),
+    (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*(?:إسبانيا|اسبانيا)|🇪🇸', re.IGNORECASE), "إسبانيا 🇪🇸"),
+    (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*(?:أوكرانيا|اوكرانيا)|🇺🇦', re.IGNORECASE), "أوكرانيا 🇺🇦"),
+    (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*(?:أستراليا|استراليا)|🇦🇺', re.IGNORECASE), "أستراليا 🇦🇺"),
 ]
 
 BLOCKED_STORE_KEYWORDS = [
@@ -445,7 +454,7 @@ def is_competitor_branded_code(code: str) -> bool:
     if not code:
         return False
     cl = code.lower().strip()
-    for brand in ["anis", "bnd", "zed", "lody", "ecks", "megaprix", "megaphonna", "cp4dz", "francecp"]:
+    for brand in ["anis", "bnd", "zed", "lody", "ecks", "megaprix", "megaphonna", "cp4dz", "francecp", "alifrdrop", "anishays", "couponsglobal"]:
         if cl.startswith(brand) or f"_{brand}" in cl or f"-{brand}" in cl:
             return True
         if brand in ["anis", "megaprix", "megaphonna", "ecks"] and brand in cl:
@@ -453,9 +462,261 @@ def is_competitor_branded_code(code: str) -> bool:
     return False
 
 
+BLACKLIST_COUPONS = {
+    "http", "https", "aliexpress", "item", "items", "link", "url", "temu", "html", "bot",
+    "t.me", "dzgamingcoinbot", "coinbot", "coins", "channel", "click", "s.click",
+    "dzaliexpress0", "francedealsdz", "france", "canada", "algerie", "livraison",
+    "promo", "promos", "reduction", "reductions", "remise", "code", "codes", "coupon", "coupons",
+    "seller", "store", "vendeur", "boutique", "magasin", "shop", "online",
+    "choice", "plus", "super", "deal", "deals", "price", "prix", "order",
+    "camera", "battery", "android", "snapdragon", "display", "screen",
+    "global", "version", "edition", "original", "usbc", "typec",
+    "realme", "vivo", "iqoo", "redmi", "xiaomi", "poco", "samsung", "infinix",
+    "oppo", "honor", "huawei", "apple", "iphone", "ipad", "oneplus", "lenovo",
+    "motorola", "blackview", "cubot", "oukitel", "doogee", "tecno", "itel", "nubia", "zte",
+    "note", "pad", "tab", "watch", "band", "buds", "air", "phone", "z11s", "c71",
+    "ram", "rom", "used", "new", "pro", "max", "lite", "mini", "neo", "ultra",
+    "8gb", "16gb", "32gb", "64gb", "128gb", "256gb", "512gb", "1tb", "2tb", "4gb", "6gb", "2gb"
+}
+
+
+def clean_coupon_token(raw: str) -> Optional[str]:
+    """Validates and cleans a potential coupon token string."""
+    if not raw:
+        return None
+    c = raw.strip()
+    c = re.sub(r'^[<>/`*#()\[\]{}:;,\.=\-+ـ]+|[<>/`*#()\[\]{}:;,\.=\-+ـ]+$', '', c).strip()
+    c = c.replace("<code>", "").replace("</code>", "")
+    c = c.upper()
+
+    if len(c) < 3 or len(c) > 25:
+        return None
+    if not re.search(r'[A-Za-z]', c):
+        return None
+    c_lower = c.lower()
+    if c_lower in BLACKLIST_COUPONS:
+        return None
+    if re.search(r'^\d+(?:gb|tb|mb|g|ram|rom|t)$', c_lower):
+        return None
+    if any(b in c_lower for b in ["http", "t.me", "click", "item/"]):
+        return None
+    if c_lower.startswith("item"):
+        return None
+    if is_competitor_branded_code(c):
+        return None
+    return c
+
+
+def extract_multi_coupons(raw_text: str) -> Dict[str, Any]:
+    """
+    Comprehensive multi-coupon and description extractor for Telegram deal posts.
+    Extracts ALL promo codes, spend/discount tiers, and labels from various formats:
+      - 'كوبون: CODE1', 'كوبون آخر: CODE2', 'كود المتجر: CODE3'
+      - '🎟️ 6/49$ : WOAE06', '🎟️ 12/89$ : WOAE12'
+      - 'كود: CODE1 / CODE2'
+      - 'Code promo: CODE1'
+      - 'قسيمة: CODE1'
+    Filters out blacklist noise and competitor-branded codes.
+    Returns:
+      {
+        "coupons": List[str],             # All unique valid coupon codes
+        "coupon_details": List[Dict],      # [{"code": str, "tier": str, "label": str}]
+        "coupon_code": Optional[str],     # First code (for backward compatibility)
+        "description": str                # Cleaned description stripping URLs, bots, affiliate links
+      }
+    """
+    if not raw_text:
+        return {
+            "coupons": [],
+            "coupon_details": [],
+            "coupon_code": None,
+            "description": ""
+        }
+
+    norm = re.sub(r'[\u0640]', '', raw_text)
+
+    coupons: List[str] = []
+    coupon_details: List[Dict[str, str]] = []
+    seen_codes = set()
+
+    def add_coupon(code_str: str, label: str = "كوبون", tier: str = ""):
+        c = clean_coupon_token(code_str)
+        if not c:
+            return
+        clean_tier = ""
+        if tier:
+            t = re.sub(r'\s+', '', tier.strip())
+            if not t.startswith('$') and not t.endswith('$') and not t.startswith('€') and not t.endswith('€'):
+                t = f"{t}$"
+            clean_tier = t
+
+        clean_label = label.strip() if label else "كوبون"
+        clean_label = re.sub(r'^[🏷️🎟️🎫•\-\*:\s]+|[🏷️🎟️🎫•\-\*:\s]+$', '', clean_label).strip()
+        if not clean_label:
+            clean_label = "كوبون"
+
+        if c not in seen_codes:
+            seen_codes.add(c)
+            coupons.append(c)
+            coupon_details.append({
+                "code": c,
+                "tier": clean_tier,
+                "label": clean_label
+            })
+        else:
+            # Upgrade existing entry if current match has a richer tier or more specific label
+            for d in coupon_details:
+                if d["code"] == c:
+                    if not d.get("tier") and clean_tier:
+                        d["tier"] = clean_tier
+                    if (not d.get("label") or d.get("label") == "كوبون") and clean_label and clean_label != "كوبون":
+                        d["label"] = clean_label
+                    break
+
+    # 1. Tier-First Pattern: '🎟️ 6/49$ : WOAE06' or 'كوبون 4/35$ : BDQT04' or 'خصم 2/15$ بكود OTPRD02'
+    p1 = re.compile(
+        r'(?P<prefix>🎟️?|🎫|•|\-|\*)?[^\S\r\n]*(?P<label>(?:ال)?كوبون(?:\s*آخر|\s*إضافي)?|(?:ال)?كود(?:\s*آخر|\s*إضافي)?|code\s*promo|(?:ال)?قسيمة|خصم|تخفيض)?[^\S\r\n]*'
+        r'(?P<tier>[$€]?[0-9]+(?:\.[0-9]+)?[^\S\r\n]*/[^\S\r\n]*[$€]?[0-9]+(?:\.[0-9]+)?[$€]?)[^\S\r\n]*'
+        r'(?:بكود|code|:|=|：|\-)?[^\S\r\n]*\r?\n?[^\S\r\n]*(?P<code>[A-Za-z0-9_-]{3,25})',
+        re.IGNORECASE
+    )
+    for m in p1.finditer(norm):
+        lbl = m.group('label')
+        pfx = m.group('prefix')
+        tier_val = m.group('tier') or ""
+        # Guard: If no coupon label or prefix, tier MUST contain currency symbol to avoid specs like 3/64
+        if not lbl and not pfx and not re.search(r'[$€]', tier_val):
+            continue
+        add_coupon(m.group('code'), label=lbl or "كوبون", tier=tier_val)
+
+    # 2. Code-First Pattern: 'OTPRD02 : 2/15$' or 'كود OTPRD02 (2/15$)'
+    p2 = re.compile(
+        r'(?P<prefix>🎟️?|🎫|•|\-|\*)?[^\S\r\n]*(?P<label>(?:ال)?كوبون(?:\s*آخر|\s*إضافي)?|(?:ال)?كود(?:\s*آخر|\s*إضافي)?|code\s*promo|(?:ال)?قسيمة)?[^\S\r\n]*'
+        r'(?P<code>[A-Za-z][A-Za-z0-9_-]{2,24})[^\S\r\n]*'
+        r'(?:[:=：\-]|خصم|بخصم|\()?[^\S\r\n]*\r?\n?[^\S\r\n]*'
+        r'(?P<tier>[$€]?[0-9]+(?:\.[0-9]+)?[^\S\r\n]*/[^\S\r\n]*[$€]?[0-9]+(?:\.[0-9]+)?[$€]?)\)?',
+        re.IGNORECASE
+    )
+    for m in p2.finditer(norm):
+        lbl = m.group('label')
+        pfx = m.group('prefix')
+        tier_val = m.group('tier') or ""
+        # Guard: Require either label or prefix, AND tier must have currency symbol (avoids phone specs like Note 12 4/128, C71 3/64)
+        if not lbl and not pfx:
+            continue
+        if not re.search(r'[$€]', tier_val):
+            continue
+        add_coupon(m.group('code'), label=lbl or "كوبون", tier=tier_val)
+
+    # 3. Labeled Lines & Slashed / Multi-Code Lines:
+    # 'كوبون: CODE1', 'كوبون آخر: CODE2', 'كود المتجر: CODE3', 'كود: CODE1 / CODE2'
+    # 'Code promo: CODE1', 'قسيمة: CODE1', 'قسيمة المتجر: CODE1'
+    p_line_label = re.compile(
+        r'^[^\S\r\n]*(?P<label>'
+        r'(?:(?:🏷️|🎟️|🎫|👊|🏷|🎟)\s*)?'
+        r'(?:'
+        r'(?:استخدم\s+|استعمل\s+|انسخ\s+|بكود\s+)?(?:ال)?كوبون\s*(?:آخر|اخر|إضافي|اضافي|خاص|البائع|المتجر|الخصم|التخفيض)?|'
+        r'(?:استخدم\s+|استعمل\s+|انسخ\s+|بكود\s+)?(?:ال)?كود\s*(?:آخر|اخر|إضافي|اضافي|خاص|البائع|المتجر|الخصم|التخفيض|الشراء)?|'
+        r'(?:ال)?قسيمة\s*(?:أخرى|اخرى|إضافية|اضافية|خاصة|البائع|المتجر|الخصم|التخفيض)?|'
+        r'(?:ال)?قسيمـ?ة|'
+        r'code\s*promo(?:\s*\d+)?|code\s*de\s*r[ée]duction|code\s*r[ée]duction|bon\s*de\s*r[ée]duction|'
+        r'coupon\s*vendeur|store\s*coupon|seller\s*coupon|utilisez\s*(?:le\s*)?code|avec\s*(?:le\s*)?code|'
+        r'promo\s*code|coupon'
+        r')'
+        r'|'
+        r'(?:🏷️|🎟️|🎫|👊)'
+        r')'
+        r'[\s:：\-=ـ_•*~|()✅🔥👉✔️⏺🙏💵💰🎁📌⚡💥🤐]*'
+        r'(?P<content>[^\r\n]+)',
+        re.IGNORECASE | re.MULTILINE
+    )
+    for m in p_line_label.finditer(norm):
+        lbl = m.group('label') or "كوبون"
+        content = m.group('content').strip()
+
+        # Check if content has an embedded spend tier e.g. "WOAE06 (6/49$)"
+        tier_m = re.search(r'\(?([$€]?[0-9]+(?:\.[0-9]+)?/[0-9]+(?:\.[0-9]+)?[$€]?)\)?', content)
+        line_tier = tier_m.group(1) if tier_m else ""
+        if line_tier:
+            content = content.replace(tier_m.group(0), "")
+
+        # Split content on separators: '/', '|', '،', ',', ' أو ', ' ou ', ' or '
+        parts = re.split(r'[\/\|,،]|\s+(?:أو|or|ou)\s+', content)
+        for part in parts:
+            cand = part.strip()
+            tokens = re.findall(r'[A-Za-z0-9_-]{3,25}', cand)
+            for tok in tokens:
+                add_coupon(tok, label=lbl, tier=line_tier)
+
+    # 4. Fallback search for HTML <code> tags or backtick codes near coupon keywords
+    p_tags = re.compile(
+        r'(?:(?:ال)?كود|(?:ال)?كوبون|(?:ال)?قسيمة|code|coupon|promo)[^\r\n]{0,60}?(?:<code>|`|\*\*)([A-Za-z0-9_-]{3,25})(?:</code>|`|\*\*)',
+        re.IGNORECASE
+    )
+    for m in p_tags.finditer(norm):
+        add_coupon(m.group(1), label="كود الخصم")
+
+    # 5. Clean Description Extraction (strips URLs, bot tags, affiliate links, and spam footers)
+    strip_keywords = [
+        'http://', 'https://', 't.me/', 's.click.aliexpress', 'aliexpress.com',
+        'رابط الشراء', 'رابط العرض', 'رابط المنتج', 'رابط الطلب', 'رابط الكوبون', 'رابط التخفيض',
+        'للشراء من هنا', 'للطلب من هنا', 'للشراء', 'للطلب', 'lien d\'achat', 'lien du produit', 'acheter ici',
+        'بوت تخفيض', 'بوت العملات', 'بوت النقاط', 'بوت التخفيض', 'استخدم البوت', 'عبر البوت',
+        'قناتنا', 'قناة التلغرام', 'اشترك في', 'تابعنا على', 'تابعونا', 'انضم الى', 'انضم إلى',
+        'rejoignez', 'notre canal', 'notre chaîne',
+        'خلي البلد', 'خلي بلد', 'بلد الحساب', 'ديرو بلاد', 'ديرو الجزائر', 'livraison france',
+        'السعر بعد', 'سعر بعد', 'السعر :', 'السعر:', 'prix :', 'prix:', 'price :'
+    ]
+
+    cleaned_lines = []
+    lines = [l.strip() for l in norm.splitlines() if l.strip()]
+    for line in lines:
+        line_lower = line.lower()
+
+        # Check if line contains links, bots, or promo noise
+        if any(kw in line_lower for kw in strip_keywords):
+            continue
+        if re.search(r'https?://|t\.me/|@[a-zA-Z0-9_]+', line):
+            continue
+
+        # Check if line is a pure coupon code line (already extracted)
+        if re.match(r'^(?:🎟️|🎫|•|\-|\*)?\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\s*promo|(?:ال)?قسيمة|code|coupon)\b', line, re.IGNORECASE):
+            continue
+        if re.match(r'^(?:🎟️|🎫)\s*[$€]?[0-9]+', line):
+            continue
+
+        # Clean inline residual tags if any
+        clean_l = re.sub(r'https?://\S+', '', line)
+        clean_l = re.sub(r'@[a-zA-Z0-9_]+', '', clean_l).strip()
+        clean_l = re.sub(r'</?[a-zA-Z0-9_-]+>', '', clean_l).strip()
+
+        if clean_l and len(clean_l) > 1:
+            cleaned_lines.append(clean_l)
+
+    description = '\n'.join(cleaned_lines).strip()
+    primary_code = coupons[0] if coupons else None
+
+    return {
+        "coupons": coupons,
+        "coupon_details": coupon_details,
+        "coupon_code": primary_code,
+        "description": description
+    }
+
+
+# Backward-compatible alias
+extract_deal_coupons_and_description = extract_multi_coupons
+
+
 def extract_coupon(text: str) -> Optional[str]:
+    """Extracts the primary/first coupon code for backward compatibility."""
     if not text:
         return None
+    res = extract_multi_coupons(text)
+    if res.get("coupon_code"):
+        return res["coupon_code"]
+
+    # Fallback to legacy COUPON_PATTERNS
     norm = re.sub(r'[\u0640]', '', text)
     blacklist = {
         "http", "https", "aliexpress", "item", "link", "url", "temu", "html", "bot",
@@ -472,6 +733,7 @@ def extract_coupon(text: str) -> Optional[str]:
                 if not is_competitor_branded_code(code):
                     return code.upper()
     return None
+
 
 def extract_seller_coupon(text: str) -> Optional[str]:
     if not text:
@@ -547,10 +809,27 @@ def detect_points_discount(text: str) -> bool:
 def extract_country_instruction(text: str, url: str = "", title: str = "") -> str:
     """
     Intelligently detects which country setting is needed for maximum discount.
-    1. Reads explicit mentions or flags in text or url (Canada 🇨🇦, Korea 🇰🇷, Algeria 🇩🇿, France 🇫🇷, Spain 🇪🇸, Ukraine 🇺🇦, Australia 🇦🇺).
+    1. Reads explicit mentions or flags in text or url (Saudi Arabia 🇸🇦, UAE 🇦🇪, Canada 🇨🇦, Korea 🇰🇷, Algeria 🇩🇿, France 🇫🇷, Spain 🇪🇸, Ukraine 🇺🇦, Australia 🇦🇺, etc.).
     2. Defaults to Canada 🇨🇦 for coins and tech deals (standard 50-70%+ coin discounts).
     """
-    combined = f"{text or ''} {url or ''}".lower()
+    norm_text = re.sub(r'[\u0640]', '', f"{text or ''} {url or ''} {title or ''}")
+    combined = norm_text.lower()
+
+    # 0. Saudi Arabia detection (must be checked BEFORE fallback)
+    if any(k in combined for k in ["السعودية", "سعودية", "🇸🇦", "saudi", "ksa", "shiptocountry=sa", "country=sa"]) or re.search(r'\bsar\b', combined):
+        return "السعودية 🇸🇦"
+
+    # 0.5 UAE & Gulf countries
+    if any(k in combined for k in ["الإمارات", "الامارات", "امارات", "إمارات", "🇦🇪", "uae", "emirates", "shiptocountry=ae", "country=ae"]) or re.search(r'\baed\b', combined):
+        return "الإمارات 🇦🇪"
+    if any(k in combined for k in ["قطر", "🇶🇦", "qatar", "shiptocountry=qa", "country=qa"]) or re.search(r'\bqar\b', combined):
+        return "قطر 🇶🇦"
+    if any(k in combined for k in ["الكويت", "كويت", "🇰🇼", "kuwait", "shiptocountry=kw", "country=kw"]) or re.search(r'\bkwd\b', combined):
+        return "الكويت 🇰🇼"
+    if any(k in combined for k in ["البحرين", "بحرين", "🇧🇭", "bahrain", "shiptocountry=bh", "country=bh"]) or re.search(r'\bbhd\b', combined):
+        return "البحرين 🇧🇭"
+    if any(k in combined for k in ["عمان", "عُمان", "🇴🇲", "oman", "shiptocountry=om", "country=om"]) or re.search(r'\bomr\b', combined):
+        return "عمان 🇴🇲"
 
     # 1. Canada detection
     if any(k in combined for k in ["كندا", "🇨🇦", "canada", "cad", "shiptocountry=ca", "country=ca"]):
