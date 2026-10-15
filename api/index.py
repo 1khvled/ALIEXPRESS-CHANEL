@@ -14,8 +14,11 @@ from fastapi import FastAPI, Request, Query
 from fastapi.responses import HTMLResponse, JSONResponse, Response
 import httpx
 import copy
+import hashlib
+import hmac
 from bs4 import BeautifulSoup
 from api.user_site import USER_WEBSITE_HTML
+from api.admin_login import ADMIN_LOGIN_HTML
 
 app = FastAPI(title="DealScout DZ — AliExpress Deals & Live Telegram Content", version="2.5.0")
 
@@ -212,6 +215,18 @@ DASHBOARD_HTML = """<!DOCTYPE html>
           <i class="fa-solid fa-download"></i>
           <span>تثبيت التطبيق</span>
         </button>
+
+        <!-- Return to User Site -->
+        <a href="/" target="_blank" title="عرض موقع العروض العام" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-3 py-1.5 rounded-xl border border-slate-700 flex items-center gap-1.5 transition">
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          <span class="hidden sm:inline">موقع العروض</span>
+        </a>
+
+        <!-- Logout Button -->
+        <a href="/api/admin/logout" title="تسجيل الخروج" class="bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 text-xs px-3 py-1.5 rounded-xl border border-rose-500/20 flex items-center gap-1.5 transition active:scale-95">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span class="hidden sm:inline">خروج</span>
+        </a>
 
         <!-- Refresh Button -->
         <button onclick="refreshDashboard()" id="refresh-btn" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs px-3 py-1.5 rounded-xl border border-slate-700 flex items-center gap-1.5 transition active:scale-95">
@@ -1142,11 +1157,78 @@ async def user_website():
     return HTMLResponse(content=USER_WEBSITE_HTML)
 
 
+ADMIN_SESSION_COOKIE = "dealscout_admin_session"
+DEFAULT_ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "dealscout2026")
+
+
+def is_admin_authenticated(request: Request) -> bool:
+    """Checks if request has a valid admin session cookie, token, or bearer header."""
+    expected_token = hashlib.sha256(f"dealscout:{DEFAULT_ADMIN_PASSWORD}".encode()).hexdigest()
+
+    # 1. Check session cookie
+    token = request.cookies.get(ADMIN_SESSION_COOKIE)
+    if token and hmac.compare_digest(token, expected_token):
+        return True
+
+    # 2. Check query param ?key=... or ?token=... or ?pass=...
+    key = request.query_params.get("key") or request.query_params.get("token") or request.query_params.get("pass")
+    if key and (hmac.compare_digest(key, DEFAULT_ADMIN_PASSWORD) or hmac.compare_digest(key, expected_token)):
+        return True
+
+    # 3. Check Authorization header
+    auth_header = request.headers.get("Authorization", "")
+    if auth_header.startswith("Bearer "):
+        bearer = auth_header.replace("Bearer ", "").strip()
+        if hmac.compare_digest(bearer, DEFAULT_ADMIN_PASSWORD) or hmac.compare_digest(bearer, expected_token):
+            return True
+
+    return False
+
+
 @app.get("/admin", response_class=HTMLResponse)
 @app.get("/dashboard", response_class=HTMLResponse)
-async def admin_dashboard():
-    """Serves the administrative management and deal publishing dashboard."""
+async def admin_dashboard(request: Request):
+    """Serves the administrative management and deal publishing dashboard behind password protection."""
+    if not is_admin_authenticated(request):
+        return HTMLResponse(content=ADMIN_LOGIN_HTML)
     return HTMLResponse(content=DASHBOARD_HTML)
+
+
+@app.post("/api/admin/login")
+async def admin_login(request: Request):
+    """Authenticates admin password and sets secure session cookie."""
+    try:
+        data = await request.json()
+        password = str(data.get("password", "")).strip()
+    except Exception:
+        password = ""
+
+    if not password:
+        return JSONResponse({"success": False, "error": "يرجى إدخال كلمة المرور"}, status_code=400)
+
+    if hmac.compare_digest(password, DEFAULT_ADMIN_PASSWORD):
+        expected_token = hashlib.sha256(f"dealscout:{DEFAULT_ADMIN_PASSWORD}".encode()).hexdigest()
+        resp = JSONResponse({"success": True, "message": "تم تسجيل الدخول بنجاح"})
+        resp.set_cookie(
+            key=ADMIN_SESSION_COOKIE,
+            value=expected_token,
+            max_age=60 * 60 * 24 * 7,  # 7 days
+            httponly=True,
+            samesite="lax"
+        )
+        return resp
+
+    return JSONResponse({"success": False, "error": "كلمة المرور غير صحيحة!"}, status_code=401)
+
+
+@app.get("/api/admin/logout")
+@app.post("/api/admin/logout")
+async def admin_logout():
+    """Logs out admin and redirects back to admin login page."""
+    from fastapi.responses import RedirectResponse
+    resp = RedirectResponse(url="/admin", status_code=303)
+    resp.delete_cookie(ADMIN_SESSION_COOKIE)
+    return resp
 
 
 # In-memory deals cache with 60s TTL
