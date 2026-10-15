@@ -13,9 +13,11 @@ from datetime import datetime, timezone, timedelta
 from fastapi import FastAPI, Request, Query
 from fastapi.responses import HTMLResponse, JSONResponse, Response
 import httpx
+import copy
 from bs4 import BeautifulSoup
+from api.user_site import USER_WEBSITE_HTML
 
-app = FastAPI(title="DealScout DZ Dashboard", version="2.0.1")
+app = FastAPI(title="DealScout DZ — AliExpress Deals & Live Telegram Content", version="2.5.0")
 
 # ── Manifest JSON ───────────────────────────────────────────────
 MANIFEST_JSON = """{
@@ -1135,9 +1137,248 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 
 # ── Web App & PWA Routes ─────────────────────────────────────────
 @app.get("/", response_class=HTMLResponse)
-async def dashboard():
-    """Serves the modern responsive installable dashboard."""
+async def user_website():
+    """Serves the modern user-facing AliExpress deals website with live Telegram feed."""
+    return HTMLResponse(content=USER_WEBSITE_HTML)
+
+
+@app.get("/admin", response_class=HTMLResponse)
+@app.get("/dashboard", response_class=HTMLResponse)
+async def admin_dashboard():
+    """Serves the administrative management and deal publishing dashboard."""
     return HTMLResponse(content=DASHBOARD_HTML)
+
+
+# In-memory deals cache with 60s TTL
+_DEALS_CACHE = {}
+
+
+def parse_telegram_deal_block(block, clean_ch: str, usdt_rate: float = 249.0):
+    """Parses a Telegram web preview widget into a structured Deal object."""
+    text_div = block.find("div", class_="tgme_widget_message_text")
+    if not text_div:
+        return None
+
+    tdiv_clone = copy.copy(text_div)
+    for br in tdiv_clone.find_all("br"):
+        br.replace_with("\n")
+    raw_text = tdiv_clone.get_text().strip()
+    if not raw_text:
+        return None
+
+    data_post = block.get("data-post", "")
+    msg_id = data_post.split("/")[-1] if "/" in data_post else ""
+    telegram_url = f"https://t.me/{data_post}" if data_post else f"https://t.me/{clean_ch}"
+
+    photo_url = None
+    photo_wrap = block.find("a", class_="tgme_widget_message_photo_wrap")
+    if photo_wrap and photo_wrap.get("style"):
+        m = re.search(r"url\('([^']+)'\)", photo_wrap["style"])
+        if m:
+            photo_url = m.group(1)
+    if not photo_url:
+        img_tag = block.find("img")
+        if img_tag and img_tag.get("src"):
+            photo_url = img_tag["src"]
+
+    date_str = ""
+    time_el = block.find("time")
+    if time_el and time_el.get("datetime"):
+        try:
+            dt = datetime.fromisoformat(time_el["datetime"].replace("Z", "+00:00"))
+            date_str = dt.strftime("%Y-%m-%d %H:%M")
+        except Exception:
+            date_str = time_el.get("datetime", "")
+
+    link_m = re.search(r'https?://s\.click\.aliexpress\.com/e/[A-Za-z0-9_-]+', raw_text)
+    affiliate_url = link_m.group(0) if link_m else telegram_url
+
+    is_tajmi3at = any(k in raw_text for k in ["تجميعة", "أقوى عروض", "Récapitulatif", "Meilleurs Bons Plans"])
+
+    title = None
+    title_m = re.search(r'✅\s*([^\n]+)', raw_text)
+    if title_m:
+        title = title_m.group(1).strip()
+    elif "تخفيض لـ" in raw_text:
+        t_m = re.search(r'تخفيض لـ\s*([^\n]+)', raw_text)
+        if t_m:
+            title = t_m.group(1).strip()
+    elif is_tajmi3at:
+        title = raw_text.split("\n")[0].replace("📱", "").replace("🎮", "").replace("🔥", "").strip()
+    else:
+        for line in raw_text.split("\n"):
+            line_s = line.strip()
+            if line_s and not any(p in line_s for p in ["📍", "خلي", "http", "بوت", "📢", "@", "💰", "🎟️"]):
+                title = line_s
+                break
+    if not title:
+        title = "AliExpress Deal"
+
+    currency = "EUR" if "france" in clean_ch.lower() else "USD"
+    price_val = None
+    price_m = re.search(r'(?:السعر|Prix)\s*:\s*[\$€]?\s*([\d\.]+)', raw_text, re.IGNORECASE)
+    if not price_m:
+        price_m = re.search(r'[\$💰]\s*([\d\.]+)|([\d\.]+)\s*[\$€]', raw_text)
+    if price_m:
+        try:
+            raw_val = price_m.group(1) or price_m.group(2)
+            price_val = float(raw_val)
+        except Exception:
+            pass
+
+    price_usd = price_val if currency == "USD" else (round(price_val * 1.08, 2) if price_val else None)
+    price_eur = price_val if currency == "EUR" else (round(price_val * 0.92, 2) if price_val else None)
+    price_dzd = None
+    if price_usd:
+        price_dzd = int(round(price_usd * usdt_rate, -1))
+    elif price_eur:
+        price_dzd = int(round(price_eur * usdt_rate * 1.09, -1))
+
+    coupon_code = None
+    c_m = re.search(r'(?:كـ?وبون|Code promo|Coupon)[^\n:]*[:\s]+([A-Za-z0-9_-]{4,15})', raw_text, re.IGNORECASE)
+    if c_m:
+        coupon_code = c_m.group(1).strip()
+
+    country = None
+    for line in raw_text.split("\n"):
+        if "خلي البل" in line or "بلد الحساب" in line or "Pays" in line:
+            country = line.replace("📍", "").replace("خلي البلـــد", "").replace("خلي البلد", "").replace("بلد الحساب", "").replace(":", "").strip()
+            break
+
+    has_coins = any(k in raw_text for k in ["عملات", "نقاط", "pièces", "coins", "Alilo07BOT", "🪙"])
+
+    comb = f"{title} {raw_text}".lower()
+    if is_tajmi3at:
+        cat = "tajmi3at"
+        cat_lbl = "تجميعة عروض 📦"
+    elif any(k in comb for k in ["phone", "smartphone", "poco", "redmi", "realme", "xiaomi", "honor", "samsung", "infinix", "oppo", "vivo", "iphone", "blackview", "cubot", "oukitel", "doogee", "tecno", "itel", "oneplus", "nubia", "zte", "motorola", "iqoo", "pad", "tablet", "هاتف", "تابلت", "لوحي"]):
+        cat = "smartphones"
+        cat_lbl = "هواتف ذكية 📱"
+    elif any(k in comb for k in ["mouse", "mice", "keyboard", "controller", "gamepad", "gaming", "attack shark", "ajazz", "aula", "vgn", "scyrox", "zaopin", "machenike", "gamesir", "darmoshark", "fantech", "ماوس", "كيبورد", "فارة", "قيمنق", "تحكم", "يد تحكم"]):
+        cat = "gaming"
+        cat_lbl = "قيمنق وإلكترونيات 🎮"
+    elif any(k in comb for k in ["earbuds", "earbud", "earphone", "earphones", "headphone", "headphones", "headset", "tws", "audio", "soundcore", "qcy", "haylou", "edifier", "lenovo lp", "lenovo xt", "moondrop", "iem", "سماعات", "سماعة", "صوتيات", "ايربودز"]):
+        cat = "audio"
+        cat_lbl = "سماعات وصوتيات 🎧"
+    elif any(k in comb for k in ["charger", "gan", "cable", "ssd", "nvme", "powerbank", "watch", "smartwatch", "wifi", "router", "repeater", "adapter", "stand", "laser", "shaver", "trimmer", "anker", "ugreen", "baseus", "toocki", "rocoren", "essager", "cusu", "walram", "شاحن", "كابل", "ساعة", "تخزين", "حلاقة", "بطارية"]):
+        cat = "tech"
+        cat_lbl = "شواحن وملحقات ⚡"
+    else:
+        cat = "other"
+        cat_lbl = "عروض منوعة 🏷️"
+
+    return {
+        "id": data_post or f"deal_{msg_id}",
+        "msg_id": msg_id,
+        "title": title,
+        "price_usd": price_usd,
+        "price_eur": price_eur,
+        "price_dzd": price_dzd,
+        "currency": currency,
+        "coupon_code": coupon_code,
+        "country": country,
+        "has_coins": has_coins,
+        "affiliate_url": affiliate_url,
+        "telegram_url": telegram_url,
+        "photo_url": photo_url,
+        "category": cat,
+        "category_label": cat_lbl,
+        "date": date_str,
+        "is_tajmi3at": is_tajmi3at,
+        "raw_text": raw_text
+    }
+
+
+@app.get("/api/deals")
+async def get_deals(channel: str = "@DzAliexpress0", force: bool = False):
+    """
+    Returns real-time structured AliExpress deals from Telegram channel with live DZD pricing.
+    """
+    clean_ch = channel.replace("@", "").strip() or "DzAliexpress0"
+    now_ts = datetime.now(timezone.utc).timestamp()
+
+    # Get live USDT rate
+    try:
+        from api.coin_bot import get_live_usdt_rate
+        usdt_rate = await get_live_usdt_rate()
+    except Exception:
+        usdt_rate = 249.0
+
+    # 1. Check in-memory cache (60s TTL)
+    if not force and clean_ch in _DEALS_CACHE:
+        cache_ts, cached_deals = _DEALS_CACHE[clean_ch]
+        if now_ts - cache_ts < 60:
+            return {
+                "deals": cached_deals,
+                "count": len(cached_deals),
+                "usdt_rate": usdt_rate,
+                "channel": f"@{clean_ch}"
+            }
+
+    # 2. Fetch Telegram public preview
+    deals = []
+    try:
+        async with httpx.AsyncClient(timeout=12.0, follow_redirects=True) as client:
+            resp = await client.get(
+                f"https://t.me/s/{clean_ch}",
+                headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+            )
+        if resp.status_code == 200:
+            soup = BeautifulSoup(resp.text, "html.parser")
+            blocks = soup.find_all("div", class_="tgme_widget_message")
+            for block in reversed(blocks):
+                parsed = parse_telegram_deal_block(block, clean_ch, usdt_rate)
+                if parsed:
+                    deals.append(parsed)
+    except Exception as e:
+        pass
+
+    # 3. Fallback to local SQLite database if telegram preview fails
+    if not deals:
+        try:
+            import sqlite3
+            from pathlib import Path
+            db_path = Path(__file__).resolve().parent.parent / "deals.db"
+            if db_path.exists():
+                conn = sqlite3.connect(str(db_path))
+                c = conn.cursor()
+                c.execute("SELECT product_id, title, current_price, current_price_eur, coupon_code, has_points_discount, affiliate_url, image_url, created_at FROM deals ORDER BY id DESC LIMIT 20")
+                for row in c.fetchall():
+                    pid, title, p_usd, p_eur, coupon, coins, aff_link, img_url, dt = row
+                    p_dzd = int(round(p_usd * usdt_rate, -1)) if p_usd else None
+                    deals.append({
+                        "id": f"db_{pid}",
+                        "msg_id": str(pid),
+                        "title": title or "AliExpress Deal",
+                        "price_usd": p_usd,
+                        "price_eur": p_eur,
+                        "price_dzd": p_dzd,
+                        "currency": "USD",
+                        "coupon_code": coupon,
+                        "country": "الجزائر 🇩🇿",
+                        "has_coins": bool(coins),
+                        "affiliate_url": aff_link or "https://t.me/DzAliexpress0",
+                        "telegram_url": "https://t.me/DzAliexpress0",
+                        "photo_url": img_url,
+                        "category": "smartphones" if any(k in (title or '').lower() for k in ['poco', 'redmi', 'realme', 'phone']) else "tech",
+                        "category_label": "صفقة مختارة 🔥",
+                        "date": str(dt)[:16] if dt else "",
+                        "is_tajmi3at": False,
+                        "raw_text": title or ""
+                    })
+                conn.close()
+        except Exception:
+            pass
+
+    if deals:
+        _DEALS_CACHE[clean_ch] = (now_ts, deals)
+
+    return {
+        "deals": deals,
+        "count": len(deals),
+        "usdt_rate": usdt_rate,
+        "channel": f"@{clean_ch}"
+    }
 
 
 @app.get("/manifest.json")
