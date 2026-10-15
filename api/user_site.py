@@ -9,7 +9,7 @@ Comprehensive E-Commerce Footer with Legal & Affiliate Compliance.
 Optimized for mobile ergonomics (iOS Safari & Android Chrome) and rich SEO indexing.
 """
 
-USER_WEBSITE_HTML = r"""<!DOCTYPE html>
+USER_WEBSITE_HTML = """<!DOCTYPE html>
 <html lang="ar" dir="rtl" class="dark">
 <head>
   <meta charset="UTF-8">
@@ -380,7 +380,7 @@ USER_WEBSITE_HTML = r"""<!DOCTYPE html>
         </a>
 
         <!-- Refresh Data Button -->
-        <button onclick="fetchDeals(true)" title="تحديث البيانات" class="w-8 sm:w-9 h-8 sm:h-9 rounded-xl border text-xs flex items-center justify-center transition active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+        <button onclick="fetchDeals(true, true)" title="تحديث البيانات" class="w-8 sm:w-9 h-8 sm:h-9 rounded-xl border text-xs flex items-center justify-center transition active:scale-95 touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
           <i class="fa-solid fa-rotate-right" id="refresh-icon" aria-hidden="true"></i>
         </button>
       </div>
@@ -1480,9 +1480,25 @@ USER_WEBSITE_HTML = r"""<!DOCTYPE html>
     }
 
     // ── Deal Data Fetching & Rendering ──────────────────────────────
-    async function fetchDeals(showSpin = false) {
+    async function fetchDeals(showSpin = false, forceRefresh = false) {
       const icon = document.getElementById('refresh-icon');
       if (showSpin && icon) icon.classList.add('fa-spin');
+
+      // 1. Instant client-side hydration from localStorage cache (0ms instant render)
+      const cacheKey = 'dealscout_deals_' + currentChannel;
+      if (!forceRefresh && (!allDeals || allDeals.length === 0)) {
+        try {
+          const cached = localStorage.getItem(cacheKey);
+          if (cached) {
+            const parsed = JSON.parse(cached);
+            if (Array.isArray(parsed) && parsed.length > 0) {
+              allDeals = parsed;
+              updateCategoryCounters();
+              filterDeals();
+            }
+          }
+        } catch(e) {}
+      }
 
       try {
         fetch('/api/rates')
@@ -1497,19 +1513,36 @@ USER_WEBSITE_HTML = r"""<!DOCTYPE html>
             }
           }).catch(() => {});
 
-        const resp = await fetch('/api/channel-posts?channel=' + encodeURIComponent(currentChannel));
+        const url = '/api/channel-posts?channel=' + encodeURIComponent(currentChannel) + (forceRefresh ? '&force=true' : '');
+        const resp = await fetch(url);
         if (!resp.ok) throw new Error('HTTP ' + resp.status);
         const data = await resp.json();
 
-        if (data.posts && Array.isArray(data.posts)) {
+        if (data.posts && Array.isArray(data.posts) && data.posts.length > 0) {
           allDeals = data.posts.map((p, idx) => parseDealPost(p, idx)).filter(d => d.affiliate_url);
+          try {
+            localStorage.setItem(cacheKey, JSON.stringify(allDeals));
+          } catch(e) {}
           updateCategoryCounters();
+          filterDeals();
+          if (showSpin) {
+            showToast(currentLang === 'fr' ? 'Offres actualisées !' : 'تم تحديث الصفقات بنجاح!');
+          }
+        } else if (!allDeals || allDeals.length === 0) {
           filterDeals();
         }
       } catch (err) {
         console.error('Error fetching deals:', err);
+        if (showSpin) {
+          showToast(currentLang === 'fr' ? 'Impossible de rafraîchir pour le moment' : 'تعذر التحديث الآن، جاري استخدام البيانات المحفوظة');
+        }
+        if (!allDeals || allDeals.length === 0) {
+          filterDeals();
+        }
       } finally {
-        if (icon) icon.classList.remove('fa-spin');
+        if (icon) {
+          setTimeout(() => icon.classList.remove('fa-spin'), 300);
+        }
       }
     }
 
@@ -1524,7 +1557,7 @@ USER_WEBSITE_HTML = r"""<!DOCTYPE html>
       let category = 'other';
       let categoryLabel = I18N[currentLang].deal_category_fallback;
 
-      const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+      const lines = text.split('\\n').map(l => l.trim()).filter(Boolean);
 
       const isBoilerplate = (l) => {
         const s = l.toLowerCase();
@@ -1545,9 +1578,9 @@ USER_WEBSITE_HTML = r"""<!DOCTYPE html>
 
       // Priority 1: Checkmark bullet (DealScout DZ & top channels standard: ✅ [Title] or ✔️ [Title])
       for (const line of lines) {
-        const m = line.match(/^[✅✔️☑️]\s*(.+)$/) || line.match(/✅\s*([^\n]+)/);
+        const m = line.match(/^[✅✔️☑️]\\s*(.+)$/) || line.match(/✅\\s*([^\\n]+)/);
         if (m) {
-          const cand = m[1].replace(/<\/?[^>]+(>|$)/g, '').replace(/^[✅✔️☑️\s*#]+/, '').trim();
+          const cand = m[1].replace(/<\\/?[^>]+(>|$)/g, '').replace(/^[✅✔️☑️\\s*#]+/, '').trim();
           if (cand.length >= 3 && !isBoilerplate(cand)) {
             title = cand;
             break;
@@ -1558,9 +1591,9 @@ USER_WEBSITE_HTML = r"""<!DOCTYPE html>
       // Priority 2: Star, device, or category prefixes (⭐️, 📱, 🎮, 🎧, ⚡, 📦, تخفيض لـ, Produit)
       if (!title) {
         for (const line of lines) {
-          const m = line.match(/^(?:⭐️|⭐|🌟|📱|🎮|🎧|⚡|📦|تخفيض\s*لـ?|عرض\s*خاص\s*لـ?|تخفيض\s*على|produit\s*:?|offre\s*:?)\s*(.+)$/i);
+          const m = line.match(/^(?:⭐️|⭐|🌟|📱|🎮|🎧|⚡|📦|تخفيض\\s*(?:لـ|ل)?|عرض\\s*خاص\\s*(?:لـ|ل)?|تخفيض\\s*على|produit\\s*:?|offre\\s*:?)\\s*(.+)$/i);
           if (m) {
-            const cand = m[1].replace(/<\/?[^>]+(>|$)/g, '').trim();
+            const cand = m[1].replace(/<\\/?[^>]+(>|$)/g, '').trim();
             if (cand.length >= 3 && !isBoilerplate(cand)) {
               title = cand;
               break;
@@ -1573,7 +1606,7 @@ USER_WEBSITE_HTML = r"""<!DOCTYPE html>
       if (!title) {
         for (const line of lines) {
           if (isBoilerplate(line)) continue;
-          const clean = line.replace(/^[🛍️🔥⚡⭐💥📦📍🏷️✅✔️•\-*\s]+/, '').replace(/<\/?[^>]+(>|$)/g, '').trim();
+          const clean = line.replace(/^[🛍️🔥⚡⭐💥📦📍🏷️✅✔️•\\-*\\s]+/, '').replace(/<\\/?[^>]+(>|$)/g, '').trim();
           if (clean.length >= 4 && !isBoilerplate(clean) && !clean.match(/^[A-Z0-9_-]{4,20}$/)) {
             title = clean;
             break;
@@ -1585,7 +1618,7 @@ USER_WEBSITE_HTML = r"""<!DOCTYPE html>
       if (!title) {
         for (const line of lines) {
           if (!line.includes('http') && !line.includes('@') && !line.includes('t.me') && line.length >= 4) {
-            const clean = line.replace(/^[🛍️🔥⚡⭐💥📦📍🏷️✅✔️•\-*\s]+/, '').trim();
+            const clean = line.replace(/^[🛍️🔥⚡⭐💥📦📍🏷️✅✔️•\\-*\\s]+/, '').trim();
             if (clean.length >= 4) {
               title = clean;
               break;
@@ -1595,28 +1628,28 @@ USER_WEBSITE_HTML = r"""<!DOCTYPE html>
       }
 
       if (title) {
-        title = title.replace(/<\/?[^>]+(>|$)/g, '').trim();
+        title = title.replace(/<\\/?[^>]+(>|$)/g, '').trim();
         if (title.length > 95) title = title.slice(0, 92) + '...';
       } else {
         title = (currentLang === 'fr' ? 'Bon Plan AliExpress' : 'صفقة مميزة من AliExpress');
       }
 
-      const usdMatch = text.match(/(\$|US\s*\$|USD\s*)\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\s*(\bUSD\b|\$)/i);
+      const usdMatch = text.match(/(?:\\$|US\\s*\\$|USD\\s*)\\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\\s*(?:\\bUSD\\b|\\$)/i);
       if (usdMatch) {
-        priceUsd = parseFloat((usdMatch[2] || usdMatch[1]).replace(',', '.'));
+        priceUsd = parseFloat(usdMatch[1].replace(',', '.'));
       }
-      const eurMatch = text.match(/(€|EUR\s*)\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\s*(€|\bEUR\b)/i);
+      const eurMatch = text.match(/(?:€|EUR\\s*)\\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\\s*(?:€|\\bEUR\\b)/i);
       if (eurMatch) {
-        priceEur = parseFloat((eurMatch[2] || eurMatch[1]).replace(',', '.'));
+        priceEur = parseFloat(eurMatch[1].replace(',', '.'));
       }
 
       // Enhanced Coupon Extraction across all Arabic, French, and Telegram formats
-      const cleanNorm = text.replace(/[\u0640]/g, '');
+      const cleanNorm = text.replace(/[\\u0640]/g, '');
       const couponMatch = 
-        cleanNorm.match(/(?:(?:ال)?كـ?وبون(?:\s*الخصم|\s*خاص)?|(?:ال)?كـ?ود(?:\s*الخصم|\s*التخفيض)?|code\s*promo|code\s*de\s*r[ée]duction|code\s*r[ée]duction|coupon|promo|code|avec\s*le\s*code|utilisez\s*le\s*code)\s*[:：\-]?\s*(?:<code>|\*\*|`)*([A-Za-z0-9_-]{3,20})/i)
-        || cleanNorm.match(/(?:(?:ال)?قسيمـ?ة(?:\s*البائع|\s*المتجر)?|coupon\s*vendeur|store\s*coupon)\s*[:：\-]?\s*(?:<code>|\*\*|`)*([0-9]+(?:\.[0-9]+)?\$?|[A-Za-z0-9_-]{3,20})/i)
-        || cleanNorm.match(/[🏷️🎟️🎫]\s*(?:code\s*[:：]?)?\s*(?:<code>|\*\*|`)*([A-Za-z0-9_-]{3,20})/i)
-        || cleanNorm.match(/(?:كود|كوبون|code|promo)[^\n]{0,60}?(?:<code>|`)([A-Za-z0-9_-]{3,20})(?:<\/code>|`)/i);
+        cleanNorm.match(/(?:(?:ال)?كـ?وبون(?:\\s*الخصم|\\s*خاص)?|(?:ال)?كـ?ود(?:\\s*الخصم|\\s*التخفيض)?|code\\s*promo|code\\s*de\\s*r[ée]duction|code\\s*r[ée]duction|coupon|promo|code|avec\\s*le\\s*code|utilisez\\s*le\\s*code)\\s*[:：\\-]?\\s*(?:<code>|\\*\\*|`)*([A-Za-z0-9_-]{3,20})/i)
+        || cleanNorm.match(/(?:(?:ال)?قسيمـ?ة(?:\\s*البائع|\\s*المتجر)?|coupon\\s*vendeur|store\\s*coupon)\\s*[:：\\-]?\\s*(?:<code>|\\*\\*|`)*([0-9]+(?:\\.[0-9]+)?\\$?|[A-Za-z0-9_-]{3,20})/i)
+        || cleanNorm.match(/[🏷️🎟️🎫]\\s*(?:code\\s*[:：]?)?\\s*(?:<code>|\\*\\*|`)*([A-Za-z0-9_-]{3,20})/i)
+        || cleanNorm.match(/(?:كود|كوبون|code|promo)[^\\n]{0,60}?(?:<code>|`)([A-Za-z0-9_-]{3,20})(?:<\\/code>|`)/i);
       
       if (couponMatch) {
         let rawCode = (couponMatch[1] || '').trim().replace(/[<>/`*#]/g, '');

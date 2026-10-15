@@ -2066,76 +2066,97 @@ async def health():
     }
 
 
+_CHANNEL_POSTS_CACHE: Dict[str, Any] = {}
+
+
 @app.get("/api/channel-posts")
-async def channel_posts(channel: str = "@DzAliexpress0"):
-    """Fetch recent posts from @DzAliexpress0 or @francedealsdz via public web preview."""
+async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
+    """Fetch recent posts from @DzAliexpress0 or @francedealsdz with server-side caching & fallback."""
+    clean_ch = channel.replace("@", "").strip() or "DzAliexpress0"
+    now_ts = time.time()
+
+    # 1. Return fresh cached response if available (60s TTL) and not forced
+    if not force and clean_ch in _CHANNEL_POSTS_CACHE:
+        cache_ts, cached_posts = _CHANNEL_POSTS_CACHE[clean_ch]
+        if now_ts - cache_ts < 60 and cached_posts:
+            return JSONResponse(
+                {"posts": cached_posts, "count": len(cached_posts), "cached": True},
+                headers={"Cache-Control": "public, max-age=60"}
+            )
+
+    # 2. Fetch from Telegram public web preview
     try:
-        clean_ch = channel.replace("@", "").strip() or "DzAliexpress0"
-        async with httpx.AsyncClient(timeout=15.0, follow_redirects=True) as client:
+        async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
             resp = await client.get(
                 f"https://t.me/s/{clean_ch}",
-                headers={"User-Agent": "Mozilla/5.0 (compatible; DealScoutBot/2.0)"}
+                headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
             )
 
-        if resp.status_code != 200:
+        if resp.status_code == 200:
+            soup = BeautifulSoup(resp.text, "html.parser")
+            blocks = soup.find_all("div", class_="tgme_widget_message")
+
+            posts = []
+            for block in reversed(blocks):
+                text_div = block.find("div", class_="tgme_widget_message_text")
+                text = text_div.get_text(separator="\n").strip() if text_div else ""
+
+                photo_url = None
+                photo_wrap = (
+                    block.find("a", class_="tgme_widget_message_photo_wrap")
+                    or block.find(class_=re.compile(r"tgme_widget_message_photo_wrap"))
+                    or block.find("i", class_=re.compile(r"link_preview_image|link_preview_right_image"))
+                    or block.find("i", class_=re.compile(r"tgme_widget_message_video_thumb"))
+                )
+                if photo_wrap and photo_wrap.get("style"):
+                    m = re.search(r"url\(['\"]?([^'\")]+)['\"]?\)", photo_wrap["style"])
+                    if m:
+                        photo_url = m.group(1)
+                elif block.find("img") and block.find("img").get("src"):
+                    photo_url = block.find("img")["src"]
+
+                date_str = ""
+                date_el = block.find("time")
+                if date_el and date_el.get("datetime"):
+                    try:
+                        dt = datetime.fromisoformat(date_el["datetime"].replace("Z", "+00:00"))
+                        date_str = dt.strftime("%Y-%m-%d %H:%M")
+                    except Exception:
+                        date_str = date_el.get("datetime", "")
+
+                data_post = block.get("data-post", "")
+                link = f"https://t.me/{data_post}" if data_post else ""
+
+                if text:
+                    posts.append({
+                        "text": text,
+                        "photo_url": photo_url,
+                        "date": date_str,
+                        "link": link
+                    })
+
+            if posts:
+                _CHANNEL_POSTS_CACHE[clean_ch] = (now_ts, posts)
+                return JSONResponse(
+                    {"posts": posts, "count": len(posts), "cached": False},
+                    headers={"Cache-Control": "public, max-age=60"}
+                )
+    except Exception:
+        pass
+
+    # 3. Graceful Fallback: If Telegram failed or timed out, serve cached posts even if older!
+    if clean_ch in _CHANNEL_POSTS_CACHE:
+        cache_ts, cached_posts = _CHANNEL_POSTS_CACHE[clean_ch]
+        if cached_posts:
             return JSONResponse(
-                {"error": f"Telegram returned HTTP {resp.status_code}", "posts": []},
-                status_code=502
+                {"posts": cached_posts, "count": len(cached_posts), "cached": True, "stale": True},
+                headers={"Cache-Control": "public, max-age=30"}
             )
 
-        soup = BeautifulSoup(resp.text, "html.parser")
-        blocks = soup.find_all("div", class_="tgme_widget_message")
-
-        posts = []
-        for block in reversed(blocks):
-            text_div = block.find("div", class_="tgme_widget_message_text")
-            text = text_div.get_text(separator="\n").strip() if text_div else ""
-
-            photo_url = None
-            photo_wrap = (
-                block.find("a", class_="tgme_widget_message_photo_wrap")
-                or block.find(class_=re.compile(r"tgme_widget_message_photo_wrap"))
-                or block.find("i", class_=re.compile(r"link_preview_image|link_preview_right_image"))
-                or block.find("i", class_=re.compile(r"tgme_widget_message_video_thumb"))
-            )
-            if photo_wrap and photo_wrap.get("style"):
-                m = re.search(r"url\(['\"]?([^'\")]+)['\"]?\)", photo_wrap["style"])
-                if m:
-                    photo_url = m.group(1)
-            elif block.find("img") and block.find("img").get("src"):
-                photo_url = block.find("img")["src"]
-
-            date_str = ""
-            date_el = block.find("time")
-            if date_el and date_el.get("datetime"):
-                try:
-                    dt = datetime.fromisoformat(date_el["datetime"].replace("Z", "+00:00"))
-                    date_str = dt.strftime("%Y-%m-%d %H:%M")
-                except Exception:
-                    date_str = date_el.get("datetime", "")
-
-            data_post = block.get("data-post", "")
-            link = f"https://t.me/{data_post}" if data_post else ""
-
-            posts.append({
-                "text": text,
-                "photo_url": photo_url,
-                "date": date_str,
-                "link": link
-            })
-
-        return {"posts": posts, "count": len(posts)}
-
-    except httpx.TimeoutException:
-        return JSONResponse(
-            {"error": "Timeout fetching channel", "posts": []},
-            status_code=504
-        )
-    except Exception as e:
-        return JSONResponse(
-            {"error": str(e), "posts": []},
-            status_code=500
-        )
+    return JSONResponse(
+        {"error": "Temporary connection timeout to Telegram channel", "posts": [], "cached": False},
+        status_code=503
+    )
 
 
 @app.get("/api/image-proxy")
