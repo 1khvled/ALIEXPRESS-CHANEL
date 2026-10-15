@@ -250,7 +250,18 @@ PROMO_CALENDAR: List[PromoEvent] = [
         end_date=datetime(2026, 10, 18, 6, 59, 59, tzinfo=timezone.utc),
         banner_tag="❄️ Winter Offers (14 - 17 أكتوبر)",
         is_major=True,
-        coupon_tiers=[],
+        coupon_tiers=[
+            {"tier": "6/49$", "code": "WOAE06"},
+            {"tier": "12/89$", "code": "WOAE12"},
+            {"tier": "23/159$", "code": "WOAE23"},
+            {"tier": "35/239$", "code": "WOAE35"},
+        ],
+        coupon_tiers_fr=[
+            {"tier": "-6€ dès 49€", "code": "FRWO06"},
+            {"tier": "-12€ dès 89€", "code": "FRWO12"},
+            {"tier": "-23€ dès 159€", "code": "FRWO23"},
+            {"tier": "-35€ dès 239€", "code": "FRWO35"},
+        ],
         source="baseline"
     ),
     PromoEvent(
@@ -834,8 +845,14 @@ class PromoTracker:
             if matching_key:
                 existing = merged[matching_key]
                 # Merge coupons: dynamic takes priority, keeping existing unique codes
-                combined_dz = {c["code"]: c for c in (existing.coupon_tiers or []) + (ev.coupon_tiers or [])}
-                combined_fr = {c["code"]: c for c in (existing.coupon_tiers_fr or []) + (ev.coupon_tiers_fr or [])}
+                combined_dz = {c["code"]: c for c in (ev.coupon_tiers or [])}
+                for c in (existing.coupon_tiers or []):
+                    if c["code"] not in combined_dz:
+                        combined_dz[c["code"]] = c
+                combined_fr = {c["code"]: c for c in (ev.coupon_tiers_fr or [])}
+                for c in (existing.coupon_tiers_fr or []):
+                    if c["code"] not in combined_fr:
+                        combined_fr[c["code"]] = c
                 existing.coupon_tiers = list(combined_dz.values())
                 existing.coupon_tiers_fr = list(combined_fr.values())
                 if ev.banner_image_url:

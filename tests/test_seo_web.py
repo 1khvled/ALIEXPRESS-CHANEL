@@ -104,3 +104,25 @@ def test_public_web_routes():
     assert r_deals.status_code == 200
     assert "text/html" in r_deals.headers.get("content-type", "")
     assert "DealScout DZ" in r_deals.text
+
+
+def test_active_event_api_and_seo_banner():
+    """Verify active event API and active event banner with SEO keywords."""
+    # 1. API endpoint check
+    resp = client.get("/api/active-event")
+    assert resp.status_code == 200
+    data = resp.json()
+    assert "active_event" in data
+    assert data["active_event"] is not None
+    assert "Winter Offers" in data["active_event"]["name"]
+    assert any("WOAE" in c for c in data["active_event"]["codes"])
+
+    # 2. Page HTML check
+    html_resp = client.get("/")
+    assert html_resp.status_code == 200
+    html = html_resp.text
+    assert 'id="active-event-banner"' in html
+    assert 'id="active-deals-keywords"' in html
+    assert 'WOAE06' in html
+    assert 'WOAE35' in html
+    assert 'Winter Offers' in html

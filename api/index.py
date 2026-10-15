@@ -1171,6 +1171,42 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 </html>"""
 
 
+def get_active_event_seo_html() -> str:
+    """Injects real-time active promotional event keywords, deals, and descriptions into HTML for instant SEO indexing."""
+    html = USER_WEBSITE_HTML
+    try:
+        from app.aliexpress.promos import promo_tracker
+        now = datetime.now(timezone.utc)
+        ev = promo_tracker.get_active_promo(now)
+        if ev:
+            active_codes = ", ".join([t["code"] for t in (ev.coupon_tiers or []) if "code" in t])
+            top_deals = "Honor X70 5G, realme 15T 5G, OPPO A6 Pro, iQOO Z11s 5G, realme Watch 5, AMD Ryzen 5 8400F, Redmi Note 12 5G, CUSU SSD 512GB, Blackview Wave 10C"
+            event_kw = f"{ev.name}, {ev.name_ar}, {ev.name_fr}, تخفيضات {ev.name_ar}, كود خصم {ev.name}, {active_codes}, {top_deals}"
+            html = re.sub(
+                r'<meta name="keywords" content="[^"]*">',
+                f'<meta name="keywords" content="{event_kw}, aliexpress algerie, شراء من علي اكسبرس بريدي موب, بطاقة بايبايت في الجزائر, تخفيضات AliExpress الجزائر">',
+                html,
+                count=1
+            )
+            active_desc = f"عروض وتخفيضات {ev.name_ar} الحصرية على AliExpress بالدينار الجزائري. صفقات فعالة مع أكواد الخصم ({active_codes}) لأجهزة {top_deals} والدفع بـ BaridiMob."
+            html = re.sub(
+                r'<meta name="description" id="meta-description" content="[^"]*">',
+                f'<meta name="description" id="meta-description" content="{active_desc}">',
+                html,
+                count=1
+            )
+            event_title = f"{ev.name_ar} — أحدث صفقات وتخفيضات AliExpress بالدينار الجزائري | DealScout DZ"
+            html = re.sub(
+                r'<meta property="og:title" id="og-title" content="[^"]*">',
+                f'<meta property="og:title" id="og-title" content="{event_title}">',
+                html,
+                count=1
+            )
+    except Exception:
+        pass
+    return html
+
+
 # ── Web App & PWA Routes ─────────────────────────────────────────
 @app.get("/", response_class=HTMLResponse)
 @app.get("/deals", response_class=HTMLResponse)
@@ -1180,8 +1216,8 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 @app.get("/contact", response_class=HTMLResponse)
 @app.get("/about", response_class=HTMLResponse)
 async def user_website():
-    """Serves the modern user-facing AliExpress deals website with live Telegram feed."""
-    return HTMLResponse(content=USER_WEBSITE_HTML)
+    """Serves the modern user-facing AliExpress deals website with live Telegram feed and dynamic active event SEO."""
+    return HTMLResponse(content=get_active_event_seo_html())
 
 
 ADMIN_SESSION_COOKIE = "dealscout_admin_session"
@@ -2102,6 +2138,32 @@ async def health():
     }
 
 
+@app.get("/api/active-event")
+async def get_active_event_api():
+    """Returns the currently active official AliExpress promo event with active coupons and keywords."""
+    from app.aliexpress.promos import promo_tracker
+    now = datetime.now(timezone.utc)
+    ev = promo_tracker.get_active_promo(now)
+    if not ev:
+        return {"active": False, "event": None}
+    event_data = {
+        "name": ev.name,
+        "name_ar": ev.name_ar,
+        "name_fr": ev.name_fr or ev.name,
+        "banner_tag": ev.banner_tag,
+        "start_date": ev.start_date.isoformat(),
+        "end_date": ev.end_date.isoformat(),
+        "coupon_tiers": ev.coupon_tiers or [],
+        "coupon_tiers_fr": ev.coupon_tiers_fr or [],
+        "codes": [t["code"] for t in (ev.coupon_tiers or []) if "code" in t]
+    }
+    return {
+        "active": True,
+        "event": event_data,
+        "active_event": event_data
+    }
+
+
 _CHANNEL_POSTS_CACHE: Dict[str, Any] = {}
 
 
@@ -2111,12 +2173,33 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
     clean_ch = channel.replace("@", "").strip() or "DzAliexpress0"
     now_ts = time.time()
 
+    # Get active promo event details
+    active_ev_data = None
+    try:
+        from app.aliexpress.promos import promo_tracker
+        now_dt = datetime.now(timezone.utc)
+        ev = promo_tracker.get_active_promo(now_dt)
+        if ev:
+            active_ev_data = {
+                "name": ev.name,
+                "name_ar": ev.name_ar,
+                "name_fr": ev.name_fr or ev.name,
+                "banner_tag": ev.banner_tag,
+                "start_date": ev.start_date.isoformat(),
+                "end_date": ev.end_date.isoformat(),
+                "coupon_tiers": ev.coupon_tiers or [],
+                "coupon_tiers_fr": ev.coupon_tiers_fr or [],
+                "codes": [t["code"] for t in (ev.coupon_tiers or []) if "code" in t]
+            }
+    except Exception:
+        pass
+
     # 1. Return fresh cached response if available (60s TTL) and not forced
     if not force and clean_ch in _CHANNEL_POSTS_CACHE:
         cache_ts, cached_posts = _CHANNEL_POSTS_CACHE[clean_ch]
         if now_ts - cache_ts < 60 and cached_posts:
             return JSONResponse(
-                {"posts": cached_posts, "count": len(cached_posts), "cached": True},
+                {"posts": cached_posts, "count": len(cached_posts), "cached": True, "active_event": active_ev_data},
                 headers={"Cache-Control": "public, max-age=60"}
             )
 
@@ -2136,6 +2219,12 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
             for block in reversed(blocks):
                 text_div = block.find("div", class_="tgme_widget_message_text")
                 text = text_div.get_text(separator="\n").strip() if text_div else ""
+
+                # Filter out expired campaigns when active promo is running
+                if any(c in text for c in ["OTPRD", "BDQT", "FRPRD", "FRBD"]) and not any(c in text for c in ["WOAE", "FRWO"]):
+                    continue
+                if any(m in text.lower() for m in ["سبتمبر", "september", "sept\b"]):
+                    continue
 
                 photo_url = None
                 photo_wrap = (
@@ -2174,7 +2263,7 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
             if posts:
                 _CHANNEL_POSTS_CACHE[clean_ch] = (now_ts, posts)
                 return JSONResponse(
-                    {"posts": posts, "count": len(posts), "cached": False},
+                    {"posts": posts, "count": len(posts), "cached": False, "active_event": active_ev_data},
                     headers={"Cache-Control": "public, max-age=60"}
                 )
     except Exception:
@@ -2185,7 +2274,7 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
         cache_ts, cached_posts = _CHANNEL_POSTS_CACHE[clean_ch]
         if cached_posts:
             return JSONResponse(
-                {"posts": cached_posts, "count": len(cached_posts), "cached": True, "stale": True},
+                {"posts": cached_posts, "count": len(cached_posts), "cached": True, "stale": True, "active_event": active_ev_data},
                 headers={"Cache-Control": "public, max-age=30"}
             )
 

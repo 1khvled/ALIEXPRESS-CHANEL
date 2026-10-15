@@ -27,7 +27,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <link rel="alternate" hreflang="x-default" href="https://dealscout-green.vercel.app/">
 
   <!-- Meta Search & Geography -->
-  <meta name="keywords" content="aliexpress algerie, شراء من علي اكسبرس بريدي موب, بطاقة بايبايت في الجزائر, بطاقة bybit مجانية, بطاقة redotpay الجزائر, كود خصم redotpay, شحن redotpay بريدي موب, شراء usdt بالدينار الجزائري, بطاقة فيزا للشراء من الانترنت الجزائر, بطاقة ماستركارد افتراضية الجزائر, تفعيل بايبال بالجزائر, binance p2p baridimob algerie, carte bybit algerie, carte redotpay algerie, acheter sur aliexpress baridimob, carte bancaire internationale algerie, تخفيضات علي اكسبرس الجزائر, صفقات aliexpress, بريد الجزائر, اسعار السكوار, algeria deals, dealscout dz, bons plans algerie">
+  <meta name="keywords" content="عروض الشتاء Winter Offers AliExpress, تخفيضات عروض الشتاء 2026, كود خصم Winter Offers, WOAE23, WOAE35, WOAE06, WOAE12, Honor X70 5G, realme 15T 5G, OPPO A6 Pro, iQOO Z11s 5G, realme Watch 5, AMD Ryzen 5 8400F, Redmi Note 12 5G, CUSU SSD 512GB, Blackview Wave 10C, aliexpress algerie, شراء من علي اكسبرس بريدي موب, بطاقة بايبايت في الجزائر, بطاقة bybit مجانية, بطاقة redotpay الجزائر, كود خصم redotpay, شحن redotpay بريدي موب, شراء usdt بالدينار الجزائري, بطاقة فيزا للشراء من الانترنت الجزائر, بطاقة ماستركارد افتراضية الجزائر, تفعيل بايبال بالجزائر, binance p2p baridimob algerie, carte bybit algerie, carte redotpay algerie, acheter sur aliexpress baridimob, carte bancaire internationale algerie, تخفيضات علي اكسبرس الجزائر, صفقات aliexpress, بريد الجزائر, اسعار السكوار, algeria deals, dealscout dz, bons plans algerie">
   <meta name="geo.region" content="DZ">
   <meta name="geo.placename" content="Algeria">
   <meta name="geo.position" content="28.0339;1.6596">
@@ -552,6 +552,63 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);"
         />
       </div>
+
+      <!-- Active Promo Event Showcase Banner & Deal Keywords -->
+      <section id="active-event-banner" class="border rounded-2xl p-4 sm:p-5 relative overflow-hidden transition-all shadow-sm" style="background: linear-gradient(135deg, rgba(225, 29, 72, 0.08) 0%, rgba(14, 165, 233, 0.08) 100%); border-color: rgba(225, 29, 72, 0.25);" aria-label="الحدث الترويجي الفعال">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+          <div class="space-y-1">
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-crimson-600/15 text-crimson-500">
+              <span class="w-2 h-2 rounded-full bg-crimson-500 animate-pulse"></span>
+              <span id="active-event-badge" data-i18n="active_event_badge">حدث ترويجي فعال حالياً 🔥</span>
+            </div>
+            <h3 id="active-event-title" class="text-base sm:text-lg font-bold tracking-tight" style="color: var(--text-main);" data-i18n="active_event_title">
+              تخفيضات عروض الشتاء Winter Offers 2026 الحصرية ❄️
+            </h3>
+            <p id="active-event-desc" class="text-xs leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="active_event_desc">
+              عروض وتخفيضات رسمية نشطة حالياً مع أكواد حصرية مخصصة للجزائر وفرنسا — الأسعار بالدينار الجزائري وفق سعر السكوار الحقيقي.
+            </p>
+          </div>
+          <!-- Active Event Coupon Chips with 1-click copy -->
+          <div class="flex items-center gap-2 flex-wrap" id="active-event-coupons">
+            <button onclick="copyReferralCode('WOAE06', this)" class="border border-dashed rounded-lg px-2.5 py-1 text-[11px] font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation shadow-sm cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: rgba(225, 29, 72, 0.4); color: #e11d48;" title="نسخ الكود WOAE06">
+              <i class="fa-solid fa-ticket text-[10px]"></i>
+              <span>WOAE06</span>
+              <span class="text-[9px] font-sans opacity-70">(-6$)</span>
+            </button>
+            <button onclick="copyReferralCode('WOAE12', this)" class="border border-dashed rounded-lg px-2.5 py-1 text-[11px] font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation shadow-sm cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: rgba(225, 29, 72, 0.4); color: #e11d48;" title="نسخ الكود WOAE12">
+              <i class="fa-solid fa-ticket text-[10px]"></i>
+              <span>WOAE12</span>
+              <span class="text-[9px] font-sans opacity-70">(-12$)</span>
+            </button>
+            <button onclick="copyReferralCode('WOAE23', this)" class="border border-dashed rounded-lg px-2.5 py-1 text-[11px] font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation shadow-sm cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: rgba(225, 29, 72, 0.4); color: #e11d48;" title="نسخ الكود WOAE23">
+              <i class="fa-solid fa-ticket text-[10px]"></i>
+              <span>WOAE23</span>
+              <span class="text-[9px] font-sans opacity-70">(-23$)</span>
+            </button>
+            <button onclick="copyReferralCode('WOAE35', this)" class="border border-dashed rounded-lg px-2.5 py-1 text-[11px] font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation shadow-sm cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: rgba(225, 29, 72, 0.4); color: #e11d48;" title="نسخ الكود WOAE35">
+              <i class="fa-solid fa-ticket text-[10px]"></i>
+              <span>WOAE35</span>
+              <span class="text-[9px] font-sans opacity-70">(-35$)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Active Deals Trending Keywords Tag Bar for instant SEO indexing & user filtering -->
+        <div class="mt-3 pt-3 border-t flex items-center gap-2 flex-wrap text-xs" style="border-color: rgba(225, 29, 72, 0.15);">
+          <span class="text-[11px] font-bold text-crimson-500 flex items-center gap-1 flex-shrink-0">
+            <i class="fa-solid fa-tags text-[10px]"></i>
+            <span data-i18n="active_deals_kw_label">أهم صفقات الحدث الفعال:</span>
+          </span>
+          <div id="active-deals-keywords" class="flex items-center gap-1.5 flex-wrap">
+            <button onclick="handleSearchInput('Honor X70')" class="border px-2 py-0.5 rounded-lg text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>Honor X70 5G</span></button>
+            <button onclick="handleSearchInput('realme 15T')" class="border px-2 py-0.5 rounded-lg text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>realme 15T 5G</span></button>
+            <button onclick="handleSearchInput('OPPO A6 Pro')" class="border px-2 py-0.5 rounded-lg text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>OPPO A6 Pro</span></button>
+            <button onclick="handleSearchInput('iQOO Z11s')" class="border px-2 py-0.5 rounded-lg text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>iQOO Z11s</span></button>
+            <button onclick="handleSearchInput('Ryzen 5 8400F')" class="border px-2 py-0.5 rounded-lg text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>Ryzen 5 8400F</span></button>
+            <button onclick="handleSearchInput('realme Watch 5')" class="border px-2 py-0.5 rounded-lg text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>realme Watch 5</span></button>
+          </div>
+        </div>
+      </section>
 
       <!-- Category Filter Pills -->
       <section class="border-b pb-3" style="border-color: var(--border-card);" aria-label="Categories">
@@ -1498,7 +1555,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         footer_compliance: "إخلاء مسؤولية الشراكة: DealScout DZ موقع مستقل وغير تابع لشركة Alibaba أو AliExpress بشكل مباشر. قد تتضمن بعض الروابط معرفات تسويق بالعمولة (AliExpress Portals Affiliate) تتيح لنا الحصول على نسبة رمزية عند الشراء دون أي تكلفة إضافية عليك إطلاقاً. الأسعار بالدينار الجزائري تقريبية وتعتمد على سعر الصرف اللحظي.",
         footer_rights: "جميع الحقوق محفوظة.",
         footer_made_with: "صُنع للمتسوق الجزائري 🇩🇿",
-        footer_back_top: "للأعلى"
+        footer_back_top: "للأعلى",
+        active_event_badge: "حدث ترويجي فعال حالياً 🔥",
+        active_event_title: "تخفيضات عروض الشتاء Winter Offers 2026 الحصرية ❄️",
+        active_event_desc: "عروض وتخفيضات رسمية نشطة حالياً مع أكواد حصرية مخصصة للجزائر وفرنسا — الأسعار بالدينار الجزائري وفق سعر السكوار الحقيقي.",
+        active_deals_kw_label: "أهم صفقات الحدث الفعال:"
       },
       fr: {
         meta_title: "DealScout DZ — Bons Plans & Réductions AliExpress en Dinar Algérien",
@@ -1645,7 +1706,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         footer_compliance: "Divulgation : DealScout DZ est un site indépendant. Certains liens sont affiliés (AliExpress Portals), permettant de soutenir le service sans surcoût pour l'acheteur. Les montants en DZD sont donnés à titre indicatif selon le taux de change du jour.",
         footer_rights: "Tous droits réservés.",
         footer_made_with: "Fait spécialement pour les acheteurs algériens 🇩🇿",
-        footer_back_top: "Haut de page"
+        footer_back_top: "Haut de page",
+        active_event_badge: "Événement Promo Actif 🔥",
+        active_event_title: "Promotions Offres d'Hiver 2026 (Winter Offers) ❄️",
+        active_event_desc: "Bons plans et réductions officielles avec codes promo exclusifs pour l'Algérie et la France — calculés en Dinar Algérien au taux Square.",
+        active_deals_kw_label: "Top deals de l'événement :"
       }
     };
 
@@ -1677,6 +1742,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     var usdtRate = 256.9;
     var currentSearchTerm = '';
     var currentActiveDeal = null;
+    var currentActiveEvent = null;
 
     function t(key, fallback = '') {
       const dict = (typeof I18N !== 'undefined' && I18N[currentLang]) ? I18N[currentLang] : (typeof I18N !== 'undefined' ? I18N.ar : {});
@@ -1762,6 +1828,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       applyTheme(currentTheme);
       showPage(currentPageId, false);
+
+      if (currentActiveEvent) {
+        updateActiveEventBanner(currentActiveEvent);
+      }
 
       if (allDeals && allDeals.length > 0) {
         filterDeals();
@@ -2054,6 +2124,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         if (!resp.ok) throw new Error('HTTP ' + resp.status);
         const data = await resp.json();
 
+        if (data.active_event) {
+          currentActiveEvent = data.active_event;
+          updateActiveEventBanner(currentActiveEvent);
+        }
+
         if (data.posts && Array.isArray(data.posts) && data.posts.length > 0) {
           allDeals = data.posts.map((p, idx) => parseDealPost(p, idx)).filter(Boolean);
           try {
@@ -2110,6 +2185,16 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         return null;
       }
 
+      // 5. Strict Active Promo Event Filter: Reject posts from expired campaigns
+      const isExpiredEvent = /(?:OTPRD|BDQT|FRPRD|FRBD|Party Ready|Brand Day|عروض الحفلة)/i.test(text);
+      const hasActiveEventCode = /(?:WOAE|FRWO|Winter Offers|عروض الشتاء)/i.test(text);
+      if (isExpiredEvent && !hasActiveEventCode) {
+        return null;
+      }
+      if (post.date && post.date < '2026-10-14' && !hasActiveEventCode) {
+        return null;
+      }
+
       let title = '';
       let coupon = null;
       let priceUsd = null;
@@ -2134,7 +2219,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           s.includes('bonne affaire') || s.includes('meilleur bon plan') || s.includes('guide') ||
           s.includes('تنبيه') || s.includes('طريقة') || s.includes('احجز') || s.includes('طبقوا') ||
           s.includes('حبات قلال') || s.includes('سارعوا') || s.includes('كندا') || s.includes('فرنسا') ||
-          s.includes('كوريا') || s.includes('أوكرانيا') || s.includes('استراليا')
+          s.includes('كوريا') || s.includes('أوكرانيا') || s.includes('استراليا') ||
+          s.includes('متوسط') || s.includes('سعره') || s.includes('دج') || s.includes('صيدة اليوم')
         );
       };
 
@@ -2193,7 +2279,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         title = title.replace(/<\\/?[^>]+(>|$)/g, '').trim();
         if (title.length > 95) title = title.slice(0, 92) + '...';
       } else {
-        title = (currentLang === 'fr' ? 'Bon Plan AliExpress' : 'صفقة مميزة من AliExpress');
+        title = (currentLang === 'fr' ? "Offre Spéciale Winter Offers" : "عرض مميز تخفيضات الشتاء (Winter Offers)");
       }
 
       const usdMatch = text.match(/(?:\\$|US\\s*\\$|USD\\s*)\\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\\s*(?:\\bUSD\\b|\\$)/i);
@@ -2323,6 +2409,32 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
     }
 
+    function updateActiveEventBanner(event) {
+      if (!event) return;
+      const isFr = currentLang === 'fr';
+      const titleEl = document.getElementById('active-event-title');
+      const couponsEl = document.getElementById('active-event-coupons');
+
+      if (titleEl) {
+        titleEl.textContent = (isFr ? (event.name_fr || event.name) : (event.name_ar || event.name)) + ' ❄️';
+      }
+      if (couponsEl && event.coupon_tiers) {
+        const isFranceCh = currentChannel === '@francedealsdz';
+        const tiers = (isFranceCh && event.coupon_tiers_fr && event.coupon_tiers_fr.length > 0)
+          ? event.coupon_tiers_fr
+          : event.coupon_tiers;
+        if (tiers && tiers.length > 0) {
+          couponsEl.innerHTML = tiers.map(t => `
+            <button onclick="copyReferralCode('${t.code}', this)" class="border border-dashed rounded-lg px-2.5 py-1 text-[11px] font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation shadow-sm cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: rgba(225, 29, 72, 0.4); color: #e11d48;" title="${isFr ? 'Copier le code ' + t.code : 'نسخ الكود ' + t.code}">
+              <i class="fa-solid fa-ticket text-[10px]"></i>
+              <span>${t.code}</span>
+              <span class="text-[9px] font-sans opacity-70">(-${t.discount}$)</span>
+            </button>
+          `).join('');
+        }
+      }
+    }
+
     function updateDealsStructuredData(deals) {
       let script = document.getElementById('structured-data-items');
       if (!script) {
@@ -2353,6 +2465,58 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         "@type": "ItemList",
         "itemListElement": items
       });
+
+      // Populate Active Deals Trending Keywords Tag Bar
+      const kwContainer = document.getElementById('active-deals-keywords');
+      if (kwContainer && deals && deals.length > 0) {
+        const uniqueTitles = [];
+        const seenWords = new Set();
+        for (const deal of deals) {
+          if (!deal.title) continue;
+          let kw = deal.title
+            .replace(/[()\\[\\]{}|#*]/g, ' ')
+            .replace(/\\s+/g, ' ')
+            .trim();
+          const parts = kw.split(' ');
+          kw = parts.slice(0, 3).join(' ');
+          if (kw.length > 25) kw = kw.slice(0, 25).trim();
+          const lowerKw = kw.toLowerCase();
+          if (kw.length >= 3 && !seenWords.has(lowerKw)) {
+            seenWords.add(lowerKw);
+            uniqueTitles.push(kw);
+          }
+          if (uniqueTitles.length >= 8) break;
+        }
+
+        if (uniqueTitles.length > 0) {
+          kwContainer.innerHTML = uniqueTitles.map(kw => `
+            <button onclick="handleSearchInput('${escapeHtml(kw)}')" class="border px-2 py-0.5 rounded-lg text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1 cursor-pointer" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);" title="تصفية حسب ${escapeHtml(kw)}">
+              <span class="text-rose-500 font-bold">#</span>
+              <span>${escapeHtml(kw)}</span>
+            </button>
+          `).join('');
+        }
+      }
+
+      // Update dynamic SEO Meta Keywords & Description with Active Deals
+      try {
+        const metaKw = document.querySelector('meta[name="keywords"]');
+        if (metaKw && deals && deals.length > 0) {
+          const dealKws = deals.slice(0, 12).map(d => d.title.replace(/[,;]/g, '').slice(0, 30).trim()).filter(Boolean);
+          const baseKws = currentLang === 'fr'
+            ? ['Winter Offers AliExpress', 'Codes Promo AliExpress 2026', 'WOAE06', 'WOAE12', 'WOAE23', 'WOAE35', 'AliExpress Algérie', 'Bons Plans Dinar']
+            : ['عروض الشتاء AliExpress', 'كوبونات تخفيضات الشتاء 2026', 'WOAE06', 'WOAE12', 'WOAE23', 'WOAE35', 'علي إكسبرس الجزائر', 'أسعار السكوار بالدينار'];
+          metaKw.setAttribute('content', [...baseKws, ...dealKws].join(', '));
+        }
+
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc && deals && deals.length > 0) {
+          const topNames = deals.slice(0, 4).map(d => d.title).join(currentLang === 'fr' ? ', ' : '، ');
+          metaDesc.setAttribute('content', currentLang === 'fr'
+            ? `Bons plans actifs Winter Offers 2026 AliExpress : ${topNames} au meilleur prix converti en Dinar Algérien (DZD) avec codes promo actifs.`
+            : `أقوى صفقات عروض الشتاء Winter Offers 2026 الفعالة حالياً على AliExpress: ${topNames} بأفضل سعر بالدينار الجزائري مع كوبونات الخصم.`);
+        }
+      } catch (e) {}
     }
 
     function formatPrice(deal) {
