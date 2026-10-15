@@ -72,32 +72,36 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <meta name="apple-mobile-web-app-title" content="DealScout DZ">
   <meta name="format-detection" content="telephone=no">
 
-  <!-- Tailwind CSS & Icons -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Resilient Production Stylesheets (Static CSS loaded first, always reliable) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
 
+  <!-- Optional Tailwind JIT CDN with safety guard -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['"IBM Plex Sans Arabic"', 'Tajawal', 'Inter', 'sans-serif'],
-            mono: ['Inter', 'monospace'],
-            inter: ['Inter', 'sans-serif']
-          },
-          colors: {
-            crimson: {
-              500: '#f43f5e',
-              600: '#e11d48',
-              700: '#be123c'
+    if (typeof tailwind !== 'undefined') {
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"IBM Plex Sans Arabic"', 'Tajawal', 'Inter', 'sans-serif'],
+              mono: ['Inter', 'monospace'],
+              inter: ['Inter', 'sans-serif']
+            },
+            colors: {
+              crimson: {
+                500: '#f43f5e',
+                600: '#e11d48',
+                700: '#be123c'
+              }
             }
           }
         }
-      }
+      };
     }
   </script>
 
@@ -159,6 +163,57 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     body[dir="rtl"] {
       font-family: 'IBM Plex Sans Arabic', Tajawal, sans-serif;
     }
+    *, *::before, *::after { box-sizing: border-box; }
+    img { max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: transparent; }
+
+    /* Bulletproof Brand Logo & Image Constraints */
+    header a img, .brand-logo-img {
+      width: 36px !important;
+      height: 36px !important;
+      max-width: 36px !important;
+      max-height: 36px !important;
+      min-width: 36px !important;
+      min-height: 36px !important;
+      object-fit: contain !important;
+      border-radius: 12px !important;
+      display: inline-block !important;
+    }
+    footer img, .footer-logo-img {
+      width: 28px !important;
+      height: 28px !important;
+      max-width: 28px !important;
+      max-height: 28px !important;
+      object-fit: contain !important;
+      border-radius: 8px !important;
+      display: inline-block !important;
+    }
+
+    /* Resilient Core Layout Utilities */
+    .hidden { display: none !important; }
+    .flex { display: flex !important; }
+    .inline-flex { display: inline-flex !important; }
+    .grid { display: grid !important; }
+    .items-center { align-items: center !important; }
+    .justify-between { justify-content: space-between !important; }
+    .justify-center { justify-content: center !important; }
+    .flex-col { flex-direction: column !important; }
+    .flex-wrap { flex-wrap: wrap !important; }
+    .flex-shrink-0 { flex-shrink: 0 !important; }
+    .flex-grow { flex-grow: 1 !important; }
+    .flex-1 { flex: 1 1 0% !important; }
+    .rounded-lg { border-radius: 0.5rem !important; }
+    .rounded-xl { border-radius: 0.75rem !important; }
+    .rounded-2xl { border-radius: 1rem !important; }
+    .rounded-3xl { border-radius: 1.5rem !important; }
+    .rounded-full { border-radius: 9999px !important; }
+    .border { border-width: 1px !important; border-style: solid !important; }
+    .font-bold { font-weight: 700 !important; }
+    .font-semibold { font-weight: 600 !important; }
+    .text-crimson-500, .text-rose-500 { color: #f43f5e !important; }
+    .bg-crimson-600, .bg-rose-600 { background-color: #e11d48 !important; color: #ffffff !important; }
+
     button, a, input, select, textarea, [role="button"] {
       touch-action: manipulation;
       -webkit-tap-highlight-color: transparent;
@@ -313,7 +368,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       
       <!-- Brand Logo -->
       <a href="#deals" onclick="showPage('deals')" class="flex items-center gap-2 sm:gap-2.5 flex-shrink-0 min-h-[44px] touch-manipulation" aria-label="DealScout DZ">
-        <img src="/logo_circular.png" alt="DealScout DZ" class="w-9 h-9 rounded-xl object-contain shadow-sm flex-shrink-0" onerror="this.onerror=null; this.src='/logo.png'">
+        <img src="/logo_circular.png" alt="DealScout DZ" width="36" height="36" style="width: 36px; height: 36px; max-width: 36px; max-height: 36px; object-fit: contain;" class="w-9 h-9 rounded-xl object-contain shadow-sm flex-shrink-0 brand-logo-img" onerror="this.onerror=null; this.src='/logo.png'">
         <div>
           <div class="flex items-center gap-1.5">
             <h1 class="font-bold text-base tracking-tight font-inter inline-flex items-center gap-1.5" style="color: var(--text-main);">
@@ -892,7 +947,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <!-- Col 1: Brand & Mission -->
         <div class="space-y-3">
           <div class="flex items-center gap-2">
-            <img src="/logo_circular.png" alt="DealScout DZ" class="w-7 h-7 rounded-lg object-contain shadow-sm flex-shrink-0" onerror="this.onerror=null; this.src='/logo.png'">
+            <img src="/logo_circular.png" alt="DealScout DZ" width="28" height="28" style="width: 28px; height: 28px; max-width: 28px; max-height: 28px; object-fit: contain;" class="w-7 h-7 rounded-lg object-contain shadow-sm flex-shrink-0 footer-logo-img" onerror="this.onerror=null; this.src='/logo.png'">
             <span class="font-bold text-base font-inter" style="color: var(--text-main);">DealScout<span class="text-crimson-500">DZ</span></span>
           </div>
           <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="footer_brand_desc">
