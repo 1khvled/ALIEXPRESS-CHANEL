@@ -77,7 +77,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Optional Tailwind JIT CDN with safety guard -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -88,9 +88,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         theme: {
           extend: {
             fontFamily: {
-              sans: ['"IBM Plex Sans Arabic"', 'Tajawal', 'Inter', 'sans-serif'],
-              mono: ['Inter', 'monospace'],
-              inter: ['Inter', 'sans-serif']
+              sans: ['"Readex Pro"', '"Plus Jakarta Sans"', 'Cairo', 'sans-serif'],
+              heading: ['Cairo', '"Readex Pro"', '"Plus Jakarta Sans"', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+              inter: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif']
             },
             colors: {
               crimson: {
@@ -158,10 +159,19 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       transition: background-color 0.2s ease, color 0.2s ease;
     }
     body[dir="ltr"] {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Plus Jakarta Sans', 'Readex Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
     body[dir="rtl"] {
-      font-family: 'IBM Plex Sans Arabic', Tajawal, sans-serif;
+      font-family: 'Readex Pro', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Cairo', 'Readex Pro', 'Plus Jakarta Sans', sans-serif !important;
+      letter-spacing: -0.015em;
+    }
+    .font-mono, code, .price-num {
+      font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+      font-feature-settings: 'tnum' 1;
+      font-variant-numeric: tabular-nums;
     }
     *, *::before, *::after { box-sizing: border-box; }
     img { max-width: 100%; height: auto; }
@@ -190,11 +200,25 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       display: inline-block !important;
     }
 
-    /* Resilient Core Layout Utilities - Hidden ALWAYS overrides any display */
-    [hidden], .hidden { display: none !important; }
-    .flex:not(.hidden) { display: flex !important; }
-    .inline-flex:not(.hidden) { display: inline-flex !important; }
-    .grid:not(.hidden) { display: grid !important; }
+    /* Resilient Core Layout Utilities */
+    [hidden] { display: none !important; }
+    .hidden { display: none; }
+    .flex { display: flex; }
+    .inline-flex { display: inline-flex; }
+    .grid { display: grid; }
+    @media (min-width: 640px) {
+      .sm\\:inline { display: inline !important; }
+      .sm\\:inline-flex { display: inline-flex !important; }
+      .sm\\:flex { display: flex !important; }
+    }
+    @media (min-width: 768px) {
+      .md\\:flex { display: flex !important; }
+      .md\\:hidden { display: none !important; }
+    }
+    @media (min-width: 1024px) {
+      .lg\\:flex { display: flex !important; }
+      .lg\\:hidden { display: none !important; }
+    }
     .items-center { align-items: center !important; }
     .justify-between { justify-content: space-between !important; }
     .justify-center { justify-content: center !important; }
@@ -236,14 +260,69 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       background-color: var(--bg-card);
       border: 1px solid var(--border-card);
       box-shadow: var(--shadow-card);
-      transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+      transition: border-color 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    html.dark .deal-card {
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
     }
     @media (hover: hover) {
       .deal-card:hover {
-        border-color: #f43f5e;
-        transform: translateY(-2px);
-        box-shadow: 0 10px 25px -5px rgba(244, 63, 94, 0.12);
+        border-color: rgba(244, 63, 94, 0.6);
+        transform: translateY(-4px);
+        box-shadow: 0 16px 32px -8px rgba(225, 29, 72, 0.18), inset 0 1px 0 0 rgba(244, 63, 94, 0.2);
       }
+    }
+
+    #active-event-banner {
+      background: radial-gradient(circle at 90% 10%, rgba(225, 29, 72, 0.14) 0%, transparent 45%),
+                  radial-gradient(circle at 10% 90%, rgba(14, 165, 233, 0.10) 0%, transparent 45%),
+                  var(--bg-card) !important;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 8px 30px -6px rgba(225, 29, 72, 0.12);
+    }
+    html.dark #active-event-banner {
+      box-shadow: 0 8px 32px -6px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(225, 29, 72, 0.25);
+    }
+
+    .btn-ali-primary {
+      background: linear-gradient(135deg, #e11d48 0%, #be123c 100%) !important;
+      box-shadow: 0 4px 14px -2px rgba(225, 29, 72, 0.45);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-ali-primary:hover {
+      box-shadow: 0 6px 20px -2px rgba(225, 29, 72, 0.6);
+      filter: brightness(1.06);
+      transform: translateY(-1px);
+    }
+    .btn-ali-primary:active {
+      transform: scale(0.98);
+      filter: brightness(0.95);
+    }
+
+    .coupon-chip {
+      transition: all 0.18s ease;
+    }
+    .coupon-chip:hover {
+      border-color: #f43f5e !important;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(225, 29, 72, 0.2);
+    }
+    .coupon-chip:active {
+      transform: scale(0.96);
+    }
+
+    .deal-kw-pill {
+      transition: all 0.18s ease;
+    }
+    .deal-kw-pill:hover {
+      border-color: #f43f5e !important;
+      background-color: var(--bg-elevated) !important;
+      transform: translateY(-1px);
+    }
+    .deal-kw-pill:active {
+      transform: scale(0.95);
     }
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -473,9 +552,15 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           oninput="handleSearchInput(this.value)"
           placeholder="ابحث عن هاتف، شاحن، كود خصم..." 
           data-i18n-placeholder="search_placeholder"
-          class="w-full border rounded-xl pr-9 pl-3 py-2 text-xs focus:outline-none focus:border-rose-500 transition min-h-[40px]"
+          class="w-full border rounded-xl pr-9 pl-14 py-2 text-xs focus:outline-none focus:border-rose-500 transition min-h-[40px]"
           style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);"
         />
+        <div class="absolute left-2.5 top-1/2 -translate-y-1/2 flex items-center gap-1">
+          <button id="desktop-search-clear" onclick="resetFilters()" class="hidden text-xs opacity-50 hover:opacity-100 p-1 cursor-pointer" title="مسح">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <kbd class="pointer-events-none hidden xl:inline-block px-1.5 py-0.5 text-[9px] font-mono border rounded opacity-50" style="background-color: var(--bg-card); border-color: var(--border-card);">Ctrl K</kbd>
+        </div>
       </div>
 
       <!-- Action Buttons -->
@@ -548,9 +633,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           oninput="handleSearchInput(this.value)"
           placeholder="ابحث عن هاتف، شاحن، كود خصم، ساعة..." 
           data-i18n-placeholder="search_placeholder"
-          class="w-full border rounded-xl pr-10 pl-3.5 py-3 text-sm focus:outline-none focus:border-rose-500 transition min-h-[46px]"
+          class="w-full border rounded-xl pr-10 pl-9 py-3 text-sm focus:outline-none focus:border-rose-500 transition min-h-[46px]"
           style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);"
         />
+        <button id="mobile-search-clear" onclick="resetFilters()" class="hidden absolute left-3 top-1/2 -translate-y-1/2 text-xs opacity-50 hover:opacity-100 p-1 cursor-pointer" title="مسح">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
       </div>
 
       <!-- Active Promo Event Showcase Banner & Deal Keywords -->
@@ -2070,8 +2158,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       currentSearchTerm = term.trim().toLowerCase();
       const desk = document.getElementById('desktop-search');
       const mob = document.getElementById('mobile-search');
+      const deskClear = document.getElementById('desktop-search-clear');
+      const mobClear = document.getElementById('mobile-search-clear');
       if (desk && desk.value !== term) desk.value = term;
       if (mob && mob.value !== term) mob.value = term;
+      if (deskClear) deskClear.classList.toggle('hidden', !currentSearchTerm);
+      if (mobClear) mobClear.classList.toggle('hidden', !currentSearchTerm);
       filterDeals();
     }
 
@@ -2080,8 +2172,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       currentCategory = 'all';
       const desk = document.getElementById('desktop-search');
       const mob = document.getElementById('mobile-search');
+      const deskClear = document.getElementById('desktop-search-clear');
+      const mobClear = document.getElementById('mobile-search-clear');
       if (desk) desk.value = '';
       if (mob) mob.value = '';
+      if (deskClear) deskClear.classList.add('hidden');
+      if (mobClear) mobClear.classList.add('hidden');
       setCategory('all');
     }
 
@@ -2523,18 +2619,18 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const isAr = currentLang === 'ar';
       if (currentCurrency === 'DZD') {
         if (deal.price_dzd) {
-          return `<span class="text-base sm:text-lg font-bold font-mono tracking-tight whitespace-nowrap inline-flex items-baseline gap-1" style="color: var(--text-main);">${deal.price_dzd.toLocaleString()} <span class="text-xs text-rose-500 font-semibold">${isAr ? 'دج' : 'DZD'}</span></span>`;
+          return `<span class="text-base sm:text-lg font-black font-mono tracking-tight whitespace-nowrap inline-flex items-baseline gap-1 price-num" style="color: var(--text-main);">${deal.price_dzd.toLocaleString()} <span class="text-xs text-rose-500 font-bold font-heading px-1 py-0.5 rounded bg-rose-500/10">${isAr ? 'دج' : 'DZD'}</span></span>`;
         }
       } else if (currentCurrency === 'EUR') {
         if (deal.price_eur) {
-          return `<span class="text-base sm:text-lg font-bold font-mono tracking-tight whitespace-nowrap inline-flex items-baseline gap-1" style="color: var(--text-main);">${deal.price_eur.toFixed(2)} <span class="text-xs text-rose-500 font-semibold">€</span></span>`;
+          return `<span class="text-base sm:text-lg font-black font-mono tracking-tight whitespace-nowrap inline-flex items-baseline gap-1 price-num" style="color: var(--text-main);">${deal.price_eur.toFixed(2)} <span class="text-xs text-rose-500 font-bold font-heading px-1 py-0.5 rounded bg-rose-500/10">€</span></span>`;
         }
       } else if (currentCurrency === 'USD') {
         if (deal.price_usd) {
-          return `<span class="text-base sm:text-lg font-bold font-mono tracking-tight whitespace-nowrap inline-flex items-baseline gap-1" style="color: var(--text-main);">${deal.price_usd.toFixed(2)} <span class="text-xs text-rose-500 font-semibold">$</span></span>`;
+          return `<span class="text-base sm:text-lg font-black font-mono tracking-tight whitespace-nowrap inline-flex items-baseline gap-1 price-num" style="color: var(--text-main);">${deal.price_usd.toFixed(2)} <span class="text-xs text-rose-500 font-bold font-heading px-1 py-0.5 rounded bg-rose-500/10">$</span></span>`;
         }
       }
-      return `<span class="text-sm font-bold text-rose-500 font-sans">${isAr ? 'تخفيض خاص' : 'Prix Promo'}</span>`;
+      return `<span class="text-sm font-bold text-rose-500 font-heading">${isAr ? 'تخفيض خاص' : 'Prix Promo'}</span>`;
     }
 
     function renderGrid(dealsToRender = null) {
@@ -2552,8 +2648,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         const photoHtml = deal.photo_url ? `
           <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-3 cursor-pointer group flex items-center justify-center border" style="background-color: var(--bg-page); border-color: var(--border-card);" onclick="openDealModal('${deal.id}')">
             <img src="${deal.photo_url}" alt="${safeTitle}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="handleImgError(this, '${escapeHtml(deal.photo_url)}')" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
-            ${deal.has_coins ? `<span class="absolute top-2 left-2 bg-amber-500 text-zinc-950 text-[10px] font-bold px-2 py-0.5 rounded-md flex items-center gap-1 shadow-md"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
-            ${deal.country ? `<span class="absolute top-2 right-2 text-[10px] px-2 py-0.5 rounded-md font-bold border shadow-md" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">${escapeHtml(deal.country)}</span>` : ''}
+            ${deal.has_coins ? `<span class="absolute top-2.5 left-2.5 bg-gradient-to-r from-amber-400 to-amber-500 text-zinc-950 text-[10px] font-extrabold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-md tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
+            ${deal.country ? `<span class="absolute top-2.5 right-2.5 text-[10px] px-2 py-0.5 rounded-lg font-bold border shadow-md backdrop-blur-md" style="background-color: rgba(18, 18, 21, 0.75); border-color: rgba(255, 255, 255, 0.1); color: #fafafa;">${escapeHtml(deal.country)}</span>` : ''}
           </div>
         ` : `
           <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-3 cursor-pointer group flex items-center justify-center border" style="background-color: var(--bg-page); border-color: var(--border-card);" onclick="openDealModal('${deal.id}')">
@@ -2561,20 +2657,20 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               <i class="fa-solid fa-bag-shopping text-2xl text-crimson-500"></i>
               <span class="text-[11px] font-semibold" style="color: var(--text-muted);">${safeTitle.slice(0, 30)}...</span>
             </div>
-            ${deal.has_coins ? `<span class="absolute top-2 left-2 bg-amber-500 text-zinc-950 text-[10px] font-bold px-2 py-0.5 rounded-md flex items-center gap-1 shadow-md"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
+            ${deal.has_coins ? `<span class="absolute top-2.5 left-2.5 bg-gradient-to-r from-amber-400 to-amber-500 text-zinc-950 text-[10px] font-extrabold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-md tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
           </div>
         `;
 
         const couponHtml = deal.coupon ? `
-          <div class="border border-dashed rounded-xl px-2.5 py-1.5 flex items-center justify-between gap-1.5 mb-2.5 transition" style="background-color: var(--bg-elevated); border-color: rgba(225, 29, 72, 0.4);">
+          <div class="border border-dashed rounded-xl px-2.5 py-1.5 flex items-center justify-between gap-1.5 mb-2.5 transition coupon-chip" style="background-color: var(--bg-elevated); border-color: rgba(225, 29, 72, 0.45);">
             <div class="flex items-center gap-1.5 min-w-0">
               <i class="fa-solid fa-ticket text-xs flex-shrink-0 text-amber-500"></i>
               <div class="min-w-0">
-                <span class="text-[9px] uppercase tracking-wider block font-semibold opacity-60">${currentLang === 'fr' ? 'Code Promo' : 'كود الخصم'}</span>
-                <span class="font-mono text-xs font-extrabold truncate select-all block text-crimson-500">${escapeHtml(deal.coupon)}</span>
+                <span class="text-[9px] uppercase tracking-wider block font-bold opacity-60 font-heading">${currentLang === 'fr' ? 'Code Promo' : 'كود الخصم'}</span>
+                <span class="font-mono text-xs font-black truncate select-all block text-crimson-500 tracking-wide">${escapeHtml(deal.coupon)}</span>
               </div>
             </div>
-            <button onclick="copyCoupon('${deal.coupon}', this)" aria-label="Copy coupon" class="min-h-[36px] min-w-[64px] border text-[11px] font-bold px-2 py-1 rounded-lg transition flex items-center justify-center gap-1 flex-shrink-0 touch-manipulation active:scale-95 shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">
+            <button onclick="copyCoupon('${deal.coupon}', this)" aria-label="Copy coupon" class="min-h-[36px] min-w-[68px] border text-[11px] font-bold px-2.5 py-1 rounded-lg transition flex items-center justify-center gap-1 flex-shrink-0 touch-manipulation active:scale-95 shadow-sm hover:border-rose-500 cursor-pointer" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">
               <i class="fa-regular fa-copy text-[11px]"></i>
               <span class="copy-text">${I18N[currentLang].btn_copy}</span>
             </button>
@@ -2589,14 +2685,15 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <div>
             ${photoHtml}
             <div class="flex items-center justify-between gap-2 mb-1.5">
-              <span class="text-[10px] font-semibold px-2 py-0.5 rounded-md border" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-lg border font-heading" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
                 ${deal.category_label || I18N[currentLang].deal_category_fallback}
               </span>
-              <span class="text-[10px] font-mono opacity-60">
+              <span class="text-[10px] font-mono opacity-60 flex items-center gap-1">
+                <i class="fa-regular fa-clock text-[9px]"></i>
                 ${deal.date ? deal.date.split(' ')[0] : ''}
               </span>
             </div>
-            <h3 class="font-semibold text-xs sm:text-sm line-clamp-2 mb-2.5 hover:text-rose-500 transition cursor-pointer leading-snug break-words" style="color: var(--text-main);" onclick="openDealModal('${deal.id}')">
+            <h3 class="font-bold text-xs sm:text-sm line-clamp-2 mb-2.5 hover:text-rose-500 transition cursor-pointer leading-snug break-words font-heading" style="color: var(--text-main);" onclick="openDealModal('${deal.id}')">
               ${safeTitle}
             </h3>
             ${couponHtml}
@@ -2609,17 +2706,17 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
                 ${secondaryPrice}
               </div>
               ${deal.telegram_url ? `
-                <a href="${deal.telegram_url}" target="_blank" rel="noopener noreferrer" title="Telegram" class="w-8 h-8 rounded-lg border flex items-center justify-center active:scale-95 transition touch-manipulation flex-shrink-0 text-sky-500" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+                <a href="${deal.telegram_url}" target="_blank" rel="noopener noreferrer" title="Telegram" class="w-8 h-8 rounded-lg border flex items-center justify-center active:scale-95 transition touch-manipulation flex-shrink-0 text-sky-500 hover:border-sky-500" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
                   <i class="fa-brands fa-telegram"></i>
                 </a>
               ` : ''}
             </div>
 
             <!-- Primary Buy Button with Coupon Auto-Copy -->
-            <a href="${deal.affiliate_url}" target="_blank" rel="noopener noreferrer" onclick="handleBuyClick('${deal.coupon || ''}')" class="w-full bg-crimson-600 hover:bg-crimson-700 active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-2 transition shadow-sm touch-manipulation min-h-[44px]">
+            <a href="${deal.affiliate_url}" target="_blank" rel="noopener noreferrer" onclick="handleBuyClick('${deal.coupon || ''}')" class="w-full btn-ali-primary active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-2 transition shadow-sm touch-manipulation min-h-[44px] font-heading cursor-pointer">
               <i class="fa-solid fa-cart-shopping text-xs"></i>
               <span>${I18N[currentLang].btn_buy}</span>
-              ${deal.coupon ? `<span class="bg-black/25 text-[10px] font-mono px-1.5 py-0.5 rounded text-white/95 mr-1 inline-flex items-center gap-1"><i class="fa-solid fa-ticket text-[9px]"></i> ${escapeHtml(deal.coupon)}</span>` : ''}
+              ${deal.coupon ? `<span class="bg-black/30 text-[10px] font-mono px-1.5 py-0.5 rounded text-white/95 mr-1 inline-flex items-center gap-1 font-bold"><i class="fa-solid fa-ticket text-[9px]"></i> ${escapeHtml(deal.coupon)}</span>` : ''}
             </a>
           </div>
         `;
@@ -2772,14 +2869,20 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     function copyCoupon(code, btn) {
       navigator.clipboard.writeText(code).then(() => {
         showToast(I18N[currentLang].btn_copied + ' ' + code);
-        const span = btn ? btn.querySelector('.copy-text') : null;
-        if (span) {
-          const original = span.textContent;
-          span.textContent = I18N[currentLang].btn_copied;
-          btn.classList.add('text-emerald-500');
+        if (btn) {
+          const span = btn.querySelector('.copy-text');
+          const icon = btn.querySelector('i');
+          const origIcon = icon ? icon.className : '';
+          const origText = span ? span.textContent : '';
+          
+          if (span) span.textContent = I18N[currentLang].btn_copied;
+          if (icon) icon.className = 'fa-solid fa-check text-[11px] text-emerald-500';
+          btn.classList.add('border-emerald-500', 'text-emerald-500');
+          
           setTimeout(() => {
-            span.textContent = original;
-            btn.classList.remove('text-emerald-500');
+            if (span) span.textContent = origText;
+            if (icon) icon.className = origIcon;
+            btn.classList.remove('border-emerald-500', 'text-emerald-500');
           }, 1800);
         }
       });
@@ -2811,7 +2914,20 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
     // ── Keyboard & Lifecycle Handlers ───────────────────────────────
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeDealModal();
+      if (e.key === 'Escape') {
+        closeDealModal();
+        if (currentSearchTerm) resetFilters();
+      }
+      // Ctrl+K or / keyboard shortcut to focus search
+      if ((e.ctrlKey || e.metaKey) && (e.key === 'k' || e.key === 'K')) {
+        e.preventDefault();
+        const searchInput = (window.innerWidth >= 768) ? document.getElementById('desktop-search') : document.getElementById('mobile-search');
+        if (searchInput) searchInput.focus();
+      } else if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+        e.preventDefault();
+        const searchInput = (window.innerWidth >= 768) ? document.getElementById('desktop-search') : document.getElementById('mobile-search');
+        if (searchInput) searchInput.focus();
+      }
     });
 
     window.addEventListener('popstate', (e) => {
