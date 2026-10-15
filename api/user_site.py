@@ -1,18 +1,20 @@
 """
 User-Facing Public Website for DealScout DZ.
 Professional, serious e-commerce deal aggregator aesthetics.
-Clean typography, high-contrast readability, zero glassmorphic slop.
+Clean neutral palette (Zero blue slop!), Full Light & Dark Mode support.
+Robust Telegram/CDN Image Loading & Proxy Recovery.
 Full Bilingual Support: Arabic (Default, RTL) & French (Secondary, LTR).
 Structured Multi-Page Views: Deals, Coins Bot, FAQ, Contact, About.
 Comprehensive E-Commerce Footer with Legal & Affiliate Compliance.
 Optimized for mobile ergonomics (iOS Safari & Android Chrome) and rich SEO indexing.
 """
 
-USER_WEBSITE_HTML = """<!DOCTYPE html>
+USER_WEBSITE_HTML = r"""<!DOCTYPE html>
 <html lang="ar" dir="rtl" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="referrer" content="no-referrer">
   <title id="meta-title">DealScout DZ — صفقات وتخفيضات AliExpress بالدينار الجزائري</title>
   <meta name="description" id="meta-desc" content="منصة متخصصة في رصد وتحديث أفضل عروض وتخفيضات AliExpress الموجهة للجزائر لحظة بلحظة، مع حساب الأسعار بالدينار الجزائري وأكواد الخصم والعملات.">
   <meta name="robots" content="index, follow">
@@ -39,11 +41,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <meta property="og:url" content="https://dealscout-green.vercel.app/">
   <meta property="og:title" id="og-title" content="DealScout DZ — صفقات وتخفيضات AliExpress بالدينار الجزائري">
   <meta property="og:description" id="og-desc" content="تتبع مباشر لأقوى صفقات وعروض AliExpress المنشورة لحظياً مع حساب السعر بالدينار الجزائري وأكواد الخصم والعملات.">
-  <meta property="og:image" content="https://dealscout-green.vercel.app/icon.svg">
-  <meta property="og:image:secure_url" content="https://dealscout-green.vercel.app/icon.svg">
-  <meta property="og:image:type" content="image/svg+xml">
-  <meta property="og:image:width" content="512">
-  <meta property="og:image:height" content="512">
+  <meta property="og:image" content="https://dealscout-green.vercel.app/logo.png">
+  <meta property="og:image:secure_url" content="https://dealscout-green.vercel.app/logo.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="DealScout DZ">
   <meta property="og:locale" content="ar_DZ">
   <meta property="og:locale:alternate" content="fr_DZ">
@@ -55,14 +57,15 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <meta name="twitter:creator" content="@DzAliexpress0">
   <meta name="twitter:title" id="twitter-title" content="DealScout DZ — صفقات وتخفيضات AliExpress بالدينار الجزائري">
   <meta name="twitter:description" id="twitter-desc" content="تتبع مباشر لأقوى صفقات AliExpress المنشورة لحظياً مع حساب الأسعار بالدينار الجزائري وأكواد الخصم والعملات.">
-  <meta name="twitter:image" content="https://dealscout-green.vercel.app/icon.svg">
+  <meta name="twitter:image" content="https://dealscout-green.vercel.app/logo.png">
   <meta name="twitter:image:alt" content="DealScout DZ">
 
   <!-- PWA & Mobile Meta (iOS Safari & Android Chrome) -->
   <link rel="manifest" href="/manifest.json">
-  <link rel="icon" type="image/svg+xml" href="/icon.svg">
-  <link rel="apple-touch-icon" href="/icon.svg">
-  <meta name="theme-color" content="#0b0f19">
+  <link rel="icon" type="image/png" href="/logo_circular.png">
+  <link rel="shortcut icon" href="/logo_circular.png">
+  <link rel="apple-touch-icon" href="/logo_circular.png">
+  <meta name="theme-color" content="#09090b" id="meta-theme-color">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -87,18 +90,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             inter: ['Inter', 'sans-serif']
           },
           colors: {
-            dark: {
-              950: '#070a10',
-              900: '#0b0f19',
-              850: '#0f172a',
-              800: '#1e293b',
-              700: '#334155',
-              600: '#475569'
-            },
             crimson: {
-              500: '#ef4444',
-              600: '#dc2626',
-              700: '#b91c1c'
+              500: '#f43f5e',
+              600: '#e11d48',
+              700: '#be123c'
             }
           }
         }
@@ -112,17 +107,51 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       --sab: env(safe-area-inset-bottom, 0px);
       --sal: env(safe-area-inset-left, 0px);
       --sar: env(safe-area-inset-right, 0px);
+
+      /* Clean Light Theme Tokens */
+      --bg-page: #f4f4f5;
+      --bg-card: #ffffff;
+      --bg-card-hover: #fafafa;
+      --bg-elevated: #ffffff;
+      --bg-subtle: #e4e4e7;
+      --border-card: #e4e4e7;
+      --border-subtle: #d4d4d8;
+      --text-main: #09090b;
+      --text-muted: #52525b;
+      --text-soft: #71717a;
+      --header-bg: rgba(255, 255, 255, 0.94);
+      --input-bg: #ffffff;
+      --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
     }
+
+    html.dark {
+      /* Clean Neutral Dark Tokens (Zero blue slop!) */
+      --bg-page: #09090b;
+      --bg-card: #121215;
+      --bg-card-hover: #18181b;
+      --bg-elevated: #18181b;
+      --bg-subtle: #27272a;
+      --border-card: #27272a;
+      --border-subtle: #3f3f46;
+      --text-main: #fafafa;
+      --text-muted: #a1a1aa;
+      --text-soft: #71717a;
+      --header-bg: rgba(18, 18, 21, 0.94);
+      --input-bg: #18181b;
+      --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+    }
+
     html {
       scroll-behavior: smooth;
       -webkit-text-size-adjust: 100%;
     }
     body {
-      background-color: #070a10;
-      color: #f1f5f9;
+      background-color: var(--bg-page);
+      color: var(--text-main);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       -webkit-tap-highlight-color: transparent;
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
     body[dir="ltr"] {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -135,15 +164,16 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       -webkit-tap-highlight-color: transparent;
     }
     .deal-card {
-      background-color: #0f172a;
-      border: 1px solid #1e293b;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-card);
+      box-shadow: var(--shadow-card);
       transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
     }
     @media (hover: hover) {
       .deal-card:hover {
-        border-color: #3b82f6;
-        box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.4);
+        border-color: #f43f5e;
         transform: translateY(-2px);
+        box-shadow: 0 10px 25px -5px rgba(244, 63, 94, 0.12);
       }
     }
     .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -159,7 +189,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       scroll-snap-type: x proximity;
     }
     .momentum-scroll > * { scroll-snap-align: start; }
-    ::selection { background: #dc2626; color: #ffffff; }
+    ::selection { background: #e11d48; color: #ffffff; }
 
     @keyframes slideUp {
       from { transform: translateY(100%); opacity: 0; }
@@ -172,7 +202,6 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     .animate-slide-up { animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
     .animate-fade-in { animation: fadeIn 0.2s ease-out forwards; }
     
-    /* FAQ Accordion Transitions */
     .faq-item[open] summary .faq-icon {
       transform: rotate(180deg);
     }
@@ -232,38 +261,46 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   }
   </script>
 </head>
-<body class="min-h-screen bg-dark-950 text-slate-100 flex flex-col justify-between" dir="rtl">
+<body class="min-h-screen flex flex-col justify-between" dir="rtl">
 
   <!-- Top Utilities Bar -->
-  <aside class="bg-dark-900 border-b border-dark-800 text-[11px] text-slate-400 py-1.5 px-4 pt-safe" aria-label="شريط المعلومات">
+  <aside class="border-b text-[11px] py-1.5 px-4 pt-safe transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);" aria-label="شريط المعلومات">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
       <div class="flex items-center gap-3">
         <span class="inline-flex items-center gap-1.5 font-medium">
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
           <span data-i18n="top_live_updates">تحديث فوري من القنوات</span>
         </span>
-        <span class="hidden sm:inline text-slate-700">|</span>
-        <a href="https://squarealgerie.com" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-1 hover:text-slate-200 transition py-0.5">
-          <i class="fa-solid fa-chart-line text-emerald-400"></i>
-          <span><span data-i18n="top_usdt_rate">سعر صرف السكوار</span>: 1 USDT ≈ <b id="top-usdt-rate" class="font-mono text-emerald-400 font-bold">256.9</b> <span data-i18n="currency_dzd">دج</span></span>
+        <span class="hidden sm:inline opacity-30">|</span>
+        <a href="https://squarealgerie.com" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-1 hover:opacity-80 transition py-0.5">
+          <i class="fa-solid fa-chart-line text-emerald-500"></i>
+          <span><span data-i18n="top_usdt_rate">سعر صرف السكوار</span>: 1 USDT ≈ <b id="top-usdt-rate" class="font-mono text-emerald-500 font-bold">256.9</b> <span data-i18n="currency_dzd">دج</span></span>
         </a>
       </div>
       
       <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Theme Toggle Button -->
+        <button onclick="toggleTheme()" id="theme-toggle-btn" aria-label="Toggle Light / Dark theme" class="px-2 py-0.5 rounded-lg border text-xs flex items-center gap-1.5 transition active:scale-95" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);">
+          <i id="theme-icon" class="fa-solid fa-moon text-[11px]"></i>
+          <span id="theme-text" class="text-[11px] hidden sm:inline">داكن</span>
+        </button>
+
+        <span class="opacity-30">|</span>
+
         <!-- Language Switcher Button -->
-        <div class="inline-flex items-center bg-dark-950 border border-dark-800 rounded-lg p-0.5 text-xs">
+        <div class="inline-flex items-center border rounded-lg p-0.5 text-xs" style="border-color: var(--border-card); background-color: var(--bg-elevated);">
           <button onclick="setLanguage('ar')" id="lang-ar-btn" class="px-2 py-0.5 rounded text-[11px] font-bold bg-crimson-600 text-white transition active:scale-95">العربية</button>
-          <button onclick="setLanguage('fr')" id="lang-fr-btn" class="px-2 py-0.5 rounded text-[11px] font-bold text-slate-400 hover:text-slate-200 transition active:scale-95">Français</button>
+          <button onclick="setLanguage('fr')" id="lang-fr-btn" class="px-2 py-0.5 rounded text-[11px] font-bold opacity-60 hover:opacity-100 transition active:scale-95">Français</button>
         </div>
 
-        <span class="text-slate-700">|</span>
-        <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition font-medium inline-flex items-center gap-1 py-1 px-1.5 active:scale-95 touch-manipulation">
-          <i class="fa-solid fa-coins text-amber-400 text-[10px]"></i>
+        <span class="opacity-30">|</span>
+        <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="hover:text-amber-500 transition font-medium inline-flex items-center gap-1 py-1 px-1.5 active:scale-95 touch-manipulation">
+          <i class="fa-solid fa-coins text-amber-500 text-[10px]"></i>
           <span class="hidden sm:inline" data-i18n="top_coin_bot">بوت العملات</span>
         </a>
-        <span class="text-slate-700">|</span>
-        <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition font-medium inline-flex items-center gap-1 py-1 px-1.5 active:scale-95 touch-manipulation">
-          <i class="fa-brands fa-telegram text-sky-400"></i>
+        <span class="opacity-30">|</span>
+        <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="hover:text-sky-500 transition font-medium inline-flex items-center gap-1 py-1 px-1.5 active:scale-95 touch-manipulation">
+          <i class="fa-brands fa-telegram text-sky-500"></i>
           <span class="hidden sm:inline">Telegram</span>
         </a>
       </div>
@@ -271,52 +308,50 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   </aside>
 
   <!-- Main Navigation Bar -->
-  <header class="sticky top-0 z-40 bg-dark-900/95 border-b border-dark-800 backdrop-blur-md px-3 sm:px-4 py-2.5 sm:py-3">
+  <header class="sticky top-0 z-40 border-b backdrop-blur-md px-3 sm:px-4 py-2.5 sm:py-3 transition-colors" style="background-color: var(--header-bg); border-color: var(--border-card);">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-3 sm:gap-4">
       
       <!-- Brand Logo -->
       <a href="#deals" onclick="showPage('deals')" class="flex items-center gap-2 sm:gap-2.5 flex-shrink-0 min-h-[44px] touch-manipulation" aria-label="DealScout DZ">
-        <div class="w-9 h-9 rounded-xl bg-crimson-600 flex items-center justify-center font-bold text-white shadow-sm flex-shrink-0" aria-hidden="true">
-          <i class="fa-solid fa-bolt text-base"></i>
-        </div>
+        <img src="/logo_circular.png" alt="DealScout DZ" class="w-9 h-9 rounded-xl object-contain shadow-sm flex-shrink-0" onerror="this.onerror=null; this.src='/logo.png'">
         <div>
           <div class="flex items-center gap-1.5">
-            <h1 class="font-bold text-base text-white tracking-tight font-inter inline-flex items-center gap-1.5">
+            <h1 class="font-bold text-base tracking-tight font-inter inline-flex items-center gap-1.5" style="color: var(--text-main);">
               <span>DealScout<span class="text-crimson-500">DZ</span></span>
-              <span class="text-[10px] font-semibold bg-dark-800 text-slate-300 px-1.5 py-0.2 rounded border border-dark-700 font-mono font-normal">2.6</span>
+              <span class="text-[10px] font-semibold px-1.5 py-0.2 rounded border font-mono font-normal" style="background-color: var(--bg-subtle); border-color: var(--border-card); color: var(--text-muted);">2.6</span>
             </h1>
           </div>
-          <p class="text-[10px] text-slate-400 block -mt-0.5" data-i18n="brand_subtitle">بوابة صفقات وتخفيضات AliExpress 🇩🇿</p>
+          <p class="text-[10px] block -mt-0.5" style="color: var(--text-soft);" data-i18n="brand_subtitle">بوابة صفقات وتخفيضات AliExpress 🇩🇿</p>
         </div>
       </a>
 
       <!-- Desktop Nav Pages Links -->
-      <nav class="hidden lg:flex items-center gap-1 text-xs font-semibold text-slate-300">
-        <button onclick="showPage('deals')" id="nav-link-deals" class="nav-page-btn px-3 py-1.5 rounded-lg bg-dark-800 text-white transition flex items-center gap-1.5">
+      <nav class="hidden lg:flex items-center gap-1 text-xs font-semibold" style="color: var(--text-muted);">
+        <button onclick="showPage('deals')" id="nav-link-deals" class="nav-page-btn px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 font-bold" style="background-color: var(--bg-elevated); color: var(--text-main);">
           <i class="fa-solid fa-fire text-crimson-500 text-xs"></i>
           <span data-i18n="nav_deals">الصفقات</span>
         </button>
-        <button onclick="showPage('coins')" id="nav-link-coins" class="nav-page-btn px-3 py-1.5 rounded-lg hover:bg-dark-800 hover:text-white transition flex items-center gap-1.5">
-          <i class="fa-solid fa-coins text-amber-400 text-xs"></i>
+        <button onclick="showPage('coins')" id="nav-link-coins" class="nav-page-btn px-3 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-coins text-amber-500 text-xs"></i>
           <span data-i18n="nav_coins">بوت العملات</span>
         </button>
-        <button onclick="showPage('faq')" id="nav-link-faq" class="nav-page-btn px-3 py-1.5 rounded-lg hover:bg-dark-800 hover:text-white transition flex items-center gap-1.5">
-          <i class="fa-solid fa-circle-question text-sky-400 text-xs"></i>
+        <button onclick="showPage('faq')" id="nav-link-faq" class="nav-page-btn px-3 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-circle-question text-sky-500 text-xs"></i>
           <span data-i18n="nav_faq">الأسئلة الشائعة</span>
         </button>
-        <button onclick="showPage('contact')" id="nav-link-contact" class="nav-page-btn px-3 py-1.5 rounded-lg hover:bg-dark-800 hover:text-white transition flex items-center gap-1.5">
-          <i class="fa-solid fa-envelope text-emerald-400 text-xs"></i>
+        <button onclick="showPage('contact')" id="nav-link-contact" class="nav-page-btn px-3 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-envelope text-emerald-500 text-xs"></i>
           <span data-i18n="nav_contact">اتصل بنا</span>
         </button>
-        <button onclick="showPage('about')" id="nav-link-about" class="nav-page-btn px-3 py-1.5 rounded-lg hover:bg-dark-800 hover:text-white transition flex items-center gap-1.5">
-          <i class="fa-solid fa-info-circle text-purple-400 text-xs"></i>
+        <button onclick="showPage('about')" id="nav-link-about" class="nav-page-btn px-3 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-info-circle text-purple-500 text-xs"></i>
           <span data-i18n="nav_about">من نحن</span>
         </button>
       </nav>
 
       <!-- Search Bar Desktop -->
       <div class="hidden md:flex items-center relative flex-1 max-w-xs xl:max-w-sm">
-        <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-xs pointer-events-none" aria-hidden="true"></i>
+        <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-1/2 -translate-y-1/2 text-xs pointer-events-none opacity-50"></i>
         <input 
           type="search" 
           id="desktop-search" 
@@ -324,17 +359,18 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           oninput="handleSearchInput(this.value)"
           placeholder="ابحث عن هاتف، شاحن، كود خصم..." 
           data-i18n-placeholder="search_placeholder"
-          class="w-full bg-dark-950 border border-dark-800 rounded-xl pr-9 pl-3 py-2 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-slate-600 transition min-h-[40px]"
+          class="w-full border rounded-xl pr-9 pl-3 py-2 text-xs focus:outline-none focus:border-rose-500 transition min-h-[40px]"
+          style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);"
         />
       </div>
 
       <!-- Action Buttons -->
       <div class="flex items-center gap-1.5 sm:gap-2">
         <!-- Currency Selector -->
-        <div class="flex items-center bg-dark-950 border border-dark-800 rounded-xl p-0.5 text-xs font-semibold" aria-label="Currency" role="group">
-          <button onclick="setCurrency('DZD')" id="curr-dzd" class="min-w-[34px] sm:min-w-[38px] h-8 sm:h-9 px-2 py-1 rounded-lg bg-dark-800 text-white font-mono transition flex items-center justify-center active:scale-95 touch-manipulation">دج</button>
-          <button onclick="setCurrency('USD')" id="curr-usd" class="min-w-[32px] sm:min-w-[36px] h-8 sm:h-9 px-2 py-1 rounded-lg text-slate-400 hover:text-slate-200 font-mono transition flex items-center justify-center active:scale-95 touch-manipulation">$</button>
-          <button onclick="setCurrency('EUR')" id="curr-eur" class="min-w-[32px] sm:min-w-[36px] h-8 sm:h-9 px-2 py-1 rounded-lg text-slate-400 hover:text-slate-200 font-mono transition flex items-center justify-center active:scale-95 touch-manipulation">€</button>
+        <div class="flex items-center border rounded-xl p-0.5 text-xs font-semibold" style="border-color: var(--border-card); background-color: var(--bg-card);" aria-label="Currency" role="group">
+          <button onclick="setCurrency('DZD')" id="curr-dzd" class="min-w-[34px] sm:min-w-[38px] h-8 sm:h-9 px-2 py-1 rounded-lg bg-crimson-600 text-white font-mono transition flex items-center justify-center active:scale-95 touch-manipulation">دج</button>
+          <button onclick="setCurrency('USD')" id="curr-usd" class="min-w-[32px] sm:min-w-[36px] h-8 sm:h-9 px-2 py-1 rounded-lg opacity-70 hover:opacity-100 font-mono transition flex items-center justify-center active:scale-95 touch-manipulation">$</button>
+          <button onclick="setCurrency('EUR')" id="curr-eur" class="min-w-[32px] sm:min-w-[36px] h-8 sm:h-9 px-2 py-1 rounded-lg opacity-70 hover:opacity-100 font-mono transition flex items-center justify-center active:scale-95 touch-manipulation">€</button>
         </div>
 
         <!-- Join Telegram Button -->
@@ -344,7 +380,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </a>
 
         <!-- Refresh Data Button -->
-        <button onclick="fetchDeals(true)" title="تحديث البيانات" class="bg-dark-800 hover:bg-dark-700 text-slate-300 w-8 sm:w-9 h-8 sm:h-9 rounded-xl border border-dark-700 text-xs flex items-center justify-center transition active:scale-95 touch-manipulation">
+        <button onclick="fetchDeals(true)" title="تحديث البيانات" class="w-8 sm:w-9 h-8 sm:h-9 rounded-xl border text-xs flex items-center justify-center transition active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
           <i class="fa-solid fa-rotate-right" id="refresh-icon" aria-hidden="true"></i>
         </button>
       </div>
@@ -363,25 +399,25 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <div id="page-deals" class="page-view space-y-5 sm:space-y-6">
 
       <!-- Channel Switcher (Algeria vs France) -->
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 bg-dark-900 border border-dark-800 p-2 sm:p-2.5 rounded-2xl">
-        <div class="flex items-center gap-1.5 bg-dark-950 p-1 rounded-xl border border-dark-800 text-xs font-bold" role="tablist">
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border p-2 sm:p-2.5 rounded-2xl transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="flex items-center gap-1.5 p-1 rounded-xl border text-xs font-bold" style="background-color: var(--bg-page); border-color: var(--border-card);" role="tablist">
           <button onclick="switchChannel('@DzAliexpress0')" id="tab-dz" role="tab" aria-selected="true" class="flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg bg-crimson-600 text-white transition flex items-center justify-center gap-2 active:scale-95 shadow-sm">
             <span>🇩🇿</span>
             <span data-i18n="tab_algeria_deals">عروض الجزائر (@DzAliexpress0)</span>
           </button>
-          <button onclick="switchChannel('@francedealsdz')" id="tab-fr" role="tab" aria-selected="false" class="flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg text-slate-400 hover:text-slate-200 transition flex items-center justify-center gap-2 active:scale-95">
+          <button onclick="switchChannel('@francedealsdz')" id="tab-fr" role="tab" aria-selected="false" class="flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg opacity-70 hover:opacity-100 transition flex items-center justify-center gap-2 active:scale-95">
             <span>🇫🇷</span>
             <span data-i18n="tab_france_deals">عروض فرنسا (@francedealsdz)</span>
           </button>
         </div>
 
         <!-- View Switcher (Grid vs Telegram Stream) -->
-        <div class="flex items-center justify-end gap-1 bg-dark-950 border border-dark-800 rounded-xl p-1 text-xs font-semibold">
-          <button onclick="setViewMode('grid')" id="view-mode-grid" class="min-h-[36px] px-3 py-1.5 rounded-lg bg-dark-800 text-slate-100 transition flex items-center gap-1.5 active:scale-95">
+        <div class="flex items-center justify-end gap-1 border rounded-xl p-1 text-xs font-semibold" style="background-color: var(--bg-page); border-color: var(--border-card);">
+          <button onclick="setViewMode('grid')" id="view-mode-grid" class="min-h-[36px] px-3 py-1.5 rounded-lg text-white transition flex items-center gap-1.5 active:scale-95" style="background-color: var(--bg-elevated); color: var(--text-main);">
             <i class="fa-solid fa-grip text-xs"></i>
             <span data-i18n="view_grid">بطاقات</span>
           </button>
-          <button onclick="setViewMode('feed')" id="view-mode-feed" class="min-h-[36px] px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition flex items-center gap-1.5 active:scale-95">
+          <button onclick="setViewMode('feed')" id="view-mode-feed" class="min-h-[36px] px-3 py-1.5 rounded-lg opacity-60 hover:opacity-100 transition flex items-center gap-1.5 active:scale-95">
             <i class="fa-brands fa-telegram text-xs"></i>
             <span data-i18n="view_stream">منشورات القناة</span>
           </button>
@@ -390,7 +426,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       <!-- Mobile Search Bar -->
       <div class="md:hidden relative">
-        <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-500 text-sm pointer-events-none"></i>
+        <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-1/2 -translate-y-1/2 text-sm pointer-events-none opacity-50"></i>
         <input 
           type="search" 
           id="mobile-search" 
@@ -398,47 +434,48 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           oninput="handleSearchInput(this.value)"
           placeholder="ابحث عن هاتف، شاحن، كود خصم، ساعة..." 
           data-i18n-placeholder="search_placeholder"
-          class="w-full bg-dark-900 border border-dark-800 rounded-xl pr-10 pl-3.5 py-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-slate-600 transition min-h-[46px]"
+          class="w-full border rounded-xl pr-10 pl-3.5 py-3 text-sm focus:outline-none focus:border-rose-500 transition min-h-[46px]"
+          style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);"
         />
       </div>
 
       <!-- Category Filter Pills -->
-      <section class="border-b border-dark-800/80 pb-3" aria-label="Categories">
+      <section class="border-b pb-3" style="border-color: var(--border-card);" aria-label="Categories">
         <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 text-xs font-semibold -mx-3.5 px-3.5 sm:mx-0 sm:px-0 momentum-scroll">
           <button onclick="setCategory('all')" id="cat-all" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl bg-crimson-600 text-white whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation shadow-sm">
             <span data-i18n="cat_all">الكل</span>
             <span id="count-all" class="text-[11px] font-mono opacity-80 bg-black/20 px-1.5 py-0.2 rounded">0</span>
           </button>
-          <button onclick="setCategory('smartphones')" id="cat-smartphones" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl bg-dark-900 hover:bg-dark-800 text-slate-300 border border-dark-800 whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation">
+          <button onclick="setCategory('smartphones')" id="cat-smartphones" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
             <span data-i18n="cat_smartphones">هواتف وتابلت</span>
-            <span id="count-smartphones" class="text-[11px] font-mono text-slate-500">0</span>
+            <span id="count-smartphones" class="text-[11px] font-mono opacity-60">0</span>
           </button>
-          <button onclick="setCategory('gaming')" id="cat-gaming" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl bg-dark-900 hover:bg-dark-800 text-slate-300 border border-dark-800 whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation">
+          <button onclick="setCategory('gaming')" id="cat-gaming" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
             <span data-i18n="cat_gaming">أجهزة قيمنق</span>
-            <span id="count-gaming" class="text-[11px] font-mono text-slate-500">0</span>
+            <span id="count-gaming" class="text-[11px] font-mono opacity-60">0</span>
           </button>
-          <button onclick="setCategory('audio')" id="cat-audio" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl bg-dark-900 hover:bg-dark-800 text-slate-300 border border-dark-800 whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation">
+          <button onclick="setCategory('audio')" id="cat-audio" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
             <span data-i18n="cat_audio">سماعات وصوتيات</span>
-            <span id="count-audio" class="text-[11px] font-mono text-slate-500">0</span>
+            <span id="count-audio" class="text-[11px] font-mono opacity-60">0</span>
           </button>
-          <button onclick="setCategory('tech')" id="cat-tech" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl bg-dark-900 hover:bg-dark-800 text-slate-300 border border-dark-800 whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation">
+          <button onclick="setCategory('tech')" id="cat-tech" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
             <span data-i18n="cat_tech">شواحن وملحقات</span>
-            <span id="count-tech" class="text-[11px] font-mono text-slate-500">0</span>
+            <span id="count-tech" class="text-[11px] font-mono opacity-60">0</span>
           </button>
-          <button onclick="setCategory('tajmi3at')" id="cat-tajmi3at" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl bg-dark-900 hover:bg-dark-800 text-slate-300 border border-dark-800 whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation">
+          <button onclick="setCategory('tajmi3at')" id="cat-tajmi3at" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
             <span data-i18n="cat_tajmi3at">تجميعات العروض</span>
-            <span id="count-tajmi3at" class="text-[11px] font-mono text-slate-500">0</span>
+            <span id="count-tajmi3at" class="text-[11px] font-mono opacity-60">0</span>
           </button>
         </div>
       </section>
 
       <!-- Section Title & Live Count -->
-      <div class="flex items-center justify-between border-b border-dark-800/80 pb-2">
-        <h2 class="text-xs sm:text-sm font-bold text-slate-200 flex items-center gap-2">
+      <div class="flex items-center justify-between border-b pb-2" style="border-color: var(--border-card);">
+        <h2 class="text-xs sm:text-sm font-bold flex items-center gap-2" style="color: var(--text-main);">
           <i class="fa-solid fa-fire text-crimson-500" aria-hidden="true"></i>
           <span data-i18n="deals_section_heading">أحدث صفقات وتخفيضات AliExpress بالدينار الجزائري</span>
         </h2>
-        <span class="text-[11px] text-emerald-400 flex items-center gap-1.5 font-medium">
+        <span class="text-[11px] text-emerald-500 flex items-center gap-1.5 font-medium">
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
           <span id="live-deals-counter" class="font-mono">...</span>
         </span>
@@ -448,28 +485,28 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <section id="deals-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-4" aria-label="قائمة الصفقات">
         <!-- Skeleton Loaders -->
         <div class="deal-card rounded-2xl p-4 animate-pulse space-y-3">
-          <div class="w-full aspect-[4/3] bg-dark-800 rounded-xl"></div>
-          <div class="h-4 bg-dark-800 rounded w-3/4"></div>
-          <div class="h-5 bg-dark-800 rounded w-1/2"></div>
-          <div class="h-11 bg-dark-800 rounded-xl"></div>
+          <div class="w-full aspect-[4/3] rounded-xl opacity-20" style="background-color: var(--bg-subtle);"></div>
+          <div class="h-4 rounded w-3/4 opacity-20" style="background-color: var(--bg-subtle);"></div>
+          <div class="h-5 rounded w-1/2 opacity-20" style="background-color: var(--bg-subtle);"></div>
+          <div class="h-11 rounded-xl opacity-20" style="background-color: var(--bg-subtle);"></div>
         </div>
         <div class="deal-card rounded-2xl p-4 animate-pulse space-y-3">
-          <div class="w-full aspect-[4/3] bg-dark-800 rounded-xl"></div>
-          <div class="h-4 bg-dark-800 rounded w-3/4"></div>
-          <div class="h-5 bg-dark-800 rounded w-1/2"></div>
-          <div class="h-11 bg-dark-800 rounded-xl"></div>
+          <div class="w-full aspect-[4/3] rounded-xl opacity-20" style="background-color: var(--bg-subtle);"></div>
+          <div class="h-4 rounded w-3/4 opacity-20" style="background-color: var(--bg-subtle);"></div>
+          <div class="h-5 rounded w-1/2 opacity-20" style="background-color: var(--bg-subtle);"></div>
+          <div class="h-11 rounded-xl opacity-20" style="background-color: var(--bg-subtle);"></div>
         </div>
         <div class="deal-card rounded-2xl p-4 animate-pulse space-y-3">
-          <div class="w-full aspect-[4/3] bg-dark-800 rounded-xl"></div>
-          <div class="h-4 bg-dark-800 rounded w-3/4"></div>
-          <div class="h-5 bg-dark-800 rounded w-1/2"></div>
-          <div class="h-11 bg-dark-800 rounded-xl"></div>
+          <div class="w-full aspect-[4/3] rounded-xl opacity-20" style="background-color: var(--bg-subtle);"></div>
+          <div class="h-4 rounded w-3/4 opacity-20" style="background-color: var(--bg-subtle);"></div>
+          <div class="h-5 rounded w-1/2 opacity-20" style="background-color: var(--bg-subtle);"></div>
+          <div class="h-11 rounded-xl opacity-20" style="background-color: var(--bg-subtle);"></div>
         </div>
         <div class="deal-card rounded-2xl p-4 animate-pulse space-y-3">
-          <div class="w-full aspect-[4/3] bg-dark-800 rounded-xl"></div>
-          <div class="h-4 bg-dark-800 rounded w-3/4"></div>
-          <div class="h-5 bg-dark-800 rounded w-1/2"></div>
-          <div class="h-11 bg-dark-800 rounded-xl"></div>
+          <div class="w-full aspect-[4/3] rounded-xl opacity-20" style="background-color: var(--bg-subtle);"></div>
+          <div class="h-4 rounded w-3/4 opacity-20" style="background-color: var(--bg-subtle);"></div>
+          <div class="h-5 rounded w-1/2 opacity-20" style="background-color: var(--bg-subtle);"></div>
+          <div class="h-11 rounded-xl opacity-20" style="background-color: var(--bg-subtle);"></div>
         </div>
       </section>
 
@@ -477,10 +514,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <section id="deals-feed" class="hidden max-w-2xl mx-auto space-y-4" aria-label="بث منشورات القناة"></section>
 
       <!-- Empty State -->
-      <div id="empty-state" class="hidden text-center py-12 px-4 space-y-3 border border-dashed border-dark-800 rounded-2xl bg-dark-900/50">
-        <i class="fa-solid fa-magnifying-glass text-slate-600 text-3xl" aria-hidden="true"></i>
-        <h3 class="font-bold text-sm text-slate-200" data-i18n="empty_title">لا توجد صفقات مطابقة للبحث</h3>
-        <p class="text-xs text-slate-500" data-i18n="empty_desc">جرب كتابة اسم منتج أو علامة تجارية مختلفة أو أعد تعيين الفلاتر.</p>
+      <div id="empty-state" class="hidden text-center py-12 px-4 space-y-3 border border-dashed rounded-2xl" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <i class="fa-solid fa-magnifying-glass text-3xl opacity-40" aria-hidden="true"></i>
+        <h3 class="font-bold text-sm" style="color: var(--text-main);" data-i18n="empty_title">لا توجد صفقات مطابقة للبحث</h3>
+        <p class="text-xs" style="color: var(--text-muted);" data-i18n="empty_desc">جرب كتابة اسم منتج أو علامة تجارية مختلفة أو أعد تعيين الفلاتر.</p>
         <button onclick="resetFilters()" class="min-h-[44px] px-4 py-2 text-xs font-bold text-crimson-500 hover:underline active:scale-95 touch-manipulation" data-i18n="empty_reset">
           عرض جميع الصفقات
         </button>
@@ -493,19 +530,19 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <!-- ───────────────────────────────────────────────────────── -->
     <div id="page-coins" class="page-view hidden space-y-6">
       
-      <div class="bg-gradient-to-r from-amber-500/10 via-dark-900 to-dark-900 border border-amber-500/30 rounded-3xl p-6 sm:p-8 space-y-4">
-        <div class="inline-flex items-center gap-2 bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full text-xs font-bold">
+      <div class="border rounded-3xl p-6 sm:p-8 space-y-4" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, var(--bg-card) 60%); border-color: rgba(245, 158, 11, 0.3);">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/15 text-amber-500">
           <i class="fa-solid fa-coins"></i>
           <span data-i18n="coins_badge">دليل توفير العملات (AliExpress Coins)</span>
         </div>
-        <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight" data-i18n="coins_hero_title">
+        <h2 class="text-xl sm:text-2xl font-bold tracking-tight" style="color: var(--text-main);" data-i18n="coins_hero_title">
           كيف توفر حتى 60% إضافية باستخدام عملات AliExpress وبوت @Alilo07BOT؟
         </h2>
-        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-3xl" data-i18n="coins_hero_desc">
+        <p class="text-xs sm:text-sm leading-relaxed max-w-3xl" style="color: var(--text-muted);" data-i18n="coins_hero_desc">
           تمنح AliExpress مستخدميها عملات يومية (Coins)، لكن معظم المنتجات في التطبيق لا تسمح باستخدام أكثر من 2% فقط. بوت التخفيضات الخاص بنا يقوم بفك القيود وتوليد روابط مباشرة تمكّنك من استهلاك أكبر عدد ممكن من العملات والحصول على خصم ضخم فوري!
         </p>
         <div class="pt-2 flex flex-wrap gap-3">
-          <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="min-h-[46px] px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-dark-950 font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg shadow-amber-500/20 active:scale-95 transition">
+          <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="min-h-[46px] px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg shadow-amber-500/20 active:scale-95 transition">
             <i class="fa-solid fa-coins"></i>
             <span data-i18n="coins_btn_start">تشغيل البوت مجاناً (@Alilo07BOT)</span>
           </a>
@@ -514,22 +551,22 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       <!-- 3 Steps Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="bg-dark-900 border border-dark-800 rounded-2xl p-5 space-y-3">
-          <div class="w-10 h-10 rounded-xl bg-dark-800 text-amber-400 font-bold text-base flex items-center justify-center font-mono">1</div>
-          <h3 class="font-bold text-sm text-white" data-i18n="coins_step1_title">انسخ رابط المنتج من AliExpress</h3>
-          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="coins_step1_desc">افتح أي منتج يعجبك داخل تطبيق AliExpress، اضغط على زر المشاركة ثم اختر نسخ الرابط (Copy Link).</p>
+        <div class="border rounded-2xl p-5 space-y-3" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="w-10 h-10 rounded-xl text-amber-500 font-bold text-base flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">1</div>
+          <h3 class="font-bold text-sm" style="color: var(--text-main);" data-i18n="coins_step1_title">انسخ رابط المنتج من AliExpress</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coins_step1_desc">افتح أي منتج يعجبك داخل تطبيق AliExpress، اضغط على زر المشاركة ثم اختر نسخ الرابط (Copy Link).</p>
         </div>
 
-        <div class="bg-dark-900 border border-dark-800 rounded-2xl p-5 space-y-3">
-          <div class="w-10 h-10 rounded-xl bg-dark-800 text-sky-400 font-bold text-base flex items-center justify-center font-mono">2</div>
-          <h3 class="font-bold text-sm text-white" data-i18n="coins_step2_title">أرسل الرابط لبوت التخفيض</h3>
-          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="coins_step2_desc">افتح بوت التيليجرام <b class="text-sky-400">@Alilo07BOT</b> والصق الرابط في المحادثة. سيقوم البوت فوراً بالبحث عن أقصى نسبة خصم متاحة للعملات.</p>
+        <div class="border rounded-2xl p-5 space-y-3" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="w-10 h-10 rounded-xl text-sky-500 font-bold text-base flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">2</div>
+          <h3 class="font-bold text-sm" style="color: var(--text-main);" data-i18n="coins_step2_title">أرسل الرابط لبوت التخفيض</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coins_step2_desc">افتح بوت التيليجرام <b class="text-sky-500">@Alilo07BOT</b> والصق الرابط في المحادثة. سيقوم البوت فوراً بالبحث عن أقصى نسبة خصم متاحة للعملات.</p>
         </div>
 
-        <div class="bg-dark-900 border border-dark-800 rounded-2xl p-5 space-y-3">
-          <div class="w-10 h-10 rounded-xl bg-dark-800 text-emerald-400 font-bold text-base flex items-center justify-center font-mono">3</div>
-          <h3 class="font-bold text-sm text-white" data-i18n="coins_step3_title">ادفع بالسعر المخفض</h3>
-          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="coins_step3_desc">اضغط على زر (شراء الآن) من الرابط الذي يرجعه البوت، وستلاحظ أن خانة العملات قد خصمت ما يصل إلى 10$ إلى 40$ من السعر الإجمالي!</p>
+        <div class="border rounded-2xl p-5 space-y-3" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="w-10 h-10 rounded-xl text-emerald-500 font-bold text-base flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">3</div>
+          <h3 class="font-bold text-sm" style="color: var(--text-main);" data-i18n="coins_step3_title">ادفع بالسعر المخفض</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coins_step3_desc">اضغط على زر (شراء الآن) من الرابط الذي يرجعه البوت، وستلاحظ أن خانة العملات قد خصمت ما يصل إلى 10$ إلى 40$ من السعر الإجمالي!</p>
         </div>
       </div>
 
@@ -541,77 +578,77 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <div id="page-faq" class="page-view hidden space-y-6">
       
       <div class="text-center max-w-2xl mx-auto space-y-2">
-        <h2 class="text-xl sm:text-2xl font-bold text-white" data-i18n="faq_title">الأسئلة الشائعة وإرشادات الشراء</h2>
-        <p class="text-xs sm:text-sm text-slate-400" data-i18n="faq_subtitle">كل ما يحتاجه المتسوق الجزائري لمعرفة طرق الشحن، حساب الأسعار بالدينار، والتعامل مع عروض AliExpress.</p>
+        <h2 class="text-xl sm:text-2xl font-bold" style="color: var(--text-main);" data-i18n="faq_title">الأسئلة الشائعة وإرشادات الشراء</h2>
+        <p class="text-xs sm:text-sm" style="color: var(--text-muted);" data-i18n="faq_subtitle">كل ما يحتاجه المتسوق الجزائري لمعرفة طرق الشحن، حساب الأسعار بالدينار، والتعامل مع عروض AliExpress.</p>
       </div>
 
       <div class="space-y-3 max-w-3xl mx-auto">
         <!-- Q1 -->
-        <details class="faq-item group bg-dark-900 border border-dark-800 rounded-2xl p-4 transition-colors hover:border-slate-700">
-          <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm text-slate-100 select-none">
+        <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
             <span class="flex items-center gap-2">
-              <i class="fa-solid fa-coins text-amber-400"></i>
+              <i class="fa-solid fa-coins text-amber-500"></i>
               <span data-i18n="faq_q1">كيف يتم احتساب الأسعار بالدينار الجزائري (DZD)؟</span>
             </span>
-            <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform duration-200 faq-icon"></i>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
           </summary>
-          <div class="pt-3 text-xs text-slate-400 leading-relaxed border-t border-dark-800 mt-3" data-i18n="faq_a1">
+          <div class="pt-3 text-xs leading-relaxed border-t mt-3" style="border-color: var(--border-card); color: var(--text-muted);" data-i18n="faq_a1">
             يتم حساب السعر بالدينار الجزائري تلقائياً وبدقة عالية اعتماداً على سعر صرف الدولار واليورو في السوق الموازي (سعر السكوار الحقيقي) المستخرج مباشرة من موقع SquareAlgerie.com، حتى تتطابق المبالغ مع ما تدفعه حقيقة عند شحن بطاقاتك (Visa / Mastercard / Bybit / RedotPay).
           </div>
         </details>
 
         <!-- Q2 -->
-        <details class="faq-item group bg-dark-900 border border-dark-800 rounded-2xl p-4 transition-colors hover:border-slate-700">
-          <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm text-slate-100 select-none">
+        <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
             <span class="flex items-center gap-2">
-              <i class="fa-solid fa-truck-fast text-sky-400"></i>
+              <i class="fa-solid fa-truck-fast text-sky-500"></i>
               <span data-i18n="faq_q2">كيف يتم شحن الطرود واستلامها في الجزائر؟</span>
             </span>
-            <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform duration-200 faq-icon"></i>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
           </summary>
-          <div class="pt-3 text-xs text-slate-400 leading-relaxed border-t border-dark-800 mt-3" data-i18n="faq_a2">
+          <div class="pt-3 text-xs leading-relaxed border-t mt-3" style="border-color: var(--border-card); color: var(--text-muted);" data-i18n="faq_a2">
             تشحن معظم المنتجات عبر بريد الجزائر (Algérie Poste / EMS). يصل الطرد إلى أقرب مكتب بريد لعنوان سكناك ويتم إرسال إشعار وصول إلى هاتفك أو صندوق بريدك. للشحنات العادية، تتراوح مدة الوصول بين 15 و35 يوماً عبر خيار AliExpress Standard Shipping.
           </div>
         </details>
 
         <!-- Q3 -->
-        <details class="faq-item group bg-dark-900 border border-dark-800 rounded-2xl p-4 transition-colors hover:border-slate-700">
-          <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm text-slate-100 select-none">
+        <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
             <span class="flex items-center gap-2">
-              <i class="fa-solid fa-credit-card text-emerald-400"></i>
+              <i class="fa-solid fa-credit-card text-emerald-500"></i>
               <span data-i18n="faq_q3">ما هي أفضل طرق وبطاقات الدفع المتاحة للجزائريين؟</span>
             </span>
-            <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform duration-200 faq-icon"></i>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
           </summary>
-          <div class="pt-3 text-xs text-slate-400 leading-relaxed border-t border-dark-800 mt-3" data-i18n="faq_a3">
+          <div class="pt-3 text-xs leading-relaxed border-t mt-3" style="border-color: var(--border-card); color: var(--text-muted);" data-i18n="faq_a3">
             يمكنك الدفع بسهولة عبر بطاقات فيزا وماستركارد الافتراضية الدولية مثل RedotPay، Bybit Card، Paysera، Pyypl، أو بطاقات العملة الصعبة الصادرة من البنوك الوطنية الجزائرية (AGB، BDL، بنك الخليج الجزائر).
           </div>
         </details>
 
         <!-- Q4 -->
-        <details class="faq-item group bg-dark-900 border border-dark-800 rounded-2xl p-4 transition-colors hover:border-slate-700">
-          <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm text-slate-100 select-none">
+        <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
             <span class="flex items-center gap-2">
-              <i class="fa-solid fa-ticket text-rose-400"></i>
+              <i class="fa-solid fa-ticket text-rose-500"></i>
               <span data-i18n="faq_q4">لماذا يظهر كود الخصم غير صالح أو منتهي الصلاحية أحياناً؟</span>
             </span>
-            <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform duration-200 faq-icon"></i>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
           </summary>
-          <div class="pt-3 text-xs text-slate-400 leading-relaxed border-t border-dark-800 mt-3" data-i18n="faq_a4">
+          <div class="pt-3 text-xs leading-relaxed border-t mt-3" style="border-color: var(--border-card); color: var(--text-muted);" data-i18n="faq_a4">
             أكواد الخصم الترويجية في AliExpress تكون محدودة بعدد استخدامات معين لكل دولة. نقوم بتحديث الأكواد لحظياً وإلغاء المنتهية فوراً، ولكن ننصح دائماً بالشراء السريع عند نشر الكود قبل نفاد حصة الجزائر.
           </div>
         </details>
 
         <!-- Q5 -->
-        <details class="faq-item group bg-dark-900 border border-dark-800 rounded-2xl p-4 transition-colors hover:border-slate-700">
-          <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm text-slate-100 select-none">
+        <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
             <span class="flex items-center gap-2">
-              <i class="fa-solid fa-earth-europe text-blue-400"></i>
+              <i class="fa-solid fa-earth-europe text-blue-500"></i>
               <span data-i18n="faq_q5">ما هي قناة عروض فرنسا (@francedealsdz)؟</span>
             </span>
-            <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform duration-200 faq-icon"></i>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
           </summary>
-          <div class="pt-3 text-xs text-slate-400 leading-relaxed border-t border-dark-800 mt-3" data-i18n="faq_a5">
+          <div class="pt-3 text-xs leading-relaxed border-t mt-3" style="border-color: var(--border-card); color: var(--text-muted);" data-i18n="faq_a5">
             هي قناة متخصصة وموجهة لأفراد الجالية الجزائرية المقيمين في فرنسا وأوروبا، أو للجزائريين الذين يستعينون بشركات إعادة توجيه الطرود (Forwarders). أسعارها باليورو الأوروبي وعروضها مشحونة من مستودعات أوروبية سريعة (خلال 3-7 أيام).
           </div>
         </details>
@@ -625,19 +662,19 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <div id="page-contact" class="page-view hidden space-y-6">
       
       <div class="text-center max-w-2xl mx-auto space-y-2">
-        <h2 class="text-xl sm:text-2xl font-bold text-white" data-i18n="contact_title">اتصل بنا والدعم الفني</h2>
-        <p class="text-xs sm:text-sm text-slate-400" data-i18n="contact_subtitle">فريق DealScout DZ يرحب باقتراحاتكم، إبلاغكم عن الروابط التالفة، واستفساراتكم حول الصفقات.</p>
+        <h2 class="text-xl sm:text-2xl font-bold" style="color: var(--text-main);" data-i18n="contact_title">اتصل بنا والدعم الفني</h2>
+        <p class="text-xs sm:text-sm" style="color: var(--text-muted);" data-i18n="contact_subtitle">فريق DealScout DZ يرحب باقتراحاتكم، إبلاغكم عن الروابط التالفة، واستفساراتكم حول الصفقات.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         <!-- Direct Telegram Support Card -->
-        <div class="bg-dark-900 border border-dark-800 rounded-2xl p-6 space-y-4 flex flex-col justify-between">
+        <div class="border rounded-2xl p-6 space-y-4 flex flex-col justify-between" style="background-color: var(--bg-card); border-color: var(--border-card);">
           <div class="space-y-3">
-            <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-xl">
+            <div class="w-12 h-12 rounded-2xl bg-sky-500/15 text-sky-500 flex items-center justify-center text-xl">
               <i class="fa-brands fa-telegram"></i>
             </div>
-            <h3 class="font-bold text-base text-white" data-i18n="contact_tg_title">الدعم السريع عبر Telegram</h3>
-            <p class="text-xs text-slate-400 leading-relaxed" data-i18n="contact_tg_desc">
+            <h3 class="font-bold text-base" style="color: var(--text-main);" data-i18n="contact_tg_title">الدعم السريع عبر Telegram</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="contact_tg_desc">
               أسرع وسيلة للتواصل مع مديري القناة والمطورين. يمكنك إرسال استفسارك أو طلب إضافة منتج معين إلى المراقبة الآلية.
             </p>
           </div>
@@ -647,7 +684,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               <i class="fa-solid fa-paper-plane text-xs"></i>
               <span data-i18n="contact_tg_btn_admin">مراسلة إدارة DealScout</span>
             </a>
-            <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="w-full min-h-[44px] bg-dark-800 hover:bg-dark-750 text-amber-400 font-bold text-xs py-2.5 px-4 rounded-xl border border-dark-700 flex items-center justify-center gap-2 active:scale-95 transition">
+            <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="w-full min-h-[44px] border font-bold text-xs py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition text-amber-500" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <i class="fa-solid fa-coins text-xs"></i>
               <span data-i18n="contact_tg_btn_bot">الدخول لبوت العملات (@Alilo07BOT)</span>
             </a>
@@ -655,20 +692,20 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
 
         <!-- Contact Form -->
-        <div class="bg-dark-900 border border-dark-800 rounded-2xl p-6 space-y-4">
-          <h3 class="font-bold text-base text-white" data-i18n="contact_form_title">إرسال رسالة أو اقتراح</h3>
+        <div class="border rounded-2xl p-6 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <h3 class="font-bold text-base" style="color: var(--text-main);" data-i18n="contact_form_title">إرسال رسالة أو اقتراح</h3>
           <form onsubmit="handleContactSubmit(event)" class="space-y-3 text-xs">
             <div>
-              <label class="block text-slate-300 mb-1 font-medium" data-i18n="form_name">الاسم أو اللقب</label>
-              <input type="text" id="contact-name" required class="w-full bg-dark-950 border border-dark-800 rounded-xl px-3 py-2 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-slate-600" placeholder="مثال: أمين الجزائري">
+              <label class="block mb-1 font-medium" style="color: var(--text-main);" data-i18n="form_name">الاسم أو اللقب</label>
+              <input type="text" id="contact-name" required class="w-full border rounded-xl px-3 py-2 focus:outline-none focus:border-rose-500" style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);" placeholder="مثال: أمين الجزائري">
             </div>
             <div>
-              <label class="block text-slate-300 mb-1 font-medium" data-i18n="form_email">البريد الإلكتروني أو معرف تيليجرام</label>
-              <input type="text" id="contact-email" required class="w-full bg-dark-950 border border-dark-800 rounded-xl px-3 py-2 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-slate-600" placeholder="@username أو name@email.com">
+              <label class="block mb-1 font-medium" style="color: var(--text-main);" data-i18n="form_email">البريد الإلكتروني أو معرف تيليجرام</label>
+              <input type="text" id="contact-email" required class="w-full border rounded-xl px-3 py-2 focus:outline-none focus:border-rose-500" style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);" placeholder="@username أو name@email.com">
             </div>
             <div>
-              <label class="block text-slate-300 mb-1 font-medium" data-i18n="form_subject">نوع الاستفسار</label>
-              <select id="contact-subject" class="w-full bg-dark-950 border border-dark-800 rounded-xl px-3 py-2 text-slate-100 focus:outline-none focus:border-slate-600">
+              <label class="block mb-1 font-medium" style="color: var(--text-main);" data-i18n="form_subject">نوع الاستفسار</label>
+              <select id="contact-subject" class="w-full border rounded-xl px-3 py-2 focus:outline-none focus:border-rose-500" style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);">
                 <option value="deal_suggestion" data-i18n="form_opt1">اقتراح صفقة أو منتج لمراقبته</option>
                 <option value="broken_link" data-i18n="form_opt2">إبلاغ عن رابط تالف أو كود منتهي</option>
                 <option value="partnership" data-i18n="form_opt3">شراكة أو إعلان تجاري</option>
@@ -676,8 +713,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               </select>
             </div>
             <div>
-              <label class="block text-slate-300 mb-1 font-medium" data-i18n="form_message">نص الرسالة</label>
-              <textarea id="contact-message" rows="3" required class="w-full bg-dark-950 border border-dark-800 rounded-xl px-3 py-2 text-slate-100 placeholder-slate-600 focus:outline-none focus:border-slate-600" placeholder="اكتب تفاصيل استفسارك هنا..."></textarea>
+              <label class="block mb-1 font-medium" style="color: var(--text-main);" data-i18n="form_message">نص الرسالة</label>
+              <textarea id="contact-message" rows="3" required class="w-full border rounded-xl px-3 py-2 focus:outline-none focus:border-rose-500" style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);" placeholder="اكتب تفاصيل استفسارك هنا..."></textarea>
             </div>
             <button type="submit" class="w-full min-h-[44px] bg-crimson-600 hover:bg-crimson-700 text-white font-bold text-xs py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition">
               <i class="fa-solid fa-paper-plane text-xs"></i>
@@ -694,12 +731,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <!-- ───────────────────────────────────────────────────────── -->
     <div id="page-about" class="page-view hidden space-y-6">
       
-      <div class="max-w-3xl mx-auto space-y-6 text-xs sm:text-sm text-slate-300 leading-relaxed">
-        <div class="bg-dark-900 border border-dark-800 rounded-3xl p-6 sm:p-8 space-y-4">
-          <div class="w-12 h-12 rounded-2xl bg-crimson-600/10 text-crimson-500 flex items-center justify-center text-2xl font-bold">
+      <div class="max-w-3xl mx-auto space-y-6 text-xs sm:text-sm leading-relaxed" style="color: var(--text-muted);">
+        <div class="border rounded-3xl p-6 sm:p-8 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="w-12 h-12 rounded-2xl bg-crimson-600/15 text-crimson-500 flex items-center justify-center text-2xl font-bold">
             <i class="fa-solid fa-bolt"></i>
           </div>
-          <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight" data-i18n="about_title">حول منصة DealScout DZ</h2>
+          <h2 class="text-xl sm:text-2xl font-bold tracking-tight" style="color: var(--text-main);" data-i18n="about_title">حول منصة DealScout DZ</h2>
           <p class="leading-relaxed" data-i18n="about_p1">
             تأسست منصة <b>DealScout DZ</b> بهدف حل أكبر مشكلة تواجه المتسوقين في الجزائر عبر الإنترنت: صعوبة الوصول إلى التخفيضات الحقيقية، والارتباك الناتج عن حساب تكلفة المنتج بالدينار الجزائري في ظل تغير أسعار سوق السكوار.
           </p>
@@ -709,31 +746,31 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="bg-dark-900 border border-dark-800 rounded-2xl p-5 space-y-2">
-            <h3 class="font-bold text-sm text-white flex items-center gap-2">
-              <i class="fa-solid fa-chart-line text-emerald-400"></i>
+          <div class="border rounded-2xl p-5 space-y-2" style="background-color: var(--bg-card); border-color: var(--border-card);">
+            <h3 class="font-bold text-sm flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-solid fa-chart-line text-emerald-500"></i>
               <span data-i18n="about_feat1_title">ربط مباشر مع سعر السكوار</span>
             </h3>
-            <p class="text-xs text-slate-400 leading-relaxed" data-i18n="about_feat1_desc">نحدث أسعار USDT بالدينار الجزائري لحظة بلحظة لضمان شفافية كاملة قبل الضغط على زر الشراء.</p>
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="about_feat1_desc">نحدث أسعار USDT بالدينار الجزائري لحظة بلحظة لضمان شفافية كاملة قبل الضغط على زر الشراء.</p>
           </div>
 
-          <div class="bg-dark-900 border border-dark-800 rounded-2xl p-5 space-y-2">
-            <h3 class="font-bold text-sm text-white flex items-center gap-2">
-              <i class="fa-solid fa-robot text-sky-400"></i>
+          <div class="border rounded-2xl p-5 space-y-2" style="background-color: var(--bg-card); border-color: var(--border-card);">
+            <h3 class="font-bold text-sm flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-solid fa-robot text-sky-500"></i>
               <span data-i18n="about_feat2_title">روبوتات آلية وخوارزميات أمان</span>
             </h3>
-            <p class="text-xs text-slate-400 leading-relaxed" data-i18n="about_feat2_desc">نظام ذكي يلتقط التخفيضات في الثواني الأولى لنزولها ويختبر صلاحية أكواد الخصم والعملات.</p>
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="about_feat2_desc">نظام ذكي يلتقط التخفيضات في الثواني الأولى لنزولها ويختبر صلاحية أكواد الخصم والعملات.</p>
           </div>
         </div>
 
         <!-- Affiliate Disclosure Notice -->
-        <div class="bg-dark-950 border border-dark-800 rounded-2xl p-4 sm:p-5 space-y-2 text-slate-400 text-xs">
-          <h4 class="font-bold text-slate-200 flex items-center gap-2">
-            <i class="fa-solid fa-handshake text-blue-400"></i>
+        <div class="border rounded-2xl p-4 sm:p-5 space-y-2 text-xs" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
+          <h4 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
+            <i class="fa-solid fa-handshake text-blue-500"></i>
             <span data-i18n="about_disclosure_title">إفصاح الشفافية والتسويق بالعمولة (Affiliate Disclosure)</span>
           </h4>
           <p class="leading-relaxed" data-i18n="about_disclosure_desc">
-            منصة DealScout DZ مشتركة في برنامج شركاء AliExpress الرسمي (AliExpress Portals Affiliate Program). عند النقر على روابط الشراء وإتمام الطلب، قد نحصل على عمولة تسويقية صغيرة من منصة AliExpress. هذه العمولة لا تزيد من سعر المنتج عليك بأي سنتيم، بل تساعدنا في دفع تكاليف الخوادم وتطوير البوتات مجاناً للمجتمع.
+            منصة DealScout DZ مشتركة في برنامج شركاء AliExpress الرسمي (AliExpress Portals Affiliate Program). عند النقر على روابط الشراء وإتمام الطلب، قد نحصل على عمولة تسويقية صغيرة من منصة AliExpress دون أي تكلفة إضافية عليك.
           </p>
         </div>
 
@@ -744,72 +781,72 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   </main>
 
   <!-- Mobile Bottom Navigation Bar -->
-  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-dark-900/95 backdrop-blur-md border-t border-dark-800/80 px-2 py-1 flex items-center justify-around text-center text-[10px] bottom-nav-safe" aria-label="التنقل للجوال">
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 backdrop-blur-md border-t px-2 py-1 flex items-center justify-around text-center text-[10px] bottom-nav-safe transition-colors" style="background-color: var(--header-bg); border-color: var(--border-card);" aria-label="التنقل للجوال">
     <button onclick="showPage('deals')" id="mob-bottom-deals" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 text-crimson-500 font-bold active:scale-90 transition-transform touch-manipulation">
       <i class="fa-solid fa-fire text-base"></i>
       <span data-i18n="nav_deals">الصفقات</span>
     </button>
-    <button onclick="showPage('coins')" id="mob-bottom-coins" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-200 font-medium active:scale-90 transition-transform touch-manipulation">
+    <button onclick="showPage('coins')" id="mob-bottom-coins" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation">
       <i class="fa-solid fa-coins text-base"></i>
       <span data-i18n="nav_coins">العملات</span>
     </button>
-    <button onclick="showPage('faq')" id="mob-bottom-faq" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-200 font-medium active:scale-90 transition-transform touch-manipulation">
+    <button onclick="showPage('faq')" id="mob-bottom-faq" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation">
       <i class="fa-solid fa-circle-question text-base"></i>
       <span data-i18n="nav_faq">الأسئلة</span>
     </button>
-    <button onclick="showPage('contact')" id="mob-bottom-contact" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-200 font-medium active:scale-90 transition-transform touch-manipulation">
+    <button onclick="showPage('contact')" id="mob-bottom-contact" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation">
       <i class="fa-solid fa-envelope text-base"></i>
       <span data-i18n="nav_contact">اتصل بنا</span>
     </button>
   </nav>
 
   <!-- Deal Details Bottom Sheet & Lightbox Modal -->
-  <div id="deal-modal" onclick="onModalBackdropClick(event)" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div id="modal-container" class="bg-dark-900 border-t sm:border border-dark-700/80 rounded-t-3xl sm:rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl p-4 sm:p-6 pb-safe space-y-4 animate-slide-up relative">
+  <div id="deal-modal" onclick="onModalBackdropClick(event)" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden flex items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div id="modal-container" class="border-t sm:border rounded-t-3xl sm:rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl p-4 sm:p-6 pb-safe space-y-4 animate-slide-up relative" style="background-color: var(--bg-card); border-color: var(--border-card);">
       
       <!-- Mobile Pull Dismiss Handle -->
-      <div class="sm:hidden w-12 h-1.5 bg-dark-700 hover:bg-dark-600 rounded-full mx-auto -mt-1 mb-2 cursor-pointer touch-manipulation" onclick="closeDealModal()"></div>
+      <div class="sm:hidden w-12 h-1.5 rounded-full mx-auto -mt-1 mb-2 cursor-pointer touch-manipulation opacity-40" style="background-color: var(--text-soft);" onclick="closeDealModal()"></div>
       
       <!-- Close Button -->
-      <button onclick="closeDealModal()" aria-label="إغلاق" class="absolute top-3.5 left-3.5 bg-dark-800 hover:bg-dark-700 text-slate-300 hover:text-white w-10 h-10 min-w-[40px] min-h-[40px] rounded-full flex items-center justify-center text-sm border border-dark-700 active:scale-95 transition z-10 touch-manipulation shadow-md">
+      <button onclick="closeDealModal()" aria-label="إغلاق" class="absolute top-3.5 left-3.5 w-10 h-10 min-w-[40px] min-h-[40px] rounded-full flex items-center justify-center text-sm border active:scale-95 transition z-10 touch-manipulation shadow-md" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
       <!-- Image Preview Container -->
-      <div id="modal-img-wrap" class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-dark-950 border border-dark-800 flex items-center justify-center">
-        <img id="modal-img" src="" alt="Deal preview" class="w-full h-full object-contain" loading="lazy" decoding="async">
-        <span id="modal-country" class="absolute top-2.5 right-2.5 bg-dark-900/90 text-slate-200 text-xs px-2.5 py-0.5 rounded-lg font-bold border border-dark-700 hidden shadow-sm"></span>
-        <span id="modal-coins" class="absolute top-2.5 left-2.5 bg-amber-500 text-slate-950 text-xs font-bold px-2 py-0.5 rounded-lg hidden items-center gap-1 shadow-sm"><i class="fa-solid fa-coins text-[10px]"></i> عملات</span>
+      <div id="modal-img-wrap" class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border flex items-center justify-center" style="background-color: var(--bg-page); border-color: var(--border-card);">
+        <img id="modal-img" src="" alt="Deal preview" class="w-full h-full object-contain" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+        <span id="modal-country" class="absolute top-2.5 right-2.5 text-xs px-2.5 py-0.5 rounded-lg font-bold border hidden shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"></span>
+        <span id="modal-coins" class="absolute top-2.5 left-2.5 bg-amber-500 text-zinc-950 text-xs font-bold px-2 py-0.5 rounded-lg hidden items-center gap-1 shadow-sm"><i class="fa-solid fa-coins text-[10px]"></i> Coins</span>
       </div>
 
       <!-- Modal Content Body -->
       <div class="space-y-3.5">
-        <div class="flex items-center justify-between gap-2 text-xs text-slate-400">
-          <span id="modal-cat" class="px-2.5 py-1 rounded-lg bg-dark-950 border border-dark-800 text-[11px] font-semibold text-slate-300"></span>
-          <span id="modal-date" class="font-mono text-xs text-slate-500"></span>
+        <div class="flex items-center justify-between gap-2 text-xs" style="color: var(--text-soft);">
+          <span id="modal-cat" class="px-2.5 py-1 rounded-lg border text-[11px] font-semibold" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);"></span>
+          <span id="modal-date" class="font-mono text-xs opacity-75"></span>
         </div>
 
-        <h3 id="modal-title" class="font-bold text-sm sm:text-base text-slate-100 leading-snug"></h3>
+        <h3 id="modal-title" class="font-bold text-sm sm:text-base leading-snug" style="color: var(--text-main);"></h3>
 
         <!-- Coupon inside modal -->
-        <div id="modal-coupon-wrap" class="hidden bg-dark-950 border border-dashed border-dark-700 rounded-xl p-3 flex items-center justify-between gap-2">
+        <div id="modal-coupon-wrap" class="hidden border border-dashed rounded-xl p-3 flex items-center justify-between gap-2" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
           <div class="flex items-center gap-2 min-w-0">
-            <i class="fa-solid fa-ticket text-slate-400 text-base flex-shrink-0"></i>
+            <i class="fa-solid fa-ticket text-base flex-shrink-0 opacity-60"></i>
             <div class="min-w-0">
-              <div class="text-[10px] text-slate-400" data-i18n="modal_coupon_label">كود الخصم الفعال:</div>
-              <span id="modal-coupon-code" class="font-mono font-bold text-white text-sm sm:text-base tracking-wider truncate block"></span>
+              <div class="text-[10px] opacity-75" data-i18n="modal_coupon_label">كود الخصم الفعال:</div>
+              <span id="modal-coupon-code" class="font-mono font-bold text-sm sm:text-base tracking-wider truncate block" style="color: var(--text-main);"></span>
             </div>
           </div>
-          <button id="modal-coupon-btn" onclick="copyCouponFromModal(this)" class="min-h-[42px] px-3.5 py-1.5 bg-dark-800 hover:bg-dark-700 active:scale-95 text-xs font-bold text-white rounded-lg transition flex items-center gap-1.5 flex-shrink-0 touch-manipulation">
+          <button id="modal-coupon-btn" onclick="copyCouponFromModal(this)" class="min-h-[42px] px-3.5 py-1.5 border active:scale-95 text-xs font-bold rounded-lg transition flex items-center gap-1.5 flex-shrink-0 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">
             <i class="fa-regular fa-copy"></i>
             <span data-i18n="btn_copy">نسخ الكود</span>
           </button>
         </div>
 
         <!-- Price display inside modal -->
-        <div class="bg-dark-950/80 p-3.5 rounded-xl border border-dark-800 flex items-center justify-between">
+        <div class="p-3.5 rounded-xl border flex items-center justify-between" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
           <div>
-            <div class="text-[10px] text-slate-400" data-i18n="modal_price_label">السعر التقديري:</div>
+            <div class="text-[10px] opacity-75" data-i18n="modal_price_label">السعر التقديري:</div>
             <div id="modal-price" class="flex items-baseline gap-2"></div>
           </div>
           <div id="modal-channel-link"></div>
@@ -822,11 +859,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <span data-i18n="modal_cta_ali">الذهاب لصفحة العرض على AliExpress</span>
           </a>
           <div class="grid grid-cols-2 gap-2 text-xs">
-            <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="min-h-[44px] bg-dark-800 hover:bg-dark-700 text-amber-400 font-bold py-2.5 px-3 rounded-xl border border-dark-700 flex items-center justify-center gap-1.5 active:scale-95 transition touch-manipulation">
+            <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="min-h-[44px] border font-bold py-2.5 px-3 rounded-xl flex items-center justify-center gap-1.5 active:scale-95 transition touch-manipulation text-amber-500" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <i class="fa-solid fa-coins text-xs"></i>
               <span data-i18n="top_coin_bot">تخفيض العملات</span>
             </a>
-            <button onclick="closeDealModal()" class="min-h-[44px] bg-dark-800 hover:bg-dark-700 text-slate-300 font-bold py-2.5 px-3 rounded-xl border border-dark-700 flex items-center justify-center gap-1 active:scale-95 transition touch-manipulation">
+            <button onclick="closeDealModal()" class="min-h-[44px] border font-bold py-2.5 px-3 rounded-xl flex items-center justify-center gap-1 active:scale-95 transition touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
               <span data-i18n="btn_close">إغلاق</span>
             </button>
           </div>
@@ -838,15 +875,15 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   </div>
 
   <!-- Toast Notification -->
-  <div id="toast" class="fixed toast-bottom md:bottom-6 left-1/2 -translate-x-1/2 z-50 bg-dark-900 border border-emerald-500/40 text-emerald-400 font-semibold text-xs px-4 py-2.5 rounded-xl shadow-2xl flex items-center gap-2 transform translate-y-16 opacity-0 pointer-events-none transition-all duration-200">
-    <i class="fa-solid fa-check text-emerald-400"></i>
+  <div id="toast" class="fixed toast-bottom md:bottom-6 left-1/2 -translate-x-1/2 z-50 border text-emerald-500 font-semibold text-xs px-4 py-2.5 rounded-xl shadow-2xl flex items-center gap-2 transform translate-y-16 opacity-0 pointer-events-none transition-all duration-200" style="background-color: var(--bg-card); border-color: rgba(16, 185, 129, 0.4);">
+    <i class="fa-solid fa-check text-emerald-500"></i>
     <span id="toast-msg">تم نسخ كود الخصم!</span>
   </div>
 
   <!-- ========================================== -->
   <!-- HIGH CREDIBILITY E-COMMERCE FOOTER         -->
   <!-- ========================================== -->
-  <footer role="contentinfo" class="border-t border-dark-800 bg-dark-900 pt-10 pb-6 px-4 text-xs text-slate-400">
+  <footer role="contentinfo" class="border-t pt-10 pb-6 px-4 text-xs transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
     <div class="max-w-7xl mx-auto space-y-8">
       
       <!-- 4 Columns Grid -->
@@ -855,15 +892,13 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <!-- Col 1: Brand & Mission -->
         <div class="space-y-3">
           <div class="flex items-center gap-2">
-            <div class="w-7 h-7 rounded-lg bg-crimson-600 flex items-center justify-center text-white font-bold text-sm">
-              <i class="fa-solid fa-bolt"></i>
-            </div>
-            <span class="font-bold text-base text-white font-inter">DealScout<span class="text-crimson-500">DZ</span></span>
+            <img src="/logo_circular.png" alt="DealScout DZ" class="w-7 h-7 rounded-lg object-contain shadow-sm flex-shrink-0" onerror="this.onerror=null; this.src='/logo.png'">
+            <span class="font-bold text-base font-inter" style="color: var(--text-main);">DealScout<span class="text-crimson-500">DZ</span></span>
           </div>
-          <p class="text-slate-400 text-xs leading-relaxed" data-i18n="footer_brand_desc">
+          <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="footer_brand_desc">
             المنصة الجزائرية المستقلة الأولى لرصد صفقات AliExpress لحظياً، مع حساب حقيقي للأسعار بالدينار الجزائري وفق أسعار السكوار اليومية.
           </p>
-          <div class="inline-flex items-center gap-1.5 bg-dark-950 border border-dark-800 rounded-lg px-2.5 py-1 text-[11px] text-emerald-400 font-mono">
+          <div class="inline-flex items-center gap-1.5 border rounded-lg px-2.5 py-1 text-[11px] text-emerald-500 font-mono" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span>1 USDT ≈ <b id="footer-usdt-rate">256.9</b> <span data-i18n="currency_dzd">دج</span></span>
           </div>
@@ -871,72 +906,76 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
         <!-- Col 2: Navigation Links -->
         <div class="space-y-3">
-          <h4 class="font-bold text-white text-xs uppercase tracking-wider" data-i18n="footer_nav_title">التنقل السريع</h4>
+          <h4 class="font-bold text-xs uppercase tracking-wider" style="color: var(--text-main);" data-i18n="footer_nav_title">التنقل السريع</h4>
           <ul class="space-y-2">
-            <li><button onclick="showPage('deals')" class="hover:text-white transition" data-i18n="nav_deals">أحدث الصفقات</button></li>
-            <li><button onclick="showPage('coins')" class="hover:text-white transition" data-i18n="nav_coins">دليل بوت العملات</button></li>
-            <li><button onclick="showPage('faq')" class="hover:text-white transition" data-i18n="nav_faq">الأسئلة الشائعة</button></li>
-            <li><button onclick="showPage('contact')" class="hover:text-white transition" data-i18n="nav_contact">اتصل بنا والدعم</button></li>
-            <li><button onclick="showPage('about')" class="hover:text-white transition" data-i18n="nav_about">من نحن وإخلاء المسؤولية</button></li>
+            <li><button onclick="showPage('deals')" class="hover:underline transition" data-i18n="nav_deals">أحدث الصفقات</button></li>
+            <li><button onclick="showPage('coins')" class="hover:underline transition" data-i18n="nav_coins">دليل بوت العملات</button></li>
+            <li><button onclick="showPage('faq')" class="hover:underline transition" data-i18n="nav_faq">الأسئلة الشائعة</button></li>
+            <li><button onclick="showPage('contact')" class="hover:underline transition" data-i18n="nav_contact">اتصل بنا والدعم</button></li>
+            <li><button onclick="showPage('about')" class="hover:underline transition" data-i18n="nav_about">من نحن وإخلاء المسؤولية</button></li>
           </ul>
         </div>
 
         <!-- Col 3: Channels & Communities -->
         <div class="space-y-3">
-          <h4 class="font-bold text-white text-xs uppercase tracking-wider" data-i18n="footer_channels_title">القنوات والمنصات</h4>
+          <h4 class="font-bold text-xs uppercase tracking-wider" style="color: var(--text-main);" data-i18n="footer_channels_title">القنوات والمنصات</h4>
           <ul class="space-y-2">
             <li>
-              <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition flex items-center gap-1.5">
-                <i class="fa-brands fa-telegram text-sky-400"></i>
+              <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="hover:text-sky-500 transition flex items-center gap-1.5">
+                <i class="fa-brands fa-telegram text-sky-500"></i>
                 <span data-i18n="footer_ch_dz">قناة صفقات الجزائر (@DzAliexpress0)</span>
               </a>
             </li>
             <li>
-              <a href="https://t.me/francedealsdz" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition flex items-center gap-1.5">
-                <i class="fa-brands fa-telegram text-sky-400"></i>
+              <a href="https://t.me/francedealsdz" target="_blank" rel="noopener noreferrer" class="hover:text-sky-500 transition flex items-center gap-1.5">
+                <i class="fa-brands fa-telegram text-sky-500"></i>
                 <span data-i18n="footer_ch_fr">قناة صفقات فرنسا (@francedealsdz)</span>
               </a>
             </li>
             <li>
-              <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition flex items-center gap-1.5">
-                <i class="fa-solid fa-coins text-amber-400 text-xs"></i>
+              <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="hover:text-amber-500 transition flex items-center gap-1.5">
+                <i class="fa-solid fa-coins text-amber-500 text-xs"></i>
                 <span data-i18n="footer_bot_coins">بوت خصم العملات (@Alilo07BOT)</span>
               </a>
             </li>
             <li>
-              <a href="https://squarealgerie.com" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition flex items-center gap-1.5">
-                <i class="fa-solid fa-arrow-trend-up text-emerald-400 text-xs"></i>
+              <a href="https://squarealgerie.com" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-500 transition flex items-center gap-1.5">
+                <i class="fa-solid fa-arrow-trend-up text-emerald-500 text-xs"></i>
                 <span>SquareAlgerie.com</span>
               </a>
             </li>
           </ul>
         </div>
 
-        <!-- Col 4: Buyer Protection & Language -->
+        <!-- Col 4: Buyer Protection & Preferences -->
         <div class="space-y-3">
-          <h4 class="font-bold text-white text-xs uppercase tracking-wider" data-i18n="footer_security_title">أمان التسوق واللغة</h4>
-          <p class="text-xs text-slate-400 leading-relaxed" data-i18n="footer_security_desc">
+          <h4 class="font-bold text-xs uppercase tracking-wider" style="color: var(--text-main);" data-i18n="footer_security_title">أمان التسوق والتفضيلات</h4>
+          <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="footer_security_desc">
             جميع روابط الشراء تفتح موقع AliExpress الرسمي مباشرة عبر سيرفرات مشفرة ومحمية ببروتوكول HTTPS.
           </p>
-          <div class="pt-1 flex items-center gap-2">
-            <button onclick="setLanguage('ar')" class="px-2.5 py-1 rounded bg-dark-950 border border-dark-800 hover:border-slate-600 text-slate-300 font-bold transition">🇩🇿 العربية</button>
-            <button onclick="setLanguage('fr')" class="px-2.5 py-1 rounded bg-dark-950 border border-dark-800 hover:border-slate-600 text-slate-300 font-bold transition">🇫🇷 Français</button>
+          <div class="pt-1 flex flex-wrap items-center gap-2">
+            <button onclick="toggleTheme()" class="px-2.5 py-1 rounded border text-xs font-bold transition flex items-center gap-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-circle-half-stroke text-[11px]"></i>
+              <span data-i18n="btn_toggle_theme">تبديل المظهر</span>
+            </button>
+            <button onclick="setLanguage('ar')" class="px-2 py-1 rounded border text-xs font-bold transition" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">🇩🇿 العربية</button>
+            <button onclick="setLanguage('fr')" class="px-2 py-1 rounded border text-xs font-bold transition" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">🇫🇷 Français</button>
           </div>
         </div>
 
       </div>
 
       <!-- Affiliate Compliance Notice -->
-      <div class="border-t border-dark-800 pt-6 text-[11px] text-slate-500 leading-relaxed text-center sm:text-start" data-i18n="footer_compliance">
+      <div class="border-t pt-6 text-[11px] leading-relaxed text-center sm:text-start" style="border-color: var(--border-card); color: var(--text-soft);" data-i18n="footer_compliance">
         إخلاء مسؤولية الشراكة: DealScout DZ موقع مستقل وغير تابع لشركة Alibaba أو AliExpress بشكل مباشر. قد تتضمن بعض الروابط معرفات تسويق بالعمولة (AliExpress Portals Affiliate) تتيح لنا الحصول على نسبة رمزية عند الشراء دون أي تكلفة إضافية عليك إطلاقاً. الأسعار بالدينار الجزائري تقريبية وتعتمد على سعر الصرف اللحظي.
       </div>
 
       <!-- Copyright Bar -->
-      <div class="border-t border-dark-800 pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+      <div class="border-t pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]" style="border-color: var(--border-card); color: var(--text-soft);">
         <div>© 2026 DealScout DZ. <span data-i18n="footer_rights">جميع الحقوق محفوظة.</span></div>
         <div class="flex items-center gap-4">
-          <span data-i18n="footer_made_with">صُنع خصيصاً للمتسوق الجزائري 🇩🇿</span>
-          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-slate-200 transition flex items-center gap-1 font-bold">
+          <span data-i18n="footer_made_with">صُنع للمتسوق الجزائري 🇩🇿</span>
+          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:underline transition flex items-center gap-1 font-bold" style="color: var(--text-main);">
             <span data-i18n="footer_back_top">للأعلى</span>
             <i class="fa-solid fa-arrow-up text-[10px]"></i>
           </button>
@@ -947,7 +986,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   </footer>
 
   <!-- ========================================== -->
-  <!-- CLIENT-SIDE BILINGUAL LOGIC & ROUTER       -->
+  <!-- CLIENT-SIDE BILINGUAL & THEME LOGIC        -->
   <!-- ========================================== -->
   <script>
     // ── Translation Dictionary ──────────────────────────────────────
@@ -966,6 +1005,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         nav_contact: "اتصل بنا",
         nav_about: "من نحن",
         btn_join_channel: "انضم للقناة",
+        btn_toggle_theme: "المظهر",
+        theme_light: "فاتح",
+        theme_dark: "داكن",
         search_placeholder: "ابحث عن هاتف، شاحن، كود خصم، سماعات...",
         tab_algeria_deals: "عروض الجزائر (@DzAliexpress0)",
         tab_france_deals: "عروض فرنسا (@francedealsdz)",
@@ -984,7 +1026,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         btn_buy: "شراء من AliExpress",
         btn_copy: "نسخ الكود",
         btn_copied: "تم النسخ!",
-        deal_category_fallback: "عرض",
+        deal_category_fallback: "عرض مميز",
         modal_coupon_label: "كود الخصم الفعال:",
         modal_price_label: "السعر التقديري:",
         modal_cta_ali: "الذهاب لصفحة العرض على AliExpress",
@@ -1039,14 +1081,14 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         footer_brand_desc: "المنصة الجزائرية المستقلة الأولى لرصد صفقات AliExpress لحظياً، مع حساب حقيقي للأسعار بالدينار الجزائري وفق أسعار السكوار اليومية.",
         footer_nav_title: "التنقل السريع",
         footer_channels_title: "القنوات والمنصات",
-        footer_security_title: "أمان التسوق واللغة",
+        footer_security_title: "أمان التسوق والتفضيلات",
         footer_security_desc: "جميع روابط الشراء تفتح موقع AliExpress الرسمي مباشرة عبر سيرفرات مشفرة ومحمية ببروتوكول HTTPS.",
         footer_ch_dz: "قناة صفقات الجزائر (@DzAliexpress0)",
         footer_ch_fr: "قناة صفقات فرنسا (@francedealsdz)",
         footer_bot_coins: "بوت خصم العملات (@Alilo07BOT)",
         footer_compliance: "إخلاء مسؤولية الشراكة: DealScout DZ موقع مستقل وغير تابع لشركة Alibaba أو AliExpress بشكل مباشر. قد تتضمن بعض الروابط معرفات تسويق بالعمولة (AliExpress Portals Affiliate) تتيح لنا الحصول على نسبة رمزية عند الشراء دون أي تكلفة إضافية عليك إطلاقاً. الأسعار بالدينار الجزائري تقريبية وتعتمد على سعر الصرف اللحظي.",
         footer_rights: "جميع الحقوق محفوظة.",
-        footer_made_with: "صُنع خصيصاً للمتسوق الجزائري 🇩🇿",
+        footer_made_with: "صُنع للمتسوق الجزائري 🇩🇿",
         footer_back_top: "للأعلى"
       },
       fr: {
@@ -1063,6 +1105,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         nav_contact: "Contact",
         nav_about: "À Propos",
         btn_join_channel: "Rejoindre Telegram",
+        btn_toggle_theme: "Thème",
+        theme_light: "Clair",
+        theme_dark: "Sombre",
         search_placeholder: "Rechercher un smartphone, écouteurs, chargeur, marque...",
         tab_algeria_deals: "Bons Plans Algérie (@DzAliexpress0)",
         tab_france_deals: "Bons Plans France (@francedealsdz)",
@@ -1081,7 +1126,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         btn_buy: "Voir sur AliExpress",
         btn_copy: "Copier le code",
         btn_copied: "Copié !",
-        deal_category_fallback: "Offre",
+        deal_category_fallback: "Bon Plan",
         modal_coupon_label: "Code promo valide :",
         modal_price_label: "Prix estimé :",
         modal_cta_ali: "Ouvrir l'offre sur AliExpress",
@@ -1136,7 +1181,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         footer_brand_desc: "Première plateforme indépendante de bons plans AliExpress pour l'Algérie avec calcul au cours réel du Square.",
         footer_nav_title: "Navigation",
         footer_channels_title: "Canaux & Réseaux",
-        footer_security_title: "Sécurité & Langues",
+        footer_security_title: "Sécurité & Préférences",
         footer_security_desc: "Toutes les commandes sont finalisées sur le site officiel sécurisé d'AliExpress via HTTPS.",
         footer_ch_dz: "Bons Plans Algérie (@DzAliexpress0)",
         footer_ch_fr: "Bons Plans France (@francedealsdz)",
@@ -1149,6 +1194,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     };
 
     // ── Global State ────────────────────────────────────────────────
+    let currentTheme = localStorage.getItem('dealscout_theme') || 'dark';
     let currentLang = localStorage.getItem('dealscout_lang') || 'ar';
     let allDeals = [];
     let currentChannel = '@DzAliexpress0';
@@ -1159,32 +1205,62 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     let currentSearchTerm = '';
     let currentActiveDeal = null;
 
+    // ── Theme Engine (Light / Dark) ─────────────────────────────────
+    function applyTheme(theme) {
+      currentTheme = theme;
+      localStorage.setItem('dealscout_theme', theme);
+      const isDark = theme === 'dark';
+      
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+      }
+
+      const metaTheme = document.getElementById('meta-theme-color');
+      if (metaTheme) metaTheme.content = isDark ? '#09090b' : '#f4f4f5';
+
+      const icon = document.getElementById('theme-icon');
+      const text = document.getElementById('theme-text');
+      if (icon) {
+        icon.className = isDark ? 'fa-solid fa-moon text-[11px]' : 'fa-solid fa-sun text-[11px] text-amber-500';
+      }
+      if (text) {
+        text.textContent = isDark ? I18N[currentLang].theme_dark : I18N[currentLang].theme_light;
+      }
+    }
+
+    function toggleTheme() {
+      const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(nextTheme);
+      showToast(nextTheme === 'dark' ? 'تم تفعيل الوضع الداكن 🌙' : 'تم تفعيل الوضع الفاتح ☀️');
+    }
+
     // ── Internationalization Engine ─────────────────────────────────
     function setLanguage(lang) {
       if (!I18N[lang]) lang = 'ar';
       currentLang = lang;
       localStorage.setItem('dealscout_lang', lang);
 
-      // Update DOM lang & dir
       const isAr = lang === 'ar';
       document.documentElement.lang = isAr ? 'ar' : 'fr';
       document.documentElement.dir = isAr ? 'rtl' : 'ltr';
       document.body.dir = isAr ? 'rtl' : 'ltr';
 
-      // Update switcher buttons
       const arBtn = document.getElementById('lang-ar-btn');
       const frBtn = document.getElementById('lang-fr-btn');
       if (arBtn && frBtn) {
         if (isAr) {
           arBtn.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-crimson-600 text-white transition active:scale-95';
-          frBtn.className = 'px-2 py-0.5 rounded text-[11px] font-bold text-slate-400 hover:text-slate-200 transition active:scale-95';
+          frBtn.className = 'px-2 py-0.5 rounded text-[11px] font-bold opacity-60 hover:opacity-100 transition active:scale-95';
         } else {
           frBtn.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-crimson-600 text-white transition active:scale-95';
-          arBtn.className = 'px-2 py-0.5 rounded text-[11px] font-bold text-slate-400 hover:text-slate-200 transition active:scale-95';
+          arBtn.className = 'px-2 py-0.5 rounded text-[11px] font-bold opacity-60 hover:opacity-100 transition active:scale-95';
         }
       }
 
-      // Translate all data-i18n elements
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (I18N[lang][key]) {
@@ -1192,7 +1268,6 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         }
       });
 
-      // Translate all data-i18n-placeholder elements
       document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.getAttribute('data-i18n-placeholder');
         if (I18N[lang][key]) {
@@ -1200,10 +1275,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         }
       });
 
-      // Update document title
       document.title = I18N[lang].meta_title;
+      applyTheme(currentTheme);
 
-      // Re-render deals to update button & category text
       if (allDeals && allDeals.length > 0) {
         filterDeals();
       }
@@ -1214,34 +1288,32 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const pages = ['deals', 'coins', 'faq', 'contact', 'about'];
       if (!pages.includes(pageId)) pageId = 'deals';
 
-      // Hide all pages, show target page
       pages.forEach(p => {
         const el = document.getElementById('page-' + p);
         if (el) {
-          if (p === pageId) {
-            el.classList.remove('hidden');
-          } else {
-            el.classList.add('hidden');
-          }
+          if (p === pageId) el.classList.remove('hidden');
+          else el.classList.add('hidden');
         }
 
-        // Desktop nav active indicator
         const navBtn = document.getElementById('nav-link-' + p);
         if (navBtn) {
           if (p === pageId) {
-            navBtn.className = 'nav-page-btn px-3 py-1.5 rounded-lg bg-dark-800 text-white transition flex items-center gap-1.5';
+            navBtn.className = 'nav-page-btn px-3 py-1.5 rounded-lg font-bold transition flex items-center gap-1.5';
+            navBtn.style.backgroundColor = 'var(--bg-elevated)';
+            navBtn.style.color = 'var(--text-main)';
           } else {
-            navBtn.className = 'nav-page-btn px-3 py-1.5 rounded-lg hover:bg-dark-800 hover:text-white text-slate-400 transition flex items-center gap-1.5';
+            navBtn.className = 'nav-page-btn px-3 py-1.5 rounded-lg opacity-60 hover:opacity-100 transition flex items-center gap-1.5';
+            navBtn.style.backgroundColor = 'transparent';
+            navBtn.style.color = 'var(--text-muted)';
           }
         }
 
-        // Mobile bottom nav active indicator
         const mobBtn = document.getElementById('mob-bottom-' + p);
         if (mobBtn) {
           if (p === pageId) {
             mobBtn.className = 'flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 text-crimson-500 font-bold active:scale-90 transition-transform touch-manipulation';
           } else {
-            mobBtn.className = 'flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 text-slate-400 hover:text-slate-200 font-medium active:scale-90 transition-transform touch-manipulation';
+            mobBtn.className = 'flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 opacity-60 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation';
           }
         }
       });
@@ -1249,13 +1321,23 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // ── Utility Helpers ─────────────────────────────────────────────
-    function handleImgError(img) {
+    // ── Robust Image Error & Proxy Recovery Handler ──────────────────
+    function handleImgError(img, originalUrl) {
       if (!img) return;
+      const targetSrc = originalUrl || img.src;
+
+      // Stage 1: If not retried yet, proxy through our Vercel /api/image-proxy
+      if (!img.dataset.retried && targetSrc && !targetSrc.includes('/api/image-proxy')) {
+        img.dataset.retried = '1';
+        img.src = '/api/image-proxy?url=' + encodeURIComponent(targetSrc);
+        return;
+      }
+
+      // Stage 2: Graceful inline SVG placeholder with clean category iconography
       img.onerror = null;
-      img.src = '/icon.svg';
-      img.classList.remove('object-cover');
-      img.classList.add('object-contain', 'p-8', 'opacity-30');
+      img.src = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300' fill='%2318181b'><rect width='400' height='300' rx='16' fill='%2318181b'/><path d='M160 110h80v80h-80z' fill='%2327272a'/><path d='M200 80l40 30h-80z' fill='%23e11d48'/><circle cx='200' cy='150' r='24' fill='%233f3f46'/><text x='200' y='230' text-anchor='middle' fill='%2371717a' font-family='sans-serif' font-size='14' font-weight='600'>AliExpress Deal DZ</text></svg>";
+      img.classList.remove('object-contain', 'object-cover');
+      img.classList.add('object-contain', 'p-4', 'opacity-90');
     }
 
     function showToast(message) {
@@ -1267,6 +1349,15 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       setTimeout(() => {
         toast.classList.add('translate-y-16', 'opacity-0', 'pointer-events-none');
       }, 2200);
+    }
+
+    function handleBuyClick(couponCode) {
+      if (couponCode && couponCode.length >= 3) {
+        try {
+          navigator.clipboard.writeText(couponCode);
+          showToast(currentLang === 'fr' ? `Code promo ${couponCode} copié !` : `تم نسخ كود الخصم ${couponCode} تلقائياً!`);
+        } catch(e) {}
+      }
     }
 
     function escapeHtml(str) {
@@ -1283,8 +1374,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       e.preventDefault();
       const name = document.getElementById('contact-name').value;
       const successMsg = currentLang === 'fr' 
-        ? `Merci ${name} ! Votre message a bien été envoyé à l'équipe.`
-        : `شكراً لك ${name}! تم إرسال رسالتك بنجاح إلى فريق الإدارة.`;
+        ? `Merci ${name} ! Votre message a bien été envoyé.`
+        : `شكراً لك ${name}! تم استلام رسالتك وسنقوم بالرد قريباً.`;
       showToast(successMsg);
       e.target.reset();
     }
@@ -1296,9 +1387,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         const btn = document.getElementById('curr-' + c);
         if (btn) {
           if (c === curr.toLowerCase()) {
-            btn.className = 'min-w-[34px] sm:min-w-[38px] h-8 sm:h-9 px-2 py-1 rounded-lg bg-dark-800 text-white font-mono transition flex items-center justify-center active:scale-95 touch-manipulation shadow-sm';
+            btn.className = 'min-w-[34px] sm:min-w-[38px] h-8 sm:h-9 px-2 py-1 rounded-lg bg-crimson-600 text-white font-mono transition flex items-center justify-center active:scale-95 touch-manipulation shadow-sm';
           } else {
-            btn.className = 'min-w-[32px] sm:min-w-[36px] h-8 sm:h-9 px-2 py-1 rounded-lg text-slate-400 hover:text-slate-200 font-mono transition flex items-center justify-center active:scale-95 touch-manipulation';
+            btn.className = 'min-w-[32px] sm:min-w-[36px] h-8 sm:h-9 px-2 py-1 rounded-lg opacity-60 hover:opacity-100 font-mono transition flex items-center justify-center active:scale-95 touch-manipulation';
           }
         }
       });
@@ -1314,12 +1405,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       if (isDz) {
         if (tabDz) tabDz.className = 'flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg bg-crimson-600 text-white transition flex items-center justify-center gap-2 active:scale-95 shadow-sm';
-        if (tabFr) tabFr.className = 'flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg text-slate-400 hover:text-slate-200 transition flex items-center justify-center gap-2 active:scale-95';
+        if (tabFr) tabFr.className = 'flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg opacity-70 hover:opacity-100 transition flex items-center justify-center gap-2 active:scale-95';
         if (btnJoin) btnJoin.href = 'https://t.me/DzAliexpress0';
         setCurrency('DZD');
       } else {
         if (tabFr) tabFr.className = 'flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg bg-crimson-600 text-white transition flex items-center justify-center gap-2 active:scale-95 shadow-sm';
-        if (tabDz) tabDz.className = 'flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg text-slate-400 hover:text-slate-200 transition flex items-center justify-center gap-2 active:scale-95';
+        if (tabDz) tabDz.className = 'flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg opacity-70 hover:opacity-100 transition flex items-center justify-center gap-2 active:scale-95';
         if (btnJoin) btnJoin.href = 'https://t.me/francedealsdz';
         setCurrency('EUR');
       }
@@ -1334,13 +1425,19 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const feedEl = document.getElementById('deals-feed');
 
       if (mode === 'grid') {
-        gridBtn.className = 'min-h-[36px] px-3 py-1.5 rounded-lg bg-dark-800 text-slate-100 transition flex items-center gap-1.5 active:scale-95';
-        feedBtn.className = 'min-h-[36px] px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition flex items-center gap-1.5 active:scale-95';
+        gridBtn.className = 'min-h-[36px] px-3 py-1.5 rounded-lg text-white transition flex items-center gap-1.5 active:scale-95 font-bold';
+        gridBtn.style.backgroundColor = 'var(--bg-elevated)';
+        gridBtn.style.color = 'var(--text-main)';
+        feedBtn.className = 'min-h-[36px] px-3 py-1.5 rounded-lg opacity-60 hover:opacity-100 transition flex items-center gap-1.5 active:scale-95';
+        feedBtn.style.backgroundColor = 'transparent';
         gridEl.classList.remove('hidden');
         feedEl.classList.add('hidden');
       } else {
-        feedBtn.className = 'min-h-[36px] px-3 py-1.5 rounded-lg bg-dark-800 text-slate-100 transition flex items-center gap-1.5 active:scale-95';
-        gridBtn.className = 'min-h-[36px] px-3 py-1.5 rounded-lg text-slate-400 hover:text-slate-200 transition flex items-center gap-1.5 active:scale-95';
+        feedBtn.className = 'min-h-[36px] px-3 py-1.5 rounded-lg text-white transition flex items-center gap-1.5 active:scale-95 font-bold';
+        feedBtn.style.backgroundColor = 'var(--bg-elevated)';
+        feedBtn.style.color = 'var(--text-main)';
+        gridBtn.className = 'min-h-[36px] px-3 py-1.5 rounded-lg opacity-60 hover:opacity-100 transition flex items-center gap-1.5 active:scale-95';
+        gridBtn.style.backgroundColor = 'transparent';
         feedEl.classList.remove('hidden');
         gridEl.classList.add('hidden');
       }
@@ -1349,11 +1446,16 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     function setCategory(cat) {
       currentCategory = cat;
       document.querySelectorAll('.cat-pill').forEach(btn => {
-        btn.className = 'cat-pill min-h-[42px] px-3.5 py-2 rounded-xl bg-dark-900 hover:bg-dark-800 text-slate-300 border border-dark-800 whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation';
+        btn.className = 'cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation';
+        btn.style.backgroundColor = 'var(--bg-card)';
+        btn.style.borderColor = 'var(--border-card)';
+        btn.style.color = 'var(--text-muted)';
       });
       const active = document.getElementById('cat-' + cat);
       if (active) {
         active.className = 'cat-pill min-h-[42px] px-3.5 py-2 rounded-xl bg-crimson-600 text-white whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation shadow-sm';
+        active.style.backgroundColor = '#e11d48';
+        active.style.color = '#ffffff';
       }
       filterDeals();
     }
@@ -1383,7 +1485,6 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (showSpin && icon) icon.classList.add('fa-spin');
 
       try {
-        // Fetch exchange rates
         fetch('/api/rates')
           .then(r => r.json())
           .then(data => {
@@ -1396,7 +1497,6 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             }
           }).catch(() => {});
 
-        // Fetch channel posts
         const resp = await fetch('/api/channel-posts?channel=' + encodeURIComponent(currentChannel));
         if (!resp.ok) throw new Error('HTTP ' + resp.status);
         const data = await resp.json();
@@ -1424,39 +1524,113 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       let category = 'other';
       let categoryLabel = I18N[currentLang].deal_category_fallback;
 
-      const lines = text.split('\\n').map(l => l.trim()).filter(Boolean);
+      const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+
+      const isBoilerplate = (l) => {
+        const s = l.toLowerCase();
+        return (
+          s.includes('http') || s.includes('@') || s.includes('t.me') ||
+          s.includes('خلي البلد') || s.includes('بلد الحساب') || s.includes('livraison') ||
+          s.includes('pays') || s.includes('السعر') || s.includes('prix') || s.includes('price') ||
+          s.includes('كوبون') || s.includes('قسيمة') || s.includes('code') || s.includes('coupon') ||
+          s.includes('عملات') || s.includes('coins') || s.includes('pièces') || s.includes('pièce') ||
+          s.includes('لافار') || s.includes('عرض اليوم') || s.includes('صيدة') || s.includes('باطل') ||
+          s.includes('تخفيض قوي') || s.includes('رابط الشراء') || s.includes('بوت') || s.includes('قناة') ||
+          s.includes('bonne affaire') || s.includes('meilleur bon plan') || s.includes('guide') ||
+          s.includes('تنبيه') || s.includes('طريقة') || s.includes('احجز') || s.includes('طبقوا') ||
+          s.includes('حبات قلال') || s.includes('سارعوا') || s.includes('كندا') || s.includes('فرنسا') ||
+          s.includes('كوريا') || s.includes('أوكرانيا') || s.includes('استراليا')
+        );
+      };
+
+      // Priority 1: Checkmark bullet (DealScout DZ & top channels standard: ✅ [Title] or ✔️ [Title])
       for (const line of lines) {
-        if (!title && !line.includes('http') && !line.includes('@') && !line.startsWith('🪙') && !line.startsWith('💰')) {
-          title = line.replace(/^[🛍️🔥⚡⭐💥📦\\s]+/, '').trim();
-          break;
+        const m = line.match(/^[✅✔️☑️]\s*(.+)$/) || line.match(/✅\s*([^\n]+)/);
+        if (m) {
+          const cand = m[1].replace(/<\/?[^>]+(>|$)/g, '').replace(/^[✅✔️☑️\s*#]+/, '').trim();
+          if (cand.length >= 3 && !isBoilerplate(cand)) {
+            title = cand;
+            break;
+          }
         }
       }
-      if (!title) title = (currentLang === 'fr' ? 'Offre Spéciale AliExpress' : 'منتج مميز من AliExpress');
 
-      // Price extraction
-      const usdMatch = text.match(/(\\$|US\\s*\\$|USD\\s*)\\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\\s*(\\bUSD\\b|\\$)/i);
+      // Priority 2: Star, device, or category prefixes (⭐️, 📱, 🎮, 🎧, ⚡, 📦, تخفيض لـ, Produit)
+      if (!title) {
+        for (const line of lines) {
+          const m = line.match(/^(?:⭐️|⭐|🌟|📱|🎮|🎧|⚡|📦|تخفيض\s*لـ?|عرض\s*خاص\s*لـ?|تخفيض\s*على|produit\s*:?|offre\s*:?)\s*(.+)$/i);
+          if (m) {
+            const cand = m[1].replace(/<\/?[^>]+(>|$)/g, '').trim();
+            if (cand.length >= 3 && !isBoilerplate(cand)) {
+              title = cand;
+              break;
+            }
+          }
+        }
+      }
+
+      // Priority 3: Non-boilerplate lines with product name
+      if (!title) {
+        for (const line of lines) {
+          if (isBoilerplate(line)) continue;
+          const clean = line.replace(/^[🛍️🔥⚡⭐💥📦📍🏷️✅✔️•\-*\s]+/, '').replace(/<\/?[^>]+(>|$)/g, '').trim();
+          if (clean.length >= 4 && !isBoilerplate(clean) && !clean.match(/^[A-Z0-9_-]{4,20}$/)) {
+            title = clean;
+            break;
+          }
+        }
+      }
+
+      // Priority 4: Non-link fallback line
+      if (!title) {
+        for (const line of lines) {
+          if (!line.includes('http') && !line.includes('@') && !line.includes('t.me') && line.length >= 4) {
+            const clean = line.replace(/^[🛍️🔥⚡⭐💥📦📍🏷️✅✔️•\-*\s]+/, '').trim();
+            if (clean.length >= 4) {
+              title = clean;
+              break;
+            }
+          }
+        }
+      }
+
+      if (title) {
+        title = title.replace(/<\/?[^>]+(>|$)/g, '').trim();
+        if (title.length > 95) title = title.slice(0, 92) + '...';
+      } else {
+        title = (currentLang === 'fr' ? 'Bon Plan AliExpress' : 'صفقة مميزة من AliExpress');
+      }
+
+      const usdMatch = text.match(/(\$|US\s*\$|USD\s*)\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\s*(\bUSD\b|\$)/i);
       if (usdMatch) {
         priceUsd = parseFloat((usdMatch[2] || usdMatch[1]).replace(',', '.'));
       }
-      const eurMatch = text.match(/(€|EUR\\s*)\\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\\s*(€|\\bEUR\\b)/i);
+      const eurMatch = text.match(/(€|EUR\s*)\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\s*(€|\bEUR\b)/i);
       if (eurMatch) {
         priceEur = parseFloat((eurMatch[2] || eurMatch[1]).replace(',', '.'));
       }
 
-      // Coupons
-      const couponMatch = text.match(/\\b(CODE|كود|code|Code|Coupon)\\s*[:：]?\\s*([A-Za-z0-9_-]{3,20})\\b/i)
-        || text.match(/🏷️\\s*([A-Za-z0-9_-]{3,20})/);
+      // Enhanced Coupon Extraction across all Arabic, French, and Telegram formats
+      const cleanNorm = text.replace(/[\u0640]/g, '');
+      const couponMatch = 
+        cleanNorm.match(/(?:(?:ال)?كـ?وبون(?:\s*الخصم|\s*خاص)?|(?:ال)?كـ?ود(?:\s*الخصم|\s*التخفيض)?|code\s*promo|code\s*de\s*r[ée]duction|code\s*r[ée]duction|coupon|promo|code|avec\s*le\s*code|utilisez\s*le\s*code)\s*[:：\-]?\s*(?:<code>|\*\*|`)*([A-Za-z0-9_-]{3,20})/i)
+        || cleanNorm.match(/(?:(?:ال)?قسيمـ?ة(?:\s*البائع|\s*المتجر)?|coupon\s*vendeur|store\s*coupon)\s*[:：\-]?\s*(?:<code>|\*\*|`)*([0-9]+(?:\.[0-9]+)?\$?|[A-Za-z0-9_-]{3,20})/i)
+        || cleanNorm.match(/[🏷️🎟️🎫]\s*(?:code\s*[:：]?)?\s*(?:<code>|\*\*|`)*([A-Za-z0-9_-]{3,20})/i)
+        || cleanNorm.match(/(?:كود|كوبون|code|promo)[^\n]{0,60}?(?:<code>|`)([A-Za-z0-9_-]{3,20})(?:<\/code>|`)/i);
+      
       if (couponMatch) {
-        coupon = couponMatch[2] || couponMatch[1];
+        let rawCode = (couponMatch[1] || '').trim().replace(/[<>/`*#]/g, '');
+        const bl = ['http', 'https', 'aliexpress', 'tme', 'link', 'item', 'click', 'coins', 'bot', 'france', 'canada', 'algerie', 'promo', 'reduction', 'code'];
+        if (rawCode.length >= 3 && !bl.some(b => rawCode.toLowerCase().includes(b))) {
+          coupon = rawCode.toUpperCase();
+        }
       }
 
-      // Country instruction
       const cMatch = text.match(/(حساب|دولة|بلد|compte|pays)\\s*[:：]?\\s*([\\u0600-\\u06FFa-zA-Z\\s]+)/i);
       if (cMatch) country = cMatch[2].trim().slice(0, 18);
 
       hasCoins = text.includes('عملات') || text.includes('Coins') || text.includes('coins') || text.includes('🪙');
 
-      // Category detection
       const lower = text.toLowerCase();
       if (/phone|هاتف|téléphone|xiaomi|redmi|poco|realme|infinix|samsung|iphone|tablet|تابلت/.test(lower)) {
         category = 'smartphones';
@@ -1594,18 +1768,18 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const isAr = currentLang === 'ar';
       if (currentCurrency === 'DZD') {
         if (deal.price_dzd) {
-          return `<span class="text-base sm:text-lg font-bold text-white font-mono tracking-tight whitespace-nowrap inline-flex items-baseline gap-1">${deal.price_dzd.toLocaleString()} <span class="text-xs text-rose-500 font-semibold">${isAr ? 'دج' : 'DZD'}</span></span>`;
+          return `<span class="text-base sm:text-lg font-bold font-mono tracking-tight whitespace-nowrap inline-flex items-baseline gap-1" style="color: var(--text-main);">${deal.price_dzd.toLocaleString()} <span class="text-xs text-rose-500 font-semibold">${isAr ? 'دج' : 'DZD'}</span></span>`;
         }
       } else if (currentCurrency === 'EUR') {
         if (deal.price_eur) {
-          return `<span class="text-base sm:text-lg font-bold text-white font-mono tracking-tight whitespace-nowrap inline-flex items-baseline gap-1">${deal.price_eur.toFixed(2)} <span class="text-xs text-rose-500 font-semibold">€</span></span>`;
+          return `<span class="text-base sm:text-lg font-bold font-mono tracking-tight whitespace-nowrap inline-flex items-baseline gap-1" style="color: var(--text-main);">${deal.price_eur.toFixed(2)} <span class="text-xs text-rose-500 font-semibold">€</span></span>`;
         }
       } else if (currentCurrency === 'USD') {
         if (deal.price_usd) {
-          return `<span class="text-base sm:text-lg font-bold text-white font-mono tracking-tight whitespace-nowrap inline-flex items-baseline gap-1">${deal.price_usd.toFixed(2)} <span class="text-xs text-rose-500 font-semibold">$</span></span>`;
+          return `<span class="text-base sm:text-lg font-bold font-mono tracking-tight whitespace-nowrap inline-flex items-baseline gap-1" style="color: var(--text-main);">${deal.price_usd.toFixed(2)} <span class="text-xs text-rose-500 font-semibold">$</span></span>`;
         }
       }
-      return `<span class="text-sm font-bold text-rose-400 font-sans">${isAr ? 'تخفيض خاص' : 'Prix Promo'}</span>`;
+      return `<span class="text-sm font-bold text-rose-500 font-sans">${isAr ? 'تخفيض خاص' : 'Prix Promo'}</span>`;
     }
 
     function renderGrid(dealsToRender = null) {
@@ -1621,20 +1795,31 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         const safeTitle = escapeHtml(deal.title);
 
         const photoHtml = deal.photo_url ? `
-          <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-dark-950 border border-dark-800 mb-3 cursor-pointer group flex items-center justify-center" onclick="openDealModal('${deal.id}')">
-            <img src="${deal.photo_url}" alt="${safeTitle}" loading="lazy" decoding="async" onerror="handleImgError(this)" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
-            ${deal.has_coins ? `<span class="absolute top-2 left-2 bg-amber-500 text-slate-950 text-[10px] font-bold px-2 py-0.5 rounded-md flex items-center gap-1 shadow-md"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
-            ${deal.country ? `<span class="absolute top-2 right-2 bg-dark-900/90 text-slate-200 text-[10px] px-2 py-0.5 rounded-md font-bold border border-dark-700 shadow-md">${escapeHtml(deal.country)}</span>` : ''}
+          <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-3 cursor-pointer group flex items-center justify-center border" style="background-color: var(--bg-page); border-color: var(--border-card);" onclick="openDealModal('${deal.id}')">
+            <img src="${deal.photo_url}" alt="${safeTitle}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="handleImgError(this, '${escapeHtml(deal.photo_url)}')" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
+            ${deal.has_coins ? `<span class="absolute top-2 left-2 bg-amber-500 text-zinc-950 text-[10px] font-bold px-2 py-0.5 rounded-md flex items-center gap-1 shadow-md"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
+            ${deal.country ? `<span class="absolute top-2 right-2 text-[10px] px-2 py-0.5 rounded-md font-bold border shadow-md" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">${escapeHtml(deal.country)}</span>` : ''}
           </div>
-        ` : '';
+        ` : `
+          <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-3 cursor-pointer group flex items-center justify-center border" style="background-color: var(--bg-page); border-color: var(--border-card);" onclick="openDealModal('${deal.id}')">
+            <div class="flex flex-col items-center justify-center gap-2 opacity-50 p-4 text-center">
+              <i class="fa-solid fa-bag-shopping text-2xl text-crimson-500"></i>
+              <span class="text-[11px] font-semibold" style="color: var(--text-muted);">${safeTitle.slice(0, 30)}...</span>
+            </div>
+            ${deal.has_coins ? `<span class="absolute top-2 left-2 bg-amber-500 text-zinc-950 text-[10px] font-bold px-2 py-0.5 rounded-md flex items-center gap-1 shadow-md"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
+          </div>
+        `;
 
         const couponHtml = deal.coupon ? `
-          <div class="bg-dark-950 border border-dashed border-dark-700 rounded-xl px-2.5 py-1.5 flex items-center justify-between gap-1.5 mb-2.5">
+          <div class="border border-dashed rounded-xl px-2.5 py-1.5 flex items-center justify-between gap-1.5 mb-2.5 transition" style="background-color: var(--bg-elevated); border-color: rgba(225, 29, 72, 0.4);">
             <div class="flex items-center gap-1.5 min-w-0">
-              <i class="fa-solid fa-ticket text-slate-500 text-xs flex-shrink-0"></i>
-              <span class="font-mono text-xs font-bold text-slate-200 truncate select-all">${escapeHtml(deal.coupon)}</span>
+              <i class="fa-solid fa-ticket text-xs flex-shrink-0 text-amber-500"></i>
+              <div class="min-w-0">
+                <span class="text-[9px] uppercase tracking-wider block font-semibold opacity-60">${currentLang === 'fr' ? 'Code Promo' : 'كود الخصم'}</span>
+                <span class="font-mono text-xs font-extrabold truncate select-all block text-crimson-500">${escapeHtml(deal.coupon)}</span>
+              </div>
             </div>
-            <button onclick="copyCoupon('${deal.coupon}', this)" aria-label="Copy coupon" class="min-h-[38px] min-w-[54px] bg-dark-800 hover:bg-dark-700 active:scale-95 text-[11px] font-bold text-slate-300 hover:text-white px-2 py-1 rounded-lg border border-dark-700 transition flex items-center justify-center gap-1 flex-shrink-0 touch-manipulation">
+            <button onclick="copyCoupon('${deal.coupon}', this)" aria-label="Copy coupon" class="min-h-[36px] min-w-[64px] border text-[11px] font-bold px-2 py-1 rounded-lg transition flex items-center justify-center gap-1 flex-shrink-0 touch-manipulation active:scale-95 shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">
               <i class="fa-regular fa-copy text-[11px]"></i>
               <span class="copy-text">${I18N[currentLang].btn_copy}</span>
             </button>
@@ -1642,43 +1827,44 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         ` : '';
 
         const secondaryPrice = (currentCurrency === 'DZD' && deal.price_usd)
-          ? `<span class="text-[11px] text-slate-500 font-mono whitespace-nowrap">($${deal.price_usd.toFixed(2)})</span>`
-          : (deal.price_dzd && currentCurrency !== 'DZD' ? `<span class="text-[11px] text-slate-500 font-mono whitespace-nowrap">(${deal.price_dzd.toLocaleString()} ${I18N[currentLang].currency_dzd})</span>` : '');
+          ? `<span class="text-[11px] font-mono whitespace-nowrap opacity-60">($${deal.price_usd.toFixed(2)})</span>`
+          : (deal.price_dzd && currentCurrency !== 'DZD' ? `<span class="text-[11px] font-mono whitespace-nowrap opacity-60">(${deal.price_dzd.toLocaleString()} ${I18N[currentLang].currency_dzd})</span>` : '');
 
         card.innerHTML = `
           <div>
             ${photoHtml}
             <div class="flex items-center justify-between gap-2 mb-1.5">
-              <span class="text-[10px] font-semibold text-slate-400 bg-dark-950 px-2 py-0.5 rounded-md border border-dark-800">
+              <span class="text-[10px] font-semibold px-2 py-0.5 rounded-md border" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
                 ${deal.category_label || I18N[currentLang].deal_category_fallback}
               </span>
-              <span class="text-[10px] text-slate-500 font-mono">
+              <span class="text-[10px] font-mono opacity-60">
                 ${deal.date ? deal.date.split(' ')[0] : ''}
               </span>
             </div>
-            <h3 class="font-semibold text-xs sm:text-sm text-slate-100 line-clamp-2 mb-2.5 hover:text-blue-400 transition cursor-pointer leading-snug break-words" onclick="openDealModal('${deal.id}')">
+            <h3 class="font-semibold text-xs sm:text-sm line-clamp-2 mb-2.5 hover:text-rose-500 transition cursor-pointer leading-snug break-words" style="color: var(--text-main);" onclick="openDealModal('${deal.id}')">
               ${safeTitle}
             </h3>
             ${couponHtml}
           </div>
 
-          <div class="pt-2.5 border-t border-dark-800/80 space-y-2.5">
+          <div class="pt-2.5 border-t space-y-2.5" style="border-color: var(--border-card);">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-baseline flex-wrap gap-1.5 min-w-0">
                 ${formatPrice(deal)}
                 ${secondaryPrice}
               </div>
               ${deal.telegram_url ? `
-                <a href="${deal.telegram_url}" target="_blank" rel="noopener noreferrer" title="Telegram" class="w-8 h-8 rounded-lg bg-dark-950 border border-dark-800 text-slate-400 hover:text-sky-400 text-xs flex items-center justify-center active:scale-95 transition touch-manipulation flex-shrink-0">
+                <a href="${deal.telegram_url}" target="_blank" rel="noopener noreferrer" title="Telegram" class="w-8 h-8 rounded-lg border flex items-center justify-center active:scale-95 transition touch-manipulation flex-shrink-0 text-sky-500" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
                   <i class="fa-brands fa-telegram"></i>
                 </a>
               ` : ''}
             </div>
 
-            <!-- Primary Buy Button -->
-            <a href="${deal.affiliate_url}" target="_blank" rel="noopener noreferrer" class="w-full bg-crimson-600 hover:bg-crimson-700 active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-2 transition shadow-sm touch-manipulation min-h-[44px]">
+            <!-- Primary Buy Button with Coupon Auto-Copy -->
+            <a href="${deal.affiliate_url}" target="_blank" rel="noopener noreferrer" onclick="handleBuyClick('${deal.coupon || ''}')" class="w-full bg-crimson-600 hover:bg-crimson-700 active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-2 transition shadow-sm touch-manipulation min-h-[44px]">
               <i class="fa-solid fa-cart-shopping text-xs"></i>
               <span>${I18N[currentLang].btn_buy}</span>
+              ${deal.coupon ? `<span class="bg-black/25 text-[10px] font-mono px-1.5 py-0.5 rounded text-white/95 mr-1 inline-flex items-center gap-1"><i class="fa-solid fa-ticket text-[9px]"></i> ${escapeHtml(deal.coupon)}</span>` : ''}
             </a>
           </div>
         `;
@@ -1695,34 +1881,36 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       deals.forEach(deal => {
         const item = document.createElement('article');
-        item.className = 'bg-dark-900 border border-dark-800 rounded-2xl p-4 space-y-3.5';
+        item.className = 'border rounded-2xl p-4 space-y-3.5 transition-colors';
+        item.style.backgroundColor = 'var(--bg-card)';
+        item.style.borderColor = 'var(--border-card)';
 
         const safeText = escapeHtml(deal.raw_text || '')
           .replace(/\\n/g, '<br>')
-          .replace(/(https?:\\/\\/s\\.click\\.aliexpress\\.com\\/e\\/[A-Za-z0-9_-]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-blue-400 font-bold underline break-all">$1</a>')
-          .replace(/(@[A-Za-z0-9_]+)/g, '<span class="text-sky-400 font-semibold">$1</span>');
+          .replace(/(https?:\\/\\/s\\.click\\.aliexpress\\.com\\/e\\/[A-Za-z0-9_-]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-rose-500 font-bold underline break-all">$1</a>')
+          .replace(/(@[A-Za-z0-9_]+)/g, '<span class="text-sky-500 font-semibold">$1</span>');
 
         item.innerHTML = `
-          <div class="flex items-center justify-between pb-2.5 border-b border-dark-800 text-xs">
+          <div class="flex items-center justify-between pb-2.5 border-b text-xs" style="border-color: var(--border-card);">
             <div class="flex items-center gap-2">
-              <div class="w-8 h-8 rounded-xl bg-dark-800 flex items-center justify-center text-sky-400 text-sm">
+              <div class="w-8 h-8 rounded-xl flex items-center justify-center text-sky-500 text-sm" style="background-color: var(--bg-elevated);">
                 <i class="fa-brands fa-telegram"></i>
               </div>
               <div>
-                <span class="font-bold text-slate-200 block">${escapeHtml(currentChannel)}</span>
-                <span class="text-slate-500 text-[10px] font-mono">${deal.date || ''}</span>
+                <span class="font-bold block" style="color: var(--text-main);">${escapeHtml(currentChannel)}</span>
+                <span class="text-[10px] font-mono opacity-60">${deal.date || ''}</span>
               </div>
             </div>
-            ${deal.telegram_url ? `<a href="${deal.telegram_url}" target="_blank" rel="noopener noreferrer" class="min-h-[38px] px-2.5 py-1 text-sky-400 hover:underline font-semibold text-xs flex items-center gap-1 active:scale-95 touch-manipulation"><i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Telegram</a>` : ''}
+            ${deal.telegram_url ? `<a href="${deal.telegram_url}" target="_blank" rel="noopener noreferrer" class="min-h-[38px] px-2.5 py-1 text-sky-500 hover:underline font-semibold text-xs flex items-center gap-1 active:scale-95 touch-manipulation"><i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Telegram</a>` : ''}
           </div>
 
           ${deal.photo_url ? `
-            <div class="rounded-xl overflow-hidden border border-dark-800 max-h-80 cursor-pointer bg-dark-950 flex items-center justify-center" onclick="openDealModal('${deal.id}')">
-              <img src="${deal.photo_url}" alt="${escapeHtml(deal.title)}" loading="lazy" decoding="async" onerror="handleImgError(this)" class="w-full h-auto object-contain max-h-80">
+            <div class="rounded-xl overflow-hidden border max-h-80 cursor-pointer flex items-center justify-center" style="background-color: var(--bg-page); border-color: var(--border-card);" onclick="openDealModal('${deal.id}')">
+              <img src="${deal.photo_url}" alt="${escapeHtml(deal.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="handleImgError(this, '${escapeHtml(deal.photo_url)}')" class="w-full h-auto object-contain max-h-80">
             </div>
           ` : ''}
 
-          <div class="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans select-text break-words">
+          <div class="text-xs sm:text-sm leading-relaxed font-sans select-text break-words" style="color: var(--text-muted);">
             ${safeText}
           </div>
 
@@ -1731,7 +1919,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               <i class="fa-solid fa-cart-shopping text-xs"></i>
               <span>${I18N[currentLang].btn_buy}</span>
             </a>
-            <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="min-h-[44px] bg-dark-800 hover:bg-dark-700 active:scale-[0.98] text-amber-400 font-bold text-xs py-2.5 px-3.5 rounded-xl border border-dark-700 flex items-center justify-center gap-1.5 transition touch-manipulation">
+            <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="min-h-[44px] border font-bold text-xs py-2.5 px-3.5 rounded-xl flex items-center justify-center gap-1.5 transition touch-manipulation active:scale-[0.98] text-amber-500" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <i class="fa-solid fa-coins text-xs"></i>
               <span>${I18N[currentLang].top_coin_bot}</span>
             </a>
@@ -1794,7 +1982,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       affBtn.href = deal.affiliate_url;
 
       if (deal.telegram_url) {
-        chLink.innerHTML = `<a href="${deal.telegram_url}" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline font-bold text-xs flex items-center gap-1"><i class="fa-brands fa-telegram"></i> Telegram</a>`;
+        chLink.innerHTML = `<a href="${deal.telegram_url}" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:underline font-bold text-xs flex items-center gap-1"><i class="fa-brands fa-telegram"></i> Telegram</a>`;
       } else {
         chLink.innerHTML = '';
       }
@@ -1823,10 +2011,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         if (span) {
           const original = span.textContent;
           span.textContent = I18N[currentLang].btn_copied;
-          btn.classList.add('text-emerald-400', 'border-emerald-500/50');
+          btn.classList.add('text-emerald-500');
           setTimeout(() => {
             span.textContent = original;
-            btn.classList.remove('text-emerald-400', 'border-emerald-500/50');
+            btn.classList.remove('text-emerald-500');
           }, 1800);
         }
       });
@@ -1844,7 +2032,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     });
 
     document.addEventListener('DOMContentLoaded', () => {
-      // Initialize language from storage
+      // Initialize theme & language
+      applyTheme(currentTheme);
       setLanguage(currentLang);
       fetchDeals();
       setInterval(() => fetchDeals(false), 180000);

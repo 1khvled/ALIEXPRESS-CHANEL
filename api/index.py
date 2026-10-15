@@ -20,7 +20,7 @@ try:
 except Exception:
     pass
 from fastapi import FastAPI, Request, Query
-from fastapi.responses import HTMLResponse, JSONResponse, Response
+from fastapi.responses import HTMLResponse, JSONResponse, Response, FileResponse
 import httpx
 import copy
 import hashlib
@@ -1450,6 +1450,17 @@ def parse_telegram_deal_block(block, clean_ch: str, usdt_rate: float = 249.0):
             if line_s and not any(p in line_s for p in ["📍", "خلي", "http", "بوت", "📢", "@", "💰", "🎟️"]):
                 title = line_s
                 break
+    try:
+        from app.aliexpress.parser import extract_clean_title, extract_coupon
+        c_found = extract_coupon(raw_text)
+        if c_found:
+            coupon_code = c_found
+        t_found = extract_clean_title(raw_text)
+        if t_found and len(t_found) >= 4:
+            title = t_found
+    except Exception:
+        pass
+
     if not title:
         title = "AliExpress Deal"
 
@@ -1636,6 +1647,24 @@ async def service_worker():
 async def app_icon():
     """Vector PWA application icon."""
     return Response(content=ICON_SVG, media_type="image/svg+xml")
+
+
+@app.get("/logo.png")
+async def get_logo():
+    """Official DealScout Brand Logo."""
+    logo_path = Path(__file__).resolve().parent.parent / "assets" / "logo.png"
+    if logo_path.exists():
+        return FileResponse(logo_path, media_type="image/png", headers={"Cache-Control": "public, max-age=604800"})
+    return Response(status_code=404)
+
+
+@app.get("/logo_circular.png")
+async def get_logo_circular():
+    """Official DealScout Circular Brand Logo."""
+    logo_path = Path(__file__).resolve().parent.parent / "assets" / "logo_circular.png"
+    if logo_path.exists():
+        return FileResponse(logo_path, media_type="image/png", headers={"Cache-Control": "public, max-age=604800"})
+    return Response(status_code=404)
 
 
 @app.get("/api/rates")
@@ -2063,11 +2092,18 @@ async def channel_posts(channel: str = "@DzAliexpress0"):
             text = text_div.get_text(separator="\n").strip() if text_div else ""
 
             photo_url = None
-            photo_wrap = block.find("a", class_="tgme_widget_message_photo_wrap")
+            photo_wrap = (
+                block.find("a", class_="tgme_widget_message_photo_wrap")
+                or block.find(class_=re.compile(r"tgme_widget_message_photo_wrap"))
+                or block.find("i", class_=re.compile(r"link_preview_image|link_preview_right_image"))
+                or block.find("i", class_=re.compile(r"tgme_widget_message_video_thumb"))
+            )
             if photo_wrap and photo_wrap.get("style"):
-                m = re.search(r"url\('([^']+)'\)", photo_wrap["style"])
+                m = re.search(r"url\(['\"]?([^'\")]+)['\"]?\)", photo_wrap["style"])
                 if m:
                     photo_url = m.group(1)
+            elif block.find("img") and block.find("img").get("src"):
+                photo_url = block.find("img")["src"]
 
             date_str = ""
             date_el = block.find("time")
@@ -2100,6 +2136,27 @@ async def channel_posts(channel: str = "@DzAliexpress0"):
             {"error": str(e), "posts": []},
             status_code=500
         )
+
+
+@app.get("/api/image-proxy")
+async def image_proxy(url: str = Query(...)):
+    """Proxies Telegram and CDN images to prevent client hotlink blocking and CORS issues."""
+    allowed = any(domain in url for domain in ["telesco.pe", "telegram.org", "aliexpress.com", "alicdn.com", "t.me"])
+    if not allowed or not url.startswith("https://"):
+        return JSONResponse({"error": "Forbidden image host"}, status_code=403)
+    try:
+        async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
+            resp = await client.get(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
+            if resp.status_code == 200:
+                media_type = resp.headers.get("content-type", "image/jpeg")
+                return Response(
+                    content=resp.content,
+                    media_type=media_type,
+                    headers={"Cache-Control": "public, max-age=86400"}
+                )
+            return Response(status_code=resp.status_code)
+    except Exception:
+        return Response(status_code=502)
 
 
 # ── Telegram Webhook Handlers ────────────────────────────────────

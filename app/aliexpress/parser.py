@@ -19,19 +19,32 @@ EUR_PRICE_PATTERNS = [
 
 COUPON_PATTERNS = [
     re.compile(
-        r'(?:كوبون|كود|code|coupon|قسيمة)\s*(?:[-–]?\s*[$€]?[0-9]+(?:[\.,][0-9]+)?[^\S\r\n]*(?:/[^\S\r\n]*[$€]?[0-9]+(?:[\.,][0-9]+)?)?[^\S\r\n]*(?:€|eur|euro|euros|دولار|dollar|\$)?)?'
+        r'(?:code\s*promo|code\s*de\s*r[ée]duction|code\s*r[ée]duction|bon\s*de\s*r[ée]duction|(?:ال)?كوبون(?:\s*الخصم|\s*التخفيض)?|(?:ال)?كود(?:\s*الخصم|\s*التخفيض)?|(?:ال)?قسيمة|coupon|code|promo)\s*'
+        r'(?:[-–]?\s*[$€]?[0-9]+(?:[\.,][0-9]+)?[^\S\r\n]*(?:/[^\S\r\n]*[$€]?[0-9]+(?:[\.,][0-9]+)?)?[^\S\r\n]*(?:€|eur|euro|euros|دولار|dollar|\$)?)?'
         r'[\s:：\-=ـ_•*~|()✅🔥👉✔️⏺🙏🎟️🎫💵💰🎁📌⚡💥🤐\r\n]*'
-        r'(?:استخدمه|استخدم|استعمله|استعمل|بكود|code)?'
+        r'(?:استخدمه|استخدم|استعمله|استعمل|انسخه|بكود|code|avec\s*le\s*code|utilisez\s*le\s*code)?'
         r'[\s:：\-=ـ_•*~|()✅🔥👉✔️⏺🙏🎟️🎫💵💰🎁📌⚡💥🤐\r\n]*'
+        r'(?:<code>|\*\*|`)*'
         r'([A-Za-z0-9_-]{3,24})',
         re.IGNORECASE
     ),
-    re.compile(r'(?:استخدم كود|استعمل كود|كود الخصم|كود التخفيض|كوبون خاص|code promo|code de reduction)\s*[^A-Za-z0-9]*([A-Za-z0-9_-]{3,24})', re.IGNORECASE),
-    re.compile(r'👊\s*(?:كوبون|كود|code)\s*[:：\-\s\d\$/€\r\n]*([A-Za-z0-9_-]{3,24})', re.IGNORECASE),
+    re.compile(
+        r'(?:استخدم\s+كود|استعمل\s+كود|كود\s+الخصم|كود\s+التخفيض|كود\s+الشراء|كوبون\s+الخصم|كوبون\s+التخفيض|كوبون\s+خاص|(?:ال)?كود\s*[:：]|(?:ال)?كوبون\s*[:：]|code\s*promo|code\s*de\s*r[ée]duction|code\s*r[ée]duction|bon\s*de\s*r[ée]duction|utilisez\s*(?:le\s*)?code|avec\s*(?:le\s*)?code)\s*[:：\-=ـ_•*~|\s]*(?:<code>|\*\*|`)*([A-Za-z0-9_-]{3,24})',
+        re.IGNORECASE
+    ),
+    re.compile(
+        r'[🏷️🎟️🎫👊]\s*(?:كوبون|كود|code|coupon|promo)?\s*[:：\-\s\d\$/€\r\n]*(?:<code>|\*\*|`)*([A-Za-z0-9_-]{3,24})',
+        re.IGNORECASE
+    ),
+    re.compile(
+        r'(?:كود|كوبون|قسيمة|code|coupon|promo|خصم|تخفيض)[^\n]{0,60}?(?:<code>|`)([A-Za-z0-9_-]{3,24})(?:</code>|`)',
+        re.IGNORECASE
+    ),
 ]
 
 SELLER_COUPON_PATTERNS = [
-    re.compile(r'(?:حصل\s*|احجز\s*)?(?:قسيمة|كوبون)\s*(?:البائع|المتجر|خاصة\s*بالمتجر|store\s*coupon|seller\s*coupon)[\s:：\-=ـ_•*~|()✅🔥👉✔️🌷🙏\+💵💰🎁\r\n]*[$]?\s*([0-9]+(?:[\.,][0-9]+)?(?:\s*(?:دولار|dollar|\$))?|[A-Za-z0-9_\-]{3,25})', re.IGNORECASE),
+    re.compile(r'(?:حصل\s*|احجز\s*)?(?:(?:ال)?قسيمة|(?:ال)?كوبون|(?:ال)?كود)\s*(?:البائع|المتجر|خاصة\s*بالمتجر|store\s*coupon|seller\s*coupon|vendeur)[\s:：\-=ـ_•*~|()✅🔥👉✔️🌷🙏\+💵💰🎁\r\n]*[$€]?\s*([0-9]+(?:[\.,][0-9]+)?(?:\s*(?:دولار|dollar|€|eur|\$))?|[A-Za-z0-9_\-]{3,25})', re.IGNORECASE),
+    re.compile(r'🌷\s*(?:(?:ال)?قسيمـ?ة\s*البـ?ائع|coupon\s*vendeur|store\s*coupon)?\s*[:：]?\s*(?:<code>|\*\*|`)*([0-9]+(?:[\.,][0-9]+)?\$?|[A-Za-z0-9_\-]{3,25})', re.IGNORECASE),
 ]
 
 
@@ -446,11 +459,15 @@ def extract_coupon(text: str) -> Optional[str]:
     norm = re.sub(r'[\u0640]', '', text)
     blacklist = {
         "http", "https", "aliexpress", "item", "link", "url", "temu", "html", "bot",
-        "t.me", "dzgamingcoinbot", "coinbot", "coins", "channel", "click", "s.click"
+        "t.me", "dzgamingcoinbot", "coinbot", "coins", "channel", "click", "s.click",
+        "dzaliexpress0", "francedealsdz", "france", "canada", "algerie", "livraison",
+        "promo", "promos", "reduction", "reductions", "remise", "code", "coupon", "coupons"
     }
     for pattern in COUPON_PATTERNS:
         for m in pattern.finditer(norm):
             code = m.group(1).strip()
+            code = re.sub(r'^[<>/`*#]+|[<>/`*#]+$', '', code).strip()
+            code = code.replace("<code>", "").replace("</code>", "")
             if len(code) >= 3 and re.search(r'[A-Za-z]', code) and code.lower() not in blacklist and not any(b in code.lower() for b in ["http", "t.me", "click", "bot"]):
                 if not is_competitor_branded_code(code):
                     return code.upper()
@@ -621,6 +638,16 @@ def extract_clean_title(text: str) -> Optional[str]:
                     cand += ' ' + lines[i + 2].strip()
             cand = re.sub(r'[\$€💵].*$', '', cand).strip()
             cand = re.sub(r'https?://\S+', '', cand).strip()
+            if not is_noisy(cand) and len(cand) >= 3:
+                return cand[:100]
+
+    # 0.5 Look for checkmark / device bullet title line (DealScout DZ & top Algerian format: ✅ [Title])
+    for i, line in enumerate(lines):
+        if any(line.startswith(s) or f" {s}" in line for s in ["✅", "✔️", "☑️", "📱", "🎮", "🎧"]):
+            cand = re.sub(r'^[✅✔️☑️📱🎮🎧\s\-:]+', '', line).strip()
+            cand = re.sub(r'[\$€💵].*$', '', cand).strip()
+            cand = re.sub(r'https?://\S+', '', cand).strip()
+            cand = re.sub(r'</?[^>]+(>|$)', '', cand).strip()
             if not is_noisy(cand) and len(cand) >= 3:
                 return cand[:100]
 
