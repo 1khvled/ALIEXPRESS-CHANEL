@@ -34,7 +34,7 @@ def test_logo_in_website_html():
     assert 'src="/logo_circular.png"' in html
     assert "this.src='/logo.png'" in html or 'src="/logo.png"' in html
     assert '<link rel="icon" type="image/png" href="/logo_circular.png">' in html
-    assert '<meta property="og:image" content="https://dealscout-green.vercel.app/logo.png">' in html
+    assert '<meta property="og:image" content="https://dealscoutgreen.vercel.app/logo.png">' in html
 
 
 def test_extract_clean_title_with_checkmark_and_hooks():

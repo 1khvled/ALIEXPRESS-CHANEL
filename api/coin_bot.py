@@ -1115,7 +1115,8 @@ async def handle_update(update: Dict[str, Any]) -> bool:
                     "2️⃣ اضغط على زر المشاركة <b>(Share)</b> ثم نسخ الرابط <b>(Copy link)</b>.\n"
                     "3️⃣ <b>ألصق الرابط هنا في هذه المحادثة فوراً</b>.\n\n"
                     "⚡ سيرسل لك البوت روابط الشراء بأقل سعر ممكن بالدينار الجزائري!\n\n"
-                    "📢 <i>تابع أيضاً قناتنا الرسمية لصيدات اليوم الحصرية:</i> @DzAliexpress0"
+                    "📢 <i>تابع أيضاً قناتنا الرسمية لأقوى الصفقات اليومية:</i> @DzAliexpress0\n"
+            "🌐 <i>موقع الصفقات والكوبونات:</i> https://dealscoutgreen.vercel.app/"
                 )
                 markup = {
                     "inline_keyboard": [
@@ -1314,7 +1315,8 @@ async def handle_update(update: Dict[str, Any]) -> bool:
         rate_msg = (
             "⏳ <b>عذراً! لقد وصلت إلى الحد الأقصى للطلبات (20 رابط في الساعة).</b>\n\n"
             f"لتفادي الضغط على السيرفرات ولحماية الخدمة للجميع، يرجى الانتظار <b>~{wait_min} دقيقة</b> قبل إرسال روابط جديدة.\n\n"
-            "📢 <i>تابع أحدث الصيدات الحصرية المنشورة مباشرة على قناتنا:</i> @DzAliexpress0"
+            "📢 <i>تابع أحدث الصفقات الحصرية المنشورة مباشرة على قناتنا:</i> @DzAliexpress0\n"
+            "🌐 <i>موقع الصفقات والكوبونات:</i> https://dealscoutgreen.vercel.app/"
         )
         await send_msg(chat_id, rate_msg)
         return True

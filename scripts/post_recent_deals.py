@@ -251,7 +251,8 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         if (b_id > last_seen_id or (b_id >= lookback_cutoff and not is_post_already_published(ch, b_id) and not is_post_handled(ch, b_id)) or f"{ch.lower()}:{b_id}" in needs_repost_keys)
                         and not is_post_already_published(ch, b_id)
                     ]
-                    new_blocks.sort(key=lambda x: x[0])
+                    # Prioritize newest deals first
+                    new_blocks.sort(key=lambda x: x[0], reverse=True)
 
                     # Pre-filter for message freshness (< 14h) and auto-mark ancient stale posts as handled
                     fresh_blocks = []

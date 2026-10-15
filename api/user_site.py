@@ -20,11 +20,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <meta name="robots" content="index, follow">
 
   <!-- Canonical & Alternate Hreflang -->
-  <link rel="canonical" href="https://dealscout-green.vercel.app/">
-  <link rel="alternate" hreflang="ar" href="https://dealscout-green.vercel.app/">
-  <link rel="alternate" hreflang="ar-DZ" href="https://dealscout-green.vercel.app/">
-  <link rel="alternate" hreflang="fr" href="https://dealscout-green.vercel.app/">
-  <link rel="alternate" hreflang="x-default" href="https://dealscout-green.vercel.app/">
+  <link rel="canonical" href="https://dealscoutgreen.vercel.app/">
+  <link rel="alternate" hreflang="ar" href="https://dealscoutgreen.vercel.app/">
+  <link rel="alternate" hreflang="ar-DZ" href="https://dealscoutgreen.vercel.app/">
+  <link rel="alternate" hreflang="fr" href="https://dealscoutgreen.vercel.app/">
+  <link rel="alternate" hreflang="x-default" href="https://dealscoutgreen.vercel.app/">
 
   <!-- Meta Search & Geography -->
   <meta name="keywords" content="عروض الشتاء Winter Offers AliExpress, تخفيضات عروض الشتاء 2026, كود خصم Winter Offers, WOAE23, WOAE35, WOAE06, WOAE12, Honor X70 5G, realme 15T 5G, OPPO A6 Pro, iQOO Z11s 5G, realme Watch 5, AMD Ryzen 5 8400F, Redmi Note 12 5G, CUSU SSD 512GB, Blackview Wave 10C, aliexpress algerie, شراء من علي اكسبرس بريدي موب, بطاقة بايبايت في الجزائر, بطاقة bybit مجانية, بطاقة redotpay الجزائر, كود خصم redotpay, شحن redotpay بريدي موب, شراء usdt بالدينار الجزائري, بطاقة فيزا للشراء من الانترنت الجزائر, بطاقة ماستركارد افتراضية الجزائر, تفعيل بايبال بالجزائر, binance p2p baridimob algerie, carte bybit algerie, carte redotpay algerie, acheter sur aliexpress baridimob, carte bancaire internationale algerie, تخفيضات علي اكسبرس الجزائر, صفقات aliexpress, بريد الجزائر, اسعار السكوار, algeria deals, dealscout dz, bons plans algerie">
@@ -38,11 +38,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <!-- OpenGraph / Social Meta -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DealScout DZ">
-  <meta property="og:url" content="https://dealscout-green.vercel.app/">
+  <meta property="og:url" content="https://dealscoutgreen.vercel.app/">
   <meta property="og:title" id="og-title" content="DealScout DZ — صفقات وتخفيضات AliExpress بالدينار الجزائري">
   <meta property="og:description" id="og-desc" content="تتبع مباشر لأقوى صفقات وعروض AliExpress المنشورة لحظياً مع حساب السعر بالدينار الجزائري وأكواد الخصم والعملات.">
-  <meta property="og:image" content="https://dealscout-green.vercel.app/logo.png">
-  <meta property="og:image:secure_url" content="https://dealscout-green.vercel.app/logo.png">
+  <meta property="og:image" content="https://dealscoutgreen.vercel.app/logo.png">
+  <meta property="og:image:secure_url" content="https://dealscoutgreen.vercel.app/logo.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -57,7 +57,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <meta name="twitter:creator" content="@DzAliexpress0">
   <meta name="twitter:title" id="twitter-title" content="DealScout DZ — صفقات وتخفيضات AliExpress بالدينار الجزائري">
   <meta name="twitter:description" id="twitter-desc" content="تتبع مباشر لأقوى صفقات AliExpress المنشورة لحظياً مع حساب الأسعار بالدينار الجزائري وأكواد الخصم والعملات.">
-  <meta name="twitter:image" content="https://dealscout-green.vercel.app/logo.png">
+  <meta name="twitter:image" content="https://dealscoutgreen.vercel.app/logo.png">
   <meta name="twitter:image:alt" content="DealScout DZ">
 
   <!-- PWA & Mobile Meta (iOS Safari & Android Chrome) -->
@@ -364,20 +364,20 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://dealscout-green.vercel.app/#website",
-    "url": "https://dealscout-green.vercel.app/",
+    "@id": "https://dealscoutgreen.vercel.app/#website",
+    "url": "https://dealscoutgreen.vercel.app/",
     "name": "DealScout DZ",
     "alternateName": ["DealScout", "ديل سكاوت الجزائر", "AliExpress Deals Algeria", "Bons Plans AliExpress Algérie"],
     "description": "منصة متخصصة في رصد وتحديث أقوى صفقات وتخفيضات AliExpress الموجهة للجزائر لحظة بلحظة مع حساب الأسعار بالدينار الجزائري.",
     "inLanguage": ["ar", "fr"],
     "publisher": {
       "@type": "Organization",
-      "@id": "https://dealscout-green.vercel.app/#organization",
+      "@id": "https://dealscoutgreen.vercel.app/#organization",
       "name": "DealScout DZ",
-      "url": "https://dealscout-green.vercel.app/",
+      "url": "https://dealscoutgreen.vercel.app/",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://dealscout-green.vercel.app/icon.svg",
+        "url": "https://dealscoutgreen.vercel.app/icon.svg",
         "width": 512,
         "height": 512
       },
@@ -393,7 +393,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     },
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://dealscout-green.vercel.app/?q={search_term_string}",
+      "target": "https://dealscoutgreen.vercel.app/?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   }
@@ -402,11 +402,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": "https://dealscout-green.vercel.app/#webpage",
-    "url": "https://dealscout-green.vercel.app/",
+    "@id": "https://dealscoutgreen.vercel.app/#webpage",
+    "url": "https://dealscoutgreen.vercel.app/",
     "name": "صفقات وتخفيضات AliExpress بالدينار الجزائري",
     "isPartOf": {
-      "@id": "https://dealscout-green.vercel.app/#website"
+      "@id": "https://dealscoutgreen.vercel.app/#website"
     },
     "inLanguage": ["ar", "fr"],
     "description": "عروض يومية حصرية من AliExpress محسوبة بالدينار الجزائري عبر أسعار الصرف الحية."
@@ -416,7 +416,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "@id": "https://dealscout-green.vercel.app/#howto-cards",
+    "@id": "https://dealscoutgreen.vercel.app/#howto-cards",
     "name": "كيف تشتري من AliExpress في الجزائر وتدفع بـ BaridiMob",
     "description": "دليل شامل لشراء وشحن بطاقات فيزا وماستركارد الافتراضية الدولية (Bybit, RedotPay) بالدينار الجزائري عبر منصة Binance P2P وبريدي موب للتسوق من AliExpress.",
     "inLanguage": ["ar", "fr"],
@@ -2270,7 +2270,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
 
       // 3. Strict Filter: Reject general non-product announcements, referral posts, and payment guides
-      const isAnnouncement = /(?:إعلان هام|تنبيه هام|دليل الشراء بالدينار|شحن بطاقتك|قناة الصيدات والصفقات|كيفاش تشري من AliExpress|كيف تشحن بطاقاتك)/i.test(text) && !text.includes('/item/');
+      const isAnnouncement = /(?:إعلان هام|تنبيه هام|دليل الشراء بالدينار|شحن بطاقتك|قناة الصفقات|قناة الصيدات|كيفاش تشري من AliExpress|كيف تشحن بطاقاتك)/i.test(text) && !text.includes('/item/');
       if (isAnnouncement) {
         return null;
       }
@@ -2310,13 +2310,13 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           s.includes('pays') || s.includes('السعر') || s.includes('prix') || s.includes('price') ||
           s.includes('كوبون') || s.includes('قسيمة') || s.includes('code') || s.includes('coupon') ||
           s.includes('عملات') || s.includes('coins') || s.includes('pièces') || s.includes('pièce') ||
-          s.includes('لافار') || s.includes('عرض اليوم') || s.includes('صيدة') || s.includes('باطل') ||
+          s.includes('لافار') || s.includes('عرض اليوم') || s.includes('صفقة') || s.includes('صيدة') || s.includes('باطل') ||
           s.includes('تخفيض قوي') || s.includes('رابط الشراء') || s.includes('بوت') || s.includes('قناة') ||
           s.includes('bonne affaire') || s.includes('meilleur bon plan') || s.includes('guide') ||
           s.includes('تنبيه') || s.includes('طريقة') || s.includes('احجز') || s.includes('طبقوا') ||
           s.includes('حبات قلال') || s.includes('سارعوا') || s.includes('كندا') || s.includes('فرنسا') ||
           s.includes('كوريا') || s.includes('أوكرانيا') || s.includes('استراليا') ||
-          s.includes('متوسط') || s.includes('سعره') || s.includes('دج') || s.includes('صيدة اليوم')
+          s.includes('متوسط') || s.includes('سعره') || s.includes('دج') || s.includes('صفقة اليوم') || s.includes('صيدة اليوم')
         );
       };
 
@@ -2545,7 +2545,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         "item": {
           "@type": "Product",
           "name": deal.title,
-          "image": deal.photo_url || "https://dealscout-green.vercel.app/icon.svg",
+          "image": deal.photo_url || "https://dealscoutgreen.vercel.app/icon.svg",
           "description": deal.title,
           "offers": {
             "@type": "Offer",

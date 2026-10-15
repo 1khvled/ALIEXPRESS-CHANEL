@@ -251,14 +251,17 @@
     "9998883836",
     "9998883963",
     "1005010620269829",
-    "1005010149868688"
+    "1005010149868688",
+    "9998886219",
+    "1005005875379717",
+    "9998887185"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
     "1005010219205081": 1791192360.1916943,
-    "999111222": 1792073962.9331777,
-    "100500999912345": 1791983963.6726248,
-    "100500999954321": 1792066763.6726248,
+    "999111222": 1792087184.8704624,
+    "100500999912345": 1791997185.7987423,
+    "100500999954321": 1792079985.7987423,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
@@ -268,7 +271,7 @@
     "1005009627597591": 1790884233.6428,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1792063163.7685444,
+    "100500777666555": 1792076385.9097276,
     "1005011778621042": 1791108644.641232,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1791192944.201814,
@@ -286,7 +289,7 @@
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
-    "100500888999777": 1792059563.8155534,
+    "100500888999777": 1792072785.9597914,
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
@@ -317,7 +320,7 @@
     "9998885726": 1790945726.205554,
     "9998885776": 1791675776.96059,
     "9998886147": 1790946147.1871526,
-    "999888777111": 1792072165.129444,
+    "999888777111": 1792085387.073461,
     "9998886362": 1790946362.071869,
     "1005012407874415": 1791061256.0753598,
     "9998887189": 1790947189.8634577,
@@ -337,7 +340,7 @@
     "1005011991145678": 1790962541.57551,
     "1005011682821623": 1790962844.0034096,
     "9998885747": 1790965747.5380507,
-    "1005010129356058": 1792062443.905085,
+    "1005010129356058": 1792075666.0562956,
     "9998885993": 1790965993.3792443,
     "1005012574108028": 1791236020.742662,
     "1005008599340405": 1791638441.843642,
@@ -449,8 +452,8 @@
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
     "COUPONS_Brand Day Sale": 1791676848.283345,
-    "COUPONS_d9b8b196": 1792073962.745027,
-    "COUPONS_Test Event 2026": 1792073962.745027,
+    "COUPONS_d9b8b196": 1792087184.6978607,
+    "COUPONS_Test Event 2026": 1792087184.6978607,
     "9998886905": 1791676905.095083,
     "9998887197": 1791677197.2988765,
     "9998887496": 1791677496.6959877,
@@ -471,10 +474,10 @@
     "1005012914301139": 1791942620.3773732,
     "1005007345151855": 1791942667.867043,
     "1005010345227483": 1791942676.1983886,
-    "1005011557896041": 1791943741.5394402,
+    "1005011557896041": 1792086995.413412,
     "1005011754993234": 1792061283.4535055,
     "1005011735727412": 1791943783.9162278,
-    "1005013039644752": 1792077724.119901,
+    "1005013039644752": 1792086982.281257,
     "1005007916078341": 1792050965.154088,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
@@ -486,7 +489,7 @@
     "1005012571601398": 1792077701.5855007,
     "1005008131216261": 1791992931.9736187,
     "1005013054007275": 1791992936.3210912,
-    "1005011899097443": 1792007142.8492503,
+    "1005011899097443": 1792086950.2070847,
     "1005012865117890": 1792007168.2612865,
     "1005010428947440": 1792007180.6836498,
     "1005010733227481": 1792017716.5973718,
@@ -496,7 +499,7 @@
     "1005009117917540": 1792017762.9428782,
     "1005008337650254": 1792017769.7299333,
     "1005013165123874": 1792017774.247927,
-    "32983391170": 1792025644.3094199,
+    "32983391170": 1792087147.0923955,
     "1005012933967378": 1792025649.1506214,
     "1005010812635861": 1792025653.768273,
     "1005008500550817": 1792025664.1703467,
@@ -513,7 +516,10 @@
     "9998883836": 1792073836.8176863,
     "9998883963": 1792073963.7339156,
     "1005010620269829": 1792077689.3824542,
-    "1005010149868688": 1792077710.438389
+    "1005010149868688": 1792077710.438389,
+    "9998886219": 1792086219.2668676,
+    "1005005875379717": 1792087000.9978776,
+    "9998887185": 1792087185.8637784
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -810,15 +816,17 @@
     "متوسط سعره حالياً 82000دج",
     "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP AI",
     "iQOO Z11s 5G (8/128GB)",
-    "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring"
+    "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring",
+    "Baseus GH02 Gaming Wireless Headphone",
+    "GameSir GM500 PMW33600 Gaming Mouse"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1792073962.9331777,
+    "Test Wireless Gaming Mouse X1": 1792087184.8704624,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
-    "Attack Shark R2 Mouse": 1792066763.6726248,
-    "Test Wrench Set": 1792073963.7339156,
+    "Attack Shark R2 Mouse": 1792079985.7987423,
+    "Test Wrench Set": 1792087185.8637784,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1791194142.1753953,
@@ -850,8 +858,8 @@
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
-    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1791983963.6726248,
-    "Attack Shark L80 PRO Wireless Mouse": 1792073063.8155534,
+    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1791997185.7987423,
+    "Attack Shark L80 PRO Wireless Mouse": 1792086285.9597914,
     "الأكثر لبا لنهار اليوووم": 1790940343.7746465,
     "POCO C81 Pro 4/64": 1791114344.949536,
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
@@ -895,7 +903,7 @@
     "HONOR 600 PRO": 1790960475.7249138,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
-    "Xiaomi Pad 7 (12/256)": 1792062443.905085,
+    "Xiaomi Pad 7 (12/256)": 1792075666.0562956,
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1791236011.4353654,
     "CUSU SSD 512 GB Portable SSD External Drive": 1791200448.8235762,
     "HONOR  X80 PRO MAX (8/128)": 1791236020.742662,
@@ -965,7 +973,7 @@
     "HONOR POWER 2 (12/256)": 1791042962.9882953,
     "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light": 1791043842.6639822,
     "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": 1791045040.5964694,
-    "RYZEN 7 7800X3D": 1791050748.149688,
+    "RYZEN 7 7800X3D": 1792086995.413412,
     "Redmi Note 14S  8/128GB": 1791051351.3013499,
     "Attack Shark X AJAZZ AK820": 1791217251.8495085,
     "Baseus Stylus Pen": 1791056153.3979695,
@@ -1070,7 +1078,7 @@
     "AMD Ryzen 5 8400F": 1792061283.4535055,
     "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": 1791943777.8506553,
     "🔝 مانات قووووة ل جماعة mobile gaming 🎮": 1792017738.3981204,
-    "جديد ال ©️©️ ببطارية عملاقة💪💪": 1791943797.3155782,
+    "جديد ال ©️©️ ببطارية عملاقة💪💪": 1792086982.281257,
     "Honor Choice Infowear Watch 2i Smartwatch AMOLED": 1791943825.002781,
     "CMF BY NOTHING Watch 3 Pro": 1792050965.154088,
     "Dolewa D3 Portable Printer Thermal Paper": 1791947519.5815504,
@@ -1086,7 +1094,7 @@
     "ماوس لاسلكي فخم Scyrox V8S Wireless 8K": 1791992936.3210912,
     "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM": 1791992945.451545,
     "Rocoren 100W Type-C to USB Fast Charging 0.5M": 1791992975.2913277,
-    "Acinaci J11 Gaming Headset": 1792007142.8492503,
+    "Acinaci J11 Gaming Headset": 1792086950.2070847,
     "Realme 14 Pro Global (12/256)": 1792007168.2612865,
     "Anker Soundcore Select 4 Go Bluetooth Speaker": 1792007180.6836498,
     "OnePlus Turbo 6V  8/256": 1792017716.5973718,
@@ -1110,7 +1118,9 @@
     "متوسط سعره حالياً 82000دج": 1792077701.5855007,
     "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP AI": 1792077710.438389,
     "iQOO Z11s 5G (8/128GB)": 1792077724.119901,
-    "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1792077728.5472124
+    "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1792077728.5472124,
+    "Baseus GH02 Gaming Wireless Headphone": 1792087000.9978776,
+    "GameSir GM500 PMW33600 Gaming Mouse": 1792087147.0923955
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1877,47 +1887,54 @@
     "aniscoupons:32955",
     "aniscoupons:32956",
     "aniscoupons:32957",
-    "aniscoupons:32958"
+    "aniscoupons:32958",
+    "test_channel:1792086219",
+    "lodydeals:45549",
+    "megaphonna:8398",
+    "aniscoupons:32960",
+    "aniscoupons:32961",
+    "lodydeals:45556",
+    "test_channel:1792087185"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1792077728.5472124,
+  "last_run_time": 1792087186.0623653,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32958,
-      "last_check_time": 1792077730.5607078
+      "last_message_id": 32964,
+      "last_check_time": 1792087008.6770473
     },
     "ecksdeal": {
       "last_message_id": 5892,
-      "last_check_time": 1792077692.1932707
+      "last_check_time": 1792086960.8982298
     },
     "lodydeals": {
-      "last_message_id": 45547,
-      "last_check_time": 1792077681.7306726
+      "last_message_id": 45556,
+      "last_check_time": 1792087185.965598
     },
     "bnddeals": {
-      "last_message_id": 50856,
-      "last_check_time": 1792077692.9753723
+      "last_message_id": 50858,
+      "last_check_time": 1792086965.2502632
     },
     "test_channel": {
-      "last_message_id": 1792073963,
-      "last_check_time": 1792073963.7339156
+      "last_message_id": 1792087185,
+      "last_check_time": 1792087185.8637784
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792077692.5853674
+      "last_check_time": 1792086961.338883
     },
     "zedstoreonline": {
       "last_message_id": 38610,
-      "last_check_time": 1792077691.3965116
+      "last_check_time": 1792086960.3057375
     },
     "megaphonna": {
-      "last_message_id": 8394,
-      "last_check_time": 1792077706.923849
+      "last_message_id": 8398,
+      "last_check_time": 1792087186.0623653
     },
     "couponsglobal": {
       "last_message_id": 48849,
-      "last_check_time": 1792077731.2923646
+      "last_check_time": 1792087009.1043608
     }
   },
   "published_product_prices": {
@@ -2107,10 +2124,10 @@
     "1005012914301139": 12.96,
     "1005007345151855": 40.0,
     "1005010345227483": 246.4,
-    "1005011557896041": 257.22,
+    "1005011557896041": 257.2,
     "1005011754993234": 87.5,
     "1005011735727412": 26.6,
-    "1005013039644752": 286.55,
+    "1005013039644752": 186.5,
     "1005007916078341": 59.0,
     "1005006506862816": 11.86,
     "1005008072923842": 2.21,
@@ -2121,7 +2138,7 @@
     "1005007767322935": 21.61,
     "1005008131216261": 54.11,
     "1005013054007275": 55.97,
-    "1005011899097443": 10.86,
+    "1005011899097443": 10.16,
     "1005010428947440": 24.47,
     "1005010733227481": 285.4,
     "1005006281667276": 33.0,
@@ -2139,7 +2156,8 @@
     "1005011997237872": 111.2,
     "1005011908654312": 122.6,
     "1005010620269829": 241.0,
-    "1005010149868688": 204.1
+    "1005010149868688": 204.1,
+    "1005005875379717": 42.89
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -5884,6 +5902,46 @@
       "price": 33.3,
       "timestamp": 1792077728.5472124,
       "status": "ACTIVE"
+    },
+    "lodydeals:45549": {
+      "channel_msg_id": 849,
+      "product_id": "1005011899097443",
+      "title": "Acinaci J11 Gaming Headset",
+      "channel": "lodydeals",
+      "source_msg_id": 45549,
+      "price": 10.16,
+      "timestamp": 1792086950.2070847,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8398": {
+      "channel_msg_id": 850,
+      "product_id": "1005013039644752",
+      "title": "جديد ال ©️©️ ببطارية عملاقة💪💪",
+      "channel": "megaphonna",
+      "source_msg_id": 8398,
+      "price": 186.5,
+      "timestamp": 1792086982.281257,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32960": {
+      "channel_msg_id": 851,
+      "product_id": "1005011557896041",
+      "title": "RYZEN 7 7800X3D",
+      "channel": "aniscoupons",
+      "source_msg_id": 32960,
+      "price": 257.2,
+      "timestamp": 1792086995.413412,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32961": {
+      "channel_msg_id": 852,
+      "product_id": "1005005875379717",
+      "title": "Baseus GH02 Gaming Wireless Headphone",
+      "channel": "aniscoupons",
+      "source_msg_id": 32961,
+      "price": 42.89,
+      "timestamp": 1792087000.9978776,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -5892,17 +5950,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792077731.3034806,
+    "last_deal_post_time": 1792087147.1134896,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792077733.909331,
+    "last_sweep_time": 1792087009.1423867,
     "last_sweep_times": {
-      "algeria": 1792077731.2980464,
+      "algeria": 1792087009.1423867,
       "france": 1792077733.909331
     },
     "last_deal_post_times": {
-      "algeria": 1792077731.3034806
+      "algeria": 1792087147.1134896
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -6128,10 +6186,10 @@
     "1005012914301139": "lodydeals",
     "1005007345151855": "bnddeals",
     "1005010345227483": "megaphonna",
-    "1005011557896041": "lodydeals",
+    "1005011557896041": "aniscoupons",
     "1005011754993234": "zedstoreonline",
     "1005011735727412": "bnddeals",
-    "1005013039644752": "aniscoupons",
+    "1005013039644752": "megaphonna",
     "1005007916078341": "zedstoreonline",
     "1005006506862816": "couponsglobal",
     "1005008072923842": "pcgamingpart",
@@ -6142,7 +6200,7 @@
     "1005007767322935": "lodydeals",
     "1005008131216261": "ecksdeal",
     "1005013054007275": "ecksdeal",
-    "1005011899097443": "pcgamingpart",
+    "1005011899097443": "lodydeals",
     "1005010428947440": "couponsglobal",
     "1005010733227481": "zedstoreonline",
     "1005006281667276": "bnddeals",
@@ -6151,7 +6209,7 @@
     "1005009117917540": "couponsglobal",
     "1005008337650254": "couponsglobal",
     "1005013165123874": "couponsglobal",
-    "32983391170": "zedstoreonline",
+    "32983391170": "lodydeals",
     "1005012933967378": "zedstoreonline",
     "1005010812635861": "zedstoreonline",
     "1005008500550817": "bnddeals",
@@ -6166,7 +6224,10 @@
     "9998883836": "test_channel",
     "9998883963": "test_channel",
     "1005010620269829": "zedstoreonline",
-    "1005010149868688": "aniscoupons"
+    "1005010149868688": "aniscoupons",
+    "9998886219": "test_channel",
+    "1005005875379717": "aniscoupons",
+    "9998887185": "test_channel"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -6441,7 +6502,7 @@
     "ماوس لاسلكي فخم Scyrox V8S Wireless 8K": "ecksdeal",
     "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM": "pcgamingpart",
     "Rocoren 100W Type-C to USB Fast Charging 0.5M": "couponsglobal",
-    "Acinaci J11 Gaming Headset": "pcgamingpart",
+    "Acinaci J11 Gaming Headset": "lodydeals",
     "Realme 14 Pro Global (12/256)": "aniscoupons",
     "Anker Soundcore Select 4 Go Bluetooth Speaker": "couponsglobal",
     "OnePlus Turbo 6V  8/256": "zedstoreonline",
@@ -6465,7 +6526,9 @@
     "متوسط سعره حالياً 82000دج": "megaphonna",
     "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP AI": "aniscoupons",
     "iQOO Z11s 5G (8/128GB)": "aniscoupons",
-    "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": "aniscoupons"
+    "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": "aniscoupons",
+    "Baseus GH02 Gaming Wireless Headphone": "aniscoupons",
+    "GameSir GM500 PMW33600 Gaming Mouse": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -6514,7 +6577,9 @@
     "test_rem_3c4e9736": "2026-10-02",
     "test_rem_3bf51f65": "2026-10-02",
     "test_rem_2eee2686": "2026-10-02",
-    "test_rem_9bdd065a": "2026-10-02"
+    "test_rem_9bdd065a": "2026-10-02",
+    "test_rem_31f3570b": "2026-10-02",
+    "test_rem_8daa6061": "2026-10-02"
   },
   "channel_announcements_history": {
     "china_holiday_shipping_delay": "2026-10-02",
@@ -6557,7 +6622,9 @@
     "test_tag_e98c78": "2026-10-02",
     "test_tag_9617ac": "2026-10-02",
     "test_tag_3959d5": "2026-10-02",
-    "test_tag_87efe9": "2026-10-02"
+    "test_tag_87efe9": "2026-10-02",
+    "test_tag_9df988": "2026-10-02",
+    "test_tag_c926f6": "2026-10-02"
   },
   "daily_tajmi3at_history": {
     "2026-10-03": {
@@ -6667,7 +6734,8 @@
     "AliExpress Special Promo Octobre 2026_20261004": 661,
     "AliExpress Special Promo Octobre 2026_20261006": 677,
     "Brand Day Sale_20261009": 731,
-    "Brand Day Sale Octobre 2026_20261009": 702
+    "Brand Day Sale Octobre 2026_20261009": 702,
+    "Winter Offers_20261014": 847
   },
   "sent_promo_notifiers": [
     "LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
@@ -6957,7 +7025,20 @@
     "megaphonna:8389",
     "megaphonna:8391",
     "megaphonna:8394",
-    "couponsglobal:48849"
+    "couponsglobal:48849",
+    "lodydeals:45548",
+    "lodydeals:45550",
+    "lodydeals:45551",
+    "lodydeals:45552",
+    "lodydeals:45553",
+    "bnddeals:50857",
+    "bnddeals:50858",
+    "megaphonna:8395",
+    "megaphonna:8397",
+    "aniscoupons:32959",
+    "aniscoupons:32962",
+    "aniscoupons:32963",
+    "aniscoupons:32964"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
@@ -7196,6 +7277,28 @@
       "channel_msg_id": 9999,
       "channel": "@DzAliexpress0",
       "timestamp": 1792073962.745027
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1792086218.194514
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1792087184.6978607
     }
   ]
 }

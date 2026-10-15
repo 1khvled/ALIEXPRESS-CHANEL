@@ -91,7 +91,8 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
                 "",
                 "🪙 <b>بوت مضاعفة تخفيض العملات:</b> @Alilo07BOT",
                 "━━━━━━━━━━━━━━━━━",
-                "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0",
+                "🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/",
+                "📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0",
                 "🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس #Brand_Day</i>"
             ]
             reply_markup = {
@@ -122,7 +123,8 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
             "لا تنسى استخدام البوت للشراء بأقل الأسعار ومضاعفة خصم العملات :",
             "👉 t.me/Alilo07BOT",
             "━━━━━━━━━━━━━━━━━",
-            "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0",
+            "🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/",
+            "📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0",
             "🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس</i>"
         ]
     else:
@@ -132,7 +134,7 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
             "",
             "💡 <b>تفاصيل التخفيض:</b>",
             "الحدث يعتمد على <b>تخفيضات العملات المضاعفة 🪙</b> وقسائم المتاجر الحصرية (Store Coupons).",
-            "احرصوا على جمع العملات يومياً في التطبيق لتكونوا جاهزين لأفضل الصيدات!",
+            "احرصوا على جمع العملات يومياً في التطبيق لتكونوا جاهزين لأقوى الصفقات والعروض!",
             "",
             "🔥 <b>إجمع العملات من هنا ⤵️</b>",
             "👉 https://s.click.aliexpress.com/e/_c4l391NX",
@@ -140,7 +142,8 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
             "لا تنسى استخدام البوت للشراء بأقل الأسعار ومضاعفة الخصم :",
             "👉 t.me/Alilo07BOT",
             "━━━━━━━━━━━━━━━━━",
-            "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0"
+            "🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/",
+            "📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0"
         ]
 
     text = "\n".join(lines)
@@ -173,7 +176,8 @@ def build_promo_launch_alert(promo: PromoEvent, start_hour_str: str = "08:00") -
                 "",
                 "🪙 <b>بوت مضاعفة تخفيض العملات:</b> @Alilo07BOT",
                 "━━━━━━━━━━━━━━━━━",
-                "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0",
+                "🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/",
+                "📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0",
                 "🔍 <i>#عروض_علي_اكسبرس #كوبونات_علي_اكسبرس #Brand_Day</i>"
             ]
             reply_markup = {
@@ -204,7 +208,9 @@ def build_promo_launch_alert(promo: PromoEvent, start_hour_str: str = "08:00") -
             "",
             "😊 <b>بوت مطور لشراء بأفضل سعر وتتبع الطرود :</b>",
             "👉 t.me/Alilo07BOT",
-            "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0"
+            "━━━━━━━━━━━━━━━━━",
+            "🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/",
+            "📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0"
         ]
         reply_markup = {}
         return "\n".join(lines), reply_markup
@@ -219,7 +225,9 @@ def build_promo_launch_alert(promo: PromoEvent, start_hour_str: str = "08:00") -
             "",
             "😊 <b>بوت مطور للشراء بأفضل سعر :</b>",
             "👉 t.me/Alilo07BOT",
-            "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0"
+            "━━━━━━━━━━━━━━━━━",
+            "🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/",
+            "📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0"
         ]
     return "\n".join(lines), {}
 

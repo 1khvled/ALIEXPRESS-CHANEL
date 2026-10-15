@@ -16,7 +16,7 @@ client = TestClient(app)
 def test_seo_metadata_in_user_site_html():
     """Verify presence of canonical URL, meta keywords, and geo tags."""
     html = USER_WEBSITE_HTML
-    assert '<link rel="canonical" href="https://dealscout-green.vercel.app/">' in html
+    assert '<link rel="canonical" href="https://dealscoutgreen.vercel.app/">' in html
     assert '<meta name="robots" content="index, follow">' in html
     assert 'name="keywords"' in html
     assert 'name="geo.region" content="DZ"' in html
@@ -74,7 +74,7 @@ def test_robots_txt_route():
     assert "Allow: /deals" in text
     assert "Disallow: /admin" in text
     assert "Disallow: /api/" in text
-    assert "Sitemap: https://dealscout-green.vercel.app/sitemap.xml" in text
+    assert "Sitemap: https://dealscoutgreen.vercel.app/sitemap.xml" in text
 
 
 def test_sitemap_xml_route():
@@ -89,8 +89,8 @@ def test_sitemap_xml_route():
     assert "urlset" in root.tag
     
     urls = [elem.text for elem in root.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
-    assert "https://dealscout-green.vercel.app/" in urls
-    assert "https://dealscout-green.vercel.app/deals" in urls
+    assert "https://dealscoutgreen.vercel.app/" in urls
+    assert "https://dealscoutgreen.vercel.app/deals" in urls
 
 
 def test_public_web_routes():

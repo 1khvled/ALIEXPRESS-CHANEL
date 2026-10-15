@@ -30,10 +30,14 @@ DISCLAIMER_TEXT = """❝ ❓ <b>لماذا يجب تغيير دولة التطب
 5️⃣ ادخل الآن عبر روابط العروض واشترِ بالعملات مباشرة بأرخص سعر! 💸
 
 🪙 <b>البوت المباشر لزيادة تخفيض العملات:</b> @Alilo07BOT
-📢 <b>قناة التيليغرام للمزيد من العروض والصيدات:</b> @DzAliexpress0"""
+🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/
+📢 <b>قناة التيليغرام للمزيد من الصفقات والعروض:</b> @DzAliexpress0"""
 
 DISCLAIMER_KEYBOARD = {
     "inline_keyboard": [
+        [
+            {"text": "🌐 تصفح موقع الصفقات والكوبونات", "url": "https://dealscoutgreen.vercel.app/"}
+        ],
         [
             {"text": "🪙 فتح بوت تخفيض العملات", "url": "https://t.me/Alilo07BOT"}
         ],

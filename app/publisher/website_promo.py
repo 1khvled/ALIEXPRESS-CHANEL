@@ -1,6 +1,6 @@
 """
 Website Marketing & Launch Announcement Module
-Publishes promotional, high-converting announcements for https://dealscout-green.vercel.app/
+Publishes promotional, high-converting announcements for https://dealscoutgreen.vercel.app/
 to Telegram channels (@DzAliexpress0 and @francedealsdz).
 """
 import os
@@ -15,12 +15,12 @@ from app.config.settings import settings
 from app.utils.logger import logger, record_system_log
 from app.utils.network import enforce_ipv4
 
-WEBSITE_URL = "https://dealscout-green.vercel.app/"
+WEBSITE_URL = "https://dealscoutgreen.vercel.app/"
 
 # --- ARABIC CAMPAIGN: For @DzAliexpress0 (Algeria Audience) ---
 POST_WEBSITE_PROMO_DZ = """<blockquote>🌐 <b>إطـلاق موقع DealScout DZ لصفقات AliExpress بالدينار! 🇩🇿⚡</b></blockquote>
 
-لكل متتبعي القناة.. طورنا لكم منصة <b>DealScout DZ</b> لاقتناص الصيدات بدقة واحترافية:
+لكل متتبعي القناة.. طورنا لكم منصة <b>DealScout DZ</b> لاقتناص أقوى الصفقات بدقة واحترافية:
 
 ✨ <b>أهم مزايا المنصة:</b>
 ▫️ 💰 <b>أسعار بالدينار (DZD):</b> حساب فوري بسعر السكوار الحقيقي (SquareAlgérie).
@@ -32,13 +32,13 @@ POST_WEBSITE_PROMO_DZ = """<blockquote>🌐 <b>إطـلاق موقع DealScout D
 📲 <i>الموقع خفيف جداً ويدعم التثبيت على شاشة هاتفك (PWA)!</i>
 
 🔗 <b>تصفح الموقع الآن ⤵️</b>
-https://dealscout-green.vercel.app/
+https://dealscoutgreen.vercel.app/
 ━━━━━━━━━━━━━━━━━
 📢 <b>قناة الصفقات:</b> @DzAliexpress0"""
 
 BUTTONS_DZ = [
-    [{"text": "🌐 تصفح موقع الصفقات الآن", "url": "https://dealscout-green.vercel.app/"}],
-    [{"text": "💳 دليل بطاقات الشراء وبريدي موب", "url": "https://dealscout-green.vercel.app/cards"}],
+    [{"text": "🌐 تصفح موقع الصفقات الآن", "url": "https://dealscoutgreen.vercel.app/"}],
+    [{"text": "💳 دليل بطاقات الشراء وبريدي موب", "url": "https://dealscoutgreen.vercel.app/cards"}],
     [{"text": "🪙 بوت تخفيض العملات (@Alilo07BOT)", "url": "https://t.me/Alilo07BOT"}]
 ]
 
@@ -55,13 +55,13 @@ Retrouvez tous les meilleurs bons plans et codes promos AliExpress sur une plate
 ▫️ 🪙 <b>Remise Pièces :</b> Liens optimisés avec le bot @Alilo07BOT.
 
 🔗 <b>Accédez au site dès maintenant ⤵️</b>
-https://dealscout-green.vercel.app/
+https://dealscoutgreen.vercel.app/
 ━━━━━━━━━━━━━━━━━
 📢 <b>Canal France :</b> @francedealsdz"""
 
 BUTTONS_FR = [
-    [{"text": "🌐 Découvrir le site DealScout DZ", "url": "https://dealscout-green.vercel.app/"}],
-    [{"text": "💳 Guide Cartes & Recharges", "url": "https://dealscout-green.vercel.app/cards"}]
+    [{"text": "🌐 Découvrir le site DealScout DZ", "url": "https://dealscoutgreen.vercel.app/"}],
+    [{"text": "💳 Guide Cartes & Recharges", "url": "https://dealscoutgreen.vercel.app/cards"}]
 ]
 
 

@@ -80,7 +80,7 @@ async def test_phone_hook_and_seller_coupon_generation():
     )
 
     # Must contain authentic phone hook
-    assert any(h in caption for h in ["الهواتف", "أجرررررري لافــــــــــار", "صيدة اليوم في الهواتف", "المحبوب", "مواصفات قوية"])
+    assert any(h in caption for h in ["الهواتف", "أجرررررري لافــــــــــار", "صفقة قوية في الهواتف", "المحبوب", "مواصفات قوية"])
     # Must NOT contain the bad generic million centime hook
     assert "سعرها يفوق مليون سنتيم" not in caption
     # Must contain seller coupon

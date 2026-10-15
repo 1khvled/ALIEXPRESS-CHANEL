@@ -51,7 +51,7 @@ class DealCaptionGenerator:
         t_lower = (title + " " + (raw_text or "")).lower()
         if any(k in t_lower for k in ["shark", "mouse", "keyboard", "gamepad", "headset", "gaming", "قيمنق"]):
             gaming_hooks = [
-                "🎮 <b>صيدة اليوم في عتاد قيمنق بسعر ممتاز متتراطاش 🔥⚡</b>",
+                "🎮 <b>صفقة قوية في عتاد قيمنق بسعر ممتاز متتراطاش 🔥⚡</b>",
                 "⚡ <b>عتاد قيمنق لافار ممتازة بأقوى سعر 🔥🎮</b>",
                 "🔥 <b>تخفيض قوي في عتاد قيمنق بسعر باطل 🔥🎮</b>"
             ]
@@ -59,7 +59,7 @@ class DealCaptionGenerator:
 
         if any(k in t_lower for k in ["realme", "xiaomi", "redmi", "poco", "infinix", "oneplus", "هاتف", "الهواتف", "phone"]):
             phone_hooks = [
-                "📱 <b>صيدة اليوم في الهواتف مواصفات قوية وسعر ممتاز 🔥</b>",
+                "📱 <b>صفقة قوية في الهواتف مواصفات ممتازة وسعر مميز 🔥</b>",
                 "🔥 <b>هاتف بمواصفات قوية وسعر لافار ممتاز متتراطاش 🔥📱</b>",
                 "⚡ <b>عرض لافار ممتاز في عالم الهواتف متتفوتش 🔥📱</b>"
             ]
@@ -166,8 +166,9 @@ class DealCaptionGenerator:
                 f"{affiliate_url}",
                 "",
                 "🪙 <b>بوت مضاعفة تخفيض العملات:</b> @Alilo07BOT",
+                "🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/",
                 "━━━━━━━━━━━━━━━━━",
-                "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0"
+                "📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0"
             ])
         elif is_live:
             lines.extend([
@@ -178,7 +179,8 @@ class DealCaptionGenerator:
                 "",
                 "😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات:</b>",
                 "👉 t.me/Alilo07BOT",
-                "📢 <b>قناة الصيدات اليومية:</b> @DzAliexpress0"
+                "🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/",
+                "📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0"
             ])
         else:
             lines.extend([
@@ -191,7 +193,8 @@ class DealCaptionGenerator:
                 "",
                 "😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات:</b>",
                 "👉 t.me/Alilo07BOT",
-                "📢 <b>قناة الصيدات اليومية:</b> @DzAliexpress0"
+                "🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/",
+                "📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0"
             ])
 
         caption = "\n".join(lines)
@@ -229,7 +232,8 @@ class DealCaptionGenerator:
             "",
             "😊 <b>بوت مطور للشراء بأفضل سعر وتخفيض العملات :</b>",
             "👉 t.me/Alilo07BOT",
-            "📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0"
+            "🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/",
+            "📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0"
         ]
         caption = "\n".join(lines)
         if len(caption) > 1020:
@@ -264,7 +268,7 @@ class DealCaptionGenerator:
             first_lines = " ".join(raw_text.splitlines()[:3]).lower()
             clean_first = re.sub(r'[\u0640]', '', first_lines)
             hook_keywords = [
-                "لافار", "تخفيض", "سعر خيالي", "عرض اليوم", "باطل", "صيدة",
+                "لافار", "تخفيض", "سعر خيالي", "عرض اليوم", "باطل", "صفقة",
                 "همزة", "ممتاز", "استثنائي", "سعر هبال", "طاح السعر", "أقوى سعر", "افار",
                 "affaire", "promotion", "promo", "bon plan", "اجري", "أجري"
             ]
@@ -378,6 +382,7 @@ class DealCaptionGenerator:
 
         lines.append("")
         lines.append("🤖 <b>بوت تخفيض العملات:</b> @Alilo07BOT")
+        lines.append("🌐 <b>موقع الصفقات:</b> https://dealscoutgreen.vercel.app/")
         lines.append("📢 @DzAliexpress0")
 
         return "\n".join(lines)

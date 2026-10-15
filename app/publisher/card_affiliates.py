@@ -66,7 +66,7 @@ DZ_VARIANTS = [
 ✨ <b>مجانية تماماً (Gratuite):</b> 0 دج مصاريف فتح، وبدون أي اشتراك شهري أو اقتطاعات خفية!
 ✨ <b>بطاقة ماستركارد عالمية:</b> مقبولة 100% على AliExpress وPayPal وجميع المتاجر.
 ✨ <b>شحن فوري بالدينار:</b> تقدر تشحن رصيدك بسهولة عن طريق BaridiMob في 2 دقائق عبر P2P.
-✨ <b>تفعيل فوري:</b> تسجل اليوم، تبدا تشري صيداتك وعروض العملات فوراً من هاتفك!
+✨ <b>تفعيل فوري:</b> تسجل اليوم، تبدا تشري صفقاتك وعروض العملات فوراً من هاتفك!
 
 🎁 <b>كـود التسجيل الحصري للحصول على البونص:</b>
 ⏺ <code>L9LLRP5</code>
@@ -76,7 +76,8 @@ DZ_VARIANTS = [
 
 💡 <i>ملاحظة: البطاقة مجانية تماماً وتقدر تستعملها في الشراء العادي أو ربطها بالباي بال مباشرة.</i>
 ━━━━━━━━━━━━━━━━━
-📢 <b>قناة الصيدات والصفقات:</b> @DzAliexpress0""".format(bybit_url=BYBIT_URL)
+🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/
+📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0""".format(bybit_url=BYBIT_URL)
     },
 
     # Variant 1: RedotPay Card (Instant Virtual Visa + $5 Welcome Bonus)
@@ -86,7 +87,7 @@ DZ_VARIANTS = [
         "image_path": str(REDOTPAY_IMG) if REDOTPAY_IMG.exists() else None,
         "caption": """<blockquote>💳 <b>بطاقة فيزا RedotPay | الحل الأسرع للشراء من AliExpress مع هدية 5$ مجاناً! 🎁🔥</b></blockquote>
 
-راهم كاينين صيدات قوية في AliExpress ومحتاج بطاقة فيزا افتراضية تتفعل في دقائق؟
+راهم كاينين صفقات قوية في AliExpress ومحتاج بطاقة فيزا افتراضية تتفعل في دقائق؟
 
 <b>بطاقة فيزا RedotPay العالمية:</b>
 ✅ <b>هدية 5$ فورية:</b> بمجرد التسجيل بالكود الحصري <code>djbt3</code> يوصلك رصيد ترحيبي في حسابك!
@@ -101,7 +102,8 @@ DZ_VARIANTS = [
 {redotpay_url}
 
 ━━━━━━━━━━━━━━━━━
-📢 <b>قناة الصيدات اليومية:</b> @DzAliexpress0""".format(redotpay_url=REDOTPAY_URL)
+🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/
+📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0""".format(redotpay_url=REDOTPAY_URL)
     },
 
     # Variant 2: Complete Toolkit - Binance P2P BaridiMob + Cards
@@ -125,7 +127,8 @@ DZ_VARIANTS = [
 {binance_url}
 
 ━━━━━━━━━━━━━━━━━
-📢 <b>قناة الصيدات المعتمدة:</b> @DzAliexpress0""".format(binance_url=BINANCE_URL)
+🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/
+📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0""".format(binance_url=BINANCE_URL)
     }
 ]
 

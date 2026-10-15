@@ -11,7 +11,7 @@ from app.publisher.website_promo import (
 )
 
 def test_promo_captions_and_urls():
-    assert "dealscout-green.vercel.app" in WEBSITE_URL
+    assert "dealscoutgreen.vercel.app" in WEBSITE_URL
     assert len(POST_WEBSITE_PROMO_DZ) <= 1024, "Arabic caption must not exceed Telegram photo caption limit (1024)"
     assert len(POST_WEBSITE_PROMO_FR) <= 1024, "French caption must not exceed Telegram photo caption limit (1024)"
     
@@ -24,5 +24,5 @@ def test_promo_captions_and_urls():
 
 def test_buttons_structure():
     assert len(BUTTONS_DZ) >= 2
-    assert any("dealscout-green.vercel.app" in btn["url"] for row in BUTTONS_DZ for btn in row)
-    assert any("dealscout-green.vercel.app" in btn["url"] for row in BUTTONS_FR for btn in row)
+    assert any("dealscoutgreen.vercel.app" in btn["url"] for row in BUTTONS_DZ for btn in row)
+    assert any("dealscoutgreen.vercel.app" in btn["url"] for row in BUTTONS_FR for btn in row)

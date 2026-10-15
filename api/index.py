@@ -1317,7 +1317,7 @@ Disallow: /admin
 Disallow: /dashboard
 Disallow: /api/
 
-Sitemap: https://dealscout-green.vercel.app/sitemap.xml
+Sitemap: https://dealscoutgreen.vercel.app/sitemap.xml
 """
     return Response(
         content=content,
@@ -1334,56 +1334,56 @@ async def sitemap_xml():
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://dealscout-green.vercel.app/</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscout-green.vercel.app/"/>
-    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscout-green.vercel.app/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscout-green.vercel.app/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscout-green.vercel.app/"/>
+    <loc>https://dealscoutgreen.vercel.app/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscoutgreen.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscoutgreen.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscoutgreen.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscoutgreen.vercel.app/"/>
     <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
     <changefreq>hourly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://dealscout-green.vercel.app/icon.svg</image:loc>
+      <image:loc>https://dealscoutgreen.vercel.app/icon.svg</image:loc>
       <image:title>DealScout DZ — صفقات وتخفيضات AliExpress بالدينار الجزائري</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://dealscout-green.vercel.app/deals</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscout-green.vercel.app/deals"/>
-    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscout-green.vercel.app/deals"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscout-green.vercel.app/deals"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscout-green.vercel.app/deals"/>
+    <loc>https://dealscoutgreen.vercel.app/deals</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscoutgreen.vercel.app/deals"/>
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscoutgreen.vercel.app/deals"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscoutgreen.vercel.app/deals"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscoutgreen.vercel.app/deals"/>
   </url>
   <url>
-    <loc>https://dealscout-green.vercel.app/cards</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscout-green.vercel.app/cards"/>
-    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscout-green.vercel.app/cards"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscout-green.vercel.app/cards"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscout-green.vercel.app/cards"/>
+    <loc>https://dealscoutgreen.vercel.app/cards</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscoutgreen.vercel.app/cards"/>
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscoutgreen.vercel.app/cards"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscoutgreen.vercel.app/cards"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscoutgreen.vercel.app/cards"/>
     <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://dealscout-green.vercel.app/logo.png</image:loc>
+      <image:loc>https://dealscoutgreen.vercel.app/logo.png</image:loc>
       <image:title>بطاقات الشراء من AliExpress بالدينار الجزائري — Bybit و RedotPay و BaridiMob</image:title>
     </image:image>
   </url>
   <url>
-    <loc>https://dealscout-green.vercel.app/coins</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscout-green.vercel.app/coins"/>
-    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscout-green.vercel.app/coins"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscout-green.vercel.app/coins"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscout-green.vercel.app/coins"/>
+    <loc>https://dealscoutgreen.vercel.app/coins</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscoutgreen.vercel.app/coins"/>
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscoutgreen.vercel.app/coins"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscoutgreen.vercel.app/coins"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscoutgreen.vercel.app/coins"/>
     <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://dealscout-green.vercel.app/faq</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscout-green.vercel.app/faq"/>
-    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscout-green.vercel.app/faq"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscout-green.vercel.app/faq"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscout-green.vercel.app/faq"/>
+    <loc>https://dealscoutgreen.vercel.app/faq</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscoutgreen.vercel.app/faq"/>
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscoutgreen.vercel.app/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscoutgreen.vercel.app/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscoutgreen.vercel.app/faq"/>
     <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -2340,7 +2340,7 @@ async def set_telegram_webhook(request: Request):
         if not base_url:
             host = request.headers.get("x-forwarded-host") or request.headers.get("host") or ""
             proto = request.headers.get("x-forwarded-proto") or "https"
-            base_url = f"{proto}://{host}" if host else "https://dealscout-green.vercel.app"
+            base_url = f"{proto}://{host}" if host else "https://dealscoutgreen.vercel.app"
         webhook_url = f"{base_url}/api/webhook"
         async with httpx.AsyncClient(timeout=10.0) as client:
             resp = await client.post(
@@ -2362,7 +2362,7 @@ async def set_admin_telegram_webhook(request: Request):
         if not base_url:
             host = request.headers.get("x-forwarded-host") or request.headers.get("host") or ""
             proto = request.headers.get("x-forwarded-proto") or "https"
-            base_url = f"{proto}://{host}" if host else "https://dealscout-green.vercel.app"
+            base_url = f"{proto}://{host}" if host else "https://dealscoutgreen.vercel.app"
         webhook_url = f"{base_url}/api/admin-webhook"
         async with httpx.AsyncClient(timeout=10.0) as client:
             resp = await client.post(
