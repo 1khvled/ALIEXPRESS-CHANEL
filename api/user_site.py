@@ -1928,7 +1928,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       let category = 'other';
       let categoryLabel = I18N[currentLang].deal_category_fallback;
 
-      const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
+      const lines = text.split('\\n').map(l => l.trim()).filter(Boolean);
 
       const isBoilerplate = (l) => {
         const s = l.toLowerCase();
