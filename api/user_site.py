@@ -492,10 +492,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       </div>
       
       <div class="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
-        <!-- Daily Streak & Saver Hub Button -->
-        <button onclick="openGamificationHub()" id="streak-header-btn" aria-label="Daily Streak & Rewards" class="px-2 py-1 rounded-lg border text-xs flex items-center gap-1.5 transition active:scale-95 touch-manipulation cursor-pointer font-bold" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);" title="سلسلة التوفير والمكافآت">
-          <i class="fa-solid fa-bolt text-amber-500 text-[11px]"></i>
-          <span id="streak-header-text" class="text-[11px] font-mono">1 يوم</span>
+        <!-- Tools & Square Calculator Hub Button -->
+        <button onclick="openGamificationHub()" id="streak-header-btn" aria-label="Square Calculator & Tools" class="px-2 sm:px-2.5 py-1 rounded-lg border text-xs flex items-center gap-1.5 transition active:scale-95 touch-manipulation cursor-pointer font-bold" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);" title="حاسبة السكوار والأدوات">
+          <i class="fa-solid fa-calculator text-emerald-500 text-[11px]"></i>
+          <span id="streak-header-text" class="text-[11px] font-semibold" data-i18n="tools_header">حاسبة السكوار</span>
         </button>
 
         <span class="opacity-30">|</span>
@@ -519,10 +519,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <i class="fa-solid fa-coins text-amber-500 text-[10px]"></i>
           <span data-i18n="top_coin_bot">بوت العملات</span>
         </a>
-        <span class="hidden sm:inline opacity-30">|</span>
-        <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex hover:text-sky-500 transition font-medium items-center gap-1 py-1 px-1.5 active:scale-95 touch-manipulation">
-          <i class="fa-brands fa-telegram text-sky-500"></i>
-          <span>Telegram</span>
+        <span class="opacity-30">|</span>
+        <a id="top-telegram-link" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="inline-flex hover:text-sky-400 text-sky-500 transition font-bold items-center gap-1 py-1 px-1.5 active:scale-95 touch-manipulation text-xs" title="قناة التيليجرام الرسمية">
+          <i class="fa-brands fa-telegram text-sky-500 text-sm"></i>
+          <span class="text-[11px] font-bold">Telegram</span>
         </a>
       </div>
     </div>
@@ -547,7 +547,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       </a>
 
       <!-- Desktop Nav Pages Links -->
-      <nav class="hidden lg:flex items-center gap-1 text-xs font-semibold" style="color: var(--text-muted);">
+      <nav class="hidden md:flex items-center gap-1 text-xs font-semibold" style="color: var(--text-muted);">
         <button onclick="showPage('deals')" id="nav-link-deals" class="nav-page-btn px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 font-bold" style="background-color: var(--bg-elevated); color: var(--text-main);">
           <i class="fa-solid fa-fire text-crimson-500 text-xs"></i>
           <span data-i18n="nav_deals">الصفقات</span>
@@ -605,9 +605,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
 
         <!-- Join Telegram Button -->
-        <a id="btn-telegram-join" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="bg-[#229ED9] hover:bg-[#1e8ec3] text-white text-xs h-8 sm:h-9 px-2.5 sm:px-3 rounded-xl font-bold flex items-center justify-center gap-1.5 transition active:scale-95 shadow-sm touch-manipulation">
+        <a id="btn-telegram-join" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="bg-[#229ED9] hover:bg-[#1e8ec3] text-white text-xs h-8 sm:h-9 px-2 sm:px-3 rounded-xl font-bold flex items-center justify-center gap-1.5 transition active:scale-95 shadow-sm touch-manipulation">
           <i class="fa-brands fa-telegram text-sm" aria-hidden="true"></i>
-          <span class="hidden sm:inline" data-i18n="btn_join_channel">انضم للقناة</span>
+          <span class="text-[11px] font-bold" data-i18n="btn_join_channel">تيليجرام</span>
         </a>
 
         <!-- Refresh Data Button -->
@@ -622,12 +622,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <!-- ========================================== -->
   <!-- MAIN ROUTER PAGES CONTAINER -->
   <!-- ========================================== -->
-  <main class="max-w-7xl mx-auto px-3.5 sm:px-4 py-4 sm:py-6 space-y-6 pb-safe w-full flex-grow">
+  <main class="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 py-3.5 sm:py-5 space-y-4 sm:space-y-6 pb-safe w-full flex-grow">
 
     <!-- ───────────────────────────────────────────────────────── -->
     <!-- PAGE 1: DEALS BROWSER (DEFAULT)                           -->
     <!-- ───────────────────────────────────────────────────────── -->
-    <div id="page-deals" class="page-view space-y-5 sm:space-y-6">
+    <div id="page-deals" class="page-view space-y-4 sm:space-y-6">
 
       <!-- Channel Switcher (Algeria vs France) -->
       <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border p-2 sm:p-2.5 rounded-2xl transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
@@ -654,6 +654,32 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </button>
         </div>
       </div>
+
+      <!-- Direct Official Telegram Channel Access Banner -->
+      <aside id="channel-telegram-banner" class="border rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 transition-colors shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-card);" aria-label="رابط القناة الرسمي">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#229ED9]/15 text-[#229ED9] flex items-center justify-center text-xl sm:text-2xl flex-shrink-0">
+            <i class="fa-brands fa-telegram"></i>
+          </div>
+          <div class="min-w-0">
+            <div class="flex items-center gap-2 flex-wrap">
+              <h2 id="channel-banner-name" class="font-bold text-xs sm:text-sm truncate" style="color: var(--text-main);">قناة التيليجرام الرسمية (@DzAliexpress0)</h2>
+              <span class="inline-flex items-center gap-1 text-[10px] font-bold px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span data-i18n="channel_banner_live">تحديثات فورية</span>
+              </span>
+            </div>
+            <p id="channel-banner-desc" class="text-[11px] sm:text-xs line-clamp-1 sm:line-clamp-none mt-0.5" style="color: var(--text-muted);" data-i18n="channel_banner_desc">
+              تابع الصفقات والتخفيضات وكوبونات التخفيض الحصرية لحظة بلحظة فور نزولها في القناة.
+            </p>
+          </div>
+        </div>
+        <a id="channel-banner-btn" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="bg-[#229ED9] hover:bg-[#1e8ec3] text-white text-xs sm:text-sm font-bold min-h-[40px] px-4 py-2 rounded-xl flex items-center justify-center gap-2 shadow-sm transition active:scale-95 touch-manipulation flex-shrink-0">
+          <i class="fa-brands fa-telegram text-base"></i>
+          <span id="channel-banner-btn-text" data-i18n="channel_banner_btn">فتح القناة في تيليجرام</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+        </a>
+      </aside>
 
       <!-- Mobile Search Bar -->
       <div class="md:hidden relative">
@@ -778,7 +804,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       </div>
 
       <!-- Deals Grid (Cards View) -->
-      <section id="deals-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-4" aria-label="قائمة الصفقات">
+      <section id="deals-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-3.5 md:gap-4 lg:gap-5" aria-label="قائمة الصفقات">
         <!-- Skeleton Loaders -->
         <div class="deal-card rounded-2xl p-4 animate-pulse space-y-3">
           <div class="w-full aspect-[4/3] rounded-xl opacity-20" style="background-color: var(--bg-subtle);"></div>
@@ -1329,17 +1355,17 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <i class="fa-solid fa-credit-card text-base text-emerald-500"></i>
       <span data-i18n="nav_cards">البطاقات</span>
     </button>
-    <button onclick="openRouletteModal()" id="mob-bottom-roulette" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-90 hover:opacity-100 font-bold active:scale-90 transition-transform touch-manipulation cursor-pointer text-amber-500">
-      <i class="fa-solid fa-dice text-base animate-bounce"></i>
-      <span data-i18n="roulette_nav">صفقة الحظ</span>
-    </button>
+    <a href="https://t.me/DzAliexpress0" id="mob-bottom-tg" target="_blank" rel="noopener noreferrer" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 text-sky-500 font-bold active:scale-90 transition-transform touch-manipulation cursor-pointer">
+      <i class="fa-brands fa-telegram text-lg"></i>
+      <span data-i18n="nav_telegram">تيليجرام</span>
+    </a>
     <button onclick="showPage('coins')" id="mob-bottom-coins" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation cursor-pointer">
       <i class="fa-solid fa-coins text-base text-amber-500"></i>
       <span data-i18n="nav_coins">العملات</span>
     </button>
-    <button onclick="openGamificationHub()" id="mob-bottom-hub" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation cursor-pointer text-amber-400">
-      <i class="fa-solid fa-trophy text-base"></i>
-      <span data-i18n="nav_hub">المكافآت</span>
+    <button onclick="openGamificationHub()" id="mob-bottom-hub" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation cursor-pointer text-emerald-500">
+      <i class="fa-solid fa-calculator text-base"></i>
+      <span data-i18n="nav_tools">الأدوات</span>
     </button>
   </nav>
 
@@ -1417,9 +1443,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- Floating Deal Roulette Button (Mobile Ergonomic FAB) -->
-  <button id="fab-roulette" onclick="openRouletteModal()" aria-label="صفقة الحظ 🎲" class="fixed z-40 bottom-18 md:bottom-6 right-3 sm:right-6 bg-gradient-to-r from-amber-500 to-amber-400 active:scale-90 text-zinc-950 font-extrabold text-xs sm:text-sm px-3.5 py-2.5 rounded-full shadow-xl flex items-center gap-2 cursor-pointer transition-all touch-manipulation border border-amber-300">
-    <i class="fa-solid fa-dice text-base animate-bounce"></i>
+  <!-- Floating Deal Roulette Button (Desktop & Tablet only, hidden on phones) -->
+  <button id="fab-roulette" onclick="openRouletteModal()" aria-label="صفقة الحظ 🎲" class="hidden md:flex fixed z-40 bottom-6 right-6 bg-gradient-to-r from-amber-500 to-amber-400 active:scale-90 text-zinc-950 font-extrabold text-xs sm:text-sm px-3.5 py-2.5 rounded-full shadow-xl items-center gap-2 cursor-pointer transition-all touch-manipulation border border-amber-300">
+    <i class="fa-solid fa-dice text-base"></i>
     <span data-i18n="roulette_fab">صفقة الحظ 🎲</span>
   </button>
 
@@ -1467,7 +1493,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <div class="space-y-2 pt-1">
         <button id="roulette-spin-btn" onclick="spinRoulette()" class="w-full min-h-[46px] rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-zinc-950 font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 transition cursor-pointer touch-manipulation">
           <i class="fa-solid fa-dice text-base"></i>
-          <span id="roulette-btn-text" data-i18n="roulette_spin_btn">دوّر العجلة الآن (+50 XP) 🎲</span>
+          <span id="roulette-btn-text" data-i18n="roulette_spin_btn">دوّر العجلة الآن 🎲</span>
         </button>
         <a id="roulette-buy-btn" href="#" target="_blank" rel="noopener noreferrer" style="display: none;" class="w-full min-h-[46px] rounded-xl bg-crimson-600 hover:bg-crimson-700 active:scale-95 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-rose-600/20 transition cursor-pointer touch-manipulation">
           <i class="fa-solid fa-cart-shopping"></i>
@@ -1484,9 +1510,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- Gamification / Rewards & Streak Modal -->
-  <div id="gamification-modal" onclick="onGamificationBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="gamification-title">
-    <div class="border-t sm:border rounded-t-3xl sm:rounded-2xl w-full max-w-md max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl p-5 sm:p-6 pb-safe space-y-5 animate-slide-up relative" style="background-color: var(--bg-card); border-color: var(--border-card);">
+  <!-- Shopping Tools Hub & Square Dinar Calculator Modal -->
+  <div id="gamification-modal" onclick="onGamificationBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="tools-modal-title">
+    <div class="border-t sm:border rounded-t-3xl sm:rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl p-5 sm:p-6 pb-safe space-y-5 animate-slide-up relative" style="background-color: var(--bg-card); border-color: var(--border-card);">
       
       <!-- Pull handle on mobile -->
       <div class="sm:hidden w-12 h-1.5 rounded-full mx-auto -mt-1 mb-2 opacity-40 cursor-pointer" style="background-color: var(--text-soft);" onclick="closeGamificationHub()"></div>
@@ -1496,102 +1522,156 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <i class="fa-solid fa-xmark"></i>
       </button>
 
-      <!-- User Hunter Rank Card -->
-      <div class="border rounded-2xl p-4 space-y-3 relative overflow-hidden" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-2.5">
-            <div id="hub-rank-avatar" class="w-11 h-11 rounded-xl bg-amber-500/15 text-amber-500 flex items-center justify-center text-xl font-black">
-              🏆
-            </div>
-            <div>
-              <div class="text-[10px] font-bold opacity-70" data-i18n="hub_your_rank">مستوى المتسوق:</div>
-              <h3 id="hub-rank-name" class="font-extrabold text-sm sm:text-base" style="color: var(--text-main);">صياد العروض (المستوى 2)</h3>
-            </div>
-          </div>
-          <div class="text-left font-mono">
-            <div class="text-[10px] opacity-70" data-i18n="hub_xp_label">نقاط الخبرة XP</div>
-            <div id="hub-xp-count" class="text-sm font-black text-amber-500">380 XP</div>
-          </div>
+      <!-- Modal Header -->
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-500 flex items-center justify-center text-xl">
+          <i class="fa-solid fa-calculator"></i>
         </div>
-
-        <!-- Progress bar to next level -->
-        <div class="space-y-1">
-          <div class="flex justify-between text-[10px] opacity-70">
-            <span id="hub-xp-progress-text">الترقية للمستوى القادم</span>
-            <span id="hub-xp-fraction">380 / 600</span>
-          </div>
-          <div class="w-full h-2 rounded-full overflow-hidden" style="background-color: var(--bg-page);">
-            <div id="hub-xp-bar" class="h-full bg-gradient-to-r from-amber-500 to-rose-500 transition-all duration-500" style="width: 63%;"></div>
-          </div>
-        </div>
-
-        <!-- Estimated Total Savings Counter -->
-        <div class="pt-2 border-t flex items-center justify-between text-xs" style="border-color: var(--border-card);">
-          <span class="opacity-75 flex items-center gap-1.5"><i class="fa-solid fa-piggy-bank text-emerald-500"></i> <span data-i18n="hub_saved_label">إجمالي توفيرك التقديري:</span></span>
-          <span id="hub-total-saved" class="font-black font-mono text-emerald-500">4,800 دج</span>
+        <div>
+          <h3 id="tools-modal-title" class="font-bold text-base sm:text-lg" style="color: var(--text-main);" data-i18n="tools_modal_title">مركز الأدوات وحاسبة السكوار</h3>
+          <p class="text-xs" style="color: var(--text-muted);" data-i18n="tools_modal_subtitle">حاسبة السكوار الفورية للدينار الجزائري وروابط الوصول السريع للقنوات</p>
         </div>
       </div>
 
-      <!-- 7-Day Streak Card -->
-      <div class="border rounded-2xl p-4 space-y-3" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-        <div class="flex items-center justify-between">
-          <h4 class="font-bold text-xs sm:text-sm flex items-center gap-1.5" style="color: var(--text-main);">
-            <i class="fa-solid fa-bolt text-amber-500"></i>
-            <span data-i18n="hub_streak_title">سلسلة الحضور اليومي</span>
-          </h4>
-          <span id="hub-streak-days" class="text-xs font-mono font-bold text-amber-500">سلسلة 1 يوم</span>
+      <!-- Live Square Dinar Calculator Card -->
+      <div class="border rounded-2xl p-4 sm:p-5 space-y-4" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+        <div class="flex items-center justify-between pb-2 border-b" style="border-color: var(--border-card);">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-chart-line text-emerald-500"></i>
+            <span class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="calc_title">حاسبة التحويل بسعر السكوار</span>
+          </div>
+          <span class="text-[11px] font-mono font-bold text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+            1 USDT ≈ <span id="calc-usdt-rate">256.9</span> دج
+          </span>
         </div>
 
-        <!-- 7 Days Track -->
-        <div class="grid grid-cols-7 gap-1.5 text-center text-[10px]" id="hub-streak-track">
-          <!-- Populated dynamically -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <!-- Foreign Currency Input -->
+          <div>
+            <label class="block text-[11px] font-bold mb-1 opacity-75" style="color: var(--text-main);" data-i18n="calc_amount_foreign">المبلغ بالدولار ($) أو اليورو (€)</label>
+            <div class="relative">
+              <input 
+                type="number" 
+                id="calc-foreign-input" 
+                min="0" 
+                step="0.01" 
+                placeholder="مثال: 25.50" 
+                oninput="onCalcForeignChange(this.value)"
+                class="w-full border rounded-xl px-3 py-2 text-sm font-mono font-bold focus:outline-none focus:border-rose-500 transition min-h-[42px]"
+                style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);"
+              />
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-mono opacity-50" id="calc-curr-symbol">$</span>
+            </div>
+          </div>
+
+          <!-- DZD Result Input -->
+          <div>
+            <label class="block text-[11px] font-bold mb-1 opacity-75" style="color: var(--text-main);" data-i18n="calc_amount_dzd">المبلغ المقابل بالدينار الجزائري (دج)</label>
+            <div class="relative">
+              <input 
+                type="number" 
+                id="calc-dzd-input" 
+                min="0" 
+                step="10" 
+                placeholder="مثال: 6500" 
+                oninput="onCalcDzdChange(this.value)"
+                class="w-full border rounded-xl px-3 py-2 text-sm font-mono font-bold focus:outline-none focus:border-emerald-500 transition min-h-[42px] text-emerald-500"
+                style="background-color: var(--input-bg); border-color: var(--border-card);"
+              />
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-mono font-bold text-emerald-500">دج</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Checkin Button -->
-        <button id="hub-checkin-btn" onclick="claimDailyCheckin()" class="w-full min-h-[44px] rounded-xl bg-crimson-600 hover:bg-crimson-700 active:scale-95 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md transition touch-manipulation cursor-pointer">
-          <i class="fa-solid fa-calendar-check"></i>
-          <span id="hub-checkin-btn-text" data-i18n="hub_checkin_cta">تسجيل الحضور اليوم (+150 XP)</span>
+        <!-- Breakdown Info -->
+        <div class="p-2.5 rounded-xl text-[11px] space-y-1 border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
+          <div class="flex justify-between">
+            <span data-i18n="calc_bybit_fee">تكلفة الشراء عبر بطاقة Bybit (رسوم 0%):</span>
+            <span id="calc-bybit-total" class="font-mono font-bold text-emerald-500">0 دج</span>
+          </div>
+          <div class="flex justify-between">
+            <span data-i18n="calc_redot_fee">تكلفة الشراء عبر بطاقة RedotPay (رسوم ~1.2%):</span>
+            <span id="calc-redot-total" class="font-mono font-bold text-rose-500">0 دج</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Shopping Tools & Direct Channels -->
+      <div class="space-y-2.5">
+        <h4 class="font-bold text-xs opacity-75" style="color: var(--text-muted);" data-i18n="tools_quick_links">وصول سريع للأدوات والقنوات:</h4>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+          <!-- Official Algeria Channel -->
+          <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-3 flex items-center justify-between gap-2 transition hover:border-[#229ED9] active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-[#229ED9]/15 text-[#229ED9] flex items-center justify-center text-base">
+                <i class="fa-brands fa-telegram"></i>
+              </div>
+              <div>
+                <div class="font-bold" style="color: var(--text-main);">صفقات الجزائر</div>
+                <div class="text-[10px] opacity-60">@DzAliexpress0</div>
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-50"></i>
+          </a>
+
+          <!-- Official France Channel -->
+          <a href="https://t.me/francedealsdz" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-3 flex items-center justify-between gap-2 transition hover:border-[#229ED9] active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-[#229ED9]/15 text-[#229ED9] flex items-center justify-center text-base">
+                <i class="fa-brands fa-telegram"></i>
+              </div>
+              <div>
+                <div class="font-bold" style="color: var(--text-main);">صفقات فرنسا</div>
+                <div class="text-[10px] opacity-60">@francedealsdz</div>
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-50"></i>
+          </a>
+
+          <!-- Coin Bot -->
+          <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-3 flex items-center justify-between gap-2 transition hover:border-amber-500 active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-base">
+                <i class="fa-solid fa-coins"></i>
+              </div>
+              <div>
+                <div class="font-bold" style="color: var(--text-main);">بوت العملات</div>
+                <div class="text-[10px] opacity-60">@Alilo07BOT</div>
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-50"></i>
+          </a>
+
+          <!-- Cards Guide -->
+          <button onclick="closeGamificationHub(); showPage('cards');" class="border rounded-xl p-3 flex items-center justify-between gap-2 transition hover:border-emerald-500 active:scale-95 touch-manipulation text-right" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/15 text-emerald-500 flex items-center justify-center text-base">
+                <i class="fa-solid fa-credit-card"></i>
+              </div>
+              <div>
+                <div class="font-bold" style="color: var(--text-main);">بطاقات الدفع وبريدي موب</div>
+                <div class="text-[10px] opacity-60">Bybit & RedotPay</div>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-left text-xs opacity-50 rtl:rotate-0 ltr:rotate-180"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Real Cumulative Estimated Savings Box -->
+      <div class="border rounded-xl p-3.5 flex items-center justify-between" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-piggy-bank text-emerald-500 text-base"></i>
+          <div>
+            <div class="text-[10px] opacity-70" data-i18n="tools_savings_title">إجمالي التوفير التقديري من الكوبونات:</div>
+            <div id="tools-total-saved" class="font-black font-mono text-emerald-500 text-sm sm:text-base">0 دج</div>
+          </div>
+        </div>
+        <button onclick="filterByFavoritesMobile(); closeGamificationHub();" class="text-xs font-bold text-rose-500 hover:underline flex items-center gap-1 active:scale-95">
+          <i class="fa-solid fa-heart text-[10px]"></i>
+          <span data-i18n="tools_view_favs">عرض المفضلة</span>
         </button>
-      </div>
-
-      <!-- Daily Quests / Missions -->
-      <div class="space-y-2">
-        <h4 class="font-bold text-xs opacity-75" style="color: var(--text-muted);" data-i18n="hub_quests_title">مهام اليوم للحصول على XP إضافي:</h4>
-        <div class="space-y-1.5 text-xs">
-          
-          <div class="border rounded-xl p-2.5 flex items-center justify-between gap-2" style="background-color: var(--bg-card); border-color: var(--border-card);">
-            <div class="flex items-center gap-2">
-              <i class="fa-solid fa-dice text-amber-500"></i>
-              <span data-i18n="quest_roulette">تجربة صفقة الحظ 🎲</span>
-            </div>
-            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-amber-500/15 text-amber-500">+50 XP</span>
-          </div>
-
-          <div class="border rounded-xl p-2.5 flex items-center justify-between gap-2" style="background-color: var(--bg-card); border-color: var(--border-card);">
-            <div class="flex items-center gap-2">
-              <i class="fa-solid fa-ticket text-rose-500"></i>
-              <span data-i18n="quest_coupon">نسخ كود خصم كوبون</span>
-            </div>
-            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-rose-500/15 text-rose-500">+50 XP</span>
-          </div>
-
-          <div class="border rounded-xl p-2.5 flex items-center justify-between gap-2" style="background-color: var(--bg-card); border-color: var(--border-card);">
-            <div class="flex items-center gap-2">
-              <i class="fa-solid fa-heart text-rose-500"></i>
-              <span data-i18n="quest_fav">حفظ صفقة في المفضلة</span>
-            </div>
-            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-rose-500/15 text-rose-500">+30 XP</span>
-          </div>
-
-          <div class="border rounded-xl p-2.5 flex items-center justify-between gap-2" style="background-color: var(--bg-card); border-color: var(--border-card);">
-            <div class="flex items-center gap-2">
-              <i class="fa-brands fa-telegram text-sky-500"></i>
-              <span data-i18n="quest_telegram">متابعة قناة التيليجرام</span>
-            </div>
-            <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" onclick="addXP(100, 'telegram')" class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-sky-500/15 text-sky-500 hover:underline">+100 XP</a>
-          </div>
-
-        </div>
       </div>
 
     </div>
@@ -1874,22 +1954,25 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         roulette_title: "صفقة الحظ العشوائية 🎲",
         roulette_subtitle: "اضغط لتدوير العجلة أو هز الهاتف لاكتشاف صفقة مميزة حصرية!",
         roulette_winner_tag: "صفقة رابحة!",
-        roulette_spin_btn: "دوّر العجلة الآن (+50 XP) 🎲",
+        roulette_spin_btn: "دوّر العجلة الآن 🎲",
         roulette_claim_btn: "اقتنص صفقة الحظ الآن!",
         roulette_shake_tip: "نصيحة: يمكنك هز هاتفك 📱 في أي وقت للتدوير التلقائي!",
-        hub_your_rank: "مستوى المتسوق:",
-        hub_xp_label: "نقاط الخبرة XP",
-        hub_saved_label: "إجمالي توفيرك التقديري:",
-        hub_streak_title: "سلسلة الحضور اليومي",
-        hub_checkin_cta: "تسجيل الحضور اليوم (+150 XP)",
-        hub_checkin_done: "تم تسجيل حضور اليوم ✓",
-        hub_quests_title: "مهام اليوم للحصول على XP إضافي:",
-        quest_roulette: "تجربة صفقة الحظ 🎲",
-        quest_coupon: "نسخ كود خصم كوبون",
-        quest_fav: "حفظ صفقة في المفضلة",
-        quest_telegram: "متابعة قناة التيليجرام",
-        roulette_nav: "صفقة الحظ",
-        nav_hub: "المكافآت",
+        tools_header: "حاسبة السكوار",
+        tools_modal_title: "مركز الأدوات وحاسبة السكوار",
+        tools_modal_subtitle: "حاسبة السكوار الفورية للدينار الجزائري وروابط الوصول السريع للقنوات",
+        calc_title: "حاسبة التحويل بسعر السكوار",
+        calc_amount_foreign: "المبلغ بالدولار ($) أو اليورو (€)",
+        calc_amount_dzd: "المبلغ المقابل بالدينار الجزائري (دج)",
+        calc_bybit_fee: "تكلفة الشراء عبر بطاقة Bybit (رسوم 0%):",
+        calc_redot_fee: "تكلفة الشراء عبر بطاقة RedotPay (رسوم ~1.2%):",
+        tools_quick_links: "وصول سريع للأدوات والقنوات:",
+        tools_savings_title: "إجمالي التوفير التقديري من الكوبونات:",
+        tools_view_favs: "عرض المفضلة",
+        channel_banner_live: "تحديثات فورية",
+        channel_banner_desc: "تابع الصفقات والتخفيضات وكوبونات التخفيض الحصرية لحظة بلحظة فور نزولها في القناة.",
+        channel_banner_btn: "فتح القناة في تيليجرام",
+        nav_telegram: "تيليجرام",
+        nav_tools: "الأدوات",
         fav_empty_title: "لا توجد صفقات محفوظة بعد",
         fav_empty_desc: "اضغط على أيقونة القلب ❤️ على أي منتج لحفظه والوصول إليه بسرعة هنا."
       },
@@ -2049,22 +2132,25 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         roulette_title: "Bon Plan Surprise 🎲",
         roulette_subtitle: "Tournez la roue ou secouez votre téléphone pour dénicher une offre exclusive !",
         roulette_winner_tag: "Offre Gagnante !",
-        roulette_spin_btn: "Lancer la roulette (+50 XP) 🎲",
+        roulette_spin_btn: "Lancer la roulette 🎲",
         roulette_claim_btn: "Saisir ce bon plan maintenant !",
         roulette_shake_tip: "Astuce : secouez votre téléphone 📱 pour relancer instantanément !",
-        hub_your_rank: "Niveau Acheteur :",
-        hub_xp_label: "Points XP",
-        hub_saved_label: "Économies totales estimées :",
-        hub_streak_title: "Série Quotidienne",
-        hub_checkin_cta: "Valider ma présence (+150 XP)",
-        hub_checkin_done: "Présence validée aujourd'hui ✓",
-        hub_quests_title: "Missions du jour pour gagner des XP :",
-        quest_roulette: "Tourner la roue des bons plans 🎲",
-        quest_coupon: "Copier un code promo",
-        quest_fav: "Ajouter un produit en favori",
-        quest_telegram: "Rejoindre le canal Telegram",
-        roulette_nav: "Surprise",
-        nav_hub: "Récompenses",
+        tools_header: "Calculateur",
+        tools_modal_title: "Outils & Calculateur Square",
+        tools_modal_subtitle: "Calculateur instantané en Dinar et accès direct aux canaux",
+        calc_title: "Calculateur Taux Square",
+        calc_amount_foreign: "Montant en Dollar ($) ou Euro (€)",
+        calc_amount_dzd: "Équivalent en Dinar Algérien (DZD)",
+        calc_bybit_fee: "Paiement via carte Bybit (0% frais) :",
+        calc_redot_fee: "Paiement via carte RedotPay (~1.2% frais) :",
+        tools_quick_links: "Accès rapide aux canaux et outils :",
+        tools_savings_title: "Économies totales estimées grâce aux coupons :",
+        tools_view_favs: "Voir les favoris",
+        channel_banner_live: "En direct",
+        channel_banner_desc: "Retrouvez tous les bons plans, promotions et coupons exclusifs dès leur parution.",
+        channel_banner_btn: "Ouvrir le canal Telegram",
+        nav_telegram: "Telegram",
+        nav_tools: "Outils",
         fav_empty_title: "Aucun favori enregistré",
         fav_empty_desc: "Cliquez sur l'icône cœur ❤️ d'un produit pour l'enregistrer ici."
       }
@@ -2402,82 +2488,27 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       confettiAnimId = requestAnimationFrame(render);
     }
 
-    // ── Gamification LocalStore & Hunter Progression ────────────────
+    // ── Shopping Tools Hub & Favorites Store ────────────────────────
     function getGameState() {
-      const raw = getStoredItem('dealscout_game_state', null);
+      const raw = getStoredItem('dealscout_user_state', null) || getStoredItem('dealscout_game_state', null);
       if (raw) {
         try {
           const parsed = JSON.parse(raw);
-          if (parsed && typeof parsed.xp === 'number') {
+          if (parsed && typeof parsed.saved_dzd === 'number') {
             if (!Array.isArray(parsed.favs)) parsed.favs = [];
             return parsed;
           }
         } catch (e) {}
       }
       return {
-        xp: 120,
-        streak: 1,
-        last_checkin: null,
-        saved_dzd: 3200,
+        saved_dzd: 4800,
         favs: []
       };
     }
 
     function saveGameState(state) {
-      setStoredItem('dealscout_game_state', JSON.stringify(state));
+      setStoredItem('dealscout_user_state', JSON.stringify(state));
       updateGamificationBadges(state);
-    }
-
-    function getRankInfo(xp) {
-      if (xp < 300) {
-        return {
-          level: 1,
-          name: currentLang === 'fr' ? 'Éclaireur Débutant' : 'مستكشف صفقات',
-          avatar: '🔍',
-          minXp: 0,
-          maxXp: 300
-        };
-      } else if (xp < 800) {
-        return {
-          level: 2,
-          name: currentLang === 'fr' ? 'Chasseur de Bons Plans' : 'صياد العروض',
-          avatar: '🎯',
-          minXp: 300,
-          maxXp: 800
-        };
-      } else if (xp < 1600) {
-        return {
-          level: 3,
-          name: currentLang === 'fr' ? 'Sniper de Réductions' : 'قناص التخفيضات',
-          avatar: '⚡',
-          minXp: 800,
-          maxXp: 1600
-        };
-      } else {
-        return {
-          level: 4,
-          name: currentLang === 'fr' ? 'Légende des Économies 👑' : 'ملك التوفير 👑',
-          avatar: '👑',
-          minXp: 1600,
-          maxXp: 3000
-        };
-      }
-    }
-
-    function addXP(amount, reason = '') {
-      const state = getGameState();
-      const prevRank = getRankInfo(state.xp);
-      state.xp += amount;
-      const nextRank = getRankInfo(state.xp);
-      saveGameState(state);
-
-      if (nextRank.level > prevRank.level) {
-        fireConfetti();
-        triggerHaptic([30, 60, 30]);
-        showToast(currentLang === 'fr'
-          ? `Bravo ! Vous êtes passé au niveau ${nextRank.level} : ${nextRank.name} 🎉`
-          : `مبروك! ارتقيت للمستوى ${nextRank.level}: ${nextRank.name} 🎉`);
-      }
     }
 
     function addSavedDZD(amount) {
@@ -2488,10 +2519,6 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
     function updateGamificationBadges(state = null) {
       if (!state) state = getGameState();
-      const streakBtn = document.getElementById('streak-header-text');
-      if (streakBtn) {
-        streakBtn.textContent = currentLang === 'fr' ? `${state.streak || 1} j` : `${state.streak || 1} يوم`;
-      }
       const favBadge = document.getElementById('mob-fav-badge');
       const countFavs = document.getElementById('count-favs');
       const favCount = (state.favs || []).length;
@@ -2510,102 +2537,63 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
     }
 
-    function getTodayKey() {
-      const d = new Date();
-      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-    }
+    // ── Live Square Dinar Converter Handlers ────────────────────────
+    function onCalcForeignChange(val) {
+      const amount = parseFloat(val);
+      const dzdInput = document.getElementById('calc-dzd-input');
+      const bybitEl = document.getElementById('calc-bybit-total');
+      const redotEl = document.getElementById('calc-redot-total');
+      const curSym = (currentCurrency === 'EUR') ? '€' : '$';
+      const symEl = document.getElementById('calc-curr-symbol');
+      if (symEl) symEl.textContent = curSym;
 
-    function getYesterdayKey() {
-      const d = new Date();
-      d.setDate(d.getDate() - 1);
-      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-    }
-
-    function claimDailyCheckin() {
-      const state = getGameState();
-      const today = getTodayKey();
-      const yesterday = getYesterdayKey();
-
-      if (state.last_checkin === today) {
-        showToast(currentLang === 'fr' ? 'Présence déjà enregistrée aujourd’hui !' : 'لقد سجلت حضورك اليوم بالفعل!');
+      if (isNaN(amount) || amount <= 0) {
+        if (dzdInput) dzdInput.value = '';
+        if (bybitEl) bybitEl.textContent = '0 ' + I18N[currentLang].currency_dzd;
+        if (redotEl) redotEl.textContent = '0 ' + I18N[currentLang].currency_dzd;
         return;
       }
+      const rate = usdtRate || 256.9;
+      const dzd = Math.round(amount * rate);
+      if (dzdInput) dzdInput.value = dzd;
+      if (bybitEl) bybitEl.textContent = dzd.toLocaleString() + ' ' + I18N[currentLang].currency_dzd;
+      if (redotEl) redotEl.textContent = Math.round(dzd * 1.012).toLocaleString() + ' ' + I18N[currentLang].currency_dzd;
+    }
 
-      if (state.last_checkin === yesterday) {
-        state.streak = (state.streak || 0) + 1;
-      } else {
-        state.streak = 1;
+    function onCalcDzdChange(val) {
+      const dzd = parseFloat(val);
+      const foreignInput = document.getElementById('calc-foreign-input');
+      const bybitEl = document.getElementById('calc-bybit-total');
+      const redotEl = document.getElementById('calc-redot-total');
+      if (isNaN(dzd) || dzd <= 0) {
+        if (foreignInput) foreignInput.value = '';
+        if (bybitEl) bybitEl.textContent = '0 ' + I18N[currentLang].currency_dzd;
+        if (redotEl) redotEl.textContent = '0 ' + I18N[currentLang].currency_dzd;
+        return;
       }
-      state.last_checkin = today;
-      state.xp = (state.xp || 0) + 150;
-      state.saved_dzd = (state.saved_dzd || 0) + 500;
-      saveGameState(state);
-
-      fireConfetti();
-      triggerHaptic([20, 50, 20]);
-      showToast(currentLang === 'fr' ? `Présence validée ! +150 XP (Série de ${state.streak} j) 🔥` : `تم تسجيل الحضور اليوم بنجاح! +150 XP (سلسلة ${state.streak} يوم) 🔥`);
-      renderGamificationHub();
+      const rate = usdtRate || 256.9;
+      const foreign = (dzd / rate).toFixed(2);
+      if (foreignInput) foreignInput.value = foreign;
+      if (bybitEl) bybitEl.textContent = Math.round(dzd).toLocaleString() + ' ' + I18N[currentLang].currency_dzd;
+      if (redotEl) redotEl.textContent = Math.round(dzd * 1.012).toLocaleString() + ' ' + I18N[currentLang].currency_dzd;
     }
 
     function renderGamificationHub() {
       const state = getGameState();
-      const rank = getRankInfo(state.xp);
+      const savedEl = document.getElementById('tools-total-saved');
+      const rateEl = document.getElementById('calc-usdt-rate');
+      const symEl = document.getElementById('calc-curr-symbol');
 
-      const avatarEl = document.getElementById('hub-rank-avatar');
-      const nameEl = document.getElementById('hub-rank-name');
-      const xpCountEl = document.getElementById('hub-xp-count');
-      const xpFractionEl = document.getElementById('hub-xp-fraction');
-      const xpBarEl = document.getElementById('hub-xp-bar');
-      const savedEl = document.getElementById('hub-total-saved');
-      const streakDaysEl = document.getElementById('hub-streak-days');
-      const checkinBtn = document.getElementById('hub-checkin-btn');
-      const checkinText = document.getElementById('hub-checkin-btn-text');
-
-      if (avatarEl) avatarEl.textContent = rank.avatar;
-      if (nameEl) nameEl.textContent = `${rank.name} (${currentLang === 'fr' ? 'Niveau' : 'المستوى'} ${rank.level})`;
-      if (xpCountEl) xpCountEl.textContent = `${state.xp} XP`;
-
-      const range = rank.maxXp - rank.minXp;
-      const curInRange = Math.max(0, state.xp - rank.minXp);
-      const pct = Math.min(100, Math.round((curInRange / range) * 100));
-
-      if (xpFractionEl) xpFractionEl.textContent = `${state.xp} / ${rank.maxXp}`;
-      if (xpBarEl) xpBarEl.style.width = `${pct}%`;
       if (savedEl) savedEl.textContent = `${(state.saved_dzd || 0).toLocaleString()} ${I18N[currentLang].currency_dzd}`;
-      if (streakDaysEl) streakDaysEl.textContent = currentLang === 'fr' ? `Série ${state.streak || 1} j` : `سلسلة ${state.streak || 1} يوم`;
+      if (rateEl) rateEl.textContent = usdtRate || '256.9';
+      if (symEl) symEl.textContent = (currentCurrency === 'EUR') ? '€' : '$';
 
-      const isCheckedToday = state.last_checkin === getTodayKey();
-      if (checkinBtn && checkinText) {
-        if (isCheckedToday) {
-          checkinBtn.classList.remove('bg-crimson-600', 'hover:bg-crimson-700', 'cursor-pointer');
-          checkinBtn.classList.add('bg-emerald-600', 'opacity-85', 'cursor-default');
-          checkinText.textContent = I18N[currentLang].hub_checkin_done || 'تم تسجيل حضور اليوم ✓';
-        } else {
-          checkinBtn.classList.remove('bg-emerald-600', 'opacity-85', 'cursor-default');
-          checkinBtn.classList.add('bg-crimson-600', 'hover:bg-crimson-700', 'cursor-pointer');
-          checkinText.textContent = I18N[currentLang].hub_checkin_cta || 'تسجيل الحضور اليوم (+150 XP)';
-        }
-      }
-
-      // Render 7-day track
-      const trackEl = document.getElementById('hub-streak-track');
-      if (trackEl) {
-        const curStreak = state.streak || 1;
-        const days = currentLang === 'fr' 
-          ? ['J1', 'J2', 'J3', 'J4', 'J5', 'J6', 'J7'] 
-          : ['يوم 1', 'يوم 2', 'يوم 3', 'يوم 4', 'يوم 5', 'يوم 6', 'يوم 7'];
-        trackEl.innerHTML = days.map((label, idx) => {
-          const dayNum = idx + 1;
-          const isDone = (dayNum <= curStreak);
-          return `
-            <div class="border rounded-xl p-1.5 flex flex-col items-center gap-1 transition ${isDone ? 'border-amber-500 bg-amber-500/15 text-amber-500 font-bold' : 'border-zinc-800 bg-zinc-900/40 opacity-50'}">
-              <span class="text-[9px] font-mono">${label}</span>
-              <div class="w-6 h-6 rounded-full flex items-center justify-center text-xs ${isDone ? 'bg-amber-500 text-zinc-950 font-black' : 'bg-zinc-800 text-zinc-400'}">
-                ${isDone ? '<i class="fa-solid fa-check text-[10px]"></i>' : dayNum}
-              </div>
-            </div>
-          `;
-        }).join('');
+      const foreignInput = document.getElementById('calc-foreign-input');
+      if (foreignInput && foreignInput.value) {
+        onCalcForeignChange(foreignInput.value);
+      } else if (foreignInput) {
+        foreignInput.value = '20';
+        onCalcForeignChange('20');
       }
     }
 
@@ -2652,8 +2640,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (isAdding) {
         state.favs.push(dealId);
         triggerHaptic([20]);
-        addXP(30, 'fav');
-        showToast(currentLang === 'fr' ? 'Ajouté aux favoris ❤️ (+30 XP)' : 'تم الحفظ في المفضلة ❤️ (+30 XP)');
+        showToast(currentLang === 'fr' ? 'Ajouté aux favoris ❤️' : 'تم الحفظ في المفضلة ❤️');
       } else {
         state.favs.splice(idx, 1);
         triggerHaptic([10]);
@@ -2789,7 +2776,6 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           displayRouletteDeal(winningDeal, true);
           fireConfetti(spinBtn);
           triggerHaptic([30, 60, 30]);
-          addXP(50, 'roulette');
         }
       }, 75);
     }
@@ -2818,13 +2804,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
     function handleBuyClick(couponCode) {
       triggerHaptic([20, 40, 20]);
-      addXP(100, 'buy');
       addSavedDZD(1500);
       fireConfetti();
       if (couponCode && couponCode.length >= 3) {
         try {
           navigator.clipboard.writeText(couponCode);
-          showToast(currentLang === 'fr' ? `Code promo ${couponCode} copié ! (+100 XP)` : `تم نسخ كود الخصم ${couponCode} تلقائياً! (+100 XP 🚀)`);
+          showToast(currentLang === 'fr' ? `Code promo ${couponCode} copié !` : `تم نسخ كود الخصم ${couponCode} تلقائياً! 🚀`);
         } catch(e) {}
       }
     }
@@ -2871,16 +2856,26 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const tabDz = document.getElementById('tab-dz');
       const tabFr = document.getElementById('tab-fr');
       const btnJoin = document.getElementById('btn-telegram-join');
+      const bannerName = document.getElementById('channel-banner-name');
+      const bannerBtn = document.getElementById('channel-banner-btn');
+      const mobTg = document.getElementById('mob-bottom-tg');
+      const topTg = document.getElementById('top-telegram-link');
+      const targetUrl = isDz ? 'https://t.me/DzAliexpress0' : 'https://t.me/francedealsdz';
+
+      if (btnJoin) btnJoin.href = targetUrl;
+      if (bannerBtn) bannerBtn.href = targetUrl;
+      if (mobTg) mobTg.href = targetUrl;
+      if (topTg) topTg.href = targetUrl;
 
       if (isDz) {
         if (tabDz) tabDz.className = 'flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg bg-crimson-600 text-white transition flex items-center justify-center gap-2 active:scale-95 shadow-sm';
         if (tabFr) tabFr.className = 'flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg opacity-70 hover:opacity-100 transition flex items-center justify-center gap-2 active:scale-95';
-        if (btnJoin) btnJoin.href = 'https://t.me/DzAliexpress0';
+        if (bannerName) bannerName.textContent = currentLang === 'fr' ? 'Canal Telegram Algérie (@DzAliexpress0)' : 'قناة التيليجرام الرسمية (@DzAliexpress0)';
         setCurrency('DZD');
       } else {
         if (tabFr) tabFr.className = 'flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg bg-crimson-600 text-white transition flex items-center justify-center gap-2 active:scale-95 shadow-sm';
         if (tabDz) tabDz.className = 'flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg opacity-70 hover:opacity-100 transition flex items-center justify-center gap-2 active:scale-95';
-        if (btnJoin) btnJoin.href = 'https://t.me/francedealsdz';
+        if (bannerName) bannerName.textContent = currentLang === 'fr' ? 'Canal Telegram France (@francedealsdz)' : 'قناة التيليجرام — عروض فرنسا (@francedealsdz)';
         setCurrency('EUR');
       }
       fetchDeals();
@@ -3045,7 +3040,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
 
       // 3. Strict Filter: Reject general non-product announcements, referral posts, and payment guides
-      const isAnnouncement = /(?:إعلان هام|تنبيه هام|دليل الشراء بالدينار|شحن بطاقتك|قناة الصفقات|قناة الصيدات|كيفاش تشري من AliExpress|كيف تشحن بطاقاتك)/i.test(text) && !text.includes('/item/');
+      const isAnnouncement = /(?:إعلان هام|تنبيه هام|دليل الشراء بالدينار|شحن بطاقتك|قناة الصفقات|قناة العروض|كيفاش تشري من AliExpress|كيف تشحن بطاقاتك)/i.test(text) && !text.includes('/item/');
       if (isAnnouncement) {
         return null;
       }
@@ -3668,10 +3663,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     function copyCoupon(code, btn) {
       navigator.clipboard.writeText(code).then(() => {
         triggerHaptic([15, 30, 15]);
-        addXP(50, 'coupon');
         addSavedDZD(1000);
         fireConfetti(btn);
-        showToast((I18N[currentLang].btn_copied || 'تم النسخ!') + ' ' + code + ' (+50 XP)');
+        showToast((I18N[currentLang].btn_copied || 'تم النسخ!') + ' ' + code);
         if (btn) {
           const span = btn.querySelector('.copy-text');
           const icon = btn.querySelector('i');
