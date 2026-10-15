@@ -249,7 +249,9 @@
     "9998883338",
     "9998883549",
     "9998883836",
-    "9998883963"
+    "9998883963",
+    "1005010620269829",
+    "1005010149868688"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -359,7 +361,7 @@
     "1005007097205322": 1791014755.488723,
     "1005010470699571": 1791015054.3845687,
     "1005012741634118": 1791015347.2675145,
-    "1005010453516983": 1791992961.3506665,
+    "1005010453516983": 1792077715.155482,
     "1005008554596598": 1791017145.537471,
     "1005012925826589": 1791752930.9846199,
     "1005010306498953": 1791021345.213176,
@@ -472,16 +474,16 @@
     "1005011557896041": 1791943741.5394402,
     "1005011754993234": 1792061283.4535055,
     "1005011735727412": 1791943783.9162278,
-    "1005013039644752": 1791943797.3155782,
+    "1005013039644752": 1792077724.119901,
     "1005007916078341": 1792050965.154088,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
     "1005013336240375": 1791968149.7952893,
     "1005012824711963": 1791968175.4449708,
-    "1005007920266509": 1791975925.0014532,
+    "1005007920266509": 1792077728.5472124,
     "1005009275536960": 1791975930.016452,
     "1005007767322935": 1791975934.9659944,
-    "1005012571601398": 1792007163.0270946,
+    "1005012571601398": 1792077701.5855007,
     "1005008131216261": 1791992931.9736187,
     "1005013054007275": 1791992936.3210912,
     "1005011899097443": 1792007142.8492503,
@@ -509,7 +511,9 @@
     "9998883338": 1792073338.7415233,
     "9998883549": 1792073549.4615705,
     "9998883836": 1792073836.8176863,
-    "9998883963": 1792073963.7339156
+    "9998883963": 1792073963.7339156,
+    "1005010620269829": 1792077689.3824542,
+    "1005010149868688": 1792077710.438389
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -802,7 +806,11 @@
     "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)",
     "Redmi Pad 2 9.7",
     "Redmi Note 12 5G Global (4/128GB)",
-    "Blackview Wave 10C"
+    "Blackview Wave 10C",
+    "متوسط سعره حالياً 82000دج",
+    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP AI",
+    "iQOO Z11s 5G (8/128GB)",
+    "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -858,7 +866,7 @@
     "QCY T13 True Wireless Earbuds Bluetooth 5.1 Earphones 7.2mm Drivers with": 1790941202.9035249,
     "Blackview Zeno 10 5G  8/128": 1790941207.5310047,
     "Honor Power 2  12/256": 1790941214.6756065,
-    "Honor X70 5G 8/128": 1790941221.8823678,
+    "Honor X70 5G 8/128": 1792077689.3824542,
     "Blackview MEGA 5  8/256": 1791137155.7589798,
     "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1791941260.30084,
     "4G LTE Wireless USB 150Mbps": 1790943633.9774187,
@@ -986,7 +994,7 @@
     "CMF Smart Watch 3 pro AMOLED": 1791110146.1927805,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
-    "OPPO A6 Pro 8/256GB": 1791992961.3506665,
+    "OPPO A6 Pro 8/256GB": 1792077715.155482,
     "ATTACK SHARK X1  Tri-Mode": 1791117948.6585228,
     "HILDA 2 Lines Laser Level Green": 1791124852.3122299,
     "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": 1791125437.8944824,
@@ -1098,7 +1106,11 @@
     "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)": 1792061306.8517709,
     "Redmi Pad 2 9.7": 1792061322.5579543,
     "Redmi Note 12 5G Global (4/128GB)": 1792061329.5738766,
-    "Blackview Wave 10C": 1792061334.470126
+    "Blackview Wave 10C": 1792061334.470126,
+    "متوسط سعره حالياً 82000دج": 1792077701.5855007,
+    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP AI": 1792077710.438389,
+    "iQOO Z11s 5G (8/128GB)": 1792077724.119901,
+    "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1792077728.5472124
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1859,27 +1871,33 @@
     "test_channel:1792073338",
     "test_channel:1792073549",
     "test_channel:1792073836",
-    "test_channel:1792073963"
+    "test_channel:1792073963",
+    "zedstoreonline:38610",
+    "megaphonna:8393",
+    "aniscoupons:32955",
+    "aniscoupons:32956",
+    "aniscoupons:32957",
+    "aniscoupons:32958"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1792073963.9096045,
+  "last_run_time": 1792077728.5472124,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32954,
-      "last_check_time": 1792061336.4892106
+      "last_message_id": 32958,
+      "last_check_time": 1792077730.5607078
     },
     "ecksdeal": {
       "last_message_id": 5892,
-      "last_check_time": 1792061298.9047992
+      "last_check_time": 1792077692.1932707
     },
     "lodydeals": {
       "last_message_id": 45547,
-      "last_check_time": 1792073963.820557
+      "last_check_time": 1792077681.7306726
     },
     "bnddeals": {
       "last_message_id": 50856,
-      "last_check_time": 1792061299.7097218
+      "last_check_time": 1792077692.9753723
     },
     "test_channel": {
       "last_message_id": 1792073963,
@@ -1887,19 +1905,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792061299.3308048
+      "last_check_time": 1792077692.5853674
     },
     "zedstoreonline": {
-      "last_message_id": 38608,
-      "last_check_time": 1792061298.1652339
+      "last_message_id": 38610,
+      "last_check_time": 1792077691.3965116
     },
     "megaphonna": {
-      "last_message_id": 8390,
-      "last_check_time": 1792073963.9096045
+      "last_message_id": 8394,
+      "last_check_time": 1792077706.923849
     },
     "couponsglobal": {
-      "last_message_id": 48848,
-      "last_check_time": 1792032624.2727525
+      "last_message_id": 48849,
+      "last_check_time": 1792077731.2923646
     }
   },
   "published_product_prices": {
@@ -2092,7 +2110,7 @@
     "1005011557896041": 257.22,
     "1005011754993234": 87.5,
     "1005011735727412": 26.6,
-    "1005013039644752": 186.5,
+    "1005013039644752": 286.55,
     "1005007916078341": 59.0,
     "1005006506862816": 11.86,
     "1005008072923842": 2.21,
@@ -2119,7 +2137,9 @@
     "1005008077568655": 42.3,
     "1005012585389764": 153.9,
     "1005011997237872": 111.2,
-    "1005011908654312": 122.6
+    "1005011908654312": 122.6,
+    "1005010620269829": 241.0,
+    "1005010149868688": 204.1
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -5804,6 +5824,66 @@
       "price": 122.6,
       "timestamp": 1792061334.470126,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38610": {
+      "channel_msg_id": 840,
+      "product_id": "1005010620269829",
+      "title": "Honor X70 5G 8/128",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38610,
+      "price": 241.0,
+      "timestamp": 1792077689.3824542,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8393": {
+      "channel_msg_id": 841,
+      "product_id": "1005012571601398",
+      "title": "متوسط سعره حالياً 82000دج",
+      "channel": "megaphonna",
+      "source_msg_id": 8393,
+      "price": 286.6,
+      "timestamp": 1792077701.5855007,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32955": {
+      "channel_msg_id": 842,
+      "product_id": "1005010149868688",
+      "title": "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP AI",
+      "channel": "aniscoupons",
+      "source_msg_id": 32955,
+      "price": 204.1,
+      "timestamp": 1792077710.438389,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32956": {
+      "channel_msg_id": 843,
+      "product_id": "1005010453516983",
+      "title": "OPPO A6 Pro 8/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 32956,
+      "price": 211.7,
+      "timestamp": 1792077715.155482,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32957": {
+      "channel_msg_id": 844,
+      "product_id": "1005013039644752",
+      "title": "iQOO Z11s 5G (8/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 32957,
+      "price": 286.55,
+      "timestamp": 1792077724.119901,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32958": {
+      "channel_msg_id": 845,
+      "product_id": "1005007920266509",
+      "title": "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring",
+      "channel": "aniscoupons",
+      "source_msg_id": 32958,
+      "price": 33.3,
+      "timestamp": 1792077728.5472124,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -5812,17 +5892,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792061336.5060856,
+    "last_deal_post_time": 1792077731.3034806,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792061339.1637588,
+    "last_sweep_time": 1792077733.909331,
     "last_sweep_times": {
-      "algeria": 1792061336.497886,
-      "france": 1792061339.1637588
+      "algeria": 1792077731.2980464,
+      "france": 1792077733.909331
     },
     "last_deal_post_times": {
-      "algeria": 1792061336.5060856
+      "algeria": 1792077731.3034806
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -6051,13 +6131,13 @@
     "1005011557896041": "lodydeals",
     "1005011754993234": "zedstoreonline",
     "1005011735727412": "bnddeals",
-    "1005013039644752": "megaphonna",
+    "1005013039644752": "aniscoupons",
     "1005007916078341": "zedstoreonline",
     "1005006506862816": "couponsglobal",
     "1005008072923842": "pcgamingpart",
     "1005013336240375": "pcgamingpart",
     "1005012824711963": "aniscoupons",
-    "1005007920266509": "lodydeals",
+    "1005007920266509": "aniscoupons",
     "1005009275536960": "lodydeals",
     "1005007767322935": "lodydeals",
     "1005008131216261": "ecksdeal",
@@ -6084,7 +6164,9 @@
     "9998883338": "test_channel",
     "9998883549": "test_channel",
     "9998883836": "test_channel",
-    "9998883963": "test_channel"
+    "9998883963": "test_channel",
+    "1005010620269829": "zedstoreonline",
+    "1005010149868688": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -6379,7 +6461,11 @@
     "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)": "megaphonna",
     "Redmi Pad 2 9.7": "aniscoupons",
     "Redmi Note 12 5G Global (4/128GB)": "aniscoupons",
-    "Blackview Wave 10C": "aniscoupons"
+    "Blackview Wave 10C": "aniscoupons",
+    "متوسط سعره حالياً 82000دج": "megaphonna",
+    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP AI": "aniscoupons",
+    "iQOO Z11s 5G (8/128GB)": "aniscoupons",
+    "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -6865,7 +6951,13 @@
     "zedstoreonline:38608",
     "megaphonna:8382",
     "aniscoupons:32945",
-    "aniscoupons:32951"
+    "aniscoupons:32951",
+    "zedstoreonline:38609",
+    "megaphonna:8387",
+    "megaphonna:8389",
+    "megaphonna:8391",
+    "megaphonna:8394",
+    "couponsglobal:48849"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
