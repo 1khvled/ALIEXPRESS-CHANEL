@@ -30,6 +30,7 @@ from api.user_site import USER_WEBSITE_HTML
 from api.admin_login import ADMIN_LOGIN_HTML
 from api.admin_dashboard import DASHBOARD_HTML
 from api.geo_llms import LLMS_TXT, LLMS_FULL_TXT, get_ai_summary_json
+from api.blog_guide import get_blog_guide_html
 
 app = FastAPI(title="DealScout DZ — AliExpress Deals & Live Telegram Content", version="2.5.0")
 
@@ -187,6 +188,14 @@ async def user_website():
     return HTMLResponse(content=get_active_event_seo_html())
 
 
+@app.get("/blog/aliexpress-algeria-guide-dz", response_class=HTMLResponse)
+@app.get("/guide", response_class=HTMLResponse)
+@app.get("/blog", response_class=HTMLResponse)
+async def blog_guide_page():
+    """Serves the comprehensive AliExpress Algeria 2026 native guide blog article."""
+    return HTMLResponse(content=get_blog_guide_html(), status_code=200)
+
+
 ADMIN_SESSION_COOKIE = "dealscout_admin_session"
 _login_failed_attempts: Dict[str, List[float]] = {}
 MAX_FAILED_ATTEMPTS = 5
@@ -283,6 +292,9 @@ Allow: /coins
 Allow: /faq
 Allow: /about
 Allow: /contact
+Allow: /blog
+Allow: /blog/aliexpress-algeria-guide-dz
+Allow: /guide
 Allow: /llms.txt
 Allow: /llms-full.txt
 Allow: /manifest.json
@@ -502,6 +514,19 @@ async def sitemap_xml():
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://dealscoutgreen.vercel.app/blog/aliexpress-algeria-guide-dz</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscoutgreen.vercel.app/blog/aliexpress-algeria-guide-dz"/>
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscoutgreen.vercel.app/blog/aliexpress-algeria-guide-dz"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscoutgreen.vercel.app/blog/aliexpress-algeria-guide-dz"/>
+    <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://dealscoutgreen.vercel.app/logo.png</image:loc>
+      <image:title>دليل الشراء من AliExpress في الجزائر 2026: الشحن والجمارك والدفع بالدينار</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://dealscoutgreen.vercel.app/llms.txt</loc>
     <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
     <changefreq>daily</changefreq>
@@ -687,10 +712,24 @@ def parse_telegram_deal_block(block, clean_ch: str, usdt_rate: float = 249.0):
         coupon_code = c_m.group(1).strip()
 
     country = None
-    for line in raw_text.split("\n"):
-        if "خلي البل" in line or "بلد الحساب" in line or "Pays" in line:
-            country = line.replace("📍", "").replace("خلي البلـــد", "").replace("خلي البلد", "").replace("بلد الحساب", "").replace(":", "").strip()
-            break
+    clean_country_text = re.sub(r'[\u0640]', '', raw_text)
+    low_c = clean_country_text.lower()
+    if any(k in low_c for k in ["كندا", "🇨🇦", "canada"]):
+        country = "كندا 🇨🇦"
+    elif any(k in low_c for k in ["كوريا", "🇰🇷", "korea"]):
+        country = "كوريا 🇰🇷"
+    elif any(k in low_c for k in ["الجزائر", "🇩🇿", "algeria"]):
+        country = "الجزائر 🇩🇿"
+    elif any(k in low_c for k in ["فرنسا", "🇫🇷", "france"]):
+        country = "فرنسا 🇫🇷"
+    elif any(k in low_c for k in ["أوكرانيا", "اوكرانيا", "🇺🇦", "ukraine"]):
+        country = "أوكرانيا 🇺🇦"
+    elif any(k in low_c for k in ["استراليا", "أستراليا", "🇦🇺", "australia"]):
+        country = "أستراليا 🇦🇺"
+    elif any(k in low_c for k in ["إسبانيا", "اسبانيا", "🇪🇸", "spain"]):
+        country = "إسبانيا 🇪🇸"
+    elif any(k in low_c for k in ["خلي البلد", "بلد الحساب"]):
+        country = "كندا 🇨🇦"
 
     has_coins = any(k in raw_text for k in ["عملات", "نقاط", "pièces", "coins", "Alilo07BOT", "🪙"])
 

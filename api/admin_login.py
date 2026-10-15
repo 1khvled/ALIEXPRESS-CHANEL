@@ -45,19 +45,19 @@ ADMIN_LOGIN_HTML = """<!DOCTYPE html>
   <style>
     :root {
       --bg-page: #06080d;
-      --bg-card: rgba(14, 18, 27, 0.94);
-      --bg-card-hover: rgba(20, 26, 40, 0.98);
-      --border-card: rgba(255, 255, 255, 0.09);
-      --border-subtle: rgba(255, 255, 255, 0.16);
+      --bg-card: #0e121b;
+      --bg-card-hover: #141a28;
+      --border-card: #1f293d;
+      --border-subtle: #2d3b55;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --text-soft: #64748b;
-      --input-bg: rgba(13, 17, 26, 0.95);
-      --shadow-card: 0 4px 12px -2px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      --input-bg: #141a28;
+      --shadow-card: 0 4px 12px -2px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.05);
     }
     body {
       background-color: var(--bg-page);
-      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
       background-size: 24px 24px;
       color: var(--text-main);
       font-family: 'Readex Pro', 'Cairo', 'Plus Jakarta Sans', sans-serif;
@@ -65,10 +65,8 @@ ADMIN_LOGIN_HTML = """<!DOCTYPE html>
       -moz-osx-font-smoothing: grayscale;
       -webkit-tap-highlight-color: transparent;
     }
-    .glass-card {
+    .solid-card {
       background: var(--bg-card);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--border-card);
       box-shadow: var(--shadow-card);
     }
@@ -76,25 +74,21 @@ ADMIN_LOGIN_HTML = """<!DOCTYPE html>
 </head>
 <body class="min-h-screen flex flex-col justify-between selection:bg-rose-500 selection:text-white p-4">
 
-  <!-- Ambient Obsidian Glow -->
-  <div class="fixed top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-rose-600/10 blur-3xl rounded-full pointer-events-none -z-10"></div>
-  <div class="fixed bottom-1/4 left-1/3 w-80 h-80 bg-amber-500/5 blur-3xl rounded-full pointer-events-none -z-10"></div>
-
   <!-- Header minimal -->
   <header class="max-w-md mx-auto w-full flex items-center justify-between py-4">
-    <a href="/" class="inline-flex items-center gap-2 text-xs text-slate-400 hover:text-slate-100 transition py-1 px-2.5 rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10">
+    <a href="/" class="inline-flex items-center gap-2 text-xs text-slate-400 hover:text-slate-100 transition py-1.5 px-3 rounded-xl bg-[#141a28] border border-[#1f293d] hover:border-slate-600">
       <i class="fa-solid fa-arrow-right text-[11px]"></i>
       <span class="font-medium">العودة لموقع العروض</span>
     </a>
-    <div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-[11px] font-mono text-rose-400">
+    <div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-[11px] font-mono text-rose-400">
       <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
-      <span>Admin Gateway v2.8</span>
+      <span>Admin Gateway v2.9</span>
     </div>
   </header>
 
   <!-- Login Card -->
   <main class="max-w-md mx-auto w-full my-auto py-6">
-    <div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+    <div class="solid-card rounded-2xl p-6 sm:p-8 space-y-6">
       
       <!-- Brand & Icon -->
       <div class="text-center space-y-3">

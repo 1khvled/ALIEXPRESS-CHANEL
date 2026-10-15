@@ -687,6 +687,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <i class="fa-solid fa-info-circle text-purple-500 text-xs"></i>
           <span class="hidden xl:inline" data-i18n="nav_about">من نحن</span>
         </button>
+        <a href="/blog/aliexpress-algeria-guide-dz" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs text-amber-400 font-bold hover:bg-amber-500/10" title="دليل الشراء من AliExpress في الجزائر 2026">
+          <i class="fa-solid fa-book-open text-amber-400 text-xs"></i>
+          <span class="hidden xl:inline">دليل 2026</span>
+        </a>
       </nav>
 
       <!-- Search Bar Desktop (Visible on Large Screens) -->
@@ -1191,12 +1195,19 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </button>
         </div>
 
-        <!-- Quick Samples / Chips -->
-        <div class="flex items-center gap-2 flex-wrap text-xs pt-1" style="color: var(--text-muted);">
-          <span class="text-[11px] opacity-75" data-i18n="tracking_quick_examples">جرب أرقام تتبع شائعة:</span>
-          <button type="button" onclick="setTrackingSample('LP00685412978432')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-blue-500 transition active:scale-95" style="background-color: var(--bg-elevated); border-color: var(--border-card);">LP006... (Choice)</button>
-          <button type="button" onclick="setTrackingSample('RE984125874DZ')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-emerald-500 transition active:scale-95" style="background-color: var(--bg-elevated); border-color: var(--border-card);">RE...DZ (بريد الجزائر)</button>
-          <button type="button" onclick="setTrackingSample('SY1548796325812')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-amber-500 transition active:scale-95" style="background-color: var(--bg-elevated); border-color: var(--border-card);">SY... (SunYou)</button>
+        <!-- Quick Samples / Chips & Recent Searches -->
+        <div class="space-y-2 pt-1 text-xs" style="color: var(--text-muted);">
+          <div class="flex items-center gap-2 flex-wrap">
+            <span class="text-[11px] opacity-75" data-i18n="tracking_quick_examples">أرقام نموذجية:</span>
+            <button type="button" onclick="setTrackingSample('CP032359951AE')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-emerald-500 transition active:scale-95" style="background-color: var(--bg-elevated); border-color: var(--border-card);">CP...AE (بريد الإمارات UPU)</button>
+            <button type="button" onclick="setTrackingSample('LP00685412978432')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-blue-500 transition active:scale-95" style="background-color: var(--bg-elevated); border-color: var(--border-card);">LP006... (Choice)</button>
+            <button type="button" onclick="setTrackingSample('RE984125874DZ')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-amber-500 transition active:scale-95" style="background-color: var(--bg-elevated); border-color: var(--border-card);">RE...DZ (بريد الجزائر)</button>
+          </div>
+          <!-- Recent Searches History Bar -->
+          <div id="tracking-recent-wrap" class="hidden flex items-center gap-2 flex-wrap pt-1 border-t" style="border-color: var(--border-card);">
+            <span class="text-[11px] opacity-75 flex items-center gap-1 font-semibold"><i class="fa-solid fa-clock-rotate-left text-[10px]"></i> آخر أرقامك:</span>
+            <div id="tracking-recent-list" class="flex items-center gap-1.5 flex-wrap"></div>
+          </div>
         </div>
 
         <div id="tracking-error" class="hidden text-xs text-rose-500 flex items-center gap-1.5 pt-1">
@@ -1205,140 +1216,182 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
       </div>
 
-      <!-- Tracking Results Card (Dynamic) -->
+      <!-- Tracking Results Card (100% Native Obsidian Dark, Zero Iframe Slop) -->
       <div id="tracking-result-card" class="hidden border rounded-2xl p-5 sm:p-6 space-y-6 transition-all" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
         
         <!-- Result Header -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b pb-4" style="border-color: var(--border-card);">
-          <div class="space-y-1">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b pb-5" style="border-color: var(--border-card);">
+          <div class="space-y-2">
             <div class="flex items-center gap-2 flex-wrap">
-              <span id="tracking-carrier-badge" class="px-2.5 py-0.5 rounded-lg text-xs font-bold border flex items-center gap-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-                <i class="fa-solid fa-truck-fast text-blue-500"></i>
-                <span id="tracking-carrier-name">AliExpress Choice / Cainiao</span>
+              <span id="tracking-carrier-badge" class="px-3 py-1 rounded-xl text-xs font-bold border flex items-center gap-2" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+                <span id="tracking-carrier-flag" class="text-base">🌐</span>
+                <span id="tracking-carrier-name" style="color: var(--text-main);">AliExpress Choice / Cainiao</span>
               </span>
-              <span id="tracking-status-badge" class="px-2.5 py-0.5 rounded-lg text-xs font-bold bg-blue-500/10 text-blue-500 border border-blue-500/20">
-                في مسار الشحن الدولي
+              <span id="tracking-service-badge" class="px-2.5 py-1 rounded-xl text-xs font-medium border" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
+                طرد بريدي مسجل دولي
+              </span>
+              <span id="tracking-status-badge" class="px-3 py-1 rounded-xl text-xs font-bold bg-blue-500/10 text-blue-400 border border-blue-500/25 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                <span id="tracking-status-text">في مسار الشحن الدولي</span>
               </span>
             </div>
+
+            <!-- Route Visualization (Origin -> Destination) -->
+            <div class="flex items-center gap-2 text-xs font-medium pt-1" style="color: var(--text-muted);">
+              <span class="flex items-center gap-1 font-bold" style="color: var(--text-main);">
+                <span id="tracking-route-origin-flag">🇨🇳</span>
+                <span id="tracking-route-origin">الصين</span>
+              </span>
+              <i class="fa-solid fa-arrow-left-long text-blue-500 text-xs px-1"></i>
+              <span class="flex items-center gap-1 font-bold" style="color: var(--text-main);">
+                <span>🇩🇿</span>
+                <span>الجزائر (مكتب بريد بلديتك)</span>
+              </span>
+            </div>
+
             <div class="flex items-center gap-2 pt-1">
-              <span class="text-xs font-semibold" style="color: var(--text-muted);" data-i18n="tracking_label_number">رقم الطرد:</span>
-              <span id="tracking-result-num" class="font-mono font-bold text-sm tracking-wider" style="color: var(--text-main);">...</span>
-              <button onclick="copyTrackingNum()" class="text-xs p-1 opacity-60 hover:opacity-100 transition cursor-pointer" title="نسخ"><i class="fa-regular fa-copy"></i></button>
+              <span class="text-xs font-semibold" style="color: var(--text-muted);">رقم التتبع:</span>
+              <span id="tracking-result-num" class="font-mono font-bold text-sm sm:text-base tracking-wider px-2 py-0.5 rounded border" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">...</span>
+              <button onclick="copyTrackingNum()" class="text-xs px-2.5 py-1 rounded-lg border flex items-center gap-1 transition active:scale-95 cursor-pointer hover:border-blue-500" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+                <i class="fa-regular fa-copy" id="tracking-copy-icon"></i>
+                <span id="tracking-copy-text">نسخ</span>
+              </button>
             </div>
           </div>
 
-          <!-- Estimated Delivery Time Box -->
-          <div class="sm:text-left text-xs space-y-0.5 border p-2.5 rounded-xl sm:border-0 sm:p-0" style="border-color: var(--border-card);">
-            <div class="text-[11px] opacity-75" data-i18n="tracking_est_label">المدة التقديرية للوصول:</div>
-            <div id="tracking-est-time" class="font-bold text-sm text-emerald-500 font-mono">14 - 25 يوماً</div>
+          <!-- Estimated Delivery Time & Buyer Protection Box -->
+          <div class="sm:text-left text-xs space-y-1.5 border p-3.5 rounded-xl sm:min-w-[210px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="flex items-center justify-between sm:justify-start gap-2">
+              <span class="text-[11px] opacity-75" style="color: var(--text-muted);">المدة التقديرية للوصول:</span>
+              <span id="tracking-est-time" class="font-bold text-xs text-emerald-400 font-mono">14 - 25 يوماً</span>
+            </div>
+            <div class="flex items-center gap-1.5 text-[11px] text-amber-400 font-bold border-t pt-1.5" style="border-color: var(--border-card);">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>حماية المشتري AliExpress مفعّلة</span>
+            </div>
           </div>
         </div>
 
-        <!-- 5-Step Algerian Delivery Journey Tracker -->
-        <div class="space-y-3">
-          <h4 class="font-bold text-xs uppercase tracking-wider flex items-center gap-2" style="color: var(--text-main);">
-            <i class="fa-solid fa-route text-blue-500"></i>
-            <span data-i18n="tracking_stages_title">مراحل شحن وتوصيل الطرد في الجزائر:</span>
-          </h4>
+        <!-- Smart Advisory / Guidance Card (Explains carrier updates & delays) -->
+        <div id="tracking-advisory-card" class="rounded-xl p-4 border flex items-start gap-3 transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+          <div class="w-8 h-8 rounded-lg bg-blue-500/15 text-blue-400 flex items-center justify-center flex-shrink-0 text-sm font-bold mt-0.5">
+            <i class="fa-solid fa-circle-info" id="tracking-advisory-icon"></i>
+          </div>
+          <div class="space-y-1 flex-1 text-xs">
+            <h4 id="tracking-advisory-title" class="font-bold text-sm" style="color: var(--text-main);">
+              الشحنة مسجلة حديثاً — بانتظار أول فحص فيزيائي لدى الناقل
+            </h4>
+            <p id="tracking-advisory-body" class="leading-relaxed opacity-85" style="color: var(--text-muted);">
+              قام البائع بتوليد بوليصة الشحن وحجز رقم الطرد. في التجارة الدولية، يستغرق استلام شركة الشحن للطرد وتسجيل أول محطة فحص فعلية بين 24 إلى 72 ساعة.
+            </p>
+          </div>
+        </div>
 
-          <div id="tracking-stages-container" class="grid grid-cols-1 sm:grid-cols-5 gap-2 text-xs">
+        <!-- 5-Step Algerian Delivery Journey Tracker (Enhanced Visual Stepper) -->
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <h4 class="font-bold text-xs uppercase tracking-wider flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-solid fa-route text-blue-500"></i>
+              <span>مسار ومحطات التوصيل في الجزائر (Algerian Delivery Journey):</span>
+            </h4>
+            <span class="text-[11px] font-mono text-emerald-400" id="tracking-journey-progress">المرحلة 1 من 5</span>
+          </div>
+
+          <div id="tracking-stages-container" class="grid grid-cols-1 sm:grid-cols-5 gap-2.5 text-xs">
             <!-- Stage 1 -->
-            <div id="track-step-1" class="p-3 rounded-xl border space-y-1 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div id="track-step-1" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="flex items-center justify-between">
-                <span class="w-5 h-5 rounded-full bg-emerald-500 text-white font-bold text-[10px] flex items-center justify-center">1</span>
-                <i class="fa-solid fa-check text-emerald-500 text-xs"></i>
+                <span class="w-6 h-6 rounded-full bg-emerald-500 text-white font-bold text-[11px] flex items-center justify-center shadow">1</span>
+                <i class="fa-solid fa-box text-emerald-400 text-sm"></i>
               </div>
-              <div class="font-bold text-[11px] pt-1" style="color: var(--text-main);">انطلاق الطرد</div>
-              <p class="text-[10px] opacity-75" style="color: var(--text-muted);">تم تجهيزه والشحن من الصين</p>
+              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">1. انطلاق الطرد</div>
+              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">تجهيز الشحنة وانطلاقها من المستودع</p>
             </div>
             <!-- Stage 2 -->
-            <div id="track-step-2" class="p-3 rounded-xl border space-y-1 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div id="track-step-2" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="flex items-center justify-between">
-                <span class="w-5 h-5 rounded-full bg-blue-500 text-white font-bold text-[10px] flex items-center justify-center">2</span>
-                <i class="fa-solid fa-plane text-blue-500 text-xs"></i>
+                <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">2</span>
+                <i class="fa-solid fa-plane text-zinc-500 text-sm"></i>
               </div>
-              <div class="font-bold text-[11px] pt-1" style="color: var(--text-main);">الشحن الجوي</div>
-              <p class="text-[10px] opacity-75" style="color: var(--text-muted);">رحلة الترانزيت الدولي للجزائر</p>
+              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">2. الشحن الجوي</div>
+              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">رحلة الترانزيت الدولي نحو الجزائر</p>
             </div>
             <!-- Stage 3 -->
-            <div id="track-step-3" class="p-3 rounded-xl border space-y-1 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div id="track-step-3" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="flex items-center justify-between">
-                <span class="w-5 h-5 rounded-full bg-zinc-600 text-white font-bold text-[10px] flex items-center justify-center">3</span>
-                <i class="fa-solid fa-warehouse text-zinc-400 text-xs"></i>
+                <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">3</span>
+                <i class="fa-solid fa-warehouse text-zinc-500 text-sm"></i>
               </div>
-              <div class="font-bold text-[11px] pt-1" style="color: var(--text-main);">مركز الفرز CTN</div>
-              <p class="text-[10px] opacity-75" style="color: var(--text-muted);">مطار هواري بومدين الجزائر</p>
+              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">3. مركز الفرز CTN</div>
+              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">مطار هواري بومدين / الجزائر</p>
             </div>
             <!-- Stage 4 -->
-            <div id="track-step-4" class="p-3 rounded-xl border space-y-1 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div id="track-step-4" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="flex items-center justify-between">
-                <span class="w-5 h-5 rounded-full bg-zinc-600 text-white font-bold text-[10px] flex items-center justify-center">4</span>
-                <i class="fa-solid fa-stamp text-zinc-400 text-xs"></i>
+                <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">4</span>
+                <i class="fa-solid fa-stamp text-zinc-500 text-sm"></i>
               </div>
-              <div class="font-bold text-[11px] pt-1" style="color: var(--text-main);">الجمارك (Douane)</div>
-              <p class="text-[10px] opacity-75" style="color: var(--text-muted);">معفى للطرود الشخصية</p>
+              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">4. الجمارك (Douane)</div>
+              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">معفى للطرود الشخصية غير التجارية</p>
             </div>
             <!-- Stage 5 -->
-            <div id="track-step-5" class="p-3 rounded-xl border space-y-1 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div id="track-step-5" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="flex items-center justify-between">
-                <span class="w-5 h-5 rounded-full bg-zinc-600 text-white font-bold text-[10px] flex items-center justify-center">5</span>
-                <i class="fa-solid fa-envelope-open-text text-zinc-400 text-xs"></i>
+                <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">5</span>
+                <i class="fa-solid fa-envelope-open-text text-zinc-500 text-sm"></i>
               </div>
-              <div class="font-bold text-[11px] pt-1" style="color: var(--text-main);">بريد بلديتك</div>
-              <p class="text-[10px] opacity-75" style="color: var(--text-muted);">استلام الطرد ببطاقة الهوية</p>
+              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">5. بريد بلديتك</div>
+              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">جاهز للاستلام ببطاقة الهوية الوطنية</p>
             </div>
           </div>
         </div>
 
-        <!-- 1-Click Direct Carrier Portal Links -->
-        <div class="space-y-2.5 pt-2 border-t" style="border-color: var(--border-card);">
-          <div class="text-xs font-bold" style="color: var(--text-main);" data-i18n="tracking_portals_heading">
-            تتبع الشحنة مباشرة على المنصات الرسمية بنقرة واحدة:
-          </div>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
-            <a id="btn-portal-17track" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-amber-500 active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
-              <i class="fa-solid fa-globe text-amber-500"></i>
-              <span>17TRACK</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
-            </a>
-            <a id="btn-portal-cainiao" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-rose-500 active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
-              <i class="fa-solid fa-plane text-rose-500"></i>
-              <span>Cainiao Global</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
-            </a>
-            <a id="btn-portal-poste" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-emerald-500 active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
-              <i class="fa-solid fa-envelope text-emerald-500"></i>
-              <span>بريد الجزائر</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
-            </a>
-            <a id="btn-portal-ninja" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-sky-500 active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
-              <i class="fa-solid fa-bolt text-sky-500"></i>
-              <span>Postal Ninja</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Checkpoints Timeline Feed (if available) -->
-        <div id="tracking-checkpoints-wrap" class="space-y-3 pt-2 border-t hidden" style="border-color: var(--border-card);">
+        <!-- Checkpoints Timeline Feed (if live events available) -->
+        <div id="tracking-checkpoints-wrap" class="space-y-3 pt-3 border-t hidden" style="border-color: var(--border-card);">
           <h4 class="font-bold text-xs uppercase tracking-wider flex items-center gap-2" style="color: var(--text-main);">
             <i class="fa-solid fa-clock-rotate-left text-blue-500"></i>
-            <span data-i18n="tracking_timeline_title">سجل المحطات ونقاط الفرز (Live Checkpoints):</span>
+            <span>سجل المحطات ونقاط الفرز (Live Checkpoints):</span>
           </h4>
           <div id="tracking-checkpoints-list" class="space-y-2 text-xs border-r-2 pr-3 mr-1" style="border-color: var(--border-subtle);">
             <!-- Dynamic checkpoints injected here -->
           </div>
         </div>
 
-        <!-- Embedded 17TRACK Widget Container (Official & Free) -->
-        <div id="tracking-widget-wrap" class="space-y-2 pt-2 border-t" style="border-color: var(--border-card);">
-          <div class="flex items-center justify-between text-xs pb-1">
-            <span class="font-bold flex items-center gap-1.5" style="color: var(--text-main);">
-              <i class="fa-solid fa-satellite-dish text-emerald-500"></i>
-              <span data-i18n="tracking_embed_title">التتبع التفاعلي المباشر (17TRACK Universal Embed):</span>
+        <!-- 1-Click Direct Official Portals (Clean External Deep-Links, No Iframe Slop) -->
+        <div class="space-y-2.5 pt-3 border-t" style="border-color: var(--border-card);">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold" style="color: var(--text-main);">
+              فحص مباشر على أنظمة الشحن العالمية الرسمية (يفتح برقمك تلقائياً ↗):
             </span>
+            <span class="text-[11px] text-slate-500">روابط مشفرة وآمنة</span>
           </div>
-          <div id="YQContainer" class="min-h-[480px] w-full rounded-xl overflow-hidden border" style="background-color: var(--bg-page); border-color: var(--border-card);"></div>
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs">
+            <a id="btn-portal-17track" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-amber-500 hover:text-amber-400 active:scale-95 touch-manipulation shadow-sm" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-globe text-amber-500"></i>
+              <span>17TRACK</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+            </a>
+            <a id="btn-portal-cainiao" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-rose-500 hover:text-rose-400 active:scale-95 touch-manipulation shadow-sm" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-plane text-rose-500"></i>
+              <span>Cainiao Global</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+            </a>
+            <a id="btn-portal-ninja" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-sky-500 hover:text-sky-400 active:scale-95 touch-manipulation shadow-sm" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-bolt text-sky-500"></i>
+              <span>Postal Ninja</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+            </a>
+            <a id="btn-portal-parcels" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-purple-500 hover:text-purple-400 active:scale-95 touch-manipulation shadow-sm" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-cubes text-purple-500"></i>
+              <span>ParcelsApp</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+            </a>
+            <a id="btn-portal-poste" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-emerald-500 hover:text-emerald-400 active:scale-95 touch-manipulation shadow-sm col-span-2 sm:col-span-1" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-envelope text-emerald-500"></i>
+              <span>بريد الجزائر</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+            </a>
+          </div>
         </div>
 
       </div>
@@ -1375,6 +1428,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </p>
         </div>
       </div>
+
+      <!-- Legacy container stub kept hidden for compatibility -->
+      <div id="YQContainer" class="hidden"></div>
 
     </div>
 
@@ -2690,6 +2746,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <h4 class="font-bold text-xs uppercase tracking-wider" style="color: var(--text-main);" data-i18n="footer_nav_title">التنقل السريع</h4>
           <ul class="space-y-2">
             <li><button onclick="showPage('deals')" class="hover:underline transition" data-i18n="nav_deals">أحدث الصفقات</button></li>
+            <li><a href="/blog/aliexpress-algeria-guide-dz" class="hover:underline transition text-amber-400 font-bold flex items-center gap-1"><i class="fa-solid fa-book-open text-[10px]"></i> <span>دليل الشراء من AliExpress 2026</span></a></li>
             <li><button onclick="showPage('cards')" class="hover:underline transition text-emerald-500 font-semibold" data-i18n="nav_cards">بطاقات الشراء والتحويل</button></li>
             <li><button onclick="showPage('coins')" class="hover:underline transition" data-i18n="nav_coins">دليل بوت العملات</button></li>
             <li><button onclick="showPage('faq')" class="hover:underline transition" data-i18n="nav_faq">الأسئلة الشائعة</button></li>
@@ -4445,8 +4502,24 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         }
       }
 
-      const cMatch = text.match(/(حساب|دولة|بلد|compte|pays)\\s*[:：]?\\s*([\\u0600-\\u06FFa-zA-Z\\s]+)/i);
-      if (cMatch) country = cMatch[2].trim().slice(0, 18);
+      // Robust Country Extraction with Tatweel Normalization
+      if (/كندا|🇨🇦|canada/i.test(cleanNorm)) {
+        country = "كندا 🇨🇦";
+      } else if (/كوريا|🇰🇷|korea/i.test(cleanNorm)) {
+        country = "كوريا 🇰🇷";
+      } else if (/الجزائر|🇩🇿|algeria/i.test(cleanNorm)) {
+        country = "الجزائر 🇩🇿";
+      } else if (/فرنسا|🇫🇷|france/i.test(cleanNorm)) {
+        country = "فرنسا 🇫🇷";
+      } else if (/أوكرانيا|اوكرانيا|🇺🇦|ukraine/i.test(cleanNorm)) {
+        country = "أوكرانيا 🇺🇦";
+      } else if (/استراليا|أستراليا|🇦🇺|australia/i.test(cleanNorm)) {
+        country = "أستراليا 🇦🇺";
+      } else if (/إسبانيا|اسبانيا|🇪🇸|spain/i.test(cleanNorm)) {
+        country = "إسبانيا 🇪🇸";
+      } else if (/(?:خلي\\s*البلد|بلد\\s*الحساب)/i.test(cleanNorm)) {
+        country = "كندا 🇨🇦";
+      }
 
       hasCoins = text.includes('عملات') || text.includes('Coins') || text.includes('coins') || text.includes('🪙');
 
@@ -4714,7 +4787,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <img src="${deal.photo_url}" alt="${safeTitle}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="handleImgError(this, '${escapeHtml(deal.photo_url)}')" class="w-full h-full object-contain group-hover:scale-102 transition-transform duration-200">
             ${favBtnHtml}
             ${deal.has_coins ? `<span class="absolute top-2 left-2 bg-amber-500 text-zinc-950 text-[10px] font-bold px-1.5 py-0.5 rounded flex items-center gap-1 shadow-sm tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
-            ${deal.country ? `<span class="absolute ${deal.has_coins ? 'top-8' : 'top-2'} left-2 text-[10px] px-1.5 py-0.5 rounded font-semibold border shadow-sm" style="background-color: rgba(18, 18, 21, 0.85); border-color: rgba(255, 255, 255, 0.15); color: #fafafa;">${escapeHtml(deal.country)}</span>` : ''}
+            ${deal.country ? `<span class="absolute ${deal.has_coins ? 'top-8' : 'top-2'} left-2 text-[10px] px-1.5 py-0.5 rounded font-bold border shadow-sm flex items-center gap-1" style="background-color: rgba(14, 18, 27, 0.92); border-color: var(--border-card); color: #fafafa;"><span class="text-amber-400 font-normal">📍</span> ${escapeHtml(deal.country)}</span>` : ''}
           </div>
         ` : `
           <div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-2.5 cursor-pointer group flex items-center justify-center border" style="background-color: var(--bg-page); border-color: var(--border-card);" onclick="openDealModal('${deal.id}')">
@@ -4724,6 +4797,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             </div>
             ${favBtnHtml}
             ${deal.has_coins ? `<span class="absolute top-2 left-2 bg-amber-500 text-zinc-950 text-[10px] font-bold px-1.5 py-0.5 rounded flex items-center gap-1 shadow-sm tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
+            ${deal.country ? `<span class="absolute ${deal.has_coins ? 'top-8' : 'top-2'} left-2 text-[10px] px-1.5 py-0.5 rounded font-bold border shadow-sm flex items-center gap-1" style="background-color: rgba(14, 18, 27, 0.92); border-color: var(--border-card); color: #fafafa;"><span class="text-amber-400 font-normal">📍</span> ${escapeHtml(deal.country)}</span>` : ''}
           </div>
         `;
 
@@ -4884,7 +4958,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       date.textContent = deal.date || '';
 
       if (deal.country) {
-        country.textContent = deal.country;
+        country.innerHTML = `<span class="text-amber-400 font-normal">📍</span> خلي البلد: <span class="font-bold text-white">${escapeHtml(deal.country)}</span>`;
         country.classList.remove('hidden');
       } else {
         country.classList.add('hidden');
@@ -5159,11 +5233,49 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
     }
 
+    function saveRecentTrackingNum(num) {
+      if (!num) return;
+      try {
+        let recents = JSON.parse(localStorage.getItem('dealscout_recent_tracks') || '[]');
+        recents = [num, ...recents.filter(n => n !== num)].slice(0, 4);
+        localStorage.setItem('dealscout_recent_tracks', JSON.stringify(recents));
+      } catch (e) {}
+    }
+
+    function renderRecentTrackingList() {
+      const wrap = document.getElementById('tracking-recent-wrap');
+      const list = document.getElementById('tracking-recent-list');
+      if (!wrap || !list) return;
+      try {
+        const recents = JSON.parse(localStorage.getItem('dealscout_recent_tracks') || '[]');
+        if (recents.length > 0) {
+          list.innerHTML = recents.map(n => `
+            <button type="button" onclick="setTrackingSample('${n}')" class="font-mono text-[10px] px-2 py-0.5 rounded border flex items-center gap-1 hover:border-blue-500 transition active:scale-95" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <span>${n}</span>
+            </button>
+          `).join('');
+          wrap.classList.remove('hidden');
+        } else {
+          wrap.classList.add('hidden');
+        }
+      } catch (e) {
+        wrap.classList.add('hidden');
+      }
+    }
+
     function copyTrackingNum() {
       const numEl = document.getElementById('tracking-result-num');
+      const icon = document.getElementById('tracking-copy-icon');
+      const text = document.getElementById('tracking-copy-text');
       if (numEl && numEl.textContent) {
         navigator.clipboard.writeText(numEl.textContent.trim()).then(() => {
+          if (icon) icon.className = 'fa-solid fa-check text-emerald-400';
+          if (text) text.textContent = (currentLang === 'fr') ? 'Copié !' : 'تم النسخ!';
           showToast(currentLang === 'fr' ? 'Numéro de suivi copié !' : 'تم نسخ رقم التتبع!');
+          setTimeout(() => {
+            if (icon) icon.className = 'fa-regular fa-copy';
+            if (text) text.textContent = (currentLang === 'fr') ? 'Copier' : 'نسخ';
+          }, 2000);
         });
       }
     }
@@ -5200,62 +5312,101 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         if (data && data.ok) {
           if (resultCard) resultCard.classList.remove('hidden');
 
-          // Update Carrier info
-          const carrierBadge = document.getElementById('tracking-carrier-badge');
-          const carrierName = document.getElementById('tracking-carrier-name');
-          const resultNum = document.getElementById('tracking-result-num');
-          const estTime = document.getElementById('tracking-est-time');
-          const statusBadge = document.getElementById('tracking-status-badge');
+          // Save to recent tracking numbers history
+          saveRecentTrackingNum(data.tracking_number);
+          renderRecentTrackingList();
 
+          const carrier = data.carrier || {};
           const isFr = currentLang === 'fr';
-          if (carrierName && data.carrier) {
-            carrierName.textContent = isFr ? (data.carrier.name_fr || data.carrier.name_ar) : data.carrier.name_ar;
-          }
+
+          // Carrier details & Flag
+          const flagEl = document.getElementById('tracking-carrier-flag');
+          if (flagEl) flagEl.textContent = carrier.origin_flag || '🌐';
+
+          const carrierName = document.getElementById('tracking-carrier-name');
+          if (carrierName) carrierName.textContent = isFr ? (carrier.name_fr || carrier.name_ar) : carrier.name_ar;
+
+          const serviceBadge = document.getElementById('tracking-service-badge');
+          if (serviceBadge) serviceBadge.textContent = isFr ? (carrier.service_type_fr || carrier.service_type_ar) : carrier.service_type_ar;
+
+          const routeOrigin = document.getElementById('tracking-route-origin');
+          if (routeOrigin) routeOrigin.textContent = isFr ? (carrier.origin_country_fr || carrier.origin_country_ar) : carrier.origin_country_ar;
+          const routeOriginFlag = document.getElementById('tracking-route-origin-flag');
+          if (routeOriginFlag) routeOriginFlag.textContent = carrier.origin_flag || '🇨🇳';
+
+          const resultNum = document.getElementById('tracking-result-num');
           if (resultNum) resultNum.textContent = data.tracking_number;
-          if (estTime && data.carrier) estTime.textContent = data.carrier.typical_days;
 
-          // Status Badge translation
-          if (statusBadge) {
-            const stages = {
-              'delivered': isFr ? 'Livré / Prêt au bureau de poste' : 'تم التسليم / جاهز للاستلام في البريد',
-              'customs': isFr ? 'En cours de dédouanement' : 'في المعالجة الجمركية',
-              'in_destination_country': isFr ? 'Arrivé en Algérie (CTN Alger)' : 'وصل إلى الجزائر (مركز الفرز CTN)',
-              'in_flight': isFr ? 'En transit aérien international' : 'في رحلة الشحن الجوي الدولي',
-              'in_transit': isFr ? "En cours d'acheminement" : 'في مسار الشحن الدولي'
+          const estTime = document.getElementById('tracking-est-time');
+          if (estTime) estTime.textContent = carrier.typical_days || '14 - 25 يوم';
+
+          // Status Badge with Color & Text
+          const statusText = document.getElementById('tracking-status-text');
+          const statusBadge = document.getElementById('tracking-status-badge');
+          if (statusBadge && statusText) {
+            const stageTexts = {
+              'delivered': isFr ? 'Prêt au bureau de poste / Livré 🎉' : 'جاهز للاستلام ببريد بلديتك 🎉',
+              'customs': isFr ? 'En cours de dédouanement' : 'في المعالجة والرقابة الجمركية',
+              'in_destination_country': isFr ? 'Arrivé en Algérie (CTN Alger) 🇩🇿' : 'وصل للجزائر (مركز الفرز CTN) 🇩🇿',
+              'in_flight': isFr ? 'En transit aérien international ✈️' : 'في رحلة الشحن الجوي الدولي ✈️',
+              'in_transit': isFr ? "En cours d'acheminement" : 'في مسار الشحن الدولي',
+              'registered_awaiting_scan': isFr ? 'Numéro généré — En attente du premier scan' : 'مسجل حديثاً — بانتظار أول فحص فيزيائي ⏳'
             };
-            statusBadge.textContent = stages[data.status_stage] || (isFr ? 'En transit' : 'في مسار الشحن');
+            statusText.textContent = stageTexts[data.status_stage] || (isFr ? 'En transit' : 'في مسار الشحن');
+            if (data.status_stage === 'delivered') {
+              statusBadge.className = 'px-3 py-1 rounded-xl text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/25 flex items-center gap-1.5';
+            } else if (data.status_stage === 'registered_awaiting_scan') {
+              statusBadge.className = 'px-3 py-1 rounded-xl text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/25 flex items-center gap-1.5';
+            } else {
+              statusBadge.className = 'px-3 py-1 rounded-xl text-xs font-bold bg-blue-500/10 text-blue-400 border border-blue-500/25 flex items-center gap-1.5';
+            }
           }
 
-          // Direct Portal Buttons
-          const links = data.portal_links || {};
-          const p17 = document.getElementById('btn-portal-17track');
-          if (p17 && links.track17) p17.href = links.track17;
-          const pCainiao = document.getElementById('btn-portal-cainiao');
-          if (pCainiao && links.cainiao) pCainiao.href = links.cainiao;
-          const pPoste = document.getElementById('btn-portal-poste');
-          if (pPoste && links.algerie_poste) pPoste.href = links.algerie_poste;
-          const pNinja = document.getElementById('btn-portal-ninja');
-          if (pNinja && links.postal_ninja) pNinja.href = links.postal_ninja;
+          // Smart Advisory Card
+          const advisoryCard = document.getElementById('tracking-advisory-card');
+          const advisoryTitle = document.getElementById('tracking-advisory-title');
+          const advisoryBody = document.getElementById('tracking-advisory-body');
+          if (advisoryCard && advisoryTitle && advisoryBody && data.advice) {
+            advisoryTitle.textContent = isFr ? (data.advice.title_fr || data.advice.title_ar) : data.advice.title_ar;
+            advisoryBody.textContent = isFr ? (data.advice.body_fr || data.advice.body_ar) : data.advice.body_ar;
+            advisoryCard.classList.remove('hidden');
+          }
 
-          // Update 5-Step Algerian Delivery Journey Stages
+          // 5-Step Algerian Delivery Journey Stages
+          let activeStepNum = 1;
           if (data.delivery_stages && data.delivery_stages.length > 0) {
             data.delivery_stages.forEach(st => {
               const stepEl = document.getElementById('track-step-' + st.step);
               if (stepEl) {
+                const badge = stepEl.querySelector('span');
                 if (st.completed) {
                   stepEl.classList.remove('opacity-40');
                   stepEl.style.borderColor = 'rgba(16, 185, 129, 0.4)';
-                  stepEl.style.backgroundColor = 'var(--bg-elevated)';
-                  const numBadge = stepEl.querySelector('span');
-                  if (numBadge) {
-                    numBadge.className = 'w-5 h-5 rounded-full bg-emerald-500 text-white font-bold text-[10px] flex items-center justify-center';
+                  if (badge) {
+                    badge.className = 'w-6 h-6 rounded-full bg-emerald-500 text-white font-bold text-[11px] flex items-center justify-center shadow';
                   }
                 } else {
                   stepEl.classList.add('opacity-40');
                   stepEl.style.borderColor = 'var(--border-card)';
+                  if (badge) {
+                    badge.className = 'w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center';
+                  }
+                }
+                if (st.active) {
+                  activeStepNum = st.step;
+                  stepEl.classList.remove('opacity-40');
+                  stepEl.style.borderColor = 'rgba(59, 130, 246, 0.6)';
+                  stepEl.style.boxShadow = '0 0 15px -3px rgba(59, 130, 246, 0.25)';
+                  if (badge) {
+                    badge.className = 'w-6 h-6 rounded-full bg-blue-500 text-white font-bold text-[11px] flex items-center justify-center shadow ring-2 ring-blue-400/40 animate-pulse';
+                  }
                 }
               }
             });
+            const progressEl = document.getElementById('tracking-journey-progress');
+            if (progressEl) {
+              progressEl.textContent = isFr ? `Étape ${activeStepNum} sur 5` : `المرحلة ${activeStepNum} من 5`;
+            }
           }
 
           // Checkpoints list feed
@@ -5264,10 +5415,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           if (checkWrap && checkList) {
             if (data.has_live_checkpoints && data.live_checkpoints && data.live_checkpoints.length > 0) {
               checkList.innerHTML = data.live_checkpoints.map(cp => `
-                <div class="relative pb-2.5">
-                  <span class="w-2 h-2 rounded-full bg-blue-500 absolute -right-[17px] top-1"></span>
-                  <div class="font-semibold text-xs" style="color: var(--text-main);">${cp.description}</div>
-                  <div class="text-[10px] font-mono opacity-70" style="color: var(--text-muted);">${cp.time || ''} ${cp.location ? '• ' + cp.location : ''}</div>
+                <div class="relative pb-3">
+                  <span class="w-2.5 h-2.5 rounded-full bg-blue-500 absolute -right-[18px] top-1 ring-4 ring-blue-500/20"></span>
+                  <div class="font-bold text-xs" style="color: var(--text-main);">${cp.description}</div>
+                  <div class="text-[11px] font-mono opacity-70 mt-0.5" style="color: var(--text-muted);">${cp.time || ''} ${cp.location ? '• ' + cp.location : ''}</div>
                 </div>
               `).join('');
               checkWrap.classList.remove('hidden');
@@ -5276,26 +5427,23 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             }
           }
 
-          // Embedded 17TRACK Universal Embed (Loads directly)
-          const yqBox = document.getElementById('YQContainer');
-          if (yqBox) {
-            yqBox.innerHTML = `
-              <iframe 
-                src="https://t.17track.net/${isFr ? 'fr' : 'ar'}#nums=${encodeURIComponent(data.tracking_number)}" 
-                width="100%" 
-                height="520" 
-                frameborder="0" 
-                class="w-full min-h-[520px] rounded-xl"
-                loading="lazy"
-                title="17TRACK Universal Tracking"
-              ></iframe>
-            `;
-          }
+          // Direct Portal Deep-Link Buttons
+          const links = data.portal_links || data.direct_links || {};
+          const p17 = document.getElementById('btn-portal-17track');
+          if (p17 && links.track17) p17.href = isFr ? (links.track17_en || links.track17) : links.track17;
+          const pCainiao = document.getElementById('btn-portal-cainiao');
+          if (pCainiao && links.cainiao) pCainiao.href = links.cainiao;
+          const pPoste = document.getElementById('btn-portal-poste');
+          if (pPoste && links.algerie_poste) pPoste.href = links.algerie_poste;
+          const pNinja = document.getElementById('btn-portal-ninja');
+          if (pNinja && links.postal_ninja) pNinja.href = links.postal_ninja;
+          const pParcels = document.getElementById('btn-portal-parcels');
+          if (pParcels && links.parcels_app) pParcels.href = links.parcels_app;
 
           if (resultCard) {
             resultCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           }
-          showToast(isFr ? 'Informations de suivi chargées !' : 'تم استرجاع بيانات التتبع بنجاح!');
+          showToast(isFr ? 'Détails de livraison chargés avec succès !' : 'تم استرجاع مسار الشحنة بنجاح!');
         } else {
           if (errBox) {
             errBox.classList.remove('hidden');
