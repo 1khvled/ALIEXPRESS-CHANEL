@@ -240,7 +240,10 @@
     "1005008500550817",
     "1005009834132291",
     "1005008077568655",
-    "1005009774318553"
+    "1005009774318553",
+    "1005012585389764",
+    "1005011997237872",
+    "1005011908654312"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -387,7 +390,7 @@
     "1005006974721332": 1791056453.5992196,
     "1005010266413614": 1791141939.4721515,
     "1005009497821240": 1791117948.6585228,
-    "1005011925142821": 1791975950.7275662,
+    "1005011925142821": 1792061295.4212031,
     "9998883864": 1791063864.5866926,
     "1005010536089199": 1791942631.2692645,
     "1005012385221205": 1791102050.1835058,
@@ -426,14 +429,14 @@
     "1005013313539058": 1791482965.5086565,
     "9998889315": 1791589315.5172248,
     "COUPONS_54d30f00dccf": 1791626806.6018147,
-    "1005008776714223": 1791943777.8506553,
+    "1005008776714223": 1792061290.6019506,
     "9998886934": 1791626934.8945594,
     "9998887499": 1791627499.229838,
     "9998887532": 1791627532.2548609,
     "9998887893": 1791627893.027416,
     "1005006007773971": 1791638433.4352653,
     "1005013067004815": 1791638447.7612462,
-    "1005009948598802": 1792017751.560627,
+    "1005009948598802": 1792061314.5490136,
     "9998885318": 1791675318.975821,
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
@@ -454,14 +457,14 @@
     "9998889143": 1791759143.197184,
     "9998889531": 1791759531.2084382,
     "9998889936": 1791759936.937901,
-    "1005012824429842": 1791941215.3821247,
+    "1005012824429842": 1792061306.8517709,
     "1005008450489185": 1791941233.817019,
     "1005012086685834": 1791941271.2358608,
     "1005012914301139": 1791942620.3773732,
     "1005007345151855": 1791942667.867043,
     "1005010345227483": 1791942676.1983886,
     "1005011557896041": 1791943741.5394402,
-    "1005011754993234": 1791943748.7195513,
+    "1005011754993234": 1792061283.4535055,
     "1005011735727412": 1791943783.9162278,
     "1005013039644752": 1791943797.3155782,
     "1005007916078341": 1792050965.154088,
@@ -491,7 +494,10 @@
     "1005008500550817": 1792025664.1703467,
     "1005009834132291": 1792025670.659584,
     "1005008077568655": 1792032611.9670143,
-    "1005009774318553": 1792050974.7243752
+    "1005009774318553": 1792050974.7243752,
+    "1005012585389764": 1792061322.5579543,
+    "1005011997237872": 1792061329.5738766,
+    "1005011908654312": 1792061334.470126
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -779,7 +785,12 @@
     "محبوبة الجماهير controller🎮",
     "EasySMX X05 Pro Wireless Gamepad",
     "MACHENIKE G5Pro Max SE Gaming Controller",
-    "قرص تخزين خارجي محمول CUSU SSD سعة 512 جيجابايت"
+    "قرص تخزين خارجي محمول CUSU SSD سعة 512 جيجابايت",
+    "CUSU SSD 512GB",
+    "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)",
+    "Redmi Pad 2 9.7",
+    "Redmi Note 12 5G Global (4/128GB)",
+    "Blackview Wave 10C"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1020,7 +1031,7 @@
     "Essager 54W USB Car Charger": 1791752780.7013927,
     "Original QKZ AK6": 1791752787.9016774,
     "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": 1791752811.1502168,
-    "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W": 1792017751.560627,
+    "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W": 1792061314.5490136,
     "🌐نسخة عالمية": 1791752930.9846199,
     "realme P3 5G 8/256GB": 1791941221.9951465,
     "HONOR Watch X5i Global Version": 1791941229.2882626,
@@ -1031,12 +1042,12 @@
     "BlackShark Buds 6 ANC": 1791942620.3773732,
     "Attack Shark X2 Pro Magnetic": 1791942626.6772876,
     "Anker Q20i Hybrid ANC": 1791942631.2692645,
-    "HONOR 600 Lite 5G 8/256": 1791975950.7275662,
+    "HONOR 600 Lite 5G 8/256": 1792061295.4212031,
     "ATTACK SHARK X11SE Wireless Gaming Mouse PixArt PAW3311": 1791942658.9081998,
     "لووووووووووووز controller 🎮": 1791942667.867043,
     "جديد علامة ©️©️©️©️🆕": 1791942676.1983886,
     "AMD Ryzen 7 7800X3D": 1791943741.5394402,
-    "AMD Ryzen 5 8400F": 1791943748.7195513,
+    "AMD Ryzen 5 8400F": 1792061283.4535055,
     "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": 1791943777.8506553,
     "🔝 مانات قووووة ل جماعة mobile gaming 🎮": 1792017738.3981204,
     "جديد ال ©️©️ ببطارية عملاقة💪💪": 1791943797.3155782,
@@ -1070,7 +1081,12 @@
     "محبوبة الجماهير controller🎮": 1792025664.1703467,
     "EasySMX X05 Pro Wireless Gamepad": 1792025670.659584,
     "MACHENIKE G5Pro Max SE Gaming Controller": 1792032611.9670143,
-    "قرص تخزين خارجي محمول CUSU SSD سعة 512 جيجابايت": 1792050974.7243752
+    "قرص تخزين خارجي محمول CUSU SSD سعة 512 جيجابايت": 1792050974.7243752,
+    "CUSU SSD 512GB": 1792061290.6019506,
+    "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)": 1792061306.8517709,
+    "Redmi Pad 2 9.7": 1792061322.5579543,
+    "Redmi Note 12 5G Global (4/128GB)": 1792061329.5738766,
+    "Blackview Wave 10C": 1792061334.470126
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1817,27 +1833,35 @@
     "megaphonna:8376",
     "zedstoreonline:38600",
     "zedstoreonline:38602",
-    "zedstoreonline:38604"
+    "zedstoreonline:38604",
+    "zedstoreonline:38605",
+    "zedstoreonline:38606",
+    "zedstoreonline:38607",
+    "megaphonna:8388",
+    "megaphonna:8390",
+    "aniscoupons:32952",
+    "aniscoupons:32953",
+    "aniscoupons:32954"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1792050974.7243752,
+  "last_run_time": 1792061334.470126,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32950,
-      "last_check_time": 1792025689.548695
+      "last_message_id": 32954,
+      "last_check_time": 1792061336.4892106
     },
     "ecksdeal": {
       "last_message_id": 5892,
-      "last_check_time": 1792032614.6201816
+      "last_check_time": 1792061298.9047992
     },
     "lodydeals": {
       "last_message_id": 45547,
-      "last_check_time": 1792050956.9249027
+      "last_check_time": 1792061276.7712893
     },
     "bnddeals": {
       "last_message_id": 50856,
-      "last_check_time": 1792032615.332507
+      "last_check_time": 1792061299.7097218
     },
     "test_channel": {
       "last_message_id": 1791759936,
@@ -1845,15 +1869,15 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792032614.9918299
+      "last_check_time": 1792061299.3308048
     },
     "zedstoreonline": {
-      "last_message_id": 38604,
-      "last_check_time": 1792050976.7370327
+      "last_message_id": 38608,
+      "last_check_time": 1792061298.1652339
     },
     "megaphonna": {
-      "last_message_id": 8386,
-      "last_check_time": 1792032622.3701465
+      "last_message_id": 8390,
+      "last_check_time": 1792061316.5679557
     },
     "couponsglobal": {
       "last_message_id": 48848,
@@ -1957,7 +1981,7 @@
     "1005010470699571": 24.56,
     "1005012741634118": 29.0,
     "1005008554596598": 15.4,
-    "1005008776714223": 45.74,
+    "1005008776714223": 45.7,
     "1005010306498953": 1.46,
     "1005010338761787": 1.49,
     "1005012265051745": 246.04,
@@ -2041,14 +2065,14 @@
     "1005006966177706": 3.49,
     "1005012234106869": 1.71,
     "1005010209307090": 204.1,
-    "1005012824429842": 252.24,
+    "1005012824429842": 252.0,
     "1005008450489185": 23.91,
     "1005012086685834": 8.99,
     "1005012914301139": 12.96,
     "1005007345151855": 40.0,
     "1005010345227483": 246.4,
     "1005011557896041": 257.22,
-    "1005011754993234": 87.58,
+    "1005011754993234": 87.5,
     "1005011735727412": 26.6,
     "1005013039644752": 186.5,
     "1005007916078341": 59.0,
@@ -2074,7 +2098,10 @@
     "1005012933967378": 26.5,
     "1005010812635861": 92.0,
     "1005008500550817": 23.6,
-    "1005008077568655": 42.3
+    "1005008077568655": 42.3,
+    "1005012585389764": 153.9,
+    "1005011997237872": 111.2,
+    "1005011908654312": 122.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -5679,6 +5706,86 @@
       "price": 51.9,
       "timestamp": 1792050974.7243752,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38605": {
+      "channel_msg_id": 832,
+      "product_id": "1005011754993234",
+      "title": "AMD Ryzen 5 8400F",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38605,
+      "price": 87.5,
+      "timestamp": 1792061283.4535055,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38606": {
+      "channel_msg_id": 833,
+      "product_id": "1005008776714223",
+      "title": "CUSU SSD 512GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38606,
+      "price": 45.7,
+      "timestamp": 1792061290.6019506,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38607": {
+      "channel_msg_id": 834,
+      "product_id": "1005011925142821",
+      "title": "HONOR 600 Lite 5G 8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38607,
+      "price": 263.0,
+      "timestamp": 1792061295.4212031,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8388": {
+      "channel_msg_id": 835,
+      "product_id": "1005012824429842",
+      "title": "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8388,
+      "price": 252.0,
+      "timestamp": 1792061306.8517709,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8390": {
+      "channel_msg_id": 836,
+      "product_id": "1005009948598802",
+      "title": "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W",
+      "channel": "megaphonna",
+      "source_msg_id": 8390,
+      "price": 231.9,
+      "timestamp": 1792061314.5490136,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32952": {
+      "channel_msg_id": 837,
+      "product_id": "1005012585389764",
+      "title": "Redmi Pad 2 9.7",
+      "channel": "aniscoupons",
+      "source_msg_id": 32952,
+      "price": 153.9,
+      "timestamp": 1792061322.5579543,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32953": {
+      "channel_msg_id": 838,
+      "product_id": "1005011997237872",
+      "title": "Redmi Note 12 5G Global (4/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 32953,
+      "price": 111.2,
+      "timestamp": 1792061329.5738766,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32954": {
+      "channel_msg_id": 839,
+      "product_id": "1005011908654312",
+      "title": "Blackview Wave 10C",
+      "channel": "aniscoupons",
+      "source_msg_id": 32954,
+      "price": 122.6,
+      "timestamp": 1792061334.470126,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -5687,17 +5794,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792050988.7653036,
+    "last_deal_post_time": 1792061336.5060856,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792050991.044767,
+    "last_sweep_time": 1792061339.1637588,
     "last_sweep_times": {
-      "algeria": 1792050988.7585166,
-      "france": 1792050991.044767
+      "algeria": 1792061336.497886,
+      "france": 1792061339.1637588
     },
     "last_deal_post_times": {
-      "algeria": 1792050988.7653036
+      "algeria": 1792061336.5060856
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -5802,7 +5909,7 @@
     "1005010470699571": "aniscoupons",
     "1005012741634118": "aniscoupons",
     "1005008554596598": "bnddeals",
-    "1005008776714223": "pcgamingpart",
+    "1005008776714223": "zedstoreonline",
     "1005010306498953": "lodydeals",
     "1005010338761787": "lodydeals",
     "1005012265051745": "lodydeals",
@@ -5917,14 +6024,14 @@
     "9998889143": "test_channel",
     "9998889531": "test_channel",
     "9998889936": "test_channel",
-    "1005012824429842": "lodydeals",
+    "1005012824429842": "megaphonna",
     "1005008450489185": "lodydeals",
     "1005012086685834": "pcgamingpart",
     "1005012914301139": "lodydeals",
     "1005007345151855": "bnddeals",
     "1005010345227483": "megaphonna",
     "1005011557896041": "lodydeals",
-    "1005011754993234": "lodydeals",
+    "1005011754993234": "zedstoreonline",
     "1005011735727412": "bnddeals",
     "1005013039644752": "megaphonna",
     "1005007916078341": "zedstoreonline",
@@ -5950,7 +6057,10 @@
     "1005012933967378": "zedstoreonline",
     "1005010812635861": "zedstoreonline",
     "1005008500550817": "bnddeals",
-    "1005008077568655": "zedstoreonline"
+    "1005008077568655": "zedstoreonline",
+    "1005012585389764": "aniscoupons",
+    "1005011997237872": "aniscoupons",
+    "1005011908654312": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -6206,7 +6316,7 @@
     "ATTACK SHARK X11SE Wireless Gaming Mouse PixArt PAW3311": "pcgamingpart",
     "لووووووووووووز controller 🎮": "bnddeals",
     "جديد علامة ©️©️©️©️🆕": "megaphonna",
-    "AMD Ryzen 5 8400F": "lodydeals",
+    "AMD Ryzen 5 8400F": "zedstoreonline",
     "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": "pcgamingpart",
     "🔝 مانات قووووة ل جماعة mobile gaming 🎮": "bnddeals",
     "جديد ال ©️©️ ببطارية عملاقة💪💪": "megaphonna",
@@ -6240,7 +6350,12 @@
     "محبوبة الجماهير controller🎮": "bnddeals",
     "EasySMX X05 Pro Wireless Gamepad": "bnddeals",
     "MACHENIKE G5Pro Max SE Gaming Controller": "zedstoreonline",
-    "قرص تخزين خارجي محمول CUSU SSD سعة 512 جيجابايت": "zedstoreonline"
+    "قرص تخزين خارجي محمول CUSU SSD سعة 512 جيجابايت": "zedstoreonline",
+    "CUSU SSD 512GB": "zedstoreonline",
+    "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)": "megaphonna",
+    "Redmi Pad 2 9.7": "aniscoupons",
+    "Redmi Note 12 5G Global (4/128GB)": "aniscoupons",
+    "Blackview Wave 10C": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -6264,7 +6379,7 @@
     "test_rem_5900fa25": "2026-10-02",
     "test_rem_b90624f4": "2026-10-02",
     "test_rem_5b9c8e4c": "2026-10-02",
-    "daily_dhikr": "2026-10-14",
+    "daily_dhikr": "2026-10-15",
     "test_rem_7dc40719": "2026-10-02",
     "test_rem_dc43d1e0": "2026-10-02",
     "test_rem_3de63a14": "2026-10-02",
@@ -6710,7 +6825,11 @@
     "megaphonna:8385",
     "megaphonna:8386",
     "zedstoreonline:38601",
-    "zedstoreonline:38603"
+    "zedstoreonline:38603",
+    "zedstoreonline:38608",
+    "megaphonna:8382",
+    "aniscoupons:32945",
+    "aniscoupons:32951"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
