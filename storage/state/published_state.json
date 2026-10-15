@@ -238,7 +238,8 @@
     "1005012933967378",
     "1005010812635861",
     "1005008500550817",
-    "1005009834132291"
+    "1005009834132291",
+    "1005008077568655"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -487,7 +488,8 @@
     "1005012933967378": 1792025649.1506214,
     "1005010812635861": 1792025653.768273,
     "1005008500550817": 1792025664.1703467,
-    "1005009834132291": 1792025670.659584
+    "1005009834132291": 1792025670.659584,
+    "1005008077568655": 1792032611.9670143
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -773,7 +775,8 @@
     "Anker Nano 3 Pro 45W GaN + Cable",
     "Blackview Wave 7C",
     "محبوبة الجماهير controller🎮",
-    "EasySMX X05 Pro Wireless Gamepad"
+    "EasySMX X05 Pro Wireless Gamepad",
+    "MACHENIKE G5Pro Max SE Gaming Controller"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1062,7 +1065,8 @@
     "Anker Nano 3 Pro 45W GaN + Cable": 1792025649.1506214,
     "Blackview Wave 7C": 1792025653.768273,
     "محبوبة الجماهير controller🎮": 1792025664.1703467,
-    "EasySMX X05 Pro Wireless Gamepad": 1792025670.659584
+    "EasySMX X05 Pro Wireless Gamepad": 1792025670.659584,
+    "MACHENIKE G5Pro Max SE Gaming Controller": 1792032611.9670143
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1806,11 +1810,12 @@
     "zedstoreonline:38599",
     "bnddeals:50855",
     "bnddeals:50856",
-    "megaphonna:8376"
+    "megaphonna:8376",
+    "zedstoreonline:38600"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1792025678.6249368,
+  "last_run_time": 1792032611.9670143,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32950,
@@ -1818,15 +1823,15 @@
     },
     "ecksdeal": {
       "last_message_id": 5892,
-      "last_check_time": 1792025656.3837907
+      "last_check_time": 1792032614.6201816
     },
     "lodydeals": {
       "last_message_id": 45547,
-      "last_check_time": 1792025640.2131176
+      "last_check_time": 1792032608.5872648
     },
     "bnddeals": {
       "last_message_id": 50856,
-      "last_check_time": 1792025672.6776986
+      "last_check_time": 1792032615.332507
     },
     "test_channel": {
       "last_message_id": 1791759936,
@@ -1834,19 +1839,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792025656.739383
+      "last_check_time": 1792032614.9918299
     },
     "zedstoreonline": {
-      "last_message_id": 38599,
-      "last_check_time": 1792025655.7870097
+      "last_message_id": 38600,
+      "last_check_time": 1792032613.9844375
     },
     "megaphonna": {
-      "last_message_id": 8383,
-      "last_check_time": 1792025685.7296731
+      "last_message_id": 8386,
+      "last_check_time": 1792032622.3701465
     },
     "couponsglobal": {
       "last_message_id": 48848,
-      "last_check_time": 1792025689.894965
+      "last_check_time": 1792032624.2727525
     }
   },
   "published_product_prices": {
@@ -2062,7 +2067,8 @@
     "32983391170": 19.9,
     "1005012933967378": 26.5,
     "1005010812635861": 92.0,
-    "1005008500550817": 23.6
+    "1005008500550817": 23.6,
+    "1005008077568655": 42.3
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -5637,6 +5643,16 @@
       "price": 171.4,
       "timestamp": 1792025678.6249368,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38600": {
+      "channel_msg_id": 827,
+      "product_id": "1005008077568655",
+      "title": "MACHENIKE G5Pro Max SE Gaming Controller",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38600,
+      "price": 42.3,
+      "timestamp": 1792032611.9670143,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -5645,17 +5661,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792025689.910688,
+    "last_deal_post_time": 1792032624.2911386,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792025692.0596418,
+    "last_sweep_time": 1792032627.1249588,
     "last_sweep_times": {
-      "algeria": 1792025689.9030118,
-      "france": 1792025692.0596418
+      "algeria": 1792032624.2815883,
+      "france": 1792032627.1249588
     },
     "last_deal_post_times": {
-      "algeria": 1792025689.910688
+      "algeria": 1792032624.2911386
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -5907,7 +5923,8 @@
     "32983391170": "zedstoreonline",
     "1005012933967378": "zedstoreonline",
     "1005010812635861": "zedstoreonline",
-    "1005008500550817": "bnddeals"
+    "1005008500550817": "bnddeals",
+    "1005008077568655": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -6195,7 +6212,8 @@
     "Anker Nano 3 Pro 45W GaN + Cable": "zedstoreonline",
     "Blackview Wave 7C": "zedstoreonline",
     "محبوبة الجماهير controller🎮": "bnddeals",
-    "EasySMX X05 Pro Wireless Gamepad": "bnddeals"
+    "EasySMX X05 Pro Wireless Gamepad": "bnddeals",
+    "MACHENIKE G5Pro Max SE Gaming Controller": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -6392,8 +6410,8 @@
     "END_ALERT_Brand Day Sale_20261013",
     "LAUNCH_ALERT_Winter Offers_20261014"
   ],
-  "last_card_affiliate_time_dz": 1791942707.848495,
-  "card_affiliate_variant_idx_dz": 2,
+  "last_card_affiliate_time_dz": 1792032596.1133597,
+  "card_affiliate_variant_idx_dz": 0,
   "last_tajmi3at_published_time": 1792017699.1436057,
   "published_deals_history": {},
   "settings": {},
@@ -6658,7 +6676,11 @@
     "bnddeals:50848",
     "bnddeals:50854",
     "megaphonna:8383",
-    "aniscoupons:32950"
+    "aniscoupons:32950",
+    "megaphonna:8374",
+    "megaphonna:8384",
+    "megaphonna:8385",
+    "megaphonna:8386"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
