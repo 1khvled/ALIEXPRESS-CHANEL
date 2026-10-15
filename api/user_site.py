@@ -480,6 +480,63 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://dealscoutgreen.vercel.app/#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "كيف يتم احتساب الأسعار بالدينار الجزائري (DZD)؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "يتم حساب السعر بالدينار الجزائري تلقائياً وبدقة عالية اعتماداً على سعر صرف الدولار واليورو في السوق الموازي (سعر السكوار الحقيقي) المستخرج مباشرة من موقع SquareAlgerie.com."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كيف يتم شحن الطرود واستلامها في الجزائر؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "تشحن معظم المنتجات عبر بريد الجزائر (Algérie Poste / EMS). يصل الطرد إلى أقرب مكتب بريد لعنوان سكناك ويتم إرسال إشعار وصول SMS إلى هاتفك. تستغرق مدة الوصول بين 15 و28 يوماً مع AliExpress Choice وStandard Shipping."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كيف أشتري من AliExpress باستخدام تطبيق بريدي موب (BaridiMob)؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "تتم العملية بفتح حساب على منصة Binance واستخدام سوق P2P لشراء رصيد USDT بالدينار الجزائري والدفع عبر BaridiMob لبائع موثوق، ثم سحب الرصيد إلى بطاقة Bybit ماستركارد المجانية أو بطاقة RedotPay في دقائق معدودة."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "ما هي قوانين الجمارك الجزائرية للطرود البريدية؟ وما هي السلع الممنوعة؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "الطرود البريدية المخصصة للاستخدام الشخصي والعائلي معفاة تماماً من الرسوم الجمركية في الجزائر بشرط عدم استيراد كميات تجارية متكررة. ويحظر استيراد طائرات الدرون، كاميرات التجسس المخفية، وأجهزة اللاسلكي بدون رخصة."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كيف أحصل على أقصى تخفيض لعملات AliExpress Coins (حتى 70%)؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "باستخدام أداة مولد روابط العملات على منصة DealScout DZ أو بوت @Alilo07BOT، يتم توليد رابط مخصص يرفع نسبة قبول العملات على نفس السلعة من 2% حتى 70% عند الشراء مباشرة من قسم العملات."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "كيف أكتب العنوان الجزائري والرمز البريدي (Code Postal) بشكل صحيح؟",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "اكتب اسمك المطابق للهوية الوطنية ورقم هاتفك الفعال. أدخل الرمز البريدي الدقيق المكون من 5 أرقام (رقمان للولاية و3 أرقام لمركز التوزيع البريدي لبلديتك) لضمان وصول الطرد مباشرة لمكتب البريد المحلي."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="min-h-screen flex flex-col justify-between" dir="rtl">
 
@@ -544,10 +601,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <img src="/logo_circular.png" alt="DealScout DZ" width="36" height="36" style="width: 36px; height: 36px; max-width: 36px; max-height: 36px; object-fit: contain;" class="w-9 h-9 rounded-xl object-contain shadow-sm flex-shrink-0 brand-logo-img" onerror="this.onerror=null; this.src='/logo.png'">
         <div>
           <div class="flex items-center gap-1.5">
-            <h1 class="font-bold text-base tracking-tight font-inter inline-flex items-center gap-1.5" style="color: var(--text-main);">
+            <div class="font-bold text-base tracking-tight font-inter inline-flex items-center gap-1.5" style="color: var(--text-main);">
               <span>DealScout<span class="text-crimson-500">DZ</span></span>
               <span class="text-[10px] font-semibold px-1.5 py-0.2 rounded border font-mono font-normal" style="background-color: var(--bg-subtle); border-color: var(--border-card); color: var(--text-muted);">2.6</span>
-            </h1>
+            </div>
           </div>
           <p class="text-[10px] hidden sm:block -mt-0.5" style="color: var(--text-soft);" data-i18n="brand_subtitle">بوابة صفقات وتخفيضات AliExpress 🇩🇿</p>
         </div>
@@ -800,10 +857,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       <!-- Section Title & Live Count -->
       <div class="flex items-center justify-between border-b pb-2" style="border-color: var(--border-card);">
-        <h2 class="text-xs sm:text-sm font-bold flex items-center gap-2" style="color: var(--text-main);">
+        <h1 class="text-xs sm:text-sm font-bold flex items-center gap-2" style="color: var(--text-main);">
           <i class="fa-solid fa-fire text-crimson-500" aria-hidden="true"></i>
           <span data-i18n="deals_section_heading">أحدث صفقات وتخفيضات AliExpress بالدينار الجزائري</span>
-        </h2>
+        </h1>
         <span class="text-[11px] text-emerald-500 flex items-center gap-1.5 font-medium">
           <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
           <span id="live-deals-counter" class="font-mono">...</span>
@@ -924,6 +981,37 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
         </div>
 
+        <!-- Internal Navigation & Cross-Links (Prevent Orphan Pages & Boost PageRank) -->
+        <div class="border-t pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs" style="border-color: var(--border-card);">
+          <a href="#cards" onclick="showPage('cards')" class="p-3 rounded-xl border flex items-center gap-2.5 transition hover:border-emerald-500/50" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/15 text-emerald-500 flex items-center justify-center flex-shrink-0 text-sm">
+              <i class="fa-solid fa-credit-card"></i>
+            </div>
+            <div class="min-w-0">
+              <div class="font-bold text-xs truncate" data-i18n="crosslink_cards_title">دليل بطاقات الدفع وبريدي موب</div>
+              <div class="text-[10px] opacity-75 truncate" data-i18n="crosslink_cards_sub">Bybit مجانية وRedotPay</div>
+            </div>
+          </a>
+          <a href="#coins" onclick="showPage('coins')" class="p-3 rounded-xl border flex items-center gap-2.5 transition hover:border-amber-500/50" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+            <div class="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center flex-shrink-0 text-sm">
+              <i class="fa-solid fa-coins"></i>
+            </div>
+            <div class="min-w-0">
+              <div class="font-bold text-xs truncate" data-i18n="crosslink_coins_title">بوت ومولد تخفيض العملات Coins</div>
+              <div class="text-[10px] opacity-75 truncate" data-i18n="crosslink_coins_sub">وفر حتى 70% من السعر</div>
+            </div>
+          </a>
+          <a href="#faq" onclick="showPage('faq')" class="p-3 rounded-xl border flex items-center gap-2.5 transition hover:border-sky-500/50" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+            <div class="w-8 h-8 rounded-lg bg-sky-500/15 text-sky-500 flex items-center justify-center flex-shrink-0 text-sm">
+              <i class="fa-solid fa-circle-question"></i>
+            </div>
+            <div class="min-w-0">
+              <div class="font-bold text-xs truncate" data-i18n="crosslink_faq_title">الأسئلة الشائعة وقوانين الجمارك</div>
+              <div class="text-[10px] opacity-75 truncate" data-i18n="crosslink_faq_sub">الشحن واستلام الطرود بالبريد</div>
+            </div>
+          </a>
+        </div>
+
         <!-- Popular Algerian Search Keywords Tags Cloud -->
         <div class="border-t pt-4 space-y-2 text-xs" style="border-color: var(--border-card);">
           <div class="font-bold text-xs uppercase tracking-wider flex items-center gap-1.5" style="color: var(--text-main);">
@@ -959,9 +1047,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <i class="fa-solid fa-credit-card"></i>
           <span data-i18n="cards_badge">دليل بطاقات الدفع والشحن بالدينار الجزائري 🇩🇿</span>
         </div>
-        <h2 class="text-lg sm:text-xl font-bold tracking-tight" style="color: var(--text-main);" data-i18n="cards_hero_title">
+        <h1 class="text-lg sm:text-xl font-bold tracking-tight" style="color: var(--text-main);" data-i18n="cards_hero_title">
           كيف تشتري من AliExpress وأنت في الجزائر؟ | أفضل البطاقات والشحن بـ BaridiMob
-        </h2>
+        </h1>
         <p class="text-xs sm:text-sm leading-relaxed max-w-3xl" style="color: var(--text-muted);" data-i18n="cards_hero_desc">
           لأن البطاقات البنكية الجزائرية المحلية لا تعمل في المواقع العالمية، إليك الحل الرسمي والمجرب: احصل على بطاقة افتراضية دولية مجانية، واشحنها مباشرة بالدينار الجزائري عبر بريدي موب ومنصة بينانس دون وسطاء وبأقل تكلفة!
         </p>
@@ -1089,9 +1177,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <!-- Step-by-Step BaridiMob Shopping Workflow Guide -->
       <div class="border rounded-xl p-5 sm:p-6 space-y-5" style="background-color: var(--bg-card); border-color: var(--border-card);">
         <div class="space-y-1">
-          <h3 class="text-lg sm:text-xl font-bold" style="color: var(--text-main);" data-i18n="cards_guide_title">
+          <h2 class="text-lg sm:text-xl font-bold" style="color: var(--text-main);" data-i18n="cards_guide_title">
             دليل الشراء خطوة بخطوة بالدينار الجزائري (BaridiMob) 🇩🇿
-          </h3>
+          </h2>
           <p class="text-xs sm:text-sm" style="color: var(--text-muted);" data-i18n="cards_guide_subtitle">
             الطريقة الرسمية والآمنة التي يستعملها آلاف المتسوقين الجزائريين يومياً للشراء من AliExpress بأقل تكلفة:
           </p>
@@ -1101,7 +1189,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           
           <div class="border rounded-xl p-4 space-y-2 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
             <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 font-bold flex items-center justify-center text-sm">1</div>
-            <h4 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step1_title">1. شراء USDT بـ BaridiMob</h4>
+            <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step1_title">1. شراء USDT بـ BaridiMob</h3>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_step1_desc">
               افتح حسابك في Binance، ادخل قسم P2P واختر الدفع بـ BaridiMob لشراء المبلغ المطلوب من الدولار الرقمي (USDT) مباشرة في دقيقتين.
             </p>
@@ -1109,7 +1197,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
           <div class="border rounded-xl p-4 space-y-2 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
             <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 font-bold flex items-center justify-center text-sm">2</div>
-            <h4 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step2_title">2. شحن بطاقتك الافتراضية</h4>
+            <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step2_title">2. شحن بطاقتك الافتراضية</h3>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_step2_desc">
               حوّل رصيد USDT من Binance إلى حساب Bybit أو RedotPay الخاص بك عبر شبكة سريعة بدون أي رسوم مرتفعة.
             </p>
@@ -1117,7 +1205,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
           <div class="border rounded-xl p-4 space-y-2 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
             <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 font-bold flex items-center justify-center text-sm">3</div>
-            <h4 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step3_title">3. ربط البطاقة في AliExpress</h4>
+            <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step3_title">3. ربط البطاقة في AliExpress</h3>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_step3_desc">
               انسخ معلومات بطاقتك الافتراضية (رقم البطاقة وتاريخ الانتهاء وCVV) وأضفها في وسائل الدفع بتطبيق AliExpress.
             </p>
@@ -1125,12 +1213,82 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
           <div class="border rounded-xl p-4 space-y-2 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
             <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 font-bold flex items-center justify-center text-sm">4</div>
-            <h4 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step4_title">4. تطبيق الخصومات والشراء</h4>
+            <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step4_title">4. تطبيق الخصومات والشراء</h3>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_step4_desc">
               اختر صفقتك من موقعنا، انسخ كود الخصم، استخدم بوت العملات واستلم طردك مباشرة من مكتب بريد الجزائر القريب منك!
             </p>
           </div>
 
+        </div>
+      </div>
+
+      <!-- In-Depth Algerian Shipping & Customs Guide Section -->
+      <div class="border rounded-2xl p-6 sm:p-8 space-y-6" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="space-y-1 border-b pb-4" style="border-color: var(--border-card);">
+          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-500">
+            <i class="fa-solid fa-map-location-dot text-xs"></i>
+            <span data-i18n="cards_post_badge">إرشادات الشحن والجمارك في الجزائر 2026</span>
+          </div>
+          <h2 class="text-base sm:text-lg font-bold" style="color: var(--text-main);" data-i18n="cards_post_title">
+            ضبط العنوان الجزائري، قوانين الجمارك (Douane)، واستلام الطرد من البريد
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs leading-relaxed" style="color: var(--text-muted);">
+          <!-- Block A: Address & Postal Code -->
+          <div class="border rounded-xl p-4 space-y-2" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <h3 class="font-bold text-sm flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-solid fa-envelopes-bulk text-sky-500"></i>
+              <span data-i18n="cards_addr_h">1. ضبط الرمز البريدي والعنوان</span>
+            </h3>
+            <p data-i18n="cards_addr_p">
+              اكتب اسمك المطابق لبطاقة الهوية ورقم هاتفك الفعال لتلقي SMS. تأكد من إدخال الرمز البريدي الدقيق المكون من 5 أرقام (أول رقمين هما رقم ولايتك، والـ 3 أرقام التالية هي مركز التوزيع البريدي لبلديتك).
+            </p>
+          </div>
+
+          <!-- Block B: Algerian Customs Rules -->
+          <div class="border rounded-xl p-4 space-y-2" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <h3 class="font-bold text-sm flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-solid fa-shield-halved text-amber-500"></i>
+              <span data-i18n="cards_customs_h">2. الجمارك الجزائرية والطرود</span>
+            </h3>
+            <p data-i18n="cards_customs_p">
+              الطرود الشخصية معفاة من الرسوم الجمركية. تجنب طلب كميات تجارية من نفس الصنف لتفادي الحجز. يُمنع منعاً باتاً استيراد طائرات الدرون، كاميرات المراقبة التجسسية المخفية، وأجهزة اللاسلكي غير المرخصة.
+            </p>
+          </div>
+
+          <!-- Block C: Tracking & Delivery -->
+          <div class="border rounded-xl p-4 space-y-2" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <h3 class="font-bold text-sm flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-solid fa-box-open text-emerald-500"></i>
+              <span data-i18n="cards_pickup_h">3. التتبع والاستلام من البريد</span>
+            </h3>
+            <p data-i18n="cards_pickup_p">
+              تتبع شحنتك عبر 17track وموقع بريد الجزائر بمجرد وصولها. عند وصول إشعار SMS أو Avis de passage، توجه إلى مكتب البريد مصحوباً ببطاقتك الوطنية، وادفع رسم التخليص البريدي الرمزي (~130 إلى 250 دج) واستلم طردك.
+            </p>
+          </div>
+        </div>
+
+        <!-- Cross-Link Actions from Cards Page -->
+        <div class="pt-2 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--border-card);">
+          <div class="font-bold flex items-center gap-1.5" style="color: var(--text-main);">
+            <i class="fa-solid fa-arrow-right-arrow-left text-emerald-500"></i>
+            <span data-i18n="cards_crosslink_heading">انتقل إلى أقسام الموقع الأخرى:</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <a href="#deals" onclick="showPage('deals')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-crimson-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-fire text-crimson-500 mr-1"></i>
+              <span data-i18n="nav_deals">الصفقات المباشرة</span>
+            </a>
+            <a href="#coins" onclick="showPage('coins')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-amber-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-coins text-amber-500 mr-1"></i>
+              <span data-i18n="nav_coins">مولد العملات Coins</span>
+            </a>
+            <a href="#faq" onclick="showPage('faq')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-sky-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-circle-question text-sky-500 mr-1"></i>
+              <span data-i18n="nav_faq">الأسئلة الشائعة</span>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -1141,47 +1299,47 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <i class="fa-solid fa-circle-question text-xs"></i>
             <span data-i18n="cards_faq_badge">أسئلة شائعة حول البطاقات والشحن</span>
           </div>
-          <h3 class="text-base sm:text-lg font-bold" style="color: var(--text-main);" data-i18n="cards_faq_title">
+          <h2 class="text-base sm:text-lg font-bold" style="color: var(--text-main);" data-i18n="cards_faq_title">
             أهم الأسئلة الشائعة حول الدفع والشراء بالدينار الجزائري
-          </h3>
+          </h2>
         </div>
 
         <div class="space-y-3 text-xs sm:text-sm">
           <div class="border rounded-xl p-4 space-y-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-            <h4 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
+            <h3 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
               <i class="fa-solid fa-chevron-left text-emerald-500 text-[10px]"></i>
               <span data-i18n="cards_faq_q1">هل بطاقة Bybit Card مجانية حقاً وبدون اشتراك شهري؟</span>
-            </h4>
+            </h3>
             <p class="text-xs leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="cards_faq_a1">
               نعم، بطاقة Bybit ماستركارد الافتراضية مجانية 100% بدون أي مصاريف فتح وبدون اقتطاع شهري أو سنوي. تدعم الدفع المباشر على AliExpress وPayPal وتحصل معها على كاش باك يصل إلى 10%.
             </p>
           </div>
 
           <div class="border rounded-xl p-4 space-y-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-            <h4 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
+            <h3 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
               <i class="fa-solid fa-chevron-left text-emerald-500 text-[10px]"></i>
               <span data-i18n="cards_faq_q2">كيف أشحن بطاقة RedotPay أو Bybit باستخدام بريدي موب (BaridiMob)؟</span>
-            </h4>
+            </h3>
             <p class="text-xs leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="cards_faq_a2">
               تتم العملية عبر منصة Binance P2P: تشتري الدولار الرقمي (USDT) بالدينار الجزائري مباشرة من بائعين جزائريين موثوقين وتدفع عبر تطبيق BaridiMob، ثم تسحب الرصيد إلى بطاقة RedotPay أو Bybit في ثوانٍ عبر شبكة BSC أو TRC20.
             </p>
           </div>
 
           <div class="border rounded-xl p-4 space-y-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-            <h4 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
+            <h3 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
               <i class="fa-solid fa-chevron-left text-emerald-500 text-[10px]"></i>
               <span data-i18n="cards_faq_q3">هل تقبل بطاقة RedotPay و Bybit التفعيل مع حساب PayPal الجزائري؟</span>
-            </h4>
+            </h3>
             <p class="text-xs leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="cards_faq_a3">
               نعم، كلاً من بطاقة RedotPay وبطاقة Bybit تقبل الربط مع PayPal الجزائري أو الأجنبي، وتصل رسالة رمز التفعيل (4 أرقام) فورياً داخل تطبيق البطاقة.
             </p>
           </div>
 
           <div class="border rounded-xl p-4 space-y-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-            <h4 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
+            <h3 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
               <i class="fa-solid fa-chevron-left text-emerald-500 text-[10px]"></i>
               <span data-i18n="cards_faq_q4">ما هو كود الحصول على هدية 5$ المجانية في RedotPay؟</span>
-            </h4>
+            </h3>
             <p class="text-xs leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="cards_faq_a4">
               عند التسجيل في RedotPay، أدخل كود الإحالة الحصري djbt3 لتحصل فوراً على بونص 5$ رصيد ترحيبي في حسابك بمجرد إكمال تأكيد الهوية ببطاقة التعريف الوطنية.
             </p>
@@ -1201,9 +1359,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <i class="fa-solid fa-coins"></i>
           <span data-i18n="coins_badge">دليل توفير العملات (AliExpress Coins)</span>
         </div>
-        <h2 class="text-lg sm:text-xl font-bold tracking-tight" style="color: var(--text-main);" data-i18n="coins_hero_title">
+        <h1 class="text-lg sm:text-xl font-bold tracking-tight" style="color: var(--text-main);" data-i18n="coins_hero_title">
           كيف توفر حتى 60% إضافية باستخدام عملات AliExpress وبوت @Alilo07BOT؟
-        </h2>
+        </h1>
         <p class="text-xs sm:text-sm leading-relaxed max-w-3xl" style="color: var(--text-muted);" data-i18n="coins_hero_desc">
           تمنح AliExpress مستخدميها عملات يومية (Coins)، لكن معظم المنتجات في التطبيق لا تسمح باستخدام أكثر من 2% فقط. بوت التخفيضات الخاص بنا يقوم بفك القيود وتوليد روابط مباشرة تمكّنك من استهلاك أكبر عدد ممكن من العملات والحصول على خصم ضخم فوري!
         </p>
@@ -1223,10 +1381,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
               <span data-i18n="coin_gen_badge">أداة مجانية فورية</span>
             </div>
-            <h3 class="text-base sm:text-lg font-bold flex items-center gap-2" style="color: var(--text-main);">
+            <h2 class="text-base sm:text-lg font-bold flex items-center gap-2" style="color: var(--text-main);" data-i18n="coin_gen_title">
               <i class="fa-solid fa-coins text-amber-500"></i>
               <span data-i18n="coin_gen_title">مولد روابط خصم العملات (Coins Deal Generator)</span>
-            </h3>
+            </h2>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coin_gen_subtitle">
               الصق رابط أي منتج من AliExpress أو نص المشاركة لتحصل فوراً على رابط تفعيل أقصى خصم للعملات (حتى 60%) وعروض السوبر ديلز!
             </p>
@@ -1376,24 +1534,57 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
       </section>
 
-      <!-- 3 Steps Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="border rounded-xl p-4 sm:p-5 space-y-2.5" style="background-color: var(--bg-card); border-color: var(--border-card);">
-          <div class="w-8 h-8 rounded-lg text-amber-500 font-bold text-sm flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">1</div>
-          <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="coins_step1_title">انسخ رابط المنتج من AliExpress</h3>
-          <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coins_step1_desc">افتح أي منتج يعجبك داخل تطبيق AliExpress، اضغط على زر المشاركة ثم اختر نسخ الرابط (Copy Link).</p>
+      <!-- 3 Steps Section with Semantic H2 -->
+      <div class="space-y-4">
+        <div class="space-y-1">
+          <h2 class="text-base sm:text-lg font-bold" style="color: var(--text-main);" data-i18n="coins_steps_section_title">
+            طريقة تفعيل أقصى خصم للعملات خطوة بخطوة 🪙
+          </h2>
+          <p class="text-xs" style="color: var(--text-muted);" data-i18n="coins_steps_section_sub">
+            اتبع هذه الخطوات البسيطة لتحويل أي رابط منتج عادي إلى رابط تخفيض العملات الأقصى:
+          </p>
         </div>
 
-        <div class="border rounded-xl p-4 sm:p-5 space-y-2.5" style="background-color: var(--bg-card); border-color: var(--border-card);">
-          <div class="w-8 h-8 rounded-lg text-sky-500 font-bold text-sm flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">2</div>
-          <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="coins_step2_title">أرسل الرابط لبوت التخفيض</h3>
-          <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coins_step2_desc">افتح بوت التيليجرام <b class="text-sky-500 font-mono">@Alilo07BOT</b> والصق الرابط في المحادثة. سيقوم البوت فوراً بالبحث عن أقصى نسبة خصم متاحة للعملات.</p>
-        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="border rounded-xl p-4 sm:p-5 space-y-2.5" style="background-color: var(--bg-card); border-color: var(--border-card);">
+            <div class="w-8 h-8 rounded-lg text-amber-500 font-bold text-sm flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">1</div>
+            <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="coins_step1_title">انسخ رابط المنتج من AliExpress</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coins_step1_desc">افتح أي منتج يعجبك داخل تطبيق AliExpress، اضغط على زر المشاركة ثم اختر نسخ الرابط (Copy Link).</p>
+          </div>
 
-        <div class="border rounded-xl p-4 sm:p-5 space-y-2.5" style="background-color: var(--bg-card); border-color: var(--border-card);">
-          <div class="w-8 h-8 rounded-lg text-emerald-500 font-bold text-sm flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">3</div>
-          <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="coins_step3_title">ادفع بالسعر المخفض</h3>
-          <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coins_step3_desc">اضغط على زر (شراء الآن) من الرابط الذي يرجعه البوت، وستلاحظ أن خانة العملات قد خصمت ما يصل إلى 10$ إلى 40$ من السعر الإجمالي!</p>
+          <div class="border rounded-xl p-4 sm:p-5 space-y-2.5" style="background-color: var(--bg-card); border-color: var(--border-card);">
+            <div class="w-8 h-8 rounded-lg text-sky-500 font-bold text-sm flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">2</div>
+            <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="coins_step2_title">أرسل الرابط لبوت التخفيض</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coins_step2_desc">افتح بوت التيليجرام <b class="text-sky-500 font-mono">@Alilo07BOT</b> والصق الرابط في المحادثة. سيقوم البوت فوراً بالبحث عن أقصى نسبة خصم متاحة للعملات.</p>
+          </div>
+
+          <div class="border rounded-xl p-4 sm:p-5 space-y-2.5" style="background-color: var(--bg-card); border-color: var(--border-card);">
+            <div class="w-8 h-8 rounded-lg text-emerald-500 font-bold text-sm flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">3</div>
+            <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="coins_step3_title">ادفع بالسعر المخفض</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coins_step3_desc">اضغط على زر (شراء الآن) من الرابط الذي يرجعه البوت، وستلاحظ أن خانة العملات قد خصمت ما يصل إلى 10$ إلى 40$ من السعر الإجمالي!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cross-Links from Coins Page -->
+      <div class="border rounded-xl p-4 flex flex-wrap items-center justify-between gap-3 text-xs" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="font-bold flex items-center gap-1.5" style="color: var(--text-main);">
+          <i class="fa-solid fa-compass text-amber-500"></i>
+          <span data-i18n="coins_crosslink_heading">تصفح أيضاً عبر DealScout DZ:</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <a href="#deals" onclick="showPage('deals')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-crimson-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
+            <i class="fa-solid fa-fire text-crimson-500 mr-1"></i>
+            <span data-i18n="nav_deals">الصفقات المباشرة</span>
+          </a>
+          <a href="#cards" onclick="showPage('cards')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-emerald-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
+            <i class="fa-solid fa-credit-card text-emerald-500 mr-1"></i>
+            <span data-i18n="nav_cards">دليل البطاقات وبريدي موب</span>
+          </a>
+          <a href="#faq" onclick="showPage('faq')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-sky-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
+            <i class="fa-solid fa-circle-question text-sky-500 mr-1"></i>
+            <span data-i18n="nav_faq">الأسئلة الشائعة</span>
+          </a>
         </div>
       </div>
 
@@ -1405,7 +1596,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <div id="page-faq" class="page-view hidden space-y-6">
       
       <div class="text-center max-w-2xl mx-auto space-y-2">
-        <h2 class="text-xl sm:text-2xl font-bold" style="color: var(--text-main);" data-i18n="faq_title">الأسئلة الشائعة وإرشادات الشراء</h2>
+        <h1 class="text-xl sm:text-2xl font-bold" style="color: var(--text-main);" data-i18n="faq_title">الأسئلة الشائعة وإرشادات الشراء</h1>
         <p class="text-xs sm:text-sm" style="color: var(--text-muted);" data-i18n="faq_subtitle">كل ما يحتاجه المتسوق الجزائري لمعرفة طرق الشحن، حساب الأسعار بالدينار، والتعامل مع عروض AliExpress.</p>
       </div>
 
@@ -1413,10 +1604,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <!-- Q1 -->
         <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
           <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
-            <span class="flex items-center gap-2">
+            <h3 class="flex items-center gap-2 m-0 p-0 text-xs sm:text-sm font-bold">
               <i class="fa-solid fa-coins text-amber-500"></i>
               <span data-i18n="faq_q1">كيف يتم احتساب الأسعار بالدينار الجزائري (DZD)؟</span>
-            </span>
+            </h3>
             <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
           </summary>
           <div class="pt-3 text-xs leading-relaxed border-t mt-3" style="border-color: var(--border-card); color: var(--text-muted);" data-i18n="faq_a1">
@@ -1427,10 +1618,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <!-- Q2 -->
         <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
           <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
-            <span class="flex items-center gap-2">
+            <h3 class="flex items-center gap-2 m-0 p-0 text-xs sm:text-sm font-bold">
               <i class="fa-solid fa-truck-fast text-sky-500"></i>
               <span data-i18n="faq_q2">كيف يتم شحن الطرود واستلامها في الجزائر؟</span>
-            </span>
+            </h3>
             <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
           </summary>
           <div class="pt-3 text-xs leading-relaxed border-t mt-3" style="border-color: var(--border-card); color: var(--text-muted);" data-i18n="faq_a2">
@@ -1441,10 +1632,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <!-- Q3 -->
         <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
           <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
-            <span class="flex items-center gap-2">
+            <h3 class="flex items-center gap-2 m-0 p-0 text-xs sm:text-sm font-bold">
               <i class="fa-solid fa-credit-card text-emerald-500"></i>
               <span data-i18n="faq_q3">ما هي أفضل طرق وبطاقات الدفع المتاحة للجزائريين؟</span>
-            </span>
+            </h3>
             <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
           </summary>
           <div class="pt-3 text-xs leading-relaxed border-t mt-3" style="border-color: var(--border-card); color: var(--text-muted);" data-i18n="faq_a3">
@@ -1455,10 +1646,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <!-- Q4 -->
         <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
           <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
-            <span class="flex items-center gap-2">
+            <h3 class="flex items-center gap-2 m-0 p-0 text-xs sm:text-sm font-bold">
               <i class="fa-solid fa-ticket text-rose-500"></i>
               <span data-i18n="faq_q4">لماذا يظهر كود الخصم غير صالح أو منتهي الصلاحية أحياناً؟</span>
-            </span>
+            </h3>
             <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
           </summary>
           <div class="pt-3 text-xs leading-relaxed border-t mt-3" style="border-color: var(--border-card); color: var(--text-muted);" data-i18n="faq_a4">
@@ -1469,16 +1660,94 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <!-- Q5 -->
         <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
           <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
-            <span class="flex items-center gap-2">
+            <h3 class="flex items-center gap-2 m-0 p-0 text-xs sm:text-sm font-bold">
               <i class="fa-solid fa-earth-europe text-blue-500"></i>
               <span data-i18n="faq_q5">ما هي قناة عروض فرنسا (@francedealsdz)؟</span>
-            </span>
+            </h3>
             <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
           </summary>
           <div class="pt-3 text-xs leading-relaxed border-t mt-3" style="border-color: var(--border-card); color: var(--text-muted);" data-i18n="faq_a5">
             هي قناة متخصصة وموجهة لأفراد الجالية الجزائرية المقيمين في فرنسا وأوروبا، أو للجزائريين الذين يستعينون بشركات إعادة توجيه الطرود (Forwarders). أسعارها باليورو الأوروبي وعروضها مشحونة من مستودعات أوروبية سريعة (خلال 3-7 أيام).
           </div>
         </details>
+
+        <!-- Q6: BaridiMob & Binance P2P -->
+        <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
+            <h3 class="flex items-center gap-2 m-0 p-0 text-xs sm:text-sm font-bold">
+              <i class="fa-solid fa-building-columns text-emerald-500"></i>
+              <span data-i18n="faq_q6">كيف أشتري من AliExpress باستخدام تطبيق بريدي موب (BaridiMob)؟</span>
+            </h3>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
+          </summary>
+          <div class="pt-3 text-xs leading-relaxed border-t mt-3" style="border-color: var(--border-card); color: var(--text-muted);" data-i18n="faq_a6">
+            لا يقبل AliExpress الدفع المباشر بالدينار أو البطاقة الذهبية. الطريقة المعتمدة هي فتح حساب في Binance واستخدام قسم التداول P2P لشراء رصيد USDT بالدينار الجزائري عبر بريدي موب من بائع معتمد، ثم تحويل الرصيد إلى بطاقة Bybit ماستركارد المجانية أو بطاقة RedotPay واستعمالها في الدفع فوراً.
+          </div>
+        </details>
+
+        <!-- Q7: Customs & Douane Regulations -->
+        <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
+            <h3 class="flex items-center gap-2 m-0 p-0 text-xs sm:text-sm font-bold">
+              <i class="fa-solid fa-shield-halved text-amber-500"></i>
+              <span data-i18n="faq_q7">ما هي قوانين الجمارك الجزائرية للطرود؟ وما هي المنتجات الممنوعة؟</span>
+            </h3>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
+          </summary>
+          <div class="pt-3 text-xs leading-relaxed border-t mt-3" style="border-color: var(--border-card); color: var(--text-muted);" data-i18n="faq_a7">
+            الطرود الموجهة للاستعمال الشخصي والعائلي معفاة تماماً من الرسوم الجمركية في الجزائر. لتفادي المشاكل، لا تطلب كميات تجارية متكررة من نفس السلعة في شحنة واحدة. يُمنع منعاً باتاً استيراد: طائرات الدرون بجميع أنواعها، كاميرات التجسس المخفية، أجهزة اللاسلكي غير المرخصة، ومؤشرات الليزر المحظورة.
+          </div>
+        </details>
+
+        <!-- Q8: Coins Discount Trick -->
+        <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
+            <h3 class="flex items-center gap-2 m-0 p-0 text-xs sm:text-sm font-bold">
+              <i class="fa-solid fa-wand-magic-sparkles text-rose-500"></i>
+              <span data-i18n="faq_q8">كيف أحصل على أقصى تخفيض للعملات Coins (حتى 70%)؟</span>
+            </h3>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
+          </summary>
+          <div class="pt-3 text-xs leading-relaxed border-t mt-3" style="border-color: var(--border-card); color: var(--text-muted);" data-i18n="faq_a8">
+            عند التسوق العادي يخصم AliExpress نسبة 1% إلى 5% فقط من العملات. باستخدام أداة مولد روابط العملات على موقعنا أو بوت @Alilo07BOT، يتم توليد رابط مخصص مع وسم المصدر sourceType=620، مما يرفع نسبة قبول العملات على نفس السلعة حتى 50% أو 70% عند الشراء مباشرة من قسم العملات.
+          </div>
+        </details>
+
+        <!-- Q9: Postal Address Formatting -->
+        <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
+            <h3 class="flex items-center gap-2 m-0 p-0 text-xs sm:text-sm font-bold">
+              <i class="fa-solid fa-location-dot text-indigo-500"></i>
+              <span data-i18n="faq_q9">كيف أكتب العنوان الجزائري والرمز البريدي (Code Postal) بشكل صحيح؟</span>
+            </h3>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
+          </summary>
+          <div class="pt-3 text-xs leading-relaxed border-t mt-3" style="border-color: var(--border-card); color: var(--text-muted);" data-i18n="faq_a9">
+            اكتب اسمك الكامل مطابقاً لبطاقة التعريف الوطنية، ورقم هاتفك المحمول الصحيح لتلقي SMS من بريد الجزائر. الرمز البريدي يتكون من 5 أرقام (أول رقمين هما رقم ولايتك، مثلاً 16 للجزائر أو 31 لوهران)، والأرقام الثلاثة المتبقية تدل على مركز التوزيع لبلديتك. احرص على وضع كود مركز البريد الأقرب إليك لضمان عدم تأخر الطرد.
+          </div>
+        </details>
+
+        <!-- Cross-Links from FAQ Page -->
+        <div class="border rounded-2xl p-4 mt-6 flex flex-wrap items-center justify-between gap-3 text-xs" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="font-bold flex items-center gap-1.5" style="color: var(--text-main);">
+            <i class="fa-solid fa-link text-sky-500"></i>
+            <span data-i18n="faq_crosslink_heading">مواضيع ذات صلة تهمك:</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <a href="#deals" onclick="showPage('deals')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-crimson-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-fire text-crimson-500 mr-1"></i>
+              <span data-i18n="nav_deals">الصفقات</span>
+            </a>
+            <a href="#cards" onclick="showPage('cards')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-emerald-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-credit-card text-emerald-500 mr-1"></i>
+              <span data-i18n="nav_cards">دليل البطاقات</span>
+            </a>
+            <a href="#coins" onclick="showPage('coins')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-amber-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-coins text-amber-500 mr-1"></i>
+              <span data-i18n="nav_coins">بوت العملات</span>
+            </a>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -1489,7 +1758,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <div id="page-contact" class="page-view hidden space-y-6">
       
       <div class="text-center max-w-2xl mx-auto space-y-2">
-        <h2 class="text-xl sm:text-2xl font-bold" style="color: var(--text-main);" data-i18n="contact_title">اتصل بنا والدعم الفني</h2>
+        <h1 class="text-xl sm:text-2xl font-bold" style="color: var(--text-main);" data-i18n="contact_title">اتصل بنا والدعم الفني</h1>
         <p class="text-xs sm:text-sm" style="color: var(--text-muted);" data-i18n="contact_subtitle">فريق DealScout DZ يرحب باقتراحاتكم، إبلاغكم عن الروابط التالفة، واستفساراتكم حول الصفقات.</p>
       </div>
 
@@ -1500,7 +1769,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <div class="w-12 h-12 rounded-2xl bg-sky-500/15 text-sky-500 flex items-center justify-center text-xl">
               <i class="fa-brands fa-telegram"></i>
             </div>
-            <h3 class="font-bold text-base" style="color: var(--text-main);" data-i18n="contact_tg_title">الدعم السريع عبر Telegram</h3>
+            <h2 class="font-bold text-base" style="color: var(--text-main);" data-i18n="contact_tg_title">الدعم السريع عبر Telegram</h2>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="contact_tg_desc">
               أسرع وسيلة للتواصل مع مديري القناة والمطورين. يمكنك إرسال استفسارك أو طلب إضافة منتج معين إلى المراقبة الآلية.
             </p>
@@ -1520,7 +1789,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
         <!-- Contact Form -->
         <div class="border rounded-2xl p-6 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
-          <h3 class="font-bold text-base" style="color: var(--text-main);" data-i18n="contact_form_title">إرسال رسالة أو اقتراح</h3>
+          <h2 class="font-bold text-base" style="color: var(--text-main);" data-i18n="contact_form_title">إرسال رسالة أو اقتراح</h2>
           <form onsubmit="handleContactSubmit(event)" class="space-y-3 text-xs">
             <div>
               <label class="block mb-1 font-medium" style="color: var(--text-main);" data-i18n="form_name">الاسم أو اللقب</label>
@@ -1563,7 +1832,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <div class="w-12 h-12 rounded-2xl bg-crimson-600/15 text-crimson-500 flex items-center justify-center text-2xl font-bold">
             <i class="fa-solid fa-bolt"></i>
           </div>
-          <h2 class="text-xl sm:text-2xl font-bold tracking-tight" style="color: var(--text-main);" data-i18n="about_title">حول منصة DealScout DZ</h2>
+          <h1 class="text-xl sm:text-2xl font-bold tracking-tight" style="color: var(--text-main);" data-i18n="about_title">حول منصة DealScout DZ</h1>
           <p class="leading-relaxed" data-i18n="about_p1">
             تأسست منصة <b>DealScout DZ</b> بهدف حل أكبر مشكلة تواجه المتسوقين في الجزائر عبر الإنترنت: صعوبة الوصول إلى التخفيضات الحقيقية، والارتباك الناتج عن حساب تكلفة المنتج بالدينار الجزائري في ظل تغير أسعار سوق السكوار.
           </p>
@@ -1574,28 +1843,28 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div class="border rounded-2xl p-5 space-y-2" style="background-color: var(--bg-card); border-color: var(--border-card);">
-            <h3 class="font-bold text-sm flex items-center gap-2" style="color: var(--text-main);">
+            <h2 class="font-bold text-sm flex items-center gap-2" style="color: var(--text-main);">
               <i class="fa-solid fa-chart-line text-emerald-500"></i>
               <span data-i18n="about_feat1_title">ربط مباشر مع سعر السكوار</span>
-            </h3>
+            </h2>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="about_feat1_desc">نحدث أسعار USDT بالدينار الجزائري لحظة بلحظة لضمان شفافية كاملة قبل الضغط على زر الشراء.</p>
           </div>
 
           <div class="border rounded-2xl p-5 space-y-2" style="background-color: var(--bg-card); border-color: var(--border-card);">
-            <h3 class="font-bold text-sm flex items-center gap-2" style="color: var(--text-main);">
+            <h2 class="font-bold text-sm flex items-center gap-2" style="color: var(--text-main);">
               <i class="fa-solid fa-robot text-sky-500"></i>
               <span data-i18n="about_feat2_title">روبوتات آلية وخوارزميات أمان</span>
-            </h3>
+            </h2>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="about_feat2_desc">نظام ذكي يلتقط التخفيضات في الثواني الأولى لنزولها ويختبر صلاحية أكواد الخصم والعملات.</p>
           </div>
         </div>
 
         <!-- Affiliate Disclosure Notice -->
         <div class="border rounded-2xl p-4 sm:p-5 space-y-2 text-xs" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
-          <h4 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
+          <h2 class="font-bold flex items-center gap-2 text-xs" style="color: var(--text-main);">
             <i class="fa-solid fa-handshake text-blue-500"></i>
             <span data-i18n="about_disclosure_title">إفصاح الشفافية والتسويق بالعمولة (Affiliate Disclosure)</span>
-          </h4>
+          </h2>
           <p class="leading-relaxed" data-i18n="about_disclosure_desc">
             منصة DealScout DZ مشتركة في برنامج شركاء AliExpress الرسمي (AliExpress Portals Affiliate Program). عند النقر على روابط الشراء وإتمام الطلب، قد نحصل على عمولة تسويقية صغيرة من منصة AliExpress دون أي تكلفة إضافية عليك.
           </p>
@@ -2271,6 +2540,33 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         faq_a4: "أكواد الخصم الترويجية في AliExpress تكون محدودة بعدد استخدامات معين لكل دولة. نقوم بتحديث الأكواد لحظياً وإلغاء المنتهية فوراً، ولكن ننصح دائماً بالشراء السريع عند نشر الكود قبل نفاد حصة الجزائر.",
         faq_q5: "ما هي قناة عروض فرنسا (@francedealsdz)؟",
         faq_a5: "هي قناة متخصصة وموجهة لأفراد الجالية الجزائرية المقيمين في فرنسا وأوروبا، أو للجزائريين الذين يستعينون بشركات إعادة توجيه الطرود (Forwarders). أسعارها باليورو الأوروبي وعروضها مشحونة من مستودعات أوروبية سريعة (خلال 3-7 أيام).",
+        faq_q6: "كيف أشتري من AliExpress باستخدام تطبيق بريدي موب (BaridiMob)؟",
+        faq_a6: "لا يقبل AliExpress الدفع المباشر بالدينار أو البطاقة الذهبية. الطريقة المعتمدة هي فتح حساب في Binance واستخدام قسم التداول P2P لشراء رصيد USDT بالدينار الجزائري عبر بريدي موب من بائع معتمد، ثم تحويل الرصيد إلى بطاقة Bybit ماستركارد المجانية أو بطاقة RedotPay واستعمالها في الدفع فوراً.",
+        faq_q7: "ما هي قوانين الجمارك الجزائرية للطرود؟ وما هي المنتجات الممنوعة؟",
+        faq_a7: "الطرود الموجهة للاستعمال الشخصي والعائلي معفاة تماماً من الرسوم الجمركية في الجزائر. لتفادي المشاكل، لا تطلب كميات تجارية متكررة من نفس السلعة في شحنة واحدة. يُمنع منعاً باتاً استيراد: طائرات الدرون بجميع أنواعها، كاميرات التجسس المخفية، أجهزة اللاسلكي غير المرخصة، ومؤشرات الليزر المحظورة.",
+        faq_q8: "كيف أحصل على أقصى تخفيض للعملات Coins (حتى 70%)؟",
+        faq_a8: "عند التسوق العادي يخصم AliExpress نسبة 1% إلى 5% فقط من العملات. باستخدام أداة مولد روابط العملات على موقعنا أو بوت @Alilo07BOT، يتم توليد رابط مخصص مع وسم المصدر sourceType=620، مما يرفع نسبة قبول العملات على نفس السلعة حتى 50% أو 70% عند الشراء مباشرة من قسم العملات.",
+        faq_q9: "كيف أكتب العنوان الجزائري والرمز البريدي (Code Postal) بشكل صحيح؟",
+        faq_a9: "اكتب اسمك الكامل مطابقاً لبطاقة التعريف الوطنية، ورقم هاتفك المحمول الصحيح لتلقي SMS من بريد الجزائر. الرمز البريدي يتكون من 5 أرقام (أول رقمين هما رقم ولايتك، مثلاً 16 للجزائر أو 31 لوهران)، والأرقام الثلاثة المتبقية تدل على مركز التوزيع لبلديتك. احرص على وضع كود مركز البريد الأقرب إليك لضمان عدم تأخر الطرد.",
+        cards_post_badge: "إرشادات الشحن والجمارك في الجزائر 2026",
+        cards_post_title: "ضبط العنوان الجزائري، قوانين الجمارك (Douane)، واستلام الطرد من البريد",
+        cards_addr_h: "1. ضبط الرمز البريدي والعنوان",
+        cards_addr_p: "اكتب اسمك المطابق لبطاقة الهوية ورقم هاتفك الفعال لتلقي SMS. تأكد من إدخال الرمز البريدي الدقيق المكون من 5 أرقام (أول رقمين هما رقم ولايتك، والـ 3 أرقام التالية هي مركز التوزيع البريدي لبلديتك).",
+        cards_customs_h: "2. الجمارك الجزائرية والطرود",
+        cards_customs_p: "الطرود الشخصية معفاة من الرسوم الجمركية. تجنب طلب كميات تجارية من نفس الصنف لتفادي الحجز. يُمنع منعاً باتاً استيراد طائرات الدرون، كاميرات المراقبة التجسسية المخفية، وأجهزة اللاسلكي غير المرخصة.",
+        cards_pickup_h: "3. التتبع والاستلام من البريد",
+        cards_pickup_p: "تتبع شحنتك عبر 17track وموقع بريد الجزائر بمجرد وصولها. عند وصول إشعار SMS أو Avis de passage، توجه إلى مكتب البريد مصحوباً ببطاقتك الوطنية، وادفع رسم التخليص البريدي الرمزي (~130 إلى 250 دج) واستلم طردك.",
+        cards_crosslink_heading: "انتقل إلى أقسام الموقع الأخرى:",
+        crosslink_cards_title: "دليل بطاقات الدفع وبريدي موب",
+        crosslink_cards_sub: "Bybit مجانية وRedotPay",
+        crosslink_coins_title: "بوت ومولد تخفيض العملات Coins",
+        crosslink_coins_sub: "وفر حتى 70% من السعر",
+        crosslink_faq_title: "الأسئلة الشائعة وقوانين الجمارك",
+        crosslink_faq_sub: "الشحن واستلام الطرود بالبريد",
+        coins_steps_section_title: "طريقة تفعيل أقصى خصم للعملات خطوة بخطوة 🪙",
+        coins_steps_section_sub: "اتبع هذه الخطوات البسيطة لتحويل أي رابط منتج عادي إلى رابط تخفيض العملات الأقصى:",
+        coins_crosslink_heading: "تصفح أيضاً عبر DealScout DZ:",
+        faq_crosslink_heading: "مواضيع ذات صلة تهمك:",
         contact_title: "اتصل بنا والدعم الفني",
         contact_subtitle: "فريق DealScout DZ يرحب باقتراحاتكم، إبلاغكم عن الروابط التالفة، واستفساراتكم حول الصفقات.",
         contact_tg_title: "الدعم السريع عبر Telegram",
@@ -2489,6 +2785,33 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         faq_a4: "Les codes promo AliExpress disposent de quotas d'utilisation limités par pays. Nous mettons à jour les codes dès leur publication, mais il est recommandé de commander rapidement dès la diffusion de l'offre.",
         faq_q5: "À qui s'adresse le canal Bons Plans France (@francedealsdz) ?",
         faq_a5: "Ce canal s'adresse aux résidents algériens en France et en Europe, ou à ceux utilisant des services de réexpédition (Forwarders). Les prix sont en Euros et la livraison s'effectue en 3 à 7 jours depuis des entrepôts européens.",
+        faq_q6: "Comment acheter sur AliExpress avec l'application BaridiMob ?",
+        faq_a6: "AliExpress n'accepte pas directement les paiements en Dinars ou via la carte Edahabia. La méthode consiste à acheter des USDT en Dinars sur Binance P2P via BaridiMob auprès d'un marchand vérifié, puis à transférer ces fonds vers une carte Bybit gratuite ou RedotPay pour régler instantanément vos commandes.",
+        faq_q7: "Quelles sont les règles douanières algériennes et les articles interdits ?",
+        faq_a7: "Les colis pour usage personnel sont exonérés de taxes douanières. Ne commandez pas de quantités commerciales d'un même article pour éviter le blocage en douane. Sont strictement interdits : les drones de toutes catégories, les micro-caméras d'espionnage dissimulées, les talkies-walkies non agréés et les pointeurs laser puissants.",
+        faq_q8: "Comment obtenir la réduction maximale en pièces Coins (jusqu'à 70%) ?",
+        faq_a8: "En navigation standard, AliExpress ne déduit que 1% à 5% en pièces. En passant par notre générateur de liens de pièces ou le bot @Alilo07BOT, un lien optimisé sourceType=620 est généré, permettant d'absorber jusqu'à 50% voire 70% du prix directement dans la section Pièces !",
+        faq_q9: "Comment renseigner son adresse postale et son code postal en Algérie ?",
+        faq_a9: "Indiquez votre nom exact selon votre carte d'identité et votre numéro de mobile algérien pour recevoir le SMS du facteur. Le code postal comporte 5 chiffres (les 2 premiers pour la wilaya et les 3 suivants pour le bureau distributeur de votre commune).",
+        cards_post_badge: "Guide Expédition & Douane en Algérie 2026",
+        cards_post_title: "Format d'adresse, réglementation douanière et retrait à Algérie Poste",
+        cards_addr_h: "1. Code Postal & Coordonnées",
+        cards_addr_p: "Indiquez votre nom officiel et numéro mobile. Renseignez le code postal précis à 5 chiffres de votre commune pour un acheminement direct sans erreur de tri.",
+        cards_customs_h: "2. Douane & Colis Personnels",
+        cards_customs_p: "Usage personnel exonéré de taxe. Évitez les lots commerciaux identiques. Drones, caméras espion et talkies-walkies sont strictement interdits d'importation.",
+        cards_pickup_h: "3. Suivi & Retrait à la Poste",
+        cards_pickup_p: "Suivez votre colis sur 17TRACK et Algérie Poste. Dès réception du SMS ou de l'avis de passage, retirez votre colis au guichet avec votre CNI et acquittez les droits de timbre (~130 à 250 DZD).",
+        cards_crosslink_heading: "Découvrez les autres sections :",
+        crosslink_cards_title: "Guide Cartes & BaridiMob",
+        crosslink_cards_sub: "Bybit gratuite & RedotPay",
+        crosslink_coins_title: "Générateur Réduction Coins",
+        crosslink_coins_sub: "Jusqu'à 70% de remise",
+        crosslink_faq_title: "FAQ & Réglementation Douane",
+        crosslink_faq_sub: "Livraison & Retrait Poste",
+        coins_steps_section_title: "Méthode pour activer la réduction Coins étape par étape 🪙",
+        coins_steps_section_sub: "Suivez ces instructions pour convertir n'importe quel lien produit en lien méga-réduction :",
+        coins_crosslink_heading: "Explorer également DealScout DZ :",
+        faq_crosslink_heading: "Thématiques associées :",
         contact_title: "Contact & Assistance",
         contact_subtitle: "L'équipe DealScout DZ est à votre disposition pour vos suggestions, signalements de liens ou partenariats.",
         contact_tg_title: "Assistance rapide sur Telegram",

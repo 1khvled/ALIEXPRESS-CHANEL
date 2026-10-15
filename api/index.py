@@ -1310,6 +1310,11 @@ async def robots_txt():
     content = """User-agent: *
 Allow: /
 Allow: /deals
+Allow: /cards
+Allow: /coins
+Allow: /faq
+Allow: /about
+Allow: /contact
 Allow: /manifest.json
 Allow: /icon.svg
 Allow: /sw.js
@@ -1387,6 +1392,26 @@ async def sitemap_xml():
     <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dealscoutgreen.vercel.app/about</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscoutgreen.vercel.app/about"/>
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscoutgreen.vercel.app/about"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscoutgreen.vercel.app/about"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscoutgreen.vercel.app/about"/>
+    <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dealscoutgreen.vercel.app/contact</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscoutgreen.vercel.app/contact"/>
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscoutgreen.vercel.app/contact"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscoutgreen.vercel.app/contact"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscoutgreen.vercel.app/contact"/>
+    <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>"""
     return Response(

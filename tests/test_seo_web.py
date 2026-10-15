@@ -38,11 +38,12 @@ def test_opengraph_and_twitter_cards():
 
 
 def test_schema_org_structured_data():
-    """Verify Schema.org WebSite, Organization, CollectionPage and dynamic ItemList markup."""
+    """Verify Schema.org WebSite, Organization, CollectionPage, FAQPage and dynamic ItemList markup."""
     html = USER_WEBSITE_HTML
     assert '"@type": "WebSite"' in html
     assert '"@type": "Organization"' in html
     assert '"@type": "CollectionPage"' in html
+    assert '"@type": "FAQPage"' in html
     assert '"SearchAction"' in html
     assert 'updateDealsStructuredData' in html
     assert '"@type": "ItemList"' in html
@@ -72,13 +73,18 @@ def test_robots_txt_route():
     text = response.text
     assert "Allow: /" in text
     assert "Allow: /deals" in text
+    assert "Allow: /cards" in text
+    assert "Allow: /coins" in text
+    assert "Allow: /faq" in text
+    assert "Allow: /about" in text
+    assert "Allow: /contact" in text
     assert "Disallow: /admin" in text
     assert "Disallow: /api/" in text
     assert "Sitemap: https://dealscoutgreen.vercel.app/sitemap.xml" in text
 
 
 def test_sitemap_xml_route():
-    """Verify /sitemap.xml response code, valid XML format, and URLs."""
+    """Verify /sitemap.xml response code, valid XML format, and all 6 canonical URLs."""
     response = client.get("/sitemap.xml")
     assert response.status_code == 200
     assert "application/xml" in response.headers.get("content-type", "") or "text/xml" in response.headers.get("content-type", "")
@@ -91,19 +97,20 @@ def test_sitemap_xml_route():
     urls = [elem.text for elem in root.findall(".//{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
     assert "https://dealscoutgreen.vercel.app/" in urls
     assert "https://dealscoutgreen.vercel.app/deals" in urls
+    assert "https://dealscoutgreen.vercel.app/cards" in urls
+    assert "https://dealscoutgreen.vercel.app/coins" in urls
+    assert "https://dealscoutgreen.vercel.app/faq" in urls
+    assert "https://dealscoutgreen.vercel.app/about" in urls
+    assert "https://dealscoutgreen.vercel.app/contact" in urls
 
 
 def test_public_web_routes():
-    """Verify / and /deals return 200 with USER_WEBSITE_HTML."""
-    r_home = client.get("/")
-    assert r_home.status_code == 200
-    assert "text/html" in r_home.headers.get("content-type", "")
-    assert "DealScout DZ" in r_home.text
-
-    r_deals = client.get("/deals")
-    assert r_deals.status_code == 200
-    assert "text/html" in r_deals.headers.get("content-type", "")
-    assert "DealScout DZ" in r_deals.text
+    """Verify all 6 public routes return 200 with USER_WEBSITE_HTML."""
+    for path in ["/", "/deals", "/cards", "/coins", "/faq", "/about", "/contact"]:
+        r = client.get(path)
+        assert r.status_code == 200
+        assert "text/html" in r.headers.get("content-type", "")
+        assert "DealScout DZ" in r.text
 
 
 def test_active_event_api_and_seo_banner():
