@@ -1184,7 +1184,7 @@ def get_active_event_seo_html() -> str:
             event_kw = f"{ev.name}, {ev.name_ar}, {ev.name_fr}, تخفيضات {ev.name_ar}, كود خصم {ev.name}, {active_codes}, {top_deals}"
             html = re.sub(
                 r'<meta name="keywords" content="[^"]*">',
-                f'<meta name="keywords" content="{event_kw}, aliexpress algerie, شراء من علي اكسبرس بريدي موب, بطاقة بايبايت في الجزائر, تخفيضات AliExpress الجزائر">',
+                f'<meta name="keywords" content="{event_kw}, aliexpressdz, aliexpress deals dz, aliexpress deald dz, عروض علي اكسبراس, شراء من علي اكسبراس في الجزائر, علي اكسبراس الجزائر, تخفيضات علي اكسبراس, كود تخفيض علي اكسبراس الجزائر, aliexpress algerie, شراء من علي اكسبرس بريدي موب, بطاقة بايبايت في الجزائر, تخفيضات AliExpress الجزائر">',
                 html,
                 count=1
             )

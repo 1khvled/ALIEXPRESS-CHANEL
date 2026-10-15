@@ -15,8 +15,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <meta name="referrer" content="no-referrer">
-  <title id="meta-title">DealScout DZ — صفقات وتخفيضات AliExpress بالدينار الجزائري</title>
-  <meta name="description" id="meta-desc" content="منصة متخصصة في رصد وتحديث أفضل عروض وتخفيضات AliExpress الموجهة للجزائر لحظة بلحظة، مع حساب الأسعار بالدينار الجزائري وأكواد الخصم والعملات.">
+  <title id="meta-title">DealScout DZ — عروض وتخفيضات علي اكسبراس في الجزائر | AliExpress Deals DZ</title>
+  <meta name="description" id="meta-desc" content="منصة DealScout DZ الأولى لرصد أقوى عروض وتخفيضات علي اكسبراس في الجزائر (AliExpress Deals DZ). تتبع صفقات aliexpressdz، كود تخفيض علي اكسبراس، طرق الشراء من علي اكسبراس في الجزائر بالدينار، وروابط خصم العملات وقناة التيليجرام الرسمية.">
   <meta name="robots" content="index, follow">
 
   <!-- Canonical & Alternate Hreflang -->
@@ -27,7 +27,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <link rel="alternate" hreflang="x-default" href="https://dealscoutgreen.vercel.app/">
 
   <!-- Meta Search & Geography -->
-  <meta name="keywords" content="عروض الشتاء Winter Offers AliExpress, تخفيضات عروض الشتاء 2026, كود خصم Winter Offers, WOAE23, WOAE35, WOAE06, WOAE12, Honor X70 5G, realme 15T 5G, OPPO A6 Pro, iQOO Z11s 5G, realme Watch 5, AMD Ryzen 5 8400F, Redmi Note 12 5G, CUSU SSD 512GB, Blackview Wave 10C, aliexpress algerie, شراء من علي اكسبرس بريدي موب, بطاقة بايبايت في الجزائر, بطاقة bybit مجانية, بطاقة redotpay الجزائر, كود خصم redotpay, شحن redotpay بريدي موب, شراء usdt بالدينار الجزائري, بطاقة فيزا للشراء من الانترنت الجزائر, بطاقة ماستركارد افتراضية الجزائر, تفعيل بايبال بالجزائر, binance p2p baridimob algerie, carte bybit algerie, carte redotpay algerie, acheter sur aliexpress baridimob, carte bancaire internationale algerie, تخفيضات علي اكسبرس الجزائر, صفقات aliexpress, بريد الجزائر, اسعار السكوار, algeria deals, dealscout dz, bons plans algerie">
+  <meta name="keywords" content="aliexpressdz, aliexpress deals dz, aliexpress deald dz, عروض علي اكسبراس, شراء من علي اكسبراس في الجزائر, علي اكسبراس الجزائر, تخفيضات علي اكسبراس, كود تخفيض علي اكسبراس الجزائر, كوبونات علي اكسبراس الجزائر, صفقات علي اكسبراس, عملات علي اكسبراس, بوت تخفيض العملات علي اكسبراس, الشراء من علي اكسبراس في الجزائر بريدي موب, توصيل علي اكسبراس الجزائر, بريد الجزائر, اسعار السكوار, قناة تيليجرام صفقات علي اكسبراس الجزائر, عروض الشتاء Winter Offers AliExpress, تخفيضات عروض الشتاء 2026, كود خصم Winter Offers, WOAE23, WOAE35, WOAE06, WOAE12, Honor X70 5G, realme 15T 5G, OPPO A6 Pro, iQOO Z11s 5G, realme Watch 5, AMD Ryzen 5 8400F, Redmi Note 12 5G, CUSU SSD 512GB, Blackview Wave 10C, aliexpress algerie, شراء من علي اكسبرس بريدي موب, بطاقة بايبايت في الجزائر, بطاقة bybit مجانية, بطاقة redotpay الجزائر, كود خصم redotpay, شحن redotpay بريدي موب, شراء usdt بالدينار الجزائري, بطاقة فيزا للشراء من الانترنت الجزائر, بطاقة ماستركارد افتراضية الجزائر, تفعيل بايبال بالجزائر, binance p2p baridimob algerie, carte bybit algerie, carte redotpay algerie, acheter sur aliexpress baridimob, carte bancaire internationale algerie, تخفيضات علي اكسبرس الجزائر, صفقات aliexpress, algeria deals, dealscout dz, bons plans algerie">
   <meta name="geo.region" content="DZ">
   <meta name="geo.placename" content="Algeria">
   <meta name="geo.position" content="28.0339;1.6596">
@@ -39,8 +39,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DealScout DZ">
   <meta property="og:url" content="https://dealscoutgreen.vercel.app/">
-  <meta property="og:title" id="og-title" content="DealScout DZ — صفقات وتخفيضات AliExpress بالدينار الجزائري">
-  <meta property="og:description" id="og-desc" content="تتبع مباشر لأقوى صفقات وعروض AliExpress المنشورة لحظياً مع حساب السعر بالدينار الجزائري وأكواد الخصم والعملات.">
+  <meta property="og:title" id="og-title" content="DealScout DZ — عروض وتخفيضات علي اكسبراس في الجزائر | AliExpress Deals DZ">
+  <meta property="og:description" id="og-desc" content="تتبع مباشر لأقوى عروض وتخفيضات علي اكسبراس في الجزائر (AliExpress Deals DZ). صفقات aliexpressdz، كود تخفيض علي اكسبراس، روابط خصم العملات، وتنبيهات قناة التيليجرام الفورية.">
   <meta property="og:image" content="https://dealscoutgreen.vercel.app/logo.png">
   <meta property="og:image:secure_url" content="https://dealscoutgreen.vercel.app/logo.png">
   <meta property="og:image:type" content="image/png">
@@ -55,8 +55,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@DzAliexpress0">
   <meta name="twitter:creator" content="@DzAliexpress0">
-  <meta name="twitter:title" id="twitter-title" content="DealScout DZ — صفقات وتخفيضات AliExpress بالدينار الجزائري">
-  <meta name="twitter:description" id="twitter-desc" content="تتبع مباشر لأقوى صفقات AliExpress المنشورة لحظياً مع حساب الأسعار بالدينار الجزائري وأكواد الخصم والعملات.">
+  <meta name="twitter:title" id="twitter-title" content="DealScout DZ — عروض وتخفيضات علي اكسبراس في الجزائر | AliExpress Deals DZ">
+  <meta name="twitter:description" id="twitter-desc" content="تتبع مباشر لأقوى عروض وتخفيضات علي اكسبراس في الجزائر (AliExpress Deals DZ). صفقات aliexpressdz، كود تخفيض علي اكسبراس، روابط خصم العملات، وتنبيهات قناة التيليجرام الفورية.">
   <meta name="twitter:image" content="https://dealscoutgreen.vercel.app/logo.png">
   <meta name="twitter:image:alt" content="DealScout DZ">
 
@@ -246,13 +246,13 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     .bg-crimson-600, .bg-rose-600 { background-color: #e11d48 !important; color: #ffffff !important; }
 
     /* Modal Strict Visibility */
-    #deal-modal.hidden {
+    #deal-modal.hidden, #telegram-modal.hidden, #roulette-modal.hidden, #gamification-modal.hidden {
       display: none !important;
       visibility: hidden !important;
       opacity: 0 !important;
       pointer-events: none !important;
     }
-    #deal-modal:not(.hidden) {
+    #deal-modal:not(.hidden), #telegram-modal:not(.hidden), #roulette-modal:not(.hidden), #gamification-modal:not(.hidden) {
       display: flex !important;
       visibility: visible !important;
       opacity: 1 !important;
@@ -398,8 +398,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     "@id": "https://dealscoutgreen.vercel.app/#website",
     "url": "https://dealscoutgreen.vercel.app/",
     "name": "DealScout DZ",
-    "alternateName": ["DealScout", "ديل سكاوت الجزائر", "AliExpress Deals Algeria", "Bons Plans AliExpress Algérie"],
-    "description": "منصة متخصصة في رصد وتحديث أقوى صفقات وتخفيضات AliExpress الموجهة للجزائر لحظة بلحظة مع حساب الأسعار بالدينار الجزائري.",
+    "alternateName": ["DealScout", "aliexpressdz", "aliexpress deals dz", "aliexpress deald dz", "عروض علي اكسبراس الجزائر", "شراء من علي اكسبراس في الجزائر", "AliExpress Deals Algeria", "Bons Plans AliExpress Algérie"],
+    "description": "منصة متخصصة في رصد وتحديث أقوى عروض وتخفيضات علي اكسبراس في الجزائر (AliExpress Deals DZ) لحظة بلحظة مع حساب الأسعار بالدينار الجزائري.",
     "inLanguage": ["ar", "fr"],
     "publisher": {
       "@type": "Organization",
@@ -851,6 +851,100 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           عرض جميع الصفقات
         </button>
       </div>
+
+      <!-- ========================================== -->
+      <!-- HIGH-RANKING SEMANTIC SEO SHOPPING GUIDE   -->
+      <!-- ========================================== -->
+      <section id="seo-shopping-guide" class="border rounded-2xl p-5 sm:p-7 space-y-6 transition-colors mt-8 overflow-hidden" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        
+        <div class="space-y-2 border-b pb-4" style="border-color: var(--border-card);">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-crimson-500/10 text-crimson-500 border border-crimson-500/20">
+            <i class="fa-solid fa-bullhorn text-xs"></i>
+            <span data-i18n="seo_badge">دليل المتسوق الجزائري 🇩🇿</span>
+          </div>
+          <h2 class="text-lg sm:text-2xl font-black leading-tight" style="color: var(--text-main);" data-i18n="seo_guide_title">
+            عروض وتخفيضات علي اكسبراس في الجزائر — AliExpress Deals DZ
+          </h2>
+          <p class="text-xs sm:text-sm leading-relaxed" style="color: var(--text-muted);" data-i18n="seo_guide_subtitle">
+            بوابتك الشاملة لكل ما يخص <strong>aliexpressdz</strong>، أحدث صفقات <strong>aliexpress deals dz</strong>، وطرق <strong>الشراء من علي اكسبراس في الجزائر</strong> بأقل تكلفة وبالدينار الجزائري.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 text-xs sm:text-sm leading-relaxed" style="color: var(--text-muted);">
+          
+          <!-- SEO Block 1: Deals & Discounts -->
+          <div class="space-y-2 p-4 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <h3 class="font-bold text-sm sm:text-base flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-solid fa-fire text-crimson-500"></i>
+              <span data-i18n="seo_block1_h">أقوى عروض علي اكسبراس في الجزائر (AliExpress DZ)</span>
+            </h3>
+            <p data-i18n="seo_block1_p">
+              يقوم موقع DealScout DZ بمتابعة وتحديث عروض علي اكسبراس يومياً، بما يشمل عروض السوبر ديلز (SuperDeals)، التخفيضات الموسمية، وتجميعات المنتجات الأكثر طلباً في الجزائر مع حساب التكلفة الفعلية بالدينار الجزائري (DZD) حسب سعر صرف السكوار المحدث.
+            </p>
+          </div>
+
+          <!-- SEO Block 2: Buying in Algeria -->
+          <div class="space-y-2 p-4 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <h3 class="font-bold text-sm sm:text-base flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-solid fa-credit-card text-emerald-500"></i>
+              <span data-i18n="seo_block2_h">طريقة الشراء من علي اكسبراس في الجزائر والدفع ببريدي موب</span>
+            </h3>
+            <p data-i18n="seo_block2_p">
+              لإتمام عملية شراء من علي اكسبراس في الجزائر، يمكنك شحن بطاقتك البنكية الدولية (مثل Bybit أو RedotPay أو Paysera) بالدينار الجزائري عبر تطبيق BaridiMob من خلال منصات P2P المعتمدة (Binance P2P)، ثم طلب المنتجات مباشرة مع التوصيل إلى مكتب بريد الجزائر الأقرب إليك.
+            </p>
+          </div>
+
+          <!-- SEO Block 3: Coins & Promo Codes -->
+          <div class="space-y-2 p-4 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <h3 class="font-bold text-sm sm:text-base flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-solid fa-coins text-amber-500"></i>
+              <span data-i18n="seo_block3_h">تخفيض عملات وكوبونات علي اكسبراس الجزائر (Coins & Coupons)</span>
+            </h3>
+            <p data-i18n="seo_block3_p">
+              استفد من أداة توليد روابط العملات الحصرية على موقعنا لتحويل أي رابط منتج إلى رابط خصم العملات الأقصى (Coins Discount) لتوفير ما يصل إلى 70% من السعر، بالإضافة إلى نسخ أكواد الخصم والبرومو كود الترويجية الفعالة فور صدورها.
+            </p>
+          </div>
+
+          <!-- SEO Block 4: Telegram Channel Conversion CTA -->
+          <div class="space-y-2 p-4 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <h3 class="font-bold text-sm sm:text-base flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-brands fa-telegram text-[#229ED9]"></i>
+              <span data-i18n="seo_block4_h">قناة التيليجرام لعروض علي اكسبراس في الجزائر</span>
+            </h3>
+            <p data-i18n="seo_block4_p">
+              الهدف الرئيسي من منصتنا هو إيصال أفضل التخفيضات إليك في الثواني الأولى. نظراً لأن الصفقات القوية تنفد كمياتها بسرعة، ننصحك بالانضمام فوراً إلى قناة التيليجرام الرسمية (@DzAliexpress0) لتصلك الإشعارات اللحظية بروابط الشراء المباشرة.
+            </p>
+            <div class="pt-1.5">
+              <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 min-h-[40px] px-4 py-2 rounded-xl bg-[#229ED9] hover:bg-[#1c8cc1] text-white font-bold text-xs shadow-md transition active:scale-95 touch-manipulation cursor-pointer">
+                <i class="fa-brands fa-telegram text-sm"></i>
+                <span data-i18n="seo_block4_btn">انضم لقناة صفقات الجزائر (@DzAliexpress0)</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Popular Algerian Search Keywords Tags Cloud -->
+        <div class="border-t pt-4 space-y-2 text-xs" style="border-color: var(--border-card);">
+          <div class="font-bold text-xs uppercase tracking-wider flex items-center gap-1.5" style="color: var(--text-main);">
+            <i class="fa-solid fa-tags text-rose-500"></i>
+            <span data-i18n="seo_tags_title">الكلمات الأكثر بحثاً في الجزائر:</span>
+          </div>
+          <div class="flex items-center gap-1.5 flex-wrap text-[11px]">
+            <span class="px-2 py-0.5 rounded border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">aliexpressdz</span>
+            <span class="px-2 py-0.5 rounded border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">aliexpress deals dz</span>
+            <span class="px-2 py-0.5 rounded border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">عروض علي اكسبراس</span>
+            <span class="px-2 py-0.5 rounded border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">شراء من علي اكسبراس في الجزائر</span>
+            <span class="px-2 py-0.5 rounded border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">تخفيضات علي اكسبراس الجزائر</span>
+            <span class="px-2 py-0.5 rounded border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">كوبونات علي اكسبراس</span>
+            <span class="px-2 py-0.5 rounded border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">الشراء من بريدي موب</span>
+            <span class="px-2 py-0.5 rounded border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">عملات علي اكسبراس</span>
+            <span class="px-2 py-0.5 rounded border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">aliexpress algerie dzd</span>
+            <span class="px-2 py-0.5 rounded border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">code promo aliexpress algerie</span>
+          </div>
+        </div>
+
+      </section>
 
     </div>
 
@@ -1859,6 +1953,94 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     </div>
   </div>
 
+  <!-- ========================================== -->
+  <!-- TELEGRAM CHANNEL JOIN MODAL / POPUP        -->
+  <!-- ========================================== -->
+  <div id="telegram-modal" onclick="onTelegramPopupBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="tg-popup-title">
+    <div id="telegram-popup-container" class="border-t sm:border rounded-t-3xl sm:rounded-2xl w-full max-w-md max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl p-5 sm:p-6 pb-safe space-y-4 animate-slide-up relative" style="background-color: var(--bg-card); border-color: var(--border-card);">
+      
+      <!-- Pull handle on mobile -->
+      <div class="sm:hidden w-12 h-1.5 rounded-full mx-auto -mt-1 mb-2 opacity-40 cursor-pointer" style="background-color: var(--text-soft);" onclick="closeTelegramPopup(true)"></div>
+
+      <!-- Top Bar: Badge & Close Button -->
+      <div class="flex items-center justify-between">
+        <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-[#229ED9]/15 text-[#229ED9] border border-[#229ED9]/30">
+          <i class="fa-brands fa-telegram text-sm"></i>
+          <span data-i18n="tg_popup_badge">قناة تيليجرام الرسمية 🇩🇿</span>
+        </div>
+        <button onclick="closeTelegramPopup(true)" aria-label="إغلاق النافذة" class="w-8 h-8 rounded-full border flex items-center justify-center text-xs opacity-75 hover:opacity-100 transition active:scale-95 touch-manipulation cursor-pointer" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Icon & Headline -->
+      <div class="text-center pt-1 pb-1 space-y-2">
+        <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-[#229ED9] to-[#0088cc] flex items-center justify-center shadow-lg shadow-[#229ED9]/25 text-white text-3xl">
+          <i class="fa-brands fa-telegram"></i>
+        </div>
+        <h3 id="tg-popup-title" class="text-lg sm:text-xl font-black leading-tight" style="color: var(--text-main);" data-i18n="tg_popup_title">
+          لا تفوّت صفقات وتخفيضات علي اكسبراس في الجزائر!
+        </h3>
+        <p class="text-xs sm:text-sm leading-relaxed" style="color: var(--text-muted);" data-i18n="tg_popup_desc">
+          أقوى الصفقات الخارقة وكوبونات التخفيض تنفذ في دقائق معدودة! انضم إلى قناتنا على تيليجرام لتصلك تنبيهات العروض اللحظية والعملات في الجزائر مباشرة على هاتفك مجاناً.
+        </p>
+      </div>
+
+      <!-- Value Proposition Highlights -->
+      <div class="space-y-2 pt-1 text-xs" style="color: var(--text-main);">
+        <div class="flex items-center gap-2.5 p-2.5 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+          <div class="w-7 h-7 rounded-lg bg-crimson-500/15 text-crimson-500 flex items-center justify-center text-xs font-bold flex-shrink-0">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <span class="font-bold block text-xs" data-i18n="tg_popup_feat1_title">عروض سريعة وكوبونات فورية</span>
+            <span class="text-[11px] opacity-75 block leading-tight mt-0.5" data-i18n="tg_popup_feat1_desc">نشر فوري للصفقات الخاطفة قبل نفاذ الكمية في الجزائر</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2.5 p-2.5 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+          <div class="w-7 h-7 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-xs font-bold flex-shrink-0">
+            <i class="fa-solid fa-coins"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <span class="font-bold block text-xs" data-i18n="tg_popup_feat2_title">روابط خصم العملات الأقصى (Coins)</span>
+            <span class="text-[11px] opacity-75 block leading-tight mt-0.5" data-i18n="tg_popup_feat2_desc">تخفيضات حقيقية تصل إلى 70% عبر روابط العملات الحصرية</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2.5 p-2.5 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+          <div class="w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-500 flex items-center justify-center text-xs font-bold flex-shrink-0">
+            <i class="fa-solid fa-money-bill-wave"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <span class="font-bold block text-xs" data-i18n="tg_popup_feat3_title">أسعار حقيقية بالدينار الجزائري (DZD)</span>
+            <span class="text-[11px] opacity-75 block leading-tight mt-0.5" data-i18n="tg_popup_feat3_desc">حساب السعر بسعر السكوار لحظياً دون رسوم مخفية</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="pt-2 space-y-2">
+        <a id="tg-popup-join-btn" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" onclick="onTelegramPopupJoinClick()" class="w-full min-h-[48px] bg-[#229ED9] hover:bg-[#1c8cc1] active:scale-[0.98] text-white font-extrabold text-sm py-3 px-4 rounded-xl text-center flex items-center justify-center gap-2 shadow-lg shadow-[#229ED9]/25 transition touch-manipulation cursor-pointer">
+          <i class="fa-brands fa-telegram text-lg"></i>
+          <span data-i18n="tg_popup_join_cta">انضم إلى قناة التيليجرام الآن مجاناً</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-75"></i>
+        </a>
+
+        <div class="flex items-center justify-between text-xs pt-1 px-1">
+          <a href="https://t.me/francedealsdz" target="_blank" rel="noopener noreferrer" onclick="onTelegramPopupJoinClick()" class="opacity-75 hover:opacity-100 hover:text-sky-500 transition flex items-center gap-1">
+            <span>🇫🇷</span>
+            <span data-i18n="tg_popup_france_link">قناة عروض فرنسا (@francedealsdz)</span>
+          </a>
+          <button onclick="closeTelegramPopup(true)" class="opacity-70 hover:opacity-100 underline transition touch-manipulation cursor-pointer" data-i18n="tg_popup_dismiss">
+            لاحقاً، تصفح الموقع
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- Confetti Canvas Particle Overlay -->
   <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-[9999] w-full h-full" style="display: none;"></canvas>
 
@@ -1981,8 +2163,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     // ── Translation Dictionary ──────────────────────────────────────
     const I18N = {
       ar: {
-        meta_title: "DealScout DZ — صفقات وتخفيضات AliExpress بالدينار الجزائري",
-        meta_desc: "منصة متخصصة في رصد وتحديث أفضل عروض وتخفيضات AliExpress الموجهة للجزائر لحظة بلحظة، مع حساب الأسعار بالدينار الجزائري وأكواد الخصم والعملات.",
+        meta_title: "DealScout DZ — عروض وتخفيضات علي اكسبراس في الجزائر | AliExpress Deals DZ",
+        meta_desc: "منصة DealScout DZ الأولى لرصد أقوى عروض وتخفيضات علي اكسبراس في الجزائر (AliExpress Deals DZ). تتبع صفقات aliexpressdz، كود تخفيض علي اكسبراس، طرق الشراء من علي اكسبراس في الجزائر بالدينار، وروابط خصم العملات وقناة التيليجرام الرسمية.",
         brand_subtitle: "بوابة صفقات وتخفيضات AliExpress 🇩🇿",
         top_live_updates: "تحديث فوري من القنوات",
         top_usdt_rate: "سعر صرف السكوار",
@@ -2171,11 +2353,36 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         superdeal_link_title: "رابط السوبر ديلز (SuperDeals)",
         bundle_link_title: "عروض الحزم (Bundle Deals)",
         btn_open_deal: "فتح العرض",
-        coin_gen_tip: "💡 سر الخصم: افتح رابط العملات داخل تطبيق AliExpress واضغط مباشرة على زر (شراء الآن / Acheter) أو أضف المنتج إلى السلة من نفس الصفحة لتفعيل خصم العملات الكامل بدلاً من 2% فقط!"
+        coin_gen_tip: "💡 سر الخصم: افتح رابط العملات داخل تطبيق AliExpress واضغط مباشرة على زر (شراء الآن / Acheter) أو أضف المنتج إلى السلة من نفس الصفحة لتفعيل خصم العملات الكامل بدلاً من 2% فقط!",
+        tg_popup_badge: "قناة تيليجرام الرسمية 🇩🇿",
+        tg_popup_title: "لا تفوّت صفقات وتخفيضات علي اكسبراس في الجزائر!",
+        tg_popup_desc: "أقوى الصفقات الخارقة وكوبونات التخفيض تنفذ في دقائق معدودة! انضم إلى قناتنا على تيليجرام لتصلك تنبيهات العروض اللحظية والعملات في الجزائر مباشرة على هاتفك مجاناً.",
+        tg_popup_feat1_title: "عروض سريعة وكوبونات فورية",
+        tg_popup_feat1_desc: "نشر فوري للصفقات الخاطفة قبل نفاذ الكمية في الجزائر",
+        tg_popup_feat2_title: "روابط خصم العملات الأقصى (Coins)",
+        tg_popup_feat2_desc: "تخفيضات حقيقية تصل إلى 70% عبر روابط العملات الحصرية",
+        tg_popup_feat3_title: "أسعار حقيقية بالدينار الجزائري (DZD)",
+        tg_popup_feat3_desc: "حساب السعر بسعر السكوار لحظياً دون رسوم مخفية",
+        tg_popup_join_cta: "انضم إلى قناة التيليجرام الآن مجاناً",
+        tg_popup_france_link: "قناة عروض فرنسا (@francedealsdz)",
+        tg_popup_dismiss: "لاحقاً، تصفح الموقع",
+        seo_badge: "دليل المتسوق الجزائري 🇩🇿",
+        seo_guide_title: "عروض وتخفيضات علي اكسبراس في الجزائر — AliExpress Deals DZ",
+        seo_guide_subtitle: "بوابتك الشاملة لكل ما يخص aliexpressdz، أحدث صفقات aliexpress deals dz، وطرق الشراء من علي اكسبراس في الجزائر بأقل تكلفة وبالدينار الجزائري.",
+        seo_block1_h: "أقوى عروض علي اكسبراس في الجزائر (AliExpress DZ)",
+        seo_block1_p: "يقوم موقع DealScout DZ بمتابعة وتحديث عروض علي اكسبراس يومياً، بما يشمل عروض السوبر ديلز (SuperDeals)، التخفيضات الموسمية، وتجميعات المنتجات الأكثر طلباً في الجزائر مع حساب التكلفة الفعلية بالدينار الجزائري (DZD) حسب سعر صرف السكوار المحدث.",
+        seo_block2_h: "طريقة الشراء من علي اكسبراس في الجزائر والدفع ببريدي موب",
+        seo_block2_p: "لإتمام عملية شراء من علي اكسبراس في الجزائر، يمكنك شحن بطاقتك البنكية الدولية (مثل Bybit أو RedotPay أو Paysera) بالدينار الجزائري عبر تطبيق BaridiMob من خلال منصات P2P المعتمدة (Binance P2P)، ثم طلب المنتجات مباشرة مع التوصيل إلى مكتب بريد الجزائر الأقرب إليك.",
+        seo_block3_h: "تخفيض عملات وكوبونات علي اكسبراس الجزائر (Coins & Coupons)",
+        seo_block3_p: "استفد من أداة توليد روابط العملات الحصرية على موقعنا لتحويل أي رابط منتج إلى رابط خصم العملات الأقصى (Coins Discount) لتوفير ما يصل إلى 70% من السعر، بالإضافة إلى نسخ أكواد الخصم والبرومو كود الترويجية الفعالة فور صدورها.",
+        seo_block4_h: "قناة التيليجرام لعروض علي اكسبراس في الجزائر",
+        seo_block4_p: "الهدف الرئيسي من منصتنا هو إيصال أفضل التخفيضات إليك في الثواني الأولى. نظراً لأن الصفقات القوية تنفد كمياتها بسرعة، ننصحك بالانضمام فوراً إلى قناة التيليجرام الرسمية (@DzAliexpress0) لتصلك الإشعارات اللحظية بروابط الشراء المباشرة.",
+        seo_block4_btn: "انضم لقناة صفقات الجزائر (@DzAliexpress0)",
+        seo_tags_title: "الكلمات الأكثر بحثاً في الجزائر:"
       },
       fr: {
-        meta_title: "DealScout DZ — Bons Plans & Réductions AliExpress en Dinar Algérien",
-        meta_desc: "Portail n°1 des meilleurs bons plans et promotions AliExpress pour l'Algérie avec conversion en Dinar Algérien (DZD) et codes promo.",
+        meta_title: "DealScout DZ — Bons Plans & Promo AliExpress Algérie | AliExpress Deals DZ",
+        meta_desc: "Portail n°1 des offres aliexpressdz et bons plans AliExpress en Algérie (AliExpress Deals DZ). Guide d'achat sur AliExpress en Algérie avec BaridiMob, réductions pièces (coins) et canal Telegram officiel.",
         brand_subtitle: "Bons plans et réductions AliExpress 🇩🇿",
         top_live_updates: "Mise à jour en direct",
         top_usdt_rate: "Taux Square Algérie",
@@ -2363,8 +2570,32 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         btn_buy_coins_deal: "Acheter avec les Pièces",
         superdeal_link_title: "Ventes Flash (SuperDeals)",
         bundle_link_title: "Offres Groupées (Bundle Deals)",
-        btn_open_deal: "Ouvrir",
-        coin_gen_tip: "💡 Astuce Réduction : Ouvrez le lien Pièces dans l'application AliExpress et cliquez directement sur (Acheter maintenant) ou ajoutez au panier depuis cette page pour débloquer la réduction maximale en pièces !"
+        coin_gen_tip: "💡 Astuce Réduction : Ouvrez le lien Pièces dans l'application AliExpress et cliquez directement sur (Acheter maintenant) ou ajoutez au panier depuis cette page pour débloquer la réduction maximale en pièces !",
+        tg_popup_badge: "Canal Telegram Officiel 🇩🇿",
+        tg_popup_title: "Ne ratez aucun bon plan AliExpress en Algérie !",
+        tg_popup_desc: "Les meilleures ventes flash et codes promo expirent en quelques minutes ! Rejoignez notre canal Telegram pour recevoir les alertes des deals et pièces en Algérie directement sur votre smartphone.",
+        tg_popup_feat1_title: "Bons plans flash & coupons en direct",
+        tg_popup_feat1_desc: "Diffusion instantanée des offres exclusives avant rupture de stock",
+        tg_popup_feat2_title: "Réduction Pièces maximale (Coins)",
+        tg_popup_feat2_desc: "Jusqu'à 70% de remise réelle grâce aux liens Pièces exclusifs",
+        tg_popup_feat3_title: "Prix réels en Dinars Algériens (DZD)",
+        tg_popup_feat3_desc: "Calcul au taux réel du Square sans frais cachés",
+        tg_popup_join_cta: "Rejoindre le canal Telegram gratuitement",
+        tg_popup_france_link: "Canal Bons Plans France (@francedealsdz)",
+        tg_popup_dismiss: "Plus tard, continuer la navigation",
+        seo_badge: "Guide Shopping Algérie 🇩🇿",
+        seo_guide_title: "Bons Plans & Promotions AliExpress en Algérie — AliExpress Deals DZ",
+        seo_guide_subtitle: "Votre référence pour tout ce qui concerne aliexpressdz, les offres aliexpress deals dz, et le guide complet pour acheter sur AliExpress en Algérie au meilleur prix en Dinar.",
+        seo_block1_h: "Meilleures offres AliExpress en Algérie (AliExpress DZ)",
+        seo_block1_p: "DealScout DZ sélectionne et met à jour en continu les meilleures offres AliExpress : SuperDeals, ventes flash, et promotions saisonnières avec conversion automatique en Dinar Algérien (DZD) selon le taux de change réel du Square.",
+        seo_block2_h: "Comment acheter sur AliExpress depuis l'Algérie avec BaridiMob",
+        seo_block2_p: "Pour commander sur AliExpress depuis l'Algérie, vous pouvez recharger vos cartes bancaires internationales (Bybit, RedotPay, Paysera) en dinars via BaridiMob sur Binance P2P, puis vous faire livrer directement au bureau d'Algérie Poste le plus proche.",
+        seo_block3_h: "Réductions Pièces et Coupons Promo AliExpress Algérie",
+        seo_block3_p: "Utilisez notre générateur de liens Pièces gratuit pour débloquer jusqu'à 70% de remise sur vos articles favoris et copiez les codes promo actifs pour réduire le montant de votre panier.",
+        seo_block4_h: "Rejoignez le canal Telegram des bons plans en Algérie",
+        seo_block4_p: "Le but principal de notre plateforme est de vous transmettre les meilleures offres en quelques secondes. Les stocks étant limités, rejoignez le canal Telegram officiel (@DzAliexpress0) pour être alerté immédiatement.",
+        seo_block4_btn: "Rejoindre le canal Telegram (@DzAliexpress0)",
+        seo_tags_title: "Recherches populaires en Algérie :"
       }
     };
 
@@ -3036,6 +3267,101 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         .replace(/'/g, '&#039;');
     }
 
+    // ── Telegram Channel Engagement Popup (Non-Annoying & Closable) ───
+    var tgPopupTimer = null;
+    var tgPopupScrollHandler = null;
+
+    function openTelegramPopup() {
+      const modal = document.getElementById('telegram-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
+      }
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeTelegramPopup(userInitiated = false) {
+      if (tgPopupTimer) {
+        clearTimeout(tgPopupTimer);
+        tgPopupTimer = null;
+      }
+      if (tgPopupScrollHandler) {
+        window.removeEventListener('scroll', tgPopupScrollHandler);
+        tgPopupScrollHandler = null;
+      }
+      const modal = document.getElementById('telegram-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+      }
+      document.body.style.overflow = '';
+      if (userInitiated) {
+        // User explicitly closed/dismissed: respect choice for 24 hours
+        setStoredItem('dealscout_tg_popup_dismissed_until', Date.now() + (24 * 60 * 60 * 1000));
+      }
+    }
+
+    function onTelegramPopupBackdropClick(event) {
+      if (event && event.target && event.target.id === 'telegram-modal') {
+        closeTelegramPopup(true);
+      }
+    }
+
+    function onTelegramPopupJoinClick() {
+      // User clicked to join! Don't prompt again for 30 days
+      setStoredItem('dealscout_tg_popup_dismissed_until', Date.now() + (30 * 24 * 60 * 60 * 1000));
+      setTimeout(() => closeTelegramPopup(false), 300);
+    }
+
+    function initTelegramPopupTrigger() {
+      const dismissedUntil = getStoredItem('dealscout_tg_popup_dismissed_until');
+      if (dismissedUntil && Date.now() < parseInt(dismissedUntil, 10)) {
+        return; // Respect user choice, never annoy!
+      }
+
+      let popupTriggered = false;
+      function triggerPopup() {
+        if (popupTriggered) return;
+        popupTriggered = true;
+        if (tgPopupScrollHandler) {
+          window.removeEventListener('scroll', tgPopupScrollHandler);
+          tgPopupScrollHandler = null;
+        }
+
+        // Avoid interrupting when a modal or lightbox is already active
+        const dealModal = document.getElementById('deal-modal');
+        const rouletteModal = document.getElementById('roulette-modal');
+        const toolsModal = document.getElementById('gamification-modal');
+        const isDealOpen = dealModal && !dealModal.classList.contains('hidden') && dealModal.style.display !== 'none';
+        const isRouletteOpen = rouletteModal && !rouletteModal.classList.contains('hidden') && rouletteModal.style.display !== 'none';
+        const isToolsOpen = toolsModal && !toolsModal.classList.contains('hidden') && toolsModal.style.display !== 'none';
+
+        if (isDealOpen || isRouletteOpen || isToolsOpen) {
+          // Retry later after 8 seconds
+          tgPopupTimer = setTimeout(() => {
+            popupTriggered = false;
+            triggerPopup();
+          }, 8000);
+          return;
+        }
+
+        openTelegramPopup();
+      }
+
+      // Dwell trigger: after 7 seconds of browsing
+      tgPopupTimer = setTimeout(triggerPopup, 7000);
+
+      // Scroll trigger: when scrolling past 35% of page content
+      tgPopupScrollHandler = function() {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        if (scrollable > 300 && (window.scrollY / scrollable) >= 0.35) {
+          if (tgPopupTimer) clearTimeout(tgPopupTimer);
+          triggerPopup();
+        }
+      };
+      window.addEventListener('scroll', tgPopupScrollHandler, { passive: true });
+    }
+
     function handleContactSubmit(e) {
       e.preventDefault();
       const name = document.getElementById('contact-name').value;
@@ -3072,12 +3398,14 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const bannerBtn = document.getElementById('channel-banner-btn');
       const mobTg = document.getElementById('mob-bottom-tg');
       const topTg = document.getElementById('top-telegram-link');
+      const tgPopupBtn = document.getElementById('tg-popup-join-btn');
       const targetUrl = isDz ? 'https://t.me/DzAliexpress0' : 'https://t.me/francedealsdz';
 
       if (btnJoin) btnJoin.href = targetUrl;
       if (bannerBtn) bannerBtn.href = targetUrl;
       if (mobTg) mobTg.href = targetUrl;
       if (topTg) topTg.href = targetUrl;
+      if (tgPopupBtn) tgPopupBtn.href = targetUrl;
 
       if (isDz) {
         if (tabDz) tabDz.className = 'flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg bg-crimson-600 text-white transition flex items-center justify-center gap-2 active:scale-95 shadow-sm';
@@ -4079,6 +4407,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         closeDealModal();
+        closeTelegramPopup(true);
+        closeRouletteModal();
+        closeGamificationHub();
         if (currentSearchTerm) resetFilters();
       }
       // Ctrl+K or / keyboard shortcut to focus search
@@ -4114,6 +4445,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
       fetchDeals();
       setInterval(() => fetchDeals(false), 180000);
+      initTelegramPopupTrigger();
     });
   </script>
 
