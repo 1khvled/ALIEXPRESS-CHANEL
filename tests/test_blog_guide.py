@@ -53,3 +53,22 @@ def test_country_completion_and_tatweel():
         assert deal is not None
         assert deal["country"] == expected, f"Failed on input: {text!r}, got: {deal['country']!r}, expected: {expected!r}"
 
+def test_trackit_dz_source_in_api():
+    """Verify that Trackit.dz is included as the primary source in the tracking API."""
+    from api.parcel_tracker import get_direct_tracking_links
+    links = get_direct_tracking_links("RB123456789SG")
+    assert "trackit_dz" in links
+    assert "https://trackdz.com/?q=RB123456789SG" == links["trackit_dz"]
+    assert "trackit.dz" in links["trackit_url"]
+
+    resp = client.get("/api/track-parcel?num=RB123456789SG")
+    assert resp.status_code == 200
+    data = resp.json()
+    assert data["ok"] is True
+    assert "source_provider" in data
+    assert "Trackit.dz" in data["source_provider"]["name"]
+
+    home = client.get("/").text
+    assert "btn-portal-trackit" in home
+    assert "Trackit.dz" in home
+

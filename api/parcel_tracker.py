@@ -201,15 +201,17 @@ def detect_carrier(num: str) -> Dict[str, Any]:
 
 
 def get_direct_tracking_links(num: str) -> Dict[str, str]:
-    """Generate verified direct portal links for deep tracking without iframe embedding."""
+    """Generate verified direct portal links for deep tracking with Trackit.dz as primary source."""
     cleaned = sanitize_tracking_number(num)
     return {
+        "trackit_dz": f"https://trackdz.com/?q={cleaned}",
+        "trackit_url": "https://trackit.dz",
         "track17": f"https://t.17track.net/ar#nums={cleaned}",
         "track17_en": f"https://t.17track.net/en#nums={cleaned}",
         "cainiao": f"https://global.cainiao.com/detail.html?mailNoList={cleaned}",
         "postal_ninja": f"https://postal.ninja/en/track/{cleaned}",
         "parcels_app": f"https://parcelsapp.com/en/tracking/{cleaned}",
-        "algerie_poste": f"https://t.17track.net/ar#nums={cleaned}"
+        "algerie_poste": f"https://trackdz.com/?q={cleaned}"
     }
 
 
@@ -390,5 +392,13 @@ async def track_algeria_parcel(raw_num: str) -> Dict[str, Any]:
         },
         "portal_links": direct_links,
         "direct_links": direct_links,
+        "source_provider": {
+            "name": "Trackit.dz",
+            "name_ar": "منصة Trackit.dz الجزائرية",
+            "name_fr": "Plateforme algérienne Trackit.dz",
+            "url": "https://trackit.dz",
+            "direct_url": direct_links.get("trackit_dz"),
+            "flag": "🇩🇿"
+        },
         "checked_at": datetime.now(timezone.utc).isoformat()
     }

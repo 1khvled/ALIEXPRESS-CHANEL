@@ -763,7 +763,7 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
       const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
 
       const isBoilerplate = (l) => {
-        const s = l.toLowerCase();
+        const s = l.toLowerCase().replace(/[\u0640]/g, '');
         return (
           s.includes('http') || s.includes('@') || s.includes('t.me') ||
           s.includes('خلي البلد') || s.includes('بلد الحساب') || s.includes('livraison') ||

@@ -1146,8 +1146,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <!-- Supported Carrier Badges -->
         <div class="pt-2 flex items-center gap-2 flex-wrap text-[11px] font-semibold" style="color: var(--text-soft);">
           <span class="opacity-75" data-i18n="tracking_supported_carriers">يدعم جميع شركات الشحن:</span>
-          <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">Cainiao / Choice (LP...)</span>
+          <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px] font-bold text-emerald-400 border-emerald-500/30 bg-emerald-500/10">المصدر: Trackit.dz 🇩🇿</span>
           <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">Algérie Poste (...DZ)</span>
+          <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">Cainiao / Choice (LP...)</span>
           <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">SunYou (SY...)</span>
           <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">Yanwen (...YP)</span>
           <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">EMS International</span>
@@ -1234,6 +1235,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
                 <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
                 <span id="tracking-status-text">في مسار الشحن الدولي</span>
               </span>
+              <a href="https://trackit.dz" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-xl text-xs font-bold border flex items-center gap-1.5 hover:opacity-80 transition" style="background-color: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.35); color: #10b981;">
+                <span class="text-xs">🇩🇿</span>
+                <span>المصدر: Trackit.dz</span>
+              </a>
             </div>
 
             <!-- Route Visualization (Origin -> Destination) -->
@@ -1365,7 +1370,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             </span>
             <span class="text-[11px] text-slate-500">روابط مشفرة وآمنة</span>
           </div>
-          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-xs">
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-xs">
+            <a id="btn-portal-trackit" href="https://trackit.dz" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-emerald-500 hover:text-emerald-400 active:scale-95 touch-manipulation shadow-sm col-span-2 sm:col-span-1" style="background-color: rgba(16, 185, 129, 0.12); border-color: rgba(16, 185, 129, 0.4); color: #10b981;">
+              <span class="text-sm">🇩🇿</span>
+              <span>Trackit.dz</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+            </a>
             <a id="btn-portal-17track" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-amber-500 hover:text-amber-400 active:scale-95 touch-manipulation shadow-sm" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
               <i class="fa-solid fa-globe text-amber-500"></i>
               <span>17TRACK</span>
@@ -1386,7 +1396,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               <span>ParcelsApp</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
             </a>
-            <a id="btn-portal-poste" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-emerald-500 hover:text-emerald-400 active:scale-95 touch-manipulation shadow-sm col-span-2 sm:col-span-1" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+            <a id="btn-portal-poste" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-emerald-500 hover:text-emerald-400 active:scale-95 touch-manipulation shadow-sm" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
               <i class="fa-solid fa-envelope text-emerald-500"></i>
               <span>بريد الجزائر</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
@@ -4402,7 +4412,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const lines = text.split(/\\r?\\n/).map(l => l.trim()).filter(Boolean);
 
       const isBoilerplate = (l) => {
-        const s = l.toLowerCase();
+        const s = l.toLowerCase().replace(/[\u0640]/g, '');
         return (
           s.includes('http') || s.includes('@') || s.includes('t.me') ||
           s.includes('خلي البلد') || s.includes('بلد الحساب') || s.includes('livraison') ||
@@ -4460,9 +4470,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       // Priority 4: Non-link fallback line
       if (!title) {
         for (const line of lines) {
-          if (!line.includes('http') && !line.includes('@') && !line.includes('t.me') && line.length >= 4) {
+          if (!line.includes('http') && !line.includes('@') && !line.includes('t.me') && line.length >= 4 && !isBoilerplate(line)) {
             const clean = line.replace(/^[-🛍️🔥⚡⭐💥📦📍🏷️✅✔️•*\\s]+/, '').trim();
-            if (clean.length >= 4) {
+            if (clean.length >= 4 && !isBoilerplate(clean)) {
               title = clean;
               break;
             }
@@ -5429,6 +5439,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
           // Direct Portal Deep-Link Buttons
           const links = data.portal_links || data.direct_links || {};
+          const pTrackit = document.getElementById('btn-portal-trackit');
+          if (pTrackit) pTrackit.href = links.trackit_dz || `https://trackdz.com/?q=${encodeURIComponent(data.tracking_number)}`;
           const p17 = document.getElementById('btn-portal-17track');
           if (p17 && links.track17) p17.href = isFr ? (links.track17_en || links.track17) : links.track17;
           const pCainiao = document.getElementById('btn-portal-cainiao');
