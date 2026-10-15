@@ -9,6 +9,7 @@ Features:
 """
 import os
 import re
+import time
 from datetime import datetime, timezone, timedelta
 from typing import Optional, Dict, Any, List
 
@@ -29,6 +30,18 @@ from api.user_site import USER_WEBSITE_HTML
 from api.admin_login import ADMIN_LOGIN_HTML
 
 app = FastAPI(title="DealScout DZ — AliExpress Deals & Live Telegram Content", version="2.5.0")
+
+@app.middleware("http")
+async def add_security_headers(request: Request, call_next):
+    response = await call_next(request)
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    response.headers["X-Frame-Options"] = "DENY"
+    response.headers["X-XSS-Protection"] = "1; mode=block"
+    response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
+    response.headers["Permissions-Policy"] = "camera=(), microphone=(), geolocation=()"
+    if request.url.scheme == "https" or request.headers.get("x-forwarded-proto") == "https":
+        response.headers["Strict-Transport-Security"] = "max-age=31536000; includeSubDomains"
+    return response
 
 # ── Manifest JSON ───────────────────────────────────────────────
 MANIFEST_JSON = """{
@@ -1160,12 +1173,47 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 
 # ── Web App & PWA Routes ─────────────────────────────────────────
 @app.get("/", response_class=HTMLResponse)
+@app.get("/deals", response_class=HTMLResponse)
 async def user_website():
     """Serves the modern user-facing AliExpress deals website with live Telegram feed."""
     return HTMLResponse(content=USER_WEBSITE_HTML)
 
 
 ADMIN_SESSION_COOKIE = "dealscout_admin_session"
+_login_failed_attempts: Dict[str, List[float]] = {}
+MAX_FAILED_ATTEMPTS = 5
+LOCKOUT_DURATION_SECONDS = 900  # 15 minutes
+
+
+def get_client_ip(request: Request) -> str:
+    forwarded = request.headers.get("x-forwarded-for")
+    if forwarded:
+        return forwarded.split(",")[0].strip()
+    return request.client.host if request.client else "127.0.0.1"
+
+
+def check_login_rate_limit(client_ip: str) -> Optional[int]:
+    """Returns seconds remaining if locked out, or None if allowed."""
+    now = time.time()
+    attempts = _login_failed_attempts.get(client_ip, [])
+    recent = [t for t in attempts if now - t < LOCKOUT_DURATION_SECONDS]
+    _login_failed_attempts[client_ip] = recent
+    if len(recent) >= MAX_FAILED_ATTEMPTS:
+        oldest_relevant = recent[0]
+        remaining = int(LOCKOUT_DURATION_SECONDS - (now - oldest_relevant))
+        return max(1, remaining)
+    return None
+
+
+def record_failed_login(client_ip: str):
+    now = time.time()
+    if client_ip not in _login_failed_attempts:
+        _login_failed_attempts[client_ip] = []
+    _login_failed_attempts[client_ip].append(now)
+
+
+def reset_login_attempts(client_ip: str):
+    _login_failed_attempts.pop(client_ip, None)
 
 
 def get_admin_auth_secret() -> Optional[str]:
@@ -1215,6 +1263,67 @@ def is_admin_authenticated(request: Request) -> bool:
     return False
 
 
+@app.get("/robots.txt", response_class=Response)
+async def robots_txt():
+    """Search Engine Optimization robots.txt"""
+    content = """User-agent: *
+Allow: /
+Allow: /deals
+Allow: /manifest.json
+Allow: /icon.svg
+Allow: /sw.js
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /api/
+
+Sitemap: https://dealscout-green.vercel.app/sitemap.xml
+"""
+    return Response(
+        content=content,
+        media_type="text/plain",
+        headers={"Cache-Control": "public, max-age=86400"}
+    )
+
+
+@app.get("/sitemap.xml", response_class=Response)
+async def sitemap_xml():
+    """Dynamic Search Engine Sitemap with multilingual and image metadata"""
+    xml_content = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://dealscout-green.vercel.app/</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscout-green.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscout-green.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscout-green.vercel.app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscout-green.vercel.app/"/>
+    <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://dealscout-green.vercel.app/icon.svg</image:loc>
+      <image:title>DealScout DZ — صفقات وتخفيضات AliExpress بالدينار الجزائري</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dealscout-green.vercel.app/deals</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscout-green.vercel.app/deals"/>
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscout-green.vercel.app/deals"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscout-green.vercel.app/deals"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscout-green.vercel.app/deals"/>
+    <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>"""
+    return Response(
+        content=xml_content,
+        media_type="application/xml",
+        headers={"Cache-Control": "public, max-age=3600"}
+    )
+
+
 @app.get("/admin", response_class=HTMLResponse)
 @app.get("/dashboard", response_class=HTMLResponse)
 async def admin_dashboard(request: Request):
@@ -1226,7 +1335,16 @@ async def admin_dashboard(request: Request):
 
 @app.post("/api/admin/login")
 async def admin_login(request: Request):
-    """Authenticates admin password strictly from environment variables."""
+    """Authenticates admin password strictly from environment variables with brute-force rate limiting."""
+    client_ip = get_client_ip(request)
+    lockout_remaining = check_login_rate_limit(client_ip)
+    if lockout_remaining:
+        mins = max(1, lockout_remaining // 60)
+        return JSONResponse({
+            "success": False,
+            "error": f"تم حظر تسجيل الدخول مؤقتاً لكثرة المحاولات الخاطئة. يرجى المحاولة بعد {mins} دقيقة."
+        }, status_code=429)
+
     secret = get_admin_auth_secret()
     if not secret:
         return JSONResponse({
@@ -1244,6 +1362,7 @@ async def admin_login(request: Request):
         return JSONResponse({"success": False, "error": "يرجى إدخال كلمة المرور"}, status_code=400)
 
     if hmac.compare_digest(password, secret):
+        reset_login_attempts(client_ip)
         expected_token = get_expected_admin_token()
         resp = JSONResponse({"success": True, "message": "تم تسجيل الدخول بنجاح"})
         resp.set_cookie(
@@ -1255,6 +1374,7 @@ async def admin_login(request: Request):
         )
         return resp
 
+    record_failed_login(client_ip)
     return JSONResponse({"success": False, "error": "كلمة المرور غير صحيحة!"}, status_code=401)
 
 
@@ -1574,6 +1694,8 @@ async def get_schedule():
 @app.post("/api/schedule")
 async def update_schedule(request: Request):
     """Updates automated posting schedule configuration."""
+    if not is_admin_authenticated(request):
+        return JSONResponse({"ok": False, "error": "غير مصرح: يرجى تسجيل الدخول كأدمن أولاً"}, status_code=401)
     try:
         data = await request.json()
         from app.publisher.state_tracker import update_schedule_config
@@ -1658,6 +1780,8 @@ async def scout_endpoint(url: str = Query(...)):
 @app.post("/api/reformat-deal")
 async def api_reformat_deal(request: Request):
     """Reformat raw Telegram deal post and prepare clean Algerian channel caption using the official algorithm."""
+    if not is_admin_authenticated(request):
+        return JSONResponse({"ok": False, "error": "غير مصرح: يرجى تسجيل الدخول كأدمن أولاً"}, status_code=401)
     try:
         data = await request.json()
         raw_text = (data.get("text") or "").strip()
@@ -1779,6 +1903,8 @@ async def api_reformat_deal(request: Request):
 @app.post("/api/publish-deal")
 async def api_publish_deal(request: Request):
     """Publish reformatted deal post directly to target channel (@DzAliexpress0 or @francedealsdz)."""
+    if not is_admin_authenticated(request):
+        return JSONResponse({"ok": False, "error": "غير مصرح: يرجى تسجيل الدخول كأدمن أولاً"}, status_code=401)
     try:
         data = await request.json()
         caption = (data.get("caption") or "").strip()
@@ -2059,16 +2185,32 @@ async def test_bot_connectivity():
 
 
 @app.api_route("/api/trigger-deals", methods=["GET", "POST"])
-async def trigger_deals_collector(force: bool = False):
+async def trigger_deals_collector(request: Request, force: bool = False):
     """
     Webhook endpoint to trigger GitHub Actions collector workflow.
-    Can be called by external cron services (cron-job.org, EasyCron, etc.).
+    Can be called by external cron services (with ?key= or ?secret=) or authenticated admin.
     
     Smart Scheduling:
       - Daytime (07:00 - 01:00 UTC+1): Every 5 minutes
       - Nighttime (01:00 - 07:00 UTC+1): Throttled to every 30 minutes
     Pass ?force=true to bypass night mode throttling.
     """
+    secret = get_admin_auth_secret()
+    trigger_secret = os.getenv("TRIGGER_SECRET", "").strip() or secret
+    req_secret = (
+        request.query_params.get("secret")
+        or request.query_params.get("key")
+        or request.query_params.get("token")
+        or request.headers.get("x-trigger-secret")
+    )
+    is_authed = is_admin_authenticated(request) or (
+        trigger_secret and req_secret and hmac.compare_digest(req_secret, trigger_secret)
+    )
+    if not is_authed:
+        return JSONResponse(
+            {"ok": False, "error": "غير مصرح: يرجى تمرير مفتاح المصادقة الصحيح (?key= أو ?secret=)"},
+            status_code=401
+        )
     dz_tz = timezone(timedelta(hours=1))
     now_dz = datetime.now(dz_tz)
     hour = now_dz.hour

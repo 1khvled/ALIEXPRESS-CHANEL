@@ -243,14 +243,20 @@
     "1005009774318553",
     "1005012585389764",
     "1005011997237872",
-    "1005011908654312"
+    "1005011908654312",
+    "9998882553",
+    "9998882689",
+    "9998883338",
+    "9998883549",
+    "9998883836",
+    "9998883963"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
     "1005010219205081": 1791192360.1916943,
-    "999111222": 1791759936.0144627,
-    "100500999912345": 1791669936.881425,
-    "100500999954321": 1791752736.881425,
+    "999111222": 1792073962.9331777,
+    "100500999912345": 1791983963.6726248,
+    "100500999954321": 1792066763.6726248,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
@@ -260,7 +266,7 @@
     "1005009627597591": 1790884233.6428,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1791749136.9715445,
+    "100500777666555": 1792063163.7685444,
     "1005011778621042": 1791108644.641232,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1791192944.201814,
@@ -278,7 +284,7 @@
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
-    "100500888999777": 1791745537.018029,
+    "100500888999777": 1792059563.8155534,
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
@@ -309,7 +315,7 @@
     "9998885726": 1790945726.205554,
     "9998885776": 1791675776.96059,
     "9998886147": 1790946147.1871526,
-    "999888777111": 1791758138.725628,
+    "999888777111": 1792072165.129444,
     "9998886362": 1790946362.071869,
     "1005012407874415": 1791061256.0753598,
     "9998887189": 1790947189.8634577,
@@ -329,7 +335,7 @@
     "1005011991145678": 1790962541.57551,
     "1005011682821623": 1790962844.0034096,
     "9998885747": 1790965747.5380507,
-    "1005010129356058": 1791748417.1090996,
+    "1005010129356058": 1792062443.905085,
     "9998885993": 1790965993.3792443,
     "1005012574108028": 1791236020.742662,
     "1005008599340405": 1791638441.843642,
@@ -441,8 +447,8 @@
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
     "COUPONS_Brand Day Sale": 1791676848.283345,
-    "COUPONS_d9b8b196": 1791759935.7819457,
-    "COUPONS_Test Event 2026": 1791759935.7819457,
+    "COUPONS_d9b8b196": 1792073962.745027,
+    "COUPONS_Test Event 2026": 1792073962.745027,
     "9998886905": 1791676905.095083,
     "9998887197": 1791677197.2988765,
     "9998887496": 1791677496.6959877,
@@ -497,7 +503,13 @@
     "1005009774318553": 1792050974.7243752,
     "1005012585389764": 1792061322.5579543,
     "1005011997237872": 1792061329.5738766,
-    "1005011908654312": 1792061334.470126
+    "1005011908654312": 1792061334.470126,
+    "9998882553": 1792072553.3589916,
+    "9998882689": 1792072689.712488,
+    "9998883338": 1792073338.7415233,
+    "9998883549": 1792073549.4615705,
+    "9998883836": 1792073836.8176863,
+    "9998883963": 1792073963.7339156
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -795,10 +807,10 @@
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1791759936.0144627,
+    "Test Wireless Gaming Mouse X1": 1792073962.9331777,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
-    "Attack Shark R2 Mouse": 1791752736.881425,
-    "Test Wrench Set": 1791759936.937901,
+    "Attack Shark R2 Mouse": 1792066763.6726248,
+    "Test Wrench Set": 1792073963.7339156,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1791194142.1753953,
@@ -830,8 +842,8 @@
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
-    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1791669936.881425,
-    "Attack Shark L80 PRO Wireless Mouse": 1791759037.018029,
+    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1791983963.6726248,
+    "Attack Shark L80 PRO Wireless Mouse": 1792073063.8155534,
     "الأكثر لبا لنهار اليوووم": 1790940343.7746465,
     "POCO C81 Pro 4/64": 1791114344.949536,
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
@@ -875,7 +887,7 @@
     "HONOR 600 PRO": 1790960475.7249138,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
-    "Xiaomi Pad 7 (12/256)": 1791748417.1090996,
+    "Xiaomi Pad 7 (12/256)": 1792062443.905085,
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1791236011.4353654,
     "CUSU SSD 512 GB Portable SSD External Drive": 1791200448.8235762,
     "HONOR  X80 PRO MAX (8/128)": 1791236020.742662,
@@ -1841,11 +1853,17 @@
     "megaphonna:8390",
     "aniscoupons:32952",
     "aniscoupons:32953",
-    "aniscoupons:32954"
+    "aniscoupons:32954",
+    "test_channel:1792072553",
+    "test_channel:1792072689",
+    "test_channel:1792073338",
+    "test_channel:1792073549",
+    "test_channel:1792073836",
+    "test_channel:1792073963"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1792061334.470126,
+  "last_run_time": 1792073963.9096045,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32954,
@@ -1857,15 +1875,15 @@
     },
     "lodydeals": {
       "last_message_id": 45547,
-      "last_check_time": 1792061276.7712893
+      "last_check_time": 1792073963.820557
     },
     "bnddeals": {
       "last_message_id": 50856,
       "last_check_time": 1792061299.7097218
     },
     "test_channel": {
-      "last_message_id": 1791759936,
-      "last_check_time": 1791759936.937901
+      "last_message_id": 1792073963,
+      "last_check_time": 1792073963.7339156
     },
     "pcgamingpart": {
       "last_message_id": 7985,
@@ -1877,7 +1895,7 @@
     },
     "megaphonna": {
       "last_message_id": 8390,
-      "last_check_time": 1792061316.5679557
+      "last_check_time": 1792073963.9096045
     },
     "couponsglobal": {
       "last_message_id": 48848,
@@ -6060,7 +6078,13 @@
     "1005008077568655": "zedstoreonline",
     "1005012585389764": "aniscoupons",
     "1005011997237872": "aniscoupons",
-    "1005011908654312": "aniscoupons"
+    "1005011908654312": "aniscoupons",
+    "9998882553": "test_channel",
+    "9998882689": "test_channel",
+    "9998883338": "test_channel",
+    "9998883549": "test_channel",
+    "9998883836": "test_channel",
+    "9998883963": "test_channel"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -6398,7 +6422,13 @@
     "test_rem_7a340116": "2026-10-02",
     "test_rem_3ecaf74a": "2026-10-02",
     "test_rem_fc9384bf": "2026-10-02",
-    "test_rem_114a900e": "2026-10-02"
+    "test_rem_114a900e": "2026-10-02",
+    "test_rem_698c0449": "2026-10-02",
+    "test_rem_d0b28976": "2026-10-02",
+    "test_rem_3c4e9736": "2026-10-02",
+    "test_rem_3bf51f65": "2026-10-02",
+    "test_rem_2eee2686": "2026-10-02",
+    "test_rem_9bdd065a": "2026-10-02"
   },
   "channel_announcements_history": {
     "china_holiday_shipping_delay": "2026-10-02",
@@ -6435,7 +6465,13 @@
     "test_tag_cc9f12": "2026-10-02",
     "test_tag_3ced26": "2026-10-02",
     "test_tag_1457c7": "2026-10-02",
-    "coupon_return_refresh": "2026-10-15"
+    "coupon_return_refresh": "2026-10-15",
+    "test_tag_76fe97": "2026-10-02",
+    "test_tag_9c03f3": "2026-10-02",
+    "test_tag_e98c78": "2026-10-02",
+    "test_tag_9617ac": "2026-10-02",
+    "test_tag_3959d5": "2026-10-02",
+    "test_tag_87efe9": "2026-10-02"
   },
   "daily_tajmi3at_history": {
     "2026-10-03": {
@@ -7002,6 +7038,72 @@
       "channel_msg_id": 9999,
       "channel": "@DzAliexpress0",
       "timestamp": 1791759935.7819457
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1792072551.725577
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1792072688.63775
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1792073337.627767
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1792073548.4827328
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1792073835.8857622
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1792073962.745027
     }
   ]
 }
