@@ -259,7 +259,8 @@
     "1005012575455222",
     "1005010210432531",
     "9998888020",
-    "9998888253"
+    "9998888253",
+    "1005010266487244"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -408,12 +409,12 @@
     "1005009497821240": 1791117948.6585228,
     "1005011925142821": 1792061295.4212031,
     "9998883864": 1791063864.5866926,
-    "1005010536089199": 1791942631.2692645,
+    "1005010536089199": 1792103187.1376467,
     "1005012385221205": 1791102050.1835058,
     "1005012743092233": 1791104461.903693,
     "1005007805497968": 1791941266.3806875,
     "1005007345108759": 1791104759.7671344,
-    "1005007394197021": 1791942626.6772876,
+    "1005007394197021": 1792103174.5720932,
     "1005013290515237": 1791110751.0808105,
     "1005012264415744": 1791114344.949536,
     "1005009689592131": 1791114651.412541,
@@ -452,7 +453,7 @@
     "9998887893": 1791627893.027416,
     "1005006007773971": 1791638433.4352653,
     "1005013067004815": 1791638447.7612462,
-    "1005009948598802": 1792061314.5490136,
+    "1005009948598802": 1792103203.7426965,
     "9998885318": 1791675318.975821,
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
@@ -505,7 +506,7 @@
     "1005008337650254": 1792017769.7299333,
     "1005013165123874": 1792017774.247927,
     "32983391170": 1792087147.0923955,
-    "1005012933967378": 1792025649.1506214,
+    "1005012933967378": 1792103193.622027,
     "1005010812635861": 1792025653.768273,
     "1005008500550817": 1792025664.1703467,
     "1005009834132291": 1792025670.659584,
@@ -529,7 +530,8 @@
     "1005012575455222": 1792091809.1996214,
     "1005010210432531": 1792097839.1553843,
     "9998888020": 1792098020.7307658,
-    "9998888253": 1792098253.077623
+    "9998888253": 1792098253.077623,
+    "1005010266487244": 1792103182.8885217
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -831,7 +833,9 @@
     "GameSir GM500 PMW33600 Gaming Mouse",
     "Honor 600S 5G 12/256GB",
     "Ⓜ  TCL 60 NXT PAPER 8/256📱",
-    "Realme P3 Lite 4G 4/128GB"
+    "Realme P3 Lite 4G 4/128GB",
+    "Anker 511 Nano Pro 30W",
+    "Anker Nano 3 Pro 45W GaN"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1072,7 +1076,7 @@
     "Essager 54W USB Car Charger": 1791752780.7013927,
     "Original QKZ AK6": 1791752787.9016774,
     "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": 1792097871.190524,
-    "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W": 1792061314.5490136,
+    "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W": 1792103203.7426965,
     "🌐نسخة عالمية": 1791752930.9846199,
     "realme P3 5G 8/256GB": 1791941221.9951465,
     "HONOR Watch X5i Global Version": 1791941229.2882626,
@@ -1081,8 +1085,8 @@
     "ARTISAN FX Mouse Pad Gaming Mats 400*450*2mm": 1791941271.2358608,
     "ATTACK SHARK L90 Tri-mode": 1791942616.1564767,
     "BlackShark Buds 6 ANC": 1791942620.3773732,
-    "Attack Shark X2 Pro Magnetic": 1791942626.6772876,
-    "Anker Q20i Hybrid ANC": 1791942631.2692645,
+    "Attack Shark X2 Pro Magnetic": 1792103174.5720932,
+    "Anker Q20i Hybrid ANC": 1792103187.1376467,
     "HONOR 600 Lite 5G 8/256": 1792061295.4212031,
     "ATTACK SHARK X11SE Wireless Gaming Mouse PixArt PAW3311": 1791942658.9081998,
     "لووووووووووووز controller 🎮": 1791942667.867043,
@@ -1136,7 +1140,9 @@
     "GameSir GM500 PMW33600 Gaming Mouse": 1792087147.0923955,
     "Honor 600S 5G 12/256GB": 1792091791.0211077,
     "Ⓜ  TCL 60 NXT PAPER 8/256📱": 1792091809.1996214,
-    "Realme P3 Lite 4G 4/128GB": 1792097839.1553843
+    "Realme P3 Lite 4G 4/128GB": 1792097839.1553843,
+    "Anker 511 Nano Pro 30W": 1792103182.8885217,
+    "Anker Nano 3 Pro 45W GaN": 1792103193.622027
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1917,27 +1923,32 @@
     "megaphonna:8405",
     "megaphonna:8402",
     "test_channel:1792098020",
-    "test_channel:1792098253"
+    "test_channel:1792098253",
+    "lodydeals:45563",
+    "lodydeals:45561",
+    "lodydeals:45560",
+    "lodydeals:45558",
+    "megaphonna:8401"
   ],
   "last_disclaimer_time": 1792097804.651378,
-  "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1792098253.2573922,
+  "last_calendar_time": 1792103160.5352654,
+  "last_run_time": 1792103203.7426965,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32969,
-      "last_check_time": 1792097883.0909147
+      "last_check_time": 1792103210.6663775
     },
     "ecksdeal": {
       "last_message_id": 5893,
-      "last_check_time": 1792097842.475998
+      "last_check_time": 1792103196.672298
     },
     "lodydeals": {
-      "last_message_id": 45557,
-      "last_check_time": 1792098253.1649413
+      "last_message_id": 45563,
+      "last_check_time": 1792103195.6357338
     },
     "bnddeals": {
       "last_message_id": 50859,
-      "last_check_time": 1792097845.4140458
+      "last_check_time": 1792103197.375707
     },
     "test_channel": {
       "last_message_id": 1792098253,
@@ -1945,15 +1956,15 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792097843.00161
+      "last_check_time": 1792103197.0311084
     },
     "zedstoreonline": {
       "last_message_id": 38610,
-      "last_check_time": 1792097841.785314
+      "last_check_time": 1792103196.2073255
     },
     "megaphonna": {
-      "last_message_id": 8411,
-      "last_check_time": 1792098253.2573922
+      "last_message_id": 8413,
+      "last_check_time": 1792103210.007692
     },
     "couponsglobal": {
       "last_message_id": 48849,
@@ -2171,7 +2182,7 @@
     "1005008337650254": 7.89,
     "1005013165123874": 7.79,
     "32983391170": 19.9,
-    "1005012933967378": 26.5,
+    "1005012933967378": 21.7,
     "1005010812635861": 92.0,
     "1005008500550817": 23.6,
     "1005008077568655": 42.3,
@@ -2183,7 +2194,8 @@
     "1005005875379717": 42.89,
     "1005013137396211": 316.02,
     "1005012575455222": 115.0,
-    "1005010210432531": 96.8
+    "1005010210432531": 96.8,
+    "1005010266487244": 14.07
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6018,6 +6030,56 @@
       "price": 111.0,
       "timestamp": 1792097871.190524,
       "status": "ACTIVE"
+    },
+    "lodydeals:45563": {
+      "channel_msg_id": 866,
+      "product_id": "1005007394197021",
+      "title": "Attack Shark X2 Pro Magnetic",
+      "channel": "lodydeals",
+      "source_msg_id": 45563,
+      "price": 14.88,
+      "timestamp": 1792103174.5720932,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45561": {
+      "channel_msg_id": 867,
+      "product_id": "1005010266487244",
+      "title": "Anker 511 Nano Pro 30W",
+      "channel": "lodydeals",
+      "source_msg_id": 45561,
+      "price": 14.07,
+      "timestamp": 1792103182.8885217,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45560": {
+      "channel_msg_id": 868,
+      "product_id": "1005010536089199",
+      "title": "Anker Q20i Hybrid ANC",
+      "channel": "lodydeals",
+      "source_msg_id": 45560,
+      "price": 36.45,
+      "timestamp": 1792103187.1376467,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45558": {
+      "channel_msg_id": 869,
+      "product_id": "1005012933967378",
+      "title": "Anker Nano 3 Pro 45W GaN",
+      "channel": "lodydeals",
+      "source_msg_id": 45558,
+      "price": 21.7,
+      "timestamp": 1792103193.622027,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8401": {
+      "channel_msg_id": 870,
+      "product_id": "1005009948598802",
+      "title": "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W",
+      "channel": "megaphonna",
+      "source_msg_id": 8401,
+      "price": 231.9,
+      "timestamp": 1792103203.7426965,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6026,17 +6088,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792097888.2053835,
+    "last_deal_post_time": 1792103217.8754354,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792097888.1836026,
+    "last_sweep_time": 1792103220.7996652,
     "last_sweep_times": {
-      "algeria": 1792097888.1836026,
-      "france": 1792091820.0369291
+      "algeria": 1792103217.870073,
+      "france": 1792103220.7996652
     },
     "last_deal_post_times": {
-      "algeria": 1792097888.2053835
+      "algeria": 1792103217.8754354
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -6286,7 +6348,7 @@
     "1005008337650254": "couponsglobal",
     "1005013165123874": "couponsglobal",
     "32983391170": "lodydeals",
-    "1005012933967378": "zedstoreonline",
+    "1005012933967378": "lodydeals",
     "1005010812635861": "zedstoreonline",
     "1005008500550817": "bnddeals",
     "1005008077568655": "zedstoreonline",
@@ -6308,7 +6370,8 @@
     "1005012575455222": "megaphonna",
     "1005010210432531": "lodydeals",
     "9998888020": "test_channel",
-    "9998888253": "test_channel"
+    "9998888253": "test_channel",
+    "1005010266487244": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -6612,7 +6675,9 @@
     "GameSir GM500 PMW33600 Gaming Mouse": "lodydeals",
     "Honor 600S 5G 12/256GB": "lodydeals",
     "Ⓜ  TCL 60 NXT PAPER 8/256📱": "megaphonna",
-    "Realme P3 Lite 4G 4/128GB": "lodydeals"
+    "Realme P3 Lite 4G 4/128GB": "lodydeals",
+    "Anker 511 Nano Pro 30W": "lodydeals",
+    "Anker Nano 3 Pro 45W GaN": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -7165,7 +7230,11 @@
     "aniscoupons:32969",
     "aniscoupons:32968",
     "aniscoupons:32967",
-    "aniscoupons:32966"
+    "aniscoupons:32966",
+    "lodydeals:45559",
+    "megaphonna:8413",
+    "megaphonna:8412",
+    "megaphonna:8400"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
