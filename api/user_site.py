@@ -117,37 +117,37 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       --sal: env(safe-area-inset-left, 0px);
       --sar: env(safe-area-inset-right, 0px);
 
-      /* Clean Light Theme Tokens */
-      --bg-page: #f4f4f5;
-      --bg-card: #ffffff;
-      --bg-card-hover: #fafafa;
-      --bg-elevated: #ffffff;
-      --bg-subtle: #e4e4e7;
-      --border-card: #e4e4e7;
-      --border-subtle: #d4d4d8;
-      --text-main: #09090b;
-      --text-muted: #52525b;
-      --text-soft: #71717a;
-      --header-bg: rgba(255, 255, 255, 0.94);
+      /* Clean Crisp Light Theme Tokens */
+      --bg-page: #f8fafc;
+      --bg-card: rgba(255, 255, 255, 0.95);
+      --bg-card-hover: #ffffff;
+      --bg-elevated: #f1f5f9;
+      --bg-subtle: #e2e8f0;
+      --border-card: #e2e8f0;
+      --border-subtle: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-soft: #64748b;
+      --header-bg: rgba(255, 255, 255, 0.92);
       --input-bg: #ffffff;
-      --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+      --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.03);
     }
 
     html.dark {
-      /* Clean Neutral Dark Tokens (Zero blue slop!) */
-      --bg-page: #09090b;
-      --bg-card: #121215;
-      --bg-card-hover: #18181b;
-      --bg-elevated: #18181b;
-      --bg-subtle: #27272a;
-      --border-card: #27272a;
-      --border-subtle: #3f3f46;
-      --text-main: #fafafa;
-      --text-muted: #a1a1aa;
-      --text-soft: #71717a;
-      --header-bg: rgba(18, 18, 21, 0.94);
-      --input-bg: #18181b;
-      --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+      /* Deep Obsidian Slate Dark Tokens with Architectural Textures */
+      --bg-page: #06080d;
+      --bg-card: rgba(14, 18, 27, 0.92);
+      --bg-card-hover: rgba(20, 26, 40, 0.98);
+      --bg-elevated: rgba(20, 26, 40, 0.95);
+      --bg-subtle: rgba(30, 41, 59, 0.7);
+      --border-card: rgba(255, 255, 255, 0.09);
+      --border-subtle: rgba(255, 255, 255, 0.16);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-soft: #64748b;
+      --header-bg: rgba(9, 12, 19, 0.9);
+      --input-bg: rgba(13, 17, 26, 0.95);
+      --shadow-card: 0 4px 12px -2px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
     }
 
     html {
@@ -159,6 +159,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     }
     body {
       background-color: var(--bg-page);
+      background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+      background-size: 24px 24px;
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -168,6 +170,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       width: 100% !important;
       max-width: 100vw !important;
       position: relative;
+    }
+    html.dark body {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+      background-size: 24px 24px;
     }
     body[dir="ltr"] {
       font-family: 'Plus Jakarta Sans', 'Readex Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -270,13 +276,15 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     .deal-card {
       background-color: var(--bg-card);
       border: 1px solid var(--border-card);
-      border-radius: 14px;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      border-radius: 16px;
+      box-shadow: var(--shadow-card);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
       position: relative;
     }
     html.dark .deal-card {
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.05);
     }
     @media (hover: hover) {
       .deal-card:hover {
@@ -655,6 +663,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <i class="fa-solid fa-fire text-crimson-500 text-xs"></i>
           <span data-i18n="nav_deals">الصفقات</span>
         </button>
+        <button onclick="showPage('tracking')" id="nav-link-tracking" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs">
+          <i class="fa-solid fa-box text-blue-500 text-xs"></i>
+          <span data-i18n="nav_tracking">تتبع الطرود</span>
+        </button>
         <button onclick="showPage('cards')" id="nav-link-cards" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs">
           <i class="fa-solid fa-credit-card text-emerald-500 text-xs"></i>
           <span data-i18n="nav_cards">بطاقات الشراء</span>
@@ -758,29 +770,29 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
       </div>
 
-      <!-- Direct Official Telegram Channel Access Banner -->
-      <aside id="channel-telegram-banner" class="border rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 transition-colors shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-card);" aria-label="رابط القناة الرسمي">
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#229ED9]/15 text-[#229ED9] flex items-center justify-center text-xl sm:text-2xl flex-shrink-0">
+      <!-- Direct Official Telegram Channel Access Banner (Sleek Compact Glass Strip) -->
+      <aside id="channel-telegram-banner" class="border rounded-xl px-3.5 py-2.5 flex items-center justify-between gap-3 transition-all shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-card);" aria-label="رابط القناة الرسمي">
+        <div class="flex items-center gap-2.5 min-w-0">
+          <div class="w-8 h-8 rounded-lg bg-[#229ED9]/15 text-[#229ED9] flex items-center justify-center text-lg flex-shrink-0">
             <i class="fa-brands fa-telegram"></i>
           </div>
           <div class="min-w-0">
-            <div class="flex items-center gap-2 flex-wrap">
-              <h2 id="channel-banner-name" class="font-bold text-xs sm:text-sm truncate" style="color: var(--text-main);">قناة التيليجرام الرسمية (@DzAliexpress0)</h2>
-              <span class="inline-flex items-center gap-1 text-[10px] font-bold px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+            <div class="flex items-center gap-2">
+              <h2 id="channel-banner-name" class="font-bold text-xs truncate" style="color: var(--text-main);">قناة التيليجرام الرسمية (@DzAliexpress0)</h2>
+              <span class="inline-flex items-center gap-1 text-[9px] font-bold px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                 <span data-i18n="channel_banner_live">تحديثات فورية</span>
               </span>
             </div>
-            <p id="channel-banner-desc" class="text-[11px] sm:text-xs line-clamp-1 sm:line-clamp-none mt-0.5" style="color: var(--text-muted);" data-i18n="channel_banner_desc">
+            <p id="channel-banner-desc" class="text-[10px] truncate opacity-75" style="color: var(--text-muted);" data-i18n="channel_banner_desc">
               تابع الصفقات والتخفيضات وكوبونات التخفيض الحصرية لحظة بلحظة فور نزولها في القناة.
             </p>
           </div>
         </div>
-        <a id="channel-banner-btn" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="bg-[#229ED9] hover:bg-[#1e8ec3] text-white text-xs sm:text-sm font-bold min-h-[40px] px-4 py-2 rounded-xl flex items-center justify-center gap-2 shadow-sm transition active:scale-95 touch-manipulation flex-shrink-0">
-          <i class="fa-brands fa-telegram text-base"></i>
-          <span id="channel-banner-btn-text" data-i18n="channel_banner_btn">فتح القناة في تيليجرام</span>
-          <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+        <a id="channel-banner-btn" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="bg-[#229ED9] hover:bg-[#1e8ec3] text-white text-xs font-bold h-8 px-3 rounded-lg flex items-center justify-center gap-1.5 shadow-sm transition active:scale-95 touch-manipulation flex-shrink-0">
+          <i class="fa-brands fa-telegram text-sm"></i>
+          <span id="channel-banner-btn-text" class="text-[11px]" data-i18n="channel_banner_btn">فتح القناة</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
         </a>
       </aside>
 
@@ -794,7 +806,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           oninput="handleSearchInput(this.value)"
           placeholder="ابحث عن هاتف، شاحن، كود خصم، ساعة..." 
           data-i18n-placeholder="search_placeholder"
-          class="w-full border rounded-xl pr-10 pl-9 py-3 text-sm focus:outline-none focus:border-rose-500 transition min-h-[46px]"
+          class="w-full border rounded-xl pr-10 pl-9 py-2.5 text-xs focus:outline-none focus:border-rose-500 transition min-h-[42px]"
           style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);"
         />
         <button id="mobile-search-clear" onclick="resetFilters()" class="hidden absolute left-3 top-1/2 -translate-y-1/2 text-xs opacity-50 hover:opacity-100 p-1 cursor-pointer" title="مسح">
@@ -803,38 +815,40 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       </div>
 
       <!-- Active Promo Event Showcase Banner & Deal Keywords -->
-      <section id="active-event-banner" class="p-4 sm:p-5 relative transition-all" aria-label="الحدث الترويجي الفعال">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
-          <div class="space-y-1">
-            <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400">
-              <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
-              <span id="active-event-badge" data-i18n="active_event_badge">حدث ترويجي رسمي فعال</span>
+      <section id="active-event-banner" class="p-3.5 sm:p-4 rounded-xl relative transition-all border" aria-label="الحدث الترويجي الفعال" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2.5">
+          <div class="space-y-0.5">
+            <div class="flex items-center gap-2">
+              <div class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400">
+                <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
+                <span id="active-event-badge" data-i18n="active_event_badge">حدث ترويجي رسمي فعال</span>
+              </div>
+              <h3 id="active-event-title" class="text-xs sm:text-sm font-bold tracking-tight" style="color: var(--text-main);" data-i18n="active_event_title">
+                تخفيضات عروض الشتاء Winter Offers 2026
+              </h3>
             </div>
-            <h3 id="active-event-title" class="text-base sm:text-lg font-bold tracking-tight" style="color: var(--text-main);" data-i18n="active_event_title">
-              تخفيضات عروض الشتاء Winter Offers 2026
-            </h3>
-            <p id="active-event-desc" class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="active_event_desc">
+            <p id="active-event-desc" class="text-[11px] leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="active_event_desc">
               عروض وتخفيضات رسمية نشطة حالياً مع أكواد حصرية مخصصة للجزائر وفرنسا — الأسعار بالدينار الجزائري وفق سعر السكوار الحقيقي.
             </p>
           </div>
           <!-- Active Event Coupon Chips with 1-click copy -->
-          <div class="flex items-center gap-2 flex-wrap" id="active-event-coupons">
-            <button onclick="copyReferralCode('WOAE06', this)" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE06">
+          <div class="flex items-center gap-1.5 flex-wrap" id="active-event-coupons">
+            <button onclick="copyReferralCode('WOAE06', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE06">
               <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
               <span>WOAE06</span>
               <span class="text-[10px] font-sans font-medium text-rose-500">(-6$)</span>
             </button>
-            <button onclick="copyReferralCode('WOAE12', this)" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE12">
+            <button onclick="copyReferralCode('WOAE12', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE12">
               <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
               <span>WOAE12</span>
               <span class="text-[10px] font-sans font-medium text-rose-500">(-12$)</span>
             </button>
-            <button onclick="copyReferralCode('WOAE23', this)" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE23">
+            <button onclick="copyReferralCode('WOAE23', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE23">
               <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
               <span>WOAE23</span>
               <span class="text-[10px] font-sans font-medium text-rose-500">(-23$)</span>
             </button>
-            <button onclick="copyReferralCode('WOAE35', this)" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE35">
+            <button onclick="copyReferralCode('WOAE35', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE35">
               <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
               <span>WOAE35</span>
               <span class="text-[10px] font-sans font-medium text-rose-500">(-35$)</span>
@@ -843,18 +857,18 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
 
         <!-- Active Deals Trending Keywords Tag Bar for instant SEO indexing & user filtering -->
-        <div class="mt-3 pt-3 border-t flex items-center gap-2 flex-wrap text-xs" style="border-color: rgba(225, 29, 72, 0.15);">
-          <span class="text-[11px] font-bold text-crimson-500 flex items-center gap-1 flex-shrink-0">
-            <i class="fa-solid fa-tags text-[10px]"></i>
+        <div class="mt-2.5 pt-2 border-t flex items-center gap-1.5 flex-wrap text-xs" style="border-color: rgba(225, 29, 72, 0.15);">
+          <span class="text-[10px] font-bold text-crimson-500 flex items-center gap-1 flex-shrink-0">
+            <i class="fa-solid fa-tags text-[9px]"></i>
             <span data-i18n="active_deals_kw_label">أهم صفقات الحدث الفعال:</span>
           </span>
-          <div id="active-deals-keywords" class="flex items-center gap-1.5 flex-wrap">
-            <button onclick="handleSearchInput('Honor X70')" class="border px-2 py-0.5 rounded-lg text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>Honor X70 5G</span></button>
-            <button onclick="handleSearchInput('realme 15T')" class="border px-2 py-0.5 rounded-lg text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>realme 15T 5G</span></button>
-            <button onclick="handleSearchInput('OPPO A6 Pro')" class="border px-2 py-0.5 rounded-lg text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>OPPO A6 Pro</span></button>
-            <button onclick="handleSearchInput('iQOO Z11s')" class="border px-2 py-0.5 rounded-lg text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>iQOO Z11s</span></button>
-            <button onclick="handleSearchInput('Ryzen 5 8400F')" class="border px-2 py-0.5 rounded-lg text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>Ryzen 5 8400F</span></button>
-            <button onclick="handleSearchInput('realme Watch 5')" class="border px-2 py-0.5 rounded-lg text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>realme Watch 5</span></button>
+          <div id="active-deals-keywords" class="flex items-center gap-1 flex-wrap">
+            <button onclick="handleSearchInput('Honor X70')" class="border px-2 py-0.5 rounded-md text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>Honor X70 5G</span></button>
+            <button onclick="handleSearchInput('realme 15T')" class="border px-2 py-0.5 rounded-md text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>realme 15T 5G</span></button>
+            <button onclick="handleSearchInput('OPPO A6 Pro')" class="border px-2 py-0.5 rounded-md text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>OPPO A6 Pro</span></button>
+            <button onclick="handleSearchInput('iQOO Z11s')" class="border px-2 py-0.5 rounded-md text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>iQOO Z11s</span></button>
+            <button onclick="handleSearchInput('Ryzen 5 8400F')" class="border px-2 py-0.5 rounded-md text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>Ryzen 5 8400F</span></button>
+            <button onclick="handleSearchInput('realme Watch 5')" class="border px-2 py-0.5 rounded-md text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>realme Watch 5</span></button>
           </div>
         </div>
       </section>
@@ -1104,6 +1118,263 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
 
       </section>
+
+    </div>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+    <!-- PAGE: PARCEL TRACKER (SUIVI COLIS DZ)                     -->
+    <!-- ───────────────────────────────────────────────────────── -->
+    <div id="page-tracking" class="page-view hidden space-y-6">
+
+      <!-- Hero Header -->
+      <div class="border rounded-2xl p-5 sm:p-6 space-y-3 transition-all" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded text-xs font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
+          <i class="fa-solid fa-plane-arrival text-xs"></i>
+          <span data-i18n="tracking_badge">خدمة تتبع الطرود المجانية 🇩🇿</span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-black tracking-tight" style="color: var(--text-main);" data-i18n="tracking_hero_title">
+          تتبع طرود AliExpress وبريد الجزائر (Suivi de Colis)
+        </h2>
+        <p class="text-xs sm:text-sm leading-relaxed max-w-3xl" style="color: var(--text-muted);" data-i18n="tracking_hero_desc">
+          أدخل رقم تتبع طردك من AliExpress (سواء كان Cainiao أو Choice أو SunYou أو Yanwen أو بريد الجزائر) لمتابعة مسار شحنتك لحظة بلحظة حتى وصولها إلى مكتب بريد بلديتك.
+        </p>
+
+        <!-- Supported Carrier Badges -->
+        <div class="pt-2 flex items-center gap-2 flex-wrap text-[11px] font-semibold" style="color: var(--text-soft);">
+          <span class="opacity-75" data-i18n="tracking_supported_carriers">يدعم جميع شركات الشحن:</span>
+          <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">Cainiao / Choice (LP...)</span>
+          <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">Algérie Poste (...DZ)</span>
+          <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">SunYou (SY...)</span>
+          <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">Yanwen (...YP)</span>
+          <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">EMS International</span>
+        </div>
+      </div>
+
+      <!-- Tracking Search Box Card -->
+      <div class="border rounded-2xl p-5 sm:p-6 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
+        <label for="tracking-input-num" class="block text-xs sm:text-sm font-bold" style="color: var(--text-main);" data-i18n="tracking_input_label">
+          أدخل رقم التتبع (Tracking Number) أو الصق رسالة التأكيد:
+        </label>
+        
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
+          <div class="relative flex-1">
+            <i class="fa-solid fa-barcode absolute right-3.5 top-1/2 -translate-y-1/2 text-sm opacity-40 pointer-events-none"></i>
+            <input 
+              type="text" 
+              id="tracking-input-num" 
+              placeholder="مثال: LP00612345678901 أو RE123456789DZ..." 
+              class="w-full border rounded-xl pr-10 pl-20 py-3 text-xs sm:text-sm focus:outline-none focus:border-blue-500 transition min-h-[46px] font-mono"
+              style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);"
+              onkeydown="if(event.key==='Enter') submitTracking()"
+            />
+            <button 
+              type="button" 
+              onclick="pasteToTrackingInput()" 
+              id="tracking-paste-btn"
+              title="لصق من الحافظة"
+              class="absolute left-2.5 top-1/2 -translate-y-1/2 px-2.5 py-1.5 rounded-lg border text-[11px] font-semibold flex items-center gap-1 transition active:scale-95 touch-manipulation cursor-pointer hover:border-blue-500"
+              style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);"
+            >
+              <i class="fa-regular fa-paste text-[10px]"></i>
+              <span data-i18n="btn_paste">لصق</span>
+            </button>
+          </div>
+
+          <button 
+            type="button" 
+            onclick="submitTracking()" 
+            id="tracking-submit-btn"
+            class="min-h-[46px] px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md active:scale-95 transition cursor-pointer flex-shrink-0"
+          >
+            <i class="fa-solid fa-magnifying-glass-location text-sm"></i>
+            <span data-i18n="btn_track_parcel">تتبع الطرد الآن</span>
+          </button>
+        </div>
+
+        <!-- Quick Samples / Chips -->
+        <div class="flex items-center gap-2 flex-wrap text-xs pt-1" style="color: var(--text-muted);">
+          <span class="text-[11px] opacity-75" data-i18n="tracking_quick_examples">جرب أرقام تتبع شائعة:</span>
+          <button type="button" onclick="setTrackingSample('LP00685412978432')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-blue-500 transition active:scale-95" style="background-color: var(--bg-elevated); border-color: var(--border-card);">LP006... (Choice)</button>
+          <button type="button" onclick="setTrackingSample('RE984125874DZ')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-emerald-500 transition active:scale-95" style="background-color: var(--bg-elevated); border-color: var(--border-card);">RE...DZ (بريد الجزائر)</button>
+          <button type="button" onclick="setTrackingSample('SY1548796325812')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-amber-500 transition active:scale-95" style="background-color: var(--bg-elevated); border-color: var(--border-card);">SY... (SunYou)</button>
+        </div>
+
+        <div id="tracking-error" class="hidden text-xs text-rose-500 flex items-center gap-1.5 pt-1">
+          <i class="fa-solid fa-circle-exclamation text-xs"></i>
+          <span id="tracking-error-text">يرجى إدخال رقم تتبع صالح.</span>
+        </div>
+      </div>
+
+      <!-- Tracking Results Card (Dynamic) -->
+      <div id="tracking-result-card" class="hidden border rounded-2xl p-5 sm:p-6 space-y-6 transition-all" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
+        
+        <!-- Result Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b pb-4" style="border-color: var(--border-card);">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span id="tracking-carrier-badge" class="px-2.5 py-0.5 rounded-lg text-xs font-bold border flex items-center gap-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+                <i class="fa-solid fa-truck-fast text-blue-500"></i>
+                <span id="tracking-carrier-name">AliExpress Choice / Cainiao</span>
+              </span>
+              <span id="tracking-status-badge" class="px-2.5 py-0.5 rounded-lg text-xs font-bold bg-blue-500/10 text-blue-500 border border-blue-500/20">
+                في مسار الشحن الدولي
+              </span>
+            </div>
+            <div class="flex items-center gap-2 pt-1">
+              <span class="text-xs font-semibold" style="color: var(--text-muted);" data-i18n="tracking_label_number">رقم الطرد:</span>
+              <span id="tracking-result-num" class="font-mono font-bold text-sm tracking-wider" style="color: var(--text-main);">...</span>
+              <button onclick="copyTrackingNum()" class="text-xs p-1 opacity-60 hover:opacity-100 transition cursor-pointer" title="نسخ"><i class="fa-regular fa-copy"></i></button>
+            </div>
+          </div>
+
+          <!-- Estimated Delivery Time Box -->
+          <div class="sm:text-left text-xs space-y-0.5 border p-2.5 rounded-xl sm:border-0 sm:p-0" style="border-color: var(--border-card);">
+            <div class="text-[11px] opacity-75" data-i18n="tracking_est_label">المدة التقديرية للوصول:</div>
+            <div id="tracking-est-time" class="font-bold text-sm text-emerald-500 font-mono">14 - 25 يوماً</div>
+          </div>
+        </div>
+
+        <!-- 5-Step Algerian Delivery Journey Tracker -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-xs uppercase tracking-wider flex items-center gap-2" style="color: var(--text-main);">
+            <i class="fa-solid fa-route text-blue-500"></i>
+            <span data-i18n="tracking_stages_title">مراحل شحن وتوصيل الطرد في الجزائر:</span>
+          </h4>
+
+          <div id="tracking-stages-container" class="grid grid-cols-1 sm:grid-cols-5 gap-2 text-xs">
+            <!-- Stage 1 -->
+            <div id="track-step-1" class="p-3 rounded-xl border space-y-1 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+              <div class="flex items-center justify-between">
+                <span class="w-5 h-5 rounded-full bg-emerald-500 text-white font-bold text-[10px] flex items-center justify-center">1</span>
+                <i class="fa-solid fa-check text-emerald-500 text-xs"></i>
+              </div>
+              <div class="font-bold text-[11px] pt-1" style="color: var(--text-main);">انطلاق الطرد</div>
+              <p class="text-[10px] opacity-75" style="color: var(--text-muted);">تم تجهيزه والشحن من الصين</p>
+            </div>
+            <!-- Stage 2 -->
+            <div id="track-step-2" class="p-3 rounded-xl border space-y-1 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+              <div class="flex items-center justify-between">
+                <span class="w-5 h-5 rounded-full bg-blue-500 text-white font-bold text-[10px] flex items-center justify-center">2</span>
+                <i class="fa-solid fa-plane text-blue-500 text-xs"></i>
+              </div>
+              <div class="font-bold text-[11px] pt-1" style="color: var(--text-main);">الشحن الجوي</div>
+              <p class="text-[10px] opacity-75" style="color: var(--text-muted);">رحلة الترانزيت الدولي للجزائر</p>
+            </div>
+            <!-- Stage 3 -->
+            <div id="track-step-3" class="p-3 rounded-xl border space-y-1 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+              <div class="flex items-center justify-between">
+                <span class="w-5 h-5 rounded-full bg-zinc-600 text-white font-bold text-[10px] flex items-center justify-center">3</span>
+                <i class="fa-solid fa-warehouse text-zinc-400 text-xs"></i>
+              </div>
+              <div class="font-bold text-[11px] pt-1" style="color: var(--text-main);">مركز الفرز CTN</div>
+              <p class="text-[10px] opacity-75" style="color: var(--text-muted);">مطار هواري بومدين الجزائر</p>
+            </div>
+            <!-- Stage 4 -->
+            <div id="track-step-4" class="p-3 rounded-xl border space-y-1 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+              <div class="flex items-center justify-between">
+                <span class="w-5 h-5 rounded-full bg-zinc-600 text-white font-bold text-[10px] flex items-center justify-center">4</span>
+                <i class="fa-solid fa-stamp text-zinc-400 text-xs"></i>
+              </div>
+              <div class="font-bold text-[11px] pt-1" style="color: var(--text-main);">الجمارك (Douane)</div>
+              <p class="text-[10px] opacity-75" style="color: var(--text-muted);">معفى للطرود الشخصية</p>
+            </div>
+            <!-- Stage 5 -->
+            <div id="track-step-5" class="p-3 rounded-xl border space-y-1 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+              <div class="flex items-center justify-between">
+                <span class="w-5 h-5 rounded-full bg-zinc-600 text-white font-bold text-[10px] flex items-center justify-center">5</span>
+                <i class="fa-solid fa-envelope-open-text text-zinc-400 text-xs"></i>
+              </div>
+              <div class="font-bold text-[11px] pt-1" style="color: var(--text-main);">بريد بلديتك</div>
+              <p class="text-[10px] opacity-75" style="color: var(--text-muted);">استلام الطرد ببطاقة الهوية</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1-Click Direct Carrier Portal Links -->
+        <div class="space-y-2.5 pt-2 border-t" style="border-color: var(--border-card);">
+          <div class="text-xs font-bold" style="color: var(--text-main);" data-i18n="tracking_portals_heading">
+            تتبع الشحنة مباشرة على المنصات الرسمية بنقرة واحدة:
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+            <a id="btn-portal-17track" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-amber-500 active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-globe text-amber-500"></i>
+              <span>17TRACK</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+            </a>
+            <a id="btn-portal-cainiao" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-rose-500 active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-plane text-rose-500"></i>
+              <span>Cainiao Global</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+            </a>
+            <a id="btn-portal-poste" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-emerald-500 active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-envelope text-emerald-500"></i>
+              <span>بريد الجزائر</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+            </a>
+            <a id="btn-portal-ninja" href="#" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-center gap-2 font-bold transition hover:border-sky-500 active:scale-95 touch-manipulation" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-bolt text-sky-500"></i>
+              <span>Postal Ninja</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Checkpoints Timeline Feed (if available) -->
+        <div id="tracking-checkpoints-wrap" class="space-y-3 pt-2 border-t hidden" style="border-color: var(--border-card);">
+          <h4 class="font-bold text-xs uppercase tracking-wider flex items-center gap-2" style="color: var(--text-main);">
+            <i class="fa-solid fa-clock-rotate-left text-blue-500"></i>
+            <span data-i18n="tracking_timeline_title">سجل المحطات ونقاط الفرز (Live Checkpoints):</span>
+          </h4>
+          <div id="tracking-checkpoints-list" class="space-y-2 text-xs border-r-2 pr-3 mr-1" style="border-color: var(--border-subtle);">
+            <!-- Dynamic checkpoints injected here -->
+          </div>
+        </div>
+
+        <!-- Embedded 17TRACK Widget Container (Official & Free) -->
+        <div id="tracking-widget-wrap" class="space-y-2 pt-2 border-t" style="border-color: var(--border-card);">
+          <div class="flex items-center justify-between text-xs pb-1">
+            <span class="font-bold flex items-center gap-1.5" style="color: var(--text-main);">
+              <i class="fa-solid fa-satellite-dish text-emerald-500"></i>
+              <span data-i18n="tracking_embed_title">التتبع التفاعلي المباشر (17TRACK Universal Embed):</span>
+            </span>
+          </div>
+          <div id="YQContainer" class="min-h-[480px] w-full rounded-xl overflow-hidden border" style="background-color: var(--bg-page); border-color: var(--border-card);"></div>
+        </div>
+
+      </div>
+
+      <!-- Algerian Delivery Best Practices Guide (3 Cards) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
+        <div class="border rounded-xl p-4 sm:p-5 space-y-2" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
+          <div class="w-8 h-8 rounded-lg bg-blue-500/15 text-blue-500 flex items-center justify-center text-sm font-bold">
+            <i class="fa-solid fa-stopwatch"></i>
+          </div>
+          <h3 class="font-bold text-sm" style="color: var(--text-main);" data-i18n="track_card1_title">كم يستغرق وصول الطرد؟</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="track_card1_desc">
+            تستغرق شحنات <strong>AliExpress Choice</strong> حوالي 14 إلى 25 يوماً للوصول إلى الجزائر، بينما الشحن الاقتصادي العادي يستغرق بين 25 و35 يوماً عبر بريد الجزائر.
+          </p>
+        </div>
+
+        <div class="border rounded-xl p-4 sm:p-5 space-y-2" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
+          <div class="w-8 h-8 rounded-lg bg-emerald-500/15 text-emerald-500 flex items-center justify-center text-sm font-bold">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="font-bold text-sm" style="color: var(--text-main);" data-i18n="track_card2_title">الجمارك الجزائرية والضرائب</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="track_card2_desc">
+            الطرود البريدية الموجهة للاستعمال الشخصي والعائلي معفاة تماماً من الرسوم الجمركية. تجنب طلب أكثر من 3 قطع من نفس السلعة في شحنة واحدة لتفادي الصفة التجارية.
+          </p>
+        </div>
+
+        <div class="border rounded-xl p-4 sm:p-5 space-y-2" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-sm font-bold">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <h3 class="font-bold text-sm" style="color: var(--text-main);" data-i18n="track_card3_title">استلام الطرد من مكتب البريد</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="track_card3_desc">
+            بمجرد وصول الطرد لمكتب بريد بلديتك، ستتلقى رسالة SMS أو إشعار Avis de passage. توجه إلى المكتب مصحوباً ببطاقة التعريف الوطنية ودفع الرسم الرمزي (130-250 دج).
+          </p>
+        </div>
+      </div>
 
     </div>
 
@@ -1840,16 +2111,16 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <div class="w-12 h-12 rounded-2xl bg-sky-500/15 text-sky-500 flex items-center justify-center text-xl">
               <i class="fa-brands fa-telegram"></i>
             </div>
-            <h2 class="font-bold text-base" style="color: var(--text-main);" data-i18n="contact_tg_title">الدعم السريع عبر Telegram</h2>
+            <h2 class="font-bold text-base" style="color: var(--text-main);" data-i18n="contact_tg_title">مجموعة المحادثة والنقاش عبر Telegram</h2>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="contact_tg_desc">
-              أسرع وسيلة للتواصل مع مديري القناة والمطورين. يمكنك إرسال استفسارك أو طلب إضافة منتج معين إلى المراقبة الآلية.
+              تواصل مباشرة مع فريق العمل ومجتمع المتسوقين عبر مجموعة المناقشات والاستفسارات الملحقة بقناة صفقات الجزائر. اطرح سؤالك، شارك تجارب الشراء، أو اطلب التحقق من أي صفقة.
             </p>
           </div>
 
           <div class="space-y-2.5 pt-2">
-            <a href="https://t.me/DealscoutadminBOT" target="_blank" rel="noopener noreferrer" class="w-full min-h-[44px] bg-[#229ED9] hover:bg-[#1c8cc1] text-white font-bold text-xs py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition">
-              <i class="fa-solid fa-paper-plane text-xs"></i>
-              <span data-i18n="contact_tg_btn_admin">مراسلة إدارة DealScout</span>
+            <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="w-full min-h-[44px] bg-[#229ED9] hover:bg-[#1c8cc1] text-white font-bold text-xs py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition">
+              <i class="fa-solid fa-comments text-xs"></i>
+              <span data-i18n="contact_tg_btn_admin">مجموعة المناقشات والاستفسارات (@DzAliexpress0)</span>
             </a>
             <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="w-full min-h-[44px] border font-bold text-xs py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 active:scale-95 transition text-amber-500" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <i class="fa-solid fa-coins text-xs"></i>
@@ -1953,9 +2224,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <i class="fa-solid fa-fire text-base"></i>
       <span data-i18n="nav_deals">الصفقات</span>
     </button>
-    <button onclick="showPage('cards')" id="mob-bottom-cards" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation cursor-pointer">
-      <i class="fa-solid fa-credit-card text-base text-emerald-500"></i>
-      <span data-i18n="nav_cards">البطاقات</span>
+    <button onclick="showPage('tracking')" id="mob-bottom-tracking" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation cursor-pointer text-blue-500">
+      <i class="fa-solid fa-box text-base"></i>
+      <span data-i18n="nav_tracking">تتبع الطرود</span>
     </button>
     <a href="https://t.me/DzAliexpress0" id="mob-bottom-tg" target="_blank" rel="noopener noreferrer" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 text-sky-500 font-bold active:scale-90 transition-transform touch-manipulation cursor-pointer">
       <i class="fa-brands fa-telegram text-lg"></i>
@@ -1965,9 +2236,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <i class="fa-solid fa-coins text-base text-amber-500"></i>
       <span data-i18n="nav_coins">العملات</span>
     </button>
-    <button onclick="openGamificationHub()" id="mob-bottom-hub" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation cursor-pointer text-emerald-500">
-      <i class="fa-solid fa-calculator text-base"></i>
-      <span data-i18n="nav_tools">الأدوات</span>
+    <button onclick="showPage('cards')" id="mob-bottom-cards" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation cursor-pointer">
+      <i class="fa-solid fa-credit-card text-base text-emerald-500"></i>
+      <span data-i18n="nav_cards">البطاقات</span>
     </button>
   </nav>
 
@@ -2640,9 +2911,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         faq_crosslink_heading: "مواضيع ذات صلة تهمك:",
         contact_title: "اتصل بنا والدعم الفني",
         contact_subtitle: "فريق DealScout DZ يرحب باقتراحاتكم، إبلاغكم عن الروابط التالفة، واستفساراتكم حول الصفقات.",
-        contact_tg_title: "الدعم السريع عبر Telegram",
-        contact_tg_desc: "أسرع وسيلة للتواصل مع مديري القناة والمطورين. يمكنك إرسال استفسارك أو طلب إضافة منتج معين إلى المراقبة الآلية.",
-        contact_tg_btn_admin: "مراسلة إدارة DealScout",
+        contact_tg_title: "مجموعة المناقشات والاستفسارات عبر Telegram",
+        contact_tg_desc: "تواصل معنا مباشرة عبر مجموعة النقاش والشات الملحقة بقناة صفقات الجزائر الرسمية. اطرح سؤالك، اطلب التحقق من أي صفقة أو شارك تجربتك مع مجتمع المتسوقين.",
+        contact_tg_btn_admin: "مجموعة المناقشات والاستفسارات (@DzAliexpress0)",
         contact_tg_btn_bot: "الدخول لبوت العملات (@Alilo07BOT)",
         contact_form_title: "إرسال رسالة أو اقتراح",
         form_name: "الاسم أو اللقب",
@@ -2755,7 +3026,27 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         geo_fact_shipping_title: "التوصيل والاستلام:",
         geo_fact_shipping_desc: "بريد الجزائر (Algérie Poste / EMS)، إعفاء تام للطرود الشخصية غير التجارية.",
         geo_fact_coins_title: "أداة العملات (Coins):",
-        geo_fact_coins_desc: "مولد روابط مجاني لتفعيل خصم 50% إلى 70% بدلاً من 2% القياسية."
+        geo_fact_coins_desc: "مولد روابط مجاني لتفعيل خصم 50% إلى 70% بدلاً من 2% القياسية.",
+        nav_tracking: "تتبع الطرود",
+        tracking_badge: "خدمة تتبع الطرود المجانية 🇩🇿",
+        tracking_hero_title: "تتبع طرود AliExpress وبريد الجزائر (Suivi de Colis)",
+        tracking_hero_desc: "أدخل رقم تتبع طردك من AliExpress (سواء كان Cainiao أو Choice أو SunYou أو Yanwen أو بريد الجزائر) لمتابعة مسار شحنتك لحظة بلحظة حتى وصولها إلى مكتب بريد بلديتك.",
+        tracking_supported_carriers: "يدعم جميع شركات الشحن:",
+        tracking_input_label: "أدخل رقم التتبع (Tracking Number) أو الصق رسالة التأكيد:",
+        btn_track_parcel: "تتبع الطرد الآن",
+        tracking_quick_examples: "جرب أرقام تتبع شائعة:",
+        tracking_label_number: "رقم الطرد:",
+        tracking_est_label: "المدة التقديرية للوصول:",
+        tracking_stages_title: "مراحل شحن وتوصيل الطرد في الجزائر:",
+        tracking_portals_heading: "تتبع الشحنة مباشرة على المنصات الرسمية بنقرة واحدة:",
+        tracking_timeline_title: "سجل المحطات ونقاط الفرز (Live Checkpoints):",
+        tracking_embed_title: "التتبع التفاعلي المباشر (17TRACK Universal Embed):",
+        track_card1_title: "كم يستغرق وصول الطرد؟",
+        track_card1_desc: "تستغرق شحنات AliExpress Choice حوالي 14 إلى 25 يوماً للوصول إلى الجزائر، بينما الشحن الاقتصادي العادي يستغرق بين 25 و35 يوماً عبر بريد الجزائر.",
+        track_card2_title: "الجمارك الجزائرية والضرائب",
+        track_card2_desc: "الطرود البريدية الموجهة للاستعمال الشخصي والعائلي معفاة تماماً من الرسوم الجمركية. تجنب طلب أكثر من 3 قطع من نفس السلعة في شحنة واحدة لتفادي الصفة التجارية.",
+        track_card3_title: "استلام الطرد من مكتب البريد",
+        track_card3_desc: "بمجرد وصول الطرد لمكتب بريد بلديتك، ستتلقى رسالة SMS أو إشعار Avis de passage. توجه إلى المكتب مصحوباً ببطاقة التعريف الوطنية ودفع الرسم الرمزي (130-250 دج)."
       },
       fr: {
         meta_title: "DealScout DZ — Bons Plans & Promo AliExpress Algérie | AliExpress Deals DZ",
@@ -2895,9 +3186,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         faq_crosslink_heading: "Thématiques associées :",
         contact_title: "Contact & Assistance",
         contact_subtitle: "L'équipe DealScout DZ est à votre disposition pour vos suggestions, signalements de liens ou partenariats.",
-        contact_tg_title: "Assistance rapide sur Telegram",
-        contact_tg_desc: "Le moyen le plus direct de joindre l'équipe. Contactez nos administrateurs pour toute question ou demande de veille produit.",
-        contact_tg_btn_admin: "Contacter l'équipe DealScout",
+        contact_tg_title: "Groupe d'entraide & discussions Telegram",
+        contact_tg_desc: "Échangez directement avec l'équipe et les membres dans le groupe de discussion attaché au canal officiel. Posez vos questions, demandez des avis sur un produit ou suivez les alertes en direct.",
+        contact_tg_btn_admin: "Groupe de discussion & entraide (@DzAliexpress0)",
         contact_tg_btn_bot: "Ouvrir le bot Pièces (@Alilo07BOT)",
         contact_form_title: "Envoyez-nous un message",
         form_name: "Nom complet",
@@ -3009,7 +3300,27 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         geo_fact_shipping_title: "Livraison & Douanes :",
         geo_fact_shipping_desc: "Algérie Poste (15-28 jours), exonération totale pour colis personnels non commerciaux.",
         geo_fact_coins_title: "Outil Pièces (Coins) :",
-        geo_fact_coins_desc: "Générateur gratuit activant 50% à 70% de réduction au lieu de 2% standard."
+        geo_fact_coins_desc: "Générateur gratuit activant 50% à 70% de réduction au lieu de 2% standard.",
+        nav_tracking: "Suivi Colis",
+        tracking_badge: "Outil Gratuit de Suivi 🇩🇿",
+        tracking_hero_title: "Suivi de Colis AliExpress & Algérie Poste (Suivi DZ)",
+        tracking_hero_desc: "Entrez le numéro de suivi de votre commande AliExpress (Cainiao, Choice, SunYou, Yanwen ou Algérie Poste) pour suivre l'acheminement en temps réel jusqu'à votre bureau de poste.",
+        tracking_supported_carriers: "Transporteurs pris en charge :",
+        tracking_input_label: "Entrez le numéro de suivi ou collez la référence :",
+        btn_track_parcel: "Suivre le colis maintenant",
+        tracking_quick_examples: "Exemples de numéros :",
+        tracking_label_number: "Numéro de colis :",
+        tracking_est_label: "Délai estimé d'arrivée :",
+        tracking_stages_title: "Étapes de livraison du colis en Algérie :",
+        tracking_portals_heading: "Suivi direct sur les plateformes officielles :",
+        tracking_timeline_title: "Historique des points de tri (Live Checkpoints) :",
+        tracking_embed_title: "Widget interactif universel (17TRACK Embed) :",
+        track_card1_title: "Combien de temps prend la livraison ?",
+        track_card1_desc: "Les colis AliExpress Choice mettent entre 14 et 25 jours pour arriver en Algérie, tandis que les envois économiques prennent 25 à 35 jours.",
+        track_card2_title: "Douanes algériennes et taxes",
+        track_card2_desc: "Les colis à usage personnel ou familial sont totalement exonérés de droits de douane. Évitez de commander plus de 3 pièces identiques par envoi.",
+        track_card3_title: "Retrait au bureau de poste",
+        track_card3_desc: "Dès l'arrivée au bureau de poste local, vous recevrez un SMS ou avis de passage. Présentez votre carte nationale d'identité et réglez la taxe postale symbolique (130-250 DZD)."
       }
     };
 
@@ -3139,7 +3450,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
     // ── Multi-Page Navigation Router & Dynamic SEO ──────────────────
     function showPage(pageId, updateHistory = true) {
-      const pages = ['deals', 'cards', 'coins', 'faq', 'contact', 'about'];
+      const pages = ['deals', 'tracking', 'cards', 'coins', 'faq', 'contact', 'about'];
       if (!pages.includes(pageId)) pageId = 'deals';
       currentPageId = pageId;
 
@@ -3178,7 +3489,14 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       let pageTitle = (I18N[currentLang] && I18N[currentLang].meta_title) || document.title;
       let pageDesc = (I18N[currentLang] && I18N[currentLang].meta_desc) || '';
 
-      if (pageId === 'cards') {
+      if (pageId === 'tracking') {
+        pageTitle = isFr
+          ? "Suivi de Colis AliExpress Algérie & Algérie Poste | DealScout DZ"
+          : "تتبع طرود AliExpress وبريد الجزائر (Suivi de Colis DZ) | DealScout DZ";
+        pageDesc = isFr
+          ? "Suivi gratuit en direct de vos colis AliExpress Choice, Cainiao, et Algérie Poste avec étapes de livraison et dédouanement."
+          : "أداة مجانية لتتبع طرود علي إكسبرس (Cainiao, Algérie Poste, SunYou) لحظة بلحظة حتى الاستلام في مكتب البريد الجزائري.";
+      } else if (pageId === 'cards') {
         pageTitle = isFr
           ? "Cartes Bancaires & BaridiMob pour AliExpress en Algérie — Bybit, RedotPay, Binance P2P | DealScout DZ"
           : "بطاقات الشراء من AliExpress بالدينار الجزائري — Bybit, RedotPay, بريدي موب Binance P2P | DealScout DZ";
@@ -3982,7 +4300,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const text = post.text || '';
 
       // 1. Strict AliExpress Link Requirement: A deal MUST have an explicit product/affiliate link
-      const urlMatch = text.match(/https?:\\/\\/(?:s\\.click\\.aliexpress\\.com\\/e\\/[A-Za-z0-9_-]+|(?:[a-z0-9-]+\\.)?aliexpress\\.com\\/(?:item|p)\\/[A-Za-z0-9_.-]+)/i);
+      const urlMatch = text.match(new RegExp('https?:\\/\\/(?:s\\.click\\.aliexpress\\.com\\/e\\/[A-Za-z0-9_-]+|(?:[a-z0-9-]+\\.)?aliexpress\\.com\\/(?:item|p)\\/[A-Za-z0-9_.-]+)', 'i'));
       if (!urlMatch) {
         return null;
       }
@@ -4048,7 +4366,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       for (const line of lines) {
         const m = line.match(/^[✅✔️☑️]\\s*(.+)$/) || line.match(/✅\\s*([^\\n]+)/);
         if (m) {
-          const cand = m[1].replace(/<\\/?[^>]+(>|$)/g, '').replace(/^[✅✔️☑️\\s*#]+/, '').trim();
+          const cand = m[1].replace(/<[^>]*>/g, '').replace(/^[✅✔️☑️\\s*#]+/, '').trim();
           if (cand.length >= 3 && !isBoilerplate(cand)) {
             title = cand;
             break;
@@ -4061,7 +4379,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         for (const line of lines) {
           const m = line.match(/^(?:⭐️|⭐|🌟|📱|🎮|🎧|⚡|📦|تخفيض\\s*(?:لـ|ل)?|عرض\\s*خاص\\s*(?:لـ|ل)?|تخفيض\\s*على|produit\\s*:?|offre\\s*:?)\\s*(.+)$/i);
           if (m) {
-            const cand = m[1].replace(/<\\/?[^>]+(>|$)/g, '').trim();
+            const cand = m[1].replace(/<[^>]*>/g, '').trim();
             if (cand.length >= 3 && !isBoilerplate(cand)) {
               title = cand;
               break;
@@ -4074,7 +4392,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (!title) {
         for (const line of lines) {
           if (isBoilerplate(line)) continue;
-          const clean = line.replace(/^[🛍️🔥⚡⭐💥📦📍🏷️✅✔️•\\-*\\s]+/, '').replace(/<\\/?[^>]+(>|$)/g, '').trim();
+          const clean = line.replace(/^[-🛍️🔥⚡⭐💥📦📍🏷️✅✔️•*\\s]+/, '').replace(/<[^>]*>/g, '').trim();
           if (clean.length >= 4 && !isBoilerplate(clean) && !clean.match(/^[A-Z0-9_-]{4,20}$/)) {
             title = clean;
             break;
@@ -4086,7 +4404,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (!title) {
         for (const line of lines) {
           if (!line.includes('http') && !line.includes('@') && !line.includes('t.me') && line.length >= 4) {
-            const clean = line.replace(/^[🛍️🔥⚡⭐💥📦📍🏷️✅✔️•\\-*\\s]+/, '').trim();
+            const clean = line.replace(/^[-🛍️🔥⚡⭐💥📦📍🏷️✅✔️•*\\s]+/, '').trim();
             if (clean.length >= 4) {
               title = clean;
               break;
@@ -4096,7 +4414,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
 
       if (title) {
-        title = title.replace(/<\\/?[^>]+(>|$)/g, '').trim();
+        title = title.replace(/<[^>]*>/g, '').trim();
         if (title.length > 95) title = title.slice(0, 92) + '...';
       } else {
         title = (currentLang === 'fr' ? "Offre Spéciale Winter Offers" : "عرض مميز تخفيضات الشتاء (Winter Offers)");
@@ -4112,12 +4430,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
 
       // Enhanced Coupon Extraction across all Arabic, French, and Telegram formats
-      const cleanNorm = text.replace(/[\\u0640]/g, '');
+      const cleanNorm = text.replace(/[\u0640]/g, '');
       const couponMatch = 
-        cleanNorm.match(/(?:(?:ال)?كـ?وبون(?:\\s*الخصم|\\s*خاص)?|(?:ال)?كـ?ود(?:\\s*الخصم|\\s*التخفيض)?|code\\s*promo|code\\s*de\\s*r[ée]duction|code\\s*r[ée]duction|coupon|promo|code|avec\\s*le\\s*code|utilisez\\s*le\\s*code)\\s*[:：\\-]?\\s*(?:<code>|\\*\\*|`)*([A-Za-z0-9_-]{3,20})/i)
-        || cleanNorm.match(/(?:(?:ال)?قسيمـ?ة(?:\\s*البائع|\\s*المتجر)?|coupon\\s*vendeur|store\\s*coupon)\\s*[:：\\-]?\\s*(?:<code>|\\*\\*|`)*([0-9]+(?:\\.[0-9]+)?\\$?|[A-Za-z0-9_-]{3,20})/i)
+        cleanNorm.match(/(?:(?:ال)?كـ?وبون(?:\\s*الخصم|\\s*خاص)?|(?:ال)?كـ?ود(?:\\s*الخصم|\\s*التخفيض)?|code\\s*promo|code\\s*de\\s*r[ée]duction|code\\s*r[ée]duction|coupon|promo|code|avec\\s*le\\s*code|utilisez\\s*le\\s*code)\\s*[-:：]?\\s*(?:<code>|\\*\\*|`)*([A-Za-z0-9_-]{3,20})/i)
+        || cleanNorm.match(/(?:(?:ال)?قسيمـ?ة(?:\\s*البائع|\\s*المتجر)?|coupon\\s*vendeur|store\\s*coupon)\\s*[-:：]?\\s*(?:<code>|\\*\\*|`)*([0-9]+(?:\\.[0-9]+)?\\$?|[A-Za-z0-9_-]{3,20})/i)
         || cleanNorm.match(/[🏷️🎟️🎫]\\s*(?:code\\s*[:：]?)?\\s*(?:<code>|\\*\\*|`)*([A-Za-z0-9_-]{3,20})/i)
-        || cleanNorm.match(/(?:كود|كوبون|code|promo)[^\\n]{0,60}?(?:<code>|`)([A-Za-z0-9_-]{3,20})(?:<\\/code>|`)/i);
+        || cleanNorm.match(new RegExp('(?:كود|كوبون|code|promo)[^\\r\\n]{0,60}?(?:<code>|`)([A-Za-z0-9_-]{3,20})(?:<\\/code>|`)', 'i'));
       
       if (couponMatch) {
         let rawCode = (couponMatch[1] || '').trim().replace(/[<>/`*#]/g, '');
@@ -4263,7 +4581,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <button onclick="copyReferralCode('${t.code}', this)" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" title="${isFr ? 'Copier le code ' + t.code : 'نسخ الكود ' + t.code}">
               <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
               <span>${t.code}</span>
-              <span class="text-[10px] font-sans font-medium text-rose-500">(-${t.discount}$)</span>
+              <span class="text-[10px] font-sans font-medium text-rose-500">(${t.tier || (t.discount ? '-' + t.discount + '$' : '')})</span>
             </button>
           `).join('');
         }
@@ -4486,9 +4804,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         item.style.borderColor = 'var(--border-card)';
 
         const safeText = escapeHtml(deal.raw_text || '')
-          .replace(/\\n/g, '<br>')
-          .replace(/(https?:\\/\\/s\\.click\\.aliexpress\\.com\\/e\\/[A-Za-z0-9_-]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-rose-500 font-bold underline break-all">$1</a>')
-          .replace(/(@[A-Za-z0-9_]+)/g, '<span class="text-sky-500 font-semibold">$1</span>');
+          .replace(new RegExp('\\n', 'g'), '<br>')
+          .replace(new RegExp('(https?:\\/\\/s\\.click\\.aliexpress\\.com\\/e\\/[A-Za-z0-9_-]+)', 'g'), '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-rose-500 font-bold underline break-all">$1</a>')
+          .replace(new RegExp('(@[A-Za-z0-9_]+)', 'g'), '<span class="text-sky-500 font-semibold">$1</span>');
 
         item.innerHTML = `
           <div class="flex items-center justify-between pb-2.5 border-b text-xs" style="border-color: var(--border-card);">
@@ -4670,25 +4988,25 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (!input) return null;
       const str = String(input).trim();
       // 1. Direct digits (10 to 20 digits)
-      if (/^\\d{10,20}$/.test(str)) return str;
+      if (/^[0-9]{10,20}$/.test(str)) return str;
       // 2. /item/123456789.html
-      const mItem = str.match(/\\/item\\/(\\d{10,20})/i);
+      const mItem = str.match(new RegExp('/item/(\\d{10,20})', 'i'));
       if (mItem) return mItem[1];
       // 3. /p/trade/123456789 or /p/anything/123456789
-      const mP = str.match(/\\/p\\/[a-z0-9_-]+\\/(\\d{10,20})/i);
+      const mP = str.match(new RegExp('/p/[a-z0-9_-]+/(\\d{10,20})', 'i'));
       if (mP) return mP[1];
       // 4. productIds=123456789 or productId=123456789
-      const mProd = str.match(/productIds?=(\\d{10,20})/i);
+      const mProd = str.match(/productIds?=([0-9]{10,20})/i);
       if (mProd) return mProd[1];
       // 5. itemId=123456789 or item_id=123456789
-      const mItemParam = str.match(/(?:itemId|item_id)[=:](\\d{10,20})/i);
+      const mItemParam = str.match(/(?:itemId|item_id)[=:]([0-9]{10,20})/i);
       if (mItemParam) return mItemParam[1];
       // 6. Generic id=123456789
-      const mGenericId = str.match(/[?&#]id=(\\d{10,20})/i);
+      const mGenericId = str.match(/[?&#]id=([0-9]{10,20})/i);
       if (mGenericId) return mGenericId[1];
       // 7. Any 11-18 continuous digits in an aliexpress context
       if (str.includes('aliexpress') || str.includes('alibab')) {
-        const mDigits = str.match(/(\\d{11,18})/);
+        const mDigits = str.match(/([0-9]{11,18})/);
         if (mDigits) return mDigits[1];
       }
       return null;
@@ -4758,7 +5076,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (!pid) {
         if (errBox) {
           errBox.classList.remove('hidden');
-          if (errText) errText.textContent = (currentLang === 'fr') ? 'Lien non reconnu. Assurez-vous qu\\'il s\\'agit d\\'un produit AliExpress valide.' : 'لم يتم التعرف على كود المنتج. يرجى التأكد من نسخ رابط منتج صحيح من AliExpress.';
+          if (errText) errText.textContent = (currentLang === 'fr') ? "Lien non reconnu. Assurez-vous qu'il s'agit d'un produit AliExpress valide." : 'لم يتم التعرف على كود المنتج. يرجى التأكد من نسخ رابط منتج صحيح من AliExpress.';
         }
         return;
       }
@@ -4817,6 +5135,186 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       });
     }
 
+    // ── Algerian & Universal Parcel Tracking Engine ───────────────────
+    async function pasteToTrackingInput() {
+      try {
+        const text = await navigator.clipboard.readText();
+        if (text) {
+          const input = document.getElementById('tracking-input-num');
+          if (input) {
+            input.value = text.trim();
+            submitTracking();
+          }
+        }
+      } catch (e) {
+        showToast(currentLang === 'fr' ? 'Collez le numéro de suivi' : 'الصق رقم التتبع في الخانة');
+      }
+    }
+
+    function setTrackingSample(code) {
+      const input = document.getElementById('tracking-input-num');
+      if (input) {
+        input.value = code;
+        submitTracking();
+      }
+    }
+
+    function copyTrackingNum() {
+      const numEl = document.getElementById('tracking-result-num');
+      if (numEl && numEl.textContent) {
+        navigator.clipboard.writeText(numEl.textContent.trim()).then(() => {
+          showToast(currentLang === 'fr' ? 'Numéro de suivi copié !' : 'تم نسخ رقم التتبع!');
+        });
+      }
+    }
+
+    async function submitTracking() {
+      const input = document.getElementById('tracking-input-num');
+      const errBox = document.getElementById('tracking-error');
+      const errText = document.getElementById('tracking-error-text');
+      const resultCard = document.getElementById('tracking-result-card');
+      const submitBtn = document.getElementById('tracking-submit-btn');
+
+      if (!input) return;
+      const rawNum = input.value.trim().replace(/\\s+/g, '');
+      if (!rawNum || rawNum.length < 5) {
+        if (errBox) {
+          errBox.classList.remove('hidden');
+          if (errText) errText.textContent = (currentLang === 'fr') 
+            ? 'Veuillez saisir un numéro de suivi valide.' 
+            : 'يرجى إدخال رقم تتبع صالح.';
+        }
+        return;
+      }
+      if (errBox) errBox.classList.add('hidden');
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ' + (currentLang === 'fr' ? 'Recherche...' : 'جاري التتبع...');
+      }
+
+      try {
+        const resp = await fetch(`/api/track-parcel?num=${encodeURIComponent(rawNum)}`);
+        const data = await resp.json();
+
+        if (data && data.ok) {
+          if (resultCard) resultCard.classList.remove('hidden');
+
+          // Update Carrier info
+          const carrierBadge = document.getElementById('tracking-carrier-badge');
+          const carrierName = document.getElementById('tracking-carrier-name');
+          const resultNum = document.getElementById('tracking-result-num');
+          const estTime = document.getElementById('tracking-est-time');
+          const statusBadge = document.getElementById('tracking-status-badge');
+
+          const isFr = currentLang === 'fr';
+          if (carrierName && data.carrier) {
+            carrierName.textContent = isFr ? (data.carrier.name_fr || data.carrier.name_ar) : data.carrier.name_ar;
+          }
+          if (resultNum) resultNum.textContent = data.tracking_number;
+          if (estTime && data.carrier) estTime.textContent = data.carrier.typical_days;
+
+          // Status Badge translation
+          if (statusBadge) {
+            const stages = {
+              'delivered': isFr ? 'Livré / Prêt au bureau de poste' : 'تم التسليم / جاهز للاستلام في البريد',
+              'customs': isFr ? 'En cours de dédouanement' : 'في المعالجة الجمركية',
+              'in_destination_country': isFr ? 'Arrivé en Algérie (CTN Alger)' : 'وصل إلى الجزائر (مركز الفرز CTN)',
+              'in_flight': isFr ? 'En transit aérien international' : 'في رحلة الشحن الجوي الدولي',
+              'in_transit': isFr ? "En cours d'acheminement" : 'في مسار الشحن الدولي'
+            };
+            statusBadge.textContent = stages[data.status_stage] || (isFr ? 'En transit' : 'في مسار الشحن');
+          }
+
+          // Direct Portal Buttons
+          const links = data.portal_links || {};
+          const p17 = document.getElementById('btn-portal-17track');
+          if (p17 && links.track17) p17.href = links.track17;
+          const pCainiao = document.getElementById('btn-portal-cainiao');
+          if (pCainiao && links.cainiao) pCainiao.href = links.cainiao;
+          const pPoste = document.getElementById('btn-portal-poste');
+          if (pPoste && links.algerie_poste) pPoste.href = links.algerie_poste;
+          const pNinja = document.getElementById('btn-portal-ninja');
+          if (pNinja && links.postal_ninja) pNinja.href = links.postal_ninja;
+
+          // Update 5-Step Algerian Delivery Journey Stages
+          if (data.delivery_stages && data.delivery_stages.length > 0) {
+            data.delivery_stages.forEach(st => {
+              const stepEl = document.getElementById('track-step-' + st.step);
+              if (stepEl) {
+                if (st.completed) {
+                  stepEl.classList.remove('opacity-40');
+                  stepEl.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+                  stepEl.style.backgroundColor = 'var(--bg-elevated)';
+                  const numBadge = stepEl.querySelector('span');
+                  if (numBadge) {
+                    numBadge.className = 'w-5 h-5 rounded-full bg-emerald-500 text-white font-bold text-[10px] flex items-center justify-center';
+                  }
+                } else {
+                  stepEl.classList.add('opacity-40');
+                  stepEl.style.borderColor = 'var(--border-card)';
+                }
+              }
+            });
+          }
+
+          // Checkpoints list feed
+          const checkWrap = document.getElementById('tracking-checkpoints-wrap');
+          const checkList = document.getElementById('tracking-checkpoints-list');
+          if (checkWrap && checkList) {
+            if (data.has_live_checkpoints && data.live_checkpoints && data.live_checkpoints.length > 0) {
+              checkList.innerHTML = data.live_checkpoints.map(cp => `
+                <div class="relative pb-2.5">
+                  <span class="w-2 h-2 rounded-full bg-blue-500 absolute -right-[17px] top-1"></span>
+                  <div class="font-semibold text-xs" style="color: var(--text-main);">${cp.description}</div>
+                  <div class="text-[10px] font-mono opacity-70" style="color: var(--text-muted);">${cp.time || ''} ${cp.location ? '• ' + cp.location : ''}</div>
+                </div>
+              `).join('');
+              checkWrap.classList.remove('hidden');
+            } else {
+              checkWrap.classList.add('hidden');
+            }
+          }
+
+          // Embedded 17TRACK Universal Embed (Loads directly)
+          const yqBox = document.getElementById('YQContainer');
+          if (yqBox) {
+            yqBox.innerHTML = `
+              <iframe 
+                src="https://t.17track.net/${isFr ? 'fr' : 'ar'}#nums=${encodeURIComponent(data.tracking_number)}" 
+                width="100%" 
+                height="520" 
+                frameborder="0" 
+                class="w-full min-h-[520px] rounded-xl"
+                loading="lazy"
+                title="17TRACK Universal Tracking"
+              ></iframe>
+            `;
+          }
+
+          if (resultCard) {
+            resultCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+          showToast(isFr ? 'Informations de suivi chargées !' : 'تم استرجاع بيانات التتبع بنجاح!');
+        } else {
+          if (errBox) {
+            errBox.classList.remove('hidden');
+            if (errText) errText.textContent = (currentLang === 'fr') 
+              ? (data.error_fr || 'Numéro de suivi introuvable.') 
+              : (data.error_ar || 'تعذر العثور على شحنة بهذا الرقم.');
+          }
+        }
+      } catch (err) {
+        console.warn('Tracking query error:', err);
+        showToast(currentLang === 'fr' ? 'Erreur de connexion au service de suivi' : 'حدث خطأ في الاتصال بخدمة التتبع');
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<i class="fa-solid fa-magnifying-glass-location text-sm"></i> ' + (currentLang === 'fr' ? 'Suivre le colis' : 'تتبع الطرد الآن');
+        }
+      }
+    }
+
     // ── Keyboard & Lifecycle Handlers ───────────────────────────────
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
@@ -4839,15 +5337,16 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     });
 
     window.addEventListener('popstate', (e) => {
-      const page = (e.state && e.state.page) || window.location.pathname.replace(/^\\//, '').split('/')[0] || window.location.hash.replace(/^#/, '') || 'deals';
+      const page = (e.state && e.state.page) || window.location.pathname.replace(new RegExp('^/'), '').split('/')[0] || window.location.hash.replace(/^#/, '') || 'deals';
       showPage(page, false);
     });
 
     document.addEventListener('DOMContentLoaded', () => {
       // Determine initial page from URL pathname or hash (e.g. /cards or /#cards)
-      const pathRoute = window.location.pathname.replace(/^\\//, '').split('/')[0].toLowerCase();
+      const pathRoute = window.location.pathname.replace(new RegExp('^/'), '').split('/')[0].toLowerCase();
       const hashRoute = window.location.hash.replace(/^#/, '').toLowerCase();
       const validPages = ['deals', 'cards', 'coins', 'faq', 'contact', 'about'];
+      if (!validPages.includes('tracking')) validPages.push('tracking');
       const initialRoute = validPages.includes(pathRoute) ? pathRoute : (validPages.includes(hashRoute) ? hashRoute : 'deals');
 
       // Initialize theme & language

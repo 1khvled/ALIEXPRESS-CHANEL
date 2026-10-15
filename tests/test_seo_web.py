@@ -207,3 +207,67 @@ def test_geo_schema_and_on_page_elements():
     assert 'id="ai-overview-facts"' in html
     assert 'data-i18n="geo_badge"' in html
     assert 'data-i18n="geo_summary_title"' in html
+
+
+def test_tracking_web_route():
+    """Verify /tracking route returns 200 with the tracking page markup."""
+    resp = client.get("/tracking")
+    assert resp.status_code == 200
+    assert "text/html" in resp.headers.get("content-type", "")
+    html = resp.text
+    assert 'id="page-tracking"' in html
+    assert 'id="tracking-input-num"' in html
+    assert 'id="tracking-carrier-badge"' in html
+    assert 'id="tracking-stages-container"' in html
+    assert 'id="YQContainer"' in html
+    assert 'nav-link-tracking' in html
+    assert 'mob-bottom-tracking' in html
+
+
+def test_tracking_api_endpoint():
+    """Verify /api/track-parcel responds with carrier info and delivery stages."""
+    # Cainiao Choice format
+    resp = client.get("/api/track-parcel?num=LP00612345678901")
+    assert resp.status_code == 200
+    data = resp.json()
+    assert data["tracking_number"] == "LP00612345678901"
+    assert data["carrier"]["id"] == "cainiao"
+    assert "delivery_stages" in data
+    assert len(data["delivery_stages"]) == 5
+    assert "direct_links" in data
+    assert "track17" in data["direct_links"]
+
+    # Algérie Poste format
+    resp_dz = client.get("/api/track-parcel?num=RE123456789DZ")
+    assert resp_dz.status_code == 200
+    data_dz = resp_dz.json()
+    assert data_dz["carrier"]["id"] == "algerie_poste"
+
+    # Missing / empty number
+    resp_empty = client.get("/api/track-parcel?num=")
+    assert resp_empty.status_code == 400
+
+
+def test_parcel_tracker_carrier_detection():
+    """Verify parcel carrier auto-detection patterns for Algeria packages."""
+    from api.parcel_tracker import detect_carrier
+
+    assert detect_carrier("LP00123456789012")["id"] == "cainiao"
+    assert detect_carrier("RE987654321DZ")["id"] == "algerie_poste"
+    assert detect_carrier("SY12345678901")["id"] == "sunyou"
+    assert detect_carrier("UJ123456789YP")["id"] == "yanwen"
+    assert detect_carrier("RB123456789SG")["id"] == "singapore_post"
+    assert detect_carrier("RA123456789CN")["id"] == "china_post"
+    assert detect_carrier("RR123456789NL")["id"] == "upu_standard"
+
+
+def test_sitemap_and_robots_tracking():
+    """Verify sitemap.xml and robots.txt include /tracking."""
+    sitemap_resp = client.get("/sitemap.xml")
+    assert sitemap_resp.status_code == 200
+    assert "<loc>https://dealscoutgreen.vercel.app/tracking</loc>" in sitemap_resp.text
+
+    robots_resp = client.get("/robots.txt")
+    assert robots_resp.status_code == 200
+    assert "Allow: /tracking" in robots_resp.text
+

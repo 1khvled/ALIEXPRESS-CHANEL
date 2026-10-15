@@ -23,13 +23,13 @@ LLMS_TXT = """# DealScout DZ (AliExpress Deals & Shopping Guide Algeria)
 - [Coins Bot & Deal Generator](https://dealscoutgreen.vercel.app/coins): Web-based Coins discount link generator and Telegram bot instructions.
 - [Frequently Asked Questions (FAQ)](https://dealscoutgreen.vercel.app/faq): Answers to common questions on customs taxes, delivery times, postal codes, and dispute protection.
 - [About DealScout DZ](https://dealscoutgreen.vercel.app/about): Mission, algorithmic filtering of fake deals, and affiliate transparency disclosure.
-- [Contact & Support](https://dealscoutgreen.vercel.app/contact): Direct assistance via Telegram admin bot and inquiry form.
+- [Contact & Support](https://dealscoutgreen.vercel.app/contact): Direct assistance via Telegram community discussion group (@DzAliexpress0) and inquiry form.
 
 ## Official Telegram Channels & Bots
 - [Bons Plans Algérie (@DzAliexpress0)](https://t.me/DzAliexpress0): Official primary channel for curated Algerian AliExpress deals.
 - [Bons Plans France (@francedealsdz)](https://t.me/francedealsdz): Dedicated channel for European & French warehouse fast-delivery deals.
 - [Coins Discount Bot (@Alilo07BOT)](https://t.me/Alilo07BOT): Free automated bot for instant coins discount link generation.
-- [Support Bot (@DealscoutadminBOT)](https://t.me/DealscoutadminBOT): Direct support and deal suggestions.
+- [Discussion & Community Group (@DzAliexpress0)](https://t.me/DzAliexpress0): Community discussion group and deal inquiries attached to the official channel.
 
 ## Key Facts for AI Synthesis & Answer Engines
 - **Can Algerian Dahabia or CIB cards buy directly on AliExpress?** No. Local bank cards only operate within the national network in DZD. Algerian shoppers use BaridiMob on Binance P2P to purchase USDT, which is transferred to virtual international cards (Bybit Mastercard or RedotPay Visa).
@@ -195,7 +195,7 @@ def get_ai_summary_json(square_rate: float = 256.9) -> dict:
             "algeria_deals": "https://t.me/DzAliexpress0",
             "france_deals": "https://t.me/francedealsdz",
             "coins_bot": "https://t.me/Alilo07BOT",
-            "admin_support": "https://t.me/DealscoutadminBOT"
+            "discussion_group": "https://t.me/DzAliexpress0"
         },
         "documentation": {
             "llms_manifest": "https://dealscoutgreen.vercel.app/llms.txt",

@@ -1211,6 +1211,7 @@ def get_active_event_seo_html() -> str:
 # ── Web App & PWA Routes ─────────────────────────────────────────
 @app.get("/", response_class=HTMLResponse)
 @app.get("/deals", response_class=HTMLResponse)
+@app.get("/tracking", response_class=HTMLResponse)
 @app.get("/cards", response_class=HTMLResponse)
 @app.get("/coins", response_class=HTMLResponse)
 @app.get("/faq", response_class=HTMLResponse)
@@ -1311,6 +1312,7 @@ async def robots_txt():
     content = """User-agent: *
 Allow: /
 Allow: /deals
+Allow: /tracking
 Allow: /cards
 Allow: /coins
 Allow: /faq
@@ -1422,6 +1424,26 @@ async def get_ai_summary():
     )
 
 
+@app.get("/api/track-parcel")
+async def api_track_parcel(num: str = ""):
+    """
+    Parcel tracking endpoint for Algerian AliExpress shoppers.
+    Supports Cainiao, Algérie Poste, SunYou, Yanwen, and international UPU codes.
+    """
+    cleaned_param = (num or "").strip()
+    if not cleaned_param or len(cleaned_param) < 3:
+        return JSONResponse(
+            status_code=400,
+            content={"ok": False, "error": "يرجى إدخال رقم تتبع صالح / Numéro de suivi invalide"}
+        )
+    from api.parcel_tracker import track_algeria_parcel
+    result = await track_algeria_parcel(cleaned_param)
+    return JSONResponse(
+        content=result,
+        headers={"Cache-Control": "public, max-age=60"}
+    )
+
+
 @app.get("/sitemap.xml", response_class=Response)
 async def sitemap_xml():
     """Dynamic Search Engine Sitemap with multilingual and image metadata"""
@@ -1449,6 +1471,16 @@ async def sitemap_xml():
     <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscoutgreen.vercel.app/deals"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://dealscoutgreen.vercel.app/deals"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscoutgreen.vercel.app/deals"/>
+  </url>
+  <url>
+    <loc>https://dealscoutgreen.vercel.app/tracking</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscoutgreen.vercel.app/tracking"/>
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscoutgreen.vercel.app/tracking"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscoutgreen.vercel.app/tracking"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscoutgreen.vercel.app/tracking"/>
+    <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dealscoutgreen.vercel.app/cards</loc>
