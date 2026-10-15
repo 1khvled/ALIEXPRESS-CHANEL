@@ -10,6 +10,14 @@ Features:
 import os
 import re
 from datetime import datetime, timezone, timedelta
+from typing import Optional, Dict, Any, List
+
+try:
+    from dotenv import load_dotenv
+    from pathlib import Path
+    load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+except Exception:
+    pass
 from fastapi import FastAPI, Request, Query
 from fastapi.responses import HTMLResponse, JSONResponse, Response
 import httpx
@@ -1158,12 +1166,34 @@ async def user_website():
 
 
 ADMIN_SESSION_COOKIE = "dealscout_admin_session"
-DEFAULT_ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "dealscout2026")
+
+
+def get_admin_auth_secret() -> Optional[str]:
+    """
+    Retrieves the admin password strictly from environment variables.
+    Checks ADMIN_PASSWORD, ADMIN_BOT_TOKEN, or TELEGRAM_BOT_TOKEN.
+    Zero hardcoded passwords in code or HTML.
+    """
+    for env_var in ["ADMIN_PASSWORD", "ADMIN_BOT_TOKEN", "TELEGRAM_BOT_TOKEN"]:
+        val = os.getenv(env_var)
+        if val and val.strip():
+            return val.strip()
+    return None
+
+
+def get_expected_admin_token() -> Optional[str]:
+    secret = get_admin_auth_secret()
+    if not secret:
+        return None
+    return hashlib.sha256(f"dealscout:{secret}".encode()).hexdigest()
 
 
 def is_admin_authenticated(request: Request) -> bool:
     """Checks if request has a valid admin session cookie, token, or bearer header."""
-    expected_token = hashlib.sha256(f"dealscout:{DEFAULT_ADMIN_PASSWORD}".encode()).hexdigest()
+    expected_token = get_expected_admin_token()
+    secret = get_admin_auth_secret()
+    if not expected_token or not secret:
+        return False
 
     # 1. Check session cookie
     token = request.cookies.get(ADMIN_SESSION_COOKIE)
@@ -1172,14 +1202,14 @@ def is_admin_authenticated(request: Request) -> bool:
 
     # 2. Check query param ?key=... or ?token=... or ?pass=...
     key = request.query_params.get("key") or request.query_params.get("token") or request.query_params.get("pass")
-    if key and (hmac.compare_digest(key, DEFAULT_ADMIN_PASSWORD) or hmac.compare_digest(key, expected_token)):
+    if key and (hmac.compare_digest(key, secret) or hmac.compare_digest(key, expected_token)):
         return True
 
     # 3. Check Authorization header
     auth_header = request.headers.get("Authorization", "")
     if auth_header.startswith("Bearer "):
         bearer = auth_header.replace("Bearer ", "").strip()
-        if hmac.compare_digest(bearer, DEFAULT_ADMIN_PASSWORD) or hmac.compare_digest(bearer, expected_token):
+        if hmac.compare_digest(bearer, secret) or hmac.compare_digest(bearer, expected_token):
             return True
 
     return False
@@ -1196,7 +1226,14 @@ async def admin_dashboard(request: Request):
 
 @app.post("/api/admin/login")
 async def admin_login(request: Request):
-    """Authenticates admin password and sets secure session cookie."""
+    """Authenticates admin password strictly from environment variables."""
+    secret = get_admin_auth_secret()
+    if not secret:
+        return JSONResponse({
+            "success": False,
+            "error": "لم يتم ضبط كلمة مرور الأدمن (ADMIN_PASSWORD) في متغيرات البيئة. يرجى إضافتها في إعدادات Vercel."
+        }, status_code=500)
+
     try:
         data = await request.json()
         password = str(data.get("password", "")).strip()
@@ -1206,8 +1243,8 @@ async def admin_login(request: Request):
     if not password:
         return JSONResponse({"success": False, "error": "يرجى إدخال كلمة المرور"}, status_code=400)
 
-    if hmac.compare_digest(password, DEFAULT_ADMIN_PASSWORD):
-        expected_token = hashlib.sha256(f"dealscout:{DEFAULT_ADMIN_PASSWORD}".encode()).hexdigest()
+    if hmac.compare_digest(password, secret):
+        expected_token = get_expected_admin_token()
         resp = JSONResponse({"success": True, "message": "تم تسجيل الدخول بنجاح"})
         resp.set_cookie(
             key=ADMIN_SESSION_COOKIE,
