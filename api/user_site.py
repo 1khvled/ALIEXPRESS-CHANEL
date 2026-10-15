@@ -259,46 +259,57 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     .deal-card {
       background-color: var(--bg-card);
       border: 1px solid var(--border-card);
-      box-shadow: var(--shadow-card);
-      transition: border-color 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      border-radius: 14px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
       position: relative;
     }
     html.dark .deal-card {
-      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.04);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
     }
     @media (hover: hover) {
       .deal-card:hover {
-        border-color: rgba(244, 63, 94, 0.6);
-        transform: translateY(-4px);
-        box-shadow: 0 16px 32px -8px rgba(225, 29, 72, 0.18), inset 0 1px 0 0 rgba(244, 63, 94, 0.2);
+        border-color: #e11d48;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.08);
+      }
+      html.dark .deal-card:hover {
+        border-color: rgba(225, 29, 72, 0.8);
+        box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5);
       }
     }
 
+    /* Anti-Slop: Editorial Promo Showcase Banner (Clean Neutral Surface, Zero Rainbow Mesh) */
     #active-event-banner {
-      background: radial-gradient(circle at 90% 10%, rgba(225, 29, 72, 0.14) 0%, transparent 45%),
-                  radial-gradient(circle at 10% 90%, rgba(14, 165, 233, 0.10) 0%, transparent 45%),
-                  var(--bg-card) !important;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      box-shadow: 0 8px 30px -6px rgba(225, 29, 72, 0.12);
+      background-color: var(--bg-card) !important;
+      border: 1px solid var(--border-card) !important;
+      border-right: 4px solid #e11d48 !important;
+      border-radius: 14px !important;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    }
+    [dir="ltr"] #active-event-banner {
+      border-right: 1px solid var(--border-card) !important;
+      border-left: 4px solid #e11d48 !important;
     }
     html.dark #active-event-banner {
-      box-shadow: 0 8px 32px -6px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(225, 29, 72, 0.25);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
     }
 
+    /* Anti-Slop: Solid, Confident AliExpress Action CTA (No Glowing Neon Gradients) */
     .btn-ali-primary {
-      background: linear-gradient(135deg, #e11d48 0%, #be123c 100%) !important;
-      box-shadow: 0 4px 14px -2px rgba(225, 29, 72, 0.45);
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      background-color: #e11d48 !important;
+      color: #ffffff !important;
+      border: 1px solid transparent;
+      box-shadow: 0 1px 2px rgba(225, 29, 72, 0.2);
+      transition: background-color 0.15s ease, transform 0.15s ease, filter 0.15s ease;
     }
     .btn-ali-primary:hover {
-      box-shadow: 0 6px 20px -2px rgba(225, 29, 72, 0.6);
-      filter: brightness(1.06);
+      background-color: #be123c !important;
       transform: translateY(-1px);
     }
     .btn-ali-primary:active {
       transform: scale(0.98);
-      filter: brightness(0.95);
+      background-color: #9f1239 !important;
     }
 
     .coupon-chip {
@@ -642,41 +653,41 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       </div>
 
       <!-- Active Promo Event Showcase Banner & Deal Keywords -->
-      <section id="active-event-banner" class="border rounded-2xl p-4 sm:p-5 relative overflow-hidden transition-all shadow-sm" style="background: linear-gradient(135deg, rgba(225, 29, 72, 0.08) 0%, rgba(14, 165, 233, 0.08) 100%); border-color: rgba(225, 29, 72, 0.25);" aria-label="الحدث الترويجي الفعال">
+      <section id="active-event-banner" class="p-4 sm:p-5 relative transition-all" aria-label="الحدث الترويجي الفعال">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
           <div class="space-y-1">
-            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-crimson-600/15 text-crimson-500">
-              <span class="w-2 h-2 rounded-full bg-crimson-500 animate-pulse"></span>
-              <span id="active-event-badge" data-i18n="active_event_badge">حدث ترويجي فعال حالياً 🔥</span>
+            <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400">
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
+              <span id="active-event-badge" data-i18n="active_event_badge">حدث ترويجي رسمي فعال</span>
             </div>
             <h3 id="active-event-title" class="text-base sm:text-lg font-bold tracking-tight" style="color: var(--text-main);" data-i18n="active_event_title">
-              تخفيضات عروض الشتاء Winter Offers 2026 الحصرية ❄️
+              تخفيضات عروض الشتاء Winter Offers 2026
             </h3>
-            <p id="active-event-desc" class="text-xs leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="active_event_desc">
+            <p id="active-event-desc" class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="active_event_desc">
               عروض وتخفيضات رسمية نشطة حالياً مع أكواد حصرية مخصصة للجزائر وفرنسا — الأسعار بالدينار الجزائري وفق سعر السكوار الحقيقي.
             </p>
           </div>
           <!-- Active Event Coupon Chips with 1-click copy -->
           <div class="flex items-center gap-2 flex-wrap" id="active-event-coupons">
-            <button onclick="copyReferralCode('WOAE06', this)" class="border border-dashed rounded-lg px-2.5 py-1 text-[11px] font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation shadow-sm cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: rgba(225, 29, 72, 0.4); color: #e11d48;" title="نسخ الكود WOAE06">
-              <i class="fa-solid fa-ticket text-[10px]"></i>
+            <button onclick="copyReferralCode('WOAE06', this)" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE06">
+              <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
               <span>WOAE06</span>
-              <span class="text-[9px] font-sans opacity-70">(-6$)</span>
+              <span class="text-[10px] font-sans font-medium text-rose-500">(-6$)</span>
             </button>
-            <button onclick="copyReferralCode('WOAE12', this)" class="border border-dashed rounded-lg px-2.5 py-1 text-[11px] font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation shadow-sm cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: rgba(225, 29, 72, 0.4); color: #e11d48;" title="نسخ الكود WOAE12">
-              <i class="fa-solid fa-ticket text-[10px]"></i>
+            <button onclick="copyReferralCode('WOAE12', this)" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE12">
+              <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
               <span>WOAE12</span>
-              <span class="text-[9px] font-sans opacity-70">(-12$)</span>
+              <span class="text-[10px] font-sans font-medium text-rose-500">(-12$)</span>
             </button>
-            <button onclick="copyReferralCode('WOAE23', this)" class="border border-dashed rounded-lg px-2.5 py-1 text-[11px] font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation shadow-sm cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: rgba(225, 29, 72, 0.4); color: #e11d48;" title="نسخ الكود WOAE23">
-              <i class="fa-solid fa-ticket text-[10px]"></i>
+            <button onclick="copyReferralCode('WOAE23', this)" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE23">
+              <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
               <span>WOAE23</span>
-              <span class="text-[9px] font-sans opacity-70">(-23$)</span>
+              <span class="text-[10px] font-sans font-medium text-rose-500">(-23$)</span>
             </button>
-            <button onclick="copyReferralCode('WOAE35', this)" class="border border-dashed rounded-lg px-2.5 py-1 text-[11px] font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation shadow-sm cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: rgba(225, 29, 72, 0.4); color: #e11d48;" title="نسخ الكود WOAE35">
-              <i class="fa-solid fa-ticket text-[10px]"></i>
+            <button onclick="copyReferralCode('WOAE35', this)" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE35">
+              <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
               <span>WOAE35</span>
-              <span class="text-[9px] font-sans opacity-70">(-35$)</span>
+              <span class="text-[10px] font-sans font-medium text-rose-500">(-35$)</span>
             </button>
           </div>
         </div>
@@ -790,12 +801,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <div id="page-cards" class="page-view hidden space-y-6">
       
       <!-- Hero Banner -->
-      <div class="border rounded-3xl p-6 sm:p-8 space-y-4" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, var(--bg-card) 60%); border-color: rgba(16, 185, 129, 0.3);">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/15 text-emerald-500">
+      <div class="border rounded-xl p-5 sm:p-6 space-y-3" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
           <i class="fa-solid fa-credit-card"></i>
           <span data-i18n="cards_badge">دليل بطاقات الدفع والشحن بالدينار الجزائري 🇩🇿</span>
         </div>
-        <h2 class="text-xl sm:text-2xl font-bold tracking-tight" style="color: var(--text-main);" data-i18n="cards_hero_title">
+        <h2 class="text-lg sm:text-xl font-bold tracking-tight" style="color: var(--text-main);" data-i18n="cards_hero_title">
           كيف تشتري من AliExpress وأنت في الجزائر؟ | أفضل البطاقات والشحن بـ BaridiMob
         </h2>
         <p class="text-xs sm:text-sm leading-relaxed max-w-3xl" style="color: var(--text-muted);" data-i18n="cards_hero_desc">
@@ -804,18 +815,18 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       </div>
 
       <!-- 3 Featured Partner Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         
         <!-- Partner 1: Bybit Virtual Mastercard -->
-        <div class="border rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-all hover:border-emerald-500/50 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="border rounded-xl p-5 flex flex-col justify-between transition-colors hover:border-emerald-500/50 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-lg font-bold">
+              <div class="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-base font-bold">
                 <i class="fa-solid fa-credit-card"></i>
               </div>
-              <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-500 border border-emerald-500/20" data-i18n="cards_bybit_badge">مجانية 100% — 0 دج</span>
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20" data-i18n="cards_bybit_badge">مجانية 100% — 0 دج</span>
             </div>
-            <h3 class="font-bold text-base sm:text-lg" style="color: var(--text-main);" data-i18n="cards_bybit_title">بطاقة Bybit Card (MasterCard)</h3>
+            <h3 class="font-bold text-sm sm:text-base" style="color: var(--text-main);" data-i18n="cards_bybit_title">بطاقة Bybit Card (MasterCard)</h3>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_bybit_desc">
               البطاقة الأفضل حالياً للتسوق من AliExpress: تصدر فورياً ومجاناً 100% وبدون أي اشتراك شهري، مقبولة في جميع المتاجر العالمية وPayPal مع كاش باك يصل إلى 10%.
             </p>
@@ -827,17 +838,17 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </div>
 
           <div class="pt-2 border-t space-y-3" style="border-color: var(--border-card);">
-            <div class="flex items-center justify-between p-2.5 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="flex items-center justify-between p-2.5 rounded-lg border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="min-w-0">
                 <div class="text-[10px] opacity-70" data-i18n="cards_ref_code">كود التسجيل الحصري:</div>
                 <div class="font-mono font-bold text-sm text-emerald-500">L9LLRP5</div>
               </div>
-              <button onclick="copyReferralCode('L9LLRP5', this)" class="min-h-[38px] px-3 py-1 text-xs font-bold rounded-lg border hover:bg-emerald-500/10 active:scale-95 transition flex items-center gap-1.5 touch-manipulation" style="border-color: var(--border-card); color: var(--text-main);">
+              <button onclick="copyReferralCode('L9LLRP5', this)" class="min-h-[36px] px-2.5 py-1 text-xs font-bold rounded border hover:bg-emerald-500/10 active:scale-95 transition flex items-center gap-1.5 touch-manipulation cursor-pointer" style="border-color: var(--border-card); color: var(--text-main);">
                 <i class="fa-regular fa-copy"></i>
                 <span data-i18n="cards_btn_copy_code">نسخ الكود</span>
               </button>
             </div>
-            <a href="https://www.bybit.com/invite?ref=L9LLRP5&medium=referral&utm_campaign=evergreen&share_to=Telegram" target="_blank" rel="noopener noreferrer" class="w-full min-h-[44px] rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2.5 px-4 flex items-center justify-center gap-2 shadow-md transition touch-manipulation">
+            <a href="https://www.bybit.com/invite?ref=L9LLRP5&medium=referral&utm_campaign=evergreen&share_to=Telegram" target="_blank" rel="noopener noreferrer" class="w-full min-h-[40px] rounded-lg bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2 px-3 flex items-center justify-center gap-2 shadow-sm transition touch-manipulation">
               <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
               <span data-i18n="cards_btn_bybit_cta">طلب بطاقة Bybit المجانية</span>
             </a>
@@ -845,15 +856,15 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
 
         <!-- Partner 2: RedotPay Virtual Visa -->
-        <div class="border rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-all hover:border-rose-500/50 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="border rounded-xl p-5 flex flex-col justify-between transition-colors hover:border-rose-500/50 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-500 flex items-center justify-center text-lg font-bold">
+              <div class="w-9 h-9 rounded-lg bg-rose-500/10 text-rose-500 flex items-center justify-center text-base font-bold">
                 <i class="fa-brands fa-cc-visa"></i>
               </div>
-              <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-rose-500/15 text-rose-500 border border-rose-500/20" data-i18n="cards_redot_badge">هدية 5$ ترحيبية 🎁</span>
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20" data-i18n="cards_redot_badge">هدية 5$ ترحيبية</span>
             </div>
-            <h3 class="font-bold text-base sm:text-lg" style="color: var(--text-main);" data-i18n="cards_redot_title">بطاقة فيزا RedotPay (هدية 5$)</h3>
+            <h3 class="font-bold text-sm sm:text-base" style="color: var(--text-main);" data-i18n="cards_redot_title">بطاقة فيزا RedotPay (هدية 5$)</h3>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_redot_desc">
               بطاقة فيزا افتراضية دولية تصدر في دقيقتين بالبطاقة الوطنية الجزائرية أو جواز السفر، تدعم تخفيضات العملات وكوبونات AliExpress وربط PayPal الجزائري.
             </p>
@@ -865,17 +876,17 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </div>
 
           <div class="pt-2 border-t space-y-3" style="border-color: var(--border-card);">
-            <div class="flex items-center justify-between p-2.5 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="flex items-center justify-between p-2.5 rounded-lg border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="min-w-0">
                 <div class="text-[10px] opacity-70" data-i18n="cards_ref_code">كود الهدية الترحيبية:</div>
                 <div class="font-mono font-bold text-sm text-rose-500">djbt3</div>
               </div>
-              <button onclick="copyReferralCode('djbt3', this)" class="min-h-[38px] px-3 py-1 text-xs font-bold rounded-lg border hover:bg-rose-500/10 active:scale-95 transition flex items-center gap-1.5 touch-manipulation" style="border-color: var(--border-card); color: var(--text-main);">
+              <button onclick="copyReferralCode('djbt3', this)" class="min-h-[36px] px-2.5 py-1 text-xs font-bold rounded border hover:bg-rose-500/10 active:scale-95 transition flex items-center gap-1.5 touch-manipulation cursor-pointer" style="border-color: var(--border-card); color: var(--text-main);">
                 <i class="fa-regular fa-copy"></i>
                 <span data-i18n="cards_btn_copy_code">نسخ الكود</span>
               </button>
             </div>
-            <a href="https://url.hk/i/en/djbt3" target="_blank" rel="noopener noreferrer" class="w-full min-h-[44px] rounded-xl bg-rose-600 hover:bg-rose-500 active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2.5 px-4 flex items-center justify-center gap-2 shadow-md transition touch-manipulation">
+            <a href="https://url.hk/i/en/djbt3" target="_blank" rel="noopener noreferrer" class="w-full min-h-[40px] rounded-lg bg-rose-600 hover:bg-rose-500 active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2 px-3 flex items-center justify-center gap-2 shadow-sm transition touch-manipulation">
               <i class="fa-solid fa-gift text-xs"></i>
               <span data-i18n="cards_btn_redot_cta">طلب بطاقة RedotPay (+ 5$ هدية)</span>
             </a>
@@ -883,15 +894,15 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
 
         <!-- Partner 3: Binance P2P BaridiMob -->
-        <div class="border rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-all hover:border-amber-500/50 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="border rounded-xl p-5 flex flex-col justify-between transition-colors hover:border-amber-500/50 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-lg font-bold">
+              <div class="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center text-base font-bold">
                 <i class="fa-solid fa-building-columns"></i>
               </div>
-              <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-500 border border-amber-500/20" data-i18n="cards_binance_badge">سوق P2P #1 في الجزائر</span>
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20" data-i18n="cards_binance_badge">سوق P2P #1 في الجزائر</span>
             </div>
-            <h3 class="font-bold text-base sm:text-lg" style="color: var(--text-main);" data-i18n="cards_binance_title">منصة Binance P2P (BaridiMob)</h3>
+            <h3 class="font-bold text-sm sm:text-base" style="color: var(--text-main);" data-i18n="cards_binance_title">منصة Binance P2P (BaridiMob)</h3>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_binance_desc">
               المنصة الرسمية والآمنة 100% لتحويل الدينار الجزائري من تطبيق BaridiMob أو CCP إلى رصيد دولار رقمي (USDT) بسعر الصرف الحقيقي وبدون وسطاء أو عمولات زائدة.
             </p>
@@ -903,17 +914,17 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </div>
 
           <div class="pt-2 border-t space-y-3" style="border-color: var(--border-card);">
-            <div class="flex items-center justify-between p-2.5 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="flex items-center justify-between p-2.5 rounded-lg border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="min-w-0">
                 <div class="text-[10px] opacity-70" data-i18n="cards_ref_code">كود إحالة Binance الرسمي:</div>
                 <div class="font-mono font-bold text-xs sm:text-sm text-amber-500 truncate">GRO_28502_3WGQR</div>
               </div>
-              <button onclick="copyReferralCode('GRO_28502_3WGQR', this)" class="min-h-[38px] px-3 py-1 text-xs font-bold rounded-lg border hover:bg-amber-500/10 active:scale-95 transition flex items-center gap-1.5 touch-manipulation flex-shrink-0" style="border-color: var(--border-card); color: var(--text-main);">
+              <button onclick="copyReferralCode('GRO_28502_3WGQR', this)" class="min-h-[36px] px-2.5 py-1 text-xs font-bold rounded border hover:bg-amber-500/10 active:scale-95 transition flex items-center gap-1.5 touch-manipulation flex-shrink-0 cursor-pointer" style="border-color: var(--border-card); color: var(--text-main);">
                 <i class="fa-regular fa-copy"></i>
                 <span data-i18n="cards_btn_copy_code">نسخ الكود</span>
               </button>
             </div>
-            <a href="https://www.binance.com/referral/earn-together/refer2earn-usdc/claim?hl=en&ref=GRO_28502_3WGQR&utm_source=referral_entrance" target="_blank" rel="noopener noreferrer" class="w-full min-h-[44px] rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-[0.98] text-zinc-950 font-bold text-xs sm:text-sm py-2.5 px-4 flex items-center justify-center gap-2 shadow-md transition touch-manipulation">
+            <a href="https://www.binance.com/referral/earn-together/refer2earn-usdc/claim?hl=en&ref=GRO_28502_3WGQR&utm_source=referral_entrance" target="_blank" rel="noopener noreferrer" class="w-full min-h-[40px] rounded-lg bg-amber-500 hover:bg-amber-400 active:scale-[0.98] text-zinc-950 font-bold text-xs sm:text-sm py-2 px-3 flex items-center justify-center gap-2 shadow-sm transition touch-manipulation">
               <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
               <span data-i18n="cards_btn_binance_cta">فتح حساب Binance P2P</span>
             </a>
@@ -923,7 +934,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       </div>
 
       <!-- Step-by-Step BaridiMob Shopping Workflow Guide -->
-      <div class="border rounded-2xl p-6 sm:p-8 space-y-6" style="background-color: var(--bg-card); border-color: var(--border-card);">
+      <div class="border rounded-xl p-5 sm:p-6 space-y-5" style="background-color: var(--bg-card); border-color: var(--border-card);">
         <div class="space-y-1">
           <h3 class="text-lg sm:text-xl font-bold" style="color: var(--text-main);" data-i18n="cards_guide_title">
             دليل الشراء خطوة بخطوة بالدينار الجزائري (BaridiMob) 🇩🇿
@@ -1032,19 +1043,19 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <!-- ───────────────────────────────────────────────────────── -->
     <div id="page-coins" class="page-view hidden space-y-6">
       
-      <div class="border rounded-3xl p-6 sm:p-8 space-y-4" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, var(--bg-card) 60%); border-color: rgba(245, 158, 11, 0.3);">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/15 text-amber-500">
+      <div class="border rounded-xl p-5 sm:p-6 space-y-3" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded text-xs font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
           <i class="fa-solid fa-coins"></i>
           <span data-i18n="coins_badge">دليل توفير العملات (AliExpress Coins)</span>
         </div>
-        <h2 class="text-xl sm:text-2xl font-bold tracking-tight" style="color: var(--text-main);" data-i18n="coins_hero_title">
+        <h2 class="text-lg sm:text-xl font-bold tracking-tight" style="color: var(--text-main);" data-i18n="coins_hero_title">
           كيف توفر حتى 60% إضافية باستخدام عملات AliExpress وبوت @Alilo07BOT؟
         </h2>
         <p class="text-xs sm:text-sm leading-relaxed max-w-3xl" style="color: var(--text-muted);" data-i18n="coins_hero_desc">
           تمنح AliExpress مستخدميها عملات يومية (Coins)، لكن معظم المنتجات في التطبيق لا تسمح باستخدام أكثر من 2% فقط. بوت التخفيضات الخاص بنا يقوم بفك القيود وتوليد روابط مباشرة تمكّنك من استهلاك أكبر عدد ممكن من العملات والحصول على خصم ضخم فوري!
         </p>
-        <div class="pt-2 flex flex-wrap gap-3">
-          <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="min-h-[46px] px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xs sm:text-sm flex items-center gap-2 shadow-lg shadow-amber-500/20 active:scale-95 transition">
+        <div class="pt-1 flex flex-wrap gap-3">
+          <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="min-h-[40px] px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xs sm:text-sm flex items-center gap-2 shadow-sm active:scale-95 transition cursor-pointer">
             <i class="fa-solid fa-coins"></i>
             <span data-i18n="coins_btn_start">تشغيل البوت مجاناً (@Alilo07BOT)</span>
           </a>
@@ -1053,21 +1064,21 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       <!-- 3 Steps Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="border rounded-2xl p-5 space-y-3" style="background-color: var(--bg-card); border-color: var(--border-card);">
-          <div class="w-10 h-10 rounded-xl text-amber-500 font-bold text-base flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">1</div>
-          <h3 class="font-bold text-sm" style="color: var(--text-main);" data-i18n="coins_step1_title">انسخ رابط المنتج من AliExpress</h3>
+        <div class="border rounded-xl p-4 sm:p-5 space-y-2.5" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="w-8 h-8 rounded-lg text-amber-500 font-bold text-sm flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">1</div>
+          <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="coins_step1_title">انسخ رابط المنتج من AliExpress</h3>
           <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coins_step1_desc">افتح أي منتج يعجبك داخل تطبيق AliExpress، اضغط على زر المشاركة ثم اختر نسخ الرابط (Copy Link).</p>
         </div>
 
-        <div class="border rounded-2xl p-5 space-y-3" style="background-color: var(--bg-card); border-color: var(--border-card);">
-          <div class="w-10 h-10 rounded-xl text-sky-500 font-bold text-base flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">2</div>
-          <h3 class="font-bold text-sm" style="color: var(--text-main);" data-i18n="coins_step2_title">أرسل الرابط لبوت التخفيض</h3>
-          <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coins_step2_desc">افتح بوت التيليجرام <b class="text-sky-500">@Alilo07BOT</b> والصق الرابط في المحادثة. سيقوم البوت فوراً بالبحث عن أقصى نسبة خصم متاحة للعملات.</p>
+        <div class="border rounded-xl p-4 sm:p-5 space-y-2.5" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="w-8 h-8 rounded-lg text-sky-500 font-bold text-sm flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">2</div>
+          <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="coins_step2_title">أرسل الرابط لبوت التخفيض</h3>
+          <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coins_step2_desc">افتح بوت التيليجرام <b class="text-sky-500 font-mono">@Alilo07BOT</b> والصق الرابط في المحادثة. سيقوم البوت فوراً بالبحث عن أقصى نسبة خصم متاحة للعملات.</p>
         </div>
 
-        <div class="border rounded-2xl p-5 space-y-3" style="background-color: var(--bg-card); border-color: var(--border-card);">
-          <div class="w-10 h-10 rounded-xl text-emerald-500 font-bold text-base flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">3</div>
-          <h3 class="font-bold text-sm" style="color: var(--text-main);" data-i18n="coins_step3_title">ادفع بالسعر المخفض</h3>
+        <div class="border rounded-xl p-4 sm:p-5 space-y-2.5" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="w-8 h-8 rounded-lg text-emerald-500 font-bold text-sm flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">3</div>
+          <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="coins_step3_title">ادفع بالسعر المخفض</h3>
           <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coins_step3_desc">اضغط على زر (شراء الآن) من الرابط الذي يرجعه البوت، وستلاحظ أن خانة العملات قد خصمت ما يصل إلى 10$ إلى 40$ من السعر الإجمالي!</p>
         </div>
       </div>
@@ -1559,7 +1570,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         cards_bybit_f2: "مقبولة 100% على AliExpress وPayPal",
         cards_bybit_f3: "شحن فوري بالدينار عبر Binance P2P",
         cards_btn_bybit_cta: "طلب بطاقة Bybit المجانية",
-        cards_redot_badge: "هدية 5$ ترحيبية 🎁",
+        cards_redot_badge: "هدية 5$ ترحيبية",
         cards_redot_title: "بطاقة فيزا RedotPay (هدية 5$)",
         cards_redot_desc: "بطاقة فيزا افتراضية دولية تصدر في دقيقتين بالبطاقة الوطنية الجزائرية أو جواز السفر، تدعم تخفيضات العملات وكوبونات AliExpress وربط PayPal الجزائري.",
         cards_redot_f1: "هدية 5$ رصيد ترحيبي فوري عند التسجيل",
@@ -1644,8 +1655,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         footer_rights: "جميع الحقوق محفوظة.",
         footer_made_with: "صُنع للمتسوق الجزائري 🇩🇿",
         footer_back_top: "للأعلى",
-        active_event_badge: "حدث ترويجي فعال حالياً 🔥",
-        active_event_title: "تخفيضات عروض الشتاء Winter Offers 2026 الحصرية ❄️",
+        active_event_badge: "حدث ترويجي فعال حالياً",
+        active_event_title: "تخفيضات عروض الشتاء Winter Offers 2026 الحصرية",
         active_event_desc: "عروض وتخفيضات رسمية نشطة حالياً مع أكواد حصرية مخصصة للجزائر وفرنسا — الأسعار بالدينار الجزائري وفق سعر السكوار الحقيقي.",
         active_deals_kw_label: "أهم صفقات الحدث الفعال:"
       },
@@ -1710,7 +1721,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         cards_bybit_f2: "100% acceptée sur AliExpress et PayPal",
         cards_bybit_f3: "Recharge instantanée en Dinars via Binance P2P",
         cards_btn_bybit_cta: "Commander la carte Bybit gratuite",
-        cards_redot_badge: "5$ de Bienvenue Offerts 🎁",
+        cards_redot_badge: "5$ de Bienvenue Offerts",
         cards_redot_title: "Carte Visa RedotPay (5$ Offerts)",
         cards_redot_desc: "Carte Visa virtuelle internationale activée en 2 minutes avec votre carte d'identité ou passeport. Compatible coupons AliExpress et PayPal.",
         cards_redot_f1: "5$ de bonus de bienvenue dès l'inscription",
@@ -1795,8 +1806,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         footer_rights: "Tous droits réservés.",
         footer_made_with: "Fait spécialement pour les acheteurs algériens 🇩🇿",
         footer_back_top: "Haut de page",
-        active_event_badge: "Événement Promo Actif 🔥",
-        active_event_title: "Promotions Offres d'Hiver 2026 (Winter Offers) ❄️",
+        active_event_badge: "Événement Promo Actif",
+        active_event_title: "Promotions Offres d'Hiver 2026 (Winter Offers)",
         active_event_desc: "Bons plans et réductions officielles avec codes promo exclusifs pour l'Algérie et la France — calculés en Dinar Algérien au taux Square.",
         active_deals_kw_label: "Top deals de l'événement :"
       }
@@ -2512,7 +2523,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const couponsEl = document.getElementById('active-event-coupons');
 
       if (titleEl) {
-        titleEl.textContent = (isFr ? (event.name_fr || event.name) : (event.name_ar || event.name)) + ' ❄️';
+        titleEl.textContent = isFr ? (event.name_fr || event.name) : (event.name_ar || event.name);
       }
       if (couponsEl && event.coupon_tiers) {
         const isFranceCh = currentChannel === '@francedealsdz';
@@ -2521,10 +2532,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           : event.coupon_tiers;
         if (tiers && tiers.length > 0) {
           couponsEl.innerHTML = tiers.map(t => `
-            <button onclick="copyReferralCode('${t.code}', this)" class="border border-dashed rounded-lg px-2.5 py-1 text-[11px] font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation shadow-sm cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: rgba(225, 29, 72, 0.4); color: #e11d48;" title="${isFr ? 'Copier le code ' + t.code : 'نسخ الكود ' + t.code}">
-              <i class="fa-solid fa-ticket text-[10px]"></i>
+            <button onclick="copyReferralCode('${t.code}', this)" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" title="${isFr ? 'Copier le code ' + t.code : 'نسخ الكود ' + t.code}">
+              <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
               <span>${t.code}</span>
-              <span class="text-[9px] font-sans opacity-70">(-${t.discount}$)</span>
+              <span class="text-[10px] font-sans font-medium text-rose-500">(-${t.discount}$)</span>
             </button>
           `).join('');
         }
@@ -2641,36 +2652,36 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       deals.forEach(deal => {
         const card = document.createElement('article');
-        card.className = 'deal-card rounded-2xl p-3.5 sm:p-4 flex flex-col justify-between';
+        card.className = 'deal-card p-3 sm:p-3.5 flex flex-col justify-between';
 
         const safeTitle = escapeHtml(deal.title);
 
         const photoHtml = deal.photo_url ? `
-          <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-3 cursor-pointer group flex items-center justify-center border" style="background-color: var(--bg-page); border-color: var(--border-card);" onclick="openDealModal('${deal.id}')">
-            <img src="${deal.photo_url}" alt="${safeTitle}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="handleImgError(this, '${escapeHtml(deal.photo_url)}')" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300">
-            ${deal.has_coins ? `<span class="absolute top-2.5 left-2.5 bg-gradient-to-r from-amber-400 to-amber-500 text-zinc-950 text-[10px] font-extrabold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-md tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
-            ${deal.country ? `<span class="absolute top-2.5 right-2.5 text-[10px] px-2 py-0.5 rounded-lg font-bold border shadow-md backdrop-blur-md" style="background-color: rgba(18, 18, 21, 0.75); border-color: rgba(255, 255, 255, 0.1); color: #fafafa;">${escapeHtml(deal.country)}</span>` : ''}
+          <div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-2.5 cursor-pointer group flex items-center justify-center border" style="background-color: var(--bg-page); border-color: var(--border-card);" onclick="openDealModal('${deal.id}')">
+            <img src="${deal.photo_url}" alt="${safeTitle}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="handleImgError(this, '${escapeHtml(deal.photo_url)}')" class="w-full h-full object-contain group-hover:scale-102 transition-transform duration-200">
+            ${deal.has_coins ? `<span class="absolute top-2 left-2 bg-amber-500 text-zinc-950 text-[10px] font-bold px-1.5 py-0.5 rounded flex items-center gap-1 shadow-sm tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
+            ${deal.country ? `<span class="absolute top-2 right-2 text-[10px] px-1.5 py-0.5 rounded font-semibold border shadow-sm" style="background-color: rgba(18, 18, 21, 0.85); border-color: rgba(255, 255, 255, 0.15); color: #fafafa;">${escapeHtml(deal.country)}</span>` : ''}
           </div>
         ` : `
-          <div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-3 cursor-pointer group flex items-center justify-center border" style="background-color: var(--bg-page); border-color: var(--border-card);" onclick="openDealModal('${deal.id}')">
-            <div class="flex flex-col items-center justify-center gap-2 opacity-50 p-4 text-center">
-              <i class="fa-solid fa-bag-shopping text-2xl text-crimson-500"></i>
+          <div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-2.5 cursor-pointer group flex items-center justify-center border" style="background-color: var(--bg-page); border-color: var(--border-card);" onclick="openDealModal('${deal.id}')">
+            <div class="flex flex-col items-center justify-center gap-1.5 opacity-50 p-4 text-center">
+              <i class="fa-solid fa-bag-shopping text-xl text-rose-500"></i>
               <span class="text-[11px] font-semibold" style="color: var(--text-muted);">${safeTitle.slice(0, 30)}...</span>
             </div>
-            ${deal.has_coins ? `<span class="absolute top-2.5 left-2.5 bg-gradient-to-r from-amber-400 to-amber-500 text-zinc-950 text-[10px] font-extrabold px-2 py-0.5 rounded-lg flex items-center gap-1 shadow-md tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
+            ${deal.has_coins ? `<span class="absolute top-2 left-2 bg-amber-500 text-zinc-950 text-[10px] font-bold px-1.5 py-0.5 rounded flex items-center gap-1 shadow-sm tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
           </div>
         `;
 
         const couponHtml = deal.coupon ? `
-          <div class="border border-dashed rounded-xl px-2.5 py-1.5 flex items-center justify-between gap-1.5 mb-2.5 transition coupon-chip" style="background-color: var(--bg-elevated); border-color: rgba(225, 29, 72, 0.45);">
+          <div class="border border-dashed rounded-lg px-2.5 py-1.5 flex items-center justify-between gap-1.5 mb-2.5 transition coupon-chip">
             <div class="flex items-center gap-1.5 min-w-0">
               <i class="fa-solid fa-ticket text-xs flex-shrink-0 text-amber-500"></i>
               <div class="min-w-0">
                 <span class="text-[9px] uppercase tracking-wider block font-bold opacity-60 font-heading">${currentLang === 'fr' ? 'Code Promo' : 'كود الخصم'}</span>
-                <span class="font-mono text-xs font-black truncate select-all block text-crimson-500 tracking-wide">${escapeHtml(deal.coupon)}</span>
+                <span class="font-mono text-xs font-bold truncate select-all block text-rose-600 dark:text-rose-400 tracking-wide">${escapeHtml(deal.coupon)}</span>
               </div>
             </div>
-            <button onclick="copyCoupon('${deal.coupon}', this)" aria-label="Copy coupon" class="min-h-[36px] min-w-[68px] border text-[11px] font-bold px-2.5 py-1 rounded-lg transition flex items-center justify-center gap-1 flex-shrink-0 touch-manipulation active:scale-95 shadow-sm hover:border-rose-500 cursor-pointer" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">
+            <button onclick="copyCoupon('${deal.coupon}', this)" aria-label="Copy coupon" class="min-h-[32px] min-w-[62px] border text-[11px] font-bold px-2 py-0.5 rounded transition flex items-center justify-center gap-1 flex-shrink-0 touch-manipulation active:scale-95 shadow-sm hover:border-zinc-400 dark:hover:border-zinc-500 cursor-pointer" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">
               <i class="fa-regular fa-copy text-[11px]"></i>
               <span class="copy-text">${I18N[currentLang].btn_copy}</span>
             </button>
@@ -2685,7 +2696,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <div>
             ${photoHtml}
             <div class="flex items-center justify-between gap-2 mb-1.5">
-              <span class="text-[10px] font-bold px-2 py-0.5 rounded-lg border font-heading" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded border font-heading" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
                 ${deal.category_label || I18N[currentLang].deal_category_fallback}
               </span>
               <span class="text-[10px] font-mono opacity-60 flex items-center gap-1">
@@ -2693,30 +2704,30 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
                 ${deal.date ? deal.date.split(' ')[0] : ''}
               </span>
             </div>
-            <h3 class="font-bold text-xs sm:text-sm line-clamp-2 mb-2.5 hover:text-rose-500 transition cursor-pointer leading-snug break-words font-heading" style="color: var(--text-main);" onclick="openDealModal('${deal.id}')">
+            <h3 class="font-bold text-xs sm:text-sm line-clamp-2 mb-2 hover:text-rose-500 transition cursor-pointer leading-snug break-words font-heading" style="color: var(--text-main);" onclick="openDealModal('${deal.id}')">
               ${safeTitle}
             </h3>
             ${couponHtml}
           </div>
 
-          <div class="pt-2.5 border-t space-y-2.5" style="border-color: var(--border-card);">
+          <div class="pt-2 border-t space-y-2" style="border-color: var(--border-card);">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-baseline flex-wrap gap-1.5 min-w-0">
                 ${formatPrice(deal)}
                 ${secondaryPrice}
               </div>
               ${deal.telegram_url ? `
-                <a href="${deal.telegram_url}" target="_blank" rel="noopener noreferrer" title="Telegram" class="w-8 h-8 rounded-lg border flex items-center justify-center active:scale-95 transition touch-manipulation flex-shrink-0 text-sky-500 hover:border-sky-500" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-                  <i class="fa-brands fa-telegram"></i>
+                <a href="${deal.telegram_url}" target="_blank" rel="noopener noreferrer" title="Telegram" class="w-7 h-7 rounded border flex items-center justify-center active:scale-95 transition touch-manipulation flex-shrink-0 text-sky-500 hover:border-sky-500" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+                  <i class="fa-brands fa-telegram text-xs"></i>
                 </a>
               ` : ''}
             </div>
 
             <!-- Primary Buy Button with Coupon Auto-Copy -->
-            <a href="${deal.affiliate_url}" target="_blank" rel="noopener noreferrer" onclick="handleBuyClick('${deal.coupon || ''}')" class="w-full btn-ali-primary active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-2 transition shadow-sm touch-manipulation min-h-[44px] font-heading cursor-pointer">
+            <a href="${deal.affiliate_url}" target="_blank" rel="noopener noreferrer" onclick="handleBuyClick('${deal.coupon || ''}')" class="w-full btn-ali-primary active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2 px-3 rounded-lg text-center flex items-center justify-center gap-1.5 transition shadow-sm touch-manipulation min-h-[40px] font-heading cursor-pointer">
               <i class="fa-solid fa-cart-shopping text-xs"></i>
               <span>${I18N[currentLang].btn_buy}</span>
-              ${deal.coupon ? `<span class="bg-black/30 text-[10px] font-mono px-1.5 py-0.5 rounded text-white/95 mr-1 inline-flex items-center gap-1 font-bold"><i class="fa-solid fa-ticket text-[9px]"></i> ${escapeHtml(deal.coupon)}</span>` : ''}
+              ${deal.coupon ? `<span class="bg-black/25 text-[10px] font-mono px-1.5 py-0.5 rounded text-white mr-1 inline-flex items-center gap-1 font-bold"><i class="fa-solid fa-ticket text-[9px]"></i> ${escapeHtml(deal.coupon)}</span>` : ''}
             </a>
           </div>
         `;
