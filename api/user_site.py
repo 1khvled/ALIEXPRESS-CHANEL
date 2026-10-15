@@ -400,6 +400,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <i class="fa-solid fa-fire text-crimson-500 text-xs"></i>
           <span data-i18n="nav_deals">الصفقات</span>
         </button>
+        <button onclick="showPage('cards')" id="nav-link-cards" class="nav-page-btn px-3 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-credit-card text-emerald-500 text-xs"></i>
+          <span data-i18n="nav_cards">بطاقات الشراء</span>
+        </button>
         <button onclick="showPage('coins')" id="nav-link-coins" class="nav-page-btn px-3 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5">
           <i class="fa-solid fa-coins text-amber-500 text-xs"></i>
           <span data-i18n="nav_coins">بوت العملات</span>
@@ -590,6 +594,194 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <button onclick="resetFilters()" class="min-h-[44px] px-4 py-2 text-xs font-bold text-crimson-500 hover:underline active:scale-95 touch-manipulation" data-i18n="empty_reset">
           عرض جميع الصفقات
         </button>
+      </div>
+
+    </div>
+
+    <!-- ───────────────────────────────────────────────────────── -->
+    <!-- PAGE: CARDS & REFERRALS (BYBIT, REDOTPAY, BINANCE P2P)    -->
+    <!-- ───────────────────────────────────────────────────────── -->
+    <div id="page-cards" class="page-view hidden space-y-6">
+      
+      <!-- Hero Banner -->
+      <div class="border rounded-3xl p-6 sm:p-8 space-y-4" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, var(--bg-card) 60%); border-color: rgba(16, 185, 129, 0.3);">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/15 text-emerald-500">
+          <i class="fa-solid fa-credit-card"></i>
+          <span data-i18n="cards_badge">دليل بطاقات الدفع والشحن بالدينار الجزائري 🇩🇿</span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-bold tracking-tight" style="color: var(--text-main);" data-i18n="cards_hero_title">
+          كيف تشتري من AliExpress وأنت في الجزائر؟ | أفضل البطاقات والشحن بـ BaridiMob
+        </h2>
+        <p class="text-xs sm:text-sm leading-relaxed max-w-3xl" style="color: var(--text-muted);" data-i18n="cards_hero_desc">
+          لأن البطاقات البنكية الجزائرية المحلية لا تعمل في المواقع العالمية، إليك الحل الرسمي والمجرب: احصل على بطاقة افتراضية دولية مجانية، واشحنها مباشرة بالدينار الجزائري عبر بريدي موب ومنصة بينانس دون وسطاء وبأقل تكلفة!
+        </p>
+      </div>
+
+      <!-- 3 Featured Partner Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        
+        <!-- Partner 1: Bybit Virtual Mastercard -->
+        <div class="border rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-all hover:border-emerald-500/50 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-lg font-bold">
+                <i class="fa-solid fa-credit-card"></i>
+              </div>
+              <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/15 text-emerald-500 border border-emerald-500/20" data-i18n="cards_bybit_badge">مجانية 100% — 0 دج</span>
+            </div>
+            <h3 class="font-bold text-base sm:text-lg" style="color: var(--text-main);" data-i18n="cards_bybit_title">بطاقة Bybit Card (MasterCard)</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_bybit_desc">
+              البطاقة الأفضل حالياً للتسوق من AliExpress: تصدر فورياً ومجاناً 100% وبدون أي اشتراك شهري، مقبولة في جميع المتاجر العالمية وPayPal مع كاش باك يصل إلى 10%.
+            </p>
+            <ul class="text-xs space-y-2 pt-1 font-medium" style="color: var(--text-main);">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[11px]"></i><span data-i18n="cards_bybit_f1">0 دج مصاريف فتح وبدون اشتراك شهري</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[11px]"></i><span data-i18n="cards_bybit_f2">مقبولة 100% على AliExpress وPayPal</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[11px]"></i><span data-i18n="cards_bybit_f3">شحن فوري بالدينار عبر Binance P2P</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-2 border-t space-y-3" style="border-color: var(--border-card);">
+            <div class="flex items-center justify-between p-2.5 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <div class="text-[10px] opacity-70" data-i18n="cards_ref_code">كود التسجيل الحصري:</div>
+                <div class="font-mono font-bold text-sm text-emerald-500">L9LLRP5</div>
+              </div>
+              <button onclick="copyReferralCode('L9LLRP5', this)" class="min-h-[38px] px-3 py-1 text-xs font-bold rounded-lg border hover:bg-emerald-500/10 active:scale-95 transition flex items-center gap-1.5 touch-manipulation" style="border-color: var(--border-card); color: var(--text-main);">
+                <i class="fa-regular fa-copy"></i>
+                <span data-i18n="cards_btn_copy_code">نسخ الكود</span>
+              </button>
+            </div>
+            <a href="https://www.bybit.com/invite?ref=L9LLRP5&medium=referral&utm_campaign=evergreen&share_to=Telegram" target="_blank" rel="noopener noreferrer" class="w-full min-h-[44px] rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2.5 px-4 flex items-center justify-center gap-2 shadow-md transition touch-manipulation">
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              <span data-i18n="cards_btn_bybit_cta">طلب بطاقة Bybit المجانية</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Partner 2: RedotPay Virtual Visa -->
+        <div class="border rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-all hover:border-rose-500/50 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="w-10 h-10 rounded-xl bg-rose-500/10 text-rose-500 flex items-center justify-center text-lg font-bold">
+                <i class="fa-brands fa-cc-visa"></i>
+              </div>
+              <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-rose-500/15 text-rose-500 border border-rose-500/20" data-i18n="cards_redot_badge">هدية 5$ ترحيبية 🎁</span>
+            </div>
+            <h3 class="font-bold text-base sm:text-lg" style="color: var(--text-main);" data-i18n="cards_redot_title">بطاقة فيزا RedotPay (هدية 5$)</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_redot_desc">
+              بطاقة فيزا افتراضية دولية تصدر في دقيقتين بالبطاقة الوطنية الجزائرية أو جواز السفر، تدعم تخفيضات العملات وكوبونات AliExpress وربط PayPal الجزائري.
+            </p>
+            <ul class="text-xs space-y-2 pt-1 font-medium" style="color: var(--text-main);">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rose-500 text-[11px]"></i><span data-i18n="cards_redot_f1">هدية 5$ رصيد ترحيبي فوري عند التسجيل</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rose-500 text-[11px]"></i><span data-i18n="cards_redot_f2">تفعيل فوري ببطاقة التعريف الوطنية</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-rose-500 text-[11px]"></i><span data-i18n="cards_redot_f3">دعم ربط وتفعيل كامل لـ PayPal</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-2 border-t space-y-3" style="border-color: var(--border-card);">
+            <div class="flex items-center justify-between p-2.5 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <div class="text-[10px] opacity-70" data-i18n="cards_ref_code">كود الهدية الترحيبية:</div>
+                <div class="font-mono font-bold text-sm text-rose-500">djbt3</div>
+              </div>
+              <button onclick="copyReferralCode('djbt3', this)" class="min-h-[38px] px-3 py-1 text-xs font-bold rounded-lg border hover:bg-rose-500/10 active:scale-95 transition flex items-center gap-1.5 touch-manipulation" style="border-color: var(--border-card); color: var(--text-main);">
+                <i class="fa-regular fa-copy"></i>
+                <span data-i18n="cards_btn_copy_code">نسخ الكود</span>
+              </button>
+            </div>
+            <a href="https://url.hk/i/en/djbt3" target="_blank" rel="noopener noreferrer" class="w-full min-h-[44px] rounded-xl bg-rose-600 hover:bg-rose-500 active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2.5 px-4 flex items-center justify-center gap-2 shadow-md transition touch-manipulation">
+              <i class="fa-solid fa-gift text-xs"></i>
+              <span data-i18n="cards_btn_redot_cta">طلب بطاقة RedotPay (+ 5$ هدية)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Partner 3: Binance P2P BaridiMob -->
+        <div class="border rounded-2xl p-5 sm:p-6 flex flex-col justify-between transition-all hover:border-amber-500/50 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-lg font-bold">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <span class="text-[11px] font-bold px-2.5 py-1 rounded-full bg-amber-500/15 text-amber-500 border border-amber-500/20" data-i18n="cards_binance_badge">سوق P2P #1 في الجزائر</span>
+            </div>
+            <h3 class="font-bold text-base sm:text-lg" style="color: var(--text-main);" data-i18n="cards_binance_title">منصة Binance P2P (BaridiMob)</h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_binance_desc">
+              المنصة الرسمية والآمنة 100% لتحويل الدينار الجزائري من تطبيق BaridiMob أو CCP إلى رصيد دولار رقمي (USDT) بسعر الصرف الحقيقي وبدون وسطاء أو عمولات زائدة.
+            </p>
+            <ul class="text-xs space-y-2 pt-1 font-medium" style="color: var(--text-main);">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span data-i18n="cards_binance_f1">شراء الدولار الرقمي مباشرة عبر BaridiMob</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span data-i18n="cards_binance_f2">حماية الضمان المالي الصارم (Escrow)</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span data-i18n="cards_binance_f3">تحويل مباشر إلى بطاقاتك في ثوانٍ</span></li>
+            </ul>
+          </div>
+
+          <div class="pt-2 border-t space-y-3" style="border-color: var(--border-card);">
+            <div class="flex items-center justify-between p-2.5 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <div class="text-[10px] opacity-70" data-i18n="cards_ref_code">كود إحالة Binance الرسمي:</div>
+                <div class="font-mono font-bold text-xs sm:text-sm text-amber-500 truncate">GRO_28502_3WGQR</div>
+              </div>
+              <button onclick="copyReferralCode('GRO_28502_3WGQR', this)" class="min-h-[38px] px-3 py-1 text-xs font-bold rounded-lg border hover:bg-amber-500/10 active:scale-95 transition flex items-center gap-1.5 touch-manipulation flex-shrink-0" style="border-color: var(--border-card); color: var(--text-main);">
+                <i class="fa-regular fa-copy"></i>
+                <span data-i18n="cards_btn_copy_code">نسخ الكود</span>
+              </button>
+            </div>
+            <a href="https://www.binance.com/referral/earn-together/refer2earn-usdc/claim?hl=en&ref=GRO_28502_3WGQR&utm_source=referral_entrance" target="_blank" rel="noopener noreferrer" class="w-full min-h-[44px] rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-[0.98] text-zinc-950 font-bold text-xs sm:text-sm py-2.5 px-4 flex items-center justify-center gap-2 shadow-md transition touch-manipulation">
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              <span data-i18n="cards_btn_binance_cta">فتح حساب Binance P2P</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Step-by-Step BaridiMob Shopping Workflow Guide -->
+      <div class="border rounded-2xl p-6 sm:p-8 space-y-6" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="space-y-1">
+          <h3 class="text-lg sm:text-xl font-bold" style="color: var(--text-main);" data-i18n="cards_guide_title">
+            دليل الشراء خطوة بخطوة بالدينار الجزائري (BaridiMob) 🇩🇿
+          </h3>
+          <p class="text-xs sm:text-sm" style="color: var(--text-muted);" data-i18n="cards_guide_subtitle">
+            الطريقة الرسمية والآمنة التي يستعملها آلاف المتسوقين الجزائريين يومياً للشراء من AliExpress بأقل تكلفة:
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <div class="border rounded-xl p-4 space-y-2 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 font-bold flex items-center justify-center text-sm">1</div>
+            <h4 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step1_title">1. شراء USDT بـ BaridiMob</h4>
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_step1_desc">
+              افتح حسابك في Binance، ادخل قسم P2P واختر الدفع بـ BaridiMob لشراء المبلغ المطلوب من الدولار الرقمي (USDT) مباشرة في دقيقتين.
+            </p>
+          </div>
+
+          <div class="border rounded-xl p-4 space-y-2 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 font-bold flex items-center justify-center text-sm">2</div>
+            <h4 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step2_title">2. شحن بطاقتك الافتراضية</h4>
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_step2_desc">
+              حوّل رصيد USDT من Binance إلى حساب Bybit أو RedotPay الخاص بك عبر شبكة سريعة بدون أي رسوم مرتفعة.
+            </p>
+          </div>
+
+          <div class="border rounded-xl p-4 space-y-2 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 font-bold flex items-center justify-center text-sm">3</div>
+            <h4 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step3_title">3. ربط البطاقة في AliExpress</h4>
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_step3_desc">
+              انسخ معلومات بطاقتك الافتراضية (رقم البطاقة وتاريخ الانتهاء وCVV) وأضفها في وسائل الدفع بتطبيق AliExpress.
+            </p>
+          </div>
+
+          <div class="border rounded-xl p-4 space-y-2 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 font-bold flex items-center justify-center text-sm">4</div>
+            <h4 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step4_title">4. تطبيق الخصومات والشراء</h4>
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_step4_desc">
+              اختر صفقتك من موقعنا، انسخ كود الخصم، استخدم بوت العملات واستلم طردك مباشرة من مكتب بريد الجزائر القريب منك!
+            </p>
+          </div>
+
+        </div>
       </div>
 
     </div>
@@ -855,6 +1047,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <i class="fa-solid fa-fire text-base"></i>
       <span data-i18n="nav_deals">الصفقات</span>
     </button>
+    <button onclick="showPage('cards')" id="mob-bottom-cards" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation">
+      <i class="fa-solid fa-credit-card text-base text-emerald-500"></i>
+      <span data-i18n="nav_cards">البطاقات</span>
+    </button>
     <button onclick="showPage('coins')" id="mob-bottom-coins" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation">
       <i class="fa-solid fa-coins text-base"></i>
       <span data-i18n="nav_coins">العملات</span>
@@ -978,6 +1174,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <h4 class="font-bold text-xs uppercase tracking-wider" style="color: var(--text-main);" data-i18n="footer_nav_title">التنقل السريع</h4>
           <ul class="space-y-2">
             <li><button onclick="showPage('deals')" class="hover:underline transition" data-i18n="nav_deals">أحدث الصفقات</button></li>
+            <li><button onclick="showPage('cards')" class="hover:underline transition text-emerald-500 font-semibold" data-i18n="nav_cards">بطاقات الشراء والتحويل</button></li>
             <li><button onclick="showPage('coins')" class="hover:underline transition" data-i18n="nav_coins">دليل بوت العملات</button></li>
             <li><button onclick="showPage('faq')" class="hover:underline transition" data-i18n="nav_faq">الأسئلة الشائعة</button></li>
             <li><button onclick="showPage('contact')" class="hover:underline transition" data-i18n="nav_contact">اتصل بنا والدعم</button></li>
@@ -1069,6 +1266,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         currency_dzd: "دج",
         top_coin_bot: "بوت العملات",
         nav_deals: "الصفقات",
+        nav_cards: "بطاقات الشراء",
         nav_coins: "بوت العملات",
         nav_faq: "الأسئلة الشائعة",
         nav_contact: "اتصل بنا",
@@ -1110,6 +1308,42 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         coins_step2_desc: "افتح بوت التيليجرام @Alilo07BOT والصق الرابط في المحادثة. سيقوم البوت فوراً بالبحث عن أقصى نسبة خصم متاحة للعملات.",
         coins_step3_title: "ادفع بالسعر المخفض",
         coins_step3_desc: "اضغط على زر (شراء الآن) من الرابط الذي يرجعه البوت، وستلاحظ أن خانة العملات قد خصمت ما يصل إلى 10$ إلى 40$ من السعر الإجمالي!",
+        cards_badge: "دليل بطاقات الدفع والشحن بالدينار الجزائري 🇩🇿",
+        cards_hero_title: "كيف تشتري من AliExpress وأنت في الجزائر؟ | أفضل البطاقات والشحن بـ BaridiMob",
+        cards_hero_desc: "لأن البطاقات البنكية الجزائرية المحلية لا تعمل في المواقع العالمية، إليك الحل الرسمي والمجرب: احصل على بطاقة افتراضية دولية مجانية، واشحنها مباشرة بالدينار الجزائري عبر بريدي موب ومنصة بينانس دون وسطاء وبأقل تكلفة!",
+        cards_bybit_badge: "مجانية 100% — 0 دج",
+        cards_bybit_title: "بطاقة Bybit Card (MasterCard)",
+        cards_bybit_desc: "البطاقة الأفضل حالياً للتسوق من AliExpress: تصدر فورياً ومجاناً 100% وبدون أي اشتراك شهري، مقبولة في جميع المتاجر العالمية وPayPal مع كاش باك يصل إلى 10%.",
+        cards_bybit_f1: "0 دج مصاريف فتح وبدون اشتراك شهري",
+        cards_bybit_f2: "مقبولة 100% على AliExpress وPayPal",
+        cards_bybit_f3: "شحن فوري بالدينار عبر Binance P2P",
+        cards_btn_bybit_cta: "طلب بطاقة Bybit المجانية",
+        cards_redot_badge: "هدية 5$ ترحيبية 🎁",
+        cards_redot_title: "بطاقة فيزا RedotPay (هدية 5$)",
+        cards_redot_desc: "بطاقة فيزا افتراضية دولية تصدر في دقيقتين بالبطاقة الوطنية الجزائرية أو جواز السفر، تدعم تخفيضات العملات وكوبونات AliExpress وربط PayPal الجزائري.",
+        cards_redot_f1: "هدية 5$ رصيد ترحيبي فوري عند التسجيل",
+        cards_redot_f2: "تفعيل فوري ببطاقة التعريف الوطنية",
+        cards_redot_f3: "دعم ربط وتفعيل كامل لـ PayPal",
+        cards_btn_redot_cta: "طلب بطاقة RedotPay (+ 5$ هدية)",
+        cards_binance_badge: "سوق P2P #1 في الجزائر",
+        cards_binance_title: "منصة Binance P2P (BaridiMob)",
+        cards_binance_desc: "المنصة الرسمية والآمنة 100% لتحويل الدينار الجزائري من تطبيق BaridiMob أو CCP إلى رصيد دولار رقمي (USDT) بسعر الصرف الحقيقي وبدون وسطاء أو عمولات زائدة.",
+        cards_binance_f1: "شراء الدولار الرقمي مباشرة عبر BaridiMob",
+        cards_binance_f2: "حماية الضمان المالي الصارم (Escrow)",
+        cards_binance_f3: "تحويل مباشر إلى بطاقاتك في ثوانٍ",
+        cards_btn_binance_cta: "فتح حساب Binance P2P",
+        cards_ref_code: "كود التسجيل الحصري:",
+        cards_btn_copy_code: "نسخ الكود",
+        cards_guide_title: "دليل الشراء خطوة بخطوة بالدينار الجزائري (BaridiMob) 🇩🇿",
+        cards_guide_subtitle: "الطريقة الرسمية والآمنة التي يستعملها آلاف المتسوقين الجزائريين يومياً للشراء من AliExpress بأقل تكلفة:",
+        cards_step1_title: "1. شراء USDT بـ BaridiMob",
+        cards_step1_desc: "افتح حسابك في Binance، ادخل قسم P2P واختر الدفع بـ BaridiMob لشراء المبلغ المطلوب من الدولار الرقمي (USDT) مباشرة في دقيقتين.",
+        cards_step2_title: "2. شحن بطاقتك الافتراضية",
+        cards_step2_desc: "حوّل رصيد USDT من Binance إلى حساب Bybit أو RedotPay الخاص بك عبر شبكة سريعة بدون أي رسوم مرتفعة.",
+        cards_step3_title: "3. ربط البطاقة في AliExpress",
+        cards_step3_desc: "انسخ معلومات بطاقتك الافتراضية (رقم البطاقة وتاريخ الانتهاء وCVV) وأضفها في وسائل الدفع بتطبيق AliExpress.",
+        cards_step4_title: "4. تطبيق الخصومات والشراء",
+        cards_step4_desc: "اختر صفقتك من موقعنا، انسخ كود الخصم، استخدم بوت العملات واستلم طردك مباشرة من مكتب بريد الجزائر القريب منك!",
         faq_title: "الأسئلة الشائعة وإرشادات الشراء",
         faq_subtitle: "كل ما يحتاجه المتسوق الجزائري لمعرفة طرق الشحن، حساب الأسعار بالدينار، والتعامل مع عروض AliExpress.",
         faq_q1: "كيف يتم احتساب الأسعار بالدينار الجزائري (DZD)؟",
@@ -1169,6 +1403,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         currency_dzd: "DZD",
         top_coin_bot: "Bot Pièces",
         nav_deals: "Bons Plans",
+        nav_cards: "Cartes & Paiement",
         nav_coins: "Bot Pièces",
         nav_faq: "FAQ",
         nav_contact: "Contact",
@@ -1210,6 +1445,42 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         coins_step2_desc: "Ouvrez @Alilo07BOT sur Telegram et collez le lien. Le bot recherche instantanément le taux de réduction maximal en pièces.",
         coins_step3_title: "Payez au meilleur prix réduit",
         coins_step3_desc: "Cliquez sur Acheter via le lien généré par le bot. La réduction des pièces s'appliquera automatiquement dans votre panier !",
+        cards_badge: "Guide Cartes Bancaires & BaridiMob 🇩🇿",
+        cards_hero_title: "Comment Acheter sur AliExpress depuis l'Algérie ? | Cartes & BaridiMob",
+        cards_hero_desc: "Les cartes bancaires locales ne fonctionnant pas sur les sites internationaux, voici la solution officielle : créez votre carte virtuelle internationale gratuite et rechargez-la en Dinars avec BaridiMob via Binance P2P !",
+        cards_bybit_badge: "100% Gratuite — 0€ Frais",
+        cards_bybit_title: "Carte Bybit (MasterCard Gratuite)",
+        cards_bybit_desc: "La meilleure carte pour AliExpress : 0€ de frais de création, 0€ d'abonnement mensuel, acceptée sur tous les sites mondiaux et PayPal avec jusqu'à 10% de cashback.",
+        cards_bybit_f1: "0€ de frais d'ouverture, 0 abonnement",
+        cards_bybit_f2: "100% acceptée sur AliExpress et PayPal",
+        cards_bybit_f3: "Recharge instantanée en Dinars via Binance P2P",
+        cards_btn_bybit_cta: "Commander la carte Bybit gratuite",
+        cards_redot_badge: "5$ de Bienvenue Offerts 🎁",
+        cards_redot_title: "Carte Visa RedotPay (5$ Offerts)",
+        cards_redot_desc: "Carte Visa virtuelle internationale activée en 2 minutes avec votre carte d'identité ou passeport. Compatible coupons AliExpress et PayPal.",
+        cards_redot_f1: "5$ de bonus de bienvenue dès l'inscription",
+        cards_redot_f2: "Activation immédiate avec pièce d'identité",
+        cards_redot_f3: "Liaison PayPal et paiements en ligne",
+        cards_btn_redot_cta: "Activer la carte RedotPay (+ 5$)",
+        cards_binance_badge: "Marché P2P N°1 en Algérie",
+        cards_binance_title: "Binance P2P (Recharge via BaridiMob)",
+        cards_binance_desc: "La plateforme sécurisée n°1 pour convertir vos Dinars depuis l'application BaridiMob ou CCP en USDT au taux réel du marché sans intermédiaire.",
+        cards_binance_f1: "Achat d'USDT directement avec BaridiMob / CCP",
+        cards_binance_f2: "Protection des fonds et séquestre sécurisé",
+        cards_binance_f3: "Transfert vers vos cartes en quelques secondes",
+        cards_btn_binance_cta: "Ouvrir un compte Binance P2P",
+        cards_ref_code: "Code de parrainage exclusif :",
+        cards_btn_copy_code: "Copier le code",
+        cards_guide_title: "Guide d'Achat Étape par Étape en Dinar Algérien (BaridiMob) 🇩🇿",
+        cards_guide_subtitle: "La méthode officielle et sécurisée utilisée quotidiennement par des milliers d'Algériens :",
+        cards_step1_title: "1. Achetez des USDT sur Binance P2P",
+        cards_step1_desc: "Ouvrez un compte Binance, rendez-vous dans P2P et payez par BaridiMob ou CCP pour obtenir vos USDT en toute sécurité.",
+        cards_step2_title: "2. Transférez vers Bybit ou RedotPay",
+        cards_step2_desc: "Envoyez vos USDT depuis Binance vers votre carte virtuelle via le réseau BSC/TRC20 en quelques secondes.",
+        cards_step3_title: "3. Ajoutez votre carte sur AliExpress",
+        cards_step3_desc: "Renseignez le numéro, la date d'expiration et le CVV de votre carte virtuelle dans vos moyens de paiement AliExpress.",
+        cards_step4_title: "4. Profitez des coupons et achetez !",
+        cards_step4_desc: "Choisissez vos bons plans sur DealScout DZ, copiez les codes promos et faites livrer vos colis directement chez vous en Algérie !",
         faq_title: "Foire Aux Questions & Guide d'Achat",
         faq_subtitle: "Toutes les réponses pour réussir vos achats sur AliExpress en Algérie : livraison, calcul en Dinar, et paiement.",
         faq_q1: "Comment est calculé le prix en Dinar Algérien (DZD) ?",
@@ -1359,7 +1630,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
     // ── Multi-Page Navigation Router ────────────────────────────────
     function showPage(pageId) {
-      const pages = ['deals', 'coins', 'faq', 'contact', 'about'];
+      const pages = ['deals', 'cards', 'coins', 'faq', 'contact', 'about'];
       if (!pages.includes(pageId)) pageId = 'deals';
 
       pages.forEach(p => {
@@ -1559,14 +1830,14 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (showSpin && icon) icon.classList.add('fa-spin');
 
       // 1. Instant client-side hydration from localStorage cache (0ms instant render)
-      const cacheKey = 'dealscout_deals_' + currentChannel;
+      const cacheKey = 'dealscout_deals_v3_' + currentChannel;
       if (!forceRefresh && (!allDeals || allDeals.length === 0)) {
         try {
           const cached = localStorage.getItem(cacheKey);
           if (cached) {
             const parsed = JSON.parse(cached);
             if (Array.isArray(parsed) && parsed.length > 0) {
-              allDeals = parsed;
+              allDeals = parsed.filter(d => d && d.affiliate_url && !d.affiliate_url.includes('_oEN3d53') && d.title && !/(?:وَتَوَكَّلْ|وتوكل|سبحان|الحمد|أذكار|دعاء|تذكير)/.test(d.title));
               updateCategoryCounters();
               filterDeals();
             }
@@ -1593,7 +1864,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         const data = await resp.json();
 
         if (data.posts && Array.isArray(data.posts) && data.posts.length > 0) {
-          allDeals = data.posts.map((p, idx) => parseDealPost(p, idx)).filter(d => d.affiliate_url);
+          allDeals = data.posts.map((p, idx) => parseDealPost(p, idx)).filter(Boolean);
           try {
             localStorage.setItem(cacheKey, JSON.stringify(allDeals));
           } catch(e) {}
@@ -1621,7 +1892,33 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     }
 
     function parseDealPost(post, index) {
+      if (!post) return null;
       const text = post.text || '';
+
+      // 1. Strict AliExpress Link Requirement: A deal MUST have an explicit product/affiliate link
+      const urlMatch = text.match(/https?:\\/\\/(?:s\\.click\\.aliexpress\\.com\\/e\\/[A-Za-z0-9_-]+|(?:[a-z0-9-]+\\.)?aliexpress\\.com\\/(?:item|p)\\/[A-Za-z0-9_.-]+)/i);
+      if (!urlMatch) {
+        return null;
+      }
+
+      // 2. Strict Filter: Reject religious verses, prayers, adhkars, and spiritual reminders
+      const isReligious = /(?:وَتَوَكَّلْ|وتوكل|سبحان الله|الحمد لله|الله أكبر|صلى الله|عليه وسلم|سورة|القرآن|أذكار|دعاء|تذكير ديني|استغفر الله|لا إله إلا الله|حسبي الله|اذكار)/i.test(text);
+      if (isReligious) {
+        return null;
+      }
+
+      // 3. Strict Filter: Reject general non-product announcements, referral posts, and payment guides
+      const isAnnouncement = /(?:إعلان هام|تنبيه هام|دليل الشراء بالدينار|شحن بطاقتك|قناة الصيدات والصفقات|كيفاش تشري من AliExpress|كيف تشحن بطاقاتك)/i.test(text) && !text.includes('/item/');
+      if (isAnnouncement) {
+        return null;
+      }
+
+      // 4. Reject emoji-only or too-short posts
+      const alphanumeric = text.replace(/[\\s\\p{Emoji_Presentation}\\p{Extended_Pictographic}\\p{Punctuation}]/gu, '');
+      if (alphanumeric.length < 5) {
+        return null;
+      }
+
       let title = '';
       let coupon = null;
       let priceUsd = null;
@@ -1631,7 +1928,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       let category = 'other';
       let categoryLabel = I18N[currentLang].deal_category_fallback;
 
-      const lines = text.split('\\n').map(l => l.trim()).filter(Boolean);
+      const lines = text.split('\n').map(l => l.trim()).filter(Boolean);
 
       const isBoilerplate = (l) => {
         const s = l.toLowerCase();
@@ -1756,11 +2053,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         categoryLabel = I18N[currentLang].cat_tajmi3at;
       }
 
-      let affiliateUrl = 'https://s.click.aliexpress.com/e/_oEN3d53';
-      const urlMatch = text.match(/https?:\\/\\/s\\.click\\.aliexpress\\.com\\/e\\/[A-Za-z0-9_-]+/);
-      if (urlMatch) {
-        affiliateUrl = urlMatch[0];
-      }
+      const affiliateUrl = urlMatch[0];
 
       let priceDzd = null;
       if (priceUsd) priceDzd = Math.round(priceUsd * usdtRate);
@@ -2141,6 +2434,24 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (currentActiveDeal && currentActiveDeal.coupon) {
         copyCoupon(currentActiveDeal.coupon, btn);
       }
+    }
+
+    function copyReferralCode(code, btn) {
+      if (!code) return;
+      navigator.clipboard.writeText(code).then(() => {
+        showToast((currentLang === 'fr' ? 'Code copié : ' : 'تم نسخ الكود: ') + code);
+        if (btn) {
+          const original = btn.innerHTML;
+          btn.innerHTML = '<i class="fa-solid fa-check text-emerald-500"></i> ' + (currentLang === 'fr' ? 'Copié !' : 'تم النسخ!');
+          btn.classList.add('border-emerald-500');
+          setTimeout(() => {
+            btn.innerHTML = original;
+            btn.classList.remove('border-emerald-500');
+          }, 2000);
+        }
+      }).catch(() => {
+        showToast(code);
+      });
     }
 
     // ── Keyboard & Lifecycle Handlers ───────────────────────────────
