@@ -233,7 +233,12 @@
     "1005012014142030",
     "1005009117917540",
     "1005008337650254",
-    "1005013165123874"
+    "1005013165123874",
+    "32983391170",
+    "1005012933967378",
+    "1005010812635861",
+    "1005008500550817",
+    "1005009834132291"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -261,7 +266,7 @@
     "1005012881256093": 1791941229.2882626,
     "1005009118633225": 1790888213.2900865,
     "1005012143831265": 1791012345.6086447,
-    "1005008852027824": 1791975976.6307437,
+    "1005008852027824": 1792025678.6249368,
     "9998888981": 1790888981.6873999,
     "1005005217734986": 1791104047.0967803,
     "1005010062128237": 1790937566.337433,
@@ -477,7 +482,12 @@
     "1005012014142030": 1792017738.3981204,
     "1005009117917540": 1792017762.9428782,
     "1005008337650254": 1792017769.7299333,
-    "1005013165123874": 1792017774.247927
+    "1005013165123874": 1792017774.247927,
+    "32983391170": 1792025644.3094199,
+    "1005012933967378": 1792025649.1506214,
+    "1005010812635861": 1792025653.768273,
+    "1005008500550817": 1792025664.1703467,
+    "1005009834132291": 1792025670.659584
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -758,7 +768,12 @@
     "ساعة قوووووووة من BLACKSHARK🔥",
     "UGREEN 45W GaN Charger PD3.0 PPS QC3.0 Quick Charge",
     "HOCO E91 Smart Airtag GPS Positioning Pet Anti-Lost",
-    "Smart Body Fat Scale Accurate"
+    "Smart Body Fat Scale Accurate",
+    "ماوس ألعاب سلكي خفيف الوزن من GameSir GM500 مزود بمستشعر بصري يصل إلى 12000 DPI",
+    "Anker Nano 3 Pro 45W GaN + Cable",
+    "Blackview Wave 7C",
+    "محبوبة الجماهير controller🎮",
+    "EasySMX X05 Pro Wireless Gamepad"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1028,7 +1043,7 @@
     "Realme Watch 5 AMOLED": 1791975925.0014532,
     "Acincai BL500 Gaming Headset": 1791975930.016452,
     "Vxe Dragonfly R1 PAW3395 SE": 1791975934.9659944,
-    "رجع العرض جنننننننننننننننننح🏃‍♂️🏃‍♂️ ©️©️©️©️️️️️⚡️️️️️️️": 1791975976.6307437,
+    "رجع العرض جنننننننننننننننننح🏃‍♂️🏃‍♂️ ©️©️©️©️️️️️⚡️️️️️️️": 1792025678.6249368,
     "Ⓜ HONOR X80 PRO MAX (8/128)": 1792007163.0270946,
     "ماوس لاسلكي فخم Scyrox V6 Wireless 8K": 1791992931.9736187,
     "ماوس لاسلكي فخم Scyrox V8S Wireless 8K": 1791992936.3210912,
@@ -1042,7 +1057,12 @@
     "ساعة قوووووووة من BLACKSHARK🔥": 1792017733.3056524,
     "UGREEN 45W GaN Charger PD3.0 PPS QC3.0 Quick Charge": 1792017762.9428782,
     "HOCO E91 Smart Airtag GPS Positioning Pet Anti-Lost": 1792017769.7299333,
-    "Smart Body Fat Scale Accurate": 1792017774.247927
+    "Smart Body Fat Scale Accurate": 1792017774.247927,
+    "ماوس ألعاب سلكي خفيف الوزن من GameSir GM500 مزود بمستشعر بصري يصل إلى 12000 DPI": 1792025644.3094199,
+    "Anker Nano 3 Pro 45W GaN + Cable": 1792025649.1506214,
+    "Blackview Wave 7C": 1792025653.768273,
+    "محبوبة الجماهير controller🎮": 1792025664.1703467,
+    "EasySMX X05 Pro Wireless Gamepad": 1792025670.659584
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1780,27 +1800,33 @@
     "megaphonna:8381",
     "couponsglobal:48846",
     "couponsglobal:48847",
-    "couponsglobal:48848"
+    "couponsglobal:48848",
+    "zedstoreonline:38596",
+    "zedstoreonline:38598",
+    "zedstoreonline:38599",
+    "bnddeals:50855",
+    "bnddeals:50856",
+    "megaphonna:8376"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1792017774.247927,
+  "last_run_time": 1792025678.6249368,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32949,
-      "last_check_time": 1792017759.062507
+      "last_message_id": 32950,
+      "last_check_time": 1792025689.548695
     },
     "ecksdeal": {
       "last_message_id": 5892,
-      "last_check_time": 1792017722.6475835
+      "last_check_time": 1792025656.3837907
     },
     "lodydeals": {
       "last_message_id": 45547,
-      "last_check_time": 1792017707.5893142
+      "last_check_time": 1792025640.2131176
     },
     "bnddeals": {
-      "last_message_id": 50853,
-      "last_check_time": 1792017740.418035
+      "last_message_id": 50856,
+      "last_check_time": 1792025672.6776986
     },
     "test_channel": {
       "last_message_id": 1791759936,
@@ -1808,19 +1834,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792017723.0016787
+      "last_check_time": 1792025656.739383
     },
     "zedstoreonline": {
-      "last_message_id": 38595,
-      "last_check_time": 1792017721.983664
+      "last_message_id": 38599,
+      "last_check_time": 1792025655.7870097
     },
     "megaphonna": {
-      "last_message_id": 8381,
-      "last_check_time": 1792017753.5803454
+      "last_message_id": 8383,
+      "last_check_time": 1792025685.7296731
     },
     "couponsglobal": {
       "last_message_id": 48848,
-      "last_check_time": 1792017776.2668076
+      "last_check_time": 1792025689.894965
     }
   },
   "published_product_prices": {
@@ -1909,7 +1935,7 @@
     "1005012285327063": 19.5,
     "1005006581583862": 25.0,
     "1005012816171978": 274.46,
-    "1005009834132291": 23.0,
+    "1005009834132291": 24.0,
     "1005010585654037": 20.6,
     "1005006248571160": 16.8,
     "1005009390995992": 34.9,
@@ -2032,7 +2058,11 @@
     "1005012014142030": 21.0,
     "1005009117917540": 13.96,
     "1005008337650254": 7.89,
-    "1005013165123874": 7.79
+    "1005013165123874": 7.79,
+    "32983391170": 19.9,
+    "1005012933967378": 26.5,
+    "1005010812635861": 92.0,
+    "1005008500550817": 23.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -5547,6 +5577,66 @@
       "price": 7.79,
       "timestamp": 1792017774.247927,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38596": {
+      "channel_msg_id": 820,
+      "product_id": "32983391170",
+      "title": "ماوس ألعاب سلكي خفيف الوزن من GameSir GM500 مزود بمستشعر بصري يصل إلى 12000 DPI",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38596,
+      "price": 19.9,
+      "timestamp": 1792025644.3094199,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38598": {
+      "channel_msg_id": 821,
+      "product_id": "1005012933967378",
+      "title": "Anker Nano 3 Pro 45W GaN + Cable",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38598,
+      "price": 26.5,
+      "timestamp": 1792025649.1506214,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38599": {
+      "channel_msg_id": 822,
+      "product_id": "1005010812635861",
+      "title": "Blackview Wave 7C",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38599,
+      "price": 92.0,
+      "timestamp": 1792025653.768273,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50855": {
+      "channel_msg_id": 823,
+      "product_id": "1005008500550817",
+      "title": "محبوبة الجماهير controller🎮",
+      "channel": "bnddeals",
+      "source_msg_id": 50855,
+      "price": 23.6,
+      "timestamp": 1792025664.1703467,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50856": {
+      "channel_msg_id": 824,
+      "product_id": "1005009834132291",
+      "title": "EasySMX X05 Pro Wireless Gamepad",
+      "channel": "bnddeals",
+      "source_msg_id": 50856,
+      "price": 24.0,
+      "timestamp": 1792025670.659584,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8376": {
+      "channel_msg_id": 825,
+      "product_id": "1005008852027824",
+      "title": "رجع العرض جنننننننننننننننننح🏃‍♂️🏃‍♂️ ©️©️©️©️️️️️⚡️️️️️️️",
+      "channel": "megaphonna",
+      "source_msg_id": 8376,
+      "price": 171.4,
+      "timestamp": 1792025678.6249368,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -5555,17 +5645,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792017776.2831202,
+    "last_deal_post_time": 1792025689.910688,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792017778.7644641,
+    "last_sweep_time": 1792025692.0596418,
     "last_sweep_times": {
-      "algeria": 1792017776.2751164,
-      "france": 1792017778.7644641
+      "algeria": 1792025689.9030118,
+      "france": 1792025692.0596418
     },
     "last_deal_post_times": {
-      "algeria": 1792017776.2831202
+      "algeria": 1792025689.910688
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -5659,7 +5749,7 @@
     "1005012285327063": "aniscoupons",
     "1005006581583862": "aniscoupons",
     "1005012816171978": "lodydeals",
-    "1005009834132291": "zedstoreonline",
+    "1005009834132291": "bnddeals",
     "1005010585654037": "aniscoupons",
     "1005006248571160": "bnddeals",
     "1005009390995992": "aniscoupons",
@@ -5813,7 +5903,11 @@
     "1005012014142030": "bnddeals",
     "1005009117917540": "couponsglobal",
     "1005008337650254": "couponsglobal",
-    "1005013165123874": "couponsglobal"
+    "1005013165123874": "couponsglobal",
+    "32983391170": "zedstoreonline",
+    "1005012933967378": "zedstoreonline",
+    "1005010812635861": "zedstoreonline",
+    "1005008500550817": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -6096,7 +6190,12 @@
     "ساعة قوووووووة من BLACKSHARK🔥": "bnddeals",
     "UGREEN 45W GaN Charger PD3.0 PPS QC3.0 Quick Charge": "couponsglobal",
     "HOCO E91 Smart Airtag GPS Positioning Pet Anti-Lost": "couponsglobal",
-    "Smart Body Fat Scale Accurate": "couponsglobal"
+    "Smart Body Fat Scale Accurate": "couponsglobal",
+    "ماوس ألعاب سلكي خفيف الوزن من GameSir GM500 مزود بمستشعر بصري يصل إلى 12000 DPI": "zedstoreonline",
+    "Anker Nano 3 Pro 45W GaN + Cable": "zedstoreonline",
+    "Blackview Wave 7C": "zedstoreonline",
+    "محبوبة الجماهير controller🎮": "bnddeals",
+    "EasySMX X05 Pro Wireless Gamepad": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -6554,7 +6653,12 @@
     "megaphonna:8380",
     "aniscoupons:32946",
     "aniscoupons:32948",
-    "aniscoupons:32949"
+    "aniscoupons:32949",
+    "zedstoreonline:38597",
+    "bnddeals:50848",
+    "bnddeals:50854",
+    "megaphonna:8383",
+    "aniscoupons:32950"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
