@@ -27,7 +27,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <link rel="alternate" hreflang="x-default" href="https://dealscout-green.vercel.app/">
 
   <!-- Meta Search & Geography -->
-  <meta name="keywords" content="aliexpress algerie, تخفيضات علي اكسبرس الجزائر, صفقات aliexpress, بريد الجزائر, اسعار السكوار, كود خصم علي اكسبرس, دينار جزائري, algeria deals, dealscout dz, عملات علي اكسبرس, bons plans algerie, codes promo aliexpress algerie">
+  <meta name="keywords" content="aliexpress algerie, شراء من علي اكسبرس بريدي موب, بطاقة بايبايت في الجزائر, بطاقة bybit مجانية, بطاقة redotpay الجزائر, كود خصم redotpay, شحن redotpay بريدي موب, شراء usdt بالدينار الجزائري, بطاقة فيزا للشراء من الانترنت الجزائر, بطاقة ماستركارد افتراضية الجزائر, تفعيل بايبال بالجزائر, binance p2p baridimob algerie, carte bybit algerie, carte redotpay algerie, acheter sur aliexpress baridimob, carte bancaire internationale algerie, تخفيضات علي اكسبرس الجزائر, صفقات aliexpress, بريد الجزائر, اسعار السكوار, algeria deals, dealscout dz, bons plans algerie">
   <meta name="geo.region" content="DZ">
   <meta name="geo.placename" content="Algeria">
   <meta name="geo.position" content="28.0339;1.6596">
@@ -274,6 +274,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     .faq-item[open] summary .faq-icon {
       transform: rotate(180deg);
     }
+    #toast {
+      pointer-events: none !important;
+      user-select: none !important;
+    }
   </style>
 
   <!-- Structured JSON-LD Schema -->
@@ -329,6 +333,43 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     "description": "عروض يومية حصرية من AliExpress محسوبة بالدينار الجزائري عبر أسعار الصرف الحية."
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "@id": "https://dealscout-green.vercel.app/#howto-cards",
+    "name": "كيف تشتري من AliExpress في الجزائر وتدفع بـ BaridiMob",
+    "description": "دليل شامل لشراء وشحن بطاقات فيزا وماستركارد الافتراضية الدولية (Bybit, RedotPay) بالدينار الجزائري عبر منصة Binance P2P وبريدي موب للتسوق من AliExpress.",
+    "inLanguage": ["ar", "fr"],
+    "totalTime": "PT10M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "شراء USDT بالدينار الجزائري عبر Binance P2P",
+        "text": "افتح حسابك في منصة Binance، توجه إلى قسم تداول P2P واختر الدفع بواسطة BaridiMob أو CCP لشراء الدولار الرقمي (USDT) بالدينار الجزائري مباشرة وبأمان تام."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "شحن بطاقتك الافتراضية (Bybit أو RedotPay)",
+        "text": "حوّل رصيد USDT من محفظة Binance إلى حساب بطاقة Bybit Card المجانية أو بطاقة فيزا RedotPay في دقائق بدون رسوم إضافية."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "إضافة البطاقة لحساب AliExpress",
+        "text": "انسخ بيانات البطاقة الافتراضية (رقم البطاقة وتاريخ الانتهاء وCVV) وأضفها في وسائل الدفع بتطبيق AliExpress."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "تطبيق أكواد الخصم والعملات والشراء",
+        "text": "اختر العرض من DealScout DZ، انسخ كود التخفيض، استخدم بوت العملات واستلم طردك مباشرة في مكتب بريد الجزائر القريب منك."
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="min-h-screen flex flex-col justify-between" dir="rtl">
 
@@ -347,11 +388,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </a>
       </div>
       
-      <div class="flex items-center gap-2 sm:gap-3">
+      <div class="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
         <!-- Theme Toggle Button -->
-        <button onclick="toggleTheme()" id="theme-toggle-btn" aria-label="Toggle Light / Dark theme" class="px-2 py-0.5 rounded-lg border text-xs flex items-center gap-1.5 transition active:scale-95" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);">
-          <i id="theme-icon" class="fa-solid fa-moon text-[11px]"></i>
-          <span id="theme-text" class="text-[11px] hidden sm:inline">داكن</span>
+        <button onclick="toggleTheme()" id="theme-toggle-btn" aria-label="Toggle Light / Dark theme" class="px-2.5 py-1 rounded-lg border text-xs flex items-center gap-1.5 transition active:scale-95 touch-manipulation cursor-pointer" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);">
+          <i id="theme-icon" class="fa-solid fa-sun text-[11px] text-amber-500"></i>
+          <span id="theme-text" class="text-[11px] font-semibold hidden sm:inline">فاتح</span>
         </button>
 
         <span class="opacity-30">|</span>
@@ -362,15 +403,15 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <button onclick="setLanguage('fr')" id="lang-fr-btn" class="px-2 py-0.5 rounded text-[11px] font-bold opacity-60 hover:opacity-100 transition active:scale-95">Français</button>
         </div>
 
-        <span class="opacity-30">|</span>
-        <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="hover:text-amber-500 transition font-medium inline-flex items-center gap-1 py-1 px-1.5 active:scale-95 touch-manipulation">
+        <span class="hidden sm:inline opacity-30">|</span>
+        <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex hover:text-amber-500 transition font-medium items-center gap-1 py-1 px-1.5 active:scale-95 touch-manipulation">
           <i class="fa-solid fa-coins text-amber-500 text-[10px]"></i>
-          <span class="hidden sm:inline" data-i18n="top_coin_bot">بوت العملات</span>
+          <span data-i18n="top_coin_bot">بوت العملات</span>
         </a>
-        <span class="opacity-30">|</span>
-        <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="hover:text-sky-500 transition font-medium inline-flex items-center gap-1 py-1 px-1.5 active:scale-95 touch-manipulation">
+        <span class="hidden sm:inline opacity-30">|</span>
+        <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex hover:text-sky-500 transition font-medium items-center gap-1 py-1 px-1.5 active:scale-95 touch-manipulation">
           <i class="fa-brands fa-telegram text-sky-500"></i>
-          <span class="hidden sm:inline">Telegram</span>
+          <span>Telegram</span>
         </a>
       </div>
     </div>
@@ -781,6 +822,61 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             </p>
           </div>
 
+        </div>
+      </div>
+
+      <!-- Cards & Payment Frequently Asked Questions (FAQ) for Instant Google Search Snippets -->
+      <div class="border rounded-2xl p-6 sm:p-8 space-y-5" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="space-y-1">
+          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-sky-500/15 text-sky-500">
+            <i class="fa-solid fa-circle-question text-xs"></i>
+            <span data-i18n="cards_faq_badge">أسئلة شائعة حول البطاقات والشحن</span>
+          </div>
+          <h3 class="text-base sm:text-lg font-bold" style="color: var(--text-main);" data-i18n="cards_faq_title">
+            أهم الأسئلة الشائعة حول الدفع والشراء بالدينار الجزائري
+          </h3>
+        </div>
+
+        <div class="space-y-3 text-xs sm:text-sm">
+          <div class="border rounded-xl p-4 space-y-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <h4 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-solid fa-chevron-left text-emerald-500 text-[10px]"></i>
+              <span data-i18n="cards_faq_q1">هل بطاقة Bybit Card مجانية حقاً وبدون اشتراك شهري؟</span>
+            </h4>
+            <p class="text-xs leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="cards_faq_a1">
+              نعم، بطاقة Bybit ماستركارد الافتراضية مجانية 100% بدون أي مصاريف فتح وبدون اقتطاع شهري أو سنوي. تدعم الدفع المباشر على AliExpress وPayPal وتحصل معها على كاش باك يصل إلى 10%.
+            </p>
+          </div>
+
+          <div class="border rounded-xl p-4 space-y-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <h4 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-solid fa-chevron-left text-emerald-500 text-[10px]"></i>
+              <span data-i18n="cards_faq_q2">كيف أشحن بطاقة RedotPay أو Bybit باستخدام بريدي موب (BaridiMob)؟</span>
+            </h4>
+            <p class="text-xs leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="cards_faq_a2">
+              تتم العملية عبر منصة Binance P2P: تشتري الدولار الرقمي (USDT) بالدينار الجزائري مباشرة من بائعين جزائريين موثوقين وتدفع عبر تطبيق BaridiMob، ثم تسحب الرصيد إلى بطاقة RedotPay أو Bybit في ثوانٍ عبر شبكة BSC أو TRC20.
+            </p>
+          </div>
+
+          <div class="border rounded-xl p-4 space-y-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <h4 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-solid fa-chevron-left text-emerald-500 text-[10px]"></i>
+              <span data-i18n="cards_faq_q3">هل تقبل بطاقة RedotPay و Bybit التفعيل مع حساب PayPal الجزائري؟</span>
+            </h4>
+            <p class="text-xs leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="cards_faq_a3">
+              نعم، كلاً من بطاقة RedotPay وبطاقة Bybit تقبل الربط مع PayPal الجزائري أو الأجنبي، وتصل رسالة رمز التفعيل (4 أرقام) فورياً داخل تطبيق البطاقة.
+            </p>
+          </div>
+
+          <div class="border rounded-xl p-4 space-y-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <h4 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-solid fa-chevron-left text-emerald-500 text-[10px]"></i>
+              <span data-i18n="cards_faq_q4">ما هو كود الحصول على هدية 5$ المجانية في RedotPay؟</span>
+            </h4>
+            <p class="text-xs leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="cards_faq_a4">
+              عند التسجيل في RedotPay، أدخل كود الإحالة الحصري djbt3 لتحصل فوراً على بونص 5$ رصيد ترحيبي في حسابك بمجرد إكمال تأكيد الهوية ببطاقة التعريف الوطنية.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -1344,6 +1440,16 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         cards_step3_desc: "انسخ معلومات بطاقتك الافتراضية (رقم البطاقة وتاريخ الانتهاء وCVV) وأضفها في وسائل الدفع بتطبيق AliExpress.",
         cards_step4_title: "4. تطبيق الخصومات والشراء",
         cards_step4_desc: "اختر صفقتك من موقعنا، انسخ كود الخصم، استخدم بوت العملات واستلم طردك مباشرة من مكتب بريد الجزائر القريب منك!",
+        cards_faq_badge: "أسئلة شائعة حول البطاقات والشحن",
+        cards_faq_title: "أهم الأسئلة الشائعة حول الدفع والشراء بالدينار الجزائري",
+        cards_faq_q1: "هل بطاقة Bybit Card مجانية حقاً وبدون اشتراك شهري؟",
+        cards_faq_a1: "نعم، بطاقة Bybit ماستركارد الافتراضية مجانية 100% بدون أي مصاريف فتح وبدون اقتطاع شهري أو سنوي. تدعم الدفع المباشر على AliExpress وPayPal وتحصل معها على كاش باك يصل إلى 10%.",
+        cards_faq_q2: "كيف أشحن بطاقة RedotPay أو Bybit باستخدام بريدي موب (BaridiMob)؟",
+        cards_faq_a2: "تتم العملية عبر منصة Binance P2P: تشتري الدولار الرقمي (USDT) بالدينار الجزائري مباشرة من بائعين جزائريين موثوقين وتدفع عبر تطبيق BaridiMob، ثم تسحب الرصيد إلى بطاقة RedotPay أو Bybit في ثوانٍ عبر شبكة BSC أو TRC20.",
+        cards_faq_q3: "هل تقبل بطاقة RedotPay و Bybit التفعيل مع حساب PayPal الجزائري؟",
+        cards_faq_a3: "نعم، كلاً من بطاقة RedotPay وبطاقة Bybit تقبل الربط مع PayPal الجزائري أو الأجنبي، وتصل رسالة رمز التفعيل (4 أرقام) فورياً داخل تطبيق البطاقة.",
+        cards_faq_q4: "ما هو كود الحصول على هدية 5$ المجانية في RedotPay؟",
+        cards_faq_a4: "عند التسجيل في RedotPay، أدخل كود الإحالة الحصري djbt3 لتحصل فوراً على بونص 5$ رصيد ترحيبي في حسابك بمجرد إكمال تأكيد الهوية ببطاقة التعريف الوطنية.",
         faq_title: "الأسئلة الشائعة وإرشادات الشراء",
         faq_subtitle: "كل ما يحتاجه المتسوق الجزائري لمعرفة طرق الشحن، حساب الأسعار بالدينار، والتعامل مع عروض AliExpress.",
         faq_q1: "كيف يتم احتساب الأسعار بالدينار الجزائري (DZD)؟",
@@ -1481,6 +1587,16 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         cards_step3_desc: "Renseignez le numéro, la date d'expiration et le CVV de votre carte virtuelle dans vos moyens de paiement AliExpress.",
         cards_step4_title: "4. Profitez des coupons et achetez !",
         cards_step4_desc: "Choisissez vos bons plans sur DealScout DZ, copiez les codes promos et faites livrer vos colis directement chez vous en Algérie !",
+        cards_faq_badge: "FAQ Cartes & Recharges",
+        cards_faq_title: "Questions fréquentes sur les cartes et le paiement en Algérie",
+        cards_faq_q1: "La carte Bybit est-elle vraiment gratuite et sans abonnement ?",
+        cards_faq_a1: "Oui, la MasterCard Bybit virtuelle est 100% gratuite : 0 frais de création, 0 abonnement mensuel ou annuel. Compatible AliExpress et PayPal avec jusqu'à 10% de cashback.",
+        cards_faq_q2: "Comment recharger Bybit ou RedotPay avec BaridiMob ?",
+        cards_faq_a2: "La recharge s'effectue via Binance P2P : achetez des USDT en payant par BaridiMob ou CCP auprès de vendeurs algériens vérifiés, puis transférez vos fonds vers RedotPay ou Bybit en quelques secondes via le réseau BSC/TRC20.",
+        cards_faq_q3: "Les cartes RedotPay et Bybit sont-elles compatibles avec PayPal Algérie ?",
+        cards_faq_a3: "Oui, les deux cartes s'associent parfaitement avec un compte PayPal algérien ou international. Le code de confirmation à 4 chiffres apparaît instantanément dans l'application de la carte.",
+        cards_faq_q4: "Quel est le code promo pour recevoir 5$ offerts sur RedotPay ?",
+        cards_faq_a4: "Lors de votre inscription sur RedotPay, renseignez le code de parrainage djbt3 pour recevoir immédiatement 5$ de bonus de bienvenue dès la validation de votre pièce d'identité.",
         faq_title: "Foire Aux Questions & Guide d'Achat",
         faq_subtitle: "Toutes les réponses pour réussir vos achats sur AliExpress en Algérie : livraison, calcul en Dinar, et paiement.",
         faq_q1: "Comment est calculé le prix en Dinar Algérien (DZD) ?",
@@ -1533,9 +1649,26 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
     };
 
+    // ── Safe LocalStorage Wrappers (Protects Private/Safari/WebView Browsers)
+    function getStoredItem(key, fallback = null) {
+      try {
+        const val = localStorage.getItem(key);
+        return val !== null ? val : fallback;
+      } catch (e) {
+        return fallback;
+      }
+    }
+
+    function setStoredItem(key, val) {
+      try {
+        localStorage.setItem(key, val);
+      } catch (e) {}
+    }
+
     // ── Global State ────────────────────────────────────────────────
-    var currentTheme = (localStorage.getItem('dealscout_theme') === 'light') ? 'light' : 'dark';
-    var currentLang = (localStorage.getItem('dealscout_lang') === 'fr') ? 'fr' : 'ar';
+    var currentTheme = (getStoredItem('dealscout_theme') === 'light') ? 'light' : 'dark';
+    var currentLang = (getStoredItem('dealscout_lang') === 'fr') ? 'fr' : 'ar';
+    var currentPageId = 'deals';
     var allDeals = [];
     var currentChannel = '@DzAliexpress0';
     var currentCategory = 'all';
@@ -1553,7 +1686,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     // ── Theme Engine (Light / Dark) ─────────────────────────────────
     function applyTheme(theme) {
       currentTheme = theme;
-      localStorage.setItem('dealscout_theme', theme);
+      setStoredItem('dealscout_theme', theme);
       const isDark = theme === 'dark';
       
       if (isDark) {
@@ -1569,25 +1702,32 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       const icon = document.getElementById('theme-icon');
       const text = document.getElementById('theme-text');
+      const toggleBtn = document.getElementById('theme-toggle-btn');
+      
       if (icon) {
-        icon.className = isDark ? 'fa-solid fa-moon text-[11px]' : 'fa-solid fa-sun text-[11px] text-amber-500';
+        icon.className = isDark ? 'fa-solid fa-sun text-[11px] text-amber-500' : 'fa-solid fa-moon text-[11px] text-indigo-400';
       }
       if (text) {
-        text.textContent = isDark ? I18N[currentLang].theme_dark : I18N[currentLang].theme_light;
+        text.textContent = isDark 
+          ? (I18N[currentLang] ? I18N[currentLang].theme_light : 'فاتح')
+          : (I18N[currentLang] ? I18N[currentLang].theme_dark : 'داكن');
+      }
+      if (toggleBtn) {
+        toggleBtn.setAttribute('title', isDark ? (currentLang === 'fr' ? 'Passer au mode clair' : 'تفعيل الوضع الفاتح') : (currentLang === 'fr' ? 'Passer au mode sombre' : 'تفعيل الوضع الداكن'));
+        toggleBtn.setAttribute('aria-label', isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode');
       }
     }
 
     function toggleTheme() {
       const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
       applyTheme(nextTheme);
-      showToast(nextTheme === 'dark' ? 'تم تفعيل الوضع الداكن 🌙' : 'تم تفعيل الوضع الفاتح ☀️');
     }
 
     // ── Internationalization Engine ─────────────────────────────────
     function setLanguage(lang) {
       if (!I18N[lang]) lang = 'ar';
       currentLang = lang;
-      localStorage.setItem('dealscout_lang', lang);
+      setStoredItem('dealscout_lang', lang);
 
       const isAr = lang === 'ar';
       document.documentElement.lang = isAr ? 'ar' : 'fr';
@@ -1620,18 +1760,19 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         }
       });
 
-      document.title = I18N[lang].meta_title;
       applyTheme(currentTheme);
+      showPage(currentPageId, false);
 
       if (allDeals && allDeals.length > 0) {
         filterDeals();
       }
     }
 
-    // ── Multi-Page Navigation Router ────────────────────────────────
-    function showPage(pageId) {
+    // ── Multi-Page Navigation Router & Dynamic SEO ──────────────────
+    function showPage(pageId, updateHistory = true) {
       const pages = ['deals', 'cards', 'coins', 'faq', 'contact', 'about'];
       if (!pages.includes(pageId)) pageId = 'deals';
+      currentPageId = pageId;
 
       pages.forEach(p => {
         const el = document.getElementById('page-' + p);
@@ -1663,6 +1804,54 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         }
       });
 
+      // Update Dynamic SEO Metadata for Search Engines and Social Cards
+      const isFr = currentLang === 'fr';
+      let pageTitle = (I18N[currentLang] && I18N[currentLang].meta_title) || document.title;
+      let pageDesc = (I18N[currentLang] && I18N[currentLang].meta_desc) || '';
+
+      if (pageId === 'cards') {
+        pageTitle = isFr
+          ? "Cartes Bancaires & BaridiMob pour AliExpress en Algérie — Bybit, RedotPay, Binance P2P | DealScout DZ"
+          : "بطاقات الشراء من AliExpress بالدينار الجزائري — Bybit, RedotPay, بريدي موب Binance P2P | DealScout DZ";
+        pageDesc = isFr
+          ? "Guide complet pour acheter sur AliExpress depuis l'Algérie avec BaridiMob via Binance P2P. Cartes virtuelles Bybit MasterCard gratuite et RedotPay Visa avec 5$ offerts."
+          : "دليل شامل لشراء وشحن بطاقات فيزا وماستركارد الدولية الافتراضية (Bybit, RedotPay) بالدينار الجزائري عبر بريدي موب ومنصة بينانس للتسوق من AliExpress.";
+      } else if (pageId === 'coins') {
+        pageTitle = isFr
+          ? "Bot Pièces AliExpress @Alilo07BOT — Réduction Maximale Coins | DealScout DZ"
+          : "بوت عملات علي اكسبرس @Alilo07BOT — أقصى خصم Coins | DealScout DZ";
+      } else if (pageId === 'faq') {
+        pageTitle = isFr
+          ? "FAQ & Guide d'Achat AliExpress en Algérie | DealScout DZ"
+          : "الأسئلة الشائعة ودليل الشراء من علي اكسبرس في الجزائر | DealScout DZ";
+      } else if (pageId === 'contact') {
+        pageTitle = isFr
+          ? "Contact & Assistance | DealScout DZ"
+          : "اتصل بنا والدعم الفني | DealScout DZ";
+      } else if (pageId === 'about') {
+        pageTitle = isFr
+          ? "À Propos de DealScout DZ — Cours Square & Bons Plans"
+          : "من نحن — DealScout DZ ومنصة صفقات الجزائر";
+      }
+
+      document.title = pageTitle;
+      const metaDescEl = document.querySelector('meta[name="description"]');
+      if (metaDescEl) metaDescEl.content = pageDesc;
+      const ogTitleEl = document.querySelector('meta[property="og:title"]');
+      if (ogTitleEl) ogTitleEl.content = pageTitle;
+      const ogDescEl = document.querySelector('meta[property="og:description"]');
+      if (ogDescEl) ogDescEl.content = pageDesc;
+
+      // Sync URL routing without page refresh
+      if (updateHistory && window.history && window.history.pushState) {
+        const newPath = pageId === 'deals' ? '/' : '/' + pageId;
+        if (window.location.pathname !== newPath && window.location.hash !== ('#' + pageId)) {
+          try {
+            history.pushState({ page: pageId }, '', newPath);
+          } catch(e) {}
+        }
+      }
+
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -1685,15 +1874,17 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       img.classList.add('object-contain', 'p-4', 'opacity-90');
     }
 
+    let toastTimer = null;
     function showToast(message) {
       const toast = document.getElementById('toast');
       const msg = document.getElementById('toast-msg');
       if (!toast || !msg) return;
       msg.textContent = message;
-      toast.classList.remove('translate-y-16', 'opacity-0', 'pointer-events-none');
-      setTimeout(() => {
-        toast.classList.add('translate-y-16', 'opacity-0', 'pointer-events-none');
-      }, 2200);
+      if (toastTimer) clearTimeout(toastTimer);
+      toast.classList.remove('translate-y-16', 'opacity-0');
+      toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-16', 'opacity-0');
+      }, 2000);
     }
 
     function handleBuyClick(couponCode) {
@@ -2459,10 +2650,24 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (e.key === 'Escape') closeDealModal();
     });
 
+    window.addEventListener('popstate', (e) => {
+      const page = (e.state && e.state.page) || window.location.pathname.replace(/^\\//, '').split('/')[0] || window.location.hash.replace(/^#/, '') || 'deals';
+      showPage(page, false);
+    });
+
     document.addEventListener('DOMContentLoaded', () => {
+      // Determine initial page from URL pathname or hash (e.g. /cards or /#cards)
+      const pathRoute = window.location.pathname.replace(/^\\//, '').split('/')[0].toLowerCase();
+      const hashRoute = window.location.hash.replace(/^#/, '').toLowerCase();
+      const validPages = ['deals', 'cards', 'coins', 'faq', 'contact', 'about'];
+      const initialRoute = validPages.includes(pathRoute) ? pathRoute : (validPages.includes(hashRoute) ? hashRoute : 'deals');
+
       // Initialize theme & language
       applyTheme(currentTheme);
       setLanguage(currentLang);
+      if (initialRoute !== 'deals') {
+        showPage(initialRoute, false);
+      }
       fetchDeals();
       setInterval(() => fetchDeals(false), 180000);
     });

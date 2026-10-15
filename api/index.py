@@ -1174,6 +1174,11 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 # ── Web App & PWA Routes ─────────────────────────────────────────
 @app.get("/", response_class=HTMLResponse)
 @app.get("/deals", response_class=HTMLResponse)
+@app.get("/cards", response_class=HTMLResponse)
+@app.get("/coins", response_class=HTMLResponse)
+@app.get("/faq", response_class=HTMLResponse)
+@app.get("/contact", response_class=HTMLResponse)
+@app.get("/about", response_class=HTMLResponse)
 async def user_website():
     """Serves the modern user-facing AliExpress deals website with live Telegram feed."""
     return HTMLResponse(content=USER_WEBSITE_HTML)
@@ -1312,9 +1317,40 @@ async def sitemap_xml():
     <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscout-green.vercel.app/deals"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://dealscout-green.vercel.app/deals"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscout-green.vercel.app/deals"/>
+  </url>
+  <url>
+    <loc>https://dealscout-green.vercel.app/cards</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscout-green.vercel.app/cards"/>
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscout-green.vercel.app/cards"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscout-green.vercel.app/cards"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscout-green.vercel.app/cards"/>
     <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
-    <changefreq>hourly</changefreq>
+    <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://dealscout-green.vercel.app/logo.png</image:loc>
+      <image:title>بطاقات الشراء من AliExpress بالدينار الجزائري — Bybit و RedotPay و BaridiMob</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://dealscout-green.vercel.app/coins</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscout-green.vercel.app/coins"/>
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscout-green.vercel.app/coins"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscout-green.vercel.app/coins"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscout-green.vercel.app/coins"/>
+    <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dealscout-green.vercel.app/faq</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://dealscout-green.vercel.app/faq"/>
+    <xhtml:link rel="alternate" hreflang="ar-DZ" href="https://dealscout-green.vercel.app/faq"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://dealscout-green.vercel.app/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://dealscout-green.vercel.app/faq"/>
+    <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>"""
     return Response(
