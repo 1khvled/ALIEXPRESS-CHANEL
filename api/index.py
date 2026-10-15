@@ -1878,6 +1878,38 @@ async def scout_endpoint(url: str = Query(...)):
         return {"ok": False, "error": str(e)}
 
 
+@app.get("/api/resolve-coin-link")
+async def resolve_coin_link_endpoint(url: str = Query(...)):
+    """Resolves any AliExpress URL (including shortlinks like a.aliexpress.com or s.click) to product ID and generates coin deal links."""
+    try:
+        from api.coin_bot import resolve_any_ali_link, extract_pid_from_string
+        from app.config.settings import settings
+
+        tracking_id = getattr(settings, "ALIEXPRESS_AFFILIATE_TRACKING_ID", "dzkhvled16") or "dzkhvled16"
+        pid = extract_pid_from_string(url)
+        if not pid:
+            pid = await resolve_any_ali_link(url)
+
+        if not pid:
+            return JSONResponse({"ok": False, "error": "لم يتم التعرف على كود المنتج"}, status_code=400)
+
+        coin_link = f"https://www.aliexpress.com/item/{pid}.html?sourceType=620&channel=coin&aff_fcid={tracking_id}"
+        super_link = f"https://www.aliexpress.com/item/{pid}.html?sourceType=561&channel=superdeal&aff_fcid={tracking_id}"
+        bundle_link = f"https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds={pid}&aff_fcid={tracking_id}"
+        direct_link = f"https://www.aliexpress.com/item/{pid}.html?aff_fcid={tracking_id}"
+
+        return {
+            "ok": True,
+            "product_id": pid,
+            "coin_link": coin_link,
+            "super_link": super_link,
+            "bundle_link": bundle_link,
+            "direct_link": direct_link
+        }
+    except Exception as e:
+        return JSONResponse({"ok": False, "error": str(e)}, status_code=500)
+
+
 @app.post("/api/reformat-deal")
 async def api_reformat_deal(request: Request):
     """Reformat raw Telegram deal post and prepare clean Algerian channel caption using the official algorithm."""

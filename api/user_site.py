@@ -149,6 +149,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     html {
       scroll-behavior: smooth;
       -webkit-text-size-adjust: 100%;
+      overflow-x: hidden !important;
+      width: 100% !important;
+      max-width: 100vw !important;
     }
     body {
       background-color: var(--bg-page);
@@ -157,6 +160,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       -moz-osx-font-smoothing: grayscale;
       -webkit-tap-highlight-color: transparent;
       transition: background-color 0.2s ease, color 0.2s ease;
+      overflow-x: hidden !important;
+      width: 100% !important;
+      max-width: 100vw !important;
+      position: relative;
     }
     body[dir="ltr"] {
       font-family: 'Plus Jakarta Sans', 'Readex Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -477,12 +484,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 <body class="min-h-screen flex flex-col justify-between" dir="rtl">
 
   <!-- Top Utilities Bar -->
-  <aside class="border-b text-[11px] py-1.5 px-4 pt-safe transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);" aria-label="شريط المعلومات">
-    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
-      <div class="flex items-center gap-3">
-        <span class="inline-flex items-center gap-1.5 font-medium">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span data-i18n="top_live_updates">تحديث فوري من القنوات</span>
+  <aside class="border-b text-[11px] py-1.5 px-3 sm:px-4 pt-safe transition-colors w-full overflow-hidden" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);" aria-label="شريط المعلومات">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-3">
+      <div class="flex items-center gap-2 sm:gap-3 min-w-0">
+        <span class="inline-flex items-center gap-1.5 font-medium text-[10px] sm:text-[11px] truncate">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0"></span>
+          <span data-i18n="top_live_updates" class="truncate">تحديث فوري من القنوات</span>
         </span>
         <span class="hidden sm:inline opacity-30">|</span>
         <a href="https://squarealgerie.com" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-1 hover:opacity-80 transition py-0.5">
@@ -491,17 +498,17 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </a>
       </div>
       
-      <div class="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
+      <div class="flex items-center gap-1 sm:gap-2.5 flex-shrink-0">
         <!-- Tools & Square Calculator Hub Button -->
-        <button onclick="openGamificationHub()" id="streak-header-btn" aria-label="Square Calculator & Tools" class="px-2 sm:px-2.5 py-1 rounded-lg border text-xs flex items-center gap-1.5 transition active:scale-95 touch-manipulation cursor-pointer font-bold" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);" title="حاسبة السكوار والأدوات">
+        <button onclick="openGamificationHub()" id="streak-header-btn" aria-label="Square Calculator & Tools" class="px-2 py-1 rounded-lg border text-xs flex items-center gap-1.5 transition active:scale-95 touch-manipulation cursor-pointer font-bold" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);" title="حاسبة السكوار والأدوات">
           <i class="fa-solid fa-calculator text-emerald-500 text-[11px]"></i>
-          <span id="streak-header-text" class="text-[11px] font-semibold" data-i18n="tools_header">حاسبة السكوار</span>
+          <span id="streak-header-text" class="text-[11px] font-semibold hidden sm:inline" data-i18n="tools_header">حاسبة السكوار</span>
         </button>
 
         <span class="opacity-30">|</span>
 
         <!-- Theme Toggle Button -->
-        <button onclick="toggleTheme()" id="theme-toggle-btn" aria-label="Toggle Light / Dark theme" class="px-2.5 py-1 rounded-lg border text-xs flex items-center gap-1.5 transition active:scale-95 touch-manipulation cursor-pointer" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);">
+        <button onclick="toggleTheme()" id="theme-toggle-btn" aria-label="Toggle Light / Dark theme" class="px-2 py-1 rounded-lg border text-xs flex items-center gap-1.5 transition active:scale-95 touch-manipulation cursor-pointer" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);">
           <i id="theme-icon" class="fa-solid fa-sun text-[11px] text-amber-500"></i>
           <span id="theme-text" class="text-[11px] font-semibold hidden sm:inline">فاتح</span>
         </button>
@@ -510,8 +517,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
         <!-- Language Switcher Button -->
         <div class="inline-flex items-center border rounded-lg p-0.5 text-xs" style="border-color: var(--border-card); background-color: var(--bg-elevated);">
-          <button onclick="setLanguage('ar')" id="lang-ar-btn" class="px-2 py-0.5 rounded text-[11px] font-bold bg-crimson-600 text-white transition active:scale-95">العربية</button>
-          <button onclick="setLanguage('fr')" id="lang-fr-btn" class="px-2 py-0.5 rounded text-[11px] font-bold opacity-60 hover:opacity-100 transition active:scale-95">Français</button>
+          <button onclick="setLanguage('ar')" id="lang-ar-btn" class="px-1.5 sm:px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-bold bg-crimson-600 text-white transition active:scale-95">العربية</button>
+          <button onclick="setLanguage('fr')" id="lang-fr-btn" class="px-1.5 sm:px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-bold opacity-60 hover:opacity-100 transition active:scale-95">Français</button>
         </div>
 
         <span class="hidden sm:inline opacity-30">|</span>
@@ -519,8 +526,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <i class="fa-solid fa-coins text-amber-500 text-[10px]"></i>
           <span data-i18n="top_coin_bot">بوت العملات</span>
         </a>
-        <span class="opacity-30">|</span>
-        <a id="top-telegram-link" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="inline-flex hover:text-sky-400 text-sky-500 transition font-bold items-center gap-1 py-1 px-1.5 active:scale-95 touch-manipulation text-xs" title="قناة التيليجرام الرسمية">
+        <span class="hidden sm:inline opacity-30">|</span>
+        <a id="top-telegram-link" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex hover:text-sky-400 text-sky-500 transition font-bold items-center gap-1 py-1 px-1.5 active:scale-95 touch-manipulation text-xs" title="قناة التيليجرام الرسمية">
           <i class="fa-brands fa-telegram text-sky-500 text-sm"></i>
           <span class="text-[11px] font-bold">Telegram</span>
         </a>
@@ -542,40 +549,40 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               <span class="text-[10px] font-semibold px-1.5 py-0.2 rounded border font-mono font-normal" style="background-color: var(--bg-subtle); border-color: var(--border-card); color: var(--text-muted);">2.6</span>
             </h1>
           </div>
-          <p class="text-[10px] block -mt-0.5" style="color: var(--text-soft);" data-i18n="brand_subtitle">بوابة صفقات وتخفيضات AliExpress 🇩🇿</p>
+          <p class="text-[10px] hidden sm:block -mt-0.5" style="color: var(--text-soft);" data-i18n="brand_subtitle">بوابة صفقات وتخفيضات AliExpress 🇩🇿</p>
         </div>
       </a>
 
       <!-- Desktop Nav Pages Links -->
       <nav class="hidden md:flex items-center gap-1 text-xs font-semibold" style="color: var(--text-muted);">
-        <button onclick="showPage('deals')" id="nav-link-deals" class="nav-page-btn px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 font-bold" style="background-color: var(--bg-elevated); color: var(--text-main);">
+        <button onclick="showPage('deals')" id="nav-link-deals" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg transition flex items-center gap-1.5 font-bold text-[11px] xl:text-xs" style="background-color: var(--bg-elevated); color: var(--text-main);">
           <i class="fa-solid fa-fire text-crimson-500 text-xs"></i>
           <span data-i18n="nav_deals">الصفقات</span>
         </button>
-        <button onclick="showPage('cards')" id="nav-link-cards" class="nav-page-btn px-3 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5">
+        <button onclick="showPage('cards')" id="nav-link-cards" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs">
           <i class="fa-solid fa-credit-card text-emerald-500 text-xs"></i>
           <span data-i18n="nav_cards">بطاقات الشراء</span>
         </button>
-        <button onclick="showPage('coins')" id="nav-link-coins" class="nav-page-btn px-3 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5">
+        <button onclick="showPage('coins')" id="nav-link-coins" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs">
           <i class="fa-solid fa-coins text-amber-500 text-xs"></i>
           <span data-i18n="nav_coins">بوت العملات</span>
         </button>
-        <button onclick="showPage('faq')" id="nav-link-faq" class="nav-page-btn px-3 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5">
+        <button onclick="showPage('faq')" id="nav-link-faq" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs">
           <i class="fa-solid fa-circle-question text-sky-500 text-xs"></i>
-          <span data-i18n="nav_faq">الأسئلة الشائعة</span>
+          <span class="hidden xl:inline" data-i18n="nav_faq">الأسئلة الشائعة</span>
         </button>
-        <button onclick="showPage('contact')" id="nav-link-contact" class="nav-page-btn px-3 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5">
+        <button onclick="showPage('contact')" id="nav-link-contact" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs">
           <i class="fa-solid fa-envelope text-emerald-500 text-xs"></i>
-          <span data-i18n="nav_contact">اتصل بنا</span>
+          <span class="hidden xl:inline" data-i18n="nav_contact">اتصل بنا</span>
         </button>
-        <button onclick="showPage('about')" id="nav-link-about" class="nav-page-btn px-3 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5">
+        <button onclick="showPage('about')" id="nav-link-about" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs">
           <i class="fa-solid fa-info-circle text-purple-500 text-xs"></i>
-          <span data-i18n="nav_about">من نحن</span>
+          <span class="hidden xl:inline" data-i18n="nav_about">من نحن</span>
         </button>
       </nav>
 
-      <!-- Search Bar Desktop -->
-      <div class="hidden md:flex items-center relative flex-1 max-w-xs xl:max-w-sm">
+      <!-- Search Bar Desktop (Visible on Large Screens) -->
+      <div class="hidden lg:flex items-center relative flex-1 max-w-xs xl:max-w-sm">
         <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-1/2 -translate-y-1/2 text-xs pointer-events-none opacity-50"></i>
         <input 
           type="search" 
@@ -596,22 +603,22 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       </div>
 
       <!-- Action Buttons -->
-      <div class="flex items-center gap-1.5 sm:gap-2">
+      <div class="flex items-center gap-1 sm:gap-2 flex-shrink-0">
         <!-- Currency Selector -->
         <div class="flex items-center border rounded-xl p-0.5 text-xs font-semibold" style="border-color: var(--border-card); background-color: var(--bg-card);" aria-label="Currency" role="group">
-          <button onclick="setCurrency('DZD')" id="curr-dzd" class="min-w-[34px] sm:min-w-[38px] h-8 sm:h-9 px-2 py-1 rounded-lg bg-crimson-600 text-white font-mono transition flex items-center justify-center active:scale-95 touch-manipulation">دج</button>
-          <button onclick="setCurrency('USD')" id="curr-usd" class="min-w-[32px] sm:min-w-[36px] h-8 sm:h-9 px-2 py-1 rounded-lg opacity-70 hover:opacity-100 font-mono transition flex items-center justify-center active:scale-95 touch-manipulation">$</button>
-          <button onclick="setCurrency('EUR')" id="curr-eur" class="min-w-[32px] sm:min-w-[36px] h-8 sm:h-9 px-2 py-1 rounded-lg opacity-70 hover:opacity-100 font-mono transition flex items-center justify-center active:scale-95 touch-manipulation">€</button>
+          <button onclick="setCurrency('DZD')" id="curr-dzd" class="min-w-[26px] sm:min-w-[34px] h-8 sm:h-9 px-1.5 sm:px-2 py-1 rounded-lg bg-crimson-600 text-white font-mono transition flex items-center justify-center active:scale-95 touch-manipulation text-[11px] sm:text-xs">دج</button>
+          <button onclick="setCurrency('USD')" id="curr-usd" class="min-w-[24px] sm:min-w-[30px] h-8 sm:h-9 px-1 sm:px-2 py-1 rounded-lg opacity-70 hover:opacity-100 font-mono transition flex items-center justify-center active:scale-95 touch-manipulation text-[11px] sm:text-xs">$</button>
+          <button onclick="setCurrency('EUR')" id="curr-eur" class="min-w-[24px] sm:min-w-[30px] h-8 sm:h-9 px-1 sm:px-2 py-1 rounded-lg opacity-70 hover:opacity-100 font-mono transition flex items-center justify-center active:scale-95 touch-manipulation text-[11px] sm:text-xs">€</button>
         </div>
 
         <!-- Join Telegram Button -->
-        <a id="btn-telegram-join" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="bg-[#229ED9] hover:bg-[#1e8ec3] text-white text-xs h-8 sm:h-9 px-2 sm:px-3 rounded-xl font-bold flex items-center justify-center gap-1.5 transition active:scale-95 shadow-sm touch-manipulation">
+        <a id="btn-telegram-join" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="bg-[#229ED9] hover:bg-[#1e8ec3] text-white text-xs h-8 sm:h-9 px-2.5 sm:px-3 rounded-xl font-bold flex items-center justify-center gap-1.5 transition active:scale-95 shadow-sm touch-manipulation" aria-label="قناة التيليجرام">
           <i class="fa-brands fa-telegram text-sm" aria-hidden="true"></i>
-          <span class="text-[11px] font-bold" data-i18n="btn_join_channel">تيليجرام</span>
+          <span class="text-[11px] font-bold hidden lg:inline" data-i18n="btn_join_channel">تيليجرام</span>
         </a>
 
         <!-- Refresh Data Button -->
-        <button onclick="fetchDeals(true, true)" title="تحديث البيانات" class="w-8 sm:w-9 h-8 sm:h-9 rounded-xl border text-xs flex items-center justify-center transition active:scale-95 touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+        <button onclick="fetchDeals(true, true)" title="تحديث البيانات" class="w-8 sm:w-9 h-8 sm:h-9 rounded-xl border text-xs flex items-center justify-center transition active:scale-95 touch-manipulation cursor-pointer hover:border-rose-500 flex-shrink-0" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
           <i class="fa-solid fa-rotate-right" id="refresh-icon" aria-hidden="true"></i>
         </button>
       </div>
@@ -681,8 +688,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </a>
       </aside>
 
-      <!-- Mobile Search Bar -->
-      <div class="md:hidden relative">
+      <!-- Mobile & Tablet Search Bar -->
+      <div class="lg:hidden relative">
         <i class="fa-solid fa-magnifying-glass absolute right-3.5 top-1/2 -translate-y-1/2 text-sm pointer-events-none opacity-50"></i>
         <input 
           type="search" 
@@ -757,8 +764,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       </section>
 
       <!-- Category Filter Pills -->
-      <section class="border-b pb-3" style="border-color: var(--border-card);" aria-label="Categories">
-        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 text-xs font-semibold -mx-3.5 px-3.5 sm:mx-0 sm:px-0 momentum-scroll">
+      <section class="border-b pb-3 w-full overflow-hidden" style="border-color: var(--border-card);" aria-label="Categories">
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 text-xs font-semibold px-0.5 momentum-scroll w-full">
           <button onclick="setCategory('all')" id="cat-all" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl bg-crimson-600 text-white whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation shadow-sm">
             <span data-i18n="cat_all">الكل</span>
             <span id="count-all" class="text-[11px] font-mono opacity-80 bg-black/20 px-1.5 py-0.2 rounded">0</span>
@@ -1113,6 +1120,167 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </a>
         </div>
       </div>
+
+      <!-- Interactive Coins Deal Link Generator Card -->
+      <section id="coins-generator-card" class="border rounded-2xl p-4 sm:p-6 space-y-4 shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-card);" aria-label="مولد روابط خصم العملات">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b pb-3" style="border-color: var(--border-card);">
+          <div class="space-y-1">
+            <div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+              <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
+              <span data-i18n="coin_gen_badge">أداة مجانية فورية</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold flex items-center gap-2" style="color: var(--text-main);">
+              <i class="fa-solid fa-coins text-amber-500"></i>
+              <span data-i18n="coin_gen_title">مولد روابط خصم العملات (Coins Deal Generator)</span>
+            </h3>
+            <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coin_gen_subtitle">
+              الصق رابط أي منتج من AliExpress أو نص المشاركة لتحصل فوراً على رابط تفعيل أقصى خصم للعملات (حتى 60%) وعروض السوبر ديلز!
+            </p>
+          </div>
+          <span class="text-[11px] text-amber-500 font-mono font-semibold flex items-center gap-1 self-start sm:self-center">
+            <i class="fa-solid fa-bolt text-xs"></i>
+            <span>توليد فوري 100%</span>
+          </span>
+        </div>
+
+        <!-- Input & Action Bar -->
+        <div class="space-y-2.5">
+          <label for="coins-input-url" class="block text-xs font-semibold" style="color: var(--text-main);" data-i18n="coin_gen_input_label">
+            رابط المنتج، كود المنتج (Item ID)، أو نص المشاركة من التطبيق:
+          </label>
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+            <div class="relative flex-1">
+              <i class="fa-solid fa-link absolute right-3.5 top-1/2 -translate-y-1/2 text-xs opacity-40 pointer-events-none"></i>
+              <input 
+                type="text" 
+                id="coins-input-url" 
+                placeholder="https://www.aliexpress.com/item/100500... أو https://a.aliexpress.com/_m..." 
+                class="w-full border rounded-xl pr-9 pl-20 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-amber-500 transition min-h-[44px]"
+                style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);"
+                onkeydown="if(event.key==='Enter') generateCoinLink()"
+              />
+              <button 
+                type="button" 
+                onclick="pasteToCoinsInput()" 
+                id="coins-paste-btn"
+                title="لصق من الحافظة"
+                class="absolute left-2 top-1/2 -translate-y-1/2 px-2.5 py-1 rounded-lg border text-[11px] font-semibold flex items-center gap-1 transition active:scale-95 touch-manipulation cursor-pointer"
+                style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);"
+              >
+                <i class="fa-regular fa-paste text-[10px]"></i>
+                <span data-i18n="btn_paste">لصق</span>
+              </button>
+            </div>
+            <button 
+              type="button" 
+              onclick="generateCoinLink()" 
+              id="coins-submit-btn"
+              class="min-h-[44px] px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-sm active:scale-95 transition cursor-pointer flex-shrink-0"
+            >
+              <i class="fa-solid fa-coins text-sm"></i>
+              <span data-i18n="btn_generate_coin_deal">توليد رابط العملات</span>
+            </button>
+          </div>
+          <div id="coins-gen-error" class="hidden text-xs text-rose-500 flex items-center gap-1.5 pt-1">
+            <i class="fa-solid fa-circle-exclamation text-xs"></i>
+            <span id="coins-gen-error-text">يرجى إدخال رابط منتج صالح من AliExpress أو رقم المنتج.</span>
+          </div>
+        </div>
+
+        <!-- Generated Result Card (Reveals upon generation) -->
+        <div id="coins-gen-result" class="hidden border rounded-xl p-4 sm:p-5 space-y-4 animate-slide-up" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b pb-3" style="border-color: var(--border-card);">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="font-bold text-xs sm:text-sm text-emerald-500" data-i18n="coin_gen_success">تم تجهيز روابط الخصم بنجاح!</span>
+            </div>
+            <span id="coins-gen-pid-badge" class="font-mono text-xs px-2.5 py-0.5 rounded-lg border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">ID: 100500...</span>
+          </div>
+
+          <!-- Highlighted Coin Deal Link -->
+          <div class="border rounded-xl p-3.5 space-y-2 border-amber-500/40" style="background-color: var(--bg-card);">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-amber-500 flex items-center gap-1.5">
+                <i class="fa-solid fa-coins"></i>
+                <span data-i18n="coin_link_primary_title">رابط العملات المخفض (Coins Deal - حتى 60% خصم)</span>
+              </span>
+              <span class="text-[10px] bg-amber-500/10 text-amber-500 px-2 py-0.5 rounded-md font-bold">أعلى توفير</span>
+            </div>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+              <input 
+                type="text" 
+                id="coins-gen-out-coin" 
+                readonly 
+                class="flex-1 font-mono text-[11px] px-3 py-2 rounded-lg border focus:outline-none select-all"
+                style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);"
+              />
+              <div class="flex items-center gap-1.5">
+                <button 
+                  onclick="copyCoinLink('coins-gen-out-coin', this)" 
+                  class="flex-1 sm:flex-none min-h-[38px] px-3 py-1.5 rounded-lg border text-xs font-bold flex items-center justify-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer"
+                  style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);"
+                >
+                  <i class="fa-regular fa-copy"></i>
+                  <span data-i18n="btn_copy_link">نسخ الرابط</span>
+                </button>
+                <a 
+                  id="coins-gen-btn-buy" 
+                  href="#" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  class="flex-1 sm:flex-none min-h-[38px] px-4 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-zinc-950 text-xs font-bold flex items-center justify-center gap-1.5 active:scale-95 transition shadow-sm"
+                >
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span data-i18n="btn_buy_coins_deal">فتح وشراء بالعملات</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Deal Formats (SuperDeals & Bundle Deals) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+            <!-- SuperDeals -->
+            <div class="border rounded-xl p-3 space-y-1.5" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="flex items-center justify-between text-rose-500 font-bold text-[11px]">
+                <span class="flex items-center gap-1"><i class="fa-solid fa-bolt"></i> <span data-i18n="superdeal_link_title">رابط السوبر ديلز (SuperDeals)</span></span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button onclick="copyCoinLink('coins-gen-out-super', this)" class="px-2.5 py-1 rounded-lg border text-[11px] font-semibold active:scale-95 transition" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);">
+                  <i class="fa-regular fa-copy text-[10px]"></i> <span data-i18n="btn_copy_link">نسخ الرابط</span>
+                </button>
+                <a id="coins-gen-btn-super" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-1 rounded-lg border text-[11px] font-bold text-rose-500 hover:bg-rose-500 hover:text-white transition" style="border-color: var(--border-card);">
+                  <span data-i18n="btn_open_deal">فتح العرض</span> &larr;
+                </a>
+              </div>
+              <input type="hidden" id="coins-gen-out-super" />
+            </div>
+
+            <!-- Bundle Deals -->
+            <div class="border rounded-xl p-3 space-y-1.5" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="flex items-center justify-between text-emerald-500 font-bold text-[11px]">
+                <span class="flex items-center gap-1"><i class="fa-solid fa-box-open"></i> <span data-i18n="bundle_link_title">عروض الحزم (Bundle Deals)</span></span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button onclick="copyCoinLink('coins-gen-out-bundle', this)" class="px-2.5 py-1 rounded-lg border text-[11px] font-semibold active:scale-95 transition" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);">
+                  <i class="fa-regular fa-copy text-[10px]"></i> <span data-i18n="btn_copy_link">نسخ الرابط</span>
+                </button>
+                <a id="coins-gen-btn-bundle" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-1 rounded-lg border text-[11px] font-bold text-emerald-500 hover:bg-emerald-500 hover:text-white transition" style="border-color: var(--border-card);">
+                  <span data-i18n="btn_open_deal">فتح العرض</span> &larr;
+                </a>
+              </div>
+              <input type="hidden" id="coins-gen-out-bundle" />
+            </div>
+          </div>
+
+          <!-- Pro Tip Box -->
+          <div class="p-3 rounded-xl border border-dashed flex items-start gap-2.5 text-xs" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
+            <i class="fa-solid fa-lightbulb text-amber-500 text-sm mt-0.5 flex-shrink-0"></i>
+            <p class="leading-relaxed text-[11px]" data-i18n="coin_gen_tip">
+              💡 سر الخصم: افتح رابط العملات داخل تطبيق AliExpress واضغط مباشرة على زر (شراء الآن / Acheter) أو أضف المنتج إلى السلة من نفس الصفحة لتفعيل خصم العملات الكامل بدلاً من 2% فقط!
+            </p>
+          </div>
+        </div>
+      </section>
 
       <!-- 3 Steps Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -1656,6 +1824,20 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             </div>
             <i class="fa-solid fa-chevron-left text-xs opacity-50 rtl:rotate-0 ltr:rotate-180"></i>
           </button>
+
+          <!-- Coins Link Generator Shortcut -->
+          <button onclick="closeGamificationHub(); showPage('coins'); setTimeout(() => document.getElementById('coins-input-url')?.focus(), 150);" class="border rounded-xl p-3 flex items-center justify-between gap-2 transition hover:border-amber-500 active:scale-95 touch-manipulation text-right" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-base">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <div>
+                <div class="font-bold text-amber-500" data-i18n="tools_coin_generator">مولد روابط العملات 🪙</div>
+                <div class="text-[10px] opacity-60">توليد خصم فوري بالرابط</div>
+              </div>
+            </div>
+            <i class="fa-solid fa-chevron-left text-xs opacity-50 rtl:rotate-0 ltr:rotate-180"></i>
+          </button>
         </div>
       </div>
 
@@ -1974,7 +2156,22 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         nav_telegram: "تيليجرام",
         nav_tools: "الأدوات",
         fav_empty_title: "لا توجد صفقات محفوظة بعد",
-        fav_empty_desc: "اضغط على أيقونة القلب ❤️ على أي منتج لحفظه والوصول إليه بسرعة هنا."
+        fav_empty_desc: "اضغط على أيقونة القلب ❤️ على أي منتج لحفظه والوصول إليه بسرعة هنا.",
+        tools_coin_generator: "مولد روابط العملات 🪙",
+        coin_gen_badge: "أداة مجانية فورية",
+        coin_gen_title: "مولد روابط خصم العملات (Coins Deal Generator)",
+        coin_gen_subtitle: "الصق رابط أي منتج من AliExpress أو نص المشاركة لتحصل فوراً على رابط تفعيل أقصى خصم للعملات (حتى 60%) وعروض السوبر ديلز!",
+        coin_gen_input_label: "رابط المنتج، كود المنتج (Item ID)، أو نص المشاركة من التطبيق:",
+        btn_paste: "لصق",
+        btn_copy_link: "نسخ الرابط",
+        btn_generate_coin_deal: "توليد رابط العملات",
+        coin_gen_success: "تم تجهيز روابط الخصم بنجاح!",
+        coin_link_primary_title: "رابط العملات المخفض (Coins Deal - حتى 60% خصم)",
+        btn_buy_coins_deal: "فتح وشراء بالعملات",
+        superdeal_link_title: "رابط السوبر ديلز (SuperDeals)",
+        bundle_link_title: "عروض الحزم (Bundle Deals)",
+        btn_open_deal: "فتح العرض",
+        coin_gen_tip: "💡 سر الخصم: افتح رابط العملات داخل تطبيق AliExpress واضغط مباشرة على زر (شراء الآن / Acheter) أو أضف المنتج إلى السلة من نفس الصفحة لتفعيل خصم العملات الكامل بدلاً من 2% فقط!"
       },
       fr: {
         meta_title: "DealScout DZ — Bons Plans & Réductions AliExpress en Dinar Algérien",
@@ -2152,7 +2349,22 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         nav_telegram: "Telegram",
         nav_tools: "Outils",
         fav_empty_title: "Aucun favori enregistré",
-        fav_empty_desc: "Cliquez sur l'icône cœur ❤️ d'un produit pour l'enregistrer ici."
+        fav_empty_desc: "Cliquez sur l'icône cœur ❤️ d'un produit pour l'enregistrer ici.",
+        tools_coin_generator: "Générateur Liens Pièces 🪙",
+        coin_gen_badge: "Outil Gratuit & Instantané",
+        coin_gen_title: "Générateur de Réduction Pièces (Coins)",
+        coin_gen_subtitle: "Collez le lien d'un produit AliExpress pour obtenir instantanément votre lien maximisant la réduction Pièces (Coins jusqu'à 60%) et SuperDeals !",
+        coin_gen_input_label: "Lien produit, Item ID ou texte partagé de l'application :",
+        btn_paste: "Coller",
+        btn_copy_link: "Copier le lien",
+        btn_generate_coin_deal: "Générer le lien Pièces",
+        coin_gen_success: "Liens de réduction générés avec succès !",
+        coin_link_primary_title: "Lien Réduction Pièces (Coins Deal - jusqu'à 60%)",
+        btn_buy_coins_deal: "Acheter avec les Pièces",
+        superdeal_link_title: "Ventes Flash (SuperDeals)",
+        bundle_link_title: "Offres Groupées (Bundle Deals)",
+        btn_open_deal: "Ouvrir",
+        coin_gen_tip: "💡 Astuce Réduction : Ouvrez le lien Pièces dans l'application AliExpress et cliquez directement sur (Acheter maintenant) ou ajoutez au panier depuis cette page pour débloquer la réduction maximale en pièces !"
       }
     };
 
@@ -3706,6 +3918,160 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         }
       }).catch(() => {
         showToast(code);
+      });
+    }
+
+    // ── AliExpress Coins Deal Link Generator ────────────────────────
+    const AFF_TRACKING_TAG = 'dzkhvled16';
+
+    function extractAliExpressPid(input) {
+      if (!input) return null;
+      const str = String(input).trim();
+      // 1. Direct digits (10 to 20 digits)
+      if (/^\\d{10,20}$/.test(str)) return str;
+      // 2. /item/123456789.html
+      const mItem = str.match(/\\/item\\/(\\d{10,20})/i);
+      if (mItem) return mItem[1];
+      // 3. /p/trade/123456789 or /p/anything/123456789
+      const mP = str.match(/\\/p\\/[a-z0-9_-]+\\/(\\d{10,20})/i);
+      if (mP) return mP[1];
+      // 4. productIds=123456789 or productId=123456789
+      const mProd = str.match(/productIds?=(\\d{10,20})/i);
+      if (mProd) return mProd[1];
+      // 5. itemId=123456789 or item_id=123456789
+      const mItemParam = str.match(/(?:itemId|item_id)[=:](\\d{10,20})/i);
+      if (mItemParam) return mItemParam[1];
+      // 6. Generic id=123456789
+      const mGenericId = str.match(/[?&#]id=(\\d{10,20})/i);
+      if (mGenericId) return mGenericId[1];
+      // 7. Any 11-18 continuous digits in an aliexpress context
+      if (str.includes('aliexpress') || str.includes('alibab')) {
+        const mDigits = str.match(/(\\d{11,18})/);
+        if (mDigits) return mDigits[1];
+      }
+      return null;
+    }
+
+    async function pasteToCoinsInput() {
+      try {
+        if (navigator.clipboard && navigator.clipboard.readText) {
+          const text = await navigator.clipboard.readText();
+          const input = document.getElementById('coins-input-url');
+          if (input && text) {
+            input.value = text.trim();
+            generateCoinLink();
+          }
+        }
+      } catch (e) {
+        showToast(currentLang === 'fr' ? 'Collez manuellement le lien' : 'الصق الرابط يدوياً في الخانة');
+      }
+    }
+
+    async function generateCoinLink() {
+      const input = document.getElementById('coins-input-url');
+      const errBox = document.getElementById('coins-gen-error');
+      const errText = document.getElementById('coins-gen-error-text');
+      const resultBox = document.getElementById('coins-gen-result');
+      const submitBtn = document.getElementById('coins-submit-btn');
+
+      if (!input) return;
+      const raw = input.value.trim();
+      if (!raw) {
+        if (errBox) {
+          errBox.classList.remove('hidden');
+          if (errText) errText.textContent = (currentLang === 'fr') ? 'Veuillez coller un lien AliExpress ou un ID valide.' : 'يرجى إدخال رابط منتج صالح من AliExpress أو رقم المنتج.';
+        }
+        return;
+      }
+
+      if (errBox) errBox.classList.add('hidden');
+
+      // 1. Try instant client-side regex extraction
+      let pid = extractAliExpressPid(raw);
+
+      // 2. If shortlink (e.g. a.aliexpress.com or s.click.aliexpress.com), resolve via backend
+      if (!pid && (raw.includes('a.aliexpress.com') || raw.includes('s.click.aliexpress.com') || raw.includes('/e/'))) {
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ' + (currentLang === 'fr' ? 'Résolution...' : 'جاري الفحص...');
+        }
+        try {
+          const resp = await fetch(`/api/resolve-coin-link?url=${encodeURIComponent(raw)}`);
+          if (resp.ok) {
+            const data = await resp.json();
+            if (data && data.product_id) {
+              pid = data.product_id;
+            }
+          }
+        } catch (e) {
+          console.warn('Backend resolution fallback:', e);
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fa-solid fa-coins text-sm"></i> ' + (currentLang === 'fr' ? 'Générer le lien Pièces' : 'توليد رابط العملات');
+          }
+        }
+      }
+
+      if (!pid) {
+        if (errBox) {
+          errBox.classList.remove('hidden');
+          if (errText) errText.textContent = (currentLang === 'fr') ? 'Lien non reconnu. Assurez-vous qu\\'il s\\'agit d\\'un produit AliExpress valide.' : 'لم يتم التعرف على كود المنتج. يرجى التأكد من نسخ رابط منتج صحيح من AliExpress.';
+        }
+        return;
+      }
+
+      // Build monentized links with affiliate tracking ID
+      const coinUrl = `https://www.aliexpress.com/item/${pid}.html?sourceType=620&channel=coin&aff_fcid=${AFF_TRACKING_TAG}`;
+      const superUrl = `https://www.aliexpress.com/item/${pid}.html?sourceType=561&channel=superdeal&aff_fcid=${AFF_TRACKING_TAG}`;
+      const bundleUrl = `https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=${pid}&aff_fcid=${AFF_TRACKING_TAG}`;
+      const directUrl = `https://www.aliexpress.com/item/${pid}.html?aff_fcid=${AFF_TRACKING_TAG}`;
+
+      // Populate UI
+      const pidBadge = document.getElementById('coins-gen-pid-badge');
+      if (pidBadge) pidBadge.textContent = 'ID: ' + pid;
+
+      const outCoin = document.getElementById('coins-gen-out-coin');
+      if (outCoin) outCoin.value = coinUrl;
+
+      const btnBuy = document.getElementById('coins-gen-btn-buy');
+      if (btnBuy) btnBuy.href = coinUrl;
+
+      const outSuper = document.getElementById('coins-gen-out-super');
+      if (outSuper) outSuper.value = superUrl;
+      const btnSuper = document.getElementById('coins-gen-btn-super');
+      if (btnSuper) btnSuper.href = superUrl;
+
+      const outBundle = document.getElementById('coins-gen-out-bundle');
+      if (outBundle) outBundle.value = bundleUrl;
+      const btnBundle = document.getElementById('coins-gen-btn-bundle');
+      if (btnBundle) btnBundle.href = bundleUrl;
+
+      if (resultBox) {
+        resultBox.classList.remove('hidden');
+        resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      showToast(currentLang === 'fr' ? 'Lien de réduction Pièces généré avec succès !' : 'تم توليد رابط خصم العملات بنجاح!');
+    }
+
+    function copyCoinLink(inputId, btn) {
+      const input = document.getElementById(inputId);
+      if (!input || !input.value) return;
+      const textToCopy = input.value;
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        if (btn) {
+          const original = btn.innerHTML;
+          btn.innerHTML = '<i class="fa-solid fa-check text-emerald-500"></i> ' + (currentLang === 'fr' ? 'Copié !' : 'تم النسخ!');
+          btn.classList.add('border-emerald-500');
+          setTimeout(() => {
+            btn.innerHTML = original;
+            btn.classList.remove('border-emerald-500');
+          }, 2000);
+        }
+        showToast(currentLang === 'fr' ? 'Lien copié dans le presse-papier !' : 'تم نسخ رابط الخصم بنجاح!');
+      }).catch(() => {
+        showToast(textToCopy);
       });
     }
 
