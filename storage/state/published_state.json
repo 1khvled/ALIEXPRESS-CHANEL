@@ -239,7 +239,8 @@
     "1005010812635861",
     "1005008500550817",
     "1005009834132291",
-    "1005008077568655"
+    "1005008077568655",
+    "1005009774318553"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -463,7 +464,7 @@
     "1005011754993234": 1791943748.7195513,
     "1005011735727412": 1791943783.9162278,
     "1005013039644752": 1791943797.3155782,
-    "1005007916078341": 1791947476.2741654,
+    "1005007916078341": 1792050965.154088,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
     "1005013336240375": 1791968149.7952893,
@@ -489,7 +490,8 @@
     "1005010812635861": 1792025653.768273,
     "1005008500550817": 1792025664.1703467,
     "1005009834132291": 1792025670.659584,
-    "1005008077568655": 1792032611.9670143
+    "1005008077568655": 1792032611.9670143,
+    "1005009774318553": 1792050974.7243752
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -776,7 +778,8 @@
     "Blackview Wave 7C",
     "محبوبة الجماهير controller🎮",
     "EasySMX X05 Pro Wireless Gamepad",
-    "MACHENIKE G5Pro Max SE Gaming Controller"
+    "MACHENIKE G5Pro Max SE Gaming Controller",
+    "قرص تخزين خارجي محمول CUSU SSD سعة 512 جيجابايت"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1038,7 +1041,7 @@
     "🔝 مانات قووووة ل جماعة mobile gaming 🎮": 1792017738.3981204,
     "جديد ال ©️©️ ببطارية عملاقة💪💪": 1791943797.3155782,
     "Honor Choice Infowear Watch 2i Smartwatch AMOLED": 1791943825.002781,
-    "CMF BY NOTHING Watch 3 Pro": 1791947476.2741654,
+    "CMF BY NOTHING Watch 3 Pro": 1792050965.154088,
     "Dolewa D3 Portable Printer Thermal Paper": 1791947519.5815504,
     "Upsiren 21W/mk Thermal Pad Phase changing": 1791968144.109348,
     "Adjustable Aluminum Laptop Stand": 1791968149.7952893,
@@ -1066,7 +1069,8 @@
     "Blackview Wave 7C": 1792025653.768273,
     "محبوبة الجماهير controller🎮": 1792025664.1703467,
     "EasySMX X05 Pro Wireless Gamepad": 1792025670.659584,
-    "MACHENIKE G5Pro Max SE Gaming Controller": 1792032611.9670143
+    "MACHENIKE G5Pro Max SE Gaming Controller": 1792032611.9670143,
+    "قرص تخزين خارجي محمول CUSU SSD سعة 512 جيجابايت": 1792050974.7243752
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1811,11 +1815,13 @@
     "bnddeals:50855",
     "bnddeals:50856",
     "megaphonna:8376",
-    "zedstoreonline:38600"
+    "zedstoreonline:38600",
+    "zedstoreonline:38602",
+    "zedstoreonline:38604"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1792032611.9670143,
+  "last_run_time": 1792050974.7243752,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32950,
@@ -1827,7 +1833,7 @@
     },
     "lodydeals": {
       "last_message_id": 45547,
-      "last_check_time": 1792032608.5872648
+      "last_check_time": 1792050956.9249027
     },
     "bnddeals": {
       "last_message_id": 50856,
@@ -1842,8 +1848,8 @@
       "last_check_time": 1792032614.9918299
     },
     "zedstoreonline": {
-      "last_message_id": 38600,
-      "last_check_time": 1792032613.9844375
+      "last_message_id": 38604,
+      "last_check_time": 1792050976.7370327
     },
     "megaphonna": {
       "last_message_id": 8386,
@@ -1928,7 +1934,7 @@
     "1005005824280128": 96.8,
     "1005011991145678": 0.8,
     "1005011682821623": 0.8,
-    "1005009774318553": 53.9,
+    "1005009774318553": 51.9,
     "1005012574108028": 279.1,
     "1005008599340405": 48.7,
     "1005007572968437": 17.47,
@@ -5653,6 +5659,26 @@
       "price": 42.3,
       "timestamp": 1792032611.9670143,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38602": {
+      "channel_msg_id": 829,
+      "product_id": "1005007916078341",
+      "title": "CMF BY NOTHING Watch 3 Pro",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38602,
+      "price": 59.0,
+      "timestamp": 1792050965.154088,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38604": {
+      "channel_msg_id": 830,
+      "product_id": "1005009774318553",
+      "title": "قرص تخزين خارجي محمول CUSU SSD سعة 512 جيجابايت",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38604,
+      "price": 51.9,
+      "timestamp": 1792050974.7243752,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -5661,17 +5687,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792032624.2911386,
+    "last_deal_post_time": 1792050988.7653036,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792032627.1249588,
+    "last_sweep_time": 1792050991.044767,
     "last_sweep_times": {
-      "algeria": 1792032624.2815883,
-      "france": 1792032627.1249588
+      "algeria": 1792050988.7585166,
+      "france": 1792050991.044767
     },
     "last_deal_post_times": {
-      "algeria": 1792032624.2911386
+      "algeria": 1792050988.7653036
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -6213,7 +6239,8 @@
     "Blackview Wave 7C": "zedstoreonline",
     "محبوبة الجماهير controller🎮": "bnddeals",
     "EasySMX X05 Pro Wireless Gamepad": "bnddeals",
-    "MACHENIKE G5Pro Max SE Gaming Controller": "zedstoreonline"
+    "MACHENIKE G5Pro Max SE Gaming Controller": "zedstoreonline",
+    "قرص تخزين خارجي محمول CUSU SSD سعة 512 جيجابايت": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -6292,7 +6319,8 @@
     "test_tag_3c37a8": "2026-10-02",
     "test_tag_cc9f12": "2026-10-02",
     "test_tag_3ced26": "2026-10-02",
-    "test_tag_1457c7": "2026-10-02"
+    "test_tag_1457c7": "2026-10-02",
+    "coupon_return_refresh": "2026-10-15"
   },
   "daily_tajmi3at_history": {
     "2026-10-03": {
@@ -6680,7 +6708,9 @@
     "megaphonna:8374",
     "megaphonna:8384",
     "megaphonna:8385",
-    "megaphonna:8386"
+    "megaphonna:8386",
+    "zedstoreonline:38601",
+    "zedstoreonline:38603"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
