@@ -358,8 +358,21 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       from { opacity: 0; }
       to { opacity: 1; }
     }
+    @keyframes heartPop {
+      0% { transform: scale(1); }
+      40% { transform: scale(1.35); }
+      100% { transform: scale(1); }
+    }
+    @keyframes slotRoll {
+      0% { transform: translateY(0); filter: blur(0); }
+      50% { transform: translateY(-24px); filter: blur(1.5px); }
+      100% { transform: translateY(0); filter: blur(0); }
+    }
     .animate-slide-up { animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
     .animate-fade-in { animation: fadeIn 0.2s ease-out forwards; }
+    .animate-heart-pop { animation: heartPop 0.35s cubic-bezier(0.17, 0.89, 0.32, 1.49); }
+    .animate-slot-roll { animation: slotRoll 0.25s ease-in-out infinite; }
+    .bottom-18 { bottom: 4.75rem; }
     
     .faq-item[open] summary .faq-icon {
       transform: rotate(180deg);
@@ -479,6 +492,14 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       </div>
       
       <div class="flex items-center gap-1.5 sm:gap-3 flex-shrink-0">
+        <!-- Daily Streak & Saver Hub Button -->
+        <button onclick="openGamificationHub()" id="streak-header-btn" aria-label="Daily Streak & Rewards" class="px-2 py-1 rounded-lg border text-xs flex items-center gap-1.5 transition active:scale-95 touch-manipulation cursor-pointer font-bold" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);" title="سلسلة التوفير والمكافآت">
+          <i class="fa-solid fa-bolt text-amber-500 text-[11px]"></i>
+          <span id="streak-header-text" class="text-[11px] font-mono">1 يوم</span>
+        </button>
+
+        <span class="opacity-30">|</span>
+
         <!-- Theme Toggle Button -->
         <button onclick="toggleTheme()" id="theme-toggle-btn" aria-label="Toggle Light / Dark theme" class="px-2.5 py-1 rounded-lg border text-xs flex items-center gap-1.5 transition active:scale-95 touch-manipulation cursor-pointer" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);">
           <i id="theme-icon" class="fa-solid fa-sun text-[11px] text-amber-500"></i>
@@ -715,6 +736,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <button onclick="setCategory('all')" id="cat-all" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl bg-crimson-600 text-white whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation shadow-sm">
             <span data-i18n="cat_all">الكل</span>
             <span id="count-all" class="text-[11px] font-mono opacity-80 bg-black/20 px-1.5 py-0.2 rounded">0</span>
+          </button>
+          <button onclick="setCategory('favs')" id="cat-favs" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation cursor-pointer" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
+            <i class="fa-solid fa-heart text-rose-500 text-xs"></i>
+            <span data-i18n="cat_favs">المفضلة</span>
+            <span id="count-favs" class="text-[11px] font-mono opacity-60">0</span>
           </button>
           <button onclick="setCategory('smartphones')" id="cat-smartphones" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
             <span data-i18n="cat_smartphones">هواتف وتابلت</span>
@@ -1294,26 +1320,26 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   </main>
 
   <!-- Mobile Bottom Navigation Bar -->
-  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 backdrop-blur-md border-t px-2 py-1 flex items-center justify-around text-center text-[10px] bottom-nav-safe transition-colors" style="background-color: var(--header-bg); border-color: var(--border-card);" aria-label="التنقل للجوال">
-    <button onclick="showPage('deals')" id="mob-bottom-deals" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 text-crimson-500 font-bold active:scale-90 transition-transform touch-manipulation">
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 backdrop-blur-md border-t px-1 py-1 flex items-center justify-around text-center text-[10px] bottom-nav-safe transition-colors" style="background-color: var(--header-bg); border-color: var(--border-card);" aria-label="التنقل للجوال">
+    <button onclick="showPage('deals')" id="mob-bottom-deals" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 text-crimson-500 font-bold active:scale-90 transition-transform touch-manipulation cursor-pointer">
       <i class="fa-solid fa-fire text-base"></i>
       <span data-i18n="nav_deals">الصفقات</span>
     </button>
-    <button onclick="showPage('cards')" id="mob-bottom-cards" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation">
+    <button onclick="showPage('cards')" id="mob-bottom-cards" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation cursor-pointer">
       <i class="fa-solid fa-credit-card text-base text-emerald-500"></i>
       <span data-i18n="nav_cards">البطاقات</span>
     </button>
-    <button onclick="showPage('coins')" id="mob-bottom-coins" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation">
-      <i class="fa-solid fa-coins text-base"></i>
+    <button onclick="openRouletteModal()" id="mob-bottom-roulette" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-90 hover:opacity-100 font-bold active:scale-90 transition-transform touch-manipulation cursor-pointer text-amber-500">
+      <i class="fa-solid fa-dice text-base animate-bounce"></i>
+      <span data-i18n="roulette_nav">صفقة الحظ</span>
+    </button>
+    <button onclick="showPage('coins')" id="mob-bottom-coins" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation cursor-pointer">
+      <i class="fa-solid fa-coins text-base text-amber-500"></i>
       <span data-i18n="nav_coins">العملات</span>
     </button>
-    <button onclick="showPage('faq')" id="mob-bottom-faq" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation">
-      <i class="fa-solid fa-circle-question text-base"></i>
-      <span data-i18n="nav_faq">الأسئلة</span>
-    </button>
-    <button onclick="showPage('contact')" id="mob-bottom-contact" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation">
-      <i class="fa-solid fa-envelope text-base"></i>
-      <span data-i18n="nav_contact">اتصل بنا</span>
+    <button onclick="openGamificationHub()" id="mob-bottom-hub" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation cursor-pointer text-amber-400">
+      <i class="fa-solid fa-trophy text-base"></i>
+      <span data-i18n="nav_hub">المكافآت</span>
     </button>
   </nav>
 
@@ -1390,6 +1416,189 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
     </div>
   </div>
+
+  <!-- Floating Deal Roulette Button (Mobile Ergonomic FAB) -->
+  <button id="fab-roulette" onclick="openRouletteModal()" aria-label="صفقة الحظ 🎲" class="fixed z-40 bottom-18 md:bottom-6 right-3 sm:right-6 bg-gradient-to-r from-amber-500 to-amber-400 active:scale-90 text-zinc-950 font-extrabold text-xs sm:text-sm px-3.5 py-2.5 rounded-full shadow-xl flex items-center gap-2 cursor-pointer transition-all touch-manipulation border border-amber-300">
+    <i class="fa-solid fa-dice text-base animate-bounce"></i>
+    <span data-i18n="roulette_fab">صفقة الحظ 🎲</span>
+  </button>
+
+  <!-- Deal Roulette Modal -->
+  <div id="roulette-modal" onclick="onRouletteBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="roulette-modal-title">
+    <div class="border-t sm:border rounded-t-3xl sm:rounded-2xl w-full max-w-md max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl p-5 sm:p-6 pb-safe space-y-4 animate-slide-up relative" style="background-color: var(--bg-card); border-color: var(--border-card);">
+      
+      <!-- Pull handle on mobile -->
+      <div class="sm:hidden w-12 h-1.5 rounded-full mx-auto -mt-1 mb-2 opacity-40 cursor-pointer" style="background-color: var(--text-soft);" onclick="closeRouletteModal()"></div>
+      
+      <!-- Close button -->
+      <button type="button" onclick="closeRouletteModal()" aria-label="إغلاق" class="absolute top-3.5 left-3.5 w-9 h-9 rounded-full flex items-center justify-center text-sm border active:scale-95 transition z-30 touch-manipulation cursor-pointer hover:bg-rose-600 hover:text-white" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="text-center space-y-1 pt-1">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/15 text-amber-500 border border-amber-500/20">
+          <i class="fa-solid fa-dice text-sm animate-spin-slow"></i>
+          <span data-i18n="roulette_badge">عجلة الحظ التفاعلية</span>
+        </div>
+        <h3 id="roulette-modal-title" class="text-lg font-bold" style="color: var(--text-main);" data-i18n="roulette_title">صفقة الحظ العشوائية 🎲</h3>
+        <p class="text-xs" style="color: var(--text-muted);" data-i18n="roulette_subtitle">اضغط لتدوير العجلة أو هز الهاتف لاكتشاف صفقة مميزة حصرية!</p>
+      </div>
+
+      <!-- Slot Machine Display Container -->
+      <div id="roulette-display-card" class="border rounded-2xl p-4 space-y-3 relative overflow-hidden transition-all text-center" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+        <div id="roulette-img-wrap" class="relative w-full aspect-[16/10] sm:aspect-[4/3] rounded-xl overflow-hidden border flex items-center justify-center mx-auto" style="background-color: var(--bg-page); border-color: var(--border-card);">
+          <img id="roulette-img" src="" alt="Lucky Deal" class="w-full h-full object-contain transition-transform duration-200">
+          <div id="roulette-winner-tag" class="hidden absolute top-2 right-2 bg-crimson-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded shadow-md flex items-center gap-1 animate-bounce">
+            <i class="fa-solid fa-trophy text-[10px]"></i> <span data-i18n="roulette_winner_tag">صفقة رابحة!</span>
+          </div>
+        </div>
+
+        <div class="space-y-1.5 text-right">
+          <span id="roulette-cat" class="text-[10px] font-bold px-2 py-0.5 rounded border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);"></span>
+          <h4 id="roulette-deal-title" class="font-bold text-xs sm:text-sm line-clamp-2 leading-snug" style="color: var(--text-main);">اضغط زر التدوير للبدء!</h4>
+          <div id="roulette-price-wrap" class="flex items-baseline justify-between pt-1 border-t" style="border-color: var(--border-card);">
+            <div id="roulette-price" class="text-sm sm:text-base font-bold font-mono"></div>
+            <div id="roulette-coupon-pill" class="text-[11px] font-mono font-bold text-rose-500"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="space-y-2 pt-1">
+        <button id="roulette-spin-btn" onclick="spinRoulette()" class="w-full min-h-[46px] rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-zinc-950 font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 transition cursor-pointer touch-manipulation">
+          <i class="fa-solid fa-dice text-base"></i>
+          <span id="roulette-btn-text" data-i18n="roulette_spin_btn">دوّر العجلة الآن (+50 XP) 🎲</span>
+        </button>
+        <a id="roulette-buy-btn" href="#" target="_blank" rel="noopener noreferrer" style="display: none;" class="w-full min-h-[46px] rounded-xl bg-crimson-600 hover:bg-crimson-700 active:scale-95 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-rose-600/20 transition cursor-pointer touch-manipulation">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span data-i18n="roulette_claim_btn">اقتنص صفقة الحظ الآن!</span>
+        </a>
+      </div>
+
+      <!-- Shake Tip on Mobile -->
+      <div class="text-center text-[11px] opacity-70 flex items-center justify-center gap-1.5 pt-1" style="color: var(--text-muted);">
+        <i class="fa-solid fa-mobile-screen animate-pulse"></i>
+        <span data-i18n="roulette_shake_tip">نصيحة: يمكنك هز هاتفك 📱 في أي وقت للتدوير التلقائي!</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Gamification / Rewards & Streak Modal -->
+  <div id="gamification-modal" onclick="onGamificationBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="gamification-title">
+    <div class="border-t sm:border rounded-t-3xl sm:rounded-2xl w-full max-w-md max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl p-5 sm:p-6 pb-safe space-y-5 animate-slide-up relative" style="background-color: var(--bg-card); border-color: var(--border-card);">
+      
+      <!-- Pull handle on mobile -->
+      <div class="sm:hidden w-12 h-1.5 rounded-full mx-auto -mt-1 mb-2 opacity-40 cursor-pointer" style="background-color: var(--text-soft);" onclick="closeGamificationHub()"></div>
+      
+      <!-- Close button -->
+      <button type="button" onclick="closeGamificationHub()" aria-label="إغلاق" class="absolute top-3.5 left-3.5 w-9 h-9 rounded-full flex items-center justify-center text-sm border active:scale-95 transition z-30 touch-manipulation cursor-pointer hover:bg-rose-600 hover:text-white" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <!-- User Hunter Rank Card -->
+      <div class="border rounded-2xl p-4 space-y-3 relative overflow-hidden" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2.5">
+            <div id="hub-rank-avatar" class="w-11 h-11 rounded-xl bg-amber-500/15 text-amber-500 flex items-center justify-center text-xl font-black">
+              🏆
+            </div>
+            <div>
+              <div class="text-[10px] font-bold opacity-70" data-i18n="hub_your_rank">مستوى المتسوق:</div>
+              <h3 id="hub-rank-name" class="font-extrabold text-sm sm:text-base" style="color: var(--text-main);">صياد العروض (المستوى 2)</h3>
+            </div>
+          </div>
+          <div class="text-left font-mono">
+            <div class="text-[10px] opacity-70" data-i18n="hub_xp_label">نقاط الخبرة XP</div>
+            <div id="hub-xp-count" class="text-sm font-black text-amber-500">380 XP</div>
+          </div>
+        </div>
+
+        <!-- Progress bar to next level -->
+        <div class="space-y-1">
+          <div class="flex justify-between text-[10px] opacity-70">
+            <span id="hub-xp-progress-text">الترقية للمستوى القادم</span>
+            <span id="hub-xp-fraction">380 / 600</span>
+          </div>
+          <div class="w-full h-2 rounded-full overflow-hidden" style="background-color: var(--bg-page);">
+            <div id="hub-xp-bar" class="h-full bg-gradient-to-r from-amber-500 to-rose-500 transition-all duration-500" style="width: 63%;"></div>
+          </div>
+        </div>
+
+        <!-- Estimated Total Savings Counter -->
+        <div class="pt-2 border-t flex items-center justify-between text-xs" style="border-color: var(--border-card);">
+          <span class="opacity-75 flex items-center gap-1.5"><i class="fa-solid fa-piggy-bank text-emerald-500"></i> <span data-i18n="hub_saved_label">إجمالي توفيرك التقديري:</span></span>
+          <span id="hub-total-saved" class="font-black font-mono text-emerald-500">4,800 دج</span>
+        </div>
+      </div>
+
+      <!-- 7-Day Streak Card -->
+      <div class="border rounded-2xl p-4 space-y-3" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+        <div class="flex items-center justify-between">
+          <h4 class="font-bold text-xs sm:text-sm flex items-center gap-1.5" style="color: var(--text-main);">
+            <i class="fa-solid fa-bolt text-amber-500"></i>
+            <span data-i18n="hub_streak_title">سلسلة الحضور اليومي</span>
+          </h4>
+          <span id="hub-streak-days" class="text-xs font-mono font-bold text-amber-500">سلسلة 1 يوم</span>
+        </div>
+
+        <!-- 7 Days Track -->
+        <div class="grid grid-cols-7 gap-1.5 text-center text-[10px]" id="hub-streak-track">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Checkin Button -->
+        <button id="hub-checkin-btn" onclick="claimDailyCheckin()" class="w-full min-h-[44px] rounded-xl bg-crimson-600 hover:bg-crimson-700 active:scale-95 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md transition touch-manipulation cursor-pointer">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span id="hub-checkin-btn-text" data-i18n="hub_checkin_cta">تسجيل الحضور اليوم (+150 XP)</span>
+        </button>
+      </div>
+
+      <!-- Daily Quests / Missions -->
+      <div class="space-y-2">
+        <h4 class="font-bold text-xs opacity-75" style="color: var(--text-muted);" data-i18n="hub_quests_title">مهام اليوم للحصول على XP إضافي:</h4>
+        <div class="space-y-1.5 text-xs">
+          
+          <div class="border rounded-xl p-2.5 flex items-center justify-between gap-2" style="background-color: var(--bg-card); border-color: var(--border-card);">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-dice text-amber-500"></i>
+              <span data-i18n="quest_roulette">تجربة صفقة الحظ 🎲</span>
+            </div>
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-amber-500/15 text-amber-500">+50 XP</span>
+          </div>
+
+          <div class="border rounded-xl p-2.5 flex items-center justify-between gap-2" style="background-color: var(--bg-card); border-color: var(--border-card);">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-ticket text-rose-500"></i>
+              <span data-i18n="quest_coupon">نسخ كود خصم كوبون</span>
+            </div>
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-rose-500/15 text-rose-500">+50 XP</span>
+          </div>
+
+          <div class="border rounded-xl p-2.5 flex items-center justify-between gap-2" style="background-color: var(--bg-card); border-color: var(--border-card);">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-heart text-rose-500"></i>
+              <span data-i18n="quest_fav">حفظ صفقة في المفضلة</span>
+            </div>
+            <span class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-rose-500/15 text-rose-500">+30 XP</span>
+          </div>
+
+          <div class="border rounded-xl p-2.5 flex items-center justify-between gap-2" style="background-color: var(--bg-card); border-color: var(--border-card);">
+            <div class="flex items-center gap-2">
+              <i class="fa-brands fa-telegram text-sky-500"></i>
+              <span data-i18n="quest_telegram">متابعة قناة التيليجرام</span>
+            </div>
+            <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" onclick="addXP(100, 'telegram')" class="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-sky-500/15 text-sky-500 hover:underline">+100 XP</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Confetti Canvas Particle Overlay -->
+  <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-[9999] w-full h-full" style="display: none;"></canvas>
 
   <!-- Toast Notification -->
   <div id="toast" class="fixed toast-bottom md:bottom-6 left-1/2 -translate-x-1/2 z-50 border text-emerald-500 font-semibold text-xs px-4 py-2.5 rounded-xl shadow-2xl flex items-center gap-2 transform translate-y-16 opacity-0 pointer-events-none transition-all duration-200" style="background-color: var(--bg-card); border-color: rgba(16, 185, 129, 0.4);">
@@ -1658,7 +1867,31 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         active_event_badge: "حدث ترويجي فعال حالياً",
         active_event_title: "تخفيضات عروض الشتاء Winter Offers 2026 الحصرية",
         active_event_desc: "عروض وتخفيضات رسمية نشطة حالياً مع أكواد حصرية مخصصة للجزائر وفرنسا — الأسعار بالدينار الجزائري وفق سعر السكوار الحقيقي.",
-        active_deals_kw_label: "أهم صفقات الحدث الفعال:"
+        active_deals_kw_label: "أهم صفقات الحدث الفعال:",
+        cat_favs: "المفضلة",
+        roulette_fab: "صفقة الحظ 🎲",
+        roulette_badge: "عجلة الحظ التفاعلية",
+        roulette_title: "صفقة الحظ العشوائية 🎲",
+        roulette_subtitle: "اضغط لتدوير العجلة أو هز الهاتف لاكتشاف صفقة مميزة حصرية!",
+        roulette_winner_tag: "صفقة رابحة!",
+        roulette_spin_btn: "دوّر العجلة الآن (+50 XP) 🎲",
+        roulette_claim_btn: "اقتنص صفقة الحظ الآن!",
+        roulette_shake_tip: "نصيحة: يمكنك هز هاتفك 📱 في أي وقت للتدوير التلقائي!",
+        hub_your_rank: "مستوى المتسوق:",
+        hub_xp_label: "نقاط الخبرة XP",
+        hub_saved_label: "إجمالي توفيرك التقديري:",
+        hub_streak_title: "سلسلة الحضور اليومي",
+        hub_checkin_cta: "تسجيل الحضور اليوم (+150 XP)",
+        hub_checkin_done: "تم تسجيل حضور اليوم ✓",
+        hub_quests_title: "مهام اليوم للحصول على XP إضافي:",
+        quest_roulette: "تجربة صفقة الحظ 🎲",
+        quest_coupon: "نسخ كود خصم كوبون",
+        quest_fav: "حفظ صفقة في المفضلة",
+        quest_telegram: "متابعة قناة التيليجرام",
+        roulette_nav: "صفقة الحظ",
+        nav_hub: "المكافآت",
+        fav_empty_title: "لا توجد صفقات محفوظة بعد",
+        fav_empty_desc: "اضغط على أيقونة القلب ❤️ على أي منتج لحفظه والوصول إليه بسرعة هنا."
       },
       fr: {
         meta_title: "DealScout DZ — Bons Plans & Réductions AliExpress en Dinar Algérien",
@@ -1809,7 +2042,31 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         active_event_badge: "Événement Promo Actif",
         active_event_title: "Promotions Offres d'Hiver 2026 (Winter Offers)",
         active_event_desc: "Bons plans et réductions officielles avec codes promo exclusifs pour l'Algérie et la France — calculés en Dinar Algérien au taux Square.",
-        active_deals_kw_label: "Top deals de l'événement :"
+        active_deals_kw_label: "Top deals de l'événement :",
+        cat_favs: "Favoris",
+        roulette_fab: "Offre Surprise 🎲",
+        roulette_badge: "Roulette Interactive",
+        roulette_title: "Bon Plan Surprise 🎲",
+        roulette_subtitle: "Tournez la roue ou secouez votre téléphone pour dénicher une offre exclusive !",
+        roulette_winner_tag: "Offre Gagnante !",
+        roulette_spin_btn: "Lancer la roulette (+50 XP) 🎲",
+        roulette_claim_btn: "Saisir ce bon plan maintenant !",
+        roulette_shake_tip: "Astuce : secouez votre téléphone 📱 pour relancer instantanément !",
+        hub_your_rank: "Niveau Acheteur :",
+        hub_xp_label: "Points XP",
+        hub_saved_label: "Économies totales estimées :",
+        hub_streak_title: "Série Quotidienne",
+        hub_checkin_cta: "Valider ma présence (+150 XP)",
+        hub_checkin_done: "Présence validée aujourd'hui ✓",
+        hub_quests_title: "Missions du jour pour gagner des XP :",
+        quest_roulette: "Tourner la roue des bons plans 🎲",
+        quest_coupon: "Copier un code promo",
+        quest_fav: "Ajouter un produit en favori",
+        quest_telegram: "Rejoindre le canal Telegram",
+        roulette_nav: "Surprise",
+        nav_hub: "Récompenses",
+        fav_empty_title: "Aucun favori enregistré",
+        fav_empty_desc: "Cliquez sur l'icône cœur ❤️ d'un produit pour l'enregistrer ici."
       }
     };
 
@@ -2056,11 +2313,518 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }, 2000);
     }
 
+    // ── Confetti & Haptic Feedback Engine ───────────────────────────
+    function triggerHaptic(pattern = [15, 30, 15]) {
+      try {
+        if (window.navigator && typeof window.navigator.vibrate === 'function') {
+          window.navigator.vibrate(pattern);
+        }
+      } catch (e) {}
+    }
+
+    let confettiParticles = [];
+    let confettiAnimId = null;
+
+    function fireConfetti(sourceEl = null) {
+      const canvas = document.getElementById('confetti-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      canvas.style.display = 'block';
+
+      let originX = canvas.width / 2;
+      let originY = canvas.height * 0.45;
+
+      if (sourceEl && typeof sourceEl.getBoundingClientRect === 'function') {
+        const rect = sourceEl.getBoundingClientRect();
+        originX = rect.left + rect.width / 2;
+        originY = rect.top + rect.height / 2;
+      }
+
+      const colors = ['#e11d48', '#f59e0b', '#10b981', '#38bdf8', '#a855f7', '#fbbf24', '#ffffff'];
+      confettiParticles = [];
+      const particleCount = 42;
+
+      for (let i = 0; i < particleCount; i++) {
+        const angle = Math.random() * Math.PI * 2;
+        const velocity = 4 + Math.random() * 8;
+        confettiParticles.push({
+          x: originX,
+          y: originY,
+          vx: Math.cos(angle) * velocity,
+          vy: Math.sin(angle) * velocity - 3,
+          size: 4 + Math.random() * 5,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          rotation: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 12,
+          opacity: 1,
+          decay: 0.015 + Math.random() * 0.02
+        });
+      }
+
+      if (confettiAnimId) cancelAnimationFrame(confettiAnimId);
+
+      function render() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        let alive = 0;
+
+        for (let i = 0; i < confettiParticles.length; i++) {
+          const p = confettiParticles[i];
+          if (p.opacity <= 0) continue;
+          alive++;
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += 0.28;
+          p.vx *= 0.98;
+          p.rotation += p.rotSpeed;
+          p.opacity -= p.decay;
+
+          ctx.save();
+          ctx.translate(p.x, p.y);
+          ctx.rotate((p.rotation * Math.PI) / 180);
+          ctx.globalAlpha = Math.max(0, p.opacity);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.7);
+          ctx.restore();
+        }
+
+        if (alive > 0) {
+          confettiAnimId = requestAnimationFrame(render);
+        } else {
+          canvas.style.display = 'none';
+          confettiAnimId = null;
+        }
+      }
+
+      confettiAnimId = requestAnimationFrame(render);
+    }
+
+    // ── Gamification LocalStore & Hunter Progression ────────────────
+    function getGameState() {
+      const raw = getStoredItem('dealscout_game_state', null);
+      if (raw) {
+        try {
+          const parsed = JSON.parse(raw);
+          if (parsed && typeof parsed.xp === 'number') {
+            if (!Array.isArray(parsed.favs)) parsed.favs = [];
+            return parsed;
+          }
+        } catch (e) {}
+      }
+      return {
+        xp: 120,
+        streak: 1,
+        last_checkin: null,
+        saved_dzd: 3200,
+        favs: []
+      };
+    }
+
+    function saveGameState(state) {
+      setStoredItem('dealscout_game_state', JSON.stringify(state));
+      updateGamificationBadges(state);
+    }
+
+    function getRankInfo(xp) {
+      if (xp < 300) {
+        return {
+          level: 1,
+          name: currentLang === 'fr' ? 'Éclaireur Débutant' : 'مستكشف صفقات',
+          avatar: '🔍',
+          minXp: 0,
+          maxXp: 300
+        };
+      } else if (xp < 800) {
+        return {
+          level: 2,
+          name: currentLang === 'fr' ? 'Chasseur de Bons Plans' : 'صياد العروض',
+          avatar: '🎯',
+          minXp: 300,
+          maxXp: 800
+        };
+      } else if (xp < 1600) {
+        return {
+          level: 3,
+          name: currentLang === 'fr' ? 'Sniper de Réductions' : 'قناص التخفيضات',
+          avatar: '⚡',
+          minXp: 800,
+          maxXp: 1600
+        };
+      } else {
+        return {
+          level: 4,
+          name: currentLang === 'fr' ? 'Légende des Économies 👑' : 'ملك التوفير 👑',
+          avatar: '👑',
+          minXp: 1600,
+          maxXp: 3000
+        };
+      }
+    }
+
+    function addXP(amount, reason = '') {
+      const state = getGameState();
+      const prevRank = getRankInfo(state.xp);
+      state.xp += amount;
+      const nextRank = getRankInfo(state.xp);
+      saveGameState(state);
+
+      if (nextRank.level > prevRank.level) {
+        fireConfetti();
+        triggerHaptic([30, 60, 30]);
+        showToast(currentLang === 'fr'
+          ? `Bravo ! Vous êtes passé au niveau ${nextRank.level} : ${nextRank.name} 🎉`
+          : `مبروك! ارتقيت للمستوى ${nextRank.level}: ${nextRank.name} 🎉`);
+      }
+    }
+
+    function addSavedDZD(amount) {
+      const state = getGameState();
+      state.saved_dzd = (state.saved_dzd || 0) + amount;
+      saveGameState(state);
+    }
+
+    function updateGamificationBadges(state = null) {
+      if (!state) state = getGameState();
+      const streakBtn = document.getElementById('streak-header-text');
+      if (streakBtn) {
+        streakBtn.textContent = currentLang === 'fr' ? `${state.streak || 1} j` : `${state.streak || 1} يوم`;
+      }
+      const favBadge = document.getElementById('mob-fav-badge');
+      const countFavs = document.getElementById('count-favs');
+      const favCount = (state.favs || []).length;
+      if (favBadge) {
+        favBadge.textContent = favCount;
+        if (favCount > 0) {
+          favBadge.classList.remove('hidden');
+          favBadge.classList.add('flex');
+        } else {
+          favBadge.classList.add('hidden');
+          favBadge.classList.remove('flex');
+        }
+      }
+      if (countFavs) {
+        countFavs.textContent = favCount;
+      }
+    }
+
+    function getTodayKey() {
+      const d = new Date();
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    }
+
+    function getYesterdayKey() {
+      const d = new Date();
+      d.setDate(d.getDate() - 1);
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    }
+
+    function claimDailyCheckin() {
+      const state = getGameState();
+      const today = getTodayKey();
+      const yesterday = getYesterdayKey();
+
+      if (state.last_checkin === today) {
+        showToast(currentLang === 'fr' ? 'Présence déjà enregistrée aujourd’hui !' : 'لقد سجلت حضورك اليوم بالفعل!');
+        return;
+      }
+
+      if (state.last_checkin === yesterday) {
+        state.streak = (state.streak || 0) + 1;
+      } else {
+        state.streak = 1;
+      }
+      state.last_checkin = today;
+      state.xp = (state.xp || 0) + 150;
+      state.saved_dzd = (state.saved_dzd || 0) + 500;
+      saveGameState(state);
+
+      fireConfetti();
+      triggerHaptic([20, 50, 20]);
+      showToast(currentLang === 'fr' ? `Présence validée ! +150 XP (Série de ${state.streak} j) 🔥` : `تم تسجيل الحضور اليوم بنجاح! +150 XP (سلسلة ${state.streak} يوم) 🔥`);
+      renderGamificationHub();
+    }
+
+    function renderGamificationHub() {
+      const state = getGameState();
+      const rank = getRankInfo(state.xp);
+
+      const avatarEl = document.getElementById('hub-rank-avatar');
+      const nameEl = document.getElementById('hub-rank-name');
+      const xpCountEl = document.getElementById('hub-xp-count');
+      const xpFractionEl = document.getElementById('hub-xp-fraction');
+      const xpBarEl = document.getElementById('hub-xp-bar');
+      const savedEl = document.getElementById('hub-total-saved');
+      const streakDaysEl = document.getElementById('hub-streak-days');
+      const checkinBtn = document.getElementById('hub-checkin-btn');
+      const checkinText = document.getElementById('hub-checkin-btn-text');
+
+      if (avatarEl) avatarEl.textContent = rank.avatar;
+      if (nameEl) nameEl.textContent = `${rank.name} (${currentLang === 'fr' ? 'Niveau' : 'المستوى'} ${rank.level})`;
+      if (xpCountEl) xpCountEl.textContent = `${state.xp} XP`;
+
+      const range = rank.maxXp - rank.minXp;
+      const curInRange = Math.max(0, state.xp - rank.minXp);
+      const pct = Math.min(100, Math.round((curInRange / range) * 100));
+
+      if (xpFractionEl) xpFractionEl.textContent = `${state.xp} / ${rank.maxXp}`;
+      if (xpBarEl) xpBarEl.style.width = `${pct}%`;
+      if (savedEl) savedEl.textContent = `${(state.saved_dzd || 0).toLocaleString()} ${I18N[currentLang].currency_dzd}`;
+      if (streakDaysEl) streakDaysEl.textContent = currentLang === 'fr' ? `Série ${state.streak || 1} j` : `سلسلة ${state.streak || 1} يوم`;
+
+      const isCheckedToday = state.last_checkin === getTodayKey();
+      if (checkinBtn && checkinText) {
+        if (isCheckedToday) {
+          checkinBtn.classList.remove('bg-crimson-600', 'hover:bg-crimson-700', 'cursor-pointer');
+          checkinBtn.classList.add('bg-emerald-600', 'opacity-85', 'cursor-default');
+          checkinText.textContent = I18N[currentLang].hub_checkin_done || 'تم تسجيل حضور اليوم ✓';
+        } else {
+          checkinBtn.classList.remove('bg-emerald-600', 'opacity-85', 'cursor-default');
+          checkinBtn.classList.add('bg-crimson-600', 'hover:bg-crimson-700', 'cursor-pointer');
+          checkinText.textContent = I18N[currentLang].hub_checkin_cta || 'تسجيل الحضور اليوم (+150 XP)';
+        }
+      }
+
+      // Render 7-day track
+      const trackEl = document.getElementById('hub-streak-track');
+      if (trackEl) {
+        const curStreak = state.streak || 1;
+        const days = currentLang === 'fr' 
+          ? ['J1', 'J2', 'J3', 'J4', 'J5', 'J6', 'J7'] 
+          : ['يوم 1', 'يوم 2', 'يوم 3', 'يوم 4', 'يوم 5', 'يوم 6', 'يوم 7'];
+        trackEl.innerHTML = days.map((label, idx) => {
+          const dayNum = idx + 1;
+          const isDone = (dayNum <= curStreak);
+          return `
+            <div class="border rounded-xl p-1.5 flex flex-col items-center gap-1 transition ${isDone ? 'border-amber-500 bg-amber-500/15 text-amber-500 font-bold' : 'border-zinc-800 bg-zinc-900/40 opacity-50'}">
+              <span class="text-[9px] font-mono">${label}</span>
+              <div class="w-6 h-6 rounded-full flex items-center justify-center text-xs ${isDone ? 'bg-amber-500 text-zinc-950 font-black' : 'bg-zinc-800 text-zinc-400'}">
+                ${isDone ? '<i class="fa-solid fa-check text-[10px]"></i>' : dayNum}
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+    }
+
+    function openGamificationHub() {
+      renderGamificationHub();
+      const modal = document.getElementById('gamification-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
+      }
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGamificationHub() {
+      const modal = document.getElementById('gamification-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+      }
+      document.body.style.overflow = '';
+    }
+
+    function onGamificationBackdropClick(e) {
+      if (e.target && e.target.id === 'gamification-modal') {
+        closeGamificationHub();
+      }
+    }
+
+    // ── Favorites / Bookmarks Engine ────────────────────────────────
+    function isFavorite(dealId) {
+      const state = getGameState();
+      return Array.isArray(state.favs) && state.favs.includes(dealId);
+    }
+
+    function toggleFavorite(dealId, event) {
+      if (event) {
+        try { event.stopPropagation(); } catch (e) {}
+      }
+      const state = getGameState();
+      if (!Array.isArray(state.favs)) state.favs = [];
+      const idx = state.favs.indexOf(dealId);
+      const isAdding = (idx === -1);
+
+      if (isAdding) {
+        state.favs.push(dealId);
+        triggerHaptic([20]);
+        addXP(30, 'fav');
+        showToast(currentLang === 'fr' ? 'Ajouté aux favoris ❤️ (+30 XP)' : 'تم الحفظ في المفضلة ❤️ (+30 XP)');
+      } else {
+        state.favs.splice(idx, 1);
+        triggerHaptic([10]);
+        showToast(currentLang === 'fr' ? 'Retiré des favoris' : 'تمت الإزالة من المفضلة');
+      }
+      saveGameState(state);
+
+      // Animate heart icon on the card
+      const icon = document.getElementById('fav-icon-' + dealId);
+      if (icon) {
+        if (isAdding) {
+          icon.className = 'fa-solid fa-heart text-rose-500 text-xs animate-heart-pop';
+        } else {
+          icon.className = 'fa-regular fa-heart text-white/90 text-xs animate-heart-pop';
+        }
+      }
+
+      if (currentCategory === 'favs') {
+        filterDeals();
+      }
+    }
+
+    function filterByFavoritesMobile() {
+      showPage('deals');
+      setCategory('favs');
+    }
+
+    // ── Deal Roulette Engine ("صفقة الحظ 🎲") ──────────────────────
+    let isSpinningRoulette = false;
+
+    function openRouletteModal() {
+      const modal = document.getElementById('roulette-modal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
+      }
+      document.body.style.overflow = 'hidden';
+
+      // Set initial preview if available
+      if (allDeals && allDeals.length > 0) {
+        const randomInitial = allDeals[Math.floor(Math.random() * allDeals.length)];
+        displayRouletteDeal(randomInitial, false);
+      }
+    }
+
+    function closeRouletteModal() {
+      if (isSpinningRoulette) return;
+      const modal = document.getElementById('roulette-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+      }
+      document.body.style.overflow = '';
+    }
+
+    function onRouletteBackdropClick(e) {
+      if (e.target && e.target.id === 'roulette-modal') {
+        closeRouletteModal();
+      }
+    }
+
+    function displayRouletteDeal(deal, isWinner = false) {
+      if (!deal) return;
+      const img = document.getElementById('roulette-img');
+      const title = document.getElementById('roulette-deal-title');
+      const cat = document.getElementById('roulette-cat');
+      const price = document.getElementById('roulette-price');
+      const coupon = document.getElementById('roulette-coupon-pill');
+      const winnerTag = document.getElementById('roulette-winner-tag');
+      const buyBtn = document.getElementById('roulette-buy-btn');
+
+      if (img && deal.photo_url) img.src = deal.photo_url;
+      if (title) title.textContent = deal.title || 'Deal AliExpress';
+      if (cat) cat.textContent = deal.category_label || (I18N[currentLang].cat_all || 'صفقة');
+      if (price) price.innerHTML = formatPrice(deal);
+      if (coupon) coupon.textContent = deal.coupon ? `🎟 ${deal.coupon}` : '';
+
+      if (winnerTag) {
+        if (isWinner) winnerTag.classList.remove('hidden');
+        else winnerTag.classList.add('hidden');
+      }
+
+      if (buyBtn) {
+        if (isWinner && deal.affiliate_url) {
+          buyBtn.href = deal.affiliate_url;
+          buyBtn.style.display = 'flex';
+          buyBtn.onclick = () => handleBuyClick(deal.coupon || '');
+        } else {
+          buyBtn.style.display = 'none';
+        }
+      }
+    }
+
+    function spinRoulette() {
+      if (isSpinningRoulette) return;
+      if (!allDeals || allDeals.length === 0) {
+        showToast(currentLang === 'fr' ? 'Chargement des offres...' : 'جاري تحميل الصفقات...');
+        return;
+      }
+
+      isSpinningRoulette = true;
+      const spinBtn = document.getElementById('roulette-spin-btn');
+      const btnText = document.getElementById('roulette-btn-text');
+      const displayCard = document.getElementById('roulette-display-card');
+      const winnerTag = document.getElementById('roulette-winner-tag');
+      const buyBtn = document.getElementById('roulette-buy-btn');
+
+      if (winnerTag) winnerTag.classList.add('hidden');
+      if (buyBtn) buyBtn.style.display = 'none';
+      if (spinBtn) spinBtn.disabled = true;
+      if (btnText) btnText.textContent = currentLang === 'fr' ? 'Roulement en cours... 🎲' : 'جاري التدوير... 🎲';
+      if (displayCard) displayCard.classList.add('animate-slot-roll');
+
+      let cycles = 0;
+      const maxCycles = 16;
+      let winningDeal = null;
+
+      const interval = setInterval(() => {
+        cycles++;
+        const randomIndex = Math.floor(Math.random() * allDeals.length);
+        const candidate = allDeals[randomIndex];
+        displayRouletteDeal(candidate, false);
+        triggerHaptic([10]);
+
+        if (cycles >= maxCycles) {
+          clearInterval(interval);
+          isSpinningRoulette = false;
+          if (displayCard) displayCard.classList.remove('animate-slot-roll');
+          if (spinBtn) spinBtn.disabled = false;
+          if (btnText) btnText.textContent = currentLang === 'fr' ? 'Recommencer 🎲' : 'دوّر مجدداً 🎲';
+
+          winningDeal = candidate;
+          displayRouletteDeal(winningDeal, true);
+          fireConfetti(spinBtn);
+          triggerHaptic([30, 60, 30]);
+          addXP(50, 'roulette');
+        }
+      }, 75);
+    }
+
+    // Mobile Shake Detection for Instant Roulette Roll
+    let lastShakeTime = 0;
+    let lastX = 0, lastY = 0, lastZ = 0;
+    if (window.DeviceMotionEvent) {
+      window.addEventListener('devicemotion', (e) => {
+        const acc = e.accelerationIncludingGravity;
+        if (!acc) return;
+        const curTime = Date.now();
+        if ((curTime - lastShakeTime) > 1200) {
+          const diffTime = curTime - lastShakeTime;
+          const speed = Math.abs(acc.x + acc.y + acc.z - lastX - lastY - lastZ) / diffTime * 10000;
+          if (speed > 28) {
+            lastShakeTime = curTime;
+            triggerHaptic([25, 40]);
+            openRouletteModal();
+            spinRoulette();
+          }
+          lastX = acc.x; lastY = acc.y; lastZ = acc.z;
+        }
+      });
+    }
+
     function handleBuyClick(couponCode) {
+      triggerHaptic([20, 40, 20]);
+      addXP(100, 'buy');
+      addSavedDZD(1500);
+      fireConfetti();
       if (couponCode && couponCode.length >= 3) {
         try {
           navigator.clipboard.writeText(couponCode);
-          showToast(currentLang === 'fr' ? `Code promo ${couponCode} copié !` : `تم نسخ كود الخصم ${couponCode} تلقائياً!`);
+          showToast(currentLang === 'fr' ? `Code promo ${couponCode} copié ! (+100 XP)` : `تم نسخ كود الخصم ${couponCode} تلقائياً! (+100 XP 🚀)`);
         } catch(e) {}
       }
     }
@@ -2471,11 +3235,15 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         const el = document.getElementById('count-' + k);
         if (el) el.textContent = v;
       }
+      updateGamificationBadges();
     }
 
     function filterDeals() {
       let filtered = allDeals;
-      if (currentCategory !== 'all') {
+      if (currentCategory === 'favs') {
+        const favIds = new Set(getGameState().favs || []);
+        filtered = filtered.filter(d => favIds.has(d.id));
+      } else if (currentCategory !== 'all') {
         filtered = filtered.filter(d => d.category === currentCategory);
       }
       if (currentSearchTerm) {
@@ -2498,7 +3266,18 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const feedEl = document.getElementById('deals-feed');
 
       if (filtered.length === 0) {
-        if (emptyEl) emptyEl.classList.remove('hidden');
+        if (emptyEl) {
+          emptyEl.classList.remove('hidden');
+          const emptyTitle = emptyEl.querySelector('h3');
+          const emptyDesc = emptyEl.querySelector('p');
+          if (currentCategory === 'favs') {
+            if (emptyTitle) emptyTitle.textContent = I18N[currentLang].fav_empty_title || 'لا توجد صفقات محفوظة بعد';
+            if (emptyDesc) emptyDesc.textContent = I18N[currentLang].fav_empty_desc || 'اضغط على أيقونة القلب ❤️ على أي منتج لحفظه والوصول إليه بسرعة هنا.';
+          } else {
+            if (emptyTitle) emptyTitle.textContent = I18N[currentLang].empty_title || 'لم نعثر على أي صفقات تطابق بحثك';
+            if (emptyDesc) emptyDesc.textContent = I18N[currentLang].empty_desc || 'جرّب البحث باسم منتج آخر أو اختيار تصنيف مختلف.';
+          }
+        }
         if (gridEl) gridEl.classList.add('hidden');
         if (feedEl) feedEl.classList.add('hidden');
       } else {
@@ -2656,11 +3435,19 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
         const safeTitle = escapeHtml(deal.title);
 
+        const isFav = isFavorite(deal.id);
+        const favBtnHtml = `
+          <button type="button" onclick="toggleFavorite('${deal.id}', event)" aria-label="${isFav ? 'إزالة من المفضلة' : 'حفظ في المفضلة'}" class="absolute top-2 right-2 w-7 h-7 rounded border flex items-center justify-center transition active:scale-125 touch-manipulation z-20 cursor-pointer shadow-sm hover:border-rose-500" style="background-color: rgba(18, 18, 21, 0.85); border-color: rgba(255, 255, 255, 0.2);">
+            <i class="${isFav ? 'fa-solid text-rose-500' : 'fa-regular text-white/90'} fa-heart text-xs" id="fav-icon-${deal.id}"></i>
+          </button>
+        `;
+
         const photoHtml = deal.photo_url ? `
           <div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-2.5 cursor-pointer group flex items-center justify-center border" style="background-color: var(--bg-page); border-color: var(--border-card);" onclick="openDealModal('${deal.id}')">
             <img src="${deal.photo_url}" alt="${safeTitle}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="handleImgError(this, '${escapeHtml(deal.photo_url)}')" class="w-full h-full object-contain group-hover:scale-102 transition-transform duration-200">
+            ${favBtnHtml}
             ${deal.has_coins ? `<span class="absolute top-2 left-2 bg-amber-500 text-zinc-950 text-[10px] font-bold px-1.5 py-0.5 rounded flex items-center gap-1 shadow-sm tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
-            ${deal.country ? `<span class="absolute top-2 right-2 text-[10px] px-1.5 py-0.5 rounded font-semibold border shadow-sm" style="background-color: rgba(18, 18, 21, 0.85); border-color: rgba(255, 255, 255, 0.15); color: #fafafa;">${escapeHtml(deal.country)}</span>` : ''}
+            ${deal.country ? `<span class="absolute ${deal.has_coins ? 'top-8' : 'top-2'} left-2 text-[10px] px-1.5 py-0.5 rounded font-semibold border shadow-sm" style="background-color: rgba(18, 18, 21, 0.85); border-color: rgba(255, 255, 255, 0.15); color: #fafafa;">${escapeHtml(deal.country)}</span>` : ''}
           </div>
         ` : `
           <div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden mb-2.5 cursor-pointer group flex items-center justify-center border" style="background-color: var(--bg-page); border-color: var(--border-card);" onclick="openDealModal('${deal.id}')">
@@ -2668,6 +3455,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               <i class="fa-solid fa-bag-shopping text-xl text-rose-500"></i>
               <span class="text-[11px] font-semibold" style="color: var(--text-muted);">${safeTitle.slice(0, 30)}...</span>
             </div>
+            ${favBtnHtml}
             ${deal.has_coins ? `<span class="absolute top-2 left-2 bg-amber-500 text-zinc-950 text-[10px] font-bold px-1.5 py-0.5 rounded flex items-center gap-1 shadow-sm tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
           </div>
         `;
@@ -2879,7 +3667,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
     function copyCoupon(code, btn) {
       navigator.clipboard.writeText(code).then(() => {
-        showToast(I18N[currentLang].btn_copied + ' ' + code);
+        triggerHaptic([15, 30, 15]);
+        addXP(50, 'coupon');
+        addSavedDZD(1000);
+        fireConfetti(btn);
+        showToast((I18N[currentLang].btn_copied || 'تم النسخ!') + ' ' + code + ' (+50 XP)');
         if (btn) {
           const span = btn.querySelector('.copy-text');
           const icon = btn.querySelector('i');
@@ -2956,6 +3748,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       // Initialize theme & language
       applyTheme(currentTheme);
       setLanguage(currentLang);
+      updateGamificationBadges();
       if (initialRoute !== 'deals') {
         showPage(initialRoute, false);
       }
