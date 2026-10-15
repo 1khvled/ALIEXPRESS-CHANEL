@@ -133,3 +133,77 @@ def test_active_event_api_and_seo_banner():
     assert 'WOAE06' in html
     assert 'WOAE35' in html
     assert 'Winter Offers' in html
+
+
+def test_llms_txt_and_full_endpoints():
+    """Verify /llms.txt and /llms-full.txt routes follow llmstxt.org specification."""
+    # 1. Standard llms.txt
+    resp = client.get("/llms.txt")
+    assert resp.status_code == 200
+    assert "text/plain" in resp.headers.get("content-type", "")
+    assert "public, max-age=3600" in resp.headers.get("cache-control", "")
+    text = resp.text
+    assert "# DealScout DZ" in text
+    assert "Core Features & Capabilities" in text
+    assert "BaridiMob & Binance P2P Payment Guide" in text
+    assert "AliExpress Coins Discount Generator" in text
+    assert "https://dealscoutgreen.vercel.app/llms-full.txt" in text
+
+    # 2. Extended llms-full.txt
+    resp_full = client.get("/llms-full.txt")
+    assert resp_full.status_code == 200
+    assert "text/plain" in resp_full.headers.get("content-type", "")
+    text_full = resp_full.text
+    assert "Complete AI & LLM Knowledge Base" in text_full
+    assert "Bybit" in text_full
+    assert "RedotPay" in text_full
+    assert "Algérie Poste" in text_full
+
+
+def test_ai_summary_endpoint():
+    """Verify /api/ai-summary provides structured JSON data for AI agents."""
+    resp = client.get("/api/ai-summary")
+    assert resp.status_code == 200
+    assert "application/json" in resp.headers.get("content-type", "")
+    data = resp.json()
+    assert data["platform"] == "DealScout DZ"
+    assert data["country"] == "Algeria"
+    assert data["iso_code"] == "DZ"
+    assert "currency_context" in data
+    assert "payment_workflow" in data
+    assert any("Bybit" in card["name"] for card in data["payment_workflow"]["destination_cards"])
+    assert "telegram_channels" in data
+    assert "DzAliexpress0" in data["telegram_channels"]["algeria_deals"]
+    assert any("Coins" in tool["name"] for tool in data["core_tools"])
+
+
+def test_ai_crawlers_in_robots_txt():
+    """Verify robots.txt explicitly allows major Generative AI bots and points to llms.txt."""
+    resp = client.get("/robots.txt")
+    assert resp.status_code == 200
+    text = resp.text
+    assert "User-agent: GPTBot" in text
+    assert "User-agent: ChatGPT-User" in text
+    assert "User-agent: PerplexityBot" in text
+    assert "User-agent: ClaudeBot" in text
+    assert "User-agent: Google-Extended" in text
+    assert "User-agent: Applebot-Extended" in text
+    assert "Allow: /llms.txt" in text
+    assert "Allow: /llms-full.txt" in text
+
+
+def test_geo_schema_and_on_page_elements():
+    """Verify WebApplication schema, SpeakableSpecification, and AI Overview facts block."""
+    html = USER_WEBSITE_HTML
+    # Alternate link in head
+    assert '<link rel="alternate" type="text/plain" href="https://dealscoutgreen.vercel.app/llms.txt"' in html
+    # Schema.org WebApplication for Coins tool
+    assert '"@type": "WebApplication"' in html
+    assert 'AliExpress Coins Deal Discount Link Generator Algeria' in html
+    # Schema.org SpeakableSpecification
+    assert '"@type": "SpeakableSpecification"' in html
+    assert '#ai-overview-facts' in html
+    # On-page AI Overview facts block
+    assert 'id="ai-overview-facts"' in html
+    assert 'data-i18n="geo_badge"' in html
+    assert 'data-i18n="geo_summary_title"' in html

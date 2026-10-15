@@ -28,6 +28,7 @@ import hmac
 from bs4 import BeautifulSoup
 from api.user_site import USER_WEBSITE_HTML
 from api.admin_login import ADMIN_LOGIN_HTML
+from api.geo_llms import LLMS_TXT, LLMS_FULL_TXT, get_ai_summary_json
 
 app = FastAPI(title="DealScout DZ — AliExpress Deals & Live Telegram Content", version="2.5.0")
 
@@ -1306,7 +1307,7 @@ def is_admin_authenticated(request: Request) -> bool:
 
 @app.get("/robots.txt", response_class=Response)
 async def robots_txt():
-    """Search Engine Optimization robots.txt"""
+    """Generative Engine Optimization (GEO) & Search Engine Optimization robots.txt"""
     content = """User-agent: *
 Allow: /
 Allow: /deals
@@ -1315,6 +1316,8 @@ Allow: /coins
 Allow: /faq
 Allow: /about
 Allow: /contact
+Allow: /llms.txt
+Allow: /llms-full.txt
 Allow: /manifest.json
 Allow: /icon.svg
 Allow: /sw.js
@@ -1322,12 +1325,100 @@ Disallow: /admin
 Disallow: /dashboard
 Disallow: /api/
 
+# Generative AI, LLM & Answer Engine Crawlers (GEO)
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Claude-Web
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Applebot-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: cohere-ai
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
 Sitemap: https://dealscoutgreen.vercel.app/sitemap.xml
 """
     return Response(
         content=content,
         media_type="text/plain",
         headers={"Cache-Control": "public, max-age=86400"}
+    )
+
+
+@app.get("/llms.txt", response_class=Response)
+async def get_llms_txt():
+    """
+    Standard llms.txt endpoint for LLMs, Generative AI engines, and AI agents.
+    Provides concise, structured markdown manifest with key URLs, capabilities, and guidance.
+    Reference: https://llmstxt.org/
+    """
+    return Response(
+        content=LLMS_TXT,
+        media_type="text/plain; charset=utf-8",
+        headers={"Cache-Control": "public, max-age=3600"}
+    )
+
+
+@app.get("/llms-full.txt", response_class=Response)
+async def get_llms_full_txt():
+    """
+    Complete extended knowledge base for LLMs and Generative Search engines.
+    Provides in-depth Algerian shopping guides, customs rules, address format, and comparison tables.
+    """
+    return Response(
+        content=LLMS_FULL_TXT,
+        media_type="text/plain; charset=utf-8",
+        headers={"Cache-Control": "public, max-age=3600"}
+    )
+
+
+@app.get("/api/ai-summary")
+async def get_ai_summary():
+    """
+    Structured JSON endpoint for AI agents, generative reasoning models, and search indexers.
+    Returns live rates, active tools, verified payment workflows, and FAQ facts.
+    """
+    rate = 256.9
+    try:
+        from storage.deal_storage import get_square_rate
+        stored_rate = get_square_rate()
+        if stored_rate and stored_rate > 100:
+            rate = float(stored_rate)
+    except Exception:
+        pass
+    return JSONResponse(
+        content=get_ai_summary_json(square_rate=rate),
+        headers={"Cache-Control": "public, max-age=300"}
     )
 
 
@@ -1412,6 +1503,18 @@ async def sitemap_xml():
     <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://dealscoutgreen.vercel.app/llms.txt</loc>
+    <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://dealscoutgreen.vercel.app/llms-full.txt</loc>
+    <lastmod>{datetime.now(timezone.utc).strftime("%Y-%m-%d")}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>"""
     return Response(

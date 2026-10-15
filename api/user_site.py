@@ -26,6 +26,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <link rel="alternate" hreflang="fr" href="https://dealscoutgreen.vercel.app/">
   <link rel="alternate" hreflang="x-default" href="https://dealscoutgreen.vercel.app/">
 
+  <!-- Generative Engine Optimization (GEO) & LLM Resource Manifests -->
+  <link rel="alternate" type="text/plain" href="https://dealscoutgreen.vercel.app/llms.txt" title="LLMs manifest">
+  <link rel="alternate" type="text/plain" href="https://dealscoutgreen.vercel.app/llms-full.txt" title="LLMs full documentation">
+
   <!-- Meta Search & Geography -->
   <meta name="keywords" content="aliexpressdz, aliexpress deals dz, aliexpress deald dz, عروض علي اكسبراس, شراء من علي اكسبراس في الجزائر, علي اكسبراس الجزائر, تخفيضات علي اكسبراس, كود تخفيض علي اكسبراس الجزائر, كوبونات علي اكسبراس الجزائر, صفقات علي اكسبراس, عملات علي اكسبراس, بوت تخفيض العملات علي اكسبراس, الشراء من علي اكسبراس في الجزائر بريدي موب, توصيل علي اكسبراس الجزائر, بريد الجزائر, اسعار السكوار, قناة تيليجرام صفقات علي اكسبراس الجزائر, عروض الشتاء Winter Offers AliExpress, تخفيضات عروض الشتاء 2026, كود خصم Winter Offers, WOAE23, WOAE35, WOAE06, WOAE12, Honor X70 5G, realme 15T 5G, OPPO A6 Pro, iQOO Z11s 5G, realme Watch 5, AMD Ryzen 5 8400F, Redmi Note 12 5G, CUSU SSD 512GB, Blackview Wave 10C, aliexpress algerie, شراء من علي اكسبرس بريدي موب, بطاقة بايبايت في الجزائر, بطاقة bybit مجانية, بطاقة redotpay الجزائر, كود خصم redotpay, شحن redotpay بريدي موب, شراء usdt بالدينار الجزائري, بطاقة فيزا للشراء من الانترنت الجزائر, بطاقة ماستركارد افتراضية الجزائر, تفعيل بايبال بالجزائر, binance p2p baridimob algerie, carte bybit algerie, carte redotpay algerie, acheter sur aliexpress baridimob, carte bancaire internationale algerie, تخفيضات علي اكسبرس الجزائر, صفقات aliexpress, algeria deals, dealscout dz, bons plans algerie">
   <meta name="geo.region" content="DZ">
@@ -537,6 +541,41 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     ]
   }
   </script>
+  <!-- Schema.org WebApplication (Coins Deal Generator for AI Agents & Search Engines) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "@id": "https://dealscoutgreen.vercel.app/#coins-tool",
+    "name": "AliExpress Coins Deal Discount Link Generator Algeria",
+    "alternateName": "مولد روابط تخفيض عملات علي إكسبرس في الجزائر",
+    "url": "https://dealscoutgreen.vercel.app/#coins-generator",
+    "applicationCategory": "ShoppingApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript. Requires HTML5.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "DZD"
+    },
+    "description": "أداة مجانية لتحويل أي رابط منتج من AliExpress إلى رابط تخفيض العملات المباشر (Coins Discount Link) بخصومات تصل حتى 70% للمتسوقين في الجزائر مع تتبع العملات وأسعار الدينار الجزائري.",
+    "inLanguage": ["ar", "fr"]
+  }
+  </script>
+  <!-- Schema.org SpeakableSpecification for AI Voice Overviews & Answer Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://dealscoutgreen.vercel.app/#speakable",
+    "url": "https://dealscoutgreen.vercel.app/",
+    "name": "صفقات علي إكسبرس ودليل الشراء في الجزائر",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["#ai-overview-facts", "#seo-shopping-guide", "#page-faq"]
+    }
+  }
+  </script>
 </head>
 <body class="min-h-screen flex flex-col justify-between" dir="rtl">
 
@@ -979,6 +1018,38 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             </div>
           </div>
 
+        </div>
+
+        <!-- AI Overview / GEO Quick Fact Sheet for Answer Engines (Perplexity, SearchGPT, Gemini) -->
+        <div id="ai-overview-facts" class="border rounded-xl p-4 sm:p-5 space-y-3" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+          <div class="flex items-center justify-between flex-wrap gap-2 border-b pb-2.5" style="border-color: var(--border-card);">
+            <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded text-xs font-bold bg-sky-500/10 text-sky-500 border border-sky-500/20">
+              <i class="fa-solid fa-robot text-xs"></i>
+              <span data-i18n="geo_badge">ملخص الذكاء الاصطناعي والإجابات المباشرة (AI Overview & GEO)</span>
+            </div>
+            <span class="text-[11px] font-mono opacity-70">llms.txt compliant</span>
+          </div>
+          <h3 class="font-bold text-sm" style="color: var(--text-main);" data-i18n="geo_summary_title">
+            حقائق سريعة لـ DealScout DZ والمحركات الذكية
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs leading-relaxed" style="color: var(--text-muted);">
+            <div class="p-3 rounded-lg border" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <b class="text-emerald-500 block text-xs mb-1" data-i18n="geo_fact_currency_title">العملة وأسعار الصرف:</b>
+              <span data-i18n="geo_fact_currency_desc">الدينار الجزائري (DZD) محسوب بسعر السكوار اللحظي (SquareAlgerie.com).</span>
+            </div>
+            <div class="p-3 rounded-lg border" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <b class="text-amber-500 block text-xs mb-1" data-i18n="geo_fact_payment_title">طريقة الدفع الرسمية:</b>
+              <span data-i18n="geo_fact_payment_desc">BaridiMob / CCP ← منصة Binance P2P ← بطاقة Bybit ماستركارد أو RedotPay.</span>
+            </div>
+            <div class="p-3 rounded-lg border" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <b class="text-sky-500 block text-xs mb-1" data-i18n="geo_fact_shipping_title">التوصيل والاستلام:</b>
+              <span data-i18n="geo_fact_shipping_desc">بريد الجزائر (Algérie Poste / EMS)، إعفاء تام للطرود الشخصية غير التجارية.</span>
+            </div>
+            <div class="p-3 rounded-lg border" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <b class="text-purple-500 block text-xs mb-1" data-i18n="geo_fact_coins_title">أداة العملات (Coins):</b>
+              <span data-i18n="geo_fact_coins_desc">مولد روابط مجاني لتفعيل خصم 50% إلى 70% بدلاً من 2% القياسية.</span>
+            </div>
+          </div>
         </div>
 
         <!-- Internal Navigation & Cross-Links (Prevent Orphan Pages & Boost PageRank) -->
@@ -2674,7 +2745,17 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         seo_block4_h: "قناة التيليجرام لعروض علي اكسبراس في الجزائر",
         seo_block4_p: "الهدف الرئيسي من منصتنا هو إيصال أفضل التخفيضات إليك في الثواني الأولى. نظراً لأن الصفقات القوية تنفد كمياتها بسرعة، ننصحك بالانضمام فوراً إلى قناة التيليجرام الرسمية (@DzAliexpress0) لتصلك الإشعارات اللحظية بروابط الشراء المباشرة.",
         seo_block4_btn: "انضم لقناة صفقات الجزائر (@DzAliexpress0)",
-        seo_tags_title: "الكلمات الأكثر بحثاً في الجزائر:"
+        seo_tags_title: "الكلمات الأكثر بحثاً في الجزائر:",
+        geo_badge: "ملخص الذكاء الاصطناعي والإجابات المباشرة (AI Overview & GEO)",
+        geo_summary_title: "حقائق سريعة لـ DealScout DZ والمحركات الذكية",
+        geo_fact_currency_title: "العملة وأسعار الصرف:",
+        geo_fact_currency_desc: "الدينار الجزائري (DZD) محسوب بسعر السكوار اللحظي (SquareAlgerie.com).",
+        geo_fact_payment_title: "طريقة الدفع الرسمية:",
+        geo_fact_payment_desc: "BaridiMob / CCP ← منصة Binance P2P ← بطاقة Bybit ماستركارد أو RedotPay.",
+        geo_fact_shipping_title: "التوصيل والاستلام:",
+        geo_fact_shipping_desc: "بريد الجزائر (Algérie Poste / EMS)، إعفاء تام للطرود الشخصية غير التجارية.",
+        geo_fact_coins_title: "أداة العملات (Coins):",
+        geo_fact_coins_desc: "مولد روابط مجاني لتفعيل خصم 50% إلى 70% بدلاً من 2% القياسية."
       },
       fr: {
         meta_title: "DealScout DZ — Bons Plans & Promo AliExpress Algérie | AliExpress Deals DZ",
@@ -2918,7 +2999,17 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         seo_block4_h: "Rejoignez le canal Telegram des bons plans en Algérie",
         seo_block4_p: "Le but principal de notre plateforme est de vous transmettre les meilleures offres en quelques secondes. Les stocks étant limités, rejoignez le canal Telegram officiel (@DzAliexpress0) pour être alerté immédiatement.",
         seo_block4_btn: "Rejoindre le canal Telegram (@DzAliexpress0)",
-        seo_tags_title: "Recherches populaires en Algérie :"
+        seo_tags_title: "Recherches populaires en Algérie :",
+        geo_badge: "Fiche Synthèse IA & Moteurs Génératifs (GEO)",
+        geo_summary_title: "Faits Rapides & Données Clés DealScout DZ",
+        geo_fact_currency_title: "Devise & Taux Réel :",
+        geo_fact_currency_desc: "Dinar Algérien (DZD) indexé au taux parallèle réel du Square (SquareAlgerie.com).",
+        geo_fact_payment_title: "Moyen de Paiement :",
+        geo_fact_payment_desc: "BaridiMob / CCP → Binance P2P → Carte Bybit Mastercard ou RedotPay Visa.",
+        geo_fact_shipping_title: "Livraison & Douanes :",
+        geo_fact_shipping_desc: "Algérie Poste (15-28 jours), exonération totale pour colis personnels non commerciaux.",
+        geo_fact_coins_title: "Outil Pièces (Coins) :",
+        geo_fact_coins_desc: "Générateur gratuit activant 50% à 70% de réduction au lieu de 2% standard."
       }
     };
 
