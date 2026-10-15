@@ -254,7 +254,9 @@
     "1005010149868688",
     "9998886219",
     "1005005875379717",
-    "9998887185"
+    "9998887185",
+    "1005013137396211",
+    "1005012575455222"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -519,7 +521,9 @@
     "1005010149868688": 1792077710.438389,
     "9998886219": 1792086219.2668676,
     "1005005875379717": 1792087000.9978776,
-    "9998887185": 1792087185.8637784
+    "9998887185": 1792087185.8637784,
+    "1005013137396211": 1792091791.0211077,
+    "1005012575455222": 1792091809.1996214
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -818,7 +822,9 @@
     "iQOO Z11s 5G (8/128GB)",
     "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring",
     "Baseus GH02 Gaming Wireless Headphone",
-    "GameSir GM500 PMW33600 Gaming Mouse"
+    "GameSir GM500 PMW33600 Gaming Mouse",
+    "Honor 600S 5G 12/256GB",
+    "Ⓜ  TCL 60 NXT PAPER 8/256📱"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1120,7 +1126,9 @@
     "iQOO Z11s 5G (8/128GB)": 1792077724.119901,
     "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1792077728.5472124,
     "Baseus GH02 Gaming Wireless Headphone": 1792087000.9978776,
-    "GameSir GM500 PMW33600 Gaming Mouse": 1792087147.0923955
+    "GameSir GM500 PMW33600 Gaming Mouse": 1792087147.0923955,
+    "Honor 600S 5G 12/256GB": 1792091791.0211077,
+    "Ⓜ  TCL 60 NXT PAPER 8/256📱": 1792091809.1996214
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1894,27 +1902,29 @@
     "aniscoupons:32960",
     "aniscoupons:32961",
     "lodydeals:45556",
-    "test_channel:1792087185"
+    "test_channel:1792087185",
+    "lodydeals:45554",
+    "megaphonna:8404"
   ],
   "last_disclaimer_time": 1790884122.2970214,
   "last_calendar_time": 1791497139.5373898,
-  "last_run_time": 1792087186.0623653,
+  "last_run_time": 1792091809.1996214,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32964,
-      "last_check_time": 1792087008.6770473
+      "last_message_id": 32965,
+      "last_check_time": 1792091813.0257113
     },
     "ecksdeal": {
-      "last_message_id": 5892,
-      "last_check_time": 1792086960.8982298
+      "last_message_id": 5893,
+      "last_check_time": 1792091794.0379894
     },
     "lodydeals": {
       "last_message_id": 45556,
-      "last_check_time": 1792087185.965598
+      "last_check_time": 1792091791.0211077
     },
     "bnddeals": {
       "last_message_id": 50858,
-      "last_check_time": 1792086965.2502632
+      "last_check_time": 1792091795.1164668
     },
     "test_channel": {
       "last_message_id": 1792087185,
@@ -1922,15 +1932,15 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792086961.338883
+      "last_check_time": 1792091794.7295864
     },
     "zedstoreonline": {
       "last_message_id": 38610,
-      "last_check_time": 1792086960.3057375
+      "last_check_time": 1792091793.6331394
     },
     "megaphonna": {
-      "last_message_id": 8398,
-      "last_check_time": 1792087186.0623653
+      "last_message_id": 8409,
+      "last_check_time": 1792091811.2228951
     },
     "couponsglobal": {
       "last_message_id": 48849,
@@ -2157,7 +2167,9 @@
     "1005011908654312": 122.6,
     "1005010620269829": 241.0,
     "1005010149868688": 204.1,
-    "1005005875379717": 42.89
+    "1005005875379717": 42.89,
+    "1005013137396211": 316.02,
+    "1005012575455222": 115.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -5942,6 +5954,26 @@
       "price": 42.89,
       "timestamp": 1792087000.9978776,
       "status": "ACTIVE"
+    },
+    "lodydeals:45554": {
+      "channel_msg_id": 854,
+      "product_id": "1005013137396211",
+      "title": "Honor 600S 5G 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45554,
+      "price": 316.02,
+      "timestamp": 1792091791.0211077,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8404": {
+      "channel_msg_id": 855,
+      "product_id": "1005012575455222",
+      "title": "Ⓜ  TCL 60 NXT PAPER 8/256📱",
+      "channel": "megaphonna",
+      "source_msg_id": 8404,
+      "price": 115.0,
+      "timestamp": 1792091809.1996214,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -5950,17 +5982,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792087147.1134896,
+    "last_deal_post_time": 1792091815.441157,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792087009.1423867,
+    "last_sweep_time": 1792091820.0369291,
     "last_sweep_times": {
-      "algeria": 1792087009.1423867,
-      "france": 1792077733.909331
+      "algeria": 1792091815.4314854,
+      "france": 1792091820.0369291
     },
     "last_deal_post_times": {
-      "algeria": 1792087147.1134896
+      "algeria": 1792091815.441157
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -6227,7 +6259,9 @@
     "1005010149868688": "aniscoupons",
     "9998886219": "test_channel",
     "1005005875379717": "aniscoupons",
-    "9998887185": "test_channel"
+    "9998887185": "test_channel",
+    "1005013137396211": "lodydeals",
+    "1005012575455222": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -6528,7 +6562,9 @@
     "iQOO Z11s 5G (8/128GB)": "aniscoupons",
     "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": "aniscoupons",
     "Baseus GH02 Gaming Wireless Headphone": "aniscoupons",
-    "GameSir GM500 PMW33600 Gaming Mouse": "lodydeals"
+    "GameSir GM500 PMW33600 Gaming Mouse": "lodydeals",
+    "Honor 600S 5G 12/256GB": "lodydeals",
+    "Ⓜ  TCL 60 NXT PAPER 8/256📱": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -7038,7 +7074,12 @@
     "aniscoupons:32959",
     "aniscoupons:32962",
     "aniscoupons:32963",
-    "aniscoupons:32964"
+    "aniscoupons:32964",
+    "lodydeals:45555",
+    "ecksdeal:5893",
+    "megaphonna:8409",
+    "megaphonna:8408",
+    "aniscoupons:32965"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
