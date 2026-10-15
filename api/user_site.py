@@ -623,73 +623,54 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <div class="inline-flex items-center border rounded-lg p-0.5 text-xs" style="border-color: var(--border-card); background-color: var(--bg-elevated);">
           <button onclick="setLanguage('ar')" id="lang-ar-btn" class="px-1.5 sm:px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-bold bg-crimson-600 text-white transition active:scale-95">العربية</button>
           <button onclick="setLanguage('fr')" id="lang-fr-btn" class="px-1.5 sm:px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-bold opacity-60 hover:opacity-100 transition active:scale-95">Français</button>
-        </div>
-
-        <span class="hidden sm:inline opacity-30">|</span>
-        <a href="https://t.me/Alilo07BOT" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex hover:text-amber-500 transition font-medium items-center gap-1 py-1 px-1.5 active:scale-95 touch-manipulation">
-          <i class="fa-solid fa-coins text-amber-500 text-[10px]"></i>
-          <span data-i18n="top_coin_bot">بوت العملات</span>
-        </a>
         <span class="hidden sm:inline opacity-30">|</span>
         <a id="top-telegram-link" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex hover:text-sky-400 text-sky-500 transition font-bold items-center gap-1 py-1 px-1.5 active:scale-95 touch-manipulation text-xs" title="قناة التيليجرام الرسمية">
           <i class="fa-brands fa-telegram text-sky-500 text-sm"></i>
           <span class="text-[11px] font-bold">Telegram</span>
         </a>
+        </div>
       </div>
     </div>
   </aside>
 
   <!-- Main Navigation Bar -->
-  <header class="sticky top-0 z-40 border-b backdrop-blur-md px-3 sm:px-4 py-2.5 sm:py-3 transition-colors" style="background-color: var(--header-bg); border-color: var(--border-card);">
+  <header class="sticky top-0 z-40 border-b backdrop-blur-md px-3 sm:px-4 py-2 sm:py-2.5 transition-colors" style="background-color: var(--header-bg); border-color: var(--border-card);">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-3 sm:gap-4">
       
       <!-- Brand Logo -->
       <a href="#deals" onclick="showPage('deals')" class="flex items-center gap-2 sm:gap-2.5 flex-shrink-0 min-h-[44px] touch-manipulation" aria-label="DealScout DZ">
-        <img src="/logo_circular.png" alt="DealScout DZ" width="36" height="36" style="width: 36px; height: 36px; max-width: 36px; max-height: 36px; object-fit: contain;" class="w-9 h-9 rounded-xl object-contain shadow-sm flex-shrink-0 brand-logo-img" onerror="this.onerror=null; this.src='/logo.png'">
+        <img src="/logo_circular.png" alt="DealScout DZ" width="34" height="34" style="width: 34px; height: 34px; max-width: 34px; max-height: 34px; object-fit: contain;" class="w-8.5 h-8.5 rounded-xl object-contain shadow-sm flex-shrink-0 brand-logo-img" onerror="this.onerror=null; this.src='/logo.png'">
         <div>
           <div class="flex items-center gap-1.5">
-            <div class="font-bold text-base tracking-tight font-inter inline-flex items-center gap-1.5" style="color: var(--text-main);">
+            <div class="font-bold text-sm sm:text-base tracking-tight font-inter inline-flex items-center gap-1" style="color: var(--text-main);">
               <span>DealScout<span class="text-crimson-500">DZ</span></span>
-              <span class="text-[10px] font-semibold px-1.5 py-0.2 rounded border font-mono font-normal" style="background-color: var(--bg-subtle); border-color: var(--border-card); color: var(--text-muted);">2.6</span>
             </div>
           </div>
-          <p class="text-[10px] hidden sm:block -mt-0.5" style="color: var(--text-soft);" data-i18n="brand_subtitle">بوابة صفقات وتخفيضات AliExpress 🇩🇿</p>
+          <p class="text-[9px] hidden sm:block -mt-0.5 opacity-60" style="color: var(--text-muted);" data-i18n="brand_subtitle">بوابة صفقات وتخفيضات AliExpress 🇩🇿</p>
         </div>
       </a>
 
-      <!-- Desktop Nav Pages Links -->
+      <!-- Desktop Nav Pages Links (Clean 5-Item Focused Navigation) -->
       <nav class="hidden md:flex items-center gap-1 text-xs font-semibold" style="color: var(--text-muted);">
-        <button onclick="showPage('deals')" id="nav-link-deals" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg transition flex items-center gap-1.5 font-bold text-[11px] xl:text-xs" style="background-color: var(--bg-elevated); color: var(--text-main);">
+        <button onclick="showPage('deals')" id="nav-link-deals" class="nav-page-btn px-2.5 py-1.5 rounded-lg transition flex items-center gap-1.5 font-bold text-xs" style="background-color: var(--bg-elevated); color: var(--text-main);">
           <i class="fa-solid fa-fire text-crimson-500 text-xs"></i>
           <span data-i18n="nav_deals">الصفقات</span>
         </button>
-        <button onclick="showPage('tracking')" id="nav-link-tracking" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs">
-          <i class="fa-solid fa-box text-blue-500 text-xs"></i>
+        <button onclick="showPage('tracking')" id="nav-link-tracking" class="nav-page-btn px-2.5 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-xs">
+          <i class="fa-solid fa-truck-fast text-blue-500 text-xs"></i>
           <span data-i18n="nav_tracking">تتبع الطرود</span>
         </button>
-        <button onclick="showPage('cards')" id="nav-link-cards" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs">
-          <i class="fa-solid fa-credit-card text-emerald-500 text-xs"></i>
-          <span data-i18n="nav_cards">بطاقات الشراء</span>
-        </button>
-        <button onclick="showPage('coins')" id="nav-link-coins" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs">
+        <button onclick="showPage('coins')" id="nav-link-coins" class="nav-page-btn px-2.5 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-xs">
           <i class="fa-solid fa-coins text-amber-500 text-xs"></i>
           <span data-i18n="nav_coins">بوت العملات</span>
         </button>
-        <button onclick="showPage('faq')" id="nav-link-faq" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs">
-          <i class="fa-solid fa-circle-question text-sky-500 text-xs"></i>
-          <span class="hidden xl:inline" data-i18n="nav_faq">الأسئلة الشائعة</span>
+        <button onclick="showPage('cards')" id="nav-link-cards" class="nav-page-btn px-2.5 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-xs">
+          <i class="fa-solid fa-credit-card text-emerald-500 text-xs"></i>
+          <span data-i18n="nav_cards">بطاقات الشراء</span>
         </button>
-        <button onclick="showPage('contact')" id="nav-link-contact" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs">
-          <i class="fa-solid fa-envelope text-emerald-500 text-xs"></i>
-          <span class="hidden xl:inline" data-i18n="nav_contact">اتصل بنا</span>
-        </button>
-        <button onclick="showPage('about')" id="nav-link-about" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs">
-          <i class="fa-solid fa-info-circle text-purple-500 text-xs"></i>
-          <span class="hidden xl:inline" data-i18n="nav_about">من نحن</span>
-        </button>
-        <a href="/blog/aliexpress-algeria-guide-dz" class="nav-page-btn px-1.5 py-1.5 xl:px-3 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-[11px] xl:text-xs text-amber-400 font-bold hover:bg-amber-500/10" title="دليل الشراء من AliExpress في الجزائر 2026">
+        <a href="/blog/aliexpress-algeria-guide-dz" class="nav-page-btn px-2.5 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-xs text-amber-400 font-bold hover:bg-amber-500/10" title="دليل الشراء من AliExpress في الجزائر 2026">
           <i class="fa-solid fa-book-open text-amber-400 text-xs"></i>
-          <span class="hidden xl:inline">دليل 2026</span>
+          <span>دليل 2026</span>
         </a>
       </nav>
 
@@ -774,8 +755,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
       </div>
 
-      <!-- Direct Official Telegram Channel Access Banner (Sleek Compact Glass Strip) -->
-      <aside id="channel-telegram-banner" class="border rounded-xl px-3.5 py-2.5 flex items-center justify-between gap-3 transition-all shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-card);" aria-label="رابط القناة الرسمي">
+      <!-- Direct Official Telegram Channel Access Banner (Preserved hidden to prevent duplicate clutter) -->
+      <aside id="channel-telegram-banner" class="hidden border rounded-xl px-3.5 py-2.5 items-center justify-between gap-3 transition-all shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-card);" aria-label="رابط القناة الرسمي">
         <div class="flex items-center gap-2.5 min-w-0">
           <div class="w-8 h-8 rounded-lg bg-[#229ED9]/15 text-[#229ED9] flex items-center justify-center text-lg flex-shrink-0">
             <i class="fa-brands fa-telegram"></i>
@@ -818,62 +799,50 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </button>
       </div>
 
-      <!-- Active Promo Event Showcase Banner & Deal Keywords -->
-      <section id="active-event-banner" class="p-3.5 sm:p-4 rounded-xl relative transition-all border" aria-label="الحدث الترويجي الفعال" style="background-color: var(--bg-card); border-color: var(--border-card);">
-        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2.5">
-          <div class="space-y-0.5">
-            <div class="flex items-center gap-2">
-              <div class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/10 text-rose-600 dark:text-rose-400">
-                <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
-                <span id="active-event-badge" data-i18n="active_event_badge">حدث ترويجي رسمي فعال</span>
-              </div>
-              <h3 id="active-event-title" class="text-xs sm:text-sm font-bold tracking-tight" style="color: var(--text-main);" data-i18n="active_event_title">
-                تخفيضات عروض الشتاء Winter Offers 2026
-              </h3>
-            </div>
-            <p id="active-event-desc" class="text-[11px] leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="active_event_desc">
-              عروض وتخفيضات رسمية نشطة حالياً مع أكواد حصرية مخصصة للجزائر وفرنسا — الأسعار بالدينار الجزائري وفق سعر السكوار الحقيقي.
-            </p>
+      <!-- Active Promo Event Showcase Banner (Streamlined Minimal Strip) -->
+      <section id="active-event-banner" class="p-2.5 sm:p-3 rounded-xl relative transition-all border flex flex-col md:flex-row md:items-center justify-between gap-2.5" aria-label="الحدث الترويجي الفعال" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="flex items-center gap-2 min-w-0">
+          <div class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/10 text-rose-500 flex-shrink-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
+            <span id="active-event-badge" data-i18n="active_event_badge">حدث رسمي</span>
           </div>
-          <!-- Active Event Coupon Chips with 1-click copy -->
-          <div class="flex items-center gap-1.5 flex-wrap" id="active-event-coupons">
-            <button onclick="copyReferralCode('WOAE06', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE06">
-              <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
-              <span>WOAE06</span>
-              <span class="text-[10px] font-sans font-medium text-rose-500">(-6$)</span>
-            </button>
-            <button onclick="copyReferralCode('WOAE12', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE12">
-              <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
-              <span>WOAE12</span>
-              <span class="text-[10px] font-sans font-medium text-rose-500">(-12$)</span>
-            </button>
-            <button onclick="copyReferralCode('WOAE23', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE23">
-              <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
-              <span>WOAE23</span>
-              <span class="text-[10px] font-sans font-medium text-rose-500">(-23$)</span>
-            </button>
-            <button onclick="copyReferralCode('WOAE35', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE35">
-              <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
-              <span>WOAE35</span>
-              <span class="text-[10px] font-sans font-medium text-rose-500">(-35$)</span>
-            </button>
-          </div>
+          <h3 id="active-event-title" class="text-xs sm:text-sm font-bold tracking-tight truncate" style="color: var(--text-main);" data-i18n="active_event_title">
+            تخفيضات عروض الشتاء Winter Offers 2026
+          </h3>
+          <p id="active-event-desc" class="hidden">عروض وتخفيضات رسمية نشطة حالياً مع أكواد حصرية مخصصة للجزائر وفرنسا — الأسعار بالدينار الجزائري وفق سعر السكوار الحقيقي.</p>
         </div>
 
-        <!-- Active Deals Trending Keywords Tag Bar for instant SEO indexing & user filtering -->
-        <div class="mt-2.5 pt-2 border-t flex items-center gap-1.5 flex-wrap text-xs" style="border-color: rgba(225, 29, 72, 0.15);">
-          <span class="text-[10px] font-bold text-crimson-500 flex items-center gap-1 flex-shrink-0">
-            <i class="fa-solid fa-tags text-[9px]"></i>
-            <span data-i18n="active_deals_kw_label">أهم صفقات الحدث الفعال:</span>
-          </span>
-          <div id="active-deals-keywords" class="flex items-center gap-1 flex-wrap">
-            <button onclick="handleSearchInput('Honor X70')" class="border px-2 py-0.5 rounded-md text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>Honor X70 5G</span></button>
-            <button onclick="handleSearchInput('realme 15T')" class="border px-2 py-0.5 rounded-md text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>realme 15T 5G</span></button>
-            <button onclick="handleSearchInput('OPPO A6 Pro')" class="border px-2 py-0.5 rounded-md text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>OPPO A6 Pro</span></button>
-            <button onclick="handleSearchInput('iQOO Z11s')" class="border px-2 py-0.5 rounded-md text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>iQOO Z11s</span></button>
-            <button onclick="handleSearchInput('Ryzen 5 8400F')" class="border px-2 py-0.5 rounded-md text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>Ryzen 5 8400F</span></button>
-            <button onclick="handleSearchInput('realme Watch 5')" class="border px-2 py-0.5 rounded-md text-[10px] font-semibold transition active:scale-95 touch-manipulation hover:border-rose-500 flex items-center gap-1" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);"><span class="text-rose-500 font-bold">#</span> <span>realme Watch 5</span></button>
-          </div>
+        <!-- Active Event Coupon Chips with 1-click copy -->
+        <div class="flex items-center gap-1.5 flex-wrap" id="active-event-coupons">
+          <button onclick="copyReferralCode('WOAE06', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE06">
+            <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
+            <span>WOAE06</span>
+            <span class="text-[10px] font-sans font-medium text-rose-500">(-6$)</span>
+          </button>
+          <button onclick="copyReferralCode('WOAE12', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE12">
+            <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
+            <span>WOAE12</span>
+            <span class="text-[10px] font-sans font-medium text-rose-500">(-12$)</span>
+          </button>
+          <button onclick="copyReferralCode('WOAE23', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE23">
+            <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
+            <span>WOAE23</span>
+            <span class="text-[10px] font-sans font-medium text-rose-500">(-23$)</span>
+          </button>
+          <button onclick="copyReferralCode('WOAE35', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE35">
+            <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
+            <span>WOAE35</span>
+            <span class="text-[10px] font-sans font-medium text-rose-500">(-35$)</span>
+          </button>
+        </div>
+
+        <div id="active-deals-keywords" class="hidden">
+          <button onclick="handleSearchInput('Honor X70')">Honor X70 5G</button>
+          <button onclick="handleSearchInput('realme 15T')">realme 15T 5G</button>
+          <button onclick="handleSearchInput('OPPO A6 Pro')">OPPO A6 Pro</button>
+          <button onclick="handleSearchInput('iQOO Z11s')">iQOO Z11s</button>
+          <button onclick="handleSearchInput('Ryzen 5 8400F')">Ryzen 5 8400F</button>
+          <button onclick="handleSearchInput('realme Watch 5')">realme Watch 5</button>
         </div>
       </section>
 
@@ -969,33 +938,48 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <!-- ========================================== -->
       <!-- HIGH-RANKING SEMANTIC SEO SHOPPING GUIDE   -->
       <!-- ========================================== -->
-      <section id="seo-shopping-guide" class="border rounded-2xl p-5 sm:p-7 space-y-6 transition-colors mt-8 overflow-hidden" style="background-color: var(--bg-card); border-color: var(--border-card);">
-        
-        <div class="space-y-2 border-b pb-4" style="border-color: var(--border-card);">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-crimson-500/10 text-crimson-500 border border-crimson-500/20">
-            <i class="fa-solid fa-bullhorn text-xs"></i>
-            <span data-i18n="seo_badge">دليل المتسوق الجزائري 🇩🇿</span>
-          </div>
-          <h2 class="text-lg sm:text-2xl font-black leading-tight" style="color: var(--text-main);" data-i18n="seo_guide_title">
-            عروض وتخفيضات علي اكسبراس في الجزائر — AliExpress Deals DZ
-          </h2>
-          <p class="text-xs sm:text-sm leading-relaxed" style="color: var(--text-muted);" data-i18n="seo_guide_subtitle">
-            بوابتك الشاملة لكل ما يخص <strong>aliexpressdz</strong>، أحدث صفقات <strong>aliexpress deals dz</strong>، وطرق <strong>الشراء من علي اكسبراس في الجزائر</strong> بأقل تكلفة وبالدينار الجزائري.
-          </p>
-        </div>
+      <section id="seo-shopping-guide" class="border rounded-2xl transition-colors mt-8 overflow-hidden" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <details class="group" id="seo-details">
+          <summary class="p-4 sm:p-5 flex items-center justify-between cursor-pointer list-none select-none hover:bg-white/[0.02] transition">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-lg bg-crimson-500/10 text-crimson-500 flex items-center justify-center text-sm font-bold flex-shrink-0">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+              <div>
+                <h2 class="text-xs sm:text-sm font-bold" style="color: var(--text-main);" data-i18n="seo_guide_title">
+                  عروض وتخفيضات علي اكسبراس في الجزائر — AliExpress Deals DZ
+                </h2>
+                <p class="text-[11px] opacity-75" style="color: var(--text-muted);" data-i18n="seo_guide_subtitle">
+                  دليل التسوق، بريدي موب، الشحن والجمارك بالجزائر (اضغط لعرض الدليل الشامل)
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-bold text-crimson-500 flex-shrink-0">
+              <span class="hidden sm:inline text-[11px]">عرض الدليل</span>
+              <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform text-xs"></i>
+            </div>
+          </summary>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 text-xs sm:text-sm leading-relaxed" style="color: var(--text-muted);">
-          
-          <!-- SEO Block 1: Deals & Discounts -->
-          <div class="space-y-2 p-4 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-            <h3 class="font-bold text-sm sm:text-base flex items-center gap-2" style="color: var(--text-main);">
-              <i class="fa-solid fa-fire text-crimson-500"></i>
-              <span data-i18n="seo_block1_h">أقوى عروض علي اكسبراس في الجزائر (AliExpress DZ)</span>
-            </h3>
-            <p data-i18n="seo_block1_p">
-              يقوم موقع DealScout DZ بمتابعة وتحديث عروض علي اكسبراس يومياً، بما يشمل عروض السوبر ديلز (SuperDeals)، التخفيضات الموسمية، وتجميعات المنتجات الأكثر طلباً في الجزائر مع حساب التكلفة الفعلية بالدينار الجزائري (DZD) حسب سعر صرف السكوار المحدث.
-            </p>
-          </div>
+          <div class="p-5 sm:p-7 border-t space-y-6" style="border-color: var(--border-card);">
+            <div class="space-y-2 border-b pb-4" style="border-color: var(--border-card);">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-crimson-500/10 text-crimson-500 border border-crimson-500/20">
+                <i class="fa-solid fa-bullhorn text-xs"></i>
+                <span data-i18n="seo_badge">دليل المتسوق الجزائري 🇩🇿</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 text-xs sm:text-sm leading-relaxed" style="color: var(--text-muted);">
+              
+              <!-- SEO Block 1: Deals & Discounts -->
+              <div class="space-y-2 p-4 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+                <h3 class="font-bold text-sm sm:text-base flex items-center gap-2" style="color: var(--text-main);">
+                  <i class="fa-solid fa-fire text-crimson-500"></i>
+                  <span data-i18n="seo_block1_h">أقوى عروض علي اكسبراس في الجزائر (AliExpress DZ)</span>
+                </h3>
+                <p data-i18n="seo_block1_p">
+                  يقوم موقع DealScout DZ بمتابعة وتحديث عروض علي اكسبراس يومياً، بما يشمل عروض السوبر ديلز (SuperDeals)، التخفيضات الموسمية، وتجميعات المنتجات الأكثر طلباً في الجزائر مع حساب التكلفة الفعلية بالدينار الجزائري (DZD) حسب سعر صرف السكوار المحدث.
+                </p>
+              </div>
 
           <!-- SEO Block 2: Buying in Algeria -->
           <div class="space-y-2 p-4 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
@@ -1119,8 +1103,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <span class="px-2 py-0.5 rounded border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">aliexpress algerie dzd</span>
             <span class="px-2 py-0.5 rounded border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">code promo aliexpress algerie</span>
           </div>
-        </div>
-
+          </div>
+        </details>
       </section>
 
     </div>
@@ -1130,84 +1114,81 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <!-- ───────────────────────────────────────────────────────── -->
     <div id="page-tracking" class="page-view hidden space-y-6">
 
-      <!-- Hero Header -->
-      <div class="border rounded-2xl p-5 sm:p-6 space-y-3 transition-all" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
-        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded text-xs font-bold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20">
-          <i class="fa-solid fa-plane-arrival text-xs"></i>
-          <span data-i18n="tracking_badge">خدمة تتبع الطرود المجانية 🇩🇿</span>
+      <!-- Unified Minimal Tracking Card -->
+      <div class="border rounded-2xl p-5 sm:p-6 space-y-4 transition-all" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+          <div>
+            <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded text-[11px] font-bold bg-blue-500/10 text-blue-500 border border-blue-500/20 mb-1.5">
+              <span>🇩🇿</span>
+              <span data-i18n="tracking_badge">تتبع الطرود في الجزائر (Suivi de Colis)</span>
+            </div>
+            <h2 class="text-base sm:text-xl font-bold tracking-tight" style="color: var(--text-main);" data-i18n="tracking_hero_title">
+              تتبع طرود AliExpress وبريد الجزائر لحظة بلحظة
+            </h2>
+            <p class="text-xs pt-1 opacity-75" style="color: var(--text-muted);" data-i18n="tracking_hero_desc">
+              محرك تتبع مباشر يدعم طرود AliExpress (Cainiao, Choice, SunYou, Yanwen) وبريد الجزائر وEMS الدولي.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 self-start sm:self-auto flex-shrink-0">
+            <span class="text-[11px] px-2.5 py-1 rounded-lg border font-mono text-emerald-500 border-emerald-500/30 bg-emerald-500/10 font-bold flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>Trackit.dz 🇩🇿</span>
+            </span>
+          </div>
         </div>
-        <h2 class="text-xl sm:text-2xl font-black tracking-tight" style="color: var(--text-main);" data-i18n="tracking_hero_title">
-          تتبع طرود AliExpress وبريد الجزائر (Suivi de Colis)
-        </h2>
-        <p class="text-xs sm:text-sm leading-relaxed max-w-3xl" style="color: var(--text-muted);" data-i18n="tracking_hero_desc">
-          أدخل رقم تتبع طردك من AliExpress (سواء كان Cainiao أو Choice أو SunYou أو Yanwen أو بريد الجزائر) لمتابعة مسار شحنتك لحظة بلحظة حتى وصولها إلى مكتب بريد بلديتك.
-        </p>
 
-        <!-- Supported Carrier Badges -->
-        <div class="pt-2 flex items-center gap-2 flex-wrap text-[11px] font-semibold" style="color: var(--text-soft);">
-          <span class="opacity-75" data-i18n="tracking_supported_carriers">يدعم جميع شركات الشحن:</span>
-          <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px] font-bold text-emerald-400 border-emerald-500/30 bg-emerald-500/10">المصدر: Trackit.dz 🇩🇿</span>
-          <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">Algérie Poste (...DZ)</span>
-          <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">Cainiao / Choice (LP...)</span>
-          <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">SunYou (SY...)</span>
-          <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">Yanwen (...YP)</span>
-          <span class="px-2.5 py-0.5 rounded-lg border font-mono text-[10px]" style="background-color: var(--bg-elevated); border-color: var(--border-card);">EMS International</span>
-        </div>
-      </div>
+        <!-- Search Input Bar -->
+        <div class="pt-1 space-y-2">
+          <label for="tracking-input-num" class="block text-xs font-bold" style="color: var(--text-main);" data-i18n="tracking_input_label">
+            أدخل رقم التتبع (Tracking Number):
+          </label>
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
+            <div class="relative flex-1">
+              <i class="fa-solid fa-barcode absolute right-3.5 top-1/2 -translate-y-1/2 text-sm opacity-40 pointer-events-none"></i>
+              <input 
+                type="text" 
+                id="tracking-input-num" 
+                placeholder="مثال: LP00612345678901 أو RE123456789DZ..." 
+                class="w-full border rounded-xl pr-10 pl-20 py-3 text-xs sm:text-sm focus:outline-none focus:border-blue-500 transition min-h-[46px] font-mono"
+                style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);"
+                onkeydown="if(event.key==='Enter') submitTracking()"
+              />
+              <button 
+                type="button" 
+                onclick="pasteToTrackingInput()" 
+                id="tracking-paste-btn"
+                title="لصق من الحافظة"
+                class="absolute left-2.5 top-1/2 -translate-y-1/2 px-2.5 py-1.5 rounded-lg border text-[11px] font-semibold flex items-center gap-1 transition active:scale-95 touch-manipulation cursor-pointer hover:border-blue-500"
+                style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);"
+              >
+                <i class="fa-regular fa-paste text-[10px]"></i>
+                <span data-i18n="btn_paste">لصق</span>
+              </button>
+            </div>
 
-      <!-- Tracking Search Box Card -->
-      <div class="border rounded-2xl p-5 sm:p-6 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card); box-shadow: var(--shadow-card);">
-        <label for="tracking-input-num" class="block text-xs sm:text-sm font-bold" style="color: var(--text-main);" data-i18n="tracking_input_label">
-          أدخل رقم التتبع (Tracking Number) أو الصق رسالة التأكيد:
-        </label>
-        
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
-          <div class="relative flex-1">
-            <i class="fa-solid fa-barcode absolute right-3.5 top-1/2 -translate-y-1/2 text-sm opacity-40 pointer-events-none"></i>
-            <input 
-              type="text" 
-              id="tracking-input-num" 
-              placeholder="مثال: LP00612345678901 أو RE123456789DZ..." 
-              class="w-full border rounded-xl pr-10 pl-20 py-3 text-xs sm:text-sm focus:outline-none focus:border-blue-500 transition min-h-[46px] font-mono"
-              style="background-color: var(--input-bg); border-color: var(--border-card); color: var(--text-main);"
-              onkeydown="if(event.key==='Enter') submitTracking()"
-            />
             <button 
               type="button" 
-              onclick="pasteToTrackingInput()" 
-              id="tracking-paste-btn"
-              title="لصق من الحافظة"
-              class="absolute left-2.5 top-1/2 -translate-y-1/2 px-2.5 py-1.5 rounded-lg border text-[11px] font-semibold flex items-center gap-1 transition active:scale-95 touch-manipulation cursor-pointer hover:border-blue-500"
-              style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);"
+              onclick="submitTracking()" 
+              id="tracking-submit-btn"
+              class="min-h-[46px] px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md active:scale-95 transition cursor-pointer flex-shrink-0"
             >
-              <i class="fa-regular fa-paste text-[10px]"></i>
-              <span data-i18n="btn_paste">لصق</span>
+              <i class="fa-solid fa-magnifying-glass-location text-sm"></i>
+              <span data-i18n="btn_track_parcel">تتبع الطرد</span>
             </button>
           </div>
-
-          <button 
-            type="button" 
-            onclick="submitTracking()" 
-            id="tracking-submit-btn"
-            class="min-h-[46px] px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md active:scale-95 transition cursor-pointer flex-shrink-0"
-          >
-            <i class="fa-solid fa-magnifying-glass-location text-sm"></i>
-            <span data-i18n="btn_track_parcel">تتبع الطرد الآن</span>
-          </button>
         </div>
 
-        <!-- Quick Samples / Chips & Recent Searches -->
-        <div class="space-y-2 pt-1 text-xs" style="color: var(--text-muted);">
-          <div class="flex items-center gap-2 flex-wrap">
-            <span class="text-[11px] opacity-75" data-i18n="tracking_quick_examples">أرقام نموذجية:</span>
-            <button type="button" onclick="setTrackingSample('CP032359951AE')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-emerald-500 transition active:scale-95" style="background-color: var(--bg-elevated); border-color: var(--border-card);">CP...AE (بريد الإمارات UPU)</button>
+        <!-- Quick Samples & Recent History -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 text-xs" style="color: var(--text-muted);">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            <span class="text-[11px] opacity-70" data-i18n="tracking_quick_examples">أمثلة:</span>
+            <button type="button" onclick="setTrackingSample('CP032359951AE')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-emerald-500 transition active:scale-95" style="background-color: var(--bg-elevated); border-color: var(--border-card);">CP...AE (UPU)</button>
             <button type="button" onclick="setTrackingSample('LP00685412978432')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-blue-500 transition active:scale-95" style="background-color: var(--bg-elevated); border-color: var(--border-card);">LP006... (Choice)</button>
             <button type="button" onclick="setTrackingSample('RE984125874DZ')" class="font-mono text-[11px] px-2 py-0.5 rounded border hover:border-amber-500 transition active:scale-95" style="background-color: var(--bg-elevated); border-color: var(--border-card);">RE...DZ (بريد الجزائر)</button>
           </div>
-          <!-- Recent Searches History Bar -->
-          <div id="tracking-recent-wrap" class="hidden flex items-center gap-2 flex-wrap pt-1 border-t" style="border-color: var(--border-card);">
-            <span class="text-[11px] opacity-75 flex items-center gap-1 font-semibold"><i class="fa-solid fa-clock-rotate-left text-[10px]"></i> آخر أرقامك:</span>
-            <div id="tracking-recent-list" class="flex items-center gap-1.5 flex-wrap"></div>
+          <div id="tracking-recent-wrap" class="hidden flex items-center gap-1.5 flex-wrap">
+            <span class="text-[11px] opacity-70 flex items-center gap-1"><i class="fa-solid fa-clock-rotate-left text-[10px]"></i> آخر أرقامك:</span>
+            <div id="tracking-recent-list" class="flex items-center gap-1 flex-wrap"></div>
           </div>
         </div>
 
@@ -1277,88 +1258,143 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </div>
         </div>
 
-        <!-- Smart Advisory / Guidance Card (Explains carrier updates & delays) -->
-        <div id="tracking-advisory-card" class="rounded-xl p-4 border flex items-start gap-3 transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-          <div class="w-8 h-8 rounded-lg bg-blue-500/15 text-blue-400 flex items-center justify-center flex-shrink-0 text-sm font-bold mt-0.5">
-            <i class="fa-solid fa-circle-info" id="tracking-advisory-icon"></i>
-          </div>
-          <div class="space-y-1 flex-1 text-xs">
-            <h4 id="tracking-advisory-title" class="font-bold text-sm" style="color: var(--text-main);">
-              الشحنة مسجلة حديثاً — بانتظار أول فحص فيزيائي لدى الناقل
-            </h4>
-            <p id="tracking-advisory-body" class="leading-relaxed opacity-85" style="color: var(--text-muted);">
-              قام البائع بتوليد بوليصة الشحن وحجز رقم الطرد. في التجارة الدولية، يستغرق استلام شركة الشحن للطرد وتسجيل أول محطة فحص فعلية بين 24 إلى 72 ساعة.
-            </p>
-          </div>
+        <!-- View Mode Switcher Tabs (Fast Native Route vs Live Trackit.dz App) -->
+        <div class="flex items-center gap-2 border-b pb-3" style="border-color: var(--border-card);" role="tablist">
+          <button 
+            type="button" 
+            onclick="switchTrackingView('stepper')" 
+            id="tab-view-stepper" 
+            role="tab"
+            aria-selected="true"
+            class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5"
+            style="background-color: var(--bg-elevated); color: var(--text-main); border: 1px solid var(--border-card);"
+          >
+            <i class="fa-solid fa-route text-blue-500"></i>
+            <span>المسار السريع والمحطات</span>
+          </button>
+          <button 
+            type="button" 
+            onclick="switchTrackingView('trackit')" 
+            id="tab-view-trackit" 
+            role="tab"
+            aria-selected="false"
+            class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 opacity-60 hover:opacity-100"
+            style="background-color: transparent; color: var(--text-muted); border: 1px solid transparent;"
+          >
+            <span class="text-xs">🇩🇿</span>
+            <span>تطبيق Trackit.dz المباشر</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          </button>
         </div>
 
-        <!-- 5-Step Algerian Delivery Journey Tracker (Enhanced Visual Stepper) -->
-        <div class="space-y-3">
-          <div class="flex items-center justify-between">
+        <!-- TAB 1: Stepper & Checkpoints Content -->
+        <div id="tracking-view-stepper-content" class="space-y-6">
+
+          <!-- Smart Advisory / Guidance Card (Explains carrier updates & delays) -->
+          <div id="tracking-advisory-card" class="rounded-xl p-4 border flex items-start gap-3 transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="w-8 h-8 rounded-lg bg-blue-500/15 text-blue-400 flex items-center justify-center flex-shrink-0 text-sm font-bold mt-0.5">
+              <i class="fa-solid fa-circle-info" id="tracking-advisory-icon"></i>
+            </div>
+            <div class="space-y-1 flex-1 text-xs">
+              <h4 id="tracking-advisory-title" class="font-bold text-sm" style="color: var(--text-main);">
+                الشحنة مسجلة حديثاً — بانتظار أول فحص فيزيائي لدى الناقل
+              </h4>
+              <p id="tracking-advisory-body" class="leading-relaxed opacity-85" style="color: var(--text-muted);">
+                قام البائع بتوليد بوليصة الشحن وحجز رقم الطرد. في التجارة الدولية، يستغرق استلام شركة الشحن للطرد وتسجيل أول محطة فحص فعلية بين 24 إلى 72 ساعة.
+              </p>
+            </div>
+          </div>
+
+          <!-- 5-Step Algerian Delivery Journey Tracker (Enhanced Visual Stepper) -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="font-bold text-xs uppercase tracking-wider flex items-center gap-2" style="color: var(--text-main);">
+                <i class="fa-solid fa-route text-blue-500"></i>
+                <span>مسار ومحطات التوصيل في الجزائر (Algerian Delivery Journey):</span>
+              </h4>
+              <span class="text-[11px] font-mono text-emerald-400" id="tracking-journey-progress">المرحلة 1 من 5</span>
+            </div>
+
+            <div id="tracking-stages-container" class="grid grid-cols-1 sm:grid-cols-5 gap-2.5 text-xs">
+              <!-- Stage 1 -->
+              <div id="track-step-1" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+                <div class="flex items-center justify-between">
+                  <span class="w-6 h-6 rounded-full bg-emerald-500 text-white font-bold text-[11px] flex items-center justify-center shadow">1</span>
+                  <i class="fa-solid fa-box text-emerald-400 text-sm"></i>
+                </div>
+                <div class="font-bold text-xs pt-1" style="color: var(--text-main);">1. انطلاق الطرد</div>
+                <p class="text-[11px] opacity-75" style="color: var(--text-muted);">تجهيز الشحنة وانطلاقها من المستودع</p>
+              </div>
+              <!-- Stage 2 -->
+              <div id="track-step-2" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+                <div class="flex items-center justify-between">
+                  <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">2</span>
+                  <i class="fa-solid fa-plane text-zinc-500 text-sm"></i>
+                </div>
+                <div class="font-bold text-xs pt-1" style="color: var(--text-main);">2. الشحن الجوي</div>
+                <p class="text-[11px] opacity-75" style="color: var(--text-muted);">رحلة الترانزيت الدولي نحو الجزائر</p>
+              </div>
+              <!-- Stage 3 -->
+              <div id="track-step-3" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+                <div class="flex items-center justify-between">
+                  <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">3</span>
+                  <i class="fa-solid fa-warehouse text-zinc-500 text-sm"></i>
+                </div>
+                <div class="font-bold text-xs pt-1" style="color: var(--text-main);">3. مركز الفرز CTN</div>
+                <p class="text-[11px] opacity-75" style="color: var(--text-muted);">مطار هواري بومدين / الجزائر</p>
+              </div>
+              <!-- Stage 4 -->
+              <div id="track-step-4" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+                <div class="flex items-center justify-between">
+                  <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">4</span>
+                  <i class="fa-solid fa-stamp text-zinc-500 text-sm"></i>
+                </div>
+                <div class="font-bold text-xs pt-1" style="color: var(--text-main);">4. الجمارك (Douane)</div>
+                <p class="text-[11px] opacity-75" style="color: var(--text-muted);">معفى للطرود الشخصية غير التجارية</p>
+              </div>
+              <!-- Stage 5 -->
+              <div id="track-step-5" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+                <div class="flex items-center justify-between">
+                  <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">5</span>
+                  <i class="fa-solid fa-envelope-open-text text-zinc-500 text-sm"></i>
+                </div>
+                <div class="font-bold text-xs pt-1" style="color: var(--text-main);">5. بريد بلديتك</div>
+                <p class="text-[11px] opacity-75" style="color: var(--text-muted);">جاهز للاستلام ببطاقة الهوية الوطنية</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Checkpoints Timeline Feed (if live events available) -->
+          <div id="tracking-checkpoints-wrap" class="space-y-3 pt-3 border-t hidden" style="border-color: var(--border-card);">
             <h4 class="font-bold text-xs uppercase tracking-wider flex items-center gap-2" style="color: var(--text-main);">
-              <i class="fa-solid fa-route text-blue-500"></i>
-              <span>مسار ومحطات التوصيل في الجزائر (Algerian Delivery Journey):</span>
+              <i class="fa-solid fa-clock-rotate-left text-blue-500"></i>
+              <span>سجل المحطات ونقاط الفرز (Live Checkpoints):</span>
             </h4>
-            <span class="text-[11px] font-mono text-emerald-400" id="tracking-journey-progress">المرحلة 1 من 5</span>
+            <div id="tracking-checkpoints-list" class="space-y-2 text-xs border-r-2 pr-3 mr-1" style="border-color: var(--border-subtle);">
+              <!-- Dynamic checkpoints injected here -->
+            </div>
           </div>
 
-          <div id="tracking-stages-container" class="grid grid-cols-1 sm:grid-cols-5 gap-2.5 text-xs">
-            <!-- Stage 1 -->
-            <div id="track-step-1" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-              <div class="flex items-center justify-between">
-                <span class="w-6 h-6 rounded-full bg-emerald-500 text-white font-bold text-[11px] flex items-center justify-center shadow">1</span>
-                <i class="fa-solid fa-box text-emerald-400 text-sm"></i>
-              </div>
-              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">1. انطلاق الطرد</div>
-              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">تجهيز الشحنة وانطلاقها من المستودع</p>
-            </div>
-            <!-- Stage 2 -->
-            <div id="track-step-2" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-              <div class="flex items-center justify-between">
-                <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">2</span>
-                <i class="fa-solid fa-plane text-zinc-500 text-sm"></i>
-              </div>
-              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">2. الشحن الجوي</div>
-              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">رحلة الترانزيت الدولي نحو الجزائر</p>
-            </div>
-            <!-- Stage 3 -->
-            <div id="track-step-3" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-              <div class="flex items-center justify-between">
-                <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">3</span>
-                <i class="fa-solid fa-warehouse text-zinc-500 text-sm"></i>
-              </div>
-              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">3. مركز الفرز CTN</div>
-              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">مطار هواري بومدين / الجزائر</p>
-            </div>
-            <!-- Stage 4 -->
-            <div id="track-step-4" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-              <div class="flex items-center justify-between">
-                <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">4</span>
-                <i class="fa-solid fa-stamp text-zinc-500 text-sm"></i>
-              </div>
-              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">4. الجمارك (Douane)</div>
-              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">معفى للطرود الشخصية غير التجارية</p>
-            </div>
-            <!-- Stage 5 -->
-            <div id="track-step-5" class="p-3.5 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-              <div class="flex items-center justify-between">
-                <span class="w-6 h-6 rounded-full bg-zinc-700 text-white font-bold text-[11px] flex items-center justify-center">5</span>
-                <i class="fa-solid fa-envelope-open-text text-zinc-500 text-sm"></i>
-              </div>
-              <div class="font-bold text-xs pt-1" style="color: var(--text-main);">5. بريد بلديتك</div>
-              <p class="text-[11px] opacity-75" style="color: var(--text-muted);">جاهز للاستلام ببطاقة الهوية الوطنية</p>
-            </div>
-          </div>
         </div>
 
-        <!-- Checkpoints Timeline Feed (if live events available) -->
-        <div id="tracking-checkpoints-wrap" class="space-y-3 pt-3 border-t hidden" style="border-color: var(--border-card);">
-          <h4 class="font-bold text-xs uppercase tracking-wider flex items-center gap-2" style="color: var(--text-main);">
-            <i class="fa-solid fa-clock-rotate-left text-blue-500"></i>
-            <span>سجل المحطات ونقاط الفرز (Live Checkpoints):</span>
-          </h4>
-          <div id="tracking-checkpoints-list" class="space-y-2 text-xs border-r-2 pr-3 mr-1" style="border-color: var(--border-subtle);">
-            <!-- Dynamic checkpoints injected here -->
+        <!-- TAB 2: Live Trackit.dz App View Content -->
+        <div id="tracking-view-trackit-content" class="hidden space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <div class="flex items-center gap-2.5">
+              <span class="text-lg">🇩🇿</span>
+              <div>
+                <h4 class="font-bold text-xs" style="color: var(--text-main);">تطبيق Trackit.dz الرسمي للطرود في الجزائر</h4>
+                <p class="text-[11px] opacity-75" style="color: var(--text-muted);">متابعة موحدة لشبكة بريد الجزائر (Algérie Poste) والطرود الدولية (Trackdz.com)</p>
+              </div>
+            </div>
+            <a id="trackit-tab-open-btn" href="https://trackdz.com" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2 transition active:scale-95 shadow-sm flex-shrink-0">
+              <span>فتح في تطبيق Trackit.dz</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+
+          <div class="relative w-full rounded-2xl overflow-hidden border shadow-inner" style="border-color: var(--border-card); height: 580px; background-color: var(--bg-elevated);">
+            <iframe id="trackit-app-frame" src="about:blank" class="w-full h-full border-0 rounded-2xl" title="Trackit.dz Live App" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
           </div>
         </div>
 
@@ -5290,6 +5326,59 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
     }
 
+    function switchTrackingView(mode) {
+      const tabStepper = document.getElementById('tab-view-stepper');
+      const tabTrackit = document.getElementById('tab-view-trackit');
+      const contentStepper = document.getElementById('tracking-view-stepper-content');
+      const contentTrackit = document.getElementById('tracking-view-trackit-content');
+      const frame = document.getElementById('trackit-app-frame');
+      const currentNum = document.getElementById('tracking-result-num')?.textContent?.trim();
+
+      if (mode === 'trackit') {
+        if (tabStepper) {
+          tabStepper.style.backgroundColor = 'transparent';
+          tabStepper.style.borderColor = 'transparent';
+          tabStepper.classList.add('opacity-60');
+          tabStepper.setAttribute('aria-selected', 'false');
+        }
+        if (tabTrackit) {
+          tabTrackit.style.backgroundColor = 'var(--bg-elevated)';
+          tabTrackit.style.borderColor = 'var(--border-card)';
+          tabTrackit.classList.remove('opacity-60');
+          tabTrackit.style.color = 'var(--text-main)';
+          tabTrackit.setAttribute('aria-selected', 'true');
+        }
+        if (contentStepper) contentStepper.classList.add('hidden');
+        if (contentTrackit) contentTrackit.classList.remove('hidden');
+
+        if (frame) {
+          const targetUrl = (currentNum && currentNum !== '...') 
+            ? `https://trackdz.com/?q=${encodeURIComponent(currentNum)}` 
+            : 'https://trackdz.com';
+          if (!frame.src || frame.src === 'about:blank' || frame.getAttribute('data-loaded-num') !== currentNum) {
+            frame.src = targetUrl;
+            frame.setAttribute('data-loaded-num', currentNum || '');
+          }
+        }
+      } else {
+        if (tabTrackit) {
+          tabTrackit.style.backgroundColor = 'transparent';
+          tabTrackit.style.borderColor = 'transparent';
+          tabTrackit.classList.add('opacity-60');
+          tabTrackit.setAttribute('aria-selected', 'false');
+        }
+        if (tabStepper) {
+          tabStepper.style.backgroundColor = 'var(--bg-elevated)';
+          tabStepper.style.borderColor = 'var(--border-card)';
+          tabStepper.classList.remove('opacity-60');
+          tabStepper.style.color = 'var(--text-main)';
+          tabStepper.setAttribute('aria-selected', 'true');
+        }
+        if (contentTrackit) contentTrackit.classList.add('hidden');
+        if (contentStepper) contentStepper.classList.remove('hidden');
+      }
+    }
+
     async function submitTracking() {
       const input = document.getElementById('tracking-input-num');
       const errBox = document.getElementById('tracking-error');
@@ -5439,8 +5528,16 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
           // Direct Portal Deep-Link Buttons
           const links = data.portal_links || data.direct_links || {};
+          const trackitDirectUrl = links.trackit_dz || `https://trackdz.com/?q=${encodeURIComponent(data.tracking_number)}`;
           const pTrackit = document.getElementById('btn-portal-trackit');
-          if (pTrackit) pTrackit.href = links.trackit_dz || `https://trackdz.com/?q=${encodeURIComponent(data.tracking_number)}`;
+          if (pTrackit) pTrackit.href = trackitDirectUrl;
+          const pTrackitTab = document.getElementById('trackit-tab-open-btn');
+          if (pTrackitTab) pTrackitTab.href = trackitDirectUrl;
+          const pFrame = document.getElementById('trackit-app-frame');
+          if (pFrame && pFrame.src && pFrame.src !== 'about:blank') {
+            pFrame.src = trackitDirectUrl;
+            pFrame.setAttribute('data-loaded-num', data.tracking_number);
+          }
           const p17 = document.getElementById('btn-portal-17track');
           if (p17 && links.track17) p17.href = isFr ? (links.track17_en || links.track17) : links.track17;
           const pCainiao = document.getElementById('btn-portal-cainiao');
