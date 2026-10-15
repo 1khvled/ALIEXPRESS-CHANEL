@@ -190,11 +190,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       display: inline-block !important;
     }
 
-    /* Resilient Core Layout Utilities */
-    .hidden { display: none !important; }
-    .flex { display: flex !important; }
-    .inline-flex { display: inline-flex !important; }
-    .grid { display: grid !important; }
+    /* Resilient Core Layout Utilities - Hidden ALWAYS overrides any display */
+    [hidden], .hidden { display: none !important; }
+    .flex:not(.hidden) { display: flex !important; }
+    .inline-flex:not(.hidden) { display: inline-flex !important; }
+    .grid:not(.hidden) { display: grid !important; }
     .items-center { align-items: center !important; }
     .justify-between { justify-content: space-between !important; }
     .justify-center { justify-content: center !important; }
@@ -213,6 +213,20 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     .font-semibold { font-weight: 600 !important; }
     .text-crimson-500, .text-rose-500 { color: #f43f5e !important; }
     .bg-crimson-600, .bg-rose-600 { background-color: #e11d48 !important; color: #ffffff !important; }
+
+    /* Modal Strict Visibility */
+    #deal-modal.hidden {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+    #deal-modal:not(.hidden) {
+      display: flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }
 
     button, a, input, select, textarea, [role="button"] {
       touch-action: manipulation;
@@ -856,15 +870,15 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   </nav>
 
   <!-- Deal Details Bottom Sheet & Lightbox Modal -->
-  <div id="deal-modal" onclick="onModalBackdropClick(event)" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden flex items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div id="deal-modal" onclick="onModalBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div id="modal-container" class="border-t sm:border rounded-t-3xl sm:rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl p-4 sm:p-6 pb-safe space-y-4 animate-slide-up relative" style="background-color: var(--bg-card); border-color: var(--border-card);">
       
       <!-- Mobile Pull Dismiss Handle -->
       <div class="sm:hidden w-12 h-1.5 rounded-full mx-auto -mt-1 mb-2 cursor-pointer touch-manipulation opacity-40" style="background-color: var(--text-soft);" onclick="closeDealModal()"></div>
       
       <!-- Close Button -->
-      <button onclick="closeDealModal()" aria-label="إغلاق" class="absolute top-3.5 left-3.5 w-10 h-10 min-w-[40px] min-h-[40px] rounded-full flex items-center justify-center text-sm border active:scale-95 transition z-10 touch-manipulation shadow-md" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
-        <i class="fa-solid fa-xmark"></i>
+      <button type="button" onclick="closeDealModal()" aria-label="إغلاق" class="absolute top-3.5 left-3.5 w-10 h-10 min-w-[40px] min-h-[40px] rounded-full flex items-center justify-center text-sm border active:scale-95 transition z-30 touch-manipulation shadow-md cursor-pointer hover:bg-rose-600 hover:text-white" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+        <i class="fa-solid fa-xmark text-base"></i>
       </button>
 
       <!-- Image Preview Container -->
@@ -1249,16 +1263,21 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     };
 
     // ── Global State ────────────────────────────────────────────────
-    let currentTheme = localStorage.getItem('dealscout_theme') || 'dark';
-    let currentLang = localStorage.getItem('dealscout_lang') || 'ar';
-    let allDeals = [];
-    let currentChannel = '@DzAliexpress0';
-    let currentCategory = 'all';
-    let currentCurrency = currentLang === 'fr' ? 'EUR' : 'DZD';
-    let currentViewMode = 'grid';
-    let usdtRate = 256.9;
-    let currentSearchTerm = '';
-    let currentActiveDeal = null;
+    var currentTheme = (localStorage.getItem('dealscout_theme') === 'light') ? 'light' : 'dark';
+    var currentLang = (localStorage.getItem('dealscout_lang') === 'fr') ? 'fr' : 'ar';
+    var allDeals = [];
+    var currentChannel = '@DzAliexpress0';
+    var currentCategory = 'all';
+    var currentCurrency = currentLang === 'fr' ? 'EUR' : 'DZD';
+    var currentViewMode = 'grid';
+    var usdtRate = 256.9;
+    var currentSearchTerm = '';
+    var currentActiveDeal = null;
+
+    function t(key, fallback = '') {
+      const dict = (typeof I18N !== 'undefined' && I18N[currentLang]) ? I18N[currentLang] : (typeof I18N !== 'undefined' ? I18N.ar : {});
+      return (dict && dict[key]) || fallback || '';
+    }
 
     // ── Theme Engine (Light / Dark) ─────────────────────────────────
     function applyTheme(theme) {
@@ -2020,6 +2039,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
     // ── Deal Modal Bottom Sheet Handlers ────────────────────────────
     function openDealModal(dealId) {
+      if (typeof allDeals === 'undefined' || !Array.isArray(allDeals) || allDeals.length === 0) return;
       const deal = allDeals.find(d => d.id === dealId);
       if (!deal) return;
       currentActiveDeal = deal;
@@ -2040,13 +2060,16 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       if (deal.photo_url) {
         imgWrap.classList.remove('hidden');
+        imgWrap.style.display = 'flex';
         img.src = deal.photo_url;
       } else {
         imgWrap.classList.add('hidden');
+        imgWrap.style.display = 'none';
+        img.src = '';
       }
 
       title.textContent = deal.title;
-      cat.textContent = deal.category_label || I18N[currentLang].deal_category_fallback;
+      cat.textContent = deal.category_label || t('deal_category_fallback', 'عرض مميز');
       date.textContent = deal.date || '';
 
       if (deal.country) {
@@ -2061,9 +2084,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       if (deal.coupon) {
         couponWrap.classList.remove('hidden');
+        couponWrap.style.display = 'flex';
         couponCode.textContent = deal.coupon;
       } else {
         couponWrap.classList.add('hidden');
+        couponWrap.style.display = 'none';
       }
 
       price.innerHTML = formatPrice(deal);
@@ -2076,12 +2101,16 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
 
       modal.classList.remove('hidden');
+      modal.style.display = 'flex';
       document.body.style.overflow = 'hidden';
     }
 
     function closeDealModal() {
       const modal = document.getElementById('deal-modal');
-      if (modal) modal.classList.add('hidden');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+      }
       document.body.style.overflow = '';
       currentActiveDeal = null;
     }
