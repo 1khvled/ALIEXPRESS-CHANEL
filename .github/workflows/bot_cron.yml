@@ -1,9 +1,14 @@
 name: AliExpress Deals Telegram Bot
 
 on:
+  push:
+    branches:
+      - main
   schedule:
-    # Continuously triggers cloud runners every 20 minutes (24/7 unbroken autonomous coverage)
-    - cron: '*/20 * * * *'
+    # Multiple odd-minute schedules to bypass GitHub Actions scheduler congestion & dropped runs
+    - cron: '13 * * * *'
+    - cron: '37 * * * *'
+    - cron: '53 * * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI anytime
     inputs:
       force:
@@ -61,7 +66,7 @@ jobs:
           if [ "${{ github.event.inputs.force }}" = "true" ]; then
             python scripts/post_recent_deals.py --force
           else
-            python scripts/post_recent_deals.py --duration 7200 --interval 75
+            python scripts/post_recent_deals.py --duration 18000 --interval 60
           fi
 
       - name: Run France Deals Publisher (@francedealsdz)

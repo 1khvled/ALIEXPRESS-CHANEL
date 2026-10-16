@@ -962,10 +962,10 @@ def extract_clean_title(text: str) -> Optional[str]:
             if not is_noisy(cand) and len(cand) >= 3:
                 return cand[:100]
 
-    # 0.5 Look for checkmark / device bullet title line (DealScout DZ & top Algerian format: ✅ [Title])
+    # 0.5 Look for checkmark / device / channel bullet title line (DealScout DZ, Megaphonna Ⓜ, etc.)
     for i, line in enumerate(lines):
-        if any(line.startswith(s) for s in ["✅", "✔️", "☑️", "📱", "🎮", "🎧"]):
-            cand = re.sub(r'^[✅✔️☑️📱🎮🎧\s\-:]+', '', line).strip()
+        if any(line.startswith(s) for s in ["✅", "✔️", "☑️", "📱", "🎮", "🎧", "Ⓜ️", "Ⓜ"]):
+            cand = re.sub(r'^[✅✔️☑️📱🎮🎧Ⓜ️Ⓜ\s\-:]+', '', line).strip()
             cand = re.sub(r'[\$€💵].*$', '', cand).strip()
             cand = re.sub(r'https?://\S+', '', cand).strip()
             cand = re.sub(r'</?[^>]+(>|$)', '', cand).strip()
