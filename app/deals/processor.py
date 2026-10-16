@@ -62,7 +62,7 @@ class DealProcessor:
         affiliate_url = await affiliate_service.create_affiliate_link(
             product_url=extracted.canonical_url,
             product_id=extracted.product_id,
-            deal_type=getattr(extracted, 'deal_type', 'coin')
+            deal_type=getattr(extracted, 'deal_type', 'item')
         )
 
         initial_status = "DETECTED"
@@ -125,9 +125,15 @@ class DealProcessor:
 
             is_coupon_list = bool(deal.product_id and deal.product_id.startswith("COUPONS_"))
             coupon_items = []
-            if is_coupon_list and deal.source_message and deal.source_message.raw_text:
+            raw_text = deal.source_message.raw_text if (deal.source_message and deal.source_message.raw_text) else ""
+            if is_coupon_list and raw_text:
                 from app.aliexpress.parser import extract_coupon_list
-                coupon_items = extract_coupon_list(deal.source_message.raw_text)
+                coupon_items = extract_coupon_list(raw_text)
+
+            from app.aliexpress.parser import extract_country_instruction, extract_seller_coupon, detect_deal_type
+            country_info = extract_country_instruction(raw_text) if raw_text else None
+            seller_coupon = extract_seller_coupon(raw_text) if raw_text else None
+            deal_type = detect_deal_type(raw_text, deal.original_url, deal.title)
 
             # 2. Generate exact Arabic post
             caption = await caption_generator.generate(
@@ -136,8 +142,12 @@ class DealProcessor:
                 eur_price=deal.current_price_eur or 0.0,
                 affiliate_url=post_deal_url,
                 coupon_code=deal.coupon_code,
+                seller_coupon=seller_coupon,
                 has_points_discount=deal.has_points_discount,
-                coupon_list=coupon_items if is_coupon_list else None
+                country_info=country_info,
+                coupon_list=coupon_items if is_coupon_list else None,
+                raw_text=raw_text,
+                deal_type=deal_type
             )
 
             # 3. Validate generated caption

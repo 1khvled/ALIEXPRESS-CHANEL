@@ -4545,10 +4545,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const pLineRegex = /(?:(?:استخدم\\s+|استعمل\\s+|انسخ\\s+|بكود\\s+)?(?:(?:ال)?كـ?وبون|(?:ال)?كـ?ود|(?:ال)?قسيمـ?ة|code\\s*promo|code\\s*de\\s*r[ée]duction|code\\s*r[ée]duction|coupon|promo|utilisez\\s*le\\s*code|avec\\s*le\\s*code)[^\\n:]*|[🏷️🎟️🎫👊])\\s*[:：\\-]\\s*([^\\r\\n]+)/gi;
       while ((mMatch = pLineRegex.exec(cleanNorm)) !== null) {
         let content = mMatch[1].trim();
-        const tierMatch = content.match(/\(?([$€]?[0-9]+(?:\.[0-9]+)?\/[0-9]+(?:\.[0-9]+)?[$€]?)\)?/);
+        const tierMatch = content.match(/\\(?([$€]?[0-9]+(?:\\.[0-9]+)?\\/[0-9]+(?:\\.[0-9]+)?[$€]?)\\)?/);
         const lineTier = tierMatch ? tierMatch[1] : '';
         if (lineTier) content = content.replace(tierMatch[0], '');
-        const parts = content.split(/[\/\|,،]|\s+(?:أو|or|ou)\s+/);
+        const parts = content.split(/[\\/\\|,،]|\\s+(?:أو|or|ou)\\s+/);
         for (const p of parts) {
           const toks = p.match(/[A-Za-z0-9_-]{3,25}/g) || [];
           for (const tok of toks) {
@@ -4558,7 +4558,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
 
       // Code tags: <code>CODE</code>
-      const pTagsRegex = /(?:(?:ال)?كود|(?:ال)?كوبون|(?:ال)?قسيمة|code|coupon|promo)[^\r\n]{0,60}?(?:<code>|`|\*\*)([A-Za-z0-9_-]{3,25})(?:<\/code>|`|\*\*)/gi;
+      const pTagsRegex = /(?:(?:ال)?كود|(?:ال)?كوبون|(?:ال)?قسيمة|code|coupon|promo)[^\\r\\n]{0,60}?(?:<code>|`|\\*\\*)([A-Za-z0-9_-]{3,25})(?:<\\/code>|`|\\*\\*)/gi;
       while ((mMatch = pTagsRegex.exec(cleanNorm)) !== null) {
         addParsedCode(mMatch[1], 'كود الخصم', '');
       }
@@ -4594,7 +4594,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         country = "أستراليا 🇦🇺";
       } else if (/إسبانيا|اسبانيا|🇪🇸|spain/i.test(cleanNorm)) {
         country = "إسبانيا 🇪🇸";
-      } else if (/(?:خلي\s*البلد\s*كندا|بلد\s*الحساب\s*كندا|ضع\s*البلد\s*كندا)/i.test(cleanNorm)) {
+      } else if (/(?:خلي\\s*البلد\\s*كندا|بلد\\s*الحساب\\s*كندا|ضع\\s*البلد\\s*كندا)/i.test(cleanNorm)) {
         country = "كندا 🇨🇦";
       }
 
@@ -4606,13 +4606,13 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         for (const l of lines) {
           const ll = l.toLowerCase();
           if (stripKeywords.some(kw => ll.includes(kw))) continue;
-          if (/https?:\/\/|t\.me\/|@[a-zA-Z0-9_]+/i.test(l)) continue;
-          if (/^(?:🎟️|🎫|•|\-|\*)?\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\s*promo|(?:ال)?قسيمة|code|coupon)\b/i.test(l)) continue;
-          if (/^(?:🎟️|🎫)\s*[$€]?[0-9]+/i.test(l)) continue;
-          const cl = l.replace(/https?:\/\/\S+/g, '').replace(/@[a-zA-Z0-9_]+/g, '').replace(/<\/?[a-zA-Z0-9_-]+>/g, '').trim();
+          if (/https?:\\/\\/|t\\.me\\/|@[a-zA-Z0-9_]+/i.test(l)) continue;
+          if (/^(?:🎟️|🎫|•|\\-|\\*)?\\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\\s*promo|(?:ال)?قسيمة|code|coupon)\\b/i.test(l)) continue;
+          if (/^(?:🎟️|🎫)\\s*[$€]?[0-9]+/i.test(l)) continue;
+          const cl = l.replace(/https?:\\/\\/\\S+/g, '').replace(/@[a-zA-Z0-9_]+/g, '').replace(/<\\/?[a-zA-Z0-9_-]+>/g, '').trim();
           if (cl.length > 1) descLines.push(cl);
         }
-        cleanDesc = descLines.join('\n').trim();
+        cleanDesc = descLines.join('\\n').trim();
       }
 
       hasCoins = text.includes('عملات') || text.includes('Coins') || text.includes('coins') || text.includes('🪙');
