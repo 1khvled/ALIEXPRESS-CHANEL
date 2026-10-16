@@ -21,7 +21,7 @@ on:
 
 concurrency:
   group: telegram-deals-cron
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   run-deals-collector:
@@ -63,7 +63,7 @@ jobs:
           if [ "${{ github.event.inputs.force }}" = "true" ]; then
             python scripts/post_recent_deals.py --force
           else
-            python scripts/post_recent_deals.py --duration 18000 --interval 60
+            python scripts/post_recent_deals.py
           fi
 
       - name: Run France Deals Publisher (@francedealsdz)
