@@ -413,17 +413,24 @@ class AutonomousEngine:
 
         return dz_published + fr_published
 
-    async def run_forever(self):
-        """Continuous autonomous loop running 24/7 with auto-recovery and exponential backoff on fatal errors."""
+    async def run_forever(self, duration_seconds: Optional[int] = None):
+        """Continuous autonomous loop running 24/7 or for a specified duration."""
         self.is_running = True
+        start_time = time.time()
         logger.info("=" * 60)
         logger.info("AUTONOMOUS DEAL SCOUT ENGINE STARTED (24/7 OPERATION)")
         logger.info(f"Target Channel: {settings.TARGET_CHANNEL_ID} | Tracking: {settings.ALIEXPRESS_AFFILIATE_TRACKING_ID}")
         logger.info(f"Check Interval: {self.interval}s | Channels: {', '.join(MONITORED_CHANNELS)}")
+        if duration_seconds:
+            logger.info(f"Planned Run Duration: {duration_seconds}s ({duration_seconds/60:.1f} mins)")
         logger.info("=" * 60)
 
         consecutive_failures = 0
         while self.is_running:
+            if duration_seconds and (time.time() - start_time) >= duration_seconds:
+                logger.info(f"Target duration of {duration_seconds}s reached. Exiting autonomous loop cleanly.")
+                break
+
             try:
                 await self.initialize()
                 published = await self.run_single_cycle()
@@ -438,6 +445,9 @@ class AutonomousEngine:
                 logger.exception(f"Unhandled error in autonomous engine cycle (failure #{consecutive_failures}): {e}")
                 backoff = min(60, 5 * consecutive_failures)
                 await asyncio.sleep(backoff)
+
+            if duration_seconds and (time.time() - start_time) >= duration_seconds:
+                break
 
             try:
                 await asyncio.sleep(self.interval)

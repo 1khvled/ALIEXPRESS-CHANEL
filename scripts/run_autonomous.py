@@ -56,6 +56,14 @@ def main():
             interval = 60
     autonomous_engine.interval = interval
 
+    duration = None
+    if "--duration" in sys.argv:
+        try:
+            idx = sys.argv.index("--duration")
+            duration = int(sys.argv[idx + 1])
+        except (IndexError, ValueError):
+            duration = None
+
     single_run = "--single-run" in sys.argv or "--once" in sys.argv
     force_run = "--force" in sys.argv or "-f" in sys.argv
 
@@ -71,6 +79,8 @@ def main():
     print("=" * 70)
     print("   DEALSCOUT AUTONOMOUS DAEMON (24/7 HANDS-OFF ENGINE)")
     print(f"   PID: {os.getpid()} | Check Interval: {interval}s")
+    if duration:
+        print(f"   Execution Duration: {duration}s ({duration/60:.1f} mins)")
     print(f"   Target: @DzAliexpress0 & @francedealsdz")
     print("   Self-healing watchdog: ACTIVE")
     print("=" * 70)
@@ -93,8 +103,8 @@ def main():
     consecutive_crashes = 0
     while not shutdown_requested:
         try:
-            asyncio.run(autonomous_engine.run_forever())
-            if shutdown_requested:
+            asyncio.run(autonomous_engine.run_forever(duration_seconds=duration))
+            if shutdown_requested or duration:
                 break
         except KeyboardInterrupt:
             logger.info("Daemon stopped by user (Ctrl+C).")

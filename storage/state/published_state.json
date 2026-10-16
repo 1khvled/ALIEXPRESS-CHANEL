@@ -270,7 +270,9 @@
     "1005012671337268",
     "1005012331836106",
     "9998888814",
-    "99988824"
+    "99988824",
+    "1005007760080474",
+    "1005012575455222"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -288,7 +290,7 @@
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
     "100500777666555": 1792149224.5565908,
-    "1005011778621042": 1791108644.641232,
+    "1005011778621042": 1792160254.9859293,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1791192944.201814,
     "1005006533038973": 1791104468.758226,
@@ -514,7 +516,7 @@
     "1005013165123874": 1792017774.247927,
     "32983391170": 1792087147.0923955,
     "1005012933967378": 1792103193.622027,
-    "1005010812635861": 1792025653.768273,
+    "1005010812635861": 1792160246.020243,
     "1005008500550817": 1792025664.1703467,
     "1005009834132291": 1792157910.2543087,
     "1005008077568655": 1792157933.6814291,
@@ -551,7 +553,9 @@
     "1005012671337268": 1792157886.3787897,
     "1005012331836106": 1792157902.7999656,
     "9998888814": 1792158814.2017248,
-    "99988824": 1792160024.5126393
+    "99988824": 1792160024.5126393,
+    "1005007760080474": 1792160262.8028278,
+    "1005012575455222": 1792160269.0502243
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -861,7 +865,10 @@
     "Blackshark GS3 Smart Watch Global Version",
     "Honor X60 GT 12/256GB",
     "EasySMX X05 Pro Wireless Gamepad PC Controller",
-    "MACHENIKE G5Pro Max SE Gaming Controller With Charging Dock"
+    "MACHENIKE G5Pro Max SE Gaming Controller With Charging Dock",
+    "RYZEN 7 5700X",
+    "Ⓜ BLACKVIEW WAVE 10C (4/32)",
+    "Ⓜ  TCL 60 NXT PAPER 8/256📱"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1146,7 +1153,7 @@
     "Smart Body Fat Scale Accurate": 1792017774.247927,
     "ماوس ألعاب سلكي خفيف الوزن من GameSir GM500 مزود بمستشعر بصري يصل إلى 12000 DPI": 1792025644.3094199,
     "Anker Nano 3 Pro 45W GaN + Cable": 1792025649.1506214,
-    "Blackview Wave 7C": 1792025653.768273,
+    "Blackview Wave 7C": 1792160246.020243,
     "محبوبة الجماهير controller🎮": 1792025664.1703467,
     "EasySMX X05 Pro Wireless Gamepad": 1792025670.659584,
     "MACHENIKE G5Pro Max SE Gaming Controller": 1792032611.9670143,
@@ -1174,7 +1181,10 @@
     "Blackshark GS3 Smart Watch Global Version": 1792157892.9621794,
     "Honor X60 GT 12/256GB": 1792157902.7999656,
     "EasySMX X05 Pro Wireless Gamepad PC Controller": 1792157910.2543087,
-    "MACHENIKE G5Pro Max SE Gaming Controller With Charging Dock": 1792157933.6814291
+    "MACHENIKE G5Pro Max SE Gaming Controller With Charging Dock": 1792157933.6814291,
+    "RYZEN 7 5700X": 1792160254.9859293,
+    "Ⓜ BLACKVIEW WAVE 10C (4/32)": 1792160262.8028278,
+    "Ⓜ  TCL 60 NXT PAPER 8/256📱": 1792160269.0502243
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1861,27 +1871,31 @@
     "aniscoupons:32983",
     "test_channel:1792158814",
     "megaphonna:8173",
-    "test_channel:1792160024"
+    "test_channel:1792160024",
+    "zedstoreonline:38622",
+    "aniscoupons:32986",
+    "megaphonna:8427",
+    "megaphonna:8425"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792160024.7219615,
+  "last_run_time": 1792160269.0502243,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32985,
-      "last_check_time": 1792158386.9210944
+      "last_message_id": 32986,
+      "last_check_time": 1792160257.0567985
     },
     "ecksdeal": {
       "last_message_id": 5894,
-      "last_check_time": 1792158382.5265355
+      "last_check_time": 1792160257.587418
     },
     "lodydeals": {
       "last_message_id": 45571,
-      "last_check_time": 1792160024.6150036
+      "last_check_time": 1792160241.2009902
     },
     "bnddeals": {
       "last_message_id": 50859,
-      "last_check_time": 1792158383.4164846
+      "last_check_time": 1792160258.5899374
     },
     "test_channel": {
       "last_message_id": 1792160024,
@@ -1889,19 +1903,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792158383.0189412
+      "last_check_time": 1792160258.0824704
     },
     "zedstoreonline": {
-      "last_message_id": 38621,
-      "last_check_time": 1792158382.1206589
+      "last_message_id": 38622,
+      "last_check_time": 1792160248.1176944
     },
     "megaphonna": {
       "last_message_id": 8427,
-      "last_check_time": 1792160024.7219615
+      "last_check_time": 1792160273.7459762
     },
     "couponsglobal": {
       "last_message_id": 48851,
-      "last_check_time": 1792158387.333198
+      "last_check_time": 1792160274.2473319
     }
   },
   "published_product_prices": {
@@ -1918,7 +1932,7 @@
     "1005007279793099": 13.7,
     "1005008829227075": 24.76,
     "100500777666555": 20.0,
-    "1005011778621042": 123.59,
+    "1005011778621042": 130.5,
     "1005012312990781": 92.31,
     "1005009234854371": 19.6,
     "1005006533038973": 21.81,
@@ -6198,6 +6212,46 @@
       "price": 45.7,
       "timestamp": 1792158003.7032418,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38622": {
+      "channel_msg_id": 898,
+      "product_id": "1005010812635861",
+      "title": "Blackview Wave 7C",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38622,
+      "price": 92.0,
+      "timestamp": 1792160246.020243,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32986": {
+      "channel_msg_id": 899,
+      "product_id": "1005011778621042",
+      "title": "RYZEN 7 5700X",
+      "channel": "aniscoupons",
+      "source_msg_id": 32986,
+      "price": 130.5,
+      "timestamp": 1792160254.9859293,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8427": {
+      "channel_msg_id": 900,
+      "product_id": "1005007760080474",
+      "title": "Ⓜ BLACKVIEW WAVE 10C (4/32)",
+      "channel": "megaphonna",
+      "source_msg_id": 8427,
+      "price": 78.0,
+      "timestamp": 1792160262.8028278,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8425": {
+      "channel_msg_id": 901,
+      "product_id": "1005012575455222",
+      "title": "Ⓜ  TCL 60 NXT PAPER 8/256📱",
+      "channel": "megaphonna",
+      "source_msg_id": 8425,
+      "price": 115.0,
+      "timestamp": 1792160269.0502243,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6206,17 +6260,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792158157.1597023,
+    "last_deal_post_time": 1792160274.2943525,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792158389.92625,
+    "last_sweep_time": 1792160274.272144,
     "last_sweep_times": {
-      "algeria": 1792158387.3552482,
+      "algeria": 1792160274.272144,
       "france": 1792158389.92625
     },
     "last_deal_post_times": {
-      "algeria": 1792158157.1597023
+      "algeria": 1792160274.2943525
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -6369,7 +6423,7 @@
     "1005007345108759": "pcgamingpart",
     "1005007394028808": "lodydeals",
     "1005007394197021": "lodydeals",
-    "1005011778621042": "lodydeals",
+    "1005011778621042": "aniscoupons",
     "1005012571601398": "megaphonna",
     "1005013290515237": "aniscoupons",
     "1005012264415744": "megaphonna",
@@ -6823,7 +6877,8 @@
     "Honor X60 GT 12/256GB": "zedstoreonline",
     "realme P3 Lite Smartphone NFC 6300mAh Battery 15W Charge 6.67\" 120Hz": "megaphonna",
     "MACHENIKE G5Pro Max SE Gaming Controller With Charging Dock": "aniscoupons",
-    "Ⓜ BLACKVIEW WAVE 10C (4/32)": "megaphonna"
+    "Ⓜ BLACKVIEW WAVE 10C (4/32)": "megaphonna",
+    "RYZEN 7 5700X": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -7432,7 +7487,9 @@
     "bnddeals:50840",
     "megaphonna:8294",
     "aniscoupons:32976",
-    "lodydeals:45512"
+    "lodydeals:45512",
+    "megaphonna:8424",
+    "megaphonna:8421"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
