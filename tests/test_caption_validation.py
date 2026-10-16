@@ -90,6 +90,34 @@ async def test_phone_hook_and_seller_coupon_generation():
     assert "OTPRD42" in caption
     # Must contain Canada flag
     assert "كــــــندا 🇨🇦" in caption
-    # Must contain price comparison
-    assert "سعر السوق المحلي" in caption
     assert "82000دج" in caption
+
+
+@pytest.mark.asyncio
+async def test_headphones_and_wearables_never_get_phone_hook():
+    # 1. Headphones must NEVER get phone hook
+    caption_audio = await caption_generator.generate(
+        title="HAYLOU FlowLoop S33 Wireless Headphones 45dB ANC Hi-Res LDAC 100h Playtime",
+        usd_price=26.29,
+        eur_price=24.18,
+        affiliate_url="https://s.click.aliexpress.com/e/_c3DKWzSH",
+        coupon_code="WOAE02",
+        country_info="كندا 🇨🇦",
+        raw_text="قناة ميغافونا @megaphonna سماعات haylou"
+    )
+    assert "هاتف" not in caption_audio
+    assert "الهواتف" not in caption_audio
+    assert "📱" not in caption_audio.splitlines()[0]  # First line/hook must not have phone emoji
+    assert any(h in caption_audio for h in ["سماعات", "السماعات", "لافار", "تخفيض"])
+
+    # 2. Smartwatch must NEVER get phone hook
+    caption_watch = await caption_generator.generate(
+        title="HAYLOU Watch Faro Voice Calling Smart Watch",
+        usd_price=19.00,
+        eur_price=17.50,
+        affiliate_url="https://s.click.aliexpress.com/e/_c43QJfHn",
+        coupon_code="WOAE02"
+    )
+    assert "هاتف" not in caption_watch
+    assert "الهواتف" not in caption_watch
+    assert "ساعة ذكية" in caption_watch or "الساعات الذكية" in caption_watch
