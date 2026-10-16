@@ -95,7 +95,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Cairo:wght@400;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Optional Tailwind JIT CDN with safety guard -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -106,10 +106,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         theme: {
           extend: {
             fontFamily: {
-              sans: ['"IBM Plex Sans Arabic"', '"Alexandria"', '"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
-              heading: ['"Alexandria"', '"IBM Plex Sans Arabic"', '"Plus Jakarta Sans"', 'sans-serif'],
+              sans: ['"Alexandria"', '"Tajawal"', '"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
+              heading: ['"Alexandria"', '"Plus Jakarta Sans"', 'sans-serif'],
               mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-              inter: ['"Plus Jakarta Sans"', '"IBM Plex Sans Arabic"', 'sans-serif']
+              inter: ['"Plus Jakarta Sans"', '"Alexandria"', 'sans-serif']
             },
             colors: {
               crimson: {
@@ -189,15 +189,18 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
       background-size: 24px 24px;
     }
-    body[dir="ltr"] {
-      font-family: 'Plus Jakarta Sans', 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    html, body, button, input, select, textarea {
+      font-family: 'Alexandria', 'Tajawal', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     }
-    body[dir="rtl"] {
-      font-family: 'IBM Plex Sans Arabic', 'Alexandria', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    body[dir="ltr"], html[dir="ltr"] {
+      font-family: 'Plus Jakarta Sans', 'Alexandria', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     }
-    h1, h2, h3, h4, .font-heading {
-      font-family: 'Alexandria', 'IBM Plex Sans Arabic', 'Plus Jakarta Sans', sans-serif !important;
-      letter-spacing: -0.02em;
+    body[dir="rtl"], html[dir="rtl"] {
+      font-family: 'Alexandria', 'Tajawal', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    }
+    h1, h2, h3, h4, h5, h6, .font-heading {
+      font-family: 'Alexandria', 'Plus Jakarta Sans', sans-serif !important;
+      letter-spacing: -0.015em;
     }
     .font-mono, code, .price-num {
       font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
