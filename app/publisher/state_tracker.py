@@ -264,6 +264,10 @@ def extract_model_identifiers(tokens: Set[str]) -> Set[str]:
 
 def is_same_deal_title(title_a: str, title_b: str) -> bool:
     """Accurately identifies if two titles refer to the same product across different channels."""
+    if not title_a or not title_b:
+        return False
+    if len(title_a) > 130 or len(title_b) > 130 or "\n" in title_a or "\n" in title_b:
+        return False
     toks_a = extract_title_tokens(title_a)
     toks_b = extract_title_tokens(title_b)
     if not toks_a or not toks_b:
@@ -749,7 +753,6 @@ async def refresh_channel_cache(force: bool = False):
                                     if clean_line and len(clean_line) > 3 and not any(k in clean_line for k in ["تنبيه", "عروض الحزم"]):
                                         text_tuples.append((clean_line, msg_ts))
                                         break
-                        text_tuples.append((t, msg_ts))
                         # Extract product ID if found in text or URLs
                         for u in re.findall(r'https?://[^\s<>"\'\)]+', t):
                             pid = extract_product_id_from_url(u)

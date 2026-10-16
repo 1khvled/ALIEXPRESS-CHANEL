@@ -268,7 +268,9 @@
     "9998881013",
     "9998881091",
     "9998881724",
-    "1005013152491360"
+    "1005013152491360",
+    "1005011904443903",
+    "1005010112746583"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -360,7 +362,7 @@
     "1005008599340405": 1791638441.843642,
     "1005007572968437": 1790969442.7810974,
     "1005009120957437": 1790970941.2570727,
-    "1005012922578845": 1791236002.3605435,
+    "1005012922578845": 1792156468.3960416,
     "1005005652871847": 1790976654.120254,
     "1005012554205120": 1791145541.318689,
     "1005008901941749": 1790973051.970508,
@@ -461,7 +463,7 @@
     "9998887893": 1791627893.027416,
     "1005006007773971": 1791638433.4352653,
     "1005013067004815": 1791638447.7612462,
-    "1005009948598802": 1792103203.7426965,
+    "1005009948598802": 1792156764.6865816,
     "9998885318": 1791675318.975821,
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
@@ -476,28 +478,28 @@
     "9998882735": 1791752735.01132,
     "1005006966177706": 1791752780.7013927,
     "1005012234106869": 1791752787.9016774,
-    "1005010209307090": 1792097871.190524,
+    "1005010209307090": 1792156493.2084296,
     "9998883006": 1791753006.1402605,
     "9998888761": 1791758761.679281,
     "9998889143": 1791759143.197184,
     "9998889531": 1791759531.2084382,
     "9998889936": 1791759936.937901,
-    "1005012824429842": 1792097860.8560278,
+    "1005012824429842": 1792156501.818011,
     "1005008450489185": 1791941233.817019,
     "1005012086685834": 1791941271.2358608,
     "1005012914301139": 1791942620.3773732,
     "1005007345151855": 1791942667.867043,
     "1005010345227483": 1791942676.1983886,
-    "1005011557896041": 1792086995.413412,
+    "1005011557896041": 1792156781.1827424,
     "1005011754993234": 1792061283.4535055,
     "1005011735727412": 1791943783.9162278,
-    "1005013039644752": 1792086982.281257,
+    "1005013039644752": 1792156486.8342333,
     "1005007916078341": 1792050965.154088,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
     "1005013336240375": 1791968149.7952893,
     "1005012824711963": 1791968175.4449708,
-    "1005007920266509": 1792077728.5472124,
+    "1005007920266509": 1792156515.7006214,
     "1005009275536960": 1791975930.016452,
     "1005007767322935": 1791975934.9659944,
     "1005012571601398": 1792077701.5855007,
@@ -506,7 +508,7 @@
     "1005011899097443": 1792146957.5319738,
     "1005012865117890": 1792007168.2612865,
     "1005010428947440": 1792007180.6836498,
-    "1005010733227481": 1792017716.5973718,
+    "1005010733227481": 1792156757.9443583,
     "1005006281667276": 1792017728.2932706,
     "1005010177152485": 1792017733.3056524,
     "1005012014142030": 1792017738.3981204,
@@ -521,8 +523,8 @@
     "1005008077568655": 1792032611.9670143,
     "1005009774318553": 1792050974.7243752,
     "1005012585389764": 1792061322.5579543,
-    "1005011997237872": 1792061329.5738766,
-    "1005011908654312": 1792061334.470126,
+    "1005011997237872": 1792156524.878074,
+    "1005011908654312": 1792156510.3081717,
     "9998882553": 1792072553.3589916,
     "9998882689": 1792072689.712488,
     "9998883338": 1792073338.7415233,
@@ -530,7 +532,7 @@
     "9998883836": 1792073836.8176863,
     "9998883963": 1792073963.7339156,
     "1005010620269829": 1792077689.3824542,
-    "1005010149868688": 1792077710.438389,
+    "1005010149868688": 1792156772.5025818,
     "9998886219": 1792086219.2668676,
     "1005005875379717": 1792087000.9978776,
     "9998887185": 1792087185.8637784,
@@ -547,7 +549,9 @@
     "9998881013": 1792111013.6508672,
     "9998881091": 1792111091.834798,
     "9998881724": 1792111724.2696939,
-    "1005013152491360": 1792118810.348281
+    "1005013152491360": 1792118810.348281,
+    "1005011904443903": 1792156532.660453,
+    "1005010112746583": 1792156744.1810272
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -852,7 +856,12 @@
     "Realme P3 Lite 4G 4/128GB",
     "Anker 511 Nano Pro 30W",
     "Anker Nano 3 Pro 45W GaN",
-    "POCO X8 5G 6/128GB"
+    "POCO X8 5G 6/128GB",
+    "Realme 15 5G 12/256GB",
+    "Blackview Wave 10",
+    "Blackview Wave 7C Smartphone 6.56 inch HD+Eye-Comfort Screen IPS Display",
+    "Anker Liberty 4 NC",
+    "Ⓜ OnePlus Turbo 6V 8/256"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1007,7 +1016,7 @@
     "HONOR POWER 2 (12/256)": 1791042962.9882953,
     "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light": 1791043842.6639822,
     "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": 1791045040.5964694,
-    "RYZEN 7 7800X3D": 1792086995.413412,
+    "RYZEN 7 7800X3D": 1792156781.1827424,
     "Redmi Note 14S  8/128GB": 1791051351.3013499,
     "Attack Shark X AJAZZ AK820": 1791217251.8495085,
     "Baseus Stylus Pen": 1791056153.3979695,
@@ -1092,8 +1101,8 @@
     "REALME P3 5G": 1791649464.949431,
     "Essager 54W USB Car Charger": 1791752780.7013927,
     "Original QKZ AK6": 1791752787.9016774,
-    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": 1792097871.190524,
-    "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W": 1792103203.7426965,
+    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": 1792156493.2084296,
+    "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W": 1792156764.6865816,
     "🌐نسخة عالمية": 1791752930.9846199,
     "realme P3 5G 8/256GB": 1791941221.9951465,
     "HONOR Watch X5i Global Version": 1791941229.2882626,
@@ -1112,7 +1121,7 @@
     "AMD Ryzen 5 8400F": 1792061283.4535055,
     "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": 1791943777.8506553,
     "🔝 مانات قووووة ل جماعة mobile gaming 🎮": 1792017738.3981204,
-    "جديد ال ©️©️ ببطارية عملاقة💪💪": 1792086982.281257,
+    "جديد ال ©️©️ ببطارية عملاقة💪💪": 1792156486.8342333,
     "Honor Choice Infowear Watch 2i Smartwatch AMOLED": 1791943825.002781,
     "CMF BY NOTHING Watch 3 Pro": 1792050965.154088,
     "Dolewa D3 Portable Printer Thermal Paper": 1791947519.5815504,
@@ -1145,14 +1154,14 @@
     "MACHENIKE G5Pro Max SE Gaming Controller": 1792032611.9670143,
     "قرص تخزين خارجي محمول CUSU SSD سعة 512 جيجابايت": 1792050974.7243752,
     "CUSU SSD 512GB": 1792061290.6019506,
-    "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)": 1792097860.8560278,
+    "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)": 1792156501.818011,
     "Redmi Pad 2 9.7": 1792061322.5579543,
-    "Redmi Note 12 5G Global (4/128GB)": 1792061329.5738766,
+    "Redmi Note 12 5G Global (4/128GB)": 1792156524.878074,
     "Blackview Wave 10C": 1792061334.470126,
     "متوسط سعره حالياً 82000دج": 1792077701.5855007,
-    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP AI": 1792077710.438389,
+    "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP AI": 1792156772.5025818,
     "iQOO Z11s 5G (8/128GB)": 1792077724.119901,
-    "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1792077728.5472124,
+    "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1792156515.7006214,
     "Baseus GH02 Gaming Wireless Headphone": 1792087000.9978776,
     "GameSir GM500 PMW33600 Gaming Mouse": 1792087147.0923955,
     "Honor 600S 5G 12/256GB": 1792091791.0211077,
@@ -1160,7 +1169,12 @@
     "Realme P3 Lite 4G 4/128GB": 1792097839.1553843,
     "Anker 511 Nano Pro 30W": 1792103182.8885217,
     "Anker Nano 3 Pro 45W GaN": 1792103193.622027,
-    "POCO X8 5G 6/128GB": 1792118810.348281
+    "POCO X8 5G 6/128GB": 1792118810.348281,
+    "Realme 15 5G 12/256GB": 1792156468.3960416,
+    "Blackview Wave 10": 1792156510.3081717,
+    "Blackview Wave 7C Smartphone 6.56 inch HD+Eye-Comfort Screen IPS Display": 1792156532.660453,
+    "Anker Liberty 4 NC": 1792156744.1810272,
+    "Ⓜ OnePlus Turbo 6V 8/256": 1792156757.9443583
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1955,27 +1969,40 @@
     "test_channel:1792111091",
     "test_channel:1792111724",
     "lodydeals:45562",
-    "lodydeals:45565"
+    "lodydeals:45565",
+    "lodydeals:45566",
+    "megaphonna:8422",
+    "megaphonna:8421",
+    "megaphonna:8420",
+    "aniscoupons:32982",
+    "aniscoupons:32981",
+    "aniscoupons:32980",
+    "aniscoupons:32979",
+    "zedstoreonline:38617",
+    "megaphonna:8418",
+    "megaphonna:8415",
+    "aniscoupons:32976",
+    "aniscoupons:32974"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792146957.5319738,
+  "last_run_time": 1792156781.1827424,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32975,
-      "last_check_time": 1792146974.3896935
+      "last_message_id": 32982,
+      "last_check_time": 1792156781.1827424
     },
     "ecksdeal": {
       "last_message_id": 5893,
-      "last_check_time": 1792146965.1576097
+      "last_check_time": 1792156750.3005123
     },
     "lodydeals": {
-      "last_message_id": 45565,
-      "last_check_time": 1792146959.5551448
+      "last_message_id": 45567,
+      "last_check_time": 1792156470.4664989
     },
     "bnddeals": {
       "last_message_id": 50859,
-      "last_check_time": 1792146965.9651647
+      "last_check_time": 1792156751.3682091
     },
     "test_channel": {
       "last_message_id": 1792111724,
@@ -1983,19 +2010,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792146965.567456
+      "last_check_time": 1792156750.8273125
     },
     "zedstoreonline": {
-      "last_message_id": 38612,
-      "last_check_time": 1792146964.6541896
+      "last_message_id": 38617,
+      "last_check_time": 1792156749.734475
     },
     "megaphonna": {
-      "last_message_id": 8413,
-      "last_check_time": 1792146966.4244862
+      "last_message_id": 8423,
+      "last_check_time": 1792156764.6865816
     },
     "couponsglobal": {
-      "last_message_id": 48849,
-      "last_check_time": 1792087009.1043608
+      "last_message_id": 48851,
+      "last_check_time": 1792156783.8929036
     }
   },
   "published_product_prices": {
@@ -2061,7 +2088,7 @@
     "1005012407874415": 480.4,
     "1005013152491360": 216.0,
     "1005012925826589": 187.0,
-    "1005012922578845": 238.9,
+    "1005012922578845": 231.9,
     "1005012865117890": 231.9,
     "1005010428573334": 294.0,
     "1005013146524028": 162.4,
@@ -2178,7 +2205,7 @@
     "1005013067004815": 7.5,
     "1005006966177706": 3.49,
     "1005012234106869": 1.71,
-    "1005010209307090": 111.0,
+    "1005010209307090": 204.0,
     "1005012824429842": 252.0,
     "1005008450489185": 23.91,
     "1005012086685834": 8.99,
@@ -2222,7 +2249,9 @@
     "1005013137396211": 316.02,
     "1005012575455222": 115.0,
     "1005010210432531": 96.8,
-    "1005010266487244": 14.07
+    "1005010266487244": 14.07,
+    "1005011904443903": 92.0,
+    "1005010112746583": 46.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6127,6 +6156,136 @@
       "price": 10.16,
       "timestamp": 1792146957.5319738,
       "status": "ACTIVE"
+    },
+    "lodydeals:45566": {
+      "channel_msg_id": 875,
+      "product_id": "1005012922578845",
+      "title": "Realme 15 5G 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45566,
+      "price": 231.9,
+      "timestamp": 1792156468.3960416,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8422": {
+      "channel_msg_id": 876,
+      "product_id": "1005013039644752",
+      "title": "جديد ال ©️©️ ببطارية عملاقة💪💪",
+      "channel": "megaphonna",
+      "source_msg_id": 8422,
+      "price": 186.5,
+      "timestamp": 1792156486.8342333,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8421": {
+      "channel_msg_id": 877,
+      "product_id": "1005010209307090",
+      "title": "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras",
+      "channel": "megaphonna",
+      "source_msg_id": 8421,
+      "price": 204.0,
+      "timestamp": 1792156493.2084296,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8420": {
+      "channel_msg_id": 878,
+      "product_id": "1005012824429842",
+      "title": "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8420,
+      "price": 252.0,
+      "timestamp": 1792156501.818011,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32982": {
+      "channel_msg_id": 879,
+      "product_id": "1005011908654312",
+      "title": "Blackview Wave 10",
+      "channel": "aniscoupons",
+      "source_msg_id": 32982,
+      "price": 122.6,
+      "timestamp": 1792156510.3081717,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32981": {
+      "channel_msg_id": 880,
+      "product_id": "1005007920266509",
+      "title": "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring",
+      "channel": "aniscoupons",
+      "source_msg_id": 32981,
+      "price": 33.3,
+      "timestamp": 1792156515.7006214,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32980": {
+      "channel_msg_id": 881,
+      "product_id": "1005011997237872",
+      "title": "Redmi Note 12 5G Global (4/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 32980,
+      "price": 111.2,
+      "timestamp": 1792156524.878074,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32979": {
+      "channel_msg_id": 882,
+      "product_id": "1005011904443903",
+      "title": "Blackview Wave 7C Smartphone 6.56 inch HD+Eye-Comfort Screen IPS Display",
+      "channel": "aniscoupons",
+      "source_msg_id": 32979,
+      "price": 92.0,
+      "timestamp": 1792156532.660453,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38617": {
+      "channel_msg_id": 883,
+      "product_id": "1005010112746583",
+      "title": "Anker Liberty 4 NC",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38617,
+      "price": 46.6,
+      "timestamp": 1792156744.1810272,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8418": {
+      "channel_msg_id": 884,
+      "product_id": "1005010733227481",
+      "title": "Ⓜ OnePlus Turbo 6V 8/256",
+      "channel": "megaphonna",
+      "source_msg_id": 8418,
+      "price": 285.4,
+      "timestamp": 1792156757.9443583,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8415": {
+      "channel_msg_id": 885,
+      "product_id": "1005009948598802",
+      "title": "realme 15 5G Smartphone Dimensity 7300+ 5G Chipset 6500mAh Battery 45W",
+      "channel": "megaphonna",
+      "source_msg_id": 8415,
+      "price": 231.9,
+      "timestamp": 1792156764.6865816,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32976": {
+      "channel_msg_id": 886,
+      "product_id": "1005010149868688",
+      "title": "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP AI",
+      "channel": "aniscoupons",
+      "source_msg_id": 32976,
+      "price": 204.1,
+      "timestamp": 1792156772.5025818,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32974": {
+      "channel_msg_id": 887,
+      "product_id": "1005011557896041",
+      "title": "RYZEN 7 7800X3D",
+      "channel": "aniscoupons",
+      "source_msg_id": 32974,
+      "price": 257.2,
+      "timestamp": 1792156781.1827424,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6135,17 +6294,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792146976.8606813,
+    "last_deal_post_time": 1792156783.9490378,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792146979.827905,
+    "last_sweep_time": 1792156783.9186811,
     "last_sweep_times": {
-      "algeria": 1792146976.8513649,
+      "algeria": 1792156783.9186811,
       "france": 1792146979.827905
     },
     "last_deal_post_times": {
-      "algeria": 1792146976.8606813
+      "algeria": 1792156783.9490378
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -6200,7 +6359,7 @@
     "1005013152491360": "lodydeals",
     "1005010129356058": "megaphonna",
     "1005012925826589": "megaphonna",
-    "1005012922578845": "megaphonna",
+    "1005012922578845": "lodydeals",
     "1005012865117890": "aniscoupons",
     "1005010428573334": "megaphonna",
     "1005013146524028": "megaphonna",
@@ -6387,7 +6546,7 @@
     "1005013054007275": "ecksdeal",
     "1005011899097443": "lodydeals",
     "1005010428947440": "couponsglobal",
-    "1005010733227481": "zedstoreonline",
+    "1005010733227481": "megaphonna",
     "1005006281667276": "bnddeals",
     "1005010177152485": "bnddeals",
     "1005012014142030": "bnddeals",
@@ -6425,7 +6584,9 @@
     "999888963": "test_channel",
     "9998881013": "test_channel",
     "9998881091": "test_channel",
-    "9998881724": "test_channel"
+    "9998881724": "test_channel",
+    "1005011904443903": "aniscoupons",
+    "1005010112746583": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -6732,7 +6893,12 @@
     "Realme P3 Lite 4G 4/128GB": "lodydeals",
     "Anker 511 Nano Pro 30W": "lodydeals",
     "Anker Nano 3 Pro 45W GaN": "lodydeals",
-    "POCO X8 5G 6/128GB": "lodydeals"
+    "POCO X8 5G 6/128GB": "lodydeals",
+    "Realme 15 5G 12/256GB": "lodydeals",
+    "Blackview Wave 10": "aniscoupons",
+    "Blackview Wave 7C Smartphone 6.56 inch HD+Eye-Comfort Screen IPS Display": "aniscoupons",
+    "Anker Liberty 4 NC": "zedstoreonline",
+    "Ⓜ OnePlus Turbo 6V 8/256": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -7313,7 +7479,16 @@
     "aniscoupons:32975",
     "aniscoupons:32973",
     "aniscoupons:32972",
-    "couponsglobal:48850"
+    "couponsglobal:48850",
+    "lodydeals:45567",
+    "zedstoreonline:38616",
+    "zedstoreonline:38615",
+    "zedstoreonline:38614",
+    "megaphonna:8423",
+    "zedstoreonline:38613",
+    "aniscoupons:32978",
+    "aniscoupons:32977",
+    "couponsglobal:48851"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
