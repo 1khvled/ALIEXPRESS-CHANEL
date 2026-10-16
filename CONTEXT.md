@@ -284,6 +284,7 @@ python -m pytest -q
 
 | Commit Hash | Date | Scope & Description |
 |:---|:---|:---|
+| `f4732ee` | 2026-10-16 | Fix card titles: display genuine product names, reject countries/hooks as titles |
 | `aadc3b8` | 2026-10-16 | Fix JS syntax breaks (escaped regexes/newlines) & safeguard deal processor |
 | `09cec25` | 2026-10-16 | Eliminate Auto-Canada bug, restore multi-coupons & strict country detection |
 | `6d18fdd` | 2026-10-15 | Redesign tracking page with native UI, 17TRACK & Postal Ninja |
