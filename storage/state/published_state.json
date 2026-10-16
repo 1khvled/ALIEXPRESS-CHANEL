@@ -1962,19 +1962,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32969,
-      "last_check_time": 1792118820.0592017
+      "last_check_time": 1792136943.5422378
     },
     "ecksdeal": {
       "last_message_id": 5893,
-      "last_check_time": 1792118813.908934
+      "last_check_time": 1792136938.6683092
     },
     "lodydeals": {
       "last_message_id": 45564,
-      "last_check_time": 1792118812.3627083
+      "last_check_time": 1792136937.696317
     },
     "bnddeals": {
       "last_message_id": 50859,
-      "last_check_time": 1792118814.6077812
+      "last_check_time": 1792136939.5504882
     },
     "test_channel": {
       "last_message_id": 1792111724,
@@ -1982,11 +1982,11 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792118814.2614558
+      "last_check_time": 1792136939.109838
     },
     "zedstoreonline": {
       "last_message_id": 38611,
-      "last_check_time": 1792118813.5697982
+      "last_check_time": 1792136938.1129792
     },
     "megaphonna": {
       "last_message_id": 8413,
@@ -6128,10 +6128,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792118829.6952868,
+    "last_sweep_time": 1792136951.3994756,
     "last_sweep_times": {
-      "algeria": 1792118827.2396889,
-      "france": 1792118829.6952868
+      "algeria": 1792136948.4111118,
+      "france": 1792136951.3994756
     },
     "last_deal_post_times": {
       "algeria": 1792118827.2450645
@@ -6727,7 +6727,7 @@
     "mock_rem": "2026-10-02",
     "test_rem_13d1524e": "2026-10-02",
     "test_rem_e95dab13": "2026-10-02",
-    "jumuah": "2026-10-09",
+    "jumuah": "2026-10-16",
     "test_rem_d0b156d9": "2026-10-02",
     "test_rem_35271d74": "2026-10-02",
     "test_rem_308fc3d4": "2026-10-02",
@@ -6980,8 +6980,8 @@
     "END_ALERT_Brand Day Sale_20261013",
     "LAUNCH_ALERT_Winter Offers_20261014"
   ],
-  "last_card_affiliate_time_dz": 1792032596.1133597,
-  "card_affiliate_variant_idx_dz": 0,
+  "last_card_affiliate_time_dz": 1792136929.4849148,
+  "card_affiliate_variant_idx_dz": 1,
   "last_tajmi3at_published_time": 1792097828.7372818,
   "published_deals_history": {},
   "settings": {},
@@ -7295,7 +7295,8 @@
     "megaphonna:8400",
     "lodydeals:45564",
     "zedstoreonline:38611",
-    "megaphonna:8396"
+    "megaphonna:8396",
+    "megaphonna:8399"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
