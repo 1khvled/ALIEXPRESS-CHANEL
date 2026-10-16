@@ -1456,20 +1456,33 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
                 headers={"Cache-Control": "public, max-age=60"}
             )
 
-    # 2. Fetch from Telegram public web preview
+    # 2. Fetch from Telegram public web preview (with pagination to guarantee 25-30 deals)
     try:
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+        all_blocks = []
+        before = None
         async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
-            resp = await client.get(
-                f"https://t.me/s/{clean_ch}",
-                headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
-            )
+            for _ in range(3):
+                url = f"https://t.me/s/{clean_ch}" + (f"?before={before}" if before else "")
+                resp = await client.get(url, headers=headers)
+                if resp.status_code != 200:
+                    break
+                soup = BeautifulSoup(resp.text, "html.parser")
+                blocks = soup.find_all("div", class_="tgme_widget_message")
+                if not blocks:
+                    break
+                all_blocks = blocks + all_blocks
+                more_btn = soup.find("a", class_=re.compile(r"js-messages_more"))
+                if more_btn and more_btn.get("data-before"):
+                    before = more_btn["data-before"]
+                else:
+                    break
+                if len(all_blocks) >= 50:
+                    break
 
-        if resp.status_code == 200:
-            soup = BeautifulSoup(resp.text, "html.parser")
-            blocks = soup.find_all("div", class_="tgme_widget_message")
-
+        if all_blocks:
             posts = []
-            for block in reversed(blocks):
+            for block in reversed(all_blocks):
                 text_div = block.find("div", class_="tgme_widget_message_text")
                 if text_div:
                     from app.aliexpress.parser import extract_telegram_html_text
@@ -1477,10 +1490,20 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
                 else:
                     text = ""
 
-                # Filter out expired campaigns when active promo is running
-                if any(c in text for c in ["OTPRD", "BDQT", "FRPRD", "FRBD"]) and not any(c in text for c in ["WOAE", "FRWO"]):
+                if not text:
                     continue
-                if any(m in text.lower() for m in ["سبتمبر", "september", "sept\b"]):
+
+                # Filter out expired month campaigns if any
+                if any(m in text.lower() for m in ["سبتمبر", "september"]):
+                    continue
+
+                # Deal must contain an AliExpress link
+                has_ali_link = bool(re.search(r"https?://(?:s\.click\.aliexpress\.com/e/[A-Za-z0-9_-]+|(?:[a-z0-9-]+\.)?aliexpress\.com/(?:item|p)/[A-Za-z0-9_.-]+)", text, re.I))
+                if not has_ali_link:
+                    continue
+
+                # Filter out religious adhkars
+                if any(r in text for r in ["وَتَوَكَّلْ", "وتوكل", "سبحان الله", "الحمد لله", "الله أكبر", "صلى الله", "عليه وسلم", "سورة", "القرآن", "أذكار", "دعاء", "استغفر الله", "لا إله إلا الله"]):
                     continue
 
                 photo_url = None
@@ -1509,37 +1532,38 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
                 data_post = block.get("data-post", "")
                 link = f"https://t.me/{data_post}" if data_post else ""
 
-                if text:
-                    try:
-                        from app.aliexpress.parser import extract_multi_coupons, extract_clean_title
-                        multi = extract_multi_coupons(text)
-                        clean_desc = multi.get("description", "")
-                        c_list = multi.get("coupons", [])
-                        c_details = multi.get("coupon_details", [])
-                        c_primary = multi.get("coupon_code")
-                        extracted_title = extract_clean_title(text) or ""
-                    except Exception:
-                        clean_desc = ""
-                        c_list = []
-                        c_details = []
-                        c_primary = None
-                        extracted_title = ""
+                try:
+                    from app.aliexpress.parser import extract_multi_coupons, extract_clean_title
+                    multi = extract_multi_coupons(text)
+                    clean_desc = multi.get("description", "")
+                    c_list = multi.get("coupons", [])
+                    c_details = multi.get("coupon_details", [])
+                    c_primary = multi.get("coupon_code")
+                    extracted_title = extract_clean_title(text) or ""
+                except Exception:
+                    clean_desc = ""
+                    c_list = []
+                    c_details = []
+                    c_primary = None
+                    extracted_title = ""
 
-                    posts.append({
-                        "text": text,
-                        "title": extracted_title,
-                        "description": clean_desc,
-                        "coupons": c_list,
-                        "coupon_details": c_details,
-                        "coupon_code": c_primary,
-                        "coupon": c_primary,
-                        "photo_url": photo_url,
-                        "date": date_str,
-                        "link": link
-                    })
+                posts.append({
+                    "text": text,
+                    "title": extracted_title,
+                    "description": clean_desc,
+                    "coupons": c_list,
+                    "coupon_details": c_details,
+                    "coupon_code": c_primary,
+                    "coupon": c_primary,
+                    "photo_url": photo_url,
+                    "date": date_str,
+                    "link": link
+                })
+
+                if len(posts) >= 30:
+                    break
 
             if posts:
-                posts = posts[:30]
                 _CHANNEL_POSTS_CACHE[clean_ch] = (now_ts, posts)
                 return JSONResponse(
                     {"posts": posts, "count": len(posts), "cached": False, "active_event": active_ev_data},

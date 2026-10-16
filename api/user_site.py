@@ -95,7 +95,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Optional Tailwind JIT CDN with safety guard -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -106,10 +106,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         theme: {
           extend: {
             fontFamily: {
-              sans: ['"Alexandria"', '"Tajawal"', '"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
-              heading: ['"Alexandria"', '"Plus Jakarta Sans"', 'sans-serif'],
+              sans: ['"Cairo"', '"Tajawal"', '"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
+              heading: ['"Cairo"', '"Plus Jakarta Sans"', 'sans-serif'],
               mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-              inter: ['"Plus Jakarta Sans"', '"Alexandria"', 'sans-serif']
+              inter: ['"Plus Jakarta Sans"', '"Cairo"', 'sans-serif']
             },
             colors: {
               crimson: {
@@ -190,17 +190,17 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       background-size: 24px 24px;
     }
     html, body, button, input, select, textarea {
-      font-family: 'Alexandria', 'Tajawal', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+      font-family: 'Cairo', 'Tajawal', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     }
     body[dir="ltr"], html[dir="ltr"] {
-      font-family: 'Plus Jakarta Sans', 'Alexandria', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+      font-family: 'Plus Jakarta Sans', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     }
     body[dir="rtl"], html[dir="rtl"] {
-      font-family: 'Alexandria', 'Tajawal', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+      font-family: 'Cairo', 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     }
     h1, h2, h3, h4, h5, h6, .font-heading {
-      font-family: 'Alexandria', 'Plus Jakarta Sans', sans-serif !important;
-      letter-spacing: -0.015em;
+      font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif !important;
+      letter-spacing: -0.01em;
     }
     .font-mono, code, .price-num {
       font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
@@ -851,18 +851,18 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       </div>
 
       <!-- Active Promo Event Showcase Banner (Streamlined Minimal Strip) -->
-      <section id="active-event-banner" class="p-2.5 sm:p-3 rounded-xl relative transition-all border flex flex-col md:flex-row md:items-center justify-between gap-2.5" aria-label="الحدث الترويجي الفعال" style="background-color: var(--bg-card); border-color: var(--border-card);">
-        <div class="flex items-center gap-2 min-w-0 flex-wrap">
-          <div id="active-event-badge-wrap" class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/10 text-rose-500 flex-shrink-0">
-            <span id="active-event-dot" class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
+      <section id="active-event-banner" class="p-3 sm:p-3.5 rounded-2xl relative transition-all border flex flex-col md:flex-row md:items-center justify-between gap-3" aria-label="الحدث الترويجي الفعال" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="flex items-center gap-2.5 min-w-0 flex-wrap">
+          <div id="active-event-badge-wrap" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold bg-rose-500/10 text-rose-500 flex-shrink-0">
+            <span id="active-event-dot" class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
             <span id="active-event-badge" data-i18n="active_event_badge">حدث رسمي</span>
           </div>
 
-          <!-- Live Event Countdown Timer -->
-          <div id="event-timer-wrap" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 font-mono">
-            <i id="event-timer-icon" class="fa-solid fa-stopwatch text-[9px] animate-pulse"></i>
-            <span id="event-timer-label" class="font-sans font-semibold text-[10px]" data-i18n="event_timer_label">ينتهي خلال:</span>
-            <span id="event-timer-val" class="font-bold">...</span>
+          <!-- Live Event Countdown Timer (Prominent & High-Visibility) -->
+          <div id="event-timer-wrap" class="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-black bg-amber-500/15 text-amber-600 dark:text-amber-400 border-2 border-amber-500/40 shadow-sm">
+            <i id="event-timer-icon" class="fa-solid fa-stopwatch text-sm sm:text-base animate-pulse text-amber-500"></i>
+            <span id="event-timer-label" class="font-sans font-bold text-xs sm:text-sm text-amber-700 dark:text-amber-300" data-i18n="event_timer_label">ينتهي خلال:</span>
+            <span id="event-timer-val" class="font-mono font-black text-xs sm:text-base tracking-wide text-amber-800 dark:text-amber-200">...</span>
           </div>
 
           <h3 id="active-event-title" class="text-xs sm:text-sm font-bold tracking-tight truncate" style="color: var(--text-main);" data-i18n="active_event_title">
@@ -972,9 +972,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <i class="fa-solid fa-fire text-rose-500" aria-hidden="true"></i>
             <span data-i18n="deals_section_heading">أحدث صفقات وتخفيضات AliExpress بالدينار الجزائري</span>
           </h1>
-          <span class="text-[11px] text-emerald-500 flex items-center gap-1.5 font-medium">
+          <span class="text-[11px] text-emerald-500 flex items-center gap-1.5 font-bold">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span id="live-deals-counter" class="font-mono">...</span>
+            <span id="live-deals-counter" class="font-sans font-bold">...</span>
           </span>
         </div>
 
@@ -4623,9 +4623,6 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (isExpiredEvent && !hasActiveEventCode) {
         return null;
       }
-      if (post.date && post.date < '2026-10-14' && !hasActiveEventCode) {
-        return null;
-      }
 
       let coupon = null;
       let priceUsd = null;
@@ -4986,9 +4983,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       const counter = document.getElementById('live-deals-counter');
       if (counter) {
-        counter.textContent = currentLang === 'fr' 
-          ? `${filtered.length} dernières offres actives`
-          : `${filtered.length} أحدث صفقات نشطة`;
+        const count = filtered.length;
+        counter.innerHTML = currentLang === 'fr' 
+          ? `<span class="font-mono font-bold">${count}</span> dernières offres actives`
+          : `<span class="font-mono font-bold">${count}</span> أحدث صفقات نشطة`;
       }
 
       const emptyEl = document.getElementById('empty-state');
@@ -5046,13 +5044,19 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       function applyEndedState() {
         if (timerWrap) {
-          timerWrap.className = 'inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-bold bg-zinc-500/10 text-zinc-400 border border-zinc-500/20';
+          timerWrap.className = 'inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-black bg-zinc-500/15 text-zinc-400 border-2 border-zinc-500/30';
         }
-        if (timerIcon) timerIcon.className = 'fa-solid fa-hourglass-end text-[9px] text-zinc-400';
-        if (timerLabel) timerLabel.textContent = isFr ? 'Statut :' : 'الحالة:';
-        if (timerVal) timerVal.textContent = isFr ? (I18N.fr.event_ended_coupons_expired || 'Événement terminé — codes expirés') : (I18N.ar.event_ended_coupons_expired || 'انتهى الحدث — الأكواد غير فعالة');
-        if (badgeWrap) badgeWrap.className = 'inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-zinc-500/10 text-zinc-400 flex-shrink-0';
-        if (badgeDot) badgeDot.className = 'w-1.5 h-1.5 rounded-full bg-zinc-500';
+        if (timerIcon) timerIcon.className = 'fa-solid fa-hourglass-end text-sm sm:text-base text-zinc-400';
+        if (timerLabel) {
+          timerLabel.className = 'font-sans font-bold text-xs sm:text-sm text-zinc-400';
+          timerLabel.textContent = isFr ? 'Statut :' : 'الحالة:';
+        }
+        if (timerVal) {
+          timerVal.className = 'font-mono font-black text-xs sm:text-sm tracking-wide text-zinc-300';
+          timerVal.textContent = isFr ? (I18N.fr.event_ended_coupons_expired || 'Événement terminé — codes expirés') : (I18N.ar.event_ended_coupons_expired || 'انتهى الحدث — الأكواد غير فعالة');
+        }
+        if (badgeWrap) badgeWrap.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold bg-zinc-500/10 text-zinc-400 flex-shrink-0';
+        if (badgeDot) badgeDot.className = 'w-2 h-2 rounded-full bg-zinc-500';
         if (badgeText) badgeText.textContent = isFr ? (I18N.fr.event_ended_badge || 'Terminé') : (I18N.ar.event_ended_badge || 'انتهى الحدث');
 
         // Mark coupon chips as expired
