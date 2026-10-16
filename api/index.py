@@ -1423,8 +1423,27 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
                 "end_date": ev.end_date.isoformat(),
                 "coupon_tiers": ev.coupon_tiers or [],
                 "coupon_tiers_fr": ev.coupon_tiers_fr or [],
-                "codes": [t["code"] for t in (ev.coupon_tiers or []) if "code" in t]
+                "codes": [t["code"] for t in (ev.coupon_tiers or []) if "code" in t],
+                "status": "active"
             }
+        else:
+            all_promos = promo_tracker.get_all_promos(now_dt)
+            past_promos = [p for p in all_promos if p.end_date <= now_dt]
+            if past_promos:
+                past_promos.sort(key=lambda p: p.end_date, reverse=True)
+                last_p = past_promos[0]
+                active_ev_data = {
+                    "name": last_p.name,
+                    "name_ar": last_p.name_ar,
+                    "name_fr": last_p.name_fr or last_p.name,
+                    "banner_tag": last_p.banner_tag,
+                    "start_date": last_p.start_date.isoformat(),
+                    "end_date": last_p.end_date.isoformat(),
+                    "coupon_tiers": last_p.coupon_tiers or [],
+                    "coupon_tiers_fr": last_p.coupon_tiers_fr or [],
+                    "codes": [t["code"] for t in (last_p.coupon_tiers or []) if "code" in t],
+                    "status": "ended"
+                }
     except Exception:
         pass
 
@@ -1520,6 +1539,7 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
                     })
 
             if posts:
+                posts = posts[:30]
                 _CHANNEL_POSTS_CACHE[clean_ch] = (now_ts, posts)
                 return JSONResponse(
                     {"posts": posts, "count": len(posts), "cached": False, "active_event": active_ev_data},

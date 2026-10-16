@@ -852,11 +852,19 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       <!-- Active Promo Event Showcase Banner (Streamlined Minimal Strip) -->
       <section id="active-event-banner" class="p-2.5 sm:p-3 rounded-xl relative transition-all border flex flex-col md:flex-row md:items-center justify-between gap-2.5" aria-label="الحدث الترويجي الفعال" style="background-color: var(--bg-card); border-color: var(--border-card);">
-        <div class="flex items-center gap-2 min-w-0">
-          <div class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/10 text-rose-500 flex-shrink-0">
-            <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
+        <div class="flex items-center gap-2 min-w-0 flex-wrap">
+          <div id="active-event-badge-wrap" class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-rose-500/10 text-rose-500 flex-shrink-0">
+            <span id="active-event-dot" class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
             <span id="active-event-badge" data-i18n="active_event_badge">حدث رسمي</span>
           </div>
+
+          <!-- Live Event Countdown Timer -->
+          <div id="event-timer-wrap" class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20 font-mono">
+            <i id="event-timer-icon" class="fa-solid fa-stopwatch text-[9px] animate-pulse"></i>
+            <span id="event-timer-label" class="font-sans font-semibold text-[10px]" data-i18n="event_timer_label">ينتهي خلال:</span>
+            <span id="event-timer-val" class="font-bold">...</span>
+          </div>
+
           <h3 id="active-event-title" class="text-xs sm:text-sm font-bold tracking-tight truncate" style="color: var(--text-main);" data-i18n="active_event_title">
             تخفيضات عروض الشتاء Winter Offers 2026
           </h3>
@@ -3134,6 +3142,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         footer_made_with: "صُنع للمتسوق الجزائري 🇩🇿",
         footer_back_top: "للأعلى",
         active_event_badge: "حدث ترويجي فعال حالياً",
+        event_timer_label: "ينتهي خلال:",
+        event_ended_badge: "انتهى الحدث",
+        event_ended_coupons_expired: "انتهى الحدث — الأكواد غير فعالة",
+        event_ended_warning: "⚠️ انتهى هذا الحدث الترويجي وأكواد الخصم التابعة له. العروض المعروضة أدناه هي عروض اعتيادية.",
         active_event_title: "تخفيضات عروض الشتاء Winter Offers 2026 الحصرية",
         active_event_desc: "عروض وتخفيضات رسمية نشطة حالياً مع أكواد حصرية مخصصة للجزائر وفرنسا — الأسعار بالدينار الجزائري وفق سعر السكوار الحقيقي.",
         active_deals_kw_label: "أهم صفقات الحدث الفعال:",
@@ -3418,6 +3430,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         footer_made_with: "Fait spécialement pour les acheteurs algériens 🇩🇿",
         footer_back_top: "Haut de page",
         active_event_badge: "Événement Promo Actif",
+        event_timer_label: "Se termine dans :",
+        event_ended_badge: "Terminé",
+        event_ended_coupons_expired: "Événement terminé — codes expirés",
+        event_ended_warning: "⚠️ Cet événement promotionnel et ses codes sont terminés. Les offres ci-dessous sont des bons plans standards.",
         active_event_title: "Promotions Offres d'Hiver 2026 (Winter Offers)",
         active_event_desc: "Bons plans et réductions officielles avec codes promo exclusifs pour l'Algérie et la France — calculés en Dinar Algérien au taux Square.",
         active_deals_kw_label: "Top deals de l'événement :",
@@ -4514,7 +4530,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           if (cached) {
             const parsed = JSON.parse(cached);
             if (Array.isArray(parsed) && parsed.length > 0) {
-              allDeals = parsed.filter(d => d && d.affiliate_url && !d.affiliate_url.includes('_oEN3d53') && d.title && !/(?:وَتَوَكَّلْ|وتوكل|سبحان|الحمد|أذكار|دعاء|تذكير)/.test(d.title));
+              allDeals = parsed.filter(d => d && d.affiliate_url && !d.affiliate_url.includes('_oEN3d53') && d.title && !/(?:وَتَوَكَّلْ|وتوكل|سبحان|الحمد|أذكار|دعاء|تذكير)/.test(d.title)).slice(0, 30);
               updateCategoryCounters();
               filterDeals();
             }
@@ -4546,7 +4562,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         }
 
         if (data.posts && Array.isArray(data.posts) && data.posts.length > 0) {
-          allDeals = data.posts.map((p, idx) => parseDealPost(p, idx)).filter(Boolean);
+          allDeals = data.posts.map((p, idx) => parseDealPost(p, idx)).filter(Boolean).slice(0, 30);
           try {
             localStorage.setItem(cacheKey, JSON.stringify(allDeals));
           } catch(e) {}
@@ -4971,8 +4987,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const counter = document.getElementById('live-deals-counter');
       if (counter) {
         counter.textContent = currentLang === 'fr' 
-          ? `${filtered.length} offres disponibles`
-          : `${filtered.length} صفقة متوفرة`;
+          ? `${filtered.length} dernières offres actives`
+          : `${filtered.length} أحدث صفقات نشطة`;
       }
 
       const emptyEl = document.getElementById('empty-state');
@@ -5009,6 +5025,72 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
     }
 
+    var eventCountdownTimer = null;
+
+    function startEventCountdown(endDateStr, eventObj) {
+      if (eventCountdownTimer) {
+        clearInterval(eventCountdownTimer);
+        eventCountdownTimer = null;
+      }
+      if (!endDateStr) return;
+
+      const target = new Date(endDateStr).getTime();
+      const timerVal = document.getElementById('event-timer-val');
+      const timerWrap = document.getElementById('event-timer-wrap');
+      const timerLabel = document.getElementById('event-timer-label');
+      const timerIcon = document.getElementById('event-timer-icon');
+      const badgeWrap = document.getElementById('active-event-badge-wrap');
+      const badgeText = document.getElementById('active-event-badge');
+      const badgeDot = document.getElementById('active-event-dot');
+      const isFr = currentLang === 'fr';
+
+      function applyEndedState() {
+        if (timerWrap) {
+          timerWrap.className = 'inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[10px] font-bold bg-zinc-500/10 text-zinc-400 border border-zinc-500/20';
+        }
+        if (timerIcon) timerIcon.className = 'fa-solid fa-hourglass-end text-[9px] text-zinc-400';
+        if (timerLabel) timerLabel.textContent = isFr ? 'Statut :' : 'الحالة:';
+        if (timerVal) timerVal.textContent = isFr ? (I18N.fr.event_ended_coupons_expired || 'Événement terminé — codes expirés') : (I18N.ar.event_ended_coupons_expired || 'انتهى الحدث — الأكواد غير فعالة');
+        if (badgeWrap) badgeWrap.className = 'inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-bold bg-zinc-500/10 text-zinc-400 flex-shrink-0';
+        if (badgeDot) badgeDot.className = 'w-1.5 h-1.5 rounded-full bg-zinc-500';
+        if (badgeText) badgeText.textContent = isFr ? (I18N.fr.event_ended_badge || 'Terminé') : (I18N.ar.event_ended_badge || 'انتهى الحدث');
+
+        // Mark coupon chips as expired
+        document.querySelectorAll('#active-event-coupons button').forEach(btn => {
+          btn.classList.add('opacity-40', 'line-through');
+          btn.onclick = () => {
+            showToast(isFr ? (I18N.fr.event_ended_warning || '⚠️ Cet événement promotionnel et ses codes sont terminés !') : (I18N.ar.event_ended_warning || '⚠️ انتهى هذا الحدث الترويجي وأكواد الخصم التابعة له!'));
+          };
+        });
+      }
+
+      function tick() {
+        const now = Date.now();
+        const diff = target - now;
+
+        if (diff <= 0) {
+          if (eventCountdownTimer) clearInterval(eventCountdownTimer);
+          eventCountdownTimer = null;
+          applyEndedState();
+          return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        if (timerVal) {
+          timerVal.textContent = isFr
+            ? `${d > 0 ? d + 'j ' : ''}${String(h).padStart(2, '0')}h ${String(m).padStart(2, '0')}m ${String(s).padStart(2, '0')}s`
+            : `${d > 0 ? d + 'ي ' : ''}${String(h).padStart(2, '0')}س ${String(m).padStart(2, '0')}د ${String(s).padStart(2, '0')}ث`;
+        }
+      }
+
+      tick();
+      eventCountdownTimer = setInterval(tick, 1000);
+    }
+
     function updateActiveEventBanner(event) {
       if (!event) return;
       const isFr = currentLang === 'fr';
@@ -5032,6 +5114,13 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             </button>
           `).join('');
         }
+      }
+
+      if (event.end_date) {
+        startEventCountdown(event.end_date, event);
+      } else if (event.status === 'ended') {
+        const timerVal = document.getElementById('event-timer-val');
+        if (timerVal) timerVal.textContent = isFr ? 'Événement terminé — codes expirés' : 'انتهى الحدث — الأكواد غير فعالة';
       }
     }
 
@@ -5137,6 +5226,31 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       return `<span class="text-sm font-bold text-rose-500 font-heading">${isAr ? 'تخفيض خاص' : 'Prix Promo'}</span>`;
     }
 
+    function formatRelativeTime(dateStr) {
+      if (!dateStr) return '';
+      try {
+        const parts = dateStr.trim().split(' ');
+        const datePart = parts[0];
+        const timePart = parts[1] || '00:00';
+        const d = new Date(`${datePart}T${timePart}:00Z`);
+        if (isNaN(d.getTime())) return dateStr.split(' ')[0] || '';
+        const now = new Date();
+        const diffMs = now.getTime() - d.getTime();
+        const diffMin = Math.floor(diffMs / 60000);
+        const diffHours = Math.floor(diffMin / 60);
+
+        if (diffMin < 2) return currentLang === 'fr' ? "À l'instant 🔥" : 'الآن 🔥';
+        if (diffMin < 60) return currentLang === 'fr' ? `Il y a ${diffMin} min` : `منذ ${diffMin} دقيقة`;
+        if (diffHours < 24) return currentLang === 'fr' ? `Il y a ${diffHours} h` : `منذ ${diffHours} ساعة`;
+        const diffDays = Math.floor(diffHours / 24);
+        if (diffDays === 1) return currentLang === 'fr' ? 'Hier' : 'أمس';
+        if (diffDays < 7) return currentLang === 'fr' ? `Il y a ${diffDays} j` : `منذ ${diffDays} أيام`;
+        return datePart;
+      } catch (e) {
+        return dateStr.split(' ')[0] || '';
+      }
+    }
+
     function renderGrid(dealsToRender = null) {
       const deals = dealsToRender !== null ? dealsToRender : allDeals;
       const grid = document.getElementById('deals-grid');
@@ -5206,9 +5320,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               <span class="text-[10px] font-bold px-2 py-0.5 rounded border font-heading" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
                 ${deal.category_label || I18N[currentLang].deal_category_fallback}
               </span>
-              <span class="text-[10px] font-mono opacity-60 flex items-center gap-1">
-                <i class="fa-regular fa-clock text-[9px]"></i>
-                ${deal.date ? deal.date.split(' ')[0] : ''}
+              <span class="text-[10px] font-mono opacity-80 flex items-center gap-1 font-semibold" style="color: var(--text-muted);" title="${escapeHtml(deal.date || '')}">
+                <i class="fa-regular fa-clock text-[9px] text-emerald-500"></i>
+                <span>${formatRelativeTime(deal.date)}</span>
               </span>
             </div>
             ${deal.country ? `
@@ -5274,7 +5388,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               </div>
               <div>
                 <span class="font-bold block" style="color: var(--text-main);">${escapeHtml(currentChannel)}</span>
-                <span class="text-[10px] font-mono opacity-60">${deal.date || ''}</span>
+                <span class="text-[10px] font-mono opacity-70" title="${escapeHtml(deal.date || '')}">${formatRelativeTime(deal.date)}</span>
               </div>
             </div>
             ${deal.telegram_url ? `<a href="${deal.telegram_url}" target="_blank" rel="noopener noreferrer" class="min-h-[38px] px-2.5 py-1 text-sky-500 hover:underline font-semibold text-xs flex items-center gap-1 active:scale-95 touch-manipulation"><i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i> Telegram</a>` : ''}
