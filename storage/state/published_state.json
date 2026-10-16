@@ -270,7 +270,8 @@
     "9998887573",
     "9998887808",
     "1005012671337268",
-    "1005012331836106"
+    "1005012331836106",
+    "1005007760080474"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -551,7 +552,8 @@
     "9998887573": 1792157573.726651,
     "9998887808": 1792157808.758875,
     "1005012671337268": 1792157886.3787897,
-    "1005012331836106": 1792157902.7999656
+    "1005012331836106": 1792157902.7999656,
+    "1005007760080474": 1792158152.2849972
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -863,7 +865,8 @@
     "Honor X60 GT 12/256GB",
     "EasySMX X05 Pro Wireless Gamepad PC Controller",
     "realme P3 Lite Smartphone NFC 6300mAh Battery 15W Charge 6.67\" 120Hz",
-    "MACHENIKE G5Pro Max SE Gaming Controller With Charging Dock"
+    "MACHENIKE G5Pro Max SE Gaming Controller With Charging Dock",
+    "Ⓜ BLACKVIEW WAVE 10C (4/32)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1178,7 +1181,8 @@
     "Honor X60 GT 12/256GB": 1792157902.7999656,
     "EasySMX X05 Pro Wireless Gamepad PC Controller": 1792157910.2543087,
     "realme P3 Lite Smartphone NFC 6300mAh Battery 15W Charge 6.67\" 120Hz": 1792157924.6176808,
-    "MACHENIKE G5Pro Max SE Gaming Controller With Charging Dock": 1792157933.6814291
+    "MACHENIKE G5Pro Max SE Gaming Controller With Charging Dock": 1792157933.6814291,
+    "Ⓜ BLACKVIEW WAVE 10C (4/32)": 1792158152.2849972
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1993,27 +1997,28 @@
     "megaphonna:8425",
     "megaphonna:8424",
     "aniscoupons:32985",
-    "aniscoupons:32983"
+    "aniscoupons:32983",
+    "megaphonna:8427"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792158003.7032418,
+  "last_run_time": 1792158152.2849972,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32985,
-      "last_check_time": 1792158008.3413684
+      "last_check_time": 1792158226.1631703
     },
     "ecksdeal": {
       "last_message_id": 5894,
-      "last_check_time": 1792157991.682742
+      "last_check_time": 1792158222.2747598
     },
     "lodydeals": {
       "last_message_id": 45571,
-      "last_check_time": 1792157990.6487248
+      "last_check_time": 1792158221.1985326
     },
     "bnddeals": {
       "last_message_id": 50859,
-      "last_check_time": 1792157993.007643
+      "last_check_time": 1792158223.105351
     },
     "test_channel": {
       "last_message_id": 1792157808,
@@ -2021,19 +2026,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792157992.2748535
+      "last_check_time": 1792158222.7018816
     },
     "zedstoreonline": {
-      "last_message_id": 38620,
-      "last_check_time": 1792157991.143035
+      "last_message_id": 38621,
+      "last_check_time": 1792158221.7363412
     },
     "megaphonna": {
-      "last_message_id": 8426,
-      "last_check_time": 1792157929.4669726
+      "last_message_id": 8427,
+      "last_check_time": 1792158156.170865
     },
     "couponsglobal": {
       "last_message_id": 48851,
-      "last_check_time": 1792158008.9378912
+      "last_check_time": 1792158226.5542474
     }
   },
   "published_product_prices": {
@@ -2264,7 +2269,8 @@
     "1005011904443903": 92.0,
     "1005010112746583": 46.6,
     "1005012671337268": 4.02,
-    "1005012331836106": 268.0
+    "1005012331836106": 268.0,
+    "1005007760080474": 78.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6349,6 +6355,16 @@
       "price": 45.7,
       "timestamp": 1792158003.7032418,
       "status": "ACTIVE"
+    },
+    "megaphonna:8427": {
+      "channel_msg_id": 897,
+      "product_id": "1005007760080474",
+      "title": "Ⓜ BLACKVIEW WAVE 10C (4/32)",
+      "channel": "megaphonna",
+      "source_msg_id": 8427,
+      "price": 78.0,
+      "timestamp": 1792158152.2849972,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6357,17 +6373,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792158009.005528,
+    "last_deal_post_time": 1792158157.1597023,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792158008.9740918,
+    "last_sweep_time": 1792158229.2013733,
     "last_sweep_times": {
-      "algeria": 1792158008.9740918,
-      "france": 1792146979.827905
+      "algeria": 1792158226.5759552,
+      "france": 1792158229.2013733
     },
     "last_deal_post_times": {
-      "algeria": 1792158009.005528
+      "algeria": 1792158157.1597023
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -6653,7 +6669,8 @@
     "9998887573": "test_channel",
     "9998887808": "test_channel",
     "1005012671337268": "lodydeals",
-    "1005012331836106": "zedstoreonline"
+    "1005012331836106": "zedstoreonline",
+    "1005007760080474": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -6970,7 +6987,8 @@
     "Blackshark GS3 Smart Watch Global Version": "zedstoreonline",
     "Honor X60 GT 12/256GB": "zedstoreonline",
     "realme P3 Lite Smartphone NFC 6300mAh Battery 15W Charge 6.67\" 120Hz": "megaphonna",
-    "MACHENIKE G5Pro Max SE Gaming Controller With Charging Dock": "aniscoupons"
+    "MACHENIKE G5Pro Max SE Gaming Controller With Charging Dock": "aniscoupons",
+    "Ⓜ BLACKVIEW WAVE 10C (4/32)": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -7575,7 +7593,8 @@
     "megaphonna:8426",
     "aniscoupons:32984",
     "aniscoupons:32971",
-    "aniscoupons:32970"
+    "aniscoupons:32970",
+    "zedstoreonline:38621"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
