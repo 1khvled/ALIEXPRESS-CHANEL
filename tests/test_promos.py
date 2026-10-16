@@ -212,3 +212,35 @@ def test_promo_tracker_integration(tmp_path):
         # Verify it now appears in unified promos
         all_promos = tracker.get_all_promos(now_oct)
         assert any(p.coupon_tiers and p.coupon_tiers[0].get("code") == "SPECIAL10" for p in all_promos)
+
+
+def test_algerian_event_timing():
+    from app.aliexpress.promos import AlgerianEventTiming
+
+    # 1. Seasonal Cutoff Algorithm (Daylight vs Standard time)
+    # October is in US PDT -> 08:00 AM Algerian Time (07:00 UTC)
+    assert AlgerianEventTiming.get_standard_cutoff_hour(2026, 10, 17) == 8
+    # June is in US PDT -> 08:00 AM Algerian Time (07:00 UTC)
+    assert AlgerianEventTiming.get_standard_cutoff_hour(2026, 6, 15) == 8
+    # November is in US PST -> 09:00 AM Algerian Time (08:00 UTC)
+    assert AlgerianEventTiming.get_standard_cutoff_hour(2026, 11, 11) == 9
+    # December is in US PST -> 09:00 AM Algerian Time (08:00 UTC)
+    assert AlgerianEventTiming.get_standard_cutoff_hour(2026, 12, 25) == 9
+
+    # 2. Channel announcement relative timing (Post 913)
+    post_date_oct16 = datetime(2026, 10, 16, 21, 30, 0, tzinfo=AlgerianEventTiming.DZ_TZ)
+    res_rel = parse_promo_dates(
+        "⚠️ تنتهي التخفيضات غداً صباحاً عند الساعة 08:00! 📌 الفعالية الحالية: تخفيضات عروض الشتاء Winter Offers ❄️",
+        ref_datetime=post_date_oct16
+    )
+    assert res_rel is not None
+    _, end_rel = res_rel
+    # End date must be October 17 at 08:00 AM Algerian Time -> 07:00:00 UTC!
+    assert end_rel == datetime(2026, 10, 17, 7, 0, 0, tzinfo=timezone.utc)
+
+    # 3. Explicit Hour Sniffing
+    res_exp = parse_promo_dates("تخفيضات من 14 إلى 17 أكتوبر على الساعة 08:00")
+    assert res_exp is not None
+    s_exp, e_exp = res_exp
+    assert s_exp == datetime(2026, 10, 14, 7, 0, 0, tzinfo=timezone.utc)
+    assert e_exp == datetime(2026, 10, 17, 7, 0, 0, tzinfo=timezone.utc)

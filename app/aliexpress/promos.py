@@ -308,11 +308,73 @@ EXPIRED_DATE_PATTERNS = [
 ]
 
 
-def parse_promo_dates(text: str, default_year: Optional[int] = None) -> Optional[Tuple[datetime, datetime]]:
+class AlgerianEventTiming:
+    """
+    Intelligent Algorithm for AliExpress Event Timing in Algerian Local Time (UTC+1).
+    AliExpress global servers operate on US Pacific Time (PT).
+    - During US Daylight Saving Time (PDT, UTC-7, ~March to early November):
+      00:00 PT sale kickoff = 08:00:00 AM Algerian Time (07:00:00 UTC).
+      23:59:59 PT sale cutoff = 07:59:59 AM Algerian Time (06:59:59 UTC).
+    - During US Standard Time (PST, UTC-8, ~November to early March):
+      00:00 PT sale kickoff = 09:00:00 AM Algerian Time (08:00:00 UTC).
+      23:59:59 PT sale cutoff = 08:59:59 AM Algerian Time (07:59:59 UTC).
+
+    Autonomous capabilities:
+    1. Automatic seasonal PT -> DZ cutoff detection (8 AM vs 9 AM).
+    2. Sniffs explicit hour mentions in Arabic/French/English channel posts ('الساعة 08:00', 'à 08h00', '23:59').
+    3. Handles relative urgency notices ('تنتهي التخفيضات غداً صباحاً عند الساعة 08:00', 'تنتهي اليوم عند الساعة 08:00').
+    """
+    DZ_TZ = timezone(timedelta(hours=1))
+
+    @staticmethod
+    def get_standard_cutoff_hour(year: int, month: int, day: int) -> int:
+        """Returns 8 AM DZ for Daylight Saving months (March-Nov) or 9 AM DZ for Standard Time (Nov-March)."""
+        if month in [11, 12, 1, 2]:
+            return 9
+        elif month in range(4, 11):
+            return 8
+        elif month == 3:
+            second_sunday = 14 - (datetime(year, 3, 1).weekday() + 1) % 7
+            return 8 if day >= second_sunday else 9
+        return 8
+
+    @classmethod
+    def to_utc(cls, year: int, month: int, day: int, hour: Optional[int] = None, minute: int = 0, second: int = 0) -> datetime:
+        """Constructs an Algerian local timestamp (UTC+1) and normalizes it to UTC."""
+        if hour is None:
+            hour = cls.get_standard_cutoff_hour(year, month, day)
+        dt_dz = datetime(year, month, day, hour, minute, second, tzinfo=cls.DZ_TZ)
+        return dt_dz.astimezone(timezone.utc)
+
+    @staticmethod
+    def extract_explicit_time(text: str) -> Optional[Tuple[int, int]]:
+        """Extracts explicit hours and minutes from post text if mentioned."""
+        if not text:
+            return None
+        clean = re.sub(r'[\u0640]', '', text)
+        m = re.search(r'(?:الساعة|على\s*الساعة|على|à|at|vers)\s*([0-9]{1,2})(?::|h|\.)([0-9]{2})', clean, re.I)
+        if m:
+            h, mn = int(m.group(1)), int(m.group(2))
+            if re.search(r'مساءً|مساء|pm', clean, re.I) and h < 12:
+                h += 12
+            return h, mn
+        m_simple = re.search(r'(?:الساعة|على\s*الساعة|على|à|at)\s*([0-9]{1,2})\s*(?:صباحاً|صباحا|مساءً|مساء|am|pm)', clean, re.I)
+        if m_simple:
+            h = int(m_simple.group(1))
+            if re.search(r'مساءً|مساء|pm', clean, re.I) and h < 12:
+                h += 12
+            return h, 0
+        return None
+
+
+def parse_promo_dates(text: str, default_year: Optional[int] = None, ref_datetime: Optional[datetime] = None) -> Optional[Tuple[datetime, datetime]]:
     """
     Multilingual Date Extractor for Arabic, French, and English announcements.
+    Calculates exact start and end timestamps in Algerian Local Time (UTC+1) normalized to UTC.
     Detects ranges like:
     - 'من 1 إلى 7 أكتوبر 2026'
+    - 'تنتهي التخفيضات غداً صباحاً عند الساعة 08:00'
+    - 'تنتهي اليوم عند الساعة 08:00'
     - 'du 1er au 7 octobre 2026'
     - 'from Oct 1 to Oct 7'
     - '11 - 18 نوفمبر'
@@ -324,7 +386,29 @@ def parse_promo_dates(text: str, default_year: Optional[int] = None) -> Optional
         return None
 
     clean_text = re.sub(r'[\u0640]', '', text)
-    ref_year = default_year or datetime.now(timezone.utc).year
+    ref_dt = ref_datetime or datetime.now(AlgerianEventTiming.DZ_TZ)
+    ref_year = default_year or ref_dt.year
+
+    # Relative Pattern R1: Tomorrow / Today urgency announcements (e.g. Post 913)
+    # 'تنتهي التخفيضات غداً صباحاً عند الساعة 08:00!'
+    m_rel = re.search(
+        r'تنتهي\s+(?:التخفيضات|العروض|الفعالية)?\s*(غداً|غدا|اليوم)\s*(?:صباحاً|صباحا|مساءً|مساء)?\s*(?:عند\s+)?(?:الساعة|على\s*الساعة|على)?\s*([0-9]{1,2})(?::([0-9]{2}))?',
+        clean_text,
+        re.IGNORECASE
+    )
+    if m_rel:
+        is_tomorrow = "غد" in m_rel.group(1)
+        target_day = ref_dt + timedelta(days=1 if is_tomorrow else 0)
+        h = int(m_rel.group(2))
+        mn = int(m_rel.group(3)) if m_rel.group(3) else 0
+        if re.search(r'مساءً|مساء|pm', clean_text, re.I) and h < 12:
+            h += 12
+        end_dt = AlgerianEventTiming.to_utc(target_day.year, target_day.month, target_day.day, hour=h, minute=mn, second=0)
+        # Approximate start to 3-4 days prior
+        start_dt = end_dt - timedelta(days=3)
+        return start_dt, end_dt
+
+    exp_time = AlgerianEventTiming.extract_explicit_time(clean_text)
 
     # Pattern M1: Month Day to Month Day: e.g. 'Oct 1 to Oct 7', 'from Oct 1 to Oct 7 2026', 'Nov 11 - 18'
     p_m1 = re.search(
@@ -342,9 +426,17 @@ def parse_promo_dates(text: str, default_year: Optional[int] = None) -> Optional
             m1_num = MONTH_MAP[m1_str]
             m2_num = MONTH_MAP[m2_str]
             try:
-                start_dt = datetime(yr, m1_num, s_day, 7, 0, 0, tzinfo=timezone.utc)
+                s_hour = exp_time[0] if exp_time else AlgerianEventTiming.get_standard_cutoff_hour(yr, m1_num, s_day)
+                s_min = exp_time[1] if exp_time else 0
+                start_dt = AlgerianEventTiming.to_utc(yr, m1_num, s_day, hour=s_hour, minute=s_min, second=0)
+
                 end_yr = yr if m2_num >= m1_num else yr + 1
-                end_dt = datetime(end_yr, m2_num, e_day, 6, 59, 59, tzinfo=timezone.utc) + timedelta(days=1)
+                if exp_time:
+                    end_dt = AlgerianEventTiming.to_utc(end_yr, m2_num, e_day, hour=exp_time[0], minute=exp_time[1], second=0)
+                else:
+                    # Closing on morning after PST cutoff day
+                    cutoff_h = AlgerianEventTiming.get_standard_cutoff_hour(end_yr, m2_num, e_day)
+                    end_dt = AlgerianEventTiming.to_utc(end_yr, m2_num, e_day, hour=cutoff_h, minute=0, second=0) + timedelta(days=1) - timedelta(seconds=1)
                 if end_dt > start_dt:
                     return start_dt, end_dt
             except ValueError:
@@ -365,9 +457,15 @@ def parse_promo_dates(text: str, default_year: Optional[int] = None) -> Optional
         if m_str in MONTH_MAP and 1 <= s_day <= 31 and 1 <= e_day <= 31:
             m_num = MONTH_MAP[m_str]
             try:
-                start_dt = datetime(yr, m_num, s_day, 7, 0, 0, tzinfo=timezone.utc)
-                # AliExpress campaigns closing on e_day usually run until the morning after
-                end_dt = datetime(yr, m_num, e_day, 6, 59, 59, tzinfo=timezone.utc) + timedelta(days=1)
+                s_hour = exp_time[0] if exp_time else AlgerianEventTiming.get_standard_cutoff_hour(yr, m_num, s_day)
+                s_min = exp_time[1] if exp_time else 0
+                start_dt = AlgerianEventTiming.to_utc(yr, m_num, s_day, hour=s_hour, minute=s_min, second=0)
+
+                if exp_time:
+                    end_dt = AlgerianEventTiming.to_utc(yr, m_num, e_day, hour=exp_time[0], minute=exp_time[1], second=0)
+                else:
+                    cutoff_h = AlgerianEventTiming.get_standard_cutoff_hour(yr, m_num, e_day)
+                    end_dt = AlgerianEventTiming.to_utc(yr, m_num, e_day, hour=cutoff_h, minute=0, second=0) + timedelta(days=1) - timedelta(seconds=1)
                 if end_dt > start_dt:
                     return start_dt, end_dt
             except ValueError:
@@ -390,9 +488,16 @@ def parse_promo_dates(text: str, default_year: Optional[int] = None) -> Optional
             m1_num = MONTH_MAP[m1_str]
             m2_num = MONTH_MAP[m2_str]
             try:
-                start_dt = datetime(yr, m1_num, s_day, 7, 0, 0, tzinfo=timezone.utc)
+                s_hour = exp_time[0] if exp_time else AlgerianEventTiming.get_standard_cutoff_hour(yr, m1_num, s_day)
+                s_min = exp_time[1] if exp_time else 0
+                start_dt = AlgerianEventTiming.to_utc(yr, m1_num, s_day, hour=s_hour, minute=s_min, second=0)
+
                 end_yr = yr if m2_num >= m1_num else yr + 1
-                end_dt = datetime(end_yr, m2_num, e_day, 6, 59, 59, tzinfo=timezone.utc) + timedelta(days=1)
+                if exp_time:
+                    end_dt = AlgerianEventTiming.to_utc(end_yr, m2_num, e_day, hour=exp_time[0], minute=exp_time[1], second=0)
+                else:
+                    cutoff_h = AlgerianEventTiming.get_standard_cutoff_hour(end_yr, m2_num, e_day)
+                    end_dt = AlgerianEventTiming.to_utc(end_yr, m2_num, e_day, hour=cutoff_h, minute=0, second=0) + timedelta(days=1) - timedelta(seconds=1)
                 if end_dt > start_dt:
                     return start_dt, end_dt
             except ValueError:
@@ -410,9 +515,16 @@ def parse_promo_dates(text: str, default_year: Optional[int] = None) -> Optional
         e_day = int(p3.group(4))
         e_m = int(p3.group(5))
         try:
-            start_dt = datetime(yr, s_m, s_day, 7, 0, 0, tzinfo=timezone.utc)
+            s_hour = exp_time[0] if exp_time else AlgerianEventTiming.get_standard_cutoff_hour(yr, s_m, s_day)
+            s_min = exp_time[1] if exp_time else 0
+            start_dt = AlgerianEventTiming.to_utc(yr, s_m, s_day, hour=s_hour, minute=s_min, second=0)
+
             end_yr = yr if e_m >= s_m else yr + 1
-            end_dt = datetime(end_yr, e_m, e_day, 6, 59, 59, tzinfo=timezone.utc) + timedelta(days=1)
+            if exp_time:
+                end_dt = AlgerianEventTiming.to_utc(end_yr, e_m, e_day, hour=exp_time[0], minute=exp_time[1], second=0)
+            else:
+                cutoff_h = AlgerianEventTiming.get_standard_cutoff_hour(end_yr, e_m, e_day)
+                end_dt = AlgerianEventTiming.to_utc(end_yr, e_m, e_day, hour=cutoff_h, minute=0, second=0) + timedelta(days=1) - timedelta(seconds=1)
             if end_dt > start_dt:
                 return start_dt, end_dt
         except ValueError:
