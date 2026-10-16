@@ -920,7 +920,9 @@ def extract_clean_title(text: str) -> Optional[str]:
         "بوشات", "كيتمان", "قلم كتابة", "انكسابل", "هدية", "شاحن مع كابل",
         "طريقة الشراء", "طريقة الطلب", "رابط الشراء", "للشراء", "للطلب",
         "جدول", "اكواد", "أكواد", "تخفيضات", "عروض الخريف", "تفعيل",
-        "متوافق مع", "متوافقة مع", "يدعم أجهزة", "تدعم أجهزة"
+        "متوافق مع", "متوافقة مع", "يدعم أجهزة", "تدعم أجهزة",
+        "أرض", "ارض", "اجري", "أجري", "تخفيض العملات", "تخفيض عملات", "خصم العملات", "رابط العملات",
+        "تلقائي", "حساب كندي", "حساب سعودي", "غير البلد", "ضع البلد", "خلي البلد"
     ]
 
     # Normalize tatweel and remove multiple exclamation/fire emojis
@@ -945,16 +947,18 @@ def extract_clean_title(text: str) -> Optional[str]:
             return True
         return False
 
-    # 0. Look for explicit star bullet title line (ZedStore & top Algerian channels standard: ⭐️ [Title])
+    # 0. Look for explicit star bullet title line (ZedStore & top Algerian channels standard: ⭐️ [Title] or [Country] ⭐️ [Title])
     for i, line in enumerate(lines):
         if any(s in line for s in ["⭐️", "⭐", "🌟"]):
-            cand = re.sub(r'^[⭐️⭐🌟\s\-:]+', '', line).strip()
+            parts = re.split(r'[⭐️⭐🌟]', line)
+            cand = parts[-1].strip()
             if (not cand or len(cand) < 3) and i + 1 < len(lines):
                 cand = lines[i + 1].strip()
                 if i + 2 < len(lines) and not any(k in lines[i + 2] for k in ['$', '€', 'السعر', 'احجز', 'كوبون', 'رابط', '🔗', '💵']):
                     cand += ' ' + lines[i + 2].strip()
             cand = re.sub(r'[\$€💵].*$', '', cand).strip()
             cand = re.sub(r'https?://\S+', '', cand).strip()
+            cand = re.sub(r'^[✅✔️☑️📱🎮🎧\s\-:]+', '', cand).strip()
             if not is_noisy(cand) and len(cand) >= 3:
                 return cand[:100]
 
@@ -984,7 +988,8 @@ def extract_clean_title(text: str) -> Optional[str]:
 
     # 2. Look for lines with English/Arabic product name
     for line in lines:
-        c = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:⭐️🌷⏺📎]+', '', line).strip()
+        c = re.sub(r'^(?:غير\s+البلد|ضع\s+البلد|خلي\s+البلد|بلد\s+الحساب)[^\n]*[🇨🇦🇸🇦🇫🇷🇦🇺🇩🇿🇶🇦🇰🇼🇦🇪⭐️⭐🌟✅]\s*', '', line).strip()
+        c = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:⭐️🌷⏺📎]+', '', c).strip()
         c = re.sub(r'[\$€].*$', '', c).strip()
         c = re.sub(r'https?://\S+', '', c).strip()
         norm = c.lower()

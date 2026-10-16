@@ -787,23 +787,30 @@ async def run_deals_loop(duration: int, interval: int, force: bool = False, forc
     start = time.time()
     cycle = 0
     total_published = 0
-    logger.info(f"Starting Algeria Deals Publisher loop: duration={duration}s, interval={interval}s")
+    logger.info(f"Starting Deals Publisher 24/7 continuous cloud loop: duration={duration}s, interval={interval}s")
     while time.time() - start < duration:
         cycle += 1
-        logger.info(f"--- Algeria Deals Sweep #{cycle} (Elapsed: {int(time.time() - start)}s / {duration}s) ---")
+        logger.info(f"--- Autonomous Sweep #{cycle} (Elapsed: {int(time.time() - start)}s / {duration}s) ---")
         try:
-            pub = await collect_and_post_last_10_deals(force=force if cycle == 1 else False, force_tajmi3at=force_tajmi3at)
-            total_published += pub
+            pub_alg = await collect_and_post_last_10_deals(force=force if cycle == 1 else False, force_tajmi3at=force_tajmi3at)
+            total_published += pub_alg
         except Exception as e:
             logger.error(f"Error in Algeria sweep #{cycle}: {e}")
-        
+
+        try:
+            from scripts.post_france_deals import collect_and_post_france_deals
+            pub_fr = await collect_and_post_france_deals(force=force if cycle == 1 else False, force_tajmi3at=force_tajmi3at)
+            total_published += pub_fr
+        except Exception as e:
+            logger.error(f"Error in France sweep #{cycle}: {e}")
+
         remaining = duration - (time.time() - start)
         if remaining <= 0:
             break
         sleep_sec = min(interval, remaining)
         logger.info(f"Sleeping {int(sleep_sec)}s before next sweep...")
         await asyncio.sleep(sleep_sec)
-    logger.info(f"Algeria publisher loop completed. Total published: {total_published}")
+    logger.info(f"Continuous publisher loop completed. Total deals published: {total_published}")
     return total_published
 
 if __name__ == "__main__":
