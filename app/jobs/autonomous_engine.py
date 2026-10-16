@@ -39,11 +39,10 @@ from app.utils.logger import logger, record_system_log
 MONITORED_CHANNELS = [
     "lodydeals",
     "zedstoreonline",
+    "aniscoupons",
     "ECKSDEAL",
     "Pcgamingpart",
     "BNDDEALS",
-    "megaphonna",
-    "aniscoupons",
     "CouponsGlobal"
 ]
 

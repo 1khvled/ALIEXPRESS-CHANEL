@@ -478,11 +478,11 @@ def is_recent_cross_channel_duplicate(
                 logger.info(f"[RESTOCK REPOST EXCEPTION] Product {p_str} restock announced by @{clean_curr_ch} (age {age/60:.1f}m). Allowing restock repost!")
                 return False, f"Restock exception: competitor announced restock/return ({age/60:.1f}m later)", False
 
-        # Check for Price-Drop Exception: require at least 1h age to prevent rapid reposts
+        # Check for Price-Drop Exception: requires a substantial, genuine price collapse (>= 15% AND >= $5.00 cheaper)
         if age >= 3600 and prev_price and current_price and current_price > 0 and prev_price > 0:
             diff = prev_price - current_price
             pct_drop = (diff / prev_price) * 100.0
-            if diff >= 1.0 or pct_drop >= 5.0:
+            if diff >= 5.0 and pct_drop >= 15.0:
                 logger.info(f"Price-Drop Exception for {p_str}: was ${prev_price:.2f}, now ${current_price:.2f} (-{pct_drop:.1f}%)")
                 return False, f"Price drop exception: was ${prev_price:.2f}, now ${current_price:.2f} (-{pct_drop:.1f}%)", True
 
