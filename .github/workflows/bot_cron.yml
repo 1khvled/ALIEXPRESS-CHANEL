@@ -1,9 +1,6 @@
 name: AliExpress Deals Telegram Bot
 
 on:
-  push:
-    branches:
-      - main
   schedule:
     # Multiple odd-minute schedules to bypass GitHub Actions scheduler congestion & dropped runs
     - cron: '13 * * * *'
