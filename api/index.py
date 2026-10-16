@@ -1452,7 +1452,11 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
             posts = []
             for block in reversed(blocks):
                 text_div = block.find("div", class_="tgme_widget_message_text")
-                text = text_div.get_text(separator="\n").strip() if text_div else ""
+                if text_div:
+                    from app.aliexpress.parser import extract_telegram_html_text
+                    text = extract_telegram_html_text(text_div)
+                else:
+                    text = ""
 
                 # Filter out expired campaigns when active promo is running
                 if any(c in text for c in ["OTPRD", "BDQT", "FRPRD", "FRBD"]) and not any(c in text for c in ["WOAE", "FRWO"]):
@@ -1488,20 +1492,23 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
 
                 if text:
                     try:
-                        from app.aliexpress.parser import extract_multi_coupons
+                        from app.aliexpress.parser import extract_multi_coupons, extract_clean_title
                         multi = extract_multi_coupons(text)
                         clean_desc = multi.get("description", "")
                         c_list = multi.get("coupons", [])
                         c_details = multi.get("coupon_details", [])
                         c_primary = multi.get("coupon_code")
+                        extracted_title = extract_clean_title(text) or ""
                     except Exception:
                         clean_desc = ""
                         c_list = []
                         c_details = []
                         c_primary = None
+                        extracted_title = ""
 
                     posts.append({
                         "text": text,
+                        "title": extracted_title,
                         "description": clean_desc,
                         "coupons": c_list,
                         "coupon_details": c_details,

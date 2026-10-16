@@ -4401,7 +4401,6 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         return null;
       }
 
-      let title = '';
       let coupon = null;
       let priceUsd = null;
       let priceEur = null;
@@ -4412,39 +4411,69 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       const lines = text.split(/\\r?\\n/).map(l => l.trim()).filter(Boolean);
 
+      const countryNames = [
+        'السعودية', 'سعودية', 'saudi', 'ksa', 'أستراليا', 'استراليا', 'australia',
+        'كندا', 'canada', 'فرنسا', 'france', 'أوكرانيا', 'اوكرانيا', 'ukraine',
+        'إسبانيا', 'اسبانيا', 'spain', 'الإمارات', 'امارات', 'uae', 'قطر', 'qatar',
+        'الكويت', 'kuwait', 'البحرين', 'bahrain', 'عمان', 'oman', 'كوريا', 'korea',
+        'الجزائر', 'algeria'
+      ];
+
       const isBoilerplate = (l) => {
-        const s = l.toLowerCase().replace(/[\u0640]/g, '');
+        if (!l) return true;
+        const s = l.toLowerCase().replace(/[\u0640]/g, '').trim();
+        if (countryNames.includes(s)) return true;
+        if (countryNames.some(c => s === 'خلي البلد ' + c || s === 'ضع البلد ' + c || s === 'بلد الحساب ' + c)) return true;
         return (
           s.includes('http') || s.includes('@') || s.includes('t.me') ||
-          s.includes('خلي البلد') || s.includes('بلد الحساب') || s.includes('livraison') ||
-          s.includes('pays') || s.includes('السعر') || s.includes('prix') || s.includes('price') ||
-          s.includes('كوبون') || s.includes('قسيمة') || s.includes('code') || s.includes('coupon') ||
-          s.includes('عملات') || s.includes('coins') || s.includes('pièces') || s.includes('pièce') ||
-          s.includes('لافار') || s.includes('عرض اليوم') || s.includes('صفقة') || s.includes('صيدة') || s.includes('باطل') ||
-          s.includes('تخفيض قوي') || s.includes('رابط الشراء') || s.includes('بوت') || s.includes('قناة') ||
-          s.includes('bonne affaire') || s.includes('meilleur bon plan') || s.includes('guide') ||
-          s.includes('تنبيه') || s.includes('طريقة') || s.includes('احجز') || s.includes('طبقوا') ||
-          s.includes('حبات قلال') || s.includes('سارعوا') || s.includes('كندا') || s.includes('فرنسا') ||
-          s.includes('كوريا') || s.includes('أوكرانيا') || s.includes('استراليا') ||
-          s.includes('متوسط') || s.includes('سعره') || s.includes('دج') || s.includes('صفقة اليوم') || s.includes('صيدة اليوم')
+          s.includes('خلي البلد') || s.includes('بلد الحساب') || s.includes('ضع البلد') ||
+          s.includes('livraison') || s.includes('pays') || s.includes('السعر') || s.includes('prix') ||
+          s.includes('price') || s.includes('كوبون') || s.includes('قسيمة') || s.includes('code') ||
+          s.includes('coupon') || s.includes('عملات') || s.includes('coins') || s.includes('pièces') ||
+          s.includes('pièce') || s.includes('لافار') || s.includes('عرض اليوم') || s.includes('صفقة') ||
+          s.includes('صيدة') || s.includes('باطل') || s.includes('تخفيض قوي') || s.includes('رابط الشراء') ||
+          s.includes('بوت') || s.includes('قناة') || s.includes('bonne affaire') ||
+          s.includes('meilleur bon plan') || s.includes('guide') || s.includes('تنبيه') ||
+          s.includes('طريقة') || s.includes('احجز') || s.includes('طبقوا') || s.includes('حبات قلال') ||
+          s.includes('سارعوا') || s.includes('سعر ممتاز') || s.includes('هبوط قوي') || s.includes('بخاصية') ||
+          s.includes('متوسط') || s.includes('سعره') || s.includes('دج') || s.includes('صفقة اليوم') || s.includes('صيدة اليوم') ||
+          countryNames.some(c => s.includes('خلي البلد ' + c) || s.includes('ضع البلد ' + c))
         );
       };
 
+      let title = '';
+      if (post.title && !isBoilerplate(post.title)) {
+        title = post.title.trim();
+      }
+
       // Priority 1: Checkmark bullet (DealScout DZ & top channels standard: ✅ [Title] or ✔️ [Title])
-      for (const line of lines) {
-        const m = line.match(/^[✅✔️☑️]\\s*(.+)$/) || line.match(/✅\\s*([^\\n]+)/);
-        if (m) {
-          const cand = m[1].replace(/<[^>]*>/g, '').replace(/^[✅✔️☑️\\s*#]+/, '').trim();
-          if (cand.length >= 3 && !isBoilerplate(cand)) {
-            title = cand;
-            break;
+      if (!title) {
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i];
+          if (line === '✅' || line === '✔️' || line === '☑️') {
+            if (i + 1 < lines.length) {
+              const next = lines[i + 1].replace(/<[^>]*>/g, '').trim();
+              if (next.length >= 3 && !isBoilerplate(next)) {
+                title = next;
+                break;
+              }
+            }
+          }
+          const m = line.match(/^[✅✔️☑️]\\s*(.+)$/) || line.match(/✅\\s*([^\\n]+)/);
+          if (m) {
+            const cand = m[1].replace(/<[^>]*>/g, '').replace(/^[✅✔️☑️\\s*#]+/, '').trim();
+            if (cand.length >= 3 && !isBoilerplate(cand)) {
+              title = cand;
+              break;
+            }
           }
         }
       }
 
       // Priority 2: Star, device, or category prefixes (⭐️, 📱, 🎮, 🎧, ⚡, 📦, تخفيض لـ, Produit)
       if (!title) {
-        for (const line of lines) {
+        for (let i = 0; i < lines.length; i++) {
+          const line = lines[i];
           const m = line.match(/^(?:⭐️|⭐|🌟|📱|🎮|🎧|⚡|📦|تخفيض\\s*(?:لـ|ل)?|عرض\\s*خاص\\s*(?:لـ|ل)?|تخفيض\\s*على|produit\\s*:?|offre\\s*:?)\\s*(.+)$/i);
           if (m) {
             const cand = m[1].replace(/<[^>]*>/g, '').trim();
@@ -4479,6 +4508,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             }
           }
         }
+      }
+
+      if (title && isBoilerplate(title)) {
+        title = '';
       }
 
       if (title) {
