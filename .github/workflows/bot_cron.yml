@@ -2,10 +2,10 @@ name: AliExpress Deals Telegram Bot
 
 on:
   schedule:
-    # Multiple odd-minute schedules to bypass GitHub Actions scheduler congestion & dropped runs
-    - cron: '13 * * * *'
-    - cron: '37 * * * *'
-    - cron: '53 * * * *'
+    # Daytime (07:00 - 00:59 DZ / 06:00 - 23:59 UTC): Every 5 minutes
+    - cron: '*/5 6-23 * * *'
+    # Nighttime (01:00 - 06:59 DZ / 00:00 - 05:59 UTC): Every 30 minutes
+    - cron: '*/30 0-5 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI anytime
     inputs:
       force:
