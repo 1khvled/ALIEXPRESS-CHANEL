@@ -43,6 +43,7 @@ MONITORED_CHANNELS = [
     "ECKSDEAL",
     "Pcgamingpart",
     "BNDDEALS",
+    "megaphonna",
     "CouponsGlobal"
 ]
 

@@ -35,7 +35,7 @@ from app.media.downloader import media_downloader
 from app.media.renderer import media_renderer
 from app.publisher.publisher import telegram_publisher
 from app.utils.logger import logger
-# Primary Algerian deal channels to mimic (Lody, Zedstore, Anis, Esk, BND)
+# Primary Algerian deal channels to mimic (Lody, Zedstore, Anis, Esk, BND, Megaphonna)
 CHANNELS = [
     "lodydeals",
     "zedstoreonline",
@@ -43,6 +43,7 @@ CHANNELS = [
     "ECKSDEAL",
     "Pcgamingpart",
     "BNDDEALS",
+    "megaphonna",
     "CouponsGlobal"
 ]
 
