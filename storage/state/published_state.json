@@ -267,7 +267,8 @@
     "999888963",
     "9998881013",
     "9998881091",
-    "9998881724"
+    "9998881724",
+    "1005013152491360"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -545,7 +546,8 @@
     "999888963": 1792110963.216331,
     "9998881013": 1792111013.6508672,
     "9998881091": 1792111091.834798,
-    "9998881724": 1792111724.2696939
+    "9998881724": 1792111724.2696939,
+    "1005013152491360": 1792118810.348281
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -849,7 +851,8 @@
     "Ⓜ  TCL 60 NXT PAPER 8/256📱",
     "Realme P3 Lite 4G 4/128GB",
     "Anker 511 Nano Pro 30W",
-    "Anker Nano 3 Pro 45W GaN"
+    "Anker Nano 3 Pro 45W GaN",
+    "POCO X8 5G 6/128GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1156,7 +1159,8 @@
     "Ⓜ  TCL 60 NXT PAPER 8/256📱": 1792091809.1996214,
     "Realme P3 Lite 4G 4/128GB": 1792097839.1553843,
     "Anker 511 Nano Pro 30W": 1792103182.8885217,
-    "Anker Nano 3 Pro 45W GaN": 1792103193.622027
+    "Anker Nano 3 Pro 45W GaN": 1792103193.622027,
+    "POCO X8 5G 6/128GB": 1792118810.348281
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1949,27 +1953,28 @@
     "test_channel:1792110963",
     "test_channel:1792111013",
     "test_channel:1792111091",
-    "test_channel:1792111724"
+    "test_channel:1792111724",
+    "lodydeals:45562"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792111724.4879146,
+  "last_run_time": 1792118810.348281,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32969,
-      "last_check_time": 1792103210.6663775
+      "last_check_time": 1792118820.0592017
     },
     "ecksdeal": {
       "last_message_id": 5893,
-      "last_check_time": 1792103196.672298
+      "last_check_time": 1792118813.908934
     },
     "lodydeals": {
-      "last_message_id": 45563,
-      "last_check_time": 1792111724.3692455
+      "last_message_id": 45564,
+      "last_check_time": 1792118812.3627083
     },
     "bnddeals": {
       "last_message_id": 50859,
-      "last_check_time": 1792103197.375707
+      "last_check_time": 1792118814.6077812
     },
     "test_channel": {
       "last_message_id": 1792111724,
@@ -1977,11 +1982,11 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792103197.0311084
+      "last_check_time": 1792118814.2614558
     },
     "zedstoreonline": {
-      "last_message_id": 38610,
-      "last_check_time": 1792103196.2073255
+      "last_message_id": 38611,
+      "last_check_time": 1792118813.5697982
     },
     "megaphonna": {
       "last_message_id": 8413,
@@ -2053,7 +2058,7 @@
     "1005008715050858": 6.4,
     "999888777111": 20.0,
     "1005012407874415": 480.4,
-    "1005013152491360": 196.0,
+    "1005013152491360": 216.0,
     "1005012925826589": 187.0,
     "1005012922578845": 238.9,
     "1005012865117890": 231.9,
@@ -6101,6 +6106,16 @@
       "price": 231.9,
       "timestamp": 1792103203.7426965,
       "status": "ACTIVE"
+    },
+    "lodydeals:45562": {
+      "channel_msg_id": 871,
+      "product_id": "1005013152491360",
+      "title": "POCO X8 5G 6/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45562,
+      "price": 216.0,
+      "timestamp": 1792118810.348281,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6109,17 +6124,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792103217.8754354,
+    "last_deal_post_time": 1792118827.2450645,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792103220.7996652,
+    "last_sweep_time": 1792118829.6952868,
     "last_sweep_times": {
-      "algeria": 1792103217.870073,
-      "france": 1792103220.7996652
+      "algeria": 1792118827.2396889,
+      "france": 1792118829.6952868
     },
     "last_deal_post_times": {
-      "algeria": 1792103217.8754354
+      "algeria": 1792118827.2450645
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -6171,7 +6186,7 @@
     "9998887189": "test_channel",
     "1005012499451512": "zedstoreonline",
     "1005010219205081": "aniscoupons",
-    "1005013152491360": "zedstoreonline",
+    "1005013152491360": "lodydeals",
     "1005010129356058": "megaphonna",
     "1005012925826589": "megaphonna",
     "1005012922578845": "megaphonna",
@@ -6705,7 +6720,8 @@
     "Ⓜ  TCL 60 NXT PAPER 8/256📱": "megaphonna",
     "Realme P3 Lite 4G 4/128GB": "lodydeals",
     "Anker 511 Nano Pro 30W": "lodydeals",
-    "Anker Nano 3 Pro 45W GaN": "lodydeals"
+    "Anker Nano 3 Pro 45W GaN": "lodydeals",
+    "POCO X8 5G 6/128GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -7276,7 +7292,10 @@
     "lodydeals:45559",
     "megaphonna:8413",
     "megaphonna:8412",
-    "megaphonna:8400"
+    "megaphonna:8400",
+    "lodydeals:45564",
+    "zedstoreonline:38611",
+    "megaphonna:8396"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
