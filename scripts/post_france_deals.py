@@ -169,10 +169,13 @@ def is_recent_france_duplicate(
 
     # 2. Cooldown check
     if age_hours < cooldown_hours:
-        # Check price drop exception
+        # Check price drop exception: require at least 5.00€ AND 5% drop, or a substantial 10.00€+ drop,
+        # to strictly prevent minor price/cent adjustments from reposting yesterday's deals
         if current_price_eur and prev_price and prev_price > 0:
-            if current_price_eur <= (prev_price * 0.96) or (current_price_eur <= prev_price - 3.0):
-                return False, f"Price drop exception: {prev_price}€ -> {current_price_eur}€", True
+            diff = prev_price - current_price_eur
+            pct_drop = (diff / prev_price) * 100.0
+            if (diff >= 5.0 and pct_drop >= 5.0) or (diff >= 10.0) or (pct_drop >= 15.0 and diff >= 3.0):
+                return False, f"Price drop exception: {prev_price}€ -> {current_price_eur}€ (-{pct_drop:.1f}%, -{diff:.2f}€)", True
 
         return True, f"Product {pid} already posted to France {age_hours:.1f}h ago (< {cooldown_hours}h cooldown)", False
 
@@ -893,11 +896,55 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
 
     return published_count
 
+async def run_france_deals_loop(duration: int, interval: int, force: bool = False, force_tajmi3at: bool = False) -> int:
+    import time
+    start = time.time()
+    cycle = 0
+    total_published = 0
+    logger.info(f"Starting France Deals Publisher loop: duration={duration}s, interval={interval}s")
+    while time.time() - start < duration:
+        cycle += 1
+        logger.info(f"--- France Deals Sweep #{cycle} (Elapsed: {int(time.time() - start)}s / {duration}s) ---")
+        try:
+            pub = await collect_and_post_france_deals(force=force if cycle == 1 else False, force_tajmi3at=force_tajmi3at)
+            total_published += pub
+        except Exception as e:
+            logger.error(f"Error in France sweep #{cycle}: {e}")
+
+        remaining = duration - (time.time() - start)
+        if remaining <= 0:
+            break
+        sleep_sec = min(interval, remaining)
+        logger.info(f"Sleeping {int(sleep_sec)}s before next France sweep...")
+        await asyncio.sleep(sleep_sec)
+    logger.info(f"France publisher loop completed. Total published: {total_published}")
+    return total_published
+
 if __name__ == "__main__":
     force_run = "--force" in sys.argv or "-f" in sys.argv
     force_tajmi3at = "--tajmi3at" in sys.argv or "--force-tajmi3at" in sys.argv
+
+    duration = None
+    if "--duration" in sys.argv:
+        try:
+            idx = sys.argv.index("--duration")
+            duration = int(sys.argv[idx + 1])
+        except (IndexError, ValueError):
+            duration = None
+
+    interval = 60
+    if "--interval" in sys.argv:
+        try:
+            idx = sys.argv.index("--interval")
+            interval = int(sys.argv[idx + 1])
+        except (IndexError, ValueError):
+            interval = 60
+
     try:
-        res = asyncio.run(collect_and_post_france_deals(force=force_run, force_tajmi3at=force_tajmi3at))
+        if duration:
+            res = asyncio.run(run_france_deals_loop(duration=duration, interval=interval, force=force_run, force_tajmi3at=force_tajmi3at))
+        else:
+            res = asyncio.run(collect_and_post_france_deals(force=force_run, force_tajmi3at=force_tajmi3at))
         sys.exit(0)
     except Exception as e:
         logger.critical(f"FATAL ERROR in France deals publisher: {e}", exc_info=True)

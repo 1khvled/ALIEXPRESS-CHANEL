@@ -72,6 +72,8 @@ COUNTRY_PATTERNS = [
     (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*(?:إسبانيا|اسبانيا)|🇪🇸', re.IGNORECASE), "إسبانيا 🇪🇸"),
     (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*(?:أوكرانيا|اوكرانيا)|🇺🇦', re.IGNORECASE), "أوكرانيا 🇺🇦"),
     (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*(?:أستراليا|استراليا)|🇦🇺', re.IGNORECASE), "أستراليا 🇦🇺"),
+    (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*(?:بريطانيا|المملكة المتحدة)|🇬🇧', re.IGNORECASE), "المملكة المتحدة 🇬🇧"),
+    (re.compile(r'(?:دولة|البلد|بلد الحساب|ضع البلد|خلي البلد|تحويل الحساب الى)\s*(?:التطبيق\s*الى)?\s*(?:البرازيل|برازيل)|🇧🇷', re.IGNORECASE), "البرازيل 🇧🇷"),
 ]
 
 BLOCKED_STORE_KEYWORDS = [
@@ -378,15 +380,22 @@ def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
         return None, None
 
     text = re.sub(r'[\u0640]', '', text)
+    # Normalize Eastern Arabic-Indic numerals (٠-٩) to ASCII (0-9)
+    arabic_digits = str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789")
+    text = text.translate(arabic_digits)
+    # Normalize Arabic decimal comma ٫ (U+066B) and Arabic comma ، (U+060C) when between digits
+    text = re.sub(r'(?<=\d)[٫،](?=\d)', '.', text)
 
     # Priority 1: Direct explicit price markers in the raw text
     explicit_price_patterns = [
         # 'القطعة بعد الكوبون : 4.19$' or 'السعر بعد الكوبون : 12.50$' or 'السعر بعد التخفيض : 1.28$'
         re.compile(r'(?:القطعة\s*بعد\s*الكوبون|السعر\s*بعد\s*الكوبون|سعر\s*بعد\s*الكوبون|بعد\s*الكوبون|القطعة\s*بعد\s*الكود|السعر\s*بعد\s*الكود|السعر\s*بعد\s*التخفيض|سعر\s*بعد\s*التخفيض)\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
+        # 'السعر الجديد : 15.5$' or 'السعر الحالي : 20$' or 'الآن بسعر 12$'
+        re.compile(r'(?:السعر\s*الجديد|السعر\s*الحالي|الآن\s*بسعر|الان\s*بسعر)\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
         # 'سعر القطعة : 4.4$' or 'سعر قطعة : 7.99$' or 'سعر الحبة : 3.5$'
         re.compile(r'(?:سعر\s*القطعة|سعر\s*قطعة|سعر\s*الحبة|سعر\s*حبة)\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
-        # 'السعر : 204.7$' or 'السعــــر : 15.5$' or 'السعر: 18.17 $' or 'prix: 15€' or 'price: $15'
-        re.compile(r'(?:ا+لسعر|ا+لسعــــر|prix|price)\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
+        # 'السعر : 204.7$' or 'السعــــر : 15.5$' (ignoring old/original prices like 'السعر القديم' or 'كان بسعر')
+        re.compile(r'(?<!كان\s)(?<!بدل\s)(?:ا+لسعر|ا+لسعــــر|prix|price)(?!\s*القديم)(?!\s*السابق)(?!\s*قبل)\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
         # 'سعر 3 قطع: 28.85$' or 'سعر ثلاث قطع 13.2$' or 'سعر 3 حبات: 24$'
         re.compile(r'(?:سعر\s*(?:3|ثلاث)\s*(?:قطع|حبات))\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
     ]
@@ -404,10 +413,12 @@ def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
             except ValueError:
                 pass
 
-    # Priority 2: Filter out lines that are coupon codes, tiers, or discount announcements
+    # Priority 2: Filter out lines that are coupon codes, tiers, discount announcements, or old/original prices
     filtered_lines = []
     for line in text.splitlines():
         lc = line.strip().lower()
+        if any(w in lc for w in ["السعر القديم", "السعر السابق", "سعر سابق", "سعر قديم", "كان بسعر", "بدل من", "بدل "]):
+            continue
         if any(p in lc for p in ["بعد الكوبون", "بعد الكود", "سعر بعد", "القطعة بعد", "السعر بعد", "سعر القطعة", "سعر قطعة", "السعر :", "السعر:"]):
             filtered_lines.append(line)
             continue
@@ -866,16 +877,24 @@ def extract_country_instruction(text: str, url: str = "", title: str = "") -> Op
         return "فرنسا 🇫🇷"
 
     # 5. Spain detection
-    if "🇪🇸" in flag_pairs or any(k in combined for k in ["إسبانيا", "اسبانيا", "spain", "shiptocountry=es"]):
+    if "🇪🇸" in flag_pairs or any(k in combined for k in ["إسبانيا", "اسبانيا", "spain", "espana", "españa", "shiptocountry=es"]):
         return "إسبانيا 🇪🇸"
 
     # 5.5 Australia detection
-    if "🇦🇺" in flag_pairs or any(k in combined for k in ["استراليا", "أستراليا", "australia", "shiptocountry=au"]):
+    if "🇦🇺" in flag_pairs or any(k in combined for k in ["استراليا", "أستراليا", "australia", "shiptocountry=au"]) or re.search(r'\baud\b', combined):
         return "أستراليا 🇦🇺"
 
     # 5.6 Ukraine detection (frequent for low smartphone prices)
-    if "🇺🇦" in flag_pairs or any(k in combined for k in ["أوكرانيا", "اوكرانيا", "ukraine", "shiptocountry=ua"]):
+    if "🇺🇦" in flag_pairs or any(k in combined for k in ["أوكرانيا", "اوكرانيا", "ukraine", "shiptocountry=ua"]) or re.search(r'\buah\b', combined):
         return "أوكرانيا 🇺🇦"
+
+    # 5.7 United Kingdom detection
+    if "🇬🇧" in flag_pairs or any(k in combined for k in ["بريطانيا", "المملكة المتحدة", "united kingdom", "uk", "shiptocountry=gb", "shiptocountry=uk"]) or re.search(r'\bgbp\b', combined):
+        return "المملكة المتحدة 🇬🇧"
+
+    # 5.8 Brazil detection
+    if "🇧🇷" in flag_pairs or any(k in combined for k in ["البرازيل", "برازيل", "brazil", "brasil", "shiptocountry=br"]) or re.search(r'\bbrl\b', combined):
+        return "البرازيل 🇧🇷"
 
     # Explicit generic directives (e.g. "خلي البلد" or "ضع البلد" without country name)
     if any(k in combined for k in ["خلي البلد", "ضع البلد", "بلد الحساب"]):

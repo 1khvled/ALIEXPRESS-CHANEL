@@ -246,7 +246,12 @@ def extract_title_tokens(title: str) -> Set[str]:
     """Extracts distinctive model/product tokens, preserving alphanumeric codes (e.g. p3, x3, 5g, 8k, r1)."""
     if not title:
         return set()
-    cleaned = re.sub(r'[\$€\(\)\[\],.;:!?/\\|\-_~+]+', ' ', title.lower())
+    norm = title.lower()
+    # Strip RAM + Storage specs like 8GB+256GB or 8+256 or 12/512 to prevent false 'plus' token
+    norm = re.sub(r'\b\d+(?:gb|tb|g)?\s*[\+/]\s*\d+(?:gb|tb|g)?\b', ' ', norm, flags=re.IGNORECASE)
+    # Convert remaining '+' (like Pro+ or S24+) to 'plus'
+    norm = re.sub(r'(\b\w+)\+', r'\1 plus', norm)
+    cleaned = re.sub(r'[\$€\(\)\[\],.;:!?/\\|\-_~+]+', ' ', norm)
     tokens = set()
     for w in cleaned.split():
         if w in STOP_WORDS:
@@ -287,6 +292,18 @@ def is_same_deal_title(title_a: str, title_b: str) -> bool:
 
     # Check product category mismatch (e.g. realme phone vs realme pad)
     if ("pad" in toks_a and "pad" not in toks_b) or ("pad" in toks_b and "pad" not in toks_a):
+        return False
+
+    # Check modifiers (Pro, Lite, Ultra, Max, Plus, Mini, Neo, etc.)
+    # e.g. "realme P3" vs "realme P3 Lite" or "POCO X6" vs "POCO X6 Pro"
+    MODIFIER_TOKENS = {'pro', 'lite', 'ultra', 'plus', 'max', 'mini', 'neo', 'se', 'fe', 'youth'}
+    mods_a = toks_a.intersection(MODIFIER_TOKENS)
+    mods_b = toks_b.intersection(MODIFIER_TOKENS)
+    if mods_a != mods_b:
+        return False
+
+    # Check 4G vs 5G connectivity mismatch
+    if ('4g' in toks_a and '5g' in toks_b) or ('5g' in toks_a and '4g' in toks_b):
         return False
 
     common = toks_a.intersection(toks_b)

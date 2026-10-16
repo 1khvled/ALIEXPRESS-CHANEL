@@ -20,11 +20,15 @@ COMMON_SHORTENERS = [
     "rb.gy",
     "is.gd",
     "buff.ly",
+    "t.ly",
+    "shorturl.at",
+    "alix.live",
+    "dub.sh",
 ]
 
 # Regex for URLs in text (matches full https:// or bare domains like s.click.aliexpress.com/...)
 URL_REGEX = re.compile(
-    r'(https?://[^\s<>"\',;]+|(?:[a-zA-Z0-9_\-]+\.)*(?:aliexpress\.com|alitems\.com|alitems\.site|bit\.ly|tinyurl\.com|t\.co|cutt\.ly|rb\.gy|is\.gd|buff\.ly)/[^\s<>"\',;]+)',
+    r'(https?://[^\s<>"\',;]+|(?:[a-zA-Z0-9_\-]+\.)*(?:aliexpress\.com|alitems\.com|alitems\.site|bit\.ly|tinyurl\.com|t\.co|cutt\.ly|rb\.gy|is\.gd|buff\.ly|t\.ly|shorturl\.at|alix\.live|dub\.sh)/[^\s<>"\',;]+)',
     re.IGNORECASE
 )
 

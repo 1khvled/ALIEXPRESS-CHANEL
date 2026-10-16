@@ -62,6 +62,9 @@ async def test_cross_channel_duplicate_detection():
     assert is_same_deal_title("realme P3 5G 8GB+256GB", "Realme P3") is True
     assert is_same_deal_title("Attack Shark X3 Pro 8K", "ماوس Attack Shark X3 Pro") is True
     assert is_same_deal_title("Attack Shark R1", "Attack Shark X3 Pro") is False
+    assert is_same_deal_title("realme P3", "realme P3 Lite") is False
+    assert is_same_deal_title("POCO X6 5G", "POCO X6 Pro 5G") is False
+    assert is_same_deal_title("POCO M6 4G", "POCO M6 5G") is False
 
     # 2. State-level deduplication blocks reposts
     record_product_published("999111222", "Test Wireless Gaming Mouse X1")
