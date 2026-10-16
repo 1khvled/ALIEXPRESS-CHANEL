@@ -4514,11 +4514,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         if (compBrands.some(brand => cl.startsWith(brand) || cl.includes('_' + brand) || cl.includes('-' + brand))) return;
         if (['anis', 'megaprix', 'megaphonna', 'ecks'].some(brand => cl.includes(brand))) return;
 
-        let cleanTier = (tier || '').trim().replace(/\s+/g, '');
+        let cleanTier = (tier || '').trim().replace(/\\s+/g, '');
         if (cleanTier && !cleanTier.startsWith('$') && !cleanTier.endsWith('$') && !cleanTier.startsWith('€') && !cleanTier.endsWith('€')) {
           cleanTier += '$';
         }
-        let cleanLabel = (label || 'كوبون').trim().replace(/^[🏷️🎟️🎫•\-\*:\s]+|[🏷️🎟️🎫•\-\*:\s]+$/g, '');
+        let cleanLabel = (label || 'كوبون').trim().replace(/^[🏷️🎟️🎫•\\-\\*:\\s]+|[🏷️🎟️🎫•\\-\\*:\\s]+$/g, '');
         if (!cleanLabel) cleanLabel = 'كوبون';
 
         if (!seenCodes.has(cleaned)) {
@@ -4529,20 +4529,20 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
 
       // Tier first: '🎟️ 6/49$ : WOAE06' or 'كوبون $2/15$: WOAE02'
-      const p1Regex = /(?:🎟️?|🎫|•|\-|\*)?\s*(?:(?:ال)?كوبون(?:\s*آخر|\s*إضافي)?|(?:ال)?كود(?:\s*آخر|\s*إضافي)?|code\s*promo|(?:ال)?قسيمة|خصم|تخفيض)?\s*([$€]?[0-9]+(?:\.[0-9]+)?\s*\/\s*[$€]?[0-9]+(?:\.[0-9]+)?[$€]?)\s*(?:بكود|code|:|=|：|\-)?\s*([A-Za-z0-9_-]{3,25})/gi;
+      const p1Regex = /(?:🎟️?|🎫|•|\\-|\\*)?\\s*(?:(?:ال)?كوبون(?:\\s*آخر|\\s*إضافي)?|(?:ال)?كود(?:\\s*آخر|\\s*إضافي)?|code\\s*promo|(?:ال)?قسيمة|خصم|تخفيض)?\\s*([$€]?[0-9]+(?:\\.[0-9]+)?\\s*\\/\\s*[$€]?[0-9]+(?:\\.[0-9]+)?[$€]?)\\s*(?:بكود|code|:|=|：|\\-)?\\s*([A-Za-z0-9_-]{3,25})/gi;
       let mMatch;
       while ((mMatch = p1Regex.exec(cleanNorm)) !== null) {
         addParsedCode(mMatch[2], 'كوبون', mMatch[1]);
       }
 
       // Code then tier: 'OTPRD02 : 2/15$'
-      const p2Regex = /(?:🎟️?|🎫|•|\-|\*)?\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\s*promo|(?:ال)?قسيمة)?\s*([A-Za-z][A-Za-z0-9_-]{2,24})\s*(?:[:=：\-]|خصم|بخصم|\()?([$€]?[0-9]+(?:\.[0-9]+)?\s*\/\s*[$€]?[0-9]+(?:\.[0-9]+)?[$€]?)\)?/gi;
+      const p2Regex = /(?:🎟️?|🎫|•|\\-|\\*)?\\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\\s*promo|(?:ال)?قسيمة)?\\s*([A-Za-z][A-Za-z0-9_-]{2,24})\\s*(?:[:=：\\-]|خصم|بخصم|\\()?([$€]?[0-9]+(?:\\.[0-9]+)?\\s*\\/\\s*[$€]?[0-9]+(?:\\.[0-9]+)?[$€]?)\\)?/gi;
       while ((mMatch = p2Regex.exec(cleanNorm)) !== null) {
         addParsedCode(mMatch[1], 'كوبون', mMatch[2]);
       }
 
       // Labeled lines & Slashed codes: 'كوبون: CODE1', 'كود: CODE1 / CODE2'
-      const pLineRegex = /(?:(?:استخدم\s+|استعمل\s+|انسخ\s+|بكود\s+)?(?:(?:ال)?كـ?وبون|(?:ال)?كـ?ود|(?:ال)?قسيمـ?ة|code\s*promo|code\s*de\s*r[ée]duction|code\s*r[ée]duction|coupon|promo|utilisez\s*le\s*code|avec\s*le\s*code)[^\n:]*|[🏷️🎟️🎫👊])\s*[:：\-]\s*([^\r\n]+)/gi;
+      const pLineRegex = /(?:(?:استخدم\\s+|استعمل\\s+|انسخ\\s+|بكود\\s+)?(?:(?:ال)?كـ?وبون|(?:ال)?كـ?ود|(?:ال)?قسيمـ?ة|code\\s*promo|code\\s*de\\s*r[ée]duction|code\\s*r[ée]duction|coupon|promo|utilisez\\s*le\\s*code|avec\\s*le\\s*code)[^\\n:]*|[🏷️🎟️🎫👊])\\s*[:：\\-]\\s*([^\\r\\n]+)/gi;
       while ((mMatch = pLineRegex.exec(cleanNorm)) !== null) {
         let content = mMatch[1].trim();
         const tierMatch = content.match(/\(?([$€]?[0-9]+(?:\.[0-9]+)?\/[0-9]+(?:\.[0-9]+)?[$€]?)\)?/);
@@ -4594,7 +4594,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         country = "أستراليا 🇦🇺";
       } else if (/إسبانيا|اسبانيا|🇪🇸|spain/i.test(cleanNorm)) {
         country = "إسبانيا 🇪🇸";
-      } else if (/(?:خلي\s*البلد|بلد\s*الحساب|ضع\s*البلد)/i.test(cleanNorm)) {
+      } else if (/(?:خلي\s*البلد\s*كندا|بلد\s*الحساب\s*كندا|ضع\s*البلد\s*كندا)/i.test(cleanNorm)) {
         country = "كندا 🇨🇦";
       }
 

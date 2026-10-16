@@ -254,7 +254,7 @@ class DealCaptionGenerator:
         is_price_drop: bool = False,
         is_restock: bool = False,
         coin_url: Optional[str] = None,
-        deal_type: str = "coin",
+        deal_type: str = "item",
         raw_text: Optional[str] = None
     ) -> str:
         lines = []
@@ -343,7 +343,6 @@ class DealCaptionGenerator:
             else:
                 lines.append(f"<blockquote>📍 خلي البلـــد <b>{html.escape(str(country_info))}</b></blockquote>")
         elif deal_type == "bundle":
-            # Bundle deals can be Algeria or Canada depending on source
             is_dz = False
             if raw_text and any(k in raw_text.lower() for k in ["الجزائر", "algeria", "dz", "ديرو الجزائر", "بلاد الجزائر", "حساب جزائري"]):
                 is_dz = True
@@ -351,8 +350,7 @@ class DealCaptionGenerator:
                 lines.append("<blockquote>📍 بلد الحساب <b>الجزائر 🇩🇿</b></blockquote>")
             else:
                 lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
-        elif deal_type == "coin":
-            # Coin deals in Algerian community default to Canada for 50-70%+ coin discounts
+        elif deal_type == "coin" and (raw_text is None or any(k in raw_text.lower() for k in ["كندا", "🇨🇦", "canada", "خلي البلد"])):
             lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
 
         # 2.5 Local price comparison quote if mentioned in source
@@ -373,14 +371,31 @@ class DealCaptionGenerator:
         else:
             lines.append("💰 <b>السعر :</b> <b>سعر خاص ومخفض</b> 🔥")
 
-        if seller_coupon and str(seller_coupon).strip() not in {"0", "0$", "$0", "None", ""}:
-            s_clean = str(seller_coupon).strip()
-            if s_clean.isdigit():
-                s_clean = f"{s_clean}$"
-            lines.append(f"🌷 <b>قسيمــة البــائع :</b> <code>{html.escape(s_clean)}</code>")
+        # Format coupons & seller vouchers (support multiple coupons if present in raw_text)
+        from app.aliexpress.parser import extract_multi_coupons
+        multi = extract_multi_coupons(raw_text) if raw_text else {}
+        extracted_coupons = multi.get("coupons", [])
+        extracted_details = multi.get("coupon_details", [])
 
-        if coupon_code:
-            lines.append(f"🎟️ <b>كـوبون الخصم :</b> <code>{html.escape(coupon_code)}</code>")
+        if len(extracted_coupons) > 1:
+            for d in extracted_details:
+                c = d["code"]
+                lbl = d.get("label") or "كـوبون الخصم"
+                tier = d.get("tier")
+                tier_str = f" ({tier})" if tier else ""
+                if any(k in lbl for k in ["متجر", "بائع", "قسيمة"]):
+                    lines.append(f"🌷 <b>{html.escape(lbl)}{tier_str} :</b> <code>{html.escape(c)}</code>")
+                else:
+                    lines.append(f"🎟️ <b>{html.escape(lbl)}{tier_str} :</b> <code>{html.escape(c)}</code>")
+        else:
+            if seller_coupon and str(seller_coupon).strip() not in {"0", "0$", "$0", "None", ""}:
+                s_clean = str(seller_coupon).strip()
+                if s_clean.isdigit():
+                    s_clean = f"{s_clean}$"
+                lines.append(f"🌷 <b>قسيمــة البــائع :</b> <code>{html.escape(s_clean)}</code>")
+
+            if coupon_code:
+                lines.append(f"🎟️ <b>كـوبون الخصم :</b> <code>{html.escape(coupon_code)}</code>")
 
         if deal_type == "bundle":
             lines.append("📦 <b>عروض الحزم (Choice Bundle) — يجب إضافة 3 قطع</b>")
@@ -417,7 +432,7 @@ class DealCaptionGenerator:
         is_restock: bool = False,
         coin_url: Optional[str] = None,
         raw_text: Optional[str] = None,
-        deal_type: str = "coin"
+        deal_type: str = "item"
     ) -> str:
         """
         Generates authentic Algerian Telegram channel caption.

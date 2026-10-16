@@ -889,7 +889,7 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
         country = "أستراليا 🇦🇺";
       } else if (/إسبانيا|اسبانيا|🇪🇸|spain/i.test(cleanNorm)) {
         country = "إسبانيا 🇪🇸";
-      } else if (/(?:خلي\s*البلد|بلد\s*الحساب|ضع\s*البلد)/i.test(cleanNorm)) {
+      } else if (/(?:خلي\s*البلد\s*كندا|بلد\s*الحساب\s*كندا|ضع\s*البلد\s*كندا)/i.test(cleanNorm)) {
         country = "كندا 🇨🇦";
       }
 

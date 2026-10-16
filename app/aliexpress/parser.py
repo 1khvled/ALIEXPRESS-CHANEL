@@ -642,11 +642,20 @@ def extract_multi_coupons(raw_text: str) -> Dict[str, Any]:
 
         # Split content on separators: '/', '|', '،', ',', ' أو ', ' ou ', ' or '
         parts = re.split(r'[\/\|,،]|\s+(?:أو|or|ou)\s+', content)
+        found_tokens = 0
         for part in parts:
             cand = part.strip()
             tokens = re.findall(r'[A-Za-z0-9_-]{3,25}', cand)
             for tok in tokens:
                 add_coupon(tok, label=lbl, tier=line_tier)
+                found_tokens += 1
+
+        # Fallback to next line if current line only had tier or punctuation (e.g. "كوبون 12€ :\nFRPRD12")
+        if found_tokens == 0:
+            pos = m.end()
+            next_m = re.match(r'\r?\n[^\S\r\n]*(?:[⏺•\-*✔️✅👉]\s*)?([A-Za-z0-9_-]{3,25})', norm[pos:])
+            if next_m:
+                add_coupon(next_m.group(1), label=lbl, tier=line_tier or content)
 
     # 4. Fallback search for HTML <code> tags or backtick codes near coupon keywords
     p_tags = re.compile(
@@ -806,11 +815,11 @@ def detect_points_discount(text: str) -> bool:
             return True
     return False
 
-def extract_country_instruction(text: str, url: str = "", title: str = "") -> str:
+def extract_country_instruction(text: str, url: str = "", title: str = "") -> Optional[str]:
     """
     Intelligently detects which country setting is needed for maximum discount.
     1. Reads explicit mentions or flags in text or url (Saudi Arabia 🇸🇦, UAE 🇦🇪, Canada 🇨🇦, Korea 🇰🇷, Algeria 🇩🇿, France 🇫🇷, Spain 🇪🇸, Ukraine 🇺🇦, Australia 🇦🇺, etc.).
-    2. Defaults to Canada 🇨🇦 for coins and tech deals (standard 50-70%+ coin discounts).
+    2. Returns None if no country change instruction is present (do NOT auto-default to Canada).
     """
     norm_text = re.sub(r'[\u0640]', '', f"{text or ''} {url or ''} {title or ''}")
     combined = norm_text.lower()
@@ -831,7 +840,7 @@ def extract_country_instruction(text: str, url: str = "", title: str = "") -> st
     if any(k in combined for k in ["عمان", "عُمان", "🇴🇲", "oman", "shiptocountry=om", "country=om"]) or re.search(r'\bomr\b', combined):
         return "عمان 🇴🇲"
 
-    # 1. Canada detection
+    # 1. Canada detection (only when explicitly mentioned in text or url)
     if any(k in combined for k in ["كندا", "🇨🇦", "canada", "cad", "shiptocountry=ca", "country=ca"]):
         return "كندا 🇨🇦"
 
@@ -863,8 +872,12 @@ def extract_country_instruction(text: str, url: str = "", title: str = "") -> st
     if any(k in combined for k in ["استراليا", "أستراليا", "🇦🇺", "australia", "shiptocountry=au"]):
         return "أستراليا 🇦🇺"
 
-    # Default to Canada 🇨🇦 for all coins / general tech deals
-    return "كندا 🇨🇦"
+    # Explicit generic directives (e.g. "خلي البلد" or "ضع البلد" without country name)
+    if any(k in combined for k in ["خلي البلد", "ضع البلد", "بلد الحساب"]):
+        return "كندا 🇨🇦"
+
+    # If no country directive was specified, return None (normal deals do not require changing country!)
+    return None
 
 def extract_clean_title(text: str) -> Optional[str]:
     if not text:
@@ -1066,7 +1079,7 @@ def detect_deal_type(raw_text: str, url: str = "") -> str:
     if any(k in text_lower for k in coin_keywords) or "sourcetype=620" in url_lower or "channel=coin" in url_lower:
         return "coin"
 
-    return "coin"
+    return "item"
 
 
 def detect_restock_deal(text: str) -> bool:

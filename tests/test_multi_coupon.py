@@ -186,8 +186,8 @@ def test_gulf_countries_country_instruction():
     assert extract_country_instruction("البلد الكويت 🇰🇼") == "الكويت 🇰🇼"
     assert extract_country_instruction("البلد البحرين 🇧🇭") == "البحرين 🇧🇭"
     assert extract_country_instruction("البلد عمان 🇴🇲") == "عمان 🇴🇲"
-    # General coins / tech without country should still default to Canada
-    assert extract_country_instruction("خصم العملات القوي على السلعة") == "كندا 🇨🇦"
+    # General coins / tech without country instruction must return None (No Auto-Canada!)
+    assert extract_country_instruction("خصم العملات القوي على السلعة") is None
 
 def test_parse_telegram_deal_block_saudi():
     from api.index import parse_telegram_deal_block
