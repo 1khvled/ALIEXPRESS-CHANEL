@@ -503,7 +503,7 @@
     "1005012571601398": 1792077701.5855007,
     "1005008131216261": 1791992931.9736187,
     "1005013054007275": 1791992936.3210912,
-    "1005011899097443": 1792086950.2070847,
+    "1005011899097443": 1792146957.5319738,
     "1005012865117890": 1792007168.2612865,
     "1005010428947440": 1792007180.6836498,
     "1005010733227481": 1792017716.5973718,
@@ -1128,7 +1128,7 @@
     "ماوس لاسلكي فخم Scyrox V8S Wireless 8K": 1791992936.3210912,
     "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM": 1791992945.451545,
     "Rocoren 100W Type-C to USB Fast Charging 0.5M": 1791992975.2913277,
-    "Acinaci J11 Gaming Headset": 1792086950.2070847,
+    "Acinaci J11 Gaming Headset": 1792146957.5319738,
     "Realme 14 Pro Global (12/256)": 1792007168.2612865,
     "Anker Soundcore Select 4 Go Bluetooth Speaker": 1792007180.6836498,
     "OnePlus Turbo 6V  8/256": 1792017716.5973718,
@@ -1954,27 +1954,28 @@
     "test_channel:1792111013",
     "test_channel:1792111091",
     "test_channel:1792111724",
-    "lodydeals:45562"
+    "lodydeals:45562",
+    "lodydeals:45565"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792118810.348281,
+  "last_run_time": 1792146957.5319738,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32969,
-      "last_check_time": 1792136943.5422378
+      "last_message_id": 32975,
+      "last_check_time": 1792146974.3896935
     },
     "ecksdeal": {
       "last_message_id": 5893,
-      "last_check_time": 1792136938.6683092
+      "last_check_time": 1792146965.1576097
     },
     "lodydeals": {
-      "last_message_id": 45564,
-      "last_check_time": 1792136937.696317
+      "last_message_id": 45565,
+      "last_check_time": 1792146959.5551448
     },
     "bnddeals": {
       "last_message_id": 50859,
-      "last_check_time": 1792136939.5504882
+      "last_check_time": 1792146965.9651647
     },
     "test_channel": {
       "last_message_id": 1792111724,
@@ -1982,15 +1983,15 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792136939.109838
+      "last_check_time": 1792146965.567456
     },
     "zedstoreonline": {
-      "last_message_id": 38611,
-      "last_check_time": 1792136938.1129792
+      "last_message_id": 38612,
+      "last_check_time": 1792146964.6541896
     },
     "megaphonna": {
       "last_message_id": 8413,
-      "last_check_time": 1792111724.4879146
+      "last_check_time": 1792146966.4244862
     },
     "couponsglobal": {
       "last_message_id": 48849,
@@ -6116,6 +6117,16 @@
       "price": 216.0,
       "timestamp": 1792118810.348281,
       "status": "ACTIVE"
+    },
+    "lodydeals:45565": {
+      "channel_msg_id": 874,
+      "product_id": "1005011899097443",
+      "title": "Acinaci J11 Gaming Headset",
+      "channel": "lodydeals",
+      "source_msg_id": 45565,
+      "price": 10.16,
+      "timestamp": 1792146957.5319738,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6124,17 +6135,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792118827.2450645,
+    "last_deal_post_time": 1792146976.8606813,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792136951.3994756,
+    "last_sweep_time": 1792146979.827905,
     "last_sweep_times": {
-      "algeria": 1792136948.4111118,
-      "france": 1792136951.3994756
+      "algeria": 1792146976.8513649,
+      "france": 1792146979.827905
     },
     "last_deal_post_times": {
-      "algeria": 1792118827.2450645
+      "algeria": 1792146976.8606813
     }
   },
   "last_coin_reminder_time": 1791968123.6806622,
@@ -7296,7 +7307,13 @@
     "lodydeals:45564",
     "zedstoreonline:38611",
     "megaphonna:8396",
-    "megaphonna:8399"
+    "megaphonna:8399",
+    "zedstoreonline:38612",
+    "megaphonna:8407",
+    "aniscoupons:32975",
+    "aniscoupons:32973",
+    "aniscoupons:32972",
+    "couponsglobal:48850"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
