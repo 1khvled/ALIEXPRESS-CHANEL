@@ -47,16 +47,16 @@ class DealCaptionGenerator:
             ]
             return price_drop_hooks[h % len(price_drop_hooks)]
 
-        # 3. Subcategory hooks (Audio, Smartwatches, Tablets, Gaming, Smartphones)
-        # Use clean title only (avoids channel names like @megaphonna triggering phone logic)
-        t_clean = title.lower()
+        # 3. Subcategory hooks using category firewall
+        from app.ai.category_firewall import (
+            is_audio_product,
+            is_wearable_product,
+            is_tablet_product,
+            is_gaming_or_pc_product,
+            is_genuine_smartphone
+        )
 
-        is_audio = bool(re.search(r'\b(?:headphone|headphones|earphone|earphones|earbud|earbuds|headset|headsets|tws|iem|iems|soundcore|edifier|soundbar|speaker)\b|سماعة|سماعات|سماعه', t_clean))
-        is_watch = bool(re.search(r'\b(?:watch|smartwatch|band)\b|ساعة|ساعات', t_clean)) and not is_audio
-        is_tablet = bool(re.search(r'\b(?:tablet|pad|ipad)\b|تابلت|لوحي', t_clean)) and not is_audio
-        is_gaming = bool(re.search(r'\b(?:mouse|keyboard|gamepad|controller|joystick|keycap|switch|gaming|rgb|shark)\b|قيمنق|عتاد قيمنق', t_clean))
-
-        if is_audio:
+        if is_audio_product(title):
             audio_hooks = [
                 "🎧 <b>سماعات بمواصفات ممتازة وعزل قوي بسعر لافار 🔥🎧</b>",
                 "🎧 <b>تخفيض قوي في السماعات.. صوت نقي وبسعر لافار ممتاز 🔥⚡</b>",
@@ -64,7 +64,7 @@ class DealCaptionGenerator:
             ]
             return audio_hooks[h % len(audio_hooks)]
 
-        if is_watch:
+        if is_wearable_product(title):
             watch_hooks = [
                 "⌚ <b>ساعة ذكية بمواصفات ممتازة وسعر لافار متتراطاش 🔥⚡</b>",
                 "⚡ <b>عرض لافار في الساعات الذكية بأقوى سعر 🔥⌚</b>",
@@ -72,14 +72,14 @@ class DealCaptionGenerator:
             ]
             return watch_hooks[h % len(watch_hooks)]
 
-        if is_tablet:
+        if is_tablet_product(title):
             tablet_hooks = [
                 "📱 <b>تخفيض قوي في التابلت بمواصفات ممتازة وسعر لافار 🔥⚡</b>",
                 "⚡ <b>عرض لافار ممتاز في أجهزة التابلت بأقوى سعر 🔥📱</b>"
             ]
             return tablet_hooks[h % len(tablet_hooks)]
 
-        if is_gaming:
+        if is_gaming_or_pc_product(title):
             gaming_hooks = [
                 "🎮 <b>صفقة قوية في عتاد قيمنق بسعر ممتاز متتراطاش 🔥⚡</b>",
                 "⚡ <b>عتاد قيمنق لافار ممتازة بأقوى سعر 🔥🎮</b>",
@@ -87,15 +87,7 @@ class DealCaptionGenerator:
             ]
             return gaming_hooks[h % len(gaming_hooks)]
 
-        # Strict phone detection:
-        # Exclude accessories and require word boundaries or brand + specs/model series
-        is_accessory = bool(re.search(r'\b(?:case|cover|holder|charger|cable|protector|glass|film|stand|skin|adapter|mount)\b|كفر|جراب|شاحن|كابل|حامل', t_clean))
-        has_phone_word = bool(re.search(r'\b(?:smartphone|smartphones|mobile)\b|(?<![a-zA-Z])phone(?!s?[a-zA-Z])|\bهاتف\b|\bجوال\b|\bموبايل\b', t_clean))
-        phone_brands = ["poco", "redmi", "realme", "xiaomi", "infinix", "oneplus", "oppo", "vivo", "honor", "samsung", "pixel", "iqoo", "nubia"]
-        has_phone_brand = any(re.search(r'\b' + b + r'\b', t_clean) for b in phone_brands)
-        has_phone_spec = bool(re.search(r'\b(?:\d+/\d+|\d+\s*gb|5g|4g|snapdragon|helio|dimensity|pro\+|ultra|gt|note)\b', t_clean))
-
-        if not is_accessory and (has_phone_word or (has_phone_brand and has_phone_spec)):
+        if is_genuine_smartphone(title):
             phone_hooks = [
                 "📱 <b>صفقة قوية في الهواتف مواصفات ممتازة وسعر مميز 🔥</b>",
                 "🔥 <b>هاتف بمواصفات قوية وسعر لافار ممتاز متتراطاش 🔥📱</b>",
@@ -452,7 +444,12 @@ class DealCaptionGenerator:
         lines.append("🌐 <b>موقع الصفقات:</b> https://dealscoutgreen.vercel.app/")
         lines.append("📢 @DzAliexpress0")
 
-        return "\n".join(lines)
+        raw_caption = "\n".join(lines)
+        from app.ai.category_firewall import sanitize_caption_category
+        clean_caption, was_sanitized = sanitize_caption_category(raw_caption, title)
+        if was_sanitized:
+            logger.warning(f"[CATEGORY FIREWALL] Corrected caption hook mismatch for title: '{title}'")
+        return clean_caption
 
     async def generate(
         self,

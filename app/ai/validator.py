@@ -158,6 +158,13 @@ class DealCaptionValidator:
             if "خصم النقاط" in non_bot_text or "تخفيض العملات مفعّل" in non_bot_text or "تخفيض العملات:" in non_bot_text:
                 errors.append("Unverified points discount found in caption")
 
+        # 5. Category Consistency check (Firewall: non-phones must never be labeled as smartphones)
+        from app.ai.category_firewall import is_genuine_smartphone
+        if not is_genuine_smartphone(expected_title):
+            phone_claims = ["هاتف بمواصفات", "صفقة قوية في الهواتف", "عالم الهواتف"]
+            if any(claim in caption for claim in phone_claims):
+                errors.append(f"Category mismatch: Caption claims product is a smartphone, but title is not a phone: '{expected_title}'")
+
         return ValidationResult(
             approved=len(errors) == 0,
             errors=errors

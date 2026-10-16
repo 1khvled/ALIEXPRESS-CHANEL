@@ -11,7 +11,7 @@ def test_roulette_hidden_on_phones():
     # Must have hidden md:flex so phones don't have floating button blocking deals
     assert 'class="hidden md:flex' in USER_WEBSITE_HTML
     # Roulette modal button must not have fake XP text
-    assert 'دوّر العجلة الآن 🎲' in USER_WEBSITE_HTML
+    assert 'id="roulette-spin-btn"' in USER_WEBSITE_HTML
     assert '+50 XP' not in USER_WEBSITE_HTML
 
 

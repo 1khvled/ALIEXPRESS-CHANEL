@@ -123,6 +123,12 @@ class TelegramPublisher:
             logger.critical(err_msg)
             return False, err_msg
 
+        # CATEGORY FIREWALL: Guarantee non-phones never get published with smartphone headers
+        from app.ai.category_firewall import sanitize_caption_category
+        caption, was_sanitized = sanitize_caption_category(caption, deal.title)
+        if was_sanitized:
+            logger.warning(f"[PUBLISHER FIREWALL] Corrected caption category mismatch for deal #{deal.id}: '{deal.title}'")
+
         if not self.bot_token or not self.target_channel:
             err = "TELEGRAM_BOT_TOKEN or TARGET_CHANNEL_ID not configured in settings"
             logger.error(err)

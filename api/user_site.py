@@ -2382,13 +2382,13 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     </div>
   </div>
 
-  <!-- Floating Deal Roulette Button (Desktop & Tablet only, hidden on phones) -->
-  <button id="fab-roulette" onclick="openRouletteModal()" aria-label="صفقة الحظ 🎲" class="hidden md:flex fixed z-40 bottom-6 right-6 bg-gradient-to-r from-amber-500 to-amber-400 active:scale-90 text-zinc-950 font-extrabold text-xs sm:text-sm px-3.5 py-2.5 rounded-full shadow-xl items-center gap-2 cursor-pointer transition-all touch-manipulation border border-amber-300">
-    <i class="fa-solid fa-dice text-base"></i>
-    <span data-i18n="roulette_fab">صفقة الحظ 🎲</span>
+  <!-- Floating Deal Discovery Button (Desktop & Tablet only, hidden on phones) -->
+  <button id="fab-roulette" onclick="openRouletteModal()" aria-label="اقتراح صفقة" class="hidden md:flex fixed z-40 bottom-6 right-6 backdrop-blur-md active:scale-95 text-xs font-semibold px-4 py-2.5 rounded-full shadow-lg items-center gap-2 cursor-pointer transition-all touch-manipulation border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">
+    <i class="fa-solid fa-sparkles text-xs text-emerald-500"></i>
+    <span data-i18n="roulette_fab">اقتراح صفقة</span>
   </button>
 
-  <!-- Deal Roulette Modal -->
+  <!-- Deal Discovery Modal -->
   <div id="roulette-modal" onclick="onRouletteBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="roulette-modal-title">
     <div class="border-t sm:border rounded-t-3xl sm:rounded-2xl w-full max-w-md max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl p-5 sm:p-6 pb-safe space-y-4 animate-slide-up relative" style="background-color: var(--bg-card); border-color: var(--border-card);">
       
@@ -2396,54 +2396,76 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <div class="sm:hidden w-12 h-1.5 rounded-full mx-auto -mt-1 mb-2 opacity-40 cursor-pointer" style="background-color: var(--text-soft);" onclick="closeRouletteModal()"></div>
       
       <!-- Close button -->
-      <button type="button" onclick="closeRouletteModal()" aria-label="إغلاق" class="absolute top-3.5 left-3.5 w-9 h-9 rounded-full flex items-center justify-center text-sm border active:scale-95 transition z-30 touch-manipulation cursor-pointer hover:bg-rose-600 hover:text-white" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+      <button type="button" onclick="closeRouletteModal()" aria-label="إغلاق" class="absolute top-3.5 left-3.5 w-8 h-8 rounded-full flex items-center justify-center text-xs border active:scale-95 transition z-30 touch-manipulation cursor-pointer hover:opacity-80" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
-      <div class="text-center space-y-1 pt-1">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/15 text-amber-500 border border-amber-500/20">
-          <i class="fa-solid fa-dice text-sm animate-spin-slow"></i>
-          <span data-i18n="roulette_badge">عجلة الحظ التفاعلية</span>
+      <div class="text-center space-y-1.5 pt-1">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
+          <i class="fa-solid fa-sliders text-[11px] text-emerald-500"></i>
+          <span data-i18n="roulette_badge">اختيار تلقائي ذكي</span>
         </div>
-        <h3 id="roulette-modal-title" class="text-lg font-bold" style="color: var(--text-main);" data-i18n="roulette_title">صفقة الحظ العشوائية 🎲</h3>
-        <p class="text-xs" style="color: var(--text-muted);" data-i18n="roulette_subtitle">اضغط لتدوير العجلة أو هز الهاتف لاكتشاف صفقة مميزة حصرية!</p>
+        <h3 id="roulette-modal-title" class="text-base sm:text-lg font-bold tracking-tight" style="color: var(--text-main);" data-i18n="roulette_title">صفقة مقترحة مختارة</h3>
+        <p class="text-xs max-w-xs mx-auto leading-relaxed" style="color: var(--text-muted);" data-i18n="roulette_subtitle">اضغط على الزر لاقتراح صفقة نشطة بأقوى نسبة تخفيض</p>
       </div>
 
-      <!-- Slot Machine Display Container -->
-      <div id="roulette-display-card" class="border rounded-2xl p-4 space-y-3 relative overflow-hidden transition-all text-center" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-        <div id="roulette-img-wrap" class="relative w-full aspect-[16/10] sm:aspect-[4/3] rounded-xl overflow-hidden border flex items-center justify-center mx-auto" style="background-color: var(--bg-page); border-color: var(--border-card);">
-          <img id="roulette-img" src="" alt="Lucky Deal" class="w-full h-full object-contain transition-transform duration-200">
-          <div id="roulette-winner-tag" class="hidden absolute top-2 right-2 bg-crimson-600 text-white text-[11px] font-bold px-2.5 py-0.5 rounded shadow-md flex items-center gap-1 animate-bounce">
-            <i class="fa-solid fa-trophy text-[10px]"></i> <span data-i18n="roulette_winner_tag">صفقة رابحة!</span>
+      <!-- Display Card Container -->
+      <div id="roulette-display-card" class="border rounded-xl p-4 space-y-3 relative overflow-hidden transition-all text-right" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+        <div id="roulette-img-wrap" class="relative w-full aspect-[16/10] sm:aspect-[4/3] rounded-lg overflow-hidden border flex items-center justify-center mx-auto" style="background-color: var(--bg-page); border-color: var(--border-card);">
+          <img id="roulette-img" src="" alt="Deal" class="w-full h-full object-contain transition-transform duration-200">
+          <div id="roulette-winner-tag" class="hidden absolute top-2 right-2 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded shadow-sm flex items-center gap-1.5 bg-emerald-600">
+            <i class="fa-solid fa-check text-[10px]"></i> <span data-i18n="roulette_winner_tag">صفقة مختارة</span>
           </div>
         </div>
 
-        <div class="space-y-1.5 text-right">
-          <span id="roulette-cat" class="text-[10px] font-bold px-2 py-0.5 rounded border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);"></span>
-          <h4 id="roulette-deal-title" class="font-bold text-xs sm:text-sm line-clamp-2 leading-snug" style="color: var(--text-main);">اضغط زر التدوير للبدء!</h4>
-          <div id="roulette-price-wrap" class="flex items-baseline justify-between pt-1 border-t" style="border-color: var(--border-card);">
-            <div id="roulette-price" class="text-sm sm:text-base font-bold font-mono"></div>
-            <div id="roulette-coupon-pill" class="text-[11px] font-mono font-bold text-rose-500"></div>
+        <div class="space-y-2">
+          <!-- Category & Country Header Row -->
+          <div class="flex items-center justify-between gap-2">
+            <span id="roulette-cat" class="text-[10px] font-semibold px-2 py-0.5 rounded border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);"></span>
+            
+            <!-- COUNTRY CALLOUT BADGE -->
+            <div id="roulette-country-badge" class="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded border" style="background-color: var(--bg-page); border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-location-dot text-emerald-500 text-[10px]"></i>
+              <span id="roulette-country-text">الجزائر 🇩🇿</span>
+            </div>
+          </div>
+
+          <h4 id="roulette-deal-title" class="font-bold text-xs sm:text-sm line-clamp-2 leading-snug" style="color: var(--text-main);">اضغط زر الاقتراح للبدء</h4>
+
+          <!-- Price & Coupon Clean Row -->
+          <div id="roulette-price-wrap" class="flex items-center justify-between pt-2 border-t" style="border-color: var(--border-card);">
+            <div id="roulette-price" class="text-sm sm:text-base font-bold font-mono" style="color: var(--text-main);"></div>
+            <div id="roulette-coupon-pill" class="text-xs font-mono font-semibold px-2 py-0.5 rounded border" style="background-color: var(--bg-page); border-color: var(--border-card); color: var(--text-main);"></div>
+          </div>
+
+          <!-- PROMINENT COUNTRY INSTRUCTION BOX -->
+          <div id="roulette-country-box" class="flex items-center justify-between px-3 py-2 rounded-lg border text-xs" style="background-color: var(--bg-page); border-color: var(--border-card);">
+            <span class="flex items-center gap-1.5 text-[11px]" style="color: var(--text-muted);">
+              <i class="fa-solid fa-earth-americas text-emerald-500"></i>
+              <span data-i18n="roulette_country_label">الدولة المطلوبة في التطبيق:</span>
+            </span>
+            <span id="roulette-country-val" class="font-bold text-xs text-emerald-500">الجزائر 🇩🇿</span>
           </div>
         </div>
       </div>
 
       <!-- Action buttons -->
       <div class="space-y-2 pt-1">
-        <button id="roulette-spin-btn" onclick="spinRoulette()" class="w-full min-h-[46px] rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-zinc-950 font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 transition cursor-pointer touch-manipulation">
-          <i class="fa-solid fa-dice text-base"></i>
-          <span id="roulette-btn-text" data-i18n="roulette_spin_btn">دوّر العجلة الآن 🎲</span>
-        </button>
-        <a id="roulette-buy-btn" href="#" target="_blank" rel="noopener noreferrer" style="display: none;" class="w-full min-h-[46px] rounded-xl bg-crimson-600 hover:bg-crimson-700 active:scale-95 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-rose-600/20 transition cursor-pointer touch-manipulation">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <span data-i18n="roulette_claim_btn">اقتنص صفقة الحظ الآن!</span>
+        <a id="roulette-buy-btn" href="#" target="_blank" rel="noopener noreferrer" style="display: none;" class="w-full min-h-[44px] rounded-xl text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-sm transition cursor-pointer touch-manipulation bg-emerald-600 hover:bg-emerald-500 active:scale-98">
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+          <span data-i18n="roulette_claim_btn">فتح رابط الشراء على AliExpress</span>
         </a>
+
+        <button id="roulette-spin-btn" onclick="spinRoulette()" class="w-full min-h-[44px] rounded-xl font-semibold text-sm flex items-center justify-center gap-2 border transition cursor-pointer touch-manipulation active:scale-98 hover:opacity-90" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+          <i class="fa-solid fa-arrows-rotate text-xs"></i>
+          <span id="roulette-btn-text" data-i18n="roulette_spin_btn">اقتراح صفقة أخرى</span>
+        </button>
       </div>
 
-      <!-- Shake Tip on Mobile -->
-      <div class="text-center text-[11px] opacity-70 flex items-center justify-center gap-1.5 pt-1" style="color: var(--text-muted);">
-        <i class="fa-solid fa-mobile-screen animate-pulse"></i>
-        <span data-i18n="roulette_shake_tip">نصيحة: يمكنك هز هاتفك 📱 في أي وقت للتدوير التلقائي!</span>
+      <!-- Tip -->
+      <div class="text-center text-[11px] opacity-60 flex items-center justify-center gap-1.5 pt-0.5" style="color: var(--text-muted);">
+        <i class="fa-solid fa-mobile-screen text-[10px]"></i>
+        <span data-i18n="roulette_shake_tip">يمكنك هز الهاتف لاقتراح صفقة أخرى تلقائياً</span>
       </div>
 
     </div>
@@ -3017,15 +3039,15 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         active_event_title: "تخفيضات عروض الشتاء Winter Offers 2026 الحصرية",
         active_event_desc: "عروض وتخفيضات رسمية نشطة حالياً مع أكواد حصرية مخصصة للجزائر وفرنسا — الأسعار بالدينار الجزائري وفق سعر السكوار الحقيقي.",
         active_deals_kw_label: "أهم صفقات الحدث الفعال:",
-        cat_favs: "المفضلة",
-        roulette_fab: "صفقة الحظ 🎲",
-        roulette_badge: "عجلة الحظ التفاعلية",
-        roulette_title: "صفقة الحظ العشوائية 🎲",
-        roulette_subtitle: "اضغط لتدوير العجلة أو هز الهاتف لاكتشاف صفقة مميزة حصرية!",
-        roulette_winner_tag: "صفقة رابحة!",
-        roulette_spin_btn: "دوّر العجلة الآن 🎲",
-        roulette_claim_btn: "اقتنص صفقة الحظ الآن!",
-        roulette_shake_tip: "نصيحة: يمكنك هز هاتفك 📱 في أي وقت للتدوير التلقائي!",
+        roulette_fab: "اقتراح صفقة",
+        roulette_badge: "اختيار تلقائي ذكي",
+        roulette_title: "صفقة مقترحة مختارة",
+        roulette_subtitle: "اضغط على الزر لاقتراح صفقة نشطة بأقوى نسبة تخفيض",
+        roulette_winner_tag: "صفقة مختارة",
+        roulette_spin_btn: "اقتراح صفقة أخرى",
+        roulette_claim_btn: "فتح رابط الشراء على AliExpress",
+        roulette_shake_tip: "يمكنك هز الهاتف لاقتراح صفقة أخرى تلقائياً",
+        roulette_country_label: "الدولة المطلوبة في التطبيق:",
         tools_header: "حاسبة السكوار",
         tools_modal_title: "مركز الأدوات وحاسبة السكوار",
         tools_modal_subtitle: "حاسبة السكوار الفورية للدينار الجزائري وروابط الوصول السريع للقنوات",
@@ -3292,15 +3314,15 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         active_event_title: "Promotions Offres d'Hiver 2026 (Winter Offers)",
         active_event_desc: "Bons plans et réductions officielles avec codes promo exclusifs pour l'Algérie et la France — calculés en Dinar Algérien au taux Square.",
         active_deals_kw_label: "Top deals de l'événement :",
-        cat_favs: "Favoris",
-        roulette_fab: "Offre Surprise 🎲",
-        roulette_badge: "Roulette Interactive",
-        roulette_title: "Bon Plan Surprise 🎲",
-        roulette_subtitle: "Tournez la roue ou secouez votre téléphone pour dénicher une offre exclusive !",
-        roulette_winner_tag: "Offre Gagnante !",
-        roulette_spin_btn: "Lancer la roulette 🎲",
-        roulette_claim_btn: "Saisir ce bon plan maintenant !",
-        roulette_shake_tip: "Astuce : secouez votre téléphone 📱 pour relancer instantanément !",
+        roulette_fab: "Deal du Jour",
+        roulette_badge: "Sélection Intelligente",
+        roulette_title: "Offre Recommandée",
+        roulette_subtitle: "Découvrez une sélection exclusive parmi les meilleures réductions du moment",
+        roulette_winner_tag: "Offre Sélectionnée",
+        roulette_spin_btn: "Suggérer une autre offre",
+        roulette_claim_btn: "Ouvrir le deal sur AliExpress",
+        roulette_shake_tip: "Secouez votre téléphone pour afficher une nouvelle offre",
+        roulette_country_label: "Pays à choisir dans l'application :",
         tools_header: "Calculateur",
         tools_modal_title: "Outils & Calculateur Square",
         tools_modal_subtitle: "Calculateur instantané en Dinar et accès direct aux canaux",
@@ -3954,12 +3976,28 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const coupon = document.getElementById('roulette-coupon-pill');
       const winnerTag = document.getElementById('roulette-winner-tag');
       const buyBtn = document.getElementById('roulette-buy-btn');
+      const countryText = document.getElementById('roulette-country-text');
+      const countryVal = document.getElementById('roulette-country-val');
 
       if (img && deal.photo_url) img.src = deal.photo_url;
       if (title) title.textContent = deal.title || 'Deal AliExpress';
       if (cat) cat.textContent = deal.category_label || (I18N[currentLang].cat_all || 'صفقة');
       if (price) price.innerHTML = formatPrice(deal);
-      if (coupon) coupon.textContent = deal.coupon ? `🎟 ${deal.coupon}` : '';
+      if (coupon) {
+        if (deal.coupon) {
+          coupon.textContent = currentLang === 'fr' ? `Code : ${deal.coupon}` : `كود: ${deal.coupon}`;
+          coupon.style.display = 'inline-block';
+        } else {
+          coupon.textContent = '';
+          coupon.style.display = 'none';
+        }
+      }
+
+      // Populate Country Indicator
+      const defaultCountry = currentLang === 'fr' ? 'Algérie 🇩🇿' : 'الجزائر 🇩🇿';
+      const cStr = deal.country || defaultCountry;
+      if (countryText) countryText.textContent = cStr;
+      if (countryVal) countryVal.textContent = cStr;
 
       if (winnerTag) {
         if (isWinner) winnerTag.classList.remove('hidden');
@@ -3994,7 +4032,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (winnerTag) winnerTag.classList.add('hidden');
       if (buyBtn) buyBtn.style.display = 'none';
       if (spinBtn) spinBtn.disabled = true;
-      if (btnText) btnText.textContent = currentLang === 'fr' ? 'Roulement en cours... 🎲' : 'جاري التدوير... 🎲';
+      if (btnText) btnText.textContent = currentLang === 'fr' ? 'Sélection en cours...' : 'جاري الاختيار...';
       if (displayCard) displayCard.classList.add('animate-slot-roll');
 
       let cycles = 0;
@@ -4013,7 +4051,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           isSpinningRoulette = false;
           if (displayCard) displayCard.classList.remove('animate-slot-roll');
           if (spinBtn) spinBtn.disabled = false;
-          if (btnText) btnText.textContent = currentLang === 'fr' ? 'Recommencer 🎲' : 'دوّر مجدداً 🎲';
+          if (btnText) btnText.textContent = currentLang === 'fr' ? 'Suggérer une autre offre' : 'اقتراح صفقة أخرى';
 
           winningDeal = candidate;
           displayRouletteDeal(winningDeal, true);
