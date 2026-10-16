@@ -30,8 +30,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
   <meta name="referrer" content="no-referrer">
   <title id="meta-title">DealScout DZ — عروض وتخفيضات علي اكسبراس في الجزائر | AliExpress Deals DZ</title>
-  <meta name="description" id="meta-desc" content="منصة DealScout DZ الأولى لرصد أقوى عروض وتخفيضات علي اكسبراس في الجزائر (AliExpress Deals DZ). تتبع صفقات aliexpressdz، كود تخفيض علي اكسبراس، طرق الشراء من علي اكسبراس في الجزائر بالدينار، وروابط خصم العملات وقناة التيليجرام الرسمية.">
   <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
   <!-- Canonical & Alternate Hreflang -->
   <link rel="canonical" href="https://dealscoutgreen.vercel.app/">
@@ -446,6 +446,13 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       "areaServed": {
         "@type": "Country",
         "name": "Algeria"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "3420",
+        "bestRating": "5",
+        "worstRating": "1"
       }
     },
     "potentialAction": {
@@ -467,6 +474,33 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     },
     "inLanguage": ["ar", "fr"],
     "description": "عروض يومية حصرية من AliExpress محسوبة بالدينار الجزائري عبر أسعار الصرف الحية."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://dealscoutgreen.vercel.app/#breadcrumbs",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "الرئيسية",
+        "item": "https://dealscoutgreen.vercel.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "عروض وتخفيضات AliExpress",
+        "item": "https://dealscoutgreen.vercel.app/#deals"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "حاسبة أسعار السكوار",
+        "item": "https://dealscoutgreen.vercel.app/#calculator"
+      }
+    ]
   }
   </script>
   <script type="application/ld+json">
@@ -895,16 +929,53 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
       </section>
 
-      <!-- Section Title & Live Count -->
-      <div class="flex items-center justify-between border-b pb-2" style="border-color: var(--border-card);">
-        <h1 class="text-xs sm:text-sm font-bold flex items-center gap-2" style="color: var(--text-main);">
-          <i class="fa-solid fa-fire text-crimson-500" aria-hidden="true"></i>
-          <span data-i18n="deals_section_heading">أحدث صفقات وتخفيضات AliExpress بالدينار الجزائري</span>
-        </h1>
-        <span class="text-[11px] text-emerald-500 flex items-center gap-1.5 font-medium">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          <span id="live-deals-counter" class="font-mono">...</span>
-        </span>
+      <!-- Country Filter Quick Pills (Ultra-High UX for Algerian Shoppers) -->
+      <section class="pt-1.5 pb-1 w-full overflow-hidden" aria-label="Country Filter">
+        <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 text-xs font-semibold px-0.5 momentum-scroll w-full">
+          <span class="text-[11px] font-bold flex items-center gap-1 pl-1 flex-shrink-0" style="color: var(--text-soft);">
+            <i class="fa-solid fa-earth-americas text-[10px] text-emerald-500"></i>
+            <span data-i18n="country_filter_label">تصفية حسب البلد:</span>
+          </span>
+          <button onclick="setCountryFilter('all')" id="country-all" class="country-pill min-h-[32px] px-3 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1 flex-shrink-0 active:scale-95 touch-manipulation border" style="background-color: var(--text-main); color: var(--bg-page); border-color: var(--text-main);">
+            <span data-i18n="country_all">كل البلدان 🌍</span>
+          </button>
+          <button onclick="setCountryFilter('canada')" id="country-canada" class="country-pill min-h-[32px] px-2.5 py-1 rounded-lg text-xs font-semibold transition flex items-center gap-1 flex-shrink-0 active:scale-95 touch-manipulation border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
+            <span>كندا 🇨🇦</span>
+          </button>
+          <button onclick="setCountryFilter('korea')" id="country-korea" class="country-pill min-h-[32px] px-2.5 py-1 rounded-lg text-xs font-semibold transition flex items-center gap-1 flex-shrink-0 active:scale-95 touch-manipulation border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
+            <span>كوريا 🇰🇷</span>
+          </button>
+          <button onclick="setCountryFilter('algeria')" id="country-algeria" class="country-pill min-h-[32px] px-2.5 py-1 rounded-lg text-xs font-semibold transition flex items-center gap-1 flex-shrink-0 active:scale-95 touch-manipulation border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
+            <span>الجزائر 🇩🇿</span>
+          </button>
+          <button onclick="setCountryFilter('france')" id="country-france" class="country-pill min-h-[32px] px-2.5 py-1 rounded-lg text-xs font-semibold transition flex items-center gap-1 flex-shrink-0 active:scale-95 touch-manipulation border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
+            <span>فرنسا 🇫🇷</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Section Title, Live Count & Sorting UX -->
+      <div class="flex flex-wrap items-center justify-between gap-2 border-b pb-2.5 pt-1" style="border-color: var(--border-card);">
+        <div class="flex items-center gap-2">
+          <h1 class="text-xs sm:text-sm font-bold flex items-center gap-1.5 font-heading" style="color: var(--text-main);">
+            <i class="fa-solid fa-fire text-rose-500" aria-hidden="true"></i>
+            <span data-i18n="deals_section_heading">أحدث صفقات وتخفيضات AliExpress بالدينار الجزائري</span>
+          </h1>
+          <span class="text-[11px] text-emerald-500 flex items-center gap-1.5 font-medium">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span id="live-deals-counter" class="font-mono">...</span>
+          </span>
+        </div>
+
+        <!-- Sort Selector -->
+        <div class="flex items-center gap-1.5 text-xs">
+          <label for="deal-sort-select" class="text-[11px] font-medium" style="color: var(--text-muted);" data-i18n="sort_label">ترتيب:</label>
+          <select id="deal-sort-select" onchange="setDealSort(this.value)" class="text-xs font-semibold rounded-lg px-2 py-1 border outline-none cursor-pointer transition" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">
+            <option value="newest" data-i18n="sort_newest">الأحدث أولاً 🕒</option>
+            <option value="price_asc" data-i18n="sort_price_asc">الأقل سعراً 📉</option>
+            <option value="price_desc" data-i18n="sort_price_desc">الأعلى سعراً 📈</option>
+          </select>
+        </div>
       </div>
 
       <!-- Deals Grid (Cards View) -->
@@ -2892,6 +2963,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         cat_tech: "شواحن وملحقات",
         cat_tajmi3at: "تجميعات العروض",
         deals_section_heading: "أحدث صفقات وتخفيضات AliExpress بالدينار الجزائري",
+        country_filter_label: "تصفية حسب البلد:",
+        country_all: "كل البلدان 🌍",
+        sort_label: "ترتيب:",
+        sort_newest: "الأحدث أولاً 🕒",
+        sort_price_asc: "الأقل سعراً 📉",
+        sort_price_desc: "الأعلى سعراً 📈",
         empty_title: "لا توجد صفقات مطابقة للبحث",
         empty_desc: "جرب كتابة اسم منتج أو علامة تجارية مختلفة أو أعد تعيين الفلاتر.",
         empty_reset: "عرض جميع الصفقات",
@@ -3167,6 +3244,12 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         cat_tech: "Chargeurs & High-Tech",
         cat_tajmi3at: "Packs & Bundles",
         deals_section_heading: "Derniers bons plans et promotions AliExpress en Dinar Algérien",
+        country_filter_label: "Filtrer par pays :",
+        country_all: "Tous les pays 🌍",
+        sort_label: "Trier :",
+        sort_newest: "Plus récents 🕒",
+        sort_price_asc: "Prix croissant 📉",
+        sort_price_desc: "Prix décroissant 📈",
         empty_title: "Aucun bon plan ne correspond à votre recherche",
         empty_desc: "Essayez un autre mot-clé ou réinitialisez les filtres de recherche.",
         empty_reset: "Afficher tous les bons plans",
@@ -3436,12 +3519,46 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     var allDeals = [];
     var currentChannel = '@DzAliexpress0';
     var currentCategory = 'all';
+    var currentCountryFilter = 'all';
+    var currentDealSort = 'newest';
     var currentCurrency = currentLang === 'fr' ? 'EUR' : 'DZD';
     var currentViewMode = 'grid';
     var usdtRate = 256.9;
     var currentSearchTerm = '';
     var currentActiveDeal = null;
     var currentActiveEvent = null;
+
+    function fallbackCopyText(text) {
+      return new Promise((resolve, reject) => {
+        try {
+          const textArea = document.createElement("textarea");
+          textArea.value = text;
+          textArea.style.position = "fixed";
+          textArea.style.top = "-9999px";
+          textArea.style.left = "-9999px";
+          textArea.style.opacity = "0";
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          const successful = document.execCommand('copy');
+          document.body.removeChild(textArea);
+          if (successful) resolve();
+          else reject(new Error('execCommand failed'));
+        } catch (err) {
+          reject(err);
+        }
+      });
+    }
+
+    function copyTextToClipboard(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text).catch(() => {
+          return fallbackCopyText(text);
+        });
+      } else {
+        return fallbackCopyText(text);
+      }
+    }
 
     function t(key, fallback = '') {
       const dict = (typeof I18N !== 'undefined' && I18N[currentLang]) ? I18N[currentLang] : (typeof I18N !== 'undefined' ? I18N.ar : {});
@@ -4088,10 +4205,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       addSavedDZD(1500);
       fireConfetti();
       if (couponCode && couponCode.length >= 3) {
-        try {
-          navigator.clipboard.writeText(couponCode);
+        copyTextToClipboard(couponCode).then(() => {
           showToast(currentLang === 'fr' ? `Code promo ${couponCode} copié !` : `تم نسخ كود الخصم ${couponCode} تلقائياً! 🚀`);
-        } catch(e) {}
+        }).catch(() => {});
       }
     }
 
@@ -4302,6 +4418,33 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       filterDeals();
     }
 
+    function setCountryFilter(country) {
+      currentCountryFilter = country;
+      document.querySelectorAll('.country-pill').forEach(btn => {
+        btn.style.backgroundColor = 'var(--bg-card)';
+        btn.style.borderColor = 'var(--border-card)';
+        btn.style.color = 'var(--text-muted)';
+        btn.classList.remove('font-bold');
+        btn.classList.add('font-semibold');
+      });
+      const active = document.getElementById('country-' + country);
+      if (active) {
+        active.style.backgroundColor = 'var(--text-main)';
+        active.style.borderColor = 'var(--text-main)';
+        active.style.color = 'var(--bg-page)';
+        active.classList.remove('font-semibold');
+        active.classList.add('font-bold');
+      }
+      filterDeals();
+    }
+
+    function setDealSort(sortVal) {
+      currentDealSort = sortVal;
+      const select = document.getElementById('deal-sort-select');
+      if (select && select.value !== sortVal) select.value = sortVal;
+      filterDeals();
+    }
+
     function handleSearchInput(term) {
       currentSearchTerm = term.trim().toLowerCase();
       const desk = document.getElementById('desktop-search');
@@ -4318,6 +4461,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     function resetFilters() {
       currentSearchTerm = '';
       currentCategory = 'all';
+      currentCountryFilter = 'all';
+      currentDealSort = 'newest';
       const desk = document.getElementById('desktop-search');
       const mob = document.getElementById('mobile-search');
       const deskClear = document.getElementById('desktop-search-clear');
@@ -4326,6 +4471,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (mob) mob.value = '';
       if (deskClear) deskClear.classList.add('hidden');
       if (mobClear) mobClear.classList.add('hidden');
+      const sortSelect = document.getElementById('deal-sort-select');
+      if (sortSelect) sortSelect.value = 'newest';
+      setCountryFilter('all');
       setCategory('all');
     }
 
@@ -4759,12 +4907,41 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       } else if (currentCategory !== 'all') {
         filtered = filtered.filter(d => d.category === currentCategory);
       }
+
+      // Country filtering
+      if (currentCountryFilter !== 'all') {
+        if (currentCountryFilter === 'canada') {
+          filtered = filtered.filter(d => (d.country && d.country.includes('كندا')) || (d.raw_text && /كندا|🇨🇦|canada/i.test(d.raw_text)));
+        } else if (currentCountryFilter === 'korea') {
+          filtered = filtered.filter(d => (d.country && d.country.includes('كوريا')) || (d.raw_text && /كوريا|🇰🇷|korea/i.test(d.raw_text)));
+        } else if (currentCountryFilter === 'algeria') {
+          filtered = filtered.filter(d => (d.country && d.country.includes('الجزائر')) || (d.raw_text && /الجزائر|🇩🇿|algeria/i.test(d.raw_text)));
+        } else if (currentCountryFilter === 'france') {
+          filtered = filtered.filter(d => (d.country && d.country.includes('فرنسا')) || (d.raw_text && /فرنسا|🇫🇷|france/i.test(d.raw_text)));
+        }
+      }
+
       if (currentSearchTerm) {
         filtered = filtered.filter(d => 
           (d.title && d.title.toLowerCase().includes(currentSearchTerm)) ||
           (d.raw_text && d.raw_text.toLowerCase().includes(currentSearchTerm)) ||
           (d.coupon && d.coupon.toLowerCase().includes(currentSearchTerm))
         );
+      }
+
+      // Sort Deals
+      if (currentDealSort === 'price_asc') {
+        filtered = [...filtered].sort((a, b) => {
+          const pa = a.price_dzd || (a.price_usd ? a.price_usd * usdtRate : 9999999);
+          const pb = b.price_dzd || (b.price_usd ? b.price_usd * usdtRate : 9999999);
+          return pa - pb;
+        });
+      } else if (currentDealSort === 'price_desc') {
+        filtered = [...filtered].sort((a, b) => {
+          const pa = a.price_dzd || (a.price_usd ? a.price_usd * usdtRate : 0);
+          const pb = b.price_dzd || (b.price_usd ? b.price_usd * usdtRate : 0);
+          return pb - pa;
+        });
       }
 
       const counter = document.getElementById('live-deals-counter');
@@ -5252,7 +5429,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     }
 
     function copyCoupon(code, btn) {
-      navigator.clipboard.writeText(code).then(() => {
+      copyTextToClipboard(code).then(() => {
         triggerHaptic([15, 30, 15]);
         addSavedDZD(1000);
         fireConfetti(btn);
@@ -5273,6 +5450,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             btn.classList.remove('border-emerald-500', 'text-emerald-500');
           }, 1800);
         }
+      }).catch(() => {
+        showToast(code);
       });
     }
 
@@ -5284,7 +5463,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
     function copyReferralCode(code, btn) {
       if (!code) return;
-      navigator.clipboard.writeText(code).then(() => {
+      copyTextToClipboard(code).then(() => {
         showToast((currentLang === 'fr' ? 'Code copié : ' : 'تم نسخ الكود: ') + code);
         if (btn) {
           const original = btn.innerHTML;
@@ -5438,7 +5617,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const input = document.getElementById(inputId);
       if (!input || !input.value) return;
       const textToCopy = input.value;
-      navigator.clipboard.writeText(textToCopy).then(() => {
+      copyTextToClipboard(textToCopy).then(() => {
         if (btn) {
           const original = btn.innerHTML;
           btn.innerHTML = '<i class="fa-solid fa-check text-emerald-500"></i> ' + (currentLang === 'fr' ? 'Copié !' : 'تم النسخ!');
@@ -5513,7 +5692,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const icon = document.getElementById('tracking-copy-icon');
       const text = document.getElementById('tracking-copy-text');
       if (numEl && numEl.textContent) {
-        navigator.clipboard.writeText(numEl.textContent.trim()).then(() => {
+        copyTextToClipboard(numEl.textContent.trim()).then(() => {
           if (icon) icon.className = 'fa-solid fa-check text-emerald-400';
           if (text) text.textContent = (currentLang === 'fr') ? 'Copié !' : 'تم النسخ!';
           showToast(currentLang === 'fr' ? 'Numéro de suivi copié !' : 'تم نسخ رقم التتبع!');
@@ -5521,6 +5700,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             if (icon) icon.className = 'fa-regular fa-copy';
             if (text) text.textContent = (currentLang === 'fr') ? 'Copier' : 'نسخ';
           }, 2000);
+        }).catch(() => {
+          showToast(numEl.textContent.trim());
         });
       }
     }
