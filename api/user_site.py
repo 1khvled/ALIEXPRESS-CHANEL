@@ -2625,6 +2625,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <span data-i18n="calc_redot_fee">تكلفة الشراء عبر بطاقة RedotPay (رسوم ~1.2%):</span>
             <span id="calc-redot-total" class="font-mono font-bold text-rose-500">0 دج</span>
           </div>
+          <div class="pt-1.5 border-t text-[10px] opacity-70 flex items-center gap-1.5" style="border-color: var(--border-card);">
+            <i class="fa-solid fa-circle-info text-[9px] text-amber-500"></i>
+            <span data-i18n="calc_disclaimer_note">أسعار الصرف هي تقديرات إعلامية بحتة لا تشكل خدمة صرف أو استشارة مالية.</span>
+          </div>
         </div>
       </div>
 
@@ -2912,6 +2916,17 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         إخلاء مسؤولية الشراكة: DealScout DZ موقع مستقل وغير تابع لشركة Alibaba أو AliExpress بشكل مباشر. قد تتضمن بعض الروابط معرفات تسويق بالعمولة (AliExpress Portals Affiliate) تتيح لنا الحصول على نسبة رمزية عند الشراء دون أي تكلفة إضافية عليك إطلاقاً. الأسعار بالدينار الجزائري تقريبية وتعتمد على سعر الصرف اللحظي.
       </div>
 
+      <!-- Algerian Legal & Financial Disclaimer (Square, USD, USDT) -->
+      <div class="mt-4 p-3.5 rounded-xl border text-[11px] leading-relaxed space-y-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
+        <div class="flex items-center gap-1.5 font-bold" style="color: var(--text-main);">
+          <i class="fa-solid fa-scale-balanced text-xs text-amber-500"></i>
+          <span data-i18n="footer_legal_title">إخلاء مسؤولية قانونية وتنظيمية (سعر السكوار والعملات):</span>
+        </div>
+        <p data-i18n="footer_legal_body">
+          منصة DealScout DZ هي موقع إعلامي ودليل تقني للتسوق وتتبع عروض وتخفيضات AliExpress، ولا تقدم أي خدمات مالية، مصرفية، وساطة صرف، أو بيع وشراء للعملات الأجنبية (USD / EUR) أو الأصول الرقمية (USDT). أسعار الصرف ومعدلات السكوار والأسعار التقديرية بالدينار الجزائري (DZD) هي مؤشرات استرشادية بحتة مستقاة من أسعار السوق العامة لتمكين المتسوق من تقدير التكلفة التقريبية. يتحمل كل مستخدم وحده كامل المسؤولية المدنية والقانونية عن اختياراته ووسائل دفعه والامتثال للقوانين واللوائح المصرفية المعمول بها في الجمهورية الجزائرية الديمقراطية الشعبية.
+        </p>
+      </div>
+
       <!-- Copyright Bar -->
       <div class="border-t pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]" style="border-color: var(--border-card); color: var(--text-soft);">
         <div>© 2026 DealScout DZ. <span data-i18n="footer_rights">جميع الحقوق محفوظة.</span></div>
@@ -3109,6 +3124,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         footer_ch_fr: "قناة صفقات فرنسا (@francedealsdz)",
         footer_bot_coins: "بوت خصم العملات (@Alilo07BOT)",
         footer_compliance: "إخلاء مسؤولية الشراكة: DealScout DZ موقع مستقل وغير تابع لشركة Alibaba أو AliExpress بشكل مباشر. قد تتضمن بعض الروابط معرفات تسويق بالعمولة (AliExpress Portals Affiliate) تتيح لنا الحصول على نسبة رمزية عند الشراء دون أي تكلفة إضافية عليك إطلاقاً. الأسعار بالدينار الجزائري تقريبية وتعتمد على سعر الصرف اللحظي.",
+        footer_legal_title: "إخلاء مسؤولية قانونية وتنظيمية (سعر السكوار والعملات):",
+        footer_legal_body: "منصة DealScout DZ هي موقع إعلامي ودليل تقني للتسوق وتتبع عروض وتخفيضات AliExpress، ولا تقدم أي خدمات مالية، مصرفية، وساطة صرف، أو بيع وشراء للعملات الأجنبية (USD / EUR) أو الأصول الرقمية (USDT). أسعار الصرف ومعدلات السكوار والأسعار التقديرية بالدينار الجزائري (DZD) هي مؤشرات استرشادية بحتة مستقاة من أسعار السوق العامة لتمكين المتسوق من تقدير التكلفة التقريبية. يتحمل كل مستخدم وحده كامل المسؤولية المدنية والقانونية عن اختياراته ووسائل دفعه والامتثال للقوانين واللوائح المصرفية المعمول بها في الجمهورية الجزائرية الديمقراطية الشعبية.",
+        calc_disclaimer_note: "أسعار الصرف هي تقديرات إعلامية بحتة لا تشكل خدمة صرف أو استشارة مالية.",
         footer_rights: "جميع الحقوق محفوظة.",
         footer_made_with: "صُنع للمتسوق الجزائري 🇩🇿",
         footer_back_top: "للأعلى",
@@ -3390,6 +3408,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         footer_ch_fr: "Bons Plans France (@francedealsdz)",
         footer_bot_coins: "Bot Pièces AliExpress (@Alilo07BOT)",
         footer_compliance: "Divulgation : DealScout DZ est un site indépendant. Certains liens sont affiliés (AliExpress Portals), permettant de soutenir le service sans surcoût pour l'acheteur. Les montants en DZD sont donnés à titre indicatif selon le taux de change du jour.",
+        footer_legal_title: "Avertissement Légal & Réglementaire (Cours Square & Devises) :",
+        footer_legal_body: "DealScout DZ est une plateforme d'information et un guide shopping indépendant pour les bons plans AliExpress. Le site ne fournit aucun service bancaire, de courtage, de change ou d'achat/vente de devises étrangères (USD/EUR) ou d'actifs numériques (USDT). Les conversions en Dinars Algériens (DZD) et les cours de référence (Square / USDT) sont des indicateurs purement estimatifs et informatifs. L'utilisateur demeure seul responsable de ses opérations de paiement et de la conformité avec la réglementation et les lois de change en vigueur en Algérie.",
+        calc_disclaimer_note: "Les taux de change sont des estimations informatives et ne constituent pas un service de change ou de conseil financier.",
         footer_rights: "Tous droits réservés.",
         footer_made_with: "Fait spécialement pour les acheteurs algériens 🇩🇿",
         footer_back_top: "Haut de page",
