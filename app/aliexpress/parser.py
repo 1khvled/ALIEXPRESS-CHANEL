@@ -818,59 +818,64 @@ def detect_points_discount(text: str) -> bool:
 def extract_country_instruction(text: str, url: str = "", title: str = "") -> Optional[str]:
     """
     Intelligently detects which country setting is needed for maximum discount.
-    1. Reads explicit mentions or flags in text or url (Saudi Arabia 🇸🇦, UAE 🇦🇪, Canada 🇨🇦, Korea 🇰🇷, Algeria 🇩🇿, France 🇫🇷, Spain 🇪🇸, Ukraine 🇺🇦, Australia 🇦🇺, etc.).
+    1. Reads explicit mentions or flags in text or url (Saudi Arabia 🇸🇦, UAE 🇦🇪, Canada 🇨🇦, Korea 🇰🇷, Algeria 🇩🇿, France 🇫🇷, Spain 🇪🇸, Australia 🇦🇺, Ukraine 🇺🇦, etc.).
     2. Returns None if no country change instruction is present (do NOT auto-default to Canada).
     """
-    norm_text = re.sub(r'[\u0640]', '', f"{text or ''} {url or ''} {title or ''}")
+    raw_combined = f"{text or ''} {url or ''} {title or ''}"
+    norm_text = re.sub(r'[\u0640]', '', raw_combined)
     combined = norm_text.lower()
 
+    # Extract isolated regional indicator flag pairs to prevent overlapping substring matches
+    # (e.g. 🇦🇺🇦🇺 Australia flag repeated contains 🇺🇦 Ukraine as a substring if matched naively!)
+    flag_pairs = set(re.findall(r'[\U0001F1E6-\U0001F1FF]{2}', raw_combined))
+
     # 0. Saudi Arabia detection (must be checked BEFORE fallback)
-    if any(k in combined for k in ["السعودية", "سعودية", "🇸🇦", "saudi", "ksa", "shiptocountry=sa", "country=sa"]) or re.search(r'\bsar\b', combined):
+    if "🇸🇦" in flag_pairs or any(k in combined for k in ["السعودية", "سعودية", "saudi", "ksa", "shiptocountry=sa", "country=sa"]) or re.search(r'\bsar\b', combined):
         return "السعودية 🇸🇦"
 
     # 0.5 UAE & Gulf countries
-    if any(k in combined for k in ["الإمارات", "الامارات", "امارات", "إمارات", "🇦🇪", "uae", "emirates", "shiptocountry=ae", "country=ae"]) or re.search(r'\baed\b', combined):
+    if "🇦🇪" in flag_pairs or any(k in combined for k in ["الإمارات", "الامارات", "امارات", "إمارات", "uae", "emirates", "shiptocountry=ae", "country=ae"]) or re.search(r'\baed\b', combined):
         return "الإمارات 🇦🇪"
-    if any(k in combined for k in ["قطر", "🇶🇦", "qatar", "shiptocountry=qa", "country=qa"]) or re.search(r'\bqar\b', combined):
+    if "🇶🇦" in flag_pairs or any(k in combined for k in ["قطر", "qatar", "shiptocountry=qa", "country=qa"]) or re.search(r'\bqar\b', combined):
         return "قطر 🇶🇦"
-    if any(k in combined for k in ["الكويت", "كويت", "🇰🇼", "kuwait", "shiptocountry=kw", "country=kw"]) or re.search(r'\bkwd\b', combined):
+    if "🇰🇼" in flag_pairs or any(k in combined for k in ["الكويت", "كويت", "kuwait", "shiptocountry=kw", "country=kw"]) or re.search(r'\bkwd\b', combined):
         return "الكويت 🇰🇼"
-    if any(k in combined for k in ["البحرين", "بحرين", "🇧🇭", "bahrain", "shiptocountry=bh", "country=bh"]) or re.search(r'\bbhd\b', combined):
+    if "🇧🇭" in flag_pairs or any(k in combined for k in ["البحرين", "بحرين", "bahrain", "shiptocountry=bh", "country=bh"]) or re.search(r'\bbhd\b', combined):
         return "البحرين 🇧🇭"
-    if any(k in combined for k in ["عمان", "عُمان", "🇴🇲", "oman", "shiptocountry=om", "country=om"]) or re.search(r'\bomr\b', combined):
+    if "🇴🇲" in flag_pairs or any(k in combined for k in ["عمان", "عُمان", "oman", "shiptocountry=om", "country=om"]) or re.search(r'\bomr\b', combined):
         return "عمان 🇴🇲"
 
     # 1. Canada detection (only when explicitly mentioned in text or url)
-    if any(k in combined for k in ["كندا", "🇨🇦", "canada", "cad", "shiptocountry=ca", "country=ca"]):
+    if "🇨🇦" in flag_pairs or any(k in combined for k in ["كندا", "canada", "cad", "shiptocountry=ca", "country=ca"]):
         return "كندا 🇨🇦"
 
     # 2. Korea detection (only when explicitly specified in source post or URL)
-    if any(k in combined for k in ["كوريا", "🇰🇷", "korea", "krw", "shiptocountry=kr", "country=kr"]):
+    if "🇰🇷" in flag_pairs or any(k in combined for k in ["كوريا", "korea", "krw", "shiptocountry=kr", "country=kr"]):
         return "كوريا 🇰🇷"
 
     # 3. Algeria detection (rare cases: local shipping / DZ coin promo)
-    if any(k in combined for k in ["الجزائر", "🇩🇿", "algeria", "shiptocountry=dz", "country=dz", "ديرو الجزائر", "بلاد الجزائر", "حساب جزائري"]):
+    if "🇩🇿" in flag_pairs or any(k in combined for k in ["الجزائر", "algeria", "shiptocountry=dz", "country=dz", "ديرو الجزائر", "بلاد الجزائر", "حساب جزائري"]):
         return "الجزائر 🇩🇿"
 
     # 4. France detection
-    if any(k in combined for k in [
-        "فرنسا", "🇫🇷", "france", "shiptocountry=fr", "country=fr",
+    if "🇫🇷" in flag_pairs or any(k in combined for k in [
+        "فرنسا", "france", "shiptocountry=fr", "country=fr",
         "european", "version européenne", "version europeenne", "livraison france",
         "francecp", "alifrdrop"
     ]) or re.search(r'\bfr(?:prd|ld|cd)?[0-9]{1,4}\b', combined):
         return "فرنسا 🇫🇷"
 
     # 5. Spain detection
-    if any(k in combined for k in ["إسبانيا", "اسبانيا", "🇪🇸", "spain", "shiptocountry=es"]):
+    if "🇪🇸" in flag_pairs or any(k in combined for k in ["إسبانيا", "اسبانيا", "spain", "shiptocountry=es"]):
         return "إسبانيا 🇪🇸"
 
-    # 5.5 Ukraine detection (frequent for low smartphone prices)
-    if any(k in combined for k in ["أوكرانيا", "اوكرانيا", "🇺🇦", "ukraine", "shiptocountry=ua"]):
-        return "أوكرانيا 🇺🇦"
-
-    # 5.6 Australia detection
-    if any(k in combined for k in ["استراليا", "أستراليا", "🇦🇺", "australia", "shiptocountry=au"]):
+    # 5.5 Australia detection
+    if "🇦🇺" in flag_pairs or any(k in combined for k in ["استراليا", "أستراليا", "australia", "shiptocountry=au"]):
         return "أستراليا 🇦🇺"
+
+    # 5.6 Ukraine detection (frequent for low smartphone prices)
+    if "🇺🇦" in flag_pairs or any(k in combined for k in ["أوكرانيا", "اوكرانيا", "ukraine", "shiptocountry=ua"]):
+        return "أوكرانيا 🇺🇦"
 
     # Explicit generic directives (e.g. "خلي البلد" or "ضع البلد" without country name)
     if any(k in combined for k in ["خلي البلد", "ضع البلد", "بلد الحساب"]):
@@ -895,7 +900,8 @@ def extract_clean_title(text: str) -> Optional[str]:
         "يلحقك", "معاها", "يأتي مع", "معها", "ملحقات", "الهدايا", "محتويات", "العلبة",
         "بوشات", "كيتمان", "قلم كتابة", "انكسابل", "هدية", "شاحن مع كابل",
         "طريقة الشراء", "طريقة الطلب", "رابط الشراء", "للشراء", "للطلب",
-        "جدول", "اكواد", "أكواد", "تخفيضات", "عروض الخريف", "تفعيل"
+        "جدول", "اكواد", "أكواد", "تخفيضات", "عروض الخريف", "تفعيل",
+        "متوافق مع", "متوافقة مع", "يدعم أجهزة", "تدعم أجهزة"
     ]
 
     # Normalize tatweel and remove multiple exclamation/fire emojis
@@ -916,7 +922,7 @@ def extract_clean_title(text: str) -> Optional[str]:
         if cand_str.count('/') >= 2 or cand_str.count('+') >= 3:
             return True
         # Reject candidate titles starting with description verbs
-        if any(norm.startswith(v) for v in ["يلحقك", "تأتي", "تحتوي", "يأتي", "معاها", "طريقة", "كيفية", "شرح"]):
+        if any(norm.startswith(v) for v in ["يلحقك", "تأتي", "تحتوي", "يأتي", "معاها", "طريقة", "كيفية", "شرح", "متوافق", "متوافقة", "يدعم", "تدعم", "أجهزة", "اجهزة"]):
             return True
         return False
 
@@ -935,7 +941,7 @@ def extract_clean_title(text: str) -> Optional[str]:
 
     # 0.5 Look for checkmark / device bullet title line (DealScout DZ & top Algerian format: ✅ [Title])
     for i, line in enumerate(lines):
-        if any(line.startswith(s) or f" {s}" in line for s in ["✅", "✔️", "☑️", "📱", "🎮", "🎧"]):
+        if any(line.startswith(s) for s in ["✅", "✔️", "☑️", "📱", "🎮", "🎧"]):
             cand = re.sub(r'^[✅✔️☑️📱🎮🎧\s\-:]+', '', line).strip()
             cand = re.sub(r'[\$€💵].*$', '', cand).strip()
             cand = re.sub(r'https?://\S+', '', cand).strip()

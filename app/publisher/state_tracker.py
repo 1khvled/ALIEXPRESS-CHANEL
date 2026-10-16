@@ -256,7 +256,13 @@ def extract_title_tokens(title: str) -> Set[str]:
             tokens.add(w)
     return tokens
 
-SPEC_TOKENS = {'5g', '4g', '8k', '4k', '120hz', '144hz', '165hz', '240hz', '128', '256', '512', '64', '32', '16', '8', '6', '12'}
+SPEC_TOKENS = {
+    '5g', '4g', '3g', '8k', '4k', '2k', '1080p', '120hz', '144hz', '165hz', '240hz', '90hz', '60hz',
+    '128', '256', '512', '64', '32', '16', '8', '6', '12', '4', '3', '2', '1',
+    '128gb', '256gb', '512gb', '64gb', '32gb', '16gb', '8gb', '6gb', '12gb', '4gb', '3gb', '2gb', '1tb', '2tb',
+    'gb', 'tb', 'mb', 'ram', 'rom', 'mah', '5000mah', '6000mah', 'w', '33w', '67w', '120w', '45w', '65w', '100w',
+    'inch', 'inches', 'cm', 'mm'
+}
 
 def extract_model_identifiers(tokens: Set[str]) -> Set[str]:
     """Finds product model identifiers like r1, x3, p3, ak820, f6, gt, hy300."""
