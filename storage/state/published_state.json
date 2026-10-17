@@ -1993,19 +1993,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32992,
-      "last_check_time": 1792204675.3736982
+      "last_check_time": 1792222026.5150864
     },
     "ecksdeal": {
       "last_message_id": 5897,
-      "last_check_time": 1792204675.8532617
+      "last_check_time": 1792222027.0618758
     },
     "lodydeals": {
       "last_message_id": 45576,
-      "last_check_time": 1792204674.391605
+      "last_check_time": 1792222025.532118
     },
     "bnddeals": {
       "last_message_id": 50862,
-      "last_check_time": 1792204676.8185563
+      "last_check_time": 1792222028.0884311
     },
     "test_channel": {
       "last_message_id": 1792186463,
@@ -2013,19 +2013,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792204676.3299172
+      "last_check_time": 1792222027.6165054
     },
     "zedstoreonline": {
       "last_message_id": 38628,
-      "last_check_time": 1792204674.8620298
+      "last_check_time": 1792222025.9971101
     },
     "megaphonna": {
       "last_message_id": 8437,
-      "last_check_time": 1792204677.3871799
+      "last_check_time": 1792222028.5631785
     },
     "couponsglobal": {
       "last_message_id": 48863,
-      "last_check_time": 1792204677.8527424
+      "last_check_time": 1792222029.0371819
     }
   },
   "published_product_prices": {
@@ -6572,10 +6572,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792204681.2740757,
+    "last_sweep_time": 1792222031.9144547,
     "last_sweep_times": {
-      "algeria": 1792204677.863297,
-      "france": 1792204681.2740757
+      "algeria": 1792222029.253194,
+      "france": 1792222031.9144547
     },
     "last_deal_post_times": {
       "algeria": 1792200034.5380213
@@ -7936,9 +7936,9 @@
     "megaphonna:8433",
     "couponsglobal:48863"
   ],
-  "last_france_cross_promo_time": 1791941207.7166665,
-  "next_france_cross_promo_interval_seconds": 268458,
-  "france_cross_promo_variant_idx": 2,
+  "last_france_cross_promo_time": 1792222009.8603575,
+  "next_france_cross_promo_interval_seconds": 182207,
+  "france_cross_promo_variant_idx": 3,
   "published_coupon_bulletins": [
     {
       "promo": "Test Event 2026",
