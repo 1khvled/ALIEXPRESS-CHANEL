@@ -806,29 +806,30 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
       </div>
 
-      <!-- Direct Official Telegram Channel Access Banner (Preserved hidden to prevent duplicate clutter) -->
-      <aside id="channel-telegram-banner" class="hidden border rounded-xl px-3.5 py-2.5 items-center justify-between gap-3 transition-all shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-card);" aria-label="رابط القناة الرسمي">
-        <div class="flex items-center gap-2.5 min-w-0">
-          <div class="w-8 h-8 rounded-lg bg-[#229ED9]/15 text-[#229ED9] flex items-center justify-center text-lg flex-shrink-0">
+      <!-- Direct Official Telegram Channel Access Banner -->
+      <aside id="channel-telegram-banner" class="flex border rounded-2xl p-3 sm:p-3.5 items-center justify-between gap-3 transition-all shadow-sm" style="background: linear-gradient(135deg, rgba(34,158,217,0.08) 0%, var(--bg-card) 100%); border-color: rgba(34,158,217,0.35);" aria-label="رابط القناة الرسمي">
+        <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-[#229ED9] to-[#0088cc] text-white flex items-center justify-center text-lg sm:text-xl shadow-md shadow-[#229ED9]/25 flex-shrink-0">
             <i class="fa-brands fa-telegram"></i>
           </div>
           <div class="min-w-0">
-            <div class="flex items-center gap-2">
-              <h2 id="channel-banner-name" class="font-bold text-xs truncate" style="color: var(--text-main);">قناة التيليجرام الرسمية (@DzAliexpress0)</h2>
-              <span class="inline-flex items-center gap-1 text-[9px] font-bold px-1.5 py-0.2 rounded bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">
+            <div class="flex items-center gap-2 flex-wrap">
+              <h2 id="channel-banner-name" class="font-bold text-xs sm:text-sm truncate" style="color: var(--text-main);">قناة التيليجرام الرسمية (@DzAliexpress0)</h2>
+              <span class="inline-flex items-center gap-1 text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-500 border border-emerald-500/30">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span data-i18n="channel_banner_live">تحديثات فورية</span>
+                <span data-i18n="channel_banner_live">تحديثات فورية 24/7</span>
               </span>
             </div>
-            <p id="channel-banner-desc" class="text-[10px] truncate opacity-75" style="color: var(--text-muted);" data-i18n="channel_banner_desc">
-              تابع الصفقات والتخفيضات وكوبونات التخفيض الحصرية لحظة بلحظة فور نزولها في القناة.
+            <p id="channel-banner-desc" class="text-[10px] sm:text-xs truncate opacity-80" style="color: var(--text-muted);" data-i18n="channel_banner_desc">
+              كوبونات حصرية، صفقات الكوينز الخارقة، وتنبيهات فورية قبل نفاذ الكمية في الجزائر.
             </p>
           </div>
         </div>
-        <a id="channel-banner-btn" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="bg-[#229ED9] hover:bg-[#1e8ec3] text-white text-xs font-bold h-8 px-3 rounded-lg flex items-center justify-center gap-1.5 shadow-sm transition active:scale-95 touch-manipulation flex-shrink-0">
+        <a id="channel-banner-btn" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="bg-[#229ED9] hover:bg-[#1e8ec3] text-white text-xs sm:text-sm font-bold h-8 sm:h-9 px-3 sm:px-3.5 rounded-lg flex items-center justify-center gap-1.5 shadow-sm transition active:scale-95 touch-manipulation flex-shrink-0">
           <i class="fa-brands fa-telegram text-sm"></i>
-          <span id="channel-banner-btn-text" class="text-[11px]" data-i18n="channel_banner_btn">فتح القناة</span>
-          <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+          <span id="channel-banner-btn-text" class="text-[11px] sm:text-xs" data-i18n="channel_banner_btn">انضم للقناة الآن (مجاناً)</span>
+          <i class="fa-solid fa-arrow-left text-[9px] rtl:inline ltr:hidden"></i>
+          <i class="fa-solid fa-arrow-right text-[9px] ltr:inline rtl:hidden"></i>
         </a>
       </aside>
 
@@ -2404,6 +2405,25 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-rose-500/10 text-rose-500 border border-rose-500/25 flex-shrink-0">ضروري للخصم</span>
         </div>
 
+        <!-- Expired Event Alert in Modal -->
+        <div id="modal-expired-alert" class="hidden rounded-xl p-3 border flex items-center justify-between gap-3 shadow-sm transition" style="background-color: rgba(244, 63, 94, 0.08); border-color: rgba(244, 63, 94, 0.35);">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold flex-shrink-0 bg-rose-500/15 text-rose-500">
+              <i class="fa-solid fa-hourglass-end"></i>
+            </div>
+            <div class="min-w-0">
+              <div class="text-[10px] font-bold uppercase tracking-wider text-rose-400">انتهى هذا الحدث الترويجي ⏳</div>
+              <div class="text-xs font-bold leading-snug" style="color: var(--text-main);">
+                الأكواد غير فعالة حالياً. انضم للتيليغرام للأكواد الجديدة!
+              </div>
+            </div>
+          </div>
+          <button type="button" onclick="openChannelPopup()" class="px-2.5 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-500 text-white text-xs font-bold flex items-center gap-1 flex-shrink-0 transition active:scale-95 shadow cursor-pointer">
+            <i class="fa-brands fa-telegram"></i>
+            <span>انضم</span>
+          </button>
+        </div>
+
         <h3 id="modal-title" class="font-bold text-sm sm:text-base leading-snug" style="color: var(--text-main);"></h3>
 
         <!-- Coupon inside modal -->
@@ -2834,6 +2854,18 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <i class="fa-solid fa-check text-emerald-500"></i>
     <span id="toast-msg">تم نسخ كود الخصم!</span>
   </div>
+
+  <!-- Persistent Floating Telegram Community Pill Button (High Organic Hook) -->
+  <a id="floating-tg-pill" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" 
+     aria-label="انضم لقناة تيليجرام"
+     class="fixed bottom-20 sm:bottom-6 left-3.5 z-40 bg-gradient-to-r from-[#229ED9] to-[#0088cc] hover:from-[#1e8ec3] hover:to-[#0077b5] text-white px-3.5 py-2.5 rounded-full shadow-2xl flex items-center gap-2 text-xs sm:text-sm font-bold active:scale-95 transition-all hover:scale-105 border border-white/20 touch-manipulation group" style="box-shadow: 0 10px 25px -5px rgba(34, 158, 217, 0.45);">
+    <div class="relative flex items-center justify-center">
+      <i class="fa-brands fa-telegram text-base sm:text-lg group-hover:rotate-12 transition-transform"></i>
+      <span class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+    </div>
+    <span class="font-heading" id="floating-tg-text">انضم لقناة الصفقات 🇩🇿</span>
+    <span class="text-[10px] bg-white/20 px-1.5 py-0.5 rounded-full font-mono font-bold">15k+</span>
+  </a>
 
   <!-- ========================================== -->
   <!-- HIGH CREDIBILITY E-COMMERCE FOOTER         -->
@@ -4240,10 +4272,14 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       });
     }
 
-    function handleBuyClick(couponCode) {
+    function handleBuyClick(couponCode, isExpired = false) {
       triggerHaptic([20, 40, 20]);
       addSavedDZD(1500);
       fireConfetti();
+      if (isExpired) {
+        showToast(currentLang === 'fr' ? '⚠️ Cet événement est terminé mais vous pouvez acheter au prix normal !' : '⚠️ انتهى هذا الحدث الترويجي ولكن يمكنك الشراء بسعر المنتج الحالي!');
+        return;
+      }
       if (couponCode && couponCode.length >= 3) {
         copyTextToClipboard(couponCode).then(() => {
           showToast(currentLang === 'fr' ? `Code promo ${couponCode} copié !` : `تم نسخ كود الخصم ${couponCode} تلقائياً! 🚀`);
@@ -4290,8 +4326,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
       document.body.style.overflow = '';
       if (userInitiated) {
-        // User explicitly closed/dismissed: respect choice for 24 hours
-        setStoredItem('dealscout_tg_popup_dismissed_until', Date.now() + (24 * 60 * 60 * 1000));
+        // User explicitly closed/dismissed: respect choice for 12 hours
+        setStoredItem('dealscout_tg_popup_dismissed_until', Date.now() + (12 * 60 * 60 * 1000));
       }
     }
 
@@ -4302,15 +4338,15 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     }
 
     function onTelegramPopupJoinClick() {
-      // User clicked to join! Don't prompt again for 30 days
-      setStoredItem('dealscout_tg_popup_dismissed_until', Date.now() + (30 * 24 * 60 * 60 * 1000));
+      // User clicked to join! Don't prompt again for 14 days
+      setStoredItem('dealscout_tg_popup_dismissed_until', Date.now() + (14 * 24 * 60 * 60 * 1000));
       setTimeout(() => closeTelegramPopup(false), 300);
     }
 
     function initTelegramPopupTrigger() {
       const dismissedUntil = getStoredItem('dealscout_tg_popup_dismissed_until');
       if (dismissedUntil && Date.now() < parseInt(dismissedUntil, 10)) {
-        return; // Respect user choice, never annoy!
+        return; // Respect user choice
       }
 
       let popupTriggered = false;
@@ -4331,11 +4367,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         const isToolsOpen = toolsModal && !toolsModal.classList.contains('hidden') && toolsModal.style.display !== 'none';
 
         if (isDealOpen || isRouletteOpen || isToolsOpen) {
-          // Retry later after 8 seconds
+          // Retry later after 6 seconds
           tgPopupTimer = setTimeout(() => {
             popupTriggered = false;
             triggerPopup();
-          }, 8000);
+          }, 6000);
           return;
         }
 
@@ -4345,10 +4381,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       // Dwell trigger: after 7 seconds of browsing
       tgPopupTimer = setTimeout(triggerPopup, 7000);
 
-      // Scroll trigger: when scrolling past 35% of page content
+      // Scroll trigger: when scrolling past 30% of page content
       tgPopupScrollHandler = function() {
         const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-        if (scrollable > 300 && (window.scrollY / scrollable) >= 0.35) {
+        if (scrollable > 200 && (window.scrollY / scrollable) >= 0.30) {
           if (tgPopupTimer) clearTimeout(tgPopupTimer);
           triggerPopup();
         }
@@ -4400,6 +4436,14 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (mobTg) mobTg.href = targetUrl;
       if (topTg) topTg.href = targetUrl;
       if (tgPopupBtn) tgPopupBtn.href = targetUrl;
+      const floatPill = document.getElementById('floating-tg-pill');
+      const floatText = document.getElementById('floating-tg-text');
+      if (floatPill) floatPill.href = targetUrl;
+      if (floatText) {
+        floatText.textContent = isDz 
+          ? (currentLang === 'fr' ? 'Rejoindre Telegram 🇩🇿' : 'انضم لقناة الصفقات 🇩🇿')
+          : (currentLang === 'fr' ? 'Canal France 🇫🇷' : 'قناة عروض فرنسا 🇫🇷');
+      }
 
       if (isDz) {
         if (tabDz) tabDz.className = 'flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg bg-crimson-600 text-white transition flex items-center justify-center gap-2 active:scale-95 shadow-sm';
@@ -5043,6 +5087,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const isFr = currentLang === 'fr';
 
       function applyEndedState() {
+        window.isPromoEventEnded = true;
         if (timerWrap) {
           timerWrap.className = 'inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-black bg-zinc-500/15 text-zinc-400 border-2 border-zinc-500/30';
         }
@@ -5064,8 +5109,42 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           btn.classList.add('opacity-40', 'line-through');
           btn.onclick = () => {
             showToast(isFr ? (I18N.fr.event_ended_warning || '⚠️ Cet événement promotionnel et ses codes sont terminés !') : (I18N.ar.event_ended_warning || '⚠️ انتهى هذا الحدث الترويجي وأكواد الخصم التابعة له!'));
+            setTimeout(() => openTelegramPopup(), 400);
           };
         });
+
+        // Event-ended Telegram Hook Alert
+        if (!document.getElementById('event-ended-tg-alert')) {
+          const alertEl = document.createElement('div');
+          alertEl.id = 'event-ended-tg-alert';
+          alertEl.className = 'w-full mt-2.5 p-3 rounded-xl border border-sky-500/35 bg-sky-500/10 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs animate-fade-in';
+          const tgTarget = currentChannel === '@francedealsdz' ? 'https://t.me/francedealsdz' : 'https://t.me/DzAliexpress0';
+          const tgName = currentChannel === '@francedealsdz' ? '@francedealsdz' : '@DzAliexpress0';
+          alertEl.innerHTML = `
+            <div class="flex items-center gap-2.5 text-sky-400">
+              <div class="w-8 h-8 rounded-lg bg-[#229ED9]/20 text-[#229ED9] flex items-center justify-center text-lg flex-shrink-0">
+                <i class="fa-brands fa-telegram"></i>
+              </div>
+              <div class="min-w-0">
+                <span class="font-bold block text-sky-300">${isFr ? 'Cet événement est terminé ! Rejoignez Telegram pour les prochains codes' : 'انتهى هذا الحدث الترويجي! ترقب الحدث القادم والصفقات السرية'}</span>
+                <span class="text-[11px] opacity-80 block text-zinc-300">${isFr ? 'Les nouveaux codes promos et réductions pièces Coins sont partagés en direct sur Telegram.' : 'أكواد الخصم الجديدة وتخفيضات الكوينز تنشر حصرياً داخل قناة التيليجرام أولاً بأول.'}</span>
+              </div>
+            </div>
+            <a href="${tgTarget}" target="_blank" rel="noopener noreferrer" class="bg-[#229ED9] hover:bg-[#1e8ec3] text-white px-3.5 py-1.5 rounded-lg font-bold flex items-center justify-center gap-1.5 flex-shrink-0 active:scale-95 transition shadow-sm touch-manipulation">
+              <i class="fa-brands fa-telegram text-sm"></i>
+              <span>${isFr ? 'Rejoindre ' + tgName : 'انضم لقناة التنبيهات'}</span>
+              <i class="fa-solid fa-arrow-left text-[10px] rtl:inline ltr:hidden"></i>
+              <i class="fa-solid fa-arrow-right text-[10px] ltr:inline rtl:hidden"></i>
+            </a>
+          `;
+          const banner = document.getElementById('active-event-banner');
+          if (banner) banner.appendChild(alertEl);
+        }
+
+        // Re-render deals so deal cards display expired status
+        if (typeof allDeals !== 'undefined' && Array.isArray(allDeals) && allDeals.length > 0) {
+          renderGrid();
+        }
       }
 
       function tick() {
@@ -5121,10 +5200,16 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
 
       if (event.end_date) {
-        startEventCountdown(event.end_date, event);
+        if (new Date(event.end_date).getTime() <= Date.now()) {
+          window.isPromoEventEnded = true;
+          applyEndedState();
+        } else {
+          window.isPromoEventEnded = false;
+          startEventCountdown(event.end_date, event);
+        }
       } else if (event.status === 'ended') {
-        const timerVal = document.getElementById('event-timer-val');
-        if (timerVal) timerVal.textContent = isFr ? 'Événement terminé — codes expirés' : 'انتهى الحدث — الأكواد غير فعالة';
+        window.isPromoEventEnded = true;
+        applyEndedState();
       }
     }
 
@@ -5255,17 +5340,71 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
     }
 
+    function isEventEnded() {
+      if (window.isPromoEventEnded) return true;
+      if (currentActiveEvent) {
+        if (currentActiveEvent.status === 'ended') return true;
+        if (currentActiveEvent.end_date && new Date(currentActiveEvent.end_date).getTime() <= Date.now()) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    function isDealCouponExpired(deal) {
+      if (!deal || !deal.coupon) return false;
+      const c = (deal.coupon || '').trim().toUpperCase();
+      const eventEnded = isEventEnded();
+
+      // Winter Offers promo codes (WOAE*, FRWO*)
+      if (/(?:WOAE|FRWO)/i.test(c)) {
+        return eventEnded;
+      }
+
+      // Past campaigns codes (always expired)
+      if (/(?:OTPRD|FRPRD|BDQT|FRBD)/i.test(c)) {
+        return true;
+      }
+
+      // If active promo event ended and deal coupon is in its active codes list
+      if (eventEnded && currentActiveEvent && Array.isArray(currentActiveEvent.codes)) {
+        if (currentActiveEvent.codes.some(x => (x || '').toUpperCase() === c)) {
+          return true;
+        }
+      }
+
+      // If deal mentions ended event explicitly
+      if (eventEnded && /(?:Winter Offers|عروض الشتاء)/i.test(deal.raw_text || '')) {
+        return true;
+      }
+
+      return false;
+    }
+
+    function handleExpiredCouponClick(couponCode, event) {
+      if (event) event.stopPropagation();
+      const isFr = currentLang === 'fr';
+      const msg = isFr 
+        ? `⚠️ Le code promo ${couponCode} est expiré suite à la fin de l'événement !`
+        : `⚠️ انتهت صلاحية الكود ${couponCode} مع نهاية الحدث الترويجي!`;
+      showToast(msg);
+      setTimeout(() => {
+        openTelegramPopup();
+      }, 500);
+    }
+
     function renderGrid(dealsToRender = null) {
       const deals = dealsToRender !== null ? dealsToRender : allDeals;
       const grid = document.getElementById('deals-grid');
       if (!grid) return;
       grid.innerHTML = '';
 
-      deals.forEach(deal => {
+      deals.forEach((deal, idx) => {
         const card = document.createElement('article');
         card.className = 'deal-card p-3 sm:p-3.5 flex flex-col justify-between';
 
         const safeTitle = escapeHtml(deal.title);
+        const isExpired = isDealCouponExpired(deal);
 
         const isFav = isFavorite(deal.id);
         const favBtnHtml = `
@@ -5297,7 +5436,23 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </div>
         `;
 
-        const couponHtml = deal.coupon ? `
+        const couponHtml = deal.coupon ? (isExpired ? `
+          <div class="border border-dashed rounded-lg px-2.5 py-1.5 flex items-center justify-between gap-1.5 mb-2.5 transition coupon-chip bg-amber-500/5 border-amber-500/25">
+            <div class="flex items-center gap-1.5 min-w-0">
+              <i class="fa-solid fa-hourglass-end text-xs flex-shrink-0 text-amber-500"></i>
+              <div class="min-w-0">
+                <span class="text-[9px] uppercase tracking-wider block font-bold text-amber-600 dark:text-amber-400 font-heading">
+                  <i class="fa-solid fa-triangle-exclamation text-[8px] mr-0.5"></i> ${currentLang === 'fr' ? "Code Expiré (Fin d'événement)" : "كود منتهي (انتهى الحدث)"}
+                </span>
+                <span class="font-mono text-xs font-bold truncate block line-through opacity-60 text-zinc-400 tracking-wide">${escapeHtml(deal.coupon)}</span>
+              </div>
+            </div>
+            <button onclick="handleExpiredCouponClick('${escapeHtml(deal.coupon)}', event)" aria-label="Expired coupon" class="min-h-[32px] border text-[11px] font-bold px-2 py-0.5 rounded transition flex items-center justify-center gap-1 flex-shrink-0 touch-manipulation active:scale-95 shadow-sm bg-zinc-500/10 border-zinc-500/30 text-zinc-400 hover:text-amber-500 cursor-pointer" title="${currentLang === 'fr' ? 'Code expiré — Rejoindre Telegram pour les nouveaux codes' : 'الكود منتهي — انضم للتيليجرام للأكواد الجديدة'}">
+              <i class="fa-solid fa-ban text-[10px]"></i>
+              <span class="copy-text">${currentLang === 'fr' ? 'Expiré' : 'منتهي'}</span>
+            </button>
+          </div>
+        ` : `
           <div class="border border-dashed rounded-lg px-2.5 py-1.5 flex items-center justify-between gap-1.5 mb-2.5 transition coupon-chip">
             <div class="flex items-center gap-1.5 min-w-0">
               <i class="fa-solid fa-ticket text-xs flex-shrink-0 text-amber-500"></i>
@@ -5311,7 +5466,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               <span class="copy-text">${I18N[currentLang].btn_copy}</span>
             </button>
           </div>
-        ` : '';
+        `) : '';
 
         const secondaryPrice = (currentCurrency === 'DZD' && deal.price_usd)
           ? `<span class="text-[11px] font-mono whitespace-nowrap opacity-60">($${deal.price_usd.toFixed(2)})</span>`
@@ -5320,10 +5475,18 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         card.innerHTML = `
           <div>
             ${photoHtml}
-            <div class="flex items-center justify-between gap-2 mb-1">
-              <span class="text-[10px] font-bold px-2 py-0.5 rounded border font-heading" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
-                ${deal.category_label || I18N[currentLang].deal_category_fallback}
-              </span>
+            <div class="flex items-center justify-between gap-1.5 mb-1 flex-wrap">
+              <div class="flex items-center gap-1 flex-wrap">
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded border font-heading" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
+                  ${deal.category_label || I18N[currentLang].deal_category_fallback}
+                </span>
+                ${isExpired ? `
+                  <span class="text-[10px] font-bold px-1.5 py-0.5 rounded border font-heading bg-amber-500/10 border-amber-500/30 text-amber-600 dark:text-amber-400 flex items-center gap-1">
+                    <i class="fa-solid fa-hourglass-end text-[8px]"></i>
+                    <span>${currentLang === 'fr' ? 'Événement terminé' : 'انتهى الحدث'}</span>
+                  </span>
+                ` : ''}
+              </div>
               <span class="text-[10px] font-mono opacity-80 flex items-center gap-1 font-semibold" style="color: var(--text-muted);" title="${escapeHtml(deal.date || '')}">
                 <i class="fa-regular fa-clock text-[9px] text-emerald-500"></i>
                 <span>${formatRelativeTime(deal.date)}</span>
@@ -5354,16 +5517,75 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               ` : ''}
             </div>
 
-            <!-- Primary Buy Button with Coupon Auto-Copy -->
-            <a href="${deal.affiliate_url}" target="_blank" rel="noopener noreferrer" onclick="handleBuyClick('${deal.coupon || ''}')" class="w-full btn-ali-primary active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2 px-3 rounded-lg text-center flex items-center justify-center gap-1.5 transition shadow-sm touch-manipulation min-h-[40px] font-heading cursor-pointer">
+            <!-- Primary Buy Button with Coupon Status -->
+            <a href="${deal.affiliate_url}" target="_blank" rel="noopener noreferrer" onclick="handleBuyClick('${deal.coupon || ''}', ${isExpired})" class="w-full btn-ali-primary active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2 px-3 rounded-lg text-center flex items-center justify-center gap-1.5 transition shadow-sm touch-manipulation min-h-[40px] font-heading cursor-pointer">
               <i class="fa-solid fa-cart-shopping text-xs"></i>
               <span>${I18N[currentLang].btn_buy}</span>
-              ${deal.coupon ? `<span class="bg-black/25 text-[10px] font-mono px-1.5 py-0.5 rounded text-white mr-1 inline-flex items-center gap-1 font-bold"><i class="fa-solid fa-ticket text-[9px]"></i> ${escapeHtml(deal.coupon)}</span>` : ''}
+              ${deal.coupon ? (isExpired ? `
+                <span class="bg-black/35 text-[9px] font-mono px-1.5 py-0.5 rounded text-zinc-300 line-through opacity-80 mr-1 inline-flex items-center gap-1">
+                  <i class="fa-solid fa-hourglass-end text-[8px] text-amber-400"></i> ${escapeHtml(deal.coupon)} (${currentLang === 'fr' ? 'expiré' : 'منتهي'})
+                </span>
+              ` : `
+                <span class="bg-black/25 text-[10px] font-mono px-1.5 py-0.5 rounded text-white mr-1 inline-flex items-center gap-1 font-bold">
+                  <i class="fa-solid fa-ticket text-[9px]"></i> ${escapeHtml(deal.coupon)}
+                </span>
+              `) : ''}
             </a>
           </div>
         `;
 
         grid.appendChild(card);
+
+        // In-grid Telegram Channel Hook Card (shown after 3rd deal to convert organic traffic)
+        if (idx === 2) {
+          const tgCard = document.createElement('article');
+          tgCard.className = 'deal-card p-4 sm:p-5 flex flex-col justify-between border-2 rounded-2xl relative overflow-hidden shadow-lg col-span-1';
+          tgCard.style.background = 'linear-gradient(135deg, rgba(34,158,217,0.14) 0%, rgba(15,23,42,0.95) 100%)';
+          tgCard.style.borderColor = 'rgba(34,158,217,0.45)';
+          const tgTarget = currentChannel === '@francedealsdz' ? 'https://t.me/francedealsdz' : 'https://t.me/DzAliexpress0';
+          const tgName = currentChannel === '@francedealsdz' ? '@francedealsdz' : '@DzAliexpress0';
+          const isFr = currentLang === 'fr';
+
+          tgCard.innerHTML = `
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-[#229ED9]/20 text-[#229ED9] border border-[#229ED9]/35">
+                  <i class="fa-brands fa-telegram text-sm"></i>
+                  <span>${isFr ? 'Canal Officiel' : 'القناة الرسمية 🇩🇿'}</span>
+                </span>
+                <span class="flex items-center gap-1 text-[10px] text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span>15k+ عضو</span>
+                </span>
+              </div>
+              <div class="text-center py-1 space-y-1.5">
+                <div class="w-12 h-12 mx-auto rounded-xl bg-gradient-to-tr from-[#229ED9] to-[#0088cc] flex items-center justify-center text-white text-2xl shadow-lg shadow-[#229ED9]/30">
+                  <i class="fa-brands fa-telegram"></i>
+                </div>
+                <h3 class="font-black text-sm sm:text-base text-white leading-tight font-heading">
+                  ${isFr ? 'Ne manquez plus les meilleures offres AliExpress !' : 'لا تفوّت الصفقات الخاطفة والكوبونات السرية!'}
+                </h3>
+                <p class="text-[11px] text-zinc-300 leading-relaxed opacity-90">
+                  ${isFr ? 'Les réductions pièces Coins et codes exclusifs expirent en quelques minutes. Rejoignez-nous pour être notifié en direct.' : 'أكثر من 80% من صفقات الـ Coins والأكواد المحدودة تنفد في دقائق وتُنشر حصرياً داخل القناة أولاً.'}
+                </p>
+              </div>
+              <div class="space-y-1.5 text-[11px] text-zinc-200 pt-1">
+                <div class="flex items-center gap-2"><i class="fa-solid fa-bolt text-amber-400 text-xs"></i> <span>${isFr ? 'Alertes instantanées 24/7' : 'تنبيهات فورية للصفقات النادرة'}</span></div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-coins text-amber-400 text-xs"></i> <span>${isFr ? "Liens Coins jusqu'à -70%" : "روابط تخفيض عملات Coins حصرية"}</span></div>
+                <div class="flex items-center gap-2"><i class="fa-solid fa-ticket text-rose-400 text-xs"></i> <span>${isFr ? 'Codes promo testés et actifs' : 'أكواد خصم مجربة ومضمونة'}</span></div>
+              </div>
+            </div>
+            <div class="pt-3">
+              <a href="${tgTarget}" target="_blank" rel="noopener noreferrer" class="w-full bg-[#229ED9] hover:bg-[#1e8ec3] text-white font-extrabold text-xs sm:text-sm py-2.5 px-3 rounded-xl text-center flex items-center justify-center gap-2 shadow-md shadow-[#229ED9]/30 active:scale-95 transition touch-manipulation">
+                <i class="fa-brands fa-telegram text-base"></i>
+                <span>${isFr ? 'Rejoindre ' + tgName : 'انضم إلى ' + tgName + ' مجاناً'}</span>
+                <i class="fa-solid fa-arrow-left text-xs rtl:inline ltr:hidden"></i>
+                <i class="fa-solid fa-arrow-right text-xs ltr:inline rtl:hidden"></i>
+              </a>
+            </div>
+          `;
+          grid.appendChild(tgCard);
+        }
       });
     }
 
@@ -5480,6 +5702,19 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (deal.has_coins) coins.classList.remove('hidden');
       else coins.classList.add('hidden');
 
+      // Expired coupon check & alert
+      const expiredAlert = document.getElementById('modal-expired-alert');
+      const isExpired = typeof isDealCouponExpired === 'function' ? isDealCouponExpired(deal) : false;
+      if (expiredAlert) {
+        if (isExpired) {
+          expiredAlert.classList.remove('hidden');
+          expiredAlert.style.display = 'flex';
+        } else {
+          expiredAlert.classList.add('hidden');
+          expiredAlert.style.display = 'none';
+        }
+      }
+
       // Multi-coupon & single coupon handling
       const multiWrap = document.getElementById('modal-multi-coupons');
       const coupons = deal.coupons || (deal.coupon ? [deal.coupon] : []);
@@ -5493,7 +5728,24 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           multiWrap.innerHTML = coupons.map((c, i) => {
             const det = details.find(d => d.code === c) || {};
             const lbl = det.label || (i === 0 ? 'كوبون' : 'كوبون إضافي');
-            const tierBadge = det.tier ? `<span class="bg-rose-500/10 text-rose-500 text-[10px] font-bold px-1.5 py-0.5 rounded border border-rose-500/20">${escapeHtml(det.tier)}</span>` : '';
+            const tierBadge = det.tier ? `<span class="${isExpired ? 'bg-zinc-500/10 text-zinc-400 border-zinc-500/20' : 'bg-rose-500/10 text-rose-500 border-rose-500/20'} text-[10px] font-bold px-1.5 py-0.5 rounded border">${escapeHtml(det.tier)}</span>` : '';
+            if (isExpired) {
+              return `
+                <div class="border border-dashed rounded-xl p-2.5 flex items-center justify-between gap-2 opacity-85" style="background-color: var(--bg-elevated); border-color: rgba(244,63,94,0.3);">
+                  <div class="flex items-center gap-2 min-w-0">
+                    <i class="fa-solid fa-triangle-exclamation text-sm flex-shrink-0 text-rose-500"></i>
+                    <div class="min-w-0">
+                      <div class="text-[10px] text-rose-400 font-bold flex items-center gap-1">${escapeHtml(lbl)} ${tierBadge} (منتهي)</div>
+                      <span class="font-mono font-bold text-sm tracking-wider truncate block line-through opacity-60" style="color: var(--text-soft);">${escapeHtml(c)}</span>
+                    </div>
+                  </div>
+                  <button onclick="handleExpiredCouponClick('${escapeHtml(c)}', event)" class="min-h-[36px] px-3 py-1 border active:scale-95 text-xs font-bold rounded-lg transition flex items-center gap-1 flex-shrink-0 touch-manipulation cursor-pointer bg-rose-500/10 text-rose-500 border-rose-500/30">
+                    <i class="fa-brands fa-telegram text-[11px]"></i>
+                    <span>${currentLang === 'fr' ? 'Telegram ↗' : 'طلب بديل ↗'}</span>
+                  </button>
+                </div>
+              `;
+            }
             return `
               <div class="border border-dashed rounded-xl p-2.5 flex items-center justify-between gap-2" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
                 <div class="flex items-center gap-2 min-w-0">
@@ -5517,6 +5769,29 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           couponWrap.classList.remove('hidden');
           couponWrap.style.display = 'flex';
           couponCode.textContent = coupons[0];
+          const modalCouponLabel = couponWrap.querySelector('[data-i18n="modal_coupon_label"]');
+          const modalCouponBtn = document.getElementById('modal-coupon-btn');
+          if (isExpired) {
+            couponCode.className = 'font-mono font-bold text-sm sm:text-base tracking-wider truncate block line-through opacity-60 text-zinc-400';
+            if (modalCouponLabel) {
+              modalCouponLabel.innerHTML = '<span class="text-rose-500 font-bold flex items-center gap-1"><i class="fa-solid fa-triangle-exclamation text-[10px]"></i> ' + (currentLang === 'fr' ? 'Code expiré (événement terminé) ⏳' : 'كود منتهي (انتهى الحدث) ⏳') + '</span>';
+            }
+            if (modalCouponBtn) {
+              modalCouponBtn.className = 'min-h-[42px] px-3.5 py-1.5 border active:scale-95 text-xs font-bold rounded-lg transition flex items-center gap-1.5 flex-shrink-0 touch-manipulation cursor-pointer bg-rose-500/10 text-rose-500 border-rose-500/30';
+              modalCouponBtn.innerHTML = '<i class="fa-brands fa-telegram"></i> <span>' + (currentLang === 'fr' ? 'Telegram ↗' : 'طلب بديل ↗') + '</span>';
+              modalCouponBtn.onclick = function(e) { handleExpiredCouponClick(coupons[0], e); };
+            }
+          } else {
+            couponCode.className = 'font-mono font-bold text-sm sm:text-base tracking-wider truncate block';
+            if (modalCouponLabel) {
+              modalCouponLabel.innerHTML = t('modal_coupon_label', 'كود الخصم الفعال:');
+            }
+            if (modalCouponBtn) {
+              modalCouponBtn.className = 'min-h-[42px] px-3.5 py-1.5 border active:scale-95 text-xs font-bold rounded-lg transition flex items-center gap-1.5 flex-shrink-0 touch-manipulation cursor-pointer';
+              modalCouponBtn.innerHTML = '<i class="fa-regular fa-copy"></i> <span class="copy-text">' + t('btn_copy', 'نسخ الكود') + '</span>';
+              modalCouponBtn.onclick = function() { copyCouponFromModal(modalCouponBtn); };
+            }
+          }
         }
       } else {
         if (multiWrap) { multiWrap.classList.add('hidden'); multiWrap.style.display = 'none'; }
@@ -5542,6 +5817,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       price.innerHTML = formatPrice(deal);
       affBtn.href = deal.affiliate_url;
+      if (isExpired) {
+        affBtn.innerHTML = `<i class="fa-solid fa-cart-shopping text-sm"></i> <span>${currentLang === 'fr' ? 'Voir sur AliExpress (Codes expirés)' : 'الذهاب لصفحة العرض (الأكواد منتهية)'}</span>`;
+      } else {
+        affBtn.innerHTML = `<i class="fa-solid fa-cart-shopping text-sm"></i> <span data-i18n="modal_cta_ali">${t('modal_cta_ali', 'الذهاب لصفحة العرض على AliExpress')}</span>`;
+      }
 
       if (deal.telegram_url) {
         chLink.innerHTML = `<a href="${deal.telegram_url}" target="_blank" rel="noopener noreferrer" class="text-sky-500 hover:underline font-bold text-xs flex items-center gap-1"><i class="fa-brands fa-telegram"></i> Telegram</a>`;
