@@ -488,7 +488,7 @@
     "9998887532": 1791627532.2548609,
     "9998887893": 1791627893.027416,
     "1005006007773971": 1791638433.4352653,
-    "1005013067004815": 1791638447.7612462,
+    "1005013067004815": 1792233107.1523154,
     "9998885318": 1791675318.975821,
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
@@ -927,7 +927,8 @@
     "K500-B61 Machenike  Mechanical Keybaord 61Keys Gaming RGB",
     "يد تحكم  GameSir Tarantula 8K TMR",
     "HONOR 600S (8/256)",
-    "HONOR WIN TURBO (12/256)"
+    "HONOR WIN TURBO (12/256)",
+    "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1255,7 +1256,8 @@
     "K500-B61 Machenike  Mechanical Keybaord 61Keys Gaming RGB": 1792181648.7159212,
     "يد تحكم  GameSir Tarantula 8K TMR": 1792200008.0113943,
     "HONOR 600S (8/256)": 1792200023.6138296,
-    "HONOR WIN TURBO (12/256)": 1792200031.9265065
+    "HONOR WIN TURBO (12/256)": 1792200031.9265065,
+    "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": 1792233107.1523154
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1985,47 +1987,48 @@
     "megaphonna:8436",
     "ecksdeal:5895",
     "megaphonna:8432",
-    "megaphonna:8431"
+    "megaphonna:8431",
+    "pcgamingpart:7986"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792200031.9265065,
+  "last_run_time": 1792233107.1523154,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32992,
-      "last_check_time": 1792222026.5150864
+      "last_check_time": 1792233102.3375335
     },
     "ecksdeal": {
       "last_message_id": 5897,
-      "last_check_time": 1792222027.0618758
+      "last_check_time": 1792233102.781045
     },
     "lodydeals": {
       "last_message_id": 45576,
-      "last_check_time": 1792222025.532118
+      "last_check_time": 1792233101.4778438
     },
     "bnddeals": {
-      "last_message_id": 50862,
-      "last_check_time": 1792222028.0884311
+      "last_message_id": 50863,
+      "last_check_time": 1792233110.7248008
     },
     "test_channel": {
       "last_message_id": 1792186463,
       "last_check_time": 1792186463.089801
     },
     "pcgamingpart": {
-      "last_message_id": 7985,
-      "last_check_time": 1792222027.6165054
+      "last_message_id": 7986,
+      "last_check_time": 1792233109.3607419
     },
     "zedstoreonline": {
       "last_message_id": 38628,
-      "last_check_time": 1792222025.9971101
+      "last_check_time": 1792233101.848434
     },
     "megaphonna": {
       "last_message_id": 8437,
-      "last_check_time": 1792222028.5631785
+      "last_check_time": 1792233111.1206744
     },
     "couponsglobal": {
       "last_message_id": 48863,
-      "last_check_time": 1792222029.0371819
+      "last_check_time": 1792233111.4641047
     }
   },
   "published_product_prices": {
@@ -2205,7 +2208,7 @@
     "1005010289640412": 32.06,
     "1005013313539058": 6.52,
     "1005006007773971": 54.15,
-    "1005013067004815": 7.5,
+    "1005013067004815": 6.4,
     "1005006966177706": 3.49,
     "1005012234106869": 1.71,
     "1005010209307090": 111.0,
@@ -6560,6 +6563,16 @@
       "price": 400.0,
       "timestamp": 1792200031.9265065,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7986": {
+      "channel_msg_id": 968,
+      "product_id": "1005013067004815",
+      "title": "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7986,
+      "price": 6.4,
+      "timestamp": 1792233107.1523154,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6568,17 +6581,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792200034.5380213,
+    "last_deal_post_time": 1792233111.4902668,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792222031.9144547,
+    "last_sweep_time": 1792233114.0000894,
     "last_sweep_times": {
-      "algeria": 1792222029.253194,
-      "france": 1792222031.9144547
+      "algeria": 1792233111.472035,
+      "france": 1792233114.0000894
     },
     "last_deal_post_times": {
-      "algeria": 1792200034.5380213
+      "algeria": 1792233111.4902668
     }
   },
   "last_coin_reminder_time": 1792166302.7026794,
@@ -6781,7 +6794,7 @@
     "9998887532": "test_channel",
     "9998887893": "test_channel",
     "1005006007773971": "ecksdeal",
-    "1005013067004815": "aniscoupons",
+    "1005013067004815": "pcgamingpart",
     "9998885318": "test_channel",
     "9998885569": "test_channel",
     "9998886905": "test_channel",
@@ -7227,7 +7240,8 @@
     "HAYLOU Solar Neo 2 Voice Calling Smartwatch  AMOLED": "couponsglobal",
     "K500-B61 Machenike  Mechanical Keybaord 61Keys Gaming RGB": "couponsglobal",
     "HONOR 600S (8/256)": "megaphonna",
-    "HONOR WIN TURBO (12/256)": "megaphonna"
+    "HONOR WIN TURBO (12/256)": "megaphonna",
+    "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": "pcgamingpart"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -7251,7 +7265,7 @@
     "test_rem_5900fa25": "2026-10-02",
     "test_rem_b90624f4": "2026-10-02",
     "test_rem_5b9c8e4c": "2026-10-02",
-    "daily_dhikr": "2026-10-15",
+    "daily_dhikr": "2026-10-17",
     "test_rem_7dc40719": "2026-10-02",
     "test_rem_dc43d1e0": "2026-10-02",
     "test_rem_3de63a14": "2026-10-02",
@@ -7557,8 +7571,8 @@
     "LAUNCH_ALERT_Winter Offers_20261014",
     "END_ALERT_Winter Offers_20261018"
   ],
-  "last_card_affiliate_time_dz": 1792136929.4849148,
-  "card_affiliate_variant_idx_dz": 1,
+  "last_card_affiliate_time_dz": 1792233089.7517264,
+  "card_affiliate_variant_idx_dz": 2,
   "last_tajmi3at_published_time": 1792182685.3908823,
   "published_deals_history": {},
   "settings": {},
@@ -7934,7 +7948,8 @@
     "zedstoreonline:38627",
     "megaphonna:8437",
     "megaphonna:8433",
-    "couponsglobal:48863"
+    "couponsglobal:48863",
+    "bnddeals:50863"
   ],
   "last_france_cross_promo_time": 1792222009.8603575,
   "next_france_cross_promo_interval_seconds": 182207,
