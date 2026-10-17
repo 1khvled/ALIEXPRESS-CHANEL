@@ -113,9 +113,27 @@ def test_public_web_routes():
         assert "DealScout DZ" in r.text
 
 
-def test_active_event_api_and_seo_banner():
+def test_active_event_api_and_seo_banner(monkeypatch):
     """Verify active event API and active event banner with SEO keywords."""
-    # 1. API endpoint check
+    from app.aliexpress.promos import PromoEvent
+    from datetime import datetime, timezone, timedelta
+
+    mock_event = PromoEvent(
+        name="Winter Offers",
+        name_ar="عروض الشتاء",
+        name_fr="Offres d'Hiver",
+        start_date=datetime.now(timezone.utc) - timedelta(days=1),
+        end_date=datetime.now(timezone.utc) + timedelta(days=2),
+        is_major=True,
+        coupon_tiers=[
+            {"spend": 39, "discount": 5, "code": "WOAE06"},
+            {"spend": 269, "discount": 35, "code": "WOAE35"}
+        ],
+        banner_tag="تخفيضات عروض الشتاء"
+    )
+    monkeypatch.setattr("app.aliexpress.promos.promo_tracker.get_active_promo", lambda *args, **kwargs: mock_event)
+
+    # 1. API endpoint check with active event
     resp = client.get("/api/active-event")
     assert resp.status_code == 200
     data = resp.json()
@@ -124,7 +142,7 @@ def test_active_event_api_and_seo_banner():
     assert "Winter Offers" in data["active_event"]["name"]
     assert any("WOAE" in c for c in data["active_event"]["codes"])
 
-    # 2. Page HTML check
+    # 2. Page HTML check with active event SEO
     html_resp = client.get("/")
     assert html_resp.status_code == 200
     html = html_resp.text
@@ -132,7 +150,13 @@ def test_active_event_api_and_seo_banner():
     assert 'id="active-deals-keywords"' in html
     assert 'WOAE06' in html
     assert 'WOAE35' in html
-    assert 'Winter Offers' in html
+    assert 'عروض الشتاء' in html
+
+    # 3. API endpoint check when no event is active
+    monkeypatch.setattr("app.aliexpress.promos.promo_tracker.get_active_promo", lambda *args, **kwargs: None)
+    resp_inactive = client.get("/api/active-event")
+    assert resp_inactive.status_code == 200
+    assert resp_inactive.json() == {"active": False, "event": None}
 
 
 def test_llms_txt_and_full_endpoints():

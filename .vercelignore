@@ -1,0 +1,60 @@
+# Version control & local environment
+.git/
+.agents/
+docs/
+scratch/
+channel_samples.txt
+
+# Automated Tests & Test Artifacts
+tests/
+.pytest_cache/
+.coverage
+htmlcov/
+pytest.ini
+test_*.jpg
+debug_*.txt
+
+# Telegram Bot Runtime Storage (88+ MB excluded from Vercel)
+storage/downloads/
+storage/generated/
+storage/assets/
+storage/official_calendar_october_2026.jpg
+storage/deals.db
+deals.db
+*.db
+*.db-journal
+*.sqlite3
+*.session
+*.session-journal
+sessions/
+last_disclaimer_pinned.txt
+app/publisher/last_disclaimer_pinned.txt
+
+# Telegram Channel PIL Graphic Banners & Overlay Templates (Not used by Web App)
+assets/bot_promo_banner.png
+assets/bot_promo_banner.jpg
+assets/tajmi3at_banner.png
+assets/tajmi3at_banner_fr.png
+assets/coupon_5_template.png
+assets/choice_day_coupon_template.png
+assets/choice_day_banner.png
+assets/frame_overlay.png
+assets/product_frame_template.png
+assets/official_dz_banner.jpg
+assets/official_fr_banner.jpg
+assets/france_channel_logo.jpg
+assets/official_calendar_october_2026.jpg
+
+# Non-web Automation Scripts
+scripts/*.py
+scripts/*.bat
+dealscout.service
+docker-compose.yml
+Dockerfile
+run_daemon_windows.bat
+start_autonomous.sh
+
+# Markdown Documentation
+README.md
+CONTEXT.md
+GEMINI.md

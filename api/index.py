@@ -31,8 +31,10 @@ from api.admin_login import ADMIN_LOGIN_HTML
 from api.admin_dashboard import DASHBOARD_HTML
 from api.geo_llms import LLMS_TXT, LLMS_FULL_TXT, get_ai_summary_json
 from api.blog_guide import get_blog_guide_html
+from starlette.middleware.gzip import GZipMiddleware
 
 app = FastAPI(title="DealScout DZ — AliExpress Deals & Live Telegram Content", version="2.5.0")
+app.add_middleware(GZipMiddleware, minimum_size=1000)
 
 @app.middleware("http")
 async def add_security_headers(request: Request, call_next):
