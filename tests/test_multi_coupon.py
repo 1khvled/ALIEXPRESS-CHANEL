@@ -216,3 +216,17 @@ def test_parse_telegram_deal_block_saudi():
     assert "خيار الشاحن لوحده 21.70$" in deal["description"]
 
 
+def test_no_fake_coupons_from_brands_urls_or_collapsed_lines():
+    """Ensure product brand words (HAYLOU, Faro), domain TLDs (COM), and URL hashes (_c3lJDYXB) are NEVER extracted as coupons."""
+    text = (
+        "كوبون 3 دولار خاص بمتابعين القناة استخدمه ZEDHAYHCS04 😍😍 ⭐️ "
+        "HAYLOU Faro  💵 السعر 17.2$    🔥 🌷  كوبون حصري 3$ :   ZEDHAYHCS04   "
+        "🔗 رابط المنتج   https://s.click.aliexpress.com/e/_c3lJDYXB  "
+        "😊 بوت مطور لشراء بأفضل سعر وتتبع الطرود  :  t.me/ZedStoreSve_bot…"
+    )
+    res = extract_multi_coupons(text, title="HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health")
+    assert res["coupons"] == []
+    assert res["coupon_code"] is None
+
+
+

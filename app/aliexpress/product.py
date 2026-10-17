@@ -210,7 +210,7 @@ class ProductExtractor:
             if not title or len(title) < 15 or self._is_suspicious_title(title):
                 title = clean_api_title
 
-        coupon_code = extract_coupon(text)
+        coupon_code = extract_coupon(text, title=title)
         seller_coupon = extract_seller_coupon(text)
         has_points = detect_points_discount(text)
         combined_deal_url = f"{ali_url or ''} {resolved.final_url or ''} {resolved.canonical_url or ''}"

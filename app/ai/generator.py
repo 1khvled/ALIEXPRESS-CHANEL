@@ -403,7 +403,7 @@ class DealCaptionGenerator:
 
         # Format coupons & seller vouchers (support multiple coupons if present in raw_text)
         from app.aliexpress.parser import extract_multi_coupons
-        multi = extract_multi_coupons(raw_text) if raw_text else {}
+        multi = extract_multi_coupons(raw_text, title=title) if raw_text else {}
         extracted_coupons = multi.get("coupons", [])
         extracted_details = multi.get("coupon_details", [])
 

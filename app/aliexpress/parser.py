@@ -487,38 +487,73 @@ BLACKLIST_COUPONS = {
     "motorola", "blackview", "cubot", "oukitel", "doogee", "tecno", "itel", "nubia", "zte",
     "note", "pad", "tab", "watch", "band", "buds", "air", "phone", "z11s", "c71",
     "ram", "rom", "used", "new", "pro", "max", "lite", "mini", "neo", "ultra",
-    "8gb", "16gb", "32gb", "64gb", "128gb", "256gb", "512gb", "1tb", "2tb", "4gb", "6gb", "2gb"
+    "8gb", "16gb", "32gb", "64gb", "128gb", "256gb", "512gb", "1tb", "2tb", "4gb", "6gb", "2gb",
+    "com", "net", "org", "co", "io", "app", "xyz", "tech", "site", "live", "info", "link", "dev", "ai",
+    "haylou", "faro", "smart", "voice", "calling", "health", "screen",
+    "zeblaze", "colmi", "amazfit", "qcy", "soundpeats", "edifier",
+    "mchose", "machenike", "ajazz", "aula", "epomaker", "keychron", "dareu",
+    "redragon", "gamesir", "flydigi", "gulikit", "8bitdo", "macbook", "airpods",
+    "galaxy", "pixel", "blackshark", "moondrop", "tangzu", "chu", "fantech", "attack",
+    "shark", "bmax", "teclast", "alldocube", "chuwi", "kfa2", "colorful",
+    "gainward", "soyo", "maxsun", "huananzhi", "jisu", "jisulife", "anker",
+    "baseus", "ugreen", "essager", "toocki", "kuulaa", "orico", "blitzwolf",
+    "tronsmart", "zealot", "wireless", "bluetooth", "earphone", "earphones",
+    "headphone", "headphones", "headset", "speaker", "mouse", "keyboard",
+    "controller", "gamepad", "cable", "charger", "powerbank", "adapter"
 }
 
 
-def clean_coupon_token(raw: str) -> Optional[str]:
+def clean_coupon_token(raw: str, title: Optional[str] = None) -> Optional[str]:
     """Validates and cleans a potential coupon token string."""
     if not raw:
         return None
-    c = raw.strip()
-    c = re.sub(r'^[<>/`*#()\[\]{}:;,\.=\-+ـ]+|[<>/`*#()\[\]{}:;,\.=\-+ـ]+$', '', c).strip()
+    raw_str = raw.strip()
+
+    # Reject URL slug hashes and tokens starting or ending with underscores or hyphens (e.g. _c3lJDYXB)
+    if raw_str.startswith(('_', '-')) or raw_str.endswith(('_', '-')):
+        return None
+
+    c = re.sub(r'^[<>/`*#()\[\]{}:;,\.=\-+ـ_]+|[<>/`*#()\[\]{}:;,\.=\-+ـ_]+$', '', raw_str).strip()
     c = c.replace("<code>", "").replace("</code>", "")
     c = c.upper()
 
     if len(c) < 3 or len(c) > 25:
         return None
+    if c.startswith(('_', '-')) or c.endswith(('_', '-')):
+        return None
     if not re.search(r'[A-Za-z]', c):
         return None
     c_lower = c.lower()
+
+    # Reject web domains, TLDs, and URL fragments
+    if c_lower in {
+        "com", "net", "org", "co", "io", "app", "xyz", "online", "store", "shop",
+        "tech", "site", "live", "info", "link", "pro", "me", "club", "vip", "dev",
+        "ai", "gov", "edu", "url", "uri", "http", "https", "www", "html", "php", "aspx", "api"
+    }:
+        return None
+
     if c_lower in BLACKLIST_COUPONS:
         return None
     if re.search(r'^\d+(?:gb|tb|mb|g|ram|rom|t)$', c_lower):
         return None
-    if any(b in c_lower for b in ["http", "t.me", "click", "item/"]):
+    if any(b in c_lower for b in ["http", "t.me", "click", "item/", ".com", ".net", "aliexpress"]):
         return None
     if c_lower.startswith("item"):
         return None
     if is_competitor_branded_code(c):
         return None
+
+    # Title check: A coupon code can NEVER simply be an English word from the product title
+    if title:
+        title_words = {w.lower().strip() for w in re.findall(r'[A-Za-z0-9_-]+', title) if len(w) >= 3}
+        if c_lower in title_words:
+            return None
+
     return c
 
 
-def extract_multi_coupons(raw_text: str) -> Dict[str, Any]:
+def extract_multi_coupons(raw_text: str, title: Optional[str] = None) -> Dict[str, Any]:
     """
     Comprehensive multi-coupon and description extractor for Telegram deal posts.
     Extracts ALL promo codes, spend/discount tiers, and labels from various formats:
@@ -551,7 +586,7 @@ def extract_multi_coupons(raw_text: str) -> Dict[str, Any]:
     seen_codes = set()
 
     def add_coupon(code_str: str, label: str = "كوبون", tier: str = ""):
-        c = clean_coupon_token(code_str)
+        c = clean_coupon_token(code_str, title=title)
         if not c:
             return
         clean_tier = ""
@@ -645,6 +680,16 @@ def extract_multi_coupons(raw_text: str) -> Dict[str, Any]:
         lbl = m.group('label') or "كوبون"
         content = m.group('content').strip()
 
+        # Stop content at boundary markers (URLs, links, product markers, prices, section emojis)
+        boundary_m = re.search(
+            r'https?://|t\.me/|@[A-Za-z0-9_]+|'
+            r'[\U0001f300-\U0001f9ff\u2600-\u26ff\u2700-\u27bf]|'
+            r'(?:^|\s)(?:رابط|السعر|سعر|للشراء|لشراء|بوت|قناة|قناتنا)\b',
+            content
+        )
+        if boundary_m:
+            content = content[:boundary_m.start()].strip()
+
         # Check if content has an embedded spend tier e.g. "WOAE06 (6/49$)"
         tier_m = re.search(r'\(?([$€]?[0-9]+(?:\.[0-9]+)?/[0-9]+(?:\.[0-9]+)?[$€]?)\)?', content)
         line_tier = tier_m.group(1) if tier_m else ""
@@ -728,30 +773,22 @@ def extract_multi_coupons(raw_text: str) -> Dict[str, Any]:
 extract_deal_coupons_and_description = extract_multi_coupons
 
 
-def extract_coupon(text: str) -> Optional[str]:
+def extract_coupon(text: str, title: Optional[str] = None) -> Optional[str]:
     """Extracts the primary/first coupon code for backward compatibility."""
     if not text:
         return None
-    res = extract_multi_coupons(text)
+    res = extract_multi_coupons(text, title=title)
     if res.get("coupon_code"):
         return res["coupon_code"]
 
     # Fallback to legacy COUPON_PATTERNS
     norm = re.sub(r'[\u0640]', '', text)
-    blacklist = {
-        "http", "https", "aliexpress", "item", "link", "url", "temu", "html", "bot",
-        "t.me", "dzgamingcoinbot", "coinbot", "coins", "channel", "click", "s.click",
-        "dzaliexpress0", "francedealsdz", "france", "canada", "algerie", "livraison",
-        "promo", "promos", "reduction", "reductions", "remise", "code", "coupon", "coupons"
-    }
     for pattern in COUPON_PATTERNS:
         for m in pattern.finditer(norm):
             code = m.group(1).strip()
-            code = re.sub(r'^[<>/`*#]+|[<>/`*#]+$', '', code).strip()
-            code = code.replace("<code>", "").replace("</code>", "")
-            if len(code) >= 3 and re.search(r'[A-Za-z]', code) and code.lower() not in blacklist and not any(b in code.lower() for b in ["http", "t.me", "click", "bot"]):
-                if not is_competitor_branded_code(code):
-                    return code.upper()
+            clean_c = clean_coupon_token(code, title=title)
+            if clean_c:
+                return clean_c
     return None
 
 
@@ -1267,8 +1304,8 @@ def extract_telegram_html_text(text_div) -> str:
         return ""
     from bs4 import BeautifulSoup
     html = text_div.decode_contents() if hasattr(text_div, "decode_contents") else str(text_div)
-    # Replace block breaks with newlines
-    html = re.sub(r'<(?:br|/p|/div|/blockquote)[^>]*>', '\n', html, flags=re.IGNORECASE)
+    # Replace block breaks and emoji container breaks with newlines
+    html = re.sub(r'<(?:br|/p|/div|/blockquote|/tg-emoji|tg-emoji)[^>]*>', '\n', html, flags=re.IGNORECASE)
     soup = BeautifulSoup(html, "html.parser")
     text = soup.get_text()
     # Normalize excessive newlines
