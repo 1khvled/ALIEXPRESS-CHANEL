@@ -295,7 +295,9 @@
     "1005011904443903",
     "1005012968221708",
     "1005013137396211",
-    "1005012575455222"
+    "1005012575455222",
+    "1005013096683979",
+    "1005012398164621"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -353,7 +355,7 @@
     "1005009281115306": 1791942658.9081998,
     "1005011797801269": 1791203753.790013,
     "1005007168829266": 1791102355.4991398,
-    "1005012406142215": 1791042955.9414852,
+    "1005012406142215": 1792200031.9265065,
     "1005007345398413": 1790943717.3545928,
     "1005012504076921": 1791236011.4353654,
     "1005008715050858": 1791033345.3970714,
@@ -602,7 +604,9 @@
     "1005012826843176": 1792191301.0348613,
     "1005011904443903": 1792191309.9832015,
     "1005013137396211": 1792191325.4876726,
-    "1005012575455222": 1792191334.3232646
+    "1005012575455222": 1792191334.3232646,
+    "1005013096683979": 1792200008.0113943,
+    "1005012398164621": 1792200023.6138296
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -920,7 +924,10 @@
     "Black Shark Pad SE Tablet 4G LTE/WiFi 10.1 Inch 60Hz HD Display MediaTek",
     "HAYLOU FlowLoop S33 Wireless Headphones 45dB ANC Hi-Res LDAC 100h Playtime",
     "HAYLOU Solar Neo 2 Voice Calling Smartwatch  AMOLED",
-    "K500-B61 Machenike  Mechanical Keybaord 61Keys Gaming RGB"
+    "K500-B61 Machenike  Mechanical Keybaord 61Keys Gaming RGB",
+    "يد تحكم  GameSir Tarantula 8K TMR",
+    "HONOR 600S (8/256)",
+    "HONOR WIN TURBO (12/256)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1245,7 +1252,10 @@
     "Black Shark Pad SE Tablet 4G LTE/WiFi 10.1 Inch 60Hz HD Display MediaTek": 1792179309.043811,
     "HAYLOU FlowLoop S33 Wireless Headphones 45dB ANC Hi-Res LDAC 100h Playtime": 1792180560.6961818,
     "HAYLOU Solar Neo 2 Voice Calling Smartwatch  AMOLED": 1792181063.4419804,
-    "K500-B61 Machenike  Mechanical Keybaord 61Keys Gaming RGB": 1792181648.7159212
+    "K500-B61 Machenike  Mechanical Keybaord 61Keys Gaming RGB": 1792181648.7159212,
+    "يد تحكم  GameSir Tarantula 8K TMR": 1792200008.0113943,
+    "HONOR 600S (8/256)": 1792200023.6138296,
+    "HONOR WIN TURBO (12/256)": 1792200031.9265065
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1972,27 +1982,30 @@
     "aniscoupons:32989",
     "ecksdeal:5896",
     "bnddeals:50860",
-    "megaphonna:8436"
+    "megaphonna:8436",
+    "ecksdeal:5895",
+    "megaphonna:8432",
+    "megaphonna:8431"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792191334.3232646,
+  "last_run_time": 1792200031.9265065,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32992,
-      "last_check_time": 1792191872.2527244
+      "last_check_time": 1792200002.931127
     },
     "ecksdeal": {
       "last_message_id": 5897,
-      "last_check_time": 1792175514.7420042
+      "last_check_time": 1792200008.0113943
     },
     "lodydeals": {
       "last_message_id": 45576,
-      "last_check_time": 1792191867.9937298
+      "last_check_time": 1792199998.6112573
     },
     "bnddeals": {
       "last_message_id": 50862,
-      "last_check_time": 1792191876.486384
+      "last_check_time": 1792200010.9788587
     },
     "test_channel": {
       "last_message_id": 1792186463,
@@ -2000,19 +2013,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7985,
-      "last_check_time": 1792191875.9399462
+      "last_check_time": 1792200010.6034133
     },
     "zedstoreonline": {
       "last_message_id": 38628,
-      "last_check_time": 1792180845.4989505
+      "last_check_time": 1792200002.5098317
     },
     "megaphonna": {
-      "last_message_id": 8436,
-      "last_check_time": 1792191334.3232646
+      "last_message_id": 8437,
+      "last_check_time": 1792200033.9412913
     },
     "couponsglobal": {
-      "last_message_id": 48862,
-      "last_check_time": 1792191899.7188401
+      "last_message_id": 48863,
+      "last_check_time": 1792200034.5262272
     }
   },
   "published_product_prices": {
@@ -2069,7 +2082,7 @@
     "1005009281115306": 17.12,
     "1005011797801269": 55.78,
     "1005007168829266": 4.19,
-    "1005012406142215": 393.0,
+    "1005012406142215": 400.0,
     "1005008390562391": 11.79,
     "1005007345398413": 14.3,
     "1005012504076921": 257.4,
@@ -2178,7 +2191,7 @@
     "1005013052800596": 1.45,
     "1005007331316456": 17.6,
     "1005007822635375": 22.47,
-    "1005013096683979": 56.86,
+    "1005013096683979": 54.68,
     "1005006838055260": 1.81,
     "1005006923518929": 0.84,
     "1005008379012998": 38.98,
@@ -2251,7 +2264,8 @@
     "1005012545304504": 123.1,
     "1005012826843176": 60.1,
     "1005012150344482": 25.94,
-    "1005006678195057": 32.62
+    "1005006678195057": 32.62,
+    "1005012398164621": 325.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6516,6 +6530,36 @@
       "price": 10.16,
       "timestamp": 1792184444.8854666,
       "status": "ACTIVE"
+    },
+    "ecksdeal:5895": {
+      "channel_msg_id": 962,
+      "product_id": "1005013096683979",
+      "title": "يد تحكم  GameSir Tarantula 8K TMR",
+      "channel": "ecksdeal",
+      "source_msg_id": 5895,
+      "price": 54.68,
+      "timestamp": 1792200008.0113943,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8432": {
+      "channel_msg_id": 963,
+      "product_id": "1005012398164621",
+      "title": "HONOR 600S (8/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8432,
+      "price": 325.9,
+      "timestamp": 1792200023.6138296,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8431": {
+      "channel_msg_id": 964,
+      "product_id": "1005012406142215",
+      "title": "HONOR WIN TURBO (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8431,
+      "price": 400.0,
+      "timestamp": 1792200031.9265065,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6524,17 +6568,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792184472.6115844,
+    "last_deal_post_time": 1792200034.5380213,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792191903.1177614,
+    "last_sweep_time": 1792200037.0383797,
     "last_sweep_times": {
-      "algeria": 1792191899.7397745,
-      "france": 1792191903.1177614
+      "algeria": 1792200034.532286,
+      "france": 1792200037.0383797
     },
     "last_deal_post_times": {
-      "algeria": 1792184472.6115844
+      "algeria": 1792200034.5380213
     }
   },
   "last_coin_reminder_time": 1792166302.7026794,
@@ -6851,7 +6895,8 @@
     "1005006678195057": "couponsglobal",
     "1005012150344482": "couponsglobal",
     "1005012545304504": "lodydeals",
-    "1005010385663278": "couponsglobal"
+    "1005010385663278": "couponsglobal",
+    "1005012398164621": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7180,7 +7225,9 @@
     "Black Shark Pad SE Tablet 4G LTE/WiFi 10.1 Inch 60Hz HD Display MediaTek": "couponsglobal",
     "HAYLOU FlowLoop S33 Wireless Headphones 45dB ANC Hi-Res LDAC 100h Playtime": "couponsglobal",
     "HAYLOU Solar Neo 2 Voice Calling Smartwatch  AMOLED": "couponsglobal",
-    "K500-B61 Machenike  Mechanical Keybaord 61Keys Gaming RGB": "couponsglobal"
+    "K500-B61 Machenike  Mechanical Keybaord 61Keys Gaming RGB": "couponsglobal",
+    "HONOR 600S (8/256)": "megaphonna",
+    "HONOR WIN TURBO (12/256)": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -7883,7 +7930,11 @@
     "couponsglobal:48862",
     "couponsglobal:48861",
     "couponsglobal:48859",
-    "couponsglobal:48856"
+    "couponsglobal:48856",
+    "zedstoreonline:38627",
+    "megaphonna:8437",
+    "megaphonna:8433",
+    "couponsglobal:48863"
   ],
   "last_france_cross_promo_time": 1791941207.7166665,
   "next_france_cross_promo_interval_seconds": 268458,
