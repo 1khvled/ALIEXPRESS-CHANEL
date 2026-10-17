@@ -93,6 +93,12 @@ class DealCaptionValidator:
         if is_contam:
             errors.append(f"VIOLATION OF CORE RULE: {contam_reason}")
 
+        # 0.1 Competitor affiliate-exclusive deal firewall
+        from app.aliexpress.parser import is_affiliate_exclusive_deal
+        is_aff, aff_reason = is_affiliate_exclusive_deal(caption)
+        if is_aff:
+            errors.append(f"VIOLATION OF CORE RULE: {aff_reason}")
+
         # CTA check
         if "@Alilo07BOT" not in caption and "DealScout" not in caption and "البوت" not in caption and "@DzAliexpress0" not in caption:
             errors.append("Mandatory channel/bot CTA is missing")

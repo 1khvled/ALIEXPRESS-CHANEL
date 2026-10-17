@@ -18,7 +18,8 @@ from app.aliexpress.parser import (
     extract_coupon_list,
     detect_coupon_event_type,
     detect_deal_type,
-    compute_title_compatibility
+    compute_title_compatibility,
+    is_affiliate_exclusive_deal
 )
 from app.utils.logger import logger
 from app.utils.network import enforce_ipv4
@@ -231,6 +232,12 @@ class ProductExtractor:
                         title = self._clean_official_title(meta_t)
             if not image_url and page_meta.get("image"):
                 image_url = page_meta["image"]
+
+        # Check if deal relies on competitor affiliate-exclusive coupon
+        is_aff, aff_reason = is_affiliate_exclusive_deal(text, title=title)
+        if is_aff:
+            logger.info(f"Product extraction rejected competitor affiliate-exclusive deal: {aff_reason}")
+            return None
 
         # NEVER fall back to competitor media_path for product deals to prevent competitor logos / watermarks!
         is_valid = bool(resolved.product_id and (usd_price or eur_price) and title and image_url)

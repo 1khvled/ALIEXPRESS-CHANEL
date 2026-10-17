@@ -135,6 +135,15 @@ class AutonomousEngine:
                         self.seen_message_urls.add(msg_url)
                     continue
 
+                # 2.5 Strict Competitor Affiliate-Exclusive Deal filter
+                from app.aliexpress.parser import is_affiliate_exclusive_deal
+                is_aff, aff_reason = is_affiliate_exclusive_deal(raw_text)
+                if is_aff:
+                    logger.info(f"[@{channel_username}] Competitor affiliate-exclusive deal rejected: {aff_reason}")
+                    if msg_url:
+                        self.seen_message_urls.add(msg_url)
+                    continue
+
                 # 3. Extract deal / coupon list
                 extracted = await product_extractor.extract_from_message(raw_text)
                 if not extracted or not extracted.is_valid:

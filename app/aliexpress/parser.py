@@ -44,7 +44,7 @@ COUPON_PATTERNS = [
 
 SELLER_COUPON_PATTERNS = [
     re.compile(r'(?:حصل\s*|احجز\s*)?(?:(?:ال)?قسيمة|(?:ال)?كوبون|(?:ال)?كود)\s*(?:البائع|المتجر|خاصة\s*بالمتجر|store\s*coupon|seller\s*coupon|vendeur)[\s:：\-=ـ_•*~|()✅🔥👉✔️🌷🙏\+💵💰🎁\r\n]*[$€]?\s*([0-9]+(?:[\.,][0-9]+)?(?:\s*(?:دولار|dollar|€|eur|\$))?|[A-Za-z0-9_\-]{3,25})', re.IGNORECASE),
-    re.compile(r'🌷\s*(?:(?:ال)?قسيمـ?ة\s*البـ?ائع|coupon\s*vendeur|store\s*coupon)?\s*[:：]?\s*(?:<code>|\*\*|`)*([0-9]+(?:[\.,][0-9]+)?\$?|[A-Za-z0-9_\-]{3,25})', re.IGNORECASE),
+    re.compile(r'🌷\s*(?:(?:ال)?قسيمـ?ة\s*(?:البـ?ائع|المتجر)?|(?:كوبون|كود)\s*(?:المتجر|البائع)|coupon\s*vendeur|store\s*coupon)\s*[:：]?\s*(?:<code>|\*\*|`)*([0-9]+(?:[\.,][0-9]+)?\$?|[A-Za-z0-9_\-]{3,25})', re.IGNORECASE),
 ]
 
 
@@ -218,6 +218,11 @@ def is_allowed_category(title: str, text: str, channel_username: str = "") -> Tu
 def is_spam_or_non_deal(text: str) -> Tuple[bool, Optional[str]]:
     if not text or len(text.strip()) < 10:
         return True, "Message is too short or empty"
+
+    # Reject competitor affiliate-exclusive deals
+    is_aff, aff_reason = is_affiliate_exclusive_deal(text)
+    if is_aff:
+        return True, f"Competitor affiliate-exclusive deal rejected: {aff_reason}"
 
     lower_text = text.lower()
 
@@ -465,10 +470,10 @@ def is_competitor_branded_code(code: str) -> bool:
     if not code:
         return False
     cl = code.lower().strip()
-    for brand in ["anis", "bnd", "zed", "lody", "ecks", "megaprix", "megaphonna", "cp4dz", "francecp", "alifrdrop", "anishays", "couponsglobal"]:
+    for brand in ["anis", "bnd", "zed", "lody", "ecks", "megaprix", "megaphonna", "pcgaming", "cp4dz", "francecp", "alifrdrop", "anishays", "couponsglobal"]:
         if cl.startswith(brand) or f"_{brand}" in cl or f"-{brand}" in cl:
             return True
-        if brand in ["anis", "megaprix", "megaphonna", "ecks"] and brand in cl:
+        if brand in ["anis", "megaprix", "megaphonna", "ecks", "pcgaming"] and brand in cl:
             return True
     return False
 
@@ -798,9 +803,9 @@ def extract_seller_coupon(text: str) -> Optional[str]:
     norm = re.sub(r'[\u0640]', '', text)
     blacklist = {"http", "https", "aliexpress", "link", "url", "temu", "t.me", "bot"}
 
-    # 1. Combined amount and code: e.g. "كوبون حصري 8$ ANISHAYS40" or "حصل قسيمة البائع $80: T0F4TZ"
+    # 1. Combined amount and code: e.g. "احجز كوبون المتجر 8$ KR0864" or "حصل قسيمة البائع $80: T0F4TZ"
     p_combined = re.search(
-        r'(?:حصل\s*|احجز\s*)?(?:قسيمة|كوبون|كود)\s*(?:البائع|المتجر|خاصة\s*بالمتجر|حصري|خاص|store\s*coupon|seller\s*coupon|exclusive)'
+        r'(?:حصل\s*|احجز\s*)?(?:قسيمة|كوبون|كود)\s*(?:البائع|المتجر|خاصة\s*بالمتجر|store\s*coupon|seller\s*coupon)'
         r'[\s:：\-=ـ_•*~|()✅🔥👉✔️🌷🙏\+💵💰🎁\r\n]*'
         r'[$]?\s*([0-9]+(?:\.[0-9]+)?)\s*[$]?'
         r'[\s:：\-=ـ_•*~|()✅🔥👉✔️🌷🙏\+💵💰🎁\r\n]+'
@@ -822,9 +827,9 @@ def extract_seller_coupon(text: str) -> Optional[str]:
             if not is_competitor_branded_code(code):
                 return f"{amount}$ (كود: {code})" if amount else code
 
-    # 2. Code only: e.g. "🎁💰احجز كوبون المتجر 💵:\nKR0864" or "كوبون حصري ANISHAYS40"
+    # 2. Code only: e.g. "🎁💰احجز كوبون المتجر 💵:\nKR0864"
     p_code = re.search(
-        r'(?:حصل\s*|احجز\s*)?(?:قسيمة|كوبون|كود)\s*(?:البائع|المتجر|خاصة\s*بالمتجر|حصري|خاص|store\s*coupon|seller\s*coupon|exclusive)'
+        r'(?:حصل\s*|احجز\s*)?(?:قسيمة|كوبون|كود)\s*(?:البائع|المتجر|خاصة\s*بالمتجر|store\s*coupon|seller\s*coupon)'
         r'[\s:：\-=ـ_•*~|()✅🔥👉✔️🌷🙏\+💵💰🎁\r\n]+'
         r'([A-Za-z][A-Za-z0-9_-]{3,24})',
         norm,
@@ -853,6 +858,69 @@ def extract_seller_coupon(text: str) -> Optional[str]:
             if not is_competitor_branded_code(code):
                 return code
     return None
+
+
+def is_affiliate_exclusive_deal(text: str, title: Optional[str] = None) -> Tuple[bool, Optional[str]]:
+    """
+    Detects if a competitor Telegram post is an affiliate-exclusive deal.
+    Such deals rely on channel-exclusive promo codes, exclusive partner coupons,
+    or exclusive creator discounts (e.g. 'خاص بمتابعين القناة', 'كوبون حصري',
+    or competitor-branded coupons like ZEDHAYHCS04, LODY10, ANIS05).
+
+    These must NEVER be posted because:
+    1. The discounted price is only valid with that specific channel's affiliate link/code.
+    2. Followers of our channel cannot use the coupon with our affiliate link.
+    3. Without the exclusive coupon, the advertised price is inaccurate/misleading.
+    """
+    if not text:
+        return False, None
+
+    norm = re.sub(r'[\u0640]', '', text)
+    lower_text = norm.lower()
+
+    # 1. Explicit channel-exclusive affiliate keywords
+    AFFILIATE_EXCLUSIVE_KEYWORDS = [
+        "خاص بمتابعين",
+        "خاص بالمتابعين",
+        "خاص بمتابعينا",
+        "خاص بالقناة",
+        "خاص بمشتركي",
+        "خاص بالمشتركين",
+        "كوبون حصري",
+        "كود حصري",
+        "قسيمة حصرية",
+        "حصري لمتابعينا",
+        "حصري للقناة",
+        "حصريا لمتابعينا",
+        "حصرياً لمتابعينا",
+        "حصريا للقناة",
+        "حصرياً للقناة",
+        "exclusive to our followers",
+        "exclusive code",
+        "exclusive coupon"
+    ]
+
+    for kw in AFFILIATE_EXCLUSIVE_KEYWORDS:
+        if kw in lower_text:
+            return True, f"Affiliate-exclusive deal detected (phrase: '{kw}')"
+
+    # 2. Check if post has coupon mentions where ALL codes are competitor-branded
+    coupon_indicators = ["كوبون", "كود", "code", "قسيمة", "promo", "🎟️", "🎫"]
+    has_coupon_mention = any(ind in lower_text for ind in coupon_indicators)
+
+    if has_coupon_mention:
+        # Find all alphanumeric tokens in the message that could be competitor codes
+        tokens = re.findall(r'[A-Za-z0-9_-]{4,25}', norm)
+        competitor_codes = [t for t in tokens if is_competitor_branded_code(t)]
+
+        if competitor_codes:
+            # Check if there are any valid non-competitor coupons extracted
+            multi = extract_multi_coupons(text, title=title)
+            valid_coupons = multi.get("coupons", [])
+            if not valid_coupons:
+                return True, f"Deal relies exclusively on competitor affiliate coupon(s): {competitor_codes}"
+
+    return False, None
 
 
 def detect_points_discount(text: str) -> bool:

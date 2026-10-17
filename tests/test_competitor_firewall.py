@@ -81,3 +81,51 @@ async def test_publisher_firewall_blocks_competitor():
     )
     assert success is False
     assert "SECURITY RULE VIOLATION" in err
+
+
+def test_is_affiliate_exclusive_deal_detection():
+    from app.aliexpress.parser import is_affiliate_exclusive_deal, is_spam_or_non_deal
+
+    # 1. Post with 'خاص بمتابعين القناة' and competitor code 'ZEDHAYHCS04'
+    zed_post = """كوبون 3 دولار خاص بمتابعين القناة استخدمه ZEDHAYHCS04 
+😍😍
+⭐️
+HAYLOU Faro
+💵
+السعر 17.2$
+🔥
+🌷
+كوبون حصري 3$ :   ZEDHAYHCS04
+🔗
+رابط المنتج   https://s.click.aliexpress.com/e/_c3lJDYXB
+"""
+    is_aff, reason = is_affiliate_exclusive_deal(zed_post, title="HAYLOU Watch Faro")
+    assert is_aff is True
+    assert "خاص بمتابعين" in reason or "competitor affiliate" in reason
+
+    # Must also be caught by is_spam_or_non_deal
+    is_spam, spam_reason = is_spam_or_non_deal(zed_post)
+    assert is_spam is True
+    assert "Competitor affiliate-exclusive" in spam_reason
+
+    # 2. Post with competitor code LODY10 and 'خاص بمتابعينا'
+    lody_post = "عرض هاتف بسعر 100$\nكود حصري خاص بمتابعينا : LODY10\nhttps://s.click.aliexpress.com/e/_xxx"
+    is_aff, reason = is_affiliate_exclusive_deal(lody_post)
+    assert is_aff is True
+
+    # 3. Normal deal with public AliExpress Choice Day coupon WOAE02 must NOT be blocked
+    public_post = """غير البلد الى كندا 🇨🇦
+⭐️ HAYLOU Watch Faro Voice Calling Smart Watch
+💵 السعر 19$    🔥
+🌷  احجــز قسيمــة البــائع 2$ 
+🙏 كـوبون 2/15$ :
+⏺ WOAE02
+🔗 رابـــــط المنتـــج   https://s.click.aliexpress.com/e/_c4eApLfr
+"""
+    is_aff, reason = is_affiliate_exclusive_deal(public_post, title="HAYLOU Watch Faro Voice Calling Smart Watch")
+    assert is_aff is False
+    assert reason is None
+
+    is_spam, _ = is_spam_or_non_deal(public_post)
+    assert is_spam is False
+

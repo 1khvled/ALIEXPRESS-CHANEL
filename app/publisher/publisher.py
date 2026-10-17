@@ -123,6 +123,14 @@ class TelegramPublisher:
             logger.critical(err_msg)
             return False, err_msg
 
+        # AFFILIATE-EXCLUSIVE DEAL FIREWALL: Never publish competitor affiliate-exclusive deals
+        from app.aliexpress.parser import is_affiliate_exclusive_deal
+        is_aff, aff_reason = is_affiliate_exclusive_deal(caption, title=deal.title)
+        if is_aff:
+            err_msg = f"SECURITY RULE VIOLATION: Competitor affiliate-exclusive deal blocked: {aff_reason}"
+            logger.critical(err_msg)
+            return False, err_msg
+
         # CATEGORY FIREWALL: Guarantee non-phones never get published with smartphone headers
         from app.ai.category_firewall import sanitize_caption_category
         caption, was_sanitized = sanitize_caption_category(caption, deal.title)
