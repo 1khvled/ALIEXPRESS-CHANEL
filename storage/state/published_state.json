@@ -296,7 +296,8 @@
     "1005013137396211",
     "1005012575455222",
     "1005013096683979",
-    "1005012398164621"
+    "1005012398164621",
+    "1005013354356242"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -604,7 +605,8 @@
     "1005013137396211": 1792191325.4876726,
     "1005012575455222": 1792191334.3232646,
     "1005013096683979": 1792200008.0113943,
-    "1005012398164621": 1792200023.6138296
+    "1005012398164621": 1792200023.6138296,
+    "1005013354356242": 1792272690.9206734
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1208,7 +1210,7 @@
     "ساعة قوووووووة من BLACKSHARK🔥": 1792017733.3056524,
     "UGREEN 45W GaN Charger PD3.0 PPS QC3.0 Quick Charge": 1792017762.9428782,
     "HOCO E91 Smart Airtag GPS Positioning Pet Anti-Lost": 1792017769.7299333,
-    "Smart Body Fat Scale Accurate": 1792017774.247927,
+    "Smart Body Fat Scale Accurate": 1792272690.9206734,
     "ماوس ألعاب سلكي خفيف الوزن من GameSir GM500 مزود بمستشعر بصري يصل إلى 12000 DPI": 1792025644.3094199,
     "Anker Nano 3 Pro 45W GaN + Cable": 1792025649.1506214,
     "محبوبة الجماهير controller🎮": 1792025664.1703467,
@@ -1986,27 +1988,28 @@
     "ecksdeal:5895",
     "megaphonna:8432",
     "megaphonna:8431",
-    "pcgamingpart:7986"
+    "pcgamingpart:7986",
+    "couponsglobal:48864"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792245292.4631972,
+  "last_run_time": 1792272690.9206734,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32993,
-      "last_check_time": 1792264371.8336356
+      "last_check_time": 1792272682.8361998
     },
     "ecksdeal": {
       "last_message_id": 5898,
-      "last_check_time": 1792264372.5574093
+      "last_check_time": 1792272683.3355591
     },
     "lodydeals": {
       "last_message_id": 45576,
-      "last_check_time": 1792264370.6899722
+      "last_check_time": 1792272682.0711944
     },
     "bnddeals": {
       "last_message_id": 50863,
-      "last_check_time": 1792264373.546341
+      "last_check_time": 1792272684.1859205
     },
     "test_channel": {
       "last_message_id": 1792186463,
@@ -2014,19 +2017,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7986,
-      "last_check_time": 1792264373.0483441
+      "last_check_time": 1792272683.797371
     },
     "zedstoreonline": {
       "last_message_id": 38630,
-      "last_check_time": 1792256192.3072867
+      "last_check_time": 1792272682.4435816
     },
     "megaphonna": {
       "last_message_id": 8439,
-      "last_check_time": 1792264374.1446881
+      "last_check_time": 1792272684.63622
     },
     "couponsglobal": {
-      "last_message_id": 48863,
-      "last_check_time": 1792264374.7194076
+      "last_message_id": 48864,
+      "last_check_time": 1792272692.9411883
     }
   },
   "published_product_prices": {
@@ -2266,7 +2269,8 @@
     "1005012826843176": 60.1,
     "1005012150344482": 25.94,
     "1005006678195057": 32.62,
-    "1005012398164621": 325.9
+    "1005012398164621": 325.9,
+    "1005013354356242": 6.72
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6571,6 +6575,16 @@
       "price": 6.4,
       "timestamp": 1792233107.1523154,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48864": {
+      "channel_msg_id": 971,
+      "product_id": "1005013354356242",
+      "title": "Smart Body Fat Scale Accurate",
+      "channel": "couponsglobal",
+      "source_msg_id": 48864,
+      "price": 6.72,
+      "timestamp": 1792272690.9206734,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6579,17 +6593,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792245300.0259454,
+    "last_deal_post_time": 1792272692.9572158,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792264378.0186448,
+    "last_sweep_time": 1792272695.9814138,
     "last_sweep_times": {
-      "algeria": 1792264374.7311914,
-      "france": 1792264378.0186448
+      "algeria": 1792272692.9491253,
+      "france": 1792272695.9814138
     },
     "last_deal_post_times": {
-      "algeria": 1792245300.0259454
+      "algeria": 1792272692.9572158
     }
   },
   "last_coin_reminder_time": 1792166302.7026794,
@@ -6907,7 +6921,8 @@
     "1005012150344482": "couponsglobal",
     "1005012545304504": "lodydeals",
     "1005010385663278": "couponsglobal",
-    "1005012398164621": "megaphonna"
+    "1005012398164621": "megaphonna",
+    "1005013354356242": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7424,6 +7439,10 @@
     "2026-10-16": {
       "timestamp": 1792182685.3908823,
       "bulletins_count": 4
+    },
+    "2026-10-17": {
+      "timestamp": 1792272679.9943383,
+      "bulletins_count": 1
     }
   },
   "regrouped_channel_msg_ids": [
@@ -7553,7 +7572,11 @@
     912,
     916,
     917,
-    918
+    918,
+    962,
+    963,
+    964,
+    968
   ],
   "pinned_promo_events": {
     "Party Ready Sale / Choice Day_20261001": 505,
@@ -7572,7 +7595,7 @@
   ],
   "last_card_affiliate_time_dz": 1792233089.7517264,
   "card_affiliate_variant_idx_dz": 2,
-  "last_tajmi3at_published_time": 1792182685.3908823,
+  "last_tajmi3at_published_time": 1792272679.9943383,
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
