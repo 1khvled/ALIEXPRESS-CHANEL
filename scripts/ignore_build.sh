@@ -4,34 +4,37 @@
 # Exit 0 = CANCEL/SKIP BUILD (Do not deploy, save storage & build quotas)
 # Exit 1 = PROCEED WITH BUILD (Deploy)
 
+# Robust fallback: use git directly if Vercel system environment variables are not exposed
+COMMIT_MSG="${VERCEL_GIT_COMMIT_MESSAGE:-$(git log -1 --pretty=format:'%B' 2>/dev/null)}"
+COMMIT_AUTHOR="${VERCEL_GIT_COMMIT_AUTHOR_LOGIN:-$(git log -1 --pretty=format:'%an %ae' 2>/dev/null)}"
+COMMIT_SHA="${VERCEL_GIT_COMMIT_SHA:-$(git rev-parse HEAD 2>/dev/null)}"
+
 echo "=== Vercel Ignore Build Check ==="
-echo "Commit Message: $VERCEL_GIT_COMMIT_MESSAGE"
-echo "Commit Ref:     $VERCEL_GIT_COMMIT_REF"
-echo "Commit Author:  $VERCEL_GIT_COMMIT_AUTHOR_LOGIN"
-echo "Commit SHA:     $VERCEL_GIT_COMMIT_SHA"
+echo "Commit Message: $COMMIT_MSG"
+echo "Commit Author:  $COMMIT_AUTHOR"
+echo "Commit SHA:     $COMMIT_SHA"
 
 # 1. Force deploy keyword overrides all skip rules
-if echo "$VERCEL_GIT_COMMIT_MESSAGE" | grep -qiE '\[force deploy\]|\[deploy\]'; then
+if echo "$COMMIT_MSG" | grep -qiE '\[force deploy\]|\[deploy\]'; then
   echo ">>> [force deploy] keyword detected. Proceeding with Vercel build."
   exit 1
 fi
 
 # 2. Skip automated database update bot commits and explicit skip flags
-if echo "$VERCEL_GIT_COMMIT_MESSAGE" | grep -qiE '\[skip vercel\]|\[vercel skip\]|\[skip ci\]|\[ci skip\]|Auto-update deals database'; then
+if echo "$COMMIT_MSG" | grep -qiE '\[skip vercel\]|\[vercel skip\]|\[skip ci\]|\[ci skip\]|Auto-update deals database'; then
   echo ">>> Skip flag or automated database update commit detected. Skipping Vercel build."
   exit 0
 fi
 
 # 3. Skip if commit author is GitHub Actions bot
-COMMIT_AUTHOR="${VERCEL_GIT_COMMIT_AUTHOR_LOGIN:-$(git log -1 --pretty=format:'%an %ae' 2>/dev/null)}"
 if echo "$COMMIT_AUTHOR" | grep -qiE 'github-actions|action@github\.com|GitHub Action'; then
   echo ">>> GitHub Actions bot author detected ($COMMIT_AUTHOR). Skipping Vercel build."
   exit 0
 fi
 
 # 4. Check changed files between deployments
-if [ -n "$VERCEL_GIT_PREVIOUS_SHA" ] && [ -n "$VERCEL_GIT_COMMIT_SHA" ]; then
-  CHANGED_FILES=$(git diff --name-only "$VERCEL_GIT_PREVIOUS_SHA" "$VERCEL_GIT_COMMIT_SHA" 2>/dev/null)
+if [ -n "$VERCEL_GIT_PREVIOUS_SHA" ] && [ -n "$COMMIT_SHA" ]; then
+  CHANGED_FILES=$(git diff --name-only "$VERCEL_GIT_PREVIOUS_SHA" "$COMMIT_SHA" 2>/dev/null)
 else
   CHANGED_FILES=$(git diff --name-only HEAD~1 HEAD 2>/dev/null || git diff --name-only HEAD^ HEAD 2>/dev/null)
 fi
