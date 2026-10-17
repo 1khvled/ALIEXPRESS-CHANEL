@@ -394,7 +394,7 @@
     "1005008901941749": 1790973051.970508,
     "1005010178295650": 1791031559.2102907,
     "1005006861002512": 1791151259.5667012,
-    "1005012285327063": 1792172089.5340507,
+    "1005012285327063": 1792245292.4631972,
     "1005006581583862": 1791013842.0461159,
     "1005012816171978": 1792157876.0860639,
     "1005010585654037": 1790978149.8785934,
@@ -928,7 +928,8 @@
     "يد تحكم  GameSir Tarantula 8K TMR",
     "HONOR 600S (8/256)",
     "HONOR WIN TURBO (12/256)",
-    "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital"
+    "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital",
+    "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1257,7 +1258,8 @@
     "يد تحكم  GameSir Tarantula 8K TMR": 1792200008.0113943,
     "HONOR 600S (8/256)": 1792200023.6138296,
     "HONOR WIN TURBO (12/256)": 1792200031.9265065,
-    "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": 1792233107.1523154
+    "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": 1792233107.1523154,
+    "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": 1792245292.4631972
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1988,27 +1990,28 @@
     "ecksdeal:5895",
     "megaphonna:8432",
     "megaphonna:8431",
-    "pcgamingpart:7986"
+    "pcgamingpart:7986",
+    "zedstoreonline:38630"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792233107.1523154,
+  "last_run_time": 1792245292.4631972,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32992,
-      "last_check_time": 1792233102.3375335
+      "last_message_id": 32993,
+      "last_check_time": 1792245298.0070622
     },
     "ecksdeal": {
       "last_message_id": 5897,
-      "last_check_time": 1792233102.781045
+      "last_check_time": 1792245298.4184234
     },
     "lodydeals": {
       "last_message_id": 45576,
-      "last_check_time": 1792233101.4778438
+      "last_check_time": 1792245288.216081
     },
     "bnddeals": {
       "last_message_id": 50863,
-      "last_check_time": 1792233110.7248008
+      "last_check_time": 1792245299.1425114
     },
     "test_channel": {
       "last_message_id": 1792186463,
@@ -2016,19 +2019,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7986,
-      "last_check_time": 1792233109.3607419
+      "last_check_time": 1792245298.779875
     },
     "zedstoreonline": {
-      "last_message_id": 38628,
-      "last_check_time": 1792233101.848434
+      "last_message_id": 38630,
+      "last_check_time": 1792245296.459307
     },
     "megaphonna": {
-      "last_message_id": 8437,
-      "last_check_time": 1792233111.1206744
+      "last_message_id": 8438,
+      "last_check_time": 1792245299.6483285
     },
     "couponsglobal": {
       "last_message_id": 48863,
-      "last_check_time": 1792233111.4641047
+      "last_check_time": 1792245300.0133424
     }
   },
   "published_product_prices": {
@@ -2114,7 +2117,7 @@
     "1005012554205120": 7.22,
     "1005008901941749": 1.2,
     "1005006861002512": 13.56,
-    "1005012285327063": 19.0,
+    "1005012285327063": 17.2,
     "1005006581583862": 25.0,
     "1005012816171978": 274.46,
     "1005009834132291": 25.2,
@@ -6573,6 +6576,16 @@
       "price": 6.4,
       "timestamp": 1792233107.1523154,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38630": {
+      "channel_msg_id": 969,
+      "product_id": "1005012285327063",
+      "title": "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38630,
+      "price": 17.2,
+      "timestamp": 1792245292.4631972,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6581,17 +6594,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792233111.4902668,
+    "last_deal_post_time": 1792245300.0259454,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792233114.0000894,
+    "last_sweep_time": 1792245302.5310333,
     "last_sweep_times": {
-      "algeria": 1792233111.472035,
-      "france": 1792233114.0000894
+      "algeria": 1792245300.0198317,
+      "france": 1792245302.5310333
     },
     "last_deal_post_times": {
-      "algeria": 1792233111.4902668
+      "algeria": 1792245300.0259454
     }
   },
   "last_coin_reminder_time": 1792166302.7026794,
@@ -7241,7 +7254,8 @@
     "K500-B61 Machenike  Mechanical Keybaord 61Keys Gaming RGB": "couponsglobal",
     "HONOR 600S (8/256)": "megaphonna",
     "HONOR WIN TURBO (12/256)": "megaphonna",
-    "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": "pcgamingpart"
+    "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": "pcgamingpart",
+    "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -7949,7 +7963,10 @@
     "megaphonna:8437",
     "megaphonna:8433",
     "couponsglobal:48863",
-    "bnddeals:50863"
+    "bnddeals:50863",
+    "zedstoreonline:38629",
+    "aniscoupons:32993",
+    "megaphonna:8438"
   ],
   "last_france_cross_promo_time": 1792222009.8603575,
   "next_france_cross_promo_interval_seconds": 182207,
