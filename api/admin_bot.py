@@ -1034,19 +1034,20 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
     if text.startswith("/notify_end") or text.startswith("نهاية التخفيضات") or text.startswith("تنبيه نهاية"):
         await send_admin_msg(chat_id, "⏳ جاري تجهيز ونشر تنبيه اقتراب نهاية التخفيضات في القناة @DzAliexpress0...")
         try:
-            from app.publisher.promo_notifiers import build_promo_ending_alert, send_promo_alert_to_channel, record_promo_notifier_sent
+            from app.publisher.promo_notifiers import build_promo_ending_alert, send_promo_alert_to_channel, record_promo_notifier_sent, get_event_ended_image_path
             from app.aliexpress.promos import promo_tracker
             now = datetime.now(timezone.utc)
             promo = promo_tracker.get_active_promo(now)
             if not promo:
                 promo = promo_tracker.calendar[0]
             alert_text, markup = build_promo_ending_alert(promo)
-            success, err, msg_id = await send_promo_alert_to_channel(alert_text, markup, bot_token=ADMIN_BOT_TOKEN)
+            img_path = get_event_ended_image_path()
+            success, err, msg_id = await send_promo_alert_to_channel(alert_text, markup, bot_token=ADMIN_BOT_TOKEN, image_path=img_path)
             if success:
                 ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
                 post_url = f"https://t.me/{ch_clean}/{msg_id}"
                 record_promo_notifier_sent(f"MANUAL_END_{promo.name}_{now.strftime('%Y%m%d')}")
-                await send_admin_msg(chat_id, f"✅ <b>تم نشر تنبيه اقتراب نهاية التخفيضات بنجاح في القناة!</b>\n🔗 <a href=\"{post_url}\">{post_url}</a>")
+                await send_admin_msg(chat_id, f"✅ <b>تم نشر تنبيه نهاية التخفيضات بالصورة الرسمية بنجاح في القناة!</b>\n🔗 <a href=\"{post_url}\">{post_url}</a>")
             else:
                 await send_admin_msg(chat_id, f"❌ فشل النشر: {err}")
         except Exception as e:
@@ -1056,18 +1057,19 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
     if text.startswith("/notify_start") or text.startswith("انطلاق التخفيضات") or text.startswith("تنبيه بداية"):
         await send_admin_msg(chat_id, "⏳ جاري تجهيز ونشر تنبيه الاستعداد لانطلاق التخفيضات في القناة @DzAliexpress0...")
         try:
-            from app.publisher.promo_notifiers import build_promo_starting_alert, send_promo_alert_to_channel, record_promo_notifier_sent
+            from app.publisher.promo_notifiers import build_promo_starting_alert, send_promo_alert_to_channel, record_promo_notifier_sent, get_event_started_image_path
             from app.aliexpress.promos import promo_tracker
             now = datetime.now(timezone.utc)
             next_res = promo_tracker.get_next_promo(now)
             promo = next_res[0] if next_res else promo_tracker.calendar[0]
             alert_text, markup = build_promo_starting_alert(promo)
-            success, err, msg_id = await send_promo_alert_to_channel(alert_text, markup, bot_token=ADMIN_BOT_TOKEN)
+            img_path = get_event_started_image_path()
+            success, err, msg_id = await send_promo_alert_to_channel(alert_text, markup, bot_token=ADMIN_BOT_TOKEN, image_path=img_path)
             if success:
                 ch_clean = str(TARGET_CHANNEL_ID).lstrip("@")
                 post_url = f"https://t.me/{ch_clean}/{msg_id}"
                 record_promo_notifier_sent(f"MANUAL_START_{promo.name}_{now.strftime('%Y%m%d')}")
-                await send_admin_msg(chat_id, f"✅ <b>تم نشر تنبيه الاستعداد لانطلاق التخفيضات بنجاح في القناة!</b>\n🔗 <a href=\"{post_url}\">{post_url}</a>")
+                await send_admin_msg(chat_id, f"✅ <b>تم نشر تنبيه بداية التخفيضات بالصورة الرسمية بنجاح في القناة!</b>\n🔗 <a href=\"{post_url}\">{post_url}</a>")
             else:
                 await send_admin_msg(chat_id, f"❌ فشل النشر: {err}")
         except Exception as e:

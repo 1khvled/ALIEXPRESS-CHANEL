@@ -11,6 +11,7 @@ import json
 import httpx
 from datetime import datetime, timezone, timedelta
 from typing import Optional, Tuple, Dict, Any, List
+from pathlib import Path
 
 from app.config.settings import settings
 from app.aliexpress.promos import promo_tracker, PromoEvent
@@ -24,35 +25,100 @@ TARGET_CHANNEL_ID = os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
 TELEGRAM_BOT_TOKEN = getattr(settings, "TELEGRAM_BOT_TOKEN", "") or os.getenv("TELEGRAM_BOT_TOKEN", "")
 ADMIN_BOT_TOKEN = getattr(settings, "ADMIN_BOT_TOKEN", "") or os.getenv("ADMIN_BOT_TOKEN", "")
 
+# Official DealScout Event Ended photo paths
+EVENT_ENDED_IMAGE_PATHS = [
+    str(Path(settings.BASE_DIR) / "assets" / "dealscout_event_ended.png"),
+    str(Path(settings.BASE_DIR) / "app" / "assets" / "dealscout_event_ended.png"),
+    os.path.join(os.path.dirname(__file__), "..", "assets", "dealscout_event_ended.png"),
+    r"C:\Users\Abdelli\Downloads\DealScout_ انتهاء العروض.png",
+]
 
-def build_promo_ending_alert(promo: PromoEvent, end_hour_str: str = "08:00") -> Tuple[str, Dict[str, Any]]:
+def get_event_ended_image_path() -> Optional[str]:
+    """Resolves the DealScout Event Ended photo with robust fallbacks."""
+    for p in EVENT_ENDED_IMAGE_PATHS:
+        if os.path.exists(p):
+            return p
+    return None
+
+
+# Official DealScout Event Started / Kickoff photo paths
+EVENT_STARTED_IMAGE_PATHS = [
+    str(Path(settings.BASE_DIR) / "assets" / "dealscout_event_started.png"),
+    str(Path(settings.BASE_DIR) / "app" / "assets" / "dealscout_event_started.png"),
+    os.path.join(os.path.dirname(__file__), "..", "assets", "dealscout_event_started.png"),
+    r"C:\Users\Abdelli\Downloads\DealScout AliExpress Sale Kickoff.png",
+]
+
+def get_event_started_image_path() -> Optional[str]:
+    """Resolves the DealScout Event Kickoff / Start photo with robust fallbacks."""
+    for p in EVENT_STARTED_IMAGE_PATHS:
+        if os.path.exists(p):
+            return p
+    return None
+
+
+def build_promo_ending_alert(promo: Optional[PromoEvent] = None, end_hour_str: str = "الثامنة") -> Tuple[str, Dict[str, Any]]:
     """
-    Builds the ending notifier post matching the reference channel alert:
-    - Native Telegram blockquote alert
-    - Coupon deadline notification
-    - Pro-tip: Freezing/empty card price lock trick (حجز ببطاقة مجمدة 20 يوم)
-    - Branded DealScout theme & inline links
+    Builds the ending notifier post matching the user reference screenshot:
+    - Blockquote alert: تنتهي التخفيضات غدا صباحا على الساعة الثامنة
+    - Last chance for coupons
+    - 20-day frozen card reservation trick
+    - Links to bot and telegram channel
+    - Inline keyboard buttons
     """
+    hour_label = "الثامنة" if end_hour_str in ["08:00", "الثامنة", "8:00", "8"] else end_hour_str
     lines = [
-        f"<blockquote>⚠️ <b>تنتهي التخفيضات غداً صباحاً عند الساعة {end_hour_str}!</b></blockquote>",
+        f"<blockquote>⚠️ <b>تنتهي التخفيضات غدا صباحا على الساعة {hour_label}</b></blockquote>",
         "",
-        f"📌 <b>الفعالية الحالية:</b> {promo.name_ar}",
+        "❌ <b>آخر فرصة للإستفادة من الكوبونات</b>",
         "",
-        "❌ <b>آخر فرصة للاستفادة من الكوبونات:</b>",
-        "جميع قسائم التخفيض وأكواد الخصم الحالية ستتوقف عن العمل فور انتهاء الموعد.",
+        "✅ <b>يمكن حجز بعض المنتجات ببطاقة مجمدة لمدة تصل الى 20 يوم بعد انتهاء التخفيضات</b>",
         "",
-        "✅ <b>حيلة المحترفين (حجز وتثبيت السعر):</b>",
-        "يمكنك حجز المنتجات المستهدفة الآن واختيار الدفع ببطاقة بنكية فارغة أو مجمدة (RedotPay / Paysera / Pyypl) لتثبيت سعر التخفيض في حسابك لمدة تصل إلى <b>20 يوماً</b>، وإتمام الدفع لاحقاً بعد انتهاء الفعالية!",
-        "━━━━━━━━━━━━━━━━━",
-        "🪙 <b>بوت مضاعفة تخفيض العملات:</b> @Alilo07BOT",
-        "📢 <b>قناة الصفقات المعتمدة:</b> @DzAliexpress0"
+        "🤖 <b>البوت لتخفيض الاسعار :</b> https://t.me/Alilo07BOT",
+        "",
+        "📢 <b>قناة التيليغرام للمزيد من العروض :</b> https://t.me/DzAliexpress0"
     ]
 
     text = "\n".join(lines)
     reply_markup = {
         "inline_keyboard": [
             [
-                {"text": "🪙 بوت تخفيض العملات DealScout", "url": "https://t.me/Alilo07BOT"}
+                {"text": "🪙 البوت لتخفيض الأسعار", "url": "https://t.me/Alilo07BOT"}
+            ],
+            [
+                {"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}
+            ]
+        ]
+    }
+    return text, reply_markup
+
+
+def build_promo_concluded_alert(promo: Optional[PromoEvent] = None) -> Tuple[str, Dict[str, Any]]:
+    """
+    Builds the event concluded post when the sale has officially ended:
+    - Official conclusion announcement
+    - Invalidation of coupons
+    - 20-day frozen card reminder
+    - Links to bot and channel
+    - Inline keyboard buttons
+    """
+    promo_name = f" ({promo.name_ar})" if promo and getattr(promo, "name_ar", None) else ""
+    lines = [
+        f"<blockquote>🛑 <b>انتهت رسمياً عروض وتخفيضات علي اكسبرس{promo_name} 🔥</b></blockquote>",
+        "",
+        "❌ <b>انتهت صلاحية جميع الكوبونات وأكواد الخصم الخاصة بهذا الحدث.</b>",
+        "",
+        "✅ <b>يمكن لمن حجز المنتجات ببطاقة مجمدة إتمام الدفع بنفس سعر التخفيض لمدة تصل إلى 20 يوم بعد انتهاء التخفيضات!</b>",
+        "",
+        "🤖 <b>البوت لتخفيض الاسعار :</b> https://t.me/Alilo07BOT",
+        "",
+        "📢 <b>قناة التيليغرام للمزيد من العروض :</b> https://t.me/DzAliexpress0"
+    ]
+    text = "\n".join(lines)
+    reply_markup = {
+        "inline_keyboard": [
+            [
+                {"text": "🪙 البوت لتخفيض الأسعار", "url": "https://t.me/Alilo07BOT"}
             ],
             [
                 {"text": "📢 قناة الصفقات المعتمدة", "url": "https://t.me/DzAliexpress0"}
@@ -255,16 +321,25 @@ async def send_promo_alert_to_channel(
     bot_token: Optional[str] = None,
     channel_id: Optional[str] = None,
     coupon_list: Optional[List[Dict[str, str]]] = None,
-    promo_title: str = "Choice Day"
+    promo_title: str = "Choice Day",
+    image_path: Optional[str] = None
 ) -> Tuple[bool, Optional[str], Optional[int]]:
-    """Dispatches the alert message to the target Telegram channel using generated card graphic."""
+    """Dispatches the alert message to the target Telegram channel using generated card graphic or DealScout photo."""
     from app.media.renderer import media_renderer
     token = bot_token or ADMIN_BOT_TOKEN or TELEGRAM_BOT_TOKEN
     target = channel_id or TARGET_CHANNEL_ID
 
     api_url = f"https://api.telegram.org/bot{token}"
-    card_path = None
-    if coupon_list:
+    card_path = image_path
+
+    # If no specific image_path provided, check if this is an ending or starting event alert
+    if not card_path:
+        if any(kw in text for kw in ["تنتهي التخفيضات", "انتهت التخفيضات", "انتهت رسمياً", "آخر فرصة للإستفادة"]):
+            card_path = get_event_ended_image_path()
+        elif any(kw in text for kw in ["انطلاق تخفيضات", "انطلاق فعاليات", "بدأت التخفيضات", "بداية تخفيضات", "كوبونات حدث", "اقتراب انطلاق"]):
+            card_path = get_event_started_image_path()
+
+    if not card_path and coupon_list:
         card_path = media_renderer.render_coupon_bulletin_card(
             coupon_list,
             promo_title=promo_title,
@@ -290,7 +365,7 @@ async def send_promo_alert_to_channel(
                     resp = await client.post(
                         f"{api_url}/sendPhoto",
                         data=data_payload,
-                        files={"photo": ("promo_card.jpg", pf, "image/jpeg")}
+                        files={"photo": ("promo_alert.png", pf, "image/png")}
                     )
             else:
                 resp = await client.post(
@@ -299,7 +374,8 @@ async def send_promo_alert_to_channel(
                         "chat_id": target,
                         "text": text,
                         "parse_mode": "HTML",
-                        "disable_web_page_preview": True
+                        "disable_web_page_preview": True,
+                        **({"reply_markup": reply_markup} if reply_markup else {})
                     }
                 )
             data = resp.json()
@@ -327,10 +403,11 @@ async def check_and_auto_post_promo_notifiers(
 ) -> List[Dict[str, Any]]:
     """
     Autonomous engine check called on schedule (every 30 mins):
-    1. Checks if any active promo ends within 12 to 36 hours (~1 day before end).
-       If yes, posts the Promo Ending Alert (with card freeze pro-tip).
+    1. Checks if any active promo ends within 12 to 30 hours (~1 day before end).
+       If yes, posts the Promo Ending Alert with DealScout event ended image.
     2. Checks if any upcoming promo starts within 12 to 36 hours (~1 day before start).
        If yes, posts the Promo Starting Alert (with warm-up guide).
+    3. Unpins expired coupon bulletins for ended promos.
     """
     if now is None:
         now = datetime.now(timezone.utc)
@@ -338,17 +415,22 @@ async def check_and_auto_post_promo_notifiers(
     results = []
 
     for promo in promo_tracker.calendar:
-        # --- 1. CHECK PROMO ENDING ALERT (1 DAY BEFORE END) ---
+        # --- 1. CHECK PROMO ENDING ALERT (FINAL 30 HOURS BEFORE END) ---
         # If promo is currently active or ending tomorrow:
         if promo.start_date <= now <= promo.end_date:
             time_until_end = promo.end_date - now
-            # Within ~24 hours before end (between 6h and 36h)
-            if timedelta(hours=6) <= time_until_end <= timedelta(hours=36):
+            # Within ~24-30 hours before end (between 0h and 30h)
+            if timedelta(hours=0) < time_until_end <= timedelta(hours=30):
                 notifier_key = f"END_ALERT_{promo.name}_{promo.end_date.strftime('%Y%m%d')}"
                 if not is_promo_notifier_already_sent(notifier_key):
                     logger.info(f"Triggering Promo Ending Alert for {promo.name} (Ends in {time_until_end.total_seconds()/3600:.1f}h)")
                     text, markup = build_promo_ending_alert(promo)
-                    success, err, msg_id = await send_promo_alert_to_channel(text, markup, bot_token, channel_id, coupon_list=promo.coupon_tiers, promo_title=promo.name)
+                    img_path = get_event_ended_image_path()
+                    success, err, msg_id = await send_promo_alert_to_channel(
+                        text, markup, bot_token, channel_id,
+                        promo_title=promo.name,
+                        image_path=img_path
+                    )
                     if success:
                         record_promo_notifier_sent(notifier_key)
                         results.append({
@@ -367,7 +449,13 @@ async def check_and_auto_post_promo_notifiers(
                 if not is_promo_notifier_already_sent(notifier_key):
                     logger.info(f"Triggering Official Promo Launch Alert for {promo.name}")
                     text, markup = build_promo_launch_alert(promo)
-                    success, err, msg_id = await send_promo_alert_to_channel(text, markup, bot_token, channel_id, coupon_list=promo.coupon_tiers, promo_title=promo.name)
+                    img_path = get_event_started_image_path()
+                    success, err, msg_id = await send_promo_alert_to_channel(
+                        text, markup, bot_token, channel_id,
+                        coupon_list=promo.coupon_tiers,
+                        promo_title=promo.name,
+                        image_path=img_path
+                    )
                     if success:
                         record_promo_notifier_sent(notifier_key)
                         results.append({
@@ -378,6 +466,28 @@ async def check_and_auto_post_promo_notifiers(
                         })
                     else:
                         logger.error(f"Failed to post promo launch alert: {err}")
+
+        # --- 1B. CLEAN UP PINNED COUPONS ONCE EVENT ENDS ---
+        elif now > promo.end_date:
+            try:
+                state = load_persistent_state()
+                pinned_promos = state.get("pinned_promo_events", {})
+                promo_key = f"{promo.name}_{promo.start_date.strftime('%Y%m%d')}"
+                pinned_id = pinned_promos.get(promo_key)
+                if pinned_id:
+                    token = bot_token or ADMIN_BOT_TOKEN or TELEGRAM_BOT_TOKEN
+                    target = channel_id or TARGET_CHANNEL_ID
+                    api_url = f"https://api.telegram.org/bot{token}"
+                    async with httpx.AsyncClient(timeout=10.0) as client:
+                        await client.post(
+                            f"{api_url}/unpinChatMessage",
+                            json={"chat_id": target, "message_id": pinned_id}
+                        )
+                    del pinned_promos[promo_key]
+                    save_persistent_state(state)
+                    logger.info(f"Unpinned expired coupon bulletin #{pinned_id} for ended promo {promo.name}")
+            except Exception as ue:
+                logger.debug(f"Unpin expired coupons check: {ue}")
 
         # --- 2. CHECK PROMO STARTING ALERT (1 DAY BEFORE START) ---
         elif now < promo.start_date:
@@ -442,7 +552,13 @@ async def ensure_active_promo_coupons_pinned(
     # Build and post the official coupon bulletin for this active event
     logger.info(f"[PROMO PIN] Publishing and pinning official event coupon bulletin for {promo.name}...")
     text, markup = build_promo_launch_alert(promo)
-    success, err, msg_id = await send_promo_alert_to_channel(text, markup, token, target, coupon_list=promo.coupon_tiers, promo_title=promo.name)
+    img_path = get_event_started_image_path()
+    success, err, msg_id = await send_promo_alert_to_channel(
+        text, markup, token, target,
+        coupon_list=promo.coupon_tiers,
+        promo_title=promo.name,
+        image_path=img_path
+    )
     if success and msg_id:
         if "pinned_promo_events" not in state:
             state["pinned_promo_events"] = {}
