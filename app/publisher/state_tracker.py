@@ -1282,4 +1282,80 @@ def record_deal_posted_time(channel: str = "algeria"):
     save_persistent_state(state)
 
 
+# ── Pre-11.11 & Black Friday Currency & Warm-up Advisory Tracking ──
+def is_pre_11_11_season(now_dt: Optional[datetime] = None) -> bool:
+    """
+    Checks if the current date is strictly within the Pre-11.11 & Black Friday warm-up season.
+    Active strictly between October 10th and November 10th.
+    Never active for regular Choice Day or any other events.
+    """
+    dz_tz = timezone(timedelta(hours=1))
+    if now_dt is None:
+        now_dt = datetime.now(dz_tz)
+    elif now_dt.tzinfo is None:
+        now_dt = now_dt.replace(tzinfo=dz_tz)
+    else:
+        now_dt = now_dt.astimezone(dz_tz)
+
+    m = now_dt.month
+    d = now_dt.day
+    return (m == 10 and d >= 10) or (m == 11 and d <= 10)
+
+
+async def is_pre_11_11_advisory_eligible(force: bool = False) -> Tuple[bool, str]:
+    """
+    Checks if the Pre-11.11 & Black Friday currency advisory is eligible to post:
+    1. Season: strictly Pre-11.11 only (Oct 10 - Nov 10).
+    2. Interval: randomized every 3 to 4 days (72 to 96 hours with jitter).
+    3. Duplicate safety: checks live channel texts.
+    """
+    if force:
+        return True, "Eligible (forced by user/admin)"
+
+    if not is_pre_11_11_season():
+        return False, "Outside Pre-11.11 season (Advisories strictly active Oct 10 - Nov 10 only)"
+
+    state = load_persistent_state()
+    now = time.time()
+    last_time = state.get("last_pre_11_11_advisory_time", 0.0)
+
+    # Randomized 3-4 days interval (72 - 96 hours)
+    jitter_seconds = state.get("next_pre_11_11_interval_seconds", 72 * 3600)
+    elapsed = now - last_time
+    if elapsed < jitter_seconds:
+        hours_left = (jitter_seconds - elapsed) / 3600.0
+        return False, f"Pre-11.11 advisory cooldown active ({hours_left:.1f} hours remaining, interval {jitter_seconds / 3600:.1f}h)"
+
+    await refresh_channel_cache()
+    for t in _CACHED_CHANNEL_TEXTS:
+        if any(kw in t for kw in [
+            "باقي اقل من شهر على التخفيضات الكبرى",
+            "باقي أقل من شهر على التخفيضات الكبرى",
+            "بشراء الدولار و الاورو من الآن",
+            "بشراء الدولار والأورو من الآن",
+            "الاستعداد لأكبر حدث في السنة (11.11",
+            "العد التنازلي لمهرجان نوفمبر الأسطوري 11/11"
+        ]):
+            state["last_pre_11_11_advisory_time"] = now
+            save_persistent_state(state)
+            return False, "Pre-11.11 advisory text already visible in recent channel messages"
+
+    return True, "Pre-11.11 advisory eligible for publication"
+
+
+def record_pre_11_11_advisory_published(variant_idx: int):
+    """
+    Records publication of Pre-11.11 advisory, rotating variants and picking next 3-4 days random interval.
+    """
+    import random
+    state = load_persistent_state()
+    now = time.time()
+    state["last_pre_11_11_advisory_time"] = now
+    # Random jitter between 72h and 96h (3 to 4 days)
+    state["next_pre_11_11_interval_seconds"] = random.randint(72 * 3600, 96 * 3600)
+    state["pre_11_11_variant_idx"] = variant_idx
+    save_persistent_state(state)
+
+
+
 

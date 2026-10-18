@@ -379,6 +379,18 @@ class AutonomousEngine:
         except Exception as e:
             logger.error(f"Error checking promo notifiers: {e}")
 
+    async def check_and_post_pre_11_11_advisory(self, force: bool = False):
+        """Checks and auto-posts Pre-11.11 & Black Friday currency advisory (strictly Oct 10 - Nov 10, 3-4 days randomized)."""
+        try:
+            from app.publisher.pre_11_11_advisory import check_and_auto_post_pre_11_11_advisory
+            success, msg, mid = await check_and_auto_post_pre_11_11_advisory(force=force)
+            if success:
+                logger.info(f"Pre-11.11 advisory posted successfully: {msg}")
+            elif msg and "Skipping" not in msg:
+                logger.debug(f"Pre-11.11 advisory check: {msg}")
+        except Exception as e:
+            logger.error(f"Error checking pre-11.11 advisory: {e}")
+
     async def run_single_cycle(self, force: bool = False) -> int:
         """Executes one scan cycle across monitored channels for both Algeria (@DzAliexpress0) and France (@francedealsdz)."""
         dz_published = 0

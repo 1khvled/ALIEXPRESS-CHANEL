@@ -141,6 +141,16 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     except Exception as e:
         print(f"[!] Expired deals updater check error: {e}")
 
+    # Automated Check: Pre-11.11 & Black Friday Currency & Warm-up Advisory (Strictly Oct 10 - Nov 10, 3-4 days randomized)
+    try:
+        from app.publisher.pre_11_11_advisory import check_and_auto_post_pre_11_11_advisory
+        force_pre11 = "--pre11" in sys.argv or "--force-pre11" in sys.argv
+        pre11_success, pre11_msg, pre11_mid = await check_and_auto_post_pre_11_11_advisory(bot_token=get_bot_token(), force=force_pre11)
+        if pre11_success:
+            print(f"[PRE-11.11 ADVISORY AUTO-POST] {pre11_msg} (Msg ID: {pre11_mid})")
+    except Exception as e:
+        print(f"[!] Pre-11.11 advisory check error: {e}")
+
     # Daily Tajmi3at / Compilations (Active ONLY during official promotional events at ~10:00 PM UTC+1)
     try:
         from app.publisher.regrouper import check_and_publish_regrouped_bulletins
