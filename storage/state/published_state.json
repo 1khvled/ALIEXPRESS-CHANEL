@@ -2000,19 +2000,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32993,
-      "last_check_time": 1792309330.7765653
+      "last_check_time": 1792320738.9337876
     },
     "ecksdeal": {
       "last_message_id": 5898,
-      "last_check_time": 1792309331.3376563
+      "last_check_time": 1792320739.4693472
     },
     "lodydeals": {
       "last_message_id": 45576,
-      "last_check_time": 1792309329.8700635
+      "last_check_time": 1792320738.0691245
     },
     "bnddeals": {
       "last_message_id": 50863,
-      "last_check_time": 1792309332.2741349
+      "last_check_time": 1792320740.435964
     },
     "test_channel": {
       "last_message_id": 1792284838,
@@ -2020,19 +2020,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7986,
-      "last_check_time": 1792309331.787247
+      "last_check_time": 1792320739.941358
     },
     "zedstoreonline": {
       "last_message_id": 38631,
-      "last_check_time": 1792309330.3185902
+      "last_check_time": 1792320738.4893782
     },
     "megaphonna": {
-      "last_message_id": 8440,
-      "last_check_time": 1792309332.8136091
+      "last_message_id": 8441,
+      "last_check_time": 1792320741.0088792
     },
     "couponsglobal": {
       "last_message_id": 48864,
-      "last_check_time": 1792309333.2923894
+      "last_check_time": 1792320741.4187186
     }
   },
   "published_product_prices": {
@@ -6589,10 +6589,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792309336.0838597,
+    "last_sweep_time": 1792320744.1171746,
     "last_sweep_times": {
-      "algeria": 1792309333.3017802,
-      "france": 1792309336.0838597
+      "algeria": 1792320741.4289725,
+      "france": 1792320744.1171746
     },
     "last_deal_post_times": {
       "algeria": 1792245300.0259454
@@ -7273,7 +7273,7 @@
     "test_rem_5900fa25": "2026-10-02",
     "test_rem_b90624f4": "2026-10-02",
     "test_rem_5b9c8e4c": "2026-10-02",
-    "daily_dhikr": "2026-10-17",
+    "daily_dhikr": "2026-10-18",
     "test_rem_7dc40719": "2026-10-02",
     "test_rem_dc43d1e0": "2026-10-02",
     "test_rem_3de63a14": "2026-10-02",
@@ -7974,7 +7974,8 @@
     "zedstoreonline:38630",
     "pcgamingpart:7986",
     "megaphonna:8439",
-    "megaphonna:8440"
+    "megaphonna:8440",
+    "megaphonna:8441"
   ],
   "last_france_cross_promo_time": 1792222009.8603575,
   "next_france_cross_promo_interval_seconds": 182207,
