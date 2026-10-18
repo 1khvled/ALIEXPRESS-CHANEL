@@ -164,7 +164,8 @@
     "FR_START_ALERT_Brand Day Sale_20261009",
     "FR_END_ALERT_Brand Day Sale_20261013",
     "FR_LAUNCH_ALERT_Winter Offers_20261014",
-    "FR_END_ALERT_Winter Offers_20261018"
+    "FR_END_ALERT_Winter Offers_20261018",
+    "FR_SUNDAY_ALERT_20261018"
   ],
   "last_deal_post_time": 1792329076.8586335,
   "daily_roundup_history": {
@@ -184,9 +185,7 @@
     }
   },
   "pinned_promo_events": {
-    "FR_Party Ready Sale / Choice Day_20261001": 147,
-    "FR_AliExpress Special Promo Octobre 2026_20261006": 166,
-    "FR_Winter Offers_20261014": 173
+    "FR_Super Sunday AliExpress France_20261017": 183
   },
   "last_card_affiliate_time_fr": 1791162951.1813257,
   "card_affiliate_variant_idx_fr": 1,

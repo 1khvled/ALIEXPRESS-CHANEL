@@ -784,6 +784,7 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             "• <code>/post &lt;نص أو رابط&gt;</code> - للنشر الفوري في القناة دون معاينة.\n"
             "• <code>/notify_end</code> - نشر تنبيه اقتراب نهاية التخفيضات (مع حيلة حجز السعر 20 يوم).\n"
             "• <code>/notify_start</code> - نشر تنبيه الاستعداد لانطلاق التخفيضات (دليل السلة والكوبونات).\n"
+            "• <code>/notify_fr</code> - نشر تنبيه وكوبونات التخفيضات أو عروض الأحد في قناة فرنسا (@francedealsdz).\n"
             "• <code>/reminder</code> - نشر تذكير العملات ودليل متسوقي الحاسوب (PC / Laptop).\n"
             "• <code>/coinbot</code> - نشر تذكير تجميع وتخفيض العملات في القناة.\n"
             "• <code>/calendar</code> - نشر رزنامة التخفيضات الرسمية.\n"
@@ -1072,6 +1073,43 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
                 await send_admin_msg(chat_id, f"✅ <b>تم نشر تنبيه بداية التخفيضات بالصورة الرسمية بنجاح في القناة!</b>\n🔗 <a href=\"{post_url}\">{post_url}</a>")
             else:
                 await send_admin_msg(chat_id, f"❌ فشل النشر: {err}")
+        except Exception as e:
+            await send_admin_msg(chat_id, f"❌ حدث خطأ: {e}")
+        return True
+
+    if text.startswith("/notify_fr") or text.startswith("تنبيه فرنسا") or text.startswith("عروض فرنسا"):
+        await send_admin_msg(chat_id, "⏳ جاري تجهيز ونشر تنبيه التخفيضات والكوبونات في قناة فرنسا @francedealsdz...")
+        try:
+            from app.publisher.promo_notifiers_fr import (
+                build_france_sunday_alert,
+                build_france_promo_launch_alert,
+                send_france_promo_alert,
+                record_france_notifier_sent
+            )
+            from app.aliexpress.promos import promo_tracker
+            now = datetime.now(timezone.utc)
+            promo = getattr(promo_tracker, "get_active_france_promo", promo_tracker.get_active_promo)(now)
+            if not promo:
+                promo = promo_tracker.calendar[0]
+            if getattr(promo, "is_sunday_flash", False) or "sunday" in text.lower() or "الأحد" in text:
+                alert_text, markup = build_france_sunday_alert(promo)
+                p_title = "Offres du Dimanche"
+            else:
+                alert_text, markup = build_france_promo_launch_alert(promo)
+                p_title = promo.name_fr or promo.name
+            success, err, msg_id = await send_france_promo_alert(
+                alert_text,
+                markup,
+                coupon_list=promo.coupon_tiers_fr,
+                promo_title=p_title
+            )
+            if success:
+                target_clean = os.getenv("FRANCE_TARGET_CHANNEL_ID", "@francedealsdz").lstrip("@")
+                post_url = f"https://t.me/{target_clean}/{msg_id}"
+                record_france_notifier_sent(f"MANUAL_FR_{promo.name}_{now.strftime('%Y%m%d')}")
+                await send_admin_msg(chat_id, f"✅ <b>تم نشر تنبيه فرنسا بالصورة والكوبونات بنجاح في القناة!</b>\n🔗 <a href=\"{post_url}\">{post_url}</a>")
+            else:
+                await send_admin_msg(chat_id, f"❌ فشل النشر في قناة فرنسا: {err}")
         except Exception as e:
             await send_admin_msg(chat_id, f"❌ حدث خطأ: {e}")
         return True

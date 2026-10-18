@@ -384,12 +384,15 @@ class MediaRenderer:
         if not date_range_str:
             try:
                 from app.aliexpress.promos import promo_tracker
-                p = promo_tracker.get_active_promo()
+                p = getattr(promo_tracker, "get_active_france_promo", promo_tracker.get_active_promo)() if is_french else promo_tracker.get_active_promo()
                 if not p:
                     next_p = promo_tracker.get_next_promo()
                     p = next_p[0] if next_p else None
                 if p:
-                    date_range_str = f"{p.name.upper()} • {p.start_date.day:02d} - {p.end_date.day:02d} OCTOBRE"
+                    if getattr(p, "is_sunday_flash", False):
+                        date_range_str = "SUPER SUNDAY • FLASH 24H DIMANCHE"
+                    else:
+                        date_range_str = f"{p.name.upper()} • {p.start_date.day:02d} - {p.end_date.day:02d} OCTOBRE"
             except Exception:
                 pass
 
@@ -402,10 +405,20 @@ class MediaRenderer:
         draw.rounded_rectangle((badge_x1, 22, badge_x1 + badge_w, 58), radius=18, fill=(254, 240, 138), outline=(245, 158, 11), width=1)
         draw.text((w // 2, 40), full_badge, fill=(146, 64, 14), font=font_badge, anchor="mm")
 
-        # Main Title (with subtle drop shadow)
+        # Main Title (with dynamic font scaling to prevent overlapping logo)
         title_text = f"ALIEXPRESS {promo_title.upper()} (FR)" if is_french else f"ALIEXPRESS {promo_title.upper()}"
-        draw.text((w // 2 + 2, 98), title_text, fill=(0, 0, 0), font=font_title, anchor="mm")
-        draw.text((w // 2, 96), title_text, fill=(255, 255, 255), font=font_title, anchor="mm")
+        t_font = font_title
+        max_title_w = w - 270 if self.logo_path.exists() else w - 80
+        bbox = t_font.getbbox(title_text)
+        if (bbox[2] - bbox[0]) > max_title_w:
+            for sz in [38, 34, 30, 26]:
+                cand = _get_system_font(["arialbd.ttf", "segoeuib.ttf", "DejaVuSans-Bold.ttf"], sz)
+                b = cand.getbbox(title_text)
+                if (b[2] - b[0]) <= max_title_w or sz == 26:
+                    t_font = cand
+                    break
+        draw.text((w // 2 + 2, 98), title_text, fill=(0, 0, 0), font=t_font, anchor="mm")
+        draw.text((w // 2, 96), title_text, fill=(255, 255, 255), font=t_font, anchor="mm")
 
         # Subtitle
         sub_text = "CODES PROMO OFFICIELS" if is_french else "OFFICIAL PROMO CODES"

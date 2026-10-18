@@ -35,6 +35,8 @@ class PromoEvent:
     banner_image_url: Optional[str] = None
     source: str = "baseline"  # "baseline", "recurring", "discovered"
     event_key: Optional[str] = None
+    is_sunday_flash: bool = False
+    is_france_only: bool = False
 
     def get_event_key(self) -> str:
         if self.event_key:
@@ -56,6 +58,8 @@ class PromoEvent:
             "banner_image_url": self.banner_image_url,
             "source": self.source,
             "event_key": self.get_event_key(),
+            "is_sunday_flash": self.is_sunday_flash,
+            "is_france_only": self.is_france_only,
         }
 
     @classmethod
@@ -78,7 +82,9 @@ class PromoEvent:
             coupon_tiers_fr=data.get("coupon_tiers_fr", []),
             banner_image_url=data.get("banner_image_url"),
             source=data.get("source", "discovered"),
-            event_key=data.get("event_key")
+            event_key=data.get("event_key"),
+            is_sunday_flash=data.get("is_sunday_flash", False),
+            is_france_only=data.get("is_france_only", False)
         )
 
 
@@ -128,6 +134,15 @@ KNOWN_EVENT_PATTERNS = [
         "banner_tag": "🎯 Choice Day Sale",
         "is_major": True,
         "keywords": ["choice day", "شويس داي", "party ready", "شويس داى", "choice"]
+    },
+    {
+        "key": "super_sunday",
+        "name": "Super Sunday France",
+        "name_ar": "عروض الأحد السريعة لفرنسا Super Sunday ⚡️🇫🇷",
+        "name_fr": "Offres du Dimanche Super Sunday ⚡️🇫🇷",
+        "banner_tag": "⚡️ Offres du Dimanche",
+        "is_major": False,
+        "keywords": ["super sunday", "offres du dimanche", "offre du dimanche", "dimanche aliexpress", "sunfr"]
     },
     {
         "key": "brand_day",
@@ -977,16 +992,63 @@ class PromoTracker:
         return sorted(merged.values(), key=lambda x: x.start_date)
 
     def get_active_promo(self, now: Optional[datetime] = None) -> Optional[PromoEvent]:
-        """Returns the currently active official AliExpress promo event, if any."""
+        """Returns the currently active official AliExpress promo event for Algeria / Global, if any."""
         if now is None:
             now = datetime.now(timezone.utc)
         promos = self.get_all_promos(now)
-        active = [ev for ev in promos if ev.start_date <= now <= ev.end_date]
+        active = [ev for ev in promos if ev.start_date <= now <= ev.end_date and not getattr(ev, "is_france_only", False)]
         if not active:
             return None
         # Prioritize major events and events with coupon tiers
         active.sort(key=lambda x: (x.is_major, len(x.coupon_tiers) + len(x.coupon_tiers_fr or [])), reverse=True)
         return active[0]
+
+    def get_active_france_promo(self, now: Optional[datetime] = None) -> Optional[PromoEvent]:
+        """
+        Returns the currently active promo event for France shoppers (@francedealsdz).
+        Supports:
+        1. Multi-day festival promos (Choice Day, Brand Day, 11.11, etc. with French coupon tiers).
+        2. Weekly recurring 'Super Sunday' (Offres du Dimanche) flash sales with SUNFR promo codes.
+        """
+        if now is None:
+            now = datetime.now(timezone.utc)
+
+        # 1. First check if a general festival promo with French coupons is active
+        promos = self.get_all_promos(now)
+        active_festivals = [
+            ev for ev in promos
+            if ev.start_date <= now <= ev.end_date and (ev.coupon_tiers_fr or ev.is_major) and not getattr(ev, "is_sunday_flash", False)
+        ]
+        if active_festivals:
+            active_festivals.sort(key=lambda x: (x.is_major, len(x.coupon_tiers_fr or [])), reverse=True)
+            return active_festivals[0]
+
+        # 2. Check for Sunday Flash Promo ("Super Sunday / Offres du Dimanche")
+        # In Paris / CET (UTC+1 or UTC+2 depending on DST)
+        paris_tz = timezone(timedelta(hours=2 if (now.month in range(4, 11) or (now.month == 3 and now.day >= 29) or (now.month == 10 and now.day <= 25)) else 1))
+        now_paris = now.astimezone(paris_tz)
+        if now_paris.weekday() == 6:  # 6 is Sunday
+            sunday_start = datetime(now_paris.year, now_paris.month, now_paris.day, 0, 0, 0, tzinfo=paris_tz).astimezone(timezone.utc)
+            sunday_end = datetime(now_paris.year, now_paris.month, now_paris.day, 23, 59, 59, tzinfo=paris_tz).astimezone(timezone.utc)
+            return PromoEvent(
+                name="Super Sunday AliExpress France",
+                name_ar="عروض الأحد السريعة لفرنسا Super Sunday ⚡️🇫🇷",
+                name_fr="Offres du Dimanche Super Sunday 🇫🇷⚡️",
+                start_date=sunday_start,
+                end_date=sunday_end,
+                banner_tag="⚡️ Offres du Dimanche (Super Sunday)",
+                is_major=False,
+                coupon_tiers=[],
+                coupon_tiers_fr=[
+                    {"tier": "-20€ dès 199€", "code": "SUNFR20"},
+                    {"tier": "-30€ dès 280€", "code": "SUNFR30"}
+                ],
+                source="recurring",
+                is_sunday_flash=True,
+                is_france_only=True
+            )
+
+        return None
 
     def get_next_promo(self, now: Optional[datetime] = None) -> Optional[Tuple[PromoEvent, int]]:
         """Returns the upcoming promo event and days remaining until it starts."""
