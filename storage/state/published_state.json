@@ -405,7 +405,7 @@
     "1005008901941749": 1790973051.970508,
     "1005010178295650": 1791031559.2102907,
     "1005006861002512": 1791151259.5667012,
-    "1005012285327063": 1792245292.4631972,
+    "1005012285327063": 1792360422.5608404,
     "1005006581583862": 1791013842.0461159,
     "1005012816171978": 1792157876.0860639,
     "1005010585654037": 1790978149.8785934,
@@ -1268,7 +1268,7 @@
     "Ⓜ  TCL 60 NXT PAPER 8/256📱": 1792160269.0502243,
     "HAYLOU Mori Pro ANC": 1792166319.9887776,
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones 43dB Adaptive Noise": 1792166326.0335298,
-    "HAYLOU Watch Faro Voice Calling Smart Watch": 1792172089.5340507,
+    "HAYLOU Watch Faro Voice Calling Smart Watch": 1792360422.5608404,
     "Redmi Note 12 5G 4/128": 1792172099.6544397,
     "OPPO A6 PRO (8/256)": 1792172109.913469,
     "Baellerry Portable Mini Men Wallet Korean": 1792172127.0373228,
@@ -2023,27 +2023,28 @@
     "test_channel:1792326288",
     "test_channel:1792329220",
     "test_channel:1792330070",
-    "test_channel:1792330248"
+    "test_channel:1792330248",
+    "couponsglobal:48865"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792330249.1879628,
+  "last_run_time": 1792360422.5608404,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32996,
-      "last_check_time": 1792352185.0109088
+      "last_check_time": 1792360413.9827871
     },
     "ecksdeal": {
       "last_message_id": 5898,
-      "last_check_time": 1792352185.4233346
+      "last_check_time": 1792360414.499956
     },
     "lodydeals": {
       "last_message_id": 45579,
-      "last_check_time": 1792352183.956269
+      "last_check_time": 1792360413.0976775
     },
     "bnddeals": {
       "last_message_id": 50863,
-      "last_check_time": 1792352186.334341
+      "last_check_time": 1792360415.3730974
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2051,19 +2052,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7986,
-      "last_check_time": 1792352185.846695
+      "last_check_time": 1792360414.9476142
     },
     "zedstoreonline": {
       "last_message_id": 38631,
-      "last_check_time": 1792352184.407905
+      "last_check_time": 1792360413.504356
     },
     "megaphonna": {
-      "last_message_id": 8445,
-      "last_check_time": 1792352186.9700668
+      "last_message_id": 8446,
+      "last_check_time": 1792360415.9173977
     },
     "couponsglobal": {
-      "last_message_id": 48864,
-      "last_check_time": 1792352187.3767836
+      "last_message_id": 48865,
+      "last_check_time": 1792360424.5858564
     }
   },
   "published_product_prices": {
@@ -2149,7 +2150,7 @@
     "1005012554205120": 7.22,
     "1005008901941749": 1.2,
     "1005006861002512": 13.56,
-    "1005012285327063": 17.2,
+    "1005012285327063": 17.29,
     "1005006581583862": 25.0,
     "1005012816171978": 274.46,
     "1005009834132291": 25.2,
@@ -6628,6 +6629,16 @@
       "price": 6.72,
       "timestamp": 1792283000,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48865": {
+      "channel_msg_id": 987,
+      "product_id": "1005012285327063",
+      "title": "HAYLOU Watch Faro Voice Calling Smart Watch",
+      "channel": "couponsglobal",
+      "source_msg_id": 48865,
+      "price": 17.29,
+      "timestamp": 1792360422.5608404,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6636,17 +6647,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792245300.0259454,
+    "last_deal_post_time": 1792360424.606137,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792352190.2014196,
+    "last_sweep_time": 1792360427.2936606,
     "last_sweep_times": {
-      "algeria": 1792352187.3875277,
-      "france": 1792352190.2014196
+      "algeria": 1792360424.5962281,
+      "france": 1792360427.2936606
     },
     "last_deal_post_times": {
-      "algeria": 1792245300.0259454
+      "algeria": 1792360424.606137
     }
   },
   "last_coin_reminder_time": 1792166302.7026794,
@@ -6737,7 +6748,7 @@
     "1005008901941749": "lodydeals",
     "1005012881256093": "lodydeals",
     "1005006861002512": "lodydeals",
-    "1005012285327063": "zedstoreonline",
+    "1005012285327063": "couponsglobal",
     "1005006581583862": "aniscoupons",
     "1005012816171978": "lodydeals",
     "1005009834132291": "zedstoreonline",
@@ -7296,7 +7307,7 @@
     "RYZEN 7 5700X": "aniscoupons",
     "HAYLOU Mori Pro ANC": "zedstoreonline",
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones 43dB Adaptive Noise": "zedstoreonline",
-    "HAYLOU Watch Faro Voice Calling Smart Watch": "zedstoreonline",
+    "HAYLOU Watch Faro Voice Calling Smart Watch": "couponsglobal",
     "Redmi Note 12 5G 4/128": "megaphonna",
     "OPPO A6 PRO (8/256)": "megaphonna",
     "Baellerry Portable Mini Men Wallet Korean": "couponsglobal",
@@ -7654,8 +7665,8 @@
     "LAUNCH_ALERT_Winter Offers_20261014",
     "END_ALERT_Winter Offers_20261018"
   ],
-  "last_card_affiliate_time_dz": 1792233089.7517264,
-  "card_affiliate_variant_idx_dz": 2,
+  "last_card_affiliate_time_dz": 1792360410.1967537,
+  "card_affiliate_variant_idx_dz": 0,
   "last_tajmi3at_published_time": 1792182685.3908823,
   "published_deals_history": {},
   "settings": {},
@@ -8051,7 +8062,8 @@
     "aniscoupons:32996",
     "megaphonna:8444",
     "megaphonna:8443",
-    "megaphonna:8445"
+    "megaphonna:8445",
+    "megaphonna:8446"
   ],
   "last_france_cross_promo_time": 1792222009.8603575,
   "next_france_cross_promo_interval_seconds": 182207,
