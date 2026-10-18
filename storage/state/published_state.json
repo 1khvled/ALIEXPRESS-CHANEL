@@ -2031,19 +2031,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32995,
-      "last_check_time": 0
+      "last_check_time": 1792333211.7115645
     },
     "ecksdeal": {
       "last_message_id": 5898,
-      "last_check_time": 1792256193.1731734
+      "last_check_time": 1792333212.2389164
     },
     "lodydeals": {
       "last_message_id": 45576,
-      "last_check_time": 1792330249.0462039
+      "last_check_time": 1792333206.9737363
     },
     "bnddeals": {
       "last_message_id": 50863,
-      "last_check_time": 1792256193.8801346
+      "last_check_time": 1792333213.0733957
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2051,19 +2051,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7986,
-      "last_check_time": 1792256193.5297236
+      "last_check_time": 1792333212.671093
     },
     "zedstoreonline": {
-      "last_message_id": 38630,
-      "last_check_time": 1792256192.3072867
+      "last_message_id": 38631,
+      "last_check_time": 1792333207.3999639
     },
     "megaphonna": {
-      "last_message_id": 8438,
-      "last_check_time": 1792330249.1879628
+      "last_message_id": 8442,
+      "last_check_time": 1792333215.9913518
     },
     "couponsglobal": {
-      "last_message_id": 48863,
-      "last_check_time": 1792256194.6835258
+      "last_message_id": 48864,
+      "last_check_time": 1792333216.3952532
     }
   },
   "published_product_prices": {
@@ -6640,10 +6640,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792329076.8653173,
+    "last_sweep_time": 1792333219.3648255,
     "last_sweep_times": {
-      "algeria": 1792256194.6922834,
-      "france": 1792329076.8653173
+      "algeria": 1792333216.4013546,
+      "france": 1792333219.3648255
     },
     "last_deal_post_times": {
       "algeria": 1792245300.0259454
@@ -7331,7 +7331,7 @@
     "test_rem_5900fa25": "2026-10-02",
     "test_rem_b90624f4": "2026-10-02",
     "test_rem_5b9c8e4c": "2026-10-02",
-    "daily_dhikr": "2026-10-17",
+    "daily_dhikr": "2026-10-18",
     "test_rem_7dc40719": "2026-10-02",
     "test_rem_dc43d1e0": "2026-10-02",
     "test_rem_3de63a14": "2026-10-02",
@@ -7643,12 +7643,9 @@
     918
   ],
   "pinned_promo_events": {
-    "Party Ready Sale / Choice Day_20261001": 505,
     "AliExpress Special Promo Octobre 2026_20261004": 661,
     "AliExpress Special Promo Octobre 2026_20261006": 677,
-    "Brand Day Sale_20261009": 731,
-    "Brand Day Sale Octobre 2026_20261009": 702,
-    "Winter Offers_20261014": 847
+    "Brand Day Sale Octobre 2026_20261009": 702
   },
   "sent_promo_notifiers": [
     "LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
@@ -8041,7 +8038,13 @@
     "megaphonna:8438",
     "ecksdeal:5898",
     "couponsglobal:48864",
-    "couponsglobal:48848"
+    "couponsglobal:48848",
+    "zedstoreonline:38631",
+    "aniscoupons:32995",
+    "aniscoupons:32994",
+    "megaphonna:8442",
+    "megaphonna:8441",
+    "megaphonna:8440"
   ],
   "last_france_cross_promo_time": 1792222009.8603575,
   "next_france_cross_promo_interval_seconds": 182207,
