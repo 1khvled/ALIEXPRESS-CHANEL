@@ -141,15 +141,14 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     except Exception as e:
         print(f"[!] Expired deals updater check error: {e}")
 
-    # Daily Tajmi3at / Compilations (DISABLED from automated sweeps; strictly requires explicit --force-tajmi3at flag)
-    if force_tajmi3at:
-        try:
-            from app.publisher.regrouper import check_and_publish_regrouped_bulletins
-            bulletins = await check_and_publish_regrouped_bulletins(bot_token=get_bot_token(), force=True)
-            if bulletins:
-                print(f"[TAJMI3AT POST] Published {len(bulletins)} daily roundup bulletin(s): {[b['category'] for b in bulletins]}")
-        except Exception as e:
-            print(f"[!] Daily tajmi3at error: {e}")
+    # Daily Tajmi3at / Compilations (Active ONLY during official promotional events at ~10:00 PM UTC+1)
+    try:
+        from app.publisher.regrouper import check_and_publish_regrouped_bulletins
+        bulletins = await check_and_publish_regrouped_bulletins(bot_token=get_bot_token(), force=force_tajmi3at)
+        if bulletins:
+            print(f"[TAJMI3AT POST] Published {len(bulletins)} event roundup bulletin(s): {[b['category'] for b in bulletins]}")
+    except Exception as e:
+        print(f"[!] Daily tajmi3at error: {e}")
 
     # Dynamic Interval & Day/Night Schedule Check (40 min daytime sweep, night paused)
     from app.publisher.state_tracker import is_deal_posting_due, record_sweep_completed, record_deal_posted_time, is_algerian_peak_hour

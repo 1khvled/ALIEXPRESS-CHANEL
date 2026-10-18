@@ -359,8 +359,14 @@ class AutonomousEngine:
             logger.error(f"Error checking region disclaimer: {e}")
 
     async def check_and_post_regrouped_bulletin(self):
-        """Auto-regrouped bulletins / tajmi3at are disabled from automated sweeps."""
-        return []
+        """Publishes Tajmi3at roundups ONLY during active promotional events at ~10 PM."""
+        try:
+            from app.publisher.regrouper import check_and_publish_regrouped_bulletins
+            bulletins = await check_and_publish_regrouped_bulletins(force=False)
+            return bulletins
+        except Exception as e:
+            logger.error(f"Error checking regrouped bulletin: {e}")
+            return []
 
     async def check_and_post_promo_notifiers(self):
         """Checks and auto-posts promo ending and promo starting alerts (1 day before)."""

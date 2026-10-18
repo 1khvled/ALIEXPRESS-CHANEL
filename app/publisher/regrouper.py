@@ -376,8 +376,10 @@ def get_recent_published_deals_for_roundup(max_age_hours: float = 24.0) -> List[
 
     # 1. Load from persistent state (primary in GitHub Actions & production)
     target_clean = str(TARGET_CHANNEL_ID).lstrip("@")
+    from app.aliexpress.promos import promo_tracker
     for post_key, info in deals_dict.items():
-        if info.get("status") == "DELETED":
+        status = str(info.get("status") or "").upper()
+        if status in ("DELETED", "EXPIRED", "DEAD", "ENDED"):
             continue
         msg_id = info.get("channel_msg_id")
         if not msg_id or int(msg_id) <= 0:
@@ -385,6 +387,13 @@ def get_recent_published_deals_for_roundup(max_age_hours: float = 24.0) -> List[
         ts = info.get("timestamp", 0)
         if (now - ts) > max_age_sec:
             continue
+
+        # Reject deals with expired festival coupons or campaign text from ended events
+        raw_text = info.get("raw_text") or info.get("text") or ""
+        if raw_text:
+            is_fresh, _ = promo_tracker.validate_deal_freshness(raw_text, msg_datetime=datetime.fromtimestamp(ts, tz=timezone.utc))
+            if not is_fresh:
+                continue
 
         msg_id_int = int(msg_id)
         raw_title = info.get("title", "")
@@ -656,14 +665,27 @@ async def check_and_publish_regrouped_bulletins(
     target = TARGET_CHANNEL_ID
     target_clean = str(target).lstrip("@")
 
-    # 1. Automated Tajmi3at is disabled completely. Only runs if explicitly called with force=True.
-    if not force:
-        logger.info("[TAJMI3AT] Automated Tajmi3at posting is disabled. Skipping.")
-        return []
-
     from app.aliexpress.promos import promo_tracker
     active_promo = promo_tracker.get_active_promo()
-    logger.info(f"[TAJMI3AT] Starting Night Tajmi3at roundup execution (Active Promo: {active_promo.name if active_promo else 'None'})...")
+
+    # 1. Tajmi3at / Roundups are strictly active ONLY during official promotional events!
+    if not active_promo and not force:
+        logger.info("[TAJMI3AT] No active promotional event currently ongoing (e.g. Choice Day, Mega Sale, 11.11). Tajmi3at is ONLY ON during active promo events. Skipping.")
+        return []
+
+    # 2. Timing and idempotency checks (if not forced)
+    if not force:
+        from app.publisher.state_tracker import is_tajmi3at_time_window, is_daily_tajmi3at_eligible
+        if not is_tajmi3at_time_window():
+            logger.info("[TAJMI3AT] Outside of ~10 PM publication window (21:30 - 23:45 UTC+1). Skipping.")
+            return []
+
+        eligible, reason = is_daily_tajmi3at_eligible(date_str=None)
+        if not eligible:
+            logger.info(f"[TAJMI3AT] Not eligible for daily roundup today: {reason}. Skipping.")
+            return []
+
+    logger.info(f"[TAJMI3AT] Starting Night Tajmi3at roundup execution (Active Promo: {active_promo.name if active_promo else 'Forced/Manual'})...")
 
     # 2. Fetch all active deals published to @DzAliexpress0 in the last 24-48h
     lookup_hours = 48.0 if active_promo else 24.0

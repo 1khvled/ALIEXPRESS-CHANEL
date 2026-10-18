@@ -275,15 +275,24 @@ async def get_recent_france_published_deals(max_age_hours: float = 24.0) -> List
 
     collected: Dict[str, Dict[str, Any]] = {}
 
-    # 1. From state history
+    from app.aliexpress.promos import promo_tracker
     target_clean = TARGET_FRANCE_CHANNEL.replace("@", "")
     for pid, info in deals_history.items():
+        status = str(info.get("status") or "").upper()
+        if status in ("DELETED", "EXPIRED", "DEAD", "ENDED"):
+            continue
         msg_id = info.get("channel_msg_id")
         if not msg_id or int(msg_id) <= 0:
             continue
         ts = info.get("timestamp", 0)
         if (now - ts) > max_age_sec:
             continue
+
+        raw_text = info.get("raw_text") or info.get("text") or ""
+        if raw_text:
+            is_fresh, _ = promo_tracker.validate_deal_freshness(raw_text, msg_datetime=datetime.fromtimestamp(ts, tz=timezone.utc))
+            if not is_fresh:
+                continue
 
         msg_id_int = int(msg_id)
         raw_title = info.get("title", "")
@@ -477,12 +486,25 @@ async def check_and_publish_france_regrouped_bulletins(
         logger.warning("[FRANCE ROUNDUP] TELEGRAM_BOT_TOKEN not configured.")
         return []
 
-    # 1. Automated France Tajmi3at is disabled completely. Only runs if explicitly called with force=True.
-    if not force:
-        logger.info("[FRANCE ROUNDUP] Automated France roundup is disabled. Skipping.")
+    from app.aliexpress.promos import promo_tracker
+    active_promo = promo_tracker.get_active_promo()
+
+    # 1. France Roundups are strictly active ONLY during official promotional events!
+    if not active_promo and not force:
+        logger.info("[FRANCE ROUNDUP] No active promotional event currently ongoing. Roundups are ONLY active during official sale events. Skipping.")
         return []
 
-    logger.info("[FRANCE ROUNDUP] Starting daily roundup collection...")
+    # 2. Timing and idempotency checks (if not forced)
+    if not force:
+        if not is_france_roundup_time_window():
+            logger.info("[FRANCE ROUNDUP] Outside of ~10 PM Paris window (21:30 - 23:45 CET). Skipping.")
+            return []
+        eligible, reason = is_france_roundup_eligible(date_str=None)
+        if not eligible:
+            logger.info(f"[FRANCE ROUNDUP] Daily France roundup not eligible today: {reason}. Skipping.")
+            return []
+
+    logger.info(f"[FRANCE ROUNDUP] Starting daily roundup collection (Active Promo: {active_promo.name if active_promo else 'Forced/Manual'})...")
     today_deals = await get_recent_france_published_deals(max_age_hours=48.0)
     if not today_deals or len(today_deals) < 2:
         logger.info("[FRANCE ROUNDUP] Insufficient deals published today (< 2). Skipping.")

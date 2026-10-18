@@ -1026,8 +1026,10 @@ class PromoTracker:
         # 3. Reject any posts containing expired festival codes from ended promo events
         for event in PROMO_CALENDAR:
             if now > event.end_date:
-                expired_codes = [t.get("code") for t in event.coupon_tiers if t.get("code")] + \
-                                [t.get("code") for t in getattr(event, "coupon_tiers_fr", []) if t.get("code")]
+                tiers_dz = event.coupon_tiers or []
+                tiers_fr = getattr(event, "coupon_tiers_fr", None) or []
+                expired_codes = [t.get("code") for t in tiers_dz if t.get("code")] + \
+                                [t.get("code") for t in tiers_fr if t.get("code")]
                 for code in expired_codes:
                     if re.search(r'\b' + re.escape(code) + r'\b', text, re.IGNORECASE):
                         return False, f"Expired festival coupon code '{code}' from ended event '{event.name}'"

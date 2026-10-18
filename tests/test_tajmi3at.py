@@ -377,3 +377,61 @@ def test_promo_tajmi3at_reposting_and_event_end_protection(tmp_path):
         assert eligible_daily is False
         assert "already published" in reason_daily
 
+@pytest.mark.asyncio
+async def test_tajmi3at_skips_when_no_promo_event_active():
+    """Verifies that Tajmi3at is strictly OFF outside active promotional sale events."""
+    with patch("app.aliexpress.promos.promo_tracker.get_active_promo", return_value=None), \
+         patch("app.publisher.state_tracker.is_tajmi3at_time_window", return_value=True), \
+         patch("app.publisher.state_tracker.is_daily_tajmi3at_eligible", return_value=(True, "Eligible")):
+        res = await check_and_publish_regrouped_bulletins(force=False)
+        assert res == []
+
+def test_tajmi3at_filters_dead_and_expired_deals():
+    """Verifies that deals marked EXPIRED or containing dead festival coupons are excluded from roundups."""
+    from app.publisher.regrouper import get_recent_published_deals_for_roundup
+    now_ts = datetime.now(timezone.utc).timestamp()
+    mock_state = {
+        "channel_published_deals": {
+            "channel:101": {
+                "channel_msg_id": 101,
+                "product_id": "100500111111",
+                "title": "Realme 14 5G Smartphone",
+                "price": 150.0,
+                "timestamp": now_ts - 3600,
+                "status": "EXPIRED"  # Dead deal
+            },
+            "channel:102": {
+                "channel_msg_id": 102,
+                "product_id": "100500222222",
+                "title": "Redmi Note 13 4G",
+                "price": 120.0,
+                "timestamp": now_ts - 1800,
+                "status": "ACTIVE",
+                "raw_text": "Party Ready Sale ended discount"  # Expired campaign text
+            },
+            "channel:103": {
+                "channel_msg_id": 103,
+                "product_id": "100500333333",
+                "title": "Black Shark Mouse X3",
+                "price": 25.0,
+                "timestamp": now_ts - 1200,
+                "status": "ACTIVE",
+                "raw_text": "عرض ممتاز بسعر باطل تخفيض العملات"
+            }
+        }
+    }
+    with patch("app.publisher.regrouper.load_persistent_state", return_value=mock_state):
+        deals = get_recent_published_deals_for_roundup(max_age_hours=24.0)
+        assert len(deals) == 1
+        assert deals[0]["channel_msg_id"] == 103
+
+@pytest.mark.asyncio
+async def test_france_roundup_skips_when_no_promo_event_active():
+    """Verifies that France roundups are strictly OFF when no promo event is ongoing."""
+    from app.publisher.regrouper_fr import check_and_publish_france_regrouped_bulletins
+    with patch("app.aliexpress.promos.promo_tracker.get_active_promo", return_value=None), \
+         patch("app.publisher.regrouper_fr.is_france_roundup_time_window", return_value=True), \
+         patch("app.publisher.regrouper_fr.is_france_roundup_eligible", return_value=(True, "Eligible")):
+        res = await check_and_publish_france_regrouped_bulletins(force=False)
+        assert res == []
+
