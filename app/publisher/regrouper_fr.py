@@ -477,25 +477,10 @@ async def check_and_publish_france_regrouped_bulletins(
         logger.warning("[FRANCE ROUNDUP] TELEGRAM_BOT_TOKEN not configured.")
         return []
 
-    # 1. Timing check: STRICTLY AT NIGHT ONLY (21:30 - 23:45 CET)
+    # 1. Automated France Tajmi3at is disabled completely. Only runs if explicitly called with force=True.
     if not force:
-        if not is_france_roundup_time_window():
-            logger.info("[FRANCE ROUNDUP] Outside night window (21:30 - 23:45 CET). France roundup runs strictly at night. Skipping.")
-            return []
-
-        from app.aliexpress.promos import promo_tracker
-        active_promo = promo_tracker.get_active_promo()
-        if active_promo:
-            promo_ok, promo_reason = is_france_promo_roundup_eligible(min_hours=6.0)
-            if not promo_ok:
-                logger.info(f"[FRANCE ROUNDUP] Promo cooldown active: {promo_reason}. Skipping.")
-                return []
-        else:
-            # When promo event has ended: strictly at most once per calendar day (no reposting)
-            eligible, reason = is_france_roundup_eligible()
-            if not eligible:
-                logger.info(f"[FRANCE ROUNDUP] Not eligible: {reason}. Skipping.")
-                return []
+        logger.info("[FRANCE ROUNDUP] Automated France roundup is disabled. Skipping.")
+        return []
 
     logger.info("[FRANCE ROUNDUP] Starting daily roundup collection...")
     today_deals = await get_recent_france_published_deals(max_age_hours=48.0)

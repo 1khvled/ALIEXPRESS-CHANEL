@@ -479,8 +479,9 @@ def is_competitor_branded_code(code: str) -> bool:
 
 
 BLACKLIST_COUPONS = {
-    "http", "https", "aliexpress", "item", "items", "link", "url", "temu", "html", "bot",
-    "t.me", "dzgamingcoinbot", "coinbot", "coins", "channel", "click", "s.click",
+    "http", "https", "aliexpress", "item", "items", "link", "url", "temu", "html", "bot", "bots",
+    "coin", "coins", "scoins", "scoins_bot", "coinbot", "couponsbot",
+    "t.me", "dzgamingcoinbot", "channel", "click", "s.click",
     "dzaliexpress0", "francedealsdz", "france", "canada", "algerie", "livraison",
     "promo", "promos", "reduction", "reductions", "remise", "code", "codes", "coupon", "coupons",
     "seller", "store", "vendeur", "boutique", "magasin", "shop", "online",
@@ -529,6 +530,12 @@ def clean_coupon_token(raw: str, title: Optional[str] = None) -> Optional[str]:
     if not re.search(r'[A-Za-z]', c):
         return None
     c_lower = c.lower()
+
+    # Reject bots, coin bots, Telegram handles and channels (e.g. SCOINS_BOT, Coins_bot, etc.)
+    if any(k in c_lower for k in ["bot", "coin", "tele", "gram", "channel", "group", "chat", "admin", "join"]):
+        return None
+    if "@" in raw_str or "/" in raw_str or "\\" in raw_str or ":" in raw_str:
+        return None
 
     # Reject web domains, TLDs, and URL fragments
     if c_lower in {
@@ -664,21 +671,21 @@ def extract_multi_coupons(raw_text: str, title: Optional[str] = None) -> Dict[st
     # 'Code promo: CODE1', 'قسيمة: CODE1', 'قسيمة المتجر: CODE1'
     p_line_label = re.compile(
         r'^[^\S\r\n]*(?P<label>'
-        r'(?:(?:🏷️|🎟️|🎫|👊|🏷|🎟)\s*)?'
+        r'(?:[^\w\s\r\n]+\s*)?'
         r'(?:'
         r'(?:استخدم\s+|استعمل\s+|انسخ\s+|بكود\s+)?(?:ال)?كوبون\s*(?:آخر|اخر|إضافي|اضافي|خاص|البائع|المتجر|الخصم|التخفيض)?|'
         r'(?:استخدم\s+|استعمل\s+|انسخ\s+|بكود\s+)?(?:ال)?كود\s*(?:آخر|اخر|إضافي|اضافي|خاص|البائع|المتجر|الخصم|التخفيض|الشراء)?|'
         r'(?:ال)?قسيمة\s*(?:أخرى|اخرى|إضافية|اضافية|خاصة|البائع|المتجر|الخصم|التخفيض)?|'
         r'(?:ال)?قسيمـ?ة|'
-        r'code\s*promo(?:\s*\d+)?|code\s*de\s*r[ée]duction|code\s*r[ée]duction|bon\s*de\s*r[ée]duction|'
+        r'\bcode(?:\s*promo)?(?:\s*[-–]?\s*[$€]?[0-9]+(?:[\.,][0-9]+)?[$€]?)?|code\s*de\s*r[ée]duction|code\s*r[ée]duction|bon\s*de\s*r[ée]duction|'
         r'coupon\s*vendeur|store\s*coupon|seller\s*coupon|utilisez\s*(?:le\s*)?code|avec\s*(?:le\s*)?code|'
-        r'promo\s*code|coupon'
+        r'promo\s*code|\bcoupon\b'
         r')'
         r'|'
         r'(?:🏷️|🎟️|🎫|👊)'
         r')'
         r'[\s:：\-=ـ_•*~|()✅🔥👉✔️⏺🙏💵💰🎁📌⚡💥🤐]*'
-        r'(?P<content>[^\r\n]+)',
+        r'(?P<content>[^\r\n]*)',
         re.IGNORECASE | re.MULTILINE
     )
     for m in p_line_label.finditer(norm):
@@ -783,18 +790,7 @@ def extract_coupon(text: str, title: Optional[str] = None) -> Optional[str]:
     if not text:
         return None
     res = extract_multi_coupons(text, title=title)
-    if res.get("coupon_code"):
-        return res["coupon_code"]
-
-    # Fallback to legacy COUPON_PATTERNS
-    norm = re.sub(r'[\u0640]', '', text)
-    for pattern in COUPON_PATTERNS:
-        for m in pattern.finditer(norm):
-            code = m.group(1).strip()
-            clean_c = clean_coupon_token(code, title=title)
-            if clean_c:
-                return clean_c
-    return None
+    return res.get("coupon_code")
 
 
 def extract_seller_coupon(text: str) -> Optional[str]:

@@ -482,14 +482,15 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
     except Exception as e:
         print(f"  [!] France promo notifiers warning: {e}")
 
-    # 0.5. Daily Tajmi3at / Compilations (~10:00 PM CET 21:30 - 23:45 or forced)
-    try:
-        from app.publisher.regrouper_fr import check_and_publish_france_regrouped_bulletins
-        bulletins = await check_and_publish_france_regrouped_bulletins(force=force_tajmi3at)
-        if bulletins:
-            print(f"\n[FRANCE ROUNDUP] Published {len(bulletins)} daily roundup bulletin(s): {[b['category'] for b in bulletins]}")
-    except Exception as e:
-        print(f"  [!] France daily roundup check error: {e}")
+    # 0.5. Daily Tajmi3at / Compilations (DISABLED from automated sweeps; strictly requires explicit --force-tajmi3at flag)
+    if force_tajmi3at:
+        try:
+            from app.publisher.regrouper_fr import check_and_publish_france_regrouped_bulletins
+            bulletins = await check_and_publish_france_regrouped_bulletins(force=True)
+            if bulletins:
+                print(f"\n[FRANCE ROUNDUP] Published {len(bulletins)} daily roundup bulletin(s): {[b['category'] for b in bulletins]}")
+        except Exception as e:
+            print(f"  [!] France daily roundup check error: {e}")
 
     # 0.6. Automated Check: Day-to-Day Card & Cashback Affiliate Marketing (Bybit 100% Free + Cashback, RedotPay Visa, Binance SEPA)
     try:

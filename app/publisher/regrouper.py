@@ -656,27 +656,10 @@ async def check_and_publish_regrouped_bulletins(
     target = TARGET_CHANNEL_ID
     target_clean = str(target).lstrip("@")
 
-    # 1. Timing check: STRICTLY AT NIGHT ONLY (21:30 - 23:45 Algiers time UTC+1)
+    # 1. Automated Tajmi3at is disabled completely. Only runs if explicitly called with force=True.
     if not force:
-        if not is_tajmi3at_time_window():
-            logger.info("[TAJMI3AT] Outside night window (21:30 - 23:45 Algiers time UTC+1). Tajmi3at runs strictly at night. Skipping.")
-            return []
-
-        from app.aliexpress.promos import promo_tracker
-        active_promo = promo_tracker.get_active_promo()
-        if not active_promo:
-            # When promo event has ended: strictly at most once per calendar day (no reposting)
-            eligible, reason = is_daily_tajmi3at_eligible()
-            if not eligible:
-                logger.info(f"[TAJMI3AT] Daily tajmi3at not eligible: {reason}. Skipping.")
-                return []
-        else:
-            # During active promos: enforce minimum 6h cooldown between tajmi3at roundups!
-            from app.publisher.state_tracker import is_promo_tajmi3at_eligible
-            eligible, reason = is_promo_tajmi3at_eligible(min_hours=6.0)
-            if not eligible:
-                logger.info(f"[TAJMI3AT] Promo tajmi3at not eligible: {reason}. Skipping.")
-                return []
+        logger.info("[TAJMI3AT] Automated Tajmi3at posting is disabled. Skipping.")
+        return []
 
     from app.aliexpress.promos import promo_tracker
     active_promo = promo_tracker.get_active_promo()

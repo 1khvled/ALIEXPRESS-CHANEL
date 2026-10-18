@@ -89,6 +89,7 @@
     "1005008901941749",
     "1005010178295650",
     "1005006861002512",
+    "1005012285327063",
     "1005006581583862",
     "1005012816171978",
     "1005010585654037",
@@ -297,14 +298,17 @@
     "1005012575455222",
     "1005013096683979",
     "1005012398164621",
-    "1005013354356242"
+    "9998883879",
+    "9998884227",
+    "1005013354356242",
+    "9998884838"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
     "1005010219205081": 1791192360.1916943,
-    "999111222": 1792186462.298369,
-    "100500999912345": 1792096463.0222178,
-    "100500999954321": 1792179263.0222178,
+    "999111222": 1792284837.8932467,
+    "100500999912345": 1792194838.8032722,
+    "100500999954321": 1792277638.8032722,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
@@ -314,7 +318,7 @@
     "1005009627597591": 1790884233.6428,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1792175663.1299763,
+    "100500777666555": 1792274038.9184666,
     "1005011778621042": 1792160254.9859293,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1791192944.201814,
@@ -332,7 +336,7 @@
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
-    "100500888999777": 1792172063.1836646,
+    "100500888999777": 1792270438.9723504,
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
@@ -363,7 +367,7 @@
     "9998885726": 1790945726.205554,
     "9998885776": 1791675776.96059,
     "9998886147": 1790946147.1871526,
-    "999888777111": 1792184668.162876,
+    "999888777111": 1792283040.4517598,
     "9998886362": 1790946362.071869,
     "1005012407874415": 1791061256.0753598,
     "9998887189": 1790947189.8634577,
@@ -383,7 +387,7 @@
     "1005011991145678": 1790962541.57551,
     "1005011682821623": 1790962844.0034096,
     "9998885747": 1790965747.5380507,
-    "1005010129356058": 1792174943.286669,
+    "1005010129356058": 1792273319.0769136,
     "9998885993": 1790965993.3792443,
     "1005012574108028": 1791236020.742662,
     "1005008599340405": 1791638441.843642,
@@ -394,6 +398,7 @@
     "1005008901941749": 1790973051.970508,
     "1005010178295650": 1791031559.2102907,
     "1005006861002512": 1791151259.5667012,
+    "1005012285327063": 1792245292.4631972,
     "1005006581583862": 1791013842.0461159,
     "1005012816171978": 1792157876.0860639,
     "1005010585654037": 1790978149.8785934,
@@ -492,8 +497,8 @@
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
     "COUPONS_Brand Day Sale": 1791676848.283345,
-    "COUPONS_d9b8b196": 1792186462.152367,
-    "COUPONS_Test Event 2026": 1792186462.152367,
+    "COUPONS_d9b8b196": 1792284837.5839462,
+    "COUPONS_Test Event 2026": 1792284837.5839462,
     "9998886905": 1791676905.095083,
     "9998887197": 1791677197.2988765,
     "9998887496": 1791677496.6959877,
@@ -606,7 +611,9 @@
     "1005012575455222": 1792191334.3232646,
     "1005013096683979": 1792200008.0113943,
     "1005012398164621": 1792200023.6138296,
-    "1005013354356242": 1792272690.9206734
+    "9998883879": 1792283879.5049274,
+    "9998884227": 1792284227.7376266,
+    "9998884838": 1792284838.8772714
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -928,15 +935,16 @@
     "يد تحكم  GameSir Tarantula 8K TMR",
     "HONOR 600S (8/256)",
     "HONOR WIN TURBO (12/256)",
-    "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital"
+    "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital",
+    "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1792186462.298369,
+    "Test Wireless Gaming Mouse X1": 1792284837.8932467,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
-    "Attack Shark R2 Mouse": 1792179263.0222178,
-    "Test Wrench Set": 1792186463.089801,
+    "Attack Shark R2 Mouse": 1792277638.8032722,
+    "Test Wrench Set": 1792284838.8772714,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1791194142.1753953,
@@ -968,8 +976,8 @@
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
-    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1792096463.0222178,
-    "Attack Shark L80 PRO Wireless Mouse": 1792185563.1836646,
+    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1792194838.8032722,
+    "Attack Shark L80 PRO Wireless Mouse": 1792283938.9723504,
     "الأكثر لبا لنهار اليوووم": 1790940343.7746465,
     "POCO C81 Pro 4/64": 1791114344.949536,
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
@@ -1013,7 +1021,7 @@
     "HONOR 600 PRO": 1790960475.7249138,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
-    "Xiaomi Pad 7 (12/256)": 1792174943.286669,
+    "Xiaomi Pad 7 (12/256)": 1792273319.0769136,
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1791236011.4353654,
     "CUSU SSD 512 GB Portable SSD External Drive": 1791200448.8235762,
     "HONOR  X80 PRO MAX (8/128)": 1791236020.742662,
@@ -1210,7 +1218,7 @@
     "ساعة قوووووووة من BLACKSHARK🔥": 1792017733.3056524,
     "UGREEN 45W GaN Charger PD3.0 PPS QC3.0 Quick Charge": 1792017762.9428782,
     "HOCO E91 Smart Airtag GPS Positioning Pet Anti-Lost": 1792017769.7299333,
-    "Smart Body Fat Scale Accurate": 1792272690.9206734,
+    "Smart Body Fat Scale Accurate": 1792017774.247927,
     "ماوس ألعاب سلكي خفيف الوزن من GameSir GM500 مزود بمستشعر بصري يصل إلى 12000 DPI": 1792025644.3094199,
     "Anker Nano 3 Pro 45W GaN + Cable": 1792025649.1506214,
     "محبوبة الجماهير controller🎮": 1792025664.1703467,
@@ -1257,7 +1265,8 @@
     "يد تحكم  GameSir Tarantula 8K TMR": 1792200008.0113943,
     "HONOR 600S (8/256)": 1792200023.6138296,
     "HONOR WIN TURBO (12/256)": 1792200031.9265065,
-    "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": 1792233107.1523154
+    "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": 1792233107.1523154,
+    "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": 1792245292.4631972
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -1989,47 +1998,51 @@
     "megaphonna:8432",
     "megaphonna:8431",
     "pcgamingpart:7986",
-    "couponsglobal:48864"
+    "zedstoreonline:38630",
+    "test_channel:1792283879",
+    "test_channel:1792284227",
+    "couponsglobal:48864",
+    "test_channel:1792284838"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792272690.9206734,
+  "last_run_time": 1792284839.0824995,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32993,
-      "last_check_time": 1792279379.2165728
+      "last_check_time": 1792256192.6544185
     },
     "ecksdeal": {
       "last_message_id": 5898,
-      "last_check_time": 1792279379.6455703
+      "last_check_time": 1792256193.1731734
     },
     "lodydeals": {
       "last_message_id": 45576,
-      "last_check_time": 1792279378.2597885
+      "last_check_time": 1792284838.977422
     },
     "bnddeals": {
       "last_message_id": 50863,
-      "last_check_time": 1792279380.519586
+      "last_check_time": 1792256193.8801346
     },
     "test_channel": {
-      "last_message_id": 1792186463,
-      "last_check_time": 1792186463.089801
+      "last_message_id": 1792284838,
+      "last_check_time": 1792284838.8772714
     },
     "pcgamingpart": {
       "last_message_id": 7986,
-      "last_check_time": 1792279380.0727262
+      "last_check_time": 1792256193.5297236
     },
     "zedstoreonline": {
-      "last_message_id": 38631,
-      "last_check_time": 1792279378.6794887
+      "last_message_id": 38630,
+      "last_check_time": 1792256192.3072867
     },
     "megaphonna": {
-      "last_message_id": 8439,
-      "last_check_time": 1792279380.9913568
+      "last_message_id": 8438,
+      "last_check_time": 1792284839.0824995
     },
     "couponsglobal": {
-      "last_message_id": 48864,
-      "last_check_time": 1792279381.4303112
+      "last_message_id": 48863,
+      "last_check_time": 1792256194.6835258
     }
   },
   "published_product_prices": {
@@ -2269,8 +2282,7 @@
     "1005012826843176": 60.1,
     "1005012150344482": 25.94,
     "1005006678195057": 32.62,
-    "1005012398164621": 325.9,
-    "1005013354356242": 6.72
+    "1005012398164621": 325.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6576,14 +6588,24 @@
       "timestamp": 1792233107.1523154,
       "status": "ACTIVE"
     },
+    "zedstoreonline:38630": {
+      "channel_msg_id": 969,
+      "product_id": "1005012285327063",
+      "title": "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38630,
+      "price": 17.2,
+      "timestamp": 1792245292.4631972,
+      "status": "ACTIVE"
+    },
     "couponsglobal:48864": {
-      "channel_msg_id": 971,
+      "channel_msg_id": 973,
       "product_id": "1005013354356242",
       "title": "Smart Body Fat Scale Accurate",
       "channel": "couponsglobal",
       "source_msg_id": 48864,
       "price": 6.72,
-      "timestamp": 1792272690.9206734,
+      "timestamp": 1792283000,
       "status": "ACTIVE"
     }
   },
@@ -6593,17 +6615,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792272692.9572158,
+    "last_deal_post_time": 1792245300.0259454,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792279383.9477875,
+    "last_sweep_time": 1792256196.9122207,
     "last_sweep_times": {
-      "algeria": 1792279381.4410193,
-      "france": 1792279383.9477875
+      "algeria": 1792256194.6922834,
+      "france": 1792256196.9122207
     },
     "last_deal_post_times": {
-      "algeria": 1792272692.9572158
+      "algeria": 1792245300.0259454
     }
   },
   "last_coin_reminder_time": 1792166302.7026794,
@@ -6922,7 +6944,9 @@
     "1005012545304504": "lodydeals",
     "1005010385663278": "couponsglobal",
     "1005012398164621": "megaphonna",
-    "1005013354356242": "couponsglobal"
+    "9998883879": "test_channel",
+    "9998884227": "test_channel",
+    "9998884838": "test_channel"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7337,7 +7361,10 @@
     "test_rem_18d6f346": "2026-10-02",
     "test_rem_77e5d93a": "2026-10-02",
     "test_rem_e205afba": "2026-10-02",
-    "test_rem_4532f971": "2026-10-02"
+    "test_rem_4532f971": "2026-10-02",
+    "test_rem_229b1cd6": "2026-10-02",
+    "test_rem_56e362b8": "2026-10-02",
+    "test_rem_a04feb4b": "2026-10-02"
   },
   "channel_announcements_history": {
     "china_holiday_shipping_delay": "2026-10-02",
@@ -7413,7 +7440,10 @@
     "test_tag_cee907": "2026-10-02",
     "test_tag_5e56cb": "2026-10-02",
     "test_tag_8d6996": "2026-10-02",
-    "test_tag_be5002": "2026-10-02"
+    "test_tag_be5002": "2026-10-02",
+    "test_tag_e924a4": "2026-10-02",
+    "test_tag_024096": "2026-10-02",
+    "test_tag_cd8b59": "2026-10-02"
   },
   "daily_tajmi3at_history": {
     "2026-10-03": {
@@ -7439,10 +7469,6 @@
     "2026-10-16": {
       "timestamp": 1792182685.3908823,
       "bulletins_count": 4
-    },
-    "2026-10-17": {
-      "timestamp": 1792272679.9943383,
-      "bulletins_count": 1
     }
   },
   "regrouped_channel_msg_ids": [
@@ -7572,11 +7598,7 @@
     912,
     916,
     917,
-    918,
-    962,
-    963,
-    964,
-    968
+    918
   ],
   "pinned_promo_events": {
     "Party Ready Sale / Choice Day_20261001": 505,
@@ -7595,7 +7617,7 @@
   ],
   "last_card_affiliate_time_dz": 1792233089.7517264,
   "card_affiliate_variant_idx_dz": 2,
-  "last_tajmi3at_published_time": 1792272679.9943383,
+  "last_tajmi3at_published_time": 1792182685.3908823,
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
@@ -7976,47 +7998,13 @@
     "aniscoupons:32993",
     "megaphonna:8438",
     "ecksdeal:5898",
-    "zedstoreonline:38630",
-    "megaphonna:8439",
-    "zedstoreonline:38631"
+    "couponsglobal:48864",
+    "couponsglobal:48848"
   ],
   "last_france_cross_promo_time": 1792222009.8603575,
   "next_france_cross_promo_interval_seconds": 182207,
   "france_cross_promo_variant_idx": 3,
   "published_coupon_bulletins": [
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
-      "timestamp": 1791677495.725336
-    },
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
-      "timestamp": 1791677679.6758788
-    },
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
-      "timestamp": 1791677704.6367133
-    },
     {
       "promo": "Test Event 2026",
       "hash": "d9b8b196",
@@ -8533,6 +8521,39 @@
       "channel_msg_id": 9999,
       "channel": "@DzAliexpress0",
       "timestamp": 1792186462.152367
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1792283878.0365489
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1792284226.7648933
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1792284837.5839462
     }
   ]
 }

@@ -229,4 +229,28 @@ def test_no_fake_coupons_from_brands_urls_or_collapsed_lines():
     assert res["coupon_code"] is None
 
 
+def test_no_fake_coupons_from_bot_names_and_coin_links():
+    """Ensure bot handles like SCOINS_BOT, Coins_bot, or coin URLs are NEVER extracted as promo coupons."""
+    text = (
+        "سعر جيد \n"
+        "🔹السعر بعد التخفيض : 6.72$🔥\n"
+        "🔹تخفيض لـ  Smart Body Fat Scale Accurate\n"
+        "🔹الرابط : https://s.click.aliexpress.com/e/_c3lf07o9\n"
+        "🔹المباشر : https://s.click.aliexpress.com/e/_c3TVaYJJ\n"
+        "✅تخفيض العملات البلد كندا تلقائي\n"
+        "بوت تخفيض العملات: t.me/CouponsCoins_bot\n"
+        "#تابع قناة التليغرام👈 t.me/CouponsGlobal#Aliexpress"
+    )
+    res = extract_multi_coupons(text, title="Smart Body Fat Scale Accurate")
+    assert res["coupons"] == []
+    assert res["coupon_code"] is None
+
+    from app.aliexpress.parser import extract_coupon, clean_coupon_token
+    assert extract_coupon(text, title="Smart Body Fat Scale Accurate") is None
+    assert clean_coupon_token("SCOINS_BOT") is None
+    assert clean_coupon_token("Coins_bot") is None
+    assert clean_coupon_token("CouponsCoins_bot") is None
+
+
+
 

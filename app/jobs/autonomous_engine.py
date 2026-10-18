@@ -359,15 +359,8 @@ class AutonomousEngine:
             logger.error(f"Error checking region disclaimer: {e}")
 
     async def check_and_post_regrouped_bulletin(self):
-        """Checks and auto-posts homogeneous product regrouping bulletins when >= 4 items exist."""
-        try:
-            from app.publisher.regrouper import check_and_publish_regrouped_bulletins
-            results = await check_and_publish_regrouped_bulletins()
-            if results:
-                for b in results:
-                    logger.info(f"Auto-Regrouped bulletin published: {b['category']} ({b['count']} items) -> Msg #{b['message_id']}")
-        except Exception as e:
-            logger.error(f"Error checking auto-regrouped bulletin: {e}")
+        """Auto-regrouped bulletins / tajmi3at are disabled from automated sweeps."""
+        return []
 
     async def check_and_post_promo_notifiers(self):
         """Checks and auto-posts promo ending and promo starting alerts (1 day before)."""
