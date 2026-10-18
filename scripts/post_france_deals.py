@@ -56,6 +56,7 @@ def get_bot_token() -> str:
 
 # Dedicated, strictly verified French/European AliExpress channels
 # NEVER include Algerian or Arabic channels here (their coins, coupons, and links do not work in France).
+# French deals dropped by Algerian channels are auto-routed by the France router in post_recent_deals.py!
 FRANCE_SOURCE_CHANNELS = [
     "AliFRDrop",
     "FranceCP",

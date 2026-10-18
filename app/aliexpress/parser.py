@@ -1124,17 +1124,31 @@ def is_france_deal(text: str, url: str = "", country_info: Optional[str] = None)
     if any(ind in combined for ind in algerian_indicators):
         return False
 
-    if country_info and any(k in str(country_info).lower() for k in ["فرنسا", "france"]):
+    # Auto-extract country instruction if not passed explicitly
+    if country_info is None and text:
+        country_info = extract_country_instruction(text)
+
+    if country_info and any(k in str(country_info).lower() for k in ["فرنسا", "france", "🇫🇷"]):
         return True
 
     # Explicit Arabic drop indicators as typed by Algerian/Arabic deal hunters
     explicit_arabic_france_markers = [
         "عروض ففرنسا", "عروض فرنسا", "عرض فرنسا", "عرض ففرنسا",
-        "خاص بفرنسا", "فرنسا فقط", "فقط لفرنسا", "شحن لفرنسا", "شحن فرنسا",
-        "توصيل لفرنسا", "توصيل فرنسا", "توصيل الى فرنسا", "شحن الى فرنسا",
-        "كودات فرنسا", "كوبونات فرنسا", "كوبون فرنسا", "كود فرنسا"
+        "خاص بفرنسا", "فرنسا فقط", "فقط لفرنسا",
+        "شحن لفرنسا", "شحن فرنسا", "شحن الى فرنسا", "شحن إلى فرنسا", "شحن نحو فرنسا",
+        "الشحن لفرنسا", "الشحن فرنسا", "الشحن الى فرنسا", "الشحن إلى فرنسا", "الشحن نحو فرنسا",
+        "توصيل لفرنسا", "توصيل فرنسا", "توصيل الى فرنسا", "توصيل إلى فرنسا", "توصيل نحو فرنسا",
+        "التوصيل لفرنسا", "التوصيل فرنسا", "التوصيل الى فرنسا", "التوصيل إلى فرنسا", "التوصيل نحو فرنسا",
+        "نحو فرنسا", "لفرنسا", "إلى فرنسا", "الى فرنسا", "في فرنسا",
+        "البلد فرنسا", "البلد : فرنسا", "بلد فرنسا",
+        "كودات فرنسا", "كوبونات فرنسا", "كوبون فرنسا", "كود فرنسا", "كوبون فرنسي", "كوبونات فرنسية",
+        "فرنسا 🇫🇷", "france 🇫🇷"
     ]
     if any(k in combined for k in explicit_arabic_france_markers):
+        return True
+
+    # If post mentions France and currency is Euro, it's definitely a France deal
+    if any(f in combined for f in ["فرنسا", "france", "🇫🇷"]) and any(e in combined for e in ["€", "اورو", "أورو", "eur", "euro"]):
         return True
 
     # Native French phrasing
@@ -1146,9 +1160,11 @@ def is_france_deal(text: str, url: str = "", country_info: Optional[str] = None)
     if any(k in combined for k in native_french_markers):
         return True
 
-    # Specific French promo codes (e.g. FRPRD12, FRLD30, CDFR25, FWFR11)
-    if re.search(r'\b(?:frprd|frld|frcd|cdfr|frfw|fwfr)\d{2,3}\b', combined):
-        return True
+    # French promo codes (e.g. FRPRD12, FRLD30, CDFR25, FWFR11, SUNFR30, SUNFR20, FR20)
+    if re.search(r'\b(?:[A-Za-z]{0,4}FR|FR[A-Za-z]{0,4})\d{1,3}\b', combined, re.IGNORECASE):
+        # Ensure it's not a false positive with standard words
+        if any(euro in combined for euro in ["€", "eur", "اورو", "أورو", "france", "فرنسا"]) or re.search(r'\b(?:frprd|frld|frcd|cdfr|frfw|fwfr|sunfr)\d{1,3}\b', combined, re.IGNORECASE):
+            return True
 
     # Explicit URL shipping parameters for France
     if "shiptocountry=fr" in combined or "country=fr" in combined:

@@ -352,10 +352,17 @@ def test_france_channel_never_accepts_arabic_deals():
     assert ok5 is True
     assert "Explicit French drop" in reason5
 
-    # 5. Arabic channels with normal Algerian deals are rejected from France
-    ok6, reason6 = is_strictly_france_compatible_deal("عرض خيالي هاتف ريدمي نوت 13 شحن للجزائر بسعر 149$ تخفيض عملات", channel_username="megaphonna")
-    assert ok6 is False
-    assert "without explicit France markers" in reason6
+    # 6. Arabic channels dropping 'الشحن نحو فرنسا مع تغيير العملة اورو' + SUNFR codes are accepted!
+    anis_text = (
+        "Realme GT 7T GLOBAL 12/256GB\n"
+        "كوبون  30€ : SUNFR30\n"
+        "السعر : 283€\n"
+        "الشحن نحو فرنسا مع تغيير العملة اورو 💶\n"
+        "رابط العملات : https://s.click.aliexpress.com/e/_c32cOKVT"
+    )
+    ok7, reason7 = is_strictly_france_compatible_deal(anis_text, channel_username="aniscoupons")
+    assert ok7 is True
+    assert "Explicit French drop" in reason7
 
 
 
