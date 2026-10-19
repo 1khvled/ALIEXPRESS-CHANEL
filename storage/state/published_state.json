@@ -308,7 +308,8 @@
     "9998886288",
     "9998889220",
     "99988870",
-    "999888248"
+    "999888248",
+    "1005013400815566"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -499,7 +500,7 @@
     "9998887532": 1791627532.2548609,
     "9998887893": 1791627893.027416,
     "1005006007773971": 1791638433.4352653,
-    "1005013067004815": 1792233107.1523154,
+    "1005013067004815": 1792437008.1245751,
     "9998885318": 1791675318.975821,
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
@@ -627,7 +628,8 @@
     "9998886288": 1792326288.286897,
     "9998889220": 1792329220.3377435,
     "99988870": 1792330070.981351,
-    "999888248": 1792330248.913317
+    "999888248": 1792330248.913317,
+    "1005013400815566": 1792437012.793756
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -950,7 +952,8 @@
     "HONOR 600S (8/256)",
     "HONOR WIN TURBO (12/256)",
     "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital",
-    "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health"
+    "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health",
+    "Wireless Electric Tire Inflator Pump"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1185,7 +1188,7 @@
     "قرص صلب SSD من CUSU بسعات 1 تيرابايت، 512 جيجابايت، 240 جيجابايت، 480": 1791626816.0179322,
     "مايكروفون ديناميكي Fifine K688": 1791638433.4352653,
     "Walram SATA3 SSD 512GB": 1791638441.843642,
-    "Electronic Body Scale.": 1791638447.7612462,
+    "Electronic Body Scale.": 1792437008.1245751,
     "Realme 15 Global (12/256)": 1791639031.4293046,
     "REALME P3 5G": 1791649464.949431,
     "Essager 54W USB Car Charger": 1791752780.7013927,
@@ -1280,7 +1283,8 @@
     "HONOR 600S (8/256)": 1792200023.6138296,
     "HONOR WIN TURBO (12/256)": 1792200031.9265065,
     "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": 1792233107.1523154,
-    "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": 1792245292.4631972
+    "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": 1792245292.4631972,
+    "Wireless Electric Tire Inflator Pump": 1792437012.793756
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2024,27 +2028,29 @@
     "test_channel:1792329220",
     "test_channel:1792330070",
     "test_channel:1792330248",
-    "couponsglobal:48865"
+    "couponsglobal:48865",
+    "aniscoupons:32998",
+    "aniscoupons:32997"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792360422.5608404,
+  "last_run_time": 1792437012.793756,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32996,
-      "last_check_time": 1792414439.8691654
+      "last_message_id": 32998,
+      "last_check_time": 1792437014.8147662
     },
     "ecksdeal": {
-      "last_message_id": 5898,
-      "last_check_time": 1792414440.4894664
+      "last_message_id": 5899,
+      "last_check_time": 1792437015.6089826
     },
     "lodydeals": {
       "last_message_id": 45579,
-      "last_check_time": 1792414438.8371594
+      "last_check_time": 1792437002.814382
     },
     "bnddeals": {
       "last_message_id": 50863,
-      "last_check_time": 1792414441.5038657
+      "last_check_time": 1792437016.4861984
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2052,19 +2058,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7986,
-      "last_check_time": 1792414440.9927626
+      "last_check_time": 1792437016.0655742
     },
     "zedstoreonline": {
       "last_message_id": 38631,
       "last_check_time": 1792414439.3414316
     },
     "megaphonna": {
-      "last_message_id": 8448,
-      "last_check_time": 1792414442.0826826
+      "last_message_id": 8450,
+      "last_check_time": 1792437017.0372567
     },
     "couponsglobal": {
       "last_message_id": 48865,
-      "last_check_time": 1792414442.5435169
+      "last_check_time": 1792437017.4254434
     }
   },
   "published_product_prices": {
@@ -2244,7 +2250,7 @@
     "1005010289640412": 32.06,
     "1005013313539058": 6.52,
     "1005006007773971": 54.15,
-    "1005013067004815": 6.4,
+    "1005013067004815": 6.8,
     "1005006966177706": 3.49,
     "1005012234106869": 1.71,
     "1005010209307090": 111.0,
@@ -2304,7 +2310,8 @@
     "1005012826843176": 60.1,
     "1005012150344482": 25.94,
     "1005006678195057": 32.62,
-    "1005012398164621": 325.9
+    "1005012398164621": 325.9,
+    "1005013400815566": 12.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6639,6 +6646,26 @@
       "price": 17.29,
       "timestamp": 1792360422.5608404,
       "status": "ACTIVE"
+    },
+    "aniscoupons:32998": {
+      "channel_msg_id": 992,
+      "product_id": "1005013067004815",
+      "title": "Electronic Body Scale.",
+      "channel": "aniscoupons",
+      "source_msg_id": 32998,
+      "price": 6.8,
+      "timestamp": 1792437008.1245751,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:32997": {
+      "channel_msg_id": 993,
+      "product_id": "1005013400815566",
+      "title": "Wireless Electric Tire Inflator Pump",
+      "channel": "aniscoupons",
+      "source_msg_id": 32997,
+      "price": 12.4,
+      "timestamp": 1792437012.793756,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6647,17 +6674,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792360424.606137,
+    "last_deal_post_time": 1792437017.4419453,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792414445.4343448,
+    "last_sweep_time": 1792437020.126992,
     "last_sweep_times": {
-      "algeria": 1792414442.5543046,
-      "france": 1792414445.4343448
+      "algeria": 1792437017.4338953,
+      "france": 1792437020.126992
     },
     "last_deal_post_times": {
-      "algeria": 1792360424.606137
+      "algeria": 1792437017.4419453
     }
   },
   "last_coin_reminder_time": 1792398226.0405686,
@@ -6860,7 +6887,7 @@
     "9998887532": "test_channel",
     "9998887893": "test_channel",
     "1005006007773971": "ecksdeal",
-    "1005013067004815": "pcgamingpart",
+    "1005013067004815": "aniscoupons",
     "9998885318": "test_channel",
     "9998885569": "test_channel",
     "9998886905": "test_channel",
@@ -6985,7 +7012,8 @@
     "9998886288": "test_channel",
     "9998889220": "test_channel",
     "99988870": "test_channel",
-    "999888248": "test_channel"
+    "999888248": "test_channel",
+    "1005013400815566": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7318,7 +7346,8 @@
     "HONOR 600S (8/256)": "megaphonna",
     "HONOR WIN TURBO (12/256)": "megaphonna",
     "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": "pcgamingpart",
-    "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": "zedstoreonline"
+    "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": "zedstoreonline",
+    "Wireless Electric Tire Inflator Pump": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -8065,7 +8094,10 @@
     "megaphonna:8445",
     "megaphonna:8446",
     "megaphonna:8448",
-    "megaphonna:8447"
+    "megaphonna:8447",
+    "ecksdeal:5899",
+    "megaphonna:8450",
+    "megaphonna:8449"
   ],
   "last_france_cross_promo_time": 1792414436.0167263,
   "next_france_cross_promo_interval_seconds": 221713,
