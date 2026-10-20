@@ -309,7 +309,8 @@
     "9998889220",
     "99988870",
     "999888248",
-    "1005013400815566"
+    "1005013400815566",
+    "1005013379632301"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -629,7 +630,8 @@
     "9998889220": 1792329220.3377435,
     "99988870": 1792330070.981351,
     "999888248": 1792330248.913317,
-    "1005013400815566": 1792437012.793756
+    "1005013400815566": 1792437012.793756,
+    "1005013379632301": 1792485988.1384284
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -953,7 +955,8 @@
     "HONOR WIN TURBO (12/256)",
     "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital",
     "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health",
-    "Wireless Electric Tire Inflator Pump"
+    "Wireless Electric Tire Inflator Pump",
+    "Double Stainless Steel Travel Thermo Cup"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1284,7 +1287,8 @@
     "HONOR WIN TURBO (12/256)": 1792200031.9265065,
     "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": 1792233107.1523154,
     "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": 1792245292.4631972,
-    "Wireless Electric Tire Inflator Pump": 1792437012.793756
+    "Wireless Electric Tire Inflator Pump": 1792437012.793756,
+    "Double Stainless Steel Travel Thermo Cup": 1792485988.1384284
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2030,19 +2034,20 @@
     "test_channel:1792330248",
     "couponsglobal:48865",
     "aniscoupons:32998",
-    "aniscoupons:32997"
+    "aniscoupons:32997",
+    "pcgamingpart:7987"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792437012.793756,
+  "last_run_time": 1792485988.1384284,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32998,
-      "last_check_time": 1792465352.80859
+      "last_check_time": 1792485984.00321
     },
     "ecksdeal": {
       "last_message_id": 5899,
-      "last_check_time": 1792465353.3086529
+      "last_check_time": 1792485984.5807903
     },
     "lodydeals": {
       "last_message_id": 45579,
@@ -2050,27 +2055,27 @@
     },
     "bnddeals": {
       "last_message_id": 50863,
-      "last_check_time": 1792465354.3510985
+      "last_check_time": 1792485990.8480382
     },
     "test_channel": {
       "last_message_id": 1792330248,
       "last_check_time": 1792330248.913317
     },
     "pcgamingpart": {
-      "last_message_id": 7986,
-      "last_check_time": 1792465353.8016567
+      "last_message_id": 7987,
+      "last_check_time": 1792485990.1593175
     },
     "zedstoreonline": {
-      "last_message_id": 38631,
-      "last_check_time": 1792414439.3414316
+      "last_message_id": 38632,
+      "last_check_time": 1792485983.5118077
     },
     "megaphonna": {
-      "last_message_id": 8450,
-      "last_check_time": 1792465354.904899
+      "last_message_id": 8451,
+      "last_check_time": 1792485991.4163878
     },
     "couponsglobal": {
       "last_message_id": 48866,
-      "last_check_time": 1792465355.425732
+      "last_check_time": 1792485991.8239908
     }
   },
   "published_product_prices": {
@@ -2311,7 +2316,8 @@
     "1005012150344482": 25.94,
     "1005006678195057": 32.62,
     "1005012398164621": 325.9,
-    "1005013400815566": 12.4
+    "1005013400815566": 12.4,
+    "1005013379632301": 4.32
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6666,6 +6672,16 @@
       "price": 12.4,
       "timestamp": 1792437012.793756,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7987": {
+      "channel_msg_id": 994,
+      "product_id": "1005013379632301",
+      "title": "Double Stainless Steel Travel Thermo Cup",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7987,
+      "price": 4.32,
+      "timestamp": 1792485988.1384284,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6674,17 +6690,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792437017.4419453,
+    "last_deal_post_time": 1792485991.8418777,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792465358.3096077,
+    "last_sweep_time": 1792485994.803728,
     "last_sweep_times": {
-      "algeria": 1792465355.4370317,
-      "france": 1792465358.3096077
+      "algeria": 1792485991.8331382,
+      "france": 1792485994.803728
     },
     "last_deal_post_times": {
-      "algeria": 1792437017.4419453
+      "algeria": 1792485991.8418777
     }
   },
   "last_coin_reminder_time": 1792398226.0405686,
@@ -7013,7 +7029,8 @@
     "9998889220": "test_channel",
     "99988870": "test_channel",
     "999888248": "test_channel",
-    "1005013400815566": "aniscoupons"
+    "1005013400815566": "aniscoupons",
+    "1005013379632301": "pcgamingpart"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7347,7 +7364,8 @@
     "HONOR WIN TURBO (12/256)": "megaphonna",
     "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": "pcgamingpart",
     "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": "zedstoreonline",
-    "Wireless Electric Tire Inflator Pump": "aniscoupons"
+    "Wireless Electric Tire Inflator Pump": "aniscoupons",
+    "Double Stainless Steel Travel Thermo Cup": "pcgamingpart"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -8098,7 +8116,9 @@
     "ecksdeal:5899",
     "megaphonna:8450",
     "megaphonna:8449",
-    "couponsglobal:48866"
+    "couponsglobal:48866",
+    "zedstoreonline:38632",
+    "megaphonna:8451"
   ],
   "last_france_cross_promo_time": 1792414436.0167263,
   "next_france_cross_promo_interval_seconds": 221713,
