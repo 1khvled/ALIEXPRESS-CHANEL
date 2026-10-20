@@ -2043,11 +2043,11 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 32998,
-      "last_check_time": 1792495404.0462556
+      "last_check_time": 1792511189.9614189
     },
     "ecksdeal": {
       "last_message_id": 5899,
-      "last_check_time": 1792495404.4866824
+      "last_check_time": 1792511190.4967268
     },
     "lodydeals": {
       "last_message_id": 45579,
@@ -2055,27 +2055,27 @@
     },
     "bnddeals": {
       "last_message_id": 50863,
-      "last_check_time": 1792495405.4671643
+      "last_check_time": 1792511191.4079525
     },
     "test_channel": {
       "last_message_id": 1792330248,
       "last_check_time": 1792330248.913317
     },
     "pcgamingpart": {
-      "last_message_id": 7987,
-      "last_check_time": 1792495404.9705493
+      "last_message_id": 7988,
+      "last_check_time": 1792511190.9197996
     },
     "zedstoreonline": {
       "last_message_id": 38632,
-      "last_check_time": 1792495403.5512369
+      "last_check_time": 1792511188.8995981
     },
     "megaphonna": {
       "last_message_id": 8452,
-      "last_check_time": 1792495406.084423
+      "last_check_time": 1792511191.8880517
     },
     "couponsglobal": {
       "last_message_id": 48866,
-      "last_check_time": 1792495406.6591365
+      "last_check_time": 1792511192.3500865
     }
   },
   "published_product_prices": {
@@ -6694,10 +6694,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792495409.6691878,
+    "last_sweep_time": 1792511194.9164462,
     "last_sweep_times": {
-      "algeria": 1792495406.774917,
-      "france": 1792495409.6691878
+      "algeria": 1792511192.36088,
+      "france": 1792511194.9164462
     },
     "last_deal_post_times": {
       "algeria": 1792485991.8418777
@@ -8119,7 +8119,8 @@
     "couponsglobal:48866",
     "zedstoreonline:38632",
     "megaphonna:8451",
-    "megaphonna:8452"
+    "megaphonna:8452",
+    "pcgamingpart:7988"
   ],
   "last_france_cross_promo_time": 1792414436.0167263,
   "next_france_cross_promo_interval_seconds": 221713,
