@@ -310,7 +310,8 @@
     "99988870",
     "999888248",
     "1005013400815566",
-    "1005013379632301"
+    "1005013379632301",
+    "1005004683413179"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -631,7 +632,8 @@
     "99988870": 1792330070.981351,
     "999888248": 1792330248.913317,
     "1005013400815566": 1792437012.793756,
-    "1005013379632301": 1792485988.1384284
+    "1005013379632301": 1792485988.1384284,
+    "1005004683413179": 1792525221.9760067
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -956,7 +958,8 @@
     "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital",
     "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health",
     "Wireless Electric Tire Inflator Pump",
-    "Double Stainless Steel Travel Thermo Cup"
+    "Double Stainless Steel Travel Thermo Cup",
+    "QOOVI Car Charger"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1288,7 +1291,8 @@
     "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": 1792233107.1523154,
     "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": 1792245292.4631972,
     "Wireless Electric Tire Inflator Pump": 1792437012.793756,
-    "Double Stainless Steel Travel Thermo Cup": 1792485988.1384284
+    "Double Stainless Steel Travel Thermo Cup": 1792485988.1384284,
+    "QOOVI Car Charger": 1792525221.9760067
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2035,27 +2039,28 @@
     "couponsglobal:48865",
     "aniscoupons:32998",
     "aniscoupons:32997",
-    "pcgamingpart:7987"
+    "pcgamingpart:7987",
+    "aniscoupons:33000"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792485988.1384284,
+  "last_run_time": 1792525221.9760067,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 32998,
-      "last_check_time": 1792511189.9614189
+      "last_message_id": 33001,
+      "last_check_time": 1792525224.0163715
     },
     "ecksdeal": {
       "last_message_id": 5899,
-      "last_check_time": 1792511190.4967268
+      "last_check_time": 1792525224.9658365
     },
     "lodydeals": {
       "last_message_id": 45579,
       "last_check_time": 1792437002.814382
     },
     "bnddeals": {
-      "last_message_id": 50863,
-      "last_check_time": 1792511191.4079525
+      "last_message_id": 50864,
+      "last_check_time": 1792525226.7696888
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2063,11 +2068,11 @@
     },
     "pcgamingpart": {
       "last_message_id": 7988,
-      "last_check_time": 1792511190.9197996
+      "last_check_time": 1792525225.328031
     },
     "zedstoreonline": {
       "last_message_id": 38632,
-      "last_check_time": 1792511188.8995981
+      "last_check_time": 1792525218.4808464
     },
     "megaphonna": {
       "last_message_id": 8452,
@@ -2075,7 +2080,7 @@
     },
     "couponsglobal": {
       "last_message_id": 48866,
-      "last_check_time": 1792511192.3500865
+      "last_check_time": 1792525228.3472095
     }
   },
   "published_product_prices": {
@@ -2317,7 +2322,8 @@
     "1005006678195057": 32.62,
     "1005012398164621": 325.9,
     "1005013400815566": 12.4,
-    "1005013379632301": 4.32
+    "1005013379632301": 4.32,
+    "1005004683413179": 1.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6682,6 +6688,16 @@
       "price": 4.32,
       "timestamp": 1792485988.1384284,
       "status": "ACTIVE"
+    },
+    "aniscoupons:33000": {
+      "channel_msg_id": 996,
+      "product_id": "1005004683413179",
+      "title": "QOOVI Car Charger",
+      "channel": "aniscoupons",
+      "source_msg_id": 33000,
+      "price": 1.9,
+      "timestamp": 1792525221.9760067,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6690,17 +6706,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792485991.8418777,
+    "last_deal_post_time": 1792525228.368419,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792511194.9164462,
+    "last_sweep_time": 1792525230.8759086,
     "last_sweep_times": {
-      "algeria": 1792511192.36088,
-      "france": 1792511194.9164462
+      "algeria": 1792525228.358147,
+      "france": 1792525230.8759086
     },
     "last_deal_post_times": {
-      "algeria": 1792485991.8418777
+      "algeria": 1792525228.368419
     }
   },
   "last_coin_reminder_time": 1792398226.0405686,
@@ -7030,7 +7046,8 @@
     "99988870": "test_channel",
     "999888248": "test_channel",
     "1005013400815566": "aniscoupons",
-    "1005013379632301": "pcgamingpart"
+    "1005013379632301": "pcgamingpart",
+    "1005004683413179": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7365,7 +7382,8 @@
     "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": "pcgamingpart",
     "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": "zedstoreonline",
     "Wireless Electric Tire Inflator Pump": "aniscoupons",
-    "Double Stainless Steel Travel Thermo Cup": "pcgamingpart"
+    "Double Stainless Steel Travel Thermo Cup": "pcgamingpart",
+    "QOOVI Car Charger": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -8120,7 +8138,10 @@
     "zedstoreonline:38632",
     "megaphonna:8451",
     "megaphonna:8452",
-    "pcgamingpart:7988"
+    "pcgamingpart:7988",
+    "aniscoupons:33001",
+    "aniscoupons:32999",
+    "bnddeals:50864"
   ],
   "last_france_cross_promo_time": 1792414436.0167263,
   "next_france_cross_promo_interval_seconds": 221713,
