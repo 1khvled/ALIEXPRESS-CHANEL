@@ -311,7 +311,9 @@
     "999888248",
     "1005013400815566",
     "1005013379632301",
-    "1005004683413179"
+    "1005004683413179",
+    "1005013246579741",
+    "1005013413834178"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -633,7 +635,9 @@
     "999888248": 1792330248.913317,
     "1005013400815566": 1792437012.793756,
     "1005013379632301": 1792485988.1384284,
-    "1005004683413179": 1792525221.9760067
+    "1005004683413179": 1792525221.9760067,
+    "1005013246579741": 1792613440.0351677,
+    "1005013413834178": 1792613447.0547092
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -959,7 +963,9 @@
     "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health",
     "Wireless Electric Tire Inflator Pump",
     "Double Stainless Steel Travel Thermo Cup",
-    "QOOVI Car Charger"
+    "QOOVI Car Charger",
+    "Multi-Tier Metal Rack with 8 Hooks for Shoes,",
+    "Wireless Car Air Compressor Air Pump Electric"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1292,7 +1298,9 @@
     "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": 1792245292.4631972,
     "Wireless Electric Tire Inflator Pump": 1792437012.793756,
     "Double Stainless Steel Travel Thermo Cup": 1792485988.1384284,
-    "QOOVI Car Charger": 1792525221.9760067
+    "QOOVI Car Charger": 1792525221.9760067,
+    "Multi-Tier Metal Rack with 8 Hooks for Shoes,": 1792613440.0351677,
+    "Wireless Car Air Compressor Air Pump Electric": 1792613447.0547092
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2041,19 +2049,21 @@
     "aniscoupons:32997",
     "pcgamingpart:7987",
     "aniscoupons:33000",
-    "ecksdeal:5901"
+    "ecksdeal:5901",
+    "couponsglobal:48869",
+    "couponsglobal:48868"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792103160.5352654,
-  "last_run_time": 1792525221.9760067,
+  "last_run_time": 1792613447.0547092,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33003,
-      "last_check_time": 1792598859.192531
+      "last_check_time": 1792613431.6899862
     },
     "ecksdeal": {
       "last_message_id": 5901,
-      "last_check_time": 1792612971.2939389
+      "last_check_time": 1792613432.23043
     },
     "lodydeals": {
       "last_message_id": 45579,
@@ -2061,7 +2071,7 @@
     },
     "bnddeals": {
       "last_message_id": 50866,
-      "last_check_time": 1792598860.651962
+      "last_check_time": 1792613433.26933
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2069,19 +2079,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7988,
-      "last_check_time": 1792598860.148434
+      "last_check_time": 1792613432.737732
     },
     "zedstoreonline": {
       "last_message_id": 38633,
-      "last_check_time": 1792598858.5922034
+      "last_check_time": 1792613431.08367
     },
     "megaphonna": {
-      "last_message_id": 8456,
-      "last_check_time": 1792598861.1873262
+      "last_message_id": 8457,
+      "last_check_time": 1792613433.88411
     },
     "couponsglobal": {
-      "last_message_id": 48867,
-      "last_check_time": 1792598861.7253942
+      "last_message_id": 48869,
+      "last_check_time": 1792613449.0793068
     }
   },
   "published_product_prices": {
@@ -2324,7 +2334,9 @@
     "1005012398164621": 325.9,
     "1005013400815566": 12.4,
     "1005013379632301": 4.32,
-    "1005004683413179": 1.9
+    "1005004683413179": 1.9,
+    "1005013246579741": 6.77,
+    "1005013413834178": 10.25
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6709,6 +6721,26 @@
       "price": 54.11,
       "timestamp": 1792612971.2939389,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48869": {
+      "channel_msg_id": 1001,
+      "product_id": "1005013246579741",
+      "title": "Multi-Tier Metal Rack with 8 Hooks for Shoes,",
+      "channel": "couponsglobal",
+      "source_msg_id": 48869,
+      "price": 6.77,
+      "timestamp": 1792613440.0351677,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48868": {
+      "channel_msg_id": 1002,
+      "product_id": "1005013413834178",
+      "title": "Wireless Car Air Compressor Air Pump Electric",
+      "channel": "couponsglobal",
+      "source_msg_id": 48868,
+      "price": 10.25,
+      "timestamp": 1792613447.0547092,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6717,17 +6749,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792525228.368419,
+    "last_deal_post_time": 1792613449.1006196,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792598864.3270779,
+    "last_sweep_time": 1792613454.527972,
     "last_sweep_times": {
-      "algeria": 1792598861.7357306,
-      "france": 1792598864.3270779
+      "algeria": 1792613449.0902498,
+      "france": 1792613454.527972
     },
     "last_deal_post_times": {
-      "algeria": 1792525228.368419
+      "algeria": 1792613449.1006196
     }
   },
   "last_coin_reminder_time": 1792398226.0405686,
@@ -7058,7 +7090,9 @@
     "999888248": "test_channel",
     "1005013400815566": "aniscoupons",
     "1005013379632301": "pcgamingpart",
-    "1005004683413179": "aniscoupons"
+    "1005004683413179": "aniscoupons",
+    "1005013246579741": "couponsglobal",
+    "1005013413834178": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7394,7 +7428,9 @@
     "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": "zedstoreonline",
     "Wireless Electric Tire Inflator Pump": "aniscoupons",
     "Double Stainless Steel Travel Thermo Cup": "pcgamingpart",
-    "QOOVI Car Charger": "aniscoupons"
+    "QOOVI Car Charger": "aniscoupons",
+    "Multi-Tier Metal Rack with 8 Hooks for Shoes,": "couponsglobal",
+    "Wireless Car Air Compressor Air Pump Electric": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -7732,7 +7768,8 @@
   "pinned_promo_events": {
     "AliExpress Special Promo Octobre 2026_20261004": 661,
     "AliExpress Special Promo Octobre 2026_20261006": 677,
-    "Brand Day Sale Octobre 2026_20261009": 702
+    "Brand Day Sale Octobre 2026_20261009": 702,
+    "Winter Offers_20261014": 999
   },
   "sent_promo_notifiers": [
     "LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
@@ -8164,7 +8201,8 @@
     "bnddeals:50865",
     "megaphonna:8456",
     "couponsglobal:48867",
-    "ecksdeal:5901"
+    "ecksdeal:5901",
+    "megaphonna:8457"
   ],
   "last_france_cross_promo_time": 1792414436.0167263,
   "next_france_cross_promo_interval_seconds": 221713,
