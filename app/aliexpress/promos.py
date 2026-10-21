@@ -262,8 +262,8 @@ PROMO_CALENDAR: List[PromoEvent] = [
         name_ar="تخفيضات عروض الشتاء Winter Offers ❄️",
         name_fr="Offres d'Hiver Winter Offers ❄️",
         start_date=datetime(2026, 10, 14, 7, 0, 0, tzinfo=timezone.utc),
-        end_date=datetime(2026, 10, 17, 7, 0, 0, tzinfo=timezone.utc),
-        banner_tag="❄️ Winter Offers (14 - 17 أكتوبر)",
+        end_date=datetime(2026, 10, 31, 23, 59, 59, tzinfo=timezone.utc),
+        banner_tag="❄️ Winter Offers (14 - 31 أكتوبر)",
         is_major=True,
         coupon_tiers=[
             {"tier": "6/49$", "code": "WOAE06"},
@@ -1088,6 +1088,9 @@ class PromoTracker:
         # 3. Reject any posts containing expired festival codes from ended promo events
         for event in PROMO_CALENDAR:
             if now > event.end_date:
+                # If the message is freshly posted (within 12h) and codes are from current month sales, don't mark as expired
+                if msg_datetime and (now - msg_datetime) < timedelta(hours=12) and event.start_date.month == now.month:
+                    continue
                 tiers_dz = event.coupon_tiers or []
                 tiers_fr = getattr(event, "coupon_tiers_fr", None) or []
                 expired_codes = [t.get("code") for t in tiers_dz if t.get("code")] + \
@@ -1096,7 +1099,12 @@ class PromoTracker:
                     if re.search(r'\b' + re.escape(code) + r'\b', text, re.IGNORECASE):
                         return False, f"Expired festival coupon code '{code}' from ended event '{event.name}'"
 
-        # 4. If coupons or campaign names are mentioned, ensure we are not in an empty period passing off old codes
+        # 4. Reject past events that are strictly over
+        party_ready_end = datetime(2026, 10, 8, 7, 0, 0, tzinfo=timezone.utc)
+        if now > party_ready_end and any(term in text.lower() for term in ["party ready", "شويس داي", "شويس داى"]):
+            return False, "Party Ready Sale / Choice Day event has ended"
+
+        # If coupons or campaign names are mentioned, ensure we are not in an empty period passing off old codes
         active_promo = self.get_active_promo(now)
         if not active_promo:
             # Reject any posts containing festival codes (OTPRD, FRPRD, BDQT, Choice Day codes)
@@ -1139,7 +1147,8 @@ class PromoTracker:
         discovered = sniff_event_from_text(text, media_url=media_url, campaign_url=campaign_url)
         if not discovered:
             return None
-        if discovered.end_date <= datetime.now(timezone.utc):
+        now_check = getattr(self, "_ref_now", None) or datetime.now(timezone.utc)
+        if (now_check - discovered.end_date) > timedelta(days=7):
             logger.info(f"[EVENT KNOWER] Discovered event has already ended ({discovered.name}), skipping registration.")
             return None
 
