@@ -543,7 +543,6 @@
     "1005009275536960": 1791975930.016452,
     "1005007767322935": 1791975934.9659944,
     "1005012571601398": 1792077701.5855007,
-    "1005008131216261": 1792612971.2939389,
     "1005013054007275": 1791992936.3210912,
     "1005011899097443": 1792191284.560975,
     "1005012865117890": 1792007168.2612865,
@@ -901,7 +900,6 @@
     "Vxe Dragonfly R1 PAW3395 SE",
     "رجع العرض جنننننننننننننننننح🏃‍♂️🏃‍♂️ ©️©️©️©️️️️️⚡️️️️️️️",
     "Ⓜ HONOR X80 PRO MAX (8/128)",
-    "ماوس لاسلكي فخم Scyrox V6 Wireless 8K",
     "ماوس لاسلكي فخم Scyrox V8S Wireless 8K",
     "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM",
     "Rocoren 100W Type-C to USB Fast Charging 0.5M",
@@ -1235,7 +1233,6 @@
     "Vxe Dragonfly R1 PAW3395 SE": 1791975934.9659944,
     "رجع العرض جنننننننننننننننننح🏃‍♂️🏃‍♂️ ©️©️©️©️️️️️⚡️️️️️️️": 1792025678.6249368,
     "Ⓜ HONOR X80 PRO MAX (8/128)": 1792007163.0270946,
-    "ماوس لاسلكي فخم Scyrox V6 Wireless 8K": 1792612971.2939389,
     "ماوس لاسلكي فخم Scyrox V8S Wireless 8K": 1791992936.3210912,
     "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM": 1791992945.451545,
     "Rocoren 100W Type-C to USB Fast Charging 0.5M": 1791992975.2913277,
@@ -2293,7 +2290,6 @@
     "1005007920266509": 33.3,
     "1005009275536960": 14.72,
     "1005007767322935": 21.61,
-    "1005008131216261": 54.11,
     "1005013054007275": 55.97,
     "1005011899097443": 10.16,
     "1005010428947440": 24.47,
@@ -6997,7 +6993,6 @@
     "1005007920266509": "aniscoupons",
     "1005009275536960": "lodydeals",
     "1005007767322935": "lodydeals",
-    "1005008131216261": "ecksdeal",
     "1005013054007275": "ecksdeal",
     "1005011899097443": "lodydeals",
     "1005010428947440": "couponsglobal",
@@ -7363,7 +7358,6 @@
     "Vxe Dragonfly R1 PAW3395 SE": "lodydeals",
     "رجع العرض جنننننننننننننننننح🏃‍♂️🏃‍♂️ ©️©️©️©️️️️️⚡️️️️️️️": "megaphonna",
     "Ⓜ HONOR X80 PRO MAX (8/128)": "megaphonna",
-    "ماوس لاسلكي فخم Scyrox V6 Wireless 8K": "ecksdeal",
     "ماوس لاسلكي فخم Scyrox V8S Wireless 8K": "ecksdeal",
     "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM": "pcgamingpart",
     "Rocoren 100W Type-C to USB Fast Charging 0.5M": "couponsglobal",
@@ -7608,7 +7602,8 @@
     "test_tag_582c9b": "2026-10-02",
     "test_tag_09f228": "2026-10-02",
     "test_tag_f3f3dd": "2026-10-02",
-    "test_tag_e4a8a1": "2026-10-02"
+    "test_tag_e4a8a1": "2026-10-02",
+    "test_tag_56d111": "2026-10-02"
   },
   "daily_tajmi3at_history": {
     "2026-10-03": {
@@ -8759,10 +8754,8 @@
       "timestamp": 1792330247.4350224
     }
   ],
-  "last_pre_11_11_advisory_time": 1792330250.405807,
-  "next_pre_11_11_interval_seconds": 296040,
+  "last_pre_11_11_advisory_time": 1792617104.953203,
+  "next_pre_11_11_interval_seconds": 262836,
   "pre_11_11_variant_idx": 1,
-  "published_title_prices": {
-    "ماوس لاسلكي فخم Scyrox V6 Wireless 8K": 54.11
-  }
+  "published_title_prices": {}
 }
