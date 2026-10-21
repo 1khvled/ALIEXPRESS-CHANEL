@@ -216,7 +216,6 @@
     "1005009275536960",
     "1005007767322935",
     "1005012571601398",
-    "1005008131216261",
     "1005013054007275",
     "1005012865117890",
     "1005010428947440",
@@ -2046,7 +2045,6 @@
     "aniscoupons:32997",
     "pcgamingpart:7987",
     "aniscoupons:33000",
-    "ecksdeal:5901",
     "couponsglobal:48869",
     "couponsglobal:48868"
   ],
@@ -2056,7 +2054,7 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33003,
-      "last_check_time": 1792613431.6899862
+      "last_check_time": 1792625092.5070093
     },
     "ecksdeal": {
       "last_message_id": 5901,
@@ -2068,7 +2066,7 @@
     },
     "bnddeals": {
       "last_message_id": 50866,
-      "last_check_time": 1792613433.26933
+      "last_check_time": 1792625093.8133607
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2076,19 +2074,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7988,
-      "last_check_time": 1792613432.737732
+      "last_check_time": 1792625093.3784776
     },
     "zedstoreonline": {
       "last_message_id": 38633,
-      "last_check_time": 1792613431.08367
+      "last_check_time": 1792625092.0277092
     },
     "megaphonna": {
       "last_message_id": 8457,
-      "last_check_time": 1792613433.88411
+      "last_check_time": 1792625094.3136022
     },
     "couponsglobal": {
       "last_message_id": 48869,
-      "last_check_time": 1792613449.0793068
+      "last_check_time": 1792625094.752124
     }
   },
   "published_product_prices": {
@@ -6708,16 +6706,6 @@
       "timestamp": 1792525221.9760067,
       "status": "ACTIVE"
     },
-    "ecksdeal:5901": {
-      "channel_msg_id": 998,
-      "product_id": "1005008131216261",
-      "title": "ماوس لاسلكي فخم Scyrox V6 Wireless 8K",
-      "channel": "ecksdeal",
-      "source_msg_id": 5901,
-      "price": 54.11,
-      "timestamp": 1792612971.2939389,
-      "status": "ACTIVE"
-    },
     "couponsglobal:48869": {
       "channel_msg_id": 1001,
       "product_id": "1005013246579741",
@@ -6749,10 +6737,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792613454.527972,
+    "last_sweep_time": 1792625097.6163876,
     "last_sweep_times": {
-      "algeria": 1792613449.0902498,
-      "france": 1792613454.527972
+      "algeria": 1792625094.7626069,
+      "france": 1792625097.6163876
     },
     "last_deal_post_times": {
       "algeria": 1792613449.1006196
@@ -7763,8 +7751,7 @@
   "pinned_promo_events": {
     "AliExpress Special Promo Octobre 2026_20261004": 661,
     "AliExpress Special Promo Octobre 2026_20261006": 677,
-    "Brand Day Sale Octobre 2026_20261009": 702,
-    "Winter Offers_20261014": 999
+    "Brand Day Sale Octobre 2026_20261009": 702
   },
   "sent_promo_notifiers": [
     "LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
@@ -7773,8 +7760,8 @@
     "LAUNCH_ALERT_Winter Offers_20261014",
     "END_ALERT_Winter Offers_20261018"
   ],
-  "last_card_affiliate_time_dz": 1792360410.1967537,
-  "card_affiliate_variant_idx_dz": 0,
+  "last_card_affiliate_time_dz": 1792625087.2699003,
+  "card_affiliate_variant_idx_dz": 1,
   "last_tajmi3at_published_time": 1792182685.3908823,
   "published_deals_history": {},
   "settings": {},
