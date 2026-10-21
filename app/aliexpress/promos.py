@@ -262,8 +262,8 @@ PROMO_CALENDAR: List[PromoEvent] = [
         name_ar="تخفيضات عروض الشتاء Winter Offers ❄️",
         name_fr="Offres d'Hiver Winter Offers ❄️",
         start_date=datetime(2026, 10, 14, 7, 0, 0, tzinfo=timezone.utc),
-        end_date=datetime(2026, 10, 31, 23, 59, 59, tzinfo=timezone.utc),
-        banner_tag="❄️ Winter Offers (14 - 31 أكتوبر)",
+        end_date=datetime(2026, 10, 17, 7, 0, 0, tzinfo=timezone.utc),
+        banner_tag="❄️ Winter Offers (14 - 17 أكتوبر)",
         is_major=True,
         coupon_tiers=[
             {"tier": "6/49$", "code": "WOAE06"},

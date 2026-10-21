@@ -37,6 +37,28 @@ def build_promo_calendar_post(now: Optional[datetime] = None) -> Tuple[str, Dict
     if now is None:
         now = datetime.now(timezone.utc)
 
+    # In late October (after Oct 17) or November, focus on the November blockbuster shopping season
+    if (now.month == 10 and now.day >= 18) or now.month == 11:
+        lines = [
+            "<blockquote>❗️ <b>رزنامة تخفيضات علي اكسبرس شهر نوفمبر 2026</b></blockquote>",
+            "",
+            "🎉 <b>شهر كامل من التخفيضات</b>",
+            "",
+            "✅ <b>من 1 الى 18 نوفمبر :</b> التخفيضات الكبرى 11.11",
+            "",
+            "✅ <b>من 19 الى 30 نوفمبر :</b> التخفيضات الكبرى Black Friday",
+            "",
+            "✅ <b>من 30 نوفمبر الى 3 ديسمبر :</b> تخفيضات Cyber Monday",
+            "",
+            "🔥 <b>إجمع العملات التي تحتاجها في العروض من هنا :</b>",
+            "https://s.click.aliexpress.com/e/_c4l391NX",
+            "",
+            "🤖 <b>البوت لتخفيض الاسعار :</b> https://t.me/Alilo07BOT",
+            "",
+            "📢 <b>قناة التيليجرام :</b> https://t.me/DzAliexpress0"
+        ]
+        return "\n".join(lines), {}
+
     arabic_months = {
         1: "جانفي", 2: "فيفري", 3: "مارس", 4: "أفريل", 5: "ماي", 6: "جوان",
         7: "جويلية", 8: "أوت", 9: "سبتمبر", 10: "أكتوبر", 11: "نوفمبر", 12: "ديسمبر"
@@ -144,9 +166,14 @@ async def publish_calendar_to_channel(bot_token: Optional[str] = None, channel_i
     api_url = f"https://api.telegram.org/bot{token}"
     try:
         async with httpx.AsyncClient(timeout=20.0) as client:
-            if os.path.exists(LOCAL_CALENDAR_PATH):
-                with open(LOCAL_CALENDAR_PATH, "rb") as f:
-                    files = {"photo": ("official_aliexpress_calendar_2026.jpg", f, "image/jpeg")}
+            banner_img = os.path.join(os.path.dirname(__file__), "..", "assets", "dealscout_event_started.png")
+            if not os.path.exists(banner_img):
+                banner_img = LOCAL_CALENDAR_PATH
+
+            if os.path.exists(banner_img):
+                with open(banner_img, "rb") as f:
+                    mime = "image/png" if banner_img.endswith(".png") else "image/jpeg"
+                    files = {"photo": ("official_calendar.png", f, mime)}
                     data = {
                         "chat_id": target,
                         "caption": caption[:1024],

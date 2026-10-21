@@ -227,6 +227,7 @@ async def test_ensure_active_promo_coupons_pinned_france(tmp_path):
     test_state = tmp_path / "france_published_state.json"
     with patch("app.publisher.promo_notifiers_fr.FRANCE_STATE_FILE_PATH", str(test_state)), \
          patch("app.publisher.promo_notifiers_fr.promo_tracker.get_active_promo", return_value=mock_promo), \
+         patch("app.publisher.promo_notifiers_fr.promo_tracker.get_active_france_promo", return_value=mock_promo), \
          patch("app.publisher.promo_notifiers_fr.send_france_promo_alert", return_value=(True, None, 777)), \
          patch("httpx.AsyncClient.post") as mock_post:
         resp = MagicMock()
