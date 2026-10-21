@@ -1,51 +1,53 @@
 {
   "published_post_keys": [
-    "promozonefr:239",
-    "francecp:419",
-    "francecp:421",
-    "francecp:422",
-    "aniscoupons:32995",
-    "promozonefr:238",
-    "francecp:434",
-    "aniscoupons:32994",
-    "promozonefr:240",
-    "promozonefr:237",
-    "francecp:414",
-    "francecp:429",
-    "alifrdrop:105",
-    "francecp:431",
-    "promozonefr:242",
-    "promozonefr:241",
     "francecp:432",
-    "francecp:433",
+    "promozonefr:239",
     "alifrdrop:103",
-    "francecp:413",
+    "francecp:419",
+    "alifrdrop:106",
+    "francecp:417",
+    "aniscoupons:32995",
+    "francecp:416",
+    "promozonefr:237",
+    "francecp:431",
+    "francecp:418",
+    "francecp:425",
+    "francecp:429",
+    "francecp:415",
     "francecp:423",
+    "francecp:426",
     "promozonefr:243",
     "alifrdrop:102",
-    "francecp:435",
-    "francecp:426",
-    "francecp:418",
+    "francecp:421",
+    "aniscoupons:32994",
     "francecp:428",
-    "francecp:424",
+    "francecp:434",
+    "promozonefr:240",
+    "francecp:422",
+    "francecp:435",
+    "promozonefr:238",
     "francecp:420",
-    "alifrdrop:106",
-    "francecp:415",
-    "francecp:425",
+    "francecp:427",
+    "francecp:424",
+    "promozonefr:241",
+    "francecp:414",
+    "promozonefr:242",
+    "alifrdrop:105",
     "promozonefr:236",
-    "francecp:430",
+    "francecp:413",
+    "lodydeals:45579",
+    "francecp:433",
     "alifrdrop:104",
-    "francecp:416",
-    "promozonefr:244",
-    "francecp:417",
-    "francecp:427"
+    "francecp:430",
+    "promozonefr:244"
   ],
   "published_product_ids": [
-    "1005012155835323",
     "1005012541048117",
-    "1005009977303549",
     "1005012218291528",
-    "1005012589045044"
+    "1005012155835323",
+    "1005012697366392",
+    "1005012589045044",
+    "1005009977303549"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -115,10 +117,10 @@
       "channel_msg_id": 156
     },
     "1005012697366392": {
-      "timestamp": 1791163250.215242,
-      "title": "Nubia proÂ  8/256GB",
-      "price_eur": 250.0,
-      "channel_msg_id": 162
+      "timestamp": 1792344480.523527,
+      "title": "Nubia Pro Pad 16/512GB",
+      "price_eur": 268.0,
+      "channel_msg_id": 186
     },
     "1005012948582447": {
       "timestamp": 1791163550.23111,
@@ -157,7 +159,7 @@
       "last_check_time": 1792329076.858411
     }
   },
-  "last_run_time": 1792329076.858633,
+  "last_run_time": 1792598864.321401,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001",
     "FR_LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
@@ -167,7 +169,7 @@
     "FR_END_ALERT_Winter Offers_20261018",
     "FR_SUNDAY_ALERT_20261018"
   ],
-  "last_deal_post_time": 1792329076.8586335,
+  "last_deal_post_time": 1792344480.523527,
   "daily_roundup_history": {
     "2026-10-02": {
       "timestamp": 1790976075.00982,
@@ -184,9 +186,7 @@
       ]
     }
   },
-  "pinned_promo_events": {
-    "FR_Super Sunday AliExpress France_20261017": 183
-  },
+  "pinned_promo_events": {},
   "last_card_affiliate_time_fr": 1791162951.1813257,
   "card_affiliate_variant_idx_fr": 1,
   "handled_post_keys": [
