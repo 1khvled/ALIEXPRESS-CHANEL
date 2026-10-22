@@ -1135,9 +1135,22 @@ async def api_reformat_deal(request: Request):
 
         deal_info = await generate_coin_discount_response(pid, raw_user_text=raw_text)
 
-        # 1. Price extraction with EUR support
+        # 1. Price extraction with explicit admin override & EUR support
+        user_price_raw = data.get("price")
+        explicit_price = None
+        if user_price_raw is not None and str(user_price_raw).strip():
+            try:
+                cleaned_p = str(user_price_raw).strip().replace("$", "").replace("€", "").replace(",", ".")
+                explicit_price = float(cleaned_p)
+            except Exception:
+                explicit_price = None
+
+
         parsed_usd, parsed_eur = extract_prices(raw_text)
-        price = parsed_usd or deal_info.get("price") or 0.0
+        price = explicit_price if explicit_price is not None else (parsed_usd or deal_info.get("price") or 0.0)
+
+
+
         eur_rate = float(getattr(settings, "EUR_USD_RATE", 0.92))
         eur_price = parsed_eur or (round(price * eur_rate, 2) if price else 0.0)
 

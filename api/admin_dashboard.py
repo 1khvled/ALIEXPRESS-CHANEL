@@ -288,16 +288,28 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
         ></textarea>
 
         <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex flex-wrap items-center gap-2">
+            <button 
+              onclick="reformatTelegramPost()" 
+              id="reformat-submit-btn" 
+              class="bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-md flex items-center justify-center gap-2 transition active:scale-95 border border-rose-400/20"
+            >
+              <i class="fa-solid fa-arrows-rotate"></i>
+              <span>إعادة التنسيق والمعاينة</span>
+            </button>
+            <div class="flex items-center gap-1.5 bg-[#141a28] border border-[#1f293d] rounded-xl px-3 py-1.5">
+              <span class="text-xs text-slate-300 font-bold">💰 السعر ($):</span>
+              <input 
+                type="number" 
+                step="0.01" 
+                id="reformat-manual-price" 
+                placeholder="مثال: 0.60" 
+                class="w-24 bg-[#0e121b] border border-[#1f293d] rounded-lg px-2 py-1 text-xs text-emerald-400 font-bold font-mono focus:outline-none focus:border-rose-500"
+              />
+            </div>
+          </div>
           <button 
-            onclick="reformatTelegramPost()" 
-            id="reformat-submit-btn" 
-            class="bg-gradient-to-r from-rose-600 to-amber-600 hover:from-rose-500 hover:to-amber-500 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-md flex items-center justify-center gap-2 transition active:scale-95 border border-rose-400/20"
-          >
-            <i class="fa-solid fa-arrows-rotate"></i>
-            <span>إعادة التنسيق والمعاينة</span>
-          </button>
-          <button 
-            onclick="document.getElementById('reformat-input').value=''; document.getElementById('reformat-result').classList.add('hidden');" 
+            onclick="document.getElementById('reformat-input').value=''; if(document.getElementById('reformat-manual-price')) document.getElementById('reformat-manual-price').value=''; document.getElementById('reformat-result').classList.add('hidden');" 
             class="text-xs text-slate-400 hover:text-slate-200 px-3 py-1.5 rounded-lg border border-[#1f293d] hover:bg-[#141a28] transition"
           >
             مسح الحقل
@@ -324,9 +336,19 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
                 <span id="reformat-target-channel-badge" class="text-xs font-bold px-2.5 py-0.5 rounded-md border border-emerald-500/20 bg-emerald-500/10 text-emerald-300">@DzAliexpress0</span>
               </div>
               <div class="flex items-center gap-2 font-mono">
-                <span id="reformat-price-usd" class="text-emerald-400 font-bold bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-md text-xs"></span>
-                <span id="reformat-price-eur" class="text-sky-400 font-bold bg-sky-500/10 border border-sky-500/20 px-2.5 py-0.5 rounded-md text-xs hidden"></span>
-                <span id="reformat-price-dzd" class="text-amber-400 font-bold bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-md text-xs"></span>
+                <div class="flex items-center gap-1.5 bg-[#0e121b] border border-emerald-500/30 rounded-lg px-2.5 py-1">
+                  <span class="text-emerald-400 font-bold text-xs">$</span>
+                  <input 
+                    type="number" 
+                    step="0.01" 
+                    id="reformat-card-price-input" 
+                    oninput="onAdminPriceEdit(this.value)" 
+                    class="w-20 bg-transparent text-emerald-400 font-bold text-xs font-mono focus:outline-none"
+                    placeholder="0.00"
+                  />
+                </div>
+                <span id="reformat-price-eur" class="text-sky-400 font-bold bg-sky-500/10 border border-sky-500/20 px-2.5 py-1 rounded-md text-xs hidden"></span>
+                <span id="reformat-price-dzd" class="text-amber-400 font-bold bg-amber-500/10 border border-amber-500/20 px-2.5 py-1 rounded-md text-xs"></span>
               </div>
             </div>
 
@@ -1309,10 +1331,16 @@ ${formatPostTextWithLinks(deal.text)}
       if (feedback) feedback.classList.add('hidden');
 
       try {
+        const manualP = (document.getElementById('reformat-manual-price') ? document.getElementById('reformat-manual-price').value.trim() : '');
+        const activeLinkType = (currentReformattedDeal && currentReformattedDeal.link_type) || 'coin';
         const resp = await fetch('/api/reformat-deal', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ text: val, link_type: (currentReformattedDeal && currentReformattedDeal.link_type) || 'coin' })
+          body: JSON.stringify({ 
+            text: val, 
+            price: manualP || null,
+            link_type: activeLinkType 
+          })
         });
         const data = await resp.json();
 
@@ -1337,7 +1365,14 @@ ${formatPostTextWithLinks(deal.text)}
           }
 
           document.getElementById('reformat-pid').innerText = 'ID: ' + data.product_id;
-          document.getElementById('reformat-price-usd').innerText = data.price ? '$' + data.price.toFixed(2) : 'سعر خاص';
+          const cardPriceInp = document.getElementById('reformat-card-price-input');
+          if (cardPriceInp) {
+            cardPriceInp.value = data.price ? data.price.toFixed(2) : '';
+          }
+          const manualPriceInp = document.getElementById('reformat-manual-price');
+          if (manualPriceInp && data.price && !manualPriceInp.value) {
+            manualPriceInp.value = data.price.toFixed(2);
+          }
           
           const refEurEl = document.getElementById('reformat-price-eur');
           if (refEurEl) {
@@ -1476,6 +1511,44 @@ ${formatPostTextWithLinks(deal.text)}
         const len = area.value.length;
         countEl.innerText = len + ' / 1024 حرف';
         countEl.className = len > 1024 ? 'text-[10px] text-rose-400 font-bold font-mono' : 'text-[10px] text-slate-500 font-mono';
+      }
+    }
+
+    function onAdminPriceEdit(newVal) {
+      if (!currentReformattedDeal) return;
+      const p = parseFloat(newVal);
+      if (isNaN(p) || p <= 0) return;
+
+      currentReformattedDeal.price = p;
+      const eurRate = 0.92;
+      const eurPrice = Math.round(p * eurRate * 100) / 100;
+      currentReformattedDeal.price_eur = eurPrice;
+
+      const rate = currentLiveRate || 249.0;
+      const dzd = Math.round(p * rate);
+      currentReformattedDeal.price_dzd = dzd;
+
+      const dzdEl = document.getElementById('reformat-price-dzd');
+      if (dzdEl) dzdEl.innerText = '~ ' + dzd.toLocaleString() + ' دج';
+
+      const eurEl = document.getElementById('reformat-price-eur');
+      if (eurEl) {
+        eurEl.innerText = eurPrice.toFixed(2) + '€';
+        eurEl.classList.remove('hidden');
+      }
+
+      const captionArea = document.getElementById('reformat-caption');
+      if (captionArea) {
+        const pRegex = /(💰\s*<b>\s*السعر\s*[:：]\s*<\/b>\s*<b>\s*\$)[0-9]+(?:\.[0-9]+)?(\s*<\/b>)/i;
+        if (pRegex.test(captionArea.value)) {
+          captionArea.value = captionArea.value.replace(pRegex, `$1${p.toFixed(2)}$2`);
+        } else {
+          const fallbackRegex = /(💰\s*السعر\s*[:：]?\s*\$)[0-9]+(?:\.[0-9]+)?/i;
+          if (fallbackRegex.test(captionArea.value)) {
+            captionArea.value = captionArea.value.replace(fallbackRegex, `$1${p.toFixed(2)}`);
+          }
+        }
+        updateCaptionCharCount();
       }
     }
 

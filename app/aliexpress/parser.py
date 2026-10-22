@@ -400,7 +400,7 @@ def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
         # 'سعر القطعة : 4.4$' or 'سعر قطعة : 7.99$' or 'سعر الحبة : 3.5$'
         re.compile(r'(?:سعر\s*القطعة|سعر\s*قطعة|سعر\s*الحبة|سعر\s*حبة)\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
         # 'السعر : 204.7$' or 'السعــــر : 15.5$' (ignoring old/original prices like 'السعر القديم' or 'كان بسعر')
-        re.compile(r'(?<!كان\s)(?<!بدل\s)(?:ا+لسعر|ا+لسعــــر|prix|price)(?!\s*القديم)(?!\s*السابق)(?!\s*قبل)\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
+        re.compile(r'(?<!كان\s)(?<!بدل\s)(?:ا+لسعر|ا+لسعــــر|prix|price)(?!\s*القديم)(?!\s*السابق)(?!\s*قبل)\s*(?:في|لكندا|بكندا|بالعملات|مع\s*العملات|بعد\s*العملات|بتخفيض\s*العملات|بالنقاط)?\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
         # 'سعر 3 قطع: 28.85$' or 'سعر ثلاث قطع 13.2$' or 'سعر 3 حبات: 24$'
         re.compile(r'(?:سعر\s*(?:3|ثلاث)\s*(?:قطع|حبات))\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
     ]
@@ -454,6 +454,17 @@ def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
                 if 0.1 <= candidate <= 10000:
                     usd_val = candidate
                     break
+            except ValueError:
+                pass
+
+    # Priority 3: Fallback for lone decimal price entered by user (e.g. "https://... 0.60" or "0.60")
+    if usd_val is None and eur_val is None:
+        lone_m = re.search(r'(?:^|[\s\r\n])([0-9]{1,4}[\.,][0-9]{1,2})(?:[\s\r\n]|$)', clean_text)
+        if lone_m:
+            try:
+                candidate = float(lone_m.group(1).replace(",", "."))
+                if 0.05 <= candidate <= 10000:
+                    usd_val = candidate
             except ValueError:
                 pass
 
