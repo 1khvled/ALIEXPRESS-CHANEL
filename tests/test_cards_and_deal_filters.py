@@ -87,3 +87,41 @@ def test_strict_post_filtering_regexes():
     )
     assert link_pattern.search(deal_post) is not None
     assert religious_pattern.search(deal_post) is None
+
+
+def test_promo_calendar_and_announcement_rejection():
+    """Verify promotional calendar bulletins (e.g. post 1003) are rejected from deals feed."""
+    calendar_regex = re.compile(
+        r"(?:رزنامة|رزنامة تخفيضات|جدول التخفيضات|جدول العروض|شهر كامل من التخفيضات|شهر التخفيضات|"
+        r"promotion calendar|promo calendar|مواعيد التخفيضات|مواعيد العروض|انتهاء العروض|"
+        r"إعلان هام|تنبيه هام|دليل الشراء بالدينار|دليل الشراء|شحن بطاقتك|قناة الصفقات|قناة العروض|كيفاش تشري)",
+        re.IGNORECASE
+    )
+
+    # Post 1003 (Roznama bulletin with coins affiliate link)
+    post_1003 = (
+        "❗️ رزنامة تخفيضات علي اكسبرس شهر نوفمبر 2026\n"
+        "🎉 شهر كامل من التخفيضات\n"
+        "✅ من 1 الى 18 نوفمبر : التخفيضات الكبرى 11.11\n"
+        "✅ من 19 الى 30 نوفمبر : التخفيضات الكبرى Black Friday\n"
+        "✅ من 30 نوفمبر الى 3 ديسمبر : تخفيضات Cyber Monday\n"
+        "🔥 إجمع العملات التي تحتاجها في العروض من هنا :\n"
+        "https://s.click.aliexpress.com/e/_c4l391NX\n"
+        "🤖 البوت لتخفيض الاسعار : https://t.me/Alilo07BOT\n"
+        "📢 قناة التيليجرام : https://t.me/DzAliexpress0"
+    )
+
+    assert calendar_regex.search(post_1003) is not None
+
+    # Real product deal should NOT trigger calendar rejection
+    deal_post = (
+        "✅ ماوس Attack Shark X3 Tri-Mode\n"
+        "💰 السعر : 18.50$\n"
+        "🎟️ كوبون : WOAE02\n"
+        "https://s.click.aliexpress.com/e/_c2ukqBQt"
+    )
+    assert calendar_regex.search(deal_post) is None
+
+    # Verify user_site.py has calendar filter in parseDealPost
+    assert "isCalendarOrPromoNotice" in USER_WEBSITE_HTML
+    assert "رزنامة" in USER_WEBSITE_HTML

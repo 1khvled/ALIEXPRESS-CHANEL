@@ -4650,7 +4650,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
 
       // 3. Strict Filter: Reject general non-product announcements, referral posts, and payment guides
-      const isAnnouncement = /(?:إعلان هام|تنبيه هام|دليل الشراء بالدينار|شحن بطاقتك|قناة الصفقات|قناة العروض|كيفاش تشري من AliExpress|كيف تشحن بطاقاتك)/i.test(text) && !text.includes('/item/');
+      const isCalendarOrPromoNotice = /(?:رزنامة|رزنامة تخفيضات|جدول التخفيضات|جدول العروض|شهر كامل من التخفيضات|شهر التخفيضات|promotion calendar|promo calendar|مواعيد التخفيضات|مواعيد العروض|انتهاء العروض|بداية تخفيضات|عروض الأحد السريعة|super sunday france)/i.test(text);
+      if (isCalendarOrPromoNotice) return null;
+
+      const isAnnouncement = /(?:إعلان هام|تنبيه هام|دليل الشراء بالدينار|دليل الشراء|شحن بطاقتك|قناة الصفقات|قناة العروض|كيفاش تشري من AliExpress|كيفاش تشري|كيف تشحن بطاقاتك)/i.test(text) && !text.includes('/item/');
       if (isAnnouncement) {
         return null;
       }
@@ -4704,6 +4707,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           s.includes('طريقة') || s.includes('احجز') || s.includes('طبقوا') || s.includes('حبات قلال') ||
           s.includes('سارعوا') || s.includes('سعر ممتاز') || s.includes('هبوط قوي') || s.includes('بخاصية') ||
           s.includes('متوسط') || s.includes('سعره') || s.includes('دج') || s.includes('صفقة اليوم') || s.includes('صيدة اليوم') ||
+          s.includes('رزنامة') || s.includes('التخفيضات الكبرى') || s.includes('black friday') || s.includes('cyber monday') || s.includes('11.11') || s.includes('شهر كامل') || s.includes('promotion calendar') ||
           countryNames.some(c => s.includes('خلي البلد ' + c) || s.includes('ضع البلد ' + c))
         );
       };

@@ -787,7 +787,10 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
           s.includes('لافار') || s.includes('عرض اليوم') || s.includes('صفقة') || s.includes('صيدة') ||
           s.includes('تخفيض قوي') || s.includes('رابط الشراء') || s.includes('بوت') || s.includes('قناة') ||
           s.includes('تنبيه') || s.includes('طريقة') || s.includes('احجز') || s.includes('طبقوا') ||
-          s.includes('سارعوا') || s.includes('متوسط') || s.includes('سعره') || s.includes('دج')
+          s.includes('سارعوا') || s.includes('متوسط') || s.includes('سعره') || s.includes('دج') ||
+          s.includes('رزنامة') || s.includes('التخفيضات الكبرى') || s.includes('black friday') ||
+          s.includes('cyber monday') || s.includes('11.11') || s.includes('شهر كامل') ||
+          s.includes('promotion calendar')
         );
       };
 

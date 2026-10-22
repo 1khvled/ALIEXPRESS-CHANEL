@@ -1611,6 +1611,17 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
                 if not has_ali_link:
                     continue
 
+                # Filter out promotional calendars, sale roadmaps, guides, and channel bulletins
+                is_calendar_or_announcement = bool(re.search(
+                    r"(?:رزنامة|رزنامة تخفيضات|جدول التخفيضات|جدول العروض|شهر كامل من التخفيضات|شهر التخفيضات|"
+                    r"promotion calendar|promo calendar|مواعيد التخفيضات|مواعيد العروض|انتهاء العروض|"
+                    r"إعلان هام|تنبيه هام|دليل الشراء بالدينار|دليل الشراء|شحن بطاقتك|قناة الصفقات|قناة العروض|كيفاش تشري)",
+                    text,
+                    re.I
+                ))
+                if is_calendar_or_announcement:
+                    continue
+
                 # Filter out religious adhkars
                 if any(r in text for r in ["وَتَوَكَّلْ", "وتوكل", "سبحان الله", "الحمد لله", "الله أكبر", "صلى الله", "عليه وسلم", "سورة", "القرآن", "أذكار", "دعاء", "استغفر الله", "لا إله إلا الله"]):
                     continue
