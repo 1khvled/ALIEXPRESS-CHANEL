@@ -1279,7 +1279,7 @@ ${formatPostTextWithLinks(deal.text)}
       if (!lastScoutedDeal) return;
       const refInput = document.getElementById('reformat-input');
       if (refInput) {
-        let textToFill = lastScoutedDeal.product_link || lastScoutedDeal.coin_link || '';
+        let textToFill = lastScoutedDeal.coin_link || lastScoutedDeal.deal_link || lastScoutedDeal.product_link || '';
         if (lastScoutedDeal.price) {
           textToFill += `\nالسعر: $${lastScoutedDeal.price}`;
         }
@@ -1312,7 +1312,7 @@ ${formatPostTextWithLinks(deal.text)}
         const resp = await fetch('/api/reformat-deal', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ text: val })
+          body: JSON.stringify({ text: val, link_type: (currentReformattedDeal && currentReformattedDeal.link_type) || 'coin' })
         });
         const data = await resp.json();
 
@@ -1426,8 +1426,12 @@ ${formatPostTextWithLinks(deal.text)}
 
       // Update caption textarea
       const captionArea = document.getElementById('reformat-caption');
-      if (captionArea && oldUrl && targetUrl && oldUrl !== targetUrl) {
-        captionArea.value = captionArea.value.replace(oldUrl, targetUrl);
+      if (captionArea && targetUrl) {
+        if (oldUrl && captionArea.value.includes(oldUrl)) {
+          captionArea.value = captionArea.value.replace(oldUrl, targetUrl);
+        } else {
+          captionArea.value = captionArea.value.replace(/https?:\/\/(?:s\.click\.aliexpress\.com\/e\/[A-Za-z0-9_-]+|(?:[a-z0-9-]+\.)?aliexpress\.com\/[^\s\n<]+)/i, targetUrl);
+        }
         updateCaptionCharCount();
       }
 

@@ -1191,31 +1191,25 @@ async def api_reformat_deal(request: Request):
             chosen_type = "super"
         else:
             raw_lower = raw_text.lower()
-            is_coin_intent = (
-                "coin" in raw_lower or "coins" in raw_lower or
-                "عملات" in raw_text or "عملة" in raw_text or
-                "نقاط" in raw_text or "points" in raw_lower or
-                "تخفيض العملات" in raw_text or has_points or
-                "coin-index" in raw_lower or "configtab" in raw_lower or
-                (not is_fr and coin_link)  # Algerian channel deals prioritize coin discount page
-            )
-            if is_coin_intent and coin_link:
-                chosen_type = "coin"
-            elif ("bundle" in raw_lower or "حزم" in raw_text) and bundle_link:
+            if ("bundle" in raw_lower or "حزم" in raw_text or "choice bundle" in raw_lower) and bundle_link:
                 chosen_type = "bundle"
             elif ("super" in raw_lower or "سوبر" in raw_text) and super_link:
                 chosen_type = "super"
+            elif coin_link:
+                # Default automatically to Coin discount link for all Algerian channel deals
+                chosen_type = "coin"
             else:
                 chosen_type = "direct"
 
         if chosen_type == "coin" and coin_link:
             deal_link = coin_link
+            has_points = True
         elif chosen_type == "bundle" and bundle_link:
             deal_link = bundle_link
         elif chosen_type == "super" and super_link:
             deal_link = super_link
         else:
-            deal_link = direct_link
+            deal_link = direct_link or coin_link
 
         # 3. Caption generation using target channel generator
         if is_fr:
