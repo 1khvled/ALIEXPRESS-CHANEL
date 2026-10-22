@@ -26,7 +26,9 @@ from app.utils.logger import logger
 from app.utils.network import enforce_ipv4
 
 # Official AliExpress 2026 Promotion Calendar Image
-LOCAL_CALENDAR_PATH = os.path.join(os.path.dirname(__file__), "..", "assets", "official_calendar_october_2026.jpg")
+LOCAL_CALENDAR_PATH = os.path.join(os.path.dirname(__file__), "..", "assets", "official_calendar_november_2026.jpg")
+if not os.path.exists(LOCAL_CALENDAR_PATH):
+    LOCAL_CALENDAR_PATH = os.path.join(os.path.dirname(__file__), "..", "assets", "official_calendar_october_2026.jpg")
 if not os.path.exists(LOCAL_CALENDAR_PATH):
     LOCAL_CALENDAR_PATH = r"C:\Users\Abdelli\Downloads\photo_2026-09-25_18-41-05.jpg"
 

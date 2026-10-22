@@ -344,6 +344,20 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
               ></textarea>
             </div>
 
+            <!-- Link Type Selector Options -->
+            <div class="p-2.5 bg-[#0e121b] border border-[#1f293d] rounded-xl flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="text-[11px] font-bold text-slate-300">نوع الرابط التابع المعتمد:</span>
+                <span id="reformat-active-link-badge" class="text-[10px] font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20">🪙 صفحة تخفيض العملات (Coins)</span>
+              </div>
+              <div class="flex items-center gap-1.5" id="reformat-link-options">
+                <button type="button" onclick="setReformatLinkType('coin')" id="opt-link-coin" class="px-2.5 py-1 rounded-lg text-xs font-bold transition bg-amber-500 text-slate-950 shadow">🪙 عملات (Coins)</button>
+                <button type="button" onclick="setReformatLinkType('direct')" id="opt-link-direct" class="px-2.5 py-1 rounded-lg text-xs font-medium transition text-slate-400 hover:text-white bg-slate-800">🛒 مباشر</button>
+                <button type="button" onclick="setReformatLinkType('bundle')" id="opt-link-bundle" class="px-2.5 py-1 rounded-lg text-xs font-medium transition text-slate-400 hover:text-white bg-slate-800">📦 حزم</button>
+                <button type="button" onclick="setReformatLinkType('super')" id="opt-link-super" class="px-2.5 py-1 rounded-lg text-xs font-medium transition text-slate-400 hover:text-white bg-slate-800">⚡ Super</button>
+              </div>
+            </div>
+
             <!-- Actions Row -->
             <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
               <a id="reformat-deal-link" href="#" target="_blank" class="text-xs text-rose-400 hover:text-rose-300 flex items-center gap-1.5 font-bold">
@@ -1360,6 +1374,9 @@ ${formatPostTextWithLinks(deal.text)}
           }
 
           document.getElementById('reformat-deal-link').href = data.deal_link || '#';
+          if (typeof setReformatLinkType === 'function') {
+            setReformatLinkType(data.link_type || 'coin', false);
+          }
           resBox.classList.remove('hidden');
           resBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } else {
@@ -1370,6 +1387,71 @@ ${formatPostTextWithLinks(deal.text)}
       } finally {
         btn.disabled = false;
         btn.innerHTML = '<i class="fa-solid fa-arrows-rotate"></i><span>إعادة التنسيق والمعاينة</span>';
+      }
+    }
+
+    function setReformatLinkType(type, notify = true) {
+      if (!currentReformattedDeal) return;
+      
+      let targetUrl = currentReformattedDeal.deal_link;
+      let badgeText = 'رابط مخصص';
+      let badgeClass = 'bg-slate-700/50 text-slate-300 border-slate-600/30';
+      
+      if (type === 'coin') {
+        targetUrl = currentReformattedDeal.coin_link || currentReformattedDeal.deal_link;
+        badgeText = '🪙 صفحة تخفيض العملات (Coins)';
+        badgeClass = 'bg-amber-500/10 text-amber-300 border-amber-500/20';
+      } else if (type === 'direct') {
+        targetUrl = currentReformattedDeal.direct_link || currentReformattedDeal.deal_link;
+        badgeText = '🛒 رابط المنتج المباشر (Direct)';
+        badgeClass = 'bg-blue-500/10 text-blue-300 border-blue-500/20';
+      } else if (type === 'bundle') {
+        targetUrl = currentReformattedDeal.bundle_link || currentReformattedDeal.deal_link;
+        badgeText = '📦 عروض الحزم (Bundle Deals)';
+        badgeClass = 'bg-purple-500/10 text-purple-300 border-purple-500/20';
+      } else if (type === 'super') {
+        targetUrl = currentReformattedDeal.super_link || currentReformattedDeal.deal_link;
+        badgeText = '⚡ عروض Super Deals';
+        badgeClass = 'bg-rose-500/10 text-rose-300 border-rose-500/20';
+      }
+      
+      if (!targetUrl) return;
+
+      const oldUrl = currentReformattedDeal.deal_link;
+      currentReformattedDeal.deal_link = targetUrl;
+      currentReformattedDeal.link_type = type;
+
+      // Update caption textarea
+      const captionArea = document.getElementById('reformat-caption');
+      if (captionArea && oldUrl && targetUrl && oldUrl !== targetUrl) {
+        captionArea.value = captionArea.value.replace(oldUrl, targetUrl);
+        updateCaptionCharCount();
+      }
+
+      // Update check link href
+      const linkCheck = document.getElementById('reformat-deal-link');
+      if (linkCheck) linkCheck.href = targetUrl;
+
+      // Update badge
+      const badge = document.getElementById('reformat-active-link-badge');
+      if (badge) {
+        badge.innerText = badgeText;
+        badge.className = `text-[10px] font-bold px-2 py-0.5 rounded border ${badgeClass}`;
+      }
+
+      // Update button styles
+      ['coin', 'direct', 'bundle', 'super'].forEach(t => {
+        const btn = document.getElementById('opt-link-' + t);
+        if (btn) {
+          if (t === type) {
+            btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold transition bg-amber-500 text-slate-950 shadow';
+          } else {
+            btn.className = 'px-2.5 py-1 rounded-lg text-xs font-medium transition text-slate-400 hover:text-white bg-slate-800';
+          }
+        }
+      });
+      if (notify) {
+        showToast('تم ضبط نوع الرابط إلى: ' + badgeText, 'info');
       }
     }
 

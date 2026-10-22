@@ -1161,16 +1161,61 @@ async def api_reformat_deal(request: Request):
         is_fr = is_france_deal(raw_text, country_info=country)
         target_channel = "@francedealsdz" if is_fr else "@DzAliexpress0"
 
-        # 2. Official /e/ affiliate link generation
-        target_product_url = f"https://www.aliexpress.com/item/{pid}.html"
-        deal_link = await affiliate_service.generate_affiliate_link(
-            target_product_url,
-            product_id=pid,
-            deal_type=deal_type
-        )
-        if not deal_link or "aliexpress.com" not in deal_link:
-            preferred = deal_info.get("bundle_link") if deal_type == "bundle" else (deal_info.get("coin_link") or deal_info.get("product_link"))
-            deal_link = ensure_affiliate(preferred, fallback_link=deal_info.get("product_link"), pid=pid)
+        # 2. Extract and ensure official affiliate links for all varieties (Coins, Direct, Bundle, Super)
+        coin_link = deal_info.get("coin_link")
+        direct_link = deal_info.get("product_link")
+        bundle_link = deal_info.get("bundle_link")
+        super_link = deal_info.get("super_link")
+
+        if not direct_link:
+            direct_link = ensure_affiliate(f"https://www.aliexpress.com/item/{pid}.html", pid=pid)
+        if not coin_link:
+            direct_coin = f"https://m.aliexpress.com/p/coin-index/index.html?_immersiveMode=true&tabname=configTab_1926001&productIds={pid}"
+            coin_link = ensure_affiliate(direct_coin, fallback_link=direct_link, pid=pid)
+        if not bundle_link:
+            direct_bundle = f"https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds={pid}"
+            bundle_link = ensure_affiliate(direct_bundle, fallback_link=direct_link, pid=pid)
+        if not super_link:
+            direct_super = f"https://www.aliexpress.com/item/{pid}.html?sourceType=561&channel=superdeal"
+            super_link = ensure_affiliate(direct_super, fallback_link=direct_link, pid=pid)
+
+        # Check requested link type or auto-detect from input text and target channel
+        req_link_type = (data.get("link_type") or "").strip().lower()
+        if req_link_type in ("coin", "coins", "points"):
+            chosen_type = "coin"
+        elif req_link_type in ("direct", "product"):
+            chosen_type = "direct"
+        elif req_link_type in ("bundle", "packages"):
+            chosen_type = "bundle"
+        elif req_link_type in ("super", "superdeal"):
+            chosen_type = "super"
+        else:
+            raw_lower = raw_text.lower()
+            is_coin_intent = (
+                "coin" in raw_lower or "coins" in raw_lower or
+                "عملات" in raw_text or "عملة" in raw_text or
+                "نقاط" in raw_text or "points" in raw_lower or
+                "تخفيض العملات" in raw_text or has_points or
+                "coin-index" in raw_lower or "configtab" in raw_lower or
+                (not is_fr and coin_link)  # Algerian channel deals prioritize coin discount page
+            )
+            if is_coin_intent and coin_link:
+                chosen_type = "coin"
+            elif ("bundle" in raw_lower or "حزم" in raw_text) and bundle_link:
+                chosen_type = "bundle"
+            elif ("super" in raw_lower or "سوبر" in raw_text) and super_link:
+                chosen_type = "super"
+            else:
+                chosen_type = "direct"
+
+        if chosen_type == "coin" and coin_link:
+            deal_link = coin_link
+        elif chosen_type == "bundle" and bundle_link:
+            deal_link = bundle_link
+        elif chosen_type == "super" and super_link:
+            deal_link = super_link
+        else:
+            deal_link = direct_link
 
         # 3. Caption generation using target channel generator
         if is_fr:
@@ -1231,6 +1276,11 @@ async def api_reformat_deal(request: Request):
             "image_url": main_img,
             "images": images[:8],
             "deal_link": deal_link,
+            "link_type": chosen_type,
+            "coin_link": coin_link,
+            "direct_link": direct_link,
+            "bundle_link": bundle_link,
+            "super_link": super_link,
             "caption": caption
         }
     except Exception as e:
