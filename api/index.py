@@ -1425,29 +1425,61 @@ async def health():
 
 
 @app.get("/api/active-event")
-async def get_active_event_api():
-    """Returns the currently active official AliExpress promo event with active coupons and keywords."""
+async def get_active_event_api(include_upcoming: bool = False):
+    """Returns the currently active official AliExpress promo event or next upcoming event with countdown targets."""
     from app.aliexpress.promos import promo_tracker
     now = datetime.now(timezone.utc)
     ev = promo_tracker.get_active_promo(now)
-    if not ev:
-        return {"active": False, "event": None}
-    event_data = {
-        "name": ev.name,
-        "name_ar": ev.name_ar,
-        "name_fr": ev.name_fr or ev.name,
-        "banner_tag": ev.banner_tag,
-        "start_date": ev.start_date.isoformat(),
-        "end_date": ev.end_date.isoformat(),
-        "coupon_tiers": ev.coupon_tiers or [],
-        "coupon_tiers_fr": ev.coupon_tiers_fr or [],
-        "codes": [t["code"] for t in (ev.coupon_tiers or []) if "code" in t]
-    }
-    return {
-        "active": True,
-        "event": event_data,
-        "active_event": event_data
-    }
+    if ev:
+        event_data = {
+            "name": ev.name,
+            "name_ar": ev.name_ar,
+            "name_fr": ev.name_fr or ev.name,
+            "banner_tag": ev.banner_tag,
+            "start_date": ev.start_date.isoformat(),
+            "end_date": ev.end_date.isoformat(),
+            "coupon_tiers": ev.coupon_tiers or [],
+            "coupon_tiers_fr": ev.coupon_tiers_fr or [],
+            "codes": [t["code"] for t in (ev.coupon_tiers or []) if "code" in t],
+            "status": "active",
+            "countdown_type": "ending",
+            "target_date": ev.end_date.isoformat()
+        }
+        return {
+            "active": True,
+            "event": event_data,
+            "active_event": event_data
+        }
+
+    if include_upcoming:
+        next_tuple = promo_tracker.get_next_promo(now)
+        if next_tuple:
+            next_ev, days_left = next_tuple
+            next_data = {
+                "name": next_ev.name,
+                "name_ar": next_ev.name_ar,
+                "name_fr": next_ev.name_fr or next_ev.name,
+                "banner_tag": next_ev.banner_tag,
+                "start_date": next_ev.start_date.isoformat(),
+                "end_date": next_ev.end_date.isoformat(),
+                "days_left": days_left,
+                "coupon_tiers": next_ev.coupon_tiers or [],
+                "coupon_tiers_fr": next_ev.coupon_tiers_fr or [],
+                "codes": [t["code"] for t in (next_ev.coupon_tiers or []) if "code" in t],
+                "status": "upcoming",
+                "countdown_type": "starting",
+                "target_date": next_ev.start_date.isoformat()
+            }
+            return {
+                "active": False,
+                "status": "upcoming",
+                "countdown_type": "starting",
+                "target_date": next_ev.start_date.isoformat(),
+                "event": next_data,
+                "next_event": next_data
+            }
+
+    return {"active": False, "event": None}
 
 
 _CHANNEL_POSTS_CACHE: Dict[str, Any] = {}
@@ -1459,12 +1491,14 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
     clean_ch = channel.replace("@", "").strip() or "DzAliexpress0"
     now_ts = time.time()
 
-    # Get active promo event details
+    # Get active promo or next upcoming promo event details with dynamic countdown targets
     active_ev_data = None
     try:
         from app.aliexpress.promos import promo_tracker
         now_dt = datetime.now(timezone.utc)
-        ev = promo_tracker.get_active_promo(now_dt)
+        is_france = (clean_ch.lower() == "francedealsdz")
+        get_promo_fn = getattr(promo_tracker, "get_active_france_promo", promo_tracker.get_active_promo) if is_france else promo_tracker.get_active_promo
+        ev = get_promo_fn(now_dt)
         if ev:
             active_ev_data = {
                 "name": ev.name,
@@ -1476,26 +1510,49 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
                 "coupon_tiers": ev.coupon_tiers or [],
                 "coupon_tiers_fr": ev.coupon_tiers_fr or [],
                 "codes": [t["code"] for t in (ev.coupon_tiers or []) if "code" in t],
-                "status": "active"
+                "status": "active",
+                "countdown_type": "ending",
+                "target_date": ev.end_date.isoformat()
             }
         else:
-            all_promos = promo_tracker.get_all_promos(now_dt)
-            past_promos = [p for p in all_promos if p.end_date <= now_dt]
-            if past_promos:
-                past_promos.sort(key=lambda p: p.end_date, reverse=True)
-                last_p = past_promos[0]
+            next_tuple = promo_tracker.get_next_promo(now_dt)
+            if next_tuple:
+                next_ev, days_left = next_tuple
                 active_ev_data = {
-                    "name": last_p.name,
-                    "name_ar": last_p.name_ar,
-                    "name_fr": last_p.name_fr or last_p.name,
-                    "banner_tag": last_p.banner_tag,
-                    "start_date": last_p.start_date.isoformat(),
-                    "end_date": last_p.end_date.isoformat(),
-                    "coupon_tiers": last_p.coupon_tiers or [],
-                    "coupon_tiers_fr": last_p.coupon_tiers_fr or [],
-                    "codes": [t["code"] for t in (last_p.coupon_tiers or []) if "code" in t],
-                    "status": "ended"
+                    "name": next_ev.name,
+                    "name_ar": next_ev.name_ar,
+                    "name_fr": next_ev.name_fr or next_ev.name,
+                    "banner_tag": next_ev.banner_tag,
+                    "start_date": next_ev.start_date.isoformat(),
+                    "end_date": next_ev.end_date.isoformat(),
+                    "days_left": days_left,
+                    "coupon_tiers": next_ev.coupon_tiers or [],
+                    "coupon_tiers_fr": next_ev.coupon_tiers_fr or [],
+                    "codes": [t["code"] for t in (next_ev.coupon_tiers or []) if "code" in t],
+                    "status": "upcoming",
+                    "countdown_type": "starting",
+                    "target_date": next_ev.start_date.isoformat()
                 }
+            else:
+                all_promos = promo_tracker.get_all_promos(now_dt)
+                past_promos = [p for p in all_promos if p.end_date <= now_dt]
+                if past_promos:
+                    past_promos.sort(key=lambda p: p.end_date, reverse=True)
+                    last_p = past_promos[0]
+                    active_ev_data = {
+                        "name": last_p.name,
+                        "name_ar": last_p.name_ar,
+                        "name_fr": last_p.name_fr or last_p.name,
+                        "banner_tag": last_p.banner_tag,
+                        "start_date": last_p.start_date.isoformat(),
+                        "end_date": last_p.end_date.isoformat(),
+                        "coupon_tiers": last_p.coupon_tiers or [],
+                        "coupon_tiers_fr": last_p.coupon_tiers_fr or [],
+                        "codes": [t["code"] for t in (last_p.coupon_tiers or []) if "code" in t],
+                        "status": "ended",
+                        "countdown_type": "ended",
+                        "target_date": last_p.end_date.isoformat()
+                    }
     except Exception:
         pass
 

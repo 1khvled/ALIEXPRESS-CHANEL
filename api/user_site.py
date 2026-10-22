@@ -867,7 +867,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </div>
 
           <h3 id="active-event-title" class="text-xs sm:text-sm font-bold tracking-tight truncate" style="color: var(--text-main);" data-i18n="active_event_title">
-            تخفيضات عروض الشتاء Winter Offers 2026
+            تخفيضات 11.11 الكبرى Global Shopping Festival 2026
           </h3>
           <p id="active-event-desc" class="hidden">عروض وتخفيضات رسمية نشطة حالياً مع أكواد حصرية مخصصة للجزائر وفرنسا — الأسعار بالدينار الجزائري وفق سعر السكوار الحقيقي.</p>
         </div>
@@ -5069,14 +5069,14 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
     var eventCountdownTimer = null;
 
-    function startEventCountdown(endDateStr, eventObj) {
+    function startEventCountdown(targetDateStr, eventObj) {
       if (eventCountdownTimer) {
         clearInterval(eventCountdownTimer);
         eventCountdownTimer = null;
       }
-      if (!endDateStr) return;
+      if (!targetDateStr) return;
 
-      const target = new Date(endDateStr).getTime();
+      const target = new Date(targetDateStr).getTime();
       const timerVal = document.getElementById('event-timer-val');
       const timerWrap = document.getElementById('event-timer-wrap');
       const timerLabel = document.getElementById('event-timer-label');
@@ -5085,6 +5085,35 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const badgeText = document.getElementById('active-event-badge');
       const badgeDot = document.getElementById('active-event-dot');
       const isFr = currentLang === 'fr';
+      const isUpcoming = (eventObj && (eventObj.status === 'upcoming' || eventObj.countdown_type === 'starting'));
+
+      if (isUpcoming) {
+        window.isPromoEventEnded = false;
+        if (timerWrap) {
+          timerWrap.className = 'inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-black bg-amber-500/15 text-amber-600 dark:text-amber-400 border-2 border-amber-500/40 shadow-sm';
+        }
+        if (timerIcon) timerIcon.className = 'fa-solid fa-clock text-sm sm:text-base animate-pulse text-amber-500';
+        if (timerLabel) {
+          timerLabel.className = 'font-sans font-bold text-xs sm:text-sm text-amber-700 dark:text-amber-300';
+          timerLabel.textContent = isFr ? 'Démarre dans :' : 'ينطلق خلال:';
+        }
+        if (badgeWrap) badgeWrap.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold bg-amber-500/10 text-amber-500 flex-shrink-0';
+        if (badgeDot) badgeDot.className = 'w-2 h-2 rounded-full bg-amber-500 animate-pulse';
+        if (badgeText) badgeText.textContent = isFr ? 'Bientôt ⏳' : 'الحدث القادم ⏳';
+      } else {
+        window.isPromoEventEnded = false;
+        if (timerWrap) {
+          timerWrap.className = 'inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs sm:text-sm font-black bg-rose-500/15 text-rose-600 dark:text-rose-400 border-2 border-rose-500/40 shadow-sm';
+        }
+        if (timerIcon) timerIcon.className = 'fa-solid fa-stopwatch text-sm sm:text-base animate-pulse text-rose-500';
+        if (timerLabel) {
+          timerLabel.className = 'font-sans font-bold text-xs sm:text-sm text-rose-700 dark:text-rose-300';
+          timerLabel.textContent = isFr ? 'Fin dans :' : 'ينتهي خلال:';
+        }
+        if (badgeWrap) badgeWrap.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold bg-rose-500/10 text-rose-500 flex-shrink-0';
+        if (badgeDot) badgeDot.className = 'w-2 h-2 rounded-full bg-rose-500 animate-pulse';
+        if (badgeText) badgeText.textContent = isFr ? 'En cours 🔥' : 'جاري الآن 🔥';
+      }
 
       function applyEndedState() {
         window.isPromoEventEnded = true;
@@ -5154,7 +5183,22 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         if (diff <= 0) {
           if (eventCountdownTimer) clearInterval(eventCountdownTimer);
           eventCountdownTimer = null;
-          applyEndedState();
+          if (isUpcoming) {
+            // Event has started! Transition to counting down to its end
+            eventObj.status = 'active';
+            eventObj.countdown_type = 'ending';
+            if (eventObj.end_date) {
+              startEventCountdown(eventObj.end_date, eventObj);
+              updateActiveEventBanner(eventObj);
+            } else if (typeof loadDeals === 'function') {
+              loadDeals(true);
+            }
+          } else {
+            applyEndedState();
+            if (typeof loadDeals === 'function') {
+              setTimeout(() => { loadDeals(true); }, 3000);
+            }
+          }
           return;
         }
 
@@ -5183,29 +5227,41 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (titleEl) {
         titleEl.textContent = isFr ? (event.name_fr || event.name) : (event.name_ar || event.name);
       }
-      if (couponsEl && event.coupon_tiers) {
+      
+      const isUpcoming = (event.status === 'upcoming' || event.countdown_type === 'starting');
+
+      if (couponsEl) {
         const isFranceCh = currentChannel === '@francedealsdz';
         const tiers = (isFranceCh && event.coupon_tiers_fr && event.coupon_tiers_fr.length > 0)
           ? event.coupon_tiers_fr
-          : event.coupon_tiers;
+          : (event.coupon_tiers || []);
+        
         if (tiers && tiers.length > 0) {
           couponsEl.innerHTML = tiers.map(t => `
-            <button onclick="copyReferralCode('${t.code}', this)" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" title="${isFr ? 'Copier le code ' + t.code : 'نسخ الكود ' + t.code}">
-              <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
+            <button onclick="${isUpcoming ? `showToast(currentLang === 'fr' ? 'Codes actifs dès le lancement !' : 'الأكواد ستتفعل فور انطلاق العرض!')` : `copyReferralCode('${t.code}', this)`}" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer hover:border-amber-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" title="${isFr ? 'Code ' + t.code : 'كود ' + t.code}">
+              <i class="fa-solid fa-ticket text-amber-500 text-[10px]"></i>
               <span>${t.code}</span>
-              <span class="text-[10px] font-sans font-medium text-rose-500">(${t.tier || (t.discount ? '-' + t.discount + '$' : '')})</span>
+              <span class="text-[10px] font-sans font-medium text-amber-500">(${t.tier || (t.discount ? '-' + t.discount + '$' : '')})</span>
             </button>
           `).join('');
+        } else {
+          couponsEl.innerHTML = `
+            <a href="/coins" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation hover:border-amber-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);">
+              <i class="fa-solid fa-coins text-amber-500 text-xs"></i>
+              <span>${isFr ? 'Collectez des pièces Coins' : 'اجمع العملات اليومية (Coins)'}</span>
+            </a>
+          `;
         }
       }
 
-      if (event.end_date) {
-        if (new Date(event.end_date).getTime() <= Date.now()) {
+      const targetDate = event.target_date || (isUpcoming ? event.start_date : event.end_date);
+      if (targetDate) {
+        if (!isUpcoming && new Date(targetDate).getTime() <= Date.now()) {
           window.isPromoEventEnded = true;
           applyEndedState();
         } else {
           window.isPromoEventEnded = false;
-          startEventCountdown(event.end_date, event);
+          startEventCountdown(targetDate, event);
         }
       } else if (event.status === 'ended') {
         window.isPromoEventEnded = true;
