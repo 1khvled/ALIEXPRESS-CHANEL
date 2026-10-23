@@ -2059,11 +2059,11 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33003,
-      "last_check_time": 1792754847.778806
+      "last_check_time": 1792770796.2600906
     },
     "ecksdeal": {
       "last_message_id": 5901,
-      "last_check_time": 1792754848.3927157
+      "last_check_time": 1792770796.8538857
     },
     "lodydeals": {
       "last_message_id": 45579,
@@ -2071,7 +2071,7 @@
     },
     "bnddeals": {
       "last_message_id": 50866,
-      "last_check_time": 1792754854.6533313
+      "last_check_time": 1792770797.8877392
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2079,11 +2079,11 @@
     },
     "pcgamingpart": {
       "last_message_id": 7990,
-      "last_check_time": 1792754854.0482445
+      "last_check_time": 1792770797.357662
     },
     "zedstoreonline": {
-      "last_message_id": 38635,
-      "last_check_time": 1792754847.3579617
+      "last_message_id": 38636,
+      "last_check_time": 1792770795.6790648
     },
     "megaphonna": {
       "last_message_id": 8462,
@@ -2091,7 +2091,7 @@
     },
     "couponsglobal": {
       "last_message_id": 48869,
-      "last_check_time": 1792754873.0886133
+      "last_check_time": 1792770821.329959
     }
   },
   "published_product_prices": {
@@ -6753,10 +6753,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792754875.5266142,
+    "last_sweep_time": 1792770824.417821,
     "last_sweep_times": {
-      "algeria": 1792754873.095387,
-      "france": 1792754875.5266142
+      "algeria": 1792770821.3407686,
+      "france": 1792770824.417821
     },
     "last_deal_post_times": {
       "algeria": 1792754873.1017356
@@ -7440,7 +7440,7 @@
     "test_rem_d0b156d9": "2026-10-02",
     "test_rem_35271d74": "2026-10-02",
     "test_rem_308fc3d4": "2026-10-02",
-    "jumuah_asr": "2026-10-16",
+    "jumuah_asr": "2026-10-23",
     "test_rem_668cf761": "2026-10-02",
     "test_rem_4160aaaf": "2026-10-02",
     "test_rem_961ddded": "2026-10-02",
@@ -8209,7 +8209,8 @@
     "megaphonna:8459",
     "megaphonna:8460",
     "megaphonna:8461",
-    "megaphonna:8462"
+    "megaphonna:8462",
+    "zedstoreonline:38636"
   ],
   "last_france_cross_promo_time": 1792637766.633011,
   "next_france_cross_promo_interval_seconds": 221713,
