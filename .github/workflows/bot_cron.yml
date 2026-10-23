@@ -59,6 +59,10 @@ jobs:
           ALIEXPRESS_AFFILIATE_APP_SECRET: ${{ secrets.ALIEXPRESS_AFFILIATE_APP_SECRET }}
           ADMIN_USER_ID: ${{ secrets.ADMIN_USER_ID }}
           DATABASE_URL: ${{ secrets.DATABASE_URL || 'sqlite+aiosqlite:///deals.db' }}
+          FACEBOOK_PAGE_ID: ${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          FACEBOOK_APP_ID: ${{ secrets.FACEBOOK_APP_ID }}
+          FACEBOOK_AUTO_POST_ENABLED: ${{ secrets.FACEBOOK_AUTO_POST_ENABLED || 'true' }}
         run: |
           if [ "${{ github.event.inputs.force }}" = "true" ]; then
             python scripts/post_recent_deals.py --force
