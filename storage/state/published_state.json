@@ -313,7 +313,10 @@
     "1005004683413179",
     "1005013246579741",
     "1005013413834178",
-    "1005013425561020"
+    "1005013425561020",
+    "1005013413640708",
+    "1005013405221326",
+    "1005013423507579"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -407,7 +410,7 @@
     "1005009120957437": 1790970941.2570727,
     "1005005652871847": 1790976654.120254,
     "1005012554205120": 1791145541.318689,
-    "1005008901941749": 1790973051.970508,
+    "1005008901941749": 1792785032.5334125,
     "1005010178295650": 1791031559.2102907,
     "1005006861002512": 1791151259.5667012,
     "1005012285327063": 1792360422.5608404,
@@ -637,7 +640,10 @@
     "1005004683413179": 1792525221.9760067,
     "1005013246579741": 1792613440.0351677,
     "1005013413834178": 1792613447.0547092,
-    "1005013425561020": 1792754852.0282364
+    "1005013425561020": 1792754852.0282364,
+    "1005013413640708": 1792785022.7499707,
+    "1005013405221326": 1792785027.430824,
+    "1005013423507579": 1792785037.2937298
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -965,7 +971,11 @@
     "QOOVI Car Charger",
     "Multi-Tier Metal Rack with 8 Hooks for Shoes,",
     "Wireless Car Air Compressor Air Pump Electric",
-    "YICO ELITE SignalRGB OpenRGB Addressable ARGB Async Controller HUB"
+    "YICO ELITE SignalRGB OpenRGB Addressable ARGB Async Controller HUB",
+    "Aluminum Laptop Stand",
+    "1300W Handheld Garment Steamer",
+    "KUULAA USB C  60W Cable",
+    "360° Clip Mobile Phone Holder"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1300,7 +1310,11 @@
     "QOOVI Car Charger": 1792525221.9760067,
     "Multi-Tier Metal Rack with 8 Hooks for Shoes,": 1792613440.0351677,
     "Wireless Car Air Compressor Air Pump Electric": 1792613447.0547092,
-    "YICO ELITE SignalRGB OpenRGB Addressable ARGB Async Controller HUB": 1792754852.0282364
+    "YICO ELITE SignalRGB OpenRGB Addressable ARGB Async Controller HUB": 1792754852.0282364,
+    "Aluminum Laptop Stand": 1792785022.7499707,
+    "1300W Handheld Garment Steamer": 1792785027.430824,
+    "KUULAA USB C  60W Cable": 1792785032.5334125,
+    "360° Clip Mobile Phone Holder": 1792785037.2937298
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2051,39 +2065,43 @@
     "aniscoupons:33000",
     "couponsglobal:48869",
     "couponsglobal:48868",
-    "pcgamingpart:7990"
+    "pcgamingpart:7990",
+    "lodydeals:45586",
+    "lodydeals:45585",
+    "lodydeals:45584",
+    "lodydeals:45583"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792711145.3171253,
-  "last_run_time": 1792754852.0282364,
+  "last_run_time": 1792785037.2937298,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33003,
-      "last_check_time": 1792770796.2600906
+      "last_check_time": 1792785040.4323297
     },
     "ecksdeal": {
       "last_message_id": 5901,
-      "last_check_time": 1792770796.8538857
+      "last_check_time": 1792785040.8396666
     },
     "lodydeals": {
-      "last_message_id": 45579,
-      "last_check_time": 1792437002.814382
+      "last_message_id": 45587,
+      "last_check_time": 1792785039.3156567
     },
     "bnddeals": {
       "last_message_id": 50866,
-      "last_check_time": 1792770797.8877392
+      "last_check_time": 1792785041.8352702
     },
     "test_channel": {
       "last_message_id": 1792330248,
       "last_check_time": 1792330248.913317
     },
     "pcgamingpart": {
-      "last_message_id": 7990,
-      "last_check_time": 1792770797.357662
+      "last_message_id": 7991,
+      "last_check_time": 1792785041.3431022
     },
     "zedstoreonline": {
       "last_message_id": 38636,
-      "last_check_time": 1792770795.6790648
+      "last_check_time": 1792785040.002675
     },
     "megaphonna": {
       "last_message_id": 8462,
@@ -2091,7 +2109,7 @@
     },
     "couponsglobal": {
       "last_message_id": 48869,
-      "last_check_time": 1792770821.329959
+      "last_check_time": 1792785068.7182853
     }
   },
   "published_product_prices": {
@@ -2175,7 +2193,7 @@
     "1005009120957437": 189.21,
     "1005005652871847": 3.7,
     "1005012554205120": 7.22,
-    "1005008901941749": 1.2,
+    "1005008901941749": 0.95,
     "1005006861002512": 13.56,
     "1005012285327063": 17.29,
     "1005006581583862": 25.0,
@@ -2336,7 +2354,10 @@
     "1005004683413179": 1.9,
     "1005013246579741": 6.77,
     "1005013413834178": 10.25,
-    "1005013425561020": 10.73
+    "1005013425561020": 10.73,
+    "1005013413640708": 3.88,
+    "1005013405221326": 12.15,
+    "1005013423507579": 3.2
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6741,6 +6762,46 @@
       "price": 10.73,
       "timestamp": 1792754852.0282364,
       "status": "ACTIVE"
+    },
+    "lodydeals:45586": {
+      "channel_msg_id": 1015,
+      "product_id": "1005013413640708",
+      "title": "Aluminum Laptop Stand",
+      "channel": "lodydeals",
+      "source_msg_id": 45586,
+      "price": 3.88,
+      "timestamp": 1792785022.7499707,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45585": {
+      "channel_msg_id": 1016,
+      "product_id": "1005013405221326",
+      "title": "1300W Handheld Garment Steamer",
+      "channel": "lodydeals",
+      "source_msg_id": 45585,
+      "price": 12.15,
+      "timestamp": 1792785027.430824,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45584": {
+      "channel_msg_id": 1017,
+      "product_id": "1005008901941749",
+      "title": "KUULAA USB C  60W Cable",
+      "channel": "lodydeals",
+      "source_msg_id": 45584,
+      "price": 0.95,
+      "timestamp": 1792785032.5334125,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45583": {
+      "channel_msg_id": 1018,
+      "product_id": "1005013423507579",
+      "title": "360° Clip Mobile Phone Holder",
+      "channel": "lodydeals",
+      "source_msg_id": 45583,
+      "price": 3.2,
+      "timestamp": 1792785037.2937298,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6749,17 +6810,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792754873.1017356,
+    "last_deal_post_time": 1792785068.735161,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792770824.417821,
+    "last_sweep_time": 1792785071.3175032,
     "last_sweep_times": {
-      "algeria": 1792770821.3407686,
-      "france": 1792770824.417821
+      "algeria": 1792785068.7269852,
+      "france": 1792785071.3175032
     },
     "last_deal_post_times": {
-      "algeria": 1792754873.1017356
+      "algeria": 1792785068.735161
     }
   },
   "last_coin_reminder_time": 1792657009.988393,
@@ -7092,7 +7153,10 @@
     "1005004683413179": "aniscoupons",
     "1005013246579741": "couponsglobal",
     "1005013413834178": "couponsglobal",
-    "1005013425561020": "pcgamingpart"
+    "1005013425561020": "pcgamingpart",
+    "1005013413640708": "lodydeals",
+    "1005013405221326": "lodydeals",
+    "1005013423507579": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7430,7 +7494,11 @@
     "QOOVI Car Charger": "aniscoupons",
     "Multi-Tier Metal Rack with 8 Hooks for Shoes,": "couponsglobal",
     "Wireless Car Air Compressor Air Pump Electric": "couponsglobal",
-    "YICO ELITE SignalRGB OpenRGB Addressable ARGB Async Controller HUB": "pcgamingpart"
+    "YICO ELITE SignalRGB OpenRGB Addressable ARGB Async Controller HUB": "pcgamingpart",
+    "Aluminum Laptop Stand": "lodydeals",
+    "1300W Handheld Garment Steamer": "lodydeals",
+    "KUULAA USB C  60W Cable": "lodydeals",
+    "360° Clip Mobile Phone Holder": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -8210,7 +8278,12 @@
     "megaphonna:8460",
     "megaphonna:8461",
     "megaphonna:8462",
-    "zedstoreonline:38636"
+    "zedstoreonline:38636",
+    "lodydeals:45582",
+    "lodydeals:45581",
+    "lodydeals:45580",
+    "lodydeals:45587",
+    "pcgamingpart:7991"
   ],
   "last_france_cross_promo_time": 1792637766.633011,
   "next_france_cross_promo_interval_seconds": 221713,
