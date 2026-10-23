@@ -1147,12 +1147,18 @@ async def api_reformat_deal(request: Request):
 
 
         parsed_usd, parsed_eur = extract_prices(raw_text)
-        price = explicit_price if explicit_price is not None else (parsed_usd or deal_info.get("price") or 0.0)
-
-
+        if explicit_price is not None:
+            price = explicit_price
+            logger.info(f"[REFORMATTER] Using explicit user price: {price}")
+        elif parsed_usd is not None:
+            price = parsed_usd
+            logger.info(f"[REFORMATTER] Matched copied post price: {price} USD (API catalog price was: {deal_info.get('price')})")
+        else:
+            price = deal_info.get("price") or 0.0
+            logger.info(f"[REFORMATTER] No copied price found in text, falling back to API catalog price: {price}")
 
         eur_rate = float(getattr(settings, "EUR_USD_RATE", 0.92))
-        eur_price = parsed_eur or (round(price * eur_rate, 2) if price else 0.0)
+        eur_price = parsed_eur if (parsed_eur is not None and explicit_price is None) else (round(price * eur_rate, 2) if price else 0.0)
 
         rate = await get_live_usdt_rate()
         dzd_price = int(price * rate) if price else 0

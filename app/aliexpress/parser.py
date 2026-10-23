@@ -384,97 +384,165 @@ def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
     if not text:
         return None, None
 
-    text = re.sub(r'[\u0640]', '', text)
-    # Normalize Eastern Arabic-Indic numerals (٠-٩) to ASCII (0-9)
-    arabic_digits = str.maketrans("٠١٢٣٤٥٦٧٨٩", "0123456789")
+    # Step 1: Strip BiDi controls, zero-width chars, BOM, and normalize Unicode whitespace
+    text = re.sub(r'[\u200e\u200f\u200b\u200c\u200d\u202a-\u202e\u2066-\u2069\ufeff]', '', text)
+    text = re.sub(r'[\u00a0\u1680\u2000-\u200a\u202f\u205f\u3000]', ' ', text)
+    text = re.sub(r'[\u0640]', '', text)  # tatweel
+
+    # Step 2: Normalize Eastern Arabic-Indic numerals (٠-٩) and Persian numerals (۰-۹) to ASCII (0-9)
+    arabic_digits = str.maketrans("٠١٢٣٤٥٦٧٨٩۰۱۲۳۴۵۶۷۸۹", "01234567890123456789")
     text = text.translate(arabic_digits)
-    # Normalize Arabic decimal comma ٫ (U+066B) and Arabic comma ، (U+060C) when between digits
+
+    # Step 3: Normalize Arabic decimal separators (٫, ،) between digits to dot
     text = re.sub(r'(?<=\d)[٫،](?=\d)', '.', text)
 
-    # Priority 1: Direct explicit price markers in the raw text
+    eur_rate = float(getattr(settings, "EUR_USD_RATE", 0.92) or 0.92)
+
+    def _parse_candidate_price(raw_num_str: str, full_context_str: str) -> Tuple[Optional[float], Optional[float]]:
+        try:
+            val = float(raw_num_str.replace(",", "."))
+        except (ValueError, TypeError):
+            return None, None
+
+        if not (0.01 <= val <= 100000):
+            return None, None
+
+        context_lower = full_context_str.lower()
+
+        # DZD / Algerian dinars
+        if any(cur in context_lower for cur in ["دج", "د.ج", "da", "dzd"]) or ("دينار" in context_lower):
+            usdt_rate = 250.0
+            u = round(val / usdt_rate, 2)
+            e = round(u * eur_rate, 2)
+            return u, e
+
+        if "€" in full_context_str or "eur" in context_lower or "euro" in context_lower:
+            u = round(val / eur_rate, 2)
+            return u, val
+
+        # Default USD
+        return val, round(val * eur_rate, 2)
+
+    # Priority 1: High-confidence discounted / coin / post-coupon / final prices
+    discounted_price_patterns = [
+        # Coins / Points discounts: 'السعر بعد العملات : 0.60$' or 'السعر في خانة العملات : 0.60$' or 'بالنقاط 0.60$'
+        re.compile(
+            r'(?:السعر\s*(?:في|بـ?|مع|بعد|بتخفيض)?\s*(?:خانة\s*)?(?:العملات|نقاط|النقاط)|سعر\s*(?:في|بـ?|مع|بعد|بتخفيض)?\s*(?:خانة\s*)?(?:العملات|نقاط|النقاط)|(?:بعد|مع|بتخفيض|في\s*خانة|بخانة)\s*(?:العملات|النقاط|نقاط))'
+            r'[\s:：\-–=ـ•*~|]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)\s*([\$💲€]|usd|eur|euro|euros|دولار|دج|د\.ج|da|dzd)?',
+            re.IGNORECASE
+        ),
+        # Post-coupon / Post-code: 'القطعة بعد الكوبون : 4.19$' or 'السعر بعد الكود : 12.50$' or 'السعر بعد التخفيض : 1.28$'
+        re.compile(
+            r'(?:القطعة\s*بعد\s*(?:الكوبون|الكود|التخفيض|الخصم)|السعر\s*بعد\s*(?:الكوبون|الكود|التخفيض|الخصم)|سعر\s*بعد\s*(?:الكوبون|الكود|التخفيض|الخصم)|بعد\s*(?:الكوبون|الكود|التخفيض|الخصم)|القطعة\s*بـ?كود|السعر\s*بـ?كود)'
+            r'[\s:：\-–=ـ•*~|]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)\s*([\$💲€]|usd|eur|euro|euros|دولار|دج|د\.ج|da|dzd)?',
+            re.IGNORECASE
+        ),
+        # Final / Price drop / Dropped to / Now: 'والآن 0.60$' or 'الآن 0.60$' or 'طاح لـ 0.60$' or 'وصل لـ 0.60$' or 'غير بـ 0.60$' or 'فقط بـ 0.60$' or 'أصبح بسعر 0.60$'
+        re.compile(
+            r'(?:السعر\s*النهائي|السعر\s*الصافي|السعر\s*الإجمالي|السعر\s*الاجمالي|السعر\s*الجديد|السعر\s*الحالي|(?:و\s*)?(?:الآن|الان|حاليا|حالياً)(?:\s*بسعر|\s*بـ?|\s*صار|\s*أصبح|\s*اصبح)?|(?:و\s*)?(?:أصبح|أصبحت|اصبح|اصبحت|صار|صارت)(?:\s*بسعر|\s*بـ?)?|طاح\s*لـ?|وصل\s*لـ?|هبط\s*لـ?|غير\s*بـ?|فقط\s*بـ?|يوصل\s*لـ?)'
+            r'[\s:：\-–=ـ•*~|]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)\s*([\$💲€]|usd|eur|euro|euros|دولار|دج|د\.ج|da|dzd)?',
+            re.IGNORECASE
+        ),
+        # French final / discount prices: 'Prix final : 15.50€' or 'Prix après réduction : 15.50€' or 'À seulement 15.50€'
+        re.compile(
+            r'(?:prix\s*final|prix\s*apr[èe]s\s*(?:r[ée]duction|code|coupon)|prix\s*avec\s*code|prix\s*r[ée]duit|[àa]\s*seulement|seulement)'
+            r'[\s:：\-–=ـ•*~|]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)\s*([\$💲€]|usd|eur|euro|euros|دج|da|dzd)?',
+            re.IGNORECASE
+        ),
+    ]
+
+    for p in discounted_price_patterns:
+        m = p.search(text)
+        if m:
+            u, e = _parse_candidate_price(m.group(1), m.group(0))
+            if u is not None:
+                return u, e
+
+    # Priority 2: Standard Explicit Price Mentions (ignoring original/old price keywords)
     explicit_price_patterns = [
-        # 'القطعة بعد الكوبون : 4.19$' or 'السعر بعد الكوبون : 12.50$' or 'السعر بعد التخفيض : 1.28$'
-        re.compile(r'(?:القطعة\s*بعد\s*الكوبون|السعر\s*بعد\s*الكوبون|سعر\s*بعد\s*الكوبون|بعد\s*الكوبون|القطعة\s*بعد\s*الكود|السعر\s*بعد\s*الكود|السعر\s*بعد\s*التخفيض|سعر\s*بعد\s*التخفيض)\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
-        # 'السعر الجديد : 15.5$' or 'السعر الحالي : 20$' or 'الآن بسعر 12$'
-        re.compile(r'(?:السعر\s*الجديد|السعر\s*الحالي|الآن\s*بسعر|الان\s*بسعر)\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
-        # 'سعر القطعة : 4.4$' or 'سعر قطعة : 7.99$' or 'سعر الحبة : 3.5$'
-        re.compile(r'(?:سعر\s*القطعة|سعر\s*قطعة|سعر\s*الحبة|سعر\s*حبة)\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
-        # 'السعر : 204.7$' or 'السعــــر : 15.5$' (ignoring old/original prices like 'السعر القديم' or 'كان بسعر')
-        re.compile(r'(?<!كان\s)(?<!بدل\s)(?:ا+لسعر|ا+لسعــــر|prix|price)(?!\s*القديم)(?!\s*السابق)(?!\s*قبل)\s*(?:في|لكندا|بكندا|بالعملات|مع\s*العملات|بعد\s*العملات|بتخفيض\s*العملات|بالنقاط)?\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
-        # 'سعر 3 قطع: 28.85$' or 'سعر ثلاث قطع 13.2$' or 'سعر 3 حبات: 24$'
-        re.compile(r'(?:سعر\s*(?:3|ثلاث)\s*(?:قطع|حبات))\s*[:：\-\s]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)[\$💲€]?', re.IGNORECASE),
+        # Per piece / unit: 'سعر القطعة : 4.4$' or 'سعر الحبة : 3.5$' or 'القطعة بـ 0.60$' or 'الحبة بـ 0.60$'
+        re.compile(
+            r'(?:سعر\s*القطعة|سعر\s*قطعة|سعر\s*الحبة|سعر\s*حبة|القطعة\s*بـ?|الحبة\s*بـ?)'
+            r'[\s:：\-–=ـ•*~|]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)\s*([\$💲€]|usd|eur|euro|euros|دولار|دج|د\.ج|da|dzd)?',
+            re.IGNORECASE
+        ),
+        # Multi-pack price: 'سعر 3 قطع: 28.85$' or 'سعر ثلاث قطع 13.2$' or 'سعر 3 حبات: 24$'
+        re.compile(
+            r'(?:سعر\s*(?:[0-9]+|ثلاث|قطعتين|حبتين)\s*(?:قطع|حبات|منتجات)?)'
+            r'[\s:：\-–=ـ•*~|]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)\s*([\$💲€]|usd|eur|euro|euros|دولار|دج|د\.ج|da|dzd)?',
+            re.IGNORECASE
+        ),
+        # Standard 'السعر : 0.60$' or 'سعر: 0.60$' or 'Prix : 15€' or 'Price: 15$' or 'بسعر 0.60$'
+        re.compile(
+            r'(?<!كان\s)(?<!كان\sب)(?<!كان\sبـ)(?<!كانت\s)(?<!كانت\sب)(?<!كانت\sبـ)(?<!بدل\s)(?<!بدل\sب)(?<!بدل\sبـ)(?<!عوض\s)(?<!من\s)'
+            r'(?:ا+لسعر|ا+لسعــــر|\bسعر|\bprix|\bprice|\bبسعر)'
+            r'(?!\s*(?:القديم|السابق|قبل|الأصلي|الاصلي|العادي|بدون))'
+            r'[\s:：\-–=ـ•*~|]*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)\s*([\$💲€]|usd|eur|euro|euros|دولار|دج|د\.ج|da|dzd)?',
+            re.IGNORECASE
+        ),
+        # 'بـ 0.60$' or 'ب 0.60$' when at start of line or following whitespace/emoji (not after كان/كانت/بدل/عوض)
+        re.compile(
+            r'(?:^|[\s\r\n🔥💥⚡💰💵])'
+            r'(?<!كان\s)(?<!كانت\s)(?<!بدل\s)(?<!عوض\s)'
+            r'بـ?\s*[\$💲€]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)\s*([\$💲€]|usd|eur|euro|euros|دولار|دج|د\.ج|da|dzd)',
+            re.IGNORECASE
+        ),
     ]
 
     for p in explicit_price_patterns:
         m = p.search(text)
         if m:
-            try:
-                candidate = float(m.group(1).replace(",", "."))
-                if 0.1 <= candidate <= 10000:
-                    rate = getattr(settings, "EUR_USD_RATE", 0.92) or 0.92
-                    if "€" in m.group(0) or "eur" in m.group(0).lower():
-                        return round(candidate / rate, 2), candidate
-                    return candidate, round(candidate * rate, 2)
-            except ValueError:
-                pass
+            u, e = _parse_candidate_price(m.group(1), m.group(0))
+            if u is not None:
+                return u, e
 
-    # Priority 2: Filter out lines that are coupon codes, tiers, discount announcements, or old/original prices
+    # Priority 3: Line-by-line filtering of obvious tiers/codes, followed by currency pattern match
     filtered_lines = []
     for line in text.splitlines():
         lc = line.strip().lower()
-        if any(w in lc for w in ["السعر القديم", "السعر السابق", "سعر سابق", "سعر قديم", "كان بسعر", "بدل من", "بدل "]):
+        if not lc:
             continue
-        if any(p in lc for p in ["بعد الكوبون", "بعد الكود", "سعر بعد", "القطعة بعد", "السعر بعد", "سعر القطعة", "سعر قطعة", "السعر :", "السعر:"]):
-            filtered_lines.append(line)
+        # Skip pure old price lines
+        if any(w in lc for w in ["السعر القديم", "السعر السابق", "سعر سابق", "سعر قديم", "كان بسعر", "بدل من", "بدل ", "السعر الأصلي", "السعر الاصلي", "prix d'origine", "ancien prix"]):
             continue
-        if any(w in lc for w in ["كوبون", "كوبـــون", "كود", "قسيمة", "code", "coupon"]):
+        # Skip coupon tier lines like 'كوبون 2/15$ : OTPRD02' or 'code 5/30$' unless the line also has an explicit price indicator
+        if re.search(r'\d+\s*/\s*\d+', lc) and not any(p in lc for p in ["السعر", "سعر", "القطعة", "الحبة", "prix", "price"]):
             continue
-        if re.search(r'\d+\s*/\s*\d+', lc):
-            continue
-        if re.search(r'(?:تخفيض|خصم|وفر|توفير)\s*[\$💲]?\s*\d+(?:\.\d+)?\s*[\$💲]?', lc):
+        # Skip store discount promo tier lines like 'تخفيض 1$ على 6 منتجات'
+        if re.search(r'^\s*(?:تخفيض|خصم|وفر|توفير)\s*[\$💲€]?[0-9]+(?:\.[0-9]+)?[\$💲€]?\s*(?:على|لكل|pour|sur)', lc):
             continue
         filtered_lines.append(line)
 
     clean_text = "\n".join(filtered_lines)
 
-    for pattern in EUR_PRICE_PATTERNS:
+    # Search for explicit currency tagged prices in cleaned text
+    currency_patterns = [
+        re.compile(r'([0-9]+(?:[\.,][0-9]{1,2})?)\s*(?:دج|د\.ج|da|dzd)\b', re.IGNORECASE),
+        re.compile(r'([0-9]+(?:[\.,][0-9]{1,2})?)\s*€', re.IGNORECASE),
+        re.compile(r'€\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
+        re.compile(r'([0-9]+(?:[\.,][0-9]{1,2})?)\s*(?:EUR|euro|euros)\b', re.IGNORECASE),
+        re.compile(r'[\$💲]\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
+        re.compile(r'([0-9]+(?:[\.,][0-9]{1,2})?)\s*[\$💲]', re.IGNORECASE),
+        re.compile(r'([0-9]+(?:[\.,][0-9]{1,2})?)\s*(?:USD|دولار)\b', re.IGNORECASE),
+        re.compile(r'(?:USD|دولار)\s*([0-9]+(?:[\.,][0-9]{1,2})?)', re.IGNORECASE),
+    ]
+
+    for pattern in currency_patterns:
         m = pattern.search(clean_text)
         if m:
-            try:
-                eur_val = float(m.group(1).replace(",", "."))
-                break
-            except ValueError:
-                pass
+            u, e = _parse_candidate_price(m.group(1), m.group(0))
+            if u is not None:
+                return u, e
 
-    for pattern in PRICE_PATTERNS:
-        m = pattern.search(clean_text)
-        if m:
-            try:
-                candidate = float(m.group(1).replace(",", "."))
-                if 0.1 <= candidate <= 10000:
-                    usd_val = candidate
-                    break
-            except ValueError:
-                pass
+    # Priority 4: Fallback for lone decimal price entered by user (e.g. "https://... 0.60" or "0.60")
+    lone_m = re.search(r'(?:^|[\s\r\n])([0-9]{1,4}[\.,][0-9]{1,2})(?:[\s\r\n]|$)', clean_text)
+    if lone_m:
+        u, e = _parse_candidate_price(lone_m.group(1), lone_m.group(0))
+        if u is not None:
+            return u, e
 
-    # Priority 3: Fallback for lone decimal price entered by user (e.g. "https://... 0.60" or "0.60")
-    if usd_val is None and eur_val is None:
-        lone_m = re.search(r'(?:^|[\s\r\n])([0-9]{1,4}[\.,][0-9]{1,2})(?:[\s\r\n]|$)', clean_text)
-        if lone_m:
-            try:
-                candidate = float(lone_m.group(1).replace(",", "."))
-                if 0.05 <= candidate <= 10000:
-                    usd_val = candidate
-            except ValueError:
-                pass
+    return None, None
 
-    rate = settings.EUR_USD_RATE or 0.92
-    if usd_val is not None and eur_val is None:
-        eur_val = round(usd_val * rate, 2)
-    elif eur_val is not None and usd_val is None:
-        usd_val = round(eur_val / rate, 2)
-
-    return usd_val, eur_val
 
 def is_competitor_branded_code(code: str) -> bool:
     """Checks if a coupon code contains a competitor channel's brand/name (e.g. ANIS, BND, ZED, LODY, ECKS)."""
