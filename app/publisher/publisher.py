@@ -257,6 +257,29 @@ class TelegramPublisher:
                         "publisher",
                         f"Published deal #{deal.id} to Telegram channel {self.target_channel} (msg #{msg_id})"
                     )
+
+                    # Facebook Auto Cross-Posting
+                    if getattr(settings, "FACEBOOK_AUTO_POST_ENABLED", False):
+                        try:
+                            from app.publisher.facebook import facebook_publisher
+                            if facebook_publisher.is_configured():
+                                async def _post_fb_safe():
+                                    try:
+                                        await facebook_publisher.publish_deal(
+                                            caption=caption,
+                                            deal_link=deal.affiliate_url or getattr(deal, "clean_url", None),
+                                            image_path=image_path if photo_bytes is None else None,
+                                            image_bytes=photo_bytes,
+                                            image_url=photo_url or getattr(deal, "image_url", None),
+                                            price=getattr(deal, "current_price", None),
+                                            title=getattr(deal, "title", None)
+                                        )
+                                    except Exception as _fb_err:
+                                        logger.warning(f"Facebook auto-post background error: {_fb_err}")
+                                asyncio.create_task(_post_fb_safe())
+                        except Exception as fb_exc:
+                            logger.warning(f"Facebook auto-posting dispatch error: {fb_exc}")
+
                     return True, None
                 else:
                     err_msg = result.get("description", f"HTTP {resp.status_code}")

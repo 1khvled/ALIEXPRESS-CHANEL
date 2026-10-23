@@ -394,14 +394,26 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
                 </label>
               </div>
 
-              <button 
-                onclick="publishReformattedDeal()" 
-                id="reformat-publish-btn" 
-                class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-md flex items-center justify-center gap-2 transition active:scale-95 border border-emerald-400/20"
-              >
-                <i class="fa-solid fa-paper-plane"></i>
-                <span id="reformat-publish-btn-text">نشر في القناة الآن (@DzAliexpress0)</span>
-              </button>
+              <div class="flex items-center gap-2">
+                <button 
+                  onclick="publishToFacebookOnly()" 
+                  id="reformat-fb-only-btn" 
+                  class="bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm px-4 py-2.5 rounded-xl shadow-md flex items-center justify-center gap-1.5 transition active:scale-95 border border-blue-400/20"
+                  title="نشر هذا المنشور على صفحة فيسبوك فقط بدون التيليجرام"
+                >
+                  <i class="fa-brands fa-facebook"></i>
+                  <span>نشر لفيسبوك فقط</span>
+                </button>
+
+                <button 
+                  onclick="publishReformattedDeal()" 
+                  id="reformat-publish-btn" 
+                  class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-md flex items-center justify-center gap-2 transition active:scale-95 border border-emerald-400/20"
+                >
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span id="reformat-publish-btn-text">نشر في القناة الآن (@DzAliexpress0)</span>
+                </button>
+              </div>
             </div>
 
             <!-- Feedback Notification Box -->
@@ -1624,6 +1636,57 @@ ${formatPostTextWithLinks(deal.text)}
       } finally {
         btn.disabled = false;
         btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i><span>نشر في القناة الآن (@DzAliexpress0)</span>';
+      }
+    }
+
+    async function publishToFacebookOnly() {
+      if (!currentReformattedDeal) {
+        showToast('يرجى أولاً تحويل منشور من مربع التعديل أعلاه', 'error');
+        return;
+      }
+      const caption = document.getElementById('reformat-caption')?.value?.trim();
+      if (!caption) {
+        showToast('نص المنشور فارغ', 'error');
+        return;
+      }
+      const fbBtn = document.getElementById('reformat-fb-only-btn');
+      const feedback = document.getElementById('reformat-feedback');
+      fbBtn.disabled = true;
+      fbBtn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i><span>جاري النشر لفيسبوك...</span>';
+
+      try {
+        const resp = await fetch('/api/facebook/publish', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            caption: caption,
+            image_url: currentReformattedDeal.image_url,
+            deal_link: currentReformattedDeal.deal_link,
+            price: currentReformattedDeal.price,
+            product_id: currentReformattedDeal.product_id
+          })
+        });
+        const data = await resp.json();
+        if (data.ok) {
+          if (feedback) {
+            feedback.className = 'p-3 rounded-xl text-xs font-medium bg-blue-500/10 border border-blue-500/20 text-blue-300 flex items-center gap-2';
+            feedback.innerHTML = `<i class="fa-brands fa-facebook text-blue-400 text-sm"></i><span>تم نشر المنشور على صفحة فيسبوك بنجاح! (ID: #${data.post_id})</span>`;
+            feedback.classList.remove('hidden');
+          }
+          showToast('تم نشر المنشور على صفحة فيسبوك بنجاح! ✅', 'success');
+        } else {
+          showToast('فشل النشر على فيسبوك: ' + (data.error || 'خطأ غير معروف'), 'error');
+          if (feedback) {
+            feedback.className = 'p-3 rounded-xl text-xs font-medium bg-rose-500/10 border border-rose-500/20 text-rose-300';
+            feedback.innerText = 'فشل النشر على فيسبوك: ' + (data.error || 'خطأ غير معروف');
+            feedback.classList.remove('hidden');
+          }
+        }
+      } catch (e) {
+        showToast('حدث خطأ أثناء الاتصال بفيسبوك: ' + e.message, 'error');
+      } finally {
+        fbBtn.disabled = false;
+        fbBtn.innerHTML = '<i class="fa-brands fa-facebook"></i><span>نشر لفيسبوك فقط</span>';
       }
     }
 

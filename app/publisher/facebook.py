@@ -1,5 +1,6 @@
 import os
 import re
+from pathlib import Path
 from typing import Optional, Tuple, Dict, Any
 import httpx
 from app.config.settings import settings
@@ -9,7 +10,7 @@ from app.utils.logger import logger, record_system_log
 class FacebookPublisher:
     """
     Automated Facebook Page Publisher via Meta Graph API v21.0.
-    Supports photo posts with rich formatted captions and feed link posts.
+    Supports photo posts with rich formatted captions, local file uploads, and feed link posts.
     """
     GRAPH_API_VERSION = "v21.0"
     GRAPH_URL = f"https://graph.facebook.com/{GRAPH_API_VERSION}"
@@ -24,23 +25,23 @@ class FacebookPublisher:
     ):
         self.page_id = (
             page_id
-            or getattr(settings, "FACEBOOK_PAGE_ID", None)
-            or os.getenv("FACEBOOK_PAGE_ID", "")
+            if page_id is not None
+            else (getattr(settings, "FACEBOOK_PAGE_ID", None) or os.getenv("FACEBOOK_PAGE_ID", ""))
         )
         self.access_token = (
             access_token
-            or getattr(settings, "FACEBOOK_PAGE_ACCESS_TOKEN", None)
-            or os.getenv("FACEBOOK_PAGE_ACCESS_TOKEN", "")
+            if access_token is not None
+            else (getattr(settings, "FACEBOOK_PAGE_ACCESS_TOKEN", None) or os.getenv("FACEBOOK_PAGE_ACCESS_TOKEN", ""))
         )
         self.app_id = (
             app_id
-            or getattr(settings, "FACEBOOK_APP_ID", None)
-            or os.getenv("FACEBOOK_APP_ID", "")
+            if app_id is not None
+            else (getattr(settings, "FACEBOOK_APP_ID", None) or os.getenv("FACEBOOK_APP_ID", ""))
         )
         self.app_secret = (
             app_secret
-            or getattr(settings, "FACEBOOK_APP_SECRET", None)
-            or os.getenv("FACEBOOK_APP_SECRET", "")
+            if app_secret is not None
+            else (getattr(settings, "FACEBOOK_APP_SECRET", None) or os.getenv("FACEBOOK_APP_SECRET", ""))
         )
         self.auto_post_enabled = (
             auto_post_enabled
@@ -73,7 +74,7 @@ class FacebookPublisher:
         text = re.sub(r'<blockquote>\s*', '✨ ', text, flags=re.IGNORECASE)
         text = re.sub(r'\s*</blockquote>', '\n', text, flags=re.IGNORECASE)
 
-        # 2. Convert <code> tags to uppercase standout
+        # 2. Convert <code> tags to standout uppercase brackets
         text = re.sub(r'<code>(.*?)</code>', r'[\1]', text, flags=re.IGNORECASE)
 
         # 3. Strip bold / italic / underline tags
@@ -171,12 +172,14 @@ class FacebookPublisher:
         caption: str,
         deal_link: Optional[str] = None,
         image_url: Optional[str] = None,
+        image_path: Optional[Any] = None,
+        image_bytes: Optional[bytes] = None,
         price: Optional[float] = None,
         title: Optional[str] = None
     ) -> Tuple[bool, Optional[str], Optional[str]]:
         """
         Publishes a deal post to the Facebook Page:
-        - If image_url is provided and valid, posts to /{PAGE_ID}/photos with image + caption.
+        - If image_bytes, image_path, or image_url is provided, posts photo to /{PAGE_ID}/photos.
         - Otherwise, posts to /{PAGE_ID}/feed with message + link.
 
         Returns: (success: bool, post_id: Optional[str], error_message: Optional[str])
@@ -185,11 +188,56 @@ class FacebookPublisher:
             return False, None, "Facebook Publisher is not configured (missing Page ID or Page Access Token)."
 
         fb_message = self.format_caption_for_facebook(caption, deal_link=deal_link, price=price)
+        photo_url = f"{self.GRAPH_URL}/{self.page_id}/photos"
 
-        async with httpx.AsyncClient(timeout=20.0) as client:
-            # 1. Image post if image_url is available
-            if image_url and image_url.startswith("http"):
-                photo_url = f"{self.GRAPH_URL}/{self.page_id}/photos"
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            photo_published = False
+
+            # 1. Local image bytes
+            if image_bytes:
+                try:
+                    files = {"source": ("deal.jpg", image_bytes, "image/jpeg")}
+                    data = {"caption": fb_message, "access_token": self.access_token}
+                    resp = await client.post(photo_url, data=data, files=files)
+                    res = resp.json()
+                    if resp.status_code in (200, 201) and ("id" in res or "post_id" in res):
+                        post_id = res.get("post_id") or res.get("id")
+                        logger.info(f"[FACEBOOK] Published photo (bytes) deal successfully! Post ID: {post_id}")
+                        try:
+                            await record_system_log("INFO", "facebook", f"Published deal to Facebook Page (Photo ID: {post_id})")
+                        except Exception:
+                            pass
+                        return True, str(post_id), None
+                    else:
+                        logger.warning(f"[FACEBOOK] Photo upload (bytes) failed: {res}. Falling back...")
+                except Exception as e:
+                    logger.warning(f"[FACEBOOK] Exception during photo bytes upload: {e}")
+
+            # 2. Local image file path
+            if not photo_published and image_path:
+                try:
+                    p = Path(image_path) if not isinstance(image_path, Path) else image_path
+                    if p.exists() and p.is_file():
+                        file_bytes = p.read_bytes()
+                        files = {"source": (p.name or "deal.jpg", file_bytes, "image/jpeg")}
+                        data = {"caption": fb_message, "access_token": self.access_token}
+                        resp = await client.post(photo_url, data=data, files=files)
+                        res = resp.json()
+                        if resp.status_code in (200, 201) and ("id" in res or "post_id" in res):
+                            post_id = res.get("post_id") or res.get("id")
+                            logger.info(f"[FACEBOOK] Published photo (file) deal successfully! Post ID: {post_id}")
+                            try:
+                                await record_system_log("INFO", "facebook", f"Published deal to Facebook Page (Photo ID: {post_id})")
+                            except Exception:
+                                pass
+                            return True, str(post_id), None
+                        else:
+                            logger.warning(f"[FACEBOOK] Photo upload (file) failed: {res}. Falling back...")
+                except Exception as e:
+                    logger.warning(f"[FACEBOOK] Exception during photo file upload: {e}")
+
+            # 3. Remote Image URL
+            if not photo_published and image_url and str(image_url).startswith("http"):
                 payload = {
                     "url": image_url,
                     "caption": fb_message,
@@ -201,18 +249,20 @@ class FacebookPublisher:
 
                     if resp.status_code in (200, 201) and ("id" in data or "post_id" in data):
                         post_id = data.get("post_id") or data.get("id")
-                        logger.info(f"[FACEBOOK] Published photo deal successfully! Post ID: {post_id}")
-                        record_system_log("INFO", f"Published deal to Facebook Page (Photo ID: {post_id})")
+                        logger.info(f"[FACEBOOK] Published photo (url) deal successfully! Post ID: {post_id}")
+                        try:
+                            await record_system_log("INFO", "facebook", f"Published deal to Facebook Page (Photo ID: {post_id})")
+                        except Exception:
+                            pass
                         return True, str(post_id), None
                     else:
                         err_data = data.get("error", {})
                         err_msg = err_data.get("message", f"HTTP {resp.status_code}: {resp.text}")
                         logger.warning(f"[FACEBOOK] Photo upload failed, falling back to feed post. Reason: {err_msg}")
-                        # Fallback to feed post with link if image upload failed
                 except Exception as e:
                     logger.warning(f"[FACEBOOK] Exception during photo post ({e}), falling back to feed post.")
 
-            # 2. Feed post fallback (Text + Link)
+            # 4. Feed post fallback (Text + Link)
             feed_url = f"{self.GRAPH_URL}/{self.page_id}/feed"
             payload = {
                 "message": fb_message,
@@ -228,7 +278,10 @@ class FacebookPublisher:
                 if resp.status_code in (200, 201) and "id" in data:
                     post_id = data["id"]
                     logger.info(f"[FACEBOOK] Published feed deal successfully! Post ID: {post_id}")
-                    record_system_log("INFO", f"Published deal to Facebook Page (Feed ID: {post_id})")
+                    try:
+                        await record_system_log("INFO", "facebook", f"Published deal to Facebook Page (Feed ID: {post_id})")
+                    except Exception:
+                        pass
                     return True, str(post_id), None
                 else:
                     err_data = data.get("error", {})

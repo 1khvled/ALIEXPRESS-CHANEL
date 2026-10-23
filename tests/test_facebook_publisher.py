@@ -36,7 +36,7 @@ def test_facebook_caption_formatter_strips_html_and_preserves_structure():
 
 
 def test_facebook_is_configured():
-    unconfigured = FacebookPublisher(page_id=None, access_token=None)
+    unconfigured = FacebookPublisher(page_id="", access_token="")
     assert unconfigured.is_configured() is False
 
     configured = FacebookPublisher(page_id="999888777", access_token="EAAB...")
@@ -45,7 +45,7 @@ def test_facebook_is_configured():
 
 @pytest.mark.asyncio
 async def test_facebook_publish_deal_unconfigured():
-    pub = FacebookPublisher(page_id=None, access_token=None)
+    pub = FacebookPublisher(page_id="", access_token="")
     ok, post_id, err = await pub.publish_deal(caption="Test Caption")
     assert ok is False
     assert post_id is None

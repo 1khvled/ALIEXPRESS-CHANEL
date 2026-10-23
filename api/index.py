@@ -1496,6 +1496,40 @@ async def api_facebook_test(request: Request):
     )
     return {"ok": ok, "post_id": post_id, "error": err}
 
+
+@app.post("/api/facebook/publish")
+async def api_facebook_publish(request: Request):
+    """Publish a deal directly to Facebook Page from admin dashboard."""
+    if not is_admin_authenticated(request):
+        return JSONResponse({"ok": False, "error": "غير مصرح"}, status_code=401)
+    try:
+        data = await request.json()
+        caption = (data.get("caption") or "").strip()
+        image_url = (data.get("image_url") or "").strip() or None
+        deal_link = (data.get("deal_link") or "").strip()
+        product_id = data.get("product_id", "")
+        price = data.get("price")
+
+        if not caption:
+            return {"ok": False, "error": "نص المنشور فارغ"}
+
+        from api.coin_bot import ensure_affiliate
+        tracked_link = ensure_affiliate(deal_link, pid=product_id)
+
+        from app.publisher.facebook import facebook_publisher
+        if not facebook_publisher.is_configured():
+            return {"ok": False, "error": "فيسبوك غير مهيأ (FACEBOOK_PAGE_ID أو FACEBOOK_PAGE_ACCESS_TOKEN مفقود)"}
+
+        ok, post_id, err = await facebook_publisher.publish_deal(
+            caption=caption,
+            deal_link=tracked_link or deal_link,
+            image_url=image_url,
+            price=price
+        )
+        return {"ok": ok, "post_id": post_id, "error": err}
+    except Exception as e:
+        return {"ok": False, "error": str(e)}
+
 @app.get("/api/health")
 async def health():
     return {
