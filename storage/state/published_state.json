@@ -312,7 +312,8 @@
     "1005013379632301",
     "1005004683413179",
     "1005013246579741",
-    "1005013413834178"
+    "1005013413834178",
+    "1005013425561020"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -635,7 +636,8 @@
     "1005013379632301": 1792485988.1384284,
     "1005004683413179": 1792525221.9760067,
     "1005013246579741": 1792613440.0351677,
-    "1005013413834178": 1792613447.0547092
+    "1005013413834178": 1792613447.0547092,
+    "1005013425561020": 1792754852.0282364
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -962,7 +964,8 @@
     "Double Stainless Steel Travel Thermo Cup",
     "QOOVI Car Charger",
     "Multi-Tier Metal Rack with 8 Hooks for Shoes,",
-    "Wireless Car Air Compressor Air Pump Electric"
+    "Wireless Car Air Compressor Air Pump Electric",
+    "YICO ELITE SignalRGB OpenRGB Addressable ARGB Async Controller HUB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1296,7 +1299,8 @@
     "Double Stainless Steel Travel Thermo Cup": 1792485988.1384284,
     "QOOVI Car Charger": 1792525221.9760067,
     "Multi-Tier Metal Rack with 8 Hooks for Shoes,": 1792613440.0351677,
-    "Wireless Car Air Compressor Air Pump Electric": 1792613447.0547092
+    "Wireless Car Air Compressor Air Pump Electric": 1792613447.0547092,
+    "YICO ELITE SignalRGB OpenRGB Addressable ARGB Async Controller HUB": 1792754852.0282364
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2046,19 +2050,20 @@
     "pcgamingpart:7987",
     "aniscoupons:33000",
     "couponsglobal:48869",
-    "couponsglobal:48868"
+    "couponsglobal:48868",
+    "pcgamingpart:7990"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792711145.3171253,
-  "last_run_time": 1792613447.0547092,
+  "last_run_time": 1792754852.0282364,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33003,
-      "last_check_time": 1792743864.4704022
+      "last_check_time": 1792754847.778806
     },
     "ecksdeal": {
       "last_message_id": 5901,
-      "last_check_time": 1792743865.0233784
+      "last_check_time": 1792754848.3927157
     },
     "lodydeals": {
       "last_message_id": 45579,
@@ -2066,27 +2071,27 @@
     },
     "bnddeals": {
       "last_message_id": 50866,
-      "last_check_time": 1792743866.0160165
+      "last_check_time": 1792754854.6533313
     },
     "test_channel": {
       "last_message_id": 1792330248,
       "last_check_time": 1792330248.913317
     },
     "pcgamingpart": {
-      "last_message_id": 7989,
-      "last_check_time": 1792743865.4991937
+      "last_message_id": 7990,
+      "last_check_time": 1792754854.0482445
     },
     "zedstoreonline": {
       "last_message_id": 38635,
-      "last_check_time": 1792743863.962242
+      "last_check_time": 1792754847.3579617
     },
     "megaphonna": {
-      "last_message_id": 8461,
-      "last_check_time": 1792743866.6123617
+      "last_message_id": 8462,
+      "last_check_time": 1792754872.487227
     },
     "couponsglobal": {
       "last_message_id": 48869,
-      "last_check_time": 1792743867.0988605
+      "last_check_time": 1792754873.0886133
     }
   },
   "published_product_prices": {
@@ -2330,7 +2335,8 @@
     "1005013379632301": 4.32,
     "1005004683413179": 1.9,
     "1005013246579741": 6.77,
-    "1005013413834178": 10.25
+    "1005013413834178": 10.25,
+    "1005013425561020": 10.73
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6725,6 +6731,16 @@
       "price": 10.25,
       "timestamp": 1792613447.0547092,
       "status": "ACTIVE"
+    },
+    "pcgamingpart:7990": {
+      "channel_msg_id": 1013,
+      "product_id": "1005013425561020",
+      "title": "YICO ELITE SignalRGB OpenRGB Addressable ARGB Async Controller HUB",
+      "channel": "pcgamingpart",
+      "source_msg_id": 7990,
+      "price": 10.73,
+      "timestamp": 1792754852.0282364,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6733,17 +6749,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792613449.1006196,
+    "last_deal_post_time": 1792754873.1017356,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792743869.7629583,
+    "last_sweep_time": 1792754875.5266142,
     "last_sweep_times": {
-      "algeria": 1792743867.1097322,
-      "france": 1792743869.7629583
+      "algeria": 1792754873.095387,
+      "france": 1792754875.5266142
     },
     "last_deal_post_times": {
-      "algeria": 1792613449.1006196
+      "algeria": 1792754873.1017356
     }
   },
   "last_coin_reminder_time": 1792657009.988393,
@@ -7075,7 +7091,8 @@
     "1005013379632301": "pcgamingpart",
     "1005004683413179": "aniscoupons",
     "1005013246579741": "couponsglobal",
-    "1005013413834178": "couponsglobal"
+    "1005013413834178": "couponsglobal",
+    "1005013425561020": "pcgamingpart"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7412,7 +7429,8 @@
     "Double Stainless Steel Travel Thermo Cup": "pcgamingpart",
     "QOOVI Car Charger": "aniscoupons",
     "Multi-Tier Metal Rack with 8 Hooks for Shoes,": "couponsglobal",
-    "Wireless Car Air Compressor Air Pump Electric": "couponsglobal"
+    "Wireless Car Air Compressor Air Pump Electric": "couponsglobal",
+    "YICO ELITE SignalRGB OpenRGB Addressable ARGB Async Controller HUB": "pcgamingpart"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -8190,7 +8208,8 @@
     "megaphonna:8458",
     "megaphonna:8459",
     "megaphonna:8460",
-    "megaphonna:8461"
+    "megaphonna:8461",
+    "megaphonna:8462"
   ],
   "last_france_cross_promo_time": 1792637766.633011,
   "next_france_cross_promo_interval_seconds": 221713,
