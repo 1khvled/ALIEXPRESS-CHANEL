@@ -63,6 +63,13 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: Optional[str] = None
     AI_MODEL: str = "gpt-4o-mini"
 
+    # Facebook Auto-Publisher (Meta Graph API)
+    FACEBOOK_PAGE_ID: Optional[str] = None
+    FACEBOOK_PAGE_ACCESS_TOKEN: Optional[str] = None
+    FACEBOOK_APP_ID: Optional[str] = None
+    FACEBOOK_APP_SECRET: Optional[str] = None
+    FACEBOOK_AUTO_POST_ENABLED: bool = False
+
     @field_validator(
         "TELEGRAM_API_ID",
         "ADMIN_USER_ID",
@@ -92,6 +99,10 @@ class Settings(BaseSettings):
         "ALIEXPRESS_AFFILIATE_APP_SECRET",
         "ALIEXPRESS_CUSTOM_AFFILIATE_PREFIX",
         "OPENAI_API_KEY",
+        "FACEBOOK_PAGE_ID",
+        "FACEBOOK_PAGE_ACCESS_TOKEN",
+        "FACEBOOK_APP_ID",
+        "FACEBOOK_APP_SECRET",
         mode="before"
     )
     @classmethod

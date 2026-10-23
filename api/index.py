@@ -1415,17 +1415,86 @@ async def api_publish_deal(request: Request):
                     except Exception:
                         pass
 
+                # Facebook Cross-Posting
+                fb_result = {"published": False, "post_id": None, "error": None}
+                post_to_fb = data.get("post_to_facebook", False) or getattr(settings, "FACEBOOK_AUTO_POST_ENABLED", False)
+
+                if post_to_fb:
+                    try:
+                        from app.publisher.facebook import facebook_publisher
+                        if facebook_publisher.is_configured():
+                            fb_ok, fb_id, fb_err = await facebook_publisher.publish_deal(
+                                caption=caption,
+                                deal_link=tracked_deal_link or deal_link,
+                                image_url=image_url,
+                                price=price,
+                                title=clean_title
+                            )
+                            fb_result = {
+                                "published": fb_ok,
+                                "post_id": fb_id,
+                                "error": fb_err
+                            }
+                        else:
+                            fb_result["error"] = "Facebook Publisher not configured (missing Page ID or Access Token)"
+                    except Exception as fb_exc:
+                        fb_result["error"] = str(fb_exc)
+
                 return {
                     "ok": True,
                     "message_id": msg_id,
                     "channel": target_ch,
-                    "post_url": f"https://t.me/{target_clean}/{msg_id}"
+                    "post_url": f"https://t.me/{target_clean}/{msg_id}",
+                    "facebook": fb_result
                 }
             else:
                 return {"ok": False, "error": res.get("description", f"Telegram API error {resp.status_code}")}
     except Exception as e:
         return {"ok": False, "error": str(e)}
 
+
+
+
+@app.get("/api/facebook/status")
+async def api_facebook_status(request: Request):
+    """Check Facebook Page configuration and token health."""
+    if not is_admin_authenticated(request):
+        return JSONResponse({"ok": False, "error": "غير مصرح"}, status_code=401)
+    from app.publisher.facebook import facebook_publisher
+    configured = facebook_publisher.is_configured()
+    if not configured:
+        return {
+            "ok": True,
+            "configured": False,
+            "page_id": facebook_publisher.page_id or None,
+            "auto_post_enabled": facebook_publisher.auto_post_enabled,
+            "message": "Facebook credentials not configured yet."
+        }
+    ok, err, page_data = await facebook_publisher.verify_page_token()
+    return {
+        "ok": ok,
+        "configured": True,
+        "auto_post_enabled": facebook_publisher.auto_post_enabled,
+        "page_id": facebook_publisher.page_id,
+        "page_name": (page_data or {}).get("name") if ok else None,
+        "page_link": (page_data or {}).get("link") if ok else None,
+        "error": err
+    }
+
+
+@app.post("/api/facebook/test")
+async def api_facebook_test(request: Request):
+    """Publish a quick test post to verify Facebook Page integration."""
+    if not is_admin_authenticated(request):
+        return JSONResponse({"ok": False, "error": "غير مصرح"}, status_code=401)
+    from app.publisher.facebook import facebook_publisher
+    if not facebook_publisher.is_configured():
+        return {"ok": False, "error": "فيسبوك غير مهيأ (FACEBOOK_PAGE_ID أو FACEBOOK_PAGE_ACCESS_TOKEN مفقود)"}
+    ok, post_id, err = await facebook_publisher.publish_deal(
+        caption="🎉 اختبار النشر التلقائي من لوحة تحكم DealScout DZ!\nالصفحة جاهزة لنشر صفقات وتخفيضات AliExpress الحصرية.",
+        deal_link="https://dealscoutgreen.vercel.app"
+    )
+    return {"ok": ok, "post_id": post_id, "error": err}
 
 @app.get("/api/health")
 async def health():

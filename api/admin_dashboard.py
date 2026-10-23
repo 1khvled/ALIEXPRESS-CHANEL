@@ -382,10 +382,17 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
 
             <!-- Actions Row -->
             <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
-              <a id="reformat-deal-link" href="#" target="_blank" class="text-xs text-rose-400 hover:text-rose-300 flex items-center gap-1.5 font-bold">
-                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                <span>فحص الرابط التابع</span>
-              </a>
+              <div class="flex items-center gap-3">
+                <a id="reformat-deal-link" href="#" target="_blank" class="text-xs text-rose-400 hover:text-rose-300 flex items-center gap-1.5 font-bold">
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                  <span>فحص الرابط التابع</span>
+                </a>
+                <label class="inline-flex items-center gap-1.5 cursor-pointer text-xs font-semibold text-zinc-300 hover:text-white transition select-none bg-blue-950/40 border border-blue-600/30 px-2.5 py-1 rounded-lg" title="نشر هذا المنشور أيضاً على صفحة الفيسبوك">
+                  <input type="checkbox" id="reformat-fb-toggle" class="rounded accent-blue-500 w-3.5 h-3.5 cursor-pointer" checked>
+                  <i class="fa-brands fa-facebook text-blue-400 text-xs"></i>
+                  <span>نشر على فيسبوك</span>
+                </label>
+              </div>
 
               <button 
                 onclick="publishReformattedDeal()" 
@@ -1584,22 +1591,27 @@ ${formatPostTextWithLinks(deal.text)}
             image_url: currentReformattedDeal.image_url,
             deal_link: currentReformattedDeal.deal_link,
             price: currentReformattedDeal.price,
-            target_channel: currentReformattedDeal.target_channel || (isFrance ? '@francedealsdz' : '@DzAliexpress0')
+            target_channel: currentReformattedDeal.target_channel || (isFrance ? '@francedealsdz' : '@DzAliexpress0'),
+            post_to_facebook: document.getElementById('reformat-fb-toggle')?.checked ?? false
           })
         });
         const data = await resp.json();
 
         if (data.ok) {
-          feedback.className = 'p-3 rounded-xl text-xs font-medium bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 flex items-center justify-between';
+          const fbOk = data.facebook && data.facebook.published;
+          const fbErr = data.facebook && data.facebook.error;
+          feedback.className = 'p-3 rounded-xl text-xs font-medium bg-emerald-500/10 border border-emerald-500/20 text-emerald-300 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2';
           feedback.innerHTML = `
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 flex-wrap">
               <i class="fa-solid fa-circle-check text-emerald-400 text-sm"></i>
               <span>تم نشر المنشور في القناة بنجاح! (#${data.message_id})</span>
+              ${fbOk ? `<span class="bg-blue-600/30 text-blue-300 border border-blue-500/40 px-2 py-0.5 rounded text-[10px] font-bold flex items-center gap-1"><i class="fa-brands fa-facebook"></i> نُشر على فيسبوك</span>` : ''}
+              ${fbErr && !fbOk && document.getElementById('reformat-fb-toggle')?.checked ? `<span class="bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-0.5 rounded text-[10px]" title="${escapeHtml(fbErr)}">⚠️ فيسبوك: غير مهيأ أو حدث خطأ</span>` : ''}
             </div>
             ${data.post_url ? `<a href="${data.post_url}" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-2.5 py-1 rounded-lg text-[11px] font-bold">عرض بالتيليجرام</a>` : ''}
           `;
           feedback.classList.remove('hidden');
-          showToast('تم نشر المنشور في القناة بنجاح! #' + data.message_id, 'success');
+          showToast('تم نشر المنشور بنجاح! #' + data.message_id + (fbOk ? ' (وفيسبوك ✅)' : ''), 'success');
           setTimeout(refreshDashboard, 2000);
         } else {
           feedback.className = 'p-3 rounded-xl text-xs font-medium bg-rose-500/10 border border-rose-500/20 text-rose-300';
