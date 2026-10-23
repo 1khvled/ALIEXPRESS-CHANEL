@@ -44,12 +44,7 @@
     "end_date": "2026-11-07T23:59:59+00:00",
     "banner_tag": "🎯 Choice Day Sale (1 - 6 نوفمبر)",
     "is_major": true,
-    "coupon_tiers": [
-      {
-        "tier": "2/15$",
-        "code": "WOAE02"
-      }
-    ],
+    "coupon_tiers": [],
     "coupon_tiers_fr": [],
     "banner_image_url": "https://cdn4.telesco.pe/file/Riblj9mgdxYMOxgOgLnLJhHPcLh3ONZJ50Yu6LV-3_yTjUaCTiHfK1q-DUxkS7U54bdtcOFerHArcTnnkAQq9oq0NTJq4KCXvu-QFHuCruksx70EIH0dnE_Q670v6ZOwvcfYvS63OQKv_uhN4tO6wC_MkuSjZMQ-pvkEhyPfTZjv0LnFQVV8b1e5VYy5sM-6RthXheEQ-O5QLeIksBj8wFPiRJYGTYfNxCGFpiIcz2lVkUel8fiIuz_9R--nhaY6d43UXfvHtajyQUCCYZqBTw2GnWqMZ4uI5r1PMGgyIFb2ZAy3FeMBLXvWYAsyInflroqHwRQyPqHliiz7xc9uyw.jpg",
     "source": "discovered",

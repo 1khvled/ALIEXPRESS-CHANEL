@@ -872,29 +872,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <p id="active-event-desc" class="hidden">عروض وتخفيضات رسمية نشطة حالياً مع أكواد حصرية مخصصة للجزائر وفرنسا — الأسعار بالدينار الجزائري وفق سعر السكوار الحقيقي.</p>
         </div>
 
-        <!-- Active Event Coupon Chips with 1-click copy -->
-        <div class="flex items-center gap-1.5 flex-wrap" id="active-event-coupons">
-          <button onclick="copyReferralCode('WOAE06', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE06">
-            <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
-            <span>WOAE06</span>
-            <span class="text-[10px] font-sans font-medium text-rose-500">(-6$)</span>
-          </button>
-          <button onclick="copyReferralCode('WOAE12', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE12">
-            <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
-            <span>WOAE12</span>
-            <span class="text-[10px] font-sans font-medium text-rose-500">(-12$)</span>
-          </button>
-          <button onclick="copyReferralCode('WOAE23', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE23">
-            <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
-            <span>WOAE23</span>
-            <span class="text-[10px] font-sans font-medium text-rose-500">(-23$)</span>
-          </button>
-          <button onclick="copyReferralCode('WOAE35', this)" class="border border-dashed rounded-lg px-2 py-1 text-[11px] font-mono font-bold flex items-center gap-1 active:scale-95 transition touch-manipulation cursor-pointer hover:border-rose-500" style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-main);" title="نسخ الكود WOAE35">
-            <i class="fa-solid fa-ticket text-rose-500 text-[10px]"></i>
-            <span>WOAE35</span>
-            <span class="text-[10px] font-sans font-medium text-rose-500">(-35$)</span>
-          </button>
-        </div>
+        <!-- Active Event Coupon Chips (Dynamically populated ONLY when an event is live with real codes) -->
+        <div class="flex items-center gap-1.5 flex-wrap hidden" id="active-event-coupons"></div>
 
         <div id="active-deals-keywords" class="hidden">
           <button onclick="handleSearchInput('Honor X70')">Honor X70 5G</button>
@@ -5235,26 +5214,30 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const isUpcoming = (event.status === 'upcoming' || event.countdown_type === 'starting');
 
       if (couponsEl) {
-        const isFranceCh = currentChannel === '@francedealsdz';
-        const tiers = (isFranceCh && event.coupon_tiers_fr && event.coupon_tiers_fr.length > 0)
-          ? event.coupon_tiers_fr
-          : (event.coupon_tiers || []);
-        
-        if (tiers && tiers.length > 0) {
-          couponsEl.innerHTML = tiers.map(t => `
-            <button onclick="${isUpcoming ? `showToast(currentLang === 'fr' ? 'Codes actifs dès le lancement !' : 'الأكواد ستتفعل فور انطلاق العرض!')` : `copyReferralCode('${t.code}', this)`}" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer hover:border-amber-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" title="${isFr ? 'Code ' + t.code : 'كود ' + t.code}">
-              <i class="fa-solid fa-ticket text-amber-500 text-[10px]"></i>
-              <span>${t.code}</span>
-              <span class="text-[10px] font-sans font-medium text-amber-500">(${t.tier || (t.discount ? '-' + t.discount + '$' : '')})</span>
-            </button>
-          `).join('');
+        if (isUpcoming) {
+          // Upcoming event countdown: strictly DO NOT show any coupons under the countdown!
+          couponsEl.innerHTML = '';
+          couponsEl.classList.add('hidden');
         } else {
-          couponsEl.innerHTML = `
-            <a href="/coins" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation hover:border-amber-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);">
-              <i class="fa-solid fa-coins text-amber-500 text-xs"></i>
-              <span>${isFr ? 'Collectez des pièces Coins' : 'اجمع العملات اليومية (Coins)'}</span>
-            </a>
-          `;
+          // Active event: only render coupons if verified active tiers exist for this running event
+          const isFranceCh = currentChannel === '@francedealsdz';
+          const tiers = (isFranceCh && event.coupon_tiers_fr && event.coupon_tiers_fr.length > 0)
+            ? event.coupon_tiers_fr
+            : (event.coupon_tiers || []);
+          
+          if (tiers && tiers.length > 0) {
+            couponsEl.classList.remove('hidden');
+            couponsEl.innerHTML = tiers.map(t => `
+              <button onclick="copyReferralCode('${t.code}', this)" class="border border-dashed rounded-lg px-2.5 py-1.5 text-xs font-mono font-bold flex items-center gap-1.5 active:scale-95 transition touch-manipulation cursor-pointer hover:border-amber-500" style="background-color: var(--bg-card); border-color: var(--border-subtle); color: var(--text-main);" title="${isFr ? 'Code ' + t.code : 'كود ' + t.code}">
+                <i class="fa-solid fa-ticket text-amber-500 text-[10px]"></i>
+                <span>${t.code}</span>
+                <span class="text-[10px] font-sans font-medium text-amber-500">(${t.tier || (t.discount ? '-' + t.discount + '$' : '')})</span>
+              </button>
+            `).join('');
+          } else {
+            couponsEl.innerHTML = '';
+            couponsEl.classList.add('hidden');
+          }
         }
       }
 
@@ -5342,8 +5325,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         if (metaKw && deals && deals.length > 0) {
           const dealKws = deals.slice(0, 12).map(d => d.title.replace(/[,;]/g, '').slice(0, 30).trim()).filter(Boolean);
           const baseKws = currentLang === 'fr'
-            ? ['Winter Offers AliExpress', 'Codes Promo AliExpress 2026', 'WOAE06', 'WOAE12', 'WOAE23', 'WOAE35', 'AliExpress Algérie', 'Bons Plans Dinar']
-            : ['عروض الشتاء AliExpress', 'كوبونات تخفيضات الشتاء 2026', 'WOAE06', 'WOAE12', 'WOAE23', 'WOAE35', 'علي إكسبرس الجزائر', 'أسعار السكوار بالدينار'];
+            ? ['AliExpress Deals', 'Codes Promo AliExpress 2026', '11.11 AliExpress', 'Festival Mondial AliExpress', 'AliExpress France', 'AliExpress Algérie', 'Bons Plans Dinar']
+            : ['تخفيضات علي إكسبرس', 'كوبونات تخفيض 2026', 'مهرجان 11.11 العالمي', 'عروض الجزائر', 'كود تخفيض الجزائر', 'أسعار السكوار بالدينار'];
           metaKw.setAttribute('content', [...baseKws, ...dealKws].join(', '));
         }
 
@@ -5351,8 +5334,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         if (metaDesc && deals && deals.length > 0) {
           const topNames = deals.slice(0, 4).map(d => d.title).join(currentLang === 'fr' ? ', ' : '، ');
           metaDesc.setAttribute('content', currentLang === 'fr'
-            ? `Bons plans actifs Winter Offers 2026 AliExpress : ${topNames} au meilleur prix converti en Dinar Algérien (DZD) avec codes promo actifs.`
-            : `أقوى صفقات عروض الشتاء Winter Offers 2026 الفعالة حالياً على AliExpress: ${topNames} بأفضل سعر بالدينار الجزائري مع كوبونات الخصم.`);
+            ? `Bons plans actifs AliExpress Deals : ${topNames} au meilleur prix converti en Dinar Algérien (DZD) avec codes promo officiels.`
+            : `أقوى صفقات وتخفيضات AliExpress الفعالة حالياً: ${topNames} بأفضل سعر بالدينار الجزائري مع كوبونات الخصم الرسمية.`);
         }
       } catch (e) {}
     }

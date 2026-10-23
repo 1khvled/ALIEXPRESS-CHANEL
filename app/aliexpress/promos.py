@@ -626,25 +626,9 @@ def generate_recurring_promos(ref_date: Optional[datetime] = None, months_ahead:
 
     events: List[PromoEvent] = []
 
-    # Default baseline tier templates
-    default_dz_choice = [
-        {"tier": "2/15$", "code": "OTPRD02"},
-        {"tier": "4/30$", "code": "OTPRD04"},
-        {"tier": "8/65$", "code": "OTPRD08"},
-        {"tier": "15/119$", "code": "OTPRD15"},
-        {"tier": "29/229$", "code": "OTPRD28"},
-        {"tier": "42/339$", "code": "OTPRD42"},
-        {"tier": "55/449$", "code": "OTPRD55"}
-    ]
-    default_fr_choice = [
-        {"tier": "-2€ dès 18€", "code": "FRPRD02"},
-        {"tier": "-6€ dès 45€", "code": "FRPRD06"},
-        {"tier": "-12€ dès 89€", "code": "FRPRD12"},
-        {"tier": "-20€ dès 159€", "code": "FRPRD20"},
-        {"tier": "-30€ dès 239€", "code": "FRPRD30"},
-        {"tier": "-45€ dès 355€", "code": "FRPRD45"},
-        {"tier": "-60€ dès 475€", "code": "FRPRD60"}
-    ]
+    # Future recurring promo events start with empty coupon tiers until officially released
+    default_dz_choice: List[Dict[str, str]] = []
+    default_fr_choice: List[Dict[str, str]] = []
 
     for offset in range(months_ahead + 1):
         m_idx = (ref_date.month - 1 + offset)

@@ -1476,9 +1476,9 @@ async def get_active_event_api(include_upcoming: bool = False):
                 "start_date": next_ev.start_date.isoformat(),
                 "end_date": next_ev.end_date.isoformat(),
                 "days_left": days_left,
-                "coupon_tiers": next_ev.coupon_tiers or [],
-                "coupon_tiers_fr": next_ev.coupon_tiers_fr or [],
-                "codes": [t["code"] for t in (next_ev.coupon_tiers or []) if "code" in t],
+                "coupon_tiers": [],  # Strictly no coupons for upcoming events that haven't started
+                "coupon_tiers_fr": [],
+                "codes": [],
                 "status": "upcoming",
                 "countdown_type": "starting",
                 "target_date": next_ev.start_date.isoformat()
@@ -1539,9 +1539,9 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
                     "start_date": next_ev.start_date.isoformat(),
                     "end_date": next_ev.end_date.isoformat(),
                     "days_left": days_left,
-                    "coupon_tiers": next_ev.coupon_tiers or [],
-                    "coupon_tiers_fr": next_ev.coupon_tiers_fr or [],
-                    "codes": [t["code"] for t in (next_ev.coupon_tiers or []) if "code" in t],
+                    "coupon_tiers": [],  # Strictly no coupons for upcoming events
+                    "coupon_tiers_fr": [],
+                    "codes": [],
                     "status": "upcoming",
                     "countdown_type": "starting",
                     "target_date": next_ev.start_date.isoformat()
@@ -1559,9 +1559,9 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
                         "banner_tag": last_p.banner_tag,
                         "start_date": last_p.start_date.isoformat(),
                         "end_date": last_p.end_date.isoformat(),
-                        "coupon_tiers": last_p.coupon_tiers or [],
-                        "coupon_tiers_fr": last_p.coupon_tiers_fr or [],
-                        "codes": [t["code"] for t in (last_p.coupon_tiers or []) if "code" in t],
+                        "coupon_tiers": [],  # Strictly no coupons for ended events
+                        "coupon_tiers_fr": [],
+                        "codes": [],
                         "status": "ended",
                         "countdown_type": "ended",
                         "target_date": last_p.end_date.isoformat()
