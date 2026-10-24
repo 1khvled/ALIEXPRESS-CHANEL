@@ -77,14 +77,19 @@ class ProductExtractor:
         if not ali_urls:
             return None
 
-        # Prioritize URLs that are labeled "مباشر" or "direct" in source text
+        # Prioritize URLs: 0 = Coin discount links, 1 = Direct/Specific links, 2 = Generic/Other links
         def _url_priority(u: str) -> int:
+            u_low = u.lower()
+            if "coin" in u_low or "sourcetype=620" in u_low or "channel=coin" in u_low:
+                return 0
             idx = text.find(u)
             if idx > 0:
                 prefix = text[max(0, idx - 45):idx].lower()
-                if any(k in prefix for k in ["مباشر", "direct", "رابط مباشر", "عادي"]):
+                if any(k in prefix for k in ["نقاط", "عملات", "coins", "خصم النقاط", "تخفيض العملات", "تخفيض النقاط", "رابط العملات"]):
                     return 0
-            return 1
+                if any(k in prefix for k in ["مباشر", "direct", "رابط مباشر", "عادي"]):
+                    return 1
+            return 2
 
         ali_urls.sort(key=_url_priority)
 

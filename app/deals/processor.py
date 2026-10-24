@@ -58,11 +58,11 @@ class DealProcessor:
             is_coupon_list=extracted.is_coupon_list
         )
 
-        # Convert to our affiliate link
+        # Convert to our affiliate link (Default to coin for Algerian channel)
         affiliate_url = await affiliate_service.create_affiliate_link(
             product_url=extracted.canonical_url,
             product_id=extracted.product_id,
-            deal_type=getattr(extracted, 'deal_type', 'item')
+            deal_type=getattr(extracted, 'deal_type', 'coin')
         )
 
         initial_status = "DETECTED"

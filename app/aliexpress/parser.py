@@ -1262,16 +1262,26 @@ def detect_deal_type(raw_text: str, url: str = "") -> str:
     text_lower = (raw_text or "").lower()
     url_lower = (url or "").lower()
 
+    # Check for accessories so accessories (e.g. laptop stand, phone holder, cable)
+    # are never mistakenly treated as high-value whole tech devices
+    accessory_keywords = [
+        "holder", "stand", "case", "cover", "cable", "adapter", "charger", "screen protector", "film",
+        "mouse", "keyboard", "fara", "souris", "pad", "mousepad", "headphone", "earphone", "earbuds",
+        "حامل", "كفر", "جراب", "غلاف", "كابل", "شاحن", "حماية", "لاصقة", "قاعدة", "مسند", "سماعة", "سماعات"
+    ]
+    is_accessory = any(w in text_lower for w in accessory_keywords)
+
     # High-value tech (phones, tablets, CPUs, GPUs, laptops) must NEVER be classified as bundle deals
     high_value_keywords = [
         "phone", "smartphone", "هاتف", "هواتف", "redmi", "poco", "xiaomi",
         "realme", "oneplus", "oppo", "honor", "infinix", "tecno", "samsung",
-        "galaxy", "iphone", "تابلت", "ipad", "pad", "tablet",
+        "galaxy", "iphone", "تابلت", "ipad", "tablet",
         "cpu", "ryzen", "intel core", "processor", "معالج", "gpu", "rtx",
         "gtx", "motherboard", "carte mere", "لوحة أم", "laptop", "pc portable", "حاسوب"
     ]
-    is_high_value = any(w in text_lower for w in high_value_keywords) or any(w in url_lower for w in high_value_keywords)
+    is_high_value = not is_accessory and (any(w in text_lower for w in high_value_keywords) or any(w in url_lower for w in high_value_keywords))
 
+    # Bundle deals check (high-value devices are excluded from Choice Bundle)
     if not is_high_value:
         bundle_keywords = [
             "bundle", "bundledraw", "bundledeals", "bundle deals", "bundledeals2",
@@ -1298,14 +1308,13 @@ def detect_deal_type(raw_text: str, url: str = "") -> str:
     if is_high_value:
         return "item"
 
-    # Coin deals: only if text explicitly mentions coins / points discount or URL is coin landing (sourceType=620)
-    coin_keywords = [
-        "عملات", "نقاط", "coins", "تخفيض العملات", "رابط العملات", "خصم العملات", "سعر العملات"
-    ]
-    if any(k in text_lower for k in coin_keywords) or "sourcetype=620" in url_lower or "channel=coin" in url_lower:
-        return "coin"
+    # Super deals
+    if "superdeal" in url_lower or "sourcetype=561" in url_lower or "سوبر ديل" in text_lower:
+        return "super"
 
-    return "item"
+    # In Algerian Deal channels and DealScout DZ, all standard product deals are coin deals
+    # (they route to the coin-index landing page to maximize discounts).
+    return "coin"
 
 
 def detect_restock_deal(text: str) -> bool:

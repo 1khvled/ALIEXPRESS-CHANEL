@@ -1516,14 +1516,22 @@ async def api_facebook_publish(request: Request):
         from api.coin_bot import ensure_affiliate
         tracked_link = ensure_affiliate(deal_link, pid=product_id)
 
-        from app.publisher.facebook import facebook_publisher
+        from app.publisher.facebook import facebook_publisher, get_high_res_aliexpress_image
         if not facebook_publisher.is_configured():
             return {"ok": False, "error": "فيسبوك غير مهيأ (FACEBOOK_PAGE_ID أو FACEBOOK_PAGE_ACCESS_TOKEN مفقود)"}
+
+        clean_img = get_high_res_aliexpress_image(image_url)
+        if (not clean_img or "telesco.pe" in clean_img) and product_id:
+            try:
+                from app.aliexpress.product import product_extractor
+                clean_img = await product_extractor._fetch_clean_aliexpress_image(str(product_id))
+            except Exception:
+                pass
 
         ok, post_id, err = await facebook_publisher.publish_deal(
             caption=caption,
             deal_link=tracked_link or deal_link,
-            image_url=image_url,
+            image_url=clean_img or image_url,
             price=price
         )
         return {"ok": ok, "post_id": post_id, "error": err}

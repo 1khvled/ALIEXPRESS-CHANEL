@@ -261,16 +261,18 @@ class TelegramPublisher:
                     # Facebook Auto Cross-Posting
                     if getattr(settings, "FACEBOOK_AUTO_POST_ENABLED", False):
                         try:
-                            from app.publisher.facebook import facebook_publisher
+                            from app.publisher.facebook import facebook_publisher, get_high_res_aliexpress_image
                             if facebook_publisher.is_configured():
                                 async def _post_fb_safe():
                                     try:
+                                        raw_img = getattr(deal, "image_url", None) or photo_url
+                                        clean_img_url = get_high_res_aliexpress_image(raw_img) if raw_img else None
                                         await facebook_publisher.publish_deal(
                                             caption=caption,
                                             deal_link=deal.affiliate_url or getattr(deal, "clean_url", None),
-                                            image_path=image_path if photo_bytes is None else None,
-                                            image_bytes=photo_bytes,
-                                            image_url=photo_url or getattr(deal, "image_url", None),
+                                            image_path=image_path if (photo_bytes is None and not clean_img_url) else None,
+                                            image_bytes=None if clean_img_url else photo_bytes,
+                                            image_url=clean_img_url,
                                             price=getattr(deal, "current_price", None),
                                             title=getattr(deal, "title", None)
                                         )

@@ -115,3 +115,50 @@ async def test_resolve_any_ali_link_history_resolution(monkeypatch):
 
     pid = await resolve_any_ali_link(sample_post)
     assert pid == "1005007027334636"
+
+
+def test_detect_deal_type_coin_and_accessories():
+    from app.aliexpress.parser import detect_deal_type
+
+    # Accessories with tech keywords must default to coin, not item
+    assert detect_deal_type("Aluminum Laptop Stand", "https://aliexpress.com/item/1005013413640708.html") == "coin"
+    assert detect_deal_type("360° Clip Mobile Phone Holder", "https://aliexpress.com/item/1005013423507579.html") == "coin"
+    assert detect_deal_type("KUULAA USB C 60W Cable", "https://aliexpress.com/item/1005008901941749.html") == "coin"
+    assert detect_deal_type("Redmi Note 13 Pro Case Cover", "https://aliexpress.com/item/100500123.html") == "coin"
+
+    # Even high-value phones default to coin for max discount unless it is a bundle
+    assert detect_deal_type("POCO X6 Pro 5G Global Version", "https://aliexpress.com/item/100500456.html") == "item"
+
+    # Bundle deals check
+    bundle_text = "عروض الحزم Choice Bundle ضف 3 قطع للحصول على الشحن المجاني"
+    assert detect_deal_type(bundle_text, "https://aliexpress.com/ssr/300000512/BundleDeals2") == "bundle"
+
+
+def test_product_extractor_url_priority():
+    from app.aliexpress.urls import extract_all_urls
+
+    text = """
+    عرض لافار ممتاز
+    رابط مباشر: https://s.click.aliexpress.com/e/_c40Ifxnh
+    خصم النقاط: https://s.click.aliexpress.com/e/_c3CYrQtt
+    """
+    urls = extract_all_urls(text)
+    ali_urls = [u for u in urls if "aliexpress" in u]
+
+    def _url_priority(u: str) -> int:
+        u_low = u.lower()
+        if "coin" in u_low or "sourcetype=620" in u_low or "channel=coin" in u_low:
+            return 0
+        idx = text.find(u)
+        if idx > 0:
+            prefix = text[max(0, idx - 45):idx].lower()
+            if any(k in prefix for k in ["نقاط", "عملات", "coins", "خصم النقاط", "تخفيض العملات", "تخفيض النقاط", "رابط العملات"]):
+                return 0
+            if any(k in prefix for k in ["مباشر", "direct", "رابط مباشر", "عادي"]):
+                return 1
+        return 2
+
+    ali_urls.sort(key=_url_priority)
+    # The coin discount link MUST be sorted first
+    assert ali_urls[0] == "https://s.click.aliexpress.com/e/_c3CYrQtt"
+    assert ali_urls[1] == "https://s.click.aliexpress.com/e/_c40Ifxnh"

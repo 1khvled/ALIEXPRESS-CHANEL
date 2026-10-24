@@ -429,7 +429,7 @@ class DealCaptionGenerator:
 
         if deal_type == "bundle":
             lines.append("📦 <b>عروض الحزم (Choice Bundle) — يجب إضافة 3 قطع</b>")
-        elif has_points_discount:
+        elif has_points_discount or deal_type == "coin":
             lines.append("🪙 <b>تخفيض العملات مفعّل عبر الرابط</b>")
 
         lines.append("")

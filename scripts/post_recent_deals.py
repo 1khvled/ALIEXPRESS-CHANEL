@@ -511,6 +511,10 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     from api.coin_bot import ensure_affiliate
                     aff_link = ensure_affiliate(aff_link, pid=extracted.product_id if not extracted.is_coupon_list else None)
 
+                    # Ensure coin discount flag is active for coin deals
+                    if deal_type == "coin" and not extracted.is_coupon_list:
+                        extracted.has_points_discount = True
+
                     # 10. Generate caption with clean Algerian format (Single monetized referral link)
                     caption = await caption_generator.generate(
                         title=extracted.title or "AliExpress Deal",

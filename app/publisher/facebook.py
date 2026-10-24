@@ -6,11 +6,41 @@ import httpx
 from app.config.settings import settings
 from app.utils.logger import logger, record_system_log
 
+try:
+    from app.utils.network import enforce_ipv4
+    enforce_ipv4()
+except Exception:
+    pass
+
+
+def get_high_res_aliexpress_image(url: Optional[str]) -> Optional[str]:
+    """
+    Transforms any AliExpress image URL into its highest possible master resolution:
+    - Strips thumbnail sizing suffixes: _50x50.jpg, _220x220.jpg, _350x350.jpg, _640x640.jpg, etc.
+    - Strips WebP compression wrappers: _.webp, _Q90.jpg_, etc.
+    - Preserves clean original JPG/PNG image from AliExpress/Alibaba CDN.
+    """
+    if not url or not isinstance(url, str):
+        return None
+    clean_url = url.strip()
+    if not clean_url.startswith("http"):
+        return clean_url
+
+    # Check if this is an AliExpress / Alibaba CDN image
+    if any(domain in clean_url for domain in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
+        # Match base image ending in .jpg, .jpeg, or .png
+        m = re.match(r'^(https?://[^?#]+?\.(?:jpg|jpeg|png))', clean_url, flags=re.IGNORECASE)
+        if m:
+            return m.group(1)
+
+    return clean_url
+
 
 class FacebookPublisher:
     """
     Automated Facebook Page Publisher via Meta Graph API v21.0.
-    Supports photo posts with rich formatted captions, local file uploads, and feed link posts.
+    Supports photo posts with rich formatted captions, master-studio CDN image delivery,
+    local file uploads, and feed link posts.
     """
     GRAPH_API_VERSION = "v21.0"
     GRAPH_URL = f"https://graph.facebook.com/{GRAPH_API_VERSION}"
@@ -179,8 +209,10 @@ class FacebookPublisher:
     ) -> Tuple[bool, Optional[str], Optional[str]]:
         """
         Publishes a deal post to the Facebook Page:
-        - If image_bytes, image_path, or image_url is provided, posts photo to /{PAGE_ID}/photos.
-        - Otherwise, posts to /{PAGE_ID}/feed with message + link.
+        - Prioritizes pristine studio AliExpress master image directly from CDN (via url parameter)
+          so Facebook downloads the uncompressed 1000x1000+ photo with zero blur and full-bleed display.
+        - Falls back to local image bytes or file upload if remote URL is unavailable.
+        - Falls back to feed text post if image delivery fails.
 
         Returns: (success: bool, post_id: Optional[str], error_message: Optional[str])
         """
@@ -190,10 +222,37 @@ class FacebookPublisher:
         fb_message = self.format_caption_for_facebook(caption, deal_link=deal_link, price=price)
         photo_url = f"{self.GRAPH_URL}/{self.page_id}/photos"
 
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            photo_published = False
+        # 1. Clean and prioritize high-res studio AliExpress CDN URL
+        clean_img_url = get_high_res_aliexpress_image(image_url) if image_url else None
 
-            # 1. Local image bytes
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            # Step 1: Remote High-Resolution Master Studio Image URL
+            if clean_img_url and str(clean_img_url).startswith("http"):
+                payload = {
+                    "url": clean_img_url,
+                    "caption": fb_message,
+                    "access_token": self.access_token
+                }
+                try:
+                    resp = await client.post(photo_url, data=payload)
+                    data = resp.json()
+
+                    if resp.status_code in (200, 201) and ("id" in data or "post_id" in data):
+                        post_id = data.get("post_id") or data.get("id")
+                        logger.info(f"[FACEBOOK] Published high-res studio photo ({clean_img_url}) successfully! Post ID: {post_id}")
+                        try:
+                            await record_system_log("INFO", "facebook", f"Published high-res studio photo to Facebook Page (Photo ID: {post_id})")
+                        except Exception:
+                            pass
+                        return True, str(post_id), None
+                    else:
+                        err_data = data.get("error", {})
+                        err_msg = err_data.get("message", f"HTTP {resp.status_code}: {resp.text}")
+                        logger.warning(f"[FACEBOOK] High-res URL photo upload failed: {err_msg}. Falling back to bytes/file...")
+                except Exception as e:
+                    logger.warning(f"[FACEBOOK] Exception during high-res URL photo upload ({e}), falling back to bytes/file...")
+
+            # Step 2: Local image bytes fallback
             if image_bytes:
                 try:
                     files = {"source": ("deal.jpg", image_bytes, "image/jpeg")}
@@ -213,8 +272,8 @@ class FacebookPublisher:
                 except Exception as e:
                     logger.warning(f"[FACEBOOK] Exception during photo bytes upload: {e}")
 
-            # 2. Local image file path
-            if not photo_published and image_path:
+            # Step 3: Local image file path fallback
+            if image_path:
                 try:
                     p = Path(image_path) if not isinstance(image_path, Path) else image_path
                     if p.exists() and p.is_file():
@@ -236,33 +295,7 @@ class FacebookPublisher:
                 except Exception as e:
                     logger.warning(f"[FACEBOOK] Exception during photo file upload: {e}")
 
-            # 3. Remote Image URL
-            if not photo_published and image_url and str(image_url).startswith("http"):
-                payload = {
-                    "url": image_url,
-                    "caption": fb_message,
-                    "access_token": self.access_token
-                }
-                try:
-                    resp = await client.post(photo_url, data=payload)
-                    data = resp.json()
-
-                    if resp.status_code in (200, 201) and ("id" in data or "post_id" in data):
-                        post_id = data.get("post_id") or data.get("id")
-                        logger.info(f"[FACEBOOK] Published photo (url) deal successfully! Post ID: {post_id}")
-                        try:
-                            await record_system_log("INFO", "facebook", f"Published deal to Facebook Page (Photo ID: {post_id})")
-                        except Exception:
-                            pass
-                        return True, str(post_id), None
-                    else:
-                        err_data = data.get("error", {})
-                        err_msg = err_data.get("message", f"HTTP {resp.status_code}: {resp.text}")
-                        logger.warning(f"[FACEBOOK] Photo upload failed, falling back to feed post. Reason: {err_msg}")
-                except Exception as e:
-                    logger.warning(f"[FACEBOOK] Exception during photo post ({e}), falling back to feed post.")
-
-            # 4. Feed post fallback (Text + Link)
+            # Step 4: Feed post fallback (Text + Link)
             feed_url = f"{self.GRAPH_URL}/{self.page_id}/feed"
             payload = {
                 "message": fb_message,

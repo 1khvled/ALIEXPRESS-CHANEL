@@ -1,5 +1,6 @@
 import pytest
-from app.publisher.facebook import FacebookPublisher
+from unittest.mock import AsyncMock, patch, MagicMock
+from app.publisher.facebook import FacebookPublisher, get_high_res_aliexpress_image
 
 
 def test_facebook_caption_formatter_strips_html_and_preserves_structure():
@@ -50,3 +51,44 @@ async def test_facebook_publish_deal_unconfigured():
     assert ok is False
     assert post_id is None
     assert "not configured" in err
+
+
+def test_get_high_res_aliexpress_image():
+    raw_urls = [
+        ("https://ae-pic-a1.aliexpress-media.com/kf/S7a14e912440348cbbf99a779dd584fb7f.jpg_350x350.jpg", "https://ae-pic-a1.aliexpress-media.com/kf/S7a14e912440348cbbf99a779dd584fb7f.jpg"),
+        ("https://ae01.alicdn.com/kf/H842938472.png_220x220.png", "https://ae01.alicdn.com/kf/H842938472.png"),
+        ("https://ae-pic-a1.aliexpress-media.com/kf/S123.jpg_.webp", "https://ae-pic-a1.aliexpress-media.com/kf/S123.jpg"),
+        ("https://ae01.alicdn.com/kf/S456.jpg_640x640Q90.jpg_.webp", "https://ae01.alicdn.com/kf/S456.jpg"),
+        ("https://ae01.alicdn.com/kf/S456.jpg?extra=123", "https://ae01.alicdn.com/kf/S456.jpg"),
+        ("https://example.com/banner.jpg", "https://example.com/banner.jpg"),
+        (None, None),
+        ("", None)
+    ]
+    for raw, expected in raw_urls:
+        assert get_high_res_aliexpress_image(raw) == expected
+
+
+@pytest.mark.asyncio
+async def test_facebook_publish_deal_prioritizes_high_res_url():
+    pub = FacebookPublisher(page_id="12345", access_token="token_xyz")
+
+    with patch("httpx.AsyncClient.post", new_callable=AsyncMock) as mock_post:
+        mock_resp = MagicMock()
+        mock_resp.status_code = 200
+        mock_resp.json.return_value = {"id": "photo_9999", "post_id": "12345_9999"}
+        mock_post.return_value = mock_resp
+
+        ok, post_id, err = await pub.publish_deal(
+            caption="High Res Deal",
+            deal_link="https://s.click.aliexpress.com/e/_test",
+            image_url="https://ae01.alicdn.com/kf/S456.jpg_350x350.jpg",
+            image_bytes=b"low_res_framed_bytes"
+        )
+
+        assert ok is True
+        assert post_id == "12345_9999"
+        # Check that post was called with URL payload and cleaned master image
+        assert mock_post.called
+        call_kwargs = mock_post.call_args.kwargs
+        assert "data" in call_kwargs
+        assert call_kwargs["data"]["url"] == "https://ae01.alicdn.com/kf/S456.jpg"
