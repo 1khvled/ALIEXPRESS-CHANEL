@@ -2077,39 +2077,39 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33003,
-      "last_check_time": 1792850944.1619618
+      "last_check_time": 1792862935.6808548
     },
     "ecksdeal": {
       "last_message_id": 5901,
-      "last_check_time": 1792850944.6463292
+      "last_check_time": 1792862936.2881782
     },
     "lodydeals": {
       "last_message_id": 45587,
-      "last_check_time": 1792850942.9410944
+      "last_check_time": 1792862934.6311147
     },
     "bnddeals": {
       "last_message_id": 50866,
-      "last_check_time": 1792850987.521734
+      "last_check_time": 1792862978.4283564
     },
     "test_channel": {
       "last_message_id": 1792330248,
       "last_check_time": 1792330248.913317
     },
     "pcgamingpart": {
-      "last_message_id": 7991,
-      "last_check_time": 1792838768.6948643
+      "last_message_id": 7996,
+      "last_check_time": 1792862977.6922636
     },
     "zedstoreonline": {
-      "last_message_id": 38636,
-      "last_check_time": 1792850943.52479
+      "last_message_id": 38637,
+      "last_check_time": 1792862935.1140647
     },
     "megaphonna": {
-      "last_message_id": 8467,
-      "last_check_time": 1792838769.9597354
+      "last_message_id": 8479,
+      "last_check_time": 1792863006.1954975
     },
     "couponsglobal": {
       "last_message_id": 48869,
-      "last_check_time": 1792851012.3097417
+      "last_check_time": 1792863006.8520832
     }
   },
   "published_product_prices": {
@@ -6814,10 +6814,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792851014.8139727,
+    "last_sweep_time": 1792863009.3508089,
     "last_sweep_times": {
-      "algeria": 1792851012.3207505,
-      "france": 1792851014.8139727
+      "algeria": 1792863006.86073,
+      "france": 1792863009.3508089
     },
     "last_deal_post_times": {
       "algeria": 1792785068.735161
@@ -8288,11 +8288,14 @@
     "megaphonna:8464",
     "megaphonna:8463",
     "megaphonna:8467",
-    "megaphonna:8466"
+    "megaphonna:8466",
+    "zedstoreonline:38637",
+    "pcgamingpart:7996",
+    "megaphonna:8479"
   ],
-  "last_france_cross_promo_time": 1792637766.633011,
-  "next_france_cross_promo_interval_seconds": 221713,
-  "france_cross_promo_variant_idx": 0,
+  "last_france_cross_promo_time": 1792862931.3259666,
+  "next_france_cross_promo_interval_seconds": 282528,
+  "france_cross_promo_variant_idx": 1,
   "published_coupon_bulletins": [
     {
       "promo": "Test Event 2026",
