@@ -316,7 +316,9 @@
     "1005013425561020",
     "1005013413640708",
     "1005013405221326",
-    "1005013423507579"
+    "1005013423507579",
+    "1005012880808298",
+    "1005013142211492"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -643,7 +645,9 @@
     "1005013425561020": 1792754852.0282364,
     "1005013413640708": 1792785022.7499707,
     "1005013405221326": 1792785027.430824,
-    "1005013423507579": 1792785037.2937298
+    "1005013423507579": 1792785037.2937298,
+    "1005012880808298": 1792879196.75772,
+    "1005013142211492": 1792879283.631006
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -975,7 +979,9 @@
     "Aluminum Laptop Stand",
     "1300W Handheld Garment Steamer",
     "KUULAA USB C  60W Cable",
-    "360° Clip Mobile Phone Holder"
+    "360° Clip Mobile Phone Holder",
+    "8L Foldable Mini Washer",
+    "2L Hand Pressure Foam Sprayer Adjustable"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1314,7 +1320,9 @@
     "Aluminum Laptop Stand": 1792785022.7499707,
     "1300W Handheld Garment Steamer": 1792785027.430824,
     "KUULAA USB C  60W Cable": 1792785032.5334125,
-    "360° Clip Mobile Phone Holder": 1792785037.2937298
+    "360° Clip Mobile Phone Holder": 1792785037.2937298,
+    "8L Foldable Mini Washer": 1792879196.75772,
+    "2L Hand Pressure Foam Sprayer Adjustable": 1792879283.631006
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2069,27 +2077,29 @@
     "lodydeals:45586",
     "lodydeals:45585",
     "lodydeals:45584",
-    "lodydeals:45583"
+    "lodydeals:45583",
+    "aniscoupons:33004",
+    "couponsglobal:48870"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792711145.3171253,
-  "last_run_time": 1792785037.2937298,
+  "last_run_time": 1792879283.631006,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33003,
-      "last_check_time": 1792871036.1891496
+      "last_message_id": 33004,
+      "last_check_time": 1792879198.779338
     },
     "ecksdeal": {
       "last_message_id": 5901,
-      "last_check_time": 1792871036.696289
+      "last_check_time": 1792879199.5256085
     },
     "lodydeals": {
       "last_message_id": 45587,
-      "last_check_time": 1792871035.1929767
+      "last_check_time": 1792879192.4712725
     },
     "bnddeals": {
       "last_message_id": 50866,
-      "last_check_time": 1792871075.4907298
+      "last_check_time": 1792879243.2348607
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2101,15 +2111,15 @@
     },
     "zedstoreonline": {
       "last_message_id": 38637,
-      "last_check_time": 1792871035.6474218
+      "last_check_time": 1792879192.855846
     },
     "megaphonna": {
       "last_message_id": 8479,
       "last_check_time": 1792863006.1954975
     },
     "couponsglobal": {
-      "last_message_id": 48869,
-      "last_check_time": 1792871111.963392
+      "last_message_id": 48871,
+      "last_check_time": 1792879285.6516094
     }
   },
   "published_product_prices": {
@@ -2357,7 +2367,9 @@
     "1005013425561020": 10.73,
     "1005013413640708": 3.88,
     "1005013405221326": 12.15,
-    "1005013423507579": 3.2
+    "1005013423507579": 3.2,
+    "1005012880808298": 12.7,
+    "1005013142211492": 6.64
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6802,6 +6814,26 @@
       "price": 3.2,
       "timestamp": 1792785037.2937298,
       "status": "ACTIVE"
+    },
+    "aniscoupons:33004": {
+      "channel_msg_id": 1021,
+      "product_id": "1005012880808298",
+      "title": "8L Foldable Mini Washer",
+      "channel": "aniscoupons",
+      "source_msg_id": 33004,
+      "price": 12.7,
+      "timestamp": 1792879196.75772,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48870": {
+      "channel_msg_id": 1022,
+      "product_id": "1005013142211492",
+      "title": "2L Hand Pressure Foam Sprayer Adjustable",
+      "channel": "couponsglobal",
+      "source_msg_id": 48870,
+      "price": 6.64,
+      "timestamp": 1792879283.631006,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6810,17 +6842,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792785068.735161,
+    "last_deal_post_time": 1792879285.6690443,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792871114.1118824,
+    "last_sweep_time": 1792879289.3224301,
     "last_sweep_times": {
-      "algeria": 1792871111.971978,
-      "france": 1792871114.1118824
+      "algeria": 1792879285.660576,
+      "france": 1792879289.3224301
     },
     "last_deal_post_times": {
-      "algeria": 1792785068.735161
+      "algeria": 1792879285.6690443
     }
   },
   "last_coin_reminder_time": 1792657009.988393,
@@ -7156,7 +7188,9 @@
     "1005013425561020": "pcgamingpart",
     "1005013413640708": "lodydeals",
     "1005013405221326": "lodydeals",
-    "1005013423507579": "lodydeals"
+    "1005013423507579": "lodydeals",
+    "1005012880808298": "aniscoupons",
+    "1005013142211492": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7498,7 +7532,9 @@
     "Aluminum Laptop Stand": "lodydeals",
     "1300W Handheld Garment Steamer": "lodydeals",
     "KUULAA USB C  60W Cable": "lodydeals",
-    "360° Clip Mobile Phone Holder": "lodydeals"
+    "360° Clip Mobile Phone Holder": "lodydeals",
+    "8L Foldable Mini Washer": "aniscoupons",
+    "2L Hand Pressure Foam Sprayer Adjustable": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -8291,7 +8327,8 @@
     "megaphonna:8466",
     "zedstoreonline:38637",
     "pcgamingpart:7996",
-    "megaphonna:8479"
+    "megaphonna:8479",
+    "couponsglobal:48871"
   ],
   "last_france_cross_promo_time": 1792862931.3259666,
   "next_france_cross_promo_interval_seconds": 282528,
