@@ -2077,19 +2077,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33003,
-      "last_check_time": 1792828322.6634593
+      "last_check_time": 1792838767.4716349
     },
     "ecksdeal": {
       "last_message_id": 5901,
-      "last_check_time": 1792828323.0650077
+      "last_check_time": 1792838768.2030342
     },
     "lodydeals": {
       "last_message_id": 45587,
-      "last_check_time": 1792828321.7602322
+      "last_check_time": 1792838766.3455622
     },
     "bnddeals": {
       "last_message_id": 50866,
-      "last_check_time": 1792828323.9010391
+      "last_check_time": 1792838769.2887478
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2097,19 +2097,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7991,
-      "last_check_time": 1792828323.4895463
+      "last_check_time": 1792838768.6948643
     },
     "zedstoreonline": {
       "last_message_id": 38636,
-      "last_check_time": 1792828322.2651224
+      "last_check_time": 1792838766.8431084
     },
     "megaphonna": {
       "last_message_id": 8467,
-      "last_check_time": 1792828324.4396753
+      "last_check_time": 1792838769.9597354
     },
     "couponsglobal": {
       "last_message_id": 48869,
-      "last_check_time": 1792828324.7983723
+      "last_check_time": 1792838770.4854646
     }
   },
   "published_product_prices": {
@@ -6814,10 +6814,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792828327.034769,
+    "last_sweep_time": 1792838773.4804056,
     "last_sweep_times": {
-      "algeria": 1792828324.804447,
-      "france": 1792828327.034769
+      "algeria": 1792838770.4962685,
+      "france": 1792838773.4804056
     },
     "last_deal_post_times": {
       "algeria": 1792785068.735161
@@ -7522,7 +7522,7 @@
     "test_rem_5900fa25": "2026-10-02",
     "test_rem_b90624f4": "2026-10-02",
     "test_rem_5b9c8e4c": "2026-10-02",
-    "daily_dhikr": "2026-10-22",
+    "daily_dhikr": "2026-10-24",
     "test_rem_7dc40719": "2026-10-02",
     "test_rem_dc43d1e0": "2026-10-02",
     "test_rem_3de63a14": "2026-10-02",
