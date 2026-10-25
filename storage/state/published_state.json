@@ -2087,19 +2087,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33004,
-      "last_check_time": 1792887368.4418926
+      "last_check_time": 1792896544.8404498
     },
     "ecksdeal": {
       "last_message_id": 5901,
-      "last_check_time": 1792887369.0608466
+      "last_check_time": 1792896545.362636
     },
     "lodydeals": {
       "last_message_id": 45587,
-      "last_check_time": 1792887367.4998806
+      "last_check_time": 1792896543.7892227
     },
     "bnddeals": {
       "last_message_id": 50866,
-      "last_check_time": 1792887414.6809847
+      "last_check_time": 1792896566.145844
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2111,7 +2111,7 @@
     },
     "zedstoreonline": {
       "last_message_id": 38637,
-      "last_check_time": 1792887367.9249017
+      "last_check_time": 1792896544.271779
     },
     "megaphonna": {
       "last_message_id": 8479,
@@ -2119,7 +2119,7 @@
     },
     "couponsglobal": {
       "last_message_id": 48871,
-      "last_check_time": 1792887436.6818068
+      "last_check_time": 1792896590.7532933
     }
   },
   "published_product_prices": {
@@ -6846,10 +6846,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792887440.7654257,
+    "last_sweep_time": 1792896593.180273,
     "last_sweep_times": {
-      "algeria": 1792887436.6925204,
-      "france": 1792887440.7654257
+      "algeria": 1792896590.7640076,
+      "france": 1792896593.180273
     },
     "last_deal_post_times": {
       "algeria": 1792879285.6690443
@@ -8328,7 +8328,13 @@
     "zedstoreonline:38637",
     "pcgamingpart:7996",
     "megaphonna:8479",
-    "couponsglobal:48871"
+    "couponsglobal:48871",
+    "pcgamingpart:7994",
+    "pcgamingpart:7993",
+    "pcgamingpart:7992",
+    "megaphonna:8470",
+    "megaphonna:8469",
+    "megaphonna:8468"
   ],
   "last_france_cross_promo_time": 1792862931.3259666,
   "next_france_cross_promo_interval_seconds": 282528,
