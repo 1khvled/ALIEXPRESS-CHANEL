@@ -2087,19 +2087,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33004,
-      "last_check_time": 1792940295.1031306
+      "last_check_time": 1792952485.6585128
     },
     "ecksdeal": {
       "last_message_id": 5901,
-      "last_check_time": 1792940295.7480366
+      "last_check_time": 1792952486.22992
     },
     "lodydeals": {
-      "last_message_id": 45587,
-      "last_check_time": 1792940294.0738878
+      "last_message_id": 45588,
+      "last_check_time": 1792952484.8461993
     },
     "bnddeals": {
       "last_message_id": 50866,
-      "last_check_time": 1792940296.7260177
+      "last_check_time": 1792952487.0552871
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2107,19 +2107,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7996,
-      "last_check_time": 1792940296.227714
+      "last_check_time": 1792952486.6351547
     },
     "zedstoreonline": {
       "last_message_id": 38637,
-      "last_check_time": 1792940294.543796
+      "last_check_time": 1792952485.2407606
     },
     "megaphonna": {
-      "last_message_id": 8479,
-      "last_check_time": 1792926705.0772347
+      "last_message_id": 8483,
+      "last_check_time": 1792952497.5541642
     },
     "couponsglobal": {
       "last_message_id": 48871,
-      "last_check_time": 1792940307.5791972
+      "last_check_time": 1792952498.1805224
     }
   },
   "published_product_prices": {
@@ -6846,10 +6846,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792940310.3838348,
+    "last_sweep_time": 1792952500.7880893,
     "last_sweep_times": {
-      "algeria": 1792940307.5857975,
-      "france": 1792940310.3838348
+      "algeria": 1792952498.1893258,
+      "france": 1792952500.7880893
     },
     "last_deal_post_times": {
       "algeria": 1792879285.6690443
@@ -8341,7 +8341,10 @@
     "megaphonna:8475",
     "megaphonna:8474",
     "megaphonna:8473",
-    "megaphonna:8472"
+    "megaphonna:8472",
+    "lodydeals:45588",
+    "megaphonna:8483",
+    "megaphonna:8482"
   ],
   "last_france_cross_promo_time": 1792862931.3259666,
   "next_france_cross_promo_interval_seconds": 282528,
