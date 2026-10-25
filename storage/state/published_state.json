@@ -2087,19 +2087,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33004,
-      "last_check_time": 1792896544.8404498
+      "last_check_time": 1792915345.2186184
     },
     "ecksdeal": {
       "last_message_id": 5901,
-      "last_check_time": 1792896545.362636
+      "last_check_time": 1792915346.5683925
     },
     "lodydeals": {
       "last_message_id": 45587,
-      "last_check_time": 1792896543.7892227
+      "last_check_time": 1792915344.2831755
     },
     "bnddeals": {
       "last_message_id": 50866,
-      "last_check_time": 1792896566.145844
+      "last_check_time": 1792915347.4123805
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2107,19 +2107,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 7996,
-      "last_check_time": 1792862977.6922636
+      "last_check_time": 1792915346.9841313
     },
     "zedstoreonline": {
       "last_message_id": 38637,
-      "last_check_time": 1792896544.271779
+      "last_check_time": 1792915344.7270296
     },
     "megaphonna": {
       "last_message_id": 8479,
-      "last_check_time": 1792863006.1954975
+      "last_check_time": 1792915348.1159532
     },
     "couponsglobal": {
       "last_message_id": 48871,
-      "last_check_time": 1792896590.7532933
+      "last_check_time": 1792915348.612326
     }
   },
   "published_product_prices": {
@@ -6846,18 +6846,18 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1792896593.180273,
+    "last_sweep_time": 1792915350.6957314,
     "last_sweep_times": {
-      "algeria": 1792896590.7640076,
-      "france": 1792896593.180273
+      "algeria": 1792915348.6191308,
+      "france": 1792915350.6957314
     },
     "last_deal_post_times": {
       "algeria": 1792879285.6690443
     }
   },
-  "last_coin_reminder_time": 1792657009.988393,
-  "next_reminder_interval_seconds": 242017,
-  "coin_reminder_variant_idx": 1,
+  "last_coin_reminder_time": 1792915339.3586805,
+  "next_reminder_interval_seconds": 254025,
+  "coin_reminder_variant_idx": 2,
   "published_product_channels": {
     "999888104": "test_channel",
     "100500888999777": "lodydeals",
@@ -8334,7 +8334,14 @@
     "pcgamingpart:7992",
     "megaphonna:8470",
     "megaphonna:8469",
-    "megaphonna:8468"
+    "megaphonna:8468",
+    "pcgamingpart:7995",
+    "megaphonna:8477",
+    "megaphonna:8476",
+    "megaphonna:8475",
+    "megaphonna:8474",
+    "megaphonna:8473",
+    "megaphonna:8472"
   ],
   "last_france_cross_promo_time": 1792862931.3259666,
   "next_france_cross_promo_interval_seconds": 282528,
