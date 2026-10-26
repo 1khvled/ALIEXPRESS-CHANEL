@@ -2095,7 +2095,7 @@
     },
     "lodydeals": {
       "last_message_id": 45588,
-      "last_check_time": 1793003057.9351118
+      "last_check_time": 1793018733.4400609
     },
     "bnddeals": {
       "last_message_id": 50866,
@@ -2111,7 +2111,7 @@
     },
     "zedstoreonline": {
       "last_message_id": 38637,
-      "last_check_time": 1793003058.5655227
+      "last_check_time": 1793018733.8668742
     },
     "megaphonna": {
       "last_message_id": 8483,
@@ -2119,7 +2119,7 @@
     },
     "couponsglobal": {
       "last_message_id": 48871,
-      "last_check_time": 1793003064.1977167
+      "last_check_time": 1793018740.1338623
     }
   },
   "published_product_prices": {
@@ -6846,10 +6846,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793003066.7740362,
+    "last_sweep_time": 1793018742.8720627,
     "last_sweep_times": {
-      "algeria": 1793003064.2087293,
-      "france": 1793003066.7740362
+      "algeria": 1793018740.142921,
+      "france": 1793018742.8720627
     },
     "last_deal_post_times": {
       "algeria": 1792879285.6690443
@@ -7558,7 +7558,7 @@
     "test_rem_5900fa25": "2026-10-02",
     "test_rem_b90624f4": "2026-10-02",
     "test_rem_5b9c8e4c": "2026-10-02",
-    "daily_dhikr": "2026-10-25",
+    "daily_dhikr": "2026-10-26",
     "test_rem_7dc40719": "2026-10-02",
     "test_rem_dc43d1e0": "2026-10-02",
     "test_rem_3de63a14": "2026-10-02",
