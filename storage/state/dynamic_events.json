@@ -44,7 +44,36 @@
     "end_date": "2026-11-07T23:59:59+00:00",
     "banner_tag": "🎯 Choice Day Sale (1 - 6 نوفمبر)",
     "is_major": true,
-    "coupon_tiers": [],
+    "coupon_tiers": [
+      {
+        "tier": "3/15$",
+        "code": "OTD1103"
+      },
+      {
+        "tier": "4/25$",
+        "code": "OTD1104"
+      },
+      {
+        "tier": "11/65$",
+        "code": "OTD1111"
+      },
+      {
+        "tier": "20/119$",
+        "code": "OTD1120"
+      },
+      {
+        "tier": "36/215$",
+        "code": "OTD1136"
+      },
+      {
+        "tier": "53/315$",
+        "code": "OTD1153"
+      },
+      {
+        "tier": "70/419$",
+        "code": "OTD1170"
+      }
+    ],
     "coupon_tiers_fr": [],
     "banner_image_url": "https://cdn4.telesco.pe/file/Riblj9mgdxYMOxgOgLnLJhHPcLh3ONZJ50Yu6LV-3_yTjUaCTiHfK1q-DUxkS7U54bdtcOFerHArcTnnkAQq9oq0NTJq4KCXvu-QFHuCruksx70EIH0dnE_Q670v6ZOwvcfYvS63OQKv_uhN4tO6wC_MkuSjZMQ-pvkEhyPfTZjv0LnFQVV8b1e5VYy5sM-6RthXheEQ-O5QLeIksBj8wFPiRJYGTYfNxCGFpiIcz2lVkUel8fiIuz_9R--nhaY6d43UXfvHtajyQUCCYZqBTw2GnWqMZ4uI5r1PMGgyIFb2ZAy3FeMBLXvWYAsyInflroqHwRQyPqHliiz7xc9uyw.jpg",
     "source": "discovered",
@@ -65,6 +94,22 @@
     "banner_image_url": "https://cdn4.telesco.pe/file/QwN_20aYD09R28TcD7MIeUKc_tDjmVvYJ5uuLVqcT1rD8bUHbt0QzUUJJe6vs-lP42NyEX0ptISggq-Jw6VTC_HjRZWhKT4HqWpmrWSqEvxz96xnsvu-aBQfCIIdcKXzvgp1kP8m35h7UjiP4n0iwc7OUefKcMmN_2XAe1pTybuCP_jNtBMuSFq9-kUHBCGS8td_c2O_1-SeZI6OW31ShmholDXrLRBUxpCfjyEOVcZqnTG6MTK29IYEB0vG16HH7ASu83_Jrs4TtX-xKIrwYN4MS1LMqdNl9S68_21onmNLekg7daJKoVM8vR2wLlKL04saHWrK8iubVZTb5nrsaQ.jpg",
     "source": "discovered",
     "event_key": "11_11_Global_Shopping_Festival_Novembre_2026_20261119",
+    "is_sunday_flash": false,
+    "is_france_only": false
+  },
+  {
+    "name": "AliExpress Special Promo Octobre 2026",
+    "name_ar": "تخفيضات علي إكسبرس الاستثنائية (أكتوبر 2026) 🔥",
+    "name_fr": "Promotions Spéciales AliExpress Octobre 2026 🇫🇷",
+    "start_date": "2026-10-29T07:00:00+00:00",
+    "end_date": "2026-11-01T06:59:59+00:00",
+    "banner_tag": "🎯 تخفيضات علي إكسبرس (29 - 0 أكتوبر)",
+    "is_major": true,
+    "coupon_tiers": [],
+    "coupon_tiers_fr": [],
+    "banner_image_url": null,
+    "source": "discovered",
+    "event_key": "AliExpress_Special_Promo_Octobre_2026_20261029",
     "is_sunday_flash": false,
     "is_france_only": false
   }

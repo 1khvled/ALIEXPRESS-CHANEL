@@ -318,7 +318,10 @@
     "1005013405221326",
     "1005013423507579",
     "1005012880808298",
-    "1005013142211492"
+    "1005013142211492",
+    "1005013467588413",
+    "1005012024630994",
+    "1005012633322402"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -647,7 +650,10 @@
     "1005013405221326": 1792785027.430824,
     "1005013423507579": 1792785037.2937298,
     "1005012880808298": 1792879196.75772,
-    "1005013142211492": 1792879283.631006
+    "1005013142211492": 1792879283.631006,
+    "1005013467588413": 1793123738.1109653,
+    "1005012024630994": 1793123744.0676813,
+    "1005012633322402": 1793123749.6836987
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -981,7 +987,10 @@
     "KUULAA USB C  60W Cable",
     "360° Clip Mobile Phone Holder",
     "8L Foldable Mini Washer",
-    "2L Hand Pressure Foam Sprayer Adjustable"
+    "2L Hand Pressure Foam Sprayer Adjustable",
+    "500ML Stainless Steel Vacuum Flask Gift Set",
+    "SAMZHE Metal Lens Protector for iPhone 17 Pro Max",
+    "SAMZHE Support Aluminum Graphics Card"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1322,7 +1331,10 @@
     "KUULAA USB C  60W Cable": 1792785032.5334125,
     "360° Clip Mobile Phone Holder": 1792785037.2937298,
     "8L Foldable Mini Washer": 1792879196.75772,
-    "2L Hand Pressure Foam Sprayer Adjustable": 1792879283.631006
+    "2L Hand Pressure Foam Sprayer Adjustable": 1792879283.631006,
+    "500ML Stainless Steel Vacuum Flask Gift Set": 1793123738.1109653,
+    "SAMZHE Metal Lens Protector for iPhone 17 Pro Max": 1793123744.0676813,
+    "SAMZHE Support Aluminum Graphics Card": 1793123749.6836987
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2079,27 +2091,30 @@
     "lodydeals:45584",
     "lodydeals:45583",
     "aniscoupons:33004",
-    "couponsglobal:48870"
+    "couponsglobal:48870",
+    "couponsglobal:48877",
+    "couponsglobal:48876",
+    "couponsglobal:48875"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792711145.3171253,
-  "last_run_time": 1792879283.631006,
+  "last_run_time": 1793123749.6836987,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33005,
-      "last_check_time": 1793102372.092191
+      "last_message_id": 33009,
+      "last_check_time": 1793123725.364807
     },
     "ecksdeal": {
-      "last_message_id": 5902,
-      "last_check_time": 1793102372.840688
+      "last_message_id": 5903,
+      "last_check_time": 1793123725.9236948
     },
     "lodydeals": {
       "last_message_id": 45588,
       "last_check_time": 1793102371.1614861
     },
     "bnddeals": {
-      "last_message_id": 50868,
-      "last_check_time": 1793102373.8975005
+      "last_message_id": 50871,
+      "last_check_time": 1793123727.0491583
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2107,19 +2122,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 8001,
-      "last_check_time": 1793102373.4002268
+      "last_check_time": 1793123726.4436603
     },
     "zedstoreonline": {
-      "last_message_id": 38638,
-      "last_check_time": 1793102371.6063852
+      "last_message_id": 38639,
+      "last_check_time": 1793123724.7322147
     },
     "megaphonna": {
-      "last_message_id": 8489,
-      "last_check_time": 1793102374.6139503
+      "last_message_id": 8495,
+      "last_check_time": 1793123732.579115
     },
     "couponsglobal": {
-      "last_message_id": 48872,
-      "last_check_time": 1793092484.8258874
+      "last_message_id": 48877,
+      "last_check_time": 1793123752.806845
     }
   },
   "published_product_prices": {
@@ -2369,7 +2384,10 @@
     "1005013405221326": 12.15,
     "1005013423507579": 3.2,
     "1005012880808298": 12.7,
-    "1005013142211492": 6.64
+    "1005013142211492": 6.64,
+    "1005013467588413": 3.5,
+    "1005012024630994": 4.24,
+    "1005012633322402": 3.05
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6834,6 +6852,36 @@
       "price": 6.64,
       "timestamp": 1792879283.631006,
       "status": "ACTIVE"
+    },
+    "couponsglobal:48877": {
+      "channel_msg_id": 1030,
+      "product_id": "1005013467588413",
+      "title": "500ML Stainless Steel Vacuum Flask Gift Set",
+      "channel": "couponsglobal",
+      "source_msg_id": 48877,
+      "price": 3.5,
+      "timestamp": 1793123738.1109653,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48876": {
+      "channel_msg_id": 1031,
+      "product_id": "1005012024630994",
+      "title": "SAMZHE Metal Lens Protector for iPhone 17 Pro Max",
+      "channel": "couponsglobal",
+      "source_msg_id": 48876,
+      "price": 4.24,
+      "timestamp": 1793123744.0676813,
+      "status": "ACTIVE"
+    },
+    "couponsglobal:48875": {
+      "channel_msg_id": 1032,
+      "product_id": "1005012633322402",
+      "title": "SAMZHE Support Aluminum Graphics Card",
+      "channel": "couponsglobal",
+      "source_msg_id": 48875,
+      "price": 3.05,
+      "timestamp": 1793123749.6836987,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6842,17 +6890,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1792879285.6690443,
+    "last_deal_post_time": 1793123752.8288772,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793102378.7732215,
+    "last_sweep_time": 1793123755.5490944,
     "last_sweep_times": {
-      "algeria": 1793102376.1483164,
-      "france": 1793102378.7732215
+      "algeria": 1793123752.8180268,
+      "france": 1793123755.5490944
     },
     "last_deal_post_times": {
-      "algeria": 1792879285.6690443
+      "algeria": 1793123752.8288772
     }
   },
   "last_coin_reminder_time": 1792915339.3586805,
@@ -7190,7 +7238,10 @@
     "1005013405221326": "lodydeals",
     "1005013423507579": "lodydeals",
     "1005012880808298": "aniscoupons",
-    "1005013142211492": "couponsglobal"
+    "1005013142211492": "couponsglobal",
+    "1005013467588413": "couponsglobal",
+    "1005012024630994": "couponsglobal",
+    "1005012633322402": "couponsglobal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7534,7 +7585,10 @@
     "KUULAA USB C  60W Cable": "lodydeals",
     "360° Clip Mobile Phone Holder": "lodydeals",
     "8L Foldable Mini Washer": "aniscoupons",
-    "2L Hand Pressure Foam Sprayer Adjustable": "couponsglobal"
+    "2L Hand Pressure Foam Sprayer Adjustable": "couponsglobal",
+    "500ML Stainless Steel Vacuum Flask Gift Set": "couponsglobal",
+    "SAMZHE Metal Lens Protector for iPhone 17 Pro Max": "couponsglobal",
+    "SAMZHE Support Aluminum Graphics Card": "couponsglobal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -8361,7 +8415,19 @@
     "couponsglobal:48872",
     "megaphonna:8488",
     "megaphonna:8487",
-    "megaphonna:8486"
+    "megaphonna:8486",
+    "zedstoreonline:38639",
+    "aniscoupons:33009",
+    "aniscoupons:33008",
+    "aniscoupons:33007",
+    "aniscoupons:33006",
+    "ecksdeal:5903",
+    "bnddeals:50871",
+    "bnddeals:50870",
+    "bnddeals:50869",
+    "megaphonna:8495",
+    "megaphonna:8493",
+    "couponsglobal:48874"
   ],
   "last_france_cross_promo_time": 1792862931.3259666,
   "next_france_cross_promo_interval_seconds": 282528,
