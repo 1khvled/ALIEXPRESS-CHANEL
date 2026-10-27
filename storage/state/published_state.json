@@ -321,7 +321,8 @@
     "1005013142211492",
     "1005013467588413",
     "1005012024630994",
-    "1005012633322402"
+    "1005012633322402",
+    "1005012249968766"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -653,7 +654,8 @@
     "1005013142211492": 1792879283.631006,
     "1005013467588413": 1793123738.1109653,
     "1005012024630994": 1793123744.0676813,
-    "1005012633322402": 1793123749.6836987
+    "1005012633322402": 1793123749.6836987,
+    "1005012249968766": 1793138738.0845888
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -990,7 +992,8 @@
     "2L Hand Pressure Foam Sprayer Adjustable",
     "500ML Stainless Steel Vacuum Flask Gift Set",
     "SAMZHE Metal Lens Protector for iPhone 17 Pro Max",
-    "SAMZHE Support Aluminum Graphics Card"
+    "SAMZHE Support Aluminum Graphics Card",
+    "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1334,7 +1337,8 @@
     "2L Hand Pressure Foam Sprayer Adjustable": 1792879283.631006,
     "500ML Stainless Steel Vacuum Flask Gift Set": 1793123738.1109653,
     "SAMZHE Metal Lens Protector for iPhone 17 Pro Max": 1793123744.0676813,
-    "SAMZHE Support Aluminum Graphics Card": 1793123749.6836987
+    "SAMZHE Support Aluminum Graphics Card": 1793123749.6836987,
+    "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500": 1793138738.0845888
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2094,27 +2098,28 @@
     "couponsglobal:48870",
     "couponsglobal:48877",
     "couponsglobal:48876",
-    "couponsglobal:48875"
+    "couponsglobal:48875",
+    "megaphonna:8494"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792711145.3171253,
-  "last_run_time": 1793123749.6836987,
+  "last_run_time": 1793138738.0845888,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33009,
-      "last_check_time": 1793123725.364807
+      "last_check_time": 1793138727.9969373
     },
     "ecksdeal": {
       "last_message_id": 5903,
-      "last_check_time": 1793123725.9236948
+      "last_check_time": 1793138728.5823643
     },
     "lodydeals": {
-      "last_message_id": 45588,
-      "last_check_time": 1793102371.1614861
+      "last_message_id": 45590,
+      "last_check_time": 1793138727.105026
     },
     "bnddeals": {
       "last_message_id": 50871,
-      "last_check_time": 1793123727.0491583
+      "last_check_time": 1793138729.4625375
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2122,15 +2127,15 @@
     },
     "pcgamingpart": {
       "last_message_id": 8001,
-      "last_check_time": 1793123726.4436603
+      "last_check_time": 1793138729.0611448
     },
     "zedstoreonline": {
       "last_message_id": 38639,
-      "last_check_time": 1793123724.7322147
+      "last_check_time": 1793138727.5172336
     },
     "megaphonna": {
       "last_message_id": 8495,
-      "last_check_time": 1793123732.579115
+      "last_check_time": 1793138738.0845888
     },
     "couponsglobal": {
       "last_message_id": 48877,
@@ -2387,7 +2392,8 @@
     "1005013142211492": 6.64,
     "1005013467588413": 3.5,
     "1005012024630994": 4.24,
-    "1005012633322402": 3.05
+    "1005012633322402": 3.05,
+    "1005012249968766": 15.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6882,6 +6888,16 @@
       "price": 3.05,
       "timestamp": 1793123749.6836987,
       "status": "ACTIVE"
+    },
+    "megaphonna:8494": {
+      "channel_msg_id": 1033,
+      "product_id": "1005012249968766",
+      "title": "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500",
+      "channel": "megaphonna",
+      "source_msg_id": 8494,
+      "price": 15.0,
+      "timestamp": 1793138738.0845888,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6890,17 +6906,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793123752.8288772,
+    "last_deal_post_time": 1793138744.5504558,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793123755.5490944,
+    "last_sweep_time": 1793138746.794952,
     "last_sweep_times": {
-      "algeria": 1793123752.8180268,
-      "france": 1793123755.5490944
+      "algeria": 1793138744.5419326,
+      "france": 1793138746.794952
     },
     "last_deal_post_times": {
-      "algeria": 1793123752.8288772
+      "algeria": 1793138744.5504558
     }
   },
   "last_coin_reminder_time": 1792915339.3586805,
@@ -7241,7 +7257,8 @@
     "1005013142211492": "couponsglobal",
     "1005013467588413": "couponsglobal",
     "1005012024630994": "couponsglobal",
-    "1005012633322402": "couponsglobal"
+    "1005012633322402": "couponsglobal",
+    "1005012249968766": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7588,7 +7605,8 @@
     "2L Hand Pressure Foam Sprayer Adjustable": "couponsglobal",
     "500ML Stainless Steel Vacuum Flask Gift Set": "couponsglobal",
     "SAMZHE Metal Lens Protector for iPhone 17 Pro Max": "couponsglobal",
-    "SAMZHE Support Aluminum Graphics Card": "couponsglobal"
+    "SAMZHE Support Aluminum Graphics Card": "couponsglobal",
+    "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -8427,7 +8445,9 @@
     "bnddeals:50869",
     "megaphonna:8495",
     "megaphonna:8493",
-    "couponsglobal:48874"
+    "couponsglobal:48874",
+    "lodydeals:45590",
+    "lodydeals:45589"
   ],
   "last_france_cross_promo_time": 1792862931.3259666,
   "next_france_cross_promo_interval_seconds": 282528,
