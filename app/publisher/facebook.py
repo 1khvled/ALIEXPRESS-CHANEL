@@ -146,7 +146,7 @@ class FacebookPublisher:
 
         url = f"{self.GRAPH_URL}/{self.page_id}"
         params = {
-            "fields": "id,name,link,can_post,tasks",
+            "fields": "id,name,link,can_post",
             "access_token": self.access_token
         }
 
