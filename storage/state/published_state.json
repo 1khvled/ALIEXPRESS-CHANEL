@@ -2107,19 +2107,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33009,
-      "last_check_time": 1793182588.7495346
+      "last_check_time": 1793191135.320824
     },
     "ecksdeal": {
       "last_message_id": 5903,
-      "last_check_time": 1793182589.357029
+      "last_check_time": 1793191135.9799094
     },
     "lodydeals": {
       "last_message_id": 45590,
-      "last_check_time": 1793182587.7186627
+      "last_check_time": 1793191134.0035856
     },
     "bnddeals": {
-      "last_message_id": 50871,
-      "last_check_time": 1793158636.823726
+      "last_message_id": 50872,
+      "last_check_time": 1793191137.0538776
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2127,19 +2127,19 @@
     },
     "pcgamingpart": {
       "last_message_id": 8002,
-      "last_check_time": 1793182590.1968002
+      "last_check_time": 1793191136.5141885
     },
     "zedstoreonline": {
       "last_message_id": 38639,
-      "last_check_time": 1793182588.169877
+      "last_check_time": 1793191134.670646
     },
     "megaphonna": {
-      "last_message_id": 8495,
-      "last_check_time": 1793158637.4468486
+      "last_message_id": 8498,
+      "last_check_time": 1793191137.704082
     },
     "couponsglobal": {
-      "last_message_id": 48877,
-      "last_check_time": 1793123752.806845
+      "last_message_id": 48878,
+      "last_check_time": 1793191138.2146552
     }
   },
   "published_product_prices": {
@@ -6910,10 +6910,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793182598.8026283,
+    "last_sweep_time": 1793191140.7962415,
     "last_sweep_times": {
-      "algeria": 1793182596.2177527,
-      "france": 1793182598.8026283
+      "algeria": 1793191138.2254257,
+      "france": 1793191140.7962415
     },
     "last_deal_post_times": {
       "algeria": 1793138744.5504558
@@ -8449,7 +8449,11 @@
     "lodydeals:45590",
     "lodydeals:45589",
     "couponsglobal:48873",
-    "pcgamingpart:8002"
+    "pcgamingpart:8002",
+    "bnddeals:50872",
+    "megaphonna:8498",
+    "megaphonna:8497",
+    "couponsglobal:48878"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
