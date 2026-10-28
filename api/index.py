@@ -935,6 +935,15 @@ async def get_logo_circular():
     return Response(status_code=404)
 
 
+@app.get("/official_stores_banner.png")
+async def get_official_stores_banner():
+    """Official 11.11 Brand Stores Directory Showcase Banner."""
+    banner_path = Path(__file__).resolve().parent.parent / "assets" / "official_stores_directory_banner.png"
+    if banner_path.exists():
+        return FileResponse(banner_path, media_type="image/png", headers={"Cache-Control": "public, max-age=604800"})
+    return Response(status_code=404)
+
+
 @app.get("/api/rates")
 async def live_rates():
     """Returns live USDT rate from SquareAlgerie.com."""

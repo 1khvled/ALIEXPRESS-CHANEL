@@ -1059,6 +1059,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             </div>
           </div>
 
+          <!-- Brand Stores Official Showcase Banner -->
+          <div class="rounded-2xl overflow-hidden border shadow-md my-2" style="border-color: rgba(225, 29, 72, 0.25);">
+            <img src="/official_stores_banner.png" alt="AliExpress 11.11 Official Stores Directory" class="w-full max-h-[380px] object-cover rounded-xl" loading="lazy" />
+          </div>
+
           <div class="space-y-2">
             <!-- Gaming Stores -->
             <div>
