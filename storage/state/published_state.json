@@ -2107,15 +2107,15 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33009,
-      "last_check_time": 1793158635.127643
+      "last_check_time": 1793182588.7495346
     },
     "ecksdeal": {
       "last_message_id": 5903,
-      "last_check_time": 1793158635.701204
+      "last_check_time": 1793182589.357029
     },
     "lodydeals": {
       "last_message_id": 45590,
-      "last_check_time": 1793158634.033799
+      "last_check_time": 1793182587.7186627
     },
     "bnddeals": {
       "last_message_id": 50871,
@@ -2126,12 +2126,12 @@
       "last_check_time": 1792330248.913317
     },
     "pcgamingpart": {
-      "last_message_id": 8001,
-      "last_check_time": 1793158636.295562
+      "last_message_id": 8002,
+      "last_check_time": 1793182590.1968002
     },
     "zedstoreonline": {
       "last_message_id": 38639,
-      "last_check_time": 1793158634.574455
+      "last_check_time": 1793182588.169877
     },
     "megaphonna": {
       "last_message_id": 8495,
@@ -6910,16 +6910,16 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793158641.9756696,
+    "last_sweep_time": 1793182598.8026283,
     "last_sweep_times": {
-      "algeria": 1793158639.22625,
-      "france": 1793158641.9756696
+      "algeria": 1793182596.2177527,
+      "france": 1793182598.8026283
     },
     "last_deal_post_times": {
       "algeria": 1793138744.5504558
     }
   },
-  "last_coin_reminder_time": 1792915339.3586805,
+  "last_coin_reminder_time": 1793182579.2180297,
   "next_reminder_interval_seconds": 254025,
   "coin_reminder_variant_idx": 2,
   "published_product_channels": {
@@ -7630,7 +7630,7 @@
     "test_rem_5900fa25": "2026-10-02",
     "test_rem_b90624f4": "2026-10-02",
     "test_rem_5b9c8e4c": "2026-10-02",
-    "daily_dhikr": "2026-10-27",
+    "daily_dhikr": "2026-10-28",
     "test_rem_7dc40719": "2026-10-02",
     "test_rem_dc43d1e0": "2026-10-02",
     "test_rem_3de63a14": "2026-10-02",
@@ -7735,7 +7735,7 @@
     "test_tag_cc9f12": "2026-10-02",
     "test_tag_3ced26": "2026-10-02",
     "test_tag_1457c7": "2026-10-02",
-    "coupon_return_refresh": "2026-10-15",
+    "coupon_return_refresh": "2026-10-28",
     "test_tag_76fe97": "2026-10-02",
     "test_tag_9c03f3": "2026-10-02",
     "test_tag_e98c78": "2026-10-02",
@@ -8448,7 +8448,8 @@
     "couponsglobal:48874",
     "lodydeals:45590",
     "lodydeals:45589",
-    "couponsglobal:48873"
+    "couponsglobal:48873",
+    "pcgamingpart:8002"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
