@@ -43,6 +43,7 @@ def get_event_ended_image_path() -> Optional[str]:
 
 # Official DealScout Event Started / Kickoff photo paths
 EVENT_STARTED_IMAGE_PATHS = [
+    str(Path(settings.BASE_DIR) / "assets" / "11_11_warm_up_kickoff.png"),
     str(Path(settings.BASE_DIR) / "assets" / "dealscout_event_started.png"),
     str(Path(settings.BASE_DIR) / "app" / "assets" / "dealscout_event_started.png"),
     os.path.join(os.path.dirname(__file__), "..", "assets", "dealscout_event_started.png"),

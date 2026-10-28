@@ -259,7 +259,8 @@ async def send_france_promo_alert(
                 is_french=True
             )
         elif any(kw in text for kw in ["Lancement officiel", "C'EST PARTI", "PROCHAINEMENT", "CODES PROMO", "OFFRES DU DIMANCHE"]):
-            card_path = get_event_started_image_path()
+            fr_poster = Path(settings.BASE_DIR) / "assets" / "france_11_11_deals_poster.png"
+            card_path = str(fr_poster) if fr_poster.exists() else get_event_started_image_path()
 
     try:
         async with httpx.AsyncClient(timeout=25.0) as client:
