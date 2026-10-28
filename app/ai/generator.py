@@ -53,7 +53,8 @@ class DealCaptionGenerator:
             is_wearable_product,
             is_tablet_product,
             is_gaming_or_pc_product,
-            is_genuine_smartphone
+            is_genuine_smartphone,
+            is_accessory_product
         )
 
         if is_audio_product(title):
@@ -95,6 +96,16 @@ class DealCaptionGenerator:
             ]
             return phone_hooks[h % len(phone_hooks)]
 
+        # 3.5 Accessories & cables (Never label cables/chargers with 'مواصفات قوية')
+        if is_accessory_product(title):
+            accessory_hooks = [
+                "⚡ <b>لافار ممتازة وسعر باطل نهار اليوم 🔥📦</b>",
+                "🔥 <b>سلعة مليحة وبأقوى سعر متتراطاش 🔥⚡</b>",
+                "🌟 <b>تخفيض قوي بأفضل سعر متاح 🔥</b>",
+                "⚡ <b>عرض اليوم بسعر باطل لافار 🔥</b>"
+            ]
+            return accessory_hooks[h % len(accessory_hooks)]
+
         # 4. High-Impact Deal Candidates (Versatile, authentic Algerian deal phrasing)
         candidates = [
             "🔥 <b>لافار ممتازة بأقوى سعر 🔥</b>",
@@ -106,8 +117,7 @@ class DealCaptionGenerator:
             "💥 <b>تخفيض استثنائي بسعر ممتاز متتراطاش 🔥</b>",
             "⚡ <b>عرض اليوم بسعر باطل لافار 🔥</b>",
             "🔥 <b>سعر خيالي لافار متتفوتش نهار اليوم 🔥⚡</b>",
-            "🌟 <b>سعر لافار ممتاز استغلوه الآن 🔥</b>",
-            "⚡ <b>مواصفات قوية وسعر لافار ممتاز متتراطاش 🔥⚡</b>"
+            "🌟 <b>سعر لافار ممتاز استغلوه الآن 🔥</b>"
         ]
 
         if has_points_discount:
