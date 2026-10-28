@@ -518,6 +518,25 @@ def build_schedule_menu_text_and_markup() -> Tuple[str, Dict[str, Any]]:
     }
     return text, markup
 
+
+async def download_telegram_photo(file_id: str, dest_path: str) -> bool:
+    """Downloads a photo from Telegram via getFile and saves it to a local path."""
+    try:
+        async with httpx.AsyncClient(timeout=30.0) as client:
+            resp = await client.get(f"https://api.telegram.org/bot{ADMIN_BOT_TOKEN}/getFile?file_id={file_id}")
+            if resp.status_code == 200 and resp.json().get("ok"):
+                file_path = resp.json()["result"]["file_path"]
+                file_url = f"https://api.telegram.org/file/bot{ADMIN_BOT_TOKEN}/{file_path}"
+                dl_resp = await client.get(file_url)
+                if dl_resp.status_code == 200:
+                    os.makedirs(os.path.dirname(os.path.abspath(dest_path)), exist_ok=True)
+                    with open(dest_path, "wb") as f:
+                        f.write(dl_resp.content)
+                    return True
+    except Exception as e:
+        logger.error(f"Error downloading telegram photo: {e}")
+    return False
+
 async def handle_admin_update(update: Dict[str, Any]) -> bool:
     """Processes updates coming to the Admin Bot."""
     # 1. Callback Queries
@@ -540,6 +559,58 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
                     )
             except Exception:
                 pass
+            return True
+
+        # Callback: Publish custom admin banner
+        if cb_data.startswith("pub_banner_"):
+            banner_file = cb_data.replace("pub_banner_", "")
+            banner_path = os.path.abspath(f"assets/{banner_file}")
+            from app.aliexpress.promos import promo_tracker
+            from app.publisher.promo_notifiers import build_promo_starting_alert, send_promo_alert_to_channel
+            from app.publisher.facebook import facebook_publisher
+            p = promo_tracker.get_active_promo() or (promo_tracker.get_next_promo()[0] if promo_tracker.get_next_promo() else None)
+            if p:
+                caption, reply_markup = build_promo_starting_alert(p)
+                tg_ok, tg_err, tg_id = await send_promo_alert_to_channel(
+                    caption, reply_markup=reply_markup, coupon_list=p.coupon_tiers, promo_title=p.name_ar, image_path=banner_path
+                )
+                fb_ok, fb_id, fb_err = await facebook_publisher.publish_deal(
+                    caption=caption, deal_link="https://s.click.aliexpress.com/e/_c3d8Osgp", image_path=banner_path, title=p.name_ar
+                )
+                res_txt = (
+                    f"🚀 <b>تم النشر بنجاح بالتصميم المخصص!</b>\n\n"
+                    f"• <b>تيليغرام (@DzAliexpress0):</b> {'✅ رسالة #' + str(tg_id) if tg_ok else '❌ ' + str(tg_err)}\n"
+                    f"• <b>فيسبوك (DealScout):</b> {'✅ منشور #' + str(fb_id) if fb_ok else '❌ ' + str(fb_err)}"
+                )
+                await send_admin_msg(chat_id, res_txt)
+            else:
+                await send_admin_msg(chat_id, "⚠️ لا يوجد حدث تخفيضات نشط أو قادم حالياً.")
+            return True
+
+        if cb_data.startswith("prev_banner_"):
+            banner_file = cb_data.replace("prev_banner_", "")
+            banner_path = os.path.abspath(f"assets/{banner_file}")
+            from app.aliexpress.promos import promo_tracker
+            from app.publisher.promo_notifiers import build_promo_starting_alert
+            p = promo_tracker.get_active_promo() or (promo_tracker.get_next_promo()[0] if promo_tracker.get_next_promo() else None)
+            if p:
+                caption, reply_markup = build_promo_starting_alert(p)
+                async with httpx.AsyncClient(timeout=15.0) as client:
+                    with open(banner_path, "rb") as f:
+                        await client.post(
+                            f"https://api.telegram.org/bot{ADMIN_BOT_TOKEN}/sendPhoto",
+                            data={
+                                "chat_id": chat_id,
+                                "caption": caption[:1024],
+                                "parse_mode": "HTML",
+                                "reply_markup": json.dumps({
+                                    "inline_keyboard": [
+                                        [{"text": "📢 نشر هذا المنشور في القناة وفيسبوك الآن 🚀", "callback_data": f"pub_banner_{banner_file}"}]
+                                    ]
+                                })
+                            },
+                            files={"photo": ("banner.png", f, "image/png")}
+                        )
             return True
 
         # Callback: Schedule & Interval controls
@@ -761,6 +832,53 @@ async def handle_admin_update(update: Dict[str, Any]) -> bool:
             f"🪙 يمكنك استخدام بوت العملات المفتوح للجميع: @{PUBLIC_BOT_USERNAME}"
         )
         await send_admin_msg(chat_id, refusal)
+        return True
+
+    # Check for Photo / Document uploads from Admin
+    photos = message.get("photo")
+    document = message.get("document")
+    caption = (message.get("caption") or "").strip()
+    if photos or (document and document.get("mime_type", "").startswith("image/")):
+        file_id = photos[-1]["file_id"] if photos else document["file_id"]
+        from app.aliexpress.promos import promo_tracker
+        active_p = promo_tracker.get_active_promo() or (promo_tracker.get_next_promo()[0] if promo_tracker.get_next_promo() else None)
+        promo_slug = re.sub(r'[^a-zA-Z0-9_]', '', (active_p.name.lower().replace(" ", "_") if active_p else "custom_event"))
+        dest_filename = f"assets/{promo_slug}_banner.png" if active_p else "assets/custom_promo_banner.png"
+
+        await send_admin_msg(chat_id, "⏳ <b>جاري تحميل وحفظ تصميمك المخصص بأعلى دقة...</b>")
+        success = await download_telegram_photo(file_id, dest_filename)
+        if success:
+            w = photos[-1].get("width") if photos else 1200
+            h = photos[-1].get("height") if photos else 800
+            ack_msg = (
+                f"🎨 <b>تم استلام وحفظ تصميمك المخصص بنجاح يا مدير! 🖼️</b>\n\n"
+                f"• <b>أبعاد الصورة:</b> {w}x{h}\n"
+                f"• <b>الملف المعتمد:</b> <code>{dest_filename}</code>\n"
+                f"• <b>الحالة:</b> تم اعتمادها كبانر رسمي لعروض وتخفيضات الحدث في القناة @DzAliexpress0 وصفحة فيسبوك 🚀\n\n"
+                f"هل تريد نشر تنبيه الكوبونات الرسمي بهذه الصورة فوراً في القناة وفيسبوك؟"
+            )
+            markup = {
+                "inline_keyboard": [
+                    [{"text": "📢 نشر منشور الكوبونات بهذه الصورة الآن 🚀", "callback_data": f"pub_banner_{os.path.basename(dest_filename)}"}],
+                    [{"text": "👁️ إرسال معاينة للمنشور", "callback_data": f"prev_banner_{os.path.basename(dest_filename)}"}]
+                ]
+            }
+            await send_admin_msg(chat_id, ack_msg, reply_markup=markup)
+            return True
+        else:
+            await send_admin_msg(chat_id, "⚠️ حدث خطأ أثناء تحميل الصورة من تيليغرام. حاول إرسالها مرة أخرى.")
+            return True
+
+    # Request Photo Command
+    if any(text.startswith(c) for c in ["/ask_photo", "/request_photo", "/banner", "بانر", "صورة"]):
+        req_txt = (
+            "🎨 <b>طلب تصميم مخصص من المدير:</b>\n\n"
+            "يا مدير، إذا كان لديك أي تصميم مخصص (بانر تخفيضات، كارت كوبونات، بوستر):\n"
+            "▫️ <b>أرسل الصورة هنا مباشرة في المحادثة</b> 🖼️\n"
+            "▫️ سيقوم البوت باستلامها وتحميلها بأعلى دقة تلقائياً.\n"
+            "▫️ سيعتمدها البوت كبانر رسمي للمنشورات الترويجية في القناة @DzAliexpress0 وصفحة فيسبوك 🚀"
+        )
+        await send_admin_msg(chat_id, req_txt)
         return True
 
     # Commands
