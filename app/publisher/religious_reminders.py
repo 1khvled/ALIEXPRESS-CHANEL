@@ -196,13 +196,64 @@ RANDOM_DHIKR_VARIANTS = [
 ]
 
 
+
+# ── 5. Major Islamic Events (أعياد ومناسبات إسلامية كبرى) ──────────────────
+EID_FITR_TEXT = """<blockquote><b>بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ</b>
+
+﴿ وَلِتُكَبِّرُوا اللَّهَ عَلَىٰ مَا هَدَاكُمْ وَلَعَلَّكُمْ تَشْكُرُونَ ﴾</blockquote> 🌙✨
+
+<b>عيد فطر مبارك وسعيد عليكم وعلى عائلاتكم الكريمة 🤍🎉</b>
+
+تقبل الله منا ومنكم الصيام والقيام وصالح الأعمال والدعوات..
+أعاده الله علينا وعليكم وعلى الأمة الإسلامية جمعاء بالخير واليُمن والبركات، وفرّج كرب إخواننا المستضعفين في فلسطين وسائر بلاد المسلمين يا رب العالمين 🤲🇩🇿🇵🇸
+
+<b>كل عام وأنتم بخير وصحة وعافية ✨</b>"""
+
+EID_ADHA_TEXT = """<blockquote><b>بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ</b>
+
+﴿ فَصَلِّ لِرَبِّكَ وَانْحَرْ ﴾</blockquote> 🐑✨
+
+<b>عيد أضحى مبارك وسعيد تقبل الله طاعاتكم وصالح أعمالكم 🤍🎉</b>
+
+نسأل الله تعالى أن يتقبل منا ومنكم ومن حجاج بيت الله الحرام، وأن يعيده علينا وعليكم بالخير والبركة واليُمن والسلام..
+ولا تنسوا إخوانكم في فلسطين وغزة من صالح دعائكم في هذه الأيام الفضيلة 🤲🇵🇸
+
+<b>صحّ عيدكم وكل عام وأنتم بخير 🇩🇿✨</b>"""
+
+RAMADAN_TEXT = """<blockquote><b>بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ</b>
+
+﴿ شَهْرُ رَمَضَانَ الَّذِي أُنزِلَ فِيهِ الْقُرْآنُ هُدًى لِّلنَّاسِ وَبَيِّنَاتٍ مِّنَ الْهُدَىٰ وَالْفُرْقَانِ ﴾</blockquote> 🌙✨
+
+<b>مبارك عليكم شهر رمضان الفضيل 🤍🕌</b>
+
+نسأل الله العلي القدير أن يوفقنا وإياكم لصيامه وقيامه إيماناً واحتساباً، وأن يجعلنا وإياكم ووالدينا من عتقائه من النار..
+رمضان مبارك وطيب على الأمة الإسلامية جمعاء 🤲✨"""
+
+MAWLID_TEXT = """<blockquote><b>بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ</b>
+
+﴿ وَمَا أَرْسَلْنَاكَ إِلَّا رَحْمَةً لِّلْعَالَمِينَ ﴾</blockquote> 🤍✨
+
+<b>ذكرى المولد النبوي الشريف ﷺ 🕌</b>
+
+عطّروا قلوبكم وألسنتكم بالصلاة والسلام على سيد الخلق وخاتم الأنبياء والمرسلين، نبينا وحبيبنا محمد ﷺ:
+<b>اللهم صلِّ وسلّم وبارك على سيدنا محمد وعلى آله وصحبه أجمعين ﷺ 🌿</b>"""
+
+ASHURA_TEXT = """<blockquote><b>بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ</b></blockquote> 🤍✨
+
+🌿 <b>تذكير | فضل صيام يوم عاشوراء 🕌</b>
+
+قال رسول الله ﷺ:
+<i>«صِيَامُ يَوْمِ عَاشُورَاءَ أَحْتَسِبُ عَلَى اللَّهِ أَنْ يُكَفِّرَ السَّنَةَ الَّتِي قَبْلَهُ»</i> ✨
+
+تقبل الله منا ومنكم صالح الأعمال والدعوات، وغفر لنا ولكم ووفقنا لكل خير 🤲"""
+
 async def post_religious_reminder(
     reminder_type: str,
     bot_token: Optional[str] = None
 ) -> Tuple[bool, Optional[str], Optional[int]]:
     """
     Publishes a specified religious reminder to @DzAliexpress0.
-    reminder_type: 'jumuah' | 'jumuah_asr' | 'fajr' | 'daily_dhikr'
+    reminder_type: 'jumuah' | 'jumuah_asr' | 'eid_fitr' | 'eid_adha' | 'ramadan_start' | 'mawlid' | 'ashura' | 'fajr' | 'daily_dhikr'
     """
     token = bot_token or getattr(settings, "TELEGRAM_BOT_TOKEN", None) or getattr(settings, "ADMIN_BOT_TOKEN", None) or TELEGRAM_BOT_TOKEN or ADMIN_BOT_TOKEN
     target_channel = getattr(settings, "TARGET_CHANNEL_ID", None) or TARGET_CHANNEL_ID
@@ -215,6 +266,21 @@ async def post_religious_reminder(
     elif reminder_type == "jumuah_asr":
         text = JUMUAH_ASR_TEXT
         markup = JUMUAH_ASR_KEYBOARD
+    elif reminder_type == "eid_fitr":
+        text = EID_FITR_TEXT
+        markup = None
+    elif reminder_type == "eid_adha":
+        text = EID_ADHA_TEXT
+        markup = None
+    elif reminder_type == "ramadan_start":
+        text = RAMADAN_TEXT
+        markup = None
+    elif reminder_type == "mawlid":
+        text = MAWLID_TEXT
+        markup = None
+    elif reminder_type == "ashura":
+        text = ASHURA_TEXT
+        markup = None
     elif reminder_type == "fajr":
         variant = random.choice(FAJR_VARIANTS)
         text = variant["text"]
@@ -268,11 +334,12 @@ async def check_and_auto_post_religious_reminders(
     bot_token: Optional[str] = None
 ) -> List[Dict[str, Any]]:
     """
-    Evaluates current Algerian time and publishes religious reminders if eligible:
-    - Jumu'ah Morning: Fridays between 07:00 and 15:00 (or if forced on Friday).
-    - Jumu'ah Asr: Fridays between 15:30 and 18:30 (Hour of response).
-    - Fajr Prayer: Daily between 04:30 and 05:45 AM (Dawn).
-    - Random Daily Dhikr: Daily on non-Fridays between 11:00 and 21:00.
+    Evaluates current Algerian time and publishes religious reminders if eligible.
+    STRICT POLICY:
+    - Jumu'ah (Fridays): Morning blessings & Asr hour of response.
+    - Major Islamic Events: Eid al-Fitr, Eid al-Adha, Ramadan start, Mawlid an-Nabi, Ashura.
+    - Daily weekday reminders (Fajr, Daily Dhikr) are COMPLETELY DISABLED from automated posting
+      to keep the channel focused exclusively on deals.
     """
     now_dz = datetime.now(DZ_TIMEZONE)
     today_str = now_dz.strftime("%Y-%m-%d")
@@ -299,8 +366,8 @@ async def check_and_auto_post_religious_reminders(
 
         # 2. Friday Asr Reminder (ساعة الاستجابة)
         in_jumuah_asr_window = (15.5 <= current_time_float <= 18.5)
-        if in_jumuah_asr_window:
-            if is_religious_reminder_eligible("jumuah_asr", today_str):
+        if in_jumuah_asr_window or force:
+            if is_religious_reminder_eligible("jumuah_asr", today_str) or force:
                 success, err, msg_id = await post_religious_reminder("jumuah_asr", bot_token)
                 results.append({
                     "type": "jumuah_asr",
@@ -309,28 +376,32 @@ async def check_and_auto_post_religious_reminders(
                     "message_id": msg_id
                 })
 
-    # 3. Daily Fajr Salah Reminder (صلاة الفجر)
-    # Fajr in Algeria in autumn/winter is around 04:45 - 05:35, with sunrise at ~06:45.
-    # Window 04:15 to 06:30 ensures GitHub Actions 30m cron jitter never misses the daily reminder.
-    in_fajr_window = (4.25 <= current_time_float <= 6.5)
-    if in_fajr_window:
-        if is_religious_reminder_eligible("fajr", today_str):
-            success, err, msg_id = await post_religious_reminder("fajr", bot_token)
-            results.append({
-                "type": "fajr",
-                "success": success,
-                "error": err,
-                "message_id": msg_id
-            })
-
-    # 4. Random Daily Dhikr & Spiritual Reminders (On non-Fridays)
-    if not is_friday:
-        in_dhikr_window = (11.0 <= current_time_float <= 21.0)
-        if in_dhikr_window or force:
-            if is_religious_reminder_eligible("daily_dhikr", today_str) or force:
-                success, err, msg_id = await post_religious_reminder("daily_dhikr", bot_token)
+    # 3. Major Islamic Events (Exact calendar dates)
+    MAJOR_ISLAMIC_DATES = {
+        # Ramadan start
+        "2026-02-18": "ramadan_start",
+        "2027-02-08": "ramadan_start",
+        # Eid al-Fitr
+        "2026-03-20": "eid_fitr",
+        "2027-03-10": "eid_fitr",
+        # Eid al-Adha
+        "2026-05-27": "eid_adha",
+        "2027-05-17": "eid_adha",
+        # Ashura
+        "2026-06-26": "ashura",
+        "2027-06-16": "ashura",
+        # Mawlid an-Nabi
+        "2026-08-25": "mawlid",
+        "2027-08-15": "mawlid",
+    }
+    if today_str in MAJOR_ISLAMIC_DATES:
+        ev_type = MAJOR_ISLAMIC_DATES[today_str]
+        in_event_window = (8.0 <= current_time_float <= 20.0)
+        if in_event_window or force:
+            if is_religious_reminder_eligible(ev_type, today_str) or force:
+                success, err, msg_id = await post_religious_reminder(ev_type, bot_token)
                 results.append({
-                    "type": "daily_dhikr",
+                    "type": ev_type,
                     "success": success,
                     "error": err,
                     "message_id": msg_id

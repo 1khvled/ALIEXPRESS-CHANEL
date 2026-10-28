@@ -144,7 +144,9 @@ class DealCaptionGenerator:
                     target_promo = next_p[0]
                     if not promo_name or promo_name == "Party Ready Sale":
                         promo_name = target_promo.name_ar or target_promo.name
-                    start_day_str = f"{target_promo.start_date.day} أكتوبر"
+                    months_ar = {1: "جانفي", 2: "فيفري", 3: "مارس", 4: "أفريل", 5: "ماي", 6: "جوان", 7: "جويلية", 8: "أوت", 9: "سبتمبر", 10: "أكتوبر", 11: "نوفمبر", 12: "ديسمبر"}
+                    month_name = months_ar.get(target_promo.start_date.month, "نوفمبر")
+                    start_day_str = f"{target_promo.start_date.day} {month_name}"
                 else:
                     if not promo_name or promo_name == "Party Ready Sale":
                         promo_name = "تخفيضات AliExpress"

@@ -259,15 +259,17 @@ def extract_coupon_list(text: str) -> List[Dict[str, str]]:
     # Strip Arabic tatweels (\u0640)
     norm = re.sub(r'[\u0640]', '', text)
 
+    tier_pattern = r'[$]?[0-9]+(?:\.[0-9]+)?[$]?[^\S\r\n]*(?:/|-)[^\S\r\n]*[$]?[0-9]+(?:\.[0-9]+)?[$]?'
+
     # 1. Tier then Code
     p1 = re.compile(
-        r'(?P<kw>🎟️?|🎫|•|\-|\*)?[^\S\r\n]*(?P<kw2>كوبون|كود|code|قسيمة|خصم)?[^\S\r\n]*(?P<tier>[$]?[0-9]+(?:\.[0-9]+)?[^\S\r\n]*/[^\S\r\n]*[$]?[0-9]+(?:\.[0-9]+)?[$]?)[^\S\r\n]*(?:بكود|code|:|=|：|\-)?[^\S\r\n]*\r?\n?[^\S\r\n]*(?P<code>[A-Za-z0-9_-]{4,25})',
+        r'(?:[^\w\s]|•|-|\*)?[^\S\r\n]*(?:كوبون|كود|code|قسيمة|خصم)?[^\S\r\n]*(?P<tier>' + tier_pattern + r')[^\S\r\n]*(?:بكود|code|:|=|：|-)?' + r'[^\S\r\n]*\r?\n?[^\S\r\n]*(?P<code>[A-Za-z0-9_-]{4,25})',
         re.IGNORECASE
     )
 
     # 2. Code then Tier
     p2 = re.compile(
-        r'(?P<kw>🎟️?|🎫|•|\-|\*)?[^\S\r\n]*(?P<kw2>كوبون|كود|code|قسيمة)?[^\S\r\n]*(?P<code>[A-Za-z][A-Za-z0-9_-]{3,24})[^\S\r\n]*(?:[:=：\-]|خصم|بخصم|\()?[^\S\r\n]*\r?\n?[^\S\r\n]*(?P<tier>[$]?[0-9]+(?:\.[0-9]+)?[^\S\r\n]*/[^\S\r\n]*[$]?[0-9]+(?:\.[0-9]+)?[$]?)\)?',
+        r'(?:[^\w\s]|•|-|\*)?[^\S\r\n]*(?:كوبون|كود|code|قسيمة)?[^\S\r\n]*(?P<code>[A-Za-z][A-Za-z0-9_-]{3,24})[^\S\r\n]*(?:[:=：\-]|خصم|بخصم|\()?[^\S\r\n]*\r?\n?[^\S\r\n]*(?P<tier>' + tier_pattern + r')\)?',
         re.IGNORECASE
     )
 
@@ -285,18 +287,27 @@ def extract_coupon_list(text: str) -> List[Dict[str, str]]:
         if '$' not in tier_str and not has_kw:
             return
         t = re.sub(r'\s+', '', tier_str.strip())
-        if not t.startswith('$') and not t.endswith('$'):
-            t = f"{t}$"
+        m_tier = re.match(r'[$]?([0-9]+(?:\.[0-9]+)?)[$]?[^\S\r\n]*(?:/|-)[^\S\r\n]*[$]?([0-9]+(?:\.[0-9]+)?)[$]?', t)
+        if m_tier:
+            val1, val2 = float(m_tier.group(1)), float(m_tier.group(2))
+            disc = min(val1, val2)
+            spend = max(val1, val2)
+            disc_str = f"{int(disc)}" if disc.is_integer() else f"{disc}"
+            spend_str = f"{int(spend)}" if spend.is_integer() else f"{spend}"
+            t = f"{disc_str}/{spend_str}$"
+        else:
+            if not t.startswith('$') and not t.endswith('$'):
+                t = f"{t}$"
         if c not in seen_codes:
             seen_codes.add(c)
             coupons.append({"tier": t, "code": c})
 
     for m in p1.finditer(norm):
-        has_kw = bool((m.group('kw') and m.group('kw') in '🎟️🎫') or m.group('kw2'))
+        has_kw = bool(m.group(0) and any(sym in m.group(0) for sym in ['🎟️', '🎫', 'كوبون', 'كود', 'قسيمة', 'خصم']))
         add_coupon(m.group('tier'), m.group('code'), has_kw)
 
     for m in p2.finditer(norm):
-        has_kw = bool((m.group('kw') and m.group('kw') in '🎟️🎫') or m.group('kw2'))
+        has_kw = bool(m.group(0) and any(sym in m.group(0) for sym in ['🎟️', '🎫', 'كوبون', 'كود', 'قسيمة', 'خصم']))
         add_coupon(m.group('tier'), m.group('code'), has_kw)
 
     return coupons
@@ -1414,13 +1425,20 @@ def detect_channel_announcement(text: str) -> Tuple[bool, Optional[str], Optiona
     has_ali_link_ann = "aliexpress.com" in t or "s.click.aliexpress" in t
     if has_coupon_return and (has_action or has_ali_link_ann):
         ali_link_match = re.search(r'https?://s\.click\.aliexpress\.com/e/[A-Za-z0-9_-]+', text)
-        ali_link = ali_link_match.group(0) if ali_link_match else "https://www.aliexpress.com"
+        if not ali_link_match:
+            ali_link_match = re.search(r'https?://[a-zA-Z0-9_\.]*aliexpress\.com/[^\s<>"\']+', text)
+        if not ali_link_match:
+            # Never default to a naked unmonetized homepage link
+            return False, None, None
+        from api.coin_bot import ensure_affiliate
+        raw_link = ali_link_match.group(0)
+        ali_link = ensure_affiliate(raw_link)
         formatted = (
             "🎟️ <b>الحقوووا عودة الكوبونات.. احجزوها قبل ما تخلاص! 🏃‍♂️🔥</b>\n\n"
             "AliExpress رجعت توزع في <b>كوبونات خصم عشوائية</b> 🎁\n"
             "احجزوها الآن مباشرة قبل نفاذها:\n\n"
             f"🔗 <b>رابط حجز الكوبونات ⤵️</b>\n{ali_link}\n\n"
-            "📌 <b>ملاحظة:</b> حوّل دولة التطبيق إلى نفس عنوان الشحن 🇩🇿\n\n"
+            "📌 <b>ملاحظة:</b> حوّل دولة التطبيق إلى الجزائر 🇩🇿 لحجز الكوبونات\n\n"
             "📢 @DzAliexpress0"
         )
         return True, formatted, "coupon_return_refresh"

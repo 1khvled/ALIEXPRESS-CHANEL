@@ -93,18 +93,19 @@ class ProductExtractor:
 
         ali_urls.sort(key=_url_priority)
 
-        # Check if this is a Full Coupon List bulletin (must have 3+ coupons and NO single product price)
+        # Check if this is a Full Coupon List bulletin (must have 3+ coupons)
+        # Never fall through to single-product post if 3+ tiered coupons are present!
         coupon_items = extract_coupon_list(text)
         usd_price, eur_price = extract_prices(text)
 
-        if len(coupon_items) >= 3 and usd_price is None and ali_urls:
+        if len(coupon_items) >= 3:
             # Detect event type: Restricted Landing Page vs Site-Wide Booking
             from app.aliexpress.promos import promo_tracker
             active_p = promo_tracker.get_active_promo()
             promo_name = active_p.name if active_p else ""
             ev_info = detect_coupon_event_type(text, promo_name=promo_name)
 
-            target_url = ev_info.get("landing_url") or ali_urls[0]
+            target_url = ev_info.get("landing_url") or (ali_urls[0] if ali_urls else "https://s.click.aliexpress.com/e/_c3F40Fvf")
 
             # Critical: Competitor mapping for ESK Brand Day link (_c38iyTZR) -> our verified affiliate link
             if "_c38iyTZR" in target_url:

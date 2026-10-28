@@ -283,30 +283,46 @@ PROMO_CALENDAR: List[PromoEvent] = [
         name="11.11 Global Shopping Festival Warm-Up",
         name_ar="التحضير لمهرجان 11.11 العالمي 💥",
         name_fr="Échauffement Festival Mondial 11.11 💥",
-        start_date=datetime(2026, 11, 1, 7, 0, 0, tzinfo=timezone.utc),
-        end_date=datetime(2026, 11, 11, 6, 59, 59, tzinfo=timezone.utc),
-        banner_tag="⏳ تحضيرات مهرجان 11.11",
+        start_date=datetime(2026, 10, 29, 7, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 11, 1, 6, 59, 59, tzinfo=timezone.utc),
+        banner_tag="⏳ تسخينات وتحضيرات مهرجان 11.11",
         is_major=True,
-        coupon_tiers=[],
+        coupon_tiers=[
+            {"tier": "3/15$", "code": "OTD1103"},
+            {"tier": "4/25$", "code": "OTD1104"},
+            {"tier": "11/65$", "code": "OTD1111"},
+            {"tier": "20/119$", "code": "OTD1120"},
+            {"tier": "36/215$", "code": "OTD1136"},
+            {"tier": "53/315$", "code": "OTD1153"},
+            {"tier": "70/490$", "code": "OTD1170"},
+        ],
         source="baseline"
     ),
     PromoEvent(
         name="11.11 Global Shopping Festival Main Sale",
         name_ar="مهرجان 11.11 الأكبر عالمياً 🛍️",
         name_fr="Festival Mondial 11.11 AliExpress 🛍️",
-        start_date=datetime(2026, 11, 11, 7, 0, 0, tzinfo=timezone.utc),
-        end_date=datetime(2026, 11, 19, 6, 59, 59, tzinfo=timezone.utc),
+        start_date=datetime(2026, 11, 1, 7, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 11, 18, 6, 59, 59, tzinfo=timezone.utc),
         banner_tag="🔥 أقوى تخفيضات السنة 11.11",
         is_major=True,
-        coupon_tiers=[],
+        coupon_tiers=[
+            {"tier": "3/15$", "code": "OTD1103"},
+            {"tier": "4/25$", "code": "OTD1104"},
+            {"tier": "11/65$", "code": "OTD1111"},
+            {"tier": "20/119$", "code": "OTD1120"},
+            {"tier": "36/215$", "code": "OTD1136"},
+            {"tier": "53/315$", "code": "OTD1153"},
+            {"tier": "70/490$", "code": "OTD1170"},
+        ],
         source="baseline"
     ),
     PromoEvent(
         name="Black Friday & Cyber Monday",
         name_ar="تخفيضات الجمعة البيضاء Black Friday 🖤",
         name_fr="Black Friday & Cyber Monday AliExpress 🖤",
-        start_date=datetime(2026, 11, 24, 7, 0, 0, tzinfo=timezone.utc),
-        end_date=datetime(2026, 12, 1, 6, 59, 59, tzinfo=timezone.utc),
+        start_date=datetime(2026, 11, 19, 7, 0, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 12, 3, 6, 59, 59, tzinfo=timezone.utc),
         banner_tag="🖤 Black Friday السنوي",
         is_major=True,
         coupon_tiers=[],
@@ -1132,7 +1148,7 @@ class PromoTracker:
         if not discovered:
             return None
         now_check = getattr(self, "_ref_now", None) or datetime.now(timezone.utc)
-        if (now_check - discovered.end_date) > timedelta(days=7):
+        if (now_check - discovered.end_date) > timedelta(days=30):
             logger.info(f"[EVENT KNOWER] Discovered event has already ended ({discovered.name}), skipping registration.")
             return None
 
