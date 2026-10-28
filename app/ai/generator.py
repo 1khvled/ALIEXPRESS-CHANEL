@@ -22,28 +22,27 @@ class DealCaptionGenerator:
         raw_text: Optional[str] = None
     ) -> str:
         """
-        Generates authentic Algerian Telegram deal channel hooks.
-        Dynamically detects restocks/returns, subcategories (Gaming, Phones, etc.),
-        and price-drop drops.
+        Generates authentic Algerian Telegram deal channel hooks tailored strictly to the product type.
+        Uses natural Algerian expressions matching top deal hunters (ZedStore, Lody, BND) with zero AI cringe.
         """
         h = int(hashlib.md5(title.encode()).hexdigest(), 16)
 
         # 1. Restock / Return Repost Hook
         if is_restock:
             restock_hooks = [
-                "⚡ <b>العرض رجع توفر من جديد.. حبات قلال سارعوا! 🚨🔥</b>",
+                "🚨 <b>لي كانو يستناو فيه.. العرض رجع توفر وبنفس السعر الشاب! 🏃‍♂️⚡</b>",
+                "⚡ <b>راه رجع توفر بحبات قلال.. اجري قبل ما يخلص الستوك! 🚨🔥</b>",
                 "🔥 <b>رجوع التوفر بسعر لافار ممتاز متفوتوهش 🏃‍♂️⚡</b>",
-                "🚨 <b>رجع توفر بكمية محدودة بسعر باطل متتراطاش! 🔥</b>",
-                "⚡ <b>الحق توفر من جديد قبل نفاذ الكمية 🔥🏃‍♂️</b>"
+                "⚡ <b>العرض رجع توفر من جديد بكمية محدودة سارعوا! 🚨🔥</b>"
             ]
             return restock_hooks[h % len(restock_hooks)]
 
         # 2. Price-Drop Arbitrage Hook
         if is_price_drop:
             price_drop_hooks = [
-                "📉 <b>نزول إضافي في السعر.. لافار ممتازة استغلوها! 🔥</b>",
-                "⚡ <b>السعر زاد طاح.. تخفيض إضافي بأقوى سعر 🔥</b>",
-                "💥 <b>هبوط قوي في السعر.. سعر باطل لافار 📉🔥</b>"
+                "📉 <b>السعر زاد طاح كثر من قبل.. همزة حقيقية استغلوها درك! 📉🔥</b>",
+                "⚡ <b>هبوط إضافي في السعر.. راهي لافار كثر من المرة لي فاتت! 📉⚡</b>",
+                "📉 <b>نزول قوي في السعر.. لافار ممتازة استغلوها قبل ما يرجع السعر! 🔥</b>"
             ]
             return price_drop_hooks[h % len(price_drop_hooks)]
 
@@ -57,73 +56,84 @@ class DealCaptionGenerator:
             is_accessory_product
         )
 
-        if is_audio_product(title):
-            audio_hooks = [
-                "🎧 <b>سماعات بمواصفات ممتازة وعزل قوي بسعر لافار 🔥🎧</b>",
-                "🎧 <b>تخفيض قوي في السماعات.. صوت نقي وبسعر لافار ممتاز 🔥⚡</b>",
-                "⚡ <b>عرض لافار ممتاز في عالم السماعات متتفوتش 🔥🎧</b>"
-            ]
-            return audio_hooks[h % len(audio_hooks)]
-
-        if is_wearable_product(title):
-            watch_hooks = [
-                "⌚ <b>ساعة ذكية بمواصفات ممتازة وسعر لافار متتراطاش 🔥⚡</b>",
-                "⚡ <b>عرض لافار في الساعات الذكية بأقوى سعر 🔥⌚</b>",
-                "🔥 <b>تخفيض قوي في الساعات الذكية بسعر باطل 🔥⌚</b>"
-            ]
-            return watch_hooks[h % len(watch_hooks)]
-
-        if is_tablet_product(title):
-            tablet_hooks = [
-                "📱 <b>تخفيض قوي في التابلت بمواصفات ممتازة وسعر لافار 🔥⚡</b>",
-                "⚡ <b>عرض لافار ممتاز في أجهزة التابلت بأقوى سعر 🔥📱</b>"
-            ]
-            return tablet_hooks[h % len(tablet_hooks)]
-
-        if is_gaming_or_pc_product(title):
-            gaming_hooks = [
-                "🎮 <b>صفقة قوية في عتاد قيمنق بسعر ممتاز متتراطاش 🔥⚡</b>",
-                "⚡ <b>عتاد قيمنق لافار ممتازة بأقوى سعر 🔥🎮</b>",
-                "🔥 <b>تخفيض قوي في عتاد قيمنق بسعر باطل 🔥🎮</b>"
-            ]
-            return gaming_hooks[h % len(gaming_hooks)]
-
-        if is_genuine_smartphone(title):
-            phone_hooks = [
-                "📱 <b>صفقة قوية في الهواتف مواصفات ممتازة وسعر مميز 🔥</b>",
-                "🔥 <b>هاتف بمواصفات قوية وسعر لافار ممتاز متتراطاش 🔥📱</b>",
-                "⚡ <b>عرض لافار ممتاز في عالم الهواتف متتفوتش 🔥📱</b>"
-            ]
-            return phone_hooks[h % len(phone_hooks)]
-
-        # 3.5 Accessories & cables (Never label cables/chargers with 'مواصفات قوية')
+        # 3.1 Accessories, cables, chargers, stands (Zero 'مواصفات قوية')
         if is_accessory_product(title):
+            if usd_price and usd_price < 3.0:
+                cheap_hooks = [
+                    "⚡ <b>سعر باطل أقل من سومة قهوة.. لافار ممتازة استغلوها 🔥☕</b>",
+                    "🔥 <b>سلعة مليحة وبسعر رمزي خاوة متتراطاش 🔥👌</b>",
+                    "⚡ <b>لافار ممتازة وسعر باطل نهار اليوم 🔥📦</b>"
+                ]
+                return cheap_hooks[h % len(cheap_hooks)]
             accessory_hooks = [
-                "⚡ <b>لافار ممتازة وسعر باطل نهار اليوم 🔥📦</b>",
-                "🔥 <b>سلعة مليحة وبأقوى سعر متتراطاش 🔥⚡</b>",
-                "🌟 <b>تخفيض قوي بأفضل سعر متاح 🔥</b>",
-                "⚡ <b>عرض اليوم بسعر باطل لافار 🔥</b>"
+                "⚡ <b>سلعة براتيك ومفيدة وسعر باطل نهار اليوم 🔥📦</b>",
+                "🔥 <b>همزة مليحة بزاف وسعر رمزي استغلوها 🔥⚡</b>",
+                "🌟 <b>تخفيض قوي بسعر باطل متتراطاش 🔥</b>",
+                "⚡ <b>عرض اليوم بسعر باطل لافار حقيقية 🔥</b>"
             ]
             return accessory_hooks[h % len(accessory_hooks)]
 
-        # 4. High-Impact Deal Candidates (Versatile, authentic Algerian deal phrasing)
-        candidates = [
-            "🔥 <b>لافار ممتازة بأقوى سعر 🔥</b>",
-            "⚡ <b>تخفيض قوي بسعر باطل متتراطاش 🔥</b>",
-            "🔥 <b>سعر ممتاز لافار نهار اليوم 🔥⚡</b>",
-            "🌟 <b>تخفيض قوي بأفضل سعر متاح 🔥</b>",
-            "⚡ <b>أقوى تخفيض نهار اليوم باطل 🔥</b>",
-            "🔥 <b>لافار حقيقية وتخفيض ممتاز 🔥⚡</b>",
-            "💥 <b>تخفيض استثنائي بسعر ممتاز متتراطاش 🔥</b>",
-            "⚡ <b>عرض اليوم بسعر باطل لافار 🔥</b>",
-            "🔥 <b>سعر خيالي لافار متتفوتش نهار اليوم 🔥⚡</b>",
-            "🌟 <b>سعر لافار ممتاز استغلوه الآن 🔥</b>"
-        ]
+        # 3.2 Audio, Earphones, IEMs
+        if is_audio_product(title):
+            audio_hooks = [
+                "🎧 <b>عشاق الصوت النقي والبيز.. لافار شابة بزاف 🔥🎧</b>",
+                "⚡ <b>سماعات بجودة صوت ممتازة وعزل شباب وسعر باطل 🔥⚡</b>",
+                "🔥 <b>تخفيض قوي في عالم السماعات.. صوت نقي بسعر لافار 🎧👌</b>"
+            ]
+            return audio_hooks[h % len(audio_hooks)]
 
+        # 3.3 Smartwatches
+        if is_wearable_product(title):
+            watch_hooks = [
+                "⌚ <b>عشاق الساعات الذكية.. صفقة شابة ومواصفات ممتازة 🔥⌚</b>",
+                "⚡ <b>ساعة ذكية بشاشة نقية وبطارية تشد مليح وبسعر لافار 🔥⚡</b>",
+                "🔥 <b>تخفيض قوي في الساعات الذكية بأقوى سعر متاح ⌚👌</b>"
+            ]
+            return watch_hooks[h % len(watch_hooks)]
+
+        # 3.4 Tablets
+        if is_tablet_product(title):
+            tablet_hooks = [
+                "📱 <b>تابلت عملية للقراية والخدمة بسعر لافار ممتاز 🔥⚡</b>",
+                "⚡ <b>تخفيض قوي في أجهزة التابلت بأقوى سعر متاح 🔥📱</b>"
+            ]
+            return tablet_hooks[h % len(tablet_hooks)]
+
+        # 3.5 Gaming gear & PC Components
+        if is_gaming_or_pc_product(title):
+            gaming_hooks = [
+                "🎮 <b>القيمرز وين راكم.. صفقة قوية في هاد العتاد متتفوتش 🔥⚡</b>",
+                "⚡ <b>عتاد قيمنق محترم وسعر لافار أقل من السوق بزااف 🔥🎮</b>",
+                "🔥 <b>تخفيض قوي للقيمرز.. أداء ممتاز وسعر باطل 🎮👌</b>"
+            ]
+            return gaming_hooks[h % len(gaming_hooks)]
+
+        # 3.6 Genuine Smartphones
+        if is_genuine_smartphone(title):
+            phone_hooks = [
+                "📱 <b>صفقة قوية في الهواتف.. مواصفات محترمة وسعر لافار 🔥📱</b>",
+                "🔥 <b>هاتف بمواصفات قوية وسعر طايح بزاف مقارنة بسوق البلاد 📱🇩🇿</b>",
+                "⚡ <b>عرض لافار ممتاز لعشاق الهواتف متتراطاش 🔥📱</b>"
+            ]
+            return phone_hooks[h % len(phone_hooks)]
+
+        # 3.7 High-Coin Discount Deals
         if has_points_discount:
-            candidates.append("🪙 <b>تخفيض قوي بالعملات (Coins) بسعر باطل 🔥🪙</b>")
-            candidates.append("🪙 <b>لافار ممتازة بتخفيض العملات متتراطاش 🔥⚡</b>")
+            coin_hooks = [
+                "🪙 <b>الكوينز دايرين حالة في هاد العرض.. هبوط قوي في السعر 🪙🔥</b>",
+                "🪙 <b>تخفيض عملات خارق عبر الرابط.. سعر باطل استغلوه 🪙⚡</b>",
+                "🪙 <b>سعر هبال بتخفيض العملات.. لافار حقيقية متتراطاش 🪙👌</b>"
+            ]
+            return coin_hooks[h % len(coin_hooks)]
 
+        # 4. Realistic Fallback for Miscellaneous Deals
+        candidates = [
+            "🔥 <b>سلعة شابة وبسعر لافار استغلوها نهار اليوم 🔥⚡</b>",
+            "⚡ <b>تخفيض قوي وسعر باطل متتراطاش 🔥</b>",
+            "🌟 <b>همزة ممتازة بأفضل سعر متاح حالياً 🔥👌</b>",
+            "⚡ <b>عرض اليوم بسعر باطل لافار حقيقية 🔥</b>",
+            "🔥 <b>سعر ممتاز لافار نهار اليوم متفوتوهاش 🔥⚡</b>"
+        ]
         return candidates[h % len(candidates)]
 
     def format_coupon_list(
