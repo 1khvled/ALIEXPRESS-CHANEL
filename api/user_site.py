@@ -1044,6 +1044,216 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </div>
         </div>
 
+
+        <!-- Official Brand Stores Directory (11.11 Special) -->
+        <div class="space-y-3 pt-3 border-t" style="border-color: rgba(225, 29, 72, 0.15);">
+          <div class="flex items-center justify-between gap-2 flex-wrap">
+            <div class="flex items-center gap-2">
+              <span class="w-6 h-6 rounded-lg bg-rose-500/15 text-rose-500 flex items-center justify-center text-xs font-bold">
+                <i class="fa-solid fa-store"></i>
+              </span>
+              <div>
+                <h3 class="font-black text-xs sm:text-sm text-rose-500 dark:text-rose-400" data-i18n="stores_directory_title">دليل المتاجر الرسمية المعتمدة (احجز قسائم المتجر وعَمّر سلّتك)</h3>
+                <p class="text-[10px] opacity-70" style="color: var(--text-muted);" data-i18n="stores_directory_sub">ادخل مباشرة لمتجر الماركة الرسمية، اجمع قسيمة المتجر الإضافية وحط منتجاتك في السلة قبل انطلاق الأسعار.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <!-- Gaming Stores -->
+            <div>
+              <span class="text-[11px] font-bold text-amber-500 flex items-center gap-1.5 mb-1.5">
+                <i class="fa-solid fa-gamepad text-[10px]"></i> عتاد القيمنق والكيبوردات الميكانيكية:
+              </span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                            <a href="https://s.click.aliexpress.com/e/_c3QPS5kr" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Ajazz</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">كيبوردات وماوسات ميكانيكية</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://s.click.aliexpress.com/e/_c3B3h1sr" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Attack Shark</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">ماوسات X3/R1 وسماعات قيمنق</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://s.click.aliexpress.com/e/_c3NODjJN" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Aula</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">كيبوردات F75 و F87 الأسطورية</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://s.click.aliexpress.com/e/_c3qBSeyj" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Machenike</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">أيادي تحكم ولابتوبات وعتاد قيمنق</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://s.click.aliexpress.com/e/_c4K7fJST" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Mchose</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">ماوسات AX5/A5 وكيبوردات K99</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://s.click.aliexpress.com/e/_c4VxLtsB" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">GameSir</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">أقوى أيادي التحكم للـ PC والهاتف</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://s.click.aliexpress.com/e/_c4p0NQdl" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Flydigi</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">أيادي تحكم احترافية Vader & Apex</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>
+              </div>
+            </div>
+
+            <!-- Audio Stores -->
+            <div class="pt-2">
+              <span class="text-[11px] font-bold text-sky-400 flex items-center gap-1.5 mb-1.5">
+                <i class="fa-solid fa-headphones text-[10px]"></i> الصوتيات وسماعات الـ IEMs:
+              </span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                            <a href="https://s.click.aliexpress.com/e/_c3CSIZ4B" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">KZ</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">سماعات سلكية IEMs بصوت نقي</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://s.click.aliexpress.com/e/_c3IHDdyn" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">QCY</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">سماعات بلوتوث TWS وعزل ضوضاء ANC</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://s.click.aliexpress.com/e/_c375eEIJ" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Anker</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">سماعات Soundcore وسبيكرات عالمية</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://www.aliexpress.com/store/1102047805?aff_fcid=dzkhvled16" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Tangzu</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">سماعات Wan'er بصوت استوديو نقي</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>
+              </div>
+            </div>
+
+            <!-- Power & Tech Stores -->
+            <div class="pt-2">
+              <span class="text-[11px] font-bold text-emerald-400 flex items-center gap-1.5 mb-1.5">
+                <i class="fa-solid fa-bolt text-[10px]"></i> الشواحن السريعة GaN وبنوك الطاقة والكوابل:
+              </span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                            <a href="https://s.click.aliexpress.com/e/_c3WEvrZp" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Baseus</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">شواحن سريعة GaN وبنوك طاقة وكوابل</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://s.click.aliexpress.com/e/_c3Sfel63" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Ugreen</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">شواحن Nexode وهبات USB-C فاخرة</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://s.click.aliexpress.com/e/_c4dZM5jH" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Essager</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">كوابل شحن سريعة بسعر باطل</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://s.click.aliexpress.com/e/_c3IWQD0P" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Toocki</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">شواحن سيارة وكوابل بشاشة عرض</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>
+              </div>
+            </div>
+
+            <!-- Wearables & Mobile Stores -->
+            <div class="pt-2">
+              <span class="text-[11px] font-bold text-purple-400 flex items-center gap-1.5 mb-1.5">
+                <i class="fa-solid fa-mobile-screen text-[10px]"></i> الهواتف والساعات الذكية:
+              </span>
+              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                            <a href="https://s.click.aliexpress.com/e/_c3fiTqFD" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Zeblaze</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">ساعات ذكية AMOLED وبطارية ضخمة</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://s.click.aliexpress.com/e/_c3sccQLp" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Colmi</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">ساعات ذكية أنيقة بسعر لافار</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://www.aliexpress.com/store/911934243?aff_fcid=dzkhvled16" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">POCO</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">هواتف POCO الأصلية بضمان المصنع</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>            <a href="https://s.click.aliexpress.com/e/_c3YghyCL" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="min-w-0">
+                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Xiaomi Mi Global Store</span>
+                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">هواتف وريدمي وأجهزة شاومي العالمية</span>
+              </div>
+              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </span>
+            </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Strategic Buying Guidance Bar -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 rounded-xl border text-[11px]" style="background-color: var(--bg-card); border-color: rgba(225, 29, 72, 0.2);">
           <div class="flex items-center gap-2">
