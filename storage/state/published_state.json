@@ -2107,19 +2107,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33009,
-      "last_check_time": 1793138727.9969373
+      "last_check_time": 1793150353.8321958
     },
     "ecksdeal": {
       "last_message_id": 5903,
-      "last_check_time": 1793138728.5823643
+      "last_check_time": 1793150354.3068395
     },
     "lodydeals": {
       "last_message_id": 45590,
-      "last_check_time": 1793138727.105026
+      "last_check_time": 1793150352.884184
     },
     "bnddeals": {
       "last_message_id": 50871,
-      "last_check_time": 1793138729.4625375
+      "last_check_time": 1793150355.2731218
     },
     "test_channel": {
       "last_message_id": 1792330248,
@@ -2127,15 +2127,15 @@
     },
     "pcgamingpart": {
       "last_message_id": 8001,
-      "last_check_time": 1793138729.0611448
+      "last_check_time": 1793150354.7636633
     },
     "zedstoreonline": {
       "last_message_id": 38639,
-      "last_check_time": 1793138727.5172336
+      "last_check_time": 1793150353.3708577
     },
     "megaphonna": {
       "last_message_id": 8495,
-      "last_check_time": 1793138738.0845888
+      "last_check_time": 1793150355.8005548
     },
     "couponsglobal": {
       "last_message_id": 48877,
@@ -6910,10 +6910,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793138746.794952,
+    "last_sweep_time": 1793150360.541863,
     "last_sweep_times": {
-      "algeria": 1793138744.5419326,
-      "france": 1793138746.794952
+      "algeria": 1793150358.2337477,
+      "france": 1793150360.541863
     },
     "last_deal_post_times": {
       "algeria": 1793138744.5504558
@@ -8447,9 +8447,10 @@
     "megaphonna:8493",
     "couponsglobal:48874",
     "lodydeals:45590",
-    "lodydeals:45589"
+    "lodydeals:45589",
+    "couponsglobal:48873"
   ],
-  "last_france_cross_promo_time": 1792862931.3259666,
+  "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
   "france_cross_promo_variant_idx": 1,
   "published_coupon_bulletins": [
