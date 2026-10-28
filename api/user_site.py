@@ -885,6 +885,181 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
       </section>
 
+      <!-- ========================================== -->
+      <!-- 11.11 GLOBAL SHOPPING FESTIVAL SPECIAL HUB -->
+      <!-- ========================================== -->
+      <section id="section-11-11-hub" class="border rounded-2xl p-3.5 sm:p-5 transition-all shadow-sm space-y-3.5 sm:space-y-4" style="background: linear-gradient(135deg, rgba(225, 29, 72, 0.06) 0%, var(--bg-card) 100%); border-color: rgba(225, 29, 72, 0.28);" aria-label="11.11 Global Shopping Festival Hub">
+        <!-- Header Strip -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-2.5 border-b" style="border-color: rgba(225, 29, 72, 0.15);">
+          <div class="flex items-center gap-2.5 min-w-0">
+            <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-rose-600 to-amber-500 text-white flex items-center justify-center font-black text-sm shadow-md shadow-rose-500/20 flex-shrink-0">
+              11.11
+            </span>
+            <div class="min-w-0">
+              <div class="flex items-center gap-2 flex-wrap">
+                <h2 class="font-black text-xs sm:text-sm tracking-tight text-rose-500 dark:text-rose-400">
+                  <span data-i18n="hub_11_11_title">مهرجان 11.11 العالمي | Global Shopping Festival</span>
+                </h2>
+                <span class="inline-flex items-center gap-1 text-[10px] font-black px-2 py-0.5 rounded-full bg-rose-500/15 text-rose-500 border border-rose-500/30">
+                  <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
+                  <span data-i18n="hub_11_11_badge">التسخينات نشطة الآن 🛒</span>
+                </span>
+              </div>
+              <p class="text-[11px] opacity-75 truncate" style="color: var(--text-muted);" data-i18n="hub_11_11_sub">
+                أضف المنتجات إلى السلة واجمع العملات والرصيد | تتفعل الكوبونات والأسعار يوم 1 نوفمبر (08:00 صباحاً)
+              </p>
+            </div>
+          </div>
+          <!-- Game Quick Action Button -->
+          <a href="https://s.click.aliexpress.com/e/_c4dXzZj5" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-sm flex items-center justify-center gap-1.5 flex-shrink-0 transition active:scale-95 touch-manipulation">
+            <i class="fa-solid fa-gamepad text-xs"></i>
+            <span data-i18n="hub_11_11_play_game">لعبة رصيد 11.11 (العب واجمع رصيد الشراء)</span>
+            <i class="fa-solid fa-arrow-left text-[9px] rtl:inline ltr:hidden"></i>
+            <i class="fa-solid fa-arrow-right text-[9px] ltr:inline rtl:hidden"></i>
+          </a>
+        </div>
+
+        <!-- Coupons Grid & Switcher -->
+        <div class="space-y-2.5">
+          <div class="flex items-center justify-between gap-2 flex-wrap">
+            <div class="flex items-center gap-1.5 text-xs font-bold">
+              <i class="fa-solid fa-ticket text-rose-500 text-xs"></i>
+              <span style="color: var(--text-main);" data-i18n="hub_coupons_heading">أكواد الخصم الرسمية المعتمدة (انسخ الكود للتطبيق في السلة):</span>
+            </div>
+            <!-- Region Tab Switcher -->
+            <div class="inline-flex items-center gap-1 p-0.5 rounded-lg border text-[11px] font-bold" style="background-color: var(--bg-page); border-color: var(--border-card);">
+              <button type="button" onclick="showHubCouponTab('global')" id="hub-tab-btn-global" class="px-2.5 py-1 rounded-md bg-rose-600 text-white transition active:scale-95 shadow-sm">
+                🇩🇿 <span data-i18n="hub_tab_global">الجزائر والعالم ($)</span>
+              </button>
+              <button type="button" onclick="showHubCouponTab('france')" id="hub-tab-btn-france" class="px-2.5 py-1 rounded-md opacity-60 hover:opacity-100 transition active:scale-95" style="color: var(--text-main);">
+                🇫🇷 <span data-i18n="hub_tab_france">فرنسا وأوروبا (€)</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Global Coupons (USD) -->
+          <div id="hub-coupons-global" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2">
+            <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <span class="text-[10px] font-bold text-rose-500">خصم 3$ من 15$</span>
+              <code class="font-mono font-black text-xs text-amber-500">OTD1103</code>
+              <button onclick="copyCode('OTD1103')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copy text-[9px]"></i><span>نسخ</span>
+              </button>
+            </div>
+            <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <span class="text-[10px] font-bold text-rose-500">خصم 5$ من 30$</span>
+              <code class="font-mono font-black text-xs text-amber-500">OTD1104</code>
+              <button onclick="copyCode('OTD1104')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copy text-[9px]"></i><span>نسخ</span>
+              </button>
+            </div>
+            <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <span class="text-[10px] font-bold text-rose-500">خصم 11$ من 80$</span>
+              <code class="font-mono font-black text-xs text-amber-500">OTD1111</code>
+              <button onclick="copyCode('OTD1111')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copy text-[9px]"></i><span>نسخ</span>
+              </button>
+            </div>
+            <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <span class="text-[10px] font-bold text-rose-500">خصم 20$ من 150$</span>
+              <code class="font-mono font-black text-xs text-amber-500">OTD1120</code>
+              <button onclick="copyCode('OTD1120')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copy text-[9px]"></i><span>نسخ</span>
+              </button>
+            </div>
+            <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <span class="text-[10px] font-bold text-rose-500">خصم 36$ من 260$</span>
+              <code class="font-mono font-black text-xs text-amber-500">OTD1136</code>
+              <button onclick="copyCode('OTD1136')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copy text-[9px]"></i><span>نسخ</span>
+              </button>
+            </div>
+            <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <span class="text-[10px] font-bold text-rose-500">خصم 53$ من 315$</span>
+              <code class="font-mono font-black text-xs text-amber-500">OTD1153</code>
+              <button onclick="copyCode('OTD1153')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copy text-[9px]"></i><span>نسخ</span>
+              </button>
+            </div>
+            <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <span class="text-[10px] font-bold text-rose-500">خصم 70$ من 490$</span>
+              <code class="font-mono font-black text-xs text-amber-500">OTD1170</code>
+              <button onclick="copyCode('OTD1170')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copy text-[9px]"></i><span>نسخ</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- France Coupons (EUR) -->
+          <div id="hub-coupons-france" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-2 hidden">
+            <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <span class="text-[10px] font-bold text-rose-500">3€ dès 18€</span>
+              <code class="font-mono font-black text-xs text-amber-500">11FR03</code>
+              <button onclick="copyCode('11FR03')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copy text-[9px]"></i><span>Copier</span>
+              </button>
+            </div>
+            <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <span class="text-[10px] font-bold text-rose-500">8€ dès 45€</span>
+              <code class="font-mono font-black text-xs text-amber-500">11FR08</code>
+              <button onclick="copyCode('11FR08')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copy text-[9px]"></i><span>Copier</span>
+              </button>
+            </div>
+            <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <span class="text-[10px] font-bold text-rose-500">13€ dès 79€</span>
+              <code class="font-mono font-black text-xs text-amber-500">11FR13</code>
+              <button onclick="copyCode('11FR13')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copy text-[9px]"></i><span>Copier</span>
+              </button>
+            </div>
+            <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <span class="text-[10px] font-bold text-rose-500">24€ dès 139€</span>
+              <code class="font-mono font-black text-xs text-amber-500">11FR24</code>
+              <button onclick="copyCode('11FR24')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copy text-[9px]"></i><span>Copier</span>
+              </button>
+            </div>
+            <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <span class="text-[10px] font-bold text-rose-500">40€ dès 229€</span>
+              <code class="font-mono font-black text-xs text-amber-500">11FR40</code>
+              <button onclick="copyCode('11FR40')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copy text-[9px]"></i><span>Copier</span>
+              </button>
+            </div>
+            <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <span class="text-[10px] font-bold text-rose-500">60€ dès 349€</span>
+              <code class="font-mono font-black text-xs text-amber-500">11FR60</code>
+              <button onclick="copyCode('11FR60')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copy text-[9px]"></i><span>Copier</span>
+              </button>
+            </div>
+            <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <span class="text-[10px] font-bold text-rose-500">80€ dès 469€</span>
+              <code class="font-mono font-black text-xs text-amber-500">11FR80</code>
+              <button onclick="copyCode('11FR80')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
+                <i class="fa-regular fa-copy text-[9px]"></i><span>Copier</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Strategic Buying Guidance Bar -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 rounded-xl border text-[11px]" style="background-color: var(--bg-card); border-color: rgba(225, 29, 72, 0.2);">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-lightbulb text-amber-500 text-xs flex-shrink-0"></i>
+            <span style="color: var(--text-muted);" data-i18n="hub_strategy_tip">
+              💡 <b>نصيحة هامة:</b> أضف المنتجات إلى السلة من الآن لتثبيت السعر المخفض. يوم 1 نوفمبر على 08:00 طبق الكوبونات الأكبر أولاً قبل نفاذ المخزون!
+            </span>
+          </div>
+          <a href="https://s.click.aliexpress.com/e/_c3F40Fvf" target="_blank" rel="noopener noreferrer" class="text-rose-500 dark:text-rose-400 font-bold hover:underline flex items-center gap-1 flex-shrink-0 self-end sm:self-auto">
+            <span data-i18n="hub_view_eligible">تصفح المنتجات المؤهلة للكوبونات</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+          </a>
+        </div>
+      </section>
+
+
       <!-- Category Filter Pills -->
       <section class="border-b pb-3 w-full overflow-hidden" style="border-color: var(--border-card);" aria-label="Categories">
         <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 text-xs font-semibold px-0.5 momentum-scroll w-full">
@@ -5200,6 +5375,34 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       tick();
       eventCountdownTimer = setInterval(tick, 1000);
     }
+
+
+    window.showHubCouponTab = function(tab) {
+      const globalEl = document.getElementById('hub-coupons-global');
+      const franceEl = document.getElementById('hub-coupons-france');
+      const btnGlobal = document.getElementById('hub-tab-btn-global');
+      const btnFrance = document.getElementById('hub-tab-btn-france');
+      if (!globalEl || !franceEl) return;
+      if (tab === 'france') {
+        globalEl.classList.add('hidden');
+        franceEl.classList.remove('hidden');
+        if (btnGlobal) {
+          btnGlobal.className = 'px-2.5 py-1 rounded-md opacity-60 hover:opacity-100 transition active:scale-95';
+        }
+        if (btnFrance) {
+          btnFrance.className = 'px-2.5 py-1 rounded-md bg-rose-600 text-white transition active:scale-95 shadow-sm';
+        }
+      } else {
+        franceEl.classList.add('hidden');
+        globalEl.classList.remove('hidden');
+        if (btnFrance) {
+          btnFrance.className = 'px-2.5 py-1 rounded-md opacity-60 hover:opacity-100 transition active:scale-95';
+        }
+        if (btnGlobal) {
+          btnGlobal.className = 'px-2.5 py-1 rounded-md bg-rose-600 text-white transition active:scale-95 shadow-sm';
+        }
+      }
+    };
 
     function updateActiveEventBanner(event) {
       if (!event) return;

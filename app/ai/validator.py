@@ -107,6 +107,10 @@ class DealCaptionValidator:
         if expected_affiliate_url not in caption:
             errors.append("Affiliate URL is missing from the caption")
 
+        # Zero-tolerance: Never post raw unmonetized homepage or naked links
+        if "https://www.aliexpress.com" in caption or "http://www.aliexpress.com" in caption:
+            errors.append("VIOLATION OF CORE RULE: Raw unmonetized AliExpress homepage link in caption")
+
         # Specific checks for Coupon List posts
         if is_coupon_list:
             if "كودات" not in caption and "كوبونات" not in caption:
@@ -163,6 +167,21 @@ class DealCaptionValidator:
             non_bot_text = "\n".join(non_bot_lines)
             if "خصم النقاط" in non_bot_text or "تخفيض العملات مفعّل" in non_bot_text or "تخفيض العملات:" in non_bot_text:
                 errors.append("Unverified points discount found in caption")
+
+        # 4.5 Multi-coupon sanity check (Single deals must NEVER have 3+ tiered coupon codes)
+        coupon_matches = re.findall(r'(?:كوبون|كود|code)[^:\n]*:[^\S\r\n]*([A-Za-z0-9_-]{4,20})', caption, re.IGNORECASE)
+        if len(coupon_matches) >= 3:
+            errors.append(f"Single deal cannot stack {len(coupon_matches)} coupon codes. Must be a coupon bulletin.")
+
+        # 4.6 Realistic Price Firewall (Flagship smartphones/electronics can never cost < $35)
+        if expected_usd_price is not None:
+            t_low = (expected_title or "").lower()
+            flagship_keywords = [
+                "oppo find", "xiaomi 14", "xiaomi 13", "galaxy s", "iphone", "dimensity 9",
+                "snapdragon 8", "redmi k", "poco f", "oneplus 1", "oneplus 2", "iqoo 1"
+            ]
+            if any(k in t_low for k in flagship_keywords) and expected_usd_price < 35.0:
+                errors.append(f"Unrealistic dummy/booking price (${expected_usd_price}) for flagship smartphone '{expected_title}'")
 
         # 5. Category Consistency check (Firewall: non-phones must never be labeled as smartphones)
         from app.ai.category_firewall import is_genuine_smartphone

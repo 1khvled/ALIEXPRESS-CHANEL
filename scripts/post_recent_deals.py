@@ -565,10 +565,11 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                                 is_french=False
                             )
 
-                        if not local_img_file and source_photo_url:
-                            downloaded = await media_downloader.download_image(source_photo_url, identifier=f"coupon_{extracted.product_id}")
-                            if downloaded:
-                                local_img_file = downloaded
+                        # 1. Check for user-provided custom event artwork
+                        if active_p and "11.11" in active_p.name:
+                            bonanza_art = os.path.join(settings.BASE_DIR, "assets", "11.11 Global Shopping Coupon Bonanza.png")
+                            if os.path.exists(bonanza_art):
+                                local_img_file = bonanza_art
 
                         # Fallback to official AliExpress Choice Day banner image
                         official_banner = os.path.join(settings.BASE_DIR, "storage", "assets", "choice_day_banner.png")

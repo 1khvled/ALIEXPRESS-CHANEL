@@ -399,7 +399,7 @@ async def publish_extracted_deal_to_france(
 
     # Image preparation
     local_img_file = None
-    img_url = extracted.image_url or source_photo_url
+    img_url = extracted.image_url
     if extracted.is_coupon_list:
         if extracted.coupon_list:
             active_p = promo_tracker.get_active_promo()
@@ -411,10 +411,7 @@ async def publish_extracted_deal_to_france(
                 is_french=True
             )
 
-        if not local_img_file and source_photo_url:
-            downloaded = await media_downloader.download_image(source_photo_url, identifier=f"fr_coupon_{extracted.product_id or 'list'}")
-            if downloaded:
-                local_img_file = downloaded
+
 
         official_banner = os.path.join(settings.BASE_DIR, "storage", "assets", "choice_day_banner.png")
         if not local_img_file and os.path.exists(official_banner):
@@ -794,10 +791,7 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                             is_french=True
                         )
 
-                    if not local_img_file and source_photo_url:
-                        downloaded = await media_downloader.download_image(source_photo_url, identifier=f"fr_coupon_{extracted.product_id}")
-                        if downloaded:
-                            local_img_file = downloaded
+
 
                     # Fallback to official AliExpress Choice Day banner image
                     official_banner = os.path.join(settings.BASE_DIR, "storage", "assets", "choice_day_banner.png")

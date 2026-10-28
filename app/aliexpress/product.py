@@ -93,12 +93,15 @@ class ProductExtractor:
 
         ali_urls.sort(key=_url_priority)
 
-        # Check if this is a Full Coupon List bulletin (must have 3+ coupons)
-        # Never fall through to single-product post if 3+ tiered coupons are present!
+        # Check if this is a Coupon List bulletin
+        # Never fall through to single-product post if multiple tiered coupons or codes are present!
         coupon_items = extract_coupon_list(text)
         usd_price, eur_price = extract_prices(text)
+        from app.aliexpress.parser import extract_multi_coupons
+        multi_info = extract_multi_coupons(text)
+        multi_codes_count = len(multi_info.get("coupons", []))
 
-        if len(coupon_items) >= 3:
+        if len(coupon_items) >= 2 or multi_codes_count >= 3:
             # Detect event type: Restricted Landing Page vs Site-Wide Booking
             from app.aliexpress.promos import promo_tracker
             active_p = promo_tracker.get_active_promo()

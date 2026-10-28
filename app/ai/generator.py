@@ -410,15 +410,21 @@ class DealCaptionGenerator:
         extracted_details = multi.get("coupon_details", [])
 
         if len(extracted_coupons) > 1:
+            seller_shown = False
+            platform_shown = False
             for d in extracted_details:
                 c = d["code"]
                 lbl = d.get("label") or "كـوبون الخصم"
                 tier = d.get("tier")
                 tier_str = f" ({tier})" if tier else ""
-                if any(k in lbl for k in ["متجر", "بائع", "قسيمة"]):
+                is_seller = any(k in lbl for k in ["متجر", "بائع", "قسيمة"])
+                if is_seller and not seller_shown:
                     lines.append(f"🌷 <b>{html.escape(lbl)}{tier_str} :</b> <code>{html.escape(c)}</code>")
-                else:
+                    seller_shown = True
+                elif not is_seller and not platform_shown:
+                    # In a single product deal, only display at most 1 global promo code
                     lines.append(f"🎟️ <b>{html.escape(lbl)}{tier_str} :</b> <code>{html.escape(c)}</code>")
+                    platform_shown = True
         else:
             if seller_coupon and str(seller_coupon).strip() not in {"0", "0$", "$0", "None", ""}:
                 s_clean = str(seller_coupon).strip()
