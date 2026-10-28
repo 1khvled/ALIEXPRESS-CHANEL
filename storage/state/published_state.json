@@ -2107,35 +2107,35 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33009,
-      "last_check_time": 1793191135.320824
+      "last_check_time": 1793212274.6773963
     },
     "ecksdeal": {
       "last_message_id": 5903,
-      "last_check_time": 1793191135.9799094
+      "last_check_time": 1793212275.3817654
     },
     "lodydeals": {
       "last_message_id": 45590,
-      "last_check_time": 1793191134.0035856
+      "last_check_time": 1793212273.47531
     },
     "bnddeals": {
       "last_message_id": 50872,
-      "last_check_time": 1793191137.0538776
+      "last_check_time": 1793212276.4496958
     },
     "test_channel": {
       "last_message_id": 1792330248,
       "last_check_time": 1792330248.913317
     },
     "pcgamingpart": {
-      "last_message_id": 8002,
-      "last_check_time": 1793191136.5141885
+      "last_message_id": 8003,
+      "last_check_time": 1793212275.8674843
     },
     "zedstoreonline": {
       "last_message_id": 38639,
-      "last_check_time": 1793191134.670646
+      "last_check_time": 1793212274.1253345
     },
     "megaphonna": {
       "last_message_id": 8498,
-      "last_check_time": 1793191137.704082
+      "last_check_time": 1793212276.9521098
     },
     "couponsglobal": {
       "last_message_id": 48878,
@@ -6910,10 +6910,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793191140.7962415,
+    "last_sweep_time": 1793212281.3380973,
     "last_sweep_times": {
-      "algeria": 1793191138.2254257,
-      "france": 1793191140.7962415
+      "algeria": 1793212278.067935,
+      "france": 1793212281.3380973
     },
     "last_deal_post_times": {
       "algeria": 1793138744.5504558
@@ -8453,7 +8453,8 @@
     "bnddeals:50872",
     "megaphonna:8498",
     "megaphonna:8497",
-    "couponsglobal:48878"
+    "couponsglobal:48878",
+    "pcgamingpart:8003"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
@@ -9010,8 +9011,8 @@
       "timestamp": 1792330247.4350224
     }
   ],
-  "last_pre_11_11_advisory_time": 1792887365.9854739,
-  "next_pre_11_11_interval_seconds": 310763,
-  "pre_11_11_variant_idx": 2,
+  "last_pre_11_11_advisory_time": 1793212271.6047354,
+  "next_pre_11_11_interval_seconds": 334210,
+  "pre_11_11_variant_idx": 0,
   "published_title_prices": {}
 }
