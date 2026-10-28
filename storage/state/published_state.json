@@ -324,7 +324,8 @@
     "1005012633322402",
     "1005012249968766",
     "9998886751",
-    "9998887440"
+    "9998887440",
+    "1005009200129898"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -659,7 +660,8 @@
     "1005012633322402": 1793123749.6836987,
     "1005012249968766": 1793138738.0845888,
     "9998886751": 1793226751.289748,
-    "9998887440": 1793227440.500994
+    "9998887440": 1793227440.500994,
+    "1005009200129898": 1793227797.933171
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -997,7 +999,8 @@
     "500ML Stainless Steel Vacuum Flask Gift Set",
     "SAMZHE Metal Lens Protector for iPhone 17 Pro Max",
     "SAMZHE Support Aluminum Graphics Card",
-    "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500"
+    "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500",
+    "كابل Ethernet Flat Cat 6 Cable 2meter  السعر💲 :"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1342,7 +1345,8 @@
     "500ML Stainless Steel Vacuum Flask Gift Set": 1793123738.1109653,
     "SAMZHE Metal Lens Protector for iPhone 17 Pro Max": 1793123744.0676813,
     "SAMZHE Support Aluminum Graphics Card": 1793123749.6836987,
-    "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500": 1793138738.0845888
+    "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500": 1793138738.0845888,
+    "كابل Ethernet Flat Cat 6 Cable 2meter  السعر💲 :": 1793227797.933171
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2105,27 +2109,28 @@
     "couponsglobal:48875",
     "megaphonna:8494",
     "test_channel:1793226751",
-    "test_channel:1793227440"
+    "test_channel:1793227440",
+    "ecksdeal:5905"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792711145.3171253,
-  "last_run_time": 1793227440.732812,
+  "last_run_time": 1793227797.933171,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33009,
-      "last_check_time": 1793212274.6773963
+      "last_message_id": 33010,
+      "last_check_time": 1793227790.6064568
     },
     "ecksdeal": {
-      "last_message_id": 5903,
-      "last_check_time": 1793212275.3817654
+      "last_message_id": 5905,
+      "last_check_time": 1793227799.9742446
     },
     "lodydeals": {
-      "last_message_id": 45590,
-      "last_check_time": 1793227440.6190536
+      "last_message_id": 45595,
+      "last_check_time": 1793227789.4562223
     },
     "bnddeals": {
-      "last_message_id": 50872,
-      "last_check_time": 1793212276.4496958
+      "last_message_id": 50873,
+      "last_check_time": 1793227801.119641
     },
     "test_channel": {
       "last_message_id": 1793227440,
@@ -2133,15 +2138,15 @@
     },
     "pcgamingpart": {
       "last_message_id": 8003,
-      "last_check_time": 1793212275.8674843
+      "last_check_time": 1793227800.6084254
     },
     "zedstoreonline": {
-      "last_message_id": 38639,
-      "last_check_time": 1793212274.1253345
+      "last_message_id": 38641,
+      "last_check_time": 1793227790.0545561
     },
     "megaphonna": {
-      "last_message_id": 8498,
-      "last_check_time": 1793227440.732812
+      "last_message_id": 8500,
+      "last_check_time": 1793227801.7706895
     },
     "couponsglobal": {
       "last_message_id": 48878,
@@ -2399,7 +2404,8 @@
     "1005013467588413": 3.5,
     "1005012024630994": 4.24,
     "1005012633322402": 3.05,
-    "1005012249968766": 15.0
+    "1005012249968766": 15.0,
+    "1005009200129898": 0.01
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6904,6 +6910,16 @@
       "price": 15.0,
       "timestamp": 1793138738.0845888,
       "status": "ACTIVE"
+    },
+    "ecksdeal:5905": {
+      "channel_msg_id": 1046,
+      "product_id": "1005009200129898",
+      "title": "كابل Ethernet Flat Cat 6 Cable 2meter  السعر💲 :",
+      "channel": "ecksdeal",
+      "source_msg_id": 5905,
+      "price": 0.01,
+      "timestamp": 1793227797.933171,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6912,17 +6928,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793138744.5504558,
+    "last_deal_post_time": 1793227803.3509848,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793226810.7610364,
+    "last_sweep_time": 1793227805.6778271,
     "last_sweep_times": {
-      "algeria": 1793212278.067935,
-      "france": 1793226810.7610364
+      "algeria": 1793227803.3400936,
+      "france": 1793227805.6778271
     },
     "last_deal_post_times": {
-      "algeria": 1793138744.5504558
+      "algeria": 1793227803.3509848
     }
   },
   "last_coin_reminder_time": 1793182579.2180297,
@@ -7266,7 +7282,8 @@
     "1005012633322402": "couponsglobal",
     "1005012249968766": "megaphonna",
     "9998886751": "test_channel",
-    "9998887440": "test_channel"
+    "9998887440": "test_channel",
+    "1005009200129898": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7614,7 +7631,8 @@
     "500ML Stainless Steel Vacuum Flask Gift Set": "couponsglobal",
     "SAMZHE Metal Lens Protector for iPhone 17 Pro Max": "couponsglobal",
     "SAMZHE Support Aluminum Graphics Card": "couponsglobal",
-    "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500": "megaphonna"
+    "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500": "megaphonna",
+    "كابل Ethernet Flat Cat 6 Cable 2meter  السعر💲 :": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -8466,7 +8484,18 @@
     "megaphonna:8498",
     "megaphonna:8497",
     "couponsglobal:48878",
-    "pcgamingpart:8003"
+    "pcgamingpart:8003",
+    "lodydeals:45595",
+    "lodydeals:45594",
+    "lodydeals:45593",
+    "lodydeals:45591",
+    "zedstoreonline:38641",
+    "zedstoreonline:38640",
+    "aniscoupons:33010",
+    "ecksdeal:5904",
+    "bnddeals:50873",
+    "megaphonna:8500",
+    "megaphonna:8499"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
