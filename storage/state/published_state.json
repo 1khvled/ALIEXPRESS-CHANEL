@@ -342,20 +342,24 @@
     "1005013479172067",
     "1005012199872142",
     "9998886358",
+    "1005013170854617",
     "1005010172572484",
     "1005012167596439",
     "1005005209037696",
+    "1005007145755647",
     "1005011559072337",
     "1005008430504420",
-    "1005010575865619",
-    "1005012483491590"
+    "1005012483491590",
+    "1005009234880101",
+    "1005012853585903",
+    "9998889488"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
     "1005010219205081": 1791192360.1916943,
-    "999111222": 1793276357.0227017,
-    "100500999912345": 1793186358.2688277,
-    "100500999954321": 1793269158.2688277,
+    "999111222": 1793279486.7551737,
+    "100500999912345": 1793189488.0598867,
+    "100500999954321": 1793272288.0598867,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
@@ -365,7 +369,7 @@
     "1005009627597591": 1790884233.6428,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1793265558.397856,
+    "100500777666555": 1793268688.1864831,
     "1005011778621042": 1792160254.9859293,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1791192944.201814,
@@ -383,7 +387,7 @@
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
-    "100500888999777": 1793261958.4617324,
+    "100500888999777": 1793265088.282272,
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
@@ -434,7 +438,7 @@
     "1005011991145678": 1790962541.57551,
     "1005011682821623": 1790962844.0034096,
     "9998885747": 1790965747.5380507,
-    "1005010129356058": 1793264838.5871994,
+    "1005010129356058": 1793267968.4733152,
     "9998885993": 1790965993.3792443,
     "1005012574108028": 1793276237.692456,
     "1005008599340405": 1791638441.843642,
@@ -492,7 +496,7 @@
     "1005006367419820": 1791056153.3979695,
     "1005013046831062": 1791056447.2532988,
     "1005006974721332": 1791056453.5992196,
-    "1005010266413614": 1791141939.4721515,
+    "1005010266413614": 1793279089.0185478,
     "1005009497821240": 1791117948.6585228,
     "1005011925142821": 1792061295.4212031,
     "9998883864": 1791063864.5866926,
@@ -533,7 +537,7 @@
     "1005013313539058": 1791482965.5086565,
     "9998889315": 1791589315.5172248,
     "COUPONS_54d30f00dccf": 1791626806.6018147,
-    "1005008776714223": 1792158003.7032418,
+    "1005008776714223": 1793279429.2056015,
     "9998886934": 1791626934.8945594,
     "9998887499": 1791627499.229838,
     "9998887532": 1791627532.2548609,
@@ -605,7 +609,7 @@
     "9998883549": 1792073549.4615705,
     "9998883836": 1792073836.8176863,
     "9998883963": 1792073963.7339156,
-    "1005010620269829": 1793278203.1732628,
+    "1005010620269829": 1793279082.9636364,
     "9998886219": 1792086219.2668676,
     "1005005875379717": 1792087000.9978776,
     "9998887185": 1792087185.8637784,
@@ -701,13 +705,17 @@
     "1005013479172067": 1793276192.7711725,
     "1005012199872142": 1793276220.2800016,
     "9998886358": 1793276358.3466215,
-    "1005010172572484": 1793278121.3665884,
-    "1005012167596439": 1793278129.3750014,
-    "1005005209037696": 1793278138.0800292,
-    "1005011559072337": 1793278150.3254101,
-    "1005008430504420": 1793278168.6975381,
-    "1005010575865619": 1793278184.0639546,
-    "1005012483491590": 1793278192.407213
+    "1005013170854617": 1793278959.3832097,
+    "1005010172572484": 1793278969.2747114,
+    "1005012167596439": 1793278979.5236633,
+    "1005005209037696": 1793278991.8471248,
+    "1005007145755647": 1793279003.6086628,
+    "1005011559072337": 1793279014.5630076,
+    "1005008430504420": 1793279040.5670838,
+    "1005012483491590": 1793279067.624665,
+    "1005009234880101": 1793279440.2445374,
+    "1005012853585903": 1793279458.874726,
+    "9998889488": 1793279488.1402335
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1061,21 +1069,25 @@
     "Honor Power 2 12/256",
     "OnePlus Turbo 6x  6/128GB",
     "Oneplus ACE 6 Ultra 12/256GB",
+    "VIVO Y600 Pro 8/128",
     "Oppo Find X9 12/256",
     "Oppo Find X9s Pro 12/256",
     "POCO F7  12/256",
+    "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz",
     "AMD Ryzen 9 9900X",
     "ONEPLUS 13 (12/256)",
-    "سعرو حالياً يفوق 11مليون",
-    "الأكثر طلباً في فترات سابقة"
+    "الأكثر طلباً في فترات سابقة",
+    "CUSU SSD 480GB",
+    "JUHOR Memory DDR5  32GB(16GBX2) 6000MHz",
+    "MSI PRO B850-P WIFI AMD B850 Motherboard AM5 used"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1793276357.0227017,
+    "Test Wireless Gaming Mouse X1": 1793279486.7551737,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
-    "Attack Shark R2 Mouse": 1793269158.2688277,
-    "Test Wrench Set": 1793276358.3466215,
+    "Attack Shark R2 Mouse": 1793272288.0598867,
+    "Test Wrench Set": 1793279488.1402335,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1791194142.1753953,
@@ -1107,8 +1119,8 @@
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
-    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1793186358.2688277,
-    "Attack Shark L80 PRO Wireless Mouse": 1793275458.4617324,
+    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1793189488.0598867,
+    "Attack Shark L80 PRO Wireless Mouse": 1793278588.282272,
     "الأكثر لبا لنهار اليوووم": 1790940343.7746465,
     "POCO C81 Pro 4/64": 1791114344.949536,
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
@@ -1142,7 +1154,7 @@
     "POCO C71 (3/64)": 1790947574.20351,
     "XIAOMI PAD7 (12/256)": 1791023149.808202,
     "REALME 14 pro (12/256)": 1791129948.3620403,
-    "HONOR X9D (12/256)": 1791141939.4721515,
+    "HONOR X9D (12/256)": 1793279089.0185478,
     "Honor 400  Smart  (6/128)": 1791042354.706192,
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": 1790949354.0364344,
     "Powerful Violent Fan 150000RPM": 1790949652.480052,
@@ -1152,8 +1164,8 @@
     "HONOR 600 PRO": 1790960475.7249138,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
-    "Xiaomi Pad 7 (12/256)": 1793264838.5871994,
-    "ONEPLUS TURBO 6X PRO 5G (8/128)": 1793278192.407213,
+    "Xiaomi Pad 7 (12/256)": 1793267968.4733152,
+    "ONEPLUS TURBO 6X PRO 5G (8/128)": 1793279067.624665,
     "CUSU SSD 512 GB Portable SSD External Drive": 1791200448.8235762,
     "HONOR  X80 PRO MAX (8/128)": 1791236020.742662,
     "WALRAM Sata SSD 512GB": 1790967962.6418507,
@@ -1428,13 +1440,17 @@
     "Honor Power 2 12/256": 1793276177.7089784,
     "OnePlus Turbo 6x  6/128GB": 1793276192.7711725,
     "Oneplus ACE 6 Ultra 12/256GB": 1793276220.2800016,
-    "Oppo Find X9 12/256": 1793278121.3665884,
-    "Oppo Find X9s Pro 12/256": 1793278129.3750014,
-    "POCO F7  12/256": 1793278138.0800292,
-    "AMD Ryzen 9 9900X": 1793278150.3254101,
-    "ONEPLUS 13 (12/256)": 1793278168.6975381,
-    "سعرو حالياً يفوق 11مليون": 1793278184.0639546,
-    "الأكثر طلباً في فترات سابقة": 1793278203.1732628
+    "VIVO Y600 Pro 8/128": 1793278959.3832097,
+    "Oppo Find X9 12/256": 1793278969.2747114,
+    "Oppo Find X9s Pro 12/256": 1793278979.5236633,
+    "POCO F7  12/256": 1793278991.8471248,
+    "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz": 1793279003.6086628,
+    "AMD Ryzen 9 9900X": 1793279014.5630076,
+    "ONEPLUS 13 (12/256)": 1793279040.5670838,
+    "الأكثر طلباً في فترات سابقة": 1793279082.9636364,
+    "CUSU SSD 480GB": 1793279429.2056015,
+    "JUHOR Memory DDR5  32GB(16GBX2) 6000MHz": 1793279440.2445374,
+    "MSI PRO B850-P WIFI AMD B850 Motherboard AM5 used": 1793279458.874726
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2223,50 +2239,56 @@
     "aniscoupons:33036",
     "megaphonna:8509",
     "test_channel:1793276358",
+    "zedstoreonline:38695",
     "zedstoreonline:38694",
     "zedstoreonline:38693",
     "zedstoreonline:38692",
+    "aniscoupons:33055",
     "aniscoupons:33053",
     "megaphonna:8519",
-    "megaphonna:8516",
     "megaphonna:8515",
-    "megaphonna:8513"
+    "megaphonna:8513",
+    "megaphonna:8510",
+    "zedstoreonline:38697",
+    "aniscoupons:33054",
+    "pcgamingpart:8019",
+    "test_channel:1793279488"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792711145.3171253,
-  "last_run_time": 1793278203.1732628,
+  "last_run_time": 1793279488.479431,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33053,
-      "last_check_time": 1793278158.6817138
+      "last_message_id": 33055,
+      "last_check_time": 1793279440.2445374
     },
     "ecksdeal": {
       "last_message_id": 5911,
-      "last_check_time": 1793278159.4537094
+      "last_check_time": 1793279453.4319398
     },
     "lodydeals": {
       "last_message_id": 45595,
-      "last_check_time": 1793276358.4675045
+      "last_check_time": 1793279488.3275368
     },
     "bnddeals": {
       "last_message_id": 50884,
       "last_check_time": 1793275705.7519362
     },
     "test_channel": {
-      "last_message_id": 1793276358,
-      "last_check_time": 1793276358.3466215
+      "last_message_id": 1793279488,
+      "last_check_time": 1793279488.1402335
     },
     "pcgamingpart": {
-      "last_message_id": 8018,
-      "last_check_time": 1793278159.9116518
+      "last_message_id": 8019,
+      "last_check_time": 1793279460.95708
     },
     "zedstoreonline": {
-      "last_message_id": 38694,
-      "last_check_time": 1793278143.7373576
+      "last_message_id": 38697,
+      "last_check_time": 1793279435.6680276
     },
     "megaphonna": {
       "last_message_id": 8519,
-      "last_check_time": 1793278206.4307768
+      "last_check_time": 1793279488.479431
     },
     "couponsglobal": {
       "last_message_id": 48880,
@@ -2370,7 +2392,7 @@
     "1005010470699571": 24.56,
     "1005012741634118": 26.29,
     "1005008554596598": 15.4,
-    "1005008776714223": 45.7,
+    "1005008776714223": 24.8,
     "1005010306498953": 1.46,
     "1005010338761787": 1.49,
     "1005012265051745": 246.04,
@@ -2402,7 +2424,7 @@
     "1005006367419820": 5.89,
     "1005013046831062": 5.29,
     "1005006974721332": 3.09,
-    "1005010266413614": 294.0,
+    "1005010266413614": 276.0,
     "1005009497821240": 24.73,
     "1005011925142821": 263.0,
     "1005010536089199": 36.45,
@@ -2537,13 +2559,16 @@
     "1005012399830182": 479.0,
     "1005013479172067": 218.2,
     "1005012199872142": 471.9,
+    "1005013170854617": 262.6,
     "1005010172572484": 509.0,
     "1005012167596439": 578.0,
     "1005005209037696": 328.0,
+    "1005007145755647": 361.26,
     "1005011559072337": 313.9,
     "1005008430504420": 474.4,
-    "1005010575865619": 373.0,
-    "1005012483491590": 246.0
+    "1005012483491590": 246.0,
+    "1005009234880101": 355.0,
+    "1005012853585903": 123.64
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -7259,84 +7284,134 @@
       "timestamp": 1793276237.692456,
       "status": "ACTIVE"
     },
+    "zedstoreonline:38695": {
+      "channel_msg_id": 1083,
+      "product_id": "1005013170854617",
+      "title": "VIVO Y600 Pro 8/128",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38695,
+      "price": 262.6,
+      "timestamp": 1793278959.3832097,
+      "status": "ACTIVE"
+    },
     "zedstoreonline:38694": {
-      "channel_msg_id": 1075,
+      "channel_msg_id": 1084,
       "product_id": "1005010172572484",
       "title": "Oppo Find X9 12/256",
       "channel": "zedstoreonline",
       "source_msg_id": 38694,
       "price": 509.0,
-      "timestamp": 1793278121.3665884,
+      "timestamp": 1793278969.2747114,
       "status": "ACTIVE"
     },
     "zedstoreonline:38693": {
-      "channel_msg_id": 1076,
+      "channel_msg_id": 1085,
       "product_id": "1005012167596439",
       "title": "Oppo Find X9s Pro 12/256",
       "channel": "zedstoreonline",
       "source_msg_id": 38693,
       "price": 578.0,
-      "timestamp": 1793278129.3750014,
+      "timestamp": 1793278979.5236633,
       "status": "ACTIVE"
     },
     "zedstoreonline:38692": {
-      "channel_msg_id": 1077,
+      "channel_msg_id": 1086,
       "product_id": "1005005209037696",
       "title": "POCO F7  12/256",
       "channel": "zedstoreonline",
       "source_msg_id": 38692,
       "price": 328.0,
-      "timestamp": 1793278138.0800292,
+      "timestamp": 1793278991.8471248,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33055": {
+      "channel_msg_id": 1087,
+      "product_id": "1005007145755647",
+      "title": "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz",
+      "channel": "aniscoupons",
+      "source_msg_id": 33055,
+      "price": 361.26,
+      "timestamp": 1793279003.6086628,
       "status": "ACTIVE"
     },
     "aniscoupons:33053": {
-      "channel_msg_id": 1078,
+      "channel_msg_id": 1088,
       "product_id": "1005011559072337",
       "title": "AMD Ryzen 9 9900X",
       "channel": "aniscoupons",
       "source_msg_id": 33053,
       "price": 313.9,
-      "timestamp": 1793278150.3254101,
+      "timestamp": 1793279014.5630076,
       "status": "ACTIVE"
     },
     "megaphonna:8519": {
-      "channel_msg_id": 1079,
+      "channel_msg_id": 1089,
       "product_id": "1005008430504420",
       "title": "ONEPLUS 13 (12/256)",
       "channel": "megaphonna",
       "source_msg_id": 8519,
       "price": 474.4,
-      "timestamp": 1793278168.6975381,
-      "status": "ACTIVE"
-    },
-    "megaphonna:8516": {
-      "channel_msg_id": 1080,
-      "product_id": "1005010575865619",
-      "title": "سعرو حالياً يفوق 11مليون",
-      "channel": "megaphonna",
-      "source_msg_id": 8516,
-      "price": 373.0,
-      "timestamp": 1793278184.0639546,
+      "timestamp": 1793279040.5670838,
       "status": "ACTIVE"
     },
     "megaphonna:8515": {
-      "channel_msg_id": 1081,
+      "channel_msg_id": 1090,
       "product_id": "1005012483491590",
       "title": "ONEPLUS TURBO 6X PRO 5G (8/128)",
       "channel": "megaphonna",
       "source_msg_id": 8515,
       "price": 246.0,
-      "timestamp": 1793278192.407213,
+      "timestamp": 1793279067.624665,
       "status": "ACTIVE"
     },
     "megaphonna:8513": {
-      "channel_msg_id": 1082,
+      "channel_msg_id": 1091,
       "product_id": "1005010620269829",
       "title": "الأكثر طلباً في فترات سابقة",
       "channel": "megaphonna",
       "source_msg_id": 8513,
       "price": 229.0,
-      "timestamp": 1793278203.1732628,
+      "timestamp": 1793279082.9636364,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8510": {
+      "channel_msg_id": 1092,
+      "product_id": "1005010266413614",
+      "title": "HONOR X9D (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8510,
+      "price": 276.0,
+      "timestamp": 1793279089.0185478,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38697": {
+      "channel_msg_id": 1093,
+      "product_id": "1005008776714223",
+      "title": "CUSU SSD 480GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38697,
+      "price": 24.8,
+      "timestamp": 1793279429.2056015,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33054": {
+      "channel_msg_id": 1094,
+      "product_id": "1005009234880101",
+      "title": "JUHOR Memory DDR5  32GB(16GBX2) 6000MHz",
+      "channel": "aniscoupons",
+      "source_msg_id": 33054,
+      "price": 355.0,
+      "timestamp": 1793279440.2445374,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:8019": {
+      "channel_msg_id": 1095,
+      "product_id": "1005012853585903",
+      "title": "MSI PRO B850-P WIFI AMD B850 Motherboard AM5 used",
+      "channel": "pcgamingpart",
+      "source_msg_id": 8019,
+      "price": 123.64,
+      "timestamp": 1793279458.874726,
       "status": "ACTIVE"
     }
   },
@@ -7346,17 +7421,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793278207.6890557,
+    "last_deal_post_time": 1793279466.7573826,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793278210.4874525,
+    "last_sweep_time": 1793279466.7295775,
     "last_sweep_times": {
-      "algeria": 1793278207.677578,
-      "france": 1793278210.4874525
+      "algeria": 1793279466.7295775,
+      "france": 1793270757.800055
     },
     "last_deal_post_times": {
-      "algeria": 1793278207.6890557
+      "algeria": 1793279466.7573826
     }
   },
   "last_coin_reminder_time": 1793182579.2180297,
@@ -7461,7 +7536,7 @@
     "1005010470699571": "aniscoupons",
     "1005012741634118": "couponsglobal",
     "1005008554596598": "bnddeals",
-    "1005008776714223": "aniscoupons",
+    "1005008776714223": "zedstoreonline",
     "1005010306498953": "lodydeals",
     "1005010338761787": "lodydeals",
     "1005012265051745": "lodydeals",
@@ -7717,13 +7792,17 @@
     "1005013479172067": "aniscoupons",
     "1005012199872142": "aniscoupons",
     "9998886358": "test_channel",
+    "1005013170854617": "zedstoreonline",
     "1005010172572484": "zedstoreonline",
     "1005012167596439": "zedstoreonline",
     "1005005209037696": "zedstoreonline",
+    "1005007145755647": "aniscoupons",
     "1005011559072337": "aniscoupons",
     "1005008430504420": "megaphonna",
-    "1005010575865619": "megaphonna",
-    "1005012483491590": "megaphonna"
+    "1005012483491590": "megaphonna",
+    "1005009234880101": "aniscoupons",
+    "1005012853585903": "pcgamingpart",
+    "9998889488": "test_channel"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -8087,13 +8166,17 @@
     "Honor Power 2 12/256": "zedstoreonline",
     "OnePlus Turbo 6x  6/128GB": "aniscoupons",
     "Oneplus ACE 6 Ultra 12/256GB": "aniscoupons",
+    "VIVO Y600 Pro 8/128": "zedstoreonline",
     "Oppo Find X9 12/256": "zedstoreonline",
     "Oppo Find X9s Pro 12/256": "zedstoreonline",
     "POCO F7  12/256": "zedstoreonline",
+    "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz": "aniscoupons",
     "AMD Ryzen 9 9900X": "aniscoupons",
     "ONEPLUS 13 (12/256)": "megaphonna",
-    "سعرو حالياً يفوق 11مليون": "megaphonna",
-    "الأكثر طلباً في فترات سابقة": "megaphonna"
+    "الأكثر طلباً في فترات سابقة": "megaphonna",
+    "CUSU SSD 480GB": "zedstoreonline",
+    "JUHOR Memory DDR5  32GB(16GBX2) 6000MHz": "aniscoupons",
+    "MSI PRO B850-P WIFI AMD B850 Motherboard AM5 used": "pcgamingpart"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -9030,7 +9113,9 @@
     "aniscoupons:33051",
     "megaphonna:8518",
     "megaphonna:8517",
-    "megaphonna:8514"
+    "megaphonna:8516",
+    "megaphonna:8514",
+    "zedstoreonline:38696"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,

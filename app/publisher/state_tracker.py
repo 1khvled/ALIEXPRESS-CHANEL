@@ -284,6 +284,22 @@ def is_same_deal_title(title_a: str, title_b: str) -> bool:
     if not toks_a or not toks_b:
         return False
 
+    # Check distinct brand names (e.g. KingSpec vs JUHOR or Crucial vs Samsung)
+    KNOWN_BRANDS = {
+        'kingspec', 'juhor', 'lexar', 'samsung', 'kingston', 'crucial', 'fanxiang', 'movespeed',
+        'corsair', 'xraydisk', 'netac', 'colorful', 'cusu', 'asgard', 'gloway', 'walram',
+        'somnambulist', 'kodak', 'sandisk', 'lenovo', 'xiaomi', 'redmi', 'poco', 'realme',
+        'oppo', 'vivo', 'iqoo', 'oneplus', 'honor', 'huawei', 'motorola', 'infinix', 'tecno',
+        'apple', 'google', 'sony', 'haylou', 'qcy', 'anker', 'soundcore', 'ugreen', 'baseus',
+        'essager', 'toocki', 'kuulaa', 'mcdodo', 'edifier', 'soundpeats', 'bluedio', 'zeblaze',
+        'colmi', 'amazfit', 'chuwi', 'teclast', 'alldocube', 'blackview', 'oukitel', 'ulefone',
+        'doogee', 'cubot', 'umidigi', 'amd', 'intel', 'nvidia', 'ryzen', 'geforce', 'radeon'
+    }
+    brands_a = toks_a.intersection(KNOWN_BRANDS)
+    brands_b = toks_b.intersection(KNOWN_BRANDS)
+    if brands_a and brands_b and not brands_a.intersection(brands_b):
+        return False
+
     # Check distinct model codes (e.g. Attack Shark R1 vs Attack Shark X3)
     models_a = extract_model_identifiers(toks_a)
     models_b = extract_model_identifiers(toks_b)

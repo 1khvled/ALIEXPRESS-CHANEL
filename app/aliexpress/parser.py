@@ -1117,7 +1117,9 @@ def extract_clean_title(text: str) -> Optional[str]:
         "أضف إلى السلة", "اضف إلى السلة", "أضف في السلة", "اضف في السلة", "أضف للسلة", "اضف للسلة",
         "أضف الآن", "اضف الان", "أضف للمفضلة", "اضف للمفضلة", "دير في السلة", "ديرو في السلة",
         "عمرو السلة", "عمّروا السلة", "البيع يبدأ", "البيع يبدا", "يوم الأحد", "يوم الاحد",
-        "يوم 1 نوفمبر", "نهار التخفيضات", "تسخينات", "تسخينات 11.11", "سعر أرض", "سعر ارض"
+        "يوم 1 نوفمبر", "نهار التخفيضات", "تسخينات", "تسخينات 11.11", "سعر أرض", "سعر ارض",
+        "متوسط سعره", "سعره حالياً", "سعره حاليا", "سعرو حالياً", "سعرو حاليا", "في البلاد",
+        "السوق الجزائرية", "السوق الجزائري", "عليه طلب"
     ]
 
     # Normalize tatweel and remove multiple exclamation/fire emojis
@@ -1137,6 +1139,10 @@ def extract_clean_title(text: str) -> Optional[str]:
         # Reject bundle listings with multiple slashes (e.g. بوشات / كابل / شاحن / ماوس)
         if cand_str.count('/') >= 2 or cand_str.count('+') >= 3:
             return True
+        # Reject market pricing notes / currency mentions in titles
+        if any(w in norm for w in ["متوسط سعره", "سعره", "سعرو", "في البلاد", "السوق الجزائرية", "دج", "dzd"]):
+            return True
+
         # Reject candidate titles starting with description verbs
         if any(norm.startswith(v) for v in ["يلحقك", "تأتي", "تحتوي", "يأتي", "معاها", "طريقة", "كيفية", "شرح", "متوافق", "متوافقة", "يدعم", "تدعم", "أجهزة", "اجهزة"]):
             return True
