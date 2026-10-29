@@ -251,6 +251,8 @@ def extract_title_tokens(title: str) -> Set[str]:
     norm = re.sub(r'\b\d+(?:gb|tb|g)?\s*[\+/]\s*\d+(?:gb|tb|g)?\b', ' ', norm, flags=re.IGNORECASE)
     # Convert remaining '+' (like Pro+ or S24+) to 'plus'
     norm = re.sub(r'(\b\w+)\+', r'\1 plus', norm)
+    # Combine series/model names with generation numbers like 'turbo 2' -> 'turbo2', 'rt 2' -> 'rt2', 'pad 6' -> 'pad6'
+    norm = re.sub(r'\b([a-z]{2,})\s+([0-9]{1,2})\b', r'\1\2', norm)
     cleaned = re.sub(r'[\$€\(\)\[\],.;:!?/\\|\-_~+]+', ' ', norm)
     tokens = set()
     for w in cleaned.split():
@@ -305,6 +307,12 @@ def is_same_deal_title(title_a: str, title_b: str) -> bool:
     models_b = extract_model_identifiers(toks_b)
     if models_a and models_b and not models_a.intersection(models_b):
         return False
+    if (models_a and not models_b) or (models_b and not models_a):
+        # If one title has a numbered version/generation of a word the other has (e.g. turbo vs turbo2)
+        for m in (models_a or models_b):
+            base = re.sub(r'\d+', '', m)
+            if base and (base in toks_a or base in toks_b):
+                return False
 
     # Check product category mismatch (e.g. realme phone vs realme pad)
     if ("pad" in toks_a and "pad" not in toks_b) or ("pad" in toks_b and "pad" not in toks_a):
@@ -312,7 +320,11 @@ def is_same_deal_title(title_a: str, title_b: str) -> bool:
 
     # Check modifiers (Pro, Lite, Ultra, Max, Plus, Mini, Neo, etc.)
     # e.g. "realme P3" vs "realme P3 Lite" or "POCO X6" vs "POCO X6 Pro"
-    MODIFIER_TOKENS = {'pro', 'lite', 'ultra', 'plus', 'max', 'mini', 'neo', 'se', 'fe', 'youth'}
+    MODIFIER_TOKENS = {
+        'pro', 'lite', 'ultra', 'plus', 'max', 'mini', 'neo', 'se', 'fe', 'youth',
+        'turbo', 'turbo2', 'turbo3', 'power', 'speed', 'gt', 'ace', 'prime', 'play',
+        'air', 'edge', 'master', 'racing', 'active', 'rt', 'rt2'
+    }
     mods_a = toks_a.intersection(MODIFIER_TOKENS)
     mods_b = toks_b.intersection(MODIFIER_TOKENS)
     if mods_a != mods_b:

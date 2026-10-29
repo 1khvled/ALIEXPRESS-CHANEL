@@ -78,12 +78,13 @@ async def test_facebook_publish_deal_prioritizes_high_res_url():
         mock_resp.json.return_value = {"id": "photo_9999", "post_id": "12345_9999"}
         mock_post.return_value = mock_resp
 
-        ok, post_id, err = await pub.publish_deal(
-            caption="High Res Deal",
-            deal_link="https://s.click.aliexpress.com/e/_test",
-            image_url="https://ae01.alicdn.com/kf/S456.jpg_350x350.jpg",
-            image_bytes=b"low_res_framed_bytes"
-        )
+        with patch("app.publisher.facebook.is_fb_duplicate", return_value=False):
+            ok, post_id, err = await pub.publish_deal(
+                caption="High Res Deal",
+                deal_link="https://s.click.aliexpress.com/e/_test_high_res",
+                image_url="https://ae01.alicdn.com/kf/S456.jpg_350x350.jpg",
+                image_bytes=b"low_res_framed_bytes"
+            )
 
         assert ok is True
         assert post_id == "12345_9999"

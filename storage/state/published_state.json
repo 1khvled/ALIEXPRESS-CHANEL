@@ -353,14 +353,25 @@
     "1005009234880101",
     "1005012853585903",
     "9998889488",
-    "999888261"
+    "999888261",
+    "1005008785149427",
+    "1005012766583284",
+    "1005011557016158",
+    "1005013451224718",
+    "1005009120899585",
+    "1005010620332784",
+    "1005013489523241",
+    "1005013422094858",
+    "1005012959515066",
+    "9998882843",
+    "9998883032"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
     "1005010219205081": 1791192360.1916943,
-    "999111222": 1793280259.958721,
-    "100500999912345": 1793190260.9896538,
-    "100500999954321": 1793273060.9896538,
+    "999111222": 1793283031.2902648,
+    "100500999912345": 1793193032.52555,
+    "100500999954321": 1793275832.52555,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
@@ -370,7 +381,7 @@
     "1005009627597591": 1790884233.6428,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1793269461.1098473,
+    "100500777666555": 1793272232.658002,
     "1005011778621042": 1792160254.9859293,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1791192944.201814,
@@ -388,7 +399,7 @@
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
-    "100500888999777": 1793265861.1645348,
+    "100500888999777": 1793268632.7179596,
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
@@ -419,7 +430,7 @@
     "9998885726": 1790945726.205554,
     "9998885776": 1791675776.96059,
     "9998886147": 1790946147.1871526,
-    "999888777111": 1793278464.082374,
+    "999888777111": 1793281235.5566409,
     "9998886362": 1790946362.071869,
     "1005012407874415": 1791061256.0753598,
     "9998887189": 1790947189.8634577,
@@ -439,7 +450,7 @@
     "1005011991145678": 1790962541.57551,
     "1005011682821623": 1790962844.0034096,
     "9998885747": 1790965747.5380507,
-    "1005010129356058": 1793268741.276951,
+    "1005010129356058": 1793271512.8397763,
     "9998885993": 1790965993.3792443,
     "1005012574108028": 1793276237.692456,
     "1005008599340405": 1791638441.843642,
@@ -549,8 +560,8 @@
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
     "COUPONS_Brand Day Sale": 1791676848.283345,
-    "COUPONS_d9b8b196": 1793280259.7656767,
-    "COUPONS_Test Event 2026": 1793280259.7656767,
+    "COUPONS_d9b8b196": 1793283031.123808,
+    "COUPONS_Test Event 2026": 1793283031.123808,
     "9998886905": 1791676905.095083,
     "9998887197": 1791677197.2988765,
     "9998887496": 1791677496.6959877,
@@ -634,7 +645,7 @@
     "9998881949": 1792161949.41664,
     "9998882334": 1792162334.582227,
     "9998882360": 1792162360.6633363,
-    "9998882475": 1792162475.4289126,
+    "9998882475": 1793282475.663889,
     "9998882568": 1792162568.078144,
     "1005010369693975": 1792166319.9887776,
     "1005006442452857": 1792166326.0335298,
@@ -717,7 +728,18 @@
     "1005009234880101": 1793279440.2445374,
     "1005012853585903": 1793279458.874726,
     "9998889488": 1793279488.1402335,
-    "999888261": 1793280261.0669627
+    "999888261": 1793280261.0669627,
+    "1005008785149427": 1793281845.5693822,
+    "1005012766583284": 1793281852.7664962,
+    "1005011557016158": 1793281863.7129755,
+    "1005013451224718": 1793281883.4004252,
+    "1005009120899585": 1793281894.0357482,
+    "1005010620332784": 1793282581.4093866,
+    "1005013489523241": 1793282597.9316623,
+    "1005013422094858": 1793282614.1434958,
+    "1005012959515066": 1793282624.5538614,
+    "9998882843": 1793282843.2823777,
+    "9998883032": 1793283032.609285
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1081,15 +1103,24 @@
     "الأكثر طلباً في فترات سابقة",
     "CUSU SSD 480GB",
     "JUHOR Memory DDR5  32GB(16GBX2) 6000MHz",
-    "MSI PRO B850-P WIFI AMD B850 Motherboard AM5 used"
+    "MSI PRO B850-P WIFI AMD B850 Motherboard AM5 used",
+    "CUSU M2 SSD 1TB",
+    "ASRock X570 PHANTOM GAMING AM4 Motherboard",
+    "realme P4 Power 8/256",
+    "Realme GT8 Pro",
+    "Gigabyte B650M GAMING WIFI DDR5",
+    "Honor 500 Pro 12/256GB",
+    "Honor Win Turbo 2 8/256",
+    "Honor Win RT2 12/256",
+    "ViVO X300E 12/256"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1793280259.958721,
+    "Test Wireless Gaming Mouse X1": 1793283031.2902648,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
-    "Attack Shark R2 Mouse": 1793273060.9896538,
-    "Test Wrench Set": 1793280261.0669627,
+    "Attack Shark R2 Mouse": 1793275832.52555,
+    "Test Wrench Set": 1793283032.609285,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1791194142.1753953,
@@ -1121,8 +1152,8 @@
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
-    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1793190260.9896538,
-    "Attack Shark L80 PRO Wireless Mouse": 1793279361.1645348,
+    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1793193032.52555,
+    "Attack Shark L80 PRO Wireless Mouse": 1793282132.7179596,
     "الأكثر لبا لنهار اليوووم": 1790940343.7746465,
     "POCO C81 Pro 4/64": 1791114344.949536,
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
@@ -1166,7 +1197,7 @@
     "HONOR 600 PRO": 1790960475.7249138,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
-    "Xiaomi Pad 7 (12/256)": 1793268741.276951,
+    "Xiaomi Pad 7 (12/256)": 1793271512.8397763,
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1793279067.624665,
     "CUSU SSD 512 GB Portable SSD External Drive": 1791200448.8235762,
     "HONOR  X80 PRO MAX (8/128)": 1791236020.742662,
@@ -1452,7 +1483,16 @@
     "الأكثر طلباً في فترات سابقة": 1793279082.9636364,
     "CUSU SSD 480GB": 1793279429.2056015,
     "JUHOR Memory DDR5  32GB(16GBX2) 6000MHz": 1793279440.2445374,
-    "MSI PRO B850-P WIFI AMD B850 Motherboard AM5 used": 1793279458.874726
+    "MSI PRO B850-P WIFI AMD B850 Motherboard AM5 used": 1793279458.874726,
+    "CUSU M2 SSD 1TB": 1793281845.5693822,
+    "ASRock X570 PHANTOM GAMING AM4 Motherboard": 1793281852.7664962,
+    "realme P4 Power 8/256": 1793281863.7129755,
+    "Realme GT8 Pro": 1793281883.4004252,
+    "Gigabyte B650M GAMING WIFI DDR5": 1793281894.0357482,
+    "Honor 500 Pro 12/256GB": 1793282581.4093866,
+    "Honor Win Turbo 2 8/256": 1793282597.9316623,
+    "Honor Win RT2 12/256": 1793282614.1434958,
+    "ViVO X300E 12/256": 1793282624.5538614
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2255,47 +2295,63 @@
     "aniscoupons:33054",
     "pcgamingpart:8019",
     "test_channel:1793279488",
-    "test_channel:1793280261"
+    "test_channel:1793280261",
+    "zedstoreonline:38702",
+    "zedstoreonline:38701",
+    "zedstoreonline:38699",
+    "aniscoupons:33060",
+    "aniscoupons:33058",
+    "test_channel:1793282475",
+    "zedstoreonline:38703",
+    "zedstoreonline:38691",
+    "zedstoreonline:38689",
+    "zedstoreonline:38688",
+    "test_channel:1793282843",
+    "test_channel:1793283032"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792711145.3171253,
-  "last_run_time": 1793280261.2825444,
+  "last_run_time": 1793283032.8455553,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33055,
-      "last_check_time": 1793279440.2445374
+      "last_message_id": 33061,
+      "last_check_time": 1793282654.7729669
     },
     "ecksdeal": {
       "last_message_id": 5911,
-      "last_check_time": 1793279453.4319398
+      "last_check_time": 1793282655.798789
     },
     "lodydeals": {
       "last_message_id": 45595,
-      "last_check_time": 1793280261.170689
+      "last_check_time": 1793283032.7238317
     },
     "bnddeals": {
       "last_message_id": 50884,
       "last_check_time": 1793275705.7519362
     },
     "test_channel": {
-      "last_message_id": 1793280261,
-      "last_check_time": 1793280261.0669627
+      "last_message_id": 1793283032,
+      "last_check_time": 1793283032.609285
     },
     "pcgamingpart": {
       "last_message_id": 8019,
-      "last_check_time": 1793279460.95708
+      "last_check_time": 1793282656.416983
     },
     "zedstoreonline": {
-      "last_message_id": 38697,
-      "last_check_time": 1793279435.6680276
+      "last_message_id": 38703,
+      "last_check_time": 1793282626.6384745
     },
     "megaphonna": {
-      "last_message_id": 8519,
-      "last_check_time": 1793280261.2825444
+      "last_message_id": 8521,
+      "last_check_time": 1793283032.8455553
     },
     "couponsglobal": {
       "last_message_id": 48880,
       "last_check_time": 1793274796.0547702
+    },
+    "alidealsdz": {
+      "last_message_id": 153,
+      "last_check_time": 1793282667.026614
     }
   },
   "published_product_prices": {
@@ -2571,7 +2627,16 @@
     "1005008430504420": 474.4,
     "1005012483491590": 246.0,
     "1005009234880101": 355.0,
-    "1005012853585903": 123.64
+    "1005012853585903": 123.64,
+    "1005008785149427": 100.0,
+    "1005012766583284": 88.3,
+    "1005011557016158": 298.0,
+    "1005013451224718": 527.0,
+    "1005009120899585": 134.0,
+    "1005010620332784": 480.0,
+    "1005013489523241": 406.0,
+    "1005013422094858": 554.0,
+    "1005012959515066": 587.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -7416,6 +7481,96 @@
       "price": 123.64,
       "timestamp": 1793279458.874726,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38702": {
+      "channel_msg_id": 1096,
+      "product_id": "1005008785149427",
+      "title": "CUSU M2 SSD 1TB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38702,
+      "price": 100.0,
+      "timestamp": 1793281845.5693822,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38701": {
+      "channel_msg_id": 1097,
+      "product_id": "1005012766583284",
+      "title": "ASRock X570 PHANTOM GAMING AM4 Motherboard",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38701,
+      "price": 88.3,
+      "timestamp": 1793281852.7664962,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38699": {
+      "channel_msg_id": 1098,
+      "product_id": "1005011557016158",
+      "title": "realme P4 Power 8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38699,
+      "price": 298.0,
+      "timestamp": 1793281863.7129755,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33060": {
+      "channel_msg_id": 1099,
+      "product_id": "1005013451224718",
+      "title": "Realme GT8 Pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 33060,
+      "price": 527.0,
+      "timestamp": 1793281883.4004252,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33058": {
+      "channel_msg_id": 1100,
+      "product_id": "1005009120899585",
+      "title": "Gigabyte B650M GAMING WIFI DDR5",
+      "channel": "aniscoupons",
+      "source_msg_id": 33058,
+      "price": 134.0,
+      "timestamp": 1793281894.0357482,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38703": {
+      "channel_msg_id": 1101,
+      "product_id": "1005010620332784",
+      "title": "Honor 500 Pro 12/256GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38703,
+      "price": 480.0,
+      "timestamp": 1793282581.4093866,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38691": {
+      "channel_msg_id": 1102,
+      "product_id": "1005013489523241",
+      "title": "Honor Win Turbo 2 8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38691,
+      "price": 406.0,
+      "timestamp": 1793282597.9316623,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38689": {
+      "channel_msg_id": 1103,
+      "product_id": "1005013422094858",
+      "title": "Honor Win RT2 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38689,
+      "price": 554.0,
+      "timestamp": 1793282614.1434958,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38688": {
+      "channel_msg_id": 1104,
+      "product_id": "1005012959515066",
+      "title": "ViVO X300E 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38688,
+      "price": 587.0,
+      "timestamp": 1793282624.5538614,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -7424,17 +7579,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793279466.7573826,
+    "last_deal_post_time": 1793282667.4106653,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793279466.7295775,
+    "last_sweep_time": 1793282667.38497,
     "last_sweep_times": {
-      "algeria": 1793279466.7295775,
+      "algeria": 1793282667.38497,
       "france": 1793270757.800055
     },
     "last_deal_post_times": {
-      "algeria": 1793279466.7573826
+      "algeria": 1793282667.4106653
     }
   },
   "last_coin_reminder_time": 1793182579.2180297,
@@ -7806,7 +7961,18 @@
     "1005009234880101": "aniscoupons",
     "1005012853585903": "pcgamingpart",
     "9998889488": "test_channel",
-    "999888261": "test_channel"
+    "999888261": "test_channel",
+    "1005008785149427": "zedstoreonline",
+    "1005012766583284": "zedstoreonline",
+    "1005011557016158": "zedstoreonline",
+    "1005013451224718": "aniscoupons",
+    "1005009120899585": "aniscoupons",
+    "1005010620332784": "zedstoreonline",
+    "1005013489523241": "zedstoreonline",
+    "1005013422094858": "zedstoreonline",
+    "1005012959515066": "zedstoreonline",
+    "9998882843": "test_channel",
+    "9998883032": "test_channel"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -8180,7 +8346,16 @@
     "الأكثر طلباً في فترات سابقة": "megaphonna",
     "CUSU SSD 480GB": "zedstoreonline",
     "JUHOR Memory DDR5  32GB(16GBX2) 6000MHz": "aniscoupons",
-    "MSI PRO B850-P WIFI AMD B850 Motherboard AM5 used": "pcgamingpart"
+    "MSI PRO B850-P WIFI AMD B850 Motherboard AM5 used": "pcgamingpart",
+    "CUSU M2 SSD 1TB": "zedstoreonline",
+    "ASRock X570 PHANTOM GAMING AM4 Motherboard": "zedstoreonline",
+    "realme P4 Power 8/256": "zedstoreonline",
+    "Realme GT8 Pro": "aniscoupons",
+    "Gigabyte B650M GAMING WIFI DDR5": "aniscoupons",
+    "Honor 500 Pro 12/256GB": "zedstoreonline",
+    "Honor Win Turbo 2 8/256": "zedstoreonline",
+    "Honor Win RT2 12/256": "zedstoreonline",
+    "ViVO X300E 12/256": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -8279,7 +8454,9 @@
     "test_rem_7f7fe91f": "2026-10-02",
     "test_rem_eea336b8": "2026-10-02",
     "test_rem_0cfbde77": "2026-10-02",
-    "test_rem_b5bfa4e8": "2026-10-02"
+    "test_rem_b5bfa4e8": "2026-10-02",
+    "test_rem_2b61a2e8": "2026-10-02",
+    "test_rem_29a6ceca": "2026-10-02"
   },
   "channel_announcements_history": {
     "china_holiday_shipping_delay": "2026-10-02",
@@ -8373,7 +8550,9 @@
     "test_tag_91e294": "2026-10-02",
     "test_tag_44bd13": "2026-10-02",
     "test_tag_349a36": "2026-10-02",
-    "test_tag_ceafed": "2026-10-02"
+    "test_tag_ceafed": "2026-10-02",
+    "test_tag_70b040": "2026-10-02",
+    "test_tag_bd08e4": "2026-10-02"
   },
   "daily_tajmi3at_history": {
     "2026-10-03": {
@@ -9079,7 +9258,6 @@
     "megaphonna:8502",
     "megaphonna:8501",
     "couponsglobal:48880",
-    "zedstoreonline:38689",
     "zedstoreonline:38683",
     "aniscoupons:33049",
     "aniscoupons:33048",
@@ -9094,7 +9272,6 @@
     "bnddeals:50875",
     "bnddeals:50874",
     "megaphonna:8507",
-    "zedstoreonline:38691",
     "aniscoupons:33050",
     "aniscoupons:33035",
     "aniscoupons:33034",
@@ -9116,39 +9293,43 @@
     "megaphonna:8508",
     "megaphonna:8506",
     "megaphonna:8505",
-    "aniscoupons:33051",
     "megaphonna:8518",
     "megaphonna:8517",
     "megaphonna:8516",
     "megaphonna:8514",
-    "zedstoreonline:38696"
+    "zedstoreonline:38696",
+    "zedstoreonline:38700",
+    "zedstoreonline:38698",
+    "aniscoupons:33059",
+    "aniscoupons:33056",
+    "alidealsdz:133",
+    "alidealsdz:134",
+    "alidealsdz:135",
+    "alidealsdz:136",
+    "alidealsdz:137",
+    "alidealsdz:138",
+    "alidealsdz:139",
+    "alidealsdz:140",
+    "aniscoupons:33061",
+    "aniscoupons:33051",
+    "megaphonna:8521",
+    "alidealsdz:153",
+    "alidealsdz:151",
+    "alidealsdz:150",
+    "alidealsdz:149",
+    "alidealsdz:148",
+    "alidealsdz:147",
+    "alidealsdz:146",
+    "alidealsdz:145",
+    "alidealsdz:144",
+    "alidealsdz:143",
+    "alidealsdz:142",
+    "alidealsdz:141"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
   "france_cross_promo_variant_idx": 1,
   "published_coupon_bulletins": [
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
-      "timestamp": 1792108341.5796723
-    },
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
-      "timestamp": 1792109395.7864256
-    },
     {
       "promo": "Test Event 2026",
       "hash": "d9b8b196",
@@ -9676,10 +9857,32 @@
       "channel_msg_id": 9999,
       "channel": "@DzAliexpress0",
       "timestamp": 1793280259.7656767
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1793282841.6674442
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1793283031.123808
     }
   ],
-  "last_pre_11_11_advisory_time": 1793280262.9343903,
-  "next_pre_11_11_interval_seconds": 331664,
+  "last_pre_11_11_advisory_time": 1793283034.4679995,
+  "next_pre_11_11_interval_seconds": 307126,
   "pre_11_11_variant_idx": 1,
   "published_title_prices": {}
 }
