@@ -327,7 +327,14 @@
     "9998887440",
     "1005009200129898",
     "9998888526",
-    "9998889908"
+    "9998889908",
+    "1005012339196141",
+    "1005012472631754",
+    "1005013039644752",
+    "1005013479436053",
+    "1005012431631514",
+    "1005009338640941",
+    "1005013137304827"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -385,7 +392,7 @@
     "1005009281115306": 1791942658.9081998,
     "1005011797801269": 1791203753.790013,
     "1005007168829266": 1791102355.4991398,
-    "1005012406142215": 1792200031.9265065,
+    "1005012406142215": 1793270753.3838494,
     "1005007345398413": 1790943717.3545928,
     "1005012504076921": 1791236011.4353654,
     "1005008715050858": 1791033345.3970714,
@@ -665,7 +672,14 @@
     "9998887440": 1793227440.500994,
     "1005009200129898": 1793227797.933171,
     "9998888526": 1793228526.415094,
-    "9998889908": 1793229908.2507865
+    "9998889908": 1793229908.2507865,
+    "1005012339196141": 1793270661.3389814,
+    "1005012472631754": 1793270671.799024,
+    "1005013039644752": 1793270685.1751034,
+    "1005013479436053": 1793270692.397357,
+    "1005012431631514": 1793270716.9132679,
+    "1005009338640941": 1793270732.2328634,
+    "1005013137304827": 1793270736.6516862
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1004,7 +1018,13 @@
     "SAMZHE Metal Lens Protector for iPhone 17 Pro Max",
     "SAMZHE Support Aluminum Graphics Card",
     "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500",
-    "كابل Ethernet Flat Cat 6 Cable 2meter  السعر💲 :"
+    "كابل Ethernet Flat Cat 6 Cable 2meter  السعر💲 :",
+    "AMD Ryzen 5 9600X",
+    "AMD Ryzen 7 8700F",
+    "OnePlus ACE 6",
+    "أضف الآن في السلة الآن العرض يعمل يوم 1 نوفمبر 🔥",
+    "Honor 600 5G Global 8/256GB .",
+    "Honor 600s (8/255GB)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1298,7 +1318,7 @@
     "Redmi Note 12 5G Global (4/128GB)": 1792156524.878074,
     "Blackview Wave 10C": 1792061334.470126,
     "متوسط سعره حالياً 82000دج": 1792077701.5855007,
-    "iQOO Z11s 5G (8/128GB)": 1792077724.119901,
+    "iQOO Z11s 5G (8/128GB)": 1793270685.1751034,
     "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1792156515.7006214,
     "Baseus GH02 Gaming Wireless Headphone": 1792087000.9978776,
     "GameSir GM500 PMW33600 Gaming Mouse": 1792087147.0923955,
@@ -1331,7 +1351,7 @@
     "K500-B61 Machenike  Mechanical Keybaord 61Keys Gaming RGB": 1792181648.7159212,
     "يد تحكم  GameSir Tarantula 8K TMR": 1792200008.0113943,
     "HONOR 600S (8/256)": 1792200023.6138296,
-    "HONOR WIN TURBO (12/256)": 1792200031.9265065,
+    "HONOR WIN TURBO (12/256)": 1793270753.3838494,
     "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": 1792233107.1523154,
     "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": 1792245292.4631972,
     "Wireless Electric Tire Inflator Pump": 1792437012.793756,
@@ -1350,7 +1370,13 @@
     "SAMZHE Metal Lens Protector for iPhone 17 Pro Max": 1793123744.0676813,
     "SAMZHE Support Aluminum Graphics Card": 1793123749.6836987,
     "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500": 1793138738.0845888,
-    "كابل Ethernet Flat Cat 6 Cable 2meter  السعر💲 :": 1793227797.933171
+    "كابل Ethernet Flat Cat 6 Cable 2meter  السعر💲 :": 1793227797.933171,
+    "AMD Ryzen 5 9600X": 1793270661.3389814,
+    "AMD Ryzen 7 8700F": 1793270671.799024,
+    "OnePlus ACE 6": 1793270692.397357,
+    "أضف الآن في السلة الآن العرض يعمل يوم 1 نوفمبر 🔥": 1793270716.9132679,
+    "Honor 600 5G Global 8/256GB .": 1793270732.2328634,
+    "Honor 600s (8/255GB)": 1793270736.6516862
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2116,43 +2142,51 @@
     "test_channel:1793227440",
     "ecksdeal:5905",
     "test_channel:1793228526",
-    "test_channel:1793229908"
+    "test_channel:1793229908",
+    "zedstoreonline:38680",
+    "zedstoreonline:38678",
+    "aniscoupons:33043",
+    "aniscoupons:33042",
+    "pcgamingpart:8012",
+    "bnddeals:50883",
+    "bnddeals:50882",
+    "megaphonna:8503"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792711145.3171253,
-  "last_run_time": 1793229908.528411,
+  "last_run_time": 1793270753.3838494,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33010,
-      "last_check_time": 1793246252.9635713
+      "last_message_id": 33043,
+      "last_check_time": 1793270703.1106806
     },
     "ecksdeal": {
-      "last_message_id": 5905,
-      "last_check_time": 1793246253.3895001
+      "last_message_id": 5911,
+      "last_check_time": 1793270710.9675152
     },
     "lodydeals": {
       "last_message_id": 45595,
       "last_check_time": 1793246252.0867581
     },
     "bnddeals": {
-      "last_message_id": 50873,
-      "last_check_time": 1793246254.4126117
+      "last_message_id": 50884,
+      "last_check_time": 1793270742.3436868
     },
     "test_channel": {
       "last_message_id": 1793229908,
       "last_check_time": 1793229908.2507865
     },
     "pcgamingpart": {
-      "last_message_id": 8003,
-      "last_check_time": 1793246253.8190463
+      "last_message_id": 8012,
+      "last_check_time": 1793270728.832439
     },
     "zedstoreonline": {
-      "last_message_id": 38643,
-      "last_check_time": 1793246252.511158
+      "last_message_id": 38680,
+      "last_check_time": 1793270677.6498191
     },
     "megaphonna": {
-      "last_message_id": 8500,
-      "last_check_time": 1793246255.118367
+      "last_message_id": 8504,
+      "last_check_time": 1793270755.4041233
     },
     "couponsglobal": {
       "last_message_id": 48879,
@@ -2213,7 +2247,7 @@
     "1005009281115306": 17.12,
     "1005011797801269": 55.78,
     "1005007168829266": 4.19,
-    "1005012406142215": 400.0,
+    "1005012406142215": 389.3,
     "1005008390562391": 11.79,
     "1005007345398413": 14.3,
     "1005012504076921": 257.4,
@@ -2349,7 +2383,7 @@
     "1005011557896041": 257.2,
     "1005011754993234": 87.5,
     "1005011735727412": 26.6,
-    "1005013039644752": 186.5,
+    "1005013039644752": 267.6,
     "1005007916078341": 59.0,
     "1005006506862816": 11.86,
     "1005008072923842": 2.21,
@@ -2411,7 +2445,13 @@
     "1005012024630994": 4.24,
     "1005012633322402": 3.05,
     "1005012249968766": 15.0,
-    "1005009200129898": 0.01
+    "1005009200129898": 0.01,
+    "1005012339196141": 2.9,
+    "1005012472631754": 0.4,
+    "1005013479436053": 429.0,
+    "1005012431631514": 143.55,
+    "1005009338640941": 372.0,
+    "1005013137304827": 266.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -6926,6 +6966,86 @@
       "price": 0.01,
       "timestamp": 1793227797.933171,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38680": {
+      "channel_msg_id": 1052,
+      "product_id": "1005012339196141",
+      "title": "AMD Ryzen 5 9600X",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38680,
+      "price": 2.9,
+      "timestamp": 1793270661.3389814,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38678": {
+      "channel_msg_id": 1053,
+      "product_id": "1005012472631754",
+      "title": "AMD Ryzen 7 8700F",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38678,
+      "price": 0.4,
+      "timestamp": 1793270671.799024,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33043": {
+      "channel_msg_id": 1054,
+      "product_id": "1005013039644752",
+      "title": "iQOO Z11s 5G (8/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 33043,
+      "price": 267.6,
+      "timestamp": 1793270685.1751034,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33042": {
+      "channel_msg_id": 1055,
+      "product_id": "1005013479436053",
+      "title": "OnePlus ACE 6",
+      "channel": "aniscoupons",
+      "source_msg_id": 33042,
+      "price": 429.0,
+      "timestamp": 1793270692.397357,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:8012": {
+      "channel_msg_id": 1056,
+      "product_id": "1005012431631514",
+      "title": "أضف الآن في السلة الآن العرض يعمل يوم 1 نوفمبر 🔥",
+      "channel": "pcgamingpart",
+      "source_msg_id": 8012,
+      "price": 143.55,
+      "timestamp": 1793270716.9132679,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50883": {
+      "channel_msg_id": 1057,
+      "product_id": "1005009338640941",
+      "title": "Honor 600 5G Global 8/256GB .",
+      "channel": "bnddeals",
+      "source_msg_id": 50883,
+      "price": 372.0,
+      "timestamp": 1793270732.2328634,
+      "status": "ACTIVE"
+    },
+    "bnddeals:50882": {
+      "channel_msg_id": 1058,
+      "product_id": "1005013137304827",
+      "title": "Honor 600s (8/255GB)",
+      "channel": "bnddeals",
+      "source_msg_id": 50882,
+      "price": 266.0,
+      "timestamp": 1793270736.6516862,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8503": {
+      "channel_msg_id": 1059,
+      "product_id": "1005012406142215",
+      "title": "HONOR WIN TURBO (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8503,
+      "price": 389.3,
+      "timestamp": 1793270753.3838494,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -6934,17 +7054,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793227803.3509848,
+    "last_deal_post_time": 1793270755.4214964,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793246257.9064302,
+    "last_sweep_time": 1793270757.800055,
     "last_sweep_times": {
-      "algeria": 1793246255.539412,
-      "france": 1793246257.9064302
+      "algeria": 1793270755.4131434,
+      "france": 1793270757.800055
     },
     "last_deal_post_times": {
-      "algeria": 1793227803.3509848
+      "algeria": 1793270755.4214964
     }
   },
   "last_coin_reminder_time": 1793182579.2180297,
@@ -7173,7 +7293,7 @@
     "1005011557896041": "aniscoupons",
     "1005011754993234": "zedstoreonline",
     "1005011735727412": "bnddeals",
-    "1005013039644752": "megaphonna",
+    "1005013039644752": "aniscoupons",
     "1005007916078341": "zedstoreonline",
     "1005006506862816": "couponsglobal",
     "1005008072923842": "pcgamingpart",
@@ -7291,7 +7411,13 @@
     "9998887440": "test_channel",
     "1005009200129898": "ecksdeal",
     "9998888526": "test_channel",
-    "9998889908": "test_channel"
+    "9998889908": "test_channel",
+    "1005012339196141": "zedstoreonline",
+    "1005012472631754": "zedstoreonline",
+    "1005013479436053": "aniscoupons",
+    "1005012431631514": "pcgamingpart",
+    "1005009338640941": "bnddeals",
+    "1005013137304827": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7640,7 +7766,13 @@
     "SAMZHE Metal Lens Protector for iPhone 17 Pro Max": "couponsglobal",
     "SAMZHE Support Aluminum Graphics Card": "couponsglobal",
     "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500": "megaphonna",
-    "كابل Ethernet Flat Cat 6 Cable 2meter  السعر💲 :": "ecksdeal"
+    "كابل Ethernet Flat Cat 6 Cable 2meter  السعر💲 :": "ecksdeal",
+    "AMD Ryzen 5 9600X": "zedstoreonline",
+    "AMD Ryzen 7 8700F": "zedstoreonline",
+    "OnePlus ACE 6": "aniscoupons",
+    "أضف الآن في السلة الآن العرض يعمل يوم 1 نوفمبر 🔥": "pcgamingpart",
+    "Honor 600 5G Global 8/256GB .": "bnddeals",
+    "Honor 600s (8/255GB)": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -8510,7 +8642,20 @@
     "megaphonna:8499",
     "zedstoreonline:38643",
     "zedstoreonline:38642",
-    "couponsglobal:48879"
+    "couponsglobal:48879",
+    "zedstoreonline:38679",
+    "zedstoreonline:38677",
+    "aniscoupons:33041",
+    "aniscoupons:33040",
+    "ecksdeal:5911",
+    "ecksdeal:5910",
+    "ecksdeal:5908",
+    "ecksdeal:5907",
+    "pcgamingpart:8011",
+    "pcgamingpart:8010",
+    "pcgamingpart:8009",
+    "bnddeals:50884",
+    "megaphonna:8504"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
