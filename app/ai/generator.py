@@ -363,15 +363,19 @@ class DealCaptionGenerator:
         if is_price_drop:
             lines.append("<blockquote>📉 <b>انخفاض السعر:</b> السعر نزل أكثر من قبل، لافار حقيقية استغلها الآن! 🔥</blockquote>")
 
-        # Warm-up / Taskhinat indicator during 11.11 warm-up
+        # Warm-up / Taskhinat indicator during 11.11 warm-up (Oct 28 - Nov 1)
         is_warmup = False
         try:
             from app.aliexpress.promos import promo_tracker
             active_p = promo_tracker.get_active_promo()
-            if active_p and any(w in active_p.name.lower() for w in ["warm-up", "warmup", "تسخينات"]):
+            if active_p and any(w in active_p.name.lower() for w in ["warm-up", "warmup", "تسخينات", "11.11"]):
                 is_warmup = True
         except Exception:
             pass
+
+        if not is_warmup and raw_text:
+            if any(k in raw_text for k in ["دير في السلة", "أضف إلى السلة", "اضف إلى السلة", "نهار التخفيضات", "البيع يبدأ", "البيع يبدا", "تسخينات", "1 نوفمبر"]):
+                is_warmup = True
 
         if is_warmup:
             lines.append("<blockquote>🔥 <b>تسخينات 11.11:</b> دير في السلّة من درك باه تضمن السعر المخفض، واشري نهار التخفيضات (1 نوفمبر)! 🛒⚡</blockquote>")

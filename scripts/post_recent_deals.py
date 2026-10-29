@@ -44,6 +44,7 @@ CHANNELS = [
     "Pcgamingpart",
     "BNDDEALS",
     "megaphonna",
+    "alidealsdz",
     "CouponsGlobal"
 ]
 

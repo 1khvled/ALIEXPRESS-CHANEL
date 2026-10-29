@@ -36,6 +36,58 @@ def get_high_res_aliexpress_image(url: Optional[str]) -> Optional[str]:
     return clean_url
 
 
+import json
+import time
+from pathlib import Path
+
+FB_STATE_FILE = Path("storage/state/facebook_published_state.json")
+
+def _load_fb_state() -> dict:
+    if FB_STATE_FILE.exists():
+        try:
+            return json.loads(FB_STATE_FILE.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+def _save_fb_state(state: dict):
+    try:
+        FB_STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
+        FB_STATE_FILE.write_text(json.dumps(state, indent=2, ensure_ascii=False), encoding="utf-8")
+    except Exception as e:
+        logger.warning(f"Failed to save FB state: {e}")
+
+def is_fb_duplicate(title: Optional[str] = None, deal_link: Optional[str] = None, cooldown_seconds: float = 86400.0) -> bool:
+    """Autonomous firewall preventing duplicate posts on DealScout Facebook page within 24h."""
+    state = _load_fb_state()
+    now = time.time()
+    keys = []
+    if deal_link:
+        keys.append(f"link:{deal_link.strip()}")
+    if title:
+        norm_t = re.sub(r'[^a-zA-Z0-9\u0600-\u06FF]+', ' ', title.lower()).strip()
+        if len(norm_t) >= 4:
+            keys.append(f"title:{norm_t}")
+    for k in keys:
+        last_time = state.get(k, {}).get("timestamp", 0)
+        if (now - last_time) < cooldown_seconds:
+            return True
+    return False
+
+def record_fb_published(title: Optional[str], deal_link: Optional[str], post_id: str):
+    """Records published deal on Facebook to prevent duplicates across concurrent jobs."""
+    state = _load_fb_state()
+    now = time.time()
+    entry = {"post_id": str(post_id), "timestamp": now, "title": title}
+    if deal_link:
+        state[f"link:{deal_link.strip()}"] = entry
+    if title:
+        norm_t = re.sub(r'[^a-zA-Z0-9\u0600-\u06FF]+', ' ', title.lower()).strip()
+        if len(norm_t) >= 4:
+            state[f"title:{norm_t}"] = entry
+    _save_fb_state(state)
+
+
 class FacebookPublisher:
     """
     Automated Facebook Page Publisher via Meta Graph API v21.0.
@@ -219,6 +271,11 @@ class FacebookPublisher:
         if not self.is_configured():
             return False, None, "Facebook Publisher is not configured (missing Page ID or Page Access Token)."
 
+        # Autonomous Duplicate Firewall: Block duplicate Facebook posts within 24h
+        if is_fb_duplicate(title=title, deal_link=deal_link):
+            logger.info(f"[FACEBOOK DEDUP] Skipping duplicate Facebook post for '{title}' (link: {deal_link})")
+            return False, None, "Duplicate post blocked by Facebook deduplication cache"
+
         fb_message = self.format_caption_for_facebook(caption, deal_link=deal_link, price=price)
         photo_url = f"{self.GRAPH_URL}/{self.page_id}/photos"
 
@@ -240,6 +297,7 @@ class FacebookPublisher:
                     if resp.status_code in (200, 201) and ("id" in data or "post_id" in data):
                         post_id = data.get("post_id") or data.get("id")
                         logger.info(f"[FACEBOOK] Published high-res studio photo ({clean_img_url}) successfully! Post ID: {post_id}")
+                        record_fb_published(title=title, deal_link=deal_link, post_id=str(post_id))
                         try:
                             await record_system_log("INFO", "facebook", f"Published high-res studio photo to Facebook Page (Photo ID: {post_id})")
                         except Exception:
@@ -262,6 +320,7 @@ class FacebookPublisher:
                     if resp.status_code in (200, 201) and ("id" in res or "post_id" in res):
                         post_id = res.get("post_id") or res.get("id")
                         logger.info(f"[FACEBOOK] Published photo (bytes) deal successfully! Post ID: {post_id}")
+                        record_fb_published(title=title, deal_link=deal_link, post_id=str(post_id))
                         try:
                             await record_system_log("INFO", "facebook", f"Published deal to Facebook Page (Photo ID: {post_id})")
                         except Exception:
@@ -285,6 +344,7 @@ class FacebookPublisher:
                         if resp.status_code in (200, 201) and ("id" in res or "post_id" in res):
                             post_id = res.get("post_id") or res.get("id")
                             logger.info(f"[FACEBOOK] Published photo (file) deal successfully! Post ID: {post_id}")
+                            record_fb_published(title=title, deal_link=deal_link, post_id=str(post_id))
                             try:
                                 await record_system_log("INFO", "facebook", f"Published deal to Facebook Page (Photo ID: {post_id})")
                             except Exception:
@@ -311,6 +371,7 @@ class FacebookPublisher:
                 if resp.status_code in (200, 201) and "id" in data:
                     post_id = data["id"]
                     logger.info(f"[FACEBOOK] Published feed deal successfully! Post ID: {post_id}")
+                    record_fb_published(title=title, deal_link=deal_link, post_id=str(post_id))
                     try:
                         await record_system_log("INFO", "facebook", f"Published deal to Facebook Page (Feed ID: {post_id})")
                     except Exception:
