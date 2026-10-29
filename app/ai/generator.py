@@ -363,6 +363,19 @@ class DealCaptionGenerator:
         if is_price_drop:
             lines.append("<blockquote>📉 <b>انخفاض السعر:</b> السعر نزل أكثر من قبل، لافار حقيقية استغلها الآن! 🔥</blockquote>")
 
+        # Warm-up / Taskhinat indicator during 11.11 warm-up
+        is_warmup = False
+        try:
+            from app.aliexpress.promos import promo_tracker
+            active_p = promo_tracker.get_active_promo()
+            if active_p and any(w in active_p.name.lower() for w in ["warm-up", "warmup", "تسخينات"]):
+                is_warmup = True
+        except Exception:
+            pass
+
+        if is_warmup:
+            lines.append("<blockquote>🔥 <b>تسخينات 11.11:</b> دير في السلّة من درك باه تضمن السعر المخفض، واشري نهار التخفيضات (1 نوفمبر)! 🛒⚡</blockquote>")
+
         # 2. Country recommendation (exact Algerian Telegram style in blockquote)
         if country_info:
             c_str = str(country_info).lower()
