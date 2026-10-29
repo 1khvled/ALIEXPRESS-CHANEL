@@ -2124,19 +2124,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33010,
-      "last_check_time": 1793227790.6064568
+      "last_check_time": 1793239314.0139425
     },
     "ecksdeal": {
       "last_message_id": 5905,
-      "last_check_time": 1793227799.9742446
+      "last_check_time": 1793239314.4535985
     },
     "lodydeals": {
       "last_message_id": 45595,
-      "last_check_time": 1793229908.3804493
+      "last_check_time": 1793239313.0878925
     },
     "bnddeals": {
       "last_message_id": 50873,
-      "last_check_time": 1793227801.119641
+      "last_check_time": 1793239315.287652
     },
     "test_channel": {
       "last_message_id": 1793229908,
@@ -2144,15 +2144,15 @@
     },
     "pcgamingpart": {
       "last_message_id": 8003,
-      "last_check_time": 1793227800.6084254
+      "last_check_time": 1793239314.870653
     },
     "zedstoreonline": {
-      "last_message_id": 38641,
-      "last_check_time": 1793227790.0545561
+      "last_message_id": 38643,
+      "last_check_time": 1793239313.538409
     },
     "megaphonna": {
       "last_message_id": 8500,
-      "last_check_time": 1793229908.528411
+      "last_check_time": 1793239315.7817914
     },
     "couponsglobal": {
       "last_message_id": 48878,
@@ -6938,10 +6938,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793227805.6778271,
+    "last_sweep_time": 1793239318.7611382,
     "last_sweep_times": {
-      "algeria": 1793227803.3400936,
-      "france": 1793227805.6778271
+      "algeria": 1793239316.6444404,
+      "france": 1793239318.7611382
     },
     "last_deal_post_times": {
       "algeria": 1793227803.3509848
@@ -7996,8 +7996,8 @@
     "LAUNCH_ALERT_Winter Offers_20261014",
     "END_ALERT_Winter Offers_20261018"
   ],
-  "last_card_affiliate_time_dz": 1792887363.7794852,
-  "card_affiliate_variant_idx_dz": 2,
+  "last_card_affiliate_time_dz": 1793239309.956487,
+  "card_affiliate_variant_idx_dz": 0,
   "last_tajmi3at_published_time": 1792182685.3908823,
   "published_deals_history": {},
   "settings": {},
@@ -8507,7 +8507,9 @@
     "ecksdeal:5904",
     "bnddeals:50873",
     "megaphonna:8500",
-    "megaphonna:8499"
+    "megaphonna:8499",
+    "zedstoreonline:38643",
+    "zedstoreonline:38642"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
