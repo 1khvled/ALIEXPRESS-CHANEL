@@ -168,11 +168,17 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
         print(f"--> Skipping deal collection this run. ({schedule_msg})")
         return 0
 
-    # Anti-Flood Pacer & Traffic Evaluation (Peak hours: 12-14 and 18-23:30 Algeria time)
+    # Anti-Flood Pacer & Traffic Evaluation (Peak hours & Major Warm-up / Festival boost)
+    active_p = promo_tracker.get_active_promo()
+    is_warmup_or_event = bool(active_p and ("warm-up" in active_p.name.lower() or "11.11" in active_p.name or "festival" in active_p.name.lower()))
     is_peak = is_algerian_peak_hour()
-    max_deals_per_channel = 6 if is_peak else 4
-    MAX_DEALS_PER_RUN = 12 if is_peak else 8
-    print(f"[PACER TRAFFIC STATUS] Peak Hour Boost: {'ON (Up to 6 deals/ch)' if is_peak else 'OFF (Paced 4 deals/ch)'} | Max run limit: {MAX_DEALS_PER_RUN}")
+    if is_warmup_or_event:
+        max_deals_per_channel = 8
+        MAX_DEALS_PER_RUN = 25
+    else:
+        max_deals_per_channel = 6 if is_peak else 4
+        MAX_DEALS_PER_RUN = 12 if is_peak else 8
+    print(f"[PACER TRAFFIC STATUS] Promo/Warmup Boost: {'ON (Up to 8 deals/ch, 25 max)' if is_warmup_or_event else ('Peak Boost ON' if is_peak else 'Paced')} | Max run limit: {MAX_DEALS_PER_RUN}")
 
     published_deals = []
     seen_products = set()
@@ -488,7 +494,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     if not img_url and extracted.product_id:
                         img_url = await product_extractor._fetch_clean_aliexpress_image(extracted.product_id)
                     if not extracted.is_coupon_list:
-                        if not img_url or not any(d in str(img_url) for d in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
+                        if not img_url or not any(d in str(img_url) for d in ["alicdn.com", "aliexpress-media.com", "aliexpress.com", "telesco.pe"]):
                             print(f"  [NO CLEAN PHOTO] Image fetch incomplete for {extracted.product_id}. Leaving for retry.")
                             continue
 
@@ -585,10 +591,10 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                                 usd_price=extracted.current_price
                             )
 
-                    if not local_img_file and img_url:
+                    if not local_img_file and img_url and not any(d in str(img_url) for d in ["telesco.pe", "t.me", "telegram.org"]):
                         local_img_file = img_url
 
-                    if not local_img_file:
+                    if not local_img_file or (isinstance(local_img_file, (str, Path)) and not str(local_img_file).startswith("http") and not Path(local_img_file).exists()):
                         print(f"  [IMAGE MISSING] Could not prepare image for product #{extracted.product_id}. Leaving for retry.")
                         continue
 

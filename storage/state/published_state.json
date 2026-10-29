@@ -334,14 +334,21 @@
     "1005013479436053",
     "1005012431631514",
     "1005009338640941",
-    "1005013137304827"
+    "1005013137304827",
+    "1005012402919487",
+    "9998883962",
+    "1005012005176923",
+    "1005012399830182",
+    "1005013479172067",
+    "1005012199872142",
+    "9998886358"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
     "1005010219205081": 1791192360.1916943,
-    "999111222": 1793229906.8962436,
-    "100500999912345": 1793139908.1672337,
-    "100500999954321": 1793222708.1672337,
+    "999111222": 1793276357.0227017,
+    "100500999912345": 1793186358.2688277,
+    "100500999954321": 1793269158.2688277,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
@@ -351,7 +358,7 @@
     "1005009627597591": 1790884233.6428,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1793219108.3019345,
+    "100500777666555": 1793265558.397856,
     "1005011778621042": 1792160254.9859293,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1791192944.201814,
@@ -362,14 +369,14 @@
     "1005012881256093": 1791941229.2882626,
     "1005009118633225": 1790888213.2900865,
     "1005012143831265": 1791012345.6086447,
-    "1005008852027824": 1792172115.0945282,
+    "1005008852027824": 1793275657.9039063,
     "9998888981": 1790888981.6873999,
     "1005005217734986": 1791104047.0967803,
     "1005010062128237": 1790937566.337433,
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
-    "100500888999777": 1793215508.3756073,
+    "100500888999777": 1793261958.4617324,
     "1005009734653254": 1790940366.7525578,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
@@ -380,7 +387,7 @@
     "1005005648888450": 1790941186.791633,
     "1005006117094928": 1790941202.9035249,
     "1005006603602562": 1790941207.5310047,
-    "1005010721042860": 1791042962.9882953,
+    "1005010721042860": 1793276177.7089784,
     "1005009517247552": 1790941221.8823678,
     "1005012191191893": 1791137155.7589798,
     "1005012968221708": 1792191314.8790042,
@@ -400,7 +407,7 @@
     "9998885726": 1790945726.205554,
     "9998885776": 1791675776.96059,
     "9998886147": 1790946147.1871526,
-    "999888777111": 1793228112.8220513,
+    "999888777111": 1793274561.34657,
     "9998886362": 1790946362.071869,
     "1005012407874415": 1791061256.0753598,
     "9998887189": 1790947189.8634577,
@@ -420,9 +427,9 @@
     "1005011991145678": 1790962541.57551,
     "1005011682821623": 1790962844.0034096,
     "9998885747": 1790965747.5380507,
-    "1005010129356058": 1793218388.52259,
+    "1005010129356058": 1793264838.5871994,
     "9998885993": 1790965993.3792443,
-    "1005012574108028": 1791236020.742662,
+    "1005012574108028": 1793276237.692456,
     "1005008599340405": 1791638441.843642,
     "1005007572968437": 1790969442.7810974,
     "1005009120957437": 1790970941.2570727,
@@ -530,8 +537,8 @@
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
     "COUPONS_Brand Day Sale": 1791676848.283345,
-    "COUPONS_d9b8b196": 1793229906.6516478,
-    "COUPONS_Test Event 2026": 1793229906.6516478,
+    "COUPONS_d9b8b196": 1793276356.8608305,
+    "COUPONS_Test Event 2026": 1793276356.8608305,
     "9998886905": 1791676905.095083,
     "9998887197": 1791677197.2988765,
     "9998887496": 1791677496.6959877,
@@ -540,7 +547,7 @@
     "9998882735": 1791752735.01132,
     "1005006966177706": 1791752780.7013927,
     "1005012234106869": 1791752787.9016774,
-    "1005010209307090": 1792172099.6544397,
+    "1005010209307090": 1793275816.741406,
     "9998883006": 1791753006.1402605,
     "9998888761": 1791758761.679281,
     "9998889143": 1791759143.197184,
@@ -553,7 +560,7 @@
     "1005007345151855": 1791942667.867043,
     "1005010345227483": 1791942676.1983886,
     "1005011557896041": 1792156781.1827424,
-    "1005011754993234": 1792061283.4535055,
+    "1005011754993234": 1793276207.4521933,
     "1005011735727412": 1791943783.9162278,
     "1005007916078341": 1792050965.154088,
     "1005006506862816": 1791947519.5815504,
@@ -620,7 +627,7 @@
     "1005010369693975": 1792166319.9887776,
     "1005006442452857": 1792166326.0335298,
     "9998886462": 1792166462.200491,
-    "1005009948598802": 1792172104.7239766,
+    "1005009948598802": 1793275710.5729244,
     "1005012751475098": 1792172127.0373228,
     "9998882185": 1792172185.4508982,
     "999888981": 1792180981.108591,
@@ -667,7 +674,7 @@
     "1005013467588413": 1793123738.1109653,
     "1005012024630994": 1793123744.0676813,
     "1005012633322402": 1793123749.6836987,
-    "1005012249968766": 1793138738.0845888,
+    "1005012249968766": 1793276147.8185523,
     "9998886751": 1793226751.289748,
     "9998887440": 1793227440.500994,
     "1005009200129898": 1793227797.933171,
@@ -679,7 +686,14 @@
     "1005013479436053": 1793270692.397357,
     "1005012431631514": 1793270716.9132679,
     "1005009338640941": 1793270732.2328634,
-    "1005013137304827": 1793270736.6516862
+    "1005013137304827": 1793270736.6516862,
+    "1005012402919487": 1793273507.4658227,
+    "9998883962": 1793273962.6790612,
+    "1005012005176923": 1793276158.7128599,
+    "1005012399830182": 1793276168.5564196,
+    "1005013479172067": 1793276192.7711725,
+    "1005012199872142": 1793276220.2800016,
+    "9998886358": 1793276358.3466215
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1024,15 +1038,23 @@
     "OnePlus ACE 6",
     "أضف الآن في السلة الآن العرض يعمل يوم 1 نوفمبر 🔥",
     "Honor 600 5G Global 8/256GB .",
-    "Honor 600s (8/255GB)"
+    "Honor 600s (8/255GB)",
+    "CUSU RAM DDR4 3200MHz 8GBx2",
+    "Realme P3 (No Charger)",
+    "Oppo Find X9 Pro 12/256",
+    "Vivo X200S 12/256",
+    "IQOO 15T 12/256",
+    "Honor Power 2 12/256",
+    "OnePlus Turbo 6x  6/128GB",
+    "Oneplus ACE 6 Ultra 12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1790857873.6056087,
-    "Test Wireless Gaming Mouse X1": 1793229906.8962436,
+    "Test Wireless Gaming Mouse X1": 1793276357.0227017,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
-    "Attack Shark R2 Mouse": 1793222708.1672337,
-    "Test Wrench Set": 1793229908.2507865,
+    "Attack Shark R2 Mouse": 1793269158.2688277,
+    "Test Wrench Set": 1793276358.3466215,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1791194142.1753953,
@@ -1064,8 +1086,8 @@
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
-    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1793139908.1672337,
-    "Attack Shark L80 PRO Wireless Mouse": 1793229008.3756073,
+    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1793186358.2688277,
+    "Attack Shark L80 PRO Wireless Mouse": 1793275458.4617324,
     "الأكثر لبا لنهار اليوووم": 1790940343.7746465,
     "POCO C81 Pro 4/64": 1791114344.949536,
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
@@ -1109,14 +1131,14 @@
     "HONOR 600 PRO": 1790960475.7249138,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
-    "Xiaomi Pad 7 (12/256)": 1793218388.52259,
+    "Xiaomi Pad 7 (12/256)": 1793264838.5871994,
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1791236011.4353654,
     "CUSU SSD 512 GB Portable SSD External Drive": 1791200448.8235762,
     "HONOR  X80 PRO MAX (8/128)": 1791236020.742662,
     "WALRAM Sata SSD 512GB": 1790967962.6418507,
     "Lenovo GM2 Pro TWS": 1790969442.7810974,
     "ASROCK B850M X WiFi": 1790970941.2570727,
-    "REALME 15 5G (12/256)": 1791104484.5433714,
+    "REALME 15 5G (12/256)": 1793275816.741406,
     "Lenovo XT88 TWS": 1790971842.421131,
     "SMAILWOLF M3 PAW3311": 1790971850.2217886,
     "UGREEN 4K 8MP 2Mics Webcam": 1790972149.2892344,
@@ -1280,7 +1302,7 @@
     "لووووووووووووز controller 🎮": 1791942667.867043,
     "جديد علامة ©️©️©️©️🆕": 1791942676.1983886,
     "AMD Ryzen 7 7800X3D": 1791943741.5394402,
-    "AMD Ryzen 5 8400F": 1792061283.4535055,
+    "AMD Ryzen 5 8400F": 1793276207.4521933,
     "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": 1791943777.8506553,
     "🔝 مانات قووووة ل جماعة mobile gaming 🎮": 1792017738.3981204,
     "Honor Choice Infowear Watch 2i Smartwatch AMOLED": 1791943825.002781,
@@ -1317,7 +1339,7 @@
     "Redmi Pad 2 9.7": 1792061322.5579543,
     "Redmi Note 12 5G Global (4/128GB)": 1792156524.878074,
     "Blackview Wave 10C": 1792061334.470126,
-    "متوسط سعره حالياً 82000دج": 1792077701.5855007,
+    "متوسط سعره حالياً 82000دج": 1793276237.692456,
     "iQOO Z11s 5G (8/128GB)": 1793270685.1751034,
     "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1792156515.7006214,
     "Baseus GH02 Gaming Wireless Headphone": 1792087000.9978776,
@@ -1376,7 +1398,15 @@
     "OnePlus ACE 6": 1793270692.397357,
     "أضف الآن في السلة الآن العرض يعمل يوم 1 نوفمبر 🔥": 1793270716.9132679,
     "Honor 600 5G Global 8/256GB .": 1793270732.2328634,
-    "Honor 600s (8/255GB)": 1793270736.6516862
+    "Honor 600s (8/255GB)": 1793270736.6516862,
+    "CUSU RAM DDR4 3200MHz 8GBx2": 1793273507.4658227,
+    "Realme P3 (No Charger)": 1793275657.9039063,
+    "Oppo Find X9 Pro 12/256": 1793276147.8185523,
+    "Vivo X200S 12/256": 1793276158.7128599,
+    "IQOO 15T 12/256": 1793276168.5564196,
+    "Honor Power 2 12/256": 1793276177.7089784,
+    "OnePlus Turbo 6x  6/128GB": 1793276192.7711725,
+    "Oneplus ACE 6 Ultra 12/256GB": 1793276220.2800016
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2150,47 +2180,61 @@
     "pcgamingpart:8012",
     "bnddeals:50883",
     "bnddeals:50882",
-    "megaphonna:8503"
+    "megaphonna:8503",
+    "aniscoupons:33047",
+    "test_channel:1793273962",
+    "aniscoupons:33032",
+    "megaphonna:8511",
+    "megaphonna:8512",
+    "zedstoreonline:38685",
+    "zedstoreonline:38676",
+    "zedstoreonline:38674",
+    "zedstoreonline:38672",
+    "aniscoupons:33044",
+    "aniscoupons:33037",
+    "aniscoupons:33036",
+    "megaphonna:8509",
+    "test_channel:1793276358"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792711145.3171253,
-  "last_run_time": 1793270753.3838494,
+  "last_run_time": 1793276358.5928903,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33043,
-      "last_check_time": 1793270703.1106806
+      "last_message_id": 33051,
+      "last_check_time": 1793276220.2800016
     },
     "ecksdeal": {
       "last_message_id": 5911,
-      "last_check_time": 1793270710.9675152
+      "last_check_time": 1793276223.2675743
     },
     "lodydeals": {
       "last_message_id": 45595,
-      "last_check_time": 1793246252.0867581
+      "last_check_time": 1793276358.4675045
     },
     "bnddeals": {
       "last_message_id": 50884,
-      "last_check_time": 1793270742.3436868
+      "last_check_time": 1793275705.7519362
     },
     "test_channel": {
-      "last_message_id": 1793229908,
-      "last_check_time": 1793229908.2507865
+      "last_message_id": 1793276358,
+      "last_check_time": 1793276358.3466215
     },
     "pcgamingpart": {
-      "last_message_id": 8012,
-      "last_check_time": 1793270728.832439
+      "last_message_id": 8018,
+      "last_check_time": 1793276223.9568298
     },
     "zedstoreonline": {
-      "last_message_id": 38680,
-      "last_check_time": 1793270677.6498191
+      "last_message_id": 38691,
+      "last_check_time": 1793276177.7089784
     },
     "megaphonna": {
-      "last_message_id": 8504,
-      "last_check_time": 1793270755.4041233
+      "last_message_id": 8512,
+      "last_check_time": 1793276358.5928903
     },
     "couponsglobal": {
-      "last_message_id": 48879,
-      "last_check_time": 1793246255.5293176
+      "last_message_id": 48880,
+      "last_check_time": 1793274796.0547702
     }
   },
   "published_product_prices": {
@@ -2219,7 +2263,7 @@
     "1005012143831265": 281.9,
     "1005007458827229": 22.1,
     "1005010453516983": 211.6,
-    "1005008852027824": 171.4,
+    "1005008852027824": 180.6,
     "1005012499451512": 260.0,
     "1005010129356058": 294.0,
     "3256809790988797": 92.8,
@@ -2238,7 +2282,7 @@
     "1005010178295650": 4.62,
     "1005006117094928": 32.2,
     "1005006603602562": 181.0,
-    "1005010721042860": 376.5,
+    "1005010721042860": 364.3,
     "1005009517247552": 236.0,
     "1005012191191893": 224.3,
     "1005012968221708": 22.74,
@@ -2268,7 +2312,7 @@
     "1005011991145678": 0.8,
     "1005011682821623": 0.8,
     "1005009774318553": 51.9,
-    "1005012574108028": 279.1,
+    "1005012574108028": 328.0,
     "1005008599340405": 48.7,
     "1005007572968437": 17.47,
     "1005009120957437": 189.21,
@@ -2364,7 +2408,7 @@
     "1005010056083952": 12.89,
     "1005012193220695": 253.22,
     "1005012823469739": 32.11,
-    "1005009948598802": 231.9,
+    "1005009948598802": 206.0,
     "1005012293918683": 5.0,
     "1005012651158292": 9.78,
     "1005010289640412": 32.06,
@@ -2373,7 +2417,7 @@
     "1005013067004815": 6.8,
     "1005006966177706": 3.49,
     "1005012234106869": 1.71,
-    "1005010209307090": 111.0,
+    "1005010209307090": 185.0,
     "1005012824429842": 252.0,
     "1005008450489185": 23.91,
     "1005012086685834": 8.99,
@@ -2381,7 +2425,7 @@
     "1005007345151855": 40.0,
     "1005010345227483": 246.4,
     "1005011557896041": 257.2,
-    "1005011754993234": 87.5,
+    "1005011754993234": 79.4,
     "1005011735727412": 26.6,
     "1005013039644752": 267.6,
     "1005007916078341": 59.0,
@@ -2444,14 +2488,19 @@
     "1005013467588413": 3.5,
     "1005012024630994": 4.24,
     "1005012633322402": 3.05,
-    "1005012249968766": 15.0,
+    "1005012249968766": 636.0,
     "1005009200129898": 0.01,
     "1005012339196141": 2.9,
     "1005012472631754": 0.4,
     "1005013479436053": 429.0,
     "1005012431631514": 143.55,
     "1005009338640941": 372.0,
-    "1005013137304827": 266.0
+    "1005013137304827": 266.0,
+    "1005012402919487": 75.3,
+    "1005012005176923": 476.6,
+    "1005012399830182": 479.0,
+    "1005013479172067": 218.2,
+    "1005012199872142": 471.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -7046,6 +7095,126 @@
       "price": 389.3,
       "timestamp": 1793270753.3838494,
       "status": "ACTIVE"
+    },
+    "aniscoupons:33047": {
+      "channel_msg_id": 1062,
+      "product_id": "1005012402919487",
+      "title": "CUSU RAM DDR4 3200MHz 8GBx2",
+      "channel": "aniscoupons",
+      "source_msg_id": 33047,
+      "price": 75.3,
+      "timestamp": 1793273507.4658227,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33032": {
+      "channel_msg_id": 1064,
+      "product_id": "1005008852027824",
+      "title": "Realme P3 (No Charger)",
+      "channel": "aniscoupons",
+      "source_msg_id": 33032,
+      "price": 180.6,
+      "timestamp": 1793275657.9039063,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8511": {
+      "channel_msg_id": 1065,
+      "product_id": "1005009948598802",
+      "title": "REALME 15 5G (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8511,
+      "price": 206.0,
+      "timestamp": 1793275710.5729244,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8512": {
+      "channel_msg_id": 1066,
+      "product_id": "1005010209307090",
+      "title": "REALME 15 5G (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8512,
+      "price": 185.0,
+      "timestamp": 1793275816.741406,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38685": {
+      "channel_msg_id": 1067,
+      "product_id": "1005012249968766",
+      "title": "Oppo Find X9 Pro 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38685,
+      "price": 636.0,
+      "timestamp": 1793276147.8185523,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38676": {
+      "channel_msg_id": 1068,
+      "product_id": "1005012005176923",
+      "title": "Vivo X200S 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38676,
+      "price": 476.6,
+      "timestamp": 1793276158.7128599,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38674": {
+      "channel_msg_id": 1069,
+      "product_id": "1005012399830182",
+      "title": "IQOO 15T 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38674,
+      "price": 479.0,
+      "timestamp": 1793276168.5564196,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38672": {
+      "channel_msg_id": 1070,
+      "product_id": "1005010721042860",
+      "title": "Honor Power 2 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38672,
+      "price": 364.3,
+      "timestamp": 1793276177.7089784,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33044": {
+      "channel_msg_id": 1071,
+      "product_id": "1005013479172067",
+      "title": "OnePlus Turbo 6x  6/128GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 33044,
+      "price": 218.2,
+      "timestamp": 1793276192.7711725,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33037": {
+      "channel_msg_id": 1072,
+      "product_id": "1005011754993234",
+      "title": "AMD Ryzen 5 8400F",
+      "channel": "aniscoupons",
+      "source_msg_id": 33037,
+      "price": 79.4,
+      "timestamp": 1793276207.4521933,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33036": {
+      "channel_msg_id": 1073,
+      "product_id": "1005012199872142",
+      "title": "Oneplus ACE 6 Ultra 12/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 33036,
+      "price": 471.9,
+      "timestamp": 1793276220.2800016,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8509": {
+      "channel_msg_id": 1074,
+      "product_id": "1005012574108028",
+      "title": "متوسط سعره حالياً 82000دج",
+      "channel": "megaphonna",
+      "source_msg_id": 8509,
+      "price": 328.0,
+      "timestamp": 1793276237.692456,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -7054,17 +7223,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793270755.4214964,
+    "last_deal_post_time": 1793276241.6602376,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793270757.800055,
+    "last_sweep_time": 1793276241.6357985,
     "last_sweep_times": {
-      "algeria": 1793270755.4131434,
+      "algeria": 1793276241.6357985,
       "france": 1793270757.800055
     },
     "last_deal_post_times": {
-      "algeria": 1793270755.4214964
+      "algeria": 1793276241.6602376
     }
   },
   "last_coin_reminder_time": 1793182579.2180297,
@@ -7086,7 +7255,7 @@
     "1005010178295650": "couponsglobal",
     "1005006117094928": "zedstoreonline",
     "1005006603602562": "zedstoreonline",
-    "1005010721042860": "megaphonna",
+    "1005010721042860": "zedstoreonline",
     "1005009517247552": "zedstoreonline",
     "1005012191191893": "aniscoupons",
     "1005012968221708": "ecksdeal",
@@ -7244,7 +7413,7 @@
     "1005007458827229": "zedstoreonline",
     "1005012899224314": "couponsglobal",
     "1005007331316456": "zedstoreonline",
-    "1005008852027824": "megaphonna",
+    "1005008852027824": "aniscoupons",
     "1005012312990781": "lodydeals",
     "1005007822635375": "ecksdeal",
     "1005013096683979": "ecksdeal",
@@ -7291,7 +7460,7 @@
     "1005007345151855": "bnddeals",
     "1005010345227483": "megaphonna",
     "1005011557896041": "aniscoupons",
-    "1005011754993234": "zedstoreonline",
+    "1005011754993234": "aniscoupons",
     "1005011735727412": "bnddeals",
     "1005013039644752": "aniscoupons",
     "1005007916078341": "zedstoreonline",
@@ -7406,7 +7575,7 @@
     "1005013467588413": "couponsglobal",
     "1005012024630994": "couponsglobal",
     "1005012633322402": "couponsglobal",
-    "1005012249968766": "megaphonna",
+    "1005012249968766": "zedstoreonline",
     "9998886751": "test_channel",
     "9998887440": "test_channel",
     "1005009200129898": "ecksdeal",
@@ -7417,7 +7586,14 @@
     "1005013479436053": "aniscoupons",
     "1005012431631514": "pcgamingpart",
     "1005009338640941": "bnddeals",
-    "1005013137304827": "bnddeals"
+    "1005013137304827": "bnddeals",
+    "1005012402919487": "aniscoupons",
+    "9998883962": "test_channel",
+    "1005012005176923": "zedstoreonline",
+    "1005012399830182": "zedstoreonline",
+    "1005013479172067": "aniscoupons",
+    "1005012199872142": "aniscoupons",
+    "9998886358": "test_channel"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7673,7 +7849,7 @@
     "ATTACK SHARK X11SE Wireless Gaming Mouse PixArt PAW3311": "pcgamingpart",
     "لووووووووووووز controller 🎮": "bnddeals",
     "جديد علامة ©️©️©️©️🆕": "megaphonna",
-    "AMD Ryzen 5 8400F": "zedstoreonline",
+    "AMD Ryzen 5 8400F": "aniscoupons",
     "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": "pcgamingpart",
     "🔝 مانات قووووة ل جماعة mobile gaming 🎮": "bnddeals",
     "جديد ال ©️©️ ببطارية عملاقة💪💪": "megaphonna",
@@ -7772,7 +7948,15 @@
     "OnePlus ACE 6": "aniscoupons",
     "أضف الآن في السلة الآن العرض يعمل يوم 1 نوفمبر 🔥": "pcgamingpart",
     "Honor 600 5G Global 8/256GB .": "bnddeals",
-    "Honor 600s (8/255GB)": "bnddeals"
+    "Honor 600s (8/255GB)": "bnddeals",
+    "CUSU RAM DDR4 3200MHz 8GBx2": "aniscoupons",
+    "Realme P3 (No Charger)": "aniscoupons",
+    "Oppo Find X9 Pro 12/256": "zedstoreonline",
+    "Vivo X200S 12/256": "zedstoreonline",
+    "IQOO 15T 12/256": "zedstoreonline",
+    "Honor Power 2 12/256": "zedstoreonline",
+    "OnePlus Turbo 6x  6/128GB": "aniscoupons",
+    "Oneplus ACE 6 Ultra 12/256GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -7868,7 +8052,9 @@
     "test_rem_41cb5db4": "2026-10-02",
     "test_rem_47c5e2b1": "2026-10-02",
     "test_rem_cf2654fe": "2026-10-02",
-    "test_rem_7f7fe91f": "2026-10-02"
+    "test_rem_7f7fe91f": "2026-10-02",
+    "test_rem_eea336b8": "2026-10-02",
+    "test_rem_0cfbde77": "2026-10-02"
   },
   "channel_announcements_history": {
     "china_holiday_shipping_delay": "2026-10-02",
@@ -7905,7 +8091,7 @@
     "test_tag_cc9f12": "2026-10-02",
     "test_tag_3ced26": "2026-10-02",
     "test_tag_1457c7": "2026-10-02",
-    "coupon_return_refresh": "2026-10-28",
+    "coupon_return_refresh": "2026-10-29",
     "test_tag_76fe97": "2026-10-02",
     "test_tag_9c03f3": "2026-10-02",
     "test_tag_e98c78": "2026-10-02",
@@ -7959,7 +8145,9 @@
     "test_tag_684ff3": "2026-10-02",
     "test_tag_b684aa": "2026-10-02",
     "test_tag_790e8d": "2026-10-02",
-    "test_tag_91e294": "2026-10-02"
+    "test_tag_91e294": "2026-10-02",
+    "test_tag_44bd13": "2026-10-02",
+    "test_tag_349a36": "2026-10-02"
   },
   "daily_tajmi3at_history": {
     "2026-10-03": {
@@ -8119,7 +8307,8 @@
   "pinned_promo_events": {
     "AliExpress Special Promo Octobre 2026_20261004": 661,
     "AliExpress Special Promo Octobre 2026_20261006": 677,
-    "Brand Day Sale Octobre 2026_20261009": 702
+    "Brand Day Sale Octobre 2026_20261009": 702,
+    "11.11 Global Shopping Festival Warm-Up_20261028": 1060
   },
   "sent_promo_notifiers": [
     "LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
@@ -8655,78 +8844,58 @@
     "pcgamingpart:8010",
     "pcgamingpart:8009",
     "bnddeals:50884",
-    "megaphonna:8504"
+    "megaphonna:8504",
+    "ecksdeal:5906",
+    "bnddeals:50879",
+    "bnddeals:50878",
+    "bnddeals:50877",
+    "bnddeals:50876",
+    "megaphonna:8502",
+    "megaphonna:8501",
+    "couponsglobal:48880",
+    "zedstoreonline:38689",
+    "zedstoreonline:38683",
+    "aniscoupons:33049",
+    "aniscoupons:33048",
+    "aniscoupons:33045",
+    "aniscoupons:33038",
+    "pcgamingpart:8016",
+    "pcgamingpart:8015",
+    "pcgamingpart:8014",
+    "pcgamingpart:8008",
+    "pcgamingpart:8007",
+    "pcgamingpart:8006",
+    "bnddeals:50875",
+    "bnddeals:50874",
+    "megaphonna:8507",
+    "zedstoreonline:38691",
+    "aniscoupons:33050",
+    "aniscoupons:33035",
+    "aniscoupons:33034",
+    "aniscoupons:33033",
+    "pcgamingpart:8017",
+    "pcgamingpart:8005",
+    "pcgamingpart:8004",
+    "zedstoreonline:38688",
+    "zedstoreonline:38687",
+    "zedstoreonline:38686",
+    "zedstoreonline:38684",
+    "zedstoreonline:38682",
+    "zedstoreonline:38681",
+    "pcgamingpart:8018",
+    "pcgamingpart:8013",
+    "bnddeals:50880",
+    "zedstoreonline:38675",
+    "zedstoreonline:38673",
+    "megaphonna:8508",
+    "megaphonna:8506",
+    "megaphonna:8505",
+    "aniscoupons:33051"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
   "france_cross_promo_variant_idx": 1,
   "published_coupon_bulletins": [
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
-      "timestamp": 1792073548.4827328
-    },
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
-      "timestamp": 1792073835.8857622
-    },
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
-      "timestamp": 1792073962.745027
-    },
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
-      "timestamp": 1792086218.194514
-    },
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
-      "timestamp": 1792087184.6978607
-    },
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
-      "timestamp": 1792098019.6495035
-    },
     {
       "promo": "Test Event 2026",
       "hash": "d9b8b196",
@@ -9210,10 +9379,76 @@
       "channel_msg_id": 9999,
       "channel": "@DzAliexpress0",
       "timestamp": 1793229906.6516478
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1793273961.2422647
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1793274417.075086
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1793274636.7494493
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1793275533.6803718
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1793276116.6879475
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1793276356.8608305
     }
   ],
-  "last_pre_11_11_advisory_time": 1793229910.2799509,
-  "next_pre_11_11_interval_seconds": 272964,
+  "last_pre_11_11_advisory_time": 1793276360.2037396,
+  "next_pre_11_11_interval_seconds": 345500,
   "pre_11_11_variant_idx": 1,
   "published_title_prices": {}
 }

@@ -228,6 +228,29 @@ class MediaRenderer:
             logger.warning(f"Failed rendering framed deal: {e}, falling back to default card")
             return self._render_deal_card(base_img, usd_price=usd_price)
 
+    def _clean_source_watermark(self, im: Image.Image) -> Image.Image:
+        try:
+            im = im.convert("RGB")
+            w, h = im.size
+            corner = im.getpixel((w - 5, h - 5))
+            if sum(corner) / 3 > 215:  # Light/white background
+                xs, ys = [], []
+                for y in range(int(h * 0.70), int(h * 0.92)):
+                    for x in range(int(w * 0.68), int(w * 0.98)):
+                        px = im.getpixel((x, y))
+                        if sum(abs(px[i] - corner[i]) for i in range(3)) > 75:
+                            xs.append(x)
+                            ys.append(y)
+                if xs and ys:
+                    min_x, max_x = max(0, min(xs) - 4), min(w, max(xs) + 4)
+                    min_y, max_y = max(0, min(ys) - 4), min(h, max(ys) + 4)
+                    if (max_x - min_x) < w * 0.35 and (max_y - min_y) < h * 0.25:
+                        draw = ImageDraw.Draw(im)
+                        draw.rectangle((min_x, min_y, max_x, max_y), fill=corner)
+            return im
+        except Exception:
+            return im
+
     def prepare_post_image(
         self,
         image_path: Optional[Path],
@@ -244,6 +267,7 @@ class MediaRenderer:
         if image_path and image_path.exists():
             try:
                 with Image.open(image_path) as img:
+                    img = self._clean_source_watermark(img)
                     branded = self._render_framed_deal(img, usd_price=usd_price, title=title)
                     branded.save(out_file, "JPEG", quality=95)
                     return out_file

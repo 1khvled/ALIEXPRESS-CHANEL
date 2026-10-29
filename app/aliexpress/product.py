@@ -248,7 +248,10 @@ class ProductExtractor:
             logger.info(f"Product extraction rejected competitor affiliate-exclusive deal: {aff_reason}")
             return None
 
-        # NEVER fall back to competitor media_path for product deals to prevent competitor logos / watermarks!
+        # Fallback to source message media if official studio image cannot be fetched directly
+        if not image_url and media_path:
+            image_url = media_path
+
         is_valid = bool(resolved.product_id and (usd_price or eur_price) and title and image_url)
 
         return ExtractedProduct(

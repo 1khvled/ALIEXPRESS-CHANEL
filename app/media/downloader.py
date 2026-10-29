@@ -20,11 +20,7 @@ class MediaDownloader:
         if not image_url:
             return None
 
-        # Zero-tolerance firewall: Block downloading images from competitor Telegram sources
-        blocked_domains = ["telesco.pe", "telegram.org", "t.me", "cdn4.telesco.pe", "cdn1.telesco.pe"]
-        if any(d in image_url.lower() for d in blocked_domains):
-            logger.warning(f"[SECURITY] Blocked downloading image from competitor Telegram source: {image_url}")
-            return None
+        # Telegram CDN source images allowed for local download and DealScout frame rendering
 
         # Build filename
         if identifier:

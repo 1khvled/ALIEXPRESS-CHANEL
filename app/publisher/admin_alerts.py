@@ -54,8 +54,12 @@ async def notify_admin_error(
     if exc:
         error_msg += f"\nException: {type(exc).__name__}: {str(exc)}"
 
-    # Deduplication key based on error type and first 80 characters of message
-    dedup_key = f"{channel}:{error_type}:{error_msg[:80]}"
+    import re
+    # Strip product IDs, deal IDs, and numbers from dedup_key so identical failure classes across deals are throttled
+    clean_msg = re.sub(r'#?\d+', '', error_msg).strip()[:80]
+    clean_type = re.sub(r'#?\d+', '', error_type).strip()[:50]
+    dedup_key = f"{channel}:{clean_type}:{clean_msg}"
+
     now = datetime.now(timezone.utc).timestamp()
     last_sent = _ALERT_COOLDOWN_CACHE.get(dedup_key, 0.0)
 

@@ -10,6 +10,10 @@ class ValidationResult:
 class DealCaptionValidator:
     SITUATIONAL_HOOKS = [
         "DealScout",
+        "تسخينات 11.11",
+        "تسخينات",
+        "دير في السلّة",
+        "دير في السلة",
         "سعر ممتاز",
         "ســـعـــر ممت",
         "عرض نااار",

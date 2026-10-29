@@ -175,7 +175,19 @@ class TelegramPublisher:
             if image_path:
                 p_str = str(image_path)
                 if p_str.startswith("http://") or p_str.startswith("https://"):
-                    photo_url = p_str
+                    # Telegram Bot API cannot fetch telesco.pe/t.me URLs directly
+                    # Pre-download them as photo_bytes to prevent 400 Bad Request
+                    if any(d in p_str.lower() for d in ["telesco.pe", "t.me", "telegram.org"]):
+                        try:
+                            enforce_ipv4()
+                            async with httpx.AsyncClient(timeout=15.0) as img_client:
+                                r = await img_client.get(p_str)
+                                if r.status_code == 200 and len(r.content) > 1000:
+                                    photo_bytes = r.content
+                        except Exception as dl_err:
+                            logger.warning(f"Failed to pre-download telegram image {p_str}: {dl_err}")
+                    if not photo_bytes:
+                        photo_url = p_str
                 else:
                     p = Path(image_path)
                     if p.exists():
