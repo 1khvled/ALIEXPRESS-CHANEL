@@ -364,7 +364,15 @@
     "1005013422094858",
     "1005012959515066",
     "9998882843",
-    "9998883032"
+    "9998883032",
+    "1005011638526553",
+    "1005010266487244",
+    "1005010207075594",
+    "1005013351519067",
+    "1005012484784752",
+    "1005013222140851",
+    "1005010355409000",
+    "1005013438245033"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -382,7 +390,7 @@
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
     "100500777666555": 1793272232.658002,
-    "1005011778621042": 1792160254.9859293,
+    "1005011778621042": 1793299484.2441924,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1791192944.201814,
     "1005006533038973": 1791104468.758226,
@@ -581,7 +589,7 @@
     "1005012086685834": 1791941271.2358608,
     "1005012914301139": 1792191289.2917817,
     "1005007345151855": 1791942667.867043,
-    "1005010345227483": 1791942676.1983886,
+    "1005010345227483": 1793299548.5548651,
     "1005011557896041": 1792156781.1827424,
     "1005011754993234": 1793276207.4521933,
     "1005011735727412": 1791943783.9162278,
@@ -597,7 +605,7 @@
     "1005013054007275": 1791992936.3210912,
     "1005011899097443": 1792191284.560975,
     "1005012865117890": 1792007168.2612865,
-    "1005010428947440": 1792007180.6836498,
+    "1005010428947440": 1793299435.330041,
     "1005010733227481": 1792156757.9443583,
     "1005006281667276": 1792157892.9621794,
     "1005010177152485": 1792017733.3056524,
@@ -739,7 +747,15 @@
     "1005013422094858": 1793282614.1434958,
     "1005012959515066": 1793282624.5538614,
     "9998882843": 1793282843.2823777,
-    "9998883032": 1793283032.609285
+    "9998883032": 1793283032.609285,
+    "1005011638526553": 1793299421.73227,
+    "1005010266487244": 1793299440.1984155,
+    "1005010207075594": 1793299454.8390412,
+    "1005013351519067": 1793299459.307718,
+    "1005012484784752": 1793299476.5930903,
+    "1005013222140851": 1793299503.8951576,
+    "1005010355409000": 1793299528.9348502,
+    "1005013438245033": 1793299536.9978156
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1112,7 +1128,18 @@
     "Honor 500 Pro 12/256GB",
     "Honor Win Turbo 2 8/256",
     "Honor Win RT2 12/256",
-    "ViVO X300E 12/256"
+    "ViVO X300E 12/256",
+    "Oneplus 13T 12/256GB",
+    "Soundcore Select 4 Go",
+    "Anker USB C GaN Charger 30W",
+    "Realme GT8",
+    "Realme C100  6/128GB",
+    "معالج Ryzen 5 5600XT",
+    "معالج Ryzen 7 5700X",
+    "ASRock B550 Phantom Gaming 4 Motherboard",
+    "الوحش الأكبر من",
+    "نسخة صينية",
+    "جديد"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1492,7 +1519,18 @@
     "Honor 500 Pro 12/256GB": 1793282581.4093866,
     "Honor Win Turbo 2 8/256": 1793282597.9316623,
     "Honor Win RT2 12/256": 1793282614.1434958,
-    "ViVO X300E 12/256": 1793282624.5538614
+    "ViVO X300E 12/256": 1793282624.5538614,
+    "Oneplus 13T 12/256GB": 1793299421.73227,
+    "Soundcore Select 4 Go": 1793299435.330041,
+    "Anker USB C GaN Charger 30W": 1793299440.1984155,
+    "Realme GT8": 1793299454.8390412,
+    "Realme C100  6/128GB": 1793299459.307718,
+    "معالج Ryzen 5 5600XT": 1793299476.5930903,
+    "معالج Ryzen 7 5700X": 1793299484.2441924,
+    "ASRock B550 Phantom Gaming 4 Motherboard": 1793299503.8951576,
+    "الوحش الأكبر من": 1793299528.9348502,
+    "نسخة صينية": 1793299536.9978156,
+    "جديد": 1793299548.5548651
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2307,19 +2345,30 @@
     "zedstoreonline:38689",
     "zedstoreonline:38688",
     "test_channel:1793282843",
-    "test_channel:1793283032"
+    "test_channel:1793283032",
+    "zedstoreonline:38709",
+    "aniscoupons:33067",
+    "aniscoupons:33066",
+    "aniscoupons:33063",
+    "aniscoupons:33062",
+    "ecksdeal:5916",
+    "ecksdeal:5915",
+    "pcgamingpart:8022",
+    "megaphonna:8539",
+    "megaphonna:8538",
+    "megaphonna:8536"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792711145.3171253,
-  "last_run_time": 1793283032.8455553,
+  "last_run_time": 1793299548.5548651,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33061,
-      "last_check_time": 1793282654.7729669
+      "last_message_id": 33067,
+      "last_check_time": 1793299469.4222581
     },
     "ecksdeal": {
-      "last_message_id": 5911,
-      "last_check_time": 1793282655.798789
+      "last_message_id": 5916,
+      "last_check_time": 1793299498.337339
     },
     "lodydeals": {
       "last_message_id": 45595,
@@ -2334,16 +2383,16 @@
       "last_check_time": 1793283032.609285
     },
     "pcgamingpart": {
-      "last_message_id": 8019,
-      "last_check_time": 1793282656.416983
+      "last_message_id": 8024,
+      "last_check_time": 1793299513.0371935
     },
     "zedstoreonline": {
-      "last_message_id": 38703,
-      "last_check_time": 1793282626.6384745
+      "last_message_id": 38713,
+      "last_check_time": 1793299431.650677
     },
     "megaphonna": {
-      "last_message_id": 8521,
-      "last_check_time": 1793283032.8455553
+      "last_message_id": 8541,
+      "last_check_time": 1793299555.1343746
     },
     "couponsglobal": {
       "last_message_id": 48880,
@@ -2351,7 +2400,7 @@
     },
     "alidealsdz": {
       "last_message_id": 153,
-      "last_check_time": 1793282667.026614
+      "last_check_time": 1793299555.796962
     }
   },
   "published_product_prices": {
@@ -2368,7 +2417,7 @@
     "1005007279793099": 13.7,
     "1005008829227075": 24.76,
     "100500777666555": 20.0,
-    "1005011778621042": 130.5,
+    "1005011778621042": 118.59,
     "1005012312990781": 92.31,
     "1005009234854371": 19.6,
     "1005006533038973": 21.81,
@@ -2540,7 +2589,7 @@
     "1005012086685834": 8.99,
     "1005012914301139": 12.07,
     "1005007345151855": 40.0,
-    "1005010345227483": 246.4,
+    "1005010345227483": 200.0,
     "1005011557896041": 257.2,
     "1005011754993234": 79.4,
     "1005011735727412": 26.6,
@@ -2555,7 +2604,7 @@
     "1005007767322935": 21.61,
     "1005013054007275": 55.97,
     "1005011899097443": 10.16,
-    "1005010428947440": 24.47,
+    "1005010428947440": 21.53,
     "1005010733227481": 285.4,
     "1005006281667276": 33.2,
     "1005010177152485": 46.0,
@@ -2577,7 +2626,7 @@
     "1005013137396211": 316.0,
     "1005012575455222": 115.0,
     "1005010210432531": 95.8,
-    "1005010266487244": 14.38,
+    "1005010266487244": 12.95,
     "1005011904443903": 92.0,
     "1005010112746583": 46.6,
     "1005012671337268": 4.02,
@@ -2636,7 +2685,14 @@
     "1005010620332784": 480.0,
     "1005013489523241": 406.0,
     "1005013422094858": 554.0,
-    "1005012959515066": 587.0
+    "1005012959515066": 587.0,
+    "1005011638526553": 410.0,
+    "1005010207075594": 424.0,
+    "1005013351519067": 202.9,
+    "1005012484784752": 98.79,
+    "1005013222140851": 71.12,
+    "1005010355409000": 518.2,
+    "1005013438245033": 412.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -7571,6 +7627,116 @@
       "price": 587.0,
       "timestamp": 1793282624.5538614,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38709": {
+      "channel_msg_id": 1106,
+      "product_id": "1005011638526553",
+      "title": "Oneplus 13T 12/256GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38709,
+      "price": 410.0,
+      "timestamp": 1793299421.73227,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33067": {
+      "channel_msg_id": 1107,
+      "product_id": "1005010428947440",
+      "title": "Soundcore Select 4 Go",
+      "channel": "aniscoupons",
+      "source_msg_id": 33067,
+      "price": 21.53,
+      "timestamp": 1793299435.330041,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33066": {
+      "channel_msg_id": 1108,
+      "product_id": "1005010266487244",
+      "title": "Anker USB C GaN Charger 30W",
+      "channel": "aniscoupons",
+      "source_msg_id": 33066,
+      "price": 12.95,
+      "timestamp": 1793299440.1984155,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33063": {
+      "channel_msg_id": 1109,
+      "product_id": "1005010207075594",
+      "title": "Realme GT8",
+      "channel": "aniscoupons",
+      "source_msg_id": 33063,
+      "price": 424.0,
+      "timestamp": 1793299454.8390412,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33062": {
+      "channel_msg_id": 1110,
+      "product_id": "1005013351519067",
+      "title": "Realme C100  6/128GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 33062,
+      "price": 202.9,
+      "timestamp": 1793299459.307718,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5916": {
+      "channel_msg_id": 1111,
+      "product_id": "1005012484784752",
+      "title": "معالج Ryzen 5 5600XT",
+      "channel": "ecksdeal",
+      "source_msg_id": 5916,
+      "price": 98.79,
+      "timestamp": 1793299476.5930903,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5915": {
+      "channel_msg_id": 1112,
+      "product_id": "1005011778621042",
+      "title": "معالج Ryzen 7 5700X",
+      "channel": "ecksdeal",
+      "source_msg_id": 5915,
+      "price": 118.59,
+      "timestamp": 1793299484.2441924,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:8022": {
+      "channel_msg_id": 1113,
+      "product_id": "1005013222140851",
+      "title": "ASRock B550 Phantom Gaming 4 Motherboard",
+      "channel": "pcgamingpart",
+      "source_msg_id": 8022,
+      "price": 71.12,
+      "timestamp": 1793299503.8951576,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8539": {
+      "channel_msg_id": 1114,
+      "product_id": "1005010355409000",
+      "title": "الوحش الأكبر من",
+      "channel": "megaphonna",
+      "source_msg_id": 8539,
+      "price": 518.2,
+      "timestamp": 1793299528.9348502,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8538": {
+      "channel_msg_id": 1115,
+      "product_id": "1005013438245033",
+      "title": "نسخة صينية",
+      "channel": "megaphonna",
+      "source_msg_id": 8538,
+      "price": 412.0,
+      "timestamp": 1793299536.9978156,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8536": {
+      "channel_msg_id": 1116,
+      "product_id": "1005010345227483",
+      "title": "جديد",
+      "channel": "megaphonna",
+      "source_msg_id": 8536,
+      "price": 200.0,
+      "timestamp": 1793299548.5548651,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -7579,17 +7745,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793282667.4106653,
+    "last_deal_post_time": 1793299556.0482917,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793282667.38497,
+    "last_sweep_time": 1793299558.5073133,
     "last_sweep_times": {
-      "algeria": 1793282667.38497,
-      "france": 1793270757.800055
+      "algeria": 1793299556.0362506,
+      "france": 1793299558.5073133
     },
     "last_deal_post_times": {
-      "algeria": 1793282667.4106653
+      "algeria": 1793299556.0482917
     }
   },
   "last_coin_reminder_time": 1793182579.2180297,
@@ -7742,7 +7908,7 @@
     "1005007345108759": "pcgamingpart",
     "1005007394028808": "lodydeals",
     "1005007394197021": "lodydeals",
-    "1005011778621042": "aniscoupons",
+    "1005011778621042": "ecksdeal",
     "1005012571601398": "megaphonna",
     "1005013290515237": "aniscoupons",
     "1005012264415744": "megaphonna",
@@ -7829,7 +7995,7 @@
     "1005007767322935": "lodydeals",
     "1005013054007275": "ecksdeal",
     "1005011899097443": "lodydeals",
-    "1005010428947440": "couponsglobal",
+    "1005010428947440": "aniscoupons",
     "1005010733227481": "megaphonna",
     "1005006281667276": "zedstoreonline",
     "1005010177152485": "bnddeals",
@@ -7861,7 +8027,7 @@
     "1005010210432531": "megaphonna",
     "9998888020": "test_channel",
     "9998888253": "test_channel",
-    "1005010266487244": "couponsglobal",
+    "1005010266487244": "aniscoupons",
     "9998888342": "test_channel",
     "9998889399": "test_channel",
     "999888177": "test_channel",
@@ -7972,7 +8138,14 @@
     "1005013422094858": "zedstoreonline",
     "1005012959515066": "zedstoreonline",
     "9998882843": "test_channel",
-    "9998883032": "test_channel"
+    "9998883032": "test_channel",
+    "1005011638526553": "zedstoreonline",
+    "1005010207075594": "aniscoupons",
+    "1005013351519067": "aniscoupons",
+    "1005012484784752": "ecksdeal",
+    "1005013222140851": "pcgamingpart",
+    "1005010355409000": "megaphonna",
+    "1005013438245033": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -8355,7 +8528,18 @@
     "Honor 500 Pro 12/256GB": "zedstoreonline",
     "Honor Win Turbo 2 8/256": "zedstoreonline",
     "Honor Win RT2 12/256": "zedstoreonline",
-    "ViVO X300E 12/256": "zedstoreonline"
+    "ViVO X300E 12/256": "zedstoreonline",
+    "Oneplus 13T 12/256GB": "zedstoreonline",
+    "Soundcore Select 4 Go": "aniscoupons",
+    "Anker USB C GaN Charger 30W": "aniscoupons",
+    "Realme GT8": "aniscoupons",
+    "Realme C100  6/128GB": "aniscoupons",
+    "معالج Ryzen 5 5600XT": "ecksdeal",
+    "معالج Ryzen 7 5700X": "ecksdeal",
+    "ASRock B550 Phantom Gaming 4 Motherboard": "pcgamingpart",
+    "الوحش الأكبر من": "megaphonna",
+    "نسخة صينية": "megaphonna",
+    "جديد": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -9324,7 +9508,30 @@
     "alidealsdz:144",
     "alidealsdz:143",
     "alidealsdz:142",
-    "alidealsdz:141"
+    "alidealsdz:141",
+    "zedstoreonline:38713",
+    "zedstoreonline:38712",
+    "zedstoreonline:38711",
+    "zedstoreonline:38710",
+    "zedstoreonline:38708",
+    "zedstoreonline:38707",
+    "zedstoreonline:38706",
+    "aniscoupons:33065",
+    "aniscoupons:33064",
+    "aniscoupons:33057",
+    "aniscoupons:33052",
+    "ecksdeal:5914",
+    "ecksdeal:5913",
+    "ecksdeal:5912",
+    "pcgamingpart:8024",
+    "pcgamingpart:8023",
+    "pcgamingpart:8021",
+    "pcgamingpart:8020",
+    "megaphonna:8541",
+    "megaphonna:8540",
+    "megaphonna:8537",
+    "megaphonna:8534",
+    "megaphonna:8533"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
