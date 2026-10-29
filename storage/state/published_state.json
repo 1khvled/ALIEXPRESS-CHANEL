@@ -372,7 +372,13 @@
     "1005012484784752",
     "1005013222140851",
     "1005010355409000",
-    "1005013438245033"
+    "1005013438245033",
+    "1005008986635164",
+    "1005008327980403",
+    "1005012838686691",
+    "1005007966795709",
+    "1005007760080474",
+    "1005011857340568"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -518,7 +524,7 @@
     "1005006974721332": 1791056453.5992196,
     "1005010266413614": 1793279089.0185478,
     "1005009497821240": 1791117948.6585228,
-    "1005011925142821": 1792061295.4212031,
+    "1005011925142821": 1793314883.2832904,
     "9998883864": 1791063864.5866926,
     "1005010536089199": 1792103187.1376467,
     "1005012385221205": 1791102050.1835058,
@@ -729,7 +735,7 @@
     "1005010172572484": 1793278969.2747114,
     "1005012167596439": 1793278979.5236633,
     "1005005209037696": 1793278991.8471248,
-    "1005007145755647": 1793279003.6086628,
+    "1005007145755647": 1793314907.7038486,
     "1005011559072337": 1793279014.5630076,
     "1005008430504420": 1793279040.5670838,
     "1005012483491590": 1793279067.624665,
@@ -741,7 +747,7 @@
     "1005012766583284": 1793281852.7664962,
     "1005011557016158": 1793281863.7129755,
     "1005013451224718": 1793281883.4004252,
-    "1005009120899585": 1793281894.0357482,
+    "1005009120899585": 1793314902.97209,
     "1005010620332784": 1793282581.4093866,
     "1005013489523241": 1793282597.9316623,
     "1005013422094858": 1793282614.1434958,
@@ -755,7 +761,13 @@
     "1005012484784752": 1793299476.5930903,
     "1005013222140851": 1793299503.8951576,
     "1005010355409000": 1793299528.9348502,
-    "1005013438245033": 1793299536.9978156
+    "1005013438245033": 1793299536.9978156,
+    "1005008986635164": 1793314892.9200466,
+    "1005008327980403": 1793314898.490911,
+    "1005012838686691": 1793314915.007305,
+    "1005007966795709": 1793314939.6901202,
+    "1005007760080474": 1793314944.416167,
+    "1005011857340568": 1793314949.3624141
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1139,7 +1151,13 @@
     "ASRock B550 Phantom Gaming 4 Motherboard",
     "الوحش الأكبر من",
     "نسخة صينية",
-    "جديد"
+    "جديد",
+    "ASRock B850M Riptide WiFi",
+    "KOOTION M.2 1TB 7200Mbs",
+    "MSI X670E GAMING PLUS WIFI AMD X670 Motherboard AM5 used",
+    "BLACKVIEW WAVE 7C (4/64)",
+    "BLACKVIEW WAVE 10C (4/32)",
+    "BLACKVIEW WAVE 10 (8/256)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1302,7 +1320,7 @@
     "TOPK Car Phone Holder": 1791056453.5992196,
     "الهاتف الاكثر طلبا": 1791056463.1366906,
     "Car Battery Charger LCD Display": 1791056745.5798366,
-    "Honor 600 lite (8/256)": 1791057346.9236152,
+    "Honor 600 lite (8/256)": 1793314883.2832904,
     "ATTACK SHARK G300": 1791105348.8066044,
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": 1791101144.9729881,
     "Toocki 25W GaN Charger": 1791102050.1835058,
@@ -1504,7 +1522,7 @@
     "Oppo Find X9 12/256": 1793278969.2747114,
     "Oppo Find X9s Pro 12/256": 1793278979.5236633,
     "POCO F7  12/256": 1793278991.8471248,
-    "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz": 1793279003.6086628,
+    "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz": 1793314907.7038486,
     "AMD Ryzen 9 9900X": 1793279014.5630076,
     "ONEPLUS 13 (12/256)": 1793279040.5670838,
     "الأكثر طلباً في فترات سابقة": 1793279082.9636364,
@@ -1515,7 +1533,7 @@
     "ASRock X570 PHANTOM GAMING AM4 Motherboard": 1793281852.7664962,
     "realme P4 Power 8/256": 1793281863.7129755,
     "Realme GT8 Pro": 1793281883.4004252,
-    "Gigabyte B650M GAMING WIFI DDR5": 1793281894.0357482,
+    "Gigabyte B650M GAMING WIFI DDR5": 1793314902.97209,
     "Honor 500 Pro 12/256GB": 1793282581.4093866,
     "Honor Win Turbo 2 8/256": 1793282597.9316623,
     "Honor Win RT2 12/256": 1793282614.1434958,
@@ -1530,7 +1548,13 @@
     "ASRock B550 Phantom Gaming 4 Motherboard": 1793299503.8951576,
     "الوحش الأكبر من": 1793299528.9348502,
     "نسخة صينية": 1793299536.9978156,
-    "جديد": 1793299548.5548651
+    "جديد": 1793299548.5548651,
+    "ASRock B850M Riptide WiFi": 1793314892.9200466,
+    "KOOTION M.2 1TB 7200Mbs": 1793314898.490911,
+    "MSI X670E GAMING PLUS WIFI AMD X670 Motherboard AM5 used": 1793314915.007305,
+    "BLACKVIEW WAVE 7C (4/64)": 1793314939.6901202,
+    "BLACKVIEW WAVE 10C (4/32)": 1793314944.416167,
+    "BLACKVIEW WAVE 10 (8/256)": 1793314949.3624141
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2356,19 +2380,28 @@
     "pcgamingpart:8022",
     "megaphonna:8539",
     "megaphonna:8538",
-    "megaphonna:8536"
+    "megaphonna:8536",
+    "aniscoupons:33112",
+    "aniscoupons:33111",
+    "aniscoupons:33110",
+    "aniscoupons:33109",
+    "aniscoupons:33108",
+    "pcgamingpart:8025",
+    "megaphonna:8544",
+    "megaphonna:8543",
+    "megaphonna:8542"
   ],
-  "last_disclaimer_time": 1792097804.651378,
+  "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1792711145.3171253,
-  "last_run_time": 1793299548.5548651,
+  "last_run_time": 1793314949.3624141,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33067,
-      "last_check_time": 1793299469.4222581
+      "last_message_id": 33115,
+      "last_check_time": 1793314909.7334242
     },
     "ecksdeal": {
       "last_message_id": 5916,
-      "last_check_time": 1793299498.337339
+      "last_check_time": 1793314910.4646788
     },
     "lodydeals": {
       "last_message_id": 45595,
@@ -2376,23 +2409,23 @@
     },
     "bnddeals": {
       "last_message_id": 50884,
-      "last_check_time": 1793275705.7519362
+      "last_check_time": 1793314917.7503018
     },
     "test_channel": {
       "last_message_id": 1793283032,
       "last_check_time": 1793283032.609285
     },
     "pcgamingpart": {
-      "last_message_id": 8024,
-      "last_check_time": 1793299513.0371935
+      "last_message_id": 8026,
+      "last_check_time": 1793314917.0347583
     },
     "zedstoreonline": {
-      "last_message_id": 38713,
-      "last_check_time": 1793299431.650677
+      "last_message_id": 38714,
+      "last_check_time": 1793314874.743446
     },
     "megaphonna": {
-      "last_message_id": 8541,
-      "last_check_time": 1793299555.1343746
+      "last_message_id": 8550,
+      "last_check_time": 1793314951.3904293
     },
     "couponsglobal": {
       "last_message_id": 48880,
@@ -2400,7 +2433,7 @@
     },
     "alidealsdz": {
       "last_message_id": 153,
-      "last_check_time": 1793299555.796962
+      "last_check_time": 1793314952.1238358
     }
   },
   "published_product_prices": {
@@ -2534,7 +2567,7 @@
     "1005006974721332": 3.09,
     "1005010266413614": 276.0,
     "1005009497821240": 24.73,
-    "1005011925142821": 263.0,
+    "1005011925142821": 246.75,
     "1005010536089199": 36.45,
     "1005012385221205": 13.27,
     "1005013223462188": 13.5,
@@ -2631,7 +2664,7 @@
     "1005010112746583": 46.6,
     "1005012671337268": 4.02,
     "1005012331836106": 268.0,
-    "1005007760080474": 78.0,
+    "1005007760080474": 75.0,
     "1005010369693975": 16.0,
     "1005006442452857": 24.7,
     "1005012751475098": 2.28,
@@ -2692,7 +2725,12 @@
     "1005012484784752": 98.79,
     "1005013222140851": 71.12,
     "1005010355409000": 518.2,
-    "1005013438245033": 412.0
+    "1005013438245033": 412.0,
+    "1005008986635164": 185.9,
+    "1005008327980403": 142.8,
+    "1005012838686691": 146.83,
+    "1005007966795709": 87.0,
+    "1005011857340568": 115.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -7737,6 +7775,96 @@
       "price": 200.0,
       "timestamp": 1793299548.5548651,
       "status": "ACTIVE"
+    },
+    "aniscoupons:33112": {
+      "channel_msg_id": 1119,
+      "product_id": "1005011925142821",
+      "title": "Honor 600 lite (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 33112,
+      "price": 246.75,
+      "timestamp": 1793314883.2832904,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33111": {
+      "channel_msg_id": 1120,
+      "product_id": "1005008986635164",
+      "title": "ASRock B850M Riptide WiFi",
+      "channel": "aniscoupons",
+      "source_msg_id": 33111,
+      "price": 185.9,
+      "timestamp": 1793314892.9200466,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33110": {
+      "channel_msg_id": 1121,
+      "product_id": "1005008327980403",
+      "title": "KOOTION M.2 1TB 7200Mbs",
+      "channel": "aniscoupons",
+      "source_msg_id": 33110,
+      "price": 142.8,
+      "timestamp": 1793314898.490911,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33109": {
+      "channel_msg_id": 1122,
+      "product_id": "1005009120899585",
+      "title": "Gigabyte B650M GAMING WIFI DDR5",
+      "channel": "aniscoupons",
+      "source_msg_id": 33109,
+      "price": 134.0,
+      "timestamp": 1793314902.97209,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33108": {
+      "channel_msg_id": 1123,
+      "product_id": "1005007145755647",
+      "title": "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz",
+      "channel": "aniscoupons",
+      "source_msg_id": 33108,
+      "price": 361.26,
+      "timestamp": 1793314907.7038486,
+      "status": "ACTIVE"
+    },
+    "pcgamingpart:8025": {
+      "channel_msg_id": 1124,
+      "product_id": "1005012838686691",
+      "title": "MSI X670E GAMING PLUS WIFI AMD X670 Motherboard AM5 used",
+      "channel": "pcgamingpart",
+      "source_msg_id": 8025,
+      "price": 146.83,
+      "timestamp": 1793314915.007305,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8544": {
+      "channel_msg_id": 1125,
+      "product_id": "1005007966795709",
+      "title": "BLACKVIEW WAVE 7C (4/64)",
+      "channel": "megaphonna",
+      "source_msg_id": 8544,
+      "price": 87.0,
+      "timestamp": 1793314939.6901202,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8543": {
+      "channel_msg_id": 1126,
+      "product_id": "1005007760080474",
+      "title": "BLACKVIEW WAVE 10C (4/32)",
+      "channel": "megaphonna",
+      "source_msg_id": 8543,
+      "price": 75.0,
+      "timestamp": 1793314944.416167,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8542": {
+      "channel_msg_id": 1127,
+      "product_id": "1005011857340568",
+      "title": "BLACKVIEW WAVE 10 (8/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8542,
+      "price": 115.0,
+      "timestamp": 1793314949.3624141,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -7745,17 +7873,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793299556.0482917,
+    "last_deal_post_time": 1793314952.37995,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793299558.5073133,
+    "last_sweep_time": 1793314955.154981,
     "last_sweep_times": {
-      "algeria": 1793299556.0362506,
-      "france": 1793299558.5073133
+      "algeria": 1793314952.3678012,
+      "france": 1793314955.154981
     },
     "last_deal_post_times": {
-      "algeria": 1793299556.0482917
+      "algeria": 1793314952.37995
     }
   },
   "last_coin_reminder_time": 1793182579.2180297,
@@ -7896,7 +8024,7 @@
     "1005006974721332": "lodydeals",
     "1005010266413614": "megaphonna",
     "1005009497821240": "lodydeals",
-    "1005011925142821": "zedstoreonline",
+    "1005011925142821": "aniscoupons",
     "9998883864": "test_channel",
     "1005010536089199": "lodydeals",
     "1005012385221205": "aniscoupons",
@@ -8145,7 +8273,12 @@
     "1005012484784752": "ecksdeal",
     "1005013222140851": "pcgamingpart",
     "1005010355409000": "megaphonna",
-    "1005013438245033": "megaphonna"
+    "1005013438245033": "megaphonna",
+    "1005008986635164": "aniscoupons",
+    "1005008327980403": "aniscoupons",
+    "1005012838686691": "pcgamingpart",
+    "1005007966795709": "megaphonna",
+    "1005011857340568": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -8539,7 +8672,13 @@
     "ASRock B550 Phantom Gaming 4 Motherboard": "pcgamingpart",
     "الوحش الأكبر من": "megaphonna",
     "نسخة صينية": "megaphonna",
-    "جديد": "megaphonna"
+    "جديد": "megaphonna",
+    "ASRock B850M Riptide WiFi": "aniscoupons",
+    "KOOTION M.2 1TB 7200Mbs": "aniscoupons",
+    "MSI X670E GAMING PLUS WIFI AMD X670 Motherboard AM5 used": "pcgamingpart",
+    "BLACKVIEW WAVE 7C (4/64)": "megaphonna",
+    "BLACKVIEW WAVE 10C (4/32)": "megaphonna",
+    "BLACKVIEW WAVE 10 (8/256)": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -9531,7 +9670,19 @@
     "megaphonna:8540",
     "megaphonna:8537",
     "megaphonna:8534",
-    "megaphonna:8533"
+    "megaphonna:8533",
+    "zedstoreonline:38714",
+    "zedstoreonline:38705",
+    "zedstoreonline:38704",
+    "aniscoupons:33115",
+    "aniscoupons:33114",
+    "aniscoupons:33113",
+    "pcgamingpart:8026",
+    "bnddeals:50881",
+    "megaphonna:8550",
+    "megaphonna:8549",
+    "megaphonna:8548",
+    "megaphonna:8546"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
