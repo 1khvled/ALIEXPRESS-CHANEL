@@ -341,7 +341,14 @@
     "1005012399830182",
     "1005013479172067",
     "1005012199872142",
-    "9998886358"
+    "9998886358",
+    "1005010172572484",
+    "1005012167596439",
+    "1005005209037696",
+    "1005011559072337",
+    "1005008430504420",
+    "1005010575865619",
+    "1005012483491590"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -598,7 +605,7 @@
     "9998883549": 1792073549.4615705,
     "9998883836": 1792073836.8176863,
     "9998883963": 1792073963.7339156,
-    "1005010620269829": 1792077689.3824542,
+    "1005010620269829": 1793278203.1732628,
     "9998886219": 1792086219.2668676,
     "1005005875379717": 1792087000.9978776,
     "9998887185": 1792087185.8637784,
@@ -693,7 +700,14 @@
     "1005012399830182": 1793276168.5564196,
     "1005013479172067": 1793276192.7711725,
     "1005012199872142": 1793276220.2800016,
-    "9998886358": 1793276358.3466215
+    "9998886358": 1793276358.3466215,
+    "1005010172572484": 1793278121.3665884,
+    "1005012167596439": 1793278129.3750014,
+    "1005005209037696": 1793278138.0800292,
+    "1005011559072337": 1793278150.3254101,
+    "1005008430504420": 1793278168.6975381,
+    "1005010575865619": 1793278184.0639546,
+    "1005012483491590": 1793278192.407213
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1046,7 +1060,14 @@
     "IQOO 15T 12/256",
     "Honor Power 2 12/256",
     "OnePlus Turbo 6x  6/128GB",
-    "Oneplus ACE 6 Ultra 12/256GB"
+    "Oneplus ACE 6 Ultra 12/256GB",
+    "Oppo Find X9 12/256",
+    "Oppo Find X9s Pro 12/256",
+    "POCO F7  12/256",
+    "AMD Ryzen 9 9900X",
+    "ONEPLUS 13 (12/256)",
+    "سعرو حالياً يفوق 11مليون",
+    "الأكثر طلباً في فترات سابقة"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1132,7 +1153,7 @@
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
     "Xiaomi Pad 7 (12/256)": 1793264838.5871994,
-    "ONEPLUS TURBO 6X PRO 5G (8/128)": 1791236011.4353654,
+    "ONEPLUS TURBO 6X PRO 5G (8/128)": 1793278192.407213,
     "CUSU SSD 512 GB Portable SSD External Drive": 1791200448.8235762,
     "HONOR  X80 PRO MAX (8/128)": 1791236020.742662,
     "WALRAM Sata SSD 512GB": 1790967962.6418507,
@@ -1406,7 +1427,14 @@
     "IQOO 15T 12/256": 1793276168.5564196,
     "Honor Power 2 12/256": 1793276177.7089784,
     "OnePlus Turbo 6x  6/128GB": 1793276192.7711725,
-    "Oneplus ACE 6 Ultra 12/256GB": 1793276220.2800016
+    "Oneplus ACE 6 Ultra 12/256GB": 1793276220.2800016,
+    "Oppo Find X9 12/256": 1793278121.3665884,
+    "Oppo Find X9s Pro 12/256": 1793278129.3750014,
+    "POCO F7  12/256": 1793278138.0800292,
+    "AMD Ryzen 9 9900X": 1793278150.3254101,
+    "ONEPLUS 13 (12/256)": 1793278168.6975381,
+    "سعرو حالياً يفوق 11مليون": 1793278184.0639546,
+    "الأكثر طلباً في فترات سابقة": 1793278203.1732628
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2194,19 +2222,27 @@
     "aniscoupons:33037",
     "aniscoupons:33036",
     "megaphonna:8509",
-    "test_channel:1793276358"
+    "test_channel:1793276358",
+    "zedstoreonline:38694",
+    "zedstoreonline:38693",
+    "zedstoreonline:38692",
+    "aniscoupons:33053",
+    "megaphonna:8519",
+    "megaphonna:8516",
+    "megaphonna:8515",
+    "megaphonna:8513"
   ],
   "last_disclaimer_time": 1792097804.651378,
   "last_calendar_time": 1792711145.3171253,
-  "last_run_time": 1793276358.5928903,
+  "last_run_time": 1793278203.1732628,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33051,
-      "last_check_time": 1793276220.2800016
+      "last_message_id": 33053,
+      "last_check_time": 1793278158.6817138
     },
     "ecksdeal": {
       "last_message_id": 5911,
-      "last_check_time": 1793276223.2675743
+      "last_check_time": 1793278159.4537094
     },
     "lodydeals": {
       "last_message_id": 45595,
@@ -2222,15 +2258,15 @@
     },
     "pcgamingpart": {
       "last_message_id": 8018,
-      "last_check_time": 1793276223.9568298
+      "last_check_time": 1793278159.9116518
     },
     "zedstoreonline": {
-      "last_message_id": 38691,
-      "last_check_time": 1793276177.7089784
+      "last_message_id": 38694,
+      "last_check_time": 1793278143.7373576
     },
     "megaphonna": {
-      "last_message_id": 8512,
-      "last_check_time": 1793276358.5928903
+      "last_message_id": 8519,
+      "last_check_time": 1793278206.4307768
     },
     "couponsglobal": {
       "last_message_id": 48880,
@@ -2454,7 +2490,7 @@
     "1005012585389764": 153.9,
     "1005011997237872": 111.2,
     "1005011908654312": 122.6,
-    "1005010620269829": 241.0,
+    "1005010620269829": 229.0,
     "1005010149868688": 204.1,
     "1005005875379717": 42.89,
     "1005013137396211": 316.0,
@@ -2500,7 +2536,14 @@
     "1005012005176923": 476.6,
     "1005012399830182": 479.0,
     "1005013479172067": 218.2,
-    "1005012199872142": 471.9
+    "1005012199872142": 471.9,
+    "1005010172572484": 509.0,
+    "1005012167596439": 578.0,
+    "1005005209037696": 328.0,
+    "1005011559072337": 313.9,
+    "1005008430504420": 474.4,
+    "1005010575865619": 373.0,
+    "1005012483491590": 246.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -7215,6 +7258,86 @@
       "price": 328.0,
       "timestamp": 1793276237.692456,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38694": {
+      "channel_msg_id": 1075,
+      "product_id": "1005010172572484",
+      "title": "Oppo Find X9 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38694,
+      "price": 509.0,
+      "timestamp": 1793278121.3665884,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38693": {
+      "channel_msg_id": 1076,
+      "product_id": "1005012167596439",
+      "title": "Oppo Find X9s Pro 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38693,
+      "price": 578.0,
+      "timestamp": 1793278129.3750014,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38692": {
+      "channel_msg_id": 1077,
+      "product_id": "1005005209037696",
+      "title": "POCO F7  12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38692,
+      "price": 328.0,
+      "timestamp": 1793278138.0800292,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33053": {
+      "channel_msg_id": 1078,
+      "product_id": "1005011559072337",
+      "title": "AMD Ryzen 9 9900X",
+      "channel": "aniscoupons",
+      "source_msg_id": 33053,
+      "price": 313.9,
+      "timestamp": 1793278150.3254101,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8519": {
+      "channel_msg_id": 1079,
+      "product_id": "1005008430504420",
+      "title": "ONEPLUS 13 (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8519,
+      "price": 474.4,
+      "timestamp": 1793278168.6975381,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8516": {
+      "channel_msg_id": 1080,
+      "product_id": "1005010575865619",
+      "title": "سعرو حالياً يفوق 11مليون",
+      "channel": "megaphonna",
+      "source_msg_id": 8516,
+      "price": 373.0,
+      "timestamp": 1793278184.0639546,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8515": {
+      "channel_msg_id": 1081,
+      "product_id": "1005012483491590",
+      "title": "ONEPLUS TURBO 6X PRO 5G (8/128)",
+      "channel": "megaphonna",
+      "source_msg_id": 8515,
+      "price": 246.0,
+      "timestamp": 1793278192.407213,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8513": {
+      "channel_msg_id": 1082,
+      "product_id": "1005010620269829",
+      "title": "الأكثر طلباً في فترات سابقة",
+      "channel": "megaphonna",
+      "source_msg_id": 8513,
+      "price": 229.0,
+      "timestamp": 1793278203.1732628,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -7223,17 +7346,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793276241.6602376,
+    "last_deal_post_time": 1793278207.6890557,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793276241.6357985,
+    "last_sweep_time": 1793278210.4874525,
     "last_sweep_times": {
-      "algeria": 1793276241.6357985,
-      "france": 1793270757.800055
+      "algeria": 1793278207.677578,
+      "france": 1793278210.4874525
     },
     "last_deal_post_times": {
-      "algeria": 1793276241.6602376
+      "algeria": 1793278207.6890557
     }
   },
   "last_coin_reminder_time": 1793182579.2180297,
@@ -7495,7 +7618,7 @@
     "9998883549": "test_channel",
     "9998883836": "test_channel",
     "9998883963": "test_channel",
-    "1005010620269829": "zedstoreonline",
+    "1005010620269829": "megaphonna",
     "1005010149868688": "aniscoupons",
     "9998886219": "test_channel",
     "1005005875379717": "aniscoupons",
@@ -7593,7 +7716,14 @@
     "1005012399830182": "zedstoreonline",
     "1005013479172067": "aniscoupons",
     "1005012199872142": "aniscoupons",
-    "9998886358": "test_channel"
+    "9998886358": "test_channel",
+    "1005010172572484": "zedstoreonline",
+    "1005012167596439": "zedstoreonline",
+    "1005005209037696": "zedstoreonline",
+    "1005011559072337": "aniscoupons",
+    "1005008430504420": "megaphonna",
+    "1005010575865619": "megaphonna",
+    "1005012483491590": "megaphonna"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -7956,7 +8086,14 @@
     "IQOO 15T 12/256": "zedstoreonline",
     "Honor Power 2 12/256": "zedstoreonline",
     "OnePlus Turbo 6x  6/128GB": "aniscoupons",
-    "Oneplus ACE 6 Ultra 12/256GB": "aniscoupons"
+    "Oneplus ACE 6 Ultra 12/256GB": "aniscoupons",
+    "Oppo Find X9 12/256": "zedstoreonline",
+    "Oppo Find X9s Pro 12/256": "zedstoreonline",
+    "POCO F7  12/256": "zedstoreonline",
+    "AMD Ryzen 9 9900X": "aniscoupons",
+    "ONEPLUS 13 (12/256)": "megaphonna",
+    "سعرو حالياً يفوق 11مليون": "megaphonna",
+    "الأكثر طلباً في فترات سابقة": "megaphonna"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -8890,7 +9027,10 @@
     "megaphonna:8508",
     "megaphonna:8506",
     "megaphonna:8505",
-    "aniscoupons:33051"
+    "aniscoupons:33051",
+    "megaphonna:8518",
+    "megaphonna:8517",
+    "megaphonna:8514"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
