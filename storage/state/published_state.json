@@ -418,7 +418,13 @@
     "1005011961308530",
     "1005012994490034",
     "1005010146493558",
-    "1005010575865619"
+    "1005010575865619",
+    "1005011778197787",
+    "1005012839355198",
+    "1005010133081414",
+    "1005005373032877",
+    "1005007869955343",
+    "1005012644570693"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -430,7 +436,7 @@
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
     "1005007805638431": 1790884166.1520143,
-    "1005009054706827": 1791194142.1753953,
+    "1005009054706827": 1793384273.7830687,
     "1005007961216287": 1791942616.1564767,
     "1005009627597591": 1790884233.6428,
     "9998887952": 1790887952.6119926,
@@ -757,7 +763,7 @@
     "1005009200129898": 1793227797.933171,
     "9998888526": 1793228526.415094,
     "9998889908": 1793229908.2507865,
-    "1005012339196141": 1793270661.3389814,
+    "1005012339196141": 1793384223.580694,
     "1005012472631754": 1793270671.799024,
     "1005013039644752": 1793380452.8087006,
     "1005013479436053": 1793380394.5736995,
@@ -766,7 +772,7 @@
     "1005013137304827": 1793362040.355753,
     "1005012402919487": 1793380414.784201,
     "9998883962": 1793273962.6790612,
-    "1005012005176923": 1793276158.7128599,
+    "1005012005176923": 1793384294.3328166,
     "1005012399830182": 1793380343.534803,
     "1005013479172067": 1793380563.535837,
     "1005012199872142": 1793380535.3677967,
@@ -780,7 +786,7 @@
     "1005008430504420": 1793380527.4977317,
     "1005012483491590": 1793380555.40847,
     "1005009234880101": 1793279440.2445374,
-    "1005012853585903": 1793279458.874726,
+    "1005012853585903": 1793384186.0456433,
     "9998889488": 1793279488.1402335,
     "999888261": 1793280261.0669627,
     "1005008785149427": 1793281845.5693822,
@@ -799,12 +805,12 @@
     "1005010207075594": 1793299454.8390412,
     "1005013351519067": 1793299459.307718,
     "1005012484784752": 1793299476.5930903,
-    "1005013222140851": 1793299503.8951576,
+    "1005013222140851": 1793384181.0587313,
     "1005010355409000": 1793362071.3460114,
     "1005013438245033": 1793299536.9978156,
     "1005008986635164": 1793314892.9200466,
     "1005008327980403": 1793361154.047475,
-    "1005012838686691": 1793314915.007305,
+    "1005012838686691": 1793384191.3385255,
     "1005007966795709": 1793314939.6901202,
     "1005007760080474": 1793314944.416167,
     "1005011857340568": 1793314949.3624141,
@@ -847,7 +853,13 @@
     "1005011961308530": 1793380460.5377874,
     "1005012994490034": 1793380468.8568103,
     "1005010146493558": 1793380488.3005445,
-    "1005010575865619": 1793380546.8905725
+    "1005010575865619": 1793380546.8905725,
+    "1005011778197787": 1793384175.8863513,
+    "1005012839355198": 1793384195.9014845,
+    "1005010133081414": 1793384203.5839794,
+    "1005005373032877": 1793384241.776936,
+    "1005007869955343": 1793384246.9387164,
+    "1005012644570693": 1793384286.409923
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1295,7 +1307,19 @@
     "OPPO FIND X9 (12/256)",
     "فلاكشيب من",
     "ONEPLUS ACE6 ULTRA (12/256)",
-    "ONEPLUS ACE 6T (12/256)"
+    "ONEPLUS ACE 6T (12/256)",
+    "AMD Ryzen 7 7700",
+    "ASROCK B550 PHANTOM",
+    "MSI PRO B850-P WIFI",
+    "MSI X670E GAMING PLUS WIFI",
+    "MSI PRO X870E-P WIFI AM5",
+    "Vivo X300 Pro 5G 12/256GB",
+    "Amd Ryzen R5 9600X Cpu 3.9 Ghz 6-Core 12-Thread 38Mb Am5 New!",
+    "Maono PD200X XLR/USB Dynamic",
+    "MAONO PD100X USB/XLR Dynamic",
+    "Machenike G3 V2 PC Gaming Controller",
+    "⭐️ 🎟️",
+    "Vivo X200s (12/255GB)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1750,7 +1774,19 @@
     "OPPO FIND X9 (12/256)": 1793380507.1165082,
     "فلاكشيب من": 1793380515.8443403,
     "ONEPLUS ACE6 ULTRA (12/256)": 1793380535.3677967,
-    "ONEPLUS ACE 6T (12/256)": 1793380546.8905725
+    "ONEPLUS ACE 6T (12/256)": 1793380546.8905725,
+    "AMD Ryzen 7 7700": 1793384175.8863513,
+    "ASROCK B550 PHANTOM": 1793384181.0587313,
+    "MSI PRO B850-P WIFI": 1793384186.0456433,
+    "MSI X670E GAMING PLUS WIFI": 1793384191.3385255,
+    "MSI PRO X870E-P WIFI AM5": 1793384195.9014845,
+    "Vivo X300 Pro 5G 12/256GB": 1793384203.5839794,
+    "Amd Ryzen R5 9600X Cpu 3.9 Ghz 6-Core 12-Thread 38Mb Am5 New!": 1793384223.580694,
+    "Maono PD200X XLR/USB Dynamic": 1793384241.776936,
+    "MAONO PD100X USB/XLR Dynamic": 1793384246.9387164,
+    "Machenike G3 V2 PC Gaming Controller": 1793384273.7830687,
+    "⭐️ 🎟️": 1793384286.409923,
+    "Vivo X200s (12/255GB)": 1793384294.3328166
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2661,23 +2697,35 @@
     "megaphonna:8586",
     "megaphonna:8584",
     "megaphonna:8583",
-    "megaphonna:8582"
+    "megaphonna:8582",
+    "lodydeals:45696",
+    "lodydeals:45694",
+    "lodydeals:45693",
+    "lodydeals:45692",
+    "lodydeals:45691",
+    "lodydeals:45690",
+    "lodydeals:45686",
+    "lodydeals:45680",
+    "lodydeals:45679",
+    "aniscoupons:33206",
+    "aniscoupons:33204",
+    "aniscoupons:33203"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793380563.535837,
+  "last_run_time": 1793384294.3328166,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33201,
-      "last_check_time": 1793380407.0158236
+      "last_message_id": 33206,
+      "last_check_time": 1793384297.5698876
     },
     "ecksdeal": {
       "last_message_id": 5919,
-      "last_check_time": 1793380411.5774958
+      "last_check_time": 1793384298.4593604
     },
     "lodydeals": {
-      "last_message_id": 45665,
-      "last_check_time": 1793357202.878811
+      "last_message_id": 45696,
+      "last_check_time": 1793384251.0537293
     },
     "bnddeals": {
       "last_message_id": 50908,
@@ -2692,8 +2740,8 @@
       "last_check_time": 1793314917.0347583
     },
     "zedstoreonline": {
-      "last_message_id": 38805,
-      "last_check_time": 1793380337.1619174
+      "last_message_id": 38810,
+      "last_check_time": 1793384270.1000001
     },
     "megaphonna": {
       "last_message_id": 8602,
@@ -2713,7 +2761,7 @@
     "1005010219205081": 57.2,
     "1005007805638431": 22.64,
     "1005007027334636": 10.3,
-    "1005009054706827": 24.6,
+    "1005009054706827": 22.0,
     "1005007961216287": 20.26,
     "1005008233932899": 294.9,
     "1005009627597591": 314.9,
@@ -2961,14 +3009,14 @@
     "1005012633322402": 3.05,
     "1005012249968766": 655.0,
     "1005009200129898": 0.01,
-    "1005012339196141": 2.9,
+    "1005012339196141": 152.36,
     "1005012472631754": 0.4,
     "1005013479436053": 429.0,
     "1005012431631514": 143.55,
     "1005009338640941": 372.0,
     "1005013137304827": 266.0,
     "1005012402919487": 75.3,
-    "1005012005176923": 476.6,
+    "1005012005176923": 476.4,
     "1005012399830182": 479.0,
     "1005013479172067": 218.0,
     "1005012199872142": 469.9,
@@ -2981,7 +3029,7 @@
     "1005008430504420": 474.4,
     "1005012483491590": 246.0,
     "1005009234880101": 355.0,
-    "1005012853585903": 123.64,
+    "1005012853585903": 119.28,
     "1005008785149427": 100.0,
     "1005012766583284": 88.7,
     "1005011557016158": 296.0,
@@ -2995,12 +3043,12 @@
     "1005010207075594": 424.0,
     "1005013351519067": 202.9,
     "1005012484784752": 98.79,
-    "1005013222140851": 71.12,
+    "1005013222140851": 65.25,
     "1005010355409000": 96.0,
     "1005013438245033": 412.0,
     "1005008986635164": 185.9,
     "1005008327980403": 143.8,
-    "1005012838686691": 146.83,
+    "1005012838686691": 140.98,
     "1005007966795709": 87.0,
     "1005011857340568": 115.0,
     "1005008459823709": 21.4,
@@ -3041,7 +3089,13 @@
     "1005011961308530": 313.7,
     "1005012994490034": 457.0,
     "1005010146493558": 562.0,
-    "1005010575865619": 373.0
+    "1005010575865619": 373.0,
+    "1005011778197787": 155.99,
+    "1005012839355198": 146.51,
+    "1005010133081414": 715.89,
+    "1005005373032877": 61.03,
+    "1005007869955343": 34.76,
+    "1005012644570693": 576.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -8936,6 +8990,126 @@
       "price": 218.0,
       "timestamp": 1793380563.535837,
       "status": "ACTIVE"
+    },
+    "lodydeals:45696": {
+      "channel_msg_id": 1232,
+      "product_id": "1005011778197787",
+      "title": "AMD Ryzen 7 7700",
+      "channel": "lodydeals",
+      "source_msg_id": 45696,
+      "price": 155.99,
+      "timestamp": 1793384175.8863513,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45694": {
+      "channel_msg_id": 1233,
+      "product_id": "1005013222140851",
+      "title": "ASROCK B550 PHANTOM",
+      "channel": "lodydeals",
+      "source_msg_id": 45694,
+      "price": 65.25,
+      "timestamp": 1793384181.0587313,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45693": {
+      "channel_msg_id": 1234,
+      "product_id": "1005012853585903",
+      "title": "MSI PRO B850-P WIFI",
+      "channel": "lodydeals",
+      "source_msg_id": 45693,
+      "price": 119.28,
+      "timestamp": 1793384186.0456433,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45692": {
+      "channel_msg_id": 1235,
+      "product_id": "1005012838686691",
+      "title": "MSI X670E GAMING PLUS WIFI",
+      "channel": "lodydeals",
+      "source_msg_id": 45692,
+      "price": 140.98,
+      "timestamp": 1793384191.3385255,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45691": {
+      "channel_msg_id": 1236,
+      "product_id": "1005012839355198",
+      "title": "MSI PRO X870E-P WIFI AM5",
+      "channel": "lodydeals",
+      "source_msg_id": 45691,
+      "price": 146.51,
+      "timestamp": 1793384195.9014845,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45690": {
+      "channel_msg_id": 1237,
+      "product_id": "1005010133081414",
+      "title": "Vivo X300 Pro 5G 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45690,
+      "price": 715.89,
+      "timestamp": 1793384203.5839794,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45686": {
+      "channel_msg_id": 1238,
+      "product_id": "1005012339196141",
+      "title": "Amd Ryzen R5 9600X Cpu 3.9 Ghz 6-Core 12-Thread 38Mb Am5 New!",
+      "channel": "lodydeals",
+      "source_msg_id": 45686,
+      "price": 152.36,
+      "timestamp": 1793384223.580694,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45680": {
+      "channel_msg_id": 1239,
+      "product_id": "1005005373032877",
+      "title": "Maono PD200X XLR/USB Dynamic",
+      "channel": "lodydeals",
+      "source_msg_id": 45680,
+      "price": 61.03,
+      "timestamp": 1793384241.776936,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45679": {
+      "channel_msg_id": 1240,
+      "product_id": "1005007869955343",
+      "title": "MAONO PD100X USB/XLR Dynamic",
+      "channel": "lodydeals",
+      "source_msg_id": 45679,
+      "price": 34.76,
+      "timestamp": 1793384246.9387164,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33206": {
+      "channel_msg_id": 1241,
+      "product_id": "1005009054706827",
+      "title": "Machenike G3 V2 PC Gaming Controller",
+      "channel": "aniscoupons",
+      "source_msg_id": 33206,
+      "price": 22.0,
+      "timestamp": 1793384273.7830687,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33204": {
+      "channel_msg_id": 1242,
+      "product_id": "1005012644570693",
+      "title": "⭐️ 🎟️",
+      "channel": "aniscoupons",
+      "source_msg_id": 33204,
+      "price": 576.0,
+      "timestamp": 1793384286.409923,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33203": {
+      "channel_msg_id": 1243,
+      "product_id": "1005012005176923",
+      "title": "Vivo X200s (12/255GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 33203,
+      "price": 476.4,
+      "timestamp": 1793384294.3328166,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -8944,17 +9118,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793380565.5748165,
+    "last_deal_post_time": 1793384327.8704176,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793380568.6963868,
+    "last_sweep_time": 1793384331.1850948,
     "last_sweep_times": {
-      "algeria": 1793380565.566703,
-      "france": 1793380568.6963868
+      "algeria": 1793384327.8563688,
+      "france": 1793384331.1850948
     },
     "last_deal_post_times": {
-      "algeria": 1793380565.5748165
+      "algeria": 1793384327.8704176
     }
   },
   "last_coin_reminder_time": 1793182579.2180297,
@@ -9035,7 +9209,7 @@
     "1005009774318553": "zedstoreonline",
     "1005012574108028": "megaphonna",
     "1005008599340405": "bnddeals",
-    "1005009054706827": "zedstoreonline",
+    "1005009054706827": "aniscoupons",
     "1005007572968437": "lodydeals",
     "1005009120957437": "lodydeals",
     "1005005652871847": "aniscoupons",
@@ -9302,7 +9476,7 @@
     "1005009200129898": "ecksdeal",
     "9998888526": "test_channel",
     "9998889908": "test_channel",
-    "1005012339196141": "zedstoreonline",
+    "1005012339196141": "lodydeals",
     "1005012472631754": "zedstoreonline",
     "1005013479436053": "aniscoupons",
     "1005012431631514": "pcgamingpart",
@@ -9310,7 +9484,7 @@
     "1005013137304827": "megaphonna",
     "1005012402919487": "bnddeals",
     "9998883962": "test_channel",
-    "1005012005176923": "zedstoreonline",
+    "1005012005176923": "aniscoupons",
     "1005012399830182": "aniscoupons",
     "1005013479172067": "megaphonna",
     "1005012199872142": "megaphonna",
@@ -9324,7 +9498,7 @@
     "1005008430504420": "megaphonna",
     "1005012483491590": "megaphonna",
     "1005009234880101": "aniscoupons",
-    "1005012853585903": "pcgamingpart",
+    "1005012853585903": "lodydeals",
     "9998889488": "test_channel",
     "999888261": "test_channel",
     "1005008785149427": "zedstoreonline",
@@ -9342,12 +9516,12 @@
     "1005010207075594": "aniscoupons",
     "1005013351519067": "aniscoupons",
     "1005012484784752": "ecksdeal",
-    "1005013222140851": "pcgamingpart",
+    "1005013222140851": "lodydeals",
     "1005010355409000": "megaphonna",
     "1005013438245033": "megaphonna",
     "1005008986635164": "aniscoupons",
     "1005008327980403": "zedstoreonline",
-    "1005012838686691": "pcgamingpart",
+    "1005012838686691": "lodydeals",
     "1005007966795709": "megaphonna",
     "1005011857340568": "megaphonna",
     "1005008459823709": "zedstoreonline",
@@ -9388,7 +9562,13 @@
     "1005011961308530": "megaphonna",
     "1005012994490034": "megaphonna",
     "1005010146493558": "megaphonna",
-    "1005010575865619": "megaphonna"
+    "1005010575865619": "megaphonna",
+    "1005011778197787": "lodydeals",
+    "1005012839355198": "lodydeals",
+    "1005010133081414": "lodydeals",
+    "1005005373032877": "lodydeals",
+    "1005007869955343": "lodydeals",
+    "1005012644570693": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -9846,7 +10026,19 @@
     "OPPO FIND X9 (12/256)": "megaphonna",
     "فلاكشيب من": "megaphonna",
     "ONEPLUS ACE6 ULTRA (12/256)": "megaphonna",
-    "ONEPLUS ACE 6T (12/256)": "megaphonna"
+    "ONEPLUS ACE 6T (12/256)": "megaphonna",
+    "AMD Ryzen 7 7700": "lodydeals",
+    "ASROCK B550 PHANTOM": "lodydeals",
+    "MSI PRO B850-P WIFI": "lodydeals",
+    "MSI X670E GAMING PLUS WIFI": "lodydeals",
+    "MSI PRO X870E-P WIFI AM5": "lodydeals",
+    "Vivo X300 Pro 5G 12/256GB": "lodydeals",
+    "Amd Ryzen R5 9600X Cpu 3.9 Ghz 6-Core 12-Thread 38Mb Am5 New!": "lodydeals",
+    "Maono PD200X XLR/USB Dynamic": "lodydeals",
+    "MAONO PD100X USB/XLR Dynamic": "lodydeals",
+    "Machenike G3 V2 PC Gaming Controller": "aniscoupons",
+    "⭐️ 🎟️": "aniscoupons",
+    "Vivo X200s (12/255GB)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -10932,7 +11124,25 @@
     "megaphonna:8601",
     "megaphonna:8597",
     "megaphonna:8588",
-    "megaphonna:8585"
+    "megaphonna:8585",
+    "lodydeals:45695",
+    "lodydeals:45689",
+    "lodydeals:45688",
+    "lodydeals:45687",
+    "lodydeals:45685",
+    "lodydeals:45684",
+    "lodydeals:45683",
+    "lodydeals:45682",
+    "lodydeals:45681",
+    "lodydeals:45678",
+    "lodydeals:45677",
+    "zedstoreonline:38810",
+    "zedstoreonline:38809",
+    "zedstoreonline:38808",
+    "zedstoreonline:38807",
+    "zedstoreonline:38806",
+    "aniscoupons:33205",
+    "aniscoupons:33202"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
