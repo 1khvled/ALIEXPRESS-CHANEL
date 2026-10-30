@@ -2392,24 +2392,24 @@
     "megaphonna:8542"
   ],
   "last_disclaimer_time": 1793314858.1877568,
-  "last_calendar_time": 1792711145.3171253,
+  "last_calendar_time": 1793327622.2534416,
   "last_run_time": 1793314949.3624141,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33115,
-      "last_check_time": 1793314909.7334242
+      "last_message_id": 33116,
+      "last_check_time": 1793327668.4760234
     },
     "ecksdeal": {
       "last_message_id": 5916,
-      "last_check_time": 1793314910.4646788
+      "last_check_time": 1793327669.101607
     },
     "lodydeals": {
-      "last_message_id": 45595,
-      "last_check_time": 1793283032.7238317
+      "last_message_id": 45663,
+      "last_check_time": 1793327643.9667659
     },
     "bnddeals": {
       "last_message_id": 50884,
-      "last_check_time": 1793314917.7503018
+      "last_check_time": 1793327669.593587
     },
     "test_channel": {
       "last_message_id": 1793283032,
@@ -2421,11 +2421,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38714,
-      "last_check_time": 1793314874.743446
+      "last_check_time": 1793327644.6241398
     },
     "megaphonna": {
       "last_message_id": 8550,
-      "last_check_time": 1793314951.3904293
+      "last_check_time": 1793327678.7224717
     },
     "couponsglobal": {
       "last_message_id": 48880,
@@ -7877,10 +7877,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793314955.154981,
+    "last_sweep_time": 1793327680.9547477,
     "last_sweep_times": {
-      "algeria": 1793314952.3678012,
-      "france": 1793314955.154981
+      "algeria": 1793327678.7467349,
+      "france": 1793327680.9547477
     },
     "last_deal_post_times": {
       "algeria": 1793314952.37995
@@ -9045,8 +9045,8 @@
     "LAUNCH_ALERT_Winter Offers_20261014",
     "END_ALERT_Winter Offers_20261018"
   ],
-  "last_card_affiliate_time_dz": 1793239309.956487,
-  "card_affiliate_variant_idx_dz": 0,
+  "last_card_affiliate_time_dz": 1793327623.0894678,
+  "card_affiliate_variant_idx_dz": 1,
   "last_tajmi3at_published_time": 1792182685.3908823,
   "published_deals_history": {},
   "settings": {},
@@ -9682,7 +9682,26 @@
     "megaphonna:8550",
     "megaphonna:8549",
     "megaphonna:8548",
-    "megaphonna:8546"
+    "megaphonna:8546",
+    "lodydeals:45663",
+    "lodydeals:45662",
+    "lodydeals:45661",
+    "lodydeals:45660",
+    "lodydeals:45659",
+    "lodydeals:45658",
+    "lodydeals:45657",
+    "lodydeals:45656",
+    "aniscoupons:33116",
+    "aniscoupons:33107",
+    "aniscoupons:33106",
+    "aniscoupons:33105",
+    "aniscoupons:33104",
+    "aniscoupons:33103",
+    "aniscoupons:33102",
+    "aniscoupons:33101",
+    "megaphonna:8532",
+    "megaphonna:8531",
+    "megaphonna:8530"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
