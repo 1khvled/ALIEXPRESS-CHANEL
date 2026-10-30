@@ -513,8 +513,30 @@ def is_recent_cross_channel_duplicate(
     if p_str and p_str in ts_map:
         age = now - ts_map[p_str]
         prev_ch = ch_map.get(p_str, "unknown")
+
+        # Restock exception: if competitor explicitly announced restock
+        if raw_text and age >= 600:
+            from app.aliexpress.parser import detect_restock_deal
+            if detect_restock_deal(raw_text):
+                return False, f"Restock exception: competitor announced restock/return ({age/60:.1f}m later)", False
+
+        # Price-drop exception: requires >= 15% AND >= $5.00 cheaper after at least 1h
+        prev_price = price_map.get(p_str)
+        if age >= 3600 and prev_price and current_price and current_price > 0 and prev_price > 0:
+            diff = prev_price - current_price
+            pct_drop = (diff / prev_price) * 100.0
+            if diff >= 5.0 and pct_drop >= 15.0:
+                return False, f"Price drop exception: was ${prev_price:.2f}, now ${current_price:.2f} (-{pct_drop:.1f}%)", True
+
+        # Same-channel repeat post exception (e.g. source channel repeats after at least 30m)
+        same_channel_min_cooldown = 1800 if active_cooldown_hours <= 3.0 else min(cooldown_seconds, 8 * 3600)
+        if prev_ch and clean_curr_ch and prev_ch == clean_curr_ch and age >= same_channel_min_cooldown:
+            return False, f"Repeat post from same channel @{clean_curr_ch}", False
+
         if age < cooldown_seconds:
-            return True, f"Product ID {p_str} was already posted {age/3600:.1f}h ago from @{prev_ch} (Strict Duplicate Blocked)", False
+            return True, f"Product ID {p_str} was already posted {age/3600:.1f}h ago from @{prev_ch} (cross-channel duplicate at same time within cooldown)", False
+        else:
+            return False, f"Renewed deal repost after {age/3600:.1f}h", False
 
     # 2. Check live channel cache PIDs
     if p_str and p_str in _CACHED_CHANNEL_PIDS:
@@ -535,7 +557,7 @@ def is_recent_cross_channel_duplicate(
                     t_age = now - pub_ts
                     if t_age < cooldown_seconds:
                         prev_desc = f"from @{pub_ch}" if pub_ch else "previously"
-                        return True, f"Product title matches deal posted {prev_desc}: '{pub_t[:45]}' (Strict Duplicate Blocked)", False
+                        return True, f"Product title matches deal posted {prev_desc}: '{pub_t[:45]}' (cross-channel duplicate within cooldown)", False
 
         for ch_t, ch_ts in _CACHED_CHANNEL_TEXT_TIMESTAMPS:
             t_age = now - ch_ts

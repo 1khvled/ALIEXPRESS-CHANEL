@@ -175,6 +175,7 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
             }
             return "\n".join(lines), reply_markup
 
+        big_coupons_str = " ثم ".join([f"${c.get('tier', '').split('/')[0]}" for c in reversed(coupons[-2:]) if '/' in c.get('tier', '')]) or "$70 ثم $53"
         lines = [
             f"🚨 <b>كوبونات حدث {promo.name_ar}!</b> 🛍️",
             f"تنطلق غداً <b>{promo.start_date.strftime('%d/%m')} وتستمر إلى غاية {promo.end_date.strftime('%d/%m/%Y')}</b> 🗓️",
@@ -182,7 +183,7 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
             *coupon_lines,
             "",
             f"⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك (طبقوها غداً على {start_hour_str} صباحاً 🔥👌🏽):</b>",
-            f"⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ({" ثم ".join([f"${c.get('tier', '').split('/')[0]}" for c in reversed(coupons[-2:]) if '/' in c.get('tier', '')]) or '$70 ثم $53'}...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅",
+            f"⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ({big_coupons_str}...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅",
             "",
             "🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب ⤵️</b>",
             "https://s.click.aliexpress.com/e/_c3d8Osgp",

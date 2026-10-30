@@ -439,7 +439,7 @@ class DealCaptionGenerator:
                             break
         if not hook and not taskhinat_header:
             if is_restock:
-                hook = "⚡ عودة توفر العرض بكمية محدودة 🔥"
+                hook = "⚡ عودة العرض توفر من جديد بكمية محدودة (حبات قلال) 🔥"
             elif is_price_drop:
                 hook = "📉 انخفاض ممتاز في السعر 🔥"
             elif usd_price and usd_price < 5.0:
@@ -464,6 +464,10 @@ class DealCaptionGenerator:
         # 4. Link line (Lody format: رابط ...)
         lines.append(f"رابط {affiliate_url}")
 
+        # Points discount (Lody format: خصم النقاط 🪙)
+        if has_points_discount or deal_type == "coin" or (raw_text and any(w in raw_text for w in ["نقاط", "العملات", "عملات", "coins", "coin"])):
+            lines.append("خصم النقاط 🪙")
+
         # 5. Extract and format coupons & vouchers (Strictly copyable <code> tags)
         found_coupon = coupon_code
         found_seller = seller_coupon
@@ -478,15 +482,18 @@ class DealCaptionGenerator:
 
         if found_seller and str(found_seller).strip() not in {"0", "0$", "$0", "None", ""}:
             s_val = str(found_seller).strip()
-            m_code_s = re.search(r'([A-Za-z0-9_\$]{3,20})\s*$', s_val)
+            m_code_s = re.search(r'([A-Za-z0-9_\$]{1,20})\s*$', s_val)
             if m_code_s:
                 code = m_code_s.group(1)
-                prefix = s_val[:m_code_s.start(1)]
-                lines.append(f"{prefix}<code>{code}</code>")
+                prefix = s_val[:m_code_s.start(1)].strip()
+                if not prefix or not any(k in prefix for k in ["قسيمة", "كوبون"]):
+                    lines.append(f"كوبون المتجر : <code>{code}</code>")
+                else:
+                    lines.append(f"{prefix} : <code>{code}</code>" if not prefix.endswith(":") else f"{prefix} <code>{code}</code>")
             elif "قسيمة" in s_val:
                 lines.append(s_val)
             else:
-                lines.append(f"قسيمة البائع <code>{s_val}</code>")
+                lines.append(f"كوبون المتجر : <code>{s_val}</code>")
 
         if found_coupon and found_coupon != found_seller:
             clean_code = str(found_coupon).strip()

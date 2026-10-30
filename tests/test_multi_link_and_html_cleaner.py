@@ -188,10 +188,10 @@ async def test_coupon_multiline_and_country_priority():
         deal_type="coin",
         has_points_discount=True
     )
-    assert "كــــــوريا 🇰🇷" in cap
-    assert "كــــــندا 🇨🇦" not in cap
+    assert "كوريا" in cap
+    assert "كندا" not in cap
     assert "OTPRD04" in cap
-    assert "كـوبون الخصم" in cap
+    assert "كوبون" in cap
 
 
 

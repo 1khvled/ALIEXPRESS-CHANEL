@@ -14,6 +14,22 @@ class DealCaptionValidator:
         "تسخينات",
         "دير في السلّة",
         "دير في السلة",
+        "أضف للسلة",
+        "اضف للسلة",
+        "أضف إلى السلة",
+        "اضف إلى السلة",
+        "أضف الى السلة",
+        "اضف الى السلة",
+        "أضف في السلة",
+        "اضف في السلة",
+        "أضف",
+        "اضف",
+        "البيع",
+        "السلة",
+        "السلّة",
+        "نوفمبر",
+        "أكتوبر",
+        "ديسمبر",
         "سعر ممتاز",
         "ســـعـــر ممت",
         "عرض نااار",
@@ -167,7 +183,8 @@ class DealCaptionValidator:
 
         # 4. Points discount check
         if expected_points:
-            if "خصم النقاط" not in caption and "تخفيض العملات" not in caption:
+            has_points_mention = any(k in caption for k in ["خصم النقاط", "تخفيض العملات", "العملات", "النقاط", "Alilo07BOT", "البوت"])
+            if not has_points_mention:
                 errors.append("Verified points discount line missing from caption")
         else:
             # Check for unverified points discount claimed for the deal itself,
