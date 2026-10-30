@@ -292,209 +292,223 @@ class DealCaptionGenerator:
             caption = caption[:1015].rstrip() + "..."
         return caption
 
+    def adapt_source_caption(
+        self,
+        raw_text: str,
+        affiliate_url: str,
+        bot_username: str = "Alilo07BOT"
+    ) -> str:
+        """
+        Adapts source channel writing (matching @lodydeals) directly, keeping the exact
+        language, structure, and tone while safely replacing the affiliate link and competitor bot.
+        """
+        lines = raw_text.splitlines()
+        cleaned_lines = []
+        link_replaced = False
+        bot_replaced = False
+
+        channel_patterns = [
+            r'@lodydeals', r'@zedstoreonline', r'@aniscoupons', r'@megaphonna',
+            r'@bnddeals', r'@ecksdeal', r'@pcgamingpart', r'@couponsglobal',
+            r't\.me/lodydeals', r't\.me/zedstoreonline', r't\.me/aniscoupons',
+            r't\.me/megaphonna', r't\.me/bnddeals'
+        ]
+
+        import re
+        for line in lines:
+            stripped = line.strip()
+
+            # Skip lines that are solely competitor channel advertisements
+            if any(re.search(pat, stripped, re.IGNORECASE) for pat in channel_patterns) and not ("s.click" in stripped or "aliexpress" in stripped):
+                continue
+
+            # Replace AliExpress product/affiliate link
+            if ("s.click.aliexpress.com" in stripped or "aliexpress.com" in stripped) and not link_replaced:
+                new_line = re.sub(r'https?://[^\s]+|s\.click\.aliexpress\.com/[^\s]+', affiliate_url, stripped)
+                cleaned_lines.append(new_line)
+                link_replaced = True
+                continue
+            elif ("s.click.aliexpress.com" in stripped or "aliexpress.com" in stripped) and link_replaced:
+                continue
+
+            # Replace competitor coin bot CTA
+            if any(w in stripped.lower() for w in ["bot", "lodycouponsbot", "megasoldebot", "zedcoinsbot"]):
+                new_line = re.sub(r'(?:https?://)?t\.me/[A-Za-z0-9_]+bot|@[A-Za-z0-9_]+bot', f"t.me/{bot_username}", stripped, flags=re.IGNORECASE)
+                cleaned_lines.append(new_line)
+                bot_replaced = True
+                continue
+
+            cleaned_lines.append(line)
+
+        # Remove trailing empty lines
+        while cleaned_lines and not cleaned_lines[-1].strip():
+            cleaned_lines.pop()
+
+        # Make coupon codes copyable with <code> tags (tap-to-copy in Telegram)
+        final_lines = []
+        for line in cleaned_lines:
+            stripped = line.strip()
+            if any(w in stripped for w in ["كوبون", "قسيمة", "كود", "قسيمـة", "قسيمــة", "code", "Code"]):
+                if "<code>" not in stripped and "`" not in stripped:
+                    m = re.search(r'([A-Za-z0-9_-]{4,20})\s*([🔥⚡🎉🚨\.\s]*)$', stripped)
+                    if m:
+                        code = m.group(1)
+                        trailing = m.group(2)
+                        if any(c.isalpha() for c in code) or len(code) >= 6:
+                            prefix = stripped[:m.start(1)]
+                            final_lines.append(f"{prefix}<code>{code}</code>{trailing}")
+                            continue
+            final_lines.append(line)
+        cleaned_lines = final_lines
+
+        result = "\n".join(cleaned_lines).strip()
+
+        # If link wasn't found in text, append it
+        if not link_replaced:
+            result += f"\nالرابط: {affiliate_url}"
+
+        # If bot CTA wasn't present, append standard Lody CTA
+        if not bot_replaced:
+            result += f"\n\nلا تنسى استخدام البوت للشراء بأقل الأسعار :\nt.me/{bot_username}"
+
+        return result
+
     def _format_deterministic(
         self,
         title: str,
         usd_price: float,
         eur_price: float,
         affiliate_url: str,
-        coupon_code: Optional[str] = None,
-        seller_coupon: Optional[str] = None,
+        coupon_code: str = None,
+        seller_coupon: str = None,
         has_points_discount: bool = False,
-        country_info: Optional[str] = None,
-        promo_tag: Optional[str] = None,
+        country_info: str = None,
+        promo_tag: str = None,
         is_price_drop: bool = False,
         is_restock: bool = False,
-        coin_url: Optional[str] = None,
+        coin_url: str = None,
         deal_type: str = "item",
-        raw_text: Optional[str] = None
+        raw_text: str = None
     ) -> str:
+        clean_title = title.strip() if title else ""
+        clean_title = re.sub(r'^(?:✅|🔥|⚡|📦|🛒|⭐️|📌|Ⓜ|📎|🌷|💵|📱|✔️)\s*', '', clean_title).strip()
+
+        # If title is generic or incomplete, try finding the actual model line in raw_text
+        if raw_text and (len(clean_title) < 15 or any(w in clean_title for w in ["الوحش", "نسخة", "هاتف", "جديد", "سعر", "باطل", "لافار"])):
+            clean_raw_lines = [re.sub(r'ـ', '', l).strip() for l in raw_text.splitlines() if l.strip()]
+            for l in clean_raw_lines:
+                l_clean = re.sub(r'^(?:✅|🔥|⚡|📦|🛒|⭐️|📌|Ⓜ|📎|🌷|💵|📱|✔️)\s*', '', l).strip()
+                if any(b in l.upper() for b in ['REALME', 'REDMI', 'POCO', 'XIAOMI', 'HONOR', 'VIVO', 'ONEPLUS', 'SAMSUNG', 'IQOO', 'INFINIX', 'TECNO', 'ANKER', 'BASEUS', 'UGREEN', 'LENOVO']):
+                    clean_title = l_clean
+                    break
+
+        # Taskhinat (Warm-up / Add to cart) header detection matching Lody
+        taskhinat_header = None
+        if raw_text:
+            clean_raw = re.sub(r'ـ', '', raw_text)
+            warmup_keywords = [
+                "أضف للسلة", "اضف للسلة", "أضف إلى السلة", "اضف إلى السلة", "أضف الى السلة", "اضف الى السلة",
+                "دير في السلة", "أضف في السلة", "اضف في السلة", "إحفظ المنشور", "احفظ المنشور",
+                "البيع يوم", "البيع يبدأ", "العرض يعمل يوم", "نهار التخفيضات", "تسخينات", "OTD11"
+            ]
+            if any(k in clean_raw for k in warmup_keywords):
+                m_date = re.search(r'(\d+\s*نوفمبر|\d+\s*أكتوبر|\d+\s*ديسمبر)', clean_raw)
+                if m_date:
+                    date_str = m_date.group(1).strip()
+                elif "الأحد" in clean_raw:
+                    date_str = "1 نوفمبر"
+                else:
+                    date_str = "1 نوفمبر"
+                taskhinat_header = f"<blockquote>🛒 أضف للسلة البيع {date_str}</blockquote>"
+
         lines = []
 
-        # 1. Authentic Algerian Deal Hook — Only include if source channel actually included one!
-        # Rule from user: "stop calling eveything affaire takhfid istina2i if those channels do it u do it if they dont u dont"
-        has_source_hook = False
-        if raw_text is None or is_restock or is_price_drop:
-            has_source_hook = True
-        elif raw_text:
-            first_lines = " ".join(raw_text.splitlines()[:3]).lower()
-            clean_first = re.sub(r'[\u0640]', '', first_lines)
-            hook_keywords = [
-                "لافار", "تخفيض", "سعر خيالي", "عرض اليوم", "باطل", "صفقة",
-                "همزة", "ممتاز", "استثنائي", "سعر هبال", "طاح السعر", "أقوى سعر", "افار",
-                "affaire", "promotion", "promo", "bon plan", "اجري", "أجري"
-            ]
-            if any(k in clean_first for k in hook_keywords):
-                has_source_hook = True
+        if taskhinat_header:
+            lines.append(taskhinat_header)
+            lines.append("")
 
-        if has_source_hook:
-            if deal_type == "bundle":
-                h = int(hashlib.md5(title.encode()).hexdigest(), 16)
-                if is_restock:
-                    hook = "⚡ <b>عروض الحزم رجعت توفرت.. حبات قلال متتراطاش! 🔥📦</b>"
-                else:
-                    bundle_hooks = [
-                        "🔥 <b>عروض الحزم Bundle Deals بسعر ممتاز متتراطاش 🔥📦</b>",
-                        "🛍️ <b>لافاار عروض الحزم 3 قطع بسعر باطل 🔥⚡</b>",
-                        "⚡ <b>تخفيض قوي في عروض الحزم 3 قطع بأقوى سعر 🔥</b>",
-                        "📦 <b>عروض الحزم (Choice Bundle) لافار ممتازة باطل 🔥⚡</b>"
-                    ]
-                    hook = bundle_hooks[h % len(bundle_hooks)]
-            else:
-                hook = self._select_smart_hook(
-                    title=title,
-                    usd_price=usd_price,
-                    has_points_discount=has_points_discount,
-                    has_coupon=bool(coupon_code or seller_coupon),
-                    promo_tag=None,
-                    is_price_drop=is_price_drop,
-                    is_restock=is_restock,
-                    raw_text=raw_text
-                )
-            if hook:
-                lines.append(f"<blockquote>{hook}</blockquote>")
-
-        if deal_type == "bundle":
-            lines.append("<blockquote>📦 <b>تنبيه عروض الحزم:</b> يجب إضافة 3 قطع إلى السلة للاستفادة من هذا السعر والشحن المجاني! 🛍️</blockquote>")
-
-        if is_restock:
-            lines.append("<blockquote>⚡ <b>تنبيه:</b> العرض رجع توفر بكمية محدودة.. سارع قبل النفاذ! 🏃‍♂️💨</blockquote>")
-
-        if is_price_drop:
-            lines.append("<blockquote>📉 <b>انخفاض السعر:</b> السعر نزل أكثر من قبل، لافار حقيقية استغلها الآن! 🔥</blockquote>")
-
-        # Warm-up / Taskhinat indicator during 11.11 warm-up (Oct 28 - Nov 1)
-        is_warmup = False
-        try:
-            from app.aliexpress.promos import promo_tracker
-            active_p = promo_tracker.get_active_promo()
-            if active_p and any(w in active_p.name.lower() for w in ["warm-up", "warmup", "تسخينات", "11.11"]):
-                is_warmup = True
-        except Exception:
-            pass
-
-        if not is_warmup and raw_text:
-            if any(k in raw_text for k in ["دير في السلة", "أضف إلى السلة", "اضف إلى السلة", "نهار التخفيضات", "البيع يبدأ", "البيع يبدا", "تسخينات", "1 نوفمبر"]):
-                is_warmup = True
-
-        if is_warmup:
-            lines.append("<blockquote>🔥 <b>تسخينات 11.11:</b> دير في السلّة من درك باه تضمن السعر المخفض، واشري نهار التخفيضات (1 نوفمبر)! 🛒⚡</blockquote>")
-
-        # 2. Country recommendation (exact Algerian Telegram style in blockquote)
-        if country_info:
-            c_str = str(country_info).lower()
-            if "سعودية" in country_info or "saudi" in c_str or "ksa" in c_str or "🇸🇦" in country_info or "sar" in c_str:
-                lines.append("<blockquote>📍 خلي البلـــد <b>السعوديـــــة 🇸🇦</b></blockquote>")
-            elif "إمارات" in country_info or "امارات" in country_info or "uae" in c_str or "emirates" in c_str or "🇦🇪" in country_info or "aed" in c_str:
-                lines.append("<blockquote>📍 خلي البلـــد <b>الإمـــــارات 🇦🇪</b></blockquote>")
-            elif "قطر" in country_info or "qatar" in c_str or "🇶🇦" in country_info:
-                lines.append("<blockquote>📍 خلي البلـــد <b>قطـــــر 🇶🇦</b></blockquote>")
-            elif "كويت" in country_info or "kuwait" in c_str or "🇰🇼" in country_info:
-                lines.append("<blockquote>📍 خلي البلـــد <b>الكويـــــت 🇰🇼</b></blockquote>")
-            elif "بحرين" in country_info or "bahrain" in c_str or "🇧🇭" in country_info:
-                lines.append("<blockquote>📍 خلي البلـــد <b>البحريـــــن 🇧🇭</b></blockquote>")
-            elif "عمان" in country_info or "عُمان" in country_info or "oman" in c_str or "🇴🇲" in country_info:
-                lines.append("<blockquote>📍 خلي البلـــد <b>عمـــــان 🇴🇲</b></blockquote>")
-            elif "فرنسا" in country_info or "france" in c_str or "🇫🇷" in country_info:
-                lines.append("<blockquote>📍 خلي البلـــد <b>فرنســـــا 🇫🇷</b></blockquote>")
-            elif "إسبانيا" in country_info or "اسبانيا" in country_info or "spain" in c_str or "🇪🇸" in country_info:
-                lines.append("<blockquote>📍 خلي البلـــد <b>إسبانيـــــا 🇪🇸</b></blockquote>")
-            elif "كوريا" in country_info or "korea" in c_str or "kr" in c_str:
-                lines.append("<blockquote>📍 خلي البلـــد <b>كــــــوريا 🇰🇷</b></blockquote>")
-            elif "كندا" in country_info or "canada" in c_str or "ca" in c_str:
-                lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
-            elif "أوكرانيا" in country_info or "اوكرانيا" in country_info or "ukraine" in c_str or "ua" in c_str:
-                lines.append("<blockquote>📍 خلي البلـــد <b>أوكرانيـــــا 🇺🇦</b></blockquote>")
-            elif "استراليا" in country_info or "أستراليا" in country_info or "australia" in c_str or "au" in c_str:
-                lines.append("<blockquote>📍 خلي البلـــد <b>أستراليـــــا 🇦🇺</b></blockquote>")
-            elif "الجزائر" in country_info or "algeria" in c_str or "dz" in c_str:
-                lines.append("<blockquote>📍 بلد الحساب <b>الجزائر 🇩🇿</b></blockquote>")
-            else:
-                lines.append(f"<blockquote>📍 خلي البلـــد <b>{html.escape(str(country_info))}</b></blockquote>")
-        elif deal_type == "bundle":
-            is_dz = False
-            if raw_text and any(k in raw_text.lower() for k in ["الجزائر", "algeria", "dz", "ديرو الجزائر", "بلاد الجزائر", "حساب جزائري"]):
-                is_dz = True
-            if is_dz:
-                lines.append("<blockquote>📍 بلد الحساب <b>الجزائر 🇩🇿</b></blockquote>")
-            else:
-                lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
-        elif deal_type == "coin" and (raw_text is None or any(k in raw_text.lower() for k in ["كندا", "🇨🇦", "canada", "خلي البلد"])):
-            lines.append("<blockquote>📍 خلي البلـــد <b>كــــــندا 🇨🇦</b></blockquote>")
-
-        # 2.5 Local price comparison quote if mentioned in source
+        # 1. Clean Lody-style hook
+        hook = ""
         if raw_text:
-            clean_raw = re.sub(r'[\u064B-\u065F\u0640]', '', raw_text)
-            p_quote = re.search(r'(?:سعرو|سعرها|سعره)\s*(?:حاليا|هنا|فالبلاد|في البلاد)\s*(?:في البلاد|فالبلاد)?\s*فوق\s*([0-9\s\.,]+(?:دج|مليون|ألف|الف|سنتيم)?)', clean_raw)
-            if p_quote:
-                matched_quote = p_quote.group(0).strip()
-                lines.append(f"<blockquote>🏷️ <b>سعر السوق المحلي:</b> {html.escape(matched_quote)} 🛒</blockquote>")
-        safe_title = html.escape(title)
+            clean_raw_lines = [re.sub(r'ـ', '', l).strip() for l in raw_text.splitlines() if l.strip()]
+            for l in clean_raw_lines:
+                if any(w in l for w in ["ممتاز", "مواصفات", "باطل", "لافار", "بطارية", "شاشة", "معالج", "متوافق", "FPS", "PUBG"]):
+                    if not any(comp in l.lower() for comp in ["zed", "anis", "mega", "bnd", "ecks", "نصاب"]):
+                        if not any(w in l for w in ["أضف", "اضف", "السلة", "البيع"]):
+                            hook = l
+                            break
+        if not hook and not taskhinat_header:
+            if is_restock:
+                hook = "⚡ عودة توفر العرض بكمية محدودة 🔥"
+            elif is_price_drop:
+                hook = "📉 انخفاض ممتاز في السعر 🔥"
+            elif usd_price and usd_price < 5.0:
+                hook = "سعر ممتاز 🔥"
+            elif promo_tag:
+                hook = f"تخفيضات {promo_tag} 🔥"
 
-        lines.append("")
-        lines.append(f"✅ <b>{safe_title}</b>")
-        lines.append("")
+        if hook:
+            lines.append(hook)
+            lines.append("")
 
+        # 2. Product Title (Lody format: تخفيض لـ ...)
+        lines.append(f"تخفيض لـ {clean_title}")
+
+        # 3. Price line (Lody format: السعر : X$ (Y€) 🔥)
         if usd_price and usd_price > 0:
-            lines.append(f"💰 <b>السعر :</b> <b>${usd_price:.2f}</b> 🔥")
-        else:
-            lines.append("💰 <b>السعر :</b> <b>سعر خاص ومخفض</b> 🔥")
+            if eur_price and eur_price > 0:
+                lines.append(f"السعر : {usd_price:.2f}$ ({eur_price:.2f}€) 🔥")
+            else:
+                lines.append(f"السعر : {usd_price:.2f}$ 🔥")
 
-        # Format coupons & seller vouchers (support multiple coupons if present in raw_text)
-        from app.aliexpress.parser import extract_multi_coupons
-        multi = extract_multi_coupons(raw_text, title=title) if raw_text else {}
-        extracted_coupons = multi.get("coupons", [])
-        extracted_details = multi.get("coupon_details", [])
+        # 4. Link line (Lody format: رابط ...)
+        lines.append(f"رابط {affiliate_url}")
 
-        if len(extracted_coupons) > 1:
-            seller_shown = False
-            platform_shown = False
-            for d in extracted_details:
-                c = d["code"]
-                lbl = d.get("label") or "كـوبون الخصم"
-                tier = d.get("tier")
-                tier_str = f" ({tier})" if tier else ""
-                is_seller = any(k in lbl for k in ["متجر", "بائع", "قسيمة"])
-                if is_seller and not seller_shown:
-                    lines.append(f"🌷 <b>{html.escape(lbl)}{tier_str} :</b> <code>{html.escape(c)}</code>")
-                    seller_shown = True
-                elif not is_seller and not platform_shown:
-                    # In a single product deal, only display at most 1 global promo code
-                    lines.append(f"🎟️ <b>{html.escape(lbl)}{tier_str} :</b> <code>{html.escape(c)}</code>")
-                    platform_shown = True
-        else:
-            if seller_coupon and str(seller_coupon).strip() not in {"0", "0$", "$0", "None", ""}:
-                s_clean = str(seller_coupon).strip()
-                if s_clean.isdigit():
-                    s_clean = f"{s_clean}$"
-                lines.append(f"🌷 <b>قسيمــة البــائع :</b> <code>{html.escape(s_clean)}</code>")
+        # 5. Extract and format coupons & vouchers (Strictly copyable <code> tags)
+        found_coupon = coupon_code
+        found_seller = seller_coupon
+        if raw_text:
+            clean_raw = re.sub(r'ـ', '', raw_text)
+            m_seller = re.search(r'(?:قسيمة البائع|كوبون المتجر|من المتجر)[^\n:]*[:\s]+([A-Za-z0-9_\$]+)', clean_raw)
+            if m_seller and not found_seller:
+                found_seller = m_seller.group(0).strip()
+            m_code = re.search(r'(?:كوبون|كود)[^\n:]*[:\s]+([A-Za-z0-9_-]{4,15})', clean_raw)
+            if m_code and not found_coupon:
+                found_coupon = m_code.group(1).strip()
 
-            if coupon_code:
-                lines.append(f"🎟️ <b>كـوبون الخصم :</b> <code>{html.escape(coupon_code)}</code>")
+        if found_seller and str(found_seller).strip() not in {"0", "0$", "$0", "None", ""}:
+            s_val = str(found_seller).strip()
+            m_code_s = re.search(r'([A-Za-z0-9_\$]{3,20})\s*$', s_val)
+            if m_code_s:
+                code = m_code_s.group(1)
+                prefix = s_val[:m_code_s.start(1)]
+                lines.append(f"{prefix}<code>{code}</code>")
+            elif "قسيمة" in s_val:
+                lines.append(s_val)
+            else:
+                lines.append(f"قسيمة البائع <code>{s_val}</code>")
 
-        if deal_type == "bundle":
-            lines.append("📦 <b>عروض الحزم (Choice Bundle) — يجب إضافة 3 قطع</b>")
-        elif has_points_discount or deal_type == "coin":
-            lines.append("🪙 <b>تخفيض العملات مفعّل عبر الرابط</b>")
+        if found_coupon and found_coupon != found_seller:
+            clean_code = str(found_coupon).strip()
+            lines.append(f"كوبون : <code>{clean_code}</code>")
 
+        # 6. Country setting (Lody format: ضع البلد ... من الإعدادات ...)
+        if not country_info and raw_text:
+            clean_raw = re.sub(r'ـ', '', raw_text)
+            m_country = re.search(r'(?:ضع البلد|خلي البلد|بلد الحساب|أختر بلد)[^\n]+', clean_raw)
+            if m_country:
+                lines.append(m_country.group(0).strip())
+        elif country_info:
+            c_str = str(country_info).lower()
+            flag = "🇦🇺" if any(k in c_str for k in ["aust", "استراليا", "أستراليا"]) else ("🇨🇦" if any(k in c_str for k in ["can", "كندا"]) else ("🇫🇷" if any(k in c_str for k in ["fr", "فرنسا"]) else "🌍"))
+            lines.append(f"ضع البلد {country_info} من الإعدادات {flag}")
+
+        # 7. Authentic Lody Footer
         lines.append("")
-        if deal_type == "bundle":
-            lines.append("🛒 <b>رابط الباندل (Bundle Deals) ⤵️</b>")
-        else:
-            lines.append("🛒 <b>رابط الشراء ⤵️</b>")
-        lines.append(affiliate_url)
+        lines.append("لا تنسى استخدام البوت للشراء بأقل الأسعار :")
+        lines.append("t.me/Alilo07BOT")
 
-        lines.append("")
-        lines.append("🤖 <b>بوت تخفيض العملات:</b> @Alilo07BOT")
-        lines.append("🌐 <b>موقع الصفقات:</b> https://dealscoutgreen.vercel.app/")
-        lines.append("📢 @DzAliexpress0")
-
-        raw_caption = "\n".join(lines)
-        from app.ai.category_firewall import sanitize_caption_category
-        clean_caption, was_sanitized = sanitize_caption_category(raw_caption, title)
-        if was_sanitized:
-            logger.warning(f"[CATEGORY FIREWALL] Corrected caption hook mismatch for title: '{title}'")
-        return clean_caption
+        return "\n".join(lines)
 
     async def generate(
         self,

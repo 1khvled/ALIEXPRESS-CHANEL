@@ -41,11 +41,8 @@ CHANNELS = [
     "zedstoreonline",
     "aniscoupons",
     "ECKSDEAL",
-    "Pcgamingpart",
     "BNDDEALS",
-    "megaphonna",
-    "alidealsdz",
-    "CouponsGlobal"
+    "megaphonna"
 ]
 
 def get_bot_token() -> str:
@@ -457,7 +454,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
 
                     is_dup, dup_reason, is_price_drop = is_recent_cross_channel_duplicate(
                         extracted.product_id, ch, current_price=extracted.current_price, title=extracted.title or "",
-                        cooldown_hours=getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 24.0), raw_text=raw_text
+                        cooldown_hours=getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 12.0), raw_text=raw_text
                     )
                     if is_dup:
                         print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] {dup_reason}")

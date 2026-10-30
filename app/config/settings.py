@@ -48,7 +48,7 @@ class Settings(BaseSettings):
     COOLDOWN_MINUTES: int = 10
     MIN_QUALITY_SCORE: int = 60
     AUTO_PUBLISH_QUALITY_SCORE: int = 85
-    DUPLICATE_COOLDOWN_HOURS: int = 24
+    DUPLICATE_COOLDOWN_HOURS: int = 12
     NEVER_REPEAT_DUPLICATES: bool = False
     EUR_USD_RATE: float = 0.92
 
