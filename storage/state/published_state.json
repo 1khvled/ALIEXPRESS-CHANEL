@@ -378,7 +378,13 @@
     "1005012838686691",
     "1005007966795709",
     "1005007760080474",
-    "1005011857340568"
+    "1005011857340568",
+    "1005008459823709",
+    "1005012823469739",
+    "1005009286078717",
+    "1005009893668383",
+    "1005010113590391",
+    "1005012820826122"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -627,7 +633,7 @@
     "1005008077568655": 1792157933.6814291,
     "1005009774318553": 1792050974.7243752,
     "1005012585389764": 1792061322.5579543,
-    "1005011997237872": 1792156524.878074,
+    "1005011997237872": 1793361163.7636058,
     "1005011908654312": 1792156510.3081717,
     "9998882553": 1792072553.3589916,
     "9998882689": 1792072689.712488,
@@ -731,7 +737,7 @@
     "1005013479172067": 1793276192.7711725,
     "1005012199872142": 1793276220.2800016,
     "9998886358": 1793276358.3466215,
-    "1005013170854617": 1793278959.3832097,
+    "1005013170854617": 1793361222.3673725,
     "1005010172572484": 1793278969.2747114,
     "1005012167596439": 1793278979.5236633,
     "1005005209037696": 1793278991.8471248,
@@ -744,8 +750,8 @@
     "9998889488": 1793279488.1402335,
     "999888261": 1793280261.0669627,
     "1005008785149427": 1793281845.5693822,
-    "1005012766583284": 1793281852.7664962,
-    "1005011557016158": 1793281863.7129755,
+    "1005012766583284": 1793361227.087633,
+    "1005011557016158": 1793361206.2841601,
     "1005013451224718": 1793281883.4004252,
     "1005009120899585": 1793314902.97209,
     "1005010620332784": 1793282581.4093866,
@@ -754,7 +760,7 @@
     "1005012959515066": 1793282624.5538614,
     "9998882843": 1793282843.2823777,
     "9998883032": 1793283032.609285,
-    "1005011638526553": 1793299421.73227,
+    "1005011638526553": 1793361213.564452,
     "1005010266487244": 1793299440.1984155,
     "1005010207075594": 1793299454.8390412,
     "1005013351519067": 1793299459.307718,
@@ -763,11 +769,17 @@
     "1005010355409000": 1793299528.9348502,
     "1005013438245033": 1793299536.9978156,
     "1005008986635164": 1793314892.9200466,
-    "1005008327980403": 1793314898.490911,
+    "1005008327980403": 1793361154.047475,
     "1005012838686691": 1793314915.007305,
     "1005007966795709": 1793314939.6901202,
     "1005007760080474": 1793314944.416167,
-    "1005011857340568": 1793314949.3624141
+    "1005011857340568": 1793314949.3624141,
+    "1005008459823709": 1793361168.2883756,
+    "1005012823469739": 1793361173.3059998,
+    "1005009286078717": 1793361178.906932,
+    "1005009893668383": 1793361183.531266,
+    "1005010113590391": 1793361188.9536324,
+    "1005012820826122": 1793361198.3055365
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1157,7 +1169,19 @@
     "MSI X670E GAMING PLUS WIFI AMD X670 Motherboard AM5 used",
     "BLACKVIEW WAVE 7C (4/64)",
     "BLACKVIEW WAVE 10C (4/32)",
-    "BLACKVIEW WAVE 10 (8/256)"
+    "BLACKVIEW WAVE 10 (8/256)",
+    "KOOTION X16 PS5 console M.2 SSD NVMe 1TB",
+    "Redmi Note 12 5G 4/128GB",
+    "UGREEN Wireless Bluetooth Headphones 80H Playtime HiFi Stereo Over Ear",
+    "UGREEN MAX5S ANC",
+    "UGREEN 60W Car Charger 145W 90W",
+    "UGREEN HiTune S3 Air Open Ear Earbuds",
+    "Soundcore by Anker Space Q45",
+    "OPPO Reno 16F 5G Global (8/256GB)",
+    "REALME P4 POWER (8/256)",
+    "ONEPLUS 13T (12/256)",
+    "VIVO Y600 pro",
+    "ASRock X570 Phantom Gaming 4 Motherboard USED"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1554,7 +1578,19 @@
     "MSI X670E GAMING PLUS WIFI AMD X670 Motherboard AM5 used": 1793314915.007305,
     "BLACKVIEW WAVE 7C (4/64)": 1793314939.6901202,
     "BLACKVIEW WAVE 10C (4/32)": 1793314944.416167,
-    "BLACKVIEW WAVE 10 (8/256)": 1793314949.3624141
+    "BLACKVIEW WAVE 10 (8/256)": 1793314949.3624141,
+    "KOOTION X16 PS5 console M.2 SSD NVMe 1TB": 1793361154.047475,
+    "Redmi Note 12 5G 4/128GB": 1793361163.7636058,
+    "UGREEN Wireless Bluetooth Headphones 80H Playtime HiFi Stereo Over Ear": 1793361168.2883756,
+    "UGREEN MAX5S ANC": 1793361173.3059998,
+    "UGREEN 60W Car Charger 145W 90W": 1793361178.906932,
+    "UGREEN HiTune S3 Air Open Ear Earbuds": 1793361183.531266,
+    "Soundcore by Anker Space Q45": 1793361188.9536324,
+    "OPPO Reno 16F 5G Global (8/256GB)": 1793361198.3055365,
+    "REALME P4 POWER (8/256)": 1793361206.2841601,
+    "ONEPLUS 13T (12/256)": 1793361213.564452,
+    "VIVO Y600 pro": 1793361222.3673725,
+    "ASRock X570 Phantom Gaming 4 Motherboard USED": 1793361227.087633
   },
   "published_post_keys": [
     "aniscoupons:32590",
@@ -2389,19 +2425,31 @@
     "pcgamingpart:8025",
     "megaphonna:8544",
     "megaphonna:8543",
-    "megaphonna:8542"
+    "megaphonna:8542",
+    "zedstoreonline:38763",
+    "zedstoreonline:38762",
+    "zedstoreonline:38761",
+    "zedstoreonline:38760",
+    "zedstoreonline:38758",
+    "zedstoreonline:38757",
+    "aniscoupons:33163",
+    "aniscoupons:33162",
+    "aniscoupons:33161",
+    "aniscoupons:33160",
+    "aniscoupons:33159",
+    "aniscoupons:33158"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793314949.3624141,
+  "last_run_time": 1793361227.087633,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33157,
-      "last_check_time": 1793357243.5198164
+      "last_message_id": 33164,
+      "last_check_time": 1793361229.68496
     },
     "ecksdeal": {
       "last_message_id": 5918,
-      "last_check_time": 1793357244.2385278
+      "last_check_time": 1793361230.5145578
     },
     "lodydeals": {
       "last_message_id": 45665,
@@ -2420,12 +2468,12 @@
       "last_check_time": 1793314917.0347583
     },
     "zedstoreonline": {
-      "last_message_id": 38740,
-      "last_check_time": 1793357217.477804
+      "last_message_id": 38764,
+      "last_check_time": 1793361185.5540116
     },
     "megaphonna": {
-      "last_message_id": 8560,
-      "last_check_time": 1793357277.5204551
+      "last_message_id": 8570,
+      "last_check_time": 1793361267.3218517
     },
     "couponsglobal": {
       "last_message_id": 48880,
@@ -2606,7 +2654,7 @@
     "1005005605683958": 34.73,
     "1005010056083952": 12.89,
     "1005012193220695": 253.22,
-    "1005012823469739": 32.11,
+    "1005012823469739": 31.1,
     "1005009948598802": 206.0,
     "1005012293918683": 5.0,
     "1005012651158292": 9.78,
@@ -2651,7 +2699,7 @@
     "1005008500550817": 23.6,
     "1005008077568655": 42.38,
     "1005012585389764": 153.9,
-    "1005011997237872": 111.2,
+    "1005011997237872": 96.0,
     "1005011908654312": 122.6,
     "1005010620269829": 229.0,
     "1005010149868688": 204.1,
@@ -2700,7 +2748,7 @@
     "1005012399830182": 479.0,
     "1005013479172067": 218.2,
     "1005012199872142": 471.9,
-    "1005013170854617": 262.6,
+    "1005013170854617": 262.0,
     "1005010172572484": 509.0,
     "1005012167596439": 578.0,
     "1005005209037696": 328.0,
@@ -2711,15 +2759,15 @@
     "1005009234880101": 355.0,
     "1005012853585903": 123.64,
     "1005008785149427": 100.0,
-    "1005012766583284": 88.3,
-    "1005011557016158": 298.0,
+    "1005012766583284": 88.7,
+    "1005011557016158": 296.0,
     "1005013451224718": 527.0,
     "1005009120899585": 134.0,
     "1005010620332784": 480.0,
     "1005013489523241": 406.0,
     "1005013422094858": 554.0,
     "1005012959515066": 587.0,
-    "1005011638526553": 410.0,
+    "1005011638526553": 409.0,
     "1005010207075594": 424.0,
     "1005013351519067": 202.9,
     "1005012484784752": 98.79,
@@ -2727,10 +2775,15 @@
     "1005010355409000": 518.2,
     "1005013438245033": 412.0,
     "1005008986635164": 185.9,
-    "1005008327980403": 142.8,
+    "1005008327980403": 143.8,
     "1005012838686691": 146.83,
     "1005007966795709": 87.0,
-    "1005011857340568": 115.0
+    "1005011857340568": 115.0,
+    "1005008459823709": 21.4,
+    "1005009286078717": 15.7,
+    "1005009893668383": 13.8,
+    "1005010113590391": 61.15,
+    "1005012820826122": 364.22
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -7865,6 +7918,126 @@
       "price": 115.0,
       "timestamp": 1793314949.3624141,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38763": {
+      "channel_msg_id": 1155,
+      "product_id": "1005008327980403",
+      "title": "KOOTION X16 PS5 console M.2 SSD NVMe 1TB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38763,
+      "price": 143.8,
+      "timestamp": 1793361154.047475,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38762": {
+      "channel_msg_id": 1156,
+      "product_id": "1005011997237872",
+      "title": "Redmi Note 12 5G 4/128GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38762,
+      "price": 96.0,
+      "timestamp": 1793361163.7636058,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38761": {
+      "channel_msg_id": 1157,
+      "product_id": "1005008459823709",
+      "title": "UGREEN Wireless Bluetooth Headphones 80H Playtime HiFi Stereo Over Ear",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38761,
+      "price": 21.4,
+      "timestamp": 1793361168.2883756,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38760": {
+      "channel_msg_id": 1158,
+      "product_id": "1005012823469739",
+      "title": "UGREEN MAX5S ANC",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38760,
+      "price": 31.1,
+      "timestamp": 1793361173.3059998,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38758": {
+      "channel_msg_id": 1159,
+      "product_id": "1005009286078717",
+      "title": "UGREEN 60W Car Charger 145W 90W",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38758,
+      "price": 15.7,
+      "timestamp": 1793361178.906932,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38757": {
+      "channel_msg_id": 1160,
+      "product_id": "1005009893668383",
+      "title": "UGREEN HiTune S3 Air Open Ear Earbuds",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38757,
+      "price": 13.8,
+      "timestamp": 1793361183.531266,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33163": {
+      "channel_msg_id": 1161,
+      "product_id": "1005010113590391",
+      "title": "Soundcore by Anker Space Q45",
+      "channel": "aniscoupons",
+      "source_msg_id": 33163,
+      "price": 61.15,
+      "timestamp": 1793361188.9536324,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33162": {
+      "channel_msg_id": 1162,
+      "product_id": "1005012820826122",
+      "title": "OPPO Reno 16F 5G Global (8/256GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 33162,
+      "price": 364.22,
+      "timestamp": 1793361198.3055365,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33161": {
+      "channel_msg_id": 1163,
+      "product_id": "1005011557016158",
+      "title": "REALME P4 POWER (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 33161,
+      "price": 296.0,
+      "timestamp": 1793361206.2841601,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33160": {
+      "channel_msg_id": 1164,
+      "product_id": "1005011638526553",
+      "title": "ONEPLUS 13T (12/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 33160,
+      "price": 409.0,
+      "timestamp": 1793361213.564452,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33159": {
+      "channel_msg_id": 1165,
+      "product_id": "1005013170854617",
+      "title": "VIVO Y600 pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 33159,
+      "price": 262.0,
+      "timestamp": 1793361222.3673725,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33158": {
+      "channel_msg_id": 1166,
+      "product_id": "1005012766583284",
+      "title": "ASRock X570 Phantom Gaming 4 Motherboard USED",
+      "channel": "aniscoupons",
+      "source_msg_id": 33158,
+      "price": 88.7,
+      "timestamp": 1793361227.087633,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -7873,17 +8046,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793314952.37995,
+    "last_deal_post_time": 1793361267.3412788,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793357279.8903537,
+    "last_sweep_time": 1793361271.40736,
     "last_sweep_times": {
-      "algeria": 1793357277.5275867,
-      "france": 1793357279.8903537
+      "algeria": 1793361267.3317266,
+      "france": 1793361271.40736
     },
     "last_deal_post_times": {
-      "algeria": 1793314952.37995
+      "algeria": 1793361267.3412788
     }
   },
   "last_coin_reminder_time": 1793182579.2180297,
@@ -8073,7 +8246,7 @@
     "1005005605683958": "lodydeals",
     "1005010056083952": "aniscoupons",
     "1005012193220695": "lodydeals",
-    "1005012823469739": "lodydeals",
+    "1005012823469739": "zedstoreonline",
     "1005009948598802": "megaphonna",
     "1005012293918683": "ecksdeal",
     "1005012651158292": "lodydeals",
@@ -8137,7 +8310,7 @@
     "1005008500550817": "bnddeals",
     "1005008077568655": "aniscoupons",
     "1005012585389764": "aniscoupons",
-    "1005011997237872": "aniscoupons",
+    "1005011997237872": "zedstoreonline",
     "1005011908654312": "aniscoupons",
     "9998882553": "test_channel",
     "9998882689": "test_channel",
@@ -8244,7 +8417,7 @@
     "1005013479172067": "aniscoupons",
     "1005012199872142": "aniscoupons",
     "9998886358": "test_channel",
-    "1005013170854617": "zedstoreonline",
+    "1005013170854617": "aniscoupons",
     "1005010172572484": "zedstoreonline",
     "1005012167596439": "zedstoreonline",
     "1005005209037696": "zedstoreonline",
@@ -8257,8 +8430,8 @@
     "9998889488": "test_channel",
     "999888261": "test_channel",
     "1005008785149427": "zedstoreonline",
-    "1005012766583284": "zedstoreonline",
-    "1005011557016158": "zedstoreonline",
+    "1005012766583284": "aniscoupons",
+    "1005011557016158": "aniscoupons",
     "1005013451224718": "aniscoupons",
     "1005009120899585": "aniscoupons",
     "1005010620332784": "zedstoreonline",
@@ -8267,7 +8440,7 @@
     "1005012959515066": "zedstoreonline",
     "9998882843": "test_channel",
     "9998883032": "test_channel",
-    "1005011638526553": "zedstoreonline",
+    "1005011638526553": "aniscoupons",
     "1005010207075594": "aniscoupons",
     "1005013351519067": "aniscoupons",
     "1005012484784752": "ecksdeal",
@@ -8275,10 +8448,15 @@
     "1005010355409000": "megaphonna",
     "1005013438245033": "megaphonna",
     "1005008986635164": "aniscoupons",
-    "1005008327980403": "aniscoupons",
+    "1005008327980403": "zedstoreonline",
     "1005012838686691": "pcgamingpart",
     "1005007966795709": "megaphonna",
-    "1005011857340568": "megaphonna"
+    "1005011857340568": "megaphonna",
+    "1005008459823709": "zedstoreonline",
+    "1005009286078717": "zedstoreonline",
+    "1005009893668383": "zedstoreonline",
+    "1005010113590391": "aniscoupons",
+    "1005012820826122": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -8678,7 +8856,19 @@
     "MSI X670E GAMING PLUS WIFI AMD X670 Motherboard AM5 used": "pcgamingpart",
     "BLACKVIEW WAVE 7C (4/64)": "megaphonna",
     "BLACKVIEW WAVE 10C (4/32)": "megaphonna",
-    "BLACKVIEW WAVE 10 (8/256)": "megaphonna"
+    "BLACKVIEW WAVE 10 (8/256)": "megaphonna",
+    "KOOTION X16 PS5 console M.2 SSD NVMe 1TB": "zedstoreonline",
+    "Redmi Note 12 5G 4/128GB": "zedstoreonline",
+    "UGREEN Wireless Bluetooth Headphones 80H Playtime HiFi Stereo Over Ear": "zedstoreonline",
+    "UGREEN MAX5S ANC": "zedstoreonline",
+    "UGREEN 60W Car Charger 145W 90W": "zedstoreonline",
+    "UGREEN HiTune S3 Air Open Ear Earbuds": "zedstoreonline",
+    "Soundcore by Anker Space Q45": "aniscoupons",
+    "OPPO Reno 16F 5G Global (8/256GB)": "aniscoupons",
+    "REALME P4 POWER (8/256)": "aniscoupons",
+    "ONEPLUS 13T (12/256)": "aniscoupons",
+    "VIVO Y600 pro": "aniscoupons",
+    "ASRock X570 Phantom Gaming 4 Motherboard USED": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -9734,7 +9924,18 @@
     "megaphonna:8554",
     "megaphonna:8553",
     "megaphonna:8552",
-    "megaphonna:8551"
+    "megaphonna:8551",
+    "zedstoreonline:38764",
+    "zedstoreonline:38759",
+    "aniscoupons:33164",
+    "megaphonna:8570",
+    "megaphonna:8569",
+    "megaphonna:8568",
+    "megaphonna:8567",
+    "megaphonna:8566",
+    "megaphonna:8565",
+    "megaphonna:8564",
+    "megaphonna:8563"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
