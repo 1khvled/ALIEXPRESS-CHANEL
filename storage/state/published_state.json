@@ -2468,11 +2468,11 @@
       "last_check_time": 1793314917.0347583
     },
     "zedstoreonline": {
-      "last_message_id": 38764,
+      "last_message_id": 38740,
       "last_check_time": 1793361185.5540116
     },
     "megaphonna": {
-      "last_message_id": 8570,
+      "last_message_id": 8560,
       "last_check_time": 1793361267.3218517
     },
     "couponsglobal": {
@@ -9917,7 +9917,6 @@
     "ecksdeal:5918",
     "bnddeals:50898",
     "megaphonna:8545",
-    "megaphonna:8560",
     "megaphonna:8559",
     "megaphonna:8558",
     "megaphonna:8556",
@@ -9926,16 +9925,7 @@
     "megaphonna:8552",
     "megaphonna:8551",
     "zedstoreonline:38764",
-    "zedstoreonline:38759",
-    "aniscoupons:33164",
-    "megaphonna:8570",
-    "megaphonna:8569",
-    "megaphonna:8568",
-    "megaphonna:8567",
-    "megaphonna:8566",
-    "megaphonna:8565",
-    "megaphonna:8564",
-    "megaphonna:8563"
+    "aniscoupons:33164"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,

@@ -171,11 +171,11 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     is_warmup_or_event = bool(active_p and ("warm-up" in active_p.name.lower() or "11.11" in active_p.name or "festival" in active_p.name.lower()))
     is_peak = is_algerian_peak_hour()
     if is_warmup_or_event:
-        max_deals_per_channel = 8
-        MAX_DEALS_PER_RUN = 25
+        max_deals_per_channel = 25
+        MAX_DEALS_PER_RUN = 50
     else:
-        max_deals_per_channel = 6 if is_peak else 4
-        MAX_DEALS_PER_RUN = 12 if is_peak else 8
+        max_deals_per_channel = 15 if is_peak else 10
+        MAX_DEALS_PER_RUN = 30 if is_peak else 20
     print(f"[PACER TRAFFIC STATUS] Promo/Warmup Boost: {'ON (Up to 8 deals/ch, 25 max)' if is_warmup_or_event else ('Peak Boost ON' if is_peak else 'Paced')} | Max run limit: {MAX_DEALS_PER_RUN}")
 
     published_deals = []
@@ -254,7 +254,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     print(f"  [FIRST RUN] @{ch} baseline set to #{current_max_id}. Processing {len(new_blocks)} visible post(s).")
                 else:
                     # Process posts newer than last_seen_id, or unposted recent candidate messages from current page
-                    lookback_cutoff = max(0, last_seen_id - 20)
+                    lookback_cutoff = max(0, last_seen_id - 60)
                     new_blocks = [
                         (b_id, b) for b_id, b in block_items
                         if (b_id > last_seen_id or (b_id >= lookback_cutoff and not is_post_already_published(ch, b_id) and not is_post_handled(ch, b_id)) or f"{ch.lower()}:{b_id}" in needs_repost_keys)

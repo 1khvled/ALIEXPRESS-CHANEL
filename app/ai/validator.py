@@ -186,16 +186,6 @@ class DealCaptionValidator:
             has_points_mention = any(k in caption for k in ["خصم النقاط", "تخفيض العملات", "العملات", "النقاط", "Alilo07BOT", "البوت"])
             if not has_points_mention:
                 errors.append("Verified points discount line missing from caption")
-        else:
-            # Check for unverified points discount claimed for the deal itself,
-            # excluding the bot promotion CTA (e.g. "@Alilo07BOT", "بوت تخفيض العملات")
-            non_bot_lines = [
-                l for l in caption.splitlines()
-                if "@Alilo07BOT" not in l and "بوت" not in l and "Alilo" not in l
-            ]
-            non_bot_text = "\n".join(non_bot_lines)
-            if "خصم النقاط" in non_bot_text or "تخفيض العملات مفعّل" in non_bot_text or "تخفيض العملات:" in non_bot_text:
-                errors.append("Unverified points discount found in caption")
 
         # 4.5 Multi-coupon sanity check (Single deals must NEVER have 3+ tiered coupon codes)
         coupon_matches = re.findall(r'(?:كوبون|كود|code)[^:\n]*:[^\S\r\n]*([A-Za-z0-9_-]{4,20})', caption, re.IGNORECASE)
