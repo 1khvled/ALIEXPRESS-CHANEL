@@ -453,7 +453,7 @@
     "1005009281115306": 1791942658.9081998,
     "1005011797801269": 1791203753.790013,
     "1005007168829266": 1791102355.4991398,
-    "1005012406142215": 1793270753.3838494,
+    "1005012406142215": 1793364086.0712912,
     "1005007345398413": 1790943717.3545928,
     "1005012504076921": 1791236011.4353654,
     "1005008715050858": 1791033345.3970714,
@@ -1546,7 +1546,7 @@
     "K500-B61 Machenike  Mechanical Keybaord 61Keys Gaming RGB": 1792181648.7159212,
     "يد تحكم  GameSir Tarantula 8K TMR": 1792200008.0113943,
     "HONOR 600S (8/256)": 1793362040.355753,
-    "HONOR WIN TURBO (12/256)": 1793270753.3838494,
+    "HONOR WIN TURBO (12/256)": 1793364086.0712912,
     "Latest USB‑Charged Smart Body Fat Scale Accurate Household Mini Digital": 1792233107.1523154,
     "HAYLOU Watch Faro Voice Calling Smart Watch 2.01'' HD Screen 24H Health": 1792245292.4631972,
     "Wireless Electric Tire Inflator Pump": 1792437012.793756,
@@ -2516,11 +2516,12 @@
     "megaphonna:8565",
     "megaphonna:8564",
     "megaphonna:8562",
-    "megaphonna:8561"
+    "megaphonna:8561",
+    "megaphonna:8571"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793362071.3460114,
+  "last_run_time": 1793364086.0712912,
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33164,
@@ -2528,7 +2529,7 @@
     },
     "ecksdeal": {
       "last_message_id": 5918,
-      "last_check_time": 1793361973.1895547
+      "last_check_time": 1793364054.4935408
     },
     "lodydeals": {
       "last_message_id": 45665,
@@ -2548,11 +2549,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38765,
-      "last_check_time": 1793361934.5396633
+      "last_check_time": 1793364052.4730995
     },
     "megaphonna": {
-      "last_message_id": 8570,
-      "last_check_time": 1793362076.8423953
+      "last_message_id": 8571,
+      "last_check_time": 1793364088.0956075
     },
     "couponsglobal": {
       "last_message_id": 48880,
@@ -8378,6 +8379,16 @@
       "price": 96.0,
       "timestamp": 1793362071.3460114,
       "status": "ACTIVE"
+    },
+    "megaphonna:8571": {
+      "channel_msg_id": 1192,
+      "product_id": "1005012406142215",
+      "title": "HONOR WIN TURBO (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8571,
+      "price": 389.3,
+      "timestamp": 1793364086.0712912,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -8386,17 +8397,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793362076.862462,
+    "last_deal_post_time": 1793364088.13157,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793362079.5551078,
+    "last_sweep_time": 1793364091.1147447,
     "last_sweep_times": {
-      "algeria": 1793362076.852504,
-      "france": 1793362079.5551078
+      "algeria": 1793364088.1215637,
+      "france": 1793364091.1147447
     },
     "last_deal_post_times": {
-      "algeria": 1793362076.862462
+      "algeria": 1793364088.13157
     }
   },
   "last_coin_reminder_time": 1793182579.2180297,
