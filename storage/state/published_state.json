@@ -2397,19 +2397,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33116,
-      "last_check_time": 1793327668.4760234
+      "last_check_time": 1793332826.807707
     },
     "ecksdeal": {
       "last_message_id": 5916,
-      "last_check_time": 1793327669.101607
+      "last_check_time": 1793332827.4494545
     },
     "lodydeals": {
       "last_message_id": 45663,
-      "last_check_time": 1793327643.9667659
+      "last_check_time": 1793332796.8173738
     },
     "bnddeals": {
       "last_message_id": 50884,
-      "last_check_time": 1793327669.593587
+      "last_check_time": 1793332827.8801758
     },
     "test_channel": {
       "last_message_id": 1793283032,
@@ -2421,7 +2421,7 @@
     },
     "zedstoreonline": {
       "last_message_id": 38714,
-      "last_check_time": 1793327644.6241398
+      "last_check_time": 1793332814.8738666
     },
     "megaphonna": {
       "last_message_id": 8550,
@@ -7877,10 +7877,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793327680.9547477,
+    "last_sweep_time": 1793332833.0784628,
     "last_sweep_times": {
-      "algeria": 1793327678.7467349,
-      "france": 1793327680.9547477
+      "algeria": 1793332831.0620077,
+      "france": 1793332833.0784628
     },
     "last_deal_post_times": {
       "algeria": 1793314952.37995
@@ -9701,7 +9701,18 @@
     "aniscoupons:33101",
     "megaphonna:8532",
     "megaphonna:8531",
-    "megaphonna:8530"
+    "megaphonna:8530",
+    "lodydeals:45655",
+    "lodydeals:45654",
+    "lodydeals:45653",
+    "lodydeals:45652",
+    "lodydeals:45651",
+    "lodydeals:45650",
+    "lodydeals:45649",
+    "aniscoupons:33100",
+    "aniscoupons:33099",
+    "aniscoupons:33098",
+    "aniscoupons:33097"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
