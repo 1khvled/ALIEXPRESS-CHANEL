@@ -1,62 +1,64 @@
 {
   "published_post_keys": [
-    "francecp:435",
-    "francecp:422",
-    "promozonefr:245",
+    "alifrdrop:107",
     "francecp:429",
-    "francecp:442",
-    "alifrdrop:106",
-    "francecp:438",
-    "francecp:433",
-    "alifrdrop:105",
-    "promozonefr:240",
-    "francecp:428",
-    "francecp:426",
-    "francecp:443",
-    "promozonefr:241",
-    "promozonefr:239",
-    "aniscoupons:32994",
-    "aniscoupons:32995",
-    "francecp:430",
-    "francecp:417",
+    "promozonefr:242",
     "promozonefr:238",
-    "francecp:425",
-    "francecp:439",
-    "francecp:440",
-    "francecp:441",
-    "francecp:421",
-    "alifrdrop:102",
-    "promozonefr:237",
-    "francecp:423",
-    "promozonefr:244",
-    "francecp:415",
-    "francecp:420",
     "francecp:427",
-    "francecp:419",
+    "promozonefr:244",
+    "francecp:417",
+    "aniscoupons:32994",
+    "francecp:428",
+    "francecp:433",
+    "francecp:420",
+    "francecp:440",
+    "francecp:424",
+    "francecp:423",
+    "francecp:415",
+    "aniscoupons:32995",
     "francecp:414",
     "francecp:437",
-    "francecp:418",
-    "francecp:434",
+    "francecp:413",
+    "francecp:431",
     "alifrdrop:103",
-    "promozonefr:242",
-    "francecp:416",
+    "francecp:438",
+    "francecp:445",
+    "promozonefr:237",
+    "francecp:418",
+    "promozonefr:239",
+    "lodydeals:45579",
     "francecp:432",
+    "francecp:422",
+    "francecp:441",
+    "francecp:434",
+    "promozonefr:240",
+    "promozonefr:241",
+    "francecp:416",
+    "francecp:444",
+    "promozonefr:236",
+    "francecp:430",
     "promozonefr:243",
     "alifrdrop:104",
-    "promozonefr:236",
-    "francecp:413",
-    "francecp:424",
-    "alifrdrop:107",
-    "lodydeals:45579",
-    "francecp:431"
+    "francecp:421",
+    "francecp:426",
+    "francecp:435",
+    "alifrdrop:106",
+    "francecp:442",
+    "francecp:419",
+    "francecp:425",
+    "francecp:439",
+    "francecp:443",
+    "alifrdrop:102",
+    "alifrdrop:105",
+    "promozonefr:245"
   ],
   "published_product_ids": [
-    "1005009977303549",
     "1005012541048117",
+    "1005012155835323",
+    "1005012589045044",
     "1005012697366392",
     "1005012218291528",
-    "1005012155835323",
-    "1005012589045044"
+    "1005009977303549"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -160,12 +162,18 @@
       "title": "🚚 en France | POCO X8 Pro Max - 12/512Go, 120Hz, 8500mAh, 100W, 5G, IP68",
       "price_eur": 316.01,
       "channel_msg_id": 209
+    },
+    "1005011654106789": {
+      "timestamp": 1793490130.030363,
+      "title": "🟢 Caméra d'action DJI Osmo Action 6 Combo - 3 batteries + Boîtier multifonctionnel 3 compartiments +",
+      "price_eur": 264.36,
+      "channel_msg_id": 211
     }
   },
   "monitored_channels": {
     "francecp": {
-      "last_message_id": 443,
-      "last_check_time": 1793478821.1062047
+      "last_message_id": 445,
+      "last_check_time": 1793490132.947219
     },
     "alifrdrop": {
       "last_message_id": 107,
@@ -180,7 +188,7 @@
       "last_check_time": 1792329076.858411
     }
   },
-  "last_run_time": 1793478821.6542912,
+  "last_run_time": 1793490133.5498538,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001",
     "FR_LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
@@ -193,7 +201,7 @@
     "FR_SUNDAY_ALERT_20261025",
     "FR_END_ALERT_11.11 Global Shopping Festival Warm-Up_20261101"
   ],
-  "last_deal_post_time": 1793478821.654292,
+  "last_deal_post_time": 1793490133.5498545,
   "daily_roundup_history": {
     "2026-10-02": {
       "timestamp": 1790976075.00982,
@@ -227,8 +235,8 @@
   "pinned_promo_events": {
     "FR_11.11 Global Shopping Festival Warm-Up_20261028": 202
   },
-  "last_card_affiliate_time_fr": 1792887439.6185877,
-  "card_affiliate_variant_idx_fr": 2,
+  "last_card_affiliate_time_fr": 1793490121.942555,
+  "card_affiliate_variant_idx_fr": 0,
   "handled_post_keys": [
     "alifrdrop:91",
     "alifrdrop:92",

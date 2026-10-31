@@ -72,9 +72,46 @@
       {
         "tier": "70/490$",
         "code": "OTD1170"
+      },
+      {
+        "tier": "00",
+        "code": "minuit"
       }
     ],
-    "coupon_tiers_fr": [],
+    "coupon_tiers_fr": [
+      {
+        "tier": "18€",
+        "code": "11FR03"
+      },
+      {
+        "tier": "45€",
+        "code": "11FR08"
+      },
+      {
+        "tier": "79€",
+        "code": "11FR13"
+      },
+      {
+        "tier": "139€",
+        "code": "11FR24"
+      },
+      {
+        "tier": "229€",
+        "code": "11FR40"
+      },
+      {
+        "tier": "349€",
+        "code": "11FR60"
+      },
+      {
+        "tier": "469€",
+        "code": "11FR80"
+      },
+      {
+        "tier": "569€",
+        "code": "FRD1190"
+      }
+    ],
     "banner_image_url": "https://cdn4.telesco.pe/file/Riblj9mgdxYMOxgOgLnLJhHPcLh3ONZJ50Yu6LV-3_yTjUaCTiHfK1q-DUxkS7U54bdtcOFerHArcTnnkAQq9oq0NTJq4KCXvu-QFHuCruksx70EIH0dnE_Q670v6ZOwvcfYvS63OQKv_uhN4tO6wC_MkuSjZMQ-pvkEhyPfTZjv0LnFQVV8b1e5VYy5sM-6RthXheEQ-O5QLeIksBj8wFPiRJYGTYfNxCGFpiIcz2lVkUel8fiIuz_9R--nhaY6d43UXfvHtajyQUCCYZqBTw2GnWqMZ4uI5r1PMGgyIFb2ZAy3FeMBLXvWYAsyInflroqHwRQyPqHliiz7xc9uyw.jpg",
     "source": "discovered",
     "event_key": "Choice_Day_Novembre_2026_20261101",

@@ -471,7 +471,12 @@
     "1005010527736444",
     "1005013450996845",
     "1005012171521680",
-    "1005013144753309"
+    "1005013144753309",
+    "1005012061152213",
+    "1005012519569107",
+    "1005006996991698",
+    "1005006968874168",
+    "1005010770983388"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -955,7 +960,12 @@
     "1005010527736444": 1793478769.6023057,
     "1005013450996845": 1793478774.2399445,
     "1005012171521680": 1793478779.2331614,
-    "1005013144753309": 1793478785.5587242
+    "1005013144753309": 1793478785.5587242,
+    "1005012061152213": 1793490079.2945042,
+    "1005012519569107": 1793490085.1205146,
+    "1005006996991698": 1793490090.28376,
+    "1005006968874168": 1793490102.028307,
+    "1005010770983388": 1793490111.0047178
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1492,7 +1502,11 @@
     "Blackview MEGA 12  12/256",
     "Lenovo Xiaoxin Pad Pro 2025 12.7  inch",
     "HONOR Pad V9  8/256",
-    "Blackview LINK 1 Kids"
+    "Blackview LINK 1 Kids",
+    "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes",
+    "COLMI i28 Ultra AI Smartwatch – AMOLED Display,",
+    "POCO Pad C1 4/64",
+    "IQOO Z11 Turbo"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1660,7 +1674,7 @@
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": 1791101144.9729881,
     "Toocki 25W GaN Charger": 1791102050.1835058,
     "Baseus Bowie E5x": 1791103551.065819,
-    "Zeblaze Btalk PRO": 1791146144.850411,
+    "Zeblaze Btalk PRO": 1793490085.1205146,
     "AMD Ryzen 5 7600X USED R5 7600X": 1791235979.230238,
     "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,": 1791104060.2548923,
     "New G6 Wireless Controller": 1791104149.1784146,
@@ -2036,14 +2050,13 @@
     "Blackview MEGA 12  12/256": 1793478769.6023057,
     "Lenovo Xiaoxin Pad Pro 2025 12.7  inch": 1793478774.2399445,
     "HONOR Pad V9  8/256": 1793478779.2331614,
-    "Blackview LINK 1 Kids": 1793478785.5587242
+    "Blackview LINK 1 Kids": 1793478785.5587242,
+    "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": 1793490079.2945042,
+    "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": 1793490090.28376,
+    "POCO Pad C1 4/64": 1793490102.028307,
+    "IQOO Z11 Turbo": 1793490111.0047178
   },
   "published_post_keys": [
-    "zedstoreonline:38504",
-    "zedstoreonline:38505",
-    "zedstoreonline:38506",
-    "zedstoreonline:38507",
-    "zedstoreonline:38508",
     "ecksdeal:5831",
     "ecksdeal:5832",
     "ecksdeal:5833",
@@ -3038,23 +3051,28 @@
     "zedstoreonline:38917",
     "zedstoreonline:38916",
     "zedstoreonline:38915",
-    "zedstoreonline:38913"
+    "zedstoreonline:38913",
+    "zedstoreonline:38924",
+    "zedstoreonline:38923",
+    "zedstoreonline:38922",
+    "zedstoreonline:38918",
+    "aniscoupons:33335"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793478785.5587242,
+  "last_run_time": 1793490111.0047178,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33333,
-      "last_check_time": 1793478794.5880425
+      "last_message_id": 33339,
+      "last_check_time": 1793490113.0636792
     },
     "ecksdeal": {
-      "last_message_id": 5919,
-      "last_check_time": 1793478795.26943
+      "last_message_id": 5923,
+      "last_check_time": 1793490115.7026393
     },
     "lodydeals": {
-      "last_message_id": 45748,
-      "last_check_time": 1793478766.0070982
+      "last_message_id": 45758,
+      "last_check_time": 1793490070.6921213
     },
     "bnddeals": {
       "last_message_id": 50968,
@@ -3069,8 +3087,8 @@
       "last_check_time": 1793314917.0347583
     },
     "zedstoreonline": {
-      "last_message_id": 38917,
-      "last_check_time": 1793478792.8577907
+      "last_message_id": 38932,
+      "last_check_time": 1793490104.064609
     },
     "megaphonna": {
       "last_message_id": 8685,
@@ -3470,7 +3488,12 @@
     "1005010527736444": 298.0,
     "1005013450996845": 212.0,
     "1005012171521680": 316.0,
-    "1005013144753309": 98.9
+    "1005013144753309": 98.9,
+    "1005012061152213": 58.3,
+    "1005012519569107": 10.6,
+    "1005006996991698": 23.0,
+    "1005006968874168": 158.0,
+    "1005010770983388": 386.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -10805,6 +10828,56 @@
       "price": 98.9,
       "timestamp": 1793478785.5587242,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38924": {
+      "channel_msg_id": 1394,
+      "product_id": "1005012061152213",
+      "title": "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38924,
+      "price": 58.3,
+      "timestamp": 1793490079.2945042,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38923": {
+      "channel_msg_id": 1395,
+      "product_id": "1005012519569107",
+      "title": "Zeblaze Btalk PRO",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38923,
+      "price": 10.6,
+      "timestamp": 1793490085.1205146,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38922": {
+      "channel_msg_id": 1396,
+      "product_id": "1005006996991698",
+      "title": "COLMI i28 Ultra AI Smartwatch – AMOLED Display,",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38922,
+      "price": 23.0,
+      "timestamp": 1793490090.28376,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:38918": {
+      "channel_msg_id": 1397,
+      "product_id": "1005006968874168",
+      "title": "POCO Pad C1 4/64",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38918,
+      "price": 158.0,
+      "timestamp": 1793490102.028307,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:33335": {
+      "channel_msg_id": 1398,
+      "product_id": "1005010770983388",
+      "title": "IQOO Z11 Turbo",
+      "channel": "aniscoupons",
+      "source_msg_id": 33335,
+      "price": 386.6,
+      "timestamp": 1793490111.0047178,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -10813,17 +10886,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793478804.0942512,
+    "last_deal_post_time": 1793490119.7421498,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793478821.6609879,
+    "last_sweep_time": 1793490133.5569515,
     "last_sweep_times": {
-      "algeria": 1793478804.0792584,
-      "france": 1793478821.6609879
+      "algeria": 1793490119.7249072,
+      "france": 1793490133.5569515
     },
     "last_deal_post_times": {
-      "algeria": 1793478804.0942512
+      "algeria": 1793490119.7421498
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -11311,7 +11384,12 @@
     "1005010527736444": "zedstoreonline",
     "1005013450996845": "zedstoreonline",
     "1005012171521680": "zedstoreonline",
-    "1005013144753309": "zedstoreonline"
+    "1005013144753309": "zedstoreonline",
+    "1005012061152213": "zedstoreonline",
+    "1005012519569107": "zedstoreonline",
+    "1005006996991698": "zedstoreonline",
+    "1005006968874168": "zedstoreonline",
+    "1005010770983388": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -11456,7 +11534,7 @@
     "Toocki 25W GaN Charger": "aniscoupons",
     "Baseus Bowie E5x": "aniscoupons",
     "Rechargeable RC Drift Racing Car": "pcgamingpart",
-    "Zeblaze Btalk PRO": "aniscoupons",
+    "Zeblaze Btalk PRO": "zedstoreonline",
     "SomnAmbulist SSD  120GB": "pcgamingpart",
     "AMD Ryzen 5 7600X USED R5 7600X": "pcgamingpart",
     "Attack Shark R1 Gaming Mouse, PixArt PAW3311 Sensor,": "pcgamingpart",
@@ -11858,7 +11936,11 @@
     "Blackview MEGA 12  12/256": "zedstoreonline",
     "Lenovo Xiaoxin Pad Pro 2025 12.7  inch": "zedstoreonline",
     "HONOR Pad V9  8/256": "zedstoreonline",
-    "Blackview LINK 1 Kids": "zedstoreonline"
+    "Blackview LINK 1 Kids": "zedstoreonline",
+    "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": "zedstoreonline",
+    "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": "zedstoreonline",
+    "POCO Pad C1 4/64": "zedstoreonline",
+    "IQOO Z11 Turbo": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -12055,7 +12137,8 @@
     "test_tag_349a36": "2026-10-02",
     "test_tag_ceafed": "2026-10-02",
     "test_tag_70b040": "2026-10-02",
-    "test_tag_bd08e4": "2026-10-02"
+    "test_tag_bd08e4": "2026-10-02",
+    "customs_postal_notice": "2026-11-01"
   },
   "daily_tajmi3at_history": {
     "2026-10-03": {
@@ -13227,7 +13310,33 @@
     "megaphonna:8680",
     "megaphonna:8679",
     "megaphonna:8677",
-    "megaphonna:8675"
+    "megaphonna:8675",
+    "lodydeals:45758",
+    "lodydeals:45757",
+    "lodydeals:45756",
+    "lodydeals:45755",
+    "lodydeals:45754",
+    "lodydeals:45753",
+    "lodydeals:45752",
+    "lodydeals:45751",
+    "lodydeals:45750",
+    "lodydeals:45749",
+    "zedstoreonline:38932",
+    "zedstoreonline:38931",
+    "zedstoreonline:38930",
+    "zedstoreonline:38929",
+    "zedstoreonline:38928",
+    "zedstoreonline:38921",
+    "zedstoreonline:38920",
+    "zedstoreonline:38919",
+    "aniscoupons:33339",
+    "aniscoupons:33338",
+    "aniscoupons:33337",
+    "aniscoupons:33336",
+    "aniscoupons:33334",
+    "ecksdeal:5923",
+    "ecksdeal:5922",
+    "ecksdeal:5921"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
