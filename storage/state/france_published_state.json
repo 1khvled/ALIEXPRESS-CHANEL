@@ -1,59 +1,62 @@
 {
   "published_post_keys": [
-    "alifrdrop:107",
-    "francecp:433",
-    "francecp:431",
-    "francecp:426",
-    "promozonefr:241",
-    "aniscoupons:32995",
-    "promozonefr:236",
-    "promozonefr:244",
+    "francecp:435",
+    "francecp:422",
+    "promozonefr:245",
     "francecp:429",
-    "promozonefr:238",
-    "promozonefr:237",
-    "promozonefr:239",
-    "francecp:428",
-    "promozonefr:240",
-    "francecp:439",
-    "francecp:427",
-    "francecp:438",
-    "alifrdrop:102",
-    "francecp:432",
-    "francecp:434",
-    "francecp:417",
-    "promozonefr:242",
-    "francecp:423",
-    "francecp:413",
+    "francecp:442",
     "alifrdrop:106",
-    "francecp:424",
+    "francecp:438",
+    "francecp:433",
+    "alifrdrop:105",
+    "promozonefr:240",
+    "francecp:428",
+    "francecp:426",
+    "francecp:443",
+    "promozonefr:241",
+    "promozonefr:239",
+    "aniscoupons:32994",
+    "aniscoupons:32995",
+    "francecp:430",
+    "francecp:417",
+    "promozonefr:238",
+    "francecp:425",
+    "francecp:439",
     "francecp:440",
-    "francecp:419",
-    "promozonefr:243",
-    "francecp:437",
-    "francecp:414",
-    "alifrdrop:103",
-    "alifrdrop:104",
-    "francecp:418",
+    "francecp:441",
+    "francecp:421",
+    "alifrdrop:102",
+    "promozonefr:237",
+    "francecp:423",
+    "promozonefr:244",
     "francecp:415",
     "francecp:420",
+    "francecp:427",
+    "francecp:419",
+    "francecp:414",
+    "francecp:437",
+    "francecp:418",
+    "francecp:434",
+    "alifrdrop:103",
+    "promozonefr:242",
     "francecp:416",
-    "francecp:421",
-    "aniscoupons:32994",
-    "francecp:425",
-    "francecp:430",
-    "francecp:422",
+    "francecp:432",
+    "promozonefr:243",
+    "alifrdrop:104",
+    "promozonefr:236",
+    "francecp:413",
+    "francecp:424",
+    "alifrdrop:107",
     "lodydeals:45579",
-    "francecp:435",
-    "alifrdrop:105",
-    "promozonefr:245"
+    "francecp:431"
   ],
   "published_product_ids": [
-    "1005012589045044",
     "1005009977303549",
+    "1005012541048117",
     "1005012697366392",
-    "1005012155835323",
     "1005012218291528",
-    "1005012541048117"
+    "1005012155835323",
+    "1005012589045044"
   ],
   "published_deals_history": {
     "1005012218291528": {
@@ -145,12 +148,24 @@
       "title": "Realme 16 5G GLOBAL 8/256GB",
       "price_eur": 258.69,
       "channel_msg_id": 180
+    },
+    "1005012137977589": {
+      "timestamp": 1793478814.630907,
+      "title": "🚚 en France | VIVO X300 Pro 5G",
+      "price_eur": 587.0,
+      "channel_msg_id": 208
+    },
+    "1005012334548611": {
+      "timestamp": 1793478819.103986,
+      "title": "🚚 en France | POCO X8 Pro Max - 12/512Go, 120Hz, 8500mAh, 100W, 5G, IP68",
+      "price_eur": 316.01,
+      "channel_msg_id": 209
     }
   },
   "monitored_channels": {
     "francecp": {
-      "last_message_id": 440,
-      "last_check_time": 1793357279.415267
+      "last_message_id": 443,
+      "last_check_time": 1793478821.1062047
     },
     "alifrdrop": {
       "last_message_id": 107,
@@ -165,7 +180,7 @@
       "last_check_time": 1792329076.858411
     }
   },
-  "last_run_time": 1793467371.2140472,
+  "last_run_time": 1793478821.6542912,
   "sent_promo_notifiers": [
     "FR_START_ALERT_Party Ready Sale / Choice Day_20261001",
     "FR_LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
@@ -178,7 +193,7 @@
     "FR_SUNDAY_ALERT_20261025",
     "FR_END_ALERT_11.11 Global Shopping Festival Warm-Up_20261101"
   ],
-  "last_deal_post_time": 1792344480.523527,
+  "last_deal_post_time": 1793478821.654292,
   "daily_roundup_history": {
     "2026-10-02": {
       "timestamp": 1790976075.00982,
@@ -199,6 +214,13 @@
       "count": 1,
       "message_ids": [
         206
+      ]
+    },
+    "2026-10-31": {
+      "timestamp": 1793478809.503477,
+      "count": 1,
+      "message_ids": [
+        207
       ]
     }
   },
@@ -256,5 +278,5 @@
     "aniscoupons:32992",
     "aniscoupons:32993"
   ],
-  "last_france_roundup_time": 1793399658.565336
+  "last_france_roundup_time": 1793478809.503477
 }
