@@ -2783,12 +2783,12 @@
   "last_run_time": 1793399646.3958395,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33227,
-      "last_check_time": 1793399588.3849683
+      "last_message_id": 33228,
+      "last_check_time": 1793411209.9882548
     },
     "ecksdeal": {
       "last_message_id": 5919,
-      "last_check_time": 1793399589.4997962
+      "last_check_time": 1793411210.7849731
     },
     "lodydeals": {
       "last_message_id": 45696,
@@ -2812,7 +2812,7 @@
     },
     "megaphonna": {
       "last_message_id": 8616,
-      "last_check_time": 1793399651.8865943
+      "last_check_time": 1793411217.41193
     },
     "couponsglobal": {
       "last_message_id": 48880,
@@ -9391,10 +9391,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793399660.5845864,
+    "last_sweep_time": 1793411220.1068053,
     "last_sweep_times": {
-      "algeria": 1793399651.89982,
-      "france": 1793399660.5845864
+      "algeria": 1793411217.4260979,
+      "france": 1793411220.1068053
     },
     "last_deal_post_times": {
       "algeria": 1793399651.9126036
@@ -10771,7 +10771,8 @@
     "START_ALERT_Brand Day Sale_20261009",
     "END_ALERT_Brand Day Sale_20261013",
     "LAUNCH_ALERT_Winter Offers_20261014",
-    "END_ALERT_Winter Offers_20261018"
+    "END_ALERT_Winter Offers_20261018",
+    "END_ALERT_11.11 Global Shopping Festival Warm-Up_20261101"
   ],
   "last_card_affiliate_time_dz": 1793327623.0894678,
   "card_affiliate_variant_idx_dz": 1,
@@ -11540,7 +11541,21 @@
     "megaphonna:8609",
     "megaphonna:8608",
     "megaphonna:8607",
-    "megaphonna:8605"
+    "megaphonna:8605",
+    "aniscoupons:33228",
+    "bnddeals:50905",
+    "bnddeals:50904",
+    "bnddeals:50903",
+    "bnddeals:50902",
+    "bnddeals:50901",
+    "bnddeals:50900",
+    "bnddeals:50899",
+    "bnddeals:50897",
+    "bnddeals:50896",
+    "bnddeals:50895",
+    "bnddeals:50894",
+    "bnddeals:50893",
+    "bnddeals:50891"
   ],
   "last_france_cross_promo_time": 1793150350.3590398,
   "next_france_cross_promo_interval_seconds": 282528,
