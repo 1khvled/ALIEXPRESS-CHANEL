@@ -2784,11 +2784,11 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33228,
-      "last_check_time": 1793411209.9882548
+      "last_check_time": 1793418282.717998
     },
     "ecksdeal": {
       "last_message_id": 5919,
-      "last_check_time": 1793411210.7849731
+      "last_check_time": 1793418283.2097108
     },
     "lodydeals": {
       "last_message_id": 45696,
@@ -2812,7 +2812,7 @@
     },
     "megaphonna": {
       "last_message_id": 8616,
-      "last_check_time": 1793411217.41193
+      "last_check_time": 1793418290.8984928
     },
     "couponsglobal": {
       "last_message_id": 48880,
@@ -9391,10 +9391,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793411220.1068053,
+    "last_sweep_time": 1793418293.7298827,
     "last_sweep_times": {
-      "algeria": 1793411217.4260979,
-      "france": 1793411220.1068053
+      "algeria": 1793418290.9090786,
+      "france": 1793418293.7298827
     },
     "last_deal_post_times": {
       "algeria": 1793399651.9126036
@@ -10774,8 +10774,8 @@
     "END_ALERT_Winter Offers_20261018",
     "END_ALERT_11.11 Global Shopping Festival Warm-Up_20261101"
   ],
-  "last_card_affiliate_time_dz": 1793327623.0894678,
-  "card_affiliate_variant_idx_dz": 1,
+  "last_card_affiliate_time_dz": 1793418256.5139923,
+  "card_affiliate_variant_idx_dz": 2,
   "last_tajmi3at_published_time": 1793399420.5018492,
   "published_deals_history": {},
   "settings": {},
