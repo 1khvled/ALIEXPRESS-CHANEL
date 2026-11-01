@@ -784,7 +784,7 @@
     "1005007345151855": 1791942667.867043,
     "1005010345227483": 1793299548.5548651,
     "1005011557896041": 1793543627.8450525,
-    "1005011754993234": 1793448608.235321,
+    "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
     "1005007916078341": 1793542412.85267,
     "1005006506862816": 1791947519.5815504,
@@ -1811,7 +1811,8 @@
     "SMAILWOLF RS8 1000Hz",
     "HILDA 2 Lines Laser",
     "KODAK USB 2.0 Flash Drive",
-    "VA VA VOOM Brand Top"
+    "VA VA VOOM Brand Top",
+    "معالج Ryzen 5 8400F"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2485,10 +2486,10 @@
     "SMAILWOLF RS8 1000Hz": 1793573558.2913802,
     "HILDA 2 Lines Laser": 1793573945.0580306,
     "KODAK USB 2.0 Flash Drive": 1793573951.3406305,
-    "VA VA VOOM Brand Top": 1793574309.4810557
+    "VA VA VOOM Brand Top": 1793574309.4810557,
+    "معالج Ryzen 5 8400F": 1793575053.368357
   },
   "published_post_keys": [
-    "bnddeals:50802",
     "aniscoupons:32705",
     "aniscoupons:32706",
     "lodydeals:45417",
@@ -3487,15 +3488,16 @@
     "lodydeals:45942",
     "lodydeals:45943",
     "lodydeals:45944",
-    "lodydeals:45946"
+    "lodydeals:45946",
+    "ecksdeal:5998"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793574309.4810557,
+  "last_run_time": 1793575053.368357,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 5997,
-      "last_check_time": 1793574484.9973931
+      "last_message_id": 5998,
+      "last_check_time": 1793575055.413816
     },
     "lodydeals": {
       "last_message_id": 45946,
@@ -3702,7 +3704,7 @@
     "1005007345151855": 40.0,
     "1005010345227483": 200.0,
     "1005011557896041": 243.58,
-    "1005011754993234": 79.4,
+    "1005011754993234": 79.58,
     "1005011735727412": 26.6,
     "1005013039644752": 265.18,
     "1005007916078341": 48.91,
@@ -12963,6 +12965,16 @@
       "price": 7.34,
       "timestamp": 1793574309.4810557,
       "status": "ACTIVE"
+    },
+    "ecksdeal:5998": {
+      "channel_msg_id": 1575,
+      "product_id": "1005011754993234",
+      "title": "معالج Ryzen 5 8400F",
+      "channel": "ecksdeal",
+      "source_msg_id": 5998,
+      "price": 79.58,
+      "timestamp": 1793575053.368357,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12971,17 +12983,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793574313.4387174,
+    "last_deal_post_time": 1793575055.4444058,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793574849.4031873,
+    "last_sweep_time": 1793575066.8301399,
     "last_sweep_times": {
-      "algeria": 1793574844.7238846,
-      "france": 1793574849.4031873
+      "algeria": 1793575055.4294066,
+      "france": 1793575066.8301399
     },
     "last_deal_post_times": {
-      "algeria": 1793574313.4387174
+      "algeria": 1793575055.4444058
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13208,7 +13220,7 @@
     "1005007345151855": "bnddeals",
     "1005010345227483": "megaphonna",
     "1005011557896041": "lodydeals",
-    "1005011754993234": "zedstoreonline",
+    "1005011754993234": "ecksdeal",
     "1005011735727412": "bnddeals",
     "1005013039644752": "lodydeals",
     "1005007916078341": "lodydeals",
@@ -14240,7 +14252,8 @@
     "SMAILWOLF RS8 1000Hz": "lodydeals",
     "HILDA 2 Lines Laser": "lodydeals",
     "KODAK USB 2.0 Flash Drive": "lodydeals",
-    "VA VA VOOM Brand Top": "lodydeals"
+    "VA VA VOOM Brand Top": "lodydeals",
+    "معالج Ryzen 5 8400F": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
