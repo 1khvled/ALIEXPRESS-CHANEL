@@ -555,7 +555,8 @@
     "1005009916144912",
     "1005011626282286",
     "1005007539896812",
-    "1005009569642817"
+    "1005009569642817",
+    "1005013438789813"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1123,7 +1124,8 @@
     "1005009916144912": 1793567337.0235388,
     "1005011626282286": 1793567897.1194866,
     "1005007539896812": 1793567901.942504,
-    "1005009569642817": 1793568442.6763802
+    "1005009569642817": 1793568442.6763802,
+    "1005013438789813": 1793569553.2022223
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1778,7 +1780,8 @@
     "Redmi Buds 6 Active",
     "Lexar D400 USB3.1 USB-C 128G",
     "Zeblaze Vibe 8 AMOLED",
-    "Baseus 20W PD Charger"
+    "Baseus 20W PD Charger",
+    "Realme Neo 8  12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2439,10 +2442,10 @@
     "Redmi Buds 6 Active": 1793567897.1194866,
     "Lexar D400 USB3.1 USB-C 128G": 1793567901.942504,
     "Zeblaze Vibe 8 AMOLED": 1793568442.6763802,
-    "Baseus 20W PD Charger": 1793568996.6387508
+    "Baseus 20W PD Charger": 1793568996.6387508,
+    "Realme Neo 8  12/256GB": 1793569553.2022223
   },
   "published_post_keys": [
-    "bnddeals:50797",
     "zedstoreonline:38518",
     "aniscoupons:32697",
     "aniscoupons:32698",
@@ -3441,19 +3444,20 @@
     "lodydeals:45927",
     "lodydeals:45928",
     "lodydeals:45929",
-    "lodydeals:45930"
+    "lodydeals:45930",
+    "lodydeals:45931"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793568996.6387508,
+  "last_run_time": 1793569553.2022223,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45930,
-      "last_check_time": 1793568998.682929
+      "last_message_id": 45931,
+      "last_check_time": 1793569555.2426238
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3932,7 +3936,8 @@
     "1005009916144912": 8.02,
     "1005011626282286": 10.84,
     "1005007539896812": 7.41,
-    "1005009569642817": 32.1
+    "1005009569642817": 32.1,
+    "1005013438789813": 408.02
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12757,6 +12762,16 @@
       "price": 4.46,
       "timestamp": 1793568996.6387508,
       "status": "ACTIVE"
+    },
+    "lodydeals:45931": {
+      "channel_msg_id": 1560,
+      "product_id": "1005013438789813",
+      "title": "Realme Neo 8  12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45931,
+      "price": 408.02,
+      "timestamp": 1793569553.2022223,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12765,17 +12780,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793569000.4861977,
+    "last_deal_post_time": 1793569557.2745175,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793569351.8337553,
+    "last_sweep_time": 1793569562.1792595,
     "last_sweep_times": {
-      "algeria": 1793569347.3394904,
-      "france": 1793569351.8337553
+      "algeria": 1793569557.255361,
+      "france": 1793569562.1792595
     },
     "last_deal_post_times": {
-      "algeria": 1793569000.4861977
+      "algeria": 1793569557.2745175
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13348,7 +13363,8 @@
     "1005009916144912": "lodydeals",
     "1005011626282286": "lodydeals",
     "1005007539896812": "lodydeals",
-    "1005009569642817": "lodydeals"
+    "1005009569642817": "lodydeals",
+    "1005013438789813": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14011,7 +14027,8 @@
     "Redmi Buds 6 Active": "lodydeals",
     "Lexar D400 USB3.1 USB-C 128G": "lodydeals",
     "Zeblaze Vibe 8 AMOLED": "lodydeals",
-    "Baseus 20W PD Charger": "lodydeals"
+    "Baseus 20W PD Charger": "lodydeals",
+    "Realme Neo 8  12/256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
