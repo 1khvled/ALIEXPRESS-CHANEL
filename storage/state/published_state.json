@@ -557,7 +557,8 @@
     "1005007539896812",
     "1005009569642817",
     "1005013438789813",
-    "1005012823102793"
+    "1005012823102793",
+    "1005012773302941"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1127,7 +1128,8 @@
     "1005007539896812": 1793567901.942504,
     "1005009569642817": 1793568442.6763802,
     "1005013438789813": 1793569553.2022223,
-    "1005012823102793": 1793569904.419889
+    "1005012823102793": 1793569904.419889,
+    "1005012773302941": 1793570640.1582527
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1785,7 +1787,8 @@
     "Baseus 20W PD Charger",
     "Realme Neo 8  12/256GB",
     "Blackview MEGA 5 AI 8/256GB",
-    "Anker Nano Smart Display 45W"
+    "Anker Nano Smart Display 45W",
+    "Zeblaze Btalk 4 Pro"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2449,10 +2452,10 @@
     "Baseus 20W PD Charger": 1793568996.6387508,
     "Realme Neo 8  12/256GB": 1793569553.2022223,
     "Blackview MEGA 5 AI 8/256GB": 1793569904.419889,
-    "Anker Nano Smart Display 45W": 1793570287.0210865
+    "Anker Nano Smart Display 45W": 1793570287.0210865,
+    "Zeblaze Btalk 4 Pro": 1793570640.1582527
   },
   "published_post_keys": [
-    "aniscoupons:32698",
     "lodydeals:45416",
     "aniscoupons:32699",
     "bnddeals:50798",
@@ -3451,19 +3454,20 @@
     "lodydeals:45930",
     "lodydeals:45931",
     "lodydeals:45932",
-    "lodydeals:45933"
+    "lodydeals:45933",
+    "lodydeals:45934"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793570287.0210865,
+  "last_run_time": 1793570640.1582527,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45933,
-      "last_check_time": 1793570289.0564046
+      "last_message_id": 45934,
+      "last_check_time": 1793570642.1889591
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3944,7 +3948,8 @@
     "1005007539896812": 7.41,
     "1005009569642817": 32.1,
     "1005013438789813": 408.02,
-    "1005012823102793": 226.25
+    "1005012823102793": 226.25,
+    "1005012773302941": 20.78
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12799,6 +12804,16 @@
       "price": 28.96,
       "timestamp": 1793570287.0210865,
       "status": "ACTIVE"
+    },
+    "lodydeals:45934": {
+      "channel_msg_id": 1563,
+      "product_id": "1005012773302941",
+      "title": "Zeblaze Btalk 4 Pro",
+      "channel": "lodydeals",
+      "source_msg_id": 45934,
+      "price": 20.78,
+      "timestamp": 1793570640.1582527,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12807,17 +12822,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793570290.6579542,
+    "last_deal_post_time": 1793570643.6244385,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793570448.1913416,
+    "last_sweep_time": 1793570646.8720193,
     "last_sweep_times": {
-      "algeria": 1793570444.5378294,
-      "france": 1793570448.1913416
+      "algeria": 1793570643.6129217,
+      "france": 1793570646.8720193
     },
     "last_deal_post_times": {
-      "algeria": 1793570290.6579542
+      "algeria": 1793570643.6244385
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13392,7 +13407,8 @@
     "1005007539896812": "lodydeals",
     "1005009569642817": "lodydeals",
     "1005013438789813": "lodydeals",
-    "1005012823102793": "lodydeals"
+    "1005012823102793": "lodydeals",
+    "1005012773302941": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14058,7 +14074,8 @@
     "Baseus 20W PD Charger": "lodydeals",
     "Realme Neo 8  12/256GB": "lodydeals",
     "Blackview MEGA 5 AI 8/256GB": "lodydeals",
-    "Anker Nano Smart Display 45W": "lodydeals"
+    "Anker Nano Smart Display 45W": "lodydeals",
+    "Zeblaze Btalk 4 Pro": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
