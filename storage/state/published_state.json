@@ -552,7 +552,9 @@
     "1005013006189646",
     "1005011653777805",
     "1005009292891294",
-    "1005009916144912"
+    "1005009916144912",
+    "1005011626282286",
+    "1005007539896812"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1117,7 +1119,9 @@
     "1005013006189646": 1793566310.8398705,
     "1005011653777805": 1793566315.7447746,
     "1005009292891294": 1793566324.6794934,
-    "1005009916144912": 1793567337.0235388
+    "1005009916144912": 1793567337.0235388,
+    "1005011626282286": 1793567897.1194866,
+    "1005007539896812": 1793567901.942504
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1768,7 +1772,9 @@
     "UGREEN FitBuds Bluetooth 6.0",
     "Ugreen Smart Display 45W",
     "Ugreen Nexode Air 100W",
-    "SMAILWOLF RS7 PAW3311"
+    "SMAILWOLF RS7 PAW3311",
+    "Redmi Buds 6 Active",
+    "Lexar D400 USB3.1 USB-C 128G"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2425,11 +2431,11 @@
     "UGREEN FitBuds Bluetooth 6.0": 1793566324.6794934,
     "Ugreen Smart Display 45W": 1793566329.6306164,
     "Ugreen Nexode Air 100W": 1793566334.1942697,
-    "SMAILWOLF RS7 PAW3311": 1793567337.0235388
+    "SMAILWOLF RS7 PAW3311": 1793567337.0235388,
+    "Redmi Buds 6 Active": 1793567897.1194866,
+    "Lexar D400 USB3.1 USB-C 128G": 1793567901.942504
   },
   "published_post_keys": [
-    "aniscoupons:32696",
-    "lodydeals:45414",
     "lodydeals:45415",
     "bnddeals:50796",
     "bnddeals:50797",
@@ -3427,19 +3433,21 @@
     "lodydeals:45921",
     "lodydeals:45922",
     "lodydeals:45923",
-    "lodydeals:45926"
+    "lodydeals:45926",
+    "lodydeals:45927",
+    "lodydeals:45928"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793567337.0235388,
+  "last_run_time": 1793567901.942504,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45926,
-      "last_check_time": 1793567339.0487123
+      "last_message_id": 45928,
+      "last_check_time": 1793567903.9860637
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3915,7 +3923,9 @@
     "1005013006189646": 415.9,
     "1005011653777805": 23.8,
     "1005009292891294": 20.44,
-    "1005009916144912": 8.02
+    "1005009916144912": 8.02,
+    "1005011626282286": 10.84,
+    "1005007539896812": 7.41
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12700,6 +12710,26 @@
       "price": 8.02,
       "timestamp": 1793567337.0235388,
       "status": "ACTIVE"
+    },
+    "lodydeals:45927": {
+      "channel_msg_id": 1556,
+      "product_id": "1005011626282286",
+      "title": "Redmi Buds 6 Active",
+      "channel": "lodydeals",
+      "source_msg_id": 45927,
+      "price": 10.84,
+      "timestamp": 1793567897.1194866,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45928": {
+      "channel_msg_id": 1557,
+      "product_id": "1005007539896812",
+      "title": "Lexar D400 USB3.1 USB-C 128G",
+      "channel": "lodydeals",
+      "source_msg_id": 45928,
+      "price": 7.41,
+      "timestamp": 1793567901.942504,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12708,17 +12738,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793567340.405918,
+    "last_deal_post_time": 1793567905.887915,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793567711.9463725,
+    "last_sweep_time": 1793567909.6935265,
     "last_sweep_times": {
-      "algeria": 1793567708.193905,
-      "france": 1793567711.9463725
+      "algeria": 1793567905.8690317,
+      "france": 1793567909.6935265
     },
     "last_deal_post_times": {
-      "algeria": 1793567340.405918
+      "algeria": 1793567905.887915
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13288,7 +13318,9 @@
     "1005013006189646": "lodydeals",
     "1005011653777805": "lodydeals",
     "1005009292891294": "lodydeals",
-    "1005009916144912": "lodydeals"
+    "1005009916144912": "lodydeals",
+    "1005011626282286": "lodydeals",
+    "1005007539896812": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -13947,7 +13979,9 @@
     "UGREEN FitBuds Bluetooth 6.0": "lodydeals",
     "Ugreen Smart Display 45W": "lodydeals",
     "Ugreen Nexode Air 100W": "lodydeals",
-    "SMAILWOLF RS7 PAW3311": "lodydeals"
+    "SMAILWOLF RS7 PAW3311": "lodydeals",
+    "Redmi Buds 6 Active": "lodydeals",
+    "Lexar D400 USB3.1 USB-C 128G": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
