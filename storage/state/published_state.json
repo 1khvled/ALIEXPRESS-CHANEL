@@ -563,7 +563,8 @@
     "1005011742851856",
     "1005006304425302",
     "1005010487426245",
-    "1005012865939059"
+    "1005012865939059",
+    "1005007171113381"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -722,7 +723,7 @@
     "1005009689592131": 1793542440.621567,
     "1005006437107166": 1791124852.3122299,
     "1005006895026041": 1791125753.051726,
-    "1005006996329614": 1791126044.0695431,
+    "1005006996329614": 1793573951.3406305,
     "1005008046254742": 1791126049.4061573,
     "1005011987956470": 1791126349.6683438,
     "1005012865709979": 1791135345.3136878,
@@ -1139,7 +1140,8 @@
     "1005011742851856": 1793572108.9610763,
     "1005006304425302": 1793572474.8860087,
     "1005010487426245": 1793573558.2913802,
-    "1005012865939059": 1793573742.8007863
+    "1005012865939059": 1793573742.8007863,
+    "1005007171113381": 1793573945.0580306
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1804,7 +1806,9 @@
     "MACHENIKE G1 Gaming",
     "Essager 45W Retractable Car",
     "Essager 240W USB Type C To USB C Cable 100W PD 3.1 Fast Charging Charger",
-    "SMAILWOLF RS8 1000Hz"
+    "SMAILWOLF RS8 1000Hz",
+    "HILDA 2 Lines Laser",
+    "KODAK USB 2.0 Flash Drive"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2475,11 +2479,11 @@
     "MACHENIKE G1 Gaming": 1793571747.1298387,
     "Essager 45W Retractable Car": 1793572108.9610763,
     "Essager 240W USB Type C To USB C Cable 100W PD 3.1 Fast Charging Charger": 1793572474.8860087,
-    "SMAILWOLF RS8 1000Hz": 1793573558.2913802
+    "SMAILWOLF RS8 1000Hz": 1793573558.2913802,
+    "HILDA 2 Lines Laser": 1793573945.0580306,
+    "KODAK USB 2.0 Flash Drive": 1793573951.3406305
   },
   "published_post_keys": [
-    "bnddeals:50800",
-    "bnddeals:50801",
     "aniscoupons:32704",
     "bnddeals:50802",
     "aniscoupons:32705",
@@ -3477,19 +3481,21 @@
     "lodydeals:45939",
     "lodydeals:45940",
     "lodydeals:45941",
-    "lodydeals:45942"
+    "lodydeals:45942",
+    "lodydeals:45943",
+    "lodydeals:45944"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793573742.8007863,
+  "last_run_time": 1793573951.3406305,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45942,
-      "last_check_time": 1793573744.8437204
+      "last_message_id": 45944,
+      "last_check_time": 1793573953.382517
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3649,7 +3655,7 @@
     "1005009689592131": 112.75,
     "1005006437107166": 1.0,
     "1005006895026041": 1.0,
-    "1005006996329614": 1.0,
+    "1005006996329614": 3.55,
     "1005008046254742": 1.0,
     "1005011987956470": 1.0,
     "1005012865709979": 1.0,
@@ -3976,7 +3982,8 @@
     "1005011742851856": 4.85,
     "1005006304425302": 2.88,
     "1005010487426245": 7.74,
-    "1005012865939059": 14.89
+    "1005012865939059": 14.89,
+    "1005007171113381": 8.44
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12921,6 +12928,26 @@
       "price": 14.89,
       "timestamp": 1793573742.8007863,
       "status": "ACTIVE"
+    },
+    "lodydeals:45943": {
+      "channel_msg_id": 1572,
+      "product_id": "1005007171113381",
+      "title": "HILDA 2 Lines Laser",
+      "channel": "lodydeals",
+      "source_msg_id": 45943,
+      "price": 8.44,
+      "timestamp": 1793573945.0580306,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45944": {
+      "channel_msg_id": 1573,
+      "product_id": "1005006996329614",
+      "title": "KODAK USB 2.0 Flash Drive",
+      "channel": "lodydeals",
+      "source_msg_id": 45944,
+      "price": 3.55,
+      "timestamp": 1793573951.3406305,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12929,17 +12956,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793573746.3785708,
+    "last_deal_post_time": 1793573955.0248227,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793573749.963771,
+    "last_sweep_time": 1793573959.2427459,
     "last_sweep_times": {
-      "algeria": 1793573746.3592446,
-      "france": 1793573749.963771
+      "algeria": 1793573955.0045311,
+      "france": 1793573959.2427459
     },
     "last_deal_post_times": {
-      "algeria": 1793573746.3785708
+      "algeria": 1793573955.0248227
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13099,7 +13126,7 @@
     "1005009689592131": "lodydeals",
     "1005006437107166": "couponsglobal",
     "1005006895026041": "couponsglobal",
-    "1005006996329614": "couponsglobal",
+    "1005006996329614": "lodydeals",
     "1005008046254742": "couponsglobal",
     "1005011987956470": "couponsglobal",
     "1005012865709979": "couponsglobal",
@@ -13520,7 +13547,8 @@
     "1005011742851856": "lodydeals",
     "1005006304425302": "lodydeals",
     "1005010487426245": "lodydeals",
-    "1005012865939059": "lodydeals"
+    "1005012865939059": "lodydeals",
+    "1005007171113381": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14193,7 +14221,9 @@
     "MACHENIKE G1 Gaming": "lodydeals",
     "Essager 45W Retractable Car": "lodydeals",
     "Essager 240W USB Type C To USB C Cable 100W PD 3.1 Fast Charging Charger": "lodydeals",
-    "SMAILWOLF RS8 1000Hz": "lodydeals"
+    "SMAILWOLF RS8 1000Hz": "lodydeals",
+    "HILDA 2 Lines Laser": "lodydeals",
+    "KODAK USB 2.0 Flash Drive": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
