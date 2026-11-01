@@ -562,7 +562,8 @@
     "1005008430147176",
     "1005011742851856",
     "1005006304425302",
-    "1005010487426245"
+    "1005010487426245",
+    "1005012865939059"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1137,7 +1138,8 @@
     "1005008430147176": 1793571747.1298387,
     "1005011742851856": 1793572108.9610763,
     "1005006304425302": 1793572474.8860087,
-    "1005010487426245": 1793573558.2913802
+    "1005010487426245": 1793573558.2913802,
+    "1005012865939059": 1793573742.8007863
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1901,7 +1903,7 @@
     "Attack Shark X1": 1790972445.6591878,
     "KUULAA USB C Cable": 1790973051.970508,
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router": 1790974856.4783835,
-    "HAYLOU Watch Faro": 1791014763.6830645,
+    "HAYLOU Watch Faro": 1793573742.8007863,
     "HAYLOU S30": 1790976351.072879,
     "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise": 1790976654.120254,
     "VIVO Y600 Pro 8/128GB": 1792157876.0860639,
@@ -2476,7 +2478,6 @@
     "SMAILWOLF RS8 1000Hz": 1793573558.2913802
   },
   "published_post_keys": [
-    "aniscoupons:32703",
     "bnddeals:50800",
     "bnddeals:50801",
     "aniscoupons:32704",
@@ -3475,19 +3476,20 @@
     "lodydeals:45938",
     "lodydeals:45939",
     "lodydeals:45940",
-    "lodydeals:45941"
+    "lodydeals:45941",
+    "lodydeals:45942"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793573558.2913802,
+  "last_run_time": 1793573742.8007863,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45941,
-      "last_check_time": 1793573560.32007
+      "last_message_id": 45942,
+      "last_check_time": 1793573744.8437204
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3973,7 +3975,8 @@
     "1005008430147176": 17.01,
     "1005011742851856": 4.85,
     "1005006304425302": 2.88,
-    "1005010487426245": 7.74
+    "1005010487426245": 7.74,
+    "1005012865939059": 14.89
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12908,6 +12911,16 @@
       "price": 7.74,
       "timestamp": 1793573558.2913802,
       "status": "ACTIVE"
+    },
+    "lodydeals:45942": {
+      "channel_msg_id": 1571,
+      "product_id": "1005012865939059",
+      "title": "HAYLOU Watch Faro",
+      "channel": "lodydeals",
+      "source_msg_id": 45942,
+      "price": 14.89,
+      "timestamp": 1793573742.8007863,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12916,17 +12929,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793573561.7318218,
+    "last_deal_post_time": 1793573746.3785708,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793573564.869626,
+    "last_sweep_time": 1793573749.963771,
     "last_sweep_times": {
-      "algeria": 1793573561.7192094,
-      "france": 1793573564.869626
+      "algeria": 1793573746.3592446,
+      "france": 1793573749.963771
     },
     "last_deal_post_times": {
-      "algeria": 1793573561.7318218
+      "algeria": 1793573746.3785708
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13506,7 +13519,8 @@
     "1005008430147176": "lodydeals",
     "1005011742851856": "lodydeals",
     "1005006304425302": "lodydeals",
-    "1005010487426245": "lodydeals"
+    "1005010487426245": "lodydeals",
+    "1005012865939059": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -13581,7 +13595,7 @@
     "KUULAA USB C Cable": "lodydeals",
     "Honor Watch X5i": "aniscoupons",
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router": "bnddeals",
-    "HAYLOU Watch Faro": "aniscoupons",
+    "HAYLOU Watch Faro": "lodydeals",
     "HAYLOU S30": "aniscoupons",
     "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise": "aniscoupons",
     "VIVO Y600 Pro 8/128GB": "lodydeals",
