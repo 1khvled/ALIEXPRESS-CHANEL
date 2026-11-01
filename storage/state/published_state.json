@@ -886,7 +886,7 @@
     "9998889908": 1793229908.2507865,
     "1005012339196141": 1793555097.6969874,
     "1005012472631754": 1793467108.5532427,
-    "1005013039644752": 1793448649.434771,
+    "1005013039644752": 1793556742.3836262,
     "1005013479436053": 1793380394.5736995,
     "1005012431631514": 1793270716.9132679,
     "1005009338640941": 1793467348.0722725,
@@ -1740,7 +1740,8 @@
     "ASRock B650 PRO RS",
     "Honor Power 2 5G 12/256GB",
     "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2",
-    "HONOR Pad X8b Wifi 4/128GB"
+    "HONOR Pad X8b Wifi 4/128GB",
+    "VIVO IQOO Z11s 8/128"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2383,10 +2384,10 @@
     "ASRock B650 PRO RS": 1793554764.2266893,
     "Honor Power 2 5G 12/256GB": 1793554773.9452004,
     "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2": 1793556560.1844745,
-    "HONOR Pad X8b Wifi 4/128GB": 1793556565.207214
+    "HONOR Pad X8b Wifi 4/128GB": 1793556565.207214,
+    "VIVO IQOO Z11s 8/128": 1793556742.3836262
   },
   "published_post_keys": [
-    "lodydeals:45410",
     "aniscoupons:32686",
     "aniscoupons:32687",
     "aniscoupons:32688",
@@ -3385,19 +3386,20 @@
     "lodydeals:45884",
     "lodydeals:45891",
     "lodydeals:45893",
-    "lodydeals:45894"
+    "lodydeals:45894",
+    "lodydeals:45895"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793556565.207214,
+  "last_run_time": 1793556742.3836262,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45894,
-      "last_check_time": 1793556567.243998
+      "last_message_id": 45895,
+      "last_check_time": 1793556744.4415622
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3602,7 +3604,7 @@
     "1005011557896041": 243.58,
     "1005011754993234": 79.4,
     "1005011735727412": 26.6,
-    "1005013039644752": 267.6,
+    "1005013039644752": 265.18,
     "1005007916078341": 48.91,
     "1005006506862816": 11.86,
     "1005008072923842": 2.21,
@@ -12481,6 +12483,16 @@
       "price": 175.8,
       "timestamp": 1793556565.207214,
       "status": "ACTIVE"
+    },
+    "lodydeals:45895": {
+      "channel_msg_id": 1531,
+      "product_id": "1005013039644752",
+      "title": "VIVO IQOO Z11s 8/128",
+      "channel": "lodydeals",
+      "source_msg_id": 45895,
+      "price": 265.18,
+      "timestamp": 1793556742.3836262,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12489,17 +12501,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793556569.0891461,
+    "last_deal_post_time": 1793556746.20894,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793556573.1418364,
+    "last_sweep_time": 1793556750.692461,
     "last_sweep_times": {
-      "algeria": 1793556569.072594,
-      "france": 1793556573.1418364
+      "algeria": 1793556746.1906543,
+      "france": 1793556750.692461
     },
     "last_deal_post_times": {
-      "algeria": 1793556569.0891461
+      "algeria": 1793556746.20894
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -12728,7 +12740,7 @@
     "1005011557896041": "lodydeals",
     "1005011754993234": "zedstoreonline",
     "1005011735727412": "bnddeals",
-    "1005013039644752": "aniscoupons",
+    "1005013039644752": "lodydeals",
     "1005007916078341": "lodydeals",
     "1005006506862816": "couponsglobal",
     "1005008072923842": "pcgamingpart",
@@ -13707,7 +13719,8 @@
     "ASRock B650 PRO RS": "lodydeals",
     "Honor Power 2 5G 12/256GB": "lodydeals",
     "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2": "lodydeals",
-    "HONOR Pad X8b Wifi 4/128GB": "lodydeals"
+    "HONOR Pad X8b Wifi 4/128GB": "lodydeals",
+    "VIVO IQOO Z11s 8/128": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
