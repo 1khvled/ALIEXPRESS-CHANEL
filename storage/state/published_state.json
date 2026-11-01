@@ -504,7 +504,7 @@
     "1005012881256093": 1791941229.2882626,
     "1005009118633225": 1793399449.9599383,
     "1005012143831265": 1791012345.6086447,
-    "1005008852027824": 1793399519.0209813,
+    "1005008852027824": 1793500780.684989,
     "9998888981": 1790888981.6873999,
     "1005005217734986": 1791104047.0967803,
     "1005010062128237": 1790937566.337433,
@@ -620,7 +620,7 @@
     "1005006367419820": 1791056153.3979695,
     "1005013046831062": 1791056447.2532988,
     "1005006974721332": 1791056453.5992196,
-    "1005010266413614": 1793399585.2177644,
+    "1005010266413614": 1793500791.1712294,
     "1005009497821240": 1791117948.6585228,
     "1005011925142821": 1793467113.354114,
     "9998883864": 1791063864.5866926,
@@ -762,7 +762,7 @@
     "1005010369693975": 1792166319.9887776,
     "1005006442452857": 1792166326.0335298,
     "9998886462": 1792166462.200491,
-    "1005009948598802": 1793399565.5626073,
+    "1005009948598802": 1793500786.1935658,
     "1005012751475098": 1792172127.0373228,
     "9998882185": 1792172185.4508982,
     "999888981": 1792180981.108591,
@@ -881,7 +881,7 @@
     "1005010385472500": 1793448762.165183,
     "1005011779814585": 1793441292.8773124,
     "1005013090910574": 1793362002.5141566,
-    "1005012382148199": 1793467342.9912982,
+    "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793362064.1795852,
     "1005012910719451": 1793380262.1330528,
     "1005006307798542": 1793467165.446982,
@@ -1577,11 +1577,11 @@
     "OnePlus Turbo 6X Pro 8/128GB": 1791941215.3821247,
     "من منتجات الأكثر طلبا": 1790943959.7454133,
     "النسخة العالمية": 1790943965.6572914,
-    "HONOR 600 PRO (12/256)": 1793467342.9912982,
+    "HONOR 600 PRO (12/256)": 1793500800.6950834,
     "POCO C71 (3/64)": 1790947574.20351,
     "XIAOMI PAD7 (12/256)": 1791023149.808202,
     "REALME 14 pro (12/256)": 1791129948.3620403,
-    "HONOR X9D (12/256)": 1793279089.0185478,
+    "HONOR X9D (12/256)": 1793500791.1712294,
     "Honor 400  Smart  (6/128)": 1791042354.706192,
     "New G6 Wireless Controller Comes With a Dual Hall Joystick and a Back": 1790949354.0364344,
     "Powerful Violent Fan 150000RPM": 1790949652.480052,
@@ -1598,7 +1598,7 @@
     "WALRAM Sata SSD 512GB": 1790967962.6418507,
     "Lenovo GM2 Pro TWS": 1790969442.7810974,
     "ASROCK B850M X WiFi": 1790970941.2570727,
-    "REALME 15 5G (12/256)": 1793275816.741406,
+    "REALME 15 5G (12/256)": 1793500786.1935658,
     "Lenovo XT88 TWS": 1790971842.421131,
     "SMAILWOLF M3 PAW3311": 1790971850.2217886,
     "UGREEN 4K 8MP 2Mics Webcam": 1790972149.2892344,
@@ -1624,7 +1624,7 @@
     "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": 1791015953.484505,
     "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz": 1791017145.537471,
     "CUSU 512GB": 1792158003.7032418,
-    "REALME P3 5G (8/256)": 1792172115.0945282,
+    "REALME P3 5G (8/256)": 1793500780.684989,
     "Toocki USB-C 60W Cable": 1791021345.213176,
     "Toocki 2.4A Lightning Cable": 1791021850.86469,
     "OnePlus Pad Go 2 8/128GB": 1791022849.763491,
@@ -2057,10 +2057,6 @@
     "IQOO Z11 Turbo": 1793490111.0047178
   },
   "published_post_keys": [
-    "ecksdeal:5831",
-    "ecksdeal:5832",
-    "ecksdeal:5833",
-    "ecksdeal:5834",
     "ecksdeal:5835",
     "ecksdeal:5836",
     "bnddeals:50768",
@@ -3056,27 +3052,31 @@
     "zedstoreonline:38923",
     "zedstoreonline:38922",
     "zedstoreonline:38918",
-    "aniscoupons:33335"
+    "aniscoupons:33335",
+    "megaphonna:8694",
+    "megaphonna:8692",
+    "megaphonna:8691",
+    "megaphonna:8689"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793490111.0047178,
+  "last_run_time": 1793500800.6950834,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33339,
-      "last_check_time": 1793490113.0636792
+      "last_message_id": 33340,
+      "last_check_time": 1793500773.5892754
     },
     "ecksdeal": {
       "last_message_id": 5923,
-      "last_check_time": 1793490115.7026393
+      "last_check_time": 1793500774.0076544
     },
     "lodydeals": {
       "last_message_id": 45758,
-      "last_check_time": 1793490070.6921213
+      "last_check_time": 1793500772.5299947
     },
     "bnddeals": {
-      "last_message_id": 50968,
-      "last_check_time": 1793478800.5533695
+      "last_message_id": 50969,
+      "last_check_time": 1793500776.677949
     },
     "test_channel": {
       "last_message_id": 1793283032,
@@ -3088,11 +3088,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38932,
-      "last_check_time": 1793490104.064609
+      "last_check_time": 1793500773.0006032
     },
     "megaphonna": {
-      "last_message_id": 8685,
-      "last_check_time": 1793478804.0634
+      "last_message_id": 8694,
+      "last_check_time": 1793500805.781245
     },
     "couponsglobal": {
       "last_message_id": 48880,
@@ -3129,7 +3129,7 @@
     "1005012143831265": 281.9,
     "1005007458827229": 22.1,
     "1005010453516983": 211.6,
-    "1005008852027824": 180.6,
+    "1005008852027824": 180.0,
     "1005012499451512": 260.0,
     "1005010129356058": 294.0,
     "3256809790988797": 92.8,
@@ -3232,7 +3232,7 @@
     "1005006367419820": 5.89,
     "1005013046831062": 5.29,
     "1005006974721332": 3.09,
-    "1005010266413614": 276.33,
+    "1005010266413614": 276.0,
     "1005009497821240": 24.73,
     "1005011925142821": 246.0,
     "1005010536089199": 36.45,
@@ -10878,6 +10878,46 @@
       "price": 386.6,
       "timestamp": 1793490111.0047178,
       "status": "ACTIVE"
+    },
+    "megaphonna:8694": {
+      "channel_msg_id": 1400,
+      "product_id": "1005008852027824",
+      "title": "REALME P3 5G (8/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8694,
+      "price": 180.0,
+      "timestamp": 1793500780.684989,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8692": {
+      "channel_msg_id": 1401,
+      "product_id": "1005009948598802",
+      "title": "REALME 15 5G (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8692,
+      "price": 206.0,
+      "timestamp": 1793500786.1935658,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8691": {
+      "channel_msg_id": 1402,
+      "product_id": "1005010266413614",
+      "title": "HONOR X9D (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8691,
+      "price": 276.0,
+      "timestamp": 1793500791.1712294,
+      "status": "ACTIVE"
+    },
+    "megaphonna:8689": {
+      "channel_msg_id": 1403,
+      "product_id": "1005012382148199",
+      "title": "HONOR 600 PRO (12/256)",
+      "channel": "megaphonna",
+      "source_msg_id": 8689,
+      "price": 469.0,
+      "timestamp": 1793500800.6950834,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -10886,17 +10926,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793490119.7421498,
+    "last_deal_post_time": 1793500805.8004646,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793490133.5569515,
+    "last_sweep_time": 1793500818.1266556,
     "last_sweep_times": {
-      "algeria": 1793490119.7249072,
-      "france": 1793490133.5569515
+      "algeria": 1793500805.7910109,
+      "france": 1793500818.1266556
     },
     "last_deal_post_times": {
-      "algeria": 1793490119.7421498
+      "algeria": 1793500805.8004646
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -11035,7 +11075,7 @@
     "1005006367419820": "lodydeals",
     "1005013046831062": "lodydeals",
     "1005006974721332": "lodydeals",
-    "1005010266413614": "aniscoupons",
+    "1005010266413614": "megaphonna",
     "1005009497821240": "lodydeals",
     "1005011925142821": "zedstoreonline",
     "9998883864": "test_channel",
@@ -11076,7 +11116,7 @@
     "1005007458827229": "zedstoreonline",
     "1005012899224314": "couponsglobal",
     "1005007331316456": "zedstoreonline",
-    "1005008852027824": "aniscoupons",
+    "1005008852027824": "megaphonna",
     "1005012312990781": "lodydeals",
     "1005007822635375": "ecksdeal",
     "1005013096683979": "ecksdeal",
@@ -11087,7 +11127,7 @@
     "1005010056083952": "aniscoupons",
     "1005012193220695": "lodydeals",
     "1005012823469739": "aniscoupons",
-    "1005009948598802": "aniscoupons",
+    "1005009948598802": "megaphonna",
     "1005012293918683": "ecksdeal",
     "1005012651158292": "lodydeals",
     "1005010289640412": "ecksdeal",
@@ -13336,7 +13376,17 @@
     "aniscoupons:33334",
     "ecksdeal:5923",
     "ecksdeal:5922",
-    "ecksdeal:5921"
+    "ecksdeal:5921",
+    "aniscoupons:33340",
+    "bnddeals:50955",
+    "bnddeals:50951",
+    "bnddeals:50950",
+    "bnddeals:50969",
+    "megaphonna:8693",
+    "megaphonna:8690",
+    "megaphonna:8688",
+    "megaphonna:8687",
+    "megaphonna:8686"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
