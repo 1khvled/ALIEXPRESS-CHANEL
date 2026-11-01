@@ -1013,7 +1013,7 @@
     "1005010074161953": 1793543659.5887568,
     "1005010498953493": 1793448734.886029,
     "1005010535660141": 1793448772.3918815,
-    "1005010472570391": 1793448777.0131965,
+    "1005010472570391": 1793571013.3288968,
     "1005012864293264": 1793570287.0210865,
     "1005010384976635": 1793448786.1863484,
     "1005012341203600": 1793448820.6517296,
@@ -1788,7 +1788,8 @@
     "Realme Neo 8  12/256GB",
     "Blackview MEGA 5 AI 8/256GB",
     "Anker Nano Smart Display 45W",
-    "Zeblaze Btalk 4 Pro"
+    "Zeblaze Btalk 4 Pro",
+    "Anker Soundcore 2"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2453,10 +2454,10 @@
     "Realme Neo 8  12/256GB": 1793569553.2022223,
     "Blackview MEGA 5 AI 8/256GB": 1793569904.419889,
     "Anker Nano Smart Display 45W": 1793570287.0210865,
-    "Zeblaze Btalk 4 Pro": 1793570640.1582527
+    "Zeblaze Btalk 4 Pro": 1793570640.1582527,
+    "Anker Soundcore 2": 1793571013.3288968
   },
   "published_post_keys": [
-    "lodydeals:45416",
     "aniscoupons:32699",
     "bnddeals:50798",
     "aniscoupons:32700",
@@ -3455,19 +3456,20 @@
     "lodydeals:45931",
     "lodydeals:45932",
     "lodydeals:45933",
-    "lodydeals:45934"
+    "lodydeals:45934",
+    "lodydeals:45935"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793570640.1582527,
+  "last_run_time": 1793571013.3288968,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45934,
-      "last_check_time": 1793570642.1889591
+      "last_message_id": 45935,
+      "last_check_time": 1793571015.3712425
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3841,7 +3843,7 @@
     "1005010074161953": 130.08,
     "1005010498953493": 51.7,
     "1005010535660141": 21.15,
-    "1005010472570391": 26.0,
+    "1005010472570391": 25.77,
     "1005012864293264": 28.96,
     "1005010384976635": 30.55,
     "1005012341203600": 478.0,
@@ -12814,6 +12816,16 @@
       "price": 20.78,
       "timestamp": 1793570640.1582527,
       "status": "ACTIVE"
+    },
+    "lodydeals:45935": {
+      "channel_msg_id": 1564,
+      "product_id": "1005010472570391",
+      "title": "Anker Soundcore 2",
+      "channel": "lodydeals",
+      "source_msg_id": 45935,
+      "price": 25.77,
+      "timestamp": 1793571013.3288968,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12822,17 +12834,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793570643.6244385,
+    "last_deal_post_time": 1793571017.197937,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793570812.6832018,
+    "last_sweep_time": 1793571021.395538,
     "last_sweep_times": {
-      "algeria": 1793570808.4266758,
-      "france": 1793570812.6832018
+      "algeria": 1793571017.178996,
+      "france": 1793571021.395538
     },
     "last_deal_post_times": {
-      "algeria": 1793570643.6244385
+      "algeria": 1793571017.197937
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13293,7 +13305,7 @@
     "1005010074161953": "lodydeals",
     "1005010498953493": "bnddeals",
     "1005010535660141": "bnddeals",
-    "1005010472570391": "bnddeals",
+    "1005010472570391": "lodydeals",
     "1005012864293264": "lodydeals",
     "1005010384976635": "bnddeals",
     "1005012341203600": "megaphonna",
@@ -14075,7 +14087,8 @@
     "Realme Neo 8  12/256GB": "lodydeals",
     "Blackview MEGA 5 AI 8/256GB": "lodydeals",
     "Anker Nano Smart Display 45W": "lodydeals",
-    "Zeblaze Btalk 4 Pro": "lodydeals"
+    "Zeblaze Btalk 4 Pro": "lodydeals",
+    "Anker Soundcore 2": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
