@@ -517,7 +517,14 @@
     "1005008605565544",
     "1005009508910625",
     "1005010114569881",
-    "1005013053122560"
+    "1005013053122560",
+    "1005012322822595",
+    "1005012524603100",
+    "1005009662812027",
+    "1005005975560350",
+    "1005012922578845",
+    "1005011752891197",
+    "1005008689880751"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -902,7 +909,7 @@
     "1005010355409000": 1793362071.3460114,
     "1005013438245033": 1793299536.9978156,
     "1005008986635164": 1793314892.9200466,
-    "1005008327980403": 1793467258.969082,
+    "1005008327980403": 1793544006.9922435,
     "1005012838686691": 1793384191.3385255,
     "1005007966795709": 1793314939.6901202,
     "1005007760080474": 1793314944.416167,
@@ -999,7 +1006,7 @@
     "COUPONS_11.11 Global Shopping Festival Warm-Up": 1793478717.5923967,
     "1005008518280704": 1793542349.2109704,
     "1005010527736444": 1793478769.6023057,
-    "1005013450996845": 1793478774.2399445,
+    "1005013450996845": 1793543981.0397952,
     "1005012171521680": 1793543596.9849713,
     "1005013144753309": 1793478785.5587242,
     "1005012061152213": 1793490079.2945042,
@@ -1047,7 +1054,14 @@
     "1005008605565544": 1793543812.9442995,
     "1005009508910625": 1793543817.982839,
     "1005010114569881": 1793543824.1762173,
-    "1005013053122560": 1793543835.4812393
+    "1005013053122560": 1793543835.4812393,
+    "1005012322822595": 1793543961.1645148,
+    "1005012524603100": 1793543976.0151808,
+    "1005009662812027": 1793543986.1929188,
+    "1005005975560350": 1793543992.7069333,
+    "1005012922578845": 1793544001.8628821,
+    "1005011752891197": 1793544011.7179348,
+    "1005008689880751": 1793544016.7486506
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1654,7 +1668,15 @@
     "سماعات اذن فخمة Truthear x Crinacle Zero BLUE2 IEM'S",
     "سماعات لاسلكية Mchose V9 Pro 7.1 Wireless",
     "ماوس لاسلكي Attack Shark X3 Wireless",
-    "ماوس لاسلكي فخم Scyrox V6S Wireless 8K"
+    "ماوس لاسلكي فخم Scyrox V6S Wireless 8K",
+    "Realme Pad 3  8/256GB",
+    "Lenovo Xiaoxin Pro 13 8/128GB",
+    "Lenovo Xiaoxin Pad Pro 2025",
+    "Magcubic HY300 Max 400ANSI",
+    "FIFINE H9 7.1 Surround Gaming",
+    "Realme 15 5G 12/256GB",
+    "Redmi 17 4G 4/128GB",
+    "ASROCK B550AM GAMING"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2047,7 +2069,7 @@
     "نسخة صينية": 1793299536.9978156,
     "جديد": 1793299548.5548651,
     "ASRock B850M Riptide WiFi": 1793314892.9200466,
-    "KOOTION M.2 1TB 7200Mbs": 1793467258.969082,
+    "KOOTION M.2 1TB 7200Mbs": 1793544006.9922435,
     "MSI X670E GAMING PLUS WIFI AMD X670 Motherboard AM5 used": 1793314915.007305,
     "BLACKVIEW WAVE 7C (4/64)": 1793314939.6901202,
     "BLACKVIEW WAVE 10C (4/32)": 1793314944.416167,
@@ -2267,18 +2289,17 @@
     "سماعات اذن فخمة Truthear x Crinacle Zero BLUE2 IEM'S": 1793543812.9442995,
     "سماعات لاسلكية Mchose V9 Pro 7.1 Wireless": 1793543817.982839,
     "ماوس لاسلكي Attack Shark X3 Wireless": 1793543824.1762173,
-    "ماوس لاسلكي فخم Scyrox V6S Wireless 8K": 1793543835.4812393
+    "ماوس لاسلكي فخم Scyrox V6S Wireless 8K": 1793543835.4812393,
+    "Realme Pad 3  8/256GB": 1793543961.1645148,
+    "Lenovo Xiaoxin Pro 13 8/128GB": 1793543976.0151808,
+    "Lenovo Xiaoxin Pad Pro 2025": 1793543981.0397952,
+    "Magcubic HY300 Max 400ANSI": 1793543986.1929188,
+    "FIFINE H9 7.1 Surround Gaming": 1793543992.7069333,
+    "Realme 15 5G 12/256GB": 1793544001.8628821,
+    "Redmi 17 4G 4/128GB": 1793544011.7179348,
+    "ASROCK B550AM GAMING": 1793544016.7486506
   },
   "published_post_keys": [
-    "aniscoupons:32675",
-    "aniscoupons:32676",
-    "aniscoupons:32677",
-    "aniscoupons:32678",
-    "aniscoupons:32679",
-    "test_channel:1790960989",
-    "test_channel:1790961037",
-    "aniscoupons:32661",
-    "aniscoupons:32663",
     "aniscoupons:32664",
     "aniscoupons:32667",
     "aniscoupons:32674",
@@ -3269,19 +3290,28 @@
     "ecksdeal:5967",
     "ecksdeal:5969",
     "ecksdeal:5971",
-    "ecksdeal:5972"
+    "ecksdeal:5972",
+    "lodydeals:45860",
+    "lodydeals:45865",
+    "lodydeals:45866",
+    "lodydeals:45867",
+    "lodydeals:45870",
+    "lodydeals:45872",
+    "lodydeals:45873",
+    "lodydeals:45874",
+    "lodydeals:45876"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793543835.4812393,
+  "last_run_time": 1793544016.7486506,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5972,
       "last_check_time": 1793543837.5068462
     },
     "lodydeals": {
-      "last_message_id": 45859,
-      "last_check_time": 1793543792.5395744
+      "last_message_id": 45876,
+      "last_check_time": 1793544018.7776399
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3359,7 +3389,7 @@
     "1005012407874415": 480.4,
     "1005013152491360": 168.69,
     "1005012925826589": 187.0,
-    "1005012922578845": 231.9,
+    "1005012922578845": 213.77,
     "1005012865117890": 231.9,
     "1005010428573334": 294.0,
     "1005013146524028": 162.4,
@@ -3679,7 +3709,7 @@
     "1005013045114640": 94.7,
     "1005008518280704": 98.52,
     "1005010527736444": 298.0,
-    "1005013450996845": 212.0,
+    "1005013450996845": 212.09,
     "1005012171521680": 287.26,
     "1005013144753309": 98.9,
     "1005012061152213": 58.3,
@@ -3723,7 +3753,13 @@
     "1005008605565544": 58.59,
     "1005009508910625": 46.26,
     "1005010114569881": 23.08,
-    "1005013053122560": 53.59
+    "1005013053122560": 53.59,
+    "1005012322822595": 266.19,
+    "1005012524603100": 283.59,
+    "1005009662812027": 76.74,
+    "1005005975560350": 34.9,
+    "1005011752891197": 119.3,
+    "1005008689880751": 76.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -11978,6 +12014,96 @@
       "price": 53.59,
       "timestamp": 1793543835.4812393,
       "status": "ACTIVE"
+    },
+    "lodydeals:45860": {
+      "channel_msg_id": 1495,
+      "product_id": "1005012322822595",
+      "title": "Realme Pad 3  8/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45860,
+      "price": 266.19,
+      "timestamp": 1793543961.1645148,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45865": {
+      "channel_msg_id": 1496,
+      "product_id": "1005012524603100",
+      "title": "Lenovo Xiaoxin Pro 13 8/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45865,
+      "price": 283.59,
+      "timestamp": 1793543976.0151808,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45866": {
+      "channel_msg_id": 1497,
+      "product_id": "1005013450996845",
+      "title": "Lenovo Xiaoxin Pad Pro 2025",
+      "channel": "lodydeals",
+      "source_msg_id": 45866,
+      "price": 212.09,
+      "timestamp": 1793543981.0397952,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45867": {
+      "channel_msg_id": 1498,
+      "product_id": "1005009662812027",
+      "title": "Magcubic HY300 Max 400ANSI",
+      "channel": "lodydeals",
+      "source_msg_id": 45867,
+      "price": 76.74,
+      "timestamp": 1793543986.1929188,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45870": {
+      "channel_msg_id": 1499,
+      "product_id": "1005005975560350",
+      "title": "FIFINE H9 7.1 Surround Gaming",
+      "channel": "lodydeals",
+      "source_msg_id": 45870,
+      "price": 34.9,
+      "timestamp": 1793543992.7069333,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45872": {
+      "channel_msg_id": 1500,
+      "product_id": "1005012922578845",
+      "title": "Realme 15 5G 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45872,
+      "price": 213.77,
+      "timestamp": 1793544001.8628821,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45873": {
+      "channel_msg_id": 1501,
+      "product_id": "1005008327980403",
+      "title": "KOOTION M.2 1TB 7200Mbs",
+      "channel": "lodydeals",
+      "source_msg_id": 45873,
+      "price": 142.86,
+      "timestamp": 1793544006.9922435,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45874": {
+      "channel_msg_id": 1502,
+      "product_id": "1005011752891197",
+      "title": "Redmi 17 4G 4/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45874,
+      "price": 119.3,
+      "timestamp": 1793544011.7179348,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45876": {
+      "channel_msg_id": 1503,
+      "product_id": "1005008689880751",
+      "title": "ASROCK B550AM GAMING",
+      "channel": "lodydeals",
+      "source_msg_id": 45876,
+      "price": 76.5,
+      "timestamp": 1793544016.7486506,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -11986,17 +12112,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793543837.53187,
+    "last_deal_post_time": 1793544020.2290995,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793543850.8172507,
+    "last_sweep_time": 1793544030.3525245,
     "last_sweep_times": {
-      "algeria": 1793543837.5209858,
-      "france": 1793543850.8172507
+      "algeria": 1793544020.218327,
+      "france": 1793544030.3525245
     },
     "last_deal_post_times": {
-      "algeria": 1793543837.53187
+      "algeria": 1793544020.2290995
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -12388,7 +12514,7 @@
     "1005010355409000": "megaphonna",
     "1005013438245033": "megaphonna",
     "1005008986635164": "aniscoupons",
-    "1005008327980403": "bnddeals",
+    "1005008327980403": "lodydeals",
     "1005012838686691": "lodydeals",
     "1005007966795709": "megaphonna",
     "1005011857340568": "megaphonna",
@@ -12482,7 +12608,7 @@
     "COUPONS_d131dda7a0e3": "lodydeals",
     "1005008518280704": "lodydeals",
     "1005010527736444": "zedstoreonline",
-    "1005013450996845": "zedstoreonline",
+    "1005013450996845": "lodydeals",
     "1005012171521680": "lodydeals",
     "1005013144753309": "zedstoreonline",
     "1005012061152213": "zedstoreonline",
@@ -12532,7 +12658,13 @@
     "1005008605565544": "ecksdeal",
     "1005009508910625": "ecksdeal",
     "1005010114569881": "ecksdeal",
-    "1005013053122560": "ecksdeal"
+    "1005013053122560": "ecksdeal",
+    "1005012322822595": "lodydeals",
+    "1005012524603100": "lodydeals",
+    "1005009662812027": "lodydeals",
+    "1005005975560350": "lodydeals",
+    "1005011752891197": "lodydeals",
+    "1005008689880751": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -12928,7 +13060,7 @@
     "نسخة صينية": "megaphonna",
     "جديد": "megaphonna",
     "ASRock B850M Riptide WiFi": "aniscoupons",
-    "KOOTION M.2 1TB 7200Mbs": "bnddeals",
+    "KOOTION M.2 1TB 7200Mbs": "lodydeals",
     "MSI X670E GAMING PLUS WIFI AMD X670 Motherboard AM5 used": "pcgamingpart",
     "BLACKVIEW WAVE 7C (4/64)": "megaphonna",
     "BLACKVIEW WAVE 10C (4/32)": "megaphonna",
@@ -13148,7 +13280,14 @@
     "سماعات اذن فخمة Truthear x Crinacle Zero BLUE2 IEM'S": "ecksdeal",
     "سماعات لاسلكية Mchose V9 Pro 7.1 Wireless": "ecksdeal",
     "ماوس لاسلكي Attack Shark X3 Wireless": "ecksdeal",
-    "ماوس لاسلكي فخم Scyrox V6S Wireless 8K": "ecksdeal"
+    "ماوس لاسلكي فخم Scyrox V6S Wireless 8K": "ecksdeal",
+    "Realme Pad 3  8/256GB": "lodydeals",
+    "Lenovo Xiaoxin Pro 13 8/128GB": "lodydeals",
+    "Lenovo Xiaoxin Pad Pro 2025": "lodydeals",
+    "Magcubic HY300 Max 400ANSI": "lodydeals",
+    "FIFINE H9 7.1 Surround Gaming": "lodydeals",
+    "Redmi 17 4G 4/128GB": "lodydeals",
+    "ASROCK B550AM GAMING": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -14638,7 +14777,14 @@
     "ecksdeal:5964",
     "ecksdeal:5965",
     "ecksdeal:5968",
-    "ecksdeal:5970"
+    "ecksdeal:5970",
+    "lodydeals:45861",
+    "lodydeals:45862",
+    "lodydeals:45863",
+    "lodydeals:45864",
+    "lodydeals:45868",
+    "lodydeals:45869",
+    "lodydeals:45871"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
