@@ -428,6 +428,15 @@ def extract_prices(text: str) -> Tuple[Optional[float], Optional[float]]:
             return u, e
 
         if "€" in full_context_str or "eur" in context_lower or "euro" in context_lower:
+            # Check if this candidate is USD but accompanied by explicit EUR (e.g. "118.59$ (106.20€)")
+            if ("$" in raw_num_str or "$" in full_context_str) and "€" not in raw_num_str:
+                m_eur = re.search(r'[\(\[]?\s*([0-9]+(?:[\.,][0-9]{1,2})?)\s*(?:€|eur|euros?|euro)', full_context_str, re.IGNORECASE)
+                if m_eur:
+                    try:
+                        explicit_eur = float(m_eur.group(1).replace(",", "."))
+                        return val, explicit_eur
+                    except Exception:
+                        pass
             u = round(val / eur_rate, 2)
             return u, val
 

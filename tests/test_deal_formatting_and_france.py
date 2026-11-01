@@ -358,10 +358,71 @@ async def test_bundle_country_rules():
 def test_couponsglobal_monitored_channel():
     from app.aliexpress.parser import is_allowed_category
     from scripts.post_recent_deals import CHANNELS
-    assert "zedstoreonline" in CHANNELS
-    # Allowed category check accepts zedstoreonline
-    allowed, _ = is_allowed_category("Random Deal", "Some text", channel_username="zedstoreonline")
+    assert "lodydeals" in CHANNELS and "ECKSDEAL" in CHANNELS
+    # Allowed category check accepts monitored channels
+    allowed, _ = is_allowed_category("Random Deal", "Some text", channel_username="lodydeals")
     assert allowed is True
+
+def test_1to1_formatters_lody_and_esk():
+    from app.ai.generator import format_lodydeals_caption_1to1, format_ecksdeal_caption_1to1
+    from app.aliexpress.urls import check_competitor_contamination
+
+    aff_url = "https://s.click.aliexpress.com/e/_OUR_MONETIZED_DEAL"
+
+    sample_lody = """تخفيض لـ Magcubic HY300 Max 400ANSI
+السعر : 76.74$ (68.73€)
+🔥
+رابط
+s.click.aliexpress.com/e/_c4Ovuddh
+مباشر
+s.click.aliexpress.com/e/_c3xlJ0SP
+كوبون 11$/65$:
+OTD1111
+متوسط سعره هنا 25000دج
+🇩🇿
+لا تنسى استخدام البوت للشراء بأقل الأسعار :
+t.me/LodyCouponsBot"""
+
+    cap_lody = format_lodydeals_caption_1to1(sample_lody, aff_url, "OTD1111")
+    assert aff_url in cap_lody
+    assert "t.me/Alilo07BOT" in cap_lody
+    assert "<code>OTD1111</code>" in cap_lody
+    is_contam_lody, reason_lody = check_competitor_contamination(cap_lody, aff_url)
+    assert not is_contam_lody, f"Lody formatter contaminated: {reason_lody}"
+
+    sample_esk = """❗️
+لاتنسى تحويل دولة التطبيق الى كندا
+🇨🇦
+خفيض لـــ  : سماعات الاذن 7Hz x Crinacle Zero:2 IEM
+السعــــر
+💲 : 
+$ 12.60
+تحتاج الى العملات
+🎟
+كوبون 03/15$ :  
+OTD1103
+الرابـــــط 
+🔗: 
+https://s.click.aliexpress.com/e/_c4a7QVq3
+رابط آخر : 
+https://s.click.aliexpress.com/e/_c3GFYYd1
+رابط آخر :
+https://s.click.aliexpress.com/e/_c4a4xFZV
+البوت لتخفيض الاسعار 
+🤖 : 
+https://t.me/ECKSdealsbot
+قناة التيليغرام للمزيد من العروض :  
+https://t.me/ECKSDEAL"""
+
+    cap_esk = format_ecksdeal_caption_1to1(sample_esk, aff_url, "OTD1103")
+    assert aff_url in cap_esk
+    assert "https://t.me/Alilo07BOT" in cap_esk
+    assert "https://t.me/DzAliexpress0" in cap_esk
+    assert "<code>OTD1103</code>" in cap_esk
+    assert "_c3GFYYd1" not in cap_esk
+    assert "_c4a4xFZV" not in cap_esk
+    is_contam_esk, reason_esk = check_competitor_contamination(cap_esk, aff_url)
+    assert not is_contam_esk, f"ESK formatter contaminated: {reason_esk}"
 
 def test_france_channel_never_accepts_arabic_deals():
     from scripts.post_france_deals import is_strictly_france_compatible_deal, FRANCE_SOURCE_CHANNELS

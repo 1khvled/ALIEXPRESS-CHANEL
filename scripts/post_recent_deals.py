@@ -30,19 +30,15 @@ from app.aliexpress.product import product_extractor
 from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category, detect_deal_type, is_france_deal, extract_telegram_html_text
 from app.aliexpress.promos import promo_tracker
 from app.aliexpress.affiliate import affiliate_service
-from app.ai.generator import caption_generator
+from app.ai.generator import caption_generator, format_lodydeals_caption_1to1, format_ecksdeal_caption_1to1
 from app.media.downloader import media_downloader
 from app.media.renderer import media_renderer
 from app.publisher.publisher import telegram_publisher
 from app.utils.logger import logger
-# Primary Algerian deal channels to mimic (Lody, Zedstore, Anis, Esk, BND, Megaphonna)
+# Primary Algerian deal channels strictly monitored (Lody & ECKSDEAL ONLY - 1:1 Mirror Copy)
 CHANNELS = [
     "lodydeals",
-    "zedstoreonline",
-    "aniscoupons",
-    "ECKSDEAL",
-    "BNDDEALS",
-    "megaphonna"
+    "ECKSDEAL"
 ]
 
 def get_bot_token() -> str:
@@ -171,8 +167,8 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     is_warmup_or_event = bool(active_p and ("warm-up" in active_p.name.lower() or "11.11" in active_p.name or "festival" in active_p.name.lower()))
     is_peak = is_algerian_peak_hour()
     if is_warmup_or_event:
-        max_deals_per_channel = 25
-        MAX_DEALS_PER_RUN = 50
+        max_deals_per_channel = 35
+        MAX_DEALS_PER_RUN = 60
     else:
         max_deals_per_channel = 15 if is_peak else 10
         MAX_DEALS_PER_RUN = 30 if is_peak else 20
@@ -206,92 +202,113 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     await refresh_channel_cache(force=True)
 
     async with httpx.AsyncClient(headers=headers, timeout=20.0, follow_redirects=True) as client:
+        DEFAULT_START_IDS = {
+            "lodydeals": 45760,
+            "ecksdeal": 5924,
+        }
+
         for ch in CHANNELS:
             if len(published_deals) >= MAX_DEALS_PER_RUN:
                 break
 
-            url = f"https://t.me/s/{ch}"
-            print(f"\n---> Scanning channel @{ch}...")
+            clean_ch = ch.lower()
+            last_seen_id = get_monitored_channel_last_id(ch)
+            start_target_id = DEFAULT_START_IDS.get(clean_ch, 0)
+            if last_seen_id is None or last_seen_id < start_target_id:
+                min_id_needed = start_target_id
+            else:
+                min_id_needed = max(start_target_id, last_seen_id - 60)
+
+            print(f"\n---> Scanning channel @{ch} (target start #{start_target_id}, last seen #{last_seen_id})...")
             try:
-                resp = None
-                for attempt in range(2):
-                    try:
-                        resp = await client.get(url)
-                        if resp.status_code == 200:
-                            break
-                    except Exception:
-                        await asyncio.sleep(1.0)
-
-                if not resp or resp.status_code != 200:
-                    print(f"  [!] HTTP {resp.status_code if resp else 'TIMEOUT'} for @{ch}")
-                    continue
-
-                soup = BeautifulSoup(resp.text, "html.parser")
-                blocks = soup.find_all("div", class_="tgme_widget_message")
-                print(f"  Found {len(blocks)} message blocks in @{ch}")
-                
                 block_items = []
-                for b in blocks:
-                    dp = b.get("data-post", "")
-                    if "/" in dp and dp.split("/")[-1].isdigit():
-                        block_items.append((int(dp.split("/")[-1]), b))
+                seen_pids = set()
+                cur_url = f"https://t.me/s/{ch}"
+                max_pages = 6
 
+                for page in range(max_pages):
+                    resp = None
+                    for attempt in range(2):
+                        try:
+                            resp = await client.get(cur_url)
+                            if resp.status_code == 200:
+                                break
+                        except Exception:
+                            await asyncio.sleep(1.0)
+
+                    if not resp or resp.status_code != 200:
+                        print(f"  [!] HTTP {resp.status_code if resp else 'TIMEOUT'} for @{ch} (page {page+1})")
+                        break
+
+                    soup = BeautifulSoup(resp.text, "html.parser")
+                    page_blocks = soup.find_all("div", class_="tgme_widget_message")
+                    if not page_blocks:
+                        break
+
+                    page_items = []
+                    for b in page_blocks:
+                        dp = b.get("data-post", "")
+                        if "/" in dp and dp.split("/")[-1].isdigit():
+                            pid = int(dp.split("/")[-1])
+                            if pid not in seen_pids:
+                                seen_pids.add(pid)
+                                page_items.append((pid, b))
+
+                    block_items.extend(page_items)
+                    min_id_on_page = min(p[0] for p in page_items) if page_items else 0
+
+                    if min_id_needed and min_id_on_page <= min_id_needed:
+                        break
+                    if min_id_on_page == 0:
+                        break
+
+                    cur_url = f"https://t.me/s/{ch}?before={min_id_on_page}"
+
+                print(f"  Found {len(block_items)} total message blocks across pages in @{ch}")
                 if not block_items:
                     print(f"  No valid post IDs found in @{ch}")
                     continue
 
                 current_max_id = max(b_id for b_id, _ in block_items)
-                last_seen_id = get_monitored_channel_last_id(ch)
 
-                if last_seen_id is None:
-                    # First time seeing this channel — process ALL posts on current page
-                    record_monitored_channel_last_id(ch, current_max_id)
-                    new_blocks = [
-                        (b_id, b) for b_id, b in block_items
-                        if not is_post_already_published(ch, b_id)
-                    ]
-                    new_blocks.sort(key=lambda x: x[0])
-                    print(f"  [FIRST RUN] @{ch} baseline set to #{current_max_id}. Processing {len(new_blocks)} visible post(s).")
-                else:
-                    # Process posts newer than last_seen_id, or unposted recent candidate messages from current page
-                    lookback_cutoff = max(0, last_seen_id - 60)
-                    new_blocks = [
-                        (b_id, b) for b_id, b in block_items
-                        if (b_id > last_seen_id or (b_id >= lookback_cutoff and not is_post_already_published(ch, b_id) and not is_post_handled(ch, b_id)) or f"{ch.lower()}:{b_id}" in needs_repost_keys)
-                        and not is_post_already_published(ch, b_id)
-                    ]
-                    # Prioritize newest deals first
-                    new_blocks.sort(key=lambda x: x[0], reverse=True)
+                # Process posts starting from 8:00 AM kickoff, filtering out already published/handled
+                new_blocks = [
+                    (b_id, b) for b_id, b in block_items
+                    if b_id >= start_target_id
+                    and not is_post_already_published(ch, b_id)
+                    and (not is_post_handled(ch, b_id) or f"{clean_ch}:{b_id}" in needs_repost_keys)
+                ]
 
-                    # Pre-filter for message freshness (< 14h) and auto-mark ancient stale posts as handled
-                    fresh_blocks = []
-                    for b_id, b in new_blocks:
-                        time_el = b.find("time")
-                        msg_dt = None
-                        if time_el and time_el.get("datetime"):
-                            try:
-                                msg_dt = datetime.fromisoformat(time_el["datetime"].replace("Z", "+00:00"))
-                            except Exception:
-                                pass
-                        text_div = b.find("div", class_="tgme_widget_message_text")
-                        raw_text = extract_telegram_html_text(text_div) if text_div else ""
-                        is_fresh, _ = promo_tracker.validate_deal_freshness(raw_text, msg_dt, max_hours=14)
-                        if not is_fresh:
-                            record_post_handled(ch, b_id)
-                            continue
-                        fresh_blocks.append((b_id, b))
-
-                    if fresh_blocks:
-                        repost_count = sum(1 for b_id, _ in fresh_blocks if b_id <= last_seen_id)
-                        new_count = len(fresh_blocks) - repost_count
-                        print(f"  [@{ch}] Found {new_count} fresh post(s) and {repost_count} unposted/repostable post(s) to process.")
-                    else:
-                        print(f"  [NO NEW POSTS] @{ch} has no new or fresh messages (last seen: #{last_seen_id}, current: #{current_max_id}).")
-                        record_monitored_channel_last_id(ch, current_max_id)
+                # Pre-filter for message freshness (< 18h) and auto-mark ancient stale posts as handled
+                fresh_blocks = []
+                for b_id, b in new_blocks:
+                    time_el = b.find("time")
+                    msg_dt = None
+                    if time_el and time_el.get("datetime"):
+                        try:
+                            msg_dt = datetime.fromisoformat(time_el["datetime"].replace("Z", "+00:00"))
+                        except Exception:
+                            pass
+                    text_div = b.find("div", class_="tgme_widget_message_text")
+                    raw_text = extract_telegram_html_text(text_div) if text_div else ""
+                    is_fresh, _ = promo_tracker.validate_deal_freshness(raw_text, msg_dt, max_hours=18)
+                    if not is_fresh:
+                        record_post_handled(ch, b_id)
                         continue
+                    fresh_blocks.append((b_id, b))
+
+                if fresh_blocks:
+                    # Sort chronologically from 8:00 AM forward
+                    fresh_blocks.sort(key=lambda x: x[0])
+                    print(f"  [@{ch}] Found {len(fresh_blocks)} fresh candidate post(s) to process from 8:00 AM (range #{fresh_blocks[0][0]}..#{fresh_blocks[-1][0]}).")
+                else:
+                    print(f"  [NO NEW POSTS] @{ch} has no new or fresh messages (last seen: #{last_seen_id}, current: #{current_max_id}).")
+                    if last_seen_id is not None and current_max_id > last_seen_id:
+                        record_monitored_channel_last_id(ch, current_max_id)
+                    continue
 
                 # Anti-Flood Pacing: pace active fresh deals
-                active_blocks = fresh_blocks if last_seen_id is not None else new_blocks
+                active_blocks = fresh_blocks
                 if len(active_blocks) > max_deals_per_channel:
                     print(f"  [ANTI-FLOOD PACER] Channel @{ch} has {len(active_blocks)} fresh deals. Pacing: publishing top {max_deals_per_channel}, holding remainder for next cycle.")
                     to_process_blocks = active_blocks[:max_deals_per_channel]
@@ -491,8 +508,10 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     img_url = extracted.image_url
                     if not img_url and extracted.product_id:
                         img_url = await product_extractor._fetch_clean_aliexpress_image(extracted.product_id)
+                    if not img_url and source_photo_url:
+                        img_url = source_photo_url
                     if not extracted.is_coupon_list:
-                        if not img_url or not any(d in str(img_url) for d in ["alicdn.com", "aliexpress-media.com", "aliexpress.com", "telesco.pe"]):
+                        if not img_url or not any(d in str(img_url) for d in ["alicdn.com", "aliexpress-media.com", "aliexpress.com", "telesco.pe", "telegram.org", "cdn"]):
                             print(f"  [NO CLEAN PHOTO] Image fetch incomplete for {extracted.product_id}. Leaving for retry.")
                             continue
 
@@ -519,24 +538,37 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     if deal_type == "coin" and not extracted.is_coupon_list:
                         extracted.has_points_discount = True
 
-                    # 10. Generate caption with clean Algerian format (Single monetized referral link)
-                    caption = await caption_generator.generate(
-                        title=extracted.title or "AliExpress Deal",
-                        usd_price=extracted.current_price,
-                        eur_price=extracted.current_price_eur,
-                        affiliate_url=aff_link,
-                        coupon_code=extracted.coupon_code,
-                        seller_coupon=extracted.seller_coupon,
-                        has_points_discount=extracted.has_points_discount,
-                        country_info=extracted.country_info,
-                        coupon_list=extracted.coupon_list if extracted.is_coupon_list else None,
-                        promo_tag=None,
-                        is_price_drop=is_price_drop,
-                        is_restock=is_restock,
-                        coin_url=None,
-                        raw_text=raw_text,
-                        deal_type=deal_type
-                    )
+                    # 10. Generate 1:1 mirror caption for monitored channels
+                    if ch.lower() == "lodydeals":
+                        caption = format_lodydeals_caption_1to1(
+                            raw_text=raw_text,
+                            affiliate_url=aff_link,
+                            coupon_code=extracted.coupon_code
+                        )
+                    elif ch.lower() == "ecksdeal":
+                        caption = format_ecksdeal_caption_1to1(
+                            raw_text=raw_text,
+                            affiliate_url=aff_link,
+                            coupon_code=extracted.coupon_code
+                        )
+                    else:
+                        caption = await caption_generator.generate(
+                            title=extracted.title or "AliExpress Deal",
+                            usd_price=extracted.current_price,
+                            eur_price=extracted.current_price_eur,
+                            affiliate_url=aff_link,
+                            coupon_code=extracted.coupon_code,
+                            seller_coupon=extracted.seller_coupon,
+                            has_points_discount=extracted.has_points_discount,
+                            country_info=extracted.country_info,
+                            coupon_list=extracted.coupon_list if extracted.is_coupon_list else None,
+                            promo_tag=None,
+                            is_price_drop=is_price_drop,
+                            is_restock=is_restock,
+                            coin_url=None,
+                            raw_text=raw_text,
+                            deal_type=deal_type
+                        )
 
                     from app.ai.validator import caption_validator
                     validation = caption_validator.validate(

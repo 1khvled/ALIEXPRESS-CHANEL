@@ -583,3 +583,134 @@ class DealCaptionGenerator:
         )
 
 caption_generator = DealCaptionGenerator()
+
+
+def format_lodydeals_caption_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None) -> str:
+    """
+    1:1 Mirror formatter for @lodydeals:
+    - Retains original Algerian hype, emojis, pricing, and structure.
+    - Replaces competitor affiliate links with our verified monetized link.
+    - Strips duplicate/secondary direct links ('مباشر').
+    - Replaces @LodyCouponsBot with our points bot @Alilo07BOT.
+    - Replaces @lodydeals mentions with @DzAliexpress0.
+    - Wraps coupon codes in <code> tags for one-tap copying in Telegram.
+    """
+    lines = raw_text.splitlines()
+    clean_lines = []
+    has_aff = False
+    skip_next_url = False
+
+    for line in lines:
+        l = line.strip()
+        if not l:
+            clean_lines.append("")
+            continue
+
+        # Skip direct competitor channel review links (e.g. t.me/lodydeals/...)
+        if any(b in l.lower() for b in ["lodydeals", "@lodydeals", "t.me/lodydeals"]):
+            continue
+
+        # Skip secondary link line 'مباشر' and its accompanying url
+        if l == "مباشر":
+            skip_next_url = True
+            continue
+        if skip_next_url:
+            skip_next_url = False
+            continue
+
+        # Replace competitor affiliate links
+        if re.search(r"https?://(?:s\.click\.aliexpress\.com|[\w\.]*aliexpress\.com)", l) or re.match(r"^s\.click\.aliexpress\.com/\S+", l):
+            if not has_aff:
+                clean_lines.append(affiliate_url)
+                has_aff = True
+            continue
+
+        # Replace competitor bot mentions
+        if any(b in l.lower() for b in ["lodycouponsbot", "@lodycouponsbot", "t.me/lodycouponsbot"]):
+            clean_lines.append("t.me/Alilo07BOT")
+            continue
+
+        clean_lines.append(l)
+
+    caption = "\n".join(clean_lines).strip()
+
+    # Wrap promo coupon codes in <code> tags
+    code_matches = re.findall(r"\b([A-Z0-9]{5,12})\b", caption)
+    for c in code_matches:
+        if any(prefix in c for prefix in ["OTD", "AE", "AL", "DZ", "FR", "SUN", "ESD", "IFP", "BEST"]):
+            caption = re.sub(rf"(?<!<code>)\b{c}\b(?!</code>)", f"<code>{c}</code>", caption)
+
+    if coupon_code and coupon_code not in caption:
+        caption = re.sub(rf"(?<!<code>)\b{coupon_code}\b(?!</code>)", f"<code>{coupon_code}</code>", caption)
+
+    if affiliate_url not in caption:
+        caption += f"\nالرابط: {affiliate_url}"
+
+    if "Alilo07BOT" not in caption:
+        caption += "\n\n🤖 بوت تخفيض النقاط: @Alilo07BOT"
+
+    return caption
+
+
+def format_ecksdeal_caption_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None) -> str:
+    """
+    1:1 Mirror formatter for @ECKSDEAL:
+    - Retains original country settings (Canada/Australia), icons, pricing, and structure.
+    - Scrubs all competitor secondary affiliate links ('رابط آخر : ...').
+    - Replaces primary affiliate link with our verified affiliate link.
+    - Replaces @ECKSdealsbot with our points bot https://t.me/Alilo07BOT.
+    - Replaces @ECKSDEAL channel mention with https://t.me/DzAliexpress0.
+    - Wraps coupon codes in <code> tags for one-tap copying in Telegram.
+    """
+    lines = raw_text.splitlines()
+    clean_lines = []
+    has_aff = False
+
+    for line in lines:
+        l = line.strip()
+        if not l:
+            clean_lines.append("")
+            continue
+
+        # Scrub secondary competitor affiliate links
+        if re.search(r"رابط\s*آخر\s*:\s*https?://", l) or re.match(r"^رابط\s*آخر\s*:", l):
+            continue
+
+        # Replace primary affiliate link
+        if re.search(r"https?://(?:s\.click\.aliexpress\.com|[\w\.]*aliexpress\.com)", l):
+            if not has_aff:
+                clean_lines.append(re.sub(r"https?://\S+", affiliate_url, l))
+                has_aff = True
+            continue
+
+        # Replace competitor bot mentions
+        if any(b in l.lower() for b in ["ecksdealsbot", "@ecksdealsbot", "t.me/ecksdealsbot"]):
+            clean_lines.append(re.sub(r"https?://t\.me/\S+|@\w+", "https://t.me/Alilo07BOT", l))
+            continue
+
+        # Replace competitor channel mention
+        if any(b in l.lower() for b in ["ecksdeal", "@ecksdeal", "t.me/ecksdeal"]):
+            clean_lines.append(re.sub(r"https?://t\.me/\S+|@\w+", "https://t.me/DzAliexpress0", l))
+            continue
+
+        clean_lines.append(l)
+
+    caption = "\n".join(clean_lines).strip()
+
+    # Wrap promo coupon codes in <code> tags
+    code_matches = re.findall(r"\b([A-Z0-9]{5,12})\b", caption)
+    for c in code_matches:
+        if any(prefix in c for prefix in ["OTD", "AE", "AL", "DZ", "FR", "SUN", "ESD", "IFP", "BEST"]):
+            caption = re.sub(rf"(?<!<code>)\b{c}\b(?!</code>)", f"<code>{c}</code>", caption)
+
+    if coupon_code and coupon_code not in caption:
+        caption = re.sub(rf"(?<!<code>)\b{coupon_code}\b(?!</code>)", f"<code>{coupon_code}</code>", caption)
+
+    if affiliate_url not in caption:
+        caption += f"\n\nالرابط: {affiliate_url}"
+
+    if "Alilo07BOT" not in caption:
+        caption += "\n\n🤖 بوت تخفيض النقاط: @Alilo07BOT"
+
+    return caption
+

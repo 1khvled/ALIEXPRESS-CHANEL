@@ -171,7 +171,16 @@ class DealCaptionValidator:
         if expected_eur_price is not None and ("€" in caption or "EUR" in caption):
             expected_eur_str = f"{expected_eur_price:.2f}"
             if expected_eur_str not in caption and f"{expected_eur_price:.1f}" not in caption:
-                errors.append(f"EUR price {expected_eur_price} not found in caption")
+                m_eur = re.search(r'([0-9]+(?:[\.,][0-9]{1,2})?)\s*(?:€|EUR)', caption)
+                if m_eur:
+                    try:
+                        val_eur = float(m_eur.group(1).replace(",", "."))
+                        if abs(val_eur - expected_eur_price) > max(5.0, expected_eur_price * 0.15):
+                            errors.append(f"EUR price {expected_eur_price} not found in caption (found {val_eur}€)")
+                    except Exception:
+                        errors.append(f"EUR price {expected_eur_price} not found in caption")
+                else:
+                    errors.append(f"EUR price {expected_eur_price} not found in caption")
 
         # 3. Coupon check
         if expected_coupon:
