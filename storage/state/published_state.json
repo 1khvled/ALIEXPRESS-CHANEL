@@ -559,7 +559,8 @@
     "1005013438789813",
     "1005012823102793",
     "1005012773302941",
-    "1005008430147176"
+    "1005008430147176",
+    "1005011742851856"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1131,7 +1132,8 @@
     "1005013438789813": 1793569553.2022223,
     "1005012823102793": 1793569904.419889,
     "1005012773302941": 1793570640.1582527,
-    "1005008430147176": 1793571747.1298387
+    "1005008430147176": 1793571747.1298387,
+    "1005011742851856": 1793572108.9610763
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1793,7 +1795,8 @@
     "Zeblaze Btalk 4 Pro",
     "Anker Soundcore 2",
     "MACHENIKE G5Pro Max SE",
-    "MACHENIKE G1 Gaming"
+    "MACHENIKE G1 Gaming",
+    "Essager 45W Retractable Car"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2461,10 +2464,10 @@
     "Zeblaze Btalk 4 Pro": 1793570640.1582527,
     "Anker Soundcore 2": 1793571013.3288968,
     "MACHENIKE G5Pro Max SE": 1793571550.5645735,
-    "MACHENIKE G1 Gaming": 1793571747.1298387
+    "MACHENIKE G1 Gaming": 1793571747.1298387,
+    "Essager 45W Retractable Car": 1793572108.9610763
   },
   "published_post_keys": [
-    "aniscoupons:32701",
     "aniscoupons:32702",
     "bnddeals:50799",
     "aniscoupons:32703",
@@ -3463,19 +3466,20 @@
     "lodydeals:45935",
     "lodydeals:45936",
     "lodydeals:45937",
-    "lodydeals:45938"
+    "lodydeals:45938",
+    "lodydeals:45939"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793571747.1298387,
+  "last_run_time": 1793572108.9610763,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45938,
-      "last_check_time": 1793571749.1829
+      "last_message_id": 45939,
+      "last_check_time": 1793572111.0042138
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3958,7 +3962,8 @@
     "1005013438789813": 408.02,
     "1005012823102793": 226.25,
     "1005012773302941": 20.78,
-    "1005008430147176": 17.01
+    "1005008430147176": 17.01,
+    "1005011742851856": 4.85
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12863,6 +12868,16 @@
       "price": 17.01,
       "timestamp": 1793571747.1298387,
       "status": "ACTIVE"
+    },
+    "lodydeals:45939": {
+      "channel_msg_id": 1568,
+      "product_id": "1005011742851856",
+      "title": "Essager 45W Retractable Car",
+      "channel": "lodydeals",
+      "source_msg_id": 45939,
+      "price": 4.85,
+      "timestamp": 1793572108.9610763,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12871,17 +12886,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793571751.0515645,
+    "last_deal_post_time": 1793572112.9939692,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793571934.7028668,
+    "last_sweep_time": 1793572117.2314649,
     "last_sweep_times": {
-      "algeria": 1793571925.4765346,
-      "france": 1793571934.7028668
+      "algeria": 1793572112.9747431,
+      "france": 1793572117.2314649
     },
     "last_deal_post_times": {
-      "algeria": 1793571751.0515645
+      "algeria": 1793572112.9939692
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13458,7 +13473,8 @@
     "1005013438789813": "lodydeals",
     "1005012823102793": "lodydeals",
     "1005012773302941": "lodydeals",
-    "1005008430147176": "lodydeals"
+    "1005008430147176": "lodydeals",
+    "1005011742851856": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14128,7 +14144,8 @@
     "Zeblaze Btalk 4 Pro": "lodydeals",
     "Anker Soundcore 2": "lodydeals",
     "MACHENIKE G5Pro Max SE": "lodydeals",
-    "MACHENIKE G1 Gaming": "lodydeals"
+    "MACHENIKE G1 Gaming": "lodydeals",
+    "Essager 45W Retractable Car": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
