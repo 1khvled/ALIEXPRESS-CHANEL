@@ -3496,8 +3496,8 @@
   "last_run_time": 1793575053.368357,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 5999,
-      "last_check_time": 1793575216.8438327
+      "last_message_id": 6000,
+      "last_check_time": 1793575773.429781
     },
     "lodydeals": {
       "last_message_id": 45946,
@@ -12987,10 +12987,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793575577.2554095,
+    "last_sweep_time": 1793575777.5556529,
     "last_sweep_times": {
-      "algeria": 1793575573.0729363,
-      "france": 1793575577.2554095
+      "algeria": 1793575773.447558,
+      "france": 1793575777.5556529
     },
     "last_deal_post_times": {
       "algeria": 1793575055.4444058
@@ -14851,7 +14851,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:5888",
     "lodydeals:45508",
     "megaphonna:8391",
     "pcgamingpart:7982",
@@ -15850,7 +15849,8 @@
     "lodydeals:45924",
     "lodydeals:45925",
     "ecksdeal:5997",
-    "ecksdeal:5999"
+    "ecksdeal:5999",
+    "ecksdeal:6000"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
