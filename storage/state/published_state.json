@@ -601,7 +601,7 @@
     "9998883531": 1790943531.551938,
     "1005010111014453": 1790943633.9774187,
     "1005009828161174": 1791031550.2120771,
-    "1005009281115306": 1791942658.9081998,
+    "1005009281115306": 1793558205.9468858,
     "1005011797801269": 1791203753.790013,
     "1005007168829266": 1791102355.4991398,
     "1005012406142215": 1793543604.5851276,
@@ -1806,7 +1806,7 @@
     "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1793542591.509991,
     "4G LTE Wireless USB 150Mbps": 1790943633.9774187,
     "Curren 8455 Men's Quartz": 1790943640.1460688,
-    "ATTACK SHARK X11SE": 1790943648.855101,
+    "ATTACK SHARK X11SE": 1793558205.9468858,
     "CMF Watch 3 Pro AMOLED": 1793542412.85267,
     "Redmi Note 17 5G   6/256": 1790943667.90417,
     "Baseus USB Type C Charger 20W": 1791102355.4991398,
@@ -2394,7 +2394,6 @@
     "Realme P3 5G 8/256": 1793557654.0136676
   },
   "published_post_keys": [
-    "aniscoupons:32688",
     "bnddeals:50793",
     "lodydeals:45411",
     "bnddeals:50794",
@@ -3393,19 +3392,20 @@
     "lodydeals:45894",
     "lodydeals:45895",
     "lodydeals:45896",
-    "lodydeals:45898"
+    "lodydeals:45898",
+    "lodydeals:45900"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793557654.0136676,
+  "last_run_time": 1793558205.9468858,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45899,
-      "last_check_time": 1793558025.5614202
+      "last_message_id": 45901,
+      "last_check_time": 1793558208.8710213
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3471,7 +3471,7 @@
     "1005012968221708": 20.2,
     "1005010111014453": 6.09,
     "1005009828161174": 7.62,
-    "1005009281115306": 17.12,
+    "1005009281115306": 12.3,
     "1005011797801269": 55.78,
     "1005007168829266": 4.19,
     "1005012406142215": 375.12,
@@ -12520,6 +12520,16 @@
       "price": 190.1,
       "timestamp": 1793557654.0136676,
       "status": "ACTIVE"
+    },
+    "lodydeals:45900": {
+      "channel_msg_id": 1534,
+      "product_id": "1005009281115306",
+      "title": "ATTACK SHARK X11SE",
+      "channel": "lodydeals",
+      "source_msg_id": 45900,
+      "price": 12.3,
+      "timestamp": 1793558205.9468858,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12528,17 +12538,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793557657.7243366,
+    "last_deal_post_time": 1793558210.6333487,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793558030.5824566,
+    "last_sweep_time": 1793558214.4196668,
     "last_sweep_times": {
-      "algeria": 1793558027.32271,
-      "france": 1793558030.5824566
+      "algeria": 1793558210.614436,
+      "france": 1793558214.4196668
     },
     "last_deal_post_times": {
-      "algeria": 1793557657.7243366
+      "algeria": 1793558210.6333487
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -12569,7 +12579,7 @@
     "9998883531": "test_channel",
     "1005010111014453": "lodydeals",
     "1005009828161174": "couponsglobal",
-    "1005009281115306": "pcgamingpart",
+    "1005009281115306": "lodydeals",
     "1005011797801269": "couponsglobal",
     "1005012973772517": "zedstoreonline",
     "1005007168829266": "aniscoupons",
@@ -15263,7 +15273,8 @@
     "lodydeals:45889",
     "lodydeals:45892",
     "lodydeals:45897",
-    "lodydeals:45899"
+    "lodydeals:45899",
+    "lodydeals:45901"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
