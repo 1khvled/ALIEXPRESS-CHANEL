@@ -543,7 +543,9 @@
     "1005008460932629",
     "1005008147206532",
     "1005006398880142",
-    "1005008755897663"
+    "1005008755897663",
+    "1005012887486015",
+    "1005010758512904"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1099,7 +1101,9 @@
     "1005008460932629": 1793553793.0475857,
     "1005008147206532": 1793554730.1566968,
     "1005006398880142": 1793554757.8937938,
-    "1005008755897663": 1793554764.2266893
+    "1005008755897663": 1793554764.2266893,
+    "1005012887486015": 1793556560.1844745,
+    "1005010758512904": 1793556565.207214
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1734,7 +1738,9 @@
     "Blackview WAVE 10 8/256GB",
     "SAMSUNG DDR3 Ram 8GB 1600MHz",
     "ASRock B650 PRO RS",
-    "Honor Power 2 5G 12/256GB"
+    "Honor Power 2 5G 12/256GB",
+    "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2",
+    "HONOR Pad X8b Wifi 4/128GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2375,11 +2381,11 @@
     "Blackview WAVE 10 8/256GB": 1793554740.6491675,
     "SAMSUNG DDR3 Ram 8GB 1600MHz": 1793554757.8937938,
     "ASRock B650 PRO RS": 1793554764.2266893,
-    "Honor Power 2 5G 12/256GB": 1793554773.9452004
+    "Honor Power 2 5G 12/256GB": 1793554773.9452004,
+    "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2": 1793556560.1844745,
+    "HONOR Pad X8b Wifi 4/128GB": 1793556565.207214
   },
   "published_post_keys": [
-    "lodydeals:45408",
-    "lodydeals:45409",
     "lodydeals:45410",
     "aniscoupons:32686",
     "aniscoupons:32687",
@@ -3377,19 +3383,21 @@
     "lodydeals:45888",
     "lodydeals:45890",
     "lodydeals:45884",
-    "lodydeals:45891"
+    "lodydeals:45891",
+    "lodydeals:45893",
+    "lodydeals:45894"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793555278.3251228,
+  "last_run_time": 1793556565.207214,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45891,
-      "last_check_time": 1793555280.3651807
+      "last_message_id": 45894,
+      "last_check_time": 1793556567.243998
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3856,7 +3864,9 @@
     "1005008460932629": 32.63,
     "1005008147206532": 79.44,
     "1005006398880142": 10.49,
-    "1005008755897663": 101.4
+    "1005008755897663": 101.4,
+    "1005012887486015": 146.25,
+    "1005010758512904": 175.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12451,6 +12461,26 @@
       "price": 313.49,
       "timestamp": 1793555278.3251228,
       "status": "ACTIVE"
+    },
+    "lodydeals:45893": {
+      "channel_msg_id": 1529,
+      "product_id": "1005012887486015",
+      "title": "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2",
+      "channel": "lodydeals",
+      "source_msg_id": 45893,
+      "price": 146.25,
+      "timestamp": 1793556560.1844745,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45894": {
+      "channel_msg_id": 1530,
+      "product_id": "1005010758512904",
+      "title": "HONOR Pad X8b Wifi 4/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45894,
+      "price": 175.8,
+      "timestamp": 1793556565.207214,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12459,17 +12489,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793555281.9936588,
+    "last_deal_post_time": 1793556569.0891461,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793556375.9758413,
+    "last_sweep_time": 1793556573.1418364,
     "last_sweep_times": {
-      "algeria": 1793556371.7556036,
-      "france": 1793556375.9758413
+      "algeria": 1793556569.072594,
+      "france": 1793556573.1418364
     },
     "last_deal_post_times": {
-      "algeria": 1793555281.9936588
+      "algeria": 1793556569.0891461
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13030,7 +13060,9 @@
     "1005008460932629": "ecksdeal",
     "1005008147206532": "lodydeals",
     "1005006398880142": "lodydeals",
-    "1005008755897663": "lodydeals"
+    "1005008755897663": "lodydeals",
+    "1005012887486015": "lodydeals",
+    "1005010758512904": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -13673,7 +13705,9 @@
     "Blackview WAVE 10 8/256GB": "lodydeals",
     "SAMSUNG DDR3 Ram 8GB 1600MHz": "lodydeals",
     "ASRock B650 PRO RS": "lodydeals",
-    "Honor Power 2 5G 12/256GB": "lodydeals"
+    "Honor Power 2 5G 12/256GB": "lodydeals",
+    "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2": "lodydeals",
+    "HONOR Pad X8b Wifi 4/128GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -15183,7 +15217,8 @@
     "lodydeals:45880",
     "lodydeals:45881",
     "lodydeals:45887",
-    "lodydeals:45889"
+    "lodydeals:45889",
+    "lodydeals:45892"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
