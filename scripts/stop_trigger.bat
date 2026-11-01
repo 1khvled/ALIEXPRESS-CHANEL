@@ -1,15 +1,15 @@
 @echo off
 setlocal
-set PID_FILE=%~dp0..\storage\state\pc_trigger.pid
+echo Stopping PC Background Trigger Daemon...
 
-if exist "%PID_FILE%" (
-    set /p PID=<"%PID_FILE%"
-    echo Stopping PC Trigger Daemon (PID: %PID%)...
-    taskkill /PID %PID% /F >nul 2>&1
-    del /f /q "%PID_FILE%" >nul 2>&1
-    echo PC Trigger stopped.
-) else (
-    echo No PID file found. Checking for running pc_auto_trigger instances...
-    wmic process where "commandline like '%%pc_auto_trigger.py%%'" call terminate >nul 2>&1
-    echo Checked and stopped any running instances.
-)
+powershell -NoProfile -Command ^
+    "$pidFile = '%~dp0..\storage\state\pc_trigger.pid';" ^
+    "if (Test-Path $pidFile) {" ^
+    "    $p = (Get-Content $pidFile).Trim();" ^
+    "    Stop-Process -Id $p -Force -ErrorAction SilentlyContinue;" ^
+    "    Remove-Item $pidFile -Force -ErrorAction SilentlyContinue;" ^
+    "    Write-Host ('PC Trigger (PID ' + $p + ') stopped.') -ForegroundColor Yellow;" ^
+    "}" ^
+    "Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -like '*pc_auto_trigger.py*' } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue; Write-Host ('Stopped leftover instance PID ' + $_.ProcessId) -ForegroundColor Yellow; };"
+
+echo Done.
