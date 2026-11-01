@@ -325,3 +325,67 @@ class FranceDealCaptionGenerator:
         )
 
 france_caption_generator = FranceDealCaptionGenerator()
+
+
+def format_alifrdrop_caption_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None) -> str:
+    """
+    Copies AliFRDrop deal format 1:1, replacing competitor link and bot with ours,
+    wrapping promo codes in <code> tags for tap-to-copy, and replacing any Arabic slang with French hook.
+    """
+    clean_lines = []
+    lines = raw_text.splitlines()
+
+    for line in lines:
+        l = line.strip()
+        if not l:
+            clean_lines.append("")
+            continue
+
+        # Replace Arabic hook like 'لافاااااار خاوتي' with 'OFFRE FLASH 🚨'
+        if any("\u0600" <= ch <= "\u06FF" for ch in l):
+            clean_lines.append("OFFRE FLASH 🚨")
+            continue
+
+        # Replace competitor affiliate link
+        if re.search(r"https?://(?:s\.click\.aliexpress\.com|[\w\.]*aliexpress\.com)", l):
+            clean_lines.append(f"🔗Lien : {affiliate_url}")
+            continue
+
+        # Replace competitor bot with @Alilo07BOT
+        if any(b in l.lower() for b in ["@lodycouponsbot", "lodycouponsbot", "@lodydeals", "@aniscoupons", "@zedstore"]):
+            clean_lines.append("🤖 Utilisez le bot avant d'acheter : @Alilo07BOT")
+            continue
+
+        # Wrap promo codes in <code>...</code> if line is Code
+        if re.search(r"(?:code|code\s+promo|coupon)\s*:", l, re.I):
+            prefix_match = re.match(r"^([^:]+:\s*)(.*)$", l)
+            if prefix_match:
+                prefix, codes_str = prefix_match.group(1), prefix_match.group(2)
+                # Split multiple codes by / or space
+                parts = [p.strip() for p in re.split(r"([/\s]+)", codes_str) if p]
+                formatted_parts = []
+                for p in parts:
+                    if re.match(r"^[A-Za-z0-9_-]{4,}$", p):
+                        formatted_parts.append(f"<code>{p}</code>")
+                    else:
+                        formatted_parts.append(p)
+                clean_lines.append(f"{prefix}{''.join(formatted_parts)}")
+                continue
+
+        # Skip hashtags
+        if l.startswith("#"):
+            continue
+
+        clean_lines.append(l)
+
+    caption = "\n".join(clean_lines).strip()
+
+    # Ensure link is present if not added
+    if affiliate_url not in caption:
+        caption += f"\n\n🔗Lien : {affiliate_url}"
+
+    # Ensure bot CTA is present
+    if "@Alilo07BOT" not in caption:
+        caption += "\n____\n\n🤖 Utilisez le bot avant d'acheter : @Alilo07BOT"
+
+    return caption

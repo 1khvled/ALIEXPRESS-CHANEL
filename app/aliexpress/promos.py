@@ -746,12 +746,12 @@ def generate_recurring_promos(ref_date: Optional[datetime] = None, months_ahead:
             ))
         elif m == 11:  # 11.11 & Black Friday
             events.append(PromoEvent(
-                name=f"11.11 Global Shopping Festival Warm-Up {yr}",
-                name_ar=f"التحضير لمهرجان 11.11 العالمي {yr} 💥",
-                name_fr=f"Échauffement 11.11 Mondial {yr} 💥",
+                name=f"11.11 Global Shopping Festival {yr}",
+                name_ar=f"مهرجان 11.11 الأكبر عالمياً {yr} 🛍️🔥",
+                name_fr=f"Festival Mondial 11.11 AliExpress {yr} 🛍️🔥",
                 start_date=datetime(yr, 11, 1, 7, 0, 0, tzinfo=timezone.utc),
-                end_date=datetime(yr, 11, 11, 6, 59, 59, tzinfo=timezone.utc),
-                banner_tag=f"⏳ تحضيرات مهرجان 11.11",
+                end_date=datetime(yr, 11, 19, 6, 59, 59, tzinfo=timezone.utc),
+                banner_tag=f"🔥 أقوى تخفيضات السنة 11.11",
                 is_major=True,
                 coupon_tiers=list(default_dz_choice),
                 coupon_tiers_fr=list(default_fr_choice),

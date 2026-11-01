@@ -419,7 +419,9 @@ class DealCaptionGenerator:
                     date_str = "1 نوفمبر"
                 else:
                     date_str = "1 نوفمبر"
-                taskhinat_header = f"<blockquote>🛒 أضف للسلة البيع {date_str}</blockquote>"
+                # If date is 1 November or past, the sale is actively selling today!
+                if date_str != "1 نوفمبر" and "1 نوفمبر" not in date_str:
+                    taskhinat_header = f"<blockquote>🛒 أضف للسلة البيع {date_str}</blockquote>"
 
         lines = []
 

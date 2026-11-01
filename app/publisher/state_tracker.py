@@ -468,8 +468,8 @@ def is_recent_cross_channel_duplicate(
     state = load_persistent_state()
     now = time.time()
     from app.config.settings import settings
-    # Default duplicate window = 2 hours
-    default_cooldown = getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 2.0)
+    # Default duplicate window = 12 hours
+    default_cooldown = getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 12.0)
     active_cooldown_hours = cooldown_hours if cooldown_hours is not None else default_cooldown
     cooldown_seconds = active_cooldown_hours * 3600
 
@@ -812,7 +812,7 @@ async def is_product_already_published(product_id: Optional[str], title: str = "
     state = load_persistent_state()
     now = time.time()
     from app.config.settings import settings
-    cooldown_seconds = getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 2.0) * 3600
+    cooldown_seconds = getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 12.0) * 3600
 
     # 1. Product ID check in persistent state
     if product_id:

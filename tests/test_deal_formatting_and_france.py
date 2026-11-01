@@ -411,3 +411,35 @@ def test_france_channel_never_accepts_arabic_deals():
 
 
 
+
+def test_alifrdrop_1to1_copy_format():
+    from app.ai.generator_fr import format_alifrdrop_caption_1to1
+
+    raw_sample = (
+        "لافاااااار خاوتي 🚨\n"
+        "🔥 Realme GT 7T 5G\n"
+        "💸Prix : 236€ \n"
+        "🦉Code  : FRD1140\n"
+        "\n"
+        "🔗Lien : https://s.click.aliexpress.com/e/_c3xxiWcF\n"
+        "____\n"
+        "\n"
+        "🤖 Utilisez le bot avant d'acheter : @LodyCouponsBot"
+    )
+
+    caption = format_alifrdrop_caption_1to1(raw_sample, "https://s.click.aliexpress.com/e/_ourAffiliate")
+
+    # 1. Competitor elements replaced
+    assert "@LodyCouponsBot" not in caption
+    assert "@Alilo07BOT" in caption
+    assert "https://s.click.aliexpress.com/e/_ourAffiliate" in caption
+    assert "_c3xxiWcF" not in caption
+
+    # 2. Arabic hook converted to French
+    assert "لافاااااار" not in caption
+    assert "OFFRE FLASH 🚨" in caption
+
+    # 3. Tap to copy code
+    assert "<code>FRD1140</code>" in caption
+    assert "Realme GT 7T 5G" in caption
+    assert "236€" in caption

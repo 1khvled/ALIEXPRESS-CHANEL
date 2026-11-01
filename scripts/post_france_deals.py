@@ -464,6 +464,96 @@ async def publish_extracted_deal_to_france(
         logger.warning(f"[FRANCE ROUTER] Publish to {TARGET_FRANCE_CHANNEL} failed: {err}")
         return False
 
+async def find_alifrdrop_max_id(client: httpx.AsyncClient) -> int:
+    """Finds current max ID in AliFRDrop via quick exponential search + binary search."""
+    low = 100
+    high = 200
+    while True:
+        try:
+            r = await client.get(f"https://t.me/AliFRDrop/{high}")
+            if r.status_code == 200 and f'data-telegram-post="alifrdrop/{high}"' in r.text.lower():
+                low = high
+                high *= 2
+            else:
+                break
+        except Exception:
+            break
+
+    best = low
+    l, h = low, high
+    while l <= h:
+        mid = (l + h) // 2
+        try:
+            r = await client.get(f"https://t.me/AliFRDrop/{mid}")
+            if r.status_code == 200 and f'data-telegram-post="alifrdrop/{mid}"' in r.text.lower():
+                best = mid
+                l = mid + 1
+            else:
+                h = mid - 1
+        except Exception:
+            h = mid - 1
+    return best
+
+async def probe_alifrdrop_direct_posts(
+    client: httpx.AsyncClient,
+    last_seen_id: Optional[int],
+    published_keys: Set[str]
+) -> Tuple[List[Dict[str, Any]], int]:
+    """
+    Directly probes https://t.me/AliFRDrop/{id} because Telegram's web preview
+    redirects /s/AliFRDrop. Extracts og:description and og:image from post metadata.
+    """
+    found_candidates = []
+    max_id = last_seen_id or 0
+
+    if last_seen_id is None:
+        current_max = await find_alifrdrop_max_id(client)
+        max_id = current_max
+        probe_start = max(1, current_max - 5)
+        for pid in range(probe_start, current_max + 1):
+            try:
+                pr = await client.get(f"https://t.me/AliFRDrop/{pid}")
+                if pr.status_code == 200 and f'data-telegram-post="alifrdrop/{pid}"' in pr.text.lower():
+                    soup_p = BeautifulSoup(pr.text, "html.parser")
+                    desc_m = soup_p.find("meta", property="og:description")
+                    img_m = soup_p.find("meta", property="og:image")
+                    if desc_m and desc_m.get("content"):
+                        found_candidates.append({
+                            "msg_id": pid,
+                            "raw_text": desc_m["content"],
+                            "source_photo_url": img_m["content"] if img_m else None,
+                            "msg_dt": datetime.now(timezone.utc)
+                        })
+            except Exception:
+                pass
+        found_candidates = [it for it in found_candidates if f"alifrdrop:{it['msg_id']}" not in published_keys]
+    else:
+        consecutive_misses = 0
+        cur_pid = last_seen_id + 1
+        while consecutive_misses < 3 and cur_pid <= last_seen_id + 25:
+            try:
+                pr = await client.get(f"https://t.me/AliFRDrop/{cur_pid}")
+                if pr.status_code == 200 and f'data-telegram-post="alifrdrop/{cur_pid}"' in pr.text.lower():
+                    consecutive_misses = 0
+                    max_id = max(max_id, cur_pid)
+                    soup_p = BeautifulSoup(pr.text, "html.parser")
+                    desc_m = soup_p.find("meta", property="og:description")
+                    img_m = soup_p.find("meta", property="og:image")
+                    if desc_m and desc_m.get("content") and f"alifrdrop:{cur_pid}" not in published_keys:
+                        found_candidates.append({
+                            "msg_id": cur_pid,
+                            "raw_text": desc_m["content"],
+                            "source_photo_url": img_m["content"] if img_m else None,
+                            "msg_dt": datetime.now(timezone.utc)
+                        })
+                else:
+                    consecutive_misses += 1
+            except Exception:
+                consecutive_misses += 1
+            cur_pid += 1
+
+    return found_candidates, max_id
+
 async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: bool = False) -> int:
     print("=" * 70)
     print("ALIEXPRESS FRANCE DEALS PUBLISHER (STRICT QUALITY & FRESHNESS)")
@@ -555,86 +645,108 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                 if "/" in dp and dp.split("/")[-1].isdigit():
                     block_items.append((int(dp.split("/")[-1]), b))
 
-            if not block_items:
-                continue
+            to_process_items = []
 
-            current_max_id = max(b_id for b_id, _ in block_items)
-            last_seen_id = monitored.get(clean_ch, {}).get("last_message_id")
-            block_items.sort(key=lambda x: x[0])
+            if not block_items and clean_ch == "alifrdrop":
+                print(f"  [@{ch}] Web preview redirected. Probing direct post metadata...")
+                last_seen_id = monitored.get(clean_ch, {}).get("last_message_id")
+                probed_items, current_max_id = await probe_alifrdrop_direct_posts(client, last_seen_id, published_keys)
+                if current_max_id > (last_seen_id or 0):
+                    monitored.setdefault(clean_ch, {})["last_message_id"] = current_max_id
+                    monitored[clean_ch]["last_check_time"] = time.time()
+                    state["monitored_channels"] = monitored
+                    save_france_state(state)
+                to_process_items = probed_items[-MAX_DEALS_PER_CHANNEL:]
+                print(f"  [@{ch}] Selected {len(to_process_items)} candidate(s) to process (max ID #{current_max_id})")
+            elif block_items:
+                current_max_id = max(b_id for b_id, _ in block_items)
+                last_seen_id = monitored.get(clean_ch, {}).get("last_message_id")
+                block_items.sort(key=lambda x: x[0])
 
-            # FIRST RUN PROTECTION: If channel never tracked before, set baseline to current_max_id
-            # so old historical backlog from days/weeks ago is NEVER dumped!
-            if last_seen_id is None:
-                monitored.setdefault(clean_ch, {})["last_message_id"] = current_max_id
-                monitored[clean_ch]["last_check_time"] = time.time()
-                state["monitored_channels"] = monitored
+                if last_seen_id is None:
+                    monitored.setdefault(clean_ch, {})["last_message_id"] = current_max_id
+                    monitored[clean_ch]["last_check_time"] = time.time()
+                    state["monitored_channels"] = monitored
+                    save_france_state(state)
+                    new_blocks = [
+                        (b_id, b) for b_id, b in block_items[-3:]
+                        if f"{clean_ch}:{b_id}" not in published_keys
+                    ]
+                    print(f"  [FIRST RUN BASELINE] @{ch} baseline set to #{current_max_id}. Evaluating {len(new_blocks)} most recent candidate(s).")
+                else:
+                    handled_keys = set(state.get("handled_post_keys", []))
+                    lookback_cutoff = max(0, last_seen_id - 20)
+                    new_blocks = [
+                        (b_id, b) for b_id, b in block_items
+                        if (b_id > last_seen_id or (b_id >= lookback_cutoff and f"{clean_ch}:{b_id}" not in published_keys and f"{clean_ch}:{b_id}" not in handled_keys))
+                        and f"{clean_ch}:{b_id}" not in published_keys
+                    ]
+
+                fresh_blocks = []
+                max_age_hours = 14.0
+                for b_id, b in new_blocks:
+                    time_el = b.find("time")
+                    msg_dt = None
+                    if time_el and time_el.get("datetime"):
+                        try:
+                            msg_dt = datetime.fromisoformat(time_el["datetime"].replace("Z", "+00:00"))
+                        except Exception:
+                            pass
+                    if msg_dt:
+                        age_h = (datetime.now(timezone.utc) - msg_dt).total_seconds() / 3600.0
+                        if age_h > max_age_hours:
+                            if f"{clean_ch}:{b_id}" not in state.get("handled_post_keys", []):
+                                state.setdefault("handled_post_keys", []).append(f"{clean_ch}:{b_id}")
+                            continue
+                    fresh_blocks.append((b_id, b))
+
                 save_france_state(state)
-                # On first run, only evaluate the last 3 visible messages as fresh candidates
-                new_blocks = [
-                    (b_id, b) for b_id, b in block_items[-3:]
-                    if f"{clean_ch}:{b_id}" not in published_keys
-                ]
-                print(f"  [FIRST RUN BASELINE] @{ch} baseline set to #{current_max_id}. Evaluating {len(new_blocks)} most recent candidate(s).")
-            else:
-                # Filter for posts strictly newer than last_seen_id OR unposted recent candidates
-                handled_keys = set(state.get("handled_post_keys", []))
-                lookback_cutoff = max(0, last_seen_id - 20)
-                new_blocks = [
-                    (b_id, b) for b_id, b in block_items
-                    if (b_id > last_seen_id or (b_id >= lookback_cutoff and f"{clean_ch}:{b_id}" not in published_keys and f"{clean_ch}:{b_id}" not in handled_keys))
-                    and f"{clean_ch}:{b_id}" not in published_keys
-                ]
+                print(f"  [@{ch}] Found {len(fresh_blocks)} fresh candidate(s) to process (last seen #{last_seen_id})")
 
-            # Pre-filter for message freshness (< 14h)
-            fresh_blocks = []
-            max_age_hours = 14.0
-            for b_id, b in new_blocks:
-                time_el = b.find("time")
-                msg_dt = None
-                if time_el and time_el.get("datetime"):
-                    try:
-                        msg_dt = datetime.fromisoformat(time_el["datetime"].replace("Z", "+00:00"))
-                    except Exception:
-                        pass
-                if msg_dt:
-                    age_h = (datetime.now(timezone.utc) - msg_dt).total_seconds() / 3600.0
-                    if age_h > max_age_hours:
-                        if f"{clean_ch}:{b_id}" not in state.get("handled_post_keys", []):
-                            state.setdefault("handled_post_keys", []).append(f"{clean_ch}:{b_id}")
+                if len(fresh_blocks) > MAX_DEALS_PER_CHANNEL:
+                    print(f"  [PACING] Channel @{ch} has {len(fresh_blocks)} candidates. Pacing top {MAX_DEALS_PER_CHANNEL}.")
+                    selected_blocks = fresh_blocks[:MAX_DEALS_PER_CHANNEL]
+                else:
+                    selected_blocks = fresh_blocks
+
+                for msg_id, block in selected_blocks:
+                    t_div = block.find("div", class_="tgme_widget_message_text")
+                    if not t_div:
                         continue
-                fresh_blocks.append((b_id, b))
-
-            save_france_state(state)
-            print(f"  [@{ch}] Found {len(fresh_blocks)} fresh candidate(s) to process (last seen #{last_seen_id})")
-
-            # Pacing: limit per channel per cycle
-            if len(fresh_blocks) > MAX_DEALS_PER_CHANNEL:
-                print(f"  [PACING] Channel @{ch} has {len(fresh_blocks)} candidates. Pacing top {MAX_DEALS_PER_CHANNEL}.")
-                to_process_blocks = fresh_blocks[:MAX_DEALS_PER_CHANNEL]
+                    source_photo_url = None
+                    photo_wrap = block.find("a", class_="tgme_widget_message_photo_wrap")
+                    if photo_wrap and photo_wrap.get("style"):
+                        m_url = re.search(r"url\([\'\"]?(https?://[^\'\"]+)[\'\"]?\)", photo_wrap["style"])
+                        if m_url:
+                            source_photo_url = m_url.group(1)
+                    raw_text = extract_telegram_html_text(t_div)
+                    time_el = block.find("time")
+                    msg_dt = None
+                    if time_el and time_el.get("datetime"):
+                        try:
+                            msg_dt = datetime.fromisoformat(time_el["datetime"].replace("Z", "+00:00"))
+                        except Exception:
+                            pass
+                    to_process_items.append({
+                        "msg_id": msg_id,
+                        "raw_text": raw_text,
+                        "source_photo_url": source_photo_url,
+                        "msg_dt": msg_dt
+                    })
             else:
-                to_process_blocks = fresh_blocks
+                continue
 
             max_processed_id = last_seen_id or 0
 
-            for msg_id, block in to_process_blocks:
+            for item in to_process_items:
                 if published_count >= MAX_DEALS_PER_RUN:
                     break
 
+                msg_id = item["msg_id"]
+                raw_text = item["raw_text"]
+                source_photo_url = item.get("source_photo_url")
+                msg_dt = item.get("msg_dt")
                 post_key = f"{clean_ch}:{msg_id}"
-                t_div = block.find("div", class_="tgme_widget_message_text")
-                if not t_div:
-                    max_processed_id = max(max_processed_id, msg_id)
-                    continue
-
-                # Extract source post photo if present (competitor's coupon banner)
-                source_photo_url = None
-                photo_wrap = block.find("a", class_="tgme_widget_message_photo_wrap")
-                if photo_wrap and photo_wrap.get("style"):
-                    m_url = re.search(r"url\(['\"]?(https?://[^'\"]+)['\"]?\)", photo_wrap["style"])
-                    if m_url:
-                        source_photo_url = m_url.group(1)
-
-                raw_text = extract_telegram_html_text(t_div)
 
                 # Strict France-specific validation: reject any Arabic/Algerian deal or non-compatible source
                 valid_fr, fr_reason = is_strictly_france_compatible_deal(raw_text, channel_username=ch)
@@ -652,15 +764,7 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                 except Exception as ev_err:
                     logger.debug(f"Event sniffing skipped: {ev_err}")
 
-                # 1. Parse message timestamp and enforce maximum freshness
-                time_el = block.find("time")
-                msg_dt = None
-                if time_el and time_el.get("datetime"):
-                    try:
-                        msg_dt = datetime.fromisoformat(time_el["datetime"].replace("Z", "+00:00"))
-                    except Exception:
-                        pass
-
+                # 1. Message timestamp already extracted
                 # 2. Strict freshness check & expired promo check
                 is_fresh, freshness_reason = promo_tracker.validate_deal_freshness(raw_text, msg_dt, max_hours=int(max_age_hours))
                 if not is_fresh:
@@ -742,11 +846,11 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                     is_price_drop = False
 
                 # 7. Official Studio Photo ONLY (Never leak competitor channel watermarks)
-                img_url = extracted.image_url
+                img_url = extracted.image_url or source_photo_url
                 if not img_url and extracted.product_id:
                     img_url = await product_extractor._fetch_clean_aliexpress_image(extracted.product_id)
                 if not extracted.is_coupon_list:
-                    if not img_url or not any(domain in str(img_url) for domain in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
+                    if not img_url or not any(domain in str(img_url) for domain in ["alicdn.com", "aliexpress-media.com", "aliexpress.com", "telesco.pe"]):
                         print(f"  [NO OFFICIAL PHOTO] Image fetch incomplete for {extracted.product_id}. Leaving for retry.")
                         continue
 
@@ -762,7 +866,11 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                 )
 
                 # 9. Generate French caption
-                caption = await france_caption_generator.generate(
+                if clean_ch == "alifrdrop":
+                    from app.ai.generator_fr import format_alifrdrop_caption_1to1
+                    caption = format_alifrdrop_caption_1to1(raw_text, aff_link, extracted.coupon_code)
+                else:
+                    caption = await france_caption_generator.generate(
                     title=extracted.title or "AliExpress Deal",
                     eur_price=extracted.current_price_eur,
                     usd_price=extracted.current_price,
