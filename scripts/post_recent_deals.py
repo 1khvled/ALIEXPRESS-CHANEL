@@ -3,6 +3,7 @@ import os
 import re
 import sys
 from pathlib import Path
+from typing import Optional, Dict, Any, List
 
 # Add project root to sys.path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
