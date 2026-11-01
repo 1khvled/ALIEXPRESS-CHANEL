@@ -538,7 +538,9 @@
     "1005007938007660",
     "1005009306976665",
     "1005010160409425",
-    "1005010158909326"
+    "1005010158909326",
+    "1005006915475056",
+    "1005008460932629"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1089,7 +1091,9 @@
     "1005007938007660": 1793550268.818711,
     "1005009306976665": 1793550277.834843,
     "1005010160409425": 1793550286.3852649,
-    "1005010158909326": 1793550291.1923656
+    "1005010158909326": 1793550291.1923656,
+    "1005006915475056": 1793553788.666037,
+    "1005008460932629": 1793553793.0475857
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1717,7 +1721,9 @@
     "واجهة صوت Maono G1 Neo Audio Mixer",
     "للتسجيل من الكاميرا و الكونصول",
     "Fifine D6 Stream deck",
-    "Ulanzi D200 Stream deck"
+    "Ulanzi D200 Stream deck",
+    "ويبكام Emeet S600 4K Webcam",
+    "بطاقة تسجيل Ezcap333 HDMI 4k USB Capture Card"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2351,11 +2357,11 @@
     "واجهة صوت Maono G1 Neo Audio Mixer": 1793550268.818711,
     "للتسجيل من الكاميرا و الكونصول": 1793550277.834843,
     "Fifine D6 Stream deck": 1793550286.3852649,
-    "Ulanzi D200 Stream deck": 1793550291.1923656
+    "Ulanzi D200 Stream deck": 1793550291.1923656,
+    "ويبكام Emeet S600 4K Webcam": 1793553788.666037,
+    "بطاقة تسجيل Ezcap333 HDMI 4k USB Capture Card": 1793553793.0475857
   },
   "published_post_keys": [
-    "aniscoupons:32685",
-    "zedstoreonline:38524",
     "lodydeals:45402",
     "lodydeals:45403",
     "bnddeals:50790",
@@ -3353,15 +3359,17 @@
     "ecksdeal:5988",
     "ecksdeal:5990",
     "ecksdeal:5994",
-    "ecksdeal:5995"
+    "ecksdeal:5995",
+    "ecksdeal:5983",
+    "ecksdeal:5991"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793550291.1923656,
+  "last_run_time": 1793553793.0475857,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
-      "last_check_time": 1793551071.5499766
+      "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
       "last_message_id": 45876,
@@ -3827,7 +3835,9 @@
     "1005007938007660": 41.53,
     "1005009306976665": 39.17,
     "1005010160409425": 53.14,
-    "1005010158909326": 35.14
+    "1005010158909326": 35.14,
+    "1005006915475056": 35.49,
+    "1005008460932629": 32.63
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12312,6 +12322,26 @@
       "price": 35.14,
       "timestamp": 1793550291.1923656,
       "status": "ACTIVE"
+    },
+    "ecksdeal:5983": {
+      "channel_msg_id": 1518,
+      "product_id": "1005006915475056",
+      "title": "ويبكام Emeet S600 4K Webcam",
+      "channel": "ecksdeal",
+      "source_msg_id": 5983,
+      "price": 35.49,
+      "timestamp": 1793553788.666037,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5991": {
+      "channel_msg_id": 1519,
+      "product_id": "1005008460932629",
+      "title": "بطاقة تسجيل Ezcap333 HDMI 4k USB Capture Card",
+      "channel": "ecksdeal",
+      "source_msg_id": 5991,
+      "price": 32.63,
+      "timestamp": 1793553793.0475857,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12320,17 +12350,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793550293.2733493,
+    "last_deal_post_time": 1793553796.8026063,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793553646.221413,
+    "last_sweep_time": 1793553802.4245863,
     "last_sweep_times": {
-      "algeria": 1793553641.7335086,
-      "france": 1793553646.221413
+      "algeria": 1793553796.784468,
+      "france": 1793553802.4245863
     },
     "last_deal_post_times": {
-      "algeria": 1793550293.2733493
+      "algeria": 1793553796.8026063
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -12886,7 +12916,9 @@
     "1005007938007660": "ecksdeal",
     "1005009306976665": "ecksdeal",
     "1005010160409425": "ecksdeal",
-    "1005010158909326": "ecksdeal"
+    "1005010158909326": "ecksdeal",
+    "1005006915475056": "ecksdeal",
+    "1005008460932629": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -13522,7 +13554,9 @@
     "واجهة صوت Maono G1 Neo Audio Mixer": "ecksdeal",
     "للتسجيل من الكاميرا و الكونصول": "ecksdeal",
     "Fifine D6 Stream deck": "ecksdeal",
-    "Ulanzi D200 Stream deck": "ecksdeal"
+    "Ulanzi D200 Stream deck": "ecksdeal",
+    "ويبكام Emeet S600 4K Webcam": "ecksdeal",
+    "بطاقة تسجيل Ezcap333 HDMI 4k USB Capture Card": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -15023,7 +15057,10 @@
     "ecksdeal:5975",
     "ecksdeal:5985",
     "ecksdeal:5989",
-    "ecksdeal:5996"
+    "ecksdeal:5996",
+    "ecksdeal:5974",
+    "ecksdeal:5992",
+    "ecksdeal:5993"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
