@@ -540,7 +540,10 @@
     "1005010160409425",
     "1005010158909326",
     "1005006915475056",
-    "1005008460932629"
+    "1005008460932629",
+    "1005008147206532",
+    "1005006398880142",
+    "1005008755897663"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -586,7 +589,7 @@
     "1005005648888450": 1790941186.791633,
     "1005006117094928": 1790941202.9035249,
     "1005006603602562": 1790941207.5310047,
-    "1005010721042860": 1793467316.5435166,
+    "1005010721042860": 1793554773.9452004,
     "1005009517247552": 1790941221.8823678,
     "1005012191191893": 1791137155.7589798,
     "1005012968221708": 1793542591.509991,
@@ -929,7 +932,7 @@
     "1005012838686691": 1793384191.3385255,
     "1005007966795709": 1793314939.6901202,
     "1005007760080474": 1793314944.416167,
-    "1005011857340568": 1793314949.3624141,
+    "1005011857340568": 1793554740.6491675,
     "1005008459823709": 1793448578.1268156,
     "1005012823469739": 1793448666.8797097,
     "1005009286078717": 1793448653.6981916,
@@ -941,7 +944,7 @@
     "1005012929122487": 1793361907.8596587,
     "1005010529820402": 1793361913.4976676,
     "1005010529440901": 1793361918.107678,
-    "1005010035309013": 1793478753.7972097,
+    "1005010035309013": 1793554752.7954907,
     "1005010385472500": 1793448762.165183,
     "1005011779814585": 1793441292.8773124,
     "1005013090910574": 1793542420.8525836,
@@ -973,7 +976,7 @@
     "1005011778197787": 1793467141.896747,
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
-    "1005005373032877": 1793384241.776936,
+    "1005005373032877": 1793554745.8585548,
     "1005007869955343": 1793542500.4794705,
     "1005012644570693": 1793441338.6619778,
     "1005003949106838": 1793542475.0738764,
@@ -1093,7 +1096,10 @@
     "1005010160409425": 1793550286.3852649,
     "1005010158909326": 1793550291.1923656,
     "1005006915475056": 1793553788.666037,
-    "1005008460932629": 1793553793.0475857
+    "1005008460932629": 1793553793.0475857,
+    "1005008147206532": 1793554730.1566968,
+    "1005006398880142": 1793554757.8937938,
+    "1005008755897663": 1793554764.2266893
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1723,7 +1729,12 @@
     "Fifine D6 Stream deck",
     "Ulanzi D200 Stream deck",
     "ويبكام Emeet S600 4K Webcam",
-    "بطاقة تسجيل Ezcap333 HDMI 4k USB Capture Card"
+    "بطاقة تسجيل Ezcap333 HDMI 4k USB Capture Card",
+    "DJI Mic Mini 2TX 1RX",
+    "Blackview WAVE 10 8/256GB",
+    "SAMSUNG DDR3 Ram 8GB 1600MHz",
+    "ASRock B650 PRO RS",
+    "Honor Power 2 5G 12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2186,7 +2197,7 @@
     "MSI PRO X870E-P WIFI AM5": 1793384195.9014845,
     "Vivo X300 Pro 5G 12/256GB": 1793384203.5839794,
     "Amd Ryzen R5 9600X Cpu 3.9 Ghz 6-Core 12-Thread 38Mb Am5 New!": 1793384223.580694,
-    "Maono PD200X XLR/USB Dynamic": 1793384241.776936,
+    "Maono PD200X XLR/USB Dynamic": 1793554745.8585548,
     "MAONO PD100X USB/XLR Dynamic": 1793542500.4794705,
     "Machenike G3 V2 PC Gaming Controller": 1793384273.7830687,
     "⭐️ 🎟️": 1793384286.409923,
@@ -2262,7 +2273,7 @@
     "Machenike G3 V2 Controller": 1793478711.9386597,
     "GIGABYTE B550M AORUS ELITE": 1793542425.5251148,
     "CUSU SSD 1TB  M2 NVMe": 1793542349.2109704,
-    "Anker Liberty 4 Pro": 1793478753.7972097,
+    "Anker Liberty 4 Pro": 1793554752.7954907,
     "Realme 15T 8/256GB": 1793543739.1061752,
     "Blackview MEGA 12  12/256": 1793478769.6023057,
     "Lenovo Xiaoxin Pad Pro 2025 12.7  inch": 1793478774.2399445,
@@ -2359,16 +2370,14 @@
     "Fifine D6 Stream deck": 1793550286.3852649,
     "Ulanzi D200 Stream deck": 1793550291.1923656,
     "ويبكام Emeet S600 4K Webcam": 1793553788.666037,
-    "بطاقة تسجيل Ezcap333 HDMI 4k USB Capture Card": 1793553793.0475857
+    "بطاقة تسجيل Ezcap333 HDMI 4k USB Capture Card": 1793553793.0475857,
+    "DJI Mic Mini 2TX 1RX": 1793554730.1566968,
+    "Blackview WAVE 10 8/256GB": 1793554740.6491675,
+    "SAMSUNG DDR3 Ram 8GB 1600MHz": 1793554757.8937938,
+    "ASRock B650 PRO RS": 1793554764.2266893,
+    "Honor Power 2 5G 12/256GB": 1793554773.9452004
   },
   "published_post_keys": [
-    "lodydeals:45402",
-    "lodydeals:45403",
-    "bnddeals:50790",
-    "bnddeals:50791",
-    "lodydeals:45404",
-    "lodydeals:45405",
-    "lodydeals:45406",
     "bnddeals:50792",
     "lodydeals:45407",
     "lodydeals:45408",
@@ -3361,19 +3370,26 @@
     "ecksdeal:5994",
     "ecksdeal:5995",
     "ecksdeal:5983",
-    "ecksdeal:5991"
+    "ecksdeal:5991",
+    "lodydeals:45878",
+    "lodydeals:45882",
+    "lodydeals:45883",
+    "lodydeals:45885",
+    "lodydeals:45886",
+    "lodydeals:45888",
+    "lodydeals:45890"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793553793.0475857,
+  "last_run_time": 1793554773.9452004,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45876,
-      "last_check_time": 1793544018.7776399
+      "last_message_id": 45890,
+      "last_check_time": 1793554775.9872658
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3433,7 +3449,7 @@
     "1005010178295650": 4.62,
     "1005006117094928": 32.2,
     "1005006603602562": 181.0,
-    "1005010721042860": 380.0,
+    "1005010721042860": 363.17,
     "1005009517247552": 236.0,
     "1005012191191893": 224.3,
     "1005012968221708": 20.2,
@@ -3682,7 +3698,7 @@
     "1005008327980403": 142.86,
     "1005012838686691": 140.98,
     "1005007966795709": 87.0,
-    "1005011857340568": 115.0,
+    "1005011857340568": 114.63,
     "1005008459823709": 21.4,
     "1005009286078717": 15.7,
     "1005009893668383": 13.8,
@@ -3837,7 +3853,10 @@
     "1005010160409425": 53.14,
     "1005010158909326": 35.14,
     "1005006915475056": 35.49,
-    "1005008460932629": 32.63
+    "1005008460932629": 32.63,
+    "1005008147206532": 79.44,
+    "1005006398880142": 10.49,
+    "1005008755897663": 101.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12342,6 +12361,76 @@
       "price": 32.63,
       "timestamp": 1793553793.0475857,
       "status": "ACTIVE"
+    },
+    "lodydeals:45878": {
+      "channel_msg_id": 1520,
+      "product_id": "1005008147206532",
+      "title": "DJI Mic Mini 2TX 1RX",
+      "channel": "lodydeals",
+      "source_msg_id": 45878,
+      "price": 79.44,
+      "timestamp": 1793554730.1566968,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45882": {
+      "channel_msg_id": 1521,
+      "product_id": "1005011857340568",
+      "title": "Blackview WAVE 10 8/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45882,
+      "price": 114.63,
+      "timestamp": 1793554740.6491675,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45883": {
+      "channel_msg_id": 1522,
+      "product_id": "1005005373032877",
+      "title": "Maono PD200X XLR/USB Dynamic",
+      "channel": "lodydeals",
+      "source_msg_id": 45883,
+      "price": 61.03,
+      "timestamp": 1793554745.8585548,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45885": {
+      "channel_msg_id": 1523,
+      "product_id": "1005010035309013",
+      "title": "Anker Liberty 4 Pro",
+      "channel": "lodydeals",
+      "source_msg_id": 45885,
+      "price": 72.89,
+      "timestamp": 1793554752.7954907,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45886": {
+      "channel_msg_id": 1524,
+      "product_id": "1005006398880142",
+      "title": "SAMSUNG DDR3 Ram 8GB 1600MHz",
+      "channel": "lodydeals",
+      "source_msg_id": 45886,
+      "price": 10.49,
+      "timestamp": 1793554757.8937938,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45888": {
+      "channel_msg_id": 1525,
+      "product_id": "1005008755897663",
+      "title": "ASRock B650 PRO RS",
+      "channel": "lodydeals",
+      "source_msg_id": 45888,
+      "price": 101.4,
+      "timestamp": 1793554764.2266893,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45890": {
+      "channel_msg_id": 1526,
+      "product_id": "1005010721042860",
+      "title": "Honor Power 2 5G 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45890,
+      "price": 363.17,
+      "timestamp": 1793554773.9452004,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12350,17 +12439,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793553796.8026063,
+    "last_deal_post_time": 1793554778.023221,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793554545.2259731,
+    "last_sweep_time": 1793554783.0672028,
     "last_sweep_times": {
-      "algeria": 1793554540.116399,
-      "france": 1793554545.2259731
+      "algeria": 1793554778.0047321,
+      "france": 1793554783.0672028
     },
     "last_deal_post_times": {
-      "algeria": 1793553796.8026063
+      "algeria": 1793554778.023221
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -12382,7 +12471,7 @@
     "1005010178295650": "couponsglobal",
     "1005006117094928": "zedstoreonline",
     "1005006603602562": "zedstoreonline",
-    "1005010721042860": "megaphonna",
+    "1005010721042860": "lodydeals",
     "1005009517247552": "zedstoreonline",
     "1005012191191893": "aniscoupons",
     "1005012968221708": "ecksdeal",
@@ -12755,7 +12844,7 @@
     "1005008327980403": "lodydeals",
     "1005012838686691": "lodydeals",
     "1005007966795709": "megaphonna",
-    "1005011857340568": "megaphonna",
+    "1005011857340568": "lodydeals",
     "1005008459823709": "zedstoreonline",
     "1005009286078717": "aniscoupons",
     "1005009893668383": "zedstoreonline",
@@ -12918,7 +13007,10 @@
     "1005010160409425": "ecksdeal",
     "1005010158909326": "ecksdeal",
     "1005006915475056": "ecksdeal",
-    "1005008460932629": "ecksdeal"
+    "1005008460932629": "ecksdeal",
+    "1005008147206532": "lodydeals",
+    "1005006398880142": "lodydeals",
+    "1005008755897663": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -13556,7 +13648,12 @@
     "Fifine D6 Stream deck": "ecksdeal",
     "Ulanzi D200 Stream deck": "ecksdeal",
     "ويبكام Emeet S600 4K Webcam": "ecksdeal",
-    "بطاقة تسجيل Ezcap333 HDMI 4k USB Capture Card": "ecksdeal"
+    "بطاقة تسجيل Ezcap333 HDMI 4k USB Capture Card": "ecksdeal",
+    "DJI Mic Mini 2TX 1RX": "lodydeals",
+    "Blackview WAVE 10 8/256GB": "lodydeals",
+    "SAMSUNG DDR3 Ram 8GB 1600MHz": "lodydeals",
+    "ASRock B650 PRO RS": "lodydeals",
+    "Honor Power 2 5G 12/256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -15060,7 +15157,13 @@
     "ecksdeal:5996",
     "ecksdeal:5974",
     "ecksdeal:5992",
-    "ecksdeal:5993"
+    "ecksdeal:5993",
+    "lodydeals:45877",
+    "lodydeals:45879",
+    "lodydeals:45880",
+    "lodydeals:45881",
+    "lodydeals:45887",
+    "lodydeals:45889"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
