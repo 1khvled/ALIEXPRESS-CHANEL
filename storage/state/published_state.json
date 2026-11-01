@@ -545,7 +545,8 @@
     "1005006398880142",
     "1005008755897663",
     "1005012887486015",
-    "1005010758512904"
+    "1005010758512904",
+    "1005013478918892"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1103,7 +1104,8 @@
     "1005006398880142": 1793554757.8937938,
     "1005008755897663": 1793554764.2266893,
     "1005012887486015": 1793556560.1844745,
-    "1005010758512904": 1793556565.207214
+    "1005010758512904": 1793556565.207214,
+    "1005013478918892": 1793556926.3977697
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1741,7 +1743,8 @@
     "Honor Power 2 5G 12/256GB",
     "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2",
     "HONOR Pad X8b Wifi 4/128GB",
-    "VIVO IQOO Z11s 8/128"
+    "VIVO IQOO Z11s 8/128",
+    "Honor WIN Turbo 2  8/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2385,10 +2388,10 @@
     "Honor Power 2 5G 12/256GB": 1793554773.9452004,
     "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2": 1793556560.1844745,
     "HONOR Pad X8b Wifi 4/128GB": 1793556565.207214,
-    "VIVO IQOO Z11s 8/128": 1793556742.3836262
+    "VIVO IQOO Z11s 8/128": 1793556742.3836262,
+    "Honor WIN Turbo 2  8/256GB": 1793556926.3977697
   },
   "published_post_keys": [
-    "aniscoupons:32686",
     "aniscoupons:32687",
     "aniscoupons:32688",
     "bnddeals:50793",
@@ -3387,19 +3390,20 @@
     "lodydeals:45891",
     "lodydeals:45893",
     "lodydeals:45894",
-    "lodydeals:45895"
+    "lodydeals:45895",
+    "lodydeals:45896"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793556742.3836262,
+  "last_run_time": 1793556926.3977697,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45895,
-      "last_check_time": 1793556744.4415622
+      "last_message_id": 45896,
+      "last_check_time": 1793556928.4411087
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3868,7 +3872,8 @@
     "1005006398880142": 10.49,
     "1005008755897663": 101.4,
     "1005012887486015": 146.25,
-    "1005010758512904": 175.8
+    "1005010758512904": 175.8,
+    "1005013478918892": 384.42
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12493,6 +12498,16 @@
       "price": 265.18,
       "timestamp": 1793556742.3836262,
       "status": "ACTIVE"
+    },
+    "lodydeals:45896": {
+      "channel_msg_id": 1532,
+      "product_id": "1005013478918892",
+      "title": "Honor WIN Turbo 2  8/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45896,
+      "price": 384.42,
+      "timestamp": 1793556926.3977697,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12501,17 +12516,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793556746.20894,
+    "last_deal_post_time": 1793556930.1244144,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793556750.692461,
+    "last_sweep_time": 1793556936.1099946,
     "last_sweep_times": {
-      "algeria": 1793556746.1906543,
-      "france": 1793556750.692461
+      "algeria": 1793556930.1052523,
+      "france": 1793556936.1099946
     },
     "last_deal_post_times": {
-      "algeria": 1793556746.20894
+      "algeria": 1793556930.1244144
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13074,7 +13089,8 @@
     "1005006398880142": "lodydeals",
     "1005008755897663": "lodydeals",
     "1005012887486015": "lodydeals",
-    "1005010758512904": "lodydeals"
+    "1005010758512904": "lodydeals",
+    "1005013478918892": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -13720,7 +13736,8 @@
     "Honor Power 2 5G 12/256GB": "lodydeals",
     "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2": "lodydeals",
     "HONOR Pad X8b Wifi 4/128GB": "lodydeals",
-    "VIVO IQOO Z11s 8/128": "lodydeals"
+    "VIVO IQOO Z11s 8/128": "lodydeals",
+    "Honor WIN Turbo 2  8/256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
