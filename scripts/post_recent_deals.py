@@ -228,16 +228,19 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
 
                 for page in range(max_pages):
                     resp = None
-                    for attempt in range(2):
+                    last_err = None
+                    for attempt in range(3):
                         try:
                             resp = await client.get(cur_url)
                             if resp.status_code == 200:
                                 break
-                        except Exception:
+                        except Exception as get_err:
+                            last_err = get_err
                             await asyncio.sleep(1.0)
 
                     if not resp or resp.status_code != 200:
-                        print(f"  [!] HTTP {resp.status_code if resp else 'TIMEOUT'} for @{ch} (page {page+1})")
+                        err_detail = f" (err: {last_err})" if last_err else ""
+                        print(f"  [!] HTTP {resp.status_code if resp else 'TIMEOUT'}{err_detail} for @{ch} (page {page+1})")
                         break
 
                     soup = BeautifulSoup(resp.text, "html.parser")
@@ -383,8 +386,8 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                                 if token:
                                     try:
                                         target_chat = getattr(settings, "TARGET_CHANNEL_ID", None) or getattr(settings, "TELEGRAM_CHANNEL", None) or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
-                                        async with httpx.AsyncClient(timeout=10.0) as client:
-                                            resp = await client.post(
+                                        async with httpx.AsyncClient(timeout=10.0) as ann_client:
+                                            resp_ann = await ann_client.post(
                                                 f"https://api.telegram.org/bot{token}/sendMessage",
                                                 json={
                                                     "chat_id": target_chat,
@@ -393,7 +396,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                                                     "disable_web_page_preview": True
                                                 }
                                             )
-                                            if resp.status_code == 200 and resp.json().get("ok"):
+                                            if resp_ann.status_code == 200 and resp_ann.json().get("ok"):
                                                 record_channel_announcement_published(ann_tag, today_str)
                                                 print(f"  [ANNOUNCEMENT PUBLISHED] Auto-posted '{ann_tag}' announcement to {settings.TARGET_CHANNEL_ID}")
                                     except Exception as e:
