@@ -830,7 +830,7 @@
     "1005012199872142": 1793448862.466345,
     "9998886358": 1793276358.3466215,
     "1005013170854617": 1793448703.2952108,
-    "1005010172572484": 1793380507.1165082,
+    "1005010172572484": 1793521744.753259,
     "1005012167596439": 1793380498.9399478,
     "1005005209037696": 1793399509.450536,
     "1005007145755647": 1793441302.3527575,
@@ -1868,7 +1868,7 @@
     "OnePlus Turbo 6x  6/128GB": 1793276192.7711725,
     "Oneplus ACE 6 Ultra 12/256GB": 1793276220.2800016,
     "VIVO Y600 Pro 8/128": 1793278959.3832097,
-    "Oppo Find X9 12/256": 1793278969.2747114,
+    "Oppo Find X9 12/256": 1793521744.753259,
     "Oppo Find X9s Pro 12/256": 1793278979.5236633,
     "POCO F7  12/256": 1793399509.450536,
     "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz": 1793314907.7038486,
@@ -2057,7 +2057,6 @@
     "IQOO Z11 Turbo": 1793490111.0047178
   },
   "published_post_keys": [
-    "ecksdeal:5835",
     "ecksdeal:5836",
     "bnddeals:50768",
     "bnddeals:50769",
@@ -3056,27 +3055,28 @@
     "megaphonna:8694",
     "megaphonna:8692",
     "megaphonna:8691",
-    "megaphonna:8689"
+    "megaphonna:8689",
+    "zedstoreonline:38967"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793500800.6950834,
+  "last_run_time": 1793521744.753259,
   "monitored_channels": {
     "aniscoupons": {
-      "last_message_id": 33340,
-      "last_check_time": 1793505137.1435826
+      "last_message_id": 33377,
+      "last_check_time": 1793521747.7682626
     },
     "ecksdeal": {
-      "last_message_id": 5923,
-      "last_check_time": 1793505137.713765
+      "last_message_id": 5934,
+      "last_check_time": 1793521749.4980252
     },
     "lodydeals": {
-      "last_message_id": 45758,
-      "last_check_time": 1793505135.8596606
+      "last_message_id": 45780,
+      "last_check_time": 1793521736.7973397
     },
     "bnddeals": {
-      "last_message_id": 50969,
-      "last_check_time": 1793505138.3017821
+      "last_message_id": 50996,
+      "last_check_time": 1793521750.2511258
     },
     "test_channel": {
       "last_message_id": 1793283032,
@@ -3087,12 +3087,12 @@
       "last_check_time": 1793314917.0347583
     },
     "zedstoreonline": {
-      "last_message_id": 38932,
-      "last_check_time": 1793505136.419328
+      "last_message_id": 38967,
+      "last_check_time": 1793521746.7909474
     },
     "megaphonna": {
-      "last_message_id": 8694,
-      "last_check_time": 1793505139.0042899
+      "last_message_id": 8712,
+      "last_check_time": 1793521753.869213
     },
     "couponsglobal": {
       "last_message_id": 48880,
@@ -3368,7 +3368,7 @@
     "1005013479172067": 218.0,
     "1005012199872142": 469.9,
     "1005013170854617": 262.0,
-    "1005010172572484": 503.0,
+    "1005010172572484": 513.7,
     "1005012167596439": 594.0,
     "1005005209037696": 328.0,
     "1005007145755647": 358.2,
@@ -10918,6 +10918,16 @@
       "price": 469.0,
       "timestamp": 1793500800.6950834,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:38967": {
+      "channel_msg_id": 1411,
+      "product_id": "1005010172572484",
+      "title": "Oppo Find X9 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 38967,
+      "price": 513.7,
+      "timestamp": 1793521744.753259,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -10926,17 +10936,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793500805.8004646,
+    "last_deal_post_time": 1793521753.9021747,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793505150.091715,
+    "last_sweep_time": 1793521757.7750401,
     "last_sweep_times": {
-      "algeria": 1793505139.0208,
-      "france": 1793505150.091715
+      "algeria": 1793521753.8859038,
+      "france": 1793521757.7750401
     },
     "last_deal_post_times": {
-      "algeria": 1793500805.8004646
+      "algeria": 1793521753.9021747
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -11298,7 +11308,7 @@
     "1005012199872142": "megaphonna",
     "9998886358": "test_channel",
     "1005013170854617": "aniscoupons",
-    "1005010172572484": "megaphonna",
+    "1005010172572484": "zedstoreonline",
     "1005012167596439": "megaphonna",
     "1005005209037696": "zedstoreonline",
     "1005007145755647": "zedstoreonline",
@@ -12480,7 +12490,7 @@
     "AliExpress Special Promo Octobre 2026_20261004": 661,
     "AliExpress Special Promo Octobre 2026_20261006": 677,
     "Brand Day Sale Octobre 2026_20261009": 702,
-    "11.11 Global Shopping Festival Warm-Up_20261028": 1060
+    "11.11 Global Shopping Festival Main Sale_20261101": 1409
   },
   "sent_promo_notifiers": [
     "LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
@@ -12488,7 +12498,9 @@
     "END_ALERT_Brand Day Sale_20261013",
     "LAUNCH_ALERT_Winter Offers_20261014",
     "END_ALERT_Winter Offers_20261018",
-    "END_ALERT_11.11 Global Shopping Festival Warm-Up_20261101"
+    "END_ALERT_11.11 Global Shopping Festival Warm-Up_20261101",
+    "LAUNCH_ALERT_11.11 Global Shopping Festival Main Sale_20261101",
+    "LAUNCH_ALERT_11.11 Global Shopping Festival Warm-Up 2026_20261101"
   ],
   "last_card_affiliate_time_dz": 1793505109.5420074,
   "card_affiliate_variant_idx_dz": 0,
@@ -12496,11 +12508,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38580",
-    "zedstoreonline:38589",
-    "aniscoupons:32848",
-    "lodydeals:45546",
-    "bnddeals:50828",
     "lodydeals:45539",
     "megaphonna:8291",
     "lodydeals:45555",
@@ -13387,7 +13394,120 @@
     "megaphonna:8688",
     "megaphonna:8687",
     "megaphonna:8686",
-    "bnddeals:50965"
+    "bnddeals:50965",
+    "lodydeals:45794",
+    "lodydeals:45793",
+    "lodydeals:45792",
+    "lodydeals:45791",
+    "lodydeals:45790",
+    "lodydeals:45789",
+    "lodydeals:45788",
+    "lodydeals:45787",
+    "lodydeals:45786",
+    "lodydeals:45785",
+    "lodydeals:45784",
+    "lodydeals:45783",
+    "lodydeals:45782",
+    "lodydeals:45781",
+    "lodydeals:45779",
+    "lodydeals:45778",
+    "lodydeals:45777",
+    "lodydeals:45776",
+    "lodydeals:45775",
+    "lodydeals:45780",
+    "zedstoreonline:38969",
+    "zedstoreonline:38968",
+    "zedstoreonline:38966",
+    "zedstoreonline:38965",
+    "zedstoreonline:38964",
+    "zedstoreonline:38963",
+    "zedstoreonline:38962",
+    "zedstoreonline:38961",
+    "zedstoreonline:38960",
+    "zedstoreonline:38959",
+    "zedstoreonline:38958",
+    "zedstoreonline:38957",
+    "zedstoreonline:38956",
+    "zedstoreonline:38955",
+    "zedstoreonline:38954",
+    "zedstoreonline:38953",
+    "zedstoreonline:38952",
+    "zedstoreonline:38951",
+    "zedstoreonline:38950",
+    "aniscoupons:33377",
+    "aniscoupons:33376",
+    "aniscoupons:33375",
+    "aniscoupons:33374",
+    "aniscoupons:33373",
+    "aniscoupons:33372",
+    "aniscoupons:33371",
+    "aniscoupons:33370",
+    "aniscoupons:33369",
+    "aniscoupons:33368",
+    "aniscoupons:33367",
+    "aniscoupons:33366",
+    "aniscoupons:33365",
+    "aniscoupons:33364",
+    "aniscoupons:33363",
+    "aniscoupons:33362",
+    "aniscoupons:33361",
+    "aniscoupons:33360",
+    "aniscoupons:33359",
+    "aniscoupons:33358",
+    "ecksdeal:5940",
+    "ecksdeal:5939",
+    "ecksdeal:5938",
+    "ecksdeal:5937",
+    "ecksdeal:5936",
+    "ecksdeal:5935",
+    "ecksdeal:5933",
+    "ecksdeal:5932",
+    "ecksdeal:5931",
+    "ecksdeal:5930",
+    "ecksdeal:5929",
+    "ecksdeal:5928",
+    "ecksdeal:5927",
+    "ecksdeal:5926",
+    "ecksdeal:5925",
+    "ecksdeal:5934",
+    "ecksdeal:5924",
+    "bnddeals:50996",
+    "bnddeals:50995",
+    "bnddeals:50994",
+    "bnddeals:50993",
+    "bnddeals:50992",
+    "bnddeals:50991",
+    "bnddeals:50990",
+    "bnddeals:50989",
+    "bnddeals:50988",
+    "bnddeals:50987",
+    "bnddeals:50986",
+    "bnddeals:50985",
+    "bnddeals:50984",
+    "bnddeals:50983",
+    "bnddeals:50982",
+    "bnddeals:50981",
+    "bnddeals:50980",
+    "bnddeals:50979",
+    "bnddeals:50978",
+    "bnddeals:50977",
+    "megaphonna:8711",
+    "megaphonna:8710",
+    "megaphonna:8709",
+    "megaphonna:8708",
+    "megaphonna:8707",
+    "megaphonna:8706",
+    "megaphonna:8705",
+    "megaphonna:8704",
+    "megaphonna:8703",
+    "megaphonna:8702",
+    "megaphonna:8701",
+    "megaphonna:8699",
+    "megaphonna:8698",
+    "megaphonna:8697",
+    "megaphonna:8695",
+    "megaphonna:8712",
+    "megaphonna:8696"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
