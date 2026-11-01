@@ -646,6 +646,7 @@ async def collect_and_post_france_deals(force: bool = False, force_tajmi3at: boo
                     block_items.append((int(dp.split("/")[-1]), b))
 
             to_process_items = []
+            max_age_hours = 14.0
 
             if not block_items and clean_ch == "alifrdrop":
                 print(f"  [@{ch}] Web preview redirected. Probing direct post metadata...")
