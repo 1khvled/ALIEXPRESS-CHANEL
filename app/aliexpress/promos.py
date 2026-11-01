@@ -1103,16 +1103,27 @@ class PromoTracker:
             if m:
                 return False, f"Mention of expired campaign/date detected: '{m.group(0)}'"
 
+        # Collect all active and upcoming festival codes so they are NEVER falsely treated as expired
+        active_codes = set()
+        for ev in PROMO_CALENDAR:
+            if now <= ev.end_date:
+                for t in (ev.coupon_tiers or []):
+                    if t.get("code"):
+                        active_codes.add(t.get("code").upper())
+                for t in (getattr(ev, "coupon_tiers_fr", None) or []):
+                    if t.get("code"):
+                        active_codes.add(t.get("code").upper())
+
         # 3. Reject any posts containing expired festival codes from ended promo events
         for event in PROMO_CALENDAR:
             if now > event.end_date:
-                # If the message is freshly posted (within 12h) and codes are from current month sales, don't mark as expired
-                if msg_datetime and (now - msg_datetime) < timedelta(hours=12) and event.start_date.month == now.month:
+                # If the message is freshly posted (within 18h), don't mark as expired
+                if msg_datetime and (now - msg_datetime) < timedelta(hours=18):
                     continue
                 tiers_dz = event.coupon_tiers or []
                 tiers_fr = getattr(event, "coupon_tiers_fr", None) or []
-                expired_codes = [t.get("code") for t in tiers_dz if t.get("code")] + \
-                                [t.get("code") for t in tiers_fr if t.get("code")]
+                expired_codes = [t.get("code") for t in tiers_dz if t.get("code") and t.get("code").upper() not in active_codes] + \
+                                [t.get("code") for t in tiers_fr if t.get("code") and t.get("code").upper() not in active_codes]
                 for code in expired_codes:
                     if re.search(r'\b' + re.escape(code) + r'\b', text, re.IGNORECASE):
                         return False, f"Expired festival coupon code '{code}' from ended event '{event.name}'"
