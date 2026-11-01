@@ -804,7 +804,7 @@
     "1005010812635861": 1792160246.020243,
     "1005008500550817": 1792025664.1703467,
     "1005009834132291": 1793542602.1938312,
-    "1005008077568655": 1792157933.6814291,
+    "1005008077568655": 1793571550.5645735,
     "1005009774318553": 1793543777.6383033,
     "1005012585389764": 1792061322.5579543,
     "1005011997237872": 1793543770.1912897,
@@ -1789,7 +1789,8 @@
     "Blackview MEGA 5 AI 8/256GB",
     "Anker Nano Smart Display 45W",
     "Zeblaze Btalk 4 Pro",
-    "Anker Soundcore 2"
+    "Anker Soundcore 2",
+    "MACHENIKE G5Pro Max SE"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2455,10 +2456,10 @@
     "Blackview MEGA 5 AI 8/256GB": 1793569904.419889,
     "Anker Nano Smart Display 45W": 1793570287.0210865,
     "Zeblaze Btalk 4 Pro": 1793570640.1582527,
-    "Anker Soundcore 2": 1793571013.3288968
+    "Anker Soundcore 2": 1793571013.3288968,
+    "MACHENIKE G5Pro Max SE": 1793571550.5645735
   },
   "published_post_keys": [
-    "bnddeals:50798",
     "aniscoupons:32700",
     "aniscoupons:32701",
     "aniscoupons:32702",
@@ -3457,19 +3458,20 @@
     "lodydeals:45933",
     "lodydeals:45934",
     "lodydeals:45935",
-    "lodydeals:45936"
+    "lodydeals:45936",
+    "lodydeals:45937"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793571187.7518308,
+  "last_run_time": 1793571550.5645735,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45936,
-      "last_check_time": 1793571189.7933724
+      "last_message_id": 45937,
+      "last_check_time": 1793571552.606062
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3697,7 +3699,7 @@
     "1005012933967378": 21.7,
     "1005010812635861": 92.0,
     "1005008500550817": 23.6,
-    "1005008077568655": 42.38,
+    "1005008077568655": 38.39,
     "1005012585389764": 153.9,
     "1005011997237872": 92.15,
     "1005011908654312": 122.6,
@@ -12836,6 +12838,16 @@
       "price": 20.14,
       "timestamp": 1793571187.7518308,
       "status": "ACTIVE"
+    },
+    "lodydeals:45937": {
+      "channel_msg_id": 1566,
+      "product_id": "1005008077568655",
+      "title": "MACHENIKE G5Pro Max SE",
+      "channel": "lodydeals",
+      "source_msg_id": 45937,
+      "price": 38.39,
+      "timestamp": 1793571550.5645735,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12844,17 +12856,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793571191.5000756,
+    "last_deal_post_time": 1793571554.1282022,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793571376.4030743,
+    "last_sweep_time": 1793571557.7028258,
     "last_sweep_times": {
-      "algeria": 1793571370.9163203,
-      "france": 1793571376.4030743
+      "algeria": 1793571554.1092465,
+      "france": 1793571557.7028258
     },
     "last_deal_post_times": {
-      "algeria": 1793571191.5000756
+      "algeria": 1793571554.1282022
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13106,7 +13118,7 @@
     "1005012933967378": "lodydeals",
     "1005010812635861": "zedstoreonline",
     "1005008500550817": "bnddeals",
-    "1005008077568655": "aniscoupons",
+    "1005008077568655": "lodydeals",
     "1005012585389764": "aniscoupons",
     "1005011997237872": "lodydeals",
     "1005011908654312": "aniscoupons",
@@ -14098,7 +14110,8 @@
     "Blackview MEGA 5 AI 8/256GB": "lodydeals",
     "Anker Nano Smart Display 45W": "lodydeals",
     "Zeblaze Btalk 4 Pro": "lodydeals",
-    "Anker Soundcore 2": "lodydeals"
+    "Anker Soundcore 2": "lodydeals",
+    "MACHENIKE G5Pro Max SE": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
