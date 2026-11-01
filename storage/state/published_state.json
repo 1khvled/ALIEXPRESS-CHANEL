@@ -3064,19 +3064,19 @@
   "monitored_channels": {
     "aniscoupons": {
       "last_message_id": 33340,
-      "last_check_time": 1793500773.5892754
+      "last_check_time": 1793505137.1435826
     },
     "ecksdeal": {
       "last_message_id": 5923,
-      "last_check_time": 1793500774.0076544
+      "last_check_time": 1793505137.713765
     },
     "lodydeals": {
       "last_message_id": 45758,
-      "last_check_time": 1793500772.5299947
+      "last_check_time": 1793505135.8596606
     },
     "bnddeals": {
       "last_message_id": 50969,
-      "last_check_time": 1793500776.677949
+      "last_check_time": 1793505138.3017821
     },
     "test_channel": {
       "last_message_id": 1793283032,
@@ -3088,11 +3088,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 38932,
-      "last_check_time": 1793500773.0006032
+      "last_check_time": 1793505136.419328
     },
     "megaphonna": {
       "last_message_id": 8694,
-      "last_check_time": 1793500805.781245
+      "last_check_time": 1793505139.0042899
     },
     "couponsglobal": {
       "last_message_id": 48880,
@@ -10930,10 +10930,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793500818.1266556,
+    "last_sweep_time": 1793505150.091715,
     "last_sweep_times": {
-      "algeria": 1793500805.7910109,
-      "france": 1793500818.1266556
+      "algeria": 1793505139.0208,
+      "france": 1793505150.091715
     },
     "last_deal_post_times": {
       "algeria": 1793500805.8004646
@@ -12490,8 +12490,8 @@
     "END_ALERT_Winter Offers_20261018",
     "END_ALERT_11.11 Global Shopping Festival Warm-Up_20261101"
   ],
-  "last_card_affiliate_time_dz": 1793418256.5139923,
-  "card_affiliate_variant_idx_dz": 2,
+  "last_card_affiliate_time_dz": 1793505109.5420074,
+  "card_affiliate_variant_idx_dz": 0,
   "last_tajmi3at_published_time": 1793478662.4373393,
   "published_deals_history": {},
   "settings": {},
@@ -13386,7 +13386,8 @@
     "megaphonna:8690",
     "megaphonna:8688",
     "megaphonna:8687",
-    "megaphonna:8686"
+    "megaphonna:8686",
+    "bnddeals:50965"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
