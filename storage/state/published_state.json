@@ -551,7 +551,8 @@
     "1005010443138358",
     "1005013006189646",
     "1005011653777805",
-    "1005009292891294"
+    "1005009292891294",
+    "1005009916144912"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1115,7 +1116,8 @@
     "1005010443138358": 1793566252.8097658,
     "1005013006189646": 1793566310.8398705,
     "1005011653777805": 1793566315.7447746,
-    "1005009292891294": 1793566324.6794934
+    "1005009292891294": 1793566324.6794934,
+    "1005009916144912": 1793567337.0235388
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1765,7 +1767,8 @@
     "ATTACK SHARK V6 25000DPI",
     "UGREEN FitBuds Bluetooth 6.0",
     "Ugreen Smart Display 45W",
-    "Ugreen Nexode Air 100W"
+    "Ugreen Nexode Air 100W",
+    "SMAILWOLF RS7 PAW3311"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2421,10 +2424,10 @@
     "ATTACK SHARK V6 25000DPI": 1793566315.7447746,
     "UGREEN FitBuds Bluetooth 6.0": 1793566324.6794934,
     "Ugreen Smart Display 45W": 1793566329.6306164,
-    "Ugreen Nexode Air 100W": 1793566334.1942697
+    "Ugreen Nexode Air 100W": 1793566334.1942697,
+    "SMAILWOLF RS7 PAW3311": 1793567337.0235388
   },
   "published_post_keys": [
-    "aniscoupons:32695",
     "aniscoupons:32696",
     "lodydeals:45414",
     "lodydeals:45415",
@@ -3423,19 +3426,20 @@
     "lodydeals:45919",
     "lodydeals:45921",
     "lodydeals:45922",
-    "lodydeals:45923"
+    "lodydeals:45923",
+    "lodydeals:45926"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793566334.1942697,
+  "last_run_time": 1793567337.0235388,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45925,
-      "last_check_time": 1793567150.5692024
+      "last_message_id": 45926,
+      "last_check_time": 1793567339.0487123
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3910,7 +3914,8 @@
     "1005010443138358": 6.9,
     "1005013006189646": 415.9,
     "1005011653777805": 23.8,
-    "1005009292891294": 20.44
+    "1005009292891294": 20.44,
+    "1005009916144912": 8.02
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12685,6 +12690,16 @@
       "price": 29.93,
       "timestamp": 1793566334.1942697,
       "status": "ACTIVE"
+    },
+    "lodydeals:45926": {
+      "channel_msg_id": 1555,
+      "product_id": "1005009916144912",
+      "title": "SMAILWOLF RS7 PAW3311",
+      "channel": "lodydeals",
+      "source_msg_id": 45926,
+      "price": 8.02,
+      "timestamp": 1793567337.0235388,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12693,17 +12708,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793566337.8858123,
+    "last_deal_post_time": 1793567340.405918,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793567155.532327,
+    "last_sweep_time": 1793567345.386757,
     "last_sweep_times": {
-      "algeria": 1793567151.8768725,
-      "france": 1793567155.532327
+      "algeria": 1793567340.3953316,
+      "france": 1793567345.386757
     },
     "last_deal_post_times": {
-      "algeria": 1793566337.8858123
+      "algeria": 1793567340.405918
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13272,7 +13287,8 @@
     "1005010443138358": "lodydeals",
     "1005013006189646": "lodydeals",
     "1005011653777805": "lodydeals",
-    "1005009292891294": "lodydeals"
+    "1005009292891294": "lodydeals",
+    "1005009916144912": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -13930,7 +13946,8 @@
     "ATTACK SHARK V6 25000DPI": "lodydeals",
     "UGREEN FitBuds Bluetooth 6.0": "lodydeals",
     "Ugreen Smart Display 45W": "lodydeals",
-    "Ugreen Nexode Air 100W": "lodydeals"
+    "Ugreen Nexode Air 100W": "lodydeals",
+    "SMAILWOLF RS7 PAW3311": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
