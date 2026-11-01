@@ -882,7 +882,7 @@
     "1005009200129898": 1793227797.933171,
     "9998888526": 1793228526.415094,
     "9998889908": 1793229908.2507865,
-    "1005012339196141": 1793441309.787715,
+    "1005012339196141": 1793555097.6969874,
     "1005012472631754": 1793467108.5532427,
     "1005013039644752": 1793448649.434771,
     "1005013479436053": 1793380394.5736995,
@@ -2196,7 +2196,7 @@
     "MSI X670E GAMING PLUS WIFI": 1793384191.3385255,
     "MSI PRO X870E-P WIFI AM5": 1793384195.9014845,
     "Vivo X300 Pro 5G 12/256GB": 1793384203.5839794,
-    "Amd Ryzen R5 9600X Cpu 3.9 Ghz 6-Core 12-Thread 38Mb Am5 New!": 1793384223.580694,
+    "Amd Ryzen R5 9600X Cpu 3.9 Ghz 6-Core 12-Thread 38Mb Am5 New!": 1793555097.6969874,
     "Maono PD200X XLR/USB Dynamic": 1793554745.8585548,
     "MAONO PD100X USB/XLR Dynamic": 1793542500.4794705,
     "Machenike G3 V2 PC Gaming Controller": 1793384273.7830687,
@@ -2378,7 +2378,6 @@
     "Honor Power 2 5G 12/256GB": 1793554773.9452004
   },
   "published_post_keys": [
-    "bnddeals:50792",
     "lodydeals:45407",
     "lodydeals:45408",
     "lodydeals:45409",
@@ -3377,11 +3376,12 @@
     "lodydeals:45885",
     "lodydeals:45886",
     "lodydeals:45888",
-    "lodydeals:45890"
+    "lodydeals:45890",
+    "lodydeals:45884"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793554773.9452004,
+  "last_run_time": 1793555097.6969874,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
@@ -3389,7 +3389,7 @@
     },
     "lodydeals": {
       "last_message_id": 45890,
-      "last_check_time": 1793554775.9872658
+      "last_check_time": 1793555097.6969874
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3657,7 +3657,7 @@
     "1005012633322402": 3.05,
     "1005012249968766": 656.0,
     "1005009200129898": 0.01,
-    "1005012339196141": 152.9,
+    "1005012339196141": 152.36,
     "1005012472631754": 120.4,
     "1005013479436053": 429.0,
     "1005012431631514": 143.55,
@@ -12431,6 +12431,16 @@
       "price": 363.17,
       "timestamp": 1793554773.9452004,
       "status": "ACTIVE"
+    },
+    "lodydeals:45884": {
+      "channel_msg_id": 1527,
+      "product_id": "1005012339196141",
+      "title": "Amd Ryzen R5 9600X Cpu 3.9 Ghz 6-Core 12-Thread 38Mb Am5 New!",
+      "channel": "lodydeals",
+      "source_msg_id": 45884,
+      "price": 152.36,
+      "timestamp": 1793555097.6969874,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12439,17 +12449,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793554778.023221,
+    "last_deal_post_time": 1793555101.2510269,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793554912.6105986,
+    "last_sweep_time": 1793555105.149448,
     "last_sweep_times": {
-      "algeria": 1793554908.485854,
-      "france": 1793554912.6105986
+      "algeria": 1793555101.2325594,
+      "france": 1793555105.149448
     },
     "last_deal_post_times": {
-      "algeria": 1793554778.023221
+      "algeria": 1793555101.2510269
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -12797,7 +12807,7 @@
     "1005009200129898": "ecksdeal",
     "9998888526": "test_channel",
     "9998889908": "test_channel",
-    "1005012339196141": "zedstoreonline",
+    "1005012339196141": "lodydeals",
     "1005012472631754": "zedstoreonline",
     "1005013479436053": "aniscoupons",
     "1005012431631514": "pcgamingpart",
