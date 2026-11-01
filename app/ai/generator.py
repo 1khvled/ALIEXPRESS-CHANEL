@@ -585,6 +585,12 @@ class DealCaptionGenerator:
 caption_generator = DealCaptionGenerator()
 
 
+ALIEXPRESS_URL_RE = re.compile(
+    r"(?:https?://)?(?:[a-zA-Z0-9_\-]+\.)*aliexpress\.com/\S+",
+    re.IGNORECASE
+)
+
+
 def format_lodydeals_caption_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None) -> str:
     """
     1:1 Mirror formatter for @lodydeals:
@@ -598,7 +604,6 @@ def format_lodydeals_caption_1to1(raw_text: str, affiliate_url: str, coupon_code
     lines = raw_text.splitlines()
     clean_lines = []
     has_aff = False
-    skip_next_url = False
 
     for line in lines:
         l = line.strip()
@@ -611,23 +616,23 @@ def format_lodydeals_caption_1to1(raw_text: str, affiliate_url: str, coupon_code
             continue
 
         # Skip secondary link line 'مباشر' and its accompanying url
-        if l == "مباشر":
-            skip_next_url = True
-            continue
-        if skip_next_url:
-            skip_next_url = False
-            continue
-
-        # Replace competitor affiliate links
-        if re.search(r"https?://(?:s\.click\.aliexpress\.com|[\w\.]*aliexpress\.com)", l) or re.match(r"^s\.click\.aliexpress\.com/\S+", l):
-            if not has_aff:
-                clean_lines.append(affiliate_url)
-                has_aff = True
+        if l == "مباشر" or (any(kw in l for kw in ["مباشر", "رابط آخر", "رابط بديل", "بديل", "متجر"]) and ALIEXPRESS_URL_RE.search(l)):
             continue
 
         # Replace competitor bot mentions
         if any(b in l.lower() for b in ["lodycouponsbot", "@lodycouponsbot", "t.me/lodycouponsbot"]):
             clean_lines.append("t.me/Alilo07BOT")
+            continue
+
+        # Replace competitor affiliate links
+        if ALIEXPRESS_URL_RE.search(l):
+            if not has_aff:
+                clean_lines.append(ALIEXPRESS_URL_RE.sub(affiliate_url, l))
+                has_aff = True
+            continue
+
+        # If a line is just an orphaned 'الرابط:' and we already placed our affiliate link, skip it
+        if has_aff and re.match(r"^الرابط\s*:?$", l):
             continue
 
         clean_lines.append(l)
@@ -649,6 +654,7 @@ def format_lodydeals_caption_1to1(raw_text: str, affiliate_url: str, coupon_code
     if "Alilo07BOT" not in caption:
         caption += "\n\n🤖 بوت تخفيض النقاط: @Alilo07BOT"
 
+    caption = re.sub(r"\n+\s*الرابط\s*:?\s*$", "", caption)
     return caption
 
 
@@ -673,13 +679,13 @@ def format_ecksdeal_caption_1to1(raw_text: str, affiliate_url: str, coupon_code:
             continue
 
         # Scrub secondary competitor affiliate links
-        if re.search(r"رابط\s*آخر\s*:\s*https?://", l) or re.match(r"^رابط\s*آخر\s*:", l):
+        if (any(kw in l for kw in ["رابط آخر", "رابط بديل", "بديل", "متجر", "مباشر"]) and ALIEXPRESS_URL_RE.search(l)) or re.match(r"^رابط\s*آخر\s*:", l):
             continue
 
         # Replace primary affiliate link
-        if re.search(r"https?://(?:s\.click\.aliexpress\.com|[\w\.]*aliexpress\.com)", l):
+        if ALIEXPRESS_URL_RE.search(l):
             if not has_aff:
-                clean_lines.append(re.sub(r"https?://\S+", affiliate_url, l))
+                clean_lines.append(ALIEXPRESS_URL_RE.sub(affiliate_url, l))
                 has_aff = True
             continue
 
@@ -691,6 +697,9 @@ def format_ecksdeal_caption_1to1(raw_text: str, affiliate_url: str, coupon_code:
         # Replace competitor channel mention
         if any(b in l.lower() for b in ["ecksdeal", "@ecksdeal", "t.me/ecksdeal"]):
             clean_lines.append(re.sub(r"https?://t\.me/\S+|@\w+", "https://t.me/DzAliexpress0", l))
+            continue
+
+        if has_aff and re.match(r"^الرابط\s*:?$", l):
             continue
 
         clean_lines.append(l)
@@ -712,5 +721,5 @@ def format_ecksdeal_caption_1to1(raw_text: str, affiliate_url: str, coupon_code:
     if "Alilo07BOT" not in caption:
         caption += "\n\n🤖 بوت تخفيض النقاط: @Alilo07BOT"
 
+    caption = re.sub(r"\n+\s*الرابط\s*:?\s*$", "", caption)
     return caption
-

@@ -60,6 +60,51 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     print(f"Active Channels: {', '.join(CHANNELS)}")
     print("=" * 70)
 
+    # Automated One-Time Post Repair: Fix posts #1420..#1442 to ensure zero competitor link contamination
+    try:
+        from app.ai.generator import format_lodydeals_caption_1to1, ALIEXPRESS_URL_RE
+        bot_token_repair = get_bot_token()
+        channel_id_repair = getattr(settings, "TARGET_CHANNEL_ID", None) or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+        if bot_token_repair and channel_id_repair:
+            async with httpx.AsyncClient(timeout=15.0) as rep_client:
+                for before_id in [1430, 1445]:
+                    preview_url = f"https://t.me/s/{channel_id_repair.lstrip('@')}?before={before_id}"
+                    r = await rep_client.get(preview_url)
+                    if r.status_code == 200:
+                        soup = BeautifulSoup(r.text, "html.parser")
+                        for m in soup.find_all("div", class_="tgme_widget_message"):
+                            dp = m.get("data-post", "")
+                            if not dp or "/" not in dp:
+                                continue
+                            mid = int(dp.split("/")[-1])
+                            if 1420 <= mid <= 1442:
+                                t_div = m.find("div", class_="tgme_widget_message_text")
+                                if not t_div:
+                                    continue
+                                raw_txt = t_div.get_text(separator="\n")
+                                urls_in_text = ALIEXPRESS_URL_RE.findall(raw_txt)
+                                btn = m.find("a", class_="url_button")
+                                our_link = btn.get("href") if btn else None
+                                if not our_link and urls_in_text:
+                                    our_link = urls_in_text[-1]
+                                if our_link and (len(urls_in_text) > 1 or any(u != our_link for u in urls_in_text)):
+                                    clean_caption = format_lodydeals_caption_1to1(raw_txt, our_link)
+                                    edit_resp = await rep_client.post(
+                                        f"https://api.telegram.org/bot{bot_token_repair}/editMessageCaption",
+                                        json={
+                                            "chat_id": channel_id_repair,
+                                            "message_id": mid,
+                                            "caption": clean_caption,
+                                            "parse_mode": "HTML"
+                                        }
+                                    )
+                                    if edit_resp.status_code == 200 and edit_resp.json().get("ok"):
+                                        print(f"  [REPAIRED POST #{mid}] Caption cleaned successfully (only our link: {our_link})")
+                                    else:
+                                        print(f"  [!] Failed to edit #{mid}: {edit_resp.text}")
+    except Exception as rep_err:
+        print(f"[!] Post repair error: {rep_err}")
+
     # Automated Check: Promo Calendar & Next Promo Transitions
     try:
         from app.publisher.promo_calendar import check_and_auto_post_promo_transitions
@@ -167,8 +212,8 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     is_warmup_or_event = bool(active_p and ("warm-up" in active_p.name.lower() or "11.11" in active_p.name or "festival" in active_p.name.lower()))
     is_peak = is_algerian_peak_hour()
     if is_warmup_or_event:
-        max_deals_per_channel = 35
-        MAX_DEALS_PER_RUN = 60
+        max_deals_per_channel = 60
+        MAX_DEALS_PER_RUN = 100
     else:
         max_deals_per_channel = 15 if is_peak else 10
         MAX_DEALS_PER_RUN = 30 if is_peak else 20
