@@ -612,7 +612,7 @@
     "1005009828161174": 1791031550.2120771,
     "1005009281115306": 1793558205.9468858,
     "1005011797801269": 1791203753.790013,
-    "1005007168829266": 1791102355.4991398,
+    "1005007168829266": 1793568996.6387508,
     "1005012406142215": 1793543604.5851276,
     "1005007345398413": 1790943717.3545928,
     "1005012504076921": 1791236011.4353654,
@@ -1777,7 +1777,8 @@
     "SMAILWOLF RS7 PAW3311",
     "Redmi Buds 6 Active",
     "Lexar D400 USB3.1 USB-C 128G",
-    "Zeblaze Vibe 8 AMOLED"
+    "Zeblaze Vibe 8 AMOLED",
+    "Baseus 20W PD Charger"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2437,10 +2438,10 @@
     "SMAILWOLF RS7 PAW3311": 1793567337.0235388,
     "Redmi Buds 6 Active": 1793567897.1194866,
     "Lexar D400 USB3.1 USB-C 128G": 1793567901.942504,
-    "Zeblaze Vibe 8 AMOLED": 1793568442.6763802
+    "Zeblaze Vibe 8 AMOLED": 1793568442.6763802,
+    "Baseus 20W PD Charger": 1793568996.6387508
   },
   "published_post_keys": [
-    "bnddeals:50796",
     "bnddeals:50797",
     "zedstoreonline:38518",
     "aniscoupons:32697",
@@ -3439,19 +3440,20 @@
     "lodydeals:45926",
     "lodydeals:45927",
     "lodydeals:45928",
-    "lodydeals:45929"
+    "lodydeals:45929",
+    "lodydeals:45930"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793568442.6763802,
+  "last_run_time": 1793568996.6387508,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45929,
-      "last_check_time": 1793568444.7100153
+      "last_message_id": 45930,
+      "last_check_time": 1793568998.682929
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3519,7 +3521,7 @@
     "1005009828161174": 7.62,
     "1005009281115306": 12.3,
     "1005011797801269": 55.78,
-    "1005007168829266": 4.19,
+    "1005007168829266": 4.46,
     "1005012406142215": 375.12,
     "1005008390562391": 11.79,
     "1005007345398413": 14.3,
@@ -12745,6 +12747,16 @@
       "price": 32.1,
       "timestamp": 1793568442.6763802,
       "status": "ACTIVE"
+    },
+    "lodydeals:45930": {
+      "channel_msg_id": 1559,
+      "product_id": "1005007168829266",
+      "title": "Baseus 20W PD Charger",
+      "channel": "lodydeals",
+      "source_msg_id": 45930,
+      "price": 4.46,
+      "timestamp": 1793568996.6387508,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12753,17 +12765,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793568446.2417748,
+    "last_deal_post_time": 1793569000.4861977,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793568820.1001332,
+    "last_sweep_time": 1793569004.6254425,
     "last_sweep_times": {
-      "algeria": 1793568815.850865,
-      "france": 1793568820.1001332
+      "algeria": 1793569000.4668815,
+      "france": 1793569004.6254425
     },
     "last_deal_post_times": {
-      "algeria": 1793568446.2417748
+      "algeria": 1793569000.4861977
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -12797,7 +12809,7 @@
     "1005009281115306": "lodydeals",
     "1005011797801269": "couponsglobal",
     "1005012973772517": "zedstoreonline",
-    "1005007168829266": "aniscoupons",
+    "1005007168829266": "lodydeals",
     "1005008880082336": "zedstoreonline",
     "1005010453516983": "megaphonna",
     "1005012406142215": "lodydeals",
@@ -13998,7 +14010,8 @@
     "SMAILWOLF RS7 PAW3311": "lodydeals",
     "Redmi Buds 6 Active": "lodydeals",
     "Lexar D400 USB3.1 USB-C 128G": "lodydeals",
-    "Zeblaze Vibe 8 AMOLED": "lodydeals"
+    "Zeblaze Vibe 8 AMOLED": "lodydeals",
+    "Baseus 20W PD Charger": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
