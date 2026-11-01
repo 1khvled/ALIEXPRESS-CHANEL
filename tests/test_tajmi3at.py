@@ -146,9 +146,9 @@ def test_bulletin_caption_length_and_format():
     assert len(caption) <= 1024, f"Caption exceeded 1024 chars! Got {len(caption)}"
 
     # Check key components
-    assert "📱" in caption
-    assert "تجميعة أقوى عروض الهواتف" in caption
-    assert "@Alilo07BOT" in caption
+    assert "❗️ فهرس لافضل عروض" in caption
+    assert "الهواتف الذكية" in caption
+    assert "Alilo07BOT" in caption
     assert "https://t.me/DzAliexpress0/" in caption
     assert "$" in caption or "💲" in caption
 
@@ -164,9 +164,8 @@ def test_master_roundup_caption_and_format():
     caption, used = build_master_daily_roundup_text(sample_deals, "DzAliexpress0")
     assert len(used) == 4
     assert len(caption) <= 1024
-    assert "🌙" in caption
-    assert "تجميعة أفضل صفقات وعروض اليوم" in caption
-    assert "@Alilo07BOT" in caption
+    assert "❗️ فهرس لافضل عروض" in caption
+    assert "Alilo07BOT" in caption
     assert "https://t.me/DzAliexpress0/210" in caption
 
 @pytest.mark.asyncio
@@ -256,8 +255,8 @@ def test_smart_gaming_aggregation():
 
     caption, used = build_category_bulletin_text("gaming_gear", sample_gaming_deals, "DzAliexpress0")
     assert len(used) == 4
-    assert "تجميعة ملحقات وعتاد القيمنق" in caption
-    assert "@Alilo07BOT" in caption
+    assert "فهرس لافضل عروض ملحقات وعتاد القيمنق" in caption
+    assert "Alilo07BOT" in caption
     assert "https://t.me/DzAliexpress0/301" in caption
 
 def test_clean_item_title_word_boundaries():
@@ -332,10 +331,8 @@ def test_format_deal_line_rtl_stability():
     }
     line = format_deal_line(item, "DzAliexpress0", index=1)
     # Verify single-line clickable format with Megaprix star and link
-    assert "⭐️ <a href=" in line
-    assert "HTC NE79 TWS" in line
-    assert "5.09" in line
-    assert "💲" in line
+    assert '<a href="https://t.me/DzAliexpress0/472">HTC NE79 TWS</a>' in line
+    assert "5.09 $" in line
 
 def test_bulletin_link_integrity():
     """Verifies that every item in bulletin text links directly and strictly to its own channel_msg_id."""
@@ -349,7 +346,7 @@ def test_bulletin_link_integrity():
 
     # Extract all href links: <a href="https://t.me/DzAliexpress0/(\d+)"><b>(.*?)</b></a>
     import re
-    links = re.findall(r'<a href="https://t\.me/DzAliexpress0/(\d+)"><b>(.*?)</b></a>', bulletin_text)
+    links = re.findall(r'<a href="https://t\.me/DzAliexpress0/(\d+)">([^<]+)</a>', bulletin_text)
 
     assert len(links) == len(items), f"Expected {len(items)} links, got {len(links)}"
     found_msg_ids = {int(msg_id_str) for msg_id_str, _ in links}

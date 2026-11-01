@@ -1128,7 +1128,7 @@ def extract_clean_title(text: str) -> Optional[str]:
         "عمرو السلة", "عمّروا السلة", "البيع يبدأ", "البيع يبدا", "يوم الأحد", "يوم الاحد",
         "يوم 1 نوفمبر", "نهار التخفيضات", "تسخينات", "تسخينات 11.11", "سعر أرض", "سعر ارض",
         "متوسط سعره", "سعره حالياً", "سعره حاليا", "سعرو حالياً", "سعرو حاليا", "في البلاد",
-        "السوق الجزائرية", "السوق الجزائري", "عليه طلب"
+        "السوق الجزائرية", "السوق الجزائري", "عليه طلب", "أستخدمها شخصيا", "استخدمها شخصيا", "للتسجيل من", "السماعات المفقودة", "الاكثر طلبا", "الأكثر طلباً", "الاكثر طلباً"
     ]
 
     # Normalize tatweel and remove multiple exclamation/fire emojis
@@ -1157,7 +1157,21 @@ def extract_clean_title(text: str) -> Optional[str]:
             return True
         return False
 
-    # 0. Look for explicit star bullet title line (ZedStore & top Algerian channels standard: ⭐️ [Title] or [Country] ⭐️ [Title])
+    # 0. Look for explicit title prefix line (HIGHEST PRIORITY in Algerian deal channels: e.g. تخفيض لـ, عرض خاص لـ)
+    for i, line in enumerate(lines):
+        m = re.search(r'(?:تخفيض\s+لـ*|تخفيض\s+الآن\s+لـ*|عرض\s+خاص\s+لـ*|تخفيض\s+على)\s*[:：\-]?\s*(.*)', line)
+        if m:
+            cand = m.group(1).strip()
+            # If empty or colon or very short, check the next line
+            if (not cand or len(cand) < 3) and i + 1 < len(lines):
+                cand = lines[i + 1].strip()
+            cand = re.sub(r'[\$€💵].*$', '', cand).strip()
+            cand = re.sub(r'https?://\S+', '', cand).strip()
+            cand = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:]+', '', cand).strip()
+            if not is_noisy(cand) and len(cand) >= 3:
+                return cand[:100]
+
+    # 0.5 Look for explicit star bullet title line (ZedStore & top Algerian channels standard: ⭐️ [Title] or [Country] ⭐️ [Title])
     for i, line in enumerate(lines):
         if any(s in line for s in ["⭐️", "⭐", "🌟"]):
             parts = re.split(r'[⭐️⭐🌟]', line)
@@ -1172,7 +1186,7 @@ def extract_clean_title(text: str) -> Optional[str]:
             if not is_noisy(cand) and len(cand) >= 3:
                 return cand[:100]
 
-    # 0.5 Look for checkmark / device / channel bullet title line (DealScout DZ, Megaphonna Ⓜ, etc.)
+    # 0.8 Look for checkmark / device / channel bullet title line (DealScout DZ, Megaphonna Ⓜ, etc.)
     for i, line in enumerate(lines):
         if any(line.startswith(s) for s in ["✅", "✔️", "☑️", "📱", "🎮", "🎧", "Ⓜ️", "Ⓜ"]):
             cand = re.sub(r'^[✅✔️☑️📱🎮🎧Ⓜ️Ⓜ\s\-:]+', '', line).strip()
@@ -1182,20 +1196,6 @@ def extract_clean_title(text: str) -> Optional[str]:
             cand = re.sub(r'https?://\S+', '', cand).strip()
             cand = re.sub(r'</?[^>]+(>|$)', '', cand).strip()
             if not is_noisy(cand) and len(cand) >= 3:
-                return cand[:100]
-
-    # 1. Look for explicit title prefix line
-    for i, line in enumerate(lines):
-        m = re.search(r'(?:تخفيض\s+لـ?|تخفيض\s+الآن\s+لـ?|عرض\s+خاص\s+لـ?|تخفيض\s+على)\s*[:：\-]?\s*(.*)', line)
-        if m:
-            cand = m.group(1).strip()
-            # If empty or colon or very short, check the next line
-            if (not cand or len(cand) < 3) and i + 1 < len(lines):
-                cand = lines[i + 1].strip()
-            cand = re.sub(r'[\$€].*$', '', cand).strip()
-            cand = re.sub(r'https?://\S+', '', cand).strip()
-            cand = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:]+', '', cand).strip()
-            if not is_noisy(cand) and len(cand) >= 4:
                 return cand[:100]
 
     # 2. Look for lines with English/Arabic product name
@@ -1514,7 +1514,8 @@ def extract_telegram_html_text(text_div) -> str:
     # Replace block breaks and emoji container breaks with newlines
     html = re.sub(r'<(?:br|/p|/div|/blockquote|/tg-emoji|tg-emoji)[^>]*>', '\n', html, flags=re.IGNORECASE)
     soup = BeautifulSoup(html, "html.parser")
-    text = soup.get_text()
+    import html as html_lib
+    text = html_lib.unescape(soup.get_text())
     # Normalize excessive newlines
     text = re.sub(r'\n{3,}', '\n\n', text)
     return text.strip()

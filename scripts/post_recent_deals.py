@@ -50,6 +50,96 @@ def get_bot_token() -> str:
         or ""
     )
 
+async def publish_incoming_index_post(
+    text_div,
+    raw_text: str,
+    source_photo_url: Optional[str],
+    source_channel: str,
+    source_msg_id: int
+) -> bool:
+    """
+    Mirrors an incoming Tajmi3a / Category Index bulletin from @ECKSDEAL or @lodydeals to @DzAliexpress0.
+    Rewrites internal competitor links to our channel links, replaces competitor bots, and preserves format.
+    """
+    try:
+        from bs4 import BeautifulSoup
+        from app.publisher.state_tracker import load_persistent_state, record_post_published
+        html_contents = text_div.decode_contents() if hasattr(text_div, "decode_contents") else str(text_div)
+
+        # Replace line breaks and strip widget clutter
+        html_clean = re.sub(r'<(?:br|/p|/div)[^>]*>', '\n', html_contents, flags=re.IGNORECASE)
+        html_clean = re.sub(r'<i class="emoji"[^>]*><b>(.*?)</b></i>', r'\1', html_clean)
+        html_clean = re.sub(r'<a\s+[^>]*href="([^"]+)"[^>]*>', r'<a href="\1">', html_clean)
+
+        # Replace competitor bots
+        html_clean = re.sub(r'https://t\.me/(?:ECKSdealsbot|lodydeals_bot)', 'https://t.me/Alilo07BOT', html_clean)
+        html_clean = re.sub(r'@(?:ECKSdealsbot|lodydeals_bot)', '@Alilo07BOT', html_clean)
+
+        # Replace competitor channels
+        html_clean = re.sub(r'https://t\.me/(?:ECKSDEAL|lodydeals)', 'https://t.me/DzAliexpress0', html_clean)
+        html_clean = re.sub(r'@(?:ECKSDEAL|lodydeals)', '@DzAliexpress0', html_clean)
+
+        # Rewrite internal post links: https://t.me/ECKSDEAL/(\d+) or https://t.me/lodydeals/(\d+)
+        state = load_persistent_state()
+        channel_deals = state.get("channel_published_deals", {})
+
+        def _rewrite_internal_link(m):
+            comp_ch = "ecksdeal" if "ECKSDEAL" in m.group(0) else "lodydeals"
+            comp_id = m.group(1)
+            pub = channel_deals.get(f"{comp_ch}:{comp_id}")
+            if pub and pub.get("channel_msg_id"):
+                return f"https://t.me/DzAliexpress0/{pub['channel_msg_id']}"
+            return "https://t.me/DzAliexpress0"
+
+        html_clean = re.sub(r'https://t\.me/(?:ECKSDEAL|lodydeals)/(\d+)', _rewrite_internal_link, html_clean)
+        html_clean = re.sub(r'\n{3,}', '\n\n', html_clean).strip()
+
+        bot_token = get_bot_token()
+        target_chat = getattr(settings, "TARGET_CHANNEL_ID", None) or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+
+        if not bot_token:
+            return False
+
+        async with httpx.AsyncClient(timeout=15.0) as client:
+            resp = None
+            if source_photo_url:
+                resp = await client.post(
+                    f"https://api.telegram.org/bot{bot_token}/sendPhoto",
+                    json={
+                        "chat_id": target_chat,
+                        "photo": source_photo_url,
+                        "caption": html_clean,
+                        "parse_mode": "HTML"
+                    }
+                )
+            if not resp or resp.status_code != 200 or not resp.json().get("ok"):
+                resp = await client.post(
+                    f"https://api.telegram.org/bot{bot_token}/sendMessage",
+                    json={
+                        "chat_id": target_chat,
+                        "text": html_clean,
+                        "parse_mode": "HTML",
+                        "disable_web_page_preview": True
+                    }
+                )
+            if resp.status_code == 200 and resp.json().get("ok"):
+                new_msg_id = resp.json().get("result", {}).get("message_id")
+                record_post_published(
+                    channel_username=source_channel,
+                    message_id=source_msg_id,
+                    product_id=f"INDEX_{source_channel}_{source_msg_id}",
+                    title="فهرس العروض",
+                    channel_msg_id=new_msg_id
+                )
+                print(f"  [INDEX BULLETIN PUBLISHED] Successfully mirrored {source_channel} #{source_msg_id} -> DzAliexpress0 #{new_msg_id}!")
+                return True
+            else:
+                print(f"  [!] Failed to publish index bulletin: {resp.text if resp else 'No response'}")
+                return False
+    except Exception as e:
+        print(f"  [!] Exception publishing index bulletin: {e}")
+        return False
+
 async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bool = False) -> int:
     await init_db()
 
@@ -419,6 +509,21 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     # 4. Extract deal or coupon list (pass source_photo_url as fallback image)
                     extracted = await product_extractor.extract_from_message(raw_text, media_path=source_photo_url)
                     if not extracted or not extracted.is_valid:
+                        # Automated check: Incoming Tajmi3a / Category Index bulletin (e.g. ECKSDEAL #5996)
+                        if ("فهرس" in raw_text or "تجميعة" in raw_text) and ("🔴" in raw_text or "t.me/ECKSDEAL" in raw_text or "t.me/lodydeals" in raw_text):
+                            published_idx = await publish_incoming_index_post(
+                                text_div=text_div,
+                                raw_text=raw_text,
+                                source_photo_url=source_photo_url,
+                                source_channel=ch,
+                                source_msg_id=msg_id
+                            )
+                            if published_idx:
+                                deals_published_this_run += 1
+                                max_processed_id = max(max_processed_id, msg_id)
+                                record_post_handled(ch, msg_id)
+                                continue
+
                         # Automated check: Competitor channel service announcements (China holidays, customs, courier notices)
                         from app.aliexpress.parser import detect_channel_announcement
                         from app.publisher.state_tracker import is_channel_announcement_eligible, record_channel_announcement_published

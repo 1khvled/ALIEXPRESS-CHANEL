@@ -65,6 +65,9 @@ class ProductExtractor:
         if not text:
             return None
 
+        import html as html_lib
+        text = html_lib.unescape(text)
+
         # 1. Smart spam & non-deal filtering
         is_spam, reason = is_spam_or_non_deal(text)
         if is_spam:
@@ -209,8 +212,8 @@ class ProductExtractor:
         # but the resolved product title has ZERO keyword/category overlap (e.g. POCO smartphone),
         # reject the deal to prevent mismatched/frankenstein posts!
         if api_title and best_cand_score == 0.0 and title:
-            clean_tokens = [w for w in re.findall(r'[a-zA-Z0-9\u0600-\u06FF]{3,}', title.lower()) if w not in {"deal", "aliexpress", "sale", "global", "version", "original", "تخفيض", "سعر", "ممتاز", "عرض"}]
-            if len(clean_tokens) >= 2:
+            latin_tokens = [w for w in re.findall(r"[a-zA-Z0-9]{3,}", title.lower()) if w not in {"deal", "aliexpress", "sale", "global", "version", "original", "drop", "drops", "promo"}]
+            if len(latin_tokens) >= 2 and not any(tok in api_title.lower() for tok in latin_tokens):
                 logger.warning(f"Rejecting contaminated deal: post title '{title}' completely conflicts with resolved product '{api_title}' (score: 0.0).")
                 return None
 
