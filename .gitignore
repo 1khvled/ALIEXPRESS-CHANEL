@@ -20,6 +20,7 @@ storage/generated/*
 !storage/generated/.gitkeep
 !storage/state/
 !storage/state/*
+storage/state/pc_trigger.*
 
 # Python artifacts
 __pycache__/
