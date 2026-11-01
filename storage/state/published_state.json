@@ -901,7 +901,7 @@
     "1005012167596439": 1793380498.9399478,
     "1005005209037696": 1793399509.450536,
     "1005007145755647": 1793441302.3527575,
-    "1005011559072337": 1793361950.7774162,
+    "1005011559072337": 1793555278.3251228,
     "1005008430504420": 1793543755.5335042,
     "1005012483491590": 1793543693.4057088,
     "1005009234880101": 1793441297.4632108,
@@ -2100,7 +2100,7 @@
     "Oppo Find X9s Pro 12/256": 1793278979.5236633,
     "POCO F7  12/256": 1793399509.450536,
     "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz": 1793314907.7038486,
-    "AMD Ryzen 9 9900X": 1793361950.7774162,
+    "AMD Ryzen 9 9900X": 1793555278.3251228,
     "ONEPLUS 13 (12/256)": 1793448854.438805,
     "الأكثر طلباً في فترات سابقة": 1793467365.3420117,
     "CUSU SSD 480GB": 1793279429.2056015,
@@ -2378,7 +2378,6 @@
     "Honor Power 2 5G 12/256GB": 1793554773.9452004
   },
   "published_post_keys": [
-    "lodydeals:45407",
     "lodydeals:45408",
     "lodydeals:45409",
     "lodydeals:45410",
@@ -3377,19 +3376,20 @@
     "lodydeals:45886",
     "lodydeals:45888",
     "lodydeals:45890",
-    "lodydeals:45884"
+    "lodydeals:45884",
+    "lodydeals:45891"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793555097.6969874,
+  "last_run_time": 1793555278.3251228,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45890,
-      "last_check_time": 1793555097.6969874
+      "last_message_id": 45891,
+      "last_check_time": 1793555280.3651807
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3673,7 +3673,7 @@
     "1005012167596439": 594.0,
     "1005005209037696": 328.0,
     "1005007145755647": 358.2,
-    "1005011559072337": 313.9,
+    "1005011559072337": 313.49,
     "1005008430504420": 472.13,
     "1005012483491590": 245.91,
     "1005009234880101": 355.0,
@@ -12441,6 +12441,16 @@
       "price": 152.36,
       "timestamp": 1793555097.6969874,
       "status": "ACTIVE"
+    },
+    "lodydeals:45891": {
+      "channel_msg_id": 1528,
+      "product_id": "1005011559072337",
+      "title": "AMD Ryzen 9 9900X",
+      "channel": "lodydeals",
+      "source_msg_id": 45891,
+      "price": 313.49,
+      "timestamp": 1793555278.3251228,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12449,17 +12459,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793555101.2510269,
+    "last_deal_post_time": 1793555281.9936588,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793555105.149448,
+    "last_sweep_time": 1793555286.2432983,
     "last_sweep_times": {
-      "algeria": 1793555101.2325594,
-      "france": 1793555105.149448
+      "algeria": 1793555281.9762337,
+      "france": 1793555286.2432983
     },
     "last_deal_post_times": {
-      "algeria": 1793555101.2510269
+      "algeria": 1793555281.9936588
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -12825,7 +12835,7 @@
     "1005012167596439": "megaphonna",
     "1005005209037696": "zedstoreonline",
     "1005007145755647": "zedstoreonline",
-    "1005011559072337": "aniscoupons",
+    "1005011559072337": "lodydeals",
     "1005008430504420": "lodydeals",
     "1005012483491590": "lodydeals",
     "1005009234880101": "zedstoreonline",
@@ -13389,7 +13399,7 @@
     "Oppo Find X9s Pro 12/256": "zedstoreonline",
     "POCO F7  12/256": "zedstoreonline",
     "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz": "aniscoupons",
-    "AMD Ryzen 9 9900X": "aniscoupons",
+    "AMD Ryzen 9 9900X": "lodydeals",
     "ONEPLUS 13 (12/256)": "megaphonna",
     "الأكثر طلباً في فترات سابقة": "megaphonna",
     "CUSU SSD 480GB": "zedstoreonline",
