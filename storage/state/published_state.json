@@ -564,7 +564,8 @@
     "1005006304425302",
     "1005010487426245",
     "1005012865939059",
-    "1005007171113381"
+    "1005007171113381",
+    "1005008144944225"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1141,7 +1142,8 @@
     "1005006304425302": 1793572474.8860087,
     "1005010487426245": 1793573558.2913802,
     "1005012865939059": 1793573742.8007863,
-    "1005007171113381": 1793573945.0580306
+    "1005007171113381": 1793573945.0580306,
+    "1005008144944225": 1793574309.4810557
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1808,7 +1810,8 @@
     "Essager 240W USB Type C To USB C Cable 100W PD 3.1 Fast Charging Charger",
     "SMAILWOLF RS8 1000Hz",
     "HILDA 2 Lines Laser",
-    "KODAK USB 2.0 Flash Drive"
+    "KODAK USB 2.0 Flash Drive",
+    "VA VA VOOM Brand Top"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2481,10 +2484,10 @@
     "Essager 240W USB Type C To USB C Cable 100W PD 3.1 Fast Charging Charger": 1793572474.8860087,
     "SMAILWOLF RS8 1000Hz": 1793573558.2913802,
     "HILDA 2 Lines Laser": 1793573945.0580306,
-    "KODAK USB 2.0 Flash Drive": 1793573951.3406305
+    "KODAK USB 2.0 Flash Drive": 1793573951.3406305,
+    "VA VA VOOM Brand Top": 1793574309.4810557
   },
   "published_post_keys": [
-    "aniscoupons:32704",
     "bnddeals:50802",
     "aniscoupons:32705",
     "aniscoupons:32706",
@@ -3483,19 +3486,20 @@
     "lodydeals:45941",
     "lodydeals:45942",
     "lodydeals:45943",
-    "lodydeals:45944"
+    "lodydeals:45944",
+    "lodydeals:45946"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793573951.3406305,
+  "last_run_time": 1793574309.4810557,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45944,
-      "last_check_time": 1793573953.382517
+      "last_message_id": 45946,
+      "last_check_time": 1793574311.5234413
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3983,7 +3987,8 @@
     "1005006304425302": 2.88,
     "1005010487426245": 7.74,
     "1005012865939059": 14.89,
-    "1005007171113381": 8.44
+    "1005007171113381": 8.44,
+    "1005008144944225": 7.34
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12948,6 +12953,16 @@
       "price": 3.55,
       "timestamp": 1793573951.3406305,
       "status": "ACTIVE"
+    },
+    "lodydeals:45946": {
+      "channel_msg_id": 1574,
+      "product_id": "1005008144944225",
+      "title": "VA VA VOOM Brand Top",
+      "channel": "lodydeals",
+      "source_msg_id": 45946,
+      "price": 7.34,
+      "timestamp": 1793574309.4810557,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12956,17 +12971,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793573955.0248227,
+    "last_deal_post_time": 1793574313.4387174,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793574126.4984736,
+    "last_sweep_time": 1793574318.905248,
     "last_sweep_times": {
-      "algeria": 1793574122.4807043,
-      "france": 1793574126.4984736
+      "algeria": 1793574313.4200225,
+      "france": 1793574318.905248
     },
     "last_deal_post_times": {
-      "algeria": 1793573955.0248227
+      "algeria": 1793574313.4387174
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13548,7 +13563,8 @@
     "1005006304425302": "lodydeals",
     "1005010487426245": "lodydeals",
     "1005012865939059": "lodydeals",
-    "1005007171113381": "lodydeals"
+    "1005007171113381": "lodydeals",
+    "1005008144944225": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14223,7 +14239,8 @@
     "Essager 240W USB Type C To USB C Cable 100W PD 3.1 Fast Charging Charger": "lodydeals",
     "SMAILWOLF RS8 1000Hz": "lodydeals",
     "HILDA 2 Lines Laser": "lodydeals",
-    "KODAK USB 2.0 Flash Drive": "lodydeals"
+    "KODAK USB 2.0 Flash Drive": "lodydeals",
+    "VA VA VOOM Brand Top": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
