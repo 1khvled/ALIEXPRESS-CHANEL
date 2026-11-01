@@ -532,7 +532,13 @@
     "1005008041957503",
     "1005010240905676",
     "1005010236248649",
-    "1005007345311212"
+    "1005007345311212",
+    "1005007010570179",
+    "1005010049082935",
+    "1005007938007660",
+    "1005009306976665",
+    "1005010160409425",
+    "1005010158909326"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1077,7 +1083,13 @@
     "1005008041957503": 1793546771.1864512,
     "1005010240905676": 1793546776.7430634,
     "1005010236248649": 1793546781.4529572,
-    "1005007345311212": 1793546788.265888
+    "1005007345311212": 1793546788.265888,
+    "1005007010570179": 1793550258.5411532,
+    "1005010049082935": 1793550263.576872,
+    "1005007938007660": 1793550268.818711,
+    "1005009306976665": 1793550277.834843,
+    "1005010160409425": 1793550286.3852649,
+    "1005010158909326": 1793550291.1923656
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1699,7 +1711,13 @@
     "اشهر ويبكام حاليا للبث المباشر",
     "ويبكام بتتبع عن طريق الذكاء الاصطناعي",
     "ويبكام OBSBOT Meet SE 1080p Webcam",
-    "ويبكام Fifine K420 1440P Webcam"
+    "ويبكام Fifine K420 1440P Webcam",
+    "واجهة صوت Fifine SC3 Audio Mixer",
+    "واجهة صوت Fifine SC8 Audio Mixer",
+    "واجهة صوت Maono G1 Neo Audio Mixer",
+    "للتسجيل من الكاميرا و الكونصول",
+    "Fifine D6 Stream deck",
+    "Ulanzi D200 Stream deck"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2327,15 +2345,15 @@
     "اشهر ويبكام حاليا للبث المباشر": 1793546771.1864512,
     "ويبكام بتتبع عن طريق الذكاء الاصطناعي": 1793546776.7430634,
     "ويبكام OBSBOT Meet SE 1080p Webcam": 1793546781.4529572,
-    "ويبكام Fifine K420 1440P Webcam": 1793546788.265888
+    "ويبكام Fifine K420 1440P Webcam": 1793546788.265888,
+    "واجهة صوت Fifine SC3 Audio Mixer": 1793550258.5411532,
+    "واجهة صوت Fifine SC8 Audio Mixer": 1793550263.576872,
+    "واجهة صوت Maono G1 Neo Audio Mixer": 1793550268.818711,
+    "للتسجيل من الكاميرا و الكونصول": 1793550277.834843,
+    "Fifine D6 Stream deck": 1793550286.3852649,
+    "Ulanzi D200 Stream deck": 1793550291.1923656
   },
   "published_post_keys": [
-    "aniscoupons:32680",
-    "aniscoupons:32681",
-    "aniscoupons:32682",
-    "aniscoupons:32683",
-    "aniscoupons:32684",
-    "zedstoreonline:38523",
     "aniscoupons:32685",
     "zedstoreonline:38524",
     "lodydeals:45402",
@@ -3329,15 +3347,21 @@
     "ecksdeal:5980",
     "ecksdeal:5981",
     "ecksdeal:5982",
-    "ecksdeal:5984"
+    "ecksdeal:5984",
+    "ecksdeal:5986",
+    "ecksdeal:5987",
+    "ecksdeal:5988",
+    "ecksdeal:5990",
+    "ecksdeal:5994",
+    "ecksdeal:5995"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793546788.265888,
+  "last_run_time": 1793550291.1923656,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 5984,
-      "last_check_time": 1793546790.2885346
+      "last_message_id": 5995,
+      "last_check_time": 1793550293.235959
     },
     "lodydeals": {
       "last_message_id": 45876,
@@ -3797,7 +3821,13 @@
     "1005008041957503": 88.33,
     "1005010240905676": 76.2,
     "1005010236248649": 68.0,
-    "1005007345311212": 16.0
+    "1005007345311212": 16.0,
+    "1005007010570179": 39.46,
+    "1005010049082935": 61.48,
+    "1005007938007660": 41.53,
+    "1005009306976665": 39.17,
+    "1005010160409425": 53.14,
+    "1005010158909326": 35.14
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12222,6 +12252,66 @@
       "price": 16.0,
       "timestamp": 1793546788.265888,
       "status": "ACTIVE"
+    },
+    "ecksdeal:5986": {
+      "channel_msg_id": 1512,
+      "product_id": "1005007010570179",
+      "title": "واجهة صوت Fifine SC3 Audio Mixer",
+      "channel": "ecksdeal",
+      "source_msg_id": 5986,
+      "price": 39.46,
+      "timestamp": 1793550258.5411532,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5987": {
+      "channel_msg_id": 1513,
+      "product_id": "1005010049082935",
+      "title": "واجهة صوت Fifine SC8 Audio Mixer",
+      "channel": "ecksdeal",
+      "source_msg_id": 5987,
+      "price": 61.48,
+      "timestamp": 1793550263.576872,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5988": {
+      "channel_msg_id": 1514,
+      "product_id": "1005007938007660",
+      "title": "واجهة صوت Maono G1 Neo Audio Mixer",
+      "channel": "ecksdeal",
+      "source_msg_id": 5988,
+      "price": 41.53,
+      "timestamp": 1793550268.818711,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5990": {
+      "channel_msg_id": 1515,
+      "product_id": "1005009306976665",
+      "title": "للتسجيل من الكاميرا و الكونصول",
+      "channel": "ecksdeal",
+      "source_msg_id": 5990,
+      "price": 39.17,
+      "timestamp": 1793550277.834843,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5994": {
+      "channel_msg_id": 1516,
+      "product_id": "1005010160409425",
+      "title": "Fifine D6 Stream deck",
+      "channel": "ecksdeal",
+      "source_msg_id": 5994,
+      "price": 53.14,
+      "timestamp": 1793550286.3852649,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5995": {
+      "channel_msg_id": 1517,
+      "product_id": "1005010158909326",
+      "title": "Ulanzi D200 Stream deck",
+      "channel": "ecksdeal",
+      "source_msg_id": 5995,
+      "price": 35.14,
+      "timestamp": 1793550291.1923656,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12230,17 +12320,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793546790.3105705,
+    "last_deal_post_time": 1793550293.2733493,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793546801.275828,
+    "last_sweep_time": 1793550305.5545206,
     "last_sweep_times": {
-      "algeria": 1793546790.2996433,
-      "france": 1793546801.275828
+      "algeria": 1793550293.2545788,
+      "france": 1793550305.5545206
     },
     "last_deal_post_times": {
-      "algeria": 1793546790.3105705
+      "algeria": 1793550293.2733493
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -12790,7 +12880,13 @@
     "1005008041957503": "ecksdeal",
     "1005010240905676": "ecksdeal",
     "1005010236248649": "ecksdeal",
-    "1005007345311212": "ecksdeal"
+    "1005007345311212": "ecksdeal",
+    "1005007010570179": "ecksdeal",
+    "1005010049082935": "ecksdeal",
+    "1005007938007660": "ecksdeal",
+    "1005009306976665": "ecksdeal",
+    "1005010160409425": "ecksdeal",
+    "1005010158909326": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -13420,7 +13516,13 @@
     "اشهر ويبكام حاليا للبث المباشر": "ecksdeal",
     "ويبكام بتتبع عن طريق الذكاء الاصطناعي": "ecksdeal",
     "ويبكام OBSBOT Meet SE 1080p Webcam": "ecksdeal",
-    "ويبكام Fifine K420 1440P Webcam": "ecksdeal"
+    "ويبكام Fifine K420 1440P Webcam": "ecksdeal",
+    "واجهة صوت Fifine SC3 Audio Mixer": "ecksdeal",
+    "واجهة صوت Fifine SC8 Audio Mixer": "ecksdeal",
+    "واجهة صوت Maono G1 Neo Audio Mixer": "ecksdeal",
+    "للتسجيل من الكاميرا و الكونصول": "ecksdeal",
+    "Fifine D6 Stream deck": "ecksdeal",
+    "Ulanzi D200 Stream deck": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -14918,7 +15020,9 @@
     "lodydeals:45868",
     "lodydeals:45869",
     "lodydeals:45871",
-    "ecksdeal:5975"
+    "ecksdeal:5975",
+    "ecksdeal:5985",
+    "ecksdeal:5989"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
