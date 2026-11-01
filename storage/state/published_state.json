@@ -558,7 +558,8 @@
     "1005009569642817",
     "1005013438789813",
     "1005012823102793",
-    "1005012773302941"
+    "1005012773302941",
+    "1005008430147176"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1129,7 +1130,8 @@
     "1005009569642817": 1793568442.6763802,
     "1005013438789813": 1793569553.2022223,
     "1005012823102793": 1793569904.419889,
-    "1005012773302941": 1793570640.1582527
+    "1005012773302941": 1793570640.1582527,
+    "1005008430147176": 1793571747.1298387
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1790,7 +1792,8 @@
     "Anker Nano Smart Display 45W",
     "Zeblaze Btalk 4 Pro",
     "Anker Soundcore 2",
-    "MACHENIKE G5Pro Max SE"
+    "MACHENIKE G5Pro Max SE",
+    "MACHENIKE G1 Gaming"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2457,10 +2460,10 @@
     "Anker Nano Smart Display 45W": 1793570287.0210865,
     "Zeblaze Btalk 4 Pro": 1793570640.1582527,
     "Anker Soundcore 2": 1793571013.3288968,
-    "MACHENIKE G5Pro Max SE": 1793571550.5645735
+    "MACHENIKE G5Pro Max SE": 1793571550.5645735,
+    "MACHENIKE G1 Gaming": 1793571747.1298387
   },
   "published_post_keys": [
-    "aniscoupons:32700",
     "aniscoupons:32701",
     "aniscoupons:32702",
     "bnddeals:50799",
@@ -3459,19 +3462,20 @@
     "lodydeals:45934",
     "lodydeals:45935",
     "lodydeals:45936",
-    "lodydeals:45937"
+    "lodydeals:45937",
+    "lodydeals:45938"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793571550.5645735,
+  "last_run_time": 1793571747.1298387,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45937,
-      "last_check_time": 1793571552.606062
+      "last_message_id": 45938,
+      "last_check_time": 1793571749.1829
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3953,7 +3957,8 @@
     "1005009569642817": 32.1,
     "1005013438789813": 408.02,
     "1005012823102793": 226.25,
-    "1005012773302941": 20.78
+    "1005012773302941": 20.78,
+    "1005008430147176": 17.01
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12848,6 +12853,16 @@
       "price": 38.39,
       "timestamp": 1793571550.5645735,
       "status": "ACTIVE"
+    },
+    "lodydeals:45938": {
+      "channel_msg_id": 1567,
+      "product_id": "1005008430147176",
+      "title": "MACHENIKE G1 Gaming",
+      "channel": "lodydeals",
+      "source_msg_id": 45938,
+      "price": 17.01,
+      "timestamp": 1793571747.1298387,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12856,17 +12871,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793571554.1282022,
+    "last_deal_post_time": 1793571751.0515645,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793571557.7028258,
+    "last_sweep_time": 1793571755.0674522,
     "last_sweep_times": {
-      "algeria": 1793571554.1092465,
-      "france": 1793571557.7028258
+      "algeria": 1793571751.0332036,
+      "france": 1793571755.0674522
     },
     "last_deal_post_times": {
-      "algeria": 1793571554.1282022
+      "algeria": 1793571751.0515645
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13442,7 +13457,8 @@
     "1005009569642817": "lodydeals",
     "1005013438789813": "lodydeals",
     "1005012823102793": "lodydeals",
-    "1005012773302941": "lodydeals"
+    "1005012773302941": "lodydeals",
+    "1005008430147176": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14111,7 +14127,8 @@
     "Anker Nano Smart Display 45W": "lodydeals",
     "Zeblaze Btalk 4 Pro": "lodydeals",
     "Anker Soundcore 2": "lodydeals",
-    "MACHENIKE G5Pro Max SE": "lodydeals"
+    "MACHENIKE G5Pro Max SE": "lodydeals",
+    "MACHENIKE G1 Gaming": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
