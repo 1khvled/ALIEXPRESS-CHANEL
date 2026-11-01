@@ -574,7 +574,7 @@
     "1005012881256093": 1791941229.2882626,
     "1005009118633225": 1793399449.9599383,
     "1005012143831265": 1791012345.6086447,
-    "1005008852027824": 1793500780.684989,
+    "1005008852027824": 1793557654.0136676,
     "9998888981": 1790888981.6873999,
     "1005005217734986": 1791104047.0967803,
     "1005010062128237": 1790937566.337433,
@@ -1744,7 +1744,8 @@
     "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2",
     "HONOR Pad X8b Wifi 4/128GB",
     "VIVO IQOO Z11s 8/128",
-    "Honor WIN Turbo 2  8/256GB"
+    "Honor WIN Turbo 2  8/256GB",
+    "Realme P3 5G 8/256"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2389,10 +2390,10 @@
     "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2": 1793556560.1844745,
     "HONOR Pad X8b Wifi 4/128GB": 1793556565.207214,
     "VIVO IQOO Z11s 8/128": 1793556742.3836262,
-    "Honor WIN Turbo 2  8/256GB": 1793556926.3977697
+    "Honor WIN Turbo 2  8/256GB": 1793556926.3977697,
+    "Realme P3 5G 8/256": 1793557654.0136676
   },
   "published_post_keys": [
-    "aniscoupons:32687",
     "aniscoupons:32688",
     "bnddeals:50793",
     "lodydeals:45411",
@@ -3391,19 +3392,20 @@
     "lodydeals:45893",
     "lodydeals:45894",
     "lodydeals:45895",
-    "lodydeals:45896"
+    "lodydeals:45896",
+    "lodydeals:45898"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793556926.3977697,
+  "last_run_time": 1793557654.0136676,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45897,
-      "last_check_time": 1793557284.02807
+      "last_message_id": 45898,
+      "last_check_time": 1793557656.0549963
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3444,7 +3446,7 @@
     "1005012143831265": 281.9,
     "1005007458827229": 22.1,
     "1005010453516983": 211.6,
-    "1005008852027824": 180.0,
+    "1005008852027824": 190.1,
     "1005012499451512": 260.0,
     "1005010129356058": 294.0,
     "3256809790988797": 92.8,
@@ -12508,6 +12510,16 @@
       "price": 384.42,
       "timestamp": 1793556926.3977697,
       "status": "ACTIVE"
+    },
+    "lodydeals:45898": {
+      "channel_msg_id": 1533,
+      "product_id": "1005008852027824",
+      "title": "Realme P3 5G 8/256",
+      "channel": "lodydeals",
+      "source_msg_id": 45898,
+      "price": 190.1,
+      "timestamp": 1793557654.0136676,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12516,17 +12528,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793556930.1244144,
+    "last_deal_post_time": 1793557657.7243366,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793557494.1092803,
+    "last_sweep_time": 1793557661.158078,
     "last_sweep_times": {
-      "algeria": 1793557480.2006745,
-      "france": 1793557494.1092803
+      "algeria": 1793557657.7057314,
+      "france": 1793557661.158078
     },
     "last_deal_post_times": {
-      "algeria": 1793556930.1244144
+      "algeria": 1793557657.7243366
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -12706,7 +12718,7 @@
     "1005007458827229": "zedstoreonline",
     "1005012899224314": "couponsglobal",
     "1005007331316456": "zedstoreonline",
-    "1005008852027824": "megaphonna",
+    "1005008852027824": "lodydeals",
     "1005012312990781": "lodydeals",
     "1005007822635375": "ecksdeal",
     "1005013096683979": "ecksdeal",
@@ -13737,7 +13749,8 @@
     "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2": "lodydeals",
     "HONOR Pad X8b Wifi 4/128GB": "lodydeals",
     "VIVO IQOO Z11s 8/128": "lodydeals",
-    "Honor WIN Turbo 2  8/256GB": "lodydeals"
+    "Honor WIN Turbo 2  8/256GB": "lodydeals",
+    "Realme P3 5G 8/256": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
