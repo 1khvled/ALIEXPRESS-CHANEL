@@ -524,7 +524,15 @@
     "1005005975560350",
     "1005012922578845",
     "1005011752891197",
-    "1005008689880751"
+    "1005008689880751",
+    "1005006861815245",
+    "1005007635109339",
+    "1005006860968233",
+    "1005009912743452",
+    "1005008041957503",
+    "1005010240905676",
+    "1005010236248649",
+    "1005007345311212"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1061,7 +1069,15 @@
     "1005005975560350": 1793543992.7069333,
     "1005012922578845": 1793544001.8628821,
     "1005011752891197": 1793544011.7179348,
-    "1005008689880751": 1793544016.7486506
+    "1005008689880751": 1793544016.7486506,
+    "1005006861815245": 1793546752.979555,
+    "1005007635109339": 1793546757.4916894,
+    "1005006860968233": 1793546761.9902797,
+    "1005009912743452": 1793546766.3907888,
+    "1005008041957503": 1793546771.1864512,
+    "1005010240905676": 1793546776.7430634,
+    "1005010236248649": 1793546781.4529572,
+    "1005007345311212": 1793546788.265888
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1676,7 +1692,14 @@
     "FIFINE H9 7.1 Surround Gaming",
     "Realme 15 5G 12/256GB",
     "Redmi 17 4G 4/128GB",
-    "ASROCK B550AM GAMING"
+    "ASROCK B550AM GAMING",
+    "مايكروفون لاسلكي Fifine M6 Wireless",
+    "مايكروفون  Fifine A8 Condenser Mic USB",
+    "ويبكام Yolocam S3 4k Webcam",
+    "اشهر ويبكام حاليا للبث المباشر",
+    "ويبكام بتتبع عن طريق الذكاء الاصطناعي",
+    "ويبكام OBSBOT Meet SE 1080p Webcam",
+    "ويبكام Fifine K420 1440P Webcam"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -1909,7 +1932,7 @@
     "Electronic Scale Smart": 1791482965.5086565,
     "أحدث كوبونات وتخفيضات AliExpress": 1793478717.5768087,
     "قرص صلب SSD من CUSU بسعات 1 تيرابايت، 512 جيجابايت، 240 جيجابايت، 480": 1791626816.0179322,
-    "مايكروفون ديناميكي Fifine K688": 1791638433.4352653,
+    "مايكروفون ديناميكي Fifine K688": 1793546757.4916894,
     "Walram SATA3 SSD 512GB": 1791638441.843642,
     "Electronic Body Scale.": 1792437008.1245751,
     "Realme 15 Global (12/256)": 1793399565.5626073,
@@ -2297,17 +2320,16 @@
     "FIFINE H9 7.1 Surround Gaming": 1793543992.7069333,
     "Realme 15 5G 12/256GB": 1793544001.8628821,
     "Redmi 17 4G 4/128GB": 1793544011.7179348,
-    "ASROCK B550AM GAMING": 1793544016.7486506
+    "ASROCK B550AM GAMING": 1793544016.7486506,
+    "مايكروفون لاسلكي Fifine M6 Wireless": 1793546752.979555,
+    "مايكروفون  Fifine A8 Condenser Mic USB": 1793546761.9902797,
+    "ويبكام Yolocam S3 4k Webcam": 1793546766.3907888,
+    "اشهر ويبكام حاليا للبث المباشر": 1793546771.1864512,
+    "ويبكام بتتبع عن طريق الذكاء الاصطناعي": 1793546776.7430634,
+    "ويبكام OBSBOT Meet SE 1080p Webcam": 1793546781.4529572,
+    "ويبكام Fifine K420 1440P Webcam": 1793546788.265888
   },
   "published_post_keys": [
-    "aniscoupons:32664",
-    "aniscoupons:32667",
-    "aniscoupons:32674",
-    "aniscoupons:32669",
-    "zedstoreonline:38522",
-    "test_channel:1790965747",
-    "test_channel:1790965993",
-    "bnddeals:50789",
     "aniscoupons:32680",
     "aniscoupons:32681",
     "aniscoupons:32682",
@@ -3299,15 +3321,23 @@
     "lodydeals:45872",
     "lodydeals:45873",
     "lodydeals:45874",
-    "lodydeals:45876"
+    "lodydeals:45876",
+    "ecksdeal:5976",
+    "ecksdeal:5977",
+    "ecksdeal:5978",
+    "ecksdeal:5979",
+    "ecksdeal:5980",
+    "ecksdeal:5981",
+    "ecksdeal:5982",
+    "ecksdeal:5984"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793544016.7486506,
+  "last_run_time": 1793546788.265888,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 5972,
-      "last_check_time": 1793543837.5068462
+      "last_message_id": 5984,
+      "last_check_time": 1793546790.2885346
     },
     "lodydeals": {
       "last_message_id": 45876,
@@ -3759,7 +3789,15 @@
     "1005009662812027": 76.74,
     "1005005975560350": 34.9,
     "1005011752891197": 119.3,
-    "1005008689880751": 76.5
+    "1005008689880751": 76.5,
+    "1005006861815245": 9.44,
+    "1005007635109339": 50.97,
+    "1005006860968233": 47.75,
+    "1005009912743452": 168.18,
+    "1005008041957503": 88.33,
+    "1005010240905676": 76.2,
+    "1005010236248649": 68.0,
+    "1005007345311212": 16.0
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12104,6 +12142,86 @@
       "price": 76.5,
       "timestamp": 1793544016.7486506,
       "status": "ACTIVE"
+    },
+    "ecksdeal:5976": {
+      "channel_msg_id": 1504,
+      "product_id": "1005006861815245",
+      "title": "مايكروفون لاسلكي Fifine M6 Wireless",
+      "channel": "ecksdeal",
+      "source_msg_id": 5976,
+      "price": 9.44,
+      "timestamp": 1793546752.979555,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5977": {
+      "channel_msg_id": 1505,
+      "product_id": "1005007635109339",
+      "title": "مايكروفون ديناميكي Fifine K688",
+      "channel": "ecksdeal",
+      "source_msg_id": 5977,
+      "price": 50.97,
+      "timestamp": 1793546757.4916894,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5978": {
+      "channel_msg_id": 1506,
+      "product_id": "1005006860968233",
+      "title": "مايكروفون  Fifine A8 Condenser Mic USB",
+      "channel": "ecksdeal",
+      "source_msg_id": 5978,
+      "price": 47.75,
+      "timestamp": 1793546761.9902797,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5979": {
+      "channel_msg_id": 1507,
+      "product_id": "1005009912743452",
+      "title": "ويبكام Yolocam S3 4k Webcam",
+      "channel": "ecksdeal",
+      "source_msg_id": 5979,
+      "price": 168.18,
+      "timestamp": 1793546766.3907888,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5980": {
+      "channel_msg_id": 1508,
+      "product_id": "1005008041957503",
+      "title": "اشهر ويبكام حاليا للبث المباشر",
+      "channel": "ecksdeal",
+      "source_msg_id": 5980,
+      "price": 88.33,
+      "timestamp": 1793546771.1864512,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5981": {
+      "channel_msg_id": 1509,
+      "product_id": "1005010240905676",
+      "title": "ويبكام بتتبع عن طريق الذكاء الاصطناعي",
+      "channel": "ecksdeal",
+      "source_msg_id": 5981,
+      "price": 76.2,
+      "timestamp": 1793546776.7430634,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5982": {
+      "channel_msg_id": 1510,
+      "product_id": "1005010236248649",
+      "title": "ويبكام OBSBOT Meet SE 1080p Webcam",
+      "channel": "ecksdeal",
+      "source_msg_id": 5982,
+      "price": 68.0,
+      "timestamp": 1793546781.4529572,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:5984": {
+      "channel_msg_id": 1511,
+      "product_id": "1005007345311212",
+      "title": "ويبكام Fifine K420 1440P Webcam",
+      "channel": "ecksdeal",
+      "source_msg_id": 5984,
+      "price": 16.0,
+      "timestamp": 1793546788.265888,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12112,17 +12230,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793544020.2290995,
+    "last_deal_post_time": 1793546790.3105705,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793544030.3525245,
+    "last_sweep_time": 1793546801.275828,
     "last_sweep_times": {
-      "algeria": 1793544020.218327,
-      "france": 1793544030.3525245
+      "algeria": 1793546790.2996433,
+      "france": 1793546801.275828
     },
     "last_deal_post_times": {
-      "algeria": 1793544020.2290995
+      "algeria": 1793546790.3105705
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -12664,7 +12782,15 @@
     "1005009662812027": "lodydeals",
     "1005005975560350": "lodydeals",
     "1005011752891197": "lodydeals",
-    "1005008689880751": "lodydeals"
+    "1005008689880751": "lodydeals",
+    "1005006861815245": "ecksdeal",
+    "1005007635109339": "ecksdeal",
+    "1005006860968233": "ecksdeal",
+    "1005009912743452": "ecksdeal",
+    "1005008041957503": "ecksdeal",
+    "1005010240905676": "ecksdeal",
+    "1005010236248649": "ecksdeal",
+    "1005007345311212": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -13287,7 +13413,14 @@
     "Magcubic HY300 Max 400ANSI": "lodydeals",
     "FIFINE H9 7.1 Surround Gaming": "lodydeals",
     "Redmi 17 4G 4/128GB": "lodydeals",
-    "ASROCK B550AM GAMING": "lodydeals"
+    "ASROCK B550AM GAMING": "lodydeals",
+    "مايكروفون لاسلكي Fifine M6 Wireless": "ecksdeal",
+    "مايكروفون  Fifine A8 Condenser Mic USB": "ecksdeal",
+    "ويبكام Yolocam S3 4k Webcam": "ecksdeal",
+    "اشهر ويبكام حاليا للبث المباشر": "ecksdeal",
+    "ويبكام بتتبع عن طريق الذكاء الاصطناعي": "ecksdeal",
+    "ويبكام OBSBOT Meet SE 1080p Webcam": "ecksdeal",
+    "ويبكام Fifine K420 1440P Webcam": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -14784,7 +14917,8 @@
     "lodydeals:45864",
     "lodydeals:45868",
     "lodydeals:45869",
-    "lodydeals:45871"
+    "lodydeals:45871",
+    "ecksdeal:5975"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
