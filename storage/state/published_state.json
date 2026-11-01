@@ -1013,7 +1013,7 @@
     "1005010498953493": 1793448734.886029,
     "1005010535660141": 1793448772.3918815,
     "1005010472570391": 1793448777.0131965,
-    "1005012864293264": 1793448781.6628585,
+    "1005012864293264": 1793570287.0210865,
     "1005010384976635": 1793448786.1863484,
     "1005012341203600": 1793448820.6517296,
     "1005011825891016": 1793448870.3873131,
@@ -1784,7 +1784,8 @@
     "Zeblaze Vibe 8 AMOLED",
     "Baseus 20W PD Charger",
     "Realme Neo 8  12/256GB",
-    "Blackview MEGA 5 AI 8/256GB"
+    "Blackview MEGA 5 AI 8/256GB",
+    "Anker Nano Smart Display 45W"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2447,10 +2448,10 @@
     "Zeblaze Vibe 8 AMOLED": 1793568442.6763802,
     "Baseus 20W PD Charger": 1793568996.6387508,
     "Realme Neo 8  12/256GB": 1793569553.2022223,
-    "Blackview MEGA 5 AI 8/256GB": 1793569904.419889
+    "Blackview MEGA 5 AI 8/256GB": 1793569904.419889,
+    "Anker Nano Smart Display 45W": 1793570287.0210865
   },
   "published_post_keys": [
-    "aniscoupons:32697",
     "aniscoupons:32698",
     "lodydeals:45416",
     "aniscoupons:32699",
@@ -3449,19 +3450,20 @@
     "lodydeals:45929",
     "lodydeals:45930",
     "lodydeals:45931",
-    "lodydeals:45932"
+    "lodydeals:45932",
+    "lodydeals:45933"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793569904.419889,
+  "last_run_time": 1793570287.0210865,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 5996,
       "last_check_time": 1793553796.7473946
     },
     "lodydeals": {
-      "last_message_id": 45932,
-      "last_check_time": 1793569906.4617572
+      "last_message_id": 45933,
+      "last_check_time": 1793570289.0564046
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3836,7 +3838,7 @@
     "1005010498953493": 51.7,
     "1005010535660141": 21.15,
     "1005010472570391": 26.0,
-    "1005012864293264": 29.29,
+    "1005012864293264": 28.96,
     "1005010384976635": 30.55,
     "1005012341203600": 478.0,
     "1005011825891016": 426.8,
@@ -12787,6 +12789,16 @@
       "price": 226.25,
       "timestamp": 1793569904.419889,
       "status": "ACTIVE"
+    },
+    "lodydeals:45933": {
+      "channel_msg_id": 1562,
+      "product_id": "1005012864293264",
+      "title": "Anker Nano Smart Display 45W",
+      "channel": "lodydeals",
+      "source_msg_id": 45933,
+      "price": 28.96,
+      "timestamp": 1793570287.0210865,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12795,17 +12807,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793569908.146776,
+    "last_deal_post_time": 1793570290.6579542,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793570087.3630211,
+    "last_sweep_time": 1793570294.6666026,
     "last_sweep_times": {
-      "algeria": 1793570082.5532916,
-      "france": 1793570087.3630211
+      "algeria": 1793570290.6423647,
+      "france": 1793570294.6666026
     },
     "last_deal_post_times": {
-      "algeria": 1793569908.146776
+      "algeria": 1793570290.6579542
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13267,7 +13279,7 @@
     "1005010498953493": "bnddeals",
     "1005010535660141": "bnddeals",
     "1005010472570391": "bnddeals",
-    "1005012864293264": "bnddeals",
+    "1005012864293264": "lodydeals",
     "1005010384976635": "bnddeals",
     "1005012341203600": "megaphonna",
     "1005011825891016": "megaphonna",
@@ -14045,7 +14057,8 @@
     "Zeblaze Vibe 8 AMOLED": "lodydeals",
     "Baseus 20W PD Charger": "lodydeals",
     "Realme Neo 8  12/256GB": "lodydeals",
-    "Blackview MEGA 5 AI 8/256GB": "lodydeals"
+    "Blackview MEGA 5 AI 8/256GB": "lodydeals",
+    "Anker Nano Smart Display 45W": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
