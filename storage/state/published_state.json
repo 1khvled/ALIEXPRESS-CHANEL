@@ -1078,7 +1078,7 @@
     "1005009806856302": 1793542545.9047854,
     "1005009980316035": 1793542552.2730343,
     "1005005905462505": 1793542560.6809025,
-    "1005008248133489": 1793542566.1256328,
+    "1005008248133489": 1793601217.1874278,
     "1005008684239370": 1793542582.419509,
     "1005011583202464": 1793542586.8414407,
     "1005009921069024": 1793542597.6187797,
@@ -1833,7 +1833,8 @@
     "POEDAGAR 896 Men's Watches",
     "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card",
     "POEDAGAR 680 Men's Quartz",
-    "QCY Buds 6 Mics ANC"
+    "QCY Buds 6 Mics ANC",
+    "Vxe Dragonfly R1 SE"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2514,10 +2515,10 @@
     "POEDAGAR 896 Men's Watches": 1793599912.232469,
     "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card": 1793600128.145566,
     "POEDAGAR 680 Men's Quartz": 1793600288.3908339,
-    "QCY Buds 6 Mics ANC": 1793600466.7601562
+    "QCY Buds 6 Mics ANC": 1793600466.7601562,
+    "Vxe Dragonfly R1 SE": 1793601217.1874278
   },
   "published_post_keys": [
-    "megaphonna:8692",
     "lodydeals:45812",
     "lodydeals:45470",
     "test_channel:1791627499",
@@ -3516,19 +3517,20 @@
     "lodydeals:45950",
     "ecksdeal:5991",
     "lodydeals:45951",
-    "lodydeals:45952"
+    "lodydeals:45952",
+    "lodydeals:45953"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793600829.806347,
+  "last_run_time": 1793601217.1874278,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45952,
-      "last_check_time": 1793600831.8525898
+      "last_message_id": 45953,
+      "last_check_time": 1793601219.230497
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3950,7 +3952,7 @@
     "1005009806856302": 14.35,
     "1005009980316035": 25.85,
     "1005005905462505": 56.27,
-    "1005008248133489": 15.79,
+    "1005008248133489": 14.17,
     "1005008684239370": 7.47,
     "1005011583202464": 56.09,
     "1005009921069024": 12.85,
@@ -13092,6 +13094,16 @@
       "price": 2.29,
       "timestamp": 1793600829.806347,
       "status": "ACTIVE"
+    },
+    "lodydeals:45953": {
+      "channel_msg_id": 1603,
+      "product_id": "1005008248133489",
+      "title": "Vxe Dragonfly R1 SE",
+      "channel": "lodydeals",
+      "source_msg_id": 45953,
+      "price": 14.17,
+      "timestamp": 1793601217.1874278,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13100,17 +13112,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793600834.6626594,
+    "last_deal_post_time": 1793601222.159007,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793601032.5846465,
+    "last_sweep_time": 1793601226.461472,
     "last_sweep_times": {
-      "algeria": 1793601027.6676874,
-      "france": 1793601032.5846465
+      "algeria": 1793601222.1395142,
+      "france": 1793601226.461472
     },
     "last_deal_post_times": {
-      "algeria": 1793600834.6626594
+      "algeria": 1793601222.159007
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13622,7 +13634,7 @@
     "1005009806856302": "ecksdeal",
     "1005009980316035": "ecksdeal",
     "1005005905462505": "ecksdeal",
-    "1005008248133489": "ecksdeal",
+    "1005008248133489": "lodydeals",
     "1005008684239370": "ecksdeal",
     "1005011583202464": "ecksdeal",
     "1005009921069024": "ecksdeal",
@@ -14385,7 +14397,8 @@
     "POEDAGAR 896 Men's Watches": "lodydeals",
     "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card": "ecksdeal",
     "POEDAGAR 680 Men's Quartz": "lodydeals",
-    "QCY Buds 6 Mics ANC": "lodydeals"
+    "QCY Buds 6 Mics ANC": "lodydeals",
+    "Vxe Dragonfly R1 SE": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
