@@ -1123,7 +1123,7 @@
     "1005003413514494": 1793543617.2639549,
     "1005008741607292": 1793649057.4862149,
     "1005010158587315": 1793543677.5915465,
-    "1005012790288780": 1793543711.8574147,
+    "1005012790288780": 1793656271.0286891,
     "1005012345939726": 1793656202.4239671,
     "1005010722422210": 1793543733.1622994,
     "1005012582348584": 1793543760.1113183,
@@ -2575,7 +2575,7 @@
     "ASROCK X570M PRO4": 1793543669.2450533,
     "Redmi Note 17 4G 4/128GB": 1793543677.5915465,
     "OnePlus Turbo 6V  8/256GB": 1793566288.5208008,
-    "QCY VN200 Pro 7.1 Wired": 1793543711.8574147,
+    "QCY VN200 Pro 7.1 Wired": 1793656271.0286891,
     "UGREEN Nexode Air 65W GaN": 1793656202.4239671,
     "Honor WIN RT 5G 12/256GB": 1793543733.1622994,
     "OnePlus 13T 5G 12/256GB": 1793543747.3776598,
@@ -2731,7 +2731,6 @@
     "سماعات لاسلكية VGN VXE Siren V1": 1793656214.2446048
   },
   "published_post_keys": [
-    "pcgamingpart:7961",
     "aniscoupons:33163",
     "aniscoupons:33063",
     "lodydeals:45826",
@@ -3730,19 +3729,20 @@
     "lodydeals:46007",
     "lodydeals:46008",
     "lodydeals:46010",
-    "ecksdeal:6025"
+    "ecksdeal:6025",
+    "lodydeals:46011"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793656214.2446048,
+  "last_run_time": 1793656271.0286891,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6025,
       "last_check_time": 1793656216.2912366
     },
     "lodydeals": {
-      "last_message_id": 46010,
-      "last_check_time": 1793656210.4661503
+      "last_message_id": 46011,
+      "last_check_time": 1793656273.0675678
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4188,7 +4188,7 @@
     "1005003413514494": 18.57,
     "1005008741607292": 110.85,
     "1005010158587315": 141.02,
-    "1005012790288780": 26.47,
+    "1005012790288780": 26.95,
     "1005012345939726": 18.62,
     "1005010722422210": 398.07,
     "1005012582348584": 18.13,
@@ -14368,6 +14368,16 @@
       "price": 29.44,
       "timestamp": 1793656214.2446048,
       "status": "ACTIVE"
+    },
+    "lodydeals:46011": {
+      "channel_msg_id": 1735,
+      "product_id": "1005012790288780",
+      "title": "QCY VN200 Pro 7.1 Wired",
+      "channel": "lodydeals",
+      "source_msg_id": 46011,
+      "price": 26.95,
+      "timestamp": 1793656271.0286891,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14376,17 +14386,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793656216.3357158,
+    "last_deal_post_time": 1793656273.7415948,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793656219.1613436,
+    "last_sweep_time": 1793656276.1633377,
     "last_sweep_times": {
-      "algeria": 1793656216.31367,
-      "france": 1793656219.1613436
+      "algeria": 1793656273.7251377,
+      "france": 1793656276.1633377
     },
     "last_deal_post_times": {
-      "algeria": 1793656216.3357158
+      "algeria": 1793656273.7415948
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
