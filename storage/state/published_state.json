@@ -795,7 +795,7 @@
     "1005011557896041": 1793543627.8450525,
     "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
-    "1005007916078341": 1793542412.85267,
+    "1005007916078341": 1793607989.1573756,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
     "1005013336240375": 1791968149.7952893,
@@ -1904,7 +1904,7 @@
     "4G LTE Wireless USB 150Mbps": 1790943633.9774187,
     "Curren 8455 Men's Quartz": 1790943640.1460688,
     "ATTACK SHARK X11SE": 1793558205.9468858,
-    "CMF Watch 3 Pro AMOLED": 1793542412.85267,
+    "CMF Watch 3 Pro AMOLED": 1793607989.1573756,
     "Redmi Note 17 5G   6/256": 1790943667.90417,
     "Baseus USB Type C Charger 20W": 1791102355.4991398,
     "Honor Win Turbo 12/256BG": 1790943705.796801,
@@ -2531,7 +2531,6 @@
     "Anker Soundcoure Life Q30": 1793607798.5770764
   },
   "published_post_keys": [
-    "pcgamingpart:7939",
     "aniscoupons:32780",
     "aniscoupons:33307",
     "lodydeals:45411",
@@ -3530,19 +3529,20 @@
     "lodydeals:45955",
     "lodydeals:45956",
     "lodydeals:45957",
-    "lodydeals:45958"
+    "lodydeals:45958",
+    "lodydeals:45959"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793607798.5770764,
+  "last_run_time": 1793607989.1573756,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45958,
-      "last_check_time": 1793607800.621883
+      "last_message_id": 45960,
+      "last_check_time": 1793607991.3804917
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -13168,6 +13168,16 @@
       "price": 43.11,
       "timestamp": 1793607798.5770764,
       "status": "ACTIVE"
+    },
+    "lodydeals:45959": {
+      "channel_msg_id": 1609,
+      "product_id": "1005007916078341",
+      "title": "CMF Watch 3 Pro AMOLED",
+      "channel": "lodydeals",
+      "source_msg_id": 45959,
+      "price": 48.91,
+      "timestamp": 1793607989.1573756,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13176,17 +13186,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793607802.777496,
+    "last_deal_post_time": 1793607994.4426398,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793607806.531693,
+    "last_sweep_time": 1793607998.7777822,
     "last_sweep_times": {
-      "algeria": 1793607802.757455,
-      "france": 1793607806.531693
+      "algeria": 1793607994.4232876,
+      "france": 1793607998.7777822
     },
     "last_deal_post_times": {
-      "algeria": 1793607802.777496
+      "algeria": 1793607994.4426398
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -15071,7 +15081,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38932",
     "megaphonna:8739",
     "aniscoupons:32989",
     "megaphonna:8706",
@@ -16070,7 +16079,8 @@
     "ecksdeal:5894",
     "lodydeals:45660",
     "megaphonna:8305",
-    "lodydeals:45947"
+    "lodydeals:45947",
+    "lodydeals:45960"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
