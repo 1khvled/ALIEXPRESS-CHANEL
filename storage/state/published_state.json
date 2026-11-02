@@ -595,7 +595,7 @@
     "1005012871436251"
   ],
   "published_product_timestamps": {
-    "1005012973772517": 1790943667.90417,
+    "1005012973772517": 1793616200.8243065,
     "1005010219205081": 1791192360.1916943,
     "999111222": 1793542236.0609214,
     "100500999912345": 1793452236.7903438,
@@ -2607,7 +2607,7 @@
     "Anker Soundcoure Life Q30": 1793607798.5770764,
     "CUSU SSD SATA 512GB": 1793608541.760777,
     "OPPO Find X9 PRO 12/256GB": 1793611292.7491462,
-    "Redmi Note 17 5G 6/256GB": 1793612016.5356846,
+    "Redmi Note 17 5G 6/256GB": 1793616200.8243065,
     "Honor 600 Pro 12/256GB": 1793613121.9226618,
     "HONOR X9D  12/256": 1793613330.7911599,
     "OnePlus 13 12/256": 1793613346.3595238,
@@ -2653,7 +2653,6 @@
     "AMD RYZEN 7 9800X3D": 1793615114.3091638
   },
   "published_post_keys": [
-    "megaphonna:8569",
     "zedstoreonline:38538",
     "ecksdeal:5880",
     "aniscoupons:32801",
@@ -3652,19 +3651,20 @@
     "aniscoupons:33565",
     "aniscoupons:33566",
     "aniscoupons:33570",
-    "lodydeals:45972"
+    "lodydeals:45972",
+    "lodydeals:45975"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793615114.3091638,
+  "last_run_time": 1793616200.8243065,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45974,
-      "last_check_time": 1793615834.3149302
+      "last_message_id": 45975,
+      "last_check_time": 1793616202.8739579
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3692,7 +3692,7 @@
     }
   },
   "published_product_prices": {
-    "1005012973772517": 179.1,
+    "1005012973772517": 189.23,
     "1005010219205081": 57.2,
     "1005007805638431": 18.03,
     "1005007027334636": 10.3,
@@ -13945,6 +13945,16 @@
       "price": 340.32,
       "timestamp": 1793615114.3091638,
       "status": "ACTIVE"
+    },
+    "lodydeals:45975": {
+      "channel_msg_id": 1688,
+      "product_id": "1005012973772517",
+      "title": "Redmi Note 17 5G 6/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45975,
+      "price": 189.23,
+      "timestamp": 1793616200.8243065,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13953,17 +13963,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793615117.1614153,
+    "last_deal_post_time": 1793616203.4785104,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793616016.2283823,
+    "last_sweep_time": 1793616209.1863708,
     "last_sweep_times": {
-      "algeria": 1793616009.2923417,
-      "france": 1793616016.2283823
+      "algeria": 1793616203.4566596,
+      "france": 1793616209.1863708
     },
     "last_deal_post_times": {
-      "algeria": 1793615117.1614153
+      "algeria": 1793616203.4785104
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13996,7 +14006,7 @@
     "1005009828161174": "couponsglobal",
     "1005009281115306": "lodydeals",
     "1005011797801269": "couponsglobal",
-    "1005012973772517": "zedstoreonline",
+    "1005012973772517": "lodydeals",
     "1005007168829266": "aniscoupons",
     "1005008880082336": "zedstoreonline",
     "1005010453516983": "megaphonna",
