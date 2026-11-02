@@ -566,7 +566,9 @@
     "1005012865939059",
     "1005007171113381",
     "1005008144944225",
-    "INDEX_ECKSDEAL_6008"
+    "INDEX_ECKSDEAL_6008",
+    "1005012172791497",
+    "1005012479560861"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1145,7 +1147,9 @@
     "1005012865939059": 1793573742.8007863,
     "1005007171113381": 1793573945.0580306,
     "1005008144944225": 1793574309.4810557,
-    "INDEX_ECKSDEAL_6008": 1793599383.3882716
+    "INDEX_ECKSDEAL_6008": 1793599383.3882716,
+    "1005012172791497": 1793599548.0470035,
+    "1005012479560861": 1793599553.1122265
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1815,7 +1819,9 @@
     "KODAK USB 2.0 Flash Drive",
     "VA VA VOOM Brand Top",
     "معالج Ryzen 5 8400F",
-    "فهرس العروض"
+    "فهرس العروض",
+    "Mortal T1 2/16GB Wifi 4K",
+    "Acinaci J11 Gaming Headset"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2088,7 +2094,7 @@
     "ماوس لاسلكي فخم Scyrox V8S Wireless 8K": 1793543830.34111,
     "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM": 1791992945.451545,
     "Rocoren 100W Type-C to USB Fast Charging 0.5M": 1791992975.2913277,
-    "Acinaci J11 Gaming Headset": 1792184444.8854666,
+    "Acinaci J11 Gaming Headset": 1793599553.1122265,
     "Realme 14 Pro Global (12/256)": 1792007168.2612865,
     "Anker Soundcore Select 4 Go Bluetooth Speaker": 1792007180.6836498,
     "OnePlus Turbo 6V  8/256": 1793380262.1330528,
@@ -2491,11 +2497,10 @@
     "KODAK USB 2.0 Flash Drive": 1793573951.3406305,
     "VA VA VOOM Brand Top": 1793574309.4810557,
     "معالج Ryzen 5 8400F": 1793575053.368357,
-    "فهرس العروض": 1793599383.3882716
+    "فهرس العروض": 1793599383.3882716,
+    "Mortal T1 2/16GB Wifi 4K": 1793599548.0470035
   },
   "published_post_keys": [
-    "aniscoupons:32706",
-    "lodydeals:45417",
     "aniscoupons:32707",
     "lodydeals:45418",
     "aniscoupons:32708",
@@ -3493,19 +3498,21 @@
     "lodydeals:45944",
     "lodydeals:45946",
     "ecksdeal:5998",
-    "ecksdeal:6008"
+    "ecksdeal:6008",
+    "lodydeals:45947",
+    "lodydeals:45948"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793599383.3882716,
+  "last_run_time": 1793599553.1122265,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793599383.3882716
     },
     "lodydeals": {
-      "last_message_id": 45946,
-      "last_check_time": 1793574311.5234413
+      "last_message_id": 45948,
+      "last_check_time": 1793599555.1383169
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3994,7 +4001,9 @@
     "1005010487426245": 7.74,
     "1005012865939059": 14.89,
     "1005007171113381": 8.44,
-    "1005008144944225": 7.34
+    "1005008144944225": 7.34,
+    "1005012172791497": 16.89,
+    "1005012479560861": 12.98
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12989,6 +12998,26 @@
       "price": null,
       "timestamp": 1793599383.3882716,
       "status": "ACTIVE"
+    },
+    "lodydeals:45947": {
+      "channel_msg_id": 1580,
+      "product_id": "1005012172791497",
+      "title": "Mortal T1 2/16GB Wifi 4K",
+      "channel": "lodydeals",
+      "source_msg_id": 45947,
+      "price": 16.89,
+      "timestamp": 1793599548.0470035,
+      "status": "ACTIVE"
+    },
+    "lodydeals:45948": {
+      "channel_msg_id": 1581,
+      "product_id": "1005012479560861",
+      "title": "Acinaci J11 Gaming Headset",
+      "channel": "lodydeals",
+      "source_msg_id": 45948,
+      "price": 12.98,
+      "timestamp": 1793599553.1122265,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12997,17 +13026,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793575055.4444058,
+    "last_deal_post_time": 1793599558.5847304,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793599389.4601948,
+    "last_sweep_time": 1793599563.2958221,
     "last_sweep_times": {
-      "algeria": 1793599384.0265613,
-      "france": 1793599389.4601948
+      "algeria": 1793599558.573351,
+      "france": 1793599563.2958221
     },
     "last_deal_post_times": {
-      "algeria": 1793575055.4444058
+      "algeria": 1793599558.5847304
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13591,7 +13620,9 @@
     "1005012865939059": "lodydeals",
     "1005007171113381": "lodydeals",
     "1005008144944225": "lodydeals",
-    "INDEX_ECKSDEAL_6008": "ecksdeal"
+    "INDEX_ECKSDEAL_6008": "ecksdeal",
+    "1005012172791497": "lodydeals",
+    "1005012479560861": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14269,7 +14300,8 @@
     "KODAK USB 2.0 Flash Drive": "lodydeals",
     "VA VA VOOM Brand Top": "lodydeals",
     "معالج Ryzen 5 8400F": "ecksdeal",
-    "فهرس العروض": "ecksdeal"
+    "فهرس العروض": "ecksdeal",
+    "Mortal T1 2/16GB Wifi 4K": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
