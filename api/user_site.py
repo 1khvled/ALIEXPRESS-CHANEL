@@ -3304,6 +3304,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     </div>
   </footer>
 
+  <!-- INITIAL_DEALS_INJECTION -->
+
   <!-- ========================================== -->
   <!-- CLIENT-SIDE BILINGUAL & THEME LOGIC        -->
   <!-- ========================================== -->
@@ -4893,7 +4895,22 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const icon = document.getElementById('refresh-icon');
       if (showSpin && icon) icon.classList.add('fa-spin');
 
-      // 1. Instant client-side hydration from localStorage cache (0ms instant render)
+      // 0. Zero-latency instant hydration from server-injected initial deals (0ms paint!)
+      if (!allDeals || allDeals.length === 0) {
+        try {
+          const initEl = document.getElementById('initial-deals-data');
+          if (initEl && initEl.textContent && initEl.textContent.trim().length > 10) {
+            const initialDeals = JSON.parse(initEl.textContent);
+            if (Array.isArray(initialDeals) && initialDeals.length > 0) {
+              allDeals = initialDeals.filter(d => d && d.affiliate_url && d.title).slice(0, 30);
+              updateCategoryCounters();
+              filterDeals();
+            }
+          }
+        } catch(e) {}
+      }
+
+      // 1. Instant client-side hydration from localStorage cache
       const cacheKey = 'dealscout_deals_v3_' + currentChannel;
       if (!forceRefresh && (!allDeals || allDeals.length === 0)) {
         try {
@@ -4937,7 +4954,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           try {
             localStorage.setItem(cacheKey, JSON.stringify(allDeals));
           } catch(e) {}
-          updateDailyTajmi3atSection(data.posts);
+          try {
+            updateDailyTajmi3atSection(data.posts);
+          } catch(te) {
+            console.warn('updateDailyTajmi3atSection err:', te);
+          }
           updateCategoryCounters();
           filterDeals();
           if (showSpin) {
@@ -4947,7 +4968,20 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           filterDeals();
         }
       } catch (err) {
-        console.error('Error fetching deals:', err);
+        console.warn('Error fetching channel posts, falling back to /api/deals:', err);
+        try {
+          const fbResp = await fetch('/api/deals?channel=' + encodeURIComponent(currentChannel));
+          if (fbResp.ok) {
+            const fbData = await fbResp.json();
+            if (fbData.deals && Array.isArray(fbData.deals) && fbData.deals.length > 0) {
+              allDeals = fbData.deals.slice(0, 30);
+              updateCategoryCounters();
+              filterDeals();
+            }
+          }
+        } catch (fbErr) {
+          console.error('Fallback /api/deals failed:', fbErr);
+        }
         if (showSpin) {
           showToast(currentLang === 'fr' ? 'Impossible de rafraîchir pour le moment' : 'تعذر التحديث الآن، جاري استخدام البيانات المحفوظة');
         }

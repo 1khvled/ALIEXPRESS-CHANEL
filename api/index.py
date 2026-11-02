@@ -140,6 +140,58 @@ ICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 # DASHBOARD_HTML is modularly imported from api.admin_dashboard
 
 
+def get_initial_deals_payload() -> str:
+    """Returns JSON array string of recent verified deals for instant 0ms client hydration."""
+    try:
+        import sqlite3, json
+        from pathlib import Path
+        db_path = Path(__file__).resolve().parent.parent / "deals.db"
+        if db_path.exists():
+            conn = sqlite3.connect(str(db_path))
+            c = conn.cursor()
+            c.execute("""
+                SELECT product_id, title, current_price, current_price_eur, coupon_code, has_points_discount, affiliate_url, image_url, created_at 
+                FROM deals 
+                WHERE affiliate_url IS NOT NULL AND affiliate_url != '' AND title IS NOT NULL
+                ORDER BY id DESC LIMIT 25
+            """)
+            usdt_rate = 258.0
+            deals = []
+            for row in c.fetchall():
+                pid, title, p_usd, p_eur, coupon, coins, aff_link, img_url, dt = row
+                p_dzd = int(round(p_usd * usdt_rate, -1)) if p_usd else None
+                deals.append({
+                    "id": f"DzAliexpress0/{pid}",
+                    "msg_id": str(pid),
+                    "title": title or "AliExpress Deal",
+                    "price_usd": p_usd,
+                    "price_eur": p_eur,
+                    "price_dzd": p_dzd,
+                    "currency": "USD",
+                    "coupon_code": coupon,
+                    "coupon": coupon,
+                    "coupons": [coupon] if coupon else [],
+                    "coupon_details": [{"code": coupon, "tier": "", "label": "كوبون"}] if coupon else [],
+                    "description": title or "",
+                    "country": None,
+                    "has_coins": bool(coins),
+                    "affiliate_url": aff_link,
+                    "telegram_url": "https://t.me/DzAliexpress0",
+                    "photo_url": img_url,
+                    "category": "other",
+                    "category_label": "عروض منوعة 🏷️",
+                    "date": str(dt) if dt else "",
+                    "is_tajmi3at": False,
+                    "raw_text": f"{title}\n{coupon or ''}\n{aff_link}"
+                })
+            conn.close()
+            if deals:
+                return json.dumps(deals, ensure_ascii=False)
+    except Exception:
+        pass
+    return "[]"
+
+
 def get_active_event_seo_html() -> str:
     """Injects real-time active promotional event keywords, deals, and descriptions into HTML for instant SEO indexing."""
     html = USER_WEBSITE_HTML
@@ -171,6 +223,12 @@ def get_active_event_seo_html() -> str:
                 html,
                 count=1
             )
+    except Exception:
+        pass
+    try:
+        initial_json = get_initial_deals_payload()
+        script_tag = f'<script id="initial-deals-data" type="application/json">{initial_json}</script>'
+        html = html.replace("<!-- INITIAL_DEALS_INJECTION -->", script_tag)
     except Exception:
         pass
     return html
