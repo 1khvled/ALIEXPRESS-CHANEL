@@ -570,7 +570,8 @@
     "1005007171113381",
     "1005012865117890",
     "1005011867856141",
-    "1005006515379868"
+    "1005006515379868",
+    "1005007792223934"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1003,7 +1004,7 @@
     "1005011778197787": 1793467141.896747,
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
-    "1005005373032877": 1793554745.8585548,
+    "1005005373032877": 1793600283.7397804,
     "1005007869955343": 1793542500.4794705,
     "1005012644570693": 1793441338.6619778,
     "1005003949106838": 1793542475.0738764,
@@ -1123,7 +1124,7 @@
     "1005010160409425": 1793550286.3852649,
     "1005010158909326": 1793550291.1923656,
     "1005006915475056": 1793553788.666037,
-    "1005008460932629": 1793553793.0475857,
+    "1005008460932629": 1793600294.7888756,
     "1005008147206532": 1793554730.1566968,
     "1005006398880142": 1793554757.8937938,
     "1005008755897663": 1793554764.2266893,
@@ -1153,7 +1154,8 @@
     "1005012172791497": 1793599548.0470035,
     "1005012479560861": 1793599553.1122265,
     "1005011867856141": 1793599912.232469,
-    "1005006515379868": 1793600128.145566
+    "1005006515379868": 1793600128.145566,
+    "1005007792223934": 1793600288.3908339
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -1827,7 +1829,8 @@
     "POCO C81 Pro 4/64",
     "Shaking Cup Fitness Sports",
     "POEDAGAR 896 Men's Watches",
-    "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card"
+    "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card",
+    "POEDAGAR 680 Men's Quartz"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2290,7 +2293,7 @@
     "MSI PRO X870E-P WIFI AM5": 1793384195.9014845,
     "Vivo X300 Pro 5G 12/256GB": 1793384203.5839794,
     "Amd Ryzen R5 9600X Cpu 3.9 Ghz 6-Core 12-Thread 38Mb Am5 New!": 1793555097.6969874,
-    "Maono PD200X XLR/USB Dynamic": 1793554745.8585548,
+    "Maono PD200X XLR/USB Dynamic": 1793600283.7397804,
     "MAONO PD100X USB/XLR Dynamic": 1793542500.4794705,
     "Machenike G3 V2 PC Gaming Controller": 1793384273.7830687,
     "⭐️ 🎟️": 1793384286.409923,
@@ -2463,7 +2466,7 @@
     "Fifine D6 Stream deck": 1793550286.3852649,
     "Ulanzi D200 Stream deck": 1793550291.1923656,
     "ويبكام Emeet S600 4K Webcam": 1793553788.666037,
-    "بطاقة تسجيل Ezcap333 HDMI 4k USB Capture Card": 1793553793.0475857,
+    "بطاقة تسجيل Ezcap333 HDMI 4k USB Capture Card": 1793600294.7888756,
     "DJI Mic Mini 2TX 1RX": 1793554730.1566968,
     "Blackview WAVE 10 8/256GB": 1793554740.6491675,
     "SAMSUNG DDR3 Ram 8GB 1600MHz": 1793554757.8937938,
@@ -2506,12 +2509,10 @@
     "فهرس العروض": 1793599383.3882716,
     "Mortal T1 2/16GB Wifi 4K": 1793599548.0470035,
     "POEDAGAR 896 Men's Watches": 1793599912.232469,
-    "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card": 1793600128.145566
+    "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card": 1793600128.145566,
+    "POEDAGAR 680 Men's Quartz": 1793600288.3908339
   },
   "published_post_keys": [
-    "lodydeals:45843",
-    "test_channel:1792110177",
-    "aniscoupons:32761",
     "lodydeals:45568",
     "couponsglobal:48789",
     "megaphonna:8692",
@@ -3508,19 +3509,22 @@
     "ecksdeal:5984",
     "lodydeals:45893",
     "lodydeals:45895",
-    "ecksdeal:5993"
+    "ecksdeal:5993",
+    "lodydeals:45883",
+    "lodydeals:45950",
+    "ecksdeal:5991"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793600128.145566,
+  "last_run_time": 1793600294.7888756,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
-      "last_check_time": 1793600128.145566
+      "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45949,
-      "last_check_time": 1793600123.185837
+      "last_message_id": 45950,
+      "last_check_time": 1793600290.4175732
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4017,7 +4021,8 @@
     "1005012172791497": 16.89,
     "1005012479560861": 12.98,
     "1005011867856141": 7.82,
-    "1005006515379868": 9.37
+    "1005006515379868": 9.37,
+    "1005007792223934": 7.34
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12514,13 +12519,13 @@
       "status": "ACTIVE"
     },
     "ecksdeal:5991": {
-      "channel_msg_id": 1519,
+      "channel_msg_id": 1600,
       "product_id": "1005008460932629",
       "title": "بطاقة تسجيل Ezcap333 HDMI 4k USB Capture Card",
       "channel": "ecksdeal",
       "source_msg_id": 5991,
       "price": 32.63,
-      "timestamp": 1793553793.0475857,
+      "timestamp": 1793600294.7888756,
       "status": "ACTIVE"
     },
     "lodydeals:45878": {
@@ -12544,13 +12549,13 @@
       "status": "ACTIVE"
     },
     "lodydeals:45883": {
-      "channel_msg_id": 1522,
+      "channel_msg_id": 1598,
       "product_id": "1005005373032877",
       "title": "Maono PD200X XLR/USB Dynamic",
       "channel": "lodydeals",
       "source_msg_id": 45883,
       "price": 61.03,
-      "timestamp": 1793554745.8585548,
+      "timestamp": 1793600283.7397804,
       "status": "ACTIVE"
     },
     "lodydeals:45885": {
@@ -13052,6 +13057,16 @@
       "price": 9.37,
       "timestamp": 1793600128.145566,
       "status": "ACTIVE"
+    },
+    "lodydeals:45950": {
+      "channel_msg_id": 1599,
+      "product_id": "1005007792223934",
+      "title": "POEDAGAR 680 Men's Quartz",
+      "channel": "lodydeals",
+      "source_msg_id": 45950,
+      "price": 7.34,
+      "timestamp": 1793600288.3908339,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13060,17 +13075,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793600130.8018575,
+    "last_deal_post_time": 1793600298.3791585,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793600135.9428234,
+    "last_sweep_time": 1793600303.5154247,
     "last_sweep_times": {
-      "algeria": 1793600130.7822685,
-      "france": 1793600135.9428234
+      "algeria": 1793600298.3679113,
+      "france": 1793600303.5154247
     },
     "last_deal_post_times": {
-      "algeria": 1793600130.8018575
+      "algeria": 1793600298.3791585
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13659,7 +13674,8 @@
     "1005012479560861": "lodydeals",
     "TAJMI3A_PC_PARTS_1582": "dzaliexpress0",
     "1005011867856141": "lodydeals",
-    "1005006515379868": "ecksdeal"
+    "1005006515379868": "ecksdeal",
+    "1005007792223934": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14341,7 +14357,8 @@
     "Mortal T1 2/16GB Wifi 4K": "lodydeals",
     "فهرس عروض قطع وعتاد البي سي": "dzaliexpress0",
     "POEDAGAR 896 Men's Watches": "lodydeals",
-    "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card": "ecksdeal"
+    "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card": "ecksdeal",
+    "POEDAGAR 680 Men's Quartz": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
