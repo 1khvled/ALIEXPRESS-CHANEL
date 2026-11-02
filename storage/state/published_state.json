@@ -996,7 +996,7 @@
     "1005013254642366": 1793566329.6306164,
     "1005012725188908": 1793467076.3852122,
     "1005013224329670": 1793380335.1434295,
-    "1005010039614599": 1793448587.6507976,
+    "1005010039614599": 1793607798.5770764,
     "1005004828097942": 1793380362.9885337,
     "1005006495503659": 1793542571.5615325,
     "1005013205488777": 1793380404.996831,
@@ -1841,7 +1841,8 @@
     "Vxe Dragonfly R1 SE",
     "Baseus 240W Type-C Cable 1m",
     "VA VA VOOM Men Casual",
-    "Anker Nano 70W Max 3-Port"
+    "Anker Nano 70W Max 3-Port",
+    "Anker Soundcoure Life Q30"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2526,10 +2527,10 @@
     "Vxe Dragonfly R1 SE": 1793601217.1874278,
     "Baseus 240W Type-C Cable 1m": 1793601389.0047116,
     "VA VA VOOM Men Casual": 1793601744.1664062,
-    "Anker Nano 70W Max 3-Port": 1793607070.347875
+    "Anker Nano 70W Max 3-Port": 1793607070.347875,
+    "Anker Soundcoure Life Q30": 1793607798.5770764
   },
   "published_post_keys": [
-    "aniscoupons:32726",
     "pcgamingpart:7939",
     "aniscoupons:32780",
     "aniscoupons:33307",
@@ -3528,19 +3529,20 @@
     "lodydeals:45954",
     "lodydeals:45955",
     "lodydeals:45956",
-    "lodydeals:45957"
+    "lodydeals:45957",
+    "lodydeals:45958"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793607070.347875,
+  "last_run_time": 1793607798.5770764,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45957,
-      "last_check_time": 1793607072.38185
+      "last_message_id": 45958,
+      "last_check_time": 1793607800.621883
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3885,7 +3887,7 @@
     "1005013254642366": 22.05,
     "1005012725188908": 35.4,
     "1005013224329670": 21.1,
-    "1005010039614599": 43.2,
+    "1005010039614599": 43.11,
     "1005004828097942": 58.4,
     "1005006495503659": 27.41,
     "1005013205488777": 57.3,
@@ -13156,6 +13158,16 @@
       "price": 29.76,
       "timestamp": 1793607070.347875,
       "status": "ACTIVE"
+    },
+    "lodydeals:45958": {
+      "channel_msg_id": 1608,
+      "product_id": "1005010039614599",
+      "title": "Anker Soundcoure Life Q30",
+      "channel": "lodydeals",
+      "source_msg_id": 45958,
+      "price": 43.11,
+      "timestamp": 1793607798.5770764,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13164,17 +13176,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793607075.123984,
+    "last_deal_post_time": 1793607802.777496,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793607610.3646183,
+    "last_sweep_time": 1793607806.531693,
     "last_sweep_times": {
-      "algeria": 1793607605.0897198,
-      "france": 1793607610.3646183
+      "algeria": 1793607802.757455,
+      "france": 1793607806.531693
     },
     "last_deal_post_times": {
-      "algeria": 1793607075.123984
+      "algeria": 1793607802.777496
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13601,7 +13613,7 @@
     "1005013254642366": "lodydeals",
     "1005012725188908": "zedstoreonline",
     "1005013224329670": "zedstoreonline",
-    "1005010039614599": "zedstoreonline",
+    "1005010039614599": "lodydeals",
     "1005004828097942": "aniscoupons",
     "1005006495503659": "ecksdeal",
     "1005013205488777": "aniscoupons",
@@ -14455,7 +14467,8 @@
     "Vxe Dragonfly R1 SE": "lodydeals",
     "Baseus 240W Type-C Cable 1m": "lodydeals",
     "VA VA VOOM Men Casual": "lodydeals",
-    "Anker Nano 70W Max 3-Port": "lodydeals"
+    "Anker Nano 70W Max 3-Port": "lodydeals",
+    "Anker Soundcoure Life Q30": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
