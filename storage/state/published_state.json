@@ -156,7 +156,6 @@
     "1005012790844974",
     "1005011742851856",
     "1005009306976665",
-    "TAJMI3A_PC_PARTS_1582",
     "1005012914301139",
     "1005008901941749",
     "9998887972",
@@ -569,7 +568,8 @@
     "1005006974721332",
     "1005008986635164",
     "1005007171113381",
-    "1005012865117890"
+    "1005012865117890",
+    "1005011867856141"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1114,7 +1114,7 @@
     "1005008041957503": 1793546771.1864512,
     "1005010240905676": 1793546776.7430634,
     "1005010236248649": 1793546781.4529572,
-    "1005007345311212": 1793546788.265888,
+    "1005007345311212": 1793599918.33911,
     "1005007010570179": 1793550258.5411532,
     "1005010049082935": 1793550263.576872,
     "1005007938007660": 1793550268.818711,
@@ -1151,7 +1151,7 @@
     "INDEX_ECKSDEAL_6008": 1793599383.3882716,
     "1005012172791497": 1793599548.0470035,
     "1005012479560861": 1793599553.1122265,
-    "TAJMI3A_PC_PARTS_1582": 1793599663.3444748
+    "1005011867856141": 1793599912.232469
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -1623,7 +1623,6 @@
     "Netac 7400MB/s SSD NVMe 1TB",
     "معالج Ryzen 7 9800X3D",
     "QCY Crossky C50i Open",
-    "فهرس عروض قطع وعتاد البي سي",
     "46pcs Ratchet Set Kit",
     "Multi-Tier Metal Rack with 8 Hooks for Shoes,",
     "ASROCK  X470 MASTER",
@@ -1824,7 +1823,8 @@
     "Netac NV7000-T M.2 Gen4 1TB",
     "HOCO ANC EQ34 PLUS",
     "POCO C81 Pro 4/64",
-    "Shaking Cup Fitness Sports"
+    "Shaking Cup Fitness Sports",
+    "POEDAGAR 896 Men's Watches"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2452,7 +2452,7 @@
     "اشهر ويبكام حاليا للبث المباشر": 1793546771.1864512,
     "ويبكام بتتبع عن طريق الذكاء الاصطناعي": 1793546776.7430634,
     "ويبكام OBSBOT Meet SE 1080p Webcam": 1793546781.4529572,
-    "ويبكام Fifine K420 1440P Webcam": 1793546788.265888,
+    "ويبكام Fifine K420 1440P Webcam": 1793599918.33911,
     "واجهة صوت Fifine SC3 Audio Mixer": 1793550258.5411532,
     "واجهة صوت Fifine SC8 Audio Mixer": 1793550263.576872,
     "واجهة صوت Maono G1 Neo Audio Mixer": 1793550268.818711,
@@ -2502,61 +2502,9 @@
     "معالج Ryzen 5 8400F": 1793575053.368357,
     "فهرس العروض": 1793599383.3882716,
     "Mortal T1 2/16GB Wifi 4K": 1793599548.0470035,
-    "فهرس عروض قطع وعتاد البي سي": 1793599663.3444748
+    "POEDAGAR 896 Men's Watches": 1793599912.232469
   },
   "published_post_keys": [
-    "bnddeals:50941",
-    "couponsglobal:48761",
-    "zedstoreonline:38564",
-    "lodydeals:45895",
-    "megaphonna:8661",
-    "ecksdeal:5926",
-    "lodydeals:45469",
-    "aniscoupons:33194",
-    "aniscoupons:32737",
-    "ecksdeal:5984",
-    "lodydeals:45947",
-    "zedstoreonline:38746",
-    "lodydeals:45434",
-    "lodydeals:45781",
-    "zedstoreonline:38605",
-    "test_channel:1792322875",
-    "test_channel:1792283879",
-    "zedstoreonline:38549",
-    "pcgamingpart:7941",
-    "lodydeals:45443",
-    "aniscoupons:32989",
-    "aniscoupons:33281",
-    "lodydeals:45811",
-    "lodydeals:45883",
-    "lodydeals:45475",
-    "zedstoreonline:38693",
-    "lodydeals:45431",
-    "bnddeals:50959",
-    "aniscoupons:32703",
-    "aniscoupons:32747",
-    "lodydeals:45893",
-    "aniscoupons:33111",
-    "couponsglobal:48794",
-    "aniscoupons:32759",
-    "couponsglobal:48791",
-    "lodydeals:45692",
-    "aniscoupons:33217",
-    "lodydeals:45735",
-    "pcgamingpart:8022",
-    "lodydeals:45809",
-    "lodydeals:45865",
-    "couponsglobal:48790",
-    "ecksdeal:5857",
-    "megaphonna:8584",
-    "bnddeals:50887",
-    "lodydeals:45404",
-    "aniscoupons:32793",
-    "couponsglobal:48870",
-    "pcgamingpart:7977",
-    "aniscoupons:32719",
-    "zedstoreonline:38888",
-    "lodydeals:45412",
     "pcgamingpart:7963",
     "aniscoupons:33146",
     "ecksdeal:5991",
@@ -2899,7 +2847,6 @@
     "bnddeals:50808",
     "zedstoreonline:38674",
     "zedstoreonline:38918",
-    "dzaliexpress0:1582",
     "test_channel:1792087185",
     "lodydeals:45798",
     "zedstoreonline:38760",
@@ -3555,19 +3502,21 @@
     "lodydeals:45890",
     "aniscoupons:33272",
     "test_channel:1791677705",
-    "test_channel:1791753006"
+    "test_channel:1791753006",
+    "lodydeals:45949",
+    "ecksdeal:5984"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793599663.3444748,
+  "last_run_time": 1793599918.33911,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
-      "last_check_time": 1793599383.3882716
+      "last_check_time": 1793599918.33911
     },
     "lodydeals": {
-      "last_message_id": 45948,
-      "last_check_time": 1793599555.1383169
+      "last_message_id": 45949,
+      "last_check_time": 1793599914.265306
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4062,7 +4011,8 @@
     "1005007171113381": 8.44,
     "1005008144944225": 7.34,
     "1005012172791497": 16.89,
-    "1005012479560861": 12.98
+    "1005012479560861": 12.98,
+    "1005011867856141": 7.82
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12479,13 +12429,13 @@
       "status": "ACTIVE"
     },
     "ecksdeal:5984": {
-      "channel_msg_id": 1511,
+      "channel_msg_id": 1584,
       "product_id": "1005007345311212",
       "title": "ويبكام Fifine K420 1440P Webcam",
       "channel": "ecksdeal",
       "source_msg_id": 5984,
       "price": 16.0,
-      "timestamp": 1793546788.265888,
+      "timestamp": 1793599918.33911,
       "status": "ACTIVE"
     },
     "ecksdeal:5986": {
@@ -13078,14 +13028,14 @@
       "timestamp": 1793599553.1122265,
       "status": "ACTIVE"
     },
-    "dzaliexpress0:1582": {
-      "channel_msg_id": 1582,
-      "product_id": "TAJMI3A_PC_PARTS_1582",
-      "title": "فهرس عروض قطع وعتاد البي سي",
-      "channel": "dzaliexpress0",
-      "source_msg_id": 1582,
-      "price": null,
-      "timestamp": 1793599663.3444748,
+    "lodydeals:45949": {
+      "channel_msg_id": 1583,
+      "product_id": "1005011867856141",
+      "title": "POEDAGAR 896 Men's Watches",
+      "channel": "lodydeals",
+      "source_msg_id": 45949,
+      "price": 7.82,
+      "timestamp": 1793599912.232469,
       "status": "ACTIVE"
     }
   },
@@ -13095,17 +13045,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793599558.5847304,
+    "last_deal_post_time": 1793599922.5990055,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793599750.5573807,
+    "last_sweep_time": 1793599926.9561062,
     "last_sweep_times": {
-      "algeria": 1793599746.2470474,
-      "france": 1793599750.5573807
+      "algeria": 1793599922.5850904,
+      "france": 1793599926.9561062
     },
     "last_deal_post_times": {
-      "algeria": 1793599558.5847304
+      "algeria": 1793599922.5990055
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13692,7 +13642,8 @@
     "INDEX_ECKSDEAL_6008": "ecksdeal",
     "1005012172791497": "lodydeals",
     "1005012479560861": "lodydeals",
-    "TAJMI3A_PC_PARTS_1582": "dzaliexpress0"
+    "TAJMI3A_PC_PARTS_1582": "dzaliexpress0",
+    "1005011867856141": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14372,7 +14323,8 @@
     "معالج Ryzen 5 8400F": "ecksdeal",
     "فهرس العروض": "ecksdeal",
     "Mortal T1 2/16GB Wifi 4K": "lodydeals",
-    "فهرس عروض قطع وعتاد البي سي": "dzaliexpress0"
+    "فهرس عروض قطع وعتاد البي سي": "dzaliexpress0",
+    "POEDAGAR 896 Men's Watches": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
