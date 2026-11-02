@@ -54,7 +54,7 @@ CATEGORIES_CONFIG = {
             "headset", "earphone", "case", "cover", "holder", "charger",
             "cable", "cooler", "mousepad", "mouse pad", "screen protector", "glass", "film",
             "watch", "band", "ساعة", "سوار", "smartwatch", "قلم", "stylus",
-            "بوشات", "زجاج", "واقي", "تابلت", "tablet", "pad"
+            "بوشات", "زجاج", "واقي", "تابلت", "tablet", "pad", "mic", "microphone", "مايك", "مايكروفون"
         ]
     },
     "gaming_pads": {
@@ -124,6 +124,7 @@ CATEGORIES_CONFIG = {
         "keywords": [
             "headset", "headsets", "headphone", "headphones", "earbuds", "earbud",
             "earphone", "earphones", "tws", "iem", "سماعة", "سماعات", "سماعة محيطية",
+            "mic", "microphone", "مايك", "مايكروفون", "maono", "fifine", "boya",
             "attack shark l80", "attack shark l90", "lenovo xt", "lenovo lp", "lenovo th",
             "htc ne", "kz edx", "kz castor", "moondrop", "qcy", "soundcore",
             "monster mqt", "monster maxstar", "cmf buds", "baseus bowie", "redmi buds", "edifier"
@@ -514,7 +515,7 @@ def format_deal_line(item: Dict[str, Any], channel_username: str, index: int = 1
     elif price_val < 35.0 or item.get("has_coupon"):
         fire = " 🔥"
 
-    return f'<a href="{post_url}">{title}</a>\n{price_display}{fire}' 
+    return f'<a href="{post_url}">{title}</a> {price_display}{fire}' 
 
 def get_telegram_visible_len(html_text: str) -> int:
     """Calculates visible text length in characters as measured by Telegram Bot API (excluding HTML tags)."""
@@ -555,7 +556,7 @@ def build_category_bulletin_text(
     }
     category_ar = cat_labels.get(category_name) or cat_config.get("name_ar") or category_name
     part_suffix = f" (الجزء {part})" if (part and total_parts and total_parts > 1) else ""
-    header_text = f"<b>❗️ فهرس لافضل عروض {category_ar}{part_suffix} لتخفيضات 11.11</b>"
+    header_text = f"<blockquote><b>❗️ فهرس لافضل عروض {category_ar}{part_suffix} لتخفيضات 11.11</b></blockquote>"
 
     header_lines = [
         header_text,
@@ -576,8 +577,27 @@ def build_category_bulletin_text(
     # Sub-group by brand/subcategory
     show_brand_headers = True
 
-    brand_groups = group_items_by_brand(items)
-    sorted_brands = sorted(brand_groups.keys(), key=lambda b: (b == "عروض أخرى", -len(brand_groups[b]), b))
+    if category_name == "pc_parts":
+        def classify_pc_sub(it):
+            t = (str(it.get("title", "")) + " " + str(it.get("raw_text", ""))).lower()
+            if "ryzen" in t or "cpu" in t or "معالج" in t or "9700x" in t or "9800x" in t or "8400f" in t or "7500f" in t:
+                return "AMD Ryzen معالجات"
+            elif any(kw in t for kw in ["b550", "b650", "x570", "x870", "motherboard", "لوحة أم", "aorus"]):
+                return "Motherboards لوحات أم"
+            elif any(kw in t for kw in ["ram", "ddr4", "ddr5", "ssd", "nvme", "sata", "رام"]):
+                return "RAM & SSD رامات وتخزين"
+            return "قطع وملحقات أخرى"
+        brand_groups = {}
+        for it in items:
+            sub = classify_pc_sub(it)
+            brand_groups.setdefault(sub, []).append(it)
+        order_pref = {"AMD Ryzen معالجات": 0, "Motherboards لوحات أم": 1, "RAM & SSD رامات وتخزين": 2, "قطع وملحقات أخرى": 3}
+        sorted_brands = sorted(brand_groups.keys(), key=lambda b: order_pref.get(b, 99))
+        for b in sorted_brands:
+            brand_groups[b].sort(key=lambda x: float(x.get("price") or 0.0))
+    else:
+        brand_groups = group_items_by_brand(items)
+        sorted_brands = sorted(brand_groups.keys(), key=lambda b: (b == "عروض أخرى", -len(brand_groups[b]), b))
 
     selected_items: List[Dict[str, Any]] = []
     body_lines: List[str] = []
@@ -594,7 +614,8 @@ def build_category_bulletin_text(
             temp_body.append("")
 
         brand_added: List[Dict[str, Any]] = []
-        for it in b_items:
+        max_per_sub = 8 if category_name == "pc_parts" else 20
+        for it in b_items[:max_per_sub]:
             line = format_deal_line(it, channel_username)
             cand_body = temp_body + [line, ""]
             cand_full = "\n".join(header_lines + cand_body + footer_lines)
@@ -621,7 +642,7 @@ def build_master_daily_roundup_text(deals: List[Dict[str, Any]], channel_usernam
     """
     clean_ch = channel_username.replace("@", "")
     header_lines = [
-        "<b>❗️ فهرس لافضل عروض وتخفيضات 11.11 اليومية</b>",
+        "<blockquote><b>❗️ فهرس لافضل عروض وتخفيضات 11.11 اليومية</b></blockquote>",
         "",
         "🆕 جميع هذه القطع جديدة و غير مستعملة",
         "",
@@ -854,7 +875,8 @@ async def check_and_publish_regrouped_bulletins(
                         logger.error(f"[TAJMI3AT] Failed to publish {cat_name} bulletin: {sent_data}")
                         break
 
-                    remaining_items = remaining_items[len(used_items):]
+                    used_ids = {it["channel_msg_id"] for it in used_items}
+                    remaining_items = [it for it in remaining_items if it["channel_msg_id"] not in used_ids]
                     part += 1
 
         # CASE B: No single category reached 4 items, but we have >= 3 deals today
