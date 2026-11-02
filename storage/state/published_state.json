@@ -571,7 +571,8 @@
     "1005012865117890",
     "1005011867856141",
     "1005006515379868",
-    "1005007792223934"
+    "1005007792223934",
+    "1005010707075064"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1155,7 +1156,8 @@
     "1005012479560861": 1793599553.1122265,
     "1005011867856141": 1793599912.232469,
     "1005006515379868": 1793600128.145566,
-    "1005007792223934": 1793600288.3908339
+    "1005007792223934": 1793600288.3908339,
+    "1005010707075064": 1793600466.7601562
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -1830,7 +1832,8 @@
     "Shaking Cup Fitness Sports",
     "POEDAGAR 896 Men's Watches",
     "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card",
-    "POEDAGAR 680 Men's Quartz"
+    "POEDAGAR 680 Men's Quartz",
+    "QCY Buds 6 Mics ANC"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2510,10 +2513,10 @@
     "Mortal T1 2/16GB Wifi 4K": 1793599548.0470035,
     "POEDAGAR 896 Men's Watches": 1793599912.232469,
     "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card": 1793600128.145566,
-    "POEDAGAR 680 Men's Quartz": 1793600288.3908339
+    "POEDAGAR 680 Men's Quartz": 1793600288.3908339,
+    "QCY Buds 6 Mics ANC": 1793600466.7601562
   },
   "published_post_keys": [
-    "lodydeals:45568",
     "couponsglobal:48789",
     "megaphonna:8692",
     "lodydeals:45812",
@@ -3512,19 +3515,20 @@
     "ecksdeal:5993",
     "lodydeals:45883",
     "lodydeals:45950",
-    "ecksdeal:5991"
+    "ecksdeal:5991",
+    "lodydeals:45951"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793600294.7888756,
+  "last_run_time": 1793600466.7601562,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45950,
-      "last_check_time": 1793600290.4175732
+      "last_message_id": 45951,
+      "last_check_time": 1793600468.805129
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4022,7 +4026,8 @@
     "1005012479560861": 12.98,
     "1005011867856141": 7.82,
     "1005006515379868": 9.37,
-    "1005007792223934": 7.34
+    "1005007792223934": 7.34,
+    "1005010707075064": 10.3
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -13067,6 +13072,16 @@
       "price": 7.34,
       "timestamp": 1793600288.3908339,
       "status": "ACTIVE"
+    },
+    "lodydeals:45951": {
+      "channel_msg_id": 1601,
+      "product_id": "1005010707075064",
+      "title": "QCY Buds 6 Mics ANC",
+      "channel": "lodydeals",
+      "source_msg_id": 45951,
+      "price": 10.3,
+      "timestamp": 1793600466.7601562,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13075,17 +13090,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793600298.3791585,
+    "last_deal_post_time": 1793600471.3668113,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793600303.5154247,
+    "last_sweep_time": 1793600475.4665694,
     "last_sweep_times": {
-      "algeria": 1793600298.3679113,
-      "france": 1793600303.5154247
+      "algeria": 1793600471.3475833,
+      "france": 1793600475.4665694
     },
     "last_deal_post_times": {
-      "algeria": 1793600298.3791585
+      "algeria": 1793600471.3668113
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13675,7 +13690,8 @@
     "TAJMI3A_PC_PARTS_1582": "dzaliexpress0",
     "1005011867856141": "lodydeals",
     "1005006515379868": "ecksdeal",
-    "1005007792223934": "lodydeals"
+    "1005007792223934": "lodydeals",
+    "1005010707075064": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14358,7 +14374,8 @@
     "فهرس عروض قطع وعتاد البي سي": "dzaliexpress0",
     "POEDAGAR 896 Men's Watches": "lodydeals",
     "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card": "ecksdeal",
-    "POEDAGAR 680 Men's Quartz": "lodydeals"
+    "POEDAGAR 680 Men's Quartz": "lodydeals",
+    "QCY Buds 6 Mics ANC": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
