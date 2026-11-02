@@ -125,6 +125,7 @@ CATEGORIES_CONFIG = {
             "headset", "headsets", "headphone", "headphones", "earbuds", "earbud",
             "earphone", "earphones", "tws", "iem", "سماعة", "سماعات", "سماعة محيطية",
             "mic", "microphone", "مايك", "مايكروفون", "maono", "fifine", "boya",
+            "webcam", "ويبكام", "yolocam", "emeet", "obsbot", "fifine h9", "fifine sc3", "fifine sc8", "fifine d6", "maono pd200x", "acinaci",
             "attack shark l80", "attack shark l90", "lenovo xt", "lenovo lp", "lenovo th",
             "htc ne", "kz edx", "kz castor", "moondrop", "qcy", "soundcore",
             "monster mqt", "monster maxstar", "cmf buds", "baseus bowie", "redmi buds", "edifier"
@@ -168,7 +169,7 @@ CATEGORIES_CONFIG = {
             "ptm7950", "كارت شاشة", "كرت شاشة", "معالج", "مشتت", "رام", "ddr4", "ddr5",
             "ryzen", "somnambulist", "cpu", "motherboard", "لوحة أم", "carte mere",
             "b450", "b550", "b650", "x470", "x570", "x670", "z790", "z690",
-            "fenvi", "network card", "pcie"
+            "fenvi", "network card", "pcie", "b850", "netac", "nv7000", "kootion", "samsung ddr3", "9900x", "b650 pro"
         ],
         "negative_keywords": [
             "case phone", "cover phone"
@@ -181,7 +182,7 @@ CATEGORIES_CONFIG = {
             "gan charger", "شاحن سريع", "شاحن سيارة", "شاحن جداري", "powerbank", "باور بانك",
             "ugreen 30w", "ugreen 65w", "ugreen charger", "toocki 60w", "toocki 100w",
             "toocki charger", "toocki usb", "toocki 2.4a", "baseus charger", "samsung charger",
-            "anker charger"
+            "anker charger", "charger", "chargeur", "gan", "nexode", "essager", "cable", "كابل", "شاحن", "power bank", "باوربانك"
         ],
         "negative_keywords": [
             "phone", "smartphone", "watch"
@@ -384,6 +385,9 @@ def get_recent_published_deals_for_roundup(max_age_hours: float = 24.0) -> List[
             continue
         msg_id = info.get("channel_msg_id")
         if not msg_id or int(msg_id) <= 0:
+            continue
+        # Strict 11.11 filter: Ignore any warmup/pre-sale deals posted before the 08:00 AM launch (#1411)
+        if int(msg_id) < 1411:
             continue
         ts = info.get("timestamp", 0)
         if (now - ts) > max_age_sec:
