@@ -1067,7 +1067,7 @@
     "1005006968874168": 1793490102.028307,
     "1005010770983388": 1793540059.832893,
     "1005010146801356": 1793540023.002178,
-    "1005012536471204": 1793540035.6702917,
+    "1005012536471204": 1793611292.7491462,
     "9998881104": 1793541104.8228326,
     "9998881403": 1793541403.922986,
     "1005010243337678": 1793541622.6543412,
@@ -1847,7 +1847,8 @@
     "VA VA VOOM Men Casual",
     "Anker Nano 70W Max 3-Port",
     "Anker Soundcoure Life Q30",
-    "CUSU SSD SATA 512GB"
+    "CUSU SSD SATA 512GB",
+    "OPPO Find X9 PRO 12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2534,10 +2535,10 @@
     "VA VA VOOM Men Casual": 1793601744.1664062,
     "Anker Nano 70W Max 3-Port": 1793607070.347875,
     "Anker Soundcoure Life Q30": 1793607798.5770764,
-    "CUSU SSD SATA 512GB": 1793608541.760777
+    "CUSU SSD SATA 512GB": 1793608541.760777,
+    "OPPO Find X9 PRO 12/256GB": 1793611292.7491462
   },
   "published_post_keys": [
-    "aniscoupons:33211",
     "aniscoupons:32915",
     "aniscoupons:33204",
     "zedstoreonline:38544",
@@ -3536,19 +3537,20 @@
     "lodydeals:45962",
     "lodydeals:45963",
     "lodydeals:45964",
-    "lodydeals:45965"
+    "lodydeals:45965",
+    "lodydeals:45966"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793609834.0521824,
+  "last_run_time": 1793611292.7491462,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45965,
-      "last_check_time": 1793609836.0963523
+      "last_message_id": 45966,
+      "last_check_time": 1793611294.7858505
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -13226,6 +13228,16 @@
       "price": 118.59,
       "timestamp": 1793609834.0521824,
       "status": "ACTIVE"
+    },
+    "lodydeals:45966": {
+      "channel_msg_id": 1614,
+      "product_id": "1005012536471204",
+      "title": "OPPO Find X9 PRO 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45966,
+      "price": 603.9,
+      "timestamp": 1793611292.7491462,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13234,17 +13246,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793609839.1729543,
+    "last_deal_post_time": 1793611297.1075609,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793611095.0245368,
+    "last_sweep_time": 1793611301.043705,
     "last_sweep_times": {
-      "algeria": 1793611090.0437217,
-      "france": 1793611095.0245368
+      "algeria": 1793611297.0905533,
+      "france": 1793611301.043705
     },
     "last_deal_post_times": {
-      "algeria": 1793609839.1729543
+      "algeria": 1793611297.1075609
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13739,7 +13751,7 @@
     "1005006968874168": "zedstoreonline",
     "1005010770983388": "megaphonna",
     "1005010146801356": "lodydeals",
-    "1005012536471204": "zedstoreonline",
+    "1005012536471204": "lodydeals",
     "9998881104": "test_channel",
     "9998881403": "test_channel",
     "1005010243337678": "lodydeals",
@@ -14529,7 +14541,8 @@
     "VA VA VOOM Men Casual": "lodydeals",
     "Anker Nano 70W Max 3-Port": "lodydeals",
     "Anker Soundcoure Life Q30": "lodydeals",
-    "CUSU SSD SATA 512GB": "lodydeals"
+    "CUSU SSD SATA 512GB": "lodydeals",
+    "OPPO Find X9 PRO 12/256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
