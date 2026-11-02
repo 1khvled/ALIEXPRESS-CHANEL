@@ -645,7 +645,7 @@
     "9998886147": 1790946147.1871526,
     "999888777111": 1793540440.3897107,
     "9998886362": 1790946362.071869,
-    "1005012407874415": 1791061256.0753598,
+    "1005012407874415": 1793613121.9226618,
     "9998887189": 1790947189.8634577,
     "1005010428573334": 1790948755.0367405,
     "1005013146524028": 1791042354.706192,
@@ -1851,7 +1851,8 @@
     "Anker Soundcoure Life Q30",
     "CUSU SSD SATA 512GB",
     "OPPO Find X9 PRO 12/256GB",
-    "Redmi Note 17 5G 6/256GB"
+    "Redmi Note 17 5G 6/256GB",
+    "Honor 600 Pro 12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2540,10 +2541,10 @@
     "Anker Soundcoure Life Q30": 1793607798.5770764,
     "CUSU SSD SATA 512GB": 1793608541.760777,
     "OPPO Find X9 PRO 12/256GB": 1793611292.7491462,
-    "Redmi Note 17 5G 6/256GB": 1793612016.5356846
+    "Redmi Note 17 5G 6/256GB": 1793612016.5356846,
+    "Honor 600 Pro 12/256GB": 1793613121.9226618
   },
   "published_post_keys": [
-    "zedstoreonline:38544",
     "megaphonna:8598",
     "lodydeals:45437",
     "bnddeals:50960",
@@ -3542,19 +3543,20 @@
     "lodydeals:45965",
     "lodydeals:45966",
     "lodydeals:45967",
-    "lodydeals:45968"
+    "lodydeals:45968",
+    "lodydeals:45969"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793612572.9334176,
+  "last_run_time": 1793613121.9226618,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45968,
-      "last_check_time": 1793612574.9613643
+      "last_message_id": 45969,
+      "last_check_time": 1793613123.9518847
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3633,7 +3635,7 @@
     "1005012504076921": 257.4,
     "1005008715050858": 6.4,
     "999888777111": 20.0,
-    "1005012407874415": 480.4,
+    "1005012407874415": 438.67,
     "1005013152491360": 168.69,
     "1005012925826589": 187.0,
     "1005012922578845": 213.77,
@@ -13263,6 +13265,16 @@
       "price": 113.4,
       "timestamp": 1793612572.9334176,
       "status": "ACTIVE"
+    },
+    "lodydeals:45969": {
+      "channel_msg_id": 1617,
+      "product_id": "1005012407874415",
+      "title": "Honor 600 Pro 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45969,
+      "price": 438.67,
+      "timestamp": 1793613121.9226618,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13271,17 +13283,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793612577.3530827,
+    "last_deal_post_time": 1793613126.8552208,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793612958.1789882,
+    "last_sweep_time": 1793613131.3525708,
     "last_sweep_times": {
-      "algeria": 1793612951.7193942,
-      "france": 1793612958.1789882
+      "algeria": 1793613126.8424942,
+      "france": 1793613131.3525708
     },
     "last_deal_post_times": {
-      "algeria": 1793612577.3530827
+      "algeria": 1793613126.8552208
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13351,7 +13363,7 @@
     "9998889674": "test_channel",
     "1005007279793099": "zedstoreonline",
     "1005005824280128": "aniscoupons",
-    "1005012407874415": "megaphonna",
+    "1005012407874415": "lodydeals",
     "1005006533038973": "pcgamingpart",
     "999888989": "test_channel",
     "9998881037": "test_channel",
@@ -14569,7 +14581,8 @@
     "Anker Soundcoure Life Q30": "lodydeals",
     "CUSU SSD SATA 512GB": "lodydeals",
     "OPPO Find X9 PRO 12/256GB": "lodydeals",
-    "Redmi Note 17 5G 6/256GB": "lodydeals"
+    "Redmi Note 17 5G 6/256GB": "lodydeals",
+    "Honor 600 Pro 12/256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
