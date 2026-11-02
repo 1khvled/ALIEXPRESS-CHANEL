@@ -31,7 +31,7 @@ from app.aliexpress.product import product_extractor
 from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category, detect_deal_type, is_france_deal, extract_telegram_html_text
 from app.aliexpress.promos import promo_tracker
 from app.aliexpress.affiliate import affiliate_service
-from app.ai.generator import caption_generator, format_lodydeals_caption_1to1, format_ecksdeal_caption_1to1, format_zedstoreonline_caption_1to1, format_aniscoupons_caption_1to1
+from app.ai.generator import caption_generator, format_lodydeals_caption_1to1, format_ecksdeal_caption_1to1
 from app.media.downloader import media_downloader
 from app.media.renderer import media_renderer
 from app.publisher.publisher import telegram_publisher
@@ -39,9 +39,7 @@ from app.utils.logger import logger
 # Primary Algerian deal channels strictly monitored (Lody & ECKSDEAL ONLY - 1:1 Mirror Copy)
 CHANNELS = [
     "lodydeals",
-    "ECKSDEAL",
-    "zedstoreonline",
-    "aniscoupons"
+    "ECKSDEAL"
 ]
 
 def get_bot_token() -> str:
@@ -227,7 +225,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     seen_titles = []
 
     from app.publisher.state_tracker import sync_deleted_channel_posts
-    needs_repost_keys = await sync_deleted_channel_posts()
+    needs_repost_keys = set()  # Strictly disabled: never re-post deals deleted by admin/user
     if needs_repost_keys:
         print(f"[DELETED POSTS SYNC] Found {len(needs_repost_keys)} post(s) deleted from channel, ready to repost: {needs_repost_keys}")
 
@@ -251,10 +249,8 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
 
     async with httpx.AsyncClient(headers=headers, timeout=20.0, follow_redirects=True) as client:
         DEFAULT_START_IDS = {
-            "lodydeals": 45760,
-            "ecksdeal": 5924,
-            "zedstoreonline": 39150,
-            "aniscoupons": 33500,
+            "lodydeals": 45969,
+            "ecksdeal": 6008,
         }
 
         for ch in CHANNELS:
@@ -267,7 +263,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
             if last_seen_id is None or last_seen_id < start_target_id:
                 min_id_needed = start_target_id
             else:
-                min_id_needed = max(start_target_id, last_seen_id - 60)
+                min_id_needed = max(start_target_id, last_seen_id)
 
             print(f"\n---> Scanning channel @{ch} (target start #{start_target_id}, last seen #{last_seen_id})...")
             try:
@@ -600,18 +596,6 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         )
                     elif ch.lower() == "ecksdeal":
                         caption = format_ecksdeal_caption_1to1(
-                            raw_text=raw_text,
-                            affiliate_url=aff_link,
-                            coupon_code=extracted.coupon_code
-                        )
-                    elif ch.lower() == "zedstoreonline":
-                        caption = format_zedstoreonline_caption_1to1(
-                            raw_text=raw_text,
-                            affiliate_url=aff_link,
-                            coupon_code=extracted.coupon_code
-                        )
-                    elif ch.lower() == "aniscoupons":
-                        caption = format_aniscoupons_caption_1to1(
                             raw_text=raw_text,
                             affiliate_url=aff_link,
                             coupon_code=extracted.coupon_code

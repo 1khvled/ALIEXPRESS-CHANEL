@@ -424,62 +424,6 @@ https://t.me/ECKSDEAL"""
     is_contam_esk, reason_esk = check_competitor_contamination(cap_esk, aff_url)
     assert not is_contam_esk, f"ESK formatter contaminated: {reason_esk}"
 
-def test_1to1_formatters_zedstore_and_aniscoupons():
-    from app.ai.generator import format_zedstoreonline_caption_1to1, format_aniscoupons_caption_1to1
-    from app.aliexpress.urls import check_competitor_contamination
-
-    aff_url = "https://s.click.aliexpress.com/e/_OUR_MONETIZED_DEAL"
-
-    sample_zed = """🚨
-الحححححححق لافاااااار بري ماحصلش 
-🚨
-غير البلد من الاعدادات أستراليا 
-🇦🇺
-⭐️ Honor 600 Pro 12/256
-💵 السعر 436.3    
-🔥
-🌷 احجــز قسيمــة البــائع 1$ 
-🙏 كوبون 100/500$ : OTD100
-🔗 رابـــــط المنتـــج  
-https://s.click.aliexpress.com/e/_c2yxvBQT
-😊 استخدم البوت للحصول على افضل سعر ممكن : 
-t.me/ZedStoreOnline_bot
-لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب ) ⚠️"""
-
-    cap_zed = format_zedstoreonline_caption_1to1(sample_zed, aff_url, "OTD100")
-    assert aff_url in cap_zed
-    assert "https://t.me/Alilo07BOT" in cap_zed or "@Alilo07BOT" in cap_zed
-    assert "<code>OTD100</code>" in cap_zed
-    assert "ZedStoreOnline_bot" not in cap_zed
-    assert "نصاب" not in cap_zed
-    assert "ابلوكيه" not in cap_zed
-    is_contam_zed, reason_zed = check_competitor_contamination(cap_zed, aff_url)
-    assert not is_contam_zed, f"Zed formatter contaminated: {reason_zed}"
-
-    sample_anis = """الححححححححق باقي 5 حبات فقط 
-✅ Realme 14T
-💰 السعر: 200.9$ 
-💎💎
-🎫 قسيمة البائع 54$ 
-🎟️ كوبـــون 36/215$ : OTD1136
-📎 رابط العملات (البلد كندا 🇨🇦) : 
-⬇️⬇️
-https://s.click.aliexpress.com/e/_c3Ns5zTD
-🔸 قناتنا :
-https://t.me/aniscoupons
-🔸 البوت :
-https://t.me/CoinsDiscountBot"""
-
-    cap_anis = format_aniscoupons_caption_1to1(sample_anis, aff_url, "OTD1136")
-    assert aff_url in cap_anis
-    assert "https://t.me/Alilo07BOT" in cap_anis or "@Alilo07BOT" in cap_anis
-    assert "https://t.me/DzAliexpress0" in cap_anis or "@DzAliexpress0" in cap_anis
-    assert "<code>OTD1136</code>" in cap_anis
-    assert "aniscoupons" not in cap_anis
-    assert "CoinsDiscountBot" not in cap_anis
-    is_contam_anis, reason_anis = check_competitor_contamination(cap_anis, aff_url)
-    assert not is_contam_anis, f"Anis formatter contaminated: {reason_anis}"
-
 def test_france_channel_never_accepts_arabic_deals():
     from scripts.post_france_deals import is_strictly_france_compatible_deal, FRANCE_SOURCE_CHANNELS
 
