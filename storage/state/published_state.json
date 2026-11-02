@@ -573,7 +573,8 @@
     "1005006515379868",
     "1005007792223934",
     "1005010707075064",
-    "1005007010692093"
+    "1005007010692093",
+    "1005006994466968"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1159,7 +1160,8 @@
     "1005006515379868": 1793600128.145566,
     "1005007792223934": 1793600288.3908339,
     "1005010707075064": 1793600466.7601562,
-    "1005007010692093": 1793601389.0047116
+    "1005007010692093": 1793601389.0047116,
+    "1005006994466968": 1793601744.1664062
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -1837,7 +1839,8 @@
     "POEDAGAR 680 Men's Quartz",
     "QCY Buds 6 Mics ANC",
     "Vxe Dragonfly R1 SE",
-    "Baseus 240W Type-C Cable 1m"
+    "Baseus 240W Type-C Cable 1m",
+    "VA VA VOOM Men Casual"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2520,10 +2523,10 @@
     "POEDAGAR 680 Men's Quartz": 1793600288.3908339,
     "QCY Buds 6 Mics ANC": 1793600466.7601562,
     "Vxe Dragonfly R1 SE": 1793601217.1874278,
-    "Baseus 240W Type-C Cable 1m": 1793601389.0047116
+    "Baseus 240W Type-C Cable 1m": 1793601389.0047116,
+    "VA VA VOOM Men Casual": 1793601744.1664062
   },
   "published_post_keys": [
-    "lodydeals:45470",
     "test_channel:1791627499",
     "aniscoupons:32745",
     "aniscoupons:32726",
@@ -3522,19 +3525,20 @@
     "lodydeals:45951",
     "lodydeals:45952",
     "lodydeals:45953",
-    "lodydeals:45954"
+    "lodydeals:45954",
+    "lodydeals:45955"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793601389.0047116,
+  "last_run_time": 1793601744.1664062,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45954,
-      "last_check_time": 1793601391.049622
+      "last_message_id": 45955,
+      "last_check_time": 1793601746.2103362
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4034,7 +4038,8 @@
     "1005006515379868": 9.37,
     "1005007792223934": 7.34,
     "1005010707075064": 10.3,
-    "1005007010692093": 2.88
+    "1005007010692093": 2.88,
+    "1005006994466968": 4.99
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -13119,6 +13124,16 @@
       "price": 2.88,
       "timestamp": 1793601389.0047116,
       "status": "ACTIVE"
+    },
+    "lodydeals:45955": {
+      "channel_msg_id": 1605,
+      "product_id": "1005006994466968",
+      "title": "VA VA VOOM Men Casual",
+      "channel": "lodydeals",
+      "source_msg_id": 45955,
+      "price": 4.99,
+      "timestamp": 1793601744.1664062,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13127,17 +13142,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793601393.8727758,
+    "last_deal_post_time": 1793601749.023456,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793601590.4224026,
+    "last_sweep_time": 1793601753.0191138,
     "last_sweep_times": {
-      "algeria": 1793601585.689212,
-      "france": 1793601590.4224026
+      "algeria": 1793601749.0040317,
+      "france": 1793601753.0191138
     },
     "last_deal_post_times": {
-      "algeria": 1793601393.8727758
+      "algeria": 1793601749.023456
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13729,7 +13744,8 @@
     "1005006515379868": "ecksdeal",
     "1005007792223934": "lodydeals",
     "1005010707075064": "lodydeals",
-    "1005007010692093": "lodydeals"
+    "1005007010692093": "lodydeals",
+    "1005006994466968": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14415,7 +14431,8 @@
     "POEDAGAR 680 Men's Quartz": "lodydeals",
     "QCY Buds 6 Mics ANC": "lodydeals",
     "Vxe Dragonfly R1 SE": "lodydeals",
-    "Baseus 240W Type-C Cable 1m": "lodydeals"
+    "Baseus 240W Type-C Cable 1m": "lodydeals",
+    "VA VA VOOM Men Casual": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
