@@ -660,66 +660,82 @@ def format_lodydeals_caption_1to1(raw_text: str, affiliate_url: str, coupon_code
 
 def format_ecksdeal_caption_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None) -> str:
     """
-    1:1 Mirror formatter for @ECKSDEAL:
-    - Retains original country settings (Canada/Australia), icons, pricing, and structure.
-    - Scrubs all competitor secondary affiliate links ('رابط آخر : ...').
-    - Replaces primary affiliate link with our verified affiliate link.
-    - Replaces @ECKSdealsbot with our points bot https://t.me/Alilo07BOT.
-    - Replaces @ECKSDEAL channel mention with https://t.me/DzAliexpress0.
-    - Wraps coupon codes in <code> tags for one-tap copying in Telegram.
+    Formats @ECKSDEAL posts into Lody's clean, standard deal layout:
+    - Extracts product title, prices, coupons, country settings, and coin discounts.
+    - Strips all competitor secondary links, bots, and channels.
+    - Structures deal strictly into Lody's standard format:
+      تخفيض لـ [Title]
+      السعر : [Price]$ 🔥
+      رابط [Affiliate URL]
+      كوبون [Tier]: [Code]
+      ضع البلد [Country] من الإعدادات [Flag]
+      خصم النقاط 🪙
+    - Concludes with official bot and channel attribution.
     """
-    lines = raw_text.splitlines()
-    clean_lines = []
-    has_aff = False
+    clean_raw = re.sub(r'ـ', '', raw_text)
 
-    for line in lines:
-        l = line.strip()
-        if not l:
-            clean_lines.append("")
-            continue
+    # 1. Extract Title
+    title = ""
+    for l in clean_raw.splitlines():
+        l_str = l.strip()
+        if any(w in l_str for w in ["خفيض ل", "تخفيض ل", "عرض ل"]):
+            title = re.sub(r'.*(?:تخفيض|خفيض|عرض)\s*لـ*[\s:]*', '', l_str).strip()
+            break
+    if not title:
+        for l in clean_raw.splitlines():
+            l_str = l.strip()
+            if re.search(r'[A-Za-z0-9]', l_str) and not any(kw in l_str for kw in ["https", "t.me", "السعر", "كوبون", "الرابط", "البوت", "قناة"]):
+                cleaned = re.sub(r'^[🚨🔥⚡⭐⭐️✅💎🎫🎟️📎🔗🔸▪️🔹❗️\-\s:]+', '', l_str).strip()
+                if cleaned:
+                    title = cleaned
+                    break
+    if not title:
+        title = "AliExpress Deal"
 
-        # Scrub secondary competitor affiliate links
-        if (any(kw in l for kw in ["رابط آخر", "رابط بديل", "بديل", "متجر", "مباشر"]) and ALIEXPRESS_URL_RE.search(l)) or re.match(r"^رابط\s*آخر\s*:", l):
-            continue
+    title = re.sub(r'^[🚨🔥⚡⭐⭐️✅💎🎫🎟️📎🔗🔸▪️🔹❗️\-\s:]+', '', title).strip()
 
-        # Replace primary affiliate link
-        if ALIEXPRESS_URL_RE.search(l):
-            if not has_aff:
-                clean_lines.append(ALIEXPRESS_URL_RE.sub(affiliate_url, l))
-                has_aff = True
-            continue
+    # 2. Extract Price
+    m_usd = re.search(r'(?:السعر|السعــــر|السعـر|Prix)\s*💲?\s*:?\s*\$?\s*(\d+(?:\.\d+)?)\s*\$?', clean_raw, re.I)
+    if not m_usd:
+        m_usd = re.search(r'(\d+(?:\.\d+)?)\s*\$', clean_raw)
+    price_str = m_usd.group(1) if m_usd else ""
 
-        # Replace competitor bot mentions
-        if any(b in l.lower() for b in ["ecksdealsbot", "@ecksdealsbot", "t.me/ecksdealsbot"]):
-            clean_lines.append(re.sub(r"https?://t\.me/\S+|@\w+", "https://t.me/Alilo07BOT", l))
-            continue
+    # 3. Extract Coupon
+    m_code = re.search(r'(?:كوبون|كود)[^\n:]*[:\s]+([A-Za-z0-9_-]{4,15})', clean_raw)
+    code = m_code.group(1).strip() if m_code else (coupon_code or "")
+    tier_m = re.search(r'(?:كوبون|كود|قسيمة)\s*(\$?\d+\s*/\s*\$?\d+\$?|\d+\$\s*/\s*\d+\$?)', clean_raw)
+    tier_str = f" {tier_m.group(1).strip()}" if tier_m else ""
 
-        # Replace competitor channel mention
-        if any(b in l.lower() for b in ["ecksdeal", "@ecksdeal", "t.me/ecksdeal"]):
-            clean_lines.append(re.sub(r"https?://t\.me/\S+|@\w+", "https://t.me/DzAliexpress0", l))
-            continue
+    # 4. Country Setting
+    country = ""
+    if any(k in clean_raw for k in ["كندا", "canada"]):
+        country = "ضع البلد كندا من الإعدادات 🇨🇦"
+    elif any(k in clean_raw for k in ["استراليا", "أستراليا", "australia"]):
+        country = "ضع البلد استراليا من الإعدادات 🇦🇺"
+    elif any(k in clean_raw for k in ["فرنسا", "france"]):
+        country = "ضع البلد فرنسا من الإعدادات 🇫🇷"
+    elif any(k in clean_raw for k in ["كوريا", "korea"]):
+        country = "ضع البلد كوريا من الإعدادات 🇰🇷"
 
-        if has_aff and re.match(r"^الرابط\s*:?$", l):
-            continue
+    has_coins = bool(re.search(r'(?:العملات|عملات|نقاط|coins)', clean_raw, re.I))
 
-        clean_lines.append(l)
+    lines = []
+    lines.append(f"تخفيض لـ {title}")
+    if price_str:
+        lines.append(f"السعر : {price_str}$ 🔥")
+    lines.append(f"رابط {affiliate_url}")
+    if code:
+        lines.append(f"كوبون{tier_str} : <code>{code}</code>")
+    if country:
+        lines.append(country)
+    if has_coins:
+        lines.append("خصم النقاط 🪙")
 
-    caption = "\n".join(clean_lines).strip()
+    lines.append("")
+    lines.append("لا تنسى استخدام البوت للشراء بأقل الأسعار :")
+    lines.append("https://t.me/Alilo07BOT")
+    lines.append("")
+    lines.append("قناة التيليغرام للمزيد من العروض : https://t.me/DzAliexpress0")
 
-    # Wrap promo coupon codes in <code> tags
-    code_matches = re.findall(r"\b([A-Z0-9]{5,12})\b", caption)
-    for c in code_matches:
-        if any(prefix in c for prefix in ["OTD", "AE", "AL", "DZ", "FR", "SUN", "ESD", "IFP", "BEST"]):
-            caption = re.sub(rf"(?<!<code>)\b{c}\b(?!</code>)", f"<code>{c}</code>", caption)
+    return "\n".join(lines).strip()
 
-    if coupon_code and coupon_code not in caption:
-        caption = re.sub(rf"(?<!<code>)\b{coupon_code}\b(?!</code>)", f"<code>{coupon_code}</code>", caption)
-
-    if affiliate_url not in caption:
-        caption += f"\n\nالرابط: {affiliate_url}"
-
-    if "Alilo07BOT" not in caption:
-        caption += "\n\n🤖 بوت تخفيض النقاط: @Alilo07BOT"
-
-    caption = re.sub(r"\n+\s*الرابط\s*:?\s*$", "", caption)
-    return caption
