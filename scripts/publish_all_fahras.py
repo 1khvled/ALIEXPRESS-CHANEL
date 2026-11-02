@@ -3,6 +3,7 @@ import os
 import json
 import asyncio
 import argparse
+from datetime import datetime, timezone
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')
@@ -16,7 +17,11 @@ from app.publisher.regrouper import (
     get_telegram_visible_len,
     record_deals_regrouped
 )
-from app.publisher.state_tracker import record_post_published
+from app.publisher.state_tracker import (
+    load_persistent_state,
+    save_persistent_state,
+    record_post_published
+)
 
 async def publish_bulletin(client, api_url, target, banner_path, bulletin_text, reply_markup, category_name):
     vis_len = get_telegram_visible_len(bulletin_text)
@@ -61,6 +66,7 @@ async def publish_bulletin(client, api_url, target, banner_path, bulletin_text, 
 async def main():
     parser = argparse.ArgumentParser(description="Publish category Fahras / Tajmi3at bulletins")
     parser.add_argument("--category", choices=["all", "phones", "headsets", "pc_parts", "chargers"], default="all")
+    parser.add_argument("--force", "-f", action="store_true", help="Force publication bypassing 12h cooldown")
     args = parser.parse_args()
 
     token = getattr(settings, "TELEGRAM_BOT_TOKEN", "") or os.getenv("TELEGRAM_BOT_TOKEN", "")
@@ -83,6 +89,11 @@ async def main():
             ]
         ]
     }
+
+    state = load_persistent_state()
+    fahras_history = state.get("daily_fahras_history", {})
+    now_ts = datetime.now(timezone.utc).timestamp()
+    cooldown_sec = 12 * 3600 # 12 hours cooldown per bulletin
 
     deals = get_recent_published_deals_for_roundup(max_age_hours=48.0)
     print(f"Found {len(deals)} published deals (all >= #1411)")
@@ -124,8 +135,18 @@ async def main():
 
     async with httpx.AsyncClient(timeout=30.0) as client:
         for name, text, used_items in bulletins_to_post:
+            norm_key = name.lower().replace(" ", "_")
+            last_pub = fahras_history.get(norm_key, 0)
+            if (now_ts - last_pub) < cooldown_sec and not args.force:
+                print(f"⏩ Skipping {name}: already published {int((now_ts - last_pub)/60)}m ago (cooldown 12h). Use --force to override.")
+                continue
+
             msg_id = await publish_bulletin(client, api_url, target, banner_path, text, reply_markup, name)
             if msg_id:
+                fahras_history[norm_key] = now_ts
+                state["daily_fahras_history"] = fahras_history
+                save_persistent_state(state)
+
                 used_ids = [it['channel_msg_id'] for it in used_items]
                 record_deals_regrouped(used_ids)
                 record_post_published(

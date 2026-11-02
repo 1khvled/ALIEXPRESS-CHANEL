@@ -16520,5 +16520,12 @@
   "last_pre_11_11_advisory_time": 1793542239.3502576,
   "next_pre_11_11_interval_seconds": 342743,
   "pre_11_11_variant_idx": 1,
-  "published_title_prices": {}
+  "published_title_prices": {},
+  "daily_fahras_history": {
+    "phones_part_1": 1793600442.6369503,
+    "phones_part_2": 1793600442.6369503,
+    "headsets_&_audio": 1793600442.6369503,
+    "pc_parts_&_cpus": 1793600442.6369503,
+    "chargers_&_power": 1793600442.6369503
+  }
 }
