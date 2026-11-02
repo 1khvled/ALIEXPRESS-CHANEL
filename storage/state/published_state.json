@@ -776,7 +776,7 @@
     "9998887705": 1791677705.7215645,
     "9998882385": 1791752385.1242118,
     "9998882735": 1791752735.01132,
-    "1005006966177706": 1791752780.7013927,
+    "1005006966177706": 1793600829.806347,
     "1005012234106869": 1791752787.9016774,
     "1005010209307090": 1793543739.1061752,
     "9998883006": 1791753006.1402605,
@@ -2071,7 +2071,7 @@
     "Electronic Body Scale.": 1792437008.1245751,
     "Realme 15 Global (12/256)": 1793399565.5626073,
     "REALME P3 5G": 1791649464.949431,
-    "Essager 54W USB Car Charger": 1791752780.7013927,
+    "Essager 54W USB Car Charger": 1793600829.806347,
     "Original QKZ AK6": 1791752787.9016774,
     "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP Cameras": 1792156493.2084296,
     "🌐نسخة عالمية": 1791752930.9846199,
@@ -2517,7 +2517,6 @@
     "QCY Buds 6 Mics ANC": 1793600466.7601562
   },
   "published_post_keys": [
-    "couponsglobal:48789",
     "megaphonna:8692",
     "lodydeals:45812",
     "lodydeals:45470",
@@ -3516,19 +3515,20 @@
     "lodydeals:45883",
     "lodydeals:45950",
     "ecksdeal:5991",
-    "lodydeals:45951"
+    "lodydeals:45951",
+    "lodydeals:45952"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793600466.7601562,
+  "last_run_time": 1793600829.806347,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45951,
-      "last_check_time": 1793600468.805129
+      "last_message_id": 45952,
+      "last_check_time": 1793600831.8525898
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3725,7 +3725,7 @@
     "1005013313539058": 6.52,
     "1005006007773971": 54.15,
     "1005013067004815": 6.8,
-    "1005006966177706": 3.49,
+    "1005006966177706": 2.29,
     "1005012234106869": 1.71,
     "1005010209307090": 190.5,
     "1005012824429842": 252.0,
@@ -13082,6 +13082,16 @@
       "price": 10.3,
       "timestamp": 1793600466.7601562,
       "status": "ACTIVE"
+    },
+    "lodydeals:45952": {
+      "channel_msg_id": 1602,
+      "product_id": "1005006966177706",
+      "title": "Essager 54W USB Car Charger",
+      "channel": "lodydeals",
+      "source_msg_id": 45952,
+      "price": 2.29,
+      "timestamp": 1793600829.806347,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13090,17 +13100,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793600471.3668113,
+    "last_deal_post_time": 1793600834.6626594,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793600670.4159722,
+    "last_sweep_time": 1793600838.668208,
     "last_sweep_times": {
-      "algeria": 1793600665.0296679,
-      "france": 1793600670.4159722
+      "algeria": 1793600834.6397266,
+      "france": 1793600838.668208
     },
     "last_deal_post_times": {
-      "algeria": 1793600471.3668113
+      "algeria": 1793600834.6626594
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
