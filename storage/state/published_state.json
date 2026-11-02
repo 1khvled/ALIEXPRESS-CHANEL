@@ -1145,7 +1145,7 @@
     "1005012865939059": 1793573742.8007863,
     "1005007171113381": 1793573945.0580306,
     "1005008144944225": 1793574309.4810557,
-    "INDEX_ECKSDEAL_6008": 1793577595.5427852
+    "INDEX_ECKSDEAL_6008": 1793599197.4815202
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -2491,7 +2491,7 @@
     "KODAK USB 2.0 Flash Drive": 1793573951.3406305,
     "VA VA VOOM Brand Top": 1793574309.4810557,
     "معالج Ryzen 5 8400F": 1793575053.368357,
-    "فهرس العروض": 1793577595.5427852
+    "فهرس العروض": 1793599197.4815202
   },
   "published_post_keys": [
     "aniscoupons:32706",
@@ -3497,11 +3497,11 @@
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793577595.5427852,
+  "last_run_time": 1793599197.4815202,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
-      "last_check_time": 1793577595.5427852
+      "last_check_time": 1793599197.4815202
     },
     "lodydeals": {
       "last_message_id": 45946,
@@ -12981,13 +12981,13 @@
       "status": "ACTIVE"
     },
     "ecksdeal:6008": {
-      "channel_msg_id": 1576,
+      "channel_msg_id": 1578,
       "product_id": "INDEX_ECKSDEAL_6008",
       "title": "فهرس العروض",
       "channel": "ecksdeal",
       "source_msg_id": 6008,
       "price": null,
-      "timestamp": 1793577595.5427852,
+      "timestamp": 1793599197.4815202,
       "status": "ACTIVE"
     }
   },
@@ -13001,10 +13001,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793599001.8958158,
+    "last_sweep_time": 1793599203.7812643,
     "last_sweep_times": {
-      "algeria": 1793598997.4754877,
-      "france": 1793599001.8958158
+      "algeria": 1793599198.0290034,
+      "france": 1793599203.7812643
     },
     "last_deal_post_times": {
       "algeria": 1793575055.4444058
