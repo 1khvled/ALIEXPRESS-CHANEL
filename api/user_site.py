@@ -45,7 +45,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <link rel="alternate" type="text/plain" href="https://dealscoutgreen.vercel.app/llms-full.txt" title="LLMs full documentation">
 
   <!-- Meta Search & Geography -->
-  <meta name="keywords" content="aliexpressdz, aliexpress deals dz, aliexpress deald dz, عروض علي اكسبراس, شراء من علي اكسبراس في الجزائر, علي اكسبراس الجزائر, تخفيضات علي اكسبراس, كود تخفيض علي اكسبراس الجزائر, كوبونات علي اكسبراس الجزائر, صفقات علي اكسبراس, عملات علي اكسبراس, بوت تخفيض العملات علي اكسبراس, الشراء من علي اكسبراس في الجزائر بريدي موب, توصيل علي اكسبراس الجزائر, بريد الجزائر, اسعار السكوار, قناة تيليجرام صفقات علي اكسبراس الجزائر, عروض الشتاء Winter Offers AliExpress, تخفيضات عروض الشتاء 2026, كود خصم Winter Offers, WOAE23, WOAE35, WOAE06, WOAE12, Honor X70 5G, realme 15T 5G, OPPO A6 Pro, iQOO Z11s 5G, realme Watch 5, AMD Ryzen 5 8400F, Redmi Note 12 5G, CUSU SSD 512GB, Blackview Wave 10C, aliexpress algerie, شراء من علي اكسبرس بريدي موب, بطاقة بايبايت في الجزائر, بطاقة bybit مجانية, بطاقة redotpay الجزائر, كود خصم redotpay, شحن redotpay بريدي موب, شراء usdt بالدينار الجزائري, بطاقة فيزا للشراء من الانترنت الجزائر, بطاقة ماستركارد افتراضية الجزائر, تفعيل بايبال بالجزائر, binance p2p baridimob algerie, carte bybit algerie, carte redotpay algerie, acheter sur aliexpress baridimob, carte bancaire internationale algerie, تخفيضات علي اكسبرس الجزائر, صفقات aliexpress, algeria deals, dealscout dz, bons plans algerie">
+  <meta name="keywords" content="مهرجان 11.11, تخفيضات 11.11, كود خصم 11.11, كوبونات 11.11 الجزائر, OTD1103, OTD1104, OTD1111, OTD1120, OTD1136, OTD1153, OTD1170, minuit, 11FR03, 11FR08, 11FR13, 11FR24, 11FR40, 11FR60, 11FR80, FRD1190, 11.11 Global Shopping Festival, Ryzen 7 9800X3D, OnePlus 13, AMD Ryzen 5 8400F, Redmi Note 12 5G, Fifine AM8, UGREEN GaN 65W, aliexpressdz, aliexpress deals dz, عروض علي اكسبراس, شراء من علي اكسبراس في الجزائر, علي اكسبراس الجزائر, تخفيضات علي اكسبراس, كود تخفيض علي اكسبراس الجزائر, عملات علي اكسبراس, بوت تخفيض العملات علي اكسبراس, الشراء من علي اكسبراس بريدي موب, اسعار السكوار, بطاقة bybit مجانية, بطاقة redotpay الجزائر, algeria deals, dealscout dz">
   <meta name="geo.region" content="DZ">
   <meta name="geo.placename" content="Algeria">
   <meta name="geo.position" content="28.0339;1.6596">
@@ -902,11 +902,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
                 </h2>
                 <span class="inline-flex items-center gap-1 text-[10px] font-black px-2 py-0.5 rounded-full bg-rose-500/15 text-rose-500 border border-rose-500/30">
                   <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>
-                  <span data-i18n="hub_11_11_badge">التسخينات نشطة الآن 🛒</span>
+                  <span data-i18n="hub_11_11_badge">🔥 التخفيضات الكبرى نشطة الآن! 🛍️</span>
                 </span>
               </div>
               <p class="text-[11px] opacity-75 truncate" style="color: var(--text-muted);" data-i18n="hub_11_11_sub">
-                أضف المنتجات إلى السلة واجمع العملات والرصيد | تتفعل الكوبونات والأسعار يوم 1 نوفمبر (08:00 صباحاً)
+                الكوبونات والأسعار التخفيضية مفعلة رسمياً الآن! سارع بالطلب وتطبيق الكوبونات قبل نفاد الكميات المحدودة!
               </p>
             </div>
           </div>
@@ -947,28 +947,28 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               </button>
             </div>
             <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <span class="text-[10px] font-bold text-rose-500">خصم 5$ من 30$</span>
+              <span class="text-[10px] font-bold text-rose-500">خصم 4$ من 25$</span>
               <code class="font-mono font-black text-xs text-amber-500">OTD1104</code>
               <button onclick="copyCode('OTD1104')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
                 <i class="fa-regular fa-copy text-[9px]"></i><span>نسخ</span>
               </button>
             </div>
             <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <span class="text-[10px] font-bold text-rose-500">خصم 11$ من 80$</span>
+              <span class="text-[10px] font-bold text-rose-500">خصم 11$ من 65$</span>
               <code class="font-mono font-black text-xs text-amber-500">OTD1111</code>
               <button onclick="copyCode('OTD1111')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
                 <i class="fa-regular fa-copy text-[9px]"></i><span>نسخ</span>
               </button>
             </div>
             <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <span class="text-[10px] font-bold text-rose-500">خصم 20$ من 150$</span>
+              <span class="text-[10px] font-bold text-rose-500">خصم 20$ من 119$</span>
               <code class="font-mono font-black text-xs text-amber-500">OTD1120</code>
               <button onclick="copyCode('OTD1120')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
                 <i class="fa-regular fa-copy text-[9px]"></i><span>نسخ</span>
               </button>
             </div>
             <div class="border rounded-xl p-2 text-center transition flex flex-col justify-between gap-1 shadow-sm hover:border-rose-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <span class="text-[10px] font-bold text-rose-500">خصم 36$ من 260$</span>
+              <span class="text-[10px] font-bold text-rose-500">خصم 36$ من 215$</span>
               <code class="font-mono font-black text-xs text-amber-500">OTD1136</code>
               <button onclick="copyCode('OTD1136')" class="w-full mt-1 py-1 rounded-md bg-rose-500/10 hover:bg-rose-500 text-rose-500 hover:text-white text-[10px] font-bold transition flex items-center justify-center gap-1">
                 <i class="fa-regular fa-copy text-[9px]"></i><span>نسخ</span>
@@ -3539,6 +3539,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         footer_legal_title: "إخلاء مسؤولية قانونية وتنظيمية (سعر السكوار والعملات):",
         footer_legal_body: "منصة DealScout DZ هي موقع إعلامي ودليل تقني للتسوق وتتبع عروض وتخفيضات AliExpress، ولا تقدم أي خدمات مالية، مصرفية، وساطة صرف، أو بيع وشراء للعملات الأجنبية (USD / EUR) أو الأصول الرقمية (USDT). أسعار الصرف ومعدلات السكوار والأسعار التقديرية بالدينار الجزائري (DZD) هي مؤشرات استرشادية بحتة مستقاة من أسعار السوق العامة لتمكين المتسوق من تقدير التكلفة التقريبية. يتحمل كل مستخدم وحده كامل المسؤولية المدنية والقانونية عن اختياراته ووسائل دفعه والامتثال للقوانين واللوائح المصرفية المعمول بها في الجمهورية الجزائرية الديمقراطية الشعبية.",
         calc_disclaimer_note: "أسعار الصرف هي تقديرات إعلامية بحتة لا تشكل خدمة صرف أو استشارة مالية.",
+        hub_11_11_title: "مهرجان 11.11 العالمي | Global Shopping Festival",
+        hub_11_11_badge: "🔥 التخفيضات الكبرى نشطة الآن! 🛍️",
+        hub_11_11_sub: "الكوبونات والأسعار التخفيضية مفعلة رسمياً الآن! سارع بالطلب وتطبيق الكوبونات قبل نفاد الكميات المحدودة!",
+        hub_11_11_play_game: "لعبة رصيد 11.11 (العب واجمع رصيد الشراء)",
         footer_rights: "جميع الحقوق محفوظة.",
         footer_made_with: "صُنع للمتسوق الجزائري 🇩🇿",
         footer_back_top: "للأعلى",
@@ -3547,7 +3551,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         event_ended_badge: "انتهى الحدث",
         event_ended_coupons_expired: "انتهى الحدث — الأكواد غير فعالة",
         event_ended_warning: "⚠️ انتهى هذا الحدث الترويجي وأكواد الخصم التابعة له. العروض المعروضة أدناه هي عروض اعتيادية.",
-        active_event_title: "تخفيضات عروض الشتاء Winter Offers 2026 الحصرية",
+        active_event_title: "مهرجان 11.11 الأكبر عالمياً 🛍️ | أقوى تخفيضات السنة",
         active_event_desc: "عروض وتخفيضات رسمية نشطة حالياً مع أكواد حصرية مخصصة للجزائر وفرنسا — الأسعار بالدينار الجزائري وفق سعر السكوار الحقيقي.",
         active_deals_kw_label: "أهم صفقات الحدث الفعال:",
         roulette_fab: "اقتراح صفقة",
@@ -3827,6 +3831,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         footer_legal_title: "Avertissement Légal & Réglementaire (Cours Square & Devises) :",
         footer_legal_body: "DealScout DZ est une plateforme d'information et un guide shopping indépendant pour les bons plans AliExpress. Le site ne fournit aucun service bancaire, de courtage, de change ou d'achat/vente de devises étrangères (USD/EUR) ou d'actifs numériques (USDT). Les conversions en Dinars Algériens (DZD) et les cours de référence (Square / USDT) sont des indicateurs purement estimatifs et informatifs. L'utilisateur demeure seul responsable de ses opérations de paiement et de la conformité avec la réglementation et les lois de change en vigueur en Algérie.",
         calc_disclaimer_note: "Les taux de change sont des estimations informatives et ne constituent pas un service de change ou de conseil financier.",
+        hub_11_11_title: "Festival Mondial 11.11 | Global Shopping Festival",
+        hub_11_11_badge: "🔥 Méga Promotions Actives ! 🛍️",
+        hub_11_11_sub: "Codes promo et réductions 11.11 actifs maintenant ! Appliquez vos coupons avant rupture de stock !",
+        hub_11_11_play_game: "Jeu Crédit 11.11 (Jouez et gagnez des crédits)",
         footer_rights: "Tous droits réservés.",
         footer_made_with: "Fait spécialement pour les acheteurs algériens 🇩🇿",
         footer_back_top: "Haut de page",
@@ -3835,7 +3843,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         event_ended_badge: "Terminé",
         event_ended_coupons_expired: "Événement terminé — codes expirés",
         event_ended_warning: "⚠️ Cet événement promotionnel et ses codes sont terminés. Les offres ci-dessous sont des bons plans standards.",
-        active_event_title: "Promotions Offres d'Hiver 2026 (Winter Offers)",
+        active_event_title: "Festival Mondial 11.11 AliExpress 🛍️ | Méga Promotions",
         active_event_desc: "Bons plans et réductions officielles avec codes promo exclusifs pour l'Algérie et la France — calculés en Dinar Algérien au taux Square.",
         active_deals_kw_label: "Top deals de l'événement :",
         roulette_fab: "Deal du Jour",
@@ -5006,9 +5014,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (!post) return null;
       const text = post.text || '';
 
-      // 1. Strict AliExpress Link Requirement: A deal MUST have an explicit product/affiliate link
+      // 1. Strict AliExpress Link Requirement: A deal MUST have an explicit product/affiliate link OR be a verified Tajmi3at / Fahras bulletin
+      const isTajmi3aPost = /(?:فهرس|تجميعة|تجميعات)/i.test(text) && /(?:11\\.11|عروض|قطع|هواتف|سماعات|شواحن)/i.test(text);
       const urlMatch = text.match(new RegExp('https?:\\/\\/(?:s\\.click\\.aliexpress\\.com\\/e\\/[A-Za-z0-9_-]+|(?:[a-z0-9-]+\\.)?aliexpress\\.com\\/(?:item|p)\\/[A-Za-z0-9_.-]+)', 'i'));
-      if (!urlMatch) {
+      if (!urlMatch && !isTajmi3aPost) {
         return null;
       }
 
@@ -5034,8 +5043,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
 
       // 5. Strict Active Promo Event Filter: Reject posts from expired campaigns
-      const isExpiredEvent = /(?:OTPRD|BDQT|FRPRD|FRBD|Party Ready|Brand Day|عروض الحفلة)/i.test(text);
-      const hasActiveEventCode = /(?:WOAE|FRWO|Winter Offers|عروض الشتاء)/i.test(text);
+      const isExpiredEvent = /(?:OTPRD|BDQT|FRPRD|FRBD|Party Ready|Brand Day|عروض الحفلة|WOAE|FRWO|Winter Offers|عروض الشتاء)/i.test(text);
+      const hasActiveEventCode = /(?:OTD11|11FR|FRD11|minuit|11\\.11|تخفيضات 11\\.11)/i.test(text);
       if (isExpiredEvent && !hasActiveEventCode) {
         return null;
       }
@@ -5158,7 +5167,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         title = title.replace(/<[^>]*>/g, '').trim();
         if (title.length > 95) title = title.slice(0, 92) + '...';
       } else {
-        title = (currentLang === 'fr' ? "Offre Spéciale Winter Offers" : "عرض مميز تخفيضات الشتاء (Winter Offers)");
+        title = isTajmi3aPost ? (currentLang === 'fr' ? "Index Officiel 11.11 DealScout" : "فهرس العروض الرسمي 11.11") : (currentLang === 'fr' ? "Offre Spéciale Festival 11.11" : "عرض مميز تخفيضات 11.11 الكبرى");
       }
 
       const usdMatch = text.match(/(?:\\$|US\\s*\\$|USD\\s*)\\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\\s*(?:\\bUSD\\b|\\$)/i);
@@ -5291,24 +5300,24 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       hasCoins = text.includes('عملات') || text.includes('Coins') || text.includes('coins') || text.includes('🪙');
 
       const lower = text.toLowerCase();
-      if (/phone|هاتف|téléphone|xiaomi|redmi|poco|realme|infinix|samsung|iphone|tablet|تابلت/.test(lower)) {
-        category = 'smartphones';
-        categoryLabel = I18N[currentLang].cat_smartphones;
-      } else if (/gaming|قيمنق|gamepad|gamesir|controller|rgb|pc gamer|playstation|xbox/.test(lower)) {
-        category = 'gaming';
-        categoryLabel = I18N[currentLang].cat_gaming;
-      } else if (/headphone|earphone|earbuds|سماعة|سماعات|anker|soundcore|audio|tws|bluetooth/.test(lower)) {
-        category = 'audio';
-        categoryLabel = I18N[currentLang].cat_audio;
-      } else if (/charger|شاحن|ugreen|baseus|powerbank|cable|usb|adapter|محول|فلاش/.test(lower)) {
-        category = 'tech';
-        categoryLabel = I18N[currentLang].cat_tech;
-      } else if (/تجميع|تجميعة|packs|bundle|عدة منتجات/.test(lower)) {
+      if (isTajmi3aPost || /فهرس|تجميع|تجميعة|packs|bundle|عدة منتجات/.test(lower)) {
         category = 'tajmi3at';
         categoryLabel = I18N[currentLang].cat_tajmi3at;
+      } else if (/phone|هاتف|téléphone|xiaomi|redmi|poco|realme|honor|oppo|vivo|infinix|samsung|iphone|oneplus|tablet|تابلت|xiaoxin|pad/.test(lower)) {
+        category = 'smartphones';
+        categoryLabel = I18N[currentLang].cat_smartphones;
+      } else if (/gaming|قيمنق|gamepad|gamesir|controller|rgb|pc gamer|playstation|xbox|mouse|mice|keyboard|كيبورد|ماوس|يد تحكم|كنترولر|ryzen|intel|cpu|gpu|motherboard|لوحة أم|معالج|كرت شاشة|ram|رام|ddr4|ddr5|ssd|nvme|sata/.test(lower)) {
+        category = 'gaming';
+        categoryLabel = I18N[currentLang].cat_gaming;
+      } else if (/headphone|headset|earphone|earbuds|سماعة|سماعات|anker|soundcore|audio|tws|bluetooth|mic|microphone|مايك|fifine|maono|boya|webcam|ويبكام/.test(lower)) {
+        category = 'audio';
+        categoryLabel = I18N[currentLang].cat_audio;
+      } else if (/charger|شاحن|ugreen|baseus|powerbank|cable|usb|adapter|محول|فلاش|باوربانك|كابل|gan|nexode|essager/.test(lower)) {
+        category = 'tech';
+        categoryLabel = I18N[currentLang].cat_tech;
       }
 
-      const affiliateUrl = urlMatch[0];
+      const affiliateUrl = urlMatch ? urlMatch[0] : (post.link || 'https://t.me/DzAliexpress0');
 
       let priceDzd = null;
       if (priceUsd) priceDzd = Math.round(priceUsd * usdtRate);
@@ -5817,13 +5826,13 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const c = (deal.coupon || '').trim().toUpperCase();
       const eventEnded = isEventEnded();
 
-      // Winter Offers promo codes (WOAE*, FRWO*)
-      if (/(?:WOAE|FRWO)/i.test(c)) {
+      // 11.11 Festival promo codes (OTD11*, 11FR*, FRD11*, minuit)
+      if (/(?:OTD11|11FR|FRD11|minuit)/i.test(c)) {
         return eventEnded;
       }
 
       // Past campaigns codes (always expired)
-      if (/(?:OTPRD|FRPRD|BDQT|FRBD)/i.test(c)) {
+      if (/(?:OTPRD|FRPRD|BDQT|FRBD|WOAE|FRWO)/i.test(c)) {
         return true;
       }
 

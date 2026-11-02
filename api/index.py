@@ -149,7 +149,7 @@ def get_active_event_seo_html() -> str:
         ev = promo_tracker.get_active_promo(now)
         if ev:
             active_codes = ", ".join([t["code"] for t in (ev.coupon_tiers or []) if "code" in t])
-            top_deals = "Honor X70 5G, realme 15T 5G, OPPO A6 Pro, iQOO Z11s 5G, realme Watch 5, AMD Ryzen 5 8400F, Redmi Note 12 5G, CUSU SSD 512GB, Blackview Wave 10C"
+            top_deals = "Ryzen 7 9800X3D, OnePlus 13, AMD Ryzen 5 8400F, Redmi Note 12 5G, Honor 200, Fifine AM8, UGREEN GaN 65W, CUSU NVMe 1TB"
             event_kw = f"{ev.name}, {ev.name_ar}, {ev.name_fr}, تخفيضات {ev.name_ar}, كود خصم {ev.name}, {active_codes}, {top_deals}"
             html = re.sub(
                 r'<meta name="keywords" content="[^"]*">',
