@@ -592,7 +592,8 @@
     "1005012770405022",
     "1005012171521680",
     "1005010758512904",
-    "1005012871436251"
+    "1005012871436251",
+    "1005010385663278"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793616200.8243065,
@@ -1197,7 +1198,8 @@
     "1005012770405022": 1793613951.963987,
     "1005012171521680": 1793613957.1320925,
     "1005010758512904": 1793613961.7877593,
-    "1005012871436251": 1793613966.8608465
+    "1005012871436251": 1793613966.8608465,
+    "1005010385663278": 1793616557.8235445
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -1921,7 +1923,8 @@
     "[Clearance] realme 14T 5G Smartphone NFC Dimensity 6300 5G Processor",
     "RYZEN 5 9600X",
     "Magcubic HY300 Max Projector",
-    "AMD RYZEN 7 9800X3D"
+    "AMD RYZEN 7 9800X3D",
+    "Anker Space One ANC Headset"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2650,10 +2653,10 @@
     "[Clearance] realme 14T 5G Smartphone NFC Dimensity 6300 5G Processor": 1793613966.8608465,
     "RYZEN 5 9600X": 1793613978.6202738,
     "Magcubic HY300 Max Projector": 1793614000.550419,
-    "AMD RYZEN 7 9800X3D": 1793615114.3091638
+    "AMD RYZEN 7 9800X3D": 1793615114.3091638,
+    "Anker Space One ANC Headset": 1793616557.8235445
   },
   "published_post_keys": [
-    "zedstoreonline:38538",
     "ecksdeal:5880",
     "aniscoupons:32801",
     "ecksdeal:5952",
@@ -3652,19 +3655,20 @@
     "aniscoupons:33566",
     "aniscoupons:33570",
     "lodydeals:45972",
-    "lodydeals:45975"
+    "lodydeals:45975",
+    "lodydeals:45976"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793616200.8243065,
+  "last_run_time": 1793616557.8235445,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45975,
-      "last_check_time": 1793616202.8739579
+      "last_message_id": 45976,
+      "last_check_time": 1793616559.8512065
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4190,7 +4194,8 @@
     "1005006966360399": 6.5,
     "1005010706590867": 16.1,
     "1005012648097890": 430.0,
-    "1005012871436251": 200.9
+    "1005012871436251": 200.9,
+    "1005010385663278": 58.55
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -13955,6 +13960,16 @@
       "price": 189.23,
       "timestamp": 1793616200.8243065,
       "status": "ACTIVE"
+    },
+    "lodydeals:45976": {
+      "channel_msg_id": 1689,
+      "product_id": "1005010385663278",
+      "title": "Anker Space One ANC Headset",
+      "channel": "lodydeals",
+      "source_msg_id": 45976,
+      "price": 58.55,
+      "timestamp": 1793616557.8235445,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13963,17 +13978,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793616203.4785104,
+    "last_deal_post_time": 1793616560.2458973,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793616381.0587482,
+    "last_sweep_time": 1793616564.2699409,
     "last_sweep_times": {
-      "algeria": 1793616376.2782905,
-      "france": 1793616381.0587482
+      "algeria": 1793616560.2342775,
+      "france": 1793616564.2699409
     },
     "last_deal_post_times": {
-      "algeria": 1793616203.4785104
+      "algeria": 1793616560.2458973
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -14289,7 +14304,7 @@
     "1005006678195057": "couponsglobal",
     "1005012150344482": "couponsglobal",
     "1005012545304504": "lodydeals",
-    "1005010385663278": "couponsglobal",
+    "1005010385663278": "lodydeals",
     "1005012398164621": "megaphonna",
     "9998883879": "test_channel",
     "9998884227": "test_channel",
@@ -15314,7 +15329,8 @@
     "RYZEN 5 9600X": "aniscoupons",
     "OnePlus Turbo 6X Pro 5G": "aniscoupons",
     "Magcubic HY300 Max Projector": "aniscoupons",
-    "AMD RYZEN 7 9800X3D": "lodydeals"
+    "AMD RYZEN 7 9800X3D": "lodydeals",
+    "Anker Space One ANC Headset": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
