@@ -593,7 +593,13 @@
     "1005012171521680",
     "1005010758512904",
     "1005012871436251",
-    "1005010385663278"
+    "1005010385663278",
+    "1005009504965110",
+    "1005008913425060",
+    "1005013359761139",
+    "1005012267973092",
+    "1005010289640412",
+    "1005012287238561"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793616200.8243065,
@@ -1106,7 +1112,7 @@
     "1005013081060247": 1793543567.486626,
     "1005012498496817": 1793543578.6842017,
     "1005003413514494": 1793543617.2639549,
-    "1005008741607292": 1793543669.2450533,
+    "1005008741607292": 1793649057.4862149,
     "1005010158587315": 1793543677.5915465,
     "1005012790288780": 1793543711.8574147,
     "1005012345939726": 1793543721.4944978,
@@ -1199,7 +1205,13 @@
     "1005012171521680": 1793613957.1320925,
     "1005010758512904": 1793613961.7877593,
     "1005012871436251": 1793613966.8608465,
-    "1005010385663278": 1793616557.8235445
+    "1005010385663278": 1793616557.8235445,
+    "1005009504965110": 1793649062.201711,
+    "1005008913425060": 1793649067.5197537,
+    "1005013359761139": 1793649073.112849,
+    "1005012267973092": 1793649078.2559402,
+    "1005010289640412": 1793649086.527061,
+    "1005012287238561": 1793649096.7166712
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -1924,7 +1936,14 @@
     "RYZEN 5 9600X",
     "Magcubic HY300 Max Projector",
     "AMD RYZEN 7 9800X3D",
-    "Anker Space One ANC Headset"
+    "Anker Space One ANC Headset",
+    "بطاقة الأم Asrock X570M PRO4",
+    "بطاقة الأم GIGABYTE B550M K",
+    "بطاقة الأم MSI A520M A PRO",
+    "ماوس لاسلكي Aula Kunlun X5 Magnetic 8K Wireless",
+    "ماوسباد زجاجي Attack Shark CM05SE Tempred Glass",
+    "يد تحكم فخمة  Flydigi Direwolf 4 Wireless Hall Effect",
+    "يد تحكم بالذكاء الاصطناعي 😂  LeadJoy Xeno Plus AI TMR"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2654,16 +2673,16 @@
     "RYZEN 5 9600X": 1793613978.6202738,
     "Magcubic HY300 Max Projector": 1793614000.550419,
     "AMD RYZEN 7 9800X3D": 1793615114.3091638,
-    "Anker Space One ANC Headset": 1793616557.8235445
+    "Anker Space One ANC Headset": 1793616557.8235445,
+    "بطاقة الأم Asrock X570M PRO4": 1793649057.4862149,
+    "بطاقة الأم GIGABYTE B550M K": 1793649062.201711,
+    "بطاقة الأم MSI A520M A PRO": 1793649067.5197537,
+    "ماوس لاسلكي Aula Kunlun X5 Magnetic 8K Wireless": 1793649073.112849,
+    "ماوسباد زجاجي Attack Shark CM05SE Tempred Glass": 1793649078.2559402,
+    "يد تحكم فخمة  Flydigi Direwolf 4 Wireless Hall Effect": 1793649086.527061,
+    "يد تحكم بالذكاء الاصطناعي 😂  LeadJoy Xeno Plus AI TMR": 1793649096.7166712
   },
   "published_post_keys": [
-    "ecksdeal:5880",
-    "aniscoupons:32801",
-    "ecksdeal:5952",
-    "lodydeals:45824",
-    "aniscoupons:32772",
-    "test_channel:1792072553",
-    "test_channel:1792160024",
     "couponsglobal:48785",
     "pcgamingpart:7983",
     "aniscoupons:33149",
@@ -3656,15 +3675,22 @@
     "aniscoupons:33570",
     "lodydeals:45972",
     "lodydeals:45975",
-    "lodydeals:45976"
+    "lodydeals:45976",
+    "ecksdeal:6010",
+    "ecksdeal:6011",
+    "ecksdeal:6012",
+    "ecksdeal:6014",
+    "ecksdeal:6015",
+    "ecksdeal:6016",
+    "ecksdeal:6018"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793616557.8235445,
+  "last_run_time": 1793649096.7166712,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6008,
-      "last_check_time": 1793600294.7888756
+      "last_message_id": 6018,
+      "last_check_time": 1793649098.753176
     },
     "lodydeals": {
       "last_message_id": 45978,
@@ -4112,7 +4138,7 @@
     "1005013081060247": 138.13,
     "1005012498496817": 204.37,
     "1005003413514494": 18.57,
-    "1005008741607292": 110.83,
+    "1005008741607292": 110.85,
     "1005010158587315": 141.02,
     "1005012790288780": 26.47,
     "1005012345939726": 18.62,
@@ -4195,7 +4221,12 @@
     "1005010706590867": 16.1,
     "1005012648097890": 430.0,
     "1005012871436251": 200.9,
-    "1005010385663278": 58.55
+    "1005010385663278": 58.55,
+    "1005009504965110": 98.98,
+    "1005008913425060": 59.1,
+    "1005013359761139": 75.6,
+    "1005012267973092": 58.3,
+    "1005012287238561": 44.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -13970,6 +14001,76 @@
       "price": 58.55,
       "timestamp": 1793616557.8235445,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6010": {
+      "channel_msg_id": 1691,
+      "product_id": "1005008741607292",
+      "title": "بطاقة الأم Asrock X570M PRO4",
+      "channel": "ecksdeal",
+      "source_msg_id": 6010,
+      "price": 110.85,
+      "timestamp": 1793649057.4862149,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:6011": {
+      "channel_msg_id": 1692,
+      "product_id": "1005009504965110",
+      "title": "بطاقة الأم GIGABYTE B550M K",
+      "channel": "ecksdeal",
+      "source_msg_id": 6011,
+      "price": 98.98,
+      "timestamp": 1793649062.201711,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:6012": {
+      "channel_msg_id": 1693,
+      "product_id": "1005008913425060",
+      "title": "بطاقة الأم MSI A520M A PRO",
+      "channel": "ecksdeal",
+      "source_msg_id": 6012,
+      "price": 59.1,
+      "timestamp": 1793649067.5197537,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:6014": {
+      "channel_msg_id": 1694,
+      "product_id": "1005013359761139",
+      "title": "ماوس لاسلكي Aula Kunlun X5 Magnetic 8K Wireless",
+      "channel": "ecksdeal",
+      "source_msg_id": 6014,
+      "price": 75.6,
+      "timestamp": 1793649073.112849,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:6015": {
+      "channel_msg_id": 1695,
+      "product_id": "1005012267973092",
+      "title": "ماوسباد زجاجي Attack Shark CM05SE Tempred Glass",
+      "channel": "ecksdeal",
+      "source_msg_id": 6015,
+      "price": 58.3,
+      "timestamp": 1793649078.2559402,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:6016": {
+      "channel_msg_id": 1696,
+      "product_id": "1005010289640412",
+      "title": "يد تحكم فخمة  Flydigi Direwolf 4 Wireless Hall Effect",
+      "channel": "ecksdeal",
+      "source_msg_id": 6016,
+      "price": 32.06,
+      "timestamp": 1793649086.527061,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:6018": {
+      "channel_msg_id": 1697,
+      "product_id": "1005012287238561",
+      "title": "يد تحكم بالذكاء الاصطناعي 😂  LeadJoy Xeno Plus AI TMR",
+      "channel": "ecksdeal",
+      "source_msg_id": 6018,
+      "price": 44.5,
+      "timestamp": 1793649096.7166712,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13978,22 +14079,22 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793616560.2458973,
+    "last_deal_post_time": 1793649098.7877305,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793618767.5918047,
+    "last_sweep_time": 1793649101.4714346,
     "last_sweep_times": {
-      "algeria": 1793618761.8114638,
-      "france": 1793618767.5918047
+      "algeria": 1793649098.7711215,
+      "france": 1793649101.4714346
     },
     "last_deal_post_times": {
-      "algeria": 1793616560.2458973
+      "algeria": 1793649098.7877305
     }
   },
-  "last_coin_reminder_time": 1793441261.8193972,
-  "next_reminder_interval_seconds": 196934,
-  "coin_reminder_variant_idx": 0,
+  "last_coin_reminder_time": 1793649047.446368,
+  "next_reminder_interval_seconds": 256532,
+  "coin_reminder_variant_idx": 1,
   "published_product_channels": {
     "999888104": "test_channel",
     "100500888999777": "lodydeals",
@@ -14514,7 +14615,7 @@
     "1005013081060247": "lodydeals",
     "1005012498496817": "lodydeals",
     "1005003413514494": "lodydeals",
-    "1005008741607292": "lodydeals",
+    "1005008741607292": "ecksdeal",
     "1005010158587315": "lodydeals",
     "1005012790288780": "lodydeals",
     "1005012345939726": "lodydeals",
@@ -14598,7 +14699,12 @@
     "1005006966360399": "aniscoupons",
     "1005010706590867": "aniscoupons",
     "1005012648097890": "aniscoupons",
-    "1005012871436251": "aniscoupons"
+    "1005012871436251": "aniscoupons",
+    "1005009504965110": "ecksdeal",
+    "1005008913425060": "ecksdeal",
+    "1005013359761139": "ecksdeal",
+    "1005012267973092": "ecksdeal",
+    "1005012287238561": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -15330,7 +15436,13 @@
     "OnePlus Turbo 6X Pro 5G": "aniscoupons",
     "Magcubic HY300 Max Projector": "aniscoupons",
     "AMD RYZEN 7 9800X3D": "lodydeals",
-    "Anker Space One ANC Headset": "lodydeals"
+    "Anker Space One ANC Headset": "lodydeals",
+    "بطاقة الأم Asrock X570M PRO4": "ecksdeal",
+    "بطاقة الأم GIGABYTE B550M K": "ecksdeal",
+    "بطاقة الأم MSI A520M A PRO": "ecksdeal",
+    "ماوس لاسلكي Aula Kunlun X5 Magnetic 8K Wireless": "ecksdeal",
+    "ماوسباد زجاجي Attack Shark CM05SE Tempred Glass": "ecksdeal",
+    "يد تحكم بالذكاء الاصطناعي 😂  LeadJoy Xeno Plus AI TMR": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -15933,9 +16045,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:39041",
-    "ecksdeal:5903",
-    "pcgamingpart:7996",
     "aniscoupons:33183",
     "bnddeals:50901",
     "alidealsdz:148",
@@ -16932,7 +17041,10 @@
     "lodydeals:45973",
     "lodydeals:45974",
     "lodydeals:45977",
-    "lodydeals:45978"
+    "lodydeals:45978",
+    "ecksdeal:6009",
+    "ecksdeal:6013",
+    "ecksdeal:6017"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
