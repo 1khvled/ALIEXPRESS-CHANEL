@@ -569,7 +569,8 @@
     "1005008986635164",
     "1005007171113381",
     "1005012865117890",
-    "1005011867856141"
+    "1005011867856141",
+    "1005006515379868"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -910,7 +911,7 @@
     "9998889908": 1793229908.2507865,
     "1005012339196141": 1793555097.6969874,
     "1005012472631754": 1793467108.5532427,
-    "1005013039644752": 1793556742.3836262,
+    "1005013039644752": 1793600120.2797327,
     "1005013479436053": 1793380394.5736995,
     "1005012431631514": 1793270716.9132679,
     "1005009338640941": 1793467348.0722725,
@@ -1126,7 +1127,7 @@
     "1005008147206532": 1793554730.1566968,
     "1005006398880142": 1793554757.8937938,
     "1005008755897663": 1793554764.2266893,
-    "1005012887486015": 1793556560.1844745,
+    "1005012887486015": 1793600112.7686548,
     "1005010758512904": 1793556565.207214,
     "1005013478918892": 1793556926.3977697,
     "1005012770405022": 1793566244.8077755,
@@ -1151,7 +1152,8 @@
     "INDEX_ECKSDEAL_6008": 1793599383.3882716,
     "1005012172791497": 1793599548.0470035,
     "1005012479560861": 1793599553.1122265,
-    "1005011867856141": 1793599912.232469
+    "1005011867856141": 1793599912.232469,
+    "1005006515379868": 1793600128.145566
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -1824,7 +1826,8 @@
     "HOCO ANC EQ34 PLUS",
     "POCO C81 Pro 4/64",
     "Shaking Cup Fitness Sports",
-    "POEDAGAR 896 Men's Watches"
+    "POEDAGAR 896 Men's Watches",
+    "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2466,9 +2469,9 @@
     "SAMSUNG DDR3 Ram 8GB 1600MHz": 1793554757.8937938,
     "ASRock B650 PRO RS": 1793554764.2266893,
     "Honor Power 2 5G 12/256GB": 1793554773.9452004,
-    "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2": 1793556560.1844745,
+    "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2": 1793600112.7686548,
     "HONOR Pad X8b Wifi 4/128GB": 1793556565.207214,
-    "VIVO IQOO Z11s 8/128": 1793556742.3836262,
+    "VIVO IQOO Z11s 8/128": 1793600120.2797327,
     "Honor WIN Turbo 2  8/256GB": 1793556926.3977697,
     "Realme P3 5G 8/256": 1793557654.0136676,
     "Lenovo Legion Y900 8/128GB": 1793566244.8077755,
@@ -2502,12 +2505,10 @@
     "معالج Ryzen 5 8400F": 1793575053.368357,
     "فهرس العروض": 1793599383.3882716,
     "Mortal T1 2/16GB Wifi 4K": 1793599548.0470035,
-    "POEDAGAR 896 Men's Watches": 1793599912.232469
+    "POEDAGAR 896 Men's Watches": 1793599912.232469,
+    "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card": 1793600128.145566
   },
   "published_post_keys": [
-    "pcgamingpart:7963",
-    "aniscoupons:33146",
-    "ecksdeal:5991",
     "lodydeals:45843",
     "test_channel:1792110177",
     "aniscoupons:32761",
@@ -3504,19 +3505,22 @@
     "test_channel:1791677705",
     "test_channel:1791753006",
     "lodydeals:45949",
-    "ecksdeal:5984"
+    "ecksdeal:5984",
+    "lodydeals:45893",
+    "lodydeals:45895",
+    "ecksdeal:5993"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793599918.33911,
+  "last_run_time": 1793600128.145566,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
-      "last_check_time": 1793599918.33911
+      "last_check_time": 1793600128.145566
     },
     "lodydeals": {
       "last_message_id": 45949,
-      "last_check_time": 1793599914.265306
+      "last_check_time": 1793600123.185837
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4012,7 +4016,8 @@
     "1005008144944225": 7.34,
     "1005012172791497": 16.89,
     "1005012479560861": 12.98,
-    "1005011867856141": 7.82
+    "1005011867856141": 7.82,
+    "1005006515379868": 9.37
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -12609,13 +12614,13 @@
       "status": "ACTIVE"
     },
     "lodydeals:45893": {
-      "channel_msg_id": 1529,
+      "channel_msg_id": 1590,
       "product_id": "1005012887486015",
       "title": "MSI MAG X670E TOMAHAWK WIFI Motherboard Socket AM5 AMD X670 4xDDR5 4xM.2",
       "channel": "lodydeals",
       "source_msg_id": 45893,
       "price": 146.25,
-      "timestamp": 1793556560.1844745,
+      "timestamp": 1793600112.7686548,
       "status": "ACTIVE"
     },
     "lodydeals:45894": {
@@ -12629,13 +12634,13 @@
       "status": "ACTIVE"
     },
     "lodydeals:45895": {
-      "channel_msg_id": 1531,
+      "channel_msg_id": 1591,
       "product_id": "1005013039644752",
       "title": "VIVO IQOO Z11s 8/128",
       "channel": "lodydeals",
       "source_msg_id": 45895,
       "price": 265.18,
-      "timestamp": 1793556742.3836262,
+      "timestamp": 1793600120.2797327,
       "status": "ACTIVE"
     },
     "lodydeals:45896": {
@@ -13037,6 +13042,16 @@
       "price": 7.82,
       "timestamp": 1793599912.232469,
       "status": "ACTIVE"
+    },
+    "ecksdeal:5993": {
+      "channel_msg_id": 1592,
+      "product_id": "1005006515379868",
+      "title": "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card",
+      "channel": "ecksdeal",
+      "source_msg_id": 5993,
+      "price": 9.37,
+      "timestamp": 1793600128.145566,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13045,17 +13060,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793599922.5990055,
+    "last_deal_post_time": 1793600130.8018575,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793599926.9561062,
+    "last_sweep_time": 1793600135.9428234,
     "last_sweep_times": {
-      "algeria": 1793599922.5850904,
-      "france": 1793599926.9561062
+      "algeria": 1793600130.7822685,
+      "france": 1793600135.9428234
     },
     "last_deal_post_times": {
-      "algeria": 1793599922.5990055
+      "algeria": 1793600130.8018575
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13643,7 +13658,8 @@
     "1005012172791497": "lodydeals",
     "1005012479560861": "lodydeals",
     "TAJMI3A_PC_PARTS_1582": "dzaliexpress0",
-    "1005011867856141": "lodydeals"
+    "1005011867856141": "lodydeals",
+    "1005006515379868": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14324,7 +14340,8 @@
     "فهرس العروض": "ecksdeal",
     "Mortal T1 2/16GB Wifi 4K": "lodydeals",
     "فهرس عروض قطع وعتاد البي سي": "dzaliexpress0",
-    "POEDAGAR 896 Men's Watches": "lodydeals"
+    "POEDAGAR 896 Men's Watches": "lodydeals",
+    "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -14927,15 +14944,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45677",
-    "aniscoupons:33105",
-    "ecksdeal:5993",
-    "ecksdeal:5913",
-    "lodydeals:45657",
-    "bnddeals:50875",
-    "lodydeals:45658",
-    "megaphonna:8753",
-    "megaphonna:8354",
     "zedstoreonline:38932",
     "megaphonna:8739",
     "aniscoupons:32989",
@@ -15934,7 +15942,8 @@
     "alidealsdz:141",
     "ecksdeal:5894",
     "lodydeals:45660",
-    "megaphonna:8305"
+    "megaphonna:8305",
+    "lodydeals:45947"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
