@@ -574,7 +574,8 @@
     "1005007792223934",
     "1005010707075064",
     "1005007010692093",
-    "1005006994466968"
+    "1005006994466968",
+    "1005011927267564"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1161,7 +1162,8 @@
     "1005007792223934": 1793600288.3908339,
     "1005010707075064": 1793600466.7601562,
     "1005007010692093": 1793601389.0047116,
-    "1005006994466968": 1793601744.1664062
+    "1005006994466968": 1793601744.1664062,
+    "1005011927267564": 1793608541.760777
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -1842,7 +1844,8 @@
     "Baseus 240W Type-C Cable 1m",
     "VA VA VOOM Men Casual",
     "Anker Nano 70W Max 3-Port",
-    "Anker Soundcoure Life Q30"
+    "Anker Soundcoure Life Q30",
+    "CUSU SSD SATA 512GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2528,10 +2531,10 @@
     "Baseus 240W Type-C Cable 1m": 1793601389.0047116,
     "VA VA VOOM Men Casual": 1793601744.1664062,
     "Anker Nano 70W Max 3-Port": 1793607070.347875,
-    "Anker Soundcoure Life Q30": 1793607798.5770764
+    "Anker Soundcoure Life Q30": 1793607798.5770764,
+    "CUSU SSD SATA 512GB": 1793608541.760777
   },
   "published_post_keys": [
-    "aniscoupons:32780",
     "aniscoupons:33307",
     "lodydeals:45411",
     "pcgamingpart:7962",
@@ -3530,19 +3533,20 @@
     "lodydeals:45956",
     "lodydeals:45957",
     "lodydeals:45958",
-    "lodydeals:45959"
+    "lodydeals:45959",
+    "lodydeals:45962"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793607989.1573756,
+  "last_run_time": 1793608541.760777,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45960,
-      "last_check_time": 1793607991.3804917
+      "last_message_id": 45962,
+      "last_check_time": 1793608543.8058128
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4043,7 +4047,8 @@
     "1005007792223934": 7.34,
     "1005010707075064": 10.3,
     "1005007010692093": 2.88,
-    "1005006994466968": 4.99
+    "1005006994466968": 4.99,
+    "1005011927267564": 42.04
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -13178,6 +13183,16 @@
       "price": 48.91,
       "timestamp": 1793607989.1573756,
       "status": "ACTIVE"
+    },
+    "lodydeals:45962": {
+      "channel_msg_id": 1610,
+      "product_id": "1005011927267564",
+      "title": "CUSU SSD SATA 512GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45962,
+      "price": 42.04,
+      "timestamp": 1793608541.760777,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13186,17 +13201,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793607994.4426398,
+    "last_deal_post_time": 1793608546.9853504,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793608350.356155,
+    "last_sweep_time": 1793608552.35419,
     "last_sweep_times": {
-      "algeria": 1793608345.6135721,
-      "france": 1793608350.356155
+      "algeria": 1793608546.9648643,
+      "france": 1793608552.35419
     },
     "last_deal_post_times": {
-      "algeria": 1793607994.4426398
+      "algeria": 1793608546.9853504
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13789,7 +13804,8 @@
     "1005007792223934": "lodydeals",
     "1005010707075064": "lodydeals",
     "1005007010692093": "lodydeals",
-    "1005006994466968": "lodydeals"
+    "1005006994466968": "lodydeals",
+    "1005011927267564": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14478,7 +14494,8 @@
     "Baseus 240W Type-C Cable 1m": "lodydeals",
     "VA VA VOOM Men Casual": "lodydeals",
     "Anker Nano 70W Max 3-Port": "lodydeals",
-    "Anker Soundcoure Life Q30": "lodydeals"
+    "Anker Soundcoure Life Q30": "lodydeals",
+    "CUSU SSD SATA 512GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
