@@ -565,7 +565,8 @@
     "1005010487426245",
     "1005012865939059",
     "1005007171113381",
-    "1005008144944225"
+    "1005008144944225",
+    "INDEX_ECKSDEAL_6008"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1143,7 +1144,8 @@
     "1005010487426245": 1793573558.2913802,
     "1005012865939059": 1793573742.8007863,
     "1005007171113381": 1793573945.0580306,
-    "1005008144944225": 1793574309.4810557
+    "1005008144944225": 1793574309.4810557,
+    "INDEX_ECKSDEAL_6008": 1793577595.5427852
   },
   "published_titles": [
     "Xiaomi Redmi Note 17 5G Global Version",
@@ -1812,7 +1814,8 @@
     "HILDA 2 Lines Laser",
     "KODAK USB 2.0 Flash Drive",
     "VA VA VOOM Brand Top",
-    "معالج Ryzen 5 8400F"
+    "معالج Ryzen 5 8400F",
+    "فهرس العروض"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2487,10 +2490,10 @@
     "HILDA 2 Lines Laser": 1793573945.0580306,
     "KODAK USB 2.0 Flash Drive": 1793573951.3406305,
     "VA VA VOOM Brand Top": 1793574309.4810557,
-    "معالج Ryzen 5 8400F": 1793575053.368357
+    "معالج Ryzen 5 8400F": 1793575053.368357,
+    "فهرس العروض": 1793577595.5427852
   },
   "published_post_keys": [
-    "aniscoupons:32705",
     "aniscoupons:32706",
     "lodydeals:45417",
     "aniscoupons:32707",
@@ -3489,15 +3492,16 @@
     "lodydeals:45943",
     "lodydeals:45944",
     "lodydeals:45946",
-    "ecksdeal:5998"
+    "ecksdeal:5998",
+    "ecksdeal:6008"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793575053.368357,
+  "last_run_time": 1793577595.5427852,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6006,
-      "last_check_time": 1793577221.1080048
+      "last_message_id": 6008,
+      "last_check_time": 1793577595.5427852
     },
     "lodydeals": {
       "last_message_id": 45946,
@@ -12975,6 +12979,16 @@
       "price": 79.58,
       "timestamp": 1793575053.368357,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6008": {
+      "channel_msg_id": 1576,
+      "product_id": "INDEX_ECKSDEAL_6008",
+      "title": "فهرس العروض",
+      "channel": "ecksdeal",
+      "source_msg_id": 6008,
+      "price": null,
+      "timestamp": 1793577595.5427852,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -12987,10 +13001,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793577405.4151785,
+    "last_sweep_time": 1793577601.2427366,
     "last_sweep_times": {
-      "algeria": 1793577399.9339714,
-      "france": 1793577405.4151785
+      "algeria": 1793577596.0618453,
+      "france": 1793577601.2427366
     },
     "last_deal_post_times": {
       "algeria": 1793575055.4444058
@@ -13576,7 +13590,8 @@
     "1005010487426245": "lodydeals",
     "1005012865939059": "lodydeals",
     "1005007171113381": "lodydeals",
-    "1005008144944225": "lodydeals"
+    "1005008144944225": "lodydeals",
+    "INDEX_ECKSDEAL_6008": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14253,7 +14268,8 @@
     "HILDA 2 Lines Laser": "lodydeals",
     "KODAK USB 2.0 Flash Drive": "lodydeals",
     "VA VA VOOM Brand Top": "lodydeals",
-    "معالج Ryzen 5 8400F": "ecksdeal"
+    "معالج Ryzen 5 8400F": "ecksdeal",
+    "فهرس العروض": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
