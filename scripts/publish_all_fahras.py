@@ -95,7 +95,7 @@ async def main():
     now_ts = datetime.now(timezone.utc).timestamp()
     cooldown_sec = 12 * 3600 # 12 hours cooldown per bulletin
 
-    deals = get_recent_published_deals_for_roundup(max_age_hours=48.0)
+    deals = get_recent_published_deals_for_roundup(max_age_hours=48.0, min_msg_id=1411)
     print(f"Found {len(deals)} published deals (all >= #1411)")
 
     bulletins_to_post = []

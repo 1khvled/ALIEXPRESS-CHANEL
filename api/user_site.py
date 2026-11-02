@@ -45,7 +45,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <link rel="alternate" type="text/plain" href="https://dealscoutgreen.vercel.app/llms-full.txt" title="LLMs full documentation">
 
   <!-- Meta Search & Geography -->
-  <meta name="keywords" content="مهرجان 11.11, تخفيضات 11.11, كود خصم 11.11, كوبونات 11.11 الجزائر, OTD1103, OTD1104, OTD1111, OTD1120, OTD1136, OTD1153, OTD1170, minuit, 11FR03, 11FR08, 11FR13, 11FR24, 11FR40, 11FR60, 11FR80, FRD1190, 11.11 Global Shopping Festival, Ryzen 7 9800X3D, OnePlus 13, AMD Ryzen 5 8400F, Redmi Note 12 5G, Fifine AM8, UGREEN GaN 65W, aliexpressdz, aliexpress deals dz, عروض علي اكسبراس, شراء من علي اكسبراس في الجزائر, علي اكسبراس الجزائر, تخفيضات علي اكسبراس, كود تخفيض علي اكسبراس الجزائر, عملات علي اكسبراس, بوت تخفيض العملات علي اكسبراس, الشراء من علي اكسبراس بريدي موب, اسعار السكوار, بطاقة bybit مجانية, بطاقة redotpay الجزائر, algeria deals, dealscout dz">
+  <meta name="keywords" content="aliexpressdz, aliexpress deals dz, aliexpress deald dz, عروض علي اكسبراس, شراء من علي اكسبراس في الجزائر, علي اكسبراس الجزائر, تخفيضات علي اكسبراس, كود تخفيض علي اكسبراس, كود تخفيض علي اكسبراس الجزائر, الشراء من علي اكسبراس في الجزائر بريدي موب, مهرجان 11.11, تخفيضات 11.11, كود خصم 11.11, كوبونات 11.11 الجزائر, OTD1103, OTD1104, OTD1111, OTD1120, OTD1136, OTD1153, OTD1170, minuit, 11FR03, 11FR08, 11FR13, 11FR24, 11FR40, 11FR60, 11FR80, FRD1190, 11.11 Global Shopping Festival, Ryzen 7 9800X3D, OnePlus 13, AMD Ryzen 5 8400F, Redmi Note 12 5G, Fifine AM8, UGREEN GaN 65W, عملات علي اكسبراس, بوت تخفيض العملات علي اكسبراس, اسعار السكوار, بطاقة bybit مجانية, بطاقة redotpay الجزائر, algeria deals, dealscout dz">
   <meta name="geo.region" content="DZ">
   <meta name="geo.placename" content="Algeria">
   <meta name="geo.position" content="28.0339;1.6596">
@@ -4988,7 +4988,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
 
       // 4. Reject emoji-only or too-short posts
-      const alphanumeric = text.replace(/[\\\s\\p{Emoji_Presentation}\\p{Extended_Pictographic}\\p{Punctuation}]/gu, '');
+      const alphanumeric = text.replace(/[\\s\\p{Emoji_Presentation}\\p{Extended_Pictographic}\\p{Punctuation}]/gu, '');
       if (alphanumeric.length < 5) {
         return null;
       }
@@ -5151,7 +5151,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         if (cleanTier && !cleanTier.startsWith('$') && !cleanTier.endsWith('$') && !cleanTier.startsWith('€') && !cleanTier.endsWith('€')) {
           cleanTier += '$';
         }
-        let cleanLabel = (label || 'كوبون').trim().replace(/^[🏷️🎟️🎫•\\\-\\*:\\\s]+|[🏷️🎟️🎫•\\\-\\*:\\\s]+$/g, '');
+        let cleanLabel = (label || 'كوبون').trim().replace(/^[🏷️🎟️🎫•\\-\\*:\\s]+|[🏷️🎟️🎫•\\-\\*:\\s]+$/g, '');
         if (!cleanLabel) cleanLabel = 'كوبون';
 
         if (!seenCodes.has(cleaned)) {
@@ -5305,7 +5305,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (!rawPosts || !Array.isArray(rawPosts) || rawPosts.length === 0) return;
       const tajmi3aPosts = rawPosts.filter(p => {
         const txt = (p.text || '');
-        return /(?:فهرس|تجميعة|تجميعات)/i.test(txt) && /(?:11\\.11|عروض|قطع|هواتف|سماعات|شواحن|قيمنق)/i.test(txt);
+        return /(?:فهرس|تجميعة|تجميعات)/i.test(txt) && /(?:11\.11|عروض|قطع|هواتف|سماعات|شواحن|قيمنق)/i.test(txt);
       });
       if (tajmi3aPosts.length === 0) return;
 
@@ -5329,8 +5329,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         for (const [k, v] of Object.entries(categoryIcons)) {
           if (txt.includes(k)) { detected = v; break; }
         }
-        const lines = txt.split('\n').map(l => l.trim()).filter(l => l.startsWith('🔹') || l.startsWith('▪️') || l.startsWith('-') || l.startsWith('•'));
-        const previewText = lines.slice(0, 3).map(l => l.replace(/^[🔹▪️•\\-\\s]+/, '').split(':')[0]).join(', ') || 'أقوى صفقات اليوم مع الكوبونات';
+        const lines = txt.split(String.fromCharCode(10)).map(l => l.trim()).filter(l => l.startsWith('🔹') || l.startsWith('▪️') || l.startsWith('-') || l.startsWith('•'));
+        const previewText = lines.slice(0, 3).map(l => l.replace(/^[🔹▪️•\-\s]+/, '').split(':')[0]).join(', ') || 'أقوى صفقات اليوم مع الكوبونات';
         const targetUrl = p.link || 'https://t.me/DzAliexpress0';
         const msgMatch = targetUrl.match(/\/(\d+)$/);
         const msgIdStr = msgMatch ? '#' + msgMatch[1] : 'قناة الصفقات';

@@ -364,7 +364,7 @@ def is_better_deal(candidate: Dict[str, Any], current: Dict[str, Any]) -> bool:
     # 2. If prices are identical (or both <= 0), prefer the freshest post
     return int(candidate.get("channel_msg_id") or 0) > int(current.get("channel_msg_id") or 0)
 
-def get_recent_published_deals_for_roundup(max_age_hours: float = 24.0) -> List[Dict[str, Any]]:
+def get_recent_published_deals_for_roundup(max_age_hours: float = 24.0, min_msg_id: int = 0) -> List[Dict[str, Any]]:
     """
     Collects active deals published to @DzAliexpress0 within the last 24 hours.
     Deduplicates identical products posted multiple times during the day (keeps lowest price / latest post).
@@ -386,8 +386,8 @@ def get_recent_published_deals_for_roundup(max_age_hours: float = 24.0) -> List[
         msg_id = info.get("channel_msg_id")
         if not msg_id or int(msg_id) <= 0:
             continue
-        # Strict 11.11 filter: Ignore any warmup/pre-sale deals posted before the 08:00 AM launch (#1411)
-        if int(msg_id) < 1411:
+        # Optional min_msg_id filter (used in 11.11 production roundups)
+        if min_msg_id > 0 and int(msg_id) < min_msg_id:
             continue
         ts = info.get("timestamp", 0)
         if (now - ts) > max_age_sec:
