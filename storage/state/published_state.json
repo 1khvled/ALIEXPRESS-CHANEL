@@ -576,7 +576,8 @@
     "1005007010692093",
     "1005006994466968",
     "1005011927267564",
-    "1005008291023017"
+    "1005008291023017",
+    "1005012947477238"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1165,7 +1166,8 @@
     "1005007010692093": 1793601389.0047116,
     "1005006994466968": 1793601744.1664062,
     "1005011927267564": 1793608541.760777,
-    "1005008291023017": 1793609285.8237927
+    "1005008291023017": 1793609285.8237927,
+    "1005012947477238": 1793612016.5356846
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -1848,7 +1850,8 @@
     "Anker Nano 70W Max 3-Port",
     "Anker Soundcoure Life Q30",
     "CUSU SSD SATA 512GB",
-    "OPPO Find X9 PRO 12/256GB"
+    "OPPO Find X9 PRO 12/256GB",
+    "Redmi Note 17 5G 6/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2536,10 +2539,10 @@
     "Anker Nano 70W Max 3-Port": 1793607070.347875,
     "Anker Soundcoure Life Q30": 1793607798.5770764,
     "CUSU SSD SATA 512GB": 1793608541.760777,
-    "OPPO Find X9 PRO 12/256GB": 1793611292.7491462
+    "OPPO Find X9 PRO 12/256GB": 1793611292.7491462,
+    "Redmi Note 17 5G 6/256GB": 1793612016.5356846
   },
   "published_post_keys": [
-    "aniscoupons:32915",
     "aniscoupons:33204",
     "zedstoreonline:38544",
     "megaphonna:8598",
@@ -3538,19 +3541,20 @@
     "lodydeals:45963",
     "lodydeals:45964",
     "lodydeals:45965",
-    "lodydeals:45966"
+    "lodydeals:45966",
+    "lodydeals:45967"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793611292.7491462,
+  "last_run_time": 1793612016.5356846,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45966,
-      "last_check_time": 1793611294.7858505
+      "last_message_id": 45967,
+      "last_check_time": 1793612018.5616133
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4053,7 +4057,8 @@
     "1005007010692093": 2.88,
     "1005006994466968": 4.99,
     "1005011927267564": 42.04,
-    "1005008291023017": 285.92
+    "1005008291023017": 285.92,
+    "1005012947477238": 199.2
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -13238,6 +13243,16 @@
       "price": 603.9,
       "timestamp": 1793611292.7491462,
       "status": "ACTIVE"
+    },
+    "lodydeals:45967": {
+      "channel_msg_id": 1615,
+      "product_id": "1005012947477238",
+      "title": "Redmi Note 17 5G 6/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45967,
+      "price": 199.2,
+      "timestamp": 1793612016.5356846,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13246,17 +13261,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793611297.1075609,
+    "last_deal_post_time": 1793612021.421795,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793611835.181064,
+    "last_sweep_time": 1793612026.0057487,
     "last_sweep_times": {
-      "algeria": 1793611830.4591281,
-      "france": 1793611835.181064
+      "algeria": 1793612021.410014,
+      "france": 1793612026.0057487
     },
     "last_deal_post_times": {
-      "algeria": 1793611297.1075609
+      "algeria": 1793612021.421795
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13851,7 +13866,8 @@
     "1005007010692093": "lodydeals",
     "1005006994466968": "lodydeals",
     "1005011927267564": "lodydeals",
-    "1005008291023017": "lodydeals"
+    "1005008291023017": "lodydeals",
+    "1005012947477238": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -14542,7 +14558,8 @@
     "Anker Nano 70W Max 3-Port": "lodydeals",
     "Anker Soundcoure Life Q30": "lodydeals",
     "CUSU SSD SATA 512GB": "lodydeals",
-    "OPPO Find X9 PRO 12/256GB": "lodydeals"
+    "OPPO Find X9 PRO 12/256GB": "lodydeals",
+    "Redmi Note 17 5G 6/256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
