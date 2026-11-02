@@ -1045,215 +1045,165 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
 
 
-        <!-- Official Brand Stores Directory (11.11 Special) -->
-        <div class="space-y-3 pt-3 border-t" style="border-color: rgba(225, 29, 72, 0.15);">
+        <!-- Daily Curated Tajmi3at & Category Bulletins (Updates Everyday) -->
+        <div id="section-daily-tajmi3at" class="space-y-3 pt-3 border-t" style="border-color: rgba(225, 29, 72, 0.18);">
           <div class="flex items-center justify-between gap-2 flex-wrap">
-            <div class="flex items-center gap-2">
-              <span class="w-6 h-6 rounded-lg bg-rose-500/15 text-rose-500 flex items-center justify-center text-xs font-bold">
-                <i class="fa-solid fa-store"></i>
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-xl bg-gradient-to-br from-rose-500 to-amber-500 text-white flex items-center justify-center text-sm shadow-md flex-shrink-0">
+                <i class="fa-solid fa-layer-group"></i>
               </span>
               <div>
-                <h3 class="font-black text-xs sm:text-sm text-rose-500 dark:text-rose-400" data-i18n="stores_directory_title">دليل المتاجر الرسمية المعتمدة (احجز قسائم المتجر وعَمّر سلّتك)</h3>
-                <p class="text-[10px] opacity-70" style="color: var(--text-muted);" data-i18n="stores_directory_sub">ادخل مباشرة لمتجر الماركة الرسمية، اجمع قسيمة المتجر الإضافية وحط منتجاتك في السلة قبل انطلاق الأسعار.</p>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="font-black text-xs sm:text-sm text-rose-500 dark:text-rose-400 font-heading">
+                    تجميعات وفهارس الصفقات اليومية 📦🔥
+                  </h3>
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-500 border border-emerald-500/30 flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>محدث يومياً 🔄</span>
+                  </span>
+                </div>
+                <p class="text-[10px] sm:text-[11px] opacity-75" style="color: var(--text-muted);">
+                  فهارس متكاملة تجمع أقوى عروض وتخفيضات 11.11 المحققة لنهار اليوم، مصنفة حسب الفئة لتسهيل التسوق والشراء بأقل سعر.
+                </p>
               </div>
             </div>
+            <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="text-xs font-bold px-3 py-1.5 rounded-xl border flex items-center gap-1.5 transition active:scale-95 shadow-sm text-sky-500 hover:border-sky-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <i class="fa-brands fa-telegram"></i>
+              <span>قناة الصفقات @DzAliexpress0</span>
+            </a>
           </div>
 
-          <!-- Brand Stores Official Showcase Banner -->
-          <div class="rounded-2xl overflow-hidden border shadow-md my-2" style="border-color: rgba(225, 29, 72, 0.25);">
-            <img src="/official_stores_banner.png" alt="AliExpress 11.11 Official Stores Directory" class="w-full max-h-[380px] object-cover rounded-xl" loading="lazy" />
-          </div>
-
-          <div class="space-y-2">
-            <!-- Gaming Stores -->
-            <div>
-              <span class="text-[11px] font-bold text-amber-500 flex items-center gap-1.5 mb-1.5">
-                <i class="fa-solid fa-gamepad text-[10px]"></i> عتاد القيمنق والكيبوردات الميكانيكية:
-              </span>
-              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-                            <a href="https://s.click.aliexpress.com/e/_c3QPS5kr" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Ajazz</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">كيبوردات وماوسات ميكانيكية</span>
+          <!-- Dynamic Daily Tajmi3at Grid -->
+          <div id="daily-tajmi3at-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+            <a href="https://t.me/DzAliexpress0/1585" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-rose-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-xl bg-rose-500/15 text-rose-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-xs sm:text-sm text-rose-500 font-heading">📱 فهرس الهواتف الذكية (Part 1 & 2)</h4>
+                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Realme 14, Honor 200, POCO X6 Pro, Note 13</span>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-500 font-bold">11.11</span>
               </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://s.click.aliexpress.com/e/_c3B3h1sr" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Attack Shark</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">ماوسات X3/R1 وسماعات قيمنق</span>
+              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
+                <span class="text-rose-500 flex items-center gap-1">
+                  <span>تصفح عروض الهواتف</span>
+                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
+                </span>
+                <span class="text-[10px] opacity-50 font-normal">تيليجرام #1585</span>
               </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://s.click.aliexpress.com/e/_c3NODjJN" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Aula</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">كيبوردات F75 و F87 الأسطورية</span>
-              </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://s.click.aliexpress.com/e/_c3qBSeyj" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Machenike</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">أيادي تحكم ولابتوبات وعتاد قيمنق</span>
-              </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://s.click.aliexpress.com/e/_c4K7fJST" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Mchose</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">ماوسات AX5/A5 وكيبوردات K99</span>
-              </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://s.click.aliexpress.com/e/_c4VxLtsB" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">GameSir</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">أقوى أيادي التحكم للـ PC والهاتف</span>
-              </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://s.click.aliexpress.com/e/_c4p0NQdl" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Flydigi</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">أيادي تحكم احترافية Vader & Apex</span>
-              </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
             </a>
-              </div>
-            </div>
 
-            <!-- Audio Stores -->
-            <div class="pt-2">
-              <span class="text-[11px] font-bold text-sky-400 flex items-center gap-1.5 mb-1.5">
-                <i class="fa-solid fa-headphones text-[10px]"></i> الصوتيات وسماعات الـ IEMs:
-              </span>
-              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-                            <a href="https://s.click.aliexpress.com/e/_c3CSIZ4B" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">KZ</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">سماعات سلكية IEMs بصوت نقي</span>
+            <a href="https://t.me/DzAliexpress0/1587" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-violet-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-xl bg-violet-500/15 text-violet-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-headphones"></i>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-xs sm:text-sm text-violet-500 font-heading">🎧 فهرس السماعات والصوتيات</h4>
+                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Fifine AM8, QCY ANC, Soundcore, Maono</span>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-violet-500/10 text-violet-500 font-bold">11.11</span>
               </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://s.click.aliexpress.com/e/_c3IHDdyn" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">QCY</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">سماعات بلوتوث TWS وعزل ضوضاء ANC</span>
+              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
+                <span class="text-violet-500 flex items-center gap-1">
+                  <span>تصفح عروض الصوتيات</span>
+                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
+                </span>
+                <span class="text-[10px] opacity-50 font-normal">تيليجرام #1587</span>
               </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://s.click.aliexpress.com/e/_c375eEIJ" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Anker</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">سماعات Soundcore وسبيكرات عالمية</span>
-              </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://www.aliexpress.com/store/1102047805?aff_fcid=dzkhvled16" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Tangzu</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">سماعات Wan'er بصوت استوديو نقي</span>
-              </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
             </a>
-              </div>
-            </div>
 
-            <!-- Power & Tech Stores -->
-            <div class="pt-2">
-              <span class="text-[11px] font-bold text-emerald-400 flex items-center gap-1.5 mb-1.5">
-                <i class="fa-solid fa-bolt text-[10px]"></i> الشواحن السريعة GaN وبنوك الطاقة والكوابل:
-              </span>
-              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-                            <a href="https://s.click.aliexpress.com/e/_c3WEvrZp" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Baseus</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">شواحن سريعة GaN وبنوك طاقة وكوابل</span>
+            <a href="https://t.me/DzAliexpress0/1588" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-amber-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-xl bg-amber-500/15 text-amber-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-microchip"></i>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-xs sm:text-sm text-amber-500 font-heading">💻 فهرس عتاد الـ PC والمعالجات</h4>
+                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Ryzen 7 9800X3D, Ryzen 8400F, Tomahawk, SSDs</span>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-500 font-bold">11.11</span>
               </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://s.click.aliexpress.com/e/_c3Sfel63" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Ugreen</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">شواحن Nexode وهبات USB-C فاخرة</span>
+              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
+                <span class="text-amber-500 flex items-center gap-1">
+                  <span>تصفح عروض الكمبيوتر</span>
+                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
+                </span>
+                <span class="text-[10px] opacity-50 font-normal">تيليجرام #1588</span>
               </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://s.click.aliexpress.com/e/_c4dZM5jH" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Essager</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">كوابل شحن سريعة بسعر باطل</span>
-              </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://s.click.aliexpress.com/e/_c3IWQD0P" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Toocki</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">شواحن سيارة وكوابل بشاشة عرض</span>
-              </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
             </a>
-              </div>
-            </div>
 
-            <!-- Wearables & Mobile Stores -->
-            <div class="pt-2">
-              <span class="text-[11px] font-bold text-purple-400 flex items-center gap-1.5 mb-1.5">
-                <i class="fa-solid fa-mobile-screen text-[10px]"></i> الهواتف والساعات الذكية:
-              </span>
-              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-                            <a href="https://s.click.aliexpress.com/e/_c3fiTqFD" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Zeblaze</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">ساعات ذكية AMOLED وبطارية ضخمة</span>
+            <a href="https://t.me/DzAliexpress0/1589" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-emerald-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-xl bg-emerald-500/15 text-emerald-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-bolt"></i>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-xs sm:text-sm text-emerald-500 font-heading">⚡ فهرس الشواحن وبنوك الطاقة</h4>
+                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Ugreen GaN 65W, Baseus 240W Cable, Car Chargers</span>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-500 font-bold">11.11</span>
               </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://s.click.aliexpress.com/e/_c3sccQLp" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Colmi</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">ساعات ذكية أنيقة بسعر لافار</span>
+              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
+                <span class="text-emerald-500 flex items-center gap-1">
+                  <span>تصفح عروض الشواحن</span>
+                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
+                </span>
+                <span class="text-[10px] opacity-50 font-normal">تيليجرام #1589</span>
               </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://www.aliexpress.com/store/911934243?aff_fcid=dzkhvled16" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">POCO</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">هواتف POCO الأصلية بضمان المصنع</span>
-              </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
-            </a>            <a href="https://s.click.aliexpress.com/e/_c3YghyCL" target="_blank" rel="noopener noreferrer" class="border rounded-xl p-2.5 flex items-center justify-between gap-2 transition hover:border-amber-500/50 shadow-sm active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="min-w-0">
-                <span class="font-bold text-xs block truncate" style="color: var(--text-main);">Xiaomi Mi Global Store</span>
-                <span class="text-[10px] opacity-70 block truncate" style="color: var(--text-muted);">هواتف وريدمي وأجهزة شاومي العالمية</span>
-              </div>
-              <span class="w-6 h-6 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-[10px] flex-shrink-0">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </span>
             </a>
+
+            <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-cyan-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-xl bg-cyan-500/15 text-cyan-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-gamepad"></i>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-xs sm:text-sm text-cyan-500 font-heading">🎮 فهرس الكيبوردات والماوسات</h4>
+                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Aula F75, Attack Shark X3/R1, GameSir G7</span>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-cyan-500/10 text-cyan-500 font-bold">11.11</span>
+              </div>
+              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
+                <span class="text-cyan-500 flex items-center gap-1">
+                  <span>تصفح عروض القيمنق</span>
+                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
+                </span>
+                <span class="text-[10px] opacity-50 font-normal">تيليجرام</span>
+              </div>
+            </a>
+
+            <div onclick="setCategory('tajmi3at')" class="tajmi3a-quick-card group p-3 rounded-2xl border border-dashed transition hover:border-rose-500 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation cursor-pointer" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-xl bg-rose-500/15 text-rose-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:rotate-12 transition-transform">
+                    <i class="fa-solid fa-list-check"></i>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-xs sm:text-sm text-rose-500 font-heading">📑 عرض كل الفهارس في الموقع</h4>
+                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">تصفية بطاقات التجميعات في جدول العروض هنا</span>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-500 font-bold">موقع</span>
+              </div>
+              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
+                <span class="text-rose-500 flex items-center gap-1">
+                  <span>انتقل لتبويب التجميعات</span>
+                  <i class="fa-solid fa-arrow-down text-[9px]"></i>
+                </span>
+                <span class="text-[10px] opacity-50 font-normal">مباشرة في الصفحة</span>
               </div>
             </div>
           </div>
@@ -1264,7 +1214,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <div class="flex items-center gap-2">
             <i class="fa-solid fa-lightbulb text-amber-500 text-xs flex-shrink-0"></i>
             <span style="color: var(--text-muted);" data-i18n="hub_strategy_tip">
-              💡 <b>نصيحة هامة:</b> أضف المنتجات إلى السلة من الآن لتثبيت السعر المخفض. يوم 1 نوفمبر على 08:00 طبق الكوبونات الأكبر أولاً قبل نفاذ المخزون!
+              💡 <b>نصيحة هامة:</b> تخفيضات 11.11 فعالة الآن! استخدم كوبونات التخفيض الأكبر أولاً (مثل OTD1136 أو OTD1120) قبل نفاد حصة الجزائر المحدودة.
             </span>
           </div>
           <a href="https://s.click.aliexpress.com/e/_c3F40Fvf" target="_blank" rel="noopener noreferrer" class="text-rose-500 dark:text-rose-400 font-bold hover:underline flex items-center gap-1 flex-shrink-0 self-end sm:self-auto">
@@ -4987,6 +4937,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           try {
             localStorage.setItem(cacheKey, JSON.stringify(allDeals));
           } catch(e) {}
+          updateDailyTajmi3atSection(data.posts);
           updateCategoryCounters();
           filterDeals();
           if (showSpin) {
@@ -5037,7 +4988,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
 
       // 4. Reject emoji-only or too-short posts
-      const alphanumeric = text.replace(/[\\s\\p{Emoji_Presentation}\\p{Extended_Pictographic}\\p{Punctuation}]/gu, '');
+      const alphanumeric = text.replace(/[\\\s\\p{Emoji_Presentation}\\p{Extended_Pictographic}\\p{Punctuation}]/gu, '');
       if (alphanumeric.length < 5) {
         return null;
       }
@@ -5108,9 +5059,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               }
             }
           }
-          const m = line.match(/^[✅✔️☑️]\\s*(.+)$/) || line.match(/✅\\s*([^\\n]+)/);
+          const m = line.match(/^[✅✔️☑️]\\\s*(.+)$/) || line.match(/✅\\\s*([^\\n]+)/);
           if (m) {
-            const cand = m[1].replace(/<[^>]*>/g, '').replace(/^[✅✔️☑️\\s*#]+/, '').trim();
+            const cand = m[1].replace(/<[^>]*>/g, '').replace(/^[✅✔️☑️\\\s*#]+/, '').trim();
             if (cand.length >= 3 && !isBoilerplate(cand)) {
               title = cand;
               break;
@@ -5123,7 +5074,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (!title) {
         for (let i = 0; i < lines.length; i++) {
           const line = lines[i];
-          const m = line.match(/^(?:⭐️|⭐|🌟|📱|🎮|🎧|⚡|📦|تخفيض\\s*(?:لـ|ل)?|عرض\\s*خاص\\s*(?:لـ|ل)?|تخفيض\\s*على|produit\\s*:?|offre\\s*:?)\\s*(.+)$/i);
+          const m = line.match(/^(?:⭐️|⭐|🌟|📱|🎮|🎧|⚡|📦|تخفيض\\\s*(?:لـ|ل)?|عرض\\\s*خاص\\\s*(?:لـ|ل)?|تخفيض\\\s*على|produit\\\s*:?|offre\\\s*:?)\\\s*(.+)$/i);
           if (m) {
             const cand = m[1].replace(/<[^>]*>/g, '').trim();
             if (cand.length >= 3 && !isBoilerplate(cand)) {
@@ -5138,7 +5089,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (!title) {
         for (const line of lines) {
           if (isBoilerplate(line)) continue;
-          const clean = line.replace(/^[-🛍️🔥⚡⭐💥📦📍🏷️✅✔️•*\\s]+/, '').replace(/<[^>]*>/g, '').trim();
+          const clean = line.replace(/^[-🛍️🔥⚡⭐💥📦📍🏷️✅✔️•*\\\s]+/, '').replace(/<[^>]*>/g, '').trim();
           if (clean.length >= 4 && !isBoilerplate(clean) && !clean.match(/^[A-Z0-9_-]{4,20}$/)) {
             title = clean;
             break;
@@ -5150,7 +5101,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (!title) {
         for (const line of lines) {
           if (!line.includes('http') && !line.includes('@') && !line.includes('t.me') && line.length >= 4 && !isBoilerplate(line)) {
-            const clean = line.replace(/^[-🛍️🔥⚡⭐💥📦📍🏷️✅✔️•*\\s]+/, '').trim();
+            const clean = line.replace(/^[-🛍️🔥⚡⭐💥📦📍🏷️✅✔️•*\\\s]+/, '').trim();
             if (clean.length >= 4 && !isBoilerplate(clean)) {
               title = clean;
               break;
@@ -5170,11 +5121,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         title = isTajmi3aPost ? (currentLang === 'fr' ? "Index Officiel 11.11 DealScout" : "فهرس العروض الرسمي 11.11") : (currentLang === 'fr' ? "Offre Spéciale Festival 11.11" : "عرض مميز تخفيضات 11.11 الكبرى");
       }
 
-      const usdMatch = text.match(/(?:\\$|US\\s*\\$|USD\\s*)\\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\\s*(?:\\bUSD\\b|\\$)/i);
+      const usdMatch = text.match(/(?:\\$|US\\\s*\\$|USD\\\s*)\\\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\\\s*(?:\\bUSD\\b|\\$)/i);
       if (usdMatch) {
         priceUsd = parseFloat(usdMatch[1].replace(',', '.'));
       }
-      const eurMatch = text.match(/(?:€|EUR\\s*)\\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\\s*(?:€|\\bEUR\\b)/i);
+      const eurMatch = text.match(/(?:€|EUR\\\s*)\\\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\\\s*(?:€|\\bEUR\\b)/i);
       if (eurMatch) {
         priceEur = parseFloat(eurMatch[1].replace(',', '.'));
       }
@@ -5196,11 +5147,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         if (compBrands.some(brand => cl.startsWith(brand) || cl.includes('_' + brand) || cl.includes('-' + brand))) return;
         if (['anis', 'megaprix', 'megaphonna', 'ecks'].some(brand => cl.includes(brand))) return;
 
-        let cleanTier = (tier || '').trim().replace(/\\s+/g, '');
+        let cleanTier = (tier || '').trim().replace(/\\\s+/g, '');
         if (cleanTier && !cleanTier.startsWith('$') && !cleanTier.endsWith('$') && !cleanTier.startsWith('€') && !cleanTier.endsWith('€')) {
           cleanTier += '$';
         }
-        let cleanLabel = (label || 'كوبون').trim().replace(/^[🏷️🎟️🎫•\\-\\*:\\s]+|[🏷️🎟️🎫•\\-\\*:\\s]+$/g, '');
+        let cleanLabel = (label || 'كوبون').trim().replace(/^[🏷️🎟️🎫•\\\-\\*:\\\s]+|[🏷️🎟️🎫•\\\-\\*:\\\s]+$/g, '');
         if (!cleanLabel) cleanLabel = 'كوبون';
 
         if (!seenCodes.has(cleaned)) {
@@ -5211,26 +5162,26 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
 
       // Tier first: '🎟️ 6/49$ : WOAE06' or 'كوبون $2/15$: WOAE02'
-      const p1Regex = /(?:🎟️?|🎫|•|\\-|\\*)?\\s*(?:(?:ال)?كوبون(?:\\s*آخر|\\s*إضافي)?|(?:ال)?كود(?:\\s*آخر|\\s*إضافي)?|code\\s*promo|(?:ال)?قسيمة|خصم|تخفيض)?\\s*([$€]?[0-9]+(?:\\.[0-9]+)?\\s*\\/\\s*[$€]?[0-9]+(?:\\.[0-9]+)?[$€]?)\\s*(?:بكود|code|:|=|：|\\-)?\\s*([A-Za-z0-9_-]{3,25})/gi;
+      const p1Regex = /(?:🎟️?|🎫|•|\\\-|\\*)?\\\s*(?:(?:ال)?كوبون(?:\\\s*آخر|\\\s*إضافي)?|(?:ال)?كود(?:\\\s*آخر|\\\s*إضافي)?|code\\\s*promo|(?:ال)?قسيمة|خصم|تخفيض)?\\\s*([$€]?[0-9]+(?:\\.[0-9]+)?\\\s*\\/\\\s*[$€]?[0-9]+(?:\\.[0-9]+)?[$€]?)\\\s*(?:بكود|code|:|=|：|\\\-)?\\\s*([A-Za-z0-9_-]{3,25})/gi;
       let mMatch;
       while ((mMatch = p1Regex.exec(cleanNorm)) !== null) {
         addParsedCode(mMatch[2], 'كوبون', mMatch[1]);
       }
 
       // Code then tier: 'OTPRD02 : 2/15$'
-      const p2Regex = /(?:🎟️?|🎫|•|\\-|\\*)?\\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\\s*promo|(?:ال)?قسيمة)?\\s*([A-Za-z][A-Za-z0-9_-]{2,24})\\s*(?:[:=：\\-]|خصم|بخصم|\\()?([$€]?[0-9]+(?:\\.[0-9]+)?\\s*\\/\\s*[$€]?[0-9]+(?:\\.[0-9]+)?[$€]?)\\)?/gi;
+      const p2Regex = /(?:🎟️?|🎫|•|\\\-|\\*)?\\\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\\\s*promo|(?:ال)?قسيمة)?\\\s*([A-Za-z][A-Za-z0-9_-]{2,24})\\\s*(?:[:=：\\\-]|خصم|بخصم|\\()?([$€]?[0-9]+(?:\\.[0-9]+)?\\\s*\\/\\\s*[$€]?[0-9]+(?:\\.[0-9]+)?[$€]?)\\)?/gi;
       while ((mMatch = p2Regex.exec(cleanNorm)) !== null) {
         addParsedCode(mMatch[1], 'كوبون', mMatch[2]);
       }
 
       // Labeled lines & Slashed codes: 'كوبون: CODE1', 'كود: CODE1 / CODE2'
-      const pLineRegex = /(?:(?:استخدم\\s+|استعمل\\s+|انسخ\\s+|بكود\\s+)?(?:(?:ال)?كـ?وبون|(?:ال)?كـ?ود|(?:ال)?قسيمـ?ة|code\\s*promo|code\\s*de\\s*r[ée]duction|code\\s*r[ée]duction|coupon|promo|utilisez\\s*le\\s*code|avec\\s*le\\s*code)[^\\n:]*|[🏷️🎟️🎫👊])\\s*[:：\\-]\\s*([^\\r\\n]+)/gi;
+      const pLineRegex = /(?:(?:استخدم\\\s+|استعمل\\\s+|انسخ\\\s+|بكود\\\s+)?(?:(?:ال)?كـ?وبون|(?:ال)?كـ?ود|(?:ال)?قسيمـ?ة|code\\\s*promo|code\\\s*de\\\s*r[ée]duction|code\\\s*r[ée]duction|coupon|promo|utilisez\\\s*le\\\s*code|avec\\\s*le\\\s*code)[^\\n:]*|[🏷️🎟️🎫👊])\\\s*[:：\\\-]\\\s*([^\\r\\n]+)/gi;
       while ((mMatch = pLineRegex.exec(cleanNorm)) !== null) {
         let content = mMatch[1].trim();
         const tierMatch = content.match(/\\(?([$€]?[0-9]+(?:\\.[0-9]+)?\\/[0-9]+(?:\\.[0-9]+)?[$€]?)\\)?/);
         const lineTier = tierMatch ? tierMatch[1] : '';
         if (lineTier) content = content.replace(tierMatch[0], '');
-        const parts = content.split(/[\\/\\|,،]|\\s+(?:أو|or|ou)\\s+/);
+        const parts = content.split(/[\\/\\|,،]|\\\s+(?:أو|or|ou)\\\s+/);
         for (const p of parts) {
           const toks = p.match(/[A-Za-z0-9_-]{3,25}/g) || [];
           for (const tok of toks) {
@@ -5276,7 +5227,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         country = "أستراليا 🇦🇺";
       } else if (/إسبانيا|اسبانيا|🇪🇸|spain/i.test(cleanNorm)) {
         country = "إسبانيا 🇪🇸";
-      } else if (/(?:خلي\\s*البلد\\s*كندا|بلد\\s*الحساب\\s*كندا|ضع\\s*البلد\\s*كندا)/i.test(cleanNorm)) {
+      } else if (/(?:خلي\\\s*البلد\\\s*كندا|بلد\\\s*الحساب\\\s*كندا|ضع\\\s*البلد\\\s*كندا)/i.test(cleanNorm)) {
         country = "كندا 🇨🇦";
       }
 
@@ -5289,8 +5240,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           const ll = l.toLowerCase();
           if (stripKeywords.some(kw => ll.includes(kw))) continue;
           if (/https?:\\/\\/|t\\.me\\/|@[a-zA-Z0-9_]+/i.test(l)) continue;
-          if (/^(?:🎟️|🎫|•|\\-|\\*)?\\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\\s*promo|(?:ال)?قسيمة|code|coupon)\\b/i.test(l)) continue;
-          if (/^(?:🎟️|🎫)\\s*[$€]?[0-9]+/i.test(l)) continue;
+          if (/^(?:🎟️|🎫|•|\\\-|\\*)?\\\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\\\s*promo|(?:ال)?قسيمة|code|coupon)\\b/i.test(l)) continue;
+          if (/^(?:🎟️|🎫)\\\s*[$€]?[0-9]+/i.test(l)) continue;
           const cl = l.replace(/https?:\\/\\/\\S+/g, '').replace(/@[a-zA-Z0-9_]+/g, '').replace(/<\\/?[a-zA-Z0-9_-]+>/g, '').trim();
           if (cl.length > 1) descLines.push(cl);
         }
@@ -5348,6 +5299,92 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         date: post.date || '',
         raw_text: text
       };
+    }
+
+        function updateDailyTajmi3atSection(rawPosts) {
+      if (!rawPosts || !Array.isArray(rawPosts) || rawPosts.length === 0) return;
+      const tajmi3aPosts = rawPosts.filter(p => {
+        const txt = (p.text || '');
+        return /(?:فهرس|تجميعة|تجميعات)/i.test(txt) && /(?:11\\.11|عروض|قطع|هواتف|سماعات|شواحن|قيمنق)/i.test(txt);
+      });
+      if (tajmi3aPosts.length === 0) return;
+
+      const grid = document.getElementById('daily-tajmi3at-grid');
+      if (!grid) return;
+
+      const categoryIcons = {
+        'هاتف': { icon: 'fa-mobile-screen', color: 'rose', label: '📱 فهرس الهواتف الذكية' },
+        'سماع': { icon: 'fa-headphones', color: 'violet', label: '🎧 فهرس السماعات والصوتيات' },
+        'صوت': { icon: 'fa-headphones', color: 'violet', label: '🎧 فهرس السماعات والصوتيات' },
+        'قطع': { icon: 'fa-microchip', color: 'amber', label: '💻 فهرس عتاد الـ PC والمعالجات' },
+        'معالج': { icon: 'fa-microchip', color: 'amber', label: '💻 فهرس عتاد الـ PC والمعالجات' },
+        'شاحن': { icon: 'fa-bolt', color: 'emerald', label: '⚡ فهرس الشواحن وبنوك الطاقة' },
+        'كابل': { icon: 'fa-bolt', color: 'emerald', label: '⚡ فهرس الشواحن وبنوك الطاقة' },
+        'قيمنق': { icon: 'fa-gamepad', color: 'cyan', label: '🎮 فهرس ملحقات القيمنق' }
+      };
+
+      const newCardsHtml = tajmi3aPosts.slice(0, 5).map(p => {
+        const txt = p.text || '';
+        let detected = { icon: 'fa-layer-group', color: 'rose', label: '📦 فهرس عروض 11.11 الرسمي' };
+        for (const [k, v] of Object.entries(categoryIcons)) {
+          if (txt.includes(k)) { detected = v; break; }
+        }
+        const lines = txt.split('\n').map(l => l.trim()).filter(l => l.startsWith('🔹') || l.startsWith('▪️') || l.startsWith('-') || l.startsWith('•'));
+        const previewText = lines.slice(0, 3).map(l => l.replace(/^[🔹▪️•\\-\\s]+/, '').split(':')[0]).join(', ') || 'أقوى صفقات اليوم مع الكوبونات';
+        const targetUrl = p.link || 'https://t.me/DzAliexpress0';
+        const msgMatch = targetUrl.match(/\/(\d+)$/);
+        const msgIdStr = msgMatch ? '#' + msgMatch[1] : 'قناة الصفقات';
+
+        return `
+          <a href="${targetUrl}" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-${detected.color}-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="w-8 h-8 rounded-xl bg-${detected.color}-500/15 text-${detected.color}-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <i class="fa-solid ${detected.icon}"></i>
+                </span>
+                <div>
+                  <h4 class="font-bold text-xs sm:text-sm text-${detected.color}-500 font-heading">${detected.label}</h4>
+                  <span class="text-[10px] opacity-60 block truncate max-w-[200px]" style="color: var(--text-muted);">${escapeHtml(previewText)}</span>
+                </div>
+              </div>
+              <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-${detected.color}-500/10 text-${detected.color}-500 font-bold">محدث اليوم</span>
+            </div>
+            <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
+              <span class="text-${detected.color}-500 flex items-center gap-1">
+                <span>تصفح الفهرس وروابط الشراء</span>
+                <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
+              </span>
+              <span class="text-[10px] opacity-50 font-normal">تيليجرام ${msgIdStr}</span>
+            </div>
+          </a>
+        `;
+      }).join('');
+
+      const viewAllCard = `
+        <div onclick="setCategory('tajmi3at')" class="tajmi3a-quick-card group p-3 rounded-2xl border border-dashed transition hover:border-rose-500 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation cursor-pointer" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+          <div class="flex items-start justify-between gap-2">
+            <div class="flex items-center gap-2">
+              <span class="w-8 h-8 rounded-xl bg-rose-500/15 text-rose-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:rotate-12 transition-transform">
+                <i class="fa-solid fa-list-check"></i>
+              </span>
+              <div>
+                <h4 class="font-bold text-xs sm:text-sm text-rose-500 font-heading">📑 عرض كل الفهارس في الموقع</h4>
+                <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">تصفية بطاقات التجميعات في جدول العروض هنا</span>
+              </div>
+            </div>
+            <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-500 font-bold">موقع</span>
+          </div>
+          <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
+            <span class="text-rose-500 flex items-center gap-1">
+              <span>انتقل لتبويب التجميعات</span>
+              <i class="fa-solid fa-arrow-down text-[9px]"></i>
+            </span>
+            <span class="text-[10px] opacity-50 font-normal">مباشرة في الصفحة</span>
+          </div>
+        </div>
+      `;
+
+      grid.innerHTML = newCardsHtml + viewAllCard;
     }
 
     function updateCategoryCounters() {
@@ -5723,7 +5760,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           if (!deal.title) continue;
           let kw = deal.title
             .replace(/[()\\[\\]{}|#*]/g, ' ')
-            .replace(/\\s+/g, ' ')
+            .replace(/\\\s+/g, ' ')
             .trim();
           const parts = kw.split(' ');
           kw = parts.slice(0, 3).join(' ');
@@ -5988,9 +6025,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             </div>
 
             <!-- Primary Buy Button with Coupon Status -->
-            <a href="${deal.affiliate_url}" target="_blank" rel="noopener noreferrer" onclick="handleBuyClick('${deal.coupon || ''}', ${isExpired})" class="w-full btn-ali-primary active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2 px-3 rounded-lg text-center flex items-center justify-center gap-1.5 transition shadow-sm touch-manipulation min-h-[40px] font-heading cursor-pointer">
-              <i class="fa-solid fa-cart-shopping text-xs"></i>
-              <span>${I18N[currentLang].btn_buy}</span>
+            <a href="${deal.affiliate_url}" target="_blank" rel="noopener noreferrer" onclick="handleBuyClick('${deal.coupon || ''}', ${isExpired})" class="w-full ${deal.category === 'tajmi3at' ? 'bg-[#229ED9] hover:bg-[#1e8bc0]' : 'btn-ali-primary'} active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2 px-3 rounded-lg text-center flex items-center justify-center gap-1.5 transition shadow-sm touch-manipulation min-h-[40px] font-heading cursor-pointer">
+              <i class="${deal.category === 'tajmi3at' ? 'fa-brands fa-telegram' : 'fa-solid fa-cart-shopping'} text-xs"></i>
+              <span>${deal.category === 'tajmi3at' ? (currentLang === 'fr' ? 'Consulter le Pack sur Telegram 📢' : 'تصفح الفهرس على تيليجرام 📢') : I18N[currentLang].btn_buy}</span>
               ${deal.coupon ? (isExpired ? `
                 <span class="bg-black/35 text-[9px] font-mono px-1.5 py-0.5 rounded text-zinc-300 line-through opacity-80 mr-1 inline-flex items-center gap-1">
                   <i class="fa-solid fa-hourglass-end text-[8px] text-amber-400"></i> ${escapeHtml(deal.coupon)} (${currentLang === 'fr' ? 'expiré' : 'منتهي'})
@@ -6606,7 +6643,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const submitBtn = document.getElementById('tracking-submit-btn');
 
       if (!input) return;
-      const rawNum = input.value.trim().replace(/\\s+/g, '');
+      const rawNum = input.value.trim().replace(/\\\s+/g, '');
       if (!rawNum || rawNum.length < 5) {
         if (errBox) {
           errBox.classList.remove('hidden');
