@@ -601,7 +601,8 @@
     "1005010289640412",
     "1005012287238561",
     "1005012533449539",
-    "1005009178167326"
+    "1005009178167326",
+    "1005011742640729"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793616200.8243065,
@@ -1215,7 +1216,8 @@
     "1005010289640412": 1793649086.527061,
     "1005012287238561": 1793649096.7166712,
     "1005012533449539": 1793649851.0043526,
-    "1005009178167326": 1793650772.8370051
+    "1005009178167326": 1793650772.8370051,
+    "1005011742640729": 1793650956.0417867
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -1949,7 +1951,8 @@
     "يد تحكم فخمة  Flydigi Direwolf 4 Wireless Hall Effect",
     "يد تحكم بالذكاء الاصطناعي 😂  LeadJoy Xeno Plus AI TMR",
     "كيبورد ميكانيكي لاسلكي فخم  EPOMAKER x Aproz TH108 Wireless",
-    "كيبورد مغناطيسي فخم Epomaker HE68 Lite Magnetic 8K"
+    "كيبورد مغناطيسي فخم Epomaker HE68 Lite Magnetic 8K",
+    "كيبورد مغناطيسي لاسلكي فخم Epomaker HE108 Wireless Magnetic 8K"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2688,10 +2691,10 @@
     "يد تحكم فخمة  Flydigi Direwolf 4 Wireless Hall Effect": 1793649086.527061,
     "يد تحكم بالذكاء الاصطناعي 😂  LeadJoy Xeno Plus AI TMR": 1793649096.7166712,
     "كيبورد ميكانيكي لاسلكي فخم  EPOMAKER x Aproz TH108 Wireless": 1793649851.0043526,
-    "كيبورد مغناطيسي فخم Epomaker HE68 Lite Magnetic 8K": 1793650772.8370051
+    "كيبورد مغناطيسي فخم Epomaker HE68 Lite Magnetic 8K": 1793650772.8370051,
+    "كيبورد مغناطيسي لاسلكي فخم Epomaker HE108 Wireless Magnetic 8K": 1793650956.0417867
   },
   "published_post_keys": [
-    "aniscoupons:33149",
     "bnddeals:50807",
     "ecksdeal:5858",
     "test_channel:1792158814",
@@ -3690,15 +3693,16 @@
     "ecksdeal:6016",
     "ecksdeal:6018",
     "ecksdeal:6020",
-    "ecksdeal:6021"
+    "ecksdeal:6021",
+    "ecksdeal:6022"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793650772.8370051,
+  "last_run_time": 1793650956.0417867,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6021,
-      "last_check_time": 1793650774.8828762
+      "last_message_id": 6022,
+      "last_check_time": 1793650958.0860407
     },
     "lodydeals": {
       "last_message_id": 45978,
@@ -4236,7 +4240,8 @@
     "1005012267973092": 58.3,
     "1005012287238561": 44.5,
     "1005012533449539": 40.71,
-    "1005009178167326": 36.96
+    "1005009178167326": 36.96,
+    "1005011742640729": 75.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -14101,6 +14106,16 @@
       "price": 36.96,
       "timestamp": 1793650772.8370051,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6022": {
+      "channel_msg_id": 1700,
+      "product_id": "1005011742640729",
+      "title": "كيبورد مغناطيسي لاسلكي فخم Epomaker HE108 Wireless Magnetic 8K",
+      "channel": "ecksdeal",
+      "source_msg_id": 6022,
+      "price": 75.8,
+      "timestamp": 1793650956.0417867,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14109,17 +14124,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793650774.9254596,
+    "last_deal_post_time": 1793650958.1284401,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793650778.285171,
+    "last_sweep_time": 1793650961.089449,
     "last_sweep_times": {
-      "algeria": 1793650774.904403,
-      "france": 1793650778.285171
+      "algeria": 1793650958.1079683,
+      "france": 1793650961.089449
     },
     "last_deal_post_times": {
-      "algeria": 1793650774.9254596
+      "algeria": 1793650958.1284401
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -14736,7 +14751,8 @@
     "1005012267973092": "ecksdeal",
     "1005012287238561": "ecksdeal",
     "1005012533449539": "ecksdeal",
-    "1005009178167326": "ecksdeal"
+    "1005009178167326": "ecksdeal",
+    "1005011742640729": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -15476,7 +15492,8 @@
     "ماوسباد زجاجي Attack Shark CM05SE Tempred Glass": "ecksdeal",
     "يد تحكم بالذكاء الاصطناعي 😂  LeadJoy Xeno Plus AI TMR": "ecksdeal",
     "كيبورد ميكانيكي لاسلكي فخم  EPOMAKER x Aproz TH108 Wireless": "ecksdeal",
-    "كيبورد مغناطيسي فخم Epomaker HE68 Lite Magnetic 8K": "ecksdeal"
+    "كيبورد مغناطيسي فخم Epomaker HE68 Lite Magnetic 8K": "ecksdeal",
+    "كيبورد مغناطيسي لاسلكي فخم Epomaker HE108 Wireless Magnetic 8K": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
