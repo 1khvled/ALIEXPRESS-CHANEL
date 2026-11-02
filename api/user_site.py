@@ -5151,7 +5151,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         if (cleanTier && !cleanTier.startsWith('$') && !cleanTier.endsWith('$') && !cleanTier.startsWith('€') && !cleanTier.endsWith('€')) {
           cleanTier += '$';
         }
-        let cleanLabel = (label || 'كوبون').trim().replace(/^[🏷️🎟️🎫•\\-\\*:\\s]+|[🏷️🎟️🎫•\\-\\*:\\s]+$/g, '');
+        let cleanLabel = (label || 'كوبون').trim().replace(/^[-🏷️🎟️🎫•*:\\s]+|[-🏷️🎟️🎫•*:\\s]+$/g, '');
         if (!cleanLabel) cleanLabel = 'كوبون';
 
         if (!seenCodes.has(cleaned)) {
