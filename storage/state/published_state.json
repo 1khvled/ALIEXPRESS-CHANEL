@@ -1086,7 +1086,7 @@
     "1005012135177627": 1793542370.559594,
     "1005013455514231": 1793542445.2859337,
     "1005009578274758": 1793542479.8362749,
-    "1005010413332383": 1793542512.9419136,
+    "1005010413332383": 1793615114.3091638,
     "1005011550075220": 1793542531.6312253,
     "1005009806856302": 1793542545.9047854,
     "1005009980316035": 1793542552.2730343,
@@ -1920,7 +1920,8 @@
     "HONOR Pad X8b (LTE 6/128GB)",
     "[Clearance] realme 14T 5G Smartphone NFC Dimensity 6300 5G Processor",
     "RYZEN 5 9600X",
-    "Magcubic HY300 Max Projector"
+    "Magcubic HY300 Max Projector",
+    "AMD RYZEN 7 9800X3D"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2648,10 +2649,10 @@
     "HONOR Pad X8b (LTE 6/128GB)": 1793613961.7877593,
     "[Clearance] realme 14T 5G Smartphone NFC Dimensity 6300 5G Processor": 1793613966.8608465,
     "RYZEN 5 9600X": 1793613978.6202738,
-    "Magcubic HY300 Max Projector": 1793614000.550419
+    "Magcubic HY300 Max Projector": 1793614000.550419,
+    "AMD RYZEN 7 9800X3D": 1793615114.3091638
   },
   "published_post_keys": [
-    "megaphonna:8513",
     "megaphonna:8569",
     "zedstoreonline:38538",
     "ecksdeal:5880",
@@ -3650,19 +3651,20 @@
     "aniscoupons:33563",
     "aniscoupons:33565",
     "aniscoupons:33566",
-    "aniscoupons:33570"
+    "aniscoupons:33570",
+    "lodydeals:45972"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793614000.550419,
+  "last_run_time": 1793615114.3091638,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45971,
-      "last_check_time": 1793614735.3597383
+      "last_message_id": 45972,
+      "last_check_time": 1793615116.3545327
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4087,7 +4089,7 @@
     "1005012135177627": 182.6,
     "1005013455514231": 66.71,
     "1005009578274758": 7.63,
-    "1005010413332383": 340.38,
+    "1005010413332383": 340.32,
     "1005011550075220": 124.53,
     "1005009806856302": 14.35,
     "1005009980316035": 25.85,
@@ -13933,6 +13935,16 @@
       "price": 76.6,
       "timestamp": 1793614000.550419,
       "status": "ACTIVE"
+    },
+    "lodydeals:45972": {
+      "channel_msg_id": 1687,
+      "product_id": "1005010413332383",
+      "title": "AMD RYZEN 7 9800X3D",
+      "channel": "lodydeals",
+      "source_msg_id": 45972,
+      "price": 340.32,
+      "timestamp": 1793615114.3091638,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13941,17 +13953,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793614002.6387389,
+    "last_deal_post_time": 1793615117.1614153,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793614916.9587815,
+    "last_sweep_time": 1793615122.1144502,
     "last_sweep_times": {
-      "algeria": 1793614911.721228,
-      "france": 1793614916.9587815
+      "algeria": 1793615117.1393895,
+      "france": 1793615122.1144502
     },
     "last_deal_post_times": {
-      "algeria": 1793614002.6387389
+      "algeria": 1793615117.1614153
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -14458,7 +14470,7 @@
     "1005013455514231": "lodydeals",
     "1005009578274758": "lodydeals",
     "1005007805638431": "lodydeals",
-    "1005010413332383": "ecksdeal",
+    "1005010413332383": "lodydeals",
     "1005011550075220": "ecksdeal",
     "1005009806856302": "ecksdeal",
     "1005009980316035": "ecksdeal",
@@ -15291,7 +15303,8 @@
     "[Clearance] realme 14T 5G Smartphone NFC Dimensity 6300 5G Processor": "aniscoupons",
     "RYZEN 5 9600X": "aniscoupons",
     "OnePlus Turbo 6X Pro 5G": "aniscoupons",
-    "Magcubic HY300 Max Projector": "aniscoupons"
+    "Magcubic HY300 Max Projector": "aniscoupons",
+    "AMD RYZEN 7 9800X3D": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
