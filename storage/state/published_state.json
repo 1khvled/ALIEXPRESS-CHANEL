@@ -575,7 +575,8 @@
     "1005010707075064",
     "1005007010692093",
     "1005006994466968",
-    "1005011927267564"
+    "1005011927267564",
+    "1005008291023017"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1790943667.90417,
@@ -1163,7 +1164,8 @@
     "1005010707075064": 1793600466.7601562,
     "1005007010692093": 1793601389.0047116,
     "1005006994466968": 1793601744.1664062,
-    "1005011927267564": 1793608541.760777
+    "1005011927267564": 1793608541.760777,
+    "1005008291023017": 1793609285.8237927
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2404,7 +2406,7 @@
     "CUSU DDR5 RAM 16GB 6000MHz": 1793542370.559594,
     "Magcubic HY300 PRO 4K Projector": 1793542384.0089695,
     "مدعومة ب Hall effect في Joysticks": 1793542392.5669472,
-    "Realme 15 Pro 5G 12/256GB": 1793542398.3843465,
+    "Realme 15 Pro 5G 12/256GB": 1793609285.8237927,
     ".شاشة AMOLED 6.57″ بدقة FHD+": 1793542420.8525836,
     "AMD Ryzen 5 5600XT": 1793542433.4669354,
     "POCO M7 6/128GB": 1793542440.621567,
@@ -2535,7 +2537,6 @@
     "CUSU SSD SATA 512GB": 1793608541.760777
   },
   "published_post_keys": [
-    "lodydeals:45411",
     "pcgamingpart:7962",
     "aniscoupons:33211",
     "aniscoupons:32915",
@@ -3534,19 +3535,20 @@
     "lodydeals:45958",
     "lodydeals:45959",
     "lodydeals:45962",
-    "lodydeals:45963"
+    "lodydeals:45963",
+    "lodydeals:45964"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793608903.4854167,
+  "last_run_time": 1793609285.8237927,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6008,
       "last_check_time": 1793600294.7888756
     },
     "lodydeals": {
-      "last_message_id": 45963,
-      "last_check_time": 1793608905.5200872
+      "last_message_id": 45964,
+      "last_check_time": 1793609287.8704662
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4048,7 +4050,8 @@
     "1005010707075064": 10.3,
     "1005007010692093": 2.88,
     "1005006994466968": 4.99,
-    "1005011927267564": 42.04
+    "1005011927267564": 42.04,
+    "1005008291023017": 285.92
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -13203,6 +13206,16 @@
       "price": 271.5,
       "timestamp": 1793608903.4854167,
       "status": "ACTIVE"
+    },
+    "lodydeals:45964": {
+      "channel_msg_id": 1612,
+      "product_id": "1005008291023017",
+      "title": "Realme 15 Pro 5G 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 45964,
+      "price": 285.92,
+      "timestamp": 1793609285.8237927,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -13211,17 +13224,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793608907.749383,
+    "last_deal_post_time": 1793609291.003772,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793609099.7694588,
+    "last_sweep_time": 1793609295.6648428,
     "last_sweep_times": {
-      "algeria": 1793609095.737699,
-      "france": 1793609099.7694588
+      "algeria": 1793609290.9839282,
+      "france": 1793609295.6648428
     },
     "last_deal_post_times": {
-      "algeria": 1793608907.749383
+      "algeria": 1793609291.003772
     }
   },
   "last_coin_reminder_time": 1793441261.8193972,
@@ -13815,7 +13828,8 @@
     "1005010707075064": "lodydeals",
     "1005007010692093": "lodydeals",
     "1005006994466968": "lodydeals",
-    "1005011927267564": "lodydeals"
+    "1005011927267564": "lodydeals",
+    "1005008291023017": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
