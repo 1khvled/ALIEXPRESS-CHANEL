@@ -1052,7 +1052,7 @@
     "1005007869955343": 1793656150.4800947,
     "1005012644570693": 1793441338.6619778,
     "1005003949106838": 1793613866.509307,
-    "1005012436082838": 1793542425.5251148,
+    "1005012436082838": 1793733101.535615,
     "1005010716206374": 1793448715.1480892,
     "1005012864273120": 1793399494.1323898,
     "1005006967218963": 1793448582.9150612,
@@ -2561,7 +2561,7 @@
     "MSI PRO B650-P WIFI USED": 1793478701.5762863,
     "GIGABYTE B650M WIFI DDR5": 1793478707.133471,
     "Machenike G3 V2 Controller": 1793571187.7518308,
-    "GIGABYTE B550M AORUS ELITE": 1793542425.5251148,
+    "GIGABYTE B550M AORUS ELITE": 1793733101.535615,
     "CUSU SSD 1TB  M2 NVMe": 1793542349.2109704,
     "Anker Liberty 4 Pro": 1793554752.7954907,
     "Realme 15T 8/256GB": 1793543739.1061752,
@@ -2805,7 +2805,6 @@
     "UGREEN 65W GaN Charger": 1793732921.385459
   },
   "published_post_keys": [
-    "zedstoreonline:38913",
     "test_channel:1792110963",
     "lodydeals:45771",
     "lodydeals:45919",
@@ -3804,19 +3803,20 @@
     "lodydeals:46052",
     "ecksdeal:6031",
     "lodydeals:46059",
-    "lodydeals:46060"
+    "lodydeals:46060",
+    "lodydeals:46061"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793732921.385459,
+  "last_run_time": 1793733101.535615,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6031,
       "last_check_time": 1793732355.6413443
     },
     "lodydeals": {
-      "last_message_id": 46060,
-      "last_check_time": 1793732923.4337516
+      "last_message_id": 46061,
+      "last_check_time": 1793733103.584699
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4184,7 +4184,7 @@
     "1005007869955343": 37.05,
     "1005012644570693": 558.0,
     "1005003949106838": 116.99,
-    "1005012436082838": 120.4,
+    "1005012436082838": 123.6,
     "1005010716206374": 308.0,
     "1005012864273120": 154.0,
     "1005006967218963": 17.3,
@@ -14785,6 +14785,16 @@
       "price": 20.3,
       "timestamp": 1793732921.385459,
       "status": "ACTIVE"
+    },
+    "lodydeals:46061": {
+      "channel_msg_id": 1774,
+      "product_id": "1005012436082838",
+      "title": "GIGABYTE B550M AORUS ELITE",
+      "channel": "lodydeals",
+      "source_msg_id": 46061,
+      "price": 123.6,
+      "timestamp": 1793733101.535615,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14793,17 +14803,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793732924.1968172,
+    "last_deal_post_time": 1793733104.32108,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793732926.6738203,
+    "last_sweep_time": 1793733106.6806023,
     "last_sweep_times": {
-      "algeria": 1793732924.1746697,
-      "france": 1793732926.6738203
+      "algeria": 1793733104.2990348,
+      "france": 1793733106.6806023
     },
     "last_deal_post_times": {
-      "algeria": 1793732924.1968172
+      "algeria": 1793733104.32108
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
