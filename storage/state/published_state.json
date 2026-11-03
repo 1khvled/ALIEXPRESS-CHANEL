@@ -621,7 +621,8 @@
     "1005010462111234",
     "1005006026842392",
     "1005011748000554",
-    "1005009111757092"
+    "1005009111757092",
+    "1005013030365524"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793707128.1762419,
@@ -1257,7 +1258,8 @@
     "1005011748000554": 1793720747.8731222,
     "COUPONS_gen": 1793728683.0472453,
     "COUPONS_11.11 Global Shopping Festival Main Sale": 1793728683.0472453,
-    "1005009111757092": 1793728859.1630292
+    "1005009111757092": 1793728859.1630292,
+    "1005013030365524": 1793735141.9083512
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2028,7 +2030,8 @@
     "Blackview OSCAL MARINE 2 8/128",
     "HAYLOU S30 Headphones 43dB",
     "UGREEN 65W GaN Charger",
-    "MAONO Wave T1 Wireless"
+    "MAONO Wave T1 Wireless",
+    "Huawei Pura 90 Pro Max 12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2804,10 +2807,10 @@
     "Blackview OSCAL MARINE 2 8/128": 1793728859.1630292,
     "HAYLOU S30 Headphones 43dB": 1793729589.4170802,
     "UGREEN 65W GaN Charger": 1793732921.385459,
-    "MAONO Wave T1 Wireless": 1793733452.578614
+    "MAONO Wave T1 Wireless": 1793733452.578614,
+    "Huawei Pura 90 Pro Max 12/256GB": 1793735141.9083512
   },
   "published_post_keys": [
-    "lodydeals:45771",
     "lodydeals:45919",
     "lodydeals:45455",
     "lodydeals:45536",
@@ -3806,19 +3809,20 @@
     "lodydeals:46059",
     "lodydeals:46060",
     "lodydeals:46061",
-    "lodydeals:46062"
+    "lodydeals:46062",
+    "lodydeals:46064"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793733452.578614,
+  "last_run_time": 1793735141.9083512,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6032,
       "last_check_time": 1793733456.3652186
     },
     "lodydeals": {
-      "last_message_id": 46063,
-      "last_check_time": 1793734182.7659314
+      "last_message_id": 46064,
+      "last_check_time": 1793735143.9566805
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4372,7 +4376,8 @@
     "1005010462111234": 2.51,
     "1005006026842392": 14.91,
     "1005011748000554": 21.36,
-    "1005009111757092": 114.9
+    "1005009111757092": 114.9,
+    "1005013030365524": 659.21
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -14807,6 +14812,16 @@
       "price": 9.21,
       "timestamp": 1793733452.578614,
       "status": "ACTIVE"
+    },
+    "lodydeals:46064": {
+      "channel_msg_id": 1776,
+      "product_id": "1005013030365524",
+      "title": "Huawei Pura 90 Pro Max 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46064,
+      "price": 659.21,
+      "timestamp": 1793735141.9083512,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14815,17 +14830,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793733456.408241,
+    "last_deal_post_time": 1793735144.6491747,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793734943.2140164,
+    "last_sweep_time": 1793735147.083983,
     "last_sweep_times": {
-      "algeria": 1793734940.055235,
-      "france": 1793734943.2140164
+      "algeria": 1793735144.6267195,
+      "france": 1793735147.083983
     },
     "last_deal_post_times": {
-      "algeria": 1793733456.408241
+      "algeria": 1793735144.6491747
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15462,7 +15477,8 @@
     "1005010462111234": "lodydeals",
     "1005006026842392": "lodydeals",
     "1005011748000554": "lodydeals",
-    "1005009111757092": "lodydeals"
+    "1005009111757092": "lodydeals",
+    "1005013030365524": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -16238,7 +16254,8 @@
     "Blackview OSCAL MARINE 2 8/128": "lodydeals",
     "HAYLOU S30 Headphones 43dB": "lodydeals",
     "UGREEN 65W GaN Charger": "lodydeals",
-    "MAONO Wave T1 Wireless": "lodydeals"
+    "MAONO Wave T1 Wireless": "lodydeals",
+    "Huawei Pura 90 Pro Max 12/256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
