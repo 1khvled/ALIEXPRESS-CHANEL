@@ -1149,7 +1149,7 @@
     "1005010114569881": 1793543824.1762173,
     "1005013053122560": 1793543835.4812393,
     "1005012322822595": 1793543961.1645148,
-    "1005009662812027": 1793614000.550419,
+    "1005009662812027": 1793738518.4424365,
     "1005005975560350": 1793543992.7069333,
     "1005012922578845": 1793544001.8628821,
     "1005011752891197": 1793613465.8475375,
@@ -2653,7 +2653,7 @@
     "Realme Pad 3  8/256GB": 1793543961.1645148,
     "Lenovo Xiaoxin Pro 13 8/128GB": 1793543976.0151808,
     "Lenovo Xiaoxin Pad Pro 2025": 1793543981.0397952,
-    "Magcubic HY300 Max 400ANSI": 1793543986.1929188,
+    "Magcubic HY300 Max 400ANSI": 1793738518.4424365,
     "FIFINE H9 7.1 Surround Gaming": 1793543992.7069333,
     "Realme 15 5G 12/256GB": 1793544001.8628821,
     "Redmi 17 4G 4/128GB": 1793544011.7179348,
@@ -2823,7 +2823,6 @@
     "Xiaoxin Pad Pro GT 8/256GB": 1793737359.999931
   },
   "published_post_keys": [
-    "lodydeals:45556",
     "lodydeals:45575",
     "aniscoupons:33285",
     "aniscoupons:33224",
@@ -3822,19 +3821,20 @@
     "lodydeals:46067",
     "lodydeals:46068",
     "lodydeals:46069",
-    "lodydeals:46071"
+    "lodydeals:46071",
+    "lodydeals:46072"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793738297.0536208,
+  "last_run_time": 1793738518.4424365,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46071,
-      "last_check_time": 1793738299.092582
+      "last_message_id": 46072,
+      "last_check_time": 1793738520.4806151
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4291,7 +4291,7 @@
     "1005013053122560": 53.59,
     "1005012322822595": 266.19,
     "1005012524603100": 283.59,
-    "1005009662812027": 76.6,
+    "1005009662812027": 76.35,
     "1005005975560350": 34.9,
     "1005011752891197": 119.3,
     "1005008689880751": 76.5,
@@ -14906,6 +14906,16 @@
       "price": 311.31,
       "timestamp": 1793738297.0536208,
       "status": "ACTIVE"
+    },
+    "lodydeals:46072": {
+      "channel_msg_id": 1790,
+      "product_id": "1005009662812027",
+      "title": "Magcubic HY300 Max 400ANSI",
+      "channel": "lodydeals",
+      "source_msg_id": 46072,
+      "price": 76.35,
+      "timestamp": 1793738518.4424365,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14914,17 +14924,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793738299.9550674,
+    "last_deal_post_time": 1793738521.3332534,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793738302.9716847,
+    "last_sweep_time": 1793738524.1268296,
     "last_sweep_times": {
-      "algeria": 1793738299.9379635,
-      "france": 1793738302.9716847
+      "algeria": 1793738521.3160546,
+      "france": 1793738524.1268296
     },
     "last_deal_post_times": {
-      "algeria": 1793738299.9550674
+      "algeria": 1793738521.3332534
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15463,7 +15473,7 @@
     "1005013053122560": "ecksdeal",
     "1005012322822595": "lodydeals",
     "1005012524603100": "aniscoupons",
-    "1005009662812027": "aniscoupons",
+    "1005009662812027": "lodydeals",
     "1005005975560350": "lodydeals",
     "1005011752891197": "zedstoreonline",
     "1005008689880751": "lodydeals",
