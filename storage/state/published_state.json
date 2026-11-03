@@ -1125,7 +1125,7 @@
     "1005009921069024": 1793542597.6187797,
     "1005009916209766": 1793542607.3688066,
     "1005012537594921": 1793542611.8880281,
-    "1005009963377960": 1793542616.283133,
+    "1005009963377960": 1793727358.6485991,
     "1005012790844974": 1793542621.7908955,
     "1005010354926803": 1793542626.5536122,
     "1005009621100138": 1793542634.9331498,
@@ -2600,7 +2600,7 @@
     "يد تحكم لاسلكية EasySMX X05 PRO RGB Wireless Hall Effect Ultimate": 1793542602.1938312,
     "كيبورد ميكانيكي Ajazz NK61 Red Switch": 1793542607.3688066,
     "كيبورد ميكانيكي لاسلكي فخم بشاشة Aula F75 Max Wireless": 1793542611.8880281,
-    "كيبورد مغناطيسي AULA Win68 HE 8K Magnetic Switch": 1793542616.283133,
+    "كيبورد مغناطيسي AULA Win68 HE 8K Magnetic Switch": 1793727358.6485991,
     "سماعات لاسلكية Epomaker GX1 Wireless": 1793542621.7908955,
     "سماعات لاسلكية Aula G7 7.1 Wireless": 1793542626.5536122,
     "كيبورد مغناطيسي AULA Hero68 HE 8K Magnetic Switch": 1793542634.9331498,
@@ -2793,7 +2793,6 @@
     "HAYLOU Watch 3 AMOLED": 1793720747.8731222
   },
   "published_post_keys": [
-    "lodydeals:45561",
     "bnddeals:50908",
     "zedstoreonline:38896",
     "aniscoupons:32774",
@@ -3792,15 +3791,16 @@
     "lodydeals:46040",
     "lodydeals:46042",
     "lodydeals:46044",
-    "lodydeals:46046"
+    "lodydeals:46046",
+    "ecksdeal:6030"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793720747.8731222,
+  "last_run_time": 1793727358.6485991,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6029,
-      "last_check_time": 1793707172.0701895
+      "last_message_id": 6030,
+      "last_check_time": 1793727360.6819441
     },
     "lodydeals": {
       "last_message_id": 46046,
@@ -14692,6 +14692,16 @@
       "price": 21.36,
       "timestamp": 1793720747.8731222,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6030": {
+      "channel_msg_id": 1761,
+      "product_id": "1005009963377960",
+      "title": "كيبورد مغناطيسي AULA Win68 HE 8K Magnetic Switch",
+      "channel": "ecksdeal",
+      "source_msg_id": 6030,
+      "price": 26.46,
+      "timestamp": 1793727358.6485991,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14700,17 +14710,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793720750.5837345,
+    "last_deal_post_time": 1793727360.7089527,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793727180.9856744,
+    "last_sweep_time": 1793727363.9238658,
     "last_sweep_times": {
-      "algeria": 1793727178.150935,
-      "france": 1793727180.9856744
+      "algeria": 1793727360.6956632,
+      "france": 1793727363.9238658
     },
     "last_deal_post_times": {
-      "algeria": 1793720750.5837345
+      "algeria": 1793727360.7089527
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
