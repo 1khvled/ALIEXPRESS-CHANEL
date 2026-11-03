@@ -626,7 +626,8 @@
     "1005013199719142",
     "1005013205365677",
     "1005008429979494",
-    "1005004795387201"
+    "1005004795387201",
+    "1005010702983351"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793707128.1762419,
@@ -1267,7 +1268,8 @@
     "1005013199719142": 1793735684.5341609,
     "1005013205365677": 1793736440.319658,
     "1005008429979494": 1793741666.9686077,
-    "1005004795387201": 1793742770.1634803
+    "1005004795387201": 1793742770.1634803,
+    "1005010702983351": 1793745097.300649
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2046,7 +2048,8 @@
     "Xiaoxin Pad Pro GT 8/256GB",
     "EasyThreed 3D Printer Entry",
     "CUSU SSD SATA 1TB",
-    "MAONO PD400X USB/XLR"
+    "MAONO PD400X USB/XLR",
+    "HyperX Cloud 3 DTS"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2830,10 +2833,10 @@
     "Xiaoxin Pad Pro GT 8/256GB": 1793737359.999931,
     "EasyThreed 3D Printer Entry": 1793741666.9686077,
     "CUSU SSD SATA 1TB": 1793742040.7102718,
-    "MAONO PD400X USB/XLR": 1793742770.1634803
+    "MAONO PD400X USB/XLR": 1793742770.1634803,
+    "HyperX Cloud 3 DTS": 1793745097.300649
   },
   "published_post_keys": [
-    "pcgamingpart:7975",
     "zedstoreonline:38691",
     "zedstoreonline:38545",
     "test_channel:1791627532",
@@ -3832,19 +3835,20 @@
     "lodydeals:46077",
     "lodydeals:46078",
     "lodydeals:46079",
-    "lodydeals:46080"
+    "lodydeals:46080",
+    "lodydeals:46082"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793744216.8445618,
+  "last_run_time": 1793745097.300649,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46081,
-      "last_check_time": 1793744570.7707653
+      "last_message_id": 46082,
+      "last_check_time": 1793745099.3480074
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4403,7 +4407,8 @@
     "1005013199719142": 52.75,
     "1005013205365677": 890.6,
     "1005008429979494": 72.7,
-    "1005004795387201": 115.5
+    "1005004795387201": 115.5,
+    "1005010702983351": 76.7
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -14998,6 +15003,16 @@
       "price": 12.69,
       "timestamp": 1793744216.8445618,
       "status": "ACTIVE"
+    },
+    "lodydeals:46082": {
+      "channel_msg_id": 1798,
+      "product_id": "1005010702983351",
+      "title": "HyperX Cloud 3 DTS",
+      "channel": "lodydeals",
+      "source_msg_id": 46082,
+      "price": 76.7,
+      "timestamp": 1793745097.300649,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15006,17 +15021,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793744219.7208624,
+    "last_deal_post_time": 1793745100.2618058,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793744924.9590871,
+    "last_sweep_time": 1793745103.5809557,
     "last_sweep_times": {
-      "algeria": 1793744922.2049701,
-      "france": 1793744924.9590871
+      "algeria": 1793745100.2396455,
+      "france": 1793745103.5809557
     },
     "last_deal_post_times": {
-      "algeria": 1793744219.7208624
+      "algeria": 1793745100.2618058
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15658,7 +15673,8 @@
     "1005013199719142": "ecksdeal",
     "1005013205365677": "lodydeals",
     "1005008429979494": "lodydeals",
-    "1005004795387201": "lodydeals"
+    "1005004795387201": "lodydeals",
+    "1005010702983351": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -16442,7 +16458,8 @@
     "Xiaoxin Pad Pro GT 8/256GB": "lodydeals",
     "EasyThreed 3D Printer Entry": "lodydeals",
     "CUSU SSD SATA 1TB": "lodydeals",
-    "MAONO PD400X USB/XLR": "lodydeals"
+    "MAONO PD400X USB/XLR": "lodydeals",
+    "HyperX Cloud 3 DTS": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
