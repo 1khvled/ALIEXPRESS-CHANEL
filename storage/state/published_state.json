@@ -1200,7 +1200,7 @@
     "1005007010692093": 1793601389.0047116,
     "1005006994466968": 1793601744.1664062,
     "1005011927267564": 1793728844.5794795,
-    "1005008291023017": 1793609285.8237927,
+    "1005008291023017": 1793732518.3808835,
     "1005012947477238": 1793612016.5356846,
     "1005010121513376": 1793613330.7911599,
     "1005009064526142": 1793613380.753295,
@@ -2582,7 +2582,7 @@
     "CUSU DDR5 RAM 16GB 6000MHz": 1793542370.559594,
     "Magcubic HY300 PRO 4K Projector": 1793542384.0089695,
     "مدعومة ب Hall effect في Joysticks": 1793542392.5669472,
-    "Realme 15 Pro 5G 12/256GB": 1793609285.8237927,
+    "Realme 15 Pro 5G 12/256GB": 1793732518.3808835,
     ".شاشة AMOLED 6.57″ بدقة FHD+": 1793542420.8525836,
     "AMD Ryzen 5 5600XT": 1793542433.4669354,
     "POCO M7 6/128GB": 1793707060.393079,
@@ -2803,7 +2803,6 @@
     "HAYLOU S30 Headphones 43dB": 1793729589.4170802
   },
   "published_post_keys": [
-    "couponsglobal:48774",
     "megaphonna:8562",
     "zedstoreonline:38913",
     "test_channel:1792110963",
@@ -3802,19 +3801,20 @@
     "lodydeals:46049",
     "lodydeals:46051",
     "lodydeals:46052",
-    "ecksdeal:6031"
+    "ecksdeal:6031",
+    "lodydeals:46059"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793732353.5932157,
+  "last_run_time": 1793732518.3808835,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6031,
       "last_check_time": 1793732355.6413443
     },
     "lodydeals": {
-      "last_message_id": 46057,
-      "last_check_time": 1793732150.8522484
+      "last_message_id": 46059,
+      "last_check_time": 1793732520.4300318
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -14763,6 +14763,16 @@
       "price": 118.59,
       "timestamp": 1793732353.5932157,
       "status": "ACTIVE"
+    },
+    "lodydeals:46059": {
+      "channel_msg_id": 1772,
+      "product_id": "1005008291023017",
+      "title": "Realme 15 Pro 5G 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46059,
+      "price": 285.92,
+      "timestamp": 1793732518.3808835,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14771,17 +14781,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793732355.6850896,
+    "last_deal_post_time": 1793732521.3819268,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793732358.0924459,
+    "last_sweep_time": 1793732524.7521563,
     "last_sweep_times": {
-      "algeria": 1793732355.6635346,
-      "france": 1793732358.0924459
+      "algeria": 1793732521.3571246,
+      "france": 1793732524.7521563
     },
     "last_deal_post_times": {
-      "algeria": 1793732355.6850896
+      "algeria": 1793732521.3819268
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
