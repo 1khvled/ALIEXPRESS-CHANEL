@@ -1121,7 +1121,7 @@
     "1005009980316035": 1793542552.2730343,
     "1005005905462505": 1793542560.6809025,
     "1005008248133489": 1793656129.0102158,
-    "1005008684239370": 1793542582.419509,
+    "1005008684239370": 1793733452.578614,
     "1005011583202464": 1793542586.8414407,
     "1005009921069024": 1793542597.6187797,
     "1005009916209766": 1793542607.3688066,
@@ -2027,7 +2027,8 @@
     "CUSU SSD SATA 256GB",
     "Blackview OSCAL MARINE 2 8/128",
     "HAYLOU S30 Headphones 43dB",
-    "UGREEN 65W GaN Charger"
+    "UGREEN 65W GaN Charger",
+    "MAONO Wave T1 Wireless"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2802,10 +2803,10 @@
     "CUSU SSD SATA 256GB": 1793728844.5794795,
     "Blackview OSCAL MARINE 2 8/128": 1793728859.1630292,
     "HAYLOU S30 Headphones 43dB": 1793729589.4170802,
-    "UGREEN 65W GaN Charger": 1793732921.385459
+    "UGREEN 65W GaN Charger": 1793732921.385459,
+    "MAONO Wave T1 Wireless": 1793733452.578614
   },
   "published_post_keys": [
-    "test_channel:1792110963",
     "lodydeals:45771",
     "lodydeals:45919",
     "lodydeals:45455",
@@ -3804,19 +3805,20 @@
     "ecksdeal:6031",
     "lodydeals:46059",
     "lodydeals:46060",
-    "lodydeals:46061"
+    "lodydeals:46061",
+    "lodydeals:46062"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793733101.535615,
+  "last_run_time": 1793733452.578614,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6031,
-      "last_check_time": 1793732355.6413443
+      "last_message_id": 6032,
+      "last_check_time": 1793733456.3652186
     },
     "lodydeals": {
-      "last_message_id": 46061,
-      "last_check_time": 1793733103.584699
+      "last_message_id": 46062,
+      "last_check_time": 1793733454.6269448
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4247,7 +4249,7 @@
     "1005009980316035": 25.85,
     "1005005905462505": 56.27,
     "1005008248133489": 14.88,
-    "1005008684239370": 7.47,
+    "1005008684239370": 9.21,
     "1005011583202464": 56.09,
     "1005009921069024": 12.85,
     "1005009916209766": 24.04,
@@ -14795,6 +14797,16 @@
       "price": 123.6,
       "timestamp": 1793733101.535615,
       "status": "ACTIVE"
+    },
+    "lodydeals:46062": {
+      "channel_msg_id": 1775,
+      "product_id": "1005008684239370",
+      "title": "MAONO Wave T1 Wireless",
+      "channel": "lodydeals",
+      "source_msg_id": 46062,
+      "price": 9.21,
+      "timestamp": 1793733452.578614,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14803,17 +14815,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793733104.32108,
+    "last_deal_post_time": 1793733456.408241,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793733273.075194,
+    "last_sweep_time": 1793733458.9625893,
     "last_sweep_times": {
-      "algeria": 1793733270.655889,
-      "france": 1793733273.075194
+      "algeria": 1793733456.386845,
+      "france": 1793733458.9625893
     },
     "last_deal_post_times": {
-      "algeria": 1793733104.32108
+      "algeria": 1793733456.408241
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15326,7 +15338,7 @@
     "1005009980316035": "ecksdeal",
     "1005005905462505": "ecksdeal",
     "1005008248133489": "lodydeals",
-    "1005008684239370": "ecksdeal",
+    "1005008684239370": "lodydeals",
     "1005011583202464": "ecksdeal",
     "1005009921069024": "ecksdeal",
     "1005009916209766": "ecksdeal",
@@ -16225,7 +16237,8 @@
     "CUSU SSD SATA 256GB": "lodydeals",
     "Blackview OSCAL MARINE 2 8/128": "lodydeals",
     "HAYLOU S30 Headphones 43dB": "lodydeals",
-    "UGREEN 65W GaN Charger": "lodydeals"
+    "UGREEN 65W GaN Charger": "lodydeals",
+    "MAONO Wave T1 Wireless": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -16924,7 +16937,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38968",
     "megaphonna:8585",
     "megaphonna:8357",
     "zedstoreonline:38569",
@@ -17923,7 +17935,8 @@
     "lodydeals:46054",
     "lodydeals:46055",
     "lodydeals:46056",
-    "lodydeals:46057"
+    "lodydeals:46057",
+    "ecksdeal:6032"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
