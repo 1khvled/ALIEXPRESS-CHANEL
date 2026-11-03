@@ -608,7 +608,8 @@
     "1005006783028347",
     "1005007010104970",
     "1005008637113849",
-    "1005010419207841"
+    "1005010419207841",
+    "1005011891052345"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793616200.8243065,
@@ -1229,7 +1230,8 @@
     "1005006783028347": 1793656112.890115,
     "1005007010104970": 1793656134.827825,
     "1005008637113849": 1793656145.7068295,
-    "1005010419207841": 1793656214.2446048
+    "1005010419207841": 1793656214.2446048,
+    "1005011891052345": 1793706864.9165008
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -1976,7 +1978,8 @@
     "HONOR Pad X9a 8/256GB Global",
     "CUSU RAM DDR5 16GB 6000Mhz",
     "UGREEN MAX5S ANC -45dB",
-    "سماعات لاسلكية VGN VXE Siren V1"
+    "سماعات لاسلكية VGN VXE Siren V1",
+    "ماوس لاسلكي بألياف الكربون Attack Shark X11 Ultimate 8K Carbon"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2728,10 +2731,10 @@
     "HONOR Pad X9a 8/256GB Global": 1793656173.8785615,
     "CUSU RAM DDR5 16GB 6000Mhz": 1793656181.223734,
     "UGREEN MAX5S ANC -45dB": 1793656197.5558417,
-    "سماعات لاسلكية VGN VXE Siren V1": 1793656214.2446048
+    "سماعات لاسلكية VGN VXE Siren V1": 1793656214.2446048,
+    "ماوس لاسلكي بألياف الكربون Attack Shark X11 Ultimate 8K Carbon": 1793706864.9165008
   },
   "published_post_keys": [
-    "aniscoupons:33163",
     "aniscoupons:33063",
     "lodydeals:45826",
     "aniscoupons:32797",
@@ -3730,15 +3733,16 @@
     "lodydeals:46008",
     "lodydeals:46010",
     "ecksdeal:6025",
-    "lodydeals:46011"
+    "lodydeals:46011",
+    "ecksdeal:6028"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793656271.0286891,
+  "last_run_time": 1793706864.9165008,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6027,
-      "last_check_time": 1793670765.5448258
+      "last_message_id": 6028,
+      "last_check_time": 1793706866.9663277
     },
     "lodydeals": {
       "last_message_id": 46011,
@@ -4283,7 +4287,8 @@
     "1005006783028347": 2.62,
     "1005007010104970": 6.81,
     "1005008637113849": 52.5,
-    "1005010419207841": 29.44
+    "1005010419207841": 29.44,
+    "1005011891052345": 50.64
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -14378,6 +14383,16 @@
       "price": 26.95,
       "timestamp": 1793656271.0286891,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6028": {
+      "channel_msg_id": 1737,
+      "product_id": "1005011891052345",
+      "title": "ماوس لاسلكي بألياف الكربون Attack Shark X11 Ultimate 8K Carbon",
+      "channel": "ecksdeal",
+      "source_msg_id": 6028,
+      "price": 50.64,
+      "timestamp": 1793706864.9165008,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14386,17 +14401,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793656273.7415948,
+    "last_deal_post_time": 1793706867.0090253,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793706682.5012941,
+    "last_sweep_time": 1793706871.4295535,
     "last_sweep_times": {
-      "algeria": 1793706678.0684886,
-      "france": 1793706682.5012941
+      "algeria": 1793706866.9878948,
+      "france": 1793706871.4295535
     },
     "last_deal_post_times": {
-      "algeria": 1793656273.7415948
+      "algeria": 1793706867.0090253
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15020,7 +15035,8 @@
     "1005006783028347": "lodydeals",
     "1005007010104970": "lodydeals",
     "1005008637113849": "lodydeals",
-    "1005010419207841": "ecksdeal"
+    "1005010419207841": "ecksdeal",
+    "1005011891052345": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -15772,7 +15788,8 @@
     "OPPO Reno 16F 5G 8/256GB": "lodydeals",
     "HONOR Pad X9a 8/256GB Global": "lodydeals",
     "CUSU RAM DDR5 16GB 6000Mhz": "lodydeals",
-    "سماعات لاسلكية VGN VXE Siren V1": "ecksdeal"
+    "سماعات لاسلكية VGN VXE Siren V1": "ecksdeal",
+    "ماوس لاسلكي بألياف الكربون Attack Shark X11 Ultimate 8K Carbon": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
