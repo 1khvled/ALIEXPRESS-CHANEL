@@ -1210,7 +1210,7 @@
     "1005010009130696": 1793613403.4444478,
     "1005013465751932": 1793613440.9413722,
     "1005011778223630": 1793613478.3592212,
-    "1005009231510301": 1793613499.1620939,
+    "1005009231510301": 1793737359.999931,
     "1005011625723042": 1793613515.3490868,
     "1005006280695304": 1793613524.8970137,
     "1005010149868688": 1793613530.8342392,
@@ -2038,7 +2038,8 @@
     "Huawei Pura 90 Pro Max 12/256GB",
     "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless",
     "OPPO Find X10 Pro Max 12/256GB",
-    "GameSir T4 Nova Lite"
+    "GameSir T4 Nova Lite",
+    "Xiaoxin Pad Pro GT 8/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2818,10 +2819,10 @@
     "Huawei Pura 90 Pro Max 12/256GB": 1793735141.9083512,
     "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless": 1793735684.5341609,
     "OPPO Find X10 Pro Max 12/256GB": 1793736440.319658,
-    "GameSir T4 Nova Lite": 1793736995.9663026
+    "GameSir T4 Nova Lite": 1793736995.9663026,
+    "Xiaoxin Pad Pro GT 8/256GB": 1793737359.999931
   },
   "published_post_keys": [
-    "lodydeals:45917",
     "zedstoreonline:38546",
     "lodydeals:45556",
     "lodydeals:45575",
@@ -3820,19 +3821,20 @@
     "ecksdeal:6033",
     "lodydeals:46066",
     "lodydeals:46067",
-    "lodydeals:46068"
+    "lodydeals:46068",
+    "lodydeals:46069"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793736995.9663026,
+  "last_run_time": 1793737359.999931,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46068,
-      "last_check_time": 1793736997.9989145
+      "last_message_id": 46069,
+      "last_check_time": 1793737362.0502298
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4350,7 +4352,7 @@
     "1005010009130696": 656.0,
     "1005013465751932": 527.0,
     "1005011778223630": 106.0,
-    "1005009231510301": 259.7,
+    "1005009231510301": 259.54,
     "1005011625723042": 7.59,
     "1005006280695304": 5.7,
     "1005007060644375": 3.11,
@@ -14884,6 +14886,16 @@
       "price": 19.08,
       "timestamp": 1793736995.9663026,
       "status": "ACTIVE"
+    },
+    "lodydeals:46069": {
+      "channel_msg_id": 1782,
+      "product_id": "1005009231510301",
+      "title": "Xiaoxin Pad Pro GT 8/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46069,
+      "price": 259.54,
+      "timestamp": 1793737359.999931,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14892,17 +14904,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793736998.7098632,
+    "last_deal_post_time": 1793737362.9153817,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793737177.2904742,
+    "last_sweep_time": 1793737365.4734707,
     "last_sweep_times": {
-      "algeria": 1793737174.4895713,
-      "france": 1793737177.2904742
+      "algeria": 1793737362.892424,
+      "france": 1793737365.4734707
     },
     "last_deal_post_times": {
-      "algeria": 1793736998.7098632
+      "algeria": 1793737362.9153817
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15504,7 +15516,7 @@
     "1005010009130696": "zedstoreonline",
     "1005013465751932": "zedstoreonline",
     "1005011778223630": "zedstoreonline",
-    "1005009231510301": "zedstoreonline",
+    "1005009231510301": "lodydeals",
     "1005011625723042": "aniscoupons",
     "1005006280695304": "aniscoupons",
     "1005007060644375": "aniscoupons",
@@ -16322,7 +16334,8 @@
     "Huawei Pura 90 Pro Max 12/256GB": "lodydeals",
     "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless": "ecksdeal",
     "OPPO Find X10 Pro Max 12/256GB": "lodydeals",
-    "GameSir T4 Nova Lite": "lodydeals"
+    "GameSir T4 Nova Lite": "lodydeals",
+    "Xiaoxin Pad Pro GT 8/256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
