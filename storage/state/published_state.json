@@ -1133,7 +1133,7 @@
     "1005004905380908": 1793542639.2483642,
     "1005013081060247": 1793543567.486626,
     "1005012498496817": 1793543578.6842017,
-    "1005003413514494": 1793543617.2639549,
+    "1005003413514494": 1793732921.385459,
     "1005008741607292": 1793649057.4862149,
     "1005010158587315": 1793543677.5915465,
     "1005012790288780": 1793656271.0286891,
@@ -2026,7 +2026,8 @@
     "HAYLOU Watch 3 AMOLED",
     "CUSU SSD SATA 256GB",
     "Blackview OSCAL MARINE 2 8/128",
-    "HAYLOU S30 Headphones 43dB"
+    "HAYLOU S30 Headphones 43dB",
+    "UGREEN 65W GaN Charger"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2800,10 +2801,10 @@
     "HAYLOU Watch 3 AMOLED": 1793720747.8731222,
     "CUSU SSD SATA 256GB": 1793728844.5794795,
     "Blackview OSCAL MARINE 2 8/128": 1793728859.1630292,
-    "HAYLOU S30 Headphones 43dB": 1793729589.4170802
+    "HAYLOU S30 Headphones 43dB": 1793729589.4170802,
+    "UGREEN 65W GaN Charger": 1793732921.385459
   },
   "published_post_keys": [
-    "megaphonna:8562",
     "zedstoreonline:38913",
     "test_channel:1792110963",
     "lodydeals:45771",
@@ -3802,19 +3803,20 @@
     "lodydeals:46051",
     "lodydeals:46052",
     "ecksdeal:6031",
-    "lodydeals:46059"
+    "lodydeals:46059",
+    "lodydeals:46060"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793732518.3808835,
+  "last_run_time": 1793732921.385459,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6031,
       "last_check_time": 1793732355.6413443
     },
     "lodydeals": {
-      "last_message_id": 46059,
-      "last_check_time": 1793732520.4300318
+      "last_message_id": 46060,
+      "last_check_time": 1793732923.4337516
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4257,7 +4259,7 @@
     "1005004905380908": 8.79,
     "1005013081060247": 138.13,
     "1005012498496817": 204.37,
-    "1005003413514494": 18.57,
+    "1005003413514494": 20.3,
     "1005008741607292": 110.85,
     "1005010158587315": 141.02,
     "1005012790288780": 26.95,
@@ -14773,6 +14775,16 @@
       "price": 285.92,
       "timestamp": 1793732518.3808835,
       "status": "ACTIVE"
+    },
+    "lodydeals:46060": {
+      "channel_msg_id": 1773,
+      "product_id": "1005003413514494",
+      "title": "UGREEN 65W GaN Charger",
+      "channel": "lodydeals",
+      "source_msg_id": 46060,
+      "price": 20.3,
+      "timestamp": 1793732921.385459,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14781,17 +14793,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793732521.3819268,
+    "last_deal_post_time": 1793732924.1968172,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793732712.2976816,
+    "last_sweep_time": 1793732926.6738203,
     "last_sweep_times": {
-      "algeria": 1793732709.889443,
-      "france": 1793732712.2976816
+      "algeria": 1793732924.1746697,
+      "france": 1793732926.6738203
     },
     "last_deal_post_times": {
-      "algeria": 1793732521.3819268
+      "algeria": 1793732924.1968172
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -16202,7 +16214,8 @@
     "HAYLOU Watch 3 AMOLED": "lodydeals",
     "CUSU SSD SATA 256GB": "lodydeals",
     "Blackview OSCAL MARINE 2 8/128": "lodydeals",
-    "HAYLOU S30 Headphones 43dB": "lodydeals"
+    "HAYLOU S30 Headphones 43dB": "lodydeals",
+    "UGREEN 65W GaN Charger": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
