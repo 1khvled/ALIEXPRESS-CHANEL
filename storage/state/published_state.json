@@ -623,7 +623,8 @@
     "1005011748000554",
     "1005009111757092",
     "1005013030365524",
-    "1005013199719142"
+    "1005013199719142",
+    "1005013205365677"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793707128.1762419,
@@ -1261,7 +1262,8 @@
     "COUPONS_11.11 Global Shopping Festival Main Sale": 1793728683.0472453,
     "1005009111757092": 1793728859.1630292,
     "1005013030365524": 1793735141.9083512,
-    "1005013199719142": 1793735684.5341609
+    "1005013199719142": 1793735684.5341609,
+    "1005013205365677": 1793736440.319658
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2034,7 +2036,8 @@
     "UGREEN 65W GaN Charger",
     "MAONO Wave T1 Wireless",
     "Huawei Pura 90 Pro Max 12/256GB",
-    "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless"
+    "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless",
+    "OPPO Find X10 Pro Max 12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2812,10 +2815,10 @@
     "UGREEN 65W GaN Charger": 1793732921.385459,
     "MAONO Wave T1 Wireless": 1793733452.578614,
     "Huawei Pura 90 Pro Max 12/256GB": 1793735141.9083512,
-    "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless": 1793735684.5341609
+    "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless": 1793735684.5341609,
+    "OPPO Find X10 Pro Max 12/256GB": 1793736440.319658
   },
   "published_post_keys": [
-    "lodydeals:45583",
     "zedstoreonline:38709",
     "lodydeals:45917",
     "zedstoreonline:38546",
@@ -3814,19 +3817,20 @@
     "lodydeals:46064",
     "lodydeals:46065",
     "ecksdeal:6033",
-    "lodydeals:46066"
+    "lodydeals:46066",
+    "lodydeals:46067"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793735876.7804084,
+  "last_run_time": 1793736440.319658,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46066,
-      "last_check_time": 1793735878.8159888
+      "last_message_id": 46067,
+      "last_check_time": 1793736442.3700323
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4382,7 +4386,8 @@
     "1005011748000554": 21.36,
     "1005009111757092": 114.9,
     "1005013030365524": 659.21,
-    "1005013199719142": 52.75
+    "1005013199719142": 52.75,
+    "1005013205365677": 890.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -14857,6 +14862,16 @@
       "price": 142.86,
       "timestamp": 1793735876.7804084,
       "status": "ACTIVE"
+    },
+    "lodydeals:46067": {
+      "channel_msg_id": 1780,
+      "product_id": "1005013205365677",
+      "title": "OPPO Find X10 Pro Max 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46067,
+      "price": 890.6,
+      "timestamp": 1793736440.319658,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14865,17 +14880,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793735879.5126772,
+    "last_deal_post_time": 1793736443.1115134,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793736259.0202622,
+    "last_sweep_time": 1793736445.5513434,
     "last_sweep_times": {
-      "algeria": 1793736256.1165555,
-      "france": 1793736259.0202622
+      "algeria": 1793736443.08783,
+      "france": 1793736445.5513434
     },
     "last_deal_post_times": {
-      "algeria": 1793735879.5126772
+      "algeria": 1793736443.1115134
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15514,7 +15529,8 @@
     "1005011748000554": "lodydeals",
     "1005009111757092": "lodydeals",
     "1005013030365524": "lodydeals",
-    "1005013199719142": "ecksdeal"
+    "1005013199719142": "ecksdeal",
+    "1005013205365677": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -16292,7 +16308,8 @@
     "UGREEN 65W GaN Charger": "lodydeals",
     "MAONO Wave T1 Wireless": "lodydeals",
     "Huawei Pura 90 Pro Max 12/256GB": "lodydeals",
-    "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless": "ecksdeal"
+    "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless": "ecksdeal",
+    "OPPO Find X10 Pro Max 12/256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
