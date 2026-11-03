@@ -619,7 +619,8 @@
     "1005010044163415",
     "1005012099740266",
     "1005010462111234",
-    "1005006026842392"
+    "1005006026842392",
+    "1005011748000554"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793707128.1762419,
@@ -737,7 +738,7 @@
     "1005008144855522": 1791026444.9395418,
     "1005008486721357": 1791026452.368309,
     "1005012871566388": 1791026457.7236943,
-    "1005007027334636": 1791026466.6956959,
+    "1005007027334636": 1793720742.084677,
     "1005006727600702": 1791027043.7332833,
     "1005009916278058": 1791027049.3509357,
     "1005009719082543": 1791027355.6595695,
@@ -1251,7 +1252,8 @@
     "1005010044163415": 1793707149.3437843,
     "1005012099740266": 1793707154.0863686,
     "1005010462111234": 1793707161.4322476,
-    "1005006026842392": 1793707779.0330126
+    "1005006026842392": 1793707779.0330126,
+    "1005011748000554": 1793720747.8731222
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2015,7 +2017,9 @@
     "Essager 45W Car Charger",
     "Essager 4in1 Cable 240W",
     "Realme 14T 5G 12/256GB",
-    "Mibro A1 Smartwatch"
+    "Mibro A1 Smartwatch",
+    "Somnambulist SSD 128GB",
+    "HAYLOU Watch 3 AMOLED"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2784,11 +2788,11 @@
     "Essager 45W Car Charger": 1793707154.0863686,
     "Essager 4in1 Cable 240W": 1793707161.4322476,
     "Realme 14T 5G 12/256GB": 1793707168.1519766,
-    "Mibro A1 Smartwatch": 1793707779.0330126
+    "Mibro A1 Smartwatch": 1793707779.0330126,
+    "Somnambulist SSD 128GB": 1793720742.084677,
+    "HAYLOU Watch 3 AMOLED": 1793720747.8731222
   },
   "published_post_keys": [
-    "couponsglobal:48869",
-    "megaphonna:8512",
     "lodydeals:45561",
     "bnddeals:50908",
     "zedstoreonline:38896",
@@ -3786,19 +3790,21 @@
     "lodydeals:46038",
     "lodydeals:46039",
     "lodydeals:46040",
-    "lodydeals:46042"
+    "lodydeals:46042",
+    "lodydeals:46044",
+    "lodydeals:46046"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793712560.6780183,
+  "last_run_time": 1793720747.8731222,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6029,
       "last_check_time": 1793707172.0701895
     },
     "lodydeals": {
-      "last_message_id": 46043,
-      "last_check_time": 1793712563.6407435
+      "last_message_id": 46046,
+      "last_check_time": 1793720749.9021432
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3829,7 +3835,7 @@
     "1005012973772517": 189.23,
     "1005010219205081": 57.2,
     "1005007805638431": 18.03,
-    "1005007027334636": 10.3,
+    "1005007027334636": 13.49,
     "1005009054706827": 20.14,
     "1005007961216287": 20.26,
     "1005008233932899": 294.9,
@@ -4350,7 +4356,8 @@
     "1005010044163415": 2.92,
     "1005012099740266": 2.17,
     "1005010462111234": 2.51,
-    "1005006026842392": 14.91
+    "1005006026842392": 14.91,
+    "1005011748000554": 21.36
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -14665,6 +14672,26 @@
       "price": 129.88,
       "timestamp": 1793712560.6780183,
       "status": "ACTIVE"
+    },
+    "lodydeals:46044": {
+      "channel_msg_id": 1759,
+      "product_id": "1005007027334636",
+      "title": "Somnambulist SSD 128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46044,
+      "price": 13.49,
+      "timestamp": 1793720742.084677,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46046": {
+      "channel_msg_id": 1760,
+      "product_id": "1005011748000554",
+      "title": "HAYLOU Watch 3 AMOLED",
+      "channel": "lodydeals",
+      "source_msg_id": 46046,
+      "price": 21.36,
+      "timestamp": 1793720747.8731222,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14673,17 +14700,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793712564.3495014,
+    "last_deal_post_time": 1793720750.5837345,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793720563.9359863,
+    "last_sweep_time": 1793720753.5749376,
     "last_sweep_times": {
-      "algeria": 1793720560.5826874,
-      "france": 1793720563.9359863
+      "algeria": 1793720750.5705442,
+      "france": 1793720753.5749376
     },
     "last_deal_post_times": {
-      "algeria": 1793712564.3495014
+      "algeria": 1793720750.5837345
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -14692,7 +14719,7 @@
   "published_product_channels": {
     "999888104": "test_channel",
     "100500888999777": "lodydeals",
-    "1005007027334636": "aniscoupons",
+    "1005007027334636": "lodydeals",
     "1005009734653254": "lodydeals",
     "1005008333859881": "bnddeals",
     "1005009357018019": "bnddeals",
@@ -15318,7 +15345,8 @@
     "1005010044163415": "lodydeals",
     "1005012099740266": "lodydeals",
     "1005010462111234": "lodydeals",
-    "1005006026842392": "lodydeals"
+    "1005006026842392": "lodydeals",
+    "1005011748000554": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -16087,7 +16115,9 @@
     "Essager 45W Car Charger": "lodydeals",
     "Essager 4in1 Cable 240W": "lodydeals",
     "Realme 14T 5G 12/256GB": "lodydeals",
-    "Mibro A1 Smartwatch": "lodydeals"
+    "Mibro A1 Smartwatch": "lodydeals",
+    "Somnambulist SSD 128GB": "lodydeals",
+    "HAYLOU Watch 3 AMOLED": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -16786,7 +16816,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8356",
     "bnddeals:51015",
     "bnddeals:50900",
     "pcgamingpart:7965",
@@ -17785,7 +17814,8 @@
     "lodydeals:46037",
     "ecksdeal:6029",
     "lodydeals:46041",
-    "lodydeals:46043"
+    "lodydeals:46043",
+    "lodydeals:46045"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
