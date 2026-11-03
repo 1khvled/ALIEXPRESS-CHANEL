@@ -1003,7 +1003,7 @@
     "1005013222140851": 1793467234.8425448,
     "1005013438245033": 1793299536.9978156,
     "1005008986635164": 1793314892.9200466,
-    "1005008327980403": 1793544006.9922435,
+    "1005008327980403": 1793735876.7804084,
     "1005012838686691": 1793384191.3385255,
     "1005007966795709": 1793613350.9171102,
     "1005007760080474": 1793613355.4947147,
@@ -2425,7 +2425,7 @@
     "نسخة صينية": 1793299536.9978156,
     "جديد": 1793299548.5548651,
     "ASRock B850M Riptide WiFi": 1793314892.9200466,
-    "KOOTION M.2 1TB 7200Mbs": 1793544006.9922435,
+    "KOOTION M.2 1TB 7200Mbs": 1793735876.7804084,
     "MSI X670E GAMING PLUS WIFI AMD X670 Motherboard AM5 used": 1793314915.007305,
     "BLACKVIEW WAVE 7C (4/64)": 1793314939.6901202,
     "BLACKVIEW WAVE 10C (4/32)": 1793314944.416167,
@@ -2815,7 +2815,6 @@
     "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless": 1793735684.5341609
   },
   "published_post_keys": [
-    "lodydeals:45536",
     "lodydeals:45583",
     "zedstoreonline:38709",
     "lodydeals:45917",
@@ -3814,19 +3813,20 @@
     "lodydeals:46062",
     "lodydeals:46064",
     "lodydeals:46065",
-    "ecksdeal:6033"
+    "ecksdeal:6033",
+    "lodydeals:46066"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793735684.5341609,
+  "last_run_time": 1793735876.7804084,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46065,
-      "last_check_time": 1793735521.40234
+      "last_message_id": 46066,
+      "last_check_time": 1793735878.8159888
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -14847,6 +14847,16 @@
       "price": 52.75,
       "timestamp": 1793735684.5341609,
       "status": "ACTIVE"
+    },
+    "lodydeals:46066": {
+      "channel_msg_id": 1779,
+      "product_id": "1005008327980403",
+      "title": "KOOTION M.2 1TB 7200Mbs",
+      "channel": "lodydeals",
+      "source_msg_id": 46066,
+      "price": 142.86,
+      "timestamp": 1793735876.7804084,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14855,17 +14865,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793735686.5980818,
+    "last_deal_post_time": 1793735879.5126772,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793735689.0780282,
+    "last_sweep_time": 1793735881.9784517,
     "last_sweep_times": {
-      "algeria": 1793735686.5824451,
-      "france": 1793735689.0780282
+      "algeria": 1793735879.495383,
+      "france": 1793735881.9784517
     },
     "last_deal_post_times": {
-      "algeria": 1793735686.5980818
+      "algeria": 1793735879.5126772
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
