@@ -851,7 +851,7 @@
     "1005007920266509": 1792156515.7006214,
     "1005009275536960": 1791975930.016452,
     "1005007767322935": 1791975934.9659944,
-    "1005012571601398": 1793608903.4854167,
+    "1005012571601398": 1793740379.2008631,
     "1005013054007275": 1793543830.34111,
     "1005011899097443": 1792191284.560975,
     "1005012865117890": 1793613385.3577175,
@@ -2627,7 +2627,7 @@
     "سماعات الاذن  TANGZU WAN'ER S.G  IEM": 1793542639.2483642,
     "OnePlus Turbo 6X  8/128GB": 1793543578.6842017,
     "Soundcore by Anker P20i True Wireless Earbuds 30H Wireless Earphone": 1793543583.5978532,
-    "Honor X80 Pro Max 8/128GB": 1793608903.4854167,
+    "Honor X80 Pro Max 8/128GB": 1793740379.2008631,
     "HONOR Pad V9 Wifi 8/256GB": 1793543596.9849713,
     "Redmi A7 Pro 4/64GB": 1793543612.279949,
     "تخفيض ل UGREEN 65W GaN Charger": 1793543617.2639549,
@@ -2823,7 +2823,6 @@
     "Xiaoxin Pad Pro GT 8/256GB": 1793737359.999931
   },
   "published_post_keys": [
-    "lodydeals:45575",
     "aniscoupons:33285",
     "aniscoupons:33224",
     "lodydeals:45936",
@@ -3822,19 +3821,20 @@
     "lodydeals:46068",
     "lodydeals:46069",
     "lodydeals:46071",
-    "lodydeals:46072"
+    "lodydeals:46072",
+    "lodydeals:46074"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793738518.4424365,
+  "last_run_time": 1793740379.2008631,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46073,
-      "last_check_time": 1793739788.710709
+      "last_message_id": 46074,
+      "last_check_time": 1793740381.2486308
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -14916,6 +14916,16 @@
       "price": 76.35,
       "timestamp": 1793738518.4424365,
       "status": "ACTIVE"
+    },
+    "lodydeals:46074": {
+      "channel_msg_id": 1791,
+      "product_id": "1005012571601398",
+      "title": "Honor X80 Pro Max 8/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46074,
+      "price": 271.5,
+      "timestamp": 1793740379.2008631,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14924,17 +14934,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793738521.3332534,
+    "last_deal_post_time": 1793740381.971382,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793740170.3272479,
+    "last_sweep_time": 1793740384.3733768,
     "last_sweep_times": {
-      "algeria": 1793740167.5249538,
-      "france": 1793740170.3272479
+      "algeria": 1793740381.9499366,
+      "france": 1793740384.3733768
     },
     "last_deal_post_times": {
-      "algeria": 1793738521.3332534
+      "algeria": 1793740381.971382
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
