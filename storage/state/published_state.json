@@ -639,7 +639,7 @@
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
     "100500777666555": 1793531436.958397,
-    "1005011778621042": 1793609834.0521824,
+    "1005011778621042": 1793732353.5932157,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1793543664.66204,
     "1005006533038973": 1791104468.758226,
@@ -2411,7 +2411,7 @@
     "Realme GT8": 1793299454.8390412,
     "Realme C100  6/128GB": 1793448628.3734028,
     "معالج Ryzen 5 5600XT": 1793299476.5930903,
-    "معالج Ryzen 7 5700X": 1793299484.2441924,
+    "معالج Ryzen 7 5700X": 1793732353.5932157,
     "ASRock B550 Phantom Gaming 4 Motherboard": 1793467234.8425448,
     "الوحش الأكبر من": 1793299528.9348502,
     "نسخة صينية": 1793299536.9978156,
@@ -2803,7 +2803,6 @@
     "HAYLOU S30 Headphones 43dB": 1793729589.4170802
   },
   "published_post_keys": [
-    "lodydeals:45481",
     "couponsglobal:48774",
     "megaphonna:8562",
     "zedstoreonline:38913",
@@ -3802,15 +3801,16 @@
     "lodydeals:46047",
     "lodydeals:46049",
     "lodydeals:46051",
-    "lodydeals:46052"
+    "lodydeals:46052",
+    "ecksdeal:6031"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793729589.4170802,
+  "last_run_time": 1793732353.5932157,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6030,
-      "last_check_time": 1793727360.6819441
+      "last_message_id": 6031,
+      "last_check_time": 1793732355.6413443
     },
     "lodydeals": {
       "last_message_id": 46057,
@@ -14753,6 +14753,16 @@
       "price": 20.91,
       "timestamp": 1793729589.4170802,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6031": {
+      "channel_msg_id": 1771,
+      "product_id": "1005011778621042",
+      "title": "معالج Ryzen 7 5700X",
+      "channel": "ecksdeal",
+      "source_msg_id": 6031,
+      "price": 118.59,
+      "timestamp": 1793732353.5932157,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14761,17 +14771,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793729592.2528262,
+    "last_deal_post_time": 1793732355.6850896,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793732154.9054444,
+    "last_sweep_time": 1793732358.0924459,
     "last_sweep_times": {
-      "algeria": 1793732151.5006077,
-      "france": 1793732154.9054444
+      "algeria": 1793732355.6635346,
+      "france": 1793732358.0924459
     },
     "last_deal_post_times": {
-      "algeria": 1793729592.2528262
+      "algeria": 1793732355.6850896
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -14924,7 +14934,7 @@
     "1005007345108759": "ecksdeal",
     "1005007394028808": "lodydeals",
     "1005007394197021": "lodydeals",
-    "1005011778621042": "lodydeals",
+    "1005011778621042": "ecksdeal",
     "1005012571601398": "lodydeals",
     "1005013290515237": "aniscoupons",
     "1005012264415744": "megaphonna",
