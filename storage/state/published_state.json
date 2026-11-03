@@ -624,7 +624,8 @@
     "1005009111757092",
     "1005013030365524",
     "1005013199719142",
-    "1005013205365677"
+    "1005013205365677",
+    "1005008429979494"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793707128.1762419,
@@ -1263,7 +1264,8 @@
     "1005009111757092": 1793728859.1630292,
     "1005013030365524": 1793735141.9083512,
     "1005013199719142": 1793735684.5341609,
-    "1005013205365677": 1793736440.319658
+    "1005013205365677": 1793736440.319658,
+    "1005008429979494": 1793741666.9686077
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2039,7 +2041,8 @@
     "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless",
     "OPPO Find X10 Pro Max 12/256GB",
     "GameSir T4 Nova Lite",
-    "Xiaoxin Pad Pro GT 8/256GB"
+    "Xiaoxin Pad Pro GT 8/256GB",
+    "EasyThreed 3D Printer Entry"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2820,10 +2823,10 @@
     "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless": 1793735684.5341609,
     "OPPO Find X10 Pro Max 12/256GB": 1793736440.319658,
     "GameSir T4 Nova Lite": 1793736995.9663026,
-    "Xiaoxin Pad Pro GT 8/256GB": 1793737359.999931
+    "Xiaoxin Pad Pro GT 8/256GB": 1793737359.999931,
+    "EasyThreed 3D Printer Entry": 1793741666.9686077
   },
   "published_post_keys": [
-    "aniscoupons:33285",
     "aniscoupons:33224",
     "lodydeals:45936",
     "lodydeals:45445",
@@ -3822,19 +3825,20 @@
     "lodydeals:46069",
     "lodydeals:46071",
     "lodydeals:46072",
-    "lodydeals:46074"
+    "lodydeals:46074",
+    "lodydeals:46075"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793740379.2008631,
+  "last_run_time": 1793741666.9686077,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46074,
-      "last_check_time": 1793740381.2486308
+      "last_message_id": 46075,
+      "last_check_time": 1793741669.0075462
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4391,7 +4395,8 @@
     "1005009111757092": 114.9,
     "1005013030365524": 659.21,
     "1005013199719142": 52.75,
-    "1005013205365677": 890.6
+    "1005013205365677": 890.6,
+    "1005008429979494": 72.7
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -14926,6 +14931,16 @@
       "price": 271.5,
       "timestamp": 1793740379.2008631,
       "status": "ACTIVE"
+    },
+    "lodydeals:46075": {
+      "channel_msg_id": 1792,
+      "product_id": "1005008429979494",
+      "title": "EasyThreed 3D Printer Entry",
+      "channel": "lodydeals",
+      "source_msg_id": 46075,
+      "price": 72.7,
+      "timestamp": 1793741666.9686077,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14934,17 +14949,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793740381.971382,
+    "last_deal_post_time": 1793741669.6583586,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793741497.0346968,
+    "last_sweep_time": 1793741671.7903225,
     "last_sweep_times": {
-      "algeria": 1793741494.0484588,
-      "france": 1793741497.0346968
+      "algeria": 1793741669.640487,
+      "france": 1793741671.7903225
     },
     "last_deal_post_times": {
-      "algeria": 1793740381.971382
+      "algeria": 1793741669.6583586
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15584,7 +15599,8 @@
     "1005009111757092": "lodydeals",
     "1005013030365524": "lodydeals",
     "1005013199719142": "ecksdeal",
-    "1005013205365677": "lodydeals"
+    "1005013205365677": "lodydeals",
+    "1005008429979494": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -16365,7 +16381,8 @@
     "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless": "ecksdeal",
     "OPPO Find X10 Pro Max 12/256GB": "lodydeals",
     "GameSir T4 Nova Lite": "lodydeals",
-    "Xiaoxin Pad Pro GT 8/256GB": "lodydeals"
+    "Xiaoxin Pad Pro GT 8/256GB": "lodydeals",
+    "EasyThreed 3D Printer Entry": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
