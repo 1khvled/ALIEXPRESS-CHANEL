@@ -773,7 +773,7 @@
     "1005010536089199": 1792103187.1376467,
     "1005012385221205": 1791102050.1835058,
     "1005012743092233": 1791104461.903693,
-    "1005007805497968": 1793542392.5669472,
+    "1005007805497968": 1793736995.9663026,
     "1005007345108759": 1793542577.5838556,
     "1005007394197021": 1792103174.5720932,
     "1005013290515237": 1791110751.0808105,
@@ -2037,7 +2037,8 @@
     "MAONO Wave T1 Wireless",
     "Huawei Pura 90 Pro Max 12/256GB",
     "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless",
-    "OPPO Find X10 Pro Max 12/256GB"
+    "OPPO Find X10 Pro Max 12/256GB",
+    "GameSir T4 Nova Lite"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2816,10 +2817,10 @@
     "MAONO Wave T1 Wireless": 1793733452.578614,
     "Huawei Pura 90 Pro Max 12/256GB": 1793735141.9083512,
     "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless": 1793735684.5341609,
-    "OPPO Find X10 Pro Max 12/256GB": 1793736440.319658
+    "OPPO Find X10 Pro Max 12/256GB": 1793736440.319658,
+    "GameSir T4 Nova Lite": 1793736995.9663026
   },
   "published_post_keys": [
-    "zedstoreonline:38709",
     "lodydeals:45917",
     "zedstoreonline:38546",
     "lodydeals:45556",
@@ -3818,19 +3819,20 @@
     "lodydeals:46065",
     "ecksdeal:6033",
     "lodydeals:46066",
-    "lodydeals:46067"
+    "lodydeals:46067",
+    "lodydeals:46068"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793736440.319658,
+  "last_run_time": 1793736995.9663026,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46067,
-      "last_check_time": 1793736442.3700323
+      "last_message_id": 46068,
+      "last_check_time": 1793736997.9989145
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3993,7 +3995,7 @@
     "1005012385221205": 13.27,
     "1005013223462188": 13.5,
     "1005012743092233": 24.37,
-    "1005007805497968": 16.19,
+    "1005007805497968": 19.08,
     "1005007345108759": 19.47,
     "1005007394197021": 14.88,
     "1005012571601398": 271.5,
@@ -14872,6 +14874,16 @@
       "price": 890.6,
       "timestamp": 1793736440.319658,
       "status": "ACTIVE"
+    },
+    "lodydeals:46068": {
+      "channel_msg_id": 1781,
+      "product_id": "1005007805497968",
+      "title": "GameSir T4 Nova Lite",
+      "channel": "lodydeals",
+      "source_msg_id": 46068,
+      "price": 19.08,
+      "timestamp": 1793736995.9663026,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14880,17 +14892,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793736443.1115134,
+    "last_deal_post_time": 1793736998.7098632,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793736803.7773497,
+    "last_sweep_time": 1793737001.0562835,
     "last_sweep_times": {
-      "algeria": 1793736800.5605736,
-      "france": 1793736803.7773497
+      "algeria": 1793736998.6972713,
+      "france": 1793737001.0562835
     },
     "last_deal_post_times": {
-      "algeria": 1793736443.1115134
+      "algeria": 1793736998.7098632
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -16309,7 +16321,8 @@
     "MAONO Wave T1 Wireless": "lodydeals",
     "Huawei Pura 90 Pro Max 12/256GB": "lodydeals",
     "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless": "ecksdeal",
-    "OPPO Find X10 Pro Max 12/256GB": "lodydeals"
+    "OPPO Find X10 Pro Max 12/256GB": "lodydeals",
+    "GameSir T4 Nova Lite": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
