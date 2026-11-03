@@ -618,7 +618,8 @@
     "1005012483329501",
     "1005010044163415",
     "1005012099740266",
-    "1005010462111234"
+    "1005010462111234",
+    "1005006026842392"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793707128.1762419,
@@ -1249,7 +1250,8 @@
     "1005012483329501": 1793707144.6128297,
     "1005010044163415": 1793707149.3437843,
     "1005012099740266": 1793707154.0863686,
-    "1005010462111234": 1793707161.4322476
+    "1005010462111234": 1793707161.4322476,
+    "1005006026842392": 1793707779.0330126
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2012,7 +2014,8 @@
     "Essager Mini 30W",
     "Essager 45W Car Charger",
     "Essager 4in1 Cable 240W",
-    "Realme 14T 5G 12/256GB"
+    "Realme 14T 5G 12/256GB",
+    "Mibro A1 Smartwatch"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2780,10 +2783,10 @@
     "Essager Mini 30W": 1793707149.3437843,
     "Essager 45W Car Charger": 1793707154.0863686,
     "Essager 4in1 Cable 240W": 1793707161.4322476,
-    "Realme 14T 5G 12/256GB": 1793707168.1519766
+    "Realme 14T 5G 12/256GB": 1793707168.1519766,
+    "Mibro A1 Smartwatch": 1793707779.0330126
   },
   "published_post_keys": [
-    "aniscoupons:32709",
     "aniscoupons:32724",
     "couponsglobal:48869",
     "megaphonna:8512",
@@ -3782,19 +3785,20 @@
     "lodydeals:46035",
     "lodydeals:46036",
     "lodydeals:46038",
-    "lodydeals:46039"
+    "lodydeals:46039",
+    "lodydeals:46040"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793707168.1519766,
+  "last_run_time": 1793707779.0330126,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6029,
       "last_check_time": 1793707172.0701895
     },
     "lodydeals": {
-      "last_message_id": 46039,
-      "last_check_time": 1793707170.206086
+      "last_message_id": 46040,
+      "last_check_time": 1793707781.076308
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4345,7 +4349,8 @@
     "1005012483329501": 245.94,
     "1005010044163415": 2.92,
     "1005012099740266": 2.17,
-    "1005010462111234": 2.51
+    "1005010462111234": 2.51,
+    "1005006026842392": 14.91
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -14640,6 +14645,16 @@
       "price": 200.96,
       "timestamp": 1793707168.1519766,
       "status": "ACTIVE"
+    },
+    "lodydeals:46040": {
+      "channel_msg_id": 1757,
+      "product_id": "1005006026842392",
+      "title": "Mibro A1 Smartwatch",
+      "channel": "lodydeals",
+      "source_msg_id": 46040,
+      "price": 14.91,
+      "timestamp": 1793707779.0330126,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14648,17 +14663,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793707172.1167302,
+    "last_deal_post_time": 1793707781.7337728,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793707601.1807063,
+    "last_sweep_time": 1793707784.5662754,
     "last_sweep_times": {
-      "algeria": 1793707597.7941065,
-      "france": 1793707601.1807063
+      "algeria": 1793707781.71487,
+      "france": 1793707784.5662754
     },
     "last_deal_post_times": {
-      "algeria": 1793707172.1167302
+      "algeria": 1793707781.7337728
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15292,7 +15307,8 @@
     "1005012483329501": "lodydeals",
     "1005010044163415": "lodydeals",
     "1005012099740266": "lodydeals",
-    "1005010462111234": "lodydeals"
+    "1005010462111234": "lodydeals",
+    "1005006026842392": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -16060,7 +16076,8 @@
     "Essager Mini 30W": "lodydeals",
     "Essager 45W Car Charger": "lodydeals",
     "Essager 4in1 Cable 240W": "lodydeals",
-    "Realme 14T 5G 12/256GB": "lodydeals"
+    "Realme 14T 5G 12/256GB": "lodydeals",
+    "Mibro A1 Smartwatch": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
