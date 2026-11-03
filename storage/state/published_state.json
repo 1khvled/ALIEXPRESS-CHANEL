@@ -622,7 +622,8 @@
     "1005006026842392",
     "1005011748000554",
     "1005009111757092",
-    "1005013030365524"
+    "1005013030365524",
+    "1005013199719142"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793707128.1762419,
@@ -1259,7 +1260,8 @@
     "COUPONS_gen": 1793728683.0472453,
     "COUPONS_11.11 Global Shopping Festival Main Sale": 1793728683.0472453,
     "1005009111757092": 1793728859.1630292,
-    "1005013030365524": 1793735141.9083512
+    "1005013030365524": 1793735141.9083512,
+    "1005013199719142": 1793735684.5341609
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2031,7 +2033,8 @@
     "HAYLOU S30 Headphones 43dB",
     "UGREEN 65W GaN Charger",
     "MAONO Wave T1 Wireless",
-    "Huawei Pura 90 Pro Max 12/256GB"
+    "Huawei Pura 90 Pro Max 12/256GB",
+    "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2808,10 +2811,10 @@
     "HAYLOU S30 Headphones 43dB": 1793729589.4170802,
     "UGREEN 65W GaN Charger": 1793732921.385459,
     "MAONO Wave T1 Wireless": 1793733452.578614,
-    "Huawei Pura 90 Pro Max 12/256GB": 1793735141.9083512
+    "Huawei Pura 90 Pro Max 12/256GB": 1793735141.9083512,
+    "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless": 1793735684.5341609
   },
   "published_post_keys": [
-    "lodydeals:45455",
     "lodydeals:45536",
     "lodydeals:45583",
     "zedstoreonline:38709",
@@ -3810,15 +3813,16 @@
     "lodydeals:46061",
     "lodydeals:46062",
     "lodydeals:46064",
-    "lodydeals:46065"
+    "lodydeals:46065",
+    "ecksdeal:6033"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793735519.3537216,
+  "last_run_time": 1793735684.5341609,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6032,
-      "last_check_time": 1793733456.3652186
+      "last_message_id": 6033,
+      "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
       "last_message_id": 46065,
@@ -4377,7 +4381,8 @@
     "1005006026842392": 14.91,
     "1005011748000554": 21.36,
     "1005009111757092": 114.9,
-    "1005013030365524": 659.21
+    "1005013030365524": 659.21,
+    "1005013199719142": 52.75
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -14832,6 +14837,16 @@
       "price": 275.11,
       "timestamp": 1793735519.3537216,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6033": {
+      "channel_msg_id": 1778,
+      "product_id": "1005013199719142",
+      "title": "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless",
+      "channel": "ecksdeal",
+      "source_msg_id": 6033,
+      "price": 52.75,
+      "timestamp": 1793735684.5341609,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14840,17 +14855,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793735522.2361295,
+    "last_deal_post_time": 1793735686.5980818,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793735525.0947664,
+    "last_sweep_time": 1793735689.0780282,
     "last_sweep_times": {
-      "algeria": 1793735522.213679,
-      "france": 1793735525.0947664
+      "algeria": 1793735686.5824451,
+      "france": 1793735689.0780282
     },
     "last_deal_post_times": {
-      "algeria": 1793735522.2361295
+      "algeria": 1793735686.5980818
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15488,7 +15503,8 @@
     "1005006026842392": "lodydeals",
     "1005011748000554": "lodydeals",
     "1005009111757092": "lodydeals",
-    "1005013030365524": "lodydeals"
+    "1005013030365524": "lodydeals",
+    "1005013199719142": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -16265,7 +16281,8 @@
     "HAYLOU S30 Headphones 43dB": "lodydeals",
     "UGREEN 65W GaN Charger": "lodydeals",
     "MAONO Wave T1 Wireless": "lodydeals",
-    "Huawei Pura 90 Pro Max 12/256GB": "lodydeals"
+    "Huawei Pura 90 Pro Max 12/256GB": "lodydeals",
+    "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
