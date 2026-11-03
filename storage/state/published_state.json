@@ -721,7 +721,7 @@
     "1005005652871847": 1790976654.120254,
     "1005012554205120": 1791145541.318689,
     "1005008901941749": 1792785032.5334125,
-    "1005010178295650": 1791031559.2102907,
+    "1005010178295650": 1793743848.9735239,
     "1005006861002512": 1791151259.5667012,
     "1005012285327063": 1792360422.5608404,
     "1005006581583862": 1793729589.4170802,
@@ -2098,7 +2098,7 @@
     "Zeblaze Btalk PRO Multiple": 1790941174.1965158,
     "KZ EDX Lite Dynamic": 1791027645.512462,
     "HILDA Laser Rangefinder": 1790941186.791633,
-    "Monster Maxstar MQT52": 1790973057.7979915,
+    "Monster Maxstar MQT52": 1793743848.9735239,
     "QCY T13 True Wireless Earbuds Bluetooth 5.1 Earphones 7.2mm Drivers with": 1790941202.9035249,
     "Blackview Zeno 10 5G  8/128": 1790941207.5310047,
     "Honor Power 2  12/256": 1790941214.6756065,
@@ -2833,7 +2833,6 @@
     "MAONO PD400X USB/XLR": 1793742770.1634803
   },
   "published_post_keys": [
-    "lodydeals:45445",
     "aniscoupons:33267",
     "lodydeals:45528",
     "pcgamingpart:7975",
@@ -3832,19 +3831,20 @@
     "lodydeals:46074",
     "lodydeals:46075",
     "lodydeals:46076",
-    "lodydeals:46077"
+    "lodydeals:46077",
+    "lodydeals:46078"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793742770.1634803,
+  "last_run_time": 1793743848.9735239,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46077,
-      "last_check_time": 1793742772.2107933
+      "last_message_id": 46078,
+      "last_check_time": 1793743851.0139856
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3913,7 +3913,7 @@
     "1005012184442621": 11.15,
     "1005006631309573": 2.55,
     "1005005648888450": 10.09,
-    "1005010178295650": 4.62,
+    "1005010178295650": 6.49,
     "1005006117094928": 32.2,
     "1005006603602562": 181.0,
     "1005010721042860": 363.7,
@@ -14968,6 +14968,16 @@
       "price": 115.5,
       "timestamp": 1793742770.1634803,
       "status": "ACTIVE"
+    },
+    "lodydeals:46078": {
+      "channel_msg_id": 1795,
+      "product_id": "1005010178295650",
+      "title": "Monster Maxstar MQT52",
+      "channel": "lodydeals",
+      "source_msg_id": 46078,
+      "price": 6.49,
+      "timestamp": 1793743848.9735239,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14976,17 +14986,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793742772.9858859,
+    "last_deal_post_time": 1793743851.8757064,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793743652.8967516,
+    "last_sweep_time": 1793743854.6035607,
     "last_sweep_times": {
-      "algeria": 1793743649.779757,
-      "france": 1793743652.8967516
+      "algeria": 1793743851.8583357,
+      "france": 1793743854.6035607
     },
     "last_deal_post_times": {
-      "algeria": 1793742772.9858859
+      "algeria": 1793743851.8757064
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15005,7 +15015,7 @@
     "1005012184442621": "aniscoupons",
     "1005006631309573": "lodydeals",
     "1005005648888450": "lodydeals",
-    "1005010178295650": "couponsglobal",
+    "1005010178295650": "lodydeals",
     "1005006117094928": "zedstoreonline",
     "1005006603602562": "zedstoreonline",
     "1005010721042860": "lodydeals",
