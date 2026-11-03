@@ -668,7 +668,7 @@
     "1005012436000251": 1791992945.451545,
     "1005006750448278": 1790941167.9296343,
     "1005012184442621": 1791146144.850411,
-    "1005006631309573": 1791027645.512462,
+    "1005006631309573": 1793744026.509727,
     "1005005648888450": 1790941186.791633,
     "1005006117094928": 1790941202.9035249,
     "1005006603602562": 1790941207.5310047,
@@ -2096,7 +2096,7 @@
     "AMD Ryzen 5 7600X": 1790941160.7696626,
     "Adapter  8 in 2 USB Hub": 1790941167.9296343,
     "Zeblaze Btalk PRO Multiple": 1790941174.1965158,
-    "KZ EDX Lite Dynamic": 1791027645.512462,
+    "KZ EDX Lite Dynamic": 1793744026.509727,
     "HILDA Laser Rangefinder": 1790941186.791633,
     "Monster Maxstar MQT52": 1793743848.9735239,
     "QCY T13 True Wireless Earbuds Bluetooth 5.1 Earphones 7.2mm Drivers with": 1790941202.9035249,
@@ -2833,7 +2833,6 @@
     "MAONO PD400X USB/XLR": 1793742770.1634803
   },
   "published_post_keys": [
-    "aniscoupons:33267",
     "lodydeals:45528",
     "pcgamingpart:7975",
     "zedstoreonline:38691",
@@ -3832,19 +3831,20 @@
     "lodydeals:46075",
     "lodydeals:46076",
     "lodydeals:46077",
-    "lodydeals:46078"
+    "lodydeals:46078",
+    "lodydeals:46079"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793743848.9735239,
+  "last_run_time": 1793744026.509727,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46078,
-      "last_check_time": 1793743851.0139856
+      "last_message_id": 46079,
+      "last_check_time": 1793744028.5600488
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3911,7 +3911,7 @@
     "1005012436000251": 106.49,
     "1005006750448278": 3.69,
     "1005012184442621": 11.15,
-    "1005006631309573": 2.55,
+    "1005006631309573": 3.49,
     "1005005648888450": 10.09,
     "1005010178295650": 6.49,
     "1005006117094928": 32.2,
@@ -14978,6 +14978,16 @@
       "price": 6.49,
       "timestamp": 1793743848.9735239,
       "status": "ACTIVE"
+    },
+    "lodydeals:46079": {
+      "channel_msg_id": 1796,
+      "product_id": "1005006631309573",
+      "title": "KZ EDX Lite Dynamic",
+      "channel": "lodydeals",
+      "source_msg_id": 46079,
+      "price": 3.49,
+      "timestamp": 1793744026.509727,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14986,17 +14996,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793743851.8757064,
+    "last_deal_post_time": 1793744029.4072442,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793743854.6035607,
+    "last_sweep_time": 1793744032.2461898,
     "last_sweep_times": {
-      "algeria": 1793743851.8583357,
-      "france": 1793743854.6035607
+      "algeria": 1793744029.3843148,
+      "france": 1793744032.2461898
     },
     "last_deal_post_times": {
-      "algeria": 1793743851.8757064
+      "algeria": 1793744029.4072442
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
