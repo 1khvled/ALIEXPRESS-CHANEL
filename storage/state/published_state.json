@@ -625,7 +625,8 @@
     "1005013030365524",
     "1005013199719142",
     "1005013205365677",
-    "1005008429979494"
+    "1005008429979494",
+    "1005004795387201"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793707128.1762419,
@@ -1265,7 +1266,8 @@
     "1005013030365524": 1793735141.9083512,
     "1005013199719142": 1793735684.5341609,
     "1005013205365677": 1793736440.319658,
-    "1005008429979494": 1793741666.9686077
+    "1005008429979494": 1793741666.9686077,
+    "1005004795387201": 1793742770.1634803
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2043,7 +2045,8 @@
     "GameSir T4 Nova Lite",
     "Xiaoxin Pad Pro GT 8/256GB",
     "EasyThreed 3D Printer Entry",
-    "CUSU SSD SATA 1TB"
+    "CUSU SSD SATA 1TB",
+    "MAONO PD400X USB/XLR"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2826,10 +2829,10 @@
     "GameSir T4 Nova Lite": 1793736995.9663026,
     "Xiaoxin Pad Pro GT 8/256GB": 1793737359.999931,
     "EasyThreed 3D Printer Entry": 1793741666.9686077,
-    "CUSU SSD SATA 1TB": 1793742040.7102718
+    "CUSU SSD SATA 1TB": 1793742040.7102718,
+    "MAONO PD400X USB/XLR": 1793742770.1634803
   },
   "published_post_keys": [
-    "lodydeals:45936",
     "lodydeals:45445",
     "aniscoupons:33267",
     "lodydeals:45528",
@@ -3828,19 +3831,20 @@
     "lodydeals:46072",
     "lodydeals:46074",
     "lodydeals:46075",
-    "lodydeals:46076"
+    "lodydeals:46076",
+    "lodydeals:46077"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793742040.7102718,
+  "last_run_time": 1793742770.1634803,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46076,
-      "last_check_time": 1793742042.762503
+      "last_message_id": 46077,
+      "last_check_time": 1793742772.2107933
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4398,7 +4402,8 @@
     "1005013030365524": 659.21,
     "1005013199719142": 52.75,
     "1005013205365677": 890.6,
-    "1005008429979494": 72.7
+    "1005008429979494": 72.7,
+    "1005004795387201": 115.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -14953,6 +14958,16 @@
       "price": 74.7,
       "timestamp": 1793742040.7102718,
       "status": "ACTIVE"
+    },
+    "lodydeals:46077": {
+      "channel_msg_id": 1794,
+      "product_id": "1005004795387201",
+      "title": "MAONO PD400X USB/XLR",
+      "channel": "lodydeals",
+      "source_msg_id": 46077,
+      "price": 115.5,
+      "timestamp": 1793742770.1634803,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14961,17 +14976,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793742043.507545,
+    "last_deal_post_time": 1793742772.9858859,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793742590.6092923,
+    "last_sweep_time": 1793742775.3938954,
     "last_sweep_times": {
-      "algeria": 1793742587.8768845,
-      "france": 1793742590.6092923
+      "algeria": 1793742772.965106,
+      "france": 1793742775.3938954
     },
     "last_deal_post_times": {
-      "algeria": 1793742043.507545
+      "algeria": 1793742772.9858859
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15612,7 +15627,8 @@
     "1005013030365524": "lodydeals",
     "1005013199719142": "ecksdeal",
     "1005013205365677": "lodydeals",
-    "1005008429979494": "lodydeals"
+    "1005008429979494": "lodydeals",
+    "1005004795387201": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -16395,7 +16411,8 @@
     "GameSir T4 Nova Lite": "lodydeals",
     "Xiaoxin Pad Pro GT 8/256GB": "lodydeals",
     "EasyThreed 3D Printer Entry": "lodydeals",
-    "CUSU SSD SATA 1TB": "lodydeals"
+    "CUSU SSD SATA 1TB": "lodydeals",
+    "MAONO PD400X USB/XLR": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
