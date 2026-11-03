@@ -667,7 +667,7 @@
     "1005009357018019": 1790940383.4974926,
     "1005012436000251": 1791992945.451545,
     "1005006750448278": 1790941167.9296343,
-    "1005012184442621": 1791146144.850411,
+    "1005012184442621": 1793744216.8445618,
     "1005006631309573": 1793744026.509727,
     "1005005648888450": 1790941186.791633,
     "1005006117094928": 1790941202.9035249,
@@ -2095,7 +2095,7 @@
     "realme Pad 3 5G Global Version 8/256GB": 1790940388.7188938,
     "AMD Ryzen 5 7600X": 1790941160.7696626,
     "Adapter  8 in 2 USB Hub": 1790941167.9296343,
-    "Zeblaze Btalk PRO Multiple": 1790941174.1965158,
+    "Zeblaze Btalk PRO Multiple": 1793744216.8445618,
     "KZ EDX Lite Dynamic": 1793744026.509727,
     "HILDA Laser Rangefinder": 1790941186.791633,
     "Monster Maxstar MQT52": 1793743848.9735239,
@@ -2833,7 +2833,6 @@
     "MAONO PD400X USB/XLR": 1793742770.1634803
   },
   "published_post_keys": [
-    "lodydeals:45528",
     "pcgamingpart:7975",
     "zedstoreonline:38691",
     "zedstoreonline:38545",
@@ -3832,19 +3831,20 @@
     "lodydeals:46076",
     "lodydeals:46077",
     "lodydeals:46078",
-    "lodydeals:46079"
+    "lodydeals:46079",
+    "lodydeals:46080"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793744026.509727,
+  "last_run_time": 1793744216.8445618,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46079,
-      "last_check_time": 1793744028.5600488
+      "last_message_id": 46080,
+      "last_check_time": 1793744218.8927557
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3910,7 +3910,7 @@
     "1005009357018019": 17.5,
     "1005012436000251": 106.49,
     "1005006750448278": 3.69,
-    "1005012184442621": 11.15,
+    "1005012184442621": 12.69,
     "1005006631309573": 3.49,
     "1005005648888450": 10.09,
     "1005010178295650": 6.49,
@@ -14988,6 +14988,16 @@
       "price": 3.49,
       "timestamp": 1793744026.509727,
       "status": "ACTIVE"
+    },
+    "lodydeals:46080": {
+      "channel_msg_id": 1797,
+      "product_id": "1005012184442621",
+      "title": "Zeblaze Btalk PRO Multiple",
+      "channel": "lodydeals",
+      "source_msg_id": 46080,
+      "price": 12.69,
+      "timestamp": 1793744216.8445618,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14996,17 +15006,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793744029.4072442,
+    "last_deal_post_time": 1793744219.7208624,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793744032.2461898,
+    "last_sweep_time": 1793744222.4525347,
     "last_sweep_times": {
-      "algeria": 1793744029.3843148,
-      "france": 1793744032.2461898
+      "algeria": 1793744219.6996877,
+      "france": 1793744222.4525347
     },
     "last_deal_post_times": {
-      "algeria": 1793744029.4072442
+      "algeria": 1793744219.7208624
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15022,7 +15032,7 @@
     "1005012143831265": "zedstoreonline",
     "1005012436000251": "pcgamingpart",
     "1005006750448278": "lodydeals",
-    "1005012184442621": "aniscoupons",
+    "1005012184442621": "lodydeals",
     "1005006631309573": "lodydeals",
     "1005005648888450": "lodydeals",
     "1005010178295650": "lodydeals",
