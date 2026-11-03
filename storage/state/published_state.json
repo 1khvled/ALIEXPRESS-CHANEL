@@ -719,7 +719,7 @@
     "1005010178295650": 1791031559.2102907,
     "1005006861002512": 1791151259.5667012,
     "1005012285327063": 1792360422.5608404,
-    "1005006581583862": 1791013842.0461159,
+    "1005006581583862": 1793729589.4170802,
     "1005012816171978": 1792157876.0860639,
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791638734.5386465,
@@ -2025,7 +2025,8 @@
     "Somnambulist SSD 128GB",
     "HAYLOU Watch 3 AMOLED",
     "CUSU SSD SATA 256GB",
-    "Blackview OSCAL MARINE 2 8/128"
+    "Blackview OSCAL MARINE 2 8/128",
+    "HAYLOU S30 Headphones 43dB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2798,10 +2799,10 @@
     "Somnambulist SSD 128GB": 1793720742.084677,
     "HAYLOU Watch 3 AMOLED": 1793720747.8731222,
     "CUSU SSD SATA 256GB": 1793728844.5794795,
-    "Blackview OSCAL MARINE 2 8/128": 1793728859.1630292
+    "Blackview OSCAL MARINE 2 8/128": 1793728859.1630292,
+    "HAYLOU S30 Headphones 43dB": 1793729589.4170802
   },
   "published_post_keys": [
-    "couponsglobal:48797",
     "lodydeals:45481",
     "couponsglobal:48774",
     "megaphonna:8562",
@@ -3800,19 +3801,20 @@
     "ecksdeal:6030",
     "lodydeals:46047",
     "lodydeals:46049",
-    "lodydeals:46051"
+    "lodydeals:46051",
+    "lodydeals:46052"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793728859.1630292,
+  "last_run_time": 1793729589.4170802,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6030,
       "last_check_time": 1793727360.6819441
     },
     "lodydeals": {
-      "last_message_id": 46051,
-      "last_check_time": 1793728861.1930044
+      "last_message_id": 46053,
+      "last_check_time": 1793729591.490674
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3923,7 +3925,7 @@
     "1005008901941749": 0.95,
     "1005006861002512": 13.56,
     "1005012285327063": 17.29,
-    "1005006581583862": 25.0,
+    "1005006581583862": 20.91,
     "1005012816171978": 274.46,
     "1005009834132291": 20.04,
     "1005010585654037": 16.8,
@@ -14741,6 +14743,16 @@
       "price": 114.9,
       "timestamp": 1793728859.1630292,
       "status": "ACTIVE"
+    },
+    "lodydeals:46052": {
+      "channel_msg_id": 1765,
+      "product_id": "1005006581583862",
+      "title": "HAYLOU S30 Headphones 43dB",
+      "channel": "lodydeals",
+      "source_msg_id": 46052,
+      "price": 20.91,
+      "timestamp": 1793729589.4170802,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14749,17 +14761,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793728862.0468953,
+    "last_deal_post_time": 1793729592.2528262,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793729415.4079123,
+    "last_sweep_time": 1793729594.8685346,
     "last_sweep_times": {
-      "algeria": 1793729412.8299756,
-      "france": 1793729415.4079123
+      "algeria": 1793729592.2307453,
+      "france": 1793729594.8685346
     },
     "last_deal_post_times": {
-      "algeria": 1793728862.0468953
+      "algeria": 1793729592.2528262
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -14851,7 +14863,7 @@
     "1005012881256093": "lodydeals",
     "1005006861002512": "lodydeals",
     "1005012285327063": "couponsglobal",
-    "1005006581583862": "aniscoupons",
+    "1005006581583862": "lodydeals",
     "1005012816171978": "lodydeals",
     "1005009834132291": "ecksdeal",
     "1005010585654037": "aniscoupons",
@@ -16169,7 +16181,8 @@
     "Somnambulist SSD 128GB": "lodydeals",
     "HAYLOU Watch 3 AMOLED": "lodydeals",
     "CUSU SSD SATA 256GB": "lodydeals",
-    "Blackview OSCAL MARINE 2 8/128": "lodydeals"
+    "Blackview OSCAL MARINE 2 8/128": "lodydeals",
+    "HAYLOU S30 Headphones 43dB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -16868,7 +16881,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "pcgamingpart:7965",
     "ecksdeal:6001",
     "aniscoupons:33315",
     "ecksdeal:5932",
@@ -17867,7 +17879,8 @@
     "lodydeals:46043",
     "lodydeals:46045",
     "lodydeals:46048",
-    "lodydeals:46050"
+    "lodydeals:46050",
+    "lodydeals:46053"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
