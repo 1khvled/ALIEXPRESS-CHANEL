@@ -808,7 +808,7 @@
     "1005013313539058": 1791482965.5086565,
     "9998889315": 1791589315.5172248,
     "COUPONS_54d30f00dccf": 1791626806.6018147,
-    "1005008776714223": 1793478749.3947985,
+    "1005008776714223": 1793742040.7102718,
     "9998886934": 1791626934.8945594,
     "9998887499": 1791627499.229838,
     "9998887532": 1791627532.2548609,
@@ -2042,7 +2042,8 @@
     "OPPO Find X10 Pro Max 12/256GB",
     "GameSir T4 Nova Lite",
     "Xiaoxin Pad Pro GT 8/256GB",
-    "EasyThreed 3D Printer Entry"
+    "EasyThreed 3D Printer Entry",
+    "CUSU SSD SATA 1TB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2824,10 +2825,10 @@
     "OPPO Find X10 Pro Max 12/256GB": 1793736440.319658,
     "GameSir T4 Nova Lite": 1793736995.9663026,
     "Xiaoxin Pad Pro GT 8/256GB": 1793737359.999931,
-    "EasyThreed 3D Printer Entry": 1793741666.9686077
+    "EasyThreed 3D Printer Entry": 1793741666.9686077,
+    "CUSU SSD SATA 1TB": 1793742040.7102718
   },
   "published_post_keys": [
-    "aniscoupons:33224",
     "lodydeals:45936",
     "lodydeals:45445",
     "aniscoupons:33267",
@@ -3826,19 +3827,20 @@
     "lodydeals:46071",
     "lodydeals:46072",
     "lodydeals:46074",
-    "lodydeals:46075"
+    "lodydeals:46075",
+    "lodydeals:46076"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793741666.9686077,
+  "last_run_time": 1793742040.7102718,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46075,
-      "last_check_time": 1793741669.0075462
+      "last_message_id": 46076,
+      "last_check_time": 1793742042.762503
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3962,7 +3964,7 @@
     "1005010470699571": 24.56,
     "1005012741634118": 26.29,
     "1005008554596598": 15.4,
-    "1005008776714223": 24.8,
+    "1005008776714223": 74.7,
     "1005010306498953": 1.46,
     "1005010338761787": 1.49,
     "1005012265051745": 246.04,
@@ -14941,6 +14943,16 @@
       "price": 72.7,
       "timestamp": 1793741666.9686077,
       "status": "ACTIVE"
+    },
+    "lodydeals:46076": {
+      "channel_msg_id": 1793,
+      "product_id": "1005008776714223",
+      "title": "CUSU SSD SATA 1TB",
+      "channel": "lodydeals",
+      "source_msg_id": 46076,
+      "price": 74.7,
+      "timestamp": 1793742040.7102718,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14949,17 +14961,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793741669.6583586,
+    "last_deal_post_time": 1793742043.507545,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793741859.750907,
+    "last_sweep_time": 1793742045.926652,
     "last_sweep_times": {
-      "algeria": 1793741856.6967554,
-      "france": 1793741859.750907
+      "algeria": 1793742043.4838142,
+      "france": 1793742045.926652
     },
     "last_deal_post_times": {
-      "algeria": 1793741669.6583586
+      "algeria": 1793742043.507545
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -16382,7 +16394,8 @@
     "OPPO Find X10 Pro Max 12/256GB": "lodydeals",
     "GameSir T4 Nova Lite": "lodydeals",
     "Xiaoxin Pad Pro GT 8/256GB": "lodydeals",
-    "EasyThreed 3D Printer Entry": "lodydeals"
+    "EasyThreed 3D Printer Entry": "lodydeals",
+    "CUSU SSD SATA 1TB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
