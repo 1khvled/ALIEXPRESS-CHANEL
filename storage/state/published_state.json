@@ -1024,7 +1024,7 @@
     "1005013090910574": 1793707088.599235,
     "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793543612.279949,
-    "1005012910719451": 1793543685.9369972,
+    "1005012910719451": 1793735519.3537216,
     "1005006307798542": 1793467165.446982,
     "1005011787296177": 1793607070.347875,
     "1005007375332966": 1793467173.1692383,
@@ -2629,7 +2629,7 @@
     "UGREEN 4K FHD Webcam 8MP": 1793543664.66204,
     "ASROCK X570M PRO4": 1793543669.2450533,
     "Redmi Note 17 4G 4/128GB": 1793543677.5915465,
-    "OnePlus Turbo 6V  8/256GB": 1793566288.5208008,
+    "OnePlus Turbo 6V  8/256GB": 1793735519.3537216,
     "QCY VN200 Pro 7.1 Wired": 1793656271.0286891,
     "UGREEN Nexode Air 65W GaN": 1793656202.4239671,
     "Honor WIN RT 5G 12/256GB": 1793543733.1622994,
@@ -2811,7 +2811,6 @@
     "Huawei Pura 90 Pro Max 12/256GB": 1793735141.9083512
   },
   "published_post_keys": [
-    "lodydeals:45919",
     "lodydeals:45455",
     "lodydeals:45536",
     "lodydeals:45583",
@@ -3810,19 +3809,20 @@
     "lodydeals:46060",
     "lodydeals:46061",
     "lodydeals:46062",
-    "lodydeals:46064"
+    "lodydeals:46064",
+    "lodydeals:46065"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793735141.9083512,
+  "last_run_time": 1793735519.3537216,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6032,
       "last_check_time": 1793733456.3652186
     },
     "lodydeals": {
-      "last_message_id": 46064,
-      "last_check_time": 1793735143.9566805
+      "last_message_id": 46065,
+      "last_check_time": 1793735521.40234
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4160,7 +4160,7 @@
     "1005013090910574": 192.42,
     "1005012382148199": 469.0,
     "1005010158485058": 66.5,
-    "1005012910719451": 276.52,
+    "1005012910719451": 275.11,
     "1005006307798542": 35.3,
     "1005011787296177": 29.76,
     "1005007375332966": 52.8,
@@ -14822,6 +14822,16 @@
       "price": 659.21,
       "timestamp": 1793735141.9083512,
       "status": "ACTIVE"
+    },
+    "lodydeals:46065": {
+      "channel_msg_id": 1777,
+      "product_id": "1005012910719451",
+      "title": "OnePlus Turbo 6V  8/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46065,
+      "price": 275.11,
+      "timestamp": 1793735519.3537216,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14830,17 +14840,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793735144.6491747,
+    "last_deal_post_time": 1793735522.2361295,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793735351.2498188,
+    "last_sweep_time": 1793735525.0947664,
     "last_sweep_times": {
-      "algeria": 1793735348.009623,
-      "france": 1793735351.2498188
+      "algeria": 1793735522.213679,
+      "france": 1793735525.0947664
     },
     "last_deal_post_times": {
-      "algeria": 1793735144.6491747
+      "algeria": 1793735522.2361295
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
