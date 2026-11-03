@@ -756,7 +756,7 @@
     "1005012826813261": 1791045040.5964694,
     "9998887267": 1791047267.2870219,
     "1005012203827165": 1791050748.149688,
-    "1005009870615222": 1793606535.163351,
+    "1005009870615222": 1793712560.6780183,
     "1005007546468421": 1791217251.8495085,
     "1005006367419820": 1791056153.3979695,
     "1005013046831062": 1791056447.2532988,
@@ -2171,7 +2171,7 @@
     "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light": 1791043842.6639822,
     "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": 1791045040.5964694,
     "RYZEN 7 7800X3D": 1793380373.2463536,
-    "Redmi Note 14S  8/128GB": 1793606535.163351,
+    "Redmi Note 14S  8/128GB": 1793712560.6780183,
     "Attack Shark X AJAZZ AK820": 1791217251.8495085,
     "Baseus Stylus Pen": 1791056153.3979695,
     "46pcs Ratchet Set Kit": 1791056447.2532988,
@@ -2787,7 +2787,6 @@
     "Mibro A1 Smartwatch": 1793707779.0330126
   },
   "published_post_keys": [
-    "aniscoupons:32724",
     "couponsglobal:48869",
     "megaphonna:8512",
     "lodydeals:45561",
@@ -3786,19 +3785,20 @@
     "lodydeals:46036",
     "lodydeals:46038",
     "lodydeals:46039",
-    "lodydeals:46040"
+    "lodydeals:46040",
+    "lodydeals:46042"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793707779.0330126,
+  "last_run_time": 1793712560.6780183,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6029,
       "last_check_time": 1793707172.0701895
     },
     "lodydeals": {
-      "last_message_id": 46041,
-      "last_check_time": 1793712004.146299
+      "last_message_id": 46043,
+      "last_check_time": 1793712563.6407435
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -14655,6 +14655,16 @@
       "price": 14.91,
       "timestamp": 1793707779.0330126,
       "status": "ACTIVE"
+    },
+    "lodydeals:46042": {
+      "channel_msg_id": 1758,
+      "product_id": "1005009870615222",
+      "title": "Redmi Note 14S  8/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46042,
+      "price": 129.88,
+      "timestamp": 1793712560.6780183,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14663,17 +14673,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793707781.7337728,
+    "last_deal_post_time": 1793712564.3495014,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793712375.704945,
+    "last_sweep_time": 1793712567.4148297,
     "last_sweep_times": {
-      "algeria": 1793712372.2380245,
-      "france": 1793712375.704945
+      "algeria": 1793712564.3324387,
+      "france": 1793712567.4148297
     },
     "last_deal_post_times": {
-      "algeria": 1793707781.7337728
+      "algeria": 1793712564.3495014
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -16776,7 +16786,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45754",
     "megaphonna:8356",
     "bnddeals:51015",
     "bnddeals:50900",
@@ -17775,7 +17784,8 @@
     "lodydeals:46033",
     "lodydeals:46037",
     "ecksdeal:6029",
-    "lodydeals:46041"
+    "lodydeals:46041",
+    "lodydeals:46043"
   ],
   "last_france_cross_promo_time": 1793441262.660348,
   "next_france_cross_promo_interval_seconds": 309192,
