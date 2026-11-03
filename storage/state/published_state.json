@@ -1226,7 +1226,7 @@
     "1005010355409000": 1793613934.9347482,
     "1005012648097890": 1793613942.3770478,
     "1005012524603100": 1793613946.9206119,
-    "1005012770405022": 1793613951.963987,
+    "1005012770405022": 1793738297.0536208,
     "1005012171521680": 1793613957.1320925,
     "1005010758512904": 1793613961.7877593,
     "1005012871436251": 1793707168.1519766,
@@ -2683,7 +2683,7 @@
     "VIVO IQOO Z11s 8/128": 1793600120.2797327,
     "Honor WIN Turbo 2  8/256GB": 1793556926.3977697,
     "Realme P3 5G 8/256": 1793557654.0136676,
-    "Lenovo Legion Y900 8/128GB": 1793566244.8077755,
+    "Lenovo Legion Y900 8/128GB": 1793738297.0536208,
     "HOCO ANC EQ34 PLUS": 1793566252.8097658,
     "Magcubic 900ANSI HY350 MAX": 1793612572.9334176,
     "OPPO A7 Pro Max 8/128GB": 1793566274.2309785,
@@ -2823,7 +2823,6 @@
     "Xiaoxin Pad Pro GT 8/256GB": 1793737359.999931
   },
   "published_post_keys": [
-    "zedstoreonline:38546",
     "lodydeals:45556",
     "lodydeals:45575",
     "aniscoupons:33285",
@@ -3822,19 +3821,20 @@
     "lodydeals:46066",
     "lodydeals:46067",
     "lodydeals:46068",
-    "lodydeals:46069"
+    "lodydeals:46069",
+    "lodydeals:46071"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793737359.999931,
+  "last_run_time": 1793738297.0536208,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46070,
-      "last_check_time": 1793737525.3236735
+      "last_message_id": 46071,
+      "last_check_time": 1793738299.092582
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4317,7 +4317,7 @@
     "1005012887486015": 146.25,
     "1005010758512904": 175.8,
     "1005013478918892": 384.42,
-    "1005012770405022": 311.3,
+    "1005012770405022": 311.31,
     "1005010443138358": 6.9,
     "1005013006189646": 415.9,
     "1005011653777805": 23.8,
@@ -14896,6 +14896,16 @@
       "price": 259.54,
       "timestamp": 1793737359.999931,
       "status": "ACTIVE"
+    },
+    "lodydeals:46071": {
+      "channel_msg_id": 1789,
+      "product_id": "1005012770405022",
+      "title": "Lenovo Legion Y900 8/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46071,
+      "price": 311.31,
+      "timestamp": 1793738297.0536208,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -14904,17 +14914,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793737362.9153817,
+    "last_deal_post_time": 1793738299.9550674,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793738094.1531649,
+    "last_sweep_time": 1793738302.9716847,
     "last_sweep_times": {
-      "algeria": 1793738092.0030243,
-      "france": 1793738094.1531649
+      "algeria": 1793738299.9379635,
+      "france": 1793738302.9716847
     },
     "last_deal_post_times": {
-      "algeria": 1793737362.9153817
+      "algeria": 1793738299.9550674
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15479,7 +15489,7 @@
     "1005012887486015": "lodydeals",
     "1005010758512904": "aniscoupons",
     "1005013478918892": "lodydeals",
-    "1005012770405022": "aniscoupons",
+    "1005012770405022": "lodydeals",
     "1005010443138358": "lodydeals",
     "1005013006189646": "lodydeals",
     "1005011653777805": "lodydeals",
