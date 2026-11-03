@@ -1253,7 +1253,9 @@
     "1005012099740266": 1793707154.0863686,
     "1005010462111234": 1793707161.4322476,
     "1005006026842392": 1793707779.0330126,
-    "1005011748000554": 1793720747.8731222
+    "1005011748000554": 1793720747.8731222,
+    "COUPONS_gen": 1793728683.0472453,
+    "COUPONS_11.11 Global Shopping Festival Main Sale": 1793728683.0472453
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -14714,10 +14716,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793728481.5413315,
+    "last_sweep_time": 1793728688.3345873,
     "last_sweep_times": {
-      "algeria": 1793728473.6537392,
-      "france": 1793728481.5413315
+      "algeria": 1793728675.2913032,
+      "france": 1793728688.3345873
     },
     "last_deal_post_times": {
       "algeria": 1793727360.7089527
@@ -17840,17 +17842,6 @@
       ],
       "channel_msg_id": 9999,
       "channel": "@DzAliexpress0",
-      "timestamp": 1792157572.3070884
-    },
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
       "timestamp": 1792157807.4905038
     },
     {
@@ -18380,6 +18371,14 @@
       "channel_msg_id": 9999,
       "channel": "@DzAliexpress0",
       "timestamp": 1793542235.8968582
+    },
+    {
+      "promo": "11.11 Global Shopping Festival Main Sale",
+      "hash": "gen",
+      "codes": [],
+      "channel_msg_id": 256,
+      "channel": "@francedealsdz",
+      "timestamp": 1793728683.0472453
     }
   ],
   "last_pre_11_11_advisory_time": 1793542239.3502576,
