@@ -1256,7 +1256,7 @@
     "1005010419207841": 1793656214.2446048,
     "1005011891052345": 1793706864.9165008,
     "1005009648930854": 1793707047.5983977,
-    "1005010184029817": 1793707076.3653712,
+    "1005010184029817": 1793794075.3624413,
     "1005006302799297": 1793707108.6257114,
     "1005013372330447": 1793707119.4932482,
     "1005012305564176": 1793707135.2600253,
@@ -2820,7 +2820,7 @@
     "Leaven X3 RGB Magnetic 1600DPI": 1793707047.5983977,
     "CUSU DDR5 32GB(16GBX2) 5600MHz": 1793707052.9762022,
     "HONOR X70 5G 8/128GB": 1793707067.6841128,
-    "CMF Buds 2a ANC -42dB": 1793707076.3653712,
+    "CMF Buds 2a ANC -42dB": 1793794075.3624413,
     "CUSU SSD 256GB M2 NVMe": 1793707081.0327315,
     "OPPO A6 PRO 12/256GB": 1793793726.6494405,
     "Attack Shark R1 PAW3311": 1793707094.3712285,
@@ -2855,7 +2855,6 @@
     "Zeblaze Btalk 3 Plus": 1793793774.6743867
   },
   "published_post_keys": [
-    "aniscoupons:32758",
     "couponsglobal:48773",
     "aniscoupons:32710",
     "zedstoreonline:38845",
@@ -3854,19 +3853,20 @@
     "lodydeals:46100",
     "lodydeals:46102",
     "lodydeals:46103",
-    "lodydeals:46104"
+    "lodydeals:46104",
+    "lodydeals:46105"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793793774.6743867,
+  "last_run_time": 1793794075.3624413,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46104,
-      "last_check_time": 1793793776.7193325
+      "last_message_id": 46105,
+      "last_check_time": 1793794077.399154
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -15185,6 +15185,16 @@
       "price": 31.07,
       "timestamp": 1793793774.6743867,
       "status": "ACTIVE"
+    },
+    "lodydeals:46105": {
+      "channel_msg_id": 1821,
+      "product_id": "1005010184029817",
+      "title": "CMF Buds 2a ANC -42dB",
+      "channel": "lodydeals",
+      "source_msg_id": 46105,
+      "price": 9.8,
+      "timestamp": 1793794075.3624413,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15193,17 +15203,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793793777.6475694,
+    "last_deal_post_time": 1793794078.1961823,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793793905.3260424,
+    "last_sweep_time": 1793794083.1255138,
     "last_sweep_times": {
-      "algeria": 1793793900.7031293,
-      "france": 1793793905.3260424
+      "algeria": 1793794078.1792452,
+      "france": 1793794083.1255138
     },
     "last_deal_post_times": {
-      "algeria": 1793793777.6475694
+      "algeria": 1793794078.1961823
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
