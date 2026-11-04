@@ -15073,10 +15073,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793779914.4237082,
+    "last_sweep_time": 1793786358.3116026,
     "last_sweep_times": {
-      "algeria": 1793779910.819691,
-      "france": 1793779914.4237082
+      "algeria": 1793786353.8198462,
+      "france": 1793786358.3116026
     },
     "last_deal_post_times": {
       "algeria": 1793779910.841864
@@ -17256,8 +17256,8 @@
     "LAUNCH_ALERT_Winter Offers_20261014",
     "LAUNCH_ALERT_11.11 Global Shopping Festival Main Sale_20261101"
   ],
-  "last_card_affiliate_time_dz": 1793695265.666904,
-  "card_affiliate_variant_idx_dz": 2,
+  "last_card_affiliate_time_dz": 1793786350.791278,
+  "card_affiliate_variant_idx_dz": 0,
   "last_tajmi3at_published_time": 1793737936.879746,
   "published_deals_history": {},
   "settings": {},
