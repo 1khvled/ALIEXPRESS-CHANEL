@@ -632,7 +632,8 @@
     "1005005058037424",
     "1005012946895000",
     "1005012150344482",
-    "1005006972551834"
+    "1005006972551834",
+    "1005010169268165"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1279,7 +1280,8 @@
     "1005005058037424": 1793779907.9964287,
     "1005012946895000": 1793793714.105913,
     "1005012150344482": 1793793748.870438,
-    "1005006972551834": 1793793774.6743867
+    "1005006972551834": 1793793774.6743867,
+    "1005010169268165": 1793794440.9453664
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2063,7 +2065,8 @@
     "KOOTION X15 M.2 Nvme 512GB",
     "HAYLOU Solar Neo 2 AMOLED",
     "ESSAGER 45W Car Charger",
-    "Zeblaze Btalk 3 Plus"
+    "Zeblaze Btalk 3 Plus",
+    "BOYA mini 2 Wireless"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2852,10 +2855,10 @@
     "KOOTION X15 M.2 Nvme 512GB": 1793779899.2858438,
     "HAYLOU Solar Neo 2 AMOLED": 1793793748.870438,
     "ESSAGER 45W Car Charger": 1793793769.5631576,
-    "Zeblaze Btalk 3 Plus": 1793793774.6743867
+    "Zeblaze Btalk 3 Plus": 1793793774.6743867,
+    "BOYA mini 2 Wireless": 1793794440.9453664
   },
   "published_post_keys": [
-    "couponsglobal:48773",
     "aniscoupons:32710",
     "zedstoreonline:38845",
     "aniscoupons:32792",
@@ -3854,19 +3857,20 @@
     "lodydeals:46102",
     "lodydeals:46103",
     "lodydeals:46104",
-    "lodydeals:46105"
+    "lodydeals:46105",
+    "lodydeals:46106"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793794075.3624413,
+  "last_run_time": 1793794440.9453664,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46105,
-      "last_check_time": 1793794077.399154
+      "last_message_id": 46107,
+      "last_check_time": 1793794444.084217
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4430,7 +4434,8 @@
     "1005008366962319": 48.25,
     "1005005058037424": 34.67,
     "1005012946895000": 142.59,
-    "1005006972551834": 31.07
+    "1005006972551834": 31.07,
+    "1005010169268165": 19.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -15195,6 +15200,16 @@
       "price": 9.8,
       "timestamp": 1793794075.3624413,
       "status": "ACTIVE"
+    },
+    "lodydeals:46106": {
+      "channel_msg_id": 1822,
+      "product_id": "1005010169268165",
+      "title": "BOYA mini 2 Wireless",
+      "channel": "lodydeals",
+      "source_msg_id": 46106,
+      "price": 19.6,
+      "timestamp": 1793794440.9453664,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15203,17 +15218,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793794078.1961823,
+    "last_deal_post_time": 1793794444.8785474,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793794259.2472854,
+    "last_sweep_time": 1793794448.2184174,
     "last_sweep_times": {
-      "algeria": 1793794255.0623357,
-      "france": 1793794259.2472854
+      "algeria": 1793794444.855257,
+      "france": 1793794448.2184174
     },
     "last_deal_post_times": {
-      "algeria": 1793794078.1961823
+      "algeria": 1793794444.8785474
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15860,7 +15875,8 @@
     "1005008366962319": "lodydeals",
     "1005005058037424": "lodydeals",
     "1005012946895000": "lodydeals",
-    "1005006972551834": "lodydeals"
+    "1005006972551834": "lodydeals",
+    "1005010169268165": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -16649,7 +16665,8 @@
     "KOOTION X15 M.2 Nvme 512GB": "lodydeals",
     "HAYLOU Solar Neo 2 AMOLED": "lodydeals",
     "ESSAGER 45W Car Charger": "lodydeals",
-    "Zeblaze Btalk 3 Plus": "lodydeals"
+    "Zeblaze Btalk 3 Plus": "lodydeals",
+    "BOYA mini 2 Wireless": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -17401,7 +17418,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45590",
     "lodydeals:45887",
     "zedstoreonline:38765",
     "aniscoupons:32930",
@@ -18400,7 +18416,8 @@
     "lodydeals:46089",
     "lodydeals:46096",
     "lodydeals:46098",
-    "lodydeals:46101"
+    "lodydeals:46101",
+    "lodydeals:46107"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
