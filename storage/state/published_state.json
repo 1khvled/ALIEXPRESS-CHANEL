@@ -1134,7 +1134,7 @@
     "1005005905462505": 1793542560.6809025,
     "1005008248133489": 1793656129.0102158,
     "1005008684239370": 1793733452.578614,
-    "1005011583202464": 1793542586.8414407,
+    "1005011583202464": 1793809046.6886706,
     "1005009921069024": 1793542597.6187797,
     "1005009916209766": 1793542607.3688066,
     "1005012537594921": 1793542611.8880281,
@@ -2642,7 +2642,7 @@
     "مايكروفون Maono DGM20 Condenser USB Mic": 1793542571.5615325,
     "مايكروفون Fifine Ampligame A2 Condenser USB Mic": 1793542577.5838556,
     "مايكروفون لاسلكي Maono T1 Mini Wireless": 1793542582.419509,
-    "مايكروفون ديناميكي لاسلكي Maono PD100W Dynamic Wireless USB Mic": 1793542586.8414407,
+    "مايكروفون ديناميكي لاسلكي Maono PD100W Dynamic Wireless USB Mic": 1793809046.6886706,
     "مايكروفون لاسلكي BOYA BM V10": 1793542597.6187797,
     "يد تحكم لاسلكية EasySMX X05 PRO RGB Wireless Hall Effect Ultimate": 1793542602.1938312,
     "كيبورد ميكانيكي Ajazz NK61 Red Switch": 1793542607.3688066,
@@ -2859,7 +2859,6 @@
     "BOYA mini 2 Wireless": 1793794440.9453664
   },
   "published_post_keys": [
-    "aniscoupons:32710",
     "zedstoreonline:38845",
     "aniscoupons:32792",
     "test_channel:1791677994",
@@ -3858,15 +3857,16 @@
     "lodydeals:46103",
     "lodydeals:46104",
     "lodydeals:46105",
-    "lodydeals:46106"
+    "lodydeals:46106",
+    "ecksdeal:6034"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793794440.9453664,
+  "last_run_time": 1793809046.6886706,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6033,
-      "last_check_time": 1793735686.5682385
+      "last_message_id": 6034,
+      "last_check_time": 1793809048.7373407
     },
     "lodydeals": {
       "last_message_id": 46107,
@@ -15210,6 +15210,16 @@
       "price": 19.6,
       "timestamp": 1793794440.9453664,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6034": {
+      "channel_msg_id": 1823,
+      "product_id": "1005011583202464",
+      "title": "مايكروفون ديناميكي لاسلكي Maono PD100W Dynamic Wireless USB Mic",
+      "channel": "ecksdeal",
+      "source_msg_id": 6034,
+      "price": 56.09,
+      "timestamp": 1793809046.6886706,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15218,17 +15228,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793794444.8785474,
+    "last_deal_post_time": 1793809048.7812946,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793807466.5652728,
+    "last_sweep_time": 1793809051.7398608,
     "last_sweep_times": {
-      "algeria": 1793807464.1652188,
-      "france": 1793807466.5652728
+      "algeria": 1793809048.7595186,
+      "france": 1793809051.7398608
     },
     "last_deal_post_times": {
-      "algeria": 1793794444.8785474
+      "algeria": 1793809048.7812946
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
