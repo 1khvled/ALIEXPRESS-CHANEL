@@ -627,7 +627,9 @@
     "1005013205365677",
     "1005008429979494",
     "1005004795387201",
-    "1005010702983351"
+    "1005010702983351",
+    "1005008366962319",
+    "1005005058037424"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793707128.1762419,
@@ -1269,7 +1271,9 @@
     "1005013205365677": 1793736440.319658,
     "1005008429979494": 1793741666.9686077,
     "1005004795387201": 1793742770.1634803,
-    "1005010702983351": 1793745097.300649
+    "1005010702983351": 1793779903.687306,
+    "1005008366962319": 1793779899.2858438,
+    "1005005058037424": 1793779907.9964287
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2049,7 +2053,8 @@
     "EasyThreed 3D Printer Entry",
     "CUSU SSD SATA 1TB",
     "MAONO PD400X USB/XLR",
-    "HyperX Cloud 3 DTS"
+    "HyperX Cloud 3 DTS",
+    "KOOTION X15 M.2 Nvme 512GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2819,7 +2824,7 @@
     "Essager 4in1 Cable 240W": 1793707161.4322476,
     "Realme 14T 5G 12/256GB": 1793707168.1519766,
     "Mibro A1 Smartwatch": 1793707779.0330126,
-    "Somnambulist SSD 128GB": 1793720742.084677,
+    "Somnambulist SSD 128GB": 1793779907.9964287,
     "HAYLOU Watch 3 AMOLED": 1793720747.8731222,
     "CUSU SSD SATA 256GB": 1793728844.5794795,
     "Blackview OSCAL MARINE 2 8/128": 1793728859.1630292,
@@ -2834,12 +2839,10 @@
     "EasyThreed 3D Printer Entry": 1793741666.9686077,
     "CUSU SSD SATA 1TB": 1793742040.7102718,
     "MAONO PD400X USB/XLR": 1793742770.1634803,
-    "HyperX Cloud 3 DTS": 1793745097.300649
+    "HyperX Cloud 3 DTS": 1793779903.687306,
+    "KOOTION X15 M.2 Nvme 512GB": 1793779899.2858438
   },
   "published_post_keys": [
-    "zedstoreonline:38545",
-    "test_channel:1791627532",
-    "megaphonna:8628",
     "lodydeals:45453",
     "zedstoreonline:38610",
     "test_channel:1792183569",
@@ -3836,19 +3839,22 @@
     "lodydeals:46079",
     "lodydeals:46080",
     "lodydeals:46082",
-    "lodydeals:46083"
+    "lodydeals:46083",
+    "lodydeals:46085",
+    "lodydeals:46087",
+    "lodydeals:46088"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793745640.3719149,
+  "last_run_time": 1793779907.9964287,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6033,
       "last_check_time": 1793735686.5682385
     },
     "lodydeals": {
-      "last_message_id": 46083,
-      "last_check_time": 1793745642.4013267
+      "last_message_id": 46088,
+      "last_check_time": 1793779910.0450885
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4408,7 +4414,9 @@
     "1005013205365677": 890.6,
     "1005008429979494": 72.7,
     "1005004795387201": 115.5,
-    "1005010702983351": 76.7
+    "1005010702983351": 71.4,
+    "1005008366962319": 48.25,
+    "1005005058037424": 34.67
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -15023,6 +15031,36 @@
       "price": 98.79,
       "timestamp": 1793745640.3719149,
       "status": "ACTIVE"
+    },
+    "lodydeals:46085": {
+      "channel_msg_id": 1806,
+      "product_id": "1005008366962319",
+      "title": "KOOTION X15 M.2 Nvme 512GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46085,
+      "price": 48.25,
+      "timestamp": 1793779899.2858438,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46087": {
+      "channel_msg_id": 1807,
+      "product_id": "1005010702983351",
+      "title": "HyperX Cloud 3 DTS",
+      "channel": "lodydeals",
+      "source_msg_id": 46087,
+      "price": 71.4,
+      "timestamp": 1793779903.687306,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46088": {
+      "channel_msg_id": 1808,
+      "product_id": "1005005058037424",
+      "title": "Somnambulist SSD 128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46088,
+      "price": 34.67,
+      "timestamp": 1793779907.9964287,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15031,17 +15069,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793745643.0790136,
+    "last_deal_post_time": 1793779910.841864,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793757192.8103037,
+    "last_sweep_time": 1793779914.4237082,
     "last_sweep_times": {
-      "algeria": 1793757188.7599268,
-      "france": 1793757192.8103037
+      "algeria": 1793779910.819691,
+      "france": 1793779914.4237082
     },
     "last_deal_post_times": {
-      "algeria": 1793745643.0790136
+      "algeria": 1793779910.841864
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15684,7 +15722,9 @@
     "1005013205365677": "lodydeals",
     "1005008429979494": "lodydeals",
     "1005004795387201": "lodydeals",
-    "1005010702983351": "lodydeals"
+    "1005010702983351": "lodydeals",
+    "1005008366962319": "lodydeals",
+    "1005005058037424": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -16469,7 +16509,8 @@
     "EasyThreed 3D Printer Entry": "lodydeals",
     "CUSU SSD SATA 1TB": "lodydeals",
     "MAONO PD400X USB/XLR": "lodydeals",
-    "HyperX Cloud 3 DTS": "lodydeals"
+    "HyperX Cloud 3 DTS": "lodydeals",
+    "KOOTION X15 M.2 Nvme 512GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -17221,8 +17262,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:5898",
-    "megaphonna:8358",
     "aniscoupons:33008",
     "zedstoreonline:38900",
     "lodydeals:45836",
@@ -18220,11 +18259,13 @@
     "lodydeals:46063",
     "lodydeals:46070",
     "lodydeals:46073",
-    "lodydeals:46081"
+    "lodydeals:46081",
+    "lodydeals:46084",
+    "lodydeals:46086"
   ],
-  "last_france_cross_promo_time": 1793441262.660348,
-  "next_france_cross_promo_interval_seconds": 309192,
-  "france_cross_promo_variant_idx": 2,
+  "last_france_cross_promo_time": 1793779890.1987555,
+  "next_france_cross_promo_interval_seconds": 175459,
+  "france_cross_promo_variant_idx": 3,
   "published_coupon_bulletins": [
     {
       "promo": "Test Event 2026",
