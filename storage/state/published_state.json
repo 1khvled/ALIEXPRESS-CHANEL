@@ -1275,7 +1275,7 @@
     "1005013205365677": 1793736440.319658,
     "1005008429979494": 1793741666.9686077,
     "1005004795387201": 1793742770.1634803,
-    "1005010702983351": 1793779903.687306,
+    "1005010702983351": 1793895024.6524682,
     "1005008366962319": 1793779899.2858438,
     "1005005058037424": 1793779907.9964287,
     "1005012946895000": 1793793714.105913,
@@ -2066,7 +2066,8 @@
     "HAYLOU Solar Neo 2 AMOLED",
     "ESSAGER 45W Car Charger",
     "Zeblaze Btalk 3 Plus",
-    "BOYA mini 2 Wireless"
+    "BOYA mini 2 Wireless",
+    "سماعات فخمة HyperX Cloud 3"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2856,10 +2857,10 @@
     "HAYLOU Solar Neo 2 AMOLED": 1793793748.870438,
     "ESSAGER 45W Car Charger": 1793793769.5631576,
     "Zeblaze Btalk 3 Plus": 1793793774.6743867,
-    "BOYA mini 2 Wireless": 1793794440.9453664
+    "BOYA mini 2 Wireless": 1793794440.9453664,
+    "سماعات فخمة HyperX Cloud 3": 1793895024.6524682
   },
   "published_post_keys": [
-    "zedstoreonline:38845",
     "aniscoupons:32792",
     "test_channel:1791677994",
     "test_channel:1791676905",
@@ -3858,15 +3859,16 @@
     "lodydeals:46104",
     "lodydeals:46105",
     "lodydeals:46106",
-    "ecksdeal:6034"
+    "ecksdeal:6034",
+    "ecksdeal:6039"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793809046.6886706,
+  "last_run_time": 1793895024.6524682,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6038,
-      "last_check_time": 1793888774.9063504
+      "last_message_id": 6039,
+      "last_check_time": 1793895026.7210338
     },
     "lodydeals": {
       "last_message_id": 46107,
@@ -4430,7 +4432,7 @@
     "1005013205365677": 890.6,
     "1005008429979494": 72.7,
     "1005004795387201": 115.5,
-    "1005010702983351": 71.4,
+    "1005010702983351": 69.9,
     "1005008366962319": 48.25,
     "1005005058037424": 34.67,
     "1005012946895000": 142.59,
@@ -15220,6 +15222,16 @@
       "price": 56.09,
       "timestamp": 1793809046.6886706,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6039": {
+      "channel_msg_id": 1841,
+      "product_id": "1005010702983351",
+      "title": "سماعات فخمة HyperX Cloud 3",
+      "channel": "ecksdeal",
+      "source_msg_id": 6039,
+      "price": 69.9,
+      "timestamp": 1793895024.6524682,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15228,17 +15240,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793809048.7812946,
+    "last_deal_post_time": 1793895026.74588,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793894838.155686,
+    "last_sweep_time": 1793895029.675175,
     "last_sweep_times": {
-      "algeria": 1793894835.4135408,
-      "france": 1793894838.155686
+      "algeria": 1793895026.7337787,
+      "france": 1793895029.675175
     },
     "last_deal_post_times": {
-      "algeria": 1793809048.7812946
+      "algeria": 1793895026.74588
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15881,7 +15893,7 @@
     "1005013205365677": "lodydeals",
     "1005008429979494": "lodydeals",
     "1005004795387201": "lodydeals",
-    "1005010702983351": "lodydeals",
+    "1005010702983351": "ecksdeal",
     "1005008366962319": "lodydeals",
     "1005005058037424": "lodydeals",
     "1005012946895000": "lodydeals",
@@ -16676,7 +16688,8 @@
     "HAYLOU Solar Neo 2 AMOLED": "lodydeals",
     "ESSAGER 45W Car Charger": "lodydeals",
     "Zeblaze Btalk 3 Plus": "lodydeals",
-    "BOYA mini 2 Wireless": "lodydeals"
+    "BOYA mini 2 Wireless": "lodydeals",
+    "سماعات فخمة HyperX Cloud 3": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
