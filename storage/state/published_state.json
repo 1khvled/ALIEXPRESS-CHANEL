@@ -3865,8 +3865,8 @@
   "last_run_time": 1793809046.6886706,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6036,
-      "last_check_time": 1793870114.0774372
+      "last_message_id": 6038,
+      "last_check_time": 1793888774.9063504
     },
     "lodydeals": {
       "last_message_id": 46107,
@@ -15232,10 +15232,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793870117.7737842,
+    "last_sweep_time": 1793888778.3219926,
     "last_sweep_times": {
-      "algeria": 1793870114.1016324,
-      "france": 1793870117.7737842
+      "algeria": 1793888774.9314785,
+      "france": 1793888778.3219926
     },
     "last_deal_post_times": {
       "algeria": 1793809048.7812946
@@ -17446,13 +17446,12 @@
     "LAUNCH_ALERT_Winter Offers_20261014",
     "LAUNCH_ALERT_11.11 Global Shopping Festival Main Sale_20261101"
   ],
-  "last_card_affiliate_time_dz": 1793786350.791278,
-  "card_affiliate_variant_idx_dz": 0,
+  "last_card_affiliate_time_dz": 1793888771.023496,
+  "card_affiliate_variant_idx_dz": 1,
   "last_tajmi3at_published_time": 1793824321.3066487,
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:32930",
     "lodydeals:45511",
     "zedstoreonline:38712",
     "megaphonna:8690",
@@ -18451,7 +18450,8 @@
     "lodydeals:46101",
     "lodydeals:46107",
     "ecksdeal:6035",
-    "ecksdeal:6036"
+    "ecksdeal:6036",
+    "ecksdeal:6038"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
@@ -19005,9 +19005,9 @@
       "timestamp": 1793728683.0472453
     }
   ],
-  "last_pre_11_11_advisory_time": 1793542239.3502576,
-  "next_pre_11_11_interval_seconds": 342743,
-  "pre_11_11_variant_idx": 1,
+  "last_pre_11_11_advisory_time": 1793888771.809383,
+  "next_pre_11_11_interval_seconds": 274680,
+  "pre_11_11_variant_idx": 2,
   "published_title_prices": {},
   "daily_fahras_history": {
     "phones_part_1": 1793600442.6369503,
