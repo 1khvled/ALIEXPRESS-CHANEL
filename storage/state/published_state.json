@@ -633,7 +633,8 @@
     "1005012946895000",
     "1005012150344482",
     "1005006972551834",
-    "1005010169268165"
+    "1005010169268165",
+    "1005010702038861"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1281,7 +1282,8 @@
     "1005012946895000": 1793793714.105913,
     "1005012150344482": 1793793748.870438,
     "1005006972551834": 1793793774.6743867,
-    "1005010169268165": 1793794440.9453664
+    "1005010169268165": 1793794440.9453664,
+    "1005010702038861": 1793895388.951633
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2067,7 +2069,8 @@
     "ESSAGER 45W Car Charger",
     "Zeblaze Btalk 3 Plus",
     "BOYA mini 2 Wireless",
-    "سماعات فخمة HyperX Cloud 3"
+    "سماعات فخمة HyperX Cloud 3",
+    "سماعات HyperX Cloud Earbuds 2"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2858,10 +2861,10 @@
     "ESSAGER 45W Car Charger": 1793793769.5631576,
     "Zeblaze Btalk 3 Plus": 1793793774.6743867,
     "BOYA mini 2 Wireless": 1793794440.9453664,
-    "سماعات فخمة HyperX Cloud 3": 1793895024.6524682
+    "سماعات فخمة HyperX Cloud 3": 1793895024.6524682,
+    "سماعات HyperX Cloud Earbuds 2": 1793895388.951633
   },
   "published_post_keys": [
-    "aniscoupons:32792",
     "test_channel:1791677994",
     "test_channel:1791676905",
     "megaphonna:8596",
@@ -3860,15 +3863,16 @@
     "lodydeals:46105",
     "lodydeals:46106",
     "ecksdeal:6034",
-    "ecksdeal:6039"
+    "ecksdeal:6039",
+    "ecksdeal:6040"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793895024.6524682,
+  "last_run_time": 1793895388.951633,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6039,
-      "last_check_time": 1793895026.7210338
+      "last_message_id": 6040,
+      "last_check_time": 1793895391.0321677
     },
     "lodydeals": {
       "last_message_id": 46107,
@@ -4437,7 +4441,8 @@
     "1005005058037424": 34.67,
     "1005012946895000": 142.59,
     "1005006972551834": 31.07,
-    "1005010169268165": 19.6
+    "1005010169268165": 19.6,
+    "1005010702038861": 18.12
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -15232,6 +15237,16 @@
       "price": 69.9,
       "timestamp": 1793895024.6524682,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6040": {
+      "channel_msg_id": 1842,
+      "product_id": "1005010702038861",
+      "title": "سماعات HyperX Cloud Earbuds 2",
+      "channel": "ecksdeal",
+      "source_msg_id": 6040,
+      "price": 18.12,
+      "timestamp": 1793895388.951633,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15240,17 +15255,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793895026.74588,
+    "last_deal_post_time": 1793895391.057334,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793895029.675175,
+    "last_sweep_time": 1793895394.2617526,
     "last_sweep_times": {
-      "algeria": 1793895026.7337787,
-      "france": 1793895029.675175
+      "algeria": 1793895391.0451732,
+      "france": 1793895394.2617526
     },
     "last_deal_post_times": {
-      "algeria": 1793895026.74588
+      "algeria": 1793895391.057334
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
@@ -15898,7 +15913,8 @@
     "1005005058037424": "lodydeals",
     "1005012946895000": "lodydeals",
     "1005006972551834": "lodydeals",
-    "1005010169268165": "lodydeals"
+    "1005010169268165": "lodydeals",
+    "1005010702038861": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -16689,7 +16705,8 @@
     "ESSAGER 45W Car Charger": "lodydeals",
     "Zeblaze Btalk 3 Plus": "lodydeals",
     "BOYA mini 2 Wireless": "lodydeals",
-    "سماعات فخمة HyperX Cloud 3": "ecksdeal"
+    "سماعات فخمة HyperX Cloud 3": "ecksdeal",
+    "سماعات HyperX Cloud Earbuds 2": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
