@@ -736,7 +736,7 @@
     "1005010178295650": 1793743848.9735239,
     "1005006861002512": 1791151259.5667012,
     "1005012285327063": 1792360422.5608404,
-    "1005006581583862": 1793793753.8135507,
+    "1005006581583862": 1793913766.8714123,
     "1005012816171978": 1792157876.0860639,
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791638734.5386465,
@@ -821,7 +821,7 @@
     "1005013313539058": 1791482965.5086565,
     "9998889315": 1791589315.5172248,
     "COUPONS_54d30f00dccf": 1791626806.6018147,
-    "1005008776714223": 1793742040.7102718,
+    "1005008776714223": 1793913777.3174822,
     "9998886934": 1791626934.8945594,
     "9998887499": 1791627499.229838,
     "9998887532": 1791627532.2548609,
@@ -1051,7 +1051,7 @@
     "1005011790544318": 1793448745.105644,
     "1005010266614743": 1793380310.000534,
     "1005006990064696": 1793380320.7842646,
-    "1005013254642366": 1793566329.6306164,
+    "1005013254642366": 1793913781.9155498,
     "1005012725188908": 1793467076.3852122,
     "1005013224329670": 1793380335.1434295,
     "1005010039614599": 1793607798.5770764,
@@ -2084,7 +2084,8 @@
     "سماعات فخمة HyperX Cloud 2",
     "CUSU Nexdrive P60 512GB",
     "HONOR PAD X8A 4/64GB",
-    "Magcubic HY300 Pro Projector"
+    "Magcubic HY300 Pro Projector",
+    "CUSU SSD SATA3"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2736,7 +2737,7 @@
     "iQOO Neo 11 Ultra 12/256": 1793566310.8398705,
     "ATTACK SHARK V6 25000DPI": 1793566315.7447746,
     "UGREEN FitBuds Bluetooth 6.0": 1793613871.2148516,
-    "Ugreen Smart Display 45W": 1793566329.6306164,
+    "Ugreen Smart Display 45W": 1793913781.9155498,
     "Ugreen Nexode Air 100W": 1793566334.1942697,
     "SMAILWOLF RS7 PAW3311": 1793567337.0235388,
     "Redmi Buds 6 Active": 1793613510.8543386,
@@ -2858,7 +2859,7 @@
     "HAYLOU Watch 3 AMOLED": 1793793759.2206655,
     "CUSU SSD SATA 256GB": 1793728844.5794795,
     "Blackview OSCAL MARINE 2 8/128": 1793728859.1630292,
-    "HAYLOU S30 Headphones 43dB": 1793793753.8135507,
+    "HAYLOU S30 Headphones 43dB": 1793913766.8714123,
     "UGREEN 65W GaN Charger": 1793732921.385459,
     "MAONO Wave T1 Wireless": 1793733452.578614,
     "Huawei Pura 90 Pro Max 12/256GB": 1793735141.9083512,
@@ -2882,12 +2883,10 @@
     "سماعات فخمة HyperX Cloud 2": 1793903106.9341598,
     "CUSU Nexdrive P60 512GB": 1793908979.1776278,
     "HONOR PAD X8A 4/64GB": 1793908989.4952903,
-    "Magcubic HY300 Pro Projector": 1793908994.588809
+    "Magcubic HY300 Pro Projector": 1793908994.588809,
+    "CUSU SSD SATA3": 1793913777.3174822
   },
   "published_post_keys": [
-    "zedstoreonline:38574",
-    "lodydeals:45731",
-    "aniscoupons:32974",
     "ecksdeal:5854",
     "couponsglobal:48844",
     "megaphonna:8503",
@@ -3884,19 +3883,22 @@
     "lodydeals:46162",
     "lodydeals:46163",
     "lodydeals:46164",
-    "lodydeals:46166"
+    "lodydeals:46166",
+    "lodydeals:46170",
+    "lodydeals:46176",
+    "lodydeals:46177"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793909005.2551894,
+  "last_run_time": 1793913781.9155498,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
       "last_check_time": 1793903108.984469
     },
     "lodydeals": {
-      "last_message_id": 46168,
-      "last_check_time": 1793909716.5405986
+      "last_message_id": 46177,
+      "last_check_time": 1793913783.9629338
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4007,7 +4009,7 @@
     "1005008901941749": 0.95,
     "1005006861002512": 13.56,
     "1005012285327063": 17.29,
-    "1005006581583862": 19.76,
+    "1005006581583862": 17.44,
     "1005012816171978": 274.46,
     "1005009834132291": 20.04,
     "1005010585654037": 16.8,
@@ -4020,7 +4022,7 @@
     "1005010470699571": 24.56,
     "1005012741634118": 26.29,
     "1005008554596598": 15.4,
-    "1005008776714223": 74.7,
+    "1005008776714223": 41.56,
     "1005010306498953": 1.46,
     "1005010338761787": 1.49,
     "1005012265051745": 246.04,
@@ -4246,7 +4248,7 @@
     "1005010266614743": 57.8,
     "1005012741268303": 29.9,
     "1005006990064696": 29.9,
-    "1005013254642366": 22.05,
+    "1005013254642366": 22.9,
     "1005012725188908": 35.4,
     "1005013224329670": 21.1,
     "1005010039614599": 43.11,
@@ -15411,6 +15413,36 @@
       "price": 10.71,
       "timestamp": 1793909005.2551894,
       "status": "ACTIVE"
+    },
+    "lodydeals:46170": {
+      "channel_msg_id": 1867,
+      "product_id": "1005006581583862",
+      "title": "HAYLOU S30 Headphones 43dB",
+      "channel": "lodydeals",
+      "source_msg_id": 46170,
+      "price": 17.44,
+      "timestamp": 1793913766.8714123,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46176": {
+      "channel_msg_id": 1868,
+      "product_id": "1005008776714223",
+      "title": "CUSU SSD SATA3",
+      "channel": "lodydeals",
+      "source_msg_id": 46176,
+      "price": 41.56,
+      "timestamp": 1793913777.3174822,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46177": {
+      "channel_msg_id": 1869,
+      "product_id": "1005013254642366",
+      "title": "Ugreen Smart Display 45W",
+      "channel": "lodydeals",
+      "source_msg_id": 46177,
+      "price": 22.9,
+      "timestamp": 1793913781.9155498,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15419,17 +15451,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793909008.7375815,
+    "last_deal_post_time": 1793913786.1197474,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793913581.2213643,
+    "last_sweep_time": 1793913789.217099,
     "last_sweep_times": {
-      "algeria": 1793913578.7820475,
-      "france": 1793913581.2213643
+      "algeria": 1793913786.097857,
+      "france": 1793913789.217099
     },
     "last_deal_post_times": {
-      "algeria": 1793909008.7375815
+      "algeria": 1793913786.1197474
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16880,7 +16912,8 @@
     "سماعات فخمة HyperX Cloud 2": "ecksdeal",
     "CUSU Nexdrive P60 512GB": "lodydeals",
     "HONOR PAD X8A 4/64GB": "lodydeals",
-    "Magcubic HY300 Pro Projector": "lodydeals"
+    "Magcubic HY300 Pro Projector": "lodydeals",
+    "CUSU SSD SATA3": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -17666,12 +17699,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8658",
-    "aniscoupons:33150",
-    "bnddeals:50840",
-    "lodydeals:45853",
-    "zedstoreonline:39032",
-    "megaphonna:8462",
     "megaphonna:8552",
     "zedstoreonline:38633",
     "zedstoreonline:38640",
@@ -18665,7 +18692,13 @@
     "lodydeals:46157",
     "lodydeals:46165",
     "lodydeals:46167",
-    "lodydeals:46168"
+    "lodydeals:46168",
+    "lodydeals:46169",
+    "lodydeals:46171",
+    "lodydeals:46172",
+    "lodydeals:46173",
+    "lodydeals:46174",
+    "lodydeals:46175"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
