@@ -15423,10 +15423,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793910454.6241152,
+    "last_sweep_time": 1793910662.6383812,
     "last_sweep_times": {
-      "algeria": 1793910452.0754676,
-      "france": 1793910454.6241152
+      "algeria": 1793910653.3127372,
+      "france": 1793910662.6383812
     },
     "last_deal_post_times": {
       "algeria": 1793909008.7375815
@@ -17136,14 +17136,13 @@
     "2026-11-04": {
       "timestamp": 1793824321.3066487,
       "bulletins_count": 5
+    },
+    "2026-11-05": {
+      "timestamp": 1793910650.2404215,
+      "bulletins_count": 4
     }
   },
   "regrouped_channel_msg_ids": [
-    435,
-    438,
-    441,
-    443,
-    444,
     446,
     448,
     451,
@@ -17620,6 +17619,7 @@
     1794,
     1795,
     1796,
+    1797,
     1799,
     1806,
     1808,
@@ -17629,10 +17629,20 @@
     1813,
     1814,
     1816,
+    1817,
     1819,
+    1820,
     1821,
     1822,
-    1823
+    1823,
+    1841,
+    1842,
+    1843,
+    1844,
+    1846,
+    1847,
+    1850,
+    1852
   ],
   "pinned_promo_events": {
     "AliExpress Special Promo Octobre 2026_20261004": 661,
@@ -17652,7 +17662,7 @@
   ],
   "last_card_affiliate_time_dz": 1793888771.023496,
   "card_affiliate_variant_idx_dz": 1,
-  "last_tajmi3at_published_time": 1793824321.3066487,
+  "last_tajmi3at_published_time": 1793910650.2404215,
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
