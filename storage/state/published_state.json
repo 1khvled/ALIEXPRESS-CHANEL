@@ -1065,7 +1065,7 @@
     "1005005373032877": 1793600283.7397804,
     "1005007869955343": 1793656150.4800947,
     "1005012644570693": 1793441338.6619778,
-    "1005003949106838": 1793613866.509307,
+    "1005003949106838": 1793899614.3022053,
     "1005012436082838": 1793733101.535615,
     "1005010716206374": 1793448715.1480892,
     "1005012864273120": 1793399494.1323898,
@@ -2637,7 +2637,7 @@
     "Blackview Wave 10C  4/32GB": 1793542445.2859337,
     "COLMI i28 Ultra AI  AMOLED": 1793542450.420599,
     "GIGABYTE B650M GAMING WIFI": 1793542466.6850684,
-    "Netac NV7000-T M.2 Gen4 1TB": 1793613866.509307,
+    "Netac NV7000-T M.2 Gen4 1TB": 1793899614.3022053,
     "UGREEN HiTune S3 Earbuds": 1793542479.8362749,
     "OnePlus Ace 6T 5G 12/256GB": 1793793743.7359905,
     "Attack Shark X11 PAW3311": 1793542495.8604958,
@@ -2871,7 +2871,6 @@
     "Blackview Wave 7C 4/64GB": 1793898351.709536
   },
   "published_post_keys": [
-    "bnddeals:50809",
     "ecksdeal:5863",
     "aniscoupons:32729",
     "pcgamingpart:7960",
@@ -3870,19 +3869,20 @@
     "lodydeals:46146",
     "lodydeals:46148",
     "lodydeals:46154",
-    "lodydeals:46158"
+    "lodydeals:46158",
+    "lodydeals:46159"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793898397.363593,
+  "last_run_time": 1793899614.3022053,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6040,
       "last_check_time": 1793895391.0321677
     },
     "lodydeals": {
-      "last_message_id": 46158,
-      "last_check_time": 1793898399.4115033
+      "last_message_id": 46159,
+      "last_check_time": 1793899616.3504865
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -4249,7 +4249,7 @@
     "1005005373032877": 61.03,
     "1005007869955343": 37.05,
     "1005012644570693": 558.0,
-    "1005003949106838": 116.99,
+    "1005003949106838": 114.99,
     "1005012436082838": 123.6,
     "1005010716206374": 308.0,
     "1005012864273120": 154.0,
@@ -15324,6 +15324,16 @@
       "price": 18.77,
       "timestamp": 1793898397.363593,
       "status": "ACTIVE"
+    },
+    "lodydeals:46159": {
+      "channel_msg_id": 1850,
+      "product_id": "1005003949106838",
+      "title": "Netac NV7000-T M.2 Gen4 1TB",
+      "channel": "lodydeals",
+      "source_msg_id": 46159,
+      "price": 114.99,
+      "timestamp": 1793899614.3022053,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15332,17 +15342,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793898401.1375146,
+    "last_deal_post_time": 1793899617.7559817,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793899430.8022249,
+    "last_sweep_time": 1793899620.5078692,
     "last_sweep_times": {
-      "algeria": 1793899428.4553874,
-      "france": 1793899430.8022249
+      "algeria": 1793899617.7337298,
+      "france": 1793899620.5078692
     },
     "last_deal_post_times": {
-      "algeria": 1793898401.1375146
+      "algeria": 1793899617.7559817
     }
   },
   "last_coin_reminder_time": 1793649047.446368,
