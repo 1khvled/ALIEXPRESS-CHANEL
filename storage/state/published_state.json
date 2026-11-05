@@ -636,7 +636,9 @@
     "1005010169268165",
     "1005010702038861",
     "1005009313079431",
-    "1005010702511858"
+    "1005010702511858",
+    "1005008554218453",
+    "1005012499433797"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -647,7 +649,7 @@
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
-    "1005007805638431": 1793542495.8604958,
+    "1005007805638431": 1793908984.385319,
     "1005009054706827": 1793571187.7518308,
     "1005007961216287": 1791942616.1564767,
     "1005009627597591": 1793542398.3843465,
@@ -916,7 +918,7 @@
     "9998882360": 1792162360.6633363,
     "9998882475": 1793282475.663889,
     "9998882568": 1792162568.078144,
-    "1005010369693975": 1793793764.4042914,
+    "1005010369693975": 1793909005.2551894,
     "1005006442452857": 1792166326.0335298,
     "9998886462": 1792166462.200491,
     "1005009948598802": 1793500786.1935658,
@@ -1074,7 +1076,7 @@
     "1005012675968319": 1793399525.3383162,
     "1005010424638496": 1793898382.556843,
     "1005010141682336": 1793399542.6698716,
-    "1005006782790827": 1793542384.0089695,
+    "1005006782790827": 1793908994.588809,
     "1005012938359476": 1793448722.5382965,
     "1005012931209980": 1793566274.2309785,
     "1005011820893973": 1793540051.7895243,
@@ -1287,7 +1289,9 @@
     "1005010169268165": 1793794440.9453664,
     "1005010702038861": 1793895388.951633,
     "1005009313079431": 1793898336.7775517,
-    "1005010702511858": 1793903106.9341598
+    "1005010702511858": 1793903106.9341598,
+    "1005008554218453": 1793908979.1776278,
+    "1005012499433797": 1793908989.4952903
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2077,7 +2081,10 @@
     "سماعات HyperX Cloud Earbuds 2",
     "WALRAM SSD  512GB",
     "Blackview Wave 7C 4/64GB",
-    "سماعات فخمة HyperX Cloud 2"
+    "سماعات فخمة HyperX Cloud 2",
+    "CUSU Nexdrive P60 512GB",
+    "HONOR PAD X8A 4/64GB",
+    "Magcubic HY300 Pro Projector"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2392,7 +2399,7 @@
     "RYZEN 7 5700X": 1793380381.1111934,
     "Ⓜ BLACKVIEW WAVE 10C (4/32)": 1792160262.8028278,
     "Ⓜ  TCL 60 NXT PAPER 8/256📱": 1792160269.0502243,
-    "HAYLOU Mori Pro ANC": 1793793764.4042914,
+    "HAYLOU Mori Pro ANC": 1793909005.2551894,
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones 43dB Adaptive Noise": 1792166326.0335298,
     "HAYLOU Watch Faro Voice Calling Smart Watch": 1792360422.5608404,
     "Redmi Note 12 5G 4/128": 1793543770.1912897,
@@ -2643,7 +2650,7 @@
     "Netac NV7000-T M.2 Gen4 1TB": 1793899614.3022053,
     "UGREEN HiTune S3 Earbuds": 1793542479.8362749,
     "OnePlus Ace 6T 5G 12/256GB": 1793793743.7359905,
-    "Attack Shark X11 PAW3311": 1793542495.8604958,
+    "Attack Shark X11 PAW3311": 1793908984.385319,
     "معالج Ryzen 7 9800X3D": 1793542512.9419136,
     "معالج Ryzen 5 7600X": 1793542531.6312253,
     "يد تحكم للهاتف GameSir X5 Lite": 1793542545.9047854,
@@ -2872,14 +2879,12 @@
     "سماعات HyperX Cloud Earbuds 2": 1793895388.951633,
     "WALRAM SSD  512GB": 1793898336.7775517,
     "Blackview Wave 7C 4/64GB": 1793898351.709536,
-    "سماعات فخمة HyperX Cloud 2": 1793903106.9341598
+    "سماعات فخمة HyperX Cloud 2": 1793903106.9341598,
+    "CUSU Nexdrive P60 512GB": 1793908979.1776278,
+    "HONOR PAD X8A 4/64GB": 1793908989.4952903,
+    "Magcubic HY300 Pro Projector": 1793908994.588809
   },
   "published_post_keys": [
-    "aniscoupons:32729",
-    "pcgamingpart:7960",
-    "aniscoupons:32740",
-    "aniscoupons:32796",
-    "zedstoreonline:38540",
     "zedstoreonline:38574",
     "lodydeals:45731",
     "aniscoupons:32974",
@@ -3874,19 +3879,24 @@
     "lodydeals:46154",
     "lodydeals:46158",
     "lodydeals:46159",
-    "ecksdeal:6041"
+    "ecksdeal:6041",
+    "lodydeals:46161",
+    "lodydeals:46162",
+    "lodydeals:46163",
+    "lodydeals:46164",
+    "lodydeals:46166"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793327622.2534416,
-  "last_run_time": 1793903106.9341598,
+  "last_run_time": 1793909005.2551894,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
       "last_check_time": 1793903108.984469
     },
     "lodydeals": {
-      "last_message_id": 46159,
-      "last_check_time": 1793899616.3504865
+      "last_message_id": 46166,
+      "last_check_time": 1793909007.3023334
     },
     "test_channel": {
       "last_message_id": 1793542236,
@@ -3916,7 +3926,7 @@
   "published_product_prices": {
     "1005012973772517": 189.23,
     "1005010219205081": 57.2,
-    "1005007805638431": 18.03,
+    "1005007805638431": 21.8,
     "1005007027334636": 13.49,
     "1005009054706827": 20.14,
     "1005007961216287": 20.26,
@@ -4142,7 +4152,7 @@
     "1005012671337268": 4.02,
     "1005012331836106": 268.0,
     "1005007760080474": 75.0,
-    "1005010369693975": 12.3,
+    "1005010369693975": 10.71,
     "1005006442452857": 24.7,
     "1005012751475098": 2.28,
     "1005012545304504": 123.1,
@@ -4261,7 +4271,7 @@
     "1005012675968319": 30.0,
     "1005010424638496": 113.4,
     "1005010141682336": 224.0,
-    "1005006782790827": 47.06,
+    "1005006782790827": 47.51,
     "1005012938359476": 123.17,
     "1005012931209980": 290.54,
     "1005011820893973": 690.0,
@@ -4454,7 +4464,9 @@
     "1005010169268165": 19.6,
     "1005010702038861": 18.12,
     "1005009313079431": 43.11,
-    "1005010702511858": 59.8
+    "1005010702511858": 59.8,
+    "1005008554218453": 52.55,
+    "1005012499433797": 134.3
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -15349,6 +15361,56 @@
       "price": 59.8,
       "timestamp": 1793903106.9341598,
       "status": "ACTIVE"
+    },
+    "lodydeals:46161": {
+      "channel_msg_id": 1858,
+      "product_id": "1005008554218453",
+      "title": "CUSU Nexdrive P60 512GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46161,
+      "price": 52.55,
+      "timestamp": 1793908979.1776278,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46162": {
+      "channel_msg_id": 1859,
+      "product_id": "1005007805638431",
+      "title": "Attack Shark X11 PAW3311",
+      "channel": "lodydeals",
+      "source_msg_id": 46162,
+      "price": 21.8,
+      "timestamp": 1793908984.385319,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46163": {
+      "channel_msg_id": 1860,
+      "product_id": "1005012499433797",
+      "title": "HONOR PAD X8A 4/64GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46163,
+      "price": 134.3,
+      "timestamp": 1793908989.4952903,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46164": {
+      "channel_msg_id": 1861,
+      "product_id": "1005006782790827",
+      "title": "Magcubic HY300 Pro Projector",
+      "channel": "lodydeals",
+      "source_msg_id": 46164,
+      "price": 47.51,
+      "timestamp": 1793908994.588809,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46166": {
+      "channel_msg_id": 1862,
+      "product_id": "1005010369693975",
+      "title": "HAYLOU Mori Pro ANC",
+      "channel": "lodydeals",
+      "source_msg_id": 46166,
+      "price": 10.71,
+      "timestamp": 1793909005.2551894,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15357,17 +15419,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793903109.0293903,
+    "last_deal_post_time": 1793909008.7375815,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793908802.9725819,
+    "last_sweep_time": 1793909012.159905,
     "last_sweep_times": {
-      "algeria": 1793908800.032143,
-      "france": 1793908802.9725819
+      "algeria": 1793909008.714702,
+      "france": 1793909012.159905
     },
     "last_deal_post_times": {
-      "algeria": 1793903109.0293903
+      "algeria": 1793909008.7375815
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16018,7 +16080,9 @@
     "1005010169268165": "lodydeals",
     "1005010702038861": "ecksdeal",
     "1005009313079431": "lodydeals",
-    "1005010702511858": "ecksdeal"
+    "1005010702511858": "ecksdeal",
+    "1005008554218453": "lodydeals",
+    "1005012499433797": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -16813,7 +16877,10 @@
     "سماعات HyperX Cloud Earbuds 2": "ecksdeal",
     "WALRAM SSD  512GB": "lodydeals",
     "Blackview Wave 7C 4/64GB": "lodydeals",
-    "سماعات فخمة HyperX Cloud 2": "ecksdeal"
+    "سماعات فخمة HyperX Cloud 2": "ecksdeal",
+    "CUSU Nexdrive P60 512GB": "lodydeals",
+    "HONOR PAD X8A 4/64GB": "lodydeals",
+    "Magcubic HY300 Pro Projector": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -17589,7 +17656,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33327",
     "bnddeals:50896",
     "megaphonna:8502",
     "megaphonna:8658",
@@ -18588,7 +18654,8 @@
     "lodydeals:46152",
     "lodydeals:46155",
     "lodydeals:46156",
-    "lodydeals:46157"
+    "lodydeals:46157",
+    "lodydeals:46165"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
