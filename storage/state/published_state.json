@@ -1233,7 +1233,7 @@
     "1005011927267564": 1793728844.5794795,
     "1005008291023017": 1793732518.3808835,
     "1005012947477238": 1793612016.5356846,
-    "1005010121513376": 1793613330.7911599,
+    "1005010121513376": 1793974514.9586184,
     "1005009064526142": 1793613380.753295,
     "1005010009130696": 1793613403.4444478,
     "1005013465751932": 1793613440.9413722,
@@ -2140,7 +2140,8 @@
     "HAYLOU Flowbuds N50 ANC",
     "Honor 600 Pro 12/256",
     "HONOR Pad X8a (4/64GB)",
-    "Magcubic HY350 Max 900ANSI"
+    "Magcubic HY350 Max 900ANSI",
+    "Honor X9d (no charger)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2966,10 +2967,10 @@
     "HAYLOU Flowbuds N50 ANC": 1793970449.9003735,
     "Honor 600 Pro 12/256": 1793971367.4627862,
     "HONOR Pad X8a (4/64GB)": 1793972480.4803846,
-    "Magcubic HY350 Max 900ANSI": 1793974144.8262026
+    "Magcubic HY350 Max 900ANSI": 1793974144.8262026,
+    "Honor X9d (no charger)": 1793974514.9586184
   },
   "published_post_keys": [
-    "lodydeals:45789",
     "megaphonna:8622",
     "megaphonna:8564",
     "lodydeals:45456",
@@ -3968,11 +3969,12 @@
     "aniscoupons:34151",
     "bnddeals:51196",
     "aniscoupons:34155",
-    "aniscoupons:34156"
+    "aniscoupons:34156",
+    "aniscoupons:34157"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793974144.8262026,
+  "last_run_time": 1793974514.9586184,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
@@ -3999,12 +4001,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39634,
-      "last_check_time": 1793973775.1423602
+      "last_message_id": 39635,
+      "last_check_time": 1793974511.0741756
     },
     "aniscoupons": {
-      "last_message_id": 34156,
-      "last_check_time": 1793974146.8554678
+      "last_message_id": 34157,
+      "last_check_time": 1793974517.0119245
     },
     "bnddeals": {
       "last_message_id": 51196,
@@ -4497,7 +4499,7 @@
     "1005011927267564": 24.55,
     "1005008291023017": 285.92,
     "1005012947477238": 199.2,
-    "1005010121513376": 289.0,
+    "1005010121513376": 289.5,
     "1005009064526142": 123.9,
     "1005010009130696": 656.0,
     "1005013465751932": 527.0,
@@ -16003,6 +16005,16 @@
       "price": 113.4,
       "timestamp": 1793974144.8262026,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34157": {
+      "channel_msg_id": 1930,
+      "product_id": "1005010121513376",
+      "title": "Honor X9d (no charger)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34157,
+      "price": 289.5,
+      "timestamp": 1793974514.9586184,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16011,17 +16023,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793974147.7089028,
+    "last_deal_post_time": 1793974517.845861,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793974333.2299156,
+    "last_sweep_time": 1793974520.3977027,
     "last_sweep_times": {
-      "algeria": 1793974330.417966,
-      "france": 1793974333.2299156
+      "algeria": 1793974517.8230405,
+      "france": 1793974520.3977027
     },
     "last_deal_post_times": {
-      "algeria": 1793974147.7089028
+      "algeria": 1793974517.845861
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16618,7 +16630,7 @@
     "1005011927267564": "lodydeals",
     "1005008291023017": "lodydeals",
     "1005012947477238": "lodydeals",
-    "1005010121513376": "zedstoreonline",
+    "1005010121513376": "aniscoupons",
     "1005009064526142": "zedstoreonline",
     "1005010009130696": "zedstoreonline",
     "1005013465751932": "zedstoreonline",
@@ -17514,7 +17526,8 @@
     "HAYLOU Flowbuds N50 ANC": "zedstoreonline",
     "Honor 600 Pro 12/256": "zedstoreonline",
     "HONOR Pad X8a (4/64GB)": "aniscoupons",
-    "Magcubic HY350 Max 900ANSI": "aniscoupons"
+    "Magcubic HY350 Max 900ANSI": "aniscoupons",
+    "Honor X9d (no charger)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -18308,7 +18321,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33372",
     "megaphonna:8498",
     "aniscoupons:33010",
     "bnddeals:50850",
@@ -19307,7 +19319,8 @@
     "aniscoupons:34152",
     "aniscoupons:34153",
     "aniscoupons:34154",
-    "zedstoreonline:39634"
+    "zedstoreonline:39634",
+    "zedstoreonline:39635"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
