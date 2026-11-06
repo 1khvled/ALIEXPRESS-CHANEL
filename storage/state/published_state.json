@@ -15459,10 +15459,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793957786.5538962,
+    "last_sweep_time": 1793958163.3197277,
     "last_sweep_times": {
-      "algeria": 1793957784.1350636,
-      "france": 1793957786.5538962
+      "algeria": 1793958160.9028766,
+      "france": 1793958163.3197277
     },
     "last_deal_post_times": {
       "algeria": 1793913786.1197474
@@ -18708,9 +18708,9 @@
     "lodydeals:46175",
     "ecksdeal:6037"
   ],
-  "last_france_cross_promo_time": 1793779890.1987555,
-  "next_france_cross_promo_interval_seconds": 175459,
-  "france_cross_promo_variant_idx": 3,
+  "last_france_cross_promo_time": 1793958156.0052226,
+  "next_france_cross_promo_interval_seconds": 258327,
+  "france_cross_promo_variant_idx": 0,
   "published_coupon_bulletins": [
     {
       "promo": "Test Event 2026",
