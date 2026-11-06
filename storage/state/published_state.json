@@ -663,7 +663,8 @@
     "1005008534907844",
     "1005009577554629",
     "1005010656922924",
-    "1005008077441711"
+    "1005008077441711",
+    "1005006411483066"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1341,7 +1342,8 @@
     "1005008534907844": 1793987285.4130383,
     "1005009577554629": 1793987289.8200357,
     "1005010656922924": 1793994623.1444166,
-    "1005008077441711": 1793998299.0115912
+    "1005008077441711": 1793998299.0115912,
+    "1005006411483066": 1794002338.4554162
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2178,7 +2180,8 @@
     "SOUNDPEATS C30 ANC Wireless Earphones",
     "UGREEN 45W GaN Smart Display Charger",
     "Inphic PG1 PG9 RGB Wired Gaming Mouse",
-    "realme C100d 4/128GB"
+    "realme C100d 4/128GB",
+    "Zeblaze GTS 3 Pro AMOLED"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3020,10 +3023,10 @@
     "SOUNDPEATS C30 ANC Wireless Earphones": 1793994623.1444166,
     "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899,
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1793998299.0115912,
-    "realme C100d 4/128GB": 1794001056.1545
+    "realme C100d 4/128GB": 1794001056.1545,
+    "Zeblaze GTS 3 Pro AMOLED": 1794002338.4554162
   },
   "published_post_keys": [
-    "ecksdeal:5946",
     "test_channel:1791752385",
     "couponsglobal:48762",
     "zedstoreonline:38573",
@@ -4022,11 +4025,12 @@
     "ecksdeal:6042",
     "zedstoreonline:39654",
     "zedstoreonline:39655",
-    "zedstoreonline:39656"
+    "zedstoreonline:39656",
+    "zedstoreonline:39658"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794001056.1545,
+  "last_run_time": 1794002338.4554162,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
@@ -4053,8 +4057,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39657,
-      "last_check_time": 1794002145.6327996
+      "last_message_id": 39658,
+      "last_check_time": 1794002340.500479
     },
     "aniscoupons": {
       "last_message_id": 34178,
@@ -4612,7 +4616,7 @@
     "1005008774483451": 45.1,
     "1005010635850450": 21.1,
     "1005006782986446": 6.7,
-    "1005006411483066": 13.2,
+    "1005006411483066": 12.9,
     "1005009738356108": 16.5,
     "1005008636930795": 31.5,
     "1005013083645836": 304.4,
@@ -16308,6 +16312,16 @@
       "price": 136.7,
       "timestamp": 1794001056.1545,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39658": {
+      "channel_msg_id": 1960,
+      "product_id": "1005006411483066",
+      "title": "Zeblaze GTS 3 Pro AMOLED",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39658,
+      "price": 12.9,
+      "timestamp": 1794002338.4554162,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16316,17 +16330,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794001059.6155095,
+    "last_deal_post_time": 1794002341.95453,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794002149.1280046,
+    "last_sweep_time": 1794002344.710996,
     "last_sweep_times": {
-      "algeria": 1794002146.7326183,
-      "france": 1794002149.1280046
+      "algeria": 1794002341.894255,
+      "france": 1794002344.710996
     },
     "last_deal_post_times": {
-      "algeria": 1794001059.6155095
+      "algeria": 1794002341.95453
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17004,7 +17018,8 @@
     "1005008534907844": "lodydeals",
     "1005009577554629": "lodydeals",
     "1005010656922924": "zedstoreonline",
-    "1005008077441711": "zedstoreonline"
+    "1005008077441711": "zedstoreonline",
+    "1005006411483066": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -17846,7 +17861,8 @@
     "SOUNDPEATS C30 ANC Wireless Earphones": "zedstoreonline",
     "UGREEN 45W GaN Smart Display Charger": "zedstoreonline",
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": "zedstoreonline",
-    "realme C100d 4/128GB": "zedstoreonline"
+    "realme C100d 4/128GB": "zedstoreonline",
+    "Zeblaze GTS 3 Pro AMOLED": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
