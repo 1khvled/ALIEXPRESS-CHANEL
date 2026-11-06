@@ -4015,8 +4015,8 @@
       "last_check_time": 1793977452.570362
     },
     "aniscoupons": {
-      "last_message_id": 34157,
-      "last_check_time": 1793974517.0119245
+      "last_message_id": 34158,
+      "last_check_time": 1793977814.4160533
     },
     "bnddeals": {
       "last_message_id": 51196,
@@ -16069,10 +16069,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793977642.807602,
+    "last_sweep_time": 1793977817.3866937,
     "last_sweep_times": {
-      "algeria": 1793977640.1054862,
-      "france": 1793977642.807602
+      "algeria": 1793977814.9366112,
+      "france": 1793977817.3866937
     },
     "last_deal_post_times": {
       "algeria": 1793977276.4300675
@@ -18350,7 +18350,7 @@
     "AliExpress Special Promo Octobre 2026_20261004": 661,
     "AliExpress Special Promo Octobre 2026_20261006": 677,
     "Brand Day Sale Octobre 2026_20261009": 702,
-    "11.11 Global Shopping Festival Main Sale_20261101": 1839
+    "11.11 Global Shopping Festival Main Sale_20261101": 1936
   },
   "sent_promo_notifiers": [
     "LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
@@ -18368,7 +18368,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "bnddeals:50850",
     "zedstoreonline:38677",
     "aniscoupons:33218",
     "lodydeals:45756",
@@ -19367,7 +19366,8 @@
     "zedstoreonline:39634",
     "zedstoreonline:39635",
     "zedstoreonline:39639",
-    "zedstoreonline:39640"
+    "zedstoreonline:39640",
+    "aniscoupons:34158"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
