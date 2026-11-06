@@ -219,7 +219,7 @@ async def test_france_caption_generator_formatting():
     assert "🤐" not in caption
     assert "________________________________" not in caption
     assert "📢 @francedealsdz" in caption
-    assert "@Alilo07BOT" in caption
+    assert "Alilo07BOT" in caption
 
 
 @pytest.mark.asyncio
@@ -492,7 +492,7 @@ def test_alifrdrop_1to1_copy_format():
 
     # 1. Competitor elements replaced
     assert "@LodyCouponsBot" not in caption
-    assert "@Alilo07BOT" in caption
+    assert "Alilo07BOT" in caption
     assert "https://s.click.aliexpress.com/e/_ourAffiliate" in caption
     assert "_c3xxiWcF" not in caption
 
@@ -567,7 +567,7 @@ def test_multi_deal_compilation_detection_and_formatting():
     assert "تخفيض لـ WALRAM 2.5 SSD 480GB" in cap_multi
 
     # Bot attribution present
-    assert "@Alilo07BOT" in cap_multi
+    assert "Alilo07BOT" in cap_multi
     assert "@DzAliexpress0" in cap_multi
 
     # 3. Single deal formatter also NEVER wraps WALRAM or REALME in code tags
@@ -660,3 +660,80 @@ t.me/lodycouponsbot"""
     # 5. Competitor bot replaced
     assert "t.me/Alilo07BOT" in res
     assert "lodycouponsbot" not in res
+
+
+def test_maono_formatting_no_duplicate_links_no_floating_emojis():
+    from app.ai.generator import format_competitor_to_lody_1to1
+
+    raw_sample = """سعرو فالبلاد حوالي 15000دج
+🚨
+تخفيض لـ MAONO PD100X USB/XL
+السعر : $37.05 (€33.08)
+🔥
+رابط https://s.click.aliexpress.com/e/_c3EFS0yf
+https://s.click.aliexpress.com/e/_c3EFS0yf
+إحجز قسيمة البائع 1$
+كوبون 4/25$ : OTD1104"""
+
+    cap = format_competitor_to_lody_1to1(
+        raw_text=raw_sample,
+        affiliate_url="https://s.click.aliexpress.com/e/_c3EFS0yf",
+        coupon_code="OTD1104",
+        extracted_title="MAONO PD100X USB/XLR"
+    )
+
+    # 1. No floating emoji lines
+    lines = [l.strip() for l in cap.splitlines() if l.strip()]
+    for l in lines:
+        assert l not in ["🚨", "🔥", "💥", "◀️", "👇"]
+
+    # 2. Hook rephrased
+    assert "سعره في السوق المحلي حوالي 15000 دج 🚨" in cap
+
+    # 3. Model name clean
+    assert "MAONO PD100X USB/XLR" in cap
+
+    # 4. BiDi price isolation
+    assert "37.05$" in cap
+    assert "\u200e(33.08€)" in cap or "‎(33.08€)" in cap
+
+    # 5. Exactly ONE link line
+    url_occurrences = cap.count("https://s.click.aliexpress.com/e/_c3EFS0yf")
+    assert url_occurrences == 1, f"Expected 1 URL occurrence, found {url_occurrences}"
+
+    # 6. Clean coupon and voucher
+    assert "🎫 احجز قسيمة البائع: 1$" in cap
+    assert "🎟️ كوبون 4/25$ : <code>OTD1104</code>" in cap
+
+
+def test_iqoo_turbo_formatting_inverted_coupon_dollar():
+    from app.ai.generator import format_competitor_to_lody_1to1
+
+    raw_sample = """تخفيض لـ IQOO Z11 Turbo
+السعر : $381.27
+رابط https://s.click.aliexpress.com/e/_c2wfrln1
+احجز قسيمة البائع: 2$
+كوبون $70/419 : OTD1170 🎟️
+ضع البلد استراليا من الإعدادات 🇦🇺
+خصم العملات"""
+
+    cap = format_competitor_to_lody_1to1(
+        raw_text=raw_sample,
+        affiliate_url="https://s.click.aliexpress.com/e/_c2wfrln1",
+        coupon_code="OTD1170"
+    )
+
+    # 1. Inverted coupon tier fixed
+    assert "$70/419" not in cap
+    assert "70/419$" in cap
+    assert "<code>OTD1170</code>" in cap
+
+    # 2. Store voucher normalized
+    assert "🎫 احجز قسيمة البائع: 2$" in cap
+
+    # 3. Exactly ONE link
+    assert cap.count("https://s.click.aliexpress.com/e/_c2wfrln1") == 1
+
+    # 4. Clean standard attribution
+    assert "Alilo07BOT" in cap
+    assert "@DzAliexpress0" in cap

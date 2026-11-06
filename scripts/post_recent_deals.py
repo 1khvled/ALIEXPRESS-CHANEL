@@ -92,8 +92,6 @@ async def publish_incoming_multi_deal_post(raw_text: str, source_channel: str, s
 
         # Official branded banner ONLY - NEVER leak competitor mascot/logos
         banner_path = settings.BASE_DIR / "assets" / "tajmi3at_banner.png"
-        if not banner_path.exists():
-            banner_path = settings.BASE_DIR / "assets" / "dealscout_super_deals_template.png"
 
         bot_token = get_bot_token()
         target_chat = getattr(settings, "TARGET_CHANNEL_ID", None) or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
@@ -711,14 +709,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     if not img_url and extracted.product_id:
                         img_url = await product_extractor._fetch_clean_aliexpress_image(extracted.product_id)
                     if not img_url and source_photo_url:
-                        # Competitor channels brand their images with logos/mascots.
-                        # Never leak competitor graphics; fall back to official DealScout template!
-                        if any(b in str(source_photo_url).lower() for b in ["telesco.pe", "telegram", "cdn-telegram"]):
-                            template_art = settings.BASE_DIR / "assets" / "dealscout_super_deals_template.png"
-                            if template_art.exists():
-                                img_url = str(template_art)
-                        else:
-                            img_url = source_photo_url
+                        img_url = source_photo_url
                     if not extracted.is_coupon_list:
                         if not img_url:
                             print(f"  [NO CLEAN PHOTO] Image fetch incomplete for {extracted.product_id}. Leaving for retry.")
@@ -752,7 +743,8 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         caption = format_lodydeals_caption_1to1(
                             raw_text=raw_text,
                             affiliate_url=aff_link,
-                            coupon_code=extracted.coupon_code
+                            coupon_code=extracted.coupon_code,
+                            extracted_title=extracted.title
                         )
                     elif ch.lower() in ["ecksdeal", "zedstoreonline", "aniscoupons", "bnddeals"]:
                         caption = format_competitor_to_lody_1to1(
