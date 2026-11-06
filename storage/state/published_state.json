@@ -1091,7 +1091,7 @@
     "1005012938359476": 1793448722.5382965,
     "1005012931209980": 1793566274.2309785,
     "1005011820893973": 1793540051.7895243,
-    "1005009073904302": 1793448601.5661764,
+    "1005009073904302": 1793968985.4885292,
     "1005009916208760": 1793448612.7938895,
     "1005010033441204": 1793543583.5978532,
     "1005008356663932": 1793707052.9762022,
@@ -2184,7 +2184,7 @@
     "Blackview Zeno 10 5G  8/128": 1790941207.5310047,
     "Honor Power 2  12/256": 1790941214.6756065,
     "Honor X70 5G 8/128": 1792077689.3824542,
-    "Blackview MEGA 5  8/256": 1793448601.5661764,
+    "Blackview MEGA 5  8/256": 1793968985.4885292,
     "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1793542591.509991,
     "4G LTE Wireless USB 150Mbps": 1790943633.9774187,
     "Curren 8455 Men's Quartz": 1790943640.1460688,
@@ -2949,7 +2949,6 @@
     "HAYLOU WATCH 3 NEW": 1793966892.2256048
   },
   "published_post_keys": [
-    "lodydeals:45440",
     "ecksdeal:5892",
     "zedstoreonline:38841",
     "lodydeals:45822",
@@ -3948,11 +3947,12 @@
     "test_channel:1793967089",
     "test_channel:1793967107",
     "test_channel:1793967678",
-    "test_channel:1793967703"
+    "test_channel:1793967703",
+    "zedstoreonline:39624"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793967703.6914306,
+  "last_run_time": 1793968985.4885292,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
@@ -3979,8 +3979,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39623,
-      "last_check_time": 1793967335.8268454
+      "last_message_id": 39624,
+      "last_check_time": 1793968987.5429251
     },
     "aniscoupons": {
       "last_message_id": 34142,
@@ -4343,7 +4343,7 @@
     "1005012938359476": 123.17,
     "1005012931209980": 290.54,
     "1005011820893973": 690.0,
-    "1005009073904302": 226.2,
+    "1005009073904302": 226.3,
     "1005009916208760": 77.0,
     "1005010033441204": 14.6,
     "1005008356663932": 355.5,
@@ -15841,6 +15841,16 @@
       "price": 17.8,
       "timestamp": 1793966892.2256048,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39624": {
+      "channel_msg_id": 1916,
+      "product_id": "1005009073904302",
+      "title": "Blackview MEGA 5  8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39624,
+      "price": 226.3,
+      "timestamp": 1793968985.4885292,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15849,17 +15859,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793966909.4911926,
+    "last_deal_post_time": 1793968989.029242,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793968792.0776944,
+    "last_sweep_time": 1793968991.8857431,
     "last_sweep_times": {
-      "algeria": 1793968789.7542396,
-      "france": 1793968792.0776944
+      "algeria": 1793968989.0070271,
+      "france": 1793968991.8857431
     },
     "last_deal_post_times": {
-      "algeria": 1793966909.4911926
+      "algeria": 1793968989.029242
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
