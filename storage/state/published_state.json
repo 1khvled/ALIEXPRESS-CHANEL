@@ -1223,7 +1223,7 @@
     "1005009916144912": 1793613519.9635994,
     "1005011626282286": 1793613510.8543386,
     "1005007539896812": 1793613546.2533524,
-    "1005009569642817": 1793568442.6763802,
+    "1005009569642817": 1794004758.429218,
     "1005013438789813": 1793569553.2022223,
     "1005012823102793": 1793569904.419889,
     "1005012773302941": 1794003254.1339376,
@@ -2841,7 +2841,7 @@
     "SMAILWOLF RS7 PAW3311": 1793567337.0235388,
     "Redmi Buds 6 Active": 1793613510.8543386,
     "Lexar D400 USB3.1 USB-C 128G": 1793567901.942504,
-    "Zeblaze Vibe 8 AMOLED": 1793568442.6763802,
+    "Zeblaze Vibe 8 AMOLED": 1794004758.429218,
     "Baseus 20W PD Charger": 1793568996.6387508,
     "Realme Neo 8  12/256GB": 1793569553.2022223,
     "Blackview MEGA 5 AI 8/256GB": 1793569904.419889,
@@ -3031,7 +3031,6 @@
     "شاحن سيارة ORICO بقوة 45W": 1794002515.731258
   },
   "published_post_keys": [
-    "zedstoreonline:38573",
     "aniscoupons:33159",
     "aniscoupons:33220",
     "lodydeals:45926",
@@ -4030,19 +4029,20 @@
     "zedstoreonline:39656",
     "zedstoreonline:39658",
     "zedstoreonline:39659",
-    "lodydeals:46204"
+    "lodydeals:46204",
+    "lodydeals:46206"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794003254.1339376,
+  "last_run_time": 1794004758.429218,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
       "last_check_time": 1793995904.1814108
     },
     "lodydeals": {
-      "last_message_id": 46205,
-      "last_check_time": 1794004018.100938
+      "last_message_id": 46206,
+      "last_check_time": 1794004760.4722712
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4537,7 +4537,7 @@
     "1005009916144912": 8.0,
     "1005011626282286": 10.84,
     "1005007539896812": 7.41,
-    "1005009569642817": 32.1,
+    "1005009569642817": 28.43,
     "1005013438789813": 408.02,
     "1005012823102793": 226.25,
     "1005012773302941": 17.06,
@@ -16347,6 +16347,16 @@
       "price": 17.06,
       "timestamp": 1794003254.1339376,
       "status": "ACTIVE"
+    },
+    "lodydeals:46206": {
+      "channel_msg_id": 1963,
+      "product_id": "1005009569642817",
+      "title": "Zeblaze Vibe 8 AMOLED",
+      "channel": "lodydeals",
+      "source_msg_id": 46206,
+      "price": 28.43,
+      "timestamp": 1794004758.429218,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16355,17 +16365,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794003259.0164464,
+    "last_deal_post_time": 1794004763.4434867,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794004572.6354306,
+    "last_sweep_time": 1794004766.2342787,
     "last_sweep_times": {
-      "algeria": 1794004569.9577994,
-      "france": 1794004572.6354306
+      "algeria": 1794004763.4246113,
+      "france": 1794004766.2342787
     },
     "last_deal_post_times": {
-      "algeria": 1794003259.0164464
+      "algeria": 1794004763.4434867
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
