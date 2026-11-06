@@ -652,7 +652,8 @@
     "9998887703",
     "1005008708333999",
     "1005012254132930",
-    "1005013028124905"
+    "1005013028124905",
+    "1005012691642623"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1319,7 +1320,8 @@
     "9998887703": 1793967703.2348685,
     "1005008708333999": 1793969907.6763735,
     "1005012254132930": 1793970449.9003735,
-    "1005013028124905": 1793971934.3600886
+    "1005013028124905": 1793971934.3600886,
+    "1005012691642623": 1793976348.7503736
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2142,7 +2144,8 @@
     "HONOR Pad X8a (4/64GB)",
     "Magcubic HY350 Max 900ANSI",
     "Honor X9d (no charger)",
-    "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone"
+    "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone",
+    "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2970,10 +2973,10 @@
     "HONOR Pad X8a (4/64GB)": 1793972480.4803846,
     "Magcubic HY350 Max 900ANSI": 1793974144.8262026,
     "Honor X9d (no charger)": 1793974514.9586184,
-    "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1793975250.6134522
+    "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1793975250.6134522,
+    "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736
   },
   "published_post_keys": [
-    "megaphonna:8564",
     "lodydeals:45456",
     "zedstoreonline:38922",
     "aniscoupons:32803",
@@ -3972,11 +3975,12 @@
     "aniscoupons:34155",
     "aniscoupons:34156",
     "aniscoupons:34157",
-    "zedstoreonline:39636"
+    "zedstoreonline:39636",
+    "zedstoreonline:39637"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793975250.6134522,
+  "last_run_time": 1793976348.7503736,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
@@ -4003,8 +4007,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39636,
-      "last_check_time": 1793975252.6475298
+      "last_message_id": 39637,
+      "last_check_time": 1793976350.7997782
     },
     "aniscoupons": {
       "last_message_id": 34157,
@@ -4572,7 +4576,8 @@
     "1005008357913212": 40.5,
     "1005012254132930": 15.2,
     "1005008708333999": 136.7,
-    "1005013028124905": 438.6
+    "1005013028124905": 438.6,
+    "1005012691642623": 37.1
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16027,6 +16032,16 @@
       "price": 9.2,
       "timestamp": 1793975250.6134522,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39637": {
+      "channel_msg_id": 1934,
+      "product_id": "1005012691642623",
+      "title": "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39637,
+      "price": 37.1,
+      "timestamp": 1793976348.7503736,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16035,17 +16050,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793975253.7738345,
+    "last_deal_post_time": 1793976352.3209631,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793976172.1953394,
+    "last_sweep_time": 1793976355.8548698,
     "last_sweep_times": {
-      "algeria": 1793976169.155194,
-      "france": 1793976172.1953394
+      "algeria": 1793976352.298355,
+      "france": 1793976355.8548698
     },
     "last_deal_post_times": {
-      "algeria": 1793975253.7738345
+      "algeria": 1793976352.3209631
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16712,7 +16727,8 @@
     "9998887703": "test_channel",
     "1005008708333999": "lodydeals",
     "1005012254132930": "zedstoreonline",
-    "1005013028124905": "zedstoreonline"
+    "1005013028124905": "zedstoreonline",
+    "1005012691642623": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -17540,7 +17556,8 @@
     "HONOR Pad X8a (4/64GB)": "aniscoupons",
     "Magcubic HY350 Max 900ANSI": "aniscoupons",
     "Honor X9d (no charger)": "aniscoupons",
-    "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": "zedstoreonline"
+    "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": "zedstoreonline",
+    "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
