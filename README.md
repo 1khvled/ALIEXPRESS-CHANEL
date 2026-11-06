@@ -1,141 +1,160 @@
-# AliExpress Deals Telegram Automation
+# AliExpress Deals Telegram Automation (DealScout DZ & FR)
 
-An automated, end-to-end deal intelligence and publishing system that monitors **10 Telegram deal channels** every **3 minutes**, extracts AliExpress deals, converts them to verified affiliate links, ensures multi-layer deduplication and quality scoring, formats clean Arabic posts, and publishes them automatically to your target Telegram channel.
+An autonomous, end-to-end deal intelligence, normalization, and multi-channel publishing engine. Monitors top competitor Telegram deal channels in real-time, extracts verified AliExpress deals, converts all links to high-converting affiliate URLs with active coin discounts, scrubs competitor watermarks and bot ads, and mirrors clean 1:1 deal posts to your target channels.
 
 ---
 
-## 📌 Architecture Overview
+## 📌 Production Channels & Current Status
+
+| Channel | Handle | Target Audience | Currency & Rules | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **Algeria Deals** | [`@DzAliexpress0`](https://t.me/DzAliexpress0) | Algerian Shoppers 🇩🇿 | USD ($), Coin Discount links (Canada/Australia settings), 1:1 clean Arabic format | **ACTIVE (5-min Cron)** |
+| **France Deals** | [`@francedealsdz`](https://t.me/francedealsdz) | France / Eurozone 🇫🇷 | EUR (€), Fast European delivery, Clean French layout | **ACTIVE (5-min Cron)** |
+| **Coin Bot** | `@Alilo07BOT` | Coin discount generator | Instant coin link conversions & bundle deals | **ACTIVE** |
+
+---
+
+## 🚀 Recent Major Overhaul & Changelog (November 2026)
+
+### 1. 1:1 Competitor Mirroring ("Just Copy Them")
+* **Direct Mirroring Architecture**: Replaced aggressive AI rewrites with `format_competitor_to_lody_1to1` and `format_lodydeals_caption_1to1`. The bot now accurately reflects the layout, emojis, seller vouchers, and discount tiers posted by top competitor channels (`aniscoupons`, `zedstoreonline`, `bnddeals`, `ecksdeal`, `lodydeals`).
+* **Zero Competitor Leaks**: Built-in regex filters thoroughly purge all competitor usernames (`@aniscoupons`, `@zedstoreonline`, `@bnddeals`, `@ecksdeal`, `@lodydeals`, `@ZedStoreSve_bot`, etc.) and promotional bot spam (`بوت مطور لشراء بأفضل سعر`, `لا تنسى استخدام البوت للشراء بأقل الأسعار`, `تتبع الطرود`).
+* **Clean DealScout Signatures**: Every mirrored post signs off cleanly with our official channel handle `📢 @DzAliexpress0` and verified affiliate links.
+
+### 2. Media Pipeline Modernization & Broken Frame Elimination
+* **Eliminated Empty Neon Frame Bug**: Permanently disabled `_render_framed_deal` which was outputting an empty `1254x1254` neon template frame with a transparent checkerboard center when images were missing or failed resizing.
+* **Studio Product Photos**: Switched exclusively to `_render_deal_card` in `app/media/renderer.py`. Every deal now features the full natural product photo (in native 800×800 or 1000×1000 resolution) with a subtle DealScout circular badge and modern glassmorphic price pill.
+* **Watermark Scrubber**: `_clean_source_watermark` scans and removes competitor corner watermarks on light/white backgrounds before publishing.
+* **Channel Purge**: Removed all historic broken frame posts (`#1930`, `#1932`, `#1934`, `#1935`, `#1940`, `#1941`, `#1942`) from `@DzAliexpress0`.
+
+### 3. Short Cooldown Debounce for Festival Season (11.11)
+* **Debounce Window**: Lowered `DUPLICATE_COOLDOWN_HOURS` from an overly aggressive 12 hours down to an agile **30–45 minute** window (`0.5h` - `0.75h`).
+* **Same-Channel Re-posts**: Aligned `same_channel_min_cooldown` to allow deal bumps, reminders, and price drops from monitored channels after 30 minutes, preventing our bot from skipping hot trending deals (like the `Realme C100D`).
+* **Anti-Flood Protection**: Retains short 5–15 minute deduplication to prevent posting identical deals simultaneously if multiple competitor channels post at the exact same minute.
+
+### 4. Arabic Title & Text Formatting Sanitization
+* **Truncated Title Fix**: Added `_clean_title_boundary` to remove dangling truncated words (e.g. `والأل` at line endings) caused by arbitrary character cuts.
+* **Boundary Cleaners**: Strips orphan punctuation, dangling prepositions (`لـ`, `في`, `من`), and isolated emoji lines.
+* **Price Line Normalization**: Enforces standardized RTL Arabic pricing lines (`السعر : $XX.XX 🔥`).
+
+### 5. Deactivation of Spontaneous Promo Coupon Walls
+* **Disabled Auto-Tajmi3at**: Removed the automated cron trigger in `.github/workflows/tajmi3at.yml`. Multi-deal roundups and coupon compilations only run on manual workflow dispatch.
+* **Disabled Scraper Coupon Pinning**: Removed `ensure_active_promo_coupons_pinned` from the background scraper loop in `app/publisher/promo_notifiers.py` to prevent spontaneous spam of repetitive coupon bulletin posters.
+
+### 6. Admin Chat Isolation & Security
+* **Zero DM Leaks**: Removed any debug inspection scripts forwarding test channel messages to the user's private Telegram bot chat (`ADMIN_USER_ID`).
+* **Safe State Management**: State persistence in `storage/state/published_state.json` accurately logs every channel message ID and prevents duplicate processing across workflow runs.
+
+---
+
+## 🏗 Architecture & Pipeline
 
 ```text
-10 Source Channels (Telegram)
-           ↓ every 180s
-Telethon MTProto Collector
-           ↓
-Source Message Storage (Deduplication Layer 1)
-           ↓
-URL Resolver & Canonical Normalizer
-           ↓
-Affiliate Conversion & Smart Redirect (/d/{slug})
-           ↓
-Product Extractor & Multi-Layer Deduplication Engine
-           ↓
-Deal Quality Scorer (0 - 100)
-           ↓
-AI Arabic Post Generator & Validation Engine
-           ↓
-Media Downloader & Visual Renderer
-           ↓
-Telegram Bot Publisher (Auto / Approval / Dry-Run Modes)
-           ↓
-Our Telegram Channel + Tracking & Live Web Dashboard
+Monitored Channels (Telegram)
+[aniscoupons, zedstoreonline, bnddeals, ecksdeal, lodydeals]
+                         │
+                         ▼ (Every 5 minutes via GitHub Actions)
+          Telethon / Web Scraper Collector
+                         │
+                         ▼
+        State Tracker & 30-min Anti-Spam Debounce
+                         │
+                         ▼
+       AliExpress Product & URL Canonicalization
+  (Extracts item ID, clean title, seller coupons, coin rules)
+                         │
+                         ▼
+       Affiliate Conversion Engine (Tag: dzkhvled16)
+ (Generates high-commission short links with active coin discount)
+                         │
+                         ▼
+      1:1 Format Generator & Competitor Leak Scrubber
+(Mirrors competitor structure, strips bot ads & handles, fixes boundaries)
+                         │
+                         ▼
+             Media Downloader & Renderer
+ (Fetches official AliExpress studio photo, scrubs watermarks, adds sleek card)
+                         │
+                         ▼
+        Telegram Channel Publisher (@DzAliexpress0)
 ```
 
 ---
 
-## 🌟 Key Features
+## ⚙️ Configuration & Environment Variables
 
-1. **Telegram Collector (Telethon MTProto)**:
-   - Polls 10 configured deal channels every 180 seconds.
-   - Maintains a persistent cursor (`last_message_id`) to only process new deals.
-2. **Deal Extractor & Canonical Resolver**:
-   - Follows short links (`s.click.aliexpress.com`, `a.aliexpress.com`, `bit.ly`, etc.) to canonical `/item/{product_id}.html`.
-   - Cleans all tracking spam parameters.
-   - Extracts title, USD & EUR prices, coupon codes, and points discounts (`خصم النقاط`).
-3. **Multi-Layer Deduplication**:
-   - Source message ID check.
-   - AliExpress `product_id` check.
-   - Normalized URL hash.
-   - Title + Product ID hash.
-   - 24-hour time-window protection cooldown.
-4. **Exact Arabic Channel Format**:
-   - Zero hallucination guarantee: AI and generator strictly maintain verified factual values.
-   ```text
-   العرض مستمر 🚨
-   تخفيض لـ {PRODUCT_TITLE}
-   السعر : {USD_PRICE}$ ({EUR_PRICE}€)🔥
-   رابط {AFFILIATE_URL}
-   {COUPON_LINE}
-   {POINTS_LINE}
+Key parameters in `.env`:
 
-   لا تنسى استخدام البوت للشراء بأقل الأسعار
-   ```
-5. **Smart Tracking Redirect**:
-   - Deals can be published with `/d/{slug}` links which log click metadata (timestamp, IP, referer) before 302 redirecting to your affiliate link.
-6. **Publishing Modes & Anti-Spam**:
-   - `AUTO`: Deals scoring $\ge 85$ with approved validation are published immediately.
-   - `APPROVAL`: Deals enter `PENDING_REVIEW` queue for operator 1-click approval.
-   - `DRY_RUN`: Test full pipeline without posting to Telegram.
-   - Cooldown timer & rate limiting (max posts/hour and per day).
-7. **Interactive Web Dashboard & Live Tester**:
-   - Access at `http://localhost:8000/`.
-   - Real-time metrics, live deal approvals, 10-channel cursor statuses, and a sandbox tester to paste any post text or link and preview instant parsing and Arabic post generation.
+```ini
+# Telegram Bot & Channel
+TELEGRAM_BOT_TOKEN="8900887118:AAG..."
+TARGET_CHANNEL_ID="@DzAliexpress0"
+FRANCE_TARGET_CHANNEL_ID="@francedealsdz"
+ADMIN_BOT_TOKEN="8900887118:AAG..."
+ADMIN_USER_ID="5625295907"
 
----
+# Publishing Settings
+PUBLISH_MODE="auto"
+POLL_INTERVAL_SECONDS=300
+MAX_POSTS_PER_HOUR=25
+MAX_POSTS_PER_DAY=200
+COOLDOWN_MINUTES=0
+DUPLICATE_COOLDOWN_HOURS=0.5
 
-## 🚀 Quick Start Guide
+# Affiliate Configuration
+ALIEXPRESS_AFFILIATE_PROVIDER="portals"
+ALIEXPRESS_AFFILIATE_TRACKING_ID="dzkhvled16"
+ALIEXPRESS_AFFILIATE_APP_KEY="526622"
+ALIEXPRESS_AFFILIATE_APP_SECRET="..."
 
-### 1. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 2. Configure Environment
-
-Copy `.env.example` to `.env`:
-
-```bash
-cp .env.example .env
-```
-
-Fill in your configuration:
-- `TELEGRAM_API_ID` & `TELEGRAM_API_HASH`: Get from [my.telegram.org/apps](https://my.telegram.org/apps)
-- `TELEGRAM_BOT_TOKEN`: Get from [@BotFather](https://t.me/BotFather)
-- `TARGET_CHANNEL_ID`: Your Telegram channel (e.g. `@MyDealsChannel` or channel ID)
-- `PUBLISH_MODE`: `approval` (default), `auto`, or `dry_run`
-
-### 3. Authenticate Telethon Collector Session (First Time Only)
-
-Run the interactive authentication script:
-
-```bash
-python scripts/auth_telegram.py
-```
-
-This logs into your Telegram account and creates a secure session in `sessions/deals_collector.session`.
-
-### 4. Initialize Database & Seed Channels
-
-```bash
-python scripts/init_db.py
-```
-
-### 5. Run the Application
-
-```bash
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
-```
-
-Open your browser to:
-- **Dashboard**: [http://localhost:8000/](http://localhost:8000/)
-- **Health Check**: [http://localhost:8000/health](http://localhost:8000/health)
-
----
-
-## 🧪 Running Tests
-
-Run the full pytest suite:
-
-```bash
-pytest tests/ -v
+# Currency & Rates
+EUR_USD_RATE=1.08
 ```
 
 ---
 
-## 🐳 Docker Deployment
+## 🤖 GitHub Actions Automation
 
-To run in Docker with PostgreSQL:
+The automation runs 24/7 on GitHub Actions with zero server maintenance costs:
+
+1. **`bot_cron.yml`**:
+   - Triggers every **5 minutes** (`*/5 * * * *`).
+   - Runs `scripts/post_recent_deals.py` for Algeria (`@DzAliexpress0`).
+   - Runs `scripts/post_france_deals.py` for France (`@francedealsdz`).
+   - Auto-commits updated state files (`published_state.json`, `france_published_state.json`) with `[skip ci]`.
+   - Supports manual trigger via `workflow_dispatch` with `--force` flag.
+
+2. **`tajmi3at.yml`**:
+   - Set to manual trigger only. Publishes multi-deal roundups and coupon compilations on demand.
+
+---
+
+## 🧪 Testing & Verification
+
+Run the full pytest suite locally:
 
 ```bash
-docker compose up -d --build
+# Run all unit and integration tests
+python -m pytest tests/test_deal_formatting_and_france.py -v
+
+# Run duplicate detection and cooldown tests
+python -m pytest tests/test_duplicates.py -v
+
+# Run the complete test suite (224+ tests)
+python -m pytest tests/ -v
 ```
+
+---
+
+## 📋 Troubleshooting & Maintenance
+
+* **Channel Post Removal**: If an accidental post needs removal, use `deleteMessage` with the bot token and channel ID:
+  ```python
+  import httpx
+  httpx.post(f"https://api.telegram.org/bot{TOKEN}/deleteMessage", json={"chat_id": "@DzAliexpress0", "message_id": MSG_ID})
+  ```
+* **Forcing a Deal Re-post**: If a deal needs to be reposted immediately despite recent publication, delete its entry from `published_post_keys` and `channel_published_deals` in `storage/state/published_state.json` or trigger the GitHub Action with the `force: true` input.
+* **Checking Bot Connectivity**:
+  ```bash
+  python -c "from app.utils.network import enforce_ipv4; enforce_ipv4(); import httpx; print(httpx.get('https://api.telegram.org/bot' + TOKEN + '/getMe').json())"
+  ```
