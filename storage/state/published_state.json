@@ -1088,7 +1088,7 @@
     "1005012864273120": 1793399494.1323898,
     "1005006967218963": 1793448582.9150612,
     "1005012675968319": 1793399525.3383162,
-    "1005010424638496": 1793898382.556843,
+    "1005010424638496": 1793974144.8262026,
     "1005010141682336": 1793399542.6698716,
     "1005006782790827": 1793966774.5170474,
     "1005012938359476": 1793448722.5382965,
@@ -2139,7 +2139,8 @@
     "Realme C100D 4G 4/128GB",
     "HAYLOU Flowbuds N50 ANC",
     "Honor 600 Pro 12/256",
-    "HONOR Pad X8a (4/64GB)"
+    "HONOR Pad X8a (4/64GB)",
+    "Magcubic HY350 Max 900ANSI"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2964,10 +2965,10 @@
     "Realme C100D 4G 4/128GB": 1793969907.6763735,
     "HAYLOU Flowbuds N50 ANC": 1793970449.9003735,
     "Honor 600 Pro 12/256": 1793971367.4627862,
-    "HONOR Pad X8a (4/64GB)": 1793972480.4803846
+    "HONOR Pad X8a (4/64GB)": 1793972480.4803846,
+    "Magcubic HY350 Max 900ANSI": 1793974144.8262026
   },
   "published_post_keys": [
-    "megaphonna:8565",
     "lodydeals:45789",
     "megaphonna:8622",
     "megaphonna:8564",
@@ -3966,11 +3967,12 @@
     "zedstoreonline:39631",
     "aniscoupons:34151",
     "bnddeals:51196",
-    "aniscoupons:34155"
+    "aniscoupons:34155",
+    "aniscoupons:34156"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793973971.0121949,
+  "last_run_time": 1793974144.8262026,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
@@ -4001,8 +4003,8 @@
       "last_check_time": 1793973775.1423602
     },
     "aniscoupons": {
-      "last_message_id": 34155,
-      "last_check_time": 1793973973.0631738
+      "last_message_id": 34156,
+      "last_check_time": 1793974146.8554678
     },
     "bnddeals": {
       "last_message_id": 51196,
@@ -15991,6 +15993,16 @@
       "price": 78.4,
       "timestamp": 1793973971.0121949,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34156": {
+      "channel_msg_id": 1929,
+      "product_id": "1005010424638496",
+      "title": "Magcubic HY350 Max 900ANSI",
+      "channel": "aniscoupons",
+      "source_msg_id": 34156,
+      "price": 113.4,
+      "timestamp": 1793974144.8262026,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15999,17 +16011,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793973974.003409,
+    "last_deal_post_time": 1793974147.7089028,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793973978.4202895,
+    "last_sweep_time": 1793974150.2600992,
     "last_sweep_times": {
-      "algeria": 1793973973.9798079,
-      "france": 1793973978.4202895
+      "algeria": 1793974147.6962473,
+      "france": 1793974150.2600992
     },
     "last_deal_post_times": {
-      "algeria": 1793973974.003409
+      "algeria": 1793974147.7089028
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16457,7 +16469,7 @@
     "1005012864273120": "zedstoreonline",
     "1005006967218963": "zedstoreonline",
     "1005012675968319": "aniscoupons",
-    "1005010424638496": "lodydeals",
+    "1005010424638496": "aniscoupons",
     "1005010141682336": "aniscoupons",
     "1005006782790827": "zedstoreonline",
     "1005012938359476": "aniscoupons",
@@ -17501,7 +17513,8 @@
     "Realme C100D 4G 4/128GB": "lodydeals",
     "HAYLOU Flowbuds N50 ANC": "zedstoreonline",
     "Honor 600 Pro 12/256": "zedstoreonline",
-    "HONOR Pad X8a (4/64GB)": "aniscoupons"
+    "HONOR Pad X8a (4/64GB)": "aniscoupons",
+    "Magcubic HY350 Max 900ANSI": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
