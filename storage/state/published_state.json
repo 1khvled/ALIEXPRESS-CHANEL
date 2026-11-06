@@ -700,7 +700,7 @@
     "1005006603602562": 1790941207.5310047,
     "1005010721042860": 1793656098.242545,
     "1005009517247552": 1790941221.8823678,
-    "1005012191191893": 1791137155.7589798,
+    "1005012191191893": 1793973036.340303,
     "1005012968221708": 1793542591.509991,
     "9998883454": 1790943454.3504107,
     "9998883497": 1790943497.723828,
@@ -2196,7 +2196,7 @@
     "Blackview Zeno 10 5G  8/128": 1790941207.5310047,
     "Honor Power 2  12/256": 1790941214.6756065,
     "Honor X70 5G 8/128": 1792077689.3824542,
-    "Blackview MEGA 5  8/256": 1793968985.4885292,
+    "Blackview MEGA 5  8/256": 1793973036.340303,
     "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1793542591.509991,
     "4G LTE Wireless USB 150Mbps": 1790943633.9774187,
     "Curren 8455 Men's Quartz": 1790943640.1460688,
@@ -2967,7 +2967,6 @@
     "HONOR Pad X8a (4/64GB)": 1793972480.4803846
   },
   "published_post_keys": [
-    "test_channel:1792098253",
     "ecksdeal:5895",
     "megaphonna:8565",
     "lodydeals:45789",
@@ -3966,19 +3965,20 @@
     "aniscoupons:34149",
     "zedstoreonline:39630",
     "zedstoreonline:39631",
-    "aniscoupons:34151"
+    "aniscoupons:34151",
+    "bnddeals:51196"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793972480.4803846,
+  "last_run_time": 1793973036.340303,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
       "last_check_time": 1793903108.984469
     },
     "lodydeals": {
-      "last_message_id": 46193,
-      "last_check_time": 1793972472.8033447
+      "last_message_id": 46194,
+      "last_check_time": 1793973028.1806552
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4001,12 +4001,12 @@
       "last_check_time": 1793972475.4138403
     },
     "aniscoupons": {
-      "last_message_id": 34152,
-      "last_check_time": 1793972846.9950757
+      "last_message_id": 34153,
+      "last_check_time": 1793973031.3353891
     },
     "bnddeals": {
-      "last_message_id": 51195,
-      "last_check_time": 1793967354.0579934
+      "last_message_id": 51196,
+      "last_check_time": 1793973038.3803475
     }
   },
   "published_product_prices": {
@@ -4056,7 +4056,7 @@
     "1005006603602562": 181.0,
     "1005010721042860": 363.7,
     "1005009517247552": 236.0,
-    "1005012191191893": 224.3,
+    "1005012191191893": 228.3,
     "1005012968221708": 20.2,
     "1005010111014453": 6.09,
     "1005009828161174": 7.62,
@@ -15971,6 +15971,16 @@
       "price": 134.36,
       "timestamp": 1793972480.4803846,
       "status": "ACTIVE"
+    },
+    "bnddeals:51196": {
+      "channel_msg_id": 1927,
+      "product_id": "1005012191191893",
+      "title": "Blackview MEGA 5  8/256",
+      "channel": "bnddeals",
+      "source_msg_id": 51196,
+      "price": 228.3,
+      "timestamp": 1793973036.340303,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15979,17 +15989,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793972483.2540224,
+    "last_deal_post_time": 1793973038.416111,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793972849.9712203,
+    "last_sweep_time": 1793973041.0545046,
     "last_sweep_times": {
-      "algeria": 1793972847.5682,
-      "france": 1793972849.9712203
+      "algeria": 1793973038.3985014,
+      "france": 1793973041.0545046
     },
     "last_deal_post_times": {
-      "algeria": 1793972483.2540224
+      "algeria": 1793973038.416111
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16013,7 +16023,7 @@
     "1005006603602562": "zedstoreonline",
     "1005010721042860": "lodydeals",
     "1005009517247552": "zedstoreonline",
-    "1005012191191893": "aniscoupons",
+    "1005012191191893": "bnddeals",
     "1005012968221708": "ecksdeal",
     "9998883454": "test_channel",
     "9998883497": "test_channel",
@@ -16676,7 +16686,7 @@
     "Blackview Zeno 10 5G  8/128": "zedstoreonline",
     "Honor Power 2  12/256": "zedstoreonline",
     "Honor X70 5G 8/128": "zedstoreonline",
-    "Blackview MEGA 5  8/256": "zedstoreonline",
+    "Blackview MEGA 5  8/256": "bnddeals",
     "سماعات اذن فخمة  Moondrop Chu 3 IEM": "ecksdeal",
     "4G LTE Wireless USB 150Mbps": "lodydeals",
     "Curren 8455 Men's Quartz": "lodydeals",
@@ -18275,7 +18285,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38829",
     "megaphonna:8516",
     "megaphonna:8655",
     "aniscoupons:33372",
@@ -19274,7 +19283,8 @@
     "aniscoupons:34150",
     "zedstoreonline:39632",
     "zedstoreonline:39633",
-    "aniscoupons:34152"
+    "aniscoupons:34152",
+    "aniscoupons:34153"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
