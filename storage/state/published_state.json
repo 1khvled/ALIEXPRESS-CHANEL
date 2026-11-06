@@ -1075,7 +1075,7 @@
     "1005011790544318": 1793448745.105644,
     "1005010266614743": 1793380310.000534,
     "1005006990064696": 1793380320.7842646,
-    "1005013254642366": 1793913781.9155498,
+    "1005013254642366": 1793995361.9589899,
     "1005012725188908": 1793467076.3852122,
     "1005013224329670": 1793380335.1434295,
     "1005010039614599": 1793607798.5770764,
@@ -2173,7 +2173,8 @@
     "Maono Wave T5 Wireless Mic",
     "SAMSUNG DDR3 8GB 1600v",
     "Realme 15 Pro (12/256GB)",
-    "SOUNDPEATS C30 ANC Wireless Earphones"
+    "SOUNDPEATS C30 ANC Wireless Earphones",
+    "UGREEN 45W GaN Smart Display Charger"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3012,10 +3013,10 @@
     "Maono Wave T5 Wireless Mic": 1793987285.4130383,
     "SAMSUNG DDR3 8GB 1600v": 1793987289.8200357,
     "Realme 15 Pro (12/256GB)": 1793989672.350269,
-    "SOUNDPEATS C30 ANC Wireless Earphones": 1793994623.1444166
+    "SOUNDPEATS C30 ANC Wireless Earphones": 1793994623.1444166,
+    "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899
   },
   "published_post_keys": [
-    "test_channel:1793227440",
     "lodydeals:45486",
     "zedstoreonline:38703",
     "couponsglobal:48820",
@@ -4014,11 +4015,12 @@
     "aniscoupons:34168",
     "aniscoupons:34171",
     "lodydeals:46201",
-    "zedstoreonline:39650"
+    "zedstoreonline:39650",
+    "zedstoreonline:39651"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793994623.1444166,
+  "last_run_time": 1793995361.9589899,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
@@ -4045,8 +4047,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39650,
-      "last_check_time": 1793994625.1861627
+      "last_message_id": 39651,
+      "last_check_time": 1793995364.017159
     },
     "aniscoupons": {
       "last_message_id": 34173,
@@ -4380,7 +4382,7 @@
     "1005010266614743": 57.8,
     "1005012741268303": 29.9,
     "1005006990064696": 29.9,
-    "1005013254642366": 22.9,
+    "1005013254642366": 23.5,
     "1005012725188908": 35.4,
     "1005013224329670": 21.1,
     "1005010039614599": 43.11,
@@ -16239,6 +16241,16 @@
       "price": 20.4,
       "timestamp": 1793994623.1444166,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39651": {
+      "channel_msg_id": 1954,
+      "product_id": "1005013254642366",
+      "title": "UGREEN 45W GaN Smart Display Charger",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39651,
+      "price": 23.5,
+      "timestamp": 1793995361.9589899,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16247,17 +16259,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793994626.6250262,
+    "last_deal_post_time": 1793995365.6716812,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793995169.3021023,
+    "last_sweep_time": 1793995369.133522,
     "last_sweep_times": {
-      "algeria": 1793995166.4087477,
-      "france": 1793995169.3021023
+      "algeria": 1793995365.6463048,
+      "france": 1793995369.133522
     },
     "last_deal_post_times": {
-      "algeria": 1793994626.6250262
+      "algeria": 1793995365.6716812
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16681,7 +16693,7 @@
     "1005010266614743": "zedstoreonline",
     "1005012741268303": "aniscoupons",
     "1005006990064696": "zedstoreonline",
-    "1005013254642366": "lodydeals",
+    "1005013254642366": "zedstoreonline",
     "1005012725188908": "zedstoreonline",
     "1005013224329670": "zedstoreonline",
     "1005010039614599": "lodydeals",
@@ -17773,7 +17785,8 @@
     "Maono Wave T5 Wireless Mic": "lodydeals",
     "SAMSUNG DDR3 8GB 1600v": "lodydeals",
     "Realme 15 Pro (12/256GB)": "aniscoupons",
-    "SOUNDPEATS C30 ANC Wireless Earphones": "zedstoreonline"
+    "SOUNDPEATS C30 ANC Wireless Earphones": "zedstoreonline",
+    "UGREEN 45W GaN Smart Display Charger": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
