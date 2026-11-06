@@ -1068,7 +1068,7 @@
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
     "1005005373032877": 1793600283.7397804,
-    "1005007869955343": 1793656150.4800947,
+    "1005007869955343": 1793962203.497378,
     "1005012644570693": 1793441338.6619778,
     "1005003949106838": 1793899614.3022053,
     "1005012436082838": 1793733101.535615,
@@ -2089,7 +2089,8 @@
     "CUSU Nexdrive P60 512GB",
     "HONOR PAD X8A 4/64GB",
     "Magcubic HY300 Pro Projector",
-    "CUSU SSD SATA3"
+    "CUSU SSD SATA3",
+    "MAONO PD100X USB/XL"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2888,10 +2889,10 @@
     "CUSU Nexdrive P60 512GB": 1793908979.1776278,
     "HONOR PAD X8A 4/64GB": 1793908989.4952903,
     "Magcubic HY300 Pro Projector": 1793908994.588809,
-    "CUSU SSD SATA3": 1793913777.3174822
+    "CUSU SSD SATA3": 1793913777.3174822,
+    "MAONO PD100X USB/XL": 1793962203.497378
   },
   "published_post_keys": [
-    "test_channel:1792162475",
     "aniscoupons:33158",
     "aniscoupons:33319",
     "ecksdeal:5954",
@@ -3890,19 +3891,20 @@
     "lodydeals:46177",
     "test_channel:1793929309",
     "lodydeals:45000",
-    "test_channel:1793929332"
+    "test_channel:1793929332",
+    "lodydeals:46179"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793932483.4741564,
-  "last_run_time": 1793929332.9979298,
+  "last_run_time": 1793962203.497378,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
       "last_check_time": 1793903108.984469
     },
     "lodydeals": {
-      "last_message_id": 46177,
-      "last_check_time": 1793929332.7647214
+      "last_message_id": 46181,
+      "last_check_time": 1793962210.1323075
     },
     "test_channel": {
       "last_message_id": 1793929332,
@@ -15447,6 +15449,16 @@
       "price": 22.9,
       "timestamp": 1793913781.9155498,
       "status": "ACTIVE"
+    },
+    "lodydeals:46179": {
+      "channel_msg_id": 1879,
+      "product_id": "1005007869955343",
+      "title": "MAONO PD100X USB/XL",
+      "channel": "lodydeals",
+      "source_msg_id": 46179,
+      "price": 37.05,
+      "timestamp": 1793962203.497378,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15455,17 +15467,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793913786.1197474,
+    "last_deal_post_time": 1793962210.8179047,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793962010.2877831,
+    "last_sweep_time": 1793962213.1623337,
     "last_sweep_times": {
-      "algeria": 1793962008.0082376,
-      "france": 1793962010.2877831
+      "algeria": 1793962210.796261,
+      "france": 1793962213.1623337
     },
     "last_deal_post_times": {
-      "algeria": 1793913786.1197474
+      "algeria": 1793962210.8179047
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16919,7 +16931,8 @@
     "CUSU Nexdrive P60 512GB": "lodydeals",
     "HONOR PAD X8A 4/64GB": "lodydeals",
     "Magcubic HY300 Pro Projector": "lodydeals",
-    "CUSU SSD SATA3": "lodydeals"
+    "CUSU SSD SATA3": "lodydeals",
+    "MAONO PD100X USB/XL": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -17707,9 +17720,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38633",
-    "zedstoreonline:38640",
-    "pcgamingpart:8015",
     "lodydeals:45647",
     "lodydeals:45661",
     "ecksdeal:5997",
@@ -18706,7 +18716,10 @@
     "lodydeals:46173",
     "lodydeals:46174",
     "lodydeals:46175",
-    "ecksdeal:6037"
+    "ecksdeal:6037",
+    "lodydeals:46178",
+    "lodydeals:46180",
+    "lodydeals:46181"
   ],
   "last_france_cross_promo_time": 1793958156.0052226,
   "next_france_cross_promo_interval_seconds": 258327,
