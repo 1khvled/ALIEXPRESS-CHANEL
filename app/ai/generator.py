@@ -631,12 +631,16 @@ def format_lodydeals_caption_1to1(
 
         # Replace competitor bot mentions with DealScout points bot @Alilo07BOT
         competitor_bot_keywords = [
-            "lodycouponsbot", "ecksdealsbot", "zedstorebot", "anisbot", "bndbot",
-            "pcgamingbot", "couponsbot", "ecksbot", "lodybot", "zedbot",
+            "lodycouponsbot", "ecksdealsbot", "zedstoresve_bot", "zedstorebot", "coinsdiscountbot",
+            "anisbot", "bndbot", "pcgamingbot", "couponsbot", "ecksbot", "lodybot", "zedbot",
             "dzgamingcoinbot"
         ]
         if any(b in l.lower() for b in competitor_bot_keywords):
             clean_lines.append("t.me/Alilo07BOT")
+            continue
+
+        # Skip competitor warning / scam disclaimer slop
+        if any(w in l.lower() for w in ["ابلوكيه", "نصاب", "zed store", "zedstore"]):
             continue
 
         # Replace competitor affiliate links
@@ -741,55 +745,73 @@ def format_multi_deal_tajmi3at_1to1(raw_text: str, link_mapping: Dict[str, str])
 
 
 
-def format_ecksdeal_caption_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None) -> str:
+def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None, extracted_title: Optional[str] = None) -> str:
     """
-    Formats @ECKSDEAL posts into Lody's clean, standard deal layout:
-    - Extracts product title, prices, coupons, country settings, and coin discounts.
-    - Strips all competitor secondary links, bots, and channels.
-    - Structures deal strictly into Lody's standard format:
+    Transforms incoming posts from ANY competitor channel (ECKSDEAL, ZedStore, AnisCoupons, BNDDeals)
+    into Lody's clean, standard, high-converting deal format:
       تخفيض لـ [Title]
       السعر : [Price]$ 🔥
       رابط [Affiliate URL]
-      كوبون [Tier]: [Code]
+      احجز قسيمة البائع [Store Coupon]
+      كوبون [Tier]: <code>[Code]</code>
       ضع البلد [Country] من الإعدادات [Flag]
       خصم النقاط 🪙
-    - Concludes with official bot and channel attribution.
+
+      لا تنسى استخدام البوت للشراء بأقل الأسعار :
+      https://t.me/Alilo07BOT
+
+      قناة التيليغرام للمزيد من العروض : https://t.me/DzAliexpress0
     """
     clean_raw = re.sub(r'ـ', '', raw_text)
 
-    # 1. Extract Title
-    title = ""
-    for l in clean_raw.splitlines():
-        l_str = l.strip()
-        if any(w in l_str for w in ["خفيض ل", "تخفيض ل", "عرض ل"]):
-            title = re.sub(r'.*(?:تخفيض|خفيض|عرض)\s*لـ*[\s:]*', '', l_str).strip()
-            break
+    # 1. Title Extraction
+    title = extracted_title or ""
     if not title:
         for l in clean_raw.splitlines():
             l_str = l.strip()
-            if re.search(r'[A-Za-z0-9]', l_str) and not any(kw in l_str for kw in ["https", "t.me", "السعر", "كوبون", "الرابط", "البوت", "قناة"]):
-                cleaned = re.sub(r'^[🚨🔥⚡⭐⭐️✅💎🎫🎟️📎🔗🔸▪️🔹❗️\-\s:]+', '', l_str).strip()
-                if cleaned:
+            if any(w in l_str for w in ["تخفيض ل", "عرض ل", "تخفيض لـ", "تخفيض ممتاز لـ", "تخفيض قوي لـ"]):
+                title = re.sub(r'.*(?:تخفيض|خفيض|عرض)\s*(?:ممتاز|قوي|خاص)?\s*لـ*[\s:]*', '', l_str).strip()
+                break
+    if not title:
+        for l in clean_raw.splitlines():
+            l_str = l.strip()
+            if re.search(r'[A-Za-z0-9]', l_str) and not any(kw in l_str.lower() for kw in ["https", "t.me", "السعر", "كوبون", "كود", "قسيمة", "الرابط", "البوت", "قناة", "اعدادات", "إعدادات", "بلد"]):
+                cleaned = re.sub(r'^[🚨🔥⚡⭐⭐️✅💎🎫🎟️📎🔗🔸▪️🔹❗️😮😍🙏🌷\-\s:]+', '', l_str).strip()
+                cleaned = re.sub(r'(?:💰|💵|السعر|prix|price|[\$€]).*$', '', cleaned).strip()
+                if len(cleaned) >= 3:
                     title = cleaned
                     break
     if not title:
         title = "AliExpress Deal"
 
-    title = re.sub(r'^[🚨🔥⚡⭐⭐️✅💎🎫🎟️📎🔗🔸▪️🔹❗️\-\s:]+', '', title).strip()
+    title = re.sub(r'^[🚨🔥⚡⭐⭐️✅💎🎫🎟️📎🔗🔸▪️🔹❗️😮😍🙏🌷\-\s:]+', '', title).strip()
 
-    # 2. Extract Price
-    m_usd = re.search(r'(?:السعر|السعــــر|السعـر|Prix)\s*💲?\s*:?\s*\$?\s*(\d+(?:\.\d+)?)\s*\$?', clean_raw, re.I)
+    # 2. Price Extraction
+    m_usd = re.search(r'(?:السعر|السعــــر|السعـر|Prix|💰|💵)\s*💲?\s*:?\s*\$?\s*(\d+(?:\.\d+)?)\s*\$?', clean_raw, re.I)
     if not m_usd:
         m_usd = re.search(r'(\d+(?:\.\d+)?)\s*\$', clean_raw)
     price_str = m_usd.group(1) if m_usd else ""
 
-    # 3. Extract Coupon
-    m_code = re.search(r'(?:كوبون|كود)[^\n:]*[:\s]+([A-Za-z0-9_-]{4,15})', clean_raw)
-    code = m_code.group(1).strip() if m_code else (coupon_code or "")
+    # 3. Store Coupon (قسيمة البائع)
+    store_coupon = ""
+    m_store = re.search(r'(?:قسيمة\s*البائع|قسيمــة\s*البــائع|قسيمة\s*المتجر|قسيمة\s*بائع)[^\n\d]*(\$?\d+(?:\.\d+)?\$?)', clean_raw)
+    if m_store:
+        sc_val = m_store.group(1).strip()
+        store_coupon = f"احجز قسيمة البائع {sc_val}"
+
+    # 4. Promo Coupon
+    code = coupon_code or ""
+    if not code:
+        m_code = re.search(r'(?:كوبون|كود)[^\n:]*[:\s]+([A-Za-z0-9_-]{4,15})', clean_raw)
+        if m_code:
+            cand = m_code.group(1).strip()
+            if any(cand.startswith(p) for p in ["OTD", "AE", "AL", "DZ", "FR", "SUN", "ESD", "IFP", "BEST"]):
+                code = cand
+
     tier_m = re.search(r'(?:كوبون|كود|قسيمة)\s*(\$?\d+\s*/\s*\$?\d+\$?|\d+\$\s*/\s*\d+\$?)', clean_raw)
     tier_str = f" {tier_m.group(1).strip()}" if tier_m else ""
 
-    # 4. Country Setting
+    # 5. Country Setting
     country = ""
     if any(k in clean_raw for k in ["كندا", "canada"]):
         country = "ضع البلد كندا من الإعدادات 🇨🇦"
@@ -800,6 +822,7 @@ def format_ecksdeal_caption_1to1(raw_text: str, affiliate_url: str, coupon_code:
     elif any(k in clean_raw for k in ["كوريا", "korea"]):
         country = "ضع البلد كوريا من الإعدادات 🇰🇷"
 
+    # 6. Coins
     has_coins = bool(re.search(r'(?:العملات|عملات|نقاط|coins)', clean_raw, re.I))
 
     lines = []
@@ -807,6 +830,8 @@ def format_ecksdeal_caption_1to1(raw_text: str, affiliate_url: str, coupon_code:
     if price_str:
         lines.append(f"السعر : {price_str}$ 🔥")
     lines.append(f"رابط {affiliate_url}")
+    if store_coupon:
+        lines.append(store_coupon)
     if code:
         lines.append(f"كوبون{tier_str} : <code>{code}</code>")
     if country:
@@ -821,4 +846,9 @@ def format_ecksdeal_caption_1to1(raw_text: str, affiliate_url: str, coupon_code:
     lines.append("قناة التيليغرام للمزيد من العروض : https://t.me/DzAliexpress0")
 
     return "\n".join(lines).strip()
+
+
+def format_ecksdeal_caption_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None) -> str:
+    """Compatibility wrapper for @ECKSDEAL posts using standard Lody layout."""
+    return format_competitor_to_lody_1to1(raw_text=raw_text, affiliate_url=affiliate_url, coupon_code=coupon_code)
 

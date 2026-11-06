@@ -31,7 +31,7 @@ from app.aliexpress.product import product_extractor
 from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category, detect_deal_type, is_france_deal, extract_telegram_html_text, is_multi_deal_compilation
 from app.aliexpress.promos import promo_tracker
 from app.aliexpress.affiliate import affiliate_service
-from app.ai.generator import caption_generator, format_lodydeals_caption_1to1, format_ecksdeal_caption_1to1, format_multi_deal_tajmi3at_1to1
+from app.ai.generator import caption_generator, format_lodydeals_caption_1to1, format_ecksdeal_caption_1to1, format_competitor_to_lody_1to1, format_multi_deal_tajmi3at_1to1
 from app.media.downloader import media_downloader
 from app.media.renderer import media_renderer
 from app.publisher.publisher import telegram_publisher
@@ -719,11 +719,18 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         extracted.has_points_discount = True
 
                     # 10. Generate 1:1 mirror caption for monitored channels
-                    if ch.lower() in ["lodydeals", "ecksdeal", "zedstoreonline", "aniscoupons", "bnddeals"]:
+                    if ch.lower() == "lodydeals":
                         caption = format_lodydeals_caption_1to1(
                             raw_text=raw_text,
                             affiliate_url=aff_link,
                             coupon_code=extracted.coupon_code
+                        )
+                    elif ch.lower() in ["ecksdeal", "zedstoreonline", "aniscoupons", "bnddeals"]:
+                        caption = format_competitor_to_lody_1to1(
+                            raw_text=raw_text,
+                            affiliate_url=aff_link,
+                            coupon_code=extracted.coupon_code,
+                            extracted_title=extracted.title
                         )
                     else:
                         caption = await caption_generator.generate(

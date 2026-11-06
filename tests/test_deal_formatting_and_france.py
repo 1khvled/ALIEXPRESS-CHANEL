@@ -575,3 +575,49 @@ def test_multi_deal_compilation_detection_and_formatting():
     assert "<code>WALRAM</code>" not in cap_single
     assert "<code>OTD1104</code>" in cap_single
     assert "WALRAM SSD 512GB" in cap_single
+
+
+def test_competitor_to_lody_format_scrubs_all_bots():
+    from app.ai.generator import format_competitor_to_lody_1to1
+
+    # 1. ZedStore post test
+    zed_raw = """😮 الاكثر طلبااااا 😮
+غير البلد من الاعدادات أستراليا 🇦🇺
+⭐️ CUSU SSD 512GB
+💵 السعر 43.9$ 🔥
+🌷 احجــز قسيمــة البــائع 1.06$
+🙏 كوبون 4/25$ : OTD1104
+🔗 رابـــــط المنتـــج  https://s.click.aliexpress.com/e/_c4rjiDhH
+😊 بوت مطور لشراء بأفضل سعر وتتبع الطرود  : t.me/ZedStoreSve_bot
+لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب ) ⚠️"""
+
+    cap_zed = format_competitor_to_lody_1to1(zed_raw, "https://s.click.aliexpress.com/e/_aff123", "OTD1104")
+    assert "تخفيض لـ CUSU SSD 512GB" in cap_zed
+    assert "السعر : 43.9$ 🔥" in cap_zed
+    assert "احجز قسيمة البائع 1.06$" in cap_zed
+    assert "<code>OTD1104</code>" in cap_zed
+    assert "ضع البلد استراليا من الإعدادات 🇦🇺" in cap_zed
+    assert "ZedStoreSve_bot" not in cap_zed
+    assert "zed store" not in cap_zed.lower()
+    assert "نصاب" not in cap_zed
+    assert "Alilo07BOT" in cap_zed
+    assert "DzAliexpress0" in cap_zed
+
+    # 2. AnisCoupons post test
+    anis_raw = """خلي البلـــد أستراليا 🇦🇺 🇦🇺
+لافاااااااااااااااااااااااااار
+✅ HAYLOU Watch Faro
+💰 السعر  : 12.11$ 💲 🥲 🥲
+🎟️ كوبـــون 4/25$ : OTD1104
+🎫 قسيمة البائع 4$ : ANISHAY10
+📍 رابط العملات : ⬇️ ⬇️
+🔗 https://s.click.aliexpress.com/e/_c31JFyyX
+🔸 🔸 البوت : https://t.me/CoinsDiscountBot"""
+
+    cap_anis = format_competitor_to_lody_1to1(anis_raw, "https://s.click.aliexpress.com/e/_aff456", "OTD1104")
+    assert "تخفيض لـ HAYLOU Watch Faro" in cap_anis
+    assert "السعر : 12.11$ 🔥" in cap_anis
+    assert "احجز قسيمة البائع 4$" in cap_anis
+    assert "<code>OTD1104</code>" in cap_anis
+    assert "CoinsDiscountBot" not in cap_anis
+    assert "Alilo07BOT" in cap_anis
