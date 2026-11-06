@@ -3893,7 +3893,7 @@
     "test_channel:1793929332"
   ],
   "last_disclaimer_time": 1793314858.1877568,
-  "last_calendar_time": 1793327622.2534416,
+  "last_calendar_time": 1793932483.4741564,
   "last_run_time": 1793929332.9979298,
   "monitored_channels": {
     "ecksdeal": {
@@ -15459,10 +15459,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793932316.227071,
+    "last_sweep_time": 1793932490.682409,
     "last_sweep_times": {
-      "algeria": 1793932313.8277624,
-      "france": 1793932316.227071
+      "algeria": 1793932488.2040153,
+      "france": 1793932490.682409
     },
     "last_deal_post_times": {
       "algeria": 1793913786.1197474
