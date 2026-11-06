@@ -650,7 +650,8 @@
     "9998887107",
     "9998887678",
     "9998887703",
-    "1005008708333999"
+    "1005008708333999",
+    "1005012254132930"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1315,7 +1316,8 @@
     "9998887107": 1793967108.0014687,
     "9998887678": 1793967678.8184059,
     "9998887703": 1793967703.2348685,
-    "1005008708333999": 1793969907.6763735
+    "1005008708333999": 1793969907.6763735,
+    "1005012254132930": 1793970449.9003735
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2132,7 +2134,8 @@
     "HAYLOU WATCH 3 NEW",
     "Vivo Y600 Pro",
     "MAONO PD100X USB/XL",
-    "Realme C100D 4G 4/128GB"
+    "Realme C100D 4G 4/128GB",
+    "HAYLOU Flowbuds N50 ANC"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2954,10 +2957,10 @@
     "HAYLOU WATCH 3 NEW": 1793966892.2256048,
     "Vivo Y600 Pro": 1793969543.5771117,
     "MAONO PD100X USB/XL": 1793969903.1419857,
-    "Realme C100D 4G 4/128GB": 1793969907.6763735
+    "Realme C100D 4G 4/128GB": 1793969907.6763735,
+    "HAYLOU Flowbuds N50 ANC": 1793970449.9003735
   },
   "published_post_keys": [
-    "aniscoupons:32981",
     "aniscoupons:32693",
     "zedstoreonline:38685",
     "couponsglobal:48801",
@@ -3956,19 +3959,20 @@
     "lodydeals:46179",
     "lodydeals:46181",
     "lodydeals:46187",
-    "aniscoupons:34144"
+    "aniscoupons:34144",
+    "zedstoreonline:39627"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793969932.206648,
+  "last_run_time": 1793970449.9003735,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
       "last_check_time": 1793903108.984469
     },
     "lodydeals": {
-      "last_message_id": 46189,
-      "last_check_time": 1793969923.9118786
+      "last_message_id": 46190,
+      "last_check_time": 1793970445.9555683
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -3987,12 +3991,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39626,
-      "last_check_time": 1793969926.012216
+      "last_message_id": 39627,
+      "last_check_time": 1793970451.950929
     },
     "aniscoupons": {
-      "last_message_id": 34145,
-      "last_check_time": 1793970083.6779485
+      "last_message_id": 34146,
+      "last_check_time": 1793970453.9324086
     },
     "bnddeals": {
       "last_message_id": 51195,
@@ -4554,7 +4558,7 @@
     "1005008060391372": 32.9,
     "1005012593794312": 239.8,
     "1005008357913212": 40.5,
-    "1005012254132930": 14.5,
+    "1005012254132930": 15.2,
     "1005008708333999": 136.7
   },
   "channel_published_deals": {
@@ -15910,6 +15914,16 @@
       "price": 265.7,
       "timestamp": 1793969932.206648,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39627": {
+      "channel_msg_id": 1922,
+      "product_id": "1005012254132930",
+      "title": "HAYLOU Flowbuds N50 ANC",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39627,
+      "price": 15.2,
+      "timestamp": 1793970449.9003735,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15918,17 +15932,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793969934.8897026,
+    "last_deal_post_time": 1793970454.5098794,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793970269.8427455,
+    "last_sweep_time": 1793970457.0031726,
     "last_sweep_times": {
-      "algeria": 1793970267.3304453,
-      "france": 1793970269.8427455
+      "algeria": 1793970454.4868224,
+      "france": 1793970457.0031726
     },
     "last_deal_post_times": {
-      "algeria": 1793969934.8897026
+      "algeria": 1793970454.5098794
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16593,7 +16607,8 @@
     "9998887107": "test_channel",
     "9998887678": "test_channel",
     "9998887703": "test_channel",
-    "1005008708333999": "lodydeals"
+    "1005008708333999": "lodydeals",
+    "1005012254132930": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -17415,7 +17430,8 @@
     "HAYLOU WATCH 3 NEW": "bnddeals",
     "Vivo Y600 Pro": "aniscoupons",
     "MAONO PD100X USB/XL": "lodydeals",
-    "Realme C100D 4G 4/128GB": "lodydeals"
+    "Realme C100D 4G 4/128GB": "lodydeals",
+    "HAYLOU Flowbuds N50 ANC": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -18209,8 +18225,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "pcgamingpart:7972",
-    "bnddeals:50988",
     "aniscoupons:33444",
     "zedstoreonline:38641",
     "megaphonna:8551",
@@ -19208,7 +19222,9 @@
     "lodydeals:46188",
     "lodydeals:46189",
     "zedstoreonline:39626",
-    "aniscoupons:34145"
+    "aniscoupons:34145",
+    "lodydeals:46190",
+    "aniscoupons:34146"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
