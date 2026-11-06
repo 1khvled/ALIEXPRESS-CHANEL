@@ -591,6 +591,104 @@ ALIEXPRESS_URL_RE = re.compile(
 )
 
 
+def is_symbol_only(line: str) -> bool:
+    """Returns True if the line contains NO Arabic letters, Latin letters, or digits."""
+    return not bool(re.search(r'[\u0600-\u06FFa-zA-Z0-9]', line))
+
+
+def normalize_deal_price_line(line: str) -> str:
+    """
+    Normalizes price lines with USD and optional EUR:
+    - Handles 'السعر : 37.05$ (33.08€)'
+    - Handles 'السعر : (36.97€) $41.56'
+    - Handles 'السعر: $41.56 (36.97€)'
+    - Handles 'السعر : 41.56$ (€36.97)'
+    - Injects \u200e before euro parentheses so Telegram BiDi RTL never flips the parentheses!
+    """
+    m_usd = re.search(r'\$[ \t]*(\d+(?:\.\d+)?)|(\d+(?:\.\d+)?)[ \t]*\$', line)
+    usd = (m_usd.group(1) or m_usd.group(2)) if m_usd else ""
+    m_eur = re.search(r'(\d+(?:\.\d+)?)[ \t]*€|€[ \t]*(\d+(?:\.\d+)?)', line)
+    eur = (m_eur.group(1) or m_eur.group(2)) if m_eur else ""
+
+    if usd and eur:
+        return f"السعر : {usd}$ \u200e({eur}€) 🔥"
+    elif usd:
+        return f"السعر : {usd}$ 🔥"
+    return line
+
+
+def modify_deal_hooks_and_phrasing(caption: str) -> str:
+    """
+    Subtly modifies competitor hooks and phrasing so posts are not obvious identical clones:
+    - Adapts local Algerian market comparisons.
+    - Rephrases stock and urgency hooks into engaging Algerian shopping dialect.
+    - Turns personal review lines into clean bullet points.
+    - Refreshes deal title prefixes.
+    """
+    caption = re.sub(r'سعرو\s*فالبلاد\s*حوالي\s*(\d+)\s*دج', r'سعره في السوق المحلي حوالي \1 دج', caption)
+    caption = re.sub(r'سعرو\s*فالسوق\s*حوالي\s*(\d+)\s*دج', r'في محلاتنا راه يدير حوالي \1 دج', caption)
+    caption = re.sub(r'الحح+ق\s*المفقود\s*راه\s*هنا', r'فرصة ذهبية قبل نفاد الكمية', caption)
+    caption = re.sub(r'راه\s*يـ+ليكيـ+دي', r'تصفية ستوك وتخفيض جنوني', caption)
+    caption = re.sub(r'اجـ+ري', r'سارع قبل نهاية العرض والكمية', caption)
+    caption = re.sub(r'أقوى\s*هبوط\s*في\s*السعر', r'هبوط تاريخي وممتاز في السعر', caption)
+    caption = re.sub(r'الكاسك\s*راه\s*عندي\s*منذ\s*[^\n]+', r'▫️ منتج مجرب ومضمون 100% ✨', caption)
+    caption = re.sub(r'جودة\s*صوت\s*ممتازة', r'▫️ نقاوة صوت وجودة عالية 🎵', caption)
+    caption = re.sub(r'عزل\s*الضوضاء\s*بشكل\s*احترافي', r'▫️ عزل ضوضاء احترافي فعال ⚡', caption)
+    caption = re.sub(r'^تخفيض\s*لـ\s*', r'تخفيض ممتاز لـ ', caption, flags=re.MULTILINE)
+    return caption
+
+
+def merge_floating_emoji_lines(lines: List[str]) -> List[str]:
+    """
+    Merges any standalone symbol/emoji lines so they never sit alone on empty lines.
+    - Bullets (◀️, ▶️, ▫️, ▪️, 🔹, etc.) prepend to the NEXT text line.
+    - Emotion/trailing emojis (🔥, 🚨, 💥, etc.) append to the PREVIOUS text line.
+    """
+    merged = []
+    i = 0
+    while i < len(lines):
+        line = lines[i].strip()
+        if not line:
+            if merged and merged[-1] != "":
+                merged.append("")
+            i += 1
+            continue
+
+        if is_symbol_only(line):
+            if any(b in line for b in ["◀️", "▶️", "▫️", "▪️", "🔹", "🔸", "🔴", "📌", "✅", "🏷️", "📦"]):
+                j = i + 1
+                while j < len(lines) and not lines[j].strip():
+                    j += 1
+                if j < len(lines) and lines[j].strip():
+                    lines[j] = f"{line} {lines[j].strip()}"
+                    i = j
+                    continue
+                else:
+                    i += 1
+                    continue
+            else:
+                k = len(merged) - 1
+                while k >= 0 and merged[k] == "":
+                    k -= 1
+                if k >= 0:
+                    if line not in merged[k]:
+                        merged[k] = f"{merged[k]} {line}"
+                    i += 1
+                    continue
+                else:
+                    j = i + 1
+                    while j < len(lines) and not lines[j].strip():
+                        j += 1
+                    if j < len(lines) and lines[j].strip():
+                        lines[j] = f"{lines[j].strip()} {line}"
+                        i = j
+                        continue
+
+        merged.append(line)
+        i += 1
+    return merged
+
+
 def format_lodydeals_caption_1to1(
     raw_text: str,
     affiliate_url: str,
@@ -598,22 +696,23 @@ def format_lodydeals_caption_1to1(
     link_mapping: Optional[Dict[str, str]] = None
 ) -> str:
     """
-    1:1 Mirror formatter for @lodydeals:
-    - Retains original Algerian hype, emojis, pricing, and structure.
+    Polished formatter for @lodydeals:
+    - Retains Algerian deal layout and high-converting structure.
+    - Modifies hooks subtly so it's not an obvious clone ("dont cop their caption").
     - Replaces competitor affiliate links with our verified monetized link(s).
-    - Strips duplicate/secondary direct links ('مباشر').
-    - Replaces @LodyCouponsBot with our points bot @Alilo07BOT.
-    - Replaces @lodydeals mentions with @DzAliexpress0.
-    - Wraps coupon codes in <code> tags for one-tap copying in Telegram.
-    - Strictly avoids wrapping brand names (WALRAM, REALME, etc.) in <code> tags.
+    - Strips duplicate/secondary direct links ('مباشر' or naked URLs).
+    - Injects \u200e before euro parentheses so Telegram BiDi RTL never flips parentheses.
+    - Merges isolated/floating emojis onto proper text lines.
+    - Replaces competitor bots with our points bot @Alilo07BOT.
+    - Replaces competitor channel mentions with @DzAliexpress0.
+    - Normalizes store coupons and wraps promo coupon codes in <code> tags.
     """
-    lines = raw_text.splitlines()
+    raw_lines = [l.strip() for l in raw_text.splitlines()]
     clean_lines = []
     has_aff = False
 
-    for line in lines:
-        l = line.strip()
-        if not l:
+    for line in raw_lines:
+        if not line:
             clean_lines.append("")
             continue
 
@@ -622,11 +721,11 @@ def format_lodydeals_caption_1to1(
             "lodydeals", "ecksdeal", "zedstoreonline", "aniscoupons", "bnddeals",
             "pcgamingpart", "bnd_deals", "ecks_deal", "anis_coupons", "zed_store"
         ]
-        if any(b in l.lower() for b in competitor_channel_keywords) and any(kw in l.lower() for kw in ["t.me/", "@", "قناة", "خاص", "متابعين", "متابعي"]):
+        if any(b in line.lower() for b in competitor_channel_keywords) and any(kw in line.lower() for kw in ["t.me/", "@", "قناة", "خاص", "متابعين", "متابعي"]):
             continue
 
         # Skip secondary link line 'مباشر' and its accompanying url
-        if l == "مباشر" or (any(kw in l for kw in ["مباشر", "رابط آخر", "رابط بديل", "بديل", "متجر"]) and ALIEXPRESS_URL_RE.search(l)):
+        if line == "مباشر" or (any(kw in line for kw in ["مباشر", "رابط آخر", "رابط بديل", "بديل", "متجر"]) and ALIEXPRESS_URL_RE.search(line)):
             continue
 
         # Replace competitor bot mentions with DealScout points bot @Alilo07BOT
@@ -635,24 +734,27 @@ def format_lodydeals_caption_1to1(
             "anisbot", "bndbot", "pcgamingbot", "couponsbot", "ecksbot", "lodybot", "zedbot",
             "dzgamingcoinbot"
         ]
-        if any(b in l.lower() for b in competitor_bot_keywords):
+        if any(b in line.lower() for b in competitor_bot_keywords):
             clean_lines.append("t.me/Alilo07BOT")
             continue
 
         # Skip competitor warning / scam disclaimer slop
-        if any(w in l.lower() for w in ["ابلوكيه", "نصاب", "zed store", "zedstore"]):
+        if any(w in line.lower() for w in ["ابلوكيه", "نصاب", "zed store", "zedstore"]):
             continue
 
         # Replace competitor affiliate links
-        if ALIEXPRESS_URL_RE.search(l):
+        if ALIEXPRESS_URL_RE.search(line):
             if link_mapping:
                 for orig_url, aff in link_mapping.items():
-                    if orig_url in l:
-                        l = l.replace(orig_url, aff)
-                clean_lines.append(l)
+                    if orig_url in line:
+                        line = line.replace(orig_url, aff)
+                clean_lines.append(line)
                 has_aff = True
             elif not has_aff:
-                clean_lines.append(ALIEXPRESS_URL_RE.sub(affiliate_url, l))
+                aff_line = ALIEXPRESS_URL_RE.sub(affiliate_url, line)
+                if not aff_line.startswith("رابط") and not aff_line.startswith("الرابط"):
+                    aff_line = f"رابط {aff_line}"
+                clean_lines.append(aff_line)
                 has_aff = True
             else:
                 # We already placed the primary affiliate link; skip duplicate / secondary link lines
@@ -660,25 +762,34 @@ def format_lodydeals_caption_1to1(
             continue
 
         # Skip orphaned "مباشر" or "الرابط:"
-        if has_aff and (l in ["مباشر", "رابط آخر", "رابط بديل", "بديل", "الرابط", "رابط"] or re.match(r"^(?:الرابط|رابط|مباشر)\s*:?$", l)):
+        if has_aff and (line in ["مباشر", "رابط آخر", "رابط بديل", "بديل", "الرابط", "رابط"] or re.match(r"^(?:الرابط|رابط|مباشر)\s*:?$", line)):
             continue
 
-        # If line is just an emoji (e.g. 🔥 or 🚨) and previous line exists, merge emoji into previous line
-        if l in ["🔥", "🚨", "💥", "⚡", "✨", "👇"] and clean_lines:
-            last_idx = len(clean_lines) - 1
-            while last_idx >= 0 and not clean_lines[last_idx]:
-                last_idx -= 1
-            if last_idx >= 0 and l not in clean_lines[last_idx]:
-                clean_lines[last_idx] = f"{clean_lines[last_idx]} {l}"
-                continue
+        # Normalize price line with BiDi isolation and clean format
+        if any(kw in line for kw in ["السعر", "السعـر", "السعــــر", "Prix"]) and ("$" in line or "€" in line):
+            line = normalize_deal_price_line(line)
 
-        clean_lines.append(l)
+        clean_lines.append(line)
 
-    caption = "\n".join(clean_lines).strip()
+    # Merge floating emojis onto text lines
+    merged_lines = merge_floating_emoji_lines(clean_lines)
+
+    caption = "\n".join(merged_lines).strip()
     caption = re.sub(r'\n{3,}', '\n\n', caption)
 
+    # Subtly modify Algerian hooks so it is not an exact clone
+    caption = modify_deal_hooks_and_phrasing(caption)
+
+    # Fix coupon tier ratio: "$4/25" -> "4/25$"
+    caption = re.sub(r'\$(\d+/\d+)', r'\1$', caption)
+
+    # Normalize store coupon line
+    caption = re.sub(r'(?<!🎫[ \t])(?:احجز|اجمع|إحجز|حصّل|حصل)\s*(?:قسيمة\s*(?:البائع|المتجر))\s*:?\s*\$?\s*(\d+(?:\.\d+)?)\s*\$?', r'🎫 احجز قسيمة البائع: \1$', caption)
+
+    # Normalize promo coupon line
+    caption = re.sub(r'(?<!🎟️[ \t])(?:كوبون|كود)[ \t]*(\d+/\d+\$?)[ \t]*:[ \t]*([A-Za-z0-9_-]+)', r'🎟️ كوبون \1 : <code>\2</code>', caption)
+
     # Wrap promo coupon codes in <code> tags (Strict: must start with prefix AND contain at least one digit)
-    # This prevents wrapping brand names like WALRAM, REALME, APPLE, etc.
     code_matches = re.findall(r"\b([A-Z0-9]{4,12})\b", caption)
     for c in code_matches:
         if any(c.startswith(prefix) for prefix in ["OTD", "AE", "AL", "DZ", "FR", "SUN", "ESD", "IFP", "BEST"]) and any(ch.isdigit() for ch in c):
@@ -687,104 +798,138 @@ def format_lodydeals_caption_1to1(
     if coupon_code and coupon_code not in caption:
         caption = re.sub(rf"(?<!<code>)\b{coupon_code}\b(?!</code>)", f"<code>{coupon_code}</code>", caption)
 
-    if affiliate_url not in caption and (not link_mapping or not any(aff in caption for aff in link_mapping.values())):
-        caption += f"\nالرابط: {affiliate_url}"
-
-    if "Alilo07BOT" not in caption:
-        caption += "\n\n🤖 بوت تخفيض النقاط: @Alilo07BOT"
-
-    caption = re.sub(r"\n+\s*الرابط\s*:?\s*$", "", caption)
-
-    # Fix BiDi / LTR price parentheses formatting: e.g. "السعر : 37.05$ (33.08€)" -> isolates the euro conversion cleanly
-    def fix_parens(m):
-        return f"{m.group(1)} \u200e{m.group(2)}"
-    caption = re.sub(r'(\$\s*\d+(?:\.\d+)?|\d+(?:\.\d+)?\s*\$)\s*(\(\s*[\d\.]+\s*€\s*\)|\(\s*€\s*[\d\.]+\s*\))', fix_parens, caption)
-
-    # Fix coupon tier: "$4/25" -> "4/25$"
-    caption = re.sub(r'\$(\d+/\d+)', r'\1$', caption)
-
     # Fix truncated model name if ends with broken suffix
     if "USB/XL" in caption and "USB/XLR" not in caption:
         caption = caption.replace("USB/XL", "USB/XLR")
 
-    return caption
+    if affiliate_url not in caption and (not link_mapping or not any(aff in caption for aff in link_mapping.values())):
+        caption += f"\nالرابط: {affiliate_url}"
+
+    if "Alilo07BOT" not in caption:
+        caption += "\n\n🤖 بوت تخفيض النقاط: @Alilo07BOT\nhttps://t.me/Alilo07BOT"
+
+    if "@DzAliexpress0" not in caption and "DzAliexpress0" not in caption:
+        caption += "\n\nقناة التيليغرام للمزيد من العروض : @DzAliexpress0\nhttps://t.me/DzAliexpress0"
+
+    caption = re.sub(r"\n+\s*الرابط\s*:?\s*$", "", caption)
+
+    # Deduplicate repeated emojis on the same line (e.g. 🔥 🔥 -> 🔥)
+    for em in ["🔥", "🚨", "💥", "✨", "⚡"]:
+        caption = re.sub(rf"(?:{em}[ \t]*)+{em}", em, caption)
+
+    return caption.strip()
 
 
 def format_multi_deal_tajmi3at_1to1(raw_text: str, link_mapping: Dict[str, str]) -> str:
     """
-    1:1 Multi-Deal / Tajmi3at Formatter:
-    - Preserves multi-item roundup layout, headers (e.g. 'أفضل العروض في التخزين SSD'), bullets, and prices.
+    Polished Multi-Deal / Tajmi3at Formatter:
+    - Merges isolated/floating bullet & emotion emojis onto proper text lines.
+    - Fixes BiDi / RTL parentheses and price order inversion.
+    - Modifies roundup headers slightly with engaging emojis so it is not an exact copy.
     - Replaces ALL competitor AliExpress URLs with our monetized links from link_mapping.
-    - Strips competitor channels (@lodydeals, @ECKSDEAL) -> @DzAliexpress0.
-    - Replaces competitor bots (@LodyCouponsBot, @ECKSdealsbot) -> @Alilo07BOT.
-    - Wraps coupon codes in <code> tags (requires prefix + digit, never wrapping brand names).
+    - Strips competitor channels & replaces competitor bots with @Alilo07BOT.
+    - Wraps coupon codes in <code> tags and formats coupon tiers cleanly.
     - Appends official bot and channel attribution.
     """
-    lines = raw_text.splitlines()
+    raw_lines = [l.strip() for l in raw_text.splitlines()]
     clean_lines = []
 
-    for line in lines:
-        l = line.strip()
-        if not l:
+    # 1. Filter competitor mentions and substitute monetized URLs
+    for line in raw_lines:
+        if not line:
             clean_lines.append("")
             continue
 
-        # Skip direct competitor channel links
-        if any(b in l.lower() for b in ["t.me/lodydeals", "t.me/ecksdeal"]):
+        # Skip direct competitor channel links & scam disclaimers
+        if any(b in line.lower() for b in ["t.me/lodydeals", "t.me/ecksdeal", "t.me/zedstoreonline", "t.me/aniscoupons", "t.me/bnddeals"]):
+            continue
+        if any(w in line.lower() for w in ["ابلوكيه", "نصاب", "zed store", "zedstore"]):
             continue
 
         # Rewrite competitor channel mentions
-        l = re.sub(r'@(?:lodydeals|ECKSDEAL)', '@DzAliexpress0', l, flags=re.IGNORECASE)
+        line = re.sub(r'@(?:lodydeals|ECKSDEAL|zedstoreonline|aniscoupons|bnddeals)', '@DzAliexpress0', line, flags=re.IGNORECASE)
 
         # Replace competitor bot mentions
-        if any(b in l.lower() for b in ["lodycouponsbot", "@lodycouponsbot", "t.me/lodycouponsbot", "ecksdealsbot", "@ecksdealsbot"]):
+        competitor_bot_keywords = [
+            "lodycouponsbot", "ecksdealsbot", "zedstoresve_bot", "zedstorebot", "coinsdiscountbot",
+            "anisbot", "bndbot", "pcgamingbot", "couponsbot", "ecksbot", "lodybot", "zedbot",
+            "dzgamingcoinbot", "bnd_hot_deals_coins_bot"
+        ]
+        if any(b in line.lower() for b in competitor_bot_keywords):
             clean_lines.append("t.me/Alilo07BOT")
             continue
 
         # Replace AliExpress URLs with verified monetized links
-        urls = ALIEXPRESS_URL_RE.findall(l)
+        urls = ALIEXPRESS_URL_RE.findall(line)
         if urls:
             for u in urls:
                 clean_u = u.rstrip('.,;)"\'')
                 new_u = link_mapping.get(clean_u, link_mapping.get(u, u))
-                l = l.replace(u, new_u)
+                line = line.replace(u, new_u)
 
-        clean_lines.append(l)
+        clean_lines.append(line)
 
-    caption = "\n".join(clean_lines).strip()
+    # 2. Merge floating/isolated emojis so they never sit alone on empty lines
+    merged_lines = merge_floating_emoji_lines(clean_lines)
 
-    # Wrap coupon codes in <code> tags (Strict: prefix + digit only)
+    caption = "\n".join(merged_lines)
+
+    # 3. Clean up version prices (e.g. 'بـ : $43.7' -> 'بسعر: 43.7$ 🔥')
+    caption = re.sub(r'بـ[ \t]*:[ \t]*\$[ \t]*(\d+(?:\.\d+)?)', r'بسعر: \1$ 🔥', caption)
+    caption = re.sub(r'بـ[ \t]*:[ \t]*(\d+(?:\.\d+)?)[ \t]*\$', r'بسعر: \1$ 🔥', caption)
+
+    # 4. Fix BiDi inverted price parentheses: 'السعر : (36.97€) $41.56' -> 'السعر : 41.56$ \u200e(36.97€) 🔥'
+    caption = re.sub(r'السعر[ \t]*:[^\n]+', lambda m: normalize_deal_price_line(m.group(0)), caption)
+
+    # 5. Fix coupon format and wrap in code tags
+    caption = re.sub(r'\$(\d+/\d+)', r'\1$', caption)
+    caption = re.sub(r'(?<!🎟️[ \t])كوبون[ \t]*(\d+/\d+\$?)[ \t]*:[ \t]*([A-Za-z0-9_-]+)', r'🎟️ كوبون \1 : <code>\2</code>', caption)
     code_matches = re.findall(r"\b([A-Z0-9]{4,12})\b", caption)
     for c in code_matches:
         if any(c.startswith(prefix) for prefix in ["OTD", "AE", "AL", "DZ", "FR", "SUN", "ESD", "IFP", "BEST"]) and any(ch.isdigit() for ch in c):
             caption = re.sub(rf"(?<!<code>)\b{c}\b(?!</code>)", f"<code>{c}</code>", caption)
 
+    # 6. Fix store coupon format
+    caption = re.sub(r'(?<!🎫[ \t])(?:احجز|اجمع|إحجز|حصّل|حصل)\s*(?:قسيمة\s*(?:البائع|المتجر))\s*:?\s*\$?\s*(\d+(?:\.\d+)?)\s*\$?', r'🎫 احجز قسيمة البائع: \1$', caption)
+
+    # 7. Modify generic roundup header slightly with engaging styling
+    caption = re.sub(r'^(?:أفضل|افضل)\s+العروض\s+في\s+التخزين\s+SSD.*', r'🔥 أقوى عروض وحدات التخزين SSD 💥\n', caption, flags=re.MULTILINE)
+    caption = re.sub(r'^(?:أفضل|افضل)\s+العروض\s+في\s+(.*)', r'🔥 أقوى عروض \1 💥\n', caption, flags=re.MULTILINE)
+
+    # 8. Separate product blocks with a blank line before ◀️
+    caption = re.sub(r'([^\n])\n(◀️[^\n]+)', r'\1\n\n\2', caption)
+
+    # 9. Ensure official footer attribution
     if "Alilo07BOT" not in caption:
-        caption += "\n\n🤖 بوت تخفيض النقاط: @Alilo07BOT"
-
+        caption += "\n\n🤖 بوت تخفيض النقاط: @Alilo07BOT\nhttps://t.me/Alilo07BOT"
     if "@DzAliexpress0" not in caption and "DzAliexpress0" not in caption:
-        caption += "\nقناة العروض: @DzAliexpress0"
+        caption += "\n\nقناة التيليغرام للمزيد من العروض : @DzAliexpress0\nhttps://t.me/DzAliexpress0"
 
-    return caption
+    # Deduplicate repeated emojis on the same line (e.g. 🔥 🔥 -> 🔥)
+    for em in ["🔥", "🚨", "💥", "✨", "⚡"]:
+        caption = re.sub(rf"(?:{em}[ \t]*)+{em}", em, caption)
 
+    caption = re.sub(r'\n{3,}', '\n\n', caption)
+    return caption.strip()
 
 
 def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None, extracted_title: Optional[str] = None) -> str:
     """
     Transforms incoming posts from ANY competitor channel (ECKSDEAL, ZedStore, AnisCoupons, BNDDeals)
     into Lody's clean, standard, high-converting deal format:
-      تخفيض لـ [Title]
-      السعر : [Price]$ 🔥
+      تخفيض ممتاز لـ [Title]
+      السعر : [Price]$ \u200e([EUR]€) 🔥
       رابط [Affiliate URL]
-      احجز قسيمة البائع [Store Coupon]
-      كوبون [Tier]: <code>[Code]</code>
+      🎫 احجز قسيمة البائع: [Store Coupon]$
+      🎟️ كوبون [Tier]$ : <code>[Code]</code>
       ضع البلد [Country] من الإعدادات [Flag]
       خصم النقاط 🪙
 
       لا تنسى استخدام البوت للشراء بأقل الأسعار :
       https://t.me/Alilo07BOT
 
-      قناة التيليغرام للمزيد من العروض : https://t.me/DzAliexpress0
+      قناة التيليغرام للمزيد من العروض : @DzAliexpress0
+      https://t.me/DzAliexpress0
     """
     clean_raw = re.sub(r'ـ', '', raw_text)
 
@@ -810,18 +955,27 @@ def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_cod
 
     title = re.sub(r'^[🚨🔥⚡⭐⭐️✅💎🎫🎟️📎🔗🔸▪️🔹❗️😮😍🙏🌷\-\s:]+', '', title).strip()
 
-    # 2. Price Extraction
+    # 2. Price Extraction (USD & EUR with BiDi isolation)
     m_usd = re.search(r'(?:السعر|السعــــر|السعـر|Prix|💰|💵)\s*💲?\s*:?\s*\$?\s*(\d+(?:\.\d+)?)\s*\$?', clean_raw, re.I)
     if not m_usd:
         m_usd = re.search(r'(\d+(?:\.\d+)?)\s*\$', clean_raw)
     price_str = m_usd.group(1) if m_usd else ""
 
+    m_eur = re.search(r'(\d+(?:\.\d+)?)[ \t]*€|€[ \t]*(\d+(?:\.\d+)?)', clean_raw)
+    eur_str = (m_eur.group(1) or m_eur.group(2)) if m_eur else ""
+
+    price_line = ""
+    if price_str and eur_str:
+        price_line = f"السعر : {price_str}$ \u200e({eur_str}€) 🔥"
+    elif price_str:
+        price_line = f"السعر : {price_str}$ 🔥"
+
     # 3. Store Coupon (قسيمة البائع)
     store_coupon = ""
     m_store = re.search(r'(?:قسيمة\s*البائع|قسيمــة\s*البــائع|قسيمة\s*المتجر|قسيمة\s*بائع)[^\n\d]*(\$?\d+(?:\.\d+)?\$?)', clean_raw)
     if m_store:
-        sc_val = m_store.group(1).strip()
-        store_coupon = f"احجز قسيمة البائع {sc_val}"
+        sc_val = re.sub(r'[\$ ]', '', m_store.group(1).strip())
+        store_coupon = f"🎫 احجز قسيمة البائع: {sc_val}$"
 
     # 4. Promo Coupon
     code = coupon_code or ""
@@ -833,7 +987,10 @@ def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_cod
                 code = cand
 
     tier_m = re.search(r'(?:كوبون|كود|قسيمة)\s*(\$?\d+\s*/\s*\$?\d+\$?|\d+\$\s*/\s*\d+\$?)', clean_raw)
-    tier_str = f" {tier_m.group(1).strip()}" if tier_m else ""
+    tier_str = ""
+    if tier_m:
+        raw_tier = re.sub(r'[\$ ]', '', tier_m.group(1).strip())
+        tier_str = f" {raw_tier}$"
 
     # 5. Country Setting
     country = ""
@@ -850,14 +1007,14 @@ def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_cod
     has_coins = bool(re.search(r'(?:العملات|عملات|نقاط|coins)', clean_raw, re.I))
 
     lines = []
-    lines.append(f"تخفيض لـ {title}")
-    if price_str:
-        lines.append(f"السعر : {price_str}$ 🔥")
+    lines.append(f"تخفيض ممتاز لـ {title}")
+    if price_line:
+        lines.append(price_line)
     lines.append(f"رابط {affiliate_url}")
     if store_coupon:
         lines.append(store_coupon)
     if code:
-        lines.append(f"كوبون{tier_str} : <code>{code}</code>")
+        lines.append(f"🎟️ كوبون{tier_str} : <code>{code}</code>")
     if country:
         lines.append(country)
     if has_coins:
@@ -867,7 +1024,8 @@ def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_cod
     lines.append("لا تنسى استخدام البوت للشراء بأقل الأسعار :")
     lines.append("https://t.me/Alilo07BOT")
     lines.append("")
-    lines.append("قناة التيليغرام للمزيد من العروض : https://t.me/DzAliexpress0")
+    lines.append("قناة التيليغرام للمزيد من العروض : @DzAliexpress0")
+    lines.append("https://t.me/DzAliexpress0")
 
     return "\n".join(lines).strip()
 
@@ -875,4 +1033,3 @@ def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_cod
 def format_ecksdeal_caption_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None) -> str:
     """Compatibility wrapper for @ECKSDEAL posts using standard Lody layout."""
     return format_competitor_to_lody_1to1(raw_text=raw_text, affiliate_url=affiliate_url, coupon_code=coupon_code)
-

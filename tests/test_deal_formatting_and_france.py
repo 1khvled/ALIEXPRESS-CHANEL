@@ -592,9 +592,9 @@ def test_competitor_to_lody_format_scrubs_all_bots():
 لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب ) ⚠️"""
 
     cap_zed = format_competitor_to_lody_1to1(zed_raw, "https://s.click.aliexpress.com/e/_aff123", "OTD1104")
-    assert "تخفيض لـ CUSU SSD 512GB" in cap_zed
+    assert "CUSU SSD 512GB" in cap_zed
+    assert "احجز قسيمة البائع: 1.06$" in cap_zed
     assert "السعر : 43.9$ 🔥" in cap_zed
-    assert "احجز قسيمة البائع 1.06$" in cap_zed
     assert "<code>OTD1104</code>" in cap_zed
     assert "ضع البلد استراليا من الإعدادات 🇦🇺" in cap_zed
     assert "ZedStoreSve_bot" not in cap_zed
@@ -615,9 +615,9 @@ def test_competitor_to_lody_format_scrubs_all_bots():
 🔸 🔸 البوت : https://t.me/CoinsDiscountBot"""
 
     cap_anis = format_competitor_to_lody_1to1(anis_raw, "https://s.click.aliexpress.com/e/_aff456", "OTD1104")
-    assert "تخفيض لـ HAYLOU Watch Faro" in cap_anis
+    assert "HAYLOU Watch Faro" in cap_anis
+    assert "احجز قسيمة البائع: 4$" in cap_anis
     assert "السعر : 12.11$ 🔥" in cap_anis
-    assert "احجز قسيمة البائع 4$" in cap_anis
     assert "<code>OTD1104</code>" in cap_anis
     assert "CoinsDiscountBot" not in cap_anis
     assert "Alilo07BOT" in cap_anis
@@ -648,7 +648,7 @@ t.me/lodycouponsbot"""
     assert res.count(aff) == 1
 
     # 2. Emojis merged onto text lines
-    assert "سعرو فالبلاد حوالي 15000دج 🚨" in res
+    assert "سعره في السوق المحلي حوالي 15000 دج 🚨" in res
     assert "السعر : 37.05$ ‎(33.08€) 🔥" in res
 
     # 3. Model name restored

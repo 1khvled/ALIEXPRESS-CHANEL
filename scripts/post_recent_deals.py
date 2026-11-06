@@ -297,14 +297,15 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     except Exception as e:
         print(f"[!] Pre-11.11 advisory check error: {e}")
 
-    # Daily Tajmi3at / Compilations (Active ONLY during official promotional events at ~10:00 PM UTC+1)
-    try:
-        from app.publisher.regrouper import check_and_publish_regrouped_bulletins
-        bulletins = await check_and_publish_regrouped_bulletins(bot_token=get_bot_token(), force=force_tajmi3at)
-        if bulletins:
-            print(f"[TAJMI3AT POST] Published {len(bulletins)} event roundup bulletin(s): {[b['category'] for b in bulletins]}")
-    except Exception as e:
-        print(f"[!] Daily tajmi3at error: {e}")
+    # Daily Tajmi3at / Compilations (Active ONLY when explicitly requested with --tajmi3at)
+    if force_tajmi3at:
+        try:
+            from app.publisher.regrouper import check_and_publish_regrouped_bulletins
+            bulletins = await check_and_publish_regrouped_bulletins(bot_token=get_bot_token(), force=True)
+            if bulletins:
+                print(f"[TAJMI3AT POST] Published {len(bulletins)} event roundup bulletin(s): {[b['category'] for b in bulletins]}")
+        except Exception as e:
+            print(f"[!] Daily tajmi3at error: {e}")
 
     # Dynamic Interval & Day/Night Schedule Check (40 min daytime sweep, night paused)
     from app.publisher.state_tracker import is_deal_posting_due, record_sweep_completed, record_deal_posted_time, is_algerian_peak_hour
@@ -528,14 +529,22 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
 
                     # Check: Multi-Deal Roundup / Tajmi3at Compilation (e.g. SSD compilation, phones roundup)
                     if is_multi_deal_compilation(raw_text):
-                        published_multi = await publish_incoming_multi_deal_post(
-                            raw_text=raw_text,
-                            source_channel=ch,
-                            source_msg_id=msg_id
-                        )
-                        if published_multi:
-                            deals_published_this_run += 1
-                            published_deals.append(f"TAJMI3AT_{ch}_{msg_id}")
+                        if force_tajmi3at:
+                            published_multi = await publish_incoming_multi_deal_post(
+                                raw_text=raw_text,
+                                source_channel=ch,
+                                source_msg_id=msg_id
+                            )
+                            if published_multi:
+                                deals_published_this_run += 1
+                                published_deals.append(f"TAJMI3AT_{ch}_{msg_id}")
+                                max_processed_id = max(max_processed_id, msg_id)
+                                record_monitored_channel_last_id(ch, msg_id)
+                                record_post_handled(ch, msg_id)
+                                continue
+                        else:
+                            # User strictly wants single deals only, skip incoming multi-deal roundups
+                            logger.info(f"Skipping multi-deal compilation / Tajmi3at {ch} #{msg_id} (single deals only)")
                             max_processed_id = max(max_processed_id, msg_id)
                             record_monitored_channel_last_id(ch, msg_id)
                             record_post_handled(ch, msg_id)
