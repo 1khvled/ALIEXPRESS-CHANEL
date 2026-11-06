@@ -649,7 +649,8 @@
     "9998887089",
     "9998887107",
     "9998887678",
-    "9998887703"
+    "9998887703",
+    "1005008708333999"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -987,7 +988,7 @@
     "9998889908": 1793229908.2507865,
     "1005012339196141": 1793613978.6202738,
     "1005012472631754": 1793467108.5532427,
-    "1005013039644752": 1793600120.2797327,
+    "1005013039644752": 1793969932.206648,
     "1005013479436053": 1793380394.5736995,
     "1005012431631514": 1793270716.9132679,
     "1005009338640941": 1793613430.959157,
@@ -1077,7 +1078,7 @@
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
     "1005005373032877": 1793600283.7397804,
-    "1005007869955343": 1793656150.4800947,
+    "1005007869955343": 1793969903.1419857,
     "1005012644570693": 1793441338.6619778,
     "1005003949106838": 1793899614.3022053,
     "1005012436082838": 1793733101.535615,
@@ -1292,7 +1293,7 @@
     "1005008429979494": 1793741666.9686077,
     "1005004795387201": 1793742770.1634803,
     "1005010702983351": 1793966856.3932962,
-    "1005008366962319": 1793898370.6975753,
+    "1005008366962319": 1793969920.9023197,
     "1005005058037424": 1793779907.9964287,
     "1005012946895000": 1793793714.105913,
     "1005012150344482": 1793966664.0552397,
@@ -1313,7 +1314,8 @@
     "9998887089": 1793967089.468535,
     "9998887107": 1793967108.0014687,
     "9998887678": 1793967678.8184059,
-    "9998887703": 1793967703.2348685
+    "9998887703": 1793967703.2348685,
+    "1005008708333999": 1793969907.6763735
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2128,7 +2130,9 @@
     "ال mouse  الشهيرة رجعت🖱️",
     "هذون سماعات جدد من   HAYLOU⌚",
     "HAYLOU WATCH 3 NEW",
-    "Vivo Y600 Pro"
+    "Vivo Y600 Pro",
+    "MAONO PD100X USB/XL",
+    "Realme C100D 4G 4/128GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2422,7 +2426,7 @@
     "Redmi Note 12 5G Global (4/128GB)": 1792156524.878074,
     "Blackview Wave 10C": 1793613355.4947147,
     "متوسط سعره حالياً 82000دج": 1793276237.692456,
-    "iQOO Z11s 5G (8/128GB)": 1793448649.434771,
+    "iQOO Z11s 5G (8/128GB)": 1793969932.206648,
     "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1793966861.2399917,
     "Baseus GH02 Gaming Wireless Headphone": 1792087000.9978776,
     "GameSir GM500 PMW33600 Gaming Mouse": 1792087147.0923955,
@@ -2914,7 +2918,7 @@
     "CUSU SSD SATA 1TB": 1793742040.7102718,
     "MAONO PD400X USB/XLR": 1793742770.1634803,
     "HyperX Cloud 3 DTS": 1793779903.687306,
-    "KOOTION X15 M.2 Nvme 512GB": 1793898370.6975753,
+    "KOOTION X15 M.2 Nvme 512GB": 1793969920.9023197,
     "HAYLOU Solar Neo 2 AMOLED": 1793793748.870438,
     "ESSAGER 45W Car Charger": 1793793769.5631576,
     "Zeblaze Btalk 3 Plus": 1793793774.6743867,
@@ -2948,13 +2952,11 @@
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
     "هذون سماعات جدد من   HAYLOU⌚": 1793966887.3818936,
     "HAYLOU WATCH 3 NEW": 1793966892.2256048,
-    "Vivo Y600 Pro": 1793969543.5771117
+    "Vivo Y600 Pro": 1793969543.5771117,
+    "MAONO PD100X USB/XL": 1793969903.1419857,
+    "Realme C100D 4G 4/128GB": 1793969907.6763735
   },
   "published_post_keys": [
-    "zedstoreonline:38841",
-    "lodydeals:45822",
-    "zedstoreonline:38619",
-    "aniscoupons:32700",
     "aniscoupons:32981",
     "aniscoupons:32693",
     "zedstoreonline:38685",
@@ -3950,19 +3952,23 @@
     "test_channel:1793967678",
     "test_channel:1793967703",
     "zedstoreonline:39624",
-    "aniscoupons:34143"
+    "aniscoupons:34143",
+    "lodydeals:46179",
+    "lodydeals:46181",
+    "lodydeals:46187",
+    "aniscoupons:34144"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793969543.5771117,
+  "last_run_time": 1793969932.206648,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
       "last_check_time": 1793903108.984469
     },
     "lodydeals": {
-      "last_message_id": 46177,
-      "last_check_time": 1793967703.465253
+      "last_message_id": 46189,
+      "last_check_time": 1793969923.9118786
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -3981,12 +3987,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39625,
-      "last_check_time": 1793969536.821314
+      "last_message_id": 39626,
+      "last_check_time": 1793969926.012216
     },
     "aniscoupons": {
-      "last_message_id": 34143,
-      "last_check_time": 1793969545.616999
+      "last_message_id": 34144,
+      "last_check_time": 1793969934.2350926
     },
     "bnddeals": {
       "last_message_id": 51195,
@@ -4183,7 +4189,7 @@
     "1005011557896041": 243.58,
     "1005011754993234": 79.58,
     "1005011735727412": 26.6,
-    "1005013039644752": 265.18,
+    "1005013039644752": 265.7,
     "1005007916078341": 48.9,
     "1005006506862816": 11.86,
     "1005008072923842": 2.21,
@@ -4527,7 +4533,7 @@
     "1005008429979494": 72.7,
     "1005004795387201": 115.5,
     "1005010702983351": 69.6,
-    "1005008366962319": 48.25,
+    "1005008366962319": 49.76,
     "1005005058037424": 34.67,
     "1005012946895000": 142.59,
     "1005006972551834": 31.07,
@@ -4548,7 +4554,8 @@
     "1005008060391372": 32.9,
     "1005012593794312": 239.8,
     "1005008357913212": 40.5,
-    "1005012254132930": 14.5
+    "1005012254132930": 14.5,
+    "1005008708333999": 136.7
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -15863,6 +15870,46 @@
       "price": 258.8,
       "timestamp": 1793969543.5771117,
       "status": "ACTIVE"
+    },
+    "lodydeals:46179": {
+      "channel_msg_id": 1918,
+      "product_id": "1005007869955343",
+      "title": "MAONO PD100X USB/XL",
+      "channel": "lodydeals",
+      "source_msg_id": 46179,
+      "price": 37.05,
+      "timestamp": 1793969903.1419857,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46181": {
+      "channel_msg_id": 1919,
+      "product_id": "1005008708333999",
+      "title": "Realme C100D 4G 4/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46181,
+      "price": 136.7,
+      "timestamp": 1793969907.6763735,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46187": {
+      "channel_msg_id": 1920,
+      "product_id": "1005008366962319",
+      "title": "KOOTION X15 M.2 Nvme 512GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46187,
+      "price": 49.76,
+      "timestamp": 1793969920.9023197,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34144": {
+      "channel_msg_id": 1921,
+      "product_id": "1005013039644752",
+      "title": "iQOO Z11s 5G (8/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34144,
+      "price": 265.7,
+      "timestamp": 1793969932.206648,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15871,17 +15918,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793969546.4475641,
+    "last_deal_post_time": 1793969934.8897026,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793969716.6695318,
+    "last_sweep_time": 1793969937.1425893,
     "last_sweep_times": {
-      "algeria": 1793969713.557695,
-      "france": 1793969716.6695318
+      "algeria": 1793969934.8769634,
+      "france": 1793969937.1425893
     },
     "last_deal_post_times": {
-      "algeria": 1793969546.4475641
+      "algeria": 1793969934.8897026
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16110,7 +16157,7 @@
     "1005011557896041": "lodydeals",
     "1005011754993234": "ecksdeal",
     "1005011735727412": "bnddeals",
-    "1005013039644752": "lodydeals",
+    "1005013039644752": "aniscoupons",
     "1005007916078341": "zedstoreonline",
     "1005006506862816": "couponsglobal",
     "1005008072923842": "pcgamingpart",
@@ -16545,7 +16592,8 @@
     "9998887089": "test_channel",
     "9998887107": "test_channel",
     "9998887678": "test_channel",
-    "9998887703": "test_channel"
+    "9998887703": "test_channel",
+    "1005008708333999": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -17365,7 +17413,9 @@
     "ال mouse  الشهيرة رجعت🖱️": "bnddeals",
     "هذون سماعات جدد من   HAYLOU⌚": "bnddeals",
     "HAYLOU WATCH 3 NEW": "bnddeals",
-    "Vivo Y600 Pro": "aniscoupons"
+    "Vivo Y600 Pro": "aniscoupons",
+    "MAONO PD100X USB/XL": "lodydeals",
+    "Realme C100D 4G 4/128GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -18159,16 +18209,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8707",
-    "aniscoupons:32969",
-    "megaphonna:8303",
-    "zedstoreonline:38627",
-    "bnddeals:50863",
-    "megaphonna:8445",
-    "aniscoupons:33035",
-    "lodydeals:45737",
-    "megaphonna:8302",
-    "ecksdeal:5919",
     "bnddeals:50993",
     "pcgamingpart:7972",
     "bnddeals:50988",
@@ -19158,7 +19198,17 @@
     "bnddeals:51182",
     "bnddeals:51183",
     "aniscoupons:34142",
-    "zedstoreonline:39625"
+    "zedstoreonline:39625",
+    "lodydeals:46178",
+    "lodydeals:46180",
+    "lodydeals:46182",
+    "lodydeals:46183",
+    "lodydeals:46184",
+    "lodydeals:46185",
+    "lodydeals:46186",
+    "lodydeals:46188",
+    "lodydeals:46189",
+    "zedstoreonline:39626"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
