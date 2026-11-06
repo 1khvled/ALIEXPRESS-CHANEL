@@ -653,7 +653,8 @@
     "1005008708333999",
     "1005012254132930",
     "1005013028124905",
-    "1005012691642623"
+    "1005012691642623",
+    "1005010266233059"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1321,7 +1322,8 @@
     "1005008708333999": 1793969907.6763735,
     "1005012254132930": 1793970449.9003735,
     "1005013028124905": 1793971934.3600886,
-    "1005012691642623": 1793976348.7503736
+    "1005012691642623": 1793976348.7503736,
+    "1005010266233059": 1793977272.9654846
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2145,7 +2147,8 @@
     "Magcubic HY350 Max 900ANSI",
     "Honor X9d (no charger)",
     "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone",
-    "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل"
+    "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل",
+    "Ulanzi A21 Wireless Lavalier Microphone"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2974,10 +2977,10 @@
     "Magcubic HY350 Max 900ANSI": 1793974144.8262026,
     "Honor X9d (no charger)": 1793974514.9586184,
     "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1793975250.6134522,
-    "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736
+    "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
+    "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846
   },
   "published_post_keys": [
-    "lodydeals:45456",
     "zedstoreonline:38922",
     "aniscoupons:32803",
     "lodydeals:45834",
@@ -3976,11 +3979,12 @@
     "aniscoupons:34156",
     "aniscoupons:34157",
     "zedstoreonline:39636",
-    "zedstoreonline:39637"
+    "zedstoreonline:39637",
+    "zedstoreonline:39638"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793976348.7503736,
+  "last_run_time": 1793977272.9654846,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
@@ -4007,8 +4011,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39637,
-      "last_check_time": 1793976350.7997782
+      "last_message_id": 39639,
+      "last_check_time": 1793977275.0465484
     },
     "aniscoupons": {
       "last_message_id": 34157,
@@ -4577,7 +4581,8 @@
     "1005012254132930": 15.2,
     "1005008708333999": 136.7,
     "1005013028124905": 438.6,
-    "1005012691642623": 37.1
+    "1005012691642623": 37.1,
+    "1005010266233059": 17.1
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16042,6 +16047,16 @@
       "price": 37.1,
       "timestamp": 1793976348.7503736,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39638": {
+      "channel_msg_id": 1935,
+      "product_id": "1005010266233059",
+      "title": "Ulanzi A21 Wireless Lavalier Microphone",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39638,
+      "price": 17.1,
+      "timestamp": 1793977272.9654846,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16050,17 +16065,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793976352.3209631,
+    "last_deal_post_time": 1793977276.4300675,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793977083.008549,
+    "last_sweep_time": 1793977279.0303621,
     "last_sweep_times": {
-      "algeria": 1793977080.5828745,
-      "france": 1793977083.008549
+      "algeria": 1793977276.4066992,
+      "france": 1793977279.0303621
     },
     "last_deal_post_times": {
-      "algeria": 1793976352.3209631
+      "algeria": 1793977276.4300675
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16728,7 +16743,8 @@
     "1005008708333999": "lodydeals",
     "1005012254132930": "zedstoreonline",
     "1005013028124905": "zedstoreonline",
-    "1005012691642623": "zedstoreonline"
+    "1005012691642623": "zedstoreonline",
+    "1005010266233059": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -17557,7 +17573,8 @@
     "Magcubic HY350 Max 900ANSI": "aniscoupons",
     "Honor X9d (no charger)": "aniscoupons",
     "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": "zedstoreonline",
-    "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": "zedstoreonline"
+    "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": "zedstoreonline",
+    "Ulanzi A21 Wireless Lavalier Microphone": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -18351,7 +18368,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8498",
     "aniscoupons:33010",
     "bnddeals:50850",
     "zedstoreonline:38677",
@@ -19350,7 +19366,8 @@
     "aniscoupons:34153",
     "aniscoupons:34154",
     "zedstoreonline:39634",
-    "zedstoreonline:39635"
+    "zedstoreonline:39635",
+    "zedstoreonline:39639"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
