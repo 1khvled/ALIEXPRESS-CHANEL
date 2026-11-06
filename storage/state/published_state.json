@@ -658,7 +658,10 @@
     "1005007469003552",
     "1005010041181003",
     "1005010265542567",
-    "1005003156756854"
+    "1005003156756854",
+    "1005010142208108",
+    "1005008534907844",
+    "1005009577554629"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1135,7 +1138,7 @@
     "1005008518280704": 1793707081.0327315,
     "1005010527736444": 1793478769.6023057,
     "1005013450996845": 1793543981.0397952,
-    "1005013144753309": 1793478785.5587242,
+    "1005013144753309": 1793987273.8309157,
     "1005012061152213": 1793490079.2945042,
     "1005012519569107": 1793490085.1205146,
     "1005006996991698": 1793542450.420599,
@@ -1331,7 +1334,10 @@
     "1005007469003552": 1793982290.6109207,
     "1005010041181003": 1793982668.8847792,
     "1005010265542567": 1793982853.0323274,
-    "1005003156756854": 1793983598.810499
+    "1005003156756854": 1793983598.810499,
+    "1005010142208108": 1793987278.5140982,
+    "1005008534907844": 1793987285.4130383,
+    "1005009577554629": 1793987289.8200357
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2160,7 +2166,10 @@
     "ميكروفون Ulanzi A100 لاسلكي صغير",
     "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB",
     "Ulanzi A200 Mini Wireless Lavalier Microphone",
-    "حامل هاتف Ulanzi ST-06S"
+    "حامل هاتف Ulanzi ST-06S",
+    "AULA MINI60 HE PRO",
+    "Maono Wave T5 Wireless Mic",
+    "SAMSUNG DDR3 8GB 1600v"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2701,7 +2710,7 @@
     "Blackview MEGA 12  12/256": 1793478769.6023057,
     "Lenovo Xiaoxin Pad Pro 2025 12.7  inch": 1793478774.2399445,
     "HONOR Pad V9  8/256": 1793478779.2331614,
-    "Blackview LINK 1 Kids": 1793478785.5587242,
+    "Blackview LINK 1 Kids": 1793987273.8309157,
     "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": 1793490079.2945042,
     "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": 1793490090.28376,
     "POCO Pad C1 4/64": 1793490102.028307,
@@ -2994,13 +3003,12 @@
     "ميكروفون Ulanzi A100 لاسلكي صغير": 1793982290.6109207,
     "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1793982668.8847792,
     "Ulanzi A200 Mini Wireless Lavalier Microphone": 1793982853.0323274,
-    "حامل هاتف Ulanzi ST-06S": 1793983598.810499
+    "حامل هاتف Ulanzi ST-06S": 1793983598.810499,
+    "AULA MINI60 HE PRO": 1793987278.5140982,
+    "Maono Wave T5 Wireless Mic": 1793987285.4130383,
+    "SAMSUNG DDR3 8GB 1600v": 1793987289.8200357
   },
   "published_post_keys": [
-    "test_channel:1792109399",
-    "megaphonna:8583",
-    "couponsglobal:48760",
-    "lodydeals:45691",
     "lodydeals:45696",
     "couponsglobal:48792",
     "ecksdeal:5998",
@@ -3996,19 +4004,23 @@
     "zedstoreonline:39643",
     "aniscoupons:34163",
     "aniscoupons:34164",
-    "zedstoreonline:39645"
+    "zedstoreonline:39645",
+    "lodydeals:46192",
+    "lodydeals:46195",
+    "lodydeals:46196",
+    "lodydeals:46198"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793983598.810499,
+  "last_run_time": 1793987289.8200357,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
       "last_check_time": 1793903108.984469
     },
     "lodydeals": {
-      "last_message_id": 46198,
-      "last_check_time": 1793987086.7085786
+      "last_message_id": 46199,
+      "last_check_time": 1793987296.6315038
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4424,7 +4436,7 @@
     "1005010527736444": 298.0,
     "1005013450996845": 212.09,
     "1005012171521680": 287.26,
-    "1005013144753309": 98.9,
+    "1005013144753309": 92.78,
     "1005012061152213": 58.3,
     "1005012519569107": 10.6,
     "1005006996991698": 20.84,
@@ -4602,7 +4614,10 @@
     "1005007469003552": 17.1,
     "1005010041181003": 167.8,
     "1005010265542567": 23.89,
-    "1005003156756854": 10.8
+    "1005003156756854": 10.8,
+    "1005010142208108": 37.5,
+    "1005008534907844": 50.86,
+    "1005009577554629": 10.55
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16127,6 +16142,46 @@
       "price": 10.8,
       "timestamp": 1793983598.810499,
       "status": "ACTIVE"
+    },
+    "lodydeals:46192": {
+      "channel_msg_id": 1945,
+      "product_id": "1005013144753309",
+      "title": "Blackview LINK 1 Kids",
+      "channel": "lodydeals",
+      "source_msg_id": 46192,
+      "price": 92.78,
+      "timestamp": 1793987273.8309157,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46195": {
+      "channel_msg_id": 1946,
+      "product_id": "1005010142208108",
+      "title": "AULA MINI60 HE PRO",
+      "channel": "lodydeals",
+      "source_msg_id": 46195,
+      "price": 37.5,
+      "timestamp": 1793987278.5140982,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46196": {
+      "channel_msg_id": 1947,
+      "product_id": "1005008534907844",
+      "title": "Maono Wave T5 Wireless Mic",
+      "channel": "lodydeals",
+      "source_msg_id": 46196,
+      "price": 50.86,
+      "timestamp": 1793987285.4130383,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46198": {
+      "channel_msg_id": 1948,
+      "product_id": "1005009577554629",
+      "title": "SAMSUNG DDR3 8GB 1600v",
+      "channel": "lodydeals",
+      "source_msg_id": 46198,
+      "price": 10.55,
+      "timestamp": 1793987289.8200357,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16135,17 +16190,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793983602.4894722,
+    "last_deal_post_time": 1793987299.0756845,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793987092.5610733,
+    "last_sweep_time": 1793987301.9878314,
     "last_sweep_times": {
-      "algeria": 1793987089.3196037,
-      "france": 1793987092.5610733
+      "algeria": 1793987299.0528333,
+      "france": 1793987301.9878314
     },
     "last_deal_post_times": {
-      "algeria": 1793983602.4894722
+      "algeria": 1793987299.0756845
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16633,7 +16688,7 @@
     "1005010527736444": "zedstoreonline",
     "1005013450996845": "lodydeals",
     "1005012171521680": "aniscoupons",
-    "1005013144753309": "zedstoreonline",
+    "1005013144753309": "lodydeals",
     "1005012061152213": "zedstoreonline",
     "1005012519569107": "zedstoreonline",
     "1005006996991698": "lodydeals",
@@ -16818,7 +16873,10 @@
     "1005007469003552": "zedstoreonline",
     "1005010041181003": "aniscoupons",
     "1005010265542567": "aniscoupons",
-    "1005003156756854": "zedstoreonline"
+    "1005003156756854": "zedstoreonline",
+    "1005010142208108": "lodydeals",
+    "1005008534907844": "lodydeals",
+    "1005009577554629": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -17365,7 +17423,7 @@
     "Blackview MEGA 12  12/256": "zedstoreonline",
     "Lenovo Xiaoxin Pad Pro 2025 12.7  inch": "zedstoreonline",
     "HONOR Pad V9  8/256": "zedstoreonline",
-    "Blackview LINK 1 Kids": "zedstoreonline",
+    "Blackview LINK 1 Kids": "lodydeals",
     "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": "zedstoreonline",
     "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": "zedstoreonline",
     "POCO Pad C1 4/64": "zedstoreonline",
@@ -17652,7 +17710,10 @@
     "ميكروفون Ulanzi A100 لاسلكي صغير": "zedstoreonline",
     "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": "aniscoupons",
     "Ulanzi A200 Mini Wireless Lavalier Microphone": "aniscoupons",
-    "حامل هاتف Ulanzi ST-06S": "zedstoreonline"
+    "حامل هاتف Ulanzi ST-06S": "zedstoreonline",
+    "AULA MINI60 HE PRO": "lodydeals",
+    "Maono Wave T5 Wireless Mic": "lodydeals",
+    "SAMSUNG DDR3 8GB 1600v": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -18446,10 +18507,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33100",
-    "bnddeals:50832",
-    "megaphonna:8680",
-    "lodydeals:45904",
     "bnddeals:51014",
     "ecksdeal:5985",
     "lodydeals:45858",
@@ -19445,7 +19502,11 @@
     "zedstoreonline:39644",
     "aniscoupons:34165",
     "zedstoreonline:39646",
-    "aniscoupons:34166"
+    "aniscoupons:34166",
+    "lodydeals:46193",
+    "lodydeals:46194",
+    "lodydeals:46197",
+    "lodydeals:46199"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
