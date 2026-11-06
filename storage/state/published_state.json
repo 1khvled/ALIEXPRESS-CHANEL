@@ -1226,7 +1226,7 @@
     "1005009569642817": 1793568442.6763802,
     "1005013438789813": 1793569553.2022223,
     "1005012823102793": 1793569904.419889,
-    "1005012773302941": 1793656208.4187303,
+    "1005012773302941": 1794003254.1339376,
     "1005008430147176": 1793707072.0357203,
     "1005011742851856": 1793793769.5631576,
     "1005006304425302": 1793656107.995781,
@@ -2846,7 +2846,7 @@
     "Realme Neo 8  12/256GB": 1793569553.2022223,
     "Blackview MEGA 5 AI 8/256GB": 1793569904.419889,
     "Anker Nano Smart Display 45W": 1793570287.0210865,
-    "Zeblaze Btalk 4 Pro": 1793656208.4187303,
+    "Zeblaze Btalk 4 Pro": 1794003254.1339376,
     "Anker Soundcore 2": 1793571013.3288968,
     "MACHENIKE G5Pro Max SE": 1793571550.5645735,
     "MACHENIKE G1 Gaming": 1793707072.0357203,
@@ -3031,7 +3031,6 @@
     "شاحن سيارة ORICO بقوة 45W": 1794002515.731258
   },
   "published_post_keys": [
-    "couponsglobal:48762",
     "zedstoreonline:38573",
     "aniscoupons:33159",
     "aniscoupons:33220",
@@ -4030,19 +4029,20 @@
     "zedstoreonline:39655",
     "zedstoreonline:39656",
     "zedstoreonline:39658",
-    "zedstoreonline:39659"
+    "zedstoreonline:39659",
+    "lodydeals:46204"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794002515.731258,
+  "last_run_time": 1794003254.1339376,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
       "last_check_time": 1793995904.1814108
     },
     "lodydeals": {
-      "last_message_id": 46203,
-      "last_check_time": 1793998103.162646
+      "last_message_id": 46204,
+      "last_check_time": 1794003256.164201
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4065,8 +4065,8 @@
       "last_check_time": 1794002517.7673247
     },
     "aniscoupons": {
-      "last_message_id": 34180,
-      "last_check_time": 1794002885.8147426
+      "last_message_id": 34181,
+      "last_check_time": 1794003258.5565083
     },
     "bnddeals": {
       "last_message_id": 51202,
@@ -4540,7 +4540,7 @@
     "1005009569642817": 32.1,
     "1005013438789813": 408.02,
     "1005012823102793": 226.25,
-    "1005012773302941": 20.78,
+    "1005012773302941": 17.06,
     "1005008430147176": 19.41,
     "1005011742851856": 12.8,
     "1005006304425302": 2.24,
@@ -16337,6 +16337,16 @@
       "price": 11.2,
       "timestamp": 1794002515.731258,
       "status": "ACTIVE"
+    },
+    "lodydeals:46204": {
+      "channel_msg_id": 1962,
+      "product_id": "1005012773302941",
+      "title": "Zeblaze Btalk 4 Pro",
+      "channel": "lodydeals",
+      "source_msg_id": 46204,
+      "price": 17.06,
+      "timestamp": 1794003254.1339376,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16345,17 +16355,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794002522.5819113,
+    "last_deal_post_time": 1794003259.0164464,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794003072.586347,
+    "last_sweep_time": 1794003261.2849243,
     "last_sweep_times": {
-      "algeria": 1794003069.8812811,
-      "france": 1794003072.586347
+      "algeria": 1794003259.0019052,
+      "france": 1794003261.2849243
     },
     "last_deal_post_times": {
-      "algeria": 1794002522.5819113
+      "algeria": 1794003259.0164464
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -18673,7 +18683,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "couponsglobal:48833",
     "zedstoreonline:38818",
     "megaphonna:8470",
     "aniscoupons:32993",
@@ -19672,7 +19681,8 @@
     "bnddeals:51201",
     "aniscoupons:34179",
     "bnddeals:51202",
-    "aniscoupons:34180"
+    "aniscoupons:34180",
+    "aniscoupons:34181"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
