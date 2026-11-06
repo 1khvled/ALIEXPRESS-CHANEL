@@ -641,14 +641,17 @@
     "1005012499433797",
     "9998889309",
     "9998889332",
-    "1005008357913212"
+    "999888807",
+    "9998881035",
+    "9998886503",
+    "9998886541"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
     "1005010219205081": 1791192360.1916943,
-    "999111222": 1793929331.3714204,
-    "100500999912345": 1793839332.4043593,
-    "100500999954321": 1793922132.4043593,
+    "999111222": 1793966540.6441917,
+    "100500999912345": 1793876541.424869,
+    "100500999954321": 1793959341.424869,
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
@@ -658,7 +661,7 @@
     "1005009627597591": 1793542398.3843465,
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
-    "100500777666555": 1793918532.654223,
+    "100500777666555": 1793955741.6400363,
     "1005011778621042": 1793898345.0223713,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1793543664.66204,
@@ -676,7 +679,7 @@
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
-    "100500888999777": 1793914932.7517016,
+    "100500888999777": 1793952141.7369676,
     "1005009734653254": 1793543647.346056,
     "1005008333859881": 1790940373.336947,
     "1005009357018019": 1790940383.4974926,
@@ -707,7 +710,7 @@
     "9998885726": 1790945726.205554,
     "9998885776": 1791675776.96059,
     "9998886147": 1790946147.1871526,
-    "999888777111": 1793927513.4379737,
+    "999888777111": 1793964745.6295197,
     "9998886362": 1790946362.071869,
     "1005012407874415": 1793613121.9226618,
     "9998887189": 1790947189.8634577,
@@ -727,7 +730,7 @@
     "1005011991145678": 1790962541.57551,
     "1005011682821623": 1790962844.0034096,
     "9998885747": 1790965747.5380507,
-    "1005010129356058": 1793917812.9854648,
+    "1005010129356058": 1793955021.9362757,
     "9998885993": 1790965993.3792443,
     "1005012574108028": 1793543591.1032917,
     "1005008599340405": 1791638441.843642,
@@ -835,8 +838,8 @@
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
     "COUPONS_Brand Day Sale": 1791676848.283345,
-    "COUPONS_d9b8b196": 1793929307.9199073,
-    "COUPONS_Test Event 2026": 1793929307.9199073,
+    "COUPONS_d9b8b196": 1793966540.4530497,
+    "COUPONS_Test Event 2026": 1793966540.4530497,
     "9998886905": 1791676905.095083,
     "9998887197": 1791677197.2988765,
     "9998887496": 1791677496.6959877,
@@ -1069,7 +1072,7 @@
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
     "1005005373032877": 1793600283.7397804,
-    "1005007869955343": 1793962203.497378,
+    "1005007869955343": 1793656150.4800947,
     "1005012644570693": 1793441338.6619778,
     "1005003949106838": 1793899614.3022053,
     "1005012436082838": 1793733101.535615,
@@ -1297,7 +1300,10 @@
     "1005012499433797": 1793908989.4952903,
     "9998889309": 1793929309.3822134,
     "9998889332": 1793929332.5530465,
-    "1005008357913212": 1793963482.9134784
+    "999888807": 1793930807.599727,
+    "9998881035": 1793931035.8306286,
+    "9998886503": 1793966503.2669244,
+    "9998886541": 1793966541.5598364
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2091,17 +2097,15 @@
     "CUSU Nexdrive P60 512GB",
     "HONOR PAD X8A 4/64GB",
     "Magcubic HY300 Pro Projector",
-    "CUSU SSD SATA3",
-    "MAONO PD100X USB/XL",
-    "KOOTION SATA SSD 480GB"
+    "CUSU SSD SATA3"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
     "POCO C71 3/64GB": 1793542360.268408,
-    "Test Wireless Gaming Mouse X1": 1793929331.3714204,
+    "Test Wireless Gaming Mouse X1": 1793966540.6441917,
     "SomnAmbulist NVMe SSD 1TB High Speed": 1790798981.6562803,
-    "Attack Shark R2 Mouse": 1793922132.4043593,
-    "Test Wrench Set": 1793929332.5530465,
+    "Attack Shark R2 Mouse": 1793959341.424869,
+    "Test Wrench Set": 1793966541.5598364,
     "ATTACK SHARK X11 Tri-Mode Wireless Gaming Mouse with Charging Dock": 1790884166.1520143,
     "SomnAmbulist SSD 2.5 128GB": 1790884187.7542295,
     "Machenike G3 V2 PC Gaming Controller Hall Effect": 1791194142.1753953,
@@ -2133,8 +2137,8 @@
     "CMF Buds 2a 42dB ANC 4HD Mics Up to 31H of playback Bluetooth 5.4 12.4mm Driver": 1790937566.337433,
     "Attack Shark X5 Tri-mode Gaming Mouse 49g Ultralight 2.4Ghz/Wired/BT": 1790937582.4855082,
     "COLMI P81 Voice Calling Smart Watch Ultra 1.9 inch Screen 24H Health": 1790937595.2497241,
-    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1793839332.4043593,
-    "Attack Shark L80 PRO Wireless Mouse": 1793928432.7517016,
+    "TestMockUniqueBrand NVMe SSD 1TB High Speed": 1793876541.424869,
+    "Attack Shark L80 PRO Wireless Mouse": 1793965641.7369676,
     "الأكثر لبا لنهار اليوووم": 1790940343.7746465,
     "POCO C81 Pro 4/64": 1791114344.949536,
     "Lenovo XT53 Bluetooth V5.4 Earphones LED Power Display Gaming Headphones": 1790940373.336947,
@@ -2178,7 +2182,7 @@
     "HONOR 600 PRO": 1790960475.7249138,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
-    "Xiaomi Pad 7 (12/256)": 1793917812.9854648,
+    "Xiaomi Pad 7 (12/256)": 1793955021.9362757,
     "ONEPLUS TURBO 6X PRO 5G (8/128)": 1793380555.40847,
     "CUSU SSD 512 GB Portable SSD External Drive": 1791200448.8235762,
     "HONOR  X80 PRO MAX (8/128)": 1791236020.742662,
@@ -2892,13 +2896,9 @@
     "CUSU Nexdrive P60 512GB": 1793908979.1776278,
     "HONOR PAD X8A 4/64GB": 1793908989.4952903,
     "Magcubic HY300 Pro Projector": 1793908994.588809,
-    "CUSU SSD SATA3": 1793913777.3174822,
-    "MAONO PD100X USB/XL": 1793962203.497378,
-    "KOOTION SATA SSD 480GB": 1793963482.9134784
+    "CUSU SSD SATA3": 1793913777.3174822
   },
   "published_post_keys": [
-    "aniscoupons:33319",
-    "ecksdeal:5954",
     "zedstoreonline:38530",
     "aniscoupons:32744",
     "lodydeals:45527",
@@ -3895,24 +3895,26 @@
     "test_channel:1793929309",
     "lodydeals:45000",
     "test_channel:1793929332",
-    "lodydeals:46179",
-    "lodydeals:46182"
+    "test_channel:1793930807",
+    "test_channel:1793931035",
+    "test_channel:1793966503",
+    "test_channel:1793966541"
   ],
   "last_disclaimer_time": 1793314858.1877568,
-  "last_calendar_time": 1793932483.4741564,
-  "last_run_time": 1793963482.9134784,
+  "last_calendar_time": 1793327622.2534416,
+  "last_run_time": 1793966541.9473605,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
       "last_check_time": 1793903108.984469
     },
     "lodydeals": {
-      "last_message_id": 46182,
-      "last_check_time": 1793963484.9563136
+      "last_message_id": 46177,
+      "last_check_time": 1793966541.7485251
     },
     "test_channel": {
-      "last_message_id": 1793929332,
-      "last_check_time": 1793929332.5530465
+      "last_message_id": 1793966541,
+      "last_check_time": 1793966541.5598364
     },
     "alidealsdz": {
       "last_message_id": 153,
@@ -3920,7 +3922,7 @@
     },
     "megaphonna": {
       "last_message_id": 8173,
-      "last_check_time": 1793929332.9979298
+      "last_check_time": 1793966541.9473605
     },
     "dzaliexpress0": {
       "last_message_id": 1582,
@@ -4478,8 +4480,7 @@
     "1005009313079431": 43.11,
     "1005010702511858": 59.8,
     "1005008554218453": 52.55,
-    "1005012499433797": 134.3,
-    "1005008357913212": 40.5
+    "1005012499433797": 134.3
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -15454,26 +15455,6 @@
       "price": 22.9,
       "timestamp": 1793913781.9155498,
       "status": "ACTIVE"
-    },
-    "lodydeals:46179": {
-      "channel_msg_id": 1879,
-      "product_id": "1005007869955343",
-      "title": "MAONO PD100X USB/XL",
-      "channel": "lodydeals",
-      "source_msg_id": 46179,
-      "price": 37.05,
-      "timestamp": 1793962203.497378,
-      "status": "ACTIVE"
-    },
-    "lodydeals:46182": {
-      "channel_msg_id": 1880,
-      "product_id": "1005008357913212",
-      "title": "KOOTION SATA SSD 480GB",
-      "channel": "lodydeals",
-      "source_msg_id": 46182,
-      "price": 40.5,
-      "timestamp": 1793963482.9134784,
-      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15482,17 +15463,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793963485.7890208,
+    "last_deal_post_time": 1793913786.1197474,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793966601.9976532,
+    "last_sweep_time": 1793931035.2734838,
     "last_sweep_times": {
-      "algeria": 1793966599.1988907,
-      "france": 1793966601.9976532
+      "algeria": 1793931032.0274327,
+      "france": 1793931035.2734838
     },
     "last_deal_post_times": {
-      "algeria": 1793963485.7890208
+      "algeria": 1793913786.1197474
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16148,7 +16129,10 @@
     "1005012499433797": "lodydeals",
     "9998889309": "test_channel",
     "9998889332": "test_channel",
-    "1005008357913212": "lodydeals"
+    "999888807": "test_channel",
+    "9998881035": "test_channel",
+    "9998886503": "test_channel",
+    "9998886541": "test_channel"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -16947,15 +16931,13 @@
     "CUSU Nexdrive P60 512GB": "lodydeals",
     "HONOR PAD X8A 4/64GB": "lodydeals",
     "Magcubic HY300 Pro Projector": "lodydeals",
-    "CUSU SSD SATA3": "lodydeals",
-    "MAONO PD100X USB/XL": "lodydeals",
-    "KOOTION SATA SSD 480GB": "lodydeals"
+    "CUSU SSD SATA3": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
     "test_rem_13d1524e": "2026-10-02",
     "test_rem_e95dab13": "2026-10-02",
-    "jumuah": "2026-11-06",
+    "jumuah": "2026-10-30",
     "test_rem_d0b156d9": "2026-10-02",
     "test_rem_35271d74": "2026-10-02",
     "test_rem_308fc3d4": "2026-10-02",
@@ -17055,7 +17037,10 @@
     "test_rem_4a4d6853": "2026-10-02",
     "test_rem_b52bf5a6": "2026-10-02",
     "test_rem_68b795c4": "2026-10-02",
-    "test_rem_3ec5a6cf": "2026-10-02"
+    "test_rem_3ec5a6cf": "2026-10-02",
+    "test_rem_d281fa63": "2026-10-02",
+    "test_rem_da5e0d47": "2026-10-02",
+    "test_rem_63d062a9": "2026-10-02"
   },
   "channel_announcements_history": {
     "china_holiday_shipping_delay": "2026-10-02",
@@ -17157,7 +17142,10 @@
     "test_tag_dbf172": "2026-10-02",
     "test_tag_80692d": "2026-10-02",
     "test_tag_d2cfb6": "2026-10-02",
-    "test_tag_a8b98b": "2026-10-02"
+    "test_tag_a8b98b": "2026-10-02",
+    "test_tag_ee3b80": "2026-10-02",
+    "test_tag_67a6f1": "2026-10-02",
+    "test_tag_116060": "2026-10-02"
   },
   "daily_tajmi3at_history": {
     "2026-10-03": {
@@ -17719,7 +17707,7 @@
     "AliExpress Special Promo Octobre 2026_20261004": 661,
     "AliExpress Special Promo Octobre 2026_20261006": 677,
     "Brand Day Sale Octobre 2026_20261009": 702,
-    "11.11 Global Shopping Festival Main Sale_20261101": 1876
+    "11.11 Global Shopping Festival Main Sale_20261101": 1839
   },
   "sent_promo_notifiers": [
     "LAUNCH_ALERT_AliExpress Special Promo Octobre 2026_20261004",
@@ -17737,6 +17725,10 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
+    "megaphonna:8552",
+    "zedstoreonline:38633",
+    "zedstoreonline:38640",
+    "pcgamingpart:8015",
     "lodydeals:45647",
     "lodydeals:45661",
     "ecksdeal:5997",
@@ -18732,49 +18724,12 @@
     "lodydeals:46172",
     "lodydeals:46173",
     "lodydeals:46174",
-    "lodydeals:46175",
-    "ecksdeal:6037",
-    "lodydeals:46178",
-    "lodydeals:46180",
-    "lodydeals:46181"
+    "lodydeals:46175"
   ],
-  "last_france_cross_promo_time": 1793958156.0052226,
-  "next_france_cross_promo_interval_seconds": 258327,
-  "france_cross_promo_variant_idx": 0,
+  "last_france_cross_promo_time": 1793779890.1987555,
+  "next_france_cross_promo_interval_seconds": 175459,
+  "france_cross_promo_variant_idx": 3,
   "published_coupon_bulletins": [
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
-      "timestamp": 1792158812.9706964
-    },
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
-      "timestamp": 1792160023.5054688
-    },
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
-      "timestamp": 1792161948.4177241
-    },
     {
       "promo": "Test Event 2026",
       "hash": "d9b8b196",
@@ -19288,10 +19243,43 @@
       "channel_msg_id": 9999,
       "channel": "@DzAliexpress0",
       "timestamp": 1793929307.9199073
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1793930806.425221
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1793931034.6125388
+    },
+    {
+      "promo": "Test Event 2026",
+      "hash": "d9b8b196",
+      "codes": [
+        "TEST04",
+        "TEST06"
+      ],
+      "channel_msg_id": 9999,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1793966540.4530497
     }
   ],
-  "last_pre_11_11_advisory_time": 1793929312.2074633,
-  "next_pre_11_11_interval_seconds": 273622,
+  "last_pre_11_11_advisory_time": 1793966544.0111399,
+  "next_pre_11_11_interval_seconds": 311323,
   "pre_11_11_variant_idx": 1,
   "published_title_prices": {},
   "daily_fahras_history": {

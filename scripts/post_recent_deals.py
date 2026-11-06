@@ -36,10 +36,13 @@ from app.media.downloader import media_downloader
 from app.media.renderer import media_renderer
 from app.publisher.publisher import telegram_publisher
 from app.utils.logger import logger
-# Primary Algerian deal channels strictly monitored (Lody & ECKSDEAL ONLY - 1:1 Mirror Copy)
+# Primary Algerian deal channels monitored with strict 1:1 format & zero duplicate cross-posting
 CHANNELS = [
     "lodydeals",
-    "ECKSDEAL"
+    "ECKSDEAL",
+    "zedstoreonline",
+    "aniscoupons",
+    "BNDDEALS"
 ]
 
 def get_bot_token() -> str:
@@ -354,6 +357,9 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
         DEFAULT_START_IDS = {
             "lodydeals": 45969,
             "ecksdeal": 6008,
+            "zedstoreonline": 39580,
+            "aniscoupons": 34100,
+            "bnddeals": 51170,
         }
 
         for ch in CHANNELS:
@@ -713,14 +719,8 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         extracted.has_points_discount = True
 
                     # 10. Generate 1:1 mirror caption for monitored channels
-                    if ch.lower() == "lodydeals":
+                    if ch.lower() in ["lodydeals", "ecksdeal", "zedstoreonline", "aniscoupons", "bnddeals"]:
                         caption = format_lodydeals_caption_1to1(
-                            raw_text=raw_text,
-                            affiliate_url=aff_link,
-                            coupon_code=extracted.coupon_code
-                        )
-                    elif ch.lower() == "ecksdeal":
-                        caption = format_ecksdeal_caption_1to1(
                             raw_text=raw_text,
                             affiliate_url=aff_link,
                             coupon_code=extracted.coupon_code

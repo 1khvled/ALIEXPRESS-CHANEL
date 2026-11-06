@@ -1159,7 +1159,7 @@ def extract_clean_title(text: str) -> Optional[str]:
 
     # 0. Look for explicit title prefix line (HIGHEST PRIORITY in Algerian deal channels: e.g. تخفيض لـ, عرض خاص لـ)
     for i, line in enumerate(lines):
-        m = re.search(r'(?:تخفيض\s+لـ*|تخفيض\s+الآن\s+لـ*|عرض\s+خاص\s+لـ*|تخفيض\s+على)\s*[:：\-]?\s*(.*)', line)
+        m = re.search(r'(?:تخفيض\s+(?:ممتاز\s+|قوي\s+|خاص\s+)?لـ*|تخفيض\s+الآن\s+لـ*|عرض\s+خاص\s+لـ*|تخفيض\s+على)\s*[:：\-]?\s*(.*)', line)
         if m:
             cand = m.group(1).strip()
             # If empty or colon or very short, check the next line
@@ -1186,15 +1186,17 @@ def extract_clean_title(text: str) -> Optional[str]:
             if not is_noisy(cand) and len(cand) >= 3:
                 return cand[:100]
 
-    # 0.8 Look for checkmark / device / channel bullet title line (DealScout DZ, Megaphonna Ⓜ, etc.)
+    # 0.8 Look for checkmark / device / channel bullet title line anywhere in line (DealScout DZ, Anis, BND, ZedStore, Megaphonna)
     for i, line in enumerate(lines):
-        if any(line.startswith(s) for s in ["✅", "✔️", "☑️", "📱", "🎮", "🎧", "Ⓜ️", "Ⓜ"]):
-            cand = re.sub(r'^[✅✔️☑️📱🎮🎧Ⓜ️Ⓜ\s\-:]+', '', line).strip()
+        if any(b in line for b in ["✅", "✔️", "☑️", "📌", "Ⓜ️", "Ⓜ", "📱", "🎮", "🎧"]):
+            parts = re.split(r'[✅✔️☑️📌Ⓜ️Ⓜ📱🎮🎧]', line)
+            cand = parts[-1].strip()
             if (not cand or len(cand) < 3) and i + 1 < len(lines):
                 cand = lines[i + 1].strip()
-            cand = re.sub(r'[\$€💵].*$', '', cand).strip()
+            cand = re.sub(r'(?:💰|💵|السعر|prix|price|[\$€]).*$', '', cand).strip()
             cand = re.sub(r'https?://\S+', '', cand).strip()
             cand = re.sub(r'</?[^>]+(>|$)', '', cand).strip()
+            cand = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:⭐️🌷⏺📎📱🎮🎧]+', '', cand).strip()
             if not is_noisy(cand) and len(cand) >= 3:
                 return cand[:100]
 

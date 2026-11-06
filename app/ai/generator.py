@@ -617,16 +617,25 @@ def format_lodydeals_caption_1to1(
             clean_lines.append("")
             continue
 
-        # Skip direct competitor channel review links (e.g. t.me/lodydeals/...)
-        if any(b in l.lower() for b in ["lodydeals", "@lodydeals", "t.me/lodydeals"]):
+        # Skip direct competitor channel review links, channel mentions & promo referrals
+        competitor_channel_keywords = [
+            "lodydeals", "ecksdeal", "zedstoreonline", "aniscoupons", "bnddeals",
+            "pcgamingpart", "bnd_deals", "ecks_deal", "anis_coupons", "zed_store"
+        ]
+        if any(b in l.lower() for b in competitor_channel_keywords) and any(kw in l.lower() for kw in ["t.me/", "@", "قناة", "خاص", "متابعين", "متابعي"]):
             continue
 
         # Skip secondary link line 'مباشر' and its accompanying url
         if l == "مباشر" or (any(kw in l for kw in ["مباشر", "رابط آخر", "رابط بديل", "بديل", "متجر"]) and ALIEXPRESS_URL_RE.search(l)):
             continue
 
-        # Replace competitor bot mentions
-        if any(b in l.lower() for b in ["lodycouponsbot", "@lodycouponsbot", "t.me/lodycouponsbot"]):
+        # Replace competitor bot mentions with DealScout points bot @Alilo07BOT
+        competitor_bot_keywords = [
+            "lodycouponsbot", "ecksdealsbot", "zedstorebot", "anisbot", "bndbot",
+            "pcgamingbot", "couponsbot", "ecksbot", "lodybot", "zedbot",
+            "dzgamingcoinbot"
+        ]
+        if any(b in l.lower() for b in competitor_bot_keywords):
             clean_lines.append("t.me/Alilo07BOT")
             continue
 
