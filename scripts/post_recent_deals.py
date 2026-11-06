@@ -425,6 +425,26 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
 
                 print(f"  Found {len(block_items)} total message blocks across pages in @{ch}")
                 if not block_items:
+                    print(f"  [@{ch}] Web preview returned 0 blocks (redirected or throttled). Probing direct posts with ?embed=1...")
+                    probe_start = (last_seen_id or start_target_id) + 1
+                    consecutive_misses = 0
+                    cur_pid = probe_start
+                    while consecutive_misses < 3 and cur_pid <= probe_start + 25:
+                        try:
+                            probe_resp = await client.get(f"https://t.me/{ch}/{cur_pid}?embed=1")
+                            if probe_resp.status_code == 200 and f'data-post="{clean_ch}/{cur_pid}"' in probe_resp.text.lower():
+                                consecutive_misses = 0
+                                soup_probe = BeautifulSoup(probe_resp.text, "html.parser")
+                                widget = soup_probe.find("div", class_="tgme_widget_message")
+                                if widget:
+                                    block_items.append((cur_pid, widget))
+                            else:
+                                consecutive_misses += 1
+                        except Exception:
+                            consecutive_misses += 1
+                        cur_pid += 1
+
+                if not block_items:
                     print(f"  No valid post IDs found in @{ch}")
                     continue
 
