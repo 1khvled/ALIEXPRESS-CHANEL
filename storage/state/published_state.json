@@ -664,7 +664,8 @@
     "1005009577554629",
     "1005010656922924",
     "1005008077441711",
-    "1005006411483066"
+    "1005006411483066",
+    "1005012925301774"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1343,7 +1344,8 @@
     "1005009577554629": 1793987289.8200357,
     "1005010656922924": 1793994623.1444166,
     "1005008077441711": 1793998299.0115912,
-    "1005006411483066": 1794002338.4554162
+    "1005006411483066": 1794002338.4554162,
+    "1005012925301774": 1794002515.731258
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2181,7 +2183,8 @@
     "UGREEN 45W GaN Smart Display Charger",
     "Inphic PG1 PG9 RGB Wired Gaming Mouse",
     "realme C100d 4/128GB",
-    "Zeblaze GTS 3 Pro AMOLED"
+    "Zeblaze GTS 3 Pro AMOLED",
+    "شاحن سيارة ORICO بقوة 45W"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3024,10 +3027,10 @@
     "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899,
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1793998299.0115912,
     "realme C100d 4/128GB": 1794001056.1545,
-    "Zeblaze GTS 3 Pro AMOLED": 1794002338.4554162
+    "Zeblaze GTS 3 Pro AMOLED": 1794002338.4554162,
+    "شاحن سيارة ORICO بقوة 45W": 1794002515.731258
   },
   "published_post_keys": [
-    "test_channel:1791752385",
     "couponsglobal:48762",
     "zedstoreonline:38573",
     "aniscoupons:33159",
@@ -4026,11 +4029,12 @@
     "zedstoreonline:39654",
     "zedstoreonline:39655",
     "zedstoreonline:39656",
-    "zedstoreonline:39658"
+    "zedstoreonline:39658",
+    "zedstoreonline:39659"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794002338.4554162,
+  "last_run_time": 1794002515.731258,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
@@ -4057,16 +4061,16 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39658,
-      "last_check_time": 1794002340.500479
+      "last_message_id": 39659,
+      "last_check_time": 1794002517.7673247
     },
     "aniscoupons": {
       "last_message_id": 34178,
       "last_check_time": 1794001966.5450463
     },
     "bnddeals": {
-      "last_message_id": 51200,
-      "last_check_time": 1793979104.8569498
+      "last_message_id": 51201,
+      "last_check_time": 1794002522.5505588
     }
   },
   "published_product_prices": {
@@ -4637,7 +4641,8 @@
     "1005008534907844": 50.86,
     "1005009577554629": 10.55,
     "1005010656922924": 20.4,
-    "1005008077441711": 7.6
+    "1005008077441711": 7.6,
+    "1005012925301774": 11.2
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16322,6 +16327,16 @@
       "price": 12.9,
       "timestamp": 1794002338.4554162,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39659": {
+      "channel_msg_id": 1961,
+      "product_id": "1005012925301774",
+      "title": "شاحن سيارة ORICO بقوة 45W",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39659,
+      "price": 11.2,
+      "timestamp": 1794002515.731258,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16330,17 +16345,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794002341.95453,
+    "last_deal_post_time": 1794002522.5819113,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794002344.710996,
+    "last_sweep_time": 1794002524.8598158,
     "last_sweep_times": {
-      "algeria": 1794002341.894255,
-      "france": 1794002344.710996
+      "algeria": 1794002522.5663981,
+      "france": 1794002524.8598158
     },
     "last_deal_post_times": {
-      "algeria": 1794002341.95453
+      "algeria": 1794002522.5819113
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17019,7 +17034,8 @@
     "1005009577554629": "lodydeals",
     "1005010656922924": "zedstoreonline",
     "1005008077441711": "zedstoreonline",
-    "1005006411483066": "zedstoreonline"
+    "1005006411483066": "zedstoreonline",
+    "1005012925301774": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -17862,7 +17878,8 @@
     "UGREEN 45W GaN Smart Display Charger": "zedstoreonline",
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": "zedstoreonline",
     "realme C100d 4/128GB": "zedstoreonline",
-    "Zeblaze GTS 3 Pro AMOLED": "zedstoreonline"
+    "Zeblaze GTS 3 Pro AMOLED": "zedstoreonline",
+    "شاحن سيارة ORICO بقوة 45W": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -18656,7 +18673,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:32977",
     "zedstoreonline:38581",
     "aniscoupons:32912",
     "lodydeals:45774",
@@ -19655,7 +19671,8 @@
     "lodydeals:46203",
     "aniscoupons:34177",
     "aniscoupons:34178",
-    "zedstoreonline:39657"
+    "zedstoreonline:39657",
+    "bnddeals:51201"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
