@@ -15459,10 +15459,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793942763.458214,
+    "last_sweep_time": 1793942943.7477171,
     "last_sweep_times": {
-      "algeria": 1793942760.7613914,
-      "france": 1793942763.458214
+      "algeria": 1793942941.2834058,
+      "france": 1793942943.7477171
     },
     "last_deal_post_times": {
       "algeria": 1793913786.1197474
@@ -17707,7 +17707,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8552",
     "zedstoreonline:38633",
     "zedstoreonline:38640",
     "pcgamingpart:8015",
@@ -18706,7 +18705,8 @@
     "lodydeals:46172",
     "lodydeals:46173",
     "lodydeals:46174",
-    "lodydeals:46175"
+    "lodydeals:46175",
+    "ecksdeal:6037"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
