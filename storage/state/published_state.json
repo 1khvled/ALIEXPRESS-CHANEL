@@ -998,7 +998,7 @@
     "1005013479172067": 1793448884.6592717,
     "1005012199872142": 1793966811.2584407,
     "9998886358": 1793276358.3466215,
-    "1005013170854617": 1793656161.7382708,
+    "1005013170854617": 1793969543.5771117,
     "1005010172572484": 1793521744.753259,
     "1005012167596439": 1793380498.9399478,
     "1005005209037696": 1793399509.450536,
@@ -2127,7 +2127,8 @@
     "KOOTION SSD SATA",
     "ال mouse  الشهيرة رجعت🖱️",
     "هذون سماعات جدد من   HAYLOU⌚",
-    "HAYLOU WATCH 3 NEW"
+    "HAYLOU WATCH 3 NEW",
+    "Vivo Y600 Pro"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2946,10 +2947,10 @@
     "KOOTION SSD SATA": 1793966867.0400634,
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
     "هذون سماعات جدد من   HAYLOU⌚": 1793966887.3818936,
-    "HAYLOU WATCH 3 NEW": 1793966892.2256048
+    "HAYLOU WATCH 3 NEW": 1793966892.2256048,
+    "Vivo Y600 Pro": 1793969543.5771117
   },
   "published_post_keys": [
-    "ecksdeal:5892",
     "zedstoreonline:38841",
     "lodydeals:45822",
     "zedstoreonline:38619",
@@ -3948,11 +3949,12 @@
     "test_channel:1793967107",
     "test_channel:1793967678",
     "test_channel:1793967703",
-    "zedstoreonline:39624"
+    "zedstoreonline:39624",
+    "aniscoupons:34143"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793968985.4885292,
+  "last_run_time": 1793969543.5771117,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
@@ -3979,12 +3981,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39624,
-      "last_check_time": 1793968987.5429251
+      "last_message_id": 39625,
+      "last_check_time": 1793969536.821314
     },
     "aniscoupons": {
-      "last_message_id": 34142,
-      "last_check_time": 1793967688.0476415
+      "last_message_id": 34143,
+      "last_check_time": 1793969545.616999
     },
     "bnddeals": {
       "last_message_id": 51195,
@@ -4255,7 +4257,7 @@
     "1005012399830182": 442.3,
     "1005013479172067": 218.0,
     "1005012199872142": 469.3,
-    "1005013170854617": 260.4,
+    "1005013170854617": 258.8,
     "1005010172572484": 513.7,
     "1005012167596439": 594.0,
     "1005005209037696": 328.0,
@@ -15851,6 +15853,16 @@
       "price": 226.3,
       "timestamp": 1793968985.4885292,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34143": {
+      "channel_msg_id": 1917,
+      "product_id": "1005013170854617",
+      "title": "Vivo Y600 Pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 34143,
+      "price": 258.8,
+      "timestamp": 1793969543.5771117,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15859,17 +15871,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793968989.029242,
+    "last_deal_post_time": 1793969546.4475641,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793969351.8886728,
+    "last_sweep_time": 1793969549.1775186,
     "last_sweep_times": {
-      "algeria": 1793969348.8946989,
-      "france": 1793969351.8886728
+      "algeria": 1793969546.4294152,
+      "france": 1793969549.1775186
     },
     "last_deal_post_times": {
-      "algeria": 1793968989.029242
+      "algeria": 1793969546.4475641
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16230,7 +16242,7 @@
     "1005013479172067": "megaphonna",
     "1005012199872142": "aniscoupons",
     "9998886358": "test_channel",
-    "1005013170854617": "lodydeals",
+    "1005013170854617": "aniscoupons",
     "1005010172572484": "zedstoreonline",
     "1005012167596439": "megaphonna",
     "1005005209037696": "zedstoreonline",
@@ -17352,7 +17364,8 @@
     "KOOTION SSD SATA": "aniscoupons",
     "ال mouse  الشهيرة رجعت🖱️": "bnddeals",
     "هذون سماعات جدد من   HAYLOU⌚": "bnddeals",
-    "HAYLOU WATCH 3 NEW": "bnddeals"
+    "HAYLOU WATCH 3 NEW": "bnddeals",
+    "Vivo Y600 Pro": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -18146,7 +18159,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:5923",
     "megaphonna:8707",
     "aniscoupons:32969",
     "megaphonna:8303",
@@ -19145,7 +19157,8 @@
     "bnddeals:51176",
     "bnddeals:51182",
     "bnddeals:51183",
-    "aniscoupons:34142"
+    "aniscoupons:34142",
+    "zedstoreonline:39625"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
