@@ -662,7 +662,8 @@
     "1005010142208108",
     "1005008534907844",
     "1005009577554629",
-    "1005010656922924"
+    "1005010656922924",
+    "1005008077441711"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1339,7 +1340,8 @@
     "1005010142208108": 1793987278.5140982,
     "1005008534907844": 1793987285.4130383,
     "1005009577554629": 1793987289.8200357,
-    "1005010656922924": 1793994623.1444166
+    "1005010656922924": 1793994623.1444166,
+    "1005008077441711": 1793998299.0115912
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2174,7 +2176,8 @@
     "SAMSUNG DDR3 8GB 1600v",
     "Realme 15 Pro (12/256GB)",
     "SOUNDPEATS C30 ANC Wireless Earphones",
-    "UGREEN 45W GaN Smart Display Charger"
+    "UGREEN 45W GaN Smart Display Charger",
+    "Inphic PG1 PG9 RGB Wired Gaming Mouse"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3014,10 +3017,10 @@
     "SAMSUNG DDR3 8GB 1600v": 1793987289.8200357,
     "Realme 15 Pro (12/256GB)": 1793989672.350269,
     "SOUNDPEATS C30 ANC Wireless Earphones": 1793994623.1444166,
-    "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899
+    "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899,
+    "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1793998299.0115912
   },
   "published_post_keys": [
-    "couponsglobal:48820",
     "zedstoreonline:38887",
     "ecksdeal:5916",
     "ecksdeal:5946",
@@ -4016,11 +4019,12 @@
     "zedstoreonline:39650",
     "zedstoreonline:39651",
     "aniscoupons:34174",
-    "ecksdeal:6042"
+    "ecksdeal:6042",
+    "zedstoreonline:39654"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793995902.130763,
+  "last_run_time": 1793998299.0115912,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
@@ -4047,12 +4051,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39653,
-      "last_check_time": 1793997188.9766505
+      "last_message_id": 39654,
+      "last_check_time": 1793998301.0574348
     },
     "aniscoupons": {
-      "last_message_id": 34176,
-      "last_check_time": 1793997741.9525604
+      "last_message_id": 34177,
+      "last_check_time": 1793998301.9121184
     },
     "bnddeals": {
       "last_message_id": 51200,
@@ -4626,7 +4630,8 @@
     "1005010142208108": 37.5,
     "1005008534907844": 50.86,
     "1005009577554629": 10.55,
-    "1005010656922924": 20.4
+    "1005010656922924": 20.4,
+    "1005008077441711": 7.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16271,6 +16276,16 @@
       "price": 110.85,
       "timestamp": 1793995902.130763,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39654": {
+      "channel_msg_id": 1957,
+      "product_id": "1005008077441711",
+      "title": "Inphic PG1 PG9 RGB Wired Gaming Mouse",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39654,
+      "price": 7.6,
+      "timestamp": 1793998299.0115912,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16279,17 +16294,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793995905.8253975,
+    "last_deal_post_time": 1793998302.5824137,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793998107.4824793,
+    "last_sweep_time": 1793998305.0366793,
     "last_sweep_times": {
-      "algeria": 1793998105.2128325,
-      "france": 1793998107.4824793
+      "algeria": 1793998302.5619211,
+      "france": 1793998305.0366793
     },
     "last_deal_post_times": {
-      "algeria": 1793995905.8253975
+      "algeria": 1793998302.5824137
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16966,7 +16981,8 @@
     "1005010142208108": "lodydeals",
     "1005008534907844": "lodydeals",
     "1005009577554629": "lodydeals",
-    "1005010656922924": "zedstoreonline"
+    "1005010656922924": "zedstoreonline",
+    "1005008077441711": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -17806,7 +17822,8 @@
     "SAMSUNG DDR3 8GB 1600v": "lodydeals",
     "Realme 15 Pro (12/256GB)": "aniscoupons",
     "SOUNDPEATS C30 ANC Wireless Earphones": "zedstoreonline",
-    "UGREEN 45W GaN Smart Display Charger": "zedstoreonline"
+    "UGREEN 45W GaN Smart Display Charger": "zedstoreonline",
+    "Inphic PG1 PG9 RGB Wired Gaming Mouse": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -18600,7 +18617,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "couponsglobal:48867",
     "aniscoupons:32972",
     "megaphonna:8665",
     "aniscoupons:32977",
@@ -19599,7 +19615,8 @@
     "aniscoupons:34175",
     "aniscoupons:34176",
     "lodydeals:46202",
-    "lodydeals:46203"
+    "lodydeals:46203",
+    "aniscoupons:34177"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
