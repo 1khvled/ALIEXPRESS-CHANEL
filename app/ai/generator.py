@@ -823,7 +823,10 @@ def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_cod
       قناة التيليغرام للمزيد من العروض : @DzAliexpress0
       https://t.me/DzAliexpress0
     """
-    clean_raw = re.sub(r'ـ', '', raw_text)
+    clean_raw = re.sub(r'@[A-Za-z0-9_]+', '', raw_text)
+    clean_raw = re.sub(r'https?://t\.me/(?!Alilo07BOT|DzAliexpress0)[A-Za-z0-9_]+', '', clean_raw)
+    clean_raw = re.sub(r't\.me/(?!Alilo07BOT|DzAliexpress0)[A-Za-z0-9_]+', '', clean_raw)
+    clean_raw = re.sub(r'ـ', '', clean_raw)
 
     # 0. Hook Extraction & Phrasing Modification
     hook = ""
@@ -831,18 +834,51 @@ def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_cod
         l_str = l.strip()
         if not l_str:
             continue
-        if any(w in l_str for w in ["تخفيض", "عرض", "السعر", "Prix", "http", "t.me", "كوبون", "كود", "قسيمة", "البلد", "النقاط", "عملات"]):
+        if any(w in l_str.lower() for w in [
+            "تخفيض", "عرض", "السعر", "prix", "price", "http", "t.me", "كوبون", "كود", "قسيمة",
+            "البلد", "النقاط", "عملات", "بوت", "bot", "تتبع", "مطور", "قناة", "اشترك", "متابعين",
+            "تليجرام", "تيليجرام", "لي يراسلك", "ابلوكيه", "نصاب", "شراء بأفضل", "تتبع الطرود",
+            "telegram", "channel", "groupe", "group", "admin", "contact"
+        ]):
             continue
-        if any(w in l_str for w in ["فالبلاد", "السوق", "محلي", "بطارية", "شاشة", "معالج", "كاميرا", "صوت", "عزل", "أفضل", "افضل", "نزول", "هبوط", "تصفية", "باطل", "لافار", "فرصة", "أقوى", "اقوى"]):
+        if any(w in l_str for w in ["فالبلاد", "السوق", "محلي", "بطارية", "شاشة", "معالج", "كاميرا", "صوت", "عزل", "نزول", "هبوط", "تصفية", "باطل", "لافار", "فرصة", "أقوى", "اقوى"]):
             mod = modify_deal_hooks_and_phrasing(l_str)
-            hook = re.sub(r'(?:[🚨🔥⚡✨💥][ 	]*)+', ' ', mod).strip()
-            if "دج" in hook:
-                hook += " 🚨"
-            else:
-                hook += " 🔥"
-            break
+            cleaned_hook = re.sub(r'^[🚨🔥⚡✨💥\:\-\|\t\s]+|[🚨🔥⚡✨💥\:\-\|\t\s]+$', '', mod).strip()
+            cleaned_hook = re.sub(r'[\:\-\|\t]+', ' ', cleaned_hook).strip()
+            if len(cleaned_hook) >= 4:
+                if "دج" in cleaned_hook:
+                    hook = f"{cleaned_hook} 🚨"
+                else:
+                    hook = f"{cleaned_hook} 🔥"
+                break
 
-    # 1. Title Extraction
+    # 1. Title Extraction & Sanitization
+    def _sanitize_title(t: str) -> str:
+        if not t:
+            return "AliExpress Deal"
+        t = re.sub(r'^[🚨🔥⚡⭐⭐️✅💎🎫🎟️📎🔗🔸▪️🔹❗️😮😍🙏🌷\-\s:]+', '', t).strip()
+        t = re.sub(r'[\$€💵].*$', '', t).strip()
+        for sep in [' – ', ' — ', ' | ', ' - ', ' –', ' —', ' |']:
+            if sep in t:
+                part = t.split(sep)[0].strip()
+                if len(part) >= 10:
+                    t = part
+                    break
+        if len(t) > 55:
+            words = t.split()
+            res = []
+            cur = 0
+            for w in words:
+                if cur + len(w) + 1 > 55:
+                    break
+                res.append(w)
+                cur += len(w) + 1
+            t = " ".join(res)
+        t = re.sub(r'[\s\-–—|،,\.]+(?:وال?|أو|مع|في|لـ?|بـ?)?$', '', t).strip(' -–—|،,.')
+        if "USB/XL" in t and "USB/XLR" not in t:
+            t = t.replace("USB/XL", "USB/XLR")
+        return t or "AliExpress Deal"
+
     title = extracted_title or ""
     if not title:
         for l in clean_raw.splitlines():
@@ -859,12 +895,8 @@ def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_cod
                 if len(cleaned) >= 3:
                     title = cleaned
                     break
-    if not title:
-        title = "AliExpress Deal"
 
-    title = re.sub(r'^[🚨🔥⚡⭐⭐️✅💎🎫🎟️📎🔗🔸▪️🔹❗️😮😍🙏🌷\-\s:]+', '', title).strip()
-    if "USB/XL" in title and "USB/XLR" not in title:
-        title = title.replace("USB/XL", "USB/XLR")
+    title = _sanitize_title(title)
 
     # 2. Price Extraction (USD & EUR with BiDi isolation)
     m_usd = re.search(r'(?:السعر|السعــــر|السعـر|Prix|💰|💵)\s*💲?\s*:?\s*\$?\s*(\d+(?:\.\d+)?)\s*\$?', clean_raw, re.I)

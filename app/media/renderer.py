@@ -259,7 +259,9 @@ class MediaRenderer:
         usd_price: Optional[float] = None
     ) -> Optional[Path]:
         """
-        Processes product image inside DealScout Neon Frame template.
+        Processes product image with clean studio photo rendering:
+        - Full natural product photo (never squashed into empty template frames)
+        - Subtle circular DealScout logo and sleek price pill
         """
         pid = product_id or "deal"
         out_file = self.output_dir / f"ready_{pid}.jpg"
@@ -268,7 +270,7 @@ class MediaRenderer:
             try:
                 with Image.open(image_path) as img:
                     img = self._clean_source_watermark(img)
-                    branded = self._render_framed_deal(img, usd_price=usd_price, title=title)
+                    branded = self._render_deal_card(img, usd_price=usd_price)
                     branded.save(out_file, "JPEG", quality=95)
                     return out_file
             except Exception as e:

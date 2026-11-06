@@ -1,9 +1,7 @@
 name: Tajmi3at & Category Fahras Publisher
 
 on:
-  schedule:
-    # Daily at 12:00 PM and 21:00 UTC (1:00 PM and 10:00 PM Algeria time UTC+1)
-    - cron: '0 12,21 * * *'
+  # Automated schedule disabled per user requirement: post single deals only, no tajmi3at compilations
   workflow_dispatch:
     inputs:
       category:

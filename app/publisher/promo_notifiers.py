@@ -274,8 +274,8 @@ def build_promo_launch_alert(promo: PromoEvent, start_hour_str: str = "08:00") -
             "🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب ⤵️</b>",
             "https://s.click.aliexpress.com/e/_c3d8Osgp",
             "",
-            "😊 <b>بوت مطور لشراء بأفضل سعر وتتبع الطرود :</b>",
-            "👉 t.me/Alilo07BOT",
+            "لا تنسى استخدام البوت للشراء بأقل الأسعار :",
+            "https://t.me/Alilo07BOT",
             "━━━━━━━━━━━━━━━━━",
             "🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/",
             "📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0"
@@ -291,8 +291,8 @@ def build_promo_launch_alert(promo: PromoEvent, start_hour_str: str = "08:00") -
             "🔥 <b>رابط تفعيل وجمع العملات ⤵️</b>",
             "👉 https://s.click.aliexpress.com/e/_c4l391NX",
             "",
-            "😊 <b>بوت مطور للشراء بأفضل سعر :</b>",
-            "👉 t.me/Alilo07BOT",
+            "لا تنسى استخدام البوت للشراء بأقل الأسعار :",
+            "https://t.me/Alilo07BOT",
             "━━━━━━━━━━━━━━━━━",
             "🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/",
             "📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0"
@@ -496,18 +496,6 @@ async def check_and_auto_post_promo_notifiers(
             # Do not post coupons before the event actually starts!
             pass
 
-    # --- 4. GUARANTEE ACTIVE EVENT COUPON BULLETIN IS ALWAYS PINNED ---
-    try:
-        pinned_msg_id = await ensure_active_promo_coupons_pinned(now, bot_token, channel_id)
-        if pinned_msg_id:
-            results.append({
-                "type": "active_promo_coupons_pinned",
-                "message_id": pinned_msg_id,
-                "status": "pinned"
-            })
-    except Exception as e:
-        logger.warning(f"Error in ensure_active_promo_coupons_pinned: {e}")
-
     return results
 
 async def ensure_active_promo_coupons_pinned(
@@ -550,6 +538,10 @@ async def ensure_active_promo_coupons_pinned(
                     return existing_msg_id
         except Exception as e:
             logger.warning(f"Error checking pinned status: {e}")
+
+    # Only publish a new bulletin if force_post is explicitly True
+    if not force_post:
+        return None
 
     # Build and post the official coupon bulletin for this active event
     logger.info(f"[PROMO PIN] Publishing and pinning official event coupon bulletin for {promo.name}...")

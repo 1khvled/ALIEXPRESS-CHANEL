@@ -737,3 +737,46 @@ def test_iqoo_turbo_formatting_inverted_coupon_dollar():
     # 4. Clean standard attribution
     assert "Alilo07BOT" in cap
     assert "@DzAliexpress0" in cap
+
+
+def test_maono_zedstore_competitor_bot_ad_scrubbed_and_title_sanitized():
+    from app.ai.generator import format_competitor_to_lody_1to1
+
+    raw_sample = """
+🔥  شــــــــــــد لافاااااااار هاذي عندك بري تاعو هنا فوق 12000دج   🔥 
+غير البلد استراليا 🇦🇺
+ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والألعاب
+السعر : 37.1$ 🔥
+رابط https://s.click.aliexpress.com/e/_c32nt3Lp
+احجز قسيمة البائع : 15$
+كوبون 11/65$ : OTD1111
+😊 بوت مطور لشراء بأفضل سعر وتتبع الطرود : t.me/ZedStoreSve_bot
+"""
+
+    cap = format_competitor_to_lody_1to1(
+        raw_text=raw_sample,
+        affiliate_url="https://s.click.aliexpress.com/e/_c32nt3Lp",
+        coupon_code="OTD1111",
+        extracted_title="ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل"
+    )
+
+    # 1. Zero competitor bot text or handle
+    assert "ZedStore" not in cap
+    assert "بوت مطور لشراء بأفضل سعر" not in cap
+    assert "تتبع الطرود" not in cap
+
+    # 2. No dangling emoji colons
+    assert "🔥 :" not in cap
+    assert ": 🔥" not in cap
+
+    # 3. Clean sanitized title (no truncated words mid-sentence)
+    assert "والأل" not in cap
+    assert "ميكروفون MAONO DGM20W لاسلكي للألعاب" in cap
+
+    # 4. Clean coupon and store coupon
+    assert "🎫 احجز قسيمة البائع: 15$" in cap
+    assert "🎟️ كوبون 11/65$ : <code>OTD1111</code>" in cap
+
+    # 5. Exactly 1 URL line
+    assert cap.count("https://s.click.aliexpress.com/e/_c32nt3Lp") == 1
+

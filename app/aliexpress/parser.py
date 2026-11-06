@@ -1157,6 +1157,29 @@ def extract_clean_title(text: str) -> Optional[str]:
             return True
         return False
 
+    def clean_title_boundary(cand_str: str, max_len: int = 65) -> str:
+        if not cand_str:
+            return ""
+        s = cand_str.strip()
+        for sep in [' – ', ' — ', ' | ', ' - ', ' –', ' —', ' |']:
+            if sep in s:
+                part = s.split(sep)[0].strip()
+                if len(part) >= 10:
+                    s = part
+                    break
+        if len(s) > max_len:
+            words = s.split()
+            res = []
+            cur = 0
+            for w in words:
+                if cur + len(w) + 1 > max_len:
+                    break
+                res.append(w)
+                cur += len(w) + 1
+            s = " ".join(res)
+        s = re.sub(r'[\s\-–—|،,\.]+(?:وال?|أو|مع|في|لـ?|بـ?)?$', '', s).strip(' -–—|،,.')
+        return s
+
     # 0. Look for explicit title prefix line (HIGHEST PRIORITY in Algerian deal channels: e.g. تخفيض لـ, عرض خاص لـ)
     for i, line in enumerate(lines):
         m = re.search(r'(?:تخفيض\s+(?:ممتاز\s+|قوي\s+|خاص\s+)?لـ*|تخفيض\s+الآن\s+لـ*|عرض\s+خاص\s+لـ*|تخفيض\s+على)\s*[:：\-]?\s*(.*)', line)
@@ -1169,7 +1192,7 @@ def extract_clean_title(text: str) -> Optional[str]:
             cand = re.sub(r'https?://\S+', '', cand).strip()
             cand = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:]+', '', cand).strip()
             if not is_noisy(cand) and len(cand) >= 3:
-                return cand[:100]
+                return clean_title_boundary(cand)
 
     # 0.5 Look for explicit star bullet title line (ZedStore & top Algerian channels standard: ⭐️ [Title] or [Country] ⭐️ [Title])
     for i, line in enumerate(lines):
@@ -1184,7 +1207,7 @@ def extract_clean_title(text: str) -> Optional[str]:
             cand = re.sub(r'https?://\S+', '', cand).strip()
             cand = re.sub(r'^[✅✔️☑️📱🎮🎧\s\-:]+', '', cand).strip()
             if not is_noisy(cand) and len(cand) >= 3:
-                return cand[:100]
+                return clean_title_boundary(cand)
 
     # 0.8 Look for checkmark / device / channel bullet title line anywhere in line (DealScout DZ, Anis, BND, ZedStore, Megaphonna)
     for i, line in enumerate(lines):
@@ -1198,7 +1221,7 @@ def extract_clean_title(text: str) -> Optional[str]:
             cand = re.sub(r'</?[^>]+(>|$)', '', cand).strip()
             cand = re.sub(r'^[❗️🔖📌🔥🚨⚡💥✨📦🛒🎁📢✅💎💰🔻ـ\s\-:⭐️🌷⏺📎📱🎮🎧]+', '', cand).strip()
             if not is_noisy(cand) and len(cand) >= 3:
-                return cand[:100]
+                return clean_title_boundary(cand)
 
     # 2. Look for lines with English/Arabic product name
     for line in lines:
@@ -1216,7 +1239,7 @@ def extract_clean_title(text: str) -> Optional[str]:
             and not is_noisy(c)
             and not any(k in norm for k in ["السعر", "رابط", "كوبون", "قناتنا", "البوت", "t.me", "youtu", "https", "http", "شحن", "تخفيض", "سعر", "البلد", "بلاد", "ديرو", "الجزائر"])
         ):
-            return c[:100]
+            return clean_title_boundary(c)
 
     return None
 
