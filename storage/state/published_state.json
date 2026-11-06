@@ -1328,7 +1328,7 @@
     "9998887107": 1793967108.0014687,
     "9998887678": 1793967678.8184059,
     "9998887703": 1793967703.2348685,
-    "1005008708333999": 1793981948.5637252,
+    "1005008708333999": 1794001056.1545,
     "1005012254132930": 1793970449.9003735,
     "1005013028124905": 1793971934.3600886,
     "1005012691642623": 1793976348.7503736,
@@ -2177,7 +2177,8 @@
     "Realme 15 Pro (12/256GB)",
     "SOUNDPEATS C30 ANC Wireless Earphones",
     "UGREEN 45W GaN Smart Display Charger",
-    "Inphic PG1 PG9 RGB Wired Gaming Mouse"
+    "Inphic PG1 PG9 RGB Wired Gaming Mouse",
+    "realme C100d 4/128GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3018,10 +3019,10 @@
     "Realme 15 Pro (12/256GB)": 1793989672.350269,
     "SOUNDPEATS C30 ANC Wireless Earphones": 1793994623.1444166,
     "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899,
-    "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1793998299.0115912
+    "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1793998299.0115912,
+    "realme C100d 4/128GB": 1794001056.1545
   },
   "published_post_keys": [
-    "ecksdeal:5916",
     "ecksdeal:5946",
     "test_channel:1791752385",
     "couponsglobal:48762",
@@ -4020,11 +4021,12 @@
     "aniscoupons:34174",
     "ecksdeal:6042",
     "zedstoreonline:39654",
-    "zedstoreonline:39655"
+    "zedstoreonline:39655",
+    "zedstoreonline:39656"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794000865.9547298,
+  "last_run_time": 1794001056.1545,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
@@ -4051,8 +4053,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39655,
-      "last_check_time": 1794000867.990542
+      "last_message_id": 39656,
+      "last_check_time": 1794001058.205743
     },
     "aniscoupons": {
       "last_message_id": 34177,
@@ -16296,6 +16298,16 @@
       "price": 54.4,
       "timestamp": 1794000865.9547298,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39656": {
+      "channel_msg_id": 1959,
+      "product_id": "1005008708333999",
+      "title": "realme C100d 4/128GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39656,
+      "price": 136.7,
+      "timestamp": 1794001056.1545,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16304,17 +16316,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794000869.3223963,
+    "last_deal_post_time": 1794001059.6155095,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794000871.8070238,
+    "last_sweep_time": 1794001062.291125,
     "last_sweep_times": {
-      "algeria": 1794000869.3051782,
-      "france": 1794000871.8070238
+      "algeria": 1794001059.592315,
+      "france": 1794001062.291125
     },
     "last_deal_post_times": {
-      "algeria": 1794000869.3223963
+      "algeria": 1794001059.6155095
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16979,7 +16991,7 @@
     "9998887107": "test_channel",
     "9998887678": "test_channel",
     "9998887703": "test_channel",
-    "1005008708333999": "lodydeals",
+    "1005008708333999": "zedstoreonline",
     "1005012254132930": "zedstoreonline",
     "1005013028124905": "zedstoreonline",
     "1005012691642623": "zedstoreonline",
@@ -17833,7 +17845,8 @@
     "Realme 15 Pro (12/256GB)": "aniscoupons",
     "SOUNDPEATS C30 ANC Wireless Earphones": "zedstoreonline",
     "UGREEN 45W GaN Smart Display Charger": "zedstoreonline",
-    "Inphic PG1 PG9 RGB Wired Gaming Mouse": "zedstoreonline"
+    "Inphic PG1 PG9 RGB Wired Gaming Mouse": "zedstoreonline",
+    "realme C100d 4/128GB": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
