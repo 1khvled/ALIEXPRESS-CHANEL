@@ -1175,7 +1175,7 @@
     "1005013081060247": 1793543567.486626,
     "1005012498496817": 1793543578.6842017,
     "1005003413514494": 1793732921.385459,
-    "1005008741607292": 1793649057.4862149,
+    "1005008741607292": 1793995902.130763,
     "1005010158587315": 1793543677.5915465,
     "1005012790288780": 1793656271.0286891,
     "1005012345939726": 1793656202.4239671,
@@ -2905,7 +2905,7 @@
     "Magcubic HY300 Max Projector": 1793973971.0121949,
     "AMD RYZEN 7 9800X3D": 1793615114.3091638,
     "Anker Space One ANC Headset": 1793616557.8235445,
-    "بطاقة الأم Asrock X570M PRO4": 1793649057.4862149,
+    "بطاقة الأم Asrock X570M PRO4": 1793995902.130763,
     "بطاقة الأم GIGABYTE B550M K": 1793649062.201711,
     "بطاقة الأم MSI A520M A PRO": 1793649067.5197537,
     "ماوس لاسلكي Aula Kunlun X5 Magnetic 8K Wireless": 1793649073.112849,
@@ -3017,7 +3017,6 @@
     "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899
   },
   "published_post_keys": [
-    "zedstoreonline:38703",
     "couponsglobal:48820",
     "zedstoreonline:38887",
     "ecksdeal:5916",
@@ -4016,15 +4015,16 @@
     "lodydeals:46201",
     "zedstoreonline:39650",
     "zedstoreonline:39651",
-    "aniscoupons:34174"
+    "aniscoupons:34174",
+    "ecksdeal:6042"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793995725.6198444,
+  "last_run_time": 1793995902.130763,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6041,
-      "last_check_time": 1793903108.984469
+      "last_message_id": 6042,
+      "last_check_time": 1793995904.1814108
     },
     "lodydeals": {
       "last_message_id": 46201,
@@ -16261,6 +16261,16 @@
       "price": 37.5,
       "timestamp": 1793995725.6198444,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6042": {
+      "channel_msg_id": 1956,
+      "product_id": "1005008741607292",
+      "title": "بطاقة الأم Asrock X570M PRO4",
+      "channel": "ecksdeal",
+      "source_msg_id": 6042,
+      "price": 110.85,
+      "timestamp": 1793995902.130763,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16269,17 +16279,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793995728.57583,
+    "last_deal_post_time": 1793995905.8253975,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793995731.8723388,
+    "last_sweep_time": 1793995908.6575189,
     "last_sweep_times": {
-      "algeria": 1793995728.5524728,
-      "france": 1793995731.8723388
+      "algeria": 1793995905.8025992,
+      "france": 1793995908.6575189
     },
     "last_deal_post_times": {
-      "algeria": 1793995728.57583
+      "algeria": 1793995905.8253975
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
