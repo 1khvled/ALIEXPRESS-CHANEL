@@ -42,7 +42,9 @@ class DirectAffiliateProvider(AffiliateProvider):
             elif deal_type == "item":
                 return f"https://www.aliexpress.com/item/{pid}.html?aff_fcid={self.tracking_id}"
             else:
-                return f"https://m.aliexpress.com/p/coin-index/index.html?_immersiveMode=true&tabname=configTab_1926001&productIds={pid}&aff_fcid={self.tracking_id}"
+                # Never return a generic / coin-index URL that lands on empty coin exchanges
+                # Always direct users directly to the actual product with affiliate tracking!
+                return f"https://www.aliexpress.com/item/{pid}.html?aff_fcid={self.tracking_id}"
 
         # Clean campaign URLs to strip noisy tracking parameters
         clean_url = product_url.split("?")[0] if ("aliexpress.com" in product_url and "?" in product_url) else product_url
@@ -114,7 +116,8 @@ class PortalsApiAffiliateProvider(AffiliateProvider):
             elif deal_type == "item":
                 target_url = f"https://www.aliexpress.com/item/{pid}.html"
             else:
-                target_url = f"https://m.aliexpress.com/p/coin-index/index.html?_immersiveMode=true&tabname=configTab_1926001&productIds={pid}"
+                # Always generate s.click from official item URL so it resolves directly to product!
+                target_url = f"https://www.aliexpress.com/item/{pid}.html"
         else:
             if deal_type == "bundle":
                 target_url = "https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES&pha_manifest=ssr&_immersiveMode=true"
@@ -129,35 +132,22 @@ class PortalsApiAffiliateProvider(AffiliateProvider):
             async with _PORTALS_API_LOCK:
                 import time
                 elapsed = time.time() - _LAST_PORTALS_CALL_TIME
-                if elapsed < 1.1:
-                    await asyncio.sleep(1.1 - elapsed)
+                if elapsed < 1.5:
+                    await asyncio.sleep(1.5 - elapsed)
                 _LAST_PORTALS_CALL_TIME = time.time()
 
-                for attempt in range(1, 3):
+                for attempt in range(1, 4):
                     try:
                         aff_links = await asyncio.to_thread(self.api.get_affiliate_links, target_url)
                         if aff_links and len(aff_links) > 0:
                             link = getattr(aff_links[0], "promotion_link", None) or getattr(aff_links[0], "promotion_url", None)
                             if link:
                                 return link
-                        # If API responded cleanly but target_url has no promotion link (e.g. raw /item/ URL),
-                        # retry with coin index URL which reliably produces official /e/ shortlinks in Portals API!
-                        if pid:
-                            coin_target = f"https://m.aliexpress.com/p/coin-index/index.html?_immersiveMode=true&tabname=configTab_1926001&productIds={pid}"
-                            if target_url != coin_target:
-                                try:
-                                    coin_aff_links = await asyncio.to_thread(self.api.get_affiliate_links, coin_target)
-                                    if coin_aff_links and len(coin_aff_links) > 0:
-                                        c_link = getattr(coin_aff_links[0], "promotion_link", None) or getattr(coin_aff_links[0], "promotion_url", None)
-                                        if c_link:
-                                            return c_link
-                                except Exception as e2:
-                                    logger.warning(f"Portals API coin fallback failed: {e2}")
                         break
                     except Exception as e:
-                        logger.warning(f"AliExpress Portals API attempt {attempt}/2 failed: {e}")
-                        if attempt < 2:
-                            await asyncio.sleep(1.5)
+                        logger.warning(f"AliExpress Portals API attempt {attempt}/3 failed: {e}")
+                        if attempt < 3:
+                            await asyncio.sleep(2.0 * attempt)
                             _LAST_PORTALS_CALL_TIME = time.time()
                             continue
         return await self.fallback.generate_link(product_url, product_id, deal_type=deal_type)
