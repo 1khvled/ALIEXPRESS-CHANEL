@@ -28,10 +28,10 @@ from app.config.settings import settings
 from app.db.session import init_db, db_context
 from app.db.models import Channel, SourceMessage, Deal, GeneratedPost, TelegramPost
 from app.aliexpress.product import product_extractor
-from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category, detect_deal_type, is_france_deal, extract_telegram_html_text
+from app.aliexpress.parser import is_spam_or_non_deal, is_allowed_category, detect_deal_type, is_france_deal, extract_telegram_html_text, is_multi_deal_compilation
 from app.aliexpress.promos import promo_tracker
 from app.aliexpress.affiliate import affiliate_service
-from app.ai.generator import caption_generator, format_lodydeals_caption_1to1, format_ecksdeal_caption_1to1
+from app.ai.generator import caption_generator, format_lodydeals_caption_1to1, format_ecksdeal_caption_1to1, format_multi_deal_tajmi3at_1to1
 from app.media.downloader import media_downloader
 from app.media.renderer import media_renderer
 from app.publisher.publisher import telegram_publisher
@@ -50,6 +50,109 @@ def get_bot_token() -> str:
         or os.getenv("ADMIN_BOT_TOKEN", "")
         or ""
     )
+
+async def publish_incoming_multi_deal_post(raw_text: str, source_channel: str, source_msg_id: int) -> bool:
+    """
+    Publishes incoming multi-deal roundup / Tajmi3at posts from monitored channels:
+    - Uses our branded assets/tajmi3at_banner.png exclusively (NEVER competitor mascot/logos).
+    - Monetizes ALL AliExpress links 1:1 using our affiliate tag.
+    - Preserves multi-item roundup layout, prices, emojis, notes.
+    - Replaces competitor channel/bot mentions.
+    - Auto-publishes to Telegram channel @DzAliexpress0 and Facebook.
+    """
+    try:
+        from app.aliexpress.urls import extract_all_urls, is_aliexpress_url, is_potential_shortener
+        from app.aliexpress.affiliate import affiliate_service
+        from api.coin_bot import ensure_affiliate
+        from app.ai.generator import format_multi_deal_tajmi3at_1to1
+        from app.publisher.state_tracker import record_post_published
+
+        urls = extract_all_urls(raw_text)
+        ali_urls = [u for u in urls if is_aliexpress_url(u) or is_potential_shortener(u)]
+        if not ali_urls:
+            return False
+
+        # Monetize all unique AliExpress URLs 1:1
+        link_mapping = {}
+        for u in ali_urls:
+            clean_u = u.rstrip('.,;)"\'')
+            if clean_u not in link_mapping:
+                try:
+                    monetized = await affiliate_service.create_affiliate_link(clean_u)
+                    link_mapping[clean_u] = ensure_affiliate(monetized)
+                except Exception as aff_err:
+                    logger.warning(f"Failed monetizing link {clean_u}: {aff_err}")
+                    link_mapping[clean_u] = clean_u
+
+        # Format caption preserving items, structure, and monetizing all links
+        caption = format_multi_deal_tajmi3at_1to1(raw_text, link_mapping)
+
+        # Official branded banner ONLY - NEVER leak competitor mascot/logos
+        banner_path = settings.BASE_DIR / "assets" / "tajmi3at_banner.png"
+        if not banner_path.exists():
+            banner_path = settings.BASE_DIR / "assets" / "dealscout_super_deals_template.png"
+
+        bot_token = get_bot_token()
+        target_chat = getattr(settings, "TARGET_CHANNEL_ID", None) or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+        if not bot_token:
+            return False
+
+        async with httpx.AsyncClient(timeout=20.0) as client:
+            resp = None
+            if banner_path.exists():
+                with open(banner_path, "rb") as f_img:
+                    resp = await client.post(
+                        f"https://api.telegram.org/bot{bot_token}/sendPhoto",
+                        data={"chat_id": target_chat, "caption": caption, "parse_mode": "HTML"},
+                        files={"photo": ("tajmi3at_banner.png", f_img, "image/png")}
+                    )
+            if not resp or resp.status_code != 200 or not resp.json().get("ok"):
+                resp = await client.post(
+                    f"https://api.telegram.org/bot{bot_token}/sendMessage",
+                    json={
+                        "chat_id": target_chat,
+                        "text": caption,
+                        "parse_mode": "HTML",
+                        "disable_web_page_preview": True
+                    }
+                )
+
+            if resp.status_code == 200 and resp.json().get("ok"):
+                new_msg_id = resp.json().get("result", {}).get("message_id")
+                first_line = raw_text.splitlines()[0].strip() if raw_text.splitlines() else "تجميعة عروض"
+                record_post_published(
+                    channel_username=source_channel,
+                    message_id=source_msg_id,
+                    product_id=f"TAJMI3AT_{source_channel}_{source_msg_id}",
+                    title=first_line[:60],
+                    channel_msg_id=new_msg_id
+                )
+                print(f"  [TAJMI3AT PUBLISHED] Successfully published multi-deal roundup {source_channel} #{source_msg_id} -> DzAliexpress0 #{new_msg_id}!")
+
+                # Facebook auto-post if enabled
+                try:
+                    from app.publisher.facebook_publisher import facebook_publisher
+                    if getattr(settings, "FACEBOOK_AUTO_POST_ENABLED", True) and banner_path.exists():
+                        first_aff = list(link_mapping.values())[0] if link_mapping else None
+                        await facebook_publisher.publish_deal(
+                            title=first_line[:60],
+                            usd_price=None,
+                            affiliate_url=first_aff,
+                            coupon_code=None,
+                            image_path=banner_path,
+                            caption=caption
+                        )
+                except Exception as fb_err:
+                    logger.warning(f"Facebook tajmi3at auto-post skipped: {fb_err}")
+
+                return True
+            else:
+                print(f"  [!] Failed to publish tajmi3at: {resp.text if resp else 'No response'}")
+                return False
+    except Exception as e:
+        print(f"  [!] Exception publishing multi-deal post: {e}")
+        return False
+
 
 async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bool = False) -> int:
     await init_db()
@@ -417,6 +520,21 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         record_post_handled(ch, msg_id)
                         continue
 
+                    # Check: Multi-Deal Roundup / Tajmi3at Compilation (e.g. SSD compilation, phones roundup)
+                    if is_multi_deal_compilation(raw_text):
+                        published_multi = await publish_incoming_multi_deal_post(
+                            raw_text=raw_text,
+                            source_channel=ch,
+                            source_msg_id=msg_id
+                        )
+                        if published_multi:
+                            deals_published_this_run += 1
+                            published_deals.append(f"TAJMI3AT_{ch}_{msg_id}")
+                            max_processed_id = max(max_processed_id, msg_id)
+                            record_monitored_channel_last_id(ch, msg_id)
+                            record_post_handled(ch, msg_id)
+                            continue
+
                     # 4. Extract deal or coupon list (pass source_photo_url as fallback image)
                     extracted = await product_extractor.extract_from_message(raw_text, media_path=source_photo_url)
                     if not extracted or not extracted.is_valid:
@@ -558,9 +676,16 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     if not img_url and extracted.product_id:
                         img_url = await product_extractor._fetch_clean_aliexpress_image(extracted.product_id)
                     if not img_url and source_photo_url:
-                        img_url = source_photo_url
+                        # Competitor channels brand their images with logos/mascots.
+                        # Never leak competitor graphics; fall back to official DealScout template!
+                        if any(b in str(source_photo_url).lower() for b in ["telesco.pe", "telegram", "cdn-telegram"]):
+                            template_art = settings.BASE_DIR / "assets" / "dealscout_super_deals_template.png"
+                            if template_art.exists():
+                                img_url = str(template_art)
+                        else:
+                            img_url = source_photo_url
                     if not extracted.is_coupon_list:
-                        if not img_url or not any(d in str(img_url) for d in ["alicdn.com", "aliexpress-media.com", "aliexpress.com", "telesco.pe", "telegram.org", "cdn"]):
+                        if not img_url:
                             print(f"  [NO CLEAN PHOTO] Image fetch incomplete for {extracted.product_id}. Leaving for retry.")
                             continue
 
@@ -661,14 +786,17 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         if not local_img_file and os.path.exists(official_banner):
                             local_img_file = official_banner
                     elif img_url:
-                        downloaded = await media_downloader.download_image(img_url, extracted.product_id)
-                        if downloaded:
-                            local_img_file = media_renderer.prepare_post_image(
-                                downloaded,
-                                extracted.product_id,
-                                extracted.title,
-                                usd_price=extracted.current_price
-                            )
+                        if isinstance(img_url, (str, Path)) and os.path.exists(str(img_url)):
+                            local_img_file = Path(img_url)
+                        else:
+                            downloaded = await media_downloader.download_image(img_url, extracted.product_id)
+                            if downloaded:
+                                local_img_file = media_renderer.prepare_post_image(
+                                    downloaded,
+                                    extracted.product_id,
+                                    extracted.title,
+                                    usd_price=extracted.current_price
+                                )
 
                     if not local_img_file and img_url and not any(d in str(img_url) for d in ["telesco.pe", "t.me", "telegram.org"]):
                         local_img_file = img_url

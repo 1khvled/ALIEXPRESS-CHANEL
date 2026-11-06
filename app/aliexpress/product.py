@@ -252,8 +252,16 @@ class ProductExtractor:
             return None
 
         # Fallback to source message media if official studio image cannot be fetched directly
+        # Never leak competitor channel watermarks or mascots from Telegram/telescope
         if not image_url and media_path:
-            image_url = media_path
+            if any(b in str(media_path).lower() for b in ["telesco.pe", "telegram", "cdn-telegram"]):
+                template_art = settings.BASE_DIR / "assets" / "dealscout_super_deals_template.png"
+                if template_art.exists():
+                    image_url = str(template_art)
+                else:
+                    image_url = media_path
+            else:
+                image_url = media_path
 
         is_valid = bool(resolved.product_id and (usd_price or eur_price) and title and image_url)
 

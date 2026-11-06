@@ -591,15 +591,21 @@ ALIEXPRESS_URL_RE = re.compile(
 )
 
 
-def format_lodydeals_caption_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None) -> str:
+def format_lodydeals_caption_1to1(
+    raw_text: str,
+    affiliate_url: str,
+    coupon_code: Optional[str] = None,
+    link_mapping: Optional[Dict[str, str]] = None
+) -> str:
     """
     1:1 Mirror formatter for @lodydeals:
     - Retains original Algerian hype, emojis, pricing, and structure.
-    - Replaces competitor affiliate links with our verified monetized link.
+    - Replaces competitor affiliate links with our verified monetized link(s).
     - Strips duplicate/secondary direct links ('مباشر').
     - Replaces @LodyCouponsBot with our points bot @Alilo07BOT.
     - Replaces @lodydeals mentions with @DzAliexpress0.
     - Wraps coupon codes in <code> tags for one-tap copying in Telegram.
+    - Strictly avoids wrapping brand names (WALRAM, REALME, etc.) in <code> tags.
     """
     lines = raw_text.splitlines()
     clean_lines = []
@@ -626,9 +632,17 @@ def format_lodydeals_caption_1to1(raw_text: str, affiliate_url: str, coupon_code
 
         # Replace competitor affiliate links
         if ALIEXPRESS_URL_RE.search(l):
-            if not has_aff:
+            if link_mapping:
+                for orig_url, aff in link_mapping.items():
+                    if orig_url in l:
+                        l = l.replace(orig_url, aff)
+                clean_lines.append(l)
+                has_aff = True
+            elif not has_aff:
                 clean_lines.append(ALIEXPRESS_URL_RE.sub(affiliate_url, l))
                 has_aff = True
+            else:
+                clean_lines.append(ALIEXPRESS_URL_RE.sub(affiliate_url, l))
             continue
 
         # If a line is just an orphaned 'الرابط:' and we already placed our affiliate link, skip it
@@ -639,16 +653,17 @@ def format_lodydeals_caption_1to1(raw_text: str, affiliate_url: str, coupon_code
 
     caption = "\n".join(clean_lines).strip()
 
-    # Wrap promo coupon codes in <code> tags
-    code_matches = re.findall(r"\b([A-Z0-9]{5,12})\b", caption)
+    # Wrap promo coupon codes in <code> tags (Strict: must start with prefix AND contain at least one digit)
+    # This prevents wrapping brand names like WALRAM, REALME, APPLE, etc.
+    code_matches = re.findall(r"\b([A-Z0-9]{4,12})\b", caption)
     for c in code_matches:
-        if any(prefix in c for prefix in ["OTD", "AE", "AL", "DZ", "FR", "SUN", "ESD", "IFP", "BEST"]):
+        if any(c.startswith(prefix) for prefix in ["OTD", "AE", "AL", "DZ", "FR", "SUN", "ESD", "IFP", "BEST"]) and any(ch.isdigit() for ch in c):
             caption = re.sub(rf"(?<!<code>)\b{c}\b(?!</code>)", f"<code>{c}</code>", caption)
 
     if coupon_code and coupon_code not in caption:
         caption = re.sub(rf"(?<!<code>)\b{coupon_code}\b(?!</code>)", f"<code>{coupon_code}</code>", caption)
 
-    if affiliate_url not in caption:
+    if affiliate_url not in caption and (not link_mapping or not any(aff in caption for aff in link_mapping.values())):
         caption += f"\nالرابط: {affiliate_url}"
 
     if "Alilo07BOT" not in caption:
@@ -656,6 +671,65 @@ def format_lodydeals_caption_1to1(raw_text: str, affiliate_url: str, coupon_code
 
     caption = re.sub(r"\n+\s*الرابط\s*:?\s*$", "", caption)
     return caption
+
+
+def format_multi_deal_tajmi3at_1to1(raw_text: str, link_mapping: Dict[str, str]) -> str:
+    """
+    1:1 Multi-Deal / Tajmi3at Formatter:
+    - Preserves multi-item roundup layout, headers (e.g. 'أفضل العروض في التخزين SSD'), bullets, and prices.
+    - Replaces ALL competitor AliExpress URLs with our monetized links from link_mapping.
+    - Strips competitor channels (@lodydeals, @ECKSDEAL) -> @DzAliexpress0.
+    - Replaces competitor bots (@LodyCouponsBot, @ECKSdealsbot) -> @Alilo07BOT.
+    - Wraps coupon codes in <code> tags (requires prefix + digit, never wrapping brand names).
+    - Appends official bot and channel attribution.
+    """
+    lines = raw_text.splitlines()
+    clean_lines = []
+
+    for line in lines:
+        l = line.strip()
+        if not l:
+            clean_lines.append("")
+            continue
+
+        # Skip direct competitor channel links
+        if any(b in l.lower() for b in ["t.me/lodydeals", "t.me/ecksdeal"]):
+            continue
+
+        # Rewrite competitor channel mentions
+        l = re.sub(r'@(?:lodydeals|ECKSDEAL)', '@DzAliexpress0', l, flags=re.IGNORECASE)
+
+        # Replace competitor bot mentions
+        if any(b in l.lower() for b in ["lodycouponsbot", "@lodycouponsbot", "t.me/lodycouponsbot", "ecksdealsbot", "@ecksdealsbot"]):
+            clean_lines.append("t.me/Alilo07BOT")
+            continue
+
+        # Replace AliExpress URLs with verified monetized links
+        urls = ALIEXPRESS_URL_RE.findall(l)
+        if urls:
+            for u in urls:
+                clean_u = u.rstrip('.,;)"\'')
+                new_u = link_mapping.get(clean_u, link_mapping.get(u, u))
+                l = l.replace(u, new_u)
+
+        clean_lines.append(l)
+
+    caption = "\n".join(clean_lines).strip()
+
+    # Wrap coupon codes in <code> tags (Strict: prefix + digit only)
+    code_matches = re.findall(r"\b([A-Z0-9]{4,12})\b", caption)
+    for c in code_matches:
+        if any(c.startswith(prefix) for prefix in ["OTD", "AE", "AL", "DZ", "FR", "SUN", "ESD", "IFP", "BEST"]) and any(ch.isdigit() for ch in c):
+            caption = re.sub(rf"(?<!<code>)\b{c}\b(?!</code>)", f"<code>{c}</code>", caption)
+
+    if "Alilo07BOT" not in caption:
+        caption += "\n\n🤖 بوت تخفيض النقاط: @Alilo07BOT"
+
+    if "@DzAliexpress0" not in caption and "DzAliexpress0" not in caption:
+        caption += "\nقناة العروض: @DzAliexpress0"
+
+    return caption
+
 
 
 def format_ecksdeal_caption_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None) -> str:

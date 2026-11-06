@@ -504,3 +504,74 @@ def test_alifrdrop_1to1_copy_format():
     assert "<code>FRD1140</code>" in caption
     assert "Realme GT 7T 5G" in caption
     assert "236€" in caption
+
+
+def test_multi_deal_compilation_detection_and_formatting():
+    from app.aliexpress.parser import is_multi_deal_compilation
+    from app.ai.generator import format_multi_deal_tajmi3at_1to1, format_lodydeals_caption_1to1
+
+    ssd_compilation = (
+        "أفضل العروض في التخزين SSD\n"
+        "📌\n"
+        "👇\n"
+        "◀️\n"
+        "تخفيض لـ CUSU SSD SATA3\n"
+        "نسخة الـ 512GB بـ : $43.7\n"
+        "🔥\n"
+        "نسخة 256GB بـ : $24.3\n"
+        "🔥\n"
+        "رابط https://s.click.aliexpress.com/e/_c3eUBDQ3\n"
+        "احجز قسيمة البائع $1.05\n"
+        "كوبون 4/25$ : OTD1104\n"
+        "◀️\n"
+        "تخفيض لـ WALRAM 2.5 SSD 480GB\n"
+        "السعر : $41.56 ($36.97)\n"
+        "🔥\n"
+        "رابط https://s.click.aliexpress.com/e/_c3walram1\n"
+        "كوبون 4/25$ : OTD1104\n"
+        "◀️\n"
+        "تخفيض لـ WALRAM SSD 512GB\n"
+        "السعر : $44.80 ($39.93)\n"
+        "رابط https://s.click.aliexpress.com/e/_c3walram2"
+    )
+
+    single_deal = (
+        "تخفيض لـ WALRAM SSD 512GB\n"
+        "السعر : 44.80$ 🔥\n"
+        "رابط https://s.click.aliexpress.com/e/_c3walram2\n"
+        "كوبون 4/25$ : OTD1104"
+    )
+
+    # 1. Detection works correctly
+    assert is_multi_deal_compilation(ssd_compilation) is True
+    assert is_multi_deal_compilation(single_deal) is False
+
+    # 2. Multi-deal formatting preserves all items and monetizes all links
+    link_mapping = {
+        "https://s.click.aliexpress.com/e/_c3eUBDQ3": "https://s.click.aliexpress.com/e/_ourCusu",
+        "https://s.click.aliexpress.com/e/_c3walram1": "https://s.click.aliexpress.com/e/_ourWalram1",
+        "https://s.click.aliexpress.com/e/_c3walram2": "https://s.click.aliexpress.com/e/_ourWalram2",
+    }
+    cap_multi = format_multi_deal_tajmi3at_1to1(ssd_compilation, link_mapping)
+
+    # All three links exist and are monetized
+    assert "https://s.click.aliexpress.com/e/_ourCusu" in cap_multi
+    assert "https://s.click.aliexpress.com/e/_ourWalram1" in cap_multi
+    assert "https://s.click.aliexpress.com/e/_ourWalram2" in cap_multi
+
+    # Coupon is wrapped in code tags
+    assert "<code>OTD1104</code>" in cap_multi
+
+    # Brand name WALRAM is NEVER wrapped in code tags (prevents green text bug)
+    assert "<code>WALRAM</code>" not in cap_multi
+    assert "تخفيض لـ WALRAM 2.5 SSD 480GB" in cap_multi
+
+    # Bot attribution present
+    assert "@Alilo07BOT" in cap_multi
+    assert "@DzAliexpress0" in cap_multi
+
+    # 3. Single deal formatter also NEVER wraps WALRAM or REALME in code tags
+    cap_single = format_lodydeals_caption_1to1(single_deal, "https://s.click.aliexpress.com/e/_ourWalram2", "OTD1104")
+    assert "<code>WALRAM</code>" not in cap_single
+    assert "<code>OTD1104</code>" in cap_single
+    assert "WALRAM SSD 512GB" in cap_single

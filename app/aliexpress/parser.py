@@ -1514,11 +1514,57 @@ def extract_telegram_html_text(text_div) -> str:
     # Replace block breaks and emoji container breaks with newlines
     html = re.sub(r'<(?:br|/p|/div|/blockquote|/tg-emoji|tg-emoji)[^>]*>', '\n', html, flags=re.IGNORECASE)
     soup = BeautifulSoup(html, "html.parser")
+    # Preserve inline links if the URL is not already in the anchor text
+    for a in soup.find_all("a", href=True):
+        href = a["href"].strip()
+        a_text = a.get_text().strip()
+        if ("aliexpress.com" in href or "s.click" in href) and href not in a_text:
+            a.replace_with(f"{a_text}\n{href}")
     import html as html_lib
     text = html_lib.unescape(soup.get_text())
     # Normalize excessive newlines
     text = re.sub(r'\n{3,}', '\n\n', text)
     return text.strip()
+
+
+def is_multi_deal_compilation(text: str) -> bool:
+    """
+    Detects if a post from monitored channels is a multi-product deal roundup / Tajmi3a:
+    - Explicit roundup headers ('أفضل العروض في', 'تجميعة', 'فهرس عروض', 'فهرس التخفيضات')
+    - Multiple deal markers ('تخفيض لـ', 'عرض لـ' >= 2)
+    - Multiple bullet points with multiple prices and multiple product URLs
+    """
+    if not text:
+        return False
+    # 1. Obvious roundup/compilation headers
+    roundup_keywords = [
+        "أفضل العروض في", "افضل العروض في", "تجميعة عروض", "تجميعة تخفيضات",
+        "تجميعة", "فهرس العروض", "فهرس عروض", "فهرس التخفيضات", "عروض التخزين",
+        "عروض الهواتف", "عروض الحواسيب", "عروض الساعات"
+    ]
+    if any(kw in text for kw in roundup_keywords):
+        return True
+
+    # 2. Multiple explicit deal headers (e.g. تخفيض لـ / عرض لـ >= 2)
+    deal_markers = len(re.findall(r'(?:تخفيض|عرض)\s+لـ', text))
+    if deal_markers >= 2:
+        return True
+
+    # 3. Multiple bullet points paired with multiple price declarations and multiple links
+    bullets = len(re.findall(r'[◀️▶️▪️▫️🔹🔸🔴]', text))
+    prices = len(re.findall(r'\$\s*\d+(?:\.\d+)?|\d+(?:\.\d+)?\s*\$', text))
+    from app.aliexpress.urls import extract_all_urls, is_aliexpress_url, is_potential_shortener
+    urls = extract_all_urls(text)
+    ali_urls = [u for u in urls if is_aliexpress_url(u) or is_potential_shortener(u)]
+
+    if bullets >= 2 and prices >= 2 and len(ali_urls) >= 2:
+        return True
+
+    if len(ali_urls) >= 3 and prices >= 2:
+        return True
+
+    return False
+
 
 
 BRAND_TRANSLITERATIONS = {
