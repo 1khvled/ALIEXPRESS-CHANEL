@@ -1240,7 +1240,7 @@
     "1005007010692093": 1793601389.0047116,
     "1005006994466968": 1793601744.1664062,
     "1005011927267564": 1793728844.5794795,
-    "1005008291023017": 1793732518.3808835,
+    "1005008291023017": 1793989672.350269,
     "1005012947477238": 1793612016.5356846,
     "1005010121513376": 1793974514.9586184,
     "1005009064526142": 1793613380.753295,
@@ -2169,7 +2169,8 @@
     "حامل هاتف Ulanzi ST-06S",
     "AULA MINI60 HE PRO",
     "Maono Wave T5 Wireless Mic",
-    "SAMSUNG DDR3 8GB 1600v"
+    "SAMSUNG DDR3 8GB 1600v",
+    "Realme 15 Pro (12/256GB)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3006,10 +3007,10 @@
     "حامل هاتف Ulanzi ST-06S": 1793983598.810499,
     "AULA MINI60 HE PRO": 1793987278.5140982,
     "Maono Wave T5 Wireless Mic": 1793987285.4130383,
-    "SAMSUNG DDR3 8GB 1600v": 1793987289.8200357
+    "SAMSUNG DDR3 8GB 1600v": 1793987289.8200357,
+    "Realme 15 Pro (12/256GB)": 1793989672.350269
   },
   "published_post_keys": [
-    "couponsglobal:48792",
     "ecksdeal:5998",
     "aniscoupons:32699",
     "test_channel:1791063864",
@@ -4008,11 +4009,12 @@
     "lodydeals:46195",
     "lodydeals:46196",
     "lodydeals:46198",
-    "aniscoupons:34167"
+    "aniscoupons:34167",
+    "aniscoupons:34168"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793989291.1519866,
+  "last_run_time": 1793989672.350269,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
@@ -4043,8 +4045,8 @@
       "last_check_time": 1793985618.5131385
     },
     "aniscoupons": {
-      "last_message_id": 34167,
-      "last_check_time": 1793989293.1987417
+      "last_message_id": 34168,
+      "last_check_time": 1793989674.3919673
     },
     "bnddeals": {
       "last_message_id": 51200,
@@ -4535,7 +4537,7 @@
     "1005007010692093": 2.88,
     "1005006994466968": 4.99,
     "1005011927267564": 24.55,
-    "1005008291023017": 285.92,
+    "1005008291023017": 285.9,
     "1005012947477238": 199.2,
     "1005010121513376": 289.5,
     "1005009064526142": 123.9,
@@ -16192,6 +16194,16 @@
       "price": 192.7,
       "timestamp": 1793989291.1519866,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34168": {
+      "channel_msg_id": 1950,
+      "product_id": "1005008291023017",
+      "title": "Realme 15 Pro (12/256GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34168,
+      "price": 285.9,
+      "timestamp": 1793989672.350269,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16200,17 +16212,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793989294.4648895,
+    "last_deal_post_time": 1793989675.4409003,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793989298.6760962,
+    "last_sweep_time": 1793989679.0825448,
     "last_sweep_times": {
-      "algeria": 1793989294.184544,
-      "france": 1793989298.6760962
+      "algeria": 1793989675.4215236,
+      "france": 1793989679.0825448
     },
     "last_deal_post_times": {
-      "algeria": 1793989294.4648895
+      "algeria": 1793989675.4409003
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16805,7 +16817,7 @@
     "1005007010692093": "lodydeals",
     "1005006994466968": "lodydeals",
     "1005011927267564": "lodydeals",
-    "1005008291023017": "lodydeals",
+    "1005008291023017": "aniscoupons",
     "1005012947477238": "lodydeals",
     "1005010121513376": "aniscoupons",
     "1005009064526142": "zedstoreonline",
@@ -17723,7 +17735,8 @@
     "حامل هاتف Ulanzi ST-06S": "zedstoreonline",
     "AULA MINI60 HE PRO": "lodydeals",
     "Maono Wave T5 Wireless Mic": "lodydeals",
-    "SAMSUNG DDR3 8GB 1600v": "lodydeals"
+    "SAMSUNG DDR3 8GB 1600v": "lodydeals",
+    "Realme 15 Pro (12/256GB)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
