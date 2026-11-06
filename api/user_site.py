@@ -5093,9 +5093,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               }
             }
           }
-          const m = line.match(/^[✅✔️☑️]\\\s*(.+)$/) || line.match(/✅\\\s*([^\\n]+)/);
+          const m = line.match(/^[✅✔️☑️]\\s*(.+)$/) || line.match(/✅\\s*([^\\n]+)/);
           if (m) {
-            const cand = m[1].replace(/<[^>]*>/g, '').replace(/^[✅✔️☑️\\\s*#]+/, '').trim();
+            const cand = m[1].replace(/<[^>]*>/g, '').replace(/^[✅✔️☑️\\s*#]+/, '').trim();
             if (cand.length >= 3 && !isBoilerplate(cand)) {
               title = cand;
               break;
@@ -5108,7 +5108,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (!title) {
         for (let i = 0; i < lines.length; i++) {
           const line = lines[i];
-          const m = line.match(/^(?:⭐️|⭐|🌟|📱|🎮|🎧|⚡|📦|تخفيض\\\s*(?:لـ|ل)?|عرض\\\s*خاص\\\s*(?:لـ|ل)?|تخفيض\\\s*على|produit\\\s*:?|offre\\\s*:?)\\\s*(.+)$/i);
+          const m = line.match(/^(?:⭐️|⭐|🌟|📱|🎮|🎧|⚡|📦|تخفيض\\s*(?:لـ|ل)?|عرض\\s*خاص\\s*(?:لـ|ل)?|تخفيض\\s*على|produit\\s*:?|offre\\s*:?)\\s*(.+)$/i);
           if (m) {
             const cand = m[1].replace(/<[^>]*>/g, '').trim();
             if (cand.length >= 3 && !isBoilerplate(cand)) {
@@ -5123,7 +5123,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (!title) {
         for (const line of lines) {
           if (isBoilerplate(line)) continue;
-          const clean = line.replace(/^[-🛍️🔥⚡⭐💥📦📍🏷️✅✔️•*\\\s]+/, '').replace(/<[^>]*>/g, '').trim();
+          const clean = line.replace(/^[-🛍️🔥⚡⭐💥📦📍🏷️✅✔️•*\\s]+/, '').replace(/<[^>]*>/g, '').trim();
           if (clean.length >= 4 && !isBoilerplate(clean) && !clean.match(/^[A-Z0-9_-]{4,20}$/)) {
             title = clean;
             break;
@@ -5135,7 +5135,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       if (!title) {
         for (const line of lines) {
           if (!line.includes('http') && !line.includes('@') && !line.includes('t.me') && line.length >= 4 && !isBoilerplate(line)) {
-            const clean = line.replace(/^[-🛍️🔥⚡⭐💥📦📍🏷️✅✔️•*\\\s]+/, '').trim();
+            const clean = line.replace(/^[-🛍️🔥⚡⭐💥📦📍🏷️✅✔️•*\\s]+/, '').trim();
             if (clean.length >= 4 && !isBoilerplate(clean)) {
               title = clean;
               break;
@@ -5155,11 +5155,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         title = isTajmi3aPost ? (currentLang === 'fr' ? "Index Officiel 11.11 DealScout" : "فهرس العروض الرسمي 11.11") : (currentLang === 'fr' ? "Offre Spéciale Festival 11.11" : "عرض مميز تخفيضات 11.11 الكبرى");
       }
 
-      const usdMatch = text.match(/(?:\\$|US\\\s*\\$|USD\\\s*)\\\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\\\s*(?:\\bUSD\\b|\\$)/i);
+      const usdMatch = text.match(/(?:\\$|US\\s*\\$|USD\\s*)\\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\\s*(?:\\bUSD\\b|\\$)/i);
       if (usdMatch) {
         priceUsd = parseFloat(usdMatch[1].replace(',', '.'));
       }
-      const eurMatch = text.match(/(?:€|EUR\\\s*)\\\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\\\s*(?:€|\\bEUR\\b)/i);
+      const eurMatch = text.match(/(?:€|EUR\\s*)\\s*([0-9]+[.,][0-9]{1,2})/i) || text.match(/([0-9]+[.,][0-9]{1,2})\\s*(?:€|\\bEUR\\b)/i);
       if (eurMatch) {
         priceEur = parseFloat(eurMatch[1].replace(',', '.'));
       }
@@ -5181,7 +5181,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         if (compBrands.some(brand => cl.startsWith(brand) || cl.includes('_' + brand) || cl.includes('-' + brand))) return;
         if (['anis', 'megaprix', 'megaphonna', 'ecks'].some(brand => cl.includes(brand))) return;
 
-        let cleanTier = (tier || '').trim().replace(/\\\s+/g, '');
+        let cleanTier = (tier || '').trim().replace(/\\s+/g, '');
         if (cleanTier && !cleanTier.startsWith('$') && !cleanTier.endsWith('$') && !cleanTier.startsWith('€') && !cleanTier.endsWith('€')) {
           cleanTier += '$';
         }
@@ -5196,26 +5196,26 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       }
 
       // Tier first: '🎟️ 6/49$ : WOAE06' or 'كوبون $2/15$: WOAE02'
-      const p1Regex = /(?:🎟️?|🎫|•|\\\-|\\*)?\\\s*(?:(?:ال)?كوبون(?:\\\s*آخر|\\\s*إضافي)?|(?:ال)?كود(?:\\\s*آخر|\\\s*إضافي)?|code\\\s*promo|(?:ال)?قسيمة|خصم|تخفيض)?\\\s*([$€]?[0-9]+(?:\\.[0-9]+)?\\\s*\\/\\\s*[$€]?[0-9]+(?:\\.[0-9]+)?[$€]?)\\\s*(?:بكود|code|:|=|：|\\\-)?\\\s*([A-Za-z0-9_-]{3,25})/gi;
+      const p1Regex = /(?:🎟️?|🎫|•|\\-|\*)?\s*(?:(?:ال)?كوبون(?:\s*آخر|\s*إضافي)?|(?:ال)?كود(?:\s*آخر|\s*إضافي)?|code\s*promo|(?:ال)?قسيمة|خصم|تخفيض)?\s*([$€]?[0-9]+(?:\.[0-9]+)?\s*\/\s*[$€]?[0-9]+(?:\.[0-9]+)?[$€]?)\s*(?:بكود|code|:|=|：|\-)?\s*([A-Za-z0-9_-]{3,25})/gi;
       let mMatch;
       while ((mMatch = p1Regex.exec(cleanNorm)) !== null) {
         addParsedCode(mMatch[2], 'كوبون', mMatch[1]);
       }
 
       // Code then tier: 'OTPRD02 : 2/15$'
-      const p2Regex = /(?:🎟️?|🎫|•|\\\-|\\*)?\\\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\\\s*promo|(?:ال)?قسيمة)?\\\s*([A-Za-z][A-Za-z0-9_-]{2,24})\\\s*(?:[:=：\\\-]|خصم|بخصم|\\()?([$€]?[0-9]+(?:\\.[0-9]+)?\\\s*\\/\\\s*[$€]?[0-9]+(?:\\.[0-9]+)?[$€]?)\\)?/gi;
+      const p2Regex = /(?:🎟️?|🎫|•|\\-|\*)?\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\s*promo|(?:ال)?قسيمة)?\s*([A-Za-z][A-Za-z0-9_-]{2,24})\s*(?:[:=：\-]|خصم|بخصم|\()?([$€]?[0-9]+(?:\.[0-9]+)?\s*\/\s*[$€]?[0-9]+(?:\.[0-9]+)?[$€]?)\)?/gi;
       while ((mMatch = p2Regex.exec(cleanNorm)) !== null) {
         addParsedCode(mMatch[1], 'كوبون', mMatch[2]);
       }
 
       // Labeled lines & Slashed codes: 'كوبون: CODE1', 'كود: CODE1 / CODE2'
-      const pLineRegex = /(?:(?:استخدم\\\s+|استعمل\\\s+|انسخ\\\s+|بكود\\\s+)?(?:(?:ال)?كـ?وبون|(?:ال)?كـ?ود|(?:ال)?قسيمـ?ة|code\\\s*promo|code\\\s*de\\\s*r[ée]duction|code\\\s*r[ée]duction|coupon|promo|utilisez\\\s*le\\\s*code|avec\\\s*le\\\s*code)[^\\n:]*|[🏷️🎟️🎫👊])\\\s*[:：\\\-]\\\s*([^\\r\\n]+)/gi;
+      const pLineRegex = /(?:(?:استخدم\s+|استعمل\s+|انسخ\s+|بكود\s+)?(?:(?:ال)?كـ?وبون|(?:ال)?كـ?ود|(?:ال)?قسيمـ?ة|code\s*promo|code\s*de\s*r[ée]duction|code\s*r[ée]duction|coupon|promo|utilisez\s*le\s*code|avec\s*le\s*code)[^\\n:]*|[🏷️🎟️🎫👊])\s*[:：\-]\s*([^\\r\\n]+)/gi;
       while ((mMatch = pLineRegex.exec(cleanNorm)) !== null) {
         let content = mMatch[1].trim();
-        const tierMatch = content.match(/\\(?([$€]?[0-9]+(?:\\.[0-9]+)?\\/[0-9]+(?:\\.[0-9]+)?[$€]?)\\)?/);
+        const tierMatch = content.match(/\(?([$€]?[0-9]+(?:\.[0-9]+)?\/[0-9]+(?:\.[0-9]+)?[$€]?)\)?/);
         const lineTier = tierMatch ? tierMatch[1] : '';
         if (lineTier) content = content.replace(tierMatch[0], '');
-        const parts = content.split(/[\\/\\|,،]|\\\s+(?:أو|or|ou)\\\s+/);
+        const parts = content.split(/[\/\|,،]|\\s+(?:أو|or|ou)\\s+/);
         for (const p of parts) {
           const toks = p.match(/[A-Za-z0-9_-]{3,25}/g) || [];
           for (const tok of toks) {
@@ -5261,7 +5261,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         country = "أستراليا 🇦🇺";
       } else if (/إسبانيا|اسبانيا|🇪🇸|spain/i.test(cleanNorm)) {
         country = "إسبانيا 🇪🇸";
-      } else if (/(?:خلي\\\s*البلد\\\s*كندا|بلد\\\s*الحساب\\\s*كندا|ضع\\\s*البلد\\\s*كندا)/i.test(cleanNorm)) {
+      } else if (/(?:خلي\\s*البلد\\s*كندا|بلد\\s*الحساب\\s*كندا|ضع\\s*البلد\\s*كندا)/i.test(cleanNorm)) {
         country = "كندا 🇨🇦";
       }
 
@@ -5274,8 +5274,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           const ll = l.toLowerCase();
           if (stripKeywords.some(kw => ll.includes(kw))) continue;
           if (/https?:\\/\\/|t\\.me\\/|@[a-zA-Z0-9_]+/i.test(l)) continue;
-          if (/^(?:🎟️|🎫|•|\\\-|\\*)?\\\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\\\s*promo|(?:ال)?قسيمة|code|coupon)\\b/i.test(l)) continue;
-          if (/^(?:🎟️|🎫)\\\s*[$€]?[0-9]+/i.test(l)) continue;
+          if (/^(?:🎟️|🎫|•|\\-|\\*)?\\s*(?:(?:ال)?كوبون|(?:ال)?كود|code\\s*promo|(?:ال)?قسيمة|code|coupon)\\b/i.test(l)) continue;
+          if (/^(?:🎟️|🎫)\\s*[$€]?[0-9]+/i.test(l)) continue;
           const cl = l.replace(/https?:\\/\\/\\S+/g, '').replace(/@[a-zA-Z0-9_]+/g, '').replace(/<\\/?[a-zA-Z0-9_-]+>/g, '').trim();
           if (cl.length > 1) descLines.push(cl);
         }
@@ -5794,7 +5794,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           if (!deal.title) continue;
           let kw = deal.title
             .replace(/[()\\[\\]{}|#*]/g, ' ')
-            .replace(/\\\s+/g, ' ')
+            .replace(/\\s+/g, ' ')
             .trim();
           const parts = kw.split(' ');
           kw = parts.slice(0, 3).join(' ');
@@ -6677,7 +6677,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const submitBtn = document.getElementById('tracking-submit-btn');
 
       if (!input) return;
-      const rawNum = input.value.trim().replace(/\\\s+/g, '');
+      const rawNum = input.value.trim().replace(/\\s+/g, '');
       if (!rawNum || rawNum.length < 5) {
         if (errBox) {
           errBox.classList.remove('hidden');

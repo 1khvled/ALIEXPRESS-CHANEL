@@ -187,9 +187,14 @@ def get_initial_deals_payload() -> str:
             conn.close()
             if deals:
                 return json.dumps(deals, ensure_ascii=False)
+        # Fallback to bundled recent_deals.json for instant 0ms Vercel hydration
+        json_path = Path(__file__).resolve().parent.parent / "storage" / "state" / "recent_deals.json"
+        if json_path.exists():
+            with open(json_path, "r", encoding="utf-8") as jf:
+                return jf.read()
     except Exception:
         pass
-    return "[]"
+    return "[]" 
 
 
 def get_active_event_seo_html() -> str:
@@ -943,6 +948,15 @@ async def get_deals(channel: str = "@DzAliexpress0", force: bool = False):
                         "raw_text": title or ""
                     })
                 conn.close()
+        except Exception:
+            pass
+
+    if not deals:
+        try:
+            json_path = Path(__file__).resolve().parent.parent / "storage" / "state" / "recent_deals.json"
+            if json_path.exists():
+                with open(json_path, "r", encoding="utf-8") as jf:
+                    deals = json.load(jf)
         except Exception:
             pass
 
@@ -1891,6 +1905,35 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
                 {"posts": cached_posts, "count": len(cached_posts), "cached": True, "stale": True, "active_event": active_ev_data},
                 headers={"Cache-Control": "public, max-age=30"}
             )
+
+    # 4. Graceful Fallback to bundled recent deals if Telegram failed & no cache
+    json_path = Path(__file__).resolve().parent.parent / "storage" / "state" / "recent_deals.json"
+    if json_path.exists():
+        try:
+            with open(json_path, "r", encoding="utf-8") as jf:
+                bundled_deals = json.load(jf)
+                if bundled_deals:
+                    converted_posts = []
+                    for d in bundled_deals:
+                        converted_posts.append({
+                            "text": d.get("raw_text") or d.get("title", ""),
+                            "title": d.get("title", ""),
+                            "description": d.get("description", ""),
+                            "coupons": d.get("coupons", []),
+                            "coupon_details": d.get("coupon_details", []),
+                            "coupon_code": d.get("coupon_code"),
+                            "coupon": d.get("coupon"),
+                            "photo_url": d.get("photo_url"),
+                            "date": d.get("date", ""),
+                            "link": d.get("affiliate_url") or d.get("telegram_url", "")
+                        })
+                    _CHANNEL_POSTS_CACHE[clean_ch] = (now_ts, converted_posts)
+                    return JSONResponse(
+                        {"posts": converted_posts, "count": len(converted_posts), "cached": True, "stale": True, "active_event": active_ev_data},
+                        headers={"Cache-Control": "public, max-age=60"}
+                    )
+        except Exception:
+            pass
 
     return JSONResponse(
         {"error": "Temporary connection timeout to Telegram channel", "posts": [], "cached": False},
