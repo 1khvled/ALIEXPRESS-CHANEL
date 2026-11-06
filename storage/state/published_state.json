@@ -1231,7 +1231,7 @@
     "1005007171113381": 1793573945.0580306,
     "1005008144944225": 1793574309.4810557,
     "INDEX_ECKSDEAL_6008": 1793599383.3882716,
-    "1005012172791497": 1793656117.9829555,
+    "1005012172791497": 1793993517.4065924,
     "1005012479560861": 1793599553.1122265,
     "1005011867856141": 1793599912.232469,
     "1005006515379868": 1793600128.145566,
@@ -2844,7 +2844,7 @@
     "VA VA VOOM Brand Top": 1793574309.4810557,
     "معالج Ryzen 5 8400F": 1793575053.368357,
     "فهرس العروض": 1793599383.3882716,
-    "Mortal T1 2/16GB Wifi 4K": 1793656117.9829555,
+    "Mortal T1 2/16GB Wifi 4K": 1793993517.4065924,
     "POEDAGAR 896 Men's Watches": 1793599912.232469,
     "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card": 1793600128.145566,
     "POEDAGAR 680 Men's Quartz": 1793600288.3908339,
@@ -3011,7 +3011,6 @@
     "Realme 15 Pro (12/256GB)": 1793989672.350269
   },
   "published_post_keys": [
-    "aniscoupons:32699",
     "test_channel:1791063864",
     "test_channel:1793227440",
     "lodydeals:45486",
@@ -4010,19 +4009,20 @@
     "lodydeals:46198",
     "aniscoupons:34167",
     "aniscoupons:34168",
-    "aniscoupons:34171"
+    "aniscoupons:34171",
+    "lodydeals:46201"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793992811.9341931,
+  "last_run_time": 1793993517.4065924,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
       "last_check_time": 1793903108.984469
     },
     "lodydeals": {
-      "last_message_id": 46200,
-      "last_check_time": 1793992804.4561713
+      "last_message_id": 46201,
+      "last_check_time": 1793993519.4652154
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4528,7 +4528,7 @@
     "1005012865939059": 14.89,
     "1005007171113381": 8.44,
     "1005008144944225": 7.34,
-    "1005012172791497": 19.4,
+    "1005012172791497": 20.11,
     "1005012479560861": 12.98,
     "1005011867856141": 7.82,
     "1005006515379868": 9.37,
@@ -16214,6 +16214,16 @@
       "price": 48.9,
       "timestamp": 1793992811.9341931,
       "status": "ACTIVE"
+    },
+    "lodydeals:46201": {
+      "channel_msg_id": 1952,
+      "product_id": "1005012172791497",
+      "title": "Mortal T1 2/16GB Wifi 4K",
+      "channel": "lodydeals",
+      "source_msg_id": 46201,
+      "price": 20.11,
+      "timestamp": 1793993517.4065924,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16222,17 +16232,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793992814.9907548,
+    "last_deal_post_time": 1793993522.7360885,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793993329.9625976,
+    "last_sweep_time": 1793993526.537772,
     "last_sweep_times": {
-      "algeria": 1793993327.0576582,
-      "france": 1793993329.9625976
+      "algeria": 1793993522.7095668,
+      "france": 1793993526.537772
     },
     "last_deal_post_times": {
-      "algeria": 1793992814.9907548
+      "algeria": 1793993522.7360885
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
