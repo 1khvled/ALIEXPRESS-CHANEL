@@ -657,7 +657,8 @@
     "1005010266233059",
     "1005007469003552",
     "1005010041181003",
-    "1005010265542567"
+    "1005010265542567",
+    "1005003156756854"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1329,7 +1330,8 @@
     "1005010266233059": 1793977272.9654846,
     "1005007469003552": 1793982290.6109207,
     "1005010041181003": 1793982668.8847792,
-    "1005010265542567": 1793982853.0323274
+    "1005010265542567": 1793982853.0323274,
+    "1005003156756854": 1793983598.810499
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2157,7 +2159,8 @@
     "Ulanzi A21 Wireless Lavalier Microphone",
     "ميكروفون Ulanzi A100 لاسلكي صغير",
     "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB",
-    "Ulanzi A200 Mini Wireless Lavalier Microphone"
+    "Ulanzi A200 Mini Wireless Lavalier Microphone",
+    "حامل هاتف Ulanzi ST-06S"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2990,10 +2993,10 @@
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
     "ميكروفون Ulanzi A100 لاسلكي صغير": 1793982290.6109207,
     "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1793982668.8847792,
-    "Ulanzi A200 Mini Wireless Lavalier Microphone": 1793982853.0323274
+    "Ulanzi A200 Mini Wireless Lavalier Microphone": 1793982853.0323274,
+    "حامل هاتف Ulanzi ST-06S": 1793983598.810499
   },
   "published_post_keys": [
-    "couponsglobal:48803",
     "test_channel:1792109399",
     "megaphonna:8583",
     "couponsglobal:48760",
@@ -3992,11 +3995,12 @@
     "zedstoreonline:39638",
     "zedstoreonline:39643",
     "aniscoupons:34163",
-    "aniscoupons:34164"
+    "aniscoupons:34164",
+    "zedstoreonline:39645"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793982853.0323274,
+  "last_run_time": 1793983598.810499,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
@@ -4023,8 +4027,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39644,
-      "last_check_time": 1793982665.1423128
+      "last_message_id": 39645,
+      "last_check_time": 1793983600.8574102
     },
     "aniscoupons": {
       "last_message_id": 34164,
@@ -4597,7 +4601,8 @@
     "1005010266233059": 17.1,
     "1005007469003552": 17.1,
     "1005010041181003": 167.8,
-    "1005010265542567": 23.89
+    "1005010265542567": 23.89,
+    "1005003156756854": 10.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16112,6 +16117,16 @@
       "price": 23.89,
       "timestamp": 1793982853.0323274,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39645": {
+      "channel_msg_id": 1944,
+      "product_id": "1005003156756854",
+      "title": "حامل هاتف Ulanzi ST-06S",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39645,
+      "price": 10.8,
+      "timestamp": 1793983598.810499,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16120,17 +16135,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793982856.1853118,
+    "last_deal_post_time": 1793983602.4894722,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793983422.6418679,
+    "last_sweep_time": 1793983606.0819805,
     "last_sweep_times": {
-      "algeria": 1793983418.8673258,
-      "france": 1793983422.6418679
+      "algeria": 1793983602.4678795,
+      "france": 1793983606.0819805
     },
     "last_deal_post_times": {
-      "algeria": 1793982856.1853118
+      "algeria": 1793983602.4894722
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16802,7 +16817,8 @@
     "1005010266233059": "zedstoreonline",
     "1005007469003552": "zedstoreonline",
     "1005010041181003": "aniscoupons",
-    "1005010265542567": "aniscoupons"
+    "1005010265542567": "aniscoupons",
+    "1005003156756854": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -17635,7 +17651,8 @@
     "Ulanzi A21 Wireless Lavalier Microphone": "zedstoreonline",
     "ميكروفون Ulanzi A100 لاسلكي صغير": "zedstoreonline",
     "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": "aniscoupons",
-    "Ulanzi A200 Mini Wireless Lavalier Microphone": "aniscoupons"
+    "Ulanzi A200 Mini Wireless Lavalier Microphone": "aniscoupons",
+    "حامل هاتف Ulanzi ST-06S": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
