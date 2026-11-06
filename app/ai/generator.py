@@ -881,6 +881,12 @@ def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_cod
 
     title = extracted_title or ""
     if not title:
+        try:
+            from app.aliexpress.parser import extract_clean_title
+            title = extract_clean_title(clean_raw) or ""
+        except Exception:
+            title = ""
+    if not title:
         for l in clean_raw.splitlines():
             l_str = l.strip()
             if any(w in l_str for w in ["تخفيض ل", "عرض ل", "تخفيض لـ", "تخفيض ممتاز لـ", "تخفيض قوي لـ"]):
