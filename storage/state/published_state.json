@@ -1161,7 +1161,7 @@
     "1005011550075220": 1793542531.6312253,
     "1005009806856302": 1793542545.9047854,
     "1005009980316035": 1793542552.2730343,
-    "1005005905462505": 1793542560.6809025,
+    "1005005905462505": 1794000865.9547298,
     "1005008248133489": 1793656129.0102158,
     "1005008684239370": 1793975250.6134522,
     "1005011583202464": 1793809046.6886706,
@@ -2616,7 +2616,7 @@
     "Anker 45W Smart Display USB-C Fast Charger – PD Quick Charge": 1793380335.1434295,
     "IQOO 15T": 1793380343.534803,
     "Soundcore by Anker Life Q30": 1793380356.1638675,
-    "FIFINE AM8 USB/XLR Dynamic Microphone": 1793380362.9885337,
+    "FIFINE AM8 USB/XLR Dynamic Microphone": 1794000865.9547298,
     "MAONO DGM20 USB Gaming Microphone": 1793467049.206074,
     "MAONO PD100W USB Wireless Dynamic Microphone Cardioid Mic 50m Range": 1793380404.996831,
     "CUSU RAM DDR4 RGB 8x2 3200Mhz": 1793380414.784201,
@@ -3021,7 +3021,6 @@
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1793998299.0115912
   },
   "published_post_keys": [
-    "zedstoreonline:38887",
     "ecksdeal:5916",
     "ecksdeal:5946",
     "test_channel:1791752385",
@@ -4020,11 +4019,12 @@
     "zedstoreonline:39651",
     "aniscoupons:34174",
     "ecksdeal:6042",
-    "zedstoreonline:39654"
+    "zedstoreonline:39654",
+    "zedstoreonline:39655"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793998299.0115912,
+  "last_run_time": 1794000865.9547298,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
@@ -4051,8 +4051,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39654,
-      "last_check_time": 1793998301.0574348
+      "last_message_id": 39655,
+      "last_check_time": 1794000867.990542
     },
     "aniscoupons": {
       "last_message_id": 34177,
@@ -4465,7 +4465,7 @@
     "1005011550075220": 124.53,
     "1005009806856302": 14.35,
     "1005009980316035": 25.85,
-    "1005005905462505": 56.27,
+    "1005005905462505": 54.4,
     "1005008248133489": 14.88,
     "1005008684239370": 9.2,
     "1005011583202464": 56.09,
@@ -16286,6 +16286,16 @@
       "price": 7.6,
       "timestamp": 1793998299.0115912,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39655": {
+      "channel_msg_id": 1958,
+      "product_id": "1005005905462505",
+      "title": "FIFINE AM8 USB/XLR Dynamic Microphone",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39655,
+      "price": 54.4,
+      "timestamp": 1794000865.9547298,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16294,17 +16304,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793998302.5824137,
+    "last_deal_post_time": 1794000869.3223963,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794000678.7307277,
+    "last_sweep_time": 1794000871.8070238,
     "last_sweep_times": {
-      "algeria": 1794000676.36796,
-      "france": 1794000678.7307277
+      "algeria": 1794000869.3051782,
+      "france": 1794000871.8070238
     },
     "last_deal_post_times": {
-      "algeria": 1793998302.5824137
+      "algeria": 1794000869.3223963
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16815,7 +16825,7 @@
     "1005011550075220": "ecksdeal",
     "1005009806856302": "ecksdeal",
     "1005009980316035": "ecksdeal",
-    "1005005905462505": "ecksdeal",
+    "1005005905462505": "zedstoreonline",
     "1005008248133489": "lodydeals",
     "1005008684239370": "zedstoreonline",
     "1005011583202464": "ecksdeal",
@@ -17427,7 +17437,7 @@
     "Anker 45W Smart Display USB-C Fast Charger – PD Quick Charge": "zedstoreonline",
     "IQOO 15T": "aniscoupons",
     "Soundcore by Anker Life Q30": "aniscoupons",
-    "FIFINE AM8 USB/XLR Dynamic Microphone": "aniscoupons",
+    "FIFINE AM8 USB/XLR Dynamic Microphone": "zedstoreonline",
     "MAONO DGM20 USB Gaming Microphone": "zedstoreonline",
     "MAONO PD100W USB Wireless Dynamic Microphone Cardioid Mic 50m Range": "aniscoupons",
     "CUSU RAM DDR4 RGB 8x2 3200Mhz": "bnddeals",
