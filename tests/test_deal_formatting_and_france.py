@@ -621,3 +621,42 @@ def test_competitor_to_lody_format_scrubs_all_bots():
     assert "<code>OTD1104</code>" in cap_anis
     assert "CoinsDiscountBot" not in cap_anis
     assert "Alilo07BOT" in cap_anis
+
+
+def test_lody_format_no_duplicate_urls_and_merged_emojis():
+    from app.ai.generator import format_lodydeals_caption_1to1
+
+    raw = """سعرو فالبلاد حوالي 15000دج
+🚨
+
+تخفيض لـ MAONO PD100X USB/XL
+السعر : 37.05$ (33.08€)
+🔥
+
+رابط https://s.click.aliexpress.com/e/_orig1
+https://s.click.aliexpress.com/e/_orig2
+إحجز قسيمة البائع 1$
+كوبون $4/25 : OTD1104
+
+لا تنسى استخدام البوت للشراء بأقل الأسعار :
+t.me/lodycouponsbot"""
+
+    aff = "https://s.click.aliexpress.com/e/_c3EFS0yf"
+    res = format_lodydeals_caption_1to1(raw, aff, "OTD1104")
+
+    # 1. Exactly one affiliate link
+    assert res.count(aff) == 1
+
+    # 2. Emojis merged onto text lines
+    assert "سعرو فالبلاد حوالي 15000دج 🚨" in res
+    assert "السعر : 37.05$ ‎(33.08€) 🔥" in res
+
+    # 3. Model name restored
+    assert "MAONO PD100X USB/XLR" in res
+
+    # 4. Coupon tier normalized
+    assert "كوبون 4/25$ : <code>OTD1104</code>" in res
+
+    # 5. Competitor bot replaced
+    assert "t.me/Alilo07BOT" in res
+    assert "lodycouponsbot" not in res

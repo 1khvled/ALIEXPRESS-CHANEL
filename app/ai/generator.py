@@ -655,16 +655,27 @@ def format_lodydeals_caption_1to1(
                 clean_lines.append(ALIEXPRESS_URL_RE.sub(affiliate_url, l))
                 has_aff = True
             else:
-                clean_lines.append(ALIEXPRESS_URL_RE.sub(affiliate_url, l))
+                # We already placed the primary affiliate link; skip duplicate / secondary link lines
+                continue
             continue
 
-        # If a line is just an orphaned 'الرابط:' and we already placed our affiliate link, skip it
-        if has_aff and re.match(r"^الرابط\s*:?$", l):
+        # Skip orphaned "مباشر" or "الرابط:"
+        if has_aff and (l in ["مباشر", "رابط آخر", "رابط بديل", "بديل", "الرابط", "رابط"] or re.match(r"^(?:الرابط|رابط|مباشر)\s*:?$", l)):
             continue
+
+        # If line is just an emoji (e.g. 🔥 or 🚨) and previous line exists, merge emoji into previous line
+        if l in ["🔥", "🚨", "💥", "⚡", "✨", "👇"] and clean_lines:
+            last_idx = len(clean_lines) - 1
+            while last_idx >= 0 and not clean_lines[last_idx]:
+                last_idx -= 1
+            if last_idx >= 0 and l not in clean_lines[last_idx]:
+                clean_lines[last_idx] = f"{clean_lines[last_idx]} {l}"
+                continue
 
         clean_lines.append(l)
 
     caption = "\n".join(clean_lines).strip()
+    caption = re.sub(r'\n{3,}', '\n\n', caption)
 
     # Wrap promo coupon codes in <code> tags (Strict: must start with prefix AND contain at least one digit)
     # This prevents wrapping brand names like WALRAM, REALME, APPLE, etc.
@@ -683,6 +694,19 @@ def format_lodydeals_caption_1to1(
         caption += "\n\n🤖 بوت تخفيض النقاط: @Alilo07BOT"
 
     caption = re.sub(r"\n+\s*الرابط\s*:?\s*$", "", caption)
+
+    # Fix BiDi / LTR price parentheses formatting: e.g. "السعر : 37.05$ (33.08€)" -> isolates the euro conversion cleanly
+    def fix_parens(m):
+        return f"{m.group(1)} \u200e{m.group(2)}"
+    caption = re.sub(r'(\$\s*\d+(?:\.\d+)?|\d+(?:\.\d+)?\s*\$)\s*(\(\s*[\d\.]+\s*€\s*\)|\(\s*€\s*[\d\.]+\s*\))', fix_parens, caption)
+
+    # Fix coupon tier: "$4/25" -> "4/25$"
+    caption = re.sub(r'\$(\d+/\d+)', r'\1$', caption)
+
+    # Fix truncated model name if ends with broken suffix
+    if "USB/XL" in caption and "USB/XLR" not in caption:
+        caption = caption.replace("USB/XL", "USB/XLR")
+
     return caption
 
 
