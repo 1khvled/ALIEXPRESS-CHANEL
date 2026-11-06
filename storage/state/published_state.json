@@ -661,7 +661,8 @@
     "1005003156756854",
     "1005010142208108",
     "1005008534907844",
-    "1005009577554629"
+    "1005009577554629",
+    "1005010656922924"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1337,7 +1338,8 @@
     "1005003156756854": 1793983598.810499,
     "1005010142208108": 1793987278.5140982,
     "1005008534907844": 1793987285.4130383,
-    "1005009577554629": 1793987289.8200357
+    "1005009577554629": 1793987289.8200357,
+    "1005010656922924": 1793994623.1444166
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2170,7 +2172,8 @@
     "AULA MINI60 HE PRO",
     "Maono Wave T5 Wireless Mic",
     "SAMSUNG DDR3 8GB 1600v",
-    "Realme 15 Pro (12/256GB)"
+    "Realme 15 Pro (12/256GB)",
+    "SOUNDPEATS C30 ANC Wireless Earphones"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3008,10 +3011,10 @@
     "AULA MINI60 HE PRO": 1793987278.5140982,
     "Maono Wave T5 Wireless Mic": 1793987285.4130383,
     "SAMSUNG DDR3 8GB 1600v": 1793987289.8200357,
-    "Realme 15 Pro (12/256GB)": 1793989672.350269
+    "Realme 15 Pro (12/256GB)": 1793989672.350269,
+    "SOUNDPEATS C30 ANC Wireless Earphones": 1793994623.1444166
   },
   "published_post_keys": [
-    "test_channel:1791063864",
     "test_channel:1793227440",
     "lodydeals:45486",
     "zedstoreonline:38703",
@@ -4010,11 +4013,12 @@
     "aniscoupons:34167",
     "aniscoupons:34168",
     "aniscoupons:34171",
-    "lodydeals:46201"
+    "lodydeals:46201",
+    "zedstoreonline:39650"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793993517.4065924,
+  "last_run_time": 1793994623.1444166,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
@@ -4041,8 +4045,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39649,
-      "last_check_time": 1793994070.6414
+      "last_message_id": 39650,
+      "last_check_time": 1793994625.1861627
     },
     "aniscoupons": {
       "last_message_id": 34172,
@@ -4619,7 +4623,8 @@
     "1005003156756854": 10.8,
     "1005010142208108": 37.5,
     "1005008534907844": 50.86,
-    "1005009577554629": 10.55
+    "1005009577554629": 10.55,
+    "1005010656922924": 20.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16224,6 +16229,16 @@
       "price": 20.11,
       "timestamp": 1793993517.4065924,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39650": {
+      "channel_msg_id": 1953,
+      "product_id": "1005010656922924",
+      "title": "SOUNDPEATS C30 ANC Wireless Earphones",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39650,
+      "price": 20.4,
+      "timestamp": 1793994623.1444166,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16232,17 +16247,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793993522.7360885,
+    "last_deal_post_time": 1793994626.6250262,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793994436.856704,
+    "last_sweep_time": 1793994630.3179703,
     "last_sweep_times": {
-      "algeria": 1793994433.752733,
-      "france": 1793994436.856704
+      "algeria": 1793994626.6066604,
+      "france": 1793994630.3179703
     },
     "last_deal_post_times": {
-      "algeria": 1793993522.7360885
+      "algeria": 1793994626.6250262
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16918,7 +16933,8 @@
     "1005003156756854": "zedstoreonline",
     "1005010142208108": "lodydeals",
     "1005008534907844": "lodydeals",
-    "1005009577554629": "lodydeals"
+    "1005009577554629": "lodydeals",
+    "1005010656922924": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -17756,7 +17772,8 @@
     "AULA MINI60 HE PRO": "lodydeals",
     "Maono Wave T5 Wireless Mic": "lodydeals",
     "SAMSUNG DDR3 8GB 1600v": "lodydeals",
-    "Realme 15 Pro (12/256GB)": "aniscoupons"
+    "Realme 15 Pro (12/256GB)": "aniscoupons",
+    "SOUNDPEATS C30 ANC Wireless Earphones": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
