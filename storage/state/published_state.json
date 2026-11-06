@@ -1060,7 +1060,7 @@
     "1005010035309013": 1793554752.7954907,
     "1005010385472500": 1793448762.165183,
     "1005011779814585": 1793613414.4818656,
-    "1005013090910574": 1793966765.4767177,
+    "1005013090910574": 1793989291.1519866,
     "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793543612.279949,
     "1005012910719451": 1793735519.3537216,
@@ -2353,7 +2353,7 @@
     "CMF Smart Watch 3 pro AMOLED": 1793380399.3107846,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
-    "OPPO A6 Pro 8/256GB": 1793362002.5141566,
+    "OPPO A6 Pro 8/256GB": 1793989291.1519866,
     "ATTACK SHARK X1  Tri-Mode": 1791117948.6585228,
     "HILDA 2 Lines Laser Level Green": 1791124852.3122299,
     "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": 1791125437.8944824,
@@ -3009,7 +3009,6 @@
     "SAMSUNG DDR3 8GB 1600v": 1793987289.8200357
   },
   "published_post_keys": [
-    "lodydeals:45696",
     "couponsglobal:48792",
     "ecksdeal:5998",
     "aniscoupons:32699",
@@ -4008,11 +4007,12 @@
     "lodydeals:46192",
     "lodydeals:46195",
     "lodydeals:46196",
-    "lodydeals:46198"
+    "lodydeals:46198",
+    "aniscoupons:34167"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793987289.8200357,
+  "last_run_time": 1793989291.1519866,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
@@ -4043,8 +4043,8 @@
       "last_check_time": 1793985618.5131385
     },
     "aniscoupons": {
-      "last_message_id": 34166,
-      "last_check_time": 1793985808.4969497
+      "last_message_id": 34167,
+      "last_check_time": 1793989293.1987417
     },
     "bnddeals": {
       "last_message_id": 51200,
@@ -16182,6 +16182,16 @@
       "price": 10.55,
       "timestamp": 1793987289.8200357,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34167": {
+      "channel_msg_id": 1949,
+      "product_id": "1005013090910574",
+      "title": "OPPO A6 Pro 8/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34167,
+      "price": 192.7,
+      "timestamp": 1793989291.1519866,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16190,17 +16200,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793987299.0756845,
+    "last_deal_post_time": 1793989294.4648895,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793989105.412685,
+    "last_sweep_time": 1793989298.6760962,
     "last_sweep_times": {
-      "algeria": 1793989102.5929174,
-      "france": 1793989105.412685
+      "algeria": 1793989294.184544,
+      "france": 1793989298.6760962
     },
     "last_deal_post_times": {
-      "algeria": 1793987299.0756845
+      "algeria": 1793989294.4648895
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16609,7 +16619,7 @@
     "1005010035309013": "lodydeals",
     "1005010385472500": "bnddeals",
     "1005011779814585": "zedstoreonline",
-    "1005013090910574": "zedstoreonline",
+    "1005013090910574": "aniscoupons",
     "1005012382148199": "megaphonna",
     "1005010158485058": "lodydeals",
     "1005012910719451": "lodydeals",
@@ -16905,7 +16915,7 @@
     "Redmi Note 17 5G   6/256": "zedstoreonline",
     "Baseus USB Type C Charger 20W": "aniscoupons",
     "ATTACK SHARK L80 PRO": "zedstoreonline",
-    "OPPO A6 Pro 8/256GB": "bnddeals",
+    "OPPO A6 Pro 8/256GB": "aniscoupons",
     "Honor Win Turbo 12/256BG": "bnddeals",
     "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction": "bnddeals",
     "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": "bnddeals",
