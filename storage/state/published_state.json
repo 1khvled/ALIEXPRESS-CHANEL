@@ -640,7 +640,8 @@
     "1005008554218453",
     "1005012499433797",
     "9998889309",
-    "9998889332"
+    "9998889332",
+    "1005008357913212"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1295,7 +1296,8 @@
     "1005008554218453": 1793908979.1776278,
     "1005012499433797": 1793908989.4952903,
     "9998889309": 1793929309.3822134,
-    "9998889332": 1793929332.5530465
+    "9998889332": 1793929332.5530465,
+    "1005008357913212": 1793963482.9134784
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2090,7 +2092,8 @@
     "HONOR PAD X8A 4/64GB",
     "Magcubic HY300 Pro Projector",
     "CUSU SSD SATA3",
-    "MAONO PD100X USB/XL"
+    "MAONO PD100X USB/XL",
+    "KOOTION SATA SSD 480GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2890,10 +2893,10 @@
     "HONOR PAD X8A 4/64GB": 1793908989.4952903,
     "Magcubic HY300 Pro Projector": 1793908994.588809,
     "CUSU SSD SATA3": 1793913777.3174822,
-    "MAONO PD100X USB/XL": 1793962203.497378
+    "MAONO PD100X USB/XL": 1793962203.497378,
+    "KOOTION SATA SSD 480GB": 1793963482.9134784
   },
   "published_post_keys": [
-    "aniscoupons:33158",
     "aniscoupons:33319",
     "ecksdeal:5954",
     "zedstoreonline:38530",
@@ -3892,19 +3895,20 @@
     "test_channel:1793929309",
     "lodydeals:45000",
     "test_channel:1793929332",
-    "lodydeals:46179"
+    "lodydeals:46179",
+    "lodydeals:46182"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793932483.4741564,
-  "last_run_time": 1793962203.497378,
+  "last_run_time": 1793963482.9134784,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
       "last_check_time": 1793903108.984469
     },
     "lodydeals": {
-      "last_message_id": 46181,
-      "last_check_time": 1793962210.1323075
+      "last_message_id": 46182,
+      "last_check_time": 1793963484.9563136
     },
     "test_channel": {
       "last_message_id": 1793929332,
@@ -4474,7 +4478,8 @@
     "1005009313079431": 43.11,
     "1005010702511858": 59.8,
     "1005008554218453": 52.55,
-    "1005012499433797": 134.3
+    "1005012499433797": 134.3,
+    "1005008357913212": 40.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -15459,6 +15464,16 @@
       "price": 37.05,
       "timestamp": 1793962203.497378,
       "status": "ACTIVE"
+    },
+    "lodydeals:46182": {
+      "channel_msg_id": 1880,
+      "product_id": "1005008357913212",
+      "title": "KOOTION SATA SSD 480GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46182,
+      "price": 40.5,
+      "timestamp": 1793963482.9134784,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15467,17 +15482,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793962210.8179047,
+    "last_deal_post_time": 1793963485.7890208,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793963313.0859215,
+    "last_sweep_time": 1793963488.6138115,
     "last_sweep_times": {
-      "algeria": 1793963310.3167415,
-      "france": 1793963313.0859215
+      "algeria": 1793963485.77126,
+      "france": 1793963488.6138115
     },
     "last_deal_post_times": {
-      "algeria": 1793962210.8179047
+      "algeria": 1793963485.7890208
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16132,7 +16147,8 @@
     "1005008554218453": "lodydeals",
     "1005012499433797": "lodydeals",
     "9998889309": "test_channel",
-    "9998889332": "test_channel"
+    "9998889332": "test_channel",
+    "1005008357913212": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -16932,7 +16948,8 @@
     "HONOR PAD X8A 4/64GB": "lodydeals",
     "Magcubic HY300 Pro Projector": "lodydeals",
     "CUSU SSD SATA3": "lodydeals",
-    "MAONO PD100X USB/XL": "lodydeals"
+    "MAONO PD100X USB/XL": "lodydeals",
+    "KOOTION SATA SSD 480GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
