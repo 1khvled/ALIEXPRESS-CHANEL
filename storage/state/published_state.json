@@ -1305,7 +1305,7 @@
     "1005009313079431": 1793898336.7775517,
     "1005010702511858": 1793903106.9341598,
     "1005008554218453": 1793908979.1776278,
-    "1005012499433797": 1793908989.4952903,
+    "1005012499433797": 1793972480.4803846,
     "9998889309": 1793929309.3822134,
     "9998889332": 1793929332.5530465,
     "999888807": 1793930807.599727,
@@ -2138,7 +2138,8 @@
     "MAONO PD100X USB/XL",
     "Realme C100D 4G 4/128GB",
     "HAYLOU Flowbuds N50 ANC",
-    "Honor 600 Pro 12/256"
+    "Honor 600 Pro 12/256",
+    "HONOR Pad X8a (4/64GB)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2962,10 +2963,10 @@
     "MAONO PD100X USB/XL": 1793969903.1419857,
     "Realme C100D 4G 4/128GB": 1793969907.6763735,
     "HAYLOU Flowbuds N50 ANC": 1793970449.9003735,
-    "Honor 600 Pro 12/256": 1793971367.4627862
+    "Honor 600 Pro 12/256": 1793971367.4627862,
+    "HONOR Pad X8a (4/64GB)": 1793972480.4803846
   },
   "published_post_keys": [
-    "ecksdeal:5980",
     "test_channel:1792098253",
     "ecksdeal:5895",
     "megaphonna:8565",
@@ -3964,19 +3965,20 @@
     "zedstoreonline:39627",
     "aniscoupons:34149",
     "zedstoreonline:39630",
-    "zedstoreonline:39631"
+    "zedstoreonline:39631",
+    "aniscoupons:34151"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793971934.3600886,
+  "last_run_time": 1793972480.4803846,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
       "last_check_time": 1793903108.984469
     },
     "lodydeals": {
-      "last_message_id": 46192,
-      "last_check_time": 1793972123.5769045
+      "last_message_id": 46193,
+      "last_check_time": 1793972472.8033447
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -3995,12 +3997,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39632,
-      "last_check_time": 1793972300.0733507
+      "last_message_id": 39633,
+      "last_check_time": 1793972475.4138403
     },
     "aniscoupons": {
-      "last_message_id": 34150,
-      "last_check_time": 1793971558.3916008
+      "last_message_id": 34151,
+      "last_check_time": 1793972482.5118074
     },
     "bnddeals": {
       "last_message_id": 51195,
@@ -4550,7 +4552,7 @@
     "1005009313079431": 43.11,
     "1005010702511858": 59.8,
     "1005008554218453": 52.55,
-    "1005012499433797": 134.3,
+    "1005012499433797": 134.36,
     "1005008774483451": 45.1,
     "1005010635850450": 21.1,
     "1005006782986446": 6.7,
@@ -15959,6 +15961,16 @@
       "price": 438.6,
       "timestamp": 1793971934.3600886,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34151": {
+      "channel_msg_id": 1926,
+      "product_id": "1005012499433797",
+      "title": "HONOR Pad X8a (4/64GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34151,
+      "price": 134.36,
+      "timestamp": 1793972480.4803846,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15967,17 +15979,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793971938.024527,
+    "last_deal_post_time": 1793972483.2540224,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793972304.2647092,
+    "last_sweep_time": 1793972485.6518955,
     "last_sweep_times": {
-      "algeria": 1793972301.4603899,
-      "france": 1793972304.2647092
+      "algeria": 1793972483.2406745,
+      "france": 1793972485.6518955
     },
     "last_deal_post_times": {
-      "algeria": 1793971938.024527
+      "algeria": 1793972483.2540224
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16630,7 +16642,7 @@
     "1005009313079431": "lodydeals",
     "1005010702511858": "ecksdeal",
     "1005008554218453": "lodydeals",
-    "1005012499433797": "lodydeals",
+    "1005012499433797": "aniscoupons",
     "9998889309": "test_channel",
     "9998889332": "test_channel",
     "999888807": "test_channel",
@@ -17468,7 +17480,8 @@
     "MAONO PD100X USB/XL": "lodydeals",
     "Realme C100D 4G 4/128GB": "lodydeals",
     "HAYLOU Flowbuds N50 ANC": "zedstoreonline",
-    "Honor 600 Pro 12/256": "zedstoreonline"
+    "Honor 600 Pro 12/256": "zedstoreonline",
+    "HONOR Pad X8a (4/64GB)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -18262,7 +18275,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33223",
     "megaphonna:8749",
     "zedstoreonline:38829",
     "megaphonna:8516",
@@ -19261,7 +19273,8 @@
     "zedstoreonline:39629",
     "aniscoupons:34148",
     "aniscoupons:34150",
-    "zedstoreonline:39632"
+    "zedstoreonline:39632",
+    "zedstoreonline:39633"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
