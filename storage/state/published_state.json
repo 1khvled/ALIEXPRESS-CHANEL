@@ -1152,7 +1152,7 @@
     "1005009980316035": 1793542552.2730343,
     "1005005905462505": 1793542560.6809025,
     "1005008248133489": 1793656129.0102158,
-    "1005008684239370": 1793733452.578614,
+    "1005008684239370": 1793975250.6134522,
     "1005011583202464": 1793809046.6886706,
     "1005009921069024": 1793542597.6187797,
     "1005009916209766": 1793542607.3688066,
@@ -2141,7 +2141,8 @@
     "Honor 600 Pro 12/256",
     "HONOR Pad X8a (4/64GB)",
     "Magcubic HY350 Max 900ANSI",
-    "Honor X9d (no charger)"
+    "Honor X9d (no charger)",
+    "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2968,10 +2969,10 @@
     "Honor 600 Pro 12/256": 1793971367.4627862,
     "HONOR Pad X8a (4/64GB)": 1793972480.4803846,
     "Magcubic HY350 Max 900ANSI": 1793974144.8262026,
-    "Honor X9d (no charger)": 1793974514.9586184
+    "Honor X9d (no charger)": 1793974514.9586184,
+    "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1793975250.6134522
   },
   "published_post_keys": [
-    "megaphonna:8622",
     "megaphonna:8564",
     "lodydeals:45456",
     "zedstoreonline:38922",
@@ -3970,11 +3971,12 @@
     "bnddeals:51196",
     "aniscoupons:34155",
     "aniscoupons:34156",
-    "aniscoupons:34157"
+    "aniscoupons:34157",
+    "zedstoreonline:39636"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793974514.9586184,
+  "last_run_time": 1793975250.6134522,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
@@ -4001,8 +4003,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39635,
-      "last_check_time": 1793974511.0741756
+      "last_message_id": 39636,
+      "last_check_time": 1793975252.6475298
     },
     "aniscoupons": {
       "last_message_id": 34157,
@@ -4417,7 +4419,7 @@
     "1005009980316035": 25.85,
     "1005005905462505": 56.27,
     "1005008248133489": 14.88,
-    "1005008684239370": 9.21,
+    "1005008684239370": 9.2,
     "1005011583202464": 56.09,
     "1005009921069024": 12.85,
     "1005009916209766": 24.04,
@@ -16015,6 +16017,16 @@
       "price": 289.5,
       "timestamp": 1793974514.9586184,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39636": {
+      "channel_msg_id": 1932,
+      "product_id": "1005008684239370",
+      "title": "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39636,
+      "price": 9.2,
+      "timestamp": 1793975250.6134522,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16023,17 +16035,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793974517.845861,
+    "last_deal_post_time": 1793975253.7738345,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793975070.8750231,
+    "last_sweep_time": 1793975256.2733033,
     "last_sweep_times": {
-      "algeria": 1793975068.2252336,
-      "france": 1793975070.8750231
+      "algeria": 1793975253.759457,
+      "france": 1793975256.2733033
     },
     "last_deal_post_times": {
-      "algeria": 1793974517.845861
+      "algeria": 1793975253.7738345
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16546,7 +16558,7 @@
     "1005009980316035": "ecksdeal",
     "1005005905462505": "ecksdeal",
     "1005008248133489": "lodydeals",
-    "1005008684239370": "lodydeals",
+    "1005008684239370": "zedstoreonline",
     "1005011583202464": "ecksdeal",
     "1005009921069024": "ecksdeal",
     "1005009916209766": "ecksdeal",
@@ -17527,7 +17539,8 @@
     "Honor 600 Pro 12/256": "zedstoreonline",
     "HONOR Pad X8a (4/64GB)": "aniscoupons",
     "Magcubic HY350 Max 900ANSI": "aniscoupons",
-    "Honor X9d (no charger)": "aniscoupons"
+    "Honor X9d (no charger)": "aniscoupons",
+    "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -18315,8 +18328,8 @@
     "LAUNCH_ALERT_Winter Offers_20261014",
     "LAUNCH_ALERT_11.11 Global Shopping Festival Main Sale_20261101"
   ],
-  "last_card_affiliate_time_dz": 1793888771.023496,
-  "card_affiliate_variant_idx_dz": 1,
+  "last_card_affiliate_time_dz": 1793975240.7821596,
+  "card_affiliate_variant_idx_dz": 2,
   "last_tajmi3at_published_time": 1793910650.2404215,
   "published_deals_history": {},
   "settings": {},
