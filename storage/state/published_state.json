@@ -1133,7 +1133,7 @@
     "1005012519569107": 1793490085.1205146,
     "1005006996991698": 1793542450.420599,
     "1005006968874168": 1793490102.028307,
-    "1005010770983388": 1793540059.832893,
+    "1005010770983388": 1793971007.1100602,
     "1005010146801356": 1793540023.002178,
     "1005012536471204": 1793611292.7491462,
     "9998881104": 1793541104.8228326,
@@ -2680,7 +2680,7 @@
     "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": 1793490079.2945042,
     "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": 1793490090.28376,
     "POCO Pad C1 4/64": 1793490102.028307,
-    "IQOO Z11 Turbo": 1793490111.0047178,
+    "IQOO Z11 Turbo": 1793971007.1100602,
     "Vivo X300 5G 12/256GB": 1793540023.002178,
     "VIVO X300 Pro China Version 50MP OIS 6.78 Inch AMOLED 120Hz Dimensity9500": 1793540051.7895243,
     "VIVO IQOO Z11 TURBO (12/256)": 1793540059.832893,
@@ -2961,7 +2961,6 @@
     "HAYLOU Flowbuds N50 ANC": 1793970449.9003735
   },
   "published_post_keys": [
-    "aniscoupons:32693",
     "zedstoreonline:38685",
     "couponsglobal:48801",
     "ecksdeal:5980",
@@ -3960,11 +3959,12 @@
     "lodydeals:46181",
     "lodydeals:46187",
     "aniscoupons:34144",
-    "zedstoreonline:39627"
+    "zedstoreonline:39627",
+    "aniscoupons:34149"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793970449.9003735,
+  "last_run_time": 1793971007.1100602,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
@@ -3991,12 +3991,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39628,
-      "last_check_time": 1793970628.879781
+      "last_message_id": 39629,
+      "last_check_time": 1793970999.0498712
     },
     "aniscoupons": {
-      "last_message_id": 34147,
-      "last_check_time": 1793970632.8414118
+      "last_message_id": 34149,
+      "last_check_time": 1793971009.1561852
     },
     "bnddeals": {
       "last_message_id": 51195,
@@ -4393,7 +4393,7 @@
     "1005012519569107": 10.6,
     "1005006996991698": 20.84,
     "1005006968874168": 158.0,
-    "1005010770983388": 382.0,
+    "1005010770983388": 381.27,
     "1005010146801356": 560.65,
     "1005012536471204": 603.9,
     "1005010243337678": 628.73,
@@ -15924,6 +15924,16 @@
       "price": 15.2,
       "timestamp": 1793970449.9003735,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34149": {
+      "channel_msg_id": 1923,
+      "product_id": "1005010770983388",
+      "title": "IQOO Z11 Turbo",
+      "channel": "aniscoupons",
+      "source_msg_id": 34149,
+      "price": 381.27,
+      "timestamp": 1793971007.1100602,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15932,17 +15942,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793970454.5098794,
+    "last_deal_post_time": 1793971010.0865533,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793970815.7311332,
+    "last_sweep_time": 1793971012.8540688,
     "last_sweep_times": {
-      "algeria": 1793970813.3355086,
-      "france": 1793970815.7311332
+      "algeria": 1793971010.063486,
+      "france": 1793971012.8540688
     },
     "last_deal_post_times": {
-      "algeria": 1793970454.5098794
+      "algeria": 1793971010.0865533
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16435,7 +16445,7 @@
     "1005012519569107": "zedstoreonline",
     "1005006996991698": "lodydeals",
     "1005006968874168": "zedstoreonline",
-    "1005010770983388": "megaphonna",
+    "1005010770983388": "aniscoupons",
     "1005010146801356": "lodydeals",
     "1005012536471204": "lodydeals",
     "9998881104": "test_channel",
@@ -18225,8 +18235,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "bnddeals:50835",
-    "lodydeals:45573",
     "zedstoreonline:38587",
     "lodydeals:45913",
     "aniscoupons:33223",
@@ -19224,7 +19232,9 @@
     "aniscoupons:34146",
     "zedstoreonline:39628",
     "aniscoupons:34147",
-    "lodydeals:46191"
+    "lodydeals:46191",
+    "zedstoreonline:39629",
+    "aniscoupons:34148"
   ],
   "last_france_cross_promo_time": 1793779890.1987555,
   "next_france_cross_promo_interval_seconds": 175459,
