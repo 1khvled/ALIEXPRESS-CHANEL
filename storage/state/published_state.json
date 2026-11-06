@@ -719,7 +719,7 @@
     "9998886147": 1790946147.1871526,
     "999888777111": 1793964745.6295197,
     "9998886362": 1790946362.071869,
-    "1005012407874415": 1793613121.9226618,
+    "1005012407874415": 1793971367.4627862,
     "9998887189": 1790947189.8634577,
     "1005010428573334": 1790948755.0367405,
     "1005013146524028": 1791042354.706192,
@@ -2135,7 +2135,8 @@
     "Vivo Y600 Pro",
     "MAONO PD100X USB/XL",
     "Realme C100D 4G 4/128GB",
-    "HAYLOU Flowbuds N50 ANC"
+    "HAYLOU Flowbuds N50 ANC",
+    "Honor 600 Pro 12/256"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2958,10 +2959,10 @@
     "Vivo Y600 Pro": 1793969543.5771117,
     "MAONO PD100X USB/XL": 1793969903.1419857,
     "Realme C100D 4G 4/128GB": 1793969907.6763735,
-    "HAYLOU Flowbuds N50 ANC": 1793970449.9003735
+    "HAYLOU Flowbuds N50 ANC": 1793970449.9003735,
+    "Honor 600 Pro 12/256": 1793971367.4627862
   },
   "published_post_keys": [
-    "zedstoreonline:38685",
     "couponsglobal:48801",
     "ecksdeal:5980",
     "test_channel:1792098253",
@@ -3960,11 +3961,12 @@
     "lodydeals:46187",
     "aniscoupons:34144",
     "zedstoreonline:39627",
-    "aniscoupons:34149"
+    "aniscoupons:34149",
+    "zedstoreonline:39630"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1793971007.1100602,
+  "last_run_time": 1793971367.4627862,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6041,
@@ -3991,8 +3993,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39629,
-      "last_check_time": 1793970999.0498712
+      "last_message_id": 39630,
+      "last_check_time": 1793971369.4931715
     },
     "aniscoupons": {
       "last_message_id": 34149,
@@ -4063,7 +4065,7 @@
     "1005012504076921": 257.4,
     "1005008715050858": 6.4,
     "999888777111": 20.0,
-    "1005012407874415": 438.67,
+    "1005012407874415": 465.3,
     "1005013152491360": 166.0,
     "1005012925826589": 187.0,
     "1005012922578845": 213.77,
@@ -15934,6 +15936,16 @@
       "price": 381.27,
       "timestamp": 1793971007.1100602,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39630": {
+      "channel_msg_id": 1924,
+      "product_id": "1005012407874415",
+      "title": "Honor 600 Pro 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39630,
+      "price": 465.3,
+      "timestamp": 1793971367.4627862,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -15942,17 +15954,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1793971010.0865533,
+    "last_deal_post_time": 1793971370.5968218,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1793971188.1695018,
+    "last_sweep_time": 1793971372.9332733,
     "last_sweep_times": {
-      "algeria": 1793971183.7678032,
-      "france": 1793971188.1695018
+      "algeria": 1793971370.5841036,
+      "france": 1793971372.9332733
     },
     "last_deal_post_times": {
-      "algeria": 1793971010.0865533
+      "algeria": 1793971370.5968218
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16022,7 +16034,7 @@
     "9998889674": "test_channel",
     "1005007279793099": "zedstoreonline",
     "1005005824280128": "aniscoupons",
-    "1005012407874415": "lodydeals",
+    "1005012407874415": "zedstoreonline",
     "1005006533038973": "pcgamingpart",
     "999888989": "test_channel",
     "9998881037": "test_channel",
@@ -17441,7 +17453,8 @@
     "Vivo Y600 Pro": "aniscoupons",
     "MAONO PD100X USB/XL": "lodydeals",
     "Realme C100D 4G 4/128GB": "lodydeals",
-    "HAYLOU Flowbuds N50 ANC": "zedstoreonline"
+    "HAYLOU Flowbuds N50 ANC": "zedstoreonline",
+    "Honor 600 Pro 12/256": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
