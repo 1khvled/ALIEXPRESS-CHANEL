@@ -1343,7 +1343,7 @@
     "1005008708333999": 1794059512.7523012,
     "1005012254132930": 1793970449.9003735,
     "1005013028124905": 1793971934.3600886,
-    "1005012691642623": 1793976348.7503736,
+    "1005012691642623": 1794074230.5173922,
     "1005010266233059": 1793977272.9654846,
     "1005007469003552": 1793982290.6109207,
     "1005010041181003": 1794073141.3253567,
@@ -2221,7 +2221,8 @@
     "KOOTION SSD SATA  256GB",
     "MSI AMD A520M-A PRO",
     "1MORE SonoFlow Pro HQ51",
-    "Ulanzi ST-06S Vertical Shooting"
+    "Ulanzi ST-06S Vertical Shooting",
+    "ميكروفون MAONO DGM20W لاسلكي للألعاب"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3082,10 +3083,10 @@
     "KOOTION SSD SATA  256GB": 1794071284.8947144,
     "MSI AMD A520M-A PRO": 1794072944.774369,
     "1MORE SonoFlow Pro HQ51": 1794073127.8664527,
-    "Ulanzi ST-06S Vertical Shooting": 1794073132.3964775
+    "Ulanzi ST-06S Vertical Shooting": 1794073132.3964775,
+    "ميكروفون MAONO DGM20W لاسلكي للألعاب": 1794074230.5173922
   },
   "published_post_keys": [
-    "lodydeals:45769",
     "lodydeals:45451",
     "lodydeals:45473",
     "aniscoupons:32736",
@@ -4084,11 +4085,12 @@
     "lodydeals:46228",
     "lodydeals:46229",
     "lodydeals:46230",
-    "aniscoupons:34242"
+    "aniscoupons:34242",
+    "zedstoreonline:39694"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794073141.3253567,
+  "last_run_time": 1794074230.5173922,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4115,8 +4117,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39693,
-      "last_check_time": 1794074046.9844906
+      "last_message_id": 39694,
+      "last_check_time": 1794074232.56859
     },
     "aniscoupons": {
       "last_message_id": 34242,
@@ -16838,6 +16840,16 @@
       "price": 167.8,
       "timestamp": 1794073141.3253567,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39694": {
+      "channel_msg_id": 2008,
+      "product_id": "1005012691642623",
+      "title": "ميكروفون MAONO DGM20W لاسلكي للألعاب",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39694,
+      "price": 37.1,
+      "timestamp": 1794074230.5173922,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16846,17 +16858,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794073144.4564826,
+    "last_deal_post_time": 1794074233.8070476,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794074051.4089165,
+    "last_sweep_time": 1794074236.0393214,
     "last_sweep_times": {
-      "algeria": 1794074048.4015868,
-      "france": 1794074051.4089165
+      "algeria": 1794074233.7837067,
+      "france": 1794074236.0393214
     },
     "last_deal_post_times": {
-      "algeria": 1794073144.4564826
+      "algeria": 1794074233.8070476
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -18408,7 +18420,8 @@
     "KOOTION SSD SATA  256GB": "aniscoupons",
     "MSI AMD A520M-A PRO": "lodydeals",
     "1MORE SonoFlow Pro HQ51": "lodydeals",
-    "Ulanzi ST-06S Vertical Shooting": "lodydeals"
+    "Ulanzi ST-06S Vertical Shooting": "lodydeals",
+    "ميكروفون MAONO DGM20W لاسلكي للألعاب": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
