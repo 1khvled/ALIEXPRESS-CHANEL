@@ -1188,7 +1188,7 @@
     "1005012790288780": 1793656271.0286891,
     "1005012345939726": 1793656202.4239671,
     "1005010722422210": 1793543733.1622994,
-    "1005012582348584": 1793543760.1113183,
+    "1005012582348584": 1794051434.2488248,
     "1005012529582418": 1793543800.9051948,
     "1005008605565544": 1793543812.9442995,
     "1005009508910625": 1793543817.982839,
@@ -2199,7 +2199,8 @@
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI",
     "Zeblaze Btalk 4 Pro السعر : 17.06",
     "HyperX Cloud Earbuds II 2 Gaming Earphone",
-    "Essager 30W Car Charger"
+    "Essager 30W Car Charger",
+    "KOOTION SSD SATA  240GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3048,10 +3049,10 @@
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794038258.8331141,
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627,
     "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794046485.9160285,
-    "Essager 30W Car Charger": 1794046667.9804564
+    "Essager 30W Car Charger": 1794046667.9804564,
+    "KOOTION SSD SATA  240GB": 1794051434.2488248
   },
   "published_post_keys": [
-    "zedstoreonline:38518",
     "megaphonna:8599",
     "lodydeals:45413",
     "aniscoupons:33286",
@@ -4050,19 +4051,20 @@
     "zedstoreonline:39671",
     "lodydeals:46212",
     "aniscoupons:34208",
-    "aniscoupons:34210"
+    "aniscoupons:34210",
+    "aniscoupons:34217"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794047769.4348345,
+  "last_run_time": 1794051434.2488248,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
       "last_check_time": 1793995904.1814108
     },
     "lodydeals": {
-      "last_message_id": 46213,
-      "last_check_time": 1794048308.4663985
+      "last_message_id": 46214,
+      "last_check_time": 1794051428.66614
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4085,8 +4087,8 @@
       "last_check_time": 1794051252.2414405
     },
     "aniscoupons": {
-      "last_message_id": 34216,
-      "last_check_time": 1794050880.509856
+      "last_message_id": 34218,
+      "last_check_time": 1794051437.482897
     },
     "bnddeals": {
       "last_message_id": 51220,
@@ -4515,7 +4517,7 @@
     "1005012790288780": 26.95,
     "1005012345939726": 18.62,
     "1005010722422210": 398.07,
-    "1005012582348584": 18.13,
+    "1005012582348584": 15.1,
     "1005012529582418": 12.6,
     "1005008605565544": 58.59,
     "1005009508910625": 46.26,
@@ -16560,6 +16562,16 @@
       "price": 14.97,
       "timestamp": 1794047769.4348345,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34217": {
+      "channel_msg_id": 1983,
+      "product_id": "1005012582348584",
+      "title": "KOOTION SSD SATA  240GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34217,
+      "price": 15.1,
+      "timestamp": 1794051434.2488248,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16568,17 +16580,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794047772.3499715,
+    "last_deal_post_time": 1794051438.3240461,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794051256.146986,
+    "last_sweep_time": 1794051440.6424892,
     "last_sweep_times": {
-      "algeria": 1794051253.488724,
-      "france": 1794051256.146986
+      "algeria": 1794051438.3025935,
+      "france": 1794051440.6424892
     },
     "last_deal_post_times": {
-      "algeria": 1794047772.3499715
+      "algeria": 1794051438.3240461
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17109,7 +17121,7 @@
     "1005012790288780": "lodydeals",
     "1005012345939726": "lodydeals",
     "1005010722422210": "lodydeals",
-    "1005012582348584": "lodydeals",
+    "1005012582348584": "aniscoupons",
     "1005012529582418": "ecksdeal",
     "1005008605565544": "ecksdeal",
     "1005009508910625": "ecksdeal",
@@ -18112,7 +18124,8 @@
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": "aniscoupons",
     "Zeblaze Btalk 4 Pro السعر : 17.06": "lodydeals",
     "HyperX Cloud Earbuds II 2 Gaming Earphone": "zedstoreonline",
-    "Essager 30W Car Charger": "lodydeals"
+    "Essager 30W Car Charger": "lodydeals",
+    "KOOTION SSD SATA  240GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -18906,7 +18919,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38601",
     "bnddeals:50880",
     "zedstoreonline:38964",
     "zedstoreonline:39029",
@@ -19905,7 +19917,8 @@
     "bnddeals:51219",
     "bnddeals:51220",
     "aniscoupons:34216",
-    "zedstoreonline:39675"
+    "zedstoreonline:39675",
+    "aniscoupons:34218"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
