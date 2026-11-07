@@ -673,7 +673,8 @@
     "1005007038130594",
     "1005008248187128",
     "1005013053381984",
-    "1005008060391372"
+    "1005008060391372",
+    "1005010209911111"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1199,7 +1200,7 @@
     "1005013053122560": 1793543835.4812393,
     "1005012322822595": 1793543961.1645148,
     "1005009662812027": 1793973971.0121949,
-    "1005005975560350": 1793966832.9435866,
+    "1005005975560350": 1794068051.714454,
     "1005012922578845": 1793544001.8628821,
     "1005011752891197": 1793613465.8475375,
     "1005008689880751": 1793544016.7486506,
@@ -1361,7 +1362,8 @@
     "1005007038130594": 1794046667.9804564,
     "1005008248187128": 1794057675.8729835,
     "1005013053381984": 1794060065.5449874,
-    "1005008060391372": 1794067512.4027624
+    "1005008060391372": 1794067512.4027624,
+    "1005010209911111": 1794068056.674266
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2212,7 +2214,8 @@
     "Toocki 60W Car Charger and cable",
     "Hollyland Lark M2 Wireless Mic",
     "XUNYOU-LINK 4G LTE WiFi 6 Portable Router",
-    "XUNYOU-LINK 4G SIM WiFi"
+    "XUNYOU-LINK 4G SIM WiFi",
+    "BlackShark GS3 Ultra New"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3025,7 +3028,7 @@
     "Essager 20W GaN + cable": 1793966794.01192,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794044840.8764274,
-    "Fifine Gaming Headset H9W": 1793966832.9435866,
+    "Fifine Gaming Headset H9W": 1794068051.714454,
     "Fifine Gaming Headset H6": 1794067512.4027624,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794037520.0568364,
     "KOOTION SSD SATA": 1794040635.1055257,
@@ -3068,11 +3071,10 @@
     "Toocki 60W Car Charger and cable": 1794062457.796558,
     "Hollyland Lark M2 Wireless Mic": 1794063654.6498907,
     "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": 1794064385.819615,
-    "XUNYOU-LINK 4G SIM WiFi": 1794065862.849844
+    "XUNYOU-LINK 4G SIM WiFi": 1794065862.849844,
+    "BlackShark GS3 Ultra New": 1794068056.674266
   },
   "published_post_keys": [
-    "zedstoreonline:38842",
-    "pcgamingpart:7952",
     "lodydeals:45433",
     "zedstoreonline:38527",
     "ecksdeal:6008",
@@ -4070,11 +4072,13 @@
     "bnddeals:51227",
     "lodydeals:46223",
     "lodydeals:46225",
-    "aniscoupons:34234"
+    "aniscoupons:34234",
+    "aniscoupons:34235",
+    "bnddeals:51230"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794067512.4027624,
+  "last_run_time": 1794068056.674266,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4105,12 +4109,12 @@
       "last_check_time": 1794066596.1946757
     },
     "aniscoupons": {
-      "last_message_id": 34234,
-      "last_check_time": 1794067514.4545572
+      "last_message_id": 34235,
+      "last_check_time": 1794068053.747226
     },
     "bnddeals": {
-      "last_message_id": 51229,
-      "last_check_time": 1794067870.8409703
+      "last_message_id": 51230,
+      "last_check_time": 1794068058.7062237
     }
   },
   "published_product_prices": {
@@ -4687,7 +4691,8 @@
     "1005007162099601": 32.87,
     "1005007038130594": 12.03,
     "1005008248187128": 4.49,
-    "1005013053381984": 254.11
+    "1005013053381984": 254.11,
+    "1005010209911111": 40.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16712,6 +16717,26 @@
       "price": 32.9,
       "timestamp": 1794067512.4027624,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34235": {
+      "channel_msg_id": 1997,
+      "product_id": "1005005975560350",
+      "title": "Fifine Gaming Headset H9W",
+      "channel": "aniscoupons",
+      "source_msg_id": 34235,
+      "price": 35.9,
+      "timestamp": 1794068051.714454,
+      "status": "ACTIVE"
+    },
+    "bnddeals:51230": {
+      "channel_msg_id": 1998,
+      "product_id": "1005010209911111",
+      "title": "BlackShark GS3 Ultra New",
+      "channel": "bnddeals",
+      "source_msg_id": 51230,
+      "price": 40.6,
+      "timestamp": 1794068056.674266,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16720,17 +16745,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794067515.546526,
+    "last_deal_post_time": 1794068058.7394202,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794067873.245267,
+    "last_sweep_time": 1794068061.137617,
     "last_sweep_times": {
-      "algeria": 1794067870.8656833,
-      "france": 1794067873.245267
+      "algeria": 1794068058.7210162,
+      "france": 1794068061.137617
     },
     "last_deal_post_times": {
-      "algeria": 1794067515.546526
+      "algeria": 1794068058.7394202
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17418,7 +17443,8 @@
     "1005007038130594": "lodydeals",
     "1005008248187128": "lodydeals",
     "1005013053381984": "aniscoupons",
-    "1005008060391372": "aniscoupons"
+    "1005008060391372": "aniscoupons",
+    "1005010209911111": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -18275,7 +18301,8 @@
     "Toocki 60W Car Charger and cable": "zedstoreonline",
     "Hollyland Lark M2 Wireless Mic": "lodydeals",
     "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": "bnddeals",
-    "XUNYOU-LINK 4G SIM WiFi": "lodydeals"
+    "XUNYOU-LINK 4G SIM WiFi": "lodydeals",
+    "BlackShark GS3 Ultra New": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
