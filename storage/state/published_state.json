@@ -668,7 +668,8 @@
     "1005012925301774",
     "1005012959738411",
     "1005008357913212",
-    "1005008703989845"
+    "1005008703989845",
+    "1005007162099601"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1351,7 +1352,8 @@
     "1005012925301774": 1794002515.731258,
     "1005012959738411": 1794036964.0036426,
     "1005008357913212": 1794040635.1055257,
-    "1005008703989845": 1794044840.8764274
+    "1005008703989845": 1794044840.8764274,
+    "1005007162099601": 1794046115.3557825
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2963,7 +2965,7 @@
     "Essager 4in1 Cable 240W": 1793707161.4322476,
     "Realme 14T 5G 12/256GB": 1793707168.1519766,
     "Mibro A1 Smartwatch": 1793707779.0330126,
-    "Somnambulist SSD 128GB": 1793779907.9964287,
+    "Somnambulist SSD 128GB": 1794046115.3557825,
     "HAYLOU Watch 3 AMOLED": 1793793759.2206655,
     "CUSU SSD SATA 256GB": 1793728844.5794795,
     "Blackview OSCAL MARINE 2 8/128": 1793728859.1630292,
@@ -3043,7 +3045,6 @@
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627
   },
   "published_post_keys": [
-    "lodydeals:45898",
     "ecksdeal:5891",
     "lodydeals:45418",
     "lodydeals:45439",
@@ -4042,19 +4043,20 @@
     "aniscoupons:34203",
     "aniscoupons:34204",
     "zedstoreonline:39669",
-    "aniscoupons:34206"
+    "aniscoupons:34206",
+    "lodydeals:46211"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794045934.722371,
+  "last_run_time": 1794046115.3557825,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
       "last_check_time": 1793995904.1814108
     },
     "lodydeals": {
-      "last_message_id": 46210,
-      "last_check_time": 1794045753.3546653
+      "last_message_id": 46211,
+      "last_check_time": 1794046117.3971117
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4655,7 +4657,8 @@
     "1005010656922924": 20.4,
     "1005008077441711": 7.6,
     "1005012925301774": 11.2,
-    "1005012959738411": 68.79
+    "1005012959738411": 68.79,
+    "1005007162099601": 32.87
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16500,6 +16503,16 @@
       "price": 283.59,
       "timestamp": 1794045934.722371,
       "status": "ACTIVE"
+    },
+    "lodydeals:46211": {
+      "channel_msg_id": 1978,
+      "product_id": "1005007162099601",
+      "title": "Somnambulist SSD 128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46211,
+      "price": 32.87,
+      "timestamp": 1794046115.3557825,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16508,17 +16521,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794045937.4012523,
+    "last_deal_post_time": 1794046120.4290404,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794045940.0471966,
+    "last_sweep_time": 1794046122.6319928,
     "last_sweep_times": {
-      "algeria": 1794045937.382815,
-      "france": 1794045940.0471966
+      "algeria": 1794046120.410229,
+      "france": 1794046122.6319928
     },
     "last_deal_post_times": {
-      "algeria": 1794045937.4012523
+      "algeria": 1794046120.4290404
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17201,7 +17214,8 @@
     "1005012925301774": "zedstoreonline",
     "1005012959738411": "aniscoupons",
     "1005008357913212": "aniscoupons",
-    "1005008703989845": "aniscoupons"
+    "1005008703989845": "aniscoupons",
+    "1005007162099601": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
