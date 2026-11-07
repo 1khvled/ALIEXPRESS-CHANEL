@@ -1360,7 +1360,7 @@
     "1005009577554629": 1793987289.8200357,
     "1005010656922924": 1793994623.1444166,
     "1005008077441711": 1793998299.0115912,
-    "1005006411483066": 1794002338.4554162,
+    "1005006411483066": 1794091985.0146983,
     "1005012925301774": 1794002515.731258,
     "1005012959738411": 1794063654.6498907,
     "1005008357913212": 1794091251.586213,
@@ -3083,7 +3083,7 @@
     "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899,
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1793998299.0115912,
     "realme C100d 4/128GB": 1794001056.1545,
-    "Zeblaze GTS 3 Pro AMOLED": 1794002338.4554162,
+    "Zeblaze GTS 3 Pro AMOLED": 1794091985.0146983,
     "شاحن سيارة ORICO بقوة 45W": 1794002515.731258,
     "Hollyland LARK M2 DUO 2-Person": 1794036964.0036426,
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794059512.7523012,
@@ -3111,7 +3111,6 @@
     "SOUNDPEATS Air6 HS": 1794087501.0429602
   },
   "published_post_keys": [
-    "ecksdeal:5966",
     "aniscoupons:32757",
     "aniscoupons:32714",
     "lodydeals:45478",
@@ -4110,11 +4109,12 @@
     "lodydeals:46237",
     "zedstoreonline:39704",
     "aniscoupons:34262",
-    "zedstoreonline:39706"
+    "zedstoreonline:39706",
+    "zedstoreonline:39707"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794091436.6772544,
+  "last_run_time": 1794091985.0146983,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4141,8 +4141,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39706,
-      "last_check_time": 1794091438.720617
+      "last_message_id": 39707,
+      "last_check_time": 1794091987.0681338
     },
     "aniscoupons": {
       "last_message_id": 34262,
@@ -4700,7 +4700,7 @@
     "1005008774483451": 45.1,
     "1005010635850450": 21.1,
     "1005006782986446": 6.7,
-    "1005006411483066": 12.9,
+    "1005006411483066": 13.2,
     "1005009738356108": 16.5,
     "1005008636930795": 31.5,
     "1005013083645836": 304.4,
@@ -17029,6 +17029,16 @@
       "price": 92.7,
       "timestamp": 1794091436.6772544,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39707": {
+      "channel_msg_id": 2024,
+      "product_id": "1005006411483066",
+      "title": "Zeblaze GTS 3 Pro AMOLED",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39707,
+      "price": 13.2,
+      "timestamp": 1794091985.0146983,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17037,17 +17047,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794091439.970853,
+    "last_deal_post_time": 1794091988.4036388,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794091799.714988,
+    "last_sweep_time": 1794091991.200977,
     "last_sweep_times": {
-      "algeria": 1794091797.0201976,
-      "france": 1794091799.714988
+      "algeria": 1794091988.3791971,
+      "france": 1794091991.200977
     },
     "last_deal_post_times": {
-      "algeria": 1794091439.970853
+      "algeria": 1794091988.4036388
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
