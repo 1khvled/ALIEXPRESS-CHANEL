@@ -834,7 +834,7 @@
     "1005011987956470": 1791126349.6683438,
     "1005012865709979": 1791135345.3136878,
     "COUPONS_be64457c7fff": 1791138647.0734267,
-    "1005007461615597": 1791192351.7104166,
+    "1005007461615597": 1794065862.849844,
     "1005010167814251": 1791147347.3774981,
     "1005012113350943": 1791147353.0681367,
     "1005012415005884": 1793566288.5208008,
@@ -2209,7 +2209,8 @@
     "Magcubic  HY350 Max 900ANSI",
     "Toocki 60W Car Charger and cable",
     "Hollyland Lark M2 Wireless Mic",
-    "XUNYOU-LINK 4G LTE WiFi 6 Portable Router"
+    "XUNYOU-LINK 4G LTE WiFi 6 Portable Router",
+    "XUNYOU-LINK 4G SIM WiFi"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3064,10 +3065,10 @@
     "Magcubic  HY350 Max 900ANSI": 1794060985.659608,
     "Toocki 60W Car Charger and cable": 1794062457.796558,
     "Hollyland Lark M2 Wireless Mic": 1794063654.6498907,
-    "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": 1794064385.819615
+    "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": 1794064385.819615,
+    "XUNYOU-LINK 4G SIM WiFi": 1794065862.849844
   },
   "published_post_keys": [
-    "aniscoupons:32936",
     "ecksdeal:5938",
     "aniscoupons:33044",
     "zedstoreonline:38842",
@@ -4066,19 +4067,20 @@
     "aniscoupons:34230",
     "zedstoreonline:39682",
     "lodydeals:46216",
-    "bnddeals:51227"
+    "bnddeals:51227",
+    "lodydeals:46223"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794064385.819615,
+  "last_run_time": 1794065862.849844,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
       "last_check_time": 1794055834.6061237
     },
     "lodydeals": {
-      "last_message_id": 46222,
-      "last_check_time": 1794065678.530576
+      "last_message_id": 46224,
+      "last_check_time": 1794065864.9280374
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4258,7 +4260,7 @@
     "1005008046254742": 1.0,
     "1005011987956470": 1.0,
     "1005012865709979": 1.0,
-    "1005007461615597": 13.7,
+    "1005007461615597": 24.02,
     "1005010167814251": 139.9,
     "1005012113350943": 15.5,
     "1005012415005884": 275.11,
@@ -16678,6 +16680,16 @@
       "price": 14.6,
       "timestamp": 1794064385.819615,
       "status": "ACTIVE"
+    },
+    "lodydeals:46223": {
+      "channel_msg_id": 1994,
+      "product_id": "1005007461615597",
+      "title": "XUNYOU-LINK 4G SIM WiFi",
+      "channel": "lodydeals",
+      "source_msg_id": 46223,
+      "price": 24.02,
+      "timestamp": 1794065862.849844,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16686,17 +16698,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794064387.8823738,
+    "last_deal_post_time": 1794065867.1600683,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794065683.8195994,
+    "last_sweep_time": 1794065869.81195,
     "last_sweep_times": {
-      "algeria": 1794065681.492825,
-      "france": 1794065683.8195994
+      "algeria": 1794065867.1400993,
+      "france": 1794065869.81195
     },
     "last_deal_post_times": {
-      "algeria": 1794064387.8823738
+      "algeria": 1794065867.1600683
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16861,7 +16873,7 @@
     "1005011987956470": "couponsglobal",
     "1005012865709979": "couponsglobal",
     "COUPONS_be64457c7fff": "lodydeals",
-    "1005007461615597": "zedstoreonline",
+    "1005007461615597": "lodydeals",
     "1005010167814251": "lodydeals",
     "1005012113350943": "lodydeals",
     "1005012415005884": "lodydeals",
@@ -18239,7 +18251,8 @@
     "Magcubic  HY350 Max 900ANSI": "zedstoreonline",
     "Toocki 60W Car Charger and cable": "zedstoreonline",
     "Hollyland Lark M2 Wireless Mic": "lodydeals",
-    "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": "bnddeals"
+    "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": "bnddeals",
+    "XUNYOU-LINK 4G SIM WiFi": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -19033,7 +19046,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "couponsglobal:48859",
     "lodydeals:45877",
     "zedstoreonline:38806",
     "aniscoupons:32987",
@@ -20032,7 +20044,8 @@
     "lodydeals:46219",
     "lodydeals:46220",
     "lodydeals:46221",
-    "lodydeals:46222"
+    "lodydeals:46222",
+    "lodydeals:46224"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
