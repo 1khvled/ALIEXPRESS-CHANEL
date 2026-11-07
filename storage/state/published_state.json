@@ -1066,7 +1066,7 @@
     "1005010035309013": 1793554752.7954907,
     "1005010385472500": 1793448762.165183,
     "1005011779814585": 1793613414.4818656,
-    "1005013090910574": 1793989291.1519866,
+    "1005013090910574": 1794044287.5728564,
     "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793543612.279949,
     "1005012910719451": 1793735519.3537216,
@@ -2222,7 +2222,7 @@
     "UGREEN 45W GaN Charger": 1793399449.9599383,
     "Realme Pad 3 5G 256GB": 1791012345.6086447,
     "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor": 1790888886.4062796,
-    "OPPO A6 Pro 8/256": 1793966765.4767177,
+    "OPPO A6 Pro 8/256": 1794044287.5728564,
     "realme P3 5G 8/256": 1793613419.7534997,
     "OnePlus Turbo 6X Pro 5G": 1793966850.1250699,
     "Xiaomi Pad 7  12/256GB": 1790897106.449474,
@@ -3041,7 +3041,6 @@
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627
   },
   "published_post_keys": [
-    "aniscoupons:32980",
     "aniscoupons:32770",
     "test_channel:1791752735",
     "zedstoreonline:38577",
@@ -4040,11 +4039,12 @@
     "aniscoupons:34191",
     "aniscoupons:34195",
     "lodydeals:46207",
-    "aniscoupons:34202"
+    "aniscoupons:34202",
+    "zedstoreonline:39668"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794043565.318146,
+  "last_run_time": 1794044287.5728564,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
@@ -4071,8 +4071,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39667,
-      "last_check_time": 1794043746.3477182
+      "last_message_id": 39668,
+      "last_check_time": 1794044289.6309836
     },
     "aniscoupons": {
       "last_message_id": 34202,
@@ -16448,6 +16448,16 @@
       "price": 167.8,
       "timestamp": 1794043565.318146,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39668": {
+      "channel_msg_id": 1973,
+      "product_id": "1005013090910574",
+      "title": "OPPO A6 Pro 8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39668,
+      "price": 192.7,
+      "timestamp": 1794044287.5728564,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16456,17 +16466,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794043567.9272797,
+    "last_deal_post_time": 1794044291.151536,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794044108.3048854,
+    "last_sweep_time": 1794044293.4776757,
     "last_sweep_times": {
-      "algeria": 1794044105.8451846,
-      "france": 1794044108.3048854
+      "algeria": 1794044291.1248431,
+      "france": 1794044293.4776757
     },
     "last_deal_post_times": {
-      "algeria": 1794043567.9272797
+      "algeria": 1794044291.151536
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16875,7 +16885,7 @@
     "1005010035309013": "lodydeals",
     "1005010385472500": "bnddeals",
     "1005011779814585": "zedstoreonline",
-    "1005013090910574": "aniscoupons",
+    "1005013090910574": "zedstoreonline",
     "1005012382148199": "megaphonna",
     "1005010158485058": "lodydeals",
     "1005012910719451": "lodydeals",
