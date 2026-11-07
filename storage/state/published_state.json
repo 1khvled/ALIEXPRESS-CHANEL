@@ -1331,7 +1331,7 @@
     "9998887107": 1793967108.0014687,
     "9998887678": 1793967678.8184059,
     "9998887703": 1793967703.2348685,
-    "1005008708333999": 1794001056.1545,
+    "1005008708333999": 1794038258.8331141,
     "1005012254132930": 1793970449.9003735,
     "1005013028124905": 1793971934.3600886,
     "1005012691642623": 1793976348.7503736,
@@ -2187,7 +2187,8 @@
     "realme C100d 4/128GB",
     "Zeblaze GTS 3 Pro AMOLED",
     "شاحن سيارة ORICO بقوة 45W",
-    "Hollyland LARK M2 DUO 2-Person"
+    "Hollyland LARK M2 DUO 2-Person",
+    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3032,10 +3033,10 @@
     "realme C100d 4/128GB": 1794001056.1545,
     "Zeblaze GTS 3 Pro AMOLED": 1794002338.4554162,
     "شاحن سيارة ORICO بقوة 45W": 1794002515.731258,
-    "Hollyland LARK M2 DUO 2-Person": 1794036964.0036426
+    "Hollyland LARK M2 DUO 2-Person": 1794036964.0036426,
+    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794038258.8331141
   },
   "published_post_keys": [
-    "couponsglobal:48776",
     "megaphonna:8691",
     "lodydeals:45428",
     "megaphonna:8425",
@@ -4034,11 +4035,12 @@
     "lodydeals:46206",
     "aniscoupons:34183",
     "aniscoupons:34185",
-    "aniscoupons:34186"
+    "aniscoupons:34186",
+    "aniscoupons:34187"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794037884.5208838,
+  "last_run_time": 1794038258.8331141,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
@@ -4069,8 +4071,8 @@
       "last_check_time": 1794008637.578994
     },
     "aniscoupons": {
-      "last_message_id": 34186,
-      "last_check_time": 1794037886.5739155
+      "last_message_id": 34187,
+      "last_check_time": 1794038260.865018
     },
     "bnddeals": {
       "last_message_id": 51204,
@@ -16392,6 +16394,16 @@
       "price": 134.36,
       "timestamp": 1794037884.5208838,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34187": {
+      "channel_msg_id": 1968,
+      "product_id": "1005008708333999",
+      "title": "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI",
+      "channel": "aniscoupons",
+      "source_msg_id": 34187,
+      "price": 136.7,
+      "timestamp": 1794038258.8331141,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16400,17 +16412,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794037887.4553952,
+    "last_deal_post_time": 1794038261.6473904,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794038062.5534637,
+    "last_sweep_time": 1794038264.2582085,
     "last_sweep_times": {
-      "algeria": 1794038060.3804364,
-      "france": 1794038062.5534637
+      "algeria": 1794038261.634087,
+      "france": 1794038264.2582085
     },
     "last_deal_post_times": {
-      "algeria": 1794037887.4553952
+      "algeria": 1794038261.6473904
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17075,7 +17087,7 @@
     "9998887107": "test_channel",
     "9998887678": "test_channel",
     "9998887703": "test_channel",
-    "1005008708333999": "zedstoreonline",
+    "1005008708333999": "aniscoupons",
     "1005012254132930": "zedstoreonline",
     "1005013028124905": "zedstoreonline",
     "1005012691642623": "zedstoreonline",
@@ -17936,7 +17948,8 @@
     "realme C100d 4/128GB": "zedstoreonline",
     "Zeblaze GTS 3 Pro AMOLED": "zedstoreonline",
     "شاحن سيارة ORICO بقوة 45W": "zedstoreonline",
-    "Hollyland LARK M2 DUO 2-Person": "aniscoupons"
+    "Hollyland LARK M2 DUO 2-Person": "aniscoupons",
+    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
