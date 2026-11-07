@@ -802,7 +802,7 @@
     "1005008144734940": 1791032158.6801872,
     "1005006443158717": 1791032177.1222703,
     "1005012492244291": 1791035151.8836284,
-    "1005008522983211": 1794047769.4348345,
+    "1005008522983211": 1794064385.819615,
     "1005011734677486": 1791038145.1521833,
     "1005008414973716": 1791125437.8944824,
     "1005010706783496": 1791043842.6639822,
@@ -2208,7 +2208,8 @@
     "Xiaomi Redmi Note 17 Pro 5G Global Version",
     "Magcubic  HY350 Max 900ANSI",
     "Toocki 60W Car Charger and cable",
-    "Hollyland Lark M2 Wireless Mic"
+    "Hollyland Lark M2 Wireless Mic",
+    "XUNYOU-LINK 4G LTE WiFi 6 Portable Router"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3062,10 +3063,10 @@
     "Xiaomi Redmi Note 17 Pro 5G Global Version": 1794060065.5449874,
     "Magcubic  HY350 Max 900ANSI": 1794060985.659608,
     "Toocki 60W Car Charger and cable": 1794062457.796558,
-    "Hollyland Lark M2 Wireless Mic": 1794063654.6498907
+    "Hollyland Lark M2 Wireless Mic": 1794063654.6498907,
+    "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": 1794064385.819615
   },
   "published_post_keys": [
-    "aniscoupons:32697",
     "aniscoupons:32936",
     "ecksdeal:5938",
     "aniscoupons:33044",
@@ -4064,11 +4065,12 @@
     "zedstoreonline:39681",
     "aniscoupons:34230",
     "zedstoreonline:39682",
-    "lodydeals:46216"
+    "lodydeals:46216",
+    "bnddeals:51227"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794063654.6498907,
+  "last_run_time": 1794064385.819615,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4103,8 +4105,8 @@
       "last_check_time": 1794063661.4919543
     },
     "bnddeals": {
-      "last_message_id": 51226,
-      "last_check_time": 1794062896.3558307
+      "last_message_id": 51227,
+      "last_check_time": 1794064387.8547456
     }
   },
   "published_product_prices": {
@@ -4225,7 +4227,7 @@
     "1005008144734940": 5.23,
     "1005006443158717": 6.42,
     "1005012492244291": 230.0,
-    "1005008522983211": 14.97,
+    "1005008522983211": 14.6,
     "1005011734677486": 13.8,
     "1005008414973716": 1.0,
     "1005010706783496": 16.2,
@@ -16666,6 +16668,16 @@
       "price": 85.59,
       "timestamp": 1794063654.6498907,
       "status": "ACTIVE"
+    },
+    "bnddeals:51227": {
+      "channel_msg_id": 1993,
+      "product_id": "1005008522983211",
+      "title": "XUNYOU-LINK 4G LTE WiFi 6 Portable Router",
+      "channel": "bnddeals",
+      "source_msg_id": 51227,
+      "price": 14.6,
+      "timestamp": 1794064385.819615,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16674,17 +16686,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794063662.1401663,
+    "last_deal_post_time": 1794064387.8823738,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794064214.2117288,
+    "last_sweep_time": 1794064390.3763075,
     "last_sweep_times": {
-      "algeria": 1794064211.2342935,
-      "france": 1794064214.2117288
+      "algeria": 1794064387.8688505,
+      "france": 1794064390.3763075
     },
     "last_deal_post_times": {
-      "algeria": 1794063662.1401663
+      "algeria": 1794064387.8823738
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16811,7 +16823,7 @@
     "1005008144734940": "couponsglobal",
     "1005006443158717": "couponsglobal",
     "1005012492244291": "megaphonna",
-    "1005008522983211": "aniscoupons",
+    "1005008522983211": "bnddeals",
     "1005011734677486": "bnddeals",
     "1005008414973716": "couponsglobal",
     "1005010706783496": "bnddeals",
@@ -18226,7 +18238,8 @@
     "Xiaomi Redmi Note 17 Pro 5G Global Version": "aniscoupons",
     "Magcubic  HY350 Max 900ANSI": "zedstoreonline",
     "Toocki 60W Car Charger and cable": "zedstoreonline",
-    "Hollyland Lark M2 Wireless Mic": "lodydeals"
+    "Hollyland Lark M2 Wireless Mic": "lodydeals",
+    "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
