@@ -672,7 +672,8 @@
     "1005007162099601",
     "1005007038130594",
     "1005008248187128",
-    "1005013053381984"
+    "1005013053381984",
+    "1005008060391372"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1359,7 +1360,8 @@
     "1005007162099601": 1794046115.3557825,
     "1005007038130594": 1794046667.9804564,
     "1005008248187128": 1794057675.8729835,
-    "1005013053381984": 1794060065.5449874
+    "1005013053381984": 1794060065.5449874,
+    "1005008060391372": 1794067512.4027624
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -3024,7 +3026,7 @@
     "Redmi Note 17 Pro Max": 1793966798.7696738,
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794044840.8764274,
     "Fifine Gaming Headset H9W": 1793966832.9435866,
-    "Fifine Gaming Headset H6": 1793966837.4758828,
+    "Fifine Gaming Headset H6": 1794067512.4027624,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794037520.0568364,
     "KOOTION SSD SATA": 1794040635.1055257,
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
@@ -3069,7 +3071,6 @@
     "XUNYOU-LINK 4G SIM WiFi": 1794065862.849844
   },
   "published_post_keys": [
-    "aniscoupons:33044",
     "zedstoreonline:38842",
     "pcgamingpart:7952",
     "lodydeals:45433",
@@ -4068,11 +4069,12 @@
     "lodydeals:46216",
     "bnddeals:51227",
     "lodydeals:46223",
-    "lodydeals:46225"
+    "lodydeals:46225",
+    "aniscoupons:34234"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794067316.3057165,
+  "last_run_time": 1794067512.4027624,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4103,8 +4105,8 @@
       "last_check_time": 1794066596.1946757
     },
     "aniscoupons": {
-      "last_message_id": 34233,
-      "last_check_time": 1794064760.9160836
+      "last_message_id": 34234,
+      "last_check_time": 1794067514.4545572
     },
     "bnddeals": {
       "last_message_id": 51227,
@@ -16700,6 +16702,16 @@
       "price": 48.91,
       "timestamp": 1794067316.3057165,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34234": {
+      "channel_msg_id": 1996,
+      "product_id": "1005008060391372",
+      "title": "Fifine Gaming Headset H6",
+      "channel": "aniscoupons",
+      "source_msg_id": 34234,
+      "price": 32.9,
+      "timestamp": 1794067512.4027624,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16708,17 +16720,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794067320.6538415,
+    "last_deal_post_time": 1794067515.546526,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794067322.965852,
+    "last_sweep_time": 1794067518.5563347,
     "last_sweep_times": {
-      "algeria": 1794067320.6381223,
-      "france": 1794067322.965852
+      "algeria": 1794067515.5233164,
+      "france": 1794067518.5563347
     },
     "last_deal_post_times": {
-      "algeria": 1794067320.6538415
+      "algeria": 1794067515.546526
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17405,7 +17417,8 @@
     "1005007162099601": "lodydeals",
     "1005007038130594": "lodydeals",
     "1005008248187128": "lodydeals",
-    "1005013053381984": "aniscoupons"
+    "1005013053381984": "aniscoupons",
+    "1005008060391372": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
