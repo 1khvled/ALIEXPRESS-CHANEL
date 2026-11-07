@@ -1108,7 +1108,7 @@
     "1005012864273120": 1793399494.1323898,
     "1005006967218963": 1793448582.9150612,
     "1005012675968319": 1793399525.3383162,
-    "1005010424638496": 1794044483.1683135,
+    "1005010424638496": 1794060985.659608,
     "1005010141682336": 1793399542.6698716,
     "1005006782790827": 1793966774.5170474,
     "1005012938359476": 1793448722.5382965,
@@ -2205,7 +2205,8 @@
     "HyperX Cloud Earbuds II 2 Gaming Earphone",
     "Essager 30W Car Charger",
     "KOOTION SSD SATA  240GB",
-    "Xiaomi Redmi Note 17 Pro 5G Global Version"
+    "Xiaomi Redmi Note 17 Pro 5G Global Version",
+    "Magcubic  HY350 Max 900ANSI"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3056,10 +3057,10 @@
     "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794046485.9160285,
     "Essager 30W Car Charger": 1794046667.9804564,
     "KOOTION SSD SATA  240GB": 1794051434.2488248,
-    "Xiaomi Redmi Note 17 Pro 5G Global Version": 1794060065.5449874
+    "Xiaomi Redmi Note 17 Pro 5G Global Version": 1794060065.5449874,
+    "Magcubic  HY350 Max 900ANSI": 1794060985.659608
   },
   "published_post_keys": [
-    "megaphonna:8587",
     "lodydeals:45818",
     "lodydeals:45896",
     "couponsglobal:48816",
@@ -4058,11 +4059,12 @@
     "ecksdeal:6043",
     "lodydeals:46214",
     "aniscoupons:34227",
-    "aniscoupons:34228"
+    "aniscoupons:34228",
+    "zedstoreonline:39681"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794060065.5449874,
+  "last_run_time": 1794060985.659608,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4089,8 +4091,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39680,
-      "last_check_time": 1794057486.5911243
+      "last_message_id": 39681,
+      "last_check_time": 1794060987.7004998
     },
     "aniscoupons": {
       "last_message_id": 34229,
@@ -4447,7 +4449,7 @@
     "1005012864273120": 154.0,
     "1005006967218963": 17.3,
     "1005012675968319": 30.0,
-    "1005010424638496": 111.4,
+    "1005010424638496": 113.9,
     "1005010141682336": 224.0,
     "1005006782790827": 47.5,
     "1005012938359476": 123.17,
@@ -16620,6 +16622,16 @@
       "price": 254.11,
       "timestamp": 1794060065.5449874,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39681": {
+      "channel_msg_id": 1988,
+      "product_id": "1005010424638496",
+      "title": "Magcubic  HY350 Max 900ANSI",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39681,
+      "price": 113.9,
+      "timestamp": 1794060985.659608,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16628,17 +16640,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794060068.4327414,
+    "last_deal_post_time": 1794060989.0776894,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794060802.2212462,
+    "last_sweep_time": 1794060991.7830799,
     "last_sweep_times": {
-      "algeria": 1794060799.6060605,
-      "france": 1794060802.2212462
+      "algeria": 1794060989.0594404,
+      "france": 1794060991.7830799
     },
     "last_deal_post_times": {
-      "algeria": 1794060068.4327414
+      "algeria": 1794060989.0776894
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17086,7 +17098,7 @@
     "1005012864273120": "zedstoreonline",
     "1005006967218963": "zedstoreonline",
     "1005012675968319": "aniscoupons",
-    "1005010424638496": "aniscoupons",
+    "1005010424638496": "zedstoreonline",
     "1005010141682336": "aniscoupons",
     "1005006782790827": "zedstoreonline",
     "1005012938359476": "aniscoupons",
@@ -18177,7 +18189,8 @@
     "Essager 30W Car Charger": "lodydeals",
     "KOOTION SSD SATA  240GB": "aniscoupons",
     "ماوس لاسلكي Attack Shark R1 Wireless": "ecksdeal",
-    "Xiaomi Redmi Note 17 Pro 5G Global Version": "aniscoupons"
+    "Xiaomi Redmi Note 17 Pro 5G Global Version": "aniscoupons",
+    "Magcubic  HY350 Max 900ANSI": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
