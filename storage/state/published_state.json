@@ -1282,7 +1282,7 @@
     "1005012871436251": 1793707168.1519766,
     "1005010385663278": 1793616557.8235445,
     "1005009504965110": 1793707102.1529818,
-    "1005008913425060": 1793649067.5197537,
+    "1005008913425060": 1794072944.774369,
     "1005013359761139": 1793649073.112849,
     "1005012267973092": 1793649078.2559402,
     "1005010289640412": 1793649086.527061,
@@ -2216,7 +2216,8 @@
     "XUNYOU-LINK 4G LTE WiFi 6 Portable Router",
     "XUNYOU-LINK 4G SIM WiFi",
     "BlackShark GS3 Ultra New",
-    "KOOTION SSD SATA  256GB"
+    "KOOTION SSD SATA  256GB",
+    "MSI AMD A520M-A PRO"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3074,10 +3075,10 @@
     "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": 1794064385.819615,
     "XUNYOU-LINK 4G SIM WiFi": 1794065862.849844,
     "BlackShark GS3 Ultra New": 1794068056.674266,
-    "KOOTION SSD SATA  256GB": 1794071284.8947144
+    "KOOTION SSD SATA  256GB": 1794071284.8947144,
+    "MSI AMD A520M-A PRO": 1794072944.774369
   },
   "published_post_keys": [
-    "ecksdeal:5853",
     "pcgamingpart:7953",
     "bnddeals:50799",
     "lodydeals:45480",
@@ -4076,19 +4077,20 @@
     "aniscoupons:34237",
     "aniscoupons:34238",
     "aniscoupons:34239",
-    "aniscoupons:34240"
+    "aniscoupons:34240",
+    "lodydeals:46228"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794071284.8947144,
+  "last_run_time": 1794072944.774369,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
       "last_check_time": 1794055834.6061237
     },
     "lodydeals": {
-      "last_message_id": 46226,
-      "last_check_time": 1794072389.362239
+      "last_message_id": 46228,
+      "last_check_time": 1794072946.8336227
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4107,8 +4109,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39691,
-      "last_check_time": 1794072021.1829164
+      "last_message_id": 39692,
+      "last_check_time": 1794072949.4954758
     },
     "aniscoupons": {
       "last_message_id": 34241,
@@ -4621,7 +4623,7 @@
     "1005012871436251": 200.96,
     "1005010385663278": 58.55,
     "1005009504965110": 98.57,
-    "1005008913425060": 59.1,
+    "1005008913425060": 58.11,
     "1005013359761139": 75.6,
     "1005012267973092": 58.3,
     "1005012287238561": 44.5,
@@ -16789,6 +16791,16 @@
       "price": 18.13,
       "timestamp": 1794071284.8947144,
       "status": "ACTIVE"
+    },
+    "lodydeals:46228": {
+      "channel_msg_id": 2004,
+      "product_id": "1005008913425060",
+      "title": "MSI AMD A520M-A PRO",
+      "channel": "lodydeals",
+      "source_msg_id": 46228,
+      "price": 58.11,
+      "timestamp": 1794072944.774369,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16797,17 +16809,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794071287.5066855,
+    "last_deal_post_time": 1794072950.6859722,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794072759.5199184,
+    "last_sweep_time": 1794072953.0246837,
     "last_sweep_times": {
-      "algeria": 1794072756.360351,
-      "france": 1794072759.5199184
+      "algeria": 1794072950.6620314,
+      "france": 1794072953.0246837
     },
     "last_deal_post_times": {
-      "algeria": 1794071287.5066855
+      "algeria": 1794072950.6859722
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17419,7 +17431,7 @@
     "1005012648097890": "aniscoupons",
     "1005012871436251": "lodydeals",
     "1005009504965110": "lodydeals",
-    "1005008913425060": "ecksdeal",
+    "1005008913425060": "lodydeals",
     "1005013359761139": "ecksdeal",
     "1005012267973092": "ecksdeal",
     "1005012287238561": "ecksdeal",
@@ -18355,7 +18367,8 @@
     "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": "bnddeals",
     "XUNYOU-LINK 4G SIM WiFi": "lodydeals",
     "BlackShark GS3 Ultra New": "bnddeals",
-    "KOOTION SSD SATA  256GB": "aniscoupons"
+    "KOOTION SSD SATA  256GB": "aniscoupons",
+    "MSI AMD A520M-A PRO": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -19149,7 +19162,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38890",
     "aniscoupons:33429",
     "zedstoreonline:38911",
     "zedstoreonline:38623",
@@ -20148,7 +20160,8 @@
     "zedstoreonline:39690",
     "zedstoreonline:39691",
     "aniscoupons:34241",
-    "lodydeals:46226"
+    "lodydeals:46226",
+    "zedstoreonline:39692"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
