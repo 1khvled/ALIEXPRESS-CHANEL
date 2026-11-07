@@ -1228,7 +1228,7 @@
     "1005009569642817": 1794004758.429218,
     "1005013438789813": 1793569553.2022223,
     "1005012823102793": 1793569904.419889,
-    "1005012773302941": 1794003254.1339376,
+    "1005012773302941": 1794043557.929627,
     "1005008430147176": 1793707072.0357203,
     "1005011742851856": 1793793769.5631576,
     "1005006304425302": 1793656107.995781,
@@ -1338,7 +1338,7 @@
     "1005012691642623": 1793976348.7503736,
     "1005010266233059": 1793977272.9654846,
     "1005007469003552": 1793982290.6109207,
-    "1005010041181003": 1793982668.8847792,
+    "1005010041181003": 1794043565.318146,
     "1005010265542567": 1793982853.0323274,
     "1005003156756854": 1793983598.810499,
     "1005010142208108": 1793987278.5140982,
@@ -2190,7 +2190,8 @@
     "Zeblaze GTS 3 Pro AMOLED",
     "شاحن سيارة ORICO بقوة 45W",
     "Hollyland LARK M2 DUO 2-Person",
-    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI"
+    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI",
+    "Zeblaze Btalk 4 Pro السعر : 17.06"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3022,7 +3023,7 @@
     "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
     "ميكروفون Ulanzi A100 لاسلكي صغير": 1793982290.6109207,
-    "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1793982668.8847792,
+    "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794043565.318146,
     "Ulanzi A200 Mini Wireless Lavalier Microphone": 1793982853.0323274,
     "حامل هاتف Ulanzi ST-06S": 1793983598.810499,
     "AULA MINI60 HE PRO": 1793987278.5140982,
@@ -3036,11 +3037,10 @@
     "Zeblaze GTS 3 Pro AMOLED": 1794002338.4554162,
     "شاحن سيارة ORICO بقوة 45W": 1794002515.731258,
     "Hollyland LARK M2 DUO 2-Person": 1794036964.0036426,
-    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794038258.8331141
+    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794038258.8331141,
+    "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627
   },
   "published_post_keys": [
-    "megaphonna:8425",
-    "lodydeals:45935",
     "aniscoupons:32980",
     "aniscoupons:32770",
     "test_channel:1791752735",
@@ -4038,11 +4038,13 @@
     "aniscoupons:34186",
     "aniscoupons:34187",
     "aniscoupons:34191",
-    "aniscoupons:34195"
+    "aniscoupons:34195",
+    "lodydeals:46207",
+    "aniscoupons:34202"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794040635.1055257,
+  "last_run_time": 1794043565.318146,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
@@ -4050,7 +4052,7 @@
     },
     "lodydeals": {
       "last_message_id": 46208,
-      "last_check_time": 1794007342.822652
+      "last_check_time": 1794043559.9743369
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4073,8 +4075,8 @@
       "last_check_time": 1794042284.4595082
     },
     "aniscoupons": {
-      "last_message_id": 34201,
-      "last_check_time": 1794043375.515849
+      "last_message_id": 34202,
+      "last_check_time": 1794043567.3578367
     },
     "bnddeals": {
       "last_message_id": 51212,
@@ -16426,6 +16428,26 @@
       "price": 40.5,
       "timestamp": 1794040635.1055257,
       "status": "ACTIVE"
+    },
+    "lodydeals:46207": {
+      "channel_msg_id": 1971,
+      "product_id": "1005012773302941",
+      "title": "Zeblaze Btalk 4 Pro السعر : 17.06",
+      "channel": "lodydeals",
+      "source_msg_id": 46207,
+      "price": 17.06,
+      "timestamp": 1794043557.929627,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34202": {
+      "channel_msg_id": 1972,
+      "product_id": "1005010041181003",
+      "title": "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34202,
+      "price": 167.8,
+      "timestamp": 1794043565.318146,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16434,17 +16456,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794040641.6894207,
+    "last_deal_post_time": 1794043567.9272797,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794043378.466749,
+    "last_sweep_time": 1794043570.5857928,
     "last_sweep_times": {
-      "algeria": 1794043376.1696734,
-      "france": 1794043378.466749
+      "algeria": 1794043567.9090033,
+      "france": 1794043570.5857928
     },
     "last_deal_post_times": {
-      "algeria": 1794040641.6894207
+      "algeria": 1794043567.9272797
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17972,7 +17994,8 @@
     "Zeblaze GTS 3 Pro AMOLED": "zedstoreonline",
     "شاحن سيارة ORICO بقوة 45W": "zedstoreonline",
     "Hollyland LARK M2 DUO 2-Person": "aniscoupons",
-    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": "aniscoupons"
+    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": "aniscoupons",
+    "Zeblaze Btalk 4 Pro السعر : 17.06": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -18766,7 +18789,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8597",
     "zedstoreonline:38636",
     "aniscoupons:33216",
     "megaphonna:8482",
@@ -19765,7 +19787,8 @@
     "aniscoupons:34200",
     "bnddeals:51211",
     "bnddeals:51212",
-    "aniscoupons:34201"
+    "aniscoupons:34201",
+    "lodydeals:46208"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
