@@ -1290,7 +1290,7 @@
     "1005011742640729": 1793650956.0417867,
     "1005013154935332": 1793655734.5359836,
     "1005012774075728": 1793656103.0944026,
-    "1005006783028347": 1793656112.890115,
+    "1005006783028347": 1794062457.796558,
     "1005007010104970": 1793656134.827825,
     "1005008637113849": 1793656145.7068295,
     "1005010419207841": 1793656214.2446048,
@@ -2206,7 +2206,8 @@
     "Essager 30W Car Charger",
     "KOOTION SSD SATA  240GB",
     "Xiaomi Redmi Note 17 Pro 5G Global Version",
-    "Magcubic  HY350 Max 900ANSI"
+    "Magcubic  HY350 Max 900ANSI",
+    "Toocki 60W Car Charger and cable"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3058,10 +3059,10 @@
     "Essager 30W Car Charger": 1794046667.9804564,
     "KOOTION SSD SATA  240GB": 1794051434.2488248,
     "Xiaomi Redmi Note 17 Pro 5G Global Version": 1794060065.5449874,
-    "Magcubic  HY350 Max 900ANSI": 1794060985.659608
+    "Magcubic  HY350 Max 900ANSI": 1794060985.659608,
+    "Toocki 60W Car Charger and cable": 1794062457.796558
   },
   "published_post_keys": [
-    "lodydeals:45896",
     "couponsglobal:48816",
     "aniscoupons:32697",
     "aniscoupons:32936",
@@ -4060,11 +4061,12 @@
     "aniscoupons:34227",
     "aniscoupons:34228",
     "zedstoreonline:39681",
-    "aniscoupons:34230"
+    "aniscoupons:34230",
+    "zedstoreonline:39682"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794062272.0446324,
+  "last_run_time": 1794062457.796558,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4091,8 +4093,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39681,
-      "last_check_time": 1794060987.7004998
+      "last_message_id": 39682,
+      "last_check_time": 1794062459.8473547
     },
     "aniscoupons": {
       "last_message_id": 34230,
@@ -4614,7 +4616,7 @@
     "1005011742640729": 75.8,
     "1005013154935332": 33.75,
     "1005012774075728": 6.81,
-    "1005006783028347": 2.62,
+    "1005006783028347": 2.7,
     "1005007010104970": 6.81,
     "1005008637113849": 52.5,
     "1005010419207841": 29.44,
@@ -16642,6 +16644,16 @@
       "price": 134.36,
       "timestamp": 1794062272.0446324,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39682": {
+      "channel_msg_id": 1991,
+      "product_id": "1005006783028347",
+      "title": "Toocki 60W Car Charger and cable",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39682,
+      "price": 2.7,
+      "timestamp": 1794062457.796558,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16650,17 +16662,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794062274.952491,
+    "last_deal_post_time": 1794062461.3636973,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794062277.5617251,
+    "last_sweep_time": 1794062464.3590646,
     "last_sweep_times": {
-      "algeria": 1794062274.9284837,
-      "france": 1794062277.5617251
+      "algeria": 1794062461.339408,
+      "france": 1794062464.3590646
     },
     "last_deal_post_times": {
-      "algeria": 1794062274.952491
+      "algeria": 1794062461.3636973
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17281,7 +17293,7 @@
     "1005011742640729": "ecksdeal",
     "1005013154935332": "ecksdeal",
     "1005012774075728": "lodydeals",
-    "1005006783028347": "lodydeals",
+    "1005006783028347": "zedstoreonline",
     "1005007010104970": "lodydeals",
     "1005008637113849": "lodydeals",
     "1005010419207841": "ecksdeal",
@@ -18200,7 +18212,8 @@
     "KOOTION SSD SATA  240GB": "aniscoupons",
     "ماوس لاسلكي Attack Shark R1 Wireless": "ecksdeal",
     "Xiaomi Redmi Note 17 Pro 5G Global Version": "aniscoupons",
-    "Magcubic  HY350 Max 900ANSI": "zedstoreonline"
+    "Magcubic  HY350 Max 900ANSI": "zedstoreonline",
+    "Toocki 60W Car Charger and cable": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
