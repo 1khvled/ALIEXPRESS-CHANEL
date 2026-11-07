@@ -665,7 +665,8 @@
     "1005010656922924",
     "1005008077441711",
     "1005006411483066",
-    "1005012925301774"
+    "1005012925301774",
+    "1005012959738411"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1345,7 +1346,8 @@
     "1005010656922924": 1793994623.1444166,
     "1005008077441711": 1793998299.0115912,
     "1005006411483066": 1794002338.4554162,
-    "1005012925301774": 1794002515.731258
+    "1005012925301774": 1794002515.731258,
+    "1005012959738411": 1794036964.0036426
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2184,7 +2186,8 @@
     "Inphic PG1 PG9 RGB Wired Gaming Mouse",
     "realme C100d 4/128GB",
     "Zeblaze GTS 3 Pro AMOLED",
-    "شاحن سيارة ORICO بقوة 45W"
+    "شاحن سيارة ORICO بقوة 45W",
+    "Hollyland LARK M2 DUO 2-Person"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3028,10 +3031,10 @@
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1793998299.0115912,
     "realme C100d 4/128GB": 1794001056.1545,
     "Zeblaze GTS 3 Pro AMOLED": 1794002338.4554162,
-    "شاحن سيارة ORICO بقوة 45W": 1794002515.731258
+    "شاحن سيارة ORICO بقوة 45W": 1794002515.731258,
+    "Hollyland LARK M2 DUO 2-Person": 1794036964.0036426
   },
   "published_post_keys": [
-    "aniscoupons:33159",
     "aniscoupons:33220",
     "lodydeals:45926",
     "couponsglobal:48776",
@@ -4030,11 +4033,12 @@
     "zedstoreonline:39658",
     "zedstoreonline:39659",
     "lodydeals:46204",
-    "lodydeals:46206"
+    "lodydeals:46206",
+    "aniscoupons:34183"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794004758.429218,
+  "last_run_time": 1794036964.0036426,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
@@ -4065,8 +4069,8 @@
       "last_check_time": 1794008637.578994
     },
     "aniscoupons": {
-      "last_message_id": 34182,
-      "last_check_time": 1794008638.1173868
+      "last_message_id": 34183,
+      "last_check_time": 1794036966.0354457
     },
     "bnddeals": {
       "last_message_id": 51203,
@@ -4642,7 +4646,8 @@
     "1005009577554629": 10.55,
     "1005010656922924": 20.4,
     "1005008077441711": 7.6,
-    "1005012925301774": 11.2
+    "1005012925301774": 11.2,
+    "1005012959738411": 68.79
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16357,6 +16362,16 @@
       "price": 28.43,
       "timestamp": 1794004758.429218,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34183": {
+      "channel_msg_id": 1965,
+      "product_id": "1005012959738411",
+      "title": "Hollyland LARK M2 DUO 2-Person",
+      "channel": "aniscoupons",
+      "source_msg_id": 34183,
+      "price": 68.79,
+      "timestamp": 1794036964.0036426,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16365,17 +16380,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794004763.4434867,
+    "last_deal_post_time": 1794036966.708711,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794036785.2900462,
+    "last_sweep_time": 1794036969.0037866,
     "last_sweep_times": {
-      "algeria": 1794036782.6496668,
-      "france": 1794036785.2900462
+      "algeria": 1794036966.695961,
+      "france": 1794036969.0037866
     },
     "last_deal_post_times": {
-      "algeria": 1794004763.4434867
+      "algeria": 1794036966.708711
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17055,7 +17070,8 @@
     "1005010656922924": "zedstoreonline",
     "1005008077441711": "zedstoreonline",
     "1005006411483066": "zedstoreonline",
-    "1005012925301774": "zedstoreonline"
+    "1005012925301774": "zedstoreonline",
+    "1005012959738411": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -17899,7 +17915,8 @@
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": "zedstoreonline",
     "realme C100d 4/128GB": "zedstoreonline",
     "Zeblaze GTS 3 Pro AMOLED": "zedstoreonline",
-    "شاحن سيارة ORICO بقوة 45W": "zedstoreonline"
+    "شاحن سيارة ORICO بقوة 45W": "zedstoreonline",
+    "Hollyland LARK M2 DUO 2-Person": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
