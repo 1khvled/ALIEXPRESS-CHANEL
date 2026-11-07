@@ -666,7 +666,8 @@
     "1005008077441711",
     "1005006411483066",
     "1005012925301774",
-    "1005012959738411"
+    "1005012959738411",
+    "1005008357913212"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1347,7 +1348,8 @@
     "1005008077441711": 1793998299.0115912,
     "1005006411483066": 1794002338.4554162,
     "1005012925301774": 1794002515.731258,
-    "1005012959738411": 1794036964.0036426
+    "1005012959738411": 1794036964.0036426,
+    "1005008357913212": 1794040635.1055257
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -3004,7 +3006,7 @@
     "Fifine Gaming Headset H9W": 1793966832.9435866,
     "Fifine Gaming Headset H6": 1793966837.4758828,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794037520.0568364,
-    "KOOTION SSD SATA": 1793966867.0400634,
+    "KOOTION SSD SATA": 1794040635.1055257,
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
     "هذون سماعات جدد من   HAYLOU⌚": 1793966887.3818936,
     "HAYLOU WATCH 3 NEW": 1793966892.2256048,
@@ -3037,7 +3039,6 @@
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794038258.8331141
   },
   "published_post_keys": [
-    "lodydeals:45428",
     "megaphonna:8425",
     "lodydeals:45935",
     "aniscoupons:32980",
@@ -4036,11 +4037,12 @@
     "aniscoupons:34185",
     "aniscoupons:34186",
     "aniscoupons:34187",
-    "aniscoupons:34191"
+    "aniscoupons:34191",
+    "aniscoupons:34195"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794039534.2371004,
+  "last_run_time": 1794040635.1055257,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
@@ -4067,12 +4069,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39662,
-      "last_check_time": 1794040261.2695909
+      "last_message_id": 39663,
+      "last_check_time": 1794040631.8414702
     },
     "aniscoupons": {
-      "last_message_id": 34194,
-      "last_check_time": 1794040449.4476364
+      "last_message_id": 34196,
+      "last_check_time": 1794040640.7359872
     },
     "bnddeals": {
       "last_message_id": 51207,
@@ -16414,6 +16416,16 @@
       "price": 285.9,
       "timestamp": 1794039534.2371004,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34195": {
+      "channel_msg_id": 1970,
+      "product_id": "1005008357913212",
+      "title": "KOOTION SSD SATA",
+      "channel": "aniscoupons",
+      "source_msg_id": 34195,
+      "price": 40.5,
+      "timestamp": 1794040635.1055257,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16422,17 +16434,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794039537.469786,
+    "last_deal_post_time": 1794040641.6894207,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794040453.554032,
+    "last_sweep_time": 1794040644.550848,
     "last_sweep_times": {
-      "algeria": 1794040451.1599355,
-      "france": 1794040453.554032
+      "algeria": 1794040641.6671214,
+      "france": 1794040644.550848
     },
     "last_deal_post_times": {
-      "algeria": 1794039537.469786
+      "algeria": 1794040641.6894207
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17113,7 +17125,8 @@
     "1005008077441711": "zedstoreonline",
     "1005006411483066": "zedstoreonline",
     "1005012925301774": "zedstoreonline",
-    "1005012959738411": "aniscoupons"
+    "1005012959738411": "aniscoupons",
+    "1005008357913212": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -18753,8 +18766,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8453",
-    "megaphonna:8308",
     "zedstoreonline:39030",
     "lodydeals:45813",
     "pcgamingpart:8017",
@@ -19752,7 +19763,9 @@
     "bnddeals:51206",
     "zedstoreonline:39662",
     "aniscoupons:34194",
-    "bnddeals:51207"
+    "bnddeals:51207",
+    "zedstoreonline:39663",
+    "aniscoupons:34196"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
