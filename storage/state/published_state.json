@@ -1254,7 +1254,7 @@
     "1005010009130696": 1793613403.4444478,
     "1005013465751932": 1793613440.9413722,
     "1005011778223630": 1793613478.3592212,
-    "1005009231510301": 1793966745.9884162,
+    "1005009231510301": 1794045022.0356805,
     "1005011625723042": 1793613515.3490868,
     "1005006280695304": 1793613524.8970137,
     "1005010149868688": 1793613530.8342392,
@@ -2896,7 +2896,7 @@
     "Xiaomi Redmi 17 Smartphone 128G 256G ROM 120Hz 6.9\" Display 50MP 45W Turbo": 1793613465.8475375,
     "AMD Ryzen 5 7500F": 1793613478.3592212,
     "AMD Ryzen R9 9900X": 1793613486.2912338,
-    "Lenovo Xiaoxin Pad Pro GT  8/256": 1793966745.9884162,
+    "Lenovo Xiaoxin Pad Pro GT  8/256": 1794045022.0356805,
     "China Version Xiaomi WiFi Router Amplifier Pro": 1793613515.3490868,
     "SMAILWOLF RS7 Bluetooth wireless gaming mouse PAW3311 macro driver laptop": 1793613519.9635994,
     "Original Xiaomi Mi Small Backpack": 1793613524.8970137,
@@ -3043,7 +3043,6 @@
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627
   },
   "published_post_keys": [
-    "zedstoreonline:38577",
     "aniscoupons:32979",
     "lodydeals:45898",
     "ecksdeal:5891",
@@ -4042,11 +4041,12 @@
     "aniscoupons:34202",
     "zedstoreonline:39668",
     "aniscoupons:34203",
-    "aniscoupons:34204"
+    "aniscoupons:34204",
+    "zedstoreonline:39669"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794044840.8764274,
+  "last_run_time": 1794045022.0356805,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
@@ -4073,12 +4073,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39668,
-      "last_check_time": 1794044289.6309836
+      "last_message_id": 39669,
+      "last_check_time": 1794045024.0712352
     },
     "aniscoupons": {
-      "last_message_id": 34204,
-      "last_check_time": 1794044842.927018
+      "last_message_id": 34205,
+      "last_check_time": 1794045024.8950098
     },
     "bnddeals": {
       "last_message_id": 51214,
@@ -16480,6 +16480,16 @@
       "price": 24.8,
       "timestamp": 1794044840.8764274,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39669": {
+      "channel_msg_id": 1976,
+      "product_id": "1005009231510301",
+      "title": "Lenovo Xiaoxin Pad Pro GT  8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39669,
+      "price": 259.7,
+      "timestamp": 1794045022.0356805,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16488,17 +16498,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794044844.8652987,
+    "last_deal_post_time": 1794045025.534251,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794044847.4401152,
+    "last_sweep_time": 1794045028.1288207,
     "last_sweep_times": {
-      "algeria": 1794044844.842253,
-      "france": 1794044847.4401152
+      "algeria": 1794045025.5183704,
+      "france": 1794045028.1288207
     },
     "last_deal_post_times": {
-      "algeria": 1794044844.8652987
+      "algeria": 1794045025.534251
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -18822,7 +18832,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38603",
     "zedstoreonline:38683",
     "lodydeals:45747",
     "aniscoupons:33101",
@@ -19821,7 +19830,8 @@
     "zedstoreonline:39667",
     "bnddeals:51213",
     "lodydeals:46209",
-    "bnddeals:51214"
+    "bnddeals:51214",
+    "aniscoupons:34205"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
