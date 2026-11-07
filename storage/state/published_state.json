@@ -891,7 +891,7 @@
     "1005011557896041": 1793543627.8450525,
     "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
-    "1005007916078341": 1793992811.9341931,
+    "1005007916078341": 1794067316.3057165,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
     "1005013336240375": 1791968149.7952893,
@@ -2272,7 +2272,7 @@
     "4G LTE Wireless USB 150Mbps": 1794057675.8729835,
     "Curren 8455 Men's Quartz": 1790943640.1460688,
     "ATTACK SHARK X11SE": 1793558205.9468858,
-    "CMF Watch 3 Pro AMOLED": 1793728849.1757755,
+    "CMF Watch 3 Pro AMOLED": 1794067316.3057165,
     "Redmi Note 17 5G   6/256": 1790943667.90417,
     "Baseus USB Type C Charger 20W": 1791102355.4991398,
     "Honor Win Turbo 12/256BG": 1790943705.796801,
@@ -3069,7 +3069,6 @@
     "XUNYOU-LINK 4G SIM WiFi": 1794065862.849844
   },
   "published_post_keys": [
-    "ecksdeal:5938",
     "aniscoupons:33044",
     "zedstoreonline:38842",
     "pcgamingpart:7952",
@@ -4068,19 +4067,20 @@
     "zedstoreonline:39682",
     "lodydeals:46216",
     "bnddeals:51227",
-    "lodydeals:46223"
+    "lodydeals:46223",
+    "lodydeals:46225"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794065862.849844,
+  "last_run_time": 1794067316.3057165,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
       "last_check_time": 1794055834.6061237
     },
     "lodydeals": {
-      "last_message_id": 46224,
-      "last_check_time": 1794065864.9280374
+      "last_message_id": 46225,
+      "last_check_time": 1794067318.3415115
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4302,7 +4302,7 @@
     "1005011754993234": 79.58,
     "1005011735727412": 26.6,
     "1005013039644752": 265.7,
-    "1005007916078341": 48.9,
+    "1005007916078341": 48.91,
     "1005006506862816": 11.86,
     "1005008072923842": 2.21,
     "1005013336240375": 4.18,
@@ -16690,6 +16690,16 @@
       "price": 24.02,
       "timestamp": 1794065862.849844,
       "status": "ACTIVE"
+    },
+    "lodydeals:46225": {
+      "channel_msg_id": 1995,
+      "product_id": "1005007916078341",
+      "title": "CMF Watch 3 Pro AMOLED",
+      "channel": "lodydeals",
+      "source_msg_id": 46225,
+      "price": 48.91,
+      "timestamp": 1794067316.3057165,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16698,17 +16708,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794065867.1600683,
+    "last_deal_post_time": 1794067320.6538415,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794067137.194326,
+    "last_sweep_time": 1794067322.965852,
     "last_sweep_times": {
-      "algeria": 1794067134.358791,
-      "france": 1794067137.194326
+      "algeria": 1794067320.6381223,
+      "france": 1794067322.965852
     },
     "last_deal_post_times": {
-      "algeria": 1794065867.1600683
+      "algeria": 1794067320.6538415
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -16938,7 +16948,7 @@
     "1005011754993234": "ecksdeal",
     "1005011735727412": "bnddeals",
     "1005013039644752": "aniscoupons",
-    "1005007916078341": "aniscoupons",
+    "1005007916078341": "lodydeals",
     "1005006506862816": "couponsglobal",
     "1005008072923842": "pcgamingpart",
     "1005013336240375": "pcgamingpart",
