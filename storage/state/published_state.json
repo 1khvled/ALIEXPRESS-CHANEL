@@ -1308,7 +1308,7 @@
     "1005013205365677": 1793736440.319658,
     "1005008429979494": 1793741666.9686077,
     "1005004795387201": 1793742770.1634803,
-    "1005010702983351": 1793966856.3932962,
+    "1005010702983351": 1794037520.0568364,
     "1005008366962319": 1793969920.9023197,
     "1005005058037424": 1793779907.9964287,
     "1005012946895000": 1793793714.105913,
@@ -3002,7 +3002,7 @@
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1793966827.2695835,
     "Fifine Gaming Headset H9W": 1793966832.9435866,
     "Fifine Gaming Headset H6": 1793966837.4758828,
-    "HyperX Cloud 3 III Wired Gaming Headset": 1793966856.3932962,
+    "HyperX Cloud 3 III Wired Gaming Headset": 1794037520.0568364,
     "KOOTION SSD SATA": 1793966867.0400634,
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
     "هذون سماعات جدد من   HAYLOU⌚": 1793966887.3818936,
@@ -3035,7 +3035,6 @@
     "Hollyland LARK M2 DUO 2-Person": 1794036964.0036426
   },
   "published_post_keys": [
-    "aniscoupons:33220",
     "lodydeals:45926",
     "couponsglobal:48776",
     "megaphonna:8691",
@@ -4034,11 +4033,12 @@
     "zedstoreonline:39659",
     "lodydeals:46204",
     "lodydeals:46206",
-    "aniscoupons:34183"
+    "aniscoupons:34183",
+    "aniscoupons:34185"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794036964.0036426,
+  "last_run_time": 1794037520.0568364,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
@@ -4069,12 +4069,12 @@
       "last_check_time": 1794008637.578994
     },
     "aniscoupons": {
-      "last_message_id": 34184,
-      "last_check_time": 1794037333.4381196
+      "last_message_id": 34185,
+      "last_check_time": 1794037522.0972831
     },
     "bnddeals": {
-      "last_message_id": 51203,
-      "last_check_time": 1794003633.2238019
+      "last_message_id": 51204,
+      "last_check_time": 1794037523.657832
     }
   },
   "published_product_prices": {
@@ -16372,6 +16372,16 @@
       "price": 68.79,
       "timestamp": 1794036964.0036426,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34185": {
+      "channel_msg_id": 1966,
+      "product_id": "1005010702983351",
+      "title": "HyperX Cloud 3 III Wired Gaming Headset",
+      "channel": "aniscoupons",
+      "source_msg_id": 34185,
+      "price": 69.6,
+      "timestamp": 1794037520.0568364,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16380,17 +16390,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794036966.708711,
+    "last_deal_post_time": 1794037523.6944602,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794037336.6105232,
+    "last_sweep_time": 1794037526.5679982,
     "last_sweep_times": {
-      "algeria": 1794037334.2396169,
-      "france": 1794037336.6105232
+      "algeria": 1794037523.676305,
+      "france": 1794037526.5679982
     },
     "last_deal_post_times": {
-      "algeria": 1794036966.708711
+      "algeria": 1794037523.6944602
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -18710,7 +18720,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "couponsglobal:48857",
     "pcgamingpart:8004",
     "aniscoupons:33361",
     "couponsglobal:48860",
@@ -19709,7 +19718,8 @@
     "lodydeals:46205",
     "zedstoreonline:39661",
     "aniscoupons:34182",
-    "aniscoupons:34184"
+    "aniscoupons:34184",
+    "bnddeals:51204"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
