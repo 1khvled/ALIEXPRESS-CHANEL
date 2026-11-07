@@ -16369,10 +16369,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794029830.9773014,
+    "last_sweep_time": 1794030016.2039485,
     "last_sweep_times": {
-      "algeria": 1794029828.284885,
-      "france": 1794029830.9773014
+      "algeria": 1794030013.2478213,
+      "france": 1794030016.2039485
     },
     "last_deal_post_times": {
       "algeria": 1794004763.4434867
@@ -19694,9 +19694,9 @@
     "zedstoreonline:39661",
     "aniscoupons:34182"
   ],
-  "last_france_cross_promo_time": 1793779890.1987555,
-  "next_france_cross_promo_interval_seconds": 175459,
-  "france_cross_promo_variant_idx": 3,
+  "last_france_cross_promo_time": 1794030002.0118742,
+  "next_france_cross_promo_interval_seconds": 262587,
+  "france_cross_promo_variant_idx": 0,
   "published_coupon_bulletins": [
     {
       "promo": "Test Event 2026",
