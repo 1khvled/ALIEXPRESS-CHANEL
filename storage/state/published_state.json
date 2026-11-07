@@ -1079,7 +1079,7 @@
     "1005010035309013": 1793554752.7954907,
     "1005010385472500": 1793448762.165183,
     "1005011779814585": 1793613414.4818656,
-    "1005013090910574": 1794069334.6949534,
+    "1005013090910574": 1794085849.5386124,
     "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793543612.279949,
     "1005012910719451": 1793735519.3537216,
@@ -2421,7 +2421,7 @@
     "CMF Smart Watch 3 pro AMOLED": 1793992811.9341931,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
-    "OPPO A6 Pro 8/256GB": 1794069334.6949534,
+    "OPPO A6 Pro 8/256GB": 1794085849.5386124,
     "ATTACK SHARK X1  Tri-Mode": 1791117948.6585228,
     "HILDA 2 Lines Laser Level Green": 1791124852.3122299,
     "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": 1791125437.8944824,
@@ -3107,7 +3107,6 @@
     "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop": 1794079928.0765662
   },
   "published_post_keys": [
-    "test_channel:1793541403",
     "test_channel:1792324181",
     "lodydeals:45407",
     "test_channel:1791677197",
@@ -4106,11 +4105,12 @@
     "lodydeals:46233",
     "lodydeals:46234",
     "aniscoupons:34255",
-    "aniscoupons:34256"
+    "aniscoupons:34256",
+    "aniscoupons:34259"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794079932.1547406,
+  "last_run_time": 1794085849.5386124,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4141,8 +4141,8 @@
       "last_check_time": 1794085483.4893012
     },
     "aniscoupons": {
-      "last_message_id": 34258,
-      "last_check_time": 1794085667.3973005
+      "last_message_id": 34259,
+      "last_check_time": 1794085851.6392202
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -16954,6 +16954,16 @@
       "price": 19.5,
       "timestamp": 1794079932.1547406,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34259": {
+      "channel_msg_id": 2017,
+      "product_id": "1005013090910574",
+      "title": "OPPO A6 Pro 8/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34259,
+      "price": 192.7,
+      "timestamp": 1794085849.5386124,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16962,17 +16972,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794079935.0011003,
+    "last_deal_post_time": 1794085852.3310463,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794085671.4206505,
+    "last_sweep_time": 1794085855.0979493,
     "last_sweep_times": {
-      "algeria": 1794085668.0400126,
-      "france": 1794085671.4206505
+      "algeria": 1794085852.3042386,
+      "france": 1794085855.0979493
     },
     "last_deal_post_times": {
-      "algeria": 1794079935.0011003
+      "algeria": 1794085852.3310463
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
