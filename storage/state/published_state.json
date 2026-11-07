@@ -670,7 +670,8 @@
     "1005008357913212",
     "1005008703989845",
     "1005007162099601",
-    "1005007038130594"
+    "1005007038130594",
+    "1005008248187128"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1355,7 +1356,8 @@
     "1005008357913212": 1794040635.1055257,
     "1005008703989845": 1794044840.8764274,
     "1005007162099601": 1794046115.3557825,
-    "1005007038130594": 1794046667.9804564
+    "1005007038130594": 1794046667.9804564,
+    "1005008248187128": 1794057675.8729835
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2259,7 +2261,7 @@
     "Honor X70 5G 8/128": 1792077689.3824542,
     "Blackview MEGA 5  8/256": 1793973036.340303,
     "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1793542591.509991,
-    "4G LTE Wireless USB 150Mbps": 1790943633.9774187,
+    "4G LTE Wireless USB 150Mbps": 1794057675.8729835,
     "Curren 8455 Men's Quartz": 1790943640.1460688,
     "ATTACK SHARK X11SE": 1793558205.9468858,
     "CMF Watch 3 Pro AMOLED": 1793728849.1757755,
@@ -3053,7 +3055,6 @@
     "KOOTION SSD SATA  240GB": 1794051434.2488248
   },
   "published_post_keys": [
-    "lodydeals:45413",
     "aniscoupons:33286",
     "zedstoreonline:38747",
     "megaphonna:8587",
@@ -4052,11 +4053,12 @@
     "aniscoupons:34208",
     "aniscoupons:34210",
     "aniscoupons:34217",
-    "ecksdeal:6043"
+    "ecksdeal:6043",
+    "lodydeals:46214"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794055832.565326,
+  "last_run_time": 1794057675.8729835,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4064,7 +4066,7 @@
     },
     "lodydeals": {
       "last_message_id": 46214,
-      "last_check_time": 1794051428.66614
+      "last_check_time": 1794057675.8729835
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4667,7 +4669,8 @@
     "1005012925301774": 11.2,
     "1005012959738411": 68.79,
     "1005007162099601": 32.87,
-    "1005007038130594": 12.03
+    "1005007038130594": 12.03,
+    "1005008248187128": 4.49
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16582,6 +16585,16 @@
       "price": 16.1,
       "timestamp": 1794055832.565326,
       "status": "ACTIVE"
+    },
+    "lodydeals:46214": {
+      "channel_msg_id": 1985,
+      "product_id": "1005008248187128",
+      "title": "4G LTE Wireless USB 150Mbps",
+      "channel": "lodydeals",
+      "source_msg_id": 46214,
+      "price": 4.49,
+      "timestamp": 1794057675.8729835,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16590,17 +16603,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794055836.8782985,
+    "last_deal_post_time": 1794057680.4304988,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794057491.051804,
+    "last_sweep_time": 1794057683.1552622,
     "last_sweep_times": {
-      "algeria": 1794057487.9154937,
-      "france": 1794057491.051804
+      "algeria": 1794057680.4061782,
+      "france": 1794057683.1552622
     },
     "last_deal_post_times": {
-      "algeria": 1794055836.8782985
+      "algeria": 1794057680.4304988
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17285,7 +17298,8 @@
     "1005008357913212": "aniscoupons",
     "1005008703989845": "aniscoupons",
     "1005007162099601": "lodydeals",
-    "1005007038130594": "lodydeals"
+    "1005007038130594": "lodydeals",
+    "1005008248187128": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -18930,7 +18944,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "pcgamingpart:8018",
     "megaphonna:8497",
     "megaphonna:8386",
     "bnddeals:50868",
@@ -19929,7 +19942,8 @@
     "bnddeals:51224",
     "zedstoreonline:39679",
     "aniscoupons:34226",
-    "zedstoreonline:39680"
+    "zedstoreonline:39680",
+    "lodydeals:46213"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
