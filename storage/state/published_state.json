@@ -674,7 +674,8 @@
     "1005008248187128",
     "1005013053381984",
     "1005008060391372",
-    "1005010209911111"
+    "1005010209911111",
+    "1005008295555234"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1345,9 +1346,9 @@
     "1005012691642623": 1793976348.7503736,
     "1005010266233059": 1793977272.9654846,
     "1005007469003552": 1793982290.6109207,
-    "1005010041181003": 1794043565.318146,
+    "1005010041181003": 1794073141.3253567,
     "1005010265542567": 1793982853.0323274,
-    "1005003156756854": 1793983598.810499,
+    "1005003156756854": 1794073132.3964775,
     "1005010142208108": 1793987278.5140982,
     "1005008534907844": 1793987285.4130383,
     "1005009577554629": 1793987289.8200357,
@@ -1363,7 +1364,8 @@
     "1005008248187128": 1794057675.8729835,
     "1005013053381984": 1794060065.5449874,
     "1005008060391372": 1794067512.4027624,
-    "1005010209911111": 1794068056.674266
+    "1005010209911111": 1794068056.674266,
+    "1005008295555234": 1794073127.8664527
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2217,7 +2219,9 @@
     "XUNYOU-LINK 4G SIM WiFi",
     "BlackShark GS3 Ultra New",
     "KOOTION SSD SATA  256GB",
-    "MSI AMD A520M-A PRO"
+    "MSI AMD A520M-A PRO",
+    "1MORE SonoFlow Pro HQ51",
+    "Ulanzi ST-06S Vertical Shooting"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3049,7 +3053,7 @@
     "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
     "ميكروفون Ulanzi A100 لاسلكي صغير": 1793982290.6109207,
-    "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794043565.318146,
+    "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794073141.3253567,
     "Ulanzi A200 Mini Wireless Lavalier Microphone": 1793982853.0323274,
     "حامل هاتف Ulanzi ST-06S": 1793983598.810499,
     "AULA MINI60 HE PRO": 1793987278.5140982,
@@ -3076,12 +3080,11 @@
     "XUNYOU-LINK 4G SIM WiFi": 1794065862.849844,
     "BlackShark GS3 Ultra New": 1794068056.674266,
     "KOOTION SSD SATA  256GB": 1794071284.8947144,
-    "MSI AMD A520M-A PRO": 1794072944.774369
+    "MSI AMD A520M-A PRO": 1794072944.774369,
+    "1MORE SonoFlow Pro HQ51": 1794073127.8664527,
+    "Ulanzi ST-06S Vertical Shooting": 1794073132.3964775
   },
   "published_post_keys": [
-    "pcgamingpart:7953",
-    "bnddeals:50799",
-    "lodydeals:45480",
     "lodydeals:45769",
     "lodydeals:45451",
     "lodydeals:45473",
@@ -4078,19 +4081,22 @@
     "aniscoupons:34238",
     "aniscoupons:34239",
     "aniscoupons:34240",
-    "lodydeals:46228"
+    "lodydeals:46228",
+    "lodydeals:46229",
+    "lodydeals:46230",
+    "aniscoupons:34242"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794072944.774369,
+  "last_run_time": 1794073141.3253567,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
       "last_check_time": 1794055834.6061237
     },
     "lodydeals": {
-      "last_message_id": 46228,
-      "last_check_time": 1794072946.8336227
+      "last_message_id": 46230,
+      "last_check_time": 1794073134.4493194
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4113,8 +4119,8 @@
       "last_check_time": 1794072949.4954758
     },
     "aniscoupons": {
-      "last_message_id": 34241,
-      "last_check_time": 1794072022.4695954
+      "last_message_id": 34242,
+      "last_check_time": 1794073143.3793905
     },
     "bnddeals": {
       "last_message_id": 51230,
@@ -4684,7 +4690,7 @@
     "1005007469003552": 17.1,
     "1005010041181003": 167.8,
     "1005010265542567": 23.89,
-    "1005003156756854": 10.8,
+    "1005003156756854": 10.85,
     "1005010142208108": 37.5,
     "1005008534907844": 50.86,
     "1005009577554629": 10.55,
@@ -4696,7 +4702,8 @@
     "1005007038130594": 12.03,
     "1005008248187128": 4.49,
     "1005013053381984": 254.11,
-    "1005010209911111": 40.6
+    "1005010209911111": 40.6,
+    "1005008295555234": 59.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16801,6 +16808,36 @@
       "price": 58.11,
       "timestamp": 1794072944.774369,
       "status": "ACTIVE"
+    },
+    "lodydeals:46229": {
+      "channel_msg_id": 2005,
+      "product_id": "1005008295555234",
+      "title": "1MORE SonoFlow Pro HQ51",
+      "channel": "lodydeals",
+      "source_msg_id": 46229,
+      "price": 59.5,
+      "timestamp": 1794073127.8664527,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46230": {
+      "channel_msg_id": 2006,
+      "product_id": "1005003156756854",
+      "title": "Ulanzi ST-06S Vertical Shooting",
+      "channel": "lodydeals",
+      "source_msg_id": 46230,
+      "price": 10.85,
+      "timestamp": 1794073132.3964775,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34242": {
+      "channel_msg_id": 2007,
+      "product_id": "1005010041181003",
+      "title": "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34242,
+      "price": 167.8,
+      "timestamp": 1794073141.3253567,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16809,17 +16846,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794072950.6859722,
+    "last_deal_post_time": 1794073144.4564826,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794072953.0246837,
+    "last_sweep_time": 1794073147.0486648,
     "last_sweep_times": {
-      "algeria": 1794072950.6620314,
-      "france": 1794072953.0246837
+      "algeria": 1794073144.4252973,
+      "france": 1794073147.0486648
     },
     "last_deal_post_times": {
-      "algeria": 1794072950.6859722
+      "algeria": 1794073144.4564826
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17492,7 +17529,7 @@
     "1005007469003552": "zedstoreonline",
     "1005010041181003": "aniscoupons",
     "1005010265542567": "aniscoupons",
-    "1005003156756854": "zedstoreonline",
+    "1005003156756854": "lodydeals",
     "1005010142208108": "lodydeals",
     "1005008534907844": "lodydeals",
     "1005009577554629": "lodydeals",
@@ -17508,7 +17545,8 @@
     "1005008248187128": "lodydeals",
     "1005013053381984": "aniscoupons",
     "1005008060391372": "aniscoupons",
-    "1005010209911111": "bnddeals"
+    "1005010209911111": "bnddeals",
+    "1005008295555234": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -18368,7 +18406,9 @@
     "XUNYOU-LINK 4G SIM WiFi": "lodydeals",
     "BlackShark GS3 Ultra New": "bnddeals",
     "KOOTION SSD SATA  256GB": "aniscoupons",
-    "MSI AMD A520M-A PRO": "lodydeals"
+    "MSI AMD A520M-A PRO": "lodydeals",
+    "1MORE SonoFlow Pro HQ51": "lodydeals",
+    "Ulanzi ST-06S Vertical Shooting": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
