@@ -1266,7 +1266,7 @@
     "1005011625723042": 1793613515.3490868,
     "1005006280695304": 1793613524.8970137,
     "1005010149868688": 1793613530.8342392,
-    "1005007060644375": 1793966794.01192,
+    "1005007060644375": 1794076070.3822317,
     "1005012741268303": 1793613890.9637206,
     "1005010285419688": 1793613895.6129942,
     "1005007805750092": 1793613900.590816,
@@ -3035,7 +3035,7 @@
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": 1793966727.646043,
     "GameSir X5 Lite Game Controller": 1793966734.5622914,
     "Netac SSD NVME M2 250GB": 1793966752.4109294,
-    "Essager 20W GaN + cable": 1793966794.01192,
+    "Essager 20W GaN + cable": 1794076070.3822317,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794044840.8764274,
     "Fifine Gaming Headset H9W": 1794068051.714454,
@@ -3091,7 +3091,6 @@
     "CUSU 512GB External SSD Drive": 1794075516.7789276
   },
   "published_post_keys": [
-    "lodydeals:45473",
     "aniscoupons:32736",
     "pcgamingpart:7980",
     "aniscoupons:32731",
@@ -4090,11 +4089,12 @@
     "lodydeals:46230",
     "aniscoupons:34242",
     "zedstoreonline:39694",
-    "aniscoupons:34245"
+    "aniscoupons:34245",
+    "aniscoupons:34247"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794075516.7789276,
+  "last_run_time": 1794076070.3822317,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4125,8 +4125,8 @@
       "last_check_time": 1794075699.6914537
     },
     "aniscoupons": {
-      "last_message_id": 34246,
-      "last_check_time": 1794075701.4081082
+      "last_message_id": 34247,
+      "last_check_time": 1794076072.4236882
     },
     "bnddeals": {
       "last_message_id": 51230,
@@ -16865,6 +16865,16 @@
       "price": 41.5,
       "timestamp": 1794075516.7789276,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34247": {
+      "channel_msg_id": 2010,
+      "product_id": "1005007060644375",
+      "title": "Essager 20W GaN + cable",
+      "channel": "aniscoupons",
+      "source_msg_id": 34247,
+      "price": 3.2,
+      "timestamp": 1794076070.3822317,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16873,17 +16883,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794075519.456052,
+    "last_deal_post_time": 1794076073.276809,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794075886.3457124,
+    "last_sweep_time": 1794076076.05975,
     "last_sweep_times": {
-      "algeria": 1794075883.8137817,
-      "france": 1794075886.3457124
+      "algeria": 1794076073.2580652,
+      "france": 1794076076.05975
     },
     "last_deal_post_times": {
-      "algeria": 1794075519.456052
+      "algeria": 1794076073.276809
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
