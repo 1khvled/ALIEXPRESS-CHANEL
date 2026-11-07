@@ -1239,7 +1239,7 @@
     "1005009569642817": 1794004758.429218,
     "1005013438789813": 1793569553.2022223,
     "1005012823102793": 1793569904.419889,
-    "1005012773302941": 1794043557.929627,
+    "1005012773302941": 1794078084.8778791,
     "1005008430147176": 1793707072.0357203,
     "1005011742851856": 1793793769.5631576,
     "1005006304425302": 1793656107.995781,
@@ -2893,7 +2893,7 @@
     "Realme Neo 8  12/256GB": 1793569553.2022223,
     "Blackview MEGA 5 AI 8/256GB": 1793569904.419889,
     "Anker Nano Smart Display 45W": 1793570287.0210865,
-    "Zeblaze Btalk 4 Pro": 1794003254.1339376,
+    "Zeblaze Btalk 4 Pro": 1794078084.8778791,
     "Anker Soundcore 2": 1793571013.3288968,
     "MACHENIKE G5Pro Max SE": 1793571550.5645735,
     "MACHENIKE G1 Gaming": 1793707072.0357203,
@@ -3099,7 +3099,6 @@
     "EPOMAKER X AULA F87 Pro": 1794077543.1413288
   },
   "published_post_keys": [
-    "aniscoupons:32731",
     "lodydeals:45471",
     "aniscoupons:32960",
     "pcgamingpart:7940",
@@ -4098,19 +4097,20 @@
     "aniscoupons:34245",
     "aniscoupons:34247",
     "aniscoupons:34248",
-    "lodydeals:46232"
+    "lodydeals:46232",
+    "lodydeals:46233"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794077543.1413288,
+  "last_run_time": 1794078084.8778791,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
       "last_check_time": 1794055834.6061237
     },
     "lodydeals": {
-      "last_message_id": 46232,
-      "last_check_time": 1794077545.1930535
+      "last_message_id": 46233,
+      "last_check_time": 1794078086.9156518
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -16904,6 +16904,16 @@
       "price": 37.8,
       "timestamp": 1794077543.1413288,
       "status": "ACTIVE"
+    },
+    "lodydeals:46233": {
+      "channel_msg_id": 2013,
+      "product_id": "1005012773302941",
+      "title": "Zeblaze Btalk 4 Pro",
+      "channel": "lodydeals",
+      "source_msg_id": 46233,
+      "price": 17.06,
+      "timestamp": 1794078084.8778791,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16912,17 +16922,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794077549.125434,
+    "last_deal_post_time": 1794078088.941531,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794077894.7034633,
+    "last_sweep_time": 1794078091.4230394,
     "last_sweep_times": {
-      "algeria": 1794077892.2230635,
-      "france": 1794077894.7034633
+      "algeria": 1794078088.9268968,
+      "france": 1794078091.4230394
     },
     "last_deal_post_times": {
-      "algeria": 1794077549.125434
+      "algeria": 1794078088.941531
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
