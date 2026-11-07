@@ -1158,7 +1158,7 @@
     "1005008518280704": 1793707081.0327315,
     "1005010527736444": 1793478769.6023057,
     "1005013450996845": 1793543981.0397952,
-    "1005013144753309": 1793987273.8309157,
+    "1005013144753309": 1794091436.6772544,
     "1005012061152213": 1793490079.2945042,
     "1005012519569107": 1793490085.1205146,
     "1005006996991698": 1793542450.420599,
@@ -2781,7 +2781,7 @@
     "Blackview MEGA 12  12/256": 1793478769.6023057,
     "Lenovo Xiaoxin Pad Pro 2025 12.7  inch": 1793478774.2399445,
     "HONOR Pad V9  8/256": 1793478779.2331614,
-    "Blackview LINK 1 Kids": 1793987273.8309157,
+    "Blackview LINK 1 Kids": 1794091436.6772544,
     "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": 1793490079.2945042,
     "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": 1793490090.28376,
     "POCO Pad C1 4/64": 1793490102.028307,
@@ -3111,7 +3111,6 @@
     "SOUNDPEATS Air6 HS": 1794087501.0429602
   },
   "published_post_keys": [
-    "test_channel:1792157808",
     "ecksdeal:5966",
     "aniscoupons:32757",
     "aniscoupons:32714",
@@ -4110,11 +4109,12 @@
     "aniscoupons:34260",
     "lodydeals:46237",
     "zedstoreonline:39704",
-    "aniscoupons:34262"
+    "aniscoupons:34262",
+    "zedstoreonline:39706"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794091251.586213,
+  "last_run_time": 1794091436.6772544,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4141,8 +4141,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39705,
-      "last_check_time": 1794090508.4892647
+      "last_message_id": 39706,
+      "last_check_time": 1794091438.720617
     },
     "aniscoupons": {
       "last_message_id": 34262,
@@ -4538,7 +4538,7 @@
     "1005010527736444": 298.0,
     "1005013450996845": 212.09,
     "1005012171521680": 287.26,
-    "1005013144753309": 92.78,
+    "1005013144753309": 92.7,
     "1005012061152213": 58.3,
     "1005012519569107": 10.6,
     "1005006996991698": 20.84,
@@ -17019,6 +17019,16 @@
       "price": 40.5,
       "timestamp": 1794091251.586213,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39706": {
+      "channel_msg_id": 2023,
+      "product_id": "1005013144753309",
+      "title": "Blackview LINK 1 Kids",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39706,
+      "price": 92.7,
+      "timestamp": 1794091436.6772544,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17027,17 +17037,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794091254.49994,
+    "last_deal_post_time": 1794091439.970853,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794091258.087069,
+    "last_sweep_time": 1794091442.887216,
     "last_sweep_times": {
-      "algeria": 1794091254.4810407,
-      "france": 1794091258.087069
+      "algeria": 1794091439.951436,
+      "france": 1794091442.887216
     },
     "last_deal_post_times": {
-      "algeria": 1794091254.49994
+      "algeria": 1794091439.970853
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17525,7 +17535,7 @@
     "1005010527736444": "zedstoreonline",
     "1005013450996845": "lodydeals",
     "1005012171521680": "aniscoupons",
-    "1005013144753309": "lodydeals",
+    "1005013144753309": "zedstoreonline",
     "1005012061152213": "zedstoreonline",
     "1005012519569107": "zedstoreonline",
     "1005006996991698": "lodydeals",
@@ -18280,7 +18290,7 @@
     "Blackview MEGA 12  12/256": "zedstoreonline",
     "Lenovo Xiaoxin Pad Pro 2025 12.7  inch": "zedstoreonline",
     "HONOR Pad V9  8/256": "zedstoreonline",
-    "Blackview LINK 1 Kids": "lodydeals",
+    "Blackview LINK 1 Kids": "zedstoreonline",
     "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": "zedstoreonline",
     "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": "zedstoreonline",
     "POCO Pad C1 4/64": "zedstoreonline",
