@@ -1265,7 +1265,7 @@
     "1005010285419688": 1793613895.6129942,
     "1005007805750092": 1793613900.590816,
     "1005006966360399": 1793613905.8870661,
-    "1005010706590867": 1793707094.3712285,
+    "1005010706590867": 1794055832.565326,
     "1005010428947440": 1793613916.2199864,
     "1005010585654037": 1793613921.841963,
     "1005013137304827": 1793613926.9213502,
@@ -2217,7 +2217,7 @@
     "Realme 15 Pro Global (8/256)": 1790884233.6428,
     "Poco C71 3/64GB": 1791192360.1916943,
     "سماعات لاسلكية Attack Shark L80 PRO Wireless": 1791206142.4737842,
-    "ماوس لاسلكي Attack Shark R1 Wireless": 1790884299.0959656,
+    "ماوس لاسلكي Attack Shark R1 Wireless": 1794055832.565326,
     "ماوس لاسلكي مع شاحن Attack Shark X1 Wireless": 1790884310.7506618,
     "معالج AMD Ryzen R7 5700X جديد! بتردد 3.4 جيجاهرتز، ثماني النواة وستة عشر": 1790888057.5668976,
     "معالج AMD Ryzen 5 7500F مستعمل، 6 نوى/12 خيط، 65 واط، 5 نانومتر، ذاكرة": 1790888097.0085742,
@@ -3053,7 +3053,6 @@
     "KOOTION SSD SATA  240GB": 1794051434.2488248
   },
   "published_post_keys": [
-    "megaphonna:8599",
     "lodydeals:45413",
     "aniscoupons:33286",
     "zedstoreonline:38747",
@@ -4052,15 +4051,16 @@
     "lodydeals:46212",
     "aniscoupons:34208",
     "aniscoupons:34210",
-    "aniscoupons:34217"
+    "aniscoupons:34217",
+    "ecksdeal:6043"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794051434.2488248,
+  "last_run_time": 1794055832.565326,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6042,
-      "last_check_time": 1793995904.1814108
+      "last_message_id": 6043,
+      "last_check_time": 1794055834.6061237
     },
     "lodydeals": {
       "last_message_id": 46214,
@@ -16572,6 +16572,16 @@
       "price": 15.1,
       "timestamp": 1794051434.2488248,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6043": {
+      "channel_msg_id": 1984,
+      "product_id": "1005010706590867",
+      "title": "ماوس لاسلكي Attack Shark R1 Wireless",
+      "channel": "ecksdeal",
+      "source_msg_id": 6043,
+      "price": 16.1,
+      "timestamp": 1794055832.565326,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16580,17 +16590,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794051438.3240461,
+    "last_deal_post_time": 1794055836.8782985,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794055652.9172559,
+    "last_sweep_time": 1794055838.9270024,
     "last_sweep_times": {
-      "algeria": 1794055650.4710727,
-      "france": 1794055652.9172559
+      "algeria": 1794055836.8599548,
+      "france": 1794055838.9270024
     },
     "last_deal_post_times": {
-      "algeria": 1794051438.3240461
+      "algeria": 1794055836.8782985
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17198,7 +17208,7 @@
     "1005007060644375": "aniscoupons",
     "1005007805750092": "aniscoupons",
     "1005006966360399": "aniscoupons",
-    "1005010706590867": "lodydeals",
+    "1005010706590867": "ecksdeal",
     "1005012648097890": "aniscoupons",
     "1005012871436251": "lodydeals",
     "1005009504965110": "lodydeals",
@@ -18125,7 +18135,8 @@
     "Zeblaze Btalk 4 Pro السعر : 17.06": "lodydeals",
     "HyperX Cloud Earbuds II 2 Gaming Earphone": "zedstoreonline",
     "Essager 30W Car Charger": "lodydeals",
-    "KOOTION SSD SATA  240GB": "aniscoupons"
+    "KOOTION SSD SATA  240GB": "aniscoupons",
+    "ماوس لاسلكي Attack Shark R1 Wireless": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
