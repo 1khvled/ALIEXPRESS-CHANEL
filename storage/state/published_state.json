@@ -669,7 +669,8 @@
     "1005012959738411",
     "1005008357913212",
     "1005008703989845",
-    "1005007162099601"
+    "1005007162099601",
+    "1005007038130594"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1353,7 +1354,8 @@
     "1005012959738411": 1794036964.0036426,
     "1005008357913212": 1794040635.1055257,
     "1005008703989845": 1794044840.8764274,
-    "1005007162099601": 1794046115.3557825
+    "1005007162099601": 1794046115.3557825,
+    "1005007038130594": 1794046667.9804564
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2196,7 +2198,8 @@
     "Hollyland LARK M2 DUO 2-Person",
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI",
     "Zeblaze Btalk 4 Pro السعر : 17.06",
-    "HyperX Cloud Earbuds II 2 Gaming Earphone"
+    "HyperX Cloud Earbuds II 2 Gaming Earphone",
+    "Essager 30W Car Charger"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3044,10 +3047,10 @@
     "Hollyland LARK M2 DUO 2-Person": 1794036964.0036426,
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794038258.8331141,
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627,
-    "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794046485.9160285
+    "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794046485.9160285,
+    "Essager 30W Car Charger": 1794046667.9804564
   },
   "published_post_keys": [
-    "lodydeals:45418",
     "lodydeals:45439",
     "zedstoreonline:38844",
     "zedstoreonline:38518",
@@ -4046,19 +4049,20 @@
     "zedstoreonline:39669",
     "aniscoupons:34206",
     "lodydeals:46211",
-    "zedstoreonline:39671"
+    "zedstoreonline:39671",
+    "lodydeals:46212"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794046485.9160285,
+  "last_run_time": 1794046667.9804564,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
       "last_check_time": 1793995904.1814108
     },
     "lodydeals": {
-      "last_message_id": 46211,
-      "last_check_time": 1794046117.3971117
+      "last_message_id": 46212,
+      "last_check_time": 1794046670.0329072
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4660,7 +4664,8 @@
     "1005008077441711": 7.6,
     "1005012925301774": 11.2,
     "1005012959738411": 68.79,
-    "1005007162099601": 32.87
+    "1005007162099601": 32.87,
+    "1005007038130594": 12.03
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16525,6 +16530,16 @@
       "price": 18.1,
       "timestamp": 1794046485.9160285,
       "status": "ACTIVE"
+    },
+    "lodydeals:46212": {
+      "channel_msg_id": 1980,
+      "product_id": "1005007038130594",
+      "title": "Essager 30W Car Charger",
+      "channel": "lodydeals",
+      "source_msg_id": 46212,
+      "price": 12.03,
+      "timestamp": 1794046667.9804564,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16533,17 +16548,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794046489.3472824,
+    "last_deal_post_time": 1794046673.4398768,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794046491.9665244,
+    "last_sweep_time": 1794046676.6155066,
     "last_sweep_times": {
-      "algeria": 1794046489.330717,
-      "france": 1794046491.9665244
+      "algeria": 1794046673.4154427,
+      "france": 1794046676.6155066
     },
     "last_deal_post_times": {
-      "algeria": 1794046489.3472824
+      "algeria": 1794046673.4398768
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17227,7 +17242,8 @@
     "1005012959738411": "aniscoupons",
     "1005008357913212": "aniscoupons",
     "1005008703989845": "aniscoupons",
-    "1005007162099601": "lodydeals"
+    "1005007162099601": "lodydeals",
+    "1005007038130594": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -18075,7 +18091,8 @@
     "Hollyland LARK M2 DUO 2-Person": "aniscoupons",
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": "aniscoupons",
     "Zeblaze Btalk 4 Pro السعر : 17.06": "lodydeals",
-    "HyperX Cloud Earbuds II 2 Gaming Earphone": "zedstoreonline"
+    "HyperX Cloud Earbuds II 2 Gaming Earphone": "zedstoreonline",
+    "Essager 30W Car Charger": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
