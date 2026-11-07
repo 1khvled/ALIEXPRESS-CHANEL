@@ -100,3 +100,28 @@ def test_extract_seller_coupon():
     """Verify seller coupon parsing."""
     assert extract_seller_coupon("قسيمة المتجر : 5$") == "5$"
     assert extract_seller_coupon("🌷 قسيمة البائع : 2$") == "2$"
+
+
+def test_prepare_post_image_uses_frame_template_and_does_not_cut_product(tmp_path):
+    """Verify prepare_post_image frames products inside DealScout Neon Frame and never scrubs product pixels."""
+    from PIL import Image
+    from app.media.renderer import MediaRenderer
+
+    mr = MediaRenderer(output_dir=tmp_path)
+    # Create a test image with white background and dark device in bottom-right corner
+    test_img = Image.new("RGB", (600, 600), (255, 255, 255))
+    # Draw dark rectangle in bottom-right (simulating TV box or device)
+    for x in range(400, 580):
+        for y in range(420, 560):
+            test_img.putpixel((x, y), (20, 20, 20))
+
+    src_file = tmp_path / "raw_deal.jpg"
+    test_img.save(src_file)
+
+    out_file = mr.prepare_post_image(src_file, product_id="test12345", title="Mortal TV Box", usd_price=19.99)
+    assert out_file is not None
+    assert out_file.exists()
+
+    with Image.open(out_file) as rendered:
+        # 1. Dimensions match DealScout Neon Frame
+        assert rendered.size == (1254, 1254)

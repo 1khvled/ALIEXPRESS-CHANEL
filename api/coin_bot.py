@@ -390,9 +390,11 @@ def ensure_affiliate(link: Optional[str], fallback_link: Optional[str] = None, p
     if "s.click.aliexpress.com" in target or "/e/_" in target or "/e/" in target:
         return target
 
-    # Never allow raw coin-index links in channel posts (they lead to empty coin exchange tabs)
-    if "coin-index" in target and pid:
-        return f"https://www.aliexpress.com/item/{pid}.html?aff_fcid={tracking_id}"
+    if "coin-index" in target:
+        if "aff_fcid=" not in target:
+            sep = "&" if "?" in target else "?"
+            return f"{target}{sep}aff_fcid={tracking_id}"
+        return target
 
     # Plain raw URLs can adopt official s.click fallback, but never promotional landing pages
     if not is_promotional_ali_url(target) and fallback_link and ("s.click.aliexpress.com" in fallback_link or "/e/" in fallback_link):

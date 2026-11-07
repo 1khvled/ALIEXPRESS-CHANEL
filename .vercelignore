@@ -14,12 +14,19 @@ pytest.ini
 test_*.jpg
 debug_*.txt
 
-# Telegram Bot Runtime Storage (88+ MB excluded from Vercel)
+# Telegram Bot Runtime Storage (110+ MB excluded from Vercel)
 storage/downloads/
 storage/generated/
 storage/assets/
-storage/official_calendar_october_2026.jpg
-storage/deals.db
+storage/*.jpg
+storage/*.png
+storage/*.db
+storage/*.sqlite*
+storage/*.session*
+storage/state/published_state.json
+storage/state/facebook_published_state.json
+storage/state/france_published_state.json
+storage/state/group_bulletins_state.json
 deals.db
 *.db
 *.db-journal
@@ -30,22 +37,24 @@ sessions/
 last_disclaimer_pinned.txt
 app/publisher/last_disclaimer_pinned.txt
 
-# Telegram Channel PIL Graphic Banners & Overlay Templates (Not used by Web App)
-assets/bot_promo_banner.png
-assets/bot_promo_banner.jpg
-assets/tajmi3at_banner.png
-assets/tajmi3at_banner_fr.png
+# Telegram Channel Heavy Graphic Banners & Overlay Templates (24+ MB excluded from Vercel)
+# Keep only essential web assets: assets/logo.png, assets/logo_circular.png, assets/official_stores_directory_banner.png
+assets/11_11_*.png
+assets/bot_promo_banner.*
+assets/canada_coins_hack_guide.png
+assets/choice_day_*
 assets/coupon_5_template.png
-assets/choice_day_coupon_template.png
-assets/choice_day_banner.png
+assets/dealscout_*.png
 assets/frame_overlay.png
+assets/france_*.png
+assets/france_*.jpg
+assets/official_*.jpg
+assets/official_calendar_*.jpg
 assets/product_frame_template.png
-assets/official_dz_banner.jpg
-assets/official_fr_banner.jpg
-assets/france_channel_logo.jpg
-assets/official_calendar_october_2026.jpg
+assets/tajmi3at_banner*.png
+assets/attack_shark_logo.png
 
-# Non-web Automation Scripts
+# Automation & Maintenance Scripts (Excluded from Serverless Lambda payload)
 scripts/*.py
 scripts/*.bat
 dealscout.service

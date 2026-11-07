@@ -251,9 +251,10 @@ class ProductExtractor:
             logger.info(f"Product extraction rejected competitor affiliate-exclusive deal: {aff_reason}")
             return None
 
-        # Fallback to source message media if official studio image cannot be fetched directly
+        # Fallback to source message media only if not from competitor telegram CDN (prevents watermark leakage)
         if not image_url and media_path:
-            image_url = media_path
+            if not any(d in str(media_path) for d in ["telesco.pe", "telegram", "cdn-telegram"]):
+                image_url = media_path
 
         is_valid = bool(resolved.product_id and (usd_price or eur_price) and title and image_url)
 
@@ -343,14 +344,11 @@ class ProductExtractor:
                             text = res.text
                             soup = BeautifulSoup(text, "html.parser")
                             og_img = soup.find("meta", property="og:image")
-                            if og_img and og_img.get("content") and "aliexpress" in og_img["content"]:
+                            if og_img and og_img.get("content") and any(d in og_img["content"] for d in ["alicdn.com", "aliexpress-media.com", "aliexpress.com"]):
                                 return og_img["content"].strip()
-                            m = re.search(r'https://ae-pic-a1\.aliexpress-media\.com/kf/[A-Za-z0-9_]+\.(?:jpg|png)', text)
+                            m = re.search(r'https?://(?:ae\d+|ae-pic-[a-z0-9]+)\.(?:alicdn|aliexpress-media)\.com/kf/[A-Za-z0-9_]+\.(?:jpg|png)', text)
                             if m:
                                 return m.group(0)
-                            m2 = re.search(r'https://ae01\.alicdn\.com/kf/[A-Za-z0-9_]+\.(?:jpg|png)', text)
-                            if m2:
-                                return m2.group(0)
                     except Exception:
                         continue
         except Exception as e:

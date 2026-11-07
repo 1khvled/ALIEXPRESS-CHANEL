@@ -538,10 +538,7 @@ async def ensure_active_promo_coupons_pinned(
                     return existing_msg_id
         except Exception as e:
             logger.warning(f"Error checking pinned status: {e}")
-
-    # Only publish a new bulletin if force_post is explicitly True
-    if not force_post:
-        return None
+        return existing_msg_id
 
     # Build and post the official coupon bulletin for this active event
     logger.info(f"[PROMO PIN] Publishing and pinning official event coupon bulletin for {promo.name}...")

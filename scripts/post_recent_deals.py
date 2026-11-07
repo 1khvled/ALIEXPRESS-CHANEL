@@ -706,12 +706,15 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
 
                     # 7. Official Studio Photo ONLY (Never leak competitor channel watermarks)
                     img_url = extracted.image_url
-                    if not img_url and extracted.product_id:
-                        img_url = await product_extractor._fetch_clean_aliexpress_image(extracted.product_id)
-                    if not img_url and source_photo_url:
+                    is_telegram_img = bool(img_url and any(d in str(img_url) for d in ["telesco.pe", "telegram", "cdn-telegram"]))
+                    if (not img_url or is_telegram_img) and extracted.product_id:
+                        clean_img = await product_extractor._fetch_clean_aliexpress_image(extracted.product_id)
+                        if clean_img:
+                            img_url = clean_img
+                    if not img_url and source_photo_url and extracted.is_coupon_list:
                         img_url = source_photo_url
                     if not extracted.is_coupon_list:
-                        if not img_url:
+                        if not img_url or any(d in str(img_url) for d in ["telesco.pe", "telegram", "cdn-telegram"]):
                             print(f"  [NO CLEAN PHOTO] Image fetch incomplete for {extracted.product_id}. Leaving for retry.")
                             continue
 
@@ -722,6 +725,9 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     )
                     if extracted.is_coupon_list:
                         deal_type = "item"
+                    elif deal_type != "bundle":
+                        # In @DzAliexpress0, all single product deals must be Coin deals
+                        deal_type = "coin"
 
                     if extracted.is_coupon_list and getattr(extracted, "is_restricted_event", False) and ("_c38iyTZR" in extracted.original_url or "brand" in raw_text.lower()):
                         aff_link = "https://s.click.aliexpress.com/e/_c3F40Fvf"

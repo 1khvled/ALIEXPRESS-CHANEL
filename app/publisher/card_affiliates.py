@@ -58,26 +58,18 @@ DZ_VARIANTS = [
         "id": "dz_bybit_card_free",
         "title": "Bybit Free Card (Algeria)",
         "image_path": None,
-        "caption": """<blockquote>💳 <b>كيفاش تشري من AliExpress وأنت في الجزائر؟ | بطاقة Bybit Card مجانية 100%! 🔥</b></blockquote>
+        "caption": """<blockquote>💳 <b>بطاقة Bybit ماستركارد مجانية 100% للشراء من AliExpress 🇩🇿⚡</b></blockquote>
 
-بزاف ناس يعجبوهم عروض وهواتف AliExpress لكن ما يقدروش يطلبوها لأن البطاقات البنكية الجزائرية (بريدي موب، BNA...) ما تخدمش في المواقع العالمية.
+1️⃣ <b>مجانية تماماً :</b> 0 دج مصاريف فتح وبدون أي اشتراك شهري.
+2️⃣ <b>شحن فوري بـ BaridiMob :</b> اشحن رصيدك بالدينار عبر P2P في دقيقتين.
+3️⃣ <b>مقبولة عالمياً :</b> للشراء من AliExpress وربط PayPal بأفضل سعر صرف!
 
-الحل الأسهل والأضمن حالياً هو <b>بطاقة Bybit Card</b>:
-✨ <b>مجانية تماماً (Gratuite):</b> 0 دج مصاريف فتح، وبدون أي اشتراك شهري أو اقتطاعات خفية!
-✨ <b>بطاقة ماستركارد عالمية:</b> مقبولة 100% على AliExpress وPayPal وجميع المتاجر.
-✨ <b>شحن فوري بالدينار:</b> تقدر تشحن رصيدك بسهولة عن طريق BaridiMob في 2 دقائق عبر P2P.
-✨ <b>تفعيل فوري:</b> تسجل اليوم، تبدا تشري صفقاتك وعروض العملات فوراً من هاتفك!
-
-🎁 <b>كـود التسجيل الحصري للحصول على البونص:</b>
-⏺ <code>L9LLRP5</code>
-
-🔗 <b>رابط فتح حسابك وطلب بطاقتك المجانية ⤵️</b>
+🎁 <b>كـود البونص الحصري :</b> <code>L9LLRP5</code>
+🔗 <b>اطلب بطاقتك المجانية ⤵️</b>
 {bybit_url}
 
-💡 <i>ملاحظة: البطاقة مجانية تماماً وتقدر تستعملها في الشراء العادي أو ربطها بالباي بال مباشرة.</i>
 ━━━━━━━━━━━━━━━━━
-🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/
-📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0""".format(bybit_url=BYBIT_URL)
+📢 <b>قناة الصفقات للمزيد :</b> @DzAliexpress0""".format(bybit_url=BYBIT_URL)
     },
 
     # Variant 1: RedotPay Card (Instant Virtual Visa + $5 Welcome Bonus)
@@ -85,25 +77,17 @@ DZ_VARIANTS = [
         "id": "dz_redotpay_visa",
         "title": "RedotPay Visa Card (Algeria)",
         "image_path": str(REDOTPAY_IMG) if REDOTPAY_IMG.exists() else None,
-        "caption": """<blockquote>💳 <b>بطاقة فيزا RedotPay | الحل الأسرع للشراء من AliExpress مع هدية 5$ مجاناً! 🎁🔥</b></blockquote>
+        "caption": """<blockquote>💳 <b>بطاقة فيزا RedotPay الافتراضية مع بونص 5$ هدية! 🎁⚡</b></blockquote>
 
-راهم كاينين صفقات قوية في AliExpress ومحتاج بطاقة فيزا افتراضية تتفعل في دقائق؟
+1️⃣ <b>بونص 5$ مجاناً :</b> رصيد ترحيبي يوصلك فوراً بكود <code>djbt3</code>
+2️⃣ <b>جاهزة في ثوانٍ :</b> بطاقة فيزا افتراضية مقبولة للشراء من AliExpress فوراً.
+3️⃣ <b>شحن سهل :</b> تشحن بـ USDT وتدعم ربط وتفعيل PayPal بأمان.
 
-<b>بطاقة فيزا RedotPay العالمية:</b>
-✅ <b>هدية 5$ فورية:</b> بمجرد التسجيل بالكود الحصري <code>djbt3</code> يوصلك رصيد ترحيبي في حسابك!
-✅ <b>مقبولة 100% في AliExpress:</b> تدعم خصم العملات، وتخفيضات الكوبونات وشحن الحزم.
-✅ <b>ربط مباشر مع PayPal:</b> تقبل الربط مع بايبال جزائري أو أجنبي وتفعله كلياً.
-✅ <b>شحن سهل وسريع:</b> تشحنها عبر Binance أو أي محفظة بـ USDT في ثوانٍ.
-
-🎁 <b>كـود البـونص الترحيبي (5$ مجاناً):</b>
-⏺ <code>djbt3</code>
-
-🔗 <b>رابط التسجيل وتحميل التطبيق ⤵️</b>
+🔗 <b>سجل وفعّل بطاقتك مع الـ 5$ ⤵️</b>
 {redotpay_url}
 
 ━━━━━━━━━━━━━━━━━
-🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/
-📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0""".format(redotpay_url=REDOTPAY_URL)
+📢 <b>قناة الصفقات للمزيد :</b> @DzAliexpress0""".format(redotpay_url=REDOTPAY_URL)
     },
 
     # Variant 2: Complete Toolkit - Binance P2P BaridiMob + Cards
@@ -111,24 +95,17 @@ DZ_VARIANTS = [
         "id": "dz_binance_p2p_guide",
         "title": "Binance P2P BaridiMob Guide (Algeria)",
         "image_path": str(BINANCE_IMG) if BINANCE_IMG.exists() else None,
-        "caption": """<blockquote>🛒 <b>دليل الشراء بالدينار الجزائري (BaridiMob) | كيف تشحن بطاقاتك وتتسوق من AliExpress! 🇩🇿⚡</b></blockquote>
+        "caption": """<blockquote>🛒 <b>دليل الشراء من AliExpress بـ BaridiMob 🇩🇿⚡</b></blockquote>
 
-الكثير يسأل: <i>"عندي تطبيق بريدي موب، كيفاش نحولو لدولار ونشري بيه من AliExpress؟"</i>
+1️⃣ <b>افتح حساب Binance :</b> وسجل بكود البونص <code>GRO_28502_3WGQR</code>
+2️⃣ <b>اشري دولار (USDT) بـ BaridiMob :</b> من قسم P2P في دقيقتين وبسعر رسمي مضمون 🛡️
+3️⃣ <b>اشحن بطاقتك (RedotPay / Bybit) :</b> واشري مباشرة من AliExpress بدون وسطاء وبأقل سعر صرف! 💳
 
-الطريقة الرسمية والآمنة 100% التي يستعملها كل المحترفين:
-1️⃣ <b>فتح حساب في منصة Binance:</b> أضخم وأضمن منصة تداول في العالم.
-2️⃣ <b>شراء USDT عبر P2P:</b> تدخل لقسم P2P، تختار الدفع بـ <b>BaridiMob</b> وتشتري الدولار الرقمي (USDT) بالدينار الجزائري مباشرة من بائعين جزائريين موثوقين ومحميين بالنظام في دقيقتين.
-3️⃣ <b>شحن بطاقتك (Bybit أو RedotPay):</b> ترسل الرصيد لبطاقتك بضغطة زر وتتسوق من AliExpress بأقل سعر صرف وبدون وسطاء يأخذون عليك عمولات مضاعفة!
-
-🎁 <b>كـود الإحـالة للتسجيل والحصول على بونص الترحيب:</b>
-⏺ <code>GRO_28502_3WGQR</code>
-
-🔗 <b>رابط التسجيل الرسمي في Binance ⤵️</b>
+🔗 <b>رابط التسجيل في Binance ⤵️</b>
 {binance_url}
 
 ━━━━━━━━━━━━━━━━━
-🌐 <b>موقع الصفقات والكوبونات:</b> https://dealscoutgreen.vercel.app/
-📢 <b>قناة الصفقات الرسمية:</b> @DzAliexpress0""".format(binance_url=BINANCE_URL)
+📢 <b>قناة الصفقات للمزيد :</b> @DzAliexpress0""".format(binance_url=BINANCE_URL)
     }
 ]
 
@@ -143,20 +120,14 @@ FR_VARIANTS = [
         "id": "fr_bybit_card_cashback",
         "title": "Carte Bybit Cashback & 0€ Frais (France)",
         "image_path": None,
-        "caption": """<blockquote>💳 <b>Astuce Bons Plans | Carte Bybit 100% GRATUITE & Jusqu'à 10% de Cashback sur AliExpress ! 🔥🇪🇺</b></blockquote>
+        "caption": """<blockquote>💳 <b>Carte Bybit 100% GRATUITE & Jusqu'à 10% de Cashback ! 🔥🇪🇺</b></blockquote>
 
-Saviez-vous que la plupart des banques traditionnelles françaises facturent entre <b>2% et 3% de frais de change</b> sur les paiements internationaux en ligne ?
+1️⃣ <b>0€ de Frais :</b> 100% Gratuite, 0€ d'abonnement et 0% de frais de change bancaires.
+2️⃣ <b>Jusqu'à 10% de Cashback :</b> Économisez sur tous vos achats AliExpress et tech.
+3️⃣ <b>Apple Pay & Google Pay :</b> Carte virtuelle instantanée utilisable immédiatement.
 
-La <b>Carte Bybit</b> est le moyen le plus rentable pour payer vos commandes AliExpress, Amazon et tech :
-✨ <b>100% Gratuite :</b> 0€ de frais de création, 0€ d'abonnement mensuel et sans conditions de revenus !
-✨ <b>Jusqu'à 10% de Cashback :</b> Récupérez une partie de votre argent sur chaque achat effectué.
-✨ <b>Multi-devises & Crypto :</b> Payez en Euros ou directement avec vos cryptos (USDT, BTC, ETH) avec conversion instantanée au taux officiel Mastercard.
-✨ <b>Paiement Sans Contact :</b> Compatible Apple Pay & Google Pay dès la validation.
-
-🎁 <b>Code Parrainage Exclusif :</b>
-⏺ <code>L9LLRP5</code>
-
-🔗 <b>Commandez votre carte virtuelle gratuite en 2 minutes ⤵️</b>
+🎁 <b>Code Parrainage Exclusif :</b> <code>L9LLRP5</code>
+🔗 <b>Commandez votre carte gratuite en 2 min ⤵️</b>
 {bybit_url}
 
 ━━━━━━━━━━━━━━━━━
@@ -168,24 +139,17 @@ La <b>Carte Bybit</b> est le moyen le plus rentable pour payer vos commandes Ali
         "id": "fr_redotpay_visa",
         "title": "Carte Visa RedotPay 5$ Offerts (France)",
         "image_path": str(REDOTPAY_IMG) if REDOTPAY_IMG.exists() else None,
-        "caption": """<blockquote>💳 <b>Carte Visa RedotPay | Dépensez vos cryptos sur AliExpress en toute liberté (+ 5$ offerts) 🎁⚡</b></blockquote>
+        "caption": """<blockquote>💳 <b>Carte Visa RedotPay | 5$ Offerts pour vos Achats en Ligne ! 🎁⚡</b></blockquote>
 
-Besoin d'une carte Visa internationale sans passer par une banque classique pour vos achats high-tech et AliExpress ?
+1️⃣ <b>5$ de Bienvenue :</b> Crédit offert immédiatement avec le code <code>djbt3</code>
+2️⃣ <b>Instantanée & Sans Paperasse :</b> Carte Visa virtuelle prête en quelques secondes.
+3️⃣ <b>Paiement Universel :</b> Fonctionne à 100% sur AliExpress, Amazon et PayPal.
 
-<b>La carte Visa RedotPay :</b>
-✅ <b>Bonus de 5$ offert :</b> Recevez 5$ de crédit dès votre inscription avec le code <code>djbt3</code>.
-✅ <b>Zéro paperasse :</b> Carte virtuelle émise en quelques secondes, prête à l'emploi.
-✅ <b>Acceptée partout :</b> Fonctionne à 100% sur AliExpress, Amazon, abonnements en ligne et PayPal.
-✅ <b>Recharge instantanée :</b> Déposez en USDT ou cryptos sans frais cachés.
-
-🎁 <b>Code Promo Bonus (5$ gratuits) :</b>
-⏺ <code>djbt3</code>
-
-🔗 <b>Activez votre carte Visa et réclamez vos 5$ ⤵️</b>
+🔗 <b>Activez votre carte et recevez vos 5$ ⤵️</b>
 {redotpay_url}
 
 ━━━━━━━━━━━━━━━━━
-📢 <b>Canal Officiel France :</b> @francedealsdz""".format(redotpay_url=REDOTPAY_URL)
+📢 <b>Bons Plans France :</b> @francedealsdz""".format(redotpay_url=REDOTPAY_URL)
     },
 
     # Variant 2: Binance Europe (Invest in Crypto + Stocks, P2P, Secured, 0€ SEPA)
@@ -193,20 +157,14 @@ Besoin d'une carte Visa internationale sans passer par une banque classique pour
         "id": "fr_binance_invest_crypto_stocks",
         "title": "Binance Invest Crypto, Stocks & P2P (France)",
         "image_path": str(BINANCE_IMG) if BINANCE_IMG.exists() else None,
-        "caption": """<blockquote>🚀 <b>Binance | N°1 Mondial : Investissez en Crypto, Actions & Achetez en P2P en toute Sécurité ! 🇪🇺⚡</b></blockquote>
+        "caption": """<blockquote>🚀 <b>Binance | N°1 Mondial Crypto, Actions & P2P Sécurisé ! 🇪🇺⚡</b></blockquote>
 
-Vous cherchez la plateforme la plus fiable et complète pour gérer vos cryptos, diversifier votre épargne et financer vos achats high-tech ?
+1️⃣ <b>Crypto & Actions :</b> Investissez et gérez vos actifs facilement au meilleur taux.
+2️⃣ <b>0€ Frais SEPA & P2P :</b> Dépôts gratuits en Euros et achats P2P directs entre particuliers.
+3️⃣ <b>Sécurité Maximale :</b> Fonds protégés (garantie SAFU) et plateforme régulée PSAN.
 
-<b>Pourquoi choisir Binance :</b>
-🔹 <b>Investissement Crypto & Actions :</b> Achetez Bitcoin, Ethereum, USDT et accédez aux marchés mondiaux ainsi qu'aux actions tokenisées en toute simplicité.
-🔹 <b>Achat Crypto P2P & Virement SEPA Gratuit :</b> Déposez des Euros sans aucun frais via SEPA instantané ou achetez/vendez directement entre particuliers (P2P) au taux réel sans intermédiaire.
-🔹 <b>Sécurité Maximale (Fonds SAFU) :</b> Plateforme enregistrée PSAN en France (régulée par l'AMF) avec protection intégrale de vos avoirs grâce au fonds de garantie SAFU.
-🔹 <b>Revenus Passifs (Earn & Staking) :</b> Faites fructifier vos USDT et cryptos stables avec des rendements attractifs pendant que vous profitez des soldes en ligne.
-
-🎁 <b>Bonus de bienvenue exclusif via notre lien partenaire :</b>
-⏺ <b>Code Référent :</b> <code>GRO_28502_3WGQR</code>
-
-🔗 <b>Inscrivez-vous et débloquez votre bonus de bienvenue ⤵️</b>
+🎁 <b>Code Référent Exclusif :</b> <code>GRO_28502_3WGQR</code>
+🔗 <b>Inscrivez-vous sur Binance et débloquez votre bonus ⤵️</b>
 {binance_url}
 
 ━━━━━━━━━━━━━━━━━

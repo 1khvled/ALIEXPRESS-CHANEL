@@ -42,9 +42,7 @@ class DirectAffiliateProvider(AffiliateProvider):
             elif deal_type == "item":
                 return f"https://www.aliexpress.com/item/{pid}.html?aff_fcid={self.tracking_id}"
             else:
-                # Never return a generic / coin-index URL that lands on empty coin exchanges
-                # Always direct users directly to the actual product with affiliate tracking!
-                return f"https://www.aliexpress.com/item/{pid}.html?aff_fcid={self.tracking_id}"
+                return f"https://m.aliexpress.com/p/coin-index/index.html?_immersiveMode=true&tabname=configTab_1926001&productIds={pid}&aff_fcid={self.tracking_id}"
 
         # Clean campaign URLs to strip noisy tracking parameters
         clean_url = product_url.split("?")[0] if ("aliexpress.com" in product_url and "?" in product_url) else product_url
@@ -116,8 +114,7 @@ class PortalsApiAffiliateProvider(AffiliateProvider):
             elif deal_type == "item":
                 target_url = f"https://www.aliexpress.com/item/{pid}.html"
             else:
-                # Always generate s.click from official item URL so it resolves directly to product!
-                target_url = f"https://www.aliexpress.com/item/{pid}.html"
+                target_url = f"https://m.aliexpress.com/p/coin-index/index.html?_immersiveMode=true&tabname=configTab_1926001&productIds={pid}"
         else:
             if deal_type == "bundle":
                 target_url = "https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES&pha_manifest=ssr&_immersiveMode=true"

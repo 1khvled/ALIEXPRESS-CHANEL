@@ -57,7 +57,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git add storage/state/ deals.db || true
           if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "Auto-update state after Tajmi3at publication [skip ci]"
+            git commit -m "Auto-update state after Tajmi3at publication [skip ci] [skip vercel] [vercel skip]"
             for i in 1 2 3 4 5; do
               git fetch origin main || true
               git rebase -X ours origin/main || (git rebase --abort && git pull origin main --no-rebase -X ours) || true
