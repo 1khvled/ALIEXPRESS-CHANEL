@@ -671,7 +671,8 @@
     "1005008703989845",
     "1005007162099601",
     "1005007038130594",
-    "1005008248187128"
+    "1005008248187128",
+    "1005013053381984"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1357,7 +1358,8 @@
     "1005008703989845": 1794044840.8764274,
     "1005007162099601": 1794046115.3557825,
     "1005007038130594": 1794046667.9804564,
-    "1005008248187128": 1794057675.8729835
+    "1005008248187128": 1794057675.8729835,
+    "1005013053381984": 1794060065.5449874
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2202,7 +2204,8 @@
     "Zeblaze Btalk 4 Pro السعر : 17.06",
     "HyperX Cloud Earbuds II 2 Gaming Earphone",
     "Essager 30W Car Charger",
-    "KOOTION SSD SATA  240GB"
+    "KOOTION SSD SATA  240GB",
+    "Xiaomi Redmi Note 17 Pro 5G Global Version"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3052,10 +3055,10 @@
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627,
     "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794046485.9160285,
     "Essager 30W Car Charger": 1794046667.9804564,
-    "KOOTION SSD SATA  240GB": 1794051434.2488248
+    "KOOTION SSD SATA  240GB": 1794051434.2488248,
+    "Xiaomi Redmi Note 17 Pro 5G Global Version": 1794060065.5449874
   },
   "published_post_keys": [
-    "zedstoreonline:38747",
     "megaphonna:8587",
     "lodydeals:45818",
     "lodydeals:45896",
@@ -4054,11 +4057,12 @@
     "aniscoupons:34217",
     "ecksdeal:6043",
     "lodydeals:46214",
-    "aniscoupons:34227"
+    "aniscoupons:34227",
+    "aniscoupons:34228"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794059512.7523012,
+  "last_run_time": 1794060065.5449874,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4089,8 +4093,8 @@
       "last_check_time": 1794057486.5911243
     },
     "aniscoupons": {
-      "last_message_id": 34227,
-      "last_check_time": 1794059514.8066893
+      "last_message_id": 34228,
+      "last_check_time": 1794060067.640531
     },
     "bnddeals": {
       "last_message_id": 51224,
@@ -4670,7 +4674,8 @@
     "1005012959738411": 68.79,
     "1005007162099601": 32.87,
     "1005007038130594": 12.03,
-    "1005008248187128": 4.49
+    "1005008248187128": 4.49,
+    "1005013053381984": 254.11
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16605,6 +16610,16 @@
       "price": 136.7,
       "timestamp": 1794059512.7523012,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34228": {
+      "channel_msg_id": 1987,
+      "product_id": "1005013053381984",
+      "title": "Xiaomi Redmi Note 17 Pro 5G Global Version",
+      "channel": "aniscoupons",
+      "source_msg_id": 34228,
+      "price": 254.11,
+      "timestamp": 1794060065.5449874,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16613,17 +16628,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794059515.7996266,
+    "last_deal_post_time": 1794060068.4327414,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794059890.8512177,
+    "last_sweep_time": 1794060070.6070502,
     "last_sweep_times": {
-      "algeria": 1794059887.6580024,
-      "france": 1794059890.8512177
+      "algeria": 1794060068.411224,
+      "france": 1794060070.6070502
     },
     "last_deal_post_times": {
-      "algeria": 1794059515.7996266
+      "algeria": 1794060068.4327414
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17309,7 +17324,8 @@
     "1005008703989845": "aniscoupons",
     "1005007162099601": "lodydeals",
     "1005007038130594": "lodydeals",
-    "1005008248187128": "lodydeals"
+    "1005008248187128": "lodydeals",
+    "1005013053381984": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -18160,7 +18176,8 @@
     "HyperX Cloud Earbuds II 2 Gaming Earphone": "zedstoreonline",
     "Essager 30W Car Charger": "lodydeals",
     "KOOTION SSD SATA  240GB": "aniscoupons",
-    "ماوس لاسلكي Attack Shark R1 Wireless": "ecksdeal"
+    "ماوس لاسلكي Attack Shark R1 Wireless": "ecksdeal",
+    "Xiaomi Redmi Note 17 Pro 5G Global Version": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
