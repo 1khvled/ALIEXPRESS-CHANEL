@@ -1192,7 +1192,7 @@
     "1005012790288780": 1793656271.0286891,
     "1005012345939726": 1793656202.4239671,
     "1005010722422210": 1793543733.1622994,
-    "1005012582348584": 1794051434.2488248,
+    "1005012582348584": 1794071284.8947144,
     "1005012529582418": 1793543800.9051948,
     "1005008605565544": 1793543812.9442995,
     "1005009508910625": 1793543817.982839,
@@ -2215,7 +2215,8 @@
     "Hollyland Lark M2 Wireless Mic",
     "XUNYOU-LINK 4G LTE WiFi 6 Portable Router",
     "XUNYOU-LINK 4G SIM WiFi",
-    "BlackShark GS3 Ultra New"
+    "BlackShark GS3 Ultra New",
+    "KOOTION SSD SATA  256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3072,10 +3073,10 @@
     "Hollyland Lark M2 Wireless Mic": 1794063654.6498907,
     "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": 1794064385.819615,
     "XUNYOU-LINK 4G SIM WiFi": 1794065862.849844,
-    "BlackShark GS3 Ultra New": 1794068056.674266
+    "BlackShark GS3 Ultra New": 1794068056.674266,
+    "KOOTION SSD SATA  256GB": 1794071284.8947144
   },
   "published_post_keys": [
-    "aniscoupons:33109",
     "ecksdeal:5853",
     "pcgamingpart:7953",
     "bnddeals:50799",
@@ -4074,11 +4075,12 @@
     "zedstoreonline:39687",
     "aniscoupons:34237",
     "aniscoupons:34238",
-    "aniscoupons:34239"
+    "aniscoupons:34239",
+    "aniscoupons:34240"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794070312.33285,
+  "last_run_time": 1794071284.8947144,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4109,8 +4111,8 @@
       "last_check_time": 1794070069.3760657
     },
     "aniscoupons": {
-      "last_message_id": 34239,
-      "last_check_time": 1794070314.3852966
+      "last_message_id": 34240,
+      "last_check_time": 1794071286.9312203
     },
     "bnddeals": {
       "last_message_id": 51230,
@@ -4539,7 +4541,7 @@
     "1005012790288780": 26.95,
     "1005012345939726": 18.62,
     "1005010722422210": 398.07,
-    "1005012582348584": 15.1,
+    "1005012582348584": 18.13,
     "1005012529582418": 12.6,
     "1005008605565544": 58.59,
     "1005009508910625": 46.26,
@@ -16777,6 +16779,16 @@
       "price": 69.6,
       "timestamp": 1794070312.33285,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34240": {
+      "channel_msg_id": 2003,
+      "product_id": "1005012582348584",
+      "title": "KOOTION SSD SATA  256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34240,
+      "price": 18.13,
+      "timestamp": 1794071284.8947144,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16785,17 +16797,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794070315.267481,
+    "last_deal_post_time": 1794071287.5066855,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794071109.1215715,
+    "last_sweep_time": 1794071289.7910461,
     "last_sweep_times": {
-      "algeria": 1794071106.4273372,
-      "france": 1794071109.1215715
+      "algeria": 1794071287.4884524,
+      "france": 1794071289.7910461
     },
     "last_deal_post_times": {
-      "algeria": 1794070315.267481
+      "algeria": 1794071287.5066855
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -18342,7 +18354,8 @@
     "Hollyland Lark M2 Wireless Mic": "lodydeals",
     "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": "bnddeals",
     "XUNYOU-LINK 4G SIM WiFi": "lodydeals",
-    "BlackShark GS3 Ultra New": "bnddeals"
+    "BlackShark GS3 Ultra New": "bnddeals",
+    "KOOTION SSD SATA  256GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
