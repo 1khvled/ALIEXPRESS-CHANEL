@@ -1253,7 +1253,7 @@
     "1005007010692093": 1793601389.0047116,
     "1005006994466968": 1793601744.1664062,
     "1005011927267564": 1793728844.5794795,
-    "1005008291023017": 1794039534.2371004,
+    "1005008291023017": 1794069888.730529,
     "1005012947477238": 1793612016.5356846,
     "1005010121513376": 1794047586.9073458,
     "1005009064526142": 1793613380.753295,
@@ -3053,7 +3053,7 @@
     "AULA MINI60 HE PRO": 1793987278.5140982,
     "Maono Wave T5 Wireless Mic": 1793987285.4130383,
     "SAMSUNG DDR3 8GB 1600v": 1793987289.8200357,
-    "Realme 15 Pro (12/256GB)": 1794039534.2371004,
+    "Realme 15 Pro (12/256GB)": 1794069888.730529,
     "SOUNDPEATS C30 ANC Wireless Earphones": 1793994623.1444166,
     "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899,
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1793998299.0115912,
@@ -3075,7 +3075,6 @@
     "BlackShark GS3 Ultra New": 1794068056.674266
   },
   "published_post_keys": [
-    "ecksdeal:6008",
     "zedstoreonline:38801",
     "aniscoupons:33109",
     "ecksdeal:5853",
@@ -4074,11 +4073,12 @@
     "aniscoupons:34235",
     "bnddeals:51230",
     "zedstoreonline:39687",
-    "aniscoupons:34237"
+    "aniscoupons:34237",
+    "aniscoupons:34238"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794069334.6949534,
+  "last_run_time": 1794069888.730529,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4109,8 +4109,8 @@
       "last_check_time": 1794069696.605737
     },
     "aniscoupons": {
-      "last_message_id": 34237,
-      "last_check_time": 1794069336.7345057
+      "last_message_id": 34238,
+      "last_check_time": 1794069890.782397
     },
     "bnddeals": {
       "last_message_id": 51230,
@@ -16757,6 +16757,16 @@
       "price": 192.7,
       "timestamp": 1794069334.6949534,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34238": {
+      "channel_msg_id": 2001,
+      "product_id": "1005008291023017",
+      "title": "Realme 15 Pro (12/256GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34238,
+      "price": 285.9,
+      "timestamp": 1794069888.730529,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16765,17 +16775,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794069337.6156752,
+    "last_deal_post_time": 1794069891.565482,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794069699.9014955,
+    "last_sweep_time": 1794069894.0217838,
     "last_sweep_times": {
-      "algeria": 1794069697.737203,
-      "france": 1794069699.9014955
+      "algeria": 1794069891.5418856,
+      "france": 1794069894.0217838
     },
     "last_deal_post_times": {
-      "algeria": 1794069337.6156752
+      "algeria": 1794069891.565482
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
