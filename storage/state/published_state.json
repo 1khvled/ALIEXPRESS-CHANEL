@@ -1353,7 +1353,7 @@
     "1005008077441711": 1793998299.0115912,
     "1005006411483066": 1794002338.4554162,
     "1005012925301774": 1794002515.731258,
-    "1005012959738411": 1794036964.0036426,
+    "1005012959738411": 1794063654.6498907,
     "1005008357913212": 1794040635.1055257,
     "1005008703989845": 1794044840.8764274,
     "1005007162099601": 1794046115.3557825,
@@ -2207,7 +2207,8 @@
     "KOOTION SSD SATA  240GB",
     "Xiaomi Redmi Note 17 Pro 5G Global Version",
     "Magcubic  HY350 Max 900ANSI",
-    "Toocki 60W Car Charger and cable"
+    "Toocki 60W Car Charger and cable",
+    "Hollyland Lark M2 Wireless Mic"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3060,10 +3061,10 @@
     "KOOTION SSD SATA  240GB": 1794051434.2488248,
     "Xiaomi Redmi Note 17 Pro 5G Global Version": 1794060065.5449874,
     "Magcubic  HY350 Max 900ANSI": 1794060985.659608,
-    "Toocki 60W Car Charger and cable": 1794062457.796558
+    "Toocki 60W Car Charger and cable": 1794062457.796558,
+    "Hollyland Lark M2 Wireless Mic": 1794063654.6498907
   },
   "published_post_keys": [
-    "couponsglobal:48816",
     "aniscoupons:32697",
     "aniscoupons:32936",
     "ecksdeal:5938",
@@ -4062,19 +4063,20 @@
     "aniscoupons:34228",
     "zedstoreonline:39681",
     "aniscoupons:34230",
-    "zedstoreonline:39682"
+    "zedstoreonline:39682",
+    "lodydeals:46216"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794062457.796558,
+  "last_run_time": 1794063654.6498907,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
       "last_check_time": 1794055834.6061237
     },
     "lodydeals": {
-      "last_message_id": 46215,
-      "last_check_time": 1794057851.6327598
+      "last_message_id": 46216,
+      "last_check_time": 1794063656.6948752
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4097,8 +4099,8 @@
       "last_check_time": 1794063476.1732707
     },
     "aniscoupons": {
-      "last_message_id": 34230,
-      "last_check_time": 1794062274.0991254
+      "last_message_id": 34232,
+      "last_check_time": 1794063661.4919543
     },
     "bnddeals": {
       "last_message_id": 51226,
@@ -4675,7 +4677,7 @@
     "1005010656922924": 20.4,
     "1005008077441711": 7.6,
     "1005012925301774": 11.2,
-    "1005012959738411": 68.79,
+    "1005012959738411": 85.59,
     "1005007162099601": 32.87,
     "1005007038130594": 12.03,
     "1005008248187128": 4.49,
@@ -16654,6 +16656,16 @@
       "price": 2.7,
       "timestamp": 1794062457.796558,
       "status": "ACTIVE"
+    },
+    "lodydeals:46216": {
+      "channel_msg_id": 1992,
+      "product_id": "1005012959738411",
+      "title": "Hollyland Lark M2 Wireless Mic",
+      "channel": "lodydeals",
+      "source_msg_id": 46216,
+      "price": 85.59,
+      "timestamp": 1794063654.6498907,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16662,17 +16674,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794062461.3636973,
+    "last_deal_post_time": 1794063662.1401663,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794063479.8038256,
+    "last_sweep_time": 1794063664.4824002,
     "last_sweep_times": {
-      "algeria": 1794063477.5441444,
-      "france": 1794063479.8038256
+      "algeria": 1794063662.1201012,
+      "france": 1794063664.4824002
     },
     "last_deal_post_times": {
-      "algeria": 1794062461.3636973
+      "algeria": 1794063662.1401663
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17353,7 +17365,7 @@
     "1005008077441711": "zedstoreonline",
     "1005006411483066": "zedstoreonline",
     "1005012925301774": "zedstoreonline",
-    "1005012959738411": "aniscoupons",
+    "1005012959738411": "lodydeals",
     "1005008357913212": "aniscoupons",
     "1005008703989845": "aniscoupons",
     "1005007162099601": "lodydeals",
@@ -18213,7 +18225,8 @@
     "ماوس لاسلكي Attack Shark R1 Wireless": "ecksdeal",
     "Xiaomi Redmi Note 17 Pro 5G Global Version": "aniscoupons",
     "Magcubic  HY350 Max 900ANSI": "zedstoreonline",
-    "Toocki 60W Car Charger and cable": "zedstoreonline"
+    "Toocki 60W Car Charger and cable": "zedstoreonline",
+    "Hollyland Lark M2 Wireless Mic": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -19007,8 +19020,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:5963",
-    "megaphonna:8312",
     "lodydeals:45550",
     "couponsglobal:48834",
     "couponsglobal:48838",
@@ -20006,7 +20017,9 @@
     "bnddeals:51225",
     "bnddeals:51226",
     "zedstoreonline:39683",
-    "zedstoreonline:39684"
+    "zedstoreonline:39684",
+    "aniscoupons:34231",
+    "aniscoupons:34232"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
