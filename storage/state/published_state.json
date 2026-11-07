@@ -676,7 +676,8 @@
     "1005008060391372",
     "1005010209911111",
     "1005008295555234",
-    "1005008645323478"
+    "1005008645323478",
+    "1005008636930795"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1367,7 +1368,8 @@
     "1005008060391372": 1794067512.4027624,
     "1005010209911111": 1794068056.674266,
     "1005008295555234": 1794073127.8664527,
-    "1005008645323478": 1794075516.7789276
+    "1005008645323478": 1794075516.7789276,
+    "1005008636930795": 1794076438.7694528
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2225,7 +2227,8 @@
     "1MORE SonoFlow Pro HQ51",
     "Ulanzi ST-06S Vertical Shooting",
     "ميكروفون MAONO DGM20W لاسلكي للألعاب",
-    "CUSU 512GB External SSD Drive"
+    "CUSU 512GB External SSD Drive",
+    "Netac M.2 NVME 250GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3088,10 +3091,10 @@
     "1MORE SonoFlow Pro HQ51": 1794073127.8664527,
     "Ulanzi ST-06S Vertical Shooting": 1794073132.3964775,
     "ميكروفون MAONO DGM20W لاسلكي للألعاب": 1794074230.5173922,
-    "CUSU 512GB External SSD Drive": 1794075516.7789276
+    "CUSU 512GB External SSD Drive": 1794075516.7789276,
+    "Netac M.2 NVME 250GB": 1794076438.7694528
   },
   "published_post_keys": [
-    "aniscoupons:32736",
     "pcgamingpart:7980",
     "aniscoupons:32731",
     "lodydeals:45471",
@@ -4090,11 +4093,12 @@
     "aniscoupons:34242",
     "zedstoreonline:39694",
     "aniscoupons:34245",
-    "aniscoupons:34247"
+    "aniscoupons:34247",
+    "aniscoupons:34248"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794076070.3822317,
+  "last_run_time": 1794076438.7694528,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4125,8 +4129,8 @@
       "last_check_time": 1794075699.6914537
     },
     "aniscoupons": {
-      "last_message_id": 34247,
-      "last_check_time": 1794076072.4236882
+      "last_message_id": 34248,
+      "last_check_time": 1794076440.8127275
     },
     "bnddeals": {
       "last_message_id": 51230,
@@ -16875,6 +16879,16 @@
       "price": 3.2,
       "timestamp": 1794076070.3822317,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34248": {
+      "channel_msg_id": 2011,
+      "product_id": "1005008636930795",
+      "title": "Netac M.2 NVME 250GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34248,
+      "price": 31.5,
+      "timestamp": 1794076438.7694528,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16883,17 +16897,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794076073.276809,
+    "last_deal_post_time": 1794076441.679313,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794076256.0882304,
+    "last_sweep_time": 1794076444.5280516,
     "last_sweep_times": {
-      "algeria": 1794076253.165286,
-      "france": 1794076256.0882304
+      "algeria": 1794076441.660167,
+      "france": 1794076444.5280516
     },
     "last_deal_post_times": {
-      "algeria": 1794076073.276809
+      "algeria": 1794076441.679313
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17584,7 +17598,8 @@
     "1005008060391372": "aniscoupons",
     "1005010209911111": "bnddeals",
     "1005008295555234": "lodydeals",
-    "1005008645323478": "aniscoupons"
+    "1005008645323478": "aniscoupons",
+    "1005008636930795": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -18448,7 +18463,8 @@
     "1MORE SonoFlow Pro HQ51": "lodydeals",
     "Ulanzi ST-06S Vertical Shooting": "lodydeals",
     "ميكروفون MAONO DGM20W لاسلكي للألعاب": "zedstoreonline",
-    "CUSU 512GB External SSD Drive": "aniscoupons"
+    "CUSU 512GB External SSD Drive": "aniscoupons",
+    "Netac M.2 NVME 250GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
