@@ -678,7 +678,8 @@
     "1005008295555234",
     "1005008645323478",
     "1005008636930795",
-    "1005006260870758"
+    "1005006260870758",
+    "1005009759580502"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1371,7 +1372,8 @@
     "1005008295555234": 1794073127.8664527,
     "1005008645323478": 1794075516.7789276,
     "1005008636930795": 1794076438.7694528,
-    "1005006260870758": 1794077543.1413288
+    "1005006260870758": 1794077543.1413288,
+    "1005009759580502": 1794079741.7808652
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2231,7 +2233,8 @@
     "ميكروفون MAONO DGM20W لاسلكي للألعاب",
     "CUSU 512GB External SSD Drive",
     "Netac M.2 NVME 250GB",
-    "EPOMAKER X AULA F87 Pro"
+    "EPOMAKER X AULA F87 Pro",
+    "SIX PCIe 4.0 7350MB/s  1TB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3096,10 +3099,10 @@
     "ميكروفون MAONO DGM20W لاسلكي للألعاب": 1794074230.5173922,
     "CUSU 512GB External SSD Drive": 1794075516.7789276,
     "Netac M.2 NVME 250GB": 1794076438.7694528,
-    "EPOMAKER X AULA F87 Pro": 1794077543.1413288
+    "EPOMAKER X AULA F87 Pro": 1794077543.1413288,
+    "SIX PCIe 4.0 7350MB/s  1TB": 1794079741.7808652
   },
   "published_post_keys": [
-    "lodydeals:45471",
     "aniscoupons:32960",
     "pcgamingpart:7940",
     "test_channel:1793541403",
@@ -4098,19 +4101,20 @@
     "aniscoupons:34247",
     "aniscoupons:34248",
     "lodydeals:46232",
-    "lodydeals:46233"
+    "lodydeals:46233",
+    "lodydeals:46234"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794078084.8778791,
+  "last_run_time": 1794079741.7808652,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
       "last_check_time": 1794055834.6061237
     },
     "lodydeals": {
-      "last_message_id": 46233,
-      "last_check_time": 1794078086.9156518
+      "last_message_id": 46234,
+      "last_check_time": 1794079743.8290994
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4719,7 +4723,8 @@
     "1005010209911111": 40.6,
     "1005008295555234": 59.5,
     "1005008645323478": 41.5,
-    "1005006260870758": 37.8
+    "1005006260870758": 37.8,
+    "1005009759580502": 101.07
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -16914,6 +16919,16 @@
       "price": 17.06,
       "timestamp": 1794078084.8778791,
       "status": "ACTIVE"
+    },
+    "lodydeals:46234": {
+      "channel_msg_id": 2014,
+      "product_id": "1005009759580502",
+      "title": "SIX PCIe 4.0 7350MB/s  1TB",
+      "channel": "lodydeals",
+      "source_msg_id": 46234,
+      "price": 101.07,
+      "timestamp": 1794079741.7808652,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16922,17 +16937,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794078088.941531,
+    "last_deal_post_time": 1794079746.482333,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794079558.8078215,
+    "last_sweep_time": 1794079748.957464,
     "last_sweep_times": {
-      "algeria": 1794079556.4818027,
-      "france": 1794079558.8078215
+      "algeria": 1794079746.4574869,
+      "france": 1794079748.957464
     },
     "last_deal_post_times": {
-      "algeria": 1794078088.941531
+      "algeria": 1794079746.482333
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17625,7 +17640,8 @@
     "1005008295555234": "lodydeals",
     "1005008645323478": "aniscoupons",
     "1005008636930795": "aniscoupons",
-    "1005006260870758": "lodydeals"
+    "1005006260870758": "lodydeals",
+    "1005009759580502": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -18491,7 +18507,8 @@
     "ميكروفون MAONO DGM20W لاسلكي للألعاب": "zedstoreonline",
     "CUSU 512GB External SSD Drive": "aniscoupons",
     "Netac M.2 NVME 250GB": "aniscoupons",
-    "EPOMAKER X AULA F87 Pro": "lodydeals"
+    "EPOMAKER X AULA F87 Pro": "lodydeals",
+    "SIX PCIe 4.0 7350MB/s  1TB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
