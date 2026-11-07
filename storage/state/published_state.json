@@ -667,7 +667,8 @@
     "1005006411483066",
     "1005012925301774",
     "1005012959738411",
-    "1005008357913212"
+    "1005008357913212",
+    "1005008703989845"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1349,7 +1350,8 @@
     "1005006411483066": 1794002338.4554162,
     "1005012925301774": 1794002515.731258,
     "1005012959738411": 1794036964.0036426,
-    "1005008357913212": 1794040635.1055257
+    "1005008357913212": 1794040635.1055257,
+    "1005008703989845": 1794044840.8764274
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -3003,7 +3005,7 @@
     "Netac SSD NVME M2 250GB": 1793966752.4109294,
     "Essager 20W GaN + cable": 1793966794.01192,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
-    "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1793966827.2695835,
+    "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794044840.8764274,
     "Fifine Gaming Headset H9W": 1793966832.9435866,
     "Fifine Gaming Headset H6": 1793966837.4758828,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794037520.0568364,
@@ -3041,7 +3043,6 @@
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627
   },
   "published_post_keys": [
-    "test_channel:1791752735",
     "zedstoreonline:38577",
     "aniscoupons:32979",
     "lodydeals:45898",
@@ -4040,11 +4041,12 @@
     "lodydeals:46207",
     "aniscoupons:34202",
     "zedstoreonline:39668",
-    "aniscoupons:34203"
+    "aniscoupons:34203",
+    "aniscoupons:34204"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794044483.1683135,
+  "last_run_time": 1794044840.8764274,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6042,
@@ -4075,12 +4077,12 @@
       "last_check_time": 1794044289.6309836
     },
     "aniscoupons": {
-      "last_message_id": 34203,
-      "last_check_time": 1794044485.2197375
+      "last_message_id": 34204,
+      "last_check_time": 1794044842.927018
     },
     "bnddeals": {
-      "last_message_id": 51213,
-      "last_check_time": 1794043749.2874806
+      "last_message_id": 51214,
+      "last_check_time": 1794044844.8191307
     }
   },
   "published_product_prices": {
@@ -16468,6 +16470,16 @@
       "price": 111.4,
       "timestamp": 1794044483.1683135,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34204": {
+      "channel_msg_id": 1975,
+      "product_id": "1005008703989845",
+      "title": "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34204,
+      "price": 24.8,
+      "timestamp": 1794044840.8764274,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -16476,17 +16488,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794044486.3898034,
+    "last_deal_post_time": 1794044844.8652987,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794044661.3209422,
+    "last_sweep_time": 1794044847.4401152,
     "last_sweep_times": {
-      "algeria": 1794044658.3018913,
-      "france": 1794044661.3209422
+      "algeria": 1794044844.842253,
+      "france": 1794044847.4401152
     },
     "last_deal_post_times": {
-      "algeria": 1794044486.3898034
+      "algeria": 1794044844.8652987
     }
   },
   "last_coin_reminder_time": 1793905656.9149199,
@@ -17168,7 +17180,8 @@
     "1005006411483066": "zedstoreonline",
     "1005012925301774": "zedstoreonline",
     "1005012959738411": "aniscoupons",
-    "1005008357913212": "aniscoupons"
+    "1005008357913212": "aniscoupons",
+    "1005008703989845": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -18809,7 +18822,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33107",
     "zedstoreonline:38603",
     "zedstoreonline:38683",
     "lodydeals:45747",
@@ -19808,7 +19820,8 @@
     "lodydeals:46208",
     "zedstoreonline:39667",
     "bnddeals:51213",
-    "lodydeals:46209"
+    "lodydeals:46209",
+    "bnddeals:51214"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
