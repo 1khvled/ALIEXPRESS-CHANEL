@@ -1385,7 +1385,7 @@
     "1005006411483066": 1794091985.0146983,
     "1005012925301774": 1794002515.731258,
     "1005012959738411": 1794159557.4708524,
-    "1005008357913212": 1794127389.2657666,
+    "1005008357913212": 1794173731.8411272,
     "1005008703989845": 1794127040.2666676,
     "1005007162099601": 1794046115.3557825,
     "1005007038130594": 1794046667.9804564,
@@ -2321,7 +2321,8 @@
     "Ajazz NK61 Wired Mechanical Keyboard",
     "Honor Win Turbo",
     "POCO PAD C1 4/64",
-    "Smailwolf L80 Wireless Headset"
+    "Smailwolf L80 Wireless Headset",
+    "KOOTION SSD SATA3 480GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3226,10 +3227,10 @@
     "Ajazz NK61 Wired Mechanical Keyboard": 1794167239.3538153,
     "Honor Win Turbo": 1794169846.8168333,
     "POCO PAD C1 4/64": 1794171698.893023,
-    "Smailwolf L80 Wireless Headset": 1794171706.368645
+    "Smailwolf L80 Wireless Headset": 1794171706.368645,
+    "KOOTION SSD SATA3 480GB": 1794173731.8411272
   },
   "published_post_keys": [
-    "test_channel:1792172185",
     "lodydeals:45427",
     "zedstoreonline:38834",
     "zedstoreonline:38526",
@@ -4228,19 +4229,20 @@
     "zedstoreonline:39754",
     "aniscoupons:34314",
     "lodydeals:46272",
-    "lodydeals:46273"
+    "lodydeals:46273",
+    "lodydeals:46274"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794171706.368645,
+  "last_run_time": 1794173731.8411272,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
       "last_check_time": 1794159484.4700966
     },
     "lodydeals": {
-      "last_message_id": 46273,
-      "last_check_time": 1794171708.3995245
+      "last_message_id": 46274,
+      "last_check_time": 1794173733.8965566
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4825,7 +4827,7 @@
     "1005008703989845": 24.8,
     "1005008060391372": 32.9,
     "1005012593794312": 239.8,
-    "1005008357913212": 40.4,
+    "1005008357913212": 40.5,
     "1005012254132930": 15.2,
     "1005008708333999": 136.7,
     "1005013028124905": 438.6,
@@ -17977,6 +17979,16 @@
       "price": 22.13,
       "timestamp": 1794171706.368645,
       "status": "ACTIVE"
+    },
+    "lodydeals:46274": {
+      "channel_msg_id": 2110,
+      "product_id": "1005008357913212",
+      "title": "KOOTION SSD SATA3 480GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46274,
+      "price": 40.5,
+      "timestamp": 1794173731.8411272,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17985,17 +17997,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794171710.4697514,
+    "last_deal_post_time": 1794173736.1811824,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794173552.4703138,
+    "last_sweep_time": 1794173738.9529693,
     "last_sweep_times": {
-      "algeria": 1794173549.5311816,
-      "france": 1794173552.4703138
+      "algeria": 1794173736.154916,
+      "france": 1794173738.9529693
     },
     "last_deal_post_times": {
-      "algeria": 1794171710.4697514
+      "algeria": 1794173736.1811824
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18677,7 +18689,7 @@
     "1005006411483066": "zedstoreonline",
     "1005012925301774": "zedstoreonline",
     "1005012959738411": "aniscoupons",
-    "1005008357913212": "zedstoreonline",
+    "1005008357913212": "lodydeals",
     "1005008703989845": "aniscoupons",
     "1005007162099601": "lodydeals",
     "1005007038130594": "lodydeals",
@@ -19621,7 +19633,8 @@
     "Ajazz NK61 Wired Mechanical Keyboard": "aniscoupons",
     "Honor Win Turbo": "aniscoupons",
     "POCO PAD C1 4/64": "lodydeals",
-    "Smailwolf L80 Wireless Headset": "lodydeals"
+    "Smailwolf L80 Wireless Headset": "lodydeals",
+    "KOOTION SSD SATA3 480GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
