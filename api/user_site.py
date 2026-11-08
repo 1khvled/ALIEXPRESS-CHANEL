@@ -133,7 +133,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       /* Clean Crisp Light Theme Tokens */
       --bg-page: #f8fafc;
-      --bg-card: rgba(255, 255, 255, 0.95);
+      --bg-card: #ffffff;
       --bg-card-hover: #ffffff;
       --bg-elevated: #f1f5f9;
       --bg-subtle: #e2e8f0;
@@ -142,7 +142,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       --text-main: #0f172a;
       --text-muted: #475569;
       --text-soft: #64748b;
-      --header-bg: rgba(255, 255, 255, 0.92);
+      --header-bg: #ffffff;
       --input-bg: #ffffff;
       --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.03);
     }
@@ -150,18 +150,18 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     html.dark {
       /* Deep Obsidian Slate Dark Tokens with Architectural Textures */
       --bg-page: #06080d;
-      --bg-card: rgba(14, 18, 27, 0.92);
-      --bg-card-hover: rgba(20, 26, 40, 0.98);
-      --bg-elevated: rgba(20, 26, 40, 0.95);
+      --bg-card: #121215;
+      --bg-card-hover: #18181c;
+      --bg-elevated: #1a1a20;
       --bg-subtle: rgba(30, 41, 59, 0.7);
-      --border-card: rgba(255, 255, 255, 0.09);
-      --border-subtle: rgba(255, 255, 255, 0.16);
+      --border-card: #27272a;
+      --border-subtle: #3f3f46;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --text-soft: #64748b;
-      --header-bg: rgba(9, 12, 19, 0.9);
-      --input-bg: rgba(13, 17, 26, 0.95);
-      --shadow-card: 0 4px 12px -2px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      --header-bg: #09090b;
+      --input-bg: #121215;
+      --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
     }
 
     html {
@@ -173,8 +173,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     }
     body {
       background-color: var(--bg-page);
-      background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-      background-size: 24px 24px;
+      /* Clean solid surface */
       color: var(--text-main);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -185,10 +184,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       max-width: 100vw !important;
       position: relative;
     }
-    html.dark body {
-      background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
-      background-size: 24px 24px;
-    }
+    html.dark body { background-color: var(--bg-page); }
     html, body, button, input, select, textarea {
       font-family: 'Cairo', 'Tajawal', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     }
@@ -293,25 +289,23 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     .deal-card {
       background-color: var(--bg-card);
       border: 1px solid var(--border-card);
-      border-radius: 16px;
+      border-radius: 12px;
       box-shadow: var(--shadow-card);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+      transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
       position: relative;
     }
     html.dark .deal-card {
-      box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
     }
     @media (hover: hover) {
       .deal-card:hover {
         border-color: #e11d48;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.08);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
       }
       html.dark .deal-card:hover {
-        border-color: rgba(225, 29, 72, 0.8);
-        box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5);
+        border-color: rgba(225, 29, 72, 0.7);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
       }
     }
 
@@ -685,7 +679,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   </aside>
 
   <!-- Main Navigation Bar -->
-  <header class="sticky top-0 z-40 border-b backdrop-blur-md px-3 sm:px-4 py-2 sm:py-2.5 transition-colors" style="background-color: var(--header-bg); border-color: var(--border-card);">
+  <header class="sticky top-0 z-40 border-b px-3 sm:px-4 py-2 sm:py-2.5 transition-colors" style="background-color: var(--header-bg); border-color: var(--border-card);">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-3 sm:gap-4">
       
       <!-- Brand Logo -->
@@ -807,9 +801,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       </div>
 
       <!-- Direct Official Telegram Channel Access Banner -->
-      <aside id="channel-telegram-banner" class="flex border rounded-2xl p-3 sm:p-3.5 items-center justify-between gap-3 transition-all shadow-sm" style="background: linear-gradient(135deg, rgba(34,158,217,0.08) 0%, var(--bg-card) 100%); border-color: rgba(34,158,217,0.35);" aria-label="رابط القناة الرسمي">
+      <aside id="channel-telegram-banner" class="flex border rounded-2xl p-3 sm:p-3.5 items-center justify-between gap-3 transition-all shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-card);" aria-label="رابط القناة الرسمي">
         <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
-          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-[#229ED9] to-[#0088cc] text-white flex items-center justify-center text-lg sm:text-xl shadow-md shadow-[#229ED9]/25 flex-shrink-0">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#0088cc] text-white flex items-center justify-center text-lg sm:text-xl shadow-sm flex-shrink-0">
             <i class="fa-brands fa-telegram"></i>
           </div>
           <div class="min-w-0">
@@ -888,11 +882,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <!-- ========================================== -->
       <!-- 11.11 GLOBAL SHOPPING FESTIVAL SPECIAL HUB -->
       <!-- ========================================== -->
-      <section id="section-11-11-hub" class="border rounded-2xl p-3.5 sm:p-5 transition-all shadow-sm space-y-3.5 sm:space-y-4" style="background: linear-gradient(135deg, rgba(225, 29, 72, 0.06) 0%, var(--bg-card) 100%); border-color: rgba(225, 29, 72, 0.28);" aria-label="11.11 Global Shopping Festival Hub">
+      <section id="section-11-11-hub" class="border rounded-2xl p-3.5 sm:p-5 transition-all shadow-sm space-y-3.5 sm:space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);" aria-label="11.11 Global Shopping Festival Hub">
         <!-- Header Strip -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-2.5 border-b" style="border-color: rgba(225, 29, 72, 0.15);">
           <div class="flex items-center gap-2.5 min-w-0">
-            <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-tr from-rose-600 to-amber-500 text-white flex items-center justify-center font-black text-sm shadow-md shadow-rose-500/20 flex-shrink-0">
+            <span class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-rose-600 text-white flex items-center justify-center font-bold text-sm shadow-sm flex-shrink-0">
               11.11
             </span>
             <div class="min-w-0">
@@ -911,7 +905,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             </div>
           </div>
           <!-- Game Quick Action Button -->
-          <a href="https://s.click.aliexpress.com/e/_c4dXzZj5" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white text-xs font-bold px-3 py-1.5 rounded-xl shadow-sm flex items-center justify-center gap-1.5 flex-shrink-0 transition active:scale-95 touch-manipulation">
+          <a href="https://s.click.aliexpress.com/e/_c4dXzZj5" target="_blank" rel="noopener noreferrer" class="bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold px-3 py-1.5 rounded-lg shadow-sm flex items-center justify-center gap-1.5 flex-shrink-0 transition active:scale-95 touch-manipulation">
             <i class="fa-solid fa-gamepad text-xs"></i>
             <span data-i18n="hub_11_11_play_game">لعبة رصيد 11.11 (العب واجمع رصيد الشراء)</span>
             <i class="fa-solid fa-arrow-left text-[9px] rtl:inline ltr:hidden"></i>
@@ -1049,7 +1043,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <div id="section-daily-tajmi3at" class="space-y-3 pt-3 border-t" style="border-color: rgba(225, 29, 72, 0.18);">
           <div class="flex items-center justify-between gap-2 flex-wrap">
             <div class="flex items-center gap-2.5">
-              <span class="w-8 h-8 rounded-xl bg-gradient-to-br from-rose-500 to-amber-500 text-white flex items-center justify-center text-sm shadow-md flex-shrink-0">
+              <span class="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center text-sm shadow-sm flex-shrink-0">
                 <i class="fa-solid fa-layer-group"></i>
               </span>
               <div>
@@ -2658,7 +2652,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   </main>
 
   <!-- Mobile Bottom Navigation Bar -->
-  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 backdrop-blur-md border-t px-1 py-1 flex items-center justify-around text-center text-[10px] bottom-nav-safe transition-colors" style="background-color: var(--header-bg); border-color: var(--border-card);" aria-label="التنقل للجوال">
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 border-t px-1 py-1 flex items-center justify-around text-center text-[10px] bottom-nav-safe transition-colors" style="background-color: var(--header-bg); border-color: var(--border-card);" aria-label="التنقل للجوال">
     <button onclick="showPage('deals')" id="mob-bottom-deals" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 text-crimson-500 font-bold active:scale-90 transition-transform touch-manipulation cursor-pointer">
       <i class="fa-solid fa-fire text-base"></i>
       <span data-i18n="nav_deals">الصفقات</span>
@@ -2682,7 +2676,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   </nav>
 
   <!-- Deal Details Bottom Sheet & Lightbox Modal -->
-  <div id="deal-modal" onclick="onModalBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div id="deal-modal" onclick="onModalBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/60 hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div id="modal-container" class="border-t sm:border rounded-t-3xl sm:rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl p-4 sm:p-6 pb-safe space-y-4 animate-slide-up relative" style="background-color: var(--bg-card); border-color: var(--border-card);">
       
       <!-- Mobile Pull Dismiss Handle -->
@@ -2696,7 +2690,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <!-- Image Preview Container -->
       <div id="modal-img-wrap" class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border flex items-center justify-center" style="background-color: var(--bg-page); border-color: var(--border-card);">
         <img id="modal-img" src="" alt="Deal preview" class="w-full h-full object-contain" loading="lazy" decoding="async" referrerpolicy="no-referrer">
-        <span id="modal-country" class="absolute top-2.5 right-2.5 text-xs px-2.5 py-1 rounded-lg font-black border hidden shadow-md z-20 backdrop-blur-md" style="background-color: #e11d48; border-color: rgba(255, 255, 255, 0.35); color: #ffffff;"></span>
+        <span id="modal-country" class="absolute top-2.5 right-2.5 text-xs px-2.5 py-1 rounded-lg font-black border hidden shadow-sm z-20" style="background-color: #e11d48; border-color: rgba(255, 255, 255, 0.35); color: #ffffff;"></span>
         <span id="modal-coins" class="absolute top-2.5 left-2.5 bg-amber-500 text-zinc-950 text-xs font-bold px-2 py-0.5 rounded-lg hidden items-center gap-1 shadow-sm"><i class="fa-solid fa-coins text-[10px]"></i> Coins</span>
       </div>
 
@@ -2804,13 +2798,13 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   </div>
 
   <!-- Floating Deal Discovery Button (Desktop & Tablet only, hidden on phones) -->
-  <button id="fab-roulette" onclick="openRouletteModal()" aria-label="اقتراح صفقة" class="hidden md:flex fixed z-40 bottom-6 right-6 backdrop-blur-md active:scale-95 text-xs font-semibold px-4 py-2.5 rounded-full shadow-lg items-center gap-2 cursor-pointer transition-all touch-manipulation border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">
-    <i class="fa-solid fa-sparkles text-xs text-emerald-500"></i>
+  <button id="fab-roulette" onclick="openRouletteModal()" aria-label="اقتراح صفقة" class="hidden md:flex fixed z-40 bottom-6 right-6 active:scale-95 text-xs font-semibold px-3.5 py-2 rounded-lg shadow-md items-center gap-2 cursor-pointer transition-colors touch-manipulation border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">
+    <i class="fa-solid fa-shuffle text-xs text-emerald-500"></i>
     <span data-i18n="roulette_fab">اقتراح صفقة</span>
   </button>
 
   <!-- Deal Discovery Modal -->
-  <div id="roulette-modal" onclick="onRouletteBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="roulette-modal-title">
+  <div id="roulette-modal" onclick="onRouletteBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/60 hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="roulette-modal-title">
     <div class="border-t sm:border rounded-t-3xl sm:rounded-2xl w-full max-w-md max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl p-5 sm:p-6 pb-safe space-y-4 animate-slide-up relative" style="background-color: var(--bg-card); border-color: var(--border-card);">
       
       <!-- Pull handle on mobile -->
@@ -2893,7 +2887,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   </div>
 
   <!-- Shopping Tools Hub & Square Dinar Calculator Modal -->
-  <div id="gamification-modal" onclick="onGamificationBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="tools-modal-title">
+  <div id="gamification-modal" onclick="onGamificationBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/60 hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="tools-modal-title">
     <div class="border-t sm:border rounded-t-3xl sm:rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl p-5 sm:p-6 pb-safe space-y-5 animate-slide-up relative" style="background-color: var(--bg-card); border-color: var(--border-card);">
       
       <!-- Pull handle on mobile -->
@@ -3080,7 +3074,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <!-- ========================================== -->
   <!-- TELEGRAM CHANNEL JOIN MODAL / POPUP        -->
   <!-- ========================================== -->
-  <div id="telegram-modal" onclick="onTelegramPopupBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="tg-popup-title">
+  <div id="telegram-modal" onclick="onTelegramPopupBackdropClick(event)" style="display: none;" class="fixed inset-0 z-50 bg-black/60 hidden items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in" role="dialog" aria-modal="true" aria-labelledby="tg-popup-title">
     <div id="telegram-popup-container" class="border-t sm:border rounded-t-3xl sm:rounded-2xl w-full max-w-md max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl p-5 sm:p-6 pb-safe space-y-4 animate-slide-up relative" style="background-color: var(--bg-card); border-color: var(--border-card);">
       
       <!-- Pull handle on mobile -->
@@ -3099,7 +3093,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       <!-- Icon & Headline -->
       <div class="text-center pt-1 pb-1 space-y-2">
-        <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-tr from-[#229ED9] to-[#0088cc] flex items-center justify-center shadow-lg shadow-[#229ED9]/25 text-white text-3xl">
+        <div class="w-14 h-14 mx-auto rounded-xl bg-[#0088cc] flex items-center justify-center shadow-sm text-white text-2xl">
           <i class="fa-brands fa-telegram"></i>
         </div>
         <h3 id="tg-popup-title" class="text-lg sm:text-xl font-black leading-tight" style="color: var(--text-main);" data-i18n="tg_popup_title">
@@ -3174,16 +3168,13 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <span id="toast-msg">تم نسخ كود الخصم!</span>
   </div>
 
-  <!-- Persistent Floating Telegram Community Pill Button (High Organic Hook) -->
+  <!-- Persistent Floating Telegram Community Pill Button (Clean Solid) -->
   <a id="floating-tg-pill" href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" 
      aria-label="انضم لقناة تيليجرام"
-     class="fixed bottom-20 sm:bottom-6 left-3.5 z-40 bg-gradient-to-r from-[#229ED9] to-[#0088cc] hover:from-[#1e8ec3] hover:to-[#0077b5] text-white px-3.5 py-2.5 rounded-full shadow-2xl flex items-center gap-2 text-xs sm:text-sm font-bold active:scale-95 transition-all hover:scale-105 border border-white/20 touch-manipulation group" style="box-shadow: 0 10px 25px -5px rgba(34, 158, 217, 0.45);">
-    <div class="relative flex items-center justify-center">
-      <i class="fa-brands fa-telegram text-base sm:text-lg group-hover:rotate-12 transition-transform"></i>
-      <span class="absolute -top-1 -right-1 w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-    </div>
-    <span class="font-heading" id="floating-tg-text">انضم لقناة الصفقات 🇩🇿</span>
-    <span class="text-[10px] bg-white/20 px-1.5 py-0.5 rounded-full font-mono font-bold">15k+</span>
+     class="fixed bottom-20 sm:bottom-6 left-3.5 z-40 bg-[#0088cc] hover:bg-[#0077b5] text-white px-3.5 py-2 rounded-lg shadow-md flex items-center gap-2 text-xs sm:text-sm font-semibold active:scale-95 transition-colors border border-sky-600 touch-manipulation">
+    <i class="fa-brands fa-telegram text-base"></i>
+    <span class="font-heading" id="floating-tg-text">قناة الصفقات 🇩🇿</span>
+    <span class="text-[10px] bg-white/20 px-1.5 py-0.5 rounded font-mono font-bold">15k+</span>
   </a>
 
   <!-- ========================================== -->
@@ -4191,84 +4182,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       } catch (e) {}
     }
 
-    let confettiParticles = [];
-    let confettiAnimId = null;
-
     function fireConfetti(sourceEl = null) {
-      const canvas = document.getElementById('confetti-canvas');
-      if (!canvas) return;
-      const ctx = canvas.getContext('2d');
-      if (!ctx) return;
-
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      canvas.style.display = 'block';
-
-      let originX = canvas.width / 2;
-      let originY = canvas.height * 0.45;
-
-      if (sourceEl && typeof sourceEl.getBoundingClientRect === 'function') {
-        const rect = sourceEl.getBoundingClientRect();
-        originX = rect.left + rect.width / 2;
-        originY = rect.top + rect.height / 2;
-      }
-
-      const colors = ['#e11d48', '#f59e0b', '#10b981', '#38bdf8', '#a855f7', '#fbbf24', '#ffffff'];
-      confettiParticles = [];
-      const particleCount = 42;
-
-      for (let i = 0; i < particleCount; i++) {
-        const angle = Math.random() * Math.PI * 2;
-        const velocity = 4 + Math.random() * 8;
-        confettiParticles.push({
-          x: originX,
-          y: originY,
-          vx: Math.cos(angle) * velocity,
-          vy: Math.sin(angle) * velocity - 3,
-          size: 4 + Math.random() * 5,
-          color: colors[Math.floor(Math.random() * colors.length)],
-          rotation: Math.random() * 360,
-          rotSpeed: (Math.random() - 0.5) * 12,
-          opacity: 1,
-          decay: 0.015 + Math.random() * 0.02
-        });
-      }
-
-      if (confettiAnimId) cancelAnimationFrame(confettiAnimId);
-
-      function render() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        let alive = 0;
-
-        for (let i = 0; i < confettiParticles.length; i++) {
-          const p = confettiParticles[i];
-          if (p.opacity <= 0) continue;
-          alive++;
-          p.x += p.vx;
-          p.y += p.vy;
-          p.vy += 0.28;
-          p.vx *= 0.98;
-          p.rotation += p.rotSpeed;
-          p.opacity -= p.decay;
-
-          ctx.save();
-          ctx.translate(p.x, p.y);
-          ctx.rotate((p.rotation * Math.PI) / 180);
-          ctx.globalAlpha = Math.max(0, p.opacity);
-          ctx.fillStyle = p.color;
-          ctx.fillRect(-p.size / 2, -p.size / 2, p.size, p.size * 0.7);
-          ctx.restore();
-        }
-
-        if (alive > 0) {
-          confettiAnimId = requestAnimationFrame(render);
-        } else {
-          canvas.style.display = 'none';
-          confettiAnimId = null;
-        }
-      }
-
-      confettiAnimId = requestAnimationFrame(render);
+      return;
     }
 
     // ── Shopping Tools Hub & Favorites Store ────────────────────────
@@ -4294,11 +4209,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       updateGamificationBadges(state);
     }
 
-    function addSavedDZD(amount) {
-      const state = getGameState();
-      state.saved_dzd = (state.saved_dzd || 0) + amount;
-      saveGameState(state);
-    }
+    function addSavedDZD(amount) { return; }
 
     function updateGamificationBadges(state = null) {
       if (!state) state = getGameState();
@@ -5959,7 +5870,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <img src="${deal.photo_url}" alt="${safeTitle}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="handleImgError(this, '${escapeHtml(deal.photo_url)}')" class="w-full h-full object-contain group-hover:scale-102 transition-transform duration-200">
             ${favBtnHtml}
             <div class="absolute top-2 left-2 flex flex-col items-start gap-1 z-10 pointer-events-none">
-              ${deal.country ? `<span class="text-[10px] sm:text-[11px] font-black px-2 py-0.5 rounded shadow border flex items-center gap-1 backdrop-blur-md" style="background-color: #e11d48; border-color: rgba(255, 255, 255, 0.35); color: #ffffff;"><i class="fa-solid fa-location-dot text-[9px]"></i> <span>خلي البلد: ${escapeHtml(deal.country)}</span></span>` : ''}
+              ${deal.country ? `<span class="text-[10px] sm:text-[11px] font-black px-2 py-0.5 rounded shadow border flex items-center gap-1 " style="background-color: #e11d48; border-color: #f43f5e; color: #ffffff;"><i class="fa-solid fa-location-dot text-[9px]"></i> <span>خلي البلد: ${escapeHtml(deal.country)}</span></span>` : ''}
               ${deal.has_coins ? `<span class="bg-amber-500 text-zinc-950 text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm flex items-center gap-1 tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
             </div>
           </div>
@@ -5971,7 +5882,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             </div>
             ${favBtnHtml}
             <div class="absolute top-2 left-2 flex flex-col items-start gap-1 z-10 pointer-events-none">
-              ${deal.country ? `<span class="text-[10px] sm:text-[11px] font-black px-2 py-0.5 rounded shadow border flex items-center gap-1 backdrop-blur-md" style="background-color: #e11d48; border-color: rgba(255, 255, 255, 0.35); color: #ffffff;"><i class="fa-solid fa-location-dot text-[9px]"></i> <span>خلي البلد: ${escapeHtml(deal.country)}</span></span>` : ''}
+              ${deal.country ? `<span class="text-[10px] sm:text-[11px] font-black px-2 py-0.5 rounded shadow border flex items-center gap-1 " style="background-color: #e11d48; border-color: #f43f5e; color: #ffffff;"><i class="fa-solid fa-location-dot text-[9px]"></i> <span>خلي البلد: ${escapeHtml(deal.country)}</span></span>` : ''}
               ${deal.has_coins ? `<span class="bg-amber-500 text-zinc-950 text-[10px] font-bold px-1.5 py-0.5 rounded shadow-sm flex items-center gap-1 tracking-tight"><i class="fa-solid fa-coins text-[9px]"></i> Coins</span>` : ''}
             </div>
           </div>
@@ -6081,8 +5992,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         if (idx === 2) {
           const tgCard = document.createElement('article');
           tgCard.className = 'deal-card p-4 sm:p-5 flex flex-col justify-between border-2 rounded-2xl relative overflow-hidden shadow-lg col-span-1';
-          tgCard.style.background = 'linear-gradient(135deg, rgba(34,158,217,0.14) 0%, rgba(15,23,42,0.95) 100%)';
-          tgCard.style.borderColor = 'rgba(34,158,217,0.45)';
+          tgCard.style.backgroundColor = 'var(--bg-elevated)';
+          tgCard.style.borderColor = 'rgba(0, 136, 204, 0.4)';
           const tgTarget = currentChannel === '@francedealsdz' ? 'https://t.me/francedealsdz' : 'https://t.me/DzAliexpress0';
           const tgName = currentChannel === '@francedealsdz' ? '@francedealsdz' : '@DzAliexpress0';
           const isFr = currentLang === 'fr';
@@ -6100,7 +6011,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
                 </span>
               </div>
               <div class="text-center py-1 space-y-1.5">
-                <div class="w-12 h-12 mx-auto rounded-xl bg-gradient-to-tr from-[#229ED9] to-[#0088cc] flex items-center justify-center text-white text-2xl shadow-lg shadow-[#229ED9]/30">
+                <div class="w-12 h-12 mx-auto rounded-lg bg-[#0088cc] flex items-center justify-center text-white text-xl shadow-sm">
                   <i class="fa-brands fa-telegram"></i>
                 </div>
                 <h3 class="font-black text-sm sm:text-base text-white leading-tight font-heading">

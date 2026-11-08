@@ -288,7 +288,7 @@ def get_blog_guide_html() -> str:
 <body class="bg-[#06080d] text-slate-100 antialiased selection:bg-amber-500 selection:text-black">
 
   <!-- Top Sticky Navigation Bar -->
-  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#06080d]/90 border-b border-[#1f293d] transition-all">
+  <header class="sticky top-0 z-50 bg-[#06080d] border-b border-[#1f293d] transition-all">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
       <!-- Logo & Brand -->
       <a href="/" class="flex items-center gap-3 group">

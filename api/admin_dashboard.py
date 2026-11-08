@@ -676,10 +676,10 @@ DASHBOARD_HTML = r"""<!DOCTYPE html>
 
       text.innerText = message;
       if (type === 'success') {
-        body.className = 'p-3.5 rounded-2xl text-xs font-bold shadow-2xl flex items-center justify-between gap-3 border bg-emerald-500/15 border-emerald-500/30 text-emerald-300 backdrop-blur-xl';
+        body.className = 'p-3.5 rounded-2xl text-xs font-bold shadow-2xl flex items-center justify-between gap-3 border bg-emerald-500/15 border-emerald-500/30 text-emerald-300 ';
         icon.className = 'fa-solid fa-circle-check text-emerald-400 text-sm';
       } else {
-        body.className = 'p-3.5 rounded-2xl text-xs font-bold shadow-2xl flex items-center justify-between gap-3 border bg-rose-500/15 border-rose-500/30 text-rose-300 backdrop-blur-xl';
+        body.className = 'p-3.5 rounded-2xl text-xs font-bold shadow-2xl flex items-center justify-between gap-3 border bg-rose-500/15 border-rose-500/30 text-rose-300 ';
         icon.className = 'fa-solid fa-triangle-exclamation text-rose-400 text-sm';
       }
 
