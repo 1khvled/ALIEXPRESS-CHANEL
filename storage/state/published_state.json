@@ -1335,7 +1335,7 @@
     "1005009313079431": 1793898336.7775517,
     "1005010702511858": 1793903106.9341598,
     "1005008554218453": 1793908979.1776278,
-    "1005012499433797": 1794062272.0446324,
+    "1005012499433797": 1794127587.510284,
     "9998889309": 1793929309.3822134,
     "9998889332": 1793929332.5530465,
     "999888807": 1793930807.599727,
@@ -3069,7 +3069,7 @@
     "Realme C100D 4G 4/128GB": 1793969907.6763735,
     "HAYLOU Flowbuds N50 ANC": 1793970449.9003735,
     "Honor 600 Pro 12/256": 1793971367.4627862,
-    "HONOR Pad X8a (4/64GB)": 1794062272.0446324,
+    "HONOR Pad X8a (4/64GB)": 1794127587.510284,
     "Magcubic HY350 Max 900ANSI": 1794126846.802194,
     "Honor X9d (no charger)": 1794127394.3986294,
     "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1793975250.6134522,
@@ -3117,7 +3117,6 @@
     "KOOTION SATA SSD 480GB": 1794127389.2657666
   },
   "published_post_keys": [
-    "lodydeals:45565",
     "megaphonna:8428",
     "test_channel:1792184255",
     "test_channel:1793282475",
@@ -4116,11 +4115,12 @@
     "aniscoupons:34270",
     "aniscoupons:34271",
     "zedstoreonline:39716",
-    "aniscoupons:34272"
+    "aniscoupons:34272",
+    "aniscoupons:34273"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794127394.3986294,
+  "last_run_time": 1794127587.510284,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4147,12 +4147,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39716,
-      "last_check_time": 1794127391.2962642
+      "last_message_id": 39717,
+      "last_check_time": 1794127583.2097497
     },
     "aniscoupons": {
-      "last_message_id": 34272,
-      "last_check_time": 1794127396.46651
+      "last_message_id": 34273,
+      "last_check_time": 1794127589.6071246
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -17136,6 +17136,16 @@
       "price": 289.5,
       "timestamp": 1794127394.3986294,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34273": {
+      "channel_msg_id": 2035,
+      "product_id": "1005012499433797",
+      "title": "HONOR Pad X8a (4/64GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34273,
+      "price": 134.36,
+      "timestamp": 1794127587.510284,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17144,17 +17154,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794127396.8799942,
+    "last_deal_post_time": 1794127590.5740008,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794127399.6570754,
+    "last_sweep_time": 1794127594.2901576,
     "last_sweep_times": {
-      "algeria": 1794127396.8647556,
-      "france": 1794127399.6570754
+      "algeria": 1794127590.554589,
+      "france": 1794127594.2901576
     },
     "last_deal_post_times": {
-      "algeria": 1794127396.8799942
+      "algeria": 1794127590.5740008
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19517,7 +19527,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38920",
     "bnddeals:50859",
     "aniscoupons:33435",
     "lodydeals:45522",
@@ -20516,7 +20525,8 @@
     "zedstoreonline:39711",
     "zedstoreonline:39713",
     "aniscoupons:34268",
-    "zedstoreonline:39715"
+    "zedstoreonline:39715",
+    "zedstoreonline:39717"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
