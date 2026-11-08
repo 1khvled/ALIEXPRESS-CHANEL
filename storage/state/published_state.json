@@ -1139,7 +1139,7 @@
     "1005012864293264": 1793570287.0210865,
     "1005010384976635": 1793448786.1863484,
     "1005012341203600": 1793448820.6517296,
-    "1005011825891016": 1793448870.3873131,
+    "1005011825891016": 1794130143.129755,
     "1005013277965369": 1793467031.5081036,
     "1005010749192036": 1793467039.5413008,
     "1005011851389082": 1793467058.6031225,
@@ -2256,7 +2256,8 @@
     "راوتر Vodafone 4G محمول",
     "OnePlus ACE 6T",
     "Essager Mini 20W Type C Charger PD",
-    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)"
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)",
+    "OnePlus Ace 6 12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3130,10 +3131,10 @@
     "راوتر Vodafone 4G محمول": 1794128872.1451216,
     "OnePlus ACE 6T": 1794128880.302774,
     "Essager Mini 20W Type C Charger PD": 1794129971.1690388,
-    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794129986.607079
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794129986.607079,
+    "OnePlus Ace 6 12/256GB": 1794130143.129755
   },
   "published_post_keys": [
-    "lodydeals:45417",
     "megaphonna:8542",
     "lodydeals:45693",
     "pcgamingpart:7937",
@@ -4132,19 +4133,20 @@
     "aniscoupons:34278",
     "zedstoreonline:39723",
     "zedstoreonline:39724",
-    "aniscoupons:34279"
+    "aniscoupons:34279",
+    "lodydeals:46241"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794129986.607079,
+  "last_run_time": 1794130143.129755,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
       "last_check_time": 1794055834.6061237
     },
     "lodydeals": {
-      "last_message_id": 46240,
-      "last_check_time": 1794129222.6977024
+      "last_message_id": 46241,
+      "last_check_time": 1794130145.1836667
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4538,7 +4540,7 @@
     "1005012864293264": 28.96,
     "1005010384976635": 30.55,
     "1005012341203600": 478.0,
-    "1005011825891016": 426.8,
+    "1005011825891016": 414.57,
     "1005013277965369": 23.4,
     "1005010749192036": 263.6,
     "1005011851389082": 361.0,
@@ -17245,6 +17247,16 @@
       "price": 217.8,
       "timestamp": 1794129986.607079,
       "status": "ACTIVE"
+    },
+    "lodydeals:46241": {
+      "channel_msg_id": 2047,
+      "product_id": "1005011825891016",
+      "title": "OnePlus Ace 6 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46241,
+      "price": 414.57,
+      "timestamp": 1794130143.129755,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17253,17 +17265,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794129989.4761488,
+    "last_deal_post_time": 1794130147.6315796,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794129992.4233458,
+    "last_sweep_time": 1794130150.7108142,
     "last_sweep_times": {
-      "algeria": 1794129989.4512544,
-      "france": 1794129992.4233458
+      "algeria": 1794130147.606479,
+      "france": 1794130150.7108142
     },
     "last_deal_post_times": {
-      "algeria": 1794129989.4761488
+      "algeria": 1794130147.6315796
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -17728,7 +17740,7 @@
     "1005012864293264": "lodydeals",
     "1005010384976635": "bnddeals",
     "1005012341203600": "megaphonna",
-    "1005011825891016": "megaphonna",
+    "1005011825891016": "lodydeals",
     "1005013277965369": "zedstoreonline",
     "1005010749192036": "zedstoreonline",
     "1005011851389082": "zedstoreonline",
@@ -18840,7 +18852,8 @@
     "راوتر Vodafone 4G محمول": "zedstoreonline",
     "OnePlus ACE 6T": "aniscoupons",
     "Essager Mini 20W Type C Charger PD": "zedstoreonline",
-    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": "aniscoupons"
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": "aniscoupons",
+    "OnePlus Ace 6 12/256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
