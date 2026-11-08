@@ -1376,7 +1376,7 @@
     "1005008534907844": 1793987285.4130383,
     "1005009577554629": 1793987289.8200357,
     "1005010656922924": 1793994623.1444166,
-    "1005008077441711": 1793998299.0115912,
+    "1005008077441711": 1794147198.6954062,
     "1005006411483066": 1794091985.0146983,
     "1005012925301774": 1794002515.731258,
     "1005012959738411": 1794063654.6498907,
@@ -3136,7 +3136,7 @@
     "Realme 15 Pro (12/256GB)": 1794086587.7356915,
     "SOUNDPEATS C30 ANC Wireless Earphones": 1793994623.1444166,
     "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899,
-    "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1793998299.0115912,
+    "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1794147198.6954062,
     "realme C100d 4/128GB": 1794126114.167646,
     "Zeblaze GTS 3 Pro AMOLED": 1794091985.0146983,
     "شاحن سيارة ORICO بقوة 45W": 1794002515.731258,
@@ -3187,7 +3187,6 @@
     "Ulanzi ST-06S Smartphone Mount Holder": 1794146840.7057447
   },
   "published_post_keys": [
-    "test_channel:1792162568",
     "bnddeals:50949",
     "bnddeals:50856",
     "aniscoupons:33316",
@@ -4186,11 +4185,12 @@
     "lodydeals:46254",
     "lodydeals:46255",
     "lodydeals:46256",
-    "aniscoupons:34296"
+    "aniscoupons:34296",
+    "zedstoreonline:39739"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794146840.7057447,
+  "last_run_time": 1794147198.6954062,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6045,
@@ -4217,8 +4217,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39738,
-      "last_check_time": 1794146834.8795576
+      "last_message_id": 39739,
+      "last_check_time": 1794147200.739249
     },
     "aniscoupons": {
       "last_message_id": 34297,
@@ -4797,7 +4797,7 @@
     "1005008534907844": 50.86,
     "1005009577554629": 10.55,
     "1005010656922924": 20.4,
-    "1005008077441711": 7.6,
+    "1005008077441711": 7.7,
     "1005012925301774": 11.2,
     "1005012959738411": 85.59,
     "1005007162099601": 32.87,
@@ -17580,6 +17580,16 @@
       "price": 10.8,
       "timestamp": 1794146840.7057447,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39739": {
+      "channel_msg_id": 2074,
+      "product_id": "1005008077441711",
+      "title": "Inphic PG1 PG9 RGB Wired Gaming Mouse",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39739,
+      "price": 7.7,
+      "timestamp": 1794147198.6954062,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17588,17 +17598,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794146843.6860619,
+    "last_deal_post_time": 1794147202.0900867,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794147008.039828,
+    "last_sweep_time": 1794147205.4184103,
     "last_sweep_times": {
-      "algeria": 1794147005.1431212,
-      "france": 1794147008.039828
+      "algeria": 1794147202.070428,
+      "france": 1794147205.4184103
     },
     "last_deal_post_times": {
-      "algeria": 1794146843.6860619
+      "algeria": 1794147202.0900867
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
