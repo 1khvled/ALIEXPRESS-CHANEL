@@ -694,7 +694,8 @@
     "1005012048332402",
     "1005011665465731",
     "1005012377459743",
-    "1005009460475870"
+    "1005009460475870",
+    "1005009649079564"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1403,7 +1404,8 @@
     "1005012048332402": 1794136369.073103,
     "1005011665465731": 1794137638.8201442,
     "1005012377459743": 1794139106.9168086,
-    "1005009460475870": 1794144806.2660766
+    "1005009460475870": 1794144806.2660766,
+    "1005009649079564": 1794145536.5317988
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2282,7 +2284,8 @@
     "ويبكام OBSBOT MEET 2 Webcam 4K",
     "Blackview Mega 5",
     "Warvank X8 Wireless Gaming Mouse",
-    "Xiaoxin Pad Pro 2025 (8/128GB)"
+    "Xiaoxin Pad Pro 2025 (8/128GB)",
+    "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3166,10 +3169,10 @@
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
     "Blackview Mega 5": 1794142225.168232,
     "Warvank X8 Wireless Gaming Mouse": 1794144806.2660766,
-    "Xiaoxin Pad Pro 2025 (8/128GB)": 1794145351.158124
+    "Xiaoxin Pad Pro 2025 (8/128GB)": 1794145351.158124,
+    "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": 1794145536.5317988
   },
   "published_post_keys": [
-    "aniscoupons:33162",
     "lodydeals:45839",
     "zedstoreonline:38850",
     "lodydeals:45930",
@@ -4168,11 +4171,12 @@
     "lodydeals:46250",
     "aniscoupons:34293",
     "zedstoreonline:39736",
-    "aniscoupons:34295"
+    "aniscoupons:34295",
+    "zedstoreonline:39737"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794145351.158124,
+  "last_run_time": 1794145536.5317988,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6045,
@@ -4199,8 +4203,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39736,
-      "last_check_time": 1794144808.3197145
+      "last_message_id": 39737,
+      "last_check_time": 1794145538.5659757
     },
     "aniscoupons": {
       "last_message_id": 34295,
@@ -4803,7 +4807,8 @@
     "1005012048332402": 193.1,
     "1005011665465731": 5.38,
     "1005012377459743": 304.77,
-    "1005009460475870": 6.9
+    "1005009460475870": 6.9,
+    "1005009649079564": 19.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17508,6 +17513,16 @@
       "price": 212.48,
       "timestamp": 1794145351.158124,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39737": {
+      "channel_msg_id": 2069,
+      "product_id": "1005009649079564",
+      "title": "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39737,
+      "price": 19.4,
+      "timestamp": 1794145536.5317988,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17516,17 +17531,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794145353.701068,
+    "last_deal_post_time": 1794145539.7491784,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794145356.2392042,
+    "last_sweep_time": 1794145542.96668,
     "last_sweep_times": {
-      "algeria": 1794145353.6812098,
-      "france": 1794145356.2392042
+      "algeria": 1794145539.734902,
+      "france": 1794145542.96668
     },
     "last_deal_post_times": {
-      "algeria": 1794145353.701068
+      "algeria": 1794145539.7491784
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18235,7 +18250,8 @@
     "1005012048332402": "aniscoupons",
     "1005011665465731": "lodydeals",
     "1005012377459743": "aniscoupons",
-    "1005009460475870": "zedstoreonline"
+    "1005009460475870": "zedstoreonline",
+    "1005009649079564": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19121,7 +19137,8 @@
     "ويبكام OBSBOT MEET 2 Webcam 4K": "ecksdeal",
     "Blackview Mega 5": "aniscoupons",
     "Warvank X8 Wireless Gaming Mouse": "zedstoreonline",
-    "Xiaoxin Pad Pro 2025 (8/128GB)": "aniscoupons"
+    "Xiaoxin Pad Pro 2025 (8/128GB)": "aniscoupons",
+    "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
