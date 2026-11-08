@@ -637,13 +637,13 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 sm:gap-3">
       <div class="flex items-center gap-2 sm:gap-3 min-w-0">
         <span class="inline-flex items-center gap-1.5 font-medium text-[10px] sm:text-[11px] truncate">
-          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0"></span>
+          <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse flex-shrink-0"></span>
           <span data-i18n="top_live_updates" class="truncate">تحديث فوري من القنوات</span>
         </span>
         <span class="hidden sm:inline opacity-30">|</span>
         <a href="https://squarealgerie.com" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-1 hover:opacity-80 transition py-0.5">
           <i class="fa-solid fa-chart-line opacity-60"></i>
-          <span><span data-i18n="top_usdt_rate">سعر صرف السكوار</span>: 1 USDT ≈ <b id="top-usdt-rate" class="font-mono text-emerald-500 font-bold">256.9</b> <span data-i18n="currency_dzd">دج</span></span>
+          <span><span data-i18n="top_usdt_rate">سعر صرف السكوار</span>: 1 USDT ≈ <b id="top-usdt-rate" class="font-mono text-amber-500 font-bold">256.9</b> <span data-i18n="currency_dzd">دج</span></span>
         </a>
       </div>
       
@@ -809,8 +809,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <div class="min-w-0">
             <div class="flex items-center gap-2 flex-wrap">
               <h2 id="channel-banner-name" class="font-bold text-xs sm:text-sm truncate" style="color: var(--text-main);">قناة التيليجرام الرسمية (@DzAliexpress0)</h2>
-              <span class="inline-flex items-center gap-1 text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-500 border border-emerald-500/30">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="inline-flex items-center gap-1 text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/25">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
                 <span data-i18n="channel_banner_live">تحديثات فورية 24/7</span>
               </span>
             </div>
@@ -1039,170 +1039,6 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
 
 
-        <!-- Daily Curated Tajmi3at & Category Bulletins (Updates Everyday) -->
-        <div id="section-daily-tajmi3at" class="space-y-3 pt-3 border-t" style="border-color: rgba(225, 29, 72, 0.18);">
-          <div class="flex items-center justify-between gap-2 flex-wrap">
-            <div class="flex items-center gap-2.5">
-              <span class="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center text-sm shadow-sm flex-shrink-0">
-                <i class="fa-solid fa-layer-group"></i>
-              </span>
-              <div>
-                <div class="flex items-center gap-2 flex-wrap">
-                  <h3 class="font-black text-xs sm:text-sm text-rose-500 dark:text-rose-400 font-heading">
-                    تجميعات وفهارس الصفقات اليومية 📦🔥
-                  </h3>
-                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-500 border border-emerald-500/30 flex items-center gap-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span>محدث يومياً 🔄</span>
-                  </span>
-                </div>
-                <p class="text-[10px] sm:text-[11px] opacity-75" style="color: var(--text-muted);">
-                  فهارس متكاملة تجمع أقوى عروض وتخفيضات 11.11 المحققة لنهار اليوم، مصنفة حسب الفئة لتسهيل التسوق والشراء بأقل سعر.
-                </p>
-              </div>
-            </div>
-            <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="text-xs font-bold px-3 py-1.5 rounded-xl border flex items-center gap-1.5 transition active:scale-95 shadow-sm text-sky-500 hover:border-sky-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <i class="fa-brands fa-telegram"></i>
-              <span>قناة الصفقات @DzAliexpress0</span>
-            </a>
-          </div>
-
-          <!-- Dynamic Daily Tajmi3at Grid -->
-          <div id="daily-tajmi3at-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
-            <a href="https://t.me/DzAliexpress0/1585" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-rose-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="flex items-start justify-between gap-2">
-                <div class="flex items-center gap-2">
-                  <span class="w-8 h-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-105 transition-transform">
-                    <i class="fa-solid fa-mobile-screen"></i>
-                  </span>
-                  <div>
-                    <h4 class="font-bold text-xs sm:text-sm text-rose-500 font-heading">📱 فهرس الهواتف الذكية (Part 1 & 2)</h4>
-                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Realme 14, Honor 200, POCO X6 Pro, Note 13</span>
-                  </div>
-                </div>
-                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-500 font-bold">11.11</span>
-              </div>
-              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
-                <span class="text-rose-500 flex items-center gap-1">
-                  <span>تصفح عروض الهواتف</span>
-                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
-                </span>
-                <span class="text-[10px] opacity-50 font-normal">تيليجرام #1585</span>
-              </div>
-            </a>
-
-            <a href="https://t.me/DzAliexpress0/1587" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-rose-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="flex items-start justify-between gap-2">
-                <div class="flex items-center gap-2">
-                  <span class="w-8 h-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-105 transition-transform">
-                    <i class="fa-solid fa-headphones"></i>
-                  </span>
-                  <div>
-                    <h4 class="font-bold text-xs sm:text-sm text-rose-500 font-heading">🎧 فهرس السماعات والصوتيات</h4>
-                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Fifine AM8, QCY ANC, Soundcore, Maono</span>
-                  </div>
-                </div>
-                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-violet-500/10 text-rose-500 font-bold">11.11</span>
-              </div>
-              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
-                <span class="text-rose-500 flex items-center gap-1">
-                  <span>تصفح عروض الصوتيات</span>
-                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
-                </span>
-                <span class="text-[10px] opacity-50 font-normal">تيليجرام #1587</span>
-              </div>
-            </a>
-
-            <a href="https://t.me/DzAliexpress0/1588" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-rose-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="flex items-start justify-between gap-2">
-                <div class="flex items-center gap-2">
-                  <span class="w-8 h-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-105 transition-transform">
-                    <i class="fa-solid fa-microchip"></i>
-                  </span>
-                  <div>
-                    <h4 class="font-bold text-xs sm:text-sm text-amber-500 font-heading">💻 فهرس عتاد الـ PC والمعالجات</h4>
-                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Ryzen 7 9800X3D, Ryzen 8400F, Tomahawk, SSDs</span>
-                  </div>
-                </div>
-                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-500 font-bold">11.11</span>
-              </div>
-              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
-                <span class="text-amber-500 flex items-center gap-1">
-                  <span>تصفح عروض الكمبيوتر</span>
-                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
-                </span>
-                <span class="text-[10px] opacity-50 font-normal">تيليجرام #1588</span>
-              </div>
-            </a>
-
-            <a href="https://t.me/DzAliexpress0/1589" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-emerald-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="flex items-start justify-between gap-2">
-                <div class="flex items-center gap-2">
-                  <span class="w-8 h-8 rounded-xl bg-emerald-500/15 text-emerald-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-bolt"></i>
-                  </span>
-                  <div>
-                    <h4 class="font-bold text-xs sm:text-sm text-emerald-500 font-heading">⚡ فهرس الشواحن وبنوك الطاقة</h4>
-                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Ugreen GaN 65W, Baseus 240W Cable, Car Chargers</span>
-                  </div>
-                </div>
-                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-500 font-bold">11.11</span>
-              </div>
-              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
-                <span class="text-emerald-500 flex items-center gap-1">
-                  <span>تصفح عروض الشواحن</span>
-                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
-                </span>
-                <span class="text-[10px] opacity-50 font-normal">تيليجرام #1589</span>
-              </div>
-            </a>
-
-            <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-cyan-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="flex items-start justify-between gap-2">
-                <div class="flex items-center gap-2">
-                  <span class="w-8 h-8 rounded-xl bg-cyan-500/15 text-cyan-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-gamepad"></i>
-                  </span>
-                  <div>
-                    <h4 class="font-bold text-xs sm:text-sm text-cyan-500 font-heading">🎮 فهرس الكيبوردات والماوسات</h4>
-                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Aula F75, Attack Shark X3/R1, GameSir G7</span>
-                  </div>
-                </div>
-                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-cyan-500/10 text-cyan-500 font-bold">11.11</span>
-              </div>
-              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
-                <span class="text-cyan-500 flex items-center gap-1">
-                  <span>تصفح عروض القيمنق</span>
-                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
-                </span>
-                <span class="text-[10px] opacity-50 font-normal">تيليجرام</span>
-              </div>
-            </a>
-
-            <div onclick="setCategory('tajmi3at')" class="tajmi3a-quick-card group p-3 rounded-2xl border border-dashed transition hover:border-rose-500 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation cursor-pointer" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-              <div class="flex items-start justify-between gap-2">
-                <div class="flex items-center gap-2">
-                  <span class="w-8 h-8 rounded-xl bg-rose-500/15 text-rose-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:rotate-12 transition-transform">
-                    <i class="fa-solid fa-list-check"></i>
-                  </span>
-                  <div>
-                    <h4 class="font-bold text-xs sm:text-sm text-rose-500 font-heading">📑 عرض كل الفهارس في الموقع</h4>
-                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">تصفية بطاقات التجميعات في جدول العروض هنا</span>
-                  </div>
-                </div>
-                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-500 font-bold">موقع</span>
-              </div>
-              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
-                <span class="text-rose-500 flex items-center gap-1">
-                  <span>انتقل لتبويب التجميعات</span>
-                  <i class="fa-solid fa-arrow-down text-[9px]"></i>
-                </span>
-                <span class="text-[10px] opacity-50 font-normal">مباشرة في الصفحة</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <!-- Strategic Buying Guidance Bar -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 p-2.5 rounded-xl border text-[11px]" style="background-color: var(--bg-card); border-color: rgba(225, 29, 72, 0.2);">
           <div class="flex items-center gap-2">
@@ -1286,8 +1122,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <i class="fa-solid fa-fire text-rose-500" aria-hidden="true"></i>
             <span data-i18n="deals_section_heading">أحدث صفقات وتخفيضات AliExpress بالدينار الجزائري</span>
           </h1>
-          <span class="text-[11px] text-emerald-500 flex items-center gap-1.5 font-bold">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-[11px] text-amber-500 flex items-center gap-1.5 font-bold">
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
             <span id="live-deals-counter" class="font-sans font-bold">...</span>
           </span>
         </div>
@@ -1346,6 +1182,171 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       </div>
 
       <!-- ========================================== -->
+      
+      <!-- Daily Curated Tajmi3at & Category Bulletins (Updates Everyday) -->
+        <section id="section-daily-tajmi3at" class="border rounded-2xl p-4 sm:p-5 space-y-3.5 transition-colors mt-6" style="background-color: var(--bg-card); border-color: var(--border-card);">
+          <div class="flex items-center justify-between gap-2 flex-wrap">
+            <div class="flex items-center gap-2.5">
+              <span class="w-8 h-8 rounded-lg bg-rose-600 text-white flex items-center justify-center text-sm shadow-sm flex-shrink-0">
+                <i class="fa-solid fa-layer-group"></i>
+              </span>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <h3 class="font-black text-xs sm:text-sm text-rose-500 dark:text-rose-400 font-heading">
+                    تجميعات وفهارس الصفقات اليومية 📦🔥
+                  </h3>
+                  <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/25 flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                    <span>محدث يومياً 🔄</span>
+                  </span>
+                </div>
+                <p class="text-[10px] sm:text-[11px] opacity-75" style="color: var(--text-muted);">
+                  فهارس متكاملة تجمع أقوى عروض وتخفيضات 11.11 المحققة لنهار اليوم، مصنفة حسب الفئة لتسهيل التسوق والشراء بأقل سعر.
+                </p>
+              </div>
+            </div>
+            <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="text-xs font-bold px-3 py-1.5 rounded-xl border flex items-center gap-1.5 transition active:scale-95 shadow-sm text-sky-500 hover:border-sky-500/50" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <i class="fa-brands fa-telegram"></i>
+              <span>قناة الصفقات @DzAliexpress0</span>
+            </a>
+          </div>
+
+          <!-- Dynamic Daily Tajmi3at Grid -->
+          <div id="daily-tajmi3at-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+            <a href="https://t.me/DzAliexpress0/1585" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-rose-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-xs sm:text-sm text-rose-500 font-heading">📱 فهرس الهواتف الذكية (Part 1 & 2)</h4>
+                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Realme 14, Honor 200, POCO X6 Pro, Note 13</span>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-500 font-bold">11.11</span>
+              </div>
+              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
+                <span class="text-rose-500 flex items-center gap-1">
+                  <span>تصفح عروض الهواتف</span>
+                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
+                </span>
+                <span class="text-[10px] opacity-50 font-normal">تيليجرام #1585</span>
+              </div>
+            </a>
+
+            <a href="https://t.me/DzAliexpress0/1587" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-rose-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-headphones"></i>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-xs sm:text-sm text-rose-500 font-heading">🎧 فهرس السماعات والصوتيات</h4>
+                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Fifine AM8, QCY ANC, Soundcore, Maono</span>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-500 font-bold">11.11</span>
+              </div>
+              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
+                <span class="text-rose-500 flex items-center gap-1">
+                  <span>تصفح عروض الصوتيات</span>
+                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
+                </span>
+                <span class="text-[10px] opacity-50 font-normal">تيليجرام #1587</span>
+              </div>
+            </a>
+
+            <a href="https://t.me/DzAliexpress0/1588" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-rose-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-microchip"></i>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-xs sm:text-sm text-amber-500 font-heading">💻 فهرس عتاد الـ PC والمعالجات</h4>
+                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Ryzen 7 9800X3D, Ryzen 8400F, Tomahawk, SSDs</span>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-500 font-bold">11.11</span>
+              </div>
+              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
+                <span class="text-amber-500 flex items-center gap-1">
+                  <span>تصفح عروض الكمبيوتر</span>
+                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
+                </span>
+                <span class="text-[10px] opacity-50 font-normal">تيليجرام #1588</span>
+              </div>
+            </a>
+
+            <a href="https://t.me/DzAliexpress0/1589" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-amber-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-bolt"></i>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-xs sm:text-sm text-amber-500 font-heading">⚡ فهرس الشواحن وبنوك الطاقة</h4>
+                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Ugreen GaN 65W, Baseus 240W Cable, Car Chargers</span>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-500 font-bold">11.11</span>
+              </div>
+              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
+                <span class="text-amber-500 flex items-center gap-1">
+                  <span>تصفح عروض الشواحن</span>
+                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
+                </span>
+                <span class="text-[10px] opacity-50 font-normal">تيليجرام #1589</span>
+              </div>
+            </a>
+
+            <a href="https://t.me/DzAliexpress0" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-rose-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-xl bg-rose-500/10 text-rose-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-gamepad"></i>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-xs sm:text-sm text-rose-500 font-heading">🎮 فهرس الكيبوردات والماوسات</h4>
+                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Aula F75, Attack Shark X3/R1, GameSir G7</span>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-500 font-bold">11.11</span>
+              </div>
+              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
+                <span class="text-rose-500 flex items-center gap-1">
+                  <span>تصفح عروض القيمنق</span>
+                  <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
+                </span>
+                <span class="text-[10px] opacity-50 font-normal">تيليجرام</span>
+              </div>
+            </a>
+
+            <div onclick="setCategory('tajmi3at'); document.getElementById('deals-grid')?.scrollIntoView({behavior: 'smooth'});" class="tajmi3a-quick-card group p-3 rounded-2xl border border-dashed transition hover:border-rose-500 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation cursor-pointer" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+              <div class="flex items-start justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="w-8 h-8 rounded-xl bg-rose-500/15 text-rose-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:rotate-12 transition-transform">
+                    <i class="fa-solid fa-list-check"></i>
+                  </span>
+                  <div>
+                    <h4 class="font-bold text-xs sm:text-sm text-rose-500 font-heading">📑 عرض كل الفهارس في الموقع</h4>
+                    <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">تصفية بطاقات التجميعات في جدول العروض هنا</span>
+                  </div>
+                </div>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-rose-500/10 text-rose-500 font-bold">موقع</span>
+              </div>
+              <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
+                <span class="text-rose-500 flex items-center gap-1">
+                  <span>تصفية عروض التجميعات بالأعلى</span>
+                  <i class="fa-solid fa-arrow-up text-[9px] group-hover:-translate-y-1 transition-transform"></i>
+                </span>
+                <span class="text-[10px] opacity-50 font-normal">مباشرة في الصفحة</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
       <!-- HIGH-RANKING SEMANTIC SEO SHOPPING GUIDE   -->
       <!-- ========================================== -->
       <section id="seo-shopping-guide" class="border rounded-2xl transition-colors mt-8 overflow-hidden" style="background-color: var(--bg-card); border-color: var(--border-card);">
@@ -1394,7 +1395,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <!-- SEO Block 2: Buying in Algeria -->
           <div class="space-y-2 p-4 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
             <h3 class="font-bold text-sm sm:text-base flex items-center gap-2" style="color: var(--text-main);">
-              <i class="fa-solid fa-credit-card text-emerald-500"></i>
+              <i class="fa-solid fa-credit-card text-rose-500"></i>
               <span data-i18n="seo_block2_h">طريقة الشراء من علي اكسبراس في الجزائر والدفع ببريدي موب</span>
             </h3>
             <p data-i18n="seo_block2_p">
@@ -1446,7 +1447,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </h3>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs leading-relaxed" style="color: var(--text-muted);">
             <div class="p-3 rounded-lg border" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <b class="text-emerald-500 block text-xs mb-1" data-i18n="geo_fact_currency_title">العملة وأسعار الصرف:</b>
+              <b class="text-amber-500 block text-xs mb-1" data-i18n="geo_fact_currency_title">العملة وأسعار الصرف:</b>
               <span data-i18n="geo_fact_currency_desc">الدينار الجزائري (DZD) محسوب بسعر السكوار اللحظي (SquareAlgerie.com).</span>
             </div>
             <div class="p-3 rounded-lg border" style="background-color: var(--bg-card); border-color: var(--border-card);">
@@ -1458,7 +1459,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               <span data-i18n="geo_fact_shipping_desc">بريد الجزائر (Algérie Poste / EMS)، إعفاء تام للطرود الشخصية غير التجارية.</span>
             </div>
             <div class="p-3 rounded-lg border" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <b class="text-purple-500 block text-xs mb-1" data-i18n="geo_fact_coins_title">أداة العملات (Coins):</b>
+              <b class="text-amber-500 block text-xs mb-1" data-i18n="geo_fact_coins_title">أداة العملات (Coins):</b>
               <span data-i18n="geo_fact_coins_desc">مولد روابط مجاني لتفعيل خصم 50% إلى 70% بدلاً من 2% القياسية.</span>
             </div>
           </div>
@@ -1466,8 +1467,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
         <!-- Internal Navigation & Cross-Links (Prevent Orphan Pages & Boost PageRank) -->
         <div class="border-t pt-4 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs" style="border-color: var(--border-card);">
-          <a href="#cards" onclick="showPage('cards')" class="p-3 rounded-xl border flex items-center gap-2.5 transition hover:border-emerald-500/50" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
-            <div class="w-8 h-8 rounded-lg bg-emerald-500/15 text-emerald-500 flex items-center justify-center flex-shrink-0 text-sm">
+          <a href="#cards" onclick="showPage('cards')" class="p-3 rounded-xl border flex items-center gap-2.5 transition hover:border-rose-500/50" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+            <div class="w-8 h-8 rounded-lg bg-rose-500/10 text-rose-500 flex items-center justify-center flex-shrink-0 text-sm">
               <i class="fa-solid fa-credit-card"></i>
             </div>
             <div class="min-w-0">
@@ -1530,7 +1531,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <!-- Header -->
         <div class="space-y-1.5 text-right">
           <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md text-[11px] font-mono font-medium border" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
             <span data-i18n="tracking_badge">شبكة التتبع اللوجستي • الجزائر 🇩🇿</span>
           </div>
           <h2 class="text-xl sm:text-2xl font-black tracking-tight" style="color: var(--text-main);" data-i18n="tracking_hero_title">
@@ -1611,8 +1612,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
                 <span id="tracking-carrier-flag" class="text-sm">🌐</span>
                 <span id="tracking-carrier-name" style="color: var(--text-main);">AliExpress Choice / Cainiao</span>
               </span>
-              <span id="tracking-status-badge" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span id="tracking-status-badge" class="px-2.5 py-1 rounded-lg text-xs font-semibold bg-amber-500/10 text-amber-500 border border-amber-500/20 flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
                 <span id="tracking-status-text">في مسار الشحن الدولي</span>
               </span>
             </div>
@@ -1682,7 +1683,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <!-- Stage 1 -->
             <div id="track-step-1" class="p-3 rounded-xl border space-y-1 relative transition" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="flex items-center justify-between">
-                <span class="w-5 h-5 rounded-full bg-emerald-500 text-white font-bold text-[10px] flex items-center justify-center">1</span>
+                <span class="w-5 h-5 rounded-full bg-rose-600 text-white font-bold text-[10px] flex items-center justify-center">1</span>
                 <i class="fa-solid fa-box text-xs opacity-50"></i>
               </div>
               <div class="font-bold text-xs pt-1" style="color: var(--text-main);">1. المستودع</div>
@@ -1773,7 +1774,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             </a>
 
             <!-- 5. Algérie Poste -->
-            <a id="btn-portal-poste" href="https://t.17track.net/ar" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-between gap-1.5 font-semibold transition hover:border-emerald-500 active:scale-95 touch-manipulation col-span-2 sm:col-span-1" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+            <a id="btn-portal-poste" href="https://t.17track.net/ar" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-xl border flex items-center justify-between gap-1.5 font-semibold transition hover:border-rose-500 active:scale-95 touch-manipulation col-span-2 sm:col-span-1" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
               <span>بريد الجزائر</span>
               <span class="opacity-40 text-[10px]">↗</span>
             </a>
@@ -1818,7 +1819,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       
       <!-- Hero Banner -->
       <div class="border rounded-xl p-5 sm:p-6 space-y-3" style="background-color: var(--bg-card); border-color: var(--border-card);">
-        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded text-xs font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded text-xs font-bold bg-rose-500/10 text-rose-500 border border-rose-500/20">
           <i class="fa-solid fa-credit-card"></i>
           <span data-i18n="cards_badge">دليل بطاقات الدفع والشحن بالدينار الجزائري 🇩🇿</span>
         </div>
@@ -1834,22 +1835,22 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         
         <!-- Partner 1: Bybit Virtual Mastercard -->
-        <div class="border rounded-xl p-5 flex flex-col justify-between transition-colors hover:border-emerald-500/50 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="border rounded-xl p-5 flex flex-col justify-between transition-colors hover:border-amber-500/50 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
-              <div class="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-base font-bold">
+              <div class="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center text-base font-bold">
                 <i class="fa-solid fa-credit-card"></i>
               </div>
-              <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20" data-i18n="cards_bybit_badge">مجانية 100% — 0 دج</span>
+              <span class="text-[11px] font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-500 border border-amber-500/20" data-i18n="cards_bybit_badge">مجانية 100% — 0 دج</span>
             </div>
             <h3 class="font-bold text-sm sm:text-base" style="color: var(--text-main);" data-i18n="cards_bybit_title">بطاقة Bybit Card (MasterCard)</h3>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_bybit_desc">
               البطاقة الأفضل حالياً للتسوق من AliExpress: تصدر فورياً ومجاناً 100% وبدون أي اشتراك شهري، مقبولة في جميع المتاجر العالمية وPayPal مع كاش باك يصل إلى 10%.
             </p>
             <ul class="text-xs space-y-2 pt-1 font-medium" style="color: var(--text-main);">
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[11px]"></i><span data-i18n="cards_bybit_f1">0 دج مصاريف فتح وبدون اشتراك شهري</span></li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[11px]"></i><span data-i18n="cards_bybit_f2">مقبولة 100% على AliExpress وPayPal</span></li>
-              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-[11px]"></i><span data-i18n="cards_bybit_f3">شحن فوري بالدينار عبر Binance P2P</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span data-i18n="cards_bybit_f1">0 دج مصاريف فتح وبدون اشتراك شهري</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span data-i18n="cards_bybit_f2">مقبولة 100% على AliExpress وPayPal</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-500 text-[11px]"></i><span data-i18n="cards_bybit_f3">شحن فوري بالدينار عبر Binance P2P</span></li>
             </ul>
           </div>
 
@@ -1857,14 +1858,14 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <div class="flex items-center justify-between p-2.5 rounded-lg border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
               <div class="min-w-0">
                 <div class="text-[10px] opacity-70" data-i18n="cards_ref_code">كود التسجيل الحصري:</div>
-                <div class="font-mono font-bold text-sm text-emerald-500">L9LLRP5</div>
+                <div class="font-mono font-bold text-sm text-amber-500">L9LLRP5</div>
               </div>
-              <button onclick="copyReferralCode('L9LLRP5', this)" class="min-h-[36px] px-2.5 py-1 text-xs font-bold rounded border hover:bg-emerald-500/10 active:scale-95 transition flex items-center gap-1.5 touch-manipulation cursor-pointer" style="border-color: var(--border-card); color: var(--text-main);">
+              <button onclick="copyReferralCode('L9LLRP5', this)" class="min-h-[36px] px-2.5 py-1 text-xs font-bold rounded border hover:bg-amber-500/10 active:scale-95 transition flex items-center gap-1.5 touch-manipulation cursor-pointer" style="border-color: var(--border-card); color: var(--text-main);">
                 <i class="fa-regular fa-copy"></i>
                 <span data-i18n="cards_btn_copy_code">نسخ الكود</span>
               </button>
             </div>
-            <a href="https://www.bybit.com/invite?ref=L9LLRP5&medium=referral&utm_campaign=evergreen&share_to=Telegram" target="_blank" rel="noopener noreferrer" class="w-full min-h-[40px] rounded-lg bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] text-white font-bold text-xs sm:text-sm py-2 px-3 flex items-center justify-center gap-2 shadow-sm transition touch-manipulation">
+            <a href="https://www.bybit.com/invite?ref=L9LLRP5&medium=referral&utm_campaign=evergreen&share_to=Telegram" target="_blank" rel="noopener noreferrer" class="w-full min-h-[40px] rounded-lg bg-amber-500 hover:bg-amber-400 active:scale-[0.98] text-zinc-950 font-bold text-xs sm:text-sm py-2 px-3 flex items-center justify-center gap-2 shadow-sm transition touch-manipulation">
               <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
               <span data-i18n="cards_btn_bybit_cta">طلب بطاقة Bybit المجانية</span>
             </a>
@@ -1963,7 +1964,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           
           <div class="border rounded-xl p-4 space-y-2 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 font-bold flex items-center justify-center text-sm">1</div>
+            <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-500 font-bold flex items-center justify-center text-sm">1</div>
             <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step1_title">1. شراء USDT بـ BaridiMob</h3>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_step1_desc">
               افتح حسابك في Binance، ادخل قسم P2P واختر الدفع بـ BaridiMob لشراء المبلغ المطلوب من الدولار الرقمي (USDT) مباشرة في دقيقتين.
@@ -1971,7 +1972,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </div>
 
           <div class="border rounded-xl p-4 space-y-2 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 font-bold flex items-center justify-center text-sm">2</div>
+            <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-500 font-bold flex items-center justify-center text-sm">2</div>
             <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step2_title">2. شحن بطاقتك الافتراضية</h3>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_step2_desc">
               حوّل رصيد USDT من Binance إلى حساب Bybit أو RedotPay الخاص بك عبر شبكة سريعة بدون أي رسوم مرتفعة.
@@ -1979,7 +1980,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </div>
 
           <div class="border rounded-xl p-4 space-y-2 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 font-bold flex items-center justify-center text-sm">3</div>
+            <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-500 font-bold flex items-center justify-center text-sm">3</div>
             <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step3_title">3. ربط البطاقة في AliExpress</h3>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_step3_desc">
               انسخ معلومات بطاقتك الافتراضية (رقم البطاقة وتاريخ الانتهاء وCVV) وأضفها في وسائل الدفع بتطبيق AliExpress.
@@ -1987,7 +1988,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </div>
 
           <div class="border rounded-xl p-4 space-y-2 relative" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 font-bold flex items-center justify-center text-sm">4</div>
+            <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-500 font-bold flex items-center justify-center text-sm">4</div>
             <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="cards_step4_title">4. تطبيق الخصومات والشراء</h3>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="cards_step4_desc">
               اختر صفقتك من موقعنا، انسخ كود الخصم، استخدم بوت العملات واستلم طردك مباشرة من مكتب بريد الجزائر القريب منك!
@@ -2000,7 +2001,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <!-- In-Depth Algerian Shipping & Customs Guide Section -->
       <div class="border rounded-2xl p-6 sm:p-8 space-y-6" style="background-color: var(--bg-card); border-color: var(--border-card);">
         <div class="space-y-1 border-b pb-4" style="border-color: var(--border-card);">
-          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-500/15 text-emerald-500">
+          <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-500/10 text-amber-500">
             <i class="fa-solid fa-map-location-dot text-xs"></i>
             <span data-i18n="cards_post_badge">إرشادات الشحن والجمارك في الجزائر 2026</span>
           </div>
@@ -2035,7 +2036,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <!-- Block C: Tracking & Delivery -->
           <div class="border rounded-xl p-4 space-y-2" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
             <h3 class="font-bold text-sm flex items-center gap-2" style="color: var(--text-main);">
-              <i class="fa-solid fa-box-open text-emerald-500"></i>
+              <i class="fa-solid fa-box-open text-amber-500"></i>
               <span data-i18n="cards_pickup_h">3. التتبع والاستلام من البريد</span>
             </h3>
             <p data-i18n="cards_pickup_p">
@@ -2047,7 +2048,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <!-- Cross-Link Actions from Cards Page -->
         <div class="pt-2 border-t flex flex-wrap items-center justify-between gap-3 text-xs" style="border-color: var(--border-card);">
           <div class="font-bold flex items-center gap-1.5" style="color: var(--text-main);">
-            <i class="fa-solid fa-arrow-right-arrow-left text-emerald-500"></i>
+            <i class="fa-solid fa-arrow-right-arrow-left text-rose-500"></i>
             <span data-i18n="cards_crosslink_heading">انتقل إلى أقسام الموقع الأخرى:</span>
           </div>
           <div class="flex items-center gap-2">
@@ -2082,7 +2083,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <div class="space-y-3 text-xs sm:text-sm">
           <div class="border rounded-xl p-4 space-y-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
             <h3 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
-              <i class="fa-solid fa-chevron-left text-emerald-500 text-[10px]"></i>
+              <i class="fa-solid fa-chevron-left text-rose-500 text-[10px]"></i>
               <span data-i18n="cards_faq_q1">هل بطاقة Bybit Card مجانية حقاً وبدون اشتراك شهري؟</span>
             </h3>
             <p class="text-xs leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="cards_faq_a1">
@@ -2092,7 +2093,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
           <div class="border rounded-xl p-4 space-y-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
             <h3 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
-              <i class="fa-solid fa-chevron-left text-emerald-500 text-[10px]"></i>
+              <i class="fa-solid fa-chevron-left text-rose-500 text-[10px]"></i>
               <span data-i18n="cards_faq_q2">كيف أشحن بطاقة RedotPay أو Bybit باستخدام بريدي موب (BaridiMob)؟</span>
             </h3>
             <p class="text-xs leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="cards_faq_a2">
@@ -2102,7 +2103,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
           <div class="border rounded-xl p-4 space-y-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
             <h3 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
-              <i class="fa-solid fa-chevron-left text-emerald-500 text-[10px]"></i>
+              <i class="fa-solid fa-chevron-left text-rose-500 text-[10px]"></i>
               <span data-i18n="cards_faq_q3">هل تقبل بطاقة RedotPay و Bybit التفعيل مع حساب PayPal الجزائري؟</span>
             </h3>
             <p class="text-xs leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="cards_faq_a3">
@@ -2112,7 +2113,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
           <div class="border rounded-xl p-4 space-y-1.5" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
             <h3 class="font-bold flex items-center gap-2" style="color: var(--text-main);">
-              <i class="fa-solid fa-chevron-left text-emerald-500 text-[10px]"></i>
+              <i class="fa-solid fa-chevron-left text-rose-500 text-[10px]"></i>
               <span data-i18n="cards_faq_q4">ما هو كود الحصول على هدية 5$ المجانية في RedotPay؟</span>
             </h3>
             <p class="text-xs leading-relaxed opacity-80" style="color: var(--text-muted);" data-i18n="cards_faq_a4">
@@ -2218,8 +2219,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <div id="coins-gen-result" class="hidden border rounded-xl p-4 sm:p-5 space-y-4 animate-slide-up" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b pb-3" style="border-color: var(--border-card);">
             <div class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span class="font-bold text-xs sm:text-sm text-emerald-500" data-i18n="coin_gen_success">تم تجهيز روابط الخصم بنجاح!</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
+              <span class="font-bold text-xs sm:text-sm text-amber-500" data-i18n="coin_gen_success">تم تجهيز روابط الخصم بنجاح!</span>
             </div>
             <span id="coins-gen-pid-badge" class="font-mono text-xs px-2.5 py-0.5 rounded-lg border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">ID: 100500...</span>
           </div>
@@ -2284,14 +2285,14 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
             <!-- Bundle Deals -->
             <div class="border rounded-xl p-3 space-y-1.5" style="background-color: var(--bg-card); border-color: var(--border-card);">
-              <div class="flex items-center justify-between text-emerald-500 font-bold text-[11px]">
+              <div class="flex items-center justify-between text-amber-500 font-bold text-[11px]">
                 <span class="flex items-center gap-1"><i class="fa-solid fa-box-open"></i> <span data-i18n="bundle_link_title">عروض الحزم (Bundle Deals)</span></span>
               </div>
               <div class="flex items-center gap-1.5">
                 <button onclick="copyCoinLink('coins-gen-out-bundle', this)" class="px-2.5 py-1 rounded-lg border text-[11px] font-semibold active:scale-95 transition" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);">
                   <i class="fa-regular fa-copy text-[10px]"></i> <span data-i18n="btn_copy_link">نسخ الرابط</span>
                 </button>
-                <a id="coins-gen-btn-bundle" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-1 rounded-lg border text-[11px] font-bold text-emerald-500 hover:bg-emerald-500 hover:text-white transition" style="border-color: var(--border-card);">
+                <a id="coins-gen-btn-bundle" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center py-1 rounded-lg border text-[11px] font-bold text-amber-500 hover:bg-amber-500 hover:text-zinc-950 transition" style="border-color: var(--border-card);">
                   <span data-i18n="btn_open_deal">فتح العرض</span> &larr;
                 </a>
               </div>
@@ -2334,7 +2335,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </div>
 
           <div class="border rounded-xl p-4 sm:p-5 space-y-2.5" style="background-color: var(--bg-card); border-color: var(--border-card);">
-            <div class="w-8 h-8 rounded-lg text-emerald-500 font-bold text-sm flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">3</div>
+            <div class="w-8 h-8 rounded-lg text-amber-500 font-bold text-sm flex items-center justify-center font-mono" style="background-color: var(--bg-elevated);">3</div>
             <h3 class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="coins_step3_title">ادفع بالسعر المخفض</h3>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="coins_step3_desc">اضغط على زر (شراء الآن) من الرابط الذي يرجعه البوت، وستلاحظ أن خانة العملات قد خصمت ما يصل إلى 10$ إلى 40$ من السعر الإجمالي!</p>
           </div>
@@ -2352,8 +2353,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <i class="fa-solid fa-fire text-crimson-500 mr-1"></i>
             <span data-i18n="nav_deals">الصفقات المباشرة</span>
           </a>
-          <a href="#cards" onclick="showPage('cards')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-emerald-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
-            <i class="fa-solid fa-credit-card text-emerald-500 mr-1"></i>
+          <a href="#cards" onclick="showPage('cards')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-rose-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
+            <i class="fa-solid fa-credit-card text-rose-500 mr-1"></i>
             <span data-i18n="nav_cards">دليل البطاقات وبريدي موب</span>
           </a>
           <a href="#faq" onclick="showPage('faq')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-sky-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
@@ -2408,7 +2409,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
           <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
             <h3 class="flex items-center gap-2 m-0 p-0 text-xs sm:text-sm font-bold">
-              <i class="fa-solid fa-credit-card text-emerald-500"></i>
+              <i class="fa-solid fa-credit-card text-rose-500"></i>
               <span data-i18n="faq_q3">ما هي أفضل طرق وبطاقات الدفع المتاحة للجزائريين؟</span>
             </h3>
             <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
@@ -2450,7 +2451,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
           <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
             <h3 class="flex items-center gap-2 m-0 p-0 text-xs sm:text-sm font-bold">
-              <i class="fa-solid fa-building-columns text-emerald-500"></i>
+              <i class="fa-solid fa-building-columns text-amber-500"></i>
               <span data-i18n="faq_q6">كيف أشتري من AliExpress باستخدام تطبيق بريدي موب (BaridiMob)؟</span>
             </h3>
             <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
@@ -2492,7 +2493,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <details class="faq-item group border rounded-2xl p-4 transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
           <summary class="flex items-center justify-between cursor-pointer list-none font-bold text-xs sm:text-sm select-none" style="color: var(--text-main);">
             <h3 class="flex items-center gap-2 m-0 p-0 text-xs sm:text-sm font-bold">
-              <i class="fa-solid fa-location-dot text-indigo-500"></i>
+              <i class="fa-solid fa-location-dot text-rose-500"></i>
               <span data-i18n="faq_q9">كيف أكتب العنوان الجزائري والرمز البريدي (Code Postal) بشكل صحيح؟</span>
             </h3>
             <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200 faq-icon opacity-50"></i>
@@ -2513,8 +2514,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               <i class="fa-solid fa-fire text-crimson-500 mr-1"></i>
               <span data-i18n="nav_deals">الصفقات</span>
             </a>
-            <a href="#cards" onclick="showPage('cards')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-emerald-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
-              <i class="fa-solid fa-credit-card text-emerald-500 mr-1"></i>
+            <a href="#cards" onclick="showPage('cards')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-rose-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
+              <i class="fa-solid fa-credit-card text-rose-500 mr-1"></i>
               <span data-i18n="nav_cards">دليل البطاقات</span>
             </a>
             <a href="#coins" onclick="showPage('coins')" class="px-3 py-1.5 rounded-lg border font-bold hover:bg-amber-500/10 transition active:scale-95" style="border-color: var(--border-card); color: var(--text-main);">
@@ -2799,7 +2800,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
   <!-- Floating Deal Discovery Button (Desktop & Tablet only, hidden on phones) -->
   <button id="fab-roulette" onclick="openRouletteModal()" aria-label="اقتراح صفقة" class="hidden md:flex fixed z-40 bottom-6 right-6 active:scale-95 text-xs font-semibold px-3.5 py-2 rounded-lg shadow-md items-center gap-2 cursor-pointer transition-colors touch-manipulation border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-main);">
-    <i class="fa-solid fa-shuffle text-xs text-emerald-500"></i>
+    <i class="fa-solid fa-shuffle text-xs text-rose-500"></i>
     <span data-i18n="roulette_fab">اقتراح صفقة</span>
   </button>
 
@@ -2817,7 +2818,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       <div class="text-center space-y-1.5 pt-1">
         <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-muted);">
-          <i class="fa-solid fa-sliders text-[11px] text-emerald-500"></i>
+          <i class="fa-solid fa-sliders text-[11px] text-amber-500"></i>
           <span data-i18n="roulette_badge">اختيار تلقائي ذكي</span>
         </div>
         <h3 id="roulette-modal-title" class="text-base sm:text-lg font-bold tracking-tight" style="color: var(--text-main);" data-i18n="roulette_title">صفقة مقترحة مختارة</h3>
@@ -2828,7 +2829,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <div id="roulette-display-card" class="border rounded-xl p-4 space-y-3 relative overflow-hidden transition-all text-right" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
         <div id="roulette-img-wrap" class="relative w-full aspect-[16/10] sm:aspect-[4/3] rounded-lg overflow-hidden border flex items-center justify-center mx-auto" style="background-color: var(--bg-page); border-color: var(--border-card);">
           <img id="roulette-img" src="" alt="Deal" class="w-full h-full object-contain transition-transform duration-200">
-          <div id="roulette-winner-tag" class="hidden absolute top-2 right-2 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded shadow-sm flex items-center gap-1.5 bg-emerald-600">
+          <div id="roulette-winner-tag" class="hidden absolute top-2 right-2 text-white text-[11px] font-semibold px-2.5 py-0.5 rounded shadow-sm flex items-center gap-1.5 bg-rose-600">
             <i class="fa-solid fa-check text-[10px]"></i> <span data-i18n="roulette_winner_tag">صفقة مختارة</span>
           </div>
         </div>
@@ -2856,17 +2857,17 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <!-- PROMINENT COUNTRY INSTRUCTION BOX -->
           <div id="roulette-country-box" class="flex items-center justify-between px-3 py-2 rounded-lg border text-xs" style="background-color: var(--bg-page); border-color: var(--border-card);">
             <span class="flex items-center gap-1.5 text-[11px]" style="color: var(--text-muted);">
-              <i class="fa-solid fa-earth-americas text-emerald-500"></i>
+              <i class="fa-solid fa-earth-americas text-rose-500"></i>
               <span data-i18n="roulette_country_label">الدولة المطلوبة في التطبيق:</span>
             </span>
-            <span id="roulette-country-val" class="font-bold text-xs text-emerald-500">الجزائر 🇩🇿</span>
+            <span id="roulette-country-val" class="font-bold text-xs text-rose-500">الجزائر 🇩🇿</span>
           </div>
         </div>
       </div>
 
       <!-- Action buttons -->
       <div class="space-y-2 pt-1">
-        <a id="roulette-buy-btn" href="#" target="_blank" rel="noopener noreferrer" style="display: none;" class="w-full min-h-[44px] rounded-xl text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-sm transition cursor-pointer touch-manipulation bg-emerald-600 hover:bg-emerald-500 active:scale-98">
+        <a id="roulette-buy-btn" href="#" target="_blank" rel="noopener noreferrer" style="display: none;" class="w-full min-h-[44px] rounded-xl text-white font-semibold text-sm flex items-center justify-center gap-2 shadow-sm transition cursor-pointer touch-manipulation btn-ali-primary">
           <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
           <span data-i18n="roulette_claim_btn">فتح رابط الشراء على AliExpress</span>
         </a>
@@ -2900,7 +2901,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       <!-- Modal Header -->
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-emerald-500/15 text-emerald-500 flex items-center justify-center text-xl">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-500 flex items-center justify-center text-xl">
           <i class="fa-solid fa-calculator"></i>
         </div>
         <div>
@@ -2916,7 +2917,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <i class="fa-solid fa-chart-line opacity-60"></i>
             <span class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="calc_title">حاسبة التحويل بسعر السكوار</span>
           </div>
-          <span class="text-[11px] font-mono font-bold text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+          <span class="text-[11px] font-mono font-bold text-amber-500 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/20">
             1 USDT ≈ <span id="calc-usdt-rate">256.9</span> دج
           </span>
         </div>
@@ -2951,10 +2952,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
                 step="10" 
                 placeholder="مثال: 6500" 
                 oninput="onCalcDzdChange(this.value)"
-                class="w-full border rounded-xl px-3 py-2 text-sm font-mono font-bold focus:outline-none focus:border-emerald-500 transition min-h-[42px] text-emerald-500"
+                class="w-full border rounded-xl px-3 py-2 text-sm font-mono font-bold focus:outline-none focus:border-amber-500 transition min-h-[42px] text-amber-500"
                 style="background-color: var(--input-bg); border-color: var(--border-card);"
               />
-              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-mono font-bold text-emerald-500">دج</span>
+              <span class="absolute left-3 top-1/2 -translate-y-1/2 text-xs font-mono font-bold text-amber-500">دج</span>
             </div>
           </div>
         </div>
@@ -2963,7 +2964,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <div class="p-2.5 rounded-xl text-[11px] space-y-1 border" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
           <div class="flex justify-between">
             <span data-i18n="calc_bybit_fee">تكلفة الشراء عبر بطاقة Bybit (رسوم 0%):</span>
-            <span id="calc-bybit-total" class="font-mono font-bold text-emerald-500">0 دج</span>
+            <span id="calc-bybit-total" class="font-mono font-bold text-amber-500">0 دج</span>
           </div>
           <div class="flex justify-between">
             <span data-i18n="calc_redot_fee">تكلفة الشراء عبر بطاقة RedotPay (رسوم ~1.2%):</span>
@@ -3024,9 +3025,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           </a>
 
           <!-- Cards Guide -->
-          <button onclick="closeGamificationHub(); showPage('cards');" class="border rounded-xl p-3 flex items-center justify-between gap-2 transition hover:border-emerald-500 active:scale-95 touch-manipulation text-right" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+          <button onclick="closeGamificationHub(); showPage('cards');" class="border rounded-xl p-3 flex items-center justify-between gap-2 transition hover:border-rose-500 active:scale-95 touch-manipulation text-right" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
             <div class="flex items-center gap-2.5">
-              <div class="w-8 h-8 rounded-lg bg-emerald-500/15 text-emerald-500 flex items-center justify-center text-base">
+              <div class="w-8 h-8 rounded-lg bg-rose-500/10 text-rose-500 flex items-center justify-center text-base">
                 <i class="fa-solid fa-credit-card"></i>
               </div>
               <div>
@@ -3056,10 +3057,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <!-- Real Cumulative Estimated Savings Box -->
       <div class="border rounded-xl p-3.5 flex items-center justify-between" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
         <div class="flex items-center gap-2">
-          <i class="fa-solid fa-piggy-bank text-emerald-500 text-base"></i>
+          <i class="fa-solid fa-piggy-bank text-amber-500 text-base"></i>
           <div>
             <div class="text-[10px] opacity-70" data-i18n="tools_savings_title">إجمالي التوفير التقديري من الكوبونات:</div>
-            <div id="tools-total-saved" class="font-black font-mono text-emerald-500 text-sm sm:text-base">0 دج</div>
+            <div id="tools-total-saved" class="font-black font-mono text-amber-500 text-sm sm:text-base">0 دج</div>
           </div>
         </div>
         <button onclick="filterByFavoritesMobile(); closeGamificationHub();" class="text-xs font-bold text-rose-500 hover:underline flex items-center gap-1 active:scale-95">
@@ -3127,7 +3128,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
 
         <div class="flex items-center gap-2.5 p-2.5 rounded-xl border" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-          <div class="w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-500 flex items-center justify-center text-xs font-bold flex-shrink-0">
+          <div class="w-7 h-7 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center text-xs font-bold flex-shrink-0">
             <i class="fa-solid fa-money-bill-wave"></i>
           </div>
           <div class="flex-1 min-w-0">
@@ -3163,8 +3164,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-[9999] w-full h-full" style="display: none;"></canvas>
 
   <!-- Toast Notification -->
-  <div id="toast" class="fixed toast-bottom md:bottom-6 left-1/2 -translate-x-1/2 z-50 border text-emerald-500 font-semibold text-xs px-4 py-2.5 rounded-xl shadow-2xl flex items-center gap-2 transform translate-y-16 opacity-0 pointer-events-none transition-all duration-200" style="background-color: var(--bg-card); border-color: rgba(16, 185, 129, 0.4);">
-    <i class="fa-solid fa-check text-emerald-500"></i>
+  <div id="toast" class="fixed toast-bottom md:bottom-6 left-1/2 -translate-x-1/2 z-50 border text-amber-500 font-semibold text-xs px-4 py-2.5 rounded-xl shadow-2xl flex items-center gap-2 transform translate-y-16 opacity-0 pointer-events-none transition-all duration-200" style="background-color: var(--bg-card); border-color: rgba(245, 158, 11, 0.4);">
+    <i class="fa-solid fa-circle-check text-amber-500"></i>
     <span id="toast-msg">تم نسخ كود الخصم!</span>
   </div>
 
@@ -3195,8 +3196,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="footer_brand_desc">
             المنصة الجزائرية المستقلة الأولى لرصد صفقات AliExpress لحظياً، مع حساب حقيقي للأسعار بالدينار الجزائري وفق أسعار السكوار اليومية.
           </p>
-          <div class="inline-flex items-center gap-1.5 border rounded-lg px-2.5 py-1 text-[11px] text-emerald-500 font-mono" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <div class="inline-flex items-center gap-1.5 border rounded-lg px-2.5 py-1 text-[11px] text-zinc-300 font-mono" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
+            <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
             <span>1 USDT ≈ <b id="footer-usdt-rate">256.9</b> <span data-i18n="currency_dzd">دج</span></span>
           </div>
         </div>
@@ -3207,7 +3208,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           <ul class="space-y-2">
             <li><button onclick="showPage('deals')" class="hover:underline transition" data-i18n="nav_deals">أحدث الصفقات</button></li>
             <li><a href="/blog/aliexpress-algeria-guide-dz" class="hover:underline transition text-amber-400 font-bold flex items-center gap-1"><i class="fa-solid fa-book-open text-[10px]"></i> <span>دليل الشراء من AliExpress 2026</span></a></li>
-            <li><button onclick="showPage('cards')" class="hover:underline transition text-emerald-500 font-semibold" data-i18n="nav_cards">بطاقات الشراء والتحويل</button></li>
+            <li><button onclick="showPage('cards')" class="hover:underline transition text-rose-500 font-semibold" data-i18n="nav_cards">بطاقات الشراء والتحويل</button></li>
             <li><button onclick="showPage('coins')" class="hover:underline transition" data-i18n="nav_coins">دليل بوت العملات</button></li>
             <li><button onclick="showPage('faq')" class="hover:underline transition" data-i18n="nav_faq">الأسئلة الشائعة</button></li>
             <li><button onclick="showPage('contact')" class="hover:underline transition" data-i18n="nav_contact">اتصل بنا والدعم</button></li>
@@ -3238,8 +3239,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               </a>
             </li>
             <li>
-              <a href="https://squarealgerie.com" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-500 transition flex items-center gap-1.5">
-                <i class="fa-solid fa-arrow-trend-up text-emerald-500 text-xs"></i>
+              <a href="https://squarealgerie.com" target="_blank" rel="noopener noreferrer" class="hover:text-amber-500 transition flex items-center gap-1.5">
+                <i class="fa-solid fa-arrow-trend-up text-amber-500 text-xs"></i>
                 <span>SquareAlgerie.com</span>
               </a>
             </li>
@@ -3979,7 +3980,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const toggleBtn = document.getElementById('theme-toggle-btn');
       
       if (icon) {
-        icon.className = isDark ? 'fa-solid fa-sun text-[11px] text-amber-500' : 'fa-solid fa-moon text-[11px] text-indigo-400';
+        icon.className = isDark ? 'fa-solid fa-sun text-[11px] text-amber-500' : 'fa-solid fa-moon text-[11px] text-zinc-400';
       }
       if (text) {
         text.textContent = isDark 
@@ -5259,13 +5260,13 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
 
       const categoryIcons = {
         'هاتف': { icon: 'fa-mobile-screen', color: 'rose', label: '📱 فهرس الهواتف الذكية' },
-        'سماع': { icon: 'fa-headphones', color: 'violet', label: '🎧 فهرس السماعات والصوتيات' },
-        'صوت': { icon: 'fa-headphones', color: 'violet', label: '🎧 فهرس السماعات والصوتيات' },
+        'سماع': { icon: 'fa-headphones', color: 'rose', label: '🎧 فهرس السماعات والصوتيات' },
+        'صوت': { icon: 'fa-headphones', color: 'rose', label: '🎧 فهرس السماعات والصوتيات' },
         'قطع': { icon: 'fa-microchip', color: 'amber', label: '💻 فهرس عتاد الـ PC والمعالجات' },
         'معالج': { icon: 'fa-microchip', color: 'amber', label: '💻 فهرس عتاد الـ PC والمعالجات' },
-        'شاحن': { icon: 'fa-bolt', color: 'emerald', label: '⚡ فهرس الشواحن وبنوك الطاقة' },
-        'كابل': { icon: 'fa-bolt', color: 'emerald', label: '⚡ فهرس الشواحن وبنوك الطاقة' },
-        'قيمنق': { icon: 'fa-gamepad', color: 'cyan', label: '🎮 فهرس ملحقات القيمنق' }
+        'شاحن': { icon: 'fa-bolt', color: 'amber', label: '⚡ فهرس الشواحن وبنوك الطاقة' },
+        'كابل': { icon: 'fa-bolt', color: 'amber', label: '⚡ فهرس الشواحن وبنوك الطاقة' },
+        'قيمنق': { icon: 'fa-gamepad', color: 'rose', label: '🎮 فهرس ملحقات القيمنق' }
       };
 
       const newCardsHtml = tajmi3aPosts.slice(0, 5).map(p => {
@@ -6005,8 +6006,8 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
                   <i class="fa-brands fa-telegram text-sm"></i>
                   <span>${isFr ? 'Canal Officiel' : 'القناة الرسمية 🇩🇿'}</span>
                 </span>
-                <span class="flex items-center gap-1 text-[10px] text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="flex items-center gap-1 text-[10px] text-amber-400 font-bold bg-amber-500/15 px-2 py-0.5 rounded-full border border-amber-500/30">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
                   <span>15k+ عضو</span>
                 </span>
               </div>
@@ -6315,13 +6316,13 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
           const origText = span ? span.textContent : '';
           
           if (span) span.textContent = I18N[currentLang].btn_copied || 'تم النسخ!';
-          if (icon) icon.className = 'fa-solid fa-check text-[11px] text-emerald-500';
-          btn.classList.add('border-emerald-500', 'text-emerald-500');
+          if (icon) icon.className = 'fa-solid fa-check text-[11px] text-amber-500';
+          btn.classList.add('border-amber-500', 'text-amber-500');
           
           setTimeout(() => {
             if (span) span.textContent = origText;
             if (icon) icon.className = origIcon;
-            btn.classList.remove('border-emerald-500', 'text-emerald-500');
+            btn.classList.remove('border-amber-500', 'text-amber-500');
           }, 1800);
         }
       }).catch(() => {
@@ -6341,11 +6342,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         showToast((currentLang === 'fr' ? 'Code copié : ' : 'تم نسخ الكود: ') + code);
         if (btn) {
           const original = btn.innerHTML;
-          btn.innerHTML = '<i class="fa-solid fa-check text-emerald-500"></i> ' + (currentLang === 'fr' ? 'Copié !' : 'تم النسخ!');
-          btn.classList.add('border-emerald-500');
+          btn.innerHTML = '<i class="fa-solid fa-check text-amber-500"></i> ' + (currentLang === 'fr' ? 'Copié !' : 'تم النسخ!');
+          btn.classList.add('border-amber-500');
           setTimeout(() => {
             btn.innerHTML = original;
-            btn.classList.remove('border-emerald-500');
+            btn.classList.remove('border-amber-500');
           }, 2000);
         }
       }).catch(() => {
@@ -6494,11 +6495,11 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       copyTextToClipboard(textToCopy).then(() => {
         if (btn) {
           const original = btn.innerHTML;
-          btn.innerHTML = '<i class="fa-solid fa-check text-emerald-500"></i> ' + (currentLang === 'fr' ? 'Copié !' : 'تم النسخ!');
-          btn.classList.add('border-emerald-500');
+          btn.innerHTML = '<i class="fa-solid fa-check text-amber-500"></i> ' + (currentLang === 'fr' ? 'Copié !' : 'تم النسخ!');
+          btn.classList.add('border-amber-500');
           setTimeout(() => {
             btn.innerHTML = original;
-            btn.classList.remove('border-emerald-500');
+            btn.classList.remove('border-amber-500');
           }, 2000);
         }
         showToast(currentLang === 'fr' ? 'Lien copié dans le presse-papier !' : 'تم نسخ رابط الخصم بنجاح!');
@@ -6567,7 +6568,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       const text = document.getElementById('tracking-copy-text');
       if (numEl && numEl.textContent) {
         copyTextToClipboard(numEl.textContent.trim()).then(() => {
-          if (icon) icon.className = 'fa-solid fa-check text-emerald-400';
+          if (icon) icon.className = 'fa-solid fa-check text-amber-400';
           if (text) text.textContent = (currentLang === 'fr') ? 'Copié !' : 'تم النسخ!';
           showToast(currentLang === 'fr' ? 'Numéro de suivi copié !' : 'تم نسخ رقم التتبع!');
           setTimeout(() => {
@@ -6654,7 +6655,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             };
             statusText.textContent = stageTexts[data.status_stage] || (isFr ? 'En transit' : 'في مسار الشحن');
             if (data.status_stage === 'delivered') {
-              statusBadge.className = 'px-3 py-1 rounded-xl text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/25 flex items-center gap-1.5';
+              statusBadge.className = 'px-3 py-1 rounded-xl text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/25 flex items-center gap-1.5';
             } else if (data.status_stage === 'registered_awaiting_scan') {
               statusBadge.className = 'px-3 py-1 rounded-xl text-xs font-bold bg-amber-500/10 text-amber-400 border border-amber-500/25 flex items-center gap-1.5';
             } else {
@@ -6681,9 +6682,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
                 const badge = stepEl.querySelector('span');
                 if (st.completed) {
                   stepEl.classList.remove('opacity-40');
-                  stepEl.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+                  stepEl.style.borderColor = 'rgba(225, 29, 72, 0.4)';
                   if (badge) {
-                    badge.className = 'w-5 h-5 rounded-full bg-emerald-500 text-white font-bold text-[10px] flex items-center justify-center';
+                    badge.className = 'w-5 h-5 rounded-full bg-rose-600 text-white font-bold text-[10px] flex items-center justify-center';
                   }
                 } else {
                   stepEl.classList.add('opacity-40');
@@ -6697,7 +6698,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
                   stepEl.classList.remove('opacity-40');
                   stepEl.style.borderColor = 'var(--border-subtle)';
                   if (badge) {
-                    badge.className = 'w-5 h-5 rounded-full bg-emerald-500 text-white font-bold text-[10px] flex items-center justify-center ring-2 ring-emerald-500/40 animate-pulse';
+                    badge.className = 'w-5 h-5 rounded-full bg-amber-500 text-zinc-950 font-bold text-[10px] flex items-center justify-center ring-2 ring-amber-500/40 animate-pulse';
                   }
                 }
               }

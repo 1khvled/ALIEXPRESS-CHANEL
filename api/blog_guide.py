@@ -11,7 +11,7 @@ Styled in solid obsidian dark theme matching DealScout DZ design tokens:
 --bg-elevated: #141a28
 --border-card: #1f293d
 --accent-gold: #f59e0b
---accent-emerald: #10b981
+--accent-gold: #f59e0b
 """
 
 def get_blog_guide_html() -> str:
@@ -99,7 +99,7 @@ def get_blog_guide_html() -> str:
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --accent-gold: #f59e0b;
-      --accent-emerald: #10b981;
+      --accent-gold: #f59e0b;
       --accent-blue: #3b82f6;
     }
     body {
@@ -306,7 +306,7 @@ def get_blog_guide_html() -> str:
         <a href="/" class="hover:text-amber-400 transition flex items-center gap-1.5"><i class="fa-solid fa-fire text-amber-500"></i> الصيدات الحية</a>
         <a href="/tracking" class="hover:text-amber-400 transition flex items-center gap-1.5"><i class="fa-solid fa-truck-fast text-sky-400"></i> تتبع الطرود</a>
         <a href="/#coins" class="hover:text-amber-400 transition flex items-center gap-1.5"><i class="fa-solid fa-coins text-amber-400"></i> بوت العملات</a>
-        <a href="/#cards" class="hover:text-amber-400 transition flex items-center gap-1.5"><i class="fa-regular fa-credit-card text-emerald-400"></i> بطاقات الدفع</a>
+        <a href="/#cards" class="hover:text-amber-400 transition flex items-center gap-1.5"><i class="fa-regular fa-credit-card text-rose-500"></i> بطاقات الدفع</a>
         <a href="/blog/aliexpress-algeria-guide-dz" class="text-amber-400 font-bold border-b-2 border-amber-400 pb-0.5">دليل الشراء 2026</a>
       </nav>
 
@@ -357,7 +357,7 @@ def get_blog_guide_html() -> str:
           <i class="fa-regular fa-clock text-slate-500"></i>
           <span>وقت القراءة: 12 دقيقة</span>
         </div>
-        <div class="flex items-center gap-1.5 text-emerald-400 font-medium mr-auto">
+        <div class="flex items-center gap-1.5 text-amber-400 font-medium mr-auto">
           <i class="fa-solid fa-circle-check"></i>
           <span>دليل محدث ومتوافق مع بريد الجزائر</span>
         </div>
@@ -431,7 +431,7 @@ def get_blog_guide_html() -> str:
         </p>
 
         <!-- Section 2 -->
-        <h2 id="ecommerce-dz"><i class="fa-solid fa-chart-line text-emerald-400 text-xl"></i> واقع التجارة الإلكترونية في الجزائر (AliExpress DZ)</h2>
+        <h2 id="ecommerce-dz"><i class="fa-solid fa-chart-line text-rose-500 text-xl"></i> واقع التجارة الإلكترونية في الجزائر (AliExpress DZ)</h2>
         <p>
           انتقلت تجربة الشراء من الإنترنت في الجزائر من مجرد رفاهية مقتصرة على المغتربين أو أصحاب الحسابات البنكية في أوروبا، إلى واقع يومي يعيشه مئات الآلاف من الشباب والمهتمين بالتقنية والتجارة من تبسة إلى تلمسان.
         </p>
@@ -495,7 +495,7 @@ def get_blog_guide_html() -> str:
             </p>
           </div>
           <div class="bg-[#141a28] border border-[#1f293d] p-4 rounded-xl">
-            <div class="text-emerald-400 text-lg font-bold mb-2 flex items-center gap-2">
+            <div class="text-amber-400 text-lg font-bold mb-2 flex items-center gap-2">
               <i class="fa-solid fa-language"></i> اللغة (Language)
             </div>
             <p class="text-xs text-slate-300 leading-relaxed">
@@ -541,17 +541,17 @@ def get_blog_guide_html() -> str:
             </thead>
             <tbody class="divide-y divide-[#1f293d]">
               <tr class="hover:bg-[#0e121b]/60">
-                <td class="p-3 font-bold text-emerald-400 flex items-center gap-1.5">
+                <td class="p-3 font-bold text-rose-500 flex items-center gap-1.5">
                   <i class="fa-solid fa-crown text-amber-400"></i> AliExpress Standard Shipping
                 </td>
                 <td class="p-3 font-mono">18 – 35 يوماً</td>
-                <td class="p-3"><span class="text-emerald-400 font-semibold">ممتاز</span> (تتبع كامل برقم مسجل ينتهي بـ SG أو CN)</td>
+                <td class="p-3"><span class="text-amber-400 font-semibold">ممتاز</span> (تتبع كامل برقم مسجل ينتهي بـ SG أو CN)</td>
                 <td class="p-3 text-xs">الخيار الأول والموصى به لجميع المنتجات والهواتف والإلكترونيات.</td>
               </tr>
               <tr class="hover:bg-[#0e121b]/60">
                 <td class="p-3 font-bold text-sky-400">AliExpress Selection Standard</td>
                 <td class="p-3 font-mono">20 – 35 يوماً</td>
-                <td class="p-3"><span class="text-emerald-400 font-semibold">ممتاز</span> (تتبع دقيق عبر بريد سنغافورة)</td>
+                <td class="p-3"><span class="text-amber-400 font-semibold">ممتاز</span> (تتبع دقيق عبر بريد سنغافورة)</td>
                 <td class="p-3 text-xs">خيار معتمد ممتاز ويوفر شحناً سريعاً لمعظم الطلبيات.</td>
               </tr>
               <tr class="hover:bg-[#0e121b]/60">
@@ -563,7 +563,7 @@ def get_blog_guide_html() -> str:
               <tr class="hover:bg-[#0e121b]/60">
                 <td class="p-3 font-bold text-rose-400">DHL / FedEx / UPS (البريد السريع)</td>
                 <td class="p-3 font-mono">5 – 12 يوماً</td>
-                <td class="p-3"><span class="text-emerald-400 font-semibold">تتبع فوري</span> لباب المنزل</td>
+                <td class="p-3"><span class="text-amber-400 font-semibold">تتبع فوري</span> لباب المنزل</td>
                 <td class="p-3 text-xs text-rose-300"><strong>حذر شديد:</strong> تفرض هذه الشركات رسوم تخليص جمركي باهظة في الجزائر (قد تفوق ثمن السلعة).</td>
               </tr>
             </tbody>
@@ -571,7 +571,7 @@ def get_blog_guide_html() -> str:
         </div>
 
         <!-- Section 7 -->
-        <h2 id="payment-cards"><i class="fa-solid fa-credit-card text-emerald-400 text-xl"></i> طرق الدفع المتاحة في الجزائر: كيف تدفع بأمان؟</h2>
+        <h2 id="payment-cards"><i class="fa-solid fa-credit-card text-rose-500 text-xl"></i> طرق الدفع المتاحة في الجزائر: كيف تدفع بأمان؟</h2>
         <p>
           السؤال الأكثر تداولاً بين المبتدئين: <em>"هل أستطيع الشراء بالبطاقة الذهبية مباشرة من AliExpress؟"</em>
         </p>
@@ -594,9 +594,9 @@ def get_blog_guide_html() -> str:
               بطاقة ماستركارد افتراضية تصدر فوراً بعد تفعيل الحساب ببطاقة التعريف الوطنية. تتميز بصفر رسوم صيانة، ونسبة قبول 100% في AliExpress، وشحن مباشر وسريع بالدينار الجزائري عبر سوق Bybit P2P.
             </p>
             <ul class="text-xs text-slate-400 space-y-1 mb-4">
-              <li><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> شحن فوري برصيد USDT بالبريدي موب (BaridiMob)</li>
-              <li><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> كاش باك (Cashback) حقيقي على مشترياتك</li>
-              <li><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> تعمل بسلاسة مع Google Pay و Apple Pay</li>
+              <li><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> شحن فوري برصيد USDT بالبريدي موب (BaridiMob)</li>
+              <li><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> كاش باك (Cashback) حقيقي على مشترياتك</li>
+              <li><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> تعمل بسلاسة مع Google Pay و Apple Pay</li>
             </ul>
             <a href="https://www.bybit.com/invite?ref=YRM1KVX" target="_blank" rel="noopener noreferrer" class="block text-center bg-amber-500 hover:bg-amber-400 text-black font-bold text-xs py-2.5 rounded-lg transition">
               فتح حساب وطلب بطاقة Bybit
@@ -614,9 +614,9 @@ def get_blog_guide_html() -> str:
               بطاقة فيزا افتراضية شهيرة في الجزائر، تصدر بتكلفة 10$ وتوفر سهولة فائقة في الاستخدام. يمكن شحنها بعملة USDT أو من أي محفظة إلكترونية خارجية، ومقبولة بشكل ممتاز في متجر AliExpress.
             </p>
             <ul class="text-xs text-slate-400 space-y-1 mb-4">
-              <li><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> تفعيل فوري وسهل بجواز السفر أو بطاقة التعريف</li>
-              <li><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> تطبيق عربي سهل لإدارة البطاقة وتجميدها</li>
-              <li><i class="fa-solid fa-check text-emerald-400 text-[10px]"></i> مناسبة للدفع في إعلانات فيسبوك والتسوق الدولي</li>
+              <li><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> تفعيل فوري وسهل بجواز السفر أو بطاقة التعريف</li>
+              <li><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> تطبيق عربي سهل لإدارة البطاقة وتجميدها</li>
+              <li><i class="fa-solid fa-check text-amber-400 text-[10px]"></i> مناسبة للدفع في إعلانات فيسبوك والتسوق الدولي</li>
             </ul>
             <a href="/#cards" class="block text-center border border-[#1f293d] hover:border-slate-400 text-slate-200 font-bold text-xs py-2.5 rounded-lg transition">
               مقارنة البطاقات في قسم الدفع
@@ -645,7 +645,7 @@ def get_blog_guide_html() -> str:
         </div>
 
         <!-- Section 9 -->
-        <h2 id="avoid-scams"><i class="fa-solid fa-shield-halved text-emerald-400 text-xl"></i> كيف تتجنب الاحتيال وتختار بائعين موثوقين 100%؟</h2>
+        <h2 id="avoid-scams"><i class="fa-solid fa-shield-halved text-rose-500 text-xl"></i> كيف تتجنب الاحتيال وتختار بائعين موثوقين 100%؟</h2>
         <p>
           لضمان وصول منتج أصلي ومطابق للمواصفات دون الوقوع في فخ السلع الرديئة، اتبع هذه القواعد البسيطة:
         </p>

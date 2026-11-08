@@ -81,7 +81,7 @@ def detect_carrier(num: str) -> Dict[str, Any]:
             "origin_country_fr": "Algérie",
             "origin_flag": "🇩🇿",
             "destination_flag": "🇩🇿",
-            "badge_color": "emerald",
+            "badge_color": "amber",
             "typical_days": "1 - 3 أيام",
             "desc_ar": "طرد مسجل برقم تتبع وطني ينتهي بـ DZ. يستلم من مكتب البريد المحلي ببطاقة التعريف الوطنية.",
             "desc_fr": "Colis recommandé national sous la responsabilité d'Algérie Poste. Retrait en agence avec pièce d'identité."
