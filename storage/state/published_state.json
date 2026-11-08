@@ -1204,7 +1204,7 @@
     "1005008684239370": 1793975250.6134522,
     "1005011583202464": 1793809046.6886706,
     "1005009921069024": 1793542597.6187797,
-    "1005009916209766": 1793542607.3688066,
+    "1005009916209766": 1794167239.3538153,
     "1005012537594921": 1793542611.8880281,
     "1005009963377960": 1793727358.6485991,
     "1005012790844974": 1793542621.7908955,
@@ -2313,7 +2313,8 @@
     "Machenike G7 56g RGB",
     "ضف 4 قطع ثم أدفع",
     "iQOO Z11 Turbo 12/256GB",
-    "CMF Buds 2a ANC"
+    "CMF Buds 2a ANC",
+    "Ajazz NK61 Wired Mechanical Keyboard"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3214,10 +3215,10 @@
     "Machenike G7 56g RGB": 1794164691.7591228,
     "ضف 4 قطع ثم أدفع": 1794165031.7231321,
     "iQOO Z11 Turbo 12/256GB": 1794166685.9915411,
-    "CMF Buds 2a ANC": 1794166876.875887
+    "CMF Buds 2a ANC": 1794166876.875887,
+    "Ajazz NK61 Wired Mechanical Keyboard": 1794167239.3538153
   },
   "published_post_keys": [
-    "aniscoupons:32717",
     "test_channel:1791627893",
     "couponsglobal:48786",
     "lodydeals:45461",
@@ -4216,11 +4217,12 @@
     "bnddeals:51237",
     "zedstoreonline:39753",
     "lodydeals:46268",
-    "lodydeals:46269"
+    "lodydeals:46269",
+    "aniscoupons:34313"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794166876.875887,
+  "last_run_time": 1794167239.3538153,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
@@ -4251,8 +4253,8 @@
       "last_check_time": 1794166135.8702354
     },
     "aniscoupons": {
-      "last_message_id": 34312,
-      "last_check_time": 1794160830.5899696
+      "last_message_id": 34313,
+      "last_check_time": 1794167241.3970318
     },
     "bnddeals": {
       "last_message_id": 51239,
@@ -4666,7 +4668,7 @@
     "1005008684239370": 9.2,
     "1005011583202464": 56.09,
     "1005009921069024": 12.85,
-    "1005009916209766": 24.04,
+    "1005009916209766": 27.14,
     "1005012537594921": 45.74,
     "1005009963377960": 26.46,
     "1005012790844974": 35.86,
@@ -17913,6 +17915,16 @@
       "price": 14.7,
       "timestamp": 1794166876.875887,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34313": {
+      "channel_msg_id": 2105,
+      "product_id": "1005009916209766",
+      "title": "Ajazz NK61 Wired Mechanical Keyboard",
+      "channel": "aniscoupons",
+      "source_msg_id": 34313,
+      "price": 27.14,
+      "timestamp": 1794167239.3538153,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17921,17 +17933,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794166882.2904134,
+    "last_deal_post_time": 1794167242.2574418,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794167054.7468488,
+    "last_sweep_time": 1794167245.529469,
     "last_sweep_times": {
-      "algeria": 1794167051.5512357,
-      "france": 1794167054.7468488
+      "algeria": 1794167242.2375,
+      "france": 1794167245.529469
     },
     "last_deal_post_times": {
-      "algeria": 1794166882.2904134
+      "algeria": 1794167242.2574418
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18447,7 +18459,7 @@
     "1005008684239370": "zedstoreonline",
     "1005011583202464": "ecksdeal",
     "1005009921069024": "ecksdeal",
-    "1005009916209766": "ecksdeal",
+    "1005009916209766": "aniscoupons",
     "1005012537594921": "ecksdeal",
     "1005009963377960": "ecksdeal",
     "1005012790844974": "ecksdeal",
@@ -19551,7 +19563,8 @@
     "Machenike G7 56g RGB": "lodydeals",
     "ضف 4 قطع ثم أدفع": "bnddeals",
     "iQOO Z11 Turbo 12/256GB": "lodydeals",
-    "CMF Buds 2a ANC": "lodydeals"
+    "CMF Buds 2a ANC": "lodydeals",
+    "Ajazz NK61 Wired Mechanical Keyboard": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
