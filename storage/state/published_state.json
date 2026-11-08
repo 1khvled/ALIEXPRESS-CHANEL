@@ -691,7 +691,8 @@
     "1005009851407234",
     "1005009738356108",
     "1005012953027259",
-    "1005012048332402"
+    "1005012048332402",
+    "1005011665465731"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1397,7 +1398,8 @@
     "1005009851407234": 1794130701.0727847,
     "1005009738356108": 1794131236.9079208,
     "1005012953027259": 1794133977.9005425,
-    "1005012048332402": 1794136369.073103
+    "1005012048332402": 1794136369.073103,
+    "1005011665465731": 1794137638.8201442
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2270,7 +2272,8 @@
     "OnePlus Ace 6 12/256GB",
     "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse",
     "Ulanzi A100 Wireless Lavalier Microphone",
-    "Kootion X15 M.2 SSD NVMe 256GB"
+    "Kootion X15 M.2 SSD NVMe 256GB",
+    "Lenovo LE257 Headphones"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3148,10 +3151,10 @@
     "OnePlus Ace 6 12/256GB": 1794130143.129755,
     "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": 1794130518.3291268,
     "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464,
-    "Kootion X15 M.2 SSD NVMe 256GB": 1794134534.5760646
+    "Kootion X15 M.2 SSD NVMe 256GB": 1794134534.5760646,
+    "Lenovo LE257 Headphones": 1794137638.8201442
   },
   "published_post_keys": [
-    "zedstoreonline:38760",
     "aniscoupons:32742",
     "pcgamingpart:7943",
     "zedstoreonline:38916",
@@ -4150,19 +4153,20 @@
     "aniscoupons:34287",
     "zedstoreonline:39731",
     "zedstoreonline:39732",
-    "aniscoupons:34288"
+    "aniscoupons:34288",
+    "lodydeals:46245"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794136369.073103,
+  "last_run_time": 1794137638.8201442,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
       "last_check_time": 1794055834.6061237
     },
     "lodydeals": {
-      "last_message_id": 46244,
-      "last_check_time": 1794137456.961769
+      "last_message_id": 46245,
+      "last_check_time": 1794137640.8728628
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4782,7 +4786,8 @@
     "1005012374550298": 17.6,
     "1005009851407234": 149.4,
     "1005012953027259": 279.32,
-    "1005012048332402": 193.1
+    "1005012048332402": 193.1,
+    "1005011665465731": 5.38
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17407,6 +17412,16 @@
       "price": 193.1,
       "timestamp": 1794136369.073103,
       "status": "ACTIVE"
+    },
+    "lodydeals:46245": {
+      "channel_msg_id": 2061,
+      "product_id": "1005011665465731",
+      "title": "Lenovo LE257 Headphones",
+      "channel": "lodydeals",
+      "source_msg_id": 46245,
+      "price": 5.38,
+      "timestamp": 1794137638.8201442,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17415,17 +17430,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794136372.0897722,
+    "last_deal_post_time": 1794137643.2885737,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794137463.9996898,
+    "last_sweep_time": 1794137646.3502781,
     "last_sweep_times": {
-      "algeria": 1794137460.057356,
-      "france": 1794137463.9996898
+      "algeria": 1794137643.2658994,
+      "france": 1794137646.3502781
     },
     "last_deal_post_times": {
-      "algeria": 1794136372.0897722
+      "algeria": 1794137643.2885737
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18131,7 +18146,8 @@
     "1005009851407234": "zedstoreonline",
     "1005009738356108": "zedstoreonline",
     "1005012953027259": "aniscoupons",
-    "1005012048332402": "aniscoupons"
+    "1005012048332402": "aniscoupons",
+    "1005011665465731": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19011,7 +19027,8 @@
     "OnePlus Ace 6 12/256GB": "lodydeals",
     "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": "zedstoreonline",
     "Ulanzi A100 Wireless Lavalier Microphone": "aniscoupons",
-    "Kootion X15 M.2 SSD NVMe 256GB": "zedstoreonline"
+    "Kootion X15 M.2 SSD NVMe 256GB": "zedstoreonline",
+    "Lenovo LE257 Headphones": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -19805,7 +19822,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38570",
     "aniscoupons:33050",
     "zedstoreonline:38914",
     "aniscoupons:33360",
@@ -20804,7 +20820,8 @@
     "zedstoreonline:39733",
     "zedstoreonline:39734",
     "aniscoupons:34289",
-    "lodydeals:46244"
+    "lodydeals:46244",
+    "lodydeals:46227"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
