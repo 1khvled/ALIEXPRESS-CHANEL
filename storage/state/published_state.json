@@ -682,7 +682,8 @@
     "1005009759580502",
     "1005009120888793",
     "1005011874310777",
-    "1005008721853055"
+    "1005008721853055",
+    "1005012593794312"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1379,7 +1380,8 @@
     "1005009759580502": 1794079741.7808652,
     "1005009120888793": 1794079928.0765662,
     "1005011874310777": 1794087501.0429602,
-    "1005008721853055": 1794126663.880001
+    "1005008721853055": 1794126663.880001,
+    "1005012593794312": 1794128140.9765735
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2277,7 +2279,7 @@
     "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor": 1790888886.4062796,
     "OPPO A6 Pro 8/256": 1794044287.5728564,
     "realme P3 5G 8/256": 1793613419.7534997,
-    "OnePlus Turbo 6X Pro 5G": 1793966850.1250699,
+    "OnePlus Turbo 6X Pro 5G": 1794128140.9765735,
     "Xiaomi Pad 7  12/256GB": 1790897106.449474,
     "ATTACK SHARK L90 Flodable Gaming Headset": 1791104165.8542082,
     "SomnAmbulist SSD  120GB": 1791104047.0967803,
@@ -3117,7 +3119,6 @@
     "KOOTION SATA SSD 480GB": 1794127389.2657666
   },
   "published_post_keys": [
-    "megaphonna:8428",
     "test_channel:1792184255",
     "test_channel:1793282475",
     "lodydeals:45910",
@@ -4116,11 +4117,12 @@
     "aniscoupons:34271",
     "zedstoreonline:39716",
     "aniscoupons:34272",
-    "aniscoupons:34273"
+    "aniscoupons:34273",
+    "aniscoupons:34274"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794127587.510284,
+  "last_run_time": 1794128140.9765735,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4147,12 +4149,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39717,
-      "last_check_time": 1794127583.2097497
+      "last_message_id": 39718,
+      "last_check_time": 1794128134.5359821
     },
     "aniscoupons": {
-      "last_message_id": 34273,
-      "last_check_time": 1794127589.6071246
+      "last_message_id": 34275,
+      "last_check_time": 1794128144.1413906
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -17146,6 +17148,16 @@
       "price": 134.36,
       "timestamp": 1794127587.510284,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34274": {
+      "channel_msg_id": 2036,
+      "product_id": "1005012593794312",
+      "title": "OnePlus Turbo 6X Pro 5G",
+      "channel": "aniscoupons",
+      "source_msg_id": 34274,
+      "price": 239.8,
+      "timestamp": 1794128140.9765735,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17154,17 +17166,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794127590.5740008,
+    "last_deal_post_time": 1794128144.9804137,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794127946.5052006,
+    "last_sweep_time": 1794128148.3958292,
     "last_sweep_times": {
-      "algeria": 1794127943.5684545,
-      "france": 1794127946.5052006
+      "algeria": 1794128144.961474,
+      "france": 1794128148.3958292
     },
     "last_deal_post_times": {
-      "algeria": 1794127590.5740008
+      "algeria": 1794128144.9804137
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -17861,7 +17873,8 @@
     "1005009759580502": "lodydeals",
     "1005009120888793": "aniscoupons",
     "1005011874310777": "lodydeals",
-    "1005008721853055": "zedstoreonline"
+    "1005008721853055": "zedstoreonline",
+    "1005012593794312": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19527,8 +19540,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "bnddeals:50859",
-    "aniscoupons:33435",
     "lodydeals:45522",
     "alidealsdz:144",
     "megaphonna:8294",
@@ -20526,7 +20537,9 @@
     "zedstoreonline:39713",
     "aniscoupons:34268",
     "zedstoreonline:39715",
-    "zedstoreonline:39717"
+    "zedstoreonline:39717",
+    "zedstoreonline:39718",
+    "aniscoupons:34275"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
