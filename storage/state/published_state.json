@@ -732,7 +732,7 @@
     "1005008852027824": 1793613419.7534997,
     "9998888981": 1790888981.6873999,
     "1005005217734986": 1791104047.0967803,
-    "1005010062128237": 1790937566.337433,
+    "1005010062128237": 1794166876.875887,
     "1005006593951067": 1790937595.2497241,
     "9998887645": 1790937645.5884554,
     "999888104": 1790940104.4138699,
@@ -2312,7 +2312,8 @@
     "GameSir X5 Lite Mobile Controller",
     "Machenike G7 56g RGB",
     "ضف 4 قطع ثم أدفع",
-    "iQOO Z11 Turbo 12/256GB"
+    "iQOO Z11 Turbo 12/256GB",
+    "CMF Buds 2a ANC"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3212,10 +3213,10 @@
     "GameSir X5 Lite Mobile Controller": 1794164684.9082866,
     "Machenike G7 56g RGB": 1794164691.7591228,
     "ضف 4 قطع ثم أدفع": 1794165031.7231321,
-    "iQOO Z11 Turbo 12/256GB": 1794166685.9915411
+    "iQOO Z11 Turbo 12/256GB": 1794166685.9915411,
+    "CMF Buds 2a ANC": 1794166876.875887
   },
   "published_post_keys": [
-    "lodydeals:45908",
     "aniscoupons:32717",
     "test_channel:1791627893",
     "couponsglobal:48786",
@@ -4214,19 +4215,20 @@
     "lodydeals:46265",
     "bnddeals:51237",
     "zedstoreonline:39753",
-    "lodydeals:46268"
+    "lodydeals:46268",
+    "lodydeals:46269"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794166685.9915411,
+  "last_run_time": 1794166876.875887,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
       "last_check_time": 1794159484.4700966
     },
     "lodydeals": {
-      "last_message_id": 46268,
-      "last_check_time": 1794166688.0475614
+      "last_message_id": 46269,
+      "last_check_time": 1794166879.0022914
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4253,8 +4255,8 @@
       "last_check_time": 1794160830.5899696
     },
     "bnddeals": {
-      "last_message_id": 51238,
-      "last_check_time": 1794165406.3979783
+      "last_message_id": 51239,
+      "last_check_time": 1794166882.2497659
     }
   },
   "published_product_prices": {
@@ -4288,7 +4290,7 @@
     "1005010129356058": 294.0,
     "3256809790988797": 92.8,
     "1005005217734986": 9.61,
-    "1005010062128237": 9.9,
+    "1005010062128237": 14.7,
     "1005006593951067": 24.0,
     "100500888999777": 22.7,
     "1005009734653254": 63.06,
@@ -17901,6 +17903,16 @@
       "price": 381.27,
       "timestamp": 1794166685.9915411,
       "status": "ACTIVE"
+    },
+    "lodydeals:46269": {
+      "channel_msg_id": 2104,
+      "product_id": "1005010062128237",
+      "title": "CMF Buds 2a ANC",
+      "channel": "lodydeals",
+      "source_msg_id": 46269,
+      "price": 14.7,
+      "timestamp": 1794166876.875887,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17909,17 +17921,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794166690.4768872,
+    "last_deal_post_time": 1794166882.2904134,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794166693.4435542,
+    "last_sweep_time": 1794166885.9046085,
     "last_sweep_times": {
-      "algeria": 1794166690.4509475,
-      "france": 1794166693.4435542
+      "algeria": 1794166882.2701786,
+      "france": 1794166885.9046085
     },
     "last_deal_post_times": {
-      "algeria": 1794166690.4768872
+      "algeria": 1794166882.2904134
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18635,7 +18647,8 @@
     "1005007097302001": "lodydeals",
     "1005013361453762": "zedstoreonline",
     "1005013240296031": "lodydeals",
-    "1005012670472055": "lodydeals"
+    "1005012670472055": "lodydeals",
+    "1005010062128237": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19537,7 +19550,8 @@
     "GameSir X5 Lite Mobile Controller": "lodydeals",
     "Machenike G7 56g RGB": "lodydeals",
     "ضف 4 قطع ثم أدفع": "bnddeals",
-    "iQOO Z11 Turbo 12/256GB": "lodydeals"
+    "iQOO Z11 Turbo 12/256GB": "lodydeals",
+    "CMF Buds 2a ANC": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -20331,7 +20345,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38954",
     "zedstoreonline:38711",
     "megaphonna:8351",
     "zedstoreonline:38588",
@@ -21330,7 +21343,8 @@
     "bnddeals:51236",
     "lodydeals:46266",
     "bnddeals:51238",
-    "lodydeals:46267"
+    "lodydeals:46267",
+    "bnddeals:51239"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
