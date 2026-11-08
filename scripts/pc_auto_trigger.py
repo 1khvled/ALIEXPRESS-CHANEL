@@ -17,7 +17,7 @@ except OSError:
     sys.exit(0)
 
 # Constants & Paths
-REPO = "1khvled/ALIEXPRESS-CHANEL"
+REPO = "1khvled/dealscout-telegram-deals"
 WORKFLOW = "bot_cron.yml"
 CHECK_INTERVAL_SECONDS = 180  # Check every 3 minutes
 CREATE_NO_WINDOW = 0x08000000  # Suppress console window flashing
