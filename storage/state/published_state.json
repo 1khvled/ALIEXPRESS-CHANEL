@@ -687,7 +687,8 @@
     "1005008384277561",
     "1005010155263623",
     "1005011572208218",
-    "1005012374550298"
+    "1005012374550298",
+    "1005009851407234"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1357,10 +1358,10 @@
     "1005013028124905": 1793971934.3600886,
     "1005012691642623": 1794074230.5173922,
     "1005010266233059": 1793977272.9654846,
-    "1005007469003552": 1793982290.6109207,
+    "1005007469003552": 1794130707.0577464,
     "1005010041181003": 1794126322.307194,
     "1005010265542567": 1793982853.0323274,
-    "1005003156756854": 1794073132.3964775,
+    "1005003156756854": 1794130692.4786665,
     "1005010142208108": 1793987278.5140982,
     "1005008534907844": 1793987285.4130383,
     "1005009577554629": 1793987289.8200357,
@@ -1389,7 +1390,8 @@
     "1005008384277561": 1794128872.1451216,
     "1005010155263623": 1794129971.1690388,
     "1005011572208218": 1794129986.607079,
-    "1005012374550298": 1794130518.3291268
+    "1005012374550298": 1794130518.3291268,
+    "1005009851407234": 1794130701.0727847
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2260,7 +2262,8 @@
     "Essager Mini 20W Type C Charger PD",
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB)",
     "OnePlus Ace 6 12/256GB",
-    "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse"
+    "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse",
+    "Ulanzi A100 Wireless Lavalier Microphone"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2607,7 +2610,7 @@
     "SAMZHE Support Aluminum Graphics Card": 1793123749.6836987,
     "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500": 1793138738.0845888,
     "كابل Ethernet Flat Cat 6 Cable 2meter  السعر💲 :": 1793227797.933171,
-    "AMD Ryzen 5 9600X": 1793441309.787715,
+    "AMD Ryzen 5 9600X": 1794130701.0727847,
     "AMD Ryzen 7 8700F": 1793467108.5532427,
     "OnePlus ACE 6": 1793380394.5736995,
     "أضف الآن في السلة الآن العرض يعمل يوم 1 نوفمبر 🔥": 1793270716.9132679,
@@ -3121,7 +3124,7 @@
     "KOOTION SSD SATA  256GB": 1794071284.8947144,
     "MSI AMD A520M-A PRO": 1794072944.774369,
     "1MORE SonoFlow Pro HQ51": 1794073127.8664527,
-    "Ulanzi ST-06S Vertical Shooting": 1794073132.3964775,
+    "Ulanzi ST-06S Vertical Shooting": 1794130692.4786665,
     "ميكروفون MAONO DGM20W لاسلكي للألعاب": 1794074230.5173922,
     "CUSU 512GB External SSD Drive": 1794090319.727767,
     "Netac M.2 NVME 250GB": 1794076438.7694528,
@@ -3136,12 +3139,10 @@
     "Essager Mini 20W Type C Charger PD": 1794129971.1690388,
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794129986.607079,
     "OnePlus Ace 6 12/256GB": 1794130143.129755,
-    "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": 1794130518.3291268
+    "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": 1794130518.3291268,
+    "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464
   },
   "published_post_keys": [
-    "lodydeals:45693",
-    "pcgamingpart:7937",
-    "ecksdeal:5994",
     "zedstoreonline:38600",
     "lodydeals:45918",
     "lodydeals:45866",
@@ -4138,19 +4139,22 @@
     "zedstoreonline:39724",
     "aniscoupons:34279",
     "lodydeals:46241",
-    "zedstoreonline:39725"
+    "zedstoreonline:39725",
+    "lodydeals:46242",
+    "zedstoreonline:39726",
+    "aniscoupons:34280"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794130518.3291268,
+  "last_run_time": 1794130707.0577464,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
       "last_check_time": 1794055834.6061237
     },
     "lodydeals": {
-      "last_message_id": 46241,
-      "last_check_time": 1794130145.1836667
+      "last_message_id": 46242,
+      "last_check_time": 1794130694.5311444
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4169,12 +4173,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39725,
-      "last_check_time": 1794130520.372462
+      "last_message_id": 39726,
+      "last_check_time": 1794130703.1231542
     },
     "aniscoupons": {
-      "last_message_id": 34279,
-      "last_check_time": 1794129988.6622627
+      "last_message_id": 34281,
+      "last_check_time": 1794130710.375305
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -4741,7 +4745,7 @@
     "1005013028124905": 438.6,
     "1005012691642623": 37.1,
     "1005010266233059": 17.1,
-    "1005007469003552": 17.1,
+    "1005007469003552": 17.39,
     "1005010041181003": 167.8,
     "1005010265542567": 23.89,
     "1005003156756854": 10.85,
@@ -4767,7 +4771,8 @@
     "1005008384277561": 7.3,
     "1005010155263623": 2.4,
     "1005011572208218": 217.8,
-    "1005012374550298": 17.6
+    "1005012374550298": 17.6,
+    "1005009851407234": 149.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17272,6 +17277,36 @@
       "price": 17.6,
       "timestamp": 1794130518.3291268,
       "status": "ACTIVE"
+    },
+    "lodydeals:46242": {
+      "channel_msg_id": 2049,
+      "product_id": "1005003156756854",
+      "title": "Ulanzi ST-06S Vertical Shooting",
+      "channel": "lodydeals",
+      "source_msg_id": 46242,
+      "price": 10.85,
+      "timestamp": 1794130692.4786665,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:39726": {
+      "channel_msg_id": 2050,
+      "product_id": "1005009851407234",
+      "title": "AMD Ryzen 5 9600X",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39726,
+      "price": 149.4,
+      "timestamp": 1794130701.0727847,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34280": {
+      "channel_msg_id": 2051,
+      "product_id": "1005007469003552",
+      "title": "Ulanzi A100 Wireless Lavalier Microphone",
+      "channel": "aniscoupons",
+      "source_msg_id": 34280,
+      "price": 17.39,
+      "timestamp": 1794130707.0577464,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17280,17 +17315,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794130521.813883,
+    "last_deal_post_time": 1794130711.392378,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794130525.0423002,
+    "last_sweep_time": 1794130715.4229598,
     "last_sweep_times": {
-      "algeria": 1794130521.794809,
-      "france": 1794130525.0423002
+      "algeria": 1794130711.3674064,
+      "france": 1794130715.4229598
     },
     "last_deal_post_times": {
-      "algeria": 1794130521.813883
+      "algeria": 1794130711.392378
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -17960,7 +17995,7 @@
     "1005013028124905": "zedstoreonline",
     "1005012691642623": "zedstoreonline",
     "1005010266233059": "zedstoreonline",
-    "1005007469003552": "zedstoreonline",
+    "1005007469003552": "aniscoupons",
     "1005010041181003": "aniscoupons",
     "1005010265542567": "aniscoupons",
     "1005003156756854": "lodydeals",
@@ -17992,7 +18027,8 @@
     "1005008384277561": "zedstoreonline",
     "1005010155263623": "zedstoreonline",
     "1005011572208218": "aniscoupons",
-    "1005012374550298": "zedstoreonline"
+    "1005012374550298": "zedstoreonline",
+    "1005009851407234": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -18870,7 +18906,8 @@
     "Essager Mini 20W Type C Charger PD": "zedstoreonline",
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": "aniscoupons",
     "OnePlus Ace 6 12/256GB": "lodydeals",
-    "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": "zedstoreonline"
+    "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": "zedstoreonline",
+    "Ulanzi A100 Wireless Lavalier Microphone": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -19664,7 +19701,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45545",
     "lodydeals:45576",
     "lodydeals:45835",
     "lodydeals:45503",
@@ -20663,7 +20699,8 @@
     "zedstoreonline:39719",
     "zedstoreonline:39721",
     "lodydeals:46240",
-    "zedstoreonline:39722"
+    "zedstoreonline:39722",
+    "aniscoupons:34281"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
