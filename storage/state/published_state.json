@@ -686,7 +686,8 @@
     "1005012593794312",
     "1005008384277561",
     "1005010155263623",
-    "1005011572208218"
+    "1005011572208218",
+    "1005012374550298"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1387,7 +1388,8 @@
     "1005012593794312": 1794128140.9765735,
     "1005008384277561": 1794128872.1451216,
     "1005010155263623": 1794129971.1690388,
-    "1005011572208218": 1794129986.607079
+    "1005011572208218": 1794129986.607079,
+    "1005012374550298": 1794130518.3291268
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2257,7 +2259,8 @@
     "OnePlus ACE 6T",
     "Essager Mini 20W Type C Charger PD",
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB)",
-    "OnePlus Ace 6 12/256GB"
+    "OnePlus Ace 6 12/256GB",
+    "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3132,10 +3135,10 @@
     "OnePlus ACE 6T": 1794128880.302774,
     "Essager Mini 20W Type C Charger PD": 1794129971.1690388,
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794129986.607079,
-    "OnePlus Ace 6 12/256GB": 1794130143.129755
+    "OnePlus Ace 6 12/256GB": 1794130143.129755,
+    "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": 1794130518.3291268
   },
   "published_post_keys": [
-    "megaphonna:8542",
     "lodydeals:45693",
     "pcgamingpart:7937",
     "ecksdeal:5994",
@@ -4134,11 +4137,12 @@
     "zedstoreonline:39723",
     "zedstoreonline:39724",
     "aniscoupons:34279",
-    "lodydeals:46241"
+    "lodydeals:46241",
+    "zedstoreonline:39725"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794130143.129755,
+  "last_run_time": 1794130518.3291268,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4165,8 +4169,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39724,
-      "last_check_time": 1794129981.2504046
+      "last_message_id": 39725,
+      "last_check_time": 1794130520.372462
     },
     "aniscoupons": {
       "last_message_id": 34279,
@@ -4762,7 +4766,8 @@
     "1005008721853055": 8.7,
     "1005008384277561": 7.3,
     "1005010155263623": 2.4,
-    "1005011572208218": 217.8
+    "1005011572208218": 217.8,
+    "1005012374550298": 17.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17257,6 +17262,16 @@
       "price": 414.57,
       "timestamp": 1794130143.129755,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39725": {
+      "channel_msg_id": 2048,
+      "product_id": "1005012374550298",
+      "title": "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39725,
+      "price": 17.6,
+      "timestamp": 1794130518.3291268,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17265,17 +17280,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794130147.6315796,
+    "last_deal_post_time": 1794130521.813883,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794130329.0532386,
+    "last_sweep_time": 1794130525.0423002,
     "last_sweep_times": {
-      "algeria": 1794130326.1680417,
-      "france": 1794130329.0532386
+      "algeria": 1794130521.794809,
+      "france": 1794130525.0423002
     },
     "last_deal_post_times": {
-      "algeria": 1794130147.6315796
+      "algeria": 1794130521.813883
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -17976,7 +17991,8 @@
     "1005012593794312": "aniscoupons",
     "1005008384277561": "zedstoreonline",
     "1005010155263623": "zedstoreonline",
-    "1005011572208218": "aniscoupons"
+    "1005011572208218": "aniscoupons",
+    "1005012374550298": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -18853,7 +18869,8 @@
     "OnePlus ACE 6T": "aniscoupons",
     "Essager Mini 20W Type C Charger PD": "zedstoreonline",
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": "aniscoupons",
-    "OnePlus Ace 6 12/256GB": "lodydeals"
+    "OnePlus Ace 6 12/256GB": "lodydeals",
+    "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
