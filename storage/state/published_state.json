@@ -688,7 +688,8 @@
     "1005010155263623",
     "1005011572208218",
     "1005012374550298",
-    "1005009851407234"
+    "1005009851407234",
+    "1005009738356108"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1391,7 +1392,8 @@
     "1005010155263623": 1794129971.1690388,
     "1005011572208218": 1794129986.607079,
     "1005012374550298": 1794130518.3291268,
-    "1005009851407234": 1794130701.0727847
+    "1005009851407234": 1794130701.0727847,
+    "1005009738356108": 1794131236.9079208
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -3071,7 +3073,7 @@
     "Baseus Mouse Bluetooth Wireless Computer 1600DPI": 1793966716.198834,
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": 1793966721.1839278,
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": 1793966727.646043,
-    "GameSir X5 Lite Game Controller": 1793966734.5622914,
+    "GameSir X5 Lite Game Controller": 1794131236.9079208,
     "Netac SSD NVME M2 250GB": 1793966752.4109294,
     "Essager 20W GaN + cable": 1794076070.3822317,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
@@ -3143,7 +3145,6 @@
     "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464
   },
   "published_post_keys": [
-    "lodydeals:45918",
     "lodydeals:45866",
     "zedstoreonline:38596",
     "bnddeals:50808",
@@ -4142,11 +4143,12 @@
     "lodydeals:46242",
     "zedstoreonline:39726",
     "aniscoupons:34280",
-    "aniscoupons:34282"
+    "aniscoupons:34282",
+    "zedstoreonline:39728"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794130874.808105,
+  "last_run_time": 1794131236.9079208,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4173,8 +4175,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39727,
-      "last_check_time": 1794130871.6218498
+      "last_message_id": 39728,
+      "last_check_time": 1794131238.960292
     },
     "aniscoupons": {
       "last_message_id": 34282,
@@ -17317,6 +17319,16 @@
       "price": 283.59,
       "timestamp": 1794130874.808105,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39728": {
+      "channel_msg_id": 2053,
+      "product_id": "1005009738356108",
+      "title": "GameSir X5 Lite Game Controller",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39728,
+      "price": 16.5,
+      "timestamp": 1794131236.9079208,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17325,17 +17337,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794130877.381769,
+    "last_deal_post_time": 1794131240.234161,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794131063.4782953,
+    "last_sweep_time": 1794131243.043034,
     "last_sweep_times": {
-      "algeria": 1794131059.527138,
-      "france": 1794131063.4782953
+      "algeria": 1794131240.2096796,
+      "france": 1794131243.043034
     },
     "last_deal_post_times": {
-      "algeria": 1794130877.381769
+      "algeria": 1794131240.234161
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18038,7 +18050,8 @@
     "1005010155263623": "zedstoreonline",
     "1005011572208218": "aniscoupons",
     "1005012374550298": "zedstoreonline",
-    "1005009851407234": "zedstoreonline"
+    "1005009851407234": "zedstoreonline",
+    "1005009738356108": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
