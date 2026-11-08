@@ -693,7 +693,8 @@
     "1005012953027259",
     "1005012048332402",
     "1005011665465731",
-    "1005012377459743"
+    "1005012377459743",
+    "1005009460475870"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1401,7 +1402,8 @@
     "1005012953027259": 1794133977.9005425,
     "1005012048332402": 1794136369.073103,
     "1005011665465731": 1794137638.8201442,
-    "1005012377459743": 1794139106.9168086
+    "1005012377459743": 1794139106.9168086,
+    "1005009460475870": 1794144806.2660766
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2278,7 +2280,8 @@
     "Lenovo LE257 Headphones",
     "Honor 600s CN (8/256)",
     "ويبكام OBSBOT MEET 2 Webcam 4K",
-    "Blackview Mega 5"
+    "Blackview Mega 5",
+    "Warvank X8 Wireless Gaming Mouse"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3160,10 +3163,10 @@
     "Lenovo LE257 Headphones": 1794137638.8201442,
     "Honor 600s CN (8/256)": 1794139106.9168086,
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
-    "Blackview Mega 5": 1794142225.168232
+    "Blackview Mega 5": 1794142225.168232,
+    "Warvank X8 Wireless Gaming Mouse": 1794144806.2660766
   },
   "published_post_keys": [
-    "pcgamingpart:7954",
     "bnddeals:50953",
     "aniscoupons:33162",
     "lodydeals:45839",
@@ -4162,11 +4165,12 @@
     "ecksdeal:6044",
     "lodydeals:46246",
     "lodydeals:46250",
-    "aniscoupons:34293"
+    "aniscoupons:34293",
+    "zedstoreonline:39736"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794142225.168232,
+  "last_run_time": 1794144806.2660766,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6045,
@@ -4193,8 +4197,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39735,
-      "last_check_time": 1794143515.4521563
+      "last_message_id": 39736,
+      "last_check_time": 1794144808.3197145
     },
     "aniscoupons": {
       "last_message_id": 34293,
@@ -4796,7 +4800,8 @@
     "1005012953027259": 279.32,
     "1005012048332402": 193.1,
     "1005011665465731": 5.38,
-    "1005012377459743": 304.77
+    "1005012377459743": 304.77,
+    "1005009460475870": 6.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17481,6 +17486,16 @@
       "price": 228.3,
       "timestamp": 1794142225.168232,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39736": {
+      "channel_msg_id": 2067,
+      "product_id": "1005009460475870",
+      "title": "Warvank X8 Wireless Gaming Mouse",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39736,
+      "price": 6.9,
+      "timestamp": 1794144806.2660766,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17489,17 +17504,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794142228.070857,
+    "last_deal_post_time": 1794144809.948077,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794144619.802387,
+    "last_sweep_time": 1794144813.9551172,
     "last_sweep_times": {
-      "algeria": 1794144615.9856098,
-      "france": 1794144619.802387
+      "algeria": 1794144809.9224865,
+      "france": 1794144813.9551172
     },
     "last_deal_post_times": {
-      "algeria": 1794142228.070857
+      "algeria": 1794144809.948077
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18207,7 +18222,8 @@
     "1005012953027259": "aniscoupons",
     "1005012048332402": "aniscoupons",
     "1005011665465731": "lodydeals",
-    "1005012377459743": "aniscoupons"
+    "1005012377459743": "aniscoupons",
+    "1005009460475870": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19091,7 +19107,8 @@
     "Lenovo LE257 Headphones": "lodydeals",
     "Honor 600s CN (8/256)": "aniscoupons",
     "ويبكام OBSBOT MEET 2 Webcam 4K": "ecksdeal",
-    "Blackview Mega 5": "aniscoupons"
+    "Blackview Mega 5": "aniscoupons",
+    "Warvank X8 Wireless Gaming Mouse": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
