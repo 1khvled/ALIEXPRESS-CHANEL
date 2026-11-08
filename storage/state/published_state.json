@@ -1263,7 +1263,7 @@
     "1005011927267564": 1793728844.5794795,
     "1005008291023017": 1794086587.7356915,
     "1005012947477238": 1793612016.5356846,
-    "1005010121513376": 1794047586.9073458,
+    "1005010121513376": 1794127394.3986294,
     "1005009064526142": 1793613380.753295,
     "1005010009130696": 1793613403.4444478,
     "1005013465751932": 1793613440.9413722,
@@ -1364,7 +1364,7 @@
     "1005006411483066": 1794091985.0146983,
     "1005012925301774": 1794002515.731258,
     "1005012959738411": 1794063654.6498907,
-    "1005008357913212": 1794091251.586213,
+    "1005008357913212": 1794127389.2657666,
     "1005008703989845": 1794127040.2666676,
     "1005007162099601": 1794046115.3557825,
     "1005007038130594": 1794046667.9804564,
@@ -2243,7 +2243,8 @@
     "SIX PCIe 4.0 7350MB/s  1TB",
     "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop",
     "SOUNDPEATS Air6 HS",
-    "مبرد الهاتف MEMO CX10"
+    "مبرد الهاتف MEMO CX10",
+    "KOOTION SATA SSD 480GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3070,7 +3071,7 @@
     "Honor 600 Pro 12/256": 1793971367.4627862,
     "HONOR Pad X8a (4/64GB)": 1794062272.0446324,
     "Magcubic HY350 Max 900ANSI": 1794126846.802194,
-    "Honor X9d (no charger)": 1794047586.9073458,
+    "Honor X9d (no charger)": 1794127394.3986294,
     "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1793975250.6134522,
     "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
@@ -3112,11 +3113,10 @@
     "SIX PCIe 4.0 7350MB/s  1TB": 1794079741.7808652,
     "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop": 1794079928.0765662,
     "SOUNDPEATS Air6 HS": 1794087501.0429602,
-    "مبرد الهاتف MEMO CX10": 1794126663.880001
+    "مبرد الهاتف MEMO CX10": 1794126663.880001,
+    "KOOTION SATA SSD 480GB": 1794127389.2657666
   },
   "published_post_keys": [
-    "aniscoupons:32786",
-    "couponsglobal:48781",
     "lodydeals:45565",
     "megaphonna:8428",
     "test_channel:1792184255",
@@ -4114,11 +4114,13 @@
     "aniscoupons:34269",
     "zedstoreonline:39714",
     "aniscoupons:34270",
-    "aniscoupons:34271"
+    "aniscoupons:34271",
+    "zedstoreonline:39716",
+    "aniscoupons:34272"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794127040.2666676,
+  "last_run_time": 1794127394.3986294,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4145,12 +4147,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39715,
-      "last_check_time": 1794127036.5721774
+      "last_message_id": 39716,
+      "last_check_time": 1794127391.2962642
     },
     "aniscoupons": {
-      "last_message_id": 34271,
-      "last_check_time": 1794127042.319647
+      "last_message_id": 34272,
+      "last_check_time": 1794127396.46651
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -4711,7 +4713,7 @@
     "1005008703989845": 24.8,
     "1005008060391372": 32.9,
     "1005012593794312": 239.8,
-    "1005008357913212": 40.5,
+    "1005008357913212": 40.4,
     "1005012254132930": 15.2,
     "1005008708333999": 136.7,
     "1005013028124905": 438.6,
@@ -17114,6 +17116,26 @@
       "price": 24.8,
       "timestamp": 1794127040.2666676,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39716": {
+      "channel_msg_id": 2033,
+      "product_id": "1005008357913212",
+      "title": "KOOTION SATA SSD 480GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39716,
+      "price": 40.4,
+      "timestamp": 1794127389.2657666,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34272": {
+      "channel_msg_id": 2034,
+      "product_id": "1005010121513376",
+      "title": "Honor X9d (no charger)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34272,
+      "price": 289.5,
+      "timestamp": 1794127394.3986294,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17122,17 +17144,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794127043.2089617,
+    "last_deal_post_time": 1794127396.8799942,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794127222.6187217,
+    "last_sweep_time": 1794127399.6570754,
     "last_sweep_times": {
-      "algeria": 1794127219.0199192,
-      "france": 1794127222.6187217
+      "algeria": 1794127396.8647556,
+      "france": 1794127399.6570754
     },
     "last_deal_post_times": {
-      "algeria": 1794127043.2089617
+      "algeria": 1794127396.8799942
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -17814,7 +17836,7 @@
     "1005006411483066": "zedstoreonline",
     "1005012925301774": "zedstoreonline",
     "1005012959738411": "lodydeals",
-    "1005008357913212": "aniscoupons",
+    "1005008357913212": "zedstoreonline",
     "1005008703989845": "aniscoupons",
     "1005007162099601": "lodydeals",
     "1005007038130594": "lodydeals",
@@ -18700,7 +18722,8 @@
     "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop": "aniscoupons",
     "Honor Choice Watch 2i": "aniscoupons",
     "SOUNDPEATS Air6 HS": "lodydeals",
-    "مبرد الهاتف MEMO CX10": "zedstoreonline"
+    "مبرد الهاتف MEMO CX10": "zedstoreonline",
+    "KOOTION SATA SSD 480GB": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
