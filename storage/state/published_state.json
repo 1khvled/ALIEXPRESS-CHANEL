@@ -695,7 +695,9 @@
     "1005011665465731",
     "1005012377459743",
     "1005009460475870",
-    "1005009649079564"
+    "1005009649079564",
+    "1005007038022940",
+    "1005007981362777"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1405,7 +1407,9 @@
     "1005011665465731": 1794137638.8201442,
     "1005012377459743": 1794139106.9168086,
     "1005009460475870": 1794144806.2660766,
-    "1005009649079564": 1794145536.5317988
+    "1005009649079564": 1794145536.5317988,
+    "1005007038022940": 1794146648.256951,
+    "1005007981362777": 1794146655.1062205
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2285,7 +2289,9 @@
     "Blackview Mega 5",
     "Warvank X8 Wireless Gaming Mouse",
     "Xiaoxin Pad Pro 2025 (8/128GB)",
-    "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth"
+    "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth",
+    "Lenovo Thinkplus XT88",
+    "Rolls-Royce Phantom Model"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3170,11 +3176,11 @@
     "Blackview Mega 5": 1794142225.168232,
     "Warvank X8 Wireless Gaming Mouse": 1794144806.2660766,
     "Xiaoxin Pad Pro 2025 (8/128GB)": 1794145351.158124,
-    "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": 1794145536.5317988
+    "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": 1794145536.5317988,
+    "Lenovo Thinkplus XT88": 1794146648.256951,
+    "Rolls-Royce Phantom Model": 1794146655.1062205
   },
   "published_post_keys": [
-    "lodydeals:45839",
-    "zedstoreonline:38850",
     "lodydeals:45930",
     "lodydeals:45823",
     "test_channel:1792162568",
@@ -4172,19 +4178,21 @@
     "aniscoupons:34293",
     "zedstoreonline:39736",
     "aniscoupons:34295",
-    "zedstoreonline:39737"
+    "zedstoreonline:39737",
+    "lodydeals:46254",
+    "lodydeals:46255"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794145536.5317988,
+  "last_run_time": 1794146655.1062205,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6045,
       "last_check_time": 1794140208.423124
     },
     "lodydeals": {
-      "last_message_id": 46253,
-      "last_check_time": 1794145347.1085734
+      "last_message_id": 46255,
+      "last_check_time": 1794146657.1586652
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4808,7 +4816,9 @@
     "1005011665465731": 5.38,
     "1005012377459743": 304.77,
     "1005009460475870": 6.9,
-    "1005009649079564": 19.4
+    "1005009649079564": 19.4,
+    "1005007038022940": 5.49,
+    "1005007981362777": 5.69
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17523,6 +17533,26 @@
       "price": 19.4,
       "timestamp": 1794145536.5317988,
       "status": "ACTIVE"
+    },
+    "lodydeals:46254": {
+      "channel_msg_id": 2070,
+      "product_id": "1005007038022940",
+      "title": "Lenovo Thinkplus XT88",
+      "channel": "lodydeals",
+      "source_msg_id": 46254,
+      "price": 5.49,
+      "timestamp": 1794146648.256951,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46255": {
+      "channel_msg_id": 2071,
+      "product_id": "1005007981362777",
+      "title": "Rolls-Royce Phantom Model",
+      "channel": "lodydeals",
+      "source_msg_id": 46255,
+      "price": 5.69,
+      "timestamp": 1794146655.1062205,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17531,17 +17561,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794145539.7491784,
+    "last_deal_post_time": 1794146659.8613493,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794146461.3228018,
+    "last_sweep_time": 1794146663.2399156,
     "last_sweep_times": {
-      "algeria": 1794146458.115975,
-      "france": 1794146461.3228018
+      "algeria": 1794146659.8383548,
+      "france": 1794146663.2399156
     },
     "last_deal_post_times": {
-      "algeria": 1794145539.7491784
+      "algeria": 1794146659.8613493
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18251,7 +18281,9 @@
     "1005011665465731": "lodydeals",
     "1005012377459743": "aniscoupons",
     "1005009460475870": "zedstoreonline",
-    "1005009649079564": "zedstoreonline"
+    "1005009649079564": "zedstoreonline",
+    "1005007038022940": "lodydeals",
+    "1005007981362777": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19138,7 +19170,9 @@
     "Blackview Mega 5": "aniscoupons",
     "Warvank X8 Wireless Gaming Mouse": "zedstoreonline",
     "Xiaoxin Pad Pro 2025 (8/128GB)": "aniscoupons",
-    "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": "zedstoreonline"
+    "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": "zedstoreonline",
+    "Lenovo Thinkplus XT88": "lodydeals",
+    "Rolls-Royce Phantom Model": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
