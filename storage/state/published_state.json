@@ -1287,7 +1287,7 @@
     "1005010009130696": 1793613403.4444478,
     "1005013465751932": 1793613440.9413722,
     "1005011778223630": 1793613478.3592212,
-    "1005009231510301": 1794045022.0356805,
+    "1005009231510301": 1794166133.813164,
     "1005011625723042": 1793613515.3490868,
     "1005006280695304": 1793613524.8970137,
     "1005010149868688": 1793613530.8342392,
@@ -3014,7 +3014,7 @@
     "Xiaomi Redmi 17 Smartphone 128G 256G ROM 120Hz 6.9\" Display 50MP 45W Turbo": 1793613465.8475375,
     "AMD Ryzen 5 7500F": 1793613478.3592212,
     "AMD Ryzen R9 9900X": 1793613486.2912338,
-    "Lenovo Xiaoxin Pad Pro GT  8/256": 1794045022.0356805,
+    "Lenovo Xiaoxin Pad Pro GT  8/256": 1794166133.813164,
     "China Version Xiaomi WiFi Router Amplifier Pro": 1793613515.3490868,
     "SMAILWOLF RS7 Bluetooth wireless gaming mouse PAW3311 macro driver laptop": 1793613519.9635994,
     "Original Xiaomi Mi Small Backpack": 1793613524.8970137,
@@ -3213,7 +3213,6 @@
     "ضف 4 قطع ثم أدفع": 1794165031.7231321
   },
   "published_post_keys": [
-    "aniscoupons:33037",
     "lodydeals:45729",
     "lodydeals:45908",
     "aniscoupons:32717",
@@ -4212,11 +4211,12 @@
     "lodydeals:46263",
     "lodydeals:46264",
     "lodydeals:46265",
-    "bnddeals:51237"
+    "bnddeals:51237",
+    "zedstoreonline:39753"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794165031.7231321,
+  "last_run_time": 1794166133.813164,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
@@ -4243,8 +4243,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39752,
-      "last_check_time": 1794163013.83475
+      "last_message_id": 39753,
+      "last_check_time": 1794166135.8702354
     },
     "aniscoupons": {
       "last_message_id": 34312,
@@ -17879,6 +17879,16 @@
       "price": 13.96,
       "timestamp": 1794165031.7231321,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39753": {
+      "channel_msg_id": 2102,
+      "product_id": "1005009231510301",
+      "title": "Lenovo Xiaoxin Pad Pro GT  8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39753,
+      "price": 259.7,
+      "timestamp": 1794166133.813164,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17887,17 +17897,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794165033.8090522,
+    "last_deal_post_time": 1794166137.252598,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794165959.1061342,
+    "last_sweep_time": 1794166140.4418728,
     "last_sweep_times": {
-      "algeria": 1794165954.9160435,
-      "france": 1794165959.1061342
+      "algeria": 1794166137.2273405,
+      "france": 1794166140.4418728
     },
     "last_deal_post_times": {
-      "algeria": 1794165033.8090522
+      "algeria": 1794166137.252598
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
