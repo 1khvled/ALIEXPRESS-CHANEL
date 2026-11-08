@@ -1082,7 +1082,7 @@
     "1005010529440901": 1793361918.107678,
     "1005010035309013": 1793554752.7954907,
     "1005010385472500": 1793448762.165183,
-    "1005011779814585": 1793613414.4818656,
+    "1005011779814585": 1794129232.8871872,
     "1005013090910574": 1794125751.2963548,
     "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793543612.279949,
@@ -2668,7 +2668,7 @@
     "Soundcore by Anker Liberty 4 NC": 1793361932.515627,
     "CUSU SSD SATA 480GB": 1793478749.3947985,
     "New HONOR X9d 12GB+256 Smartphone 6.79'' 120Hz Screen 108MP AI Camera 8300": 1793399585.2177644,
-    "RYZEN 7 9700X": 1793361970.5045621,
+    "RYZEN 7 9700X": 1794129232.8871872,
     "REALME 15T  8/256GB": 1793362007.2094316,
     "HONOR 600 LITE (8/256)": 1793362020.5789406,
     "HONOR 600 (8/256)": 1793467348.0722725,
@@ -3125,7 +3125,6 @@
     "OnePlus ACE 6T": 1794128880.302774
   },
   "published_post_keys": [
-    "bnddeals:50851",
     "zedstoreonline:38790",
     "couponsglobal:48799",
     "aniscoupons:32711",
@@ -4124,19 +4123,20 @@
     "aniscoupons:34274",
     "aniscoupons:34276",
     "zedstoreonline:39720",
-    "aniscoupons:34277"
+    "aniscoupons:34277",
+    "aniscoupons:34278"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794128880.302774,
+  "last_run_time": 1794129232.8871872,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
       "last_check_time": 1794055834.6061237
     },
     "lodydeals": {
-      "last_message_id": 46238,
-      "last_check_time": 1794128309.275229
+      "last_message_id": 46240,
+      "last_check_time": 1794129222.6977024
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4159,8 +4159,8 @@
       "last_check_time": 1794129045.6569426
     },
     "aniscoupons": {
-      "last_message_id": 34277,
-      "last_check_time": 1794128882.3461378
+      "last_message_id": 34278,
+      "last_check_time": 1794129234.9400926
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -4474,7 +4474,7 @@
     "1005010529440901": 59.8,
     "1005010035309013": 72.89,
     "1005010385472500": 40.0,
-    "1005011779814585": 186.7,
+    "1005011779814585": 186.74,
     "1005013090910574": 192.7,
     "1005012382148199": 469.0,
     "1005010158485058": 66.5,
@@ -17195,6 +17195,16 @@
       "price": 367.1,
       "timestamp": 1794128880.302774,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34278": {
+      "channel_msg_id": 2040,
+      "product_id": "1005011779814585",
+      "title": "RYZEN 7 9700X",
+      "channel": "aniscoupons",
+      "source_msg_id": 34278,
+      "price": 186.74,
+      "timestamp": 1794129232.8871872,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17203,17 +17213,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794128883.3035245,
+    "last_deal_post_time": 1794129235.747945,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794129053.420062,
+    "last_sweep_time": 1794129238.764316,
     "last_sweep_times": {
-      "algeria": 1794129050.0513723,
-      "france": 1794129053.420062
+      "algeria": 1794129235.7232735,
+      "france": 1794129238.764316
     },
     "last_deal_post_times": {
-      "algeria": 1794128883.3035245
+      "algeria": 1794129235.747945
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -17621,7 +17631,7 @@
     "1005010529440901": "zedstoreonline",
     "1005010035309013": "lodydeals",
     "1005010385472500": "bnddeals",
-    "1005011779814585": "zedstoreonline",
+    "1005011779814585": "aniscoupons",
     "1005013090910574": "aniscoupons",
     "1005012382148199": "megaphonna",
     "1005010158485058": "lodydeals",
@@ -19580,7 +19590,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "bnddeals:50860",
     "lodydeals:45801",
     "lodydeals:45545",
     "lodydeals:45576",
@@ -20579,7 +20588,8 @@
     "aniscoupons:34275",
     "lodydeals:46238",
     "zedstoreonline:39719",
-    "zedstoreonline:39721"
+    "zedstoreonline:39721",
+    "lodydeals:46240"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
