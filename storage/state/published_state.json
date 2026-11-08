@@ -842,7 +842,7 @@
     "1005010536089199": 1793966721.1839278,
     "1005012385221205": 1791102050.1835058,
     "1005012743092233": 1791104461.903693,
-    "1005007805497968": 1793898397.363593,
+    "1005007805497968": 1794141669.7207782,
     "1005007345108759": 1793542577.5838556,
     "1005007394197021": 1792103174.5720932,
     "1005013290515237": 1791110751.0808105,
@@ -3057,7 +3057,7 @@
     "Huawei Pura 90 Pro Max 12/256GB": 1793735141.9083512,
     "سماعات لاسلكية Mchose V9 Pro 2 7.1 Wireless": 1793735684.5341609,
     "OPPO Find X10 Pro Max 12/256GB": 1793736440.319658,
-    "GameSir T4 Nova Lite": 1793898397.363593,
+    "GameSir T4 Nova Lite": 1794141669.7207782,
     "Xiaoxin Pad Pro GT 8/256GB": 1793737359.999931,
     "EasyThreed 3D Printer Entry": 1793741666.9686077,
     "CUSU SSD SATA 1TB": 1793742040.7102718,
@@ -3161,7 +3161,6 @@
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559
   },
   "published_post_keys": [
-    "lodydeals:45942",
     "lodydeals:45746",
     "pcgamingpart:7954",
     "bnddeals:50953",
@@ -4160,19 +4159,20 @@
     "lodydeals:46245",
     "aniscoupons:34290",
     "ecksdeal:6044",
-    "lodydeals:46246"
+    "lodydeals:46246",
+    "lodydeals:46250"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794140574.699814,
+  "last_run_time": 1794141669.7207782,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6045,
       "last_check_time": 1794140208.423124
     },
     "lodydeals": {
-      "last_message_id": 46249,
-      "last_check_time": 1794141120.561551
+      "last_message_id": 46250,
+      "last_check_time": 1794141671.775049
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4339,7 +4339,7 @@
     "1005012385221205": 13.27,
     "1005013223462188": 13.5,
     "1005012743092233": 24.37,
-    "1005007805497968": 18.77,
+    "1005007805497968": 19.08,
     "1005007345108759": 19.47,
     "1005007394197021": 14.88,
     "1005012571601398": 270.5,
@@ -17459,6 +17459,16 @@
       "price": 270.5,
       "timestamp": 1794140574.699814,
       "status": "ACTIVE"
+    },
+    "lodydeals:46250": {
+      "channel_msg_id": 2065,
+      "product_id": "1005007805497968",
+      "title": "GameSir T4 Nova Lite",
+      "channel": "lodydeals",
+      "source_msg_id": 46250,
+      "price": 19.08,
+      "timestamp": 1794141669.7207782,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17467,17 +17477,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794140579.5541866,
+    "last_deal_post_time": 1794141674.315563,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794141489.6598277,
+    "last_sweep_time": 1794141677.3370466,
     "last_sweep_times": {
-      "algeria": 1794141486.7488973,
-      "france": 1794141489.6598277
+      "algeria": 1794141674.2900138,
+      "france": 1794141677.3370466
     },
     "last_deal_post_times": {
-      "algeria": 1794140579.5541866
+      "algeria": 1794141674.315563
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
