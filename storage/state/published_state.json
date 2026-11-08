@@ -703,7 +703,8 @@
     "1005013240296031",
     "1005012670472055",
     "1005013476568095",
-    "1005012442521357"
+    "1005012442521357",
+    "1005012494171063"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1421,7 +1422,8 @@
     "1005013240296031": 1794164670.8679597,
     "1005012670472055": 1794164675.8426867,
     "1005013476568095": 1794169846.8168333,
-    "1005012442521357": 1794171698.893023
+    "1005012442521357": 1794171698.893023,
+    "1005012494171063": 1794175751.7054114
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2390,7 +2392,7 @@
     "Honor Win Turbo 12/256BG": 1790943705.796801,
     "ATTACK SHARK G300 Foldable Wireless Gaming Headset, Active Noise Reduction": 1790943710.6779277,
     "Precision Pocket Scale 1000g X 0.1g Digital Gram Food Jewelry": 1790943717.3545928,
-    "OnePlus Turbo 6X Pro 8/128GB": 1793898360.7512894,
+    "OnePlus Turbo 6X Pro 8/128GB": 1794175751.7054114,
     "من منتجات الأكثر طلبا": 1790943959.7454133,
     "النسخة العالمية": 1790943965.6572914,
     "HONOR 600 PRO (12/256)": 1793500800.6950834,
@@ -3231,7 +3233,6 @@
     "KOOTION SSD SATA3 480GB": 1794173731.8411272
   },
   "published_post_keys": [
-    "lodydeals:45427",
     "zedstoreonline:38834",
     "zedstoreonline:38526",
     "aniscoupons:32721",
@@ -4230,19 +4231,20 @@
     "aniscoupons:34314",
     "lodydeals:46272",
     "lodydeals:46273",
-    "lodydeals:46274"
+    "lodydeals:46274",
+    "lodydeals:46275"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794173731.8411272,
+  "last_run_time": 1794175751.7054114,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
       "last_check_time": 1794159484.4700966
     },
     "lodydeals": {
-      "last_message_id": 46274,
-      "last_check_time": 1794173733.8965566
+      "last_message_id": 46275,
+      "last_check_time": 1794175753.7612486
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4874,7 +4876,8 @@
     "1005013240296031": 69.06,
     "1005012670472055": 112.11,
     "1005013476568095": 370.8,
-    "1005012442521357": 158.34
+    "1005012442521357": 158.34,
+    "1005012494171063": 237.03
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17989,6 +17992,16 @@
       "price": 40.5,
       "timestamp": 1794173731.8411272,
       "status": "ACTIVE"
+    },
+    "lodydeals:46275": {
+      "channel_msg_id": 2111,
+      "product_id": "1005012494171063",
+      "title": "OnePlus Turbo 6X Pro 8/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46275,
+      "price": 237.03,
+      "timestamp": 1794175751.7054114,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17997,17 +18010,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794173736.1811824,
+    "last_deal_post_time": 1794175755.984556,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794175563.8047824,
+    "last_sweep_time": 1794175758.7663016,
     "last_sweep_times": {
-      "algeria": 1794175560.8658907,
-      "france": 1794175563.8047824
+      "algeria": 1794175755.959135,
+      "france": 1794175758.7663016
     },
     "last_deal_post_times": {
-      "algeria": 1794173736.1811824
+      "algeria": 1794175755.984556
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18726,7 +18739,8 @@
     "1005012670472055": "lodydeals",
     "1005010062128237": "lodydeals",
     "1005013476568095": "aniscoupons",
-    "1005012442521357": "lodydeals"
+    "1005012442521357": "lodydeals",
+    "1005012494171063": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
