@@ -702,7 +702,8 @@
     "1005013361453762",
     "1005013240296031",
     "1005012670472055",
-    "1005013476568095"
+    "1005013476568095",
+    "1005012442521357"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1397,7 +1398,7 @@
     "1005008636930795": 1794076438.7694528,
     "1005006260870758": 1794077543.1413288,
     "1005009759580502": 1794079741.7808652,
-    "1005009120888793": 1794079928.0765662,
+    "1005009120888793": 1794171706.368645,
     "1005011874310777": 1794087501.0429602,
     "1005008721853055": 1794126663.880001,
     "1005012593794312": 1794159565.9245353,
@@ -1419,7 +1420,8 @@
     "1005013361453762": 1794159510.650968,
     "1005013240296031": 1794164670.8679597,
     "1005012670472055": 1794164675.8426867,
-    "1005013476568095": 1794169846.8168333
+    "1005013476568095": 1794169846.8168333,
+    "1005012442521357": 1794171698.893023
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2317,7 +2319,9 @@
     "iQOO Z11 Turbo 12/256GB",
     "CMF Buds 2a ANC",
     "Ajazz NK61 Wired Mechanical Keyboard",
-    "Honor Win Turbo"
+    "Honor Win Turbo",
+    "POCO PAD C1 4/64",
+    "Smailwolf L80 Wireless Headset"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3220,11 +3224,11 @@
     "iQOO Z11 Turbo 12/256GB": 1794166685.9915411,
     "CMF Buds 2a ANC": 1794166876.875887,
     "Ajazz NK61 Wired Mechanical Keyboard": 1794167239.3538153,
-    "Honor Win Turbo": 1794169846.8168333
+    "Honor Win Turbo": 1794169846.8168333,
+    "POCO PAD C1 4/64": 1794171698.893023,
+    "Smailwolf L80 Wireless Headset": 1794171706.368645
   },
   "published_post_keys": [
-    "lodydeals:45461",
-    "aniscoupons:32728",
     "test_channel:1792172185",
     "lodydeals:45427",
     "zedstoreonline:38834",
@@ -4222,19 +4226,21 @@
     "lodydeals:46269",
     "aniscoupons:34313",
     "zedstoreonline:39754",
-    "aniscoupons:34314"
+    "aniscoupons:34314",
+    "lodydeals:46272",
+    "lodydeals:46273"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794169846.8168333,
+  "last_run_time": 1794171706.368645,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
       "last_check_time": 1794159484.4700966
     },
     "lodydeals": {
-      "last_message_id": 46271,
-      "last_check_time": 1794168151.3500721
+      "last_message_id": 46273,
+      "last_check_time": 1794171708.3995245
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4845,7 +4851,7 @@
     "1005008645323478": 41.5,
     "1005006260870758": 37.8,
     "1005009759580502": 101.07,
-    "1005009120888793": 18.13,
+    "1005009120888793": 22.13,
     "1005011874310777": 24.2,
     "1005008721853055": 8.7,
     "1005008384277561": 7.3,
@@ -4865,7 +4871,8 @@
     "1005013361453762": 276.3,
     "1005013240296031": 69.06,
     "1005012670472055": 112.11,
-    "1005013476568095": 370.8
+    "1005013476568095": 370.8,
+    "1005012442521357": 158.34
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17950,6 +17957,26 @@
       "price": 370.8,
       "timestamp": 1794169846.8168333,
       "status": "ACTIVE"
+    },
+    "lodydeals:46272": {
+      "channel_msg_id": 2108,
+      "product_id": "1005012442521357",
+      "title": "POCO PAD C1 4/64",
+      "channel": "lodydeals",
+      "source_msg_id": 46272,
+      "price": 158.34,
+      "timestamp": 1794171698.893023,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46273": {
+      "channel_msg_id": 2109,
+      "product_id": "1005009120888793",
+      "title": "Smailwolf L80 Wireless Headset",
+      "channel": "lodydeals",
+      "source_msg_id": 46273,
+      "price": 22.13,
+      "timestamp": 1794171706.368645,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17958,17 +17985,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794169849.8238657,
+    "last_deal_post_time": 1794171710.4697514,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794171521.6654437,
+    "last_sweep_time": 1794171713.3511355,
     "last_sweep_times": {
-      "algeria": 1794171518.479028,
-      "france": 1794171521.6654437
+      "algeria": 1794171710.4519467,
+      "france": 1794171713.3511355
     },
     "last_deal_post_times": {
-      "algeria": 1794169849.8238657
+      "algeria": 1794171710.4697514
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18663,7 +18690,7 @@
     "1005008636930795": "aniscoupons",
     "1005006260870758": "lodydeals",
     "1005009759580502": "lodydeals",
-    "1005009120888793": "aniscoupons",
+    "1005009120888793": "lodydeals",
     "1005011874310777": "lodydeals",
     "1005008721853055": "zedstoreonline",
     "1005012593794312": "aniscoupons",
@@ -18686,7 +18713,8 @@
     "1005013240296031": "lodydeals",
     "1005012670472055": "lodydeals",
     "1005010062128237": "lodydeals",
-    "1005013476568095": "aniscoupons"
+    "1005013476568095": "aniscoupons",
+    "1005012442521357": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19591,7 +19619,9 @@
     "iQOO Z11 Turbo 12/256GB": "lodydeals",
     "CMF Buds 2a ANC": "lodydeals",
     "Ajazz NK61 Wired Mechanical Keyboard": "aniscoupons",
-    "Honor Win Turbo": "aniscoupons"
+    "Honor Win Turbo": "aniscoupons",
+    "POCO PAD C1 4/64": "lodydeals",
+    "Smailwolf L80 Wireless Headset": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
