@@ -95,7 +95,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Tajawal:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
 
   <!-- Optional Tailwind JIT CDN with safety guard -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -106,10 +106,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         theme: {
           extend: {
             fontFamily: {
-              sans: ['"Cairo"', '"Tajawal"', '"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
-              heading: ['"Cairo"', '"Plus Jakarta Sans"', 'sans-serif'],
+              sans: ['"IBM Plex Sans Arabic"', '"Inter"', '"Tajawal"', '-apple-system', 'sans-serif'],
+              heading: ['"IBM Plex Sans Arabic"', '"Inter"', 'sans-serif'],
               mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-              inter: ['"Plus Jakarta Sans"', '"Cairo"', 'sans-serif']
+              inter: ['"Inter"', '"IBM Plex Sans Arabic"', 'sans-serif']
             },
             colors: {
               crimson: {
@@ -148,20 +148,20 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     }
 
     html.dark {
-      /* Deep Obsidian Slate Dark Tokens with Architectural Textures */
-      --bg-page: #06080d;
+      /* Solid Disciplined Dark Tokens */
+      --bg-page: #09090b;
       --bg-card: #121215;
       --bg-card-hover: #18181c;
       --bg-elevated: #1a1a20;
-      --bg-subtle: rgba(30, 41, 59, 0.7);
+      --bg-subtle: #27272a;
       --border-card: #27272a;
       --border-subtle: #3f3f46;
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
-      --text-soft: #64748b;
+      --text-soft: #71717a;
       --header-bg: #09090b;
       --input-bg: #121215;
-      --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+      --shadow-card: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
     }
 
     html {
@@ -186,17 +186,17 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     }
     html.dark body { background-color: var(--bg-page); }
     html, body, button, input, select, textarea {
-      font-family: 'Cairo', 'Tajawal', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+      font-family: 'IBM Plex Sans Arabic', 'Inter', 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     }
     body[dir="ltr"], html[dir="ltr"] {
-      font-family: 'Plus Jakarta Sans', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+      font-family: 'Inter', 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     }
     body[dir="rtl"], html[dir="rtl"] {
-      font-family: 'Cairo', 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+      font-family: 'IBM Plex Sans Arabic', 'Inter', 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     }
     h1, h2, h3, h4, h5, h6, .font-heading {
-      font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif !important;
-      letter-spacing: -0.01em;
+      font-family: 'IBM Plex Sans Arabic', 'Inter', sans-serif !important;
+      letter-spacing: -0.015em;
     }
     .font-mono, code, .price-num {
       font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
@@ -642,7 +642,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </span>
         <span class="hidden sm:inline opacity-30">|</span>
         <a href="https://squarealgerie.com" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-1 hover:opacity-80 transition py-0.5">
-          <i class="fa-solid fa-chart-line text-emerald-500"></i>
+          <i class="fa-solid fa-chart-line opacity-60"></i>
           <span><span data-i18n="top_usdt_rate">سعر صرف السكوار</span>: 1 USDT ≈ <b id="top-usdt-rate" class="font-mono text-emerald-500 font-bold">256.9</b> <span data-i18n="currency_dzd">دج</span></span>
         </a>
       </div>
@@ -650,7 +650,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <div class="flex items-center gap-1 sm:gap-2.5 flex-shrink-0">
         <!-- Tools & Square Calculator Hub Button -->
         <button onclick="openGamificationHub()" id="streak-header-btn" aria-label="Square Calculator & Tools" class="px-2 py-1 rounded-lg border text-xs flex items-center gap-1.5 transition active:scale-95 touch-manipulation cursor-pointer font-bold" style="border-color: var(--border-card); background-color: var(--bg-elevated); color: var(--text-main);" title="حاسبة السكوار والأدوات">
-          <i class="fa-solid fa-calculator text-emerald-500 text-[11px]"></i>
+          <i class="fa-solid fa-calculator opacity-60 text-[11px]"></i>
           <span id="streak-header-text" class="text-[11px] font-semibold hidden sm:inline" data-i18n="tools_header">حاسبة السكوار</span>
         </button>
 
@@ -698,23 +698,23 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <!-- Desktop Nav Pages Links (Clean 5-Item Focused Navigation) -->
       <nav class="hidden md:flex items-center gap-1 text-xs font-semibold" style="color: var(--text-muted);">
         <button onclick="showPage('deals')" id="nav-link-deals" class="nav-page-btn px-2.5 py-1.5 rounded-lg transition flex items-center gap-1.5 font-bold text-xs" style="background-color: var(--bg-elevated); color: var(--text-main);">
-          <i class="fa-solid fa-fire text-crimson-500 text-xs"></i>
+          <i class="fa-solid fa-fire text-crimson-600 text-xs"></i>
           <span data-i18n="nav_deals">الصفقات</span>
         </button>
         <button onclick="showPage('tracking')" id="nav-link-tracking" class="nav-page-btn px-2.5 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-xs">
-          <i class="fa-solid fa-truck-fast text-blue-500 text-xs"></i>
+          <i class="fa-solid fa-truck-fast opacity-60 text-xs"></i>
           <span data-i18n="nav_tracking">تتبع الطرود</span>
         </button>
         <button onclick="showPage('coins')" id="nav-link-coins" class="nav-page-btn px-2.5 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-xs">
-          <i class="fa-solid fa-coins text-amber-500 text-xs"></i>
+          <i class="fa-solid fa-coins opacity-60 text-xs"></i>
           <span data-i18n="nav_coins">بوت العملات</span>
         </button>
         <button onclick="showPage('cards')" id="nav-link-cards" class="nav-page-btn px-2.5 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-xs">
-          <i class="fa-solid fa-credit-card text-emerald-500 text-xs"></i>
+          <i class="fa-solid fa-credit-card opacity-60 text-xs"></i>
           <span data-i18n="nav_cards">بطاقات الشراء</span>
         </button>
-        <a href="/blog/aliexpress-algeria-guide-dz" class="nav-page-btn px-2.5 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-xs text-amber-400 font-bold hover:bg-amber-500/10" title="دليل الشراء من AliExpress في الجزائر 2026">
-          <i class="fa-solid fa-book-open text-amber-400 text-xs"></i>
+        <a href="/blog/aliexpress-algeria-guide-dz" class="nav-page-btn px-2.5 py-1.5 rounded-lg hover:opacity-100 transition flex items-center gap-1.5 text-xs font-bold" title="دليل الشراء من AliExpress في الجزائر 2026" style="color: var(--text-main);">
+          <i class="fa-solid fa-book-open opacity-60 text-xs"></i>
           <span>دليل 2026</span>
         </a>
       </nav>
@@ -774,28 +774,28 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     <!-- ───────────────────────────────────────────────────────── -->
     <div id="page-deals" class="page-view space-y-4 sm:space-y-6">
 
-      <!-- Channel Switcher (Algeria vs France) -->
-      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border p-2 sm:p-2.5 rounded-2xl transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
-        <div class="flex items-center gap-1.5 p-1 rounded-xl border text-xs font-bold" style="background-color: var(--bg-page); border-color: var(--border-card);" role="tablist">
-          <button onclick="switchChannel('@DzAliexpress0')" id="tab-dz" role="tab" aria-selected="true" class="flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg bg-crimson-600 text-white transition flex items-center justify-center gap-2 active:scale-95 shadow-sm">
+      <!-- Channel Switcher (Algeria vs France) — Compact Mobile Ergonomics -->
+      <div class="flex flex-row items-center justify-between gap-2 border p-1 sm:p-2 rounded-xl transition-colors" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="flex items-center gap-1 p-0.5 rounded-lg border text-xs font-bold flex-1 sm:flex-none" style="background-color: var(--bg-page); border-color: var(--border-card);" role="tablist">
+          <button onclick="switchChannel('@DzAliexpress0')" id="tab-dz" role="tab" aria-selected="true" class="flex-1 sm:flex-none h-8 sm:h-9 px-2.5 sm:px-3.5 py-1 rounded-md bg-crimson-600 text-white transition flex items-center justify-center gap-1.5 active:scale-95 shadow-sm text-xs font-semibold">
             <span>🇩🇿</span>
-            <span data-i18n="tab_algeria_deals">عروض الجزائر (@DzAliexpress0)</span>
+            <span data-i18n="tab_algeria_deals">الجزائر</span>
           </button>
-          <button onclick="switchChannel('@francedealsdz')" id="tab-fr" role="tab" aria-selected="false" class="flex-1 sm:flex-none min-h-[40px] px-4 py-2 rounded-lg opacity-70 hover:opacity-100 transition flex items-center justify-center gap-2 active:scale-95">
+          <button onclick="switchChannel('@francedealsdz')" id="tab-fr" role="tab" aria-selected="false" class="flex-1 sm:flex-none h-8 sm:h-9 px-2.5 sm:px-3.5 py-1 rounded-md opacity-70 hover:opacity-100 transition flex items-center justify-center gap-1.5 active:scale-95 text-xs font-semibold" style="color: var(--text-muted);">
             <span>🇫🇷</span>
-            <span data-i18n="tab_france_deals">عروض فرنسا (@francedealsdz)</span>
+            <span data-i18n="tab_france_deals">فرنسا</span>
           </button>
         </div>
 
         <!-- View Switcher (Grid vs Telegram Stream) -->
-        <div class="flex items-center justify-end gap-1 border rounded-xl p-1 text-xs font-semibold" style="background-color: var(--bg-page); border-color: var(--border-card);">
-          <button onclick="setViewMode('grid')" id="view-mode-grid" class="min-h-[36px] px-3 py-1.5 rounded-lg text-white transition flex items-center gap-1.5 active:scale-95" style="background-color: var(--bg-elevated); color: var(--text-main);">
+        <div class="flex items-center gap-0.5 border rounded-lg p-0.5 text-xs font-semibold" style="background-color: var(--bg-page); border-color: var(--border-card);">
+          <button onclick="setViewMode('grid')" id="view-mode-grid" class="h-8 px-2 sm:px-3 py-1 rounded-md transition flex items-center gap-1 active:scale-95" style="background-color: var(--bg-elevated); color: var(--text-main);">
             <i class="fa-solid fa-grip text-xs"></i>
-            <span data-i18n="view_grid">بطاقات</span>
+            <span data-i18n="view_grid" class="hidden sm:inline">بطاقات</span>
           </button>
-          <button onclick="setViewMode('feed')" id="view-mode-feed" class="min-h-[36px] px-3 py-1.5 rounded-lg opacity-60 hover:opacity-100 transition flex items-center gap-1.5 active:scale-95">
+          <button onclick="setViewMode('feed')" id="view-mode-feed" class="h-8 px-2 sm:px-3 py-1 rounded-md opacity-60 hover:opacity-100 transition flex items-center gap-1 active:scale-95" style="color: var(--text-muted);">
             <i class="fa-brands fa-telegram text-xs"></i>
-            <span data-i18n="view_stream">منشورات القناة</span>
+            <span data-i18n="view_stream" class="hidden sm:inline">منشورات</span>
           </button>
         </div>
       </div>
@@ -1072,7 +1072,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             <a href="https://t.me/DzAliexpress0/1585" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-rose-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
               <div class="flex items-start justify-between gap-2">
                 <div class="flex items-center gap-2">
-                  <span class="w-8 h-8 rounded-xl bg-rose-500/15 text-rose-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <span class="w-8 h-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-105 transition-transform">
                     <i class="fa-solid fa-mobile-screen"></i>
                   </span>
                   <div>
@@ -1091,21 +1091,21 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               </div>
             </a>
 
-            <a href="https://t.me/DzAliexpress0/1587" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-violet-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+            <a href="https://t.me/DzAliexpress0/1587" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-rose-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
               <div class="flex items-start justify-between gap-2">
                 <div class="flex items-center gap-2">
-                  <span class="w-8 h-8 rounded-xl bg-violet-500/15 text-violet-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <span class="w-8 h-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-105 transition-transform">
                     <i class="fa-solid fa-headphones"></i>
                   </span>
                   <div>
-                    <h4 class="font-bold text-xs sm:text-sm text-violet-500 font-heading">🎧 فهرس السماعات والصوتيات</h4>
+                    <h4 class="font-bold text-xs sm:text-sm text-rose-500 font-heading">🎧 فهرس السماعات والصوتيات</h4>
                     <span class="text-[10px] opacity-60 block" style="color: var(--text-muted);">Fifine AM8, QCY ANC, Soundcore, Maono</span>
                   </div>
                 </div>
-                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-violet-500/10 text-violet-500 font-bold">11.11</span>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-violet-500/10 text-rose-500 font-bold">11.11</span>
               </div>
               <div class="flex items-center justify-between pt-2 border-t text-[11px] font-bold" style="border-color: var(--border-card); color: var(--text-main);">
-                <span class="text-violet-500 flex items-center gap-1">
+                <span class="text-rose-500 flex items-center gap-1">
                   <span>تصفح عروض الصوتيات</span>
                   <i class="fa-solid fa-arrow-left text-[9px] group-hover:-translate-x-1 transition-transform"></i>
                 </span>
@@ -1113,10 +1113,10 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               </div>
             </a>
 
-            <a href="https://t.me/DzAliexpress0/1588" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-amber-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
+            <a href="https://t.me/DzAliexpress0/1588" target="_blank" rel="noopener noreferrer" class="tajmi3a-quick-card group p-3 rounded-2xl border transition hover:border-rose-500/50 flex flex-col justify-between gap-2.5 shadow-sm active:scale-[0.99] touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card);">
               <div class="flex items-start justify-between gap-2">
                 <div class="flex items-center gap-2">
-                  <span class="w-8 h-8 rounded-xl bg-amber-500/15 text-amber-500 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <span class="w-8 h-8 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 flex items-center justify-center text-sm flex-shrink-0 group-hover:scale-105 transition-transform">
                     <i class="fa-solid fa-microchip"></i>
                   </span>
                   <div>
@@ -1222,32 +1222,32 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <!-- Category Filter Pills -->
       <section class="border-b pb-3 w-full overflow-hidden" style="border-color: var(--border-card);" aria-label="Categories">
         <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 text-xs font-semibold px-0.5 momentum-scroll w-full">
-          <button onclick="setCategory('all')" id="cat-all" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl bg-crimson-600 text-white whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation shadow-sm">
+          <button onclick="setCategory('all')" id="cat-all" class="cat-pill h-8 sm:h-9 px-3 py-1 rounded-lg text-xs bg-crimson-600 text-white whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation shadow-sm">
             <span data-i18n="cat_all">الكل</span>
             <span id="count-all" class="text-[11px] font-mono opacity-80 bg-black/20 px-1.5 py-0.2 rounded">0</span>
           </button>
-          <button onclick="setCategory('favs')" id="cat-favs" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation cursor-pointer" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
+          <button onclick="setCategory('favs')" id="cat-favs" class="cat-pill h-8 sm:h-9 px-3 py-1 rounded-lg text-xs border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation cursor-pointer" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
             <i class="fa-solid fa-heart text-rose-500 text-xs"></i>
             <span data-i18n="cat_favs">المفضلة</span>
             <span id="count-favs" class="text-[11px] font-mono opacity-60">0</span>
           </button>
-          <button onclick="setCategory('smartphones')" id="cat-smartphones" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
+          <button onclick="setCategory('smartphones')" id="cat-smartphones" class="cat-pill h-8 sm:h-9 px-3 py-1 rounded-lg text-xs border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
             <span data-i18n="cat_smartphones">هواتف وتابلت</span>
             <span id="count-smartphones" class="text-[11px] font-mono opacity-60">0</span>
           </button>
-          <button onclick="setCategory('gaming')" id="cat-gaming" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
+          <button onclick="setCategory('gaming')" id="cat-gaming" class="cat-pill h-8 sm:h-9 px-3 py-1 rounded-lg text-xs border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
             <span data-i18n="cat_gaming">أجهزة قيمنق</span>
             <span id="count-gaming" class="text-[11px] font-mono opacity-60">0</span>
           </button>
-          <button onclick="setCategory('audio')" id="cat-audio" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
+          <button onclick="setCategory('audio')" id="cat-audio" class="cat-pill h-8 sm:h-9 px-3 py-1 rounded-lg text-xs border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
             <span data-i18n="cat_audio">سماعات وصوتيات</span>
             <span id="count-audio" class="text-[11px] font-mono opacity-60">0</span>
           </button>
-          <button onclick="setCategory('tech')" id="cat-tech" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
+          <button onclick="setCategory('tech')" id="cat-tech" class="cat-pill h-8 sm:h-9 px-3 py-1 rounded-lg text-xs border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
             <span data-i18n="cat_tech">شواحن وملحقات</span>
             <span id="count-tech" class="text-[11px] font-mono opacity-60">0</span>
           </button>
-          <button onclick="setCategory('tajmi3at')" id="cat-tajmi3at" class="cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
+          <button onclick="setCategory('tajmi3at')" id="cat-tajmi3at" class="cat-pill h-8 sm:h-9 px-3 py-1 rounded-lg text-xs border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation" style="background-color: var(--bg-card); border-color: var(--border-card); color: var(--text-muted);">
             <span data-i18n="cat_tajmi3at">تجميعات العروض</span>
             <span id="count-tajmi3at" class="text-[11px] font-mono opacity-60">0</span>
           </button>
@@ -1258,7 +1258,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <section class="pt-1.5 pb-1 w-full overflow-hidden" aria-label="Country Filter">
         <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 text-xs font-semibold px-0.5 momentum-scroll w-full">
           <span class="text-[11px] font-bold flex items-center gap-1 pl-1 flex-shrink-0" style="color: var(--text-soft);">
-            <i class="fa-solid fa-earth-americas text-[10px] text-emerald-500"></i>
+            <i class="fa-solid fa-earth-americas text-[10px] opacity-60"></i>
             <span data-i18n="country_filter_label">تصفية حسب البلد:</span>
           </span>
           <button onclick="setCountryFilter('all')" id="country-all" class="country-pill min-h-[32px] px-3 py-1 rounded-lg text-xs font-bold transition flex items-center gap-1 flex-shrink-0 active:scale-95 touch-manipulation border" style="background-color: var(--text-main); color: var(--bg-page); border-color: var(--text-main);">
@@ -1475,7 +1475,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
               <div class="text-[10px] opacity-75 truncate" data-i18n="crosslink_cards_sub">Bybit مجانية وRedotPay</div>
             </div>
           </a>
-          <a href="#coins" onclick="showPage('coins')" class="p-3 rounded-xl border flex items-center gap-2.5 transition hover:border-amber-500/50" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
+          <a href="#coins" onclick="showPage('coins')" class="p-3 rounded-xl border flex items-center gap-2.5 transition hover:border-rose-500/50" style="background-color: var(--bg-elevated); border-color: var(--border-card); color: var(--text-main);">
             <div class="w-8 h-8 rounded-lg bg-amber-500/15 text-amber-500 flex items-center justify-center flex-shrink-0 text-sm">
               <i class="fa-solid fa-coins"></i>
             </div>
@@ -1910,7 +1910,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         </div>
 
         <!-- Partner 3: Binance P2P BaridiMob -->
-        <div class="border rounded-xl p-5 flex flex-col justify-between transition-colors hover:border-amber-500/50 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
+        <div class="border rounded-xl p-5 flex flex-col justify-between transition-colors hover:border-rose-500/50 space-y-4" style="background-color: var(--bg-card); border-color: var(--border-card);">
           <div class="space-y-3">
             <div class="flex items-center justify-between">
               <div class="w-9 h-9 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center text-base font-bold">
@@ -2619,7 +2619,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div class="border rounded-2xl p-5 space-y-2" style="background-color: var(--bg-card); border-color: var(--border-card);">
             <h2 class="font-bold text-sm flex items-center gap-2" style="color: var(--text-main);">
-              <i class="fa-solid fa-chart-line text-emerald-500"></i>
+              <i class="fa-solid fa-chart-line opacity-60"></i>
               <span data-i18n="about_feat1_title">ربط مباشر مع سعر السكوار</span>
             </h2>
             <p class="text-xs leading-relaxed" style="color: var(--text-muted);" data-i18n="about_feat1_desc">نحدث أسعار USDT بالدينار الجزائري لحظة بلحظة لضمان شفافية كاملة قبل الضغط على زر الشراء.</p>
@@ -2652,25 +2652,25 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
   </main>
 
   <!-- Mobile Bottom Navigation Bar -->
-  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 border-t px-1 py-1 flex items-center justify-around text-center text-[10px] bottom-nav-safe transition-colors" style="background-color: var(--header-bg); border-color: var(--border-card);" aria-label="التنقل للجوال">
-    <button onclick="showPage('deals')" id="mob-bottom-deals" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 text-crimson-500 font-bold active:scale-90 transition-transform touch-manipulation cursor-pointer">
-      <i class="fa-solid fa-fire text-base"></i>
+  <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 border-t px-1 py-0.5 flex items-center justify-around text-center text-[10px] bottom-nav-safe transition-colors" style="background-color: var(--header-bg); border-color: var(--border-card);" aria-label="التنقل للجوال">
+    <button onclick="showPage('deals')" id="mob-bottom-deals" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 text-crimson-600 dark:text-crimson-500 font-bold active:scale-95 transition touch-manipulation cursor-pointer">
+      <i class="fa-solid fa-fire text-sm"></i>
       <span data-i18n="nav_deals">الصفقات</span>
     </button>
-    <button onclick="showPage('tracking')" id="mob-bottom-tracking" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation cursor-pointer text-blue-500">
-      <i class="fa-solid fa-box text-base"></i>
+    <button onclick="showPage('tracking')" id="mob-bottom-tracking" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-95 transition touch-manipulation cursor-pointer" style="color: var(--text-muted);">
+      <i class="fa-solid fa-box text-sm"></i>
       <span data-i18n="nav_tracking">تتبع الطرود</span>
     </button>
-    <a href="https://t.me/DzAliexpress0" id="mob-bottom-tg" target="_blank" rel="noopener noreferrer" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 text-sky-500 font-bold active:scale-90 transition-transform touch-manipulation cursor-pointer">
-      <i class="fa-brands fa-telegram text-lg"></i>
+    <a href="https://t.me/DzAliexpress0" id="mob-bottom-tg" target="_blank" rel="noopener noreferrer" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 font-medium active:scale-95 transition touch-manipulation cursor-pointer text-[#0088cc]">
+      <i class="fa-brands fa-telegram text-base"></i>
       <span data-i18n="nav_telegram">تيليجرام</span>
     </a>
-    <button onclick="showPage('coins')" id="mob-bottom-coins" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation cursor-pointer">
-      <i class="fa-solid fa-coins text-base text-amber-500"></i>
+    <button onclick="showPage('coins')" id="mob-bottom-coins" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-95 transition touch-manipulation cursor-pointer" style="color: var(--text-muted);">
+      <i class="fa-solid fa-coins text-sm"></i>
       <span data-i18n="nav_coins">العملات</span>
     </button>
-    <button onclick="showPage('cards')" id="mob-bottom-cards" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation cursor-pointer">
-      <i class="fa-solid fa-credit-card text-base text-emerald-500"></i>
+    <button onclick="showPage('cards')" id="mob-bottom-cards" class="flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-95 transition touch-manipulation cursor-pointer" style="color: var(--text-muted);">
+      <i class="fa-solid fa-credit-card text-sm"></i>
       <span data-i18n="nav_cards">البطاقات</span>
     </button>
   </nav>
@@ -2840,7 +2840,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
             
             <!-- COUNTRY CALLOUT BADGE -->
             <div id="roulette-country-badge" class="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded border" style="background-color: var(--bg-page); border-color: var(--border-card); color: var(--text-main);">
-              <i class="fa-solid fa-location-dot text-emerald-500 text-[10px]"></i>
+              <i class="fa-solid fa-location-dot text-rose-500 text-[10px]"></i>
               <span id="roulette-country-text">الجزائر 🇩🇿</span>
             </div>
           </div>
@@ -2913,7 +2913,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
       <div class="border rounded-2xl p-4 sm:p-5 space-y-4" style="background-color: var(--bg-elevated); border-color: var(--border-card);">
         <div class="flex items-center justify-between pb-2 border-b" style="border-color: var(--border-card);">
           <div class="flex items-center gap-2">
-            <i class="fa-solid fa-chart-line text-emerald-500"></i>
+            <i class="fa-solid fa-chart-line opacity-60"></i>
             <span class="font-bold text-xs sm:text-sm" style="color: var(--text-main);" data-i18n="calc_title">حاسبة التحويل بسعر السكوار</span>
           </div>
           <span class="text-[11px] font-mono font-bold text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
@@ -4075,9 +4075,9 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         const mobBtn = document.getElementById('mob-bottom-' + p);
         if (mobBtn) {
           if (p === pageId) {
-            mobBtn.className = 'flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 text-crimson-500 font-bold active:scale-90 transition-transform touch-manipulation';
+            mobBtn.className = 'flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 text-crimson-600 dark:text-crimson-500 font-bold active:scale-95 transition touch-manipulation';
           } else {
-            mobBtn.className = 'flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-1 opacity-60 hover:opacity-100 font-medium active:scale-90 transition-transform touch-manipulation';
+            mobBtn.className = 'flex-1 min-h-[48px] py-1 flex flex-col items-center justify-center gap-0.5 opacity-70 hover:opacity-100 font-medium active:scale-95 transition touch-manipulation';
           }
         }
       });
@@ -4728,14 +4728,14 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
     function setCategory(cat) {
       currentCategory = cat;
       document.querySelectorAll('.cat-pill').forEach(btn => {
-        btn.className = 'cat-pill min-h-[42px] px-3.5 py-2 rounded-xl border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation';
+        btn.className = 'cat-pill h-8 sm:h-9 px-3 py-1 rounded-lg text-xs border whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation';
         btn.style.backgroundColor = 'var(--bg-card)';
         btn.style.borderColor = 'var(--border-card)';
         btn.style.color = 'var(--text-muted)';
       });
       const active = document.getElementById('cat-' + cat);
       if (active) {
-        active.className = 'cat-pill min-h-[42px] px-3.5 py-2 rounded-xl bg-crimson-600 text-white whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation shadow-sm';
+        active.className = 'cat-pill h-8 sm:h-9 px-3 py-1 rounded-lg text-xs bg-crimson-600 text-white whitespace-nowrap transition flex items-center gap-1.5 flex-shrink-0 active:scale-95 touch-manipulation shadow-sm';
         active.style.backgroundColor = '#e11d48';
         active.style.color = '#ffffff';
       }
@@ -5780,7 +5780,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         const diffMin = Math.floor(diffMs / 60000);
         const diffHours = Math.floor(diffMin / 60);
 
-        if (diffMin < 2) return currentLang === 'fr' ? "À l'instant 🔥" : 'الآن 🔥';
+        if (diffMin < 2) return currentLang === 'fr' ? "À l'instant" : 'الآن';
         if (diffMin < 60) return currentLang === 'fr' ? `Il y a ${diffMin} min` : `منذ ${diffMin} دقيقة`;
         if (diffHours < 24) return currentLang === 'fr' ? `Il y a ${diffHours} h` : `منذ ${diffHours} ساعة`;
         const diffDays = Math.floor(diffHours / 24);
@@ -5907,7 +5907,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
         ` : `
           <div class="border border-dashed rounded-lg px-2.5 py-1.5 flex items-center justify-between gap-1.5 mb-2.5 transition coupon-chip">
             <div class="flex items-center gap-1.5 min-w-0">
-              <i class="fa-solid fa-ticket text-xs flex-shrink-0 text-amber-500"></i>
+              <i class="fa-solid fa-ticket text-xs flex-shrink-0 text-crimson-600"></i>
               <div class="min-w-0">
                 <span class="text-[9px] uppercase tracking-wider block font-bold opacity-60 font-heading">${currentLang === 'fr' ? 'Code Promo' : 'كود الخصم'}</span>
                 <span class="font-mono text-xs font-bold truncate select-all block text-rose-600 dark:text-rose-400 tracking-wide">${escapeHtml(deal.coupon)}</span>
@@ -5940,7 +5940,7 @@ USER_WEBSITE_HTML = """<!DOCTYPE html>
                 ` : ''}
               </div>
               <span class="text-[10px] font-mono opacity-80 flex items-center gap-1 font-semibold" style="color: var(--text-muted);" title="${escapeHtml(deal.date || '')}">
-                <i class="fa-regular fa-clock text-[9px] text-emerald-500"></i>
+                <i class="fa-regular fa-clock text-[9px] opacity-60"></i>
                 <span>${formatRelativeTime(deal.date)}</span>
               </span>
             </div>
