@@ -1021,7 +1021,7 @@
     "9998889908": 1793229908.2507865,
     "1005012339196141": 1793613978.6202738,
     "1005012472631754": 1793467108.5532427,
-    "1005013039644752": 1793969932.206648,
+    "1005013039644752": 1794128677.9007936,
     "1005013479436053": 1793380394.5736995,
     "1005012431631514": 1793270716.9132679,
     "1005009338640941": 1793613430.959157,
@@ -2540,7 +2540,7 @@
     "Redmi Note 12 5G Global (4/128GB)": 1792156524.878074,
     "Blackview Wave 10C": 1793613355.4947147,
     "متوسط سعره حالياً 82000دج": 1793276237.692456,
-    "iQOO Z11s 5G (8/128GB)": 1793969932.206648,
+    "iQOO Z11s 5G (8/128GB)": 1794128677.9007936,
     "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1793966861.2399917,
     "Baseus GH02 Gaming Wireless Headphone": 1792087000.9978776,
     "GameSir GM500 PMW33600 Gaming Mouse": 1792087147.0923955,
@@ -3119,7 +3119,6 @@
     "KOOTION SATA SSD 480GB": 1794127389.2657666
   },
   "published_post_keys": [
-    "test_channel:1792184255",
     "test_channel:1793282475",
     "lodydeals:45910",
     "bnddeals:50851",
@@ -4118,11 +4117,12 @@
     "zedstoreonline:39716",
     "aniscoupons:34272",
     "aniscoupons:34273",
-    "aniscoupons:34274"
+    "aniscoupons:34274",
+    "aniscoupons:34276"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794128140.9765735,
+  "last_run_time": 1794128677.9007936,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4153,8 +4153,8 @@
       "last_check_time": 1794128487.213488
     },
     "aniscoupons": {
-      "last_message_id": 34275,
-      "last_check_time": 1794128144.1413906
+      "last_message_id": 34276,
+      "last_check_time": 1794128679.9329088
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -17158,6 +17158,16 @@
       "price": 239.8,
       "timestamp": 1794128140.9765735,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34276": {
+      "channel_msg_id": 2037,
+      "product_id": "1005013039644752",
+      "title": "iQOO Z11s 5G (8/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34276,
+      "price": 265.7,
+      "timestamp": 1794128677.9007936,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17166,17 +17176,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794128144.9804137,
+    "last_deal_post_time": 1794128680.6684744,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794128493.4843044,
+    "last_sweep_time": 1794128683.5357919,
     "last_sweep_times": {
-      "algeria": 1794128490.6386483,
-      "france": 1794128493.4843044
+      "algeria": 1794128680.6542087,
+      "france": 1794128683.5357919
     },
     "last_deal_post_times": {
-      "algeria": 1794128144.9804137
+      "algeria": 1794128680.6684744
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
