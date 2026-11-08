@@ -1101,7 +1101,7 @@
     "1005013090910574": 1794125751.2963548,
     "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793543612.279949,
-    "1005012910719451": 1793735519.3537216,
+    "1005012910719451": 1794160828.535879,
     "1005006307798542": 1793467165.446982,
     "1005011787296177": 1793607070.347875,
     "1005007375332966": 1793467173.1692383,
@@ -1176,7 +1176,7 @@
     "1005008518280704": 1793707081.0327315,
     "1005010527736444": 1793478769.6023057,
     "1005013450996845": 1794145351.158124,
-    "1005013144753309": 1794091436.6772544,
+    "1005013144753309": 1794160820.0809557,
     "1005012061152213": 1793490079.2945042,
     "1005012519569107": 1793490085.1205146,
     "1005006996991698": 1793542450.420599,
@@ -2300,7 +2300,8 @@
     "Ulanzi ST-06S Smartphone Mount Holder",
     "WAMRAM SATA SSD 480GB",
     "Netac M.2 1TB 7400Mbs Gen 4",
-    "RYZEN 5 5600XT"
+    "RYZEN 5 5600XT",
+    "OnePlus Turbo 6V"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2841,7 +2842,7 @@
     "Blackview MEGA 12  12/256": 1793478769.6023057,
     "Lenovo Xiaoxin Pad Pro 2025 12.7  inch": 1793478774.2399445,
     "HONOR Pad V9  8/256": 1794159510.650968,
-    "Blackview LINK 1 Kids": 1794091436.6772544,
+    "Blackview LINK 1 Kids": 1794160820.0809557,
     "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": 1793490079.2945042,
     "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": 1793490090.28376,
     "POCO Pad C1 4/64": 1793490102.028307,
@@ -3192,11 +3193,10 @@
     "Ulanzi ST-06S Smartphone Mount Holder": 1794146840.7057447,
     "WAMRAM SATA SSD 480GB": 1794159522.2930505,
     "Netac M.2 1TB 7400Mbs Gen 4": 1794159532.8883114,
-    "RYZEN 5 5600XT": 1794159590.2283225
+    "RYZEN 5 5600XT": 1794159590.2283225,
+    "OnePlus Turbo 6V": 1794160828.535879
   },
   "published_post_keys": [
-    "couponsglobal:48784",
-    "pcgamingpart:7947",
     "aniscoupons:32784",
     "aniscoupons:33181",
     "aniscoupons:32718",
@@ -4194,19 +4194,21 @@
     "aniscoupons:34306",
     "aniscoupons:34307",
     "aniscoupons:34310",
-    "aniscoupons:34311"
+    "aniscoupons:34311",
+    "zedstoreonline:39751",
+    "aniscoupons:34312"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794159590.2283225,
+  "last_run_time": 1794160828.535879,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
       "last_check_time": 1794159484.4700966
     },
     "lodydeals": {
-      "last_message_id": 46259,
-      "last_check_time": 1794160631.1627054
+      "last_message_id": 46260,
+      "last_check_time": 1794160813.8671303
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4225,12 +4227,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39750,
-      "last_check_time": 1794159528.812291
+      "last_message_id": 39751,
+      "last_check_time": 1794160822.1365328
     },
     "aniscoupons": {
-      "last_message_id": 34311,
-      "last_check_time": 1794159592.271152
+      "last_message_id": 34312,
+      "last_check_time": 1794160830.5899696
     },
     "bnddeals": {
       "last_message_id": 51234,
@@ -4548,7 +4550,7 @@
     "1005013090910574": 192.7,
     "1005012382148199": 469.0,
     "1005010158485058": 66.5,
-    "1005012910719451": 275.11,
+    "1005012910719451": 275.8,
     "1005006307798542": 35.3,
     "1005011787296177": 29.76,
     "1005007375332966": 52.8,
@@ -17759,6 +17761,26 @@
       "price": 98.79,
       "timestamp": 1794159590.2283225,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39751": {
+      "channel_msg_id": 2092,
+      "product_id": "1005013144753309",
+      "title": "Blackview LINK 1 Kids",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39751,
+      "price": 92.7,
+      "timestamp": 1794160820.0809557,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34312": {
+      "channel_msg_id": 2093,
+      "product_id": "1005012910719451",
+      "title": "OnePlus Turbo 6V",
+      "channel": "aniscoupons",
+      "source_msg_id": 34312,
+      "price": 275.8,
+      "timestamp": 1794160828.535879,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17767,17 +17789,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794159593.1616442,
+    "last_deal_post_time": 1794160831.6615868,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794160637.8797503,
+    "last_sweep_time": 1794160835.5058799,
     "last_sweep_times": {
-      "algeria": 1794160634.0038502,
-      "france": 1794160637.8797503
+      "algeria": 1794160831.6366556,
+      "france": 1794160835.5058799
     },
     "last_deal_post_times": {
-      "algeria": 1794159593.1616442
+      "algeria": 1794160831.6615868
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18189,7 +18211,7 @@
     "1005013090910574": "aniscoupons",
     "1005012382148199": "megaphonna",
     "1005010158485058": "lodydeals",
-    "1005012910719451": "lodydeals",
+    "1005012910719451": "aniscoupons",
     "1005006307798542": "aniscoupons",
     "1005011787296177": "lodydeals",
     "1005007375332966": "aniscoupons",
@@ -19385,7 +19407,8 @@
     "Ulanzi ST-06S Smartphone Mount Holder": "aniscoupons",
     "WAMRAM SATA SSD 480GB": "zedstoreonline",
     "Netac M.2 1TB 7400Mbs Gen 4": "aniscoupons",
-    "RYZEN 5 5600XT": "aniscoupons"
+    "RYZEN 5 5600XT": "aniscoupons",
+    "OnePlus Turbo 6V": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
