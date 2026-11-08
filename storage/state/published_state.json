@@ -741,7 +741,7 @@
     "1005006603602562": 1790941207.5310047,
     "1005010721042860": 1793656098.242545,
     "1005009517247552": 1790941221.8823678,
-    "1005012191191893": 1793973036.340303,
+    "1005012191191893": 1794142225.168232,
     "1005012968221708": 1793542591.509991,
     "9998883454": 1790943454.3504107,
     "9998883497": 1790943497.723828,
@@ -2277,7 +2277,8 @@
     "Kootion X15 M.2 SSD NVMe 256GB",
     "Lenovo LE257 Headphones",
     "Honor 600s CN (8/256)",
-    "ويبكام OBSBOT MEET 2 Webcam 4K"
+    "ويبكام OBSBOT MEET 2 Webcam 4K",
+    "Blackview Mega 5"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3158,10 +3159,10 @@
     "Kootion X15 M.2 SSD NVMe 256GB": 1794134534.5760646,
     "Lenovo LE257 Headphones": 1794137638.8201442,
     "Honor 600s CN (8/256)": 1794139106.9168086,
-    "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559
+    "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
+    "Blackview Mega 5": 1794142225.168232
   },
   "published_post_keys": [
-    "lodydeals:45746",
     "pcgamingpart:7954",
     "bnddeals:50953",
     "aniscoupons:33162",
@@ -4160,11 +4161,12 @@
     "aniscoupons:34290",
     "ecksdeal:6044",
     "lodydeals:46246",
-    "lodydeals:46250"
+    "lodydeals:46250",
+    "aniscoupons:34293"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794141669.7207782,
+  "last_run_time": 1794142225.168232,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6045,
@@ -4195,8 +4197,8 @@
       "last_check_time": 1794136363.3820682
     },
     "aniscoupons": {
-      "last_message_id": 34292,
-      "last_check_time": 1794142043.3024883
+      "last_message_id": 34293,
+      "last_check_time": 1794142227.21053
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -17469,6 +17471,16 @@
       "price": 19.08,
       "timestamp": 1794141669.7207782,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34293": {
+      "channel_msg_id": 2066,
+      "product_id": "1005012191191893",
+      "title": "Blackview Mega 5",
+      "channel": "aniscoupons",
+      "source_msg_id": 34293,
+      "price": 228.3,
+      "timestamp": 1794142225.168232,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17477,17 +17489,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794141674.315563,
+    "last_deal_post_time": 1794142228.070857,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794142047.3490674,
+    "last_sweep_time": 1794142231.3718014,
     "last_sweep_times": {
-      "algeria": 1794142044.0581267,
-      "france": 1794142047.3490674
+      "algeria": 1794142228.0518029,
+      "france": 1794142231.3718014
     },
     "last_deal_post_times": {
-      "algeria": 1794141674.315563
+      "algeria": 1794142228.070857
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -17511,7 +17523,7 @@
     "1005006603602562": "zedstoreonline",
     "1005010721042860": "lodydeals",
     "1005009517247552": "zedstoreonline",
-    "1005012191191893": "bnddeals",
+    "1005012191191893": "aniscoupons",
     "1005012968221708": "ecksdeal",
     "9998883454": "test_channel",
     "9998883497": "test_channel",
@@ -19078,7 +19090,8 @@
     "Kootion X15 M.2 SSD NVMe 256GB": "zedstoreonline",
     "Lenovo LE257 Headphones": "lodydeals",
     "Honor 600s CN (8/256)": "aniscoupons",
-    "ويبكام OBSBOT MEET 2 Webcam 4K": "ecksdeal"
+    "ويبكام OBSBOT MEET 2 Webcam 4K": "ecksdeal",
+    "Blackview Mega 5": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
