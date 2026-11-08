@@ -1170,7 +1170,7 @@
     "COUPONS_11.11 Global Shopping Festival Warm-Up": 1793478717.5923967,
     "1005008518280704": 1793707081.0327315,
     "1005010527736444": 1793478769.6023057,
-    "1005013450996845": 1793543981.0397952,
+    "1005013450996845": 1794145351.158124,
     "1005013144753309": 1794091436.6772544,
     "1005012061152213": 1793490079.2945042,
     "1005012519569107": 1793490085.1205146,
@@ -2281,7 +2281,8 @@
     "Honor 600s CN (8/256)",
     "ويبكام OBSBOT MEET 2 Webcam 4K",
     "Blackview Mega 5",
-    "Warvank X8 Wireless Gaming Mouse"
+    "Warvank X8 Wireless Gaming Mouse",
+    "Xiaoxin Pad Pro 2025 (8/128GB)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3164,10 +3165,10 @@
     "Honor 600s CN (8/256)": 1794139106.9168086,
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
     "Blackview Mega 5": 1794142225.168232,
-    "Warvank X8 Wireless Gaming Mouse": 1794144806.2660766
+    "Warvank X8 Wireless Gaming Mouse": 1794144806.2660766,
+    "Xiaoxin Pad Pro 2025 (8/128GB)": 1794145351.158124
   },
   "published_post_keys": [
-    "bnddeals:50953",
     "aniscoupons:33162",
     "lodydeals:45839",
     "zedstoreonline:38850",
@@ -4166,19 +4167,20 @@
     "lodydeals:46246",
     "lodydeals:46250",
     "aniscoupons:34293",
-    "zedstoreonline:39736"
+    "zedstoreonline:39736",
+    "aniscoupons:34295"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794144806.2660766,
+  "last_run_time": 1794145351.158124,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6045,
       "last_check_time": 1794140208.423124
     },
     "lodydeals": {
-      "last_message_id": 46252,
-      "last_check_time": 1794144613.2546663
+      "last_message_id": 46253,
+      "last_check_time": 1794145347.1085734
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4201,8 +4203,8 @@
       "last_check_time": 1794144808.3197145
     },
     "aniscoupons": {
-      "last_message_id": 34294,
-      "last_check_time": 1794144983.7839189
+      "last_message_id": 34295,
+      "last_check_time": 1794145353.2018743
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -4592,7 +4594,7 @@
     "1005013045114640": 94.7,
     "1005008518280704": 60.25,
     "1005010527736444": 298.0,
-    "1005013450996845": 212.09,
+    "1005013450996845": 212.48,
     "1005012171521680": 287.26,
     "1005013144753309": 92.7,
     "1005012061152213": 58.3,
@@ -17496,6 +17498,16 @@
       "price": 6.9,
       "timestamp": 1794144806.2660766,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34295": {
+      "channel_msg_id": 2068,
+      "product_id": "1005013450996845",
+      "title": "Xiaoxin Pad Pro 2025 (8/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34295,
+      "price": 212.48,
+      "timestamp": 1794145351.158124,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17504,17 +17516,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794144809.948077,
+    "last_deal_post_time": 1794145353.701068,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794145162.380657,
+    "last_sweep_time": 1794145356.2392042,
     "last_sweep_times": {
-      "algeria": 1794145159.5353243,
-      "france": 1794145162.380657
+      "algeria": 1794145353.6812098,
+      "france": 1794145356.2392042
     },
     "last_deal_post_times": {
-      "algeria": 1794144809.948077
+      "algeria": 1794145353.701068
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18000,7 +18012,7 @@
     "COUPONS_d131dda7a0e3": "lodydeals",
     "1005008518280704": "lodydeals",
     "1005010527736444": "zedstoreonline",
-    "1005013450996845": "lodydeals",
+    "1005013450996845": "aniscoupons",
     "1005012171521680": "aniscoupons",
     "1005013144753309": "zedstoreonline",
     "1005012061152213": "zedstoreonline",
@@ -19108,7 +19120,8 @@
     "Honor 600s CN (8/256)": "aniscoupons",
     "ويبكام OBSBOT MEET 2 Webcam 4K": "ecksdeal",
     "Blackview Mega 5": "aniscoupons",
-    "Warvank X8 Wireless Gaming Mouse": "zedstoreonline"
+    "Warvank X8 Wireless Gaming Mouse": "zedstoreonline",
+    "Xiaoxin Pad Pro 2025 (8/128GB)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -19902,7 +19915,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45571",
     "aniscoupons:32942",
     "alidealsdz:145",
     "lodydeals:45797",
@@ -20901,7 +20913,8 @@
     "lodydeals:46251",
     "zedstoreonline:39735",
     "lodydeals:46252",
-    "aniscoupons:34294"
+    "aniscoupons:34294",
+    "lodydeals:46253"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
