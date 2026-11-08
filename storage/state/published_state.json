@@ -900,7 +900,7 @@
     "1005011557896041": 1793543627.8450525,
     "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
-    "1005007916078341": 1794067316.3057165,
+    "1005007916078341": 1794124830.4594686,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
     "1005013336240375": 1791968149.7952893,
@@ -2421,7 +2421,7 @@
     "ATTACK SHARK L80PRO Ultralight": 1791107750.295487,
     "AMD Ryzen 7 5700X": 1793898345.0223713,
     "هاتف ينسيك في شارجور🤣🤣": 1791109857.5190113,
-    "CMF Smart Watch 3 pro AMOLED": 1793992811.9341931,
+    "CMF Smart Watch 3 pro AMOLED": 1794124830.4594686,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
     "OPPO A6 Pro 8/256GB": 1794085849.5386124,
@@ -3111,7 +3111,6 @@
     "SOUNDPEATS Air6 HS": 1794087501.0429602
   },
   "published_post_keys": [
-    "aniscoupons:32757",
     "aniscoupons:32714",
     "lodydeals:45478",
     "aniscoupons:33054",
@@ -4110,11 +4109,12 @@
     "zedstoreonline:39704",
     "aniscoupons:34262",
     "zedstoreonline:39706",
-    "zedstoreonline:39707"
+    "zedstoreonline:39707",
+    "aniscoupons:34266"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794091985.0146983,
+  "last_run_time": 1794124830.4594686,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4145,8 +4145,8 @@
       "last_check_time": 1794094009.8145607
     },
     "aniscoupons": {
-      "last_message_id": 34265,
-      "last_check_time": 1794095532.992718
+      "last_message_id": 34266,
+      "last_check_time": 1794124832.4966288
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -4344,7 +4344,7 @@
     "1005011754993234": 79.58,
     "1005011735727412": 26.6,
     "1005013039644752": 265.7,
-    "1005007916078341": 48.91,
+    "1005007916078341": 48.9,
     "1005006506862816": 11.86,
     "1005008072923842": 2.21,
     "1005013336240375": 4.18,
@@ -17039,6 +17039,16 @@
       "price": 13.2,
       "timestamp": 1794091985.0146983,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34266": {
+      "channel_msg_id": 2026,
+      "product_id": "1005007916078341",
+      "title": "CMF Smart Watch 3 pro AMOLED",
+      "channel": "aniscoupons",
+      "source_msg_id": 34266,
+      "price": 48.9,
+      "timestamp": 1794124830.4594686,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17047,17 +17057,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794091988.4036388,
+    "last_deal_post_time": 1794124833.3192103,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794124652.5900304,
+    "last_sweep_time": 1794124836.563016,
     "last_sweep_times": {
-      "algeria": 1794124649.7415352,
-      "france": 1794124652.5900304
+      "algeria": 1794124833.3041837,
+      "france": 1794124836.563016
     },
     "last_deal_post_times": {
-      "algeria": 1794091988.4036388
+      "algeria": 1794124833.3192103
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -17287,7 +17297,7 @@
     "1005011754993234": "ecksdeal",
     "1005011735727412": "bnddeals",
     "1005013039644752": "aniscoupons",
-    "1005007916078341": "lodydeals",
+    "1005007916078341": "aniscoupons",
     "1005006506862816": "couponsglobal",
     "1005008072923842": "pcgamingpart",
     "1005013336240375": "pcgamingpart",
