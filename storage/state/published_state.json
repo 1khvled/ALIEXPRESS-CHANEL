@@ -1227,7 +1227,7 @@
     "1005007635109339": 1793546757.4916894,
     "1005006860968233": 1793546761.9902797,
     "1005009912743452": 1793546766.3907888,
-    "1005008041957503": 1793546771.1864512,
+    "1005008041957503": 1794140022.1412559,
     "1005010240905676": 1793546776.7430634,
     "1005010236248649": 1793546781.4529572,
     "1005007345311212": 1793599918.33911,
@@ -2276,7 +2276,8 @@
     "Ulanzi A100 Wireless Lavalier Microphone",
     "Kootion X15 M.2 SSD NVMe 256GB",
     "Lenovo LE257 Headphones",
-    "Honor 600s CN (8/256)"
+    "Honor 600s CN (8/256)",
+    "ويبكام OBSBOT MEET 2 Webcam 4K"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3156,10 +3157,10 @@
     "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464,
     "Kootion X15 M.2 SSD NVMe 256GB": 1794134534.5760646,
     "Lenovo LE257 Headphones": 1794137638.8201442,
-    "Honor 600s CN (8/256)": 1794139106.9168086
+    "Honor 600s CN (8/256)": 1794139106.9168086,
+    "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559
   },
   "published_post_keys": [
-    "pcgamingpart:7943",
     "zedstoreonline:38916",
     "lodydeals:45942",
     "lodydeals:45746",
@@ -4158,15 +4159,16 @@
     "zedstoreonline:39732",
     "aniscoupons:34288",
     "lodydeals:46245",
-    "aniscoupons:34290"
+    "aniscoupons:34290",
+    "ecksdeal:6044"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794139106.9168086,
+  "last_run_time": 1794140022.1412559,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6043,
-      "last_check_time": 1794055834.6061237
+      "last_message_id": 6044,
+      "last_check_time": 1794140024.1938038
     },
     "lodydeals": {
       "last_message_id": 46245,
@@ -17437,6 +17439,16 @@
       "price": 304.77,
       "timestamp": 1794139106.9168086,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6044": {
+      "channel_msg_id": 2063,
+      "product_id": "1005008041957503",
+      "title": "ويبكام OBSBOT MEET 2 Webcam 4K",
+      "channel": "ecksdeal",
+      "source_msg_id": 6044,
+      "price": 88.33,
+      "timestamp": 1794140022.1412559,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17445,17 +17457,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794139109.652593,
+    "last_deal_post_time": 1794140026.2327938,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794139839.4400861,
+    "last_sweep_time": 1794140029.8767362,
     "last_sweep_times": {
-      "algeria": 1794139836.3152454,
-      "france": 1794139839.4400861
+      "algeria": 1794140026.2086053,
+      "france": 1794140029.8767362
     },
     "last_deal_post_times": {
-      "algeria": 1794139109.652593
+      "algeria": 1794140026.2327938
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19045,7 +19057,8 @@
     "Ulanzi A100 Wireless Lavalier Microphone": "aniscoupons",
     "Kootion X15 M.2 SSD NVMe 256GB": "zedstoreonline",
     "Lenovo LE257 Headphones": "lodydeals",
-    "Honor 600s CN (8/256)": "aniscoupons"
+    "Honor 600s CN (8/256)": "aniscoupons",
+    "ويبكام OBSBOT MEET 2 Webcam 4K": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
