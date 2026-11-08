@@ -920,7 +920,7 @@
     "1005007920266509": 1793966861.2399917,
     "1005009275536960": 1791975930.016452,
     "1005007767322935": 1791975934.9659944,
-    "1005012571601398": 1793740379.2008631,
+    "1005012571601398": 1794140574.699814,
     "1005013054007275": 1793543830.34111,
     "1005011899097443": 1794086036.4692597,
     "1005012865117890": 1793613385.3577175,
@@ -2865,7 +2865,7 @@
     "سماعات الاذن  TANGZU WAN'ER S.G  IEM": 1793542639.2483642,
     "OnePlus Turbo 6X  8/128GB": 1793543578.6842017,
     "Soundcore by Anker P20i True Wireless Earbuds 30H Wireless Earphone": 1793543583.5978532,
-    "Honor X80 Pro Max 8/128GB": 1793740379.2008631,
+    "Honor X80 Pro Max 8/128GB": 1794140574.699814,
     "HONOR Pad V9 Wifi 8/256GB": 1793543596.9849713,
     "Redmi A7 Pro 4/64GB": 1793543612.279949,
     "تخفيض ل UGREEN 65W GaN Charger": 1793543617.2639549,
@@ -3161,7 +3161,6 @@
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559
   },
   "published_post_keys": [
-    "zedstoreonline:38916",
     "lodydeals:45942",
     "lodydeals:45746",
     "pcgamingpart:7954",
@@ -4160,11 +4159,12 @@
     "aniscoupons:34288",
     "lodydeals:46245",
     "aniscoupons:34290",
-    "ecksdeal:6044"
+    "ecksdeal:6044",
+    "lodydeals:46246"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794140022.1412559,
+  "last_run_time": 1794140574.699814,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6045,
@@ -4172,7 +4172,7 @@
     },
     "lodydeals": {
       "last_message_id": 46248,
-      "last_check_time": 1794140381.7255793
+      "last_check_time": 1794140574.699814
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4342,7 +4342,7 @@
     "1005007805497968": 18.77,
     "1005007345108759": 19.47,
     "1005007394197021": 14.88,
-    "1005012571601398": 271.5,
+    "1005012571601398": 270.5,
     "1005013290515237": 23.22,
     "1005012264415744": 78.0,
     "1005009689592131": 107.55,
@@ -17449,6 +17449,16 @@
       "price": 88.33,
       "timestamp": 1794140022.1412559,
       "status": "ACTIVE"
+    },
+    "lodydeals:46246": {
+      "channel_msg_id": 2064,
+      "product_id": "1005012571601398",
+      "title": "Honor X80 Pro Max 8/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46246,
+      "price": 270.5,
+      "timestamp": 1794140574.699814,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17457,17 +17467,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794140026.2327938,
+    "last_deal_post_time": 1794140579.5541866,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794140386.9703307,
+    "last_sweep_time": 1794140583.576229,
     "last_sweep_times": {
-      "algeria": 1794140384.2392848,
-      "france": 1794140386.9703307
+      "algeria": 1794140579.5289922,
+      "france": 1794140583.576229
     },
     "last_deal_post_times": {
-      "algeria": 1794140026.2327938
+      "algeria": 1794140579.5541866
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
