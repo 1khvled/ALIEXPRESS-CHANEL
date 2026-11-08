@@ -692,7 +692,8 @@
     "1005009738356108",
     "1005012953027259",
     "1005012048332402",
-    "1005011665465731"
+    "1005011665465731",
+    "1005012377459743"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1399,7 +1400,8 @@
     "1005009738356108": 1794131236.9079208,
     "1005012953027259": 1794133977.9005425,
     "1005012048332402": 1794136369.073103,
-    "1005011665465731": 1794137638.8201442
+    "1005011665465731": 1794137638.8201442,
+    "1005012377459743": 1794139106.9168086
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2273,7 +2275,8 @@
     "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse",
     "Ulanzi A100 Wireless Lavalier Microphone",
     "Kootion X15 M.2 SSD NVMe 256GB",
-    "Lenovo LE257 Headphones"
+    "Lenovo LE257 Headphones",
+    "Honor 600s CN (8/256)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3152,10 +3155,10 @@
     "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": 1794130518.3291268,
     "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464,
     "Kootion X15 M.2 SSD NVMe 256GB": 1794134534.5760646,
-    "Lenovo LE257 Headphones": 1794137638.8201442
+    "Lenovo LE257 Headphones": 1794137638.8201442,
+    "Honor 600s CN (8/256)": 1794139106.9168086
   },
   "published_post_keys": [
-    "aniscoupons:32742",
     "pcgamingpart:7943",
     "zedstoreonline:38916",
     "lodydeals:45942",
@@ -4154,11 +4157,12 @@
     "zedstoreonline:39731",
     "zedstoreonline:39732",
     "aniscoupons:34288",
-    "lodydeals:46245"
+    "lodydeals:46245",
+    "aniscoupons:34290"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794137638.8201442,
+  "last_run_time": 1794139106.9168086,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4189,8 +4193,8 @@
       "last_check_time": 1794136363.3820682
     },
     "aniscoupons": {
-      "last_message_id": 34289,
-      "last_check_time": 1794137280.8116453
+      "last_message_id": 34290,
+      "last_check_time": 1794139108.9499645
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -4787,7 +4791,8 @@
     "1005009851407234": 149.4,
     "1005012953027259": 279.32,
     "1005012048332402": 193.1,
-    "1005011665465731": 5.38
+    "1005011665465731": 5.38,
+    "1005012377459743": 304.77
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17422,6 +17427,16 @@
       "price": 5.38,
       "timestamp": 1794137638.8201442,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34290": {
+      "channel_msg_id": 2062,
+      "product_id": "1005012377459743",
+      "title": "Honor 600s CN (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34290,
+      "price": 304.77,
+      "timestamp": 1794139106.9168086,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17430,17 +17445,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794137643.2885737,
+    "last_deal_post_time": 1794139109.652593,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794138921.5914242,
+    "last_sweep_time": 1794139112.3775637,
     "last_sweep_times": {
-      "algeria": 1794138917.7839005,
-      "france": 1794138921.5914242
+      "algeria": 1794139109.6380017,
+      "france": 1794139112.3775637
     },
     "last_deal_post_times": {
-      "algeria": 1794137643.2885737
+      "algeria": 1794139109.652593
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18147,7 +18162,8 @@
     "1005009738356108": "zedstoreonline",
     "1005012953027259": "aniscoupons",
     "1005012048332402": "aniscoupons",
-    "1005011665465731": "lodydeals"
+    "1005011665465731": "lodydeals",
+    "1005012377459743": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19028,7 +19044,8 @@
     "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": "zedstoreonline",
     "Ulanzi A100 Wireless Lavalier Microphone": "aniscoupons",
     "Kootion X15 M.2 SSD NVMe 256GB": "zedstoreonline",
-    "Lenovo LE257 Headphones": "lodydeals"
+    "Lenovo LE257 Headphones": "lodydeals",
+    "Honor 600s CN (8/256)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
