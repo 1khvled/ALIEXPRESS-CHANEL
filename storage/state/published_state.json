@@ -1340,7 +1340,7 @@
     "1005013205365677": 1793736440.319658,
     "1005008429979494": 1793741666.9686077,
     "1005004795387201": 1793742770.1634803,
-    "1005010702983351": 1794070312.33285,
+    "1005010702983351": 1794147383.4570146,
     "1005008366962319": 1794134534.5760646,
     "1005005058037424": 1793779907.9964287,
     "1005012946895000": 1793793714.105913,
@@ -3110,7 +3110,7 @@
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794127040.2666676,
     "Fifine Gaming Headset H9W": 1794068051.714454,
     "Fifine Gaming Headset H6": 1794067512.4027624,
-    "HyperX Cloud 3 III Wired Gaming Headset": 1794070312.33285,
+    "HyperX Cloud 3 III Wired Gaming Headset": 1794147383.4570146,
     "KOOTION SSD SATA": 1794091251.586213,
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
     "هذون سماعات جدد من   HAYLOU⌚": 1793966887.3818936,
@@ -3187,7 +3187,6 @@
     "Ulanzi ST-06S Smartphone Mount Holder": 1794146840.7057447
   },
   "published_post_keys": [
-    "bnddeals:50949",
     "bnddeals:50856",
     "aniscoupons:33316",
     "lodydeals:45844",
@@ -4186,11 +4185,12 @@
     "lodydeals:46255",
     "lodydeals:46256",
     "aniscoupons:34296",
-    "zedstoreonline:39739"
+    "zedstoreonline:39739",
+    "aniscoupons:34298"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794147198.6954062,
+  "last_run_time": 1794147383.4570146,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6045,
@@ -4217,12 +4217,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39739,
-      "last_check_time": 1794147200.739249
+      "last_message_id": 39740,
+      "last_check_time": 1794147380.0567012
     },
     "aniscoupons": {
-      "last_message_id": 34297,
-      "last_check_time": 1794147004.5598657
+      "last_message_id": 34298,
+      "last_check_time": 1794147385.5122957
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -4762,7 +4762,7 @@
     "1005013205365677": 890.6,
     "1005008429979494": 72.7,
     "1005004795387201": 115.5,
-    "1005010702983351": 69.6,
+    "1005010702983351": 67.6,
     "1005008366962319": 30.8,
     "1005005058037424": 34.67,
     "1005012946895000": 142.59,
@@ -17590,6 +17590,16 @@
       "price": 7.7,
       "timestamp": 1794147198.6954062,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34298": {
+      "channel_msg_id": 2075,
+      "product_id": "1005010702983351",
+      "title": "HyperX Cloud 3 III Wired Gaming Headset",
+      "channel": "aniscoupons",
+      "source_msg_id": 34298,
+      "price": 67.6,
+      "timestamp": 1794147383.4570146,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17598,17 +17608,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794147202.0900867,
+    "last_deal_post_time": 1794147386.323361,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794147205.4184103,
+    "last_sweep_time": 1794147389.1245031,
     "last_sweep_times": {
-      "algeria": 1794147202.070428,
-      "france": 1794147205.4184103
+      "algeria": 1794147386.29817,
+      "france": 1794147389.1245031
     },
     "last_deal_post_times": {
-      "algeria": 1794147202.0900867
+      "algeria": 1794147386.323361
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20006,7 +20016,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45797",
     "lodydeals:45681",
     "aniscoupons:33103",
     "bnddeals:50990",
@@ -21005,7 +21014,8 @@
     "aniscoupons:34294",
     "lodydeals:46253",
     "zedstoreonline:39738",
-    "aniscoupons:34297"
+    "aniscoupons:34297",
+    "zedstoreonline:39740"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
