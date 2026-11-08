@@ -681,7 +681,8 @@
     "1005006260870758",
     "1005009759580502",
     "1005009120888793",
-    "1005011874310777"
+    "1005011874310777",
+    "1005008721853055"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1377,7 +1378,8 @@
     "1005006260870758": 1794077543.1413288,
     "1005009759580502": 1794079741.7808652,
     "1005009120888793": 1794079928.0765662,
-    "1005011874310777": 1794087501.0429602
+    "1005011874310777": 1794087501.0429602,
+    "1005008721853055": 1794126663.880001
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2240,7 +2242,8 @@
     "EPOMAKER X AULA F87 Pro",
     "SIX PCIe 4.0 7350MB/s  1TB",
     "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop",
-    "SOUNDPEATS Air6 HS"
+    "SOUNDPEATS Air6 HS",
+    "مبرد الهاتف MEMO CX10"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3108,10 +3111,10 @@
     "EPOMAKER X AULA F87 Pro": 1794077543.1413288,
     "SIX PCIe 4.0 7350MB/s  1TB": 1794079741.7808652,
     "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop": 1794079928.0765662,
-    "SOUNDPEATS Air6 HS": 1794087501.0429602
+    "SOUNDPEATS Air6 HS": 1794087501.0429602,
+    "مبرد الهاتف MEMO CX10": 1794126663.880001
   },
   "published_post_keys": [
-    "aniscoupons:33191",
     "lodydeals:45762",
     "lodydeals:45884",
     "aniscoupons:32786",
@@ -4110,11 +4113,12 @@
     "aniscoupons:34266",
     "aniscoupons:34267",
     "zedstoreonline:39712",
-    "aniscoupons:34269"
+    "aniscoupons:34269",
+    "zedstoreonline:39714"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794126322.307194,
+  "last_run_time": 1794126663.880001,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4141,8 +4145,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39713,
-      "last_check_time": 1794126315.3843658
+      "last_message_id": 39714,
+      "last_check_time": 1794126665.9220645
     },
     "aniscoupons": {
       "last_message_id": 34269,
@@ -4734,7 +4738,8 @@
     "1005006260870758": 37.8,
     "1005009759580502": 101.07,
     "1005009120888793": 18.13,
-    "1005011874310777": 24.2
+    "1005011874310777": 24.2,
+    "1005008721853055": 8.7
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17079,6 +17084,16 @@
       "price": 167.8,
       "timestamp": 1794126322.307194,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39714": {
+      "channel_msg_id": 2030,
+      "product_id": "1005008721853055",
+      "title": "مبرد الهاتف MEMO CX10",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39714,
+      "price": 8.7,
+      "timestamp": 1794126663.880001,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17087,17 +17102,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794126325.5541384,
+    "last_deal_post_time": 1794126667.0624166,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794126489.6979563,
+    "last_sweep_time": 1794126669.5579016,
     "last_sweep_times": {
-      "algeria": 1794126485.8321161,
-      "france": 1794126489.6979563
+      "algeria": 1794126667.0431037,
+      "france": 1794126669.5579016
     },
     "last_deal_post_times": {
-      "algeria": 1794126325.5541384
+      "algeria": 1794126667.0624166
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -17793,7 +17808,8 @@
     "1005006260870758": "lodydeals",
     "1005009759580502": "lodydeals",
     "1005009120888793": "aniscoupons",
-    "1005011874310777": "lodydeals"
+    "1005011874310777": "lodydeals",
+    "1005008721853055": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -18663,7 +18679,8 @@
     "SIX PCIe 4.0 7350MB/s  1TB": "lodydeals",
     "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop": "aniscoupons",
     "Honor Choice Watch 2i": "aniscoupons",
-    "SOUNDPEATS Air6 HS": "lodydeals"
+    "SOUNDPEATS Air6 HS": "lodydeals",
+    "مبرد الهاتف MEMO CX10": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
