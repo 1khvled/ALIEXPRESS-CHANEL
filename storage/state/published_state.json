@@ -810,7 +810,7 @@
     "1005010470699571": 1793966659.0305355,
     "1005012741634118": 1793966676.2934937,
     "1005010453516983": 1792172109.913469,
-    "1005008554596598": 1791017145.537471,
+    "1005008554596598": 1794165031.7231321,
     "1005012925826589": 1791752930.9846199,
     "1005010306498953": 1791021345.213176,
     "1005010338761787": 1791021850.86469,
@@ -2310,7 +2310,8 @@
     "Magcubic HY350Max 900 ANSI",
     "Warvank X8 Wireless Gaming",
     "GameSir X5 Lite Mobile Controller",
-    "Machenike G7 56g RGB"
+    "Machenike G7 56g RGB",
+    "ضف 4 قطع ثم أدفع"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3208,10 +3209,10 @@
     "Magcubic HY350Max 900 ANSI": 1794164675.8426867,
     "Warvank X8 Wireless Gaming": 1794164680.2575803,
     "GameSir X5 Lite Mobile Controller": 1794164684.9082866,
-    "Machenike G7 56g RGB": 1794164691.7591228
+    "Machenike G7 56g RGB": 1794164691.7591228,
+    "ضف 4 قطع ثم أدفع": 1794165031.7231321
   },
   "published_post_keys": [
-    "aniscoupons:32708",
     "aniscoupons:33037",
     "lodydeals:45729",
     "lodydeals:45908",
@@ -4210,11 +4211,12 @@
     "lodydeals:46262",
     "lodydeals:46263",
     "lodydeals:46264",
-    "lodydeals:46265"
+    "lodydeals:46265",
+    "bnddeals:51237"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794164698.641711,
+  "last_run_time": 1794165031.7231321,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
@@ -4249,8 +4251,8 @@
       "last_check_time": 1794160830.5899696
     },
     "bnddeals": {
-      "last_message_id": 51236,
-      "last_check_time": 1794164854.3037694
+      "last_message_id": 51237,
+      "last_check_time": 1794165033.7693036
     }
   },
   "published_product_prices": {
@@ -4349,7 +4351,7 @@
     "1005007097205322": 15.1,
     "1005010470699571": 17.8,
     "1005012741634118": 23.7,
-    "1005008554596598": 15.4,
+    "1005008554596598": 13.96,
     "1005008776714223": 43.9,
     "1005010306498953": 1.46,
     "1005010338761787": 1.49,
@@ -17867,6 +17869,16 @@
       "price": 136.7,
       "timestamp": 1794164698.641711,
       "status": "ACTIVE"
+    },
+    "bnddeals:51237": {
+      "channel_msg_id": 2101,
+      "product_id": "1005008554596598",
+      "title": "ضف 4 قطع ثم أدفع",
+      "channel": "bnddeals",
+      "source_msg_id": 51237,
+      "price": 13.96,
+      "timestamp": 1794165031.7231321,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17875,17 +17887,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794164703.144463,
+    "last_deal_post_time": 1794165033.8090522,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794164858.077791,
+    "last_sweep_time": 1794165036.449722,
     "last_sweep_times": {
-      "algeria": 1794164854.3321142,
-      "france": 1794164858.077791
+      "algeria": 1794165033.7894886,
+      "france": 1794165036.449722
     },
     "last_deal_post_times": {
-      "algeria": 1794164703.144463
+      "algeria": 1794165033.8090522
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19501,7 +19513,8 @@
     "Magcubic HY350Max 900 ANSI": "lodydeals",
     "Warvank X8 Wireless Gaming": "lodydeals",
     "GameSir X5 Lite Mobile Controller": "lodydeals",
-    "Machenike G7 56g RGB": "lodydeals"
+    "Machenike G7 56g RGB": "lodydeals",
+    "ضف 4 قطع ثم أدفع": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
