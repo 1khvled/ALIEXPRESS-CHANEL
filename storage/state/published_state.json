@@ -701,7 +701,8 @@
     "1005007097302001",
     "1005013361453762",
     "1005013240296031",
-    "1005012670472055"
+    "1005012670472055",
+    "1005013476568095"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1417,7 +1418,8 @@
     "1005007097302001": 1794146830.4272797,
     "1005013361453762": 1794159510.650968,
     "1005013240296031": 1794164670.8679597,
-    "1005012670472055": 1794164675.8426867
+    "1005012670472055": 1794164675.8426867,
+    "1005013476568095": 1794169846.8168333
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2314,7 +2316,8 @@
     "ضف 4 قطع ثم أدفع",
     "iQOO Z11 Turbo 12/256GB",
     "CMF Buds 2a ANC",
-    "Ajazz NK61 Wired Mechanical Keyboard"
+    "Ajazz NK61 Wired Mechanical Keyboard",
+    "Honor Win Turbo"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3216,10 +3219,10 @@
     "ضف 4 قطع ثم أدفع": 1794165031.7231321,
     "iQOO Z11 Turbo 12/256GB": 1794166685.9915411,
     "CMF Buds 2a ANC": 1794166876.875887,
-    "Ajazz NK61 Wired Mechanical Keyboard": 1794167239.3538153
+    "Ajazz NK61 Wired Mechanical Keyboard": 1794167239.3538153,
+    "Honor Win Turbo": 1794169846.8168333
   },
   "published_post_keys": [
-    "couponsglobal:48786",
     "lodydeals:45461",
     "aniscoupons:32728",
     "test_channel:1792172185",
@@ -4218,11 +4221,12 @@
     "lodydeals:46268",
     "lodydeals:46269",
     "aniscoupons:34313",
-    "zedstoreonline:39754"
+    "zedstoreonline:39754",
+    "aniscoupons:34314"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794167976.0921652,
+  "last_run_time": 1794169846.8168333,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
@@ -4253,8 +4257,8 @@
       "last_check_time": 1794169651.0589695
     },
     "aniscoupons": {
-      "last_message_id": 34313,
-      "last_check_time": 1794167241.3970318
+      "last_message_id": 34314,
+      "last_check_time": 1794169848.848113
     },
     "bnddeals": {
       "last_message_id": 51239,
@@ -4860,7 +4864,8 @@
     "1005007097302001": 4.69,
     "1005013361453762": 276.3,
     "1005013240296031": 69.06,
-    "1005012670472055": 112.11
+    "1005012670472055": 112.11,
+    "1005013476568095": 370.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17935,6 +17940,16 @@
       "price": 2.7,
       "timestamp": 1794167976.0921652,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34314": {
+      "channel_msg_id": 2107,
+      "product_id": "1005013476568095",
+      "title": "Honor Win Turbo",
+      "channel": "aniscoupons",
+      "source_msg_id": 34314,
+      "price": 370.8,
+      "timestamp": 1794169846.8168333,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17943,17 +17958,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794167979.2318275,
+    "last_deal_post_time": 1794169849.8238657,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794169655.4254322,
+    "last_sweep_time": 1794169857.9423623,
     "last_sweep_times": {
-      "algeria": 1794169652.135585,
-      "france": 1794169655.4254322
+      "algeria": 1794169849.8086994,
+      "france": 1794169857.9423623
     },
     "last_deal_post_times": {
-      "algeria": 1794167979.2318275
+      "algeria": 1794169849.8238657
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18670,7 +18685,8 @@
     "1005013361453762": "zedstoreonline",
     "1005013240296031": "lodydeals",
     "1005012670472055": "lodydeals",
-    "1005010062128237": "lodydeals"
+    "1005010062128237": "lodydeals",
+    "1005013476568095": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19574,7 +19590,8 @@
     "ضف 4 قطع ثم أدفع": "bnddeals",
     "iQOO Z11 Turbo 12/256GB": "lodydeals",
     "CMF Buds 2a ANC": "lodydeals",
-    "Ajazz NK61 Wired Mechanical Keyboard": "aniscoupons"
+    "Ajazz NK61 Wired Mechanical Keyboard": "aniscoupons",
+    "Honor Win Turbo": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
