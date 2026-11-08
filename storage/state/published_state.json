@@ -1268,7 +1268,7 @@
     "1005007010692093": 1793601389.0047116,
     "1005006994466968": 1793601744.1664062,
     "1005011927267564": 1793728844.5794795,
-    "1005008291023017": 1794086587.7356915,
+    "1005008291023017": 1794131420.4163597,
     "1005012947477238": 1793612016.5356846,
     "1005010121513376": 1794127394.3986294,
     "1005009064526142": 1793613380.753295,
@@ -1361,7 +1361,7 @@
     "1005010266233059": 1793977272.9654846,
     "1005007469003552": 1794130707.0577464,
     "1005010041181003": 1794126322.307194,
-    "1005010265542567": 1793982853.0323274,
+    "1005010265542567": 1794131426.95932,
     "1005003156756854": 1794130692.4786665,
     "1005010142208108": 1793987278.5140982,
     "1005008534907844": 1793987285.4130383,
@@ -2821,7 +2821,7 @@
     "CUSU DDR5 RAM 16GB 6000MHz": 1793542370.559594,
     "Magcubic HY300 PRO 4K Projector": 1793542384.0089695,
     "مدعومة ب Hall effect في Joysticks": 1793542392.5669472,
-    "Realme 15 Pro 5G 12/256GB": 1793732518.3808835,
+    "Realme 15 Pro 5G 12/256GB": 1794131420.4163597,
     ".شاشة AMOLED 6.57″ بدقة FHD+": 1793542420.8525836,
     "AMD Ryzen 5 5600XT": 1793745640.3719149,
     "POCO M7 6/128GB": 1793707060.393079,
@@ -3098,7 +3098,7 @@
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
     "ميكروفون Ulanzi A100 لاسلكي صغير": 1793982290.6109207,
     "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794126322.307194,
-    "Ulanzi A200 Mini Wireless Lavalier Microphone": 1793982853.0323274,
+    "Ulanzi A200 Mini Wireless Lavalier Microphone": 1794131426.95932,
     "حامل هاتف Ulanzi ST-06S": 1793983598.810499,
     "AULA MINI60 HE PRO": 1793987278.5140982,
     "Maono Wave T5 Wireless Mic": 1793987285.4130383,
@@ -3145,8 +3145,6 @@
     "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464
   },
   "published_post_keys": [
-    "lodydeals:45866",
-    "zedstoreonline:38596",
     "bnddeals:50808",
     "zedstoreonline:38674",
     "zedstoreonline:38918",
@@ -4144,19 +4142,21 @@
     "zedstoreonline:39726",
     "aniscoupons:34280",
     "aniscoupons:34282",
-    "zedstoreonline:39728"
+    "zedstoreonline:39728",
+    "lodydeals:46243",
+    "aniscoupons:34283"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794131236.9079208,
+  "last_run_time": 1794131426.95932,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
       "last_check_time": 1794055834.6061237
     },
     "lodydeals": {
-      "last_message_id": 46242,
-      "last_check_time": 1794130694.5311444
+      "last_message_id": 46243,
+      "last_check_time": 1794131422.458348
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4179,8 +4179,8 @@
       "last_check_time": 1794131238.960292
     },
     "aniscoupons": {
-      "last_message_id": 34282,
-      "last_check_time": 1794130876.840417
+      "last_message_id": 34283,
+      "last_check_time": 1794131429.0011017
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -4671,7 +4671,7 @@
     "1005007010692093": 2.88,
     "1005006994466968": 4.99,
     "1005011927267564": 24.55,
-    "1005008291023017": 285.9,
+    "1005008291023017": 285.04,
     "1005012947477238": 199.2,
     "1005010121513376": 289.5,
     "1005009064526142": 123.9,
@@ -4749,7 +4749,7 @@
     "1005010266233059": 17.1,
     "1005007469003552": 17.39,
     "1005010041181003": 167.8,
-    "1005010265542567": 23.89,
+    "1005010265542567": 24.89,
     "1005003156756854": 10.85,
     "1005010142208108": 37.5,
     "1005008534907844": 50.86,
@@ -17329,6 +17329,26 @@
       "price": 16.5,
       "timestamp": 1794131236.9079208,
       "status": "ACTIVE"
+    },
+    "lodydeals:46243": {
+      "channel_msg_id": 2054,
+      "product_id": "1005008291023017",
+      "title": "Realme 15 Pro 5G 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46243,
+      "price": 285.04,
+      "timestamp": 1794131420.4163597,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34283": {
+      "channel_msg_id": 2055,
+      "product_id": "1005010265542567",
+      "title": "Ulanzi A200 Mini Wireless Lavalier Microphone",
+      "channel": "aniscoupons",
+      "source_msg_id": 34283,
+      "price": 24.89,
+      "timestamp": 1794131426.95932,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17337,17 +17357,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794131240.234161,
+    "last_deal_post_time": 1794131429.591714,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794131243.043034,
+    "last_sweep_time": 1794131432.8928797,
     "last_sweep_times": {
-      "algeria": 1794131240.2096796,
-      "france": 1794131243.043034
+      "algeria": 1794131429.5719285,
+      "france": 1794131432.8928797
     },
     "last_deal_post_times": {
-      "algeria": 1794131240.234161
+      "algeria": 1794131429.591714
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -17942,7 +17962,7 @@
     "1005007010692093": "lodydeals",
     "1005006994466968": "lodydeals",
     "1005011927267564": "lodydeals",
-    "1005008291023017": "aniscoupons",
+    "1005008291023017": "lodydeals",
     "1005012947477238": "lodydeals",
     "1005010121513376": "aniscoupons",
     "1005009064526142": "zedstoreonline",
