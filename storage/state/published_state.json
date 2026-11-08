@@ -683,7 +683,8 @@
     "1005009120888793",
     "1005011874310777",
     "1005008721853055",
-    "1005012593794312"
+    "1005012593794312",
+    "1005008384277561"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1106,7 +1107,7 @@
     "1005011961308530": 1793380460.5377874,
     "1005012994490034": 1793441317.3934674,
     "1005010146493558": 1793448836.300828,
-    "1005010575865619": 1793793743.7359905,
+    "1005010575865619": 1794128880.302774,
     "1005011778197787": 1793656192.605134,
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
@@ -1381,7 +1382,8 @@
     "1005009120888793": 1794079928.0765662,
     "1005011874310777": 1794087501.0429602,
     "1005008721853055": 1794126663.880001,
-    "1005012593794312": 1794128140.9765735
+    "1005012593794312": 1794128140.9765735,
+    "1005008384277561": 1794128872.1451216
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2246,7 +2248,9 @@
     "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop",
     "SOUNDPEATS Air6 HS",
     "مبرد الهاتف MEMO CX10",
-    "KOOTION SATA SSD 480GB"
+    "KOOTION SATA SSD 480GB",
+    "راوتر Vodafone 4G محمول",
+    "OnePlus ACE 6T"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3116,11 +3120,11 @@
     "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop": 1794079928.0765662,
     "SOUNDPEATS Air6 HS": 1794087501.0429602,
     "مبرد الهاتف MEMO CX10": 1794126663.880001,
-    "KOOTION SATA SSD 480GB": 1794127389.2657666
+    "KOOTION SATA SSD 480GB": 1794127389.2657666,
+    "راوتر Vodafone 4G محمول": 1794128872.1451216,
+    "OnePlus ACE 6T": 1794128880.302774
   },
   "published_post_keys": [
-    "test_channel:1793282475",
-    "lodydeals:45910",
     "bnddeals:50851",
     "zedstoreonline:38790",
     "couponsglobal:48799",
@@ -4118,11 +4122,13 @@
     "aniscoupons:34272",
     "aniscoupons:34273",
     "aniscoupons:34274",
-    "aniscoupons:34276"
+    "aniscoupons:34276",
+    "zedstoreonline:39720",
+    "aniscoupons:34277"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794128677.9007936,
+  "last_run_time": 1794128880.302774,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4149,12 +4155,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39719,
-      "last_check_time": 1794128487.213488
+      "last_message_id": 39720,
+      "last_check_time": 1794128874.1868732
     },
     "aniscoupons": {
-      "last_message_id": 34276,
-      "last_check_time": 1794128679.9329088
+      "last_message_id": 34277,
+      "last_check_time": 1794128882.3461378
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -4494,7 +4500,7 @@
     "1005011961308530": 313.7,
     "1005012994490034": 458.0,
     "1005010146493558": 562.0,
-    "1005010575865619": 367.44,
+    "1005010575865619": 367.1,
     "1005011778197787": 155.31,
     "1005012839355198": 150.12,
     "1005010133081414": 715.0,
@@ -4743,7 +4749,8 @@
     "1005009759580502": 101.07,
     "1005009120888793": 18.13,
     "1005011874310777": 24.2,
-    "1005008721853055": 8.7
+    "1005008721853055": 8.7,
+    "1005008384277561": 7.3
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17168,6 +17175,26 @@
       "price": 265.7,
       "timestamp": 1794128677.9007936,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39720": {
+      "channel_msg_id": 2038,
+      "product_id": "1005008384277561",
+      "title": "راوتر Vodafone 4G محمول",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39720,
+      "price": 7.3,
+      "timestamp": 1794128872.1451216,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34277": {
+      "channel_msg_id": 2039,
+      "product_id": "1005010575865619",
+      "title": "OnePlus ACE 6T",
+      "channel": "aniscoupons",
+      "source_msg_id": 34277,
+      "price": 367.1,
+      "timestamp": 1794128880.302774,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17176,17 +17203,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794128680.6684744,
+    "last_deal_post_time": 1794128883.3035245,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794128683.5357919,
+    "last_sweep_time": 1794128886.8383312,
     "last_sweep_times": {
-      "algeria": 1794128680.6542087,
-      "france": 1794128683.5357919
+      "algeria": 1794128883.28405,
+      "france": 1794128886.8383312
     },
     "last_deal_post_times": {
-      "algeria": 1794128680.6684744
+      "algeria": 1794128883.3035245
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -17620,7 +17647,7 @@
     "1005011961308530": "megaphonna",
     "1005012994490034": "zedstoreonline",
     "1005010146493558": "megaphonna",
-    "1005010575865619": "lodydeals",
+    "1005010575865619": "aniscoupons",
     "1005011778197787": "lodydeals",
     "1005012839355198": "bnddeals",
     "1005010133081414": "aniscoupons",
@@ -17884,7 +17911,8 @@
     "1005009120888793": "aniscoupons",
     "1005011874310777": "lodydeals",
     "1005008721853055": "zedstoreonline",
-    "1005012593794312": "aniscoupons"
+    "1005012593794312": "aniscoupons",
+    "1005008384277561": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -18756,7 +18784,9 @@
     "Honor Choice Watch 2i": "aniscoupons",
     "SOUNDPEATS Air6 HS": "lodydeals",
     "مبرد الهاتف MEMO CX10": "zedstoreonline",
-    "KOOTION SATA SSD 480GB": "zedstoreonline"
+    "KOOTION SATA SSD 480GB": "zedstoreonline",
+    "راوتر Vodafone 4G محمول": "zedstoreonline",
+    "OnePlus ACE 6T": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
