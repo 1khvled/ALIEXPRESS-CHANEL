@@ -689,7 +689,8 @@
     "1005011572208218",
     "1005012374550298",
     "1005009851407234",
-    "1005009738356108"
+    "1005009738356108",
+    "1005012953027259"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1393,7 +1394,8 @@
     "1005011572208218": 1794129986.607079,
     "1005012374550298": 1794130518.3291268,
     "1005009851407234": 1794130701.0727847,
-    "1005009738356108": 1794131236.9079208
+    "1005009738356108": 1794131236.9079208,
+    "1005012953027259": 1794133977.9005425
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2989,7 +2991,7 @@
     "Oppo Find X8s+": 1793613942.3770478,
     "Xiaoxin Pad Pro 13 (8/128)": 1794130874.808105,
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S CPU 11.1\" 4K 144Hz LCD Display 1100": 1793613951.963987,
-    "Honor Pad V9 (8/256)": 1793613957.1320925,
+    "Honor Pad V9 (8/256)": 1794133977.9005425,
     "HONOR Pad X8b (LTE 6/128GB)": 1793613961.7877593,
     "[Clearance] realme 14T 5G Smartphone NFC Dimensity 6300 5G Processor": 1793613966.8608465,
     "RYZEN 5 9600X": 1793613978.6202738,
@@ -3145,7 +3147,6 @@
     "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464
   },
   "published_post_keys": [
-    "zedstoreonline:38674",
     "zedstoreonline:38918",
     "test_channel:1792087185",
     "lodydeals:45798",
@@ -4144,11 +4145,12 @@
     "zedstoreonline:39728",
     "lodydeals:46243",
     "aniscoupons:34283",
-    "zedstoreonline:39730"
+    "zedstoreonline:39730",
+    "aniscoupons:34287"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794131798.3098254,
+  "last_run_time": 1794133977.9005425,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4179,8 +4181,8 @@
       "last_check_time": 1794131800.3549645
     },
     "aniscoupons": {
-      "last_message_id": 34286,
-      "last_check_time": 1794133614.2628446
+      "last_message_id": 34287,
+      "last_check_time": 1794133979.9318945
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -4774,7 +4776,8 @@
     "1005010155263623": 2.4,
     "1005011572208218": 217.8,
     "1005012374550298": 17.6,
-    "1005009851407234": 149.4
+    "1005009851407234": 149.4,
+    "1005012953027259": 279.32
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17359,6 +17362,16 @@
       "price": 465.3,
       "timestamp": 1794131798.3098254,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34287": {
+      "channel_msg_id": 2057,
+      "product_id": "1005012953027259",
+      "title": "Honor Pad V9 (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34287,
+      "price": 279.32,
+      "timestamp": 1794133977.9005425,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17367,17 +17380,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794131801.7871609,
+    "last_deal_post_time": 1794133980.4056056,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794133804.0230544,
+    "last_sweep_time": 1794133983.131828,
     "last_sweep_times": {
-      "algeria": 1794133800.6886888,
-      "france": 1794133804.0230544
+      "algeria": 1794133980.3921437,
+      "france": 1794133983.131828
     },
     "last_deal_post_times": {
-      "algeria": 1794131801.7871609
+      "algeria": 1794133980.4056056
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18081,7 +18094,8 @@
     "1005011572208218": "aniscoupons",
     "1005012374550298": "zedstoreonline",
     "1005009851407234": "zedstoreonline",
-    "1005009738356108": "zedstoreonline"
+    "1005009738356108": "zedstoreonline",
+    "1005012953027259": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
