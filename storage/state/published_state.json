@@ -1333,7 +1333,7 @@
     "1005008429979494": 1793741666.9686077,
     "1005004795387201": 1793742770.1634803,
     "1005010702983351": 1794070312.33285,
-    "1005008366962319": 1793969920.9023197,
+    "1005008366962319": 1794134534.5760646,
     "1005005058037424": 1793779907.9964287,
     "1005012946895000": 1793793714.105913,
     "1005012150344482": 1793966664.0552397,
@@ -2267,7 +2267,8 @@
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB)",
     "OnePlus Ace 6 12/256GB",
     "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse",
-    "Ulanzi A100 Wireless Lavalier Microphone"
+    "Ulanzi A100 Wireless Lavalier Microphone",
+    "Kootion X15 M.2 SSD NVMe 256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3144,10 +3145,10 @@
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794129986.607079,
     "OnePlus Ace 6 12/256GB": 1794130143.129755,
     "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": 1794130518.3291268,
-    "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464
+    "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464,
+    "Kootion X15 M.2 SSD NVMe 256GB": 1794134534.5760646
   },
   "published_post_keys": [
-    "test_channel:1792087185",
     "lodydeals:45798",
     "zedstoreonline:38760",
     "aniscoupons:32742",
@@ -4146,11 +4147,12 @@
     "aniscoupons:34283",
     "zedstoreonline:39730",
     "aniscoupons:34287",
-    "zedstoreonline:39731"
+    "zedstoreonline:39731",
+    "zedstoreonline:39732"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794134168.8193681,
+  "last_run_time": 1794134534.5760646,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4177,8 +4179,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39731,
-      "last_check_time": 1794134170.8620267
+      "last_message_id": 39732,
+      "last_check_time": 1794134536.6295395
     },
     "aniscoupons": {
       "last_message_id": 34287,
@@ -4723,7 +4725,7 @@
     "1005008429979494": 72.7,
     "1005004795387201": 115.5,
     "1005010702983351": 69.6,
-    "1005008366962319": 49.76,
+    "1005008366962319": 30.8,
     "1005005058037424": 34.67,
     "1005012946895000": 142.59,
     "1005006972551834": 31.07,
@@ -17382,6 +17384,16 @@
       "price": 18.1,
       "timestamp": 1794134168.8193681,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39732": {
+      "channel_msg_id": 2059,
+      "product_id": "1005008366962319",
+      "title": "Kootion X15 M.2 SSD NVMe 256GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39732,
+      "price": 30.8,
+      "timestamp": 1794134534.5760646,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17390,17 +17402,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794134172.3319016,
+    "last_deal_post_time": 1794134537.883297,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794134354.6903458,
+    "last_sweep_time": 1794134540.647718,
     "last_sweep_times": {
-      "algeria": 1794134351.201727,
-      "france": 1794134354.6903458
+      "algeria": 1794134537.8588958,
+      "france": 1794134540.647718
     },
     "last_deal_post_times": {
-      "algeria": 1794134172.3319016
+      "algeria": 1794134537.883297
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18044,7 +18056,7 @@
     "1005008429979494": "lodydeals",
     "1005004795387201": "lodydeals",
     "1005010702983351": "aniscoupons",
-    "1005008366962319": "lodydeals",
+    "1005008366962319": "zedstoreonline",
     "1005005058037424": "lodydeals",
     "1005012946895000": "lodydeals",
     "1005006972551834": "lodydeals",
@@ -18984,7 +18996,8 @@
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": "aniscoupons",
     "OnePlus Ace 6 12/256GB": "lodydeals",
     "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": "zedstoreonline",
-    "Ulanzi A100 Wireless Lavalier Microphone": "aniscoupons"
+    "Ulanzi A100 Wireless Lavalier Microphone": "aniscoupons",
+    "Kootion X15 M.2 SSD NVMe 256GB": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
