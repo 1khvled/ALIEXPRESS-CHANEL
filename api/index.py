@@ -140,8 +140,14 @@ ICON_SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 # DASHBOARD_HTML is modularly imported from api.admin_dashboard
 
 
+_INITIAL_DEALS_CACHE: Dict[str, Any] = {"ts": 0.0, "payload": "[]"}
+
+
 def get_initial_deals_payload() -> str:
     """Returns JSON array string of recent verified deals for instant 0ms client hydration."""
+    now_ts = time.time()
+    if now_ts - _INITIAL_DEALS_CACHE["ts"] < 60 and _INITIAL_DEALS_CACHE["payload"] != "[]":
+        return _INITIAL_DEALS_CACHE["payload"]
     try:
         import sqlite3, json
         from pathlib import Path
@@ -186,12 +192,18 @@ def get_initial_deals_payload() -> str:
                 })
             conn.close()
             if deals:
-                return json.dumps(deals, ensure_ascii=False)
+                payload = json.dumps(deals, ensure_ascii=False)
+                _INITIAL_DEALS_CACHE["ts"] = now_ts
+                _INITIAL_DEALS_CACHE["payload"] = payload
+                return payload
         # Fallback to bundled recent_deals.json for instant 0ms Vercel hydration
         json_path = Path(__file__).resolve().parent.parent / "storage" / "state" / "recent_deals.json"
         if json_path.exists():
             with open(json_path, "r", encoding="utf-8") as jf:
-                return jf.read()
+                payload = jf.read()
+                _INITIAL_DEALS_CACHE["ts"] = now_ts
+                _INITIAL_DEALS_CACHE["payload"] = payload
+                return payload
     except Exception:
         pass
     return "[]" 
@@ -202,8 +214,8 @@ def get_active_event_seo_html() -> str:
     html = USER_WEBSITE_HTML
     try:
         from app.aliexpress.promos import promo_tracker
-        now = datetime.now(timezone.utc)
-        ev = promo_tracker.get_active_promo(now)
+        now_dt = datetime.now(timezone.utc)
+        ev = promo_tracker.get_active_promo(now_dt)
         if ev:
             active_codes = ", ".join([t["code"] for t in (ev.coupon_tiers or []) if "code" in t])
             top_deals = "Ryzen 7 9800X3D, OnePlus 13, AMD Ryzen 5 8400F, Redmi Note 12 5G, Honor 200, Fifine AM8, UGREEN GaN 65W, CUSU NVMe 1TB"
@@ -250,7 +262,10 @@ def get_active_event_seo_html() -> str:
 @app.get("/about", response_class=HTMLResponse)
 async def user_website():
     """Serves the modern user-facing AliExpress deals website with live Telegram feed and dynamic active event SEO."""
-    return HTMLResponse(content=get_active_event_seo_html())
+    return HTMLResponse(
+        content=get_active_event_seo_html(),
+        headers={"Cache-Control": "public, max-age=60, s-maxage=300, stale-while-revalidate=600"}
+    )
 
 
 @app.get("/blog/aliexpress-algeria-guide-dz", response_class=HTMLResponse)
@@ -258,7 +273,11 @@ async def user_website():
 @app.get("/blog", response_class=HTMLResponse)
 async def blog_guide_page():
     """Serves the comprehensive AliExpress Algeria 2026 native guide blog article."""
-    return HTMLResponse(content=get_blog_guide_html(), status_code=200)
+    return HTMLResponse(
+        content=get_blog_guide_html(),
+        status_code=200,
+        headers={"Cache-Control": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400"}
+    )
 
 
 ADMIN_SESSION_COOKIE = "dealscout_admin_session"
@@ -415,7 +434,7 @@ Sitemap: https://dealscoutgreen.vercel.app/sitemap.xml
     return Response(
         content=content,
         media_type="text/plain",
-        headers={"Cache-Control": "public, max-age=86400"}
+        headers={"Cache-Control": "public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400"}
     )
 
 
@@ -429,7 +448,7 @@ async def get_llms_txt():
     return Response(
         content=LLMS_TXT,
         media_type="text/plain; charset=utf-8",
-        headers={"Cache-Control": "public, max-age=3600"}
+        headers={"Cache-Control": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400"}
     )
 
 
@@ -442,7 +461,7 @@ async def get_llms_full_txt():
     return Response(
         content=LLMS_FULL_TXT,
         media_type="text/plain; charset=utf-8",
-        headers={"Cache-Control": "public, max-age=3600"}
+        headers={"Cache-Control": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400"}
     )
 
 
@@ -462,7 +481,7 @@ async def get_ai_summary():
         pass
     return JSONResponse(
         content=get_ai_summary_json(square_rate=rate),
-        headers={"Cache-Control": "public, max-age=300"}
+        headers={"Cache-Control": "public, max-age=300, s-maxage=600, stale-while-revalidate=600"}
     )
 
 
@@ -607,7 +626,7 @@ async def sitemap_xml():
     return Response(
         content=xml_content,
         media_type="application/xml",
-        headers={"Cache-Control": "public, max-age=3600"}
+        headers={"Cache-Control": "public, max-age=3600, s-maxage=86400, stale-while-revalidate=86400"}
     )
 
 
@@ -885,12 +904,15 @@ async def get_deals(channel: str = "@DzAliexpress0", force: bool = False):
     if not force and clean_ch in _DEALS_CACHE:
         cache_ts, cached_deals = _DEALS_CACHE[clean_ch]
         if now_ts - cache_ts < 60:
-            return {
-                "deals": cached_deals,
-                "count": len(cached_deals),
-                "usdt_rate": usdt_rate,
-                "channel": f"@{clean_ch}"
-            }
+            return JSONResponse(
+                content={
+                    "deals": cached_deals,
+                    "count": len(cached_deals),
+                    "usdt_rate": usdt_rate,
+                    "channel": f"@{clean_ch}"
+                },
+                headers={"Cache-Control": "public, max-age=60, s-maxage=180, stale-while-revalidate=300"}
+            )
 
     # 2. Fetch Telegram public preview
     deals = []
@@ -963,30 +985,45 @@ async def get_deals(channel: str = "@DzAliexpress0", force: bool = False):
     if deals:
         _DEALS_CACHE[clean_ch] = (now_ts, deals)
 
-    return {
-        "deals": deals,
-        "count": len(deals),
-        "usdt_rate": usdt_rate,
-        "channel": f"@{clean_ch}"
-    }
+    return JSONResponse(
+        content={
+            "deals": deals,
+            "count": len(deals),
+            "usdt_rate": usdt_rate,
+            "channel": f"@{clean_ch}"
+        },
+        headers={"Cache-Control": "public, max-age=60, s-maxage=180, stale-while-revalidate=300"}
+    )
 
 
 @app.get("/manifest.json")
 async def manifest():
     """Web App Manifest for PWA installation."""
-    return Response(content=MANIFEST_JSON, media_type="application/manifest+json")
+    return Response(
+        content=MANIFEST_JSON,
+        media_type="application/manifest+json",
+        headers={"Cache-Control": "public, max-age=86400, s-maxage=604800, immutable"}
+    )
 
 
 @app.get("/sw.js")
 async def service_worker():
     """Service Worker for offline support and PWA caching."""
-    return Response(content=SW_JS, media_type="application/javascript")
+    return Response(
+        content=SW_JS,
+        media_type="application/javascript",
+        headers={"Cache-Control": "public, max-age=3600, s-maxage=3600"}
+    )
 
 
 @app.get("/icon.svg")
 async def app_icon():
     """Vector PWA application icon."""
-    return Response(content=ICON_SVG, media_type="image/svg+xml")
+    return Response(
+        content=ICON_SVG,
+        media_type="image/svg+xml",
+        headers={"Cache-Control": "public, max-age=86400, s-maxage=604800, immutable"}
+    )
 
 
 @app.get("/logo.png")
@@ -994,7 +1031,7 @@ async def get_logo():
     """Official DealScout Brand Logo."""
     logo_path = Path(__file__).resolve().parent.parent / "assets" / "logo.png"
     if logo_path.exists():
-        return FileResponse(logo_path, media_type="image/png", headers={"Cache-Control": "public, max-age=604800"})
+        return FileResponse(logo_path, media_type="image/png", headers={"Cache-Control": "public, max-age=604800, s-maxage=2592000, immutable"})
     return Response(status_code=404)
 
 
@@ -1003,7 +1040,7 @@ async def get_logo_circular():
     """Official DealScout Circular Brand Logo."""
     logo_path = Path(__file__).resolve().parent.parent / "assets" / "logo_circular.png"
     if logo_path.exists():
-        return FileResponse(logo_path, media_type="image/png", headers={"Cache-Control": "public, max-age=604800"})
+        return FileResponse(logo_path, media_type="image/png", headers={"Cache-Control": "public, max-age=604800, s-maxage=2592000, immutable"})
     return Response(status_code=404)
 
 
@@ -1012,7 +1049,7 @@ async def get_official_stores_banner():
     """Official 11.11 Brand Stores Directory Showcase Banner."""
     banner_path = Path(__file__).resolve().parent.parent / "assets" / "official_stores_directory_banner.png"
     if banner_path.exists():
-        return FileResponse(banner_path, media_type="image/png", headers={"Cache-Control": "public, max-age=604800"})
+        return FileResponse(banner_path, media_type="image/png", headers={"Cache-Control": "public, max-age=604800, s-maxage=2592000, immutable"})
     return Response(status_code=404)
 
 
@@ -1021,7 +1058,10 @@ async def live_rates():
     """Returns live USDT rate from SquareAlgerie.com."""
     from api.coin_bot import get_live_usdt_rate
     rate = await get_live_usdt_rate()
-    return {"rate": rate, "currency": "USDT", "source": "SquareAlgerie.com"}
+    return JSONResponse(
+        content={"rate": rate, "currency": "USDT", "source": "SquareAlgerie.com"},
+        headers={"Cache-Control": "public, max-age=300, s-maxage=600, stale-while-revalidate=600"}
+    )
 
 
 @app.get("/api/stats")
@@ -1650,11 +1690,14 @@ async def get_active_event_api(include_upcoming: bool = False):
             "countdown_type": "ending",
             "target_date": ev.end_date.isoformat()
         }
-        return {
-            "active": True,
-            "event": event_data,
-            "active_event": event_data
-        }
+        return JSONResponse(
+            content={
+                "active": True,
+                "event": event_data,
+                "active_event": event_data
+            },
+            headers={"Cache-Control": "public, max-age=300, s-maxage=600, stale-while-revalidate=600"}
+        )
 
     if include_upcoming:
         next_tuple = promo_tracker.get_next_promo(now)
@@ -1675,16 +1718,22 @@ async def get_active_event_api(include_upcoming: bool = False):
                 "countdown_type": "starting",
                 "target_date": next_ev.start_date.isoformat()
             }
-            return {
-                "active": False,
-                "status": "upcoming",
-                "countdown_type": "starting",
-                "target_date": next_ev.start_date.isoformat(),
-                "event": next_data,
-                "next_event": next_data
-            }
+            return JSONResponse(
+                content={
+                    "active": False,
+                    "status": "upcoming",
+                    "countdown_type": "starting",
+                    "target_date": next_ev.start_date.isoformat(),
+                    "event": next_data,
+                    "next_event": next_data
+                },
+                headers={"Cache-Control": "public, max-age=300, s-maxage=600, stale-while-revalidate=600"}
+            )
 
-    return {"active": False, "event": None}
+    return JSONResponse(
+        content={"active": False, "event": None},
+        headers={"Cache-Control": "public, max-age=300, s-maxage=600, stale-while-revalidate=600"}
+    )
 
 
 _CHANNEL_POSTS_CACHE: Dict[str, Any] = {}
@@ -1767,7 +1816,7 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
         if now_ts - cache_ts < 60 and cached_posts:
             return JSONResponse(
                 {"posts": cached_posts, "count": len(cached_posts), "cached": True, "active_event": active_ev_data},
-                headers={"Cache-Control": "public, max-age=60"}
+                headers={"Cache-Control": "public, max-age=60, s-maxage=180, stale-while-revalidate=300"}
             )
 
     # 2. Fetch from Telegram public web preview (with pagination to guarantee 25-30 deals)
@@ -1892,7 +1941,7 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
                 _CHANNEL_POSTS_CACHE[clean_ch] = (now_ts, posts)
                 return JSONResponse(
                     {"posts": posts, "count": len(posts), "cached": False, "active_event": active_ev_data},
-                    headers={"Cache-Control": "public, max-age=60"}
+                    headers={"Cache-Control": "public, max-age=60, s-maxage=180, stale-while-revalidate=300"}
                 )
     except Exception:
         pass
@@ -1903,7 +1952,7 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
         if cached_posts:
             return JSONResponse(
                 {"posts": cached_posts, "count": len(cached_posts), "cached": True, "stale": True, "active_event": active_ev_data},
-                headers={"Cache-Control": "public, max-age=30"}
+                headers={"Cache-Control": "public, max-age=30, s-maxage=120, stale-while-revalidate=180"}
             )
 
     # 4. Graceful Fallback to bundled recent deals if Telegram failed & no cache
@@ -1930,7 +1979,7 @@ async def channel_posts(channel: str = "@DzAliexpress0", force: bool = False):
                     _CHANNEL_POSTS_CACHE[clean_ch] = (now_ts, converted_posts)
                     return JSONResponse(
                         {"posts": converted_posts, "count": len(converted_posts), "cached": True, "stale": True, "active_event": active_ev_data},
-                        headers={"Cache-Control": "public, max-age=60"}
+                        headers={"Cache-Control": "public, max-age=60, s-maxage=180, stale-while-revalidate=300"}
                     )
         except Exception:
             pass
@@ -1955,7 +2004,7 @@ async def image_proxy(url: str = Query(...)):
                 return Response(
                     content=resp.content,
                     media_type=media_type,
-                    headers={"Cache-Control": "public, max-age=86400"}
+                    headers={"Cache-Control": "public, max-age=86400, s-maxage=604800, stale-while-revalidate=86400"}
                 )
             return Response(status_code=resp.status_code)
     except Exception:
