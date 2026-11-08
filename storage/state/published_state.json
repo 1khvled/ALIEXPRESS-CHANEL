@@ -1134,7 +1134,7 @@
     "1005012864273120": 1793399494.1323898,
     "1005006967218963": 1793448582.9150612,
     "1005012675968319": 1793399525.3383162,
-    "1005010424638496": 1794126846.802194,
+    "1005010424638496": 1794147930.6937103,
     "1005010141682336": 1793399542.6698716,
     "1005006782790827": 1793966774.5170474,
     "1005012938359476": 1793448722.5382965,
@@ -3147,7 +3147,7 @@
     "Essager 30W Car Charger": 1794046667.9804564,
     "KOOTION SSD SATA  240GB": 1794051434.2488248,
     "Xiaomi Redmi Note 17 Pro 5G Global Version": 1794060065.5449874,
-    "Magcubic  HY350 Max 900ANSI": 1794060985.659608,
+    "Magcubic  HY350 Max 900ANSI": 1794147930.6937103,
     "Toocki 60W Car Charger and cable": 1794062457.796558,
     "Hollyland Lark M2 Wireless Mic": 1794063654.6498907,
     "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": 1794064385.819615,
@@ -3187,7 +3187,6 @@
     "Ulanzi ST-06S Smartphone Mount Holder": 1794146840.7057447
   },
   "published_post_keys": [
-    "bnddeals:50856",
     "aniscoupons:33316",
     "lodydeals:45844",
     "ecksdeal:5990",
@@ -4186,11 +4185,12 @@
     "lodydeals:46256",
     "aniscoupons:34296",
     "zedstoreonline:39739",
-    "aniscoupons:34298"
+    "aniscoupons:34298",
+    "zedstoreonline:39742"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794147383.4570146,
+  "last_run_time": 1794147930.6937103,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6045,
@@ -4217,8 +4217,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39741,
-      "last_check_time": 1794147748.3180544
+      "last_message_id": 39742,
+      "last_check_time": 1794147932.742574
     },
     "aniscoupons": {
       "last_message_id": 34298,
@@ -4575,7 +4575,7 @@
     "1005012864273120": 154.0,
     "1005006967218963": 17.3,
     "1005012675968319": 30.0,
-    "1005010424638496": 111.4,
+    "1005010424638496": 113.9,
     "1005010141682336": 224.0,
     "1005006782790827": 47.5,
     "1005012938359476": 123.17,
@@ -17600,6 +17600,16 @@
       "price": 67.6,
       "timestamp": 1794147383.4570146,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39742": {
+      "channel_msg_id": 2076,
+      "product_id": "1005010424638496",
+      "title": "Magcubic  HY350 Max 900ANSI",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39742,
+      "price": 113.9,
+      "timestamp": 1794147930.6937103,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17608,17 +17618,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794147386.323361,
+    "last_deal_post_time": 1794147934.0592263,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794147752.622919,
+    "last_sweep_time": 1794147937.2155173,
     "last_sweep_times": {
-      "algeria": 1794147749.451539,
-      "france": 1794147752.622919
+      "algeria": 1794147934.0367162,
+      "france": 1794147937.2155173
     },
     "last_deal_post_times": {
-      "algeria": 1794147386.323361
+      "algeria": 1794147934.0592263
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18066,7 +18076,7 @@
     "1005012864273120": "zedstoreonline",
     "1005006967218963": "zedstoreonline",
     "1005012675968319": "aniscoupons",
-    "1005010424638496": "aniscoupons",
+    "1005010424638496": "zedstoreonline",
     "1005010141682336": "aniscoupons",
     "1005006782790827": "zedstoreonline",
     "1005012938359476": "aniscoupons",
