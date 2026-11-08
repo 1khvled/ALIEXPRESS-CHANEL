@@ -1183,7 +1183,7 @@
     "1005012519569107": 1793490085.1205146,
     "1005006996991698": 1793542450.420599,
     "1005006968874168": 1793490102.028307,
-    "1005010770983388": 1793971007.1100602,
+    "1005010770983388": 1794166685.9915411,
     "1005010146801356": 1793540023.002178,
     "1005012536471204": 1793611292.7491462,
     "9998881104": 1793541104.8228326,
@@ -2311,7 +2311,8 @@
     "Warvank X8 Wireless Gaming",
     "GameSir X5 Lite Mobile Controller",
     "Machenike G7 56g RGB",
-    "ضف 4 قطع ثم أدفع"
+    "ضف 4 قطع ثم أدفع",
+    "iQOO Z11 Turbo 12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3210,10 +3211,10 @@
     "Warvank X8 Wireless Gaming": 1794164680.2575803,
     "GameSir X5 Lite Mobile Controller": 1794164684.9082866,
     "Machenike G7 56g RGB": 1794164691.7591228,
-    "ضف 4 قطع ثم أدفع": 1794165031.7231321
+    "ضف 4 قطع ثم أدفع": 1794165031.7231321,
+    "iQOO Z11 Turbo 12/256GB": 1794166685.9915411
   },
   "published_post_keys": [
-    "lodydeals:45729",
     "lodydeals:45908",
     "aniscoupons:32717",
     "test_channel:1791627893",
@@ -4212,19 +4213,20 @@
     "lodydeals:46264",
     "lodydeals:46265",
     "bnddeals:51237",
-    "zedstoreonline:39753"
+    "zedstoreonline:39753",
+    "lodydeals:46268"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794166133.813164,
+  "last_run_time": 1794166685.9915411,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
       "last_check_time": 1794159484.4700966
     },
     "lodydeals": {
-      "last_message_id": 46267,
-      "last_check_time": 1794165755.513396
+      "last_message_id": 46268,
+      "last_check_time": 1794166688.0475614
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -17889,6 +17891,16 @@
       "price": 259.7,
       "timestamp": 1794166133.813164,
       "status": "ACTIVE"
+    },
+    "lodydeals:46268": {
+      "channel_msg_id": 2103,
+      "product_id": "1005010770983388",
+      "title": "iQOO Z11 Turbo 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46268,
+      "price": 381.27,
+      "timestamp": 1794166685.9915411,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17897,17 +17909,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794166137.252598,
+    "last_deal_post_time": 1794166690.4768872,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794166524.6627808,
+    "last_sweep_time": 1794166693.4435542,
     "last_sweep_times": {
-      "algeria": 1794166522.0746791,
-      "france": 1794166524.6627808
+      "algeria": 1794166690.4509475,
+      "france": 1794166693.4435542
     },
     "last_deal_post_times": {
-      "algeria": 1794166137.252598
+      "algeria": 1794166690.4768872
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18400,7 +18412,7 @@
     "1005012519569107": "zedstoreonline",
     "1005006996991698": "lodydeals",
     "1005006968874168": "zedstoreonline",
-    "1005010770983388": "aniscoupons",
+    "1005010770983388": "lodydeals",
     "1005010146801356": "lodydeals",
     "1005012536471204": "lodydeals",
     "9998881104": "test_channel",
@@ -19524,7 +19536,8 @@
     "Warvank X8 Wireless Gaming": "lodydeals",
     "GameSir X5 Lite Mobile Controller": "lodydeals",
     "Machenike G7 56g RGB": "lodydeals",
-    "ضف 4 قطع ثم أدفع": "bnddeals"
+    "ضف 4 قطع ثم أدفع": "bnddeals",
+    "iQOO Z11 Turbo 12/256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
