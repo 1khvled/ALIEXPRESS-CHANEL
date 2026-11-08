@@ -684,7 +684,9 @@
     "1005011874310777",
     "1005008721853055",
     "1005012593794312",
-    "1005008384277561"
+    "1005008384277561",
+    "1005010155263623",
+    "1005011572208218"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -900,7 +902,7 @@
     "1005012914301139": 1792191289.2917817,
     "1005007345151855": 1791942667.867043,
     "1005010345227483": 1793299548.5548651,
-    "1005011557896041": 1793543627.8450525,
+    "1005011557896041": 1794129979.1935983,
     "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
     "1005007916078341": 1794124830.4594686,
@@ -1383,7 +1385,9 @@
     "1005011874310777": 1794087501.0429602,
     "1005008721853055": 1794126663.880001,
     "1005012593794312": 1794128140.9765735,
-    "1005008384277561": 1794128872.1451216
+    "1005008384277561": 1794128872.1451216,
+    "1005010155263623": 1794129971.1690388,
+    "1005011572208218": 1794129986.607079
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2250,7 +2254,9 @@
     "مبرد الهاتف MEMO CX10",
     "KOOTION SATA SSD 480GB",
     "راوتر Vodafone 4G محمول",
-    "OnePlus ACE 6T"
+    "OnePlus ACE 6T",
+    "Essager Mini 20W Type C Charger PD",
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2505,7 +2511,7 @@
     "ATTACK SHARK X11SE Wireless Gaming Mouse PixArt PAW3311": 1791942658.9081998,
     "لووووووووووووز controller 🎮": 1791942667.867043,
     "جديد علامة ©️©️©️©️🆕": 1791942676.1983886,
-    "AMD Ryzen 7 7800X3D": 1793543627.8450525,
+    "AMD Ryzen 7 7800X3D": 1794129979.1935983,
     "AMD Ryzen 5 8400F": 1793448608.235321,
     "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": 1791943777.8506553,
     "🔝 مانات قووووة ل جماعة mobile gaming 🎮": 1792017738.3981204,
@@ -3122,12 +3128,11 @@
     "مبرد الهاتف MEMO CX10": 1794126663.880001,
     "KOOTION SATA SSD 480GB": 1794127389.2657666,
     "راوتر Vodafone 4G محمول": 1794128872.1451216,
-    "OnePlus ACE 6T": 1794128880.302774
+    "OnePlus ACE 6T": 1794128880.302774,
+    "Essager Mini 20W Type C Charger PD": 1794129971.1690388,
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794129986.607079
   },
   "published_post_keys": [
-    "zedstoreonline:38790",
-    "couponsglobal:48799",
-    "aniscoupons:32711",
     "lodydeals:45417",
     "megaphonna:8542",
     "lodydeals:45693",
@@ -4124,11 +4129,14 @@
     "aniscoupons:34276",
     "zedstoreonline:39720",
     "aniscoupons:34277",
-    "aniscoupons:34278"
+    "aniscoupons:34278",
+    "zedstoreonline:39723",
+    "zedstoreonline:39724",
+    "aniscoupons:34279"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794129232.8871872,
+  "last_run_time": 1794129986.607079,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4155,12 +4163,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39722,
-      "last_check_time": 1794129408.9678288
+      "last_message_id": 39724,
+      "last_check_time": 1794129981.2504046
     },
     "aniscoupons": {
-      "last_message_id": 34278,
-      "last_check_time": 1794129234.9400926
+      "last_message_id": 34279,
+      "last_check_time": 1794129988.6622627
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -4354,7 +4362,7 @@
     "1005012914301139": 12.07,
     "1005007345151855": 40.0,
     "1005010345227483": 200.0,
-    "1005011557896041": 243.58,
+    "1005011557896041": 240.7,
     "1005011754993234": 79.58,
     "1005011735727412": 26.6,
     "1005013039644752": 265.7,
@@ -4750,7 +4758,9 @@
     "1005009120888793": 18.13,
     "1005011874310777": 24.2,
     "1005008721853055": 8.7,
-    "1005008384277561": 7.3
+    "1005008384277561": 7.3,
+    "1005010155263623": 2.4,
+    "1005011572208218": 217.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17205,6 +17215,36 @@
       "price": 186.74,
       "timestamp": 1794129232.8871872,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39723": {
+      "channel_msg_id": 2044,
+      "product_id": "1005010155263623",
+      "title": "Essager Mini 20W Type C Charger PD",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39723,
+      "price": 2.4,
+      "timestamp": 1794129971.1690388,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:39724": {
+      "channel_msg_id": 2045,
+      "product_id": "1005011557896041",
+      "title": "AMD Ryzen 7 7800X3D",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39724,
+      "price": 240.7,
+      "timestamp": 1794129979.1935983,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34279": {
+      "channel_msg_id": 2046,
+      "product_id": "1005011572208218",
+      "title": "Xiaomi Redmi Note 17 5G Global Version (6/256GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34279,
+      "price": 217.8,
+      "timestamp": 1794129986.607079,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17213,17 +17253,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794129235.747945,
+    "last_deal_post_time": 1794129989.4761488,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794129779.131344,
+    "last_sweep_time": 1794129992.4233458,
     "last_sweep_times": {
-      "algeria": 1794129740.5459125,
-      "france": 1794129779.131344
+      "algeria": 1794129989.4512544,
+      "france": 1794129992.4233458
     },
     "last_deal_post_times": {
-      "algeria": 1794129235.747945
+      "algeria": 1794129989.4761488
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -17449,7 +17489,7 @@
     "1005012914301139": "lodydeals",
     "1005007345151855": "bnddeals",
     "1005010345227483": "megaphonna",
-    "1005011557896041": "lodydeals",
+    "1005011557896041": "zedstoreonline",
     "1005011754993234": "ecksdeal",
     "1005011735727412": "bnddeals",
     "1005013039644752": "aniscoupons",
@@ -17922,7 +17962,9 @@
     "1005011874310777": "lodydeals",
     "1005008721853055": "zedstoreonline",
     "1005012593794312": "aniscoupons",
-    "1005008384277561": "zedstoreonline"
+    "1005008384277561": "zedstoreonline",
+    "1005010155263623": "zedstoreonline",
+    "1005011572208218": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -18141,7 +18183,7 @@
     "CMF by Nothing Buds 2A 12.4mm Driver 42dB ANC 4HD MicsLong Battery Life Up": "aniscoupons",
     "REALME 15 5G (12/512)": "megaphonna",
     "Attack Shark X1 PAW3395PRO": "lodydeals",
-    "AMD Ryzen 7 7800X3D": "lodydeals",
+    "AMD Ryzen 7 7800X3D": "zedstoreonline",
     "UGREEN MAX5S ANC -45dB": "lodydeals",
     "Attack Shark G300 ANC": "lodydeals",
     "POCO X8 5G 6/128": "zedstoreonline",
@@ -18796,7 +18838,9 @@
     "مبرد الهاتف MEMO CX10": "zedstoreonline",
     "KOOTION SATA SSD 480GB": "zedstoreonline",
     "راوتر Vodafone 4G محمول": "zedstoreonline",
-    "OnePlus ACE 6T": "aniscoupons"
+    "OnePlus ACE 6T": "aniscoupons",
+    "Essager Mini 20W Type C Charger PD": "zedstoreonline",
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
