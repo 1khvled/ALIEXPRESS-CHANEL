@@ -699,7 +699,9 @@
     "1005007038022940",
     "1005007981362777",
     "1005007097302001",
-    "1005013361453762"
+    "1005013361453762",
+    "1005013240296031",
+    "1005012670472055"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1364,7 +1366,7 @@
     "9998887107": 1793967108.0014687,
     "9998887678": 1793967678.8184059,
     "9998887703": 1793967703.2348685,
-    "1005008708333999": 1794148671.949184,
+    "1005008708333999": 1794164698.641711,
     "1005012254132930": 1793970449.9003735,
     "1005013028124905": 1793971934.3600886,
     "1005012691642623": 1794074230.5173922,
@@ -1401,19 +1403,21 @@
     "1005008384277561": 1794128872.1451216,
     "1005010155263623": 1794129971.1690388,
     "1005011572208218": 1794159581.7546332,
-    "1005012374550298": 1794130518.3291268,
+    "1005012374550298": 1794164691.7591228,
     "1005009851407234": 1794130701.0727847,
-    "1005009738356108": 1794131236.9079208,
+    "1005009738356108": 1794164684.9082866,
     "1005012953027259": 1794133977.9005425,
     "1005012048332402": 1794136369.073103,
     "1005011665465731": 1794137638.8201442,
     "1005012377459743": 1794139106.9168086,
-    "1005009460475870": 1794144806.2660766,
+    "1005009460475870": 1794164680.2575803,
     "1005009649079564": 1794145536.5317988,
     "1005007038022940": 1794146648.256951,
     "1005007981362777": 1794146655.1062205,
     "1005007097302001": 1794146830.4272797,
-    "1005013361453762": 1794159510.650968
+    "1005013361453762": 1794159510.650968,
+    "1005013240296031": 1794164670.8679597,
+    "1005012670472055": 1794164675.8426867
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2301,7 +2305,12 @@
     "WAMRAM SATA SSD 480GB",
     "Netac M.2 1TB 7400Mbs Gen 4",
     "RYZEN 5 5600XT",
-    "OnePlus Turbo 6V"
+    "OnePlus Turbo 6V",
+    "DJI Mic Mini2  2TX 1RX",
+    "Magcubic HY350Max 900 ANSI",
+    "Warvank X8 Wireless Gaming",
+    "GameSir X5 Lite Mobile Controller",
+    "Machenike G7 56g RGB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3123,7 +3132,7 @@
     "HAYLOU WATCH 3 NEW": 1793966892.2256048,
     "Vivo Y600 Pro": 1793969543.5771117,
     "MAONO PD100X USB/XL": 1793969903.1419857,
-    "Realme C100D 4G 4/128GB": 1793969907.6763735,
+    "Realme C100D 4G 4/128GB": 1794164698.641711,
     "HAYLOU Flowbuds N50 ANC": 1793970449.9003735,
     "Honor 600 Pro 12/256": 1794131798.3098254,
     "HONOR Pad X8a (4/64GB)": 1794127587.510284,
@@ -3194,15 +3203,14 @@
     "WAMRAM SATA SSD 480GB": 1794159522.2930505,
     "Netac M.2 1TB 7400Mbs Gen 4": 1794159532.8883114,
     "RYZEN 5 5600XT": 1794159590.2283225,
-    "OnePlus Turbo 6V": 1794160828.535879
+    "OnePlus Turbo 6V": 1794160828.535879,
+    "DJI Mic Mini2  2TX 1RX": 1794164670.8679597,
+    "Magcubic HY350Max 900 ANSI": 1794164675.8426867,
+    "Warvank X8 Wireless Gaming": 1794164680.2575803,
+    "GameSir X5 Lite Mobile Controller": 1794164684.9082866,
+    "Machenike G7 56g RGB": 1794164691.7591228
   },
   "published_post_keys": [
-    "aniscoupons:33181",
-    "aniscoupons:32718",
-    "lodydeals:45532",
-    "zedstoreonline:38822",
-    "lodydeals:45846",
-    "lodydeals:45483",
     "aniscoupons:32708",
     "aniscoupons:33037",
     "lodydeals:45729",
@@ -4196,19 +4204,25 @@
     "aniscoupons:34311",
     "zedstoreonline:39751",
     "aniscoupons:34312",
-    "zedstoreonline:39752"
+    "zedstoreonline:39752",
+    "lodydeals:46258",
+    "lodydeals:46259",
+    "lodydeals:46262",
+    "lodydeals:46263",
+    "lodydeals:46264",
+    "lodydeals:46265"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794163011.802638,
+  "last_run_time": 1794164698.641711,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
       "last_check_time": 1794159484.4700966
     },
     "lodydeals": {
-      "last_message_id": 46263,
-      "last_check_time": 1794164479.0262284
+      "last_message_id": 46265,
+      "last_check_time": 1794164700.7011883
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4831,12 +4845,14 @@
     "1005012048332402": 193.1,
     "1005011665465731": 5.38,
     "1005012377459743": 304.77,
-    "1005009460475870": 6.9,
+    "1005009460475870": 6.78,
     "1005009649079564": 19.4,
     "1005007038022940": 5.49,
     "1005007981362777": 5.69,
     "1005007097302001": 4.69,
-    "1005013361453762": 276.3
+    "1005013361453762": 276.3,
+    "1005013240296031": 69.06,
+    "1005012670472055": 112.11
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17791,6 +17807,66 @@
       "price": 10.8,
       "timestamp": 1794163011.802638,
       "status": "ACTIVE"
+    },
+    "lodydeals:46258": {
+      "channel_msg_id": 2095,
+      "product_id": "1005013240296031",
+      "title": "DJI Mic Mini2  2TX 1RX",
+      "channel": "lodydeals",
+      "source_msg_id": 46258,
+      "price": 69.06,
+      "timestamp": 1794164670.8679597,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46259": {
+      "channel_msg_id": 2096,
+      "product_id": "1005012670472055",
+      "title": "Magcubic HY350Max 900 ANSI",
+      "channel": "lodydeals",
+      "source_msg_id": 46259,
+      "price": 112.11,
+      "timestamp": 1794164675.8426867,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46262": {
+      "channel_msg_id": 2097,
+      "product_id": "1005009460475870",
+      "title": "Warvank X8 Wireless Gaming",
+      "channel": "lodydeals",
+      "source_msg_id": 46262,
+      "price": 6.78,
+      "timestamp": 1794164680.2575803,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46263": {
+      "channel_msg_id": 2098,
+      "product_id": "1005009738356108",
+      "title": "GameSir X5 Lite Mobile Controller",
+      "channel": "lodydeals",
+      "source_msg_id": 46263,
+      "price": 16.5,
+      "timestamp": 1794164684.9082866,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46264": {
+      "channel_msg_id": 2099,
+      "product_id": "1005012374550298",
+      "title": "Machenike G7 56g RGB",
+      "channel": "lodydeals",
+      "source_msg_id": 46264,
+      "price": 17.6,
+      "timestamp": 1794164691.7591228,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46265": {
+      "channel_msg_id": 2100,
+      "product_id": "1005008708333999",
+      "title": "Realme C100D 4G 4/128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46265,
+      "price": 136.7,
+      "timestamp": 1794164698.641711,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17799,17 +17875,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794163014.9346013,
+    "last_deal_post_time": 1794164703.144463,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794164483.8753667,
+    "last_sweep_time": 1794164706.1609902,
     "last_sweep_times": {
-      "algeria": 1794164480.9932358,
-      "france": 1794164483.8753667
+      "algeria": 1794164703.1194406,
+      "france": 1794164706.1609902
     },
     "last_deal_post_times": {
-      "algeria": 1794163014.9346013
+      "algeria": 1794164703.144463
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18474,7 +18550,7 @@
     "9998887107": "test_channel",
     "9998887678": "test_channel",
     "9998887703": "test_channel",
-    "1005008708333999": "zedstoreonline",
+    "1005008708333999": "lodydeals",
     "1005012254132930": "zedstoreonline",
     "1005013028124905": "zedstoreonline",
     "1005012691642623": "zedstoreonline",
@@ -18511,19 +18587,21 @@
     "1005008384277561": "zedstoreonline",
     "1005010155263623": "zedstoreonline",
     "1005011572208218": "aniscoupons",
-    "1005012374550298": "zedstoreonline",
+    "1005012374550298": "lodydeals",
     "1005009851407234": "zedstoreonline",
-    "1005009738356108": "zedstoreonline",
+    "1005009738356108": "lodydeals",
     "1005012953027259": "aniscoupons",
     "1005012048332402": "aniscoupons",
     "1005011665465731": "lodydeals",
     "1005012377459743": "aniscoupons",
-    "1005009460475870": "zedstoreonline",
+    "1005009460475870": "lodydeals",
     "1005009649079564": "zedstoreonline",
     "1005007038022940": "lodydeals",
     "1005007981362777": "lodydeals",
     "1005007097302001": "lodydeals",
-    "1005013361453762": "zedstoreonline"
+    "1005013361453762": "zedstoreonline",
+    "1005013240296031": "lodydeals",
+    "1005012670472055": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19418,7 +19496,12 @@
     "WAMRAM SATA SSD 480GB": "zedstoreonline",
     "Netac M.2 1TB 7400Mbs Gen 4": "aniscoupons",
     "RYZEN 5 5600XT": "aniscoupons",
-    "OnePlus Turbo 6V": "aniscoupons"
+    "OnePlus Turbo 6V": "aniscoupons",
+    "DJI Mic Mini2  2TX 1RX": "lodydeals",
+    "Magcubic HY350Max 900 ANSI": "lodydeals",
+    "Warvank X8 Wireless Gaming": "lodydeals",
+    "GameSir X5 Lite Mobile Controller": "lodydeals",
+    "Machenike G7 56g RGB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -20212,9 +20295,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "bnddeals:50869",
-    "megaphonna:8391",
-    "lodydeals:45506",
     "aniscoupons:33152",
     "bnddeals:50983",
     "lodydeals:45760",
@@ -21211,7 +21291,10 @@
     "zedstoreonline:39750",
     "aniscoupons:34308",
     "aniscoupons:34309",
-    "bnddeals:51235"
+    "bnddeals:51235",
+    "lodydeals:46257",
+    "lodydeals:46260",
+    "lodydeals:46261"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
