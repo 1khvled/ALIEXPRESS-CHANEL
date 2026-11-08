@@ -690,7 +690,8 @@
     "1005012374550298",
     "1005009851407234",
     "1005009738356108",
-    "1005012953027259"
+    "1005012953027259",
+    "1005012048332402"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1395,7 +1396,8 @@
     "1005012374550298": 1794130518.3291268,
     "1005009851407234": 1794130701.0727847,
     "1005009738356108": 1794131236.9079208,
-    "1005012953027259": 1794133977.9005425
+    "1005012953027259": 1794133977.9005425,
+    "1005012048332402": 1794136369.073103
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2993,7 +2995,7 @@
     "Xiaoxin Pad Pro 13 (8/128)": 1794130874.808105,
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S CPU 11.1\" 4K 144Hz LCD Display 1100": 1793613951.963987,
     "Honor Pad V9 (8/256)": 1794133977.9005425,
-    "HONOR Pad X8b (LTE 6/128GB)": 1793613961.7877593,
+    "HONOR Pad X8b (LTE 6/128GB)": 1794136369.073103,
     "[Clearance] realme 14T 5G Smartphone NFC Dimensity 6300 5G Processor": 1793613966.8608465,
     "RYZEN 5 9600X": 1793613978.6202738,
     "Magcubic HY300 Max Projector": 1793973971.0121949,
@@ -3149,7 +3151,6 @@
     "Kootion X15 M.2 SSD NVMe 256GB": 1794134534.5760646
   },
   "published_post_keys": [
-    "lodydeals:45798",
     "zedstoreonline:38760",
     "aniscoupons:32742",
     "pcgamingpart:7943",
@@ -4148,11 +4149,12 @@
     "zedstoreonline:39730",
     "aniscoupons:34287",
     "zedstoreonline:39731",
-    "zedstoreonline:39732"
+    "zedstoreonline:39732",
+    "aniscoupons:34288"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794134534.5760646,
+  "last_run_time": 1794136369.073103,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6043,
@@ -4179,12 +4181,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39733,
-      "last_check_time": 1794134893.7296052
+      "last_message_id": 39734,
+      "last_check_time": 1794136363.3820682
     },
     "aniscoupons": {
-      "last_message_id": 34287,
-      "last_check_time": 1794133979.9318945
+      "last_message_id": 34288,
+      "last_check_time": 1794136371.127063
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -4779,7 +4781,8 @@
     "1005011572208218": 217.8,
     "1005012374550298": 17.6,
     "1005009851407234": 149.4,
-    "1005012953027259": 279.32
+    "1005012953027259": 279.32,
+    "1005012048332402": 193.1
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17394,6 +17397,16 @@
       "price": 30.8,
       "timestamp": 1794134534.5760646,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34288": {
+      "channel_msg_id": 2060,
+      "product_id": "1005012048332402",
+      "title": "HONOR Pad X8b (LTE 6/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34288,
+      "price": 193.1,
+      "timestamp": 1794136369.073103,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17402,17 +17415,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794134537.883297,
+    "last_deal_post_time": 1794136372.0897722,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794136183.3328264,
+    "last_sweep_time": 1794136375.8765404,
     "last_sweep_times": {
-      "algeria": 1794136179.4379623,
-      "france": 1794136183.3328264
+      "algeria": 1794136372.0655828,
+      "france": 1794136375.8765404
     },
     "last_deal_post_times": {
-      "algeria": 1794134537.883297
+      "algeria": 1794136372.0897722
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18117,7 +18130,8 @@
     "1005012374550298": "zedstoreonline",
     "1005009851407234": "zedstoreonline",
     "1005009738356108": "zedstoreonline",
-    "1005012953027259": "aniscoupons"
+    "1005012953027259": "aniscoupons",
+    "1005012048332402": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19791,7 +19805,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33428",
     "megaphonna:8504",
     "lodydeals:45499",
     "zedstoreonline:38570",
@@ -20790,7 +20803,8 @@
     "aniscoupons:34284",
     "aniscoupons:34285",
     "aniscoupons:34286",
-    "zedstoreonline:39733"
+    "zedstoreonline:39733",
+    "zedstoreonline:39734"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
