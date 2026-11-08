@@ -4173,8 +4173,8 @@
       "last_check_time": 1794140208.423124
     },
     "lodydeals": {
-      "last_message_id": 46251,
-      "last_check_time": 1794142590.1994126
+      "last_message_id": 46252,
+      "last_check_time": 1794144613.2546663
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -17493,10 +17493,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794144435.835066,
+    "last_sweep_time": 1794144619.802387,
     "last_sweep_times": {
-      "algeria": 1794144432.381921,
-      "france": 1794144435.835066
+      "algeria": 1794144615.9856098,
+      "france": 1794144619.802387
     },
     "last_deal_post_times": {
       "algeria": 1794142228.070857
@@ -19885,7 +19885,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45892",
     "megaphonna:8293",
     "lodydeals:45571",
     "aniscoupons:32942",
@@ -20884,7 +20883,8 @@
     "lodydeals:46249",
     "aniscoupons:34292",
     "lodydeals:46251",
-    "zedstoreonline:39735"
+    "zedstoreonline:39735",
+    "lodydeals:46252"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
