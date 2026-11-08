@@ -697,7 +697,8 @@
     "1005009460475870",
     "1005009649079564",
     "1005007038022940",
-    "1005007981362777"
+    "1005007981362777",
+    "1005007097302001"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1370,7 +1371,7 @@
     "1005007469003552": 1794130707.0577464,
     "1005010041181003": 1794126322.307194,
     "1005010265542567": 1794131426.95932,
-    "1005003156756854": 1794130692.4786665,
+    "1005003156756854": 1794146840.7057447,
     "1005010142208108": 1793987278.5140982,
     "1005008534907844": 1793987285.4130383,
     "1005009577554629": 1793987289.8200357,
@@ -1409,7 +1410,8 @@
     "1005009460475870": 1794144806.2660766,
     "1005009649079564": 1794145536.5317988,
     "1005007038022940": 1794146648.256951,
-    "1005007981362777": 1794146655.1062205
+    "1005007981362777": 1794146655.1062205,
+    "1005007097302001": 1794146830.4272797
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2291,7 +2293,9 @@
     "Xiaoxin Pad Pro 2025 (8/128GB)",
     "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth",
     "Lenovo Thinkplus XT88",
-    "Rolls-Royce Phantom Model"
+    "Rolls-Royce Phantom Model",
+    "Lenovo LP40 Pro",
+    "Ulanzi ST-06S Smartphone Mount Holder"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3178,11 +3182,11 @@
     "Xiaoxin Pad Pro 2025 (8/128GB)": 1794145351.158124,
     "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": 1794145536.5317988,
     "Lenovo Thinkplus XT88": 1794146648.256951,
-    "Rolls-Royce Phantom Model": 1794146655.1062205
+    "Rolls-Royce Phantom Model": 1794146655.1062205,
+    "Lenovo LP40 Pro": 1794146830.4272797,
+    "Ulanzi ST-06S Smartphone Mount Holder": 1794146840.7057447
   },
   "published_post_keys": [
-    "lodydeals:45930",
-    "lodydeals:45823",
     "test_channel:1792162568",
     "bnddeals:50949",
     "bnddeals:50856",
@@ -4180,19 +4184,21 @@
     "aniscoupons:34295",
     "zedstoreonline:39737",
     "lodydeals:46254",
-    "lodydeals:46255"
+    "lodydeals:46255",
+    "lodydeals:46256",
+    "aniscoupons:34296"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794146655.1062205,
+  "last_run_time": 1794146840.7057447,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6045,
       "last_check_time": 1794140208.423124
     },
     "lodydeals": {
-      "last_message_id": 46255,
-      "last_check_time": 1794146657.1586652
+      "last_message_id": 46256,
+      "last_check_time": 1794146832.4839864
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4211,12 +4217,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39737,
-      "last_check_time": 1794145538.5659757
+      "last_message_id": 39738,
+      "last_check_time": 1794146834.8795576
     },
     "aniscoupons": {
-      "last_message_id": 34295,
-      "last_check_time": 1794145353.2018743
+      "last_message_id": 34296,
+      "last_check_time": 1794146842.758219
     },
     "bnddeals": {
       "last_message_id": 51232,
@@ -4786,7 +4792,7 @@
     "1005007469003552": 17.39,
     "1005010041181003": 167.8,
     "1005010265542567": 24.89,
-    "1005003156756854": 10.85,
+    "1005003156756854": 10.8,
     "1005010142208108": 37.5,
     "1005008534907844": 50.86,
     "1005009577554629": 10.55,
@@ -4818,7 +4824,8 @@
     "1005009460475870": 6.9,
     "1005009649079564": 19.4,
     "1005007038022940": 5.49,
-    "1005007981362777": 5.69
+    "1005007981362777": 5.69,
+    "1005007097302001": 4.69
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -17553,6 +17560,26 @@
       "price": 5.69,
       "timestamp": 1794146655.1062205,
       "status": "ACTIVE"
+    },
+    "lodydeals:46256": {
+      "channel_msg_id": 2072,
+      "product_id": "1005007097302001",
+      "title": "Lenovo LP40 Pro",
+      "channel": "lodydeals",
+      "source_msg_id": 46256,
+      "price": 4.69,
+      "timestamp": 1794146830.4272797,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34296": {
+      "channel_msg_id": 2073,
+      "product_id": "1005003156756854",
+      "title": "Ulanzi ST-06S Smartphone Mount Holder",
+      "channel": "aniscoupons",
+      "source_msg_id": 34296,
+      "price": 10.8,
+      "timestamp": 1794146840.7057447,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -17561,17 +17588,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794146659.8613493,
+    "last_deal_post_time": 1794146843.6860619,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794146663.2399156,
+    "last_sweep_time": 1794146846.9559898,
     "last_sweep_times": {
-      "algeria": 1794146659.8383548,
-      "france": 1794146663.2399156
+      "algeria": 1794146843.6611369,
+      "france": 1794146846.9559898
     },
     "last_deal_post_times": {
-      "algeria": 1794146659.8613493
+      "algeria": 1794146843.6860619
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18244,7 +18271,7 @@
     "1005007469003552": "aniscoupons",
     "1005010041181003": "aniscoupons",
     "1005010265542567": "aniscoupons",
-    "1005003156756854": "lodydeals",
+    "1005003156756854": "aniscoupons",
     "1005010142208108": "lodydeals",
     "1005008534907844": "lodydeals",
     "1005009577554629": "lodydeals",
@@ -18283,7 +18310,8 @@
     "1005009460475870": "zedstoreonline",
     "1005009649079564": "zedstoreonline",
     "1005007038022940": "lodydeals",
-    "1005007981362777": "lodydeals"
+    "1005007981362777": "lodydeals",
+    "1005007097302001": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19172,7 +19200,9 @@
     "Xiaoxin Pad Pro 2025 (8/128GB)": "aniscoupons",
     "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": "zedstoreonline",
     "Lenovo Thinkplus XT88": "lodydeals",
-    "Rolls-Royce Phantom Model": "lodydeals"
+    "Rolls-Royce Phantom Model": "lodydeals",
+    "Lenovo LP40 Pro": "lodydeals",
+    "Ulanzi ST-06S Smartphone Mount Holder": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -19966,7 +19996,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:32942",
     "alidealsdz:145",
     "lodydeals:45797",
     "lodydeals:45681",
@@ -20965,7 +20994,8 @@
     "zedstoreonline:39735",
     "lodydeals:46252",
     "aniscoupons:34294",
-    "lodydeals:46253"
+    "lodydeals:46253",
+    "zedstoreonline:39738"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
