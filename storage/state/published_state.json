@@ -720,7 +720,8 @@
     "1005008041973031",
     "1005007900411524",
     "1005005295582727",
-    "1005009776317549"
+    "1005009776317549",
+    "1005009766330661"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1455,7 +1456,8 @@
     "1005008041973031": 1794242679.099279,
     "1005007900411524": 1794243215.3426878,
     "1005005295582727": 1794243589.8816426,
-    "1005009776317549": 1794250024.5461965
+    "1005009776317549": 1794250024.5461965,
+    "1005009766330661": 1794251129.0913823
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2374,7 +2376,8 @@
     "AOCHUAN Handheld Gimbal V8",
     "hohem X3 SE Gimbal Phone Stabilizer",
     "Hohem iSteady XE Kit",
-    "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )"
+    "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )",
+    "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3298,10 +3301,10 @@
     "AOCHUAN Handheld Gimbal V8": 1794242679.099279,
     "hohem X3 SE Gimbal Phone Stabilizer": 1794243215.3426878,
     "Hohem iSteady XE Kit": 1794243589.8816426,
-    "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": 1794250024.5461965
+    "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": 1794250024.5461965,
+    "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": 1794251129.0913823
   },
   "published_post_keys": [
-    "zedstoreonline:39025",
     "bnddeals:50810",
     "aniscoupons:32762",
     "lodydeals:45680",
@@ -4300,11 +4303,12 @@
     "lodydeals:46300",
     "zedstoreonline:39780",
     "aniscoupons:34365",
-    "aniscoupons:34366"
+    "aniscoupons:34366",
+    "aniscoupons:34367"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794250569.5221198,
+  "last_run_time": 1794251129.0913823,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6049,
@@ -4335,8 +4339,8 @@
       "last_check_time": 1794250024.5461965
     },
     "aniscoupons": {
-      "last_message_id": 34366,
-      "last_check_time": 1794250571.5795748
+      "last_message_id": 34367,
+      "last_check_time": 1794251131.1366744
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -4961,7 +4965,8 @@
     "1005008041973031": 55.2,
     "1005007900411524": 70.9,
     "1005005295582727": 34.77,
-    "1005009776317549": 3.9
+    "1005009776317549": 3.9,
+    "1005009766330661": 45.1
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18696,6 +18701,16 @@
       "price": 41.1,
       "timestamp": 1794250569.5221198,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34367": {
+      "channel_msg_id": 2176,
+      "product_id": "1005009766330661",
+      "title": "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White",
+      "channel": "aniscoupons",
+      "source_msg_id": 34367,
+      "price": 45.1,
+      "timestamp": 1794251129.0913823,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18704,17 +18719,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794250572.3838115,
+    "last_deal_post_time": 1794251131.8607585,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794250938.6189492,
+    "last_sweep_time": 1794251135.0049994,
     "last_sweep_times": {
-      "algeria": 1794250935.5707173,
-      "france": 1794250938.6189492
+      "algeria": 1794251131.8454762,
+      "france": 1794251135.0049994
     },
     "last_deal_post_times": {
-      "algeria": 1794250572.3838115
+      "algeria": 1794251131.8607585
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19450,7 +19465,8 @@
     "1005008041973031": "aniscoupons",
     "1005007900411524": "aniscoupons",
     "1005005295582727": "aniscoupons",
-    "1005009776317549": "zedstoreonline"
+    "1005009776317549": "zedstoreonline",
+    "1005009766330661": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -20376,7 +20392,8 @@
     "AOCHUAN Handheld Gimbal V8": "aniscoupons",
     "hohem X3 SE Gimbal Phone Stabilizer": "aniscoupons",
     "Hohem iSteady XE Kit": "aniscoupons",
-    "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": "zedstoreonline"
+    "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": "zedstoreonline",
+    "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
