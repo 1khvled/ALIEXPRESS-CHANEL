@@ -1143,9 +1143,9 @@
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
     "1005005373032877": 1793600283.7397804,
-    "1005007869955343": 1794069161.1750643,
+    "1005007869955343": 1794234942.1863568,
     "1005012644570693": 1793441338.6619778,
-    "1005003949106838": 1794159532.8883114,
+    "1005003949106838": 1794234949.9761558,
     "1005012436082838": 1793733101.535615,
     "1005010716206374": 1793448715.1480892,
     "1005012864273120": 1793399494.1323898,
@@ -1398,7 +1398,7 @@
     "1005012925301774": 1794002515.731258,
     "1005012959738411": 1794211663.3506916,
     "1005008357913212": 1794214218.5353336,
-    "1005008703989845": 1794214034.3163798,
+    "1005008703989845": 1794234954.8876405,
     "1005007162099601": 1794046115.3557825,
     "1005007038130594": 1794046667.9804564,
     "1005008248187128": 1794057675.8729835,
@@ -2845,7 +2845,7 @@
     "OnePlus Turbo 6X Pro 8/128": 1793441350.359979,
     "Soundcore by Anker Life Q30 Hybrid Active Noise Cancelling Headphones": 1793448587.6507976,
     "بروجكتور Magcubic HY300 max – أوتو فوكس، Android 14، إضاءة 400 ANSI": 1793448612.7938895,
-    "MAONO PD100X Dynamic Microphone": 1794069161.1750643,
+    "MAONO PD100X Dynamic Microphone": 1794234942.1863568,
     "Soundcore by Anker P20i": 1793448624.0516217,
     "CUSU Memory DDR5  32GB(16GBX2) 5600MHz": 1793448632.7055113,
     "OPPO FIND X9 Pro": 1793448641.953655,
@@ -3170,7 +3170,7 @@
     "Netac SSD NVME M2 250GB": 1794231632.2676654,
     "Essager 20W GaN + cable": 1794076070.3822317,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
-    "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794214034.3163798,
+    "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794234954.8876405,
     "Fifine Gaming Headset H9W": 1794215317.7512906,
     "Fifine Gaming Headset H6": 1794215146.3107493,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794212577.1786916,
@@ -3249,7 +3249,7 @@
     "Lenovo LP40 Pro": 1794146830.4272797,
     "Ulanzi ST-06S Smartphone Mount Holder": 1794146840.7057447,
     "WAMRAM SATA SSD 480GB": 1794159522.2930505,
-    "Netac M.2 1TB 7400Mbs Gen 4": 1794159532.8883114,
+    "Netac M.2 1TB 7400Mbs Gen 4": 1794234949.9761558,
     "RYZEN 5 5600XT": 1794159590.2283225,
     "OnePlus Turbo 6V": 1794160828.535879,
     "DJI Mic Mini2  2TX 1RX": 1794216974.0881407,
@@ -3279,9 +3279,6 @@
     "Honor X70 Pro Max  8/256GB": 1794232557.0275722
   },
   "published_post_keys": [
-    "aniscoupons:32765",
-    "aniscoupons:33279",
-    "test_channel:1792180981",
     "test_channel:1792181758",
     "lodydeals:45922",
     "lodydeals:45519",
@@ -4278,11 +4275,14 @@
     "aniscoupons:34348",
     "zedstoreonline:39785",
     "lodydeals:46294",
-    "aniscoupons:34349"
+    "aniscoupons:34349",
+    "zedstoreonline:39787",
+    "aniscoupons:34350",
+    "aniscoupons:34351"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794234390.5370977,
+  "last_run_time": 1794234954.8876405,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6049,
@@ -4309,12 +4309,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39786,
-      "last_check_time": 1794232003.3984683
+      "last_message_id": 39787,
+      "last_check_time": 1794234944.2444925
     },
     "aniscoupons": {
-      "last_message_id": 34349,
-      "last_check_time": 1794234392.596997
+      "last_message_id": 34351,
+      "last_check_time": 1794234956.9456077
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -18469,6 +18469,36 @@
       "price": 277.36,
       "timestamp": 1794234390.5370977,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39787": {
+      "channel_msg_id": 2156,
+      "product_id": "1005007869955343",
+      "title": "MAONO PD100X Dynamic Microphone",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39787,
+      "price": 36.5,
+      "timestamp": 1794234942.1863568,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34350": {
+      "channel_msg_id": 2157,
+      "product_id": "1005003949106838",
+      "title": "Netac M.2 1TB 7400Mbs Gen 4",
+      "channel": "aniscoupons",
+      "source_msg_id": 34350,
+      "price": 114.99,
+      "timestamp": 1794234949.9761558,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34351": {
+      "channel_msg_id": 2158,
+      "product_id": "1005008703989845",
+      "title": "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34351,
+      "price": 24.8,
+      "timestamp": 1794234954.8876405,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18477,17 +18507,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794234393.4978378,
+    "last_deal_post_time": 1794234957.9581075,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794234760.607037,
+    "last_sweep_time": 1794234962.1631057,
     "last_sweep_times": {
-      "algeria": 1794234757.0968282,
-      "france": 1794234760.607037
+      "algeria": 1794234957.9312181,
+      "france": 1794234962.1631057
     },
     "last_deal_post_times": {
-      "algeria": 1794234393.4978378
+      "algeria": 1794234957.9581075
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
