@@ -710,7 +710,8 @@
     "1005008200346347",
     "1005006542204624",
     "1005007820092290",
-    "1005012329021334"
+    "1005012329021334",
+    "1005013218893010"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1435,7 +1436,8 @@
     "1005008200346347": 1794223934.5228841,
     "1005006542204624": 1794224474.0767472,
     "1005007820092290": 1794224654.527678,
-    "1005012329021334": 1794225392.2814271
+    "1005012329021334": 1794225392.2814271,
+    "1005013218893010": 1794226314.627466
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2342,7 +2344,8 @@
     "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق",
     "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية",
     "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات",
-    "MAONO PM360TR Condenser Microphone XLR Podcast Microphone"
+    "MAONO PM360TR Condenser Microphone XLR Podcast Microphone",
+    "لوووووووووووووووز"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3254,10 +3257,10 @@
     "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق": 1794223934.5228841,
     "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية": 1794224474.0767472,
     "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات": 1794224654.527678,
-    "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": 1794225392.2814271
+    "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": 1794225392.2814271,
+    "لوووووووووووووووز": 1794226314.627466
   },
   "published_post_keys": [
-    "lodydeals:45940",
     "aniscoupons:32698",
     "pcgamingpart:7944",
     "lodydeals:45554",
@@ -4256,11 +4259,12 @@
     "zedstoreonline:39773",
     "zedstoreonline:39776",
     "zedstoreonline:39778",
-    "aniscoupons:34344"
+    "aniscoupons:34344",
+    "zedstoreonline:39779"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794225392.2814271,
+  "last_run_time": 1794226314.627466,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6048,
@@ -4287,8 +4291,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39778,
-      "last_check_time": 1794224656.5640738
+      "last_message_id": 39779,
+      "last_check_time": 1794226316.689392
     },
     "aniscoupons": {
       "last_message_id": 34344,
@@ -4907,7 +4911,8 @@
     "1005008200346347": 4.5,
     "1005006542204624": 3.1,
     "1005007820092290": 2.8,
-    "1005012329021334": 35.25
+    "1005012329021334": 35.25,
+    "1005013218893010": 2.7
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18332,6 +18337,16 @@
       "price": 35.25,
       "timestamp": 1794225392.2814271,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39779": {
+      "channel_msg_id": 2144,
+      "product_id": "1005013218893010",
+      "title": "لوووووووووووووووز",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39779,
+      "price": 2.7,
+      "timestamp": 1794226314.627466,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18340,17 +18355,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794225395.4343061,
+    "last_deal_post_time": 1794226318.2308495,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794226132.6718712,
+    "last_sweep_time": 1794226321.5478587,
     "last_sweep_times": {
-      "algeria": 1794226129.1970077,
-      "france": 1794226132.6718712
+      "algeria": 1794226318.2017488,
+      "france": 1794226321.5478587
     },
     "last_deal_post_times": {
-      "algeria": 1794225395.4343061
+      "algeria": 1794226318.2308495
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19076,7 +19091,8 @@
     "1005008200346347": "zedstoreonline",
     "1005006542204624": "zedstoreonline",
     "1005007820092290": "zedstoreonline",
-    "1005012329021334": "aniscoupons"
+    "1005012329021334": "aniscoupons",
+    "1005013218893010": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19990,7 +20006,8 @@
     "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق": "zedstoreonline",
     "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية": "zedstoreonline",
     "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات": "zedstoreonline",
-    "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": "aniscoupons"
+    "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": "aniscoupons",
+    "لوووووووووووووووز": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
