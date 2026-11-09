@@ -934,7 +934,7 @@
     "1005007767322935": 1791975934.9659944,
     "1005012571601398": 1794140574.699814,
     "1005013054007275": 1793543830.34111,
-    "1005011899097443": 1794086036.4692597,
+    "1005011899097443": 1794213297.7367866,
     "1005012865117890": 1793613385.3577175,
     "1005010733227481": 1792156757.9443583,
     "1005006281667276": 1792157892.9621794,
@@ -2600,7 +2600,7 @@
     "ماوس لاسلكي فخم Scyrox V8S Wireless 8K": 1793543830.34111,
     "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM": 1791992945.451545,
     "Rocoren 100W Type-C to USB Fast Charging 0.5M": 1791992975.2913277,
-    "Acinaci J11 Gaming Headset": 1794086036.4692597,
+    "Acinaci J11 Gaming Headset": 1794213297.7367866,
     "Realme 14 Pro Global (12/256)": 1792007168.2612865,
     "Anker Soundcore Select 4 Go Bluetooth Speaker": 1792007180.6836498,
     "OnePlus Turbo 6V  8/256": 1793380262.1330528,
@@ -3237,7 +3237,6 @@
     "OnePlus Ace 7Pro (12/256GB)": 1794212210.5228837
   },
   "published_post_keys": [
-    "ecksdeal:5988",
     "test_channel:1792073836",
     "bnddeals:50813",
     "aniscoupons:33274",
@@ -4236,19 +4235,20 @@
     "aniscoupons:34322",
     "aniscoupons:34323",
     "aniscoupons:34324",
-    "aniscoupons:34325"
+    "aniscoupons:34325",
+    "lodydeals:46276"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794212756.8201253,
+  "last_run_time": 1794213297.7367866,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
       "last_check_time": 1794159484.4700966
     },
     "lodydeals": {
-      "last_message_id": 46275,
-      "last_check_time": 1794175753.7612486
+      "last_message_id": 46276,
+      "last_check_time": 1794213299.7714245
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4479,7 +4479,7 @@
     "1005009275536960": 14.72,
     "1005007767322935": 21.61,
     "1005013054007275": 53.59,
-    "1005011899097443": 10.3,
+    "1005011899097443": 7.05,
     "1005010428947440": 21.2,
     "1005010733227481": 285.4,
     "1005006281667276": 33.2,
@@ -18107,6 +18107,16 @@
       "price": 240.7,
       "timestamp": 1794212756.8201253,
       "status": "ACTIVE"
+    },
+    "lodydeals:46276": {
+      "channel_msg_id": 2124,
+      "product_id": "1005011899097443",
+      "title": "Acinaci J11 Gaming Headset",
+      "channel": "lodydeals",
+      "source_msg_id": 46276,
+      "price": 7.05,
+      "timestamp": 1794213297.7367866,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18115,17 +18125,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794212759.6174695,
+    "last_deal_post_time": 1794213301.7275946,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794213124.1183796,
+    "last_sweep_time": 1794213304.2007754,
     "last_sweep_times": {
-      "algeria": 1794213121.5530803,
-      "france": 1794213124.1183796
+      "algeria": 1794213301.712884,
+      "france": 1794213304.2007754
     },
     "last_deal_post_times": {
-      "algeria": 1794212759.6174695
+      "algeria": 1794213301.7275946
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
