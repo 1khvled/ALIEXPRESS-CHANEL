@@ -1097,7 +1097,7 @@
     "1005010266487244": 1793448791.1740308,
     "1005010207075594": 1793299454.8390412,
     "1005013351519067": 1793448628.3734028,
-    "1005012484784752": 1794159590.2283225,
+    "1005012484784752": 1794253893.3396604,
     "1005013222140851": 1793467234.8425448,
     "1005013438245033": 1793299536.9978156,
     "1005008986635164": 1793314892.9200466,
@@ -3269,7 +3269,7 @@
     "Ulanzi ST-06S Smartphone Mount Holder": 1794146840.7057447,
     "WAMRAM SATA SSD 480GB": 1794159522.2930505,
     "Netac M.2 1TB 7400Mbs Gen 4": 1794234949.9761558,
-    "RYZEN 5 5600XT": 1794159590.2283225,
+    "RYZEN 5 5600XT": 1794253893.3396604,
     "OnePlus Turbo 6V": 1794160828.535879,
     "DJI Mic Mini2  2TX 1RX": 1794216974.0881407,
     "Magcubic HY350Max 900 ANSI": 1794164675.8426867,
@@ -3305,7 +3305,6 @@
     "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": 1794251129.0913823
   },
   "published_post_keys": [
-    "bnddeals:50810",
     "aniscoupons:32762",
     "lodydeals:45680",
     "test_channel:1792185068",
@@ -4304,11 +4303,12 @@
     "zedstoreonline:39780",
     "aniscoupons:34365",
     "aniscoupons:34366",
-    "aniscoupons:34367"
+    "aniscoupons:34367",
+    "aniscoupons:34369"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794251129.0913823,
+  "last_run_time": 1794253893.3396604,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4339,8 +4339,8 @@
       "last_check_time": 1794250024.5461965
     },
     "aniscoupons": {
-      "last_message_id": 34368,
-      "last_check_time": 1794251306.9167192
+      "last_message_id": 34369,
+      "last_check_time": 1794253895.4398232
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -18711,6 +18711,16 @@
       "price": 45.1,
       "timestamp": 1794251129.0913823,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34369": {
+      "channel_msg_id": 2177,
+      "product_id": "1005012484784752",
+      "title": "RYZEN 5 5600XT",
+      "channel": "aniscoupons",
+      "source_msg_id": 34369,
+      "price": 98.79,
+      "timestamp": 1794253893.3396604,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18719,17 +18729,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794251131.8607585,
+    "last_deal_post_time": 1794253896.1899838,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794253709.5488868,
+    "last_sweep_time": 1794253899.0692875,
     "last_sweep_times": {
-      "algeria": 1794253706.0959737,
-      "france": 1794253709.5488868
+      "algeria": 1794253896.1640348,
+      "france": 1794253899.0692875
     },
     "last_deal_post_times": {
-      "algeria": 1794251131.8607585
+      "algeria": 1794253896.1899838
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
