@@ -1310,7 +1310,7 @@
     "1005006966360399": 1793613905.8870661,
     "1005010706590867": 1794055832.565326,
     "1005010428947440": 1793613916.2199864,
-    "1005010585654037": 1793613921.841963,
+    "1005010585654037": 1794229795.9714105,
     "1005013137304827": 1793613926.9213502,
     "1005010355409000": 1793613934.9347482,
     "1005012648097890": 1793613942.3770478,
@@ -2350,7 +2350,8 @@
     "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات",
     "MAONO PM360TR Condenser Microphone XLR Podcast Microphone",
     "لوووووووووووووووز",
-    "شاحنة ألعاب صغيرة بالتحكم عن بُعد"
+    "شاحنة ألعاب صغيرة بالتحكم عن بُعد",
+    "Mortal T1+ 2/16GB Wifi 4K"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3264,10 +3265,10 @@
     "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات": 1794224654.527678,
     "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": 1794225392.2814271,
     "لوووووووووووووووز": 1794226314.627466,
-    "شاحنة ألعاب صغيرة بالتحكم عن بُعد": 1794227594.9699965
+    "شاحنة ألعاب صغيرة بالتحكم عن بُعد": 1794227594.9699965,
+    "Mortal T1+ 2/16GB Wifi 4K": 1794229795.9714105
   },
   "published_post_keys": [
-    "lodydeals:45554",
     "lodydeals:45530",
     "aniscoupons:33184",
     "megaphonna:8494",
@@ -4266,19 +4267,20 @@
     "aniscoupons:34344",
     "zedstoreonline:39779",
     "aniscoupons:34345",
-    "zedstoreonline:39782"
+    "zedstoreonline:39782",
+    "lodydeals:46289"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794227594.9699965,
+  "last_run_time": 1794229795.9714105,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6048,
       "last_check_time": 1794223212.0463006
     },
     "lodydeals": {
-      "last_message_id": 46288,
-      "last_check_time": 1794221722.8389966
+      "last_message_id": 46289,
+      "last_check_time": 1794229798.0291302
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4396,7 +4398,7 @@
     "1005006581583862": 18.4,
     "1005012816171978": 274.46,
     "1005009834132291": 20.04,
-    "1005010585654037": 16.8,
+    "1005010585654037": 19.4,
     "1005006248571160": 16.8,
     "1005009390995992": 34.9,
     "1005006196428484": 7.09,
@@ -18375,6 +18377,16 @@
       "price": 12.3,
       "timestamp": 1794227594.9699965,
       "status": "ACTIVE"
+    },
+    "lodydeals:46289": {
+      "channel_msg_id": 2147,
+      "product_id": "1005010585654037",
+      "title": "Mortal T1+ 2/16GB Wifi 4K",
+      "channel": "lodydeals",
+      "source_msg_id": 46289,
+      "price": 19.4,
+      "timestamp": 1794229795.9714105,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18383,17 +18395,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794227598.2676203,
+    "last_deal_post_time": 1794229801.226959,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794229614.3121188,
+    "last_sweep_time": 1794229804.191882,
     "last_sweep_times": {
-      "algeria": 1794229610.71976,
-      "france": 1794229614.3121188
+      "algeria": 1794229801.2020688,
+      "france": 1794229804.191882
     },
     "last_deal_post_times": {
-      "algeria": 1794227598.2676203
+      "algeria": 1794229801.226959
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18488,7 +18500,7 @@
     "1005006581583862": "zedstoreonline",
     "1005012816171978": "lodydeals",
     "1005009834132291": "ecksdeal",
-    "1005010585654037": "aniscoupons",
+    "1005010585654037": "lodydeals",
     "1005006248571160": "bnddeals",
     "1005009390995992": "aniscoupons",
     "1005006196428484": "lodydeals",
@@ -20038,7 +20050,8 @@
     "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات": "zedstoreonline",
     "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": "aniscoupons",
     "لوووووووووووووووز": "zedstoreonline",
-    "شاحنة ألعاب صغيرة بالتحكم عن بُعد": "zedstoreonline"
+    "شاحنة ألعاب صغيرة بالتحكم عن بُعد": "zedstoreonline",
+    "Mortal T1+ 2/16GB Wifi 4K": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
