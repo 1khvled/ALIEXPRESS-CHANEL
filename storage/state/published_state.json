@@ -709,7 +709,8 @@
     "1005009121981190",
     "1005008200346347",
     "1005006542204624",
-    "1005007820092290"
+    "1005007820092290",
+    "1005012329021334"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1433,7 +1434,8 @@
     "1005009121981190": 1794219534.0651362,
     "1005008200346347": 1794223934.5228841,
     "1005006542204624": 1794224474.0767472,
-    "1005007820092290": 1794224654.527678
+    "1005007820092290": 1794224654.527678,
+    "1005012329021334": 1794225392.2814271
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2339,7 +2341,8 @@
     "KODAK K133 USB3.1 256GB",
     "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق",
     "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية",
-    "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات"
+    "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات",
+    "MAONO PM360TR Condenser Microphone XLR Podcast Microphone"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3250,10 +3253,10 @@
     "KODAK K133 USB3.1 256GB": 1794219534.0651362,
     "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق": 1794223934.5228841,
     "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية": 1794224474.0767472,
-    "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات": 1794224654.527678
+    "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات": 1794224654.527678,
+    "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": 1794225392.2814271
   },
   "published_post_keys": [
-    "aniscoupons:32696",
     "lodydeals:45940",
     "aniscoupons:32698",
     "pcgamingpart:7944",
@@ -4252,11 +4255,12 @@
     "ecksdeal:6048",
     "zedstoreonline:39773",
     "zedstoreonline:39776",
-    "zedstoreonline:39778"
+    "zedstoreonline:39778",
+    "aniscoupons:34344"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794224654.527678,
+  "last_run_time": 1794225392.2814271,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6048,
@@ -4287,8 +4291,8 @@
       "last_check_time": 1794224656.5640738
     },
     "aniscoupons": {
-      "last_message_id": 34343,
-      "last_check_time": 1794224836.8576894
+      "last_message_id": 34344,
+      "last_check_time": 1794225394.3392475
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -4902,7 +4906,8 @@
     "1005009121981190": 13.08,
     "1005008200346347": 4.5,
     "1005006542204624": 3.1,
-    "1005007820092290": 2.8
+    "1005007820092290": 2.8,
+    "1005012329021334": 35.25
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18317,6 +18322,16 @@
       "price": 2.8,
       "timestamp": 1794224654.527678,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34344": {
+      "channel_msg_id": 2143,
+      "product_id": "1005012329021334",
+      "title": "MAONO PM360TR Condenser Microphone XLR Podcast Microphone",
+      "channel": "aniscoupons",
+      "source_msg_id": 34344,
+      "price": 35.25,
+      "timestamp": 1794225392.2814271,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18325,17 +18340,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794224657.7155588,
+    "last_deal_post_time": 1794225395.4343061,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794225207.4965978,
+    "last_sweep_time": 1794225398.82104,
     "last_sweep_times": {
-      "algeria": 1794225204.1440334,
-      "france": 1794225207.4965978
+      "algeria": 1794225395.4090586,
+      "france": 1794225398.82104
     },
     "last_deal_post_times": {
-      "algeria": 1794224657.7155588
+      "algeria": 1794225395.4343061
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19060,7 +19075,8 @@
     "1005009121981190": "lodydeals",
     "1005008200346347": "zedstoreonline",
     "1005006542204624": "zedstoreonline",
-    "1005007820092290": "zedstoreonline"
+    "1005007820092290": "zedstoreonline",
+    "1005012329021334": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19973,7 +19989,8 @@
     "KODAK K133 USB3.1 256GB": "lodydeals",
     "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق": "zedstoreonline",
     "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية": "zedstoreonline",
-    "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات": "zedstoreonline"
+    "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات": "zedstoreonline",
+    "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
