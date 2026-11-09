@@ -723,7 +723,8 @@
     "1005009776317549",
     "1005009766330661",
     "1005009649048598",
-    "1005005209277375"
+    "1005005209277375",
+    "1005010706691647"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1461,7 +1462,8 @@
     "1005009776317549": 1794250024.5461965,
     "1005009766330661": 1794251129.0913823,
     "1005009649048598": 1794263521.335573,
-    "1005005209277375": 1794263702.59817
+    "1005005209277375": 1794263702.59817,
+    "1005010706691647": 1794263885.7408762
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2383,7 +2385,8 @@
     "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )",
     "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White",
     "Fashion Square Watches",
-    "Bicycle Pump 80 PSI"
+    "Bicycle Pump 80 PSI",
+    "Portable Hair Clipper"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3310,10 +3313,10 @@
     "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": 1794250024.5461965,
     "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": 1794251129.0913823,
     "Fashion Square Watches": 1794263521.335573,
-    "Bicycle Pump 80 PSI": 1794263702.59817
+    "Bicycle Pump 80 PSI": 1794263702.59817,
+    "Portable Hair Clipper": 1794263885.7408762
   },
   "published_post_keys": [
-    "pcgamingpart:8012",
     "zedstoreonline:38699",
     "lodydeals:45740",
     "ecksdeal:5935",
@@ -4312,11 +4315,12 @@
     "lodydeals:46305",
     "lodydeals:46306",
     "lodydeals:46309",
-    "lodydeals:46310"
+    "lodydeals:46310",
+    "lodydeals:46308"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794263706.8812196,
+  "last_run_time": 1794263885.7408762,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4324,7 +4328,7 @@
     },
     "lodydeals": {
       "last_message_id": 46310,
-      "last_check_time": 1794263708.92451
+      "last_check_time": 1794263885.7408762
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4976,7 +4980,8 @@
     "1005009776317549": 3.9,
     "1005009766330661": 45.1,
     "1005009649048598": 3.29,
-    "1005005209277375": 4.69
+    "1005005209277375": 4.69,
+    "1005010706691647": 5.29
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18781,6 +18786,16 @@
       "price": 4.89,
       "timestamp": 1794263706.8812196,
       "status": "ACTIVE"
+    },
+    "lodydeals:46308": {
+      "channel_msg_id": 2183,
+      "product_id": "1005010706691647",
+      "title": "Portable Hair Clipper",
+      "channel": "lodydeals",
+      "source_msg_id": 46308,
+      "price": 5.29,
+      "timestamp": 1794263885.7408762,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18789,17 +18804,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794263711.0305974,
+    "last_deal_post_time": 1794263889.7533736,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794263714.1277013,
+    "last_sweep_time": 1794263893.2720702,
     "last_sweep_times": {
-      "algeria": 1794263711.0099876,
-      "france": 1794263714.1277013
+      "algeria": 1794263889.7387025,
+      "france": 1794263893.2720702
     },
     "last_deal_post_times": {
-      "algeria": 1794263711.0305974
+      "algeria": 1794263889.7533736
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19538,7 +19553,8 @@
     "1005009776317549": "zedstoreonline",
     "1005009766330661": "aniscoupons",
     "1005009649048598": "lodydeals",
-    "1005005209277375": "lodydeals"
+    "1005005209277375": "lodydeals",
+    "1005010706691647": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -20467,7 +20483,8 @@
     "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": "zedstoreonline",
     "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": "aniscoupons",
     "Fashion Square Watches": "lodydeals",
-    "Bicycle Pump 80 PSI": "lodydeals"
+    "Bicycle Pump 80 PSI": "lodydeals",
+    "Portable Hair Clipper": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
