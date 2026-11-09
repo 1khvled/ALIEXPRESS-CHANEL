@@ -1231,7 +1231,7 @@
     "1005013053122560": 1793543835.4812393,
     "1005012322822595": 1793543961.1645148,
     "1005009662812027": 1793973971.0121949,
-    "1005005975560350": 1794068051.714454,
+    "1005005975560350": 1794215317.7512906,
     "1005012922578845": 1793544001.8628821,
     "1005011752891197": 1793613465.8475375,
     "1005008689880751": 1793544016.7486506,
@@ -3140,7 +3140,7 @@
     "Essager 20W GaN + cable": 1794076070.3822317,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794214034.3163798,
-    "Fifine Gaming Headset H9W": 1794068051.714454,
+    "Fifine Gaming Headset H9W": 1794215317.7512906,
     "Fifine Gaming Headset H6": 1794215146.3107493,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794212577.1786916,
     "KOOTION SSD SATA": 1794214218.5353336,
@@ -3237,7 +3237,6 @@
     "OnePlus Ace 7Pro (12/256GB)": 1794212210.5228837
   },
   "published_post_keys": [
-    "lodydeals:45429",
     "zedstoreonline:38748",
     "bnddeals:50886",
     "zedstoreonline:38525",
@@ -4236,11 +4235,12 @@
     "aniscoupons:34333",
     "aniscoupons:34334",
     "zedstoreonline:39762",
-    "aniscoupons:34335"
+    "aniscoupons:34335",
+    "aniscoupons:34336"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794215146.3107493,
+  "last_run_time": 1794215317.7512906,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
@@ -4271,8 +4271,8 @@
       "last_check_time": 1794215139.970004
     },
     "aniscoupons": {
-      "last_message_id": 34335,
-      "last_check_time": 1794215148.3664522
+      "last_message_id": 34336,
+      "last_check_time": 1794215319.8050768
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -18187,6 +18187,16 @@
       "price": 32.9,
       "timestamp": 1794215146.3107493,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34336": {
+      "channel_msg_id": 2132,
+      "product_id": "1005005975560350",
+      "title": "Fifine Gaming Headset H9W",
+      "channel": "aniscoupons",
+      "source_msg_id": 34336,
+      "price": 35.9,
+      "timestamp": 1794215317.7512906,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18195,17 +18205,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794215149.2397454,
+    "last_deal_post_time": 1794215320.5892494,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794215151.919372,
+    "last_sweep_time": 1794215323.1075554,
     "last_sweep_times": {
-      "algeria": 1794215149.2141018,
-      "france": 1794215151.919372
+      "algeria": 1794215320.563625,
+      "france": 1794215323.1075554
     },
     "last_deal_post_times": {
-      "algeria": 1794215149.2397454
+      "algeria": 1794215320.5892494
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
