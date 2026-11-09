@@ -713,7 +713,8 @@
     "1005012329021334",
     "1005013218893010",
     "1005013480169843",
-    "1005013226454479"
+    "1005013226454479",
+    "1005005548265076"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1189,7 +1190,7 @@
     "COUPONS_11.11 Global Shopping Festival Warm-Up": 1793478717.5923967,
     "1005008518280704": 1793707081.0327315,
     "1005010527736444": 1793478769.6023057,
-    "1005013450996845": 1794145351.158124,
+    "1005013450996845": 1794231086.6438067,
     "1005013144753309": 1794160820.0809557,
     "1005012061152213": 1793490079.2945042,
     "1005012519569107": 1793490085.1205146,
@@ -1441,7 +1442,8 @@
     "1005012329021334": 1794225392.2814271,
     "1005013218893010": 1794226314.627466,
     "1005013480169843": 1794226491.8355606,
-    "1005013226454479": 1794227594.9699965
+    "1005013226454479": 1794227594.9699965,
+    "1005005548265076": 1794231079.407264
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2352,7 +2354,8 @@
     "لوووووووووووووووز",
     "شاحنة ألعاب صغيرة بالتحكم عن بُعد",
     "Mortal T1+ 2/16GB Wifi 4K",
-    "Honor Win Turbo 2"
+    "Honor Win Turbo 2",
+    "THINKCAR THINKDIAG OBD2 Scanner"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3236,7 +3239,7 @@
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
     "Blackview Mega 5": 1794142225.168232,
     "Warvank X8 Wireless Gaming Mouse": 1794144806.2660766,
-    "Xiaoxin Pad Pro 2025 (8/128GB)": 1794145351.158124,
+    "Xiaoxin Pad Pro 2025 (8/128GB)": 1794231086.6438067,
     "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": 1794145536.5317988,
     "Lenovo Thinkplus XT88": 1794146648.256951,
     "Rolls-Royce Phantom Model": 1794146655.1062205,
@@ -3268,11 +3271,10 @@
     "لوووووووووووووووز": 1794226314.627466,
     "شاحنة ألعاب صغيرة بالتحكم عن بُعد": 1794227594.9699965,
     "Mortal T1+ 2/16GB Wifi 4K": 1794229795.9714105,
-    "Honor Win Turbo 2": 1794230539.4652834
+    "Honor Win Turbo 2": 1794230539.4652834,
+    "THINKCAR THINKDIAG OBD2 Scanner": 1794231079.407264
   },
   "published_post_keys": [
-    "megaphonna:8494",
-    "bnddeals:50940",
     "lodydeals:45738",
     "aniscoupons:32957",
     "zedstoreonline:38832",
@@ -4270,19 +4272,21 @@
     "zedstoreonline:39782",
     "lodydeals:46289",
     "lodydeals:46290",
-    "aniscoupons:34347"
+    "aniscoupons:34347",
+    "lodydeals:46292",
+    "aniscoupons:34348"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794230539.4652834,
+  "last_run_time": 1794231086.6438067,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6048,
       "last_check_time": 1794223212.0463006
     },
     "lodydeals": {
-      "last_message_id": 46291,
-      "last_check_time": 1794230899.386469
+      "last_message_id": 46292,
+      "last_check_time": 1794231081.46412
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4305,8 +4309,8 @@
       "last_check_time": 1794230722.0804377
     },
     "aniscoupons": {
-      "last_message_id": 34347,
-      "last_check_time": 1794230541.5798783
+      "last_message_id": 34348,
+      "last_check_time": 1794231088.6975331
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -4924,7 +4928,8 @@
     "1005012329021334": 35.25,
     "1005013218893010": 2.7,
     "1005013480169843": 66.7,
-    "1005013226454479": 12.3
+    "1005013226454479": 12.3,
+    "1005005548265076": 36.51
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18409,6 +18414,26 @@
       "price": 382.9,
       "timestamp": 1794230539.4652834,
       "status": "ACTIVE"
+    },
+    "lodydeals:46292": {
+      "channel_msg_id": 2150,
+      "product_id": "1005005548265076",
+      "title": "THINKCAR THINKDIAG OBD2 Scanner",
+      "channel": "lodydeals",
+      "source_msg_id": 46292,
+      "price": 36.51,
+      "timestamp": 1794231079.407264,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34348": {
+      "channel_msg_id": 2151,
+      "product_id": "1005013450996845",
+      "title": "Xiaoxin Pad Pro 2025 (8/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34348,
+      "price": 212.48,
+      "timestamp": 1794231086.6438067,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18417,17 +18442,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794230542.3504126,
+    "last_deal_post_time": 1794231089.3380878,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794230907.1657012,
+    "last_sweep_time": 1794231092.3228483,
     "last_sweep_times": {
-      "algeria": 1794230903.0839093,
-      "france": 1794230907.1657012
+      "algeria": 1794231089.3134248,
+      "france": 1794231092.3228483
     },
     "last_deal_post_times": {
-      "algeria": 1794230542.3504126
+      "algeria": 1794231089.3380878
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19156,7 +19181,8 @@
     "1005012329021334": "aniscoupons",
     "1005013218893010": "zedstoreonline",
     "1005013480169843": "aniscoupons",
-    "1005013226454479": "zedstoreonline"
+    "1005013226454479": "zedstoreonline",
+    "1005005548265076": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -20074,7 +20100,8 @@
     "لوووووووووووووووز": "zedstoreonline",
     "شاحنة ألعاب صغيرة بالتحكم عن بُعد": "zedstoreonline",
     "Mortal T1+ 2/16GB Wifi 4K": "lodydeals",
-    "Honor Win Turbo 2": "aniscoupons"
+    "Honor Win Turbo 2": "aniscoupons",
+    "THINKCAR THINKDIAG OBD2 Scanner": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
