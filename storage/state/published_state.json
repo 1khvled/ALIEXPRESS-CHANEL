@@ -1142,7 +1142,7 @@
     "1005011961308530": 1793380460.5377874,
     "1005012994490034": 1793441317.3934674,
     "1005010146493558": 1793448836.300828,
-    "1005010575865619": 1794128880.302774,
+    "1005010575865619": 1794245233.887035,
     "1005011778197787": 1793656192.605134,
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
@@ -2936,7 +2936,7 @@
     "GIGABYTE B650M GAMING WIFI": 1793542466.6850684,
     "Netac NV7000-T M.2 Gen4 1TB": 1793899614.3022053,
     "UGREEN HiTune S3 Earbuds": 1793542479.8362749,
-    "OnePlus Ace 6T 5G 12/256GB": 1793793743.7359905,
+    "OnePlus Ace 6T 5G 12/256GB": 1794245233.887035,
     "Attack Shark X11 PAW3311": 1793908984.385319,
     "معالج Ryzen 7 9800X3D": 1793542512.9419136,
     "معالج Ryzen 5 7600X": 1793542531.6312253,
@@ -3297,7 +3297,6 @@
     "Hohem iSteady XE Kit": 1794243589.8816426
   },
   "published_post_keys": [
-    "zedstoreonline:38672",
     "lodydeals:45776",
     "zedstoreonline:38897",
     "megaphonna:8568",
@@ -4296,19 +4295,20 @@
     "aniscoupons:34357",
     "zedstoreonline:39796",
     "aniscoupons:34360",
-    "aniscoupons:34361"
+    "aniscoupons:34361",
+    "lodydeals:46299"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794243589.8816426,
+  "last_run_time": 1794245233.887035,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6049,
       "last_check_time": 1794232565.6123683
     },
     "lodydeals": {
-      "last_message_id": 46298,
-      "last_check_time": 1794244683.0483935
+      "last_message_id": 46299,
+      "last_check_time": 1794245235.930939
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4672,7 +4672,7 @@
     "1005011961308530": 313.7,
     "1005012994490034": 458.0,
     "1005010146493558": 562.0,
-    "1005010575865619": 367.1,
+    "1005010575865619": 366.51,
     "1005011778197787": 155.31,
     "1005012839355198": 150.12,
     "1005010133081414": 715.0,
@@ -18641,6 +18641,16 @@
       "price": 34.77,
       "timestamp": 1794243589.8816426,
       "status": "ACTIVE"
+    },
+    "lodydeals:46299": {
+      "channel_msg_id": 2171,
+      "product_id": "1005010575865619",
+      "title": "OnePlus Ace 6T 5G 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46299,
+      "price": 366.51,
+      "timestamp": 1794245233.887035,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18649,17 +18659,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794243592.6595356,
+    "last_deal_post_time": 1794245239.0514414,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794245048.2089632,
+    "last_sweep_time": 1794245242.0013275,
     "last_sweep_times": {
-      "algeria": 1794245045.2781272,
-      "france": 1794245048.2089632
+      "algeria": 1794245239.031152,
+      "france": 1794245242.0013275
     },
     "last_deal_post_times": {
-      "algeria": 1794243592.6595356
+      "algeria": 1794245239.0514414
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19093,7 +19103,7 @@
     "1005011961308530": "megaphonna",
     "1005012994490034": "zedstoreonline",
     "1005010146493558": "megaphonna",
-    "1005010575865619": "aniscoupons",
+    "1005010575865619": "lodydeals",
     "1005011778197787": "lodydeals",
     "1005012839355198": "bnddeals",
     "1005010133081414": "aniscoupons",
