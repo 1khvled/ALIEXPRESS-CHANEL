@@ -1322,7 +1322,7 @@
     "1005012648097890": 1793613942.3770478,
     "1005012524603100": 1794215509.2629838,
     "1005012770405022": 1793738297.0536208,
-    "1005012171521680": 1793613957.1320925,
+    "1005012171521680": 1794246148.3838613,
     "1005010758512904": 1793613961.7877593,
     "1005012871436251": 1793707168.1519766,
     "1005010385663278": 1793616557.8235445,
@@ -2960,7 +2960,7 @@
     "OnePlus Turbo 6X  8/128GB": 1793543578.6842017,
     "Soundcore by Anker P20i True Wireless Earbuds 30H Wireless Earphone": 1793543583.5978532,
     "Honor X80 Pro Max 8/128GB": 1794140574.699814,
-    "HONOR Pad V9 Wifi 8/256GB": 1793543596.9849713,
+    "HONOR Pad V9 Wifi 8/256GB": 1794246148.3838613,
     "Redmi A7 Pro 4/64GB": 1793543612.279949,
     "تخفيض ل UGREEN 65W GaN Charger": 1793543617.2639549,
     "Vivo X200S 5G 12/256GB": 1793543639.3190484,
@@ -3297,7 +3297,6 @@
     "Hohem iSteady XE Kit": 1794243589.8816426
   },
   "published_post_keys": [
-    "lodydeals:45776",
     "zedstoreonline:38897",
     "megaphonna:8568",
     "megaphonna:8624",
@@ -4296,19 +4295,20 @@
     "zedstoreonline:39796",
     "aniscoupons:34360",
     "aniscoupons:34361",
-    "lodydeals:46299"
+    "lodydeals:46299",
+    "lodydeals:46300"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794245233.887035,
+  "last_run_time": 1794246148.3838613,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6049,
       "last_check_time": 1794232565.6123683
     },
     "lodydeals": {
-      "last_message_id": 46299,
-      "last_check_time": 1794245235.930939
+      "last_message_id": 46300,
+      "last_check_time": 1794246150.422029
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4723,7 +4723,7 @@
     "1005008518280704": 60.25,
     "1005010527736444": 298.0,
     "1005013450996845": 212.48,
-    "1005012171521680": 287.26,
+    "1005012171521680": 277.26,
     "1005013144753309": 92.7,
     "1005012061152213": 58.3,
     "1005012519569107": 10.6,
@@ -18651,6 +18651,16 @@
       "price": 366.51,
       "timestamp": 1794245233.887035,
       "status": "ACTIVE"
+    },
+    "lodydeals:46300": {
+      "channel_msg_id": 2172,
+      "product_id": "1005012171521680",
+      "title": "HONOR Pad V9 Wifi 8/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46300,
+      "price": 277.26,
+      "timestamp": 1794246148.3838613,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18659,17 +18669,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794245239.0514414,
+    "last_deal_post_time": 1794246153.5770664,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794245977.0838568,
+    "last_sweep_time": 1794246156.5859723,
     "last_sweep_times": {
-      "algeria": 1794245974.2010589,
-      "france": 1794245977.0838568
+      "algeria": 1794246153.5613556,
+      "france": 1794246156.5859723
     },
     "last_deal_post_times": {
-      "algeria": 1794245239.0514414
+      "algeria": 1794246153.5770664
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19156,7 +19166,7 @@
     "1005008518280704": "lodydeals",
     "1005010527736444": "zedstoreonline",
     "1005013450996845": "aniscoupons",
-    "1005012171521680": "aniscoupons",
+    "1005012171521680": "lodydeals",
     "1005013144753309": "zedstoreonline",
     "1005012061152213": "zedstoreonline",
     "1005012519569107": "zedstoreonline",
