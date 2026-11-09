@@ -716,7 +716,8 @@
     "1005013226454479",
     "1005005548265076",
     "1005012555450345",
-    "1005005936479058"
+    "1005005936479058",
+    "1005008041973031"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1447,7 +1448,8 @@
     "1005013226454479": 1794227594.9699965,
     "1005005548265076": 1794231079.407264,
     "1005012555450345": 1794232557.0275722,
-    "1005005936479058": 1794242485.418005
+    "1005005936479058": 1794242485.418005,
+    "1005008041973031": 1794242679.099279
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2362,7 +2364,8 @@
     "THINKCAR THINKDIAG OBD2 Scanner",
     "Honor X70 Pro Max  8/256GB",
     "AMD Ryzen 7 9800X3D",
-    "FeiyuTech VB4 3-Axis Gimbal Stabilizer"
+    "FeiyuTech VB4 3-Axis Gimbal Stabilizer",
+    "AOCHUAN Handheld Gimbal V8"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3282,10 +3285,10 @@
     "THINKCAR THINKDIAG OBD2 Scanner": 1794231079.407264,
     "Honor X70 Pro Max  8/256GB": 1794232557.0275722,
     "AMD Ryzen 7 9800X3D": 1794235317.681294,
-    "FeiyuTech VB4 3-Axis Gimbal Stabilizer": 1794242485.418005
+    "FeiyuTech VB4 3-Axis Gimbal Stabilizer": 1794242485.418005,
+    "AOCHUAN Handheld Gimbal V8": 1794242679.099279
   },
   "published_post_keys": [
-    "lodydeals:45933",
     "test_channel:1792284227",
     "test_channel:1792157573",
     "aniscoupons:32956",
@@ -4284,11 +4287,12 @@
     "zedstoreonline:39793",
     "zedstoreonline:39794",
     "zedstoreonline:39795",
-    "aniscoupons:34358"
+    "aniscoupons:34358",
+    "aniscoupons:34357"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794242485.418005,
+  "last_run_time": 1794242679.099279,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6049,
@@ -4320,7 +4324,7 @@
     },
     "aniscoupons": {
       "last_message_id": 34358,
-      "last_check_time": 1794242487.474749
+      "last_check_time": 1794242679.099279
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -4941,7 +4945,8 @@
     "1005013226454479": 12.3,
     "1005005548265076": 36.51,
     "1005012555450345": 272.2,
-    "1005005936479058": 41.6
+    "1005005936479058": 41.6,
+    "1005008041973031": 55.2
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18586,6 +18591,16 @@
       "price": 41.6,
       "timestamp": 1794242485.418005,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34357": {
+      "channel_msg_id": 2167,
+      "product_id": "1005008041973031",
+      "title": "AOCHUAN Handheld Gimbal V8",
+      "channel": "aniscoupons",
+      "source_msg_id": 34357,
+      "price": 55.2,
+      "timestamp": 1794242679.099279,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18594,17 +18609,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794242488.4026988,
+    "last_deal_post_time": 1794242682.154588,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794242491.7631657,
+    "last_sweep_time": 1794242685.8320935,
     "last_sweep_times": {
-      "algeria": 1794242488.3766675,
-      "france": 1794242491.7631657
+      "algeria": 1794242682.1285365,
+      "france": 1794242685.8320935
     },
     "last_deal_post_times": {
-      "algeria": 1794242488.4026988
+      "algeria": 1794242682.154588
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19336,7 +19351,8 @@
     "1005013226454479": "zedstoreonline",
     "1005005548265076": "lodydeals",
     "1005012555450345": "lodydeals",
-    "1005005936479058": "aniscoupons"
+    "1005005936479058": "aniscoupons",
+    "1005008041973031": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -20258,7 +20274,8 @@
     "THINKCAR THINKDIAG OBD2 Scanner": "lodydeals",
     "Honor X70 Pro Max  8/256GB": "lodydeals",
     "AMD Ryzen 7 9800X3D": "aniscoupons",
-    "FeiyuTech VB4 3-Axis Gimbal Stabilizer": "aniscoupons"
+    "FeiyuTech VB4 3-Axis Gimbal Stabilizer": "aniscoupons",
+    "AOCHUAN Handheld Gimbal V8": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
