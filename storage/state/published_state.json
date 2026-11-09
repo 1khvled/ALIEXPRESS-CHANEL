@@ -722,7 +722,8 @@
     "1005005295582727",
     "1005009776317549",
     "1005009766330661",
-    "1005009649048598"
+    "1005009649048598",
+    "1005005209277375"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -779,7 +780,7 @@
     "1005009828161174": 1791031550.2120771,
     "1005009281115306": 1793558205.9468858,
     "1005011797801269": 1791203753.790013,
-    "1005007168829266": 1793613536.2808673,
+    "1005007168829266": 1794263706.8812196,
     "1005012406142215": 1793543604.5851276,
     "1005007345398413": 1790943717.3545928,
     "1005012504076921": 1791236011.4353654,
@@ -1459,7 +1460,8 @@
     "1005005295582727": 1794263151.742903,
     "1005009776317549": 1794250024.5461965,
     "1005009766330661": 1794251129.0913823,
-    "1005009649048598": 1794263521.335573
+    "1005009649048598": 1794263521.335573,
+    "1005005209277375": 1794263702.59817
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2380,7 +2382,8 @@
     "Hohem iSteady XE Kit",
     "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )",
     "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White",
-    "Fashion Square Watches"
+    "Fashion Square Watches",
+    "Bicycle Pump 80 PSI"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3038,7 +3041,7 @@
     "Redmi Buds 6 Active": 1793613510.8543386,
     "Lexar D400 USB3.1 USB-C 128G": 1793567901.942504,
     "Zeblaze Vibe 8 AMOLED": 1794004758.429218,
-    "Baseus 20W PD Charger": 1793568996.6387508,
+    "Baseus 20W PD Charger": 1794263706.8812196,
     "Realme Neo 8  12/256GB": 1793569553.2022223,
     "Blackview MEGA 5 AI 8/256GB": 1793569904.419889,
     "Anker Nano Smart Display 45W": 1793570287.0210865,
@@ -3306,11 +3309,10 @@
     "Hohem iSteady XE Kit": 1794263151.742903,
     "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": 1794250024.5461965,
     "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": 1794251129.0913823,
-    "Fashion Square Watches": 1794263521.335573
+    "Fashion Square Watches": 1794263521.335573,
+    "Bicycle Pump 80 PSI": 1794263702.59817
   },
   "published_post_keys": [
-    "couponsglobal:48772",
-    "zedstoreonline:38901",
     "pcgamingpart:8012",
     "zedstoreonline:38699",
     "lodydeals:45740",
@@ -4308,19 +4310,21 @@
     "aniscoupons:34369",
     "aniscoupons:34371",
     "lodydeals:46305",
-    "lodydeals:46306"
+    "lodydeals:46306",
+    "lodydeals:46309",
+    "lodydeals:46310"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794263521.335573,
+  "last_run_time": 1794263706.8812196,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
       "last_check_time": 1794252785.3081255
     },
     "lodydeals": {
-      "last_message_id": 46307,
-      "last_check_time": 1794263525.8117118
+      "last_message_id": 46310,
+      "last_check_time": 1794263708.92451
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4404,7 +4408,7 @@
     "1005009828161174": 7.62,
     "1005009281115306": 12.3,
     "1005011797801269": 55.78,
-    "1005007168829266": 4.46,
+    "1005007168829266": 4.89,
     "1005012406142215": 375.12,
     "1005008390562391": 11.79,
     "1005007345398413": 14.3,
@@ -4971,7 +4975,8 @@
     "1005005295582727": 34.77,
     "1005009776317549": 3.9,
     "1005009766330661": 45.1,
-    "1005009649048598": 3.29
+    "1005009649048598": 3.29,
+    "1005005209277375": 4.69
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18756,6 +18761,26 @@
       "price": 3.29,
       "timestamp": 1794263521.335573,
       "status": "ACTIVE"
+    },
+    "lodydeals:46309": {
+      "channel_msg_id": 2181,
+      "product_id": "1005005209277375",
+      "title": "Bicycle Pump 80 PSI",
+      "channel": "lodydeals",
+      "source_msg_id": 46309,
+      "price": 4.69,
+      "timestamp": 1794263702.59817,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46310": {
+      "channel_msg_id": 2182,
+      "product_id": "1005007168829266",
+      "title": "Baseus 20W PD Charger",
+      "channel": "lodydeals",
+      "source_msg_id": 46310,
+      "price": 4.89,
+      "timestamp": 1794263706.8812196,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18764,17 +18789,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794263528.3134959,
+    "last_deal_post_time": 1794263711.0305974,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794263532.8218184,
+    "last_sweep_time": 1794263714.1277013,
     "last_sweep_times": {
-      "algeria": 1794263528.2929235,
-      "france": 1794263532.8218184
+      "algeria": 1794263711.0099876,
+      "france": 1794263714.1277013
     },
     "last_deal_post_times": {
-      "algeria": 1794263528.3134959
+      "algeria": 1794263711.0305974
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18808,7 +18833,7 @@
     "1005009281115306": "lodydeals",
     "1005011797801269": "couponsglobal",
     "1005012973772517": "lodydeals",
-    "1005007168829266": "aniscoupons",
+    "1005007168829266": "lodydeals",
     "1005008880082336": "zedstoreonline",
     "1005010453516983": "megaphonna",
     "1005012406142215": "lodydeals",
@@ -19512,7 +19537,8 @@
     "1005005295582727": "lodydeals",
     "1005009776317549": "zedstoreonline",
     "1005009766330661": "aniscoupons",
-    "1005009649048598": "lodydeals"
+    "1005009649048598": "lodydeals",
+    "1005005209277375": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -20440,7 +20466,8 @@
     "Hohem iSteady XE Kit": "lodydeals",
     "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": "zedstoreonline",
     "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": "aniscoupons",
-    "Fashion Square Watches": "lodydeals"
+    "Fashion Square Watches": "lodydeals",
+    "Bicycle Pump 80 PSI": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
