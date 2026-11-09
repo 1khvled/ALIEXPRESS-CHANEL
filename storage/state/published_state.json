@@ -721,7 +721,8 @@
     "1005007900411524",
     "1005005295582727",
     "1005009776317549",
-    "1005009766330661"
+    "1005009766330661",
+    "1005009649048598"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1457,7 +1458,8 @@
     "1005007900411524": 1794243215.3426878,
     "1005005295582727": 1794263151.742903,
     "1005009776317549": 1794250024.5461965,
-    "1005009766330661": 1794251129.0913823
+    "1005009766330661": 1794251129.0913823,
+    "1005009649048598": 1794263521.335573
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2377,7 +2379,8 @@
     "hohem X3 SE Gimbal Phone Stabilizer",
     "Hohem iSteady XE Kit",
     "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )",
-    "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White"
+    "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White",
+    "Fashion Square Watches"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3302,10 +3305,10 @@
     "hohem X3 SE Gimbal Phone Stabilizer": 1794243215.3426878,
     "Hohem iSteady XE Kit": 1794263151.742903,
     "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": 1794250024.5461965,
-    "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": 1794251129.0913823
+    "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": 1794251129.0913823,
+    "Fashion Square Watches": 1794263521.335573
   },
   "published_post_keys": [
-    "test_channel:1792185068",
     "couponsglobal:48772",
     "zedstoreonline:38901",
     "pcgamingpart:8012",
@@ -4304,19 +4307,20 @@
     "aniscoupons:34367",
     "aniscoupons:34369",
     "aniscoupons:34371",
-    "lodydeals:46305"
+    "lodydeals:46305",
+    "lodydeals:46306"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794263151.742903,
+  "last_run_time": 1794263521.335573,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
       "last_check_time": 1794252785.3081255
     },
     "lodydeals": {
-      "last_message_id": 46305,
-      "last_check_time": 1794263153.7865665
+      "last_message_id": 46307,
+      "last_check_time": 1794263525.8117118
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4966,7 +4970,8 @@
     "1005007900411524": 70.9,
     "1005005295582727": 34.77,
     "1005009776317549": 3.9,
-    "1005009766330661": 45.1
+    "1005009766330661": 45.1,
+    "1005009649048598": 3.29
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18741,6 +18746,16 @@
       "price": 34.77,
       "timestamp": 1794263151.742903,
       "status": "ACTIVE"
+    },
+    "lodydeals:46306": {
+      "channel_msg_id": 2180,
+      "product_id": "1005009649048598",
+      "title": "Fashion Square Watches",
+      "channel": "lodydeals",
+      "source_msg_id": 46306,
+      "price": 3.29,
+      "timestamp": 1794263521.335573,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18749,17 +18764,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794263155.8221967,
+    "last_deal_post_time": 1794263528.3134959,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794263333.9506907,
+    "last_sweep_time": 1794263532.8218184,
     "last_sweep_times": {
-      "algeria": 1794263330.698898,
-      "france": 1794263333.9506907
+      "algeria": 1794263528.2929235,
+      "france": 1794263532.8218184
     },
     "last_deal_post_times": {
-      "algeria": 1794263155.8221967
+      "algeria": 1794263528.3134959
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19496,7 +19511,8 @@
     "1005007900411524": "aniscoupons",
     "1005005295582727": "lodydeals",
     "1005009776317549": "zedstoreonline",
-    "1005009766330661": "aniscoupons"
+    "1005009766330661": "aniscoupons",
+    "1005009649048598": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -20423,7 +20439,8 @@
     "hohem X3 SE Gimbal Phone Stabilizer": "aniscoupons",
     "Hohem iSteady XE Kit": "lodydeals",
     "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": "zedstoreonline",
-    "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": "aniscoupons"
+    "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": "aniscoupons",
+    "Fashion Square Watches": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -21218,7 +21235,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:5911",
     "bnddeals:51019",
     "megaphonna:8610",
     "aniscoupons:33106",
@@ -22217,7 +22233,8 @@
     "aniscoupons:34370",
     "zedstoreonline:39799",
     "bnddeals:51241",
-    "lodydeals:46304"
+    "lodydeals:46304",
+    "lodydeals:46307"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
