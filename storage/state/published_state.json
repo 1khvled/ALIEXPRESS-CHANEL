@@ -1217,7 +1217,7 @@
     "1005009980316035": 1793542552.2730343,
     "1005005905462505": 1794000865.9547298,
     "1005008248133489": 1793656129.0102158,
-    "1005008684239370": 1793975250.6134522,
+    "1005008684239370": 1794242854.979892,
     "1005011583202464": 1793809046.6886706,
     "1005009921069024": 1793542597.6187797,
     "1005009916209766": 1794167239.3538153,
@@ -3193,7 +3193,7 @@
     "HONOR Pad X8a (4/64GB)": 1794212581.5467725,
     "Magcubic HY350 Max 900ANSI": 1794213677.0196168,
     "Honor X9d (no charger)": 1794214589.905976,
-    "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1793975250.6134522,
+    "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1794242854.979892,
     "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
     "ميكروفون Ulanzi A100 لاسلكي صغير": 1793982290.6109207,
@@ -3289,7 +3289,6 @@
     "AOCHUAN Handheld Gimbal V8": 1794242679.099279
   },
   "published_post_keys": [
-    "test_channel:1792284227",
     "test_channel:1792157573",
     "aniscoupons:32956",
     "zedstoreonline:38672",
@@ -4288,11 +4287,12 @@
     "zedstoreonline:39794",
     "zedstoreonline:39795",
     "aniscoupons:34358",
-    "aniscoupons:34357"
+    "aniscoupons:34357",
+    "zedstoreonline:39796"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794242679.099279,
+  "last_run_time": 1794242854.979892,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6049,
@@ -4319,12 +4319,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39795,
-      "last_check_time": 1794242121.2419271
+      "last_message_id": 39796,
+      "last_check_time": 1794242857.0355206
     },
     "aniscoupons": {
-      "last_message_id": 34358,
-      "last_check_time": 1794242679.099279
+      "last_message_id": 34359,
+      "last_check_time": 1794242859.9063072
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -18601,6 +18601,16 @@
       "price": 55.2,
       "timestamp": 1794242679.099279,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39796": {
+      "channel_msg_id": 2168,
+      "product_id": "1005008684239370",
+      "title": "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39796,
+      "price": 9.2,
+      "timestamp": 1794242854.979892,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18609,17 +18619,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794242682.154588,
+    "last_deal_post_time": 1794242860.5281167,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794242685.8320935,
+    "last_sweep_time": 1794242863.862275,
     "last_sweep_times": {
-      "algeria": 1794242682.1285365,
-      "france": 1794242685.8320935
+      "algeria": 1794242860.5017977,
+      "france": 1794242863.862275
     },
     "last_deal_post_times": {
-      "algeria": 1794242682.154588
+      "algeria": 1794242860.5281167
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -21070,7 +21080,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45829",
     "pcgamingpart:8020",
     "aniscoupons:32965",
     "bnddeals:50965",
@@ -22069,7 +22078,8 @@
     "aniscoupons:34355",
     "aniscoupons:34356",
     "zedstoreonline:39789",
-    "zedstoreonline:39791"
+    "zedstoreonline:39791",
+    "aniscoupons:34359"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
