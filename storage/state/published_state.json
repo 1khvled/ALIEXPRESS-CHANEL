@@ -708,7 +708,8 @@
     "1005013474555268",
     "1005009121981190",
     "1005008200346347",
-    "1005006542204624"
+    "1005006542204624",
+    "1005007820092290"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1431,7 +1432,8 @@
     "1005013474555268": 1794212210.5228837,
     "1005009121981190": 1794219534.0651362,
     "1005008200346347": 1794223934.5228841,
-    "1005006542204624": 1794224474.0767472
+    "1005006542204624": 1794224474.0767472,
+    "1005007820092290": 1794224654.527678
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2336,7 +2338,8 @@
     "OnePlus Ace 7Pro (12/256GB)",
     "KODAK K133 USB3.1 256GB",
     "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق",
-    "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية"
+    "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية",
+    "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3246,10 +3249,10 @@
     "OnePlus Ace 7Pro (12/256GB)": 1794212210.5228837,
     "KODAK K133 USB3.1 256GB": 1794219534.0651362,
     "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق": 1794223934.5228841,
-    "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية": 1794224474.0767472
+    "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية": 1794224474.0767472,
+    "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات": 1794224654.527678
   },
   "published_post_keys": [
-    "aniscoupons:32706",
     "aniscoupons:32696",
     "lodydeals:45940",
     "aniscoupons:32698",
@@ -4248,11 +4251,12 @@
     "ecksdeal:6047",
     "ecksdeal:6048",
     "zedstoreonline:39773",
-    "zedstoreonline:39776"
+    "zedstoreonline:39776",
+    "zedstoreonline:39778"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794224474.0767472,
+  "last_run_time": 1794224654.527678,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6048,
@@ -4279,8 +4283,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39777,
-      "last_check_time": 1794224476.129462
+      "last_message_id": 39778,
+      "last_check_time": 1794224656.5640738
     },
     "aniscoupons": {
       "last_message_id": 34342,
@@ -4897,7 +4901,8 @@
     "1005013474555268": 566.8,
     "1005009121981190": 13.08,
     "1005008200346347": 4.5,
-    "1005006542204624": 3.1
+    "1005006542204624": 3.1,
+    "1005007820092290": 2.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18302,6 +18307,16 @@
       "price": 3.1,
       "timestamp": 1794224474.0767472,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39778": {
+      "channel_msg_id": 2142,
+      "product_id": "1005007820092290",
+      "title": "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39778,
+      "price": 2.8,
+      "timestamp": 1794224654.527678,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18310,17 +18325,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794224477.3755267,
+    "last_deal_post_time": 1794224657.7155588,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794224480.0503557,
+    "last_sweep_time": 1794224660.431626,
     "last_sweep_times": {
-      "algeria": 1794224477.3599951,
-      "france": 1794224480.0503557
+      "algeria": 1794224657.698234,
+      "france": 1794224660.431626
     },
     "last_deal_post_times": {
-      "algeria": 1794224477.3755267
+      "algeria": 1794224657.7155588
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19044,7 +19059,8 @@
     "1005013474555268": "aniscoupons",
     "1005009121981190": "lodydeals",
     "1005008200346347": "zedstoreonline",
-    "1005006542204624": "zedstoreonline"
+    "1005006542204624": "zedstoreonline",
+    "1005007820092290": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19956,7 +19972,8 @@
     "OnePlus Ace 7Pro (12/256GB)": "aniscoupons",
     "KODAK K133 USB3.1 256GB": "lodydeals",
     "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق": "zedstoreonline",
-    "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية": "zedstoreonline"
+    "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية": "zedstoreonline",
+    "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
