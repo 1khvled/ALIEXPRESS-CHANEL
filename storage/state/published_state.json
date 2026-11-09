@@ -1300,7 +1300,7 @@
     "1005007010692093": 1793601389.0047116,
     "1005006994466968": 1793601744.1664062,
     "1005011927267564": 1793728844.5794795,
-    "1005008291023017": 1794211836.7446432,
+    "1005008291023017": 1794258732.6519542,
     "1005012947477238": 1793612016.5356846,
     "1005010121513376": 1794214589.905976,
     "1005009064526142": 1793613380.753295,
@@ -3215,7 +3215,7 @@
     "AULA MINI60 HE PRO": 1793987278.5140982,
     "Maono Wave T5 Wireless Mic": 1793987285.4130383,
     "SAMSUNG DDR3 8GB 1600v": 1793987289.8200357,
-    "Realme 15 Pro (12/256GB)": 1794211836.7446432,
+    "Realme 15 Pro (12/256GB)": 1794258732.6519542,
     "SOUNDPEATS C30 ANC Wireless Earphones": 1793994623.1444166,
     "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899,
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1794147198.6954062,
@@ -3305,7 +3305,6 @@
     "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": 1794251129.0913823
   },
   "published_post_keys": [
-    "aniscoupons:32762",
     "lodydeals:45680",
     "test_channel:1792185068",
     "couponsglobal:48772",
@@ -4304,11 +4303,12 @@
     "aniscoupons:34365",
     "aniscoupons:34366",
     "aniscoupons:34367",
-    "aniscoupons:34369"
+    "aniscoupons:34369",
+    "aniscoupons:34371"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794253893.3396604,
+  "last_run_time": 1794258732.6519542,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4339,8 +4339,8 @@
       "last_check_time": 1794258353.783547
     },
     "aniscoupons": {
-      "last_message_id": 34370,
-      "last_check_time": 1794257993.7116926
+      "last_message_id": 34371,
+      "last_check_time": 1794258734.744484
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -18721,6 +18721,16 @@
       "price": 98.79,
       "timestamp": 1794253893.3396604,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34371": {
+      "channel_msg_id": 2178,
+      "product_id": "1005008291023017",
+      "title": "Realme 15 Pro (12/256GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34371,
+      "price": 285.9,
+      "timestamp": 1794258732.6519542,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18729,17 +18739,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794253896.1899838,
+    "last_deal_post_time": 1794258735.44159,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794258547.5030437,
+    "last_sweep_time": 1794258738.9161913,
     "last_sweep_times": {
-      "algeria": 1794258544.078457,
-      "france": 1794258547.5030437
+      "algeria": 1794258735.425708,
+      "france": 1794258738.9161913
     },
     "last_deal_post_times": {
-      "algeria": 1794253896.1899838
+      "algeria": 1794258735.44159
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
