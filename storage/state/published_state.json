@@ -1347,7 +1347,7 @@
     "1005013205365677": 1793736440.319658,
     "1005008429979494": 1793741666.9686077,
     "1005004795387201": 1793742770.1634803,
-    "1005010702983351": 1794147383.4570146,
+    "1005010702983351": 1794212577.1786916,
     "1005008366962319": 1794134534.5760646,
     "1005005058037424": 1793779907.9964287,
     "1005012946895000": 1793793714.105913,
@@ -1358,7 +1358,7 @@
     "1005009313079431": 1794159522.2930505,
     "1005010702511858": 1793903106.9341598,
     "1005008554218453": 1793908979.1776278,
-    "1005012499433797": 1794127587.510284,
+    "1005012499433797": 1794212581.5467725,
     "9998889309": 1793929309.3822134,
     "9998889332": 1793929332.5530465,
     "999888807": 1793930807.599727,
@@ -3142,7 +3142,7 @@
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794127040.2666676,
     "Fifine Gaming Headset H9W": 1794068051.714454,
     "Fifine Gaming Headset H6": 1794067512.4027624,
-    "HyperX Cloud 3 III Wired Gaming Headset": 1794147383.4570146,
+    "HyperX Cloud 3 III Wired Gaming Headset": 1794212577.1786916,
     "KOOTION SSD SATA": 1794091251.586213,
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
     "هذون سماعات جدد من   HAYLOU⌚": 1793966887.3818936,
@@ -3152,7 +3152,7 @@
     "Realme C100D 4G 4/128GB": 1794164698.641711,
     "HAYLOU Flowbuds N50 ANC": 1793970449.9003735,
     "Honor 600 Pro 12/256": 1794131798.3098254,
-    "HONOR Pad X8a (4/64GB)": 1794127587.510284,
+    "HONOR Pad X8a (4/64GB)": 1794212581.5467725,
     "Magcubic HY350 Max 900ANSI": 1794126846.802194,
     "Honor X9d (no charger)": 1794127394.3986294,
     "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1793975250.6134522,
@@ -3237,8 +3237,6 @@
     "OnePlus Ace 7Pro (12/256GB)": 1794212210.5228837
   },
   "published_post_keys": [
-    "couponsglobal:48846",
-    "lodydeals:45845",
     "aniscoupons:32732",
     "ecksdeal:5988",
     "test_channel:1792073836",
@@ -4236,11 +4234,13 @@
     "aniscoupons:34319",
     "aniscoupons:34320",
     "aniscoupons:34321",
-    "aniscoupons:34322"
+    "aniscoupons:34322",
+    "aniscoupons:34323",
+    "aniscoupons:34324"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794212210.5228837,
+  "last_run_time": 1794212581.5467725,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
@@ -4267,12 +4267,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39757,
-      "last_check_time": 1794178675.5408962
+      "last_message_id": 39758,
+      "last_check_time": 1794212573.8417902
     },
     "aniscoupons": {
-      "last_message_id": 34322,
-      "last_check_time": 1794212212.5880075
+      "last_message_id": 34324,
+      "last_check_time": 1794212583.5886602
     },
     "bnddeals": {
       "last_message_id": 51239,
@@ -4812,7 +4812,7 @@
     "1005013205365677": 890.6,
     "1005008429979494": 72.7,
     "1005004795387201": 115.5,
-    "1005010702983351": 67.6,
+    "1005010702983351": 69.6,
     "1005008366962319": 30.8,
     "1005005058037424": 34.67,
     "1005012946895000": 142.59,
@@ -18077,6 +18077,26 @@
       "price": 566.8,
       "timestamp": 1794212210.5228837,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34323": {
+      "channel_msg_id": 2121,
+      "product_id": "1005010702983351",
+      "title": "HyperX Cloud 3 III Wired Gaming Headset",
+      "channel": "aniscoupons",
+      "source_msg_id": 34323,
+      "price": 69.6,
+      "timestamp": 1794212577.1786916,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34324": {
+      "channel_msg_id": 2122,
+      "product_id": "1005012499433797",
+      "title": "HONOR Pad X8a (4/64GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34324,
+      "price": 134.36,
+      "timestamp": 1794212581.5467725,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18085,17 +18105,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794212213.4821112,
+    "last_deal_post_time": 1794212584.3930404,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794212391.3455184,
+    "last_sweep_time": 1794212587.0572164,
     "last_sweep_times": {
-      "algeria": 1794212388.5678947,
-      "france": 1794212391.3455184
+      "algeria": 1794212584.372246,
+      "france": 1794212587.0572164
     },
     "last_deal_post_times": {
-      "algeria": 1794212213.4821112
+      "algeria": 1794212584.3930404
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20520,7 +20540,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45684",
     "zedstoreonline:38754",
     "lodydeals:45828",
     "lodydeals:45650",
@@ -21519,7 +21538,8 @@
     "zedstoreonline:39755",
     "zedstoreonline:39756",
     "aniscoupons:34315",
-    "zedstoreonline:39757"
+    "zedstoreonline:39757",
+    "zedstoreonline:39758"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
