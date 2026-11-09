@@ -714,7 +714,8 @@
     "1005013218893010",
     "1005013480169843",
     "1005013226454479",
-    "1005005548265076"
+    "1005005548265076",
+    "1005012555450345"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1443,7 +1444,8 @@
     "1005013218893010": 1794226314.627466,
     "1005013480169843": 1794226491.8355606,
     "1005013226454479": 1794227594.9699965,
-    "1005005548265076": 1794231079.407264
+    "1005005548265076": 1794231079.407264,
+    "1005012555450345": 1794232557.0275722
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2355,7 +2357,8 @@
     "شاحنة ألعاب صغيرة بالتحكم عن بُعد",
     "Mortal T1+ 2/16GB Wifi 4K",
     "Honor Win Turbo 2",
-    "THINKCAR THINKDIAG OBD2 Scanner"
+    "THINKCAR THINKDIAG OBD2 Scanner",
+    "Honor X70 Pro Max  8/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3272,10 +3275,10 @@
     "شاحنة ألعاب صغيرة بالتحكم عن بُعد": 1794227594.9699965,
     "Mortal T1+ 2/16GB Wifi 4K": 1794229795.9714105,
     "Honor Win Turbo 2": 1794230539.4652834,
-    "THINKCAR THINKDIAG OBD2 Scanner": 1794231079.407264
+    "THINKCAR THINKDIAG OBD2 Scanner": 1794231079.407264,
+    "Honor X70 Pro Max  8/256GB": 1794232557.0275722
   },
   "published_post_keys": [
-    "aniscoupons:32957",
     "zedstoreonline:38832",
     "aniscoupons:32765",
     "aniscoupons:33279",
@@ -4274,19 +4277,20 @@
     "aniscoupons:34347",
     "lodydeals:46292",
     "aniscoupons:34348",
-    "zedstoreonline:39785"
+    "zedstoreonline:39785",
+    "lodydeals:46294"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794231632.2676654,
+  "last_run_time": 1794232557.0275722,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6048,
-      "last_check_time": 1794223212.0463006
+      "last_message_id": 6049,
+      "last_check_time": 1794232565.6123683
     },
     "lodydeals": {
-      "last_message_id": 46293,
-      "last_check_time": 1794231996.804748
+      "last_message_id": 46294,
+      "last_check_time": 1794232559.096367
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4929,7 +4933,8 @@
     "1005013218893010": 2.7,
     "1005013480169843": 66.7,
     "1005013226454479": 12.3,
-    "1005005548265076": 36.51
+    "1005005548265076": 36.51,
+    "1005012555450345": 272.2
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18444,6 +18449,16 @@
       "price": 31.5,
       "timestamp": 1794231632.2676654,
       "status": "ACTIVE"
+    },
+    "lodydeals:46294": {
+      "channel_msg_id": 2153,
+      "product_id": "1005012555450345",
+      "title": "Honor X70 Pro Max  8/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46294,
+      "price": 272.2,
+      "timestamp": 1794232557.0275722,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18452,17 +18467,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794231635.5867128,
+    "last_deal_post_time": 1794232568.9727411,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794232373.2575061,
+    "last_sweep_time": 1794232572.146421,
     "last_sweep_times": {
-      "algeria": 1794232370.2712247,
-      "france": 1794232373.2575061
+      "algeria": 1794232568.9411662,
+      "france": 1794232572.146421
     },
     "last_deal_post_times": {
-      "algeria": 1794231635.5867128
+      "algeria": 1794232568.9727411
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19192,7 +19207,8 @@
     "1005013218893010": "zedstoreonline",
     "1005013480169843": "aniscoupons",
     "1005013226454479": "zedstoreonline",
-    "1005005548265076": "lodydeals"
+    "1005005548265076": "lodydeals",
+    "1005012555450345": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -20111,7 +20127,8 @@
     "شاحنة ألعاب صغيرة بالتحكم عن بُعد": "zedstoreonline",
     "Mortal T1+ 2/16GB Wifi 4K": "lodydeals",
     "Honor Win Turbo 2": "aniscoupons",
-    "THINKCAR THINKDIAG OBD2 Scanner": "lodydeals"
+    "THINKCAR THINKDIAG OBD2 Scanner": "lodydeals",
+    "Honor X70 Pro Max  8/256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -20906,7 +20923,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33338",
     "megaphonna:8458",
     "megaphonna:8292",
     "zedstoreonline:38921",
@@ -21905,7 +21921,8 @@
     "zedstoreonline:39784",
     "lodydeals:46291",
     "lodydeals:46293",
-    "zedstoreonline:39786"
+    "zedstoreonline:39786",
+    "ecksdeal:6049"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
