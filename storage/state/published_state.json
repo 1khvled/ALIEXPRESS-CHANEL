@@ -719,7 +719,8 @@
     "1005005936479058",
     "1005008041973031",
     "1005007900411524",
-    "1005005295582727"
+    "1005005295582727",
+    "1005009776317549"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1453,7 +1454,8 @@
     "1005005936479058": 1794242485.418005,
     "1005008041973031": 1794242679.099279,
     "1005007900411524": 1794243215.3426878,
-    "1005005295582727": 1794243589.8816426
+    "1005005295582727": 1794243589.8816426,
+    "1005009776317549": 1794250024.5461965
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2371,7 +2373,8 @@
     "FeiyuTech VB4 3-Axis Gimbal Stabilizer",
     "AOCHUAN Handheld Gimbal V8",
     "hohem X3 SE Gimbal Phone Stabilizer",
-    "Hohem iSteady XE Kit"
+    "Hohem iSteady XE Kit",
+    "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3294,10 +3297,10 @@
     "FeiyuTech VB4 3-Axis Gimbal Stabilizer": 1794242485.418005,
     "AOCHUAN Handheld Gimbal V8": 1794242679.099279,
     "hohem X3 SE Gimbal Phone Stabilizer": 1794243215.3426878,
-    "Hohem iSteady XE Kit": 1794243589.8816426
+    "Hohem iSteady XE Kit": 1794243589.8816426,
+    "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": 1794250024.5461965
   },
   "published_post_keys": [
-    "zedstoreonline:38897",
     "megaphonna:8568",
     "megaphonna:8624",
     "zedstoreonline:39025",
@@ -4296,11 +4299,12 @@
     "aniscoupons:34360",
     "aniscoupons:34361",
     "lodydeals:46299",
-    "lodydeals:46300"
+    "lodydeals:46300",
+    "zedstoreonline:39780"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794246148.3838613,
+  "last_run_time": 1794250024.5461965,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6049,
@@ -4328,11 +4332,11 @@
     },
     "zedstoreonline": {
       "last_message_id": 39797,
-      "last_check_time": 1794248908.8187938
+      "last_check_time": 1794250024.5461965
     },
     "aniscoupons": {
-      "last_message_id": 34363,
-      "last_check_time": 1794249644.8818266
+      "last_message_id": 34364,
+      "last_check_time": 1794250031.4305646
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -4956,7 +4960,8 @@
     "1005005936479058": 41.6,
     "1005008041973031": 55.2,
     "1005007900411524": 70.9,
-    "1005005295582727": 34.77
+    "1005005295582727": 34.77,
+    "1005009776317549": 3.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18661,6 +18666,16 @@
       "price": 277.26,
       "timestamp": 1794246148.3838613,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39780": {
+      "channel_msg_id": 2173,
+      "product_id": "1005009776317549",
+      "title": "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39780,
+      "price": 3.9,
+      "timestamp": 1794250024.5461965,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18669,17 +18684,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794246153.5770664,
+    "last_deal_post_time": 1794250032.0249612,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794249830.5474663,
+    "last_sweep_time": 1794250035.6970816,
     "last_sweep_times": {
-      "algeria": 1794249827.686113,
-      "france": 1794249830.5474663
+      "algeria": 1794250032.0044441,
+      "france": 1794250035.6970816
     },
     "last_deal_post_times": {
-      "algeria": 1794246153.5770664
+      "algeria": 1794250032.0249612
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19414,7 +19429,8 @@
     "1005005936479058": "aniscoupons",
     "1005008041973031": "aniscoupons",
     "1005007900411524": "aniscoupons",
-    "1005005295582727": "aniscoupons"
+    "1005005295582727": "aniscoupons",
+    "1005009776317549": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -20339,7 +20355,8 @@
     "FeiyuTech VB4 3-Axis Gimbal Stabilizer": "aniscoupons",
     "AOCHUAN Handheld Gimbal V8": "aniscoupons",
     "hohem X3 SE Gimbal Phone Stabilizer": "aniscoupons",
-    "Hohem iSteady XE Kit": "aniscoupons"
+    "Hohem iSteady XE Kit": "aniscoupons",
+    "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -21134,7 +21151,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38907",
     "megaphonna:8608",
     "megaphonna:8681",
     "bnddeals:50870",
@@ -22133,7 +22149,8 @@
     "lodydeals:46298",
     "lodydeals:46301",
     "zedstoreonline:39797",
-    "aniscoupons:34363"
+    "aniscoupons:34363",
+    "aniscoupons:34364"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
