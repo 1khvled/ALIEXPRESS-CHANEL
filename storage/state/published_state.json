@@ -1306,7 +1306,7 @@
     "1005013137304827": 1793613926.9213502,
     "1005010355409000": 1793613934.9347482,
     "1005012648097890": 1793613942.3770478,
-    "1005012524603100": 1794130874.808105,
+    "1005012524603100": 1794215509.2629838,
     "1005012770405022": 1793738297.0536208,
     "1005012171521680": 1793613957.1320925,
     "1005010758512904": 1793613961.7877593,
@@ -3049,7 +3049,7 @@
     "HONOR 600s 8/256GB": 1793613926.9213502,
     "Realme GT8 Pro": 1793613934.9347482,
     "Oppo Find X8s+": 1793613942.3770478,
-    "Xiaoxin Pad Pro 13 (8/128)": 1794130874.808105,
+    "Xiaoxin Pad Pro 13 (8/128)": 1794215509.2629838,
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S CPU 11.1\" 4K 144Hz LCD Display 1100": 1793613951.963987,
     "Honor Pad V9 (8/256)": 1794133977.9005425,
     "HONOR Pad X8b (LTE 6/128GB)": 1794136369.073103,
@@ -3237,7 +3237,6 @@
     "OnePlus Ace 7Pro (12/256GB)": 1794212210.5228837
   },
   "published_post_keys": [
-    "zedstoreonline:38748",
     "bnddeals:50886",
     "zedstoreonline:38525",
     "lodydeals:45915",
@@ -4236,19 +4235,20 @@
     "aniscoupons:34334",
     "zedstoreonline:39762",
     "aniscoupons:34335",
-    "aniscoupons:34336"
+    "aniscoupons:34336",
+    "aniscoupons:34337"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794215317.7512906,
+  "last_run_time": 1794215509.2629838,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
       "last_check_time": 1794159484.4700966
     },
     "lodydeals": {
-      "last_message_id": 46278,
-      "last_check_time": 1794214762.0626233
+      "last_message_id": 46279,
+      "last_check_time": 1794215500.8965926
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4271,8 +4271,8 @@
       "last_check_time": 1794215139.970004
     },
     "aniscoupons": {
-      "last_message_id": 34336,
-      "last_check_time": 1794215319.8050768
+      "last_message_id": 34337,
+      "last_check_time": 1794215511.3189118
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -18197,6 +18197,16 @@
       "price": 35.9,
       "timestamp": 1794215317.7512906,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34337": {
+      "channel_msg_id": 2133,
+      "product_id": "1005012524603100",
+      "title": "Xiaoxin Pad Pro 13 (8/128)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34337,
+      "price": 283.59,
+      "timestamp": 1794215509.2629838,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18205,17 +18215,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794215320.5892494,
+    "last_deal_post_time": 1794215512.3463614,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794215323.1075554,
+    "last_sweep_time": 1794215515.6677861,
     "last_sweep_times": {
-      "algeria": 1794215320.563625,
-      "france": 1794215323.1075554
+      "algeria": 1794215512.3204093,
+      "france": 1794215515.6677861
     },
     "last_deal_post_times": {
-      "algeria": 1794215320.5892494
+      "algeria": 1794215512.3463614
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20640,7 +20650,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38751",
     "megaphonna:8406",
     "pcgamingpart:8008",
     "aniscoupons:33157",
@@ -21639,7 +21648,8 @@
     "lodydeals:46277",
     "zedstoreonline:39760",
     "lodydeals:46278",
-    "zedstoreonline:39761"
+    "zedstoreonline:39761",
+    "lodydeals:46279"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
