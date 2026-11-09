@@ -149,5 +149,26 @@
     "event_key": "AliExpress_Special_Promo_Octobre_2026_20261029",
     "is_sunday_flash": false,
     "is_france_only": false
+  },
+  {
+    "name": "Choice Day Décembre 2026",
+    "name_ar": "تخفيضات Choice Day الشهيرة 🎯 (ديسمبر 2026)",
+    "name_fr": "AliExpress Choice Day 🎯 Décembre 2026",
+    "start_date": "2026-12-01T07:00:00+00:00",
+    "end_date": "2026-12-07T23:59:59+00:00",
+    "banner_tag": "🎯 Choice Day Sale (1 - 6 ديسمبر)",
+    "is_major": true,
+    "coupon_tiers": [
+      {
+        "tier": "4/25$",
+        "code": "OTD1104"
+      }
+    ],
+    "coupon_tiers_fr": [],
+    "banner_image_url": "https://cdn4.telesco.pe/file/LCBfKjJcvi-MjXhTiye9xGHYa5zP5PiYDv7wV-g6gahtZh7g71WhrK6o69yKXTSu2-fB2_Xum-zeeJbXI61krYmg0I1Bg8hBN5IZHJEDu_Vk5l-hxST5F1g8SLD4P506RVzneX-uPfH5vapmU_KYPMZnWzojTD_Cr76Lqj1nO9uLay-52_sKtr0KOgXFE-ZzI_gUzLv4SOx3A9ZpJRIYNnHBdG7pl7ajP5lf7ah60yDjTMojv8dnVGFb7_vY3QCw4zjOe6BnTunIvKqK1V9I_n3XK3GwMX6D-4pO8yJM0AQLqILn04FJ9a7XhNZJR7qbjT5wLVYABoF7V_D8gRtqEA.jpg",
+    "source": "discovered",
+    "event_key": "Choice_Day_D_cembre_2026_20261201",
+    "is_sunday_flash": false,
+    "is_france_only": false
   }
 ]

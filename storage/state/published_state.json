@@ -1120,7 +1120,7 @@
     "1005011787296177": 1793607070.347875,
     "1005007375332966": 1793467173.1692383,
     "1005012543970886": 1793467209.762414,
-    "1005013222073946": 1794079932.1547406,
+    "1005013222073946": 1794230168.269789,
     "1005010485068924": 1793613491.3461006,
     "1005013245248248": 1793467100.7719579,
     "1005011790544318": 1793448745.105644,
@@ -2563,7 +2563,7 @@
     "Rocoren 100W Type-C to USB Fast Charging": 1791156089.0187185,
     "XUNYOU-LINK 4G SIM WiFi Router": 1791192351.7104166,
     "UGREEN  1080P Webcam": 1791192944.201814,
-    "HONOR CHOICE Watch 2i": 1791193543.9040256,
+    "HONOR CHOICE Watch 2i": 1794230168.269789,
     "HONOR Watch X5i Version globale SmartWatch 1.9": 1791194149.475346,
     "Attack Shark L60 Tri-mode Gaming Headset": 1791194741.6244273,
     "ATTACK SHARK X2 Pro station de chargement RGB": 1791195344.3305714,
@@ -3269,7 +3269,6 @@
     "Mortal T1+ 2/16GB Wifi 4K": 1794229795.9714105
   },
   "published_post_keys": [
-    "lodydeals:45530",
     "aniscoupons:33184",
     "megaphonna:8494",
     "bnddeals:50940",
@@ -4268,19 +4267,20 @@
     "zedstoreonline:39779",
     "aniscoupons:34345",
     "zedstoreonline:39782",
-    "lodydeals:46289"
+    "lodydeals:46289",
+    "lodydeals:46290"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794229795.9714105,
+  "last_run_time": 1794230168.269789,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6048,
       "last_check_time": 1794223212.0463006
     },
     "lodydeals": {
-      "last_message_id": 46289,
-      "last_check_time": 1794229798.0291302
+      "last_message_id": 46290,
+      "last_check_time": 1794230170.3221753
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4627,7 +4627,7 @@
     "1005011787296177": 29.76,
     "1005007375332966": 52.8,
     "1005012543970886": 12.3,
-    "1005013222073946": 19.5,
+    "1005013222073946": 19.51,
     "1005010485068924": 22.4,
     "1005013245248248": 18.5,
     "1005011790544318": 57.85,
@@ -18387,6 +18387,16 @@
       "price": 19.4,
       "timestamp": 1794229795.9714105,
       "status": "ACTIVE"
+    },
+    "lodydeals:46290": {
+      "channel_msg_id": 2148,
+      "product_id": "1005013222073946",
+      "title": "HONOR CHOICE Watch 2i",
+      "channel": "lodydeals",
+      "source_msg_id": 46290,
+      "price": 19.51,
+      "timestamp": 1794230168.269789,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18395,17 +18405,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794229801.226959,
+    "last_deal_post_time": 1794230173.9082396,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794229982.602233,
+    "last_sweep_time": 1794230177.4488437,
     "last_sweep_times": {
-      "algeria": 1794229979.0900729,
-      "france": 1794229982.602233
+      "algeria": 1794230173.8839593,
+      "france": 1794230177.4488437
     },
     "last_deal_post_times": {
-      "algeria": 1794229801.226959
+      "algeria": 1794230173.9082396
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18822,7 +18832,7 @@
     "1005011787296177": "lodydeals",
     "1005007375332966": "aniscoupons",
     "1005012543970886": "aniscoupons",
-    "1005013222073946": "aniscoupons",
+    "1005013222073946": "lodydeals",
     "1005010485068924": "zedstoreonline",
     "1005013245248248": "zedstoreonline",
     "1005011790544318": "bnddeals",
@@ -19329,7 +19339,7 @@
     "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse": "zedstoreonline",
     "XUNYOU-LINK 4G SIM WiFi Router": "zedstoreonline",
     "UGREEN  1080P Webcam": "zedstoreonline",
-    "HONOR CHOICE Watch 2i": "zedstoreonline",
+    "HONOR CHOICE Watch 2i": "lodydeals",
     "HONOR Watch X5i Version globale SmartWatch 1.9": "bnddeals",
     "Attack Shark L60 Tri-mode Gaming Headset": "zedstoreonline",
     "ATTACK SHARK X2 Pro station de chargement RGB": "zedstoreonline",
