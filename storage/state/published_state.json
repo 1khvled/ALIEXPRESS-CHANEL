@@ -1388,7 +1388,7 @@
     "1005012925301774": 1794002515.731258,
     "1005012959738411": 1794211663.3506916,
     "1005008357913212": 1794173731.8411272,
-    "1005008703989845": 1794127040.2666676,
+    "1005008703989845": 1794214034.3163798,
     "1005007162099601": 1794046115.3557825,
     "1005007038130594": 1794046667.9804564,
     "1005008248187128": 1794057675.8729835,
@@ -3139,7 +3139,7 @@
     "Netac SSD NVME M2 250GB": 1793966752.4109294,
     "Essager 20W GaN + cable": 1794076070.3822317,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
-    "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794127040.2666676,
+    "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794214034.3163798,
     "Fifine Gaming Headset H9W": 1794068051.714454,
     "Fifine Gaming Headset H6": 1794067512.4027624,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794212577.1786916,
@@ -3237,7 +3237,6 @@
     "OnePlus Ace 7Pro (12/256GB)": 1794212210.5228837
   },
   "published_post_keys": [
-    "aniscoupons:33274",
     "zedstoreonline:38604",
     "lodydeals:45425",
     "lodydeals:45458",
@@ -4236,11 +4235,12 @@
     "aniscoupons:34325",
     "lodydeals:46276",
     "aniscoupons:34328",
-    "aniscoupons:34331"
+    "aniscoupons:34331",
+    "aniscoupons:34332"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794213677.0196168,
+  "last_run_time": 1794214034.3163798,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
@@ -4267,12 +4267,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39758,
-      "last_check_time": 1794212573.8417902
+      "last_message_id": 39759,
+      "last_check_time": 1794214030.764505
     },
     "aniscoupons": {
-      "last_message_id": 34331,
-      "last_check_time": 1794213679.065828
+      "last_message_id": 34332,
+      "last_check_time": 1794214036.3483396
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -18137,6 +18137,16 @@
       "price": 111.4,
       "timestamp": 1794213677.0196168,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34332": {
+      "channel_msg_id": 2127,
+      "product_id": "1005008703989845",
+      "title": "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34332,
+      "price": 24.8,
+      "timestamp": 1794214034.3163798,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18145,17 +18155,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794213679.7853394,
+    "last_deal_post_time": 1794214037.0501223,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794213853.188469,
+    "last_sweep_time": 1794214039.5029244,
     "last_sweep_times": {
-      "algeria": 1794213850.7372339,
-      "france": 1794213853.188469
+      "algeria": 1794214037.0359793,
+      "france": 1794214039.5029244
     },
     "last_deal_post_times": {
-      "algeria": 1794213679.7853394
+      "algeria": 1794214037.0501223
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20580,7 +20590,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38681",
     "megaphonna:8668",
     "zedstoreonline:39042",
     "lodydeals:45649",
@@ -21579,7 +21588,8 @@
     "aniscoupons:34326",
     "aniscoupons:34327",
     "aniscoupons:34329",
-    "aniscoupons:34330"
+    "aniscoupons:34330",
+    "zedstoreonline:39759"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
