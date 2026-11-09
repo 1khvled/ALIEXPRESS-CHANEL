@@ -1397,7 +1397,7 @@
     "1005006411483066": 1794091985.0146983,
     "1005012925301774": 1794002515.731258,
     "1005012959738411": 1794211663.3506916,
-    "1005008357913212": 1794214218.5353336,
+    "1005008357913212": 1794241389.2452002,
     "1005008703989845": 1794234954.8876405,
     "1005007162099601": 1794046115.3557825,
     "1005007038130594": 1794046667.9804564,
@@ -3229,7 +3229,7 @@
     "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop": 1794079928.0765662,
     "SOUNDPEATS Air6 HS": 1794087501.0429602,
     "مبرد الهاتف MEMO CX10": 1794126663.880001,
-    "KOOTION SATA SSD 480GB": 1794127389.2657666,
+    "KOOTION SATA SSD 480GB": 1794241389.2452002,
     "راوتر Vodafone 4G محمول": 1794128872.1451216,
     "OnePlus ACE 6T": 1794128880.302774,
     "Essager Mini 20W Type C Charger PD": 1794129971.1690388,
@@ -3281,7 +3281,6 @@
     "AMD Ryzen 7 9800X3D": 1794235317.681294
   },
   "published_post_keys": [
-    "zedstoreonline:38534",
     "zedstoreonline:38799",
     "megaphonna:8614",
     "zedstoreonline:38824",
@@ -4280,11 +4279,12 @@
     "aniscoupons:34352",
     "aniscoupons:34353",
     "aniscoupons:34354",
-    "zedstoreonline:39792"
+    "zedstoreonline:39792",
+    "zedstoreonline:39793"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794241024.1358633,
+  "last_run_time": 1794241389.2452002,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6049,
@@ -4311,8 +4311,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39792,
-      "last_check_time": 1794241026.3564167
+      "last_message_id": 39793,
+      "last_check_time": 1794241391.299825
     },
     "aniscoupons": {
       "last_message_id": 34356,
@@ -4877,7 +4877,7 @@
     "1005008703989845": 24.8,
     "1005008060391372": 32.9,
     "1005012593794312": 239.8,
-    "1005008357913212": 40.5,
+    "1005008357913212": 40.4,
     "1005012254132930": 15.2,
     "1005008708333999": 136.7,
     "1005013028124905": 438.6,
@@ -18541,6 +18541,16 @@
       "price": 192.7,
       "timestamp": 1794241024.1358633,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39793": {
+      "channel_msg_id": 2163,
+      "product_id": "1005008357913212",
+      "title": "KOOTION SATA SSD 480GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39793,
+      "price": 40.4,
+      "timestamp": 1794241389.2452002,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18549,17 +18559,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794241027.7229707,
+    "last_deal_post_time": 1794241392.7775576,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794241196.659841,
+    "last_sweep_time": 1794241395.9935572,
     "last_sweep_times": {
-      "algeria": 1794241193.5231926,
-      "france": 1794241196.659841
+      "algeria": 1794241392.7530987,
+      "france": 1794241395.9935572
     },
     "last_deal_post_times": {
-      "algeria": 1794241027.7229707
+      "algeria": 1794241392.7775576
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19241,7 +19251,7 @@
     "1005006411483066": "zedstoreonline",
     "1005012925301774": "zedstoreonline",
     "1005012959738411": "aniscoupons",
-    "1005008357913212": "aniscoupons",
+    "1005008357913212": "zedstoreonline",
     "1005008703989845": "aniscoupons",
     "1005007162099601": "lodydeals",
     "1005007038130594": "lodydeals",
