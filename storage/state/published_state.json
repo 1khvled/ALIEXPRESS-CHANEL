@@ -706,7 +706,8 @@
     "1005012442521357",
     "1005012494171063",
     "1005013474555268",
-    "1005009121981190"
+    "1005009121981190",
+    "1005008200346347"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1427,7 +1428,8 @@
     "1005012442521357": 1794171698.893023,
     "1005012494171063": 1794175751.7054114,
     "1005013474555268": 1794212210.5228837,
-    "1005009121981190": 1794219534.0651362
+    "1005009121981190": 1794219534.0651362,
+    "1005008200346347": 1794223934.5228841
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2330,7 +2332,8 @@
     "Smailwolf L80 Wireless Headset",
     "KOOTION SSD SATA3 480GB",
     "OnePlus Ace 7Pro (12/256GB)",
-    "KODAK K133 USB3.1 256GB"
+    "KODAK K133 USB3.1 256GB",
+    "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3238,10 +3241,10 @@
     "Smailwolf L80 Wireless Headset": 1794171706.368645,
     "KOOTION SSD SATA3 480GB": 1794173731.8411272,
     "OnePlus Ace 7Pro (12/256GB)": 1794212210.5228837,
-    "KODAK K133 USB3.1 256GB": 1794219534.0651362
+    "KODAK K133 USB3.1 256GB": 1794219534.0651362,
+    "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق": 1794223934.5228841
   },
   "published_post_keys": [
-    "test_channel:1792326038",
     "lodydeals:45448",
     "aniscoupons:32706",
     "aniscoupons:32696",
@@ -4240,11 +4243,12 @@
     "aniscoupons:34340",
     "lodydeals:46285",
     "ecksdeal:6047",
-    "ecksdeal:6048"
+    "ecksdeal:6048",
+    "zedstoreonline:39773"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794223210.002915,
+  "last_run_time": 1794223934.5228841,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6048,
@@ -4271,12 +4275,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39772,
-      "last_check_time": 1794223554.5779748
+      "last_message_id": 39774,
+      "last_check_time": 1794223936.603227
     },
     "aniscoupons": {
-      "last_message_id": 34340,
-      "last_check_time": 1794219164.9361544
+      "last_message_id": 34341,
+      "last_check_time": 1794223938.0273852
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -4887,7 +4891,8 @@
     "1005012442521357": 158.34,
     "1005012494171063": 237.03,
     "1005013474555268": 566.8,
-    "1005009121981190": 13.08
+    "1005009121981190": 13.08,
+    "1005008200346347": 4.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18272,6 +18277,16 @@
       "price": 53.59,
       "timestamp": 1794223210.002915,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39773": {
+      "channel_msg_id": 2140,
+      "product_id": "1005008200346347",
+      "title": "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39773,
+      "price": 4.5,
+      "timestamp": 1794223934.5228841,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18280,17 +18295,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794223219.2420685,
+    "last_deal_post_time": 1794223938.5930545,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794223741.3843675,
+    "last_sweep_time": 1794223941.198172,
     "last_sweep_times": {
-      "algeria": 1794223738.6138384,
-      "france": 1794223741.3843675
+      "algeria": 1794223938.5689034,
+      "france": 1794223941.198172
     },
     "last_deal_post_times": {
-      "algeria": 1794223219.2420685
+      "algeria": 1794223938.5930545
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19012,7 +19027,8 @@
     "1005012442521357": "lodydeals",
     "1005012494171063": "lodydeals",
     "1005013474555268": "aniscoupons",
-    "1005009121981190": "lodydeals"
+    "1005009121981190": "lodydeals",
+    "1005008200346347": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19922,7 +19938,8 @@
     "Smailwolf L80 Wireless Headset": "lodydeals",
     "KOOTION SSD SATA3 480GB": "lodydeals",
     "OnePlus Ace 7Pro (12/256GB)": "aniscoupons",
-    "KODAK K133 USB3.1 256GB": "lodydeals"
+    "KODAK K133 USB3.1 256GB": "lodydeals",
+    "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -20717,8 +20734,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:5964",
-    "zedstoreonline:38698",
     "bnddeals:51002",
     "lodydeals:45799",
     "bnddeals:50957",
@@ -21716,7 +21731,9 @@
     "lodydeals:46287",
     "lodydeals:46288",
     "zedstoreonline:39771",
-    "zedstoreonline:39772"
+    "zedstoreonline:39772",
+    "zedstoreonline:39774",
+    "aniscoupons:34341"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
