@@ -1451,7 +1451,7 @@
     "1005007820092290": 1794224654.527678,
     "1005012329021334": 1794225392.2814271,
     "1005013218893010": 1794226314.627466,
-    "1005013480169843": 1794226491.8355606,
+    "1005013480169843": 1794264257.1501565,
     "1005013226454479": 1794227594.9699965,
     "1005005548265076": 1794231079.407264,
     "1005012555450345": 1794232557.0275722,
@@ -2678,7 +2678,7 @@
     "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)": 1792156501.818011,
     "Redmi Pad 2 9.7": 1792061322.5579543,
     "Redmi Note 12 5G Global (4/128GB)": 1792156524.878074,
-    "Blackview Wave 10C": 1794226491.8355606,
+    "Blackview Wave 10C": 1794264257.1501565,
     "متوسط سعره حالياً 82000دج": 1793276237.692456,
     "iQOO Z11s 5G (8/128GB)": 1794159573.4625287,
     "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1793966861.2399917,
@@ -3317,7 +3317,6 @@
     "Portable Hair Clipper": 1794263885.7408762
   },
   "published_post_keys": [
-    "zedstoreonline:38699",
     "lodydeals:45740",
     "ecksdeal:5935",
     "lodydeals:45867",
@@ -4316,11 +4315,12 @@
     "lodydeals:46306",
     "lodydeals:46309",
     "lodydeals:46310",
-    "lodydeals:46308"
+    "lodydeals:46308",
+    "aniscoupons:34372"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794263885.7408762,
+  "last_run_time": 1794264257.1501565,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4351,8 +4351,8 @@
       "last_check_time": 1794258353.783547
     },
     "aniscoupons": {
-      "last_message_id": 34371,
-      "last_check_time": 1794258734.744484
+      "last_message_id": 34372,
+      "last_check_time": 1794264259.2096379
     },
     "bnddeals": {
       "last_message_id": 51241,
@@ -18796,6 +18796,16 @@
       "price": 5.29,
       "timestamp": 1794263885.7408762,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34372": {
+      "channel_msg_id": 2184,
+      "product_id": "1005013480169843",
+      "title": "Blackview Wave 10C",
+      "channel": "aniscoupons",
+      "source_msg_id": 34372,
+      "price": 66.7,
+      "timestamp": 1794264257.1501565,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18804,17 +18814,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794263889.7533736,
+    "last_deal_post_time": 1794264260.0434742,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794264075.3935554,
+    "last_sweep_time": 1794264263.331208,
     "last_sweep_times": {
-      "algeria": 1794264071.7320101,
-      "france": 1794264075.3935554
+      "algeria": 1794264260.0167682,
+      "france": 1794264263.331208
     },
     "last_deal_post_times": {
-      "algeria": 1794263889.7533736
+      "algeria": 1794264260.0434742
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
