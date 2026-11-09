@@ -943,7 +943,7 @@
     "1005011557896041": 1794212756.8201253,
     "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
-    "1005007916078341": 1794211658.839484,
+    "1005007916078341": 1794264992.2273488,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
     "1005013336240375": 1791968149.7952893,
@@ -2567,7 +2567,7 @@
     "ATTACK SHARK L80PRO Ultralight": 1791107750.295487,
     "AMD Ryzen 7 5700X": 1793898345.0223713,
     "هاتف ينسيك في شارجور🤣🤣": 1791109857.5190113,
-    "CMF Smart Watch 3 pro AMOLED": 1794211658.839484,
+    "CMF Smart Watch 3 pro AMOLED": 1794264992.2273488,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
     "OPPO A6 Pro 8/256GB": 1794180320.4443028,
@@ -3317,7 +3317,6 @@
     "Portable Hair Clipper": 1794263885.7408762
   },
   "published_post_keys": [
-    "lodydeals:45740",
     "ecksdeal:5935",
     "lodydeals:45867",
     "lodydeals:45876",
@@ -4316,11 +4315,12 @@
     "lodydeals:46309",
     "lodydeals:46310",
     "lodydeals:46308",
-    "aniscoupons:34372"
+    "aniscoupons:34372",
+    "aniscoupons:34373"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794264257.1501565,
+  "last_run_time": 1794264992.2273488,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4351,8 +4351,8 @@
       "last_check_time": 1794258353.783547
     },
     "aniscoupons": {
-      "last_message_id": 34372,
-      "last_check_time": 1794264259.2096379
+      "last_message_id": 34373,
+      "last_check_time": 1794264994.2857668
     },
     "bnddeals": {
       "last_message_id": 51241,
@@ -18806,6 +18806,16 @@
       "price": 66.7,
       "timestamp": 1794264257.1501565,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34373": {
+      "channel_msg_id": 2185,
+      "product_id": "1005007916078341",
+      "title": "CMF Smart Watch 3 pro AMOLED",
+      "channel": "aniscoupons",
+      "source_msg_id": 34373,
+      "price": 48.9,
+      "timestamp": 1794264992.2273488,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18814,17 +18824,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794264260.0434742,
+    "last_deal_post_time": 1794264995.2996237,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794264808.5480123,
+    "last_sweep_time": 1794264999.0583422,
     "last_sweep_times": {
-      "algeria": 1794264805.7179966,
-      "france": 1794264808.5480123
+      "algeria": 1794264995.2728462,
+      "france": 1794264999.0583422
     },
     "last_deal_post_times": {
-      "algeria": 1794264260.0434742
+      "algeria": 1794264995.2996237
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
