@@ -923,7 +923,7 @@
     "1005011557896041": 1794129979.1935983,
     "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
-    "1005007916078341": 1794159551.7122035,
+    "1005007916078341": 1794211658.839484,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
     "1005013336240375": 1791968149.7952893,
@@ -1385,7 +1385,7 @@
     "1005008077441711": 1794147198.6954062,
     "1005006411483066": 1794091985.0146983,
     "1005012925301774": 1794002515.731258,
-    "1005012959738411": 1794159557.4708524,
+    "1005012959738411": 1794211663.3506916,
     "1005008357913212": 1794173731.8411272,
     "1005008703989845": 1794127040.2666676,
     "1005007162099601": 1794046115.3557825,
@@ -2505,7 +2505,7 @@
     "ATTACK SHARK L80PRO Ultralight": 1791107750.295487,
     "AMD Ryzen 7 5700X": 1793898345.0223713,
     "هاتف ينسيك في شارجور🤣🤣": 1791109857.5190113,
-    "CMF Smart Watch 3 pro AMOLED": 1794159551.7122035,
+    "CMF Smart Watch 3 pro AMOLED": 1794211658.839484,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
     "OPPO A6 Pro 8/256GB": 1794180320.4443028,
@@ -3169,7 +3169,7 @@
     "realme C100d 4/128GB": 1794148671.949184,
     "Zeblaze GTS 3 Pro AMOLED": 1794091985.0146983,
     "شاحن سيارة ORICO بقوة 45W": 1794002515.731258,
-    "Hollyland LARK M2 DUO 2-Person": 1794159557.4708524,
+    "Hollyland LARK M2 DUO 2-Person": 1794211663.3506916,
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794211285.5903995,
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627,
     "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794134168.8193681,
@@ -3233,8 +3233,6 @@
     "KOOTION SSD SATA3 480GB": 1794173731.8411272
   },
   "published_post_keys": [
-    "zedstoreonline:38851",
-    "lodydeals:45816",
     "ecksdeal:5882",
     "aniscoupons:33219",
     "couponsglobal:48846",
@@ -4232,11 +4230,13 @@
     "lodydeals:46275",
     "aniscoupons:34316",
     "aniscoupons:34317",
-    "aniscoupons:34318"
+    "aniscoupons:34318",
+    "aniscoupons:34319",
+    "aniscoupons:34320"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794211285.5903995,
+  "last_run_time": 1794211663.3506916,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
@@ -4267,8 +4267,8 @@
       "last_check_time": 1794178675.5408962
     },
     "aniscoupons": {
-      "last_message_id": 34318,
-      "last_check_time": 1794211287.6201124
+      "last_message_id": 34320,
+      "last_check_time": 1794211665.3956506
     },
     "bnddeals": {
       "last_message_id": 51239,
@@ -18032,6 +18032,26 @@
       "price": 136.7,
       "timestamp": 1794211285.5903995,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34319": {
+      "channel_msg_id": 2117,
+      "product_id": "1005007916078341",
+      "title": "CMF Smart Watch 3 pro AMOLED",
+      "channel": "aniscoupons",
+      "source_msg_id": 34319,
+      "price": 48.9,
+      "timestamp": 1794211658.839484,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34320": {
+      "channel_msg_id": 2118,
+      "product_id": "1005012959738411",
+      "title": "Hollyland LARK M2 DUO 2-Person",
+      "channel": "aniscoupons",
+      "source_msg_id": 34320,
+      "price": 68.79,
+      "timestamp": 1794211663.3506916,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18040,17 +18060,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794211288.3606865,
+    "last_deal_post_time": 1794211666.2439754,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794211473.7850266,
+    "last_sweep_time": 1794211669.1322384,
     "last_sweep_times": {
-      "algeria": 1794211471.4002695,
-      "france": 1794211473.7850266
+      "algeria": 1794211666.224051,
+      "france": 1794211669.1322384
     },
     "last_deal_post_times": {
-      "algeria": 1794211288.3606865
+      "algeria": 1794211666.2439754
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
