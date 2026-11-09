@@ -1406,7 +1406,7 @@
     "1005008060391372": 1794215146.3107493,
     "1005010209911111": 1794068056.674266,
     "1005008295555234": 1794073127.8664527,
-    "1005008645323478": 1794090319.727767,
+    "1005008645323478": 1794235676.7278144,
     "1005008636930795": 1794231632.2676654,
     "1005006260870758": 1794077543.1413288,
     "1005009759580502": 1794079741.7808652,
@@ -3222,7 +3222,7 @@
     "1MORE SonoFlow Pro HQ51": 1794073127.8664527,
     "Ulanzi ST-06S Vertical Shooting": 1794130692.4786665,
     "ميكروفون MAONO DGM20W لاسلكي للألعاب": 1794074230.5173922,
-    "CUSU 512GB External SSD Drive": 1794090319.727767,
+    "CUSU 512GB External SSD Drive": 1794235676.7278144,
     "Netac M.2 NVME 250GB": 1794076438.7694528,
     "EPOMAKER X AULA F87 Pro": 1794077543.1413288,
     "SIX PCIe 4.0 7350MB/s  1TB": 1794079741.7808652,
@@ -3281,7 +3281,6 @@
     "AMD Ryzen 7 9800X3D": 1794235317.681294
   },
   "published_post_keys": [
-    "lodydeals:45519",
     "zedstoreonline:38749",
     "zedstoreonline:38534",
     "zedstoreonline:38799",
@@ -4280,11 +4279,12 @@
     "aniscoupons:34350",
     "aniscoupons:34351",
     "aniscoupons:34352",
-    "aniscoupons:34353"
+    "aniscoupons:34353",
+    "aniscoupons:34354"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794235317.681294,
+  "last_run_time": 1794235676.7278144,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6049,
@@ -4315,8 +4315,8 @@
       "last_check_time": 1794235491.7274933
     },
     "aniscoupons": {
-      "last_message_id": 34353,
-      "last_check_time": 1794235319.7284431
+      "last_message_id": 34354,
+      "last_check_time": 1794235678.788466
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -18521,6 +18521,16 @@
       "price": 341.3,
       "timestamp": 1794235317.681294,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34354": {
+      "channel_msg_id": 2161,
+      "product_id": "1005008645323478",
+      "title": "CUSU 512GB External SSD Drive",
+      "channel": "aniscoupons",
+      "source_msg_id": 34354,
+      "price": 41.5,
+      "timestamp": 1794235676.7278144,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18529,17 +18539,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794235320.4705346,
+    "last_deal_post_time": 1794235679.4910216,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794235496.3153079,
+    "last_sweep_time": 1794235682.6311677,
     "last_sweep_times": {
-      "algeria": 1794235493.360891,
-      "france": 1794235496.3153079
+      "algeria": 1794235679.4634683,
+      "france": 1794235682.6311677
     },
     "last_deal_post_times": {
-      "algeria": 1794235320.4705346
+      "algeria": 1794235679.4910216
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19230,7 +19240,7 @@
     "1005008060391372": "aniscoupons",
     "1005010209911111": "bnddeals",
     "1005008295555234": "lodydeals",
-    "1005008645323478": "zedstoreonline",
+    "1005008645323478": "aniscoupons",
     "1005008636930795": "zedstoreonline",
     "1005006260870758": "lodydeals",
     "1005009759580502": "lodydeals",
@@ -20134,7 +20144,7 @@
     "1MORE SonoFlow Pro HQ51": "lodydeals",
     "Ulanzi ST-06S Vertical Shooting": "lodydeals",
     "ميكروفون MAONO DGM20W لاسلكي للألعاب": "zedstoreonline",
-    "CUSU 512GB External SSD Drive": "zedstoreonline",
+    "CUSU 512GB External SSD Drive": "aniscoupons",
     "Netac M.2 NVME 250GB": "aniscoupons",
     "EPOMAKER X AULA F87 Pro": "lodydeals",
     "SIX PCIe 4.0 7350MB/s  1TB": "lodydeals",
