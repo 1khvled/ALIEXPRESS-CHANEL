@@ -440,7 +440,12 @@ class DealCaptionGenerator:
                             hook = l
                             break
         if not hook and not taskhinat_header:
-            if is_restock:
+            is_bundle = (deal_type == "bundle") or bool(
+                re.search(r'(?i)\bbundle\b|3\s*قطع|قطع\s*3|عروض\s*3|عرض\s*3|3\s*items|3\s*حبات|3بـ|3\s*بـ|باندل|بندل', raw_text or "")
+            )
+            if is_bundle:
+                hook = "<blockquote> عروض 3 قطع Bundle ⤵️</blockquote>"
+            elif is_restock:
                 hook = "⚡ عودة العرض توفر من جديد بكمية محدودة (حبات قلال) 🔥"
             elif is_price_drop:
                 hook = "📉 انخفاض ممتاز في السعر 🔥"
@@ -507,6 +512,8 @@ class DealCaptionGenerator:
             m_country = re.search(r'(?:ضع البلد|خلي البلد|بلد الحساب|أختر بلد)[^\n]+', clean_raw)
             if m_country:
                 lines.append(m_country.group(0).strip())
+            elif is_bundle:
+                lines.append("🇩🇿 ضع البلد الجزائر")
         elif country_info:
             c_str = str(country_info).lower()
             flag = "🇦🇺" if any(k in c_str for k in ["aust", "استراليا", "أستراليا"]) else ("🇨🇦" if any(k in c_str for k in ["can", "كندا"]) else ("🇫🇷" if any(k in c_str for k in ["fr", "فرنسا"]) else "🌍"))
@@ -694,7 +701,8 @@ def format_lodydeals_caption_1to1(
     affiliate_url: str,
     coupon_code: Optional[str] = None,
     link_mapping: Optional[Dict[str, str]] = None,
-    extracted_title: Optional[str] = None
+    extracted_title: Optional[str] = None,
+    deal_type: Optional[str] = None
 ) -> str:
     """
     Standardizes @lodydeals deals using our unified, high-converting format:
@@ -706,7 +714,8 @@ def format_lodydeals_caption_1to1(
         raw_text=raw_text,
         affiliate_url=affiliate_url,
         coupon_code=coupon_code,
-        extracted_title=extracted_title
+        extracted_title=extracted_title,
+        deal_type=deal_type
     )
 
 
@@ -803,7 +812,7 @@ def format_multi_deal_tajmi3at_1to1(raw_text: str, link_mapping: Dict[str, str])
     return caption.strip()
 
 
-def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None, extracted_title: Optional[str] = None) -> str:
+def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None, extracted_title: Optional[str] = None, deal_type: Optional[str] = None) -> str:
     """
     Transforms incoming posts from ANY monitored channel (Lodydeals, ECKSDEAL, ZedStore, AnisCoupons, BNDDeals)
     into our clean, standardized, high-converting deal format:
@@ -828,8 +837,21 @@ def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_cod
     clean_raw = re.sub(r't\.me/(?!Alilo07BOT|DzAliexpress0)[A-Za-z0-9_]+', '', clean_raw)
     clean_raw = re.sub(r'ـ', '', clean_raw)
 
+    # Check if deal is a Bundle deal (Choice 3/4 items)
+    is_bundle = (deal_type == "bundle") or bool(
+        re.search(r'(?i)\bbundle\b|3\s*قطع|قطع\s*3|عروض\s*3|عرض\s*3|3\s*سلع|3\s*items|3\s*حبات|3بـ|3\s*بـ|باندل|بندل|حزم\s*التوفير|حزمة\s*التوفير|300000512|sourcetype=562', raw_text or "")
+        or re.search(r'300000512|sourcetype=562|bundledeals', affiliate_url or "", re.I)
+    )
+
+    bundle_header = ""
+    if is_bundle:
+        if re.search(r'4\s*قطع|ضع\s*4|4\s*items', raw_text or ""):
+            bundle_header = "<blockquote> عروض 4 قطع Bundle ⤵️</blockquote>"
+        else:
+            bundle_header = "<blockquote> عروض 3 قطع Bundle ⤵️</blockquote>"
+
     # 0. Hook Extraction & Phrasing Modification
-    hook = ""
+    hook = bundle_header or ""
     for l in clean_raw.splitlines():
         l_str = l.strip()
         if not l_str:
@@ -951,9 +973,11 @@ def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_cod
         country = "ضع البلد فرنسا من الإعدادات 🇫🇷"
     elif any(k in clean_raw for k in ["كوريا", "korea"]):
         country = "ضع البلد كوريا من الإعدادات 🇰🇷"
+    elif any(k in clean_raw for k in ["الجزائر", "algeria"]) or "ضع البلد الجزائر" in clean_raw or is_bundle:
+        country = "🇩🇿 ضع البلد الجزائر"
 
-    # 6. Coins
-    has_coins = bool(re.search(r'(?:العملات|عملات|نقاط|coins)', clean_raw, re.I))
+    # 6. Coins (Bundle deals do not use coin discount unless explicitly stated)
+    has_coins = bool(re.search(r'(?:العملات|عملات|نقاط|coins)', clean_raw, re.I)) if not is_bundle else False
 
     lines = []
     if hook:
@@ -985,11 +1009,13 @@ def format_ecksdeal_caption_1to1(
     raw_text: str,
     affiliate_url: str,
     coupon_code: Optional[str] = None,
-    extracted_title: Optional[str] = None
+    extracted_title: Optional[str] = None,
+    deal_type: Optional[str] = None
 ) -> str:
     return format_competitor_to_lody_1to1(
         raw_text=raw_text,
         affiliate_url=affiliate_url,
         coupon_code=coupon_code,
-        extracted_title=extracted_title
+        extracted_title=extracted_title,
+        deal_type=deal_type
     )

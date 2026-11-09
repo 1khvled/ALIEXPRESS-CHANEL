@@ -66,6 +66,12 @@ class DealCaptionValidator:
         "اجججججججري",
         "باطل",
         "bundle deals",
+        "عروض 3 قطع Bundle",
+        "عروض 3 قطع",
+        "عروض 4 قطع Bundle",
+        "عروض 4 قطع",
+        "عروض Bundle",
+        "Bundle",
         "عروض الحزم",
         "العرض مستمر",
         "تخفيض عملات",
@@ -156,7 +162,7 @@ class DealCaptionValidator:
         clean_first_lines = re.sub(r'[\u0640]', '', first_lines)
         country_or_meta = [
             "كندا", "كوريا", "أوكرانيا", "اوكرانيا", "الجزائر", "فرنسا", "أستراليا", "استراليا",
-            "سعر السوق المحلي", "خلي البلد", "بلد الحساب", "تنبيه"
+            "سعر السوق المحلي", "خلي البلد", "بلد الحساب", "تنبيه", "bundle", "عروض 3 قطع", "عروض 4 قطع"
         ]
         if "<blockquote>" in clean_first_lines and not any(k in clean_first_lines for k in country_or_meta):
             if not any(hook in clean_first_lines for hook in self.SITUATIONAL_HOOKS):

@@ -780,3 +780,36 @@ def test_maono_zedstore_competitor_bot_ad_scrubbed_and_title_sanitized():
     # 5. Exactly 1 URL line
     assert cap.count("https://s.click.aliexpress.com/e/_c32nt3Lp") == 1
 
+
+def test_bundle_deals_formatting_and_headers():
+    from app.ai.generator import format_competitor_to_lody_1to1, format_lodydeals_caption_1to1
+
+    raw_sample = """
+<blockquote> عروض 3 قطع Bundle ⤵️</blockquote>
+تخفيض لـ Baseus 20W PD Charger
+السعر : $4.89 (€4.36) 🔥
+رابط s.click.aliexpress.com/e/_c3XISSmT
+ضع البلد الجزائر 🇩🇿
+لا تنسى استخدام البوت للشراء بأقل الأسعار :
+t.me/LodyCouponsBot
+"""
+    cap = format_lodydeals_caption_1to1(
+        raw_text=raw_sample,
+        affiliate_url="https://s.click.aliexpress.com/e/_c3KffHkL",
+        extracted_title="Baseus 20W PD Charger",
+        deal_type="bundle"
+    )
+
+    # 1. Blockquote header present
+    assert "<blockquote> عروض 3 قطع Bundle ⤵️</blockquote>" in cap
+
+    # 2. Algeria country tag present
+    assert "🇩🇿 ضع البلد الجزائر" in cap
+
+    # 3. No competitor mentions
+    assert "LodyCouponsBot" not in cap
+    assert "Alilo07BOT" in cap
+    assert "DzAliexpress0" in cap
+
+    # 4. No coin lines injected for bundle deals
+    assert "خصم النقاط 🪙" not in cap

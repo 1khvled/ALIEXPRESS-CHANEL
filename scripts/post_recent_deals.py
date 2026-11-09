@@ -750,14 +750,16 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                             raw_text=raw_text,
                             affiliate_url=aff_link,
                             coupon_code=extracted.coupon_code,
-                            extracted_title=extracted.title
+                            extracted_title=extracted.title,
+                            deal_type=deal_type
                         )
                     elif ch.lower() in ["ecksdeal", "zedstoreonline", "aniscoupons", "bnddeals"]:
                         caption = format_competitor_to_lody_1to1(
                             raw_text=raw_text,
                             affiliate_url=aff_link,
                             coupon_code=extracted.coupon_code,
-                            extracted_title=extracted.title
+                            extracted_title=extracted.title,
+                            deal_type=deal_type
                         )
                     else:
                         caption = await caption_generator.generate(
