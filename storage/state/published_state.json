@@ -1263,7 +1263,7 @@
     "1005006398880142": 1793554757.8937938,
     "1005008755897663": 1793554764.2266893,
     "1005012887486015": 1793600112.7686548,
-    "1005013478918892": 1793556926.3977697,
+    "1005013478918892": 1794230539.4652834,
     "1005010443138358": 1793566252.8097658,
     "1005013006189646": 1793566310.8398705,
     "1005011653777805": 1793566315.7447746,
@@ -2351,7 +2351,8 @@
     "MAONO PM360TR Condenser Microphone XLR Podcast Microphone",
     "لوووووووووووووووز",
     "شاحنة ألعاب صغيرة بالتحكم عن بُعد",
-    "Mortal T1+ 2/16GB Wifi 4K"
+    "Mortal T1+ 2/16GB Wifi 4K",
+    "Honor Win Turbo 2"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3266,10 +3267,10 @@
     "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": 1794225392.2814271,
     "لوووووووووووووووز": 1794226314.627466,
     "شاحنة ألعاب صغيرة بالتحكم عن بُعد": 1794227594.9699965,
-    "Mortal T1+ 2/16GB Wifi 4K": 1794229795.9714105
+    "Mortal T1+ 2/16GB Wifi 4K": 1794229795.9714105,
+    "Honor Win Turbo 2": 1794230539.4652834
   },
   "published_post_keys": [
-    "aniscoupons:33184",
     "megaphonna:8494",
     "bnddeals:50940",
     "lodydeals:45738",
@@ -4268,11 +4269,12 @@
     "aniscoupons:34345",
     "zedstoreonline:39782",
     "lodydeals:46289",
-    "lodydeals:46290"
+    "lodydeals:46290",
+    "aniscoupons:34347"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794230168.269789,
+  "last_run_time": 1794230539.4652834,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6048,
@@ -4303,8 +4305,8 @@
       "last_check_time": 1794228879.4816291
     },
     "aniscoupons": {
-      "last_message_id": 34346,
-      "last_check_time": 1794229426.6148515
+      "last_message_id": 34347,
+      "last_check_time": 1794230541.5798783
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -4766,7 +4768,7 @@
     "1005008755897663": 101.4,
     "1005012887486015": 146.25,
     "1005010758512904": 175.8,
-    "1005013478918892": 384.42,
+    "1005013478918892": 382.9,
     "1005012770405022": 311.31,
     "1005010443138358": 6.9,
     "1005013006189646": 415.9,
@@ -18397,6 +18399,16 @@
       "price": 19.51,
       "timestamp": 1794230168.269789,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34347": {
+      "channel_msg_id": 2149,
+      "product_id": "1005013478918892",
+      "title": "Honor Win Turbo 2",
+      "channel": "aniscoupons",
+      "source_msg_id": 34347,
+      "price": 382.9,
+      "timestamp": 1794230539.4652834,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18405,17 +18417,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794230173.9082396,
+    "last_deal_post_time": 1794230542.3504126,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794230354.3668375,
+    "last_sweep_time": 1794230545.2573662,
     "last_sweep_times": {
-      "algeria": 1794230350.914968,
-      "france": 1794230354.3668375
+      "algeria": 1794230542.322987,
+      "france": 1794230545.2573662
     },
     "last_deal_post_times": {
-      "algeria": 1794230173.9082396
+      "algeria": 1794230542.3504126
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18979,7 +18991,7 @@
     "1005008755897663": "lodydeals",
     "1005012887486015": "lodydeals",
     "1005010758512904": "aniscoupons",
-    "1005013478918892": "lodydeals",
+    "1005013478918892": "aniscoupons",
     "1005012770405022": "lodydeals",
     "1005010443138358": "lodydeals",
     "1005013006189646": "lodydeals",
@@ -20061,7 +20073,8 @@
     "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": "aniscoupons",
     "لوووووووووووووووز": "zedstoreonline",
     "شاحنة ألعاب صغيرة بالتحكم عن بُعد": "zedstoreonline",
-    "Mortal T1+ 2/16GB Wifi 4K": "lodydeals"
+    "Mortal T1+ 2/16GB Wifi 4K": "lodydeals",
+    "Honor Win Turbo 2": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
