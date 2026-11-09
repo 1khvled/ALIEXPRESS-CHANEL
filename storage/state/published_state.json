@@ -733,7 +733,7 @@
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
     "100500777666555": 1793956903.3513582,
-    "1005011778621042": 1793898345.0223713,
+    "1005011778621042": 1794235308.4985485,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1793543664.66204,
     "1005006533038973": 1791104468.758226,
@@ -1209,7 +1209,7 @@
     "1005012135177627": 1793656181.223734,
     "1005013455514231": 1793542445.2859337,
     "1005009578274758": 1793542479.8362749,
-    "1005010413332383": 1793615114.3091638,
+    "1005010413332383": 1794235317.681294,
     "1005011550075220": 1793542531.6312253,
     "1005009806856302": 1793542545.9047854,
     "1005009980316035": 1793542552.2730343,
@@ -2358,7 +2358,8 @@
     "Mortal T1+ 2/16GB Wifi 4K",
     "Honor Win Turbo 2",
     "THINKCAR THINKDIAG OBD2 Scanner",
-    "Honor X70 Pro Max  8/256GB"
+    "Honor X70 Pro Max  8/256GB",
+    "AMD Ryzen 7 9800X3D"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2670,7 +2671,7 @@
     "Honor X60 GT 12/256GB": 1792157902.7999656,
     "EasySMX X05 Pro Wireless Gamepad PC Controller": 1792157910.2543087,
     "MACHENIKE G5Pro Max SE Gaming Controller With Charging Dock": 1792157933.6814291,
-    "RYZEN 7 5700X": 1793380381.1111934,
+    "RYZEN 7 5700X": 1794235308.4985485,
     "Ⓜ BLACKVIEW WAVE 10C (4/32)": 1792160262.8028278,
     "Ⓜ  TCL 60 NXT PAPER 8/256📱": 1792160269.0502243,
     "HAYLOU Mori Pro ANC": 1793966654.208892,
@@ -3276,11 +3277,10 @@
     "Mortal T1+ 2/16GB Wifi 4K": 1794229795.9714105,
     "Honor Win Turbo 2": 1794230539.4652834,
     "THINKCAR THINKDIAG OBD2 Scanner": 1794231079.407264,
-    "Honor X70 Pro Max  8/256GB": 1794232557.0275722
+    "Honor X70 Pro Max  8/256GB": 1794232557.0275722,
+    "AMD Ryzen 7 9800X3D": 1794235317.681294
   },
   "published_post_keys": [
-    "test_channel:1792181758",
-    "lodydeals:45922",
     "lodydeals:45519",
     "zedstoreonline:38749",
     "zedstoreonline:38534",
@@ -4278,11 +4278,13 @@
     "aniscoupons:34349",
     "zedstoreonline:39787",
     "aniscoupons:34350",
-    "aniscoupons:34351"
+    "aniscoupons:34351",
+    "aniscoupons:34352",
+    "aniscoupons:34353"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794234954.8876405,
+  "last_run_time": 1794235317.681294,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6049,
@@ -4313,8 +4315,8 @@
       "last_check_time": 1794234944.2444925
     },
     "aniscoupons": {
-      "last_message_id": 34351,
-      "last_check_time": 1794234956.9456077
+      "last_message_id": 34353,
+      "last_check_time": 1794235319.7284431
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -4335,7 +4337,7 @@
     "1005007279793099": 13.7,
     "1005008829227075": 24.76,
     "100500777666555": 20.0,
-    "1005011778621042": 118.59,
+    "1005011778621042": 118.5,
     "1005012312990781": 92.31,
     "1005009234854371": 13.3,
     "1005006533038973": 21.81,
@@ -4719,7 +4721,7 @@
     "1005012135177627": 179.3,
     "1005013455514231": 66.71,
     "1005009578274758": 7.63,
-    "1005010413332383": 340.32,
+    "1005010413332383": 341.3,
     "1005011550075220": 124.53,
     "1005009806856302": 14.35,
     "1005009980316035": 25.85,
@@ -18499,6 +18501,26 @@
       "price": 24.8,
       "timestamp": 1794234954.8876405,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34352": {
+      "channel_msg_id": 2159,
+      "product_id": "1005011778621042",
+      "title": "RYZEN 7 5700X",
+      "channel": "aniscoupons",
+      "source_msg_id": 34352,
+      "price": 118.5,
+      "timestamp": 1794235308.4985485,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34353": {
+      "channel_msg_id": 2160,
+      "product_id": "1005010413332383",
+      "title": "AMD Ryzen 7 9800X3D",
+      "channel": "aniscoupons",
+      "source_msg_id": 34353,
+      "price": 341.3,
+      "timestamp": 1794235317.681294,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18507,17 +18529,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794234957.9581075,
+    "last_deal_post_time": 1794235320.4705346,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794235126.0604992,
+    "last_sweep_time": 1794235323.159927,
     "last_sweep_times": {
-      "algeria": 1794235123.041425,
-      "france": 1794235126.0604992
+      "algeria": 1794235320.4495537,
+      "france": 1794235323.159927
     },
     "last_deal_post_times": {
-      "algeria": 1794234957.9581075
+      "algeria": 1794235320.4705346
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18670,7 +18692,7 @@
     "1005007345108759": "ecksdeal",
     "1005007394028808": "lodydeals",
     "1005007394197021": "lodydeals",
-    "1005011778621042": "lodydeals",
+    "1005011778621042": "aniscoupons",
     "1005012571601398": "lodydeals",
     "1005013290515237": "aniscoupons",
     "1005012264415744": "megaphonna",
@@ -19024,7 +19046,7 @@
     "1005013455514231": "lodydeals",
     "1005009578274758": "lodydeals",
     "1005007805638431": "bnddeals",
-    "1005010413332383": "lodydeals",
+    "1005010413332383": "aniscoupons",
     "1005011550075220": "ecksdeal",
     "1005009806856302": "ecksdeal",
     "1005009980316035": "ecksdeal",
@@ -20168,7 +20190,8 @@
     "Mortal T1+ 2/16GB Wifi 4K": "lodydeals",
     "Honor Win Turbo 2": "aniscoupons",
     "THINKCAR THINKDIAG OBD2 Scanner": "lodydeals",
-    "Honor X70 Pro Max  8/256GB": "lodydeals"
+    "Honor X70 Pro Max  8/256GB": "lodydeals",
+    "AMD Ryzen 7 9800X3D": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
