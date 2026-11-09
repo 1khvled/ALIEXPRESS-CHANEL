@@ -1104,7 +1104,7 @@
     "1005010035309013": 1793554752.7954907,
     "1005010385472500": 1793448762.165183,
     "1005011779814585": 1794159539.8174424,
-    "1005013090910574": 1794180320.4443028,
+    "1005013090910574": 1794215137.9138958,
     "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793543612.279949,
     "1005012910719451": 1794160828.535879,
@@ -1393,7 +1393,7 @@
     "1005007038130594": 1794046667.9804564,
     "1005008248187128": 1794057675.8729835,
     "1005013053381984": 1794060065.5449874,
-    "1005008060391372": 1794067512.4027624,
+    "1005008060391372": 1794215146.3107493,
     "1005010209911111": 1794068056.674266,
     "1005008295555234": 1794073127.8664527,
     "1005008645323478": 1794090319.727767,
@@ -2358,7 +2358,7 @@
     "UGREEN 45W GaN Charger": 1793399449.9599383,
     "Realme Pad 3 5G 256GB": 1791012345.6086447,
     "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor": 1790888886.4062796,
-    "OPPO A6 Pro 8/256": 1794044287.5728564,
+    "OPPO A6 Pro 8/256": 1794215137.9138958,
     "realme P3 5G 8/256": 1793613419.7534997,
     "OnePlus Turbo 6X Pro 5G": 1794159565.9245353,
     "Xiaomi Pad 7  12/256GB": 1790897106.449474,
@@ -3141,7 +3141,7 @@
     "Redmi Note 17 Pro Max": 1793966798.7696738,
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794214034.3163798,
     "Fifine Gaming Headset H9W": 1794068051.714454,
-    "Fifine Gaming Headset H6": 1794067512.4027624,
+    "Fifine Gaming Headset H6": 1794215146.3107493,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794212577.1786916,
     "KOOTION SSD SATA": 1794214218.5353336,
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
@@ -3237,8 +3237,6 @@
     "OnePlus Ace 7Pro (12/256GB)": 1794212210.5228837
   },
   "published_post_keys": [
-    "lodydeals:45458",
-    "zedstoreonline:38590",
     "lodydeals:45429",
     "zedstoreonline:38748",
     "bnddeals:50886",
@@ -4236,11 +4234,13 @@
     "aniscoupons:34331",
     "aniscoupons:34332",
     "aniscoupons:34333",
-    "aniscoupons:34334"
+    "aniscoupons:34334",
+    "zedstoreonline:39762",
+    "aniscoupons:34335"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794214589.905976,
+  "last_run_time": 1794215146.3107493,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
@@ -4267,12 +4267,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39761,
-      "last_check_time": 1794214956.277509
+      "last_message_id": 39762,
+      "last_check_time": 1794215139.970004
     },
     "aniscoupons": {
-      "last_message_id": 34334,
-      "last_check_time": 1794214591.9640653
+      "last_message_id": 34335,
+      "last_check_time": 1794215148.3664522
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -18167,6 +18167,26 @@
       "price": 289.5,
       "timestamp": 1794214589.905976,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39762": {
+      "channel_msg_id": 2130,
+      "product_id": "1005013090910574",
+      "title": "OPPO A6 Pro 8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39762,
+      "price": 192.7,
+      "timestamp": 1794215137.9138958,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34335": {
+      "channel_msg_id": 2131,
+      "product_id": "1005008060391372",
+      "title": "Fifine Gaming Headset H6",
+      "channel": "aniscoupons",
+      "source_msg_id": 34335,
+      "price": 32.9,
+      "timestamp": 1794215146.3107493,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18175,17 +18195,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794214592.875954,
+    "last_deal_post_time": 1794215149.2397454,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794214960.6072927,
+    "last_sweep_time": 1794215151.919372,
     "last_sweep_times": {
-      "algeria": 1794214957.5878088,
-      "france": 1794214960.6072927
+      "algeria": 1794215149.2141018,
+      "france": 1794215151.919372
     },
     "last_deal_post_times": {
-      "algeria": 1794214592.875954
+      "algeria": 1794215149.2397454
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18594,7 +18614,7 @@
     "1005010035309013": "lodydeals",
     "1005010385472500": "bnddeals",
     "1005011779814585": "aniscoupons",
-    "1005013090910574": "aniscoupons",
+    "1005013090910574": "zedstoreonline",
     "1005012382148199": "megaphonna",
     "1005010158485058": "lodydeals",
     "1005012910719451": "aniscoupons",
