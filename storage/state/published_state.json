@@ -715,7 +715,8 @@
     "1005013480169843",
     "1005013226454479",
     "1005005548265076",
-    "1005012555450345"
+    "1005012555450345",
+    "1005005936479058"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1445,7 +1446,8 @@
     "1005013480169843": 1794226491.8355606,
     "1005013226454479": 1794227594.9699965,
     "1005005548265076": 1794231079.407264,
-    "1005012555450345": 1794232557.0275722
+    "1005012555450345": 1794232557.0275722,
+    "1005005936479058": 1794242485.418005
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2359,7 +2361,8 @@
     "Honor Win Turbo 2",
     "THINKCAR THINKDIAG OBD2 Scanner",
     "Honor X70 Pro Max  8/256GB",
-    "AMD Ryzen 7 9800X3D"
+    "AMD Ryzen 7 9800X3D",
+    "FeiyuTech VB4 3-Axis Gimbal Stabilizer"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3278,10 +3281,10 @@
     "Honor Win Turbo 2": 1794230539.4652834,
     "THINKCAR THINKDIAG OBD2 Scanner": 1794231079.407264,
     "Honor X70 Pro Max  8/256GB": 1794232557.0275722,
-    "AMD Ryzen 7 9800X3D": 1794235317.681294
+    "AMD Ryzen 7 9800X3D": 1794235317.681294,
+    "FeiyuTech VB4 3-Axis Gimbal Stabilizer": 1794242485.418005
   },
   "published_post_keys": [
-    "zedstoreonline:38824",
     "lodydeals:45933",
     "test_channel:1792284227",
     "test_channel:1792157573",
@@ -4280,11 +4283,12 @@
     "zedstoreonline:39792",
     "zedstoreonline:39793",
     "zedstoreonline:39794",
-    "zedstoreonline:39795"
+    "zedstoreonline:39795",
+    "aniscoupons:34358"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794242119.207932,
+  "last_run_time": 1794242485.418005,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6049,
@@ -4315,8 +4319,8 @@
       "last_check_time": 1794242121.2419271
     },
     "aniscoupons": {
-      "last_message_id": 34356,
-      "last_check_time": 1794239353.7680225
+      "last_message_id": 34358,
+      "last_check_time": 1794242487.474749
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -4936,7 +4940,8 @@
     "1005013480169843": 66.7,
     "1005013226454479": 12.3,
     "1005005548265076": 36.51,
-    "1005012555450345": 272.2
+    "1005012555450345": 272.2,
+    "1005005936479058": 41.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18571,6 +18576,16 @@
       "price": 186.7,
       "timestamp": 1794242119.207932,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34358": {
+      "channel_msg_id": 2166,
+      "product_id": "1005005936479058",
+      "title": "FeiyuTech VB4 3-Axis Gimbal Stabilizer",
+      "channel": "aniscoupons",
+      "source_msg_id": 34358,
+      "price": 41.6,
+      "timestamp": 1794242485.418005,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18579,17 +18594,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794242122.4055572,
+    "last_deal_post_time": 1794242488.4026988,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794242312.9356601,
+    "last_sweep_time": 1794242491.7631657,
     "last_sweep_times": {
-      "algeria": 1794242309.1304133,
-      "france": 1794242312.9356601
+      "algeria": 1794242488.3766675,
+      "france": 1794242491.7631657
     },
     "last_deal_post_times": {
-      "algeria": 1794242122.4055572
+      "algeria": 1794242488.4026988
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19320,7 +19335,8 @@
     "1005013480169843": "aniscoupons",
     "1005013226454479": "zedstoreonline",
     "1005005548265076": "lodydeals",
-    "1005012555450345": "lodydeals"
+    "1005012555450345": "lodydeals",
+    "1005005936479058": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -20241,7 +20257,8 @@
     "Honor Win Turbo 2": "aniscoupons",
     "THINKCAR THINKDIAG OBD2 Scanner": "lodydeals",
     "Honor X70 Pro Max  8/256GB": "lodydeals",
-    "AMD Ryzen 7 9800X3D": "aniscoupons"
+    "AMD Ryzen 7 9800X3D": "aniscoupons",
+    "FeiyuTech VB4 3-Axis Gimbal Stabilizer": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
