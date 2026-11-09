@@ -1387,7 +1387,7 @@
     "1005006411483066": 1794091985.0146983,
     "1005012925301774": 1794002515.731258,
     "1005012959738411": 1794211663.3506916,
-    "1005008357913212": 1794173731.8411272,
+    "1005008357913212": 1794214218.5353336,
     "1005008703989845": 1794214034.3163798,
     "1005007162099601": 1794046115.3557825,
     "1005007038130594": 1794046667.9804564,
@@ -3143,7 +3143,7 @@
     "Fifine Gaming Headset H9W": 1794068051.714454,
     "Fifine Gaming Headset H6": 1794067512.4027624,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794212577.1786916,
-    "KOOTION SSD SATA": 1794091251.586213,
+    "KOOTION SSD SATA": 1794214218.5353336,
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
     "هذون سماعات جدد من   HAYLOU⌚": 1793966887.3818936,
     "HAYLOU WATCH 3 NEW": 1793966892.2256048,
@@ -3237,7 +3237,6 @@
     "OnePlus Ace 7Pro (12/256GB)": 1794212210.5228837
   },
   "published_post_keys": [
-    "zedstoreonline:38604",
     "lodydeals:45425",
     "lodydeals:45458",
     "zedstoreonline:38590",
@@ -4236,19 +4235,20 @@
     "lodydeals:46276",
     "aniscoupons:34328",
     "aniscoupons:34331",
-    "aniscoupons:34332"
+    "aniscoupons:34332",
+    "aniscoupons:34333"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794214034.3163798,
+  "last_run_time": 1794214218.5353336,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
       "last_check_time": 1794159484.4700966
     },
     "lodydeals": {
-      "last_message_id": 46276,
-      "last_check_time": 1794213299.7714245
+      "last_message_id": 46277,
+      "last_check_time": 1794214214.327202
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4271,8 +4271,8 @@
       "last_check_time": 1794214030.764505
     },
     "aniscoupons": {
-      "last_message_id": 34332,
-      "last_check_time": 1794214036.3483396
+      "last_message_id": 34333,
+      "last_check_time": 1794214220.581956
     },
     "bnddeals": {
       "last_message_id": 51240,
@@ -18147,6 +18147,16 @@
       "price": 24.8,
       "timestamp": 1794214034.3163798,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34333": {
+      "channel_msg_id": 2128,
+      "product_id": "1005008357913212",
+      "title": "KOOTION SSD SATA",
+      "channel": "aniscoupons",
+      "source_msg_id": 34333,
+      "price": 40.5,
+      "timestamp": 1794214218.5353336,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18155,17 +18165,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794214037.0501223,
+    "last_deal_post_time": 1794214221.1666317,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794214039.5029244,
+    "last_sweep_time": 1794214223.6708639,
     "last_sweep_times": {
-      "algeria": 1794214037.0359793,
-      "france": 1794214039.5029244
+      "algeria": 1794214221.1438777,
+      "france": 1794214223.6708639
     },
     "last_deal_post_times": {
-      "algeria": 1794214037.0501223
+      "algeria": 1794214221.1666317
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18847,7 +18857,7 @@
     "1005006411483066": "zedstoreonline",
     "1005012925301774": "zedstoreonline",
     "1005012959738411": "aniscoupons",
-    "1005008357913212": "lodydeals",
+    "1005008357913212": "aniscoupons",
     "1005008703989845": "aniscoupons",
     "1005007162099601": "lodydeals",
     "1005007038130594": "lodydeals",
@@ -20590,7 +20600,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8668",
     "zedstoreonline:39042",
     "lodydeals:45649",
     "megaphonna:8474",
@@ -21589,7 +21598,8 @@
     "aniscoupons:34327",
     "aniscoupons:34329",
     "aniscoupons:34330",
-    "zedstoreonline:39759"
+    "zedstoreonline:39759",
+    "lodydeals:46277"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
