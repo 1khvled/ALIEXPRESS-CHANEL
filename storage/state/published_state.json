@@ -705,7 +705,8 @@
     "1005013476568095",
     "1005012442521357",
     "1005012494171063",
-    "1005013474555268"
+    "1005013474555268",
+    "1005009121981190"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1425,7 +1426,8 @@
     "1005013476568095": 1794169846.8168333,
     "1005012442521357": 1794171698.893023,
     "1005012494171063": 1794175751.7054114,
-    "1005013474555268": 1794212210.5228837
+    "1005013474555268": 1794212210.5228837,
+    "1005009121981190": 1794219534.0651362
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2327,7 +2329,8 @@
     "POCO PAD C1 4/64",
     "Smailwolf L80 Wireless Headset",
     "KOOTION SSD SATA3 480GB",
-    "OnePlus Ace 7Pro (12/256GB)"
+    "OnePlus Ace 7Pro (12/256GB)",
+    "KODAK K133 USB3.1 256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3234,10 +3237,10 @@
     "POCO PAD C1 4/64": 1794171698.893023,
     "Smailwolf L80 Wireless Headset": 1794171706.368645,
     "KOOTION SSD SATA3 480GB": 1794173731.8411272,
-    "OnePlus Ace 7Pro (12/256GB)": 1794212210.5228837
+    "OnePlus Ace 7Pro (12/256GB)": 1794212210.5228837,
+    "KODAK K133 USB3.1 256GB": 1794219534.0651362
   },
   "published_post_keys": [
-    "zedstoreonline:38680",
     "couponsglobal:48782",
     "aniscoupons:33185",
     "test_channel:1792326038",
@@ -4236,19 +4239,20 @@
     "aniscoupons:34337",
     "aniscoupons:34339",
     "lodydeals:46281",
-    "aniscoupons:34340"
+    "aniscoupons:34340",
+    "lodydeals:46285"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794219162.8801334,
+  "last_run_time": 1794219534.0651362,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
       "last_check_time": 1794159484.4700966
     },
     "lodydeals": {
-      "last_message_id": 46284,
-      "last_check_time": 1794218419.2127151
+      "last_message_id": 46285,
+      "last_check_time": 1794219536.1231043
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4267,8 +4271,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39768,
-      "last_check_time": 1794218800.060442
+      "last_message_id": 39769,
+      "last_check_time": 1794219538.2853665
     },
     "aniscoupons": {
       "last_message_id": 34340,
@@ -4882,7 +4886,8 @@
     "1005013476568095": 370.8,
     "1005012442521357": 158.34,
     "1005012494171063": 237.03,
-    "1005013474555268": 566.8
+    "1005013474555268": 566.8,
+    "1005009121981190": 13.08
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18237,6 +18242,16 @@
       "price": 356.9,
       "timestamp": 1794219162.8801334,
       "status": "ACTIVE"
+    },
+    "lodydeals:46285": {
+      "channel_msg_id": 2137,
+      "product_id": "1005009121981190",
+      "title": "KODAK K133 USB3.1 256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46285,
+      "price": 13.08,
+      "timestamp": 1794219534.0651362,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18245,17 +18260,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794219165.8216114,
+    "last_deal_post_time": 1794219539.5552073,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794219346.555462,
+    "last_sweep_time": 1794219542.5852158,
     "last_sweep_times": {
-      "algeria": 1794219343.954474,
-      "france": 1794219346.555462
+      "algeria": 1794219539.5290098,
+      "france": 1794219542.5852158
     },
     "last_deal_post_times": {
-      "algeria": 1794219165.8216114
+      "algeria": 1794219539.5552073
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18976,7 +18991,8 @@
     "1005013476568095": "aniscoupons",
     "1005012442521357": "lodydeals",
     "1005012494171063": "lodydeals",
-    "1005013474555268": "aniscoupons"
+    "1005013474555268": "aniscoupons",
+    "1005009121981190": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -19885,7 +19901,8 @@
     "POCO PAD C1 4/64": "lodydeals",
     "Smailwolf L80 Wireless Headset": "lodydeals",
     "KOOTION SSD SATA3 480GB": "lodydeals",
-    "OnePlus Ace 7Pro (12/256GB)": "aniscoupons"
+    "OnePlus Ace 7Pro (12/256GB)": "aniscoupons",
+    "KODAK K133 USB3.1 256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -20680,7 +20697,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33009",
     "zedstoreonline:38813",
     "alidealsdz:136",
     "aniscoupons:33339",
@@ -21679,7 +21695,8 @@
     "lodydeals:46283",
     "lodydeals:46284",
     "zedstoreonline:39767",
-    "zedstoreonline:39768"
+    "zedstoreonline:39768",
+    "zedstoreonline:39769"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
