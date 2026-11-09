@@ -1455,7 +1455,7 @@
     "1005005936479058": 1794242485.418005,
     "1005008041973031": 1794242679.099279,
     "1005007900411524": 1794243215.3426878,
-    "1005005295582727": 1794243589.8816426,
+    "1005005295582727": 1794263151.742903,
     "1005009776317549": 1794250024.5461965,
     "1005009766330661": 1794251129.0913823
   },
@@ -3300,12 +3300,11 @@
     "FeiyuTech VB4 3-Axis Gimbal Stabilizer": 1794242485.418005,
     "AOCHUAN Handheld Gimbal V8": 1794242679.099279,
     "hohem X3 SE Gimbal Phone Stabilizer": 1794243215.3426878,
-    "Hohem iSteady XE Kit": 1794243589.8816426,
+    "Hohem iSteady XE Kit": 1794263151.742903,
     "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": 1794250024.5461965,
     "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": 1794251129.0913823
   },
   "published_post_keys": [
-    "lodydeals:45680",
     "test_channel:1792185068",
     "couponsglobal:48772",
     "zedstoreonline:38901",
@@ -4304,19 +4303,20 @@
     "aniscoupons:34366",
     "aniscoupons:34367",
     "aniscoupons:34369",
-    "aniscoupons:34371"
+    "aniscoupons:34371",
+    "lodydeals:46305"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794258732.6519542,
+  "last_run_time": 1794263151.742903,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
       "last_check_time": 1794252785.3081255
     },
     "lodydeals": {
-      "last_message_id": 46304,
-      "last_check_time": 1794262965.2635212
+      "last_message_id": 46305,
+      "last_check_time": 1794263153.7865665
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -18731,6 +18731,16 @@
       "price": 285.9,
       "timestamp": 1794258732.6519542,
       "status": "ACTIVE"
+    },
+    "lodydeals:46305": {
+      "channel_msg_id": 2179,
+      "product_id": "1005005295582727",
+      "title": "Hohem iSteady XE Kit",
+      "channel": "lodydeals",
+      "source_msg_id": 46305,
+      "price": 34.77,
+      "timestamp": 1794263151.742903,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18739,17 +18749,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794258735.44159,
+    "last_deal_post_time": 1794263155.8221967,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794262971.103613,
+    "last_sweep_time": 1794263158.8893104,
     "last_sweep_times": {
-      "algeria": 1794262967.8748107,
-      "france": 1794262971.103613
+      "algeria": 1794263155.8016555,
+      "france": 1794263158.8893104
     },
     "last_deal_post_times": {
-      "algeria": 1794258735.44159
+      "algeria": 1794263155.8221967
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19484,7 +19494,7 @@
     "1005005936479058": "aniscoupons",
     "1005008041973031": "aniscoupons",
     "1005007900411524": "aniscoupons",
-    "1005005295582727": "aniscoupons",
+    "1005005295582727": "lodydeals",
     "1005009776317549": "zedstoreonline",
     "1005009766330661": "aniscoupons"
   },
@@ -20411,7 +20421,7 @@
     "FeiyuTech VB4 3-Axis Gimbal Stabilizer": "aniscoupons",
     "AOCHUAN Handheld Gimbal V8": "aniscoupons",
     "hohem X3 SE Gimbal Phone Stabilizer": "aniscoupons",
-    "Hohem iSteady XE Kit": "aniscoupons",
+    "Hohem iSteady XE Kit": "lodydeals",
     "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": "zedstoreonline",
     "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": "aniscoupons"
   },
