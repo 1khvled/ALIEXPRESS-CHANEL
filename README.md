@@ -1,4 +1,10 @@
-# AliExpress Deals Telegram Automation (DealScout DZ & FR)
+# ⚡ AliExpress Deals Telegram Automation (DealScout DZ & FR)
+
+[![Telegram Channel DZ](https://img.shields.io/badge/Telegram-Channel%20%40DzAliexpress0-blue?logo=telegram)](https://t.me/DzAliexpress0)
+[![Telegram Channel FR](https://img.shields.io/badge/Telegram-Channel%20%40francedealsdz-blue?logo=telegram)](https://t.me/francedealsdz)
+[![Coin Deals Bot](https://img.shields.io/badge/Telegram-Bot%20%40Alilo07BOT-green?logo=telegram)](https://t.me/Alilo07BOT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 
 An autonomous, end-to-end deal intelligence, normalization, and multi-channel publishing engine. Monitors top competitor Telegram deal channels in real-time, extracts verified AliExpress deals, converts all links to high-converting affiliate URLs with active coin discounts, scrubs competitor watermarks and bot ads, and mirrors clean 1:1 deal posts to your target channels.
 
