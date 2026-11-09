@@ -712,7 +712,8 @@
     "1005007820092290",
     "1005012329021334",
     "1005013218893010",
-    "1005013480169843"
+    "1005013480169843",
+    "1005013226454479"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1439,7 +1440,8 @@
     "1005007820092290": 1794224654.527678,
     "1005012329021334": 1794225392.2814271,
     "1005013218893010": 1794226314.627466,
-    "1005013480169843": 1794226491.8355606
+    "1005013480169843": 1794226491.8355606,
+    "1005013226454479": 1794227594.9699965
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2347,7 +2349,8 @@
     "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية",
     "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات",
     "MAONO PM360TR Condenser Microphone XLR Podcast Microphone",
-    "لوووووووووووووووز"
+    "لوووووووووووووووز",
+    "شاحنة ألعاب صغيرة بالتحكم عن بُعد"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3260,10 +3263,10 @@
     "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية": 1794224474.0767472,
     "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات": 1794224654.527678,
     "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": 1794225392.2814271,
-    "لوووووووووووووووز": 1794226314.627466
+    "لوووووووووووووووز": 1794226314.627466,
+    "شاحنة ألعاب صغيرة بالتحكم عن بُعد": 1794227594.9699965
   },
   "published_post_keys": [
-    "pcgamingpart:7944",
     "lodydeals:45554",
     "lodydeals:45530",
     "aniscoupons:33184",
@@ -4262,11 +4265,12 @@
     "zedstoreonline:39778",
     "aniscoupons:34344",
     "zedstoreonline:39779",
-    "aniscoupons:34345"
+    "aniscoupons:34345",
+    "zedstoreonline:39782"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794226491.8355606,
+  "last_run_time": 1794227594.9699965,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6048,
@@ -4293,8 +4297,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39781,
-      "last_check_time": 1794226858.1631248
+      "last_message_id": 39782,
+      "last_check_time": 1794227597.0116596
     },
     "aniscoupons": {
       "last_message_id": 34345,
@@ -4915,7 +4919,8 @@
     "1005007820092290": 2.8,
     "1005012329021334": 35.25,
     "1005013218893010": 2.7,
-    "1005013480169843": 66.7
+    "1005013480169843": 66.7,
+    "1005013226454479": 12.3
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -18360,6 +18365,16 @@
       "price": 66.7,
       "timestamp": 1794226491.8355606,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39782": {
+      "channel_msg_id": 2146,
+      "product_id": "1005013226454479",
+      "title": "شاحنة ألعاب صغيرة بالتحكم عن بُعد",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39782,
+      "price": 12.3,
+      "timestamp": 1794227594.9699965,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18368,17 +18383,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794226494.747257,
+    "last_deal_post_time": 1794227598.2676203,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794227417.924974,
+    "last_sweep_time": 1794227600.9645758,
     "last_sweep_times": {
-      "algeria": 1794227414.8208938,
-      "france": 1794227417.924974
+      "algeria": 1794227598.250408,
+      "france": 1794227600.9645758
     },
     "last_deal_post_times": {
-      "algeria": 1794226494.747257
+      "algeria": 1794227598.2676203
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19106,7 +19121,8 @@
     "1005007820092290": "zedstoreonline",
     "1005012329021334": "aniscoupons",
     "1005013218893010": "zedstoreonline",
-    "1005013480169843": "aniscoupons"
+    "1005013480169843": "aniscoupons",
+    "1005013226454479": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -20021,7 +20037,8 @@
     "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية": "zedstoreonline",
     "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات": "zedstoreonline",
     "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": "aniscoupons",
-    "لوووووووووووووووز": "zedstoreonline"
+    "لوووووووووووووووز": "zedstoreonline",
+    "شاحنة ألعاب صغيرة بالتحكم عن بُعد": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
