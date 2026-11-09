@@ -934,7 +934,7 @@
     "1005009275536960": 1791975930.016452,
     "1005007767322935": 1791975934.9659944,
     "1005012571601398": 1794140574.699814,
-    "1005013054007275": 1793543830.34111,
+    "1005013054007275": 1794223210.002915,
     "1005011899097443": 1794213297.7367866,
     "1005012865117890": 1793613385.3577175,
     "1005010733227481": 1792156757.9443583,
@@ -1229,7 +1229,7 @@
     "1005008605565544": 1793543812.9442995,
     "1005009508910625": 1793543817.982839,
     "1005010114569881": 1793543824.1762173,
-    "1005013053122560": 1793543835.4812393,
+    "1005013053122560": 1794223202.4757502,
     "1005012322822595": 1793543961.1645148,
     "1005009662812027": 1793973971.0121949,
     "1005005975560350": 1794215317.7512906,
@@ -2600,7 +2600,7 @@
     "Vxe Dragonfly R1 PAW3395 SE": 1791975934.9659944,
     "رجع العرض جنننننننننننننننننح🏃‍♂️🏃‍♂️ ©️©️©️©️️️️️⚡️️️️️️️": 1792025678.6249368,
     "Ⓜ HONOR X80 PRO MAX (8/128)": 1792007163.0270946,
-    "ماوس لاسلكي فخم Scyrox V8S Wireless 8K": 1793543830.34111,
+    "ماوس لاسلكي فخم Scyrox V8S Wireless 8K": 1794223210.002915,
     "Used AMD Ryzen 5 7600X R5 7600X 4.7GHz CPU Processor 6-Core 12-Thread 5NM": 1791992945.451545,
     "Rocoren 100W Type-C to USB Fast Charging 0.5M": 1791992975.2913277,
     "Acinaci J11 Gaming Headset": 1794213297.7367866,
@@ -2940,7 +2940,7 @@
     "سماعات اذن فخمة Truthear x Crinacle Zero BLUE2 IEM'S": 1793543812.9442995,
     "سماعات لاسلكية Mchose V9 Pro 7.1 Wireless": 1793543817.982839,
     "ماوس لاسلكي Attack Shark X3 Wireless": 1793543824.1762173,
-    "ماوس لاسلكي فخم Scyrox V6S Wireless 8K": 1793543835.4812393,
+    "ماوس لاسلكي فخم Scyrox V6S Wireless 8K": 1794223202.4757502,
     "Realme Pad 3  8/256GB": 1793543961.1645148,
     "Lenovo Xiaoxin Pro 13 8/128GB": 1793543976.0151808,
     "Lenovo Xiaoxin Pad Pro 2025": 1793543981.0397952,
@@ -3241,8 +3241,6 @@
     "KODAK K133 USB3.1 256GB": 1794219534.0651362
   },
   "published_post_keys": [
-    "couponsglobal:48782",
-    "aniscoupons:33185",
     "test_channel:1792326038",
     "lodydeals:45448",
     "aniscoupons:32706",
@@ -4240,15 +4238,17 @@
     "aniscoupons:34339",
     "lodydeals:46281",
     "aniscoupons:34340",
-    "lodydeals:46285"
+    "lodydeals:46285",
+    "ecksdeal:6047",
+    "ecksdeal:6048"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794219534.0651362,
+  "last_run_time": 1794223210.002915,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6046,
-      "last_check_time": 1794159484.4700966
+      "last_message_id": 6048,
+      "last_check_time": 1794223212.0463006
     },
     "lodydeals": {
       "last_message_id": 46288,
@@ -4271,8 +4271,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39770,
-      "last_check_time": 1794220078.7488225
+      "last_message_id": 39771,
+      "last_check_time": 1794223217.7346528
     },
     "aniscoupons": {
       "last_message_id": 34340,
@@ -18252,6 +18252,26 @@
       "price": 13.08,
       "timestamp": 1794219534.0651362,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6047": {
+      "channel_msg_id": 2138,
+      "product_id": "1005013053122560",
+      "title": "ماوس لاسلكي فخم Scyrox V6S Wireless 8K",
+      "channel": "ecksdeal",
+      "source_msg_id": 6047,
+      "price": 53.59,
+      "timestamp": 1794223202.4757502,
+      "status": "ACTIVE"
+    },
+    "ecksdeal:6048": {
+      "channel_msg_id": 2139,
+      "product_id": "1005013054007275",
+      "title": "ماوس لاسلكي فخم Scyrox V8S Wireless 8K",
+      "channel": "ecksdeal",
+      "source_msg_id": 6048,
+      "price": 53.59,
+      "timestamp": 1794223210.002915,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18260,17 +18280,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794219539.5552073,
+    "last_deal_post_time": 1794223219.2420685,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794223016.466505,
+    "last_sweep_time": 1794223222.5790393,
     "last_sweep_times": {
-      "algeria": 1794223013.0307813,
-      "france": 1794223016.466505
+      "algeria": 1794223219.2219958,
+      "france": 1794223222.5790393
     },
     "last_deal_post_times": {
-      "algeria": 1794219539.5552073
+      "algeria": 1794223219.2420685
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20697,7 +20717,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8451",
     "lodydeals:45871",
     "ecksdeal:5964",
     "zedstoreonline:38698",
@@ -21696,7 +21715,8 @@
     "zedstoreonline:39770",
     "lodydeals:46286",
     "lodydeals:46287",
-    "lodydeals:46288"
+    "lodydeals:46288",
+    "zedstoreonline:39771"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
