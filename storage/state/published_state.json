@@ -1420,7 +1420,7 @@
     "1005007981362777": 1794146655.1062205,
     "1005007097302001": 1794146830.4272797,
     "1005013361453762": 1794159510.650968,
-    "1005013240296031": 1794164670.8679597,
+    "1005013240296031": 1794216974.0881407,
     "1005012670472055": 1794164675.8426867,
     "1005013476568095": 1794169846.8168333,
     "1005012442521357": 1794171698.893023,
@@ -3221,7 +3221,7 @@
     "Netac M.2 1TB 7400Mbs Gen 4": 1794159532.8883114,
     "RYZEN 5 5600XT": 1794159590.2283225,
     "OnePlus Turbo 6V": 1794160828.535879,
-    "DJI Mic Mini2  2TX 1RX": 1794164670.8679597,
+    "DJI Mic Mini2  2TX 1RX": 1794216974.0881407,
     "Magcubic HY350Max 900 ANSI": 1794164675.8426867,
     "Warvank X8 Wireless Gaming": 1794164680.2575803,
     "GameSir X5 Lite Mobile Controller": 1794164684.9082866,
@@ -3237,7 +3237,6 @@
     "OnePlus Ace 7Pro (12/256GB)": 1794212210.5228837
   },
   "published_post_keys": [
-    "zedstoreonline:38525",
     "lodydeals:45915",
     "zedstoreonline:38680",
     "couponsglobal:48782",
@@ -4236,19 +4235,20 @@
     "aniscoupons:34335",
     "aniscoupons:34336",
     "aniscoupons:34337",
-    "aniscoupons:34339"
+    "aniscoupons:34339",
+    "lodydeals:46281"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794216066.6956975,
+  "last_run_time": 1794216974.0881407,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6046,
       "last_check_time": 1794159484.4700966
     },
     "lodydeals": {
-      "last_message_id": 46280,
-      "last_check_time": 1794216417.741923
+      "last_message_id": 46281,
+      "last_check_time": 1794216976.1433964
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4877,7 +4877,7 @@
     "1005007981362777": 5.69,
     "1005007097302001": 4.69,
     "1005013361453762": 276.3,
-    "1005013240296031": 69.06,
+    "1005013240296031": 68.98,
     "1005012670472055": 112.11,
     "1005013476568095": 370.8,
     "1005012442521357": 158.34,
@@ -18217,6 +18217,16 @@
       "price": 167.8,
       "timestamp": 1794216066.6956975,
       "status": "ACTIVE"
+    },
+    "lodydeals:46281": {
+      "channel_msg_id": 2135,
+      "product_id": "1005013240296031",
+      "title": "DJI Mic Mini2  2TX 1RX",
+      "channel": "lodydeals",
+      "source_msg_id": 46281,
+      "price": 68.98,
+      "timestamp": 1794216974.0881407,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18225,17 +18235,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794216069.5570283,
+    "last_deal_post_time": 1794216979.0578046,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794216785.141747,
+    "last_sweep_time": 1794216982.4204388,
     "last_sweep_times": {
-      "algeria": 1794216782.0119505,
-      "france": 1794216785.141747
+      "algeria": 1794216979.031644,
+      "france": 1794216982.4204388
     },
     "last_deal_post_times": {
-      "algeria": 1794216069.5570283
+      "algeria": 1794216979.0578046
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
