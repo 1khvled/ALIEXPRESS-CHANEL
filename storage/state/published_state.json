@@ -1123,7 +1123,7 @@
     "1005010035309013": 1793554752.7954907,
     "1005010385472500": 1793448762.165183,
     "1005011779814585": 1794242119.207932,
-    "1005013090910574": 1794241024.1358633,
+    "1005013090910574": 1794265909.0829787,
     "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793543612.279949,
     "1005012910719451": 1794160828.535879,
@@ -2570,7 +2570,7 @@
     "CMF Smart Watch 3 pro AMOLED": 1794264992.2273488,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
-    "OPPO A6 Pro 8/256GB": 1794180320.4443028,
+    "OPPO A6 Pro 8/256GB": 1794265909.0829787,
     "ATTACK SHARK X1  Tri-Mode": 1791117948.6585228,
     "HILDA 2 Lines Laser Level Green": 1791124852.3122299,
     "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": 1791125437.8944824,
@@ -3317,7 +3317,6 @@
     "Portable Hair Clipper": 1794263885.7408762
   },
   "published_post_keys": [
-    "lodydeals:45867",
     "lodydeals:45876",
     "aniscoupons:33312",
     "couponsglobal:48767",
@@ -4316,11 +4315,12 @@
     "lodydeals:46308",
     "aniscoupons:34372",
     "aniscoupons:34373",
-    "zedstoreonline:39801"
+    "zedstoreonline:39801",
+    "aniscoupons:34374"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794265544.8882673,
+  "last_run_time": 1794265909.0829787,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4351,8 +4351,8 @@
       "last_check_time": 1794265546.9487739
     },
     "aniscoupons": {
-      "last_message_id": 34373,
-      "last_check_time": 1794264994.2857668
+      "last_message_id": 34374,
+      "last_check_time": 1794265911.1665626
     },
     "bnddeals": {
       "last_message_id": 51241,
@@ -18826,6 +18826,16 @@
       "price": 276.3,
       "timestamp": 1794265544.8882673,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34374": {
+      "channel_msg_id": 2187,
+      "product_id": "1005013090910574",
+      "title": "OPPO A6 Pro 8/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34374,
+      "price": 192.7,
+      "timestamp": 1794265909.0829787,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18834,17 +18844,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794265548.3047478,
+    "last_deal_post_time": 1794265911.9685104,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794265744.4333148,
+    "last_sweep_time": 1794265915.142008,
     "last_sweep_times": {
-      "algeria": 1794265740.7085142,
-      "france": 1794265744.4333148
+      "algeria": 1794265911.9478216,
+      "france": 1794265915.142008
     },
     "last_deal_post_times": {
-      "algeria": 1794265548.3047478
+      "algeria": 1794265911.9685104
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19253,7 +19263,7 @@
     "1005010035309013": "lodydeals",
     "1005010385472500": "bnddeals",
     "1005011779814585": "zedstoreonline",
-    "1005013090910574": "zedstoreonline",
+    "1005013090910574": "aniscoupons",
     "1005012382148199": "megaphonna",
     "1005010158485058": "lodydeals",
     "1005012910719451": "aniscoupons",
