@@ -1438,7 +1438,7 @@
     "1005007038022940": 1794146648.256951,
     "1005007981362777": 1794146655.1062205,
     "1005007097302001": 1794146830.4272797,
-    "1005013361453762": 1794234390.5370977,
+    "1005013361453762": 1794265544.8882673,
     "1005013240296031": 1794216974.0881407,
     "1005012670472055": 1794164675.8426867,
     "1005013476568095": 1794169846.8168333,
@@ -2926,7 +2926,7 @@
     "Realme 15T 8/256GB": 1793543739.1061752,
     "Blackview MEGA 12  12/256": 1793478769.6023057,
     "Lenovo Xiaoxin Pad Pro 2025 12.7  inch": 1793478774.2399445,
-    "HONOR Pad V9  8/256": 1794159510.650968,
+    "HONOR Pad V9  8/256": 1794265544.8882673,
     "Blackview LINK 1 Kids": 1794160820.0809557,
     "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": 1793490079.2945042,
     "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": 1793490090.28376,
@@ -3317,7 +3317,6 @@
     "Portable Hair Clipper": 1794263885.7408762
   },
   "published_post_keys": [
-    "ecksdeal:5935",
     "lodydeals:45867",
     "lodydeals:45876",
     "aniscoupons:33312",
@@ -4316,11 +4315,12 @@
     "lodydeals:46310",
     "lodydeals:46308",
     "aniscoupons:34372",
-    "aniscoupons:34373"
+    "aniscoupons:34373",
+    "zedstoreonline:39801"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794264992.2273488,
+  "last_run_time": 1794265544.8882673,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4347,8 +4347,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39799,
-      "last_check_time": 1794258353.783547
+      "last_message_id": 39801,
+      "last_check_time": 1794265546.9487739
     },
     "aniscoupons": {
       "last_message_id": 34373,
@@ -4956,7 +4956,7 @@
     "1005007038022940": 5.49,
     "1005007981362777": 5.69,
     "1005007097302001": 4.69,
-    "1005013361453762": 277.36,
+    "1005013361453762": 276.3,
     "1005013240296031": 68.98,
     "1005012670472055": 112.11,
     "1005013476568095": 370.8,
@@ -18816,6 +18816,16 @@
       "price": 48.9,
       "timestamp": 1794264992.2273488,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39801": {
+      "channel_msg_id": 2186,
+      "product_id": "1005013361453762",
+      "title": "HONOR Pad V9  8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39801,
+      "price": 276.3,
+      "timestamp": 1794265544.8882673,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18824,17 +18834,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794264995.2996237,
+    "last_deal_post_time": 1794265548.3047478,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794265353.2365806,
+    "last_sweep_time": 1794265551.2317786,
     "last_sweep_times": {
-      "algeria": 1794265350.3522568,
-      "france": 1794265353.2365806
+      "algeria": 1794265548.2785788,
+      "france": 1794265551.2317786
     },
     "last_deal_post_times": {
-      "algeria": 1794264995.2996237
+      "algeria": 1794265548.3047478
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19548,7 +19558,7 @@
     "1005007038022940": "lodydeals",
     "1005007981362777": "lodydeals",
     "1005007097302001": "lodydeals",
-    "1005013361453762": "aniscoupons",
+    "1005013361453762": "zedstoreonline",
     "1005013240296031": "lodydeals",
     "1005012670472055": "lodydeals",
     "1005010062128237": "lodydeals",
@@ -21299,7 +21309,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "bnddeals:51019",
     "megaphonna:8610",
     "aniscoupons:33106",
     "megaphonna:8563",
@@ -22298,7 +22307,8 @@
     "zedstoreonline:39799",
     "bnddeals:51241",
     "lodydeals:46304",
-    "lodydeals:46307"
+    "lodydeals:46307",
+    "zedstoreonline:39800"
   ],
   "last_france_cross_promo_time": 1794030002.0118742,
   "next_france_cross_promo_interval_seconds": 262587,
