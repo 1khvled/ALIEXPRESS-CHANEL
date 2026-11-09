@@ -1113,7 +1113,7 @@
     "1005010529440901": 1793361918.107678,
     "1005010035309013": 1793554752.7954907,
     "1005010385472500": 1793448762.165183,
-    "1005011779814585": 1794159539.8174424,
+    "1005011779814585": 1794242119.207932,
     "1005013090910574": 1794241024.1358633,
     "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793543612.279949,
@@ -2837,7 +2837,7 @@
     "OPPO A7 PRO MAX  (8/128)": 1793399619.8124897,
     "وحش الأخر": 1793448843.5220337,
     "OnePlus ACE 6T 12/256": 1793613338.6107306,
-    "AMD Ryzen 7 9700X": 1793613414.4818656,
+    "AMD Ryzen 7 9700X": 1794242119.207932,
     "JUHOR DDR5 RAM 6000MHz 16GBx2": 1793441297.4632108,
     "KingSpec DDR5 RGB RAM 16GBX2 6000 MHz": 1793441302.3527575,
     "ViVO iQOO Neo 11 Ultra 12/256": 1793971934.3600886,
@@ -3281,7 +3281,6 @@
     "AMD Ryzen 7 9800X3D": 1794235317.681294
   },
   "published_post_keys": [
-    "megaphonna:8614",
     "zedstoreonline:38824",
     "lodydeals:45933",
     "test_channel:1792284227",
@@ -4280,11 +4279,12 @@
     "aniscoupons:34354",
     "zedstoreonline:39792",
     "zedstoreonline:39793",
-    "zedstoreonline:39794"
+    "zedstoreonline:39794",
+    "zedstoreonline:39795"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794241569.7761958,
+  "last_run_time": 1794242119.207932,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6049,
@@ -4311,8 +4311,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39794,
-      "last_check_time": 1794241571.8342383
+      "last_message_id": 39795,
+      "last_check_time": 1794242121.2419271
     },
     "aniscoupons": {
       "last_message_id": 34356,
@@ -4630,7 +4630,7 @@
     "1005010529440901": 59.8,
     "1005010035309013": 72.89,
     "1005010385472500": 40.0,
-    "1005011779814585": 186.74,
+    "1005011779814585": 186.7,
     "1005013090910574": 192.7,
     "1005012382148199": 469.0,
     "1005010158485058": 66.5,
@@ -18561,6 +18561,16 @@
       "price": 69.6,
       "timestamp": 1794241569.7761958,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39795": {
+      "channel_msg_id": 2165,
+      "product_id": "1005011779814585",
+      "title": "AMD Ryzen 7 9700X",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39795,
+      "price": 186.7,
+      "timestamp": 1794242119.207932,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18569,17 +18579,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794241573.205066,
+    "last_deal_post_time": 1794242122.4055572,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794241938.3369977,
+    "last_sweep_time": 1794242125.3182945,
     "last_sweep_times": {
-      "algeria": 1794241935.4298072,
-      "france": 1794241938.3369977
+      "algeria": 1794242122.391118,
+      "france": 1794242125.3182945
     },
     "last_deal_post_times": {
-      "algeria": 1794241573.205066
+      "algeria": 1794242122.4055572
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -18987,7 +18997,7 @@
     "1005010529440901": "zedstoreonline",
     "1005010035309013": "lodydeals",
     "1005010385472500": "bnddeals",
-    "1005011779814585": "aniscoupons",
+    "1005011779814585": "zedstoreonline",
     "1005013090910574": "zedstoreonline",
     "1005012382148199": "megaphonna",
     "1005010158485058": "lodydeals",
