@@ -1161,7 +1161,7 @@
     "1005005373032877": 1793600283.7397804,
     "1005007869955343": 1794310561.509585,
     "1005012644570693": 1793441338.6619778,
-    "1005003949106838": 1794234949.9761558,
+    "1005003949106838": 1794339059.384088,
     "1005012436082838": 1793733101.535615,
     "1005010716206374": 1793448715.1480892,
     "1005012864273120": 1793399494.1323898,
@@ -3311,7 +3311,7 @@
     "Lenovo LP40 Pro": 1794146830.4272797,
     "Ulanzi ST-06S Smartphone Mount Holder": 1794146840.7057447,
     "WAMRAM SATA SSD 480GB": 1794159522.2930505,
-    "Netac M.2 1TB 7400Mbs Gen 4": 1794234949.9761558,
+    "Netac M.2 1TB 7400Mbs Gen 4": 1794339059.384088,
     "RYZEN 5 5600XT": 1794253893.3396604,
     "OnePlus Turbo 6V": 1794160828.535879,
     "DJI Mic Mini2  2TX 1RX": 1794216974.0881407,
@@ -3370,7 +3370,6 @@
     "KOOTION SATA SSD 128GB": 1794334097.945569
   },
   "published_post_keys": [
-    "lodydeals:45444",
     "lodydeals:45679",
     "lodydeals:45838",
     "couponsglobal:48808",
@@ -4369,11 +4368,12 @@
     "lodydeals:46323",
     "lodydeals:46325",
     "aniscoupons:34446",
-    "aniscoupons:34448"
+    "aniscoupons:34448",
+    "aniscoupons:34450"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794338322.1743293,
+  "last_run_time": 1794339059.384088,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6053,
@@ -4404,8 +4404,8 @@
       "last_check_time": 1794337402.26414
     },
     "aniscoupons": {
-      "last_message_id": 34449,
-      "last_check_time": 1794338686.287893
+      "last_message_id": 34450,
+      "last_check_time": 1794339061.4399467
     },
     "bnddeals": {
       "last_message_id": 51265,
@@ -19575,6 +19575,16 @@
       "price": 12.11,
       "timestamp": 1794338322.1743293,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34450": {
+      "channel_msg_id": 2261,
+      "product_id": "1005003949106838",
+      "title": "Netac M.2 1TB 7400Mbs Gen 4",
+      "channel": "aniscoupons",
+      "source_msg_id": 34450,
+      "price": 114.99,
+      "timestamp": 1794339059.384088,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19583,17 +19593,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794338324.9928696,
+    "last_deal_post_time": 1794339062.3232937,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794338886.1570241,
+    "last_sweep_time": 1794339065.8389063,
     "last_sweep_times": {
-      "algeria": 1794338882.8598707,
-      "france": 1794338886.1570241
+      "algeria": 1794339062.2984116,
+      "france": 1794339065.8389063
     },
     "last_deal_post_times": {
-      "algeria": 1794338324.9928696
+      "algeria": 1794339062.3232937
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
