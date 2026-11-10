@@ -728,7 +728,8 @@
     "COUPONS_949f01595a98",
     "1005008046071240",
     "1005012083833079",
-    "1005012292809645"
+    "1005012292809645",
+    "1005007495712340"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1408,7 +1409,7 @@
     "1005010656922924": 1793994623.1444166,
     "1005008077441711": 1794302806.3764513,
     "1005006411483066": 1794091985.0146983,
-    "1005012925301774": 1794002515.731258,
+    "1005012925301774": 1794311859.8991392,
     "1005012959738411": 1794304640.3506072,
     "1005008357913212": 1794301465.5699842,
     "1005008703989845": 1794300358.3541322,
@@ -1472,7 +1473,8 @@
     "COUPONS_949f0159": 1794309459.0725908,
     "1005008046071240": 1794310928.9154878,
     "1005012083833079": 1794311122.753493,
-    "1005012292809645": 1794311488.3788898
+    "1005012292809645": 1794311488.3788898,
+    "1005007495712340": 1794311865.7221916
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2404,7 +2406,8 @@
     "Attack Shark X11",
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for",
     "MAONO PD100W USB Wireless Dynamic",
-    "MAONO Wave T1 Mini Pro"
+    "MAONO Wave T1 Mini Pro",
+    "FIFINE M9 Wireless Lavalier Microphone"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3248,7 +3251,7 @@
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1794147198.6954062,
     "realme C100d 4/128GB": 1794148671.949184,
     "Zeblaze GTS 3 Pro AMOLED": 1794091985.0146983,
-    "شاحن سيارة ORICO بقوة 45W": 1794002515.731258,
+    "شاحن سيارة ORICO بقوة 45W": 1794311859.8991392,
     "Hollyland LARK M2 DUO 2-Person": 1794304640.3506072,
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794301837.774286,
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627,
@@ -3341,11 +3344,10 @@
     "Attack Shark X11": 1794310187.5175397,
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794310928.9154878,
     "MAONO PD100W USB Wireless Dynamic": 1794311122.753493,
-    "MAONO Wave T1 Mini Pro": 1794311488.3788898
+    "MAONO Wave T1 Mini Pro": 1794311488.3788898,
+    "FIFINE M9 Wireless Lavalier Microphone": 1794311865.7221916
   },
   "published_post_keys": [
-    "aniscoupons:32798",
-    "aniscoupons:33187",
     "megaphonna:8436",
     "lodydeals:45773",
     "aniscoupons:32746",
@@ -4343,11 +4345,13 @@
     "aniscoupons:34409",
     "aniscoupons:34410",
     "aniscoupons:34411",
-    "aniscoupons:34412"
+    "aniscoupons:34412",
+    "zedstoreonline:39817",
+    "aniscoupons:34413"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794311488.3788898,
+  "last_run_time": 1794311865.7221916,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4374,12 +4378,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39816,
-      "last_check_time": 1794311485.2028472
+      "last_message_id": 39817,
+      "last_check_time": 1794311861.9464123
     },
     "aniscoupons": {
-      "last_message_id": 34412,
-      "last_check_time": 1794311490.4266634
+      "last_message_id": 34413,
+      "last_check_time": 1794311867.7682617
     },
     "bnddeals": {
       "last_message_id": 51243,
@@ -5011,7 +5015,8 @@
     "1005010706691647": 5.29,
     "1005008046071240": 46.77,
     "1005012083833079": 57.9,
-    "1005012292809645": 37.69
+    "1005012292809645": 37.69,
+    "1005007495712340": 53.24
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -19296,6 +19301,26 @@
       "price": 37.69,
       "timestamp": 1794311488.3788898,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39817": {
+      "channel_msg_id": 2235,
+      "product_id": "1005012925301774",
+      "title": "شاحن سيارة ORICO بقوة 45W",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39817,
+      "price": 11.2,
+      "timestamp": 1794311859.8991392,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34413": {
+      "channel_msg_id": 2236,
+      "product_id": "1005007495712340",
+      "title": "FIFINE M9 Wireless Lavalier Microphone",
+      "channel": "aniscoupons",
+      "source_msg_id": 34413,
+      "price": 53.24,
+      "timestamp": 1794311865.7221916,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19304,17 +19329,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794311490.9577317,
+    "last_deal_post_time": 1794311868.7008176,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794311672.106975,
+    "last_sweep_time": 1794311872.463576,
     "last_sweep_times": {
-      "algeria": 1794311669.0048065,
-      "france": 1794311672.106975
+      "algeria": 1794311868.6794825,
+      "france": 1794311872.463576
     },
     "last_deal_post_times": {
-      "algeria": 1794311490.9577317
+      "algeria": 1794311868.7008176
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20058,7 +20083,8 @@
     "COUPONS_949f01595a98": "bnddeals",
     "1005008046071240": "aniscoupons",
     "1005012083833079": "aniscoupons",
-    "1005012292809645": "aniscoupons"
+    "1005012292809645": "aniscoupons",
+    "1005007495712340": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -20997,7 +21023,8 @@
     "Attack Shark X11": "aniscoupons",
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": "aniscoupons",
     "MAONO PD100W USB Wireless Dynamic": "aniscoupons",
-    "MAONO Wave T1 Mini Pro": "aniscoupons"
+    "MAONO Wave T1 Mini Pro": "aniscoupons",
+    "FIFINE M9 Wireless Lavalier Microphone": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
