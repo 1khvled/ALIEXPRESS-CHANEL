@@ -1255,7 +1255,7 @@
     "1005013053122560": 1794223202.4757502,
     "1005012322822595": 1793543961.1645148,
     "1005009662812027": 1794302238.7307503,
-    "1005005975560350": 1794215317.7512906,
+    "1005005975560350": 1794312406.8406456,
     "1005012922578845": 1793544001.8628821,
     "1005011752891197": 1793613465.8475375,
     "1005008689880751": 1793544016.7486506,
@@ -1417,7 +1417,7 @@
     "1005007038130594": 1794046667.9804564,
     "1005008248187128": 1794057675.8729835,
     "1005013053381984": 1794060065.5449874,
-    "1005008060391372": 1794215146.3107493,
+    "1005008060391372": 1794312402.179863,
     "1005010209911111": 1794068056.674266,
     "1005008295555234": 1794073127.8664527,
     "1005008645323478": 1794235676.7278144,
@@ -3220,8 +3220,8 @@
     "Essager 20W GaN + cable": 1794076070.3822317,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794300358.3541322,
-    "Fifine Gaming Headset H9W": 1794215317.7512906,
-    "Fifine Gaming Headset H6": 1794215146.3107493,
+    "Fifine Gaming Headset H9W": 1794312406.8406456,
+    "Fifine Gaming Headset H6": 1794312402.179863,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794305193.7156484,
     "KOOTION SSD SATA": 1794301465.5699842,
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
@@ -3348,8 +3348,6 @@
     "FIFINE M9 Wireless Lavalier Microphone": 1794311865.7221916
   },
   "published_post_keys": [
-    "megaphonna:8436",
-    "lodydeals:45773",
     "aniscoupons:32746",
     "aniscoupons:33188",
     "zedstoreonline:38800",
@@ -4347,11 +4345,13 @@
     "aniscoupons:34411",
     "aniscoupons:34412",
     "zedstoreonline:39817",
-    "aniscoupons:34413"
+    "aniscoupons:34413",
+    "aniscoupons:34414",
+    "aniscoupons:34415"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794311865.7221916,
+  "last_run_time": 1794312406.8406456,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4382,8 +4382,8 @@
       "last_check_time": 1794312040.8184867
     },
     "aniscoupons": {
-      "last_message_id": 34413,
-      "last_check_time": 1794311867.7682617
+      "last_message_id": 34415,
+      "last_check_time": 1794312408.8725135
     },
     "bnddeals": {
       "last_message_id": 51243,
@@ -4821,7 +4821,7 @@
     "1005012322822595": 266.19,
     "1005012524603100": 283.59,
     "1005009662812027": 76.35,
-    "1005005975560350": 35.9,
+    "1005005975560350": 36.5,
     "1005011752891197": 119.3,
     "1005008689880751": 76.5,
     "1005006861815245": 9.44,
@@ -4942,7 +4942,7 @@
     "1005008636930795": 31.5,
     "1005013083645836": 304.4,
     "1005008703989845": 24.8,
-    "1005008060391372": 32.9,
+    "1005008060391372": 33.5,
     "1005012593794312": 241.5,
     "1005008357913212": 40.5,
     "1005012254132930": 15.2,
@@ -19321,6 +19321,26 @@
       "price": 53.24,
       "timestamp": 1794311865.7221916,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34414": {
+      "channel_msg_id": 2237,
+      "product_id": "1005008060391372",
+      "title": "Fifine Gaming Headset H6",
+      "channel": "aniscoupons",
+      "source_msg_id": 34414,
+      "price": 33.5,
+      "timestamp": 1794312402.179863,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34415": {
+      "channel_msg_id": 2238,
+      "product_id": "1005005975560350",
+      "title": "Fifine Gaming Headset H9W",
+      "channel": "aniscoupons",
+      "source_msg_id": 34415,
+      "price": 36.5,
+      "timestamp": 1794312406.8406456,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19329,17 +19349,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794311868.7008176,
+    "last_deal_post_time": 1794312409.5389838,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794312225.005443,
+    "last_sweep_time": 1794312412.3843446,
     "last_sweep_times": {
-      "algeria": 1794312221.6254125,
-      "france": 1794312225.005443
+      "algeria": 1794312409.5159492,
+      "france": 1794312412.3843446
     },
     "last_deal_post_times": {
-      "algeria": 1794311868.7008176
+      "algeria": 1794312409.5389838
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
