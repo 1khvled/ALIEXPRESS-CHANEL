@@ -829,7 +829,7 @@
     "1005010178295650": 1793743848.9735239,
     "1005006861002512": 1791151259.5667012,
     "1005012285327063": 1794314242.0907123,
-    "1005006581583862": 1794313321.761044,
+    "1005006581583862": 1794337406.2234359,
     "1005012816171978": 1792157876.0860639,
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791638734.5386465,
@@ -2529,7 +2529,7 @@
     "آلة حلاقة من علامة KEMEI": 1791012946.4110153,
     "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": 1791638734.5386465,
     "Predyee Groin Hair Trimmer WH": 1791013836.445986,
-    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1791013842.0461159,
+    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1794337406.2234359,
     "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise": 1791014140.3360124,
     "Baseus-Bowie E5x": 1791014145.8727648,
     "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": 1791014755.488723,
@@ -3370,7 +3370,6 @@
     "KOOTION SATA SSD 128GB": 1794334097.945569
   },
   "published_post_keys": [
-    "test_channel:1793229908",
     "test_channel:1792073549",
     "lodydeals:45444",
     "lodydeals:45679",
@@ -4369,11 +4368,12 @@
     "aniscoupons:34443",
     "aniscoupons:34444",
     "lodydeals:46323",
-    "lodydeals:46325"
+    "lodydeals:46325",
+    "aniscoupons:34446"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794334097.945569,
+  "last_run_time": 1794337406.2234359,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6053,
@@ -4400,12 +4400,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39835,
-      "last_check_time": 1794334275.761803
+      "last_message_id": 39836,
+      "last_check_time": 1794337402.26414
     },
     "aniscoupons": {
-      "last_message_id": 34445,
-      "last_check_time": 1794332262.8394136
+      "last_message_id": 34446,
+      "last_check_time": 1794337408.2818773
     },
     "bnddeals": {
       "last_message_id": 51265,
@@ -19555,6 +19555,16 @@
       "price": 8.3,
       "timestamp": 1794334097.945569,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34446": {
+      "channel_msg_id": 2259,
+      "product_id": "1005006581583862",
+      "title": "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling",
+      "channel": "aniscoupons",
+      "source_msg_id": 34446,
+      "price": 18.4,
+      "timestamp": 1794337406.2234359,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19563,17 +19573,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794334104.1828675,
+    "last_deal_post_time": 1794337409.1357012,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794337226.349792,
+    "last_sweep_time": 1794337412.3310668,
     "last_sweep_times": {
-      "algeria": 1794337223.0679333,
-      "france": 1794337226.349792
+      "algeria": 1794337409.1088388,
+      "france": 1794337412.3310668
     },
     "last_deal_post_times": {
-      "algeria": 1794334104.1828675
+      "algeria": 1794337409.1357012
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19665,7 +19675,7 @@
     "1005012881256093": "lodydeals",
     "1005006861002512": "lodydeals",
     "1005012285327063": "aniscoupons",
-    "1005006581583862": "zedstoreonline",
+    "1005006581583862": "aniscoupons",
     "1005012816171978": "lodydeals",
     "1005009834132291": "ecksdeal",
     "1005010585654037": "lodydeals",
@@ -22064,7 +22074,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8702",
     "megaphonna:8296",
     "megaphonna:8317",
     "aniscoupons:32911",
@@ -23063,7 +23072,8 @@
     "ecksdeal:6053",
     "aniscoupons:34445",
     "lodydeals:46324",
-    "zedstoreonline:39835"
+    "zedstoreonline:39835",
+    "zedstoreonline:39836"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
