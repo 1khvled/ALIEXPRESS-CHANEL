@@ -1310,7 +1310,7 @@
     "1005010009130696": 1793613403.4444478,
     "1005013465751932": 1793613440.9413722,
     "1005011778223630": 1793613478.3592212,
-    "1005009231510301": 1794166133.813164,
+    "1005009231510301": 1794308897.9947796,
     "1005011625723042": 1793613515.3490868,
     "1005006280695304": 1793613524.8970137,
     "1005010149868688": 1793613530.8342392,
@@ -2390,7 +2390,8 @@
     "Inphic PG1 RGB Wired Gaming Mouse",
     "Anker Q20i Hybrid Active",
     "CUSU CV3500Q 2TB M.2",
-    "MACHENIKE G5Pro Max SE With Charging Dock"
+    "MACHENIKE G5Pro Max SE With Charging Dock",
+    "Xiaoxin Pad Pro GT (8/256)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3322,10 +3323,10 @@
     "Inphic PG1 RGB Wired Gaming Mouse": 1794302806.3764513,
     "Anker Q20i Hybrid Active": 1794303359.8230114,
     "CUSU CV3500Q 2TB M.2": 1794305012.9961731,
-    "MACHENIKE G5Pro Max SE With Charging Dock": 1794306963.5533123
+    "MACHENIKE G5Pro Max SE With Charging Dock": 1794306963.5533123,
+    "Xiaoxin Pad Pro GT (8/256)": 1794308897.9947796
   },
   "published_post_keys": [
-    "pcgamingpart:7946",
     "aniscoupons:33066",
     "aniscoupons:32687",
     "aniscoupons:32795",
@@ -4324,11 +4325,12 @@
     "aniscoupons:34402",
     "zedstoreonline:39810",
     "aniscoupons:34403",
-    "zedstoreonline:39812"
+    "zedstoreonline:39812",
+    "aniscoupons:34404"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794307971.8462343,
+  "last_run_time": 1794308897.9947796,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4359,8 +4361,8 @@
       "last_check_time": 1794308342.2040477
     },
     "aniscoupons": {
-      "last_message_id": 34403,
-      "last_check_time": 1794307251.2901773
+      "last_message_id": 34404,
+      "last_check_time": 1794308900.0562532
     },
     "bnddeals": {
       "last_message_id": 51242,
@@ -19184,6 +19186,16 @@
       "price": 11.2,
       "timestamp": 1794307971.8462343,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34404": {
+      "channel_msg_id": 2225,
+      "product_id": "1005009231510301",
+      "title": "Xiaoxin Pad Pro GT (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34404,
+      "price": 259.7,
+      "timestamp": 1794308897.9947796,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19192,17 +19204,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794307974.7605255,
+    "last_deal_post_time": 1794308900.6950016,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794308719.4746866,
+    "last_sweep_time": 1794308903.5511332,
     "last_sweep_times": {
-      "algeria": 1794308715.664463,
-      "france": 1794308719.4746866
+      "algeria": 1794308900.667869,
+      "france": 1794308903.5511332
     },
     "last_deal_post_times": {
-      "algeria": 1794307974.7605255
+      "algeria": 1794308900.6950016
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19804,7 +19816,7 @@
     "1005010009130696": "zedstoreonline",
     "1005013465751932": "zedstoreonline",
     "1005011778223630": "zedstoreonline",
-    "1005009231510301": "zedstoreonline",
+    "1005009231510301": "aniscoupons",
     "1005011625723042": "aniscoupons",
     "1005006280695304": "aniscoupons",
     "1005007060644375": "aniscoupons",
@@ -20876,7 +20888,8 @@
     "Inphic PG1 RGB Wired Gaming Mouse": "aniscoupons",
     "Anker Q20i Hybrid Active": "aniscoupons",
     "CUSU CV3500Q 2TB M.2": "lodydeals",
-    "MACHENIKE G5Pro Max SE With Charging Dock": "aniscoupons"
+    "MACHENIKE G5Pro Max SE With Charging Dock": "aniscoupons",
+    "Xiaoxin Pad Pro GT (8/256)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
