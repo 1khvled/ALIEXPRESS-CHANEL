@@ -1198,7 +1198,7 @@
     "COUPONS_d131dda7a0e3": 1793478717.5768087,
     "COUPONS_d131dda7": 1793478717.5923967,
     "COUPONS_11.11 Global Shopping Festival Warm-Up": 1793478717.5923967,
-    "1005008518280704": 1793707081.0327315,
+    "1005008518280704": 1794305012.9961731,
     "1005010527736444": 1793478769.6023057,
     "1005013450996845": 1794231086.6438067,
     "1005013144753309": 1794160820.0809557,
@@ -2388,7 +2388,8 @@
     "Bicycle Pump 80 PSI",
     "Portable Hair Clipper",
     "Inphic PG1 RGB Wired Gaming Mouse",
-    "Anker Q20i Hybrid Active"
+    "Anker Q20i Hybrid Active",
+    "CUSU CV3500Q 2TB M.2"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3318,10 +3319,10 @@
     "Bicycle Pump 80 PSI": 1794263702.59817,
     "Portable Hair Clipper": 1794263885.7408762,
     "Inphic PG1 RGB Wired Gaming Mouse": 1794302806.3764513,
-    "Anker Q20i Hybrid Active": 1794303359.8230114
+    "Anker Q20i Hybrid Active": 1794303359.8230114,
+    "CUSU CV3500Q 2TB M.2": 1794305012.9961731
   },
   "published_post_keys": [
-    "bnddeals:50804",
     "ecksdeal:5986",
     "lodydeals:45779",
     "lodydeals:45894",
@@ -4320,19 +4321,20 @@
     "aniscoupons:34391",
     "aniscoupons:34392",
     "aniscoupons:34393",
-    "aniscoupons:34394"
+    "aniscoupons:34394",
+    "lodydeals:46320"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794304640.3506072,
+  "last_run_time": 1794305012.9961731,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
       "last_check_time": 1794252785.3081255
     },
     "lodydeals": {
-      "last_message_id": 46319,
-      "last_check_time": 1794302620.4158065
+      "last_message_id": 46320,
+      "last_check_time": 1794305015.056621
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4744,7 +4746,7 @@
     "1005013037972159": 85.7,
     "1005013081860728": 103.98,
     "1005013045114640": 94.7,
-    "1005008518280704": 60.25,
+    "1005008518280704": 179.48,
     "1005010527736444": 298.0,
     "1005013450996845": 212.48,
     "1005012171521680": 277.26,
@@ -19080,6 +19082,16 @@
       "price": 68.79,
       "timestamp": 1794304640.3506072,
       "status": "ACTIVE"
+    },
+    "lodydeals:46320": {
+      "channel_msg_id": 2215,
+      "product_id": "1005008518280704",
+      "title": "CUSU CV3500Q 2TB M.2",
+      "channel": "lodydeals",
+      "source_msg_id": 46320,
+      "price": 179.48,
+      "timestamp": 1794305012.9961731,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19088,17 +19100,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794304643.0606542,
+    "last_deal_post_time": 1794305017.3627815,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794304834.7905111,
+    "last_sweep_time": 1794305020.2638667,
     "last_sweep_times": {
-      "algeria": 1794304831.1605318,
-      "france": 1794304834.7905111
+      "algeria": 1794305017.336243,
+      "france": 1794305020.2638667
     },
     "last_deal_post_times": {
-      "algeria": 1794304643.0606542
+      "algeria": 1794305017.3627815
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20770,7 +20782,8 @@
     "Bicycle Pump 80 PSI": "lodydeals",
     "Portable Hair Clipper": "lodydeals",
     "Inphic PG1 RGB Wired Gaming Mouse": "aniscoupons",
-    "Anker Q20i Hybrid Active": "aniscoupons"
+    "Anker Q20i Hybrid Active": "aniscoupons",
+    "CUSU CV3500Q 2TB M.2": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
