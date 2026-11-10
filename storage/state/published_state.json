@@ -1130,7 +1130,7 @@
     "1005010035309013": 1793554752.7954907,
     "1005010385472500": 1793448762.165183,
     "1005011779814585": 1794339426.7315922,
-    "1005013090910574": 1794299257.6397457,
+    "1005013090910574": 1794340346.0747576,
     "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793543612.279949,
     "1005012910719451": 1794160828.535879,
@@ -2604,7 +2604,7 @@
     "CMF Smart Watch 3 pro AMOLED": 1794299263.989674,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
-    "OPPO A6 Pro 8/256GB": 1794265909.0829787,
+    "OPPO A6 Pro 8/256GB": 1794340346.0747576,
     "ATTACK SHARK X1  Tri-Mode": 1791117948.6585228,
     "HILDA 2 Lines Laser Level Green": 1791124852.3122299,
     "Lenovo XT53 Wireless Bluetooth 5.4 Earphones": 1791125437.8944824,
@@ -3370,7 +3370,6 @@
     "KOOTION SATA SSD 128GB": 1794334097.945569
   },
   "published_post_keys": [
-    "couponsglobal:48808",
     "aniscoupons:32771",
     "couponsglobal:48777",
     "ecksdeal:5856",
@@ -4369,11 +4368,12 @@
     "aniscoupons:34448",
     "aniscoupons:34450",
     "aniscoupons:34451",
-    "aniscoupons:34452"
+    "aniscoupons:34452",
+    "aniscoupons:34453"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794339790.4710326,
+  "last_run_time": 1794340346.0747576,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6053,
@@ -4404,8 +4404,8 @@
       "last_check_time": 1794339603.5476394
     },
     "aniscoupons": {
-      "last_message_id": 34452,
-      "last_check_time": 1794339792.5572422
+      "last_message_id": 34453,
+      "last_check_time": 1794340348.1380749
     },
     "bnddeals": {
       "last_message_id": 51265,
@@ -19605,6 +19605,16 @@
       "price": 167.8,
       "timestamp": 1794339790.4710326,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34453": {
+      "channel_msg_id": 2264,
+      "product_id": "1005013090910574",
+      "title": "OPPO A6 Pro 8/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34453,
+      "price": 192.7,
+      "timestamp": 1794340346.0747576,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19613,17 +19623,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794339793.054173,
+    "last_deal_post_time": 1794340348.7280428,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794340162.2175753,
+    "last_sweep_time": 1794340351.563291,
     "last_sweep_times": {
-      "algeria": 1794340159.3341115,
-      "france": 1794340162.2175753
+      "algeria": 1794340348.6999664,
+      "france": 1794340351.563291
     },
     "last_deal_post_times": {
-      "algeria": 1794339793.054173
+      "algeria": 1794340348.7280428
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20032,7 +20042,7 @@
     "1005010035309013": "lodydeals",
     "1005010385472500": "bnddeals",
     "1005011779814585": "aniscoupons",
-    "1005013090910574": "zedstoreonline",
+    "1005013090910574": "aniscoupons",
     "1005012382148199": "megaphonna",
     "1005010158485058": "lodydeals",
     "1005012910719451": "aniscoupons",
