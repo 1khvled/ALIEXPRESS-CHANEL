@@ -1010,7 +1010,7 @@
     "9998882360": 1792162360.6633363,
     "9998882475": 1793282475.663889,
     "9998882568": 1792162568.078144,
-    "1005010369693975": 1793966654.208892,
+    "1005010369693975": 1794314605.5631006,
     "1005006442452857": 1792166326.0335298,
     "9998886462": 1792166462.200491,
     "1005009948598802": 1793500786.1935658,
@@ -2412,7 +2412,8 @@
     "FIFINE M9 Wireless Lavalier Microphone",
     "AULA WIN68 HE Gaming Mechanical Keyboard",
     "CMF Buds 2a ANC -42dB  السعر: 11.7",
-    "MACHENIKE G1 Wireless Gaming Controller"
+    "MACHENIKE G1 Wireless Gaming Controller",
+    "HAYLOU Mori Pro"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3353,10 +3354,10 @@
     "FIFINE M9 Wireless Lavalier Microphone": 1794311865.7221916,
     "AULA WIN68 HE Gaming Mechanical Keyboard": 1794312953.1830955,
     "CMF Buds 2a ANC -42dB  السعر: 11.7": 1794312964.1163073,
-    "MACHENIKE G1 Wireless Gaming Controller": 1794313510.6359115
+    "MACHENIKE G1 Wireless Gaming Controller": 1794313510.6359115,
+    "HAYLOU Mori Pro": 1794314605.5631006
   },
   "published_post_keys": [
-    "zedstoreonline:38788",
     "zedstoreonline:38898",
     "zedstoreonline:38812",
     "lodydeals:45814",
@@ -4355,11 +4356,12 @@
     "zedstoreonline:39822",
     "zedstoreonline:39824",
     "aniscoupons:34420",
-    "zedstoreonline:39825"
+    "zedstoreonline:39825",
+    "aniscoupons:34422"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794314418.8957746,
+  "last_run_time": 1794314605.5631006,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4390,8 +4392,8 @@
       "last_check_time": 1794314420.9546447
     },
     "aniscoupons": {
-      "last_message_id": 34420,
-      "last_check_time": 1794314244.1269617
+      "last_message_id": 34423,
+      "last_check_time": 1794314608.5611885
     },
     "bnddeals": {
       "last_message_id": 51246,
@@ -4627,7 +4629,7 @@
     "1005012671337268": 4.02,
     "1005012331836106": 268.0,
     "1005007760080474": 75.0,
-    "1005010369693975": 9.7,
+    "1005010369693975": 10.7,
     "1005006442452857": 24.7,
     "1005012751475098": 2.28,
     "1005012545304504": 123.1,
@@ -19440,6 +19442,16 @@
       "price": 18.7,
       "timestamp": 1794314418.8957746,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34422": {
+      "channel_msg_id": 2248,
+      "product_id": "1005010369693975",
+      "title": "HAYLOU Mori Pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 34422,
+      "price": 10.7,
+      "timestamp": 1794314605.5631006,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19448,17 +19460,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794314422.2136583,
+    "last_deal_post_time": 1794314609.3259342,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794314425.0250852,
+    "last_sweep_time": 1794314612.2333717,
     "last_sweep_times": {
-      "algeria": 1794314422.1839616,
-      "france": 1794314425.0250852
+      "algeria": 1794314609.3014605,
+      "france": 1794314612.2333717
     },
     "last_deal_post_times": {
-      "algeria": 1794314422.2136583
+      "algeria": 1794314609.3259342
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19752,7 +19764,7 @@
     "9998882360": "test_channel",
     "9998882475": "test_channel",
     "9998882568": "test_channel",
-    "1005010369693975": "zedstoreonline",
+    "1005010369693975": "aniscoupons",
     "1005006442452857": "zedstoreonline",
     "9998886462": "test_channel",
     "1005012751475098": "couponsglobal",
@@ -21147,7 +21159,8 @@
     "FIFINE M9 Wireless Lavalier Microphone": "aniscoupons",
     "AULA WIN68 HE Gaming Mechanical Keyboard": "zedstoreonline",
     "CMF Buds 2a ANC -42dB  السعر: 11.7": "bnddeals",
-    "MACHENIKE G1 Wireless Gaming Controller": "zedstoreonline"
+    "MACHENIKE G1 Wireless Gaming Controller": "zedstoreonline",
+    "HAYLOU Mori Pro": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -21942,7 +21955,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "bnddeals:50865",
     "ecksdeal:6006",
     "zedstoreonline:38559",
     "lodydeals:45507",
@@ -22941,7 +22953,8 @@
     "zedstoreonline:39823",
     "bnddeals:51245",
     "aniscoupons:34419",
-    "bnddeals:51246"
+    "bnddeals:51246",
+    "aniscoupons:34423"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
