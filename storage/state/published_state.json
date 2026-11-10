@@ -725,7 +725,8 @@
     "1005009649048598",
     "1005005209277375",
     "1005010706691647",
-    "COUPONS_949f01595a98"
+    "COUPONS_949f01595a98",
+    "1005008046071240"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1466,7 +1467,8 @@
     "1005005209277375": 1794263702.59817,
     "1005010706691647": 1794263885.7408762,
     "COUPONS_949f01595a98": 1794309459.0513651,
-    "COUPONS_949f0159": 1794309459.0725908
+    "COUPONS_949f0159": 1794309459.0725908,
+    "1005008046071240": 1794310928.9154878
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2395,7 +2397,8 @@
     "CUSU CV3500Q 2TB M.2",
     "MACHENIKE G5Pro Max SE With Charging Dock",
     "Xiaoxin Pad Pro GT (8/256)",
-    "Attack Shark X11"
+    "Attack Shark X11",
+    "Mic USB Microphone with RGB Modes Professional Condenser Mic for"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3329,10 +3332,10 @@
     "CUSU CV3500Q 2TB M.2": 1794305012.9961731,
     "MACHENIKE G5Pro Max SE With Charging Dock": 1794306963.5533123,
     "Xiaoxin Pad Pro GT (8/256)": 1794308897.9947796,
-    "Attack Shark X11": 1794310187.5175397
+    "Attack Shark X11": 1794310187.5175397,
+    "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794310928.9154878
   },
   "published_post_keys": [
-    "zedstoreonline:38895",
     "aniscoupons:32785",
     "aniscoupons:33161",
     "aniscoupons:32798",
@@ -4331,11 +4334,12 @@
     "aniscoupons:34406",
     "bnddeals:51243",
     "aniscoupons:34408",
-    "aniscoupons:34409"
+    "aniscoupons:34409",
+    "aniscoupons:34410"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794310561.509585,
+  "last_run_time": 1794310928.9154878,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4366,8 +4370,8 @@
       "last_check_time": 1794308342.2040477
     },
     "aniscoupons": {
-      "last_message_id": 34409,
-      "last_check_time": 1794310563.5486357
+      "last_message_id": 34410,
+      "last_check_time": 1794310930.969848
     },
     "bnddeals": {
       "last_message_id": 51243,
@@ -4996,7 +5000,8 @@
     "1005009766330661": 45.1,
     "1005009649048598": 3.29,
     "1005005209277375": 4.69,
-    "1005010706691647": 5.29
+    "1005010706691647": 5.29,
+    "1005008046071240": 46.77
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -19251,6 +19256,16 @@
       "price": 37.5,
       "timestamp": 1794310561.509585,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34410": {
+      "channel_msg_id": 2232,
+      "product_id": "1005008046071240",
+      "title": "Mic USB Microphone with RGB Modes Professional Condenser Mic for",
+      "channel": "aniscoupons",
+      "source_msg_id": 34410,
+      "price": 46.77,
+      "timestamp": 1794310928.9154878,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19259,17 +19274,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794310564.4600432,
+    "last_deal_post_time": 1794310931.690845,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794310751.9223676,
+    "last_sweep_time": 1794310934.5735536,
     "last_sweep_times": {
-      "algeria": 1794310748.7698312,
-      "france": 1794310751.9223676
+      "algeria": 1794310931.666739,
+      "france": 1794310934.5735536
     },
     "last_deal_post_times": {
-      "algeria": 1794310564.4600432
+      "algeria": 1794310931.690845
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20010,7 +20025,8 @@
     "1005009649048598": "lodydeals",
     "1005005209277375": "lodydeals",
     "1005010706691647": "lodydeals",
-    "COUPONS_949f01595a98": "bnddeals"
+    "COUPONS_949f01595a98": "bnddeals",
+    "1005008046071240": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -20946,7 +20962,8 @@
     "CUSU CV3500Q 2TB M.2": "lodydeals",
     "MACHENIKE G5Pro Max SE With Charging Dock": "aniscoupons",
     "Xiaoxin Pad Pro GT (8/256)": "aniscoupons",
-    "Attack Shark X11": "aniscoupons"
+    "Attack Shark X11": "aniscoupons",
+    "Mic USB Microphone with RGB Modes Professional Condenser Mic for": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
