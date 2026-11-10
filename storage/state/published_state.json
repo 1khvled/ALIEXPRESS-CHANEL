@@ -732,7 +732,8 @@
     "1005007495712340",
     "1005009104334975",
     "1005012474727998",
-    "1005006807619368"
+    "1005006807619368",
+    "1005010653559191"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1480,7 +1481,8 @@
     "1005007495712340": 1794311865.7221916,
     "1005009104334975": 1794314237.0165172,
     "1005012474727998": 1794320674.833981,
-    "1005006807619368": 1794344038.7678037
+    "1005006807619368": 1794344038.7678037,
+    "1005010653559191": 1794349536.4429784
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2425,7 +2427,8 @@
     "KOOTION SATA SSD 128GB",
     "Kingston DataTraveler 128GB",
     "CUSU CV3500  M.2 NVMe SSD (1tb)",
-    "Kootion X15 M.2 NVMe 256GB"
+    "Kootion X15 M.2 NVMe 256GB",
+    "Baseus BS2 Lite"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3375,10 +3378,10 @@
     "KOOTION SATA SSD 128GB": 1794334097.945569,
     "Kingston DataTraveler 128GB": 1794344038.7678037,
     "CUSU CV3500  M.2 NVMe SSD (1tb)": 1794344399.896034,
-    "Kootion X15 M.2 NVMe 256GB": 1794346230.0535362
+    "Kootion X15 M.2 NVMe 256GB": 1794346230.0535362,
+    "Baseus BS2 Lite": 1794349536.4429784
   },
   "published_post_keys": [
-    "lodydeals:45730",
     "lodydeals:45847",
     "ecksdeal:5976",
     "zedstoreonline:38852",
@@ -4377,19 +4380,20 @@
     "lodydeals:46328",
     "aniscoupons:34466",
     "zedstoreonline:39841",
-    "zedstoreonline:39842"
+    "zedstoreonline:39842",
+    "zedstoreonline:39843"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794349171.7275317,
+  "last_run_time": 1794349536.4429784,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6053,
       "last_check_time": 1794328944.6992753
     },
     "lodydeals": {
-      "last_message_id": 46330,
-      "last_check_time": 1794348801.2160683
+      "last_message_id": 46331,
+      "last_check_time": 1794349531.3733902
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4408,12 +4412,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39842,
-      "last_check_time": 1794349173.786421
+      "last_message_id": 39843,
+      "last_check_time": 1794349538.4918828
     },
     "aniscoupons": {
-      "last_message_id": 34467,
-      "last_check_time": 1794348068.0762417
+      "last_message_id": 34468,
+      "last_check_time": 1794349539.3752098
     },
     "bnddeals": {
       "last_message_id": 51265,
@@ -5049,7 +5053,8 @@
     "1005007495712340": 53.24,
     "1005009104334975": 10.6,
     "1005012474727998": 14.9,
-    "1005006807619368": 6.55
+    "1005006807619368": 6.55,
+    "1005010653559191": 10.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -19704,6 +19709,16 @@
       "price": 18.7,
       "timestamp": 1794349171.7275317,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39843": {
+      "channel_msg_id": 2274,
+      "product_id": "1005010653559191",
+      "title": "Baseus BS2 Lite",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39843,
+      "price": 10.5,
+      "timestamp": 1794349536.4429784,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19712,17 +19727,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794349175.3554745,
+    "last_deal_post_time": 1794349539.9178026,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794349355.319774,
+    "last_sweep_time": 1794349543.8916585,
     "last_sweep_times": {
-      "algeria": 1794349351.9803534,
-      "france": 1794349355.319774
+      "algeria": 1794349539.8963752,
+      "france": 1794349543.8916585
     },
     "last_deal_post_times": {
-      "algeria": 1794349175.3554745
+      "algeria": 1794349539.9178026
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20470,7 +20485,8 @@
     "1005007495712340": "aniscoupons",
     "1005009104334975": "zedstoreonline",
     "1005012474727998": "zedstoreonline",
-    "1005006807619368": "aniscoupons"
+    "1005006807619368": "aniscoupons",
+    "1005010653559191": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -21422,7 +21438,8 @@
     "KOOTION SATA SSD 128GB": "lodydeals",
     "Kingston DataTraveler 128GB": "aniscoupons",
     "CUSU CV3500  M.2 NVMe SSD (1tb)": "aniscoupons",
-    "Kootion X15 M.2 NVMe 256GB": "lodydeals"
+    "Kootion X15 M.2 NVMe 256GB": "lodydeals",
+    "Baseus BS2 Lite": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22217,7 +22234,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38835",
     "megaphonna:8394",
     "megaphonna:8343",
     "megaphonna:8712",
@@ -23216,7 +23232,8 @@
     "aniscoupons:34464",
     "zedstoreonline:39839",
     "aniscoupons:34467",
-    "zedstoreonline:39840"
+    "zedstoreonline:39840",
+    "aniscoupons:34468"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
