@@ -724,7 +724,8 @@
     "1005009766330661",
     "1005009649048598",
     "1005005209277375",
-    "1005010706691647"
+    "1005010706691647",
+    "COUPONS_949f01595a98"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1200,7 +1201,7 @@
     "COUPONS_11.11 Global Shopping Festival Warm-Up": 1793478717.5923967,
     "1005008518280704": 1794305012.9961731,
     "1005010527736444": 1793478769.6023057,
-    "1005013450996845": 1794231086.6438067,
+    "1005013450996845": 1794309452.4510136,
     "1005013144753309": 1794160820.0809557,
     "1005012061152213": 1793490079.2945042,
     "1005012519569107": 1793490085.1205146,
@@ -1359,7 +1360,7 @@
     "1005006026842392": 1793707779.0330126,
     "1005011748000554": 1793966892.2256048,
     "COUPONS_gen": 1793728683.0472453,
-    "COUPONS_11.11 Global Shopping Festival Main Sale": 1793728683.0472453,
+    "COUPONS_11.11 Global Shopping Festival Main Sale": 1794309459.0725908,
     "1005009111757092": 1793728859.1630292,
     "1005013030365524": 1793735141.9083512,
     "1005013199719142": 1793735684.5341609,
@@ -1463,7 +1464,9 @@
     "1005009766330661": 1794251129.0913823,
     "1005009649048598": 1794263521.335573,
     "1005005209277375": 1794263702.59817,
-    "1005010706691647": 1794263885.7408762
+    "1005010706691647": 1794263885.7408762,
+    "COUPONS_949f01595a98": 1794309459.0513651,
+    "COUPONS_949f0159": 1794309459.0725908
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2622,7 +2625,7 @@
     "CMF by Nothing Buds 2A 12.4mm Driver 42dB ANC 4HD MicsLong Battery Life Up": 1791968180.0253317,
     "REALME 15 5G (12/512)": 1792172104.7239766,
     "Electronic Scale Smart": 1791482965.5086565,
-    "أحدث كوبونات وتخفيضات AliExpress": 1793478717.5768087,
+    "أحدث كوبونات وتخفيضات AliExpress": 1794309459.0513651,
     "قرص صلب SSD من CUSU بسعات 1 تيرابايت، 512 جيجابايت، 240 جيجابايت، 480": 1791626816.0179322,
     "مايكروفون ديناميكي Fifine K688": 1793546757.4916894,
     "Walram SATA3 SSD 512GB": 1791638441.843642,
@@ -3275,7 +3278,7 @@
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
     "Blackview Mega 5": 1794142225.168232,
     "Warvank X8 Wireless Gaming Mouse": 1794144806.2660766,
-    "Xiaoxin Pad Pro 2025 (8/128GB)": 1794231086.6438067,
+    "Xiaoxin Pad Pro 2025 (8/128GB)": 1794309452.4510136,
     "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": 1794145536.5317988,
     "Lenovo Thinkplus XT88": 1794146648.256951,
     "Rolls-Royce Phantom Model": 1794146655.1062205,
@@ -3327,8 +3330,6 @@
     "Xiaoxin Pad Pro GT (8/256)": 1794308897.9947796
   },
   "published_post_keys": [
-    "aniscoupons:32687",
-    "aniscoupons:32795",
     "ecksdeal:5860",
     "lodydeals:45441",
     "zedstoreonline:38895",
@@ -4326,11 +4327,13 @@
     "aniscoupons:34403",
     "zedstoreonline:39812",
     "aniscoupons:34404",
-    "aniscoupons:34405"
+    "aniscoupons:34405",
+    "aniscoupons:34406",
+    "bnddeals:51243"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794309088.1309376,
+  "last_run_time": 1794309459.0513651,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4361,12 +4364,12 @@
       "last_check_time": 1794308342.2040477
     },
     "aniscoupons": {
-      "last_message_id": 34405,
-      "last_check_time": 1794309090.190592
+      "last_message_id": 34406,
+      "last_check_time": 1794309454.498506
     },
     "bnddeals": {
-      "last_message_id": 51242,
-      "last_check_time": 1794303734.0942163
+      "last_message_id": 51243,
+      "last_check_time": 1794309461.117543
     }
   },
   "published_product_prices": {
@@ -19206,6 +19209,26 @@
       "price": 283.59,
       "timestamp": 1794309088.1309376,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34406": {
+      "channel_msg_id": 2227,
+      "product_id": "1005013450996845",
+      "title": "Xiaoxin Pad Pro 2025 (8/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34406,
+      "price": 212.48,
+      "timestamp": 1794309452.4510136,
+      "status": "ACTIVE"
+    },
+    "bnddeals:51243": {
+      "channel_msg_id": 2228,
+      "product_id": "COUPONS_949f01595a98",
+      "title": "أحدث كوبونات وتخفيضات AliExpress",
+      "channel": "bnddeals",
+      "source_msg_id": 51243,
+      "price": null,
+      "timestamp": 1794309459.0513651,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19214,17 +19237,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794309091.0966346,
+    "last_deal_post_time": 1794309461.1598663,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794309265.8829837,
+    "last_sweep_time": 1794309464.5557346,
     "last_sweep_times": {
-      "algeria": 1794309263.0754788,
-      "france": 1794309265.8829837
+      "algeria": 1794309461.1390247,
+      "france": 1794309464.5557346
     },
     "last_deal_post_times": {
-      "algeria": 1794309091.0966346
+      "algeria": 1794309461.1598663
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19964,7 +19987,8 @@
     "1005009766330661": "aniscoupons",
     "1005009649048598": "lodydeals",
     "1005005209277375": "lodydeals",
-    "1005010706691647": "lodydeals"
+    "1005010706691647": "lodydeals",
+    "COUPONS_949f01595a98": "bnddeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -20139,7 +20163,7 @@
     "HTC NE79 TWS Wireless Bluetooth Earphones: AI": "couponsglobal",
     "Nail Scissors Set Household High End": "couponsglobal",
     "Baseus 30W Car Charger Dual Port USB Type-C Fast": "couponsglobal",
-    "أحدث كوبونات وتخفيضات AliExpress": "lodydeals",
+    "أحدث كوبونات وتخفيضات AliExpress": "bnddeals",
     "XUNYOU-LINK 4G SIM WiFi Router 300Mbps High Speed WiFi6": "aniscoupons",
     "SMAILWOLF M3 Ergonomic Gaming Mouse Tri-Mode": "aniscoupons",
     "Xprinter H10 Handheld POS Thermal": "lodydeals",
@@ -22708,17 +22732,6 @@
       ],
       "channel_msg_id": 9999,
       "channel": "@DzAliexpress0",
-      "timestamp": 1792162473.396861
-    },
-    {
-      "promo": "Test Event 2026",
-      "hash": "d9b8b196",
-      "codes": [
-        "TEST04",
-        "TEST06"
-      ],
-      "channel_msg_id": 9999,
-      "channel": "@DzAliexpress0",
       "timestamp": 1792162567.0560858
     },
     {
@@ -23245,6 +23258,16 @@
       "channel_msg_id": 9999,
       "channel": "@DzAliexpress0",
       "timestamp": 1793966540.4530497
+    },
+    {
+      "promo": "11.11 Global Shopping Festival Main Sale",
+      "hash": "949f0159",
+      "codes": [
+        "OTD1120"
+      ],
+      "channel_msg_id": 2228,
+      "channel": "@DzAliexpress0",
+      "timestamp": 1794309459.0725908
     }
   ],
   "last_pre_11_11_advisory_time": 1794277956.9993703,
