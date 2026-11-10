@@ -1168,7 +1168,7 @@
     "1005011820893973": 1793540051.7895243,
     "1005009073904302": 1794159496.3891714,
     "1005009916208760": 1793448612.7938895,
-    "1005010033441204": 1793543583.5978532,
+    "1005010033441204": 1794303729.6185703,
     "1005008356663932": 1793707052.9762022,
     "1005010074161953": 1793543659.5887568,
     "1005010498953493": 1793448734.886029,
@@ -2876,7 +2876,7 @@
     "Soundcore by Anker Life Q30 Hybrid Active Noise Cancelling Headphones": 1793448587.6507976,
     "بروجكتور Magcubic HY300 max – أوتو فوكس، Android 14، إضاءة 400 ANSI": 1793448612.7938895,
     "MAONO PD100X Dynamic Microphone": 1794234942.1863568,
-    "Soundcore by Anker P20i": 1793448624.0516217,
+    "Soundcore by Anker P20i": 1794303729.6185703,
     "CUSU Memory DDR5  32GB(16GBX2) 5600MHz": 1793448632.7055113,
     "OPPO FIND X9 Pro": 1793448641.953655,
     "OPPO A7 Pro Max CN": 1793448660.3359752,
@@ -3321,7 +3321,6 @@
     "Anker Q20i Hybrid Active": 1794303359.8230114
   },
   "published_post_keys": [
-    "test_channel:1793541955",
     "aniscoupons:32694",
     "bnddeals:50860",
     "lodydeals:45948",
@@ -4320,11 +4319,12 @@
     "lodydeals:46318",
     "aniscoupons:34388",
     "aniscoupons:34389",
-    "aniscoupons:34390"
+    "aniscoupons:34390",
+    "aniscoupons:34391"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794303364.4723535,
+  "last_run_time": 1794303729.6185703,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4355,12 +4355,12 @@
       "last_check_time": 1794302411.7350125
     },
     "aniscoupons": {
-      "last_message_id": 34390,
-      "last_check_time": 1794303366.5351958
+      "last_message_id": 34391,
+      "last_check_time": 1794303731.8147478
     },
     "bnddeals": {
-      "last_message_id": 51241,
-      "last_check_time": 1794259095.7446
+      "last_message_id": 51242,
+      "last_check_time": 1794303734.0942163
     }
   },
   "published_product_prices": {
@@ -19040,6 +19040,16 @@
       "price": 22.47,
       "timestamp": 1794303364.4723535,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34391": {
+      "channel_msg_id": 2211,
+      "product_id": "1005010033441204",
+      "title": "Soundcore by Anker P20i",
+      "channel": "aniscoupons",
+      "source_msg_id": 34391,
+      "price": 14.6,
+      "timestamp": 1794303729.6185703,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19048,17 +19058,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794303367.3189063,
+    "last_deal_post_time": 1794303734.1361408,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794303550.942133,
+    "last_sweep_time": 1794303737.49108,
     "last_sweep_times": {
-      "algeria": 1794303547.5605288,
-      "france": 1794303550.942133
+      "algeria": 1794303734.1154492,
+      "france": 1794303737.49108
     },
     "last_deal_post_times": {
-      "algeria": 1794303367.3189063
+      "algeria": 1794303734.1361408
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19514,7 +19524,7 @@
     "1005011820893973": "megaphonna",
     "1005009073904302": "zedstoreonline",
     "1005009916208760": "zedstoreonline",
-    "1005010033441204": "lodydeals",
+    "1005010033441204": "aniscoupons",
     "1005008356663932": "lodydeals",
     "1005010074161953": "lodydeals",
     "1005010498953493": "bnddeals",
@@ -21525,7 +21535,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8434",
     "bnddeals:51007",
     "aniscoupons:32995",
     "zedstoreonline:38950",
@@ -22524,7 +22533,8 @@
     "lodydeals:46316",
     "zedstoreonline:39807",
     "lodydeals:46319",
-    "aniscoupons:34387"
+    "aniscoupons:34387",
+    "bnddeals:51242"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
