@@ -827,7 +827,7 @@
     "1005010178295650": 1793743848.9735239,
     "1005006861002512": 1791151259.5667012,
     "1005012285327063": 1793966782.6269238,
-    "1005006581583862": 1793966668.5598733,
+    "1005006581583862": 1794313321.761044,
     "1005012816171978": 1792157876.0860639,
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791638734.5386465,
@@ -3210,7 +3210,7 @@
     "Magcubic HY300 Pro Projector": 1793908994.588809,
     "CUSU SSD SATA3": 1793913777.3174822,
     "Haylou Solar NEO 2 Amoled": 1793966664.0552397,
-    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones": 1793966668.5598733,
+    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones": 1794313321.761044,
     "HAYLOU Solar Ultra GPS": 1793966681.3536706,
     "NOTHING Watch 3 Pro": 1793966696.631638,
     "مشترك كهربائي ORICO PD25W – محطة شحن مكتبية تضم منفذي Type-C ومنفذي USB-A ومقبسين AC لشحن الأجهزة وت": 1793966711.2525856,
@@ -3352,7 +3352,6 @@
     "CMF Buds 2a ANC -42dB  السعر: 11.7": 1794312964.1163073
   },
   "published_post_keys": [
-    "lodydeals:45860",
     "test_channel:1793541104",
     "couponsglobal:48806",
     "bnddeals:50797",
@@ -4351,11 +4350,12 @@
     "zedstoreonline:39819",
     "zedstoreonline:39820",
     "aniscoupons:34417",
-    "bnddeals:51244"
+    "bnddeals:51244",
+    "zedstoreonline:39821"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794312964.1163073,
+  "last_run_time": 1794313321.761044,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4382,12 +4382,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39820,
-      "last_check_time": 1794312955.2446082
+      "last_message_id": 39821,
+      "last_check_time": 1794313323.821116
     },
     "aniscoupons": {
-      "last_message_id": 34417,
-      "last_check_time": 1794312960.7799878
+      "last_message_id": 34418,
+      "last_check_time": 1794313325.7183511
     },
     "bnddeals": {
       "last_message_id": 51244,
@@ -19385,6 +19385,16 @@
       "price": 11.7,
       "timestamp": 1794312964.1163073,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39821": {
+      "channel_msg_id": 2243,
+      "product_id": "1005006581583862",
+      "title": "HAYLOU S30 Wireless Bluetooth 5.4 Headphones",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39821,
+      "price": 18.4,
+      "timestamp": 1794313321.761044,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19393,17 +19403,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794312966.22998,
+    "last_deal_post_time": 1794313326.312735,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794313141.2988431,
+    "last_sweep_time": 1794313329.3274734,
     "last_sweep_times": {
-      "algeria": 1794313137.5509136,
-      "france": 1794313141.2988431
+      "algeria": 1794313326.2857192,
+      "france": 1794313329.3274734
     },
     "last_deal_post_times": {
-      "algeria": 1794312966.22998
+      "algeria": 1794313326.312735
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -21885,7 +21895,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:32854",
     "zedstoreonline:38797",
     "zedstoreonline:38642",
     "aniscoupons:33446",
@@ -22884,7 +22893,8 @@
     "zedstoreonline:39815",
     "zedstoreonline:39816",
     "zedstoreonline:39818",
-    "aniscoupons:34416"
+    "aniscoupons:34416",
+    "aniscoupons:34418"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
