@@ -1303,7 +1303,7 @@
     "1005007010692093": 1793601389.0047116,
     "1005006994466968": 1793601744.1664062,
     "1005011927267564": 1793728844.5794795,
-    "1005008291023017": 1794258732.6519542,
+    "1005008291023017": 1794298882.30035,
     "1005012947477238": 1793612016.5356846,
     "1005010121513376": 1794214589.905976,
     "1005009064526142": 1793613380.753295,
@@ -3224,7 +3224,7 @@
     "AULA MINI60 HE PRO": 1793987278.5140982,
     "Maono Wave T5 Wireless Mic": 1793987285.4130383,
     "SAMSUNG DDR3 8GB 1600v": 1793987289.8200357,
-    "Realme 15 Pro (12/256GB)": 1794258732.6519542,
+    "Realme 15 Pro (12/256GB)": 1794298882.30035,
     "SOUNDPEATS C30 ANC Wireless Earphones": 1793994623.1444166,
     "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899,
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1794147198.6954062,
@@ -3317,7 +3317,6 @@
     "Portable Hair Clipper": 1794263885.7408762
   },
   "published_post_keys": [
-    "lodydeals:45876",
     "aniscoupons:33312",
     "couponsglobal:48767",
     "aniscoupons:33112",
@@ -4316,11 +4315,12 @@
     "aniscoupons:34372",
     "aniscoupons:34373",
     "zedstoreonline:39801",
-    "aniscoupons:34374"
+    "aniscoupons:34374",
+    "aniscoupons:34375"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794265909.0829787,
+  "last_run_time": 1794298882.30035,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4347,12 +4347,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39802,
-      "last_check_time": 1794266277.8667374
+      "last_message_id": 39803,
+      "last_check_time": 1794298878.7312198
     },
     "aniscoupons": {
-      "last_message_id": 34374,
-      "last_check_time": 1794265911.1665626
+      "last_message_id": 34375,
+      "last_check_time": 1794298884.346253
     },
     "bnddeals": {
       "last_message_id": 51241,
@@ -18836,6 +18836,16 @@
       "price": 192.7,
       "timestamp": 1794265909.0829787,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34375": {
+      "channel_msg_id": 2191,
+      "product_id": "1005008291023017",
+      "title": "Realme 15 Pro (12/256GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34375,
+      "price": 285.9,
+      "timestamp": 1794298882.30035,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18844,17 +18854,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794265911.9685104,
+    "last_deal_post_time": 1794298885.1148374,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794298691.3275785,
+    "last_sweep_time": 1794298887.9024146,
     "last_sweep_times": {
-      "algeria": 1794298688.3845935,
-      "france": 1794298691.3275785
+      "algeria": 1794298885.0942776,
+      "france": 1794298887.9024146
     },
     "last_deal_post_times": {
-      "algeria": 1794265911.9685104
+      "algeria": 1794298885.1148374
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -21319,7 +21329,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33106",
     "megaphonna:8563",
     "pcgamingpart:8013",
     "megaphonna:8605",
@@ -22318,7 +22327,8 @@
     "lodydeals:46304",
     "lodydeals:46307",
     "zedstoreonline:39800",
-    "zedstoreonline:39802"
+    "zedstoreonline:39802",
+    "zedstoreonline:39803"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
