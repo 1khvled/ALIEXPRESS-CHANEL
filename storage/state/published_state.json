@@ -967,7 +967,7 @@
     "1005010812635861": 1792160246.020243,
     "1005008500550817": 1792025664.1703467,
     "1005009834132291": 1793542602.1938312,
-    "1005008077568655": 1793571550.5645735,
+    "1005008077568655": 1794306963.5533123,
     "1005009774318553": 1793543777.6383033,
     "1005012585389764": 1792061322.5579543,
     "1005011997237872": 1793543770.1912897,
@@ -2389,7 +2389,8 @@
     "Portable Hair Clipper",
     "Inphic PG1 RGB Wired Gaming Mouse",
     "Anker Q20i Hybrid Active",
-    "CUSU CV3500Q 2TB M.2"
+    "CUSU CV3500Q 2TB M.2",
+    "MACHENIKE G5Pro Max SE With Charging Dock"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3320,10 +3321,10 @@
     "Portable Hair Clipper": 1794263885.7408762,
     "Inphic PG1 RGB Wired Gaming Mouse": 1794302806.3764513,
     "Anker Q20i Hybrid Active": 1794303359.8230114,
-    "CUSU CV3500Q 2TB M.2": 1794305012.9961731
+    "CUSU CV3500Q 2TB M.2": 1794305012.9961731,
+    "MACHENIKE G5Pro Max SE With Charging Dock": 1794306963.5533123
   },
   "published_post_keys": [
-    "lodydeals:45424",
     "ecksdeal:5950",
     "ecksdeal:5969",
     "ecksdeal:5995",
@@ -4322,11 +4323,12 @@
     "aniscoupons:34396",
     "aniscoupons:34399",
     "aniscoupons:34400",
-    "aniscoupons:34401"
+    "aniscoupons:34401",
+    "aniscoupons:34402"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794306871.9339762,
+  "last_run_time": 1794306963.5533123,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4357,8 +4359,8 @@
       "last_check_time": 1794304466.971382
     },
     "aniscoupons": {
-      "last_message_id": 34401,
-      "last_check_time": 1794306873.9839706
+      "last_message_id": 34402,
+      "last_check_time": 1794306965.6006682
     },
     "bnddeals": {
       "last_message_id": 51242,
@@ -4578,7 +4580,7 @@
     "1005012933967378": 21.7,
     "1005010812635861": 92.0,
     "1005008500550817": 23.6,
-    "1005008077568655": 38.39,
+    "1005008077568655": 41.77,
     "1005012585389764": 153.9,
     "1005011997237872": 92.15,
     "1005011908654312": 122.6,
@@ -19142,6 +19144,16 @@
       "price": 19.5,
       "timestamp": 1794306871.9339762,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34402": {
+      "channel_msg_id": 2221,
+      "product_id": "1005008077568655",
+      "title": "MACHENIKE G5Pro Max SE With Charging Dock",
+      "channel": "aniscoupons",
+      "source_msg_id": 34402,
+      "price": 41.77,
+      "timestamp": 1794306963.5533123,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19150,17 +19162,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794306874.853367,
+    "last_deal_post_time": 1794306966.498304,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794306878.5184166,
+    "last_sweep_time": 1794306969.8157406,
     "last_sweep_times": {
-      "algeria": 1794306874.8317535,
-      "france": 1794306878.5184166
+      "algeria": 1794306966.477438,
+      "france": 1794306969.8157406
     },
     "last_deal_post_times": {
-      "algeria": 1794306874.853367
+      "algeria": 1794306966.498304
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19412,7 +19424,7 @@
     "1005012933967378": "lodydeals",
     "1005010812635861": "zedstoreonline",
     "1005008500550817": "bnddeals",
-    "1005008077568655": "lodydeals",
+    "1005008077568655": "aniscoupons",
     "1005012585389764": "aniscoupons",
     "1005011997237872": "lodydeals",
     "1005011908654312": "aniscoupons",
@@ -20833,7 +20845,8 @@
     "Portable Hair Clipper": "lodydeals",
     "Inphic PG1 RGB Wired Gaming Mouse": "aniscoupons",
     "Anker Q20i Hybrid Active": "aniscoupons",
-    "CUSU CV3500Q 2TB M.2": "lodydeals"
+    "CUSU CV3500Q 2TB M.2": "lodydeals",
+    "MACHENIKE G5Pro Max SE With Charging Dock": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
