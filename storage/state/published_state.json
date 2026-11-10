@@ -1249,7 +1249,7 @@
     "1005012790288780": 1793656271.0286891,
     "1005012345939726": 1793656202.4239671,
     "1005010722422210": 1793543733.1622994,
-    "1005012582348584": 1794332259.758732,
+    "1005012582348584": 1794334097.945569,
     "1005012529582418": 1793543800.9051948,
     "1005008605565544": 1793543812.9442995,
     "1005009508910625": 1793543817.982839,
@@ -2419,7 +2419,8 @@
     "KOOTION SATA3 SSD 128GB",
     "Inphic YuanChuang Cyber Gaming Mouse",
     "SIX PCIe 4.0 SSD (1TB) NVMe M2",
-    "Kootion SSD SATA"
+    "Kootion SSD SATA",
+    "KOOTION SATA SSD 128GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3365,10 +3366,10 @@
     "KOOTION SATA3 SSD 128GB": 1794315897.4341226,
     "Inphic YuanChuang Cyber Gaming Mouse": 1794320674.833981,
     "SIX PCIe 4.0 SSD (1TB) NVMe M2": 1794331533.1223195,
-    "Kootion SSD SATA": 1794332259.758732
+    "Kootion SSD SATA": 1794332259.758732,
+    "KOOTION SATA SSD 128GB": 1794334097.945569
   },
   "published_post_keys": [
-    "aniscoupons:32985",
     "test_channel:1793229908",
     "test_channel:1792073549",
     "lodydeals:45444",
@@ -4367,19 +4368,20 @@
     "bnddeals:51265",
     "aniscoupons:34443",
     "aniscoupons:34444",
-    "lodydeals:46323"
+    "lodydeals:46323",
+    "lodydeals:46325"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794333726.3418753,
+  "last_run_time": 1794334097.945569,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6053,
       "last_check_time": 1794328944.6992753
     },
     "lodydeals": {
-      "last_message_id": 46324,
-      "last_check_time": 1794333906.0199358
+      "last_message_id": 46325,
+      "last_check_time": 1794334099.9941998
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4832,7 +4834,7 @@
     "1005012790288780": 26.95,
     "1005012345939726": 18.62,
     "1005010722422210": 398.07,
-    "1005012582348584": 8.47,
+    "1005012582348584": 8.3,
     "1005012529582418": 12.6,
     "1005008605565544": 58.59,
     "1005009508910625": 46.26,
@@ -19543,6 +19545,16 @@
       "price": 10.71,
       "timestamp": 1794333726.3418753,
       "status": "ACTIVE"
+    },
+    "lodydeals:46325": {
+      "channel_msg_id": 2258,
+      "product_id": "1005012582348584",
+      "title": "KOOTION SATA SSD 128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46325,
+      "price": 8.3,
+      "timestamp": 1794334097.945569,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19551,17 +19563,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794333731.602737,
+    "last_deal_post_time": 1794334104.1828675,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794333913.0085013,
+    "last_sweep_time": 1794334107.4234688,
     "last_sweep_times": {
-      "algeria": 1794333910.0481682,
-      "france": 1794333913.0085013
+      "algeria": 1794334104.1614447,
+      "france": 1794334107.4234688
     },
     "last_deal_post_times": {
-      "algeria": 1794333731.602737
+      "algeria": 1794334104.1828675
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20092,7 +20104,7 @@
     "1005012790288780": "lodydeals",
     "1005012345939726": "lodydeals",
     "1005010722422210": "lodydeals",
-    "1005012582348584": "aniscoupons",
+    "1005012582348584": "lodydeals",
     "1005012529582418": "ecksdeal",
     "1005008605565544": "ecksdeal",
     "1005009508910625": "ecksdeal",
@@ -21256,7 +21268,8 @@
     "KOOTION SATA3 SSD 128GB": "bnddeals",
     "Inphic YuanChuang Cyber Gaming Mouse": "zedstoreonline",
     "SIX PCIe 4.0 SSD (1TB) NVMe M2": "bnddeals",
-    "Kootion SSD SATA": "aniscoupons"
+    "Kootion SSD SATA": "aniscoupons",
+    "KOOTION SATA SSD 128GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
