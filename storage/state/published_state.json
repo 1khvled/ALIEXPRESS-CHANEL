@@ -950,7 +950,7 @@
     "1005011557896041": 1794212756.8201253,
     "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
-    "1005007916078341": 1794299263.989674,
+    "1005007916078341": 1794340712.047587,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
     "1005013336240375": 1791968149.7952893,
@@ -2601,7 +2601,7 @@
     "ATTACK SHARK L80PRO Ultralight": 1791107750.295487,
     "AMD Ryzen 7 5700X": 1793898345.0223713,
     "هاتف ينسيك في شارجور🤣🤣": 1791109857.5190113,
-    "CMF Smart Watch 3 pro AMOLED": 1794299263.989674,
+    "CMF Smart Watch 3 pro AMOLED": 1794340712.047587,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
     "OPPO A6 Pro 8/256GB": 1794340346.0747576,
@@ -3370,7 +3370,6 @@
     "KOOTION SATA SSD 128GB": 1794334097.945569
   },
   "published_post_keys": [
-    "aniscoupons:32771",
     "couponsglobal:48777",
     "ecksdeal:5856",
     "test_channel:1792184523",
@@ -4369,11 +4368,12 @@
     "aniscoupons:34450",
     "aniscoupons:34451",
     "aniscoupons:34452",
-    "aniscoupons:34453"
+    "aniscoupons:34453",
+    "aniscoupons:34454"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794340346.0747576,
+  "last_run_time": 1794340712.047587,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6053,
@@ -4404,8 +4404,8 @@
       "last_check_time": 1794339603.5476394
     },
     "aniscoupons": {
-      "last_message_id": 34453,
-      "last_check_time": 1794340348.1380749
+      "last_message_id": 34454,
+      "last_check_time": 1794340714.1072686
     },
     "bnddeals": {
       "last_message_id": 51265,
@@ -19615,6 +19615,16 @@
       "price": 192.7,
       "timestamp": 1794340346.0747576,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34454": {
+      "channel_msg_id": 2265,
+      "product_id": "1005007916078341",
+      "title": "CMF Smart Watch 3 pro AMOLED",
+      "channel": "aniscoupons",
+      "source_msg_id": 34454,
+      "price": 48.9,
+      "timestamp": 1794340712.047587,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19623,17 +19633,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794340348.7280428,
+    "last_deal_post_time": 1794340714.850681,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794340522.1300042,
+    "last_sweep_time": 1794340717.6354122,
     "last_sweep_times": {
-      "algeria": 1794340519.1777272,
-      "france": 1794340522.1300042
+      "algeria": 1794340714.823931,
+      "france": 1794340717.6354122
     },
     "last_deal_post_times": {
-      "algeria": 1794340348.7280428
+      "algeria": 1794340714.850681
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
