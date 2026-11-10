@@ -1375,7 +1375,7 @@
     "1005008429979494": 1793741666.9686077,
     "1005004795387201": 1793742770.1634803,
     "1005010702983351": 1794305193.7156484,
-    "1005008366962319": 1794134534.5760646,
+    "1005008366962319": 1794346230.0535362,
     "1005005058037424": 1793779907.9964287,
     "1005012946895000": 1793793714.105913,
     "1005012150344482": 1794314418.8957746,
@@ -2424,7 +2424,8 @@
     "Kootion SSD SATA",
     "KOOTION SATA SSD 128GB",
     "Kingston DataTraveler 128GB",
-    "CUSU CV3500  M.2 NVMe SSD (1tb)"
+    "CUSU CV3500  M.2 NVMe SSD (1tb)",
+    "Kootion X15 M.2 NVMe 256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3373,10 +3374,10 @@
     "Kootion SSD SATA": 1794332259.758732,
     "KOOTION SATA SSD 128GB": 1794334097.945569,
     "Kingston DataTraveler 128GB": 1794344038.7678037,
-    "CUSU CV3500  M.2 NVMe SSD (1tb)": 1794344399.896034
+    "CUSU CV3500  M.2 NVMe SSD (1tb)": 1794344399.896034,
+    "Kootion X15 M.2 NVMe 256GB": 1794346230.0535362
   },
   "published_post_keys": [
-    "bnddeals:50938",
     "ecksdeal:5949",
     "lodydeals:45848",
     "zedstoreonline:38624",
@@ -4375,19 +4376,20 @@
     "aniscoupons:34454",
     "aniscoupons:34460",
     "aniscoupons:34462",
-    "aniscoupons:34465"
+    "aniscoupons:34465",
+    "lodydeals:46328"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794346051.8080108,
+  "last_run_time": 1794346230.0535362,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6053,
       "last_check_time": 1794328944.6992753
     },
     "lodydeals": {
-      "last_message_id": 46327,
-      "last_check_time": 1794342542.2137096
+      "last_message_id": 46328,
+      "last_check_time": 1794346232.117224
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4952,7 +4954,7 @@
     "1005008429979494": 72.7,
     "1005004795387201": 115.5,
     "1005010702983351": 67.6,
-    "1005008366962319": 30.8,
+    "1005008366962319": 30.03,
     "1005005058037424": 34.67,
     "1005012946895000": 142.59,
     "1005006972551834": 31.07,
@@ -19662,6 +19664,16 @@
       "price": 228.3,
       "timestamp": 1794346051.8080108,
       "status": "ACTIVE"
+    },
+    "lodydeals:46328": {
+      "channel_msg_id": 2269,
+      "product_id": "1005008366962319",
+      "title": "Kootion X15 M.2 NVMe 256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46328,
+      "price": 30.03,
+      "timestamp": 1794346230.0535362,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19670,17 +19682,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794346054.8413138,
+    "last_deal_post_time": 1794346236.7576315,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794346059.37405,
+    "last_sweep_time": 1794346240.3059196,
     "last_sweep_times": {
-      "algeria": 1794346054.813656,
-      "france": 1794346059.37405
+      "algeria": 1794346236.7292473,
+      "france": 1794346240.3059196
     },
     "last_deal_post_times": {
-      "algeria": 1794346054.8413138
+      "algeria": 1794346236.7576315
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20324,7 +20336,7 @@
     "1005008429979494": "lodydeals",
     "1005004795387201": "lodydeals",
     "1005010702983351": "aniscoupons",
-    "1005008366962319": "zedstoreonline",
+    "1005008366962319": "lodydeals",
     "1005005058037424": "lodydeals",
     "1005012946895000": "lodydeals",
     "1005006972551834": "lodydeals",
@@ -21379,7 +21391,8 @@
     "Kootion SSD SATA": "aniscoupons",
     "KOOTION SATA SSD 128GB": "lodydeals",
     "Kingston DataTraveler 128GB": "aniscoupons",
-    "CUSU CV3500  M.2 NVMe SSD (1tb)": "aniscoupons"
+    "CUSU CV3500  M.2 NVMe SSD (1tb)": "aniscoupons",
+    "Kootion X15 M.2 NVMe 256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
