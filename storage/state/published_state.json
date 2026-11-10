@@ -736,7 +736,7 @@
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
     "1005007805638431": 1793966875.5755405,
-    "1005009054706827": 1793571187.7518308,
+    "1005009054706827": 1794307249.1472638,
     "1005007961216287": 1791942616.1564767,
     "1005009627597591": 1793542398.3843465,
     "9998887952": 1790887952.6119926,
@@ -1427,7 +1427,7 @@
     "1005010155263623": 1794129971.1690388,
     "1005011572208218": 1794304276.1692173,
     "1005012374550298": 1794164691.7591228,
-    "1005009851407234": 1794130701.0727847,
+    "1005009851407234": 1794307242.7687027,
     "1005009738356108": 1794164684.9082866,
     "1005012953027259": 1794133977.9005425,
     "1005012048332402": 1794136369.073103,
@@ -2737,7 +2737,7 @@
     "SAMZHE Support Aluminum Graphics Card": 1793123749.6836987,
     "Oppo Find X9 Pro New 7500mAh 80W SuperVOOC 50W Wireless Dimensity9500": 1793138738.0845888,
     "كابل Ethernet Flat Cat 6 Cable 2meter  السعر💲 :": 1793227797.933171,
-    "AMD Ryzen 5 9600X": 1794130701.0727847,
+    "AMD Ryzen 5 9600X": 1794307242.7687027,
     "AMD Ryzen 7 8700F": 1793467108.5532427,
     "OnePlus ACE 6": 1793380394.5736995,
     "أضف الآن في السلة الآن العرض يعمل يوم 1 نوفمبر 🔥": 1793270716.9132679,
@@ -2852,7 +2852,7 @@
     "Amd Ryzen R5 9600X Cpu 3.9 Ghz 6-Core 12-Thread 38Mb Am5 New!": 1793555097.6969874,
     "Maono PD200X XLR/USB Dynamic": 1793600283.7397804,
     "MAONO PD100X USB/XLR Dynamic": 1793656150.4800947,
-    "Machenike G3 V2 PC Gaming Controller": 1793384273.7830687,
+    "Machenike G3 V2 PC Gaming Controller": 1794307249.1472638,
     "⭐️ 🎟️": 1793384286.409923,
     "Vivo X200s (12/255GB)": 1793384294.3328166,
     "Netac 7400MB/s SSD NVMe 1TB": 1793399456.9766166,
@@ -3325,8 +3325,6 @@
     "MACHENIKE G5Pro Max SE With Charging Dock": 1794306963.5533123
   },
   "published_post_keys": [
-    "ecksdeal:5950",
-    "ecksdeal:5969",
     "ecksdeal:5995",
     "pcgamingpart:7946",
     "aniscoupons:33066",
@@ -4324,11 +4322,13 @@
     "aniscoupons:34399",
     "aniscoupons:34400",
     "aniscoupons:34401",
-    "aniscoupons:34402"
+    "aniscoupons:34402",
+    "zedstoreonline:39810",
+    "aniscoupons:34403"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794306963.5533123,
+  "last_run_time": 1794307249.1472638,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4355,12 +4355,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39808,
-      "last_check_time": 1794304466.971382
+      "last_message_id": 39810,
+      "last_check_time": 1794307244.8127437
     },
     "aniscoupons": {
-      "last_message_id": 34402,
-      "last_check_time": 1794306965.6006682
+      "last_message_id": 34403,
+      "last_check_time": 1794307251.2901773
     },
     "bnddeals": {
       "last_message_id": 51242,
@@ -4372,7 +4372,7 @@
     "1005010219205081": 57.2,
     "1005007805638431": 21.8,
     "1005007027334636": 13.49,
-    "1005009054706827": 20.14,
+    "1005009054706827": 23.1,
     "1005007961216287": 20.26,
     "1005008233932899": 294.9,
     "1005009627597591": 285.92,
@@ -19154,6 +19154,26 @@
       "price": 41.77,
       "timestamp": 1794306963.5533123,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39810": {
+      "channel_msg_id": 2222,
+      "product_id": "1005009851407234",
+      "title": "AMD Ryzen 5 9600X",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39810,
+      "price": 149.4,
+      "timestamp": 1794307242.7687027,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34403": {
+      "channel_msg_id": 2223,
+      "product_id": "1005009054706827",
+      "title": "Machenike G3 V2 PC Gaming Controller",
+      "channel": "aniscoupons",
+      "source_msg_id": 34403,
+      "price": 23.1,
+      "timestamp": 1794307249.1472638,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19162,17 +19182,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794306966.498304,
+    "last_deal_post_time": 1794307252.2462015,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794307050.1323204,
+    "last_sweep_time": 1794307255.8206444,
     "last_sweep_times": {
-      "algeria": 1794307046.9622746,
-      "france": 1794307050.1323204
+      "algeria": 1794307252.2252011,
+      "france": 1794307255.8206444
     },
     "last_deal_post_times": {
-      "algeria": 1794306966.498304
+      "algeria": 1794307252.2462015
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19253,7 +19273,7 @@
     "1005009774318553": "lodydeals",
     "1005012574108028": "lodydeals",
     "1005008599340405": "bnddeals",
-    "1005009054706827": "lodydeals",
+    "1005009054706827": "aniscoupons",
     "1005007572968437": "lodydeals",
     "1005009120957437": "lodydeals",
     "1005005652871847": "aniscoupons",
@@ -21641,7 +21661,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33318",
     "zedstoreonline:39035",
     "ecksdeal:5965",
     "lodydeals:45803",
@@ -22640,7 +22659,8 @@
     "zedstoreonline:39808",
     "aniscoupons:34397",
     "aniscoupons:34398",
-    "lodydeals:46321"
+    "lodydeals:46321",
+    "zedstoreonline:39809"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
