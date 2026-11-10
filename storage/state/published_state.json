@@ -1147,7 +1147,7 @@
     "1005011961308530": 1793380460.5377874,
     "1005012994490034": 1793441317.3934674,
     "1005010146493558": 1793448836.300828,
-    "1005010575865619": 1794245233.887035,
+    "1005010575865619": 1794302033.8246877,
     "1005011778197787": 1793656192.605134,
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
@@ -2951,7 +2951,7 @@
     "GIGABYTE B650M GAMING WIFI": 1793542466.6850684,
     "Netac NV7000-T M.2 Gen4 1TB": 1793899614.3022053,
     "UGREEN HiTune S3 Earbuds": 1793542479.8362749,
-    "OnePlus Ace 6T 5G 12/256GB": 1794245233.887035,
+    "OnePlus Ace 6T 5G 12/256GB": 1794302033.8246877,
     "Attack Shark X11 PAW3311": 1793908984.385319,
     "معالج Ryzen 7 9800X3D": 1793542512.9419136,
     "معالج Ryzen 5 7600X": 1793542531.6312253,
@@ -3317,7 +3317,6 @@
     "Portable Hair Clipper": 1794263885.7408762
   },
   "published_post_keys": [
-    "zedstoreonline:38924",
     "aniscoupons:32961",
     "pcgamingpart:7936",
     "aniscoupons:33282",
@@ -4316,19 +4315,20 @@
     "aniscoupons:34382",
     "aniscoupons:34383",
     "aniscoupons:34384",
-    "aniscoupons:34385"
+    "aniscoupons:34385",
+    "lodydeals:46313"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794301837.774286,
+  "last_run_time": 1794302033.8246877,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
       "last_check_time": 1794252785.3081255
     },
     "lodydeals": {
-      "last_message_id": 46311,
-      "last_check_time": 1794297391.7665718
+      "last_message_id": 46313,
+      "last_check_time": 1794302035.8837092
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -18946,6 +18946,16 @@
       "price": 136.7,
       "timestamp": 1794301837.774286,
       "status": "ACTIVE"
+    },
+    "lodydeals:46313": {
+      "channel_msg_id": 2202,
+      "product_id": "1005010575865619",
+      "title": "OnePlus Ace 6T 5G 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46313,
+      "price": 366.51,
+      "timestamp": 1794302033.8246877,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18954,17 +18964,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794301840.64149,
+    "last_deal_post_time": 1794302038.3307617,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794301843.506095,
+    "last_sweep_time": 1794302041.6207097,
     "last_sweep_times": {
-      "algeria": 1794301840.6152139,
-      "france": 1794301843.506095
+      "algeria": 1794302038.3041859,
+      "france": 1794302041.6207097
     },
     "last_deal_post_times": {
-      "algeria": 1794301840.64149
+      "algeria": 1794302038.3307617
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -21429,7 +21439,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33197",
     "zedstoreonline:39028",
     "zedstoreonline:38956",
     "megaphonna:8748",
@@ -22428,7 +22437,8 @@
     "zedstoreonline:39803",
     "aniscoupons:34377",
     "zedstoreonline:39805",
-    "zedstoreonline:39806"
+    "zedstoreonline:39806",
+    "lodydeals:46312"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
