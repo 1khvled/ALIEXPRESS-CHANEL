@@ -1389,7 +1389,7 @@
     "9998887107": 1793967108.0014687,
     "9998887678": 1793967678.8184059,
     "9998887703": 1793967703.2348685,
-    "1005008708333999": 1794250564.730497,
+    "1005008708333999": 1794301837.774286,
     "1005012254132930": 1793970449.9003735,
     "1005013028124905": 1793971934.3600886,
     "1005012691642623": 1794074230.5173922,
@@ -3232,7 +3232,7 @@
     "Zeblaze GTS 3 Pro AMOLED": 1794091985.0146983,
     "شاحن سيارة ORICO بقوة 45W": 1794002515.731258,
     "Hollyland LARK M2 DUO 2-Person": 1794211663.3506916,
-    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794250564.730497,
+    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794301837.774286,
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627,
     "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794134168.8193681,
     "Essager 30W Car Charger": 1794046667.9804564,
@@ -3317,7 +3317,6 @@
     "Portable Hair Clipper": 1794263885.7408762
   },
   "published_post_keys": [
-    "lodydeals:45929",
     "zedstoreonline:38924",
     "aniscoupons:32961",
     "pcgamingpart:7936",
@@ -4316,11 +4315,12 @@
     "aniscoupons:34381",
     "aniscoupons:34382",
     "aniscoupons:34383",
-    "aniscoupons:34384"
+    "aniscoupons:34384",
+    "aniscoupons:34385"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794301654.5672474,
+  "last_run_time": 1794301837.774286,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4351,8 +4351,8 @@
       "last_check_time": 1794300355.0053985
     },
     "aniscoupons": {
-      "last_message_id": 34384,
-      "last_check_time": 1794301656.6802602
+      "last_message_id": 34385,
+      "last_check_time": 1794301839.8317654
     },
     "bnddeals": {
       "last_message_id": 51241,
@@ -18936,6 +18936,16 @@
       "price": 241.5,
       "timestamp": 1794301654.5672474,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34385": {
+      "channel_msg_id": 2201,
+      "product_id": "1005008708333999",
+      "title": "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI",
+      "channel": "aniscoupons",
+      "source_msg_id": 34385,
+      "price": 136.7,
+      "timestamp": 1794301837.774286,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18944,17 +18954,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794301657.436703,
+    "last_deal_post_time": 1794301840.64149,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794301660.4218361,
+    "last_sweep_time": 1794301843.506095,
     "last_sweep_times": {
-      "algeria": 1794301657.4164333,
-      "france": 1794301660.4218361
+      "algeria": 1794301840.6152139,
+      "france": 1794301843.506095
     },
     "last_deal_post_times": {
-      "algeria": 1794301657.436703
+      "algeria": 1794301840.64149
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
