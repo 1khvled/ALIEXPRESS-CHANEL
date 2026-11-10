@@ -1206,7 +1206,7 @@
     "COUPONS_d131dda7a0e3": 1793478717.5768087,
     "COUPONS_d131dda7": 1793478717.5923967,
     "COUPONS_11.11 Global Shopping Festival Warm-Up": 1793478717.5923967,
-    "1005008518280704": 1794305012.9961731,
+    "1005008518280704": 1794344399.896034,
     "1005010527736444": 1793478769.6023057,
     "1005013450996845": 1794309452.4510136,
     "1005013144753309": 1794160820.0809557,
@@ -2423,7 +2423,8 @@
     "SIX PCIe 4.0 SSD (1TB) NVMe M2",
     "Kootion SSD SATA",
     "KOOTION SATA SSD 128GB",
-    "Kingston DataTraveler 128GB"
+    "Kingston DataTraveler 128GB",
+    "CUSU CV3500  M.2 NVMe SSD (1tb)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3371,10 +3372,10 @@
     "SIX PCIe 4.0 SSD (1TB) NVMe M2": 1794331533.1223195,
     "Kootion SSD SATA": 1794332259.758732,
     "KOOTION SATA SSD 128GB": 1794334097.945569,
-    "Kingston DataTraveler 128GB": 1794344038.7678037
+    "Kingston DataTraveler 128GB": 1794344038.7678037,
+    "CUSU CV3500  M.2 NVMe SSD (1tb)": 1794344399.896034
   },
   "published_post_keys": [
-    "ecksdeal:5856",
     "test_channel:1792184523",
     "bnddeals:50938",
     "ecksdeal:5949",
@@ -4373,11 +4374,12 @@
     "aniscoupons:34452",
     "aniscoupons:34453",
     "aniscoupons:34454",
-    "aniscoupons:34460"
+    "aniscoupons:34460",
+    "aniscoupons:34462"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794344038.7678037,
+  "last_run_time": 1794344399.896034,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6053,
@@ -4408,8 +4410,8 @@
       "last_check_time": 1794341261.4037135
     },
     "aniscoupons": {
-      "last_message_id": 34461,
-      "last_check_time": 1794344040.866218
+      "last_message_id": 34462,
+      "last_check_time": 1794344401.9582365
     },
     "bnddeals": {
       "last_message_id": 51265,
@@ -4797,7 +4799,7 @@
     "1005013037972159": 85.7,
     "1005013081860728": 103.98,
     "1005013045114640": 94.7,
-    "1005008518280704": 179.48,
+    "1005008518280704": 179.3,
     "1005010527736444": 298.0,
     "1005013450996845": 212.48,
     "1005012171521680": 277.26,
@@ -19640,6 +19642,16 @@
       "price": 6.55,
       "timestamp": 1794344038.7678037,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34462": {
+      "channel_msg_id": 2267,
+      "product_id": "1005008518280704",
+      "title": "CUSU CV3500  M.2 NVMe SSD (1tb)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34462,
+      "price": 179.3,
+      "timestamp": 1794344399.896034,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19648,17 +19660,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794344041.7984018,
+    "last_deal_post_time": 1794344402.5621417,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794344212.5416403,
+    "last_sweep_time": 1794344405.8652635,
     "last_sweep_times": {
-      "algeria": 1794344209.1068952,
-      "france": 1794344212.5416403
+      "algeria": 1794344402.5345552,
+      "france": 1794344405.8652635
     },
     "last_deal_post_times": {
-      "algeria": 1794344041.7984018
+      "algeria": 1794344402.5621417
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20142,7 +20154,7 @@
     "1005013081860728": "lodydeals",
     "1005013045114640": "lodydeals",
     "COUPONS_d131dda7a0e3": "lodydeals",
-    "1005008518280704": "lodydeals",
+    "1005008518280704": "aniscoupons",
     "1005010527736444": "zedstoreonline",
     "1005013450996845": "aniscoupons",
     "1005012171521680": "lodydeals",
@@ -21356,7 +21368,8 @@
     "SIX PCIe 4.0 SSD (1TB) NVMe M2": "bnddeals",
     "Kootion SSD SATA": "aniscoupons",
     "KOOTION SATA SSD 128GB": "lodydeals",
-    "Kingston DataTraveler 128GB": "aniscoupons"
+    "Kingston DataTraveler 128GB": "aniscoupons",
+    "CUSU CV3500  M.2 NVMe SSD (1tb)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
