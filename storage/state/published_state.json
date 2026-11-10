@@ -1082,7 +1082,7 @@
     "1005010172572484": 1793521744.753259,
     "1005012167596439": 1793380498.9399478,
     "1005005209037696": 1793399509.450536,
-    "1005007145755647": 1794219162.8801334,
+    "1005007145755647": 1794312958.7225254,
     "1005011559072337": 1793613486.2912338,
     "1005008430504420": 1793613346.3595238,
     "1005012483491590": 1793613986.7335317,
@@ -1234,7 +1234,7 @@
     "1005009921069024": 1793542597.6187797,
     "1005009916209766": 1794167239.3538153,
     "1005012537594921": 1793542611.8880281,
-    "1005009963377960": 1793727358.6485991,
+    "1005009963377960": 1794312953.1830955,
     "1005012790844974": 1793542621.7908955,
     "1005010354926803": 1793542626.5536122,
     "1005009621100138": 1793542634.9331498,
@@ -1353,7 +1353,7 @@
     "1005010419207841": 1793656214.2446048,
     "1005011891052345": 1793706864.9165008,
     "1005009648930854": 1793707047.5983977,
-    "1005010184029817": 1793794075.3624413,
+    "1005010184029817": 1794312964.1163073,
     "1005006302799297": 1793707108.6257114,
     "1005013372330447": 1793707119.4932482,
     "1005012305564176": 1793707135.2600253,
@@ -2407,7 +2407,9 @@
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for",
     "MAONO PD100W USB Wireless Dynamic",
     "MAONO Wave T1 Mini Pro",
-    "FIFINE M9 Wireless Lavalier Microphone"
+    "FIFINE M9 Wireless Lavalier Microphone",
+    "AULA WIN68 HE Gaming Mechanical Keyboard",
+    "CMF Buds 2a ANC -42dB  السعر: 11.7"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2772,7 +2774,7 @@
     "Oppo Find X9 12/256": 1793521744.753259,
     "Oppo Find X9s Pro 12/256": 1793278979.5236633,
     "POCO F7  12/256": 1793399509.450536,
-    "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz": 1794219162.8801334,
+    "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz": 1794312958.7225254,
     "AMD Ryzen 9 9900X": 1793555278.3251228,
     "ONEPLUS 13 (12/256)": 1793448854.438805,
     "الأكثر طلباً في فترات سابقة": 1793467365.3420117,
@@ -3345,12 +3347,11 @@
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794310928.9154878,
     "MAONO PD100W USB Wireless Dynamic": 1794311122.753493,
     "MAONO Wave T1 Mini Pro": 1794311488.3788898,
-    "FIFINE M9 Wireless Lavalier Microphone": 1794311865.7221916
+    "FIFINE M9 Wireless Lavalier Microphone": 1794311865.7221916,
+    "AULA WIN68 HE Gaming Mechanical Keyboard": 1794312953.1830955,
+    "CMF Buds 2a ANC -42dB  السعر: 11.7": 1794312964.1163073
   },
   "published_post_keys": [
-    "aniscoupons:33188",
-    "zedstoreonline:38800",
-    "ecksdeal:5905",
     "lodydeals:45860",
     "test_channel:1793541104",
     "couponsglobal:48806",
@@ -4347,11 +4348,14 @@
     "aniscoupons:34413",
     "aniscoupons:34414",
     "aniscoupons:34415",
-    "zedstoreonline:39819"
+    "zedstoreonline:39819",
+    "zedstoreonline:39820",
+    "aniscoupons:34417",
+    "bnddeals:51244"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794312591.4470382,
+  "last_run_time": 1794312964.1163073,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4378,16 +4382,16 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39819,
-      "last_check_time": 1794312593.507633
+      "last_message_id": 39820,
+      "last_check_time": 1794312955.2446082
     },
     "aniscoupons": {
-      "last_message_id": 34416,
-      "last_check_time": 1794312771.2310553
+      "last_message_id": 34417,
+      "last_check_time": 1794312960.7799878
     },
     "bnddeals": {
-      "last_message_id": 51243,
-      "last_check_time": 1794309461.117543
+      "last_message_id": 51244,
+      "last_check_time": 1794312966.1755123
     }
   },
   "published_product_prices": {
@@ -4799,7 +4803,7 @@
     "1005009921069024": 12.85,
     "1005009916209766": 27.14,
     "1005012537594921": 45.74,
-    "1005009963377960": 26.46,
+    "1005009963377960": 22.2,
     "1005012790844974": 35.86,
     "1005010354926803": 19.11,
     "1005009621100138": 35.76,
@@ -4907,7 +4911,7 @@
     "1005010419207841": 29.44,
     "1005011891052345": 50.64,
     "1005009648930854": 7.56,
-    "1005010184029817": 9.8,
+    "1005010184029817": 11.7,
     "1005006302799297": 282.23,
     "1005013372330447": 583.0,
     "1005012305564176": 60.76,
@@ -19351,6 +19355,36 @@
       "price": 15.8,
       "timestamp": 1794312591.4470382,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39820": {
+      "channel_msg_id": 2240,
+      "product_id": "1005009963377960",
+      "title": "AULA WIN68 HE Gaming Mechanical Keyboard",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39820,
+      "price": 22.2,
+      "timestamp": 1794312953.1830955,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34417": {
+      "channel_msg_id": 2241,
+      "product_id": "1005007145755647",
+      "title": "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz",
+      "channel": "aniscoupons",
+      "source_msg_id": 34417,
+      "price": 356.9,
+      "timestamp": 1794312958.7225254,
+      "status": "ACTIVE"
+    },
+    "bnddeals:51244": {
+      "channel_msg_id": 2242,
+      "product_id": "1005010184029817",
+      "title": "CMF Buds 2a ANC -42dB  السعر: 11.7",
+      "channel": "bnddeals",
+      "source_msg_id": 51244,
+      "price": 11.7,
+      "timestamp": 1794312964.1163073,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19359,17 +19393,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794312594.98542,
+    "last_deal_post_time": 1794312966.22998,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794312775.8451374,
+    "last_sweep_time": 1794312969.1707177,
     "last_sweep_times": {
-      "algeria": 1794312771.878663,
-      "france": 1794312775.8451374
+      "algeria": 1794312966.2029977,
+      "france": 1794312969.1707177
     },
     "last_deal_post_times": {
-      "algeria": 1794312594.98542
+      "algeria": 1794312966.22998
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19887,7 +19921,7 @@
     "1005009921069024": "ecksdeal",
     "1005009916209766": "aniscoupons",
     "1005012537594921": "ecksdeal",
-    "1005009963377960": "ecksdeal",
+    "1005009963377960": "zedstoreonline",
     "1005012790844974": "ecksdeal",
     "1005010354926803": "ecksdeal",
     "1005009621100138": "ecksdeal",
@@ -19996,7 +20030,7 @@
     "1005010419207841": "ecksdeal",
     "1005011891052345": "ecksdeal",
     "1005009648930854": "lodydeals",
-    "1005010184029817": "lodydeals",
+    "1005010184029817": "bnddeals",
     "1005006302799297": "lodydeals",
     "1005013372330447": "lodydeals",
     "1005012305564176": "lodydeals",
@@ -21054,7 +21088,9 @@
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": "aniscoupons",
     "MAONO PD100W USB Wireless Dynamic": "aniscoupons",
     "MAONO Wave T1 Mini Pro": "aniscoupons",
-    "FIFINE M9 Wireless Lavalier Microphone": "aniscoupons"
+    "FIFINE M9 Wireless Lavalier Microphone": "aniscoupons",
+    "AULA WIN68 HE Gaming Mechanical Keyboard": "zedstoreonline",
+    "CMF Buds 2a ANC -42dB  السعر: 11.7": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
