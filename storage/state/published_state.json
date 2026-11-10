@@ -1153,7 +1153,7 @@
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
     "1005005373032877": 1793600283.7397804,
-    "1005007869955343": 1794234942.1863568,
+    "1005007869955343": 1794310561.509585,
     "1005012644570693": 1793441338.6619778,
     "1005003949106838": 1794234949.9761558,
     "1005012436082838": 1793733101.535615,
@@ -2882,7 +2882,7 @@
     "OnePlus Turbo 6X Pro 8/128": 1793441350.359979,
     "Soundcore by Anker Life Q30 Hybrid Active Noise Cancelling Headphones": 1793448587.6507976,
     "بروجكتور Magcubic HY300 max – أوتو فوكس، Android 14، إضاءة 400 ANSI": 1793448612.7938895,
-    "MAONO PD100X Dynamic Microphone": 1794234942.1863568,
+    "MAONO PD100X Dynamic Microphone": 1794310561.509585,
     "Soundcore by Anker P20i": 1794303729.6185703,
     "CUSU Memory DDR5  32GB(16GBX2) 5600MHz": 1793448632.7055113,
     "OPPO FIND X9 Pro": 1793448641.953655,
@@ -3332,7 +3332,6 @@
     "Attack Shark X11": 1794310187.5175397
   },
   "published_post_keys": [
-    "lodydeals:45441",
     "zedstoreonline:38895",
     "aniscoupons:32785",
     "aniscoupons:33161",
@@ -4331,11 +4330,12 @@
     "aniscoupons:34405",
     "aniscoupons:34406",
     "bnddeals:51243",
-    "aniscoupons:34408"
+    "aniscoupons:34408",
+    "aniscoupons:34409"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794310187.5175397,
+  "last_run_time": 1794310561.509585,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4366,8 +4366,8 @@
       "last_check_time": 1794308342.2040477
     },
     "aniscoupons": {
-      "last_message_id": 34408,
-      "last_check_time": 1794310189.5516315
+      "last_message_id": 34409,
+      "last_check_time": 1794310563.5486357
     },
     "bnddeals": {
       "last_message_id": 51243,
@@ -4712,7 +4712,7 @@
     "1005012839355198": 150.12,
     "1005010133081414": 715.0,
     "1005005373032877": 61.03,
-    "1005007869955343": 36.5,
+    "1005007869955343": 37.5,
     "1005012644570693": 558.0,
     "1005003949106838": 114.99,
     "1005012436082838": 123.6,
@@ -19241,6 +19241,16 @@
       "price": 21.2,
       "timestamp": 1794310187.5175397,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34409": {
+      "channel_msg_id": 2231,
+      "product_id": "1005007869955343",
+      "title": "MAONO PD100X Dynamic Microphone",
+      "channel": "aniscoupons",
+      "source_msg_id": 34409,
+      "price": 37.5,
+      "timestamp": 1794310561.509585,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19249,17 +19259,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794310190.224899,
+    "last_deal_post_time": 1794310564.4600432,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794310385.915562,
+    "last_sweep_time": 1794310567.8956058,
     "last_sweep_times": {
-      "algeria": 1794310382.14739,
-      "france": 1794310385.915562
+      "algeria": 1794310564.4433293,
+      "france": 1794310567.8956058
     },
     "last_deal_post_times": {
-      "algeria": 1794310190.224899
+      "algeria": 1794310564.4600432
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19698,7 +19708,7 @@
     "1005012839355198": "bnddeals",
     "1005010133081414": "aniscoupons",
     "1005005373032877": "lodydeals",
-    "1005007869955343": "zedstoreonline",
+    "1005007869955343": "aniscoupons",
     "1005012644570693": "zedstoreonline",
     "1005009118633225": "zedstoreonline",
     "1005003949106838": "aniscoupons",
@@ -20493,7 +20503,7 @@
     "HONOR 600S 8/256": "zedstoreonline",
     "Soundcore by Anker Life Q30 Hybrid Active Noise Cancelling Headphones": "zedstoreonline",
     "بروجكتور Magcubic HY300 max – أوتو فوكس، Android 14، إضاءة 400 ANSI": "zedstoreonline",
-    "MAONO PD100X Dynamic Microphone": "zedstoreonline",
+    "MAONO PD100X Dynamic Microphone": "aniscoupons",
     "Soundcore by Anker P20i": "aniscoupons",
     "CUSU Memory DDR5  32GB(16GBX2) 5600MHz": "aniscoupons",
     "OPPO FIND X9 Pro": "aniscoupons",
