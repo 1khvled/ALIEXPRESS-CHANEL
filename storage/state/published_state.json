@@ -726,7 +726,8 @@
     "1005005209277375",
     "1005010706691647",
     "COUPONS_949f01595a98",
-    "1005008046071240"
+    "1005008046071240",
+    "1005012083833079"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1468,7 +1469,8 @@
     "1005010706691647": 1794263885.7408762,
     "COUPONS_949f01595a98": 1794309459.0513651,
     "COUPONS_949f0159": 1794309459.0725908,
-    "1005008046071240": 1794310928.9154878
+    "1005008046071240": 1794310928.9154878,
+    "1005012083833079": 1794311122.753493
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2398,7 +2400,8 @@
     "MACHENIKE G5Pro Max SE With Charging Dock",
     "Xiaoxin Pad Pro GT (8/256)",
     "Attack Shark X11",
-    "Mic USB Microphone with RGB Modes Professional Condenser Mic for"
+    "Mic USB Microphone with RGB Modes Professional Condenser Mic for",
+    "MAONO PD100W USB Wireless Dynamic"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3333,10 +3336,10 @@
     "MACHENIKE G5Pro Max SE With Charging Dock": 1794306963.5533123,
     "Xiaoxin Pad Pro GT (8/256)": 1794308897.9947796,
     "Attack Shark X11": 1794310187.5175397,
-    "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794310928.9154878
+    "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794310928.9154878,
+    "MAONO PD100W USB Wireless Dynamic": 1794311122.753493
   },
   "published_post_keys": [
-    "aniscoupons:32785",
     "aniscoupons:33161",
     "aniscoupons:32798",
     "aniscoupons:33187",
@@ -4335,11 +4338,12 @@
     "bnddeals:51243",
     "aniscoupons:34408",
     "aniscoupons:34409",
-    "aniscoupons:34410"
+    "aniscoupons:34410",
+    "aniscoupons:34411"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794310928.9154878,
+  "last_run_time": 1794311122.753493,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4366,12 +4370,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39814,
-      "last_check_time": 1794308342.2040477
+      "last_message_id": 39815,
+      "last_check_time": 1794311119.2831728
     },
     "aniscoupons": {
-      "last_message_id": 34410,
-      "last_check_time": 1794310930.969848
+      "last_message_id": 34411,
+      "last_check_time": 1794311124.80285
     },
     "bnddeals": {
       "last_message_id": 51243,
@@ -5001,7 +5005,8 @@
     "1005009649048598": 3.29,
     "1005005209277375": 4.69,
     "1005010706691647": 5.29,
-    "1005008046071240": 46.77
+    "1005008046071240": 46.77,
+    "1005012083833079": 57.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -19266,6 +19271,16 @@
       "price": 46.77,
       "timestamp": 1794310928.9154878,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34411": {
+      "channel_msg_id": 2233,
+      "product_id": "1005012083833079",
+      "title": "MAONO PD100W USB Wireless Dynamic",
+      "channel": "aniscoupons",
+      "source_msg_id": 34411,
+      "price": 57.9,
+      "timestamp": 1794311122.753493,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19274,17 +19289,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794310931.690845,
+    "last_deal_post_time": 1794311125.638262,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794310934.5735536,
+    "last_sweep_time": 1794311129.047159,
     "last_sweep_times": {
-      "algeria": 1794310931.666739,
-      "france": 1794310934.5735536
+      "algeria": 1794311125.6170948,
+      "france": 1794311129.047159
     },
     "last_deal_post_times": {
-      "algeria": 1794310931.690845
+      "algeria": 1794311125.638262
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20026,7 +20041,8 @@
     "1005005209277375": "lodydeals",
     "1005010706691647": "lodydeals",
     "COUPONS_949f01595a98": "bnddeals",
-    "1005008046071240": "aniscoupons"
+    "1005008046071240": "aniscoupons",
+    "1005012083833079": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -20963,7 +20979,8 @@
     "MACHENIKE G5Pro Max SE With Charging Dock": "aniscoupons",
     "Xiaoxin Pad Pro GT (8/256)": "aniscoupons",
     "Attack Shark X11": "aniscoupons",
-    "Mic USB Microphone with RGB Modes Professional Condenser Mic for": "aniscoupons"
+    "Mic USB Microphone with RGB Modes Professional Condenser Mic for": "aniscoupons",
+    "MAONO PD100W USB Wireless Dynamic": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -21758,7 +21775,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "bnddeals:50866",
     "megaphonna:8488",
     "megaphonna:8375",
     "lodydeals:45521",
@@ -22757,7 +22773,8 @@
     "zedstoreonline:39811",
     "zedstoreonline:39813",
     "zedstoreonline:39814",
-    "aniscoupons:34407"
+    "aniscoupons:34407",
+    "zedstoreonline:39815"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
