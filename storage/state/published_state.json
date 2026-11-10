@@ -1249,7 +1249,7 @@
     "1005012790288780": 1793656271.0286891,
     "1005012345939726": 1793656202.4239671,
     "1005010722422210": 1793543733.1622994,
-    "1005012582348584": 1794315897.4341226,
+    "1005012582348584": 1794332259.758732,
     "1005012529582418": 1793543800.9051948,
     "1005008605565544": 1793543812.9442995,
     "1005009508910625": 1793543817.982839,
@@ -2418,7 +2418,8 @@
     "HAYLOU Mori Pro",
     "KOOTION SATA3 SSD 128GB",
     "Inphic YuanChuang Cyber Gaming Mouse",
-    "SIX PCIe 4.0 SSD (1TB) NVMe M2"
+    "SIX PCIe 4.0 SSD (1TB) NVMe M2",
+    "Kootion SSD SATA"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3363,10 +3364,10 @@
     "HAYLOU Mori Pro": 1794314605.5631006,
     "KOOTION SATA3 SSD 128GB": 1794315897.4341226,
     "Inphic YuanChuang Cyber Gaming Mouse": 1794320674.833981,
-    "SIX PCIe 4.0 SSD (1TB) NVMe M2": 1794331533.1223195
+    "SIX PCIe 4.0 SSD (1TB) NVMe M2": 1794331533.1223195,
+    "Kootion SSD SATA": 1794332259.758732
   },
   "published_post_keys": [
-    "aniscoupons:32958",
     "couponsglobal:48877",
     "aniscoupons:32985",
     "test_channel:1793229908",
@@ -4365,11 +4366,12 @@
     "aniscoupons:34441",
     "aniscoupons:34442",
     "bnddeals:51265",
-    "aniscoupons:34443"
+    "aniscoupons:34443",
+    "aniscoupons:34444"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794331708.056503,
+  "last_run_time": 1794332259.758732,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6053,
@@ -4400,8 +4402,8 @@
       "last_check_time": 1794326930.9605153
     },
     "aniscoupons": {
-      "last_message_id": 34443,
-      "last_check_time": 1794331710.109284
+      "last_message_id": 34445,
+      "last_check_time": 1794332262.8394136
     },
     "bnddeals": {
       "last_message_id": 51265,
@@ -19521,6 +19523,16 @@
       "price": 136.7,
       "timestamp": 1794331708.056503,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34444": {
+      "channel_msg_id": 2256,
+      "product_id": "1005012582348584",
+      "title": "Kootion SSD SATA",
+      "channel": "aniscoupons",
+      "source_msg_id": 34444,
+      "price": 8.47,
+      "timestamp": 1794332259.758732,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19529,17 +19541,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794331710.8708172,
+    "last_deal_post_time": 1794332263.6551547,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794332081.923397,
+    "last_sweep_time": 1794332266.4329274,
     "last_sweep_times": {
-      "algeria": 1794332078.86296,
-      "france": 1794332081.923397
+      "algeria": 1794332263.6278348,
+      "france": 1794332266.4329274
     },
     "last_deal_post_times": {
-      "algeria": 1794331710.8708172
+      "algeria": 1794332263.6551547
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20070,7 +20082,7 @@
     "1005012790288780": "lodydeals",
     "1005012345939726": "lodydeals",
     "1005010722422210": "lodydeals",
-    "1005012582348584": "bnddeals",
+    "1005012582348584": "aniscoupons",
     "1005012529582418": "ecksdeal",
     "1005008605565544": "ecksdeal",
     "1005009508910625": "ecksdeal",
@@ -21233,7 +21245,8 @@
     "HAYLOU Mori Pro": "aniscoupons",
     "KOOTION SATA3 SSD 128GB": "bnddeals",
     "Inphic YuanChuang Cyber Gaming Mouse": "zedstoreonline",
-    "SIX PCIe 4.0 SSD (1TB) NVMe M2": "bnddeals"
+    "SIX PCIe 4.0 SSD (1TB) NVMe M2": "bnddeals",
+    "Kootion SSD SATA": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22028,7 +22041,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:32984",
     "megaphonna:8477",
     "zedstoreonline:38708",
     "megaphonna:8702",
@@ -23027,7 +23039,8 @@
     "aniscoupons:34440",
     "bnddeals:51263",
     "bnddeals:51264",
-    "ecksdeal:6053"
+    "ecksdeal:6053",
+    "aniscoupons:34445"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
