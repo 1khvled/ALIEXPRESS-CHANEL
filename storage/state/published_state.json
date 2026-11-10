@@ -736,7 +736,7 @@
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
-    "1005007805638431": 1793966875.5755405,
+    "1005007805638431": 1794310187.5175397,
     "1005009054706827": 1794307249.1472638,
     "1005007961216287": 1791942616.1564767,
     "1005009627597591": 1793542398.3843465,
@@ -2394,7 +2394,8 @@
     "Anker Q20i Hybrid Active",
     "CUSU CV3500Q 2TB M.2",
     "MACHENIKE G5Pro Max SE With Charging Dock",
-    "Xiaoxin Pad Pro GT (8/256)"
+    "Xiaoxin Pad Pro GT (8/256)",
+    "Attack Shark X11"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3327,10 +3328,10 @@
     "Anker Q20i Hybrid Active": 1794303359.8230114,
     "CUSU CV3500Q 2TB M.2": 1794305012.9961731,
     "MACHENIKE G5Pro Max SE With Charging Dock": 1794306963.5533123,
-    "Xiaoxin Pad Pro GT (8/256)": 1794308897.9947796
+    "Xiaoxin Pad Pro GT (8/256)": 1794308897.9947796,
+    "Attack Shark X11": 1794310187.5175397
   },
   "published_post_keys": [
-    "ecksdeal:5860",
     "lodydeals:45441",
     "zedstoreonline:38895",
     "aniscoupons:32785",
@@ -4329,11 +4330,12 @@
     "aniscoupons:34404",
     "aniscoupons:34405",
     "aniscoupons:34406",
-    "bnddeals:51243"
+    "bnddeals:51243",
+    "aniscoupons:34408"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794309459.0513651,
+  "last_run_time": 1794310187.5175397,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4364,8 +4366,8 @@
       "last_check_time": 1794308342.2040477
     },
     "aniscoupons": {
-      "last_message_id": 34407,
-      "last_check_time": 1794309632.0314658
+      "last_message_id": 34408,
+      "last_check_time": 1794310189.5516315
     },
     "bnddeals": {
       "last_message_id": 51243,
@@ -4375,7 +4377,7 @@
   "published_product_prices": {
     "1005012973772517": 189.23,
     "1005010219205081": 57.2,
-    "1005007805638431": 21.8,
+    "1005007805638431": 21.2,
     "1005007027334636": 13.49,
     "1005009054706827": 23.1,
     "1005007961216287": 20.26,
@@ -19229,6 +19231,16 @@
       "price": null,
       "timestamp": 1794309459.0513651,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34408": {
+      "channel_msg_id": 2230,
+      "product_id": "1005007805638431",
+      "title": "Attack Shark X11",
+      "channel": "aniscoupons",
+      "source_msg_id": 34408,
+      "price": 21.2,
+      "timestamp": 1794310187.5175397,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19237,17 +19249,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794309461.1598663,
+    "last_deal_post_time": 1794310190.224899,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794310010.1659262,
+    "last_sweep_time": 1794310193.0477679,
     "last_sweep_times": {
-      "algeria": 1794310007.0885367,
-      "france": 1794310010.1659262
+      "algeria": 1794310190.2093933,
+      "france": 1794310193.0477679
     },
     "last_deal_post_times": {
-      "algeria": 1794309461.1598663
+      "algeria": 1794310190.224899
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19753,7 +19765,7 @@
     "1005009627597591": "lodydeals",
     "1005013455514231": "lodydeals",
     "1005009578274758": "lodydeals",
-    "1005007805638431": "bnddeals",
+    "1005007805638431": "aniscoupons",
     "1005010413332383": "aniscoupons",
     "1005011550075220": "ecksdeal",
     "1005009806856302": "ecksdeal",
@@ -20923,7 +20935,8 @@
     "Anker Q20i Hybrid Active": "aniscoupons",
     "CUSU CV3500Q 2TB M.2": "lodydeals",
     "MACHENIKE G5Pro Max SE With Charging Dock": "aniscoupons",
-    "Xiaoxin Pad Pro GT (8/256)": "aniscoupons"
+    "Xiaoxin Pad Pro GT (8/256)": "aniscoupons",
+    "Attack Shark X11": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
