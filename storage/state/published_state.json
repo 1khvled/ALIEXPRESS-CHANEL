@@ -730,7 +730,8 @@
     "1005012083833079",
     "1005012292809645",
     "1005007495712340",
-    "1005009104334975"
+    "1005009104334975",
+    "1005012474727998"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1476,7 +1477,8 @@
     "1005012083833079": 1794311122.753493,
     "1005012292809645": 1794311488.3788898,
     "1005007495712340": 1794311865.7221916,
-    "1005009104334975": 1794314237.0165172
+    "1005009104334975": 1794314237.0165172,
+    "1005012474727998": 1794320674.833981
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2414,7 +2416,8 @@
     "CMF Buds 2a ANC -42dB  السعر: 11.7",
     "MACHENIKE G1 Wireless Gaming Controller",
     "HAYLOU Mori Pro",
-    "KOOTION SATA3 SSD 128GB"
+    "KOOTION SATA3 SSD 128GB",
+    "Inphic YuanChuang Cyber Gaming Mouse"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3357,10 +3360,10 @@
     "CMF Buds 2a ANC -42dB  السعر: 11.7": 1794312964.1163073,
     "MACHENIKE G1 Wireless Gaming Controller": 1794313510.6359115,
     "HAYLOU Mori Pro": 1794314605.5631006,
-    "KOOTION SATA3 SSD 128GB": 1794315897.4341226
+    "KOOTION SATA3 SSD 128GB": 1794315897.4341226,
+    "Inphic YuanChuang Cyber Gaming Mouse": 1794320674.833981
   },
   "published_post_keys": [
-    "zedstoreonline:38812",
     "lodydeals:45814",
     "zedstoreonline:38692",
     "aniscoupons:33273",
@@ -4359,11 +4362,12 @@
     "aniscoupons:34420",
     "zedstoreonline:39825",
     "aniscoupons:34422",
-    "bnddeals:51247"
+    "bnddeals:51247",
+    "zedstoreonline:39831"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794315897.4341226,
+  "last_run_time": 1794320674.833981,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4390,8 +4394,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39830,
-      "last_check_time": 1794320306.7614367
+      "last_message_id": 39831,
+      "last_check_time": 1794320676.895471
     },
     "aniscoupons": {
       "last_message_id": 34436,
@@ -5029,7 +5033,8 @@
     "1005012083833079": 57.9,
     "1005012292809645": 37.69,
     "1005007495712340": 53.24,
-    "1005009104334975": 10.6
+    "1005009104334975": 10.6,
+    "1005012474727998": 14.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -19464,6 +19469,16 @@
       "price": 8.47,
       "timestamp": 1794315897.4341226,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39831": {
+      "channel_msg_id": 2250,
+      "product_id": "1005012474727998",
+      "title": "Inphic YuanChuang Cyber Gaming Mouse",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39831,
+      "price": 14.9,
+      "timestamp": 1794320674.833981,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19472,17 +19487,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794315899.548729,
+    "last_deal_post_time": 1794320678.6405847,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794320492.3341029,
+    "last_sweep_time": 1794320682.6158974,
     "last_sweep_times": {
-      "algeria": 1794320488.552179,
-      "france": 1794320492.3341029
+      "algeria": 1794320678.6135716,
+      "france": 1794320682.6158974
     },
     "last_deal_post_times": {
-      "algeria": 1794315899.548729
+      "algeria": 1794320678.6405847
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20228,7 +20243,8 @@
     "1005012083833079": "aniscoupons",
     "1005012292809645": "aniscoupons",
     "1005007495712340": "aniscoupons",
-    "1005009104334975": "zedstoreonline"
+    "1005009104334975": "zedstoreonline",
+    "1005012474727998": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -21173,7 +21189,8 @@
     "CMF Buds 2a ANC -42dB  السعر: 11.7": "bnddeals",
     "MACHENIKE G1 Wireless Gaming Controller": "zedstoreonline",
     "HAYLOU Mori Pro": "aniscoupons",
-    "KOOTION SATA3 SSD 128GB": "bnddeals"
+    "KOOTION SATA3 SSD 128GB": "bnddeals",
+    "Inphic YuanChuang Cyber Gaming Mouse": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
