@@ -1402,7 +1402,7 @@
     "1005012691642623": 1794074230.5173922,
     "1005010266233059": 1793977272.9654846,
     "1005007469003552": 1794130707.0577464,
-    "1005010041181003": 1794299814.8079743,
+    "1005010041181003": 1794339790.4710326,
     "1005010265542567": 1794131426.95932,
     "1005003156756854": 1794307971.8462343,
     "1005010142208108": 1794302223.66585,
@@ -3252,7 +3252,7 @@
     "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
     "ميكروفون Ulanzi A100 لاسلكي صغير": 1793982290.6109207,
-    "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794299814.8079743,
+    "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794339790.4710326,
     "Ulanzi A200 Mini Wireless Lavalier Microphone": 1794131426.95932,
     "حامل هاتف Ulanzi ST-06S": 1794307971.8462343,
     "AULA MINI60 HE PRO": 1794302223.66585,
@@ -3370,7 +3370,6 @@
     "KOOTION SATA SSD 128GB": 1794334097.945569
   },
   "published_post_keys": [
-    "lodydeals:45838",
     "couponsglobal:48808",
     "aniscoupons:32771",
     "couponsglobal:48777",
@@ -4369,11 +4368,12 @@
     "aniscoupons:34446",
     "aniscoupons:34448",
     "aniscoupons:34450",
-    "aniscoupons:34451"
+    "aniscoupons:34451",
+    "aniscoupons:34452"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794339426.7315922,
+  "last_run_time": 1794339790.4710326,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6053,
@@ -4404,8 +4404,8 @@
       "last_check_time": 1794339603.5476394
     },
     "aniscoupons": {
-      "last_message_id": 34451,
-      "last_check_time": 1794339428.794917
+      "last_message_id": 34452,
+      "last_check_time": 1794339792.5572422
     },
     "bnddeals": {
       "last_message_id": 51265,
@@ -19595,6 +19595,16 @@
       "price": 186.74,
       "timestamp": 1794339426.7315922,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34452": {
+      "channel_msg_id": 2263,
+      "product_id": "1005010041181003",
+      "title": "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34452,
+      "price": 167.8,
+      "timestamp": 1794339790.4710326,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19603,17 +19613,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794339429.54536,
+    "last_deal_post_time": 1794339793.054173,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794339607.877366,
+    "last_sweep_time": 1794339795.7013142,
     "last_sweep_times": {
-      "algeria": 1794339604.6909847,
-      "france": 1794339607.877366
+      "algeria": 1794339793.0326881,
+      "france": 1794339795.7013142
     },
     "last_deal_post_times": {
-      "algeria": 1794339429.54536
+      "algeria": 1794339793.054173
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
