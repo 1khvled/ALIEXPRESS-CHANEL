@@ -1419,7 +1419,7 @@
     "1005008636930795": 1794231632.2676654,
     "1005006260870758": 1794250569.5221198,
     "1005009759580502": 1794079741.7808652,
-    "1005009120888793": 1794171706.368645,
+    "1005009120888793": 1794306130.341298,
     "1005011874310777": 1794087501.0429602,
     "1005008721853055": 1794126663.880001,
     "1005012593794312": 1794301654.5672474,
@@ -3256,7 +3256,7 @@
     "Netac M.2 NVME 250GB": 1794076438.7694528,
     "EPOMAKER X AULA F87 Pro": 1794250569.5221198,
     "SIX PCIe 4.0 7350MB/s  1TB": 1794079741.7808652,
-    "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop": 1794079928.0765662,
+    "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop": 1794306130.341298,
     "SOUNDPEATS Air6 HS": 1794087501.0429602,
     "مبرد الهاتف MEMO CX10": 1794126663.880001,
     "KOOTION SATA SSD 480GB": 1794241389.2452002,
@@ -3323,7 +3323,6 @@
     "CUSU CV3500Q 2TB M.2": 1794305012.9961731
   },
   "published_post_keys": [
-    "lodydeals:45894",
     "aniscoupons:32722",
     "pcgamingpart:7938",
     "lodydeals:45424",
@@ -4322,11 +4321,12 @@
     "aniscoupons:34394",
     "lodydeals:46320",
     "aniscoupons:34395",
-    "aniscoupons:34396"
+    "aniscoupons:34396",
+    "aniscoupons:34399"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794305200.722419,
+  "last_run_time": 1794306130.341298,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4357,8 +4357,8 @@
       "last_check_time": 1794304466.971382
     },
     "aniscoupons": {
-      "last_message_id": 34398,
-      "last_check_time": 1794305755.7038217
+      "last_message_id": 34399,
+      "last_check_time": 1794306132.4043958
     },
     "bnddeals": {
       "last_message_id": 51242,
@@ -4945,7 +4945,7 @@
     "1005008645323478": 41.5,
     "1005006260870758": 41.1,
     "1005009759580502": 101.07,
-    "1005009120888793": 22.13,
+    "1005009120888793": 22.3,
     "1005011874310777": 24.2,
     "1005008721853055": 8.7,
     "1005008384277561": 7.3,
@@ -19112,6 +19112,16 @@
       "price": 304.77,
       "timestamp": 1794305200.722419,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34399": {
+      "channel_msg_id": 2218,
+      "product_id": "1005009120888793",
+      "title": "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop",
+      "channel": "aniscoupons",
+      "source_msg_id": 34399,
+      "price": 22.3,
+      "timestamp": 1794306130.341298,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19120,17 +19130,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794305203.549391,
+    "last_deal_post_time": 1794306133.4310615,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794305938.4655547,
+    "last_sweep_time": 1794306137.4203591,
     "last_sweep_times": {
-      "algeria": 1794305935.490718,
-      "france": 1794305938.4655547
+      "algeria": 1794306133.403172,
+      "france": 1794306137.4203591
     },
     "last_deal_post_times": {
-      "algeria": 1794305203.549391
+      "algeria": 1794306133.4310615
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19825,7 +19835,7 @@
     "1005008636930795": "zedstoreonline",
     "1005006260870758": "aniscoupons",
     "1005009759580502": "lodydeals",
-    "1005009120888793": "lodydeals",
+    "1005009120888793": "aniscoupons",
     "1005011874310777": "lodydeals",
     "1005008721853055": "zedstoreonline",
     "1005012593794312": "aniscoupons",
