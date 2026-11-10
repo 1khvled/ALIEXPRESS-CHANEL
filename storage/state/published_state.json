@@ -1378,7 +1378,7 @@
     "1005008366962319": 1794346230.0535362,
     "1005005058037424": 1793779907.9964287,
     "1005012946895000": 1793793714.105913,
-    "1005012150344482": 1794314418.8957746,
+    "1005012150344482": 1794349171.7275317,
     "1005006972551834": 1793793774.6743867,
     "1005010169268165": 1793794440.9453664,
     "1005010702038861": 1794134168.8193681,
@@ -3225,7 +3225,7 @@
     "HONOR PAD X8A 4/64GB": 1793908989.4952903,
     "Magcubic HY300 Pro Projector": 1793908994.588809,
     "CUSU SSD SATA3": 1793913777.3174822,
-    "Haylou Solar NEO 2 Amoled": 1794314418.8957746,
+    "Haylou Solar NEO 2 Amoled": 1794349171.7275317,
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones": 1794313321.761044,
     "HAYLOU Solar Ultra GPS": 1793966681.3536706,
     "NOTHING Watch 3 Pro": 1793966696.631638,
@@ -3378,7 +3378,6 @@
     "Kootion X15 M.2 NVMe 256GB": 1794346230.0535362
   },
   "published_post_keys": [
-    "zedstoreonline:38624",
     "lodydeals:45730",
     "lodydeals:45847",
     "ecksdeal:5976",
@@ -4377,11 +4376,12 @@
     "aniscoupons:34465",
     "lodydeals:46328",
     "aniscoupons:34466",
-    "zedstoreonline:39841"
+    "zedstoreonline:39841",
+    "zedstoreonline:39842"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794348808.2825344,
+  "last_run_time": 1794349171.7275317,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6053,
@@ -4408,8 +4408,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39841,
-      "last_check_time": 1794348810.3417156
+      "last_message_id": 39842,
+      "last_check_time": 1794349173.786421
     },
     "aniscoupons": {
       "last_message_id": 34467,
@@ -19694,6 +19694,16 @@
       "price": 10.5,
       "timestamp": 1794348808.2825344,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39842": {
+      "channel_msg_id": 2273,
+      "product_id": "1005012150344482",
+      "title": "Haylou Solar NEO 2 Amoled",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39842,
+      "price": 18.7,
+      "timestamp": 1794349171.7275317,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19702,17 +19712,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794348811.9592528,
+    "last_deal_post_time": 1794349175.3554745,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794348990.0042732,
+    "last_sweep_time": 1794349179.7551286,
     "last_sweep_times": {
-      "algeria": 1794348986.6593182,
-      "france": 1794348990.0042732
+      "algeria": 1794349175.328172,
+      "france": 1794349179.7551286
     },
     "last_deal_post_times": {
-      "algeria": 1794348811.9592528
+      "algeria": 1794349175.3554745
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
