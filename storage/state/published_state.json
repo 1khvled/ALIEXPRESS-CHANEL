@@ -1248,7 +1248,7 @@
     "1005012790288780": 1793656271.0286891,
     "1005012345939726": 1793656202.4239671,
     "1005010722422210": 1793543733.1622994,
-    "1005012582348584": 1794071284.8947144,
+    "1005012582348584": 1794315897.4341226,
     "1005012529582418": 1793543800.9051948,
     "1005008605565544": 1793543812.9442995,
     "1005009508910625": 1793543817.982839,
@@ -2413,7 +2413,8 @@
     "AULA WIN68 HE Gaming Mechanical Keyboard",
     "CMF Buds 2a ANC -42dB  السعر: 11.7",
     "MACHENIKE G1 Wireless Gaming Controller",
-    "HAYLOU Mori Pro"
+    "HAYLOU Mori Pro",
+    "KOOTION SATA3 SSD 128GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3355,10 +3356,10 @@
     "AULA WIN68 HE Gaming Mechanical Keyboard": 1794312953.1830955,
     "CMF Buds 2a ANC -42dB  السعر: 11.7": 1794312964.1163073,
     "MACHENIKE G1 Wireless Gaming Controller": 1794313510.6359115,
-    "HAYLOU Mori Pro": 1794314605.5631006
+    "HAYLOU Mori Pro": 1794314605.5631006,
+    "KOOTION SATA3 SSD 128GB": 1794315897.4341226
   },
   "published_post_keys": [
-    "zedstoreonline:38898",
     "zedstoreonline:38812",
     "lodydeals:45814",
     "zedstoreonline:38692",
@@ -4357,11 +4358,12 @@
     "zedstoreonline:39824",
     "aniscoupons:34420",
     "zedstoreonline:39825",
-    "aniscoupons:34422"
+    "aniscoupons:34422",
+    "bnddeals:51247"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794314605.5631006,
+  "last_run_time": 1794315897.4341226,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4392,12 +4394,12 @@
       "last_check_time": 1794314800.0266573
     },
     "aniscoupons": {
-      "last_message_id": 34427,
-      "last_check_time": 1794315709.2722447
+      "last_message_id": 34428,
+      "last_check_time": 1794315891.9982758
     },
     "bnddeals": {
-      "last_message_id": 51246,
-      "last_check_time": 1794314245.6431954
+      "last_message_id": 51247,
+      "last_check_time": 1794315899.494197
     }
   },
   "published_product_prices": {
@@ -4822,7 +4824,7 @@
     "1005012790288780": 26.95,
     "1005012345939726": 18.62,
     "1005010722422210": 398.07,
-    "1005012582348584": 18.13,
+    "1005012582348584": 8.47,
     "1005012529582418": 12.6,
     "1005008605565544": 58.59,
     "1005009508910625": 46.26,
@@ -19452,6 +19454,16 @@
       "price": 10.7,
       "timestamp": 1794314605.5631006,
       "status": "ACTIVE"
+    },
+    "bnddeals:51247": {
+      "channel_msg_id": 2249,
+      "product_id": "1005012582348584",
+      "title": "KOOTION SATA3 SSD 128GB",
+      "channel": "bnddeals",
+      "source_msg_id": 51247,
+      "price": 8.47,
+      "timestamp": 1794315897.4341226,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19460,17 +19472,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794314609.3259342,
+    "last_deal_post_time": 1794315899.548729,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794315713.5612342,
+    "last_sweep_time": 1794315903.4440606,
     "last_sweep_times": {
-      "algeria": 1794315709.994052,
-      "france": 1794315713.5612342
+      "algeria": 1794315899.5217142,
+      "france": 1794315903.4440606
     },
     "last_deal_post_times": {
-      "algeria": 1794314609.3259342
+      "algeria": 1794315899.548729
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20001,7 +20013,7 @@
     "1005012790288780": "lodydeals",
     "1005012345939726": "lodydeals",
     "1005010722422210": "lodydeals",
-    "1005012582348584": "aniscoupons",
+    "1005012582348584": "bnddeals",
     "1005012529582418": "ecksdeal",
     "1005008605565544": "ecksdeal",
     "1005009508910625": "ecksdeal",
@@ -21160,7 +21172,8 @@
     "AULA WIN68 HE Gaming Mechanical Keyboard": "zedstoreonline",
     "CMF Buds 2a ANC -42dB  السعر: 11.7": "bnddeals",
     "MACHENIKE G1 Wireless Gaming Controller": "zedstoreonline",
-    "HAYLOU Mori Pro": "aniscoupons"
+    "HAYLOU Mori Pro": "aniscoupons",
+    "KOOTION SATA3 SSD 128GB": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -21955,7 +21968,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:32843",
     "couponsglobal:48849",
     "megaphonna:8438",
     "alidealsdz:143",
@@ -22954,7 +22966,8 @@
     "aniscoupons:34424",
     "aniscoupons:34425",
     "aniscoupons:34426",
-    "aniscoupons:34427"
+    "aniscoupons:34427",
+    "aniscoupons:34428"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
