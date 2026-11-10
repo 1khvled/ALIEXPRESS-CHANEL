@@ -1431,7 +1431,7 @@
     "1005008384277561": 1794128872.1451216,
     "1005010155263623": 1794129971.1690388,
     "1005011572208218": 1794304276.1692173,
-    "1005012374550298": 1794164691.7591228,
+    "1005012374550298": 1794312591.4470382,
     "1005009851407234": 1794307242.7687027,
     "1005009738356108": 1794164684.9082866,
     "1005012953027259": 1794133977.9005425,
@@ -3283,7 +3283,7 @@
     "Essager Mini 20W Type C Charger PD": 1794129971.1690388,
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794304276.1692173,
     "OnePlus Ace 6 12/256GB": 1794130143.129755,
-    "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": 1794130518.3291268,
+    "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": 1794312591.4470382,
     "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464,
     "Kootion X15 M.2 SSD NVMe 256GB": 1794134534.5760646,
     "Lenovo LE257 Headphones": 1794137638.8201442,
@@ -3348,7 +3348,6 @@
     "FIFINE M9 Wireless Lavalier Microphone": 1794311865.7221916
   },
   "published_post_keys": [
-    "aniscoupons:32746",
     "aniscoupons:33188",
     "zedstoreonline:38800",
     "ecksdeal:5905",
@@ -4347,11 +4346,12 @@
     "zedstoreonline:39817",
     "aniscoupons:34413",
     "aniscoupons:34414",
-    "aniscoupons:34415"
+    "aniscoupons:34415",
+    "zedstoreonline:39819"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794312406.8406456,
+  "last_run_time": 1794312591.4470382,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4378,8 +4378,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39818,
-      "last_check_time": 1794312040.8184867
+      "last_message_id": 39819,
+      "last_check_time": 1794312593.507633
     },
     "aniscoupons": {
       "last_message_id": 34415,
@@ -4976,7 +4976,7 @@
     "1005008384277561": 7.3,
     "1005010155263623": 2.4,
     "1005011572208218": 217.8,
-    "1005012374550298": 17.6,
+    "1005012374550298": 15.8,
     "1005009851407234": 149.4,
     "1005012953027259": 279.32,
     "1005012048332402": 193.1,
@@ -19341,6 +19341,16 @@
       "price": 36.5,
       "timestamp": 1794312406.8406456,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39819": {
+      "channel_msg_id": 2239,
+      "product_id": "1005012374550298",
+      "title": "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39819,
+      "price": 15.8,
+      "timestamp": 1794312591.4470382,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19349,17 +19359,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794312409.5389838,
+    "last_deal_post_time": 1794312594.98542,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794312412.3843446,
+    "last_sweep_time": 1794312598.531296,
     "last_sweep_times": {
-      "algeria": 1794312409.5159492,
-      "france": 1794312412.3843446
+      "algeria": 1794312594.956793,
+      "france": 1794312598.531296
     },
     "last_deal_post_times": {
-      "algeria": 1794312409.5389838
+      "algeria": 1794312594.98542
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20061,7 +20071,7 @@
     "1005008384277561": "zedstoreonline",
     "1005010155263623": "zedstoreonline",
     "1005011572208218": "aniscoupons",
-    "1005012374550298": "lodydeals",
+    "1005012374550298": "zedstoreonline",
     "1005009851407234": "zedstoreonline",
     "1005009738356108": "lodydeals",
     "1005012953027259": "aniscoupons",
