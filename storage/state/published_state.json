@@ -943,7 +943,7 @@
     "1005011557896041": 1794212756.8201253,
     "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
-    "1005007916078341": 1794264992.2273488,
+    "1005007916078341": 1794299263.989674,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
     "1005013336240375": 1791968149.7952893,
@@ -1123,7 +1123,7 @@
     "1005010035309013": 1793554752.7954907,
     "1005010385472500": 1793448762.165183,
     "1005011779814585": 1794242119.207932,
-    "1005013090910574": 1794265909.0829787,
+    "1005013090910574": 1794299257.6397457,
     "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793543612.279949,
     "1005012910719451": 1794160828.535879,
@@ -2417,7 +2417,7 @@
     "UGREEN 45W GaN Charger": 1793399449.9599383,
     "Realme Pad 3 5G 256GB": 1791012345.6086447,
     "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor": 1790888886.4062796,
-    "OPPO A6 Pro 8/256": 1794241024.1358633,
+    "OPPO A6 Pro 8/256": 1794299257.6397457,
     "realme P3 5G 8/256": 1793613419.7534997,
     "OnePlus Turbo 6X Pro 5G": 1794159565.9245353,
     "Xiaomi Pad 7  12/256GB": 1790897106.449474,
@@ -2567,7 +2567,7 @@
     "ATTACK SHARK L80PRO Ultralight": 1791107750.295487,
     "AMD Ryzen 7 5700X": 1793898345.0223713,
     "هاتف ينسيك في شارجور🤣🤣": 1791109857.5190113,
-    "CMF Smart Watch 3 pro AMOLED": 1794264992.2273488,
+    "CMF Smart Watch 3 pro AMOLED": 1794299263.989674,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
     "OPPO A6 Pro 8/256GB": 1794265909.0829787,
@@ -3317,8 +3317,6 @@
     "Portable Hair Clipper": 1794263885.7408762
   },
   "published_post_keys": [
-    "aniscoupons:33312",
-    "couponsglobal:48767",
     "aniscoupons:33112",
     "bnddeals:50793",
     "bnddeals:50806",
@@ -4316,11 +4314,13 @@
     "aniscoupons:34373",
     "zedstoreonline:39801",
     "aniscoupons:34374",
-    "aniscoupons:34375"
+    "aniscoupons:34375",
+    "zedstoreonline:39804",
+    "aniscoupons:34376"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794298882.30035,
+  "last_run_time": 1794299263.989674,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4347,12 +4347,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39803,
-      "last_check_time": 1794298878.7312198
+      "last_message_id": 39804,
+      "last_check_time": 1794299259.6960442
     },
     "aniscoupons": {
-      "last_message_id": 34375,
-      "last_check_time": 1794298884.346253
+      "last_message_id": 34376,
+      "last_check_time": 1794299266.0453813
     },
     "bnddeals": {
       "last_message_id": 51241,
@@ -18846,6 +18846,26 @@
       "price": 285.9,
       "timestamp": 1794298882.30035,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39804": {
+      "channel_msg_id": 2192,
+      "product_id": "1005013090910574",
+      "title": "OPPO A6 Pro 8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39804,
+      "price": 192.7,
+      "timestamp": 1794299257.6397457,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34376": {
+      "channel_msg_id": 2193,
+      "product_id": "1005007916078341",
+      "title": "CMF Smart Watch 3 pro AMOLED",
+      "channel": "aniscoupons",
+      "source_msg_id": 34376,
+      "price": 48.9,
+      "timestamp": 1794299263.989674,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18854,17 +18874,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794298885.1148374,
+    "last_deal_post_time": 1794299267.020483,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794299073.4361174,
+    "last_sweep_time": 1794299270.7773988,
     "last_sweep_times": {
-      "algeria": 1794299070.3056438,
-      "france": 1794299073.4361174
+      "algeria": 1794299266.9942098,
+      "france": 1794299270.7773988
     },
     "last_deal_post_times": {
-      "algeria": 1794298885.1148374
+      "algeria": 1794299267.020483
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19273,7 +19293,7 @@
     "1005010035309013": "lodydeals",
     "1005010385472500": "bnddeals",
     "1005011779814585": "zedstoreonline",
-    "1005013090910574": "aniscoupons",
+    "1005013090910574": "zedstoreonline",
     "1005012382148199": "megaphonna",
     "1005010158485058": "lodydeals",
     "1005012910719451": "aniscoupons",
