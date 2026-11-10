@@ -1291,7 +1291,7 @@
     "1005013438789813": 1793569553.2022223,
     "1005012823102793": 1793569904.419889,
     "1005012773302941": 1794078084.8778791,
-    "1005008430147176": 1793707072.0357203,
+    "1005008430147176": 1794313510.6359115,
     "1005011742851856": 1793793769.5631576,
     "1005006304425302": 1793656107.995781,
     "1005010487426245": 1793573558.2913802,
@@ -2409,7 +2409,8 @@
     "MAONO Wave T1 Mini Pro",
     "FIFINE M9 Wireless Lavalier Microphone",
     "AULA WIN68 HE Gaming Mechanical Keyboard",
-    "CMF Buds 2a ANC -42dB  السعر: 11.7"
+    "CMF Buds 2a ANC -42dB  السعر: 11.7",
+    "MACHENIKE G1 Wireless Gaming Controller"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3349,10 +3350,10 @@
     "MAONO Wave T1 Mini Pro": 1794311488.3788898,
     "FIFINE M9 Wireless Lavalier Microphone": 1794311865.7221916,
     "AULA WIN68 HE Gaming Mechanical Keyboard": 1794312953.1830955,
-    "CMF Buds 2a ANC -42dB  السعر: 11.7": 1794312964.1163073
+    "CMF Buds 2a ANC -42dB  السعر: 11.7": 1794312964.1163073,
+    "MACHENIKE G1 Wireless Gaming Controller": 1794313510.6359115
   },
   "published_post_keys": [
-    "test_channel:1793541104",
     "couponsglobal:48806",
     "bnddeals:50797",
     "aniscoupons:32735",
@@ -4351,11 +4352,12 @@
     "zedstoreonline:39820",
     "aniscoupons:34417",
     "bnddeals:51244",
-    "zedstoreonline:39821"
+    "zedstoreonline:39821",
+    "zedstoreonline:39822"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794313321.761044,
+  "last_run_time": 1794313510.6359115,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4382,8 +4384,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39821,
-      "last_check_time": 1794313323.821116
+      "last_message_id": 39822,
+      "last_check_time": 1794313512.6954365
     },
     "aniscoupons": {
       "last_message_id": 34418,
@@ -4862,7 +4864,7 @@
     "1005013438789813": 408.02,
     "1005012823102793": 226.25,
     "1005012773302941": 17.06,
-    "1005008430147176": 19.41,
+    "1005008430147176": 20.4,
     "1005011742851856": 12.8,
     "1005006304425302": 2.24,
     "1005010487426245": 7.74,
@@ -19395,6 +19397,16 @@
       "price": 18.4,
       "timestamp": 1794313321.761044,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39822": {
+      "channel_msg_id": 2244,
+      "product_id": "1005008430147176",
+      "title": "MACHENIKE G1 Wireless Gaming Controller",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39822,
+      "price": 20.4,
+      "timestamp": 1794313510.6359115,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19403,17 +19415,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794313326.312735,
+    "last_deal_post_time": 1794313514.3732276,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794313329.3274734,
+    "last_sweep_time": 1794313518.421549,
     "last_sweep_times": {
-      "algeria": 1794313326.2857192,
-      "france": 1794313329.3274734
+      "algeria": 1794313514.3452337,
+      "france": 1794313518.421549
     },
     "last_deal_post_times": {
-      "algeria": 1794313326.312735
+      "algeria": 1794313514.3732276
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19990,7 +20002,7 @@
     "1005013438789813": "lodydeals",
     "1005012823102793": "lodydeals",
     "1005012773302941": "lodydeals",
-    "1005008430147176": "lodydeals",
+    "1005008430147176": "zedstoreonline",
     "1005011742851856": "lodydeals",
     "1005006304425302": "lodydeals",
     "1005010487426245": "lodydeals",
@@ -21100,7 +21112,8 @@
     "MAONO Wave T1 Mini Pro": "aniscoupons",
     "FIFINE M9 Wireless Lavalier Microphone": "aniscoupons",
     "AULA WIN68 HE Gaming Mechanical Keyboard": "zedstoreonline",
-    "CMF Buds 2a ANC -42dB  السعر: 11.7": "bnddeals"
+    "CMF Buds 2a ANC -42dB  السعر: 11.7": "bnddeals",
+    "MACHENIKE G1 Wireless Gaming Controller": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
