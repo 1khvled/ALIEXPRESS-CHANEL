@@ -1377,7 +1377,7 @@
     "1005009313079431": 1794159522.2930505,
     "1005010702511858": 1793903106.9341598,
     "1005008554218453": 1793908979.1776278,
-    "1005012499433797": 1794212581.5467725,
+    "1005012499433797": 1794301093.163363,
     "9998889309": 1793929309.3822134,
     "9998889332": 1793929332.5530465,
     "999888807": 1793930807.599727,
@@ -3211,7 +3211,7 @@
     "Realme C100D 4G 4/128GB": 1794164698.641711,
     "HAYLOU Flowbuds N50 ANC": 1793970449.9003735,
     "Honor 600 Pro 12/256": 1794131798.3098254,
-    "HONOR Pad X8a (4/64GB)": 1794212581.5467725,
+    "HONOR Pad X8a (4/64GB)": 1794301093.163363,
     "Magcubic HY350 Max 900ANSI": 1794300185.514064,
     "Honor X9d (no charger)": 1794300732.0543585,
     "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1794242854.979892,
@@ -3317,7 +3317,6 @@
     "Portable Hair Clipper": 1794263885.7408762
   },
   "published_post_keys": [
-    "zedstoreonline:38539",
     "aniscoupons:32730",
     "ecksdeal:5864",
     "lodydeals:45929",
@@ -4316,11 +4315,12 @@
     "aniscoupons:34378",
     "aniscoupons:34379",
     "aniscoupons:34380",
-    "aniscoupons:34381"
+    "aniscoupons:34381",
+    "aniscoupons:34382"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794300732.0543585,
+  "last_run_time": 1794301093.163363,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4351,8 +4351,8 @@
       "last_check_time": 1794300355.0053985
     },
     "aniscoupons": {
-      "last_message_id": 34381,
-      "last_check_time": 1794300734.1033983
+      "last_message_id": 34382,
+      "last_check_time": 1794301095.2213886
     },
     "bnddeals": {
       "last_message_id": 51241,
@@ -18906,6 +18906,16 @@
       "price": 289.5,
       "timestamp": 1794300732.0543585,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34382": {
+      "channel_msg_id": 2198,
+      "product_id": "1005012499433797",
+      "title": "HONOR Pad X8a (4/64GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34382,
+      "price": 134.36,
+      "timestamp": 1794301093.163363,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18914,17 +18924,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794300734.893273,
+    "last_deal_post_time": 1794301095.982951,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794300920.8315547,
+    "last_sweep_time": 1794301098.7109802,
     "last_sweep_times": {
-      "algeria": 1794300917.1509862,
-      "france": 1794300920.8315547
+      "algeria": 1794301095.9567444,
+      "france": 1794301098.7109802
     },
     "last_deal_post_times": {
-      "algeria": 1794300734.893273
+      "algeria": 1794301095.982951
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
