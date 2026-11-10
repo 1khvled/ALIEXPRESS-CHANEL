@@ -1422,7 +1422,7 @@
     "1005009120888793": 1794171706.368645,
     "1005011874310777": 1794087501.0429602,
     "1005008721853055": 1794126663.880001,
-    "1005012593794312": 1794159565.9245353,
+    "1005012593794312": 1794301654.5672474,
     "1005008384277561": 1794128872.1451216,
     "1005010155263623": 1794129971.1690388,
     "1005011572208218": 1794159581.7546332,
@@ -2419,7 +2419,7 @@
     "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor": 1790888886.4062796,
     "OPPO A6 Pro 8/256": 1794299257.6397457,
     "realme P3 5G 8/256": 1793613419.7534997,
-    "OnePlus Turbo 6X Pro 5G": 1794159565.9245353,
+    "OnePlus Turbo 6X Pro 5G": 1794301654.5672474,
     "Xiaomi Pad 7  12/256GB": 1790897106.449474,
     "ATTACK SHARK L90 Flodable Gaming Headset": 1791104165.8542082,
     "SomnAmbulist SSD  120GB": 1791104047.0967803,
@@ -3317,7 +3317,6 @@
     "Portable Hair Clipper": 1794263885.7408762
   },
   "published_post_keys": [
-    "ecksdeal:5864",
     "lodydeals:45929",
     "zedstoreonline:38924",
     "aniscoupons:32961",
@@ -4316,11 +4315,12 @@
     "aniscoupons:34380",
     "aniscoupons:34381",
     "aniscoupons:34382",
-    "aniscoupons:34383"
+    "aniscoupons:34383",
+    "aniscoupons:34384"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794301465.5699842,
+  "last_run_time": 1794301654.5672474,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4351,8 +4351,8 @@
       "last_check_time": 1794300355.0053985
     },
     "aniscoupons": {
-      "last_message_id": 34383,
-      "last_check_time": 1794301467.6305885
+      "last_message_id": 34384,
+      "last_check_time": 1794301656.6802602
     },
     "bnddeals": {
       "last_message_id": 51241,
@@ -4912,7 +4912,7 @@
     "1005013083645836": 304.4,
     "1005008703989845": 24.8,
     "1005008060391372": 32.9,
-    "1005012593794312": 239.8,
+    "1005012593794312": 241.5,
     "1005008357913212": 40.5,
     "1005012254132930": 15.2,
     "1005008708333999": 136.7,
@@ -18926,6 +18926,16 @@
       "price": 40.5,
       "timestamp": 1794301465.5699842,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34384": {
+      "channel_msg_id": 2200,
+      "product_id": "1005012593794312",
+      "title": "OnePlus Turbo 6X Pro 5G",
+      "channel": "aniscoupons",
+      "source_msg_id": 34384,
+      "price": 241.5,
+      "timestamp": 1794301654.5672474,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18934,17 +18944,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794301468.4056842,
+    "last_deal_post_time": 1794301657.436703,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794301471.3304546,
+    "last_sweep_time": 1794301660.4218361,
     "last_sweep_times": {
-      "algeria": 1794301468.378977,
-      "france": 1794301471.3304546
+      "algeria": 1794301657.4164333,
+      "france": 1794301660.4218361
     },
     "last_deal_post_times": {
-      "algeria": 1794301468.4056842
+      "algeria": 1794301657.436703
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
