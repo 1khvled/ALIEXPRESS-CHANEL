@@ -4392,8 +4392,8 @@
       "last_check_time": 1794328944.6992753
     },
     "lodydeals": {
-      "last_message_id": 46331,
-      "last_check_time": 1794349531.3733902
+      "last_message_id": 46332,
+      "last_check_time": 1794350079.0118697
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -19741,10 +19741,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794349902.285399,
+    "last_sweep_time": 1794350087.7265007,
     "last_sweep_times": {
-      "algeria": 1794349898.1924179,
-      "france": 1794349902.285399
+      "algeria": 1794350084.350739,
+      "france": 1794350087.7265007
     },
     "last_deal_post_times": {
       "algeria": 1794349727.9070163
