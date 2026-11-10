@@ -349,16 +349,6 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     except Exception as e:
         print(f"[!] Promo alert check error: {e}")
 
-    # Automated Check: 09:00 AM Coupon Restock & Direct Reservation Alert
-    try:
-        from app.publisher.promo_notifiers import check_and_auto_post_coupon_restock_alert
-        force_restock = "--restock-alert" in sys.argv or "--force-restock" in sys.argv
-        restock_msg_id = await check_and_auto_post_coupon_restock_alert(force=force_restock)
-        if restock_msg_id:
-            print(f"[COUPON RESTOCK AUTO-POST] Published official 09:00 AM coupon restock alert: #{restock_msg_id}")
-    except Exception as e:
-        print(f"[!] Coupon restock alert check error: {e}")
-
     # Automated Check: Rotating Coin & PC Educational Reminders (48-72h randomized interval)
     try:
         from app.publisher.bot_ad import post_bot_advertisement

@@ -41,6 +41,13 @@ def test_is_coupon_claim_post_detection():
     sample_no_link = "الكوبونات توفرت الآن ادخلوا احجزوا"
     assert is_coupon_claim_post(sample_no_link) is False
 
+    # 5. Algerian dialect variation (كويونات / ترجع)
+    sample_algerian = """
+السلام عليكم خاوتي ترجع الكويونات ضرك على 9:00!
+ادخلوا ديروا تحصيل من هنا: https://s.click.aliexpress.com/e/_c4Up4ucr
+"""
+    assert is_coupon_claim_post(sample_algerian) is True
+
 
 def test_format_coupon_claim_caption():
     raw_sample = """
