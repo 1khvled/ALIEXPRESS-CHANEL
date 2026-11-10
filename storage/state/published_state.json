@@ -1122,7 +1122,7 @@
     "1005010529440901": 1793361918.107678,
     "1005010035309013": 1793554752.7954907,
     "1005010385472500": 1793448762.165183,
-    "1005011779814585": 1794242119.207932,
+    "1005011779814585": 1794303930.2445617,
     "1005013090910574": 1794299257.6397457,
     "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793543612.279949,
@@ -2806,7 +2806,7 @@
     "Soundcore by Anker Liberty 4 NC": 1793361932.515627,
     "CUSU SSD SATA 480GB": 1793478749.3947985,
     "New HONOR X9d 12GB+256 Smartphone 6.79'' 120Hz Screen 108MP AI Camera 8300": 1793399585.2177644,
-    "RYZEN 7 9700X": 1794159539.8174424,
+    "RYZEN 7 9700X": 1794303930.2445617,
     "REALME 15T  8/256GB": 1793362007.2094316,
     "HONOR 600 LITE (8/256)": 1793362020.5789406,
     "HONOR 600 (8/256)": 1793467348.0722725,
@@ -3321,7 +3321,6 @@
     "Anker Q20i Hybrid Active": 1794303359.8230114
   },
   "published_post_keys": [
-    "aniscoupons:32694",
     "bnddeals:50860",
     "lodydeals:45948",
     "bnddeals:50804",
@@ -4320,11 +4319,12 @@
     "aniscoupons:34388",
     "aniscoupons:34389",
     "aniscoupons:34390",
-    "aniscoupons:34391"
+    "aniscoupons:34391",
+    "aniscoupons:34392"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794303729.6185703,
+  "last_run_time": 1794303930.2445617,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4355,8 +4355,8 @@
       "last_check_time": 1794302411.7350125
     },
     "aniscoupons": {
-      "last_message_id": 34391,
-      "last_check_time": 1794303731.8147478
+      "last_message_id": 34392,
+      "last_check_time": 1794303932.3095224
     },
     "bnddeals": {
       "last_message_id": 51242,
@@ -4670,7 +4670,7 @@
     "1005010529440901": 59.8,
     "1005010035309013": 72.89,
     "1005010385472500": 40.0,
-    "1005011779814585": 186.7,
+    "1005011779814585": 186.74,
     "1005013090910574": 192.7,
     "1005012382148199": 469.0,
     "1005010158485058": 66.5,
@@ -19050,6 +19050,16 @@
       "price": 14.6,
       "timestamp": 1794303729.6185703,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34392": {
+      "channel_msg_id": 2212,
+      "product_id": "1005011779814585",
+      "title": "RYZEN 7 9700X",
+      "channel": "aniscoupons",
+      "source_msg_id": 34392,
+      "price": 186.74,
+      "timestamp": 1794303930.2445617,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19058,17 +19068,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794303734.1361408,
+    "last_deal_post_time": 1794303933.072121,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794303737.49108,
+    "last_sweep_time": 1794303935.9185522,
     "last_sweep_times": {
-      "algeria": 1794303734.1154492,
-      "france": 1794303737.49108
+      "algeria": 1794303933.0449429,
+      "france": 1794303935.9185522
     },
     "last_deal_post_times": {
-      "algeria": 1794303734.1361408
+      "algeria": 1794303933.072121
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19476,7 +19486,7 @@
     "1005010529440901": "zedstoreonline",
     "1005010035309013": "lodydeals",
     "1005010385472500": "bnddeals",
-    "1005011779814585": "zedstoreonline",
+    "1005011779814585": "aniscoupons",
     "1005013090910574": "zedstoreonline",
     "1005012382148199": "megaphonna",
     "1005010158485058": "lodydeals",
