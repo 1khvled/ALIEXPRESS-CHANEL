@@ -1412,7 +1412,7 @@
     "1005010656922924": 1793994623.1444166,
     "1005008077441711": 1794302806.3764513,
     "1005006411483066": 1794091985.0146983,
-    "1005012925301774": 1794311859.8991392,
+    "1005012925301774": 1794348808.2825344,
     "1005012959738411": 1794304640.3506072,
     "1005008357913212": 1794301465.5699842,
     "1005008703989845": 1794300358.3541322,
@@ -3269,7 +3269,7 @@
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1794147198.6954062,
     "realme C100d 4/128GB": 1794148671.949184,
     "Zeblaze GTS 3 Pro AMOLED": 1794091985.0146983,
-    "شاحن سيارة ORICO بقوة 45W": 1794311859.8991392,
+    "شاحن سيارة ORICO بقوة 45W": 1794348808.2825344,
     "Hollyland LARK M2 DUO 2-Person": 1794304640.3506072,
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794331708.056503,
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627,
@@ -3378,7 +3378,6 @@
     "Kootion X15 M.2 NVMe 256GB": 1794346230.0535362
   },
   "published_post_keys": [
-    "lodydeals:45848",
     "zedstoreonline:38624",
     "lodydeals:45730",
     "lodydeals:45847",
@@ -4377,19 +4376,20 @@
     "aniscoupons:34462",
     "aniscoupons:34465",
     "lodydeals:46328",
-    "aniscoupons:34466"
+    "aniscoupons:34466",
+    "zedstoreonline:39841"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794346607.3243797,
+  "last_run_time": 1794348808.2825344,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6053,
       "last_check_time": 1794328944.6992753
     },
     "lodydeals": {
-      "last_message_id": 46329,
-      "last_check_time": 1794347692.3540657
+      "last_message_id": 46330,
+      "last_check_time": 1794348801.2160683
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4408,8 +4408,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39840,
-      "last_check_time": 1794348620.25821
+      "last_message_id": 39841,
+      "last_check_time": 1794348810.3417156
     },
     "aniscoupons": {
       "last_message_id": 34467,
@@ -4989,7 +4989,7 @@
     "1005009577554629": 10.55,
     "1005010656922924": 20.4,
     "1005008077441711": 7.32,
-    "1005012925301774": 11.2,
+    "1005012925301774": 10.5,
     "1005012959738411": 68.79,
     "1005007162099601": 32.87,
     "1005007038130594": 12.03,
@@ -19684,6 +19684,16 @@
       "price": 285.9,
       "timestamp": 1794346607.3243797,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39841": {
+      "channel_msg_id": 2272,
+      "product_id": "1005012925301774",
+      "title": "شاحن سيارة ORICO بقوة 45W",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39841,
+      "price": 10.5,
+      "timestamp": 1794348808.2825344,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19692,22 +19702,22 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794346609.8655572,
+    "last_deal_post_time": 1794348811.9592528,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794348625.1727076,
+    "last_sweep_time": 1794348816.4387639,
     "last_sweep_times": {
-      "algeria": 1794348621.6429622,
-      "france": 1794348625.1727076
+      "algeria": 1794348811.9312532,
+      "france": 1794348816.4387639
     },
     "last_deal_post_times": {
-      "algeria": 1794346609.8655572
+      "algeria": 1794348811.9592528
     }
   },
-  "last_coin_reminder_time": 1794119525.1570954,
-  "next_reminder_interval_seconds": 229089,
-  "coin_reminder_variant_idx": 0,
+  "last_coin_reminder_time": 1794348793.0732265,
+  "next_reminder_interval_seconds": 185061,
+  "coin_reminder_variant_idx": 1,
   "published_product_channels": {
     "999888104": "test_channel",
     "100500888999777": "lodydeals",
