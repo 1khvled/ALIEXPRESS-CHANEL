@@ -18848,10 +18848,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794277772.2117515,
+    "last_sweep_time": 1794277963.8144822,
     "last_sweep_times": {
-      "algeria": 1794277769.4384315,
-      "france": 1794277772.2117515
+      "algeria": 1794277960.9136393,
+      "france": 1794277963.8144822
     },
     "last_deal_post_times": {
       "algeria": 1794265911.9685104
@@ -22872,9 +22872,9 @@
       "timestamp": 1793966540.4530497
     }
   ],
-  "last_pre_11_11_advisory_time": 1793966544.0111399,
-  "next_pre_11_11_interval_seconds": 311323,
-  "pre_11_11_variant_idx": 1,
+  "last_pre_11_11_advisory_time": 1794277956.9993703,
+  "next_pre_11_11_interval_seconds": 337506,
+  "pre_11_11_variant_idx": 2,
   "published_title_prices": {},
   "daily_fahras_history": {
     "phones_part_1": 1793600442.6369503,
