@@ -1131,7 +1131,7 @@
     "1005011787296177": 1793607070.347875,
     "1005007375332966": 1793467173.1692383,
     "1005012543970886": 1793467209.762414,
-    "1005013222073946": 1794230168.269789,
+    "1005013222073946": 1794306871.9339762,
     "1005010485068924": 1794303364.4723535,
     "1005013245248248": 1793467100.7719579,
     "1005011790544318": 1793448745.105644,
@@ -2414,7 +2414,7 @@
     "UGREEN  1080P Webcam 8MP for PC": 1791104748.6212523,
     "EasySMX X15 Wireless PC Gamepad Hall Effect": 1791104468.758226,
     "Attack Shark X5": 1790888161.7112389,
-    "Honor Choice Watch 2i": 1794079932.1547406,
+    "Honor Choice Watch 2i": 1794306871.9339762,
     "HONOR CHOICE Earbuds X7e Active": 1790888191.2162998,
     "Honor Watch X5i": 1790973641.950298,
     "UGREEN 45W GaN Charger": 1793399449.9599383,
@@ -3323,7 +3323,6 @@
     "CUSU CV3500Q 2TB M.2": 1794305012.9961731
   },
   "published_post_keys": [
-    "pcgamingpart:7938",
     "lodydeals:45424",
     "ecksdeal:5950",
     "ecksdeal:5969",
@@ -4322,19 +4321,20 @@
     "aniscoupons:34395",
     "aniscoupons:34396",
     "aniscoupons:34399",
-    "aniscoupons:34400"
+    "aniscoupons:34400",
+    "aniscoupons:34401"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794306495.9115696,
+  "last_run_time": 1794306871.9339762,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
       "last_check_time": 1794252785.3081255
     },
     "lodydeals": {
-      "last_message_id": 46320,
-      "last_check_time": 1794305015.056621
+      "last_message_id": 46321,
+      "last_check_time": 1794306866.5594819
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4357,8 +4357,8 @@
       "last_check_time": 1794304466.971382
     },
     "aniscoupons": {
-      "last_message_id": 34400,
-      "last_check_time": 1794306497.9685793
+      "last_message_id": 34401,
+      "last_check_time": 1794306873.9839706
     },
     "bnddeals": {
       "last_message_id": 51242,
@@ -4681,7 +4681,7 @@
     "1005011787296177": 29.76,
     "1005007375332966": 52.8,
     "1005012543970886": 12.3,
-    "1005013222073946": 19.51,
+    "1005013222073946": 19.5,
     "1005010485068924": 22.47,
     "1005013245248248": 18.5,
     "1005011790544318": 57.85,
@@ -19132,6 +19132,16 @@
       "price": 118.5,
       "timestamp": 1794306495.9115696,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34401": {
+      "channel_msg_id": 2220,
+      "product_id": "1005013222073946",
+      "title": "Honor Choice Watch 2i",
+      "channel": "aniscoupons",
+      "source_msg_id": 34401,
+      "price": 19.5,
+      "timestamp": 1794306871.9339762,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19140,17 +19150,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794306498.7250288,
+    "last_deal_post_time": 1794306874.853367,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794306672.179882,
+    "last_sweep_time": 1794306878.5184166,
     "last_sweep_times": {
-      "algeria": 1794306669.5062213,
-      "france": 1794306672.179882
+      "algeria": 1794306874.8317535,
+      "france": 1794306878.5184166
     },
     "last_deal_post_times": {
-      "algeria": 1794306498.7250288
+      "algeria": 1794306874.853367
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19567,7 +19577,7 @@
     "1005011787296177": "lodydeals",
     "1005007375332966": "aniscoupons",
     "1005012543970886": "aniscoupons",
-    "1005013222073946": "lodydeals",
+    "1005013222073946": "aniscoupons",
     "1005010485068924": "aniscoupons",
     "1005013245248248": "zedstoreonline",
     "1005011790544318": "bnddeals",
@@ -21618,7 +21628,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "bnddeals:50950",
     "aniscoupons:33318",
     "zedstoreonline:39035",
     "ecksdeal:5965",
@@ -22617,7 +22626,8 @@
     "bnddeals:51242",
     "zedstoreonline:39808",
     "aniscoupons:34397",
-    "aniscoupons:34398"
+    "aniscoupons:34398",
+    "lodydeals:46321"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
