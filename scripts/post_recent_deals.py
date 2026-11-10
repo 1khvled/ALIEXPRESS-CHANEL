@@ -155,6 +155,118 @@ async def publish_incoming_multi_deal_post(raw_text: str, source_channel: str, s
         return False
 
 
+async def publish_incoming_coupon_claim_post(raw_text: str, source_channel: str, source_msg_id: int) -> bool:
+    """
+    Publishes incoming coupon reservation / restock announcement posts from monitored channels:
+    - Monetizes ALL AliExpress links 1:1 using our official affiliate tag.
+    - Formats caption preserving country instructions and claim links.
+    - Uses official assets/11_11_warm_up_kickoff.png banner.
+    - Replaces competitor channel/bot mentions.
+    - Deduplicates via record_coupon_restock_alert_published (once per morning).
+    - Auto-publishes to Telegram channel @DzAliexpress0.
+    """
+    try:
+        from app.aliexpress.urls import extract_all_urls, is_aliexpress_url, is_potential_shortener
+        from app.aliexpress.affiliate import affiliate_service
+        from api.coin_bot import ensure_affiliate
+        from app.ai.generator import format_coupon_claim_caption
+        from app.publisher.state_tracker import (
+            is_coupon_restock_alert_eligible,
+            record_coupon_restock_alert_published,
+            record_post_published
+        )
+
+        now_dz = datetime.now(timezone(timedelta(hours=1)))
+        today_str = now_dz.strftime("%Y-%m-%d")
+
+        if not is_coupon_restock_alert_eligible(today_str):
+            logger.info(f"Skipping incoming coupon claim {source_channel} #{source_msg_id}: restock alert already posted today")
+            return False
+
+        urls = extract_all_urls(raw_text)
+        ali_urls = [u for u in urls if is_aliexpress_url(u) or is_potential_shortener(u)]
+        if not ali_urls:
+            return False
+
+        # Monetize all unique AliExpress URLs 1:1
+        link_mapping = {}
+        for u in ali_urls:
+            clean_u = u.rstrip('.,;)"\'')
+            if clean_u not in link_mapping:
+                try:
+                    monetized = await affiliate_service.create_affiliate_link(clean_u)
+                    link_mapping[clean_u] = ensure_affiliate(monetized)
+                except Exception as aff_err:
+                    logger.warning(f"Failed monetizing link {clean_u}: {aff_err}")
+                    link_mapping[clean_u] = clean_u
+
+        caption = format_coupon_claim_caption(raw_text, link_mapping)
+
+        banner_path = settings.BASE_DIR / "assets" / "11_11_warm_up_kickoff.png"
+        bot_token = get_bot_token()
+        target_chat = getattr(settings, "TARGET_CHANNEL_ID", None) or os.getenv("TARGET_CHANNEL_ID", "@DzAliexpress0")
+        if not bot_token:
+            return False
+
+        first_aff = list(link_mapping.values())[0] if link_mapping else "https://s.click.aliexpress.com/e/_c3OOlDBD"
+        reply_markup = {
+            "inline_keyboard": [
+                [
+                    {"text": "🎟️ حجز الكوبونات المباشر", "url": first_aff}
+                ],
+                [
+                    {"text": "🪙 البوت لتخفيض الأسعار", "url": "https://t.me/Alilo07BOT"},
+                    {"text": "📢 قناة الصفقات الرسمية", "url": "https://t.me/DzAliexpress0"}
+                ]
+            ]
+        }
+
+        async with httpx.AsyncClient(timeout=25.0) as client:
+            resp = None
+            if banner_path.exists():
+                with open(banner_path, "rb") as f_img:
+                    resp = await client.post(
+                        f"https://api.telegram.org/bot{bot_token}/sendPhoto",
+                        data={
+                            "chat_id": target_chat,
+                            "caption": caption,
+                            "parse_mode": "HTML",
+                            "reply_markup": json.dumps(reply_markup)
+                        },
+                        files={"photo": ("11_11_warm_up_kickoff.png", f_img, "image/png")}
+                    )
+            if not resp or resp.status_code != 200 or not resp.json().get("ok"):
+                resp = await client.post(
+                    f"https://api.telegram.org/bot{bot_token}/sendMessage",
+                    json={
+                        "chat_id": target_chat,
+                        "text": caption,
+                        "parse_mode": "HTML",
+                        "reply_markup": reply_markup,
+                        "disable_web_page_preview": True
+                    }
+                )
+
+            if resp.status_code == 200 and resp.json().get("ok"):
+                new_msg_id = resp.json().get("result", {}).get("message_id")
+                record_coupon_restock_alert_published(today_str)
+                record_post_published(
+                    channel_username=source_channel,
+                    message_id=source_msg_id,
+                    product_id=f"COUPON_CLAIM_{source_channel}_{source_msg_id}",
+                    title="حجز وتجدد كوبونات 11.11",
+                    channel_msg_id=new_msg_id
+                )
+                print(f"  [COUPON CLAIM PUBLISHED] Auto-posted coupon restock alert from {source_channel} #{source_msg_id} -> DzAliexpress0 #{new_msg_id}!")
+                return True
+            else:
+                print(f"  [!] Failed to publish coupon claim: {resp.text if resp else 'No response'}")
+                return False
+    except Exception as e:
+        print(f"  [!] Exception publishing coupon claim: {e}")
+        return False
+
+
 async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bool = False) -> int:
     await init_db()
 
@@ -236,6 +348,16 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
             print(f"[PROMO ALERT AUTO-POST] {alert.get('type')}: {alert.get('promo')} (Msg ID: {alert.get('message_id')})")
     except Exception as e:
         print(f"[!] Promo alert check error: {e}")
+
+    # Automated Check: 09:00 AM Coupon Restock & Direct Reservation Alert
+    try:
+        from app.publisher.promo_notifiers import check_and_auto_post_coupon_restock_alert
+        force_restock = "--restock-alert" in sys.argv or "--force-restock" in sys.argv
+        restock_msg_id = await check_and_auto_post_coupon_restock_alert(force=force_restock)
+        if restock_msg_id:
+            print(f"[COUPON RESTOCK AUTO-POST] Published official 09:00 AM coupon restock alert: #{restock_msg_id}")
+    except Exception as e:
+        print(f"[!] Coupon restock alert check error: {e}")
 
     # Automated Check: Rotating Coin & PC Educational Reminders (48-72h randomized interval)
     try:
@@ -563,6 +685,22 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         else:
                             # User strictly wants single deals only, skip incoming multi-deal roundups
                             logger.info(f"Skipping multi-deal compilation / Tajmi3at {ch} #{msg_id} (single deals only)")
+                            max_processed_id = max(max_processed_id, msg_id)
+                            record_monitored_channel_last_id(ch, msg_id)
+                            record_post_handled(ch, msg_id)
+                            continue
+
+                    # Check: Coupon Claim / Reservation Post (e.g. 09:00 AM restock links, claim center)
+                    from app.aliexpress.parser import is_coupon_claim_post
+                    if is_coupon_claim_post(raw_text):
+                        published_claim = await publish_incoming_coupon_claim_post(
+                            raw_text=raw_text,
+                            source_channel=ch,
+                            source_msg_id=msg_id
+                        )
+                        if published_claim:
+                            deals_published_this_run += 1
+                            published_deals.append(f"COUPON_CLAIM_{ch}_{msg_id}")
                             max_processed_id = max(max_processed_id, msg_id)
                             record_monitored_channel_last_id(ch, msg_id)
                             record_post_handled(ch, msg_id)

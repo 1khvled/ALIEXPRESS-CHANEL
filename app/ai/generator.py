@@ -812,6 +812,55 @@ def format_multi_deal_tajmi3at_1to1(raw_text: str, link_mapping: Dict[str, str])
     return caption.strip()
 
 
+def format_coupon_claim_caption(raw_text: str, link_mapping: Dict[str, str]) -> str:
+    """
+    Standardizes Coupon Center / Restock announcements into our high-converting channel post:
+    - Native blockquote header indicating coupon return & replenishment
+    - Algeria country setup instruction
+    - Direct monetized links using our official affiliate tags
+    - Clear pro-tip to collect all coupons before stock runs out
+    - Bot & Channel footer attribution with zero competitor links
+    """
+    monetized_urls = []
+    for raw_u, aff_u in link_mapping.items():
+        if aff_u and aff_u not in monetized_urls:
+            monetized_urls.append(aff_u)
+
+    if not monetized_urls:
+        monetized_urls = ["https://s.click.aliexpress.com/e/_c3OOlDBD"]
+
+    lines = [
+        "<blockquote>🔥 <b>تجدد الكوبونات وتوفرها رسمياً الآن! سارعوا بالحجز ⤵️</b></blockquote>",
+        "",
+        "تتوفر الكوبونات الآن لحسابات الجزائر بكميات محدودة جداً مع انطلاق أقوى تحديثات وتخفيضات 11.11! ⏰",
+        "",
+        "🇩🇿 <b>ضع البلد الجزائر</b> من إعدادات التطبيق قبل الدخول للرابط.",
+        "",
+        "🎟️ <b>رابط صفحة حجز وجمع الكوبونات المباشر:</b>",
+        f"👉 {monetized_urls[0]}"
+    ]
+
+    if len(monetized_urls) > 1:
+        lines.extend([
+            "",
+            "🔥 <b>رابط آخر لأقوى الصفقات والتخفيضات:</b>",
+            f"👉 {monetized_urls[1]}"
+        ])
+
+    lines.extend([
+        "",
+        "💡 ادخلوا للرابط وقوموا بتحصيل (Collect) لجميع الكوبونات فوراً لتثبيتها في حساباتكم قبل نفاد الكمية! ⚡",
+        "",
+        "لا تنسى استخدام البوت للشراء بأقل الأسعار ومضاعفة خصم العملات :",
+        "https://t.me/Alilo07BOT",
+        "",
+        "قناة التليغرام للمزيد من العروض : @DzAliexpress0",
+        "https://t.me/DzAliexpress0"
+    ])
+
+    return "\n".join(lines).strip()
+
+
 def format_competitor_to_lody_1to1(raw_text: str, affiliate_url: str, coupon_code: Optional[str] = None, extracted_title: Optional[str] = None, deal_type: Optional[str] = None) -> str:
     """
     Transforms incoming posts from ANY monitored channel (Lodydeals, ECKSDEAL, ZedStore, AnisCoupons, BNDDeals)

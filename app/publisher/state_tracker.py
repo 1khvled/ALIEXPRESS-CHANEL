@@ -1130,6 +1130,38 @@ def record_channel_announcement_published(tag: str, date_str: str):
     state["channel_announcements_history"][tag] = date_str
     save_persistent_state(state)
 
+# ── 09:00 AM Coupon Restock & Direct Claim Alert Tracking ──────
+def is_coupon_restock_time_window(now_dt: Optional[datetime] = None) -> bool:
+    """
+    Checks if current time in Algiers (UTC+1) is around 09:00 AM.
+    Window: 08:55 to 09:40 UTC+1 (accommodates GitHub Actions cron delays).
+    """
+    dz_tz = timezone(timedelta(hours=1))
+    if now_dt is None:
+        now_dt = datetime.now(dz_tz)
+    elif now_dt.tzinfo is None:
+        now_dt = now_dt.replace(tzinfo=dz_tz)
+    else:
+        now_dt = now_dt.astimezone(dz_tz)
+
+    hour = now_dt.hour
+    minute = now_dt.minute
+    return (hour == 8 and minute >= 55) or (hour == 9 and minute <= 40)
+
+def is_coupon_restock_alert_eligible(date_str: str) -> bool:
+    """Checks if the 09:00 AM coupon restock alert has already been posted today."""
+    state = load_persistent_state()
+    history = state.get("coupon_restock_alerts_history", {})
+    return history.get("restock_alert") != date_str
+
+def record_coupon_restock_alert_published(date_str: str):
+    """Records that the coupon restock alert was published for the given date."""
+    state = load_persistent_state()
+    if "coupon_restock_alerts_history" not in state:
+        state["coupon_restock_alerts_history"] = {}
+    state["coupon_restock_alerts_history"]["restock_alert"] = date_str
+    save_persistent_state(state)
+
 # ── Daily Tajmi3at (Roundups at ~10:00 PM UTC+1) Tracking ──────
 def is_tajmi3at_time_window(now_dt: Optional[datetime] = None) -> bool:
     """

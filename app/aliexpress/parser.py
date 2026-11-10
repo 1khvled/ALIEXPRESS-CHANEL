@@ -1591,6 +1591,43 @@ def is_multi_deal_compilation(text: str) -> bool:
     return False
 
 
+def is_coupon_claim_post(text: str) -> bool:
+    """
+    Detects whether an incoming post is a Coupon Reservation / Coupon Center / Restock announcement
+    (e.g., 'حجز الكوبونات', 'رابط صفحة الكوبونات', 'تجددت الكوبونات', 'توفرت الكوبونات').
+    """
+    if not text:
+        return False
+    lower = text.lower()
+
+    from app.aliexpress.urls import extract_all_urls, is_aliexpress_url, is_potential_shortener
+    urls = extract_all_urls(text)
+    ali_urls = [u for u in urls if is_aliexpress_url(u) or is_potential_shortener(u)]
+    if not ali_urls:
+        return False
+
+    coupon_kws = ["كوبون", "كوبونات", "coupon", "coupons", "قسائم", "قسيمة"]
+    if not any(k in lower for k in coupon_kws):
+        return False
+
+    action_kws = [
+        "حجز", "احجز", "احجزوا", "صفحة الكوبونات", "رابط الحجز", "رابط الكوبونات",
+        "تحصيل", "تجدد", "تجددت", "توفرت", "توفر الكوبونات", "رجعت الكوبونات",
+        "عودة الكوبونات", "كوبونات من جديد", "حجز الكوبون", "حجز قسائم",
+        "glo-coupon-center", "coupon-center", "300003448"
+    ]
+    if not any(k in lower for k in action_kws):
+        return False
+
+    usd_price, _ = extract_prices(text)
+    has_item_link = any("/item/" in u.lower() for u in ali_urls)
+    has_coupon_center = any("coupon" in u.lower() or "300003448" in u.lower() for u in ali_urls)
+    if has_item_link and usd_price is not None and not has_coupon_center:
+        return False
+
+    return True
+
+
 
 BRAND_TRANSLITERATIONS = {
     "بوكو": "poco",

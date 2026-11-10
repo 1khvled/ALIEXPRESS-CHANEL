@@ -560,3 +560,87 @@ async def ensure_active_promo_coupons_pinned(
     else:
         logger.error(f"[PROMO PIN] Failed to publish & pin coupon bulletin: {err}")
         return None
+
+
+async def check_and_auto_post_coupon_restock_alert(
+    now: Optional[datetime] = None,
+    bot_token: Optional[str] = None,
+    channel_id: Optional[str] = None,
+    force: bool = False
+) -> Optional[int]:
+    """
+    Autonomous 09:00 AM Coupon Restock Notifier:
+    Checks if current time in Algiers (UTC+1) is around 09:00 AM (08:55 AM - 09:40 AM)
+    during 11.11 sale era. If not yet posted today, publishes the official
+    coupon claim & booking post with our verified affiliate links to @DzAliexpress0.
+    """
+    from app.publisher.state_tracker import (
+        is_coupon_restock_time_window,
+        is_coupon_restock_alert_eligible,
+        record_coupon_restock_alert_published
+    )
+
+    dz_tz = timezone(timedelta(hours=1))
+    now_dz = now.astimezone(dz_tz) if (now and now.tzinfo) else (now.replace(tzinfo=dz_tz) if now else datetime.now(dz_tz))
+    today_str = now_dz.strftime("%Y-%m-%d")
+
+    # Time window check (unless forced)
+    if not force and not is_coupon_restock_time_window(now_dz):
+        return None
+
+    # Deduplication check: once per day
+    if not force and not is_coupon_restock_alert_eligible(today_str):
+        return None
+
+    logger.info(f"[COUPON RESTOCK] Triggering official 09:00 AM coupon restock alert for {today_str}...")
+
+    # Verified official affiliate links for Coupon Center and 11.11 Top Deals
+    claim_url = "https://s.click.aliexpress.com/e/_c3OOlDBD"
+    deals_url = "https://s.click.aliexpress.com/e/_c30KcdBp"
+
+    text = (
+        "<blockquote>🔥 <b>تجدد الكوبونات وتوفرها رسمياً الآن! سارعوا بالحجز ⤵️</b></blockquote>\n\n"
+        "تتوفر الكوبونات الآن لحسابات الجزائر بكميات محدودة جداً على الساعة <b>09:00 صباحاً</b> مع انطلاق تحديثات وتخفيضات 11.11! ⏰\n\n"
+        "🇩🇿 <b>ضع البلد الجزائر</b> من إعدادات التطبيق قبل الدخول للرابط.\n\n"
+        "🎟️ <b>رابط صفحة حجز وجمع الكوبونات المباشر:</b>\n"
+        f"👉 {claim_url}\n\n"
+        "🔥 <b>رابط أقوى عروض وتخفيضات 11.11:</b>\n"
+        f"👉 {deals_url}\n\n"
+        "💡 <b>ادخلوا للرابط وقوموا بتحصيل (Collect) لجميع الكوبونات فوراً لتثبيتها في حساباتكم قبل نفاد الكمية! ⚡</b>\n\n"
+        "لا تنسى استخدام البوت للشراء بأقل الأسعار ومضاعفة خصم العملات :\n"
+        "https://t.me/Alilo07BOT\n\n"
+        "قناة التليغرام للمزيد من العروض : @DzAliexpress0\n"
+        "https://t.me/DzAliexpress0"
+    )
+
+    reply_markup = {
+        "inline_keyboard": [
+            [
+                {"text": "🎟️ حجز الكوبونات المباشر", "url": claim_url}
+            ],
+            [
+                {"text": "🪙 البوت لتخفيض الأسعار", "url": "https://t.me/Alilo07BOT"},
+                {"text": "📢 قناة الصفقات الرسمية", "url": "https://t.me/DzAliexpress0"}
+            ]
+        ]
+    }
+
+    img_path = get_event_started_image_path()
+    token = bot_token or ADMIN_BOT_TOKEN or TELEGRAM_BOT_TOKEN
+    target = channel_id or TARGET_CHANNEL_ID
+
+    success, err, msg_id = await send_promo_alert_to_channel(
+        text=text,
+        reply_markup=reply_markup,
+        bot_token=token,
+        channel_id=target,
+        image_path=img_path
+    )
+
+    if success and msg_id:
+        record_coupon_restock_alert_published(today_str)
+        logger.info(f"[COUPON RESTOCK] Successfully published restock alert (Msg #{msg_id}) to {target}")
+        return msg_id
+    else:
+        logger.error(f"[COUPON RESTOCK] Failed to post restock alert: {err}")
+        return None
