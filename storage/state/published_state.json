@@ -1376,7 +1376,7 @@
     "1005008366962319": 1794134534.5760646,
     "1005005058037424": 1793779907.9964287,
     "1005012946895000": 1793793714.105913,
-    "1005012150344482": 1793966664.0552397,
+    "1005012150344482": 1794314418.8957746,
     "1005006972551834": 1793793774.6743867,
     "1005010169268165": 1793794440.9453664,
     "1005010702038861": 1794134168.8193681,
@@ -3212,7 +3212,7 @@
     "HONOR PAD X8A 4/64GB": 1793908989.4952903,
     "Magcubic HY300 Pro Projector": 1793908994.588809,
     "CUSU SSD SATA3": 1793913777.3174822,
-    "Haylou Solar NEO 2 Amoled": 1793966664.0552397,
+    "Haylou Solar NEO 2 Amoled": 1794314418.8957746,
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones": 1794313321.761044,
     "HAYLOU Solar Ultra GPS": 1793966681.3536706,
     "NOTHING Watch 3 Pro": 1793966696.631638,
@@ -3356,7 +3356,6 @@
     "MACHENIKE G1 Wireless Gaming Controller": 1794313510.6359115
   },
   "published_post_keys": [
-    "aniscoupons:32735",
     "zedstoreonline:38788",
     "zedstoreonline:38898",
     "zedstoreonline:38812",
@@ -4355,11 +4354,12 @@
     "zedstoreonline:39821",
     "zedstoreonline:39822",
     "zedstoreonline:39824",
-    "aniscoupons:34420"
+    "aniscoupons:34420",
+    "zedstoreonline:39825"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794314242.0907123,
+  "last_run_time": 1794314418.8957746,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4386,8 +4386,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39824,
-      "last_check_time": 1794314239.0527356
+      "last_message_id": 39825,
+      "last_check_time": 1794314420.9546447
     },
     "aniscoupons": {
       "last_message_id": 34420,
@@ -19430,6 +19430,16 @@
       "price": 12.11,
       "timestamp": 1794314242.0907123,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39825": {
+      "channel_msg_id": 2247,
+      "product_id": "1005012150344482",
+      "title": "Haylou Solar NEO 2 Amoled",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39825,
+      "price": 18.7,
+      "timestamp": 1794314418.8957746,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19438,17 +19448,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794314245.6808038,
+    "last_deal_post_time": 1794314422.2136583,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794314248.623655,
+    "last_sweep_time": 1794314425.0250852,
     "last_sweep_times": {
-      "algeria": 1794314245.660514,
-      "france": 1794314248.623655
+      "algeria": 1794314422.1839616,
+      "france": 1794314425.0250852
     },
     "last_deal_post_times": {
-      "algeria": 1794314245.6808038
+      "algeria": 1794314422.2136583
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
