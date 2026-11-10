@@ -1425,7 +1425,7 @@
     "1005008645323478": 1794235676.7278144,
     "1005008636930795": 1794231632.2676654,
     "1005006260870758": 1794250569.5221198,
-    "1005009759580502": 1794079741.7808652,
+    "1005009759580502": 1794331533.1223195,
     "1005009120888793": 1794306130.341298,
     "1005011874310777": 1794087501.0429602,
     "1005008721853055": 1794126663.880001,
@@ -2417,7 +2417,8 @@
     "MACHENIKE G1 Wireless Gaming Controller",
     "HAYLOU Mori Pro",
     "KOOTION SATA3 SSD 128GB",
-    "Inphic YuanChuang Cyber Gaming Mouse"
+    "Inphic YuanChuang Cyber Gaming Mouse",
+    "SIX PCIe 4.0 SSD (1TB) NVMe M2"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3361,10 +3362,10 @@
     "MACHENIKE G1 Wireless Gaming Controller": 1794313510.6359115,
     "HAYLOU Mori Pro": 1794314605.5631006,
     "KOOTION SATA3 SSD 128GB": 1794315897.4341226,
-    "Inphic YuanChuang Cyber Gaming Mouse": 1794320674.833981
+    "Inphic YuanChuang Cyber Gaming Mouse": 1794320674.833981,
+    "SIX PCIe 4.0 SSD (1TB) NVMe M2": 1794331533.1223195
   },
   "published_post_keys": [
-    "aniscoupons:33273",
     "couponsglobal:48814",
     "aniscoupons:32958",
     "couponsglobal:48877",
@@ -4363,11 +4364,12 @@
     "bnddeals:51247",
     "zedstoreonline:39831",
     "aniscoupons:34441",
-    "aniscoupons:34442"
+    "aniscoupons:34442",
+    "bnddeals:51265"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794331342.9050384,
+  "last_run_time": 1794331533.1223195,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6053,
@@ -4402,8 +4404,8 @@
       "last_check_time": 1794331344.954099
     },
     "bnddeals": {
-      "last_message_id": 51264,
-      "last_check_time": 1794328761.2665536
+      "last_message_id": 51265,
+      "last_check_time": 1794331535.1795883
     }
   },
   "published_product_prices": {
@@ -4985,7 +4987,7 @@
     "1005008295555234": 59.5,
     "1005008645323478": 41.5,
     "1005006260870758": 41.1,
-    "1005009759580502": 101.07,
+    "1005009759580502": 101.1,
     "1005009120888793": 22.3,
     "1005011874310777": 24.2,
     "1005008721853055": 8.7,
@@ -19499,6 +19501,16 @@
       "price": 365.8,
       "timestamp": 1794331342.9050384,
       "status": "ACTIVE"
+    },
+    "bnddeals:51265": {
+      "channel_msg_id": 2254,
+      "product_id": "1005009759580502",
+      "title": "SIX PCIe 4.0 SSD (1TB) NVMe M2",
+      "channel": "bnddeals",
+      "source_msg_id": 51265,
+      "price": 101.1,
+      "timestamp": 1794331533.1223195,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19507,17 +19519,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794331345.7491348,
+    "last_deal_post_time": 1794331535.230512,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794331348.7930202,
+    "last_sweep_time": 1794331539.0652163,
     "last_sweep_times": {
-      "algeria": 1794331345.72716,
-      "france": 1794331348.7930202
+      "algeria": 1794331535.205546,
+      "france": 1794331539.0652163
     },
     "last_deal_post_times": {
-      "algeria": 1794331345.7491348
+      "algeria": 1794331535.230512
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20211,7 +20223,7 @@
     "1005008645323478": "aniscoupons",
     "1005008636930795": "zedstoreonline",
     "1005006260870758": "aniscoupons",
-    "1005009759580502": "lodydeals",
+    "1005009759580502": "bnddeals",
     "1005009120888793": "aniscoupons",
     "1005011874310777": "lodydeals",
     "1005008721853055": "zedstoreonline",
@@ -21210,7 +21222,8 @@
     "MACHENIKE G1 Wireless Gaming Controller": "zedstoreonline",
     "HAYLOU Mori Pro": "aniscoupons",
     "KOOTION SATA3 SSD 128GB": "bnddeals",
-    "Inphic YuanChuang Cyber Gaming Mouse": "zedstoreonline"
+    "Inphic YuanChuang Cyber Gaming Mouse": "zedstoreonline",
+    "SIX PCIe 4.0 SSD (1TB) NVMe M2": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
