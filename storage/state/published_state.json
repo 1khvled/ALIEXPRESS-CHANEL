@@ -907,7 +907,7 @@
     "1005013313539058": 1791482965.5086565,
     "9998889315": 1791589315.5172248,
     "COUPONS_54d30f00dccf": 1791626806.6018147,
-    "1005008776714223": 1793966691.5688944,
+    "1005008776714223": 1794302230.3856256,
     "9998886934": 1791626934.8945594,
     "9998887499": 1791627499.229838,
     "9998887532": 1791627532.2548609,
@@ -1249,7 +1249,7 @@
     "1005010114569881": 1793543824.1762173,
     "1005013053122560": 1794223202.4757502,
     "1005012322822595": 1793543961.1645148,
-    "1005009662812027": 1793973971.0121949,
+    "1005009662812027": 1794302238.7307503,
     "1005005975560350": 1794215317.7512906,
     "1005012922578845": 1793544001.8628821,
     "1005011752891197": 1793613465.8475375,
@@ -1398,7 +1398,7 @@
     "1005010041181003": 1794299814.8079743,
     "1005010265542567": 1794131426.95932,
     "1005003156756854": 1794163011.802638,
-    "1005010142208108": 1793987278.5140982,
+    "1005010142208108": 1794302223.66585,
     "1005008534907844": 1793987285.4130383,
     "1005009577554629": 1793987289.8200357,
     "1005010656922924": 1793994623.1444166,
@@ -1451,7 +1451,7 @@
     "1005007820092290": 1794224654.527678,
     "1005012329021334": 1794225392.2814271,
     "1005013218893010": 1794226314.627466,
-    "1005013480169843": 1794264257.1501565,
+    "1005013480169843": 1794302244.5686898,
     "1005013226454479": 1794227594.9699965,
     "1005005548265076": 1794231079.407264,
     "1005012555450345": 1794232557.0275722,
@@ -2678,7 +2678,7 @@
     "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)": 1792156501.818011,
     "Redmi Pad 2 9.7": 1792061322.5579543,
     "Redmi Note 12 5G Global (4/128GB)": 1792156524.878074,
-    "Blackview Wave 10C": 1794264257.1501565,
+    "Blackview Wave 10C": 1794302244.5686898,
     "متوسط سعره حالياً 82000دج": 1793276237.692456,
     "iQOO Z11s 5G (8/128GB)": 1794159573.4625287,
     "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1793966861.2399917,
@@ -3000,7 +3000,7 @@
     "Realme Pad 3  8/256GB": 1793543961.1645148,
     "Lenovo Xiaoxin Pro 13 8/128GB": 1793543976.0151808,
     "Lenovo Xiaoxin Pad Pro 2025": 1793543981.0397952,
-    "Magcubic HY300 Max 400ANSI": 1793738518.4424365,
+    "Magcubic HY300 Max 400ANSI": 1794302238.7307503,
     "FIFINE H9 7.1 Surround Gaming": 1793543992.7069333,
     "Realme 15 5G 12/256GB": 1793544001.8628821,
     "Redmi 17 4G 4/128GB": 1793544011.7179348,
@@ -3169,7 +3169,7 @@
     "GameSir T4 Nova Lite": 1794141669.7207782,
     "Xiaoxin Pad Pro GT 8/256GB": 1793737359.999931,
     "EasyThreed 3D Printer Entry": 1793741666.9686077,
-    "CUSU SSD SATA 1TB": 1793742040.7102718,
+    "CUSU SSD SATA 1TB": 1794302230.3856256,
     "MAONO PD400X USB/XLR": 1793742770.1634803,
     "HyperX Cloud 3 DTS": 1793779903.687306,
     "KOOTION X15 M.2 Nvme 512GB": 1793969920.9023197,
@@ -3221,7 +3221,7 @@
     "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794299814.8079743,
     "Ulanzi A200 Mini Wireless Lavalier Microphone": 1794131426.95932,
     "حامل هاتف Ulanzi ST-06S": 1794163011.802638,
-    "AULA MINI60 HE PRO": 1793987278.5140982,
+    "AULA MINI60 HE PRO": 1794302223.66585,
     "Maono Wave T5 Wireless Mic": 1793987285.4130383,
     "SAMSUNG DDR3 8GB 1600v": 1793987289.8200357,
     "Realme 15 Pro (12/256GB)": 1794298882.30035,
@@ -3317,10 +3317,6 @@
     "Portable Hair Clipper": 1794263885.7408762
   },
   "published_post_keys": [
-    "aniscoupons:32961",
-    "pcgamingpart:7936",
-    "aniscoupons:33282",
-    "aniscoupons:32787",
     "aniscoupons:32986",
     "lodydeals:45825",
     "test_channel:1791759531",
@@ -4316,19 +4312,23 @@
     "aniscoupons:34383",
     "aniscoupons:34384",
     "aniscoupons:34385",
-    "lodydeals:46313"
+    "lodydeals:46313",
+    "lodydeals:46314",
+    "lodydeals:46315",
+    "lodydeals:46317",
+    "aniscoupons:34386"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794302033.8246877,
+  "last_run_time": 1794302244.5686898,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
       "last_check_time": 1794252785.3081255
     },
     "lodydeals": {
-      "last_message_id": 46313,
-      "last_check_time": 1794302035.8837092
+      "last_message_id": 46317,
+      "last_check_time": 1794302240.7640886
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4351,8 +4351,8 @@
       "last_check_time": 1794300355.0053985
     },
     "aniscoupons": {
-      "last_message_id": 34385,
-      "last_check_time": 1794301839.8317654
+      "last_message_id": 34386,
+      "last_check_time": 1794302246.602031
     },
     "bnddeals": {
       "last_message_id": 51241,
@@ -4456,7 +4456,7 @@
     "1005010470699571": 17.8,
     "1005012741634118": 23.7,
     "1005008554596598": 13.96,
-    "1005008776714223": 43.9,
+    "1005008776714223": 74.47,
     "1005010306498953": 1.46,
     "1005010338761787": 1.49,
     "1005012265051745": 246.04,
@@ -4789,7 +4789,7 @@
     "1005013053122560": 53.59,
     "1005012322822595": 266.19,
     "1005012524603100": 283.59,
-    "1005009662812027": 78.4,
+    "1005009662812027": 76.35,
     "1005005975560350": 35.9,
     "1005011752891197": 119.3,
     "1005008689880751": 76.5,
@@ -4923,7 +4923,7 @@
     "1005010041181003": 167.8,
     "1005010265542567": 24.89,
     "1005003156756854": 10.8,
-    "1005010142208108": 37.5,
+    "1005010142208108": 40.87,
     "1005008534907844": 50.86,
     "1005009577554629": 10.55,
     "1005010656922924": 20.4,
@@ -18956,6 +18956,46 @@
       "price": 366.51,
       "timestamp": 1794302033.8246877,
       "status": "ACTIVE"
+    },
+    "lodydeals:46314": {
+      "channel_msg_id": 2203,
+      "product_id": "1005010142208108",
+      "title": "AULA MINI60 HE PRO",
+      "channel": "lodydeals",
+      "source_msg_id": 46314,
+      "price": 40.87,
+      "timestamp": 1794302223.66585,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46315": {
+      "channel_msg_id": 2204,
+      "product_id": "1005008776714223",
+      "title": "CUSU SSD SATA 1TB",
+      "channel": "lodydeals",
+      "source_msg_id": 46315,
+      "price": 74.47,
+      "timestamp": 1794302230.3856256,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46317": {
+      "channel_msg_id": 2205,
+      "product_id": "1005009662812027",
+      "title": "Magcubic HY300 Max 400ANSI",
+      "channel": "lodydeals",
+      "source_msg_id": 46317,
+      "price": 76.35,
+      "timestamp": 1794302238.7307503,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34386": {
+      "channel_msg_id": 2206,
+      "product_id": "1005013480169843",
+      "title": "Blackview Wave 10C",
+      "channel": "aniscoupons",
+      "source_msg_id": 34386,
+      "price": 66.7,
+      "timestamp": 1794302244.5686898,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -18964,17 +19004,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794302038.3307617,
+    "last_deal_post_time": 1794302247.0968184,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794302041.6207097,
+    "last_sweep_time": 1794302249.97295,
     "last_sweep_times": {
-      "algeria": 1794302038.3041859,
-      "france": 1794302041.6207097
+      "algeria": 1794302247.081421,
+      "france": 1794302249.97295
     },
     "last_deal_post_times": {
-      "algeria": 1794302038.3307617
+      "algeria": 1794302247.0968184
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -19079,7 +19119,7 @@
     "1005010470699571": "zedstoreonline",
     "1005012741634118": "zedstoreonline",
     "1005008554596598": "bnddeals",
-    "1005008776714223": "zedstoreonline",
+    "1005008776714223": "lodydeals",
     "1005010306498953": "lodydeals",
     "1005010338761787": "lodydeals",
     "1005012265051745": "lodydeals",
@@ -19513,7 +19553,7 @@
     "1005013053122560": "ecksdeal",
     "1005012322822595": "lodydeals",
     "1005012524603100": "aniscoupons",
-    "1005009662812027": "aniscoupons",
+    "1005009662812027": "lodydeals",
     "1005005975560350": "aniscoupons",
     "1005011752891197": "zedstoreonline",
     "1005008689880751": "lodydeals",
@@ -21439,7 +21479,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:39028",
     "zedstoreonline:38956",
     "megaphonna:8748",
     "aniscoupons:33363",
@@ -22438,7 +22477,8 @@
     "aniscoupons:34377",
     "zedstoreonline:39805",
     "zedstoreonline:39806",
-    "lodydeals:46312"
+    "lodydeals:46312",
+    "lodydeals:46316"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
