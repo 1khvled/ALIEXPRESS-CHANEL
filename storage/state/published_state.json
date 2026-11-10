@@ -729,7 +729,8 @@
     "1005008046071240",
     "1005012083833079",
     "1005012292809645",
-    "1005007495712340"
+    "1005007495712340",
+    "1005009104334975"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -826,7 +827,7 @@
     "1005008901941749": 1792785032.5334125,
     "1005010178295650": 1793743848.9735239,
     "1005006861002512": 1791151259.5667012,
-    "1005012285327063": 1793966782.6269238,
+    "1005012285327063": 1794314242.0907123,
     "1005006581583862": 1794313321.761044,
     "1005012816171978": 1792157876.0860639,
     "1005006248571160": 1791012946.4110153,
@@ -1474,7 +1475,8 @@
     "1005008046071240": 1794310928.9154878,
     "1005012083833079": 1794311122.753493,
     "1005012292809645": 1794311488.3788898,
-    "1005007495712340": 1794311865.7221916
+    "1005007495712340": 1794311865.7221916,
+    "1005009104334975": 1794314237.0165172
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2509,7 +2511,7 @@
     "Attack Shark X1": 1790972445.6591878,
     "KUULAA USB C Cable": 1790973051.970508,
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router": 1790974856.4783835,
-    "HAYLOU Watch Faro": 1793966782.6269238,
+    "HAYLOU Watch Faro": 1794314242.0907123,
     "HAYLOU S30": 1790976351.072879,
     "Lenovo XT88 TWS Wireless Earphones Bluetooth 5.3 Dual MIC Stereo Noise": 1790976654.120254,
     "VIVO Y600 Pro 8/128GB": 1793656161.7382708,
@@ -2725,7 +2727,7 @@
     "RYZEN 7 5700X": 1794306495.9115696,
     "Ⓜ BLACKVIEW WAVE 10C (4/32)": 1792160262.8028278,
     "Ⓜ  TCL 60 NXT PAPER 8/256📱": 1792160269.0502243,
-    "HAYLOU Mori Pro ANC": 1793966654.208892,
+    "HAYLOU Mori Pro ANC": 1794314237.0165172,
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones 43dB Adaptive Noise": 1792166326.0335298,
     "HAYLOU Watch Faro Voice Calling Smart Watch": 1792360422.5608404,
     "Redmi Note 12 5G 4/128": 1793543770.1912897,
@@ -3354,8 +3356,6 @@
     "MACHENIKE G1 Wireless Gaming Controller": 1794313510.6359115
   },
   "published_post_keys": [
-    "couponsglobal:48806",
-    "bnddeals:50797",
     "aniscoupons:32735",
     "zedstoreonline:38788",
     "zedstoreonline:38898",
@@ -4353,11 +4353,13 @@
     "aniscoupons:34417",
     "bnddeals:51244",
     "zedstoreonline:39821",
-    "zedstoreonline:39822"
+    "zedstoreonline:39822",
+    "zedstoreonline:39824",
+    "aniscoupons:34420"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794313510.6359115,
+  "last_run_time": 1794314242.0907123,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6050,
@@ -4384,16 +4386,16 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39823,
-      "last_check_time": 1794313874.1337364
+      "last_message_id": 39824,
+      "last_check_time": 1794314239.0527356
     },
     "aniscoupons": {
-      "last_message_id": 34419,
-      "last_check_time": 1794314051.133424
+      "last_message_id": 34420,
+      "last_check_time": 1794314244.1269617
     },
     "bnddeals": {
-      "last_message_id": 51245,
-      "last_check_time": 1794313876.7418432
+      "last_message_id": 51246,
+      "last_check_time": 1794314245.6431954
     }
   },
   "published_product_prices": {
@@ -5022,7 +5024,8 @@
     "1005008046071240": 46.77,
     "1005012083833079": 57.9,
     "1005012292809645": 37.69,
-    "1005007495712340": 53.24
+    "1005007495712340": 53.24,
+    "1005009104334975": 10.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -19407,6 +19410,26 @@
       "price": 20.4,
       "timestamp": 1794313510.6359115,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39824": {
+      "channel_msg_id": 2245,
+      "product_id": "1005009104334975",
+      "title": "HAYLOU Mori Pro ANC",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39824,
+      "price": 10.6,
+      "timestamp": 1794314237.0165172,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34420": {
+      "channel_msg_id": 2246,
+      "product_id": "1005012285327063",
+      "title": "HAYLOU Watch Faro",
+      "channel": "aniscoupons",
+      "source_msg_id": 34420,
+      "price": 12.11,
+      "timestamp": 1794314242.0907123,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19415,17 +19438,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794313514.3732276,
+    "last_deal_post_time": 1794314245.6808038,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794314054.6452699,
+    "last_sweep_time": 1794314248.623655,
     "last_sweep_times": {
-      "algeria": 1794314051.896675,
-      "france": 1794314054.6452699
+      "algeria": 1794314245.660514,
+      "france": 1794314248.623655
     },
     "last_deal_post_times": {
-      "algeria": 1794313514.3732276
+      "algeria": 1794314245.6808038
     }
   },
   "last_coin_reminder_time": 1794119525.1570954,
@@ -20170,7 +20193,8 @@
     "1005008046071240": "aniscoupons",
     "1005012083833079": "aniscoupons",
     "1005012292809645": "aniscoupons",
-    "1005007495712340": "aniscoupons"
+    "1005007495712340": "aniscoupons",
+    "1005009104334975": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -21908,7 +21932,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "couponsglobal:48862",
     "bnddeals:50865",
     "ecksdeal:6006",
     "zedstoreonline:38559",
@@ -22907,7 +22930,8 @@
     "aniscoupons:34418",
     "zedstoreonline:39823",
     "bnddeals:51245",
-    "aniscoupons:34419"
+    "aniscoupons:34419",
+    "bnddeals:51246"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
