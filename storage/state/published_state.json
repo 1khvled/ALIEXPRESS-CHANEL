@@ -1213,7 +1213,7 @@
     "COUPONS_11.11 Global Shopping Festival Warm-Up": 1793478717.5923967,
     "1005008518280704": 1794344399.896034,
     "1005010527736444": 1793478769.6023057,
-    "1005013450996845": 1794309452.4510136,
+    "1005013450996845": 1794412182.3559208,
     "1005013144753309": 1794160820.0809557,
     "1005012061152213": 1793490079.2945042,
     "1005012519569107": 1793490085.1205146,
@@ -3335,7 +3335,7 @@
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
     "Blackview Mega 5": 1794346051.8080108,
     "Warvank X8 Wireless Gaming Mouse": 1794144806.2660766,
-    "Xiaoxin Pad Pro 2025 (8/128GB)": 1794309452.4510136,
+    "Xiaoxin Pad Pro 2025 (8/128GB)": 1794412182.3559208,
     "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": 1794145536.5317988,
     "Lenovo Thinkplus XT88": 1794146648.256951,
     "Rolls-Royce Phantom Model": 1794146655.1062205,
@@ -3420,7 +3420,6 @@
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794411999.7818277
   },
   "published_post_keys": [
-    "test_channel:1792073963",
     "aniscoupons:33304",
     "lodydeals:45460",
     "couponsglobal:48818",
@@ -4419,19 +4418,20 @@
     "aniscoupons:34511",
     "zedstoreonline:39885",
     "aniscoupons:34512",
-    "zedstoreonline:39887"
+    "zedstoreonline:39887",
+    "aniscoupons:34515"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794411999.7818277,
+  "last_run_time": 1794412182.3559208,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
       "last_check_time": 1794407600.0378215
     },
     "lodydeals": {
-      "last_message_id": 46366,
-      "last_check_time": 1794411994.0107932
+      "last_message_id": 46367,
+      "last_check_time": 1794412176.6747582
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4454,8 +4454,8 @@
       "last_check_time": 1794412001.8332038
     },
     "aniscoupons": {
-      "last_message_id": 34514,
-      "last_check_time": 1794411264.3806424
+      "last_message_id": 34515,
+      "last_check_time": 1794412184.3954012
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20140,6 +20140,16 @@
       "price": 167.8,
       "timestamp": 1794411999.7818277,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34515": {
+      "channel_msg_id": 2316,
+      "product_id": "1005013450996845",
+      "title": "Xiaoxin Pad Pro 2025 (8/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34515,
+      "price": 212.48,
+      "timestamp": 1794412182.3559208,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20148,17 +20158,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794412003.2982988,
+    "last_deal_post_time": 1794412185.2751741,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794412006.3888328,
+    "last_sweep_time": 1794412188.077847,
     "last_sweep_times": {
-      "algeria": 1794412003.276482,
-      "france": 1794412006.3888328
+      "algeria": 1794412185.2591634,
+      "france": 1794412188.077847
     },
     "last_deal_post_times": {
-      "algeria": 1794412003.2982988
+      "algeria": 1794412185.2751741
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
