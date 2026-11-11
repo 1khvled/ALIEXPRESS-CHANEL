@@ -28,7 +28,7 @@
       "ewma": 0.5768
     },
     "zedstoreonline": {
-      "seen": 1,
+      "seen": 5,
       "published": 0,
       "skipped": 0,
       "ewma": 0.5
@@ -60,7 +60,7 @@
       "ewma": 0.54
     },
     "phones": {
-      "seen": 2,
+      "seen": 6,
       "published": 2,
       "skipped": 0,
       "ewma": 0.5768
@@ -93,14 +93,14 @@
     ]
   },
   "counters": {
-    "scored": 12,
-    "verdict_publish": 11,
+    "scored": 16,
+    "verdict_publish": 15,
     "verdict_hold": 1,
     "verdict_skip": 0,
     "published": 6,
     "skipped": 0
   },
-  "score_sum": 920.93,
+  "score_sum": 1198.64,
   "recent_decisions": [
     {
       "ts": 1794383955,
@@ -197,7 +197,39 @@
       "product_id": "1005010369693975",
       "score": 59.95,
       "verdict": "hold"
+    },
+    {
+      "ts": 1794390020,
+      "channel": "zedstoreonline",
+      "category": "phones",
+      "product_id": "1005013422894128",
+      "score": 70.19,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794390024,
+      "channel": "zedstoreonline",
+      "category": "phones",
+      "product_id": "1005010179192246",
+      "score": 69.45,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794390028,
+      "channel": "zedstoreonline",
+      "category": "phones",
+      "product_id": "1005011648649269",
+      "score": 71.27,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794390032,
+      "channel": "zedstoreonline",
+      "category": "phones",
+      "product_id": "1005012406142215",
+      "score": 66.8,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794389841.9277265
+  "updated_at": 1794390032.112585
 }
