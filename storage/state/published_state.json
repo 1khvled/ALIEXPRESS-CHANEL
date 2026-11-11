@@ -1488,9 +1488,9 @@
     "1005012083833079": 1794311122.753493,
     "1005012292809645": 1794311488.3788898,
     "1005007495712340": 1794311865.7221916,
-    "1005009104334975": 1794314237.0165172,
+    "1005009104334975": 1794421043.2176414,
     "1005012474727998": 1794320674.833981,
-    "1005006807619368": 1794344038.7678037,
+    "1005006807619368": 1794421050.6233609,
     "1005010653559191": 1794349536.4429784,
     "COUPON_CLAIM_zedstoreonline_39827": 1794363974.314961,
     "1005012197291105": 1794408497.0639706,
@@ -2786,7 +2786,7 @@
     "RYZEN 7 5700X": 1794306495.9115696,
     "Ⓜ BLACKVIEW WAVE 10C (4/32)": 1792160262.8028278,
     "Ⓜ  TCL 60 NXT PAPER 8/256📱": 1792160269.0502243,
-    "HAYLOU Mori Pro ANC": 1794333726.3418753,
+    "HAYLOU Mori Pro ANC": 1794421043.2176414,
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones 43dB Adaptive Noise": 1792166326.0335298,
     "HAYLOU Watch Faro Voice Calling Smart Watch": 1792360422.5608404,
     "Redmi Note 12 5G 4/128": 1793543770.1912897,
@@ -3419,7 +3419,7 @@
     "SIX PCIe 4.0 SSD (1TB) NVMe M2": 1794331533.1223195,
     "Kootion SSD SATA": 1794332259.758732,
     "KOOTION SATA SSD 128GB": 1794334097.945569,
-    "Kingston DataTraveler 128GB": 1794344038.7678037,
+    "Kingston DataTraveler 128GB": 1794421050.6233609,
     "CUSU CV3500  M.2 NVMe SSD (1tb)": 1794420697.970357,
     "Kootion X15 M.2 NVMe 256GB": 1794346230.0535362,
     "Baseus BS2 Lite": 1794349536.4429784,
@@ -3450,8 +3450,6 @@
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551
   },
   "published_post_keys": [
-    "zedstoreonline:38917",
-    "aniscoupons:32750",
     "aniscoupons:32767",
     "aniscoupons:32691",
     "aniscoupons:33313",
@@ -4449,11 +4447,13 @@
     "lodydeals:46362",
     "lodydeals:46364",
     "lodydeals:46365",
-    "aniscoupons:34543"
+    "aniscoupons:34543",
+    "zedstoreonline:39905",
+    "aniscoupons:34544"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794420697.970357,
+  "last_run_time": 1794421050.6233609,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4480,12 +4480,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39904,
-      "last_check_time": 1794420695.173814
+      "last_message_id": 39905,
+      "last_check_time": 1794421045.2871065
     },
     "aniscoupons": {
-      "last_message_id": 34543,
-      "last_check_time": 1794420700.0348685
+      "last_message_id": 34544,
+      "last_check_time": 1794421052.6880355
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5119,7 +5119,7 @@
     "1005012083833079": 57.9,
     "1005012292809645": 37.69,
     "1005007495712340": 53.24,
-    "1005009104334975": 10.6,
+    "1005009104334975": 10.7,
     "1005012474727998": 14.9,
     "1005006807619368": 6.55,
     "1005010653559191": 10.5,
@@ -20515,6 +20515,26 @@
       "price": 179.3,
       "timestamp": 1794420697.970357,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39905": {
+      "channel_msg_id": 2352,
+      "product_id": "1005009104334975",
+      "title": "HAYLOU Mori Pro ANC",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39905,
+      "price": 10.7,
+      "timestamp": 1794421043.2176414,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34544": {
+      "channel_msg_id": 2353,
+      "product_id": "1005006807619368",
+      "title": "Kingston DataTraveler 128GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34544,
+      "price": 6.55,
+      "timestamp": 1794421050.6233609,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20523,17 +20543,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794420700.6740296,
+    "last_deal_post_time": 1794421053.4780154,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794420863.875602,
+    "last_sweep_time": 1794421055.9237685,
     "last_sweep_times": {
-      "algeria": 1794420860.840829,
-      "france": 1794420863.875602
+      "algeria": 1794421053.4499543,
+      "france": 1794421055.9237685
     },
     "last_deal_post_times": {
-      "algeria": 1794420700.6740296
+      "algeria": 1794421053.4780154
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21610,7 +21630,7 @@
     "MACHENIKE G5Pro Max SE Gaming Controller With Charging Dock": "aniscoupons",
     "Ⓜ BLACKVIEW WAVE 10C (4/32)": "megaphonna",
     "RYZEN 7 5700X": "aniscoupons",
-    "HAYLOU Mori Pro ANC": "lodydeals",
+    "HAYLOU Mori Pro ANC": "zedstoreonline",
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones 43dB Adaptive Noise": "zedstoreonline",
     "HAYLOU Watch Faro Voice Calling Smart Watch": "couponsglobal",
     "Redmi Note 12 5G 4/128": "lodydeals",
