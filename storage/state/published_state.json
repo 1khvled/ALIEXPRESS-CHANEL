@@ -1247,7 +1247,7 @@
     "1005013081060247": 1793543567.486626,
     "1005012498496817": 1793543578.6842017,
     "1005003413514494": 1793732921.385459,
-    "1005008741607292": 1793995902.130763,
+    "1005008741607292": 1794383957.69665,
     "1005010158587315": 1793543677.5915465,
     "1005012790288780": 1793656271.0286891,
     "1005012345939726": 1793656202.4239671,
@@ -3027,7 +3027,7 @@
     "POCO C81 PRO 4/64GB": 1793543647.346056,
     "Xiaomi Redmi Pad 2 4/64GB": 1793543659.5887568,
     "UGREEN 4K FHD Webcam 8MP": 1793543664.66204,
-    "ASROCK X570M PRO4": 1793543669.2450533,
+    "ASROCK X570M PRO4": 1794383957.69665,
     "Redmi Note 17 4G 4/128GB": 1793793714.105913,
     "OnePlus Turbo 6V  8/256GB": 1793735519.3537216,
     "QCY VN200 Pro 7.1 Wired": 1793656271.0286891,
@@ -3386,7 +3386,6 @@
     "حجز وتجدد كوبونات 11.11": 1794363974.314961
   },
   "published_post_keys": [
-    "zedstoreonline:38852",
     "zedstoreonline:38821",
     "lodydeals:45900",
     "couponsglobal:48848",
@@ -4385,19 +4384,20 @@
     "zedstoreonline:39842",
     "zedstoreonline:39843",
     "aniscoupons:34469",
-    "zedstoreonline:39827"
+    "zedstoreonline:39827",
+    "lodydeals:46331"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794363974.314961,
+  "last_run_time": 1794383957.69665,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
       "last_check_time": 1794350628.34148
     },
     "lodydeals": {
-      "last_message_id": 46332,
-      "last_check_time": 1794350079.0118697
+      "last_message_id": 46333,
+      "last_check_time": 1794383959.7893505
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4845,7 +4845,7 @@
     "1005013081060247": 138.13,
     "1005012498496817": 204.37,
     "1005003413514494": 20.3,
-    "1005008741607292": 110.85,
+    "1005008741607292": 110.83,
     "1005010158587315": 141.02,
     "1005012790288780": 26.95,
     "1005012345939726": 18.62,
@@ -19743,6 +19743,16 @@
       "price": null,
       "timestamp": 1794363974.314961,
       "status": "ACTIVE"
+    },
+    "lodydeals:46331": {
+      "channel_msg_id": 2279,
+      "product_id": "1005008741607292",
+      "title": "ASROCK X570M PRO4",
+      "channel": "lodydeals",
+      "source_msg_id": 46331,
+      "price": 110.83,
+      "timestamp": 1794383957.69665,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19751,17 +19761,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794363975.8108883,
+    "last_deal_post_time": 1794383962.2112787,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794383779.295737,
+    "last_sweep_time": 1794383965.1799684,
     "last_sweep_times": {
-      "algeria": 1794383774.3832316,
-      "france": 1794383779.295737
+      "algeria": 1794383962.1829345,
+      "france": 1794383965.1799684
     },
     "last_deal_post_times": {
-      "algeria": 1794363975.8108883
+      "algeria": 1794383962.2112787
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20287,7 +20297,7 @@
     "1005013081060247": "lodydeals",
     "1005012498496817": "lodydeals",
     "1005003413514494": "lodydeals",
-    "1005008741607292": "ecksdeal",
+    "1005008741607292": "lodydeals",
     "1005010158587315": "lodydeals",
     "1005012790288780": "lodydeals",
     "1005012345939726": "lodydeals",
@@ -22261,9 +22271,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "alidealsdz:134",
-    "pcgamingpart:7966",
-    "couponsglobal:48861",
     "megaphonna:8350",
     "megaphonna:8321",
     "pcgamingpart:7995",
@@ -23260,7 +23267,10 @@
     "ecksdeal:6054",
     "aniscoupons:34470",
     "zedstoreonline:39827",
-    "zedstoreonline:39844"
+    "zedstoreonline:39844",
+    "lodydeals:46329",
+    "lodydeals:46330",
+    "lodydeals:46332"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,

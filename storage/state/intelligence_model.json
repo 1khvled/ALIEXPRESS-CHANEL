@@ -1,0 +1,64 @@
+{
+  "version": "1.0.0",
+  "weights": {
+    "freshness": 1.4,
+    "price_edge": 1.3,
+    "channel_reliability": 0.7,
+    "category_value": 0.5,
+    "title_quality": 0.8,
+    "incentive": 0.6,
+    "novelty": 0.9,
+    "flow_pressure": 0.7,
+    "restock_bonus": 0.5,
+    "price_drop_bonus": 0.8,
+    "coupon_list_bonus": 0.4
+  },
+  "thresholds": {
+    "publish": 60.0,
+    "skip": 38.0
+  },
+  "temperature": 2.2,
+  "bias": 0.0,
+  "flow_target": 24.0,
+  "channel_stats": {
+    "lodydeals": {
+      "seen": 1,
+      "published": 1,
+      "skipped": 0,
+      "ewma": 0.54
+    }
+  },
+  "category_stats": {
+    "other": {
+      "seen": 1,
+      "published": 1,
+      "skipped": 0,
+      "ewma": 0.54
+    }
+  },
+  "product_prices": {
+    "1005008741607292": [
+      110.83
+    ]
+  },
+  "counters": {
+    "scored": 1,
+    "verdict_publish": 1,
+    "verdict_hold": 0,
+    "verdict_skip": 0,
+    "published": 1,
+    "skipped": 0
+  },
+  "score_sum": 61.51,
+  "recent_decisions": [
+    {
+      "ts": 1794383955,
+      "channel": "lodydeals",
+      "category": "other",
+      "product_id": "1005008741607292",
+      "score": 61.51,
+      "verdict": "publish"
+    }
+  ],
+  "updated_at": 1794383957.746236
+}
