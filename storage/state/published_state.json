@@ -1089,7 +1089,7 @@
     "1005005209037696": 1793399509.450536,
     "1005007145755647": 1794312958.7225254,
     "1005011559072337": 1793613486.2912338,
-    "1005008430504420": 1793613346.3595238,
+    "1005008430504420": 1794390398.1860356,
     "1005012483491590": 1793613986.7335317,
     "1005009234880101": 1793441297.4632108,
     "1005012853585903": 1793384186.0456433,
@@ -1221,7 +1221,7 @@
     "1005012536471204": 1793611292.7491462,
     "9998881104": 1793541104.8228326,
     "9998881403": 1793541403.922986,
-    "1005010243337678": 1793541622.6543412,
+    "1005010243337678": 1794390388.8432028,
     "9998881955": 1793541955.4874578,
     "9998882236": 1793542236.891774,
     "1005012401488201": 1793542360.268408,
@@ -2432,7 +2432,8 @@
     "Kootion X15 M.2 NVMe 256GB",
     "Baseus BS2 Lite",
     "حجز وتجدد كوبونات 11.11",
-    "Huawei Pura 90s Pro Max 12/256GB"
+    "Huawei Pura 90s Pro Max 12/256GB",
+    "OnePlus 13"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2983,7 +2984,7 @@
     "VIVO IQOO Z11 TURBO (12/256)": 1793540059.832893,
     "ViVO iQOO 15T 12/256GB": 1793541596.0579712,
     "OnePlus Ace 6 Ultra 12/256GB": 1793541603.2191782,
-    "OnePlus 15 5G 12/256GB": 1793541622.6543412,
+    "OnePlus 15 5G 12/256GB": 1794390388.8432028,
     "CUSU RAM DDR4 8x2 3200Mhz": 1793542345.0399988,
     "CUSU DDR5 RAM 16GB 6000MHz": 1793542370.559594,
     "Magcubic HY300 PRO 4K Projector": 1793542384.0089695,
@@ -3385,11 +3386,10 @@
     "Kootion X15 M.2 NVMe 256GB": 1794346230.0535362,
     "Baseus BS2 Lite": 1794349536.4429784,
     "حجز وتجدد كوبونات 11.11": 1794363974.314961,
-    "Huawei Pura 90s Pro Max 12/256GB": 1794390200.6061625
+    "Huawei Pura 90s Pro Max 12/256GB": 1794390200.6061625,
+    "OnePlus 13": 1794390398.1860356
   },
   "published_post_keys": [
-    "lodydeals:45516",
-    "lodydeals:45529",
     "aniscoupons:32783",
     "lodydeals:45518",
     "bnddeals:50844",
@@ -4387,19 +4387,21 @@
     "aniscoupons:34481",
     "aniscoupons:34482",
     "lodydeals:46345",
-    "aniscoupons:34484"
+    "aniscoupons:34484",
+    "lodydeals:46346",
+    "aniscoupons:34485"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794390207.8353982,
+  "last_run_time": 1794390398.1860356,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
       "last_check_time": 1794350628.34148
     },
     "lodydeals": {
-      "last_message_id": 46345,
-      "last_check_time": 1794390202.646448
+      "last_message_id": 46346,
+      "last_check_time": 1794390390.9059362
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4422,12 +4424,12 @@
       "last_check_time": 1794390204.9392622
     },
     "aniscoupons": {
-      "last_message_id": 34484,
-      "last_check_time": 1794390209.8786175
+      "last_message_id": 34485,
+      "last_check_time": 1794390400.2472374
     },
     "bnddeals": {
-      "last_message_id": 51272,
-      "last_check_time": 1794387812.0683208
+      "last_message_id": 51274,
+      "last_check_time": 1794390408.200177
     }
   },
   "published_product_prices": {
@@ -4700,7 +4702,7 @@
     "1005005209037696": 328.0,
     "1005007145755647": 356.9,
     "1005011559072337": 313.9,
-    "1005008430504420": 447.0,
+    "1005008430504420": 440.3,
     "1005012483491590": 245.8,
     "1005009234880101": 355.0,
     "1005012853585903": 119.28,
@@ -4823,7 +4825,7 @@
     "1005010770983388": 380.6,
     "1005010146801356": 560.65,
     "1005012536471204": 603.9,
-    "1005010243337678": 628.73,
+    "1005010243337678": 598.26,
     "1005012401488201": 30.35,
     "1005012135177627": 179.3,
     "1005013455514231": 66.71,
@@ -19825,6 +19827,26 @@
       "price": 18.4,
       "timestamp": 1794390207.8353982,
       "status": "ACTIVE"
+    },
+    "lodydeals:46346": {
+      "channel_msg_id": 2287,
+      "product_id": "1005010243337678",
+      "title": "OnePlus 15 5G 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46346,
+      "price": 598.26,
+      "timestamp": 1794390388.8432028,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34485": {
+      "channel_msg_id": 2288,
+      "product_id": "1005008430504420",
+      "title": "OnePlus 13",
+      "channel": "aniscoupons",
+      "source_msg_id": 34485,
+      "price": 440.3,
+      "timestamp": 1794390398.1860356,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19833,17 +19855,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794390210.4074905,
+    "last_deal_post_time": 1794390408.25526,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794390214.1027591,
+    "last_sweep_time": 1794390412.31112,
     "last_sweep_times": {
-      "algeria": 1794390210.3890352,
-      "france": 1794390214.1027591
+      "algeria": 1794390408.2279909,
+      "france": 1794390412.31112
     },
     "last_deal_post_times": {
-      "algeria": 1794390210.4074905
+      "algeria": 1794390408.25526
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20210,7 +20232,7 @@
     "1005005209037696": "zedstoreonline",
     "1005007145755647": "aniscoupons",
     "1005011559072337": "zedstoreonline",
-    "1005008430504420": "zedstoreonline",
+    "1005008430504420": "aniscoupons",
     "1005012483491590": "aniscoupons",
     "1005009234880101": "zedstoreonline",
     "1005012853585903": "lodydeals",
@@ -21548,7 +21570,8 @@
     "Kootion X15 M.2 NVMe 256GB": "lodydeals",
     "Baseus BS2 Lite": "zedstoreonline",
     "حجز وتجدد كوبونات 11.11": "zedstoreonline",
-    "Huawei Pura 90s Pro Max 12/256GB": "lodydeals"
+    "Huawei Pura 90s Pro Max 12/256GB": "lodydeals",
+    "OnePlus 13": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22344,8 +22367,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:5996",
-    "lodydeals:45842",
     "bnddeals:50980",
     "zedstoreonline:39026",
     "megaphonna:8403",
@@ -23343,7 +23364,9 @@
     "zedstoreonline:39857",
     "zedstoreonline:39858",
     "aniscoupons:34483",
-    "zedstoreonline:39859"
+    "zedstoreonline:39859",
+    "bnddeals:51273",
+    "bnddeals:51274"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
