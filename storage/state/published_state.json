@@ -1136,7 +1136,7 @@
     "1005010529440901": 1793361918.107678,
     "1005010035309013": 1793554752.7954907,
     "1005010385472500": 1793448762.165183,
-    "1005011779814585": 1794339426.7315922,
+    "1005011779814585": 1794414964.855447,
     "1005013090910574": 1794340346.0747576,
     "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793543612.279949,
@@ -1251,7 +1251,7 @@
     "1005013081060247": 1793543567.486626,
     "1005012498496817": 1793543578.6842017,
     "1005003413514494": 1793732921.385459,
-    "1005008741607292": 1794383957.69665,
+    "1005008741607292": 1794414971.7181702,
     "1005010158587315": 1793543677.5915465,
     "1005012790288780": 1793656271.0286891,
     "1005012345939726": 1793656202.4239671,
@@ -2454,7 +2454,8 @@
     "SoundPEATS C30 Hybrid ANC -52dB",
     "Somnambulist SSD 120GB",
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB",
-    "Realme P4 Power 8/256GB"
+    "Realme P4 Power 8/256GB",
+    "ASROCK X570M PRO4 MOTHERBOARD"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2932,7 +2933,7 @@
     "OPPO A7 PRO MAX  (8/128)": 1793399619.8124897,
     "وحش الأخر": 1793448843.5220337,
     "OnePlus ACE 6T 12/256": 1793613338.6107306,
-    "AMD Ryzen 7 9700X": 1794242119.207932,
+    "AMD Ryzen 7 9700X": 1794414964.855447,
     "JUHOR DDR5 RAM 6000MHz 16GBx2": 1793441297.4632108,
     "KingSpec DDR5 RGB RAM 16GBX2 6000 MHz": 1793441302.3527575,
     "ViVO iQOO Neo 11 Ultra 12/256": 1793971934.3600886,
@@ -3421,11 +3422,10 @@
     "SoundPEATS C30 Hybrid ANC -52dB": 1794407013.7230165,
     "Somnambulist SSD 120GB": 1794407765.5158777,
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794411999.7818277,
-    "Realme P4 Power 8/256GB": 1794414407.5368557
+    "Realme P4 Power 8/256GB": 1794414407.5368557,
+    "ASROCK X570M PRO4 MOTHERBOARD": 1794414971.7181702
   },
   "published_post_keys": [
-    "lodydeals:45563",
-    "bnddeals:50847",
     "test_channel:1792162334",
     "ecksdeal:5971",
     "lodydeals:45474",
@@ -4423,11 +4423,13 @@
     "aniscoupons:34521",
     "aniscoupons:34522",
     "aniscoupons:34523",
-    "aniscoupons:34524"
+    "aniscoupons:34524",
+    "zedstoreonline:39890",
+    "aniscoupons:34525"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794414785.110352,
+  "last_run_time": 1794414971.7181702,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4454,12 +4456,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39889,
-      "last_check_time": 1794414223.9840207
+      "last_message_id": 39891,
+      "last_check_time": 1794414968.3413694
     },
     "aniscoupons": {
-      "last_message_id": 34524,
-      "last_check_time": 1794414787.1728945
+      "last_message_id": 34525,
+      "last_check_time": 1794414973.7546763
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4773,7 +4775,7 @@
     "1005010529440901": 59.8,
     "1005010035309013": 72.89,
     "1005010385472500": 40.0,
-    "1005011779814585": 186.74,
+    "1005011779814585": 186.7,
     "1005013090910574": 192.7,
     "1005012382148199": 469.0,
     "1005010158485058": 66.5,
@@ -4883,7 +4885,7 @@
     "1005013081060247": 138.13,
     "1005012498496817": 204.37,
     "1005003413514494": 20.3,
-    "1005008741607292": 110.83,
+    "1005008741607292": 110.8,
     "1005010158587315": 141.02,
     "1005012790288780": 26.95,
     "1005012345939726": 18.62,
@@ -20255,6 +20257,26 @@
       "price": 285.9,
       "timestamp": 1794414785.110352,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39890": {
+      "channel_msg_id": 2327,
+      "product_id": "1005011779814585",
+      "title": "AMD Ryzen 7 9700X",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39890,
+      "price": 186.7,
+      "timestamp": 1794414964.855447,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34525": {
+      "channel_msg_id": 2328,
+      "product_id": "1005008741607292",
+      "title": "ASROCK X570M PRO4 MOTHERBOARD",
+      "channel": "aniscoupons",
+      "source_msg_id": 34525,
+      "price": 110.8,
+      "timestamp": 1794414971.7181702,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20263,17 +20285,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794414788.1498165,
+    "last_deal_post_time": 1794414974.3222005,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794414790.9309604,
+    "last_sweep_time": 1794414982.7597437,
     "last_sweep_times": {
-      "algeria": 1794414788.1205986,
-      "france": 1794414790.9309604
+      "algeria": 1794414974.3065886,
+      "france": 1794414982.7597437
     },
     "last_deal_post_times": {
-      "algeria": 1794414788.1498165
+      "algeria": 1794414974.3222005
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20681,7 +20703,7 @@
     "1005010529440901": "zedstoreonline",
     "1005010035309013": "lodydeals",
     "1005010385472500": "bnddeals",
-    "1005011779814585": "aniscoupons",
+    "1005011779814585": "zedstoreonline",
     "1005013090910574": "aniscoupons",
     "1005012382148199": "megaphonna",
     "1005010158485058": "lodydeals",
@@ -20799,7 +20821,7 @@
     "1005013081060247": "lodydeals",
     "1005012498496817": "lodydeals",
     "1005003413514494": "lodydeals",
-    "1005008741607292": "lodydeals",
+    "1005008741607292": "aniscoupons",
     "1005010158587315": "lodydeals",
     "1005012790288780": "lodydeals",
     "1005012345939726": "lodydeals",
@@ -21996,7 +22018,8 @@
     "SoundPEATS C30 Hybrid ANC -52dB": "lodydeals",
     "Somnambulist SSD 120GB": "lodydeals",
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": "zedstoreonline",
-    "Realme P4 Power 8/256GB": "aniscoupons"
+    "Realme P4 Power 8/256GB": "aniscoupons",
+    "ASROCK X570M PRO4 MOTHERBOARD": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22792,7 +22815,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "pcgamingpart:7988",
     "ecksdeal:5921",
     "megaphonna:8751",
     "megaphonna:8500",
@@ -23791,7 +23813,8 @@
     "aniscoupons:34513",
     "aniscoupons:34514",
     "zedstoreonline:39886",
-    "zedstoreonline:39889"
+    "zedstoreonline:39889",
+    "zedstoreonline:39891"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
