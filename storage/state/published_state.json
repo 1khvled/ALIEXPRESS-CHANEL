@@ -1435,7 +1435,7 @@
     "1005012593794312": 1794301654.5672474,
     "1005008384277561": 1794128872.1451216,
     "1005010155263623": 1794129971.1690388,
-    "1005011572208218": 1794304276.1692173,
+    "1005011572208218": 1794389101.8349671,
     "1005012374550298": 1794312591.4470382,
     "1005009851407234": 1794307242.7687027,
     "1005009738356108": 1794164684.9082866,
@@ -3305,7 +3305,7 @@
     "راوتر Vodafone 4G محمول": 1794128872.1451216,
     "OnePlus ACE 6T": 1794331342.9050384,
     "Essager Mini 20W Type C Charger PD": 1794129971.1690388,
-    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794304276.1692173,
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794389101.8349671,
     "OnePlus Ace 6 12/256GB": 1794130143.129755,
     "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": 1794312591.4470382,
     "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464,
@@ -3386,7 +3386,6 @@
     "حجز وتجدد كوبونات 11.11": 1794363974.314961
   },
   "published_post_keys": [
-    "couponsglobal:48848",
     "bnddeals:50967",
     "couponsglobal:48788",
     "pcgamingpart:8019",
@@ -4385,11 +4384,12 @@
     "zedstoreonline:39827",
     "lodydeals:46331",
     "lodydeals:46338",
-    "aniscoupons:34478"
+    "aniscoupons:34478",
+    "aniscoupons:34480"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794388550.666115,
+  "last_run_time": 1794389101.8349671,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
@@ -4420,8 +4420,8 @@
       "last_check_time": 1794388730.8598742
     },
     "aniscoupons": {
-      "last_message_id": 34479,
-      "last_check_time": 1794388552.7657998
+      "last_message_id": 34480,
+      "last_check_time": 1794389103.898761
     },
     "bnddeals": {
       "last_message_id": 51272,
@@ -19773,6 +19773,16 @@
       "price": 285.9,
       "timestamp": 1794388550.666115,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34480": {
+      "channel_msg_id": 2282,
+      "product_id": "1005011572208218",
+      "title": "Xiaomi Redmi Note 17 5G Global Version (6/256GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34480,
+      "price": 217.8,
+      "timestamp": 1794389101.8349671,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19781,17 +19791,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794388553.4665544,
+    "last_deal_post_time": 1794389104.7942245,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794388911.421515,
+    "last_sweep_time": 1794389108.2431045,
     "last_sweep_times": {
-      "algeria": 1794388907.9687665,
-      "france": 1794388911.421515
+      "algeria": 1794389104.7675343,
+      "france": 1794389108.2431045
     },
     "last_deal_post_times": {
-      "algeria": 1794388553.4665544
+      "algeria": 1794389104.7942245
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
