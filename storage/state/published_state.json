@@ -742,7 +742,8 @@
     "1005013399086495",
     "1005006257950849",
     "1005013391950901",
-    "1005007477084001"
+    "1005007477084001",
+    "1005008774483451"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1500,7 +1501,8 @@
     "1005013399086495": 1794418466.1920443,
     "1005006257950849": 1794420680.672656,
     "1005013391950901": 1794420685.287832,
-    "1005007477084001": 1794420689.8352551
+    "1005007477084001": 1794420689.8352551,
+    "1005008774483451": 1794426765.2023578
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -3273,7 +3275,7 @@
     "CUSU SSD SATA3": 1793913777.3174822,
     "Haylou Solar NEO 2 Amoled": 1794349171.7275317,
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones": 1794313321.761044,
-    "HAYLOU Solar Ultra GPS": 1793966681.3536706,
+    "HAYLOU Solar Ultra GPS": 1794426765.2023578,
     "NOTHING Watch 3 Pro": 1793966696.631638,
     "مشترك كهربائي ORICO PD25W – محطة شحن مكتبية تضم منفذي Type-C ومنفذي USB-A ومقبسين AC لشحن الأجهزة وت": 1793966711.2525856,
     "Baseus Mouse Bluetooth Wireless Computer 1600DPI": 1793966716.198834,
@@ -3450,7 +3452,6 @@
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551
   },
   "published_post_keys": [
-    "test_channel:1791589315",
     "couponsglobal:48841",
     "aniscoupons:32748",
     "aniscoupons:33145",
@@ -4449,19 +4450,20 @@
     "aniscoupons:34557",
     "aniscoupons:34558",
     "aniscoupons:34559",
-    "aniscoupons:34563"
+    "aniscoupons:34563",
+    "zedstoreonline:39919"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794426405.7985656,
+  "last_run_time": 1794426765.2023578,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
       "last_check_time": 1794419029.2500024
     },
     "lodydeals": {
-      "last_message_id": 46375,
-      "last_check_time": 1794426575.7774956
+      "last_message_id": 46376,
+      "last_check_time": 1794426757.94481
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4480,12 +4482,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39918,
-      "last_check_time": 1794426402.4846876
+      "last_message_id": 39919,
+      "last_check_time": 1794426767.264491
     },
     "aniscoupons": {
-      "last_message_id": 34563,
-      "last_check_time": 1794426407.8638353
+      "last_message_id": 34564,
+      "last_check_time": 1794426769.7064097
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5036,7 +5038,7 @@
     "1005010702511858": 59.8,
     "1005008554218453": 52.55,
     "1005012499433797": 134.36,
-    "1005008774483451": 45.1,
+    "1005008774483451": 40.1,
     "1005010635850450": 21.1,
     "1005006782986446": 6.7,
     "1005006411483066": 13.2,
@@ -20625,6 +20627,16 @@
       "price": 41.4,
       "timestamp": 1794426405.7985656,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39919": {
+      "channel_msg_id": 2363,
+      "product_id": "1005008774483451",
+      "title": "HAYLOU Solar Ultra GPS",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39919,
+      "price": 40.1,
+      "timestamp": 1794426765.2023578,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20633,17 +20645,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794426409.0297127,
+    "last_deal_post_time": 1794426770.3857675,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794426581.9439259,
+    "last_sweep_time": 1794426773.3120208,
     "last_sweep_times": {
-      "algeria": 1794426578.8528879,
-      "france": 1794426581.9439259
+      "algeria": 1794426770.359031,
+      "france": 1794426773.3120208
     },
     "last_deal_post_times": {
-      "algeria": 1794426409.0297127
+      "algeria": 1794426770.3857675
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21401,7 +21413,8 @@
     "1005013399086495": "aniscoupons",
     "1005006257950849": "lodydeals",
     "1005013391950901": "lodydeals",
-    "1005007477084001": "lodydeals"
+    "1005007477084001": "lodydeals",
+    "1005008774483451": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -23175,7 +23188,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45551",
     "megaphonna:8609",
     "aniscoupons:33049",
     "zedstoreonline:39040",
@@ -24174,7 +24186,8 @@
     "aniscoupons:34561",
     "zedstoreonline:39917",
     "aniscoupons:34562",
-    "zedstoreonline:39918"
+    "zedstoreonline:39918",
+    "aniscoupons:34564"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
