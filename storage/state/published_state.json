@@ -739,7 +739,10 @@
     "1005010179192246",
     "1005010457635845",
     "1005012921754472",
-    "1005013399086495"
+    "1005013399086495",
+    "1005006257950849",
+    "1005013391950901",
+    "1005007477084001"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -917,7 +920,7 @@
     "1005006838055260": 1791212152.7085261,
     "1005006923518929": 1791212158.132987,
     "1005008379012998": 1791235946.0562956,
-    "1005005605683958": 1791235953.2682726,
+    "1005005605683958": 1794420675.7412696,
     "1005010056083952": 1791968180.0253317,
     "1005013313539058": 1791482965.5086565,
     "9998889315": 1791589315.5172248,
@@ -1213,7 +1216,7 @@
     "COUPONS_d131dda7a0e3": 1793478717.5768087,
     "COUPONS_d131dda7": 1793478717.5923967,
     "COUPONS_11.11 Global Shopping Festival Warm-Up": 1793478717.5923967,
-    "1005008518280704": 1794344399.896034,
+    "1005008518280704": 1794420697.970357,
     "1005010527736444": 1793478769.6023057,
     "1005013450996845": 1794412182.3559208,
     "1005013144753309": 1794160820.0809557,
@@ -1494,7 +1497,10 @@
     "1005010179192246": 1794391117.1890683,
     "1005010457635845": 1794393509.614562,
     "1005012921754472": 1794414407.5368557,
-    "1005013399086495": 1794418466.1920443
+    "1005013399086495": 1794418466.1920443,
+    "1005006257950849": 1794420680.672656,
+    "1005013391950901": 1794420685.287832,
+    "1005007477084001": 1794420689.8352551
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2461,7 +2467,11 @@
     "EASYSMX X05 PRO Controller",
     "ONEPLUS 16 12/256GB",
     "Fifine H9 USB Gaming Headset",
-    "Honor 600 5G Global 8/256GB"
+    "Honor 600 5G Global 8/256GB",
+    "Baseus GoTrip VA1 Wireless Air Pump",
+    "HOCO EW60 Bluetooth 5.0 Earbuds Wireless Hi-Res Audio Touch Control",
+    "Essager 2in1 USB Type C  60W",
+    "GOOJPRT Portable Thermal Printer"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3410,7 +3420,7 @@
     "Kootion SSD SATA": 1794332259.758732,
     "KOOTION SATA SSD 128GB": 1794334097.945569,
     "Kingston DataTraveler 128GB": 1794344038.7678037,
-    "CUSU CV3500  M.2 NVMe SSD (1tb)": 1794344399.896034,
+    "CUSU CV3500  M.2 NVMe SSD (1tb)": 1794420697.970357,
     "Kootion X15 M.2 NVMe 256GB": 1794346230.0535362,
     "Baseus BS2 Lite": 1794349536.4429784,
     "حجز وتجدد كوبونات 11.11": 1794363974.314961,
@@ -3433,14 +3443,13 @@
     "EASYSMX X05 PRO Controller": 1794417558.6712675,
     "ONEPLUS 16 12/256GB": 1794418466.1920443,
     "Fifine H9 USB Gaming Headset": 1794418654.7538266,
-    "Honor 600 5G Global 8/256GB": 1794418660.6617887
+    "Honor 600 5G Global 8/256GB": 1794418660.6617887,
+    "Baseus GoTrip VA1 Wireless Air Pump": 1794420675.7412696,
+    "HOCO EW60 Bluetooth 5.0 Earbuds Wireless Hi-Res Audio Touch Control": 1794420680.672656,
+    "Essager 2in1 USB Type C  60W": 1794420685.287832,
+    "GOOJPRT Portable Thermal Printer": 1794420689.8352551
   },
   "published_post_keys": [
-    "aniscoupons:32734",
-    "bnddeals:50794",
-    "test_channel:1792181695",
-    "megaphonna:8662",
-    "aniscoupons:32773",
     "zedstoreonline:38917",
     "aniscoupons:32750",
     "aniscoupons:32767",
@@ -4435,19 +4444,24 @@
     "aniscoupons:34538",
     "aniscoupons:34540",
     "zedstoreonline:39903",
-    "aniscoupons:34542"
+    "aniscoupons:34542",
+    "lodydeals:46361",
+    "lodydeals:46362",
+    "lodydeals:46364",
+    "lodydeals:46365",
+    "aniscoupons:34543"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794420511.1707425,
+  "last_run_time": 1794420697.970357,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
       "last_check_time": 1794419029.2500024
     },
     "lodydeals": {
-      "last_message_id": 46367,
-      "last_check_time": 1794412176.6747582
+      "last_message_id": 46368,
+      "last_check_time": 1794420692.0849552
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4466,12 +4480,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39903,
-      "last_check_time": 1794420508.1463609
+      "last_message_id": 39904,
+      "last_check_time": 1794420695.173814
     },
     "aniscoupons": {
-      "last_message_id": 34542,
-      "last_check_time": 1794420513.2322936
+      "last_message_id": 34543,
+      "last_check_time": 1794420700.0348685
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4645,7 +4659,7 @@
     "1005006838055260": 1.81,
     "1005006923518929": 0.84,
     "1005008379012998": 38.98,
-    "1005005605683958": 34.73,
+    "1005005605683958": 34.23,
     "1005010056083952": 12.89,
     "1005012193220695": 253.22,
     "1005012823469739": 29.32,
@@ -5113,7 +5127,10 @@
     "1005010179192246": 609.9,
     "1005010457635845": 581.4,
     "1005012921754472": 265.11,
-    "1005013399086495": 758.3
+    "1005013399086495": 758.3,
+    "1005006257950849": 5.6,
+    "1005013391950901": 1.11,
+    "1005007477084001": 18.78
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -20448,6 +20465,56 @@
       "price": 22.47,
       "timestamp": 1794420511.1707425,
       "status": "ACTIVE"
+    },
+    "lodydeals:46361": {
+      "channel_msg_id": 2347,
+      "product_id": "1005005605683958",
+      "title": "Baseus GoTrip VA1 Wireless Air Pump",
+      "channel": "lodydeals",
+      "source_msg_id": 46361,
+      "price": 34.23,
+      "timestamp": 1794420675.7412696,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46362": {
+      "channel_msg_id": 2348,
+      "product_id": "1005006257950849",
+      "title": "HOCO EW60 Bluetooth 5.0 Earbuds Wireless Hi-Res Audio Touch Control",
+      "channel": "lodydeals",
+      "source_msg_id": 46362,
+      "price": 5.6,
+      "timestamp": 1794420680.672656,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46364": {
+      "channel_msg_id": 2349,
+      "product_id": "1005013391950901",
+      "title": "Essager 2in1 USB Type C  60W",
+      "channel": "lodydeals",
+      "source_msg_id": 46364,
+      "price": 1.11,
+      "timestamp": 1794420685.287832,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46365": {
+      "channel_msg_id": 2350,
+      "product_id": "1005007477084001",
+      "title": "GOOJPRT Portable Thermal Printer",
+      "channel": "lodydeals",
+      "source_msg_id": 46365,
+      "price": 18.78,
+      "timestamp": 1794420689.8352551,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34543": {
+      "channel_msg_id": 2351,
+      "product_id": "1005008518280704",
+      "title": "CUSU CV3500  M.2 NVMe SSD (1tb)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34543,
+      "price": 179.3,
+      "timestamp": 1794420697.970357,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20456,17 +20523,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794420513.901566,
+    "last_deal_post_time": 1794420700.6740296,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794420516.2769365,
+    "last_sweep_time": 1794420703.0270615,
     "last_sweep_times": {
-      "algeria": 1794420513.8733041,
-      "france": 1794420516.2769365
+      "algeria": 1794420700.645481,
+      "france": 1794420703.0270615
     },
     "last_deal_post_times": {
-      "algeria": 1794420513.901566
+      "algeria": 1794420700.6740296
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21221,7 +21288,10 @@
     "1005010179192246": "aniscoupons",
     "1005010457635845": "aniscoupons",
     "1005012921754472": "aniscoupons",
-    "1005013399086495": "aniscoupons"
+    "1005013399086495": "aniscoupons",
+    "1005006257950849": "lodydeals",
+    "1005013391950901": "lodydeals",
+    "1005007477084001": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -22195,7 +22265,11 @@
     "EASYSMX X05 PRO Controller": "aniscoupons",
     "ONEPLUS 16 12/256GB": "aniscoupons",
     "Fifine H9 USB Gaming Headset": "zedstoreonline",
-    "Honor 600 5G Global 8/256GB": "aniscoupons"
+    "Honor 600 5G Global 8/256GB": "aniscoupons",
+    "Baseus GoTrip VA1 Wireless Air Pump": "lodydeals",
+    "HOCO EW60 Bluetooth 5.0 Earbuds Wireless Hi-Res Audio Touch Control": "lodydeals",
+    "Essager 2in1 USB Type C  60W": "lodydeals",
+    "GOOJPRT Portable Thermal Printer": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22991,13 +23065,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:32920",
-    "megaphonna:8447",
-    "megaphonna:8697",
-    "aniscoupons:32847",
-    "zedstoreonline:38905",
-    "aniscoupons:32850",
-    "aniscoupons:33337",
     "aniscoupons:33340",
     "bnddeals:50969",
     "megaphonna:8704",
@@ -23990,7 +24057,14 @@
     "zedstoreonline:39900",
     "ecksdeal:6056",
     "aniscoupons:34539",
-    "aniscoupons:34541"
+    "aniscoupons:34541",
+    "lodydeals:46359",
+    "lodydeals:46360",
+    "lodydeals:46363",
+    "lodydeals:46366",
+    "lodydeals:46367",
+    "lodydeals:46368",
+    "zedstoreonline:39904"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,

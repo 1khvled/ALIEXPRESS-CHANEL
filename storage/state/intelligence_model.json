@@ -22,13 +22,13 @@
   "flow_target": 24.0,
   "channel_stats": {
     "lodydeals": {
-      "seen": 8,
-      "published": 8,
+      "seen": 12,
+      "published": 12,
       "skipped": 0,
-      "ewma": 0.7434
+      "ewma": 0.8162
     },
     "zedstoreonline": {
-      "seen": 33,
+      "seen": 34,
       "published": 13,
       "skipped": 0,
       "ewma": 0.8309
@@ -40,24 +40,24 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 53,
-      "published": 41,
+      "seen": 54,
+      "published": 42,
       "skipped": 0,
-      "ewma": 0.9836
+      "ewma": 0.9849
     }
   },
   "category_stats": {
     "other": {
-      "seen": 30,
-      "published": 24,
+      "seen": 33,
+      "published": 27,
       "skipped": 0,
-      "ewma": 0.9324
+      "ewma": 0.9474
     },
     "pc": {
-      "seen": 22,
-      "published": 11,
+      "seen": 24,
+      "published": 12,
       "skipped": 0,
-      "ewma": 0.8002
+      "ewma": 0.8162
     },
     "phones": {
       "seen": 53,
@@ -78,10 +78,10 @@
       "ewma": 0.5768
     },
     "audio": {
-      "seen": 2,
-      "published": 1,
+      "seen": 3,
+      "published": 2,
       "skipped": 0,
-      "ewma": 0.54
+      "ewma": 0.5768
     }
   },
   "product_prices": {
@@ -261,17 +261,32 @@
     ],
     "1005010485068924": [
       22.47
+    ],
+    "1005005605683958": [
+      34.23
+    ],
+    "1005006257950849": [
+      5.6
+    ],
+    "1005013391950901": [
+      1.11
+    ],
+    "1005007477084001": [
+      18.78
+    ],
+    "1005008518280704": [
+      179.3
     ]
   },
   "counters": {
-    "scored": 112,
-    "verdict_publish": 103,
+    "scored": 118,
+    "verdict_publish": 109,
     "verdict_hold": 9,
     "verdict_skip": 0,
-    "published": 65,
+    "published": 70,
     "skipped": 0
   },
-  "score_sum": 7956.1,
+  "score_sum": 8369.0,
   "recent_decisions": [
     {
       "ts": 1794383955,
@@ -1168,7 +1183,55 @@
       "product_id": "1005010485068924",
       "score": 68.78,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794420673,
+      "channel": "lodydeals",
+      "category": "other",
+      "product_id": "1005005605683958",
+      "score": 72.46,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794420678,
+      "channel": "lodydeals",
+      "category": "audio",
+      "product_id": "1005006257950849",
+      "score": 70.61,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794420683,
+      "channel": "lodydeals",
+      "category": "other",
+      "product_id": "1005013391950901",
+      "score": 72.5,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794420688,
+      "channel": "lodydeals",
+      "category": "other",
+      "product_id": "1005007477084001",
+      "score": 68.46,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794420694,
+      "channel": "zedstoreonline",
+      "category": "pc",
+      "product_id": "1005008366962319",
+      "score": 65.48,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794420696,
+      "channel": "aniscoupons",
+      "category": "pc",
+      "product_id": "1005008518280704",
+      "score": 63.39,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794420511.2191806
+  "updated_at": 1794420698.019982
 }
