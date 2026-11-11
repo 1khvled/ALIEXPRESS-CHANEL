@@ -1495,7 +1495,7 @@
     "1005010653559191": 1794349536.4429784,
     "COUPON_CLAIM_zedstoreonline_39827": 1794363974.314961,
     "1005012197291105": 1794408497.0639706,
-    "1005010179192246": 1794391117.1890683,
+    "1005010179192246": 1794427325.301942,
     "1005010457635845": 1794393509.614562,
     "1005012921754472": 1794414407.5368557,
     "1005013399086495": 1794418466.1920443,
@@ -2963,7 +2963,7 @@
     "MAONO PD100X Dynamic Microphone": 1794310561.509585,
     "Soundcore by Anker P20i": 1794419208.6994803,
     "CUSU Memory DDR5  32GB(16GBX2) 5600MHz": 1793448632.7055113,
-    "OPPO FIND X9 Pro": 1794391117.1890683,
+    "OPPO FIND X9 Pro": 1794427325.301942,
     "OPPO A7 Pro Max CN": 1793448660.3359752,
     "Poco Pad X1 512GB": 1793448715.1480892,
     "Redmi Pad 2 9.7\"": 1793448729.1572442,
@@ -3452,7 +3452,6 @@
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551
   },
   "published_post_keys": [
-    "aniscoupons:32748",
     "aniscoupons:33145",
     "megaphonna:8536",
     "lodydeals:45938",
@@ -4451,11 +4450,12 @@
     "aniscoupons:34559",
     "aniscoupons:34563",
     "zedstoreonline:39919",
-    "aniscoupons:34565"
+    "aniscoupons:34565",
+    "aniscoupons:34566"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794426949.7609992,
+  "last_run_time": 1794427325.301942,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4486,8 +4486,8 @@
       "last_check_time": 1794426767.264491
     },
     "aniscoupons": {
-      "last_message_id": 34565,
-      "last_check_time": 1794426951.8279476
+      "last_message_id": 34566,
+      "last_check_time": 1794427327.3684597
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20647,6 +20647,16 @@
       "price": 40.5,
       "timestamp": 1794426949.7609992,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34566": {
+      "channel_msg_id": 2365,
+      "product_id": "1005010179192246",
+      "title": "OPPO FIND X9 Pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 34566,
+      "price": 609.9,
+      "timestamp": 1794427325.301942,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20655,17 +20665,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794426952.6758533,
+    "last_deal_post_time": 1794427328.257951,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794427135.3467174,
+    "last_sweep_time": 1794427330.5770981,
     "last_sweep_times": {
-      "algeria": 1794427132.5768795,
-      "france": 1794427135.3467174
+      "algeria": 1794427328.2290018,
+      "france": 1794427330.5770981
     },
     "last_deal_post_times": {
-      "algeria": 1794426952.6758533
+      "algeria": 1794427328.257951
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
