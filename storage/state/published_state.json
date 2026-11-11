@@ -1488,7 +1488,7 @@
     "1005006807619368": 1794344038.7678037,
     "1005010653559191": 1794349536.4429784,
     "COUPON_CLAIM_zedstoreonline_39827": 1794363974.314961,
-    "1005012197291105": 1794390920.4038398,
+    "1005012197291105": 1794408497.0639706,
     "1005010179192246": 1794391117.1890683,
     "1005010457635845": 1794393509.614562
   },
@@ -3406,7 +3406,7 @@
     "Huawei Pura 90s Pro Max 12/256GB": 1794390200.6061625,
     "OnePlus 13": 1794390398.1860356,
     "Oppo Find X10 Pro Max 12/256": 1794390785.626018,
-    "OnePlus ACE 6 Ultra 12/256": 1794390920.4038398,
+    "OnePlus ACE 6 Ultra 12/256": 1794408497.0639706,
     "iQOO Neo 11 Ultra": 1794391855.282333,
     "ONEPLUS 15 Global Rom 12/256": 1794393509.614562,
     "OPPO FIND X9s Pro": 1794394415.6108775,
@@ -3418,7 +3418,6 @@
     "Somnambulist SSD 120GB": 1794407765.5158777
   },
   "published_post_keys": [
-    "megaphonna:8663",
     "lodydeals:45447",
     "lodydeals:45487",
     "test_channel:1792073963",
@@ -4417,19 +4416,20 @@
     "aniscoupons:34509",
     "lodydeals:46354",
     "lodydeals:46357",
-    "aniscoupons:34511"
+    "aniscoupons:34511",
+    "zedstoreonline:39885"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794408129.5060408,
+  "last_run_time": 1794408497.0639706,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
       "last_check_time": 1794407600.0378215
     },
     "lodydeals": {
-      "last_message_id": 46357,
-      "last_check_time": 1794407767.5789337
+      "last_message_id": 46358,
+      "last_check_time": 1794408490.1430588
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4448,8 +4448,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39884,
-      "last_check_time": 1794404808.880159
+      "last_message_id": 39885,
+      "last_check_time": 1794408499.1152263
     },
     "aniscoupons": {
       "last_message_id": 34511,
@@ -20108,6 +20108,16 @@
       "price": 277.36,
       "timestamp": 1794408129.5060408,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39885": {
+      "channel_msg_id": 2313,
+      "product_id": "1005012197291105",
+      "title": "OnePlus ACE 6 Ultra 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39885,
+      "price": 438.2,
+      "timestamp": 1794408497.0639706,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20116,17 +20126,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794408132.196787,
+    "last_deal_post_time": 1794408500.301828,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794408327.0244195,
+    "last_sweep_time": 1794408508.5640721,
     "last_sweep_times": {
-      "algeria": 1794408318.2301486,
-      "france": 1794408327.0244195
+      "algeria": 1794408500.2800028,
+      "france": 1794408508.5640721
     },
     "last_deal_post_times": {
-      "algeria": 1794408132.196787
+      "algeria": 1794408500.301828
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22642,7 +22652,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8418",
     "lodydeals:45595",
     "aniscoupons:33189",
     "aniscoupons:33370",
@@ -23641,7 +23650,8 @@
     "zedstoreonline:39884",
     "lodydeals:46353",
     "ecksdeal:6055",
-    "lodydeals:46356"
+    "lodydeals:46356",
+    "lodydeals:46358"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
