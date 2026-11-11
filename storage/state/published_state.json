@@ -964,7 +964,7 @@
     "1005012914301139": 1792191289.2917817,
     "1005007345151855": 1791942667.867043,
     "1005010345227483": 1793299548.5548651,
-    "1005011557896041": 1794418100.8637865,
+    "1005011557896041": 1794439171.9105787,
     "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
     "1005007916078341": 1794397913.7086546,
@@ -2645,7 +2645,7 @@
     "HONOR POWER 2 (12/256)": 1793467316.5435166,
     "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light": 1791043842.6639822,
     "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": 1791045040.5964694,
-    "RYZEN 7 7800X3D": 1794396072.4358249,
+    "RYZEN 7 7800X3D": 1794439171.9105787,
     "Redmi Note 14S  8/128GB": 1793712560.6780183,
     "Attack Shark X AJAZZ AK820": 1791217251.8495085,
     "Baseus Stylus Pen": 1791056153.3979695,
@@ -3476,7 +3476,6 @@
     "Essager Mini 30W Type C Charger PD": 1794438972.1864517
   },
   "published_post_keys": [
-    "ecksdeal:5947",
     "couponsglobal:48765",
     "zedstoreonline:38838",
     "aniscoupons:32727",
@@ -4475,11 +4474,12 @@
     "aniscoupons:34602",
     "zedstoreonline:39929",
     "aniscoupons:34605",
-    "zedstoreonline:39932"
+    "zedstoreonline:39932",
+    "aniscoupons:34606"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794438972.1864517,
+  "last_run_time": 1794439171.9105787,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4510,8 +4510,8 @@
       "last_check_time": 1794438974.257189
     },
     "aniscoupons": {
-      "last_message_id": 34605,
-      "last_check_time": 1794438805.0710833
+      "last_message_id": 34606,
+      "last_check_time": 1794439173.978515
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4705,7 +4705,7 @@
     "1005012914301139": 12.07,
     "1005007345151855": 40.0,
     "1005010345227483": 200.0,
-    "1005011557896041": 240.7,
+    "1005011557896041": 226.78,
     "1005011754993234": 79.58,
     "1005011735727412": 26.6,
     "1005013039644752": 265.7,
@@ -21036,6 +21036,16 @@
       "price": 2.7,
       "timestamp": 1794438972.1864517,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34606": {
+      "channel_msg_id": 2401,
+      "product_id": "1005011557896041",
+      "title": "RYZEN 7 7800X3D",
+      "channel": "aniscoupons",
+      "source_msg_id": 34606,
+      "price": 226.78,
+      "timestamp": 1794439171.9105787,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21044,17 +21054,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794438979.0160036,
+    "last_deal_post_time": 1794439175.028238,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794438981.4690645,
+    "last_sweep_time": 1794439178.1201627,
     "last_sweep_times": {
-      "algeria": 1794438978.9850638,
-      "france": 1794438981.4690645
+      "algeria": 1794439174.9986122,
+      "france": 1794439178.1201627
     },
     "last_deal_post_times": {
-      "algeria": 1794438979.0160036
+      "algeria": 1794439175.028238
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21280,7 +21290,7 @@
     "1005012914301139": "lodydeals",
     "1005007345151855": "bnddeals",
     "1005010345227483": "megaphonna",
-    "1005011557896041": "zedstoreonline",
+    "1005011557896041": "aniscoupons",
     "1005011754993234": "ecksdeal",
     "1005011735727412": "bnddeals",
     "1005013039644752": "aniscoupons",
