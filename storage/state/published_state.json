@@ -1488,7 +1488,7 @@
     "COUPONS_949f01595a98": 1794309459.0513651,
     "COUPONS_949f0159": 1794309459.0725908,
     "1005008046071240": 1794310928.9154878,
-    "1005012083833079": 1794311122.753493,
+    "1005012083833079": 1794432872.6767933,
     "1005012292809645": 1794425282.6782186,
     "1005007495712340": 1794424903.9490352,
     "1005009104334975": 1794421043.2176414,
@@ -3416,7 +3416,7 @@
     "Xiaoxin Pad Pro GT (8/256)": 1794308897.9947796,
     "Attack Shark X11": 1794310187.5175397,
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794310928.9154878,
-    "MAONO PD100W USB Wireless Dynamic": 1794311122.753493,
+    "MAONO PD100W USB Wireless Dynamic": 1794432872.6767933,
     "MAONO Wave T1 Mini Pro": 1794425282.6782186,
     "FIFINE M9 Wireless Lavalier Microphone": 1794424903.9490352,
     "AULA WIN68 HE Gaming Mechanical Keyboard": 1794312953.1830955,
@@ -3462,7 +3462,6 @@
     "DJI Osmo mobile": 1794432694.0507162
   },
   "published_post_keys": [
-    "aniscoupons:32763",
     "ecksdeal:5865",
     "pcgamingpart:7951",
     "lodydeals:45934",
@@ -4461,11 +4460,12 @@
     "aniscoupons:34582",
     "zedstoreonline:39923",
     "aniscoupons:34585",
-    "zedstoreonline:39924"
+    "zedstoreonline:39924",
+    "aniscoupons:34586"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794432694.0507162,
+  "last_run_time": 1794432872.6767933,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4496,8 +4496,8 @@
       "last_check_time": 1794432696.1177993
     },
     "aniscoupons": {
-      "last_message_id": 34585,
-      "last_check_time": 1794432505.056253
+      "last_message_id": 34586,
+      "last_check_time": 1794432874.730664
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20819,6 +20819,16 @@
       "price": 58.7,
       "timestamp": 1794432694.0507162,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34586": {
+      "channel_msg_id": 2381,
+      "product_id": "1005012083833079",
+      "title": "MAONO PD100W USB Wireless Dynamic",
+      "channel": "aniscoupons",
+      "source_msg_id": 34586,
+      "price": 57.9,
+      "timestamp": 1794432872.6767933,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20827,17 +20837,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794432697.712966,
+    "last_deal_post_time": 1794432875.661699,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794432700.614514,
+    "last_sweep_time": 1794432878.4493105,
     "last_sweep_times": {
-      "algeria": 1794432697.6842945,
-      "france": 1794432700.614514
+      "algeria": 1794432875.638005,
+      "france": 1794432878.4493105
     },
     "last_deal_post_times": {
-      "algeria": 1794432697.712966
+      "algeria": 1794432875.661699
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
