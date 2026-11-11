@@ -1433,7 +1433,7 @@
     "1005008060391372": 1794424534.1435025,
     "1005010209911111": 1794068056.674266,
     "1005008295555234": 1794073127.8664527,
-    "1005008645323478": 1794408682.8518124,
+    "1005008645323478": 1794426405.7985656,
     "1005008636930795": 1794422876.857545,
     "1005006260870758": 1794250569.5221198,
     "1005009759580502": 1794331533.1223195,
@@ -3334,7 +3334,7 @@
     "1MORE SonoFlow Pro HQ51": 1794073127.8664527,
     "Ulanzi ST-06S Vertical Shooting": 1794130692.4786665,
     "ميكروفون MAONO DGM20W لاسلكي للألعاب": 1794074230.5173922,
-    "CUSU 512GB External SSD Drive": 1794408682.8518124,
+    "CUSU 512GB External SSD Drive": 1794426405.7985656,
     "Netac M.2 NVME 250GB": 1794076438.7694528,
     "EPOMAKER X AULA F87 Pro": 1794250569.5221198,
     "SIX PCIe 4.0 7350MB/s  1TB": 1794079741.7808652,
@@ -3450,7 +3450,6 @@
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551
   },
   "published_post_keys": [
-    "lodydeals:45745",
     "test_channel:1791589315",
     "couponsglobal:48841",
     "aniscoupons:32748",
@@ -4449,11 +4448,12 @@
     "aniscoupons:34556",
     "aniscoupons:34557",
     "aniscoupons:34558",
-    "aniscoupons:34559"
+    "aniscoupons:34559",
+    "aniscoupons:34563"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794425282.6782186,
+  "last_run_time": 1794426405.7985656,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4480,12 +4480,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39917,
-      "last_check_time": 1794426204.4015145
+      "last_message_id": 39918,
+      "last_check_time": 1794426402.4846876
     },
     "aniscoupons": {
-      "last_message_id": 34562,
-      "last_check_time": 1794426209.8103583
+      "last_message_id": 34563,
+      "last_check_time": 1794426407.8638353
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20615,6 +20615,16 @@
       "price": 37.69,
       "timestamp": 1794425282.6782186,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34563": {
+      "channel_msg_id": 2362,
+      "product_id": "1005008645323478",
+      "title": "CUSU 512GB External SSD Drive",
+      "channel": "aniscoupons",
+      "source_msg_id": 34563,
+      "price": 41.4,
+      "timestamp": 1794426405.7985656,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20623,17 +20633,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794425285.6632953,
+    "last_deal_post_time": 1794426409.0297127,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794426213.33229,
+    "last_sweep_time": 1794426412.203175,
     "last_sweep_times": {
-      "algeria": 1794426210.6847336,
-      "france": 1794426213.33229
+      "algeria": 1794426409.0007675,
+      "france": 1794426412.203175
     },
     "last_deal_post_times": {
-      "algeria": 1794425285.6632953
+      "algeria": 1794426409.0297127
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23165,7 +23175,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:5876",
     "lodydeals:45551",
     "megaphonna:8609",
     "aniscoupons:33049",
@@ -24164,7 +24173,8 @@
     "aniscoupons:34560",
     "aniscoupons:34561",
     "zedstoreonline:39917",
-    "aniscoupons:34562"
+    "aniscoupons:34562",
+    "zedstoreonline:39918"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
