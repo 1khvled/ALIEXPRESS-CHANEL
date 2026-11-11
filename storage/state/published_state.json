@@ -1393,7 +1393,7 @@
     "1005012150344482": 1794430858.2362945,
     "1005006972551834": 1793793774.6743867,
     "1005010169268165": 1793794440.9453664,
-    "1005010702038861": 1794134168.8193681,
+    "1005010702038861": 1794432497.7853866,
     "1005009313079431": 1794159522.2930505,
     "1005010702511858": 1793903106.9341598,
     "1005008554218453": 1793908979.1776278,
@@ -1415,7 +1415,7 @@
     "1005012691642623": 1794074230.5173922,
     "1005010266233059": 1793977272.9654846,
     "1005007469003552": 1794130707.0577464,
-    "1005010041181003": 1794411999.7818277,
+    "1005010041181003": 1794432503.000665,
     "1005010265542567": 1794131426.95932,
     "1005003156756854": 1794412940.6962595,
     "1005010142208108": 1794302223.66585,
@@ -3309,7 +3309,7 @@
     "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
     "ميكروفون Ulanzi A100 لاسلكي صغير": 1793982290.6109207,
-    "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794397542.339012,
+    "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794432503.000665,
     "Ulanzi A200 Mini Wireless Lavalier Microphone": 1794131426.95932,
     "حامل هاتف Ulanzi ST-06S": 1794412940.6962595,
     "AULA MINI60 HE PRO": 1794302223.66585,
@@ -3325,7 +3325,7 @@
     "Hollyland LARK M2 DUO 2-Person": 1794304640.3506072,
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794422698.8993735,
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627,
-    "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794134168.8193681,
+    "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794432497.7853866,
     "Essager 30W Car Charger": 1794393500.1320646,
     "KOOTION SSD SATA  240GB": 1794051434.2488248,
     "Xiaomi Redmi Note 17 Pro 5G Global Version": 1794060065.5449874,
@@ -3458,8 +3458,6 @@
     "HONOR X80 PRO MAX": 1794431585.5032148
   },
   "published_post_keys": [
-    "aniscoupons:32702",
-    "zedstoreonline:38750",
     "lodydeals:45694",
     "aniscoupons:32763",
     "ecksdeal:5865",
@@ -4457,19 +4455,21 @@
     "aniscoupons:34578",
     "aniscoupons:34580",
     "aniscoupons:34581",
-    "aniscoupons:34582"
+    "aniscoupons:34582",
+    "zedstoreonline:39923",
+    "aniscoupons:34585"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794432132.8832204,
+  "last_run_time": 1794432503.000665,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
       "last_check_time": 1794419029.2500024
     },
     "lodydeals": {
-      "last_message_id": 46385,
-      "last_check_time": 1794432127.436333
+      "last_message_id": 46386,
+      "last_check_time": 1794432492.3555555
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4488,12 +4488,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39922,
-      "last_check_time": 1794431397.2578402
+      "last_message_id": 39923,
+      "last_check_time": 1794432499.8378708
     },
     "aniscoupons": {
-      "last_message_id": 34584,
-      "last_check_time": 1794432135.1103382
+      "last_message_id": 34585,
+      "last_check_time": 1794432505.056253
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20784,6 +20784,26 @@
       "price": 289.5,
       "timestamp": 1794432132.8832204,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39923": {
+      "channel_msg_id": 2378,
+      "product_id": "1005010702038861",
+      "title": "HyperX Cloud Earbuds II 2 Gaming Earphone",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39923,
+      "price": 18.1,
+      "timestamp": 1794432497.7853866,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34585": {
+      "channel_msg_id": 2379,
+      "product_id": "1005010041181003",
+      "title": "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34585,
+      "price": 167.8,
+      "timestamp": 1794432503.000665,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20792,17 +20812,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794432136.138429,
+    "last_deal_post_time": 1794432505.6489897,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794432315.2894034,
+    "last_sweep_time": 1794432508.0631297,
     "last_sweep_times": {
-      "algeria": 1794432312.8585443,
-      "france": 1794432315.2894034
+      "algeria": 1794432505.6257029,
+      "france": 1794432508.0631297
     },
     "last_deal_post_times": {
-      "algeria": 1794432136.138429
+      "algeria": 1794432505.6489897
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21473,7 +21493,7 @@
     "1005012691642623": "zedstoreonline",
     "1005010266233059": "zedstoreonline",
     "1005007469003552": "aniscoupons",
-    "1005010041181003": "zedstoreonline",
+    "1005010041181003": "aniscoupons",
     "1005010265542567": "aniscoupons",
     "1005003156756854": "zedstoreonline",
     "1005010142208108": "lodydeals",
