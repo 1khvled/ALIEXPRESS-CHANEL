@@ -1425,7 +1425,7 @@
     "1005006411483066": 1794091985.0146983,
     "1005012925301774": 1794348808.2825344,
     "1005012959738411": 1794304640.3506072,
-    "1005008357913212": 1794397172.8708336,
+    "1005008357913212": 1794426949.7609992,
     "1005008703989845": 1794412380.423559,
     "1005007162099601": 1794407765.5158777,
     "1005007038130594": 1794393500.1320646,
@@ -3289,7 +3289,7 @@
     "Fifine Gaming Headset H9W": 1794312406.8406456,
     "Fifine Gaming Headset H6": 1794424534.1435025,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794305193.7156484,
-    "KOOTION SSD SATA": 1794397172.8708336,
+    "KOOTION SSD SATA": 1794426949.7609992,
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
     "هذون سماعات جدد من   HAYLOU⌚": 1793966887.3818936,
     "HAYLOU WATCH 3 NEW": 1793966892.2256048,
@@ -3452,7 +3452,6 @@
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551
   },
   "published_post_keys": [
-    "couponsglobal:48841",
     "aniscoupons:32748",
     "aniscoupons:33145",
     "megaphonna:8536",
@@ -4451,11 +4450,12 @@
     "aniscoupons:34558",
     "aniscoupons:34559",
     "aniscoupons:34563",
-    "zedstoreonline:39919"
+    "zedstoreonline:39919",
+    "aniscoupons:34565"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794426765.2023578,
+  "last_run_time": 1794426949.7609992,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4486,8 +4486,8 @@
       "last_check_time": 1794426767.264491
     },
     "aniscoupons": {
-      "last_message_id": 34564,
-      "last_check_time": 1794426769.7064097
+      "last_message_id": 34565,
+      "last_check_time": 1794426951.8279476
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20637,6 +20637,16 @@
       "price": 40.1,
       "timestamp": 1794426765.2023578,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34565": {
+      "channel_msg_id": 2364,
+      "product_id": "1005008357913212",
+      "title": "KOOTION SSD SATA",
+      "channel": "aniscoupons",
+      "source_msg_id": 34565,
+      "price": 40.5,
+      "timestamp": 1794426949.7609992,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20645,17 +20655,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794426770.3857675,
+    "last_deal_post_time": 1794426952.6758533,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794426773.3120208,
+    "last_sweep_time": 1794426955.0090547,
     "last_sweep_times": {
-      "algeria": 1794426770.359031,
-      "france": 1794426773.3120208
+      "algeria": 1794426952.6467009,
+      "france": 1794426955.0090547
     },
     "last_deal_post_times": {
-      "algeria": 1794426770.3857675
+      "algeria": 1794426952.6758533
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
