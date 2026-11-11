@@ -1232,7 +1232,7 @@
     "1005012135177627": 1793656181.223734,
     "1005013455514231": 1793542445.2859337,
     "1005009578274758": 1793542479.8362749,
-    "1005010413332383": 1794349724.9598093,
+    "1005010413332383": 1794415897.5781474,
     "1005011550075220": 1793542531.6312253,
     "1005009806856302": 1794415703.2366781,
     "1005009980316035": 1793542552.2730343,
@@ -3374,7 +3374,7 @@
     "Honor Win Turbo 2": 1794230539.4652834,
     "THINKCAR THINKDIAG OBD2 Scanner": 1794231079.407264,
     "Honor X70 Pro Max  8/256GB": 1794232557.0275722,
-    "AMD Ryzen 7 9800X3D": 1794349724.9598093,
+    "AMD Ryzen 7 9800X3D": 1794415897.5781474,
     "FeiyuTech VB4 3-Axis Gimbal Stabilizer": 1794242485.418005,
     "AOCHUAN Handheld Gimbal V8": 1794242679.099279,
     "hohem X3 SE Gimbal Phone Stabilizer": 1794243215.3426878,
@@ -3426,7 +3426,6 @@
     "ASROCK X570M PRO4 MOTHERBOARD": 1794414971.7181702
   },
   "published_post_keys": [
-    "ecksdeal:5971",
     "lodydeals:45474",
     "aniscoupons:33203",
     "lodydeals:45442",
@@ -4425,11 +4424,12 @@
     "aniscoupons:34524",
     "zedstoreonline:39890",
     "aniscoupons:34525",
-    "aniscoupons:34527"
+    "aniscoupons:34527",
+    "aniscoupons:34528"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794415703.2366781,
+  "last_run_time": 1794415897.5781474,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4460,8 +4460,8 @@
       "last_check_time": 1794414968.3413694
     },
     "aniscoupons": {
-      "last_message_id": 34527,
-      "last_check_time": 1794415705.2888205
+      "last_message_id": 34528,
+      "last_check_time": 1794415899.6419797
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20287,6 +20287,16 @@
       "price": 16.5,
       "timestamp": 1794415703.2366781,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34528": {
+      "channel_msg_id": 2330,
+      "product_id": "1005010413332383",
+      "title": "AMD Ryzen 7 9800X3D",
+      "channel": "aniscoupons",
+      "source_msg_id": 34528,
+      "price": 340.3,
+      "timestamp": 1794415897.5781474,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20295,17 +20305,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794415706.3320475,
+    "last_deal_post_time": 1794415900.664786,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794415709.1602135,
+    "last_sweep_time": 1794415903.8528173,
     "last_sweep_times": {
-      "algeria": 1794415706.3094463,
-      "france": 1794415709.1602135
+      "algeria": 1794415900.637047,
+      "france": 1794415903.8528173
     },
     "last_deal_post_times": {
-      "algeria": 1794415706.3320475
+      "algeria": 1794415900.664786
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
