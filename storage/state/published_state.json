@@ -1387,7 +1387,7 @@
     "1005013205365677": 1794390785.626018,
     "1005008429979494": 1793741666.9686077,
     "1005004795387201": 1793742770.1634803,
-    "1005010702983351": 1794305193.7156484,
+    "1005010702983351": 1794436379.3016446,
     "1005008366962319": 1794401855.0861495,
     "1005005058037424": 1793779907.9964287,
     "1005012946895000": 1793793714.105913,
@@ -3295,7 +3295,7 @@
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794412380.423559,
     "Fifine Gaming Headset H9W": 1794433999.0419908,
     "Fifine Gaming Headset H6": 1794424534.1435025,
-    "HyperX Cloud 3 III Wired Gaming Headset": 1794305193.7156484,
+    "HyperX Cloud 3 III Wired Gaming Headset": 1794436379.3016446,
     "KOOTION SSD SATA": 1794426949.7609992,
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
     "هذون سماعات جدد من   HAYLOU⌚": 1793966887.3818936,
@@ -3462,7 +3462,6 @@
     "DJI Osmo mobile": 1794432694.0507162
   },
   "published_post_keys": [
-    "zedstoreonline:38535",
     "zedstoreonline:38757",
     "bnddeals:50814",
     "lodydeals:45491",
@@ -4461,11 +4460,12 @@
     "aniscoupons:34592",
     "aniscoupons:34593",
     "aniscoupons:34595",
-    "aniscoupons:34596"
+    "aniscoupons:34596",
+    "aniscoupons:34597"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794436007.5288515,
+  "last_run_time": 1794436379.3016446,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4496,8 +4496,8 @@
       "last_check_time": 1794433800.1771796
     },
     "aniscoupons": {
-      "last_message_id": 34596,
-      "last_check_time": 1794436009.5950959
+      "last_message_id": 34597,
+      "last_check_time": 1794436381.3691318
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20929,6 +20929,16 @@
       "price": 46.77,
       "timestamp": 1794436007.5288515,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34597": {
+      "channel_msg_id": 2392,
+      "product_id": "1005010702983351",
+      "title": "HyperX Cloud 3 III Wired Gaming Headset",
+      "channel": "aniscoupons",
+      "source_msg_id": 34597,
+      "price": 67.6,
+      "timestamp": 1794436379.3016446,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20937,17 +20947,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794436010.4477482,
+    "last_deal_post_time": 1794436382.282198,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794436193.1999605,
+    "last_sweep_time": 1794436384.8260787,
     "last_sweep_times": {
-      "algeria": 1794436190.3779972,
-      "france": 1794436193.1999605
+      "algeria": 1794436382.2534857,
+      "france": 1794436384.8260787
     },
     "last_deal_post_times": {
-      "algeria": 1794436010.4477482
+      "algeria": 1794436382.282198
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
