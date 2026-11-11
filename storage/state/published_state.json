@@ -1361,7 +1361,7 @@
     "1005010419207841": 1793656214.2446048,
     "1005011891052345": 1793706864.9165008,
     "1005009648930854": 1793707047.5983977,
-    "1005010184029817": 1794312964.1163073,
+    "1005010184029817": 1794396619.5833008,
     "1005006302799297": 1793707108.6257114,
     "1005013372330447": 1793707119.4932482,
     "1005012305564176": 1793707135.2600253,
@@ -2445,7 +2445,8 @@
     "iQOO Neo 11 Ultra",
     "ONEPLUS 15 Global Rom 12/256",
     "OPPO FIND X9s Pro",
-    "Vivo X300  12/256GB"
+    "Vivo X300  12/256GB",
+    "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3405,10 +3406,10 @@
     "iQOO Neo 11 Ultra": 1794391855.282333,
     "ONEPLUS 15 Global Rom 12/256": 1794393509.614562,
     "OPPO FIND X9s Pro": 1794394415.6108775,
-    "Vivo X300  12/256GB": 1794394604.3664222
+    "Vivo X300  12/256GB": 1794394604.3664222,
+    "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD": 1794396619.5833008
   },
   "published_post_keys": [
-    "aniscoupons:32788",
     "zedstoreonline:38893",
     "zedstoreonline:38697",
     "lodydeals:45542",
@@ -4407,11 +4408,12 @@
     "aniscoupons:34497",
     "bnddeals:51289",
     "bnddeals:51290",
-    "aniscoupons:34499"
+    "aniscoupons:34499",
+    "zedstoreonline:39876"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794396072.4358249,
+  "last_run_time": 1794396619.5833008,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
@@ -4438,12 +4440,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39875,
-      "last_check_time": 1794395149.6214633
+      "last_message_id": 39876,
+      "last_check_time": 1794396621.6465254
     },
     "aniscoupons": {
-      "last_message_id": 34499,
-      "last_check_time": 1794396074.5149324
+      "last_message_id": 34500,
+      "last_check_time": 1794396623.5369394
     },
     "bnddeals": {
       "last_message_id": 51290,
@@ -4967,7 +4969,7 @@
     "1005010419207841": 29.44,
     "1005011891052345": 50.64,
     "1005009648930854": 7.56,
-    "1005010184029817": 11.7,
+    "1005010184029817": 10.8,
     "1005006302799297": 282.23,
     "1005013372330447": 583.0,
     "1005012305564176": 60.76,
@@ -19998,6 +20000,16 @@
       "price": 226.78,
       "timestamp": 1794396072.4358249,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39876": {
+      "channel_msg_id": 2302,
+      "product_id": "1005010184029817",
+      "title": "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39876,
+      "price": 10.8,
+      "timestamp": 1794396619.5833008,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20006,17 +20018,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794396075.325818,
+    "last_deal_post_time": 1794396624.2180157,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794396432.1960874,
+    "last_sweep_time": 1794396627.2536256,
     "last_sweep_times": {
-      "algeria": 1794396429.07635,
-      "france": 1794396432.1960874
+      "algeria": 1794396624.1900299,
+      "france": 1794396627.2536256
     },
     "last_deal_post_times": {
-      "algeria": 1794396075.325818
+      "algeria": 1794396624.2180157
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20643,7 +20655,7 @@
     "1005010419207841": "ecksdeal",
     "1005011891052345": "ecksdeal",
     "1005009648930854": "lodydeals",
-    "1005010184029817": "bnddeals",
+    "1005010184029817": "zedstoreonline",
     "1005006302799297": "lodydeals",
     "1005013372330447": "lodydeals",
     "1005012305564176": "lodydeals",
@@ -21731,7 +21743,8 @@
     "iQOO Neo 11 Ultra": "aniscoupons",
     "ONEPLUS 15 Global Rom 12/256": "aniscoupons",
     "OPPO FIND X9s Pro": "bnddeals",
-    "Vivo X300  12/256GB": "bnddeals"
+    "Vivo X300  12/256GB": "bnddeals",
+    "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22527,7 +22540,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38710",
     "megaphonna:8532",
     "megaphonna:8486",
     "lodydeals:45909",
@@ -23526,7 +23538,8 @@
     "bnddeals:51287",
     "bnddeals:51288",
     "aniscoupons:34498",
-    "zedstoreonline:39875"
+    "zedstoreonline:39875",
+    "aniscoupons:34500"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
