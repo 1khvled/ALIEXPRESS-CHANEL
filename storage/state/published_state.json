@@ -1430,7 +1430,7 @@
     "1005007038130594": 1794393500.1320646,
     "1005008248187128": 1794057675.8729835,
     "1005013053381984": 1794060065.5449874,
-    "1005008060391372": 1794312402.179863,
+    "1005008060391372": 1794424534.1435025,
     "1005010209911111": 1794068056.674266,
     "1005008295555234": 1794073127.8664527,
     "1005008645323478": 1794408682.8518124,
@@ -3285,7 +3285,7 @@
     "Redmi Note 17 Pro Max": 1793966798.7696738,
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794412380.423559,
     "Fifine Gaming Headset H9W": 1794312406.8406456,
-    "Fifine Gaming Headset H6": 1794312402.179863,
+    "Fifine Gaming Headset H6": 1794424534.1435025,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794305193.7156484,
     "KOOTION SSD SATA": 1794397172.8708336,
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
@@ -3450,7 +3450,6 @@
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551
   },
   "published_post_keys": [
-    "test_channel:1792284838",
     "lodydeals:45872",
     "zedstoreonline:38622",
     "lodydeals:45745",
@@ -4449,11 +4448,12 @@
     "aniscoupons:34548",
     "aniscoupons:34550",
     "zedstoreonline:39910",
-    "aniscoupons:34556"
+    "aniscoupons:34556",
+    "aniscoupons:34557"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794424345.6568675,
+  "last_run_time": 1794424534.1435025,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4484,8 +4484,8 @@
       "last_check_time": 1794423427.123123
     },
     "aniscoupons": {
-      "last_message_id": 34556,
-      "last_check_time": 1794424347.7231243
+      "last_message_id": 34557,
+      "last_check_time": 1794424536.2087958
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20585,6 +20585,16 @@
       "price": 12.11,
       "timestamp": 1794424345.6568675,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34557": {
+      "channel_msg_id": 2359,
+      "product_id": "1005008060391372",
+      "title": "Fifine Gaming Headset H6",
+      "channel": "aniscoupons",
+      "source_msg_id": 34557,
+      "price": 33.5,
+      "timestamp": 1794424534.1435025,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20593,17 +20603,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794424348.5177197,
+    "last_deal_post_time": 1794424537.0636215,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794424350.7829885,
+    "last_sweep_time": 1794424539.4917717,
     "last_sweep_times": {
-      "algeria": 1794424348.4889674,
-      "france": 1794424350.7829885
+      "algeria": 1794424537.0353396,
+      "france": 1794424539.4917717
     },
     "last_deal_post_times": {
-      "algeria": 1794424348.5177197
+      "algeria": 1794424537.0636215
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
