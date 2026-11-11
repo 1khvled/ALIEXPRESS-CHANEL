@@ -1271,7 +1271,7 @@
     "1005013053122560": 1794223202.4757502,
     "1005012322822595": 1793543961.1645148,
     "1005009662812027": 1794431224.823109,
-    "1005005975560350": 1794418654.7538266,
+    "1005005975560350": 1794433999.0419908,
     "1005012922578845": 1793544001.8628821,
     "1005011752891197": 1793613465.8475375,
     "1005008689880751": 1793544016.7486506,
@@ -3293,7 +3293,7 @@
     "Essager 20W GaN + cable": 1794076070.3822317,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794412380.423559,
-    "Fifine Gaming Headset H9W": 1794312406.8406456,
+    "Fifine Gaming Headset H9W": 1794433999.0419908,
     "Fifine Gaming Headset H6": 1794424534.1435025,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794305193.7156484,
     "KOOTION SSD SATA": 1794426949.7609992,
@@ -3462,7 +3462,6 @@
     "DJI Osmo mobile": 1794432694.0507162
   },
   "published_post_keys": [
-    "zedstoreonline:38689",
     "zedstoreonline:38967",
     "lodydeals:45438",
     "lodydeals:45482",
@@ -4461,19 +4460,20 @@
     "zedstoreonline:39925",
     "aniscoupons:34588",
     "aniscoupons:34589",
-    "zedstoreonline:39927"
+    "zedstoreonline:39927",
+    "aniscoupons:34590"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794433798.1228175,
+  "last_run_time": 1794433999.0419908,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
       "last_check_time": 1794419029.2500024
     },
     "lodydeals": {
-      "last_message_id": 46391,
-      "last_check_time": 1794433793.6893816
+      "last_message_id": 46393,
+      "last_check_time": 1794433993.8054702
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4496,8 +4496,8 @@
       "last_check_time": 1794433800.1771796
     },
     "aniscoupons": {
-      "last_message_id": 34589,
-      "last_check_time": 1794433621.633387
+      "last_message_id": 34590,
+      "last_check_time": 1794434001.1119893
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4935,7 +4935,7 @@
     "1005012322822595": 266.19,
     "1005012524603100": 283.59,
     "1005009662812027": 78.4,
-    "1005005975560350": 35.9,
+    "1005005975560350": 36.5,
     "1005011752891197": 119.3,
     "1005008689880751": 76.5,
     "1005006861815245": 9.44,
@@ -20879,6 +20879,16 @@
       "price": 9.2,
       "timestamp": 1794433798.1228175,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34590": {
+      "channel_msg_id": 2387,
+      "product_id": "1005005975560350",
+      "title": "Fifine Gaming Headset H9W",
+      "channel": "aniscoupons",
+      "source_msg_id": 34590,
+      "price": 36.5,
+      "timestamp": 1794433999.0419908,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20887,17 +20897,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794433801.342428,
+    "last_deal_post_time": 1794434001.8761303,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794433803.5313454,
+    "last_sweep_time": 1794434004.2989776,
     "last_sweep_times": {
-      "algeria": 1794433801.3191001,
-      "france": 1794433803.5313454
+      "algeria": 1794434001.8536232,
+      "france": 1794434004.2989776
     },
     "last_deal_post_times": {
-      "algeria": 1794433801.342428
+      "algeria": 1794434001.8761303
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21437,7 +21447,7 @@
     "1005012322822595": "lodydeals",
     "1005012524603100": "aniscoupons",
     "1005009662812027": "aniscoupons",
-    "1005005975560350": "zedstoreonline",
+    "1005005975560350": "aniscoupons",
     "1005011752891197": "zedstoreonline",
     "1005008689880751": "lodydeals",
     "1005006861815245": "ecksdeal",
