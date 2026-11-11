@@ -745,7 +745,8 @@
     "1005007477084001",
     "1005008774483451",
     "1005012639349629",
-    "1005010153422760"
+    "1005010153422760",
+    "1005012809141747"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1506,7 +1507,8 @@
     "1005007477084001": 1794420689.8352551,
     "1005008774483451": 1794426765.2023578,
     "1005012639349629": 1794431418.716995,
-    "1005010153422760": 1794432694.0507162
+    "1005010153422760": 1794432694.0507162,
+    "1005012809141747": 1794436740.624044
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2480,7 +2482,8 @@
     "GOOJPRT Portable Thermal Printer",
     "KOOTION M.2 512GB 7200Mbs",
     "HONOR X80 PRO MAX",
-    "DJI Osmo mobile"
+    "DJI Osmo mobile",
+    "OPPO K15 12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3459,10 +3462,10 @@
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551,
     "KOOTION M.2 512GB 7200Mbs": 1794430852.2821708,
     "HONOR X80 PRO MAX": 1794431585.5032148,
-    "DJI Osmo mobile": 1794432694.0507162
+    "DJI Osmo mobile": 1794432694.0507162,
+    "OPPO K15 12/256GB": 1794436740.624044
   },
   "published_post_keys": [
-    "zedstoreonline:38757",
     "bnddeals:50814",
     "lodydeals:45491",
     "couponsglobal:48766",
@@ -4461,11 +4464,12 @@
     "aniscoupons:34593",
     "aniscoupons:34595",
     "aniscoupons:34596",
-    "aniscoupons:34597"
+    "aniscoupons:34597",
+    "aniscoupons:34598"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794436379.3016446,
+  "last_run_time": 1794436740.624044,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4496,8 +4500,8 @@
       "last_check_time": 1794433800.1771796
     },
     "aniscoupons": {
-      "last_message_id": 34597,
-      "last_check_time": 1794436381.3691318
+      "last_message_id": 34598,
+      "last_check_time": 1794436742.666302
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5144,7 +5148,8 @@
     "1005013391950901": 1.11,
     "1005007477084001": 18.78,
     "1005012639349629": 378.14,
-    "1005010153422760": 58.7
+    "1005010153422760": 58.7,
+    "1005012809141747": 349.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -20939,6 +20944,16 @@
       "price": 67.6,
       "timestamp": 1794436379.3016446,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34598": {
+      "channel_msg_id": 2393,
+      "product_id": "1005012809141747",
+      "title": "OPPO K15 12/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34598,
+      "price": 349.4,
+      "timestamp": 1794436740.624044,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20947,17 +20962,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794436382.282198,
+    "last_deal_post_time": 1794436743.417944,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794436569.0334246,
+    "last_sweep_time": 1794436745.685882,
     "last_sweep_times": {
-      "algeria": 1794436566.3409815,
-      "france": 1794436569.0334246
+      "algeria": 1794436743.4011638,
+      "france": 1794436745.685882
     },
     "last_deal_post_times": {
-      "algeria": 1794436382.282198
+      "algeria": 1794436743.417944
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21718,7 +21733,8 @@
     "1005007477084001": "lodydeals",
     "1005008774483451": "zedstoreonline",
     "1005012639349629": "aniscoupons",
-    "1005010153422760": "zedstoreonline"
+    "1005010153422760": "zedstoreonline",
+    "1005012809141747": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -22699,7 +22715,8 @@
     "GOOJPRT Portable Thermal Printer": "lodydeals",
     "KOOTION M.2 512GB 7200Mbs": "lodydeals",
     "HONOR X80 PRO MAX": "aniscoupons",
-    "DJI Osmo mobile": "zedstoreonline"
+    "DJI Osmo mobile": "zedstoreonline",
+    "OPPO K15 12/256GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
