@@ -1147,7 +1147,7 @@
     "1005007375332966": 1793467173.1692383,
     "1005012543970886": 1793467209.762414,
     "1005013222073946": 1794306871.9339762,
-    "1005010485068924": 1794303364.4723535,
+    "1005010485068924": 1794420511.1707425,
     "1005013245248248": 1793467100.7719579,
     "1005011790544318": 1793448745.105644,
     "1005010266614743": 1793380310.000534,
@@ -1301,7 +1301,7 @@
     "1005013438789813": 1793569553.2022223,
     "1005012823102793": 1793569904.419889,
     "1005012773302941": 1794078084.8778791,
-    "1005008430147176": 1794313510.6359115,
+    "1005008430147176": 1794420506.0795698,
     "1005011742851856": 1793793769.5631576,
     "1005006304425302": 1793656107.995781,
     "1005010487426245": 1793573558.2913802,
@@ -2981,7 +2981,7 @@
     "TicWatch Pro 5 Wear OS Smartwatch NFC 5ATM (Refurbished)": 1793467173.1692383,
     "Redmi Pad 2 Pro (8/256GB)": 1793467181.5819678,
     "Poco Pad M1 (8/256GB)": 1793467199.494143,
-    "Soundcore P30i by Anker": 1794303364.4723535,
+    "Soundcore P30i by Anker": 1794420511.1707425,
     "Black Shark Neo2": 1793467209.762414,
     "MSI PRO X870E-P WIFI AM5 Motherboard used": 1793467230.0211325,
     "Soundcore by Anker Space One Pro": 1793467240.7535586,
@@ -3402,7 +3402,7 @@
     "FIFINE M9 Wireless Lavalier Microphone": 1794311865.7221916,
     "AULA WIN68 HE Gaming Mechanical Keyboard": 1794312953.1830955,
     "CMF Buds 2a ANC -42dB  السعر: 11.7": 1794312964.1163073,
-    "MACHENIKE G1 Wireless Gaming Controller": 1794313510.6359115,
+    "MACHENIKE G1 Wireless Gaming Controller": 1794420506.0795698,
     "HAYLOU Mori Pro": 1794417732.9524915,
     "KOOTION SATA3 SSD 128GB": 1794315897.4341226,
     "Inphic YuanChuang Cyber Gaming Mouse": 1794320674.833981,
@@ -3436,8 +3436,6 @@
     "Honor 600 5G Global 8/256GB": 1794418660.6617887
   },
   "published_post_keys": [
-    "lodydeals:45584",
-    "aniscoupons:32802",
     "aniscoupons:32734",
     "bnddeals:50794",
     "test_channel:1792181695",
@@ -4435,11 +4433,13 @@
     "aniscoupons:34537",
     "zedstoreonline:39902",
     "aniscoupons:34538",
-    "aniscoupons:34540"
+    "aniscoupons:34540",
+    "zedstoreonline:39903",
+    "aniscoupons:34542"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794419939.6582677,
+  "last_run_time": 1794420511.1707425,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4466,12 +4466,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39902,
-      "last_check_time": 1794419205.5863073
+      "last_message_id": 39903,
+      "last_check_time": 1794420508.1463609
     },
     "aniscoupons": {
-      "last_message_id": 34541,
-      "last_check_time": 1794420130.8768775
+      "last_message_id": 34542,
+      "last_check_time": 1794420513.2322936
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20428,6 +20428,26 @@
       "price": 33.64,
       "timestamp": 1794419939.6582677,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39903": {
+      "channel_msg_id": 2345,
+      "product_id": "1005008430147176",
+      "title": "MACHENIKE G1 Wireless Gaming Controller",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39903,
+      "price": 20.4,
+      "timestamp": 1794420506.0795698,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34542": {
+      "channel_msg_id": 2346,
+      "product_id": "1005010485068924",
+      "title": "Soundcore P30i by Anker",
+      "channel": "aniscoupons",
+      "source_msg_id": 34542,
+      "price": 22.47,
+      "timestamp": 1794420511.1707425,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20436,17 +20456,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794419942.664738,
+    "last_deal_post_time": 1794420513.901566,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794420309.209559,
+    "last_sweep_time": 1794420516.2769365,
     "last_sweep_times": {
-      "algeria": 1794420306.7963133,
-      "france": 1794420309.209559
+      "algeria": 1794420513.8733041,
+      "france": 1794420516.2769365
     },
     "last_deal_post_times": {
-      "algeria": 1794419942.664738
+      "algeria": 1794420513.901566
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
