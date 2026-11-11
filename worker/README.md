@@ -46,6 +46,24 @@ https://api.telegram.org/bot<token>/setWebhook?url=https://alilo07bot.<subdomain
 
 Check it with `getWebhookInfo` and `GET /health`.
 
+## Free-tier budget
+
+Built to sit far below the Workers free plan (100k requests/day, 10 ms CPU
+per invocation):
+
+| Cost | When | Mitigation |
+| --- | --- | --- |
+| Worker request | every message | one webhook call per Telegram update |
+| CPU | every message | warm path is regex only (~0.5 ms) |
+| AliExpress fetch | cache miss only | L1 isolate map → L2 edge cache, 7 days |
+| USDT fetch | only when a USD price needs DZD | 30 min cache, skipped for French replies |
+| Short-link hops | cache miss only | `s.click`/`a.aliexpress` code → product id, 7 days |
+| Telegram calls | every reply | typing + message fired in parallel |
+
+Only the first 80KB of a product page is read and only its `<head>` is
+scanned. A captcha/blocked page is remembered as "empty" for 30 minutes, not
+a week, so a block cannot poison the cache.
+
 ## Routes
 
 - `POST /telegram` — Telegram webhook (also accepts `POST /`)

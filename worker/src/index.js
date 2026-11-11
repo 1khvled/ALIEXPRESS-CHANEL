@@ -24,7 +24,7 @@ const UA =
 
 const MAX_LINKS_PER_HOUR = 20;
 const HOUR_MS = 3600 * 1000;
-const WORK_BUDGET_MS = 25000;
+const WORK_BUDGET_MS = 15000;
 
 /* ------------------------------------------------------------------ */
 /* In-memory state (per isolate — best effort, same as the old server) */
@@ -32,9 +32,87 @@ const WORK_BUDGET_MS = 25000;
 
 const userLang = new Map(); // userId -> "ar" | "fr"
 const linkHits = new Map(); // userId -> [timestamps]
-const usdtCache = { rate: 249.0, at: 0 };
+let lastUsdtRate = 249.0;
 
 const nf = new Intl.NumberFormat("en-US");
+
+/* ------------------------------------------------------------------ */
+/* Caching — L1 isolate map, L2 Cloudflare edge cache                  */
+/*                                                                     */
+/* The expensive part of this bot is downloading + regex-parsing an    */
+/* AliExpress product page. Each product is therefore fetched at most  */
+/* once per colo per week, and the USDT rate once per 30 minutes.      */
+/* Cache API reads are free: they do not count as subrequests.         */
+/* ------------------------------------------------------------------ */
+
+const CACHE_ORIGIN = "https://cache.alilo07bot.internal";
+const MEMO_MAX = 400;
+const META_TTL = 7 * 24 * 3600; // product title/image
+const RATE_TTL = 1800; // USDT rate
+const SHORT_TTL = 7 * 24 * 3600; // short link -> product id
+
+const memo = new Map(); // key -> { v, exp }
+
+function memoGet(key) {
+  const e = memo.get(key);
+  if (!e) return undefined;
+  if (e.exp < Date.now()) {
+    memo.delete(key);
+    return undefined;
+  }
+  return e.v;
+}
+
+function memoSet(key, v, ttlMs) {
+  if (memo.size >= MEMO_MAX) {
+    const oldest = memo.keys().next().value;
+    if (oldest !== undefined) memo.delete(oldest);
+  }
+  memo.set(key, { v, exp: Date.now() + ttlMs });
+}
+
+async function edgeGet(key) {
+  try {
+    const hit = await caches.default.match(`${CACHE_ORIGIN}/${key}`);
+    if (!hit) return undefined;
+    return await hit.json();
+  } catch (_) {
+    return undefined;
+  }
+}
+
+async function edgeSet(key, value, ttlSeconds) {
+  try {
+    await caches.default.put(
+      `${CACHE_ORIGIN}/${key}`,
+      new Response(JSON.stringify(value), {
+        headers: {
+          "content-type": "application/json",
+          "cache-control": `public, max-age=${ttlSeconds}`,
+        },
+      })
+    );
+  } catch (_) {}
+}
+
+/** L1 -> L2 -> produce(). A produce() that returns undefined is not cached. */
+async function cached(key, ttlSeconds, produce) {
+  const l1 = memoGet(key);
+  if (l1 !== undefined) return l1;
+
+  const l2 = await edgeGet(key);
+  if (l2 !== undefined) {
+    memoSet(key, l2, ttlSeconds * 1000);
+    return l2;
+  }
+
+  const value = await produce();
+  if (value !== undefined) {
+    memoSet(key, value, ttlSeconds * 1000);
+    await edgeSet(key, value, ttlSeconds);
+  }
+  return value;
+}
 
 /* ------------------------------------------------------------------ */
 /* Copy                                                                */
@@ -139,17 +217,31 @@ function getLang(userId) {
   return userLang.get(userId) || "ar";
 }
 
+function setLang(userId, lang) {
+  userLang.set(userId, lang);
+  if (userLang.size > 5000) {
+    const oldest = userLang.keys().next().value;
+    if (oldest !== undefined) userLang.delete(oldest);
+  }
+}
+
 function checkRateLimit(userId, env) {
   if (isAdmin(userId, env)) return { limited: false, waitMs: 0 };
   const now = Date.now();
   const cutoff = now - HOUR_MS;
-  const hits = (linkHits.get(userId) || []).filter((t) => t > cutoff);
+  let hits = linkHits.get(userId) || [];
+  hits = hits.length && hits[hits.length - 1] < cutoff ? [] : hits.filter((t) => t > cutoff);
   if (hits.length >= MAX_LINKS_PER_HOUR) {
     linkHits.set(userId, hits);
     return { limited: true, waitMs: Math.max(1000, HOUR_MS - (now - hits[0])) };
   }
   hits.push(now);
   linkHits.set(userId, hits);
+  // Bound the map so a long-lived isolate cannot grow without limit.
+  if (linkHits.size > 5000) {
+    const oldest = linkHits.keys().next().value;
+    if (oldest !== undefined) linkHits.delete(oldest);
+  }
   return { limited: false, waitMs: 0 };
 }
 
@@ -269,9 +361,59 @@ function extractTitleAndPrice(text) {
 }
 
 /**
+ * Follow one short link to a product id, reading Location headers by hand
+ * so the landing page never has to be rendered.
+ */
+async function followToPid(start, deadline) {
+  let current = start;
+  for (let hop = 0; hop < 5; hop++) {
+    if (Date.now() > deadline) return null;
+
+    const pid = extractPid(current);
+    if (pid) return pid;
+
+    let res;
+    try {
+      res = await fetch(current, {
+        redirect: "manual",
+        headers: {
+          "user-agent": UA,
+          accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+          "accept-language": "en-US,en;q=0.9,ar;q=0.8",
+        },
+        signal: AbortSignal.timeout(Math.min(4000, remaining(deadline))),
+      });
+    } catch (_) {
+      return null;
+    }
+
+    const loc = res.headers.get("location");
+    if (loc) {
+      try {
+        current = new URL(loc, current).toString();
+      } catch (_) {
+        return null;
+      }
+      continue;
+    }
+
+    // Landing page: scan a capped slice for a product id / item URL.
+    try {
+      const body = (await res.text()).slice(0, 60000);
+      const found = extractPid(body);
+      if (found) return found;
+      const m = body.match(/\/item\/(\d{10,18})/);
+      if (m) return m[1];
+    } catch (_) {}
+    return null;
+  }
+  return null;
+}
+
+/**
  * Resolve any AliExpress input to a product id.
- * Follows s.click / a.aliexpress / star short links by hand so the
- * final landing page never has to be rendered.
+ * Full /item/ URLs and raw ids are answered by regex alone (no network).
+ * Short links are followed once and then cached for a week.
  */
 async function resolveProductId(text, deadline) {
   const direct = extractPid(text);
@@ -279,54 +421,30 @@ async function resolveProductId(text, deadline) {
 
   const candidates = [];
   const sc = String(text).match(/s\.click\.aliexpress\.com\/e\/(_[A-Za-z0-9]+)/);
-  if (sc) candidates.push(`https://s.click.aliexpress.com/e/${sc[1]}`);
+  if (sc) candidates.push({ url: `https://s.click.aliexpress.com/e/${sc[1]}`, key: `sc:${sc[1]}` });
   const a = String(text).match(/a\.aliexpress\.com\/(_[A-Za-z0-9]+)/);
-  if (a) candidates.push(`https://a.aliexpress.com/${a[1]}`);
+  if (a) candidates.push({ url: `https://a.aliexpress.com/${a[1]}`, key: `a:${a[1]}` });
   for (const u of extractUrls(text)) {
-    if (!candidates.includes(u)) candidates.push(u);
+    if (!candidates.some((c) => c.url === u)) candidates.push({ url: u, key: null });
   }
 
-  for (const start of candidates.slice(0, 3)) {
-    let current = start;
-    for (let hop = 0; hop < 6; hop++) {
-      if (Date.now() > deadline) return null;
-      const pid = extractPid(current);
-      if (pid) return pid;
-
-      let res;
-      try {
-        res = await fetch(current, {
-          redirect: "manual",
-          headers: {
-            "user-agent": UA,
-            accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "accept-language": "en-US,en;q=0.9,ar;q=0.8",
-          },
-          signal: AbortSignal.timeout(Math.min(6000, remaining(deadline))),
-        });
-      } catch (_) {
-        break;
+  for (const c of candidates.slice(0, 3)) {
+    if (c.key) {
+      const hit = memoGet(c.key) || (await edgeGet(c.key));
+      if (hit && hit.pid) {
+        memoSet(c.key, hit, SHORT_TTL * 1000);
+        return hit.pid;
       }
+    }
 
-      const loc = res.headers.get("location");
-      if (loc) {
-        try {
-          current = new URL(loc, current).toString();
-        } catch (_) {
-          break;
-        }
-        continue;
+    const pid = await followToPid(c.url, deadline);
+    if (pid) {
+      if (c.key) {
+        const payload = { pid };
+        memoSet(c.key, payload, SHORT_TTL * 1000);
+        await edgeSet(c.key, payload, SHORT_TTL);
       }
-
-      // Landing page: scan the body for a product id / item URL.
-      try {
-        const body = (await res.text()).slice(0, 80000);
-        const found = extractPid(body);
-        if (found) return found;
-        const m = body.match(/\/item\/(\d{10,18})/);
-        if (m) return m[1];
-      } catch (_) {}
-      break;
+      return pid;
     }
   }
 
@@ -349,37 +467,90 @@ function decodeEntities(s) {
     .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)));
 }
 
+const metaRe = new Map();
+
 function metaContent(html, prop) {
-  const p = prop.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  let m = html.match(new RegExp(`<meta[^>]+(?:property|name)=["']${p}["'][^>]*>`, "i"));
-  let tag = m && m[0];
-  if (!tag) {
-    m = html.match(new RegExp(`<meta[^>]+content=["'][^"']*["'][^>]*(?:property|name)=["']${p}["'][^>]*>`, "i"));
-    tag = m && m[0];
+  let res = metaRe.get(prop);
+  if (!res) {
+    const p = prop.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    res = [
+      new RegExp(`<meta[^>]+(?:property|name)=["']${p}["'][^>]*>`, "i"),
+      new RegExp(`<meta[^>]+content=["'][^"']*["'][^>]*(?:property|name)=["']${p}["'][^>]*>`, "i"),
+    ];
+    metaRe.set(prop, res);
   }
+  const tag = (html.match(res[0]) || html.match(res[1]) || [])[0];
   if (!tag) return null;
   const c = tag.match(/content=["']([^"']*)["']/i);
   return c ? decodeEntities(c[1]) : null;
 }
 
-async function fetchProductMeta(pid, deadline) {
-  const out = {};
+/**
+ * Product title + image.
+ *
+ * Cost control:
+ *  - L1 isolate map -> L2 edge cache (7 days) -> at most one origin fetch
+ *    per product per colo per week.
+ *  - Only the first 80KB is downloaded and only the <head> is scanned,
+ *    because og:title / og:image always live there.
+ *  - A page that yields nothing (captcha, blocked, tagless) is remembered
+ *    for 30 minutes instead of a week, so a block cannot poison the cache
+ *    and a burst of links cannot hammer AliExpress.
+ */
+async function getProductMeta(pid, deadline) {
+  const key = `meta:${pid}`;
+
+  const l1 = memoGet(key);
+  if (l1 !== undefined) return l1.empty ? undefined : l1;
+
+  const l2 = await edgeGet(key);
+  if (l2 !== undefined) {
+    memoSet(key, l2, (l2.empty ? 1800 : META_TTL) * 1000);
+    return l2.empty ? undefined : l2;
+  }
+
+  let res;
   try {
-    const res = await fetch(`https://www.aliexpress.com/item/${pid}.html`, {
+    res = await fetch(`https://www.aliexpress.com/item/${pid}.html`, {
       redirect: "follow",
       headers: { "user-agent": UA, "accept-language": "en-US,en;q=0.9" },
-      signal: AbortSignal.timeout(Math.min(6000, remaining(deadline))),
+      signal: AbortSignal.timeout(Math.min(4500, remaining(deadline))),
+      cf: { cacheTtl: 86400 },
     });
-    if (!res.ok) return out;
-    const html = (await res.text()).slice(0, 300000);
-    const title = metaContent(html, "og:title") || metaContent(html, "twitter:title");
-    if (title) {
-      const clean = title.replace(/\s*[-|]\s*AliExpress\s*\d*\s*$/i, "").trim();
-      if (clean.length >= 5) out.title = clean.slice(0, 120);
-    }
-    const image = metaContent(html, "og:image") || metaContent(html, "twitter:image");
-    if (image && /alicdn\.com|aliexpress-media\.com/.test(image)) out.image = image;
-  } catch (_) {}
+  } catch (_) {
+    return undefined;
+  }
+  if (!res.ok) return undefined;
+
+  let html;
+  try {
+    const buf = await res.arrayBuffer();
+    html = new TextDecoder("utf-8").decode(buf.slice(0, 80000));
+  } catch (_) {
+    return undefined;
+  }
+
+  const headEnd = html.indexOf("</head>");
+  if (headEnd > 0) html = html.slice(0, headEnd);
+
+  const out = {};
+  const title = metaContent(html, "og:title") || metaContent(html, "twitter:title");
+  if (title) {
+    const clean = title.replace(/\s*[-|]\s*AliExpress\s*\d*\s*$/i, "").trim();
+    if (clean.length >= 5) out.title = clean.slice(0, 120);
+  }
+  const image = metaContent(html, "og:image") || metaContent(html, "twitter:image");
+  if (image && /alicdn\.com|aliexpress-media\.com/.test(image)) out.image = image;
+
+  if (!out.title && !out.image) {
+    const neg = { empty: true };
+    memoSet(key, neg, 1800 * 1000);
+    await edgeSet(key, neg, 1800);
+    return undefined;
+  }
+
+  memoSet(key, out, META_TTL * 1000);
+  await edgeSet(key, out, META_TTL);
   return out;
 }
 
@@ -388,25 +559,26 @@ async function fetchProductMeta(pid, deadline) {
 /* ------------------------------------------------------------------ */
 
 async function getUsdtRate() {
-  const now = Date.now();
-  if (usdtCache.at && now - usdtCache.at < 30 * 60 * 1000) return usdtCache.rate;
-  try {
-    const res = await fetch("https://squarealgerie.com/api/rates", {
-      signal: AbortSignal.timeout(3000),
-    });
-    if (res.ok) {
-      const data = await res.json();
-      const usdt = (data && data.currencies ? data.currencies : []).find((c) => c && c.code === "USDT");
-      const rate = Number(usdt && usdt.buy);
-      if (Number.isFinite(rate) && rate >= 220 && rate <= 280) {
-        usdtCache.rate = rate;
-        usdtCache.at = now;
-        return rate;
+  const v = await cached("usdt", RATE_TTL, async () => {
+    let rate = lastUsdtRate;
+    try {
+      const res = await fetch("https://squarealgerie.com/api/rates", {
+        signal: AbortSignal.timeout(2500),
+        cf: { cacheTtl: RATE_TTL },
+      });
+      if (res.ok) {
+        const data = await res.json();
+        const usdt = (data && data.currencies ? data.currencies : []).find((c) => c && c.code === "USDT");
+        const n = Number(usdt && usdt.buy);
+        if (Number.isFinite(n) && n >= 220 && n <= 280) {
+          rate = n;
+          lastUsdtRate = n;
+        }
       }
-    }
-  } catch (_) {}
-  usdtCache.at = now;
-  return usdtCache.rate;
+    } catch (_) {}
+    return { rate };
+  });
+  return v && Number.isFinite(v.rate) ? v.rate : lastUsdtRate;
 }
 
 /* ------------------------------------------------------------------ */
@@ -439,10 +611,15 @@ async function generateDeal(pid, rawText, lang, env, deadline) {
   const links = buildLinks(pid, trackingId);
   const fromText = extractTitleAndPrice(rawText);
 
-  const [meta, rate] = await Promise.all([fetchProductMeta(pid, deadline), getUsdtRate()]);
+  // The rate is only needed to convert a USD price to DZD, so don't ask
+  // for it when the share text carried no price.
+  const [meta, rate] = await Promise.all([
+    getProductMeta(pid, deadline),
+    fromText.price ? getUsdtRate() : Promise.resolve(lastUsdtRate),
+  ]);
 
   const title =
-    meta.title ||
+    (meta && meta.title) ||
     fromText.title ||
     (lang === "fr" ? "Produit AliExpress" : "منتج مميز من AliExpress");
 
@@ -558,7 +735,7 @@ ${priceLine}
     markup,
     title,
     price,
-    image: meta.image || null,
+    image: (meta && meta.image) || null,
     links,
     rate,
   };
@@ -653,13 +830,13 @@ async function handleCallback(cb, env, deadline) {
   if (!chatId) return { handled: "callback_no_chat" };
 
   if (data === "set_lang_fr") {
-    userLang.set(userId, "fr");
+    setLang(userId, "fr");
     await sendMsg(env, chatId, "✅ <b>Langue changée en Français !</b>\n\n" + WELCOME_FR, startMarkupFr(), deadline);
     return { handled: "set_lang_fr" };
   }
 
   if (data === "set_lang_ar") {
-    userLang.set(userId, "ar");
+    setLang(userId, "ar");
     await sendMsg(env, chatId, "✅ <b>تم تغيير اللغة إلى العربية !</b>\n\n" + WELCOME_AR, startMarkupAr(), deadline);
     return { handled: "set_lang_ar" };
   }
@@ -806,10 +983,10 @@ async function handleMessage(message, env, deadline) {
     let userLangNow = lang;
     if (param.includes("fr")) {
       userLangNow = "fr";
-      userLang.set(userId, "fr");
+      setLang(userId, "fr");
     } else if (param.includes("ar")) {
       userLangNow = "ar";
-      userLang.set(userId, "ar");
+      setLang(userId, "ar");
     }
 
     if (["meta", "ad", "fb", "coins", "promo", "deal"].some((k) => param.includes(k))) {
@@ -853,7 +1030,7 @@ async function handleMessage(message, env, deadline) {
   }
 
   if (["/fr", "/french", "francais", "français"].includes(text)) {
-    userLang.set(userId, "fr");
+    setLang(userId, "fr");
     await sendMsg(
       env,
       chatId,
@@ -865,7 +1042,7 @@ async function handleMessage(message, env, deadline) {
   }
 
   if (["/ar", "/arabic", "عربي", "العربية"].includes(text)) {
-    userLang.set(userId, "ar");
+    setLang(userId, "ar");
     await sendMsg(
       env,
       chatId,
@@ -996,9 +1173,12 @@ async function handleMessage(message, env, deadline) {
     return { handled: "rate_limited", pid };
   }
 
-  await tg(env, "sendChatAction", { chat_id: chatId, action: "typing" }, deadline);
-
-  const deal = await generateDeal(pid, text, lang, env, deadline);
+  // Typing indicator runs alongside the (cached, usually instant) lookup
+  // instead of adding its own round trip before it.
+  const [deal] = await Promise.all([
+    generateDeal(pid, text, lang, env, deadline),
+    tg(env, "sendChatAction", { chat_id: chatId, action: "typing" }, deadline),
+  ]);
 
   if (isAdmin(userId, env)) {
     deal.markup.inline_keyboard.unshift([
