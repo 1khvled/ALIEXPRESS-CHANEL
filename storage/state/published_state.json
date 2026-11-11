@@ -746,7 +746,8 @@
     "1005008774483451",
     "1005012639349629",
     "1005010153422760",
-    "1005012809141747"
+    "1005012809141747",
+    "1005012912160949"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1508,7 +1509,8 @@
     "1005008774483451": 1794426765.2023578,
     "1005012639349629": 1794431418.716995,
     "1005010153422760": 1794432694.0507162,
-    "1005012809141747": 1794436740.624044
+    "1005012809141747": 1794436740.624044,
+    "1005012912160949": 1794437490.1572993
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2483,7 +2485,8 @@
     "KOOTION M.2 512GB 7200Mbs",
     "HONOR X80 PRO MAX",
     "DJI Osmo mobile",
-    "OPPO K15 12/256GB"
+    "OPPO K15 12/256GB",
+    "Lenovo Legion Y70 2026 Gamin(12/512GB)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3463,10 +3466,10 @@
     "KOOTION M.2 512GB 7200Mbs": 1794430852.2821708,
     "HONOR X80 PRO MAX": 1794431585.5032148,
     "DJI Osmo mobile": 1794432694.0507162,
-    "OPPO K15 12/256GB": 1794436740.624044
+    "OPPO K15 12/256GB": 1794436740.624044,
+    "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794437490.1572993
   },
   "published_post_keys": [
-    "couponsglobal:48766",
     "megaphonna:8427",
     "couponsglobal:48798",
     "zedstoreonline:38831",
@@ -4465,11 +4468,12 @@
     "aniscoupons:34597",
     "aniscoupons:34598",
     "zedstoreonline:39928",
-    "aniscoupons:34600"
+    "aniscoupons:34600",
+    "aniscoupons:34601"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794437138.1462939,
+  "last_run_time": 1794437490.1572993,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4500,8 +4504,8 @@
       "last_check_time": 1794437134.8889828
     },
     "aniscoupons": {
-      "last_message_id": 34600,
-      "last_check_time": 1794437140.2090871
+      "last_message_id": 34601,
+      "last_check_time": 1794437492.1973388
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5149,7 +5153,8 @@
     "1005007477084001": 18.78,
     "1005012639349629": 378.14,
     "1005010153422760": 58.7,
-    "1005012809141747": 349.4
+    "1005012809141747": 349.4,
+    "1005012912160949": 370.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -20974,6 +20979,16 @@
       "price": 114.63,
       "timestamp": 1794437138.1462939,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34601": {
+      "channel_msg_id": 2396,
+      "product_id": "1005012912160949",
+      "title": "Lenovo Legion Y70 2026 Gamin(12/512GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34601,
+      "price": 370.5,
+      "timestamp": 1794437490.1572993,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20982,17 +20997,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794437140.8821435,
+    "last_deal_post_time": 1794437493.0512538,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794437312.1209638,
+    "last_sweep_time": 1794437495.5055237,
     "last_sweep_times": {
-      "algeria": 1794437309.4566271,
-      "france": 1794437312.1209638
+      "algeria": 1794437493.0340297,
+      "france": 1794437495.5055237
     },
     "last_deal_post_times": {
-      "algeria": 1794437140.8821435
+      "algeria": 1794437493.0512538
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21754,7 +21769,8 @@
     "1005008774483451": "zedstoreonline",
     "1005012639349629": "aniscoupons",
     "1005010153422760": "zedstoreonline",
-    "1005012809141747": "aniscoupons"
+    "1005012809141747": "aniscoupons",
+    "1005012912160949": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -22736,7 +22752,8 @@
     "KOOTION M.2 512GB 7200Mbs": "lodydeals",
     "HONOR X80 PRO MAX": "aniscoupons",
     "DJI Osmo mobile": "zedstoreonline",
-    "OPPO K15 12/256GB": "aniscoupons"
+    "OPPO K15 12/256GB": "aniscoupons",
+    "Lenovo Legion Y70 2026 Gamin(12/512GB)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
