@@ -1081,7 +1081,7 @@
     "1005012402919487": 1793542345.0399988,
     "9998883962": 1793273962.6790612,
     "1005012005176923": 1793543639.3190484,
-    "1005012399830182": 1793613447.9686892,
+    "1005012399830182": 1794392587.3539767,
     "1005013479172067": 1793448884.6592717,
     "1005012199872142": 1794391862.7124853,
     "9998886358": 1793276358.3466215,
@@ -2797,7 +2797,7 @@
     "Realme P3 (No Charger)": 1793399519.0209813,
     "Oppo Find X9 Pro 12/256": 1793540035.6702917,
     "Vivo X200S 12/256": 1793448596.0702198,
-    "IQOO 15T 12/256": 1793613447.9686892,
+    "IQOO 15T 12/256": 1794392587.3539767,
     "Honor Power 2 12/256": 1793276177.7089784,
     "OnePlus Turbo 6x  6/128GB": 1793276192.7711725,
     "Oneplus ACE 6 Ultra 12/256GB": 1794391862.7124853,
@@ -3400,7 +3400,6 @@
     "iQOO Neo 11 Ultra": 1794391855.282333
   },
   "published_post_keys": [
-    "zedstoreonline:38618",
     "aniscoupons:32857",
     "pcgamingpart:7949",
     "zedstoreonline:38694",
@@ -4399,11 +4398,12 @@
     "zedstoreonline:39862",
     "aniscoupons:34488",
     "aniscoupons:34489",
-    "aniscoupons:34490"
+    "aniscoupons:34490",
+    "aniscoupons:34494"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794391862.7124853,
+  "last_run_time": 1794392587.3539767,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
@@ -4430,16 +4430,16 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39867,
-      "last_check_time": 1794392406.2818313
+      "last_message_id": 39868,
+      "last_check_time": 1794392581.4241326
     },
     "aniscoupons": {
-      "last_message_id": 34493,
-      "last_check_time": 1794392414.8801882
+      "last_message_id": 34494,
+      "last_check_time": 1794392589.3938887
     },
     "bnddeals": {
-      "last_message_id": 51279,
-      "last_check_time": 1794392430.331939
+      "last_message_id": 51282,
+      "last_check_time": 1794392602.0854259
     }
   },
   "published_product_prices": {
@@ -4703,7 +4703,7 @@
     "1005013137304827": 276.1,
     "1005012402919487": 68.74,
     "1005012005176923": 475.06,
-    "1005012399830182": 442.3,
+    "1005012399830182": 443.3,
     "1005013479172067": 218.0,
     "1005012199872142": 438.5,
     "1005013170854617": 258.8,
@@ -19929,6 +19929,16 @@
       "price": 438.5,
       "timestamp": 1794391862.7124853,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34494": {
+      "channel_msg_id": 2296,
+      "product_id": "1005012399830182",
+      "title": "IQOO 15T 12/256",
+      "channel": "aniscoupons",
+      "source_msg_id": 34494,
+      "price": 443.3,
+      "timestamp": 1794392587.3539767,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19937,17 +19947,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794391880.170127,
+    "last_deal_post_time": 1794392602.118087,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794392434.0497322,
+    "last_sweep_time": 1794392605.315745,
     "last_sweep_times": {
-      "algeria": 1794392430.361226,
-      "france": 1794392434.0497322
+      "algeria": 1794392602.1018932,
+      "france": 1794392605.315745
     },
     "last_deal_post_times": {
-      "algeria": 1794391880.170127
+      "algeria": 1794392602.118087
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20304,7 +20314,7 @@
     "1005012402919487": "lodydeals",
     "9998883962": "test_channel",
     "1005012005176923": "lodydeals",
-    "1005012399830182": "zedstoreonline",
+    "1005012399830182": "aniscoupons",
     "1005013479172067": "megaphonna",
     "1005012199872142": "aniscoupons",
     "9998886358": "test_channel",
@@ -21059,7 +21069,7 @@
     "Realme P3 (No Charger)": "aniscoupons",
     "Oppo Find X9 Pro 12/256": "zedstoreonline",
     "Vivo X200S 12/256": "zedstoreonline",
-    "IQOO 15T 12/256": "zedstoreonline",
+    "IQOO 15T 12/256": "aniscoupons",
     "Honor Power 2 12/256": "zedstoreonline",
     "OnePlus Turbo 6x  6/128GB": "aniscoupons",
     "Oneplus ACE 6 Ultra 12/256GB": "aniscoupons",
@@ -22454,10 +22464,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45830",
-    "aniscoupons:33377",
-    "pcgamingpart:8007",
-    "megaphonna:8588",
     "aniscoupons:33442",
     "aniscoupons:33056",
     "bnddeals:50854",
@@ -23453,7 +23459,11 @@
     "aniscoupons:34492",
     "aniscoupons:34493",
     "bnddeals:51278",
-    "bnddeals:51279"
+    "bnddeals:51279",
+    "zedstoreonline:39868",
+    "bnddeals:51280",
+    "bnddeals:51281",
+    "bnddeals:51282"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
