@@ -1025,7 +1025,7 @@
     "9998882360": 1792162360.6633363,
     "9998882475": 1793282475.663889,
     "9998882568": 1792162568.078144,
-    "1005010369693975": 1794417732.9524915,
+    "1005010369693975": 1794434721.967324,
     "1005006442452857": 1792166326.0335298,
     "9998886462": 1792166462.200491,
     "1005009948598802": 1793500786.1935658,
@@ -3422,7 +3422,7 @@
     "AULA WIN68 HE Gaming Mechanical Keyboard": 1794312953.1830955,
     "CMF Buds 2a ANC -42dB  السعر: 11.7": 1794312964.1163073,
     "MACHENIKE G1 Wireless Gaming Controller": 1794420506.0795698,
-    "HAYLOU Mori Pro": 1794417732.9524915,
+    "HAYLOU Mori Pro": 1794434721.967324,
     "KOOTION SATA3 SSD 128GB": 1794315897.4341226,
     "Inphic YuanChuang Cyber Gaming Mouse": 1794320674.833981,
     "SIX PCIe 4.0 SSD (1TB) NVMe M2": 1794331533.1223195,
@@ -3462,7 +3462,6 @@
     "DJI Osmo mobile": 1794432694.0507162
   },
   "published_post_keys": [
-    "zedstoreonline:38967",
     "lodydeals:45438",
     "lodydeals:45482",
     "aniscoupons:32775",
@@ -4461,11 +4460,12 @@
     "aniscoupons:34588",
     "aniscoupons:34589",
     "zedstoreonline:39927",
-    "aniscoupons:34590"
+    "aniscoupons:34590",
+    "aniscoupons:34592"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794433999.0419908,
+  "last_run_time": 1794434721.967324,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4496,8 +4496,8 @@
       "last_check_time": 1794433800.1771796
     },
     "aniscoupons": {
-      "last_message_id": 34591,
-      "last_check_time": 1794434167.377968
+      "last_message_id": 34592,
+      "last_check_time": 1794434724.032568
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20889,6 +20889,16 @@
       "price": 36.5,
       "timestamp": 1794433999.0419908,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34592": {
+      "channel_msg_id": 2388,
+      "product_id": "1005010369693975",
+      "title": "HAYLOU Mori Pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 34592,
+      "price": 10.7,
+      "timestamp": 1794434721.967324,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20897,17 +20907,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794434001.8761303,
+    "last_deal_post_time": 1794434724.8884966,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794434549.0677555,
+    "last_sweep_time": 1794434727.2815957,
     "last_sweep_times": {
-      "algeria": 1794434546.5223682,
-      "france": 1794434549.0677555
+      "algeria": 1794434724.8591433,
+      "france": 1794434727.2815957
     },
     "last_deal_post_times": {
-      "algeria": 1794434001.8761303
+      "algeria": 1794434724.8884966
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
