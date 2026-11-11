@@ -1434,7 +1434,7 @@
     "1005010209911111": 1794068056.674266,
     "1005008295555234": 1794073127.8664527,
     "1005008645323478": 1794408682.8518124,
-    "1005008636930795": 1794231632.2676654,
+    "1005008636930795": 1794422876.857545,
     "1005006260870758": 1794250569.5221198,
     "1005009759580502": 1794331533.1223195,
     "1005009120888793": 1794306130.341298,
@@ -3280,7 +3280,7 @@
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": 1793966721.1839278,
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": 1793966727.646043,
     "GameSir X5 Lite Game Controller": 1794415703.2366781,
-    "Netac SSD NVME M2 250GB": 1794231632.2676654,
+    "Netac SSD NVME M2 250GB": 1794422876.857545,
     "Essager 20W GaN + cable": 1794076070.3822317,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794412380.423559,
@@ -3450,7 +3450,6 @@
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551
   },
   "published_post_keys": [
-    "aniscoupons:32778",
     "lodydeals:45778",
     "test_channel:1792284838",
     "lodydeals:45872",
@@ -4449,11 +4448,12 @@
     "aniscoupons:34544",
     "aniscoupons:34545",
     "aniscoupons:34548",
-    "aniscoupons:34550"
+    "aniscoupons:34550",
+    "zedstoreonline:39910"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794422698.8993735,
+  "last_run_time": 1794422876.857545,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4480,12 +4480,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39909,
-      "last_check_time": 1794422694.6816857
+      "last_message_id": 39910,
+      "last_check_time": 1794422878.9225583
     },
     "aniscoupons": {
-      "last_message_id": 34550,
-      "last_check_time": 1794422700.9565632
+      "last_message_id": 34551,
+      "last_check_time": 1794422880.3296945
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20565,6 +20565,16 @@
       "price": 136.7,
       "timestamp": 1794422698.8993735,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39910": {
+      "channel_msg_id": 2357,
+      "product_id": "1005008636930795",
+      "title": "Netac SSD NVME M2 250GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39910,
+      "price": 31.5,
+      "timestamp": 1794422876.857545,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20573,17 +20583,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794422701.7911384,
+    "last_deal_post_time": 1794422880.9494424,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794422704.3869417,
+    "last_sweep_time": 1794422883.2576702,
     "last_sweep_times": {
-      "algeria": 1794422701.7664883,
-      "france": 1794422704.3869417
+      "algeria": 1794422880.9201097,
+      "france": 1794422883.2576702
     },
     "last_deal_post_times": {
-      "algeria": 1794422701.7911384
+      "algeria": 1794422880.9494424
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23115,7 +23125,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45899",
     "bnddeals:50862",
     "megaphonna:8456",
     "lodydeals:45687",
@@ -24114,7 +24123,8 @@
     "aniscoupons:34547",
     "aniscoupons:34549",
     "lodydeals:46370",
-    "zedstoreonline:39909"
+    "zedstoreonline:39909",
+    "aniscoupons:34551"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
