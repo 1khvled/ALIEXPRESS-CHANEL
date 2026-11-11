@@ -1454,7 +1454,7 @@
     "1005012048332402": 1794136369.073103,
     "1005011665465731": 1794137638.8201442,
     "1005012377459743": 1794305200.722419,
-    "1005009460475870": 1794164680.2575803,
+    "1005009460475870": 1794433244.1988828,
     "1005009649079564": 1794145536.5317988,
     "1005007038022940": 1794146648.256951,
     "1005007981362777": 1794146655.1062205,
@@ -3363,7 +3363,7 @@
     "Honor 600s CN (8/256)": 1794305200.722419,
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
     "Blackview Mega 5": 1794414780.2759852,
-    "Warvank X8 Wireless Gaming Mouse": 1794144806.2660766,
+    "Warvank X8 Wireless Gaming Mouse": 1794433244.1988828,
     "Xiaoxin Pad Pro 2025 (8/128GB)": 1794412182.3559208,
     "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": 1794145536.5317988,
     "Lenovo Thinkplus XT88": 1794146648.256951,
@@ -3462,7 +3462,6 @@
     "DJI Osmo mobile": 1794432694.0507162
   },
   "published_post_keys": [
-    "pcgamingpart:7951",
     "lodydeals:45934",
     "lodydeals:45403",
     "test_channel:1792185128",
@@ -4461,11 +4460,12 @@
     "aniscoupons:34585",
     "zedstoreonline:39924",
     "aniscoupons:34586",
-    "aniscoupons:34587"
+    "aniscoupons:34587",
+    "zedstoreonline:39925"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794433057.1369512,
+  "last_run_time": 1794433244.1988828,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4492,8 +4492,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39924,
-      "last_check_time": 1794432696.1177993
+      "last_message_id": 39925,
+      "last_check_time": 1794433246.254014
     },
     "aniscoupons": {
       "last_message_id": 34587,
@@ -5096,7 +5096,7 @@
     "1005012048332402": 193.1,
     "1005011665465731": 5.38,
     "1005012377459743": 304.77,
-    "1005009460475870": 6.78,
+    "1005009460475870": 6.7,
     "1005009649079564": 19.4,
     "1005007038022940": 5.49,
     "1005007981362777": 5.69,
@@ -20839,6 +20839,16 @@
       "price": 182.38,
       "timestamp": 1794433057.1369512,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39925": {
+      "channel_msg_id": 2383,
+      "product_id": "1005009460475870",
+      "title": "Warvank X8 Wireless Gaming Mouse",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39925,
+      "price": 6.7,
+      "timestamp": 1794433244.1988828,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20847,17 +20857,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794433059.9817564,
+    "last_deal_post_time": 1794433247.603857,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794433062.2992384,
+    "last_sweep_time": 1794433250.43017,
     "last_sweep_times": {
-      "algeria": 1794433059.952975,
-      "france": 1794433062.2992384
+      "algeria": 1794433247.5811334,
+      "france": 1794433250.43017
     },
     "last_deal_post_times": {
-      "algeria": 1794433059.9817564
+      "algeria": 1794433247.603857
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21566,7 +21576,7 @@
     "1005012048332402": "aniscoupons",
     "1005011665465731": "lodydeals",
     "1005012377459743": "aniscoupons",
-    "1005009460475870": "lodydeals",
+    "1005009460475870": "zedstoreonline",
     "1005009649079564": "zedstoreonline",
     "1005007038022940": "lodydeals",
     "1005007981362777": "lodydeals",
