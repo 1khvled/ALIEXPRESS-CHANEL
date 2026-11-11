@@ -1234,7 +1234,7 @@
     "1005009578274758": 1793542479.8362749,
     "1005010413332383": 1794349724.9598093,
     "1005011550075220": 1793542531.6312253,
-    "1005009806856302": 1793542545.9047854,
+    "1005009806856302": 1794415703.2366781,
     "1005009980316035": 1793542552.2730343,
     "1005005905462505": 1794000865.9547298,
     "1005008248133489": 1793656129.0102158,
@@ -3263,7 +3263,7 @@
     "Baseus Mouse Bluetooth Wireless Computer 1600DPI": 1793966716.198834,
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": 1793966721.1839278,
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": 1793966727.646043,
-    "GameSir X5 Lite Game Controller": 1794131236.9079208,
+    "GameSir X5 Lite Game Controller": 1794415703.2366781,
     "Netac SSD NVME M2 250GB": 1794231632.2676654,
     "Essager 20W GaN + cable": 1794076070.3822317,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
@@ -3426,7 +3426,6 @@
     "ASROCK X570M PRO4 MOTHERBOARD": 1794414971.7181702
   },
   "published_post_keys": [
-    "test_channel:1792162334",
     "ecksdeal:5971",
     "lodydeals:45474",
     "aniscoupons:33203",
@@ -4425,11 +4424,12 @@
     "aniscoupons:34523",
     "aniscoupons:34524",
     "zedstoreonline:39890",
-    "aniscoupons:34525"
+    "aniscoupons:34525",
+    "aniscoupons:34527"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794414971.7181702,
+  "last_run_time": 1794415703.2366781,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4460,8 +4460,8 @@
       "last_check_time": 1794414968.3413694
     },
     "aniscoupons": {
-      "last_message_id": 34526,
-      "last_check_time": 1794415337.7308538
+      "last_message_id": 34527,
+      "last_check_time": 1794415705.2888205
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4868,7 +4868,7 @@
     "1005009578274758": 7.63,
     "1005010413332383": 340.3,
     "1005011550075220": 124.53,
-    "1005009806856302": 14.35,
+    "1005009806856302": 16.5,
     "1005009980316035": 25.85,
     "1005005905462505": 54.4,
     "1005008248133489": 14.88,
@@ -20277,6 +20277,16 @@
       "price": 110.8,
       "timestamp": 1794414971.7181702,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34527": {
+      "channel_msg_id": 2329,
+      "product_id": "1005009806856302",
+      "title": "GameSir X5 Lite Game Controller",
+      "channel": "aniscoupons",
+      "source_msg_id": 34527,
+      "price": 16.5,
+      "timestamp": 1794415703.2366781,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20285,17 +20295,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794414974.3222005,
+    "last_deal_post_time": 1794415706.3320475,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794415512.050452,
+    "last_sweep_time": 1794415709.1602135,
     "last_sweep_times": {
-      "algeria": 1794415509.7834396,
-      "france": 1794415512.050452
+      "algeria": 1794415706.3094463,
+      "france": 1794415709.1602135
     },
     "last_deal_post_times": {
-      "algeria": 1794414974.3222005
+      "algeria": 1794415706.3320475
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20804,7 +20814,7 @@
     "1005007805638431": "aniscoupons",
     "1005010413332383": "aniscoupons",
     "1005011550075220": "ecksdeal",
-    "1005009806856302": "ecksdeal",
+    "1005009806856302": "aniscoupons",
     "1005009980316035": "ecksdeal",
     "1005005905462505": "zedstoreonline",
     "1005008248133489": "lodydeals",
@@ -21857,7 +21867,7 @@
     "Baseus Mouse Bluetooth Wireless Computer 1600DPI": "zedstoreonline",
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": "zedstoreonline",
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": "zedstoreonline",
-    "GameSir X5 Lite Game Controller": "zedstoreonline",
+    "GameSir X5 Lite Game Controller": "aniscoupons",
     "Netac SSD NVME M2 250GB": "zedstoreonline",
     "Essager 20W GaN + cable": "aniscoupons",
     "Redmi Note 17 Pro Max": "aniscoupons",
