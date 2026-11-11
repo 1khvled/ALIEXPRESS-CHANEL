@@ -971,7 +971,7 @@
     "1005007920266509": 1793966861.2399917,
     "1005009275536960": 1791975930.016452,
     "1005007767322935": 1791975934.9659944,
-    "1005012571601398": 1794302617.1026945,
+    "1005012571601398": 1794431585.5032148,
     "1005013054007275": 1794223210.002915,
     "1005011899097443": 1794213297.7367866,
     "1005012865117890": 1793613385.3577175,
@@ -1082,7 +1082,7 @@
     "9998889908": 1793229908.2507865,
     "1005012339196141": 1793613978.6202738,
     "1005012472631754": 1793467108.5532427,
-    "1005013039644752": 1794159573.4625287,
+    "1005013039644752": 1794431592.229099,
     "1005013479436053": 1793380394.5736995,
     "1005012431631514": 1793270716.9132679,
     "1005009338640941": 1794418660.6617887,
@@ -2476,7 +2476,8 @@
     "HOCO EW60 Bluetooth 5.0 Earbuds Wireless Hi-Res Audio Touch Control",
     "Essager 2in1 USB Type C  60W",
     "GOOJPRT Portable Thermal Printer",
-    "KOOTION M.2 512GB 7200Mbs"
+    "KOOTION M.2 512GB 7200Mbs",
+    "HONOR X80 PRO MAX"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2770,7 +2771,7 @@
     "Redmi Note 12 5G Global (4/128GB)": 1792156524.878074,
     "Blackview Wave 10C": 1794416693.462334,
     "متوسط سعره حالياً 82000دج": 1793276237.692456,
-    "iQOO Z11s 5G (8/128GB)": 1794159573.4625287,
+    "iQOO Z11s 5G (8/128GB)": 1794431592.229099,
     "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1793966861.2399917,
     "Baseus GH02 Gaming Wireless Headphone": 1792087000.9978776,
     "GameSir GM500 PMW33600 Gaming Mouse": 1792087147.0923955,
@@ -3453,11 +3454,10 @@
     "HOCO EW60 Bluetooth 5.0 Earbuds Wireless Hi-Res Audio Touch Control": 1794420680.672656,
     "Essager 2in1 USB Type C  60W": 1794420685.287832,
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551,
-    "KOOTION M.2 512GB 7200Mbs": 1794430852.2821708
+    "KOOTION M.2 512GB 7200Mbs": 1794430852.2821708,
+    "HONOR X80 PRO MAX": 1794431585.5032148
   },
   "published_post_keys": [
-    "zedstoreonline:38620",
-    "lodydeals:45415",
     "zedstoreonline:38848",
     "aniscoupons:33324",
     "aniscoupons:32702",
@@ -4455,19 +4455,21 @@
     "aniscoupons:34572",
     "aniscoupons:34579",
     "aniscoupons:34576",
-    "aniscoupons:34577"
+    "aniscoupons:34577",
+    "aniscoupons:34578",
+    "aniscoupons:34580"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794431418.716995,
+  "last_run_time": 1794431592.229099,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
       "last_check_time": 1794419029.2500024
     },
     "lodydeals": {
-      "last_message_id": 46380,
-      "last_check_time": 1794431204.3724217
+      "last_message_id": 46382,
+      "last_check_time": 1794431577.1662266
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4490,8 +4492,8 @@
       "last_check_time": 1794431397.2578402
     },
     "aniscoupons": {
-      "last_message_id": 34579,
-      "last_check_time": 1794431418.716995
+      "last_message_id": 34580,
+      "last_check_time": 1794431594.2957926
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4637,7 +4639,7 @@
     "1005007805497968": 19.08,
     "1005007345108759": 19.47,
     "1005007394197021": 14.88,
-    "1005012571601398": 270.5,
+    "1005012571601398": 273.5,
     "1005013290515237": 23.22,
     "1005012264415744": 78.0,
     "1005009689592131": 107.55,
@@ -20742,6 +20744,26 @@
       "price": 378.14,
       "timestamp": 1794431418.716995,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34578": {
+      "channel_msg_id": 2374,
+      "product_id": "1005012571601398",
+      "title": "HONOR X80 PRO MAX",
+      "channel": "aniscoupons",
+      "source_msg_id": 34578,
+      "price": 273.5,
+      "timestamp": 1794431585.5032148,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34580": {
+      "channel_msg_id": 2375,
+      "product_id": "1005013039644752",
+      "title": "iQOO Z11s 5G (8/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34580,
+      "price": 265.7,
+      "timestamp": 1794431592.229099,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20750,17 +20772,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794431425.4264438,
+    "last_deal_post_time": 1794431595.3641875,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794431427.8240037,
+    "last_sweep_time": 1794431597.8247962,
     "last_sweep_times": {
-      "algeria": 1794431425.3973634,
-      "france": 1794431427.8240037
+      "algeria": 1794431595.334749,
+      "france": 1794431597.8247962
     },
     "last_deal_post_times": {
-      "algeria": 1794431425.4264438
+      "algeria": 1794431595.3641875
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20914,7 +20936,7 @@
     "1005007394028808": "lodydeals",
     "1005007394197021": "lodydeals",
     "1005011778621042": "aniscoupons",
-    "1005012571601398": "lodydeals",
+    "1005012571601398": "aniscoupons",
     "1005013290515237": "aniscoupons",
     "1005012264415744": "megaphonna",
     "1005009689592131": "lodydeals",
@@ -22499,7 +22521,8 @@
     "HOCO EW60 Bluetooth 5.0 Earbuds Wireless Hi-Res Audio Touch Control": "lodydeals",
     "Essager 2in1 USB Type C  60W": "lodydeals",
     "GOOJPRT Portable Thermal Printer": "lodydeals",
-    "KOOTION M.2 512GB 7200Mbs": "lodydeals"
+    "KOOTION M.2 512GB 7200Mbs": "lodydeals",
+    "HONOR X80 PRO MAX": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
