@@ -1418,7 +1418,7 @@
     "1005012959738411": 1794304640.3506072,
     "1005008357913212": 1794301465.5699842,
     "1005008703989845": 1794300358.3541322,
-    "1005007162099601": 1794046115.3557825,
+    "1005007162099601": 1794385424.98073,
     "1005007038130594": 1794046667.9804564,
     "1005008248187128": 1794057675.8729835,
     "1005013053381984": 1794060065.5449874,
@@ -3201,7 +3201,7 @@
     "Essager 4in1 Cable 240W": 1793707161.4322476,
     "Realme 14T 5G 12/256GB": 1793707168.1519766,
     "Mibro A1 Smartwatch": 1793707779.0330126,
-    "Somnambulist SSD 128GB": 1794046115.3557825,
+    "Somnambulist SSD 128GB": 1794385424.98073,
     "HAYLOU Watch 3 AMOLED": 1793793759.2206655,
     "CUSU SSD SATA 256GB": 1793728844.5794795,
     "Blackview OSCAL MARINE 2 8/128": 1793728859.1630292,
@@ -3386,7 +3386,6 @@
     "حجز وتجدد كوبونات 11.11": 1794363974.314961
   },
   "published_post_keys": [
-    "zedstoreonline:38821",
     "lodydeals:45900",
     "couponsglobal:48848",
     "bnddeals:50967",
@@ -4385,19 +4384,20 @@
     "zedstoreonline:39843",
     "aniscoupons:34469",
     "zedstoreonline:39827",
-    "lodydeals:46331"
+    "lodydeals:46331",
+    "lodydeals:46338"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794383957.69665,
+  "last_run_time": 1794385424.98073,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
       "last_check_time": 1794350628.34148
     },
     "lodydeals": {
-      "last_message_id": 46337,
-      "last_check_time": 1794385053.4609559
+      "last_message_id": 46338,
+      "last_check_time": 1794385427.041328
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4424,8 +4424,8 @@
       "last_check_time": 1794384884.5733378
     },
     "bnddeals": {
-      "last_message_id": 51268,
-      "last_check_time": 1794385246.5355313
+      "last_message_id": 51269,
+      "last_check_time": 1794385431.5009756
     }
   },
   "published_product_prices": {
@@ -4999,7 +4999,7 @@
     "1005008077441711": 7.32,
     "1005012925301774": 10.5,
     "1005012959738411": 68.79,
-    "1005007162099601": 32.87,
+    "1005007162099601": 33.47,
     "1005007038130594": 12.03,
     "1005008248187128": 4.49,
     "1005013053381984": 254.11,
@@ -19753,6 +19753,16 @@
       "price": 110.83,
       "timestamp": 1794383957.69665,
       "status": "ACTIVE"
+    },
+    "lodydeals:46338": {
+      "channel_msg_id": 2280,
+      "product_id": "1005007162099601",
+      "title": "Somnambulist SSD 128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46338,
+      "price": 33.47,
+      "timestamp": 1794385424.98073,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19761,17 +19771,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794383962.2112787,
+    "last_deal_post_time": 1794385431.5563407,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794385249.892367,
+    "last_sweep_time": 1794385434.8995988,
     "last_sweep_times": {
-      "algeria": 1794385246.562025,
-      "france": 1794385249.892367
+      "algeria": 1794385431.5288172,
+      "france": 1794385434.8995988
     },
     "last_deal_post_times": {
-      "algeria": 1794383962.2112787
+      "algeria": 1794385431.5563407
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22271,7 +22281,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "pcgamingpart:8005",
     "aniscoupons:33208",
     "bnddeals:50894",
     "aniscoupons:32996",
@@ -23270,7 +23279,8 @@
     "aniscoupons:34473",
     "lodydeals:46337",
     "bnddeals:51267",
-    "bnddeals:51268"
+    "bnddeals:51268",
+    "bnddeals:51269"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
