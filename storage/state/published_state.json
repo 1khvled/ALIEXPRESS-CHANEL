@@ -744,7 +744,8 @@
     "1005013391950901",
     "1005007477084001",
     "1005008774483451",
-    "1005012639349629"
+    "1005012639349629",
+    "1005010153422760"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1504,7 +1505,8 @@
     "1005013391950901": 1794420685.287832,
     "1005007477084001": 1794420689.8352551,
     "1005008774483451": 1794426765.2023578,
-    "1005012639349629": 1794431418.716995
+    "1005012639349629": 1794431418.716995,
+    "1005010153422760": 1794432694.0507162
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2477,7 +2479,8 @@
     "Essager 2in1 USB Type C  60W",
     "GOOJPRT Portable Thermal Printer",
     "KOOTION M.2 512GB 7200Mbs",
-    "HONOR X80 PRO MAX"
+    "HONOR X80 PRO MAX",
+    "DJI Osmo mobile"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3455,10 +3458,10 @@
     "Essager 2in1 USB Type C  60W": 1794420685.287832,
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551,
     "KOOTION M.2 512GB 7200Mbs": 1794430852.2821708,
-    "HONOR X80 PRO MAX": 1794431585.5032148
+    "HONOR X80 PRO MAX": 1794431585.5032148,
+    "DJI Osmo mobile": 1794432694.0507162
   },
   "published_post_keys": [
-    "lodydeals:45694",
     "aniscoupons:32763",
     "ecksdeal:5865",
     "pcgamingpart:7951",
@@ -4457,19 +4460,20 @@
     "aniscoupons:34581",
     "aniscoupons:34582",
     "zedstoreonline:39923",
-    "aniscoupons:34585"
+    "aniscoupons:34585",
+    "zedstoreonline:39924"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794432503.000665,
+  "last_run_time": 1794432694.0507162,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
       "last_check_time": 1794419029.2500024
     },
     "lodydeals": {
-      "last_message_id": 46386,
-      "last_check_time": 1794432492.3555555
+      "last_message_id": 46387,
+      "last_check_time": 1794432685.0496645
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4488,8 +4492,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39923,
-      "last_check_time": 1794432499.8378708
+      "last_message_id": 39924,
+      "last_check_time": 1794432696.1177993
     },
     "aniscoupons": {
       "last_message_id": 34585,
@@ -5139,7 +5143,8 @@
     "1005006257950849": 5.6,
     "1005013391950901": 1.11,
     "1005007477084001": 18.78,
-    "1005012639349629": 378.14
+    "1005012639349629": 378.14,
+    "1005010153422760": 58.7
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -20804,6 +20809,16 @@
       "price": 167.8,
       "timestamp": 1794432503.000665,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39924": {
+      "channel_msg_id": 2380,
+      "product_id": "1005010153422760",
+      "title": "DJI Osmo mobile",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39924,
+      "price": 58.7,
+      "timestamp": 1794432694.0507162,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20812,17 +20827,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794432505.6489897,
+    "last_deal_post_time": 1794432697.712966,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794432508.0631297,
+    "last_sweep_time": 1794432700.614514,
     "last_sweep_times": {
-      "algeria": 1794432505.6257029,
-      "france": 1794432508.0631297
+      "algeria": 1794432697.6842945,
+      "france": 1794432700.614514
     },
     "last_deal_post_times": {
-      "algeria": 1794432505.6489897
+      "algeria": 1794432697.712966
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21582,7 +21597,8 @@
     "1005013391950901": "lodydeals",
     "1005007477084001": "lodydeals",
     "1005008774483451": "zedstoreonline",
-    "1005012639349629": "aniscoupons"
+    "1005012639349629": "aniscoupons",
+    "1005010153422760": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -22562,7 +22578,8 @@
     "Essager 2in1 USB Type C  60W": "lodydeals",
     "GOOJPRT Portable Thermal Printer": "lodydeals",
     "KOOTION M.2 512GB 7200Mbs": "lodydeals",
-    "HONOR X80 PRO MAX": "aniscoupons"
+    "HONOR X80 PRO MAX": "aniscoupons",
+    "DJI Osmo mobile": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
