@@ -1173,7 +1173,7 @@
     "1005012864273120": 1793399494.1323898,
     "1005006967218963": 1793448582.9150612,
     "1005012675968319": 1793399525.3383162,
-    "1005010424638496": 1794300185.514064,
+    "1005010424638496": 1794414228.5787423,
     "1005010141682336": 1793399542.6698716,
     "1005006782790827": 1794159491.7570124,
     "1005012938359476": 1793448722.5382965,
@@ -3277,7 +3277,7 @@
     "HAYLOU Flowbuds N50 ANC": 1793970449.9003735,
     "Honor 600 Pro 12/256": 1794131798.3098254,
     "HONOR Pad X8a (4/64GB)": 1794413492.0212069,
-    "Magcubic HY350 Max 900ANSI": 1794300185.514064,
+    "Magcubic HY350 Max 900ANSI": 1794414228.5787423,
     "Honor X9d (no charger)": 1794413855.8227875,
     "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1794242854.979892,
     "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
@@ -3420,7 +3420,6 @@
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794411999.7818277
   },
   "published_post_keys": [
-    "lodydeals:45874",
     "lodydeals:45931",
     "ecksdeal:5890",
     "bnddeals:50892",
@@ -4419,11 +4418,12 @@
     "zedstoreonline:39888",
     "aniscoupons:34518",
     "aniscoupons:34519",
-    "aniscoupons:34520"
+    "aniscoupons:34520",
+    "aniscoupons:34521"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794413855.8227875,
+  "last_run_time": 1794414228.5787423,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4450,12 +4450,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39888,
-      "last_check_time": 1794412942.7591736
+      "last_message_id": 39889,
+      "last_check_time": 1794414223.9840207
     },
     "aniscoupons": {
-      "last_message_id": 34520,
-      "last_check_time": 1794413857.8592682
+      "last_message_id": 34521,
+      "last_check_time": 1794414230.6285338
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20210,6 +20210,16 @@
       "price": 289.5,
       "timestamp": 1794413855.8227875,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34521": {
+      "channel_msg_id": 2323,
+      "product_id": "1005010424638496",
+      "title": "Magcubic HY350 Max 900ANSI",
+      "channel": "aniscoupons",
+      "source_msg_id": 34521,
+      "price": 113.4,
+      "timestamp": 1794414228.5787423,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20218,17 +20228,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794413858.8007073,
+    "last_deal_post_time": 1794414231.443598,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794414044.2392244,
+    "last_sweep_time": 1794414233.8792732,
     "last_sweep_times": {
-      "algeria": 1794414041.1846087,
-      "france": 1794414044.2392244
+      "algeria": 1794414231.4217272,
+      "france": 1794414233.8792732
     },
     "last_deal_post_times": {
-      "algeria": 1794413858.8007073
+      "algeria": 1794414231.443598
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22745,7 +22755,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33102",
     "pcgamingpart:7988",
     "ecksdeal:5921",
     "megaphonna:8751",
@@ -23744,7 +23753,8 @@
     "lodydeals:46358",
     "aniscoupons:34513",
     "aniscoupons:34514",
-    "zedstoreonline:39886"
+    "zedstoreonline:39886",
+    "zedstoreonline:39889"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
