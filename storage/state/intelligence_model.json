@@ -40,10 +40,10 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 69,
-      "published": 53,
+      "seen": 70,
+      "published": 54,
       "skipped": 0,
-      "ewma": 0.9939
+      "ewma": 0.9944
     }
   },
   "category_stats": {
@@ -60,10 +60,10 @@
       "ewma": 0.8568
     },
     "phones": {
-      "seen": 63,
-      "published": 30,
+      "seen": 64,
+      "published": 31,
       "skipped": 0,
-      "ewma": 0.9591
+      "ewma": 0.9624
     },
     "home": {
       "seen": 3,
@@ -192,6 +192,7 @@
       19.46
     ],
     "1005013361453762": [
+      277.36,
       277.36
     ],
     "1005008645323478": [
@@ -311,14 +312,14 @@
     ]
   },
   "counters": {
-    "scored": 141,
-    "verdict_publish": 130,
+    "scored": 142,
+    "verdict_publish": 131,
     "verdict_hold": 11,
     "verdict_skip": 0,
-    "published": 84,
+    "published": 85,
     "skipped": 0
   },
-  "score_sum": 9985.59,
+  "score_sum": 10055.3,
   "recent_decisions": [
     {
       "ts": 1794383955,
@@ -1447,7 +1448,15 @@
       "product_id": "1005012184442621",
       "score": 80.89,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794428250,
+      "channel": "aniscoupons",
+      "category": "phones",
+      "product_id": "1005013361453762",
+      "score": 69.71,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794427883.1408026
+  "updated_at": 1794428252.344897
 }
