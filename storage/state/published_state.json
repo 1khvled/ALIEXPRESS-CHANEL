@@ -1496,7 +1496,7 @@
     "1005007495712340": 1794424903.9490352,
     "1005009104334975": 1794421043.2176414,
     "1005012474727998": 1794320674.833981,
-    "1005006807619368": 1794421050.6233609,
+    "1005006807619368": 1794438803.0185766,
     "1005010653559191": 1794349536.4429784,
     "COUPON_CLAIM_zedstoreonline_39827": 1794363974.314961,
     "1005012197291105": 1794438408.5282347,
@@ -2488,7 +2488,8 @@
     "HONOR X80 PRO MAX",
     "DJI Osmo mobile",
     "OPPO K15 12/256GB",
-    "Lenovo Legion Y70 2026 Gamin(12/512GB)"
+    "Lenovo Legion Y70 2026 Gamin(12/512GB)",
+    "KINGSTON DATA TRAVELER USB3.2 (128G)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3469,10 +3470,10 @@
     "HONOR X80 PRO MAX": 1794431585.5032148,
     "DJI Osmo mobile": 1794432694.0507162,
     "OPPO K15 12/256GB": 1794436740.624044,
-    "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794437490.1572993
+    "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794437490.1572993,
+    "KINGSTON DATA TRAVELER USB3.2 (128G)": 1794438803.0185766
   },
   "published_post_keys": [
-    "zedstoreonline:38831",
     "lodydeals:45462",
     "ecksdeal:5947",
     "couponsglobal:48765",
@@ -4471,11 +4472,12 @@
     "aniscoupons:34600",
     "aniscoupons:34601",
     "aniscoupons:34602",
-    "zedstoreonline:39929"
+    "zedstoreonline:39929",
+    "aniscoupons:34605"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794438408.5282347,
+  "last_run_time": 1794438803.0185766,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4502,12 +4504,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39930,
-      "last_check_time": 1794438411.3974843
+      "last_message_id": 39931,
+      "last_check_time": 1794438797.7430387
     },
     "aniscoupons": {
-      "last_message_id": 34604,
-      "last_check_time": 1794438419.5798013
+      "last_message_id": 34605,
+      "last_check_time": 1794438805.0710833
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5143,7 +5145,7 @@
     "1005007495712340": 53.24,
     "1005009104334975": 10.7,
     "1005012474727998": 14.9,
-    "1005006807619368": 6.55,
+    "1005006807619368": 6.5,
     "1005010653559191": 10.5,
     "1005012197291105": 438.2,
     "1005010179192246": 609.9,
@@ -21012,6 +21014,16 @@
       "price": 438.2,
       "timestamp": 1794438408.5282347,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34605": {
+      "channel_msg_id": 2399,
+      "product_id": "1005006807619368",
+      "title": "KINGSTON DATA TRAVELER USB3.2 (128G)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34605,
+      "price": 6.5,
+      "timestamp": 1794438803.0185766,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21020,17 +21032,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794438420.3328693,
+    "last_deal_post_time": 1794438805.8071547,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794438589.6017532,
+    "last_sweep_time": 1794438807.9312744,
     "last_sweep_times": {
-      "algeria": 1794438586.9806852,
-      "france": 1794438589.6017532
+      "algeria": 1794438805.7839353,
+      "france": 1794438807.9312744
     },
     "last_deal_post_times": {
-      "algeria": 1794438420.3328693
+      "algeria": 1794438805.8071547
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22777,7 +22789,8 @@
     "HONOR X80 PRO MAX": "aniscoupons",
     "DJI Osmo mobile": "zedstoreonline",
     "OPPO K15 12/256GB": "aniscoupons",
-    "Lenovo Legion Y70 2026 Gamin(12/512GB)": "aniscoupons"
+    "Lenovo Legion Y70 2026 Gamin(12/512GB)": "aniscoupons",
+    "KINGSTON DATA TRAVELER USB3.2 (128G)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -23573,7 +23586,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "pcgamingpart:7998",
     "aniscoupons:33320",
     "ecksdeal:5933",
     "aniscoupons:33371",
@@ -24572,7 +24584,8 @@
     "aniscoupons:34599",
     "zedstoreonline:39930",
     "aniscoupons:34603",
-    "aniscoupons:34604"
+    "aniscoupons:34604",
+    "zedstoreonline:39931"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
