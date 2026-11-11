@@ -371,7 +371,7 @@ async function fetchProductMeta(pid, deadline) {
       signal: AbortSignal.timeout(Math.min(6000, remaining(deadline))),
     });
     if (!res.ok) return out;
-    const html = await res.text();
+    const html = (await res.text()).slice(0, 300000);
     const title = metaContent(html, "og:title") || metaContent(html, "twitter:title");
     if (title) {
       const clean = title.replace(/\s*[-|]\s*AliExpress\s*\d*\s*$/i, "").trim();
