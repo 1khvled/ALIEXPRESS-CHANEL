@@ -34,7 +34,7 @@
       "ewma": 0.5
     },
     "bnddeals": {
-      "seen": 2,
+      "seen": 3,
       "published": 0,
       "skipped": 0,
       "ewma": 0.5
@@ -48,7 +48,7 @@
       "ewma": 0.54
     },
     "pc": {
-      "seen": 3,
+      "seen": 4,
       "published": 1,
       "skipped": 0,
       "ewma": 0.54
@@ -63,14 +63,14 @@
     ]
   },
   "counters": {
-    "scored": 5,
-    "verdict_publish": 5,
+    "scored": 6,
+    "verdict_publish": 6,
     "verdict_hold": 0,
     "verdict_skip": 0,
     "published": 2,
     "skipped": 0
   },
-  "score_sum": 396.26,
+  "score_sum": 485.92,
   "recent_decisions": [
     {
       "ts": 1794383955,
@@ -111,7 +111,15 @@
       "product_id": "1005007162099601",
       "score": 69.2,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794385983,
+      "channel": "bnddeals",
+      "category": "pc",
+      "product_id": "1005007027334636",
+      "score": 89.66,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794385425.030139
+  "updated_at": 1794385983.4391026
 }
