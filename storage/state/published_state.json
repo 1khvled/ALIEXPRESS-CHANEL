@@ -1165,7 +1165,7 @@
     "1005011961308530": 1793380460.5377874,
     "1005012994490034": 1793441317.3934674,
     "1005010146493558": 1793448836.300828,
-    "1005010575865619": 1794331342.9050384,
+    "1005010575865619": 1794422151.260992,
     "1005011778197787": 1793656192.605134,
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
@@ -3343,7 +3343,7 @@
     "مبرد الهاتف MEMO CX10": 1794126663.880001,
     "KOOTION SATA SSD 480GB": 1794241389.2452002,
     "راوتر Vodafone 4G محمول": 1794128872.1451216,
-    "OnePlus ACE 6T": 1794331342.9050384,
+    "OnePlus ACE 6T": 1794422151.260992,
     "Essager Mini 20W Type C Charger PD": 1794129971.1690388,
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794389101.8349671,
     "OnePlus Ace 6 12/256GB": 1794130143.129755,
@@ -3450,7 +3450,6 @@
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551
   },
   "published_post_keys": [
-    "aniscoupons:32691",
     "aniscoupons:33313",
     "aniscoupons:32778",
     "lodydeals:45778",
@@ -4449,11 +4448,12 @@
     "aniscoupons:34543",
     "zedstoreonline:39905",
     "aniscoupons:34544",
-    "aniscoupons:34545"
+    "aniscoupons:34545",
+    "aniscoupons:34548"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794421237.0650215,
+  "last_run_time": 1794422151.260992,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4484,8 +4484,8 @@
       "last_check_time": 1794421963.516301
     },
     "aniscoupons": {
-      "last_message_id": 34546,
-      "last_check_time": 1794421593.108399
+      "last_message_id": 34548,
+      "last_check_time": 1794422153.3308513
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20545,6 +20545,16 @@
       "price": 18.4,
       "timestamp": 1794421237.0650215,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34548": {
+      "channel_msg_id": 2355,
+      "product_id": "1005010575865619",
+      "title": "OnePlus ACE 6T",
+      "channel": "aniscoupons",
+      "source_msg_id": 34548,
+      "price": 365.8,
+      "timestamp": 1794422151.260992,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20553,17 +20563,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794421240.121066,
+    "last_deal_post_time": 1794422154.330443,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794421967.3512933,
+    "last_sweep_time": 1794422157.3479722,
     "last_sweep_times": {
-      "algeria": 1794421964.9515374,
-      "france": 1794421967.3512933
+      "algeria": 1794422154.3020265,
+      "france": 1794422157.3479722
     },
     "last_deal_post_times": {
-      "algeria": 1794421240.121066
+      "algeria": 1794422154.330443
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23095,7 +23105,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38965",
     "zedstoreonline:38809",
     "couponsglobal:48871",
     "aniscoupons:33154",
@@ -24094,7 +24103,8 @@
     "aniscoupons:34546",
     "lodydeals:46369",
     "zedstoreonline:39907",
-    "zedstoreonline:39908"
+    "zedstoreonline:39908",
+    "aniscoupons:34547"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
