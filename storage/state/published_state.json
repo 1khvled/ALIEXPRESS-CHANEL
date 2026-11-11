@@ -954,7 +954,7 @@
     "1005012914301139": 1792191289.2917817,
     "1005007345151855": 1791942667.867043,
     "1005010345227483": 1793299548.5548651,
-    "1005011557896041": 1794396072.4358249,
+    "1005011557896041": 1794418100.8637865,
     "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
     "1005007916078341": 1794397913.7086546,
@@ -2711,7 +2711,7 @@
     "ATTACK SHARK X11SE Wireless Gaming Mouse PixArt PAW3311": 1791942658.9081998,
     "لووووووووووووز controller 🎮": 1791942667.867043,
     "جديد علامة ©️©️©️©️🆕": 1791942676.1983886,
-    "AMD Ryzen 7 7800X3D": 1794129979.1935983,
+    "AMD Ryzen 7 7800X3D": 1794418100.8637865,
     "AMD Ryzen 5 8400F": 1793448608.235321,
     "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": 1791943777.8506553,
     "🔝 مانات قووووة ل جماعة mobile gaming 🎮": 1792017738.3981204,
@@ -3428,7 +3428,6 @@
     "EASYSMX X05 PRO Controller": 1794417558.6712675
   },
   "published_post_keys": [
-    "zedstoreonline:38793",
     "bnddeals:50795",
     "pcgamingpart:7984",
     "lodydeals:45489",
@@ -4427,11 +4426,12 @@
     "zedstoreonline:39894",
     "zedstoreonline:39896",
     "aniscoupons:34532",
-    "aniscoupons:34534"
+    "aniscoupons:34534",
+    "zedstoreonline:39898"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794417732.9524915,
+  "last_run_time": 1794418100.8637865,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4458,12 +4458,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39897,
-      "last_check_time": 1794417727.8101878
+      "last_message_id": 39898,
+      "last_check_time": 1794418102.92748
     },
     "aniscoupons": {
-      "last_message_id": 34534,
-      "last_check_time": 1794417735.0037067
+      "last_message_id": 34535,
+      "last_check_time": 1794418105.2997458
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4657,7 +4657,7 @@
     "1005012914301139": 12.07,
     "1005007345151855": 40.0,
     "1005010345227483": 200.0,
-    "1005011557896041": 226.78,
+    "1005011557896041": 240.7,
     "1005011754993234": 79.58,
     "1005011735727412": 26.6,
     "1005013039644752": 265.7,
@@ -20349,6 +20349,16 @@
       "price": 10.7,
       "timestamp": 1794417732.9524915,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39898": {
+      "channel_msg_id": 2336,
+      "product_id": "1005011557896041",
+      "title": "AMD Ryzen 7 7800X3D",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39898,
+      "price": 240.7,
+      "timestamp": 1794418100.8637865,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20357,17 +20367,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794417735.8749976,
+    "last_deal_post_time": 1794418106.0588539,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794417914.673349,
+    "last_sweep_time": 1794418109.1664224,
     "last_sweep_times": {
-      "algeria": 1794417911.8552096,
-      "france": 1794417914.673349
+      "algeria": 1794418106.0308053,
+      "france": 1794418109.1664224
     },
     "last_deal_post_times": {
-      "algeria": 1794417735.8749976
+      "algeria": 1794418106.0588539
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20593,7 +20603,7 @@
     "1005012914301139": "lodydeals",
     "1005007345151855": "bnddeals",
     "1005010345227483": "megaphonna",
-    "1005011557896041": "aniscoupons",
+    "1005011557896041": "zedstoreonline",
     "1005011754993234": "ecksdeal",
     "1005011735727412": "bnddeals",
     "1005013039644752": "aniscoupons",
@@ -22888,7 +22898,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8489",
     "alidealsdz:142",
     "couponsglobal:48873",
     "zedstoreonline:38673",
@@ -23887,7 +23896,8 @@
     "zedstoreonline:39895",
     "aniscoupons:34531",
     "aniscoupons:34533",
-    "zedstoreonline:39897"
+    "zedstoreonline:39897",
+    "aniscoupons:34535"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
