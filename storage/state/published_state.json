@@ -832,7 +832,7 @@
     "1005010178295650": 1793743848.9735239,
     "1005006861002512": 1791151259.5667012,
     "1005012285327063": 1794389464.8877077,
-    "1005006581583862": 1794337406.2234359,
+    "1005006581583862": 1794390207.8353982,
     "1005012816171978": 1792157876.0860639,
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791638734.5386465,
@@ -1371,7 +1371,7 @@
     "COUPONS_gen": 1793728683.0472453,
     "COUPONS_11.11 Global Shopping Festival Main Sale": 1794309459.0725908,
     "1005009111757092": 1793728859.1630292,
-    "1005013030365524": 1793735141.9083512,
+    "1005013030365524": 1794390200.6061625,
     "1005013199719142": 1793735684.5341609,
     "1005013205365677": 1793736440.319658,
     "1005008429979494": 1793741666.9686077,
@@ -2431,7 +2431,8 @@
     "CUSU CV3500  M.2 NVMe SSD (1tb)",
     "Kootion X15 M.2 NVMe 256GB",
     "Baseus BS2 Lite",
-    "حجز وتجدد كوبونات 11.11"
+    "حجز وتجدد كوبونات 11.11",
+    "Huawei Pura 90s Pro Max 12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2540,7 +2541,7 @@
     "آلة حلاقة من علامة KEMEI": 1791012946.4110153,
     "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": 1791638734.5386465,
     "Predyee Groin Hair Trimmer WH": 1791013836.445986,
-    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1794337406.2234359,
+    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1794390207.8353982,
     "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise": 1791014140.3360124,
     "Baseus-Bowie E5x": 1791014145.8727648,
     "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": 1791014755.488723,
@@ -3383,11 +3384,10 @@
     "CUSU CV3500  M.2 NVMe SSD (1tb)": 1794344399.896034,
     "Kootion X15 M.2 NVMe 256GB": 1794346230.0535362,
     "Baseus BS2 Lite": 1794349536.4429784,
-    "حجز وتجدد كوبونات 11.11": 1794363974.314961
+    "حجز وتجدد كوبونات 11.11": 1794363974.314961,
+    "Huawei Pura 90s Pro Max 12/256GB": 1794390200.6061625
   },
   "published_post_keys": [
-    "pcgamingpart:8019",
-    "lodydeals:45485",
     "lodydeals:45516",
     "lodydeals:45529",
     "aniscoupons:32783",
@@ -4385,19 +4385,21 @@
     "aniscoupons:34478",
     "aniscoupons:34480",
     "aniscoupons:34481",
-    "aniscoupons:34482"
+    "aniscoupons:34482",
+    "lodydeals:46345",
+    "aniscoupons:34484"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794389841.8756988,
+  "last_run_time": 1794390207.8353982,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
       "last_check_time": 1794350628.34148
     },
     "lodydeals": {
-      "last_message_id": 46344,
-      "last_check_time": 1794389826.8596804
+      "last_message_id": 46345,
+      "last_check_time": 1794390202.646448
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4416,12 +4418,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39858,
-      "last_check_time": 1794390032.5799813
+      "last_message_id": 39859,
+      "last_check_time": 1794390204.9392622
     },
     "aniscoupons": {
-      "last_message_id": 34483,
-      "last_check_time": 1794390033.6422002
+      "last_message_id": 34484,
+      "last_check_time": 1794390209.8786175
     },
     "bnddeals": {
       "last_message_id": 51272,
@@ -4956,7 +4958,7 @@
     "1005006026842392": 14.91,
     "1005011748000554": 17.8,
     "1005009111757092": 114.9,
-    "1005013030365524": 659.21,
+    "1005013030365524": 646.41,
     "1005013199719142": 52.75,
     "1005013205365677": 890.6,
     "1005008429979494": 72.7,
@@ -19803,6 +19805,26 @@
       "price": 10.7,
       "timestamp": 1794389841.8756988,
       "status": "ACTIVE"
+    },
+    "lodydeals:46345": {
+      "channel_msg_id": 2285,
+      "product_id": "1005013030365524",
+      "title": "Huawei Pura 90s Pro Max 12/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46345,
+      "price": 646.41,
+      "timestamp": 1794390200.6061625,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34484": {
+      "channel_msg_id": 2286,
+      "product_id": "1005006581583862",
+      "title": "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling",
+      "channel": "aniscoupons",
+      "source_msg_id": 34484,
+      "price": 18.4,
+      "timestamp": 1794390207.8353982,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19811,17 +19833,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794389844.9936726,
+    "last_deal_post_time": 1794390210.4074905,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794390038.6020412,
+    "last_sweep_time": 1794390214.1027591,
     "last_sweep_times": {
-      "algeria": 1794390034.535299,
-      "france": 1794390038.6020412
+      "algeria": 1794390210.3890352,
+      "france": 1794390214.1027591
     },
     "last_deal_post_times": {
-      "algeria": 1794389844.9936726
+      "algeria": 1794390210.4074905
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21525,7 +21547,8 @@
     "CUSU CV3500  M.2 NVMe SSD (1tb)": "aniscoupons",
     "Kootion X15 M.2 NVMe 256GB": "lodydeals",
     "Baseus BS2 Lite": "zedstoreonline",
-    "حجز وتجدد كوبونات 11.11": "zedstoreonline"
+    "حجز وتجدد كوبونات 11.11": "zedstoreonline",
+    "Huawei Pura 90s Pro Max 12/256GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22321,7 +22344,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:32949",
     "ecksdeal:5996",
     "lodydeals:45842",
     "bnddeals:50980",
@@ -23320,7 +23342,8 @@
     "zedstoreonline:39856",
     "zedstoreonline:39857",
     "zedstoreonline:39858",
-    "aniscoupons:34483"
+    "aniscoupons:34483",
+    "zedstoreonline:39859"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
