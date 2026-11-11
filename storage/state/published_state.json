@@ -1487,7 +1487,7 @@
     "1005008046071240": 1794310928.9154878,
     "1005012083833079": 1794311122.753493,
     "1005012292809645": 1794311488.3788898,
-    "1005007495712340": 1794311865.7221916,
+    "1005007495712340": 1794424903.9490352,
     "1005009104334975": 1794421043.2176414,
     "1005012474727998": 1794320674.833981,
     "1005006807619368": 1794421050.6233609,
@@ -3409,7 +3409,7 @@
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794310928.9154878,
     "MAONO PD100W USB Wireless Dynamic": 1794311122.753493,
     "MAONO Wave T1 Mini Pro": 1794311488.3788898,
-    "FIFINE M9 Wireless Lavalier Microphone": 1794311865.7221916,
+    "FIFINE M9 Wireless Lavalier Microphone": 1794424903.9490352,
     "AULA WIN68 HE Gaming Mechanical Keyboard": 1794312953.1830955,
     "CMF Buds 2a ANC -42dB  السعر: 11.7": 1794312964.1163073,
     "MACHENIKE G1 Wireless Gaming Controller": 1794420506.0795698,
@@ -3450,7 +3450,6 @@
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551
   },
   "published_post_keys": [
-    "lodydeals:45872",
     "zedstoreonline:38622",
     "lodydeals:45745",
     "test_channel:1791589315",
@@ -4449,11 +4448,12 @@
     "aniscoupons:34550",
     "zedstoreonline:39910",
     "aniscoupons:34556",
-    "aniscoupons:34557"
+    "aniscoupons:34557",
+    "aniscoupons:34558"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794424534.1435025,
+  "last_run_time": 1794424903.9490352,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4484,8 +4484,8 @@
       "last_check_time": 1794424714.5853179
     },
     "aniscoupons": {
-      "last_message_id": 34557,
-      "last_check_time": 1794424536.2087958
+      "last_message_id": 34558,
+      "last_check_time": 1794424906.0817666
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20595,6 +20595,16 @@
       "price": 33.5,
       "timestamp": 1794424534.1435025,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34558": {
+      "channel_msg_id": 2360,
+      "product_id": "1005007495712340",
+      "title": "FIFINE M9 Wireless Lavalier Microphone",
+      "channel": "aniscoupons",
+      "source_msg_id": 34558,
+      "price": 53.24,
+      "timestamp": 1794424903.9490352,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20603,17 +20613,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794424537.0636215,
+    "last_deal_post_time": 1794424906.9126756,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794424718.3217022,
+    "last_sweep_time": 1794424909.266587,
     "last_sweep_times": {
-      "algeria": 1794424715.90335,
-      "france": 1794424718.3217022
+      "algeria": 1794424906.8860617,
+      "france": 1794424909.266587
     },
     "last_deal_post_times": {
-      "algeria": 1794424537.0636215
+      "algeria": 1794424906.9126756
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
