@@ -738,7 +738,8 @@
     "1005012197291105",
     "1005010179192246",
     "1005010457635845",
-    "1005012921754472"
+    "1005012921754472",
+    "1005013399086495"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1492,7 +1493,8 @@
     "1005012197291105": 1794408497.0639706,
     "1005010179192246": 1794391117.1890683,
     "1005010457635845": 1794393509.614562,
-    "1005012921754472": 1794414407.5368557
+    "1005012921754472": 1794414407.5368557,
+    "1005013399086495": 1794418466.1920443
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2456,7 +2458,8 @@
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB",
     "Realme P4 Power 8/256GB",
     "ASROCK X570M PRO4 MOTHERBOARD",
-    "EASYSMX X05 PRO Controller"
+    "EASYSMX X05 PRO Controller",
+    "ONEPLUS 16 12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3425,10 +3428,10 @@
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794411999.7818277,
     "Realme P4 Power 8/256GB": 1794414407.5368557,
     "ASROCK X570M PRO4 MOTHERBOARD": 1794414971.7181702,
-    "EASYSMX X05 PRO Controller": 1794417558.6712675
+    "EASYSMX X05 PRO Controller": 1794417558.6712675,
+    "ONEPLUS 16 12/256GB": 1794418466.1920443
   },
   "published_post_keys": [
-    "bnddeals:50795",
     "pcgamingpart:7984",
     "lodydeals:45489",
     "aniscoupons:32754",
@@ -4427,11 +4430,12 @@
     "zedstoreonline:39896",
     "aniscoupons:34532",
     "aniscoupons:34534",
-    "zedstoreonline:39898"
+    "zedstoreonline:39898",
+    "aniscoupons:34536"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794418100.8637865,
+  "last_run_time": 1794418466.1920443,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4462,8 +4466,8 @@
       "last_check_time": 1794418102.92748
     },
     "aniscoupons": {
-      "last_message_id": 34535,
-      "last_check_time": 1794418105.2997458
+      "last_message_id": 34536,
+      "last_check_time": 1794418468.2541707
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5104,7 +5108,8 @@
     "1005012197291105": 438.2,
     "1005010179192246": 609.9,
     "1005010457635845": 581.4,
-    "1005012921754472": 265.11
+    "1005012921754472": 265.11,
+    "1005013399086495": 758.3
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -20359,6 +20364,16 @@
       "price": 240.7,
       "timestamp": 1794418100.8637865,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34536": {
+      "channel_msg_id": 2337,
+      "product_id": "1005013399086495",
+      "title": "ONEPLUS 16 12/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34536,
+      "price": 758.3,
+      "timestamp": 1794418466.1920443,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20367,17 +20382,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794418106.0588539,
+    "last_deal_post_time": 1794418469.1258788,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794418280.067181,
+    "last_sweep_time": 1794418471.482058,
     "last_sweep_times": {
-      "algeria": 1794418277.6389928,
-      "france": 1794418280.067181
+      "algeria": 1794418469.0978432,
+      "france": 1794418471.482058
     },
     "last_deal_post_times": {
-      "algeria": 1794418106.0588539
+      "algeria": 1794418469.1258788
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21131,7 +21146,8 @@
     "1005012197291105": "zedstoreonline",
     "1005010179192246": "aniscoupons",
     "1005010457635845": "aniscoupons",
-    "1005012921754472": "aniscoupons"
+    "1005012921754472": "aniscoupons",
+    "1005013399086495": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -22102,7 +22118,8 @@
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": "zedstoreonline",
     "Realme P4 Power 8/256GB": "aniscoupons",
     "ASROCK X570M PRO4 MOTHERBOARD": "aniscoupons",
-    "EASYSMX X05 PRO Controller": "aniscoupons"
+    "EASYSMX X05 PRO Controller": "aniscoupons",
+    "ONEPLUS 16 12/256GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
