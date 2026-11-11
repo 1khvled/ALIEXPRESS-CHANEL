@@ -840,7 +840,7 @@
     "1005010178295650": 1793743848.9735239,
     "1005006861002512": 1791151259.5667012,
     "1005012285327063": 1794389464.8877077,
-    "1005006581583862": 1794390207.8353982,
+    "1005006581583862": 1794421237.0650215,
     "1005012816171978": 1792157876.0860639,
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791638734.5386465,
@@ -2580,7 +2580,7 @@
     "آلة حلاقة من علامة KEMEI": 1791012946.4110153,
     "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": 1791638734.5386465,
     "Predyee Groin Hair Trimmer WH": 1791013836.445986,
-    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1794390207.8353982,
+    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1794421237.0650215,
     "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise": 1791014140.3360124,
     "Baseus-Bowie E5x": 1791014145.8727648,
     "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": 1791014755.488723,
@@ -3450,7 +3450,6 @@
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551
   },
   "published_post_keys": [
-    "aniscoupons:32767",
     "aniscoupons:32691",
     "aniscoupons:33313",
     "aniscoupons:32778",
@@ -4449,11 +4448,12 @@
     "lodydeals:46365",
     "aniscoupons:34543",
     "zedstoreonline:39905",
-    "aniscoupons:34544"
+    "aniscoupons:34544",
+    "aniscoupons:34545"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794421050.6233609,
+  "last_run_time": 1794421237.0650215,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4480,12 +4480,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39905,
-      "last_check_time": 1794421045.2871065
+      "last_message_id": 39906,
+      "last_check_time": 1794421232.1302326
     },
     "aniscoupons": {
-      "last_message_id": 34544,
-      "last_check_time": 1794421052.6880355
+      "last_message_id": 34545,
+      "last_check_time": 1794421239.1322913
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20535,6 +20535,16 @@
       "price": 6.55,
       "timestamp": 1794421050.6233609,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34545": {
+      "channel_msg_id": 2354,
+      "product_id": "1005006581583862",
+      "title": "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling",
+      "channel": "aniscoupons",
+      "source_msg_id": 34545,
+      "price": 18.4,
+      "timestamp": 1794421237.0650215,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20543,17 +20553,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794421053.4780154,
+    "last_deal_post_time": 1794421240.121066,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794421055.9237685,
+    "last_sweep_time": 1794421243.2071714,
     "last_sweep_times": {
-      "algeria": 1794421053.4499543,
-      "france": 1794421055.9237685
+      "algeria": 1794421240.0916793,
+      "france": 1794421243.2071714
     },
     "last_deal_post_times": {
-      "algeria": 1794421053.4780154
+      "algeria": 1794421240.121066
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23085,7 +23095,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33340",
     "bnddeals:50969",
     "megaphonna:8704",
     "zedstoreonline:39024",
@@ -24084,7 +24093,8 @@
     "lodydeals:46366",
     "lodydeals:46367",
     "lodydeals:46368",
-    "zedstoreonline:39904"
+    "zedstoreonline:39904",
+    "zedstoreonline:39906"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
