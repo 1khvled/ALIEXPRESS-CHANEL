@@ -1499,7 +1499,7 @@
     "1005006807619368": 1794421050.6233609,
     "1005010653559191": 1794349536.4429784,
     "COUPON_CLAIM_zedstoreonline_39827": 1794363974.314961,
-    "1005012197291105": 1794408497.0639706,
+    "1005012197291105": 1794438408.5282347,
     "1005010179192246": 1794427325.301942,
     "1005010457635845": 1794393509.614562,
     "1005012921754472": 1794414407.5368557,
@@ -3444,7 +3444,7 @@
     "Huawei Pura 90s Pro Max 12/256GB": 1794390200.6061625,
     "OnePlus 13": 1794390398.1860356,
     "Oppo Find X10 Pro Max 12/256": 1794390785.626018,
-    "OnePlus ACE 6 Ultra 12/256": 1794408497.0639706,
+    "OnePlus ACE 6 Ultra 12/256": 1794438408.5282347,
     "iQOO Neo 11 Ultra": 1794391855.282333,
     "ONEPLUS 15 Global Rom 12/256": 1794393509.614562,
     "OPPO FIND X9s Pro": 1794394415.6108775,
@@ -3472,7 +3472,6 @@
     "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794437490.1572993
   },
   "published_post_keys": [
-    "couponsglobal:48798",
     "zedstoreonline:38831",
     "lodydeals:45462",
     "ecksdeal:5947",
@@ -4471,11 +4470,12 @@
     "zedstoreonline:39928",
     "aniscoupons:34600",
     "aniscoupons:34601",
-    "aniscoupons:34602"
+    "aniscoupons:34602",
+    "zedstoreonline:39929"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794437860.4294534,
+  "last_run_time": 1794438408.5282347,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4502,12 +4502,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39928,
-      "last_check_time": 1794437134.8889828
+      "last_message_id": 39930,
+      "last_check_time": 1794438411.3974843
     },
     "aniscoupons": {
-      "last_message_id": 34602,
-      "last_check_time": 1794437862.4842699
+      "last_message_id": 34604,
+      "last_check_time": 1794438419.5798013
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -21002,6 +21002,16 @@
       "price": 558.49,
       "timestamp": 1794437860.4294534,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39929": {
+      "channel_msg_id": 2398,
+      "product_id": "1005012197291105",
+      "title": "OnePlus ACE 6 Ultra 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39929,
+      "price": 438.2,
+      "timestamp": 1794438408.5282347,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21010,17 +21020,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794437863.3205383,
+    "last_deal_post_time": 1794438420.3328693,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794438223.7334425,
+    "last_sweep_time": 1794438422.5819478,
     "last_sweep_times": {
-      "algeria": 1794438221.4514232,
-      "france": 1794438223.7334425
+      "algeria": 1794438420.3097217,
+      "france": 1794438422.5819478
     },
     "last_deal_post_times": {
-      "algeria": 1794437863.3205383
+      "algeria": 1794438420.3328693
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23563,9 +23573,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8480",
-    "zedstoreonline:38679",
-    "megaphonna:8487",
     "pcgamingpart:7998",
     "aniscoupons:33320",
     "ecksdeal:5933",
@@ -24562,7 +24569,10 @@
     "zedstoreonline:39926",
     "aniscoupons:34591",
     "aniscoupons:34594",
-    "aniscoupons:34599"
+    "aniscoupons:34599",
+    "zedstoreonline:39930",
+    "aniscoupons:34603",
+    "aniscoupons:34604"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,

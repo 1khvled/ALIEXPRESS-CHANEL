@@ -28,10 +28,10 @@
       "ewma": 0.8309
     },
     "zedstoreonline": {
-      "seen": 50,
-      "published": 22,
+      "seen": 51,
+      "published": 23,
       "skipped": 0,
-      "ewma": 0.9201
+      "ewma": 0.9265
     },
     "bnddeals": {
       "seen": 18,
@@ -40,7 +40,7 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 98,
+      "seen": 100,
       "published": 78,
       "skipped": 0,
       "ewma": 0.9993
@@ -48,7 +48,7 @@
   },
   "category_stats": {
     "other": {
-      "seen": 48,
+      "seen": 50,
       "published": 39,
       "skipped": 0,
       "ewma": 0.9807
@@ -60,10 +60,10 @@
       "ewma": 0.8788
     },
     "phones": {
-      "seen": 81,
-      "published": 46,
+      "seen": 82,
+      "published": 47,
       "skipped": 0,
-      "ewma": 0.9891
+      "ewma": 0.99
     },
     "home": {
       "seen": 5,
@@ -133,6 +133,7 @@
       883.6
     ],
     "1005012197291105": [
+      438.2,
       438.2,
       438.2
     ],
@@ -395,14 +396,14 @@
     ]
   },
   "counters": {
-    "scored": 179,
-    "verdict_publish": 167,
+    "scored": 182,
+    "verdict_publish": 170,
     "verdict_hold": 12,
     "verdict_skip": 0,
-    "published": 116,
+    "published": 117,
     "skipped": 0
   },
-  "score_sum": 12828.04,
+  "score_sum": 13055.35,
   "recent_decisions": [
     {
       "ts": 1794383955,
@@ -1835,7 +1836,31 @@
       "product_id": "1005012167744546",
       "score": 76.33,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794438406,
+      "channel": "zedstoreonline",
+      "category": "phones",
+      "product_id": "1005012197291105",
+      "score": 63.92,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794438415,
+      "channel": "aniscoupons",
+      "category": "other",
+      "product_id": "1005012650636759",
+      "score": 78.31,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794438419,
+      "channel": "aniscoupons",
+      "category": "other",
+      "product_id": "1005012333024137",
+      "score": 85.08,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794437860.4692872
+  "updated_at": 1794438419.0468893
 }
