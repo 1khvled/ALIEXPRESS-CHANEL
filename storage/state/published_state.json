@@ -1377,7 +1377,7 @@
     "1005013372330447": 1793707119.4932482,
     "1005012305564176": 1793707135.2600253,
     "1005012483329501": 1793898360.7512894,
-    "1005010044163415": 1793707149.3437843,
+    "1005010044163415": 1794438972.1864517,
     "1005012099740266": 1793707154.0863686,
     "1005010462111234": 1793707161.4322476,
     "1005006026842392": 1793707779.0330126,
@@ -2489,7 +2489,8 @@
     "DJI Osmo mobile",
     "OPPO K15 12/256GB",
     "Lenovo Legion Y70 2026 Gamin(12/512GB)",
-    "KINGSTON DATA TRAVELER USB3.2 (128G)"
+    "KINGSTON DATA TRAVELER USB3.2 (128G)",
+    "Essager Mini 30W Type C Charger PD"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3471,10 +3472,10 @@
     "DJI Osmo mobile": 1794432694.0507162,
     "OPPO K15 12/256GB": 1794436740.624044,
     "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794437490.1572993,
-    "KINGSTON DATA TRAVELER USB3.2 (128G)": 1794438803.0185766
+    "KINGSTON DATA TRAVELER USB3.2 (128G)": 1794438803.0185766,
+    "Essager Mini 30W Type C Charger PD": 1794438972.1864517
   },
   "published_post_keys": [
-    "lodydeals:45462",
     "ecksdeal:5947",
     "couponsglobal:48765",
     "zedstoreonline:38838",
@@ -4473,11 +4474,12 @@
     "aniscoupons:34601",
     "aniscoupons:34602",
     "zedstoreonline:39929",
-    "aniscoupons:34605"
+    "aniscoupons:34605",
+    "zedstoreonline:39932"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794438803.0185766,
+  "last_run_time": 1794438972.1864517,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4504,8 +4506,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39931,
-      "last_check_time": 1794438797.7430387
+      "last_message_id": 39932,
+      "last_check_time": 1794438974.257189
     },
     "aniscoupons": {
       "last_message_id": 34605,
@@ -5038,7 +5040,7 @@
     "1005013372330447": 583.0,
     "1005012305564176": 60.76,
     "1005012483329501": 245.75,
-    "1005010044163415": 2.92,
+    "1005010044163415": 2.7,
     "1005012099740266": 2.17,
     "1005010462111234": 2.51,
     "1005006026842392": 14.91,
@@ -21024,6 +21026,16 @@
       "price": 6.5,
       "timestamp": 1794438803.0185766,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39932": {
+      "channel_msg_id": 2400,
+      "product_id": "1005010044163415",
+      "title": "Essager Mini 30W Type C Charger PD",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39932,
+      "price": 2.7,
+      "timestamp": 1794438972.1864517,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21032,17 +21044,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794438805.8071547,
+    "last_deal_post_time": 1794438979.0160036,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794438807.9312744,
+    "last_sweep_time": 1794438981.4690645,
     "last_sweep_times": {
-      "algeria": 1794438805.7839353,
-      "france": 1794438807.9312744
+      "algeria": 1794438978.9850638,
+      "france": 1794438981.4690645
     },
     "last_deal_post_times": {
-      "algeria": 1794438805.8071547
+      "algeria": 1794438979.0160036
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21674,7 +21686,7 @@
     "1005013372330447": "lodydeals",
     "1005012305564176": "lodydeals",
     "1005012483329501": "lodydeals",
-    "1005010044163415": "lodydeals",
+    "1005010044163415": "zedstoreonline",
     "1005012099740266": "lodydeals",
     "1005010462111234": "lodydeals",
     "1005006026842392": "lodydeals",
@@ -22790,7 +22802,8 @@
     "DJI Osmo mobile": "zedstoreonline",
     "OPPO K15 12/256GB": "aniscoupons",
     "Lenovo Legion Y70 2026 Gamin(12/512GB)": "aniscoupons",
-    "KINGSTON DATA TRAVELER USB3.2 (128G)": "aniscoupons"
+    "KINGSTON DATA TRAVELER USB3.2 (128G)": "aniscoupons",
+    "Essager Mini 30W Type C Charger PD": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
