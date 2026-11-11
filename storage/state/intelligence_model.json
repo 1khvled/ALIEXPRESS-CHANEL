@@ -34,7 +34,7 @@
       "ewma": 0.5768
     },
     "bnddeals": {
-      "seen": 17,
+      "seen": 18,
       "published": 3,
       "skipped": 0,
       "ewma": 0.6107
@@ -76,6 +76,12 @@
       "published": 1,
       "skipped": 0,
       "ewma": 0.54
+    },
+    "audio": {
+      "seen": 1,
+      "published": 0,
+      "skipped": 0,
+      "ewma": 0.5
     }
   },
   "product_prices": {
@@ -162,14 +168,14 @@
     ]
   },
   "counters": {
-    "scored": 61,
-    "verdict_publish": 58,
+    "scored": 62,
+    "verdict_publish": 59,
     "verdict_hold": 3,
     "verdict_skip": 0,
     "published": 27,
     "skipped": 0
   },
-  "score_sum": 4390.08,
+  "score_sum": 4471.42,
   "recent_decisions": [
     {
       "ts": 1794383955,
@@ -658,7 +664,15 @@
       "product_id": "1005007162099601",
       "score": 87.02,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794399994,
+      "channel": "bnddeals",
+      "category": "audio",
+      "product_id": "1005007038022940",
+      "score": 81.34,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794398651.8977177
+  "updated_at": 1794399994.7510548
 }
