@@ -1084,7 +1084,7 @@
     "1005012005176923": 1793543639.3190484,
     "1005012399830182": 1794392587.3539767,
     "1005013479172067": 1793448884.6592717,
-    "1005012199872142": 1794391862.7124853,
+    "1005012199872142": 1794412755.036021,
     "9998886358": 1793276358.3466215,
     "1005013170854617": 1793969543.5771117,
     "1005010172572484": 1793521744.753259,
@@ -2811,7 +2811,7 @@
     "IQOO 15T 12/256": 1794392587.3539767,
     "Honor Power 2 12/256": 1793276177.7089784,
     "OnePlus Turbo 6x  6/128GB": 1793276192.7711725,
-    "Oneplus ACE 6 Ultra 12/256GB": 1794391862.7124853,
+    "Oneplus ACE 6 Ultra 12/256GB": 1794412755.036021,
     "VIVO Y600 Pro 8/128": 1793278959.3832097,
     "Oppo Find X9 12/256": 1793521744.753259,
     "Oppo Find X9s Pro 12/256": 1793278979.5236633,
@@ -3420,7 +3420,6 @@
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794411999.7818277
   },
   "published_post_keys": [
-    "lodydeals:45460",
     "couponsglobal:48818",
     "lodydeals:45574",
     "megaphonna:8595",
@@ -4419,11 +4418,12 @@
     "aniscoupons:34512",
     "zedstoreonline:39887",
     "aniscoupons:34515",
-    "aniscoupons:34516"
+    "aniscoupons:34516",
+    "aniscoupons:34517"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794412380.423559,
+  "last_run_time": 1794412755.036021,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4454,8 +4454,8 @@
       "last_check_time": 1794412001.8332038
     },
     "aniscoupons": {
-      "last_message_id": 34516,
-      "last_check_time": 1794412382.490107
+      "last_message_id": 34517,
+      "last_check_time": 1794412757.101822
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20160,6 +20160,16 @@
       "price": 24.8,
       "timestamp": 1794412380.423559,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34517": {
+      "channel_msg_id": 2318,
+      "product_id": "1005012199872142",
+      "title": "Oneplus ACE 6 Ultra 12/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34517,
+      "price": 438.5,
+      "timestamp": 1794412755.036021,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20168,17 +20178,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794412383.1978025,
+    "last_deal_post_time": 1794412758.022675,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794412567.3722873,
+    "last_sweep_time": 1794412761.1099706,
     "last_sweep_times": {
-      "algeria": 1794412564.2523634,
-      "france": 1794412567.3722873
+      "algeria": 1794412757.9941492,
+      "france": 1794412761.1099706
     },
     "last_deal_post_times": {
-      "algeria": 1794412383.1978025
+      "algeria": 1794412758.022675
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
