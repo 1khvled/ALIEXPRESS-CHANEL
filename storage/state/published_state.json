@@ -748,7 +748,9 @@
     "1005010153422760",
     "1005012809141747",
     "1005012912160949",
-    "1005012167744546"
+    "1005012167744546",
+    "1005009582538267",
+    "1005005471311412"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1512,7 +1514,9 @@
     "1005010153422760": 1794432694.0507162,
     "1005012809141747": 1794436740.624044,
     "1005012912160949": 1794437490.1572993,
-    "1005012167744546": 1794437860.4294534
+    "1005012167744546": 1794437860.4294534,
+    "1005009582538267": 1794439531.0399334,
+    "1005005471311412": 1794439539.8661358
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2490,7 +2494,9 @@
     "OPPO K15 12/256GB",
     "Lenovo Legion Y70 2026 Gamin(12/512GB)",
     "KINGSTON DATA TRAVELER USB3.2 (128G)",
-    "Essager Mini 30W Type C Charger PD"
+    "Essager Mini 30W Type C Charger PD",
+    "X96Q TV BOX 2/16GB",
+    "Kingston DataTraveler Exodia S USB Flash (128g)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3473,11 +3479,11 @@
     "OPPO K15 12/256GB": 1794436740.624044,
     "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794437490.1572993,
     "KINGSTON DATA TRAVELER USB3.2 (128G)": 1794438803.0185766,
-    "Essager Mini 30W Type C Charger PD": 1794438972.1864517
+    "Essager Mini 30W Type C Charger PD": 1794438972.1864517,
+    "X96Q TV BOX 2/16GB": 1794439531.0399334,
+    "Kingston DataTraveler Exodia S USB Flash (128g)": 1794439539.8661358
   },
   "published_post_keys": [
-    "couponsglobal:48765",
-    "zedstoreonline:38838",
     "aniscoupons:32727",
     "bnddeals:50966",
     "lodydeals:45467",
@@ -4475,19 +4481,21 @@
     "zedstoreonline:39929",
     "aniscoupons:34605",
     "zedstoreonline:39932",
-    "aniscoupons:34606"
+    "aniscoupons:34606",
+    "zedstoreonline:39934",
+    "aniscoupons:34608"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794439171.9105787,
+  "last_run_time": 1794439539.8661358,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
       "last_check_time": 1794419029.2500024
     },
     "lodydeals": {
-      "last_message_id": 46402,
-      "last_check_time": 1794436938.546056
+      "last_message_id": 46403,
+      "last_check_time": 1794439525.1898353
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4506,12 +4514,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39933,
-      "last_check_time": 1794439341.3663416
+      "last_message_id": 39934,
+      "last_check_time": 1794439533.0833206
     },
     "aniscoupons": {
-      "last_message_id": 34606,
-      "last_check_time": 1794439173.978515
+      "last_message_id": 34608,
+      "last_check_time": 1794439541.9111793
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5161,7 +5169,9 @@
     "1005010153422760": 58.7,
     "1005012809141747": 349.4,
     "1005012912160949": 370.5,
-    "1005012167744546": 558.49
+    "1005012167744546": 558.49,
+    "1005009582538267": 25.1,
+    "1005005471311412": 7.7
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -21046,6 +21056,26 @@
       "price": 226.78,
       "timestamp": 1794439171.9105787,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39934": {
+      "channel_msg_id": 2402,
+      "product_id": "1005009582538267",
+      "title": "X96Q TV BOX 2/16GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39934,
+      "price": 25.1,
+      "timestamp": 1794439531.0399334,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34608": {
+      "channel_msg_id": 2403,
+      "product_id": "1005005471311412",
+      "title": "Kingston DataTraveler Exodia S USB Flash (128g)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34608,
+      "price": 7.7,
+      "timestamp": 1794439539.8661358,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21054,17 +21084,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794439175.028238,
+    "last_deal_post_time": 1794439542.6627762,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794439345.5979059,
+    "last_sweep_time": 1794439545.143232,
     "last_sweep_times": {
-      "algeria": 1794439343.050207,
-      "france": 1794439345.5979059
+      "algeria": 1794439542.6445386,
+      "france": 1794439545.143232
     },
     "last_deal_post_times": {
-      "algeria": 1794439175.028238
+      "algeria": 1794439542.6627762
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21828,7 +21858,9 @@
     "1005010153422760": "zedstoreonline",
     "1005012809141747": "aniscoupons",
     "1005012912160949": "aniscoupons",
-    "1005012167744546": "aniscoupons"
+    "1005012167744546": "aniscoupons",
+    "1005009582538267": "zedstoreonline",
+    "1005005471311412": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -22813,7 +22845,9 @@
     "OPPO K15 12/256GB": "aniscoupons",
     "Lenovo Legion Y70 2026 Gamin(12/512GB)": "aniscoupons",
     "KINGSTON DATA TRAVELER USB3.2 (128G)": "aniscoupons",
-    "Essager Mini 30W Type C Charger PD": "zedstoreonline"
+    "Essager Mini 30W Type C Charger PD": "zedstoreonline",
+    "X96Q TV BOX 2/16GB": "zedstoreonline",
+    "Kingston DataTraveler Exodia S USB Flash (128g)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
