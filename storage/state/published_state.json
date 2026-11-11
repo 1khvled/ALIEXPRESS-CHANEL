@@ -1486,7 +1486,7 @@
     "COUPONS_949f0159": 1794309459.0725908,
     "1005008046071240": 1794310928.9154878,
     "1005012083833079": 1794311122.753493,
-    "1005012292809645": 1794311488.3788898,
+    "1005012292809645": 1794425282.6782186,
     "1005007495712340": 1794424903.9490352,
     "1005009104334975": 1794421043.2176414,
     "1005012474727998": 1794320674.833981,
@@ -3408,7 +3408,7 @@
     "Attack Shark X11": 1794310187.5175397,
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794310928.9154878,
     "MAONO PD100W USB Wireless Dynamic": 1794311122.753493,
-    "MAONO Wave T1 Mini Pro": 1794311488.3788898,
+    "MAONO Wave T1 Mini Pro": 1794425282.6782186,
     "FIFINE M9 Wireless Lavalier Microphone": 1794424903.9490352,
     "AULA WIN68 HE Gaming Mechanical Keyboard": 1794312953.1830955,
     "CMF Buds 2a ANC -42dB  السعر: 11.7": 1794312964.1163073,
@@ -3450,7 +3450,6 @@
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551
   },
   "published_post_keys": [
-    "zedstoreonline:38622",
     "lodydeals:45745",
     "test_channel:1791589315",
     "couponsglobal:48841",
@@ -4449,11 +4448,12 @@
     "zedstoreonline:39910",
     "aniscoupons:34556",
     "aniscoupons:34557",
-    "aniscoupons:34558"
+    "aniscoupons:34558",
+    "aniscoupons:34559"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794424903.9490352,
+  "last_run_time": 1794425282.6782186,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4480,12 +4480,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39913,
-      "last_check_time": 1794424714.5853179
+      "last_message_id": 39914,
+      "last_check_time": 1794425278.8797455
     },
     "aniscoupons": {
-      "last_message_id": 34558,
-      "last_check_time": 1794424906.0817666
+      "last_message_id": 34559,
+      "last_check_time": 1794425284.7476892
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20605,6 +20605,16 @@
       "price": 53.24,
       "timestamp": 1794424903.9490352,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34559": {
+      "channel_msg_id": 2361,
+      "product_id": "1005012292809645",
+      "title": "MAONO Wave T1 Mini Pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 34559,
+      "price": 37.69,
+      "timestamp": 1794425282.6782186,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20613,17 +20623,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794424906.9126756,
+    "last_deal_post_time": 1794425285.6632953,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794425098.406376,
+    "last_sweep_time": 1794425288.324726,
     "last_sweep_times": {
-      "algeria": 1794425095.3776815,
-      "france": 1794425098.406376
+      "algeria": 1794425285.6341872,
+      "france": 1794425288.324726
     },
     "last_deal_post_times": {
-      "algeria": 1794424906.9126756
+      "algeria": 1794425285.6632953
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23155,7 +23165,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:32845",
     "megaphonna:8546",
     "bnddeals:50819",
     "zedstoreonline:38808",
@@ -24154,7 +24163,8 @@
     "aniscoupons:34553",
     "aniscoupons:34554",
     "aniscoupons:34555",
-    "zedstoreonline:39913"
+    "zedstoreonline:39913",
+    "zedstoreonline:39914"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
