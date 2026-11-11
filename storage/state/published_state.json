@@ -1205,7 +1205,7 @@
     "1005013104807077": 1793467066.6592104,
     "1005013254708251": 1793467118.9110754,
     "1005013247504991": 1793467124.0929165,
-    "1005010063240047": 1793656173.8785615,
+    "1005010063240047": 1794433057.1369512,
     "1005011572654672": 1793467181.5819678,
     "1005011573078192": 1793467199.494143,
     "1005010499486523": 1793467240.7535586,
@@ -2994,7 +2994,7 @@
     "New HONOR 600 Lite 5G Smartphone 8GB+256GB 6.6'' AMOLED Screen 108MP Main": 1793467113.354114,
     "HONOR Earbuds X10 Lite TWS": 1793467118.9110754,
     "HONOR CHOICE Earbuds X7e": 1793467124.0929165,
-    "HONOR Pad X9a (8/256GB)": 1793467129.4370139,
+    "HONOR Pad X9a (8/256GB)": 1794433057.1369512,
     "Ryzen 7 7700 AM5": 1793467141.896747,
     "New vivo X300 Pro Smartphones MediaTek Dimensity 9500 6.78 inch 120Hz 50MP": 1793467151.9364934,
     "TicWatch Pro 5 Wear OS Smartwatch NFC 5ATM (Refurbished)": 1793467173.1692383,
@@ -3462,7 +3462,6 @@
     "DJI Osmo mobile": 1794432694.0507162
   },
   "published_post_keys": [
-    "ecksdeal:5865",
     "pcgamingpart:7951",
     "lodydeals:45934",
     "lodydeals:45403",
@@ -4461,19 +4460,20 @@
     "zedstoreonline:39923",
     "aniscoupons:34585",
     "zedstoreonline:39924",
-    "aniscoupons:34586"
+    "aniscoupons:34586",
+    "aniscoupons:34587"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794432872.6767933,
+  "last_run_time": 1794433057.1369512,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
       "last_check_time": 1794419029.2500024
     },
     "lodydeals": {
-      "last_message_id": 46387,
-      "last_check_time": 1794432685.0496645
+      "last_message_id": 46389,
+      "last_check_time": 1794433051.8730009
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4496,8 +4496,8 @@
       "last_check_time": 1794432696.1177993
     },
     "aniscoupons": {
-      "last_message_id": 34586,
-      "last_check_time": 1794432874.730664
+      "last_message_id": 34587,
+      "last_check_time": 1794433059.2058911
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4874,7 +4874,7 @@
     "1005013104807077": 397.0,
     "1005013254708251": 7.0,
     "1005013247504991": 7.0,
-    "1005010063240047": 184.3,
+    "1005010063240047": 182.38,
     "1005011572654672": 233.1,
     "1005011573078192": 217.5,
     "1005010499486523": 109.34,
@@ -20829,6 +20829,16 @@
       "price": 57.9,
       "timestamp": 1794432872.6767933,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34587": {
+      "channel_msg_id": 2382,
+      "product_id": "1005010063240047",
+      "title": "HONOR Pad X9a (8/256GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34587,
+      "price": 182.38,
+      "timestamp": 1794433057.1369512,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20837,17 +20847,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794432875.661699,
+    "last_deal_post_time": 1794433059.9817564,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794432878.4493105,
+    "last_sweep_time": 1794433062.2992384,
     "last_sweep_times": {
-      "algeria": 1794432875.638005,
-      "france": 1794432878.4493105
+      "algeria": 1794433059.952975,
+      "france": 1794433062.2992384
     },
     "last_deal_post_times": {
-      "algeria": 1794432875.661699
+      "algeria": 1794433059.9817564
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21319,7 +21329,7 @@
     "1005013104807077": "zedstoreonline",
     "1005013254708251": "aniscoupons",
     "1005013247504991": "aniscoupons",
-    "1005010063240047": "lodydeals",
+    "1005010063240047": "aniscoupons",
     "1005011572654672": "aniscoupons",
     "1005011573078192": "aniscoupons",
     "1005010499486523": "bnddeals",
