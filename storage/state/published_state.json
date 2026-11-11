@@ -1281,7 +1281,7 @@
     "1005011752891197": 1793613465.8475375,
     "1005008689880751": 1793544016.7486506,
     "1005006861815245": 1793546752.979555,
-    "1005007635109339": 1793546757.4916894,
+    "1005007635109339": 1794439743.6258593,
     "1005006860968233": 1793546761.9902797,
     "1005009912743452": 1793546766.3907888,
     "1005008041957503": 1794140022.1412559,
@@ -2496,7 +2496,8 @@
     "KINGSTON DATA TRAVELER USB3.2 (128G)",
     "Essager Mini 30W Type C Charger PD",
     "X96Q TV BOX 2/16GB",
-    "Kingston DataTraveler Exodia S USB Flash (128g)"
+    "Kingston DataTraveler Exodia S USB Flash (128g)",
+    "FIFINE K688W USB XLR MIC"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3481,10 +3482,10 @@
     "KINGSTON DATA TRAVELER USB3.2 (128G)": 1794438803.0185766,
     "Essager Mini 30W Type C Charger PD": 1794438972.1864517,
     "X96Q TV BOX 2/16GB": 1794439531.0399334,
-    "Kingston DataTraveler Exodia S USB Flash (128g)": 1794439539.8661358
+    "Kingston DataTraveler Exodia S USB Flash (128g)": 1794439539.8661358,
+    "FIFINE K688W USB XLR MIC": 1794439743.6258593
   },
   "published_post_keys": [
-    "aniscoupons:32727",
     "bnddeals:50966",
     "lodydeals:45467",
     "lodydeals:45535",
@@ -4483,11 +4484,12 @@
     "zedstoreonline:39932",
     "aniscoupons:34606",
     "zedstoreonline:39934",
-    "aniscoupons:34608"
+    "aniscoupons:34608",
+    "aniscoupons:34607"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794439539.8661358,
+  "last_run_time": 1794439743.6258593,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4519,7 +4521,7 @@
     },
     "aniscoupons": {
       "last_message_id": 34608,
-      "last_check_time": 1794439541.9111793
+      "last_check_time": 1794439743.6258593
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4961,7 +4963,7 @@
     "1005011752891197": 119.3,
     "1005008689880751": 76.5,
     "1005006861815245": 9.44,
-    "1005007635109339": 50.97,
+    "1005007635109339": 52.5,
     "1005006860968233": 47.75,
     "1005009912743452": 168.18,
     "1005008041957503": 88.33,
@@ -21076,6 +21078,16 @@
       "price": 7.7,
       "timestamp": 1794439539.8661358,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34607": {
+      "channel_msg_id": 2404,
+      "product_id": "1005007635109339",
+      "title": "FIFINE K688W USB XLR MIC",
+      "channel": "aniscoupons",
+      "source_msg_id": 34607,
+      "price": 52.5,
+      "timestamp": 1794439743.6258593,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21084,17 +21096,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794439542.6627762,
+    "last_deal_post_time": 1794439746.6430714,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794439545.143232,
+    "last_sweep_time": 1794439749.4857514,
     "last_sweep_times": {
-      "algeria": 1794439542.6445386,
-      "france": 1794439545.143232
+      "algeria": 1794439746.6144574,
+      "france": 1794439749.4857514
     },
     "last_deal_post_times": {
-      "algeria": 1794439542.6627762
+      "algeria": 1794439746.6430714
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21638,7 +21650,7 @@
     "1005011752891197": "zedstoreonline",
     "1005008689880751": "lodydeals",
     "1005006861815245": "ecksdeal",
-    "1005007635109339": "ecksdeal",
+    "1005007635109339": "aniscoupons",
     "1005006860968233": "ecksdeal",
     "1005009912743452": "ecksdeal",
     "1005008041957503": "ecksdeal",
@@ -22847,7 +22859,8 @@
     "KINGSTON DATA TRAVELER USB3.2 (128G)": "aniscoupons",
     "Essager Mini 30W Type C Charger PD": "zedstoreonline",
     "X96Q TV BOX 2/16GB": "zedstoreonline",
-    "Kingston DataTraveler Exodia S USB Flash (128g)": "aniscoupons"
+    "Kingston DataTraveler Exodia S USB Flash (128g)": "aniscoupons",
+    "FIFINE K688W USB XLR MIC": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
