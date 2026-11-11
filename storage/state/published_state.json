@@ -1390,7 +1390,7 @@
     "1005009313079431": 1794159522.2930505,
     "1005010702511858": 1793903106.9341598,
     "1005008554218453": 1793908979.1776278,
-    "1005012499433797": 1794301093.163363,
+    "1005012499433797": 1794413492.0212069,
     "9998889309": 1793929309.3822134,
     "9998889332": 1793929332.5530465,
     "999888807": 1793930807.599727,
@@ -3276,7 +3276,7 @@
     "Realme C100D 4G 4/128GB": 1794164698.641711,
     "HAYLOU Flowbuds N50 ANC": 1793970449.9003735,
     "Honor 600 Pro 12/256": 1794131798.3098254,
-    "HONOR Pad X8a (4/64GB)": 1794301093.163363,
+    "HONOR Pad X8a (4/64GB)": 1794413492.0212069,
     "Magcubic HY350 Max 900ANSI": 1794300185.514064,
     "Honor X9d (no charger)": 1794300732.0543585,
     "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1794242854.979892,
@@ -3420,7 +3420,6 @@
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794411999.7818277
   },
   "published_post_keys": [
-    "megaphonna:8595",
     "zedstoreonline:38537",
     "lodydeals:45874",
     "lodydeals:45931",
@@ -4419,11 +4418,12 @@
     "aniscoupons:34516",
     "aniscoupons:34517",
     "zedstoreonline:39888",
-    "aniscoupons:34518"
+    "aniscoupons:34518",
+    "aniscoupons:34519"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794413125.6384788,
+  "last_run_time": 1794413492.0212069,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4454,8 +4454,8 @@
       "last_check_time": 1794412942.7591736
     },
     "aniscoupons": {
-      "last_message_id": 34518,
-      "last_check_time": 1794413127.6881256
+      "last_message_id": 34519,
+      "last_check_time": 1794413494.0854769
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20190,6 +20190,16 @@
       "price": 275.8,
       "timestamp": 1794413125.6384788,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34519": {
+      "channel_msg_id": 2321,
+      "product_id": "1005012499433797",
+      "title": "HONOR Pad X8a (4/64GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34519,
+      "price": 134.36,
+      "timestamp": 1794413492.0212069,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20198,17 +20208,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794413128.7536268,
+    "last_deal_post_time": 1794413495.181316,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794413304.2418706,
+    "last_sweep_time": 1794413498.4278772,
     "last_sweep_times": {
-      "algeria": 1794413300.5910795,
-      "france": 1794413304.2418706
+      "algeria": 1794413495.1497138,
+      "france": 1794413498.4278772
     },
     "last_deal_post_times": {
-      "algeria": 1794413128.7536268
+      "algeria": 1794413495.181316
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
