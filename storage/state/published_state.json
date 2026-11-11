@@ -750,7 +750,8 @@
     "1005012912160949",
     "1005012167744546",
     "1005009582538267",
-    "1005005471311412"
+    "1005005471311412",
+    "1005012915663790"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1340,7 +1341,7 @@
     "1005011625723042": 1793613515.3490868,
     "1005006280695304": 1793613524.8970137,
     "1005010149868688": 1793613530.8342392,
-    "1005007060644375": 1794076070.3822317,
+    "1005007060644375": 1794439910.7944255,
     "1005012741268303": 1793613890.9637206,
     "1005010285419688": 1793613895.6129942,
     "1005007805750092": 1793613900.590816,
@@ -1516,7 +1517,8 @@
     "1005012912160949": 1794437490.1572993,
     "1005012167744546": 1794437860.4294534,
     "1005009582538267": 1794439531.0399334,
-    "1005005471311412": 1794439539.8661358
+    "1005005471311412": 1794439539.8661358,
+    "1005012915663790": 1794439916.4928079
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2497,7 +2499,8 @@
     "Essager Mini 30W Type C Charger PD",
     "X96Q TV BOX 2/16GB",
     "Kingston DataTraveler Exodia S USB Flash (128g)",
-    "FIFINE K688W USB XLR MIC"
+    "FIFINE K688W USB XLR MIC",
+    "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3307,7 +3310,7 @@
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": 1793966727.646043,
     "GameSir X5 Lite Game Controller": 1794415703.2366781,
     "Netac SSD NVME M2 250GB": 1794422876.857545,
-    "Essager 20W GaN + cable": 1794076070.3822317,
+    "Essager 20W GaN + cable": 1794439910.7944255,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794412380.423559,
     "Fifine Gaming Headset H9W": 1794433999.0419908,
@@ -3483,11 +3486,10 @@
     "Essager Mini 30W Type C Charger PD": 1794438972.1864517,
     "X96Q TV BOX 2/16GB": 1794439531.0399334,
     "Kingston DataTraveler Exodia S USB Flash (128g)": 1794439539.8661358,
-    "FIFINE K688W USB XLR MIC": 1794439743.6258593
+    "FIFINE K688W USB XLR MIC": 1794439743.6258593,
+    "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra": 1794439916.4928079
   },
   "published_post_keys": [
-    "bnddeals:50966",
-    "lodydeals:45467",
     "lodydeals:45535",
     "megaphonna:8519",
     "aniscoupons:33160",
@@ -4485,11 +4487,13 @@
     "aniscoupons:34606",
     "zedstoreonline:39934",
     "aniscoupons:34608",
-    "aniscoupons:34607"
+    "aniscoupons:34607",
+    "zedstoreonline:39935",
+    "aniscoupons:34610"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794439743.6258593,
+  "last_run_time": 1794439916.4928079,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4516,12 +4520,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39934,
-      "last_check_time": 1794439533.0833206
+      "last_message_id": 39935,
+      "last_check_time": 1794439912.867792
     },
     "aniscoupons": {
-      "last_message_id": 34608,
-      "last_check_time": 1794439743.6258593
+      "last_message_id": 34610,
+      "last_check_time": 1794439918.559194
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5173,7 +5177,8 @@
     "1005012912160949": 370.5,
     "1005012167744546": 558.49,
     "1005009582538267": 25.1,
-    "1005005471311412": 7.7
+    "1005005471311412": 7.7,
+    "1005012915663790": 56.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -21088,6 +21093,26 @@
       "price": 52.5,
       "timestamp": 1794439743.6258593,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39935": {
+      "channel_msg_id": 2405,
+      "product_id": "1005007060644375",
+      "title": "Essager 20W GaN + cable",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39935,
+      "price": 3.2,
+      "timestamp": 1794439910.7944255,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34610": {
+      "channel_msg_id": 2406,
+      "product_id": "1005012915663790",
+      "title": "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra",
+      "channel": "aniscoupons",
+      "source_msg_id": 34610,
+      "price": 56.8,
+      "timestamp": 1794439916.4928079,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21096,17 +21121,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794439746.6430714,
+    "last_deal_post_time": 1794439919.4437609,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794439749.4857514,
+    "last_sweep_time": 1794439921.9145205,
     "last_sweep_times": {
-      "algeria": 1794439746.6144574,
-      "france": 1794439749.4857514
+      "algeria": 1794439919.4150891,
+      "france": 1794439921.9145205
     },
     "last_deal_post_times": {
-      "algeria": 1794439746.6430714
+      "algeria": 1794439919.4437609
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21711,7 +21736,7 @@
     "1005009231510301": "zedstoreonline",
     "1005011625723042": "aniscoupons",
     "1005006280695304": "aniscoupons",
-    "1005007060644375": "aniscoupons",
+    "1005007060644375": "zedstoreonline",
     "1005007805750092": "aniscoupons",
     "1005006966360399": "aniscoupons",
     "1005010706590867": "ecksdeal",
@@ -21872,7 +21897,8 @@
     "1005012912160949": "aniscoupons",
     "1005012167744546": "aniscoupons",
     "1005009582538267": "zedstoreonline",
-    "1005005471311412": "aniscoupons"
+    "1005005471311412": "aniscoupons",
+    "1005012915663790": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -22682,7 +22708,7 @@
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": "zedstoreonline",
     "GameSir X5 Lite Game Controller": "aniscoupons",
     "Netac SSD NVME M2 250GB": "zedstoreonline",
-    "Essager 20W GaN + cable": "aniscoupons",
+    "Essager 20W GaN + cable": "zedstoreonline",
     "Redmi Note 17 Pro Max": "aniscoupons",
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": "aniscoupons",
     "Fifine Gaming Headset H9W": "aniscoupons",
@@ -22860,7 +22886,8 @@
     "Essager Mini 30W Type C Charger PD": "zedstoreonline",
     "X96Q TV BOX 2/16GB": "zedstoreonline",
     "Kingston DataTraveler Exodia S USB Flash (128g)": "aniscoupons",
-    "FIFINE K688W USB XLR MIC": "aniscoupons"
+    "FIFINE K688W USB XLR MIC": "aniscoupons",
+    "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
