@@ -1318,7 +1318,7 @@
     "1005011927267564": 1793728844.5794795,
     "1005008291023017": 1794388550.666115,
     "1005012947477238": 1793612016.5356846,
-    "1005010121513376": 1794300732.0543585,
+    "1005010121513376": 1794413855.8227875,
     "1005009064526142": 1793613380.753295,
     "1005010009130696": 1793613403.4444478,
     "1005013465751932": 1793613440.9413722,
@@ -3278,7 +3278,7 @@
     "Honor 600 Pro 12/256": 1794131798.3098254,
     "HONOR Pad X8a (4/64GB)": 1794413492.0212069,
     "Magcubic HY350 Max 900ANSI": 1794300185.514064,
-    "Honor X9d (no charger)": 1794300732.0543585,
+    "Honor X9d (no charger)": 1794413855.8227875,
     "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1794242854.979892,
     "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
@@ -3420,7 +3420,6 @@
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794411999.7818277
   },
   "published_post_keys": [
-    "zedstoreonline:38537",
     "lodydeals:45874",
     "lodydeals:45931",
     "ecksdeal:5890",
@@ -4419,11 +4418,12 @@
     "aniscoupons:34517",
     "zedstoreonline:39888",
     "aniscoupons:34518",
-    "aniscoupons:34519"
+    "aniscoupons:34519",
+    "aniscoupons:34520"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794413492.0212069,
+  "last_run_time": 1794413855.8227875,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4454,8 +4454,8 @@
       "last_check_time": 1794412942.7591736
     },
     "aniscoupons": {
-      "last_message_id": 34519,
-      "last_check_time": 1794413494.0854769
+      "last_message_id": 34520,
+      "last_check_time": 1794413857.8592682
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20200,6 +20200,16 @@
       "price": 134.36,
       "timestamp": 1794413492.0212069,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34520": {
+      "channel_msg_id": 2322,
+      "product_id": "1005010121513376",
+      "title": "Honor X9d (no charger)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34520,
+      "price": 289.5,
+      "timestamp": 1794413855.8227875,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20208,17 +20218,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794413495.181316,
+    "last_deal_post_time": 1794413858.8007073,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794413672.3345542,
+    "last_sweep_time": 1794413861.713383,
     "last_sweep_times": {
-      "algeria": 1794413670.013766,
-      "france": 1794413672.3345542
+      "algeria": 1794413858.784908,
+      "france": 1794413861.713383
     },
     "last_deal_post_times": {
-      "algeria": 1794413495.181316
+      "algeria": 1794413858.8007073
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
