@@ -9,6 +9,7 @@ Strictly deduplicated: Each alert is sent exactly once per promotion event.
 import os
 import json
 import httpx
+from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from typing import Optional, Tuple, Dict, Any, List
 

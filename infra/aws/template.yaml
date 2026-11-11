@@ -1,0 +1,270 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  DealScout publisher runtime. EventBridge Scheduler invokes a container-image
+  Lambda every few minutes; state is persisted in a private S3 bucket.
+  All resources are created in the stack's region (use eu-north-1).
+
+Parameters:
+  ImageUri:
+    Type: String
+    Description: >
+      Full ECR image URI, e.g.
+      123456789012.dkr.ecr.eu-north-1.amazonaws.com/dealscout-runtime:latest
+  ScheduleExpression:
+    Type: String
+    Default: "rate(5 minutes)"
+    Description: EventBridge Scheduler expression (rate or cron).
+  TelegramSecretArn:
+    Type: String
+    Default: ""
+    Description: >
+      Optional Secrets Manager ARN holding a JSON object of environment
+      variables (TELEGRAM_BOT_TOKEN, ALIEXPRESS_AFFILIATE_APP_KEY, ...).
+  IntelligenceMode:
+    Type: String
+    Default: shadow
+    AllowedValues: [off, shadow, enforce]
+    Description: Deterministic intelligence gate mode.
+  MemorySize:
+    Type: Number
+    Default: 1024
+    MinValue: 512
+    MaxValue: 10240
+  TimeoutSeconds:
+    Type: Number
+    Default: 900
+    MinValue: 60
+    MaxValue: 900
+  LogRetentionDays:
+    Type: Number
+    Default: 14
+    AllowedValues: [1, 3, 5, 7, 14, 30, 60, 90, 180, 365]
+  AlarmEmail:
+    Type: String
+    Default: ""
+    Description: Optional email subscribed to the failure alarm.
+
+Conditions:
+  HasSecret: !Not [!Equals [!Ref TelegramSecretArn, ""]]
+  HasAlarmEmail: !Not [!Equals [!Ref AlarmEmail, ""]]
+
+Resources:
+  # -------------------------------------------------------------------------
+  # State + audit database (private, versioned, encrypted)
+  # -------------------------------------------------------------------------
+  StateBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      VersioningConfiguration:
+        Status: Enabled
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+      LifecycleConfiguration:
+        Rules:
+          - Id: abort-incomplete-multipart
+            Status: Enabled
+            AbortIncompleteMultipartUpload:
+              DaysAfterInitiation: 7
+          - Id: expire-old-versions
+            Status: Enabled
+            NoncurrentVersionExpiration:
+              NoncurrentDays: 30
+
+  # -------------------------------------------------------------------------
+  # Lambda execution role
+  # -------------------------------------------------------------------------
+  RuntimeRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - !Sub arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: state-bucket-access
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:ListBucket
+                Resource: !Sub arn:${AWS::Partition}:s3:::${StateBucket}
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                  - s3:PutObject
+                  - s3:DeleteObject
+                Resource: !Sub arn:${AWS::Partition}:s3:::${StateBucket}/*
+        - !If
+          - HasSecret
+          - PolicyName: telegram-secret-access
+            PolicyDocument:
+              Version: "2012-10-17"
+              Statement:
+                - Effect: Allow
+                  Action:
+                    - secretsmanager:GetSecretValue
+                  Resource: !Ref TelegramSecretArn
+          - !Ref AWS::NoValue
+
+  # -------------------------------------------------------------------------
+  # Publisher function (container image, no Lambda@Edge)
+  # -------------------------------------------------------------------------
+  RuntimeLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/aws/lambda/${AWS::StackName}-runtime"
+      RetentionInDays: !Ref LogRetentionDays
+
+  RuntimeFunction:
+    Type: AWS::Lambda::Function
+    DependsOn: RuntimeLogGroup
+    Properties:
+      FunctionName: !Sub "${AWS::StackName}-runtime"
+      Description: DealScout Algeria + France publishers on a schedule
+      PackageType: Image
+      Code:
+        ImageUri: !Ref ImageUri
+      Role: !GetAtt RuntimeRole.Arn
+      MemorySize: !Ref MemorySize
+      Timeout: !Ref TimeoutSeconds
+      Architectures: [x86_64]
+      EphemeralStorage:
+        Size: 2048
+      ReservedConcurrentExecutions: 1
+      Environment:
+        Variables:
+          STATE_BUCKET: !Ref StateBucket
+          STATE_DIR: storage/state
+          DEALSCOUT_SECRET_ARN: !Ref TelegramSecretArn
+          INTELLIGENCE_MODE: !Ref IntelligenceMode
+          PYTHONUNBUFFERED: "1"
+          TZ: Africa/Algiers
+      LoggingConfig:
+        LogGroup: !Ref RuntimeLogGroup
+
+  # -------------------------------------------------------------------------
+  # Scheduler (5 minutes by default) + least-privilege invoke role
+  # -------------------------------------------------------------------------
+  SchedulerRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: scheduler.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: invoke-runtime
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: lambda:InvokeFunction
+                Resource: !GetAtt RuntimeFunction.Arn
+
+  RuntimeSchedule:
+    Type: AWS::Scheduler::Schedule
+    Properties:
+      Name: !Sub "${AWS::StackName}-schedule"
+      Description: Invoke the DealScout publisher runtime
+      ScheduleExpression: !Ref ScheduleExpression
+      FlexibleTimeWindow:
+        Mode: OFF
+      State: ENABLED
+      Target:
+        Arn: !GetAtt RuntimeFunction.Arn
+        RoleArn: !GetAtt SchedulerRole.Arn
+        RetryPolicy:
+          MaximumRetryAttempts: 1
+          MaximumEventAgeInSeconds: 300
+
+  # -------------------------------------------------------------------------
+  # Failure visibility
+  # -------------------------------------------------------------------------
+  AlertTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: DealScout runtime alerts
+
+  AlertSubscription:
+    Type: AWS::SNS::Subscription
+    Condition: HasAlarmEmail
+    Properties:
+      Protocol: email
+      Endpoint: !Ref AlarmEmail
+      TopicArn: !Ref AlertTopic
+
+  RuntimeErrorsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub "${AWS::StackName}-errors"
+      AlarmDescription: Publisher Lambda raised an error (see CloudWatch logs)
+      Namespace: AWS/Lambda
+      MetricName: Errors
+      Dimensions:
+        - Name: FunctionName
+          Value: !Ref RuntimeFunction
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+      AlarmActions:
+        - !Ref AlertTopic
+
+  RuntimeThrottlesAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub "${AWS::StackName}-throttles"
+      AlarmDescription: >
+        A scheduled run was skipped because the previous run was still
+        executing. Consider a longer schedule or more memory.
+      Namespace: AWS/Lambda
+      MetricName: Throttles
+      Dimensions:
+        - Name: FunctionName
+          Value: !Ref RuntimeFunction
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+      AlarmActions:
+        - !Ref AlertTopic
+
+Outputs:
+  FunctionName:
+    Description: Lambda function name
+    Value: !Ref RuntimeFunction
+  FunctionArn:
+    Description: Lambda function ARN
+    Value: !GetAtt RuntimeFunction.Arn
+  StateBucketName:
+    Description: S3 bucket holding storage/state and deals.db
+    Value: !Ref StateBucket
+  ScheduleName:
+    Description: EventBridge Scheduler schedule
+    Value: !Ref RuntimeSchedule
+  LogGroupName:
+    Description: CloudWatch log group
+    Value: !Ref RuntimeLogGroup
+  AlertTopicArn:
+    Description: SNS topic for runtime alarms
+    Value: !Ref AlertTopic

@@ -1,0 +1,145 @@
+name: DealScout Control Loop
+
+# Deterministic closed-loop control (no LLM):
+#   report  -> health + metrics + a preview of the proposed thresholds
+#   propose -> opens a PR that changes storage/state/control_state.json
+#   apply   -> writes control_state.json directly (manual override)
+#
+# Scheduled runs are health checks only: they never change the bot.
+# The publisher gate reads control_state.json at runtime and clamps every
+# value to hard bounds, so a bad proposal cannot disable publishing.
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "report (read-only), propose (open a PR), apply (commit)"
+        required: true
+        default: report
+        type: choice
+        options: [report, propose, apply]
+  schedule:
+    - cron: "0 */6 * * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: dealscout-control
+  cancel-in-progress: false
+
+jobs:
+  control:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # When AWS owns the runtime, state lives in S3 instead of git. Pull it
+      # into a temp directory so the controller reads reality without dirtying
+      # the working tree that the propose/apply steps commit from.
+      - name: Configure AWS (state read)
+        if: vars.DEALSCOUT_RUNTIME == 'aws'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: eu-north-1
+
+      - name: Resolve state directory
+        shell: bash
+        run: |
+          if [ "${{ vars.DEALSCOUT_RUNTIME }}" = "aws" ]; then
+            if [ -z "${{ vars.DEALSCOUT_STATE_BUCKET }}" ]; then
+              echo "::error::Set repository variable DEALSCOUT_STATE_BUCKET (stack output StateBucketName)."
+              exit 1
+            fi
+            state_dir="$RUNNER_TEMP/dealscout-state"
+            mkdir -p "$state_dir"
+            aws s3 sync "s3://${{ vars.DEALSCOUT_STATE_BUCKET }}/state/" "$state_dir/" --only-show-errors
+            echo "DEALSCOUT_STATE_DIR=$state_dir" >> "$GITHUB_ENV"
+          else
+            echo "DEALSCOUT_STATE_DIR=storage/state" >> "$GITHUB_ENV"
+          fi
+
+      - name: Report
+        id: report
+        shell: bash
+        run: |
+          set +e
+          python -m app.control.controller \
+            --state-dir "$DEALSCOUT_STATE_DIR" \
+            report --markdown --out "$RUNNER_TEMP/control_report.json" \
+            > "$RUNNER_TEMP/report.md"
+          status=$?
+          cat "$RUNNER_TEMP/report.md" >> "$GITHUB_STEP_SUMMARY"
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Fail scheduled run on critical health
+        if: github.event_name == 'schedule' && steps.report.outputs.status != '0'
+        run: |
+          echo "::error::DealScout health is critical (report exit ${{ steps.report.outputs.status }})"
+          exit 1
+
+      - name: Propose thresholds
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.action == 'propose'
+        shell: bash
+        run: |
+          python -m app.control.controller \
+            --state-dir "$DEALSCOUT_STATE_DIR" \
+            propose \
+            --out storage/state/control_state.json \
+            --markdown-out "$RUNNER_TEMP/proposal.md" \
+            --actor "github-actions[bot]"
+          cat "$RUNNER_TEMP/proposal.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open proposal pull request
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.action == 'propose'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -z "$(git status --porcelain -- storage/state/control_state.json)" ]; then
+            echo "No threshold change proposed; no pull request."
+            exit 0
+          fi
+          branch="control/proposal-$(date -u +%Y%m%d-%H%M%S)"
+          git config user.name "dealscout-control[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add storage/state/control_state.json
+          git commit -m "chore(control): propose intelligence thresholds [skip ci] [skip vercel] [vercel skip]"
+          git push origin "$branch"
+          gh pr create \
+            --base main \
+            --head "$branch" \
+            --title "chore(control): intelligence threshold update" \
+            --body-file "$RUNNER_TEMP/proposal.md"
+
+      - name: Apply thresholds
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.action == 'apply'
+        shell: bash
+        run: |
+          python -m app.control.controller \
+            --state-dir "$DEALSCOUT_STATE_DIR" \
+            apply \
+            --out storage/state/control_state.json \
+            --actor "github-actions[bot]"
+          if [ -z "$(git status --porcelain -- storage/state/control_state.json)" ]; then
+            echo "No threshold change applied."
+            exit 0
+          fi
+          git config user.name "dealscout-control[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add storage/state/control_state.json
+          git commit -m "chore(control): apply intelligence thresholds [skip ci] [skip vercel] [vercel skip]"
+          git pull --rebase origin main
+          git push origin HEAD:main

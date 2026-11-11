@@ -38,6 +38,8 @@ An autonomous, end-to-end deal intelligence, normalization, and multi-channel pu
 * **Same-Channel Re-posts**: Aligned `same_channel_min_cooldown` to allow deal bumps, reminders, and price drops from monitored channels after 30 minutes, preventing our bot from skipping hot trending deals (like the `Realme C100D`).
 * **Anti-Flood Protection**: Retains short 5–15 minute deduplication to prevent posting identical deals simultaneously if multiple competitor channels post at the exact same minute.
 
+> ⚠️ **Correction (11 Nov 2026):** this section describes intent, not the configured value. `.env` currently sets `DUPLICATE_COOLDOWN_HOURS=24`, and CI runs the `settings.py` default of **4 hours** because `.env` is not committed. See `CONTEXT.md` §7 before tuning this again.
+
 ### 4. Arabic Title & Text Formatting Sanitization
 * **Truncated Title Fix**: Added `_clean_title_boundary` to remove dangling truncated words (e.g. `والأل` at line endings) caused by arbitrary character cuts.
 * **Boundary Cleaners**: Strips orphan punctuation, dangling prepositions (`لـ`, `في`, `من`), and isolated emoji lines.
@@ -51,6 +53,25 @@ An autonomous, end-to-end deal intelligence, normalization, and multi-channel pu
 * **Zero DM Leaks**: Removed any debug inspection scripts forwarding test channel messages to the user's private Telegram bot chat (`ADMIN_USER_ID`).
 * **Safe State Management**: State persistence in `storage/state/published_state.json` accurately logs every channel message ID and prevents duplicate processing across workflow runs.
 
+### 7. Deterministic Deal Intelligence (no LLM)
+* **No model provider, no network call, no inference service.** Scoring is a pure function of the candidate's features plus a small bounded JSON model (`storage/state/intelligence_model.json`).
+* **Nine signals** feed a 0–100 logistic score: freshness, price edge (vs. last price and the product's own price history), learned source-channel yield, learned category value, title quality, incentive (coupon / coins), novelty vs. 72h of published titles, saturation pressure (posts in the last 6h) and restock / price-drop bonuses.
+* **Explainable by construction.** Every decision logs a signed reason list, e.g. `score=73.2 verdict=publish | freshness +1.24 | price_edge +0.65 ($249.00 -> $199.00 (+20%)) | flow_pressure -0.09`.
+* **Three modes** via `INTELLIGENCE_MODE`: `off`, `shadow` (default — score, log and learn but always publish) and `enforce` (block only `skip`; `hold` publishes by default through `INTELLIGENCE_HOLD_ACTION`).
+* **Fail-open.** Any scoring error logs a warning and lets the deal through; the intelligence layer can never stop publishing.
+* **Placement:** after all four dedup layers and before the image fetch, so it cannot interfere with deduplication or retries.
+
+### 8. Optional AWS Runtime (built, not deployed)
+* `infra/aws/` contains a CloudFormation stack (private versioned encrypted S3 state bucket, container Lambda with reserved concurrency 1, EventBridge Scheduler, CloudWatch error/throttle alarms + SNS), a Dockerfile, and a Lambda handler that syncs state down, runs the **same** publisher scripts, then syncs state up.
+* **State download is fail-closed:** if S3 is unreachable the run aborts instead of publishing without dedup memory.
+* Deploys are manual and dry-run by default; nothing is created until `-ConfirmDeploy` / `--confirm`.
+* Repository variable `DEALSCOUT_RUNTIME=aws` disables the GitHub cron schedule once AWS is healthy; manual dispatch still works as a rollback path.
+
+### 9. Closed-Loop Control (GitHub Actions)
+* `app/control/controller.py` (stdlib only) reads production state and the learned model, reports health, and proposes **bounded** threshold changes with explicit reasons.
+* `control.yml` runs a read-only health report every 6 hours; manual `report` / `propose` (opens a PR) / `apply` (commits `control_state.json`) actions are available.
+* Changes are deliberately slow: ±4 points per run, `publish ∈ [45, 80]`, `skip ∈ [20, 55]`, minimum 8-point gap. A bad proposal cannot disable publishing or deduplication.
+
 ---
 
 ## 🏗 Architecture & Pipeline
@@ -60,10 +81,16 @@ Monitored Channels (Telegram)
 [aniscoupons, zedstoreonline, bnddeals, ecksdeal, lodydeals]
                          │
                          ▼ (Every 5 minutes via GitHub Actions)
-          Telethon / Web Scraper Collector
+          Public Web-Preview Scraper
+   (t.me/s/<channel> + ?embed=1 fallback; no Telethon, no user session)
                          │
                          ▼
-        State Tracker & 30-min Anti-Spam Debounce
+        State Tracker & 4-Layer Deduplication
+   (post keys, product ids, titles, cooldown + high-water marks)
+                         │
+                         ▼
+    Deterministic Deal Intelligence Gate (step 6.5)
+ (score 0–100 + reasons; off | shadow | enforce, fail-open)
                          │
                          ▼
        AliExpress Product & URL Canonicalization
@@ -133,6 +160,31 @@ The automation runs 24/7 on GitHub Actions with zero server maintenance costs:
 2. **`tajmi3at.yml`**:
    - Set to manual trigger only. Publishes multi-deal roundups and coupon compilations on demand.
 
+3. **`control.yml`** (Phase 3 closed loop):
+   - Read-only health report every 6 hours (posts/24h, last post age, sweep age, learned source yield, skip rate).
+   - Manual `report`, `propose` (opens a pull request) and `apply` (commits `storage/state/control_state.json`).
+   - Works in AWS mode: set `DEALSCOUT_RUNTIME=aws` + `DEALSCOUT_STATE_BUCKET` and the workflow syncs S3 state into a temp directory instead of reading git.
+
+4. **`deploy_aws.yml`** (Phase 2, optional):
+   - Manual only, OIDC, requires typing `DEPLOY`; builds the Lambda image and updates the CloudFormation stack in `eu-north-1`.
+
+### Intelligence configuration
+
+```ini
+# Deterministic scorer — no LLM, no network
+INTELLIGENCE_MODE="shadow"          # off | shadow | enforce
+INTELLIGENCE_HOLD_ACTION="publish"  # enforce: what to do with mid-band "hold" deals
+```
+
+Local control-loop commands (no dependencies beyond the stdlib):
+
+```bash
+python -m app.control.controller report --markdown
+python -m app.control.controller propose --json
+python -m app.control.controller apply --dry-run
+python -m app.control.controller apply --actor "$USER"
+```
+
 ---
 
 ## 🧪 Testing & Verification
@@ -146,9 +198,14 @@ python -m pytest tests/test_deal_formatting_and_france.py -v
 # Run duplicate detection and cooldown tests
 python -m pytest tests/test_duplicates.py -v
 
-# Run the complete test suite (224+ tests)
+# Run the complete test suite (285 tests, fully offline, ~37s)
 python -m pytest tests/ -v
+
+# Static gate: fails on any undefined name in app/, api/, scripts/, infra/
+python -m pytest tests/test_undefined_names.py -v
 ```
+
+> Every commit touching `app/`, `api/`, `scripts/` or `infra/` must pass `tests/test_undefined_names.py` and `tests/test_publish_smoke.py` **before** it is pushed — see `.agents/rules/publish_safety.md` for why.
 
 ---
 

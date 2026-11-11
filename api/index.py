@@ -10,12 +10,16 @@ Features:
 import os
 import re
 import time
+import json
+import logging
+from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from typing import Optional, Dict, Any, List
 
+logger = logging.getLogger(__name__)
+
 try:
     from dotenv import load_dotenv
-    from pathlib import Path
     load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 except Exception:
     pass
@@ -1424,6 +1428,8 @@ async def api_reformat_deal(request: Request):
 @app.post("/api/publish-deal")
 async def api_publish_deal(request: Request):
     """Publish reformatted deal post directly to target channel (@DzAliexpress0 or @francedealsdz)."""
+    from app.config.settings import settings
+
     if not is_admin_authenticated(request):
         return JSONResponse({"ok": False, "error": "غير مصرح: يرجى تسجيل الدخول كأدمن أولاً"}, status_code=401)
     try:

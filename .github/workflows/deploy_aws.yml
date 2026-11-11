@@ -1,0 +1,98 @@
+name: Deploy AWS Runtime
+
+# Manual, explicit, and gated by typing DEPLOY. Nothing runs on a schedule.
+#
+# One-time setup:
+#   1. Create an IAM OIDC provider for token.actions.githubusercontent.com.
+#   2. Create a role that trusts this repository and can push to ECR,
+#      deploy CloudFormation and pass the Lambda role.
+#   3. Add repository variable AWS_DEPLOY_ROLE_ARN = arn:aws:iam::...:role/...
+#
+# All resources stay in eu-north-1 (the project's assigned Region).
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "Type DEPLOY to build and create/update the stack"
+        required: true
+        default: ""
+        type: string
+      schedule:
+        description: "EventBridge Scheduler expression"
+        required: false
+        default: "rate(5 minutes)"
+        type: string
+      secret_arn:
+        description: "Secrets Manager ARN with bot env vars (optional)"
+        required: false
+        default: ""
+        type: string
+      alarm_email:
+        description: "Email for failure alarms (optional)"
+        required: false
+        default: ""
+        type: string
+      intelligence_mode:
+        description: "Deterministic intelligence mode"
+        required: true
+        default: "shadow"
+        type: choice
+        options: [shadow, enforce, off]
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: deploy-aws-runtime
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.event.inputs.confirm == 'DEPLOY'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check OIDC role
+        run: |
+          if [ -z "${{ vars.AWS_DEPLOY_ROLE_ARN }}" ]; then
+            echo "::error::Repository variable AWS_DEPLOY_ROLE_ARN is not set."
+            exit 1
+          fi
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: eu-north-1
+
+      - name: Build and deploy
+        env:
+          AWS_PROFILE: default
+          AWS_REGION: eu-north-1
+          IMAGE_TAG: ${{ github.sha }}
+          SCHEDULE_EXPRESSION: ${{ inputs.schedule }}
+          SECRET_ARN: ${{ inputs.secret_arn }}
+          ALARM_EMAIL: ${{ inputs.alarm_email }}
+          INTELLIGENCE_MODE: ${{ inputs.intelligence_mode }}
+        run: |
+          chmod +x infra/aws/deploy.sh
+          ./infra/aws/deploy.sh --confirm
+
+      - name: Deployment summary
+        if: always()
+        run: |
+          {
+            echo "### AWS runtime deployment"
+            echo ""
+            echo "| Field | Value |"
+            echo "|---|---|"
+            echo "| Region | eu-north-1 |"
+            echo "| Image tag | ${{ github.sha }} |"
+            echo "| Schedule | ${{ inputs.schedule }} |"
+            echo "| Intelligence mode | ${{ inputs.intelligence_mode }} |"
+            echo "| Status | ${{ job.status }} |"
+          } >> "$GITHUB_STEP_SUMMARY"

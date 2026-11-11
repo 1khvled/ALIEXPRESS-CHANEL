@@ -2,6 +2,7 @@ import asyncio
 import os
 import re
 import sys
+import json
 from pathlib import Path
 from typing import Optional, Dict, Any, List
 
@@ -35,6 +36,7 @@ from app.ai.generator import caption_generator, format_lodydeals_caption_1to1, f
 from app.media.downloader import media_downloader
 from app.media.renderer import media_renderer
 from app.publisher.publisher import telegram_publisher
+from app.intelligence.gate import evaluate_deal_gate, record_published_outcome
 from app.utils.logger import logger
 # Primary Algerian deal channels monitored with strict 1:1 format & zero duplicate cross-posting
 CHANNELS = [
@@ -438,6 +440,7 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
     print(f"[PACER TRAFFIC STATUS] Promo/Warmup Boost: {'ON (Up to 8 deals/ch, 25 max)' if is_warmup_or_event else ('Peak Boost ON' if is_peak else 'Paced')} | Max run limit: {MAX_DEALS_PER_RUN}")
 
     published_deals = []
+    deals_published_this_run = 0
     seen_products = set()
     seen_titles = []
 
@@ -827,6 +830,23 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                         record_post_handled(ch, msg_id)
                         continue
 
+                    # 6.5. Deterministic intelligence gate (no LLM, no network).
+                    # Shadow mode logs only; enforce mode can suppress low-value deals.
+                    intel_result = evaluate_deal_gate(
+                        extracted=extracted,
+                        channel=ch,
+                        raw_text=raw_text,
+                        message_dt=msg_dt,
+                        is_restock=is_restock,
+                        is_price_drop=is_price_drop,
+                    )
+                    if not intel_result.allowed:
+                        print(f"  [INTEL SKIP] {intel_result.log_line()}")
+                        max_processed_id = max(max_processed_id, msg_id)
+                        record_monitored_channel_last_id(ch, msg_id)
+                        record_post_handled(ch, msg_id)
+                        continue
+
                     if extracted.product_id:
                         seen_products.add(extracted.product_id)
                     if extracted.title:
@@ -1123,6 +1143,8 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                                 "price": f"${deal.current_price}" if deal.current_price else "Coupons",
                                 "link": aff_link
                             })
+                            # Attach the real outcome to the intelligence model.
+                            record_published_outcome(intel_result)
                             try:
                                 print(f"\n  [PUBLISHED #{len(published_deals)} from @{ch}]")
                                 print("  " + "-" * 50)

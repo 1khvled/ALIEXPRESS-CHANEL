@@ -21,6 +21,7 @@ import httpx
 from aliexpress_api import AliexpressApi, models
 
 from app.ai.generator import DealCaptionGenerator
+from app.utils.logger import logger
 from api.coin_bot import (
     resolve_any_ali_link,
     generate_coin_discount_response,

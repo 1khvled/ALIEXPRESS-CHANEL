@@ -52,6 +52,12 @@ class Settings(BaseSettings):
     NEVER_REPEAT_DUPLICATES: bool = False
     EUR_USD_RATE: float = 0.92
 
+    # Deterministic deal intelligence (no LLM, no network, no external service)
+    INTELLIGENCE_MODE: Literal["off", "shadow", "enforce"] = "shadow"
+    INTELLIGENCE_HOLD_ACTION: Literal["publish", "skip"] = "publish"
+    INTELLIGENCE_MODEL_PATH: Optional[str] = None
+    INTELLIGENCE_CONTROL_PATH: Optional[str] = None
+
     # AliExpress Affiliate
     ALIEXPRESS_AFFILIATE_PROVIDER: str = "portals"
     ALIEXPRESS_AFFILIATE_TRACKING_ID: Optional[str] = "dzkhvled16"
@@ -99,6 +105,8 @@ class Settings(BaseSettings):
         "ALIEXPRESS_AFFILIATE_APP_SECRET",
         "ALIEXPRESS_CUSTOM_AFFILIATE_PREFIX",
         "OPENAI_API_KEY",
+        "INTELLIGENCE_MODEL_PATH",
+        "INTELLIGENCE_CONTROL_PATH",
         "FACEBOOK_PAGE_ID",
         "FACEBOOK_PAGE_ACCESS_TOKEN",
         "FACEBOOK_APP_ID",

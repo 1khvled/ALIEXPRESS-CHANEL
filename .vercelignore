@@ -27,6 +27,11 @@ storage/state/published_state.json
 storage/state/facebook_published_state.json
 storage/state/france_published_state.json
 storage/state/group_bulletins_state.json
+storage/state/intelligence_model.json
+storage/state/control_state.json
+storage/state/control_report.json
+storage/state/control_proposal.json
+infra/
 deals.db
 *.db
 *.db-journal

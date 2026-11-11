@@ -42,6 +42,8 @@ jobs:
       - name: Byte-compile critical paths
         run: |
           python -m py_compile app/aliexpress/urls.py app/aliexpress/parser.py
+          python -m py_compile app/intelligence/scoring.py app/intelligence/gate.py
+          python -m py_compile app/control/controller.py infra/aws/lambda_handler.py
           python -m py_compile scripts/post_recent_deals.py scripts/post_france_deals.py
 
       - name: Import smoke (catches NameError before cron does)
