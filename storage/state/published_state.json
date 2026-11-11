@@ -734,7 +734,8 @@
     "1005012474727998",
     "1005006807619368",
     "1005010653559191",
-    "COUPON_CLAIM_zedstoreonline_39827"
+    "COUPON_CLAIM_zedstoreonline_39827",
+    "1005012197291105"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1484,7 +1485,8 @@
     "1005012474727998": 1794320674.833981,
     "1005006807619368": 1794344038.7678037,
     "1005010653559191": 1794349536.4429784,
-    "COUPON_CLAIM_zedstoreonline_39827": 1794363974.314961
+    "COUPON_CLAIM_zedstoreonline_39827": 1794363974.314961,
+    "1005012197291105": 1794390920.4038398
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2434,7 +2436,8 @@
     "حجز وتجدد كوبونات 11.11",
     "Huawei Pura 90s Pro Max 12/256GB",
     "OnePlus 13",
-    "Oppo Find X10 Pro Max 12/256"
+    "Oppo Find X10 Pro Max 12/256",
+    "OnePlus ACE 6 Ultra 12/256"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3389,10 +3392,10 @@
     "حجز وتجدد كوبونات 11.11": 1794363974.314961,
     "Huawei Pura 90s Pro Max 12/256GB": 1794390200.6061625,
     "OnePlus 13": 1794390398.1860356,
-    "Oppo Find X10 Pro Max 12/256": 1794390785.626018
+    "Oppo Find X10 Pro Max 12/256": 1794390785.626018,
+    "OnePlus ACE 6 Ultra 12/256": 1794390920.4038398
   },
   "published_post_keys": [
-    "lodydeals:45464",
     "aniscoupons:33212",
     "zedstoreonline:38891",
     "zedstoreonline:38816",
@@ -4391,19 +4394,20 @@
     "aniscoupons:34485",
     "lodydeals:46347",
     "aniscoupons:34486",
-    "bnddeals:51275"
+    "bnddeals:51275",
+    "zedstoreonline:39862"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794390785.626018,
+  "last_run_time": 1794390920.4038398,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
       "last_check_time": 1794350628.34148
     },
     "lodydeals": {
-      "last_message_id": 46347,
-      "last_check_time": 1794390759.782356
+      "last_message_id": 46348,
+      "last_check_time": 1794390911.8014095
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4422,16 +4426,16 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39861,
-      "last_check_time": 1794390770.14856
+      "last_message_id": 39862,
+      "last_check_time": 1794390922.4641263
     },
     "aniscoupons": {
-      "last_message_id": 34486,
-      "last_check_time": 1794390779.02848
+      "last_message_id": 34487,
+      "last_check_time": 1794390927.0345526
     },
     "bnddeals": {
-      "last_message_id": 51275,
-      "last_check_time": 1794390787.6756587
+      "last_message_id": 51276,
+      "last_check_time": 1794390933.0486805
     }
   },
   "published_product_prices": {
@@ -5064,7 +5068,8 @@
     "1005009104334975": 10.6,
     "1005012474727998": 14.9,
     "1005006807619368": 6.55,
-    "1005010653559191": 10.5
+    "1005010653559191": 10.5,
+    "1005012197291105": 438.2
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -19879,6 +19884,16 @@
       "price": 883.6,
       "timestamp": 1794390785.626018,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39862": {
+      "channel_msg_id": 2292,
+      "product_id": "1005012197291105",
+      "title": "OnePlus ACE 6 Ultra 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39862,
+      "price": 438.2,
+      "timestamp": 1794390920.4038398,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19887,17 +19902,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794390787.72148,
+    "last_deal_post_time": 1794390933.104405,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794390791.4456668,
+    "last_sweep_time": 1794390936.4235296,
     "last_sweep_times": {
-      "algeria": 1794390787.698802,
-      "france": 1794390791.4456668
+      "algeria": 1794390933.0766282,
+      "france": 1794390936.4235296
     },
     "last_deal_post_times": {
-      "algeria": 1794390787.72148
+      "algeria": 1794390933.104405
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20647,7 +20662,8 @@
     "1005012474727998": "zedstoreonline",
     "1005006807619368": "aniscoupons",
     "1005010653559191": "zedstoreonline",
-    "COUPON_CLAIM_zedstoreonline_39827": "zedstoreonline"
+    "COUPON_CLAIM_zedstoreonline_39827": "zedstoreonline",
+    "1005012197291105": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -21604,7 +21620,8 @@
     "حجز وتجدد كوبونات 11.11": "zedstoreonline",
     "Huawei Pura 90s Pro Max 12/256GB": "lodydeals",
     "OnePlus 13": "aniscoupons",
-    "Oppo Find X10 Pro Max 12/256": "bnddeals"
+    "Oppo Find X10 Pro Max 12/256": "bnddeals",
+    "OnePlus ACE 6 Ultra 12/256": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22400,9 +22417,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8403",
-    "zedstoreonline:38919",
-    "couponsglobal:48874",
     "megaphonna:8631",
     "megaphonna:8389",
     "ecksdeal:5897",
@@ -23399,7 +23413,10 @@
     "bnddeals:51273",
     "bnddeals:51274",
     "zedstoreonline:39860",
-    "zedstoreonline:39861"
+    "zedstoreonline:39861",
+    "lodydeals:46348",
+    "aniscoupons:34487",
+    "bnddeals:51276"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
