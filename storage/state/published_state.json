@@ -1408,7 +1408,7 @@
     "1005012691642623": 1794074230.5173922,
     "1005010266233059": 1793977272.9654846,
     "1005007469003552": 1794130707.0577464,
-    "1005010041181003": 1794397542.339012,
+    "1005010041181003": 1794411999.7818277,
     "1005010265542567": 1794131426.95932,
     "1005003156756854": 1794307971.8462343,
     "1005010142208108": 1794302223.66585,
@@ -2450,7 +2450,8 @@
     "Electronic Body Scale",
     "Kootiion X15 M.2 SSD NVMe 256GB",
     "SoundPEATS C30 Hybrid ANC -52dB",
-    "Somnambulist SSD 120GB"
+    "Somnambulist SSD 120GB",
+    "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3415,10 +3416,10 @@
     "Electronic Body Scale": 1794400568.4819298,
     "Kootiion X15 M.2 SSD NVMe 256GB": 1794401855.0861495,
     "SoundPEATS C30 Hybrid ANC -52dB": 1794407013.7230165,
-    "Somnambulist SSD 120GB": 1794407765.5158777
+    "Somnambulist SSD 120GB": 1794407765.5158777,
+    "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794411999.7818277
   },
   "published_post_keys": [
-    "lodydeals:45487",
     "test_channel:1792073963",
     "aniscoupons:33304",
     "lodydeals:45460",
@@ -4417,19 +4418,20 @@
     "lodydeals:46357",
     "aniscoupons:34511",
     "zedstoreonline:39885",
-    "aniscoupons:34512"
+    "aniscoupons:34512",
+    "zedstoreonline:39887"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794408682.8518124,
+  "last_run_time": 1794411999.7818277,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
       "last_check_time": 1794407600.0378215
     },
     "lodydeals": {
-      "last_message_id": 46365,
-      "last_check_time": 1794411807.4282186
+      "last_message_id": 46366,
+      "last_check_time": 1794411994.0107932
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4448,8 +4450,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39886,
-      "last_check_time": 1794411625.0780046
+      "last_message_id": 39887,
+      "last_check_time": 1794412001.8332038
     },
     "aniscoupons": {
       "last_message_id": 34514,
@@ -20128,6 +20130,16 @@
       "price": 41.4,
       "timestamp": 1794408682.8518124,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39887": {
+      "channel_msg_id": 2315,
+      "product_id": "1005010041181003",
+      "title": "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39887,
+      "price": 167.8,
+      "timestamp": 1794411999.7818277,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20136,17 +20148,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794408685.769436,
+    "last_deal_post_time": 1794412003.2982988,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794411813.7091095,
+    "last_sweep_time": 1794412006.3888328,
     "last_sweep_times": {
-      "algeria": 1794411811.5038142,
-      "france": 1794411813.7091095
+      "algeria": 1794412003.276482,
+      "france": 1794412006.3888328
     },
     "last_deal_post_times": {
-      "algeria": 1794408685.769436
+      "algeria": 1794412003.2982988
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20817,7 +20829,7 @@
     "1005012691642623": "zedstoreonline",
     "1005010266233059": "zedstoreonline",
     "1005007469003552": "aniscoupons",
-    "1005010041181003": "aniscoupons",
+    "1005010041181003": "zedstoreonline",
     "1005010265542567": "aniscoupons",
     "1005003156756854": "zedstoreonline",
     "1005010142208108": "lodydeals",
@@ -21866,7 +21878,8 @@
     "Electronic Body Scale": "aniscoupons",
     "Kootiion X15 M.2 SSD NVMe 256GB": "aniscoupons",
     "SoundPEATS C30 Hybrid ANC -52dB": "lodydeals",
-    "Somnambulist SSD 120GB": "lodydeals"
+    "Somnambulist SSD 120GB": "lodydeals",
+    "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
