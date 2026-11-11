@@ -1407,7 +1407,7 @@
     "9998887107": 1793967108.0014687,
     "9998887678": 1793967678.8184059,
     "9998887703": 1793967703.2348685,
-    "1005008708333999": 1794331708.056503,
+    "1005008708333999": 1794422698.8993735,
     "1005012254132930": 1793970449.9003735,
     "1005013028124905": 1793971934.3600886,
     "1005012691642623": 1794074230.5173922,
@@ -3317,7 +3317,7 @@
     "Zeblaze GTS 3 Pro AMOLED": 1794091985.0146983,
     "شاحن سيارة ORICO بقوة 45W": 1794348808.2825344,
     "Hollyland LARK M2 DUO 2-Person": 1794304640.3506072,
-    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794331708.056503,
+    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794422698.8993735,
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627,
     "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794134168.8193681,
     "Essager 30W Car Charger": 1794393500.1320646,
@@ -3450,7 +3450,6 @@
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551
   },
   "published_post_keys": [
-    "aniscoupons:33313",
     "aniscoupons:32778",
     "lodydeals:45778",
     "test_channel:1792284838",
@@ -4449,19 +4448,20 @@
     "zedstoreonline:39905",
     "aniscoupons:34544",
     "aniscoupons:34545",
-    "aniscoupons:34548"
+    "aniscoupons:34548",
+    "aniscoupons:34550"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794422151.260992,
+  "last_run_time": 1794422698.8993735,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
       "last_check_time": 1794419029.2500024
     },
     "lodydeals": {
-      "last_message_id": 46369,
-      "last_check_time": 1794421776.4552846
+      "last_message_id": 46370,
+      "last_check_time": 1794422687.9197745
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4480,12 +4480,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39908,
-      "last_check_time": 1794421963.516301
+      "last_message_id": 39909,
+      "last_check_time": 1794422694.6816857
     },
     "aniscoupons": {
-      "last_message_id": 34549,
-      "last_check_time": 1794422446.0823052
+      "last_message_id": 34550,
+      "last_check_time": 1794422700.9565632
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20555,6 +20555,16 @@
       "price": 365.8,
       "timestamp": 1794422151.260992,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34550": {
+      "channel_msg_id": 2356,
+      "product_id": "1005008708333999",
+      "title": "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI",
+      "channel": "aniscoupons",
+      "source_msg_id": 34550,
+      "price": 136.7,
+      "timestamp": 1794422698.8993735,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20563,17 +20573,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794422154.330443,
+    "last_deal_post_time": 1794422701.7911384,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794422449.475059,
+    "last_sweep_time": 1794422704.3869417,
     "last_sweep_times": {
-      "algeria": 1794422446.8450747,
-      "france": 1794422449.475059
+      "algeria": 1794422701.7664883,
+      "france": 1794422704.3869417
     },
     "last_deal_post_times": {
-      "algeria": 1794422154.330443
+      "algeria": 1794422701.7911384
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23105,8 +23115,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "couponsglobal:48871",
-    "aniscoupons:33154",
     "lodydeals:45899",
     "bnddeals:50862",
     "megaphonna:8456",
@@ -24104,7 +24112,9 @@
     "zedstoreonline:39907",
     "zedstoreonline:39908",
     "aniscoupons:34547",
-    "aniscoupons:34549"
+    "aniscoupons:34549",
+    "lodydeals:46370",
+    "zedstoreonline:39909"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
