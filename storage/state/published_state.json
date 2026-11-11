@@ -1451,7 +1451,7 @@
     "1005007038022940": 1794146648.256951,
     "1005007981362777": 1794146655.1062205,
     "1005007097302001": 1794146830.4272797,
-    "1005013361453762": 1794330790.3691356,
+    "1005013361453762": 1794408129.5060408,
     "1005013240296031": 1794216974.0881407,
     "1005012670472055": 1794164675.8426867,
     "1005013476568095": 1794169846.8168333,
@@ -3174,7 +3174,7 @@
     "Oppo Find X8s+": 1793613942.3770478,
     "Xiaoxin Pad Pro 13 (8/128)": 1794309088.1309376,
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S CPU 11.1\" 4K 144Hz LCD Display 1100": 1793613951.963987,
-    "Honor Pad V9 (8/256)": 1794330790.3691356,
+    "Honor Pad V9 (8/256)": 1794408129.5060408,
     "HONOR Pad X8b (LTE 6/128GB)": 1794136369.073103,
     "[Clearance] realme 14T 5G Smartphone NFC Dimensity 6300 5G Processor": 1793613966.8608465,
     "RYZEN 5 9600X": 1793613978.6202738,
@@ -3418,7 +3418,6 @@
     "Somnambulist SSD 120GB": 1794407765.5158777
   },
   "published_post_keys": [
-    "lodydeals:45405",
     "megaphonna:8663",
     "lodydeals:45447",
     "lodydeals:45487",
@@ -4417,11 +4416,12 @@
     "aniscoupons:34508",
     "aniscoupons:34509",
     "lodydeals:46354",
-    "lodydeals:46357"
+    "lodydeals:46357",
+    "aniscoupons:34511"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794407765.5158777,
+  "last_run_time": 1794408129.5060408,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4452,8 +4452,8 @@
       "last_check_time": 1794404808.880159
     },
     "aniscoupons": {
-      "last_message_id": 34510,
-      "last_check_time": 1794404625.5125434
+      "last_message_id": 34511,
+      "last_check_time": 1794408131.568261
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20098,6 +20098,16 @@
       "price": 29.21,
       "timestamp": 1794407765.5158777,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34511": {
+      "channel_msg_id": 2312,
+      "product_id": "1005013361453762",
+      "title": "Honor Pad V9 (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34511,
+      "price": 277.36,
+      "timestamp": 1794408129.5060408,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20106,17 +20116,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794407771.6349607,
+    "last_deal_post_time": 1794408132.196787,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794407946.6762495,
+    "last_sweep_time": 1794408134.606532,
     "last_sweep_times": {
-      "algeria": 1794407944.3085816,
-      "france": 1794407946.6762495
+      "algeria": 1794408132.16808,
+      "france": 1794408134.606532
     },
     "last_deal_post_times": {
-      "algeria": 1794407771.6349607
+      "algeria": 1794408132.196787
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
