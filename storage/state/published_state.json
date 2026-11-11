@@ -1080,7 +1080,7 @@
     "1005013039644752": 1794159573.4625287,
     "1005013479436053": 1793380394.5736995,
     "1005012431631514": 1793270716.9132679,
-    "1005009338640941": 1793613430.959157,
+    "1005009338640941": 1794418660.6617887,
     "1005012402919487": 1793542345.0399988,
     "9998883962": 1793273962.6790612,
     "1005012005176923": 1793543639.3190484,
@@ -1265,7 +1265,7 @@
     "1005013053122560": 1794223202.4757502,
     "1005012322822595": 1793543961.1645148,
     "1005009662812027": 1794302238.7307503,
-    "1005005975560350": 1794312406.8406456,
+    "1005005975560350": 1794418654.7538266,
     "1005012922578845": 1793544001.8628821,
     "1005011752891197": 1793613465.8475375,
     "1005008689880751": 1793544016.7486506,
@@ -2459,7 +2459,9 @@
     "Realme P4 Power 8/256GB",
     "ASROCK X570M PRO4 MOTHERBOARD",
     "EASYSMX X05 PRO Controller",
-    "ONEPLUS 16 12/256GB"
+    "ONEPLUS 16 12/256GB",
+    "Fifine H9 USB Gaming Headset",
+    "Honor 600 5G Global 8/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3429,11 +3431,11 @@
     "Realme P4 Power 8/256GB": 1794414407.5368557,
     "ASROCK X570M PRO4 MOTHERBOARD": 1794414971.7181702,
     "EASYSMX X05 PRO Controller": 1794417558.6712675,
-    "ONEPLUS 16 12/256GB": 1794418466.1920443
+    "ONEPLUS 16 12/256GB": 1794418466.1920443,
+    "Fifine H9 USB Gaming Headset": 1794418654.7538266,
+    "Honor 600 5G Global 8/256GB": 1794418660.6617887
   },
   "published_post_keys": [
-    "pcgamingpart:7984",
-    "lodydeals:45489",
     "aniscoupons:32754",
     "bnddeals:50939",
     "pcgamingpart:7987",
@@ -4431,11 +4433,13 @@
     "aniscoupons:34532",
     "aniscoupons:34534",
     "zedstoreonline:39898",
-    "aniscoupons:34536"
+    "aniscoupons:34536",
+    "zedstoreonline:39901",
+    "aniscoupons:34537"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794418466.1920443,
+  "last_run_time": 1794418660.6617887,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4462,12 +4466,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39898,
-      "last_check_time": 1794418102.92748
+      "last_message_id": 39901,
+      "last_check_time": 1794418656.7962947
     },
     "aniscoupons": {
-      "last_message_id": 34536,
-      "last_check_time": 1794418468.2541707
+      "last_message_id": 34537,
+      "last_check_time": 1794418662.7349436
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4905,7 +4909,7 @@
     "1005012322822595": 266.19,
     "1005012524603100": 283.59,
     "1005009662812027": 76.35,
-    "1005005975560350": 36.5,
+    "1005005975560350": 35.9,
     "1005011752891197": 119.3,
     "1005008689880751": 76.5,
     "1005006861815245": 9.44,
@@ -20374,6 +20378,26 @@
       "price": 758.3,
       "timestamp": 1794418466.1920443,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39901": {
+      "channel_msg_id": 2338,
+      "product_id": "1005005975560350",
+      "title": "Fifine H9 USB Gaming Headset",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39901,
+      "price": 35.9,
+      "timestamp": 1794418654.7538266,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34537": {
+      "channel_msg_id": 2339,
+      "product_id": "1005009338640941",
+      "title": "Honor 600 5G Global 8/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34537,
+      "price": 380.4,
+      "timestamp": 1794418660.6617887,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20382,17 +20406,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794418469.1258788,
+    "last_deal_post_time": 1794418663.439326,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794418471.482058,
+    "last_sweep_time": 1794418666.1654997,
     "last_sweep_times": {
-      "algeria": 1794418469.0978432,
-      "france": 1794418471.482058
+      "algeria": 1794418663.4219465,
+      "france": 1794418666.1654997
     },
     "last_deal_post_times": {
-      "algeria": 1794418469.1258788
+      "algeria": 1794418663.439326
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20744,7 +20768,7 @@
     "1005012472631754": "zedstoreonline",
     "1005013479436053": "aniscoupons",
     "1005012431631514": "pcgamingpart",
-    "1005009338640941": "zedstoreonline",
+    "1005009338640941": "aniscoupons",
     "1005013137304827": "aniscoupons",
     "1005012402919487": "lodydeals",
     "9998883962": "test_channel",
@@ -20932,7 +20956,7 @@
     "1005012322822595": "lodydeals",
     "1005012524603100": "aniscoupons",
     "1005009662812027": "lodydeals",
-    "1005005975560350": "aniscoupons",
+    "1005005975560350": "zedstoreonline",
     "1005011752891197": "zedstoreonline",
     "1005008689880751": "lodydeals",
     "1005006861815245": "ecksdeal",
@@ -22119,7 +22143,9 @@
     "Realme P4 Power 8/256GB": "aniscoupons",
     "ASROCK X570M PRO4 MOTHERBOARD": "aniscoupons",
     "EASYSMX X05 PRO Controller": "aniscoupons",
-    "ONEPLUS 16 12/256GB": "aniscoupons"
+    "ONEPLUS 16 12/256GB": "aniscoupons",
+    "Fifine H9 USB Gaming Headset": "zedstoreonline",
+    "Honor 600 5G Global 8/256GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22915,8 +22941,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "alidealsdz:142",
-    "couponsglobal:48873",
     "zedstoreonline:38673",
     "alidealsdz:146",
     "megaphonna:8746",
@@ -23914,7 +23938,9 @@
     "aniscoupons:34531",
     "aniscoupons:34533",
     "zedstoreonline:39897",
-    "aniscoupons:34535"
+    "aniscoupons:34535",
+    "zedstoreonline:39899",
+    "zedstoreonline:39900"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
