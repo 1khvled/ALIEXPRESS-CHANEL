@@ -786,7 +786,7 @@
     "1005006603602562": 1790941207.5310047,
     "1005010721042860": 1793656098.242545,
     "1005009517247552": 1790941221.8823678,
-    "1005012191191893": 1794346051.8080108,
+    "1005012191191893": 1794414780.2759852,
     "1005012968221708": 1793542591.509991,
     "9998883454": 1790943454.3504107,
     "9998883497": 1790943497.723828,
@@ -1317,7 +1317,7 @@
     "1005007010692093": 1793601389.0047116,
     "1005006994466968": 1793601744.1664062,
     "1005011927267564": 1793728844.5794795,
-    "1005008291023017": 1794388550.666115,
+    "1005008291023017": 1794414785.110352,
     "1005012947477238": 1793612016.5356846,
     "1005010121513376": 1794413855.8227875,
     "1005009064526142": 1793613380.753295,
@@ -3292,7 +3292,7 @@
     "AULA MINI60 HE PRO": 1794302223.66585,
     "Maono Wave T5 Wireless Mic": 1793987285.4130383,
     "SAMSUNG DDR3 8GB 1600v": 1793987289.8200357,
-    "Realme 15 Pro (12/256GB)": 1794388550.666115,
+    "Realme 15 Pro (12/256GB)": 1794414785.110352,
     "SOUNDPEATS C30 ANC Wireless Earphones": 1793994623.1444166,
     "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899,
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1794147198.6954062,
@@ -3336,7 +3336,7 @@
     "Lenovo LE257 Headphones": 1794137638.8201442,
     "Honor 600s CN (8/256)": 1794305200.722419,
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
-    "Blackview Mega 5": 1794346051.8080108,
+    "Blackview Mega 5": 1794414780.2759852,
     "Warvank X8 Wireless Gaming Mouse": 1794144806.2660766,
     "Xiaoxin Pad Pro 2025 (8/128GB)": 1794412182.3559208,
     "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": 1794145536.5317988,
@@ -3424,8 +3424,6 @@
     "Realme P4 Power 8/256GB": 1794414407.5368557
   },
   "published_post_keys": [
-    "ecksdeal:5890",
-    "bnddeals:50892",
     "lodydeals:45563",
     "bnddeals:50847",
     "test_channel:1792162334",
@@ -4423,11 +4421,13 @@
     "aniscoupons:34519",
     "aniscoupons:34520",
     "aniscoupons:34521",
-    "aniscoupons:34522"
+    "aniscoupons:34522",
+    "aniscoupons:34523",
+    "aniscoupons:34524"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794414407.5368557,
+  "last_run_time": 1794414785.110352,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4458,8 +4458,8 @@
       "last_check_time": 1794414223.9840207
     },
     "aniscoupons": {
-      "last_message_id": 34522,
-      "last_check_time": 1794414409.5881567
+      "last_message_id": 34524,
+      "last_check_time": 1794414787.1728945
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20235,6 +20235,26 @@
       "price": 265.11,
       "timestamp": 1794414407.5368557,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34523": {
+      "channel_msg_id": 2325,
+      "product_id": "1005012191191893",
+      "title": "Blackview Mega 5",
+      "channel": "aniscoupons",
+      "source_msg_id": 34523,
+      "price": 228.3,
+      "timestamp": 1794414780.2759852,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34524": {
+      "channel_msg_id": 2326,
+      "product_id": "1005008291023017",
+      "title": "Realme 15 Pro (12/256GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34524,
+      "price": 285.9,
+      "timestamp": 1794414785.110352,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20243,17 +20263,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794414410.3419847,
+    "last_deal_post_time": 1794414788.1498165,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794414598.87715,
+    "last_sweep_time": 1794414790.9309604,
     "last_sweep_times": {
-      "algeria": 1794414596.2440119,
-      "france": 1794414598.87715
+      "algeria": 1794414788.1205986,
+      "france": 1794414790.9309604
     },
     "last_deal_post_times": {
-      "algeria": 1794414410.3419847
+      "algeria": 1794414788.1498165
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
