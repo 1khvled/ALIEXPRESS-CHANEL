@@ -4410,8 +4410,8 @@
       "last_check_time": 1794350628.34148
     },
     "lodydeals": {
-      "last_message_id": 46349,
-      "last_check_time": 1794391657.0284772
+      "last_message_id": 46350,
+      "last_check_time": 1794392396.0582876
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4430,16 +4430,16 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39865,
-      "last_check_time": 1794391849.9922757
+      "last_message_id": 39867,
+      "last_check_time": 1794392406.2818313
     },
     "aniscoupons": {
-      "last_message_id": 34491,
-      "last_check_time": 1794391870.0433707
+      "last_message_id": 34493,
+      "last_check_time": 1794392414.8801882
     },
     "bnddeals": {
-      "last_message_id": 51277,
-      "last_check_time": 1794391123.9694963
+      "last_message_id": 51279,
+      "last_check_time": 1794392430.331939
     }
   },
   "published_product_prices": {
@@ -19941,10 +19941,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794392231.0869398,
+    "last_sweep_time": 1794392434.0497322,
     "last_sweep_times": {
-      "algeria": 1794392227.635219,
-      "france": 1794392231.0869398
+      "algeria": 1794392430.361226,
+      "france": 1794392434.0497322
     },
     "last_deal_post_times": {
       "algeria": 1794391880.170127
@@ -22454,13 +22454,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8682",
-    "aniscoupons:32966",
-    "bnddeals:50992",
-    "aniscoupons:32856",
-    "lodydeals:45787",
-    "lodydeals:45879",
-    "megaphonna:8531",
     "lodydeals:45830",
     "aniscoupons:33377",
     "pcgamingpart:8007",
@@ -23453,7 +23446,14 @@
     "lodydeals:46349",
     "zedstoreonline:39864",
     "zedstoreonline:39865",
-    "aniscoupons:34491"
+    "aniscoupons:34491",
+    "lodydeals:46350",
+    "zedstoreonline:39866",
+    "zedstoreonline:39867",
+    "aniscoupons:34492",
+    "aniscoupons:34493",
+    "bnddeals:51278",
+    "bnddeals:51279"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
