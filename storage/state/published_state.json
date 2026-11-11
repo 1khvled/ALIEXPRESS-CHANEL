@@ -1014,7 +1014,7 @@
     "9998882360": 1792162360.6633363,
     "9998882475": 1793282475.663889,
     "9998882568": 1792162568.078144,
-    "1005010369693975": 1794333726.3418753,
+    "1005010369693975": 1794389841.8756988,
     "1005006442452857": 1792166326.0335298,
     "9998886462": 1792166462.200491,
     "1005009948598802": 1793500786.1935658,
@@ -3373,7 +3373,7 @@
     "AULA WIN68 HE Gaming Mechanical Keyboard": 1794312953.1830955,
     "CMF Buds 2a ANC -42dB  السعر: 11.7": 1794312964.1163073,
     "MACHENIKE G1 Wireless Gaming Controller": 1794313510.6359115,
-    "HAYLOU Mori Pro": 1794314605.5631006,
+    "HAYLOU Mori Pro": 1794389841.8756988,
     "KOOTION SATA3 SSD 128GB": 1794315897.4341226,
     "Inphic YuanChuang Cyber Gaming Mouse": 1794320674.833981,
     "SIX PCIe 4.0 SSD (1TB) NVMe M2": 1794331533.1223195,
@@ -3386,7 +3386,6 @@
     "حجز وتجدد كوبونات 11.11": 1794363974.314961
   },
   "published_post_keys": [
-    "couponsglobal:48788",
     "pcgamingpart:8019",
     "lodydeals:45485",
     "lodydeals:45516",
@@ -4385,19 +4384,20 @@
     "lodydeals:46338",
     "aniscoupons:34478",
     "aniscoupons:34480",
-    "aniscoupons:34481"
+    "aniscoupons:34481",
+    "aniscoupons:34482"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794389464.8877077,
+  "last_run_time": 1794389841.8756988,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
       "last_check_time": 1794350628.34148
     },
     "lodydeals": {
-      "last_message_id": 46343,
-      "last_check_time": 1794388727.690413
+      "last_message_id": 46344,
+      "last_check_time": 1794389826.8596804
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4420,8 +4420,8 @@
       "last_check_time": 1794388730.8598742
     },
     "aniscoupons": {
-      "last_message_id": 34481,
-      "last_check_time": 1794389466.936079
+      "last_message_id": 34482,
+      "last_check_time": 1794389843.9402122
     },
     "bnddeals": {
       "last_message_id": 51272,
@@ -4657,7 +4657,7 @@
     "1005012671337268": 4.02,
     "1005012331836106": 268.0,
     "1005007760080474": 75.0,
-    "1005010369693975": 10.71,
+    "1005010369693975": 10.7,
     "1005006442452857": 24.7,
     "1005012751475098": 2.28,
     "1005012545304504": 123.1,
@@ -19793,6 +19793,16 @@
       "price": 12.11,
       "timestamp": 1794389464.8877077,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34482": {
+      "channel_msg_id": 2284,
+      "product_id": "1005010369693975",
+      "title": "HAYLOU Mori Pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 34482,
+      "price": 10.7,
+      "timestamp": 1794389841.8756988,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19801,17 +19811,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794389467.6318169,
+    "last_deal_post_time": 1794389844.9936726,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794389653.6501563,
+    "last_sweep_time": 1794389849.121394,
     "last_sweep_times": {
-      "algeria": 1794389650.330253,
-      "france": 1794389653.6501563
+      "algeria": 1794389844.9657311,
+      "france": 1794389849.121394
     },
     "last_deal_post_times": {
-      "algeria": 1794389467.6318169
+      "algeria": 1794389844.9936726
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20105,7 +20115,7 @@
     "9998882360": "test_channel",
     "9998882475": "test_channel",
     "9998882568": "test_channel",
-    "1005010369693975": "lodydeals",
+    "1005010369693975": "aniscoupons",
     "1005006442452857": "zedstoreonline",
     "9998886462": "test_channel",
     "1005012751475098": "couponsglobal",
@@ -22311,7 +22321,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "alidealsdz:149",
     "megaphonna:8686",
     "bnddeals:50879",
     "megaphonna:8435",
@@ -23310,7 +23319,8 @@
     "lodydeals:46342",
     "aniscoupons:34479",
     "lodydeals:46343",
-    "zedstoreonline:39854"
+    "zedstoreonline:39854",
+    "lodydeals:46344"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
