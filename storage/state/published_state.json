@@ -1487,7 +1487,7 @@
     "1005010706691647": 1794263885.7408762,
     "COUPONS_949f01595a98": 1794309459.0513651,
     "COUPONS_949f0159": 1794309459.0725908,
-    "1005008046071240": 1794310928.9154878,
+    "1005008046071240": 1794436007.5288515,
     "1005012083833079": 1794432872.6767933,
     "1005012292809645": 1794425282.6782186,
     "1005007495712340": 1794424903.9490352,
@@ -3415,7 +3415,7 @@
     "MACHENIKE G5Pro Max SE With Charging Dock": 1794430876.2525523,
     "Xiaoxin Pad Pro GT (8/256)": 1794308897.9947796,
     "Attack Shark X11": 1794433619.5688288,
-    "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794310928.9154878,
+    "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794436007.5288515,
     "MAONO PD100W USB Wireless Dynamic": 1794432872.6767933,
     "MAONO Wave T1 Mini Pro": 1794425282.6782186,
     "FIFINE M9 Wireless Lavalier Microphone": 1794424903.9490352,
@@ -3462,7 +3462,6 @@
     "DJI Osmo mobile": 1794432694.0507162
   },
   "published_post_keys": [
-    "aniscoupons:32775",
     "zedstoreonline:38535",
     "zedstoreonline:38757",
     "bnddeals:50814",
@@ -4461,11 +4460,12 @@
     "aniscoupons:34590",
     "aniscoupons:34592",
     "aniscoupons:34593",
-    "aniscoupons:34595"
+    "aniscoupons:34595",
+    "aniscoupons:34596"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794435638.773679,
+  "last_run_time": 1794436007.5288515,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4496,8 +4496,8 @@
       "last_check_time": 1794433800.1771796
     },
     "aniscoupons": {
-      "last_message_id": 34595,
-      "last_check_time": 1794435640.8396044
+      "last_message_id": 34596,
+      "last_check_time": 1794436009.5950959
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20919,6 +20919,16 @@
       "price": 35.25,
       "timestamp": 1794435638.773679,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34596": {
+      "channel_msg_id": 2391,
+      "product_id": "1005008046071240",
+      "title": "Mic USB Microphone with RGB Modes Professional Condenser Mic for",
+      "channel": "aniscoupons",
+      "source_msg_id": 34596,
+      "price": 46.77,
+      "timestamp": 1794436007.5288515,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20927,17 +20937,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794435641.6596375,
+    "last_deal_post_time": 1794436010.4477482,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794435838.4393423,
+    "last_sweep_time": 1794436012.9515655,
     "last_sweep_times": {
-      "algeria": 1794435835.1805618,
-      "france": 1794435838.4393423
+      "algeria": 1794436010.4181893,
+      "france": 1794436012.9515655
     },
     "last_deal_post_times": {
-      "algeria": 1794435641.6596375
+      "algeria": 1794436010.4477482
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
