@@ -737,7 +737,8 @@
     "COUPON_CLAIM_zedstoreonline_39827",
     "1005012197291105",
     "1005010179192246",
-    "1005010457635845"
+    "1005010457635845",
+    "1005012921754472"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1490,7 +1491,8 @@
     "COUPON_CLAIM_zedstoreonline_39827": 1794363974.314961,
     "1005012197291105": 1794408497.0639706,
     "1005010179192246": 1794391117.1890683,
-    "1005010457635845": 1794393509.614562
+    "1005010457635845": 1794393509.614562,
+    "1005012921754472": 1794414407.5368557
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2451,7 +2453,8 @@
     "Kootiion X15 M.2 SSD NVMe 256GB",
     "SoundPEATS C30 Hybrid ANC -52dB",
     "Somnambulist SSD 120GB",
-    "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB"
+    "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB",
+    "Realme P4 Power 8/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3417,10 +3420,10 @@
     "Kootiion X15 M.2 SSD NVMe 256GB": 1794401855.0861495,
     "SoundPEATS C30 Hybrid ANC -52dB": 1794407013.7230165,
     "Somnambulist SSD 120GB": 1794407765.5158777,
-    "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794411999.7818277
+    "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794411999.7818277,
+    "Realme P4 Power 8/256GB": 1794414407.5368557
   },
   "published_post_keys": [
-    "lodydeals:45931",
     "ecksdeal:5890",
     "bnddeals:50892",
     "lodydeals:45563",
@@ -4419,11 +4422,12 @@
     "aniscoupons:34518",
     "aniscoupons:34519",
     "aniscoupons:34520",
-    "aniscoupons:34521"
+    "aniscoupons:34521",
+    "aniscoupons:34522"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794414228.5787423,
+  "last_run_time": 1794414407.5368557,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4454,8 +4458,8 @@
       "last_check_time": 1794414223.9840207
     },
     "aniscoupons": {
-      "last_message_id": 34521,
-      "last_check_time": 1794414230.6285338
+      "last_message_id": 34522,
+      "last_check_time": 1794414409.5881567
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5095,7 +5099,8 @@
     "1005010653559191": 10.5,
     "1005012197291105": 438.2,
     "1005010179192246": 609.9,
-    "1005010457635845": 581.4
+    "1005010457635845": 581.4,
+    "1005012921754472": 265.11
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -20220,6 +20225,16 @@
       "price": 113.4,
       "timestamp": 1794414228.5787423,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34522": {
+      "channel_msg_id": 2324,
+      "product_id": "1005012921754472",
+      "title": "Realme P4 Power 8/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34522,
+      "price": 265.11,
+      "timestamp": 1794414407.5368557,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20228,17 +20243,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794414231.443598,
+    "last_deal_post_time": 1794414410.3419847,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794414233.8792732,
+    "last_sweep_time": 1794414412.7353692,
     "last_sweep_times": {
-      "algeria": 1794414231.4217272,
-      "france": 1794414233.8792732
+      "algeria": 1794414410.3203015,
+      "france": 1794414412.7353692
     },
     "last_deal_post_times": {
-      "algeria": 1794414231.443598
+      "algeria": 1794414410.3419847
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20991,7 +21006,8 @@
     "COUPON_CLAIM_zedstoreonline_39827": "zedstoreonline",
     "1005012197291105": "zedstoreonline",
     "1005010179192246": "aniscoupons",
-    "1005010457635845": "aniscoupons"
+    "1005010457635845": "aniscoupons",
+    "1005012921754472": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -21959,7 +21975,8 @@
     "Kootiion X15 M.2 SSD NVMe 256GB": "aniscoupons",
     "SoundPEATS C30 Hybrid ANC -52dB": "lodydeals",
     "Somnambulist SSD 120GB": "lodydeals",
-    "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": "zedstoreonline"
+    "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": "zedstoreonline",
+    "Realme P4 Power 8/256GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
