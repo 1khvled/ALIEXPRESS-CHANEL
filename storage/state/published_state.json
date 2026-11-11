@@ -1220,7 +1220,7 @@
     "1005006996991698": 1793542450.420599,
     "1005006968874168": 1793490102.028307,
     "1005010770983388": 1794213670.2477903,
-    "1005010146801356": 1793540023.002178,
+    "1005010146801356": 1794394604.3664222,
     "1005012536471204": 1793611292.7491462,
     "9998881104": 1793541104.8228326,
     "9998881403": 1793541403.922986,
@@ -2444,7 +2444,8 @@
     "OnePlus ACE 6 Ultra 12/256",
     "iQOO Neo 11 Ultra",
     "ONEPLUS 15 Global Rom 12/256",
-    "OPPO FIND X9s Pro"
+    "OPPO FIND X9s Pro",
+    "Vivo X300  12/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3403,10 +3404,10 @@
     "OnePlus ACE 6 Ultra 12/256": 1794390920.4038398,
     "iQOO Neo 11 Ultra": 1794391855.282333,
     "ONEPLUS 15 Global Rom 12/256": 1794393509.614562,
-    "OPPO FIND X9s Pro": 1794394415.6108775
+    "OPPO FIND X9s Pro": 1794394415.6108775,
+    "Vivo X300  12/256GB": 1794394604.3664222
   },
   "published_post_keys": [
-    "couponsglobal:48787",
     "aniscoupons:32781",
     "aniscoupons:32788",
     "zedstoreonline:38893",
@@ -4405,11 +4406,12 @@
     "aniscoupons:34494",
     "lodydeals:46351",
     "aniscoupons:34497",
-    "bnddeals:51289"
+    "bnddeals:51289",
+    "bnddeals:51290"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794394415.6108775,
+  "last_run_time": 1794394604.3664222,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
@@ -4444,8 +4446,8 @@
       "last_check_time": 1794393511.674772
     },
     "bnddeals": {
-      "last_message_id": 51289,
-      "last_check_time": 1794394417.6508582
+      "last_message_id": 51290,
+      "last_check_time": 1794394606.4163845
     }
   },
   "published_product_prices": {
@@ -4839,7 +4841,7 @@
     "1005006996991698": 20.84,
     "1005006968874168": 158.0,
     "1005010770983388": 380.6,
-    "1005010146801356": 560.65,
+    "1005010146801356": 517.6,
     "1005012536471204": 603.9,
     "1005010243337678": 598.26,
     "1005012401488201": 30.35,
@@ -19976,6 +19978,16 @@
       "price": 553.5,
       "timestamp": 1794394415.6108775,
       "status": "ACTIVE"
+    },
+    "bnddeals:51290": {
+      "channel_msg_id": 2300,
+      "product_id": "1005010146801356",
+      "title": "Vivo X300  12/256GB",
+      "channel": "bnddeals",
+      "source_msg_id": 51290,
+      "price": 517.6,
+      "timestamp": 1794394604.3664222,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19984,17 +19996,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794394417.6855984,
+    "last_deal_post_time": 1794394606.4597673,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794394420.6431165,
+    "last_sweep_time": 1794394609.8851707,
     "last_sweep_times": {
-      "algeria": 1794394417.6679997,
-      "france": 1794394420.6431165
+      "algeria": 1794394606.4382422,
+      "france": 1794394609.8851707
     },
     "last_deal_post_times": {
-      "algeria": 1794394417.6855984
+      "algeria": 1794394606.4597673
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20488,7 +20500,7 @@
     "1005006996991698": "lodydeals",
     "1005006968874168": "zedstoreonline",
     "1005010770983388": "aniscoupons",
-    "1005010146801356": "lodydeals",
+    "1005010146801356": "bnddeals",
     "1005012536471204": "lodydeals",
     "9998881104": "test_channel",
     "9998881403": "test_channel",
@@ -21708,7 +21720,8 @@
     "OnePlus ACE 6 Ultra 12/256": "zedstoreonline",
     "iQOO Neo 11 Ultra": "aniscoupons",
     "ONEPLUS 15 Global Rom 12/256": "aniscoupons",
-    "OPPO FIND X9s Pro": "bnddeals"
+    "OPPO FIND X9s Pro": "bnddeals",
+    "Vivo X300  12/256GB": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
