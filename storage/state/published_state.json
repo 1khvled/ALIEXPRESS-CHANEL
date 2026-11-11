@@ -735,7 +735,8 @@
     "1005006807619368",
     "1005010653559191",
     "COUPON_CLAIM_zedstoreonline_39827",
-    "1005012197291105"
+    "1005012197291105",
+    "1005010179192246"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1486,7 +1487,8 @@
     "1005006807619368": 1794344038.7678037,
     "1005010653559191": 1794349536.4429784,
     "COUPON_CLAIM_zedstoreonline_39827": 1794363974.314961,
-    "1005012197291105": 1794390920.4038398
+    "1005012197291105": 1794390920.4038398,
+    "1005010179192246": 1794391117.1890683
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2927,7 +2929,7 @@
     "MAONO PD100X Dynamic Microphone": 1794310561.509585,
     "Soundcore by Anker P20i": 1794303729.6185703,
     "CUSU Memory DDR5  32GB(16GBX2) 5600MHz": 1793448632.7055113,
-    "OPPO FIND X9 Pro": 1793448641.953655,
+    "OPPO FIND X9 Pro": 1794391117.1890683,
     "OPPO A7 Pro Max CN": 1793448660.3359752,
     "Poco Pad X1 512GB": 1793448715.1480892,
     "Redmi Pad 2 9.7\"": 1793448729.1572442,
@@ -3396,7 +3398,6 @@
     "OnePlus ACE 6 Ultra 12/256": 1794390920.4038398
   },
   "published_post_keys": [
-    "aniscoupons:33212",
     "zedstoreonline:38891",
     "zedstoreonline:38816",
     "zedstoreonline:38618",
@@ -4395,11 +4396,12 @@
     "lodydeals:46347",
     "aniscoupons:34486",
     "bnddeals:51275",
-    "zedstoreonline:39862"
+    "zedstoreonline:39862",
+    "aniscoupons:34488"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794390920.4038398,
+  "last_run_time": 1794391117.1890683,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
@@ -4426,16 +4428,16 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39862,
-      "last_check_time": 1794390922.4641263
+      "last_message_id": 39863,
+      "last_check_time": 1794391111.6413794
     },
     "aniscoupons": {
-      "last_message_id": 34487,
-      "last_check_time": 1794390927.0345526
+      "last_message_id": 34488,
+      "last_check_time": 1794391119.248283
     },
     "bnddeals": {
-      "last_message_id": 51276,
-      "last_check_time": 1794390933.0486805
+      "last_message_id": 51277,
+      "last_check_time": 1794391123.9694963
     }
   },
   "published_product_prices": {
@@ -5069,7 +5071,8 @@
     "1005012474727998": 14.9,
     "1005006807619368": 6.55,
     "1005010653559191": 10.5,
-    "1005012197291105": 438.2
+    "1005012197291105": 438.2,
+    "1005010179192246": 609.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -19894,6 +19897,16 @@
       "price": 438.2,
       "timestamp": 1794390920.4038398,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34488": {
+      "channel_msg_id": 2293,
+      "product_id": "1005010179192246",
+      "title": "OPPO FIND X9 Pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 34488,
+      "price": 609.9,
+      "timestamp": 1794391117.1890683,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19902,17 +19915,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794390933.104405,
+    "last_deal_post_time": 1794391124.0202234,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794390936.4235296,
+    "last_sweep_time": 1794391127.3919983,
     "last_sweep_times": {
-      "algeria": 1794390933.0766282,
-      "france": 1794390936.4235296
+      "algeria": 1794391123.9949968,
+      "france": 1794391127.3919983
     },
     "last_deal_post_times": {
-      "algeria": 1794390933.104405
+      "algeria": 1794391124.0202234
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20663,7 +20676,8 @@
     "1005006807619368": "aniscoupons",
     "1005010653559191": "zedstoreonline",
     "COUPON_CLAIM_zedstoreonline_39827": "zedstoreonline",
-    "1005012197291105": "zedstoreonline"
+    "1005012197291105": "zedstoreonline",
+    "1005010179192246": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -22417,8 +22431,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8631",
-    "megaphonna:8389",
     "ecksdeal:5897",
     "megaphonna:8601",
     "zedstoreonline:38631",
@@ -23416,7 +23428,9 @@
     "zedstoreonline:39861",
     "lodydeals:46348",
     "aniscoupons:34487",
-    "bnddeals:51276"
+    "bnddeals:51276",
+    "zedstoreonline:39863",
+    "bnddeals:51277"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
