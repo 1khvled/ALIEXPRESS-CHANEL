@@ -1470,7 +1470,7 @@
     "1005008200346347": 1794223934.5228841,
     "1005006542204624": 1794224474.0767472,
     "1005007820092290": 1794224654.527678,
-    "1005012329021334": 1794225392.2814271,
+    "1005012329021334": 1794435638.773679,
     "1005013218893010": 1794226314.627466,
     "1005013480169843": 1794416693.462334,
     "1005013226454479": 1794227594.9699965,
@@ -3392,7 +3392,7 @@
     "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق": 1794223934.5228841,
     "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية": 1794224474.0767472,
     "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات": 1794224654.527678,
-    "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": 1794225392.2814271,
+    "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": 1794435638.773679,
     "لوووووووووووووووز": 1794226314.627466,
     "شاحنة ألعاب صغيرة بالتحكم عن بُعد": 1794227594.9699965,
     "Mortal T1+ 2/16GB Wifi 4K": 1794229795.9714105,
@@ -3462,7 +3462,6 @@
     "DJI Osmo mobile": 1794432694.0507162
   },
   "published_post_keys": [
-    "lodydeals:45482",
     "aniscoupons:32775",
     "zedstoreonline:38535",
     "zedstoreonline:38757",
@@ -4461,19 +4460,20 @@
     "zedstoreonline:39927",
     "aniscoupons:34590",
     "aniscoupons:34592",
-    "aniscoupons:34593"
+    "aniscoupons:34593",
+    "aniscoupons:34595"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794435090.9779193,
+  "last_run_time": 1794435638.773679,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
       "last_check_time": 1794419029.2500024
     },
     "lodydeals": {
-      "last_message_id": 46397,
-      "last_check_time": 1794435269.5410295
+      "last_message_id": 46398,
+      "last_check_time": 1794435633.288085
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4496,8 +4496,8 @@
       "last_check_time": 1794433800.1771796
     },
     "aniscoupons": {
-      "last_message_id": 34594,
-      "last_check_time": 1794435463.7854328
+      "last_message_id": 34595,
+      "last_check_time": 1794435640.8396044
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20909,6 +20909,16 @@
       "price": 217.8,
       "timestamp": 1794435090.9779193,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34595": {
+      "channel_msg_id": 2390,
+      "product_id": "1005012329021334",
+      "title": "MAONO PM360TR Condenser Microphone XLR Podcast Microphone",
+      "channel": "aniscoupons",
+      "source_msg_id": 34595,
+      "price": 35.25,
+      "timestamp": 1794435638.773679,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20917,17 +20927,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794435093.7482424,
+    "last_deal_post_time": 1794435641.6596375,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794435466.8956473,
+    "last_sweep_time": 1794435644.0666304,
     "last_sweep_times": {
-      "algeria": 1794435464.5389278,
-      "france": 1794435466.8956473
+      "algeria": 1794435641.6310108,
+      "france": 1794435644.0666304
     },
     "last_deal_post_times": {
-      "algeria": 1794435093.7482424
+      "algeria": 1794435641.6596375
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
