@@ -1183,7 +1183,7 @@
     "1005011820893973": 1793540051.7895243,
     "1005009073904302": 1794159496.3891714,
     "1005009916208760": 1793448612.7938895,
-    "1005010033441204": 1794303729.6185703,
+    "1005010033441204": 1794419208.6994803,
     "1005008356663932": 1793707052.9762022,
     "1005010074161953": 1793543659.5887568,
     "1005010498953493": 1793448734.886029,
@@ -1357,7 +1357,7 @@
     "1005011742640729": 1793650956.0417867,
     "1005013154935332": 1793655734.5359836,
     "1005012774075728": 1793656103.0944026,
-    "1005006783028347": 1794167976.0921652,
+    "1005006783028347": 1794419203.5335758,
     "1005007010104970": 1793656134.827825,
     "1005008637113849": 1793656145.7068295,
     "1005010419207841": 1793656214.2446048,
@@ -2949,7 +2949,7 @@
     "Soundcore by Anker Life Q30 Hybrid Active Noise Cancelling Headphones": 1793448587.6507976,
     "بروجكتور Magcubic HY300 max – أوتو فوكس، Android 14، إضاءة 400 ANSI": 1793448612.7938895,
     "MAONO PD100X Dynamic Microphone": 1794310561.509585,
-    "Soundcore by Anker P20i": 1794303729.6185703,
+    "Soundcore by Anker P20i": 1794419208.6994803,
     "CUSU Memory DDR5  32GB(16GBX2) 5600MHz": 1793448632.7055113,
     "OPPO FIND X9 Pro": 1794391117.1890683,
     "OPPO A7 Pro Max CN": 1793448660.3359752,
@@ -3314,7 +3314,7 @@
     "KOOTION SSD SATA  240GB": 1794051434.2488248,
     "Xiaomi Redmi Note 17 Pro 5G Global Version": 1794060065.5449874,
     "Magcubic  HY350 Max 900ANSI": 1794147930.6937103,
-    "Toocki 60W Car Charger and cable": 1794167976.0921652,
+    "Toocki 60W Car Charger and cable": 1794419203.5335758,
     "Hollyland Lark M2 Wireless Mic": 1794063654.6498907,
     "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": 1794064385.819615,
     "XUNYOU-LINK 4G SIM WiFi": 1794065862.849844,
@@ -3436,8 +3436,6 @@
     "Honor 600 5G Global 8/256GB": 1794418660.6617887
   },
   "published_post_keys": [
-    "aniscoupons:32754",
-    "bnddeals:50939",
     "pcgamingpart:7987",
     "lodydeals:45584",
     "aniscoupons:32802",
@@ -4435,11 +4433,13 @@
     "zedstoreonline:39898",
     "aniscoupons:34536",
     "zedstoreonline:39901",
-    "aniscoupons:34537"
+    "aniscoupons:34537",
+    "zedstoreonline:39902",
+    "aniscoupons:34538"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794418660.6617887,
+  "last_run_time": 1794419208.6994803,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4466,12 +4466,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39901,
-      "last_check_time": 1794418656.7962947
+      "last_message_id": 39902,
+      "last_check_time": 1794419205.5863073
     },
     "aniscoupons": {
-      "last_message_id": 34537,
-      "last_check_time": 1794418662.7349436
+      "last_message_id": 34538,
+      "last_check_time": 1794419210.7494652
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20398,6 +20398,26 @@
       "price": 380.4,
       "timestamp": 1794418660.6617887,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39902": {
+      "channel_msg_id": 2342,
+      "product_id": "1005006783028347",
+      "title": "Toocki 60W Car Charger and cable",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39902,
+      "price": 2.7,
+      "timestamp": 1794419203.5335758,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34538": {
+      "channel_msg_id": 2343,
+      "product_id": "1005010033441204",
+      "title": "Soundcore by Anker P20i",
+      "channel": "aniscoupons",
+      "source_msg_id": 34538,
+      "price": 14.6,
+      "timestamp": 1794419208.6994803,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20406,17 +20426,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794418663.439326,
+    "last_deal_post_time": 1794419211.3100264,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794419034.4876087,
+    "last_sweep_time": 1794419213.5407135,
     "last_sweep_times": {
-      "algeria": 1794419031.3213172,
-      "france": 1794419034.4876087
+      "algeria": 1794419211.2873318,
+      "france": 1794419213.5407135
     },
     "last_deal_post_times": {
-      "algeria": 1794418663.439326
+      "algeria": 1794419211.3100264
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
