@@ -986,7 +986,7 @@
     "1005010812635861": 1792160246.020243,
     "1005008500550817": 1792025664.1703467,
     "1005009834132291": 1794417558.6712675,
-    "1005008077568655": 1794306963.5533123,
+    "1005008077568655": 1794430876.2525523,
     "1005009774318553": 1793543777.6383033,
     "1005012585389764": 1792061322.5579543,
     "1005011997237872": 1793543770.1912897,
@@ -1123,7 +1123,7 @@
     "1005013222140851": 1793467234.8425448,
     "1005013438245033": 1793299536.9978156,
     "1005008986635164": 1793314892.9200466,
-    "1005008327980403": 1793735876.7804084,
+    "1005008327980403": 1794430852.2821708,
     "1005012838686691": 1793384191.3385255,
     "1005007966795709": 1793898351.709536,
     "1005007760080474": 1793613355.4947147,
@@ -1389,7 +1389,7 @@
     "1005008366962319": 1794401855.0861495,
     "1005005058037424": 1793779907.9964287,
     "1005012946895000": 1793793714.105913,
-    "1005012150344482": 1794349171.7275317,
+    "1005012150344482": 1794430858.2362945,
     "1005006972551834": 1793793774.6743867,
     "1005010169268165": 1793794440.9453664,
     "1005010702038861": 1794134168.8193681,
@@ -1438,7 +1438,7 @@
     "1005008636930795": 1794422876.857545,
     "1005006260870758": 1794250569.5221198,
     "1005009759580502": 1794331533.1223195,
-    "1005009120888793": 1794306130.341298,
+    "1005009120888793": 1794430871.8468843,
     "1005011874310777": 1794087501.0429602,
     "1005008721853055": 1794126663.880001,
     "1005012593794312": 1794301654.5672474,
@@ -2473,7 +2473,8 @@
     "Baseus GoTrip VA1 Wireless Air Pump",
     "HOCO EW60 Bluetooth 5.0 Earbuds Wireless Hi-Res Audio Touch Control",
     "Essager 2in1 USB Type C  60W",
-    "GOOJPRT Portable Thermal Printer"
+    "GOOJPRT Portable Thermal Printer",
+    "KOOTION M.2 512GB 7200Mbs"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3273,7 +3274,7 @@
     "HONOR PAD X8A 4/64GB": 1793908989.4952903,
     "Magcubic HY300 Pro Projector": 1793908994.588809,
     "CUSU SSD SATA3": 1793913777.3174822,
-    "Haylou Solar NEO 2 Amoled": 1794349171.7275317,
+    "Haylou Solar NEO 2 Amoled": 1794430858.2362945,
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones": 1794313321.761044,
     "HAYLOU Solar Ultra GPS": 1794426765.2023578,
     "NOTHING Watch 3 Pro": 1793966696.631638,
@@ -3340,7 +3341,7 @@
     "Netac M.2 NVME 250GB": 1794076438.7694528,
     "EPOMAKER X AULA F87 Pro": 1794250569.5221198,
     "SIX PCIe 4.0 7350MB/s  1TB": 1794079741.7808652,
-    "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop": 1794306130.341298,
+    "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop": 1794430871.8468843,
     "SOUNDPEATS Air6 HS": 1794087501.0429602,
     "مبرد الهاتف MEMO CX10": 1794126663.880001,
     "KOOTION SATA SSD 480GB": 1794241389.2452002,
@@ -3405,7 +3406,7 @@
     "Inphic PG1 RGB Wired Gaming Mouse": 1794302806.3764513,
     "Anker Q20i Hybrid Active": 1794419939.6582677,
     "CUSU CV3500Q 2TB M.2": 1794305012.9961731,
-    "MACHENIKE G5Pro Max SE With Charging Dock": 1794306963.5533123,
+    "MACHENIKE G5Pro Max SE With Charging Dock": 1794430876.2525523,
     "Xiaoxin Pad Pro GT (8/256)": 1794308897.9947796,
     "Attack Shark X11": 1794310187.5175397,
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794310928.9154878,
@@ -3449,13 +3450,10 @@
     "Baseus GoTrip VA1 Wireless Air Pump": 1794420675.7412696,
     "HOCO EW60 Bluetooth 5.0 Earbuds Wireless Hi-Res Audio Touch Control": 1794420680.672656,
     "Essager 2in1 USB Type C  60W": 1794420685.287832,
-    "GOOJPRT Portable Thermal Printer": 1794420689.8352551
+    "GOOJPRT Portable Thermal Printer": 1794420689.8352551,
+    "KOOTION M.2 512GB 7200Mbs": 1794430852.2821708
   },
   "published_post_keys": [
-    "megaphonna:8536",
-    "lodydeals:45938",
-    "aniscoupons:32695",
-    "zedstoreonline:38758",
     "ecksdeal:5978",
     "aniscoupons:33269",
     "zedstoreonline:38826",
@@ -4451,19 +4449,23 @@
     "zedstoreonline:39919",
     "aniscoupons:34565",
     "aniscoupons:34566",
-    "aniscoupons:34569"
+    "aniscoupons:34569",
+    "lodydeals:46378",
+    "zedstoreonline:39920",
+    "aniscoupons:34571",
+    "aniscoupons:34572"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794428252.3014421,
+  "last_run_time": 1794430876.2525523,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
       "last_check_time": 1794419029.2500024
     },
     "lodydeals": {
-      "last_message_id": 46376,
-      "last_check_time": 1794426757.94481
+      "last_message_id": 46379,
+      "last_check_time": 1794430854.4199142
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4482,12 +4484,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39919,
-      "last_check_time": 1794426767.264491
+      "last_message_id": 39921,
+      "last_check_time": 1794430865.9518647
     },
     "aniscoupons": {
-      "last_message_id": 34569,
-      "last_check_time": 1794428254.3564308
+      "last_message_id": 34575,
+      "last_check_time": 1794430891.325106
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4785,7 +4787,7 @@
     "1005010355409000": 494.2,
     "1005013438245033": 412.0,
     "1005008986635164": 185.9,
-    "1005008327980403": 142.86,
+    "1005008327980403": 83.31,
     "1005012838686691": 140.98,
     "1005007966795709": 87.0,
     "1005011857340568": 114.6,
@@ -20667,6 +20669,46 @@
       "price": 277.36,
       "timestamp": 1794428252.3014421,
       "status": "ACTIVE"
+    },
+    "lodydeals:46378": {
+      "channel_msg_id": 2367,
+      "product_id": "1005008327980403",
+      "title": "KOOTION M.2 512GB 7200Mbs",
+      "channel": "lodydeals",
+      "source_msg_id": 46378,
+      "price": 83.31,
+      "timestamp": 1794430852.2821708,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:39920": {
+      "channel_msg_id": 2368,
+      "product_id": "1005012150344482",
+      "title": "Haylou Solar NEO 2 Amoled",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39920,
+      "price": 18.7,
+      "timestamp": 1794430858.2362945,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34571": {
+      "channel_msg_id": 2369,
+      "product_id": "1005009120888793",
+      "title": "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop",
+      "channel": "aniscoupons",
+      "source_msg_id": 34571,
+      "price": 22.3,
+      "timestamp": 1794430871.8468843,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34572": {
+      "channel_msg_id": 2370,
+      "product_id": "1005008077568655",
+      "title": "MACHENIKE G5Pro Max SE With Charging Dock",
+      "channel": "aniscoupons",
+      "source_msg_id": 34572,
+      "price": 41.77,
+      "timestamp": 1794430876.2525523,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20675,17 +20717,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794428255.1042652,
+    "last_deal_post_time": 1794430892.2000282,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794428257.2940178,
+    "last_sweep_time": 1794430901.1276731,
     "last_sweep_times": {
-      "algeria": 1794428255.0816507,
-      "france": 1794428257.2940178
+      "algeria": 1794430892.169597,
+      "france": 1794430901.1276731
     },
     "last_deal_post_times": {
-      "algeria": 1794428255.1042652
+      "algeria": 1794430892.2000282
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22422,7 +22464,8 @@
     "Baseus GoTrip VA1 Wireless Air Pump": "lodydeals",
     "HOCO EW60 Bluetooth 5.0 Earbuds Wireless Hi-Res Audio Touch Control": "lodydeals",
     "Essager 2in1 USB Type C  60W": "lodydeals",
-    "GOOJPRT Portable Thermal Printer": "lodydeals"
+    "GOOJPRT Portable Thermal Printer": "lodydeals",
+    "KOOTION M.2 512GB 7200Mbs": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -23218,14 +23261,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:39040",
-    "aniscoupons:33440",
-    "lodydeals:45512",
-    "bnddeals:51013",
-    "aniscoupons:33330",
-    "aniscoupons:32924",
-    "megaphonna:8508",
-    "lodydeals:45753",
     "bnddeals:50897",
     "zedstoreonline:38714",
     "megaphonna:8560",
@@ -24217,7 +24252,15 @@
     "zedstoreonline:39918",
     "aniscoupons:34564",
     "aniscoupons:34567",
-    "aniscoupons:34568"
+    "aniscoupons:34568",
+    "lodydeals:46374",
+    "lodydeals:46375",
+    "lodydeals:46376",
+    "lodydeals:46377",
+    "lodydeals:46379",
+    "zedstoreonline:39921",
+    "aniscoupons:34570",
+    "aniscoupons:34575"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
