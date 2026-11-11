@@ -1465,7 +1465,7 @@
     "1005007820092290": 1794224654.527678,
     "1005012329021334": 1794225392.2814271,
     "1005013218893010": 1794226314.627466,
-    "1005013480169843": 1794400361.8866153,
+    "1005013480169843": 1794416693.462334,
     "1005013226454479": 1794227594.9699965,
     "1005005548265076": 1794231079.407264,
     "1005012555450345": 1794232557.0275722,
@@ -2747,7 +2747,7 @@
     "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)": 1792156501.818011,
     "Redmi Pad 2 9.7": 1792061322.5579543,
     "Redmi Note 12 5G Global (4/128GB)": 1792156524.878074,
-    "Blackview Wave 10C": 1794400361.8866153,
+    "Blackview Wave 10C": 1794416693.462334,
     "متوسط سعره حالياً 82000دج": 1793276237.692456,
     "iQOO Z11s 5G (8/128GB)": 1794159573.4625287,
     "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1793966861.2399917,
@@ -3426,7 +3426,6 @@
     "ASROCK X570M PRO4 MOTHERBOARD": 1794414971.7181702
   },
   "published_post_keys": [
-    "lodydeals:45474",
     "aniscoupons:33203",
     "lodydeals:45442",
     "aniscoupons:33110",
@@ -4425,11 +4424,12 @@
     "zedstoreonline:39890",
     "aniscoupons:34525",
     "aniscoupons:34527",
-    "aniscoupons:34528"
+    "aniscoupons:34528",
+    "zedstoreonline:39892"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794415897.5781474,
+  "last_run_time": 1794416693.462334,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4456,8 +4456,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39891,
-      "last_check_time": 1794414968.3413694
+      "last_message_id": 39892,
+      "last_check_time": 1794416695.5026996
     },
     "aniscoupons": {
       "last_message_id": 34530,
@@ -20297,6 +20297,16 @@
       "price": 340.3,
       "timestamp": 1794415897.5781474,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39892": {
+      "channel_msg_id": 2331,
+      "product_id": "1005013480169843",
+      "title": "Blackview Wave 10C",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39892,
+      "price": 66.7,
+      "timestamp": 1794416693.462334,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20305,17 +20315,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794415900.664786,
+    "last_deal_post_time": 1794416696.7917254,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794416510.695271,
+    "last_sweep_time": 1794416699.4179516,
     "last_sweep_times": {
-      "algeria": 1794416508.2855144,
-      "france": 1794416510.695271
+      "algeria": 1794416696.7747686,
+      "france": 1794416699.4179516
     },
     "last_deal_post_times": {
-      "algeria": 1794415900.664786
+      "algeria": 1794416696.7917254
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21043,7 +21053,7 @@
     "1005007820092290": "zedstoreonline",
     "1005012329021334": "aniscoupons",
     "1005013218893010": "zedstoreonline",
-    "1005013480169843": "aniscoupons",
+    "1005013480169843": "zedstoreonline",
     "1005013226454479": "zedstoreonline",
     "1005005548265076": "lodydeals",
     "1005012555450345": "lodydeals",
@@ -21363,7 +21373,7 @@
     "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)": "megaphonna",
     "Redmi Pad 2 9.7": "aniscoupons",
     "Redmi Note 12 5G Global (4/128GB)": "aniscoupons",
-    "Blackview Wave 10C": "aniscoupons",
+    "Blackview Wave 10C": "zedstoreonline",
     "متوسط سعره حالياً 82000دج": "megaphonna",
     "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP AI": "aniscoupons",
     "iQOO Z11s 5G (8/128GB)": "aniscoupons",
