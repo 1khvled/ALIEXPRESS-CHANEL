@@ -26,7 +26,7 @@ Alongside the pipeline there is a public bilingual web portal (FastAPI on Vercel
 |---|---|---|
 | Algeria channel | `@DzAliexpress0` | Primary. Arabic (RTL), USD pricing with DZD conversion on the site. |
 | France channel | `@francedealsdz` | French copy, EUR pricing, separate publisher and state file. |
-| Coin bot | `@Alilo07BOT` | Coin-discount link generator, `api/coin_bot.py`. |
+| Coin bot | `@Alilo07BOT` | Coin-discount link generator. Production runtime is the Cloudflare Worker in `worker/` (`POST /telegram`); `api/coin_bot.py` keeps the same logic for local polling. |
 | Website | `dealscoutgreen.vercel.app` | FastAPI + embedded HTML, Vercel `services` deploy. |
 | Admin dashboard | `/admin` | Cookie-signed login, manual reformat/publish, Facebook publish. |
 | Facebook page | `1451244491398196` | Optional cross-post (`FACEBOOK_AUTO_POST_ENABLED`), separate state file. |
@@ -55,6 +55,7 @@ Properties worth knowing before you change anything:
 - **`concurrency: telegram-deals-cron`, `cancel-in-progress: false`** — runs queue instead of overlapping.
 - **The last step commits `storage/state/` back to `main`** with rebase-retry, message `Auto-update deals database [skip ci] [skip vercel] [vercel skip]`. Vercel skips those commits (`scripts/ignore_build.sh`), so state churn costs no builds.
 - **Night pause:** 00:00–08:00 Africa/Algiers the scheduler stops collecting deals; sweeps continue at 60-minute intervals. Daytime interval is 5 minutes.
+- **The coin bot is not part of this workflow.** `@Alilo07BOT` runs as a Cloudflare Worker (`worker/`, deployed with `npx wrangler deploy`, webhook `https://alilo07bot.<subdomain>.workers.dev/telegram`). It is a pure webhook — no cron, no polling, no KV/D1 — so it costs one request per Telegram update. Vercel's `402` killed the old `/api/webhook`; do not point the bot back at it.
 
 ---
 

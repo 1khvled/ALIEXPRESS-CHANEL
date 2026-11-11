@@ -1,0 +1,17 @@
+name = "alilo07bot"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+# Secrets (set with `npx wrangler secret put`, never commit them):
+#   TELEGRAM_BOT_TOKEN      @Alilo07BOT token
+#   TELEGRAM_WEBHOOK_SECRET random string also passed to setWebhook
+#   ADMIN_USER_ID           owner's Telegram id (enables /post + publish button)
+#   ADMIN_USER_IDS          optional comma separated extra admins
+
+[vars]
+AFF_TRACKING_ID = "dzkhvled16"
+CHANNEL_ID = "@DzAliexpress0"
+
+[observability]
+enabled = true

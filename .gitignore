@@ -52,3 +52,6 @@ aliexpress-coin-bot/
 last_disclaimer_pinned.txt
 app/publisher/last_disclaimer_pinned.txt
 scratch/
+
+# Cloudflare Worker local state
+.wrangler/
