@@ -980,7 +980,7 @@
     "1005012933967378": 1792103193.622027,
     "1005010812635861": 1792160246.020243,
     "1005008500550817": 1792025664.1703467,
-    "1005009834132291": 1793542602.1938312,
+    "1005009834132291": 1794417558.6712675,
     "1005008077568655": 1794306963.5533123,
     "1005009774318553": 1793543777.6383033,
     "1005012585389764": 1792061322.5579543,
@@ -1324,7 +1324,7 @@
     "1005010009130696": 1793613403.4444478,
     "1005013465751932": 1793613440.9413722,
     "1005011778223630": 1793613478.3592212,
-    "1005009231510301": 1794308897.9947796,
+    "1005009231510301": 1794417542.0419154,
     "1005011625723042": 1793613515.3490868,
     "1005006280695304": 1793613524.8970137,
     "1005010149868688": 1793613530.8342392,
@@ -1416,7 +1416,7 @@
     "1005008534907844": 1793987285.4130383,
     "1005009577554629": 1793987289.8200357,
     "1005010656922924": 1794407013.7230165,
-    "1005008077441711": 1794302806.3764513,
+    "1005008077441711": 1794417547.9385538,
     "1005006411483066": 1794091985.0146983,
     "1005012925301774": 1794348808.2825344,
     "1005012959738411": 1794304640.3506072,
@@ -2455,7 +2455,8 @@
     "Somnambulist SSD 120GB",
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB",
     "Realme P4 Power 8/256GB",
-    "ASROCK X570M PRO4 MOTHERBOARD"
+    "ASROCK X570M PRO4 MOTHERBOARD",
+    "EASYSMX X05 PRO Controller"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3158,7 +3159,7 @@
     "Xiaomi Redmi 17 Smartphone 128G 256G ROM 120Hz 6.9\" Display 50MP 45W Turbo": 1793613465.8475375,
     "AMD Ryzen 5 7500F": 1793613478.3592212,
     "AMD Ryzen R9 9900X": 1793613486.2912338,
-    "Lenovo Xiaoxin Pad Pro GT  8/256": 1794166133.813164,
+    "Lenovo Xiaoxin Pad Pro GT  8/256": 1794417542.0419154,
     "China Version Xiaomi WiFi Router Amplifier Pro": 1793613515.3490868,
     "SMAILWOLF RS7 Bluetooth wireless gaming mouse PAW3311 macro driver laptop": 1793613519.9635994,
     "Original Xiaomi Mi Small Backpack": 1793613524.8970137,
@@ -3296,7 +3297,7 @@
     "Realme 15 Pro (12/256GB)": 1794414785.110352,
     "SOUNDPEATS C30 ANC Wireless Earphones": 1793994623.1444166,
     "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899,
-    "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1794147198.6954062,
+    "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1794417547.9385538,
     "realme C100d 4/128GB": 1794148671.949184,
     "Zeblaze GTS 3 Pro AMOLED": 1794091985.0146983,
     "شاحن سيارة ORICO بقوة 45W": 1794348808.2825344,
@@ -3423,12 +3424,10 @@
     "Somnambulist SSD 120GB": 1794407765.5158777,
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794411999.7818277,
     "Realme P4 Power 8/256GB": 1794414407.5368557,
-    "ASROCK X570M PRO4 MOTHERBOARD": 1794414971.7181702
+    "ASROCK X570M PRO4 MOTHERBOARD": 1794414971.7181702,
+    "EASYSMX X05 PRO Controller": 1794417558.6712675
   },
   "published_post_keys": [
-    "aniscoupons:33203",
-    "lodydeals:45442",
-    "aniscoupons:33110",
     "couponsglobal:48795",
     "zedstoreonline:38793",
     "bnddeals:50795",
@@ -4425,11 +4424,14 @@
     "aniscoupons:34525",
     "aniscoupons:34527",
     "aniscoupons:34528",
-    "zedstoreonline:39892"
+    "zedstoreonline:39892",
+    "zedstoreonline:39894",
+    "zedstoreonline:39896",
+    "aniscoupons:34532"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794416693.462334,
+  "last_run_time": 1794417558.6712675,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4456,12 +4458,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39892,
-      "last_check_time": 1794416695.5026996
+      "last_message_id": 39896,
+      "last_check_time": 1794417549.9892256
     },
     "aniscoupons": {
-      "last_message_id": 34530,
-      "last_check_time": 1794416507.5136437
+      "last_message_id": 34533,
+      "last_check_time": 1794417564.4059956
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4554,7 +4556,7 @@
     "1005012285327063": 12.11,
     "1005006581583862": 18.4,
     "1005012816171978": 274.46,
-    "1005009834132291": 20.04,
+    "1005009834132291": 21.1,
     "1005010585654037": 19.4,
     "1005006248571160": 16.8,
     "1005009390995992": 34.9,
@@ -5036,7 +5038,7 @@
     "1005008534907844": 50.86,
     "1005009577554629": 10.55,
     "1005010656922924": 19.46,
-    "1005008077441711": 7.32,
+    "1005008077441711": 7.6,
     "1005012925301774": 10.5,
     "1005012959738411": 68.79,
     "1005007162099601": 29.21,
@@ -20307,6 +20309,36 @@
       "price": 66.7,
       "timestamp": 1794416693.462334,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39894": {
+      "channel_msg_id": 2332,
+      "product_id": "1005009231510301",
+      "title": "Lenovo Xiaoxin Pad Pro GT  8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39894,
+      "price": 259.7,
+      "timestamp": 1794417542.0419154,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:39896": {
+      "channel_msg_id": 2333,
+      "product_id": "1005008077441711",
+      "title": "Inphic PG1 PG9 RGB Wired Gaming Mouse",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39896,
+      "price": 7.6,
+      "timestamp": 1794417547.9385538,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34532": {
+      "channel_msg_id": 2334,
+      "product_id": "1005009834132291",
+      "title": "EASYSMX X05 PRO Controller",
+      "channel": "aniscoupons",
+      "source_msg_id": 34532,
+      "price": 21.1,
+      "timestamp": 1794417558.6712675,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20315,17 +20347,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794416696.7917254,
+    "last_deal_post_time": 1794417565.1725345,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794416699.4179516,
+    "last_sweep_time": 1794417567.5560768,
     "last_sweep_times": {
-      "algeria": 1794416696.7747686,
-      "france": 1794416699.4179516
+      "algeria": 1794417565.1482646,
+      "france": 1794417567.5560768
     },
     "last_deal_post_times": {
-      "algeria": 1794416696.7917254
+      "algeria": 1794417565.1725345
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20419,7 +20451,7 @@
     "1005012285327063": "aniscoupons",
     "1005006581583862": "aniscoupons",
     "1005012816171978": "lodydeals",
-    "1005009834132291": "ecksdeal",
+    "1005009834132291": "aniscoupons",
     "1005010585654037": "lodydeals",
     "1005006248571160": "bnddeals",
     "1005009390995992": "aniscoupons",
@@ -20927,7 +20959,7 @@
     "1005010009130696": "zedstoreonline",
     "1005013465751932": "zedstoreonline",
     "1005011778223630": "zedstoreonline",
-    "1005009231510301": "aniscoupons",
+    "1005009231510301": "zedstoreonline",
     "1005011625723042": "aniscoupons",
     "1005006280695304": "aniscoupons",
     "1005007060644375": "aniscoupons",
@@ -21003,7 +21035,7 @@
     "1005008534907844": "lodydeals",
     "1005009577554629": "lodydeals",
     "1005010656922924": "lodydeals",
-    "1005008077441711": "aniscoupons",
+    "1005008077441711": "zedstoreonline",
     "1005006411483066": "zedstoreonline",
     "1005012925301774": "zedstoreonline",
     "1005012959738411": "aniscoupons",
@@ -22049,7 +22081,8 @@
     "Somnambulist SSD 120GB": "lodydeals",
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": "zedstoreonline",
     "Realme P4 Power 8/256GB": "aniscoupons",
-    "ASROCK X570M PRO4 MOTHERBOARD": "aniscoupons"
+    "ASROCK X570M PRO4 MOTHERBOARD": "aniscoupons",
+    "EASYSMX X05 PRO Controller": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22845,9 +22878,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:6005",
-    "aniscoupons:33226",
-    "aniscoupons:32839",
     "aniscoupons:32925",
     "megaphonna:8489",
     "alidealsdz:142",
@@ -23844,7 +23874,10 @@
     "zedstoreonline:39891",
     "aniscoupons:34526",
     "aniscoupons:34529",
-    "aniscoupons:34530"
+    "aniscoupons:34530",
+    "zedstoreonline:39895",
+    "aniscoupons:34531",
+    "aniscoupons:34533"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
