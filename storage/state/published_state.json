@@ -1414,7 +1414,7 @@
     "1005010142208108": 1794302223.66585,
     "1005008534907844": 1793987285.4130383,
     "1005009577554629": 1793987289.8200357,
-    "1005010656922924": 1793994623.1444166,
+    "1005010656922924": 1794407013.7230165,
     "1005008077441711": 1794302806.3764513,
     "1005006411483066": 1794091985.0146983,
     "1005012925301774": 1794348808.2825344,
@@ -2448,7 +2448,8 @@
     "Vivo X300  12/256GB",
     "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD",
     "Electronic Body Scale",
-    "Kootiion X15 M.2 SSD NVMe 256GB"
+    "Kootiion X15 M.2 SSD NVMe 256GB",
+    "SoundPEATS C30 Hybrid ANC -52dB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3411,10 +3412,10 @@
     "Vivo X300  12/256GB": 1794394604.3664222,
     "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD": 1794396619.5833008,
     "Electronic Body Scale": 1794400568.4819298,
-    "Kootiion X15 M.2 SSD NVMe 256GB": 1794401855.0861495
+    "Kootiion X15 M.2 SSD NVMe 256GB": 1794401855.0861495,
+    "SoundPEATS C30 Hybrid ANC -52dB": 1794407013.7230165
   },
   "published_post_keys": [
-    "megaphonna:8589",
     "pcgamingpart:7950",
     "lodydeals:45405",
     "megaphonna:8663",
@@ -4413,19 +4414,20 @@
     "aniscoupons:34504",
     "aniscoupons:34507",
     "aniscoupons:34508",
-    "aniscoupons:34509"
+    "aniscoupons:34509",
+    "lodydeals:46354"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794401855.0861495,
+  "last_run_time": 1794407013.7230165,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
       "last_check_time": 1794350628.34148
     },
     "lodydeals": {
-      "last_message_id": 46353,
-      "last_check_time": 1794406464.4853063
+      "last_message_id": 46354,
+      "last_check_time": 1794407015.7849603
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -5023,7 +5025,7 @@
     "1005010142208108": 40.87,
     "1005008534907844": 50.86,
     "1005009577554629": 10.55,
-    "1005010656922924": 20.4,
+    "1005010656922924": 19.46,
     "1005008077441711": 7.32,
     "1005012925301774": 10.5,
     "1005012959738411": 68.79,
@@ -20074,6 +20076,16 @@
       "price": 30.3,
       "timestamp": 1794401855.0861495,
       "status": "ACTIVE"
+    },
+    "lodydeals:46354": {
+      "channel_msg_id": 2309,
+      "product_id": "1005010656922924",
+      "title": "SoundPEATS C30 Hybrid ANC -52dB",
+      "channel": "lodydeals",
+      "source_msg_id": 46354,
+      "price": 19.46,
+      "timestamp": 1794407013.7230165,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20082,17 +20094,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794401857.9666576,
+    "last_deal_post_time": 1794407019.4487538,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794406837.5355418,
+    "last_sweep_time": 1794407022.055963,
     "last_sweep_times": {
-      "algeria": 1794406835.096051,
-      "france": 1794406837.5355418
+      "algeria": 1794407019.420678,
+      "france": 1794407022.055963
     },
     "last_deal_post_times": {
-      "algeria": 1794401857.9666576
+      "algeria": 1794407019.4487538
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20769,7 +20781,7 @@
     "1005010142208108": "lodydeals",
     "1005008534907844": "lodydeals",
     "1005009577554629": "lodydeals",
-    "1005010656922924": "zedstoreonline",
+    "1005010656922924": "lodydeals",
     "1005008077441711": "aniscoupons",
     "1005006411483066": "zedstoreonline",
     "1005012925301774": "zedstoreonline",
@@ -21810,7 +21822,8 @@
     "Vivo X300  12/256GB": "bnddeals",
     "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD": "zedstoreonline",
     "Electronic Body Scale": "aniscoupons",
-    "Kootiion X15 M.2 SSD NVMe 256GB": "aniscoupons"
+    "Kootiion X15 M.2 SSD NVMe 256GB": "aniscoupons",
+    "SoundPEATS C30 Hybrid ANC -52dB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
