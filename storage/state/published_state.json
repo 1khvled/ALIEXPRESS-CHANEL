@@ -1410,7 +1410,7 @@
     "1005007469003552": 1794130707.0577464,
     "1005010041181003": 1794411999.7818277,
     "1005010265542567": 1794131426.95932,
-    "1005003156756854": 1794307971.8462343,
+    "1005003156756854": 1794412940.6962595,
     "1005010142208108": 1794302223.66585,
     "1005008534907844": 1793987285.4130383,
     "1005009577554629": 1793987289.8200357,
@@ -3285,7 +3285,7 @@
     "ميكروفون Ulanzi A100 لاسلكي صغير": 1793982290.6109207,
     "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794397542.339012,
     "Ulanzi A200 Mini Wireless Lavalier Microphone": 1794131426.95932,
-    "حامل هاتف Ulanzi ST-06S": 1794307971.8462343,
+    "حامل هاتف Ulanzi ST-06S": 1794412940.6962595,
     "AULA MINI60 HE PRO": 1794302223.66585,
     "Maono Wave T5 Wireless Mic": 1793987285.4130383,
     "SAMSUNG DDR3 8GB 1600v": 1793987289.8200357,
@@ -3420,7 +3420,6 @@
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794411999.7818277
   },
   "published_post_keys": [
-    "couponsglobal:48818",
     "lodydeals:45574",
     "megaphonna:8595",
     "zedstoreonline:38537",
@@ -4419,11 +4418,12 @@
     "zedstoreonline:39887",
     "aniscoupons:34515",
     "aniscoupons:34516",
-    "aniscoupons:34517"
+    "aniscoupons:34517",
+    "zedstoreonline:39888"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794412755.036021,
+  "last_run_time": 1794412940.6962595,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
@@ -4450,8 +4450,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39887,
-      "last_check_time": 1794412001.8332038
+      "last_message_id": 39888,
+      "last_check_time": 1794412942.7591736
     },
     "aniscoupons": {
       "last_message_id": 34517,
@@ -20170,6 +20170,16 @@
       "price": 438.5,
       "timestamp": 1794412755.036021,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39888": {
+      "channel_msg_id": 2319,
+      "product_id": "1005003156756854",
+      "title": "حامل هاتف Ulanzi ST-06S",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39888,
+      "price": 11.2,
+      "timestamp": 1794412940.6962595,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20178,17 +20188,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794412758.022675,
+    "last_deal_post_time": 1794412944.3418887,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794412761.1099706,
+    "last_sweep_time": 1794412950.9699574,
     "last_sweep_times": {
-      "algeria": 1794412757.9941492,
-      "france": 1794412761.1099706
+      "algeria": 1794412944.3142154,
+      "france": 1794412950.9699574
     },
     "last_deal_post_times": {
-      "algeria": 1794412758.022675
+      "algeria": 1794412944.3418887
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
