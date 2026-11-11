@@ -802,7 +802,7 @@
     "9998886147": 1790946147.1871526,
     "999888777111": 1793964745.6295197,
     "9998886362": 1790946362.071869,
-    "1005012407874415": 1794131798.3098254,
+    "1005012407874415": 1794390776.9729664,
     "9998887189": 1790947189.8634577,
     "1005010428573334": 1790948755.0367405,
     "1005013146524028": 1791042354.706192,
@@ -1102,7 +1102,7 @@
     "1005009120899585": 1793613389.897003,
     "1005010620332784": 1793467334.18714,
     "1005013489523241": 1793467308.16315,
-    "1005013422094858": 1793541611.5548718,
+    "1005013422094858": 1794390757.7303157,
     "1005012959515066": 1793448809.122717,
     "9998882843": 1793282843.2823777,
     "9998883032": 1793283032.609285,
@@ -1373,7 +1373,7 @@
     "1005009111757092": 1793728859.1630292,
     "1005013030365524": 1794390200.6061625,
     "1005013199719142": 1793735684.5341609,
-    "1005013205365677": 1793736440.319658,
+    "1005013205365677": 1794390785.626018,
     "1005008429979494": 1793741666.9686077,
     "1005004795387201": 1793742770.1634803,
     "1005010702983351": 1794305193.7156484,
@@ -2433,7 +2433,8 @@
     "Baseus BS2 Lite",
     "حجز وتجدد كوبونات 11.11",
     "Huawei Pura 90s Pro Max 12/256GB",
-    "OnePlus 13"
+    "OnePlus 13",
+    "Oppo Find X10 Pro Max 12/256"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2515,7 +2516,7 @@
     "Essager 65W GaN USB": 1790949658.4852333,
     "Blackview LINK 1 Kids Tablets": 1791022250.7560554,
     "POCO X8 5G (6/128GB)": 1791189979.3835318,
-    "HONOR 600 PRO": 1790960475.7249138,
+    "HONOR 600 PRO": 1794390776.9729664,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
     "Xiaomi Pad 7 (12/256)": 1793956183.6769423,
@@ -2811,7 +2812,7 @@
     "Gigabyte B650M GAMING WIFI DDR5": 1793361992.1645038,
     "Honor 500 Pro 12/256GB": 1793467334.18714,
     "Honor Win Turbo 2 8/256": 1793282597.9316623,
-    "Honor Win RT2 12/256": 1793613440.9413722,
+    "Honor Win RT2 12/256": 1794390757.7303157,
     "ViVO X300E 12/256": 1793282624.5538614,
     "Oneplus 13T 12/256GB": 1793299421.73227,
     "Anker USB C GaN Charger 30W": 1793299440.1984155,
@@ -3387,12 +3388,10 @@
     "Baseus BS2 Lite": 1794349536.4429784,
     "حجز وتجدد كوبونات 11.11": 1794363974.314961,
     "Huawei Pura 90s Pro Max 12/256GB": 1794390200.6061625,
-    "OnePlus 13": 1794390398.1860356
+    "OnePlus 13": 1794390398.1860356,
+    "Oppo Find X10 Pro Max 12/256": 1794390785.626018
   },
   "published_post_keys": [
-    "aniscoupons:32783",
-    "lodydeals:45518",
-    "bnddeals:50844",
     "lodydeals:45464",
     "aniscoupons:33212",
     "zedstoreonline:38891",
@@ -4389,19 +4388,22 @@
     "lodydeals:46345",
     "aniscoupons:34484",
     "lodydeals:46346",
-    "aniscoupons:34485"
+    "aniscoupons:34485",
+    "lodydeals:46347",
+    "aniscoupons:34486",
+    "bnddeals:51275"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794390398.1860356,
+  "last_run_time": 1794390785.626018,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
       "last_check_time": 1794350628.34148
     },
     "lodydeals": {
-      "last_message_id": 46346,
-      "last_check_time": 1794390390.9059362
+      "last_message_id": 46347,
+      "last_check_time": 1794390759.782356
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4420,16 +4422,16 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39859,
-      "last_check_time": 1794390204.9392622
+      "last_message_id": 39861,
+      "last_check_time": 1794390770.14856
     },
     "aniscoupons": {
-      "last_message_id": 34485,
-      "last_check_time": 1794390400.2472374
+      "last_message_id": 34486,
+      "last_check_time": 1794390779.02848
     },
     "bnddeals": {
-      "last_message_id": 51274,
-      "last_check_time": 1794390408.200177
+      "last_message_id": 51275,
+      "last_check_time": 1794390787.6756587
     }
   },
   "published_product_prices": {
@@ -4492,7 +4494,7 @@
     "1005012504076921": 257.4,
     "1005008715050858": 6.4,
     "999888777111": 20.0,
-    "1005012407874415": 465.3,
+    "1005012407874415": 437.3,
     "1005013152491360": 166.0,
     "1005012925826589": 187.0,
     "1005012922578845": 213.77,
@@ -4713,7 +4715,7 @@
     "1005009120899585": 123.1,
     "1005010620332784": 480.0,
     "1005013489523241": 398.0,
-    "1005013422094858": 548.8,
+    "1005013422094858": 518.23,
     "1005012959515066": 226.2,
     "1005011638526553": 407.54,
     "1005010207075594": 424.0,
@@ -4962,7 +4964,7 @@
     "1005009111757092": 114.9,
     "1005013030365524": 646.41,
     "1005013199719142": 52.75,
-    "1005013205365677": 890.6,
+    "1005013205365677": 883.6,
     "1005008429979494": 72.7,
     "1005004795387201": 115.5,
     "1005010702983351": 67.6,
@@ -19847,6 +19849,36 @@
       "price": 440.3,
       "timestamp": 1794390398.1860356,
       "status": "ACTIVE"
+    },
+    "lodydeals:46347": {
+      "channel_msg_id": 2289,
+      "product_id": "1005013422094858",
+      "title": "Honor Win RT2 12/256",
+      "channel": "lodydeals",
+      "source_msg_id": 46347,
+      "price": 518.23,
+      "timestamp": 1794390757.7303157,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34486": {
+      "channel_msg_id": 2290,
+      "product_id": "1005012407874415",
+      "title": "HONOR 600 PRO",
+      "channel": "aniscoupons",
+      "source_msg_id": 34486,
+      "price": 437.3,
+      "timestamp": 1794390776.9729664,
+      "status": "ACTIVE"
+    },
+    "bnddeals:51275": {
+      "channel_msg_id": 2291,
+      "product_id": "1005013205365677",
+      "title": "Oppo Find X10 Pro Max 12/256",
+      "channel": "bnddeals",
+      "source_msg_id": 51275,
+      "price": 883.6,
+      "timestamp": 1794390785.626018,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19855,17 +19887,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794390408.25526,
+    "last_deal_post_time": 1794390787.72148,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794390564.9139304,
+    "last_sweep_time": 1794390791.4456668,
     "last_sweep_times": {
-      "algeria": 1794390562.1715684,
-      "france": 1794390564.9139304
+      "algeria": 1794390787.698802,
+      "france": 1794390791.4456668
     },
     "last_deal_post_times": {
-      "algeria": 1794390408.25526
+      "algeria": 1794390787.72148
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -19935,7 +19967,7 @@
     "9998889674": "test_channel",
     "1005007279793099": "zedstoreonline",
     "1005005824280128": "aniscoupons",
-    "1005012407874415": "zedstoreonline",
+    "1005012407874415": "aniscoupons",
     "1005006533038973": "pcgamingpart",
     "999888989": "test_channel",
     "9998881037": "test_channel",
@@ -20505,7 +20537,7 @@
     "1005009111757092": "lodydeals",
     "1005013030365524": "lodydeals",
     "1005013199719142": "ecksdeal",
-    "1005013205365677": "lodydeals",
+    "1005013205365677": "bnddeals",
     "1005008429979494": "lodydeals",
     "1005004795387201": "lodydeals",
     "1005010702983351": "aniscoupons",
@@ -20997,7 +21029,7 @@
     "Gigabyte B650M GAMING WIFI DDR5": "bnddeals",
     "Honor 500 Pro 12/256GB": "megaphonna",
     "Honor Win Turbo 2 8/256": "zedstoreonline",
-    "Honor Win RT2 12/256": "zedstoreonline",
+    "Honor Win RT2 12/256": "lodydeals",
     "ViVO X300E 12/256": "zedstoreonline",
     "Oneplus 13T 12/256GB": "zedstoreonline",
     "Soundcore Select 4 Go": "aniscoupons",
@@ -21571,7 +21603,8 @@
     "Baseus BS2 Lite": "zedstoreonline",
     "حجز وتجدد كوبونات 11.11": "zedstoreonline",
     "Huawei Pura 90s Pro Max 12/256GB": "lodydeals",
-    "OnePlus 13": "aniscoupons"
+    "OnePlus 13": "aniscoupons",
+    "Oppo Find X10 Pro Max 12/256": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22367,8 +22400,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "bnddeals:50980",
-    "zedstoreonline:39026",
     "megaphonna:8403",
     "zedstoreonline:38919",
     "couponsglobal:48874",
@@ -23366,7 +23397,9 @@
     "aniscoupons:34483",
     "zedstoreonline:39859",
     "bnddeals:51273",
-    "bnddeals:51274"
+    "bnddeals:51274",
+    "zedstoreonline:39860",
+    "zedstoreonline:39861"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
