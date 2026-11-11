@@ -747,7 +747,8 @@
     "1005012639349629",
     "1005010153422760",
     "1005012809141747",
-    "1005012912160949"
+    "1005012912160949",
+    "1005012167744546"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1510,7 +1511,8 @@
     "1005012639349629": 1794431418.716995,
     "1005010153422760": 1794432694.0507162,
     "1005012809141747": 1794436740.624044,
-    "1005012912160949": 1794437490.1572993
+    "1005012912160949": 1794437490.1572993,
+    "1005012167744546": 1794437860.4294534
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2849,7 +2851,7 @@
     "Oneplus ACE 6 Ultra 12/256GB": 1794412755.036021,
     "VIVO Y600 Pro 8/128": 1793278959.3832097,
     "Oppo Find X9 12/256": 1793521744.753259,
-    "Oppo Find X9s Pro 12/256": 1793278979.5236633,
+    "Oppo Find X9s Pro 12/256": 1794437860.4294534,
     "POCO F7  12/256": 1793399509.450536,
     "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz": 1794312958.7225254,
     "AMD Ryzen 9 9900X": 1793555278.3251228,
@@ -3470,7 +3472,6 @@
     "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794437490.1572993
   },
   "published_post_keys": [
-    "megaphonna:8427",
     "couponsglobal:48798",
     "zedstoreonline:38831",
     "lodydeals:45462",
@@ -4469,11 +4470,12 @@
     "aniscoupons:34598",
     "zedstoreonline:39928",
     "aniscoupons:34600",
-    "aniscoupons:34601"
+    "aniscoupons:34601",
+    "aniscoupons:34602"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794437490.1572993,
+  "last_run_time": 1794437860.4294534,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4504,8 +4506,8 @@
       "last_check_time": 1794437134.8889828
     },
     "aniscoupons": {
-      "last_message_id": 34601,
-      "last_check_time": 1794437492.1973388
+      "last_message_id": 34602,
+      "last_check_time": 1794437862.4842699
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5154,7 +5156,8 @@
     "1005012639349629": 378.14,
     "1005010153422760": 58.7,
     "1005012809141747": 349.4,
-    "1005012912160949": 370.5
+    "1005012912160949": 370.5,
+    "1005012167744546": 558.49
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -20989,6 +20992,16 @@
       "price": 370.5,
       "timestamp": 1794437490.1572993,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34602": {
+      "channel_msg_id": 2397,
+      "product_id": "1005012167744546",
+      "title": "Oppo Find X9s Pro 12/256",
+      "channel": "aniscoupons",
+      "source_msg_id": 34602,
+      "price": 558.49,
+      "timestamp": 1794437860.4294534,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20997,17 +21010,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794437493.0512538,
+    "last_deal_post_time": 1794437863.3205383,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794437495.5055237,
+    "last_sweep_time": 1794437865.676507,
     "last_sweep_times": {
-      "algeria": 1794437493.0340297,
-      "france": 1794437495.5055237
+      "algeria": 1794437863.2982867,
+      "france": 1794437865.676507
     },
     "last_deal_post_times": {
-      "algeria": 1794437493.0512538
+      "algeria": 1794437863.3205383
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21770,7 +21783,8 @@
     "1005012639349629": "aniscoupons",
     "1005010153422760": "zedstoreonline",
     "1005012809141747": "aniscoupons",
-    "1005012912160949": "aniscoupons"
+    "1005012912160949": "aniscoupons",
+    "1005012167744546": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -22136,7 +22150,7 @@
     "Oneplus ACE 6 Ultra 12/256GB": "aniscoupons",
     "VIVO Y600 Pro 8/128": "zedstoreonline",
     "Oppo Find X9 12/256": "zedstoreonline",
-    "Oppo Find X9s Pro 12/256": "zedstoreonline",
+    "Oppo Find X9s Pro 12/256": "aniscoupons",
     "POCO F7  12/256": "zedstoreonline",
     "KingSpec Memory DDR5  32GB(16GBX2) 6000MHz": "aniscoupons",
     "AMD Ryzen 9 9900X": "lodydeals",
