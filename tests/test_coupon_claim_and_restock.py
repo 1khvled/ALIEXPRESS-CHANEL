@@ -2,6 +2,7 @@ import pytest
 from datetime import datetime, timezone, timedelta
 from app.aliexpress.parser import is_coupon_claim_post
 from app.ai.generator import format_coupon_claim_caption
+from app.config.settings import settings
 from app.publisher.state_tracker import (
     is_coupon_restock_time_window,
     is_coupon_restock_alert_eligible,
@@ -79,6 +80,26 @@ def test_format_coupon_claim_caption():
     assert "https://t.me/Alilo07BOT" in cap
     assert "@DzAliexpress0" in cap
     assert "ضع البلد الجزائر" in cap
+
+
+def test_coupon_claim_posting_is_opt_in_and_disabled_by_default():
+    """A coupon wall is not a deal: the sniffer must be silent unless enabled."""
+    import asyncio
+
+    from scripts.post_recent_deals import publish_incoming_coupon_claim_post
+
+    assert settings.COUPON_CLAIM_POSTS_ENABLED is False
+    posted = asyncio.run(
+        publish_incoming_coupon_claim_post(
+            raw_text=(
+                "🔥 توفرت الكوبونات الآن رسمياً!\n"
+                "رابط صفحة الكوبونات : https://s.click.aliexpress.com/e/_c4Up4ucr"
+            ),
+            source_channel="zedstoreonline",
+            source_msg_id=1,
+        )
+    )
+    assert posted is False
 
 
 def test_coupon_restock_time_window():

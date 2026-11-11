@@ -166,7 +166,15 @@ async def publish_incoming_coupon_claim_post(raw_text: str, source_channel: str,
     - Replaces competitor channel/bot mentions.
     - Deduplicates via record_coupon_restock_alert_published (once per morning).
     - Auto-publishes to Telegram channel @DzAliexpress0.
+    - Disabled by default: set COUPON_CLAIM_POSTS_ENABLED=true to opt in.
     """
+    if not bool(getattr(settings, "COUPON_CLAIM_POSTS_ENABLED", False)):
+        logger.info(
+            f"Coupon-claim post skipped ({source_channel} #{source_msg_id}): "
+            "COUPON_CLAIM_POSTS_ENABLED is false"
+        )
+        return False
+
     try:
         from app.aliexpress.urls import extract_all_urls, is_aliexpress_url, is_potential_shortener
         from app.aliexpress.affiliate import affiliate_service
@@ -684,8 +692,19 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                             continue
 
                     # Check: Coupon Claim / Reservation Post (e.g. 09:00 AM restock links, claim center)
+                    # Opt-in only: a coupon wall is not a deal. When disabled we mark the
+                    # post handled and skip it entirely (never fall through to extraction).
                     from app.aliexpress.parser import is_coupon_claim_post
                     if is_coupon_claim_post(raw_text):
+                        if not bool(getattr(settings, "COUPON_CLAIM_POSTS_ENABLED", False)):
+                            logger.info(
+                                f"Skipping coupon-claim post {ch} #{msg_id} "
+                                "(COUPON_CLAIM_POSTS_ENABLED is false)"
+                            )
+                            max_processed_id = max(max_processed_id, msg_id)
+                            record_monitored_channel_last_id(ch, msg_id)
+                            record_post_handled(ch, msg_id)
+                            continue
                         published_claim = await publish_incoming_coupon_claim_post(
                             raw_text=raw_text,
                             source_channel=ch,

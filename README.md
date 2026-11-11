@@ -48,6 +48,7 @@ An autonomous, end-to-end deal intelligence, normalization, and multi-channel pu
 ### 5. Deactivation of Spontaneous Promo Coupon Walls
 * **Disabled Auto-Tajmi3at**: Removed the automated cron trigger in `.github/workflows/tajmi3at.yml`. Multi-deal roundups and coupon compilations only run on manual workflow dispatch.
 * **Disabled Scraper Coupon Pinning**: Removed `ensure_active_promo_coupons_pinned` from the background scraper loop in `app/publisher/promo_notifiers.py` to prevent spontaneous spam of repetitive coupon bulletin posters.
+* **Coupon-claim sniffer is opt-in (`COUPON_CLAIM_POSTS_ENABLED=false` by default).** A missing `json` import had silently broken this path; restoring the import briefly re-enabled it on 11 Nov 03:26 (one coupon wall posted, then deleted). A coupon wall is not a deal: when the flag is off the post is marked handled and skipped, never re-published.
 
 ### 6. Admin Chat Isolation & Security
 * **Zero DM Leaks**: Removed any debug inspection scripts forwarding test channel messages to the user's private Telegram bot chat (`ADMIN_USER_ID`).
@@ -198,7 +199,7 @@ python -m pytest tests/test_deal_formatting_and_france.py -v
 # Run duplicate detection and cooldown tests
 python -m pytest tests/test_duplicates.py -v
 
-# Run the complete test suite (285 tests, fully offline, ~37s)
+# Run the complete test suite (286 tests, fully offline, ~37s)
 python -m pytest tests/ -v
 
 # Static gate: fails on any undefined name in app/, api/, scripts/, infra/

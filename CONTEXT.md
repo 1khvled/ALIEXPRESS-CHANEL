@@ -208,7 +208,7 @@ app/
 
 scripts/                 One entry point per job (see §3); all add repo root to sys.path
 infra/aws/               Phase-2 runtime: CloudFormation, Dockerfile, Lambda handler, deploy scripts
-tests/                   pytest suite (285 tests, offline)
+tests/                   pytest suite (286 tests, offline)
 storage/state/           Committed JSON state (see §6)
 assets/                  Brand banners used by the publishers
 deals.db                 LOCAL ONLY — gitignored and excluded from Vercel (§7)
@@ -330,7 +330,7 @@ python -m app.control.controller apply --actor "$USER"      # write control_stat
 
 ## 9. Testing and quality gates
 
-**285 tests, all offline** (no network, no tokens, no DB writes required) — `python -m pytest tests/ -q` runs in ~37s.
+**286 tests, all offline** (no network, no tokens, no DB writes required) — `python -m pytest tests/ -q` runs in ~37s.
 
 Two CI gates:
 
@@ -375,7 +375,23 @@ proposals with explicit reasons, and `apply` that writes
 (6-hourly read-only health check; manual `report`/`propose`/`apply`; `propose`
 opens a PR for review). The gate clamps overrides to hard bounds.
 
-Tests: 232 → **285**.
+Tests: 232 → **286**.
+
+### 11 Nov 2026 — coupon-claim wall incident (post-deploy fix)
+
+The first run after the undefined-name sweep posted one Arabic coupon wall to
+`@DzAliexpress0` (message #2276, source `@zedstoreonline` #39827). Cause: the
+`json` import restored in `scripts/post_recent_deals.py` revived
+`publish_incoming_coupon_claim_post`, a dormant "claim center" path that had
+been silently failing with `NameError` inside its `except`. It was never
+disabled on purpose by the earlier coupon-wall cleanup, because that cleanup
+only touched `ensure_active_promo_coupons_pinned`.
+
+Fix: `COUPON_CLAIM_POSTS_ENABLED` (default **false**). When false the branch
+marks the source post handled and skips it entirely — it never falls through to
+normal extraction, so it cannot be republished as a coupon list. The incident
+message was deleted. No other posting path was affected: the remaining fixed
+names touch the web API, the admin bot, France card images and a manual helper.
 
 ### 11 Nov 2026 — silent-failure sweep
 Nine undefined-name defects fixed across four files. None could be caught by `py_compile`; each was a latent `NameError` inside a handler that swallowed it.

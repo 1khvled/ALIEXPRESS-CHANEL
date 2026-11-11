@@ -52,6 +52,12 @@ class Settings(BaseSettings):
     NEVER_REPEAT_DUPLICATES: bool = False
     EUR_USD_RATE: float = 0.92
 
+    # Coupon walls / claim-center bulletins are opt-in only (user policy).
+    # The real-time claim sniffer was silently broken (NameError) and started
+    # posting again once the missing import was restored; keep it off by
+    # default so the channel only carries real deals.
+    COUPON_CLAIM_POSTS_ENABLED: bool = False
+
     # Deterministic deal intelligence (no LLM, no network, no external service)
     INTELLIGENCE_MODE: Literal["off", "shadow", "enforce"] = "shadow"
     INTELLIGENCE_HOLD_ACTION: Literal["publish", "skip"] = "publish"
