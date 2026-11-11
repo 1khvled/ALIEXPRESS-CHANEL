@@ -733,7 +733,8 @@
     "1005009104334975",
     "1005012474727998",
     "1005006807619368",
-    "1005010653559191"
+    "1005010653559191",
+    "COUPON_CLAIM_zedstoreonline_39827"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1482,7 +1483,8 @@
     "1005009104334975": 1794314237.0165172,
     "1005012474727998": 1794320674.833981,
     "1005006807619368": 1794344038.7678037,
-    "1005010653559191": 1794349536.4429784
+    "1005010653559191": 1794349536.4429784,
+    "COUPON_CLAIM_zedstoreonline_39827": 1794363974.314961
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2428,7 +2430,8 @@
     "Kingston DataTraveler 128GB",
     "CUSU CV3500  M.2 NVMe SSD (1tb)",
     "Kootion X15 M.2 NVMe 256GB",
-    "Baseus BS2 Lite"
+    "Baseus BS2 Lite",
+    "حجز وتجدد كوبونات 11.11"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3379,10 +3382,10 @@
     "Kingston DataTraveler 128GB": 1794344038.7678037,
     "CUSU CV3500  M.2 NVMe SSD (1tb)": 1794344399.896034,
     "Kootion X15 M.2 NVMe 256GB": 1794346230.0535362,
-    "Baseus BS2 Lite": 1794349536.4429784
+    "Baseus BS2 Lite": 1794349536.4429784,
+    "حجز وتجدد كوبونات 11.11": 1794363974.314961
   },
   "published_post_keys": [
-    "ecksdeal:5976",
     "zedstoreonline:38852",
     "zedstoreonline:38821",
     "lodydeals:45900",
@@ -4381,11 +4384,12 @@
     "zedstoreonline:39841",
     "zedstoreonline:39842",
     "zedstoreonline:39843",
-    "aniscoupons:34469"
+    "aniscoupons:34469",
+    "zedstoreonline:39827"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794349724.9598093,
+  "last_run_time": 1794363974.314961,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
@@ -4413,7 +4417,7 @@
     },
     "zedstoreonline": {
       "last_message_id": 39843,
-      "last_check_time": 1794349538.4918828
+      "last_check_time": 1794363974.34747
     },
     "aniscoupons": {
       "last_message_id": 34470,
@@ -19729,6 +19733,16 @@
       "price": 340.3,
       "timestamp": 1794349724.9598093,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39827": {
+      "channel_msg_id": 2276,
+      "product_id": "COUPON_CLAIM_zedstoreonline_39827",
+      "title": "حجز وتجدد كوبونات 11.11",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39827,
+      "price": null,
+      "timestamp": 1794363974.314961,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19737,17 +19751,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794349727.9070163,
+    "last_deal_post_time": 1794363975.8108883,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794363790.4368129,
+    "last_sweep_time": 1794363979.4298935,
     "last_sweep_times": {
-      "algeria": 1794363787.8413422,
-      "france": 1794363790.4368129
+      "algeria": 1794363975.7790134,
+      "france": 1794363979.4298935
     },
     "last_deal_post_times": {
-      "algeria": 1794349727.9070163
+      "algeria": 1794363975.8108883
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20496,7 +20510,8 @@
     "1005009104334975": "zedstoreonline",
     "1005012474727998": "zedstoreonline",
     "1005006807619368": "aniscoupons",
-    "1005010653559191": "zedstoreonline"
+    "1005010653559191": "zedstoreonline",
+    "COUPON_CLAIM_zedstoreonline_39827": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -21449,7 +21464,8 @@
     "Kingston DataTraveler 128GB": "aniscoupons",
     "CUSU CV3500  M.2 NVMe SSD (1tb)": "aniscoupons",
     "Kootion X15 M.2 NVMe 256GB": "lodydeals",
-    "Baseus BS2 Lite": "zedstoreonline"
+    "Baseus BS2 Lite": "zedstoreonline",
+    "حجز وتجدد كوبونات 11.11": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22244,7 +22260,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8712",
     "aniscoupons:33099",
     "alidealsdz:134",
     "pcgamingpart:7966",
@@ -23243,7 +23258,8 @@
     "zedstoreonline:39840",
     "aniscoupons:34468",
     "ecksdeal:6054",
-    "aniscoupons:34470"
+    "aniscoupons:34470",
+    "zedstoreonline:39827"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
@@ -23806,5 +23822,8 @@
     "headsets_&_audio": 1793600442.6369503,
     "pc_parts_&_cpus": 1793600442.6369503,
     "chargers_&_power": 1793600442.6369503
+  },
+  "coupon_restock_alerts_history": {
+    "restock_alert": "2026-11-11"
   }
 }
