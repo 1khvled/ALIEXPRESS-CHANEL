@@ -32,11 +32,17 @@
       "published": 0,
       "skipped": 0,
       "ewma": 0.5
+    },
+    "bnddeals": {
+      "seen": 1,
+      "published": 0,
+      "skipped": 0,
+      "ewma": 0.5
     }
   },
   "category_stats": {
     "other": {
-      "seen": 1,
+      "seen": 2,
       "published": 1,
       "skipped": 0,
       "ewma": 0.54
@@ -54,14 +60,14 @@
     ]
   },
   "counters": {
-    "scored": 2,
-    "verdict_publish": 2,
+    "scored": 3,
+    "verdict_publish": 3,
     "verdict_hold": 0,
     "verdict_skip": 0,
     "published": 1,
     "skipped": 0
   },
-  "score_sum": 149.69,
+  "score_sum": 237.3,
   "recent_decisions": [
     {
       "ts": 1794383955,
@@ -78,7 +84,15 @@
       "product_id": "1005007162099601",
       "score": 88.18,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794385057,
+      "channel": "bnddeals",
+      "category": "other",
+      "product_id": "1005007027334636",
+      "score": 87.61,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794384882.1568747
+  "updated_at": 1794385057.6345754
 }
