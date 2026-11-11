@@ -756,7 +756,7 @@
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
-    "1005007805638431": 1794310187.5175397,
+    "1005007805638431": 1794433619.5688288,
     "1005009054706827": 1794307249.1472638,
     "1005007961216287": 1791942616.1564767,
     "1005009627597591": 1793542398.3843465,
@@ -3414,7 +3414,7 @@
     "CUSU CV3500Q 2TB M.2": 1794305012.9961731,
     "MACHENIKE G5Pro Max SE With Charging Dock": 1794430876.2525523,
     "Xiaoxin Pad Pro GT (8/256)": 1794308897.9947796,
-    "Attack Shark X11": 1794310187.5175397,
+    "Attack Shark X11": 1794433619.5688288,
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794310928.9154878,
     "MAONO PD100W USB Wireless Dynamic": 1794432872.6767933,
     "MAONO Wave T1 Mini Pro": 1794425282.6782186,
@@ -3462,7 +3462,6 @@
     "DJI Osmo mobile": 1794432694.0507162
   },
   "published_post_keys": [
-    "lodydeals:45403",
     "test_channel:1792185128",
     "zedstoreonline:38689",
     "zedstoreonline:38967",
@@ -4461,19 +4460,20 @@
     "aniscoupons:34586",
     "aniscoupons:34587",
     "zedstoreonline:39925",
-    "aniscoupons:34588"
+    "aniscoupons:34588",
+    "aniscoupons:34589"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794433423.9855666,
+  "last_run_time": 1794433619.5688288,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
       "last_check_time": 1794419029.2500024
     },
     "lodydeals": {
-      "last_message_id": 46389,
-      "last_check_time": 1794433051.8730009
+      "last_message_id": 46390,
+      "last_check_time": 1794433612.1339934
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4492,12 +4492,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39925,
-      "last_check_time": 1794433246.254014
+      "last_message_id": 39926,
+      "last_check_time": 1794433615.8588262
     },
     "aniscoupons": {
-      "last_message_id": 34588,
-      "last_check_time": 1794433426.030661
+      "last_message_id": 34589,
+      "last_check_time": 1794433621.633387
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -20859,6 +20859,16 @@
       "price": 37.5,
       "timestamp": 1794433423.9855666,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34589": {
+      "channel_msg_id": 2385,
+      "product_id": "1005007805638431",
+      "title": "Attack Shark X11",
+      "channel": "aniscoupons",
+      "source_msg_id": 34589,
+      "price": 21.2,
+      "timestamp": 1794433619.5688288,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20867,17 +20877,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794433426.8174994,
+    "last_deal_post_time": 1794433622.5807264,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794433429.093181,
+    "last_sweep_time": 1794433625.441185,
     "last_sweep_times": {
-      "algeria": 1794433426.7983944,
-      "france": 1794433429.093181
+      "algeria": 1794433622.5528557,
+      "france": 1794433625.441185
     },
     "last_deal_post_times": {
-      "algeria": 1794433426.8174994
+      "algeria": 1794433622.5807264
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23415,7 +23425,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:5953",
     "megaphonna:8754",
     "ecksdeal:5914",
     "megaphonna:8612",
@@ -24414,7 +24423,8 @@
     "aniscoupons:34573",
     "aniscoupons:34574",
     "aniscoupons:34583",
-    "aniscoupons:34584"
+    "aniscoupons:34584",
+    "zedstoreonline:39926"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
