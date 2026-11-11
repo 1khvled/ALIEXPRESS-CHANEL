@@ -1088,7 +1088,7 @@
     "9998886358": 1793276358.3466215,
     "1005013170854617": 1793969543.5771117,
     "1005010172572484": 1793521744.753259,
-    "1005012167596439": 1793380498.9399478,
+    "1005012167596439": 1794394415.6108775,
     "1005005209037696": 1793399509.450536,
     "1005007145755647": 1794312958.7225254,
     "1005011559072337": 1793613486.2912338,
@@ -2443,7 +2443,8 @@
     "Oppo Find X10 Pro Max 12/256",
     "OnePlus ACE 6 Ultra 12/256",
     "iQOO Neo 11 Ultra",
-    "ONEPLUS 15 Global Rom 12/256"
+    "ONEPLUS 15 Global Rom 12/256",
+    "OPPO FIND X9s Pro"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3401,10 +3402,10 @@
     "Oppo Find X10 Pro Max 12/256": 1794390785.626018,
     "OnePlus ACE 6 Ultra 12/256": 1794390920.4038398,
     "iQOO Neo 11 Ultra": 1794391855.282333,
-    "ONEPLUS 15 Global Rom 12/256": 1794393509.614562
+    "ONEPLUS 15 Global Rom 12/256": 1794393509.614562,
+    "OPPO FIND X9s Pro": 1794394415.6108775
   },
   "published_post_keys": [
-    "zedstoreonline:38694",
     "couponsglobal:48787",
     "aniscoupons:32781",
     "aniscoupons:32788",
@@ -4403,11 +4404,12 @@
     "aniscoupons:34490",
     "aniscoupons:34494",
     "lodydeals:46351",
-    "aniscoupons:34497"
+    "aniscoupons:34497",
+    "bnddeals:51289"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794393509.614562,
+  "last_run_time": 1794394415.6108775,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
@@ -4442,8 +4444,8 @@
       "last_check_time": 1794393511.674772
     },
     "bnddeals": {
-      "last_message_id": 51288,
-      "last_check_time": 1794394066.2644923
+      "last_message_id": 51289,
+      "last_check_time": 1794394417.6508582
     }
   },
   "published_product_prices": {
@@ -4712,7 +4714,7 @@
     "1005012199872142": 438.5,
     "1005013170854617": 258.8,
     "1005010172572484": 513.7,
-    "1005012167596439": 594.0,
+    "1005012167596439": 553.5,
     "1005005209037696": 328.0,
     "1005007145755647": 356.9,
     "1005011559072337": 313.9,
@@ -19964,6 +19966,16 @@
       "price": 581.4,
       "timestamp": 1794393509.614562,
       "status": "ACTIVE"
+    },
+    "bnddeals:51289": {
+      "channel_msg_id": 2299,
+      "product_id": "1005012167596439",
+      "title": "OPPO FIND X9s Pro",
+      "channel": "bnddeals",
+      "source_msg_id": 51289,
+      "price": 553.5,
+      "timestamp": 1794394415.6108775,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19972,17 +19984,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794393517.400553,
+    "last_deal_post_time": 1794394417.6855984,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794394236.8268042,
+    "last_sweep_time": 1794394420.6431165,
     "last_sweep_times": {
-      "algeria": 1794394233.1832743,
-      "france": 1794394236.8268042
+      "algeria": 1794394417.6679997,
+      "france": 1794394420.6431165
     },
     "last_deal_post_times": {
-      "algeria": 1794393517.400553
+      "algeria": 1794394417.6855984
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20345,7 +20357,7 @@
     "9998886358": "test_channel",
     "1005013170854617": "aniscoupons",
     "1005010172572484": "zedstoreonline",
-    "1005012167596439": "megaphonna",
+    "1005012167596439": "bnddeals",
     "1005005209037696": "zedstoreonline",
     "1005007145755647": "aniscoupons",
     "1005011559072337": "zedstoreonline",
@@ -21695,7 +21707,8 @@
     "Oppo Find X10 Pro Max 12/256": "bnddeals",
     "OnePlus ACE 6 Ultra 12/256": "zedstoreonline",
     "iQOO Neo 11 Ultra": "aniscoupons",
-    "ONEPLUS 15 Global Rom 12/256": "aniscoupons"
+    "ONEPLUS 15 Global Rom 12/256": "aniscoupons",
+    "OPPO FIND X9s Pro": "bnddeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
