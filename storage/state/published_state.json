@@ -4422,8 +4422,8 @@
   "last_run_time": 1794407013.7230165,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6054,
-      "last_check_time": 1794350628.34148
+      "last_message_id": 6055,
+      "last_check_time": 1794407600.0378215
     },
     "lodydeals": {
       "last_message_id": 46354,
@@ -20098,10 +20098,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794407393.493191,
+    "last_sweep_time": 1794407606.2281177,
     "last_sweep_times": {
-      "algeria": 1794407390.3506515,
-      "france": 1794407393.493191
+      "algeria": 1794407603.4009216,
+      "france": 1794407606.2281177
     },
     "last_deal_post_times": {
       "algeria": 1794407019.4487538
@@ -22613,13 +22613,12 @@
     "LAUNCH_ALERT_Brand Day Novembre 2026_20261109",
     "LAUNCH_ALERT_11.11 Global Shopping Festival Main Sale 2026_20261111"
   ],
-  "last_card_affiliate_time_dz": 1794321027.1142852,
-  "card_affiliate_variant_idx_dz": 0,
+  "last_card_affiliate_time_dz": 1794407567.9410257,
+  "card_affiliate_variant_idx_dz": 1,
   "last_tajmi3at_published_time": 1793910650.2404215,
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:5934",
     "megaphonna:8558",
     "megaphonna:8418",
     "lodydeals:45595",
@@ -23618,7 +23617,8 @@
     "zedstoreonline:39883",
     "aniscoupons:34510",
     "zedstoreonline:39884",
-    "lodydeals:46353"
+    "lodydeals:46353",
+    "ecksdeal:6055"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
