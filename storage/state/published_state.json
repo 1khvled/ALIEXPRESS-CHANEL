@@ -926,7 +926,7 @@
     "9998887532": 1791627532.2548609,
     "9998887893": 1791627893.027416,
     "1005006007773971": 1791638433.4352653,
-    "1005013067004815": 1792437008.1245751,
+    "1005013067004815": 1794400568.4819298,
     "9998885318": 1791675318.975821,
     "9998885569": 1791675569.6911583,
     "COUPONS_54d30f00": 1791676848.283345,
@@ -2446,7 +2446,8 @@
     "ONEPLUS 15 Global Rom 12/256",
     "OPPO FIND X9s Pro",
     "Vivo X300  12/256GB",
-    "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD"
+    "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD",
+    "Electronic Body Scale"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3407,10 +3408,10 @@
     "ONEPLUS 15 Global Rom 12/256": 1794393509.614562,
     "OPPO FIND X9s Pro": 1794394415.6108775,
     "Vivo X300  12/256GB": 1794394604.3664222,
-    "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD": 1794396619.5833008
+    "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD": 1794396619.5833008,
+    "Electronic Body Scale": 1794400568.4819298
   },
   "published_post_keys": [
-    "bnddeals:50790",
     "lodydeals:45537",
     "megaphonna:8589",
     "pcgamingpart:7950",
@@ -4409,11 +4410,12 @@
     "aniscoupons:34502",
     "aniscoupons:34503",
     "aniscoupons:34504",
-    "aniscoupons:34507"
+    "aniscoupons:34507",
+    "aniscoupons:34508"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794400361.8866153,
+  "last_run_time": 1794400568.4819298,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
@@ -4444,8 +4446,8 @@
       "last_check_time": 1794400172.379467
     },
     "aniscoupons": {
-      "last_message_id": 34507,
-      "last_check_time": 1794400363.9398046
+      "last_message_id": 34508,
+      "last_check_time": 1794400570.546945
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4629,7 +4631,7 @@
     "1005010289640412": 32.06,
     "1005013313539058": 6.52,
     "1005006007773971": 54.15,
-    "1005013067004815": 6.8,
+    "1005013067004815": 6.7,
     "1005006966177706": 2.29,
     "1005012234106869": 1.71,
     "1005010209307090": 190.5,
@@ -20050,6 +20052,16 @@
       "price": 66.7,
       "timestamp": 1794400361.8866153,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34508": {
+      "channel_msg_id": 2307,
+      "product_id": "1005013067004815",
+      "title": "Electronic Body Scale",
+      "channel": "aniscoupons",
+      "source_msg_id": 34508,
+      "price": 6.7,
+      "timestamp": 1794400568.4819298,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20058,17 +20070,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794400364.6883743,
+    "last_deal_post_time": 1794400571.4410052,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794400372.324887,
+    "last_sweep_time": 1794400575.238077,
     "last_sweep_times": {
-      "algeria": 1794400364.6655908,
-      "france": 1794400372.324887
+      "algeria": 1794400571.4134028,
+      "france": 1794400575.238077
     },
     "last_deal_post_times": {
-      "algeria": 1794400364.6883743
+      "algeria": 1794400571.4410052
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21784,7 +21796,8 @@
     "ONEPLUS 15 Global Rom 12/256": "aniscoupons",
     "OPPO FIND X9s Pro": "bnddeals",
     "Vivo X300  12/256GB": "bnddeals",
-    "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD": "zedstoreonline"
+    "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD": "zedstoreonline",
+    "Electronic Body Scale": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
