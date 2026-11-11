@@ -743,7 +743,8 @@
     "1005006257950849",
     "1005013391950901",
     "1005007477084001",
-    "1005008774483451"
+    "1005008774483451",
+    "1005012639349629"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1121,7 +1122,7 @@
     "1005013351519067": 1793448628.3734028,
     "1005012484784752": 1794253893.3396604,
     "1005013222140851": 1793467234.8425448,
-    "1005013438245033": 1793299536.9978156,
+    "1005013438245033": 1794431410.6893005,
     "1005008986635164": 1793314892.9200466,
     "1005008327980403": 1794430852.2821708,
     "1005012838686691": 1793384191.3385255,
@@ -1502,7 +1503,8 @@
     "1005006257950849": 1794420680.672656,
     "1005013391950901": 1794420685.287832,
     "1005007477084001": 1794420689.8352551,
-    "1005008774483451": 1794426765.2023578
+    "1005008774483451": 1794426765.2023578,
+    "1005012639349629": 1794431418.716995
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2856,7 +2858,7 @@
     "ViVO X300E 12/256": 1793282624.5538614,
     "Oneplus 13T 12/256GB": 1793299421.73227,
     "Anker USB C GaN Charger 30W": 1793299440.1984155,
-    "Realme GT8": 1793299454.8390412,
+    "Realme GT8": 1794431410.6893005,
     "Realme C100  6/128GB": 1793448628.3734028,
     "معالج Ryzen 5 5600XT": 1793299476.5930903,
     "معالج Ryzen 7 5700X": 1793732353.5932157,
@@ -3019,7 +3021,7 @@
     "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": 1793490079.2945042,
     "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": 1793490090.28376,
     "POCO Pad C1 4/64": 1793490102.028307,
-    "IQOO Z11 Turbo": 1794213670.2477903,
+    "IQOO Z11 Turbo": 1794431418.716995,
     "Vivo X300 5G 12/256GB": 1793540023.002178,
     "VIVO X300 Pro China Version 50MP OIS 6.78 Inch AMOLED 120Hz Dimensity9500": 1793540051.7895243,
     "VIVO IQOO Z11 TURBO (12/256)": 1793540059.832893,
@@ -3454,8 +3456,6 @@
     "KOOTION M.2 512GB 7200Mbs": 1794430852.2821708
   },
   "published_post_keys": [
-    "aniscoupons:33269",
-    "zedstoreonline:38826",
     "zedstoreonline:38620",
     "lodydeals:45415",
     "zedstoreonline:38848",
@@ -4453,11 +4453,13 @@
     "zedstoreonline:39920",
     "aniscoupons:34571",
     "aniscoupons:34572",
-    "aniscoupons:34579"
+    "aniscoupons:34579",
+    "aniscoupons:34576",
+    "aniscoupons:34577"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794431224.823109,
+  "last_run_time": 1794431418.716995,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4484,12 +4486,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39921,
-      "last_check_time": 1794430865.9518647
+      "last_message_id": 39922,
+      "last_check_time": 1794431397.2578402
     },
     "aniscoupons": {
       "last_message_id": 34579,
-      "last_check_time": 1794431226.9433973
+      "last_check_time": 1794431418.716995
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4785,7 +4787,7 @@
     "1005012484784752": 98.79,
     "1005013222140851": 71.12,
     "1005010355409000": 494.2,
-    "1005013438245033": 412.0,
+    "1005013438245033": 408.73,
     "1005008986635164": 185.9,
     "1005008327980403": 83.31,
     "1005012838686691": 140.98,
@@ -5134,7 +5136,8 @@
     "1005013399086495": 758.3,
     "1005006257950849": 5.6,
     "1005013391950901": 1.11,
-    "1005007477084001": 18.78
+    "1005007477084001": 18.78,
+    "1005012639349629": 378.14
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -20719,6 +20722,26 @@
       "price": 78.4,
       "timestamp": 1794431224.823109,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34576": {
+      "channel_msg_id": 2372,
+      "product_id": "1005013438245033",
+      "title": "Realme GT8",
+      "channel": "aniscoupons",
+      "source_msg_id": 34576,
+      "price": 408.73,
+      "timestamp": 1794431410.6893005,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34577": {
+      "channel_msg_id": 2373,
+      "product_id": "1005012639349629",
+      "title": "IQOO Z11 Turbo",
+      "channel": "aniscoupons",
+      "source_msg_id": 34577,
+      "price": 378.14,
+      "timestamp": 1794431418.716995,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20727,17 +20750,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794431227.8812015,
+    "last_deal_post_time": 1794431425.4264438,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794431230.2834842,
+    "last_sweep_time": 1794431427.8240037,
     "last_sweep_times": {
-      "algeria": 1794431227.8510106,
-      "france": 1794431230.2834842
+      "algeria": 1794431425.3973634,
+      "france": 1794431427.8240037
     },
     "last_deal_post_times": {
-      "algeria": 1794431227.8812015
+      "algeria": 1794431425.4264438
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21127,7 +21150,7 @@
     "1005012484784752": "aniscoupons",
     "1005013222140851": "bnddeals",
     "1005010355409000": "aniscoupons",
-    "1005013438245033": "megaphonna",
+    "1005013438245033": "aniscoupons",
     "1005008986635164": "aniscoupons",
     "1005008327980403": "lodydeals",
     "1005012838686691": "lodydeals",
@@ -21496,7 +21519,8 @@
     "1005006257950849": "lodydeals",
     "1005013391950901": "lodydeals",
     "1005007477084001": "lodydeals",
-    "1005008774483451": "zedstoreonline"
+    "1005008774483451": "zedstoreonline",
+    "1005012639349629": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -23271,9 +23295,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "bnddeals:50897",
-    "zedstoreonline:38714",
-    "megaphonna:8560",
     "megaphonna:8472",
     "aniscoupons:33192",
     "ecksdeal:5953",
@@ -24270,7 +24291,10 @@
     "lodydeals:46379",
     "zedstoreonline:39921",
     "aniscoupons:34570",
-    "aniscoupons:34575"
+    "aniscoupons:34575",
+    "zedstoreonline:39922",
+    "aniscoupons:34573",
+    "aniscoupons:34574"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,

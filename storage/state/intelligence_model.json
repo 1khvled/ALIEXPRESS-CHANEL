@@ -40,18 +40,18 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 74,
-      "published": 57,
+      "seen": 78,
+      "published": 59,
       "skipped": 0,
-      "ewma": 0.9956
+      "ewma": 0.9963
     }
   },
   "category_stats": {
     "other": {
-      "seen": 40,
-      "published": 33,
+      "seen": 41,
+      "published": 34,
       "skipped": 0,
-      "ewma": 0.9682
+      "ewma": 0.9707
     },
     "pc": {
       "seen": 29,
@@ -60,10 +60,10 @@
       "ewma": 0.8568
     },
     "phones": {
-      "seen": 64,
-      "published": 31,
+      "seen": 67,
+      "published": 32,
       "skipped": 0,
-      "ewma": 0.9624
+      "ewma": 0.9654
     },
     "home": {
       "seen": 5,
@@ -324,17 +324,23 @@
     ],
     "1005009662812027": [
       78.4
+    ],
+    "1005013438245033": [
+      408.73
+    ],
+    "1005012639349629": [
+      378.14
     ]
   },
   "counters": {
-    "scored": 149,
-    "verdict_publish": 137,
+    "scored": 153,
+    "verdict_publish": 141,
     "verdict_hold": 12,
     "verdict_skip": 0,
-    "published": 90,
+    "published": 92,
     "skipped": 0
   },
-  "score_sum": 10567.18,
+  "score_sum": 10889.32,
   "recent_decisions": [
     {
       "ts": 1794383955,
@@ -1527,7 +1533,39 @@
       "product_id": "1005009662812027",
       "score": 75.85,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794431401,
+      "channel": "aniscoupons",
+      "category": "phones",
+      "product_id": "1005011648649269",
+      "score": 84.39,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794431405,
+      "channel": "aniscoupons",
+      "category": "phones",
+      "product_id": "1005013474555268",
+      "score": 77.73,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794431408,
+      "channel": "aniscoupons",
+      "category": "phones",
+      "product_id": "1005013438245033",
+      "score": 79.78,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794431416,
+      "channel": "aniscoupons",
+      "category": "other",
+      "product_id": "1005012639349629",
+      "score": 80.24,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794431224.9270477
+  "updated_at": 1794431418.7670696
 }
