@@ -289,6 +289,21 @@ const sendMsg = (env, chatId, text, markup, deadline, replyTo) =>
     deadline
   );
 
+/** Trim HTML to Telegram's 1024-char caption limit without leaving a tag open. */
+function safeCaption(html, max = 1024) {
+  const s = String(html);
+  if (s.length <= max) return s;
+  let cut = s.slice(0, max);
+  const nl = cut.lastIndexOf("\n");
+  if (nl > max * 0.6) cut = cut.slice(0, nl);
+  cut = cut.replace(/<[^>]*$/, "");
+  const b = (cut.match(/<b>/g) || []).length - (cut.match(/<\/b>/g) || []).length;
+  const i = (cut.match(/<i>/g) || []).length - (cut.match(/<\/i>/g) || []).length;
+  if (b > 0) cut += "</b>".repeat(b);
+  if (i > 0) cut += "</i>".repeat(i);
+  return cut;
+}
+
 const sendPhoto = (env, chatId, photo, caption, markup, deadline, replyTo) =>
   tg(
     env,
@@ -296,7 +311,7 @@ const sendPhoto = (env, chatId, photo, caption, markup, deadline, replyTo) =>
     {
       chat_id: chatId,
       photo,
-      caption: String(caption).slice(0, 1024),
+      caption: safeCaption(caption),
       parse_mode: "HTML",
       ...(markup ? { reply_markup: markup } : {}),
       ...(replyTo ? { reply_to_message_id: replyTo } : {}),
@@ -358,6 +373,19 @@ function extractTitleAndPrice(text) {
     .trim();
 
   return { title: cleaned.length >= 8 ? cleaned.slice(0, 90) : null, price };
+}
+
+/**
+ * The discount AliExpress itself advertises in its share text
+ * ("... $10.80 45%OFF | Product name"). Returns a whole percent or null.
+ */
+function extractDiscount(text) {
+  if (!text) return null;
+  const s = String(text);
+  const m = s.match(/(\d{1,2})\s*%\s*off/i) || s.match(/-\s*(\d{1,2})\s*%/);
+  if (!m) return null;
+  const d = parseInt(m[1], 10);
+  return d >= 5 && d <= 90 ? d : null;
 }
 
 /**
@@ -860,6 +888,8 @@ async function generateDeal(pid, rawText, lang, env, deadline) {
     (lang === "fr" ? "Produit AliExpress" : "منتج مميز من AliExpress");
 
   const price = fromText.price;
+  const discount = extractDiscount(rawText);
+  const original = discount && price ? price / (1 - discount / 100) : null;
   const safeTitle = esc(title);
 
   let text;
@@ -867,40 +897,34 @@ async function generateDeal(pid, rawText, lang, env, deadline) {
 
   if (lang === "fr") {
     const eur = price ? Math.round(price * 0.92 * 100) / 100 : null;
+    const oldEur = original ? Math.round(original * 0.92 * 100) / 100 : null;
     const priceLine = eur
-      ? `💶 Prix estimé : <b>${eur.toFixed(2)}€</b> (~<b>${price.toFixed(2)}$</b>)\n`
+      ? `💰 <b>${eur.toFixed(2)}€</b> ≈ <b>${price.toFixed(2)}$</b>\n` +
+        (oldEur ? `🏷️ Au lieu de <s>${oldEur.toFixed(2)}€</s> · <b>-${discount}%</b>\n` : "")
       : "";
 
-    text = `🛍️ <b>${safeTitle}</b>
-${priceLine}
-🛒 <b>Lien direct du produit :</b>
-🔗 ${links.direct}
+    text = `🔥 <b>${safeTitle}</b>
 
-🪙 <b>Prix avec réduction Pièces (Coins) :</b>
-🔗 ${links.coin}
+${priceLine}🪙 Avec les Coins : jusqu'à <b>70%</b> de réduction en plus
 
-📦 <b>Offres groupées (Bundle Deals) :</b>
-🔗 ${links.bundle}
+👇 <b>Commandez au meilleur prix :</b>
+${links.coin}
 
-⚡ <b>Ventes Flash (SuperDeals) :</b>
-🔗 ${links.super}
-
-⏳ <b>Offre limitée (Limited Offer) :</b>
-🔗 ${links.limited}
-
-💡 <i>Conseil : Ouvrez le lien Pièces et achetez directement pour déduire le maximum de pièces !</i>`;
+━━━━━━━━━━━━━
+⏳ Stock limité — ne traînez pas
+📢 Bons plans du jour : @francedealsdz`;
 
     markup = {
       inline_keyboard: [
         [
-          { text: "🛒 Lien Direct", url: links.direct },
-          { text: "🪙 Réduction Pièces (Coins)", url: links.coin },
+          { text: "🪙 Meilleur prix (Coins)", url: links.coin },
+          { text: "🛒 Produit", url: links.direct },
         ],
         [
-          { text: "📦 Offres Bundle Deals", url: links.bundle },
-          { text: "⚡ Ventes SuperDeals", url: links.super },
+          { text: "⚡ SuperDeals", url: links.super },
+          { text: "📦 Bundle", url: links.bundle },
         ],
-        [{ text: "⏳ Offre Limitée", url: links.limited }],
+        [{ text: "⏳ Offre limitée", url: links.limited }],
         [
           { text: "🇫🇷 Canal Bons Plans France 🇪🇺", url: CH_FR },
           { text: "🇩🇿 Canal Bons Plans Algérie 🇩🇿", url: CH_DZ },
@@ -916,41 +940,32 @@ ${priceLine}
     };
   } else {
     const priceLine = price
-      ? `💵 السعر التقريبي: <b>${price.toFixed(2)}$</b> (~<b>${nf.format(
-          Math.round(price * rate)
-        )} دج</b>)\n`
+      ? `💰 <b>${price.toFixed(2)}$</b> ≈ <b>${nf.format(Math.round(price * rate))} دج</b>\n` +
+        (original ? `🏷️ بدلاً من <s>${original.toFixed(2)}$</s> · خصم <b>${discount}%</b>\n` : "")
       : "";
 
-    text = `🛍️ <b>${safeTitle}</b>
-${priceLine}
-🛒 <b>الرابط المباشر للمنتج:</b>
-🔗 ${links.direct}
+    text = `🔥 <b>${safeTitle}</b>
 
-🪙 <b>سعر تخفيض العملات (Coins):</b>
-🔗 ${links.coin}
+${priceLine}🪙 مع تخفيض العملات: خصم إضافي يصل إلى <b>70%</b>
 
-📦 <b>عروض الحزم (Bundle Deals):</b>
-🔗 ${links.bundle}
+👇 <b>اطلب بأرخص سعر من هنا:</b>
+${links.coin}
 
-⚡ <b>عروض السوبر ديلز (SuperDeals):</b>
-🔗 ${links.super}
-
-⏳ <b>العرض المحدود (Limited Offer):</b>
-🔗 ${links.limited}
-
-💡 <i>نصيحة: ادخل من رابط العملات واشترِ مباشرة أو أضف المنتج للسلة لتفعيل أكبر نسبة خصم!</i>`;
+━━━━━━━━━━━━━
+⏳ الكمية محدودة — لا تتأخر
+📢 صفقات مختارة يومياً: @DzAliexpress0`;
 
     markup = {
       inline_keyboard: [
         [
-          { text: "🛒 رابط الشراء المباشر", url: links.direct },
-          { text: "🪙 شراء بتخفيض العملات", url: links.coin },
+          { text: "🪙 أرخص سعر (عملات)", url: links.coin },
+          { text: "🛒 المنتج مباشرة", url: links.direct },
         ],
         [
-          { text: "📦 عروض Bundle Deals", url: links.bundle },
-          { text: "⚡ عروض السوبر ديلز", url: links.super },
+          { text: "⚡ سوبر ديلز", url: links.super },
+          { text: "📦 حزمة التوفير", url: links.bundle },
         ],
-        [{ text: "⏳ العرض المحدود (Limited)", url: links.limited }],
+        [{ text: "⏳ عرض محدود", url: links.limited }],
         [
           { text: "📢 قناة صفقات الجزائر 🇩🇿", url: CH_DZ },
           { text: "🇫🇷 قناة صفقات فرنسا 🇪🇺", url: CH_FR },
@@ -971,6 +986,8 @@ ${priceLine}
     markup,
     title,
     price,
+    discount,
+    original,
     image: (meta && meta.image) || null,
     links,
     rate,
@@ -984,19 +1001,21 @@ ${priceLine}
 async function publishToChannel(pid, rawText, env, deadline) {
   const deal = await generateDeal(pid, rawText, "ar", env, deadline);
   const priceLine = deal.price
-    ? `💰 <b>السعر:</b> <b>${deal.price.toFixed(2)}$</b> (~<b>${nf.format(
+    ? `💰 <b>${deal.price.toFixed(2)}$</b> ≈ <b>${nf.format(
         Math.round(deal.price * deal.rate)
-      )} دج</b>)\n`
+      )} دج</b>\n` +
+      (deal.original ? `🏷️ بدلاً من <s>${deal.original.toFixed(2)}$</s> · خصم <b>${deal.discount}%</b>\n` : "")
     : "";
 
   const caption = `🔥 <b>${esc(deal.title)}</b>
 
-${priceLine}🪙 <b>خصم العملات (Coins):</b> يصل حتى 70%
+${priceLine}🪙 مع تخفيض العملات: خصم إضافي يصل إلى <b>70%</b>
 
-👇 <b>اطلب الآن عبر رابط العملات:</b>
+👇 <b>اطلب بأرخص سعر من هنا:</b>
 ${deal.links.coin}
 
-📢 <i>تابع قناتنا لمزيد من الصفقات اليومية:</i> @DzAliexpress0`;
+━━━━━━━━━━━━━
+📢 صفقات مختارة يومياً: @DzAliexpress0`;
 
   const markup = {
     inline_keyboard: [
@@ -1439,6 +1458,7 @@ async function handleMessage(message, env, deadline) {
     price: deal.price,
     // Operator diagnostics: shown only when the x-debug header is present.
     links: deal.links,
+    text: deal.text,
     link_debug: linkDebug,
     sent: res.ok,
     error: res.error,
