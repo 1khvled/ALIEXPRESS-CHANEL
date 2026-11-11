@@ -591,32 +591,268 @@ function withAff(url, trackingId) {
   return url + (url.includes("?") ? "&" : "?") + "aff_fcid=" + encodeURIComponent(trackingId);
 }
 
-function buildLinks(pid, trackingId) {
-  const direct = `https://www.aliexpress.com/item/${pid}.html`;
-  const coin = `https://m.aliexpress.com/p/coin-index/index.html?_immersiveMode=true&tabname=configTab_1926001&productIds=${pid}`;
-  const bundle = `https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=${pid}`;
-  const superdeal = `https://www.aliexpress.com/item/${pid}.html?sourceType=561&channel=superdeal`;
-  const limited = `https://www.aliexpress.com/item/${pid}.html?sourceType=562&channel=limited`;
+/* ------------------------------------------------------------------ */
+/* s.click short links (official affiliate link API)                   */
+/*                                                                     */
+/* Appending aff_fcid to a raw URL works, but the result is a 120-char */
+/* link that wraps over four lines in chat. The affiliate API turns a  */
+/* batch of URLs into s.click.aliexpress.com/e/_xxxx links in one call.*/
+/* Links are stable per product, so each product costs one API call    */
+/* and is then cached for a week.                                      */
+/* ------------------------------------------------------------------ */
+
+const AFF_API = "https://api-sg.aliexpress.com/sync";
+const LINK_TTL = 7 * 24 * 3600;
+const LINK_FAIL_TTL = 600;
+
+/** Last short-link outcome, surfaced only in x-debug responses. */
+let linkDebug = "none";
+
+/** MD5 (hex) — the affiliate API signs requests with MD5, which Workers lack. */
+const MD5_S = [
+  7, 12, 17, 22, 7, 12, 17, 22, 7, 12, 17, 22, 7, 12, 17, 22,
+  5, 9, 14, 20, 5, 9, 14, 20, 5, 9, 14, 20, 5, 9, 14, 20,
+  4, 11, 16, 23, 4, 11, 16, 23, 4, 11, 16, 23, 4, 11, 16, 23,
+  6, 10, 15, 21, 6, 10, 15, 21, 6, 10, 15, 21, 6, 10, 15, 21,
+];
+const MD5_K = new Uint32Array(64);
+for (let i = 0; i < 64; i++) MD5_K[i] = Math.floor(Math.abs(Math.sin(i + 1)) * 4294967296);
+
+function md5hex(input) {
+  const bytes = new TextEncoder().encode(input);
+  const len = bytes.length;
+  const bitLen = len * 8;
+  const total = ((len + 1 + 8 + 63) >> 6) << 6;
+  const buf = new Uint8Array(total);
+  buf.set(bytes);
+  buf[len] = 0x80;
+  const dv = new DataView(buf.buffer);
+  dv.setUint32(total - 8, bitLen >>> 0, true);
+  dv.setUint32(total - 4, Math.floor(bitLen / 4294967296), true);
+
+  let a0 = 0x67452301;
+  let b0 = 0xefcdab89;
+  let c0 = 0x98badcfe;
+  let d0 = 0x10325476;
+  const m = new Uint32Array(16);
+
+  for (let off = 0; off < total; off += 64) {
+    for (let i = 0; i < 16; i++) m[i] = dv.getUint32(off + i * 4, true);
+    let A = a0;
+    let B = b0;
+    let C = c0;
+    let D = d0;
+    for (let i = 0; i < 64; i++) {
+      let F;
+      let g;
+      if (i < 16) {
+        F = (B & C) | (~B & D);
+        g = i;
+      } else if (i < 32) {
+        F = (D & B) | (~D & C);
+        g = (5 * i + 1) & 15;
+      } else if (i < 48) {
+        F = B ^ C ^ D;
+        g = (3 * i + 5) & 15;
+      } else {
+        F = C ^ (B | ~D);
+        g = (7 * i) & 15;
+      }
+      const tmp = D;
+      D = C;
+      C = B;
+      const sum = (A + F + MD5_K[i] + m[g]) | 0;
+      const s = MD5_S[i];
+      B = (B + ((sum << s) | (sum >>> (32 - s)))) | 0;
+      A = tmp;
+    }
+    a0 = (a0 + A) | 0;
+    b0 = (b0 + B) | 0;
+    c0 = (c0 + C) | 0;
+    d0 = (d0 + D) | 0;
+  }
+
+  const out = new Uint8Array(16);
+  const odv = new DataView(out.buffer);
+  odv.setUint32(0, a0, true);
+  odv.setUint32(4, b0, true);
+  odv.setUint32(8, c0, true);
+  odv.setUint32(12, d0, true);
+  let hex = "";
+  for (let i = 0; i < 16; i++) hex += out[i].toString(16).padStart(2, "0");
+  return hex;
+}
+
+/** md5(secret + sorted(k+v) + secret), uppercase — AliExpress signature. */
+function affiliateSign(params, secret) {
+  let s = secret;
+  for (const k of Object.keys(params).sort()) s += k + params[k];
+  s += secret;
+  return md5hex(s).toUpperCase();
+}
+
+/** Untracked URLs behind each button. */
+function baseLinks(pid) {
   return {
-    direct: withAff(direct, trackingId),
-    coin: withAff(coin, trackingId),
-    bundle: withAff(bundle, trackingId),
-    super: withAff(superdeal, trackingId),
-    limited: withAff(limited, trackingId),
+    direct: `https://www.aliexpress.com/item/${pid}.html`,
+    coin: `https://m.aliexpress.com/p/coin-index/index.html?_immersiveMode=true&tabname=configTab_1926001&productIds=${pid}`,
+    bundle: `https://www.aliexpress.com/ssr/300000512/BundleDeals2?disableNav=YES&pha_manifest=ssr&_immersiveMode=true&productIds=${pid}`,
+    super: `https://www.aliexpress.com/item/${pid}.html?sourceType=561&channel=superdeal`,
+    limited: `https://www.aliexpress.com/item/${pid}.html?sourceType=562&channel=limited`,
   };
+}
+
+/**
+ * Short links for a product, or null when the API is unavailable.
+ * One batched call covers all five buttons.
+ */
+async function fetchShortLinks(pid, trackingId, env, deadline) {
+  const key = `links:${pid}`;
+
+  const l1 = memoGet(key);
+  if (l1 !== undefined) {
+    linkDebug = l1.ok ? "cached (isolate)" : "cached failure (isolate)";
+    return l1.ok ? l1.links : null;
+  }
+
+  const l2 = await edgeGet(key);
+  if (l2 !== undefined) {
+    memoSet(key, l2, (l2.ok ? l2.ttl || LINK_TTL : LINK_FAIL_TTL) * 1000);
+    linkDebug = l2.ok ? "cached (edge)" : "cached failure (edge)";
+    return l2.ok ? l2.links : null;
+  }
+
+  const appKey = env.ALIEXPRESS_APP_KEY || "";
+  const secret = env.ALIEXPRESS_APP_SECRET || "";
+  const tracking = trackingId || env.AFF_TRACKING_ID || "";
+  if (!appKey || !secret || !tracking) {
+    linkDebug = `no-creds key=${appKey.length} secret=${secret.length} tracking=${tracking.length}`;
+    return null;
+  }
+
+  const base = baseLinks(pid);
+
+  // AliExpress collapses duplicates by landing page, so the three product-page
+  // variants (direct / superdeal / limited) must be requested separately; the
+  // coin and bundle pages share one call. Four calls, then cached for a week.
+  const groups = [
+    ["direct", [base.direct]],
+    ["super", [base.super]],
+    ["limited", [base.limited]],
+    ["coin+bundle", [base.coin, base.bundle]],
+  ];
+
+  const results = await Promise.all(
+    groups.map((g) => requestAffLinks(g[1], appKey, secret, tracking, deadline))
+  );
+
+  const byUrl = new Map();
+  let errors = 0;
+  for (const map of results) {
+    if (!map) {
+      errors++;
+      continue;
+    }
+    for (const [url, short] of map) byUrl.set(url, short);
+  }
+
+  const links = {};
+  for (const name of Object.keys(base)) {
+    const short = byUrl.get(base[name]);
+    if (short) links[name] = short;
+  }
+
+  const count = Object.keys(links).length;
+  linkDebug = `${count}/5 links (${errors} call errors)`;
+
+  if (count === 0) {
+    // Every call failed: remember it briefly so a broken API is not hammered
+    // once per message.
+    const neg = { ok: false };
+    memoSet(key, neg, LINK_FAIL_TTL * 1000);
+    await edgeSet(key, neg, LINK_FAIL_TTL);
+    return null;
+  }
+
+  // A partial result is retried after an hour instead of a week.
+  const ttl = count === Object.keys(base).length ? LINK_TTL : 3600;
+  const ok = { ok: true, links, ttl };
+  memoSet(key, ok, ttl * 1000);
+  await edgeSet(key, ok, ttl);
+  return links;
+}
+
+/** One signed call; returns a Map of source URL -> s.click URL, or null. */
+async function requestAffLinks(urls, appKey, secret, tracking, deadline) {
+  const params = {
+    app_key: appKey,
+    format: "json",
+    method: "aliexpress.affiliate.link.generate",
+    promotion_link_type: "0",
+    sign_method: "md5",
+    source_values: urls.join(","),
+    timestamp: String(Date.now()),
+    tracking_id: tracking,
+    v: "2.0",
+  };
+  params.sign = affiliateSign(params, secret);
+
+  let payload;
+  try {
+    const res = await fetch(AFF_API, {
+      method: "POST",
+      headers: { "content-type": "application/x-www-form-urlencoded;charset=utf-8" },
+      body: new URLSearchParams(params).toString(),
+      signal: AbortSignal.timeout(Math.min(4000, remaining(deadline))),
+    });
+    if (!res.ok) return null;
+    payload = await res.json();
+  } catch (_) {
+    // Network hiccup: do not cache, try again on the next message.
+    return null;
+  }
+
+  const resp =
+    payload &&
+    payload.aliexpress_affiliate_link_generate_response &&
+    payload.aliexpress_affiliate_link_generate_response.resp_result;
+  if (!resp || resp.resp_code !== 200) return null;
+
+  const list =
+    (resp.result && resp.result.promotion_links && resp.result.promotion_links.promotion_link) || [];
+  const map = new Map();
+  for (const item of Array.isArray(list) ? list : [list]) {
+    if (item && item.source_value && item.promotion_link) {
+      map.set(item.source_value, item.promotion_link);
+    }
+  }
+  return map.size ? map : null;
+}
+
+/** Buttons: short s.click links when available, tracked long links otherwise. */
+function buildLinks(pid, trackingId, short) {
+  const base = baseLinks(pid);
+  const out = {};
+  for (const name of Object.keys(base)) {
+    out[name] = (short && short[name]) || withAff(base[name], trackingId);
+  }
+  return out;
 }
 
 async function generateDeal(pid, rawText, lang, env, deadline) {
   const trackingId = env.AFF_TRACKING_ID || "";
-  const links = buildLinks(pid, trackingId);
   const fromText = extractTitleAndPrice(rawText);
 
   // The rate is only needed to convert a USD price to DZD, so don't ask
-  // for it when the share text carried no price.
-  const [meta, rate] = await Promise.all([
+  // for it when the share text carried no price. Short links come from the
+  // cache after the first message about a product.
+  const [meta, rate, short] = await Promise.all([
     getProductMeta(pid, deadline),
     fromText.price ? getUsdtRate() : Promise.resolve(lastUsdtRate),
+    fetchShortLinks(pid, trackingId, env, deadline),
   ]);
+
+  const links = buildLinks(pid, trackingId, short);
 
   const title =
     (meta && meta.title) ||
@@ -1201,6 +1437,9 @@ async function handleMessage(message, env, deadline) {
     pid,
     title: deal.title,
     price: deal.price,
+    // Operator diagnostics: shown only when the x-debug header is present.
+    links: deal.links,
+    link_debug: linkDebug,
     sent: res.ok,
     error: res.error,
   };

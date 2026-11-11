@@ -26,7 +26,7 @@ Alongside the pipeline there is a public bilingual web portal (FastAPI on Vercel
 |---|---|---|
 | Algeria channel | `@DzAliexpress0` | Primary. Arabic (RTL), USD pricing with DZD conversion on the site. |
 | France channel | `@francedealsdz` | French copy, EUR pricing, separate publisher and state file. |
-| Coin bot | `@Alilo07BOT` | Coin-discount link generator. Production runtime is the Cloudflare Worker in `worker/` (`POST /telegram`); `api/coin_bot.py` keeps the same logic for local polling. |
+| Coin bot | `@Alilo07BOT` | Coin-discount link generator. Production runtime is the Cloudflare Worker in `worker/` (`POST /telegram`); `api/coin_bot.py` keeps the same logic for local polling. Buttons use official `s.click.aliexpress.com/e/_xxxx` short links minted via `aliexpress.affiliate.link.generate` and cached 7 days per product. |
 | Website | `dealscoutgreen.vercel.app` | FastAPI + embedded HTML, Vercel `services` deploy. |
 | Admin dashboard | `/admin` | Cookie-signed login, manual reformat/publish, Facebook publish. |
 | Facebook page | `1451244491398196` | Optional cross-post (`FACEBOOK_AUTO_POST_ENABLED`), separate state file. |

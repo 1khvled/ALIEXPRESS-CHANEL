@@ -58,7 +58,15 @@ per invocation):
 | AliExpress fetch | cache miss only | L1 isolate map → L2 edge cache, 7 days |
 | USDT fetch | only when a USD price needs DZD | 30 min cache, skipped for French replies |
 | Short-link hops | cache miss only | `s.click`/`a.aliexpress` code → product id, 7 days |
+| Affiliate link API | cache miss only | 4 signed calls per new product, then 7 days |
 | Telegram calls | every reply | typing + message fired in parallel |
+
+The affiliate API (`aliexpress.affiliate.link.generate`) is what turns the raw
+product URLs into `s.click.aliexpress.com/e/_xxxx` buttons. AliExpress collapses
+duplicates by landing page, so the three product-page variants are requested
+separately and coin + bundle share one call. If the API fails, that button
+falls back to the tracked long URL — a reply never fails because of it. Partial
+results are retried after an hour instead of a week.
 
 Only the first 80KB of a product page is read and only its `<head>` is
 scanned. A captcha/blocked page is remembered as "empty" for 30 minutes, not
