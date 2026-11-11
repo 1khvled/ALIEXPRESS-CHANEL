@@ -736,7 +736,8 @@
     "1005010653559191",
     "COUPON_CLAIM_zedstoreonline_39827",
     "1005012197291105",
-    "1005010179192246"
+    "1005010179192246",
+    "1005010457635845"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1421,7 +1422,7 @@
     "1005008357913212": 1794301465.5699842,
     "1005008703989845": 1794300358.3541322,
     "1005007162099601": 1794385424.98073,
-    "1005007038130594": 1794046667.9804564,
+    "1005007038130594": 1794393500.1320646,
     "1005008248187128": 1794057675.8729835,
     "1005013053381984": 1794060065.5449874,
     "1005008060391372": 1794312402.179863,
@@ -1488,7 +1489,8 @@
     "1005010653559191": 1794349536.4429784,
     "COUPON_CLAIM_zedstoreonline_39827": 1794363974.314961,
     "1005012197291105": 1794390920.4038398,
-    "1005010179192246": 1794391117.1890683
+    "1005010179192246": 1794391117.1890683,
+    "1005010457635845": 1794393509.614562
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2440,7 +2442,8 @@
     "OnePlus 13",
     "Oppo Find X10 Pro Max 12/256",
     "OnePlus ACE 6 Ultra 12/256",
-    "iQOO Neo 11 Ultra"
+    "iQOO Neo 11 Ultra",
+    "ONEPLUS 15 Global Rom 12/256"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3289,7 +3292,7 @@
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794331708.056503,
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627,
     "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794134168.8193681,
-    "Essager 30W Car Charger": 1794046667.9804564,
+    "Essager 30W Car Charger": 1794393500.1320646,
     "KOOTION SSD SATA  240GB": 1794051434.2488248,
     "Xiaomi Redmi Note 17 Pro 5G Global Version": 1794060065.5449874,
     "Magcubic  HY350 Max 900ANSI": 1794147930.6937103,
@@ -3397,11 +3400,10 @@
     "OnePlus 13": 1794390398.1860356,
     "Oppo Find X10 Pro Max 12/256": 1794390785.626018,
     "OnePlus ACE 6 Ultra 12/256": 1794390920.4038398,
-    "iQOO Neo 11 Ultra": 1794391855.282333
+    "iQOO Neo 11 Ultra": 1794391855.282333,
+    "ONEPLUS 15 Global Rom 12/256": 1794393509.614562
   },
   "published_post_keys": [
-    "aniscoupons:32857",
-    "pcgamingpart:7949",
     "zedstoreonline:38694",
     "couponsglobal:48787",
     "aniscoupons:32781",
@@ -4399,19 +4401,21 @@
     "aniscoupons:34488",
     "aniscoupons:34489",
     "aniscoupons:34490",
-    "aniscoupons:34494"
+    "aniscoupons:34494",
+    "lodydeals:46351",
+    "aniscoupons:34497"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794392587.3539767,
+  "last_run_time": 1794393509.614562,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
       "last_check_time": 1794350628.34148
     },
     "lodydeals": {
-      "last_message_id": 46350,
-      "last_check_time": 1794392396.0582876
+      "last_message_id": 46351,
+      "last_check_time": 1794393502.1930249
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4434,12 +4438,12 @@
       "last_check_time": 1794393125.8607845
     },
     "aniscoupons": {
-      "last_message_id": 34496,
-      "last_check_time": 1794393130.1018698
+      "last_message_id": 34497,
+      "last_check_time": 1794393511.674772
     },
     "bnddeals": {
-      "last_message_id": 51284,
-      "last_check_time": 1794393134.0859315
+      "last_message_id": 51285,
+      "last_check_time": 1794393517.3443375
     }
   },
   "published_product_prices": {
@@ -5074,7 +5078,8 @@
     "1005006807619368": 6.55,
     "1005010653559191": 10.5,
     "1005012197291105": 438.2,
-    "1005010179192246": 609.9
+    "1005010179192246": 609.9,
+    "1005010457635845": 581.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -19939,6 +19944,26 @@
       "price": 443.3,
       "timestamp": 1794392587.3539767,
       "status": "ACTIVE"
+    },
+    "lodydeals:46351": {
+      "channel_msg_id": 2297,
+      "product_id": "1005007038130594",
+      "title": "Essager 30W Car Charger",
+      "channel": "lodydeals",
+      "source_msg_id": 46351,
+      "price": 12.03,
+      "timestamp": 1794393500.1320646,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34497": {
+      "channel_msg_id": 2298,
+      "product_id": "1005010457635845",
+      "title": "ONEPLUS 15 Global Rom 12/256",
+      "channel": "aniscoupons",
+      "source_msg_id": 34497,
+      "price": 581.4,
+      "timestamp": 1794393509.614562,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19947,17 +19972,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794392602.118087,
+    "last_deal_post_time": 1794393517.400553,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794393322.2911649,
+    "last_sweep_time": 1794393521.3813972,
     "last_sweep_times": {
-      "algeria": 1794393318.7111177,
-      "france": 1794393322.2911649
+      "algeria": 1794393517.3729837,
+      "france": 1794393521.3813972
     },
     "last_deal_post_times": {
-      "algeria": 1794392602.118087
+      "algeria": 1794393517.400553
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20709,7 +20734,8 @@
     "1005010653559191": "zedstoreonline",
     "COUPON_CLAIM_zedstoreonline_39827": "zedstoreonline",
     "1005012197291105": "zedstoreonline",
-    "1005010179192246": "aniscoupons"
+    "1005010179192246": "aniscoupons",
+    "1005010457635845": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -21668,7 +21694,8 @@
     "OnePlus 13": "aniscoupons",
     "Oppo Find X10 Pro Max 12/256": "bnddeals",
     "OnePlus ACE 6 Ultra 12/256": "zedstoreonline",
-    "iQOO Neo 11 Ultra": "aniscoupons"
+    "iQOO Neo 11 Ultra": "aniscoupons",
+    "ONEPLUS 15 Global Rom 12/256": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22464,7 +22491,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:32963",
     "aniscoupons:33310",
     "aniscoupons:33038",
     "zedstoreonline:38563",
@@ -23463,7 +23489,8 @@
     "zedstoreonline:39870",
     "zedstoreonline:39871",
     "aniscoupons:34496",
-    "bnddeals:51284"
+    "bnddeals:51284",
+    "bnddeals:51285"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,

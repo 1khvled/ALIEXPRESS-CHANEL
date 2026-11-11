@@ -22,10 +22,10 @@
   "flow_target": 24.0,
   "channel_stats": {
     "lodydeals": {
-      "seen": 5,
-      "published": 5,
+      "seen": 6,
+      "published": 6,
       "skipped": 0,
-      "ewma": 0.6705
+      "ewma": 0.6969
     },
     "zedstoreonline": {
       "seen": 13,
@@ -40,10 +40,10 @@
       "ewma": 0.54
     },
     "aniscoupons": {
-      "seen": 14,
-      "published": 11,
+      "seen": 15,
+      "published": 12,
       "skipped": 0,
-      "ewma": 0.8002
+      "ewma": 0.8162
     }
   },
   "category_stats": {
@@ -60,12 +60,18 @@
       "ewma": 0.54
     },
     "phones": {
-      "seen": 29,
-      "published": 11,
+      "seen": 30,
+      "published": 12,
       "skipped": 0,
-      "ewma": 0.8002
+      "ewma": 0.8162
     },
     "home": {
+      "seen": 1,
+      "published": 1,
+      "skipped": 0,
+      "ewma": 0.54
+    },
+    "accessories": {
       "seen": 1,
       "published": 1,
       "skipped": 0,
@@ -126,17 +132,23 @@
     ],
     "1005012399830182": [
       443.3
+    ],
+    "1005007038130594": [
+      12.03
+    ],
+    "1005010457635845": [
+      581.4
     ]
   },
   "counters": {
-    "scored": 45,
-    "verdict_publish": 44,
+    "scored": 47,
+    "verdict_publish": 46,
     "verdict_hold": 1,
     "verdict_skip": 0,
-    "published": 18,
+    "published": 20,
     "skipped": 0
   },
-  "score_sum": 3256.6,
+  "score_sum": 3405.46,
   "recent_decisions": [
     {
       "ts": 1794383955,
@@ -497,7 +509,23 @@
       "product_id": "1005013304766961",
       "score": 63.05,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794393498,
+      "channel": "lodydeals",
+      "category": "accessories",
+      "product_id": "1005007038130594",
+      "score": 71.24,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794393507,
+      "channel": "aniscoupons",
+      "category": "phones",
+      "product_id": "1005010457635845",
+      "score": 77.62,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794392946.5266771
+  "updated_at": 1794393509.6630073
 }
