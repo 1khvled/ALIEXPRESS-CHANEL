@@ -1083,7 +1083,7 @@
     "1005012005176923": 1793543639.3190484,
     "1005012399830182": 1793613447.9686892,
     "1005013479172067": 1793448884.6592717,
-    "1005012199872142": 1793966811.2584407,
+    "1005012199872142": 1794391862.7124853,
     "9998886358": 1793276358.3466215,
     "1005013170854617": 1793969543.5771117,
     "1005010172572484": 1793521744.753259,
@@ -1288,7 +1288,7 @@
     "1005012887486015": 1793600112.7686548,
     "1005013478918892": 1794230539.4652834,
     "1005010443138358": 1793566252.8097658,
-    "1005013006189646": 1793566310.8398705,
+    "1005013006189646": 1794391855.282333,
     "1005011653777805": 1793566315.7447746,
     "1005009292891294": 1793613871.2148516,
     "1005009916144912": 1793613519.9635994,
@@ -2439,7 +2439,8 @@
     "Huawei Pura 90s Pro Max 12/256GB",
     "OnePlus 13",
     "Oppo Find X10 Pro Max 12/256",
-    "OnePlus ACE 6 Ultra 12/256"
+    "OnePlus ACE 6 Ultra 12/256",
+    "iQOO Neo 11 Ultra"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2799,7 +2800,7 @@
     "IQOO 15T 12/256": 1793613447.9686892,
     "Honor Power 2 12/256": 1793276177.7089784,
     "OnePlus Turbo 6x  6/128GB": 1793276192.7711725,
-    "Oneplus ACE 6 Ultra 12/256GB": 1793966811.2584407,
+    "Oneplus ACE 6 Ultra 12/256GB": 1794391862.7124853,
     "VIVO Y600 Pro 8/128": 1793278959.3832097,
     "Oppo Find X9 12/256": 1793521744.753259,
     "Oppo Find X9s Pro 12/256": 1793278979.5236633,
@@ -3395,11 +3396,10 @@
     "Huawei Pura 90s Pro Max 12/256GB": 1794390200.6061625,
     "OnePlus 13": 1794390398.1860356,
     "Oppo Find X10 Pro Max 12/256": 1794390785.626018,
-    "OnePlus ACE 6 Ultra 12/256": 1794390920.4038398
+    "OnePlus ACE 6 Ultra 12/256": 1794390920.4038398,
+    "iQOO Neo 11 Ultra": 1794391855.282333
   },
   "published_post_keys": [
-    "zedstoreonline:38891",
-    "zedstoreonline:38816",
     "zedstoreonline:38618",
     "aniscoupons:32857",
     "pcgamingpart:7949",
@@ -4397,11 +4397,13 @@
     "aniscoupons:34486",
     "bnddeals:51275",
     "zedstoreonline:39862",
-    "aniscoupons:34488"
+    "aniscoupons:34488",
+    "aniscoupons:34489",
+    "aniscoupons:34490"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794391117.1890683,
+  "last_run_time": 1794391862.7124853,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
@@ -4428,12 +4430,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39863,
-      "last_check_time": 1794391111.6413794
+      "last_message_id": 39865,
+      "last_check_time": 1794391849.9922757
     },
     "aniscoupons": {
-      "last_message_id": 34488,
-      "last_check_time": 1794391119.248283
+      "last_message_id": 34491,
+      "last_check_time": 1794391870.0433707
     },
     "bnddeals": {
       "last_message_id": 51277,
@@ -4703,7 +4705,7 @@
     "1005012005176923": 475.06,
     "1005012399830182": 442.3,
     "1005013479172067": 218.0,
-    "1005012199872142": 469.3,
+    "1005012199872142": 438.5,
     "1005013170854617": 258.8,
     "1005010172572484": 513.7,
     "1005012167596439": 594.0,
@@ -4898,7 +4900,7 @@
     "1005013478918892": 382.9,
     "1005012770405022": 311.31,
     "1005010443138358": 6.9,
-    "1005013006189646": 415.9,
+    "1005013006189646": 414.2,
     "1005011653777805": 23.8,
     "1005009292891294": 20.44,
     "1005009916144912": 8.0,
@@ -19907,6 +19909,26 @@
       "price": 609.9,
       "timestamp": 1794391117.1890683,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34489": {
+      "channel_msg_id": 2294,
+      "product_id": "1005013006189646",
+      "title": "iQOO Neo 11 Ultra",
+      "channel": "aniscoupons",
+      "source_msg_id": 34489,
+      "price": 414.2,
+      "timestamp": 1794391855.282333,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34490": {
+      "channel_msg_id": 2295,
+      "product_id": "1005012199872142",
+      "title": "Oneplus ACE 6 Ultra 12/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34490,
+      "price": 438.5,
+      "timestamp": 1794391862.7124853,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -19915,17 +19937,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794391124.0202234,
+    "last_deal_post_time": 1794391880.170127,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794391684.3473787,
+    "last_sweep_time": 1794391883.7650228,
     "last_sweep_times": {
-      "algeria": 1794391679.5487156,
-      "france": 1794391684.3473787
+      "algeria": 1794391880.142661,
+      "france": 1794391883.7650228
     },
     "last_deal_post_times": {
-      "algeria": 1794391124.0202234
+      "algeria": 1794391880.170127
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20492,7 +20514,7 @@
     "1005013478918892": "aniscoupons",
     "1005012770405022": "lodydeals",
     "1005010443138358": "lodydeals",
-    "1005013006189646": "lodydeals",
+    "1005013006189646": "aniscoupons",
     "1005011653777805": "lodydeals",
     "1005009292891294": "lodydeals",
     "1005009916144912": "aniscoupons",
@@ -21635,7 +21657,8 @@
     "Huawei Pura 90s Pro Max 12/256GB": "lodydeals",
     "OnePlus 13": "aniscoupons",
     "Oppo Find X10 Pro Max 12/256": "bnddeals",
-    "OnePlus ACE 6 Ultra 12/256": "zedstoreonline"
+    "OnePlus ACE 6 Ultra 12/256": "zedstoreonline",
+    "iQOO Neo 11 Ultra": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22431,9 +22454,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8601",
-    "zedstoreonline:38631",
-    "bnddeals:50968",
     "megaphonna:8682",
     "aniscoupons:32966",
     "bnddeals:50992",
@@ -23430,7 +23450,10 @@
     "bnddeals:51276",
     "zedstoreonline:39863",
     "bnddeals:51277",
-    "lodydeals:46349"
+    "lodydeals:46349",
+    "zedstoreonline:39864",
+    "zedstoreonline:39865",
+    "aniscoupons:34491"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
