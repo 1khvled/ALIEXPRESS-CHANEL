@@ -1380,7 +1380,7 @@
     "1005008429979494": 1793741666.9686077,
     "1005004795387201": 1793742770.1634803,
     "1005010702983351": 1794305193.7156484,
-    "1005008366962319": 1794346230.0535362,
+    "1005008366962319": 1794401855.0861495,
     "1005005058037424": 1793779907.9964287,
     "1005012946895000": 1793793714.105913,
     "1005012150344482": 1794349171.7275317,
@@ -2447,7 +2447,8 @@
     "OPPO FIND X9s Pro",
     "Vivo X300  12/256GB",
     "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD",
-    "Electronic Body Scale"
+    "Electronic Body Scale",
+    "Kootiion X15 M.2 SSD NVMe 256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3409,10 +3410,10 @@
     "OPPO FIND X9s Pro": 1794394415.6108775,
     "Vivo X300  12/256GB": 1794394604.3664222,
     "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD": 1794396619.5833008,
-    "Electronic Body Scale": 1794400568.4819298
+    "Electronic Body Scale": 1794400568.4819298,
+    "Kootiion X15 M.2 SSD NVMe 256GB": 1794401855.0861495
   },
   "published_post_keys": [
-    "lodydeals:45537",
     "megaphonna:8589",
     "pcgamingpart:7950",
     "lodydeals:45405",
@@ -4411,11 +4412,12 @@
     "aniscoupons:34503",
     "aniscoupons:34504",
     "aniscoupons:34507",
-    "aniscoupons:34508"
+    "aniscoupons:34508",
+    "aniscoupons:34509"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794400568.4819298,
+  "last_run_time": 1794401855.0861495,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6054,
@@ -4446,8 +4448,8 @@
       "last_check_time": 1794400747.1192715
     },
     "aniscoupons": {
-      "last_message_id": 34508,
-      "last_check_time": 1794400570.546945
+      "last_message_id": 34509,
+      "last_check_time": 1794401857.1493688
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4988,7 +4990,7 @@
     "1005008429979494": 72.7,
     "1005004795387201": 115.5,
     "1005010702983351": 67.6,
-    "1005008366962319": 30.03,
+    "1005008366962319": 30.3,
     "1005005058037424": 34.67,
     "1005012946895000": 142.59,
     "1005006972551834": 31.07,
@@ -20062,6 +20064,16 @@
       "price": 6.7,
       "timestamp": 1794400568.4819298,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34509": {
+      "channel_msg_id": 2308,
+      "product_id": "1005008366962319",
+      "title": "Kootiion X15 M.2 SSD NVMe 256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34509,
+      "price": 30.3,
+      "timestamp": 1794401855.0861495,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20070,17 +20082,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794400571.4410052,
+    "last_deal_post_time": 1794401857.9666576,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794401673.2033558,
+    "last_sweep_time": 1794401861.2938778,
     "last_sweep_times": {
-      "algeria": 1794401669.7435248,
-      "france": 1794401673.2033558
+      "algeria": 1794401857.9383566,
+      "france": 1794401861.2938778
     },
     "last_deal_post_times": {
-      "algeria": 1794400571.4410052
+      "algeria": 1794401857.9666576
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -20724,7 +20736,7 @@
     "1005008429979494": "lodydeals",
     "1005004795387201": "lodydeals",
     "1005010702983351": "aniscoupons",
-    "1005008366962319": "lodydeals",
+    "1005008366962319": "aniscoupons",
     "1005005058037424": "lodydeals",
     "1005012946895000": "lodydeals",
     "1005006972551834": "lodydeals",
@@ -21797,7 +21809,8 @@
     "OPPO FIND X9s Pro": "bnddeals",
     "Vivo X300  12/256GB": "bnddeals",
     "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD": "zedstoreonline",
-    "Electronic Body Scale": "aniscoupons"
+    "Electronic Body Scale": "aniscoupons",
+    "Kootiion X15 M.2 SSD NVMe 256GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
