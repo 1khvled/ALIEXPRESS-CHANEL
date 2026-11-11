@@ -1421,7 +1421,7 @@
     "1005012959738411": 1794304640.3506072,
     "1005008357913212": 1794397172.8708336,
     "1005008703989845": 1794300358.3541322,
-    "1005007162099601": 1794385424.98073,
+    "1005007162099601": 1794407765.5158777,
     "1005007038130594": 1794393500.1320646,
     "1005008248187128": 1794057675.8729835,
     "1005013053381984": 1794060065.5449874,
@@ -2449,7 +2449,8 @@
     "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD",
     "Electronic Body Scale",
     "Kootiion X15 M.2 SSD NVMe 256GB",
-    "SoundPEATS C30 Hybrid ANC -52dB"
+    "SoundPEATS C30 Hybrid ANC -52dB",
+    "Somnambulist SSD 120GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3413,10 +3414,10 @@
     "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD": 1794396619.5833008,
     "Electronic Body Scale": 1794400568.4819298,
     "Kootiion X15 M.2 SSD NVMe 256GB": 1794401855.0861495,
-    "SoundPEATS C30 Hybrid ANC -52dB": 1794407013.7230165
+    "SoundPEATS C30 Hybrid ANC -52dB": 1794407013.7230165,
+    "Somnambulist SSD 120GB": 1794407765.5158777
   },
   "published_post_keys": [
-    "pcgamingpart:7950",
     "lodydeals:45405",
     "megaphonna:8663",
     "lodydeals:45447",
@@ -4415,19 +4416,20 @@
     "aniscoupons:34507",
     "aniscoupons:34508",
     "aniscoupons:34509",
-    "lodydeals:46354"
+    "lodydeals:46354",
+    "lodydeals:46357"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794407013.7230165,
+  "last_run_time": 1794407765.5158777,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6055,
       "last_check_time": 1794407600.0378215
     },
     "lodydeals": {
-      "last_message_id": 46354,
-      "last_check_time": 1794407015.7849603
+      "last_message_id": 46357,
+      "last_check_time": 1794407767.5789337
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -5029,7 +5031,7 @@
     "1005008077441711": 7.32,
     "1005012925301774": 10.5,
     "1005012959738411": 68.79,
-    "1005007162099601": 33.47,
+    "1005007162099601": 29.21,
     "1005007038130594": 12.03,
     "1005008248187128": 4.49,
     "1005013053381984": 254.11,
@@ -20086,6 +20088,16 @@
       "price": 19.46,
       "timestamp": 1794407013.7230165,
       "status": "ACTIVE"
+    },
+    "lodydeals:46357": {
+      "channel_msg_id": 2311,
+      "product_id": "1005007162099601",
+      "title": "Somnambulist SSD 120GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46357,
+      "price": 29.21,
+      "timestamp": 1794407765.5158777,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20094,17 +20106,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794407019.4487538,
+    "last_deal_post_time": 1794407771.6349607,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794407606.2281177,
+    "last_sweep_time": 1794407774.896681,
     "last_sweep_times": {
-      "algeria": 1794407603.4009216,
-      "france": 1794407606.2281177
+      "algeria": 1794407771.6057053,
+      "france": 1794407774.896681
     },
     "last_deal_post_times": {
-      "algeria": 1794407019.4487538
+      "algeria": 1794407771.6349607
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21823,7 +21835,8 @@
     "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD": "zedstoreonline",
     "Electronic Body Scale": "aniscoupons",
     "Kootiion X15 M.2 SSD NVMe 256GB": "aniscoupons",
-    "SoundPEATS C30 Hybrid ANC -52dB": "lodydeals"
+    "SoundPEATS C30 Hybrid ANC -52dB": "lodydeals",
+    "Somnambulist SSD 120GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -22619,7 +22632,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8558",
     "megaphonna:8418",
     "lodydeals:45595",
     "aniscoupons:33189",
@@ -23618,7 +23630,8 @@
     "aniscoupons:34510",
     "zedstoreonline:39884",
     "lodydeals:46353",
-    "ecksdeal:6055"
+    "ecksdeal:6055",
+    "lodydeals:46356"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
