@@ -1130,7 +1130,7 @@
     "1005012838686691": 1793384191.3385255,
     "1005007966795709": 1793898351.709536,
     "1005007760080474": 1793613355.4947147,
-    "1005011857340568": 1793613424.8373997,
+    "1005011857340568": 1794437138.1462939,
     "1005008459823709": 1793448578.1268156,
     "1005012823469739": 1793656197.5558417,
     "1005009286078717": 1793448653.6981916,
@@ -1170,7 +1170,7 @@
     "1005012994490034": 1793441317.3934674,
     "1005010146493558": 1793448836.300828,
     "1005010575865619": 1794422151.260992,
-    "1005011778197787": 1793656192.605134,
+    "1005011778197787": 1794437132.8258533,
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
     "1005005373032877": 1793600283.7397804,
@@ -2786,7 +2786,7 @@
     "Anker 511 Nano Pro 30W": 1792103182.8885217,
     "Anker Nano 3 Pro 45W GaN": 1792103193.622027,
     "POCO X8 5G 6/128GB": 1793542379.417902,
-    "Blackview Wave 10": 1792156510.3081717,
+    "Blackview Wave 10": 1794437138.1462939,
     "Blackview Wave 7C Smartphone 6.56 inch HD+Eye-Comfort Screen IPS Display": 1792156532.660453,
     "Anker Liberty 4 NC": 1793448767.4736183,
     "Ⓜ OnePlus Turbo 6V 8/256": 1792156757.9443583,
@@ -2936,7 +2936,7 @@
     "فلاكشيب من": 1793380515.8443403,
     "ONEPLUS ACE6 ULTRA (12/256)": 1793448862.466345,
     "ONEPLUS ACE 6T (12/256)": 1793380546.8905725,
-    "AMD Ryzen 7 7700": 1793656192.605134,
+    "AMD Ryzen 7 7700": 1794437132.8258533,
     "ASROCK B550 PHANTOM": 1793384181.0587313,
     "MSI PRO B850-P WIFI": 1793543567.486626,
     "MSI X670E GAMING PLUS WIFI": 1793384191.3385255,
@@ -3466,8 +3466,6 @@
     "OPPO K15 12/256GB": 1794436740.624044
   },
   "published_post_keys": [
-    "bnddeals:50814",
-    "lodydeals:45491",
     "couponsglobal:48766",
     "megaphonna:8427",
     "couponsglobal:48798",
@@ -4465,11 +4463,13 @@
     "aniscoupons:34595",
     "aniscoupons:34596",
     "aniscoupons:34597",
-    "aniscoupons:34598"
+    "aniscoupons:34598",
+    "zedstoreonline:39928",
+    "aniscoupons:34600"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794436740.624044,
+  "last_run_time": 1794437138.1462939,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4496,12 +4496,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39927,
-      "last_check_time": 1794433800.1771796
+      "last_message_id": 39928,
+      "last_check_time": 1794437134.8889828
     },
     "aniscoupons": {
-      "last_message_id": 34599,
-      "last_check_time": 1794436941.7792222
+      "last_message_id": 34600,
+      "last_check_time": 1794437140.2090871
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4802,7 +4802,7 @@
     "1005008327980403": 83.31,
     "1005012838686691": 140.98,
     "1005007966795709": 87.0,
-    "1005011857340568": 114.6,
+    "1005011857340568": 114.63,
     "1005008459823709": 21.4,
     "1005009286078717": 15.7,
     "1005009893668383": 13.8,
@@ -4842,7 +4842,7 @@
     "1005012994490034": 458.0,
     "1005010146493558": 562.0,
     "1005010575865619": 365.8,
-    "1005011778197787": 155.31,
+    "1005011778197787": 155.2,
     "1005012839355198": 150.12,
     "1005010133081414": 715.0,
     "1005005373032877": 61.03,
@@ -20954,6 +20954,26 @@
       "price": 349.4,
       "timestamp": 1794436740.624044,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39928": {
+      "channel_msg_id": 2394,
+      "product_id": "1005011778197787",
+      "title": "AMD Ryzen 7 7700",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39928,
+      "price": 155.2,
+      "timestamp": 1794437132.8258533,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34600": {
+      "channel_msg_id": 2395,
+      "product_id": "1005011857340568",
+      "title": "Blackview Wave 10",
+      "channel": "aniscoupons",
+      "source_msg_id": 34600,
+      "price": 114.63,
+      "timestamp": 1794437138.1462939,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -20962,17 +20982,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794436743.417944,
+    "last_deal_post_time": 1794437140.8821435,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794436945.1374211,
+    "last_sweep_time": 1794437143.3780828,
     "last_sweep_times": {
-      "algeria": 1794436942.5232,
-      "france": 1794436945.1374211
+      "algeria": 1794437140.8549578,
+      "france": 1794437143.3780828
     },
     "last_deal_post_times": {
-      "algeria": 1794436743.417944
+      "algeria": 1794437140.8821435
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21367,7 +21387,7 @@
     "1005008327980403": "lodydeals",
     "1005012838686691": "lodydeals",
     "1005007966795709": "lodydeals",
-    "1005011857340568": "zedstoreonline",
+    "1005011857340568": "aniscoupons",
     "1005008459823709": "zedstoreonline",
     "1005009286078717": "aniscoupons",
     "1005009893668383": "zedstoreonline",
@@ -21407,7 +21427,7 @@
     "1005012994490034": "zedstoreonline",
     "1005010146493558": "megaphonna",
     "1005010575865619": "aniscoupons",
-    "1005011778197787": "lodydeals",
+    "1005011778197787": "zedstoreonline",
     "1005012839355198": "bnddeals",
     "1005010133081414": "aniscoupons",
     "1005005373032877": "lodydeals",
@@ -22193,7 +22213,7 @@
     "فلاكشيب من": "megaphonna",
     "ONEPLUS ACE6 ULTRA (12/256)": "megaphonna",
     "ONEPLUS ACE 6T (12/256)": "megaphonna",
-    "AMD Ryzen 7 7700": "lodydeals",
+    "AMD Ryzen 7 7700": "zedstoreonline",
     "ASROCK B550 PHANTOM": "lodydeals",
     "MSI PRO B850-P WIFI": "lodydeals",
     "MSI X670E GAMING PLUS WIFI": "lodydeals",
