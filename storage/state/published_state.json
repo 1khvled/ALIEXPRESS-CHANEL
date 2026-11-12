@@ -935,7 +935,7 @@
     "1005011987956470": 1791126349.6683438,
     "1005012865709979": 1791135345.3136878,
     "COUPONS_be64457c7fff": 1791138647.0734267,
-    "1005007461615597": 1794065862.849844,
+    "1005007461615597": 1794519220.5820196,
     "1005010167814251": 1791147347.3774981,
     "1005012113350943": 1791147353.0681367,
     "1005012415005884": 1793566288.5208008,
@@ -2719,7 +2719,7 @@
     "Mini Laser Rangefinder 30M High Precision": 1791032177.1222703,
     "Men’s Oxford Fabric Sling Crossbody Bag": 1791033345.3970714,
     "ONEPLUS TURBO 6X 5G": 1793448884.6592717,
-    "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": 1794518679.1969855,
+    "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem": 1794519220.5820196,
     "️ POCO X6 Pro (12/256)": 1791037857.3485136,
     "LENOVO LE257": 1791038145.1521833,
     "Lenovo XT53": 1791038753.5097415,
@@ -3590,7 +3590,6 @@
     "WALRAM M.2  128GB": 1794515920.3397443
   },
   "published_post_keys": [
-    "lodydeals:45775",
     "lodydeals:45870",
     "lodydeals:45420",
     "test_channel:1792108342",
@@ -4589,11 +4588,12 @@
     "zedstoreonline:40028",
     "zedstoreonline:40029",
     "aniscoupons:34733",
-    "aniscoupons:34734"
+    "aniscoupons:34734",
+    "aniscoupons:34735"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794519051.76153,
+  "last_run_time": 1794519220.5820196,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6058,
@@ -4624,8 +4624,8 @@
       "last_check_time": 1794517938.200843
     },
     "aniscoupons": {
-      "last_message_id": 34734,
-      "last_check_time": 1794519053.8496568
+      "last_message_id": 34735,
+      "last_check_time": 1794519222.6302562
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -4781,7 +4781,7 @@
     "1005008046254742": 1.0,
     "1005011987956470": 1.0,
     "1005012865709979": 1.0,
-    "1005007461615597": 24.02,
+    "1005007461615597": 22.2,
     "1005010167814251": 139.9,
     "1005012113350943": 15.5,
     "1005012415005884": 275.11,
@@ -22543,6 +22543,16 @@
       "price": 167.8,
       "timestamp": 1794519051.76153,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34735": {
+      "channel_msg_id": 2541,
+      "product_id": "1005007461615597",
+      "title": "XUNYOU-LINK 4G LTE WiFi Router WiFi 6 300Mpbs 4G Modem",
+      "channel": "aniscoupons",
+      "source_msg_id": 34735,
+      "price": 22.2,
+      "timestamp": 1794519220.5820196,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22551,17 +22561,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794519054.7776935,
+    "last_deal_post_time": 1794519223.386614,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794519057.7342572,
+    "last_sweep_time": 1794519225.8993468,
     "last_sweep_times": {
-      "algeria": 1794519054.7555811,
-      "france": 1794519057.7342572
+      "algeria": 1794519223.3683717,
+      "france": 1794519225.8993468
     },
     "last_deal_post_times": {
-      "algeria": 1794519054.7776935
+      "algeria": 1794519223.386614
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22726,7 +22736,7 @@
     "1005011987956470": "couponsglobal",
     "1005012865709979": "couponsglobal",
     "COUPONS_be64457c7fff": "lodydeals",
-    "1005007461615597": "lodydeals",
+    "1005007461615597": "aniscoupons",
     "1005010167814251": "lodydeals",
     "1005012113350943": "lodydeals",
     "1005012415005884": "lodydeals",
