@@ -867,7 +867,7 @@
     "1005010178295650": 1793743848.9735239,
     "1005006861002512": 1791151259.5667012,
     "1005012285327063": 1794486161.9343145,
-    "1005006581583862": 1794472518.4835422,
+    "1005006581583862": 1794500368.8434355,
     "1005012816171978": 1792157876.0860639,
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791638734.5386465,
@@ -1448,12 +1448,12 @@
     "1005009577554629": 1793987289.8200357,
     "1005010656922924": 1794407013.7230165,
     "1005008077441711": 1794480643.2529733,
-    "1005006411483066": 1794091985.0146983,
+    "1005006411483066": 1794500381.7712336,
     "1005012925301774": 1794348808.2825344,
     "1005012959738411": 1794304640.3506072,
     "1005008357913212": 1794473249.7212825,
     "1005008703989845": 1794475632.0153844,
-    "1005007162099601": 1794407765.5158777,
+    "1005007162099601": 1794500376.8953977,
     "1005007038130594": 1794393500.1320646,
     "1005008248187128": 1794057675.8729835,
     "1005013053381984": 1794060065.5449874,
@@ -3331,7 +3331,7 @@
     "HAYLOU Watch 3 AMOLED": 1793793759.2206655,
     "CUSU SSD SATA 256GB": 1793728844.5794795,
     "Blackview OSCAL MARINE 2 8/128": 1793728859.1630292,
-    "HAYLOU S30 Headphones 43dB": 1793913766.8714123,
+    "HAYLOU S30 Headphones 43dB": 1794500368.8434355,
     "UGREEN 65W GaN Charger": 1793732921.385459,
     "MAONO Wave T1 Wireless": 1793733452.578614,
     "Huawei Pura 90 Pro Max 12/256GB": 1793735141.9083512,
@@ -3400,7 +3400,7 @@
     "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899,
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1794417547.9385538,
     "realme C100d 4/128GB": 1794440265.8938825,
-    "Zeblaze GTS 3 Pro AMOLED": 1794091985.0146983,
+    "Zeblaze GTS 3 Pro AMOLED": 1794500381.7712336,
     "شاحن سيارة ORICO بقوة 45W": 1794348808.2825344,
     "Hollyland LARK M2 DUO 2-Person": 1794304640.3506072,
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794483770.100659,
@@ -3522,7 +3522,7 @@
     "Electronic Body Scale": 1794400568.4819298,
     "Kootiion X15 M.2 SSD NVMe 256GB": 1794490967.174317,
     "SoundPEATS C30 Hybrid ANC -52dB": 1794407013.7230165,
-    "Somnambulist SSD 120GB": 1794407765.5158777,
+    "Somnambulist SSD 120GB": 1794500376.8953977,
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794492627.75024,
     "Realme P4 Power 8/256GB": 1794485983.772945,
     "ASROCK X570M PRO4 MOTHERBOARD": 1794414971.7181702,
@@ -3568,9 +3568,6 @@
     "سماعات Fifine Ampligame H6 7.1 RGB": 1794496851.9006197
   },
   "published_post_keys": [
-    "test_channel:1792073338",
-    "lodydeals:45827",
-    "lodydeals:45408",
     "zedstoreonline:38753",
     "lodydeals:45882",
     "aniscoupons:32739",
@@ -4567,19 +4564,22 @@
     "aniscoupons:34705",
     "aniscoupons:34706",
     "aniscoupons:34708",
-    "aniscoupons:34709"
+    "aniscoupons:34709",
+    "lodydeals:46407",
+    "lodydeals:46412",
+    "lodydeals:46413"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794500185.0688565,
+  "last_run_time": 1794500381.7712336,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6057,
       "last_check_time": 1794496853.9442635
     },
     "lodydeals": {
-      "last_message_id": 46412,
-      "last_check_time": 1794496847.5441957
+      "last_message_id": 46413,
+      "last_check_time": 1794500383.844072
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4598,8 +4598,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40011,
-      "last_check_time": 1794499070.675681
+      "last_message_id": 40012,
+      "last_check_time": 1794500390.2910125
     },
     "aniscoupons": {
       "last_message_id": 34709,
@@ -4694,7 +4694,7 @@
     "1005008901941749": 0.95,
     "1005006861002512": 13.56,
     "1005012285327063": 12.11,
-    "1005006581583862": 18.4,
+    "1005006581583862": 18.44,
     "1005012816171978": 274.46,
     "1005009834132291": 21.1,
     "1005010585654037": 19.4,
@@ -5157,7 +5157,7 @@
     "1005008774483451": 40.1,
     "1005010635850450": 21.1,
     "1005006782986446": 6.7,
-    "1005006411483066": 13.2,
+    "1005006411483066": 13.24,
     "1005009738356108": 17.2,
     "1005008636930795": 31.5,
     "1005013083645836": 304.4,
@@ -22217,6 +22217,36 @@
       "price": 259.7,
       "timestamp": 1794500185.0688565,
       "status": "ACTIVE"
+    },
+    "lodydeals:46407": {
+      "channel_msg_id": 2511,
+      "product_id": "1005006581583862",
+      "title": "HAYLOU S30 Headphones 43dB",
+      "channel": "lodydeals",
+      "source_msg_id": 46407,
+      "price": 18.44,
+      "timestamp": 1794500368.8434355,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46412": {
+      "channel_msg_id": 2512,
+      "product_id": "1005007162099601",
+      "title": "Somnambulist SSD 120GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46412,
+      "price": 29.21,
+      "timestamp": 1794500376.8953977,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46413": {
+      "channel_msg_id": 2513,
+      "product_id": "1005006411483066",
+      "title": "Zeblaze GTS 3 Pro AMOLED",
+      "channel": "lodydeals",
+      "source_msg_id": 46413,
+      "price": 13.24,
+      "timestamp": 1794500381.7712336,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22225,17 +22255,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794500187.8883398,
+    "last_deal_post_time": 1794500391.951152,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794500190.7480931,
+    "last_sweep_time": 1794500395.315626,
     "last_sweep_times": {
-      "algeria": 1794500187.868796,
-      "france": 1794500190.7480931
+      "algeria": 1794500391.9192445,
+      "france": 1794500395.315626
     },
     "last_deal_post_times": {
-      "algeria": 1794500187.8883398
+      "algeria": 1794500391.951152
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22327,7 +22357,7 @@
     "1005012881256093": "lodydeals",
     "1005006861002512": "lodydeals",
     "1005012285327063": "aniscoupons",
-    "1005006581583862": "aniscoupons",
+    "1005006581583862": "lodydeals",
     "1005012816171978": "lodydeals",
     "1005009834132291": "aniscoupons",
     "1005010585654037": "lodydeals",
@@ -22914,7 +22944,7 @@
     "1005009577554629": "lodydeals",
     "1005010656922924": "lodydeals",
     "1005008077441711": "aniscoupons",
-    "1005006411483066": "zedstoreonline",
+    "1005006411483066": "lodydeals",
     "1005012925301774": "zedstoreonline",
     "1005012959738411": "aniscoupons",
     "1005008357913212": "aniscoupons",
@@ -23861,7 +23891,7 @@
     "UGREEN 45W GaN Smart Display Charger": "zedstoreonline",
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": "zedstoreonline",
     "realme C100d 4/128GB": "zedstoreonline",
-    "Zeblaze GTS 3 Pro AMOLED": "zedstoreonline",
+    "Zeblaze GTS 3 Pro AMOLED": "lodydeals",
     "شاحن سيارة ORICO بقوة 45W": "zedstoreonline",
     "Hollyland LARK M2 DUO 2-Person": "aniscoupons",
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": "aniscoupons",
@@ -24825,12 +24855,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8446",
-    "lodydeals:45857",
-    "lodydeals:45577",
-    "megaphonna:8611",
-    "ecksdeal:5901",
-    "lodydeals:45566",
     "bnddeals:50899",
     "zedstoreonline:38969",
     "aniscoupons:33317",
@@ -25824,7 +25848,13 @@
     "aniscoupons:34703",
     "zedstoreonline:40010",
     "zedstoreonline:40011",
-    "aniscoupons:34707"
+    "aniscoupons:34707",
+    "lodydeals:46406",
+    "lodydeals:46408",
+    "lodydeals:46409",
+    "lodydeals:46410",
+    "lodydeals:46411",
+    "zedstoreonline:40012"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
