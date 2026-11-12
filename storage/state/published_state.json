@@ -1461,7 +1461,7 @@
     "1005012959738411": 1794304640.3506072,
     "1005008357913212": 1794503164.1120768,
     "1005008703989845": 1794475632.0153844,
-    "1005007162099601": 1794500376.8953977,
+    "1005007162099601": 1794524556.2538168,
     "1005007038130594": 1794393500.1320646,
     "1005008248187128": 1794057675.8729835,
     "1005013053381984": 1794060065.5449874,
@@ -3548,7 +3548,7 @@
     "Electronic Body Scale": 1794400568.4819298,
     "Kootiion X15 M.2 SSD NVMe 256GB": 1794522161.7558599,
     "SoundPEATS C30 Hybrid ANC -52dB": 1794407013.7230165,
-    "Somnambulist SSD 120GB": 1794500376.8953977,
+    "Somnambulist SSD 120GB": 1794524556.2538168,
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794492627.75024,
     "Realme P4 Power 8/256GB": 1794485983.772945,
     "ASROCK X570M PRO4 MOTHERBOARD": 1794520699.708655,
@@ -3604,7 +3604,6 @@
     "Retro Bronze Embossed": 1794524381.8060858
   },
   "published_post_keys": [
-    "aniscoupons:32766",
     "zedstoreonline:38626",
     "zedstoreonline:38815",
     "megaphonna:8617",
@@ -4603,19 +4602,20 @@
     "lodydeals:46433",
     "lodydeals:46434",
     "lodydeals:46435",
-    "lodydeals:46436"
+    "lodydeals:46436",
+    "lodydeals:46440"
   ],
-  "last_disclaimer_time": 1793314858.1877568,
+  "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794524386.8590817,
+  "last_run_time": 1794524556.2538168,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6058,
       "last_check_time": 1794511305.5885172
     },
     "lodydeals": {
-      "last_message_id": 46440,
-      "last_check_time": 1794524389.0316474
+      "last_message_id": 46443,
+      "last_check_time": 1794524560.3901823
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4634,16 +4634,16 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40040,
-      "last_check_time": 1794524172.483081
+      "last_message_id": 40041,
+      "last_check_time": 1794524561.9900908
     },
     "aniscoupons": {
       "last_message_id": 34749,
       "last_check_time": 1794524396.1339726
     },
     "bnddeals": {
-      "last_message_id": 51295,
-      "last_check_time": 1794524175.7760925
+      "last_message_id": 51296,
+      "last_check_time": 1794524565.8365307
     }
   },
   "published_product_prices": {
@@ -22661,6 +22661,16 @@
       "price": 3.29,
       "timestamp": 1794524386.8590817,
       "status": "ACTIVE"
+    },
+    "lodydeals:46440": {
+      "channel_msg_id": 2553,
+      "product_id": "1005007162099601",
+      "title": "Somnambulist SSD 120GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46440,
+      "price": 29.21,
+      "timestamp": 1794524556.2538168,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22669,17 +22679,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794524399.0855286,
+    "last_deal_post_time": 1794524565.8986137,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794524402.1315315,
+    "last_sweep_time": 1794524568.7648594,
     "last_sweep_times": {
-      "algeria": 1794524399.0551136,
-      "france": 1794524402.1315315
+      "algeria": 1794524565.8675466,
+      "france": 1794524568.7648594
     },
     "last_deal_post_times": {
-      "algeria": 1794524399.0855286
+      "algeria": 1794524565.8986137
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -25287,11 +25297,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33541",
-    "aniscoupons:33543",
-    "aniscoupons:33544",
-    "aniscoupons:33545",
-    "aniscoupons:33546",
     "aniscoupons:33547",
     "aniscoupons:33548",
     "aniscoupons:33549",
@@ -26286,7 +26291,12 @@
     "lodydeals:46437",
     "lodydeals:46438",
     "lodydeals:46439",
-    "aniscoupons:34749"
+    "aniscoupons:34749",
+    "lodydeals:46426",
+    "lodydeals:46441",
+    "lodydeals:46443",
+    "zedstoreonline:40041",
+    "bnddeals:51296"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
