@@ -754,7 +754,8 @@
     "1005012915663790",
     "1005013560596944",
     "1005007038882010",
-    "1005007345327497"
+    "1005007345327497",
+    "1005009560287420"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -852,7 +853,7 @@
     "1005010178295650": 1793743848.9735239,
     "1005006861002512": 1791151259.5667012,
     "1005012285327063": 1794424345.6568675,
-    "1005006581583862": 1794421237.0650215,
+    "1005006581583862": 1794472518.4835422,
     "1005012816171978": 1792157876.0860639,
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791638734.5386465,
@@ -1034,7 +1035,7 @@
     "9998882360": 1792162360.6633363,
     "9998882475": 1793282475.663889,
     "9998882568": 1792162568.078144,
-    "1005010369693975": 1794434721.967324,
+    "1005010369693975": 1794472514.3049436,
     "1005006442452857": 1792166326.0335298,
     "9998886462": 1792166462.200491,
     "1005009948598802": 1793500786.1935658,
@@ -1524,7 +1525,8 @@
     "1005012915663790": 1794439916.4928079,
     "1005013560596944": 1794470859.4033997,
     "1005007038882010": 1794471412.477501,
-    "1005007345327497": 1794472329.794574
+    "1005007345327497": 1794472329.794574,
+    "1005009560287420": 1794472509.191089
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2618,7 +2620,7 @@
     "آلة حلاقة من علامة KEMEI": 1791012946.4110153,
     "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": 1791638734.5386465,
     "Predyee Groin Hair Trimmer WH": 1791013836.445986,
-    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1794421237.0650215,
+    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1794472518.4835422,
     "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise": 1791014140.3360124,
     "Baseus-Bowie E5x": 1791014145.8727648,
     "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": 1791014755.488723,
@@ -3312,7 +3314,7 @@
     "Haylou Solar NEO 2 Amoled": 1794430858.2362945,
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones": 1794313321.761044,
     "HAYLOU Solar Ultra GPS": 1794426765.2023578,
-    "NOTHING Watch 3 Pro": 1793966696.631638,
+    "NOTHING Watch 3 Pro": 1794472509.191089,
     "مشترك كهربائي ORICO PD25W – محطة شحن مكتبية تضم منفذي Type-C ومنفذي USB-A ومقبسين AC لشحن الأجهزة وت": 1793966711.2525856,
     "Baseus Mouse Bluetooth Wireless Computer 1600DPI": 1793966716.198834,
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": 1793966721.1839278,
@@ -3451,7 +3453,7 @@
     "AULA WIN68 HE Gaming Mechanical Keyboard": 1794312953.1830955,
     "CMF Buds 2a ANC -42dB  السعر: 11.7": 1794312964.1163073,
     "MACHENIKE G1 Wireless Gaming Controller": 1794420506.0795698,
-    "HAYLOU Mori Pro": 1794434721.967324,
+    "HAYLOU Mori Pro": 1794472514.3049436,
     "KOOTION SATA3 SSD 128GB": 1794315897.4341226,
     "Inphic YuanChuang Cyber Gaming Mouse": 1794320674.833981,
     "SIX PCIe 4.0 SSD (1TB) NVMe M2": 1794331533.1223195,
@@ -3502,9 +3504,6 @@
     "ميزان رقمي محمول لحقائب السفر": 1794472329.794574
   },
   "published_post_keys": [
-    "aniscoupons:33053",
-    "aniscoupons:32741",
-    "ecksdeal:5957",
     "aniscoupons:32952",
     "aniscoupons:32738",
     "megaphonna:8544",
@@ -4501,11 +4500,14 @@
     "aniscoupons:34617",
     "aniscoupons:34618",
     "aniscoupons:34619",
-    "zedstoreonline:39947"
+    "zedstoreonline:39947",
+    "zedstoreonline:39948",
+    "aniscoupons:34620",
+    "aniscoupons:34621"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794472329.794574,
+  "last_run_time": 1794472518.4835422,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4532,12 +4534,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39947,
-      "last_check_time": 1794472331.8618634
+      "last_message_id": 39948,
+      "last_check_time": 1794472511.244893
     },
     "aniscoupons": {
-      "last_message_id": 34619,
-      "last_check_time": 1794471960.6349828
+      "last_message_id": 34621,
+      "last_check_time": 1794472520.5372684
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5193,7 +5195,8 @@
     "1005012915663790": 56.8,
     "1005013560596944": 9.6,
     "1005007038882010": 8.4,
-    "1005007345327497": 2.4
+    "1005007345327497": 2.4,
+    "1005009560287420": 51.3
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -21198,6 +21201,36 @@
       "price": 2.4,
       "timestamp": 1794472329.794574,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39948": {
+      "channel_msg_id": 2416,
+      "product_id": "1005009560287420",
+      "title": "NOTHING Watch 3 Pro",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39948,
+      "price": 51.3,
+      "timestamp": 1794472509.191089,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34620": {
+      "channel_msg_id": 2417,
+      "product_id": "1005010369693975",
+      "title": "HAYLOU Mori Pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 34620,
+      "price": 10.7,
+      "timestamp": 1794472514.3049436,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34621": {
+      "channel_msg_id": 2418,
+      "product_id": "1005006581583862",
+      "title": "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling",
+      "channel": "aniscoupons",
+      "source_msg_id": 34621,
+      "price": 18.4,
+      "timestamp": 1794472518.4835422,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21206,17 +21239,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794472333.2794461,
+    "last_deal_post_time": 1794472521.303768,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794472336.1334531,
+    "last_sweep_time": 1794472524.0200958,
     "last_sweep_times": {
-      "algeria": 1794472333.249508,
-      "france": 1794472336.1334531
+      "algeria": 1794472521.2806795,
+      "france": 1794472524.0200958
     },
     "last_deal_post_times": {
-      "algeria": 1794472333.2794461
+      "algeria": 1794472521.303768
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21986,7 +22019,8 @@
     "1005012915663790": "aniscoupons",
     "1005013560596944": "aniscoupons",
     "1005007038882010": "aniscoupons",
-    "1005007345327497": "zedstoreonline"
+    "1005007345327497": "zedstoreonline",
+    "1005009560287420": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
