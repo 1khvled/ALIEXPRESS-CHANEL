@@ -1437,7 +1437,7 @@
     "1005006411483066": 1794091985.0146983,
     "1005012925301774": 1794348808.2825344,
     "1005012959738411": 1794304640.3506072,
-    "1005008357913212": 1794426949.7609992,
+    "1005008357913212": 1794473249.7212825,
     "1005008703989845": 1794412380.423559,
     "1005007162099601": 1794407765.5158777,
     "1005007038130594": 1794393500.1320646,
@@ -1482,7 +1482,7 @@
     "1005007820092290": 1794224654.527678,
     "1005012329021334": 1794435638.773679,
     "1005013218893010": 1794226314.627466,
-    "1005013480169843": 1794416693.462334,
+    "1005013480169843": 1794473244.7379925,
     "1005013226454479": 1794227594.9699965,
     "1005005548265076": 1794231079.407264,
     "1005012555450345": 1794232557.0275722,
@@ -2803,7 +2803,7 @@
     "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)": 1792156501.818011,
     "Redmi Pad 2 9.7": 1792061322.5579543,
     "Redmi Note 12 5G Global (4/128GB)": 1792156524.878074,
-    "Blackview Wave 10C": 1794416693.462334,
+    "Blackview Wave 10C": 1794473244.7379925,
     "متوسط سعره حالياً 82000دج": 1793276237.692456,
     "iQOO Z11s 5G (8/128GB)": 1794431592.229099,
     "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1793966861.2399917,
@@ -3327,7 +3327,7 @@
     "Fifine Gaming Headset H9W": 1794433999.0419908,
     "Fifine Gaming Headset H6": 1794424534.1435025,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794436379.3016446,
-    "KOOTION SSD SATA": 1794426949.7609992,
+    "KOOTION SSD SATA": 1794473249.7212825,
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
     "هذون سماعات جدد من   HAYLOU⌚": 1793966887.3818936,
     "HAYLOU WATCH 3 NEW": 1793966892.2256048,
@@ -3504,8 +3504,6 @@
     "ميزان رقمي محمول لحقائب السفر": 1794472329.794574
   },
   "published_post_keys": [
-    "aniscoupons:32738",
-    "megaphonna:8544",
     "test_channel:1792086219",
     "lodydeals:45558",
     "couponsglobal:48807",
@@ -4503,11 +4501,13 @@
     "zedstoreonline:39948",
     "aniscoupons:34620",
     "aniscoupons:34621",
-    "aniscoupons:34622"
+    "aniscoupons:34622",
+    "zedstoreonline:39950",
+    "aniscoupons:34623"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794473066.6555345,
+  "last_run_time": 1794473249.7212825,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4534,12 +4534,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39949,
-      "last_check_time": 1794472872.3461154
+      "last_message_id": 39950,
+      "last_check_time": 1794473246.8224094
     },
     "aniscoupons": {
-      "last_message_id": 34622,
-      "last_check_time": 1794473068.725193
+      "last_message_id": 34623,
+      "last_check_time": 1794473251.7750096
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -21241,6 +21241,26 @@
       "price": 226.78,
       "timestamp": 1794473066.6555345,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39950": {
+      "channel_msg_id": 2420,
+      "product_id": "1005013480169843",
+      "title": "Blackview Wave 10C",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39950,
+      "price": 66.7,
+      "timestamp": 1794473244.7379925,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34623": {
+      "channel_msg_id": 2421,
+      "product_id": "1005008357913212",
+      "title": "KOOTION SSD SATA",
+      "channel": "aniscoupons",
+      "source_msg_id": 34623,
+      "price": 40.5,
+      "timestamp": 1794473249.7212825,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21249,17 +21269,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794473069.7036452,
+    "last_deal_post_time": 1794473252.4319708,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794473072.8121011,
+    "last_sweep_time": 1794473255.6292388,
     "last_sweep_times": {
-      "algeria": 1794473069.6746852,
-      "france": 1794473072.8121011
+      "algeria": 1794473252.407788,
+      "france": 1794473255.6292388
     },
     "last_deal_post_times": {
-      "algeria": 1794473069.7036452
+      "algeria": 1794473252.4319708
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
