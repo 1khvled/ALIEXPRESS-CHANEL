@@ -773,7 +773,8 @@
     "1005009012821000",
     "1005013485724377",
     "1005012783197164",
-    "1005012993724126"
+    "1005012993724126",
+    "1005012726037568"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1562,7 +1563,8 @@
     "1005009012821000": 1794502225.0175712,
     "1005013485724377": 1794510747.6816225,
     "1005012783197164": 1794512597.1982763,
-    "1005012993724126": 1794515920.3397443
+    "1005012993724126": 1794515920.3397443,
+    "1005012726037568": 1794523623.94713
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -3518,7 +3520,7 @@
     "KOOTION SATA3 SSD 128GB": 1794315897.4341226,
     "Inphic YuanChuang Cyber Gaming Mouse": 1794320674.833981,
     "SIX PCIe 4.0 SSD (1TB) NVMe M2": 1794331533.1223195,
-    "Kootion SSD SATA": 1794332259.758732,
+    "Kootion SSD SATA": 1794523623.94713,
     "KOOTION SATA SSD 128GB": 1794334097.945569,
     "Kingston DataTraveler 128GB": 1794481781.56275,
     "CUSU CV3500  M.2 NVMe SSD (1tb)": 1794481572.7195961,
@@ -3590,7 +3592,6 @@
     "WALRAM M.2  128GB": 1794515920.3397443
   },
   "published_post_keys": [
-    "megaphonna:8570",
     "aniscoupons:33210",
     "lodydeals:45937",
     "aniscoupons:32705",
@@ -4589,11 +4590,12 @@
     "aniscoupons:34735",
     "zedstoreonline:40032",
     "aniscoupons:34740",
-    "aniscoupons:34742"
+    "aniscoupons:34742",
+    "aniscoupons:34744"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794522161.7558599,
+  "last_run_time": 1794523623.94713,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6058,
@@ -4620,12 +4622,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40037,
-      "last_check_time": 1794523446.3958256
+      "last_message_id": 40039,
+      "last_check_time": 1794523619.7243161
     },
     "aniscoupons": {
-      "last_message_id": 34743,
-      "last_check_time": 1794522715.3691382
+      "last_message_id": 34745,
+      "last_check_time": 1794523626.0134788
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -5298,7 +5300,8 @@
     "1005009012821000": 87.8,
     "1005013485724377": 11.5,
     "1005012783197164": 36.4,
-    "1005012993724126": 15.6
+    "1005012993724126": 15.6,
+    "1005012726037568": 7.47
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -22583,6 +22586,16 @@
       "price": 30.3,
       "timestamp": 1794522161.7558599,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34744": {
+      "channel_msg_id": 2545,
+      "product_id": "1005012726037568",
+      "title": "Kootion SSD SATA",
+      "channel": "aniscoupons",
+      "source_msg_id": 34744,
+      "price": 7.47,
+      "timestamp": 1794523623.94713,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22591,17 +22604,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794522164.5147007,
+    "last_deal_post_time": 1794523626.7776845,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794523450.7357001,
+    "last_sweep_time": 1794523629.2540066,
     "last_sweep_times": {
-      "algeria": 1794523447.7708488,
-      "france": 1794523450.7357001
+      "algeria": 1794523626.7602205,
+      "france": 1794523629.2540066
     },
     "last_deal_post_times": {
-      "algeria": 1794522164.5147007
+      "algeria": 1794523626.7776845
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23388,7 +23401,8 @@
     "1005009012821000": "lodydeals",
     "1005013485724377": "aniscoupons",
     "1005012783197164": "aniscoupons",
-    "1005012993724126": "aniscoupons"
+    "1005012993724126": "aniscoupons",
+    "1005012726037568": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -25202,9 +25216,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33514",
-    "aniscoupons:33515",
-    "aniscoupons:33517",
     "aniscoupons:33519",
     "aniscoupons:33520",
     "aniscoupons:33521",
@@ -26201,7 +26212,10 @@
     "zedstoreonline:40036",
     "aniscoupons:34741",
     "aniscoupons:34743",
-    "zedstoreonline:40037"
+    "zedstoreonline:40037",
+    "zedstoreonline:40038",
+    "zedstoreonline:40039",
+    "aniscoupons:34745"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
