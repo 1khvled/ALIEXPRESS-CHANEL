@@ -788,7 +788,7 @@
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
     "100500777666555": 1793956903.3513582,
-    "1005011778621042": 1794492258.9957209,
+    "1005011778621042": 1794507247.0720062,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1793543664.66204,
     "1005006533038973": 1791104468.758226,
@@ -2742,7 +2742,7 @@
     "ATTACK SHARK X5": 1791106544.154073,
     "ATTACK SHARK X2 Pro": 1791106853.9447496,
     "ATTACK SHARK L80PRO Ultralight": 1791107750.295487,
-    "AMD Ryzen 7 5700X": 1793898345.0223713,
+    "AMD Ryzen 7 5700X": 1794507247.0720062,
     "هاتف ينسيك في شارجور🤣🤣": 1791109857.5190113,
     "CMF Smart Watch 3 pro AMOLED": 1794498509.0561047,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
@@ -3578,7 +3578,6 @@
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": 1794502591.7937624
   },
   "published_post_keys": [
-    "pcgamingpart:7990",
     "bnddeals:50935",
     "bnddeals:50883",
     "aniscoupons:33201",
@@ -4577,11 +4576,12 @@
     "lodydeals:46420",
     "zedstoreonline:40017",
     "aniscoupons:34718",
-    "aniscoupons:34719"
+    "aniscoupons:34719",
+    "zedstoreonline:40020"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794506330.082156,
+  "last_run_time": 1794507247.0720062,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6057,
@@ -4608,8 +4608,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40019,
-      "last_check_time": 1794506883.9923558
+      "last_message_id": 40020,
+      "last_check_time": 1794507249.1429787
     },
     "aniscoupons": {
       "last_message_id": 34719,
@@ -22378,6 +22378,16 @@
       "price": 147.8,
       "timestamp": 1794506330.082156,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40020": {
+      "channel_msg_id": 2526,
+      "product_id": "1005011778621042",
+      "title": "AMD Ryzen 7 5700X",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40020,
+      "price": 118.5,
+      "timestamp": 1794507247.0720062,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22386,17 +22396,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794506333.0806181,
+    "last_deal_post_time": 1794507250.588359,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794507071.3318775,
+    "last_sweep_time": 1794507253.5949357,
     "last_sweep_times": {
-      "algeria": 1794507067.3758726,
-      "france": 1794507071.3318775
+      "algeria": 1794507250.5573282,
+      "france": 1794507253.5949357
     },
     "last_deal_post_times": {
-      "algeria": 1794506333.0806181
+      "algeria": 1794507250.588359
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22549,7 +22559,7 @@
     "1005007345108759": "ecksdeal",
     "1005007394028808": "lodydeals",
     "1005007394197021": "lodydeals",
-    "1005011778621042": "aniscoupons",
+    "1005011778621042": "zedstoreonline",
     "1005012571601398": "aniscoupons",
     "1005013290515237": "aniscoupons",
     "1005012264415744": "megaphonna",
@@ -23340,7 +23350,7 @@
     "ATTACK SHARK X5": "aniscoupons",
     "ATTACK SHARK X2 Pro": "aniscoupons",
     "ATTACK SHARK L80PRO Ultralight": "aniscoupons",
-    "AMD Ryzen 7 5700X": "lodydeals",
+    "AMD Ryzen 7 5700X": "zedstoreonline",
     "Attack Shark L80 Tri-mode": "lodydeals",
     "هاتف ينسيك في شارجور🤣🤣": "aniscoupons",
     "CMF Smart Watch 3 pro AMOLED": "aniscoupons",
