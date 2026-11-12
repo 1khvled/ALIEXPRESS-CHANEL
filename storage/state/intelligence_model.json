@@ -40,7 +40,7 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 193,
+      "seen": 194,
       "published": 153,
       "skipped": 0,
       "ewma": 0.9994
@@ -84,7 +84,7 @@
       "ewma": 0.7211
     },
     "audio": {
-      "seen": 13,
+      "seen": 14,
       "published": 12,
       "skipped": 0,
       "ewma": 0.8162
@@ -625,23 +625,15 @@
     ]
   },
   "counters": {
-    "scored": 360,
-    "verdict_publish": 337,
+    "scored": 361,
+    "verdict_publish": 338,
     "verdict_hold": 23,
     "verdict_skip": 0,
     "published": 248,
     "skipped": 0
   },
-  "score_sum": 26002.42,
+  "score_sum": 26085.4,
   "recent_decisions": [
-    {
-      "ts": 1794432870,
-      "channel": "aniscoupons",
-      "category": "audio",
-      "product_id": "1005012083833079",
-      "score": 67.96,
-      "verdict": "publish"
-    },
     {
       "ts": 1794433055,
       "channel": "aniscoupons",
@@ -2233,7 +2225,15 @@
       "product_id": "1005012648097890",
       "score": 78.47,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794513523,
+      "channel": "aniscoupons",
+      "category": "audio",
+      "product_id": "1005010702038861",
+      "score": 82.98,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794513145.5814595
+  "updated_at": 1794513523.0186076
 }
