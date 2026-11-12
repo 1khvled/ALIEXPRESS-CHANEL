@@ -1176,7 +1176,7 @@
     "1005011787296177": 1793607070.347875,
     "1005007375332966": 1793467173.1692383,
     "1005012543970886": 1793467209.762414,
-    "1005013222073946": 1794306871.9339762,
+    "1005013222073946": 1794492985.70064,
     "1005010485068924": 1794481008.527723,
     "1005013245248248": 1793467100.7719579,
     "1005011790544318": 1793448745.105644,
@@ -2768,7 +2768,7 @@
     "Rocoren 100W Type-C to USB Fast Charging": 1791156089.0187185,
     "XUNYOU-LINK 4G SIM WiFi Router": 1791192351.7104166,
     "UGREEN  1080P Webcam": 1791192944.201814,
-    "HONOR CHOICE Watch 2i": 1794230168.269789,
+    "HONOR CHOICE Watch 2i": 1794492985.70064,
     "HONOR Watch X5i Version globale SmartWatch 1.9": 1791194149.475346,
     "Attack Shark L60 Tri-mode Gaming Headset": 1791194741.6244273,
     "ATTACK SHARK X2 Pro station de chargement RGB": 1791195344.3305714,
@@ -3566,7 +3566,6 @@
     "MCHOSE A7 V3 Pro": 1794489491.8874733
   },
   "published_post_keys": [
-    "zedstoreonline:38761",
     "test_channel:1792098020",
     "lodydeals:45414",
     "lodydeals:45468",
@@ -4565,11 +4564,12 @@
     "zedstoreonline:40001",
     "aniscoupons:34692",
     "zedstoreonline:40002",
-    "zedstoreonline:40003"
+    "zedstoreonline:40003",
+    "zedstoreonline:40004"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794492627.75024,
+  "last_run_time": 1794492985.70064,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4596,12 +4596,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40003,
-      "last_check_time": 1794492629.8231735
+      "last_message_id": 40004,
+      "last_check_time": 1794492987.7689784
     },
     "aniscoupons": {
-      "last_message_id": 34694,
-      "last_check_time": 1794492632.3641021
+      "last_message_id": 34695,
+      "last_check_time": 1794492989.7410197
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -22095,6 +22095,16 @@
       "price": 167.8,
       "timestamp": 1794492627.75024,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40004": {
+      "channel_msg_id": 2498,
+      "product_id": "1005013222073946",
+      "title": "HONOR CHOICE Watch 2i",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40004,
+      "price": 19.5,
+      "timestamp": 1794492985.70064,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22103,17 +22113,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794492633.137189,
+    "last_deal_post_time": 1794492990.4398577,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794492808.2105892,
+    "last_sweep_time": 1794492993.2472413,
     "last_sweep_times": {
-      "algeria": 1794492804.4223895,
-      "france": 1794492808.2105892
+      "algeria": 1794492990.4095592,
+      "france": 1794492993.2472413
     },
     "last_deal_post_times": {
-      "algeria": 1794492633.137189
+      "algeria": 1794492990.4398577
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22530,7 +22540,7 @@
     "1005011787296177": "lodydeals",
     "1005007375332966": "aniscoupons",
     "1005012543970886": "aniscoupons",
-    "1005013222073946": "aniscoupons",
+    "1005013222073946": "zedstoreonline",
     "1005010485068924": "aniscoupons",
     "1005013245248248": "zedstoreonline",
     "1005011790544318": "bnddeals",
@@ -23091,7 +23101,7 @@
     "Attack Shark x AJAZZ AJ159P Tri-mode Gaming Mouse": "zedstoreonline",
     "XUNYOU-LINK 4G SIM WiFi Router": "zedstoreonline",
     "UGREEN  1080P Webcam": "zedstoreonline",
-    "HONOR CHOICE Watch 2i": "lodydeals",
+    "HONOR CHOICE Watch 2i": "zedstoreonline",
     "HONOR Watch X5i Version globale SmartWatch 1.9": "bnddeals",
     "Attack Shark L60 Tri-mode Gaming Headset": "zedstoreonline",
     "ATTACK SHARK X2 Pro station de chargement RGB": "zedstoreonline",
@@ -24702,7 +24712,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8476",
     "alidealsdz:133",
     "aniscoupons:33328",
     "aniscoupons:32951",
@@ -25701,7 +25710,8 @@
     "zedstoreonline:39999",
     "aniscoupons:34691",
     "aniscoupons:34693",
-    "aniscoupons:34694"
+    "aniscoupons:34694",
+    "aniscoupons:34695"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
