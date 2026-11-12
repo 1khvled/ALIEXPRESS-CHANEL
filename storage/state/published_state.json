@@ -1163,7 +1163,7 @@
     "1005013090910574": 1794340346.0747576,
     "1005012382148199": 1793500800.6950834,
     "1005010158485058": 1793543612.279949,
-    "1005012910719451": 1794413125.6384788,
+    "1005012910719451": 1794476009.5322104,
     "1005006307798542": 1793467165.446982,
     "1005011787296177": 1793607070.347875,
     "1005007375332966": 1793467173.1692383,
@@ -3424,7 +3424,7 @@
     "WAMRAM SATA SSD 480GB": 1794159522.2930505,
     "Netac M.2 1TB 7400Mbs Gen 4": 1794339059.384088,
     "RYZEN 5 5600XT": 1794253893.3396604,
-    "OnePlus Turbo 6V": 1794413125.6384788,
+    "OnePlus Turbo 6V": 1794476009.5322104,
     "DJI Mic Mini2  2TX 1RX": 1794216974.0881407,
     "Magcubic HY350Max 900 ANSI": 1794164675.8426867,
     "Warvank X8 Wireless Gaming": 1794164680.2575803,
@@ -3532,7 +3532,6 @@
     "FANTECH SHOOTER III": 1794475884.0444102
   },
   "published_post_keys": [
-    "aniscoupons:33335",
     "aniscoupons:33108",
     "pcgamingpart:7956",
     "couponsglobal:48779",
@@ -4531,11 +4530,12 @@
     "lodydeals:46400",
     "lodydeals:46403",
     "lodydeals:46404",
-    "zedstoreonline:39958"
+    "zedstoreonline:39958",
+    "aniscoupons:34633"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794475884.0444102,
+  "last_run_time": 1794476009.5322104,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4566,8 +4566,8 @@
       "last_check_time": 1794475886.0987277
     },
     "aniscoupons": {
-      "last_message_id": 34632,
-      "last_check_time": 1794475634.0647979
+      "last_message_id": 34633,
+      "last_check_time": 1794476011.6028383
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -21494,6 +21494,16 @@
       "price": 20.6,
       "timestamp": 1794475884.0444102,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34633": {
+      "channel_msg_id": 2442,
+      "product_id": "1005012910719451",
+      "title": "OnePlus Turbo 6V",
+      "channel": "aniscoupons",
+      "source_msg_id": 34633,
+      "price": 275.8,
+      "timestamp": 1794476009.5322104,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21502,17 +21512,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794475887.3876672,
+    "last_deal_post_time": 1794476012.465948,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794475890.3864965,
+    "last_sweep_time": 1794476015.675966,
     "last_sweep_times": {
-      "algeria": 1794475887.3649697,
-      "france": 1794475890.3864965
+      "algeria": 1794476012.4365942,
+      "france": 1794476015.675966
     },
     "last_deal_post_times": {
-      "algeria": 1794475887.3876672
+      "algeria": 1794476012.465948
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
