@@ -1145,7 +1145,7 @@
     "1005013351519067": 1793448628.3734028,
     "1005012484784752": 1794479314.6761642,
     "1005013222140851": 1793467234.8425448,
-    "1005013438245033": 1794431410.6893005,
+    "1005013438245033": 1794482760.5852623,
     "1005008986635164": 1793314892.9200466,
     "1005008327980403": 1794430852.2821708,
     "1005012838686691": 1793384191.3385255,
@@ -2932,7 +2932,7 @@
     "ViVO X300E 12/256": 1793282624.5538614,
     "Oneplus 13T 12/256GB": 1793299421.73227,
     "Anker USB C GaN Charger 30W": 1793299440.1984155,
-    "Realme GT8": 1794431410.6893005,
+    "Realme GT8": 1794482760.5852623,
     "Realme C100  6/128GB": 1793448628.3734028,
     "معالج Ryzen 5 5600XT": 1793299476.5930903,
     "معالج Ryzen 7 5700X": 1793732353.5932157,
@@ -3558,7 +3558,6 @@
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191
   },
   "published_post_keys": [
-    "couponsglobal:48783",
     "test_channel:1791759143",
     "aniscoupons:32998",
     "test_channel:1792166462",
@@ -4557,11 +4556,12 @@
     "aniscoupons:34651",
     "aniscoupons:34652",
     "zedstoreonline:39977",
-    "aniscoupons:34655"
+    "aniscoupons:34655",
+    "aniscoupons:34654"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794482375.9737191,
+  "last_run_time": 1794482760.5852623,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4588,12 +4588,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39978,
-      "last_check_time": 1794482369.3386805
+      "last_message_id": 39979,
+      "last_check_time": 1794482754.9180331
     },
     "aniscoupons": {
-      "last_message_id": 34656,
-      "last_check_time": 1794482379.1496212
+      "last_message_id": 34657,
+      "last_check_time": 1794482762.690912
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -21795,6 +21795,16 @@
       "price": 147.8,
       "timestamp": 1794482375.9737191,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34654": {
+      "channel_msg_id": 2469,
+      "product_id": "1005013438245033",
+      "title": "Realme GT8",
+      "channel": "aniscoupons",
+      "source_msg_id": 34654,
+      "price": 408.73,
+      "timestamp": 1794482760.5852623,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21803,17 +21813,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794482379.9094403,
+    "last_deal_post_time": 1794482763.5703864,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794482563.1181593,
+    "last_sweep_time": 1794482766.3610647,
     "last_sweep_times": {
-      "algeria": 1794482560.1504624,
-      "france": 1794482563.1181593
+      "algeria": 1794482763.5404398,
+      "france": 1794482766.3610647
     },
     "last_deal_post_times": {
-      "algeria": 1794482379.9094403
+      "algeria": 1794482763.5703864
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -24398,8 +24408,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:32988",
-    "zedstoreonline:38892",
     "aniscoupons:33213",
     "couponsglobal:48851",
     "zedstoreonline:38597",
@@ -25397,7 +25405,9 @@
     "zedstoreonline:39976",
     "aniscoupons:34653",
     "zedstoreonline:39978",
-    "aniscoupons:34656"
+    "aniscoupons:34656",
+    "zedstoreonline:39979",
+    "aniscoupons:34657"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
