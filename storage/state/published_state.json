@@ -771,7 +771,8 @@
     "1005013422894128",
     "1005010297094897",
     "1005009012821000",
-    "1005013485724377"
+    "1005013485724377",
+    "1005012783197164"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1558,7 +1559,8 @@
     "1005013422894128": 1794487083.9711623,
     "1005010297094897": 1794500546.592492,
     "1005009012821000": 1794502225.0175712,
-    "1005013485724377": 1794510747.6816225
+    "1005013485724377": 1794510747.6816225,
+    "1005012783197164": 1794512597.1982763
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2566,7 +2568,8 @@
     "FANTECH SHOOTER III WGP13S",
     "DITONG X3Plus  4K WIFI6",
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S",
-    "realme Original Adapter SUPERVOOC Charger 45W"
+    "realme Original Adapter SUPERVOOC Charger 45W",
+    "EPOMAKER GX1 Tri-mode"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3579,10 +3582,10 @@
     "FANTECH SHOOTER III WGP13S": 1794501299.95393,
     "DITONG X3Plus  4K WIFI6": 1794502225.0175712,
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": 1794502591.7937624,
-    "realme Original Adapter SUPERVOOC Charger 45W": 1794510747.6816225
+    "realme Original Adapter SUPERVOOC Charger 45W": 1794510747.6816225,
+    "EPOMAKER GX1 Tri-mode": 1794512597.1982763
   },
   "published_post_keys": [
-    "lodydeals:45410",
     "couponsglobal:48771",
     "lodydeals:45543",
     "aniscoupons:32982",
@@ -4581,11 +4584,12 @@
     "aniscoupons:34722",
     "ecksdeal:6058",
     "aniscoupons:34724",
-    "aniscoupons:34725"
+    "aniscoupons:34725",
+    "aniscoupons:34726"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794512221.1229692,
+  "last_run_time": 1794512597.1982763,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6058,
@@ -4616,8 +4620,8 @@
       "last_check_time": 1794507983.1409287
     },
     "aniscoupons": {
-      "last_message_id": 34725,
-      "last_check_time": 1794512223.1921422
+      "last_message_id": 34726,
+      "last_check_time": 1794512599.306038
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -5288,7 +5292,8 @@
     "1005013422894128": 499.5,
     "1005010297094897": 34.1,
     "1005009012821000": 87.8,
-    "1005013485724377": 11.5
+    "1005013485724377": 11.5,
+    "1005012783197164": 36.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -22443,6 +22448,16 @@
       "price": 289.5,
       "timestamp": 1794512221.1229692,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34726": {
+      "channel_msg_id": 2532,
+      "product_id": "1005012783197164",
+      "title": "EPOMAKER GX1 Tri-mode",
+      "channel": "aniscoupons",
+      "source_msg_id": 34726,
+      "price": 36.4,
+      "timestamp": 1794512597.1982763,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22451,17 +22466,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794512224.088412,
+    "last_deal_post_time": 1794512600.2841294,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794512404.5494566,
+    "last_sweep_time": 1794512604.083363,
     "last_sweep_times": {
-      "algeria": 1794512401.010543,
-      "france": 1794512404.5494566
+      "algeria": 1794512600.2617793,
+      "france": 1794512604.083363
     },
     "last_deal_post_times": {
-      "algeria": 1794512224.088412
+      "algeria": 1794512600.2841294
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23246,7 +23261,8 @@
     "1005013422894128": "aniscoupons",
     "1005010297094897": "lodydeals",
     "1005009012821000": "lodydeals",
-    "1005013485724377": "aniscoupons"
+    "1005013485724377": "aniscoupons",
+    "1005012783197164": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -24261,7 +24277,8 @@
     "FANTECH SHOOTER III WGP13S": "lodydeals",
     "DITONG X3Plus  4K WIFI6": "lodydeals",
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": "aniscoupons",
-    "realme Original Adapter SUPERVOOC Charger 45W": "aniscoupons"
+    "realme Original Adapter SUPERVOOC Charger 45W": "aniscoupons",
+    "EPOMAKER GX1 Tri-mode": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
