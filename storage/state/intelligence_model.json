@@ -40,8 +40,8 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 161,
-      "published": 131,
+      "seen": 162,
+      "published": 132,
       "skipped": 0,
       "ewma": 0.9994
     }
@@ -78,10 +78,10 @@
       "ewma": 0.6705
     },
     "audio": {
-      "seen": 9,
-      "published": 8,
+      "seen": 10,
+      "published": 9,
       "skipped": 0,
-      "ewma": 0.7434
+      "ewma": 0.7639
     }
   },
   "product_prices": {
@@ -370,6 +370,7 @@
       18.7
     ],
     "1005009120888793": [
+      22.3,
       22.3
     ],
     "1005008077568655": [
@@ -555,23 +556,15 @@
     ]
   },
   "counters": {
-    "scored": 301,
-    "verdict_publish": 279,
+    "scored": 302,
+    "verdict_publish": 280,
     "verdict_hold": 22,
     "verdict_skip": 0,
-    "published": 206,
+    "published": 207,
     "skipped": 0
   },
-  "score_sum": 21633.17,
+  "score_sum": 21704.74,
   "recent_decisions": [
-    {
-      "ts": 1794418098,
-      "channel": "zedstoreonline",
-      "category": "other",
-      "product_id": "1005011557896041",
-      "score": 62.91,
-      "verdict": "publish"
-    },
     {
       "ts": 1794418104,
       "channel": "aniscoupons",
@@ -2163,7 +2156,15 @@
       "product_id": "1005012191191893",
       "score": 80.61,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794490592,
+      "channel": "aniscoupons",
+      "category": "audio",
+      "product_id": "1005009120888793",
+      "score": 71.57,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794490419.4438493
+  "updated_at": 1794490595.0343027
 }

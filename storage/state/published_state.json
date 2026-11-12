@@ -1464,7 +1464,7 @@
     "1005008636930795": 1794422876.857545,
     "1005006260870758": 1794250569.5221198,
     "1005009759580502": 1794331533.1223195,
-    "1005009120888793": 1794430871.8468843,
+    "1005009120888793": 1794490594.9899428,
     "1005011874310777": 1794087501.0429602,
     "1005008721853055": 1794126663.880001,
     "1005012593794312": 1794301654.5672474,
@@ -3423,7 +3423,7 @@
     "Netac M.2 NVME 250GB": 1794076438.7694528,
     "EPOMAKER X AULA F87 Pro": 1794250569.5221198,
     "SIX PCIe 4.0 7350MB/s  1TB": 1794079741.7808652,
-    "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop": 1794430871.8468843,
+    "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop": 1794490594.9899428,
     "SOUNDPEATS Air6 HS": 1794087501.0429602,
     "مبرد الهاتف MEMO CX10": 1794126663.880001,
     "KOOTION SATA SSD 480GB": 1794241389.2452002,
@@ -3566,7 +3566,6 @@
     "MCHOSE A7 V3 Pro": 1794489491.8874733
   },
   "published_post_keys": [
-    "lodydeals:45406",
     "couponsglobal:48804",
     "ecksdeal:5945",
     "bnddeals:50812",
@@ -4565,11 +4564,12 @@
     "zedstoreonline:39995",
     "zedstoreonline:39996",
     "aniscoupons:34684",
-    "aniscoupons:34687"
+    "aniscoupons:34687",
+    "aniscoupons:34688"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794490419.3986382,
+  "last_run_time": 1794490594.9899428,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4600,8 +4600,8 @@
       "last_check_time": 1794489297.3709888
     },
     "aniscoupons": {
-      "last_message_id": 34687,
-      "last_check_time": 1794490421.4560325
+      "last_message_id": 34688,
+      "last_check_time": 1794490597.0460935
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -22015,6 +22015,16 @@
       "price": 228.3,
       "timestamp": 1794490419.3986382,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34688": {
+      "channel_msg_id": 2490,
+      "product_id": "1005009120888793",
+      "title": "SMAILWOLF L80 Bluetooth wireless wired three-mode gaming headset laptop",
+      "channel": "aniscoupons",
+      "source_msg_id": 34688,
+      "price": 22.3,
+      "timestamp": 1794490594.9899428,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22023,17 +22033,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794490422.2664742,
+    "last_deal_post_time": 1794490597.9018483,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794490425.2446194,
+    "last_sweep_time": 1794490600.939257,
     "last_sweep_times": {
-      "algeria": 1794490422.2427454,
-      "france": 1794490425.2446194
+      "algeria": 1794490597.877998,
+      "france": 1794490600.939257
     },
     "last_deal_post_times": {
-      "algeria": 1794490422.2664742
+      "algeria": 1794490597.9018483
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
