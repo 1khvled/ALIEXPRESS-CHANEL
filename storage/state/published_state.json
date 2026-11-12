@@ -1295,7 +1295,7 @@
     "1005013053122560": 1794223202.4757502,
     "1005012322822595": 1793543961.1645148,
     "1005009662812027": 1794431224.823109,
-    "1005005975560350": 1794433999.0419908,
+    "1005005975560350": 1794492068.8537488,
     "1005012922578845": 1793544001.8628821,
     "1005011752891197": 1793613465.8475375,
     "1005008689880751": 1793544016.7486506,
@@ -3527,7 +3527,7 @@
     "ASROCK X570M PRO4 MOTHERBOARD": 1794414971.7181702,
     "EASYSMX X05 PRO Controller": 1794478912.5670652,
     "ONEPLUS 16 12/256GB": 1794478726.13417,
-    "Fifine H9 USB Gaming Headset": 1794418654.7538266,
+    "Fifine H9 USB Gaming Headset": 1794492068.8537488,
     "Honor 600 5G Global 8/256GB": 1794478101.5678475,
     "Baseus GoTrip VA1 Wireless Air Pump": 1794420675.7412696,
     "HOCO EW60 Bluetooth 5.0 Earbuds Wireless Hi-Res Audio Touch Control": 1794420680.672656,
@@ -3566,7 +3566,6 @@
     "MCHOSE A7 V3 Pro": 1794489491.8874733
   },
   "published_post_keys": [
-    "aniscoupons:32764",
     "aniscoupons:32789",
     "pcgamingpart:7979",
     "ecksdeal:5855",
@@ -4565,11 +4564,12 @@
     "aniscoupons:34688",
     "aniscoupons:34689",
     "aniscoupons:34690",
-    "zedstoreonline:40000"
+    "zedstoreonline:40000",
+    "zedstoreonline:40001"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794491882.9016292,
+  "last_run_time": 1794492068.8537488,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4596,8 +4596,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40000,
-      "last_check_time": 1794491884.9491322
+      "last_message_id": 40001,
+      "last_check_time": 1794492070.898296
     },
     "aniscoupons": {
       "last_message_id": 34691,
@@ -5039,7 +5039,7 @@
     "1005012322822595": 266.19,
     "1005012524603100": 283.59,
     "1005009662812027": 78.4,
-    "1005005975560350": 36.5,
+    "1005005975560350": 35.9,
     "1005011752891197": 119.3,
     "1005008689880751": 76.5,
     "1005006861815245": 9.44,
@@ -22055,6 +22055,16 @@
       "price": 41.5,
       "timestamp": 1794491882.9016292,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40001": {
+      "channel_msg_id": 2494,
+      "product_id": "1005005975560350",
+      "title": "Fifine H9 USB Gaming Headset",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40001,
+      "price": 35.9,
+      "timestamp": 1794492068.8537488,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22063,17 +22073,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794491886.2301648,
+    "last_deal_post_time": 1794492072.1639624,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794491889.2676585,
+    "last_sweep_time": 1794492075.1149487,
     "last_sweep_times": {
-      "algeria": 1794491886.2121437,
-      "france": 1794491889.2676585
+      "algeria": 1794492072.1459892,
+      "france": 1794492075.1149487
     },
     "last_deal_post_times": {
-      "algeria": 1794491886.2301648
+      "algeria": 1794492072.1639624
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22613,7 +22623,7 @@
     "1005012322822595": "lodydeals",
     "1005012524603100": "aniscoupons",
     "1005009662812027": "aniscoupons",
-    "1005005975560350": "aniscoupons",
+    "1005005975560350": "zedstoreonline",
     "1005011752891197": "zedstoreonline",
     "1005008689880751": "lodydeals",
     "1005006861815245": "ecksdeal",
