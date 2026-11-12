@@ -766,7 +766,8 @@
     "1005006967391791",
     "1005013288890301",
     "1005013089015192",
-    "1005009278114794"
+    "1005009278114794",
+    "1005010210432531"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1548,7 +1549,8 @@
     "1005006967391791": 1794476797.164376,
     "1005013288890301": 1794477157.5349603,
     "1005013089015192": 1794478710.9244785,
-    "1005009278114794": 1794480064.6967885
+    "1005009278114794": 1794480064.6967885,
+    "1005010210432531": 1794482375.9737191
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2547,7 +2549,8 @@
     "Webcam EMEET C100 1080P",
     "FIFINE 1440p Full HD PC Webcam with Microphone",
     "iQOO Z11S 8/128",
-    "Inphic A9 PRO MAX Wireless Gaming Mouse"
+    "Inphic A9 PRO MAX Wireless Gaming Mouse",
+    "realme P4 Lite Smartphone NFC 6300mAh Battery"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3551,10 +3554,10 @@
     "Webcam EMEET C100 1080P": 1794477157.5349603,
     "FIFINE 1440p Full HD PC Webcam with Microphone": 1794478095.864591,
     "iQOO Z11S 8/128": 1794478710.9244785,
-    "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794480064.6967885
+    "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794480064.6967885,
+    "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191
   },
   "published_post_keys": [
-    "lodydeals:45788",
     "couponsglobal:48783",
     "test_channel:1791759143",
     "aniscoupons:32998",
@@ -4553,11 +4556,12 @@
     "aniscoupons:34650",
     "aniscoupons:34651",
     "aniscoupons:34652",
-    "zedstoreonline:39977"
+    "zedstoreonline:39977",
+    "aniscoupons:34655"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794481983.745732,
+  "last_run_time": 1794482375.9737191,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4584,12 +4588,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39977,
-      "last_check_time": 1794481985.8167553
+      "last_message_id": 39978,
+      "last_check_time": 1794482369.3386805
     },
     "aniscoupons": {
-      "last_message_id": 34653,
-      "last_check_time": 1794481986.7254913
+      "last_message_id": 34656,
+      "last_check_time": 1794482379.1496212
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -4818,7 +4822,7 @@
     "1005005875379717": 42.89,
     "1005013137396211": 316.0,
     "1005012575455222": 115.0,
-    "1005010210432531": 95.8,
+    "1005010210432531": 147.8,
     "1005010266487244": 12.95,
     "1005011904443903": 92.0,
     "1005010112746583": 47.9,
@@ -21781,6 +21785,16 @@
       "price": 18.7,
       "timestamp": 1794481983.745732,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34655": {
+      "channel_msg_id": 2468,
+      "product_id": "1005010210432531",
+      "title": "realme P4 Lite Smartphone NFC 6300mAh Battery",
+      "channel": "aniscoupons",
+      "source_msg_id": 34655,
+      "price": 147.8,
+      "timestamp": 1794482375.9737191,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21789,17 +21803,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794481987.4737334,
+    "last_deal_post_time": 1794482379.9094403,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794481990.9420493,
+    "last_sweep_time": 1794482382.999187,
     "last_sweep_times": {
-      "algeria": 1794481987.443988,
-      "france": 1794481990.9420493
+      "algeria": 1794482379.891277,
+      "france": 1794482382.999187
     },
     "last_deal_post_times": {
-      "algeria": 1794481987.4737334
+      "algeria": 1794482379.9094403
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22068,7 +22082,7 @@
     "9998887185": "test_channel",
     "1005013137396211": "bnddeals",
     "1005012575455222": "megaphonna",
-    "1005010210432531": "megaphonna",
+    "1005010210432531": "aniscoupons",
     "9998888020": "test_channel",
     "9998888253": "test_channel",
     "1005010266487244": "bnddeals",
@@ -23586,7 +23600,8 @@
     "Webcam EMEET C100 1080P": "zedstoreonline",
     "FIFINE 1440p Full HD PC Webcam with Microphone": "zedstoreonline",
     "iQOO Z11S 8/128": "zedstoreonline",
-    "Inphic A9 PRO MAX Wireless Gaming Mouse": "zedstoreonline"
+    "Inphic A9 PRO MAX Wireless Gaming Mouse": "zedstoreonline",
+    "realme P4 Lite Smartphone NFC 6300mAh Battery": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -24383,8 +24398,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "bnddeals:50987",
-    "zedstoreonline:38629",
     "aniscoupons:32988",
     "zedstoreonline:38892",
     "aniscoupons:33213",
@@ -25382,7 +25395,9 @@
     "zedstoreonline:39974",
     "zedstoreonline:39975",
     "zedstoreonline:39976",
-    "aniscoupons:34653"
+    "aniscoupons:34653",
+    "zedstoreonline:39978",
+    "aniscoupons:34656"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
