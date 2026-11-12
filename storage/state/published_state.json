@@ -1452,7 +1452,7 @@
     "1005006411483066": 1794500381.7712336,
     "1005012925301774": 1794348808.2825344,
     "1005012959738411": 1794304640.3506072,
-    "1005008357913212": 1794473249.7212825,
+    "1005008357913212": 1794503164.1120768,
     "1005008703989845": 1794475632.0153844,
     "1005007162099601": 1794500376.8953977,
     "1005007038130594": 1794393500.1320646,
@@ -3469,7 +3469,7 @@
     "Honor Win Turbo": 1794169846.8168333,
     "POCO PAD C1 4/64": 1794171698.893023,
     "Smailwolf L80 Wireless Headset": 1794171706.368645,
-    "KOOTION SSD SATA3 480GB": 1794173731.8411272,
+    "KOOTION SSD SATA3 480GB": 1794503164.1120768,
     "OnePlus Ace 7Pro (12/256GB)": 1794212210.5228837,
     "KODAK K133 USB3.1 256GB": 1794219534.0651362,
     "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق": 1794223934.5228841,
@@ -3578,7 +3578,6 @@
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": 1794502591.7937624
   },
   "published_post_keys": [
-    "lodydeals:45686",
     "aniscoupons:32760",
     "test_channel:1793226751",
     "test_channel:1792072689",
@@ -4577,19 +4576,20 @@
     "aniscoupons:34711",
     "lodydeals:46419",
     "aniscoupons:34712",
-    "aniscoupons:34713"
+    "aniscoupons:34713",
+    "lodydeals:46420"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794502591.7937624,
+  "last_run_time": 1794503164.1120768,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6057,
       "last_check_time": 1794496853.9442635
     },
     "lodydeals": {
-      "last_message_id": 46419,
-      "last_check_time": 1794502227.090983
+      "last_message_id": 46420,
+      "last_check_time": 1794503166.1666667
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -5174,7 +5174,7 @@
     "1005008703989845": 24.8,
     "1005008060391372": 31.38,
     "1005012593794312": 241.5,
-    "1005008357913212": 40.5,
+    "1005008357913212": 40.43,
     "1005012254132930": 15.2,
     "1005008708333999": 136.7,
     "1005013028124905": 438.6,
@@ -22338,6 +22338,16 @@
       "price": 311.3,
       "timestamp": 1794502591.7937624,
       "status": "ACTIVE"
+    },
+    "lodydeals:46420": {
+      "channel_msg_id": 2522,
+      "product_id": "1005008357913212",
+      "title": "KOOTION SSD SATA3 480GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46420,
+      "price": 40.43,
+      "timestamp": 1794503164.1120768,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22346,17 +22356,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794502594.590535,
+    "last_deal_post_time": 1794503168.8902678,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794502971.1564286,
+    "last_sweep_time": 1794503172.749419,
     "last_sweep_times": {
-      "algeria": 1794502968.5633485,
-      "france": 1794502971.1564286
+      "algeria": 1794503168.8660672,
+      "france": 1794503172.749419
     },
     "last_deal_post_times": {
-      "algeria": 1794502594.590535
+      "algeria": 1794503168.8902678
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23038,7 +23048,7 @@
     "1005006411483066": "lodydeals",
     "1005012925301774": "zedstoreonline",
     "1005012959738411": "aniscoupons",
-    "1005008357913212": "aniscoupons",
+    "1005008357913212": "lodydeals",
     "1005008703989845": "aniscoupons",
     "1005007162099601": "lodydeals",
     "1005007038130594": "lodydeals",
