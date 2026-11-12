@@ -40,18 +40,18 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 165,
-      "published": 134,
+      "seen": 166,
+      "published": 135,
       "skipped": 0,
       "ewma": 0.9994
     }
   },
   "category_stats": {
     "other": {
-      "seen": 95,
-      "published": 78,
+      "seen": 96,
+      "published": 79,
       "skipped": 0,
-      "ewma": 0.9993
+      "ewma": 0.9994
     },
     "pc": {
       "seen": 48,
@@ -557,26 +557,21 @@
     ],
     "1005010297094897": [
       44.8
+    ],
+    "1005011778621042": [
+      118.5
     ]
   },
   "counters": {
-    "scored": 308,
-    "verdict_publish": 286,
+    "scored": 309,
+    "verdict_publish": 287,
     "verdict_hold": 22,
     "verdict_skip": 0,
-    "published": 211,
+    "published": 212,
     "skipped": 0
   },
-  "score_sum": 22140.77,
+  "score_sum": 22220.02,
   "recent_decisions": [
-    {
-      "ts": 1794419207,
-      "channel": "aniscoupons",
-      "category": "other",
-      "product_id": "1005010033441204",
-      "score": 68.59,
-      "verdict": "publish"
-    },
     {
       "ts": 1794419938,
       "channel": "aniscoupons",
@@ -2168,7 +2163,15 @@
       "product_id": "1005005975560350",
       "score": 62.79,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794492254,
+      "channel": "aniscoupons",
+      "category": "other",
+      "product_id": "1005011778621042",
+      "score": 79.25,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794492068.8870585
+  "updated_at": 1794492259.0285141
 }

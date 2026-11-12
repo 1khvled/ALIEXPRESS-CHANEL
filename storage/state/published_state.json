@@ -787,7 +787,7 @@
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
     "100500777666555": 1793956903.3513582,
-    "1005011778621042": 1794306495.9115696,
+    "1005011778621042": 1794492258.9957209,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1793543664.66204,
     "1005006533038973": 1791104468.758226,
@@ -2868,7 +2868,7 @@
     "Honor X60 GT 12/256GB": 1792157902.7999656,
     "EasySMX X05 Pro Wireless Gamepad PC Controller": 1792157910.2543087,
     "MACHENIKE G5Pro Max SE Gaming Controller With Charging Dock": 1792157933.6814291,
-    "RYZEN 7 5700X": 1794306495.9115696,
+    "RYZEN 7 5700X": 1794492258.9957209,
     "Ⓜ BLACKVIEW WAVE 10C (4/32)": 1792160262.8028278,
     "Ⓜ  TCL 60 NXT PAPER 8/256📱": 1792160269.0502243,
     "HAYLOU Mori Pro ANC": 1794421043.2176414,
@@ -3566,7 +3566,6 @@
     "MCHOSE A7 V3 Pro": 1794489491.8874733
   },
   "published_post_keys": [
-    "aniscoupons:32789",
     "pcgamingpart:7979",
     "ecksdeal:5855",
     "zedstoreonline:38761",
@@ -4565,11 +4564,12 @@
     "aniscoupons:34689",
     "aniscoupons:34690",
     "zedstoreonline:40000",
-    "zedstoreonline:40001"
+    "zedstoreonline:40001",
+    "aniscoupons:34692"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794492068.8537488,
+  "last_run_time": 1794492258.9957209,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4600,8 +4600,8 @@
       "last_check_time": 1794492070.898296
     },
     "aniscoupons": {
-      "last_message_id": 34691,
-      "last_check_time": 1794491696.7363956
+      "last_message_id": 34692,
+      "last_check_time": 1794492261.0385888
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -22065,6 +22065,16 @@
       "price": 35.9,
       "timestamp": 1794492068.8537488,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34692": {
+      "channel_msg_id": 2495,
+      "product_id": "1005011778621042",
+      "title": "RYZEN 7 5700X",
+      "channel": "aniscoupons",
+      "source_msg_id": 34692,
+      "price": 118.5,
+      "timestamp": 1794492258.9957209,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22073,17 +22083,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794492072.1639624,
+    "last_deal_post_time": 1794492261.8358648,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794492075.1149487,
+    "last_sweep_time": 1794492264.9988053,
     "last_sweep_times": {
-      "algeria": 1794492072.1459892,
-      "france": 1794492075.1149487
+      "algeria": 1794492261.8187847,
+      "france": 1794492264.9988053
     },
     "last_deal_post_times": {
-      "algeria": 1794492072.1639624
+      "algeria": 1794492261.8358648
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
