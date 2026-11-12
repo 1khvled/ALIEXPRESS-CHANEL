@@ -915,7 +915,7 @@
     "1005006974721332": 1791056453.5992196,
     "1005010266413614": 1793500791.1712294,
     "1005009497821240": 1791117948.6585228,
-    "1005011925142821": 1793613373.547554,
+    "1005011925142821": 1794511855.3635662,
     "9998883864": 1791063864.5866926,
     "1005010536089199": 1794480460.355499,
     "1005012385221205": 1791102050.1835058,
@@ -2729,7 +2729,7 @@
     "TOPK Car Phone Holder": 1791056453.5992196,
     "الهاتف الاكثر طلبا": 1791056463.1366906,
     "Car Battery Charger LCD Display": 1791056745.5798366,
-    "Honor 600 lite (8/256)": 1793314883.2832904,
+    "Honor 600 lite (8/256)": 1794511855.3635662,
     "ATTACK SHARK G300": 1791105348.8066044,
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": 1791101144.9729881,
     "Toocki 25W GaN Charger": 1791102050.1835058,
@@ -3582,7 +3582,6 @@
     "realme Original Adapter SUPERVOOC Charger 45W": 1794510747.6816225
   },
   "published_post_keys": [
-    "lodydeals:45739",
     "aniscoupons:32701",
     "lodydeals:45410",
     "couponsglobal:48771",
@@ -4581,11 +4580,12 @@
     "zedstoreonline:40020",
     "aniscoupons:34720",
     "aniscoupons:34722",
-    "ecksdeal:6058"
+    "ecksdeal:6058",
+    "aniscoupons:34724"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794511303.5161283,
+  "last_run_time": 1794511855.3635662,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6058,
@@ -4616,8 +4616,8 @@
       "last_check_time": 1794507983.1409287
     },
     "aniscoupons": {
-      "last_message_id": 34723,
-      "last_check_time": 1794511308.530218
+      "last_message_id": 34724,
+      "last_check_time": 1794511857.4349277
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -4755,7 +4755,7 @@
     "1005006974721332": 3.09,
     "1005010266413614": 276.0,
     "1005009497821240": 24.73,
-    "1005011925142821": 258.0,
+    "1005011925142821": 258.5,
     "1005010536089199": 33.64,
     "1005012385221205": 13.27,
     "1005013223462188": 13.5,
@@ -22423,6 +22423,16 @@
       "price": 29.44,
       "timestamp": 1794511303.5161283,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34724": {
+      "channel_msg_id": 2530,
+      "product_id": "1005011925142821",
+      "title": "Honor 600 lite (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34724,
+      "price": 258.5,
+      "timestamp": 1794511855.3635662,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22431,17 +22441,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794511309.2354028,
+    "last_deal_post_time": 1794511858.271884,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794511673.1211991,
+    "last_sweep_time": 1794511861.0723314,
     "last_sweep_times": {
-      "algeria": 1794511669.1772192,
-      "france": 1794511673.1211991
+      "algeria": 1794511858.2415721,
+      "france": 1794511861.0723314
     },
     "last_deal_post_times": {
-      "algeria": 1794511309.2354028
+      "algeria": 1794511858.271884
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22582,7 +22592,7 @@
     "1005006974721332": "lodydeals",
     "1005010266413614": "megaphonna",
     "1005009497821240": "lodydeals",
-    "1005011925142821": "zedstoreonline",
+    "1005011925142821": "aniscoupons",
     "9998883864": "test_channel",
     "1005010536089199": "aniscoupons",
     "1005012385221205": "aniscoupons",
