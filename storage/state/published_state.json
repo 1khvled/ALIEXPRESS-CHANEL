@@ -768,7 +768,8 @@
     "1005013089015192",
     "1005009278114794",
     "1005010210432531",
-    "1005013422894128"
+    "1005013422894128",
+    "1005010297094897"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1552,7 +1553,8 @@
     "1005013089015192": 1794478710.9244785,
     "1005009278114794": 1794480064.6967885,
     "1005010210432531": 1794482375.9737191,
-    "1005013422894128": 1794487083.9711623
+    "1005013422894128": 1794487083.9711623,
+    "1005010297094897": 1794489491.8874733
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2553,7 +2555,8 @@
     "iQOO Z11S 8/128",
     "Inphic A9 PRO MAX Wireless Gaming Mouse",
     "realme P4 Lite Smartphone NFC 6300mAh Battery",
-    "Honor Win RT2"
+    "Honor Win RT2",
+    "MCHOSE A7 V3 Pro"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3559,10 +3562,10 @@
     "iQOO Z11S 8/128": 1794478710.9244785,
     "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794480064.6967885,
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191,
-    "Honor Win RT2": 1794487083.9711623
+    "Honor Win RT2": 1794487083.9711623,
+    "MCHOSE A7 V3 Pro": 1794489491.8874733
   },
   "published_post_keys": [
-    "bnddeals:50956",
     "zedstoreonline:38533",
     "lodydeals:45406",
     "couponsglobal:48804",
@@ -4561,11 +4564,12 @@
     "aniscoupons:34676",
     "aniscoupons:34677",
     "zedstoreonline:39995",
-    "zedstoreonline:39996"
+    "zedstoreonline:39996",
+    "aniscoupons:34684"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794488939.6119785,
+  "last_run_time": 1794489491.8874733,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4596,8 +4600,8 @@
       "last_check_time": 1794489297.3709888
     },
     "aniscoupons": {
-      "last_message_id": 34682,
-      "last_check_time": 1794488572.4732802
+      "last_message_id": 34684,
+      "last_check_time": 1794489493.9568617
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -5265,7 +5269,8 @@
     "1005013288890301": 16.9,
     "1005013089015192": 261.9,
     "1005009278114794": 11.9,
-    "1005013422894128": 499.5
+    "1005013422894128": 499.5,
+    "1005010297094897": 44.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -21990,6 +21995,16 @@
       "price": 155.2,
       "timestamp": 1794488939.6119785,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34684": {
+      "channel_msg_id": 2488,
+      "product_id": "1005010297094897",
+      "title": "MCHOSE A7 V3 Pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 34684,
+      "price": 44.8,
+      "timestamp": 1794489491.8874733,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21998,17 +22013,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794488943.417054,
+    "last_deal_post_time": 1794489494.889279,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794489301.9703805,
+    "last_sweep_time": 1794489498.0316288,
     "last_sweep_times": {
-      "algeria": 1794489299.168642,
-      "france": 1794489301.9703805
+      "algeria": 1794489494.8595874,
+      "france": 1794489498.0316288
     },
     "last_deal_post_times": {
-      "algeria": 1794488943.417054
+      "algeria": 1794489494.889279
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22790,7 +22805,8 @@
     "1005013288890301": "zedstoreonline",
     "1005013089015192": "zedstoreonline",
     "1005009278114794": "zedstoreonline",
-    "1005013422894128": "aniscoupons"
+    "1005013422894128": "aniscoupons",
+    "1005010297094897": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -23798,7 +23814,8 @@
     "iQOO Z11S 8/128": "zedstoreonline",
     "Inphic A9 PRO MAX Wireless Gaming Mouse": "zedstoreonline",
     "realme P4 Lite Smartphone NFC 6300mAh Battery": "aniscoupons",
-    "Honor Win RT2": "aniscoupons"
+    "Honor Win RT2": "aniscoupons",
+    "MCHOSE A7 V3 Pro": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
