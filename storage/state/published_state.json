@@ -1440,7 +1440,7 @@
     "1005012691642623": 1794074230.5173922,
     "1005010266233059": 1793977272.9654846,
     "1005007469003552": 1794130707.0577464,
-    "1005010041181003": 1794473802.0614088,
+    "1005010041181003": 1794492627.75024,
     "1005010265542567": 1794131426.95932,
     "1005003156756854": 1794488565.604101,
     "1005010142208108": 1794302223.66585,
@@ -3522,7 +3522,7 @@
     "Kootiion X15 M.2 SSD NVMe 256GB": 1794490967.174317,
     "SoundPEATS C30 Hybrid ANC -52dB": 1794407013.7230165,
     "Somnambulist SSD 120GB": 1794407765.5158777,
-    "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794411999.7818277,
+    "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794492627.75024,
     "Realme P4 Power 8/256GB": 1794485983.772945,
     "ASROCK X570M PRO4 MOTHERBOARD": 1794414971.7181702,
     "EASYSMX X05 PRO Controller": 1794478912.5670652,
@@ -3566,7 +3566,6 @@
     "MCHOSE A7 V3 Pro": 1794489491.8874733
   },
   "published_post_keys": [
-    "ecksdeal:5855",
     "zedstoreonline:38761",
     "test_channel:1792098020",
     "lodydeals:45414",
@@ -4565,11 +4564,12 @@
     "zedstoreonline:40000",
     "zedstoreonline:40001",
     "aniscoupons:34692",
-    "zedstoreonline:40002"
+    "zedstoreonline:40002",
+    "zedstoreonline:40003"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794492434.7759526,
+  "last_run_time": 1794492627.75024,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4596,12 +4596,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40002,
-      "last_check_time": 1794492436.8467262
+      "last_message_id": 40003,
+      "last_check_time": 1794492629.8231735
     },
     "aniscoupons": {
-      "last_message_id": 34693,
-      "last_check_time": 1794492439.3215506
+      "last_message_id": 34694,
+      "last_check_time": 1794492632.3641021
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -22085,6 +22085,16 @@
       "price": 113.9,
       "timestamp": 1794492434.7759526,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40003": {
+      "channel_msg_id": 2497,
+      "product_id": "1005010041181003",
+      "title": "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40003,
+      "price": 167.8,
+      "timestamp": 1794492627.75024,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22093,17 +22103,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794492440.0324068,
+    "last_deal_post_time": 1794492633.137189,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794492442.8150187,
+    "last_sweep_time": 1794492637.3372207,
     "last_sweep_times": {
-      "algeria": 1794492440.0022311,
-      "france": 1794492442.8150187
+      "algeria": 1794492633.106336,
+      "france": 1794492637.3372207
     },
     "last_deal_post_times": {
-      "algeria": 1794492440.0324068
+      "algeria": 1794492633.137189
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22774,7 +22784,7 @@
     "1005012691642623": "zedstoreonline",
     "1005010266233059": "zedstoreonline",
     "1005007469003552": "aniscoupons",
-    "1005010041181003": "aniscoupons",
+    "1005010041181003": "zedstoreonline",
     "1005010265542567": "aniscoupons",
     "1005003156756854": "zedstoreonline",
     "1005010142208108": "lodydeals",
@@ -24692,7 +24702,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8607",
     "megaphonna:8476",
     "alidealsdz:133",
     "aniscoupons:33328",
@@ -25691,7 +25700,8 @@
     "zedstoreonline:39998",
     "zedstoreonline:39999",
     "aniscoupons:34691",
-    "aniscoupons:34693"
+    "aniscoupons:34693",
+    "aniscoupons:34694"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
