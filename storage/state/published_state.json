@@ -764,7 +764,8 @@
     "1005007822635375",
     "1005001849536579",
     "1005006967391791",
-    "1005013288890301"
+    "1005013288890301",
+    "1005013089015192"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1519,7 +1520,7 @@
     "1005010179192246": 1794427325.301942,
     "1005010457635845": 1794393509.614562,
     "1005012921754472": 1794414407.5368557,
-    "1005013399086495": 1794418466.1920443,
+    "1005013399086495": 1794478726.13417,
     "1005006257950849": 1794420680.672656,
     "1005013391950901": 1794420685.287832,
     "1005007477084001": 1794420689.8352551,
@@ -1544,7 +1545,8 @@
     "1005007822635375": 1794475884.0444102,
     "1005001849536579": 1794476179.330803,
     "1005006967391791": 1794476797.164376,
-    "1005013288890301": 1794477157.5349603
+    "1005013288890301": 1794477157.5349603,
+    "1005013089015192": 1794478710.9244785
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2541,7 +2543,8 @@
     "MAONO PM360TR Condenser Microphone",
     "Machenike G5 Pro Gaming Controller",
     "Webcam EMEET C100 1080P",
-    "FIFINE 1440p Full HD PC Webcam with Microphone"
+    "FIFINE 1440p Full HD PC Webcam with Microphone",
+    "iQOO Z11S 8/128"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3511,7 +3514,7 @@
     "Realme P4 Power 8/256GB": 1794414407.5368557,
     "ASROCK X570M PRO4 MOTHERBOARD": 1794414971.7181702,
     "EASYSMX X05 PRO Controller": 1794417558.6712675,
-    "ONEPLUS 16 12/256GB": 1794418466.1920443,
+    "ONEPLUS 16 12/256GB": 1794478726.13417,
     "Fifine H9 USB Gaming Headset": 1794418654.7538266,
     "Honor 600 5G Global 8/256GB": 1794478101.5678475,
     "Baseus GoTrip VA1 Wireless Air Pump": 1794420675.7412696,
@@ -3543,11 +3546,10 @@
     "MAONO PM360TR Condenser Microphone": 1794476179.330803,
     "Machenike G5 Pro Gaming Controller": 1794476797.164376,
     "Webcam EMEET C100 1080P": 1794477157.5349603,
-    "FIFINE 1440p Full HD PC Webcam with Microphone": 1794478095.864591
+    "FIFINE 1440p Full HD PC Webcam with Microphone": 1794478095.864591,
+    "iQOO Z11S 8/128": 1794478710.9244785
   },
   "published_post_keys": [
-    "aniscoupons:33268",
-    "zedstoreonline:38630",
     "lodydeals:45806",
     "zedstoreonline:38847",
     "megaphonna:8429",
@@ -4545,11 +4547,13 @@
     "zedstoreonline:39962",
     "aniscoupons:34639",
     "zedstoreonline:39964",
-    "aniscoupons:34640"
+    "aniscoupons:34640",
+    "zedstoreonline:39963",
+    "aniscoupons:34641"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794478101.5678475,
+  "last_run_time": 1794478726.13417,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4576,12 +4580,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39964,
-      "last_check_time": 1794478097.9346588
+      "last_message_id": 39966,
+      "last_check_time": 1794478720.5815618
     },
     "aniscoupons": {
-      "last_message_id": 34640,
-      "last_check_time": 1794478103.6385324
+      "last_message_id": 34642,
+      "last_check_time": 1794478731.926126
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -5246,7 +5250,8 @@
     "1005012333024137": 7.07,
     "1005001849536579": 20.5,
     "1005006967391791": 36.2,
-    "1005013288890301": 16.9
+    "1005013288890301": 16.9,
+    "1005013089015192": 261.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -21621,6 +21626,26 @@
       "price": 380.4,
       "timestamp": 1794478101.5678475,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39963": {
+      "channel_msg_id": 2453,
+      "product_id": "1005013089015192",
+      "title": "iQOO Z11S 8/128",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39963,
+      "price": 261.9,
+      "timestamp": 1794478710.9244785,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34641": {
+      "channel_msg_id": 2454,
+      "product_id": "1005013399086495",
+      "title": "ONEPLUS 16 12/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34641,
+      "price": 758.3,
+      "timestamp": 1794478726.13417,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21629,17 +21654,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794478104.5488274,
+    "last_deal_post_time": 1794478732.940663,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794478282.7340286,
+    "last_sweep_time": 1794478736.4957623,
     "last_sweep_times": {
-      "algeria": 1794478279.784637,
-      "france": 1794478282.7340286
+      "algeria": 1794478732.9169803,
+      "france": 1794478736.4957623
     },
     "last_deal_post_times": {
-      "algeria": 1794478104.5488274
+      "algeria": 1794478732.940663
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22418,7 +22443,8 @@
     "1005012333024137": "lodydeals",
     "1005001849536579": "zedstoreonline",
     "1005006967391791": "zedstoreonline",
-    "1005013288890301": "zedstoreonline"
+    "1005013288890301": "zedstoreonline",
+    "1005013089015192": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -23422,7 +23448,8 @@
     "MAONO PM360TR Condenser Microphone": "zedstoreonline",
     "Machenike G5 Pro Gaming Controller": "zedstoreonline",
     "Webcam EMEET C100 1080P": "zedstoreonline",
-    "FIFINE 1440p Full HD PC Webcam with Microphone": "zedstoreonline"
+    "FIFINE 1440p Full HD PC Webcam with Microphone": "zedstoreonline",
+    "iQOO Z11S 8/128": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -24219,9 +24246,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8708",
-    "zedstoreonline:38910",
-    "aniscoupons:33369",
     "alidealsdz:151",
     "megaphonna:8743",
     "aniscoupons:33041",
@@ -25218,7 +25242,10 @@
     "lodydeals:46405",
     "bnddeals:51292",
     "aniscoupons:34637",
-    "aniscoupons:34638"
+    "aniscoupons:34638",
+    "zedstoreonline:39965",
+    "zedstoreonline:39966",
+    "aniscoupons:34642"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
