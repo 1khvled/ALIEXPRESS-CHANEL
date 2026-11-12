@@ -28,7 +28,7 @@
       "ewma": 0.9324
     },
     "zedstoreonline": {
-      "seen": 98,
+      "seen": 99,
       "published": 48,
       "skipped": 0,
       "ewma": 0.9908
@@ -40,8 +40,8 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 162,
-      "published": 132,
+      "seen": 163,
+      "published": 133,
       "skipped": 0,
       "ewma": 0.9994
     }
@@ -54,13 +54,13 @@
       "ewma": 0.9993
     },
     "pc": {
-      "seen": 46,
-      "published": 29,
+      "seen": 47,
+      "published": 30,
       "skipped": 0,
-      "ewma": 0.9555
+      "ewma": 0.9591
     },
     "phones": {
-      "seen": 131,
+      "seen": 132,
       "published": 75,
       "skipped": 0,
       "ewma": 0.999
@@ -208,6 +208,7 @@
       6.7
     ],
     "1005008366962319": [
+      30.3,
       30.3
     ],
     "1005010656922924": [
@@ -556,31 +557,15 @@
     ]
   },
   "counters": {
-    "scored": 302,
-    "verdict_publish": 280,
+    "scored": 304,
+    "verdict_publish": 282,
     "verdict_hold": 22,
     "verdict_skip": 0,
-    "published": 207,
+    "published": 208,
     "skipped": 0
   },
-  "score_sum": 21704.74,
+  "score_sum": 21872.12,
   "recent_decisions": [
-    {
-      "ts": 1794418104,
-      "channel": "aniscoupons",
-      "category": "pc",
-      "product_id": "1005007162099601",
-      "score": 83.91,
-      "verdict": "publish"
-    },
-    {
-      "ts": 1794418464,
-      "channel": "aniscoupons",
-      "category": "phones",
-      "product_id": "1005013399086495",
-      "score": 76.57,
-      "verdict": "publish"
-    },
     {
       "ts": 1794418647,
       "channel": "zedstoreonline",
@@ -2164,7 +2149,23 @@
       "product_id": "1005009120888793",
       "score": 71.57,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794490963,
+      "channel": "zedstoreonline",
+      "category": "phones",
+      "product_id": "1005010210432531",
+      "score": 84.83,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794490964,
+      "channel": "aniscoupons",
+      "category": "pc",
+      "product_id": "1005008366962319",
+      "score": 82.55,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794490595.0343027
+  "updated_at": 1794490967.2270968
 }
