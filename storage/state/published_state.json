@@ -1426,7 +1426,7 @@
     "1005012691642623": 1794074230.5173922,
     "1005010266233059": 1793977272.9654846,
     "1005007469003552": 1794130707.0577464,
-    "1005010041181003": 1794432503.000665,
+    "1005010041181003": 1794473802.0614088,
     "1005010265542567": 1794131426.95932,
     "1005003156756854": 1794412940.6962595,
     "1005010142208108": 1794302223.66585,
@@ -3343,7 +3343,7 @@
     "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
     "ميكروفون Ulanzi A100 لاسلكي صغير": 1793982290.6109207,
-    "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794432503.000665,
+    "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794473802.0614088,
     "Ulanzi A200 Mini Wireless Lavalier Microphone": 1794131426.95932,
     "حامل هاتف Ulanzi ST-06S": 1794412940.6962595,
     "AULA MINI60 HE PRO": 1794302223.66585,
@@ -3504,7 +3504,6 @@
     "ميزان رقمي محمول لحقائب السفر": 1794472329.794574
   },
   "published_post_keys": [
-    "lodydeals:45558",
     "couponsglobal:48807",
     "test_channel:1792181452",
     "zedstoreonline:38752",
@@ -4503,11 +4502,12 @@
     "aniscoupons:34622",
     "zedstoreonline:39950",
     "aniscoupons:34623",
-    "zedstoreonline:39951"
+    "zedstoreonline:39951",
+    "aniscoupons:34625"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794473432.2937162,
+  "last_run_time": 1794473802.0614088,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4534,12 +4534,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39951,
-      "last_check_time": 1794473434.3622582
+      "last_message_id": 39952,
+      "last_check_time": 1794473798.2407951
     },
     "aniscoupons": {
-      "last_message_id": 34624,
-      "last_check_time": 1794473435.9217107
+      "last_message_id": 34625,
+      "last_check_time": 1794473804.11626
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -21271,6 +21271,16 @@
       "price": 17.2,
       "timestamp": 1794473432.2937162,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34625": {
+      "channel_msg_id": 2423,
+      "product_id": "1005010041181003",
+      "title": "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34625,
+      "price": 167.8,
+      "timestamp": 1794473802.0614088,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21279,17 +21289,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794473436.7351925,
+    "last_deal_post_time": 1794473805.0923085,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794473615.6271157,
+    "last_sweep_time": 1794473808.8336086,
     "last_sweep_times": {
-      "algeria": 1794473612.7377915,
-      "france": 1794473615.6271157
+      "algeria": 1794473805.0695288,
+      "france": 1794473808.8336086
     },
     "last_deal_post_times": {
-      "algeria": 1794473436.7351925
+      "algeria": 1794473805.0923085
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23849,7 +23859,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8540",
     "megaphonna:8466",
     "ecksdeal:5989",
     "lodydeals:45508",
@@ -24848,7 +24857,8 @@
     "zedstoreonline:39945",
     "zedstoreonline:39946",
     "zedstoreonline:39949",
-    "aniscoupons:34624"
+    "aniscoupons:34624",
+    "zedstoreonline:39952"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
