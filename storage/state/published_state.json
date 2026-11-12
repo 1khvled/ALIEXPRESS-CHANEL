@@ -1205,7 +1205,7 @@
     "1005012864273120": 1793399494.1323898,
     "1005006967218963": 1793448582.9150612,
     "1005012675968319": 1793399525.3383162,
-    "1005010424638496": 1794476813.180707,
+    "1005010424638496": 1794492434.7759526,
     "1005010141682336": 1793399542.6698716,
     "1005006782790827": 1794159491.7570124,
     "1005012938359476": 1793448722.5382965,
@@ -3408,7 +3408,7 @@
     "Essager 30W Car Charger": 1794393500.1320646,
     "KOOTION SSD SATA  240GB": 1794051434.2488248,
     "Xiaomi Redmi Note 17 Pro 5G Global Version": 1794060065.5449874,
-    "Magcubic  HY350 Max 900ANSI": 1794147930.6937103,
+    "Magcubic  HY350 Max 900ANSI": 1794492434.7759526,
     "Toocki 60W Car Charger and cable": 1794419203.5335758,
     "Hollyland Lark M2 Wireless Mic": 1794063654.6498907,
     "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": 1794064385.819615,
@@ -3566,7 +3566,6 @@
     "MCHOSE A7 V3 Pro": 1794489491.8874733
   },
   "published_post_keys": [
-    "pcgamingpart:7979",
     "ecksdeal:5855",
     "zedstoreonline:38761",
     "test_channel:1792098020",
@@ -4565,11 +4564,12 @@
     "aniscoupons:34690",
     "zedstoreonline:40000",
     "zedstoreonline:40001",
-    "aniscoupons:34692"
+    "aniscoupons:34692",
+    "zedstoreonline:40002"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794492258.9957209,
+  "last_run_time": 1794492434.7759526,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4596,12 +4596,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40001,
-      "last_check_time": 1794492070.898296
+      "last_message_id": 40002,
+      "last_check_time": 1794492436.8467262
     },
     "aniscoupons": {
-      "last_message_id": 34692,
-      "last_check_time": 1794492261.0385888
+      "last_message_id": 34693,
+      "last_check_time": 1794492439.3215506
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -4954,7 +4954,7 @@
     "1005012864273120": 154.0,
     "1005006967218963": 17.3,
     "1005012675968319": 30.0,
-    "1005010424638496": 113.4,
+    "1005010424638496": 113.9,
     "1005010141682336": 224.0,
     "1005006782790827": 47.5,
     "1005012938359476": 123.17,
@@ -22075,6 +22075,16 @@
       "price": 118.5,
       "timestamp": 1794492258.9957209,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40002": {
+      "channel_msg_id": 2496,
+      "product_id": "1005010424638496",
+      "title": "Magcubic  HY350 Max 900ANSI",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40002,
+      "price": 113.9,
+      "timestamp": 1794492434.7759526,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22083,17 +22093,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794492261.8358648,
+    "last_deal_post_time": 1794492440.0324068,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794492264.9988053,
+    "last_sweep_time": 1794492442.8150187,
     "last_sweep_times": {
-      "algeria": 1794492261.8187847,
-      "france": 1794492264.9988053
+      "algeria": 1794492440.0022311,
+      "france": 1794492442.8150187
     },
     "last_deal_post_times": {
-      "algeria": 1794492261.8358648
+      "algeria": 1794492440.0324068
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22541,7 +22551,7 @@
     "1005012864273120": "zedstoreonline",
     "1005006967218963": "zedstoreonline",
     "1005012675968319": "aniscoupons",
-    "1005010424638496": "aniscoupons",
+    "1005010424638496": "zedstoreonline",
     "1005010141682336": "aniscoupons",
     "1005006782790827": "zedstoreonline",
     "1005012938359476": "aniscoupons",
@@ -24682,7 +24692,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "bnddeals:50876",
     "megaphonna:8607",
     "megaphonna:8476",
     "alidealsdz:133",
@@ -25681,7 +25690,8 @@
     "aniscoupons:34683",
     "zedstoreonline:39998",
     "zedstoreonline:39999",
-    "aniscoupons:34691"
+    "aniscoupons:34691",
+    "aniscoupons:34693"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,

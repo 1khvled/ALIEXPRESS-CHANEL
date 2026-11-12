@@ -28,10 +28,10 @@
       "ewma": 0.9324
     },
     "zedstoreonline": {
-      "seen": 101,
-      "published": 50,
+      "seen": 102,
+      "published": 51,
       "skipped": 0,
-      "ewma": 0.9922
+      "ewma": 0.9928
     },
     "bnddeals": {
       "seen": 18,
@@ -40,7 +40,7 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 166,
+      "seen": 167,
       "published": 135,
       "skipped": 0,
       "ewma": 0.9994
@@ -48,8 +48,8 @@
   },
   "category_stats": {
     "other": {
-      "seen": 96,
-      "published": 79,
+      "seen": 98,
+      "published": 80,
       "skipped": 0,
       "ewma": 0.9994
     },
@@ -253,7 +253,8 @@
     ],
     "1005010424638496": [
       113.4,
-      113.4
+      113.4,
+      113.9
     ],
     "1005012921754472": [
       265.11,
@@ -563,31 +564,15 @@
     ]
   },
   "counters": {
-    "scored": 309,
-    "verdict_publish": 287,
+    "scored": 311,
+    "verdict_publish": 289,
     "verdict_hold": 22,
     "verdict_skip": 0,
-    "published": 212,
+    "published": 213,
     "skipped": 0
   },
-  "score_sum": 22220.02,
+  "score_sum": 22354.37,
   "recent_decisions": [
-    {
-      "ts": 1794419938,
-      "channel": "aniscoupons",
-      "category": "other",
-      "product_id": "1005010536089199",
-      "score": 68.79,
-      "verdict": "publish"
-    },
-    {
-      "ts": 1794420504,
-      "channel": "zedstoreonline",
-      "category": "pc",
-      "product_id": "1005008430147176",
-      "score": 61.3,
-      "verdict": "publish"
-    },
     {
       "ts": 1794420509,
       "channel": "aniscoupons",
@@ -2171,7 +2156,23 @@
       "product_id": "1005011778621042",
       "score": 79.25,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794492430,
+      "channel": "zedstoreonline",
+      "category": "other",
+      "product_id": "1005010424638496",
+      "score": 64.64,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794492438,
+      "channel": "aniscoupons",
+      "category": "other",
+      "product_id": "1005012184442621",
+      "score": 69.71,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794492259.0285141
+  "updated_at": 1794492438.7615728
 }
