@@ -1514,7 +1514,7 @@
     "1005007495712340": 1794475814.3090613,
     "1005009104334975": 1794421043.2176414,
     "1005012474727998": 1794320674.833981,
-    "1005006807619368": 1794438803.0185766,
+    "1005006807619368": 1794481781.56275,
     "1005010653559191": 1794349536.4429784,
     "COUPON_CLAIM_zedstoreonline_39827": 1794363974.314961,
     "1005012197291105": 1794438408.5282347,
@@ -3495,7 +3495,7 @@
     "SIX PCIe 4.0 SSD (1TB) NVMe M2": 1794331533.1223195,
     "Kootion SSD SATA": 1794332259.758732,
     "KOOTION SATA SSD 128GB": 1794334097.945569,
-    "Kingston DataTraveler 128GB": 1794475858.8069391,
+    "Kingston DataTraveler 128GB": 1794481781.56275,
     "CUSU CV3500  M.2 NVMe SSD (1tb)": 1794481572.7195961,
     "Kootion X15 M.2 NVMe 256GB": 1794346230.0535362,
     "Baseus BS2 Lite": 1794349536.4429784,
@@ -3554,7 +3554,6 @@
     "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794480064.6967885
   },
   "published_post_keys": [
-    "ecksdeal:5981",
     "aniscoupons:32720",
     "lodydeals:45788",
     "couponsglobal:48783",
@@ -4553,11 +4552,12 @@
     "aniscoupons:34648",
     "aniscoupons:34649",
     "aniscoupons:34650",
-    "aniscoupons:34651"
+    "aniscoupons:34651",
+    "aniscoupons:34652"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794481572.7195961,
+  "last_run_time": 1794481781.56275,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4588,8 +4588,8 @@
       "last_check_time": 1794481569.5763128
     },
     "aniscoupons": {
-      "last_message_id": 34651,
-      "last_check_time": 1794481577.920043
+      "last_message_id": 34652,
+      "last_check_time": 1794481783.6332493
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -5225,7 +5225,7 @@
     "1005007495712340": 53.24,
     "1005009104334975": 10.7,
     "1005012474727998": 14.9,
-    "1005006807619368": 6.5,
+    "1005006807619368": 6.55,
     "1005010653559191": 10.5,
     "1005012197291105": 438.2,
     "1005010179192246": 609.9,
@@ -21761,6 +21761,16 @@
       "price": 179.3,
       "timestamp": 1794481572.7195961,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34652": {
+      "channel_msg_id": 2466,
+      "product_id": "1005006807619368",
+      "title": "Kingston DataTraveler 128GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34652,
+      "price": 6.55,
+      "timestamp": 1794481781.56275,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21769,17 +21779,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794481578.933974,
+    "last_deal_post_time": 1794481784.5076416,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794481583.064212,
+    "last_sweep_time": 1794481787.3762167,
     "last_sweep_times": {
-      "algeria": 1794481578.9094415,
-      "france": 1794481583.064212
+      "algeria": 1794481784.477309,
+      "france": 1794481787.3762167
     },
     "last_deal_post_times": {
-      "algeria": 1794481578.933974
+      "algeria": 1794481784.5076416
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23510,7 +23520,7 @@
     "SIX PCIe 4.0 SSD (1TB) NVMe M2": "bnddeals",
     "Kootion SSD SATA": "aniscoupons",
     "KOOTION SATA SSD 128GB": "lodydeals",
-    "Kingston DataTraveler 128GB": "lodydeals",
+    "Kingston DataTraveler 128GB": "aniscoupons",
     "CUSU CV3500  M.2 NVMe SSD (1tb)": "aniscoupons",
     "Kootion X15 M.2 NVMe 256GB": "lodydeals",
     "Baseus BS2 Lite": "zedstoreonline",
