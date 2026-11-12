@@ -767,7 +767,8 @@
     "1005013288890301",
     "1005013089015192",
     "1005009278114794",
-    "1005010210432531"
+    "1005010210432531",
+    "1005013422894128"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1550,7 +1551,8 @@
     "1005013288890301": 1794477157.5349603,
     "1005013089015192": 1794478710.9244785,
     "1005009278114794": 1794480064.6967885,
-    "1005010210432531": 1794482375.9737191
+    "1005010210432531": 1794482375.9737191,
+    "1005013422894128": 1794487083.9711623
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2550,7 +2552,8 @@
     "FIFINE 1440p Full HD PC Webcam with Microphone",
     "iQOO Z11S 8/128",
     "Inphic A9 PRO MAX Wireless Gaming Mouse",
-    "realme P4 Lite Smartphone NFC 6300mAh Battery"
+    "realme P4 Lite Smartphone NFC 6300mAh Battery",
+    "Honor Win RT2"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3555,10 +3558,10 @@
     "FIFINE 1440p Full HD PC Webcam with Microphone": 1794478095.864591,
     "iQOO Z11S 8/128": 1794478710.9244785,
     "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794480064.6967885,
-    "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191
+    "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191,
+    "Honor Win RT2": 1794487083.9711623
   },
   "published_post_keys": [
-    "zedstoreonline:38795",
     "lodydeals:45472",
     "lodydeals:45928",
     "zedstoreonline:38542",
@@ -4557,11 +4560,12 @@
     "zedstoreonline:39987",
     "aniscoupons:34672",
     "aniscoupons:34673",
-    "aniscoupons:34674"
+    "aniscoupons:34674",
+    "aniscoupons:34675"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794486903.972016,
+  "last_run_time": 1794487083.9711623,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4588,12 +4592,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39988,
-      "last_check_time": 1794486896.1816337
+      "last_message_id": 39989,
+      "last_check_time": 1794487077.5434065
     },
     "aniscoupons": {
-      "last_message_id": 34674,
-      "last_check_time": 1794486906.0400708
+      "last_message_id": 34675,
+      "last_check_time": 1794487086.0194933
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -5260,7 +5264,8 @@
     "1005006967391791": 36.2,
     "1005013288890301": 16.9,
     "1005013089015192": 261.9,
-    "1005009278114794": 11.9
+    "1005009278114794": 11.9,
+    "1005013422894128": 499.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -21925,6 +21930,16 @@
       "price": 437.3,
       "timestamp": 1794486903.972016,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34675": {
+      "channel_msg_id": 2482,
+      "product_id": "1005013422894128",
+      "title": "Honor Win RT2",
+      "channel": "aniscoupons",
+      "source_msg_id": 34675,
+      "price": 499.5,
+      "timestamp": 1794487083.9711623,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21933,17 +21948,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794486907.2026436,
+    "last_deal_post_time": 1794487086.9869578,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794486910.9922109,
+    "last_sweep_time": 1794487090.519282,
     "last_sweep_times": {
-      "algeria": 1794486907.169272,
-      "france": 1794486910.9922109
+      "algeria": 1794487086.9664376,
+      "france": 1794487090.519282
     },
     "last_deal_post_times": {
-      "algeria": 1794486907.2026436
+      "algeria": 1794487086.9869578
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22724,7 +22739,8 @@
     "1005006967391791": "zedstoreonline",
     "1005013288890301": "zedstoreonline",
     "1005013089015192": "zedstoreonline",
-    "1005009278114794": "zedstoreonline"
+    "1005009278114794": "zedstoreonline",
+    "1005013422894128": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -23731,7 +23747,8 @@
     "FIFINE 1440p Full HD PC Webcam with Microphone": "zedstoreonline",
     "iQOO Z11S 8/128": "zedstoreonline",
     "Inphic A9 PRO MAX Wireless Gaming Mouse": "zedstoreonline",
-    "realme P4 Lite Smartphone NFC 6300mAh Battery": "aniscoupons"
+    "realme P4 Lite Smartphone NFC 6300mAh Battery": "aniscoupons",
+    "Honor Win RT2": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -24528,7 +24545,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "pcgamingpart:8021",
     "lodydeals:45902",
     "lodydeals:45924",
     "bnddeals:50845",
@@ -25527,7 +25543,8 @@
     "aniscoupons:34667",
     "aniscoupons:34668",
     "zedstoreonline:39986",
-    "zedstoreonline:39988"
+    "zedstoreonline:39988",
+    "zedstoreonline:39989"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
