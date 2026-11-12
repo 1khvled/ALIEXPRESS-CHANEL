@@ -28,10 +28,10 @@
       "ewma": 0.9324
     },
     "zedstoreonline": {
-      "seen": 108,
-      "published": 54,
+      "seen": 109,
+      "published": 55,
       "skipped": 0,
-      "ewma": 0.9944
+      "ewma": 0.9948
     },
     "bnddeals": {
       "seen": 18,
@@ -40,7 +40,7 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 172,
+      "seen": 173,
       "published": 137,
       "skipped": 0,
       "ewma": 0.9994
@@ -54,16 +54,16 @@
       "ewma": 0.9994
     },
     "pc": {
-      "seen": 51,
+      "seen": 52,
       "published": 32,
       "skipped": 0,
       "ewma": 0.9654
     },
     "phones": {
-      "seen": 137,
-      "published": 78,
+      "seen": 138,
+      "published": 79,
       "skipped": 0,
-      "ewma": 0.9993
+      "ewma": 0.9994
     },
     "home": {
       "seen": 13,
@@ -219,7 +219,8 @@
     "1005013361453762": [
       277.36,
       277.36,
-      277.36
+      277.36,
+      276.3
     ],
     "1005008645323478": [
       41.4,
@@ -571,31 +572,15 @@
     ]
   },
   "counters": {
-    "scored": 322,
-    "verdict_publish": 300,
+    "scored": 324,
+    "verdict_publish": 302,
     "verdict_hold": 22,
     "verdict_skip": 0,
-    "published": 218,
+    "published": 219,
     "skipped": 0
   },
-  "score_sum": 23196.48,
+  "score_sum": 23347.83,
   "recent_decisions": [
-    {
-      "ts": 1794421781,
-      "channel": "zedstoreonline",
-      "category": "phones",
-      "product_id": "1005011648649269",
-      "score": 70.21,
-      "verdict": "publish"
-    },
-    {
-      "ts": 1794421963,
-      "channel": "zedstoreonline",
-      "category": "phones",
-      "product_id": "1005010575865619",
-      "score": 67.61,
-      "verdict": "publish"
-    },
     {
       "ts": 1794422149,
       "channel": "aniscoupons",
@@ -2179,7 +2164,23 @@
       "product_id": "1005012498496817",
       "score": 74.69,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794496484,
+      "channel": "zedstoreonline",
+      "category": "phones",
+      "product_id": "1005013361453762",
+      "score": 64.45,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794496491,
+      "channel": "aniscoupons",
+      "category": "pc",
+      "product_id": "1005007027334636",
+      "score": 86.9,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794495197.043237
+  "updated_at": 1794496491.8938756
 }
