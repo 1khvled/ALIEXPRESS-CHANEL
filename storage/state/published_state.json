@@ -1444,7 +1444,7 @@
     "1005008534907844": 1793987285.4130383,
     "1005009577554629": 1793987289.8200357,
     "1005010656922924": 1794407013.7230165,
-    "1005008077441711": 1794417547.9385538,
+    "1005008077441711": 1794480643.2529733,
     "1005006411483066": 1794091985.0146983,
     "1005012925301774": 1794348808.2825344,
     "1005012959738411": 1794304640.3506072,
@@ -3476,7 +3476,7 @@
     "Fashion Square Watches": 1794263521.335573,
     "Bicycle Pump 80 PSI": 1794263702.59817,
     "Portable Hair Clipper": 1794263885.7408762,
-    "Inphic PG1 RGB Wired Gaming Mouse": 1794302806.3764513,
+    "Inphic PG1 RGB Wired Gaming Mouse": 1794480643.2529733,
     "Anker Q20i Hybrid Active": 1794480460.355499,
     "CUSU CV3500Q 2TB M.2": 1794305012.9961731,
     "MACHENIKE G5Pro Max SE With Charging Dock": 1794430876.2525523,
@@ -3554,7 +3554,6 @@
     "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794480064.6967885
   },
   "published_post_keys": [
-    "ecksdeal:5977",
     "bnddeals:50855",
     "bnddeals:50853",
     "ecksdeal:5981",
@@ -4553,11 +4552,12 @@
     "zedstoreonline:39971",
     "aniscoupons:34647",
     "zedstoreonline:39972",
-    "aniscoupons:34648"
+    "aniscoupons:34648",
+    "aniscoupons:34649"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794480460.355499,
+  "last_run_time": 1794480643.2529733,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4584,12 +4584,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39972,
-      "last_check_time": 1794480457.0250583
+      "last_message_id": 39973,
+      "last_check_time": 1794480639.7013173
     },
     "aniscoupons": {
-      "last_message_id": 34648,
-      "last_check_time": 1794480462.4245443
+      "last_message_id": 34649,
+      "last_check_time": 1794480645.3221211
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -21731,6 +21731,16 @@
       "price": 33.64,
       "timestamp": 1794480460.355499,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34649": {
+      "channel_msg_id": 2463,
+      "product_id": "1005008077441711",
+      "title": "Inphic PG1 RGB Wired Gaming Mouse",
+      "channel": "aniscoupons",
+      "source_msg_id": 34649,
+      "price": 7.6,
+      "timestamp": 1794480643.2529733,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21739,17 +21749,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794480463.094339,
+    "last_deal_post_time": 1794480646.2453036,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794480466.0356433,
+    "last_sweep_time": 1794480649.3128567,
     "last_sweep_times": {
-      "algeria": 1794480463.063769,
-      "france": 1794480466.0356433
+      "algeria": 1794480646.2148166,
+      "france": 1794480649.3128567
     },
     "last_deal_post_times": {
-      "algeria": 1794480463.094339
+      "algeria": 1794480646.2453036
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22427,7 +22437,7 @@
     "1005008534907844": "lodydeals",
     "1005009577554629": "lodydeals",
     "1005010656922924": "lodydeals",
-    "1005008077441711": "zedstoreonline",
+    "1005008077441711": "aniscoupons",
     "1005006411483066": "zedstoreonline",
     "1005012925301774": "zedstoreonline",
     "1005012959738411": "aniscoupons",
@@ -24333,7 +24343,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8407",
     "aniscoupons:33190",
     "megaphonna:8618",
     "megaphonna:8448",
@@ -25332,7 +25341,8 @@
     "zedstoreonline:39967",
     "zedstoreonline:39969",
     "zedstoreonline:39970",
-    "aniscoupons:34645"
+    "aniscoupons:34645",
+    "zedstoreonline:39973"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
