@@ -772,7 +772,8 @@
     "1005010297094897",
     "1005009012821000",
     "1005013485724377",
-    "1005012783197164"
+    "1005012783197164",
+    "1005012993724126"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1560,7 +1561,8 @@
     "1005010297094897": 1794500546.592492,
     "1005009012821000": 1794502225.0175712,
     "1005013485724377": 1794510747.6816225,
-    "1005012783197164": 1794512597.1982763
+    "1005012783197164": 1794512597.1982763,
+    "1005012993724126": 1794515920.3397443
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2569,7 +2571,8 @@
     "DITONG X3Plus  4K WIFI6",
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S",
     "realme Original Adapter SUPERVOOC Charger 45W",
-    "EPOMAKER GX1 Tri-mode"
+    "EPOMAKER GX1 Tri-mode",
+    "WALRAM M.2  128GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3583,10 +3586,10 @@
     "DITONG X3Plus  4K WIFI6": 1794502225.0175712,
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": 1794502591.7937624,
     "realme Original Adapter SUPERVOOC Charger 45W": 1794510747.6816225,
-    "EPOMAKER GX1 Tri-mode": 1794512597.1982763
+    "EPOMAKER GX1 Tri-mode": 1794512597.1982763,
+    "WALRAM M.2  128GB": 1794515920.3397443
   },
   "published_post_keys": [
-    "ecksdeal:5866",
     "megaphonna:8430",
     "zedstoreonline:38762",
     "aniscoupons:32769",
@@ -4585,19 +4588,20 @@
     "aniscoupons:34726",
     "aniscoupons:34729",
     "zedstoreonline:40026",
-    "zedstoreonline:40027"
+    "zedstoreonline:40027",
+    "aniscoupons:34731"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794515535.4850473,
+  "last_run_time": 1794515920.3397443,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6058,
       "last_check_time": 1794511305.5885172
     },
     "lodydeals": {
-      "last_message_id": 46433,
-      "last_check_time": 1794515725.958502
+      "last_message_id": 46434,
+      "last_check_time": 1794515910.9328501
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4620,8 +4624,8 @@
       "last_check_time": 1794515537.5521796
     },
     "aniscoupons": {
-      "last_message_id": 34730,
-      "last_check_time": 1794515728.5558872
+      "last_message_id": 34731,
+      "last_check_time": 1794515922.4089813
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -5293,7 +5297,8 @@
     "1005010297094897": 34.1,
     "1005009012821000": 87.8,
     "1005013485724377": 11.5,
-    "1005012783197164": 36.4
+    "1005012783197164": 36.4,
+    "1005012993724126": 15.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -22488,6 +22493,16 @@
       "price": 66.7,
       "timestamp": 1794515535.4850473,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34731": {
+      "channel_msg_id": 2536,
+      "product_id": "1005012993724126",
+      "title": "WALRAM M.2  128GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34731,
+      "price": 15.6,
+      "timestamp": 1794515920.3397443,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22496,17 +22511,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794515538.9577758,
+    "last_deal_post_time": 1794515923.3022807,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794515732.9555337,
+    "last_sweep_time": 1794515925.9757514,
     "last_sweep_times": {
-      "algeria": 1794515729.5868695,
-      "france": 1794515732.9555337
+      "algeria": 1794515923.270145,
+      "france": 1794515925.9757514
     },
     "last_deal_post_times": {
-      "algeria": 1794515538.9577758
+      "algeria": 1794515923.3022807
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23292,7 +23307,8 @@
     "1005010297094897": "lodydeals",
     "1005009012821000": "lodydeals",
     "1005013485724377": "aniscoupons",
-    "1005012783197164": "aniscoupons"
+    "1005012783197164": "aniscoupons",
+    "1005012993724126": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -24308,7 +24324,8 @@
     "DITONG X3Plus  4K WIFI6": "lodydeals",
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": "aniscoupons",
     "realme Original Adapter SUPERVOOC Charger 45W": "aniscoupons",
-    "EPOMAKER GX1 Tri-mode": "aniscoupons"
+    "EPOMAKER GX1 Tri-mode": "aniscoupons",
+    "WALRAM M.2  128GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
