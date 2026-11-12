@@ -752,7 +752,8 @@
     "1005009582538267",
     "1005005471311412",
     "1005012915663790",
-    "1005013560596944"
+    "1005013560596944",
+    "1005007038882010"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1520,7 +1521,8 @@
     "1005009582538267": 1794439531.0399334,
     "1005005471311412": 1794439539.8661358,
     "1005012915663790": 1794439916.4928079,
-    "1005013560596944": 1794470859.4033997
+    "1005013560596944": 1794470859.4033997,
+    "1005007038882010": 1794471412.477501
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2503,7 +2505,8 @@
     "Kingston DataTraveler Exodia S USB Flash (128g)",
     "FIFINE K688W USB XLR MIC",
     "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra",
-    "12V CORDLESS ELECTRIC DRILL"
+    "12V CORDLESS ELECTRIC DRILL",
+    "FORSINING MECHANICAL SKELETON WATCH"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3491,10 +3494,10 @@
     "Kingston DataTraveler Exodia S USB Flash (128g)": 1794439539.8661358,
     "FIFINE K688W USB XLR MIC": 1794439743.6258593,
     "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra": 1794439916.4928079,
-    "12V CORDLESS ELECTRIC DRILL": 1794470859.4033997
+    "12V CORDLESS ELECTRIC DRILL": 1794470859.4033997,
+    "FORSINING MECHANICAL SKELETON WATCH": 1794471412.477501
   },
   "published_post_keys": [
-    "megaphonna:8543",
     "couponsglobal:48813",
     "zedstoreonline:38602",
     "aniscoupons:33047",
@@ -4493,11 +4496,12 @@
     "aniscoupons:34610",
     "zedstoreonline:39936",
     "aniscoupons:34614",
-    "aniscoupons:34615"
+    "aniscoupons:34615",
+    "aniscoupons:34617"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794470859.4033997,
+  "last_run_time": 1794471412.477501,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4524,12 +4528,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39941,
-      "last_check_time": 1794471049.777175
+      "last_message_id": 39942,
+      "last_check_time": 1794471409.0043662
     },
     "aniscoupons": {
-      "last_message_id": 34616,
-      "last_check_time": 1794471225.365791
+      "last_message_id": 34617,
+      "last_check_time": 1794471414.5442224
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5183,7 +5187,8 @@
     "1005009582538267": 25.1,
     "1005005471311412": 7.7,
     "1005012915663790": 56.8,
-    "1005013560596944": 9.6
+    "1005013560596944": 9.6,
+    "1005007038882010": 8.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -21148,6 +21153,16 @@
       "price": 9.6,
       "timestamp": 1794470859.4033997,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34617": {
+      "channel_msg_id": 2412,
+      "product_id": "1005007038882010",
+      "title": "FORSINING MECHANICAL SKELETON WATCH",
+      "channel": "aniscoupons",
+      "source_msg_id": 34617,
+      "price": 8.4,
+      "timestamp": 1794471412.477501,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21156,17 +21171,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794470862.2460845,
+    "last_deal_post_time": 1794471415.4004672,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794471228.8864148,
+    "last_sweep_time": 1794471418.2823517,
     "last_sweep_times": {
-      "algeria": 1794471225.9832208,
-      "france": 1794471228.8864148
+      "algeria": 1794471415.371383,
+      "france": 1794471418.2823517
     },
     "last_deal_post_times": {
-      "algeria": 1794470862.2460845
+      "algeria": 1794471415.4004672
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21934,7 +21949,8 @@
     "1005009582538267": "zedstoreonline",
     "1005005471311412": "aniscoupons",
     "1005012915663790": "aniscoupons",
-    "1005013560596944": "aniscoupons"
+    "1005013560596944": "aniscoupons",
+    "1005007038882010": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -22924,7 +22940,8 @@
     "Kingston DataTraveler Exodia S USB Flash (128g)": "aniscoupons",
     "FIFINE K688W USB XLR MIC": "aniscoupons",
     "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra": "aniscoupons",
-    "12V CORDLESS ELECTRIC DRILL": "aniscoupons"
+    "12V CORDLESS ELECTRIC DRILL": "aniscoupons",
+    "FORSINING MECHANICAL SKELETON WATCH": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -23721,7 +23738,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38828",
     "megaphonna:8672",
     "ecksdeal:6000",
     "aniscoupons:33164",
@@ -24720,7 +24736,8 @@
     "aniscoupons:34613",
     "zedstoreonline:39940",
     "zedstoreonline:39941",
-    "aniscoupons:34616"
+    "aniscoupons:34616",
+    "zedstoreonline:39942"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
