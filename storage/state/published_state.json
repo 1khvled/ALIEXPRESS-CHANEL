@@ -1475,7 +1475,7 @@
     "1005012953027259": 1794133977.9005425,
     "1005012048332402": 1794136369.073103,
     "1005011665465731": 1794137638.8201442,
-    "1005012377459743": 1794305200.722419,
+    "1005012377459743": 1794485990.5871184,
     "1005009460475870": 1794433244.1988828,
     "1005009649079564": 1794145536.5317988,
     "1005007038022940": 1794146648.256951,
@@ -1521,7 +1521,7 @@
     "1005012197291105": 1794438408.5282347,
     "1005010179192246": 1794427325.301942,
     "1005010457635845": 1794393509.614562,
-    "1005012921754472": 1794414407.5368557,
+    "1005012921754472": 1794485983.772945,
     "1005013399086495": 1794478726.13417,
     "1005006257950849": 1794420680.672656,
     "1005013391950901": 1794420685.287832,
@@ -3430,7 +3430,7 @@
     "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464,
     "Kootion X15 M.2 SSD NVMe 256GB": 1794134534.5760646,
     "Lenovo LE257 Headphones": 1794137638.8201442,
-    "Honor 600s CN (8/256)": 1794305200.722419,
+    "Honor 600s CN (8/256)": 1794485990.5871184,
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
     "Blackview Mega 5": 1794414780.2759852,
     "Warvank X8 Wireless Gaming Mouse": 1794433244.1988828,
@@ -3517,7 +3517,7 @@
     "SoundPEATS C30 Hybrid ANC -52dB": 1794407013.7230165,
     "Somnambulist SSD 120GB": 1794407765.5158777,
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794411999.7818277,
-    "Realme P4 Power 8/256GB": 1794414407.5368557,
+    "Realme P4 Power 8/256GB": 1794485983.772945,
     "ASROCK X570M PRO4 MOTHERBOARD": 1794414971.7181702,
     "EASYSMX X05 PRO Controller": 1794478912.5670652,
     "ONEPLUS 16 12/256GB": 1794478726.13417,
@@ -3558,8 +3558,6 @@
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191
   },
   "published_post_keys": [
-    "zedstoreonline:38804",
-    "lodydeals:45851",
     "couponsglobal:48775",
     "aniscoupons:32712",
     "zedstoreonline:38536",
@@ -4557,11 +4555,13 @@
     "aniscoupons:34663",
     "aniscoupons:34665",
     "aniscoupons:34666",
-    "zedstoreonline:39985"
+    "zedstoreonline:39985",
+    "aniscoupons:34669",
+    "aniscoupons:34670"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794485060.022662,
+  "last_run_time": 1794485990.5871184,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4592,8 +4592,8 @@
       "last_check_time": 1794485800.277442
     },
     "aniscoupons": {
-      "last_message_id": 34668,
-      "last_check_time": 1794485065.6165504
+      "last_message_id": 34670,
+      "last_check_time": 1794485992.6524515
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -21855,6 +21855,26 @@
       "price": 17.8,
       "timestamp": 1794485060.022662,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34669": {
+      "channel_msg_id": 2475,
+      "product_id": "1005012921754472",
+      "title": "Realme P4 Power 8/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34669,
+      "price": 265.11,
+      "timestamp": 1794485983.772945,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34670": {
+      "channel_msg_id": 2476,
+      "product_id": "1005012377459743",
+      "title": "Honor 600s CN (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34670,
+      "price": 304.77,
+      "timestamp": 1794485990.5871184,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21863,17 +21883,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794485066.389798,
+    "last_deal_post_time": 1794485993.6826487,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794485812.0977983,
+    "last_sweep_time": 1794485997.7261994,
     "last_sweep_times": {
-      "algeria": 1794485808.2773955,
-      "france": 1794485812.0977983
+      "algeria": 1794485993.6525757,
+      "france": 1794485997.7261994
     },
     "last_deal_post_times": {
-      "algeria": 1794485066.389798
+      "algeria": 1794485993.6826487
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
