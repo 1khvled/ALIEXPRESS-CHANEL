@@ -1392,7 +1392,7 @@
     "1005006783028347": 1794493913.1325247,
     "1005007010104970": 1793656134.827825,
     "1005008637113849": 1793656145.7068295,
-    "1005010419207841": 1793656214.2446048,
+    "1005010419207841": 1794511303.5161283,
     "1005011891052345": 1793706864.9165008,
     "1005009648930854": 1793707047.5983977,
     "1005010184029817": 1794396619.5833008,
@@ -3318,7 +3318,7 @@
     "HONOR Pad X9a 8/256GB Global": 1793656173.8785615,
     "CUSU RAM DDR5 16GB 6000Mhz": 1794475875.1316102,
     "UGREEN MAX5S ANC -45dB": 1793656197.5558417,
-    "سماعات لاسلكية VGN VXE Siren V1": 1793656214.2446048,
+    "سماعات لاسلكية VGN VXE Siren V1": 1794511303.5161283,
     "ماوس لاسلكي بألياف الكربون Attack Shark X11 Ultimate 8K Carbon": 1793706864.9165008,
     "Leaven X3 RGB Magnetic 1600DPI": 1793707047.5983977,
     "CUSU DDR5 32GB(16GBX2) 5600MHz": 1793707052.9762022,
@@ -3582,7 +3582,6 @@
     "realme Original Adapter SUPERVOOC Charger 45W": 1794510747.6816225
   },
   "published_post_keys": [
-    "aniscoupons:33201",
     "lodydeals:45739",
     "aniscoupons:32701",
     "lodydeals:45410",
@@ -4581,15 +4580,16 @@
     "aniscoupons:34719",
     "zedstoreonline:40020",
     "aniscoupons:34720",
-    "aniscoupons:34722"
+    "aniscoupons:34722",
+    "ecksdeal:6058"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794510747.6816225,
+  "last_run_time": 1794511303.5161283,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6057,
-      "last_check_time": 1794496853.9442635
+      "last_message_id": 6058,
+      "last_check_time": 1794511305.5885172
     },
     "lodydeals": {
       "last_message_id": 46431,
@@ -4616,8 +4616,8 @@
       "last_check_time": 1794507983.1409287
     },
     "aniscoupons": {
-      "last_message_id": 34722,
-      "last_check_time": 1794510749.7382
+      "last_message_id": 34723,
+      "last_check_time": 1794511308.530218
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -22413,6 +22413,16 @@
       "price": 11.5,
       "timestamp": 1794510747.6816225,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6058": {
+      "channel_msg_id": 2529,
+      "product_id": "1005010419207841",
+      "title": "سماعات لاسلكية VGN VXE Siren V1",
+      "channel": "ecksdeal",
+      "source_msg_id": 6058,
+      "price": 29.44,
+      "timestamp": 1794511303.5161283,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22421,17 +22431,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794510750.603685,
+    "last_deal_post_time": 1794511309.2354028,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794511113.0959926,
+    "last_sweep_time": 1794511312.8037033,
     "last_sweep_times": {
-      "algeria": 1794511110.4699721,
-      "france": 1794511113.0959926
+      "algeria": 1794511309.2048318,
+      "france": 1794511312.8037033
     },
     "last_deal_post_times": {
-      "algeria": 1794510750.603685
+      "algeria": 1794511309.2354028
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -25028,7 +25038,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:39151",
     "zedstoreonline:39152",
     "zedstoreonline:39160",
     "zedstoreonline:39162",
@@ -26027,7 +26036,8 @@
     "zedstoreonline:40021",
     "zedstoreonline:40022",
     "zedstoreonline:40023",
-    "aniscoupons:34721"
+    "aniscoupons:34721",
+    "aniscoupons:34723"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
