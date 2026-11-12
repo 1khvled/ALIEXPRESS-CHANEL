@@ -1355,7 +1355,7 @@
     "1005010009130696": 1793613403.4444478,
     "1005013465751932": 1793613440.9413722,
     "1005011778223630": 1793613478.3592212,
-    "1005009231510301": 1794417542.0419154,
+    "1005009231510301": 1794500185.0688565,
     "1005011625723042": 1793613515.3490868,
     "1005006280695304": 1793613524.8970137,
     "1005010149868688": 1793613530.8342392,
@@ -3490,7 +3490,7 @@
     "Anker Q20i Hybrid Active": 1794480460.355499,
     "CUSU CV3500Q 2TB M.2": 1794305012.9961731,
     "MACHENIKE G5Pro Max SE With Charging Dock": 1794493355.4264135,
-    "Xiaoxin Pad Pro GT (8/256)": 1794308897.9947796,
+    "Xiaoxin Pad Pro GT (8/256)": 1794500185.0688565,
     "Attack Shark X11": 1794480454.9508715,
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794436007.5288515,
     "MAONO PD100W USB Wireless Dynamic": 1794432872.6767933,
@@ -3568,7 +3568,6 @@
     "سماعات Fifine Ampligame H6 7.1 RGB": 1794496851.9006197
   },
   "published_post_keys": [
-    "zedstoreonline:38755",
     "test_channel:1792073338",
     "lodydeals:45827",
     "lodydeals:45408",
@@ -4567,11 +4566,12 @@
     "aniscoupons:34704",
     "aniscoupons:34705",
     "aniscoupons:34706",
-    "aniscoupons:34708"
+    "aniscoupons:34708",
+    "aniscoupons:34709"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794499991.8758564,
+  "last_run_time": 1794500185.0688565,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6057,
@@ -4602,8 +4602,8 @@
       "last_check_time": 1794499070.675681
     },
     "aniscoupons": {
-      "last_message_id": 34708,
-      "last_check_time": 1794499993.9443228
+      "last_message_id": 34709,
+      "last_check_time": 1794500187.1130688
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -22207,6 +22207,16 @@
       "price": 226.78,
       "timestamp": 1794499991.8758564,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34709": {
+      "channel_msg_id": 2510,
+      "product_id": "1005009231510301",
+      "title": "Xiaoxin Pad Pro GT (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34709,
+      "price": 259.7,
+      "timestamp": 1794500185.0688565,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22215,17 +22225,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794499994.827955,
+    "last_deal_post_time": 1794500187.8883398,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794499997.6057572,
+    "last_sweep_time": 1794500190.7480931,
     "last_sweep_times": {
-      "algeria": 1794499994.7981405,
-      "france": 1794499997.6057572
+      "algeria": 1794500187.868796,
+      "france": 1794500190.7480931
     },
     "last_deal_post_times": {
-      "algeria": 1794499994.827955
+      "algeria": 1794500187.8883398
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22827,7 +22837,7 @@
     "1005010009130696": "zedstoreonline",
     "1005013465751932": "zedstoreonline",
     "1005011778223630": "zedstoreonline",
-    "1005009231510301": "zedstoreonline",
+    "1005009231510301": "aniscoupons",
     "1005011625723042": "aniscoupons",
     "1005006280695304": "aniscoupons",
     "1005007060644375": "zedstoreonline",
