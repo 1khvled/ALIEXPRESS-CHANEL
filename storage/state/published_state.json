@@ -1320,7 +1320,7 @@
     "1005012887486015": 1793600112.7686548,
     "1005013478918892": 1794230539.4652834,
     "1005010443138358": 1793566252.8097658,
-    "1005013006189646": 1794391855.282333,
+    "1005013006189646": 1794487267.6087227,
     "1005011653777805": 1793566315.7447746,
     "1005009292891294": 1793613871.2148516,
     "1005009916144912": 1793613519.9635994,
@@ -1529,7 +1529,7 @@
     "1005007477084001": 1794420689.8352551,
     "1005008774483451": 1794426765.2023578,
     "1005012639349629": 1794484695.7251022,
-    "1005010153422760": 1794432694.0507162,
+    "1005010153422760": 1794487260.3295033,
     "1005012809141747": 1794436740.624044,
     "1005012912160949": 1794437490.1572993,
     "1005012167744546": 1794437860.4294534,
@@ -3510,7 +3510,7 @@
     "OnePlus 13": 1794486549.7011836,
     "Oppo Find X10 Pro Max 12/256": 1794390785.626018,
     "OnePlus ACE 6 Ultra 12/256": 1794486534.4538748,
-    "iQOO Neo 11 Ultra": 1794391855.282333,
+    "iQOO Neo 11 Ultra": 1794487267.6087227,
     "ONEPLUS 15 Global Rom 12/256": 1794393509.614562,
     "OPPO FIND X9s Pro": 1794394415.6108775,
     "Vivo X300  12/256GB": 1794394604.3664222,
@@ -3532,7 +3532,7 @@
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551,
     "KOOTION M.2 512GB 7200Mbs": 1794430852.2821708,
     "HONOR X80 PRO MAX": 1794484875.2933695,
-    "DJI Osmo mobile": 1794432694.0507162,
+    "DJI Osmo mobile": 1794487260.3295033,
     "OPPO K15 12/256GB": 1794436740.624044,
     "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794437490.1572993,
     "KINGSTON DATA TRAVELER USB3.2 (128G)": 1794438803.0185766,
@@ -3562,8 +3562,6 @@
     "Honor Win RT2": 1794487083.9711623
   },
   "published_post_keys": [
-    "lodydeals:45472",
-    "lodydeals:45928",
     "zedstoreonline:38542",
     "aniscoupons:33305",
     "bnddeals:50800",
@@ -4561,11 +4559,13 @@
     "aniscoupons:34672",
     "aniscoupons:34673",
     "aniscoupons:34674",
-    "aniscoupons:34675"
+    "aniscoupons:34675",
+    "zedstoreonline:39991",
+    "aniscoupons:34676"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794487083.9711623,
+  "last_run_time": 1794487267.6087227,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4592,12 +4592,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39989,
-      "last_check_time": 1794487077.5434065
+      "last_message_id": 39991,
+      "last_check_time": 1794487262.4021778
     },
     "aniscoupons": {
-      "last_message_id": 34675,
-      "last_check_time": 1794487086.0194933
+      "last_message_id": 34676,
+      "last_check_time": 1794487269.6804461
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -21940,6 +21940,26 @@
       "price": 499.5,
       "timestamp": 1794487083.9711623,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39991": {
+      "channel_msg_id": 2483,
+      "product_id": "1005010153422760",
+      "title": "DJI Osmo mobile",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39991,
+      "price": 58.7,
+      "timestamp": 1794487260.3295033,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34676": {
+      "channel_msg_id": 2484,
+      "product_id": "1005013006189646",
+      "title": "iQOO Neo 11 Ultra",
+      "channel": "aniscoupons",
+      "source_msg_id": 34676,
+      "price": 414.2,
+      "timestamp": 1794487267.6087227,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21948,17 +21968,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794487086.9869578,
+    "last_deal_post_time": 1794487270.5697336,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794487090.519282,
+    "last_sweep_time": 1794487273.341928,
     "last_sweep_times": {
-      "algeria": 1794487086.9664376,
-      "france": 1794487090.519282
+      "algeria": 1794487270.539011,
+      "france": 1794487273.341928
     },
     "last_deal_post_times": {
-      "algeria": 1794487086.9869578
+      "algeria": 1794487270.5697336
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -24545,7 +24565,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45902",
     "lodydeals:45924",
     "bnddeals:50845",
     "megaphonna:8450",
@@ -25544,7 +25563,8 @@
     "aniscoupons:34668",
     "zedstoreonline:39986",
     "zedstoreonline:39988",
-    "zedstoreonline:39989"
+    "zedstoreonline:39989",
+    "zedstoreonline:39990"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
