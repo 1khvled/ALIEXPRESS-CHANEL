@@ -1459,7 +1459,7 @@
     "1005011572208218": 1794471958.5920799,
     "1005012374550298": 1794312591.4470382,
     "1005009851407234": 1794307242.7687027,
-    "1005009738356108": 1794164684.9082866,
+    "1005009738356108": 1794473432.2937162,
     "1005012953027259": 1794133977.9005425,
     "1005012048332402": 1794136369.073103,
     "1005011665465731": 1794137638.8201442,
@@ -3319,7 +3319,7 @@
     "Baseus Mouse Bluetooth Wireless Computer 1600DPI": 1793966716.198834,
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": 1793966721.1839278,
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": 1793966727.646043,
-    "GameSir X5 Lite Game Controller": 1794415703.2366781,
+    "GameSir X5 Lite Game Controller": 1794473432.2937162,
     "Netac SSD NVME M2 250GB": 1794422876.857545,
     "Essager 20W GaN + cable": 1794439910.7944255,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
@@ -3504,7 +3504,6 @@
     "ميزان رقمي محمول لحقائب السفر": 1794472329.794574
   },
   "published_post_keys": [
-    "test_channel:1792086219",
     "lodydeals:45558",
     "couponsglobal:48807",
     "test_channel:1792181452",
@@ -4503,11 +4502,12 @@
     "aniscoupons:34621",
     "aniscoupons:34622",
     "zedstoreonline:39950",
-    "aniscoupons:34623"
+    "aniscoupons:34623",
+    "zedstoreonline:39951"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794473249.7212825,
+  "last_run_time": 1794473432.2937162,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4534,12 +4534,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39950,
-      "last_check_time": 1794473246.8224094
+      "last_message_id": 39951,
+      "last_check_time": 1794473434.3622582
     },
     "aniscoupons": {
-      "last_message_id": 34623,
-      "last_check_time": 1794473251.7750096
+      "last_message_id": 34624,
+      "last_check_time": 1794473435.9217107
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5094,7 +5094,7 @@
     "1005010635850450": 21.1,
     "1005006782986446": 6.7,
     "1005006411483066": 13.2,
-    "1005009738356108": 16.5,
+    "1005009738356108": 17.2,
     "1005008636930795": 31.5,
     "1005013083645836": 304.4,
     "1005008703989845": 24.8,
@@ -21261,6 +21261,16 @@
       "price": 40.5,
       "timestamp": 1794473249.7212825,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39951": {
+      "channel_msg_id": 2422,
+      "product_id": "1005009738356108",
+      "title": "GameSir X5 Lite Game Controller",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39951,
+      "price": 17.2,
+      "timestamp": 1794473432.2937162,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21269,17 +21279,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794473252.4319708,
+    "last_deal_post_time": 1794473436.7351925,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794473255.6292388,
+    "last_sweep_time": 1794473440.561917,
     "last_sweep_times": {
-      "algeria": 1794473252.407788,
-      "france": 1794473255.6292388
+      "algeria": 1794473436.705331,
+      "france": 1794473440.561917
     },
     "last_deal_post_times": {
-      "algeria": 1794473252.4319708
+      "algeria": 1794473436.7351925
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21983,7 +21993,7 @@
     "1005011572208218": "aniscoupons",
     "1005012374550298": "zedstoreonline",
     "1005009851407234": "zedstoreonline",
-    "1005009738356108": "lodydeals",
+    "1005009738356108": "zedstoreonline",
     "1005012953027259": "aniscoupons",
     "1005012048332402": "aniscoupons",
     "1005011665465731": "lodydeals",
@@ -22858,7 +22868,7 @@
     "Baseus Mouse Bluetooth Wireless Computer 1600DPI": "zedstoreonline",
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": "zedstoreonline",
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": "zedstoreonline",
-    "GameSir X5 Lite Game Controller": "aniscoupons",
+    "GameSir X5 Lite Game Controller": "zedstoreonline",
     "Netac SSD NVME M2 250GB": "zedstoreonline",
     "Essager 20W GaN + cable": "zedstoreonline",
     "Redmi Note 17 Pro Max": "aniscoupons",
@@ -23839,7 +23849,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33113",
     "megaphonna:8540",
     "megaphonna:8466",
     "ecksdeal:5989",
@@ -24838,7 +24847,8 @@
     "zedstoreonline:39944",
     "zedstoreonline:39945",
     "zedstoreonline:39946",
-    "zedstoreonline:39949"
+    "zedstoreonline:39949",
+    "aniscoupons:34624"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
