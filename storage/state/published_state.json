@@ -1454,7 +1454,7 @@
     "1005012593794312": 1794301654.5672474,
     "1005008384277561": 1794128872.1451216,
     "1005010155263623": 1794129971.1690388,
-    "1005011572208218": 1794435090.9779193,
+    "1005011572208218": 1794471958.5920799,
     "1005012374550298": 1794312591.4470382,
     "1005009851407234": 1794307242.7687027,
     "1005009738356108": 1794164684.9082866,
@@ -3380,7 +3380,7 @@
     "راوتر Vodafone 4G محمول": 1794128872.1451216,
     "OnePlus ACE 6T": 1794422151.260992,
     "Essager Mini 20W Type C Charger PD": 1794129971.1690388,
-    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794435090.9779193,
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794471958.5920799,
     "OnePlus Ace 6 12/256GB": 1794130143.129755,
     "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": 1794312591.4470382,
     "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464,
@@ -3498,7 +3498,6 @@
     "FORSINING MECHANICAL SKELETON WATCH": 1794471412.477501
   },
   "published_post_keys": [
-    "zedstoreonline:38602",
     "aniscoupons:33047",
     "aniscoupons:33053",
     "aniscoupons:32741",
@@ -4497,11 +4496,12 @@
     "aniscoupons:34614",
     "aniscoupons:34615",
     "aniscoupons:34617",
-    "aniscoupons:34618"
+    "aniscoupons:34618",
+    "aniscoupons:34619"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794471778.0830927,
+  "last_run_time": 1794471958.5920799,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4528,12 +4528,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39944,
-      "last_check_time": 1794471775.052156
+      "last_message_id": 39945,
+      "last_check_time": 1794471955.148505
     },
     "aniscoupons": {
-      "last_message_id": 34618,
-      "last_check_time": 1794471780.1257815
+      "last_message_id": 34619,
+      "last_check_time": 1794471960.6349828
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -21173,6 +21173,16 @@
       "price": 285.9,
       "timestamp": 1794471778.0830927,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34619": {
+      "channel_msg_id": 2414,
+      "product_id": "1005011572208218",
+      "title": "Xiaomi Redmi Note 17 5G Global Version (6/256GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34619,
+      "price": 217.8,
+      "timestamp": 1794471958.5920799,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21181,17 +21191,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794471780.6881034,
+    "last_deal_post_time": 1794471961.4249105,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794471783.6071198,
+    "last_sweep_time": 1794471964.4636135,
     "last_sweep_times": {
-      "algeria": 1794471780.668857,
-      "france": 1794471783.6071198
+      "algeria": 1794471961.4071174,
+      "france": 1794471964.4636135
     },
     "last_deal_post_times": {
-      "algeria": 1794471780.6881034
+      "algeria": 1794471961.4249105
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23748,7 +23758,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33164",
     "megaphonna:8373",
     "lodydeals:45790",
     "aniscoupons:33113",
@@ -24747,7 +24756,8 @@
     "aniscoupons:34616",
     "zedstoreonline:39942",
     "zedstoreonline:39943",
-    "zedstoreonline:39944"
+    "zedstoreonline:39944",
+    "zedstoreonline:39945"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
