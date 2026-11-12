@@ -1550,7 +1550,7 @@
     "1005011936109841": 1794475842.5666552,
     "1005012333024137": 1794475849.927629,
     "1005007822635375": 1794501299.95393,
-    "1005001849536579": 1794476179.330803,
+    "1005001849536579": 1794515176.9450598,
     "1005006967391791": 1794476797.164376,
     "1005013288890301": 1794477157.5349603,
     "1005013089015192": 1794503538.0099986,
@@ -3568,7 +3568,7 @@
     "Lenovo Legion Y700 12/256GB": 1794475842.5666552,
     "S80 USB 3.2 Flash Drive 128GB": 1794475849.927629,
     "FANTECH SHOOTER III": 1794475884.0444102,
-    "MAONO PM360TR Condenser Microphone": 1794476179.330803,
+    "MAONO PM360TR Condenser Microphone": 1794515176.9450598,
     "Machenike G5 Pro Gaming Controller": 1794476797.164376,
     "Webcam EMEET C100 1080P": 1794477157.5349603,
     "FIFINE 1440p Full HD PC Webcam with Microphone": 1794478095.864591,
@@ -3586,7 +3586,6 @@
     "EPOMAKER GX1 Tri-mode": 1794512597.1982763
   },
   "published_post_keys": [
-    "lodydeals:45543",
     "aniscoupons:32982",
     "ecksdeal:5866",
     "megaphonna:8430",
@@ -4585,11 +4584,12 @@
     "aniscoupons:34724",
     "aniscoupons:34725",
     "aniscoupons:34726",
-    "aniscoupons:34729"
+    "aniscoupons:34729",
+    "zedstoreonline:40026"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794514990.78419,
+  "last_run_time": 1794515176.9450598,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6058,
@@ -4616,8 +4616,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40025,
-      "last_check_time": 1794514613.4751146
+      "last_message_id": 40026,
+      "last_check_time": 1794515179.0006557
     },
     "aniscoupons": {
       "last_message_id": 34729,
@@ -22468,6 +22468,16 @@
       "price": 114.99,
       "timestamp": 1794514990.78419,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40026": {
+      "channel_msg_id": 2534,
+      "product_id": "1005001849536579",
+      "title": "MAONO PM360TR Condenser Microphone",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40026,
+      "price": 20.5,
+      "timestamp": 1794515176.9450598,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22476,17 +22486,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794514993.6878507,
+    "last_deal_post_time": 1794515180.3283854,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794514996.5319066,
+    "last_sweep_time": 1794515183.0023193,
     "last_sweep_times": {
-      "algeria": 1794514993.657119,
-      "france": 1794514996.5319066
+      "algeria": 1794515180.3044355,
+      "france": 1794515183.0023193
     },
     "last_deal_post_times": {
-      "algeria": 1794514993.6878507
+      "algeria": 1794515180.3283854
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
