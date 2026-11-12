@@ -1115,7 +1115,7 @@
     "1005012005176923": 1793543639.3190484,
     "1005012399830182": 1794392587.3539767,
     "1005013479172067": 1793448884.6592717,
-    "1005012199872142": 1794412755.036021,
+    "1005012199872142": 1794487833.0095515,
     "9998886358": 1793276358.3466215,
     "1005013170854617": 1793969543.5771117,
     "1005010172572484": 1793521744.753259,
@@ -2913,7 +2913,7 @@
     "IQOO 15T 12/256": 1794392587.3539767,
     "Honor Power 2 12/256": 1793276177.7089784,
     "OnePlus Turbo 6x  6/128GB": 1793276192.7711725,
-    "Oneplus ACE 6 Ultra 12/256GB": 1794412755.036021,
+    "Oneplus ACE 6 Ultra 12/256GB": 1794487833.0095515,
     "VIVO Y600 Pro 8/128": 1793278959.3832097,
     "Oppo Find X9 12/256": 1793521744.753259,
     "Oppo Find X9s Pro 12/256": 1794437860.4294534,
@@ -3562,7 +3562,6 @@
     "Honor Win RT2": 1794487083.9711623
   },
   "published_post_keys": [
-    "zedstoreonline:38542",
     "aniscoupons:33305",
     "bnddeals:50800",
     "bnddeals:50956",
@@ -4561,11 +4560,12 @@
     "aniscoupons:34674",
     "aniscoupons:34675",
     "zedstoreonline:39991",
-    "aniscoupons:34676"
+    "aniscoupons:34676",
+    "aniscoupons:34677"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794487267.6087227,
+  "last_run_time": 1794487833.0095515,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4596,8 +4596,8 @@
       "last_check_time": 1794487634.9637747
     },
     "aniscoupons": {
-      "last_message_id": 34676,
-      "last_check_time": 1794487269.6804461
+      "last_message_id": 34678,
+      "last_check_time": 1794487839.4064898
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -21960,6 +21960,16 @@
       "price": 414.2,
       "timestamp": 1794487267.6087227,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34677": {
+      "channel_msg_id": 2485,
+      "product_id": "1005012199872142",
+      "title": "Oneplus ACE 6 Ultra 12/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34677,
+      "price": 438.5,
+      "timestamp": 1794487833.0095515,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21968,17 +21978,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794487270.5697336,
+    "last_deal_post_time": 1794487840.3081253,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794487643.0131977,
+    "last_sweep_time": 1794487843.6942315,
     "last_sweep_times": {
-      "algeria": 1794487639.8150728,
-      "france": 1794487643.0131977
+      "algeria": 1794487840.2845194,
+      "france": 1794487843.6942315
     },
     "last_deal_post_times": {
-      "algeria": 1794487270.5697336
+      "algeria": 1794487840.3081253
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -24565,7 +24575,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "bnddeals:50845",
     "megaphonna:8450",
     "bnddeals:51003",
     "aniscoupons:32853",
@@ -25564,7 +25573,8 @@
     "zedstoreonline:39988",
     "zedstoreonline:39989",
     "zedstoreonline:39990",
-    "zedstoreonline:39992"
+    "zedstoreonline:39992",
+    "aniscoupons:34678"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
