@@ -1231,7 +1231,7 @@
     "COUPONS_11.11 Global Shopping Festival Warm-Up": 1793478717.5923967,
     "1005008518280704": 1794420697.970357,
     "1005010527736444": 1793478769.6023057,
-    "1005013450996845": 1794412182.3559208,
+    "1005013450996845": 1794475091.4412947,
     "1005013144753309": 1794160820.0809557,
     "1005012061152213": 1793490079.2945042,
     "1005012519569107": 1793490085.1205146,
@@ -1256,7 +1256,7 @@
     "1005005905462505": 1794000865.9547298,
     "1005008248133489": 1793656129.0102158,
     "1005008684239370": 1794433798.1228175,
-    "1005011583202464": 1793809046.6886706,
+    "1005011583202464": 1794475084.685867,
     "1005009921069024": 1793542597.6187797,
     "1005009916209766": 1794167239.3538153,
     "1005012537594921": 1793542611.8880281,
@@ -2511,7 +2511,8 @@
     "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra",
     "12V CORDLESS ELECTRIC DRILL",
     "FORSINING MECHANICAL SKELETON WATCH",
-    "ميزان رقمي محمول لحقائب السفر"
+    "ميزان رقمي محمول لحقائب السفر",
+    "ميكروفون لاسلكي احترافي MAONO PD100W بمدى 50 متر مع تقليل"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3395,7 +3396,7 @@
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
     "Blackview Mega 5": 1794414780.2759852,
     "Warvank X8 Wireless Gaming Mouse": 1794433244.1988828,
-    "Xiaoxin Pad Pro 2025 (8/128GB)": 1794412182.3559208,
+    "Xiaoxin Pad Pro 2025 (8/128GB)": 1794475091.4412947,
     "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": 1794145536.5317988,
     "Lenovo Thinkplus XT88": 1794146648.256951,
     "Rolls-Royce Phantom Model": 1794146655.1062205,
@@ -3501,11 +3502,10 @@
     "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra": 1794439916.4928079,
     "12V CORDLESS ELECTRIC DRILL": 1794470859.4033997,
     "FORSINING MECHANICAL SKELETON WATCH": 1794471412.477501,
-    "ميزان رقمي محمول لحقائب السفر": 1794472329.794574
+    "ميزان رقمي محمول لحقائب السفر": 1794472329.794574,
+    "ميكروفون لاسلكي احترافي MAONO PD100W بمدى 50 متر مع تقليل": 1794475084.685867
   },
   "published_post_keys": [
-    "lodydeals:45782",
-    "megaphonna:8591",
     "zedstoreonline:38550",
     "couponsglobal:48875",
     "aniscoupons:32799",
@@ -4503,11 +4503,13 @@
     "aniscoupons:34625",
     "aniscoupons:34626",
     "aniscoupons:34627",
-    "aniscoupons:34628"
+    "aniscoupons:34628",
+    "zedstoreonline:39955",
+    "aniscoupons:34630"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794474352.4663627,
+  "last_run_time": 1794475091.4412947,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4534,12 +4536,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39954,
-      "last_check_time": 1794474715.019298
+      "last_message_id": 39955,
+      "last_check_time": 1794475086.741485
     },
     "aniscoupons": {
-      "last_message_id": 34629,
-      "last_check_time": 1794474719.4654539
+      "last_message_id": 34630,
+      "last_check_time": 1794475093.49343
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4951,7 +4953,7 @@
     "1005005905462505": 54.4,
     "1005008248133489": 14.88,
     "1005008684239370": 9.2,
-    "1005011583202464": 56.09,
+    "1005011583202464": 58.4,
     "1005009921069024": 12.85,
     "1005009916209766": 27.14,
     "1005012537594921": 45.74,
@@ -21311,6 +21313,26 @@
       "price": 51.3,
       "timestamp": 1794474352.4663627,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39955": {
+      "channel_msg_id": 2427,
+      "product_id": "1005011583202464",
+      "title": "ميكروفون لاسلكي احترافي MAONO PD100W بمدى 50 متر مع تقليل",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39955,
+      "price": 58.4,
+      "timestamp": 1794475084.685867,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34630": {
+      "channel_msg_id": 2428,
+      "product_id": "1005013450996845",
+      "title": "Xiaoxin Pad Pro 2025 (8/128GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34630,
+      "price": 212.48,
+      "timestamp": 1794475091.4412947,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21319,17 +21341,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794474355.4685302,
+    "last_deal_post_time": 1794475094.2311976,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794474898.2513,
+    "last_sweep_time": 1794475097.0380092,
     "last_sweep_times": {
-      "algeria": 1794474895.496458,
-      "france": 1794474898.2513
+      "algeria": 1794475094.2080598,
+      "france": 1794475097.0380092
     },
     "last_deal_post_times": {
-      "algeria": 1794474355.4685302
+      "algeria": 1794475094.2311976
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21843,7 +21865,7 @@
     "1005005905462505": "zedstoreonline",
     "1005008248133489": "lodydeals",
     "1005008684239370": "zedstoreonline",
-    "1005011583202464": "ecksdeal",
+    "1005011583202464": "zedstoreonline",
     "1005009921069024": "ecksdeal",
     "1005009916209766": "aniscoupons",
     "1005012537594921": "ecksdeal",
@@ -23092,7 +23114,8 @@
     "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra": "aniscoupons",
     "12V CORDLESS ELECTRIC DRILL": "aniscoupons",
     "FORSINING MECHANICAL SKELETON WATCH": "aniscoupons",
-    "ميزان رقمي محمول لحقائب السفر": "zedstoreonline"
+    "ميزان رقمي محمول لحقائب السفر": "zedstoreonline",
+    "ميكروفون لاسلكي احترافي MAONO PD100W بمدى 50 متر مع تقليل": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
