@@ -971,7 +971,7 @@
     "1005012914301139": 1792191289.2917817,
     "1005007345151855": 1791942667.867043,
     "1005010345227483": 1793299548.5548651,
-    "1005011557896041": 1794439171.9105787,
+    "1005011557896041": 1794473066.6555345,
     "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
     "1005007916078341": 1794397913.7086546,
@@ -2666,7 +2666,7 @@
     "HONOR POWER 2 (12/256)": 1793467316.5435166,
     "New Sports Large Dial Men's Concept Watch Air Hole Men's Watch Night Light": 1791043842.6639822,
     "Nothing CMF Buds 2a TWS Earbuds 42dB Active Noise Cancellation ANC": 1791045040.5964694,
-    "RYZEN 7 7800X3D": 1794439171.9105787,
+    "RYZEN 7 7800X3D": 1794473066.6555345,
     "Redmi Note 14S  8/128GB": 1793712560.6780183,
     "Attack Shark X AJAZZ AK820": 1791217251.8495085,
     "Baseus Stylus Pen": 1791056153.3979695,
@@ -3504,7 +3504,6 @@
     "ميزان رقمي محمول لحقائب السفر": 1794472329.794574
   },
   "published_post_keys": [
-    "aniscoupons:32952",
     "aniscoupons:32738",
     "megaphonna:8544",
     "test_channel:1792086219",
@@ -4503,11 +4502,12 @@
     "zedstoreonline:39947",
     "zedstoreonline:39948",
     "aniscoupons:34620",
-    "aniscoupons:34621"
+    "aniscoupons:34621",
+    "aniscoupons:34622"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794472518.4835422,
+  "last_run_time": 1794473066.6555345,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4538,8 +4538,8 @@
       "last_check_time": 1794472872.3461154
     },
     "aniscoupons": {
-      "last_message_id": 34621,
-      "last_check_time": 1794472520.5372684
+      "last_message_id": 34622,
+      "last_check_time": 1794473068.725193
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -21231,6 +21231,16 @@
       "price": 18.4,
       "timestamp": 1794472518.4835422,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34622": {
+      "channel_msg_id": 2419,
+      "product_id": "1005011557896041",
+      "title": "RYZEN 7 7800X3D",
+      "channel": "aniscoupons",
+      "source_msg_id": 34622,
+      "price": 226.78,
+      "timestamp": 1794473066.6555345,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21239,17 +21249,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794472521.303768,
+    "last_deal_post_time": 1794473069.7036452,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794472879.8841448,
+    "last_sweep_time": 1794473072.8121011,
     "last_sweep_times": {
-      "algeria": 1794472876.8954353,
-      "france": 1794472879.8841448
+      "algeria": 1794473069.6746852,
+      "france": 1794473072.8121011
     },
     "last_deal_post_times": {
-      "algeria": 1794472521.303768
+      "algeria": 1794473069.7036452
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
