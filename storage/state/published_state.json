@@ -769,7 +769,8 @@
     "1005009278114794",
     "1005010210432531",
     "1005013422894128",
-    "1005010297094897"
+    "1005010297094897",
+    "1005009012821000"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1532,7 +1533,7 @@
     "1005012639349629": 1794484695.7251022,
     "1005010153422760": 1794487260.3295033,
     "1005012809141747": 1794436740.624044,
-    "1005012912160949": 1794437490.1572993,
+    "1005012912160949": 1794502231.5458007,
     "1005012167744546": 1794437860.4294534,
     "1005009582538267": 1794439531.0399334,
     "1005005471311412": 1794475858.8069391,
@@ -1554,7 +1555,8 @@
     "1005009278114794": 1794480064.6967885,
     "1005010210432531": 1794482375.9737191,
     "1005013422894128": 1794487083.9711623,
-    "1005010297094897": 1794500546.592492
+    "1005010297094897": 1794500546.592492,
+    "1005009012821000": 1794502225.0175712
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2559,7 +2561,8 @@
     "MCHOSE A7 V3 Pro",
     "سماعات Fifine Ampligame H6 7.1 RGB",
     "MCHOSE A7 V3 Lightweight",
-    "FANTECH SHOOTER III WGP13S"
+    "FANTECH SHOOTER III WGP13S",
+    "DITONG X3Plus  4K WIFI6"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3540,7 +3543,7 @@
     "HONOR X80 PRO MAX": 1794484875.2933695,
     "DJI Osmo mobile": 1794487260.3295033,
     "OPPO K15 12/256GB": 1794436740.624044,
-    "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794437490.1572993,
+    "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794502231.5458007,
     "KINGSTON DATA TRAVELER USB3.2 (128G)": 1794438803.0185766,
     "Essager Mini 30W Type C Charger PD": 1794438972.1864517,
     "X96Q TV BOX 2/16GB": 1794439531.0399334,
@@ -3569,11 +3572,10 @@
     "MCHOSE A7 V3 Pro": 1794489491.8874733,
     "سماعات Fifine Ampligame H6 7.1 RGB": 1794496851.9006197,
     "MCHOSE A7 V3 Lightweight": 1794500546.592492,
-    "FANTECH SHOOTER III WGP13S": 1794501299.95393
+    "FANTECH SHOOTER III WGP13S": 1794501299.95393,
+    "DITONG X3Plus  4K WIFI6": 1794502225.0175712
   },
   "published_post_keys": [
-    "lodydeals:45831",
-    "aniscoupons:32715",
     "bnddeals:50798",
     "lodydeals:45686",
     "aniscoupons:32760",
@@ -4571,19 +4573,21 @@
     "lodydeals:46415",
     "zedstoreonline:40013",
     "lodydeals:46417",
-    "aniscoupons:34711"
+    "aniscoupons:34711",
+    "lodydeals:46419",
+    "aniscoupons:34712"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794502039.7814257,
+  "last_run_time": 1794502231.5458007,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6057,
       "last_check_time": 1794496853.9442635
     },
     "lodydeals": {
-      "last_message_id": 46418,
-      "last_check_time": 1794501674.6293304
+      "last_message_id": 46419,
+      "last_check_time": 1794502227.090983
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4606,8 +4610,8 @@
       "last_check_time": 1794501487.9376626
     },
     "aniscoupons": {
-      "last_message_id": 34711,
-      "last_check_time": 1794502041.8324316
+      "last_message_id": 34712,
+      "last_check_time": 1794502233.616317
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -5276,7 +5280,8 @@
     "1005013089015192": 261.9,
     "1005009278114794": 11.9,
     "1005013422894128": 499.5,
-    "1005010297094897": 34.1
+    "1005010297094897": 34.1,
+    "1005009012821000": 87.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -22301,6 +22306,26 @@
       "price": 283.59,
       "timestamp": 1794502039.7814257,
       "status": "ACTIVE"
+    },
+    "lodydeals:46419": {
+      "channel_msg_id": 2519,
+      "product_id": "1005009012821000",
+      "title": "DITONG X3Plus  4K WIFI6",
+      "channel": "lodydeals",
+      "source_msg_id": 46419,
+      "price": 87.8,
+      "timestamp": 1794502225.0175712,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34712": {
+      "channel_msg_id": 2520,
+      "product_id": "1005012912160949",
+      "title": "Lenovo Legion Y70 2026 Gamin(12/512GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34712,
+      "price": 370.5,
+      "timestamp": 1794502231.5458007,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22309,17 +22334,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794502042.6297386,
+    "last_deal_post_time": 1794502234.4207618,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794502045.669747,
+    "last_sweep_time": 1794502237.2602496,
     "last_sweep_times": {
-      "algeria": 1794502042.6129854,
-      "france": 1794502045.669747
+      "algeria": 1794502234.3905969,
+      "france": 1794502237.2602496
     },
     "last_deal_post_times": {
-      "algeria": 1794502042.6297386
+      "algeria": 1794502234.4207618
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23102,7 +23127,8 @@
     "1005013089015192": "zedstoreonline",
     "1005009278114794": "zedstoreonline",
     "1005013422894128": "aniscoupons",
-    "1005010297094897": "lodydeals"
+    "1005010297094897": "lodydeals",
+    "1005009012821000": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -24114,7 +24140,8 @@
     "MCHOSE A7 V3 Pro": "aniscoupons",
     "سماعات Fifine Ampligame H6 7.1 RGB": "ecksdeal",
     "MCHOSE A7 V3 Lightweight": "lodydeals",
-    "FANTECH SHOOTER III WGP13S": "lodydeals"
+    "FANTECH SHOOTER III WGP13S": "lodydeals",
+    "DITONG X3Plus  4K WIFI6": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
