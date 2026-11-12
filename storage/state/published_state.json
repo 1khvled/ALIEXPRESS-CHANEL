@@ -763,7 +763,8 @@
     "1005012333024137",
     "1005007822635375",
     "1005001849536579",
-    "1005006967391791"
+    "1005006967391791",
+    "1005013288890301"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1542,7 +1543,8 @@
     "1005012333024137": 1794475849.927629,
     "1005007822635375": 1794475884.0444102,
     "1005001849536579": 1794476179.330803,
-    "1005006967391791": 1794476797.164376
+    "1005006967391791": 1794476797.164376,
+    "1005013288890301": 1794477157.5349603
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2537,7 +2539,8 @@
     "S80 USB 3.2 Flash Drive 128GB",
     "FANTECH SHOOTER III",
     "MAONO PM360TR Condenser Microphone",
-    "Machenike G5 Pro Gaming Controller"
+    "Machenike G5 Pro Gaming Controller",
+    "Webcam EMEET C100 1080P"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3537,10 +3540,10 @@
     "S80 USB 3.2 Flash Drive 128GB": 1794475849.927629,
     "FANTECH SHOOTER III": 1794475884.0444102,
     "MAONO PM360TR Condenser Microphone": 1794476179.330803,
-    "Machenike G5 Pro Gaming Controller": 1794476797.164376
+    "Machenike G5 Pro Gaming Controller": 1794476797.164376,
+    "Webcam EMEET C100 1080P": 1794477157.5349603
   },
   "published_post_keys": [
-    "pcgamingpart:8025",
     "aniscoupons:32733",
     "lodydeals:45560",
     "lodydeals:45916",
@@ -4539,11 +4542,12 @@
     "zedstoreonline:39960",
     "zedstoreonline:39961",
     "aniscoupons:34635",
-    "aniscoupons:34636"
+    "aniscoupons:34636",
+    "zedstoreonline:39962"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794476813.180707,
+  "last_run_time": 1794477157.5349603,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4570,12 +4574,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39961,
-      "last_check_time": 1794476803.5365725
+      "last_message_id": 39962,
+      "last_check_time": 1794477159.591333
     },
     "aniscoupons": {
-      "last_message_id": 34636,
-      "last_check_time": 1794476815.2570107
+      "last_message_id": 34637,
+      "last_check_time": 1794477160.9645276
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -5239,7 +5243,8 @@
     "1005011936109841": 457.36,
     "1005012333024137": 7.07,
     "1005001849536579": 20.5,
-    "1005006967391791": 36.2
+    "1005006967391791": 36.2,
+    "1005013288890301": 16.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -21574,6 +21579,16 @@
       "price": 113.4,
       "timestamp": 1794476813.180707,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39962": {
+      "channel_msg_id": 2449,
+      "product_id": "1005013288890301",
+      "title": "Webcam EMEET C100 1080P",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39962,
+      "price": 16.9,
+      "timestamp": 1794477157.5349603,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21582,17 +21597,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794476816.2246614,
+    "last_deal_post_time": 1794477161.6242259,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794476976.2099767,
+    "last_sweep_time": 1794477164.877759,
     "last_sweep_times": {
-      "algeria": 1794476973.3929446,
-      "france": 1794476976.2099767
+      "algeria": 1794477161.6003845,
+      "france": 1794477164.877759
     },
     "last_deal_post_times": {
-      "algeria": 1794476816.2246614
+      "algeria": 1794477161.6242259
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22370,7 +22385,8 @@
     "1005011936109841": "lodydeals",
     "1005012333024137": "lodydeals",
     "1005001849536579": "zedstoreonline",
-    "1005006967391791": "zedstoreonline"
+    "1005006967391791": "zedstoreonline",
+    "1005013288890301": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -23372,7 +23388,8 @@
     "S80 USB 3.2 Flash Drive 128GB": "lodydeals",
     "FANTECH SHOOTER III": "zedstoreonline",
     "MAONO PM360TR Condenser Microphone": "zedstoreonline",
-    "Machenike G5 Pro Gaming Controller": "zedstoreonline"
+    "Machenike G5 Pro Gaming Controller": "zedstoreonline",
+    "Webcam EMEET C100 1080P": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -24169,7 +24186,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "couponsglobal:48843",
     "zedstoreonline:38825",
     "megaphonna:8708",
     "zedstoreonline:38910",
@@ -25168,7 +25184,8 @@
     "lodydeals:46401",
     "lodydeals:46402",
     "lodydeals:46405",
-    "bnddeals:51292"
+    "bnddeals:51292",
+    "aniscoupons:34637"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
