@@ -1141,7 +1141,7 @@
     "1005010266487244": 1793448791.1740308,
     "1005010207075594": 1793299454.8390412,
     "1005013351519067": 1793448628.3734028,
-    "1005012484784752": 1794253893.3396604,
+    "1005012484784752": 1794479314.6761642,
     "1005013222140851": 1793467234.8425448,
     "1005013438245033": 1794431410.6893005,
     "1005008986635164": 1793314892.9200466,
@@ -3102,7 +3102,7 @@
     "مدعومة ب Hall effect في Joysticks": 1793542392.5669472,
     "Realme 15 Pro 5G 12/256GB": 1794131420.4163597,
     ".شاشة AMOLED 6.57″ بدقة FHD+": 1793542420.8525836,
-    "AMD Ryzen 5 5600XT": 1793745640.3719149,
+    "AMD Ryzen 5 5600XT": 1794479314.6761642,
     "POCO M7 6/128GB": 1793707060.393079,
     "Blackview Wave 10C  4/32GB": 1793542445.2859337,
     "COLMI i28 Ultra AI  AMOLED": 1793542450.420599,
@@ -3550,7 +3550,6 @@
     "iQOO Z11S 8/128": 1794478710.9244785
   },
   "published_post_keys": [
-    "megaphonna:8429",
     "bnddeals:50796",
     "bnddeals:50803",
     "test_channel:1793228526",
@@ -4549,11 +4548,12 @@
     "zedstoreonline:39963",
     "aniscoupons:34641",
     "aniscoupons:34643",
-    "aniscoupons:34644"
+    "aniscoupons:34644",
+    "zedstoreonline:39968"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794479121.2108586,
+  "last_run_time": 1794479314.6761642,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4580,8 +4580,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39967,
-      "last_check_time": 1794478908.7025578
+      "last_message_id": 39968,
+      "last_check_time": 1794479316.723886
     },
     "aniscoupons": {
       "last_message_id": 34644,
@@ -4878,7 +4878,7 @@
     "1005011638526553": 407.54,
     "1005010207075594": 424.0,
     "1005013351519067": 202.9,
-    "1005012484784752": 98.79,
+    "1005012484784752": 98.7,
     "1005013222140851": 71.12,
     "1005010355409000": 494.2,
     "1005013438245033": 408.73,
@@ -21666,6 +21666,16 @@
       "price": 186.74,
       "timestamp": 1794479121.2108586,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39968": {
+      "channel_msg_id": 2457,
+      "product_id": "1005012484784752",
+      "title": "AMD Ryzen 5 5600XT",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39968,
+      "price": 98.7,
+      "timestamp": 1794479314.6761642,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21674,17 +21684,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794479124.1850693,
+    "last_deal_post_time": 1794479317.9319503,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794479127.3316777,
+    "last_sweep_time": 1794479320.7290273,
     "last_sweep_times": {
-      "algeria": 1794479124.1576777,
-      "france": 1794479127.3316777
+      "algeria": 1794479317.911799,
+      "france": 1794479320.7290273
     },
     "last_deal_post_times": {
-      "algeria": 1794479124.1850693
+      "algeria": 1794479317.9319503
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22071,7 +22081,7 @@
     "1005011638526553": "lodydeals",
     "1005010207075594": "aniscoupons",
     "1005013351519067": "aniscoupons",
-    "1005012484784752": "aniscoupons",
+    "1005012484784752": "zedstoreonline",
     "1005013222140851": "bnddeals",
     "1005010355409000": "aniscoupons",
     "1005013438245033": "aniscoupons",
@@ -23029,7 +23039,7 @@
     "مدعومة ب Hall effect في Joysticks": "lodydeals",
     "Realme 15 Pro 5G 12/256GB": "lodydeals",
     ".شاشة AMOLED 6.57″ بدقة FHD+": "lodydeals",
-    "AMD Ryzen 5 5600XT": "lodydeals",
+    "AMD Ryzen 5 5600XT": "zedstoreonline",
     "POCO M7 6/128GB": "lodydeals",
     "Blackview Wave 10C  4/32GB": "lodydeals",
     "COLMI i28 Ultra AI  AMOLED": "lodydeals",
