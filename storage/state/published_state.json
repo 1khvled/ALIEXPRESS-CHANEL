@@ -1122,7 +1122,7 @@
     "1005005209037696": 1793399509.450536,
     "1005007145755647": 1794312958.7225254,
     "1005011559072337": 1793613486.2912338,
-    "1005008430504420": 1794390398.1860356,
+    "1005008430504420": 1794486549.7011836,
     "1005012483491590": 1794431768.5275018,
     "1005009234880101": 1793441297.4632108,
     "1005012853585903": 1793384186.0456433,
@@ -1518,8 +1518,8 @@
     "1005006807619368": 1794481781.56275,
     "1005010653559191": 1794349536.4429784,
     "COUPON_CLAIM_zedstoreonline_39827": 1794363974.314961,
-    "1005012197291105": 1794438408.5282347,
-    "1005010179192246": 1794427325.301942,
+    "1005012197291105": 1794486534.4538748,
+    "1005010179192246": 1794486542.3386803,
     "1005010457635845": 1794393509.614562,
     "1005012921754472": 1794485983.772945,
     "1005013399086495": 1794478726.13417,
@@ -3040,7 +3040,7 @@
     "MAONO PD100X Dynamic Microphone": 1794433423.9855666,
     "Soundcore by Anker P20i": 1794477712.6358197,
     "CUSU Memory DDR5  32GB(16GBX2) 5600MHz": 1793448632.7055113,
-    "OPPO FIND X9 Pro": 1794427325.301942,
+    "OPPO FIND X9 Pro": 1794486542.3386803,
     "OPPO A7 Pro Max CN": 1793448660.3359752,
     "Poco Pad X1 512GB": 1793448715.1480892,
     "Redmi Pad 2 9.7\"": 1793448729.1572442,
@@ -3504,9 +3504,9 @@
     "Baseus BS2 Lite": 1794349536.4429784,
     "حجز وتجدد كوبونات 11.11": 1794363974.314961,
     "Huawei Pura 90s Pro Max 12/256GB": 1794390200.6061625,
-    "OnePlus 13": 1794390398.1860356,
+    "OnePlus 13": 1794486549.7011836,
     "Oppo Find X10 Pro Max 12/256": 1794390785.626018,
-    "OnePlus ACE 6 Ultra 12/256": 1794438408.5282347,
+    "OnePlus ACE 6 Ultra 12/256": 1794486534.4538748,
     "iQOO Neo 11 Ultra": 1794391855.282333,
     "ONEPLUS 15 Global Rom 12/256": 1794393509.614562,
     "OPPO FIND X9s Pro": 1794394415.6108775,
@@ -3558,9 +3558,6 @@
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191
   },
   "published_post_keys": [
-    "aniscoupons:32712",
-    "zedstoreonline:38536",
-    "zedstoreonline:38606",
     "couponsglobal:48865",
     "zedstoreonline:38795",
     "lodydeals:45472",
@@ -4557,11 +4554,14 @@
     "zedstoreonline:39985",
     "aniscoupons:34669",
     "aniscoupons:34670",
-    "aniscoupons:34671"
+    "aniscoupons:34671",
+    "zedstoreonline:39987",
+    "aniscoupons:34672",
+    "aniscoupons:34673"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794486161.9343145,
+  "last_run_time": 1794486549.7011836,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4588,12 +4588,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39986,
-      "last_check_time": 1794485800.277442
+      "last_message_id": 39987,
+      "last_check_time": 1794486536.523963
     },
     "aniscoupons": {
-      "last_message_id": 34671,
-      "last_check_time": 1794486166.905196
+      "last_message_id": 34673,
+      "last_check_time": 1794486551.7702072
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -21885,6 +21885,36 @@
       "price": 12.11,
       "timestamp": 1794486161.9343145,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39987": {
+      "channel_msg_id": 2478,
+      "product_id": "1005012197291105",
+      "title": "OnePlus ACE 6 Ultra 12/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39987,
+      "price": 438.2,
+      "timestamp": 1794486534.4538748,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34672": {
+      "channel_msg_id": 2479,
+      "product_id": "1005010179192246",
+      "title": "OPPO FIND X9 Pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 34672,
+      "price": 609.9,
+      "timestamp": 1794486542.3386803,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34673": {
+      "channel_msg_id": 2480,
+      "product_id": "1005008430504420",
+      "title": "OnePlus 13",
+      "channel": "aniscoupons",
+      "source_msg_id": 34673,
+      "price": 440.3,
+      "timestamp": 1794486549.7011836,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21893,17 +21923,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794486167.9965985,
+    "last_deal_post_time": 1794486552.6852124,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794486353.9333534,
+    "last_sweep_time": 1794486556.110727,
     "last_sweep_times": {
-      "algeria": 1794486351.1099539,
-      "france": 1794486353.9333534
+      "algeria": 1794486552.6604285,
+      "france": 1794486556.110727
     },
     "last_deal_post_times": {
-      "algeria": 1794486167.9965985
+      "algeria": 1794486552.6852124
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
