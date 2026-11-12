@@ -873,7 +873,7 @@
     "1005012390398338": 1791027348.2517543,
     "1005012297674623": 1791103551.065819,
     "1005007097205322": 1791014755.488723,
-    "1005010470699571": 1793966659.0305355,
+    "1005010470699571": 1794485060.022662,
     "1005012741634118": 1793966676.2934937,
     "1005010453516983": 1792172109.913469,
     "1005008554596598": 1794165031.7231321,
@@ -2663,7 +2663,7 @@
     "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise": 1791014140.3360124,
     "Baseus-Bowie E5x": 1791014145.8727648,
     "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": 1791014755.488723,
-    "HAYLOU Solar Lite 2": 1793966659.0305355,
+    "HAYLOU Solar Lite 2": 1794485060.022662,
     "HAYLOU FlowLoop S33": 1793966676.2934937,
     "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": 1791015953.484505,
     "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz": 1791017145.537471,
@@ -3558,7 +3558,6 @@
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191
   },
   "published_post_keys": [
-    "lodydeals:45804",
     "zedstoreonline:38804",
     "lodydeals:45851",
     "couponsglobal:48775",
@@ -4557,11 +4556,12 @@
     "aniscoupons:34661",
     "aniscoupons:34663",
     "aniscoupons:34665",
-    "aniscoupons:34666"
+    "aniscoupons:34666",
+    "zedstoreonline:39985"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794484875.2933695,
+  "last_run_time": 1794485060.022662,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4588,12 +4588,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39984,
-      "last_check_time": 1794484328.2743769
+      "last_message_id": 39985,
+      "last_check_time": 1794485062.0941875
     },
     "aniscoupons": {
-      "last_message_id": 34666,
-      "last_check_time": 1794484877.3536773
+      "last_message_id": 34668,
+      "last_check_time": 1794485065.6165504
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -21845,6 +21845,16 @@
       "price": 273.5,
       "timestamp": 1794484875.2933695,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39985": {
+      "channel_msg_id": 2474,
+      "product_id": "1005010470699571",
+      "title": "HAYLOU Solar Lite 2",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39985,
+      "price": 17.8,
+      "timestamp": 1794485060.022662,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21853,17 +21863,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794484878.0934196,
+    "last_deal_post_time": 1794485066.389798,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794484880.8005917,
+    "last_sweep_time": 1794485069.4224372,
     "last_sweep_times": {
-      "algeria": 1794484878.068914,
-      "france": 1794484880.8005917
+      "algeria": 1794485066.35857,
+      "france": 1794485069.4224372
     },
     "last_deal_post_times": {
-      "algeria": 1794484878.0934196
+      "algeria": 1794485066.389798
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -24448,8 +24458,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8549",
-    "ecksdeal:5992",
     "aniscoupons:33358",
     "lodydeals:45795",
     "pcgamingpart:8021",
@@ -25447,7 +25455,9 @@
     "zedstoreonline:39981",
     "zedstoreonline:39982",
     "zedstoreonline:39984",
-    "aniscoupons:34664"
+    "aniscoupons:34664",
+    "aniscoupons:34667",
+    "aniscoupons:34668"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
