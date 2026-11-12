@@ -1372,7 +1372,7 @@
     "1005010355409000": 1793613934.9347482,
     "1005012648097890": 1793613942.3770478,
     "1005012524603100": 1794502039.7814257,
-    "1005012770405022": 1793738297.0536208,
+    "1005012770405022": 1794502591.7937624,
     "1005012171521680": 1794246148.3838613,
     "1005010758512904": 1793613961.7877593,
     "1005012871436251": 1793707168.1519766,
@@ -2562,7 +2562,8 @@
     "سماعات Fifine Ampligame H6 7.1 RGB",
     "MCHOSE A7 V3 Lightweight",
     "FANTECH SHOOTER III WGP13S",
-    "DITONG X3Plus  4K WIFI6"
+    "DITONG X3Plus  4K WIFI6",
+    "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3573,10 +3574,10 @@
     "سماعات Fifine Ampligame H6 7.1 RGB": 1794496851.9006197,
     "MCHOSE A7 V3 Lightweight": 1794500546.592492,
     "FANTECH SHOOTER III WGP13S": 1794501299.95393,
-    "DITONG X3Plus  4K WIFI6": 1794502225.0175712
+    "DITONG X3Plus  4K WIFI6": 1794502225.0175712,
+    "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": 1794502591.7937624
   },
   "published_post_keys": [
-    "bnddeals:50798",
     "lodydeals:45686",
     "aniscoupons:32760",
     "test_channel:1793226751",
@@ -4575,11 +4576,12 @@
     "lodydeals:46417",
     "aniscoupons:34711",
     "lodydeals:46419",
-    "aniscoupons:34712"
+    "aniscoupons:34712",
+    "aniscoupons:34713"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794502231.5458007,
+  "last_run_time": 1794502591.7937624,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6057,
@@ -4610,8 +4612,8 @@
       "last_check_time": 1794501487.9376626
     },
     "aniscoupons": {
-      "last_message_id": 34712,
-      "last_check_time": 1794502233.616317
+      "last_message_id": 34713,
+      "last_check_time": 1794502593.842466
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -5074,7 +5076,7 @@
     "1005012887486015": 146.25,
     "1005010758512904": 175.8,
     "1005013478918892": 382.9,
-    "1005012770405022": 311.31,
+    "1005012770405022": 311.3,
     "1005010443138358": 6.9,
     "1005013006189646": 414.2,
     "1005011653777805": 23.8,
@@ -22326,6 +22328,16 @@
       "price": 370.5,
       "timestamp": 1794502231.5458007,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34713": {
+      "channel_msg_id": 2521,
+      "product_id": "1005012770405022",
+      "title": "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S",
+      "channel": "aniscoupons",
+      "source_msg_id": 34713,
+      "price": 311.3,
+      "timestamp": 1794502591.7937624,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22334,17 +22346,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794502234.4207618,
+    "last_deal_post_time": 1794502594.590535,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794502413.3655744,
+    "last_sweep_time": 1794502597.4256957,
     "last_sweep_times": {
-      "algeria": 1794502409.5257847,
-      "france": 1794502413.3655744
+      "algeria": 1794502594.5707827,
+      "france": 1794502597.4256957
     },
     "last_deal_post_times": {
-      "algeria": 1794502234.4207618
+      "algeria": 1794502594.590535
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22909,7 +22921,7 @@
     "1005012887486015": "lodydeals",
     "1005010758512904": "aniscoupons",
     "1005013478918892": "aniscoupons",
-    "1005012770405022": "lodydeals",
+    "1005012770405022": "aniscoupons",
     "1005010443138358": "lodydeals",
     "1005013006189646": "aniscoupons",
     "1005011653777805": "lodydeals",
@@ -24141,7 +24153,8 @@
     "سماعات Fifine Ampligame H6 7.1 RGB": "ecksdeal",
     "MCHOSE A7 V3 Lightweight": "lodydeals",
     "FANTECH SHOOTER III WGP13S": "lodydeals",
-    "DITONG X3Plus  4K WIFI6": "lodydeals"
+    "DITONG X3Plus  4K WIFI6": "lodydeals",
+    "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
