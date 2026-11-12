@@ -777,7 +777,7 @@
     "9998883350": 1790883350.933217,
     "9998883398": 1790883398.457595,
     "9998883417": 1790883417.3833034,
-    "1005007805638431": 1794433619.5688288,
+    "1005007805638431": 1794480454.9508715,
     "1005009054706827": 1794307249.1472638,
     "1005007961216287": 1791942616.1564767,
     "1005009627597591": 1793542398.3843465,
@@ -912,7 +912,7 @@
     "1005009497821240": 1791117948.6585228,
     "1005011925142821": 1793613373.547554,
     "9998883864": 1791063864.5866926,
-    "1005010536089199": 1794419939.6582677,
+    "1005010536089199": 1794480460.355499,
     "1005012385221205": 1791102050.1835058,
     "1005012743092233": 1791104461.903693,
     "1005007805497968": 1794141669.7207782,
@@ -3477,11 +3477,11 @@
     "Bicycle Pump 80 PSI": 1794263702.59817,
     "Portable Hair Clipper": 1794263885.7408762,
     "Inphic PG1 RGB Wired Gaming Mouse": 1794302806.3764513,
-    "Anker Q20i Hybrid Active": 1794419939.6582677,
+    "Anker Q20i Hybrid Active": 1794480460.355499,
     "CUSU CV3500Q 2TB M.2": 1794305012.9961731,
     "MACHENIKE G5Pro Max SE With Charging Dock": 1794430876.2525523,
     "Xiaoxin Pad Pro GT (8/256)": 1794308897.9947796,
-    "Attack Shark X11": 1794433619.5688288,
+    "Attack Shark X11": 1794480454.9508715,
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794436007.5288515,
     "MAONO PD100W USB Wireless Dynamic": 1794432872.6767933,
     "MAONO Wave T1 Mini Pro": 1794425282.6782186,
@@ -3554,8 +3554,6 @@
     "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794480064.6967885
   },
   "published_post_keys": [
-    "lodydeals:45477",
-    "couponsglobal:48805",
     "ecksdeal:5977",
     "bnddeals:50855",
     "bnddeals:50853",
@@ -4553,11 +4551,13 @@
     "zedstoreonline:39968",
     "aniscoupons:34646",
     "zedstoreonline:39971",
-    "aniscoupons:34647"
+    "aniscoupons:34647",
+    "zedstoreonline:39972",
+    "aniscoupons:34648"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794480069.5549967,
+  "last_run_time": 1794480460.355499,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4584,12 +4584,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39971,
-      "last_check_time": 1794480066.7671618
+      "last_message_id": 39972,
+      "last_check_time": 1794480457.0250583
     },
     "aniscoupons": {
-      "last_message_id": 34647,
-      "last_check_time": 1794480071.6220121
+      "last_message_id": 34648,
+      "last_check_time": 1794480462.4245443
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -4599,7 +4599,7 @@
   "published_product_prices": {
     "1005012973772517": 189.23,
     "1005010219205081": 57.2,
-    "1005007805638431": 21.2,
+    "1005007805638431": 21.7,
     "1005007027334636": 13.49,
     "1005009054706827": 23.1,
     "1005007961216287": 20.26,
@@ -21711,6 +21711,26 @@
       "price": 16.5,
       "timestamp": 1794480069.5549967,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39972": {
+      "channel_msg_id": 2461,
+      "product_id": "1005007805638431",
+      "title": "Attack Shark X11",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39972,
+      "price": 21.7,
+      "timestamp": 1794480454.9508715,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34648": {
+      "channel_msg_id": 2462,
+      "product_id": "1005010536089199",
+      "title": "Anker Q20i Hybrid Active",
+      "channel": "aniscoupons",
+      "source_msg_id": 34648,
+      "price": 33.64,
+      "timestamp": 1794480460.355499,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21719,17 +21739,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794480072.3149996,
+    "last_deal_post_time": 1794480463.094339,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794480289.7202559,
+    "last_sweep_time": 1794480466.0356433,
     "last_sweep_times": {
-      "algeria": 1794480286.233491,
-      "france": 1794480289.7202559
+      "algeria": 1794480463.063769,
+      "france": 1794480466.0356433
     },
     "last_deal_post_times": {
-      "algeria": 1794480072.3149996
+      "algeria": 1794480463.094339
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22235,7 +22255,7 @@
     "1005009627597591": "lodydeals",
     "1005013455514231": "lodydeals",
     "1005009578274758": "lodydeals",
-    "1005007805638431": "aniscoupons",
+    "1005007805638431": "zedstoreonline",
     "1005010413332383": "aniscoupons",
     "1005011550075220": "ecksdeal",
     "1005009806856302": "aniscoupons",
@@ -23446,7 +23466,7 @@
     "CUSU CV3500Q 2TB M.2": "lodydeals",
     "MACHENIKE G5Pro Max SE With Charging Dock": "aniscoupons",
     "Xiaoxin Pad Pro GT (8/256)": "aniscoupons",
-    "Attack Shark X11": "aniscoupons",
+    "Attack Shark X11": "zedstoreonline",
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": "aniscoupons",
     "MAONO PD100W USB Wireless Dynamic": "aniscoupons",
     "MAONO Wave T1 Mini Pro": "aniscoupons",
