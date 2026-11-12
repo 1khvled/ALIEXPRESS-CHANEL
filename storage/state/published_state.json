@@ -835,7 +835,7 @@
     "9998886147": 1790946147.1871526,
     "999888777111": 1793964745.6295197,
     "9998886362": 1790946362.071869,
-    "1005012407874415": 1794390776.9729664,
+    "1005012407874415": 1794486903.972016,
     "9998887189": 1790947189.8634577,
     "1005010428573334": 1790948755.0367405,
     "1005013146524028": 1791042354.706192,
@@ -2632,7 +2632,7 @@
     "Essager 65W GaN USB": 1790949658.4852333,
     "Blackview LINK 1 Kids Tablets": 1791022250.7560554,
     "POCO X8 5G (6/128GB)": 1791189979.3835318,
-    "HONOR 600 PRO": 1794390776.9729664,
+    "HONOR 600 PRO": 1794486903.972016,
     "Cool Cra-yons Shin-chans Case for Samsung Galaxy A56 A50 A54 A15 A36 A13 A25 A51 A52 A31 A33 A52 A34": 1790962541.57551,
     "for Samsung Galaxy S26 Ultra S25 Plus S24 S21 FE S23 S20 Ultra S10 S9 Note 20 8 9 10 Funda Phone": 1790962844.0034096,
     "Xiaomi Pad 7 (12/256)": 1793956183.6769423,
@@ -3558,7 +3558,6 @@
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191
   },
   "published_post_keys": [
-    "couponsglobal:48865",
     "zedstoreonline:38795",
     "lodydeals:45472",
     "lodydeals:45928",
@@ -4557,11 +4556,12 @@
     "aniscoupons:34671",
     "zedstoreonline:39987",
     "aniscoupons:34672",
-    "aniscoupons:34673"
+    "aniscoupons:34673",
+    "aniscoupons:34674"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794486549.7011836,
+  "last_run_time": 1794486903.972016,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4588,12 +4588,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39987,
-      "last_check_time": 1794486536.523963
+      "last_message_id": 39988,
+      "last_check_time": 1794486896.1816337
     },
     "aniscoupons": {
-      "last_message_id": 34673,
-      "last_check_time": 1794486551.7702072
+      "last_message_id": 34674,
+      "last_check_time": 1794486906.0400708
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -21915,6 +21915,16 @@
       "price": 440.3,
       "timestamp": 1794486549.7011836,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34674": {
+      "channel_msg_id": 2481,
+      "product_id": "1005012407874415",
+      "title": "HONOR 600 PRO",
+      "channel": "aniscoupons",
+      "source_msg_id": 34674,
+      "price": 437.3,
+      "timestamp": 1794486903.972016,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21923,17 +21933,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794486552.6852124,
+    "last_deal_post_time": 1794486907.2026436,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794486556.110727,
+    "last_sweep_time": 1794486910.9922109,
     "last_sweep_times": {
-      "algeria": 1794486552.6604285,
-      "france": 1794486556.110727
+      "algeria": 1794486907.169272,
+      "france": 1794486910.9922109
     },
     "last_deal_post_times": {
-      "algeria": 1794486552.6852124
+      "algeria": 1794486907.2026436
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -24518,7 +24528,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45795",
     "pcgamingpart:8021",
     "lodydeals:45902",
     "lodydeals:45924",
@@ -25517,7 +25526,8 @@
     "aniscoupons:34664",
     "aniscoupons:34667",
     "aniscoupons:34668",
-    "zedstoreonline:39986"
+    "zedstoreonline:39986",
+    "zedstoreonline:39988"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
