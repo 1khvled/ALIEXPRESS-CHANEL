@@ -1190,7 +1190,7 @@
     "1005011961308530": 1793380460.5377874,
     "1005012994490034": 1793441317.3934674,
     "1005010146493558": 1793448836.300828,
-    "1005010575865619": 1794422151.260992,
+    "1005010575865619": 1794484334.0264623,
     "1005011778197787": 1794437132.8258533,
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
@@ -3422,7 +3422,7 @@
     "مبرد الهاتف MEMO CX10": 1794126663.880001,
     "KOOTION SATA SSD 480GB": 1794241389.2452002,
     "راوتر Vodafone 4G محمول": 1794128872.1451216,
-    "OnePlus ACE 6T": 1794422151.260992,
+    "OnePlus ACE 6T": 1794484334.0264623,
     "Essager Mini 20W Type C Charger PD": 1794129971.1690388,
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794471958.5920799,
     "OnePlus Ace 6 12/256GB": 1794130143.129755,
@@ -3558,7 +3558,6 @@
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191
   },
   "published_post_keys": [
-    "aniscoupons:32998",
     "test_channel:1792166462",
     "aniscoupons:32756",
     "lodydeals:45804",
@@ -4557,11 +4556,12 @@
     "zedstoreonline:39977",
     "aniscoupons:34655",
     "aniscoupons:34654",
-    "aniscoupons:34661"
+    "aniscoupons:34661",
+    "aniscoupons:34663"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794483770.100659,
+  "last_run_time": 1794484334.0264623,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4588,12 +4588,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39980,
-      "last_check_time": 1794483409.3795073
+      "last_message_id": 39984,
+      "last_check_time": 1794484328.2743769
     },
     "aniscoupons": {
-      "last_message_id": 34662,
-      "last_check_time": 1794483955.15593
+      "last_message_id": 34664,
+      "last_check_time": 1794484336.1093457
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -21815,6 +21815,16 @@
       "price": 136.7,
       "timestamp": 1794483770.100659,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34663": {
+      "channel_msg_id": 2471,
+      "product_id": "1005010575865619",
+      "title": "OnePlus ACE 6T",
+      "channel": "aniscoupons",
+      "source_msg_id": 34663,
+      "price": 365.8,
+      "timestamp": 1794484334.0264623,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21823,17 +21833,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794483772.7001414,
+    "last_deal_post_time": 1794484336.976584,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794484147.1565216,
+    "last_sweep_time": 1794484340.0167217,
     "last_sweep_times": {
-      "algeria": 1794484144.0650232,
-      "france": 1794484147.1565216
+      "algeria": 1794484336.9522192,
+      "france": 1794484340.0167217
     },
     "last_deal_post_times": {
-      "algeria": 1794483772.7001414
+      "algeria": 1794484336.976584
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -24418,10 +24428,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45815",
-    "lodydeals:45859",
-    "zedstoreonline:38705",
-    "ecksdeal:5884",
     "megaphonna:8549",
     "ecksdeal:5992",
     "aniscoupons:33358",
@@ -25417,7 +25423,11 @@
     "zedstoreonline:39980",
     "aniscoupons:34659",
     "aniscoupons:34660",
-    "aniscoupons:34662"
+    "aniscoupons:34662",
+    "zedstoreonline:39981",
+    "zedstoreonline:39982",
+    "zedstoreonline:39984",
+    "aniscoupons:34664"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
