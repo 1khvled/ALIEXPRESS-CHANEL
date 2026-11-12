@@ -765,7 +765,8 @@
     "1005001849536579",
     "1005006967391791",
     "1005013288890301",
-    "1005013089015192"
+    "1005013089015192",
+    "1005009278114794"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1261,7 +1262,7 @@
     "1005009578274758": 1793542479.8362749,
     "1005010413332383": 1794479904.193408,
     "1005011550075220": 1793542531.6312253,
-    "1005009806856302": 1794415703.2366781,
+    "1005009806856302": 1794480069.5549967,
     "1005009980316035": 1793542552.2730343,
     "1005005905462505": 1794000865.9547298,
     "1005008248133489": 1794475825.54016,
@@ -1546,7 +1547,8 @@
     "1005001849536579": 1794476179.330803,
     "1005006967391791": 1794476797.164376,
     "1005013288890301": 1794477157.5349603,
-    "1005013089015192": 1794478710.9244785
+    "1005013089015192": 1794478710.9244785,
+    "1005009278114794": 1794480064.6967885
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2544,7 +2546,8 @@
     "Machenike G5 Pro Gaming Controller",
     "Webcam EMEET C100 1080P",
     "FIFINE 1440p Full HD PC Webcam with Microphone",
-    "iQOO Z11S 8/128"
+    "iQOO Z11S 8/128",
+    "Inphic A9 PRO MAX Wireless Gaming Mouse"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3352,7 +3355,7 @@
     "Baseus Mouse Bluetooth Wireless Computer 1600DPI": 1793966716.198834,
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": 1793966721.1839278,
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": 1793966727.646043,
-    "GameSir X5 Lite Game Controller": 1794473432.2937162,
+    "GameSir X5 Lite Game Controller": 1794480069.5549967,
     "Netac SSD NVME M2 250GB": 1794422876.857545,
     "Essager 20W GaN + cable": 1794439910.7944255,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
@@ -3547,11 +3550,10 @@
     "Machenike G5 Pro Gaming Controller": 1794476797.164376,
     "Webcam EMEET C100 1080P": 1794477157.5349603,
     "FIFINE 1440p Full HD PC Webcam with Microphone": 1794478095.864591,
-    "iQOO Z11S 8/128": 1794478710.9244785
+    "iQOO Z11S 8/128": 1794478710.9244785,
+    "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794480064.6967885
   },
   "published_post_keys": [
-    "bnddeals:50803",
-    "test_channel:1793228526",
     "lodydeals:45477",
     "couponsglobal:48805",
     "ecksdeal:5977",
@@ -4549,11 +4551,13 @@
     "aniscoupons:34643",
     "aniscoupons:34644",
     "zedstoreonline:39968",
-    "aniscoupons:34646"
+    "aniscoupons:34646",
+    "zedstoreonline:39971",
+    "aniscoupons:34647"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794479904.193408,
+  "last_run_time": 1794480069.5549967,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4580,12 +4584,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39970,
-      "last_check_time": 1794479894.190697
+      "last_message_id": 39971,
+      "last_check_time": 1794480066.7671618
     },
     "aniscoupons": {
-      "last_message_id": 34646,
-      "last_check_time": 1794479906.2985275
+      "last_message_id": 34647,
+      "last_check_time": 1794480071.6220121
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -5251,7 +5255,8 @@
     "1005001849536579": 20.5,
     "1005006967391791": 36.2,
     "1005013288890301": 16.9,
-    "1005013089015192": 261.9
+    "1005013089015192": 261.9,
+    "1005009278114794": 11.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -21686,6 +21691,26 @@
       "price": 340.3,
       "timestamp": 1794479904.193408,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39971": {
+      "channel_msg_id": 2459,
+      "product_id": "1005009278114794",
+      "title": "Inphic A9 PRO MAX Wireless Gaming Mouse",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39971,
+      "price": 11.9,
+      "timestamp": 1794480064.6967885,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34647": {
+      "channel_msg_id": 2460,
+      "product_id": "1005009806856302",
+      "title": "GameSir X5 Lite Game Controller",
+      "channel": "aniscoupons",
+      "source_msg_id": 34647,
+      "price": 16.5,
+      "timestamp": 1794480069.5549967,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21694,17 +21719,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794479907.220465,
+    "last_deal_post_time": 1794480072.3149996,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794479910.493875,
+    "last_sweep_time": 1794480075.1180902,
     "last_sweep_times": {
-      "algeria": 1794479907.1907742,
-      "france": 1794479910.493875
+      "algeria": 1794480072.2848089,
+      "france": 1794480075.1180902
     },
     "last_deal_post_times": {
-      "algeria": 1794479907.220465
+      "algeria": 1794480072.3149996
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22484,7 +22509,8 @@
     "1005001849536579": "zedstoreonline",
     "1005006967391791": "zedstoreonline",
     "1005013288890301": "zedstoreonline",
-    "1005013089015192": "zedstoreonline"
+    "1005013089015192": "zedstoreonline",
+    "1005009278114794": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -23292,7 +23318,7 @@
     "Baseus Mouse Bluetooth Wireless Computer 1600DPI": "zedstoreonline",
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": "zedstoreonline",
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": "zedstoreonline",
-    "GameSir X5 Lite Game Controller": "zedstoreonline",
+    "GameSir X5 Lite Game Controller": "aniscoupons",
     "Netac SSD NVME M2 250GB": "zedstoreonline",
     "Essager 20W GaN + cable": "zedstoreonline",
     "Redmi Note 17 Pro Max": "aniscoupons",
@@ -23489,7 +23515,8 @@
     "Machenike G5 Pro Gaming Controller": "zedstoreonline",
     "Webcam EMEET C100 1080P": "zedstoreonline",
     "FIFINE 1440p Full HD PC Webcam with Microphone": "zedstoreonline",
-    "iQOO Z11S 8/128": "zedstoreonline"
+    "iQOO Z11S 8/128": "zedstoreonline",
+    "Inphic A9 PRO MAX Wireless Gaming Mouse": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
