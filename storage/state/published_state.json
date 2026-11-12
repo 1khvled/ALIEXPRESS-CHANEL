@@ -1554,7 +1554,7 @@
     "1005009278114794": 1794480064.6967885,
     "1005010210432531": 1794482375.9737191,
     "1005013422894128": 1794487083.9711623,
-    "1005010297094897": 1794489491.8874733
+    "1005010297094897": 1794500546.592492
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2557,7 +2557,8 @@
     "realme P4 Lite Smartphone NFC 6300mAh Battery",
     "Honor Win RT2",
     "MCHOSE A7 V3 Pro",
-    "سماعات Fifine Ampligame H6 7.1 RGB"
+    "سماعات Fifine Ampligame H6 7.1 RGB",
+    "MCHOSE A7 V3 Lightweight"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3565,10 +3566,10 @@
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191,
     "Honor Win RT2": 1794487083.9711623,
     "MCHOSE A7 V3 Pro": 1794489491.8874733,
-    "سماعات Fifine Ampligame H6 7.1 RGB": 1794496851.9006197
+    "سماعات Fifine Ampligame H6 7.1 RGB": 1794496851.9006197,
+    "MCHOSE A7 V3 Lightweight": 1794500546.592492
   },
   "published_post_keys": [
-    "zedstoreonline:38753",
     "lodydeals:45882",
     "aniscoupons:32739",
     "megaphonna:8606",
@@ -4567,19 +4568,20 @@
     "aniscoupons:34709",
     "lodydeals:46407",
     "lodydeals:46412",
-    "lodydeals:46413"
+    "lodydeals:46413",
+    "lodydeals:46414"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794500381.7712336,
+  "last_run_time": 1794500546.592492,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6057,
       "last_check_time": 1794496853.9442635
     },
     "lodydeals": {
-      "last_message_id": 46413,
-      "last_check_time": 1794500383.844072
+      "last_message_id": 46414,
+      "last_check_time": 1794500548.6663918
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -5272,7 +5274,7 @@
     "1005013089015192": 261.9,
     "1005009278114794": 11.9,
     "1005013422894128": 499.5,
-    "1005010297094897": 44.8
+    "1005010297094897": 34.1
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -22247,6 +22249,16 @@
       "price": 13.24,
       "timestamp": 1794500381.7712336,
       "status": "ACTIVE"
+    },
+    "lodydeals:46414": {
+      "channel_msg_id": 2514,
+      "product_id": "1005010297094897",
+      "title": "MCHOSE A7 V3 Lightweight",
+      "channel": "lodydeals",
+      "source_msg_id": 46414,
+      "price": 34.1,
+      "timestamp": 1794500546.592492,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22255,17 +22267,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794500391.951152,
+    "last_deal_post_time": 1794500551.7053463,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794500395.315626,
+    "last_sweep_time": 1794500555.692475,
     "last_sweep_times": {
-      "algeria": 1794500391.9192445,
-      "france": 1794500395.315626
+      "algeria": 1794500551.6747077,
+      "france": 1794500555.692475
     },
     "last_deal_post_times": {
-      "algeria": 1794500391.951152
+      "algeria": 1794500551.7053463
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23048,7 +23060,7 @@
     "1005013089015192": "zedstoreonline",
     "1005009278114794": "zedstoreonline",
     "1005013422894128": "aniscoupons",
-    "1005010297094897": "aniscoupons"
+    "1005010297094897": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -24058,7 +24070,8 @@
     "realme P4 Lite Smartphone NFC 6300mAh Battery": "aniscoupons",
     "Honor Win RT2": "aniscoupons",
     "MCHOSE A7 V3 Pro": "aniscoupons",
-    "سماعات Fifine Ampligame H6 7.1 RGB": "ecksdeal"
+    "سماعات Fifine Ampligame H6 7.1 RGB": "ecksdeal",
+    "MCHOSE A7 V3 Lightweight": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
