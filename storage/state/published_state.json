@@ -1416,7 +1416,7 @@
     "1005008429979494": 1793741666.9686077,
     "1005004795387201": 1793742770.1634803,
     "1005010702983351": 1794436379.3016446,
-    "1005008366962319": 1794490967.174317,
+    "1005008366962319": 1794522161.7558599,
     "1005005058037424": 1793779907.9964287,
     "1005012946895000": 1793793714.105913,
     "1005012150344482": 1794481983.745732,
@@ -3535,7 +3535,7 @@
     "Vivo X300  12/256GB": 1794394604.3664222,
     "CMF Buds 2a Bluetooth 5.4 Up to 31H of playback 12.4mm Driver 42dB ANC 4HD": 1794396619.5833008,
     "Electronic Body Scale": 1794400568.4819298,
-    "Kootiion X15 M.2 SSD NVMe 256GB": 1794490967.174317,
+    "Kootiion X15 M.2 SSD NVMe 256GB": 1794522161.7558599,
     "SoundPEATS C30 Hybrid ANC -52dB": 1794407013.7230165,
     "Somnambulist SSD 120GB": 1794500376.8953977,
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794492627.75024,
@@ -3590,7 +3590,6 @@
     "WALRAM M.2  128GB": 1794515920.3397443
   },
   "published_post_keys": [
-    "test_channel:1792108342",
     "megaphonna:8570",
     "aniscoupons:33210",
     "lodydeals:45937",
@@ -4589,11 +4588,12 @@
     "aniscoupons:34734",
     "aniscoupons:34735",
     "zedstoreonline:40032",
-    "aniscoupons:34740"
+    "aniscoupons:34740",
+    "aniscoupons:34742"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794520699.708655,
+  "last_run_time": 1794522161.7558599,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6058,
@@ -4624,8 +4624,8 @@
       "last_check_time": 1794521251.1273024
     },
     "aniscoupons": {
-      "last_message_id": 34741,
-      "last_check_time": 1794521615.7747529
+      "last_message_id": 34742,
+      "last_check_time": 1794522163.7989576
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -22573,6 +22573,16 @@
       "price": 110.8,
       "timestamp": 1794520699.708655,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34742": {
+      "channel_msg_id": 2544,
+      "product_id": "1005008366962319",
+      "title": "Kootiion X15 M.2 SSD NVMe 256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34742,
+      "price": 30.3,
+      "timestamp": 1794522161.7558599,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22581,17 +22591,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794520702.5659735,
+    "last_deal_post_time": 1794522164.5147007,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794521976.053743,
+    "last_sweep_time": 1794522172.5679421,
     "last_sweep_times": {
-      "algeria": 1794521973.7876592,
-      "france": 1794521976.053743
+      "algeria": 1794522164.4967134,
+      "france": 1794522172.5679421
     },
     "last_deal_post_times": {
-      "algeria": 1794520702.5659735
+      "algeria": 1794522164.5147007
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
