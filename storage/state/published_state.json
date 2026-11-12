@@ -774,7 +774,10 @@
     "1005013485724377",
     "1005012783197164",
     "1005012993724126",
-    "1005012726037568"
+    "1005012726037568",
+    "1005011940143389",
+    "1005010374799328",
+    "1005010487219975"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -818,7 +821,7 @@
     "1005012184442621": 1793744216.8445618,
     "1005006631309573": 1793744026.509727,
     "1005005648888450": 1790941186.791633,
-    "1005006117094928": 1790941202.9035249,
+    "1005006117094928": 1794524375.306614,
     "1005006603602562": 1790941207.5310047,
     "1005010721042860": 1793656098.242545,
     "1005009517247552": 1790941221.8823678,
@@ -1511,7 +1514,7 @@
     "1005005295582727": 1794263151.742903,
     "1005009776317549": 1794250024.5461965,
     "1005009766330661": 1794251129.0913823,
-    "1005009649048598": 1794263521.335573,
+    "1005009649048598": 1794524386.8590817,
     "1005005209277375": 1794263702.59817,
     "1005010706691647": 1794263885.7408762,
     "COUPONS_949f01595a98": 1794309459.0513651,
@@ -1564,7 +1567,10 @@
     "1005013485724377": 1794510747.6816225,
     "1005012783197164": 1794512597.1982763,
     "1005012993724126": 1794515920.3397443,
-    "1005012726037568": 1794523623.94713
+    "1005012726037568": 1794523623.94713,
+    "1005011940143389": 1794524364.21287,
+    "1005010374799328": 1794524370.7043138,
+    "1005010487219975": 1794524381.8060858
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2574,7 +2580,10 @@
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S",
     "realme Original Adapter SUPERVOOC Charger 45W",
     "EPOMAKER GX1 Tri-mode",
-    "WALRAM M.2  128GB"
+    "WALRAM M.2  128GB",
+    "Portable Magnetic Phone",
+    "QCY T13 ENC Earphone",
+    "Retro Bronze Embossed"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3252,7 +3261,7 @@
     "POEDAGAR 896 Men's Watches": 1793599912.232469,
     "بطاقة تسجيل Ugreen HDMI 1080p USB Capture Card": 1793600128.145566,
     "POEDAGAR 680 Men's Quartz": 1793600288.3908339,
-    "QCY Buds 6 Mics ANC": 1793600466.7601562,
+    "QCY Buds 6 Mics ANC": 1794524370.7043138,
     "Vxe Dragonfly R1 SE": 1794475825.54016,
     "Baseus 240W Type-C Cable 1m": 1793601389.0047116,
     "VA VA VOOM Men Casual": 1793601744.1664062,
@@ -3500,7 +3509,7 @@
     "Hohem iSteady XE Kit": 1794263151.742903,
     "لي يراسلك ويقلك انا zed store ابلوكيه مباشرة ( نصاب )": 1794250024.5461965,
     "EPOMAKER RT85 75% Mechanical Keyboard Wireless Green White": 1794251129.0913823,
-    "Fashion Square Watches": 1794263521.335573,
+    "Fashion Square Watches": 1794524386.8590817,
     "Bicycle Pump 80 PSI": 1794263702.59817,
     "Portable Hair Clipper": 1794263885.7408762,
     "Inphic PG1 RGB Wired Gaming Mouse": 1794480643.2529733,
@@ -3589,14 +3598,12 @@
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": 1794502591.7937624,
     "realme Original Adapter SUPERVOOC Charger 45W": 1794510747.6816225,
     "EPOMAKER GX1 Tri-mode": 1794512597.1982763,
-    "WALRAM M.2  128GB": 1794515920.3397443
+    "WALRAM M.2  128GB": 1794515920.3397443,
+    "Portable Magnetic Phone": 1794524364.21287,
+    "QCY T13 ENC Earphone": 1794524375.306614,
+    "Retro Bronze Embossed": 1794524381.8060858
   },
   "published_post_keys": [
-    "aniscoupons:33210",
-    "lodydeals:45937",
-    "aniscoupons:32705",
-    "ecksdeal:5967",
-    "lodydeals:45932",
     "aniscoupons:32766",
     "zedstoreonline:38626",
     "zedstoreonline:38815",
@@ -4591,11 +4598,16 @@
     "zedstoreonline:40032",
     "aniscoupons:34740",
     "aniscoupons:34742",
-    "aniscoupons:34744"
+    "aniscoupons:34744",
+    "lodydeals:46432",
+    "lodydeals:46433",
+    "lodydeals:46434",
+    "lodydeals:46435",
+    "lodydeals:46436"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794523623.94713,
+  "last_run_time": 1794524386.8590817,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6058,
@@ -4603,7 +4615,7 @@
     },
     "lodydeals": {
       "last_message_id": 46440,
-      "last_check_time": 1794520324.823846
+      "last_check_time": 1794524389.0316474
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4626,8 +4638,8 @@
       "last_check_time": 1794524172.483081
     },
     "aniscoupons": {
-      "last_message_id": 34748,
-      "last_check_time": 1794524173.2296646
+      "last_message_id": 34749,
+      "last_check_time": 1794524396.1339726
     },
     "bnddeals": {
       "last_message_id": 51295,
@@ -4677,7 +4689,7 @@
     "1005006631309573": 3.49,
     "1005005648888450": 10.09,
     "1005010178295650": 6.49,
-    "1005006117094928": 32.2,
+    "1005006117094928": 15.29,
     "1005006603602562": 181.0,
     "1005010721042860": 363.7,
     "1005009517247552": 236.0,
@@ -5301,7 +5313,10 @@
     "1005013485724377": 11.5,
     "1005012783197164": 36.4,
     "1005012993724126": 15.6,
-    "1005012726037568": 7.47
+    "1005012726037568": 7.47,
+    "1005011940143389": 3.48,
+    "1005010374799328": 10.49,
+    "1005010487219975": 5.49
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -22596,6 +22611,56 @@
       "price": 7.47,
       "timestamp": 1794523623.94713,
       "status": "ACTIVE"
+    },
+    "lodydeals:46432": {
+      "channel_msg_id": 2546,
+      "product_id": "1005011940143389",
+      "title": "Portable Magnetic Phone",
+      "channel": "lodydeals",
+      "source_msg_id": 46432,
+      "price": 3.48,
+      "timestamp": 1794524364.21287,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46433": {
+      "channel_msg_id": 2547,
+      "product_id": "1005010374799328",
+      "title": "QCY Buds 6 Mics ANC",
+      "channel": "lodydeals",
+      "source_msg_id": 46433,
+      "price": 10.49,
+      "timestamp": 1794524370.7043138,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46434": {
+      "channel_msg_id": 2548,
+      "product_id": "1005006117094928",
+      "title": "QCY T13 ENC Earphone",
+      "channel": "lodydeals",
+      "source_msg_id": 46434,
+      "price": 15.29,
+      "timestamp": 1794524375.306614,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46435": {
+      "channel_msg_id": 2549,
+      "product_id": "1005010487219975",
+      "title": "Retro Bronze Embossed",
+      "channel": "lodydeals",
+      "source_msg_id": 46435,
+      "price": 5.49,
+      "timestamp": 1794524381.8060858,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46436": {
+      "channel_msg_id": 2550,
+      "product_id": "1005009649048598",
+      "title": "Fashion Square Watches",
+      "channel": "lodydeals",
+      "source_msg_id": 46436,
+      "price": 3.29,
+      "timestamp": 1794524386.8590817,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22604,17 +22669,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794523626.7776845,
+    "last_deal_post_time": 1794524399.0855286,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794524178.580475,
+    "last_sweep_time": 1794524402.1315315,
     "last_sweep_times": {
-      "algeria": 1794524175.8025625,
-      "france": 1794524178.580475
+      "algeria": 1794524399.0551136,
+      "france": 1794524402.1315315
     },
     "last_deal_post_times": {
-      "algeria": 1794523626.7776845
+      "algeria": 1794524399.0855286
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22634,7 +22699,7 @@
     "1005006631309573": "lodydeals",
     "1005005648888450": "lodydeals",
     "1005010178295650": "lodydeals",
-    "1005006117094928": "zedstoreonline",
+    "1005006117094928": "lodydeals",
     "1005006603602562": "zedstoreonline",
     "1005010721042860": "lodydeals",
     "1005009517247552": "zedstoreonline",
@@ -23402,7 +23467,10 @@
     "1005013485724377": "aniscoupons",
     "1005012783197164": "aniscoupons",
     "1005012993724126": "aniscoupons",
-    "1005012726037568": "aniscoupons"
+    "1005012726037568": "aniscoupons",
+    "1005011940143389": "lodydeals",
+    "1005010374799328": "lodydeals",
+    "1005010487219975": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -24419,7 +24487,10 @@
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": "aniscoupons",
     "realme Original Adapter SUPERVOOC Charger 45W": "aniscoupons",
     "EPOMAKER GX1 Tri-mode": "aniscoupons",
-    "WALRAM M.2  128GB": "aniscoupons"
+    "WALRAM M.2  128GB": "aniscoupons",
+    "Portable Magnetic Phone": "lodydeals",
+    "QCY T13 ENC Earphone": "lodydeals",
+    "Retro Bronze Embossed": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -25216,15 +25287,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33527",
-    "aniscoupons:33530",
-    "aniscoupons:33531",
-    "aniscoupons:33534",
-    "aniscoupons:33535",
-    "aniscoupons:33536",
-    "aniscoupons:33538",
-    "aniscoupons:33539",
-    "aniscoupons:33540",
     "aniscoupons:33541",
     "aniscoupons:33543",
     "aniscoupons:33544",
@@ -26215,7 +26277,16 @@
     "bnddeals:51294",
     "zedstoreonline:40040",
     "aniscoupons:34748",
-    "bnddeals:51295"
+    "bnddeals:51295",
+    "lodydeals:46427",
+    "lodydeals:46428",
+    "lodydeals:46429",
+    "lodydeals:46430",
+    "lodydeals:46431",
+    "lodydeals:46437",
+    "lodydeals:46438",
+    "lodydeals:46439",
+    "aniscoupons:34749"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
