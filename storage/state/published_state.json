@@ -751,7 +751,8 @@
     "1005012167744546",
     "1005009582538267",
     "1005005471311412",
-    "1005012915663790"
+    "1005012915663790",
+    "1005013560596944"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1518,7 +1519,8 @@
     "1005012167744546": 1794437860.4294534,
     "1005009582538267": 1794439531.0399334,
     "1005005471311412": 1794439539.8661358,
-    "1005012915663790": 1794439916.4928079
+    "1005012915663790": 1794439916.4928079,
+    "1005013560596944": 1794470859.4033997
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2500,7 +2502,8 @@
     "X96Q TV BOX 2/16GB",
     "Kingston DataTraveler Exodia S USB Flash (128g)",
     "FIFINE K688W USB XLR MIC",
-    "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra"
+    "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra",
+    "12V CORDLESS ELECTRIC DRILL"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3487,10 +3490,10 @@
     "X96Q TV BOX 2/16GB": 1794439531.0399334,
     "Kingston DataTraveler Exodia S USB Flash (128g)": 1794439539.8661358,
     "FIFINE K688W USB XLR MIC": 1794439743.6258593,
-    "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra": 1794439916.4928079
+    "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra": 1794439916.4928079,
+    "12V CORDLESS ELECTRIC DRILL": 1794470859.4033997
   },
   "published_post_keys": [
-    "aniscoupons:33160",
     "megaphonna:8543",
     "couponsglobal:48813",
     "zedstoreonline:38602",
@@ -4489,11 +4492,12 @@
     "zedstoreonline:39935",
     "aniscoupons:34610",
     "zedstoreonline:39936",
-    "aniscoupons:34614"
+    "aniscoupons:34614",
+    "aniscoupons:34615"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794443653.9591506,
+  "last_run_time": 1794470859.4033997,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4524,8 +4528,8 @@
       "last_check_time": 1794468805.2536378
     },
     "aniscoupons": {
-      "last_message_id": 34614,
-      "last_check_time": 1794443656.0114348
+      "last_message_id": 34615,
+      "last_check_time": 1794470861.4601505
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5178,7 +5182,8 @@
     "1005012167744546": 558.49,
     "1005009582538267": 25.1,
     "1005005471311412": 7.7,
-    "1005012915663790": 56.8
+    "1005012915663790": 56.8,
+    "1005013560596944": 9.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -21133,6 +21138,16 @@
       "price": 285.9,
       "timestamp": 1794443653.9591506,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34615": {
+      "channel_msg_id": 2411,
+      "product_id": "1005013560596944",
+      "title": "12V CORDLESS ELECTRIC DRILL",
+      "channel": "aniscoupons",
+      "source_msg_id": 34615,
+      "price": 9.6,
+      "timestamp": 1794470859.4033997,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21141,17 +21156,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794443656.75324,
+    "last_deal_post_time": 1794470862.2460845,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794470673.8271363,
+    "last_sweep_time": 1794470864.9386518,
     "last_sweep_times": {
-      "algeria": 1794470670.643705,
-      "france": 1794470673.8271363
+      "algeria": 1794470862.2207315,
+      "france": 1794470864.9386518
     },
     "last_deal_post_times": {
-      "algeria": 1794443656.75324
+      "algeria": 1794470862.2460845
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21918,7 +21933,8 @@
     "1005012167744546": "aniscoupons",
     "1005009582538267": "zedstoreonline",
     "1005005471311412": "aniscoupons",
-    "1005012915663790": "aniscoupons"
+    "1005012915663790": "aniscoupons",
+    "1005013560596944": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -22907,7 +22923,8 @@
     "X96Q TV BOX 2/16GB": "zedstoreonline",
     "Kingston DataTraveler Exodia S USB Flash (128g)": "aniscoupons",
     "FIFINE K688W USB XLR MIC": "aniscoupons",
-    "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra": "aniscoupons"
+    "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra": "aniscoupons",
+    "12V CORDLESS ELECTRIC DRILL": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
