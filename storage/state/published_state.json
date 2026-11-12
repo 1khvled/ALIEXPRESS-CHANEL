@@ -1546,7 +1546,7 @@
     "1005012650636759": 1794475838.0735118,
     "1005011936109841": 1794475842.5666552,
     "1005012333024137": 1794475849.927629,
-    "1005007822635375": 1794475884.0444102,
+    "1005007822635375": 1794501299.95393,
     "1005001849536579": 1794476179.330803,
     "1005006967391791": 1794476797.164376,
     "1005013288890301": 1794477157.5349603,
@@ -2558,7 +2558,8 @@
     "Honor Win RT2",
     "MCHOSE A7 V3 Pro",
     "سماعات Fifine Ampligame H6 7.1 RGB",
-    "MCHOSE A7 V3 Lightweight"
+    "MCHOSE A7 V3 Lightweight",
+    "FANTECH SHOOTER III WGP13S"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3567,10 +3568,10 @@
     "Honor Win RT2": 1794487083.9711623,
     "MCHOSE A7 V3 Pro": 1794489491.8874733,
     "سماعات Fifine Ampligame H6 7.1 RGB": 1794496851.9006197,
-    "MCHOSE A7 V3 Lightweight": 1794500546.592492
+    "MCHOSE A7 V3 Lightweight": 1794500546.592492,
+    "FANTECH SHOOTER III WGP13S": 1794501299.95393
   },
   "published_post_keys": [
-    "megaphonna:8606",
     "lodydeals:45423",
     "lodydeals:45831",
     "aniscoupons:32715",
@@ -4569,19 +4570,20 @@
     "lodydeals:46413",
     "lodydeals:46414",
     "lodydeals:46415",
-    "zedstoreonline:40013"
+    "zedstoreonline:40013",
+    "lodydeals:46417"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794500738.761835,
+  "last_run_time": 1794501299.95393,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6057,
       "last_check_time": 1794496853.9442635
     },
     "lodydeals": {
-      "last_message_id": 46416,
-      "last_check_time": 1794500916.8445673
+      "last_message_id": 46417,
+      "last_check_time": 1794501301.9990733
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4600,8 +4602,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40013,
-      "last_check_time": 1794500740.8594267
+      "last_message_id": 40015,
+      "last_check_time": 1794501308.094085
     },
     "aniscoupons": {
       "last_message_id": 34709,
@@ -4774,7 +4776,7 @@
     "1005006996130042": 1.0,
     "1005013052800596": 1.45,
     "1005007331316456": 17.6,
-    "1005007822635375": 20.6,
+    "1005007822635375": 20.3,
     "1005013096683979": 54.68,
     "1005006838055260": 1.81,
     "1005006923518929": 0.84,
@@ -22279,6 +22281,16 @@
       "price": 31.5,
       "timestamp": 1794500738.761835,
       "status": "ACTIVE"
+    },
+    "lodydeals:46417": {
+      "channel_msg_id": 2517,
+      "product_id": "1005007822635375",
+      "title": "FANTECH SHOOTER III WGP13S",
+      "channel": "lodydeals",
+      "source_msg_id": 46417,
+      "price": 20.3,
+      "timestamp": 1794501299.95393,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22287,17 +22299,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794500742.0751624,
+    "last_deal_post_time": 1794501309.1709104,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794501108.8170295,
+    "last_sweep_time": 1794501312.177868,
     "last_sweep_times": {
-      "algeria": 1794501105.531436,
-      "france": 1794501108.8170295
+      "algeria": 1794501309.1513197,
+      "france": 1794501312.177868
     },
     "last_deal_post_times": {
-      "algeria": 1794500742.0751624
+      "algeria": 1794501309.1709104
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22479,7 +22491,7 @@
     "1005007331316456": "zedstoreonline",
     "1005008852027824": "zedstoreonline",
     "1005012312990781": "lodydeals",
-    "1005007822635375": "zedstoreonline",
+    "1005007822635375": "lodydeals",
     "1005013096683979": "ecksdeal",
     "1005006838055260": "couponsglobal",
     "1005006923518929": "couponsglobal",
@@ -24091,7 +24103,8 @@
     "Honor Win RT2": "aniscoupons",
     "MCHOSE A7 V3 Pro": "aniscoupons",
     "سماعات Fifine Ampligame H6 7.1 RGB": "ecksdeal",
-    "MCHOSE A7 V3 Lightweight": "lodydeals"
+    "MCHOSE A7 V3 Lightweight": "lodydeals",
+    "FANTECH SHOOTER III WGP13S": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -24888,8 +24901,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:38969",
-    "aniscoupons:33317",
     "bnddeals:50881",
     "lodydeals:45820",
     "ecksdeal:5959",
@@ -25887,7 +25898,9 @@
     "lodydeals:46410",
     "lodydeals:46411",
     "zedstoreonline:40012",
-    "lodydeals:46416"
+    "lodydeals:46416",
+    "zedstoreonline:40014",
+    "zedstoreonline:40015"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
