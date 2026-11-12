@@ -1551,7 +1551,7 @@
     "1005001849536579": 1794476179.330803,
     "1005006967391791": 1794476797.164376,
     "1005013288890301": 1794477157.5349603,
-    "1005013089015192": 1794478710.9244785,
+    "1005013089015192": 1794503538.0099986,
     "1005009278114794": 1794480064.6967885,
     "1005010210432531": 1794482375.9737191,
     "1005013422894128": 1794487083.9711623,
@@ -3566,7 +3566,7 @@
     "Machenike G5 Pro Gaming Controller": 1794476797.164376,
     "Webcam EMEET C100 1080P": 1794477157.5349603,
     "FIFINE 1440p Full HD PC Webcam with Microphone": 1794478095.864591,
-    "iQOO Z11S 8/128": 1794478710.9244785,
+    "iQOO Z11S 8/128": 1794503538.0099986,
     "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794480064.6967885,
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191,
     "Honor Win RT2": 1794487083.9711623,
@@ -3578,7 +3578,6 @@
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": 1794502591.7937624
   },
   "published_post_keys": [
-    "aniscoupons:32760",
     "test_channel:1793226751",
     "test_channel:1792072689",
     "pcgamingpart:7990",
@@ -4577,19 +4576,20 @@
     "lodydeals:46419",
     "aniscoupons:34712",
     "aniscoupons:34713",
-    "lodydeals:46420"
+    "lodydeals:46420",
+    "zedstoreonline:40017"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794503164.1120768,
+  "last_run_time": 1794503538.0099986,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6057,
       "last_check_time": 1794496853.9442635
     },
     "lodydeals": {
-      "last_message_id": 46420,
-      "last_check_time": 1794503166.1666667
+      "last_message_id": 46421,
+      "last_check_time": 1794503531.12031
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4608,8 +4608,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40016,
-      "last_check_time": 1794501487.9376626
+      "last_message_id": 40017,
+      "last_check_time": 1794503540.081422
     },
     "aniscoupons": {
       "last_message_id": 34713,
@@ -22348,6 +22348,16 @@
       "price": 40.43,
       "timestamp": 1794503164.1120768,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40017": {
+      "channel_msg_id": 2523,
+      "product_id": "1005013089015192",
+      "title": "iQOO Z11S 8/128",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40017,
+      "price": 261.9,
+      "timestamp": 1794503538.0099986,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22356,17 +22366,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794503168.8902678,
+    "last_deal_post_time": 1794503541.6678162,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794503345.201836,
+    "last_sweep_time": 1794503544.7041461,
     "last_sweep_times": {
-      "algeria": 1794503342.2423916,
-      "france": 1794503345.201836
+      "algeria": 1794503541.637595,
+      "france": 1794503544.7041461
     },
     "last_deal_post_times": {
-      "algeria": 1794503168.8902678
+      "algeria": 1794503541.6678162
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -24961,7 +24971,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "pcgamingpart:7992",
     "zedstoreonline:38632",
     "ecksdeal:5962",
     "couponsglobal:48832",
@@ -25960,7 +25969,8 @@
     "zedstoreonline:40015",
     "zedstoreonline:40016",
     "lodydeals:46418",
-    "aniscoupons:34710"
+    "aniscoupons:34710",
+    "lodydeals:46421"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
