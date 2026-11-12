@@ -974,7 +974,7 @@
     "1005011557896041": 1794473066.6555345,
     "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
-    "1005007916078341": 1794397913.7086546,
+    "1005007916078341": 1794474352.4663627,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
     "1005013336240375": 1791968149.7952893,
@@ -1446,7 +1446,7 @@
     "1005008060391372": 1794424534.1435025,
     "1005010209911111": 1794068056.674266,
     "1005008295555234": 1794073127.8664527,
-    "1005008645323478": 1794426405.7985656,
+    "1005008645323478": 1794474348.231546,
     "1005008636930795": 1794422876.857545,
     "1005006260870758": 1794250569.5221198,
     "1005009759580502": 1794331533.1223195,
@@ -1469,7 +1469,7 @@
     "1005007038022940": 1794146648.256951,
     "1005007981362777": 1794146655.1062205,
     "1005007097302001": 1794146830.4272797,
-    "1005013361453762": 1794428252.3014421,
+    "1005013361453762": 1794474343.7781756,
     "1005013240296031": 1794216974.0881407,
     "1005012670472055": 1794164675.8426867,
     "1005013476568095": 1794169846.8168333,
@@ -2692,7 +2692,7 @@
     "ATTACK SHARK L80PRO Ultralight": 1791107750.295487,
     "AMD Ryzen 7 5700X": 1793898345.0223713,
     "هاتف ينسيك في شارجور🤣🤣": 1791109857.5190113,
-    "CMF Smart Watch 3 pro AMOLED": 1794397913.7086546,
+    "CMF Smart Watch 3 pro AMOLED": 1794474352.4663627,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
     "OPPO A6 Pro 8/256GB": 1794340346.0747576,
@@ -3235,7 +3235,7 @@
     "Oppo Find X8s+": 1793613942.3770478,
     "Xiaoxin Pad Pro 13 (8/128)": 1794309088.1309376,
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S CPU 11.1\" 4K 144Hz LCD Display 1100": 1793613951.963987,
-    "Honor Pad V9 (8/256)": 1794428252.3014421,
+    "Honor Pad V9 (8/256)": 1794474343.7781756,
     "HONOR Pad X8b (LTE 6/128GB)": 1794136369.073103,
     "[Clearance] realme 14T 5G Smartphone NFC Dimensity 6300 5G Processor": 1793613966.8608465,
     "RYZEN 5 9600X": 1793613978.6202738,
@@ -3374,7 +3374,7 @@
     "1MORE SonoFlow Pro HQ51": 1794073127.8664527,
     "Ulanzi ST-06S Vertical Shooting": 1794130692.4786665,
     "ميكروفون MAONO DGM20W لاسلكي للألعاب": 1794074230.5173922,
-    "CUSU 512GB External SSD Drive": 1794426405.7985656,
+    "CUSU 512GB External SSD Drive": 1794474348.231546,
     "Netac M.2 NVME 250GB": 1794076438.7694528,
     "EPOMAKER X AULA F87 Pro": 1794250569.5221198,
     "SIX PCIe 4.0 7350MB/s  1TB": 1794079741.7808652,
@@ -3504,9 +3504,6 @@
     "ميزان رقمي محمول لحقائب السفر": 1794472329.794574
   },
   "published_post_keys": [
-    "couponsglobal:48807",
-    "test_channel:1792181452",
-    "zedstoreonline:38752",
     "lodydeals:45782",
     "megaphonna:8591",
     "zedstoreonline:38550",
@@ -4503,11 +4500,14 @@
     "zedstoreonline:39950",
     "aniscoupons:34623",
     "zedstoreonline:39951",
-    "aniscoupons:34625"
+    "aniscoupons:34625",
+    "aniscoupons:34626",
+    "aniscoupons:34627",
+    "aniscoupons:34628"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794473802.0614088,
+  "last_run_time": 1794474352.4663627,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4534,12 +4534,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39952,
-      "last_check_time": 1794473798.2407951
+      "last_message_id": 39953,
+      "last_check_time": 1794474340.544045
     },
     "aniscoupons": {
-      "last_message_id": 34625,
-      "last_check_time": 1794473804.11626
+      "last_message_id": 34628,
+      "last_check_time": 1794474354.5300376
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -4737,7 +4737,7 @@
     "1005011754993234": 79.58,
     "1005011735727412": 26.6,
     "1005013039644752": 265.7,
-    "1005007916078341": 47.44,
+    "1005007916078341": 51.3,
     "1005006506862816": 11.86,
     "1005008072923842": 2.21,
     "1005013336240375": 4.18,
@@ -21281,6 +21281,36 @@
       "price": 167.8,
       "timestamp": 1794473802.0614088,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34626": {
+      "channel_msg_id": 2424,
+      "product_id": "1005013361453762",
+      "title": "Honor Pad V9 (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34626,
+      "price": 277.36,
+      "timestamp": 1794474343.7781756,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34627": {
+      "channel_msg_id": 2425,
+      "product_id": "1005008645323478",
+      "title": "CUSU 512GB External SSD Drive",
+      "channel": "aniscoupons",
+      "source_msg_id": 34627,
+      "price": 41.4,
+      "timestamp": 1794474348.231546,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34628": {
+      "channel_msg_id": 2426,
+      "product_id": "1005007916078341",
+      "title": "CMF Smart Watch 3 pro AMOLED",
+      "channel": "aniscoupons",
+      "source_msg_id": 34628,
+      "price": 51.3,
+      "timestamp": 1794474352.4663627,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21289,17 +21319,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794473805.0923085,
+    "last_deal_post_time": 1794474355.4685302,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794474164.900243,
+    "last_sweep_time": 1794474358.3492587,
     "last_sweep_times": {
-      "algeria": 1794474161.9371607,
-      "france": 1794474164.900243
+      "algeria": 1794474355.4415631,
+      "france": 1794474358.3492587
     },
     "last_deal_post_times": {
-      "algeria": 1794473805.0923085
+      "algeria": 1794474355.4685302
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23859,7 +23889,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8466",
     "ecksdeal:5989",
     "lodydeals:45508",
     "megaphonna:8545",
@@ -24858,7 +24887,8 @@
     "zedstoreonline:39946",
     "zedstoreonline:39949",
     "aniscoupons:34624",
-    "zedstoreonline:39952"
+    "zedstoreonline:39952",
+    "zedstoreonline:39953"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
