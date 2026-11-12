@@ -40,10 +40,16 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 173,
-      "published": 137,
+      "seen": 174,
+      "published": 138,
       "skipped": 0,
       "ewma": 0.9994
+    },
+    "ecksdeal": {
+      "seen": 1,
+      "published": 1,
+      "skipped": 0,
+      "ewma": 0.54
     }
   },
   "category_stats": {
@@ -54,10 +60,10 @@
       "ewma": 0.9994
     },
     "pc": {
-      "seen": 52,
-      "published": 32,
+      "seen": 53,
+      "published": 33,
       "skipped": 0,
-      "ewma": 0.9654
+      "ewma": 0.9682
     },
     "phones": {
       "seen": 138,
@@ -78,10 +84,10 @@
       "ewma": 0.7211
     },
     "audio": {
-      "seen": 11,
-      "published": 10,
+      "seen": 12,
+      "published": 11,
       "skipped": 0,
-      "ewma": 0.7828
+      "ewma": 0.8002
     }
   },
   "product_prices": {
@@ -358,7 +364,8 @@
       31.5
     ],
     "1005008060391372": [
-      33.5
+      33.5,
+      31.38
     ],
     "1005007495712340": [
       53.24,
@@ -420,6 +427,7 @@
       182.38
     ],
     "1005009460475870": [
+      6.7,
       6.7
     ],
     "1005007869955343": [
@@ -572,31 +580,15 @@
     ]
   },
   "counters": {
-    "scored": 324,
-    "verdict_publish": 302,
+    "scored": 326,
+    "verdict_publish": 304,
     "verdict_hold": 22,
     "verdict_skip": 0,
-    "published": 219,
+    "published": 221,
     "skipped": 0
   },
-  "score_sum": 23347.83,
+  "score_sum": 23496.67,
   "recent_decisions": [
-    {
-      "ts": 1794422149,
-      "channel": "aniscoupons",
-      "category": "phones",
-      "product_id": "1005010575865619",
-      "score": 67.88,
-      "verdict": "publish"
-    },
-    {
-      "ts": 1794422694,
-      "channel": "zedstoreonline",
-      "category": "phones",
-      "product_id": "1005012639641017",
-      "score": 69.04,
-      "verdict": "publish"
-    },
     {
       "ts": 1794422696,
       "channel": "aniscoupons",
@@ -2180,7 +2172,23 @@
       "product_id": "1005007027334636",
       "score": 86.9,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794496849,
+      "channel": "ecksdeal",
+      "category": "audio",
+      "product_id": "1005008060391372",
+      "score": 77.36,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794496856,
+      "channel": "aniscoupons",
+      "category": "pc",
+      "product_id": "1005009460475870",
+      "score": 71.48,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794496491.8938756
+  "updated_at": 1794496858.1420448
 }

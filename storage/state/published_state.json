@@ -1457,7 +1457,7 @@
     "1005007038130594": 1794393500.1320646,
     "1005008248187128": 1794057675.8729835,
     "1005013053381984": 1794060065.5449874,
-    "1005008060391372": 1794424534.1435025,
+    "1005008060391372": 1794496851.9006197,
     "1005010209911111": 1794068056.674266,
     "1005008295555234": 1794073127.8664527,
     "1005008645323478": 1794491882.9016292,
@@ -1478,7 +1478,7 @@
     "1005012048332402": 1794136369.073103,
     "1005011665465731": 1794137638.8201442,
     "1005012377459743": 1794485990.5871184,
-    "1005009460475870": 1794433244.1988828,
+    "1005009460475870": 1794496858.1106308,
     "1005009649079564": 1794145536.5317988,
     "1005007038022940": 1794146648.256951,
     "1005007981362777": 1794146655.1062205,
@@ -2556,7 +2556,8 @@
     "Inphic A9 PRO MAX Wireless Gaming Mouse",
     "realme P4 Lite Smartphone NFC 6300mAh Battery",
     "Honor Win RT2",
-    "MCHOSE A7 V3 Pro"
+    "MCHOSE A7 V3 Pro",
+    "سماعات Fifine Ampligame H6 7.1 RGB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3439,7 +3440,7 @@
     "Honor 600s CN (8/256)": 1794485990.5871184,
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
     "Blackview Mega 5": 1794490419.3986382,
-    "Warvank X8 Wireless Gaming Mouse": 1794433244.1988828,
+    "Warvank X8 Wireless Gaming Mouse": 1794496858.1106308,
     "Xiaoxin Pad Pro 2025 (8/128GB)": 1794475091.4412947,
     "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": 1794145536.5317988,
     "Lenovo Thinkplus XT88": 1794146648.256951,
@@ -3563,11 +3564,10 @@
     "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794480064.6967885,
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191,
     "Honor Win RT2": 1794487083.9711623,
-    "MCHOSE A7 V3 Pro": 1794489491.8874733
+    "MCHOSE A7 V3 Pro": 1794489491.8874733,
+    "سماعات Fifine Ampligame H6 7.1 RGB": 1794496851.9006197
   },
   "published_post_keys": [
-    "aniscoupons:32804",
-    "lodydeals:45850",
     "lodydeals:45422",
     "ecksdeal:5867",
     "lodydeals:45944",
@@ -4565,19 +4565,21 @@
     "aniscoupons:34696",
     "zedstoreonline:40005",
     "aniscoupons:34699",
-    "zedstoreonline:40009"
+    "zedstoreonline:40009",
+    "ecksdeal:6057",
+    "aniscoupons:34702"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794496486.6001465,
+  "last_run_time": 1794496858.1106308,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6056,
-      "last_check_time": 1794419029.2500024
+      "last_message_id": 6057,
+      "last_check_time": 1794496853.9442635
     },
     "lodydeals": {
-      "last_message_id": 46411,
-      "last_check_time": 1794496664.3808615
+      "last_message_id": 46412,
+      "last_check_time": 1794496847.5441957
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4600,8 +4602,8 @@
       "last_check_time": 1794496488.657194
     },
     "aniscoupons": {
-      "last_message_id": 34701,
-      "last_check_time": 1794496492.385203
+      "last_message_id": 34702,
+      "last_check_time": 1794496860.1525567
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -5160,7 +5162,7 @@
     "1005008636930795": 31.5,
     "1005013083645836": 304.4,
     "1005008703989845": 24.8,
-    "1005008060391372": 33.5,
+    "1005008060391372": 31.38,
     "1005012593794312": 241.5,
     "1005008357913212": 40.5,
     "1005012254132930": 15.2,
@@ -22145,6 +22147,26 @@
       "price": 276.3,
       "timestamp": 1794496486.6001465,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6057": {
+      "channel_msg_id": 2504,
+      "product_id": "1005008060391372",
+      "title": "سماعات Fifine Ampligame H6 7.1 RGB",
+      "channel": "ecksdeal",
+      "source_msg_id": 6057,
+      "price": 31.38,
+      "timestamp": 1794496851.9006197,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34702": {
+      "channel_msg_id": 2505,
+      "product_id": "1005009460475870",
+      "title": "Warvank X8 Wireless Gaming Mouse",
+      "channel": "aniscoupons",
+      "source_msg_id": 34702,
+      "price": 6.7,
+      "timestamp": 1794496858.1106308,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22153,17 +22175,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794496493.0095105,
+    "last_deal_post_time": 1794496860.9439049,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794496670.300808,
+    "last_sweep_time": 1794496864.3999965,
     "last_sweep_times": {
-      "algeria": 1794496667.502133,
-      "france": 1794496670.300808
+      "algeria": 1794496860.925873,
+      "france": 1794496864.3999965
     },
     "last_deal_post_times": {
-      "algeria": 1794496493.0095105
+      "algeria": 1794496860.9439049
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22851,7 +22873,7 @@
     "1005007038130594": "lodydeals",
     "1005008248187128": "lodydeals",
     "1005013053381984": "aniscoupons",
-    "1005008060391372": "aniscoupons",
+    "1005008060391372": "ecksdeal",
     "1005010209911111": "bnddeals",
     "1005008295555234": "lodydeals",
     "1005008645323478": "zedstoreonline",
@@ -22872,7 +22894,7 @@
     "1005012048332402": "aniscoupons",
     "1005011665465731": "lodydeals",
     "1005012377459743": "aniscoupons",
-    "1005009460475870": "zedstoreonline",
+    "1005009460475870": "aniscoupons",
     "1005009649079564": "zedstoreonline",
     "1005007038022940": "lodydeals",
     "1005007981362777": "lodydeals",
@@ -23831,7 +23853,7 @@
     "Honor 600s CN (8/256)": "aniscoupons",
     "ويبكام OBSBOT MEET 2 Webcam 4K": "ecksdeal",
     "Blackview Mega 5": "aniscoupons",
-    "Warvank X8 Wireless Gaming Mouse": "zedstoreonline",
+    "Warvank X8 Wireless Gaming Mouse": "aniscoupons",
     "Xiaoxin Pad Pro 2025 (8/128GB)": "aniscoupons",
     "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": "zedstoreonline",
     "Lenovo Thinkplus XT88": "lodydeals",
@@ -23955,7 +23977,8 @@
     "Inphic A9 PRO MAX Wireless Gaming Mouse": "zedstoreonline",
     "realme P4 Lite Smartphone NFC 6300mAh Battery": "aniscoupons",
     "Honor Win RT2": "aniscoupons",
-    "MCHOSE A7 V3 Pro": "aniscoupons"
+    "MCHOSE A7 V3 Pro": "aniscoupons",
+    "سماعات Fifine Ampligame H6 7.1 RGB": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
