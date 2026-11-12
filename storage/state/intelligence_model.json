@@ -28,7 +28,7 @@
       "ewma": 0.8309
     },
     "zedstoreonline": {
-      "seen": 71,
+      "seen": 72,
       "published": 31,
       "skipped": 0,
       "ewma": 0.9624
@@ -40,7 +40,7 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 119,
+      "seen": 120,
       "published": 96,
       "skipped": 0,
       "ewma": 0.9994
@@ -48,7 +48,7 @@
   },
   "category_stats": {
     "other": {
-      "seen": 61,
+      "seen": 62,
       "published": 48,
       "skipped": 0,
       "ewma": 0.9908
@@ -60,7 +60,7 @@
       "ewma": 0.9132
     },
     "phones": {
-      "seen": 96,
+      "seen": 97,
       "published": 53,
       "skipped": 0,
       "ewma": 0.9939
@@ -444,31 +444,15 @@
     ]
   },
   "counters": {
-    "scored": 221,
-    "verdict_publish": 209,
+    "scored": 223,
+    "verdict_publish": 211,
     "verdict_hold": 12,
     "verdict_skip": 0,
     "published": 143,
     "skipped": 0
   },
-  "score_sum": 16001.44,
+  "score_sum": 16150.11,
   "recent_decisions": [
-    {
-      "ts": 1794390407,
-      "channel": "bnddeals",
-      "category": "phones",
-      "product_id": "1005012407874415",
-      "score": 70.54,
-      "verdict": "publish"
-    },
-    {
-      "ts": 1794390754,
-      "channel": "lodydeals",
-      "category": "phones",
-      "product_id": "1005013422094858",
-      "score": 72.72,
-      "verdict": "publish"
-    },
     {
       "ts": 1794390766,
       "channel": "zedstoreonline",
@@ -2052,7 +2036,23 @@
       "product_id": "1005007916078341",
       "score": 68.59,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794474714,
+      "channel": "zedstoreonline",
+      "category": "other",
+      "product_id": "1005010413332383",
+      "score": 65.46,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794474718,
+      "channel": "aniscoupons",
+      "category": "phones",
+      "product_id": "1005012931209980",
+      "score": 83.21,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794474352.513045
+  "updated_at": 1794474718.9335375
 }
