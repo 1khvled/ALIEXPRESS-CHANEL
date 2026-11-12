@@ -753,7 +753,8 @@
     "1005005471311412",
     "1005012915663790",
     "1005013560596944",
-    "1005007038882010"
+    "1005007038882010",
+    "1005007345327497"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1522,7 +1523,8 @@
     "1005005471311412": 1794439539.8661358,
     "1005012915663790": 1794439916.4928079,
     "1005013560596944": 1794470859.4033997,
-    "1005007038882010": 1794471412.477501
+    "1005007038882010": 1794471412.477501,
+    "1005007345327497": 1794472329.794574
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2506,7 +2508,8 @@
     "FIFINE K688W USB XLR MIC",
     "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra",
     "12V CORDLESS ELECTRIC DRILL",
-    "FORSINING MECHANICAL SKELETON WATCH"
+    "FORSINING MECHANICAL SKELETON WATCH",
+    "ميزان رقمي محمول لحقائب السفر"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3495,10 +3498,10 @@
     "FIFINE K688W USB XLR MIC": 1794439743.6258593,
     "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra": 1794439916.4928079,
     "12V CORDLESS ELECTRIC DRILL": 1794470859.4033997,
-    "FORSINING MECHANICAL SKELETON WATCH": 1794471412.477501
+    "FORSINING MECHANICAL SKELETON WATCH": 1794471412.477501,
+    "ميزان رقمي محمول لحقائب السفر": 1794472329.794574
   },
   "published_post_keys": [
-    "aniscoupons:33047",
     "aniscoupons:33053",
     "aniscoupons:32741",
     "ecksdeal:5957",
@@ -4497,11 +4500,12 @@
     "aniscoupons:34615",
     "aniscoupons:34617",
     "aniscoupons:34618",
-    "aniscoupons:34619"
+    "aniscoupons:34619",
+    "zedstoreonline:39947"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794471958.5920799,
+  "last_run_time": 1794472329.794574,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4528,8 +4532,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39945,
-      "last_check_time": 1794471955.148505
+      "last_message_id": 39947,
+      "last_check_time": 1794472331.8618634
     },
     "aniscoupons": {
       "last_message_id": 34619,
@@ -5188,7 +5192,8 @@
     "1005005471311412": 7.7,
     "1005012915663790": 56.8,
     "1005013560596944": 9.6,
-    "1005007038882010": 8.4
+    "1005007038882010": 8.4,
+    "1005007345327497": 2.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -21183,6 +21188,16 @@
       "price": 217.8,
       "timestamp": 1794471958.5920799,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39947": {
+      "channel_msg_id": 2415,
+      "product_id": "1005007345327497",
+      "title": "ميزان رقمي محمول لحقائب السفر",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39947,
+      "price": 2.4,
+      "timestamp": 1794472329.794574,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21191,17 +21206,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794471961.4249105,
+    "last_deal_post_time": 1794472333.2794461,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794472150.1442,
+    "last_sweep_time": 1794472336.1334531,
     "last_sweep_times": {
-      "algeria": 1794472147.216969,
-      "france": 1794472150.1442
+      "algeria": 1794472333.249508,
+      "france": 1794472336.1334531
     },
     "last_deal_post_times": {
-      "algeria": 1794471961.4249105
+      "algeria": 1794472333.2794461
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -21970,7 +21985,8 @@
     "1005005471311412": "aniscoupons",
     "1005012915663790": "aniscoupons",
     "1005013560596944": "aniscoupons",
-    "1005007038882010": "aniscoupons"
+    "1005007038882010": "aniscoupons",
+    "1005007345327497": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -22961,7 +22977,8 @@
     "FIFINE K688W USB XLR MIC": "aniscoupons",
     "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra": "aniscoupons",
     "12V CORDLESS ELECTRIC DRILL": "aniscoupons",
-    "FORSINING MECHANICAL SKELETON WATCH": "aniscoupons"
+    "FORSINING MECHANICAL SKELETON WATCH": "aniscoupons",
+    "ميزان رقمي محمول لحقائب السفر": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -23758,7 +23775,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8373",
     "lodydeals:45790",
     "aniscoupons:33113",
     "megaphonna:8540",
@@ -24757,7 +24773,8 @@
     "zedstoreonline:39942",
     "zedstoreonline:39943",
     "zedstoreonline:39944",
-    "zedstoreonline:39945"
+    "zedstoreonline:39945",
+    "zedstoreonline:39946"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
