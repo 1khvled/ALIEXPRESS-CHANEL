@@ -1438,7 +1438,7 @@
     "1005012925301774": 1794348808.2825344,
     "1005012959738411": 1794304640.3506072,
     "1005008357913212": 1794473249.7212825,
-    "1005008703989845": 1794412380.423559,
+    "1005008703989845": 1794475632.0153844,
     "1005007162099601": 1794407765.5158777,
     "1005007038130594": 1794393500.1320646,
     "1005008248187128": 1794057675.8729835,
@@ -3324,7 +3324,7 @@
     "Netac SSD NVME M2 250GB": 1794422876.857545,
     "Essager 20W GaN + cable": 1794439910.7944255,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
-    "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794412380.423559,
+    "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794475632.0153844,
     "Fifine Gaming Headset H9W": 1794433999.0419908,
     "Fifine Gaming Headset H6": 1794424534.1435025,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794436379.3016446,
@@ -3506,7 +3506,6 @@
     "ميكروفون لاسلكي احترافي MAONO PD100W بمدى 50 متر مع تقليل": 1794475084.685867
   },
   "published_post_keys": [
-    "zedstoreonline:38550",
     "couponsglobal:48875",
     "aniscoupons:32799",
     "lodydeals:45873",
@@ -4505,19 +4504,20 @@
     "aniscoupons:34627",
     "aniscoupons:34628",
     "zedstoreonline:39955",
-    "aniscoupons:34630"
+    "aniscoupons:34630",
+    "aniscoupons:34632"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794475091.4412947,
+  "last_run_time": 1794475632.0153844,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
       "last_check_time": 1794419029.2500024
     },
     "lodydeals": {
-      "last_message_id": 46404,
-      "last_check_time": 1794440088.965148
+      "last_message_id": 46405,
+      "last_check_time": 1794475626.198084
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4536,12 +4536,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39956,
-      "last_check_time": 1794475260.0685525
+      "last_message_id": 39957,
+      "last_check_time": 1794475628.183747
     },
     "aniscoupons": {
-      "last_message_id": 34631,
-      "last_check_time": 1794475446.673259
+      "last_message_id": 34632,
+      "last_check_time": 1794475634.0647979
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -21333,6 +21333,16 @@
       "price": 212.48,
       "timestamp": 1794475091.4412947,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34632": {
+      "channel_msg_id": 2429,
+      "product_id": "1005008703989845",
+      "title": "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34632,
+      "price": 24.8,
+      "timestamp": 1794475632.0153844,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21341,17 +21351,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794475094.2311976,
+    "last_deal_post_time": 1794475634.790369,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794475450.270843,
+    "last_sweep_time": 1794475637.7337406,
     "last_sweep_times": {
-      "algeria": 1794475447.3994706,
-      "france": 1794475450.270843
+      "algeria": 1794475634.7728536,
+      "france": 1794475637.7337406
     },
     "last_deal_post_times": {
-      "algeria": 1794475094.2311976
+      "algeria": 1794475634.790369
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23912,7 +23922,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45540",
     "zedstoreonline:38794",
     "lodydeals:45869",
     "aniscoupons:33052",
@@ -24911,7 +24920,8 @@
     "zedstoreonline:39954",
     "aniscoupons:34629",
     "zedstoreonline:39956",
-    "aniscoupons:34631"
+    "aniscoupons:34631",
+    "zedstoreonline:39957"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
