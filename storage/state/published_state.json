@@ -1012,7 +1012,7 @@
     "1005010812635861": 1792160246.020243,
     "1005008500550817": 1792025664.1703467,
     "1005009834132291": 1794478912.5670652,
-    "1005008077568655": 1794430876.2525523,
+    "1005008077568655": 1794493355.4264135,
     "1005009774318553": 1793543777.6383033,
     "1005012585389764": 1792061322.5579543,
     "1005011997237872": 1793543770.1912897,
@@ -3488,7 +3488,7 @@
     "Inphic PG1 RGB Wired Gaming Mouse": 1794480643.2529733,
     "Anker Q20i Hybrid Active": 1794480460.355499,
     "CUSU CV3500Q 2TB M.2": 1794305012.9961731,
-    "MACHENIKE G5Pro Max SE With Charging Dock": 1794430876.2525523,
+    "MACHENIKE G5Pro Max SE With Charging Dock": 1794493355.4264135,
     "Xiaoxin Pad Pro GT (8/256)": 1794308897.9947796,
     "Attack Shark X11": 1794480454.9508715,
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794436007.5288515,
@@ -3566,7 +3566,6 @@
     "MCHOSE A7 V3 Pro": 1794489491.8874733
   },
   "published_post_keys": [
-    "test_channel:1792098020",
     "lodydeals:45414",
     "lodydeals:45468",
     "megaphonna:8509",
@@ -4565,11 +4564,12 @@
     "aniscoupons:34692",
     "zedstoreonline:40002",
     "zedstoreonline:40003",
-    "zedstoreonline:40004"
+    "zedstoreonline:40004",
+    "aniscoupons:34696"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794492985.70064,
+  "last_run_time": 1794493355.4264135,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4600,8 +4600,8 @@
       "last_check_time": 1794492987.7689784
     },
     "aniscoupons": {
-      "last_message_id": 34695,
-      "last_check_time": 1794492989.7410197
+      "last_message_id": 34696,
+      "last_check_time": 1794493357.4958746
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -22105,6 +22105,16 @@
       "price": 19.5,
       "timestamp": 1794492985.70064,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34696": {
+      "channel_msg_id": 2499,
+      "product_id": "1005008077568655",
+      "title": "MACHENIKE G5Pro Max SE With Charging Dock",
+      "channel": "aniscoupons",
+      "source_msg_id": 34696,
+      "price": 41.77,
+      "timestamp": 1794493355.4264135,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22113,17 +22123,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794492990.4398577,
+    "last_deal_post_time": 1794493358.3889077,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794493165.157513,
+    "last_sweep_time": 1794493361.3109305,
     "last_sweep_times": {
-      "algeria": 1794493162.2875853,
-      "france": 1794493165.157513
+      "algeria": 1794493358.3576372,
+      "france": 1794493361.3109305
     },
     "last_deal_post_times": {
-      "algeria": 1794492990.4398577
+      "algeria": 1794493358.3889077
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
