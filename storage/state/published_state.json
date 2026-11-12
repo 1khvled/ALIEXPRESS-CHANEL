@@ -817,7 +817,7 @@
     "1005006603602562": 1790941207.5310047,
     "1005010721042860": 1793656098.242545,
     "1005009517247552": 1790941221.8823678,
-    "1005012191191893": 1794414780.2759852,
+    "1005012191191893": 1794490419.3986382,
     "1005012968221708": 1793542591.509991,
     "9998883454": 1790943454.3504107,
     "9998883497": 1790943497.723828,
@@ -3438,7 +3438,7 @@
     "Lenovo LE257 Headphones": 1794137638.8201442,
     "Honor 600s CN (8/256)": 1794485990.5871184,
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
-    "Blackview Mega 5": 1794414780.2759852,
+    "Blackview Mega 5": 1794490419.3986382,
     "Warvank X8 Wireless Gaming Mouse": 1794433244.1988828,
     "Xiaoxin Pad Pro 2025 (8/128GB)": 1794475091.4412947,
     "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": 1794145536.5317988,
@@ -3566,7 +3566,6 @@
     "MCHOSE A7 V3 Pro": 1794489491.8874733
   },
   "published_post_keys": [
-    "zedstoreonline:38533",
     "lodydeals:45406",
     "couponsglobal:48804",
     "ecksdeal:5945",
@@ -4565,11 +4564,12 @@
     "aniscoupons:34677",
     "zedstoreonline:39995",
     "zedstoreonline:39996",
-    "aniscoupons:34684"
+    "aniscoupons:34684",
+    "aniscoupons:34687"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794489491.8874733,
+  "last_run_time": 1794490419.3986382,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4600,8 +4600,8 @@
       "last_check_time": 1794489297.3709888
     },
     "aniscoupons": {
-      "last_message_id": 34686,
-      "last_check_time": 1794490047.3664129
+      "last_message_id": 34687,
+      "last_check_time": 1794490421.4560325
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -22005,6 +22005,16 @@
       "price": 44.8,
       "timestamp": 1794489491.8874733,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34687": {
+      "channel_msg_id": 2489,
+      "product_id": "1005012191191893",
+      "title": "Blackview Mega 5",
+      "channel": "aniscoupons",
+      "source_msg_id": 34687,
+      "price": 228.3,
+      "timestamp": 1794490419.3986382,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22013,17 +22023,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794489494.889279,
+    "last_deal_post_time": 1794490422.2664742,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794490223.9876814,
+    "last_sweep_time": 1794490425.2446194,
     "last_sweep_times": {
-      "algeria": 1794490221.1223705,
-      "france": 1794490223.9876814
+      "algeria": 1794490422.2427454,
+      "france": 1794490425.2446194
     },
     "last_deal_post_times": {
-      "algeria": 1794489494.889279
+      "algeria": 1794490422.2664742
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -24612,7 +24622,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8670",
     "aniscoupons:33325",
     "megaphonna:8507",
     "ecksdeal:5910",
@@ -25611,7 +25620,8 @@
     "aniscoupons:34682",
     "zedstoreonline:39997",
     "aniscoupons:34685",
-    "aniscoupons:34686"
+    "aniscoupons:34686",
+    "aniscoupons:34683"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
