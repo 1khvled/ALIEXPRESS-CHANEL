@@ -772,7 +772,7 @@
     "1005010297094897"
   ],
   "published_product_timestamps": {
-    "1005012973772517": 1793793721.6835766,
+    "1005012973772517": 1794500732.7845657,
     "1005010219205081": 1791192360.1916943,
     "999111222": 1793967702.0374625,
     "100500999912345": 1793877703.0824502,
@@ -1461,7 +1461,7 @@
     "1005010209911111": 1794068056.674266,
     "1005008295555234": 1794073127.8664527,
     "1005008645323478": 1794491882.9016292,
-    "1005008636930795": 1794422876.857545,
+    "1005008636930795": 1794500738.761835,
     "1005006260870758": 1794250569.5221198,
     "1005009759580502": 1794331533.1223195,
     "1005009120888793": 1794490594.9899428,
@@ -3244,7 +3244,7 @@
     "Anker Soundcoure Life Q30": 1793607798.5770764,
     "CUSU SSD SATA 512GB": 1793608541.760777,
     "OPPO Find X9 PRO 12/256GB": 1793611292.7491462,
-    "Redmi Note 17 5G 6/256GB": 1793793721.6835766,
+    "Redmi Note 17 5G 6/256GB": 1794500732.7845657,
     "Honor 600 Pro 12/256GB": 1793613121.9226618,
     "HONOR X9D  12/256": 1793613330.7911599,
     "OnePlus 13 12/256": 1793613346.3595238,
@@ -3367,7 +3367,7 @@
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": 1793966721.1839278,
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": 1793966727.646043,
     "GameSir X5 Lite Game Controller": 1794480069.5549967,
-    "Netac SSD NVME M2 250GB": 1794422876.857545,
+    "Netac SSD NVME M2 250GB": 1794500738.761835,
     "Essager 20W GaN + cable": 1794439910.7944255,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794475632.0153844,
@@ -3570,8 +3570,6 @@
     "MCHOSE A7 V3 Lightweight": 1794500546.592492
   },
   "published_post_keys": [
-    "lodydeals:45882",
-    "aniscoupons:32739",
     "megaphonna:8606",
     "lodydeals:45423",
     "lodydeals:45831",
@@ -4569,19 +4567,21 @@
     "lodydeals:46407",
     "lodydeals:46412",
     "lodydeals:46413",
-    "lodydeals:46414"
+    "lodydeals:46414",
+    "lodydeals:46415",
+    "zedstoreonline:40013"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794500546.592492,
+  "last_run_time": 1794500738.761835,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6057,
       "last_check_time": 1794496853.9442635
     },
     "lodydeals": {
-      "last_message_id": 46414,
-      "last_check_time": 1794500548.6663918
+      "last_message_id": 46415,
+      "last_check_time": 1794500734.8419406
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4600,8 +4600,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40012,
-      "last_check_time": 1794500390.2910125
+      "last_message_id": 40013,
+      "last_check_time": 1794500740.8594267
     },
     "aniscoupons": {
       "last_message_id": 34709,
@@ -4613,7 +4613,7 @@
     }
   },
   "published_product_prices": {
-    "1005012973772517": 189.23,
+    "1005012973772517": 217.8,
     "1005010219205081": 57.2,
     "1005007805638431": 21.7,
     "1005007027334636": 13.49,
@@ -22259,6 +22259,26 @@
       "price": 34.1,
       "timestamp": 1794500546.592492,
       "status": "ACTIVE"
+    },
+    "lodydeals:46415": {
+      "channel_msg_id": 2515,
+      "product_id": "1005012973772517",
+      "title": "Redmi Note 17 5G 6/256GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46415,
+      "price": 217.8,
+      "timestamp": 1794500732.7845657,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:40013": {
+      "channel_msg_id": 2516,
+      "product_id": "1005008636930795",
+      "title": "Netac SSD NVME M2 250GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40013,
+      "price": 31.5,
+      "timestamp": 1794500738.761835,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22267,17 +22287,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794500551.7053463,
+    "last_deal_post_time": 1794500742.0751624,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794500555.692475,
+    "last_sweep_time": 1794500746.153346,
     "last_sweep_times": {
-      "algeria": 1794500551.6747077,
-      "france": 1794500555.692475
+      "algeria": 1794500742.050703,
+      "france": 1794500746.153346
     },
     "last_deal_post_times": {
-      "algeria": 1794500551.7053463
+      "algeria": 1794500742.0751624
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
