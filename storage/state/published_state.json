@@ -994,7 +994,7 @@
     "1005007920266509": 1793966861.2399917,
     "1005009275536960": 1791975930.016452,
     "1005007767322935": 1791975934.9659944,
-    "1005012571601398": 1794431585.5032148,
+    "1005012571601398": 1794484875.2933695,
     "1005013054007275": 1794223210.002915,
     "1005011899097443": 1794213297.7367866,
     "1005012865117890": 1793613385.3577175,
@@ -3528,7 +3528,7 @@
     "Essager 2in1 USB Type C  60W": 1794420685.287832,
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551,
     "KOOTION M.2 512GB 7200Mbs": 1794430852.2821708,
-    "HONOR X80 PRO MAX": 1794431585.5032148,
+    "HONOR X80 PRO MAX": 1794484875.2933695,
     "DJI Osmo mobile": 1794432694.0507162,
     "OPPO K15 12/256GB": 1794436740.624044,
     "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794437490.1572993,
@@ -3558,7 +3558,6 @@
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191
   },
   "published_post_keys": [
-    "aniscoupons:32756",
     "lodydeals:45804",
     "zedstoreonline:38804",
     "lodydeals:45851",
@@ -4557,11 +4556,12 @@
     "aniscoupons:34654",
     "aniscoupons:34661",
     "aniscoupons:34663",
-    "aniscoupons:34665"
+    "aniscoupons:34665",
+    "aniscoupons:34666"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794484695.7251022,
+  "last_run_time": 1794484875.2933695,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4592,8 +4592,8 @@
       "last_check_time": 1794484328.2743769
     },
     "aniscoupons": {
-      "last_message_id": 34665,
-      "last_check_time": 1794484697.802356
+      "last_message_id": 34666,
+      "last_check_time": 1794484877.3536773
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -21835,6 +21835,16 @@
       "price": 378.14,
       "timestamp": 1794484695.7251022,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34666": {
+      "channel_msg_id": 2473,
+      "product_id": "1005012571601398",
+      "title": "HONOR X80 PRO MAX",
+      "channel": "aniscoupons",
+      "source_msg_id": 34666,
+      "price": 273.5,
+      "timestamp": 1794484875.2933695,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21843,17 +21853,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794484698.754662,
+    "last_deal_post_time": 1794484878.0934196,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794484701.6132212,
+    "last_sweep_time": 1794484880.8005917,
     "last_sweep_times": {
-      "algeria": 1794484698.7222738,
-      "france": 1794484701.6132212
+      "algeria": 1794484878.068914,
+      "france": 1794484880.8005917
     },
     "last_deal_post_times": {
-      "algeria": 1794484698.754662
+      "algeria": 1794484878.0934196
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
