@@ -1387,7 +1387,7 @@
     "1005011742640729": 1793650956.0417867,
     "1005013154935332": 1793655734.5359836,
     "1005012774075728": 1793656103.0944026,
-    "1005006783028347": 1794419203.5335758,
+    "1005006783028347": 1794493913.1325247,
     "1005007010104970": 1793656134.827825,
     "1005008637113849": 1793656145.7068295,
     "1005010419207841": 1793656214.2446048,
@@ -3409,7 +3409,7 @@
     "KOOTION SSD SATA  240GB": 1794051434.2488248,
     "Xiaomi Redmi Note 17 Pro 5G Global Version": 1794060065.5449874,
     "Magcubic  HY350 Max 900ANSI": 1794492434.7759526,
-    "Toocki 60W Car Charger and cable": 1794419203.5335758,
+    "Toocki 60W Car Charger and cable": 1794493913.1325247,
     "Hollyland Lark M2 Wireless Mic": 1794063654.6498907,
     "XUNYOU-LINK 4G LTE WiFi 6 Portable Router": 1794064385.819615,
     "XUNYOU-LINK 4G SIM WiFi": 1794065862.849844,
@@ -3566,7 +3566,6 @@
     "MCHOSE A7 V3 Pro": 1794489491.8874733
   },
   "published_post_keys": [
-    "lodydeals:45414",
     "lodydeals:45468",
     "megaphonna:8509",
     "aniscoupons:32804",
@@ -4565,11 +4564,12 @@
     "zedstoreonline:40002",
     "zedstoreonline:40003",
     "zedstoreonline:40004",
-    "aniscoupons:34696"
+    "aniscoupons:34696",
+    "zedstoreonline:40005"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794493355.4264135,
+  "last_run_time": 1794493913.1325247,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4596,12 +4596,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40004,
-      "last_check_time": 1794492987.7689784
+      "last_message_id": 40005,
+      "last_check_time": 1794493915.2033944
     },
     "aniscoupons": {
-      "last_message_id": 34697,
-      "last_check_time": 1794493723.4918797
+      "last_message_id": 34698,
+      "last_check_time": 1794493917.745478
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -22115,6 +22115,16 @@
       "price": 41.77,
       "timestamp": 1794493355.4264135,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40005": {
+      "channel_msg_id": 2500,
+      "product_id": "1005006783028347",
+      "title": "Toocki 60W Car Charger and cable",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40005,
+      "price": 2.7,
+      "timestamp": 1794493913.1325247,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22123,17 +22133,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794493358.3889077,
+    "last_deal_post_time": 1794493918.5860734,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794493727.3099353,
+    "last_sweep_time": 1794493922.4118476,
     "last_sweep_times": {
-      "algeria": 1794493724.2839968,
-      "france": 1794493727.3099353
+      "algeria": 1794493918.555919,
+      "france": 1794493922.4118476
     },
     "last_deal_post_times": {
-      "algeria": 1794493358.3889077
+      "algeria": 1794493918.5860734
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -24722,7 +24732,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33328",
     "aniscoupons:32951",
     "zedstoreonline:38807",
     "aniscoupons:33443",
@@ -25721,7 +25730,8 @@
     "aniscoupons:34693",
     "aniscoupons:34694",
     "aniscoupons:34695",
-    "aniscoupons:34697"
+    "aniscoupons:34697",
+    "aniscoupons:34698"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
