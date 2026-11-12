@@ -28,7 +28,7 @@
       "ewma": 0.9654
     },
     "zedstoreonline": {
-      "seen": 120,
+      "seen": 121,
       "published": 63,
       "skipped": 0,
       "ewma": 0.9973
@@ -40,8 +40,8 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 201,
-      "published": 158,
+      "seen": 202,
+      "published": 159,
       "skipped": 0,
       "ewma": 0.9994
     },
@@ -60,10 +60,10 @@
       "ewma": 0.9994
     },
     "pc": {
-      "seen": 61,
-      "published": 38,
+      "seen": 63,
+      "published": 39,
       "skipped": 0,
-      "ewma": 0.979
+      "ewma": 0.9807
     },
     "phones": {
       "seen": 153,
@@ -93,6 +93,7 @@
   "product_prices": {
     "1005008741607292": [
       110.83,
+      110.8,
       110.8
     ],
     "1005007162099601": [
@@ -643,31 +644,15 @@
     ]
   },
   "counters": {
-    "scored": 373,
-    "verdict_publish": 350,
+    "scored": 375,
+    "verdict_publish": 352,
     "verdict_hold": 23,
     "verdict_skip": 0,
-    "published": 258,
+    "published": 259,
     "skipped": 0
   },
-  "score_sum": 26993.21,
+  "score_sum": 27146.02,
   "recent_decisions": [
-    {
-      "ts": 1794436377,
-      "channel": "aniscoupons",
-      "category": "audio",
-      "product_id": "1005010702983351",
-      "score": 80.09,
-      "verdict": "publish"
-    },
-    {
-      "ts": 1794436738,
-      "channel": "aniscoupons",
-      "category": "phones",
-      "product_id": "1005012809141747",
-      "score": 79.66,
-      "verdict": "publish"
-    },
     {
       "ts": 1794437130,
       "channel": "zedstoreonline",
@@ -2251,7 +2236,23 @@
       "product_id": "1005010702038861",
       "score": 81.61,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794520693,
+      "channel": "zedstoreonline",
+      "category": "pc",
+      "product_id": "1005008366962319",
+      "score": 72.28,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794520697,
+      "channel": "aniscoupons",
+      "category": "pc",
+      "product_id": "1005008741607292",
+      "score": 80.53,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794519963.7461631
+  "updated_at": 1794520699.7516181
 }

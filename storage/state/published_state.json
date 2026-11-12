@@ -1286,7 +1286,7 @@
     "1005013081060247": 1793543567.486626,
     "1005012498496817": 1793543578.6842017,
     "1005003413514494": 1793732921.385459,
-    "1005008741607292": 1794414971.7181702,
+    "1005008741607292": 1794520699.708655,
     "1005010158587315": 1793543677.5915465,
     "1005012790288780": 1793656271.0286891,
     "1005012345939726": 1793656202.4239671,
@@ -3540,7 +3540,7 @@
     "Somnambulist SSD 120GB": 1794500376.8953977,
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794492627.75024,
     "Realme P4 Power 8/256GB": 1794485983.772945,
-    "ASROCK X570M PRO4 MOTHERBOARD": 1794414971.7181702,
+    "ASROCK X570M PRO4 MOTHERBOARD": 1794520699.708655,
     "EASYSMX X05 PRO Controller": 1794478912.5670652,
     "ONEPLUS 16 12/256GB": 1794478726.13417,
     "Fifine H9 USB Gaming Headset": 1794492068.8537488,
@@ -3590,7 +3590,6 @@
     "WALRAM M.2  128GB": 1794515920.3397443
   },
   "published_post_keys": [
-    "lodydeals:45420",
     "test_channel:1792108342",
     "megaphonna:8570",
     "aniscoupons:33210",
@@ -4589,11 +4588,12 @@
     "aniscoupons:34733",
     "aniscoupons:34734",
     "aniscoupons:34735",
-    "zedstoreonline:40032"
+    "zedstoreonline:40032",
+    "aniscoupons:34740"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794519963.712076,
+  "last_run_time": 1794520699.708655,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6058,
@@ -4620,12 +4620,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40033,
-      "last_check_time": 1794520328.3037531
+      "last_message_id": 40034,
+      "last_check_time": 1794520694.3025043
     },
     "aniscoupons": {
-      "last_message_id": 34738,
-      "last_check_time": 1794520331.8492346
+      "last_message_id": 34740,
+      "last_check_time": 1794520701.7636423
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -22563,6 +22563,16 @@
       "price": 18.1,
       "timestamp": 1794519963.712076,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34740": {
+      "channel_msg_id": 2543,
+      "product_id": "1005008741607292",
+      "title": "ASROCK X570M PRO4 MOTHERBOARD",
+      "channel": "aniscoupons",
+      "source_msg_id": 34740,
+      "price": 110.8,
+      "timestamp": 1794520699.708655,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22571,17 +22581,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794519967.162457,
+    "last_deal_post_time": 1794520702.5659735,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794520509.0964553,
+    "last_sweep_time": 1794520704.9531996,
     "last_sweep_times": {
-      "algeria": 1794520506.8733933,
-      "france": 1794520509.0964553
+      "algeria": 1794520702.5418787,
+      "france": 1794520704.9531996
     },
     "last_deal_post_times": {
-      "algeria": 1794519967.162457
+      "algeria": 1794520702.5659735
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -25182,7 +25192,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:39185",
     "zedstoreonline:39189",
     "aniscoupons:33504",
     "aniscoupons:33505",
@@ -26181,7 +26190,8 @@
     "aniscoupons:34736",
     "aniscoupons:34737",
     "zedstoreonline:40033",
-    "aniscoupons:34738"
+    "aniscoupons:34738",
+    "zedstoreonline:40034"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
