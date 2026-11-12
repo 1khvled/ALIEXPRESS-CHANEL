@@ -761,7 +761,8 @@
     "1005012650636759",
     "1005011936109841",
     "1005012333024137",
-    "1005007822635375"
+    "1005007822635375",
+    "1005001849536579"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1414,7 +1415,7 @@
     "1005009313079431": 1794159522.2930505,
     "1005010702511858": 1793903106.9341598,
     "1005008554218453": 1793908979.1776278,
-    "1005012499433797": 1794413492.0212069,
+    "1005012499433797": 1794476184.5102937,
     "9998889309": 1793929309.3822134,
     "9998889332": 1793929332.5530465,
     "999888807": 1793930807.599727,
@@ -1538,7 +1539,8 @@
     "1005012650636759": 1794475838.0735118,
     "1005011936109841": 1794475842.5666552,
     "1005012333024137": 1794475849.927629,
-    "1005007822635375": 1794475884.0444102
+    "1005007822635375": 1794475884.0444102,
+    "1005001849536579": 1794476179.330803
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2531,7 +2533,8 @@
     "H96 MAX RK3518 2/8GB",
     "Lenovo Legion Y700 12/256GB",
     "S80 USB 3.2 Flash Drive 128GB",
-    "FANTECH SHOOTER III"
+    "FANTECH SHOOTER III",
+    "MAONO PM360TR Condenser Microphone"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3356,7 +3359,7 @@
     "Realme C100D 4G 4/128GB": 1794164698.641711,
     "HAYLOU Flowbuds N50 ANC": 1793970449.9003735,
     "Honor 600 Pro 12/256": 1794131798.3098254,
-    "HONOR Pad X8a (4/64GB)": 1794413492.0212069,
+    "HONOR Pad X8a (4/64GB)": 1794476184.5102937,
     "Magcubic HY350 Max 900ANSI": 1794414228.5787423,
     "Honor X9d (no charger)": 1794432132.8832204,
     "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1794433798.1228175,
@@ -3529,11 +3532,10 @@
     "H96 MAX RK3518 2/8GB": 1794475838.0735118,
     "Lenovo Legion Y700 12/256GB": 1794475842.5666552,
     "S80 USB 3.2 Flash Drive 128GB": 1794475849.927629,
-    "FANTECH SHOOTER III": 1794475884.0444102
+    "FANTECH SHOOTER III": 1794475884.0444102,
+    "MAONO PM360TR Condenser Microphone": 1794476179.330803
   },
   "published_post_keys": [
-    "aniscoupons:33108",
-    "pcgamingpart:7956",
     "couponsglobal:48779",
     "ecksdeal:5972",
     "lodydeals:45549",
@@ -4531,11 +4533,13 @@
     "lodydeals:46403",
     "lodydeals:46404",
     "zedstoreonline:39958",
-    "aniscoupons:34633"
+    "aniscoupons:34633",
+    "zedstoreonline:39959",
+    "aniscoupons:34634"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794476009.5322104,
+  "last_run_time": 1794476184.5102937,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4562,12 +4566,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39958,
-      "last_check_time": 1794475886.0987277
+      "last_message_id": 39959,
+      "last_check_time": 1794476181.375436
     },
     "aniscoupons": {
-      "last_message_id": 34633,
-      "last_check_time": 1794476011.6028383
+      "last_message_id": 34634,
+      "last_check_time": 1794476186.5500455
     },
     "bnddeals": {
       "last_message_id": 51291,
@@ -5117,7 +5121,7 @@
     "1005009313079431": 41.5,
     "1005010702511858": 59.8,
     "1005008554218453": 52.55,
-    "1005012499433797": 134.36,
+    "1005012499433797": 130.8,
     "1005008774483451": 40.1,
     "1005010635850450": 21.1,
     "1005006782986446": 6.7,
@@ -5229,7 +5233,8 @@
     "1005013525374520": 68.85,
     "1005012650636759": 23.12,
     "1005011936109841": 457.36,
-    "1005012333024137": 7.07
+    "1005012333024137": 7.07,
+    "1005001849536579": 20.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -21504,6 +21509,26 @@
       "price": 275.8,
       "timestamp": 1794476009.5322104,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39959": {
+      "channel_msg_id": 2443,
+      "product_id": "1005001849536579",
+      "title": "MAONO PM360TR Condenser Microphone",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39959,
+      "price": 20.5,
+      "timestamp": 1794476179.330803,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34634": {
+      "channel_msg_id": 2444,
+      "product_id": "1005012499433797",
+      "title": "HONOR Pad X8a (4/64GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34634,
+      "price": 130.8,
+      "timestamp": 1794476184.5102937,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21512,17 +21537,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794476012.465948,
+    "last_deal_post_time": 1794476187.0279515,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794476015.675966,
+    "last_sweep_time": 1794476190.7486796,
     "last_sweep_times": {
-      "algeria": 1794476012.4365942,
-      "france": 1794476015.675966
+      "algeria": 1794476187.0110264,
+      "france": 1794476190.7486796
     },
     "last_deal_post_times": {
-      "algeria": 1794476012.465948
+      "algeria": 1794476187.0279515
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22298,7 +22323,8 @@
     "1005013525374520": "lodydeals",
     "1005012650636759": "lodydeals",
     "1005011936109841": "lodydeals",
-    "1005012333024137": "lodydeals"
+    "1005012333024137": "lodydeals",
+    "1005001849536579": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -23298,7 +23324,8 @@
     "H96 MAX RK3518 2/8GB": "lodydeals",
     "Lenovo Legion Y700 12/256GB": "lodydeals",
     "S80 USB 3.2 Flash Drive 128GB": "lodydeals",
-    "FANTECH SHOOTER III": "zedstoreonline"
+    "FANTECH SHOOTER III": "zedstoreonline",
+    "MAONO PM360TR Condenser Microphone": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
