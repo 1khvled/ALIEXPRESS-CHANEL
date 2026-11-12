@@ -1294,7 +1294,7 @@
     "1005010114569881": 1793543824.1762173,
     "1005013053122560": 1794223202.4757502,
     "1005012322822595": 1793543961.1645148,
-    "1005009662812027": 1794431224.823109,
+    "1005009662812027": 1794498701.8625593,
     "1005005975560350": 1794492068.8537488,
     "1005012922578845": 1793544001.8628821,
     "1005011752891197": 1793613465.8475375,
@@ -3285,7 +3285,7 @@
     "HONOR Pad X8b (LTE 6/128GB)": 1794136369.073103,
     "[Clearance] realme 14T 5G Smartphone NFC Dimensity 6300 5G Processor": 1793613966.8608465,
     "RYZEN 5 9600X": 1793613978.6202738,
-    "Magcubic HY300 Max Projector": 1794431224.823109,
+    "Magcubic HY300 Max Projector": 1794498701.8625593,
     "AMD RYZEN 7 9800X3D": 1793615114.3091638,
     "Anker Space One ANC Headset": 1793616557.8235445,
     "بطاقة الأم Asrock X570M PRO4": 1793995902.130763,
@@ -3568,7 +3568,6 @@
     "سماعات Fifine Ampligame H6 7.1 RGB": 1794496851.9006197
   },
   "published_post_keys": [
-    "ecksdeal:5867",
     "lodydeals:45944",
     "zedstoreonline:38763",
     "zedstoreonline:38755",
@@ -4567,11 +4566,12 @@
     "zedstoreonline:40009",
     "ecksdeal:6057",
     "aniscoupons:34702",
-    "aniscoupons:34704"
+    "aniscoupons:34704",
+    "aniscoupons:34705"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794498509.0561047,
+  "last_run_time": 1794498701.8625593,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6057,
@@ -4598,12 +4598,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40009,
-      "last_check_time": 1794496488.657194
+      "last_message_id": 40010,
+      "last_check_time": 1794498698.1299057
     },
     "aniscoupons": {
-      "last_message_id": 34704,
-      "last_check_time": 1794498511.1172621
+      "last_message_id": 34705,
+      "last_check_time": 1794498703.9102395
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -22177,6 +22177,16 @@
       "price": 47.4,
       "timestamp": 1794498509.0561047,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34705": {
+      "channel_msg_id": 2507,
+      "product_id": "1005009662812027",
+      "title": "Magcubic HY300 Max Projector",
+      "channel": "aniscoupons",
+      "source_msg_id": 34705,
+      "price": 78.4,
+      "timestamp": 1794498701.8625593,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22185,17 +22195,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794498512.0385199,
+    "last_deal_post_time": 1794498704.7801154,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794498515.7457488,
+    "last_sweep_time": 1794498708.0257618,
     "last_sweep_times": {
-      "algeria": 1794498512.0133665,
-      "france": 1794498515.7457488
+      "algeria": 1794498704.761589,
+      "france": 1794498708.0257618
     },
     "last_deal_post_times": {
-      "algeria": 1794498512.0385199
+      "algeria": 1794498704.7801154
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -24785,7 +24795,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:33308",
     "aniscoupons:32992",
     "megaphonna:8521",
     "megaphonna:8446",
@@ -25784,7 +25793,8 @@
     "aniscoupons:34700",
     "zedstoreonline:40008",
     "aniscoupons:34701",
-    "aniscoupons:34703"
+    "aniscoupons:34703",
+    "zedstoreonline:40010"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
