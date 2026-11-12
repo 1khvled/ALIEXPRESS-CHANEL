@@ -1527,7 +1527,7 @@
     "1005013391950901": 1794420685.287832,
     "1005007477084001": 1794420689.8352551,
     "1005008774483451": 1794426765.2023578,
-    "1005012639349629": 1794431418.716995,
+    "1005012639349629": 1794484695.7251022,
     "1005010153422760": 1794432694.0507162,
     "1005012809141747": 1794436740.624044,
     "1005012912160949": 1794437490.1572993,
@@ -3095,7 +3095,7 @@
     "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": 1793490079.2945042,
     "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": 1793490090.28376,
     "POCO Pad C1 4/64": 1793490102.028307,
-    "IQOO Z11 Turbo": 1794431418.716995,
+    "IQOO Z11 Turbo": 1794484695.7251022,
     "Vivo X300 5G 12/256GB": 1793540023.002178,
     "VIVO X300 Pro China Version 50MP OIS 6.78 Inch AMOLED 120Hz Dimensity9500": 1793540051.7895243,
     "VIVO IQOO Z11 TURBO (12/256)": 1793540059.832893,
@@ -3558,7 +3558,6 @@
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794482375.9737191
   },
   "published_post_keys": [
-    "test_channel:1792166462",
     "aniscoupons:32756",
     "lodydeals:45804",
     "zedstoreonline:38804",
@@ -4557,11 +4556,12 @@
     "aniscoupons:34655",
     "aniscoupons:34654",
     "aniscoupons:34661",
-    "aniscoupons:34663"
+    "aniscoupons:34663",
+    "aniscoupons:34665"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794484334.0264623,
+  "last_run_time": 1794484695.7251022,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4592,8 +4592,8 @@
       "last_check_time": 1794484328.2743769
     },
     "aniscoupons": {
-      "last_message_id": 34664,
-      "last_check_time": 1794484336.1093457
+      "last_message_id": 34665,
+      "last_check_time": 1794484697.802356
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -21825,6 +21825,16 @@
       "price": 365.8,
       "timestamp": 1794484334.0264623,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34665": {
+      "channel_msg_id": 2472,
+      "product_id": "1005012639349629",
+      "title": "IQOO Z11 Turbo",
+      "channel": "aniscoupons",
+      "source_msg_id": 34665,
+      "price": 378.14,
+      "timestamp": 1794484695.7251022,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21833,17 +21843,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794484336.976584,
+    "last_deal_post_time": 1794484698.754662,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794484504.3984866,
+    "last_sweep_time": 1794484701.6132212,
     "last_sweep_times": {
-      "algeria": 1794484501.5230048,
-      "france": 1794484504.3984866
+      "algeria": 1794484698.7222738,
+      "france": 1794484701.6132212
     },
     "last_deal_post_times": {
-      "algeria": 1794484336.976584
+      "algeria": 1794484698.754662
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
