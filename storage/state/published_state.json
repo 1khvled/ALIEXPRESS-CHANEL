@@ -770,7 +770,8 @@
     "1005010210432531",
     "1005013422894128",
     "1005010297094897",
-    "1005009012821000"
+    "1005009012821000",
+    "1005013485724377"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1556,7 +1557,8 @@
     "1005010210432531": 1794506330.082156,
     "1005013422894128": 1794487083.9711623,
     "1005010297094897": 1794500546.592492,
-    "1005009012821000": 1794502225.0175712
+    "1005009012821000": 1794502225.0175712,
+    "1005013485724377": 1794510747.6816225
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2563,7 +2565,8 @@
     "MCHOSE A7 V3 Lightweight",
     "FANTECH SHOOTER III WGP13S",
     "DITONG X3Plus  4K WIFI6",
-    "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S"
+    "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S",
+    "realme Original Adapter SUPERVOOC Charger 45W"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3575,10 +3578,10 @@
     "MCHOSE A7 V3 Lightweight": 1794500546.592492,
     "FANTECH SHOOTER III WGP13S": 1794501299.95393,
     "DITONG X3Plus  4K WIFI6": 1794502225.0175712,
-    "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": 1794502591.7937624
+    "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": 1794502591.7937624,
+    "realme Original Adapter SUPERVOOC Charger 45W": 1794510747.6816225
   },
   "published_post_keys": [
-    "bnddeals:50883",
     "aniscoupons:33201",
     "lodydeals:45739",
     "aniscoupons:32701",
@@ -4577,11 +4580,12 @@
     "aniscoupons:34718",
     "aniscoupons:34719",
     "zedstoreonline:40020",
-    "aniscoupons:34720"
+    "aniscoupons:34720",
+    "aniscoupons:34722"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794508546.500024,
+  "last_run_time": 1794510747.6816225,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6057,
@@ -4612,8 +4616,8 @@
       "last_check_time": 1794507983.1409287
     },
     "aniscoupons": {
-      "last_message_id": 34721,
-      "last_check_time": 1794509645.0657578
+      "last_message_id": 34722,
+      "last_check_time": 1794510749.7382
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -5283,7 +5287,8 @@
     "1005009278114794": 11.9,
     "1005013422894128": 499.5,
     "1005010297094897": 34.1,
-    "1005009012821000": 87.8
+    "1005009012821000": 87.8,
+    "1005013485724377": 11.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -22398,6 +22403,16 @@
       "price": 285.9,
       "timestamp": 1794508546.500024,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34722": {
+      "channel_msg_id": 2528,
+      "product_id": "1005013485724377",
+      "title": "realme Original Adapter SUPERVOOC Charger 45W",
+      "channel": "aniscoupons",
+      "source_msg_id": 34722,
+      "price": 11.5,
+      "timestamp": 1794510747.6816225,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22406,17 +22421,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794508549.658595,
+    "last_deal_post_time": 1794510750.603685,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794510567.2809887,
+    "last_sweep_time": 1794510753.518272,
     "last_sweep_times": {
-      "algeria": 1794510563.541377,
-      "france": 1794510567.2809887
+      "algeria": 1794510750.578163,
+      "france": 1794510753.518272
     },
     "last_deal_post_times": {
-      "algeria": 1794508549.658595
+      "algeria": 1794510750.603685
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23200,7 +23215,8 @@
     "1005009278114794": "zedstoreonline",
     "1005013422894128": "aniscoupons",
     "1005010297094897": "lodydeals",
-    "1005009012821000": "lodydeals"
+    "1005009012821000": "lodydeals",
+    "1005013485724377": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -24214,7 +24230,8 @@
     "MCHOSE A7 V3 Lightweight": "lodydeals",
     "FANTECH SHOOTER III WGP13S": "lodydeals",
     "DITONG X3Plus  4K WIFI6": "lodydeals",
-    "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": "aniscoupons"
+    "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": "aniscoupons",
+    "realme Original Adapter SUPERVOOC Charger 45W": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
