@@ -762,7 +762,8 @@
     "1005011936109841",
     "1005012333024137",
     "1005007822635375",
-    "1005001849536579"
+    "1005001849536579",
+    "1005006967391791"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1793793721.6835766,
@@ -1198,7 +1199,7 @@
     "1005012864273120": 1793399494.1323898,
     "1005006967218963": 1793448582.9150612,
     "1005012675968319": 1793399525.3383162,
-    "1005010424638496": 1794414228.5787423,
+    "1005010424638496": 1794476813.180707,
     "1005010141682336": 1793399542.6698716,
     "1005006782790827": 1794159491.7570124,
     "1005012938359476": 1793448722.5382965,
@@ -1343,7 +1344,7 @@
     "1005011927267564": 1793728844.5794795,
     "1005008291023017": 1794471778.0830927,
     "1005012947477238": 1793612016.5356846,
-    "1005010121513376": 1794432132.8832204,
+    "1005010121513376": 1794476808.0801337,
     "1005009064526142": 1793613380.753295,
     "1005010009130696": 1793613403.4444478,
     "1005013465751932": 1793613440.9413722,
@@ -1464,7 +1465,7 @@
     "1005008384277561": 1794128872.1451216,
     "1005010155263623": 1794129971.1690388,
     "1005011572208218": 1794471958.5920799,
-    "1005012374550298": 1794312591.4470382,
+    "1005012374550298": 1794476801.4817152,
     "1005009851407234": 1794307242.7687027,
     "1005009738356108": 1794473432.2937162,
     "1005012953027259": 1794133977.9005425,
@@ -1540,7 +1541,8 @@
     "1005011936109841": 1794475842.5666552,
     "1005012333024137": 1794475849.927629,
     "1005007822635375": 1794475884.0444102,
-    "1005001849536579": 1794476179.330803
+    "1005001849536579": 1794476179.330803,
+    "1005006967391791": 1794476797.164376
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2534,7 +2536,8 @@
     "Lenovo Legion Y700 12/256GB",
     "S80 USB 3.2 Flash Drive 128GB",
     "FANTECH SHOOTER III",
-    "MAONO PM360TR Condenser Microphone"
+    "MAONO PM360TR Condenser Microphone",
+    "Machenike G5 Pro Gaming Controller"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3360,8 +3363,8 @@
     "HAYLOU Flowbuds N50 ANC": 1793970449.9003735,
     "Honor 600 Pro 12/256": 1794131798.3098254,
     "HONOR Pad X8a (4/64GB)": 1794476184.5102937,
-    "Magcubic HY350 Max 900ANSI": 1794414228.5787423,
-    "Honor X9d (no charger)": 1794432132.8832204,
+    "Magcubic HY350 Max 900ANSI": 1794476813.180707,
+    "Honor X9d (no charger)": 1794476808.0801337,
     "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1794433798.1228175,
     "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
@@ -3410,7 +3413,7 @@
     "Essager Mini 20W Type C Charger PD": 1794129971.1690388,
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794471958.5920799,
     "OnePlus Ace 6 12/256GB": 1794130143.129755,
-    "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": 1794312591.4470382,
+    "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": 1794476801.4817152,
     "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464,
     "Kootion X15 M.2 SSD NVMe 256GB": 1794134534.5760646,
     "Lenovo LE257 Headphones": 1794137638.8201442,
@@ -3533,13 +3536,10 @@
     "Lenovo Legion Y700 12/256GB": 1794475842.5666552,
     "S80 USB 3.2 Flash Drive 128GB": 1794475849.927629,
     "FANTECH SHOOTER III": 1794475884.0444102,
-    "MAONO PM360TR Condenser Microphone": 1794476179.330803
+    "MAONO PM360TR Condenser Microphone": 1794476179.330803,
+    "Machenike G5 Pro Gaming Controller": 1794476797.164376
   },
   "published_post_keys": [
-    "couponsglobal:48779",
-    "ecksdeal:5972",
-    "lodydeals:45549",
-    "megaphonna:8656",
     "pcgamingpart:8025",
     "aniscoupons:32733",
     "lodydeals:45560",
@@ -4535,19 +4535,23 @@
     "zedstoreonline:39958",
     "aniscoupons:34633",
     "zedstoreonline:39959",
-    "aniscoupons:34634"
+    "aniscoupons:34634",
+    "zedstoreonline:39960",
+    "zedstoreonline:39961",
+    "aniscoupons:34635",
+    "aniscoupons:34636"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794476184.5102937,
+  "last_run_time": 1794476813.180707,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
       "last_check_time": 1794419029.2500024
     },
     "lodydeals": {
-      "last_message_id": 46405,
-      "last_check_time": 1794475878.1043038
+      "last_message_id": 46407,
+      "last_check_time": 1794476791.559241
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4566,16 +4570,16 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39959,
-      "last_check_time": 1794476181.375436
+      "last_message_id": 39961,
+      "last_check_time": 1794476803.5365725
     },
     "aniscoupons": {
-      "last_message_id": 34634,
-      "last_check_time": 1794476186.5500455
+      "last_message_id": 34636,
+      "last_check_time": 1794476815.2570107
     },
     "bnddeals": {
-      "last_message_id": 51291,
-      "last_check_time": 1794399995.2439983
+      "last_message_id": 51292,
+      "last_check_time": 1794476816.1752932
     }
   },
   "published_product_prices": {
@@ -5234,7 +5238,8 @@
     "1005012650636759": 23.12,
     "1005011936109841": 457.36,
     "1005012333024137": 7.07,
-    "1005001849536579": 20.5
+    "1005001849536579": 20.5,
+    "1005006967391791": 36.2
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -21529,6 +21534,46 @@
       "price": 130.8,
       "timestamp": 1794476184.5102937,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39960": {
+      "channel_msg_id": 2445,
+      "product_id": "1005006967391791",
+      "title": "Machenike G5 Pro Gaming Controller",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39960,
+      "price": 36.2,
+      "timestamp": 1794476797.164376,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:39961": {
+      "channel_msg_id": 2446,
+      "product_id": "1005012374550298",
+      "title": "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39961,
+      "price": 15.8,
+      "timestamp": 1794476801.4817152,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34635": {
+      "channel_msg_id": 2447,
+      "product_id": "1005010121513376",
+      "title": "Honor X9d (no charger)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34635,
+      "price": 289.5,
+      "timestamp": 1794476808.0801337,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34636": {
+      "channel_msg_id": 2448,
+      "product_id": "1005010424638496",
+      "title": "Magcubic HY350 Max 900ANSI",
+      "channel": "aniscoupons",
+      "source_msg_id": 34636,
+      "price": 113.4,
+      "timestamp": 1794476813.180707,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21537,17 +21582,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794476187.0279515,
+    "last_deal_post_time": 1794476816.2246614,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794476190.7486796,
+    "last_sweep_time": 1794476819.6484752,
     "last_sweep_times": {
-      "algeria": 1794476187.0110264,
-      "france": 1794476190.7486796
+      "algeria": 1794476816.2002819,
+      "france": 1794476819.6484752
     },
     "last_deal_post_times": {
-      "algeria": 1794476187.0279515
+      "algeria": 1794476816.2246614
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -22324,7 +22369,8 @@
     "1005012650636759": "lodydeals",
     "1005011936109841": "lodydeals",
     "1005012333024137": "lodydeals",
-    "1005001849536579": "zedstoreonline"
+    "1005001849536579": "zedstoreonline",
+    "1005006967391791": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -23325,7 +23371,8 @@
     "Lenovo Legion Y700 12/256GB": "lodydeals",
     "S80 USB 3.2 Flash Drive 128GB": "lodydeals",
     "FANTECH SHOOTER III": "zedstoreonline",
-    "MAONO PM360TR Condenser Microphone": "zedstoreonline"
+    "MAONO PM360TR Condenser Microphone": "zedstoreonline",
+    "Machenike G5 Pro Gaming Controller": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -24122,7 +24169,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45868",
     "couponsglobal:48843",
     "zedstoreonline:38825",
     "megaphonna:8708",
@@ -25121,7 +25167,8 @@
     "lodydeals:46398",
     "lodydeals:46401",
     "lodydeals:46402",
-    "lodydeals:46405"
+    "lodydeals:46405",
+    "bnddeals:51292"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,

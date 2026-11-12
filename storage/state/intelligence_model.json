@@ -28,10 +28,10 @@
       "ewma": 0.9324
     },
     "zedstoreonline": {
-      "seen": 75,
-      "published": 34,
+      "seen": 77,
+      "published": 36,
       "skipped": 0,
-      "ewma": 0.9707
+      "ewma": 0.9752
     },
     "bnddeals": {
       "seen": 18,
@@ -40,30 +40,30 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 125,
-      "published": 100,
+      "seen": 127,
+      "published": 102,
       "skipped": 0,
       "ewma": 0.9994
     }
   },
   "category_stats": {
     "other": {
-      "seen": 74,
-      "published": 59,
+      "seen": 75,
+      "published": 60,
       "skipped": 0,
-      "ewma": 0.9963
+      "ewma": 0.9966
     },
     "pc": {
-      "seen": 40,
-      "published": 24,
+      "seen": 42,
+      "published": 26,
       "skipped": 0,
-      "ewma": 0.9324
+      "ewma": 0.9428
     },
     "phones": {
-      "seen": 100,
-      "published": 56,
+      "seen": 101,
+      "published": 57,
       "skipped": 0,
-      "ewma": 0.9952
+      "ewma": 0.9956
     },
     "home": {
       "seen": 11,
@@ -237,9 +237,11 @@
     ],
     "1005010121513376": [
       289.5,
+      289.5,
       289.5
     ],
     "1005010424638496": [
+      113.4,
       113.4
     ],
     "1005012921754472": [
@@ -483,50 +485,24 @@
     ],
     "1005001849536579": [
       20.5
+    ],
+    "1005006967391791": [
+      36.2
+    ],
+    "1005012374550298": [
+      15.8
     ]
   },
   "counters": {
-    "scored": 242,
-    "verdict_publish": 221,
+    "scored": 246,
+    "verdict_publish": 225,
     "verdict_hold": 21,
     "verdict_skip": 0,
-    "published": 161,
+    "published": 165,
     "skipped": 0
   },
-  "score_sum": 17321.22,
+  "score_sum": 17615.2,
   "recent_decisions": [
-    {
-      "ts": 1794392601,
-      "channel": "bnddeals",
-      "category": "phones",
-      "product_id": "1005010457635845",
-      "score": 60.63,
-      "verdict": "publish"
-    },
-    {
-      "ts": 1794392767,
-      "channel": "zedstoreonline",
-      "category": "phones",
-      "product_id": "1005013257410516",
-      "score": 68.64,
-      "verdict": "publish"
-    },
-    {
-      "ts": 1794392946,
-      "channel": "zedstoreonline",
-      "category": "phones",
-      "product_id": "1005013304766961",
-      "score": 63.05,
-      "verdict": "publish"
-    },
-    {
-      "ts": 1794393498,
-      "channel": "lodydeals",
-      "category": "accessories",
-      "product_id": "1005007038130594",
-      "score": 71.24,
-      "verdict": "publish"
-    },
     {
       "ts": 1794393507,
       "channel": "aniscoupons",
@@ -2094,7 +2070,39 @@
       "product_id": "1005012499433797",
       "score": 71.47,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794476795,
+      "channel": "zedstoreonline",
+      "category": "pc",
+      "product_id": "1005006967391791",
+      "score": 74.49,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794476799,
+      "channel": "zedstoreonline",
+      "category": "pc",
+      "product_id": "1005012374550298",
+      "score": 78.64,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794476806,
+      "channel": "aniscoupons",
+      "category": "phones",
+      "product_id": "1005010121513376",
+      "score": 70.16,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794476811,
+      "channel": "aniscoupons",
+      "category": "other",
+      "product_id": "1005010424638496",
+      "score": 70.69,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794476184.5404203
+  "updated_at": 1794476813.2243054
 }
