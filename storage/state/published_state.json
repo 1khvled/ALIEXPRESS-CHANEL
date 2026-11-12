@@ -1240,7 +1240,7 @@
     "COUPONS_d131dda7a0e3": 1793478717.5768087,
     "COUPONS_d131dda7": 1793478717.5923967,
     "COUPONS_11.11 Global Shopping Festival Warm-Up": 1793478717.5923967,
-    "1005008518280704": 1794420697.970357,
+    "1005008518280704": 1794481572.7195961,
     "1005010527736444": 1793478769.6023057,
     "1005013450996845": 1794475091.4412947,
     "1005013144753309": 1794160820.0809557,
@@ -3496,7 +3496,7 @@
     "Kootion SSD SATA": 1794332259.758732,
     "KOOTION SATA SSD 128GB": 1794334097.945569,
     "Kingston DataTraveler 128GB": 1794475858.8069391,
-    "CUSU CV3500  M.2 NVMe SSD (1tb)": 1794420697.970357,
+    "CUSU CV3500  M.2 NVMe SSD (1tb)": 1794481572.7195961,
     "Kootion X15 M.2 NVMe 256GB": 1794346230.0535362,
     "Baseus BS2 Lite": 1794349536.4429784,
     "حجز وتجدد كوبونات 11.11": 1794363974.314961,
@@ -3554,7 +3554,6 @@
     "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794480064.6967885
   },
   "published_post_keys": [
-    "bnddeals:50853",
     "ecksdeal:5981",
     "aniscoupons:32720",
     "lodydeals:45788",
@@ -4553,11 +4552,12 @@
     "zedstoreonline:39972",
     "aniscoupons:34648",
     "aniscoupons:34649",
-    "aniscoupons:34650"
+    "aniscoupons:34650",
+    "aniscoupons:34651"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794481008.527723,
+  "last_run_time": 1794481572.7195961,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4584,12 +4584,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39975,
-      "last_check_time": 1794481396.0315518
+      "last_message_id": 39976,
+      "last_check_time": 1794481569.5763128
     },
     "aniscoupons": {
-      "last_message_id": 34650,
-      "last_check_time": 1794481010.5916264
+      "last_message_id": 34651,
+      "last_check_time": 1794481577.920043
     },
     "bnddeals": {
       "last_message_id": 51292,
@@ -21751,6 +21751,16 @@
       "price": 22.47,
       "timestamp": 1794481008.527723,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34651": {
+      "channel_msg_id": 2465,
+      "product_id": "1005008518280704",
+      "title": "CUSU CV3500  M.2 NVMe SSD (1tb)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34651,
+      "price": 179.3,
+      "timestamp": 1794481572.7195961,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21759,17 +21769,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794481011.481989,
+    "last_deal_post_time": 1794481578.933974,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794481400.918199,
+    "last_sweep_time": 1794481583.064212,
     "last_sweep_times": {
-      "algeria": 1794481397.5903275,
-      "france": 1794481400.918199
+      "algeria": 1794481578.9094415,
+      "france": 1794481583.064212
     },
     "last_deal_post_times": {
-      "algeria": 1794481011.481989
+      "algeria": 1794481578.933974
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -24353,7 +24363,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "megaphonna:8448",
     "ecksdeal:6002",
     "bnddeals:50987",
     "zedstoreonline:38629",
@@ -25352,7 +25361,8 @@
     "aniscoupons:34645",
     "zedstoreonline:39973",
     "zedstoreonline:39974",
-    "zedstoreonline:39975"
+    "zedstoreonline:39975",
+    "zedstoreonline:39976"
   ],
   "last_france_cross_promo_time": 1794292805.7643144,
   "next_france_cross_promo_interval_seconds": 205994,
