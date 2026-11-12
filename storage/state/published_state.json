@@ -1192,7 +1192,7 @@
     "1005012994490034": 1793441317.3934674,
     "1005010146493558": 1793448836.300828,
     "1005010575865619": 1794484334.0264623,
-    "1005011778197787": 1794437132.8258533,
+    "1005011778197787": 1794488939.6119785,
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
     "1005005373032877": 1793600283.7397804,
@@ -3006,7 +3006,7 @@
     "فلاكشيب من": 1793380515.8443403,
     "ONEPLUS ACE6 ULTRA (12/256)": 1793448862.466345,
     "ONEPLUS ACE 6T (12/256)": 1793380546.8905725,
-    "AMD Ryzen 7 7700": 1794437132.8258533,
+    "AMD Ryzen 7 7700": 1794488939.6119785,
     "ASROCK B550 PHANTOM": 1793384181.0587313,
     "MSI PRO B850-P WIFI": 1793543567.486626,
     "MSI X670E GAMING PLUS WIFI": 1793384191.3385255,
@@ -3562,7 +3562,6 @@
     "Honor Win RT2": 1794487083.9711623
   },
   "published_post_keys": [
-    "bnddeals:50800",
     "bnddeals:50956",
     "zedstoreonline:38533",
     "lodydeals:45406",
@@ -4561,11 +4560,12 @@
     "zedstoreonline:39991",
     "aniscoupons:34676",
     "aniscoupons:34677",
-    "zedstoreonline:39995"
+    "zedstoreonline:39995",
+    "zedstoreonline:39996"
   ],
   "last_disclaimer_time": 1793314858.1877568,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794488565.604101,
+  "last_run_time": 1794488939.6119785,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6056,
@@ -4592,8 +4592,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 39995,
-      "last_check_time": 1794488567.6596832
+      "last_message_id": 39996,
+      "last_check_time": 1794488941.6821306
     },
     "aniscoupons": {
       "last_message_id": 34682,
@@ -21980,6 +21980,16 @@
       "price": 11.2,
       "timestamp": 1794488565.604101,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:39996": {
+      "channel_msg_id": 2487,
+      "product_id": "1005011778197787",
+      "title": "AMD Ryzen 7 7700",
+      "channel": "zedstoreonline",
+      "source_msg_id": 39996,
+      "price": 155.2,
+      "timestamp": 1794488939.6119785,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -21988,17 +21998,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794488573.13947,
+    "last_deal_post_time": 1794488943.417054,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794488750.5972307,
+    "last_sweep_time": 1794488947.1575854,
     "last_sweep_times": {
-      "algeria": 1794488747.0947576,
-      "france": 1794488750.5972307
+      "algeria": 1794488943.3846397,
+      "france": 1794488947.1575854
     },
     "last_deal_post_times": {
-      "algeria": 1794488573.13947
+      "algeria": 1794488943.417054
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
