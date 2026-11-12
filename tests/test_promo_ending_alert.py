@@ -29,7 +29,7 @@ def test_get_event_started_image_path():
     assert os.path.getsize(path) > 100_000  # Image is high-res (~1.7MB)
 
 
-def test_build_promo_ending_alert_matches_user_screenshot():
+def test_build_promo_ending_alert_uses_real_end_date_and_names_event():
     promo = PromoEvent(
         name="Choice Day",
         name_ar="تخفيضات تشويس داي",
@@ -39,10 +39,13 @@ def test_build_promo_ending_alert_matches_user_screenshot():
         is_major=True,
         coupon_tiers=[]
     )
-    text, reply_markup = build_promo_ending_alert(promo)
+    now = datetime(2026, 10, 7, 18, 0, tzinfo=timezone.utc)
+    text, reply_markup = build_promo_ending_alert(promo, now=now)
 
-    # User screenshot exact matches
-    assert "<blockquote>⚠️ <b>تنتهي التخفيضات غدا صباحا على الساعة الثامنة</b></blockquote>" in text
+    # End is derived from promo.end_date, in Algeria time (UTC+1): 06:59:59 UTC -> 08:00.
+    assert "<blockquote>⚠️ <b>تنتهي التخفيضات غدا صباحا على الساعة الثامنة (08:00 بتوقيت الجزائر)</b></blockquote>" in text
+    # The event that is actually ending is named (no more ambiguous "the sale ends").
+    assert "🏁 <b>الحدث:</b> تخفيضات تشويس داي" in text
     assert "❌ <b>آخر فرصة للإستفادة من الكوبونات</b>" in text
     assert "✅ <b>يمكن حجز بعض المنتجات ببطاقة مجمدة لمدة تصل الى 20 يوم بعد انتهاء التخفيضات</b>" in text
     assert "🤖 <b>البوت لتخفيض الاسعار :</b> https://t.me/Alilo07BOT" in text
@@ -52,6 +55,28 @@ def test_build_promo_ending_alert_matches_user_screenshot():
     buttons = reply_markup["inline_keyboard"]
     assert any("Alilo07BOT" in b["url"] for row in buttons for b in row)
     assert any("DzAliexpress0" in b["url"] for row in buttons for b in row)
+
+
+def test_build_promo_ending_alert_handles_november_cutoff_hour():
+    """November (PST) cutoffs are 09:00 DZ, not the old hardcoded 08:00."""
+    promo = PromoEvent(
+        name="11.11 Global Shopping Festival Main Sale",
+        name_ar="مهرجان 11.11 الأكبر عالمياً",
+        start_date=datetime(2026, 11, 1, 7, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 11, 19, 7, 59, 59, tzinfo=timezone.utc),
+        banner_tag="11.11",
+        is_major=True,
+        coupon_tiers=[]
+    )
+    now = datetime(2026, 11, 18, 12, 0, tzinfo=timezone.utc)
+    text, _ = build_promo_ending_alert(promo, now=now)
+
+    assert "غدا صباحا على الساعة التاسعة (09:00 بتوقيت الجزائر)" in text
+
+
+def test_build_promo_ending_alert_without_promo_keeps_legacy_default():
+    text, _ = build_promo_ending_alert()
+    assert "تنتهي التخفيضات غدا صباحا على الساعة الثامنة" in text
 
 
 def test_build_promo_concluded_alert():
@@ -169,3 +194,114 @@ async def test_check_and_auto_post_promo_notifiers_triggers_ending():
         kwargs = mock_send.call_args[1]
         assert kwargs.get("image_path") is not None
         assert "dealscout_event_ended.png" in kwargs.get("image_path")
+
+
+@pytest.mark.asyncio
+async def test_ending_alert_suppressed_while_bigger_sale_still_running():
+    """12 Nov regression: Brand Day ends 13 Nov but 11.11 runs until 18 Nov -> no 'sale ends tomorrow'."""
+    now = datetime(2026, 11, 12, 12, 0, tzinfo=timezone.utc)
+    brand_day = PromoEvent(
+        name="Brand Day Novembre 2026",
+        name_ar="مهرجان Brand Day لشهر نوفمبر 🏷️",
+        start_date=datetime(2026, 11, 9, 7, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 11, 13, 6, 59, 59, tzinfo=timezone.utc),
+        banner_tag="Brand Day",
+        is_major=True,
+        coupon_tiers=[],
+        source="discovered"
+    )
+    main_sale = PromoEvent(
+        name="11.11 Global Shopping Festival Main Sale",
+        name_ar="مهرجان 11.11 الأكبر عالمياً 🛍️",
+        start_date=datetime(2026, 11, 1, 7, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 11, 18, 6, 59, 59, tzinfo=timezone.utc),
+        banner_tag="11.11",
+        is_major=True,
+        coupon_tiers=[{"tier": "3/15$", "code": "OTD1103"}],
+        source="baseline"
+    )
+
+    from unittest.mock import PropertyMock
+    from app.aliexpress.promos import PromoTracker
+
+    with patch.object(PromoTracker, "calendar", new_callable=PropertyMock, return_value=[main_sale, brand_day]), \
+         patch("app.publisher.promo_notifiers.is_promo_notifier_already_sent", return_value=False), \
+         patch("app.publisher.promo_notifiers.record_promo_notifier_sent") as mock_record, \
+         patch("app.publisher.promo_notifiers.send_promo_alert_to_channel", new=AsyncMock(return_value=(True, None, 1))) as mock_send:
+
+        results = await check_and_auto_post_promo_notifiers(now=now, bot_token="TOKEN", channel_id="@TEST")
+
+        assert results == []
+        mock_send.assert_not_called()
+        mock_record.assert_not_called()
+
+
+@pytest.mark.asyncio
+async def test_recurring_placeholder_shadowed_by_real_event_is_skipped():
+    """The auto-generated Brand Day placeholder must not fire while baseline 11.11 covers the same dates."""
+    now = datetime(2026, 11, 12, 12, 0, tzinfo=timezone.utc)
+    placeholder = PromoEvent(
+        name="Brand Day Novembre 2026",
+        name_ar="مهرجان Brand Day لشهر نوفمبر 🏷️",
+        start_date=datetime(2026, 11, 9, 7, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 11, 13, 6, 59, 59, tzinfo=timezone.utc),
+        banner_tag="Brand Day",
+        is_major=True,
+        coupon_tiers=[],
+        source="recurring"
+    )
+    main_sale = PromoEvent(
+        name="11.11 Global Shopping Festival Main Sale",
+        name_ar="مهرجان 11.11 الأكبر عالمياً 🛍️",
+        start_date=datetime(2026, 11, 1, 7, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 11, 18, 6, 59, 59, tzinfo=timezone.utc),
+        banner_tag="11.11",
+        is_major=True,
+        coupon_tiers=[{"tier": "3/15$", "code": "OTD1103"}],
+        source="baseline"
+    )
+
+    from unittest.mock import PropertyMock
+    from app.aliexpress.promos import PromoTracker
+
+    with patch.object(PromoTracker, "calendar", new_callable=PropertyMock, return_value=[main_sale, placeholder]), \
+         patch("app.publisher.promo_notifiers.is_promo_notifier_already_sent", return_value=False), \
+         patch("app.publisher.promo_notifiers.record_promo_notifier_sent") as mock_record, \
+         patch("app.publisher.promo_notifiers.send_promo_alert_to_channel", new=AsyncMock(return_value=(True, None, 1))) as mock_send:
+
+        results = await check_and_auto_post_promo_notifiers(now=now, bot_token="TOKEN", channel_id="@TEST")
+
+        assert results == []
+        mock_send.assert_not_called()
+        mock_record.assert_not_called()
+
+
+@pytest.mark.asyncio
+async def test_real_sale_end_still_fires_when_it_is_the_last_event():
+    now = datetime(2026, 11, 17, 12, 0, tzinfo=timezone.utc)
+    main_sale = PromoEvent(
+        name="11.11 Global Shopping Festival Main Sale",
+        name_ar="مهرجان 11.11 الأكبر عالمياً 🛍️",
+        start_date=datetime(2026, 11, 1, 7, 0, tzinfo=timezone.utc),
+        end_date=datetime(2026, 11, 18, 6, 59, 59, tzinfo=timezone.utc),
+        banner_tag="11.11",
+        is_major=True,
+        coupon_tiers=[{"tier": "3/15$", "code": "OTD1103"}],
+        source="baseline"
+    )
+
+    from unittest.mock import PropertyMock
+    from app.aliexpress.promos import PromoTracker
+
+    with patch.object(PromoTracker, "calendar", new_callable=PropertyMock, return_value=[main_sale]), \
+         patch("app.publisher.promo_notifiers.is_promo_notifier_already_sent", return_value=False), \
+         patch("app.publisher.promo_notifiers.record_promo_notifier_sent"), \
+         patch("app.publisher.promo_notifiers.send_promo_alert_to_channel", new=AsyncMock(return_value=(True, None, 99))) as mock_send:
+
+        results = await check_and_auto_post_promo_notifiers(now=now, bot_token="TOKEN", channel_id="@TEST")
+
+        assert len(results) == 1
+        assert results[0]["type"] == "promo_ending_alert"
+        sent_text = mock_send.call_args[0][0]
+        assert "الحدث:" in sent_text
+        assert "غدا صباحا" in sent_text

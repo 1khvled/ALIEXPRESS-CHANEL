@@ -7,6 +7,7 @@ Publishes automated alerts:
 Strictly deduplicated: Each alert is sent exactly once per promotion event.
 """
 import os
+import re
 import json
 import httpx
 from datetime import datetime, timezone, timedelta
@@ -58,19 +59,150 @@ def get_event_started_image_path() -> Optional[str]:
     return None
 
 
-def build_promo_ending_alert(promo: Optional[PromoEvent] = None, end_hour_str: str = "الثامنة") -> Tuple[str, Dict[str, Any]]:
+DZ_TZ = timezone(timedelta(hours=1))
+
+_ARABIC_HOUR_WORDS = {
+    1: "الواحدة", 2: "الثانية", 3: "الثالثة", 4: "الرابعة",
+    5: "الخامسة", 6: "السادسة", 7: "السابعة", 8: "الثامنة",
+    9: "التاسعة", 10: "العاشرة", 11: "الحادية عشرة", 12: "الثانية عشرة",
+}
+
+# Year/month/noise tokens stripped when grouping the same campaign that is
+# listed twice (baseline vs auto-generated recurring placeholder).
+_CAMPAIGN_NOISE_RE = re.compile(
+    r"\b(19|20)\d{2}\b"
+    r"|\b(global shopping festival|shopping festival|main sale|main|warm up|warmup|sale)\b"
+    r"|\b(january|february|march|april|may|june|july|august|september|october|november|december)\b",
+    re.IGNORECASE,
+)
+
+
+def _is_placeholder_promo(promo: PromoEvent) -> bool:
+    """True for calendar entries that only exist because the recurring generator filled a gap."""
+    return (
+        getattr(promo, "source", "") == "recurring"
+        and not promo.coupon_tiers
+        and not promo.coupon_tiers_fr
+    )
+
+
+def _is_shadowed_placeholder(promo: PromoEvent, calendar: List[PromoEvent]) -> bool:
+    """A recurring placeholder is shadowed when a real baseline/discovered event covers its dates."""
+    if not _is_placeholder_promo(promo):
+        return False
+    for other in calendar:
+        if other is promo or getattr(other, "source", "") not in ("baseline", "discovered"):
+            continue
+        if other.start_date < promo.end_date and other.end_date > promo.start_date:
+            return True
+    return False
+
+
+def _campaign_key(promo: PromoEvent) -> str:
+    """Collapses '11.11 ... Main Sale 2026' and '11.11 ... Main Sale' into one campaign key."""
+    name = (promo.name or "").lower().replace("&", " and ")
+    name = _CAMPAIGN_NOISE_RE.sub(" ", name)
+    name = re.sub(r"[^a-z0-9.]+", " ", name)
+    name = re.sub(r"\s+", " ", name).strip()
+    return re.sub(r"\s+", "_", name) or "promo"
+
+
+def _campaign_notifier_key(prefix: str, promo: PromoEvent) -> str:
+    """One dedupe key per campaign occurrence, regardless of which duplicate entry triggers it."""
+    return f"{prefix}_{_campaign_key(promo)}_{promo.start_date.strftime('%Y%m')}"
+
+
+def _promo_that_keeps_sale_running(
+    promo: PromoEvent,
+    active_promos: List[PromoEvent],
+    min_extra: timedelta = timedelta(hours=36)
+) -> Optional[PromoEvent]:
     """
-    Builds the ending notifier post matching the user reference screenshot:
-    - Blockquote alert: تنتهي التخفيضات غدا صباحا على الساعة الثامنة
+    Returns a real active event that continues well past `promo`.
+    Used to avoid announcing "the sale ends tomorrow" while a bigger event
+    (e.g. 11.11) is still running for several more days.
+    """
+    for other in active_promos:
+        if other is promo or _is_placeholder_promo(other):
+            continue
+        if other.end_date <= promo.end_date + min_extra:
+            continue
+        if other.is_major or other.coupon_tiers or other.coupon_tiers_fr:
+            return other
+    return None
+
+
+def _relative_day_label(target: datetime, now: datetime) -> str:
+    """Returns 'اليوم' / 'غدا' / 'يوم DD/MM' in Algeria time."""
+    target_dz = target.astimezone(DZ_TZ)
+    now_dz = now.astimezone(DZ_TZ)
+    day_delta = (target_dz.date() - now_dz.date()).days
+    if day_delta <= 0:
+        return "اليوم"
+    if day_delta == 1:
+        return "غدا"
+    return f"يوم {target_dz.strftime('%d/%m')}"
+
+
+def _dz_end_label(end_date: datetime, now: datetime) -> str:
+    """Builds an Algerian-time relative label such as 'غدا صباحا على الساعة التاسعة (09:00 بتوقيت الجزائر)'."""
+    end_dz = end_date.astimezone(DZ_TZ)
+    now_dz = now.astimezone(DZ_TZ)
+
+    # AliExpress cutoffs are stored at :59:59 — round up to the marketing hour (08:00, not 07:59).
+    if end_dz.second >= 30 or end_dz.microsecond >= 500_000:
+        end_dz = (end_dz + timedelta(minutes=1)).replace(second=0, microsecond=0)
+    else:
+        end_dz = end_dz.replace(second=0, microsecond=0)
+
+    day_delta = (end_dz.date() - now_dz.date()).days
+    if day_delta <= 0:
+        day_label = "اليوم"
+    elif day_delta == 1:
+        day_label = "غدا"
+    else:
+        day_label = f"يوم {end_dz.strftime('%d/%m')}"
+
+    period = "صباحا" if end_dz.hour < 12 else "مساء"
+    hour_word = _ARABIC_HOUR_WORDS.get(end_dz.hour % 12 or 12, str(end_dz.hour))
+    return f"{day_label} {period} على الساعة {hour_word} ({end_dz.strftime('%H:%M')} بتوقيت الجزائر)"
+
+
+def build_promo_ending_alert(
+    promo: Optional[PromoEvent] = None,
+    end_hour_str: Optional[str] = None,
+    now: Optional[datetime] = None
+) -> Tuple[str, Dict[str, Any]]:
+    """
+    Builds the ending notifier post:
+    - Blockquote alert with the REAL end day/hour derived from the promo (Algeria time)
+    - Names the event that is actually ending, so it can't be mistaken for a bigger running sale
     - Last chance for coupons
     - 20-day frozen card reservation trick
     - Links to bot and telegram channel
     - Inline keyboard buttons
     """
-    hour_label = "الثامنة" if end_hour_str in ["08:00", "الثامنة", "8:00", "8"] else end_hour_str
+    if now is None:
+        now = datetime.now(timezone.utc)
+
+    if end_hour_str:
+        hour_label = "الثامنة" if end_hour_str in ["08:00", "الثامنة", "8:00", "8"] else end_hour_str
+        when_label = f"غدا صباحا على الساعة {hour_label}"
+    elif promo is not None and getattr(promo, "end_date", None):
+        when_label = _dz_end_label(promo.end_date, now)
+    else:
+        when_label = "غدا صباحا على الساعة الثامنة"
+
     lines = [
-        f"<blockquote>⚠️ <b>تنتهي التخفيضات غدا صباحا على الساعة {hour_label}</b></blockquote>",
+        f"<blockquote>⚠️ <b>تنتهي التخفيضات {when_label}</b></blockquote>",
         "",
+    ]
+
+    event_name = (getattr(promo, "name_ar", None) or getattr(promo, "name", None)) if promo else None
+    if event_name:
+        lines.extend([f"🏁 <b>الحدث:</b> {event_name}", ""])
+
+    lines.extend([
         "❌ <b>آخر فرصة للإستفادة من الكوبونات</b>",
         "",
         "✅ <b>يمكن حجز بعض المنتجات ببطاقة مجمدة لمدة تصل الى 20 يوم بعد انتهاء التخفيضات</b>",
@@ -78,7 +210,7 @@ def build_promo_ending_alert(promo: Optional[PromoEvent] = None, end_hour_str: s
         "🤖 <b>البوت لتخفيض الاسعار :</b> https://t.me/Alilo07BOT",
         "",
         "📢 <b>قناة التيليغرام للمزيد من العروض :</b> https://t.me/DzAliexpress0"
-    ]
+    ])
 
     text = "\n".join(lines)
     reply_markup = {
@@ -129,13 +261,20 @@ def build_promo_concluded_alert(promo: Optional[PromoEvent] = None) -> Tuple[str
     return text, reply_markup
 
 
-def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00") -> Tuple[str, Dict[str, Any]]:
+def build_promo_starting_alert(
+    promo: PromoEvent,
+    start_hour_str: str = "08:00",
+    now: Optional[datetime] = None
+) -> Tuple[str, Dict[str, Any]]:
     """
     Builds the warm-up starting notifier post matching authentic Algerian deal channels:
     - Lists active official coupons dynamically from the promo event
     - Explains coupon booking / saving tutorial using high-value phone link
     - Sets 08:00 AM booking alert
     """
+    if now is None:
+        now = datetime.now(timezone.utc)
+    start_label = _relative_day_label(promo.start_date, now)
     coupons = promo.coupon_tiers if promo.coupon_tiers else []
     coupon_lines = []
     for c in coupons:
@@ -149,7 +288,7 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
         if is_brand_day:
             lines = [
                 f"🚨 <b>كوبونات حدث {promo.name_ar}!</b> 🛍️",
-                f"تنطلق غداً <b>{promo.start_date.strftime('%d/%m')} وتستمر إلى غاية {promo.end_date.strftime('%d/%m/%Y')}</b> 🗓️",
+                f"تنطلق {start_label} <b>{promo.start_date.strftime('%d/%m')} وتستمر إلى غاية {promo.end_date.strftime('%d/%m/%Y')}</b> 🗓️",
                 "",
                 *coupon_lines,
                 "",
@@ -178,11 +317,11 @@ def build_promo_starting_alert(promo: PromoEvent, start_hour_str: str = "08:00")
         big_coupons_str = " ثم ".join([f"${c.get('tier', '').split('/')[0]}" for c in reversed(coupons[-2:]) if '/' in c.get('tier', '')]) or "$70 ثم $53"
         lines = [
             f"🚨 <b>كوبونات حدث {promo.name_ar}!</b> 🛍️",
-            f"تنطلق غداً <b>{promo.start_date.strftime('%d/%m')} وتستمر إلى غاية {promo.end_date.strftime('%d/%m/%Y')}</b> 🗓️",
+            f"تنطلق {start_label} <b>{promo.start_date.strftime('%d/%m')} وتستمر إلى غاية {promo.end_date.strftime('%d/%m/%Y')}</b> 🗓️",
             "",
             *coupon_lines,
             "",
-            f"⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك (طبقوها غداً على {start_hour_str} صباحاً 🔥👌🏽):</b>",
+            f"⭕️ <b>طريقة حجز الكوبونات وتثبيتها في حسابك (طبقوها {start_label} على {start_hour_str} صباحاً 🔥👌🏽):</b>",
             f"⚠️ <b>ابدأ دائماً بالكوبونات الكبيرة ({big_coupons_str}...)</b> ثم البقية واحداً تلو الآخر باه يبقاو في حسابك طيلة التخفيضات وما يهربلكش الستوك ✅",
             "",
             "🔹 <b>طبقوا الآن كامل الكوبونات على هذا المنتج باه تبقالكم في الحساب ⤵️</b>",
@@ -415,18 +554,35 @@ async def check_and_auto_post_promo_notifiers(
         now = datetime.now(timezone.utc)
 
     results = []
+    calendar = list(promo_tracker.calendar)
+    active_promos = [p for p in calendar if p.start_date <= now <= p.end_date]
 
-    for promo in promo_tracker.calendar:
+    for promo in calendar:
         # --- 1. CHECK PROMO ENDING ALERT (FINAL 30 HOURS BEFORE END) ---
         # If promo is currently active or ending tomorrow:
         if promo.start_date <= now <= promo.end_date:
+            # Auto-generated recurring entries are fallback calendar filler. When a real
+            # baseline/discovered event covers the same dates, only the real one may alert.
+            if _is_shadowed_placeholder(promo, calendar):
+                logger.info(
+                    f"[PROMO NOTIFIER] Skipping placeholder '{promo.name}': "
+                    "its dates are covered by a real baseline/discovered event"
+                )
+                continue
+
             time_until_end = promo.end_date - now
             # Within ~24-30 hours before end (between 0h and 30h)
             if timedelta(hours=0) < time_until_end <= timedelta(hours=30):
-                notifier_key = f"END_ALERT_{promo.name}_{promo.end_date.strftime('%Y%m%d')}"
-                if not is_promo_notifier_already_sent(notifier_key):
+                continuing = _promo_that_keeps_sale_running(promo, active_promos)
+                notifier_key = _campaign_notifier_key("END_ALERT", promo)
+                if continuing:
+                    logger.info(
+                        f"[PROMO NOTIFIER] Suppressed ending alert for '{promo.name}': "
+                        f"'{continuing.name}' keeps the sale running until {continuing.end_date.isoformat()}"
+                    )
+                elif not is_promo_notifier_already_sent(notifier_key):
                     logger.info(f"Triggering Promo Ending Alert for {promo.name} (Ends in {time_until_end.total_seconds()/3600:.1f}h)")
-                    text, markup = build_promo_ending_alert(promo)
+                    text, markup = build_promo_ending_alert(promo, now=now)
                     img_path = get_event_ended_image_path()
                     success, err, msg_id = await send_promo_alert_to_channel(
                         text, markup, bot_token, channel_id,
@@ -447,7 +603,7 @@ async def check_and_auto_post_promo_notifiers(
             # --- 3. CHECK PROMO LAUNCH ALERT (OFFICIAL START HOUR - 08:00 AM DZ) ---
             time_since_start = now - promo.start_date
             if timedelta(hours=0) <= time_since_start <= timedelta(hours=6):
-                notifier_key = f"LAUNCH_ALERT_{promo.name}_{promo.start_date.strftime('%Y%m%d')}"
+                notifier_key = _campaign_notifier_key("LAUNCH_ALERT", promo)
                 if not is_promo_notifier_already_sent(notifier_key):
                     logger.info(f"Triggering Official Promo Launch Alert for {promo.name}")
                     text, markup = build_promo_launch_alert(promo)

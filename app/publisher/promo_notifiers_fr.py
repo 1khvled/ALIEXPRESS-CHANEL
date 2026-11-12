@@ -15,7 +15,13 @@ from typing import Optional, Tuple, Dict, Any, List
 
 from app.config.settings import settings
 from app.aliexpress.promos import promo_tracker, PromoEvent
-from app.publisher.promo_notifiers import get_event_ended_image_path, get_event_started_image_path
+from app.publisher.promo_notifiers import (
+    get_event_ended_image_path,
+    get_event_started_image_path,
+    _is_shadowed_placeholder,
+    _promo_that_keeps_sale_running,
+    _campaign_notifier_key,
+)
 from app.utils.logger import logger
 
 TARGET_FRANCE_CHANNEL = os.getenv("FRANCE_TARGET_CHANNEL_ID", "@francedealsdz")
@@ -356,13 +362,22 @@ async def check_and_auto_post_france_promo_notifiers(now: Optional[datetime] = N
                 logger.error(f"Failed to post France Sunday flash alert: {err}")
 
     # 2. General Promo Calendar checks (Choice Day, Brand Day, 11.11, etc.)
-    for promo in promo_tracker.calendar:
+    calendar = list(promo_tracker.calendar)
+    active_promos = [p for p in calendar if p.start_date <= now <= p.end_date]
+    for promo in calendar:
         if now < promo.start_date:
             pass
         elif promo.start_date <= now <= promo.end_date:
+            if _is_shadowed_placeholder(promo, calendar):
+                logger.info(
+                    f"[FR PROMO NOTIFIER] Skipping placeholder '{promo.name}': "
+                    "its dates are covered by a real baseline/discovered event"
+                )
+                continue
+
             time_since_start = now - promo.start_date
             if timedelta(hours=0) <= time_since_start <= timedelta(hours=6):
-                notifier_key = f"FR_LAUNCH_ALERT_{promo.name}_{promo.start_date.strftime('%Y%m%d')}"
+                notifier_key = _campaign_notifier_key("FR_LAUNCH_ALERT", promo)
                 if not is_france_notifier_already_sent(notifier_key):
                     logger.info(f"Triggering France Promo Launch Alert for {promo.name}")
                     text, markup = build_france_promo_launch_alert(promo)
@@ -380,8 +395,14 @@ async def check_and_auto_post_france_promo_notifiers(now: Optional[datetime] = N
 
             time_until_end = promo.end_date - now
             if timedelta(hours=6) <= time_until_end <= timedelta(hours=36):
-                notifier_key = f"FR_END_ALERT_{promo.name}_{promo.end_date.strftime('%Y%m%d')}"
-                if not is_france_notifier_already_sent(notifier_key):
+                continuing = _promo_that_keeps_sale_running(promo, active_promos)
+                notifier_key = _campaign_notifier_key("FR_END_ALERT", promo)
+                if continuing:
+                    logger.info(
+                        f"[FR PROMO NOTIFIER] Suppressed ending alert for '{promo.name}': "
+                        f"'{continuing.name}' keeps the sale running until {continuing.end_date.isoformat()}"
+                    )
+                elif not is_france_notifier_already_sent(notifier_key):
                     logger.info(f"Triggering France Promo Ending Alert for {promo.name}")
                     text, markup = build_france_promo_ending_alert(promo)
                     success, err, msg_id = await send_france_promo_alert(text, markup, coupon_list=promo.coupon_tiers_fr, promo_title=promo.name_fr or promo.name)
