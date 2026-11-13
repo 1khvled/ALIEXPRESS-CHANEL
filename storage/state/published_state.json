@@ -1283,7 +1283,7 @@
     "1005005905462505": 1794000865.9547298,
     "1005008248133489": 1794475825.54016,
     "1005008684239370": 1794517206.1493392,
-    "1005011583202464": 1794475084.685867,
+    "1005011583202464": 1794578866.6273274,
     "1005009921069024": 1793542597.6187797,
     "1005009916209766": 1794167239.3538153,
     "1005012537594921": 1793542611.8880281,
@@ -3592,7 +3592,7 @@
     "12V CORDLESS ELECTRIC DRILL": 1794470859.4033997,
     "FORSINING MECHANICAL SKELETON WATCH": 1794471412.477501,
     "ميزان رقمي محمول لحقائب السفر": 1794472329.794574,
-    "ميكروفون لاسلكي احترافي MAONO PD100W بمدى 50 متر مع تقليل": 1794475084.685867,
+    "ميكروفون لاسلكي احترافي MAONO PD100W بمدى 50 متر مع تقليل": 1794578866.6273274,
     "MAONO T1 Mini 2TX 1RX": 1794475809.562155,
     "FIFINE M9 Wireless Lavalier": 1794475814.3090613,
     "ADATA DDR4 16GB 2400MHz": 1794475830.5998907,
@@ -3630,7 +3630,6 @@
     "CUSU SSD CV3500 M2 1TB": 1794578319.3190603
   },
   "published_post_keys": [
-    "ecksdeal:5862",
     "couponsglobal:48811",
     "aniscoupons:32953",
     "ecksdeal:5930",
@@ -4629,19 +4628,20 @@
     "lodydeals:46454",
     "aniscoupons:34790",
     "zedstoreonline:40058",
-    "aniscoupons:34791"
+    "aniscoupons:34791",
+    "zedstoreonline:40060"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794578325.6062727,
+  "last_run_time": 1794578866.6273274,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
       "last_check_time": 1794531406.8053942
     },
     "lodydeals": {
-      "last_message_id": 46456,
-      "last_check_time": 1794578314.9109514
+      "last_message_id": 46457,
+      "last_check_time": 1794578861.4417608
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4660,8 +4660,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40059,
-      "last_check_time": 1794578494.614919
+      "last_message_id": 40060,
+      "last_check_time": 1794578868.7035615
     },
     "aniscoupons": {
       "last_message_id": 34792,
@@ -23012,6 +23012,16 @@
       "price": 51.3,
       "timestamp": 1794578325.6062727,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40060": {
+      "channel_msg_id": 2589,
+      "product_id": "1005011583202464",
+      "title": "ميكروفون لاسلكي احترافي MAONO PD100W بمدى 50 متر مع تقليل",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40060,
+      "price": 58.4,
+      "timestamp": 1794578866.6273274,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23020,17 +23030,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794578328.6221497,
+    "last_deal_post_time": 1794578873.367532,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794578501.8297691,
+    "last_sweep_time": 1794578876.3369472,
     "last_sweep_times": {
-      "algeria": 1794578499.669702,
-      "france": 1794578501.8297691
+      "algeria": 1794578873.334744,
+      "france": 1794578876.3369472
     },
     "last_deal_post_times": {
-      "algeria": 1794578328.6221497
+      "algeria": 1794578873.367532
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -25651,7 +25661,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:46037",
     "ecksdeal:6029",
     "lodydeals:46041",
     "lodydeals:46043",
@@ -26650,7 +26659,8 @@
     "lodydeals:46455",
     "lodydeals:46456",
     "zedstoreonline:40059",
-    "aniscoupons:34792"
+    "aniscoupons:34792",
+    "lodydeals:46457"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27468,6 +27478,13 @@
         "channel": "aniscoupons",
         "ts": 1794578498.3140311,
         "price": 272.0
+      }
+    ],
+    "1005011583202464": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794578864.500497,
+        "price": 58.4
       }
     ]
   },
