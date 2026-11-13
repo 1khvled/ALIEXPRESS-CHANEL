@@ -786,7 +786,8 @@
     "1005011887425776",
     "1005012547730772",
     "1005012840419521",
-    "1005010218815499"
+    "1005010218815499",
+    "1005011897409757"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1588,7 +1589,8 @@
     "1005011887425776": 1794580354.5744467,
     "1005012547730772": 1794590278.0528092,
     "1005012840419521": 1794591008.1982286,
-    "1005010218815499": 1794591382.6548223
+    "1005010218815499": 1794591382.6548223,
+    "1005011897409757": 1794593403.339319
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2615,7 +2617,8 @@
     "Kingston DataTraveler USB 128GB",
     "Honor X80 Pro Max 8/128",
     "ماوس فخم Logitech G502 Hero",
-    "ماوس لاسلكي Delux M800 Mini Series"
+    "ماوس لاسلكي Delux M800 Mini Series",
+    "Lexar V400 USB3.0 64GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3647,10 +3650,10 @@
     "Kingston DataTraveler USB 128GB": 1794589551.8961492,
     "Honor X80 Pro Max 8/128": 1794590278.0528092,
     "ماوس فخم Logitech G502 Hero": 1794591008.1982286,
-    "ماوس لاسلكي Delux M800 Mini Series": 1794591382.6548223
+    "ماوس لاسلكي Delux M800 Mini Series": 1794591382.6548223,
+    "Lexar V400 USB3.0 64GB": 1794593403.339319
   },
   "published_post_keys": [
-    "zedstoreonline:38617",
     "test_channel:1793276358",
     "lodydeals:45878",
     "megaphonna:8515",
@@ -4649,19 +4652,20 @@
     "zedstoreonline:40071",
     "zedstoreonline:40073",
     "ecksdeal:6060",
-    "ecksdeal:6061"
+    "ecksdeal:6061",
+    "lodydeals:46459"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794591382.6548223,
+  "last_run_time": 1794593403.339319,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46458,
-      "last_check_time": 1794585684.129005
+      "last_message_id": 46459,
+      "last_check_time": 1794593405.3978484
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -5371,7 +5375,8 @@
     "1005011887425776": 20.48,
     "1005012547730772": 272.8,
     "1005012840419521": 31.63,
-    "1005010218815499": 13.94
+    "1005010218815499": 13.94,
+    "1005011897409757": 7.07
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23206,6 +23211,16 @@
       "price": 13.94,
       "timestamp": 1794591382.6548223,
       "status": "ACTIVE"
+    },
+    "lodydeals:46459": {
+      "channel_msg_id": 2608,
+      "product_id": "1005011897409757",
+      "title": "Lexar V400 USB3.0 64GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46459,
+      "price": 7.07,
+      "timestamp": 1794593403.339319,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23214,17 +23229,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794591391.155149,
+    "last_deal_post_time": 1794593410.081151,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794593226.1296182,
+    "last_sweep_time": 1794593412.487277,
     "last_sweep_times": {
-      "algeria": 1794593223.7686815,
-      "france": 1794593226.1296182
+      "algeria": 1794593410.0559607,
+      "france": 1794593412.487277
     },
     "last_deal_post_times": {
-      "algeria": 1794591391.155149
+      "algeria": 1794593410.081151
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24024,7 +24039,8 @@
     "1005011887425776": "aniscoupons",
     "1005012547730772": "zedstoreonline",
     "1005012840419521": "ecksdeal",
-    "1005010218815499": "ecksdeal"
+    "1005010218815499": "ecksdeal",
+    "1005011897409757": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -25058,7 +25074,8 @@
     "Kingston DataTraveler USB 128GB": "zedstoreonline",
     "Honor X80 Pro Max 8/128": "zedstoreonline",
     "ماوس فخم Logitech G502 Hero": "ecksdeal",
-    "ماوس لاسلكي Delux M800 Mini Series": "ecksdeal"
+    "ماوس لاسلكي Delux M800 Mini Series": "ecksdeal",
+    "Lexar V400 USB3.0 64GB": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
