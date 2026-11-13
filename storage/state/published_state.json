@@ -1362,7 +1362,7 @@
     "1005006994466968": 1793601744.1664062,
     "1005011927267564": 1793728844.5794795,
     "1005008291023017": 1794508546.500024,
-    "1005012947477238": 1793612016.5356846,
+    "1005012947477238": 1794579995.0128412,
     "1005010121513376": 1794562885.2375963,
     "1005009064526142": 1793613380.753295,
     "1005010009130696": 1793613403.4444478,
@@ -1542,7 +1542,7 @@
     "1005013391950901": 1794420685.287832,
     "1005007477084001": 1794420689.8352551,
     "1005008774483451": 1794426765.2023578,
-    "1005012639349629": 1794484695.7251022,
+    "1005012639349629": 1794579990.5893576,
     "1005010153422760": 1794487260.3295033,
     "1005012809141747": 1794566185.5634332,
     "1005012912160949": 1794502231.5458007,
@@ -3147,7 +3147,7 @@
     "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": 1793490079.2945042,
     "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": 1793490090.28376,
     "POCO Pad C1 4/64": 1793490102.028307,
-    "IQOO Z11 Turbo": 1794484695.7251022,
+    "IQOO Z11 Turbo": 1794579990.5893576,
     "Vivo X300 5G 12/256GB": 1793540023.002178,
     "VIVO X300 Pro China Version 50MP OIS 6.78 Inch AMOLED 120Hz Dimensity9500": 1793540051.7895243,
     "VIVO IQOO Z11 TURBO (12/256)": 1793540059.832893,
@@ -3476,7 +3476,7 @@
     "راوتر Vodafone 4G محمول": 1794128872.1451216,
     "OnePlus ACE 6T": 1794484334.0264623,
     "Essager Mini 20W Type C Charger PD": 1794129971.1690388,
-    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794471958.5920799,
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794579995.0128412,
     "OnePlus Ace 6 12/256GB": 1794130143.129755,
     "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": 1794476801.4817152,
     "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464,
@@ -3632,8 +3632,6 @@
     "S80 Flash Drive USB 3.2 Type-A 128GB": 1794579232.5818455
   },
   "published_post_keys": [
-    "couponsglobal:48793",
-    "lodydeals:45454",
     "zedstoreonline:38531",
     "pcgamingpart:7957",
     "lodydeals:45761",
@@ -4631,11 +4629,13 @@
     "zedstoreonline:40060",
     "aniscoupons:34793",
     "aniscoupons:34794",
-    "zedstoreonline:40062"
+    "zedstoreonline:40062",
+    "aniscoupons:34796",
+    "aniscoupons:34797"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794579412.4499428,
+  "last_run_time": 1794579995.0128412,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4662,12 +4662,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40062,
-      "last_check_time": 1794579414.5242174
+      "last_message_id": 40064,
+      "last_check_time": 1794579984.6757634
     },
     "aniscoupons": {
-      "last_message_id": 34795,
-      "last_check_time": 1794579419.1318333
+      "last_message_id": 34797,
+      "last_check_time": 1794579997.07402
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -5159,7 +5159,7 @@
     "1005006994466968": 4.99,
     "1005011927267564": 24.55,
     "1005008291023017": 285.9,
-    "1005012947477238": 199.2,
+    "1005012947477238": 217.8,
     "1005010121513376": 289.5,
     "1005009064526142": 123.9,
     "1005010009130696": 656.0,
@@ -23054,6 +23054,26 @@
       "price": 7.6,
       "timestamp": 1794579412.4499428,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34796": {
+      "channel_msg_id": 2593,
+      "product_id": "1005012639349629",
+      "title": "IQOO Z11 Turbo",
+      "channel": "aniscoupons",
+      "source_msg_id": 34796,
+      "price": 378.14,
+      "timestamp": 1794579990.5893576,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34797": {
+      "channel_msg_id": 2594,
+      "product_id": "1005012947477238",
+      "title": "Xiaomi Redmi Note 17 5G Global Version (6/256GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34797,
+      "price": 217.8,
+      "timestamp": 1794579995.0128412,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23062,17 +23082,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794579419.7666454,
+    "last_deal_post_time": 1794579997.8856823,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794579598.4946053,
+    "last_sweep_time": 1794580000.339707,
     "last_sweep_times": {
-      "algeria": 1794579596.0819244,
-      "france": 1794579598.4946053
+      "algeria": 1794579997.8590477,
+      "france": 1794580000.339707
     },
     "last_deal_post_times": {
-      "algeria": 1794579419.7666454
+      "algeria": 1794579997.8856823
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23668,7 +23688,7 @@
     "1005006994466968": "lodydeals",
     "1005011927267564": "lodydeals",
     "1005008291023017": "aniscoupons",
-    "1005012947477238": "lodydeals",
+    "1005012947477238": "aniscoupons",
     "1005010121513376": "aniscoupons",
     "1005009064526142": "zedstoreonline",
     "1005010009130696": "zedstoreonline",
@@ -25694,7 +25714,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:46043",
     "lodydeals:46045",
     "lodydeals:46048",
     "lodydeals:46050",
@@ -26693,7 +26712,8 @@
     "aniscoupons:34792",
     "lodydeals:46457",
     "zedstoreonline:40061",
-    "aniscoupons:34795"
+    "aniscoupons:34795",
+    "zedstoreonline:40064"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27338,6 +27358,11 @@
         "channel": "aniscoupons",
         "ts": 1794562883.3841333,
         "price": 289.5
+      },
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794579983.8527997,
+        "price": 289.0
       }
     ],
     "1005013361453762": [
@@ -27544,6 +27569,20 @@
         "channel": "zedstoreonline",
         "ts": 1794579409.57768,
         "price": 7.6
+      }
+    ],
+    "1005012639349629": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794579988.6810253,
+        "price": 378.14
+      }
+    ],
+    "1005012947477238": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794579993.3077998,
+        "price": 217.8
       }
     ]
   },
