@@ -778,7 +778,8 @@
     "1005011940143389",
     "1005010374799328",
     "1005010487219975",
-    "1005005277901494"
+    "1005005277901494",
+    "1005012191587148"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1572,7 +1573,8 @@
     "1005011940143389": 1794524364.21287,
     "1005010374799328": 1794524370.7043138,
     "1005010487219975": 1794524381.8060858,
-    "1005005277901494": 1794563997.9172754
+    "1005005277901494": 1794563997.9172754,
+    "1005012191587148": 1794568023.9427352
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2588,7 +2590,8 @@
     "Retro Bronze Embossed",
     "تخزين Kootion X12 Sata SSD",
     "XUNYOU-LINK 4G Modem",
-    "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers"
+    "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers",
+    "HOCO E201 ENC Calling"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3609,10 +3612,10 @@
     "Retro Bronze Embossed": 1794524381.8060858,
     "تخزين Kootion X12 Sata SSD": 1794531406.8053942,
     "XUNYOU-LINK 4G Modem": 1794562333.914511,
-    "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": 1794563997.9172754
+    "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": 1794563997.9172754,
+    "HOCO E201 ENC Calling": 1794568023.9427352
   },
   "published_post_keys": [
-    "lodydeals:45807",
     "zedstoreonline:38701",
     "aniscoupons:32686",
     "zedstoreonline:38915",
@@ -4611,11 +4614,12 @@
     "lodydeals:46452",
     "aniscoupons:34778",
     "zedstoreonline:40053",
-    "aniscoupons:34780"
+    "aniscoupons:34780",
+    "aniscoupons:34782"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794567664.502953,
+  "last_run_time": 1794568023.9427352,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4642,12 +4646,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40053,
-      "last_check_time": 1794567658.3609223
+      "last_message_id": 40054,
+      "last_check_time": 1794568018.7428684
     },
     "aniscoupons": {
-      "last_message_id": 34781,
-      "last_check_time": 1794567833.3335562
+      "last_message_id": 34782,
+      "last_check_time": 1794568026.0157814
     },
     "bnddeals": {
       "last_message_id": 51299,
@@ -5325,7 +5329,8 @@
     "1005011940143389": 3.48,
     "1005010374799328": 10.49,
     "1005010487219975": 5.49,
-    "1005005277901494": 13.44
+    "1005005277901494": 13.44,
+    "1005012191587148": 6.09
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -22900,6 +22905,16 @@
       "price": 273.5,
       "timestamp": 1794567664.502953,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34782": {
+      "channel_msg_id": 2579,
+      "product_id": "1005012191587148",
+      "title": "HOCO E201 ENC Calling",
+      "channel": "aniscoupons",
+      "source_msg_id": 34782,
+      "price": 6.09,
+      "timestamp": 1794568023.9427352,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22908,17 +22923,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794567667.5490103,
+    "last_deal_post_time": 1794568026.8956962,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794567838.903595,
+    "last_sweep_time": 1794568030.5645216,
     "last_sweep_times": {
-      "algeria": 1794567834.1438315,
-      "france": 1794567838.903595
+      "algeria": 1794568026.8643494,
+      "france": 1794568030.5645216
     },
     "last_deal_post_times": {
-      "algeria": 1794567667.5490103
+      "algeria": 1794568026.8956962
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23710,7 +23725,8 @@
     "1005011940143389": "lodydeals",
     "1005010374799328": "lodydeals",
     "1005010487219975": "lodydeals",
-    "1005005277901494": "aniscoupons"
+    "1005005277901494": "aniscoupons",
+    "1005012191587148": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -24733,7 +24749,8 @@
     "Retro Bronze Embossed": "lodydeals",
     "تخزين Kootion X12 Sata SSD": "ecksdeal",
     "XUNYOU-LINK 4G Modem": "lodydeals",
-    "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": "aniscoupons"
+    "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": "aniscoupons",
+    "HOCO E201 ENC Calling": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -25530,7 +25547,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45996",
     "lodydeals:45999",
     "lodydeals:46000",
     "lodydeals:46009",
@@ -26529,7 +26545,8 @@
     "bnddeals:51299",
     "aniscoupons:34776",
     "aniscoupons:34779",
-    "aniscoupons:34781"
+    "aniscoupons:34781",
+    "zedstoreonline:40054"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27146,6 +27163,11 @@
         "channel": "aniscoupons",
         "ts": 1794561051.097965,
         "price": 147.8
+      },
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794568018.1311033,
+        "price": 40.0
       }
     ],
     "1005008522983211": [

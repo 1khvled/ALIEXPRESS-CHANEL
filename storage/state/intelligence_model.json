@@ -28,7 +28,7 @@
       "ewma": 0.9822
     },
     "zedstoreonline": {
-      "seen": 125,
+      "seen": 126,
       "published": 65,
       "skipped": 0,
       "ewma": 0.9977
@@ -40,8 +40,8 @@
       "ewma": 0.6418
     },
     "aniscoupons": {
-      "seen": 220,
-      "published": 177,
+      "seen": 221,
+      "published": 178,
       "skipped": 0,
       "ewma": 0.9994
     },
@@ -54,8 +54,8 @@
   },
   "category_stats": {
     "other": {
-      "seen": 123,
-      "published": 103,
+      "seen": 124,
+      "published": 104,
       "skipped": 0,
       "ewma": 0.9994
     },
@@ -66,7 +66,7 @@
       "ewma": 0.99
     },
     "phones": {
-      "seen": 164,
+      "seen": 165,
       "published": 102,
       "skipped": 0,
       "ewma": 0.9994
@@ -687,34 +687,21 @@
     ],
     "1005008776714223": [
       74.47
+    ],
+    "1005012191587148": [
+      6.09
     ]
   },
   "counters": {
-    "scored": 407,
-    "verdict_publish": 384,
+    "scored": 409,
+    "verdict_publish": 386,
     "verdict_hold": 23,
     "verdict_skip": 0,
-    "published": 289,
+    "published": 290,
     "skipped": 0
   },
-  "score_sum": 29501.53,
+  "score_sum": 29670.26,
   "recent_decisions": [
-    {
-      "ts": 1794472507,
-      "channel": "zedstoreonline",
-      "category": "home",
-      "product_id": "1005009560287420",
-      "score": 76.35,
-      "verdict": "publish"
-    },
-    {
-      "ts": 1794472512,
-      "channel": "aniscoupons",
-      "category": "other",
-      "product_id": "1005010369693975",
-      "score": 70.41,
-      "verdict": "publish"
-    },
     {
       "ts": 1794472517,
       "channel": "aniscoupons",
@@ -2298,7 +2285,23 @@
       "product_id": "1005012571601398",
       "score": 70.92,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794568018,
+      "channel": "zedstoreonline",
+      "category": "phones",
+      "product_id": "1005010210432531",
+      "score": 85.45,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794568022,
+      "channel": "aniscoupons",
+      "category": "other",
+      "product_id": "1005012191587148",
+      "score": 83.28,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794567664.545939
+  "updated_at": 1794568023.9994342
 }
