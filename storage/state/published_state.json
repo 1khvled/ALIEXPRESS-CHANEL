@@ -1304,7 +1304,7 @@
     "1005013053122560": 1794223202.4757502,
     "1005012322822595": 1793543961.1645148,
     "1005009662812027": 1794498701.8625593,
-    "1005005975560350": 1794492068.8537488,
+    "1005005975560350": 1794566561.968837,
     "1005012922578845": 1793544001.8628821,
     "1005011752891197": 1793613465.8475375,
     "1005008689880751": 1793544016.7486506,
@@ -3401,7 +3401,7 @@
     "Essager 20W GaN + cable": 1794439910.7944255,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794475632.0153844,
-    "Fifine Gaming Headset H9W": 1794433999.0419908,
+    "Fifine Gaming Headset H9W": 1794566561.968837,
     "Fifine Gaming Headset H6": 1794424534.1435025,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794436379.3016446,
     "KOOTION SSD SATA": 1794473249.7212825,
@@ -3612,7 +3612,6 @@
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": 1794563997.9172754
   },
   "published_post_keys": [
-    "lodydeals:45572",
     "zedstoreonline:38628",
     "lodydeals:45743",
     "lodydeals:45416",
@@ -4611,11 +4610,12 @@
     "aniscoupons:34770",
     "aniscoupons:34771",
     "bnddeals:51298",
-    "aniscoupons:34772"
+    "aniscoupons:34772",
+    "aniscoupons:34775"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794566185.5634332,
+  "last_run_time": 1794566561.968837,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4646,8 +4646,8 @@
       "last_check_time": 1794564348.0477436
     },
     "aniscoupons": {
-      "last_message_id": 34774,
-      "last_check_time": 1794566371.740134
+      "last_message_id": 34776,
+      "last_check_time": 1794566565.5622883
     },
     "bnddeals": {
       "last_message_id": 51299,
@@ -5085,7 +5085,7 @@
     "1005012322822595": 266.19,
     "1005012524603100": 283.59,
     "1005009662812027": 78.4,
-    "1005005975560350": 35.9,
+    "1005005975560350": 36.5,
     "1005011752891197": 119.3,
     "1005008689880751": 76.5,
     "1005006861815245": 9.44,
@@ -22840,6 +22840,16 @@
       "price": 349.4,
       "timestamp": 1794566185.5634332,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34775": {
+      "channel_msg_id": 2573,
+      "product_id": "1005005975560350",
+      "title": "Fifine Gaming Headset H9W",
+      "channel": "aniscoupons",
+      "source_msg_id": 34775,
+      "price": 36.5,
+      "timestamp": 1794566561.968837,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22848,17 +22858,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794566188.2968888,
+    "last_deal_post_time": 1794566566.5726285,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794566375.6990905,
+    "last_sweep_time": 1794566569.6113017,
     "last_sweep_times": {
-      "algeria": 1794566373.4263022,
-      "france": 1794566375.6990905
+      "algeria": 1794566566.5463529,
+      "france": 1794566569.6113017
     },
     "last_deal_post_times": {
-      "algeria": 1794566188.2968888
+      "algeria": 1794566566.5726285
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23398,7 +23408,7 @@
     "1005012322822595": "lodydeals",
     "1005012524603100": "aniscoupons",
     "1005009662812027": "aniscoupons",
-    "1005005975560350": "zedstoreonline",
+    "1005005975560350": "aniscoupons",
     "1005011752891197": "zedstoreonline",
     "1005008689880751": "lodydeals",
     "1005006861815245": "ecksdeal",
@@ -25470,7 +25480,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45993",
     "lodydeals:45994",
     "lodydeals:45995",
     "lodydeals:45996",
@@ -26469,7 +26478,8 @@
     "lodydeals:46451",
     "aniscoupons:34773",
     "aniscoupons:34774",
-    "bnddeals:51299"
+    "bnddeals:51299",
+    "aniscoupons:34776"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27186,6 +27196,11 @@
         "channel": "bnddeals",
         "ts": 1794566373.2908494,
         "price": 10.3
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794566565.4657965,
+        "price": 10.3
       }
     ],
     "1005012809141747": [
@@ -27193,6 +27208,13 @@
         "channel": "aniscoupons",
         "ts": 1794566183.7668915,
         "price": 349.4
+      }
+    ],
+    "1005005975560350": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794566558.9453604,
+        "price": 36.5
       }
     ]
   },
