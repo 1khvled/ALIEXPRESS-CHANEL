@@ -1540,7 +1540,7 @@
     "1005008774483451": 1794426765.2023578,
     "1005012639349629": 1794484695.7251022,
     "1005010153422760": 1794487260.3295033,
-    "1005012809141747": 1794436740.624044,
+    "1005012809141747": 1794566185.5634332,
     "1005012912160949": 1794502231.5458007,
     "1005012167744546": 1794437860.4294534,
     "1005009582538267": 1794439531.0399334,
@@ -3568,7 +3568,7 @@
     "KOOTION M.2 512GB 7200Mbs": 1794430852.2821708,
     "HONOR X80 PRO MAX": 1794484875.2933695,
     "DJI Osmo mobile": 1794487260.3295033,
-    "OPPO K15 12/256GB": 1794436740.624044,
+    "OPPO K15 12/256GB": 1794566185.5634332,
     "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794502231.5458007,
     "KINGSTON DATA TRAVELER USB3.2 (128G)": 1794438803.0185766,
     "Essager Mini 30W Type C Charger PD": 1794438972.1864517,
@@ -3612,7 +3612,6 @@
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": 1794563997.9172754
   },
   "published_post_keys": [
-    "zedstoreonline:38547",
     "lodydeals:45572",
     "zedstoreonline:38628",
     "lodydeals:45743",
@@ -4611,11 +4610,12 @@
     "aniscoupons:34767",
     "aniscoupons:34770",
     "aniscoupons:34771",
-    "bnddeals:51298"
+    "bnddeals:51298",
+    "aniscoupons:34772"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794565826.9368062,
+  "last_run_time": 1794566185.5634332,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4646,8 +4646,8 @@
       "last_check_time": 1794564348.0477436
     },
     "aniscoupons": {
-      "last_message_id": 34771,
-      "last_check_time": 1794565823.4707773
+      "last_message_id": 34772,
+      "last_check_time": 1794566187.6061394
     },
     "bnddeals": {
       "last_message_id": 51298,
@@ -22830,6 +22830,16 @@
       "price": 10.3,
       "timestamp": 1794565826.9368062,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34772": {
+      "channel_msg_id": 2572,
+      "product_id": "1005012809141747",
+      "title": "OPPO K15 12/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34772,
+      "price": 349.4,
+      "timestamp": 1794566185.5634332,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22838,17 +22848,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794565829.0573025,
+    "last_deal_post_time": 1794566188.2968888,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794566009.4400012,
+    "last_sweep_time": 1794566190.674112,
     "last_sweep_times": {
-      "algeria": 1794566007.281237,
-      "france": 1794566009.4400012
+      "algeria": 1794566188.2791605,
+      "france": 1794566190.674112
     },
     "last_deal_post_times": {
-      "algeria": 1794565829.0573025
+      "algeria": 1794566188.2968888
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -27161,6 +27171,13 @@
         "channel": "lodydeals",
         "ts": 1794566004.4694674,
         "price": 10.37
+      }
+    ],
+    "1005012809141747": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794566183.7668915,
+        "price": 349.4
       }
     ]
   },
