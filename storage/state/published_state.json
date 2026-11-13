@@ -793,7 +793,8 @@
     "1005013078612320",
     "1005007010612283",
     "1005010788231460",
-    "1389260212"
+    "1389260212",
+    "1005012138794873"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1602,7 +1603,8 @@
     "1005013078612320": 1794597984.6494167,
     "1005007010612283": 1794599454.461018,
     "1005010788231460": 1794604060.7762444,
-    "1389260212": 1794605894.0354748
+    "1389260212": 1794605894.0354748,
+    "1005012138794873": 1794608839.031857
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2992,7 +2994,7 @@
     "أضف الآن في السلة الآن العرض يعمل يوم 1 نوفمبر 🔥": 1793270716.9132679,
     "Honor 600 5G Global 8/256GB .": 1793270732.2328634,
     "Honor 600s (8/255GB)": 1793270736.6516862,
-    "CUSU RAM DDR4 3200MHz 8GBx2": 1793273507.4658227,
+    "CUSU RAM DDR4 3200MHz 8GBx2": 1794608839.031857,
     "Realme P3 (No Charger)": 1793399519.0209813,
     "Oppo Find X9 Pro 12/256": 1793540035.6702917,
     "Vivo X200S 12/256": 1793448596.0702198,
@@ -3684,7 +3686,6 @@
     "realme 45W SUPERVOOC Charger": 1794606651.7602222
   },
   "published_post_keys": [
-    "ecksdeal:5948",
     "lodydeals:45885",
     "bnddeals:50882",
     "lodydeals:45793",
@@ -4683,11 +4684,12 @@
     "lodydeals:46477",
     "lodydeals:46479",
     "aniscoupons:34820",
-    "aniscoupons:34823"
+    "aniscoupons:34823",
+    "aniscoupons:34824"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794608467.1839538,
+  "last_run_time": 1794608839.031857,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4718,8 +4720,8 @@
       "last_check_time": 1794606082.780723
     },
     "aniscoupons": {
-      "last_message_id": 34823,
-      "last_check_time": 1794608469.2662854
+      "last_message_id": 34824,
+      "last_check_time": 1794608841.1038182
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -5412,7 +5414,8 @@
     "1005013078612320": 23.6,
     "1005007010612283": 23.2,
     "1005010788231460": 178.4,
-    "1389260212": 14.8
+    "1389260212": 14.8,
+    "1005012138794873": 82.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23557,6 +23560,16 @@
       "price": 68.79,
       "timestamp": 1794608467.1839538,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34824": {
+      "channel_msg_id": 2639,
+      "product_id": "1005012138794873",
+      "title": "CUSU RAM DDR4 3200MHz 8GBx2",
+      "channel": "aniscoupons",
+      "source_msg_id": 34824,
+      "price": 82.4,
+      "timestamp": 1794608839.031857,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23565,17 +23578,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794608470.495892,
+    "last_deal_post_time": 1794608842.1250048,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794608639.4249895,
+    "last_sweep_time": 1794608845.103983,
     "last_sweep_times": {
-      "algeria": 1794608637.0386198,
-      "france": 1794608639.4249895
+      "algeria": 1794608842.0953157,
+      "france": 1794608845.103983
     },
     "last_deal_post_times": {
-      "algeria": 1794608470.495892
+      "algeria": 1794608842.1250048
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24382,7 +24395,8 @@
     "1005013078612320": "zedstoreonline",
     "1005007010612283": "zedstoreonline",
     "1005010788231460": "zedstoreonline",
-    "1389260212": "zedstoreonline"
+    "1389260212": "zedstoreonline",
+    "1005012138794873": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
