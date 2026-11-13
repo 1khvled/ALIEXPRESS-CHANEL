@@ -469,6 +469,9 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
         is_post_handled,
         record_post_published,
         record_post_handled,
+        record_competitor_sighting,
+        is_hot_deal_repost_eligible,
+        record_hot_deal_repost,
         is_recent_cross_channel_duplicate,
         refresh_channel_cache,
         is_same_deal_title
@@ -819,16 +822,31 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                     from app.aliexpress.parser import detect_restock_deal
                     is_restock = detect_restock_deal(raw_text)
 
+                    # Every competitor push of a product we already posted is a hot-deal signal.
+                    if extracted.product_id:
+                        record_competitor_sighting(extracted.product_id, ch, extracted.current_price)
+
                     is_dup, dup_reason, is_price_drop = is_recent_cross_channel_duplicate(
                         extracted.product_id, ch, current_price=extracted.current_price, title=extracted.title or "",
                         cooldown_hours=getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 12.0), raw_text=raw_text
                     )
+                    is_hot_repost = False
                     if is_dup:
-                        print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] {dup_reason}")
-                        max_processed_id = max(max_processed_id, msg_id)
-                        record_monitored_channel_last_id(ch, msg_id)
-                        record_post_handled(ch, msg_id)
-                        continue
+                        hot_ok, hot_reason = is_hot_deal_repost_eligible(
+                            extracted.product_id, extracted.current_price
+                        )
+                        if hot_ok:
+                            is_hot_repost = True
+                            print(
+                                f"  [🔥 HOT DEAL REPOST] {hot_reason}. "
+                                "Copying the competitors with one urgency post."
+                            )
+                        else:
+                            print(f"  [CROSS-CHANNEL DUPLICATE BLOCKED] {dup_reason} ({hot_reason})")
+                            max_processed_id = max(max_processed_id, msg_id)
+                            record_monitored_channel_last_id(ch, msg_id)
+                            record_post_handled(ch, msg_id)
+                            continue
 
                     if is_restock:
                         print(f"  [🚨 RESTOCK EXCEPTION] Competitor announced return/restock! Reposting with restock urgency hook.")
@@ -946,6 +964,9 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                             raw_text=raw_text,
                             deal_type=deal_type
                         )
+
+                    if is_hot_repost:
+                        caption = "🚨 <b>الحق قبل ما يخلص — العرض مطلوب بزاف</b>\n\n" + caption
 
                     from app.ai.validator import caption_validator
                     validation = caption_validator.validate(
@@ -1129,6 +1150,8 @@ async def collect_and_post_last_10_deals(force: bool = False, force_tajmi3at: bo
                                 channel_msg_id=post_msg_id,
                                 price=deal.current_price
                             )
+                            if is_hot_repost and deal.product_id:
+                                record_hot_deal_repost(deal.product_id)
                             if extracted.is_coupon_list:
                                 from app.publisher.state_tracker import record_coupon_bulletin_published
                                 active_p = promo_tracker.get_active_promo()

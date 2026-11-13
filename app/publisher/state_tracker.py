@@ -567,6 +567,132 @@ def is_recent_cross_channel_duplicate(
     return False, "", False
 
 
+HOT_DEAL_WINDOW_SECONDS = 6 * 3600
+HOT_DEAL_MIN_SIGHTINGS = 3
+HOT_DEAL_MIN_CHANNELS = 2
+HOT_DEAL_MIN_AGE_SECONDS = 60 * 60
+HOT_DEAL_REPOST_COOLDOWN_SECONDS = 12 * 3600
+
+
+def record_competitor_sighting(
+    product_id: Optional[str],
+    channel_username: str,
+    price: Optional[float] = None,
+    now: Optional[float] = None
+):
+    """
+    Remembers that a monitored channel pushed a product we already published.
+    Several pushes across different channels mark it as a hot deal that is safe
+    to repost once with an urgency hook (instead of silently dropping every copy).
+    """
+    if not product_id:
+        return
+    p_str = str(product_id).strip()
+    if not p_str or p_str.startswith("COUPONS_") or p_str.startswith("EVENT_"):
+        return
+
+    state = load_persistent_state()
+    # Only products we already posted can become hot-deal reposts.
+    if p_str not in state.get("published_product_timestamps", {}):
+        return
+
+    ts = now if now is not None else time.time()
+    clean_ch = str(channel_username or "").lower().lstrip("@")
+    sightings = state.setdefault("competitor_product_sightings", {})
+    entries = sightings.setdefault(p_str, [])
+    entries.append({
+        "channel": clean_ch,
+        "ts": ts,
+        "price": float(price) if price else None,
+    })
+
+    # Keep the map bounded: 30 sightings per product, products seen in the last 12h only.
+    cutoff = ts - 2 * HOT_DEAL_WINDOW_SECONDS
+    pruned = {}
+    for pid, items in sightings.items():
+        fresh = [e for e in items if e.get("ts", 0) >= cutoff][-30:]
+        if fresh:
+            pruned[pid] = fresh
+    pruned[p_str] = pruned.get(p_str, [])[-30:]
+    state["competitor_product_sightings"] = pruned
+    save_persistent_state(state)
+
+
+def is_hot_deal_repost_eligible(
+    product_id: Optional[str],
+    current_price: Optional[float] = None,
+    now: Optional[float] = None,
+    cooldown_hours: Optional[float] = None,
+) -> Tuple[bool, str]:
+    """
+    Returns True when the same product keeps being posted by several monitored
+    channels after we published it, so copying them once is justified.
+
+    Guards against spam:
+    - at least 1h since our post
+    - at least 3 competitor pushes from 2+ different channels in the last 6h
+    - price did not go up
+    - only one hot repost per product per 12h cooldown
+    """
+    if not product_id:
+        return False, ""
+    p_str = str(product_id).strip()
+    if not p_str or p_str.startswith("COUPONS_") or p_str.startswith("EVENT_"):
+        return False, ""
+
+    state = load_persistent_state()
+    ts_now = now if now is not None else time.time()
+    from app.config.settings import settings
+    cooldown_seconds = (
+        cooldown_hours * 3600
+        if cooldown_hours is not None
+        else float(getattr(settings, "DUPLICATE_COOLDOWN_HOURS", 12.0) or 12.0) * 3600
+    )
+    if cooldown_seconds > HOT_DEAL_REPOST_COOLDOWN_SECONDS:
+        cooldown_seconds = HOT_DEAL_REPOST_COOLDOWN_SECONDS
+
+    our_ts = state.get("published_product_timestamps", {}).get(p_str)
+    if not our_ts:
+        return False, "product was never published"
+    age = ts_now - our_ts
+    if age < HOT_DEAL_MIN_AGE_SECONDS:
+        return False, f"too soon ({age / 60:.0f}m < 60m)"
+    if age >= cooldown_seconds:
+        return False, "outside the duplicate cooldown"
+
+    last_hot = state.get("hot_repost_timestamps", {}).get(p_str)
+    if last_hot and ts_now - last_hot < HOT_DEAL_REPOST_COOLDOWN_SECONDS:
+        return False, f"hot repost already done {((ts_now - last_hot) / 3600):.1f}h ago"
+
+    prev_price = state.get("published_product_prices", {}).get(p_str)
+    if prev_price and current_price and current_price > prev_price * 1.02:
+        return False, f"price went up (${prev_price:.2f} -> ${current_price:.2f})"
+
+    entries = [
+        e for e in state.get("competitor_product_sightings", {}).get(p_str, [])
+        if e.get("ts", 0) >= our_ts and (ts_now - e.get("ts", 0)) <= HOT_DEAL_WINDOW_SECONDS
+    ]
+    channels = {e.get("channel") for e in entries if e.get("channel")}
+    if len(entries) >= HOT_DEAL_MIN_SIGHTINGS and len(channels) >= HOT_DEAL_MIN_CHANNELS:
+        return True, (
+            f"pushed {len(entries)}x by {len(channels)} competitor channels "
+            f"since our post {age / 3600:.1f}h ago"
+        )
+    return False, f"only {len(entries)} push(es) from {len(channels)} channel(s)"
+
+
+def record_hot_deal_repost(product_id: Optional[str], now: Optional[float] = None):
+    """Marks a product as already copied once under the hot-deal rule."""
+    if not product_id:
+        return
+    p_str = str(product_id).strip()
+    if not p_str:
+        return
+    state = load_persistent_state()
+    state.setdefault("hot_repost_timestamps", {})[p_str] = now if now is not None else time.time()
+    save_persistent_state(state)
+
+
 def is_algerian_peak_hour() -> bool:
     """
     Returns True if current time in Algeria (UTC+1) is peak traffic:
