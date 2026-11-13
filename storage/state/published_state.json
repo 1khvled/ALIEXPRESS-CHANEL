@@ -777,7 +777,8 @@
     "1005012726037568",
     "1005011940143389",
     "1005010374799328",
-    "1005010487219975"
+    "1005010487219975",
+    "1005005277901494"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1570,7 +1571,8 @@
     "1005012726037568": 1794556294.0510342,
     "1005011940143389": 1794524364.21287,
     "1005010374799328": 1794524370.7043138,
-    "1005010487219975": 1794524381.8060858
+    "1005010487219975": 1794524381.8060858,
+    "1005005277901494": 1794563997.9172754
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2585,7 +2587,8 @@
     "QCY T13 ENC Earphone",
     "Retro Bronze Embossed",
     "تخزين Kootion X12 Sata SSD",
-    "XUNYOU-LINK 4G Modem"
+    "XUNYOU-LINK 4G Modem",
+    "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3605,10 +3608,10 @@
     "QCY T13 ENC Earphone": 1794524375.306614,
     "Retro Bronze Embossed": 1794524381.8060858,
     "تخزين Kootion X12 Sata SSD": 1794531406.8053942,
-    "XUNYOU-LINK 4G Modem": 1794562333.914511
+    "XUNYOU-LINK 4G Modem": 1794562333.914511,
+    "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": 1794563997.9172754
   },
   "published_post_keys": [
-    "aniscoupons:32689",
     "lodydeals:45569",
     "aniscoupons:32805",
     "zedstoreonline:38902",
@@ -4607,11 +4610,12 @@
     "aniscoupons:34762",
     "aniscoupons:34763",
     "zedstoreonline:40051",
-    "aniscoupons:34765"
+    "aniscoupons:34765",
+    "aniscoupons:34766"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794563445.89714,
+  "last_run_time": 1794563997.9172754,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4642,8 +4646,8 @@
       "last_check_time": 1794563441.7614386
     },
     "aniscoupons": {
-      "last_message_id": 34765,
-      "last_check_time": 1794563447.9688137
+      "last_message_id": 34766,
+      "last_check_time": 1794563999.9789834
     },
     "bnddeals": {
       "last_message_id": 51297,
@@ -5320,7 +5324,8 @@
     "1005012726037568": 7.47,
     "1005011940143389": 3.48,
     "1005010374799328": 10.49,
-    "1005010487219975": 5.49
+    "1005010487219975": 5.49,
+    "1005005277901494": 13.44
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -22775,6 +22780,16 @@
       "price": 258.5,
       "timestamp": 1794563445.89714,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34766": {
+      "channel_msg_id": 2567,
+      "product_id": "1005005277901494",
+      "title": "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers",
+      "channel": "aniscoupons",
+      "source_msg_id": 34766,
+      "price": 13.44,
+      "timestamp": 1794563997.9172754,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22783,17 +22798,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794563449.0256891,
+    "last_deal_post_time": 1794564001.0230694,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794563801.3488176,
+    "last_sweep_time": 1794564004.0490906,
     "last_sweep_times": {
-      "algeria": 1794563798.8438847,
-      "france": 1794563801.3488176
+      "algeria": 1794564000.9975674,
+      "france": 1794564004.0490906
     },
     "last_deal_post_times": {
-      "algeria": 1794563449.0256891
+      "algeria": 1794564001.0230694
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23584,7 +23599,8 @@
     "1005012726037568": "aniscoupons",
     "1005011940143389": "lodydeals",
     "1005010374799328": "lodydeals",
-    "1005010487219975": "lodydeals"
+    "1005010487219975": "lodydeals",
+    "1005005277901494": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -24606,7 +24622,8 @@
     "QCY T13 ENC Earphone": "lodydeals",
     "Retro Bronze Embossed": "lodydeals",
     "تخزين Kootion X12 Sata SSD": "ecksdeal",
-    "XUNYOU-LINK 4G Modem": "lodydeals"
+    "XUNYOU-LINK 4G Modem": "lodydeals",
+    "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
