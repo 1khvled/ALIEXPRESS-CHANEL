@@ -1005,7 +1005,7 @@
     "1005007920266509": 1793966861.2399917,
     "1005009275536960": 1791975930.016452,
     "1005007767322935": 1791975934.9659944,
-    "1005012571601398": 1794484875.2933695,
+    "1005012571601398": 1794567664.502953,
     "1005013054007275": 1794223210.002915,
     "1005011899097443": 1794213297.7367866,
     "1005012865117890": 1793613385.3577175,
@@ -1559,7 +1559,7 @@
     "1005001849536579": 1794515176.9450598,
     "1005006967391791": 1794476797.164376,
     "1005013288890301": 1794477157.5349603,
-    "1005013089015192": 1794503538.0099986,
+    "1005013089015192": 1794567656.2959213,
     "1005009278114794": 1794480064.6967885,
     "1005010210432531": 1794561052.9558282,
     "1005013422894128": 1794487083.9711623,
@@ -3566,7 +3566,7 @@
     "Essager 2in1 USB Type C  60W": 1794420685.287832,
     "GOOJPRT Portable Thermal Printer": 1794420689.8352551,
     "KOOTION M.2 512GB 7200Mbs": 1794430852.2821708,
-    "HONOR X80 PRO MAX": 1794484875.2933695,
+    "HONOR X80 PRO MAX": 1794567664.502953,
     "DJI Osmo mobile": 1794487260.3295033,
     "OPPO K15 12/256GB": 1794566185.5634332,
     "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794502231.5458007,
@@ -3591,7 +3591,7 @@
     "Machenike G5 Pro Gaming Controller": 1794476797.164376,
     "Webcam EMEET C100 1080P": 1794477157.5349603,
     "FIFINE 1440p Full HD PC Webcam with Microphone": 1794478095.864591,
-    "iQOO Z11S 8/128": 1794503538.0099986,
+    "iQOO Z11S 8/128": 1794567656.2959213,
     "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794480064.6967885,
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794561052.9558282,
     "Honor Win RT2": 1794487083.9711623,
@@ -3612,8 +3612,6 @@
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": 1794563997.9172754
   },
   "published_post_keys": [
-    "zedstoreonline:38846",
-    "test_channel:1793282843",
     "lodydeals:45807",
     "zedstoreonline:38701",
     "aniscoupons:32686",
@@ -4611,11 +4609,13 @@
     "aniscoupons:34775",
     "aniscoupons:34777",
     "lodydeals:46452",
-    "aniscoupons:34778"
+    "aniscoupons:34778",
+    "zedstoreonline:40053",
+    "aniscoupons:34780"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794567111.1736724,
+  "last_run_time": 1794567664.502953,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4642,12 +4642,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40052,
-      "last_check_time": 1794564348.0477436
+      "last_message_id": 40053,
+      "last_check_time": 1794567658.3609223
     },
     "aniscoupons": {
-      "last_message_id": 34779,
-      "last_check_time": 1794567280.8107078
+      "last_message_id": 34780,
+      "last_check_time": 1794567666.5600712
     },
     "bnddeals": {
       "last_message_id": 51299,
@@ -22880,6 +22880,26 @@
       "price": 167.8,
       "timestamp": 1794567111.1736724,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40053": {
+      "channel_msg_id": 2577,
+      "product_id": "1005013089015192",
+      "title": "iQOO Z11S 8/128",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40053,
+      "price": 261.9,
+      "timestamp": 1794567656.2959213,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34780": {
+      "channel_msg_id": 2578,
+      "product_id": "1005012571601398",
+      "title": "HONOR X80 PRO MAX",
+      "channel": "aniscoupons",
+      "source_msg_id": 34780,
+      "price": 273.5,
+      "timestamp": 1794567664.502953,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22888,17 +22908,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794567113.951872,
+    "last_deal_post_time": 1794567667.5490103,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794567475.0920508,
+    "last_sweep_time": 1794567670.4761147,
     "last_sweep_times": {
-      "algeria": 1794567472.645271,
-      "france": 1794567475.0920508
+      "algeria": 1794567667.5239153,
+      "france": 1794567670.4761147
     },
     "last_deal_post_times": {
-      "algeria": 1794567113.951872
+      "algeria": 1794567667.5490103
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -27079,11 +27099,6 @@
   "competitor_product_sightings": {
     "1005012726037568": [
       {
-        "channel": "zedstoreonline",
-        "ts": 1794524074.0,
-        "price": 7.4
-      },
-      {
         "channel": "lodydeals",
         "ts": 1794526199.0,
         "price": 7.4
@@ -27261,6 +27276,20 @@
         "channel": "aniscoupons",
         "ts": 1794567109.5731103,
         "price": 167.8
+      }
+    ],
+    "1005013089015192": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794567654.2734976,
+        "price": 261.9
+      }
+    ],
+    "1005012571601398": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794567662.3621528,
+        "price": 273.5
       }
     ]
   },
