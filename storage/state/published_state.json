@@ -1586,7 +1586,7 @@
     "1005010487219975": 1794524381.8060858,
     "1005005277901494": 1794563997.9172754,
     "1005012191587148": 1794568023.9427352,
-    "1005012624574517": 1794575567.6709607,
+    "1005012624574517": 1794599278.9506347,
     "1005012644923854": 1794577769.242665,
     "1005005709908265": 1794577943.6825492,
     "1005011887425776": 1794580354.5744467,
@@ -2627,7 +2627,8 @@
     "Lexar V400 USB3.0 64GB",
     "HAYLOU S40 ANC Wireless",
     "CUSU Memory DDR5 (16GB) 6000MHz",
-    "Realme 15 Pro (12/512GB)"
+    "Realme 15 Pro (12/512GB)",
+    "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3663,10 +3664,10 @@
     "Lexar V400 USB3.0 64GB": 1794593403.339319,
     "HAYLOU S40 ANC Wireless": 1794597627.451524,
     "CUSU Memory DDR5 (16GB) 6000MHz": 1794598362.0815012,
-    "Realme 15 Pro (12/512GB)": 1794598366.5791407
+    "Realme 15 Pro (12/512GB)": 1794598366.5791407,
+    "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": 1794599278.9506347
   },
   "published_post_keys": [
-    "couponsglobal:48815",
     "megaphonna:8620",
     "aniscoupons:32690",
     "pcgamingpart:7976",
@@ -4665,19 +4666,20 @@
     "aniscoupons:34811",
     "aniscoupons:34812",
     "zedstoreonline:40087",
-    "zedstoreonline:40089"
+    "zedstoreonline:40089",
+    "zedstoreonline:40090"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794598909.9247847,
+  "last_run_time": 1794599278.9506347,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46471,
-      "last_check_time": 1794598540.6072
+      "last_message_id": 46472,
+      "last_check_time": 1794599272.6565468
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4696,8 +4698,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40089,
-      "last_check_time": 1794598911.9832418
+      "last_message_id": 40090,
+      "last_check_time": 1794599281.0115752
     },
     "aniscoupons": {
       "last_message_id": 34812,
@@ -5381,7 +5383,7 @@
     "1005010487219975": 5.49,
     "1005005277901494": 13.44,
     "1005012191587148": 6.09,
-    "1005012624574517": 31.62,
+    "1005012624574517": 30.6,
     "1005012644923854": 0.95,
     "1005005709908265": 48.5,
     "1005011887425776": 20.48,
@@ -23346,6 +23348,16 @@
       "price": 36.5,
       "timestamp": 1794598909.9247847,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40090": {
+      "channel_msg_id": 2620,
+      "product_id": "1005012624574517",
+      "title": "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40090,
+      "price": 30.6,
+      "timestamp": 1794599278.9506347,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23354,17 +23366,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794598913.323989,
+    "last_deal_post_time": 1794599282.5125327,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794599094.990218,
+    "last_sweep_time": 1794599285.7816482,
     "last_sweep_times": {
-      "algeria": 1794599092.7455943,
-      "france": 1794599094.990218
+      "algeria": 1794599282.4856842,
+      "france": 1794599285.7816482
     },
     "last_deal_post_times": {
-      "algeria": 1794598913.323989
+      "algeria": 1794599282.5125327
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24158,7 +24170,7 @@
     "1005010487219975": "lodydeals",
     "1005005277901494": "aniscoupons",
     "1005012191587148": "aniscoupons",
-    "1005012624574517": "aniscoupons",
+    "1005012624574517": "zedstoreonline",
     "1005012644923854": "lodydeals",
     "1005005709908265": "aniscoupons",
     "1005011887425776": "aniscoupons",
@@ -25206,7 +25218,8 @@
     "Lexar V400 USB3.0 64GB": "lodydeals",
     "HAYLOU S40 ANC Wireless": "zedstoreonline",
     "CUSU Memory DDR5 (16GB) 6000MHz": "aniscoupons",
-    "Realme 15 Pro (12/512GB)": "aniscoupons"
+    "Realme 15 Pro (12/512GB)": "aniscoupons",
+    "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -28036,6 +28049,13 @@
         "channel": "zedstoreonline",
         "ts": 1794598544.5504308,
         "price": 3.2
+      }
+    ],
+    "1005012624574517": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794599276.959406,
+        "price": 30.6
       }
     ]
   },
