@@ -961,7 +961,7 @@
     "1005013313539058": 1791482965.5086565,
     "9998889315": 1791589315.5172248,
     "COUPONS_54d30f00dccf": 1791626806.6018147,
-    "1005008776714223": 1794302230.3856256,
+    "1005008776714223": 1794567103.631711,
     "9998886934": 1791626934.8945594,
     "9998887499": 1791627499.229838,
     "9998887532": 1791627532.2548609,
@@ -1449,7 +1449,7 @@
     "1005012691642623": 1794074230.5173922,
     "1005010266233059": 1793977272.9654846,
     "1005007469003552": 1794130707.0577464,
-    "1005010041181003": 1794519051.76153,
+    "1005010041181003": 1794567111.1736724,
     "1005010265542567": 1794131426.95932,
     "1005003156756854": 1794488565.604101,
     "1005010142208108": 1794302223.66585,
@@ -3371,7 +3371,7 @@
     "GameSir T4 Nova Lite": 1794141669.7207782,
     "Xiaoxin Pad Pro GT 8/256GB": 1793737359.999931,
     "EasyThreed 3D Printer Entry": 1793741666.9686077,
-    "CUSU SSD SATA 1TB": 1794302230.3856256,
+    "CUSU SSD SATA 1TB": 1794567103.631711,
     "MAONO PD400X USB/XLR": 1793742770.1634803,
     "HyperX Cloud 3 DTS": 1793779903.687306,
     "KOOTION X15 M.2 Nvme 512GB": 1793969920.9023197,
@@ -3420,7 +3420,7 @@
     "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
     "ميكروفون Ulanzi A100 لاسلكي صغير": 1793982290.6109207,
-    "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794519051.76153,
+    "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794567111.1736724,
     "Ulanzi A200 Mini Wireless Lavalier Microphone": 1794131426.95932,
     "حامل هاتف Ulanzi ST-06S": 1794488565.604101,
     "AULA MINI60 HE PRO": 1794302223.66585,
@@ -3612,8 +3612,6 @@
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": 1794563997.9172754
   },
   "published_post_keys": [
-    "lodydeals:45743",
-    "lodydeals:45416",
     "zedstoreonline:38846",
     "test_channel:1793282843",
     "lodydeals:45807",
@@ -4611,19 +4609,21 @@
     "bnddeals:51298",
     "aniscoupons:34772",
     "aniscoupons:34775",
-    "aniscoupons:34777"
+    "aniscoupons:34777",
+    "lodydeals:46452",
+    "aniscoupons:34778"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794566735.8998222,
+  "last_run_time": 1794567111.1736724,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
       "last_check_time": 1794531406.8053942
     },
     "lodydeals": {
-      "last_message_id": 46451,
-      "last_check_time": 1794566004.5871627
+      "last_message_id": 46452,
+      "last_check_time": 1794567105.6784477
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4646,8 +4646,8 @@
       "last_check_time": 1794564348.0477436
     },
     "aniscoupons": {
-      "last_message_id": 34777,
-      "last_check_time": 1794566737.9607456
+      "last_message_id": 34778,
+      "last_check_time": 1794567113.2216644
     },
     "bnddeals": {
       "last_message_id": 51299,
@@ -22860,6 +22860,26 @@
       "price": 37.5,
       "timestamp": 1794566735.8998222,
       "status": "ACTIVE"
+    },
+    "lodydeals:46452": {
+      "channel_msg_id": 2575,
+      "product_id": "1005008776714223",
+      "title": "CUSU SSD SATA 1TB",
+      "channel": "lodydeals",
+      "source_msg_id": 46452,
+      "price": 74.47,
+      "timestamp": 1794567103.631711,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34778": {
+      "channel_msg_id": 2576,
+      "product_id": "1005010041181003",
+      "title": "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34778,
+      "price": 167.8,
+      "timestamp": 1794567111.1736724,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22868,17 +22888,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794566738.7522087,
+    "last_deal_post_time": 1794567113.951872,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794566918.3374364,
+    "last_sweep_time": 1794567116.5794806,
     "last_sweep_times": {
-      "algeria": 1794566915.940378,
-      "france": 1794566918.3374364
+      "algeria": 1794567113.9311216,
+      "france": 1794567116.5794806
     },
     "last_deal_post_times": {
-      "algeria": 1794566738.7522087
+      "algeria": 1794567113.951872
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -27059,11 +27079,6 @@
   "competitor_product_sightings": {
     "1005012726037568": [
       {
-        "channel": "aniscoupons",
-        "ts": 1794523862.0,
-        "price": 7.47
-      },
-      {
         "channel": "zedstoreonline",
         "ts": 1794524074.0,
         "price": 7.4
@@ -27232,6 +27247,20 @@
         "channel": "aniscoupons",
         "ts": 1794566733.9902842,
         "price": 37.5
+      }
+    ],
+    "1005008776714223": [
+      {
+        "channel": "lodydeals",
+        "ts": 1794567101.737185,
+        "price": 74.47
+      }
+    ],
+    "1005010041181003": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794567109.5731103,
+        "price": 167.8
       }
     ]
   },
