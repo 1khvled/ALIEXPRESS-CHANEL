@@ -1510,7 +1510,7 @@
     "1005007820092290": 1794224654.527678,
     "1005012329021334": 1794494280.7112553,
     "1005013218893010": 1794226314.627466,
-    "1005013480169843": 1794515535.4850473,
+    "1005013480169843": 1794584771.5091124,
     "1005013226454479": 1794227594.9699965,
     "1005005548265076": 1794231079.407264,
     "1005012555450345": 1794232557.0275722,
@@ -2897,7 +2897,7 @@
     "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)": 1792156501.818011,
     "Redmi Pad 2 9.7": 1792061322.5579543,
     "Redmi Note 12 5G Global (4/128GB)": 1792156524.878074,
-    "Blackview Wave 10C": 1794515535.4850473,
+    "Blackview Wave 10C": 1794584771.5091124,
     "متوسط سعره حالياً 82000دج": 1793276237.692456,
     "iQOO Z11s 5G (8/128GB)": 1794431592.229099,
     "realme Watch 5 Smart Watch 1.97\" AMOLED Display Sports & Health Monitoring": 1793966861.2399917,
@@ -3636,7 +3636,6 @@
     "ATK VXE Dragonfly V3 PRO": 1794580354.5744467
   },
   "published_post_keys": [
-    "test_channel:1791675569",
     "megaphonna:8566",
     "aniscoupons:33275",
     "test_channel:1792182115",
@@ -4635,11 +4634,12 @@
     "aniscoupons:34798",
     "zedstoreonline:40066",
     "aniscoupons:34799",
-    "zedstoreonline:40067"
+    "zedstoreonline:40067",
+    "aniscoupons:34804"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794580902.9408488,
+  "last_run_time": 1794584771.5091124,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4670,8 +4670,8 @@
       "last_check_time": 1794581264.3242278
     },
     "aniscoupons": {
-      "last_message_id": 34803,
-      "last_check_time": 1794582005.7362885
+      "last_message_id": 34804,
+      "last_check_time": 1794584773.573854
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -23119,6 +23119,16 @@
       "price": 40.1,
       "timestamp": 1794580902.9408488,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34804": {
+      "channel_msg_id": 2601,
+      "product_id": "1005013480169843",
+      "title": "Blackview Wave 10C",
+      "channel": "aniscoupons",
+      "source_msg_id": 34804,
+      "price": 66.7,
+      "timestamp": 1794584771.5091124,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23127,17 +23137,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794580909.3121452,
+    "last_deal_post_time": 1794584774.5793648,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794584586.239021,
+    "last_sweep_time": 1794584777.7646966,
     "last_sweep_times": {
-      "algeria": 1794584583.541018,
-      "france": 1794584586.239021
+      "algeria": 1794584774.5528932,
+      "france": 1794584777.7646966
     },
     "last_deal_post_times": {
-      "algeria": 1794580909.3121452
+      "algeria": 1794584774.5793648
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23865,7 +23875,7 @@
     "1005007820092290": "zedstoreonline",
     "1005012329021334": "aniscoupons",
     "1005013218893010": "zedstoreonline",
-    "1005013480169843": "zedstoreonline",
+    "1005013480169843": "aniscoupons",
     "1005013226454479": "zedstoreonline",
     "1005005548265076": "lodydeals",
     "1005012555450345": "lodydeals",
@@ -24228,7 +24238,7 @@
     "Ⓜ ONEPLUS TURBO 6X PRO 5G (8/128)": "megaphonna",
     "Redmi Pad 2 9.7": "aniscoupons",
     "Redmi Note 12 5G Global (4/128GB)": "aniscoupons",
-    "Blackview Wave 10C": "zedstoreonline",
+    "Blackview Wave 10C": "aniscoupons",
     "متوسط سعره حالياً 82000دج": "megaphonna",
     "realme 15T 5G Smartphone NFC Dimensity 6400 Max Chipset Dual 50MP AI": "aniscoupons",
     "iQOO Z11s 5G (8/128GB)": "aniscoupons",
@@ -27669,6 +27679,13 @@
         "channel": "zedstoreonline",
         "ts": 1794580901.2238681,
         "price": 40.1
+      }
+    ],
+    "1005013480169843": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794584769.4551408,
+        "price": 66.7
       }
     ]
   },
