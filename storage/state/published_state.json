@@ -1558,7 +1558,7 @@
     "1005011936109841": 1794475842.5666552,
     "1005012333024137": 1794475849.927629,
     "1005007822635375": 1794501299.95393,
-    "1005001849536579": 1794515176.9450598,
+    "1005001849536579": 1794575748.1745248,
     "1005006967391791": 1794476797.164376,
     "1005013288890301": 1794477157.5349603,
     "1005013089015192": 1794567656.2959213,
@@ -3506,7 +3506,7 @@
     "طابعة D2 Mini محمولة لطباعة الصور والملصقات والبطاقات على الورق": 1794223934.5228841,
     "قفازات سبايدرمان للأطفال مع 15 سهماً للعب والتسلية": 1794224474.0767472,
     "طابعة حرارية محمولة بحجم الجيب لطباعة النصوص والصور والملصقات": 1794224654.527678,
-    "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": 1794494280.7112553,
+    "MAONO PM360TR Condenser Microphone XLR Podcast Microphone": 1794575748.1745248,
     "لوووووووووووووووز": 1794226314.627466,
     "شاحنة ألعاب صغيرة بالتحكم عن بُعد": 1794227594.9699965,
     "Mortal T1+ 2/16GB Wifi 4K": 1794229795.9714105,
@@ -3620,7 +3620,6 @@
     "MAONO Wave T1 Plus Dual": 1794575567.6709607
   },
   "published_post_keys": [
-    "zedstoreonline:38915",
     "couponsglobal:48876",
     "zedstoreonline:38528",
     "couponsglobal:48796",
@@ -4619,11 +4618,12 @@
     "aniscoupons:34780",
     "aniscoupons:34782",
     "aniscoupons:34784",
-    "aniscoupons:34785"
+    "aniscoupons:34785",
+    "aniscoupons:34786"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794575567.6709607,
+  "last_run_time": 1794575748.1745248,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4650,12 +4650,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40056,
-      "last_check_time": 1794569849.588365
+      "last_message_id": 40057,
+      "last_check_time": 1794575743.1288655
     },
     "aniscoupons": {
-      "last_message_id": 34785,
-      "last_check_time": 1794575569.7464986
+      "last_message_id": 34786,
+      "last_check_time": 1794575750.2498124
     },
     "bnddeals": {
       "last_message_id": 51299,
@@ -5318,7 +5318,7 @@
     "1005012650636759": 23.12,
     "1005011936109841": 457.36,
     "1005012333024137": 7.07,
-    "1005001849536579": 20.5,
+    "1005001849536579": 21.52,
     "1005006967391791": 36.2,
     "1005013288890301": 16.9,
     "1005013089015192": 261.9,
@@ -22940,6 +22940,16 @@
       "price": 31.62,
       "timestamp": 1794575567.6709607,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34786": {
+      "channel_msg_id": 2583,
+      "product_id": "1005001849536579",
+      "title": "MAONO PM360TR Condenser Microphone XLR Podcast Microphone",
+      "channel": "aniscoupons",
+      "source_msg_id": 34786,
+      "price": 21.52,
+      "timestamp": 1794575748.1745248,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22948,17 +22958,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794575570.8482633,
+    "last_deal_post_time": 1794575751.3495226,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794575574.135203,
+    "last_sweep_time": 1794575754.7142692,
     "last_sweep_times": {
-      "algeria": 1794575570.8164089,
-      "france": 1794575574.135203
+      "algeria": 1794575751.316584,
+      "france": 1794575754.7142692
     },
     "last_deal_post_times": {
-      "algeria": 1794575570.8482633
+      "algeria": 1794575751.3495226
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23735,7 +23745,7 @@
     "1005012650636759": "lodydeals",
     "1005011936109841": "lodydeals",
     "1005012333024137": "lodydeals",
-    "1005001849536579": "zedstoreonline",
+    "1005001849536579": "aniscoupons",
     "1005006967391791": "zedstoreonline",
     "1005013288890301": "zedstoreonline",
     "1005013089015192": "zedstoreonline",
@@ -25574,7 +25584,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:6027",
     "lodydeals:46020",
     "lodydeals:46021",
     "lodydeals:46023",
@@ -26573,7 +26582,8 @@
     "lodydeals:46453",
     "zedstoreonline:40055",
     "aniscoupons:34783",
-    "zedstoreonline:40056"
+    "zedstoreonline:40056",
+    "zedstoreonline:40057"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27339,6 +27349,13 @@
         "channel": "aniscoupons",
         "ts": 1794567662.3621528,
         "price": 273.5
+      }
+    ],
+    "1005001849536579": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794575745.0532792,
+        "price": 21.52
       }
     ]
   },
