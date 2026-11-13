@@ -1208,7 +1208,7 @@
     "1005005373032877": 1793600283.7397804,
     "1005007869955343": 1794433423.9855666,
     "1005012644570693": 1793441338.6619778,
-    "1005003949106838": 1794514990.78419,
+    "1005003949106838": 1794565821.4120076,
     "1005012436082838": 1793733101.535615,
     "1005010716206374": 1793448715.1480892,
     "1005012864273120": 1793399494.1323898,
@@ -1402,7 +1402,7 @@
     "1005010419207841": 1794511303.5161283,
     "1005011891052345": 1793706864.9165008,
     "1005009648930854": 1793707047.5983977,
-    "1005010184029817": 1794396619.5833008,
+    "1005010184029817": 1794565826.9368062,
     "1005006302799297": 1793707108.6257114,
     "1005013372330447": 1793707119.4932482,
     "1005012305564176": 1793707135.2600253,
@@ -3345,7 +3345,7 @@
     "Leaven X3 RGB Magnetic 1600DPI": 1793707047.5983977,
     "CUSU DDR5 32GB(16GBX2) 5600MHz": 1793707052.9762022,
     "HONOR X70 5G 8/128GB": 1793707067.6841128,
-    "CMF Buds 2a ANC -42dB": 1793794075.3624413,
+    "CMF Buds 2a ANC -42dB": 1794565826.9368062,
     "CUSU SSD 256GB M2 NVMe": 1793707081.0327315,
     "OPPO A6 PRO 12/256GB": 1793793726.6494405,
     "Attack Shark R1 PAW3311": 1794475820.1482265,
@@ -3479,7 +3479,7 @@
     "Lenovo LP40 Pro": 1794146830.4272797,
     "Ulanzi ST-06S Smartphone Mount Holder": 1794146840.7057447,
     "WAMRAM SATA SSD 480GB": 1794159522.2930505,
-    "Netac M.2 1TB 7400Mbs Gen 4": 1794514990.78419,
+    "Netac M.2 1TB 7400Mbs Gen 4": 1794565821.4120076,
     "RYZEN 5 5600XT": 1794253893.3396604,
     "OnePlus Turbo 6V": 1794476009.5322104,
     "DJI Mic Mini2  2TX 1RX": 1794216974.0881407,
@@ -3612,8 +3612,6 @@
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": 1794563997.9172754
   },
   "published_post_keys": [
-    "zedstoreonline:38902",
-    "lodydeals:45435",
     "zedstoreonline:38547",
     "lodydeals:45572",
     "zedstoreonline:38628",
@@ -4611,11 +4609,13 @@
     "aniscoupons:34765",
     "aniscoupons:34766",
     "aniscoupons:34767",
-    "aniscoupons:34770"
+    "aniscoupons:34770",
+    "aniscoupons:34771",
+    "bnddeals:51298"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794565090.2307494,
+  "last_run_time": 1794565826.9368062,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4646,12 +4646,12 @@
       "last_check_time": 1794564348.0477436
     },
     "aniscoupons": {
-      "last_message_id": 34770,
-      "last_check_time": 1794565092.3029335
+      "last_message_id": 34771,
+      "last_check_time": 1794565823.4707773
     },
     "bnddeals": {
-      "last_message_id": 51297,
-      "last_check_time": 1794524726.378913
+      "last_message_id": 51298,
+      "last_check_time": 1794565829.005864
     }
   },
   "published_product_prices": {
@@ -5171,7 +5171,7 @@
     "1005010419207841": 29.44,
     "1005011891052345": 50.64,
     "1005009648930854": 7.56,
-    "1005010184029817": 10.8,
+    "1005010184029817": 10.3,
     "1005006302799297": 282.23,
     "1005013372330447": 583.0,
     "1005012305564176": 60.76,
@@ -22810,6 +22810,26 @@
       "price": 47.4,
       "timestamp": 1794565090.2307494,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34771": {
+      "channel_msg_id": 2570,
+      "product_id": "1005003949106838",
+      "title": "Netac M.2 1TB 7400Mbs Gen 4",
+      "channel": "aniscoupons",
+      "source_msg_id": 34771,
+      "price": 114.99,
+      "timestamp": 1794565821.4120076,
+      "status": "ACTIVE"
+    },
+    "bnddeals:51298": {
+      "channel_msg_id": 2571,
+      "product_id": "1005010184029817",
+      "title": "CMF Buds 2a ANC -42dB",
+      "channel": "bnddeals",
+      "source_msg_id": 51298,
+      "price": 10.3,
+      "timestamp": 1794565826.9368062,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22818,17 +22838,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794565093.3468597,
+    "last_deal_post_time": 1794565829.0573025,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794565636.0910838,
+    "last_sweep_time": 1794565831.3002102,
     "last_sweep_times": {
-      "algeria": 1794565628.555471,
-      "france": 1794565636.0910838
+      "algeria": 1794565829.0312176,
+      "france": 1794565831.3002102
     },
     "last_deal_post_times": {
-      "algeria": 1794565093.3468597
+      "algeria": 1794565829.0573025
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23455,7 +23475,7 @@
     "1005010419207841": "ecksdeal",
     "1005011891052345": "ecksdeal",
     "1005009648930854": "lodydeals",
-    "1005010184029817": "zedstoreonline",
+    "1005010184029817": "bnddeals",
     "1005006302799297": "lodydeals",
     "1005013372330447": "lodydeals",
     "1005012305564176": "lodydeals",
@@ -24377,7 +24397,7 @@
     "Leaven X3 RGB Magnetic 1600DPI": "lodydeals",
     "CUSU DDR5 32GB(16GBX2) 5600MHz": "lodydeals",
     "HONOR X70 5G 8/128GB": "lodydeals",
-    "CMF Buds 2a ANC -42dB": "lodydeals",
+    "CMF Buds 2a ANC -42dB": "bnddeals",
     "CUSU SSD 256GB M2 NVMe": "lodydeals",
     "OPPO A6 PRO 12/256GB": "lodydeals",
     "Attack Shark R1 PAW3311": "lodydeals",
@@ -27122,6 +27142,20 @@
         "channel": "aniscoupons",
         "ts": 1794565088.1287668,
         "price": 47.4
+      }
+    ],
+    "1005003949106838": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794565819.6539829,
+        "price": 114.99
+      }
+    ],
+    "1005010184029817": [
+      {
+        "channel": "bnddeals",
+        "ts": 1794565825.311976,
+        "price": 10.3
       }
     ]
   },

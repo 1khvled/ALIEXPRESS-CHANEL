@@ -34,14 +34,14 @@
       "ewma": 0.9975
     },
     "bnddeals": {
-      "seen": 18,
-      "published": 3,
+      "seen": 19,
+      "published": 4,
       "skipped": 0,
-      "ewma": 0.6107
+      "ewma": 0.6418
     },
     "aniscoupons": {
-      "seen": 214,
-      "published": 171,
+      "seen": 215,
+      "published": 172,
       "skipped": 0,
       "ewma": 0.9994
     },
@@ -54,8 +54,8 @@
   },
   "category_stats": {
     "other": {
-      "seen": 120,
-      "published": 100,
+      "seen": 122,
+      "published": 102,
       "skipped": 0,
       "ewma": 0.9994
     },
@@ -197,7 +197,8 @@
       226.78
     ],
     "1005010184029817": [
-      10.8
+      10.8,
+      10.3
     ],
     "1005008357913212": [
       40.5,
@@ -642,6 +643,7 @@
       36.4
     ],
     "1005003949106838": [
+      114.99,
       114.99
     ],
     "1005012993724126": [
@@ -679,31 +681,15 @@
     ]
   },
   "counters": {
-    "scored": 398,
-    "verdict_publish": 375,
+    "scored": 400,
+    "verdict_publish": 377,
     "verdict_hold": 23,
     "verdict_skip": 0,
-    "published": 280,
+    "published": 282,
     "skipped": 0
   },
-  "score_sum": 28829.01,
+  "score_sum": 28980.25,
   "recent_decisions": [
-    {
-      "ts": 1794471408,
-      "channel": "zedstoreonline",
-      "category": "pc",
-      "product_id": "1005007162099601",
-      "score": 85.62,
-      "verdict": "publish"
-    },
-    {
-      "ts": 1794471410,
-      "channel": "aniscoupons",
-      "category": "home",
-      "product_id": "1005007038882010",
-      "score": 78.46,
-      "verdict": "publish"
-    },
     {
       "ts": 1794471593,
       "channel": "zedstoreonline",
@@ -2287,7 +2273,23 @@
       "product_id": "1005007916078341",
       "score": 73.56,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794565819,
+      "channel": "aniscoupons",
+      "category": "other",
+      "product_id": "1005003949106838",
+      "score": 75.26,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794565825,
+      "channel": "bnddeals",
+      "category": "other",
+      "product_id": "1005010184029817",
+      "score": 75.98,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794565090.286114
+  "updated_at": 1794565826.984033
 }
