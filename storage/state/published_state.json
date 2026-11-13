@@ -1358,7 +1358,7 @@
     "1005011927267564": 1793728844.5794795,
     "1005008291023017": 1794508546.500024,
     "1005012947477238": 1793612016.5356846,
-    "1005010121513376": 1794512221.1229692,
+    "1005010121513376": 1794562885.2375963,
     "1005009064526142": 1793613380.753295,
     "1005010009130696": 1793613403.4444478,
     "1005013465751932": 1793613440.9413722,
@@ -3412,7 +3412,7 @@
     "Honor 600 Pro 12/256": 1794131798.3098254,
     "HONOR Pad X8a (4/64GB)": 1794476184.5102937,
     "Magcubic HY350 Max 900ANSI": 1794476813.180707,
-    "Honor X9d (no charger)": 1794512221.1229692,
+    "Honor X9d (no charger)": 1794562885.2375963,
     "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1794517206.1493392,
     "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
@@ -3608,7 +3608,6 @@
     "XUNYOU-LINK 4G Modem": 1794562333.914511
   },
   "published_post_keys": [
-    "lodydeals:45732",
     "aniscoupons:32751",
     "zedstoreonline:38906",
     "aniscoupons:32689",
@@ -4607,11 +4606,12 @@
     "aniscoupons:34760",
     "lodydeals:46448",
     "aniscoupons:34761",
-    "aniscoupons:34762"
+    "aniscoupons:34762",
+    "aniscoupons:34763"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794562712.2406693,
+  "last_run_time": 1794562885.2375963,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4638,12 +4638,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40048,
-      "last_check_time": 1794557022.8183174
+      "last_message_id": 40049,
+      "last_check_time": 1794562881.4183383
     },
     "aniscoupons": {
-      "last_message_id": 34762,
-      "last_check_time": 1794562714.2928994
+      "last_message_id": 34763,
+      "last_check_time": 1794562887.28586
     },
     "bnddeals": {
       "last_message_id": 51297,
@@ -22745,6 +22745,16 @@
       "price": 136.7,
       "timestamp": 1794562712.2406693,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34763": {
+      "channel_msg_id": 2564,
+      "product_id": "1005010121513376",
+      "title": "Honor X9d (no charger)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34763,
+      "price": 289.5,
+      "timestamp": 1794562885.2375963,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22753,17 +22763,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794562715.249733,
+    "last_deal_post_time": 1794562888.0612748,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794562718.214966,
+    "last_sweep_time": 1794562892.2041516,
     "last_sweep_times": {
-      "algeria": 1794562715.2280397,
-      "france": 1794562718.214966
+      "algeria": 1794562888.0422156,
+      "france": 1794562892.2041516
     },
     "last_deal_post_times": {
-      "algeria": 1794562715.249733
+      "algeria": 1794562888.0612748
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -25373,7 +25383,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45978",
     "ecksdeal:6009",
     "ecksdeal:6013",
     "ecksdeal:6017",
@@ -26372,7 +26381,8 @@
     "lodydeals:46446",
     "lodydeals:46447",
     "lodydeals:46449",
-    "lodydeals:46450"
+    "lodydeals:46450",
+    "zedstoreonline:40049"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27005,6 +27015,13 @@
         "channel": "aniscoupons",
         "ts": 1794562710.0577881,
         "price": 136.7
+      }
+    ],
+    "1005010121513376": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794562883.3841333,
+        "price": 289.5
       }
     ]
   },
