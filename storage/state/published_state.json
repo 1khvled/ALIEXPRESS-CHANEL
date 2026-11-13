@@ -1281,7 +1281,7 @@
     "9998881955": 1793541955.4874578,
     "9998882236": 1793542236.891774,
     "1005012401488201": 1793542360.268408,
-    "1005012135177627": 1794475875.1316102,
+    "1005012135177627": 1794598362.0815012,
     "1005013455514231": 1793542445.2859337,
     "1005009578274758": 1793542479.8362749,
     "1005010413332383": 1794479904.193408,
@@ -1369,7 +1369,7 @@
     "1005007010692093": 1793601389.0047116,
     "1005006994466968": 1793601744.1664062,
     "1005011927267564": 1793728844.5794795,
-    "1005008291023017": 1794508546.500024,
+    "1005008291023017": 1794598366.5791407,
     "1005012947477238": 1794579995.0128412,
     "1005010121513376": 1794580548.39376,
     "1005009064526142": 1793613380.753295,
@@ -2625,7 +2625,9 @@
     "ماوس فخم Logitech G502 Hero",
     "ماوس لاسلكي Delux M800 Mini Series",
     "Lexar V400 USB3.0 64GB",
-    "HAYLOU S40 ANC Wireless"
+    "HAYLOU S40 ANC Wireless",
+    "CUSU Memory DDR5 (16GB) 6000MHz",
+    "Realme 15 Pro (12/512GB)"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3659,11 +3661,11 @@
     "ماوس فخم Logitech G502 Hero": 1794591008.1982286,
     "ماوس لاسلكي Delux M800 Mini Series": 1794591382.6548223,
     "Lexar V400 USB3.0 64GB": 1794593403.339319,
-    "HAYLOU S40 ANC Wireless": 1794597627.451524
+    "HAYLOU S40 ANC Wireless": 1794597627.451524,
+    "CUSU Memory DDR5 (16GB) 6000MHz": 1794598362.0815012,
+    "Realme 15 Pro (12/512GB)": 1794598366.5791407
   },
   "published_post_keys": [
-    "aniscoupons:32983",
-    "megaphonna:8653",
     "bnddeals:50802",
     "lodydeals:45432",
     "couponsglobal:48815",
@@ -4661,19 +4663,21 @@
     "aniscoupons:34810",
     "zedstoreonline:40084",
     "zedstoreonline:40085",
-    "zedstoreonline:40086"
+    "zedstoreonline:40086",
+    "aniscoupons:34811",
+    "aniscoupons:34812"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794597984.6494167,
+  "last_run_time": 1794598366.5791407,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46469,
-      "last_check_time": 1794597978.9545164
+      "last_message_id": 46470,
+      "last_check_time": 1794598353.4595084
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4696,8 +4700,8 @@
       "last_check_time": 1794597986.7097185
     },
     "aniscoupons": {
-      "last_message_id": 34810,
-      "last_check_time": 1794597078.9616678
+      "last_message_id": 34812,
+      "last_check_time": 1794598368.6389508
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -5099,7 +5103,7 @@
     "1005012536471204": 603.9,
     "1005010243337678": 598.26,
     "1005012401488201": 30.35,
-    "1005012135177627": 177.87,
+    "1005012135177627": 177.8,
     "1005013455514231": 66.71,
     "1005009578274758": 7.63,
     "1005010413332383": 340.3,
@@ -5188,7 +5192,7 @@
     "1005007010692093": 2.88,
     "1005006994466968": 4.99,
     "1005011927267564": 24.55,
-    "1005008291023017": 285.9,
+    "1005008291023017": 305.22,
     "1005012947477238": 217.8,
     "1005010121513376": 289.5,
     "1005009064526142": 123.9,
@@ -23302,6 +23306,26 @@
       "price": 23.6,
       "timestamp": 1794597984.6494167,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34811": {
+      "channel_msg_id": 2616,
+      "product_id": "1005012135177627",
+      "title": "CUSU Memory DDR5 (16GB) 6000MHz",
+      "channel": "aniscoupons",
+      "source_msg_id": 34811,
+      "price": 177.8,
+      "timestamp": 1794598362.0815012,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34812": {
+      "channel_msg_id": 2617,
+      "product_id": "1005008291023017",
+      "title": "Realme 15 Pro (12/512GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34812,
+      "price": 305.22,
+      "timestamp": 1794598366.5791407,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23310,17 +23334,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794597988.0031614,
+    "last_deal_post_time": 1794598369.3870363,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794598180.9055843,
+    "last_sweep_time": 1794598371.7065213,
     "last_sweep_times": {
-      "algeria": 1794598177.8483522,
-      "france": 1794598180.9055843
+      "algeria": 1794598369.3613706,
+      "france": 1794598371.7065213
     },
     "last_deal_post_times": {
-      "algeria": 1794597988.0031614
+      "algeria": 1794598369.3870363
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23822,7 +23846,7 @@
     "9998881955": "test_channel",
     "9998882236": "test_channel",
     "1005012401488201": "lodydeals",
-    "1005012135177627": "lodydeals",
+    "1005012135177627": "aniscoupons",
     "1005009627597591": "lodydeals",
     "1005013455514231": "lodydeals",
     "1005009578274758": "lodydeals",
@@ -25160,7 +25184,9 @@
     "ماوس فخم Logitech G502 Hero": "ecksdeal",
     "ماوس لاسلكي Delux M800 Mini Series": "ecksdeal",
     "Lexar V400 USB3.0 64GB": "lodydeals",
-    "HAYLOU S40 ANC Wireless": "zedstoreonline"
+    "HAYLOU S40 ANC Wireless": "zedstoreonline",
+    "CUSU Memory DDR5 (16GB) 6000MHz": "aniscoupons",
+    "Realme 15 Pro (12/512GB)": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -27959,6 +27985,20 @@
         "channel": "zedstoreonline",
         "ts": 1794597434.8414288,
         "price": 14.5
+      }
+    ],
+    "1005012135177627": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794598360.371662,
+        "price": 177.8
+      }
+    ],
+    "1005008291023017": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794598365.0379825,
+        "price": 305.22
       }
     ]
   },
