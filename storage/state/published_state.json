@@ -1474,7 +1474,7 @@
     "1005008077441711": 1794579412.4499428,
     "1005006411483066": 1794500381.7712336,
     "1005012925301774": 1794348808.2825344,
-    "1005012959738411": 1794304640.3506072,
+    "1005012959738411": 1794608467.1839538,
     "1005008357913212": 1794600189.9159641,
     "1005008703989845": 1794475632.0153844,
     "1005007162099601": 1794524556.2538168,
@@ -3484,7 +3484,7 @@
     "realme C100d 4/128GB": 1794580542.0024478,
     "Zeblaze GTS 3 Pro AMOLED": 1794500381.7712336,
     "شاحن سيارة ORICO بقوة 45W": 1794348808.2825344,
-    "Hollyland LARK M2 DUO 2-Person": 1794304640.3506072,
+    "Hollyland LARK M2 DUO 2-Person": 1794608467.1839538,
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794605531.634575,
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627,
     "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794519963.712076,
@@ -3684,7 +3684,6 @@
     "realme 45W SUPERVOOC Charger": 1794606651.7602222
   },
   "published_post_keys": [
-    "couponsglobal:48764",
     "ecksdeal:5948",
     "lodydeals:45885",
     "bnddeals:50882",
@@ -4683,11 +4682,12 @@
     "lodydeals:46476",
     "lodydeals:46477",
     "lodydeals:46479",
-    "aniscoupons:34820"
+    "aniscoupons:34820",
+    "aniscoupons:34823"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794606997.856065,
+  "last_run_time": 1794608467.1839538,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4718,8 +4718,8 @@
       "last_check_time": 1794606082.780723
     },
     "aniscoupons": {
-      "last_message_id": 34822,
-      "last_check_time": 1794608281.4523377
+      "last_message_id": 34823,
+      "last_check_time": 1794608469.2662854
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -23547,6 +23547,16 @@
       "price": 47.4,
       "timestamp": 1794606997.856065,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34823": {
+      "channel_msg_id": 2638,
+      "product_id": "1005012959738411",
+      "title": "Hollyland LARK M2 DUO 2-Person",
+      "channel": "aniscoupons",
+      "source_msg_id": 34823,
+      "price": 68.79,
+      "timestamp": 1794608467.1839538,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23555,17 +23565,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794607000.8754663,
+    "last_deal_post_time": 1794608470.495892,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794608284.6304643,
+    "last_sweep_time": 1794608473.4236708,
     "last_sweep_times": {
-      "algeria": 1794608282.2982512,
-      "france": 1794608284.6304643
+      "algeria": 1794608470.462715,
+      "france": 1794608473.4236708
     },
     "last_deal_post_times": {
-      "algeria": 1794607000.8754663
+      "algeria": 1794608470.495892
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -27872,11 +27882,6 @@
     ],
     "1005007916078341": [
       {
-        "channel": "aniscoupons",
-        "ts": 1794565088.1287668,
-        "price": 47.4
-      },
-      {
         "channel": "zedstoreonline",
         "ts": 1794568753.4638638,
         "price": 47.4
@@ -28300,6 +28305,13 @@
         "channel": "aniscoupons",
         "ts": 1794607885.3788574,
         "price": 12.3
+      }
+    ],
+    "1005012959738411": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794608465.1756392,
+        "price": 68.79
       }
     ]
   },
