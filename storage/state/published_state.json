@@ -1256,7 +1256,7 @@
     "COUPONS_d131dda7a0e3": 1793478717.5768087,
     "COUPONS_d131dda7": 1793478717.5923967,
     "COUPONS_11.11 Global Shopping Festival Warm-Up": 1793478717.5923967,
-    "1005008518280704": 1794481572.7195961,
+    "1005008518280704": 1794578319.3190603,
     "1005010527736444": 1793478769.6023057,
     "1005013450996845": 1794475091.4412947,
     "1005013144753309": 1794160820.0809557,
@@ -1553,7 +1553,7 @@
     "1005013560596944": 1794470859.4033997,
     "1005007038882010": 1794471412.477501,
     "1005007345327497": 1794472329.794574,
-    "1005009560287420": 1794472509.191089,
+    "1005009560287420": 1794578325.6062727,
     "1005008513502995": 1794475809.562155,
     "1005013525374520": 1794475830.5998907,
     "1005012650636759": 1794475838.0735118,
@@ -2600,7 +2600,8 @@
     "HOCO E201 ENC Calling",
     "MAONO Wave T1 Plus Dual",
     "Luxury Quartz Watch",
-    "Maono Gamerwave DGM20S"
+    "Maono Gamerwave DGM20S",
+    "CUSU SSD CV3500 M2 1TB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2781,7 +2782,7 @@
     "ATTACK SHARK L80PRO Ultralight": 1791107750.295487,
     "AMD Ryzen 7 5700X": 1794507247.0720062,
     "هاتف ينسيك في شارجور🤣🤣": 1791109857.5190113,
-    "CMF Smart Watch 3 pro AMOLED": 1794565090.2307494,
+    "CMF Smart Watch 3 pro AMOLED": 1794578325.6062727,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
     "OPPO A6 Pro 8/256GB": 1794340346.0747576,
@@ -3625,11 +3626,10 @@
     "HOCO E201 ENC Calling": 1794568023.9427352,
     "MAONO Wave T1 Plus Dual": 1794575567.6709607,
     "Luxury Quartz Watch": 1794577769.242665,
-    "Maono Gamerwave DGM20S": 1794577943.6825492
+    "Maono Gamerwave DGM20S": 1794577943.6825492,
+    "CUSU SSD CV3500 M2 1TB": 1794578319.3190603
   },
   "published_post_keys": [
-    "lodydeals:45544",
-    "bnddeals:50823",
     "ecksdeal:5862",
     "couponsglobal:48811",
     "aniscoupons:32953",
@@ -4627,19 +4627,21 @@
     "aniscoupons:34786",
     "aniscoupons:34788",
     "lodydeals:46454",
-    "aniscoupons:34790"
+    "aniscoupons:34790",
+    "zedstoreonline:40058",
+    "aniscoupons:34791"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794577943.6825492,
+  "last_run_time": 1794578325.6062727,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
       "last_check_time": 1794531406.8053942
     },
     "lodydeals": {
-      "last_message_id": 46455,
-      "last_check_time": 1794577938.3893728
+      "last_message_id": 46456,
+      "last_check_time": 1794578314.9109514
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4658,12 +4660,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40057,
-      "last_check_time": 1794575743.1288655
+      "last_message_id": 40058,
+      "last_check_time": 1794578321.371659
     },
     "aniscoupons": {
-      "last_message_id": 34790,
-      "last_check_time": 1794577945.7473636
+      "last_message_id": 34791,
+      "last_check_time": 1794578327.6584885
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -5051,7 +5053,7 @@
     "1005013037972159": 85.7,
     "1005013081860728": 103.98,
     "1005013045114640": 94.7,
-    "1005008518280704": 179.3,
+    "1005008518280704": 179.16,
     "1005010527736444": 298.0,
     "1005013450996845": 212.48,
     "1005012171521680": 277.26,
@@ -22990,6 +22992,26 @@
       "price": 48.5,
       "timestamp": 1794577943.6825492,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40058": {
+      "channel_msg_id": 2587,
+      "product_id": "1005008518280704",
+      "title": "CUSU SSD CV3500 M2 1TB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40058,
+      "price": 179.16,
+      "timestamp": 1794578319.3190603,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34791": {
+      "channel_msg_id": 2588,
+      "product_id": "1005009560287420",
+      "title": "CMF Smart Watch 3 pro AMOLED",
+      "channel": "aniscoupons",
+      "source_msg_id": 34791,
+      "price": 51.3,
+      "timestamp": 1794578325.6062727,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22998,17 +23020,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794577946.6056592,
+    "last_deal_post_time": 1794578328.6221497,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794578129.8264832,
+    "last_sweep_time": 1794578331.729812,
     "last_sweep_times": {
-      "algeria": 1794578126.8139348,
-      "france": 1794578129.8264832
+      "algeria": 1794578328.5993366,
+      "france": 1794578331.729812
     },
     "last_deal_post_times": {
-      "algeria": 1794577946.6056592
+      "algeria": 1794578328.6221497
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23492,7 +23514,7 @@
     "1005013081860728": "lodydeals",
     "1005013045114640": "lodydeals",
     "COUPONS_d131dda7a0e3": "lodydeals",
-    "1005008518280704": "aniscoupons",
+    "1005008518280704": "zedstoreonline",
     "1005010527736444": "zedstoreonline",
     "1005013450996845": "aniscoupons",
     "1005012171521680": "lodydeals",
@@ -23779,7 +23801,7 @@
     "1005013560596944": "aniscoupons",
     "1005007038882010": "aniscoupons",
     "1005007345327497": "zedstoreonline",
-    "1005009560287420": "zedstoreonline",
+    "1005009560287420": "aniscoupons",
     "1005008513502995": "lodydeals",
     "1005013525374520": "lodydeals",
     "1005012650636759": "lodydeals",
@@ -24831,7 +24853,8 @@
     "HOCO E201 ENC Calling": "aniscoupons",
     "MAONO Wave T1 Plus Dual": "aniscoupons",
     "Luxury Quartz Watch": "lodydeals",
-    "Maono Gamerwave DGM20S": "aniscoupons"
+    "Maono Gamerwave DGM20S": "aniscoupons",
+    "CUSU SSD CV3500 M2 1TB": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -25628,7 +25651,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:46028",
     "lodydeals:46029",
     "lodydeals:46033",
     "lodydeals:46037",
@@ -26627,7 +26649,8 @@
     "aniscoupons:34787",
     "bnddeals:51300",
     "aniscoupons:34789",
-    "lodydeals:46455"
+    "lodydeals:46455",
+    "lodydeals:46456"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27417,6 +27440,20 @@
         "channel": "aniscoupons",
         "ts": 1794577025.3648977,
         "price": 29.4
+      }
+    ],
+    "1005008518280704": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794578317.4193006,
+        "price": 179.16
+      }
+    ],
+    "1005009560287420": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794578323.3950198,
+        "price": 51.3
       }
     ]
   },
