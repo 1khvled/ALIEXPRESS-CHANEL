@@ -1268,7 +1268,7 @@
     "1005008518280704": 1794578319.3190603,
     "1005010527736444": 1793478769.6023057,
     "1005013450996845": 1794475091.4412947,
-    "1005013144753309": 1794160820.0809557,
+    "1005013144753309": 1794599828.9735007,
     "1005012061152213": 1793490079.2945042,
     "1005012519569107": 1793490085.1205146,
     "1005006996991698": 1793542450.420599,
@@ -3171,7 +3171,7 @@
     "Blackview MEGA 12  12/256": 1793478769.6023057,
     "Lenovo Xiaoxin Pad Pro 2025 12.7  inch": 1793478774.2399445,
     "HONOR Pad V9  8/256": 1794563439.6862803,
-    "Blackview LINK 1 Kids": 1794160820.0809557,
+    "Blackview LINK 1 Kids": 1794599828.9735007,
     "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": 1793490079.2945042,
     "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": 1793490090.28376,
     "POCO Pad C1 4/64": 1793490102.028307,
@@ -3670,7 +3670,6 @@
     "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": 1794599278.9506347
   },
   "published_post_keys": [
-    "aniscoupons:32690",
     "pcgamingpart:7976",
     "megaphonna:8654",
     "megaphonna:8740",
@@ -4669,19 +4668,20 @@
     "zedstoreonline:40087",
     "zedstoreonline:40089",
     "zedstoreonline:40090",
-    "zedstoreonline:40091"
+    "zedstoreonline:40091",
+    "zedstoreonline:40092"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794599454.461018,
+  "last_run_time": 1794599828.9735007,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46472,
-      "last_check_time": 1794599272.6565468
+      "last_message_id": 46473,
+      "last_check_time": 1794599822.9336884
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4700,8 +4700,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40091,
-      "last_check_time": 1794599456.511622
+      "last_message_id": 40092,
+      "last_check_time": 1794599831.0328104
     },
     "aniscoupons": {
       "last_message_id": 34812,
@@ -23371,6 +23371,16 @@
       "price": 23.2,
       "timestamp": 1794599454.461018,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40092": {
+      "channel_msg_id": 2622,
+      "product_id": "1005013144753309",
+      "title": "Blackview LINK 1 Kids",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40092,
+      "price": 92.7,
+      "timestamp": 1794599828.9735007,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23379,17 +23389,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794599457.8173497,
+    "last_deal_post_time": 1794599832.5103536,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794599648.3293695,
+    "last_sweep_time": 1794599835.5213196,
     "last_sweep_times": {
-      "algeria": 1794599645.531344,
-      "france": 1794599648.3293695
+      "algeria": 1794599832.4850314,
+      "france": 1794599835.5213196
     },
     "last_deal_post_times": {
-      "algeria": 1794599457.8173497
+      "algeria": 1794599832.5103536
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -27600,11 +27610,6 @@
     "1005012726037568": [
       {
         "channel": "aniscoupons",
-        "ts": 1794556291.635029,
-        "price": 7.47
-      },
-      {
-        "channel": "aniscoupons",
         "ts": 1794563258.271985,
         "price": 7.47
       },
@@ -28070,6 +28075,13 @@
         "channel": "zedstoreonline",
         "ts": 1794599276.959406,
         "price": 30.6
+      }
+    ],
+    "1005013144753309": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794599826.868142,
+        "price": 92.7
       }
     ]
   },
