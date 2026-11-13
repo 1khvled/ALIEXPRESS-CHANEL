@@ -826,7 +826,7 @@
     "1005006603602562": 1790941207.5310047,
     "1005010721042860": 1793656098.242545,
     "1005009517247552": 1790941221.8823678,
-    "1005012191191893": 1794490419.3986382,
+    "1005012191191893": 1794564351.798521,
     "1005012968221708": 1793542591.509991,
     "9998883454": 1790943454.3504107,
     "9998883497": 1790943497.723828,
@@ -3470,7 +3470,7 @@
     "Lenovo LE257 Headphones": 1794137638.8201442,
     "Honor 600s CN (8/256)": 1794485990.5871184,
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
-    "Blackview Mega 5": 1794490419.3986382,
+    "Blackview Mega 5": 1794564351.798521,
     "Warvank X8 Wireless Gaming Mouse": 1794496858.1106308,
     "Xiaoxin Pad Pro 2025 (8/128GB)": 1794475091.4412947,
     "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": 1794145536.5317988,
@@ -3612,7 +3612,6 @@
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": 1794563997.9172754
   },
   "published_post_keys": [
-    "lodydeals:45569",
     "aniscoupons:32805",
     "zedstoreonline:38902",
     "lodydeals:45435",
@@ -4611,11 +4610,12 @@
     "aniscoupons:34763",
     "zedstoreonline:40051",
     "aniscoupons:34765",
-    "aniscoupons:34766"
+    "aniscoupons:34766",
+    "aniscoupons:34767"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794563997.9172754,
+  "last_run_time": 1794564351.798521,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4642,12 +4642,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40051,
-      "last_check_time": 1794563441.7614386
+      "last_message_id": 40052,
+      "last_check_time": 1794564348.0477436
     },
     "aniscoupons": {
-      "last_message_id": 34766,
-      "last_check_time": 1794563999.9789834
+      "last_message_id": 34768,
+      "last_check_time": 1794564354.910725
     },
     "bnddeals": {
       "last_message_id": 51297,
@@ -22790,6 +22790,16 @@
       "price": 13.44,
       "timestamp": 1794563997.9172754,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34767": {
+      "channel_msg_id": 2568,
+      "product_id": "1005012191191893",
+      "title": "Blackview Mega 5",
+      "channel": "aniscoupons",
+      "source_msg_id": 34767,
+      "price": 228.3,
+      "timestamp": 1794564351.798521,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22798,17 +22808,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794564001.0230694,
+    "last_deal_post_time": 1794564355.7392588,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794564172.9895575,
+    "last_sweep_time": 1794564358.4821725,
     "last_sweep_times": {
-      "algeria": 1794564169.9979808,
-      "france": 1794564172.9895575
+      "algeria": 1794564355.705984,
+      "france": 1794564358.4821725
     },
     "last_deal_post_times": {
-      "algeria": 1794564001.0230694
+      "algeria": 1794564355.7392588
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -25420,8 +25430,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:6017",
-    "ecksdeal:6019",
     "ecksdeal:6023",
     "lodydeals:45987",
     "lodydeals:45989",
@@ -26419,7 +26427,9 @@
     "lodydeals:46450",
     "zedstoreonline:40049",
     "zedstoreonline:40050",
-    "aniscoupons:34764"
+    "aniscoupons:34764",
+    "zedstoreonline:40052",
+    "aniscoupons:34768"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27022,6 +27032,11 @@
         "channel": "aniscoupons",
         "ts": 1794563258.271985,
         "price": 7.47
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794564354.7983253,
+        "price": 7.47
       }
     ],
     "1005012285327063": [
@@ -27083,6 +27098,13 @@
         "channel": "aniscoupons",
         "ts": 1794563443.7682588,
         "price": 258.5
+      }
+    ],
+    "1005012191191893": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794564350.0924182,
+        "price": 228.3
       }
     ]
   },
