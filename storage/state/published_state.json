@@ -1364,7 +1364,7 @@
     "1005011927267564": 1793728844.5794795,
     "1005008291023017": 1794508546.500024,
     "1005012947477238": 1794579995.0128412,
-    "1005010121513376": 1794562885.2375963,
+    "1005010121513376": 1794580548.39376,
     "1005009064526142": 1793613380.753295,
     "1005010009130696": 1793613403.4444478,
     "1005013465751932": 1793613440.9413722,
@@ -1448,7 +1448,7 @@
     "9998887107": 1793967108.0014687,
     "9998887678": 1793967678.8184059,
     "9998887703": 1793967703.2348685,
-    "1005008708333999": 1794562712.2406693,
+    "1005008708333999": 1794580542.0024478,
     "1005012254132930": 1793970449.9003735,
     "1005013028124905": 1793971934.3600886,
     "1005012691642623": 1794074230.5173922,
@@ -3432,7 +3432,7 @@
     "Honor 600 Pro 12/256": 1794131798.3098254,
     "HONOR Pad X8a (4/64GB)": 1794476184.5102937,
     "Magcubic HY350 Max 900ANSI": 1794476813.180707,
-    "Honor X9d (no charger)": 1794562885.2375963,
+    "Honor X9d (no charger)": 1794580548.39376,
     "MAONO Wave T1 Mini Pro Wireless Lavalier Microphone": 1794517206.1493392,
     "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
@@ -3447,7 +3447,7 @@
     "SOUNDPEATS C30 ANC Wireless Earphones": 1793994623.1444166,
     "UGREEN 45W GaN Smart Display Charger": 1793995361.9589899,
     "Inphic PG1 PG9 RGB Wired Gaming Mouse": 1794579412.4499428,
-    "realme C100d 4/128GB": 1794440265.8938825,
+    "realme C100d 4/128GB": 1794580542.0024478,
     "Zeblaze GTS 3 Pro AMOLED": 1794500381.7712336,
     "شاحن سيارة ORICO بقوة 45W": 1794348808.2825344,
     "Hollyland LARK M2 DUO 2-Person": 1794304640.3506072,
@@ -3636,8 +3636,6 @@
     "ATK VXE Dragonfly V3 PRO": 1794580354.5744467
   },
   "published_post_keys": [
-    "pcgamingpart:7957",
-    "lodydeals:45761",
     "test_channel:1791759936",
     "test_channel:1791675569",
     "megaphonna:8566",
@@ -4635,11 +4633,13 @@
     "zedstoreonline:40062",
     "aniscoupons:34796",
     "aniscoupons:34797",
-    "aniscoupons:34798"
+    "aniscoupons:34798",
+    "zedstoreonline:40066",
+    "aniscoupons:34799"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794580354.5744467,
+  "last_run_time": 1794580548.39376,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4666,12 +4666,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40065,
-      "last_check_time": 1794580351.0508113
+      "last_message_id": 40066,
+      "last_check_time": 1794580544.126333
     },
     "aniscoupons": {
-      "last_message_id": 34798,
-      "last_check_time": 1794580356.622402
+      "last_message_id": 34799,
+      "last_check_time": 1794580550.4597306
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -23089,6 +23089,26 @@
       "price": 20.48,
       "timestamp": 1794580354.5744467,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40066": {
+      "channel_msg_id": 2598,
+      "product_id": "1005008708333999",
+      "title": "realme C100d 4/128GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40066,
+      "price": 136.7,
+      "timestamp": 1794580542.0024478,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34799": {
+      "channel_msg_id": 2599,
+      "product_id": "1005010121513376",
+      "title": "Honor X9d (no charger)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34799,
+      "price": 289.5,
+      "timestamp": 1794580548.39376,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23097,17 +23117,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794580357.371377,
+    "last_deal_post_time": 1794580551.4457521,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794580359.7009706,
+    "last_sweep_time": 1794580554.580484,
     "last_sweep_times": {
-      "algeria": 1794580357.3519366,
-      "france": 1794580359.7009706
+      "algeria": 1794580551.4171655,
+      "france": 1794580554.580484
     },
     "last_deal_post_times": {
-      "algeria": 1794580357.371377
+      "algeria": 1794580551.4457521
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23772,7 +23792,7 @@
     "9998887107": "test_channel",
     "9998887678": "test_channel",
     "9998887703": "test_channel",
-    "1005008708333999": "aniscoupons",
+    "1005008708333999": "zedstoreonline",
     "1005012254132930": "zedstoreonline",
     "1005013028124905": "zedstoreonline",
     "1005012691642623": "zedstoreonline",
@@ -25725,8 +25745,8 @@
     "LAUNCH_ALERT_11.11 Global Shopping Festival Main Sale 2026_20261111",
     "END_ALERT_Brand Day Novembre 2026_20261113"
   ],
-  "last_card_affiliate_time_dz": 1794494080.4789708,
-  "card_affiliate_variant_idx_dz": 2,
+  "last_card_affiliate_time_dz": 1794580529.1104364,
+  "card_affiliate_variant_idx_dz": 0,
   "last_tajmi3at_published_time": 1793910650.2404215,
   "published_deals_history": {},
   "settings": {},
@@ -27368,6 +27388,11 @@
         "channel": "zedstoreonline",
         "ts": 1794563256.4462209,
         "price": 136.7
+      },
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794580539.829244,
+        "price": 136.7
       }
     ],
     "1005010121513376": [
@@ -27380,6 +27405,11 @@
         "channel": "zedstoreonline",
         "ts": 1794579983.8527997,
         "price": 289.0
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794580546.2908335,
+        "price": 289.5
       }
     ],
     "1005013361453762": [
