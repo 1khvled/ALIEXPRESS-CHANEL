@@ -938,7 +938,7 @@
     "1005009497821240": 1791117948.6585228,
     "1005011925142821": 1794563445.89714,
     "9998883864": 1791063864.5866926,
-    "1005010536089199": 1794480460.355499,
+    "1005010536089199": 1794604241.2698977,
     "1005012385221205": 1791102050.1835058,
     "1005012743092233": 1791104461.903693,
     "1005007805497968": 1794141669.7207782,
@@ -1372,7 +1372,7 @@
     "1005006994466968": 1793601744.1664062,
     "1005011927267564": 1793728844.5794795,
     "1005008291023017": 1794598366.5791407,
-    "1005012947477238": 1794579995.0128412,
+    "1005012947477238": 1794604246.449916,
     "1005010121513376": 1794580548.39376,
     "1005009064526142": 1793613380.753295,
     "1005010009130696": 1793613403.4444478,
@@ -2633,7 +2633,8 @@
     "CUSU Memory DDR5 (16GB) 6000MHz",
     "Realme 15 Pro (12/512GB)",
     "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone",
-    "Blackview OSCAL PILOT 5  8/256"
+    "Blackview OSCAL PILOT 5  8/256",
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3439,7 +3440,7 @@
     "NOTHING Watch 3 Pro": 1794589541.704808,
     "مشترك كهربائي ORICO PD25W – محطة شحن مكتبية تضم منفذي Type-C ومنفذي USB-A ومقبسين AC لشحن الأجهزة وت": 1793966711.2525856,
     "Baseus Mouse Bluetooth Wireless Computer 1600DPI": 1793966716.198834,
-    "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": 1793966721.1839278,
+    "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": 1794604241.2698977,
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": 1793966727.646043,
     "GameSir X5 Lite Game Controller": 1794480069.5549967,
     "Netac SSD NVME M2 250GB": 1794500738.761835,
@@ -3671,11 +3672,10 @@
     "CUSU Memory DDR5 (16GB) 6000MHz": 1794598362.0815012,
     "Realme 15 Pro (12/512GB)": 1794598366.5791407,
     "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": 1794599278.9506347,
-    "Blackview OSCAL PILOT 5  8/256": 1794604060.7762444
+    "Blackview OSCAL PILOT 5  8/256": 1794604060.7762444,
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB": 1794604246.449916
   },
   "published_post_keys": [
-    "megaphonna:8740",
-    "aniscoupons:32753",
     "pcgamingpart:7948",
     "test_channel:1792330248",
     "zedstoreonline:38903",
@@ -4673,19 +4673,21 @@
     "zedstoreonline:40091",
     "zedstoreonline:40092",
     "aniscoupons:34813",
-    "zedstoreonline:40094"
+    "zedstoreonline:40094",
+    "zedstoreonline:40095",
+    "aniscoupons:34815"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794604060.7762444,
+  "last_run_time": 1794604246.449916,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46475,
-      "last_check_time": 1794602586.2488036
+      "last_message_id": 46476,
+      "last_check_time": 1794604235.166965
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4704,12 +4706,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40094,
-      "last_check_time": 1794604062.822831
+      "last_message_id": 40095,
+      "last_check_time": 1794604243.3462036
     },
     "aniscoupons": {
-      "last_message_id": 34814,
-      "last_check_time": 1794602403.3180022
+      "last_message_id": 34815,
+      "last_check_time": 1794604248.5239809
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -4848,7 +4850,7 @@
     "1005010266413614": 276.0,
     "1005009497821240": 24.73,
     "1005011925142821": 258.5,
-    "1005010536089199": 33.64,
+    "1005010536089199": 33.6,
     "1005012385221205": 13.27,
     "1005013223462188": 13.5,
     "1005012743092233": 24.37,
@@ -23406,6 +23408,26 @@
       "price": 178.4,
       "timestamp": 1794604060.7762444,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40095": {
+      "channel_msg_id": 2625,
+      "product_id": "1005010536089199",
+      "title": "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40095,
+      "price": 33.6,
+      "timestamp": 1794604241.2698977,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34815": {
+      "channel_msg_id": 2626,
+      "product_id": "1005012947477238",
+      "title": "Xiaomi Redmi Note 17 5G Global Version (6/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34815,
+      "price": 217.8,
+      "timestamp": 1794604246.449916,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23414,17 +23436,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794604064.0711255,
+    "last_deal_post_time": 1794604249.2232187,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794604066.620304,
+    "last_sweep_time": 1794604251.6015997,
     "last_sweep_times": {
-      "algeria": 1794604064.0513682,
-      "france": 1794604066.620304
+      "algeria": 1794604249.190444,
+      "france": 1794604251.6015997
     },
     "last_deal_post_times": {
-      "algeria": 1794604064.0711255
+      "algeria": 1794604249.2232187
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23567,7 +23589,7 @@
     "1005009497821240": "lodydeals",
     "1005011925142821": "aniscoupons",
     "9998883864": "test_channel",
-    "1005010536089199": "aniscoupons",
+    "1005010536089199": "zedstoreonline",
     "1005012385221205": "aniscoupons",
     "1005013223462188": "pcgamingpart",
     "1005005217734986": "pcgamingpart",
@@ -25270,7 +25292,8 @@
     "CUSU Memory DDR5 (16GB) 6000MHz": "aniscoupons",
     "Realme 15 Pro (12/512GB)": "aniscoupons",
     "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": "zedstoreonline",
-    "Blackview OSCAL PILOT 5  8/256": "zedstoreonline"
+    "Blackview OSCAL PILOT 5  8/256": "zedstoreonline",
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -27994,6 +28017,11 @@
         "channel": "aniscoupons",
         "ts": 1794579993.3077998,
         "price": 217.8
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794604244.8378496,
+        "price": 217.8
       }
     ],
     "1005009662812027": [
@@ -28121,6 +28149,13 @@
         "channel": "zedstoreonline",
         "ts": 1794603321.4918578,
         "price": 16.0
+      }
+    ],
+    "1005010536089199": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794604239.5906916,
+        "price": 33.6
       }
     ]
   },
