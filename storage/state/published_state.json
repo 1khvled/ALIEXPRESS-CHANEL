@@ -26294,7 +26294,6 @@
     "aniscoupons:34754",
     "aniscoupons:34755",
     "aniscoupons:34756",
-    "ecksdeal:6059",
     "zedstoreonline:40046",
     "aniscoupons:34757"
   ],
@@ -26862,5 +26861,29 @@
   },
   "coupon_restock_alerts_history": {
     "restock_alert": "2026-11-11"
+  },
+  "competitor_product_sightings": {
+    "1005012726037568": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794523862.0,
+        "price": 7.47
+      },
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794524074.0,
+        "price": 7.4
+      },
+      {
+        "channel": "lodydeals",
+        "ts": 1794526199.0,
+        "price": 7.4
+      },
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794529478.0,
+        "price": 7.4
+      }
+    ]
   }
 }
