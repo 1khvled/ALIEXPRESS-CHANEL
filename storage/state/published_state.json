@@ -1012,7 +1012,7 @@
     "1005011557896041": 1794499991.8758564,
     "1005011754993234": 1794606641.3359861,
     "1005011735727412": 1791943783.9162278,
-    "1005007916078341": 1794589541.704808,
+    "1005007916078341": 1794606997.856065,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
     "1005013336240375": 1791968149.7952893,
@@ -2820,7 +2820,7 @@
     "ATTACK SHARK L80PRO Ultralight": 1791107750.295487,
     "AMD Ryzen 7 5700X": 1794507247.0720062,
     "هاتف ينسيك في شارجور🤣🤣": 1791109857.5190113,
-    "CMF Smart Watch 3 pro AMOLED": 1794578325.6062727,
+    "CMF Smart Watch 3 pro AMOLED": 1794606997.856065,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
     "OPPO A6 Pro 8/256GB": 1794340346.0747576,
@@ -3684,7 +3684,6 @@
     "realme 45W SUPERVOOC Charger": 1794606651.7602222
   },
   "published_post_keys": [
-    "lodydeals:45903",
     "couponsglobal:48764",
     "ecksdeal:5948",
     "lodydeals:45885",
@@ -4683,19 +4682,20 @@
     "lodydeals:46468",
     "lodydeals:46476",
     "lodydeals:46477",
-    "lodydeals:46479"
+    "lodydeals:46479",
+    "aniscoupons:34820"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794606808.077093,
+  "last_run_time": 1794606997.856065,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46479,
-      "last_check_time": 1794606810.1570756
+      "last_message_id": 46481,
+      "last_check_time": 1794606993.0840619
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4718,8 +4718,8 @@
       "last_check_time": 1794606082.780723
     },
     "aniscoupons": {
-      "last_message_id": 34819,
-      "last_check_time": 1794606658.293527
+      "last_message_id": 34820,
+      "last_check_time": 1794606999.9324868
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -23537,6 +23537,16 @@
       "price": 12.37,
       "timestamp": 1794606808.077093,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34820": {
+      "channel_msg_id": 2637,
+      "product_id": "1005007916078341",
+      "title": "CMF Smart Watch 3 pro AMOLED",
+      "channel": "aniscoupons",
+      "source_msg_id": 34820,
+      "price": 47.4,
+      "timestamp": 1794606997.856065,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23545,17 +23555,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794606812.7910724,
+    "last_deal_post_time": 1794607000.8754663,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794606815.2949169,
+    "last_sweep_time": 1794607003.582189,
     "last_sweep_times": {
-      "algeria": 1794606812.755743,
-      "france": 1794606815.2949169
+      "algeria": 1794607000.8445044,
+      "france": 1794607003.582189
     },
     "last_deal_post_times": {
-      "algeria": 1794606812.7910724
+      "algeria": 1794607000.8754663
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23785,7 +23795,7 @@
     "1005011754993234": "lodydeals",
     "1005011735727412": "bnddeals",
     "1005013039644752": "aniscoupons",
-    "1005007916078341": "zedstoreonline",
+    "1005007916078341": "aniscoupons",
     "1005006506862816": "couponsglobal",
     "1005008072923842": "pcgamingpart",
     "1005013336240375": "pcgamingpart",
@@ -26203,8 +26213,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:46133",
-    "lodydeals:46134",
     "lodydeals:46135",
     "lodydeals:46136",
     "lodydeals:46137",
@@ -27202,7 +27210,9 @@
     "lodydeals:46474",
     "lodydeals:46475",
     "lodydeals:46478",
-    "aniscoupons:34819"
+    "aniscoupons:34819",
+    "lodydeals:46480",
+    "lodydeals:46481"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27891,6 +27901,11 @@
       {
         "channel": "aniscoupons",
         "ts": 1794594132.3437796,
+        "price": 47.4
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794606995.8710825,
         "price": 47.4
       }
     ],
