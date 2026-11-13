@@ -789,7 +789,8 @@
     "1005010218815499",
     "1005011897409757",
     "1005013203288194",
-    "1005010305059795"
+    "1005010305059795",
+    "1005013078612320"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1594,7 +1595,8 @@
     "1005010218815499": 1794591382.6548223,
     "1005011897409757": 1794593403.339319,
     "1005013203288194": 1794595430.2306583,
-    "1005010305059795": 1794597627.451524
+    "1005010305059795": 1794597627.451524,
+    "1005013078612320": 1794597984.6494167
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2737,7 +2739,7 @@
     "Baseus-Bowie E5x": 1791014145.8727648,
     "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": 1791014755.488723,
     "HAYLOU Solar Lite 2": 1794485060.022662,
-    "HAYLOU FlowLoop S33": 1793966676.2934937,
+    "HAYLOU FlowLoop S33": 1794597984.6494167,
     "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": 1791015953.484505,
     "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz": 1791017145.537471,
     "CUSU 512GB": 1792158003.7032418,
@@ -3660,7 +3662,6 @@
     "HAYLOU S40 ANC Wireless": 1794597627.451524
   },
   "published_post_keys": [
-    "lodydeals:45943",
     "aniscoupons:32983",
     "megaphonna:8653",
     "bnddeals:50802",
@@ -4659,19 +4660,20 @@
     "zedstoreonline:40082",
     "aniscoupons:34810",
     "zedstoreonline:40084",
-    "zedstoreonline:40085"
+    "zedstoreonline:40085",
+    "zedstoreonline:40086"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794597627.451524,
+  "last_run_time": 1794597984.6494167,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46468,
-      "last_check_time": 1794597430.6045399
+      "last_message_id": 46469,
+      "last_check_time": 1794597978.9545164
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4690,8 +4692,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40085,
-      "last_check_time": 1794597629.5283008
+      "last_message_id": 40086,
+      "last_check_time": 1794597986.7097185
     },
     "aniscoupons": {
       "last_message_id": 34810,
@@ -5384,7 +5386,8 @@
     "1005010218815499": 13.94,
     "1005011897409757": 7.07,
     "1005013203288194": 348.26,
-    "1005010305059795": 29.3
+    "1005010305059795": 29.3,
+    "1005013078612320": 23.6
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23289,6 +23292,16 @@
       "price": 29.3,
       "timestamp": 1794597627.451524,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40086": {
+      "channel_msg_id": 2615,
+      "product_id": "1005013078612320",
+      "title": "HAYLOU FlowLoop S33",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40086,
+      "price": 23.6,
+      "timestamp": 1794597984.6494167,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23297,17 +23310,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794597631.15648,
+    "last_deal_post_time": 1794597988.0031614,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794597807.100614,
+    "last_sweep_time": 1794597990.1855347,
     "last_sweep_times": {
-      "algeria": 1794597803.7342799,
-      "france": 1794597807.100614
+      "algeria": 1794597987.977667,
+      "france": 1794597990.1855347
     },
     "last_deal_post_times": {
-      "algeria": 1794597631.15648
+      "algeria": 1794597988.0031614
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24110,7 +24123,8 @@
     "1005010218815499": "ecksdeal",
     "1005011897409757": "lodydeals",
     "1005013203288194": "aniscoupons",
-    "1005010305059795": "zedstoreonline"
+    "1005010305059795": "zedstoreonline",
+    "1005013078612320": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
