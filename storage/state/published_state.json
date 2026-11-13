@@ -1442,7 +1442,7 @@
     "9998887107": 1793967108.0014687,
     "9998887678": 1793967678.8184059,
     "9998887703": 1793967703.2348685,
-    "1005008708333999": 1794505952.472966,
+    "1005008708333999": 1794562712.2406693,
     "1005012254132930": 1793970449.9003735,
     "1005013028124905": 1793971934.3600886,
     "1005012691642623": 1794074230.5173922,
@@ -3431,7 +3431,7 @@
     "Zeblaze GTS 3 Pro AMOLED": 1794500381.7712336,
     "شاحن سيارة ORICO بقوة 45W": 1794348808.2825344,
     "Hollyland LARK M2 DUO 2-Person": 1794304640.3506072,
-    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794505952.472966,
+    "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794562712.2406693,
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627,
     "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794519963.712076,
     "Essager 30W Car Charger": 1794393500.1320646,
@@ -3608,7 +3608,6 @@
     "XUNYOU-LINK 4G Modem": 1794562333.914511
   },
   "published_post_keys": [
-    "aniscoupons:33321",
     "lodydeals:45732",
     "aniscoupons:32751",
     "zedstoreonline:38906",
@@ -4607,19 +4606,20 @@
     "aniscoupons:34759",
     "aniscoupons:34760",
     "lodydeals:46448",
-    "aniscoupons:34761"
+    "aniscoupons:34761",
+    "aniscoupons:34762"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794562340.4789197,
+  "last_run_time": 1794562712.2406693,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
       "last_check_time": 1794531406.8053942
     },
     "lodydeals": {
-      "last_message_id": 46449,
-      "last_check_time": 1794562336.0519514
+      "last_message_id": 46450,
+      "last_check_time": 1794562706.5530863
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4642,8 +4642,8 @@
       "last_check_time": 1794557022.8183174
     },
     "aniscoupons": {
-      "last_message_id": 34761,
-      "last_check_time": 1794562342.549903
+      "last_message_id": 34762,
+      "last_check_time": 1794562714.2928994
     },
     "bnddeals": {
       "last_message_id": 51297,
@@ -22735,6 +22735,16 @@
       "price": 110.8,
       "timestamp": 1794562340.4789197,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34762": {
+      "channel_msg_id": 2563,
+      "product_id": "1005008708333999",
+      "title": "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI",
+      "channel": "aniscoupons",
+      "source_msg_id": 34762,
+      "price": 136.7,
+      "timestamp": 1794562712.2406693,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22743,17 +22753,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794562343.2006552,
+    "last_deal_post_time": 1794562715.249733,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794562520.3848586,
+    "last_sweep_time": 1794562718.214966,
     "last_sweep_times": {
-      "algeria": 1794562518.3736086,
-      "france": 1794562520.3848586
+      "algeria": 1794562715.2280397,
+      "france": 1794562718.214966
     },
     "last_deal_post_times": {
-      "algeria": 1794562343.2006552
+      "algeria": 1794562715.249733
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -25363,7 +25373,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45977",
     "lodydeals:45978",
     "ecksdeal:6009",
     "ecksdeal:6013",
@@ -26362,7 +26371,8 @@
     "zedstoreonline:40048",
     "lodydeals:46446",
     "lodydeals:46447",
-    "lodydeals:46449"
+    "lodydeals:46449",
+    "lodydeals:46450"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -26988,6 +26998,13 @@
         "channel": "aniscoupons",
         "ts": 1794562338.7539005,
         "price": 110.8
+      }
+    ],
+    "1005008708333999": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794562710.0577881,
+        "price": 136.7
       }
     ]
   },
