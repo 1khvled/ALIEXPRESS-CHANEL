@@ -1002,7 +1002,7 @@
     "1005011557896041": 1794499991.8758564,
     "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
-    "1005007916078341": 1794565090.2307494,
+    "1005007916078341": 1794589541.704808,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
     "1005013336240375": 1791968149.7952893,
@@ -1531,7 +1531,7 @@
     "1005007495712340": 1794475814.3090613,
     "1005009104334975": 1794421043.2176414,
     "1005012474727998": 1794320674.833981,
-    "1005006807619368": 1794481781.56275,
+    "1005006807619368": 1794589551.8961492,
     "1005010653559191": 1794349536.4429784,
     "COUPON_CLAIM_zedstoreonline_39827": 1794363974.314961,
     "1005012197291105": 1794486534.4538748,
@@ -2605,7 +2605,8 @@
     "Maono Gamerwave DGM20S",
     "CUSU SSD CV3500 M2 1TB",
     "S80 Flash Drive USB 3.2 Type-A 128GB",
-    "ATK VXE Dragonfly V3 PRO"
+    "ATK VXE Dragonfly V3 PRO",
+    "Kingston DataTraveler USB 128GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3408,7 +3409,7 @@
     "Haylou Solar NEO 2 Amoled": 1794481983.745732,
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones": 1794313321.761044,
     "HAYLOU Solar Ultra GPS": 1794580902.9408488,
-    "NOTHING Watch 3 Pro": 1794472509.191089,
+    "NOTHING Watch 3 Pro": 1794589541.704808,
     "مشترك كهربائي ORICO PD25W – محطة شحن مكتبية تضم منفذي Type-C ومنفذي USB-A ومقبسين AC لشحن الأجهزة وت": 1793966711.2525856,
     "Baseus Mouse Bluetooth Wireless Computer 1600DPI": 1793966716.198834,
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": 1793966721.1839278,
@@ -3633,11 +3634,10 @@
     "Maono Gamerwave DGM20S": 1794577943.6825492,
     "CUSU SSD CV3500 M2 1TB": 1794578319.3190603,
     "S80 Flash Drive USB 3.2 Type-A 128GB": 1794579232.5818455,
-    "ATK VXE Dragonfly V3 PRO": 1794580354.5744467
+    "ATK VXE Dragonfly V3 PRO": 1794580354.5744467,
+    "Kingston DataTraveler USB 128GB": 1794589551.8961492
   },
   "published_post_keys": [
-    "aniscoupons:33275",
-    "test_channel:1792182115",
     "aniscoupons:33148",
     "zedstoreonline:38796",
     "test_channel:1792161949",
@@ -4635,11 +4635,13 @@
     "aniscoupons:34799",
     "zedstoreonline:40067",
     "aniscoupons:34804",
-    "lodydeals:46458"
+    "lodydeals:46458",
+    "zedstoreonline:40070",
+    "zedstoreonline:40071"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794585682.0605152,
+  "last_run_time": 1794589551.8961492,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4666,8 +4668,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40069,
-      "last_check_time": 1794586050.0360014
+      "last_message_id": 40071,
+      "last_check_time": 1794589553.954153
     },
     "aniscoupons": {
       "last_message_id": 34805,
@@ -5307,7 +5309,7 @@
     "1005007495712340": 53.24,
     "1005009104334975": 10.7,
     "1005012474727998": 14.9,
-    "1005006807619368": 6.55,
+    "1005006807619368": 6.5,
     "1005010653559191": 10.5,
     "1005012197291105": 438.2,
     "1005010179192246": 609.9,
@@ -23139,6 +23141,26 @@
       "price": 7.4,
       "timestamp": 1794585682.0605152,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40070": {
+      "channel_msg_id": 2603,
+      "product_id": "1005007916078341",
+      "title": "NOTHING Watch 3 Pro",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40070,
+      "price": 47.4,
+      "timestamp": 1794589541.704808,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:40071": {
+      "channel_msg_id": 2604,
+      "product_id": "1005006807619368",
+      "title": "Kingston DataTraveler USB 128GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40071,
+      "price": 6.5,
+      "timestamp": 1794589551.8961492,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23147,17 +23169,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794585688.317742,
+    "last_deal_post_time": 1794589555.2859988,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794589370.775855,
+    "last_sweep_time": 1794589557.7475722,
     "last_sweep_times": {
-      "algeria": 1794589367.4811454,
-      "france": 1794589370.775855
+      "algeria": 1794589555.2606597,
+      "france": 1794589557.7475722
     },
     "last_deal_post_times": {
-      "algeria": 1794585688.317742
+      "algeria": 1794589555.2859988
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23387,7 +23409,7 @@
     "1005011754993234": "ecksdeal",
     "1005011735727412": "bnddeals",
     "1005013039644752": "aniscoupons",
-    "1005007916078341": "aniscoupons",
+    "1005007916078341": "zedstoreonline",
     "1005006506862816": "couponsglobal",
     "1005008072923842": "pcgamingpart",
     "1005013336240375": "pcgamingpart",
@@ -23905,7 +23927,7 @@
     "1005007495712340": "lodydeals",
     "1005009104334975": "zedstoreonline",
     "1005012474727998": "zedstoreonline",
-    "1005006807619368": "aniscoupons",
+    "1005006807619368": "zedstoreonline",
     "1005010653559191": "zedstoreonline",
     "COUPON_CLAIM_zedstoreonline_39827": "zedstoreonline",
     "1005012197291105": "zedstoreonline",
@@ -24984,7 +25006,8 @@
     "Maono Gamerwave DGM20S": "aniscoupons",
     "CUSU SSD CV3500 M2 1TB": "zedstoreonline",
     "S80 Flash Drive USB 3.2 Type-A 128GB": "aniscoupons",
-    "ATK VXE Dragonfly V3 PRO": "aniscoupons"
+    "ATK VXE Dragonfly V3 PRO": "aniscoupons",
+    "Kingston DataTraveler USB 128GB": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -27498,6 +27521,11 @@
         "channel": "zedstoreonline",
         "ts": 1794568753.4638638,
         "price": 47.4
+      },
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794589539.8997576,
+        "price": 47.4
       }
     ],
     "1005003949106838": [
@@ -27706,6 +27734,13 @@
         "channel": "aniscoupons",
         "ts": 1794584769.4551408,
         "price": 66.7
+      }
+    ],
+    "1005006807619368": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794589547.8051128,
+        "price": 6.5
       }
     ]
   },
