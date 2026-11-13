@@ -784,7 +784,8 @@
     "1005012644923854",
     "1005005709908265",
     "1005011887425776",
-    "1005012547730772"
+    "1005012547730772",
+    "1005012840419521"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1584,7 +1585,8 @@
     "1005012644923854": 1794577769.242665,
     "1005005709908265": 1794577943.6825492,
     "1005011887425776": 1794580354.5744467,
-    "1005012547730772": 1794590278.0528092
+    "1005012547730772": 1794590278.0528092,
+    "1005012840419521": 1794591008.1982286
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2609,7 +2611,8 @@
     "S80 Flash Drive USB 3.2 Type-A 128GB",
     "ATK VXE Dragonfly V3 PRO",
     "Kingston DataTraveler USB 128GB",
-    "Honor X80 Pro Max 8/128"
+    "Honor X80 Pro Max 8/128",
+    "ماوس فخم Logitech G502 Hero"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3639,10 +3642,10 @@
     "S80 Flash Drive USB 3.2 Type-A 128GB": 1794579232.5818455,
     "ATK VXE Dragonfly V3 PRO": 1794580354.5744467,
     "Kingston DataTraveler USB 128GB": 1794589551.8961492,
-    "Honor X80 Pro Max 8/128": 1794590278.0528092
+    "Honor X80 Pro Max 8/128": 1794590278.0528092,
+    "ماوس فخم Logitech G502 Hero": 1794591008.1982286
   },
   "published_post_keys": [
-    "zedstoreonline:38796",
     "test_channel:1792161949",
     "zedstoreonline:38617",
     "test_channel:1793276358",
@@ -4641,15 +4644,16 @@
     "lodydeals:46458",
     "zedstoreonline:40070",
     "zedstoreonline:40071",
-    "zedstoreonline:40073"
+    "zedstoreonline:40073",
+    "ecksdeal:6060"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794590278.0528092,
+  "last_run_time": 1794591008.1982286,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6059,
-      "last_check_time": 1794531406.8053942
+      "last_message_id": 6060,
+      "last_check_time": 1794591010.2677195
     },
     "lodydeals": {
       "last_message_id": 46458,
@@ -5361,7 +5365,8 @@
     "1005012644923854": 0.95,
     "1005005709908265": 48.5,
     "1005011887425776": 20.48,
-    "1005012547730772": 272.8
+    "1005012547730772": 272.8,
+    "1005012840419521": 31.63
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23176,6 +23181,16 @@
       "price": 272.8,
       "timestamp": 1794590278.0528092,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6060": {
+      "channel_msg_id": 2606,
+      "product_id": "1005012840419521",
+      "title": "ماوس فخم Logitech G502 Hero",
+      "channel": "ecksdeal",
+      "source_msg_id": 6060,
+      "price": 31.63,
+      "timestamp": 1794591008.1982286,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23184,17 +23199,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794590282.3552985,
+    "last_deal_post_time": 1794591012.8181868,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794590828.554941,
+    "last_sweep_time": 1794591015.3232,
     "last_sweep_times": {
-      "algeria": 1794590825.7571282,
-      "france": 1794590828.554941
+      "algeria": 1794591012.7878485,
+      "france": 1794591015.3232
     },
     "last_deal_post_times": {
-      "algeria": 1794590282.3552985
+      "algeria": 1794591012.8181868
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23992,7 +24007,8 @@
     "1005012644923854": "lodydeals",
     "1005005709908265": "aniscoupons",
     "1005011887425776": "aniscoupons",
-    "1005012547730772": "zedstoreonline"
+    "1005012547730772": "zedstoreonline",
+    "1005012840419521": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -25024,7 +25040,8 @@
     "S80 Flash Drive USB 3.2 Type-A 128GB": "aniscoupons",
     "ATK VXE Dragonfly V3 PRO": "aniscoupons",
     "Kingston DataTraveler USB 128GB": "zedstoreonline",
-    "Honor X80 Pro Max 8/128": "zedstoreonline"
+    "Honor X80 Pro Max 8/128": "zedstoreonline",
+    "ماوس فخم Logitech G502 Hero": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
