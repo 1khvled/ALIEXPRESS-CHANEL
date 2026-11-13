@@ -1542,7 +1542,7 @@
     "1005006257950849": 1794420680.672656,
     "1005013391950901": 1794420685.287832,
     "1005007477084001": 1794420689.8352551,
-    "1005008774483451": 1794426765.2023578,
+    "1005008774483451": 1794580902.9408488,
     "1005012639349629": 1794579990.5893576,
     "1005010153422760": 1794487260.3295033,
     "1005012809141747": 1794566185.5634332,
@@ -3407,7 +3407,7 @@
     "CUSU SSD SATA3": 1793913777.3174822,
     "Haylou Solar NEO 2 Amoled": 1794481983.745732,
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones": 1794313321.761044,
-    "HAYLOU Solar Ultra GPS": 1794426765.2023578,
+    "HAYLOU Solar Ultra GPS": 1794580902.9408488,
     "NOTHING Watch 3 Pro": 1794472509.191089,
     "مشترك كهربائي ORICO PD25W – محطة شحن مكتبية تضم منفذي Type-C ومنفذي USB-A ومقبسين AC لشحن الأجهزة وت": 1793966711.2525856,
     "Baseus Mouse Bluetooth Wireless Computer 1600DPI": 1793966716.198834,
@@ -3636,7 +3636,6 @@
     "ATK VXE Dragonfly V3 PRO": 1794580354.5744467
   },
   "published_post_keys": [
-    "test_channel:1791759936",
     "test_channel:1791675569",
     "megaphonna:8566",
     "aniscoupons:33275",
@@ -4635,11 +4634,12 @@
     "aniscoupons:34797",
     "aniscoupons:34798",
     "zedstoreonline:40066",
-    "aniscoupons:34799"
+    "aniscoupons:34799",
+    "zedstoreonline:40067"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794580548.39376,
+  "last_run_time": 1794580902.9408488,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4666,12 +4666,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40066,
-      "last_check_time": 1794580544.126333
+      "last_message_id": 40067,
+      "last_check_time": 1794580905.0009515
     },
     "aniscoupons": {
-      "last_message_id": 34799,
-      "last_check_time": 1794580550.4597306
+      "last_message_id": 34801,
+      "last_check_time": 1794580908.7297325
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -23109,6 +23109,16 @@
       "price": 289.5,
       "timestamp": 1794580548.39376,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40067": {
+      "channel_msg_id": 2600,
+      "product_id": "1005008774483451",
+      "title": "HAYLOU Solar Ultra GPS",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40067,
+      "price": 40.1,
+      "timestamp": 1794580902.9408488,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23117,17 +23127,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794580551.4457521,
+    "last_deal_post_time": 1794580909.3121452,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794580721.771773,
+    "last_sweep_time": 1794580911.5871115,
     "last_sweep_times": {
-      "algeria": 1794580719.3499594,
-      "france": 1794580721.771773
+      "algeria": 1794580909.2870219,
+      "france": 1794580911.5871115
     },
     "last_deal_post_times": {
-      "algeria": 1794580551.4457521
+      "algeria": 1794580909.3121452
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -25751,8 +25761,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:46048",
-    "lodydeals:46050",
     "lodydeals:46053",
     "lodydeals:46054",
     "lodydeals:46055",
@@ -26750,7 +26758,9 @@
     "zedstoreonline:40061",
     "aniscoupons:34795",
     "zedstoreonline:40064",
-    "zedstoreonline:40065"
+    "zedstoreonline:40065",
+    "aniscoupons:34800",
+    "aniscoupons:34801"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27343,6 +27353,16 @@
         "channel": "aniscoupons",
         "ts": 1794574821.31824,
         "price": 7.47
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794580906.3792648,
+        "price": 7.47
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794580908.641107,
+        "price": 7.47
       }
     ],
     "1005012285327063": [
@@ -27637,6 +27657,13 @@
         "channel": "zedstoreonline",
         "ts": 1794580350.4845073,
         "price": 78.0
+      }
+    ],
+    "1005008774483451": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794580901.2238681,
+        "price": 40.1
       }
     ]
   },
