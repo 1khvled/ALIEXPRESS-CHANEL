@@ -783,7 +783,8 @@
     "1005012624574517",
     "1005012644923854",
     "1005005709908265",
-    "1005011887425776"
+    "1005011887425776",
+    "1005012547730772"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1582,7 +1583,8 @@
     "1005012624574517": 1794575567.6709607,
     "1005012644923854": 1794577769.242665,
     "1005005709908265": 1794577943.6825492,
-    "1005011887425776": 1794580354.5744467
+    "1005011887425776": 1794580354.5744467,
+    "1005012547730772": 1794590278.0528092
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2606,7 +2608,8 @@
     "CUSU SSD CV3500 M2 1TB",
     "S80 Flash Drive USB 3.2 Type-A 128GB",
     "ATK VXE Dragonfly V3 PRO",
-    "Kingston DataTraveler USB 128GB"
+    "Kingston DataTraveler USB 128GB",
+    "Honor X80 Pro Max 8/128"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3635,10 +3638,10 @@
     "CUSU SSD CV3500 M2 1TB": 1794578319.3190603,
     "S80 Flash Drive USB 3.2 Type-A 128GB": 1794579232.5818455,
     "ATK VXE Dragonfly V3 PRO": 1794580354.5744467,
-    "Kingston DataTraveler USB 128GB": 1794589551.8961492
+    "Kingston DataTraveler USB 128GB": 1794589551.8961492,
+    "Honor X80 Pro Max 8/128": 1794590278.0528092
   },
   "published_post_keys": [
-    "aniscoupons:33148",
     "zedstoreonline:38796",
     "test_channel:1792161949",
     "zedstoreonline:38617",
@@ -4637,11 +4640,12 @@
     "aniscoupons:34804",
     "lodydeals:46458",
     "zedstoreonline:40070",
-    "zedstoreonline:40071"
+    "zedstoreonline:40071",
+    "zedstoreonline:40073"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794589551.8961492,
+  "last_run_time": 1794590278.0528092,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4668,12 +4672,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40072,
-      "last_check_time": 1794589909.0455353
+      "last_message_id": 40073,
+      "last_check_time": 1794590280.1225648
     },
     "aniscoupons": {
-      "last_message_id": 34805,
-      "last_check_time": 1794586605.442743
+      "last_message_id": 34806,
+      "last_check_time": 1794590281.6651163
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -5356,7 +5360,8 @@
     "1005012624574517": 31.62,
     "1005012644923854": 0.95,
     "1005005709908265": 48.5,
-    "1005011887425776": 20.48
+    "1005011887425776": 20.48,
+    "1005012547730772": 272.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23161,6 +23166,16 @@
       "price": 6.5,
       "timestamp": 1794589551.8961492,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40073": {
+      "channel_msg_id": 2605,
+      "product_id": "1005012547730772",
+      "title": "Honor X80 Pro Max 8/128",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40073,
+      "price": 272.8,
+      "timestamp": 1794590278.0528092,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23169,17 +23184,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794589555.2859988,
+    "last_deal_post_time": 1794590282.3552985,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794590095.5318086,
+    "last_sweep_time": 1794590284.7285812,
     "last_sweep_times": {
-      "algeria": 1794590093.0444827,
-      "france": 1794590095.5318086
+      "algeria": 1794590282.3238356,
+      "france": 1794590284.7285812
     },
     "last_deal_post_times": {
-      "algeria": 1794589555.2859988
+      "algeria": 1794590282.3552985
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23976,7 +23991,8 @@
     "1005012624574517": "aniscoupons",
     "1005012644923854": "lodydeals",
     "1005005709908265": "aniscoupons",
-    "1005011887425776": "aniscoupons"
+    "1005011887425776": "aniscoupons",
+    "1005012547730772": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -25007,7 +25023,8 @@
     "CUSU SSD CV3500 M2 1TB": "zedstoreonline",
     "S80 Flash Drive USB 3.2 Type-A 128GB": "aniscoupons",
     "ATK VXE Dragonfly V3 PRO": "aniscoupons",
-    "Kingston DataTraveler USB 128GB": "zedstoreonline"
+    "Kingston DataTraveler USB 128GB": "zedstoreonline",
+    "Honor X80 Pro Max 8/128": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -25804,7 +25821,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:46063",
     "lodydeals:46070",
     "lodydeals:46073",
     "lodydeals:46081",
@@ -26803,7 +26819,8 @@
     "aniscoupons:34803",
     "zedstoreonline:40069",
     "aniscoupons:34805",
-    "zedstoreonline:40072"
+    "zedstoreonline:40072",
+    "aniscoupons:34806"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27420,6 +27437,11 @@
       {
         "channel": "aniscoupons",
         "ts": 1794586605.297803,
+        "price": 7.47
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794590281.5570705,
         "price": 7.47
       }
     ],
