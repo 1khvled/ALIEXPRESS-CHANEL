@@ -1230,7 +1230,7 @@
     "1005012938359476": 1793448722.5382965,
     "1005012931209980": 1793566274.2309785,
     "1005011820893973": 1793540051.7895243,
-    "1005009073904302": 1794159496.3891714,
+    "1005009073904302": 1794596887.3934894,
     "1005009916208760": 1793448612.7938895,
     "1005010033441204": 1794517570.3579683,
     "1005008356663932": 1793707052.9762022,
@@ -2677,7 +2677,7 @@
     "Blackview Zeno 10 5G  8/128": 1790941207.5310047,
     "Honor Power 2  12/256": 1790941214.6756065,
     "Honor X70 5G 8/128": 1792077689.3824542,
-    "Blackview MEGA 5  8/256": 1794159496.3891714,
+    "Blackview MEGA 5  8/256": 1794596887.3934894,
     "سماعات اذن فخمة  Moondrop Chu 3 IEM": 1793542591.509991,
     "4G LTE Wireless USB 150Mbps": 1794057675.8729835,
     "Curren 8455 Men's Quartz": 1790943640.1460688,
@@ -3656,7 +3656,6 @@
     "Lexar V400 USB3.0 64GB": 1794593403.339319
   },
   "published_post_keys": [
-    "megaphonna:8515",
     "aniscoupons:33058",
     "zedstoreonline:38805",
     "zedstoreonline:38820",
@@ -4655,11 +4654,12 @@
     "ecksdeal:6061",
     "lodydeals:46459",
     "aniscoupons:34809",
-    "zedstoreonline:40081"
+    "zedstoreonline:40081",
+    "zedstoreonline:40082"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794596702.4362378,
+  "last_run_time": 1794596887.3934894,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4686,8 +4686,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40081,
-      "last_check_time": 1794596704.5118754
+      "last_message_id": 40082,
+      "last_check_time": 1794596889.4547975
     },
     "aniscoupons": {
       "last_message_id": 34809,
@@ -23244,6 +23244,16 @@
       "price": 114.9,
       "timestamp": 1794596702.4362378,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40082": {
+      "channel_msg_id": 2611,
+      "product_id": "1005009073904302",
+      "title": "Blackview MEGA 5  8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40082,
+      "price": 226.3,
+      "timestamp": 1794596887.3934894,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23252,17 +23262,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794596706.0606794,
+    "last_deal_post_time": 1794596891.0078278,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794596708.498772,
+    "last_sweep_time": 1794596894.2608712,
     "last_sweep_times": {
-      "algeria": 1794596706.0277057,
-      "france": 1794596708.498772
+      "algeria": 1794596890.9822686,
+      "france": 1794596894.2608712
     },
     "last_deal_post_times": {
-      "algeria": 1794596706.0606794
+      "algeria": 1794596891.0078278
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -27877,6 +27887,13 @@
         "channel": "aniscoupons",
         "ts": 1794593222.2615552,
         "price": 366.0
+      }
+    ],
+    "1005009073904302": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794596885.2418041,
+        "price": 226.3
       }
     ]
   },
