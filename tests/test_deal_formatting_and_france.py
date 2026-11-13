@@ -577,6 +577,62 @@ def test_multi_deal_compilation_detection_and_formatting():
     assert "WALRAM SSD 512GB" in cap_single
 
 
+def test_variant_priced_product_post_is_not_multi_deal_compilation():
+    """Regression (ECKSDEAL #6059): one SSD with 128/240/256GB variants is a single deal.
+
+    Any emoji carrying a variation selector used to count as a bullet, so the post
+    looked like a multi-product roundup and was skipped as Tajmi3at.
+    """
+    from app.aliexpress.parser import is_multi_deal_compilation
+
+    variant_post = (
+        "❗️\n"
+        "حول دولة التطبيق الى كندا\n"
+        "🇨🇦\n"
+        "🏃‍♂️\n"
+        "🏃‍♂️\n"
+        "لافااار لكن تحتاج بزاف عملات 500\n"
+        "تخفيض لـــ  : تخزين Kootion X12 Sata SSD\n"
+        "السعــــر\n"
+        "💲\n"
+        ":\n"
+        "✅\n"
+        "128 GB\n"
+        "7.40 $\n"
+        "🎟\n"
+        "كوبون 03/15$ :\n"
+        "OTD1103\n"
+        "+ قسيمة المتجر 3$\n"
+        "✅\n"
+        "240 GB\n"
+        "14.98 $\n"
+        "🎟\n"
+        "كوبون 04/25$ :\n"
+        "OTD1104\n"
+        "+قسيمة المتجر 3$\n"
+        "✅\n"
+        "256 GB\n"
+        "17.53 $\n"
+        "🎟\n"
+        "كوبون 04/25$ :\n"
+        "OTD1104\n"
+        "الرابـــــط\n"
+        "🔗\n"
+        ":\n"
+        "https://s.click.aliexpress.com/e/_c3CbKaZ5\n"
+        "رابط آخر :\n"
+        "https://s.click.aliexpress.com/e/_c4tycVcF\n"
+        "البوت لتخفيض الاسعار\n"
+        "🤖\n"
+        ":\n"
+        "https://t.me/ECKSdealsbot\n"
+        "قناة التيليغرام للمزيد من العروض :\n"
+        "https://t.me/ECKSDEAL\n"
+    )
+
+    assert is_multi_deal_compilation(variant_post) is False
+
+
 def test_competitor_to_lody_format_scrubs_all_bots():
     from app.ai.generator import format_competitor_to_lody_1to1
 

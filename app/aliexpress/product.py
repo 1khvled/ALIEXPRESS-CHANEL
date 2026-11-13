@@ -53,6 +53,42 @@ class ProductExtractor:
     def __init__(self):
         self.resolver = url_resolver
 
+    async def _is_coupon_bulletin(
+        self,
+        text: str,
+        ali_urls: List[str],
+        coupon_items: List[Dict[str, str]],
+        multi_codes_count: int,
+        usd_price: Optional[float],
+        eur_price: Optional[float],
+    ) -> bool:
+        """
+        Decides whether an incoming post is a coupon bulletin or a product deal
+        that merely lists one coupon per variant (e.g. 128GB -> 3/15$, 256GB -> 4/25$).
+
+        Coupon bulletins announce booking tiers; they do not quote a product price.
+        A priced post whose link resolves to a real item stays a single product deal.
+        """
+        if len(coupon_items) < 2 and multi_codes_count < 3:
+            return False
+
+        normalized = re.sub(r'[\u0640]', '', text or "")
+        has_price_label = bool(re.search(r'السعر|price\s*[:：]', normalized, re.IGNORECASE))
+        if not (usd_price or eur_price) or not has_price_label:
+            return True
+
+        for cand_url in ali_urls:
+            try:
+                probe = await self.resolver.resolve(cand_url)
+            except Exception as err:
+                logger.debug(
+                    f"Coupon/product classification probe failed for {cand_url}: {err}"
+                )
+                continue
+            if probe and probe.product_id:
+                return False
+        return True
+
     async def extract_from_message(
         self,
         text: str,
@@ -104,7 +140,9 @@ class ProductExtractor:
         multi_info = extract_multi_coupons(text)
         multi_codes_count = len(multi_info.get("coupons", []))
 
-        if len(coupon_items) >= 2 or multi_codes_count >= 3:
+        if await self._is_coupon_bulletin(
+            text, ali_urls, coupon_items, multi_codes_count, usd_price, eur_price
+        ):
             # Detect event type: Restricted Landing Page vs Site-Wide Booking
             from app.aliexpress.promos import promo_tracker
             active_p = promo_tracker.get_active_promo()

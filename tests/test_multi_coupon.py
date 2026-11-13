@@ -254,3 +254,79 @@ def test_no_fake_coupons_from_bot_names_and_coin_links():
 
 
 
+
+
+@pytest.mark.asyncio
+async def test_priced_variant_product_is_not_a_coupon_bulletin():
+    """ECKSDEAL #6059: 3 SSD capacities with one coupon each is a product deal, not a bulletin."""
+    from unittest.mock import AsyncMock, patch
+    from app.aliexpress.product import product_extractor
+    from app.aliexpress.parser import extract_coupon_list, extract_prices, extract_multi_coupons
+    from app.aliexpress.resolver import ResolvedUrlResult
+
+    text = (
+        "تخفيض لـــ : تخزين Kootion X12 Sata SSD\n"
+        "السعــــر 💲 :\n"
+        "✅ 128 GB 7.40 $\n"
+        "🎟 كوبون 03/15$ : OTD1103\n"
+        "✅ 240 GB 14.98 $\n"
+        "🎟 كوبون 04/25$ : OTD1104\n"
+        "✅ 256 GB 17.53 $\n"
+        "🎟 كوبون 04/25$ : OTD1104\n"
+        "الرابـــــط 🔗 : https://s.click.aliexpress.com/e/_c3CbKaZ5\n"
+        "رابط آخر : https://s.click.aliexpress.com/e/_c4tycVcF\n"
+    )
+    usd, eur = extract_prices(text)
+    coupons = extract_coupon_list(text)
+    multi_count = len(extract_multi_coupons(text).get("coupons", []))
+
+    resolved = ResolvedUrlResult(
+        original_url="https://s.click.aliexpress.com/e/_c3CbKaZ5",
+        final_url="https://www.aliexpress.com/item/1005012726037568.html",
+        canonical_url="https://www.aliexpress.com/item/1005012726037568.html",
+        product_id="1005012726037568",
+        is_valid=True,
+    )
+    with patch("app.aliexpress.product.url_resolver.resolve", new=AsyncMock(return_value=resolved)):
+        verdict = await product_extractor._is_coupon_bulletin(
+            text,
+            ["https://s.click.aliexpress.com/e/_c3CbKaZ5", "https://s.click.aliexpress.com/e/_c4tycVcF"],
+            coupons,
+            multi_count,
+            usd,
+            eur,
+        )
+
+    assert coupons, "test post must contain >= 2 coupon tiers"
+    assert verdict is False
+
+
+@pytest.mark.asyncio
+async def test_booking_coupon_bulletin_stays_a_bulletin():
+    """A bulletin with booking tiers and no product price must never become a single deal."""
+    from unittest.mock import AsyncMock, patch
+    from app.aliexpress.product import product_extractor
+    from app.aliexpress.parser import extract_coupon_list, extract_prices, extract_multi_coupons
+
+    text = (
+        "🎫 الحححححححححححححححق كوبونات متوفرة للجمع\n"
+        "✅ حجز الكوبونات اهم من العروووض 😁\n"
+        "🎟️ كوبـــون 4/35$ : BDQT04\n"
+        "🎟️ كوبـــون 6/59$ : BDQT06\n"
+        "🎟️ كوبـــون 10/99$ : BDQT10\n"
+        "طريقة حجز الكوبونات هي بالدخول لرابط المنتج\n"
+        "🔗 https://s.click.aliexpress.com/e/_c3CD2Ixn\n"
+    )
+    usd, eur = extract_prices(text)
+    coupons = extract_coupon_list(text)
+    multi_count = len(extract_multi_coupons(text).get("coupons", []))
+
+    probe = AsyncMock()
+    with patch("app.aliexpress.product.url_resolver.resolve", new=probe):
+        verdict = await product_extractor._is_coupon_bulletin(
+            text, ["https://s.click.aliexpress.com/e/_c3CD2Ixn"], coupons, multi_count, usd, eur
+        )
+
+    assert len(coupons) >= 2
+    assert verdict is True
+    probe.assert_not_awaited()
