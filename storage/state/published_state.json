@@ -1567,7 +1567,7 @@
     "1005013485724377": 1794510747.6816225,
     "1005012783197164": 1794512597.1982763,
     "1005012993724126": 1794515920.3397443,
-    "1005012726037568": 1794531406.8053942,
+    "1005012726037568": 1794556294.0510342,
     "1005011940143389": 1794524364.21287,
     "1005010374799328": 1794524370.7043138,
     "1005010487219975": 1794524381.8060858
@@ -3530,7 +3530,7 @@
     "KOOTION SATA3 SSD 128GB": 1794315897.4341226,
     "Inphic YuanChuang Cyber Gaming Mouse": 1794320674.833981,
     "SIX PCIe 4.0 SSD (1TB) NVMe M2": 1794331533.1223195,
-    "Kootion SSD SATA": 1794523623.94713,
+    "Kootion SSD SATA": 1794556294.0510342,
     "KOOTION SATA SSD 128GB": 1794334097.945569,
     "Kingston DataTraveler 128GB": 1794481781.56275,
     "CUSU CV3500  M.2 NVMe SSD (1tb)": 1794481572.7195961,
@@ -3606,7 +3606,6 @@
     "تخزين Kootion X12 Sata SSD": 1794531406.8053942
   },
   "published_post_keys": [
-    "zedstoreonline:38815",
     "megaphonna:8617",
     "couponsglobal:48800",
     "aniscoupons:33227",
@@ -4605,11 +4604,12 @@
     "lodydeals:46435",
     "lodydeals:46436",
     "lodydeals:46440",
-    "ecksdeal:6059"
+    "ecksdeal:6059",
+    "aniscoupons:34758"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794531406.8053942,
+  "last_run_time": 1794556294.0510342,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4640,8 +4640,8 @@
       "last_check_time": 1794554083.2297175
     },
     "aniscoupons": {
-      "last_message_id": 34757,
-      "last_check_time": 1794531326.6113472
+      "last_message_id": 34758,
+      "last_check_time": 1794556296.1084528
     },
     "bnddeals": {
       "last_message_id": 51297,
@@ -5315,7 +5315,7 @@
     "1005013485724377": 11.5,
     "1005012783197164": 36.4,
     "1005012993724126": 15.6,
-    "1005012726037568": 7.4,
+    "1005012726037568": 7.47,
     "1005011940143389": 3.48,
     "1005010374799328": 10.49,
     "1005010487219975": 5.49
@@ -22683,6 +22683,16 @@
       "price": 7.4,
       "timestamp": 1794531406.8053942,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34758": {
+      "channel_msg_id": 2558,
+      "product_id": "1005012726037568",
+      "title": "Kootion SSD SATA",
+      "channel": "aniscoupons",
+      "source_msg_id": 34758,
+      "price": 7.47,
+      "timestamp": 1794556294.0510342,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22691,17 +22701,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794531411.1848156,
+    "last_deal_post_time": 1794556297.0226092,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794556106.442824,
+    "last_sweep_time": 1794556300.1032803,
     "last_sweep_times": {
-      "algeria": 1794556103.7404814,
-      "france": 1794556106.442824
+      "algeria": 1794556296.9984524,
+      "france": 1794556300.1032803
     },
     "last_deal_post_times": {
-      "algeria": 1794531411.1848156
+      "algeria": 1794556297.0226092
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23489,7 +23499,7 @@
     "1005013485724377": "aniscoupons",
     "1005012783197164": "aniscoupons",
     "1005012993724126": "aniscoupons",
-    "1005012726037568": "ecksdeal",
+    "1005012726037568": "aniscoupons",
     "1005011940143389": "lodydeals",
     "1005010374799328": "lodydeals",
     "1005010487219975": "lodydeals"
@@ -26902,6 +26912,11 @@
         "channel": "ecksdeal",
         "ts": 1794531404.884773,
         "price": 7.4
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794556291.635029,
+        "price": 7.47
       }
     ]
   },
