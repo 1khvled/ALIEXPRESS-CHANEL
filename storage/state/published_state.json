@@ -819,7 +819,7 @@
     "1005012899224314": 1791943825.002781,
     "1005012923660718": 1790888191.2162998,
     "1005012881256093": 1791941229.2882626,
-    "1005009118633225": 1793399449.9599383,
+    "1005009118633225": 1794606808.077093,
     "1005012143831265": 1793613460.6520321,
     "1005008852027824": 1793613419.7534997,
     "9998888981": 1790888981.6873999,
@@ -2667,7 +2667,7 @@
     "Honor Choice Watch 2i": 1794306871.9339762,
     "HONOR CHOICE Earbuds X7e Active": 1790888191.2162998,
     "Honor Watch X5i": 1790973641.950298,
-    "UGREEN 45W GaN Charger": 1793399449.9599383,
+    "UGREEN 45W GaN Charger": 1794606808.077093,
     "Realme Pad 3 5G 256GB": 1791012345.6086447,
     "Attack Shark x AJAZZ AJ159P Gaming Mouse With Magnetic Charging Dock, PAW3395 Sensor": 1790888886.4062796,
     "OPPO A6 Pro 8/256": 1794299257.6397457,
@@ -3684,7 +3684,6 @@
     "realme 45W SUPERVOOC Charger": 1794606651.7602222
   },
   "published_post_keys": [
-    "pcgamingpart:7945",
     "lodydeals:45903",
     "couponsglobal:48764",
     "ecksdeal:5948",
@@ -4683,19 +4682,20 @@
     "lodydeals:46463",
     "lodydeals:46468",
     "lodydeals:46476",
-    "lodydeals:46477"
+    "lodydeals:46477",
+    "lodydeals:46479"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794606651.7602222,
+  "last_run_time": 1794606808.077093,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46478,
-      "last_check_time": 1794606653.8115404
+      "last_message_id": 46479,
+      "last_check_time": 1794606810.1570756
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4748,7 +4748,7 @@
     "1005012899224314": 26.38,
     "1005012923660718": 15.17,
     "1005012881256093": 27.52,
-    "1005009118633225": 11.8,
+    "1005009118633225": 12.37,
     "1005012143831265": 261.0,
     "1005007458827229": 22.1,
     "1005010453516983": 211.6,
@@ -23527,6 +23527,16 @@
       "price": 11.54,
       "timestamp": 1794606651.7602222,
       "status": "ACTIVE"
+    },
+    "lodydeals:46479": {
+      "channel_msg_id": 2636,
+      "product_id": "1005009118633225",
+      "title": "UGREEN 45W GaN Charger",
+      "channel": "lodydeals",
+      "source_msg_id": 46479,
+      "price": 12.37,
+      "timestamp": 1794606808.077093,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23535,17 +23545,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794606658.7762444,
+    "last_deal_post_time": 1794606812.7910724,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794606661.2322998,
+    "last_sweep_time": 1794606815.2949169,
     "last_sweep_times": {
-      "algeria": 1794606658.756713,
-      "france": 1794606661.2322998
+      "algeria": 1794606812.755743,
+      "france": 1794606815.2949169
     },
     "last_deal_post_times": {
-      "algeria": 1794606658.7762444
+      "algeria": 1794606812.7910724
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23986,7 +23996,7 @@
     "1005005373032877": "lodydeals",
     "1005007869955343": "zedstoreonline",
     "1005012644570693": "zedstoreonline",
-    "1005009118633225": "zedstoreonline",
+    "1005009118633225": "lodydeals",
     "1005003949106838": "zedstoreonline",
     "1005012436082838": "lodydeals",
     "1005010716206374": "aniscoupons",
@@ -24823,7 +24833,7 @@
     "Machenike G3 V2 PC Gaming Controller": "aniscoupons",
     "⭐️ 🎟️": "aniscoupons",
     "Vivo X200s (12/255GB)": "aniscoupons",
-    "UGREEN 45W GaN Charger": "zedstoreonline",
+    "UGREEN 45W GaN Charger": "lodydeals",
     "Netac 7400MB/s SSD NVMe 1TB": "zedstoreonline",
     "GIGABYTE B550M AORUS ELITE Motherboard": "zedstoreonline",
     "Redmi Pad 2  4/64": "zedstoreonline",
@@ -28270,6 +28280,13 @@
         "channel": "lodydeals",
         "ts": 1794606650.295606,
         "price": 11.54
+      }
+    ],
+    "1005009118633225": [
+      {
+        "channel": "lodydeals",
+        "ts": 1794606806.0730336,
+        "price": 12.37
       }
     ]
   },
