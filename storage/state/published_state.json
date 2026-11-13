@@ -1454,7 +1454,7 @@
     "9998887678": 1793967678.8184059,
     "9998887703": 1793967703.2348685,
     "1005008708333999": 1794580542.0024478,
-    "1005012254132930": 1793970449.9003735,
+    "1005012254132930": 1794597436.9389343,
     "1005013028124905": 1793971934.3600886,
     "1005012691642623": 1794074230.5173922,
     "1005010266233059": 1793977272.9654846,
@@ -3443,7 +3443,7 @@
     "Vivo Y600 Pro": 1793969543.5771117,
     "MAONO PD100X USB/XL": 1793969903.1419857,
     "Realme C100D 4G 4/128GB": 1794164698.641711,
-    "HAYLOU Flowbuds N50 ANC": 1793970449.9003735,
+    "HAYLOU Flowbuds N50 ANC": 1794597436.9389343,
     "Honor 600 Pro 12/256": 1794131798.3098254,
     "HONOR Pad X8a (4/64GB)": 1794476184.5102937,
     "Magcubic HY350 Max 900ANSI": 1794476813.180707,
@@ -3656,7 +3656,6 @@
     "Lexar V400 USB3.0 64GB": 1794593403.339319
   },
   "published_post_keys": [
-    "zedstoreonline:38805",
     "zedstoreonline:38820",
     "lodydeals:45943",
     "aniscoupons:32983",
@@ -4655,19 +4654,20 @@
     "aniscoupons:34809",
     "zedstoreonline:40081",
     "zedstoreonline:40082",
-    "aniscoupons:34810"
+    "aniscoupons:34810",
+    "zedstoreonline:40084"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794597076.885755,
+  "last_run_time": 1794597436.9389343,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46467,
-      "last_check_time": 1794596513.5877125
+      "last_message_id": 46468,
+      "last_check_time": 1794597430.6045399
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4686,8 +4686,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40083,
-      "last_check_time": 1794597073.2220838
+      "last_message_id": 40084,
+      "last_check_time": 1794597439.0131114
     },
     "aniscoupons": {
       "last_message_id": 34810,
@@ -5253,7 +5253,7 @@
     "1005008060391372": 31.38,
     "1005012593794312": 241.5,
     "1005008357913212": 40.43,
-    "1005012254132930": 15.2,
+    "1005012254132930": 14.5,
     "1005008708333999": 136.7,
     "1005013028124905": 438.6,
     "1005012691642623": 37.1,
@@ -23264,6 +23264,16 @@
       "price": 380.4,
       "timestamp": 1794597076.885755,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40084": {
+      "channel_msg_id": 2613,
+      "product_id": "1005012254132930",
+      "title": "HAYLOU Flowbuds N50 ANC",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40084,
+      "price": 14.5,
+      "timestamp": 1794597436.9389343,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23272,17 +23282,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794597079.9745848,
+    "last_deal_post_time": 1794597440.604859,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794597256.0035996,
+    "last_sweep_time": 1794597443.3116212,
     "last_sweep_times": {
-      "algeria": 1794597253.6170738,
-      "france": 1794597256.0035996
+      "algeria": 1794597440.5731454,
+      "france": 1794597443.3116212
     },
     "last_deal_post_times": {
-      "algeria": 1794597079.9745848
+      "algeria": 1794597440.604859
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -27911,6 +27921,13 @@
         "channel": "aniscoupons",
         "ts": 1794597074.7888837,
         "price": 380.4
+      }
+    ],
+    "1005012254132930": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794597434.8414288,
+        "price": 14.5
       }
     ]
   },
