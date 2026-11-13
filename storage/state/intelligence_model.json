@@ -28,10 +28,10 @@
       "ewma": 0.9861
     },
     "zedstoreonline": {
-      "seen": 144,
-      "published": 78,
+      "seen": 146,
+      "published": 79,
       "skipped": 0,
-      "ewma": 0.9993
+      "ewma": 0.9994
     },
     "bnddeals": {
       "seen": 20,
@@ -66,7 +66,7 @@
       "ewma": 0.9939
     },
     "phones": {
-      "seen": 181,
+      "seen": 182,
       "published": 112,
       "skipped": 0,
       "ewma": 0.9994
@@ -78,10 +78,10 @@
       "ewma": 0.9056
     },
     "accessories": {
-      "seen": 13,
-      "published": 7,
+      "seen": 14,
+      "published": 8,
       "skipped": 0,
-      "ewma": 0.7211
+      "ewma": 0.7434
     },
     "audio": {
       "seen": 16,
@@ -525,6 +525,7 @@
       52.5
     ],
     "1005007060644375": [
+      3.2,
       3.2
     ],
     "1005012915663790": [
@@ -758,31 +759,15 @@
     ]
   },
   "counters": {
-    "scored": 453,
-    "verdict_publish": 430,
+    "scored": 455,
+    "verdict_publish": 432,
     "verdict_hold": 23,
     "verdict_skip": 0,
-    "published": 325,
+    "published": 326,
     "skipped": 0
   },
-  "score_sum": 32982.4,
+  "score_sum": 33138.69,
   "recent_decisions": [
-    {
-      "ts": 1794478724,
-      "channel": "aniscoupons",
-      "category": "phones",
-      "product_id": "1005013399086495",
-      "score": 69.78,
-      "verdict": "publish"
-    },
-    {
-      "ts": 1794478731,
-      "channel": "aniscoupons",
-      "category": "phones",
-      "product_id": "1005012406142215",
-      "score": 79.07,
-      "verdict": "publish"
-    },
     {
       "ts": 1794478908,
       "channel": "zedstoreonline",
@@ -2366,7 +2351,23 @@
       "product_id": "1005008291023017",
       "score": 74.56,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794598544,
+      "channel": "zedstoreonline",
+      "category": "accessories",
+      "product_id": "1005007060644375",
+      "score": 71.27,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794598549,
+      "channel": "zedstoreonline",
+      "category": "phones",
+      "product_id": "1005010210432531",
+      "score": 85.02,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794598366.6242523
+  "updated_at": 1794598549.8414125
 }

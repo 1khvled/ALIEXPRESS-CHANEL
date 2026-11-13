@@ -1380,7 +1380,7 @@
     "1005011625723042": 1793613515.3490868,
     "1005006280695304": 1793613524.8970137,
     "1005010149868688": 1793613530.8342392,
-    "1005007060644375": 1794439910.7944255,
+    "1005007060644375": 1794598546.8080914,
     "1005012741268303": 1793613890.9637206,
     "1005010285419688": 1793613895.6129942,
     "1005007805750092": 1793613900.590816,
@@ -3437,7 +3437,7 @@
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": 1793966727.646043,
     "GameSir X5 Lite Game Controller": 1794480069.5549967,
     "Netac SSD NVME M2 250GB": 1794500738.761835,
-    "Essager 20W GaN + cable": 1794439910.7944255,
+    "Essager 20W GaN + cable": 1794598546.8080914,
     "Redmi Note 17 Pro Max": 1793966798.7696738,
     "CUSU SSD 512GB 1TB 2.5 Inch SATA SATA3 2TB 4TB Hard Drive SSD 240GB 256GB": 1794475632.0153844,
     "Fifine Gaming Headset H9W": 1794566561.968837,
@@ -3666,7 +3666,6 @@
     "Realme 15 Pro (12/512GB)": 1794598366.5791407
   },
   "published_post_keys": [
-    "bnddeals:50802",
     "lodydeals:45432",
     "couponsglobal:48815",
     "megaphonna:8620",
@@ -4665,19 +4664,20 @@
     "zedstoreonline:40085",
     "zedstoreonline:40086",
     "aniscoupons:34811",
-    "aniscoupons:34812"
+    "aniscoupons:34812",
+    "zedstoreonline:40087"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794598366.5791407,
+  "last_run_time": 1794598546.8080914,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46470,
-      "last_check_time": 1794598353.4595084
+      "last_message_id": 46471,
+      "last_check_time": 1794598540.6072
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4696,8 +4696,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40086,
-      "last_check_time": 1794597986.7097185
+      "last_message_id": 40088,
+      "last_check_time": 1794598550.2565584
     },
     "aniscoupons": {
       "last_message_id": 34812,
@@ -23326,6 +23326,16 @@
       "price": 305.22,
       "timestamp": 1794598366.5791407,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40087": {
+      "channel_msg_id": 2618,
+      "product_id": "1005007060644375",
+      "title": "Essager 20W GaN + cable",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40087,
+      "price": 3.2,
+      "timestamp": 1794598546.8080914,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23334,17 +23344,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794598369.3870363,
+    "last_deal_post_time": 1794598551.7615173,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794598371.7065213,
+    "last_sweep_time": 1794598554.877675,
     "last_sweep_times": {
-      "algeria": 1794598369.3613706,
-      "france": 1794598371.7065213
+      "algeria": 1794598551.7362192,
+      "france": 1794598554.877675
     },
     "last_deal_post_times": {
-      "algeria": 1794598369.3870363
+      "algeria": 1794598551.7615173
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -25983,7 +25993,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:6038",
     "lodydeals:46139",
     "lodydeals:46140",
     "lodydeals:46141",
@@ -26982,7 +26991,8 @@
     "lodydeals:46461",
     "lodydeals:46462",
     "aniscoupons:34808",
-    "zedstoreonline:40083"
+    "zedstoreonline:40083",
+    "zedstoreonline:40088"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27624,6 +27634,11 @@
         "channel": "zedstoreonline",
         "ts": 1794568018.1311033,
         "price": 40.0
+      },
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794598549.8049977,
+        "price": 40.0
       }
     ],
     "1005008522983211": [
@@ -27999,6 +28014,13 @@
         "channel": "aniscoupons",
         "ts": 1794598365.0379825,
         "price": 305.22
+      }
+    ],
+    "1005007060644375": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794598544.5504308,
+        "price": 3.2
       }
     ]
   },
