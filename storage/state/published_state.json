@@ -921,7 +921,7 @@
     "1005006974721332": 1791056453.5992196,
     "1005010266413614": 1793500791.1712294,
     "1005009497821240": 1791117948.6585228,
-    "1005011925142821": 1794511855.3635662,
+    "1005011925142821": 1794563445.89714,
     "9998883864": 1791063864.5866926,
     "1005010536089199": 1794480460.355499,
     "1005012385221205": 1791102050.1835058,
@@ -1491,7 +1491,7 @@
     "1005007038022940": 1794146648.256951,
     "1005007981362777": 1794146655.1062205,
     "1005007097302001": 1794146830.4272797,
-    "1005013361453762": 1794496486.6001465,
+    "1005013361453762": 1794563439.6862803,
     "1005013240296031": 1794216974.0881407,
     "1005012670472055": 1794164675.8426867,
     "1005013476568095": 1794169846.8168333,
@@ -2748,7 +2748,7 @@
     "TOPK Car Phone Holder": 1791056453.5992196,
     "الهاتف الاكثر طلبا": 1791056463.1366906,
     "Car Battery Charger LCD Display": 1791056745.5798366,
-    "Honor 600 lite (8/256)": 1794511855.3635662,
+    "Honor 600 lite (8/256)": 1794563445.89714,
     "ATTACK SHARK G300": 1791105348.8066044,
     "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones": 1791101144.9729881,
     "Toocki 25W GaN Charger": 1791102050.1835058,
@@ -3125,7 +3125,7 @@
     "Realme 15T 8/256GB": 1793543739.1061752,
     "Blackview MEGA 12  12/256": 1793478769.6023057,
     "Lenovo Xiaoxin Pad Pro 2025 12.7  inch": 1793478774.2399445,
-    "HONOR Pad V9  8/256": 1794496486.6001465,
+    "HONOR Pad V9  8/256": 1794563439.6862803,
     "Blackview LINK 1 Kids": 1794160820.0809557,
     "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": 1793490079.2945042,
     "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": 1793490090.28376,
@@ -3608,8 +3608,6 @@
     "XUNYOU-LINK 4G Modem": 1794562333.914511
   },
   "published_post_keys": [
-    "aniscoupons:32751",
-    "zedstoreonline:38906",
     "aniscoupons:32689",
     "lodydeals:45569",
     "aniscoupons:32805",
@@ -4607,11 +4605,13 @@
     "lodydeals:46448",
     "aniscoupons:34761",
     "aniscoupons:34762",
-    "aniscoupons:34763"
+    "aniscoupons:34763",
+    "zedstoreonline:40051",
+    "aniscoupons:34765"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794562885.2375963,
+  "last_run_time": 1794563445.89714,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4638,12 +4638,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40050,
-      "last_check_time": 1794563256.557707
+      "last_message_id": 40051,
+      "last_check_time": 1794563441.7614386
     },
     "aniscoupons": {
-      "last_message_id": 34764,
-      "last_check_time": 1794563258.410722
+      "last_message_id": 34765,
+      "last_check_time": 1794563447.9688137
     },
     "bnddeals": {
       "last_message_id": 51297,
@@ -22755,6 +22755,26 @@
       "price": 289.5,
       "timestamp": 1794562885.2375963,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40051": {
+      "channel_msg_id": 2565,
+      "product_id": "1005013361453762",
+      "title": "HONOR Pad V9  8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40051,
+      "price": 276.3,
+      "timestamp": 1794563439.6862803,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34765": {
+      "channel_msg_id": 2566,
+      "product_id": "1005011925142821",
+      "title": "Honor 600 lite (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34765,
+      "price": 258.5,
+      "timestamp": 1794563445.89714,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22763,17 +22783,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794562888.0612748,
+    "last_deal_post_time": 1794563449.0256891,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794563262.4502409,
+    "last_sweep_time": 1794563452.4949017,
     "last_sweep_times": {
-      "algeria": 1794563259.2676716,
-      "france": 1794563262.4502409
+      "algeria": 1794563448.993788,
+      "france": 1794563452.4949017
     },
     "last_deal_post_times": {
-      "algeria": 1794562888.0612748
+      "algeria": 1794563449.0256891
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -27032,6 +27052,20 @@
         "channel": "aniscoupons",
         "ts": 1794562883.3841333,
         "price": 289.5
+      }
+    ],
+    "1005013361453762": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794563437.6302497,
+        "price": 276.3
+      }
+    ],
+    "1005011925142821": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794563443.7682588,
+        "price": 258.5
       }
     ]
   },
