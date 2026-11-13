@@ -780,7 +780,8 @@
     "1005010487219975",
     "1005005277901494",
     "1005012191587148",
-    "1005012624574517"
+    "1005012624574517",
+    "1005012644923854"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1576,7 +1577,8 @@
     "1005010487219975": 1794524381.8060858,
     "1005005277901494": 1794563997.9172754,
     "1005012191587148": 1794568023.9427352,
-    "1005012624574517": 1794575567.6709607
+    "1005012624574517": 1794575567.6709607,
+    "1005012644923854": 1794577769.242665
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2594,7 +2596,8 @@
     "XUNYOU-LINK 4G Modem",
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers",
     "HOCO E201 ENC Calling",
-    "MAONO Wave T1 Plus Dual"
+    "MAONO Wave T1 Plus Dual",
+    "Luxury Quartz Watch"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3617,10 +3620,10 @@
     "XUNYOU-LINK 4G Modem": 1794562333.914511,
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": 1794563997.9172754,
     "HOCO E201 ENC Calling": 1794568023.9427352,
-    "MAONO Wave T1 Plus Dual": 1794575567.6709607
+    "MAONO Wave T1 Plus Dual": 1794575567.6709607,
+    "Luxury Quartz Watch": 1794577769.242665
   },
   "published_post_keys": [
-    "zedstoreonline:38528",
     "couponsglobal:48796",
     "lodydeals:45544",
     "bnddeals:50823",
@@ -4619,19 +4622,20 @@
     "aniscoupons:34784",
     "aniscoupons:34785",
     "aniscoupons:34786",
-    "aniscoupons:34788"
+    "aniscoupons:34788",
+    "lodydeals:46454"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794577027.4515839,
+  "last_run_time": 1794577769.242665,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
       "last_check_time": 1794531406.8053942
     },
     "lodydeals": {
-      "last_message_id": 46453,
-      "last_check_time": 1794568381.529939
+      "last_message_id": 46454,
+      "last_check_time": 1794577771.2969937
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -5335,7 +5339,8 @@
     "1005010487219975": 5.49,
     "1005005277901494": 13.44,
     "1005012191587148": 6.09,
-    "1005012624574517": 31.62
+    "1005012624574517": 31.62,
+    "1005012644923854": 0.95
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -22960,6 +22965,16 @@
       "price": 29.4,
       "timestamp": 1794577027.4515839,
       "status": "ACTIVE"
+    },
+    "lodydeals:46454": {
+      "channel_msg_id": 2585,
+      "product_id": "1005012644923854",
+      "title": "Luxury Quartz Watch",
+      "channel": "lodydeals",
+      "source_msg_id": 46454,
+      "price": 0.95,
+      "timestamp": 1794577769.242665,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22968,17 +22983,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794577030.24408,
+    "last_deal_post_time": 1794577774.035636,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794577579.3887649,
+    "last_sweep_time": 1794577777.0537183,
     "last_sweep_times": {
-      "algeria": 1794577576.6984975,
-      "france": 1794577579.3887649
+      "algeria": 1794577774.0130115,
+      "france": 1794577777.0537183
     },
     "last_deal_post_times": {
-      "algeria": 1794577030.24408
+      "algeria": 1794577774.035636
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23772,7 +23787,8 @@
     "1005010487219975": "lodydeals",
     "1005005277901494": "aniscoupons",
     "1005012191587148": "aniscoupons",
-    "1005012624574517": "aniscoupons"
+    "1005012624574517": "aniscoupons",
+    "1005012644923854": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -24797,7 +24813,8 @@
     "XUNYOU-LINK 4G Modem": "lodydeals",
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": "aniscoupons",
     "HOCO E201 ENC Calling": "aniscoupons",
-    "MAONO Wave T1 Plus Dual": "aniscoupons"
+    "MAONO Wave T1 Plus Dual": "aniscoupons",
+    "Luxury Quartz Watch": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
