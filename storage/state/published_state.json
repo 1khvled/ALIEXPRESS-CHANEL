@@ -1490,7 +1490,7 @@
     "1005012953027259": 1794133977.9005425,
     "1005012048332402": 1794136369.073103,
     "1005011665465731": 1794137638.8201442,
-    "1005012377459743": 1794485990.5871184,
+    "1005012377459743": 1794579239.5091803,
     "1005009460475870": 1794496858.1106308,
     "1005009649079564": 1794145536.5317988,
     "1005007038022940": 1794146648.256951,
@@ -1558,7 +1558,7 @@
     "1005013525374520": 1794475830.5998907,
     "1005012650636759": 1794475838.0735118,
     "1005011936109841": 1794475842.5666552,
-    "1005012333024137": 1794475849.927629,
+    "1005012333024137": 1794579232.5818455,
     "1005007822635375": 1794501299.95393,
     "1005001849536579": 1794575748.1745248,
     "1005006967391791": 1794476797.164376,
@@ -2601,7 +2601,8 @@
     "MAONO Wave T1 Plus Dual",
     "Luxury Quartz Watch",
     "Maono Gamerwave DGM20S",
-    "CUSU SSD CV3500 M2 1TB"
+    "CUSU SSD CV3500 M2 1TB",
+    "S80 Flash Drive USB 3.2 Type-A 128GB"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3481,7 +3482,7 @@
     "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464,
     "Kootion X15 M.2 SSD NVMe 256GB": 1794134534.5760646,
     "Lenovo LE257 Headphones": 1794137638.8201442,
-    "Honor 600s CN (8/256)": 1794485990.5871184,
+    "Honor 600s CN (8/256)": 1794579239.5091803,
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
     "Blackview Mega 5": 1794564351.798521,
     "Warvank X8 Wireless Gaming Mouse": 1794496858.1106308,
@@ -3627,11 +3628,10 @@
     "MAONO Wave T1 Plus Dual": 1794575567.6709607,
     "Luxury Quartz Watch": 1794577769.242665,
     "Maono Gamerwave DGM20S": 1794577943.6825492,
-    "CUSU SSD CV3500 M2 1TB": 1794578319.3190603
+    "CUSU SSD CV3500 M2 1TB": 1794578319.3190603,
+    "S80 Flash Drive USB 3.2 Type-A 128GB": 1794579232.5818455
   },
   "published_post_keys": [
-    "couponsglobal:48811",
-    "aniscoupons:32953",
     "ecksdeal:5930",
     "couponsglobal:48793",
     "lodydeals:45454",
@@ -4629,11 +4629,13 @@
     "aniscoupons:34790",
     "zedstoreonline:40058",
     "aniscoupons:34791",
-    "zedstoreonline:40060"
+    "zedstoreonline:40060",
+    "aniscoupons:34793",
+    "aniscoupons:34794"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794578866.6273274,
+  "last_run_time": 1794579239.5091803,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4660,12 +4662,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40060,
-      "last_check_time": 1794578868.7035615
+      "last_message_id": 40061,
+      "last_check_time": 1794579225.7139065
     },
     "aniscoupons": {
-      "last_message_id": 34792,
-      "last_check_time": 1794578498.9808767
+      "last_message_id": 34794,
+      "last_check_time": 1794579241.5659435
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -5327,7 +5329,7 @@
     "1005013525374520": 68.85,
     "1005012650636759": 23.12,
     "1005011936109841": 457.36,
-    "1005012333024137": 7.07,
+    "1005012333024137": 6.07,
     "1005001849536579": 21.52,
     "1005006967391791": 36.2,
     "1005013288890301": 16.9,
@@ -23022,6 +23024,26 @@
       "price": 58.4,
       "timestamp": 1794578866.6273274,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34793": {
+      "channel_msg_id": 2590,
+      "product_id": "1005012333024137",
+      "title": "S80 Flash Drive USB 3.2 Type-A 128GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34793,
+      "price": 6.07,
+      "timestamp": 1794579232.5818455,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34794": {
+      "channel_msg_id": 2591,
+      "product_id": "1005012377459743",
+      "title": "Honor 600s CN (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34794,
+      "price": 304.77,
+      "timestamp": 1794579239.5091803,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23030,17 +23052,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794578873.367532,
+    "last_deal_post_time": 1794579242.3129103,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794579043.4748304,
+    "last_sweep_time": 1794579244.6686015,
     "last_sweep_times": {
-      "algeria": 1794579040.965698,
-      "france": 1794579043.4748304
+      "algeria": 1794579242.2880185,
+      "france": 1794579244.6686015
     },
     "last_deal_post_times": {
-      "algeria": 1794578873.367532
+      "algeria": 1794579242.3129103
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23816,7 +23838,7 @@
     "1005013525374520": "lodydeals",
     "1005012650636759": "lodydeals",
     "1005011936109841": "lodydeals",
-    "1005012333024137": "lodydeals",
+    "1005012333024137": "aniscoupons",
     "1005001849536579": "aniscoupons",
     "1005006967391791": "zedstoreonline",
     "1005013288890301": "zedstoreonline",
@@ -24864,7 +24886,8 @@
     "MAONO Wave T1 Plus Dual": "aniscoupons",
     "Luxury Quartz Watch": "lodydeals",
     "Maono Gamerwave DGM20S": "aniscoupons",
-    "CUSU SSD CV3500 M2 1TB": "zedstoreonline"
+    "CUSU SSD CV3500 M2 1TB": "zedstoreonline",
+    "S80 Flash Drive USB 3.2 Type-A 128GB": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -25661,7 +25684,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:6029",
     "lodydeals:46041",
     "lodydeals:46043",
     "lodydeals:46045",
@@ -26660,7 +26682,8 @@
     "lodydeals:46456",
     "zedstoreonline:40059",
     "aniscoupons:34792",
-    "lodydeals:46457"
+    "lodydeals:46457",
+    "zedstoreonline:40061"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27485,6 +27508,20 @@
         "channel": "zedstoreonline",
         "ts": 1794578864.500497,
         "price": 58.4
+      }
+    ],
+    "1005012333024137": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794579230.5867577,
+        "price": 6.07
+      }
+    ],
+    "1005012377459743": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794579237.994458,
+        "price": 304.77
       }
     ]
   },

@@ -40,8 +40,8 @@
       "ewma": 0.6418
     },
     "aniscoupons": {
-      "seen": 228,
-      "published": 184,
+      "seen": 230,
+      "published": 186,
       "skipped": 0,
       "ewma": 0.9994
     },
@@ -54,8 +54,8 @@
   },
   "category_stats": {
     "other": {
-      "seen": 128,
-      "published": 107,
+      "seen": 129,
+      "published": 108,
       "skipped": 0,
       "ewma": 0.9994
     },
@@ -66,8 +66,8 @@
       "ewma": 0.9915
     },
     "phones": {
-      "seen": 170,
-      "published": 104,
+      "seen": 171,
+      "published": 105,
       "skipped": 0,
       "ewma": 0.9994
     },
@@ -559,7 +559,8 @@
       457.36
     ],
     "1005012333024137": [
-      7.07
+      7.07,
+      6.07
     ],
     "1005012773302941": [
       17.06
@@ -608,6 +609,7 @@
       17.8
     ],
     "1005012377459743": [
+      304.77,
       304.77
     ],
     "1005013422894128": [
@@ -710,31 +712,15 @@
     ]
   },
   "counters": {
-    "scored": 422,
-    "verdict_publish": 399,
+    "scored": 424,
+    "verdict_publish": 401,
     "verdict_hold": 23,
     "verdict_skip": 0,
-    "published": 299,
+    "published": 301,
     "skipped": 0
   },
-  "score_sum": 30654.12,
+  "score_sum": 30804.41,
   "recent_decisions": [
-    {
-      "ts": 1794474718,
-      "channel": "aniscoupons",
-      "category": "phones",
-      "product_id": "1005012931209980",
-      "score": 83.21,
-      "verdict": "publish"
-    },
-    {
-      "ts": 1794475082,
-      "channel": "zedstoreonline",
-      "category": "other",
-      "product_id": "1005011583202464",
-      "score": 81.58,
-      "verdict": "publish"
-    },
     {
       "ts": 1794475089,
       "channel": "aniscoupons",
@@ -2318,7 +2304,23 @@
       "product_id": "1005011583202464",
       "score": 82.39,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794579230,
+      "channel": "aniscoupons",
+      "category": "other",
+      "product_id": "1005012333024137",
+      "score": 79.56,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794579238,
+      "channel": "aniscoupons",
+      "category": "phones",
+      "product_id": "1005012377459743",
+      "score": 70.73,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794578866.6862347
+  "updated_at": 1794579239.5533593
 }
