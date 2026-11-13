@@ -22,10 +22,10 @@
   "flow_target": 24.0,
   "channel_stats": {
     "lodydeals": {
-      "seen": 42,
-      "published": 41,
+      "seen": 43,
+      "published": 42,
       "skipped": 0,
-      "ewma": 0.9836
+      "ewma": 0.9849
     },
     "zedstoreonline": {
       "seen": 134,
@@ -60,10 +60,10 @@
       "ewma": 0.9994
     },
     "pc": {
-      "seen": 75,
-      "published": 50,
+      "seen": 76,
+      "published": 51,
       "skipped": 0,
-      "ewma": 0.9922
+      "ewma": 0.9928
     },
     "phones": {
       "seen": 175,
@@ -678,7 +678,8 @@
       7.47,
       7.4,
       7.47,
-      7.47
+      7.47,
+      7.4
     ],
     "1005011940143389": [
       3.48
@@ -724,23 +725,15 @@
     ]
   },
   "counters": {
-    "scored": 434,
-    "verdict_publish": 411,
+    "scored": 435,
+    "verdict_publish": 412,
     "verdict_hold": 23,
     "verdict_skip": 0,
-    "published": 309,
+    "published": 310,
     "skipped": 0
   },
-  "score_sum": 31538.39,
+  "score_sum": 31603.14,
   "recent_decisions": [
-    {
-      "ts": 1794475848,
-      "channel": "lodydeals",
-      "category": "other",
-      "product_id": "1005012333024137",
-      "score": 60.54,
-      "verdict": "publish"
-    },
     {
       "ts": 1794475857,
       "channel": "lodydeals",
@@ -2332,7 +2325,15 @@
       "product_id": "1005013480169843",
       "score": 69.64,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794585680,
+      "channel": "lodydeals",
+      "category": "pc",
+      "product_id": "1005012726037568",
+      "score": 64.75,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794584771.5593836
+  "updated_at": 1794585682.1172588
 }

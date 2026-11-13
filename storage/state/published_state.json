@@ -1573,7 +1573,7 @@
     "1005013485724377": 1794510747.6816225,
     "1005012783197164": 1794512597.1982763,
     "1005012993724126": 1794515920.3397443,
-    "1005012726037568": 1794574823.016958,
+    "1005012726037568": 1794585682.0605152,
     "1005011940143389": 1794524364.21287,
     "1005010374799328": 1794524370.7043138,
     "1005010487219975": 1794524381.8060858,
@@ -3548,7 +3548,7 @@
     "CMF Buds 2a ANC -42dB  السعر: 11.7": 1794312964.1163073,
     "MACHENIKE G1 Wireless Gaming Controller": 1794420506.0795698,
     "HAYLOU Mori Pro": 1794472514.3049436,
-    "KOOTION SATA3 SSD 128GB": 1794315897.4341226,
+    "KOOTION SATA3 SSD 128GB": 1794585682.0605152,
     "Inphic YuanChuang Cyber Gaming Mouse": 1794320674.833981,
     "SIX PCIe 4.0 SSD (1TB) NVMe M2": 1794331533.1223195,
     "Kootion SSD SATA": 1794574823.016958,
@@ -3636,7 +3636,6 @@
     "ATK VXE Dragonfly V3 PRO": 1794580354.5744467
   },
   "published_post_keys": [
-    "megaphonna:8566",
     "aniscoupons:33275",
     "test_channel:1792182115",
     "aniscoupons:33148",
@@ -4635,19 +4634,20 @@
     "zedstoreonline:40066",
     "aniscoupons:34799",
     "zedstoreonline:40067",
-    "aniscoupons:34804"
+    "aniscoupons:34804",
+    "lodydeals:46458"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794584771.5091124,
+  "last_run_time": 1794585682.0605152,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
       "last_check_time": 1794531406.8053942
     },
     "lodydeals": {
-      "last_message_id": 46457,
-      "last_check_time": 1794578861.4417608
+      "last_message_id": 46458,
+      "last_check_time": 1794585684.129005
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -5345,7 +5345,7 @@
     "1005013485724377": 11.5,
     "1005012783197164": 36.4,
     "1005012993724126": 15.6,
-    "1005012726037568": 7.47,
+    "1005012726037568": 7.4,
     "1005011940143389": 3.48,
     "1005010374799328": 10.49,
     "1005010487219975": 5.49,
@@ -23129,6 +23129,16 @@
       "price": 66.7,
       "timestamp": 1794584771.5091124,
       "status": "ACTIVE"
+    },
+    "lodydeals:46458": {
+      "channel_msg_id": 2602,
+      "product_id": "1005012726037568",
+      "title": "KOOTION SATA3 SSD 128GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46458,
+      "price": 7.4,
+      "timestamp": 1794585682.0605152,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23137,17 +23147,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794584774.5793648,
+    "last_deal_post_time": 1794585688.317742,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794585507.4038882,
+    "last_sweep_time": 1794585690.660644,
     "last_sweep_times": {
-      "algeria": 1794585504.1108189,
-      "france": 1794585507.4038882
+      "algeria": 1794585688.2997367,
+      "france": 1794585690.660644
     },
     "last_deal_post_times": {
-      "algeria": 1794584774.5793648
+      "algeria": 1794585688.317742
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23935,7 +23945,7 @@
     "1005013485724377": "aniscoupons",
     "1005012783197164": "aniscoupons",
     "1005012993724126": "aniscoupons",
-    "1005012726037568": "aniscoupons",
+    "1005012726037568": "lodydeals",
     "1005011940143389": "lodydeals",
     "1005010374799328": "lodydeals",
     "1005010487219975": "lodydeals",
@@ -24889,7 +24899,7 @@
     "CMF Buds 2a ANC -42dB  السعر: 11.7": "bnddeals",
     "MACHENIKE G1 Wireless Gaming Controller": "zedstoreonline",
     "HAYLOU Mori Pro": "aniscoupons",
-    "KOOTION SATA3 SSD 128GB": "bnddeals",
+    "KOOTION SATA3 SSD 128GB": "lodydeals",
     "Inphic YuanChuang Cyber Gaming Mouse": "zedstoreonline",
     "SIX PCIe 4.0 SSD (1TB) NVMe M2": "bnddeals",
     "Kootion SSD SATA": "aniscoupons",
@@ -27378,6 +27388,11 @@
         "channel": "aniscoupons",
         "ts": 1794581265.8586147,
         "price": 7.47
+      },
+      {
+        "channel": "lodydeals",
+        "ts": 1794585680.1842062,
+        "price": 7.4
       }
     ],
     "1005012285327063": [
@@ -27690,6 +27705,6 @@
     ]
   },
   "hot_repost_timestamps": {
-    "1005012726037568": 1794531406.8365054
+    "1005012726037568": 1794585682.081235
   }
 }
