@@ -4618,7 +4618,7 @@
     "aniscoupons:34782"
   ],
   "last_disclaimer_time": 1794524540.9476151,
-  "last_calendar_time": 1793967870.7590299,
+  "last_calendar_time": 1794572799.8939624,
   "last_run_time": 1794568023.9427352,
   "monitored_channels": {
     "ecksdeal": {
@@ -22927,10 +22927,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794572622.4384558,
+    "last_sweep_time": 1794572808.252652,
     "last_sweep_times": {
-      "algeria": 1794572619.1546044,
-      "france": 1794572622.4384558
+      "algeria": 1794572805.2706811,
+      "france": 1794572808.252652
     },
     "last_deal_post_times": {
       "algeria": 1794568026.8956962
