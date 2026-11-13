@@ -792,7 +792,8 @@
     "1005010305059795",
     "1005013078612320",
     "1005007010612283",
-    "1005010788231460"
+    "1005010788231460",
+    "1389260212"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1600,7 +1601,8 @@
     "1005010305059795": 1794597627.451524,
     "1005013078612320": 1794597984.6494167,
     "1005007010612283": 1794599454.461018,
-    "1005010788231460": 1794604060.7762444
+    "1005010788231460": 1794604060.7762444,
+    "1389260212": 1794605894.0354748
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2634,7 +2636,8 @@
     "Realme 15 Pro (12/512GB)",
     "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone",
     "Blackview OSCAL PILOT 5  8/256",
-    "Xiaomi Redmi Note 17 5G Global Version (6/256GB"
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB",
+    "NETUM NT-1698W Handheld Wirelress Barcode Scanner AND NT-1228BL Bluetooth"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3673,10 +3676,10 @@
     "Realme 15 Pro (12/512GB)": 1794598366.5791407,
     "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": 1794599278.9506347,
     "Blackview OSCAL PILOT 5  8/256": 1794604060.7762444,
-    "Xiaomi Redmi Note 17 5G Global Version (6/256GB": 1794604246.449916
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB": 1794604246.449916,
+    "NETUM NT-1698W Handheld Wirelress Barcode Scanner AND NT-1228BL Bluetooth": 1794605894.0354748
   },
   "published_post_keys": [
-    "zedstoreonline:38695",
     "zedstoreonline:38607",
     "ecksdeal:5942",
     "megaphonna:8660",
@@ -4675,11 +4678,12 @@
     "zedstoreonline:40096",
     "aniscoupons:34816",
     "aniscoupons:34817",
-    "aniscoupons:34818"
+    "aniscoupons:34818",
+    "zedstoreonline:40099"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794605531.634575,
+  "last_run_time": 1794605894.0354748,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4706,8 +4710,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40098,
-      "last_check_time": 1794605714.7463152
+      "last_message_id": 40099,
+      "last_check_time": 1794605896.109829
     },
     "aniscoupons": {
       "last_message_id": 34818,
@@ -5403,7 +5407,8 @@
     "1005010305059795": 29.3,
     "1005013078612320": 23.6,
     "1005007010612283": 23.2,
-    "1005010788231460": 178.4
+    "1005010788231460": 178.4,
+    "1389260212": 14.8
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23468,6 +23473,16 @@
       "price": 136.7,
       "timestamp": 1794605531.634575,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40099": {
+      "channel_msg_id": 2631,
+      "product_id": "1389260212",
+      "title": "NETUM NT-1698W Handheld Wirelress Barcode Scanner AND NT-1228BL Bluetooth",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40099,
+      "price": 14.8,
+      "timestamp": 1794605894.0354748,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23476,17 +23491,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794605534.6143196,
+    "last_deal_post_time": 1794605897.624161,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794605719.6858573,
+    "last_sweep_time": 1794605900.0087025,
     "last_sweep_times": {
-      "algeria": 1794605716.495748,
-      "france": 1794605719.6858573
+      "algeria": 1794605897.591527,
+      "france": 1794605900.0087025
     },
     "last_deal_post_times": {
-      "algeria": 1794605534.6143196
+      "algeria": 1794605897.624161
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24292,7 +24307,8 @@
     "1005010305059795": "zedstoreonline",
     "1005013078612320": "zedstoreonline",
     "1005007010612283": "zedstoreonline",
-    "1005010788231460": "zedstoreonline"
+    "1005010788231460": "zedstoreonline",
+    "1389260212": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -25333,7 +25349,8 @@
     "Realme 15 Pro (12/512GB)": "aniscoupons",
     "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": "zedstoreonline",
     "Blackview OSCAL PILOT 5  8/256": "zedstoreonline",
-    "Xiaomi Redmi Note 17 5G Global Version (6/256GB": "aniscoupons"
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB": "aniscoupons",
+    "NETUM NT-1698W Handheld Wirelress Barcode Scanner AND NT-1228BL Bluetooth": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
