@@ -779,7 +779,8 @@
     "1005010374799328",
     "1005010487219975",
     "1005005277901494",
-    "1005012191587148"
+    "1005012191587148",
+    "1005012624574517"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1574,7 +1575,8 @@
     "1005010374799328": 1794524370.7043138,
     "1005010487219975": 1794524381.8060858,
     "1005005277901494": 1794563997.9172754,
-    "1005012191587148": 1794568023.9427352
+    "1005012191587148": 1794568023.9427352,
+    "1005012624574517": 1794575567.6709607
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2591,7 +2593,8 @@
     "تخزين Kootion X12 Sata SSD",
     "XUNYOU-LINK 4G Modem",
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers",
-    "HOCO E201 ENC Calling"
+    "HOCO E201 ENC Calling",
+    "MAONO Wave T1 Plus Dual"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3613,10 +3616,10 @@
     "تخزين Kootion X12 Sata SSD": 1794531406.8053942,
     "XUNYOU-LINK 4G Modem": 1794562333.914511,
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": 1794563997.9172754,
-    "HOCO E201 ENC Calling": 1794568023.9427352
+    "HOCO E201 ENC Calling": 1794568023.9427352,
+    "MAONO Wave T1 Plus Dual": 1794575567.6709607
   },
   "published_post_keys": [
-    "aniscoupons:32686",
     "zedstoreonline:38915",
     "couponsglobal:48876",
     "zedstoreonline:38528",
@@ -4615,11 +4618,12 @@
     "zedstoreonline:40053",
     "aniscoupons:34780",
     "aniscoupons:34782",
-    "aniscoupons:34784"
+    "aniscoupons:34784",
+    "aniscoupons:34785"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794574823.016958,
+  "last_run_time": 1794575567.6709607,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4650,8 +4654,8 @@
       "last_check_time": 1794569849.588365
     },
     "aniscoupons": {
-      "last_message_id": 34784,
-      "last_check_time": 1794574825.0715837
+      "last_message_id": 34785,
+      "last_check_time": 1794575569.7464986
     },
     "bnddeals": {
       "last_message_id": 51299,
@@ -5330,7 +5334,8 @@
     "1005010374799328": 10.49,
     "1005010487219975": 5.49,
     "1005005277901494": 13.44,
-    "1005012191587148": 6.09
+    "1005012191587148": 6.09,
+    "1005012624574517": 31.62
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -22925,6 +22930,16 @@
       "price": 7.47,
       "timestamp": 1794574823.016958,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34785": {
+      "channel_msg_id": 2582,
+      "product_id": "1005012624574517",
+      "title": "MAONO Wave T1 Plus Dual",
+      "channel": "aniscoupons",
+      "source_msg_id": 34785,
+      "price": 31.62,
+      "timestamp": 1794575567.6709607,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22933,17 +22948,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794574825.7769544,
+    "last_deal_post_time": 1794575570.8482633,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794575373.5099988,
+    "last_sweep_time": 1794575574.135203,
     "last_sweep_times": {
-      "algeria": 1794575370.4753106,
-      "france": 1794575373.5099988
+      "algeria": 1794575570.8164089,
+      "france": 1794575574.135203
     },
     "last_deal_post_times": {
-      "algeria": 1794574825.7769544
+      "algeria": 1794575570.8482633
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23736,7 +23751,8 @@
     "1005010374799328": "lodydeals",
     "1005010487219975": "lodydeals",
     "1005005277901494": "aniscoupons",
-    "1005012191587148": "aniscoupons"
+    "1005012191587148": "aniscoupons",
+    "1005012624574517": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -24760,7 +24776,8 @@
     "تخزين Kootion X12 Sata SSD": "ecksdeal",
     "XUNYOU-LINK 4G Modem": "lodydeals",
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": "aniscoupons",
-    "HOCO E201 ENC Calling": "aniscoupons"
+    "HOCO E201 ENC Calling": "aniscoupons",
+    "MAONO Wave T1 Plus Dual": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
