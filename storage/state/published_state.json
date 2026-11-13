@@ -785,7 +785,8 @@
     "1005005709908265",
     "1005011887425776",
     "1005012547730772",
-    "1005012840419521"
+    "1005012840419521",
+    "1005010218815499"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1586,7 +1587,8 @@
     "1005005709908265": 1794577943.6825492,
     "1005011887425776": 1794580354.5744467,
     "1005012547730772": 1794590278.0528092,
-    "1005012840419521": 1794591008.1982286
+    "1005012840419521": 1794591008.1982286,
+    "1005010218815499": 1794591382.6548223
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2612,7 +2614,8 @@
     "ATK VXE Dragonfly V3 PRO",
     "Kingston DataTraveler USB 128GB",
     "Honor X80 Pro Max 8/128",
-    "ماوس فخم Logitech G502 Hero"
+    "ماوس فخم Logitech G502 Hero",
+    "ماوس لاسلكي Delux M800 Mini Series"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3643,10 +3646,10 @@
     "ATK VXE Dragonfly V3 PRO": 1794580354.5744467,
     "Kingston DataTraveler USB 128GB": 1794589551.8961492,
     "Honor X80 Pro Max 8/128": 1794590278.0528092,
-    "ماوس فخم Logitech G502 Hero": 1794591008.1982286
+    "ماوس فخم Logitech G502 Hero": 1794591008.1982286,
+    "ماوس لاسلكي Delux M800 Mini Series": 1794591382.6548223
   },
   "published_post_keys": [
-    "test_channel:1792161949",
     "zedstoreonline:38617",
     "test_channel:1793276358",
     "lodydeals:45878",
@@ -4645,15 +4648,16 @@
     "zedstoreonline:40070",
     "zedstoreonline:40071",
     "zedstoreonline:40073",
-    "ecksdeal:6060"
+    "ecksdeal:6060",
+    "ecksdeal:6061"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794591008.1982286,
+  "last_run_time": 1794591382.6548223,
   "monitored_channels": {
     "ecksdeal": {
-      "last_message_id": 6060,
-      "last_check_time": 1794591010.2677195
+      "last_message_id": 6061,
+      "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
       "last_message_id": 46458,
@@ -4676,8 +4680,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40076,
-      "last_check_time": 1794591198.5944254
+      "last_message_id": 40077,
+      "last_check_time": 1794591390.0073342
     },
     "aniscoupons": {
       "last_message_id": 34806,
@@ -5366,7 +5370,8 @@
     "1005005709908265": 48.5,
     "1005011887425776": 20.48,
     "1005012547730772": 272.8,
-    "1005012840419521": 31.63
+    "1005012840419521": 31.63,
+    "1005010218815499": 13.94
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23191,6 +23196,16 @@
       "price": 31.63,
       "timestamp": 1794591008.1982286,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6061": {
+      "channel_msg_id": 2607,
+      "product_id": "1005010218815499",
+      "title": "ماوس لاسلكي Delux M800 Mini Series",
+      "channel": "ecksdeal",
+      "source_msg_id": 6061,
+      "price": 13.94,
+      "timestamp": 1794591382.6548223,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23199,17 +23214,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794591012.8181868,
+    "last_deal_post_time": 1794591391.155149,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794591203.24612,
+    "last_sweep_time": 1794591394.0022104,
     "last_sweep_times": {
-      "algeria": 1794591200.3247557,
-      "france": 1794591203.24612
+      "algeria": 1794591391.1297932,
+      "france": 1794591394.0022104
     },
     "last_deal_post_times": {
-      "algeria": 1794591012.8181868
+      "algeria": 1794591391.155149
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24008,7 +24023,8 @@
     "1005005709908265": "aniscoupons",
     "1005011887425776": "aniscoupons",
     "1005012547730772": "zedstoreonline",
-    "1005012840419521": "ecksdeal"
+    "1005012840419521": "ecksdeal",
+    "1005010218815499": "ecksdeal"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -25041,7 +25057,8 @@
     "ATK VXE Dragonfly V3 PRO": "aniscoupons",
     "Kingston DataTraveler USB 128GB": "zedstoreonline",
     "Honor X80 Pro Max 8/128": "zedstoreonline",
-    "ماوس فخم Logitech G502 Hero": "ecksdeal"
+    "ماوس فخم Logitech G502 Hero": "ecksdeal",
+    "ماوس لاسلكي Delux M800 Mini Series": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -25838,7 +25855,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:46084",
     "lodydeals:46086",
     "lodydeals:46089",
     "lodydeals:46096",
@@ -26837,7 +26853,8 @@
     "aniscoupons:34806",
     "zedstoreonline:40074",
     "zedstoreonline:40075",
-    "zedstoreonline:40076"
+    "zedstoreonline:40076",
+    "zedstoreonline:40077"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27772,6 +27789,11 @@
       {
         "channel": "aniscoupons",
         "ts": 1794584769.4551408,
+        "price": 66.7
+      },
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794591389.9185598,
         "price": 66.7
       }
     ],
