@@ -1567,7 +1567,7 @@
     "1005013485724377": 1794510747.6816225,
     "1005012783197164": 1794512597.1982763,
     "1005012993724126": 1794515920.3397443,
-    "1005012726037568": 1794523623.94713,
+    "1005012726037568": 1794531406.8053942,
     "1005011940143389": 1794524364.21287,
     "1005010374799328": 1794524370.7043138,
     "1005010487219975": 1794524381.8060858
@@ -2583,7 +2583,8 @@
     "WALRAM M.2  128GB",
     "Portable Magnetic Phone",
     "QCY T13 ENC Earphone",
-    "Retro Bronze Embossed"
+    "Retro Bronze Embossed",
+    "تخزين Kootion X12 Sata SSD"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3601,10 +3602,10 @@
     "WALRAM M.2  128GB": 1794515920.3397443,
     "Portable Magnetic Phone": 1794524364.21287,
     "QCY T13 ENC Earphone": 1794524375.306614,
-    "Retro Bronze Embossed": 1794524381.8060858
+    "Retro Bronze Embossed": 1794524381.8060858,
+    "تخزين Kootion X12 Sata SSD": 1794531406.8053942
   },
   "published_post_keys": [
-    "zedstoreonline:38626",
     "zedstoreonline:38815",
     "megaphonna:8617",
     "couponsglobal:48800",
@@ -4603,15 +4604,16 @@
     "lodydeals:46434",
     "lodydeals:46435",
     "lodydeals:46436",
-    "lodydeals:46440"
+    "lodydeals:46440",
+    "ecksdeal:6059"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794524556.2538168,
+  "last_run_time": 1794531406.8053942,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
-      "last_check_time": 1794529491.0184398
+      "last_check_time": 1794531406.8053942
     },
     "lodydeals": {
       "last_message_id": 46444,
@@ -5313,7 +5315,7 @@
     "1005013485724377": 11.5,
     "1005012783197164": 36.4,
     "1005012993724126": 15.6,
-    "1005012726037568": 7.47,
+    "1005012726037568": 7.4,
     "1005011940143389": 3.48,
     "1005010374799328": 10.49,
     "1005010487219975": 5.49
@@ -22671,6 +22673,16 @@
       "price": 29.21,
       "timestamp": 1794524556.2538168,
       "status": "ACTIVE"
+    },
+    "ecksdeal:6059": {
+      "channel_msg_id": 2554,
+      "product_id": "1005012726037568",
+      "title": "تخزين Kootion X12 Sata SSD",
+      "channel": "ecksdeal",
+      "source_msg_id": 6059,
+      "price": 7.4,
+      "timestamp": 1794531406.8053942,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22679,17 +22691,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794524565.8986137,
+    "last_deal_post_time": 1794531411.1848156,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794531329.4151945,
+    "last_sweep_time": 1794531413.9068408,
     "last_sweep_times": {
-      "algeria": 1794531327.2598011,
-      "france": 1794531329.4151945
+      "algeria": 1794531411.1539133,
+      "france": 1794531413.9068408
     },
     "last_deal_post_times": {
-      "algeria": 1794524565.8986137
+      "algeria": 1794531411.1848156
     }
   },
   "last_coin_reminder_time": 1794348793.0732265,
@@ -23477,7 +23489,7 @@
     "1005013485724377": "aniscoupons",
     "1005012783197164": "aniscoupons",
     "1005012993724126": "aniscoupons",
-    "1005012726037568": "aniscoupons",
+    "1005012726037568": "ecksdeal",
     "1005011940143389": "lodydeals",
     "1005010374799328": "lodydeals",
     "1005010487219975": "lodydeals"
@@ -24500,7 +24512,8 @@
     "WALRAM M.2  128GB": "aniscoupons",
     "Portable Magnetic Phone": "lodydeals",
     "QCY T13 ENC Earphone": "lodydeals",
-    "Retro Bronze Embossed": "lodydeals"
+    "Retro Bronze Embossed": "lodydeals",
+    "تخزين Kootion X12 Sata SSD": "ecksdeal"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -26883,7 +26896,15 @@
         "channel": "zedstoreonline",
         "ts": 1794529478.0,
         "price": 7.4
+      },
+      {
+        "channel": "ecksdeal",
+        "ts": 1794531404.884773,
+        "price": 7.4
       }
     ]
+  },
+  "hot_repost_timestamps": {
+    "1005012726037568": 1794531406.8365054
   }
 }
