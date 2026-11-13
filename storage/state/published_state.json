@@ -788,7 +788,8 @@
     "1005012840419521",
     "1005010218815499",
     "1005011897409757",
-    "1005013203288194"
+    "1005013203288194",
+    "1005010305059795"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1592,7 +1593,8 @@
     "1005012840419521": 1794591008.1982286,
     "1005010218815499": 1794591382.6548223,
     "1005011897409757": 1794593403.339319,
-    "1005013203288194": 1794595430.2306583
+    "1005013203288194": 1794595430.2306583,
+    "1005010305059795": 1794597627.451524
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2620,7 +2622,8 @@
     "Honor X80 Pro Max 8/128",
     "ماوس فخم Logitech G502 Hero",
     "ماوس لاسلكي Delux M800 Mini Series",
-    "Lexar V400 USB3.0 64GB"
+    "Lexar V400 USB3.0 64GB",
+    "HAYLOU S40 ANC Wireless"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3653,10 +3656,10 @@
     "Honor X80 Pro Max 8/128": 1794590278.0528092,
     "ماوس فخم Logitech G502 Hero": 1794591008.1982286,
     "ماوس لاسلكي Delux M800 Mini Series": 1794591382.6548223,
-    "Lexar V400 USB3.0 64GB": 1794593403.339319
+    "Lexar V400 USB3.0 64GB": 1794593403.339319,
+    "HAYLOU S40 ANC Wireless": 1794597627.451524
   },
   "published_post_keys": [
-    "zedstoreonline:38820",
     "lodydeals:45943",
     "aniscoupons:32983",
     "megaphonna:8653",
@@ -4655,11 +4658,12 @@
     "zedstoreonline:40081",
     "zedstoreonline:40082",
     "aniscoupons:34810",
-    "zedstoreonline:40084"
+    "zedstoreonline:40084",
+    "zedstoreonline:40085"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794597436.9389343,
+  "last_run_time": 1794597627.451524,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4686,8 +4690,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40084,
-      "last_check_time": 1794597439.0131114
+      "last_message_id": 40085,
+      "last_check_time": 1794597629.5283008
     },
     "aniscoupons": {
       "last_message_id": 34810,
@@ -5379,7 +5383,8 @@
     "1005012840419521": 31.63,
     "1005010218815499": 13.94,
     "1005011897409757": 7.07,
-    "1005013203288194": 348.26
+    "1005013203288194": 348.26,
+    "1005010305059795": 29.3
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23274,6 +23279,16 @@
       "price": 14.5,
       "timestamp": 1794597436.9389343,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40085": {
+      "channel_msg_id": 2614,
+      "product_id": "1005010305059795",
+      "title": "HAYLOU S40 ANC Wireless",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40085,
+      "price": 29.3,
+      "timestamp": 1794597627.451524,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23282,17 +23297,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794597440.604859,
+    "last_deal_post_time": 1794597631.15648,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794597443.3116212,
+    "last_sweep_time": 1794597634.0015094,
     "last_sweep_times": {
-      "algeria": 1794597440.5731454,
-      "france": 1794597443.3116212
+      "algeria": 1794597631.1241825,
+      "france": 1794597634.0015094
     },
     "last_deal_post_times": {
-      "algeria": 1794597440.604859
+      "algeria": 1794597631.15648
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24094,7 +24109,8 @@
     "1005012840419521": "ecksdeal",
     "1005010218815499": "ecksdeal",
     "1005011897409757": "lodydeals",
-    "1005013203288194": "aniscoupons"
+    "1005013203288194": "aniscoupons",
+    "1005010305059795": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -25129,7 +25145,8 @@
     "Honor X80 Pro Max 8/128": "zedstoreonline",
     "ماوس فخم Logitech G502 Hero": "ecksdeal",
     "ماوس لاسلكي Delux M800 Mini Series": "ecksdeal",
-    "Lexar V400 USB3.0 64GB": "lodydeals"
+    "Lexar V400 USB3.0 64GB": "lodydeals",
+    "HAYLOU S40 ANC Wireless": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
