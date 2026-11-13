@@ -782,7 +782,8 @@
     "1005012191587148",
     "1005012624574517",
     "1005012644923854",
-    "1005005709908265"
+    "1005005709908265",
+    "1005011887425776"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1580,7 +1581,8 @@
     "1005012191587148": 1794568023.9427352,
     "1005012624574517": 1794575567.6709607,
     "1005012644923854": 1794577769.242665,
-    "1005005709908265": 1794577943.6825492
+    "1005005709908265": 1794577943.6825492,
+    "1005011887425776": 1794580354.5744467
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2602,7 +2604,8 @@
     "Luxury Quartz Watch",
     "Maono Gamerwave DGM20S",
     "CUSU SSD CV3500 M2 1TB",
-    "S80 Flash Drive USB 3.2 Type-A 128GB"
+    "S80 Flash Drive USB 3.2 Type-A 128GB",
+    "ATK VXE Dragonfly V3 PRO"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3629,10 +3632,10 @@
     "Luxury Quartz Watch": 1794577769.242665,
     "Maono Gamerwave DGM20S": 1794577943.6825492,
     "CUSU SSD CV3500 M2 1TB": 1794578319.3190603,
-    "S80 Flash Drive USB 3.2 Type-A 128GB": 1794579232.5818455
+    "S80 Flash Drive USB 3.2 Type-A 128GB": 1794579232.5818455,
+    "ATK VXE Dragonfly V3 PRO": 1794580354.5744467
   },
   "published_post_keys": [
-    "zedstoreonline:38531",
     "pcgamingpart:7957",
     "lodydeals:45761",
     "test_channel:1791759936",
@@ -4631,11 +4634,12 @@
     "aniscoupons:34794",
     "zedstoreonline:40062",
     "aniscoupons:34796",
-    "aniscoupons:34797"
+    "aniscoupons:34797",
+    "aniscoupons:34798"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794579995.0128412,
+  "last_run_time": 1794580354.5744467,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4662,12 +4666,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40064,
-      "last_check_time": 1794579984.6757634
+      "last_message_id": 40065,
+      "last_check_time": 1794580351.0508113
     },
     "aniscoupons": {
-      "last_message_id": 34797,
-      "last_check_time": 1794579997.07402
+      "last_message_id": 34798,
+      "last_check_time": 1794580356.622402
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -5349,7 +5353,8 @@
     "1005012191587148": 6.09,
     "1005012624574517": 31.62,
     "1005012644923854": 0.95,
-    "1005005709908265": 48.5
+    "1005005709908265": 48.5,
+    "1005011887425776": 20.48
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23074,6 +23079,16 @@
       "price": 217.8,
       "timestamp": 1794579995.0128412,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34798": {
+      "channel_msg_id": 2596,
+      "product_id": "1005011887425776",
+      "title": "ATK VXE Dragonfly V3 PRO",
+      "channel": "aniscoupons",
+      "source_msg_id": 34798,
+      "price": 20.48,
+      "timestamp": 1794580354.5744467,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23082,17 +23097,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794579997.8856823,
+    "last_deal_post_time": 1794580357.371377,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794580169.6943932,
+    "last_sweep_time": 1794580359.7009706,
     "last_sweep_times": {
-      "algeria": 1794580167.363026,
-      "france": 1794580169.6943932
+      "algeria": 1794580357.3519366,
+      "france": 1794580359.7009706
     },
     "last_deal_post_times": {
-      "algeria": 1794579997.8856823
+      "algeria": 1794580357.371377
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23888,7 +23903,8 @@
     "1005012191587148": "aniscoupons",
     "1005012624574517": "aniscoupons",
     "1005012644923854": "lodydeals",
-    "1005005709908265": "aniscoupons"
+    "1005005709908265": "aniscoupons",
+    "1005011887425776": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -24917,7 +24933,8 @@
     "Luxury Quartz Watch": "lodydeals",
     "Maono Gamerwave DGM20S": "aniscoupons",
     "CUSU SSD CV3500 M2 1TB": "zedstoreonline",
-    "S80 Flash Drive USB 3.2 Type-A 128GB": "aniscoupons"
+    "S80 Flash Drive USB 3.2 Type-A 128GB": "aniscoupons",
+    "ATK VXE Dragonfly V3 PRO": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -24927,7 +24944,7 @@
     "test_rem_d0b156d9": "2026-10-02",
     "test_rem_35271d74": "2026-10-02",
     "test_rem_308fc3d4": "2026-10-02",
-    "jumuah_asr": "2026-11-06",
+    "jumuah_asr": "2026-11-13",
     "test_rem_668cf761": "2026-10-02",
     "test_rem_4160aaaf": "2026-10-02",
     "test_rem_961ddded": "2026-10-02",
@@ -25714,7 +25731,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:46045",
     "lodydeals:46048",
     "lodydeals:46050",
     "lodydeals:46053",
@@ -26713,7 +26729,8 @@
     "lodydeals:46457",
     "zedstoreonline:40061",
     "aniscoupons:34795",
-    "zedstoreonline:40064"
+    "zedstoreonline:40064",
+    "zedstoreonline:40065"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27583,6 +27600,13 @@
         "channel": "aniscoupons",
         "ts": 1794579993.3077998,
         "price": 217.8
+      }
+    ],
+    "1005009662812027": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794580350.4845073,
+        "price": 78.0
       }
     ]
   },

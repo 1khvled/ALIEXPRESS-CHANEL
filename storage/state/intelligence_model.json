@@ -28,7 +28,7 @@
       "ewma": 0.9836
     },
     "zedstoreonline": {
-      "seen": 131,
+      "seen": 132,
       "published": 68,
       "skipped": 0,
       "ewma": 0.9983
@@ -40,8 +40,8 @@
       "ewma": 0.6418
     },
     "aniscoupons": {
-      "seen": 232,
-      "published": 188,
+      "seen": 233,
+      "published": 189,
       "skipped": 0,
       "ewma": 0.9994
     },
@@ -54,8 +54,8 @@
   },
   "category_stats": {
     "other": {
-      "seen": 130,
-      "published": 109,
+      "seen": 132,
+      "published": 110,
       "skipped": 0,
       "ewma": 0.9994
     },
@@ -714,34 +714,21 @@
     ],
     "1005012947477238": [
       217.8
+    ],
+    "1005011887425776": [
+      20.48
     ]
   },
   "counters": {
-    "scored": 428,
-    "verdict_publish": 405,
+    "scored": 430,
+    "verdict_publish": 407,
     "verdict_hold": 23,
     "verdict_skip": 0,
-    "published": 304,
+    "published": 305,
     "skipped": 0
   },
-  "score_sum": 31096.14,
+  "score_sum": 31249.88,
   "recent_decisions": [
-    {
-      "ts": 1794475812,
-      "channel": "lodydeals",
-      "category": "other",
-      "product_id": "1005007495712340",
-      "score": 45.95,
-      "verdict": "hold"
-    },
-    {
-      "ts": 1794475818,
-      "channel": "lodydeals",
-      "category": "other",
-      "product_id": "1005010706590867",
-      "score": 53.56,
-      "verdict": "hold"
-    },
     {
       "ts": 1794475823,
       "channel": "lodydeals",
@@ -2325,7 +2312,23 @@
       "product_id": "1005012947477238",
       "score": 77.59,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794580350,
+      "channel": "zedstoreonline",
+      "category": "other",
+      "product_id": "1005009662812027",
+      "score": 72.22,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794580352,
+      "channel": "aniscoupons",
+      "category": "other",
+      "product_id": "1005011887425776",
+      "score": 81.52,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794579995.0601847
+  "updated_at": 1794580354.610996
 }
