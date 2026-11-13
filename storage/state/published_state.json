@@ -791,7 +791,8 @@
     "1005013203288194",
     "1005010305059795",
     "1005013078612320",
-    "1005007010612283"
+    "1005007010612283",
+    "1005010788231460"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1598,7 +1599,8 @@
     "1005013203288194": 1794595430.2306583,
     "1005010305059795": 1794597627.451524,
     "1005013078612320": 1794597984.6494167,
-    "1005007010612283": 1794599454.461018
+    "1005007010612283": 1794599454.461018,
+    "1005010788231460": 1794604060.7762444
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2630,7 +2632,8 @@
     "HAYLOU S40 ANC Wireless",
     "CUSU Memory DDR5 (16GB) 6000MHz",
     "Realme 15 Pro (12/512GB)",
-    "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone"
+    "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone",
+    "Blackview OSCAL PILOT 5  8/256"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3667,10 +3670,10 @@
     "HAYLOU S40 ANC Wireless": 1794597627.451524,
     "CUSU Memory DDR5 (16GB) 6000MHz": 1794598362.0815012,
     "Realme 15 Pro (12/512GB)": 1794598366.5791407,
-    "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": 1794599278.9506347
+    "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": 1794599278.9506347,
+    "Blackview OSCAL PILOT 5  8/256": 1794604060.7762444
   },
   "published_post_keys": [
-    "megaphonna:8654",
     "megaphonna:8740",
     "aniscoupons:32753",
     "pcgamingpart:7948",
@@ -4669,11 +4672,12 @@
     "zedstoreonline:40090",
     "zedstoreonline:40091",
     "zedstoreonline:40092",
-    "aniscoupons:34813"
+    "aniscoupons:34813",
+    "zedstoreonline:40094"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794600189.9159641,
+  "last_run_time": 1794604060.7762444,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4700,8 +4704,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40093,
-      "last_check_time": 1794603322.1119967
+      "last_message_id": 40094,
+      "last_check_time": 1794604062.822831
     },
     "aniscoupons": {
       "last_message_id": 34814,
@@ -5396,7 +5400,8 @@
     "1005013203288194": 348.26,
     "1005010305059795": 29.3,
     "1005013078612320": 23.6,
-    "1005007010612283": 23.2
+    "1005007010612283": 23.2,
+    "1005010788231460": 178.4
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23391,6 +23396,16 @@
       "price": 40.5,
       "timestamp": 1794600189.9159641,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40094": {
+      "channel_msg_id": 2624,
+      "product_id": "1005010788231460",
+      "title": "Blackview OSCAL PILOT 5  8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40094,
+      "price": 178.4,
+      "timestamp": 1794604060.7762444,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23399,17 +23414,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794600192.7326806,
+    "last_deal_post_time": 1794604064.0711255,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794603872.0434759,
+    "last_sweep_time": 1794604066.620304,
     "last_sweep_times": {
-      "algeria": 1794603869.680319,
-      "france": 1794603872.0434759
+      "algeria": 1794604064.0513682,
+      "france": 1794604066.620304
     },
     "last_deal_post_times": {
-      "algeria": 1794600192.7326806
+      "algeria": 1794604064.0711255
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24214,7 +24229,8 @@
     "1005013203288194": "aniscoupons",
     "1005010305059795": "zedstoreonline",
     "1005013078612320": "zedstoreonline",
-    "1005007010612283": "zedstoreonline"
+    "1005007010612283": "zedstoreonline",
+    "1005010788231460": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -25253,7 +25269,8 @@
     "HAYLOU S40 ANC Wireless": "zedstoreonline",
     "CUSU Memory DDR5 (16GB) 6000MHz": "aniscoupons",
     "Realme 15 Pro (12/512GB)": "aniscoupons",
-    "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": "zedstoreonline"
+    "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": "zedstoreonline",
+    "Blackview OSCAL PILOT 5  8/256": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
