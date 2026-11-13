@@ -997,7 +997,7 @@
     "1005011557896041": 1794499991.8758564,
     "1005011754993234": 1793575053.368357,
     "1005011735727412": 1791943783.9162278,
-    "1005007916078341": 1794498509.0561047,
+    "1005007916078341": 1794565090.2307494,
     "1005006506862816": 1791947519.5815504,
     "1005008072923842": 1791968144.109348,
     "1005013336240375": 1791968149.7952893,
@@ -2769,7 +2769,7 @@
     "ATTACK SHARK L80PRO Ultralight": 1791107750.295487,
     "AMD Ryzen 7 5700X": 1794507247.0720062,
     "هاتف ينسيك في شارجور🤣🤣": 1791109857.5190113,
-    "CMF Smart Watch 3 pro AMOLED": 1794498509.0561047,
+    "CMF Smart Watch 3 pro AMOLED": 1794565090.2307494,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
     "POCO M7 (6/128)": 1791114651.412541,
     "OPPO A6 Pro 8/256GB": 1794340346.0747576,
@@ -3612,7 +3612,6 @@
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": 1794563997.9172754
   },
   "published_post_keys": [
-    "aniscoupons:32805",
     "zedstoreonline:38902",
     "lodydeals:45435",
     "zedstoreonline:38547",
@@ -4611,11 +4610,12 @@
     "zedstoreonline:40051",
     "aniscoupons:34765",
     "aniscoupons:34766",
-    "aniscoupons:34767"
+    "aniscoupons:34767",
+    "aniscoupons:34770"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794564351.798521,
+  "last_run_time": 1794565090.2307494,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4646,8 +4646,8 @@
       "last_check_time": 1794564348.0477436
     },
     "aniscoupons": {
-      "last_message_id": 34769,
-      "last_check_time": 1794564717.7775047
+      "last_message_id": 34770,
+      "last_check_time": 1794565092.3029335
     },
     "bnddeals": {
       "last_message_id": 51297,
@@ -22800,6 +22800,16 @@
       "price": 228.3,
       "timestamp": 1794564351.798521,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34770": {
+      "channel_msg_id": 2569,
+      "product_id": "1005007916078341",
+      "title": "CMF Smart Watch 3 pro AMOLED",
+      "channel": "aniscoupons",
+      "source_msg_id": 34770,
+      "price": 47.4,
+      "timestamp": 1794565090.2307494,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22808,17 +22818,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794564355.7392588,
+    "last_deal_post_time": 1794565093.3468597,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794564903.927983,
+    "last_sweep_time": 1794565096.2708182,
     "last_sweep_times": {
-      "algeria": 1794564901.4839082,
-      "france": 1794564903.927983
+      "algeria": 1794565093.3161843,
+      "france": 1794565096.2708182
     },
     "last_deal_post_times": {
-      "algeria": 1794564355.7392588
+      "algeria": 1794565093.3468597
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -27105,6 +27115,13 @@
         "channel": "aniscoupons",
         "ts": 1794564350.0924182,
         "price": 228.3
+      }
+    ],
+    "1005007916078341": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794565088.1287668,
+        "price": 47.4
       }
     ]
   },
