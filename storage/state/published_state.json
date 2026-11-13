@@ -1206,7 +1206,7 @@
     "1005012839355198": 1793467230.0211325,
     "1005010133081414": 1793467151.9364934,
     "1005005373032877": 1793600283.7397804,
-    "1005007869955343": 1794433423.9855666,
+    "1005007869955343": 1794566735.8998222,
     "1005012644570693": 1793441338.6619778,
     "1005003949106838": 1794565821.4120076,
     "1005012436082838": 1793733101.535615,
@@ -3075,7 +3075,7 @@
     "OnePlus Turbo 6X Pro 8/128": 1793441350.359979,
     "Soundcore by Anker Life Q30 Hybrid Active Noise Cancelling Headphones": 1793448587.6507976,
     "بروجكتور Magcubic HY300 max – أوتو فوكس، Android 14، إضاءة 400 ANSI": 1793448612.7938895,
-    "MAONO PD100X Dynamic Microphone": 1794433423.9855666,
+    "MAONO PD100X Dynamic Microphone": 1794566735.8998222,
     "Soundcore by Anker P20i": 1794517570.3579683,
     "CUSU Memory DDR5  32GB(16GBX2) 5600MHz": 1793448632.7055113,
     "OPPO FIND X9 Pro": 1794486542.3386803,
@@ -3612,7 +3612,6 @@
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": 1794563997.9172754
   },
   "published_post_keys": [
-    "zedstoreonline:38628",
     "lodydeals:45743",
     "lodydeals:45416",
     "zedstoreonline:38846",
@@ -4611,11 +4610,12 @@
     "aniscoupons:34771",
     "bnddeals:51298",
     "aniscoupons:34772",
-    "aniscoupons:34775"
+    "aniscoupons:34775",
+    "aniscoupons:34777"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794566561.968837,
+  "last_run_time": 1794566735.8998222,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4646,8 +4646,8 @@
       "last_check_time": 1794564348.0477436
     },
     "aniscoupons": {
-      "last_message_id": 34776,
-      "last_check_time": 1794566565.5622883
+      "last_message_id": 34777,
+      "last_check_time": 1794566737.9607456
     },
     "bnddeals": {
       "last_message_id": 51299,
@@ -22850,6 +22850,16 @@
       "price": 36.5,
       "timestamp": 1794566561.968837,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34777": {
+      "channel_msg_id": 2574,
+      "product_id": "1005007869955343",
+      "title": "MAONO PD100X Dynamic Microphone",
+      "channel": "aniscoupons",
+      "source_msg_id": 34777,
+      "price": 37.5,
+      "timestamp": 1794566735.8998222,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22858,17 +22868,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794566566.5726285,
+    "last_deal_post_time": 1794566738.7522087,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794566569.6113017,
+    "last_sweep_time": 1794566741.3430102,
     "last_sweep_times": {
-      "algeria": 1794566566.5463529,
-      "france": 1794566569.6113017
+      "algeria": 1794566738.7176418,
+      "france": 1794566741.3430102
     },
     "last_deal_post_times": {
-      "algeria": 1794566566.5726285
+      "algeria": 1794566738.7522087
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -27215,6 +27225,13 @@
         "channel": "aniscoupons",
         "ts": 1794566558.9453604,
         "price": 36.5
+      }
+    ],
+    "1005007869955343": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794566733.9902842,
+        "price": 37.5
       }
     ]
   },
