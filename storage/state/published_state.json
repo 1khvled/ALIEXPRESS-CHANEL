@@ -1129,7 +1129,7 @@
     "1005013039644752": 1794431592.229099,
     "1005013479436053": 1793380394.5736995,
     "1005012431631514": 1793270716.9132679,
-    "1005009338640941": 1794478101.5678475,
+    "1005009338640941": 1794597076.885755,
     "1005012402919487": 1793542345.0399988,
     "9998883962": 1793273962.6790612,
     "1005012005176923": 1793543639.3190484,
@@ -3592,7 +3592,7 @@
     "EASYSMX X05 PRO Controller": 1794478912.5670652,
     "ONEPLUS 16 12/256GB": 1794478726.13417,
     "Fifine H9 USB Gaming Headset": 1794492068.8537488,
-    "Honor 600 5G Global 8/256GB": 1794478101.5678475,
+    "Honor 600 5G Global 8/256GB": 1794597076.885755,
     "Baseus GoTrip VA1 Wireless Air Pump": 1794420675.7412696,
     "HOCO EW60 Bluetooth 5.0 Earbuds Wireless Hi-Res Audio Touch Control": 1794420680.672656,
     "Essager 2in1 USB Type C  60W": 1794420685.287832,
@@ -3656,7 +3656,6 @@
     "Lexar V400 USB3.0 64GB": 1794593403.339319
   },
   "published_post_keys": [
-    "aniscoupons:33058",
     "zedstoreonline:38805",
     "zedstoreonline:38820",
     "lodydeals:45943",
@@ -4655,11 +4654,12 @@
     "lodydeals:46459",
     "aniscoupons:34809",
     "zedstoreonline:40081",
-    "zedstoreonline:40082"
+    "zedstoreonline:40082",
+    "aniscoupons:34810"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794596887.3934894,
+  "last_run_time": 1794597076.885755,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4686,12 +4686,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40082,
-      "last_check_time": 1794596889.4547975
+      "last_message_id": 40083,
+      "last_check_time": 1794597073.2220838
     },
     "aniscoupons": {
-      "last_message_id": 34809,
-      "last_check_time": 1794595432.295046
+      "last_message_id": 34810,
+      "last_check_time": 1794597078.9616678
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -23254,6 +23254,16 @@
       "price": 226.3,
       "timestamp": 1794596887.3934894,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34810": {
+      "channel_msg_id": 2612,
+      "product_id": "1005009338640941",
+      "title": "Honor 600 5G Global 8/256GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34810,
+      "price": 380.4,
+      "timestamp": 1794597076.885755,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23262,17 +23272,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794596891.0078278,
+    "last_deal_post_time": 1794597079.9745848,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794596894.2608712,
+    "last_sweep_time": 1794597084.6331773,
     "last_sweep_times": {
-      "algeria": 1794596890.9822686,
-      "france": 1794596894.2608712
+      "algeria": 1794597079.9423091,
+      "france": 1794597084.6331773
     },
     "last_deal_post_times": {
-      "algeria": 1794596891.0078278
+      "algeria": 1794597079.9745848
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -25906,7 +25916,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:6036",
     "ecksdeal:6038",
     "lodydeals:46139",
     "lodydeals:46140",
@@ -26905,7 +26914,8 @@
     "lodydeals:46460",
     "lodydeals:46461",
     "lodydeals:46462",
-    "aniscoupons:34808"
+    "aniscoupons:34808",
+    "zedstoreonline:40083"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27894,6 +27904,13 @@
         "channel": "zedstoreonline",
         "ts": 1794596885.2418041,
         "price": 226.3
+      }
+    ],
+    "1005009338640941": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794597074.7888837,
+        "price": 380.4
       }
     ]
   },
