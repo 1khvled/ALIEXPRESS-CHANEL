@@ -790,7 +790,8 @@
     "1005011897409757",
     "1005013203288194",
     "1005010305059795",
-    "1005013078612320"
+    "1005013078612320",
+    "1005007010612283"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1596,7 +1597,8 @@
     "1005011897409757": 1794593403.339319,
     "1005013203288194": 1794595430.2306583,
     "1005010305059795": 1794597627.451524,
-    "1005013078612320": 1794597984.6494167
+    "1005013078612320": 1794597984.6494167,
+    "1005007010612283": 1794599454.461018
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -3612,7 +3614,7 @@
     "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794502231.5458007,
     "KINGSTON DATA TRAVELER USB3.2 (128G)": 1794438803.0185766,
     "Essager Mini 30W Type C Charger PD": 1794438972.1864517,
-    "X96Q TV BOX 2/16GB": 1794439531.0399334,
+    "X96Q TV BOX 2/16GB": 1794599454.461018,
     "Kingston DataTraveler Exodia S USB Flash (128g)": 1794439539.8661358,
     "FIFINE K688W USB XLR MIC": 1794439743.6258593,
     "ATK Blazing Sky Z1 V2 Ultimate Wireless Mouse PAW3950 Ultra": 1794439916.4928079,
@@ -3668,7 +3670,6 @@
     "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": 1794599278.9506347
   },
   "published_post_keys": [
-    "megaphonna:8620",
     "aniscoupons:32690",
     "pcgamingpart:7976",
     "megaphonna:8654",
@@ -4667,11 +4668,12 @@
     "aniscoupons:34812",
     "zedstoreonline:40087",
     "zedstoreonline:40089",
-    "zedstoreonline:40090"
+    "zedstoreonline:40090",
+    "zedstoreonline:40091"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794599278.9506347,
+  "last_run_time": 1794599454.461018,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4698,8 +4700,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40090,
-      "last_check_time": 1794599281.0115752
+      "last_message_id": 40091,
+      "last_check_time": 1794599456.511622
     },
     "aniscoupons": {
       "last_message_id": 34812,
@@ -5393,7 +5395,8 @@
     "1005011897409757": 7.07,
     "1005013203288194": 348.26,
     "1005010305059795": 29.3,
-    "1005013078612320": 23.6
+    "1005013078612320": 23.6,
+    "1005007010612283": 23.2
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23358,6 +23361,16 @@
       "price": 30.6,
       "timestamp": 1794599278.9506347,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40091": {
+      "channel_msg_id": 2621,
+      "product_id": "1005007010612283",
+      "title": "X96Q TV BOX 2/16GB",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40091,
+      "price": 23.2,
+      "timestamp": 1794599454.461018,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23366,17 +23379,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794599282.5125327,
+    "last_deal_post_time": 1794599457.8173497,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794599285.7816482,
+    "last_sweep_time": 1794599460.0075302,
     "last_sweep_times": {
-      "algeria": 1794599282.4856842,
-      "france": 1794599285.7816482
+      "algeria": 1794599457.7970076,
+      "france": 1794599460.0075302
     },
     "last_deal_post_times": {
-      "algeria": 1794599282.5125327
+      "algeria": 1794599457.8173497
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24180,7 +24193,8 @@
     "1005011897409757": "lodydeals",
     "1005013203288194": "aniscoupons",
     "1005010305059795": "zedstoreonline",
-    "1005013078612320": "zedstoreonline"
+    "1005013078612320": "zedstoreonline",
+    "1005007010612283": "zedstoreonline"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
