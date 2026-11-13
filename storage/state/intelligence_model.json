@@ -22,10 +22,10 @@
   "flow_target": 24.0,
   "channel_stats": {
     "lodydeals": {
-      "seen": 38,
-      "published": 38,
+      "seen": 39,
+      "published": 39,
       "skipped": 0,
-      "ewma": 0.979
+      "ewma": 0.9807
     },
     "zedstoreonline": {
       "seen": 123,
@@ -40,8 +40,8 @@
       "ewma": 0.6107
     },
     "aniscoupons": {
-      "seen": 207,
-      "published": 164,
+      "seen": 208,
+      "published": 165,
       "skipped": 0,
       "ewma": 0.9994
     },
@@ -54,16 +54,16 @@
   },
   "category_stats": {
     "other": {
-      "seen": 118,
-      "published": 98,
+      "seen": 119,
+      "published": 99,
       "skipped": 0,
       "ewma": 0.9994
     },
     "pc": {
-      "seen": 69,
-      "published": 44,
+      "seen": 70,
+      "published": 45,
       "skipped": 0,
-      "ewma": 0.9872
+      "ewma": 0.9882
     },
     "phones": {
       "seen": 156,
@@ -93,6 +93,7 @@
   "product_prices": {
     "1005008741607292": [
       110.83,
+      110.8,
       110.8,
       110.8
     ],
@@ -641,7 +642,8 @@
       15.6
     ],
     "1005008522983211": [
-      15.47
+      15.47,
+      15.6
     ],
     "1005007461615597": [
       22.2
@@ -668,31 +670,15 @@
     ]
   },
   "counters": {
-    "scored": 389,
-    "verdict_publish": 366,
+    "scored": 391,
+    "verdict_publish": 368,
     "verdict_hold": 23,
     "verdict_skip": 0,
-    "published": 271,
+    "published": 273,
     "skipped": 0
   },
-  "score_sum": 28154.08,
+  "score_sum": 28296.22,
   "recent_decisions": [
-    {
-      "ts": 1794439741,
-      "channel": "aniscoupons",
-      "category": "audio",
-      "product_id": "1005007635109339",
-      "score": 73.21,
-      "verdict": "publish"
-    },
-    {
-      "ts": 1794439908,
-      "channel": "zedstoreonline",
-      "category": "accessories",
-      "product_id": "1005007060644375",
-      "score": 68.89,
-      "verdict": "publish"
-    },
     {
       "ts": 1794439914,
       "channel": "aniscoupons",
@@ -2276,7 +2262,23 @@
       "product_id": "1005010210432531",
       "score": 79.38,
       "verdict": "publish"
+    },
+    {
+      "ts": 1794562331,
+      "channel": "lodydeals",
+      "category": "other",
+      "product_id": "1005008522983211",
+      "score": 71.65,
+      "verdict": "publish"
+    },
+    {
+      "ts": 1794562338,
+      "channel": "aniscoupons",
+      "category": "pc",
+      "product_id": "1005008741607292",
+      "score": 70.49,
+      "verdict": "publish"
     }
   ],
-  "updated_at": 1794561053.0128133
+  "updated_at": 1794562340.533447
 }

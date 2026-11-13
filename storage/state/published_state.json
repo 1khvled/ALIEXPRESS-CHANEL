@@ -907,7 +907,7 @@
     "1005008144734940": 1791032158.6801872,
     "1005006443158717": 1791032177.1222703,
     "1005012492244291": 1791035151.8836284,
-    "1005008522983211": 1794518679.1969855,
+    "1005008522983211": 1794562333.914511,
     "1005011734677486": 1791038145.1521833,
     "1005008414973716": 1791125437.8944824,
     "1005010706783496": 1791043842.6639822,
@@ -1290,7 +1290,7 @@
     "1005013081060247": 1793543567.486626,
     "1005012498496817": 1793543578.6842017,
     "1005003413514494": 1793732921.385459,
-    "1005008741607292": 1794520699.708655,
+    "1005008741607292": 1794562340.4789197,
     "1005010158587315": 1793543677.5915465,
     "1005012790288780": 1793656271.0286891,
     "1005012345939726": 1793656202.4239671,
@@ -2584,7 +2584,8 @@
     "Portable Magnetic Phone",
     "QCY T13 ENC Earphone",
     "Retro Bronze Embossed",
-    "تخزين Kootion X12 Sata SSD"
+    "تخزين Kootion X12 Sata SSD",
+    "XUNYOU-LINK 4G Modem"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3552,7 +3553,7 @@
     "Somnambulist SSD 120GB": 1794524556.2538168,
     "Lexar ARES PRO NVMe SSD PCle5.0x4 M.2 1TB": 1794492627.75024,
     "Realme P4 Power 8/256GB": 1794485983.772945,
-    "ASROCK X570M PRO4 MOTHERBOARD": 1794520699.708655,
+    "ASROCK X570M PRO4 MOTHERBOARD": 1794562340.4789197,
     "EASYSMX X05 PRO Controller": 1794478912.5670652,
     "ONEPLUS 16 12/256GB": 1794478726.13417,
     "Fifine H9 USB Gaming Headset": 1794492068.8537488,
@@ -3603,11 +3604,10 @@
     "Portable Magnetic Phone": 1794524364.21287,
     "QCY T13 ENC Earphone": 1794524375.306614,
     "Retro Bronze Embossed": 1794524381.8060858,
-    "تخزين Kootion X12 Sata SSD": 1794531406.8053942
+    "تخزين Kootion X12 Sata SSD": 1794531406.8053942,
+    "XUNYOU-LINK 4G Modem": 1794562333.914511
   },
   "published_post_keys": [
-    "aniscoupons:33227",
-    "lodydeals:45794",
     "aniscoupons:33321",
     "lodydeals:45732",
     "aniscoupons:32751",
@@ -4605,19 +4605,21 @@
     "ecksdeal:6059",
     "aniscoupons:34758",
     "aniscoupons:34759",
-    "aniscoupons:34760"
+    "aniscoupons:34760",
+    "lodydeals:46448",
+    "aniscoupons:34761"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1793967870.7590299,
-  "last_run_time": 1794561052.9558282,
+  "last_run_time": 1794562340.4789197,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
       "last_check_time": 1794531406.8053942
     },
     "lodydeals": {
-      "last_message_id": 46446,
-      "last_check_time": 1794562147.2694473
+      "last_message_id": 46449,
+      "last_check_time": 1794562336.0519514
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4640,8 +4642,8 @@
       "last_check_time": 1794557022.8183174
     },
     "aniscoupons": {
-      "last_message_id": 34760,
-      "last_check_time": 1794561055.029758
+      "last_message_id": 34761,
+      "last_check_time": 1794562342.549903
     },
     "bnddeals": {
       "last_message_id": 51297,
@@ -4766,7 +4768,7 @@
     "1005008144734940": 5.23,
     "1005006443158717": 6.42,
     "1005012492244291": 230.0,
-    "1005008522983211": 15.47,
+    "1005008522983211": 15.6,
     "1005011734677486": 13.8,
     "1005008414973716": 1.0,
     "1005010706783496": 16.2,
@@ -22713,6 +22715,26 @@
       "price": 147.8,
       "timestamp": 1794561052.9558282,
       "status": "ACTIVE"
+    },
+    "lodydeals:46448": {
+      "channel_msg_id": 2561,
+      "product_id": "1005008522983211",
+      "title": "XUNYOU-LINK 4G Modem",
+      "channel": "lodydeals",
+      "source_msg_id": 46448,
+      "price": 15.6,
+      "timestamp": 1794562333.914511,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34761": {
+      "channel_msg_id": 2562,
+      "product_id": "1005008741607292",
+      "title": "ASROCK X570M PRO4 MOTHERBOARD",
+      "channel": "aniscoupons",
+      "source_msg_id": 34761,
+      "price": 110.8,
+      "timestamp": 1794562340.4789197,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22721,17 +22743,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794561055.8886175,
+    "last_deal_post_time": 1794562343.2006552,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794562152.8284075,
+    "last_sweep_time": 1794562345.5416064,
     "last_sweep_times": {
-      "algeria": 1794562149.9169674,
-      "france": 1794562152.8284075
+      "algeria": 1794562343.1698287,
+      "france": 1794562345.5416064
     },
     "last_deal_post_times": {
-      "algeria": 1794561055.8886175
+      "algeria": 1794562343.2006552
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -22858,7 +22880,7 @@
     "1005008144734940": "couponsglobal",
     "1005006443158717": "couponsglobal",
     "1005012492244291": "megaphonna",
-    "1005008522983211": "aniscoupons",
+    "1005008522983211": "lodydeals",
     "1005011734677486": "bnddeals",
     "1005008414973716": "couponsglobal",
     "1005010706783496": "bnddeals",
@@ -24543,7 +24565,8 @@
     "Portable Magnetic Phone": "lodydeals",
     "QCY T13 ENC Earphone": "lodydeals",
     "Retro Bronze Embossed": "lodydeals",
-    "تخزين Kootion X12 Sata SSD": "ecksdeal"
+    "تخزين Kootion X12 Sata SSD": "ecksdeal",
+    "XUNYOU-LINK 4G Modem": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -25340,8 +25363,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:45973",
-    "lodydeals:45974",
     "lodydeals:45977",
     "lodydeals:45978",
     "ecksdeal:6009",
@@ -26339,7 +26360,9 @@
     "lodydeals:46445",
     "zedstoreonline:40047",
     "zedstoreonline:40048",
-    "lodydeals:46446"
+    "lodydeals:46446",
+    "lodydeals:46447",
+    "lodydeals:46449"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -26951,6 +26974,20 @@
         "channel": "aniscoupons",
         "ts": 1794561051.097965,
         "price": 147.8
+      }
+    ],
+    "1005008522983211": [
+      {
+        "channel": "lodydeals",
+        "ts": 1794562330.9682245,
+        "price": 15.6
+      }
+    ],
+    "1005008741607292": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794562338.7539005,
+        "price": 110.8
       }
     ]
   },
