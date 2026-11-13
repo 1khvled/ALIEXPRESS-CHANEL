@@ -787,7 +787,8 @@
     "1005012547730772",
     "1005012840419521",
     "1005010218815499",
-    "1005011897409757"
+    "1005011897409757",
+    "1005013203288194"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1590,7 +1591,8 @@
     "1005012547730772": 1794590278.0528092,
     "1005012840419521": 1794591008.1982286,
     "1005010218815499": 1794591382.6548223,
-    "1005011897409757": 1794593403.339319
+    "1005011897409757": 1794593403.339319,
+    "1005013203288194": 1794595430.2306583
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -3021,7 +3023,7 @@
     "UGREEN 60W Car Charger 145W 90W": 1793448653.6981916,
     "UGREEN HiTune S3 Air Open Ear Earbuds": 1793361183.531266,
     "Soundcore by Anker Space Q45": 1793448672.3363433,
-    "OPPO Reno 16F 5G Global (8/256GB)": 1793448680.077302,
+    "OPPO Reno 16F 5G Global (8/256GB)": 1794595430.2306583,
     "REALME P4 POWER (8/256)": 1793448688.2878077,
     "ONEPLUS 13T (12/256)": 1793448695.876665,
     "VIVO Y600 pro": 1793448703.2952108,
@@ -3654,7 +3656,6 @@
     "Lexar V400 USB3.0 64GB": 1794593403.339319
   },
   "published_post_keys": [
-    "test_channel:1793276358",
     "lodydeals:45878",
     "megaphonna:8515",
     "aniscoupons:33058",
@@ -4653,11 +4654,12 @@
     "zedstoreonline:40073",
     "ecksdeal:6060",
     "ecksdeal:6061",
-    "lodydeals:46459"
+    "lodydeals:46459",
+    "aniscoupons:34809"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794593403.339319,
+  "last_run_time": 1794595430.2306583,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4688,8 +4690,8 @@
       "last_check_time": 1794592478.1584742
     },
     "aniscoupons": {
-      "last_message_id": 34808,
-      "last_check_time": 1794594132.433327
+      "last_message_id": 34809,
+      "last_check_time": 1794595432.295046
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -5376,7 +5378,8 @@
     "1005012547730772": 272.8,
     "1005012840419521": 31.63,
     "1005010218815499": 13.94,
-    "1005011897409757": 7.07
+    "1005011897409757": 7.07,
+    "1005013203288194": 348.26
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23221,6 +23224,16 @@
       "price": 7.07,
       "timestamp": 1794593403.339319,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34809": {
+      "channel_msg_id": 2609,
+      "product_id": "1005013203288194",
+      "title": "OPPO Reno 16F 5G Global (8/256GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34809,
+      "price": 348.26,
+      "timestamp": 1794595430.2306583,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23229,17 +23242,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794593410.081151,
+    "last_deal_post_time": 1794595433.1772344,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794595237.195486,
+    "last_sweep_time": 1794595436.0493336,
     "last_sweep_times": {
-      "algeria": 1794595234.4360304,
-      "france": 1794595237.195486
+      "algeria": 1794595433.1511602,
+      "france": 1794595436.0493336
     },
     "last_deal_post_times": {
-      "algeria": 1794593410.081151
+      "algeria": 1794595433.1772344
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24040,7 +24053,8 @@
     "1005012547730772": "zedstoreonline",
     "1005012840419521": "ecksdeal",
     "1005010218815499": "ecksdeal",
-    "1005011897409757": "lodydeals"
+    "1005011897409757": "lodydeals",
+    "1005013203288194": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
