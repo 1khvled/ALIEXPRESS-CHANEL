@@ -781,7 +781,8 @@
     "1005005277901494",
     "1005012191587148",
     "1005012624574517",
-    "1005012644923854"
+    "1005012644923854",
+    "1005005709908265"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1578,7 +1579,8 @@
     "1005005277901494": 1794563997.9172754,
     "1005012191587148": 1794568023.9427352,
     "1005012624574517": 1794575567.6709607,
-    "1005012644923854": 1794577769.242665
+    "1005012644923854": 1794577769.242665,
+    "1005005709908265": 1794577943.6825492
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2597,7 +2599,8 @@
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers",
     "HOCO E201 ENC Calling",
     "MAONO Wave T1 Plus Dual",
-    "Luxury Quartz Watch"
+    "Luxury Quartz Watch",
+    "Maono Gamerwave DGM20S"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3621,10 +3624,10 @@
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": 1794563997.9172754,
     "HOCO E201 ENC Calling": 1794568023.9427352,
     "MAONO Wave T1 Plus Dual": 1794575567.6709607,
-    "Luxury Quartz Watch": 1794577769.242665
+    "Luxury Quartz Watch": 1794577769.242665,
+    "Maono Gamerwave DGM20S": 1794577943.6825492
   },
   "published_post_keys": [
-    "couponsglobal:48796",
     "lodydeals:45544",
     "bnddeals:50823",
     "ecksdeal:5862",
@@ -4623,19 +4626,20 @@
     "aniscoupons:34785",
     "aniscoupons:34786",
     "aniscoupons:34788",
-    "lodydeals:46454"
+    "lodydeals:46454",
+    "aniscoupons:34790"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794577769.242665,
+  "last_run_time": 1794577943.6825492,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
       "last_check_time": 1794531406.8053942
     },
     "lodydeals": {
-      "last_message_id": 46454,
-      "last_check_time": 1794577771.2969937
+      "last_message_id": 46455,
+      "last_check_time": 1794577938.3893728
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4658,8 +4662,8 @@
       "last_check_time": 1794575743.1288655
     },
     "aniscoupons": {
-      "last_message_id": 34789,
-      "last_check_time": 1794577392.0288353
+      "last_message_id": 34790,
+      "last_check_time": 1794577945.7473636
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -5340,7 +5344,8 @@
     "1005005277901494": 13.44,
     "1005012191587148": 6.09,
     "1005012624574517": 31.62,
-    "1005012644923854": 0.95
+    "1005012644923854": 0.95,
+    "1005005709908265": 48.5
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -22975,6 +22980,16 @@
       "price": 0.95,
       "timestamp": 1794577769.242665,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34790": {
+      "channel_msg_id": 2586,
+      "product_id": "1005005709908265",
+      "title": "Maono Gamerwave DGM20S",
+      "channel": "aniscoupons",
+      "source_msg_id": 34790,
+      "price": 48.5,
+      "timestamp": 1794577943.6825492,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22983,17 +22998,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794577774.035636,
+    "last_deal_post_time": 1794577946.6056592,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794577777.0537183,
+    "last_sweep_time": 1794577949.0810244,
     "last_sweep_times": {
-      "algeria": 1794577774.0130115,
-      "france": 1794577777.0537183
+      "algeria": 1794577946.5796695,
+      "france": 1794577949.0810244
     },
     "last_deal_post_times": {
-      "algeria": 1794577774.035636
+      "algeria": 1794577946.6056592
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23788,7 +23803,8 @@
     "1005005277901494": "aniscoupons",
     "1005012191587148": "aniscoupons",
     "1005012624574517": "aniscoupons",
-    "1005012644923854": "lodydeals"
+    "1005012644923854": "lodydeals",
+    "1005005709908265": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -24814,7 +24830,8 @@
     "HOCO W40 Bluetooth 5.3 Wireless Headphone Music Headset 40mm Drivers": "aniscoupons",
     "HOCO E201 ENC Calling": "aniscoupons",
     "MAONO Wave T1 Plus Dual": "aniscoupons",
-    "Luxury Quartz Watch": "lodydeals"
+    "Luxury Quartz Watch": "lodydeals",
+    "Maono Gamerwave DGM20S": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -25611,7 +25628,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:46027",
     "lodydeals:46028",
     "lodydeals:46029",
     "lodydeals:46033",
@@ -26610,7 +26626,8 @@
     "zedstoreonline:40057",
     "aniscoupons:34787",
     "bnddeals:51300",
-    "aniscoupons:34789"
+    "aniscoupons:34789",
+    "lodydeals:46455"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
