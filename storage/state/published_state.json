@@ -1010,7 +1010,7 @@
     "1005007345151855": 1791942667.867043,
     "1005010345227483": 1793299548.5548651,
     "1005011557896041": 1794499991.8758564,
-    "1005011754993234": 1793575053.368357,
+    "1005011754993234": 1794606641.3359861,
     "1005011735727412": 1791943783.9162278,
     "1005007916078341": 1794589541.704808,
     "1005006506862816": 1791947519.5815504,
@@ -1567,7 +1567,7 @@
     "1005009560287420": 1794578325.6062727,
     "1005008513502995": 1794475809.562155,
     "1005013525374520": 1794475830.5998907,
-    "1005012650636759": 1794475838.0735118,
+    "1005012650636759": 1794606633.373106,
     "1005011936109841": 1794475842.5666552,
     "1005012333024137": 1794579232.5818455,
     "1005007822635375": 1794501299.95393,
@@ -1580,8 +1580,8 @@
     "1005013422894128": 1794487083.9711623,
     "1005010297094897": 1794500546.592492,
     "1005009012821000": 1794502225.0175712,
-    "1005013485724377": 1794510747.6816225,
-    "1005012783197164": 1794512597.1982763,
+    "1005013485724377": 1794606651.7602222,
+    "1005012783197164": 1794606646.2896297,
     "1005012993724126": 1794515920.3397443,
     "1005012726037568": 1794585682.0605152,
     "1005011940143389": 1794524364.21287,
@@ -2637,7 +2637,9 @@
     "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone",
     "Blackview OSCAL PILOT 5  8/256",
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB",
-    "NETUM NT-1698W Handheld Wirelress Barcode Scanner AND NT-1228BL Bluetooth"
+    "NETUM NT-1698W Handheld Wirelress Barcode Scanner AND NT-1228BL Bluetooth",
+    "H96 MAX RK3518 2/16GB",
+    "realme 45W SUPERVOOC Charger"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2893,7 +2895,7 @@
     "لووووووووووووز controller 🎮": 1791942667.867043,
     "جديد علامة ©️©️©️©️🆕": 1791942676.1983886,
     "AMD Ryzen 7 7800X3D": 1794418100.8637865,
-    "AMD Ryzen 5 8400F": 1793448608.235321,
+    "AMD Ryzen 5 8400F": 1794606641.3359861,
     "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": 1791943777.8506553,
     "🔝 مانات قووووة ل جماعة mobile gaming 🎮": 1792017738.3981204,
     "Honor Choice Infowear Watch 2i Smartwatch AMOLED": 1791943825.002781,
@@ -3651,7 +3653,7 @@
     "DITONG X3Plus  4K WIFI6": 1794502225.0175712,
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": 1794502591.7937624,
     "realme Original Adapter SUPERVOOC Charger 45W": 1794510747.6816225,
-    "EPOMAKER GX1 Tri-mode": 1794512597.1982763,
+    "EPOMAKER GX1 Tri-mode": 1794606646.2896297,
     "WALRAM M.2  128GB": 1794515920.3397443,
     "Portable Magnetic Phone": 1794524364.21287,
     "QCY T13 ENC Earphone": 1794524375.306614,
@@ -3677,13 +3679,11 @@
     "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": 1794599278.9506347,
     "Blackview OSCAL PILOT 5  8/256": 1794604060.7762444,
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB": 1794604246.449916,
-    "NETUM NT-1698W Handheld Wirelress Barcode Scanner AND NT-1228BL Bluetooth": 1794605894.0354748
+    "NETUM NT-1698W Handheld Wirelress Barcode Scanner AND NT-1228BL Bluetooth": 1794605894.0354748,
+    "H96 MAX RK3518 2/16GB": 1794606633.373106,
+    "realme 45W SUPERVOOC Charger": 1794606651.7602222
   },
   "published_post_keys": [
-    "zedstoreonline:38607",
-    "ecksdeal:5942",
-    "megaphonna:8660",
-    "aniscoupons:32858",
     "pcgamingpart:7945",
     "lodydeals:45903",
     "couponsglobal:48764",
@@ -4679,11 +4679,15 @@
     "aniscoupons:34816",
     "aniscoupons:34817",
     "aniscoupons:34818",
-    "zedstoreonline:40099"
+    "zedstoreonline:40099",
+    "lodydeals:46463",
+    "lodydeals:46468",
+    "lodydeals:46476",
+    "lodydeals:46477"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794605894.0354748,
+  "last_run_time": 1794606651.7602222,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4691,7 +4695,7 @@
     },
     "lodydeals": {
       "last_message_id": 46478,
-      "last_check_time": 1794606257.3705113
+      "last_check_time": 1794606653.8115404
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4714,8 +4718,8 @@
       "last_check_time": 1794606082.780723
     },
     "aniscoupons": {
-      "last_message_id": 34818,
-      "last_check_time": 1794605533.697216
+      "last_message_id": 34819,
+      "last_check_time": 1794606658.293527
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -5375,7 +5379,7 @@
     "1005009560287420": 51.3,
     "1005008513502995": 35.12,
     "1005013525374520": 68.85,
-    "1005012650636759": 23.12,
+    "1005012650636759": 23.78,
     "1005011936109841": 457.36,
     "1005012333024137": 6.07,
     "1005001849536579": 21.52,
@@ -5386,8 +5390,8 @@
     "1005013422894128": 499.5,
     "1005010297094897": 34.1,
     "1005009012821000": 87.8,
-    "1005013485724377": 11.5,
-    "1005012783197164": 36.4,
+    "1005013485724377": 11.54,
+    "1005012783197164": 36.46,
     "1005012993724126": 15.6,
     "1005012726037568": 7.4,
     "1005011940143389": 3.48,
@@ -23483,6 +23487,46 @@
       "price": 14.8,
       "timestamp": 1794605894.0354748,
       "status": "ACTIVE"
+    },
+    "lodydeals:46463": {
+      "channel_msg_id": 2632,
+      "product_id": "1005012650636759",
+      "title": "H96 MAX RK3518 2/16GB",
+      "channel": "lodydeals",
+      "source_msg_id": 46463,
+      "price": 23.78,
+      "timestamp": 1794606633.373106,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46468": {
+      "channel_msg_id": 2633,
+      "product_id": "1005011754993234",
+      "title": "AMD Ryzen 5 8400F",
+      "channel": "lodydeals",
+      "source_msg_id": 46468,
+      "price": 79.58,
+      "timestamp": 1794606641.3359861,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46476": {
+      "channel_msg_id": 2634,
+      "product_id": "1005012783197164",
+      "title": "EPOMAKER GX1 Tri-mode",
+      "channel": "lodydeals",
+      "source_msg_id": 46476,
+      "price": 36.46,
+      "timestamp": 1794606646.2896297,
+      "status": "ACTIVE"
+    },
+    "lodydeals:46477": {
+      "channel_msg_id": 2635,
+      "product_id": "1005013485724377",
+      "title": "realme 45W SUPERVOOC Charger",
+      "channel": "lodydeals",
+      "source_msg_id": 46477,
+      "price": 11.54,
+      "timestamp": 1794606651.7602222,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23491,17 +23535,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794605897.624161,
+    "last_deal_post_time": 1794606658.7762444,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794606451.4909413,
+    "last_sweep_time": 1794606661.2322998,
     "last_sweep_times": {
-      "algeria": 1794606448.5265899,
-      "france": 1794606451.4909413
+      "algeria": 1794606658.756713,
+      "france": 1794606661.2322998
     },
     "last_deal_post_times": {
-      "algeria": 1794605897.624161
+      "algeria": 1794606658.7762444
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23728,7 +23772,7 @@
     "1005007345151855": "bnddeals",
     "1005010345227483": "megaphonna",
     "1005011557896041": "aniscoupons",
-    "1005011754993234": "ecksdeal",
+    "1005011754993234": "lodydeals",
     "1005011735727412": "bnddeals",
     "1005013039644752": "aniscoupons",
     "1005007916078341": "zedstoreonline",
@@ -24286,8 +24330,8 @@
     "1005013422894128": "aniscoupons",
     "1005010297094897": "lodydeals",
     "1005009012821000": "lodydeals",
-    "1005013485724377": "aniscoupons",
-    "1005012783197164": "aniscoupons",
+    "1005013485724377": "lodydeals",
+    "1005012783197164": "lodydeals",
     "1005012993724126": "aniscoupons",
     "1005012726037568": "lodydeals",
     "1005011940143389": "lodydeals",
@@ -24564,7 +24608,7 @@
     "ATTACK SHARK X11SE Wireless Gaming Mouse PixArt PAW3311": "pcgamingpart",
     "لووووووووووووز controller 🎮": "bnddeals",
     "جديد علامة ©️©️©️©️🆕": "megaphonna",
-    "AMD Ryzen 5 8400F": "zedstoreonline",
+    "AMD Ryzen 5 8400F": "lodydeals",
     "Disco Duro SSD CUSU 1TB 512GB 240GB 480GB SATA 2.5'' SATA3 Disco SSD 128GB": "pcgamingpart",
     "🔝 مانات قووووة ل جماعة mobile gaming 🎮": "bnddeals",
     "جديد ال ©️©️ ببطارية عملاقة💪💪": "megaphonna",
@@ -25324,7 +25368,7 @@
     "DITONG X3Plus  4K WIFI6": "lodydeals",
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": "aniscoupons",
     "realme Original Adapter SUPERVOOC Charger 45W": "aniscoupons",
-    "EPOMAKER GX1 Tri-mode": "aniscoupons",
+    "EPOMAKER GX1 Tri-mode": "lodydeals",
     "WALRAM M.2  128GB": "aniscoupons",
     "Portable Magnetic Phone": "lodydeals",
     "QCY T13 ENC Earphone": "lodydeals",
@@ -25350,7 +25394,9 @@
     "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": "zedstoreonline",
     "Blackview OSCAL PILOT 5  8/256": "zedstoreonline",
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB": "aniscoupons",
-    "NETUM NT-1698W Handheld Wirelress Barcode Scanner AND NT-1228BL Bluetooth": "zedstoreonline"
+    "NETUM NT-1698W Handheld Wirelress Barcode Scanner AND NT-1228BL Bluetooth": "zedstoreonline",
+    "H96 MAX RK3518 2/16GB": "lodydeals",
+    "realme 45W SUPERVOOC Charger": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -26147,19 +26193,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:46120",
-    "lodydeals:46121",
-    "lodydeals:46122",
-    "lodydeals:46123",
-    "lodydeals:46124",
-    "lodydeals:46125",
-    "lodydeals:46126",
-    "lodydeals:46127",
-    "lodydeals:46128",
-    "lodydeals:46129",
-    "lodydeals:46130",
-    "lodydeals:46131",
-    "lodydeals:46132",
     "lodydeals:46133",
     "lodydeals:46134",
     "lodydeals:46135",
@@ -27146,7 +27179,20 @@
     "zedstoreonline:40093",
     "zedstoreonline:40097",
     "zedstoreonline:40098",
-    "zedstoreonline:40100"
+    "zedstoreonline:40100",
+    "lodydeals:46464",
+    "lodydeals:46465",
+    "lodydeals:46466",
+    "lodydeals:46467",
+    "lodydeals:46469",
+    "lodydeals:46470",
+    "lodydeals:46471",
+    "lodydeals:46472",
+    "lodydeals:46473",
+    "lodydeals:46474",
+    "lodydeals:46475",
+    "lodydeals:46478",
+    "aniscoupons:34819"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -27717,11 +27763,6 @@
     "1005012726037568": [
       {
         "channel": "aniscoupons",
-        "ts": 1794563258.271985,
-        "price": 7.47
-      },
-      {
-        "channel": "aniscoupons",
         "ts": 1794564354.7983253,
         "price": 7.47
       },
@@ -27785,16 +27826,6 @@
     ],
     "1005008708333999": [
       {
-        "channel": "aniscoupons",
-        "ts": 1794562710.0577881,
-        "price": 136.7
-      },
-      {
-        "channel": "zedstoreonline",
-        "ts": 1794563256.4462209,
-        "price": 136.7
-      },
-      {
         "channel": "zedstoreonline",
         "ts": 1794580539.829244,
         "price": 136.7
@@ -27807,11 +27838,6 @@
     ],
     "1005010121513376": [
       {
-        "channel": "aniscoupons",
-        "ts": 1794562883.3841333,
-        "price": 289.5
-      },
-      {
         "channel": "zedstoreonline",
         "ts": 1794579983.8527997,
         "price": 289.0
@@ -27822,19 +27848,7 @@
         "price": 289.5
       }
     ],
-    "1005013361453762": [
-      {
-        "channel": "zedstoreonline",
-        "ts": 1794563437.6302497,
-        "price": 276.3
-      }
-    ],
     "1005011925142821": [
-      {
-        "channel": "aniscoupons",
-        "ts": 1794563443.7682588,
-        "price": 258.5
-      },
       {
         "channel": "zedstoreonline",
         "ts": 1794605714.2094247,
@@ -28228,6 +28242,34 @@
         "channel": "zedstoreonline",
         "ts": 1794605155.33943,
         "price": 19.0
+      }
+    ],
+    "1005012650636759": [
+      {
+        "channel": "lodydeals",
+        "ts": 1794606631.505177,
+        "price": 23.78
+      }
+    ],
+    "1005011754993234": [
+      {
+        "channel": "lodydeals",
+        "ts": 1794606639.658407,
+        "price": 79.58
+      }
+    ],
+    "1005012783197164": [
+      {
+        "channel": "lodydeals",
+        "ts": 1794606644.7071443,
+        "price": 36.46
+      }
+    ],
+    "1005013485724377": [
+      {
+        "channel": "lodydeals",
+        "ts": 1794606650.295606,
+        "price": 11.54
       }
     ]
   },
