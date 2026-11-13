@@ -1198,7 +1198,7 @@
     "1005013224329670": 1793380335.1434295,
     "1005010039614599": 1793607798.5770764,
     "1005004828097942": 1793380362.9885337,
-    "1005006495503659": 1793542571.5615325,
+    "1005006495503659": 1794577027.4515839,
     "1005013205488777": 1793380404.996831,
     "1005011961308530": 1793380460.5377874,
     "1005012994490034": 1793441317.3934674,
@@ -3034,7 +3034,7 @@
     "IQOO 15T": 1793380343.534803,
     "Soundcore by Anker Life Q30": 1793380356.1638675,
     "FIFINE AM8 USB/XLR Dynamic Microphone": 1794000865.9547298,
-    "MAONO DGM20 USB Gaming Microphone": 1793467049.206074,
+    "MAONO DGM20 USB Gaming Microphone": 1794577027.4515839,
     "MAONO PD100W USB Wireless Dynamic Microphone Cardioid Mic 50m Range": 1793380404.996831,
     "CUSU RAM DDR4 RGB 8x2 3200Mhz": 1793380414.784201,
     "جديد ال": 1793380452.8087006,
@@ -3620,7 +3620,6 @@
     "MAONO Wave T1 Plus Dual": 1794575567.6709607
   },
   "published_post_keys": [
-    "couponsglobal:48876",
     "zedstoreonline:38528",
     "couponsglobal:48796",
     "lodydeals:45544",
@@ -4619,11 +4618,12 @@
     "aniscoupons:34782",
     "aniscoupons:34784",
     "aniscoupons:34785",
-    "aniscoupons:34786"
+    "aniscoupons:34786",
+    "aniscoupons:34788"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794575748.1745248,
+  "last_run_time": 1794577027.4515839,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6059,
@@ -4654,8 +4654,8 @@
       "last_check_time": 1794575743.1288655
     },
     "aniscoupons": {
-      "last_message_id": 34787,
-      "last_check_time": 1794576289.1180527
+      "last_message_id": 34788,
+      "last_check_time": 1794577029.512214
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -4990,7 +4990,7 @@
     "1005013224329670": 21.1,
     "1005010039614599": 43.11,
     "1005004828097942": 58.4,
-    "1005006495503659": 27.41,
+    "1005006495503659": 29.4,
     "1005013205488777": 57.3,
     "1005011961308530": 313.7,
     "1005012994490034": 458.0,
@@ -22950,6 +22950,16 @@
       "price": 21.52,
       "timestamp": 1794575748.1745248,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34788": {
+      "channel_msg_id": 2584,
+      "product_id": "1005006495503659",
+      "title": "MAONO DGM20 USB Gaming Microphone",
+      "channel": "aniscoupons",
+      "source_msg_id": 34788,
+      "price": 29.4,
+      "timestamp": 1794577027.4515839,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -22958,17 +22968,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794575751.3495226,
+    "last_deal_post_time": 1794577030.24408,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794576843.391627,
+    "last_sweep_time": 1794577032.4704745,
     "last_sweep_times": {
-      "algeria": 1794576840.8632717,
-      "france": 1794576843.391627
+      "algeria": 1794577030.2190423,
+      "france": 1794577032.4704745
     },
     "last_deal_post_times": {
-      "algeria": 1794575751.3495226
+      "algeria": 1794577030.24408
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23397,7 +23407,7 @@
     "1005013224329670": "zedstoreonline",
     "1005010039614599": "lodydeals",
     "1005004828097942": "aniscoupons",
-    "1005006495503659": "ecksdeal",
+    "1005006495503659": "aniscoupons",
     "1005013205488777": "aniscoupons",
     "1005011961308530": "megaphonna",
     "1005012994490034": "zedstoreonline",
@@ -24208,7 +24218,7 @@
     "IQOO 15T": "aniscoupons",
     "Soundcore by Anker Life Q30": "aniscoupons",
     "FIFINE AM8 USB/XLR Dynamic Microphone": "zedstoreonline",
-    "MAONO DGM20 USB Gaming Microphone": "zedstoreonline",
+    "MAONO DGM20 USB Gaming Microphone": "aniscoupons",
     "MAONO PD100W USB Wireless Dynamic Microphone Cardioid Mic 50m Range": "aniscoupons",
     "CUSU RAM DDR4 RGB 8x2 3200Mhz": "bnddeals",
     "جديد ال": "megaphonna",
@@ -27361,6 +27371,13 @@
         "channel": "aniscoupons",
         "ts": 1794576288.9889228,
         "price": 20.52
+      }
+    ],
+    "1005006495503659": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794577025.3648977,
+        "price": 29.4
       }
     ]
   },
