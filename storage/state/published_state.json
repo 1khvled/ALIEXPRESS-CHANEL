@@ -1244,7 +1244,7 @@
     "1005010033441204": 1794648682.4911034,
     "1005008356663932": 1793707052.9762022,
     "1005010074161953": 1793543659.5887568,
-    "1005010498953493": 1793448734.886029,
+    "1005010498953493": 1794653732.8294628,
     "1005010535660141": 1793448772.3918815,
     "1005010472570391": 1793571013.3288968,
     "1005012864293264": 1793570287.0210865,
@@ -1599,7 +1599,7 @@
     "1005011887425776": 1794652347.6620066,
     "1005012547730772": 1794590278.0528092,
     "1005012840419521": 1794591008.1982286,
-    "1005010218815499": 1794591382.6548223,
+    "1005010218815499": 1794653739.643998,
     "1005011897409757": 1794593403.339319,
     "1005013203288194": 1794595430.2306583,
     "1005010305059795": 1794597627.451524,
@@ -2650,7 +2650,8 @@
     "realme 45W SUPERVOOC Charger",
     "Kodak K133 USB 3.1 Flash Drive 256GB",
     "SOYO AMD B550M Gaming",
-    "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless"
+    "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless",
+    "Delux M800mini Wireless Gaming Mouse"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3144,7 +3145,7 @@
     "OPPO A7 Pro Max CN": 1793448660.3359752,
     "Poco Pad X1 512GB": 1793448715.1480892,
     "Redmi Pad 2 9.7\"": 1793448729.1572442,
-    "Anker 100W Max USB C Charger 3-Port": 1793448734.886029,
+    "Anker 100W Max USB C Charger 3-Port": 1794653732.8294628,
     "Anker Laptop Charger, 140W Max 4-Port GaN": 1793448745.105644,
     "Anker Nano Charger, Ultra-Fast 70W Output 3-Port": 1793448757.527367,
     "Anker Space A40 Adaptive": 1793448762.165183,
@@ -3695,11 +3696,10 @@
     "realme 45W SUPERVOOC Charger": 1794606651.7602222,
     "Kodak K133 USB 3.1 Flash Drive 256GB": 1794614891.9797184,
     "SOYO AMD B550M Gaming": 1794643078.050233,
-    "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless": 1794649518.026784
+    "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless": 1794649518.026784,
+    "Delux M800mini Wireless Gaming Mouse": 1794653739.643998
   },
   "published_post_keys": [
-    "lodydeals:45939",
-    "bnddeals:50852",
     "megaphonna:8173",
     "aniscoupons:33284",
     "lodydeals:45430",
@@ -4697,11 +4697,13 @@
     "aniscoupons:34856",
     "aniscoupons:34858",
     "aniscoupons:34860",
-    "aniscoupons:34862"
+    "aniscoupons:34862",
+    "aniscoupons:34863",
+    "aniscoupons:34864"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794653127.8304193,
+  "last_run_time": 1794653739.643998,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4728,12 +4730,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40134,
-      "last_check_time": 1794651741.453585
+      "last_message_id": 40135,
+      "last_check_time": 1794653729.4045844
     },
     "aniscoupons": {
-      "last_message_id": 34862,
-      "last_check_time": 1794653129.9095418
+      "last_message_id": 34864,
+      "last_check_time": 1794653741.7230456
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -5097,7 +5099,7 @@
     "1005010033441204": 14.6,
     "1005008356663932": 355.5,
     "1005010074161953": 130.08,
-    "1005010498953493": 51.7,
+    "1005010498953493": 51.15,
     "1005010535660141": 21.15,
     "1005010472570391": 25.77,
     "1005012864293264": 28.96,
@@ -23925,6 +23927,26 @@
       "price": 305.22,
       "timestamp": 1794653127.8304193,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34863": {
+      "channel_msg_id": 2674,
+      "product_id": "1005010498953493",
+      "title": "Anker 100W Max USB C Charger 3-Port",
+      "channel": "aniscoupons",
+      "source_msg_id": 34863,
+      "price": 51.15,
+      "timestamp": 1794653732.8294628,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34864": {
+      "channel_msg_id": 2675,
+      "product_id": "1005010218815499",
+      "title": "Delux M800mini Wireless Gaming Mouse",
+      "channel": "aniscoupons",
+      "source_msg_id": 34864,
+      "price": 13.94,
+      "timestamp": 1794653739.643998,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23933,17 +23955,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794653130.9646504,
+    "last_deal_post_time": 1794653742.5960321,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794653134.1218603,
+    "last_sweep_time": 1794653745.0375435,
     "last_sweep_times": {
-      "algeria": 1794653130.9306579,
-      "france": 1794653134.1218603
+      "algeria": 1794653742.5617375,
+      "france": 1794653745.0375435
     },
     "last_deal_post_times": {
-      "algeria": 1794653130.9646504
+      "algeria": 1794653742.5960321
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24402,7 +24424,7 @@
     "1005010033441204": "aniscoupons",
     "1005008356663932": "lodydeals",
     "1005010074161953": "lodydeals",
-    "1005010498953493": "bnddeals",
+    "1005010498953493": "aniscoupons",
     "1005010535660141": "bnddeals",
     "1005010472570391": "lodydeals",
     "1005012864293264": "lodydeals",
@@ -24743,7 +24765,7 @@
     "1005011887425776": "aniscoupons",
     "1005012547730772": "zedstoreonline",
     "1005012840419521": "ecksdeal",
-    "1005010218815499": "ecksdeal",
+    "1005010218815499": "aniscoupons",
     "1005011897409757": "lodydeals",
     "1005013203288194": "aniscoupons",
     "1005010305059795": "zedstoreonline",
@@ -25254,7 +25276,7 @@
     "OPPO A7 Pro Max CN": "aniscoupons",
     "Poco Pad X1 512GB": "aniscoupons",
     "Redmi Pad 2 9.7\"": "aniscoupons",
-    "Anker 100W Max USB C Charger 3-Port": "bnddeals",
+    "Anker 100W Max USB C Charger 3-Port": "aniscoupons",
     "Anker Laptop Charger, 140W Max 4-Port GaN": "bnddeals",
     "Anker Nano Charger, Ultra-Fast 70W Output 3-Port": "bnddeals",
     "Anker Space A40 Adaptive": "bnddeals",
@@ -25801,7 +25823,8 @@
     "realme 45W SUPERVOOC Charger": "lodydeals",
     "Kodak K133 USB 3.1 Flash Drive 256GB": "zedstoreonline",
     "SOYO AMD B550M Gaming": "aniscoupons",
-    "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless": "lodydeals"
+    "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless": "lodydeals",
+    "Delux M800mini Wireless Gaming Mouse": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -26598,7 +26621,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:39602",
     "zedstoreonline:39606",
     "zedstoreonline:39608",
     "zedstoreonline:39609",
@@ -27597,7 +27619,8 @@
     "zedstoreonline:40134",
     "aniscoupons:34857",
     "aniscoupons:34859",
-    "aniscoupons:34861"
+    "aniscoupons:34861",
+    "zedstoreonline:40135"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -28252,13 +28275,6 @@
         "price": 79.5
       }
     ],
-    "1005010424638496": [
-      {
-        "channel": "zedstoreonline",
-        "ts": 1794609937.0824573,
-        "price": 113.9
-      }
-    ],
     "1005009121981190": [
       {
         "channel": "zedstoreonline",
@@ -28381,6 +28397,11 @@
       {
         "channel": "aniscoupons",
         "ts": 1794648680.4236789,
+        "price": 14.6
+      },
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794653729.2612321,
         "price": 14.6
       }
     ],
@@ -28530,6 +28551,20 @@
         "channel": "aniscoupons",
         "ts": 1794652519.492783,
         "price": 366.0
+      }
+    ],
+    "1005010498953493": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794653730.876474,
+        "price": 51.15
+      }
+    ],
+    "1005010218815499": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794653738.2059202,
+        "price": 13.94
       }
     ]
   },
