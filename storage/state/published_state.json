@@ -1468,7 +1468,7 @@
     "1005012691642623": 1794074230.5173922,
     "1005010266233059": 1793977272.9654846,
     "1005007469003552": 1794130707.0577464,
-    "1005010041181003": 1794567111.1736724,
+    "1005010041181003": 1794651747.5170398,
     "1005010265542567": 1794131426.95932,
     "1005003156756854": 1794649343.9097252,
     "1005010142208108": 1794302223.66585,
@@ -3482,7 +3482,7 @@
     "ميكروفون MAONO DGM20W لاسلكي للألعاب – تقليل الضوضاء مع إضاءة RGB، مثالي للبث المباشر والتسجيل والأل": 1793976348.7503736,
     "Ulanzi A21 Wireless Lavalier Microphone": 1793977272.9654846,
     "ميكروفون Ulanzi A100 لاسلكي صغير": 1793982290.6109207,
-    "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794567111.1736724,
+    "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB": 1794651747.5170398,
     "Ulanzi A200 Mini Wireless Lavalier Microphone": 1794131426.95932,
     "حامل هاتف Ulanzi ST-06S": 1794649343.9097252,
     "AULA MINI60 HE PRO": 1794302223.66585,
@@ -3698,7 +3698,6 @@
     "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless": 1794649518.026784
   },
   "published_post_keys": [
-    "lodydeals:45886",
     "megaphonna:8689",
     "megaphonna:8738",
     "lodydeals:45939",
@@ -4697,11 +4696,12 @@
     "zedstoreonline:40131",
     "zedstoreonline:40132",
     "aniscoupons:34855",
-    "aniscoupons:34856"
+    "aniscoupons:34856",
+    "aniscoupons:34858"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794651124.7625065,
+  "last_run_time": 1794651747.5170398,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4728,12 +4728,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40133,
-      "last_check_time": 1794651118.8956077
+      "last_message_id": 40134,
+      "last_check_time": 1794651741.453585
     },
     "aniscoupons": {
-      "last_message_id": 34856,
-      "last_check_time": 1794651126.8199325
+      "last_message_id": 34858,
+      "last_check_time": 1794651749.5712774
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -23895,6 +23895,16 @@
       "price": 186.74,
       "timestamp": 1794651124.7625065,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34858": {
+      "channel_msg_id": 2671,
+      "product_id": "1005010041181003",
+      "title": "Lexar ARES PRO NVMe SSD PCle5.0x4 1TB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34858,
+      "price": 167.8,
+      "timestamp": 1794651747.5170398,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23903,17 +23913,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794651127.6239555,
+    "last_deal_post_time": 1794651750.4181783,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794651130.2146432,
+    "last_sweep_time": 1794651753.2568254,
     "last_sweep_times": {
-      "algeria": 1794651127.6035683,
-      "france": 1794651130.2146432
+      "algeria": 1794651750.3975477,
+      "france": 1794651753.2568254
     },
     "last_deal_post_times": {
-      "algeria": 1794651127.6239555
+      "algeria": 1794651750.4181783
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -26568,8 +26578,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:39595",
-    "zedstoreonline:39598",
     "zedstoreonline:39600",
     "zedstoreonline:39601",
     "zedstoreonline:39602",
@@ -27567,7 +27575,9 @@
     "aniscoupons:34851",
     "zedstoreonline:40129",
     "aniscoupons:34853",
-    "zedstoreonline:40133"
+    "zedstoreonline:40133",
+    "zedstoreonline:40134",
+    "aniscoupons:34857"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -28215,25 +28225,11 @@
         "price": 305.0
       }
     ],
-    "1005010536089199": [
-      {
-        "channel": "aniscoupons",
-        "ts": 1794608281.3103452,
-        "price": 33.64
-      }
-    ],
     "1005011754993234": [
       {
         "channel": "zedstoreonline",
         "ts": 1794649334.3396642,
         "price": 79.5
-      }
-    ],
-    "1005012959738411": [
-      {
-        "channel": "aniscoupons",
-        "ts": 1794608465.1756392,
-        "price": 68.79
       }
     ],
     "1005010424638496": [
@@ -28307,6 +28303,11 @@
         "channel": "zedstoreonline",
         "ts": 1794647058.2744257,
         "price": 161.0
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794651745.56444,
+        "price": 167.8
       }
     ],
     "1005008774483451": [
@@ -28335,6 +28336,11 @@
         "channel": "aniscoupons",
         "ts": 1794647078.4088635,
         "price": 78.4
+      },
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794651741.3632972,
+        "price": 78.0
       }
     ],
     "1005009278114794": [
@@ -28423,6 +28429,11 @@
       {
         "channel": "zedstoreonline",
         "ts": 1794649524.5711632,
+        "price": 118.5
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794651744.9088898,
         "price": 118.5
       }
     ],
