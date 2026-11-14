@@ -4734,8 +4734,8 @@
       "last_check_time": 1794655638.6891217
     },
     "aniscoupons": {
-      "last_message_id": 34868,
-      "last_check_time": 1794655653.1071305
+      "last_message_id": 34869,
+      "last_check_time": 1794656022.4024403
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -24009,10 +24009,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794655821.5802755,
+    "last_sweep_time": 1794656026.561036,
     "last_sweep_times": {
-      "algeria": 1794655819.1742897,
-      "france": 1794655821.5802755
+      "algeria": 1794656023.3890564,
+      "france": 1794656026.561036
     },
     "last_deal_post_times": {
       "algeria": 1794655653.820519
@@ -26671,7 +26671,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:39609",
     "zedstoreonline:39610",
     "zedstoreonline:39612",
     "zedstoreonline:39615",
@@ -27670,7 +27669,8 @@
     "aniscoupons:34861",
     "zedstoreonline:40135",
     "zedstoreonline:40136",
-    "zedstoreonline:40138"
+    "zedstoreonline:40138",
+    "aniscoupons:34869"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -28258,11 +28258,6 @@
     "1005008708333999": [
       {
         "channel": "aniscoupons",
-        "ts": 1794612683.2171423,
-        "price": 136.7
-      },
-      {
-        "channel": "aniscoupons",
         "ts": 1794613226.2103295,
         "price": 136.7
       },
@@ -28297,11 +28292,6 @@
       }
     ],
     "1005008291023017": [
-      {
-        "channel": "aniscoupons",
-        "ts": 1794612498.010971,
-        "price": 305.22
-      },
       {
         "channel": "zedstoreonline",
         "ts": 1794643901.0443327,
@@ -28655,6 +28645,13 @@
         "channel": "aniscoupons",
         "ts": 1794655649.4797513,
         "price": 41.77
+      }
+    ],
+    "1005012184442621": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794656021.8657825,
+        "price": 11.75
       }
     ]
   },
