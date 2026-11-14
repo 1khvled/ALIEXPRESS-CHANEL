@@ -1377,7 +1377,7 @@
     "1005006994466968": 1793601744.1664062,
     "1005011927267564": 1793728844.5794795,
     "1005008291023017": 1794653127.8304193,
-    "1005012947477238": 1794604246.449916,
+    "1005012947477238": 1794656880.7642448,
     "1005010121513376": 1794580548.39376,
     "1005009064526142": 1793613380.753295,
     "1005010009130696": 1793613403.4444478,
@@ -1488,7 +1488,7 @@
     "1005008060391372": 1794496851.9006197,
     "1005010209911111": 1794068056.674266,
     "1005008295555234": 1794073127.8664527,
-    "1005008645323478": 1794491882.9016292,
+    "1005008645323478": 1794656885.3877928,
     "1005008636930795": 1794500738.761835,
     "1005006260870758": 1794250569.5221198,
     "1005009759580502": 1794331533.1223195,
@@ -3514,7 +3514,7 @@
     "1MORE SonoFlow Pro HQ51": 1794073127.8664527,
     "Ulanzi ST-06S Vertical Shooting": 1794130692.4786665,
     "ميكروفون MAONO DGM20W لاسلكي للألعاب": 1794074230.5173922,
-    "CUSU 512GB External SSD Drive": 1794491882.9016292,
+    "CUSU 512GB External SSD Drive": 1794656885.3877928,
     "Netac M.2 NVME 250GB": 1794076438.7694528,
     "EPOMAKER X AULA F87 Pro": 1794250569.5221198,
     "SIX PCIe 4.0 7350MB/s  1TB": 1794079741.7808652,
@@ -3525,7 +3525,7 @@
     "راوتر Vodafone 4G محمول": 1794128872.1451216,
     "OnePlus ACE 6T": 1794484334.0264623,
     "Essager Mini 20W Type C Charger PD": 1794129971.1690388,
-    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794579995.0128412,
+    "Xiaomi Redmi Note 17 5G Global Version (6/256GB)": 1794656880.7642448,
     "OnePlus Ace 6 12/256GB": 1794130143.129755,
     "Machenike G7 Gaming Mouse USB Wired 2.4GHz Wireless Mouse": 1794476801.4817152,
     "Ulanzi A100 Wireless Lavalier Microphone": 1794130707.0577464,
@@ -3700,8 +3700,6 @@
     "Delux M800mini Wireless Gaming Mouse": 1794653739.643998
   },
   "published_post_keys": [
-    "megaphonna:8511",
-    "aniscoupons:32776",
     "bnddeals:50942",
     "aniscoupons:33000",
     "test_channel:1791677496",
@@ -4699,11 +4697,13 @@
     "zedstoreonline:40137",
     "aniscoupons:34866",
     "aniscoupons:34867",
-    "aniscoupons:34868"
+    "aniscoupons:34868",
+    "aniscoupons:34871",
+    "aniscoupons:34872"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794655651.061057,
+  "last_run_time": 1794656885.3877928,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4730,12 +4730,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40138,
-      "last_check_time": 1794655638.6891217
+      "last_message_id": 40139,
+      "last_check_time": 1794656874.8789613
     },
     "aniscoupons": {
-      "last_message_id": 34869,
-      "last_check_time": 1794656022.4024403
+      "last_message_id": 34872,
+      "last_check_time": 1794656887.4530969
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -5319,7 +5319,7 @@
     "1005013053381984": 254.11,
     "1005010209911111": 40.6,
     "1005008295555234": 59.5,
-    "1005008645323478": 41.5,
+    "1005008645323478": 41.4,
     "1005006260870758": 41.1,
     "1005009759580502": 101.1,
     "1005009120888793": 22.3,
@@ -23997,6 +23997,26 @@
       "price": 41.77,
       "timestamp": 1794655651.061057,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34871": {
+      "channel_msg_id": 2681,
+      "product_id": "1005012947477238",
+      "title": "Xiaomi Redmi Note 17 5G Global Version (6/256GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34871,
+      "price": 217.8,
+      "timestamp": 1794656880.7642448,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34872": {
+      "channel_msg_id": 2682,
+      "product_id": "1005008645323478",
+      "title": "CUSU 512GB External SSD Drive",
+      "channel": "aniscoupons",
+      "source_msg_id": 34872,
+      "price": 41.4,
+      "timestamp": 1794656885.3877928,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -24005,17 +24025,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794655653.820519,
+    "last_deal_post_time": 1794656888.3769011,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794656026.561036,
+    "last_sweep_time": 1794656891.2706773,
     "last_sweep_times": {
-      "algeria": 1794656023.3890564,
-      "france": 1794656026.561036
+      "algeria": 1794656888.34842,
+      "france": 1794656891.2706773
     },
     "last_deal_post_times": {
-      "algeria": 1794655653.820519
+      "algeria": 1794656888.3769011
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24706,7 +24726,7 @@
     "1005008060391372": "ecksdeal",
     "1005010209911111": "bnddeals",
     "1005008295555234": "lodydeals",
-    "1005008645323478": "zedstoreonline",
+    "1005008645323478": "aniscoupons",
     "1005008636930795": "zedstoreonline",
     "1005006260870758": "aniscoupons",
     "1005009759580502": "bnddeals",
@@ -25690,7 +25710,7 @@
     "1MORE SonoFlow Pro HQ51": "lodydeals",
     "Ulanzi ST-06S Vertical Shooting": "lodydeals",
     "ميكروفون MAONO DGM20W لاسلكي للألعاب": "zedstoreonline",
-    "CUSU 512GB External SSD Drive": "zedstoreonline",
+    "CUSU 512GB External SSD Drive": "aniscoupons",
     "Netac M.2 NVME 250GB": "aniscoupons",
     "EPOMAKER X AULA F87 Pro": "aniscoupons",
     "SIX PCIe 4.0 7350MB/s  1TB": "lodydeals",
@@ -26671,8 +26691,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:39610",
-    "zedstoreonline:39612",
     "zedstoreonline:39615",
     "zedstoreonline:39616",
     "zedstoreonline:39617",
@@ -27670,7 +27688,9 @@
     "zedstoreonline:40135",
     "zedstoreonline:40136",
     "zedstoreonline:40138",
-    "aniscoupons:34869"
+    "aniscoupons:34869",
+    "zedstoreonline:40139",
+    "aniscoupons:34870"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -28258,17 +28278,17 @@
     "1005008708333999": [
       {
         "channel": "aniscoupons",
-        "ts": 1794613226.2103295,
-        "price": 136.7
-      },
-      {
-        "channel": "aniscoupons",
         "ts": 1794647083.4804869,
         "price": 136.7
       },
       {
         "channel": "zedstoreonline",
         "ts": 1794648672.9060693,
+        "price": 136.7
+      },
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794656874.725967,
         "price": 136.7
       }
     ],
@@ -28288,6 +28308,11 @@
       {
         "channel": "aniscoupons",
         "ts": 1794614518.441233,
+        "price": 217.8
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794656878.2733066,
         "price": 217.8
       }
     ],
@@ -28530,6 +28555,11 @@
         "channel": "zedstoreonline",
         "ts": 1794650118.4045904,
         "price": 4.1
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794656876.7338405,
+        "price": 4.14
       }
     ],
     "1005008518280704": [
@@ -28652,6 +28682,13 @@
         "channel": "aniscoupons",
         "ts": 1794656021.8657825,
         "price": 11.75
+      }
+    ],
+    "1005008645323478": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794656883.7195182,
+        "price": 41.4
       }
     ]
   },
