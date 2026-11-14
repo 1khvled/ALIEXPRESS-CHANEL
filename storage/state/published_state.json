@@ -1235,7 +1235,7 @@
     "1005012675968319": 1793399525.3383162,
     "1005010424638496": 1794609939.1136281,
     "1005010141682336": 1793399542.6698716,
-    "1005006782790827": 1794159491.7570124,
+    "1005006782790827": 1794660980.280811,
     "1005012938359476": 1793448722.5382965,
     "1005012931209980": 1793566274.2309785,
     "1005011820893973": 1793540051.7895243,
@@ -3125,7 +3125,7 @@
     "QCY Crossky C50i Open": 1793399525.3383162,
     "Magcubic HY350MAX": 1793399534.209787,
     "BLACKVIEW OSCAL TANK1": 1793399542.6698716,
-    "MAGCUBIC Projector HY300 PRO": 1794159491.7570124,
+    "MAGCUBIC Projector HY300 PRO": 1794660980.280811,
     "Redmi 17 5G": 1793448722.5382965,
     "OPPO A7 PRO MAX  (8/128)": 1793399619.8124897,
     "وحش الأخر": 1793448843.5220337,
@@ -3702,7 +3702,6 @@
     "ASROCK X570M PRO4 Motherboard": 1794660431.126332
   },
   "published_post_keys": [
-    "test_channel:1792111091",
     "zedstoreonline:38843",
     "aniscoupons:33270",
     "lodydeals:45476",
@@ -4701,19 +4700,20 @@
     "zedstoreonline:40147",
     "zedstoreonline:40148",
     "aniscoupons:34881",
-    "zedstoreonline:40149"
+    "zedstoreonline:40149",
+    "zedstoreonline:40151"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794660431.126332,
+  "last_run_time": 1794660980.280811,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46488,
-      "last_check_time": 1794660426.560603
+      "last_message_id": 46489,
+      "last_check_time": 1794660975.5552526
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4732,12 +4732,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40150,
-      "last_check_time": 1794660615.2049782
+      "last_message_id": 40151,
+      "last_check_time": 1794660982.3295295
     },
     "aniscoupons": {
-      "last_message_id": 34882,
-      "last_check_time": 1794660802.5276601
+      "last_message_id": 34883,
+      "last_check_time": 1794660983.8218288
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -24149,6 +24149,16 @@
       "price": 110.8,
       "timestamp": 1794660431.126332,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40151": {
+      "channel_msg_id": 2696,
+      "product_id": "1005006782790827",
+      "title": "MAGCUBIC Projector HY300 PRO",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40151,
+      "price": 47.5,
+      "timestamp": 1794660980.280811,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -24157,17 +24167,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794660434.579588,
+    "last_deal_post_time": 1794660984.3596902,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794660806.4551716,
+    "last_sweep_time": 1794660986.9860914,
     "last_sweep_times": {
-      "algeria": 1794660803.5829282,
-      "france": 1794660806.4551716
+      "algeria": 1794660984.337346,
+      "france": 1794660986.9860914
     },
     "last_deal_post_times": {
-      "algeria": 1794660434.579588
+      "algeria": 1794660984.3596902
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -26824,8 +26834,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:34104",
-    "aniscoupons:34105",
     "aniscoupons:34107",
     "aniscoupons:34108",
     "aniscoupons:34109",
@@ -27823,7 +27831,9 @@
     "lodydeals:46487",
     "lodydeals:46488",
     "zedstoreonline:40150",
-    "aniscoupons:34882"
+    "aniscoupons:34882",
+    "lodydeals:46489",
+    "aniscoupons:34883"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -28449,6 +28459,11 @@
         "channel": "aniscoupons",
         "ts": 1794653125.4953392,
         "price": 305.22
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794660983.7456527,
+        "price": 305.22
       }
     ],
     "1005011754993234": [
@@ -28938,6 +28953,13 @@
         "channel": "zedstoreonline",
         "ts": 1794660614.6173668,
         "price": 19.0
+      }
+    ],
+    "1005006782790827": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794660978.4447682,
+        "price": 47.5
       }
     ]
   },
