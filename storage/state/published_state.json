@@ -943,7 +943,7 @@
     "1005009497821240": 1791117948.6585228,
     "1005011925142821": 1794563445.89714,
     "9998883864": 1791063864.5866926,
-    "1005010536089199": 1794604241.2698977,
+    "1005010536089199": 1794658033.5242174,
     "1005012385221205": 1791102050.1835058,
     "1005012743092233": 1791104461.903693,
     "1005007805497968": 1794141669.7207782,
@@ -1227,7 +1227,7 @@
     "1005005373032877": 1793600283.7397804,
     "1005007869955343": 1794598909.9247847,
     "1005012644570693": 1793441338.6619778,
-    "1005003949106838": 1794596702.4362378,
+    "1005003949106838": 1794658038.8464694,
     "1005012436082838": 1793733101.535615,
     "1005010716206374": 1793448715.1480892,
     "1005012864273120": 1793399494.1323898,
@@ -3457,7 +3457,7 @@
     "NOTHING Watch 3 Pro": 1794647046.6561146,
     "مشترك كهربائي ORICO PD25W – محطة شحن مكتبية تضم منفذي Type-C ومنفذي USB-A ومقبسين AC لشحن الأجهزة وت": 1793966711.2525856,
     "Baseus Mouse Bluetooth Wireless Computer 1600DPI": 1793966716.198834,
-    "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": 1794604241.2698977,
+    "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless": 1794658033.5242174,
     "Zeblaze GTS 3 Pro Voice Calling AMOLED": 1793966727.646043,
     "GameSir X5 Lite Game Controller": 1794480069.5549967,
     "Netac SSD NVME M2 250GB": 1794500738.761835,
@@ -3542,7 +3542,7 @@
     "Lenovo LP40 Pro": 1794146830.4272797,
     "Ulanzi ST-06S Smartphone Mount Holder": 1794146840.7057447,
     "WAMRAM SATA SSD 480GB": 1794159522.2930505,
-    "Netac M.2 1TB 7400Mbs Gen 4": 1794565821.4120076,
+    "Netac M.2 1TB 7400Mbs Gen 4": 1794658038.8464694,
     "RYZEN 5 5600XT": 1794253893.3396604,
     "OnePlus Turbo 6V": 1794476009.5322104,
     "DJI Mic Mini2  2TX 1RX": 1794216974.0881407,
@@ -3700,8 +3700,6 @@
     "Delux M800mini Wireless Gaming Mouse": 1794653739.643998
   },
   "published_post_keys": [
-    "test_channel:1791677496",
-    "aniscoupons:32755",
     "aniscoupons:33036",
     "lodydeals:45457",
     "lodydeals:45585",
@@ -4699,11 +4697,13 @@
     "aniscoupons:34871",
     "aniscoupons:34872",
     "aniscoupons:34873",
-    "aniscoupons:34874"
+    "aniscoupons:34874",
+    "zedstoreonline:40142",
+    "aniscoupons:34875"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794657860.5278585,
+  "last_run_time": 1794658038.8464694,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4730,12 +4730,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40140,
-      "last_check_time": 1794657854.4354277
+      "last_message_id": 40142,
+      "last_check_time": 1794658035.601486
     },
     "aniscoupons": {
-      "last_message_id": 34874,
-      "last_check_time": 1794657862.6341114
+      "last_message_id": 34876,
+      "last_check_time": 1794658041.7082484
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -5082,7 +5082,7 @@
     "1005005373032877": 61.03,
     "1005007869955343": 36.5,
     "1005012644570693": 558.0,
-    "1005003949106838": 114.9,
+    "1005003949106838": 114.99,
     "1005012436082838": 123.6,
     "1005010716206374": 308.0,
     "1005012864273120": 154.0,
@@ -24037,6 +24037,26 @@
       "price": 273.5,
       "timestamp": 1794657860.5278585,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40142": {
+      "channel_msg_id": 2685,
+      "product_id": "1005010536089199",
+      "title": "Soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones Wireless",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40142,
+      "price": 33.6,
+      "timestamp": 1794658033.5242174,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34875": {
+      "channel_msg_id": 2686,
+      "product_id": "1005003949106838",
+      "title": "Netac M.2 1TB 7400Mbs Gen 4",
+      "channel": "aniscoupons",
+      "source_msg_id": 34875,
+      "price": 114.99,
+      "timestamp": 1794658038.8464694,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -24045,17 +24065,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794657863.5936708,
+    "last_deal_post_time": 1794658042.5791907,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794657866.5036466,
+    "last_sweep_time": 1794658045.0231388,
     "last_sweep_times": {
-      "algeria": 1794657863.5585902,
-      "france": 1794657866.5036466
+      "algeria": 1794658042.5460768,
+      "france": 1794658045.0231388
     },
     "last_deal_post_times": {
-      "algeria": 1794657863.5936708
+      "algeria": 1794658042.5791907
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24497,7 +24517,7 @@
     "1005007869955343": "zedstoreonline",
     "1005012644570693": "zedstoreonline",
     "1005009118633225": "lodydeals",
-    "1005003949106838": "zedstoreonline",
+    "1005003949106838": "aniscoupons",
     "1005012436082838": "lodydeals",
     "1005010716206374": "aniscoupons",
     "1005012864273120": "zedstoreonline",
@@ -26711,7 +26731,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:39616",
     "zedstoreonline:39617",
     "zedstoreonline:39619",
     "zedstoreonline:39621",
@@ -27710,7 +27729,8 @@
     "aniscoupons:34869",
     "zedstoreonline:40139",
     "aniscoupons:34870",
-    "zedstoreonline:40140"
+    "zedstoreonline:40140",
+    "aniscoupons:34876"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -28577,6 +28597,11 @@
         "channel": "zedstoreonline",
         "ts": 1794650120.0126364,
         "price": 179.16
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794658041.590456,
+        "price": 179.3
       }
     ],
     "1005012931209980": [
@@ -28718,6 +28743,20 @@
         "channel": "aniscoupons",
         "ts": 1794657858.2333047,
         "price": 273.5
+      }
+    ],
+    "1005010536089199": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794658031.5556867,
+        "price": 33.6
+      }
+    ],
+    "1005003949106838": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794658037.1035764,
+        "price": 114.99
       }
     ]
   },
