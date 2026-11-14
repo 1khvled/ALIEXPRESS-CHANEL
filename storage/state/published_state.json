@@ -1577,7 +1577,7 @@
     "1005006967391791": 1794476797.164376,
     "1005013288890301": 1794477157.5349603,
     "1005013089015192": 1794647055.558841,
-    "1005009278114794": 1794480064.6967885,
+    "1005009278114794": 1794647237.7084959,
     "1005010210432531": 1794604620.3292344,
     "1005013422894128": 1794487083.9711623,
     "1005010297094897": 1794500546.592492,
@@ -3649,7 +3649,7 @@
     "Webcam EMEET C100 1080P": 1794477157.5349603,
     "FIFINE 1440p Full HD PC Webcam with Microphone": 1794478095.864591,
     "iQOO Z11S 8/128": 1794647055.558841,
-    "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794480064.6967885,
+    "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794647237.7084959,
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794604620.3292344,
     "Honor Win RT2": 1794487083.9711623,
     "MCHOSE A7 V3 Pro": 1794489491.8874733,
@@ -3692,7 +3692,6 @@
     "SOYO AMD B550M Gaming": 1794643078.050233
   },
   "published_post_keys": [
-    "test_channel:1793283032",
     "lodydeals:45768",
     "lodydeals:45426",
     "couponsglobal:48810",
@@ -4691,11 +4690,12 @@
     "zedstoreonline:40117",
     "aniscoupons:34835",
     "aniscoupons:34836",
-    "aniscoupons:34838"
+    "aniscoupons:34838",
+    "zedstoreonline:40121"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794647085.3020031,
+  "last_run_time": 1794647237.7084959,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4722,12 +4722,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40120,
-      "last_check_time": 1794647068.4473455
+      "last_message_id": 40121,
+      "last_check_time": 1794647239.7850788
     },
     "aniscoupons": {
-      "last_message_id": 34843,
-      "last_check_time": 1794647089.5079854
+      "last_message_id": 34844,
+      "last_check_time": 1794647242.4857638
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -5394,7 +5394,7 @@
     "1005006967391791": 36.2,
     "1005013288890301": 16.9,
     "1005013089015192": 261.9,
-    "1005009278114794": 11.9,
+    "1005009278114794": 11.5,
     "1005013422894128": 499.5,
     "1005010297094897": 34.1,
     "1005009012821000": 87.8,
@@ -23707,6 +23707,16 @@
       "price": 136.7,
       "timestamp": 1794647085.3020031,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40121": {
+      "channel_msg_id": 2653,
+      "product_id": "1005009278114794",
+      "title": "Inphic A9 PRO MAX Wireless Gaming Mouse",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40121,
+      "price": 11.5,
+      "timestamp": 1794647237.7084959,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23715,17 +23725,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794647090.4421527,
+    "last_deal_post_time": 1794647243.301788,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794647093.2774193,
+    "last_sweep_time": 1794647247.2840614,
     "last_sweep_times": {
-      "algeria": 1794647090.4165957,
-      "france": 1794647093.2774193
+      "algeria": 1794647243.2693858,
+      "france": 1794647247.2840614
     },
     "last_deal_post_times": {
-      "algeria": 1794647090.4421527
+      "algeria": 1794647243.301788
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -26377,7 +26387,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "ecksdeal:6037",
     "zedstoreonline:39582",
     "zedstoreonline:39585",
     "zedstoreonline:39586",
@@ -27376,7 +27385,8 @@
     "aniscoupons:34840",
     "aniscoupons:34841",
     "aniscoupons:34842",
-    "aniscoupons:34843"
+    "aniscoupons:34843",
+    "aniscoupons:34844"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -28159,6 +28169,11 @@
         "channel": "zedstoreonline",
         "ts": 1794644112.4663763,
         "price": 10.7
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794647242.3681889,
+        "price": 10.7
       }
     ],
     "1005010121513376": [
@@ -28220,6 +28235,13 @@
         "channel": "aniscoupons",
         "ts": 1794647078.4088635,
         "price": 78.4
+      }
+    ],
+    "1005009278114794": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794647233.6110482,
+        "price": 11.5
       }
     ]
   },
