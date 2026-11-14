@@ -1582,7 +1582,7 @@
     "1005009278114794": 1794647237.7084959,
     "1005010210432531": 1794604620.3292344,
     "1005013422894128": 1794487083.9711623,
-    "1005010297094897": 1794500546.592492,
+    "1005010297094897": 1794657082.5305285,
     "1005009012821000": 1794502225.0175712,
     "1005013485724377": 1794606651.7602222,
     "1005012783197164": 1794606646.2896297,
@@ -3658,7 +3658,7 @@
     "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794647237.7084959,
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794604620.3292344,
     "Honor Win RT2": 1794487083.9711623,
-    "MCHOSE A7 V3 Pro": 1794489491.8874733,
+    "MCHOSE A7 V3 Pro": 1794657082.5305285,
     "سماعات Fifine Ampligame H6 7.1 RGB": 1794496851.9006197,
     "MCHOSE A7 V3 Lightweight": 1794500546.592492,
     "FANTECH SHOOTER III WGP13S": 1794501299.95393,
@@ -3700,7 +3700,6 @@
     "Delux M800mini Wireless Gaming Mouse": 1794653739.643998
   },
   "published_post_keys": [
-    "bnddeals:50942",
     "aniscoupons:33000",
     "test_channel:1791677496",
     "aniscoupons:32755",
@@ -4699,11 +4698,12 @@
     "aniscoupons:34867",
     "aniscoupons:34868",
     "aniscoupons:34871",
-    "aniscoupons:34872"
+    "aniscoupons:34872",
+    "aniscoupons:34873"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794656885.3877928,
+  "last_run_time": 1794657082.5305285,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4734,8 +4734,8 @@
       "last_check_time": 1794656874.8789613
     },
     "aniscoupons": {
-      "last_message_id": 34872,
-      "last_check_time": 1794656887.4530969
+      "last_message_id": 34873,
+      "last_check_time": 1794657084.5754697
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -5404,7 +5404,7 @@
     "1005013089015192": 261.9,
     "1005009278114794": 11.5,
     "1005013422894128": 499.5,
-    "1005010297094897": 34.1,
+    "1005010297094897": 44.8,
     "1005009012821000": 87.8,
     "1005013485724377": 11.54,
     "1005012783197164": 36.46,
@@ -24017,6 +24017,16 @@
       "price": 41.4,
       "timestamp": 1794656885.3877928,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34873": {
+      "channel_msg_id": 2683,
+      "product_id": "1005010297094897",
+      "title": "MCHOSE A7 V3 Pro",
+      "channel": "aniscoupons",
+      "source_msg_id": 34873,
+      "price": 44.8,
+      "timestamp": 1794657082.5305285,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -24025,17 +24035,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794656888.3769011,
+    "last_deal_post_time": 1794657085.406821,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794656891.2706773,
+    "last_sweep_time": 1794657088.4530773,
     "last_sweep_times": {
-      "algeria": 1794656888.34842,
-      "france": 1794656891.2706773
+      "algeria": 1794657085.3879538,
+      "france": 1794657088.4530773
     },
     "last_deal_post_times": {
-      "algeria": 1794656888.3769011
+      "algeria": 1794657085.406821
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24818,7 +24828,7 @@
     "1005013089015192": "zedstoreonline",
     "1005009278114794": "zedstoreonline",
     "1005013422894128": "aniscoupons",
-    "1005010297094897": "lodydeals",
+    "1005010297094897": "aniscoupons",
     "1005009012821000": "lodydeals",
     "1005013485724377": "lodydeals",
     "1005012783197164": "lodydeals",
@@ -28689,6 +28699,13 @@
         "channel": "aniscoupons",
         "ts": 1794656883.7195182,
         "price": 41.4
+      }
+    ],
+    "1005010297094897": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794657078.6423717,
+        "price": 44.8
       }
     ]
   },
