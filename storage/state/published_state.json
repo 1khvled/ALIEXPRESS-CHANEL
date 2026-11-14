@@ -893,7 +893,7 @@
     "1005010178295650": 1793743848.9735239,
     "1005006861002512": 1791151259.5667012,
     "1005012285327063": 1794643904.9248152,
-    "1005006581583862": 1794500368.8434355,
+    "1005006581583862": 1794647626.4665492,
     "1005012816171978": 1792157876.0860639,
     "1005006248571160": 1791012946.4110153,
     "1005009390995992": 1791638734.5386465,
@@ -2754,7 +2754,7 @@
     "آلة حلاقة من علامة KEMEI": 1791012946.4110153,
     "HAYLOU S40 ANC Wireless Headphone 50dB Noise Canceling Hi-Res 3D Spatial": 1791638734.5386465,
     "Predyee Groin Hair Trimmer WH": 1791013836.445986,
-    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1794472518.4835422,
+    "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling": 1794647626.4665492,
     "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise": 1791014140.3360124,
     "Baseus-Bowie E5x": 1791014145.8727648,
     "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": 1791014755.488723,
@@ -3692,7 +3692,6 @@
     "SOYO AMD B550M Gaming": 1794643078.050233
   },
   "published_post_keys": [
-    "lodydeals:45768",
     "lodydeals:45426",
     "couponsglobal:48810",
     "lodydeals:45534",
@@ -4691,11 +4690,12 @@
     "aniscoupons:34835",
     "aniscoupons:34836",
     "aniscoupons:34838",
-    "zedstoreonline:40121"
+    "zedstoreonline:40121",
+    "aniscoupons:34845"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794647237.7084959,
+  "last_run_time": 1794647626.4665492,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4726,8 +4726,8 @@
       "last_check_time": 1794647239.7850788
     },
     "aniscoupons": {
-      "last_message_id": 34844,
-      "last_check_time": 1794647242.4857638
+      "last_message_id": 34845,
+      "last_check_time": 1794647628.5368261
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -4818,7 +4818,7 @@
     "1005008901941749": 0.95,
     "1005006861002512": 13.56,
     "1005012285327063": 12.11,
-    "1005006581583862": 18.44,
+    "1005006581583862": 18.4,
     "1005012816171978": 274.46,
     "1005009834132291": 21.1,
     "1005010585654037": 19.4,
@@ -23717,6 +23717,16 @@
       "price": 11.5,
       "timestamp": 1794647237.7084959,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34845": {
+      "channel_msg_id": 2654,
+      "product_id": "1005006581583862",
+      "title": "HAYLOU S30 Wireless Bluetooth 5.4 Headphones With Mic Noise Cancelling",
+      "channel": "aniscoupons",
+      "source_msg_id": 34845,
+      "price": 18.4,
+      "timestamp": 1794647626.4665492,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23725,17 +23735,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794647243.301788,
+    "last_deal_post_time": 1794647629.4608793,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794647247.2840614,
+    "last_sweep_time": 1794647632.1469157,
     "last_sweep_times": {
-      "algeria": 1794647243.2693858,
-      "france": 1794647247.2840614
+      "algeria": 1794647629.430059,
+      "france": 1794647632.1469157
     },
     "last_deal_post_times": {
-      "algeria": 1794647243.301788
+      "algeria": 1794647629.4608793
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23827,7 +23837,7 @@
     "1005012881256093": "lodydeals",
     "1005006861002512": "lodydeals",
     "1005012285327063": "aniscoupons",
-    "1005006581583862": "lodydeals",
+    "1005006581583862": "aniscoupons",
     "1005012816171978": "lodydeals",
     "1005009834132291": "aniscoupons",
     "1005010585654037": "lodydeals",
@@ -28042,11 +28052,6 @@
     "1005012947477238": [
       {
         "channel": "aniscoupons",
-        "ts": 1794604244.8378496,
-        "price": 217.8
-      },
-      {
-        "channel": "aniscoupons",
         "ts": 1794614518.441233,
         "price": 217.8
       }
@@ -28064,11 +28069,6 @@
       }
     ],
     "1005010536089199": [
-      {
-        "channel": "zedstoreonline",
-        "ts": 1794604239.5906916,
-        "price": 33.6
-      },
       {
         "channel": "aniscoupons",
         "ts": 1794608281.3103452,
@@ -28242,6 +28242,13 @@
         "channel": "zedstoreonline",
         "ts": 1794647233.6110482,
         "price": 11.5
+      }
+    ],
+    "1005006581583862": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794647624.3681765,
+        "price": 18.4
       }
     ]
   },
