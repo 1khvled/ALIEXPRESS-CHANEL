@@ -1398,7 +1398,7 @@
     "1005013137304827": 1793613926.9213502,
     "1005010355409000": 1793613934.9347482,
     "1005012648097890": 1793613942.3770478,
-    "1005012524603100": 1794502039.7814257,
+    "1005012524603100": 1794654766.3431966,
     "1005012770405022": 1794502591.7937624,
     "1005012171521680": 1794246148.3838613,
     "1005010758512904": 1793613961.7877593,
@@ -3373,7 +3373,7 @@
     "HONOR 600s 8/256GB": 1793613926.9213502,
     "Realme GT8 Pro": 1793613934.9347482,
     "Oppo Find X8s+": 1793613942.3770478,
-    "Xiaoxin Pad Pro 13 (8/128)": 1794502039.7814257,
+    "Xiaoxin Pad Pro 13 (8/128)": 1794654766.3431966,
     "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S CPU 11.1\" 4K 144Hz LCD Display 1100": 1793613951.963987,
     "Honor Pad V9 (8/256)": 1794474343.7781756,
     "HONOR Pad X8b (LTE 6/128GB)": 1794136369.073103,
@@ -3700,7 +3700,6 @@
     "Delux M800mini Wireless Gaming Mouse": 1794653739.643998
   },
   "published_post_keys": [
-    "megaphonna:8173",
     "aniscoupons:33284",
     "lodydeals:45430",
     "couponsglobal:48763",
@@ -4699,11 +4698,12 @@
     "aniscoupons:34860",
     "aniscoupons:34862",
     "aniscoupons:34863",
-    "aniscoupons:34864"
+    "aniscoupons:34864",
+    "aniscoupons:34865"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794653739.643998,
+  "last_run_time": 1794654766.3431966,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4734,8 +4734,8 @@
       "last_check_time": 1794654355.04917
     },
     "aniscoupons": {
-      "last_message_id": 34864,
-      "last_check_time": 1794653741.7230456
+      "last_message_id": 34865,
+      "last_check_time": 1794654768.4222078
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -23947,6 +23947,16 @@
       "price": 13.94,
       "timestamp": 1794653739.643998,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34865": {
+      "channel_msg_id": 2676,
+      "product_id": "1005012524603100",
+      "title": "Xiaoxin Pad Pro 13 (8/128)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34865,
+      "price": 283.59,
+      "timestamp": 1794654766.3431966,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23955,17 +23965,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794653742.5960321,
+    "last_deal_post_time": 1794654769.3860238,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794654564.2923777,
+    "last_sweep_time": 1794654771.8194134,
     "last_sweep_times": {
-      "algeria": 1794654562.3076825,
-      "france": 1794654564.2923777
+      "algeria": 1794654769.352857,
+      "france": 1794654771.8194134
     },
     "last_deal_post_times": {
-      "algeria": 1794653742.5960321
+      "algeria": 1794654769.3860238
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -28207,11 +28217,6 @@
     ],
     "1005008708333999": [
       {
-        "channel": "zedstoreonline",
-        "ts": 1794611403.633974,
-        "price": 136.7
-      },
-      {
         "channel": "aniscoupons",
         "ts": 1794612683.2171423,
         "price": 136.7
@@ -28570,6 +28575,13 @@
         "channel": "aniscoupons",
         "ts": 1794653738.2059202,
         "price": 13.94
+      }
+    ],
+    "1005012524603100": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794654764.5891676,
+        "price": 283.59
       }
     ]
   },
