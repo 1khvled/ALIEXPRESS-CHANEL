@@ -1376,7 +1376,7 @@
     "1005007010692093": 1793601389.0047116,
     "1005006994466968": 1793601744.1664062,
     "1005011927267564": 1793728844.5794795,
-    "1005008291023017": 1794598366.5791407,
+    "1005008291023017": 1794653127.8304193,
     "1005012947477238": 1794604246.449916,
     "1005010121513376": 1794580548.39376,
     "1005009064526142": 1793613380.753295,
@@ -3686,7 +3686,7 @@
     "Lexar V400 USB3.0 64GB": 1794593403.339319,
     "HAYLOU S40 ANC Wireless": 1794597627.451524,
     "CUSU Memory DDR5 (16GB) 6000MHz": 1794598362.0815012,
-    "Realme 15 Pro (12/512GB)": 1794598366.5791407,
+    "Realme 15 Pro (12/512GB)": 1794653127.8304193,
     "MAONO T1 Plus Dual-Capsule Wireless Lavalier Microphone Lapel Microphone": 1794599278.9506347,
     "Blackview OSCAL PILOT 5  8/256": 1794604060.7762444,
     "Xiaomi Redmi Note 17 5G Global Version (6/256GB": 1794604246.449916,
@@ -3698,7 +3698,6 @@
     "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless": 1794649518.026784
   },
   "published_post_keys": [
-    "megaphonna:8738",
     "lodydeals:45939",
     "bnddeals:50852",
     "megaphonna:8173",
@@ -4697,11 +4696,12 @@
     "aniscoupons:34855",
     "aniscoupons:34856",
     "aniscoupons:34858",
-    "aniscoupons:34860"
+    "aniscoupons:34860",
+    "aniscoupons:34862"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794652347.6620066,
+  "last_run_time": 1794653127.8304193,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4732,8 +4732,8 @@
       "last_check_time": 1794651741.453585
     },
     "aniscoupons": {
-      "last_message_id": 34860,
-      "last_check_time": 1794652519.9895563
+      "last_message_id": 34862,
+      "last_check_time": 1794653129.9095418
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -23915,6 +23915,16 @@
       "price": 20.48,
       "timestamp": 1794652347.6620066,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34862": {
+      "channel_msg_id": 2673,
+      "product_id": "1005008291023017",
+      "title": "Realme 15 Pro (12/512GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34862,
+      "price": 305.22,
+      "timestamp": 1794653127.8304193,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23923,17 +23933,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794652350.6908517,
+    "last_deal_post_time": 1794653130.9646504,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794652523.3224201,
+    "last_sweep_time": 1794653134.1218603,
     "last_sweep_times": {
-      "algeria": 1794652520.796886,
-      "france": 1794652523.3224201
+      "algeria": 1794653130.9306579,
+      "france": 1794653134.1218603
     },
     "last_deal_post_times": {
-      "algeria": 1794652350.6908517
+      "algeria": 1794653130.9646504
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -26588,7 +26598,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:39601",
     "zedstoreonline:39602",
     "zedstoreonline:39606",
     "zedstoreonline:39608",
@@ -27587,7 +27596,8 @@
     "zedstoreonline:40133",
     "zedstoreonline:40134",
     "aniscoupons:34857",
-    "aniscoupons:34859"
+    "aniscoupons:34859",
+    "aniscoupons:34861"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -28157,11 +28167,6 @@
   "competitor_product_sightings": {
     "1005010210432531": [
       {
-        "channel": "zedstoreonline",
-        "ts": 1794609564.766112,
-        "price": 40.0
-      },
-      {
         "channel": "aniscoupons",
         "ts": 1794613968.5836847,
         "price": 147.8
@@ -28233,6 +28238,11 @@
         "channel": "zedstoreonline",
         "ts": 1794643901.0443327,
         "price": 305.0
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794653125.4953392,
+        "price": 305.22
       }
     ],
     "1005011754993234": [
@@ -28392,6 +28402,11 @@
       {
         "channel": "zedstoreonline",
         "ts": 1794649340.7000692,
+        "price": 16.0
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794653124.3184237,
         "price": 16.0
       }
     ],
