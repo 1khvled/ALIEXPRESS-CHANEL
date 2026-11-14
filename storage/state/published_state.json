@@ -903,7 +903,7 @@
     "1005012390398338": 1791027348.2517543,
     "1005012297674623": 1791103551.065819,
     "1005007097205322": 1791014755.488723,
-    "1005010470699571": 1794485060.022662,
+    "1005010470699571": 1794659893.4382045,
     "1005012741634118": 1793966676.2934937,
     "1005010453516983": 1792172109.913469,
     "1005008554596598": 1794165031.7231321,
@@ -1607,7 +1607,7 @@
     "1005007010612283": 1794599454.461018,
     "1005010788231460": 1794604060.7762444,
     "1389260212": 1794605894.0354748,
-    "1005012138794873": 1794608839.031857,
+    "1005012138794873": 1794659887.3198001,
     "1005007129557126": 1794643078.050233,
     "1005010519693722": 1794649518.026784,
     "1005010788149535": 1794650949.6978376
@@ -2764,7 +2764,7 @@
     "HTC NE79 TWS Bluetooth 6.0 Earbuds AI Translation 135 Languages ENC Noise": 1791014140.3360124,
     "Baseus-Bowie E5x": 1791014145.8727648,
     "Affichage tête haute GPS pour voiture – compteur de vitesse numérique km/h, police LED grande, compa": 1791014755.488723,
-    "HAYLOU Solar Lite 2": 1794485060.022662,
+    "HAYLOU Solar Lite 2": 1794659893.4382045,
     "HAYLOU FlowLoop S33": 1794597984.6494167,
     "OPPO A6 Pro 4G Smartphone MediaTek Helio G100 Processor 7000mAh Battery": 1791015953.484505,
     "WiFi 6 USB3.0 Adapter 1800Mbps 5G/2.4GHz": 1791017145.537471,
@@ -3159,7 +3159,7 @@
     "VIVO IQOO 15T (12/256)": 1793448820.6517296,
     "ONEPLUS ACE 6 (12/256)": 1793448870.3873131,
     "Xiaomi Pad 7  8/256": 1793467039.5413008,
-    "CUSU DDR4 Ram 8GBx2 3200MHz": 1793467044.3332574,
+    "CUSU DDR4 Ram 8GBx2 3200MHz": 1794659887.3198001,
     "Xiaomi Pad 8  8/256": 1793467058.6031225,
     "OPPO K15 Pro Plus 12/256": 1793467066.6592104,
     "New HONOR 600 Lite 5G Smartphone 8GB+256GB 6.6'' AMOLED Screen 108MP Main": 1793467113.354114,
@@ -3700,8 +3700,6 @@
     "Delux M800mini Wireless Gaming Mouse": 1794653739.643998
   },
   "published_post_keys": [
-    "megaphonna:8510",
-    "bnddeals:50937",
     "lodydeals:45484",
     "zedstoreonline:38894",
     "test_channel:1791675776",
@@ -4699,19 +4697,21 @@
     "zedstoreonline:40143",
     "aniscoupons:34877",
     "aniscoupons:34879",
-    "aniscoupons:34880"
+    "aniscoupons:34880",
+    "zedstoreonline:40146",
+    "zedstoreonline:40147"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794659521.4318178,
+  "last_run_time": 1794659893.4382045,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46486,
-      "last_check_time": 1794650114.9260104
+      "last_message_id": 46487,
+      "last_check_time": 1794659881.2908754
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4730,8 +4730,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40145,
-      "last_check_time": 1794659148.1860023
+      "last_message_id": 40147,
+      "last_check_time": 1794659895.5132468
     },
     "aniscoupons": {
       "last_message_id": 34880,
@@ -4836,7 +4836,7 @@
     "1005012390398338": 5.09,
     "1005012297674623": 6.89,
     "1005007097205322": 15.1,
-    "1005010470699571": 17.8,
+    "1005010470699571": 18.8,
     "1005012741634118": 23.7,
     "1005008554596598": 13.96,
     "1005008776714223": 74.47,
@@ -24097,6 +24097,26 @@
       "price": 40.5,
       "timestamp": 1794659521.4318178,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40146": {
+      "channel_msg_id": 2691,
+      "product_id": "1005012138794873",
+      "title": "CUSU DDR4 Ram 8GBx2 3200MHz",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40146,
+      "price": 82.4,
+      "timestamp": 1794659887.3198001,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:40147": {
+      "channel_msg_id": 2692,
+      "product_id": "1005010470699571",
+      "title": "HAYLOU Solar Lite 2",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40147,
+      "price": 18.8,
+      "timestamp": 1794659893.4382045,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -24105,17 +24125,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794659524.482973,
+    "last_deal_post_time": 1794659896.9153633,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794659700.1947868,
+    "last_sweep_time": 1794659899.2209232,
     "last_sweep_times": {
-      "algeria": 1794659697.7637992,
-      "france": 1794659700.1947868
+      "algeria": 1794659896.8815863,
+      "france": 1794659899.2209232
     },
     "last_deal_post_times": {
-      "algeria": 1794659524.482973
+      "algeria": 1794659896.9153633
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24923,7 +24943,7 @@
     "1005007010612283": "zedstoreonline",
     "1005010788231460": "zedstoreonline",
     "1389260212": "zedstoreonline",
-    "1005012138794873": "aniscoupons",
+    "1005012138794873": "zedstoreonline",
     "1005007129557126": "aniscoupons",
     "1005010519693722": "lodydeals",
     "1005010788149535": "aniscoupons"
@@ -26771,8 +26791,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:39622",
-    "aniscoupons:34100",
     "aniscoupons:34101",
     "aniscoupons:34102",
     "aniscoupons:34103",
@@ -27770,7 +27788,9 @@
     "aniscoupons:34876",
     "aniscoupons:34878",
     "zedstoreonline:40144",
-    "zedstoreonline:40145"
+    "zedstoreonline:40145",
+    "lodydeals:46486",
+    "lodydeals:46487"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -28718,6 +28738,11 @@
         "channel": "zedstoreonline",
         "ts": 1794657854.3123083,
         "price": 13.9
+      },
+      {
+        "channel": "lodydeals",
+        "ts": 1794659880.4114234,
+        "price": 13.94
       }
     ],
     "1005012524603100": [
@@ -28828,6 +28853,25 @@
         "channel": "aniscoupons",
         "ts": 1794659519.5388784,
         "price": 40.5
+      },
+      {
+        "channel": "lodydeals",
+        "ts": 1794659881.1474202,
+        "price": 40.43
+      }
+    ],
+    "1005012138794873": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794659885.6458101,
+        "price": 82.4
+      }
+    ],
+    "1005010470699571": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794659891.868846,
+        "price": 18.8
       }
     ]
   },
