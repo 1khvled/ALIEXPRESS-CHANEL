@@ -1479,7 +1479,7 @@
     "1005006411483066": 1794500381.7712336,
     "1005012925301774": 1794348808.2825344,
     "1005012959738411": 1794658966.3702009,
-    "1005008357913212": 1794600189.9159641,
+    "1005008357913212": 1794659521.4318178,
     "1005008703989845": 1794658227.562077,
     "1005007162099601": 1794524556.2538168,
     "1005007038130594": 1794393500.1320646,
@@ -3467,7 +3467,7 @@
     "Fifine Gaming Headset H9W": 1794566561.968837,
     "Fifine Gaming Headset H6": 1794424534.1435025,
     "HyperX Cloud 3 III Wired Gaming Headset": 1794436379.3016446,
-    "KOOTION SSD SATA": 1794600189.9159641,
+    "KOOTION SSD SATA": 1794659521.4318178,
     "ال mouse  الشهيرة رجعت🖱️": 1793966875.5755405,
     "هذون سماعات جدد من   HAYLOU⌚": 1793966887.3818936,
     "HAYLOU WATCH 3 NEW": 1793966892.2256048,
@@ -3700,7 +3700,6 @@
     "Delux M800mini Wireless Gaming Mouse": 1794653739.643998
   },
   "published_post_keys": [
-    "lodydeals:45446",
     "megaphonna:8510",
     "bnddeals:50937",
     "lodydeals:45484",
@@ -4699,11 +4698,12 @@
     "aniscoupons:34875",
     "zedstoreonline:40143",
     "aniscoupons:34877",
-    "aniscoupons:34879"
+    "aniscoupons:34879",
+    "aniscoupons:34880"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794658966.3702009,
+  "last_run_time": 1794659521.4318178,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4734,8 +4734,8 @@
       "last_check_time": 1794659148.1860023
     },
     "aniscoupons": {
-      "last_message_id": 34879,
-      "last_check_time": 1794658968.4470348
+      "last_message_id": 34880,
+      "last_check_time": 1794659523.5135925
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -24087,6 +24087,16 @@
       "price": 68.79,
       "timestamp": 1794658966.3702009,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34880": {
+      "channel_msg_id": 2690,
+      "product_id": "1005008357913212",
+      "title": "KOOTION SSD SATA",
+      "channel": "aniscoupons",
+      "source_msg_id": 34880,
+      "price": 40.5,
+      "timestamp": 1794659521.4318178,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -24095,17 +24105,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794658969.3211055,
+    "last_deal_post_time": 1794659524.482973,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794659339.928377,
+    "last_sweep_time": 1794659527.2586534,
     "last_sweep_times": {
-      "algeria": 1794659336.5003293,
-      "france": 1794659339.928377
+      "algeria": 1794659524.4493725,
+      "france": 1794659527.2586534
     },
     "last_deal_post_times": {
-      "algeria": 1794658969.3211055
+      "algeria": 1794659524.482973
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -28811,6 +28821,13 @@
         "channel": "aniscoupons",
         "ts": 1794658964.6528795,
         "price": 68.79
+      }
+    ],
+    "1005008357913212": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794659519.5388784,
+        "price": 40.5
       }
     ]
   },
