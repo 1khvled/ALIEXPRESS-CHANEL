@@ -795,7 +795,8 @@
     "1005010788231460",
     "1389260212",
     "1005012138794873",
-    "1005007129557126"
+    "1005007129557126",
+    "1005010519693722"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -813,7 +814,7 @@
     "9998887952": 1790887952.6119926,
     "9998887972": 1790887972.157133,
     "100500777666555": 1793956903.3513582,
-    "1005011778621042": 1794507247.0720062,
+    "1005011778621042": 1794649526.1769445,
     "9998888080": 1790888080.3099577,
     "1005009234854371": 1793543664.66204,
     "1005006533038973": 1791104468.758226,
@@ -1571,7 +1572,7 @@
     "1005013525374520": 1794475830.5998907,
     "1005012650636759": 1794606633.373106,
     "1005011936109841": 1794475842.5666552,
-    "1005012333024137": 1794579232.5818455,
+    "1005012333024137": 1794649534.468107,
     "1005007822635375": 1794501299.95393,
     "1005001849536579": 1794575748.1745248,
     "1005006967391791": 1794476797.164376,
@@ -1606,7 +1607,8 @@
     "1005010788231460": 1794604060.7762444,
     "1389260212": 1794605894.0354748,
     "1005012138794873": 1794608839.031857,
-    "1005007129557126": 1794643078.050233
+    "1005007129557126": 1794643078.050233,
+    "1005010519693722": 1794649518.026784
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2645,7 +2647,8 @@
     "H96 MAX RK3518 2/16GB",
     "realme 45W SUPERVOOC Charger",
     "Kodak K133 USB 3.1 Flash Drive 256GB",
-    "SOYO AMD B550M Gaming"
+    "SOYO AMD B550M Gaming",
+    "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -2824,7 +2827,7 @@
     "ATTACK SHARK X5": 1791106544.154073,
     "ATTACK SHARK X2 Pro": 1791106853.9447496,
     "ATTACK SHARK L80PRO Ultralight": 1791107750.295487,
-    "AMD Ryzen 7 5700X": 1794507247.0720062,
+    "AMD Ryzen 7 5700X": 1794649526.1769445,
     "هاتف ينسيك في شارجور🤣🤣": 1791109857.5190113,
     "CMF Smart Watch 3 pro AMOLED": 1794606997.856065,
     "ATTACK SHARK V6 Tri-Mode": 1791110751.0808105,
@@ -3672,7 +3675,7 @@
     "Luxury Quartz Watch": 1794577769.242665,
     "Maono Gamerwave DGM20S": 1794577943.6825492,
     "CUSU SSD CV3500 M2 1TB": 1794578319.3190603,
-    "S80 Flash Drive USB 3.2 Type-A 128GB": 1794579232.5818455,
+    "S80 Flash Drive USB 3.2 Type-A 128GB": 1794649534.468107,
     "ATK VXE Dragonfly V3 PRO": 1794580354.5744467,
     "Kingston DataTraveler USB 128GB": 1794589551.8961492,
     "Honor X80 Pro Max 8/128": 1794590278.0528092,
@@ -3689,12 +3692,10 @@
     "H96 MAX RK3518 2/16GB": 1794606633.373106,
     "realme 45W SUPERVOOC Charger": 1794606651.7602222,
     "Kodak K133 USB 3.1 Flash Drive 256GB": 1794614891.9797184,
-    "SOYO AMD B550M Gaming": 1794643078.050233
+    "SOYO AMD B550M Gaming": 1794643078.050233,
+    "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless": 1794649518.026784
   },
   "published_post_keys": [
-    "test_channel:1792162360",
-    "lodydeals:45533",
-    "aniscoupons:32692",
     "megaphonna:8694",
     "test_channel:1792329220",
     "aniscoupons:32859",
@@ -4691,19 +4692,22 @@
     "zedstoreonline:40126",
     "zedstoreonline:40127",
     "aniscoupons:34849",
-    "aniscoupons:34850"
+    "aniscoupons:34850",
+    "lodydeals:46485",
+    "zedstoreonline:40128",
+    "aniscoupons:34852"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794649363.0054698,
+  "last_run_time": 1794649534.468107,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46484,
-      "last_check_time": 1794612679.851251
+      "last_message_id": 46485,
+      "last_check_time": 1794649520.105558
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4722,12 +4726,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40127,
-      "last_check_time": 1794649350.5331736
+      "last_message_id": 40128,
+      "last_check_time": 1794649528.2523263
     },
     "aniscoupons": {
-      "last_message_id": 34851,
-      "last_check_time": 1794649368.6093328
+      "last_message_id": 34852,
+      "last_check_time": 1794649536.5446296
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -5422,7 +5426,8 @@
     "1005010788231460": 178.4,
     "1389260212": 14.8,
     "1005012138794873": 82.4,
-    "1005007129557126": 82.66
+    "1005007129557126": 82.66,
+    "1005010519693722": 14.42
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23797,6 +23802,36 @@
       "price": 7.6,
       "timestamp": 1794649363.0054698,
       "status": "ACTIVE"
+    },
+    "lodydeals:46485": {
+      "channel_msg_id": 2662,
+      "product_id": "1005010519693722",
+      "title": "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless",
+      "channel": "lodydeals",
+      "source_msg_id": 46485,
+      "price": 14.42,
+      "timestamp": 1794649518.026784,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:40128": {
+      "channel_msg_id": 2663,
+      "product_id": "1005011778621042",
+      "title": "AMD Ryzen 7 5700X",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40128,
+      "price": 118.5,
+      "timestamp": 1794649526.1769445,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34852": {
+      "channel_msg_id": 2664,
+      "product_id": "1005012333024137",
+      "title": "S80 Flash Drive USB 3.2 Type-A 128GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34852,
+      "price": 6.07,
+      "timestamp": 1794649534.468107,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23805,17 +23840,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794649369.4154315,
+    "last_deal_post_time": 1794649537.4412715,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794649371.975083,
+    "last_sweep_time": 1794649540.0395427,
     "last_sweep_times": {
-      "algeria": 1794649369.3968506,
-      "france": 1794649371.975083
+      "algeria": 1794649537.407806,
+      "france": 1794649540.0395427
     },
     "last_deal_post_times": {
-      "algeria": 1794649369.4154315
+      "algeria": 1794649537.4412715
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24624,7 +24659,8 @@
     "1005010788231460": "zedstoreonline",
     "1389260212": "zedstoreonline",
     "1005012138794873": "aniscoupons",
-    "1005007129557126": "aniscoupons"
+    "1005007129557126": "aniscoupons",
+    "1005010519693722": "lodydeals"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -25670,7 +25706,8 @@
     "H96 MAX RK3518 2/16GB": "lodydeals",
     "realme 45W SUPERVOOC Charger": "lodydeals",
     "Kodak K133 USB 3.1 Flash Drive 256GB": "zedstoreonline",
-    "SOYO AMD B550M Gaming": "aniscoupons"
+    "SOYO AMD B550M Gaming": "aniscoupons",
+    "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless": "lodydeals"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -28354,6 +28391,20 @@
         "channel": "aniscoupons",
         "ts": 1794649361.4080832,
         "price": 7.6
+      }
+    ],
+    "1005011778621042": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794649524.5711632,
+        "price": 118.5
+      }
+    ],
+    "1005012333024137": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794649532.881998,
+        "price": 6.07
       }
     ]
   },
