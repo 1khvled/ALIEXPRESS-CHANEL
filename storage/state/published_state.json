@@ -1040,7 +1040,7 @@
     "1005010812635861": 1792160246.020243,
     "1005008500550817": 1792025664.1703467,
     "1005009834132291": 1794478912.5670652,
-    "1005008077568655": 1794493355.4264135,
+    "1005008077568655": 1794655651.061057,
     "1005009774318553": 1793543777.6383033,
     "1005012585389764": 1792061322.5579543,
     "1005011997237872": 1793543770.1912897,
@@ -1399,7 +1399,7 @@
     "1005010355409000": 1793613934.9347482,
     "1005012648097890": 1793613942.3770478,
     "1005012524603100": 1794654766.3431966,
-    "1005012770405022": 1794502591.7937624,
+    "1005012770405022": 1794655646.345153,
     "1005012171521680": 1794246148.3838613,
     "1005010758512904": 1793613961.7877593,
     "1005012871436251": 1793707168.1519766,
@@ -1463,7 +1463,7 @@
     "9998887678": 1793967678.8184059,
     "9998887703": 1793967703.2348685,
     "1005008708333999": 1794647085.3020031,
-    "1005012254132930": 1794597436.9389343,
+    "1005012254132930": 1794655633.5523028,
     "1005013028124905": 1793971934.3600886,
     "1005012691642623": 1794074230.5173922,
     "1005010266233059": 1793977272.9654846,
@@ -1560,7 +1560,7 @@
     "1005012639349629": 1794579990.5893576,
     "1005010153422760": 1794487260.3295033,
     "1005012809141747": 1794604985.6884,
-    "1005012912160949": 1794502231.5458007,
+    "1005012912160949": 1794655642.071567,
     "1005012167744546": 1794437860.4294534,
     "1005009582538267": 1794439531.0399334,
     "1005005471311412": 1794475858.8069391,
@@ -3474,7 +3474,7 @@
     "Vivo Y600 Pro": 1793969543.5771117,
     "MAONO PD100X USB/XL": 1793969903.1419857,
     "Realme C100D 4G 4/128GB": 1794164698.641711,
-    "HAYLOU Flowbuds N50 ANC": 1794597436.9389343,
+    "HAYLOU Flowbuds N50 ANC": 1794655633.5523028,
     "Honor 600 Pro 12/256": 1794131798.3098254,
     "HONOR Pad X8a (4/64GB)": 1794476184.5102937,
     "Magcubic HY350 Max 900ANSI": 1794476813.180707,
@@ -3583,7 +3583,7 @@
     "Inphic PG1 RGB Wired Gaming Mouse": 1794649363.0054698,
     "Anker Q20i Hybrid Active": 1794480460.355499,
     "CUSU CV3500Q 2TB M.2": 1794305012.9961731,
-    "MACHENIKE G5Pro Max SE With Charging Dock": 1794493355.4264135,
+    "MACHENIKE G5Pro Max SE With Charging Dock": 1794655651.061057,
     "Xiaoxin Pad Pro GT (8/256)": 1794500185.0688565,
     "Attack Shark X11": 1794480454.9508715,
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794436007.5288515,
@@ -3632,7 +3632,7 @@
     "HONOR X80 PRO MAX": 1794567664.502953,
     "DJI Osmo mobile": 1794487260.3295033,
     "OPPO K15 12/256GB": 1794604985.6884,
-    "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794502231.5458007,
+    "Lenovo Legion Y70 2026 Gamin(12/512GB)": 1794655642.071567,
     "KINGSTON DATA TRAVELER USB3.2 (128G)": 1794438803.0185766,
     "Essager Mini 30W Type C Charger PD": 1794438972.1864517,
     "X96Q TV BOX 2/16GB": 1794599454.461018,
@@ -3663,7 +3663,7 @@
     "MCHOSE A7 V3 Lightweight": 1794500546.592492,
     "FANTECH SHOOTER III WGP13S": 1794501299.95393,
     "DITONG X3Plus  4K WIFI6": 1794502225.0175712,
-    "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": 1794502591.7937624,
+    "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S": 1794655646.345153,
     "realme Original Adapter SUPERVOOC Charger 45W": 1794510747.6816225,
     "EPOMAKER GX1 Tri-mode": 1794606646.2896297,
     "WALRAM M.2  128GB": 1794515920.3397443,
@@ -3700,10 +3700,6 @@
     "Delux M800mini Wireless Gaming Mouse": 1794653739.643998
   },
   "published_post_keys": [
-    "aniscoupons:33284",
-    "lodydeals:45430",
-    "couponsglobal:48763",
-    "couponsglobal:48780",
     "megaphonna:8511",
     "aniscoupons:32776",
     "bnddeals:50942",
@@ -4699,11 +4695,15 @@
     "aniscoupons:34862",
     "aniscoupons:34863",
     "aniscoupons:34864",
-    "aniscoupons:34865"
+    "aniscoupons:34865",
+    "zedstoreonline:40137",
+    "aniscoupons:34866",
+    "aniscoupons:34867",
+    "aniscoupons:34868"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794654766.3431966,
+  "last_run_time": 1794655651.061057,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4730,12 +4730,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40136,
-      "last_check_time": 1794654355.04917
+      "last_message_id": 40138,
+      "last_check_time": 1794655638.6891217
     },
     "aniscoupons": {
-      "last_message_id": 34865,
-      "last_check_time": 1794654768.4222078
+      "last_message_id": 34868,
+      "last_check_time": 1794655653.1071305
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -23957,6 +23957,46 @@
       "price": 283.59,
       "timestamp": 1794654766.3431966,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40137": {
+      "channel_msg_id": 2677,
+      "product_id": "1005012254132930",
+      "title": "HAYLOU Flowbuds N50 ANC",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40137,
+      "price": 14.5,
+      "timestamp": 1794655633.5523028,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34866": {
+      "channel_msg_id": 2678,
+      "product_id": "1005012912160949",
+      "title": "Lenovo Legion Y70 2026 Gamin(12/512GB)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34866,
+      "price": 370.5,
+      "timestamp": 1794655642.071567,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34867": {
+      "channel_msg_id": 2679,
+      "product_id": "1005012770405022",
+      "title": "Lenovo Legion Y900 11 Tablet CN Version MediaTek Dimensity 9500S",
+      "channel": "aniscoupons",
+      "source_msg_id": 34867,
+      "price": 311.3,
+      "timestamp": 1794655646.345153,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34868": {
+      "channel_msg_id": 2680,
+      "product_id": "1005008077568655",
+      "title": "MACHENIKE G5Pro Max SE With Charging Dock",
+      "channel": "aniscoupons",
+      "source_msg_id": 34868,
+      "price": 41.77,
+      "timestamp": 1794655651.061057,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23965,17 +24005,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794654769.3860238,
+    "last_deal_post_time": 1794655653.820519,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794654771.8194134,
+    "last_sweep_time": 1794655656.196251,
     "last_sweep_times": {
-      "algeria": 1794654769.352857,
-      "france": 1794654771.8194134
+      "algeria": 1794655653.8009043,
+      "france": 1794655656.196251
     },
     "last_deal_post_times": {
-      "algeria": 1794654769.3860238
+      "algeria": 1794655653.820519
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -26631,7 +26671,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "zedstoreonline:39608",
     "zedstoreonline:39609",
     "zedstoreonline:39610",
     "zedstoreonline:39612",
@@ -27630,7 +27669,8 @@
     "aniscoupons:34859",
     "aniscoupons:34861",
     "zedstoreonline:40135",
-    "zedstoreonline:40136"
+    "zedstoreonline:40136",
+    "zedstoreonline:40138"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -28521,6 +28561,11 @@
         "channel": "aniscoupons",
         "ts": 1794650132.441166,
         "price": 304.77
+      },
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794655638.6238039,
+        "price": 304.7
       }
     ],
     "1005007345311212": [
@@ -28582,6 +28627,34 @@
         "channel": "aniscoupons",
         "ts": 1794654764.5891676,
         "price": 283.59
+      }
+    ],
+    "1005012254132930": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794655631.7544243,
+        "price": 14.5
+      }
+    ],
+    "1005012912160949": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794655640.4323795,
+        "price": 370.5
+      }
+    ],
+    "1005012770405022": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794655644.7660596,
+        "price": 311.3
+      }
+    ],
+    "1005008077568655": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794655649.4797513,
+        "price": 41.77
       }
     ]
   },
