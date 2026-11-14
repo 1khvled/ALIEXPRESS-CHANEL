@@ -4712,8 +4712,8 @@
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46490,
-      "last_check_time": 1794661163.9431553
+      "last_message_id": 46491,
+      "last_check_time": 1794663921.2498999
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4736,8 +4736,8 @@
       "last_check_time": 1794663195.622249
     },
     "aniscoupons": {
-      "last_message_id": 34888,
-      "last_check_time": 1794663379.94678
+      "last_message_id": 34889,
+      "last_check_time": 1794663924.2065825
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -24211,10 +24211,10 @@
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794663748.4783876,
+    "last_sweep_time": 1794663927.3621087,
     "last_sweep_times": {
-      "algeria": 1794663745.3646202,
-      "france": 1794663748.4783876
+      "algeria": 1794663925.001581,
+      "france": 1794663927.3621087
     },
     "last_deal_post_times": {
       "algeria": 1794663380.8776815
@@ -26874,8 +26874,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:34110",
-    "aniscoupons:34111",
     "aniscoupons:34112",
     "aniscoupons:34113",
     "aniscoupons:34114",
@@ -27873,7 +27871,9 @@
     "aniscoupons:34883",
     "lodydeals:46490",
     "aniscoupons:34884",
-    "aniscoupons:34886"
+    "aniscoupons:34886",
+    "lodydeals:46491",
+    "aniscoupons:34889"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -29015,6 +29015,11 @@
         "channel": "zedstoreonline",
         "ts": 1794660978.4447682,
         "price": 47.5
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794663924.0619044,
+        "price": 47.5
       }
     ],
     "1005012809141747": [
@@ -29043,6 +29048,11 @@
         "channel": "aniscoupons",
         "ts": 1794663375.5038848,
         "price": 228.3
+      },
+      {
+        "channel": "lodydeals",
+        "ts": 1794663921.1066532,
+        "price": 228.32
       }
     ]
   },
