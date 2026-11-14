@@ -845,7 +845,7 @@
     "1005006603602562": 1790941207.5310047,
     "1005010721042860": 1793656098.242545,
     "1005009517247552": 1790941221.8823678,
-    "1005012191191893": 1794564351.798521,
+    "1005012191191893": 1794663377.8719356,
     "1005012968221708": 1793542591.509991,
     "9998883454": 1790943454.3504107,
     "9998883497": 1790943497.723828,
@@ -3534,7 +3534,7 @@
     "Lenovo LE257 Headphones": 1794137638.8201442,
     "Honor 600s CN (8/256)": 1794650134.0330412,
     "ويبكام OBSBOT MEET 2 Webcam 4K": 1794140022.1412559,
-    "Blackview Mega 5": 1794564351.798521,
+    "Blackview Mega 5": 1794663377.8719356,
     "Warvank X8 Wireless Gaming Mouse": 1794496858.1106308,
     "Xiaoxin Pad Pro 2025 (8/128GB)": 1794475091.4412947,
     "سماعات ONIKUMA T27 لاسلكية بوضعَي اتصال 2.4GHz وBluetooth": 1794145536.5317988,
@@ -3702,7 +3702,6 @@
     "ASROCK X570M PRO4 Motherboard": 1794660431.126332
   },
   "published_post_keys": [
-    "couponsglobal:48853",
     "bnddeals:50936",
     "ecksdeal:5940",
     "lodydeals:45690",
@@ -4701,11 +4700,12 @@
     "zedstoreonline:40151",
     "aniscoupons:34885",
     "aniscoupons:34887",
-    "zedstoreonline:40152"
+    "zedstoreonline:40152",
+    "aniscoupons:34888"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794663193.5352495,
+  "last_run_time": 1794663377.8719356,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4736,8 +4736,8 @@
       "last_check_time": 1794663195.622249
     },
     "aniscoupons": {
-      "last_message_id": 34887,
-      "last_check_time": 1794662826.2866817
+      "last_message_id": 34888,
+      "last_check_time": 1794663379.94678
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -24189,6 +24189,16 @@
       "price": 35.9,
       "timestamp": 1794663193.5352495,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34888": {
+      "channel_msg_id": 2700,
+      "product_id": "1005012191191893",
+      "title": "Blackview Mega 5",
+      "channel": "aniscoupons",
+      "source_msg_id": 34888,
+      "price": 228.3,
+      "timestamp": 1794663377.8719356,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -24197,17 +24207,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794663197.4394908,
+    "last_deal_post_time": 1794663380.8776815,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794663200.6861138,
+    "last_sweep_time": 1794663384.3511333,
     "last_sweep_times": {
-      "algeria": 1794663197.4060547,
-      "france": 1794663200.6861138
+      "algeria": 1794663380.8516273,
+      "france": 1794663384.3511333
     },
     "last_deal_post_times": {
-      "algeria": 1794663197.4394908
+      "algeria": 1794663380.8776815
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -29026,6 +29036,13 @@
         "channel": "zedstoreonline",
         "ts": 1794663191.3914268,
         "price": 35.9
+      }
+    ],
+    "1005012191191893": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794663375.5038848,
+        "price": 228.3
       }
     ]
   },
