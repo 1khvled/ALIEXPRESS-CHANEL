@@ -1075,7 +1075,7 @@
     "9998882360": 1792162360.6633363,
     "9998882475": 1793282475.663889,
     "9998882568": 1792162568.078144,
-    "1005010369693975": 1794472514.3049436,
+    "1005010369693975": 1794644114.5731626,
     "1005006442452857": 1792166326.0335298,
     "9998886462": 1792166462.200491,
     "1005009948598802": 1793500786.1935658,
@@ -2960,7 +2960,7 @@
     "RYZEN 7 5700X": 1794492258.9957209,
     "Ⓜ BLACKVIEW WAVE 10C (4/32)": 1792160262.8028278,
     "Ⓜ  TCL 60 NXT PAPER 8/256📱": 1792160269.0502243,
-    "HAYLOU Mori Pro ANC": 1794421043.2176414,
+    "HAYLOU Mori Pro ANC": 1794644114.5731626,
     "HAYLOU S30 Wireless Bluetooth 5.4 Headphones 43dB Adaptive Noise": 1792166326.0335298,
     "HAYLOU Watch Faro Voice Calling Smart Watch": 1792360422.5608404,
     "Redmi Note 12 5G 4/128": 1793543770.1912897,
@@ -3692,7 +3692,6 @@
     "SOYO AMD B550M Gaming": 1794643078.050233
   },
   "published_post_keys": [
-    "ecksdeal:5861",
     "test_channel:1792186261",
     "aniscoupons:32777",
     "couponsglobal:48778",
@@ -4691,11 +4690,12 @@
     "zedstoreonline:40107",
     "aniscoupons:34831",
     "aniscoupons:34832",
-    "bnddeals:51301"
+    "bnddeals:51301",
+    "zedstoreonline:40110"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794643910.1118689,
+  "last_run_time": 1794644114.5731626,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4722,12 +4722,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40109,
-      "last_check_time": 1794643901.6679792
+      "last_message_id": 40110,
+      "last_check_time": 1794644116.6466124
     },
     "aniscoupons": {
-      "last_message_id": 34833,
-      "last_check_time": 1794643907.0171263
+      "last_message_id": 34834,
+      "last_check_time": 1794644117.7354772
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -23637,6 +23637,16 @@
       "price": 10.16,
       "timestamp": 1794643910.1118689,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40110": {
+      "channel_msg_id": 2646,
+      "product_id": "1005010369693975",
+      "title": "HAYLOU Mori Pro ANC",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40110,
+      "price": 10.7,
+      "timestamp": 1794644114.5731626,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23645,17 +23655,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794643912.2223651,
+    "last_deal_post_time": 1794644118.4711452,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794643914.4299562,
+    "last_sweep_time": 1794644121.5778117,
     "last_sweep_times": {
-      "algeria": 1794643912.1971774,
-      "france": 1794643914.4299562
+      "algeria": 1794644118.4388638,
+      "france": 1794644121.5778117
     },
     "last_deal_post_times": {
-      "algeria": 1794643912.2223651
+      "algeria": 1794644118.4711452
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -23949,7 +23959,7 @@
     "9998882360": "test_channel",
     "9998882475": "test_channel",
     "9998882568": "test_channel",
-    "1005010369693975": "aniscoupons",
+    "1005010369693975": "zedstoreonline",
     "1005006442452857": "zedstoreonline",
     "9998886462": "test_channel",
     "1005012751475098": "couponsglobal",
@@ -26307,7 +26317,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "lodydeals:46151",
     "lodydeals:46152",
     "lodydeals:46155",
     "lodydeals:46156",
@@ -27306,7 +27315,8 @@
     "zedstoreonline:40106",
     "aniscoupons:34830",
     "zedstoreonline:40109",
-    "aniscoupons:34833"
+    "aniscoupons:34833",
+    "aniscoupons:34834"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -28071,6 +28081,13 @@
         "channel": "bnddeals",
         "ts": 1794643908.3763685,
         "price": 10.16
+      }
+    ],
+    "1005010369693975": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794644112.4663763,
+        "price": 10.7
       }
     ]
   },
