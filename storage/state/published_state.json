@@ -1173,7 +1173,7 @@
     "1005010266487244": 1793448791.1740308,
     "1005010207075594": 1793299454.8390412,
     "1005013351519067": 1793448628.3734028,
-    "1005012484784752": 1794479314.6761642,
+    "1005012484784752": 1794660067.2240539,
     "1005013222140851": 1793467234.8425448,
     "1005013438245033": 1794647075.3250775,
     "1005008986635164": 1793314892.9200466,
@@ -1383,7 +1383,7 @@
     "1005010009130696": 1793613403.4444478,
     "1005013465751932": 1793613440.9413722,
     "1005011778223630": 1793613478.3592212,
-    "1005009231510301": 1794500185.0688565,
+    "1005009231510301": 1794660072.7294455,
     "1005011625723042": 1793613515.3490868,
     "1005006280695304": 1793613524.8970137,
     "1005010149868688": 1793613530.8342392,
@@ -3209,7 +3209,7 @@
     "مدعومة ب Hall effect في Joysticks": 1793542392.5669472,
     "Realme 15 Pro 5G 12/256GB": 1794131420.4163597,
     ".شاشة AMOLED 6.57″ بدقة FHD+": 1793542420.8525836,
-    "AMD Ryzen 5 5600XT": 1794479314.6761642,
+    "AMD Ryzen 5 5600XT": 1794660067.2240539,
     "POCO M7 6/128GB": 1793707060.393079,
     "Blackview Wave 10C  4/32GB": 1793542445.2859337,
     "COLMI i28 Ultra AI  AMOLED": 1793542450.420599,
@@ -3584,7 +3584,7 @@
     "Anker Q20i Hybrid Active": 1794480460.355499,
     "CUSU CV3500Q 2TB M.2": 1794305012.9961731,
     "MACHENIKE G5Pro Max SE With Charging Dock": 1794655651.061057,
-    "Xiaoxin Pad Pro GT (8/256)": 1794500185.0688565,
+    "Xiaoxin Pad Pro GT (8/256)": 1794660072.7294455,
     "Attack Shark X11": 1794480454.9508715,
     "Mic USB Microphone with RGB Modes Professional Condenser Mic for": 1794436007.5288515,
     "MAONO PD100W USB Wireless Dynamic": 1794432872.6767933,
@@ -3700,8 +3700,6 @@
     "Delux M800mini Wireless Gaming Mouse": 1794653739.643998
   },
   "published_post_keys": [
-    "lodydeals:45484",
-    "zedstoreonline:38894",
     "test_channel:1791675776",
     "test_channel:1792111091",
     "zedstoreonline:38843",
@@ -4699,11 +4697,13 @@
     "aniscoupons:34879",
     "aniscoupons:34880",
     "zedstoreonline:40146",
-    "zedstoreonline:40147"
+    "zedstoreonline:40147",
+    "zedstoreonline:40148",
+    "aniscoupons:34881"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794659893.4382045,
+  "last_run_time": 1794660072.7294455,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4730,12 +4730,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40147,
-      "last_check_time": 1794659895.5132468
+      "last_message_id": 40148,
+      "last_check_time": 1794660069.302991
     },
     "aniscoupons": {
-      "last_message_id": 34880,
-      "last_check_time": 1794659523.5135925
+      "last_message_id": 34881,
+      "last_check_time": 1794660074.8067522
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -24117,6 +24117,26 @@
       "price": 18.8,
       "timestamp": 1794659893.4382045,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40148": {
+      "channel_msg_id": 2693,
+      "product_id": "1005012484784752",
+      "title": "AMD Ryzen 5 5600XT",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40148,
+      "price": 98.7,
+      "timestamp": 1794660067.2240539,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34881": {
+      "channel_msg_id": 2694,
+      "product_id": "1005009231510301",
+      "title": "Xiaoxin Pad Pro GT (8/256)",
+      "channel": "aniscoupons",
+      "source_msg_id": 34881,
+      "price": 259.7,
+      "timestamp": 1794660072.7294455,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -24125,17 +24145,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794659896.9153633,
+    "last_deal_post_time": 1794660075.7170284,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794659899.2209232,
+    "last_sweep_time": 1794660078.1304674,
     "last_sweep_times": {
-      "algeria": 1794659896.8815863,
-      "france": 1794659899.2209232
+      "algeria": 1794660075.6822867,
+      "france": 1794660078.1304674
     },
     "last_deal_post_times": {
-      "algeria": 1794659896.9153633
+      "algeria": 1794660075.7170284
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -28872,6 +28892,20 @@
         "channel": "zedstoreonline",
         "ts": 1794659891.868846,
         "price": 18.8
+      }
+    ],
+    "1005012484784752": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794660065.5371711,
+        "price": 98.7
+      }
+    ],
+    "1005009231510301": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794660071.1390655,
+        "price": 259.7
       }
     ]
   },
