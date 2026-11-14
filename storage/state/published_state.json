@@ -794,7 +794,8 @@
     "1005007010612283",
     "1005010788231460",
     "1389260212",
-    "1005012138794873"
+    "1005012138794873",
+    "1005007129557126"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1604,7 +1605,8 @@
     "1005007010612283": 1794599454.461018,
     "1005010788231460": 1794604060.7762444,
     "1389260212": 1794605894.0354748,
-    "1005012138794873": 1794608839.031857
+    "1005012138794873": 1794608839.031857,
+    "1005007129557126": 1794643078.050233
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -2642,7 +2644,8 @@
     "NETUM NT-1698W Handheld Wirelress Barcode Scanner AND NT-1228BL Bluetooth",
     "H96 MAX RK3518 2/16GB",
     "realme 45W SUPERVOOC Charger",
-    "Kodak K133 USB 3.1 Flash Drive 256GB"
+    "Kodak K133 USB 3.1 Flash Drive 256GB",
+    "SOYO AMD B550M Gaming"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3685,10 +3688,10 @@
     "NETUM NT-1698W Handheld Wirelress Barcode Scanner AND NT-1228BL Bluetooth": 1794605894.0354748,
     "H96 MAX RK3518 2/16GB": 1794606633.373106,
     "realme 45W SUPERVOOC Charger": 1794606651.7602222,
-    "Kodak K133 USB 3.1 Flash Drive 256GB": 1794614891.9797184
+    "Kodak K133 USB 3.1 Flash Drive 256GB": 1794614891.9797184,
+    "SOYO AMD B550M Gaming": 1794643078.050233
   },
   "published_post_keys": [
-    "lodydeals:45466",
     "zedstoreonline:38849",
     "aniscoupons:33067",
     "ecksdeal:5861",
@@ -4687,11 +4690,12 @@
     "aniscoupons:34824",
     "zedstoreonline:40102",
     "aniscoupons:34828",
-    "zedstoreonline:40107"
+    "zedstoreonline:40107",
+    "aniscoupons:34831"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794614891.9797184,
+  "last_run_time": 1794643078.050233,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4722,8 +4726,8 @@
       "last_check_time": 1794614894.0558093
     },
     "aniscoupons": {
-      "last_message_id": 34830,
-      "last_check_time": 1794614518.5811758
+      "last_message_id": 34831,
+      "last_check_time": 1794643080.1245575
     },
     "bnddeals": {
       "last_message_id": 51300,
@@ -5417,7 +5421,8 @@
     "1005007010612283": 23.2,
     "1005010788231460": 178.4,
     "1389260212": 14.8,
-    "1005012138794873": 82.4
+    "1005012138794873": 82.4,
+    "1005007129557126": 82.66
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23602,6 +23607,16 @@
       "price": 13.1,
       "timestamp": 1794614891.9797184,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34831": {
+      "channel_msg_id": 2643,
+      "product_id": "1005007129557126",
+      "title": "SOYO AMD B550M Gaming",
+      "channel": "aniscoupons",
+      "source_msg_id": 34831,
+      "price": 82.66,
+      "timestamp": 1794643078.050233,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23610,17 +23625,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794614895.8143096,
+    "last_deal_post_time": 1794643080.936526,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794642666.9930716,
+    "last_sweep_time": 1794643083.312599,
     "last_sweep_times": {
-      "algeria": 1794642665.0432062,
-      "france": 1794642666.9930716
+      "algeria": 1794643080.9055135,
+      "france": 1794643083.312599
     },
     "last_deal_post_times": {
-      "algeria": 1794614895.8143096
+      "algeria": 1794643080.936526
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24428,7 +24443,8 @@
     "1005007010612283": "zedstoreonline",
     "1005010788231460": "zedstoreonline",
     "1389260212": "zedstoreonline",
-    "1005012138794873": "aniscoupons"
+    "1005012138794873": "aniscoupons",
+    "1005007129557126": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -25473,7 +25489,8 @@
     "NETUM NT-1698W Handheld Wirelress Barcode Scanner AND NT-1228BL Bluetooth": "zedstoreonline",
     "H96 MAX RK3518 2/16GB": "lodydeals",
     "realme 45W SUPERVOOC Charger": "lodydeals",
-    "Kodak K133 USB 3.1 Flash Drive 256GB": "zedstoreonline"
+    "Kodak K133 USB 3.1 Flash Drive 256GB": "zedstoreonline",
+    "SOYO AMD B550M Gaming": "aniscoupons"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
