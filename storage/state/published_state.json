@@ -1308,7 +1308,7 @@
     "1005009621100138": 1793542634.9331498,
     "1005004905380908": 1793542639.2483642,
     "1005013081060247": 1793543567.486626,
-    "1005012498496817": 1793543578.6842017,
+    "1005012498496817": 1794662824.2051413,
     "1005003413514494": 1793732921.385459,
     "1005008741607292": 1794660431.126332,
     "1005010158587315": 1793543677.5915465,
@@ -3011,7 +3011,7 @@
     "Vivo X200S 12/256": 1793448596.0702198,
     "IQOO 15T 12/256": 1794392587.3539767,
     "Honor Power 2 12/256": 1793276177.7089784,
-    "OnePlus Turbo 6x  6/128GB": 1793276192.7711725,
+    "OnePlus Turbo 6x  6/128GB": 1794662824.2051413,
     "Oneplus ACE 6 Ultra 12/256GB": 1794487833.0095515,
     "VIVO Y600 Pro 8/128": 1793278959.3832097,
     "Oppo Find X9 12/256": 1793521744.753259,
@@ -3702,7 +3702,6 @@
     "ASROCK X570M PRO4 Motherboard": 1794660431.126332
   },
   "published_post_keys": [
-    "aniscoupons:33270",
     "lodydeals:45476",
     "couponsglobal:48853",
     "bnddeals:50936",
@@ -4701,11 +4700,12 @@
     "aniscoupons:34881",
     "zedstoreonline:40149",
     "zedstoreonline:40151",
-    "aniscoupons:34885"
+    "aniscoupons:34885",
+    "aniscoupons:34887"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794661908.7439618,
+  "last_run_time": 1794662824.2051413,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4736,8 +4736,8 @@
       "last_check_time": 1794660982.3295295
     },
     "aniscoupons": {
-      "last_message_id": 34886,
-      "last_check_time": 1794662458.193194
+      "last_message_id": 34887,
+      "last_check_time": 1794662826.2866817
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -5159,7 +5159,7 @@
     "1005009621100138": 35.76,
     "1005004905380908": 8.79,
     "1005013081060247": 138.13,
-    "1005012498496817": 204.37,
+    "1005012498496817": 196.4,
     "1005003413514494": 20.3,
     "1005008741607292": 110.8,
     "1005010158587315": 141.02,
@@ -24169,6 +24169,16 @@
       "price": 349.4,
       "timestamp": 1794661908.7439618,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34887": {
+      "channel_msg_id": 2698,
+      "product_id": "1005012498496817",
+      "title": "OnePlus Turbo 6x  6/128GB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34887,
+      "price": 196.4,
+      "timestamp": 1794662824.2051413,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -24177,17 +24187,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794661911.7253807,
+    "last_deal_post_time": 1794662827.1393025,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794662637.4719934,
+    "last_sweep_time": 1794662829.5094104,
     "last_sweep_times": {
-      "algeria": 1794662635.0112343,
-      "france": 1794662637.4719934
+      "algeria": 1794662827.1050205,
+      "france": 1794662829.5094104
     },
     "last_deal_post_times": {
-      "algeria": 1794661911.7253807
+      "algeria": 1794662827.1393025
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24711,7 +24721,7 @@
     "1005009621100138": "ecksdeal",
     "1005004905380908": "ecksdeal",
     "1005013081060247": "lodydeals",
-    "1005012498496817": "lodydeals",
+    "1005012498496817": "aniscoupons",
     "1005003413514494": "lodydeals",
     "1005008741607292": "zedstoreonline",
     "1005010158587315": "lodydeals",
@@ -28618,6 +28628,11 @@
         "channel": "zedstoreonline",
         "ts": 1794649331.0052443,
         "price": 196.0
+      },
+      {
+        "channel": "aniscoupons",
+        "ts": 1794662822.1859345,
+        "price": 196.4
       }
     ],
     "1005010706590867": [
