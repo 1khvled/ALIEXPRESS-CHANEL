@@ -1446,7 +1446,7 @@
     "1005012150344482": 1794481983.745732,
     "1005006972551834": 1793793774.6743867,
     "1005010169268165": 1793794440.9453664,
-    "1005010702038861": 1794519963.712076,
+    "1005010702038861": 1794658222.162282,
     "1005009313079431": 1794159522.2930505,
     "1005010702511858": 1793903106.9341598,
     "1005008554218453": 1793908979.1776278,
@@ -1480,7 +1480,7 @@
     "1005012925301774": 1794348808.2825344,
     "1005012959738411": 1794608467.1839538,
     "1005008357913212": 1794600189.9159641,
-    "1005008703989845": 1794475632.0153844,
+    "1005008703989845": 1794658227.562077,
     "1005007162099601": 1794524556.2538168,
     "1005007038130594": 1794393500.1320646,
     "1005008248187128": 1794057675.8729835,
@@ -3434,7 +3434,7 @@
     "GameSir T4 Nova Lite": 1794141669.7207782,
     "Xiaoxin Pad Pro GT 8/256GB": 1793737359.999931,
     "EasyThreed 3D Printer Entry": 1793741666.9686077,
-    "CUSU SSD SATA 1TB": 1794567103.631711,
+    "CUSU SSD SATA 1TB": 1794658227.562077,
     "MAONO PD400X USB/XLR": 1793742770.1634803,
     "HyperX Cloud 3 DTS": 1793779903.687306,
     "KOOTION X15 M.2 Nvme 512GB": 1793969920.9023197,
@@ -3499,7 +3499,7 @@
     "Hollyland LARK M2 DUO 2-Person": 1794608467.1839538,
     "[New Launch] realme C100d 4G Smartphone 8000mAh Battery 45W Charge 50MP AI": 1794647085.3020031,
     "Zeblaze Btalk 4 Pro السعر : 17.06": 1794043557.929627,
-    "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794519963.712076,
+    "HyperX Cloud Earbuds II 2 Gaming Earphone": 1794658222.162282,
     "Essager 30W Car Charger": 1794393500.1320646,
     "KOOTION SSD SATA  240GB": 1794051434.2488248,
     "Xiaomi Redmi Note 17 Pro 5G Global Version": 1794060065.5449874,
@@ -3700,8 +3700,6 @@
     "Delux M800mini Wireless Gaming Mouse": 1794653739.643998
   },
   "published_post_keys": [
-    "aniscoupons:33036",
-    "lodydeals:45457",
     "lodydeals:45585",
     "lodydeals:45446",
     "megaphonna:8510",
@@ -4699,11 +4697,13 @@
     "aniscoupons:34873",
     "aniscoupons:34874",
     "zedstoreonline:40142",
-    "aniscoupons:34875"
+    "aniscoupons:34875",
+    "zedstoreonline:40143",
+    "aniscoupons:34877"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794658038.8464694,
+  "last_run_time": 1794658227.562077,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4730,12 +4730,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40142,
-      "last_check_time": 1794658035.601486
+      "last_message_id": 40143,
+      "last_check_time": 1794658224.2258384
     },
     "aniscoupons": {
-      "last_message_id": 34876,
-      "last_check_time": 1794658041.7082484
+      "last_message_id": 34877,
+      "last_check_time": 1794658229.623585
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -5293,7 +5293,7 @@
     "1005009738356108": 17.2,
     "1005008636930795": 31.5,
     "1005013083645836": 304.4,
-    "1005008703989845": 24.8,
+    "1005008703989845": 74.5,
     "1005008060391372": 31.38,
     "1005012593794312": 241.5,
     "1005008357913212": 40.5,
@@ -24057,6 +24057,26 @@
       "price": 114.99,
       "timestamp": 1794658038.8464694,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40143": {
+      "channel_msg_id": 2687,
+      "product_id": "1005010702038861",
+      "title": "HyperX Cloud Earbuds II 2 Gaming Earphone",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40143,
+      "price": 18.1,
+      "timestamp": 1794658222.162282,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34877": {
+      "channel_msg_id": 2688,
+      "product_id": "1005008703989845",
+      "title": "CUSU SSD SATA 1TB",
+      "channel": "aniscoupons",
+      "source_msg_id": 34877,
+      "price": 74.5,
+      "timestamp": 1794658227.562077,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -24065,17 +24085,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794658042.5791907,
+    "last_deal_post_time": 1794658230.2416468,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794658045.0231388,
+    "last_sweep_time": 1794658232.7704518,
     "last_sweep_times": {
-      "algeria": 1794658042.5460768,
-      "france": 1794658045.0231388
+      "algeria": 1794658230.2146225,
+      "france": 1794658232.7704518
     },
     "last_deal_post_times": {
-      "algeria": 1794658042.5791907
+      "algeria": 1794658230.2416468
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -25669,7 +25689,7 @@
     "GameSir T4 Nova Lite": "lodydeals",
     "Xiaoxin Pad Pro GT 8/256GB": "lodydeals",
     "EasyThreed 3D Printer Entry": "lodydeals",
-    "CUSU SSD SATA 1TB": "lodydeals",
+    "CUSU SSD SATA 1TB": "aniscoupons",
     "MAONO PD400X USB/XLR": "lodydeals",
     "HyperX Cloud 3 DTS": "lodydeals",
     "KOOTION X15 M.2 Nvme 512GB": "lodydeals",
@@ -28365,13 +28385,6 @@
         "price": 79.5
       }
     ],
-    "1005009121981190": [
-      {
-        "channel": "zedstoreonline",
-        "ts": 1794614889.7423651,
-        "price": 13.1
-      }
-    ],
     "1005012285327063": [
       {
         "channel": "aniscoupons",
@@ -28757,6 +28770,20 @@
         "channel": "aniscoupons",
         "ts": 1794658037.1035764,
         "price": 114.99
+      }
+    ],
+    "1005010702038861": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794658220.3394372,
+        "price": 18.1
+      }
+    ],
+    "1005008703989845": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794658226.0271175,
+        "price": 74.5
       }
     ]
   },
