@@ -1310,7 +1310,7 @@
     "1005013081060247": 1793543567.486626,
     "1005012498496817": 1793543578.6842017,
     "1005003413514494": 1793732921.385459,
-    "1005008741607292": 1794562340.4789197,
+    "1005008741607292": 1794660431.126332,
     "1005010158587315": 1793543677.5915465,
     "1005012790288780": 1793656271.0286891,
     "1005012345939726": 1793656202.4239671,
@@ -2651,7 +2651,8 @@
     "Kodak K133 USB 3.1 Flash Drive 256GB",
     "SOYO AMD B550M Gaming",
     "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless",
-    "Delux M800mini Wireless Gaming Mouse"
+    "Delux M800mini Wireless Gaming Mouse",
+    "ASROCK X570M PRO4 Motherboard"
   ],
   "published_title_timestamps": {
     "Xiaomi Redmi Note 17 5G Global Version": 1790857823.0117362,
@@ -3697,10 +3698,10 @@
     "Kodak K133 USB 3.1 Flash Drive 256GB": 1794614891.9797184,
     "SOYO AMD B550M Gaming": 1794643078.050233,
     "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless": 1794649518.026784,
-    "Delux M800mini Wireless Gaming Mouse": 1794653739.643998
+    "Delux M800mini Wireless Gaming Mouse": 1794653739.643998,
+    "ASROCK X570M PRO4 Motherboard": 1794660431.126332
   },
   "published_post_keys": [
-    "test_channel:1791675776",
     "test_channel:1792111091",
     "zedstoreonline:38843",
     "aniscoupons:33270",
@@ -4699,19 +4700,20 @@
     "zedstoreonline:40146",
     "zedstoreonline:40147",
     "zedstoreonline:40148",
-    "aniscoupons:34881"
+    "aniscoupons:34881",
+    "zedstoreonline:40149"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794660072.7294455,
+  "last_run_time": 1794660431.126332,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46487,
-      "last_check_time": 1794659881.2908754
+      "last_message_id": 46488,
+      "last_check_time": 1794660426.560603
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4730,8 +4732,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40148,
-      "last_check_time": 1794660069.302991
+      "last_message_id": 40149,
+      "last_check_time": 1794660433.172532
     },
     "aniscoupons": {
       "last_message_id": 34881,
@@ -24137,6 +24139,16 @@
       "price": 259.7,
       "timestamp": 1794660072.7294455,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40149": {
+      "channel_msg_id": 2695,
+      "product_id": "1005008741607292",
+      "title": "ASROCK X570M PRO4 Motherboard",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40149,
+      "price": 110.8,
+      "timestamp": 1794660431.126332,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -24145,17 +24157,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794660075.7170284,
+    "last_deal_post_time": 1794660434.579588,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794660250.9709823,
+    "last_sweep_time": 1794660437.2166362,
     "last_sweep_times": {
-      "algeria": 1794660248.6343753,
-      "france": 1794660250.9709823
+      "algeria": 1794660434.5603783,
+      "france": 1794660437.2166362
     },
     "last_deal_post_times": {
-      "algeria": 1794660075.7170284
+      "algeria": 1794660434.579588
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24681,7 +24693,7 @@
     "1005013081060247": "lodydeals",
     "1005012498496817": "lodydeals",
     "1005003413514494": "lodydeals",
-    "1005008741607292": "aniscoupons",
+    "1005008741607292": "zedstoreonline",
     "1005010158587315": "lodydeals",
     "1005012790288780": "lodydeals",
     "1005012345939726": "lodydeals",
@@ -26014,7 +26026,8 @@
     "Kodak K133 USB 3.1 Flash Drive 256GB": "zedstoreonline",
     "SOYO AMD B550M Gaming": "aniscoupons",
     "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless": "lodydeals",
-    "Delux M800mini Wireless Gaming Mouse": "aniscoupons"
+    "Delux M800mini Wireless Gaming Mouse": "aniscoupons",
+    "ASROCK X570M PRO4 Motherboard": "zedstoreonline"
   },
   "religious_reminders_history": {
     "mock_rem": "2026-10-02",
@@ -26811,7 +26824,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:34101",
     "aniscoupons:34102",
     "aniscoupons:34103",
     "aniscoupons:34104",
@@ -27810,7 +27822,8 @@
     "zedstoreonline:40144",
     "zedstoreonline:40145",
     "lodydeals:46486",
-    "lodydeals:46487"
+    "lodydeals:46487",
+    "lodydeals:46488"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -28906,6 +28919,13 @@
         "channel": "aniscoupons",
         "ts": 1794660071.1390655,
         "price": 259.7
+      }
+    ],
+    "1005008741607292": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794660429.3101509,
+        "price": 110.8
       }
     ]
   },
