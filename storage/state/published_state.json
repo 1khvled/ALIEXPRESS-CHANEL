@@ -796,7 +796,8 @@
     "1389260212",
     "1005012138794873",
     "1005007129557126",
-    "1005010519693722"
+    "1005010519693722",
+    "1005010788149535"
   ],
   "published_product_timestamps": {
     "1005012973772517": 1794500732.7845657,
@@ -1333,7 +1334,7 @@
     "1005008041957503": 1794140022.1412559,
     "1005010240905676": 1793546776.7430634,
     "1005010236248649": 1793546781.4529572,
-    "1005007345311212": 1794478095.864591,
+    "1005007345311212": 1794650936.0000904,
     "1005007010570179": 1793550258.5411532,
     "1005010049082935": 1793550263.576872,
     "1005007938007660": 1793550268.818711,
@@ -1510,7 +1511,7 @@
     "1005007038022940": 1794146648.256951,
     "1005007981362777": 1794146655.1062205,
     "1005007097302001": 1794146830.4272797,
-    "1005013361453762": 1794563439.6862803,
+    "1005013361453762": 1794650941.0547981,
     "1005013240296031": 1794216974.0881407,
     "1005012670472055": 1794164675.8426867,
     "1005013476568095": 1794169846.8168333,
@@ -1608,7 +1609,8 @@
     "1389260212": 1794605894.0354748,
     "1005012138794873": 1794608839.031857,
     "1005007129557126": 1794643078.050233,
-    "1005010519693722": 1794649518.026784
+    "1005010519693722": 1794649518.026784,
+    "1005010788149535": 1794650949.6978376
   },
   "published_titles": [
     "Wireless WiFi Repeater 300Mbps WiFi Extender Amplifier Booster Router",
@@ -3188,12 +3190,12 @@
     "Realme 15T 8/256GB": 1793543739.1061752,
     "Blackview MEGA 12  12/256": 1793478769.6023057,
     "Lenovo Xiaoxin Pad Pro 2025 12.7  inch": 1793478774.2399445,
-    "HONOR Pad V9  8/256": 1794563439.6862803,
+    "HONOR Pad V9  8/256": 1794650941.0547981,
     "Blackview LINK 1 Kids": 1794599828.9735007,
     "realme Watch S5 – Stunning AMOLED Display, 20-Day Battery Life & 110 Sports Modes": 1793490079.2945042,
     "COLMI i28 Ultra AI Smartwatch – AMOLED Display,": 1793490090.28376,
     "POCO Pad C1 4/64": 1793490102.028307,
-    "IQOO Z11 Turbo": 1794579990.5893576,
+    "IQOO Z11 Turbo": 1794650949.6978376,
     "Vivo X300 5G 12/256GB": 1793540023.002178,
     "VIVO X300 Pro China Version 50MP OIS 6.78 Inch AMOLED 120Hz Dimensity9500": 1793540051.7895243,
     "VIVO IQOO Z11 TURBO (12/256)": 1793540059.832893,
@@ -3650,7 +3652,7 @@
     "MAONO PM360TR Condenser Microphone": 1794515176.9450598,
     "Machenike G5 Pro Gaming Controller": 1794476797.164376,
     "Webcam EMEET C100 1080P": 1794477157.5349603,
-    "FIFINE 1440p Full HD PC Webcam with Microphone": 1794478095.864591,
+    "FIFINE 1440p Full HD PC Webcam with Microphone": 1794650936.0000904,
     "iQOO Z11S 8/128": 1794647055.558841,
     "Inphic A9 PRO MAX Wireless Gaming Mouse": 1794647237.7084959,
     "realme P4 Lite Smartphone NFC 6300mAh Battery": 1794604620.3292344,
@@ -3696,9 +3698,6 @@
     "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless": 1794649518.026784
   },
   "published_post_keys": [
-    "aniscoupons:32859",
-    "lodydeals:45777",
-    "bnddeals:50822",
     "aniscoupons:32749",
     "lodydeals:45886",
     "megaphonna:8689",
@@ -4695,11 +4694,14 @@
     "zedstoreonline:40128",
     "aniscoupons:34852",
     "zedstoreonline:40130",
-    "aniscoupons:34854"
+    "aniscoupons:34854",
+    "zedstoreonline:40131",
+    "zedstoreonline:40132",
+    "aniscoupons:34855"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794650134.0330412,
+  "last_run_time": 1794650949.6978376,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4726,12 +4728,12 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40130,
-      "last_check_time": 1794650123.9491253
+      "last_message_id": 40132,
+      "last_check_time": 1794650943.1218555
     },
     "aniscoupons": {
-      "last_message_id": 34854,
-      "last_check_time": 1794650136.082319
+      "last_message_id": 34855,
+      "last_check_time": 1794650951.7667298
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -5427,7 +5429,8 @@
     "1389260212": 14.8,
     "1005012138794873": 82.4,
     "1005007129557126": 82.66,
-    "1005010519693722": 14.42
+    "1005010519693722": 14.42,
+    "1005010788149535": 364.9
   },
   "channel_published_deals": {
     "aniscoupons:32590": {
@@ -23852,6 +23855,36 @@
       "price": 304.77,
       "timestamp": 1794650134.0330412,
       "status": "ACTIVE"
+    },
+    "zedstoreonline:40131": {
+      "channel_msg_id": 2667,
+      "product_id": "1005007345311212",
+      "title": "FIFINE 1440p Full HD PC Webcam with Microphone",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40131,
+      "price": 18.8,
+      "timestamp": 1794650936.0000904,
+      "status": "ACTIVE"
+    },
+    "zedstoreonline:40132": {
+      "channel_msg_id": 2668,
+      "product_id": "1005013361453762",
+      "title": "HONOR Pad V9  8/256",
+      "channel": "zedstoreonline",
+      "source_msg_id": 40132,
+      "price": 276.3,
+      "timestamp": 1794650941.0547981,
+      "status": "ACTIVE"
+    },
+    "aniscoupons:34855": {
+      "channel_msg_id": 2669,
+      "product_id": "1005010788149535",
+      "title": "IQOO Z11 Turbo",
+      "channel": "aniscoupons",
+      "source_msg_id": 34855,
+      "price": 364.9,
+      "timestamp": 1794650949.6978376,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23860,17 +23893,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794650136.8314123,
+    "last_deal_post_time": 1794650952.8220613,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794650306.1808147,
+    "last_sweep_time": 1794650955.855856,
     "last_sweep_times": {
-      "algeria": 1794650304.2183492,
-      "france": 1794650306.1808147
+      "algeria": 1794650952.7912905,
+      "france": 1794650955.855856
     },
     "last_deal_post_times": {
-      "algeria": 1794650136.8314123
+      "algeria": 1794650952.8220613
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24680,7 +24713,8 @@
     "1389260212": "zedstoreonline",
     "1005012138794873": "aniscoupons",
     "1005007129557126": "aniscoupons",
-    "1005010519693722": "lodydeals"
+    "1005010519693722": "lodydeals",
+    "1005010788149535": "aniscoupons"
   },
   "published_title_channels": {
     "Test Wrench Set": "test_channel",
@@ -28142,11 +28176,6 @@
     ],
     "1005007916078341": [
       {
-        "channel": "aniscoupons",
-        "ts": 1794606995.8710825,
-        "price": 47.4
-      },
-      {
         "channel": "zedstoreonline",
         "ts": 1794647044.6727767,
         "price": 47.4
@@ -28422,6 +28451,20 @@
         "channel": "aniscoupons",
         "ts": 1794650132.441166,
         "price": 304.77
+      }
+    ],
+    "1005007345311212": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794650933.8111613,
+        "price": 18.8
+      }
+    ],
+    "1005013361453762": [
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794650939.0160332,
+        "price": 276.3
       }
     ]
   },
