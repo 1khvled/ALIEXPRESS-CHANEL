@@ -1133,7 +1133,7 @@
     "1005009200129898": 1793227797.933171,
     "9998888526": 1793228526.415094,
     "9998889908": 1793229908.2507865,
-    "1005012339196141": 1793613978.6202738,
+    "1005012339196141": 1794664109.9908633,
     "1005012472631754": 1793467108.5532427,
     "1005013039644752": 1794431592.229099,
     "1005013479436053": 1793380394.5736995,
@@ -3111,7 +3111,7 @@
     "MSI X670E GAMING PLUS WIFI": 1793384191.3385255,
     "MSI PRO X870E-P WIFI AM5": 1793384195.9014845,
     "Vivo X300 Pro 5G 12/256GB": 1793384203.5839794,
-    "Amd Ryzen R5 9600X Cpu 3.9 Ghz 6-Core 12-Thread 38Mb Am5 New!": 1793555097.6969874,
+    "Amd Ryzen R5 9600X Cpu 3.9 Ghz 6-Core 12-Thread 38Mb Am5 New!": 1794664109.9908633,
     "Maono PD200X XLR/USB Dynamic": 1793600283.7397804,
     "MAONO PD100X USB/XLR Dynamic": 1793656150.4800947,
     "Machenike G3 V2 PC Gaming Controller": 1794307249.1472638,
@@ -3702,7 +3702,6 @@
     "ASROCK X570M PRO4 Motherboard": 1794660431.126332
   },
   "published_post_keys": [
-    "bnddeals:50936",
     "ecksdeal:5940",
     "lodydeals:45690",
     "aniscoupons:33206",
@@ -4701,19 +4700,20 @@
     "aniscoupons:34885",
     "aniscoupons:34887",
     "zedstoreonline:40152",
-    "aniscoupons:34888"
+    "aniscoupons:34888",
+    "lodydeals:46492"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794663377.8719356,
+  "last_run_time": 1794664109.9908633,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
       "last_check_time": 1794591384.7155294
     },
     "lodydeals": {
-      "last_message_id": 46491,
-      "last_check_time": 1794663921.2498999
+      "last_message_id": 46492,
+      "last_check_time": 1794664112.068837
     },
     "test_channel": {
       "last_message_id": 1793967703,
@@ -4732,8 +4732,8 @@
       "last_check_time": 1793599663.3444748
     },
     "zedstoreonline": {
-      "last_message_id": 40152,
-      "last_check_time": 1794663195.622249
+      "last_message_id": 40153,
+      "last_check_time": 1794664115.1980512
     },
     "aniscoupons": {
       "last_message_id": 34889,
@@ -4997,7 +4997,7 @@
     "1005012633322402": 3.05,
     "1005012249968766": 656.0,
     "1005009200129898": 0.01,
-    "1005012339196141": 153.0,
+    "1005012339196141": 153.04,
     "1005012472631754": 120.4,
     "1005013479436053": 429.0,
     "1005012431631514": 143.55,
@@ -24199,6 +24199,16 @@
       "price": 228.3,
       "timestamp": 1794663377.8719356,
       "status": "ACTIVE"
+    },
+    "lodydeals:46492": {
+      "channel_msg_id": 2701,
+      "product_id": "1005012339196141",
+      "title": "Amd Ryzen R5 9600X Cpu 3.9 Ghz 6-Core 12-Thread 38Mb Am5 New!",
+      "channel": "lodydeals",
+      "source_msg_id": 46492,
+      "price": 153.04,
+      "timestamp": 1794664109.9908633,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -24207,17 +24217,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794663380.8776815,
+    "last_deal_post_time": 1794664116.4769971,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794663927.3621087,
+    "last_sweep_time": 1794664118.9752302,
     "last_sweep_times": {
-      "algeria": 1794663925.001581,
-      "france": 1794663927.3621087
+      "algeria": 1794664116.4424248,
+      "france": 1794664118.9752302
     },
     "last_deal_post_times": {
-      "algeria": 1794663380.8776815
+      "algeria": 1794664116.4769971
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -24565,7 +24575,7 @@
     "1005009200129898": "ecksdeal",
     "9998888526": "test_channel",
     "9998889908": "test_channel",
-    "1005012339196141": "aniscoupons",
+    "1005012339196141": "lodydeals",
     "1005012472631754": "zedstoreonline",
     "1005013479436053": "aniscoupons",
     "1005012431631514": "pcgamingpart",
@@ -26874,7 +26884,6 @@
   "published_deals_history": {},
   "settings": {},
   "handled_post_keys": [
-    "aniscoupons:34112",
     "aniscoupons:34113",
     "aniscoupons:34114",
     "aniscoupons:34115",
@@ -27873,7 +27882,8 @@
     "aniscoupons:34884",
     "aniscoupons:34886",
     "lodydeals:46491",
-    "aniscoupons:34889"
+    "aniscoupons:34889",
+    "zedstoreonline:40153"
   ],
   "last_france_cross_promo_time": 1794553348.8480208,
   "next_france_cross_promo_interval_seconds": 334302,
@@ -28589,6 +28599,11 @@
         "channel": "zedstoreonline",
         "ts": 1794647067.835595,
         "price": 30.0
+      },
+      {
+        "channel": "zedstoreonline",
+        "ts": 1794664114.6295874,
+        "price": 30.0
       }
     ],
     "1005013438245033": [
@@ -29053,6 +29068,13 @@
         "channel": "lodydeals",
         "ts": 1794663921.1066532,
         "price": 228.32
+      }
+    ],
+    "1005012339196141": [
+      {
+        "channel": "lodydeals",
+        "ts": 1794664107.7901466,
+        "price": 153.04
       }
     ]
   },
