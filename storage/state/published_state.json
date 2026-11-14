@@ -1596,7 +1596,7 @@
     "1005012624574517": 1794599278.9506347,
     "1005012644923854": 1794577769.242665,
     "1005005709908265": 1794577943.6825492,
-    "1005011887425776": 1794580354.5744467,
+    "1005011887425776": 1794652347.6620066,
     "1005012547730772": 1794590278.0528092,
     "1005012840419521": 1794591008.1982286,
     "1005010218815499": 1794591382.6548223,
@@ -3678,7 +3678,7 @@
     "Maono Gamerwave DGM20S": 1794577943.6825492,
     "CUSU SSD CV3500 M2 1TB": 1794650121.9041455,
     "S80 Flash Drive USB 3.2 Type-A 128GB": 1794649534.468107,
-    "ATK VXE Dragonfly V3 PRO": 1794580354.5744467,
+    "ATK VXE Dragonfly V3 PRO": 1794652347.6620066,
     "Kingston DataTraveler USB 128GB": 1794589551.8961492,
     "Honor X80 Pro Max 8/128": 1794590278.0528092,
     "ماوس فخم Logitech G502 Hero": 1794591008.1982286,
@@ -3698,7 +3698,6 @@
     "Delux M400 PAW3311 24000DPI 1Khz 500mAh Wireless": 1794649518.026784
   },
   "published_post_keys": [
-    "megaphonna:8689",
     "megaphonna:8738",
     "lodydeals:45939",
     "bnddeals:50852",
@@ -4697,11 +4696,12 @@
     "zedstoreonline:40132",
     "aniscoupons:34855",
     "aniscoupons:34856",
-    "aniscoupons:34858"
+    "aniscoupons:34858",
+    "aniscoupons:34860"
   ],
   "last_disclaimer_time": 1794524540.9476151,
   "last_calendar_time": 1794572799.8939624,
-  "last_run_time": 1794651747.5170398,
+  "last_run_time": 1794652347.6620066,
   "monitored_channels": {
     "ecksdeal": {
       "last_message_id": 6061,
@@ -4732,8 +4732,8 @@
       "last_check_time": 1794651741.453585
     },
     "aniscoupons": {
-      "last_message_id": 34858,
-      "last_check_time": 1794651749.5712774
+      "last_message_id": 34860,
+      "last_check_time": 1794652349.717418
     },
     "bnddeals": {
       "last_message_id": 51301,
@@ -23905,6 +23905,16 @@
       "price": 167.8,
       "timestamp": 1794651747.5170398,
       "status": "ACTIVE"
+    },
+    "aniscoupons:34860": {
+      "channel_msg_id": 2672,
+      "product_id": "1005011887425776",
+      "title": "ATK VXE Dragonfly V3 PRO",
+      "channel": "aniscoupons",
+      "source_msg_id": 34860,
+      "price": 20.48,
+      "timestamp": 1794652347.6620066,
+      "status": "ACTIVE"
     }
   },
   "schedule_config": {
@@ -23913,17 +23923,17 @@
     "current_interval_minutes": 5,
     "is_paused": false,
     "night_mode_enabled": true,
-    "last_deal_post_time": 1794651750.4181783,
+    "last_deal_post_time": 1794652350.6908517,
     "night_start_hour_dz": 0,
     "night_end_hour_dz": 8,
     "night_pause_enabled": true,
-    "last_sweep_time": 1794651753.2568254,
+    "last_sweep_time": 1794652353.7045355,
     "last_sweep_times": {
-      "algeria": 1794651750.3975477,
-      "france": 1794651753.2568254
+      "algeria": 1794652350.6677537,
+      "france": 1794652353.7045355
     },
     "last_deal_post_times": {
-      "algeria": 1794651750.4181783
+      "algeria": 1794652350.6908517
     }
   },
   "last_coin_reminder_time": 1794533888.682542,
@@ -28491,6 +28501,13 @@
         "channel": "aniscoupons",
         "ts": 1794651122.8729813,
         "price": 186.74
+      }
+    ],
+    "1005011887425776": [
+      {
+        "channel": "aniscoupons",
+        "ts": 1794652345.5976043,
+        "price": 20.48
       }
     ]
   },
